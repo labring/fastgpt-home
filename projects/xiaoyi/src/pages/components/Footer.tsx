@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import Avatar from '@/components/Avatar';
 import CommunityModal from '@/components/CommunityModal';
 
-const Footer = () => {
+const Footer = ({ appUrl }: { appUrl: string }) => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const list = useMemo(
@@ -15,7 +15,7 @@ const Footer = () => {
           {
             label: t('home.Footer FastGPT Cloud', { title: '小亦 AI' }),
             onClick: () => {
-              window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || "";
+              window.location.href = appUrl;
             }
           },
           {

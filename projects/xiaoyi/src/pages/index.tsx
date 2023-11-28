@@ -10,12 +10,8 @@ import Choice from './components/Choice';
 import Footer from './components/Footer';
 import Loading from '@/components/Loading';
 
-const Home = ({ homeUrl = '/' }: { homeUrl: string }) => {
+const Home = ({ loginUrl, appUrl }: { loginUrl: string, appUrl: string }) => {
   const router = useRouter();
-
-  if (homeUrl !== '/') {
-    router.replace(homeUrl);
-  }
 
   useEffect(() => {
     router.prefetch('/app/list');
@@ -26,10 +22,10 @@ const Home = ({ homeUrl = '/' }: { homeUrl: string }) => {
     <>
       <Box id="home" bg={'myWhite.600'} h={'100vh'} overflowY={'auto'} overflowX={'hidden'}>
         <Box position={'fixed'} zIndex={10} top={0} left={0} right={0}>
-          <Navbar />
+          <Navbar loginUrl={loginUrl} appUrl={appUrl} />
         </Box>
         <Box maxW={'1200px'} pt={'70px'} m={'auto'}>
-          <Hero />
+          <Hero appUrl={appUrl} />
           <Ability />
           <Box my={[4, 6]}>
             <Choice />
@@ -37,11 +33,10 @@ const Home = ({ homeUrl = '/' }: { homeUrl: string }) => {
         </Box>
         {false && (
           <Box bg={'white'}>
-            <Footer />
+            <Footer appUrl={appUrl} />
           </Box>
         )}
       </Box>
-      {homeUrl !== '/' && <Loading bg={'white'} />}
     </>
   );
 };
@@ -50,7 +45,8 @@ export async function getServerSideProps(content: any) {
   return {
     props: {
       ...(await serviceSideProps(content)),
-      homeUrl: process.env.HOME_URL || '/'
+      loginUrl: process.env.LOGIN_URL || '/login',
+      appUrl: process.env.APP_URL || '/app/list',
     }
   };
 }

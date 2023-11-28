@@ -5,7 +5,8 @@ import CommunityModal from '@/components/CommunityModal';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import MyIcon from '@/components/Icon';
 
-const Navbar = () => {
+const Navbar = (props: {loginUrl: string, appUrl: string}) => {
+  const { loginUrl, appUrl } = props;
   const { t } = useTranslation();
   const [scrollTop, setScrollTop] = useState(0);
   const {
@@ -115,10 +116,10 @@ const Navbar = () => {
                 {item.label}
               </Box>
             ))}
-            <Box {...menuStyles} onClick={() => {window.location.href = process.env.NEXT_PUBLIC_LOGIN_PAGE_URL || ""}}>
+            <Box {...menuStyles} onClick={() => {window.location.href = loginUrl}}>
               {t('home.Login')}
             </Box>
-            <Button ml={4} h={'36px'} borderRadius={'3xl'} onClick={() => {window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || ""}}>
+            <Button ml={4} h={'36px'} borderRadius={'3xl'} onClick={() => {window.location.href = appUrl}}>
               {t('home.Start Now')}
             </Button>
           </>
@@ -138,10 +139,10 @@ const Navbar = () => {
             </Box>
           ))}
           <Box bg={'myGray.500'} h={'1.5px'} w={'20px'} mb={8} />
-          <Box mb={10} onClick={() => window.location.href = process.env.NEXT_PUBLIC_LOGIN_PAGE_URL || ""}>
+          <Box mb={10} onClick={() => window.location.href = loginUrl}>
             {t('home.Login')}
           </Box>
-          <Button h={'36px'} borderRadius={'3xl'} onClick={() => window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || ""}>
+          <Button h={'36px'} borderRadius={'3xl'} onClick={() => window.location.href = appUrl}>
             {t('home.Start Now')}
           </Button>
         </Box>

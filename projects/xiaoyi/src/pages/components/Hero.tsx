@@ -2,7 +2,7 @@ import { Box, Flex, Button, Image } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 
-const Hero = () => {
+const Hero = ({ appUrl }: { appUrl: string }) => {
   const { t } = useTranslation();
 
   return (
@@ -20,7 +20,7 @@ const Hero = () => {
           borderRadius={'xl'}
           py={[2, 3]}
           w={'150px'}
-          onClick={() => window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || ""}
+          onClick={() => window.location.href = appUrl}
         >
           {t('home.Start Now')}
         </Button>

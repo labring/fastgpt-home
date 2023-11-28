@@ -1,6 +1,0 @@
-{
-  "i18n-ally.localesPaths": [
-    "public/locales",
-    "src/components/Icon/icons/common/language"
-  ]
-}

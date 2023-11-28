@@ -1,7 +1,6 @@
-import { Box, Image, BoxProps, Grid, useTheme } from '@chakra-ui/react';
+import { Box, BoxProps, Grid, useTheme } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
-// import { feConfigs } from '@/web/common/system/staticData';
 import { MyImage } from '@/components/MyImage';
 
 const Ability = () => {
@@ -36,7 +35,7 @@ const Ability = () => {
         fontSize={['22px', '30px']}
         fontWeight={'bold'}
       >
-        {t('home.FastGPT Ability', { title: 'FastGPT' })}
+        {t('home.FastGPT Ability', { title: '小亦 AI' })}
       </Box>
       <Grid px={[5, 0]} minH={'400px'} gridTemplateColumns={['1fr', `500px 1fr`]} gridGap={6}>
         <Box

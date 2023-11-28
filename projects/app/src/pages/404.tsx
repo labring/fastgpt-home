@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 const NonePage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push('/app/list');
+    window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || "";
   }, [router]);
 
   return <div></div>;

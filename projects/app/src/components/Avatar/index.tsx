@@ -1,7 +1,6 @@
 import React from 'react';
 import { Image } from '@chakra-ui/react';
 import type { ImageProps } from '@chakra-ui/react';
-// import { LOGO_ICON } from '@fastgpt/global/core/chat/constants';
 
 
 const LOGO_ICON = `/icon/logo.svg`

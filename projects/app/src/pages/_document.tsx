@@ -3,7 +3,7 @@ import { Html, Head, Main, NextScript } from 'next/document';
 export default function Document() {
   return (
     <Html>
-      <title>{process.env.SYSTEM_NAME || 'FastGPT'}</title>
+      <title>小亦 AI</title>
       <Head />
       <body>
         <Main />

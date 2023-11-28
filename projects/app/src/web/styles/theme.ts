@@ -60,18 +60,10 @@ const Button = defineStyleConfig({
       color: 'white',
       border: 'none',
       _hover: {
-        filter: 'brightness(120%)'
+        filter: 'brightness(115%)'
       },
       _disabled: {
         bg: '#3370ff !important'
-      }
-    },
-    gray: {
-      bg: '#F5F5F8',
-      color: 'myBlue.700',
-      border: '1px solid #EFF0F1',
-      _hover: {
-        bg: '#3370FF1A'
       }
     },
     base: {
@@ -82,8 +74,7 @@ const Button = defineStyleConfig({
       transition: 'background 0.3s',
       _hover: {
         color: 'myBlue.600',
-        bg: 'myWhite.400',
-        boxShadow: '0 0 5px rgba(0,0,0,0.1)'
+        bg: 'myWhite.400'
       },
       _active: {
         color: 'myBlue.700'

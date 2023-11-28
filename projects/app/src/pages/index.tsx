@@ -35,7 +35,7 @@ const Home = ({ homeUrl = '/' }: { homeUrl: string }) => {
             <Choice />
           </Box>
         </Box>
-        {true && (
+        {false && (
           <Box bg={'white'}>
             <Footer />
           </Box>

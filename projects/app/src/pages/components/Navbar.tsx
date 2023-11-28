@@ -1,14 +1,11 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Flex, Box, type BoxProps, Button, useDisclosure } from '@chakra-ui/react';
+import { Flex, Box, type BoxProps, Button, useDisclosure, Image } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
-import Avatar from '@/components/Avatar';
 import CommunityModal from '@/components/CommunityModal';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import MyIcon from '@/components/Icon';
 
 const Navbar = () => {
-  const router = useRouter();
   const { t } = useTranslation();
   const [scrollTop, setScrollTop] = useState(0);
   const {
@@ -19,7 +16,7 @@ const Navbar = () => {
   const { isOpen: isOpenMenu, onOpen: onOpenMenu, onClose: onCloseMenu } = useDisclosure();
   const { isPc } = useSystemStore();
   const menuList = [
-    ...(true
+    ...(false
       ? [
           {
             label: t('home.Commercial'),
@@ -40,7 +37,7 @@ const Navbar = () => {
           }
         ]
       : []),
-    ...(true
+    ...(false
       ? [
           {
             label: t('home.Docs'),
@@ -97,7 +94,7 @@ const Navbar = () => {
       h={isOpenMenu ? '100vh' : 'auto'}
     >
       <Flex maxW={'1300px'} m={'auto'} alignItems={'center'}>
-        <Avatar src="/icon/logo.svg" w={['30px', '38px']} />
+        {/* <Avatar src="/icon/logo.png" w={['30px', '38px']} />
         <Box
           className="textlg"
           fontSize={['3xl', '4xl']}
@@ -105,7 +102,10 @@ const Navbar = () => {
           ml={3}
           fontStyle={'italic'}
         >
-          FastGPT
+          小亦 AI
+        </Box> */}
+        <Box>
+          <Image src="/icon/logo-text.png" w={['80px', '160px']} alt='logo' />
         </Box>
         <Box flex={1} />
         {isPc ? (
@@ -115,13 +115,10 @@ const Navbar = () => {
                 {item.label}
               </Box>
             ))}
-            <Box px={4} color={'myGray.500'}>
-              |
-            </Box>
-            <Box {...menuStyles} onClick={() => router.push('/login')}>
+            <Box {...menuStyles} onClick={() => {window.location.href = process.env.NEXT_PUBLIC_LOGIN_PAGE_URL || ""}}>
               {t('home.Login')}
             </Box>
-            <Button ml={4} h={'36px'} borderRadius={'3xl'} onClick={() => router.push('/app/list')}>
+            <Button ml={4} h={'36px'} borderRadius={'3xl'} onClick={() => {window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || ""}}>
               {t('home.Start Now')}
             </Button>
           </>
@@ -141,10 +138,10 @@ const Navbar = () => {
             </Box>
           ))}
           <Box bg={'myGray.500'} h={'1.5px'} w={'20px'} mb={8} />
-          <Box mb={10} onClick={() => router.push('/login')}>
+          <Box mb={10} onClick={() => window.location.href = process.env.NEXT_PUBLIC_LOGIN_PAGE_URL || ""}>
             {t('home.Login')}
           </Box>
-          <Button h={'36px'} borderRadius={'3xl'} onClick={() => router.push('/app/list')}>
+          <Button h={'36px'} borderRadius={'3xl'} onClick={() => window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || ""}>
             {t('home.Start Now')}
           </Button>
         </Box>

@@ -8,12 +8,12 @@ const Choice = () => {
   const { t } = useTranslation();
 
   const list = [
-    ...(true
+    ...(false
       ? [
           {
             icon: '/imgs/home/icon_1.svg',
             title: t('home.Choice Open'),
-            desc: t('home.Choice Open Desc', { title: 'FastGPT' }),
+            desc: t('home.Choice Open Desc', { title: '小亦 AI' }),
             tooltip: '前往 GitHub',
             onClick: () => window.open('https://github.com/labring/FastGPT', '_blank')
           }
@@ -22,7 +22,7 @@ const Choice = () => {
           {
             icon: '/imgs/home/icon_0.svg',
             title: t('home.Choice Fast'),
-            desc: t('home.Choice Fast Desc', { title: 'FastGPT' })
+            desc: t('home.Choice Fast Desc', { title: '小亦 AI' })
           }
         ]),
     {
@@ -61,7 +61,7 @@ const Choice = () => {
         fontSize={['22px', '30px']}
         fontWeight={'bold'}
       >
-        {t('home.Why FastGPT', { title: 'FastGPT' })}
+        {t('home.Why FastGPT', { title: '小亦 AI' })}
       </Box>
       <Grid px={[5, 0]} gridTemplateColumns={['1fr', `1fr 1fr`, 'repeat(3,1fr)']} gridGap={6}>
         {list.map((item) => (

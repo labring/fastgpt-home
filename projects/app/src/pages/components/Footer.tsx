@@ -2,12 +2,10 @@ import React, { useMemo } from 'react';
 import { Box, Flex, useDisclosure } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import Avatar from '@/components/Avatar';
-import { useRouter } from 'next/router';
 import CommunityModal from '@/components/CommunityModal';
 
 const Footer = () => {
   const { t } = useTranslation();
-  const router = useRouter();
   const { isOpen, onOpen, onClose } = useDisclosure();
   const list = useMemo(
     () => [
@@ -15,9 +13,9 @@ const Footer = () => {
         label: t('home.Footer Product'),
         child: [
           {
-            label: t('home.Footer FastGPT Cloud', { title: 'FastGPT' }),
+            label: t('home.Footer FastGPT Cloud', { title: '小亦 AI' }),
             onClick: () => {
-              router.push('/app/list');
+              window.location.href = process.env.NEXT_PUBLIC_APP_LIST_URL || "";
             }
           },
           {
@@ -69,7 +67,7 @@ const Footer = () => {
         ]
       }
     ],
-    [onOpen, router, t]
+    [onOpen, t]
   );
 
   return (
@@ -91,11 +89,11 @@ const Footer = () => {
             ml={3}
             fontStyle={'italic'}
           >
-            FastGPT
+            {'小亦 AI'}
           </Box>
         </Flex>
         <Box mt={5} fontSize={'sm'} color={'myGray.600'} maxW={'380px'} textAlign={'justify'}>
-          {t('home.FastGPT Desc', { title: 'FastGPT' })}
+          {t('home.FastGPT Desc', { title: '小亦 AI' })}
         </Box>
       </Box>
       {list.map((item) => (

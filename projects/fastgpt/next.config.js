@@ -4,7 +4,7 @@ const path = require('path');
 
 const nextConfig = {
   i18n,
-  output: 'standalone',
+  // output: 'standalone',
   reactStrictMode: process.env.NODE_ENV === 'development' ? false : true,
   compress: true,
   webpack(config, { isServer }) {
@@ -17,17 +17,6 @@ const nextConfig = {
         }
       };
     }
-    Object.assign(config.resolve.alias, {
-      '@mongodb-js/zstd': false,
-      '@aws-sdk/credential-providers': false,
-      snappy: false,
-      aws4: false,
-      'mongodb-client-encryption': false,
-      kerberos: false,
-      'supports-color': false,
-      'bson-ext': false,
-      'pg-native': false
-    });
     config.module = {
       ...config.module,
       rules: config.module.rules.concat([

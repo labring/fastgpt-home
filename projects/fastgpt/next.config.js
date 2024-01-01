@@ -1,13 +1,11 @@
 /** @type {import('next').NextConfig} */
 const { i18n } = require('./next-i18next.config');
-const path = require('path');
 
 const nextConfig = {
   i18n,
-  // output: 'standalone',
+  // output: 'export',
   reactStrictMode: process.env.NODE_ENV === 'development' ? false : true,
   compress: true,
-  cache: false,
 
   webpack(config, { isServer }) {
     config.module = {

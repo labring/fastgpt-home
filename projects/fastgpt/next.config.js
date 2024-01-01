@@ -8,15 +8,6 @@ const nextConfig = {
   reactStrictMode: process.env.NODE_ENV === 'development' ? false : true,
   compress: true,
   webpack(config, { isServer }) {
-    if (!isServer) {
-      config.resolve = {
-        ...config.resolve,
-        fallback: {
-          ...config.resolve.fallback,
-          fs: false
-        }
-      };
-    }
     config.module = {
       ...config.module,
       rules: config.module.rules.concat([

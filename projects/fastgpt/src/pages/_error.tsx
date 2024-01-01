@@ -1,4 +1,4 @@
-import { serviceSideProps } from '@/web/common/utils/i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 function Error() {
   return (
@@ -10,9 +10,11 @@ function Error() {
   );
 }
 
-export async function getServerSideProps(context: any) {
+export async function getStaticProps({ locale }: any) {
   return {
-    props: { ...(await serviceSideProps(context)) }
+    props: {
+      ...(await serverSideTranslations(locale))
+    }
   };
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
-import { serviceSideProps } from '@/web/common/utils/i18n';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -30,10 +30,10 @@ const Home = () => {
   );
 };
 
-export async function getServerSideProps(content: any) {
+export async function getStaticProps({ locale }: any) {
   return {
     props: {
-      ...(await serviceSideProps(content))
+      ...(await serverSideTranslations(locale))
     }
   };
 }

@@ -1,5 +1,3 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
 export const LANG_KEY = 'NEXT_LOCALE_LANG';
 export enum LangEnum {
   'zh' = 'zh',
@@ -14,10 +12,6 @@ export const langMap = {
     label: '简体中文',
     icon: 'common/language/zh'
   }
-};
-
-export const serviceSideProps = (content: any) => {
-  return serverSideTranslations(content.locale, undefined, null, content.locales);
 };
 
 export const getLng = (lng: string) => {

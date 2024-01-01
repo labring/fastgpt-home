@@ -7,6 +7,8 @@ const nextConfig = {
   // output: 'standalone',
   reactStrictMode: process.env.NODE_ENV === 'development' ? false : true,
   compress: true,
+  cache: false,
+
   webpack(config, { isServer }) {
     config.module = {
       ...config.module,

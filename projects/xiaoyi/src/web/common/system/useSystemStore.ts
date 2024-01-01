@@ -2,7 +2,6 @@ import { create } from 'zustand';
 import { devtools, persist } from 'zustand/middleware';
 import { immer } from 'zustand/middleware/immer';
 
-
 type State = {
   lastRoute: string;
   setLastRoute: (e: string) => void;
@@ -37,12 +36,11 @@ export const useSystemStore = create<State>()(
             state.isPc = val < 900 ? false : true;
           });
         },
-        isPc: undefined,
+        isPc: undefined
       })),
       {
         name: 'globalStore',
-        partialize: (state) => ({
-        })
+        partialize: (state) => ({})
       }
     )
   )

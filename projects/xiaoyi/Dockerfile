@@ -4,11 +4,8 @@ FROM node:18.15-alpine AS deps
 RUN apk add libc6-compat && npm install -g pnpm
 WORKDIR /app
 
-ARG name
-
 # copy packages and one project
-COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
-COPY ./projects/$name/package.json ./projects/$name/package.json
+COPY package.json pnpm-lock.yaml ./
 
 RUN [ -f pnpm-lock.yaml ] || (echo "Lockfile not found." && exit 1)
 
@@ -18,23 +15,17 @@ RUN pnpm install
 FROM node:18.15-alpine AS builder
 WORKDIR /app
 
-ARG name
-
 # copy common node_modules and one project node_modules
-COPY package.json pnpm-workspace.yaml ./
+COPY . .
 COPY --from=deps /app/node_modules ./node_modules
-COPY ./projects/$name ./projects/$name
-COPY --from=deps /app/projects/$name/node_modules ./projects/$name/node_modules
 
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
 RUN npm install -g pnpm
-RUN pnpm --filter=$name run build
+RUN pnpm run build
 
 FROM node:18.15-alpine AS runner
 WORKDIR /app
-
-ARG name
 
 # create user and use it
 RUN addgroup --system --gid 1001 nodejs
@@ -46,12 +37,10 @@ RUN apk add curl \
   && update-ca-certificates
 
 # copy running files
-COPY --from=builder /app/projects/$name/public ./projects/$name/public
-COPY --from=builder /app/projects/$name/next.config.js ./projects/$name/next.config.js
-COPY --from=builder --chown=nextjs:nodejs /app/projects/$name/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/projects/$name/.next/static ./projects/$name/.next/static
-# copy package.json to version file
-COPY --from=builder /app/projects/$name/package.json ./package.json 
+COPY --from=builder /app/public ./public
+COPY --from=builder /app/next.config.js ./next.config.js
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
@@ -61,6 +50,6 @@ EXPOSE 3000
 
 USER nextjs
 
-ENV serverPath=./projects/$name/server.js
+ENV serverPath=./server.js
 
 ENTRYPOINT ["sh","-c","node ${serverPath}"]

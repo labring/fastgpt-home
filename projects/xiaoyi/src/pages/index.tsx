@@ -10,7 +10,7 @@ import Choice from './components/Choice';
 import Footer from './components/Footer';
 import Loading from '@/components/Loading';
 
-const Home = ({ loginUrl, appUrl }: { loginUrl: string, appUrl: string }) => {
+const Home = ({ loginUrl, appUrl }: { loginUrl: string; appUrl: string }) => {
   const router = useRouter();
 
   useEffect(() => {
@@ -46,7 +46,7 @@ export async function getServerSideProps(content: any) {
     props: {
       ...(await serviceSideProps(content)),
       loginUrl: process.env.LOGIN_URL || '/login',
-      appUrl: process.env.APP_URL || '/app/list',
+      appUrl: process.env.APP_URL || '/app/list'
     }
   };
 }

@@ -42,10 +42,6 @@ const nextConfig = {
     };
 
     return config;
-  },
-  experimental: {
-    serverComponentsExternalPackages: ['mongoose', 'winston', 'winston-mongodb', 'pg'],
-    outputFileTracingRoot: path.join(__dirname, '../../')
   }
 };
 

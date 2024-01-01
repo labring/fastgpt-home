@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 
 const NonePage = ({ appUrl }: { appUrl: string }) => {
   useEffect(() => {
-    window.location.href = "/";
+    window.location.href = '/';
   }, [appUrl]);
 
   return <div></div>;

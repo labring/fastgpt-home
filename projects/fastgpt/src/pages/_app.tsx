@@ -4,20 +4,12 @@ import Script from 'next/script';
 import Head from 'next/head';
 import { ChakraProvider, ColorModeScript } from '@chakra-ui/react';
 import { theme } from '@/web/styles/theme';
-import NProgress from 'nprogress'; //nprogress module
-import Router from 'next/router';
 import { appWithTranslation, useTranslation } from 'next-i18next';
 import { useRouter } from 'next/router';
 import { change2DefaultLng, setLngStore } from '@/web/common/utils/i18n';
 import { config } from '@/constants';
 
-import 'nprogress/nprogress.css';
 import '@/web/styles/reset.scss';
-
-//Binding events.
-Router.events.on('routeChangeStart', () => NProgress.start());
-Router.events.on('routeChangeComplete', () => NProgress.done());
-Router.events.on('routeChangeError', () => NProgress.done());
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();

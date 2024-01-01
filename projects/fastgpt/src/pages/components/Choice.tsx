@@ -57,6 +57,7 @@ const Choice = () => {
         {list.map((item) => (
           <MyTooltip key={item.title} label={item.tooltip}>
             <Flex
+              h={'100%'}
               alignItems={'flex-start'}
               border={theme.borders.md}
               borderRadius={'lg'}
@@ -78,7 +79,7 @@ const Choice = () => {
               >
                 <Image src={item.icon} w={'28px'} alt={''} loading={'lazy'} />
               </Flex>
-              <Box ml={5}>
+              <Box ml={5} lineHeight={'20px'}>
                 <Box fontSize={['lg', 'xl']} fontWeight={'bold'} color={'myGray.900'}>
                   {item.title}
                 </Box>

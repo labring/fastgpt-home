@@ -5,7 +5,7 @@ import CommunityModal from '@/components/CommunityModal';
 import { useSystemStore } from '@/web/common/system/useSystemStore';
 import MyIcon from '@/components/Icon';
 
-const Navbar = (props: {loginUrl: string, appUrl: string}) => {
+const Navbar = (props: { loginUrl: string; appUrl: string }) => {
   const { loginUrl, appUrl } = props;
   const { t } = useTranslation();
   const [scrollTop, setScrollTop] = useState(0);
@@ -106,7 +106,7 @@ const Navbar = (props: {loginUrl: string, appUrl: string}) => {
           小亦 AI
         </Box> */}
         <Box>
-          <Image src="/icon/logo-text.png" w={['80px', '160px']} alt='logo' />
+          <Image src="/icon/logo-text.png" w={['80px', '160px']} alt="logo" />
         </Box>
         <Box flex={1} />
         {isPc ? (
@@ -116,10 +116,22 @@ const Navbar = (props: {loginUrl: string, appUrl: string}) => {
                 {item.label}
               </Box>
             ))}
-            <Box {...menuStyles} onClick={() => {window.location.href = loginUrl}}>
+            <Box
+              {...menuStyles}
+              onClick={() => {
+                window.location.href = loginUrl;
+              }}
+            >
               {t('home.Login')}
             </Box>
-            <Button ml={4} h={'36px'} borderRadius={'3xl'} onClick={() => {window.location.href = appUrl}}>
+            <Button
+              ml={4}
+              h={'36px'}
+              borderRadius={'3xl'}
+              onClick={() => {
+                window.location.href = appUrl;
+              }}
+            >
               {t('home.Start Now')}
             </Button>
           </>
@@ -139,10 +151,10 @@ const Navbar = (props: {loginUrl: string, appUrl: string}) => {
             </Box>
           ))}
           <Box bg={'myGray.500'} h={'1.5px'} w={'20px'} mb={8} />
-          <Box mb={10} onClick={() => window.location.href = loginUrl}>
+          <Box mb={10} onClick={() => (window.location.href = loginUrl)}>
             {t('home.Login')}
           </Box>
-          <Button h={'36px'} borderRadius={'3xl'} onClick={() => window.location.href = appUrl}>
+          <Button h={'36px'} borderRadius={'3xl'} onClick={() => (window.location.href = appUrl)}>
             {t('home.Start Now')}
           </Button>
         </Box>

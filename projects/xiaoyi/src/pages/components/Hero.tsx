@@ -20,7 +20,7 @@ const Hero = ({ appUrl }: { appUrl: string }) => {
           borderRadius={'xl'}
           py={[2, 3]}
           w={'150px'}
-          onClick={() => window.location.href = appUrl}
+          onClick={() => (window.location.href = appUrl)}
         >
           {t('home.Start Now')}
         </Button>

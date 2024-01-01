@@ -30,7 +30,6 @@ const queryClient = new QueryClient({
   }
 });
 
-
 function App({ Component, pageProps }: AppProps) {
   const setScreenWidth = useSystemStore((state) => state.setScreenWidth);
 
@@ -38,31 +37,31 @@ function App({ Component, pageProps }: AppProps) {
     const resize = throttle(() => {
       setScreenWidth(document.documentElement.clientWidth);
     }, 300);
-  
+
     window.addEventListener('resize', resize);
-  
+
     resize();
-  
+
     return () => {
       window.removeEventListener('resize', resize);
     };
   }, [setScreenWidth]);
-  
+
   return (
     <>
       <Head>
-        <title>{"小亦 AI"}</title>
+        <title>{'小亦 AI'}</title>
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, viewport-fit=cover"
         />
-        <link rel="icon" href='/favicon.ico' />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <QueryClientProvider client={queryClient}>
         <ChakraProvider theme={theme}>
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />
-            <Component {...pageProps} />
+          <Component {...pageProps} />
         </ChakraProvider>
       </QueryClientProvider>
     </>

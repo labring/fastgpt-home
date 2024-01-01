@@ -46,9 +46,7 @@ function App({ Component, pageProps }: AppProps) {
         />
         <link rel="icon" href={'/favicon.ico'} />
       </Head>
-      {config?.scripts?.map((item, i) => (
-        <Script key={i} strategy="lazyOnload" {...item}></Script>
-      ))}
+      {config?.scripts?.map((item, i) => <Script key={i} strategy="lazyOnload" {...item}></Script>)}
 
       <ChakraProvider theme={theme}>
         <ColorModeScript initialColorMode={theme.config.initialColorMode} />

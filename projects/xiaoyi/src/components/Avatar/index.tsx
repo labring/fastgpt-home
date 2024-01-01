@@ -2,8 +2,7 @@ import React from 'react';
 import { Image } from '@chakra-ui/react';
 import type { ImageProps } from '@chakra-ui/react';
 
-
-const LOGO_ICON = `/icon/logo.svg`
+const LOGO_ICON = `/icon/logo.svg`;
 const Avatar = ({ w = '30px', src, ...props }: ImageProps) => {
   return (
     <Image

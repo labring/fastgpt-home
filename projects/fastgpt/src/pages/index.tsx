@@ -9,9 +9,6 @@ import Choice from './components/Choice';
 import Footer from './components/Footer';
 
 const Home = () => {
-
-  
-
   return (
     <>
       <Box id="home" bg={'myWhite.600'} h={'100vh'} overflowY={'auto'} overflowX={'hidden'}>

@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import React, { useEffect } from 'react';
 
 const share = ({ cloudDomain }: { cloudDomain: string }) => {
@@ -10,9 +11,10 @@ const share = ({ cloudDomain }: { cloudDomain: string }) => {
   return <div>Waiting</div>;
 };
 
-export const getServerSideProps = async (context: any) => {
+export const getServerSideProps = async ({ locale }: any) => {
   return {
     props: {
+      ...(await serverSideTranslations(locale)),
       cloudDomain: process.env.CLOUD_DOMAIN
     }
   };

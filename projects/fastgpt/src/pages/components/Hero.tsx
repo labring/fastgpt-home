@@ -8,7 +8,8 @@ import { config } from '@/constants';
 
 const Hero = () => {
   const router = useRouter();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lng = i18n.resolvedLanguage;
   const [star, setStar] = useState(7900);
   const [showVideo, setShowVide] = useState(false);
   const [isPc] = useMediaQuery('(min-width: 900px)');
@@ -22,7 +23,12 @@ const Hero = () => {
 
   return (
     <Flex flexDirection={'column'} pt={['24px', '50px']} alignItems={'center'} userSelect={'none'}>
-      <Box fontSize={['38px', '54px']} fontWeight={'bold'}>
+      <Box
+        fontSize={['38px', '54px']}
+        fontWeight={'bold'}
+        textAlign={'center'}
+        whiteSpace={'pre-wrap'}
+      >
         {t('home.slogan')}
       </Box>
       <Box fontSize={['xl', '2xl']} py={5} color={'myGray.600'} textAlign={'center'} maxW={'400px'}>
@@ -63,7 +69,7 @@ const Hero = () => {
       <Box mt={['', '-50px']} position={'relative'}>
         <Image
           minH={['auto', '400px']}
-          src={isPc ? '/imgs/home/videobgpc.png' : '/imgs/home/videobgphone.png'}
+          src={isPc ? `/imgs/home/${lng}/videobgpc.png` : `/imgs/home/${lng}/videobgphone.png`}
           mx={['-10%', 'auto']}
           maxW={['120%', '1000px']}
           alt=""

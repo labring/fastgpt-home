@@ -792,12 +792,12 @@
     "Start Now": "Start Now",
     "Visual AI orchestration": "Visual AI orchestration",
     "Why FastGPT": "Why FastGPT",
-    "desc": "AI knowledge base question and answer platform based on LLM large model",
+    "desc": "AI knowledge base building platform based on LLM large model",
     "navbar": {
       "Use guidance": "Use Guidance",
       "chatbot": "Chatbot"
     },
-    "slogan": "Let the AI know more about you"
+    "slogan": "Enable AI to better \nUnderstand your knowledge"
   },
   "module": {
     "Confirm Delete Module": "Confirm to delete the custom module?",

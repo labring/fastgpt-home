@@ -5,7 +5,8 @@ import { MyImage } from '@/components/MyImage';
 
 const Ability = () => {
   const theme = useTheme();
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const lng = i18n.resolvedLanguage;
 
   const CardStyles: BoxProps = {
     pt: 4,
@@ -37,7 +38,7 @@ const Ability = () => {
       >
         {t('home.FastGPT Ability')}
       </Box>
-      <Grid px={[5, 0]} minH={'400px'} gridTemplateColumns={['1fr', `500px 1fr`]} gridGap={6}>
+      <Grid px={[5, 0]} gridTemplateColumns={['1fr', `500px 1fr`]} gridGap={6}>
         <Box
           {...CardStyles}
           backgroundImage={'linear-gradient(to bottom right, #00A9A6 0%, #33BABB 100%)'}
@@ -48,7 +49,7 @@ const Ability = () => {
           <Box {...DescStyles} color={'rgba(255,255,255,0.9)'}>
             {t('home.AI Assistant Desc')}
           </Box>
-          <MyImage src="/imgs/home/ai_assiatant.png" alt={''} transform={'translateX(20px)'} />
+          <MyImage borderRadius={'none'} src={`/imgs/home/${lng}/ai_assiatant.png`} alt={''} />
         </Box>
         <Box
           {...CardStyles}
@@ -61,22 +62,21 @@ const Ability = () => {
           <Box {...DescStyles} color={'rgba(255,255,255,0.9)'}>
             {t('home.Dateset Desc')}
           </Box>
-          <MyImage src="/imgs/home/dataset_import.png" w={'90%'} mx={'auto'} borderRadius={'lg'} />
+          <MyImage
+            src={`/imgs/home/${lng}/dataset_import.png`}
+            w={'90%'}
+            mx={'auto'}
+            borderRadius={'lg'}
+          />
         </Box>
       </Grid>
-      <Grid
-        mt={6}
-        px={[5, 0]}
-        minH={'400px'}
-        gridTemplateColumns={['1fr', `1fr 500px`]}
-        gridGap={6}
-      >
+      <Grid mt={6} px={[5, 0]} gridTemplateColumns={['1fr', `1fr 500px`]} gridGap={6}>
         <Box {...CardStyles} backgroundImage={'linear-gradient(to top, #6a85b6 0%, #bac8e0 100%)'}>
           <Box {...TitleStyles}>{t('home.Advanced Settings')}</Box>
           <Box {...DescStyles} fontSize={['sm', 'md']}>
             {t('home.Advanced Settings Desc')}
           </Box>
-          <MyImage src="/imgs/home/advanced_settings.png" alt={''} w={'100%'} />
+          <MyImage src={`/imgs/home/${lng}/advanced_settings.png`} alt={''} w={'90%'} mx={'auto'} />
         </Box>
         <Box
           {...CardStyles}
@@ -85,13 +85,7 @@ const Ability = () => {
         >
           <Box {...TitleStyles}>{t('home.OpenAPI')}</Box>
           <Box {...DescStyles}>{t('home.OpenAPI Desc')}</Box>
-          <MyImage
-            src="/imgs/home/openapi.png"
-            alt={''}
-            w={'90%'}
-            mx={'auto'}
-            borderRadius={'lg'}
-          />
+          <MyImage borderRadius={'none'} src={`/imgs/home/${lng}/openapi.png`} alt={''} />
         </Box>
       </Grid>
     </Box>

@@ -22,19 +22,21 @@ const Hero = () => {
   }, []);
 
   return (
-    <Flex flexDirection={'column'} pt={['24px', '50px']} alignItems={'center'} userSelect={'none'}>
-      <Box
-        fontSize={['38px', '54px']}
-        fontWeight={'bold'}
-        textAlign={'center'}
-        whiteSpace={'pre-wrap'}
-      >
+    <Flex
+      flexDirection={'column'}
+      pt={['24px', '50px']}
+      alignItems={'center'}
+      userSelect={'none'}
+      whiteSpace={'pre-wrap'}
+      lineHeight={1.2}
+    >
+      <Box fontSize={['38px', '48px']} fontWeight={'bold'} textAlign={'center'}>
         {t('home.slogan')}
       </Box>
-      <Box fontSize={['xl', '2xl']} py={5} color={'myGray.600'} textAlign={'center'} maxW={'400px'}>
+      <Box fontSize={['xl', '2xl']} py={8} color={'myGray.600'} textAlign={'center'} maxW={'400px'}>
         {t('home.desc')}
       </Box>
-      <Flex zIndex={1} flexDirection={['column', 'row']} mt={[5, 8]}>
+      <Flex zIndex={1} flexDirection={['column', 'row']} mt={5}>
         <Button
           mr={[0, 5]}
           mb={[5, 0]}
@@ -70,8 +72,9 @@ const Hero = () => {
         <Image
           minH={['auto', '400px']}
           src={isPc ? `/imgs/home/${lng}/videobgpc.png` : `/imgs/home/${lng}/videobgphone.png`}
-          mx={['-10%', 'auto']}
-          maxW={['120%', '1000px']}
+          mx={['0', 'auto']}
+          minW={['100%', '800px']}
+          maxW={['100%', '1000px']}
           alt=""
           draggable={false}
           loading={'lazy'}
@@ -81,6 +84,7 @@ const Hero = () => {
           position={'absolute'}
           w={['30px', '40px']}
           cursor={'pointer'}
+          mt={['-10px', 0]}
           left={'50%'}
           top={'50%'}
           color={'#363c42b8'}

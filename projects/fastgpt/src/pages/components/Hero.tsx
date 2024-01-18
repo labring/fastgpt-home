@@ -30,7 +30,7 @@ const Hero = () => {
       whiteSpace={'pre-wrap'}
       lineHeight={1.2}
     >
-      <Box fontSize={['34px', '48px']} fontWeight={'bold'} textAlign={'center'}>
+      <Box fontSize={['28px', '48px']} fontWeight={'bold'} textAlign={'center'}>
         {t('home.slogan')}
       </Box>
       <Box

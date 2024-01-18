@@ -1,22 +1,15 @@
 import React, { useState } from 'react';
-import { Image, Skeleton, ImageProps } from '@chakra-ui/react';
+import { Image, Skeleton, ImageProps, Box } from '@chakra-ui/react';
 
 export const MyImage = (props: ImageProps) => {
   const [isLoading, setIsLoading] = useState(true);
   const [succeed, setSucceed] = useState(false);
   return (
-    <Skeleton
-      minH="100px"
-      isLoaded={!isLoading}
-      fadeDuration={2}
-      display={'flex'}
-      justifyContent={'center'}
-      my={1}
-    >
+    <Box mx={'auto'} display={'inline-block'}>
       <Image
-        display={'inline-block'}
         borderRadius={'md'}
         alt={''}
+        minH={'150px'}
         fallbackSrc={'/imgs/errImg.png'}
         fallbackStrategy={'onError'}
         cursor={succeed ? 'pointer' : 'default'}
@@ -33,7 +26,7 @@ export const MyImage = (props: ImageProps) => {
         }}
         {...props}
       />
-    </Skeleton>
+    </Box>
   );
 };
 

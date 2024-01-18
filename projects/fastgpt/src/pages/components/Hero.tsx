@@ -30,10 +30,16 @@ const Hero = () => {
       whiteSpace={'pre-wrap'}
       lineHeight={1.2}
     >
-      <Box fontSize={['38px', '48px']} fontWeight={'bold'} textAlign={'center'}>
+      <Box fontSize={['34px', '48px']} fontWeight={'bold'} textAlign={'center'}>
         {t('home.slogan')}
       </Box>
-      <Box fontSize={['xl', '2xl']} py={8} color={'myGray.600'} textAlign={'center'} maxW={'400px'}>
+      <Box
+        fontSize={['xl', '2xl']}
+        py={8}
+        color={'myGray.600'}
+        textAlign={'center'}
+        maxW={['250px', '100%']}
+      >
         {t('home.desc')}
       </Box>
       <Flex zIndex={1} flexDirection={['column', 'row']} mt={5}>

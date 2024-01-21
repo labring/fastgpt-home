@@ -1,8 +1,13 @@
 import React, { useEffect } from 'react';
 import { Box } from '@chakra-ui/react';
+import { useRouter } from 'next/router';
 
 const NonePage = () => {
-  return <Box>404</Box>;
+  const router = useRouter();
+  useEffect(() => {
+    router.push('/');
+  }, []);
+  return <Box></Box>;
 };
 
 export default NonePage;

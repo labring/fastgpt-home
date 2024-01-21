@@ -11,10 +11,12 @@ import Footer from './components/Footer';
 const Home = ({
   beian,
   docUrl,
+  statusUrl,
   cloudDomain
 }: {
   beian: string;
   docUrl: string;
+  statusUrl: string;
   cloudDomain: string;
 }) => {
   return (
@@ -31,7 +33,7 @@ const Home = ({
           </Box>
         </Box>
         <Box bg={'white'}>
-          <Footer beian={beian} docUrl={docUrl} cloudDomain={cloudDomain} />
+          <Footer beian={beian} docUrl={docUrl} statusUrl={statusUrl} cloudDomain={cloudDomain} />
         </Box>
       </Box>
     </>
@@ -43,6 +45,7 @@ export async function getStaticProps({ locale }: any) {
     props: {
       beian: process.env.BEIAN || '',
       docUrl: process.env.DOC_URL || '',
+      statusUrl: process.env.STATUS_URL || '',
       cloudDomain: process.env.CLOUD_DOMAIN || 'https://cloud.fastgpt.in',
       ...(await serverSideTranslations(locale))
     }

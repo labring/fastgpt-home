@@ -9,10 +9,12 @@ import axios from 'axios';
 const Footer = ({
   beian,
   docUrl,
+  statusUrl,
   cloudDomain
 }: {
   beian: string;
   docUrl: string;
+  statusUrl: string;
   cloudDomain: string;
 }) => {
   const { t } = useTranslation();
@@ -62,11 +64,19 @@ const Footer = ({
             onClick: () => {
               onOpen();
             }
-          }
+          },
+          ...(statusUrl
+            ? [
+                {
+                  label: t('home.Service status'),
+                  url: statusUrl
+                }
+              ]
+            : [])
         ]
       }
     ],
-    [onOpen, t]
+    [cloudDomain, docUrl, onOpen, statusUrl, t]
   );
 
   return (

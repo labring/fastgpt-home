@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const NonePage = () => {
   const router = useRouter();
   useEffect(() => {
-    router.push('/');
+    router.replace('/');
   }, []);
   return <Box></Box>;
 };

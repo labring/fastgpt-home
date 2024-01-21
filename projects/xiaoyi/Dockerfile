@@ -21,6 +21,7 @@ COPY --from=deps /app/node_modules ./node_modules
 
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV PORT=3000
 RUN pnpm install
 RUN pnpm run build
 
@@ -45,6 +46,7 @@ copy --from=builder --chown=nextjs:nodejs /app/.next/standalone ./.next/standalo
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV PORT=3000
 ENV PORT=3000
 
 EXPOSE 3000

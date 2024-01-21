@@ -29,8 +29,8 @@ FROM node:18.15-alpine AS runner
 WORKDIR /app
 
 # create user and use it
-RUN addgroup --system --gid 1001 nodejs
-RUN adduser --system --uid 1001 nextjs
+RUN addgroup --system nodejs --gid 1001
+RUN adduser --system nextjs --uid 1001
 
 RUN sed -i 's/https/http/' /etc/apk/repositories
 RUN apk add curl \
@@ -52,6 +52,10 @@ ENV PORT=3000
 EXPOSE 3000
 
 USER nextjs
+
+ENV serverPath=./server.js
+
+ENTRYPOINT ["sh","-c","node ${serverPath}"]
 
 ENV serverPath=./server.js
 

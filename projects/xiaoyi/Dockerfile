@@ -36,11 +36,12 @@ RUN apk add curl \
   && apk add ca-certificates \
   && update-ca-certificates
 
-# copy running files
+# copy necessary files and directories to the Docker image
 COPY --from=builder /app/public ./public
 COPY --from=builder /app/next.config.js ./next.config.js
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+copy --from=builder --chown=nextjs:nodejs /app/.next/standalone ./.next/standalone
 
 ENV NODE_ENV production
 ENV NEXT_TELEMETRY_DISABLED 1

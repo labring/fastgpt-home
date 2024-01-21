@@ -7,18 +7,24 @@ import Hero from './components/Hero';
 import Ability from './components/Ability';
 import Choice from './components/Choice';
 import Footer from './components/Footer';
+import { UserConfig } from 'next-i18next';
 
-const Home = ({
-  beian,
-  docUrl,
-  statusUrl,
-  cloudDomain
-}: {
+const Home = (e: {
+  _nextI18Next?:
+    | {
+        initialI18nStore: any;
+        initialLocale: string;
+        ns: string[];
+        userConfig: UserConfig | null;
+      }
+    | undefined;
   beian: string;
   docUrl: string;
   statusUrl: string;
   cloudDomain: string;
 }) => {
+  const { beian, docUrl, statusUrl, cloudDomain } = e;
+
   return (
     <>
       <Box id="home" bg={'myWhite.600'} h={'100vh'} overflowY={'auto'} overflowX={'hidden'}>

@@ -2,6 +2,9 @@ import { Box, Image, Flex, Grid, useTheme } from '@chakra-ui/react';
 import React from 'react';
 import { useTranslation } from 'next-i18next';
 import MyTooltip from '@/components/MyTooltip';
+import React from 'react';
+import { useTranslation } from 'next-i18next';
+import MyTooltip from '@/components/MyTooltip';
 
 const Choice = () => {
   const theme = useTheme();
@@ -13,30 +16,49 @@ const Choice = () => {
       title: t('home.Choice Open'),
       desc: t('home.Choice Open Desc'),
       tooltip: '前往 GitHub',
-      onClick: () => window.open('https://github.com/labring/FastGPT', '_blank')
+      onClick: () => window.open('https://github.com/labring/FastGPT', '_blank'),
+      title: t('home.Choice Open'),
+      desc: t('home.Choice Open Desc'),
+      tooltip: '前往 GitHub',
+      onClick: () => window.open('https://github.com/labring/FastGPT', '_blank'),
     },
     {
       icon: '/imgs/home/icon_2.svg',
+      title: t('home.Choice QA'),
+      desc: t('home.Choice QA Desc'),
+      tooltip: 'Some tooltip text',
       title: t('home.Choice QA'),
       desc: t('home.Choice QA Desc')
     },
     {
       icon: '/imgs/home/icon_3.svg',
       title: t('home.Choice Visual'),
+      desc: t('home.Choice Visual Desc'),
+      tooltip: 'Some tooltip text',
+      title: t('home.Choice Visual'),
       desc: t('home.Choice Visual Desc')
     },
     {
       icon: '/imgs/home/icon_4.svg',
+      title: t('home.Choice Extension'),
+      desc: t('home.Choice Extension Desc'),
+      tooltip: 'Some tooltip text',
       title: t('home.Choice Extension'),
       desc: t('home.Choice Extension Desc')
     },
     {
       icon: '/imgs/home/icon_5.svg',
       title: t('home.Choice Debug'),
+      desc: t('home.Choice Debug Desc'),
+      tooltip: 'Some tooltip text',
+      title: t('home.Choice Debug'),
       desc: t('home.Choice Debug Desc')
     },
     {
       icon: '/imgs/home/icon_6.svg',
+      title: t('home.Choice Models'),
+      desc: t('home.Choice Models Desc'),
+      tooltip: 'Some tooltip text',
       title: t('home.Choice Models'),
       desc: t('home.Choice Models Desc')
     }

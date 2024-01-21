@@ -751,7 +751,7 @@
   },
   "home": {
     "AI Assistant": "AI Assistant",
-    "AI Assistant Desc": "Both internally and externally, AI will be available to your users 24 hours a day",
+    "AI Assistant Description": "Both internally and externally, AI will be available to your users 24 hours a day",
     "Advanced Settings": "Flow Settings",
     "Advanced Settings Desc": "Flow based process orchestration mode, let your AI easily achieve database query, IO operation, networking communication and other expansion capabilities",
     "Choice Debug": "Convenient Debugging",
@@ -789,7 +789,7 @@
     "OpenAPI": "OpenAPI",
     "OpenAPI Desc": "External interface consistent with GPT API to help you easily access existing applications",
     "Quickly build AI question and answer library": "Quickly build AI question and answer library",
-    "Service status": "Service status",
+    "Service Status": "Service status",
     "Start Now": "Start Now",
     "Visual AI orchestration": "Visual AI orchestration",
     "Why FastGPT": "Why FastGPT",
@@ -859,7 +859,7 @@
   },
   "plugin": {
     "Confirm Delete": "Confirm to delete the plugin?",
-    "Create Your Plugin": "Create Plugin",
+    "Create Plugin": "Create Plugin",
     "Get Plugin Module Detail Failed": "Get plugin detail failed",
     "Intro": "Plugin Intro",
     "Load Plugin Failed": "Load Plugin Failed",

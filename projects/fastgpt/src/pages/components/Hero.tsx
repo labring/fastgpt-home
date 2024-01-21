@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import axios from 'axios';
 import { config } from '@/constants';
 
-const Hero = () => {
+const Hero = ({ cloudDomain }: { cloudDomain: string }) => {
   const router = useRouter();
   const { t, i18n } = useTranslation();
   const lng = i18n.resolvedLanguage;
@@ -69,7 +69,7 @@ const Hero = () => {
           borderRadius={'xl'}
           py={[2, 3]}
           w={'150px'}
-          onClick={() => window.open(config?.startUrl, '_self')}
+          onClick={() => window.open(`${cloudDomain}${config?.startUrl}`, '_self')}
         >
           {t('home.Start Now')}
         </Button>

@@ -8,22 +8,30 @@ import Ability from './components/Ability';
 import Choice from './components/Choice';
 import Footer from './components/Footer';
 
-const Home = () => {
+const Home = ({
+  beian,
+  docUrl,
+  cloudDomain
+}: {
+  beian: string;
+  docUrl: string;
+  cloudDomain: string;
+}) => {
   return (
     <>
       <Box id="home" bg={'myWhite.600'} h={'100vh'} overflowY={'auto'} overflowX={'hidden'}>
         <Box position={'fixed'} zIndex={10} top={0} left={0} right={0}>
-          <Navbar />
+          <Navbar docUrl={docUrl} cloudDomain={cloudDomain} />
         </Box>
         <Box maxW={'1200px'} pt={'70px'} m={'auto'}>
-          <Hero />
+          <Hero cloudDomain={cloudDomain} />
           <Ability />
           <Box my={[4, 6]}>
             <Choice />
           </Box>
         </Box>
         <Box bg={'white'}>
-          <Footer />
+          <Footer beian={beian} docUrl={docUrl} cloudDomain={cloudDomain} />
         </Box>
       </Box>
     </>
@@ -33,6 +41,9 @@ const Home = () => {
 export async function getStaticProps({ locale }: any) {
   return {
     props: {
+      beian: process.env.BEIAN || '',
+      docUrl: process.env.DOC_URL || '',
+      cloudDomain: process.env.CLOUD_DOMAIN || 'https://cloud.fastgpt.in',
       ...(await serverSideTranslations(locale))
     }
   };

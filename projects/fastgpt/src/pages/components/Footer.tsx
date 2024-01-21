@@ -1,13 +1,23 @@
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo } from 'react';
 import { Box, Flex, Link, useDisclosure } from '@chakra-ui/react';
 import { useTranslation } from 'next-i18next';
 import Avatar from '@/components/Avatar';
 import CommunityModal from '@/components/CommunityModal';
 import { config } from '@/constants';
+import axios from 'axios';
 
-const Footer = () => {
+const Footer = ({
+  beian,
+  docUrl,
+  cloudDomain
+}: {
+  beian: string;
+  docUrl: string;
+  cloudDomain: string;
+}) => {
   const { t } = useTranslation();
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const list = useMemo(
     () => [
       {
@@ -15,7 +25,7 @@ const Footer = () => {
         child: [
           {
             label: t('home.Footer FastGPT Cloud'),
-            url: config?.loginUrl
+            url: `${cloudDomain}${config?.loginUrl}`
           },
           {
             label: 'Sealos',
@@ -36,7 +46,7 @@ const Footer = () => {
           },
           {
             label: t('home.Footer Docs'),
-            url: config?.docUrl
+            url: docUrl
           }
         ]
       },
@@ -84,6 +94,12 @@ const Footer = () => {
         <Box mt={5} fontSize={'sm'} color={'myGray.600'} maxW={'380px'} textAlign={'justify'}>
           {t('home.FastGPT Desc')}
         </Box>
+
+        {!!beian && (
+          <Link href="https://beian.miit.gov.cn/" target="_blank" mt={2} fontSize={'sm'}>
+            {beian}
+          </Link>
+        )}
       </Box>
       {list.map((item) => (
         <Box key={item.label} w={'200px'} mt={[5, 0]}>
@@ -113,6 +129,7 @@ const Footer = () => {
           )}
         </Box>
       ))}
+
       {isOpen && <CommunityModal onClose={onClose} />}
     </Box>
   );

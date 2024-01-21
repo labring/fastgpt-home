@@ -6,7 +6,7 @@ import CommunityModal from '@/components/CommunityModal';
 import MyIcon from '@/components/Icon';
 import { config } from '@/constants';
 
-const Navbar = () => {
+const Navbar = ({ cloudDomain, docUrl }: { cloudDomain: string; docUrl: string }) => {
   const { t } = useTranslation();
   const [scrollTop, setScrollTop] = useState(0);
   const {
@@ -36,7 +36,7 @@ const Navbar = () => {
       label: t('home.Docs'),
       key: 'docs',
       onClick: () => {
-        window.open(config?.docUrl);
+        window.open(docUrl);
       }
     }
   ];
@@ -106,14 +106,17 @@ const Navbar = () => {
             <Box px={4} color={'myGray.500'}>
               |
             </Box>
-            <Box {...menuStyles} onClick={() => window.open(config?.loginUrl, '_self')}>
+            <Box
+              {...menuStyles}
+              onClick={() => window.open(`${cloudDomain}${config?.loginUrl}`, '_self')}
+            >
               {t('home.Login')}
             </Box>
             <Button
               ml={4}
               h={'36px'}
               borderRadius={'3xl'}
-              onClick={() => window.open(config?.startUrl, '_self')}
+              onClick={() => window.open(`${cloudDomain}${config?.startUrl}`, '_self')}
             >
               {t('home.Start Now')}
             </Button>
@@ -134,13 +137,13 @@ const Navbar = () => {
             </Box>
           ))}
           <Box bg={'myGray.500'} h={'1.5px'} w={'20px'} mb={8} />
-          <Box mb={10} onClick={() => window.open(config?.loginUrl, '_self')}>
+          <Box mb={10} onClick={() => window.open(`${cloudDomain}${config?.loginUrl}`, '_self')}>
             {t('home.Login')}
           </Box>
           <Button
             h={'36px'}
             borderRadius={'3xl'}
-            onClick={() => window.open(config?.startUrl, '_self')}
+            onClick={() => window.open(`${cloudDomain}${config?.startUrl}`, '_self')}
           >
             {t('home.Start Now')}
           </Button>

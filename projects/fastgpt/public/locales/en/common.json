@@ -789,6 +789,7 @@
     "OpenAPI": "OpenAPI",
     "OpenAPI Desc": "External interface consistent with GPT API to help you easily access existing applications",
     "Quickly build AI question and answer library": "Quickly build AI question and answer library",
+    "Service status": "Service status",
     "Start Now": "Start Now",
     "Visual AI orchestration": "Visual AI orchestration",
     "Why FastGPT": "Why FastGPT",
@@ -870,6 +871,7 @@
     "To Edit Plugin": "To Edit",
     "Update Your Plugin": "Update Plugin"
   },
+  "service status": "Service Status",
   "support": {
     "user": {
       "Price": "Price",

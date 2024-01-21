@@ -789,6 +789,7 @@
     "OpenAPI": "OpenAPI",
     "OpenAPI Desc": "与 GPT API 一致的对外接口，助你轻松接入已有应用",
     "Quickly build AI question and answer library": "快速搭建 AI 问答系统",
+    "Service status": "服务状态",
     "Start Now": "立即开始",
     "Visual AI orchestration": "可视化 AI 编排",
     "Why FastGPT": "为什么选择 FastGPT",
@@ -870,6 +871,7 @@
     "To Edit Plugin": "去编辑",
     "Update Your Plugin": "更新插件"
   },
+  "service status": "服务状态",
   "support": {
     "user": {
       "Price": "计费标准",

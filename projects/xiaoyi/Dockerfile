@@ -1,7 +1,7 @@
 # Install dependencies only when needed
 FROM node:18.15-alpine AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
-RUN apk add libc6-compat curl ca-certificates && apk update && update-ca-certificates
+RUN apk add libc6-compat curl ca-certificatesRUN apk update && update-ca-certificates
 WORKDIR /app
 
 # copy packages and one project
@@ -34,6 +34,8 @@ RUN adduser --system nextjs --uid 1001
 
 RUN sed -i 's/https/http/' /etc/apk/repositories
 RUN apk add curl \
+  && apk add ca-certificates \
+  && update-ca-certificates
   && apk add ca-certificates \
   && update-ca-certificates
 

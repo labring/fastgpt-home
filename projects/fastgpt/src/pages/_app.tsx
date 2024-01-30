@@ -13,7 +13,7 @@ import '@/web/styles/reset.scss';
 
 function App({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   useEffect(() => {
     // get default language
@@ -28,10 +28,7 @@ function App({ Component, pageProps }: AppProps) {
     <>
       <Head>
         <title>FastGPT</title>
-        <meta
-          name="description"
-          content={`FastGPT 是一个大模型应用编排系统，提供开箱即用的数据处理、模型调用等能力，可以快速的构建知识库并通过 Flow 可视化进行工作流编排，实现复杂的知识库场景！`}
-        />
+        <meta name="description" content={t('meta desc')} />
         <meta
           name="viewport"
           content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no, viewport-fit=cover"

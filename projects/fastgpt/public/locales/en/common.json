@@ -800,6 +800,7 @@
     },
     "slogan": "Improving AI's Ability\nTo Grasp Your Knowledge"
   },
+  "meta desc": "FastGPT is a knowledge-based platform built on the LLM, offers out-of-the-box data processing and model invocation capabilities, allows for workflow orchestration through Flow visualization!",
   "module": {
     "Confirm Delete Module": "Confirm to delete the custom module?",
     "Confirm Sync Plugin": "Confirm the latest sync plugin information? The plug-in connection and input content will be cleared, please confirm!",

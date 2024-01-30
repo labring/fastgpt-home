@@ -3,9 +3,20 @@ const { i18n } = require('./next-i18next.config');
 
 const nextConfig = {
   i18n,
-  // output: 'export',
+  output: process.env.OUTPUT_MODE,
   reactStrictMode: process.env.NODE_ENV === 'development' ? false : true,
   compress: true,
+
+  async rewrites() {
+    return process.env.OUTPUT_MODE === 'standalone'
+      ? [
+          {
+            source: '/standalone',
+            destination: '/'
+          }
+        ]
+      : [];
+  },
 
   webpack(config, { isServer }) {
     config.module = {

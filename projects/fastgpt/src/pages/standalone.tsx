@@ -47,7 +47,7 @@ const Home = (e: {
 };
 export default Home;
 
-export const getStaticProps = async ({ locale }: any) => {
+export const getServerSideProps = async ({ locale }: any) => {
   return {
     props: {
       beian: process.env.BEIAN || '',

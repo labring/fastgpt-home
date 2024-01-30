@@ -21,6 +21,7 @@ COPY --from=deps /app/node_modules ./node_modules
 
 # Uncomment the following line in case you want to disable telemetry during the build.
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV OUTPUT_MODE standalone
 RUN npm install -g pnpm
 RUN pnpm run build
 

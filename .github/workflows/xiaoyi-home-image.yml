@@ -1,9 +1,9 @@
-name: Build fastgpt page images in Personal warehouse
+name: Build xiaoyi page images in Personal warehouse
 on:
   workflow_dispatch:
   push:
     paths:
-      - 'projects/fastgpt/**'
+      - 'projects/xiaoyi/**'
     branches:
       - 'main'
 jobs:
@@ -33,12 +33,12 @@ jobs:
           password: ${{ secrets.GH_PAT }}
       - name: Set DOCKER_REPO_TAGGED based on branch or tag
         run: |
-          echo "DOCKER_REPO_TAGGED=ghcr.io/${{ github.repository_owner }}/fastgpt-home:latest" >> $GITHUB_ENV
+          echo "DOCKER_REPO_TAGGED=ghcr.io/${{ github.repository_owner }}/fastgpt-home:xiaoyi" >> $GITHUB_ENV
       - name: Build and publish image for main branch or tag push event
         env:
           DOCKER_REPO_TAGGED: ${{ env.DOCKER_REPO_TAGGED }}
         run: |
-          cd projects/fastgpt && docker buildx build \
+          cd projects/xiaoyi && docker buildx build \
           --label "org.opencontainers.image.source=https://github.com/${{ github.repository_owner }}/FastGPT" \
           --label "org.opencontainers.image.description=fastgpt-home image" \
           --push \

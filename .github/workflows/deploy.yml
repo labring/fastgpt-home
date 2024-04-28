@@ -1,0 +1,28 @@
+name: github pages
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'projects/fastgpt/**'
+    branches:
+      - 'main'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build
+        run: |
+          cd projects/fastgpt
+          npm install
+          npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./projects/fastgpt/out

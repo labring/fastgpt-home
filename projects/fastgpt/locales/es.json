@@ -1,0 +1,63 @@
+{
+  "video": {
+    "speed": "Velocidad",  
+    "normal": "Normal"
+  },
+  "links": [
+    {
+      "label": "Características",
+      "href": "#Ability" 
+    },
+    {
+      "label": "Precios",
+      "href": "#Pricing"
+    },
+    {
+      "label": "Preguntas frecuentes",
+      "href": "#FAQ"
+    },
+    {
+      "label": "Documentación",
+      "href": "https://doc.fastai.site/" 
+    }
+  ],
+  "Hero": {
+    "title1": "Potencia la IA",
+    "title2": "",
+    "title3": "con Tu Conocimiento",
+    "description": "FastGPT es una plataforma de código abierto para construir bases de conocimiento de IA impulsada por modelos de lenguaje grandes (LLM). Ofrece capacidades listas para usar de procesamiento de datos, invocación de modelos, recuperación de RAG y orquestación de flujos de trabajo visuales de IA, permitiéndote crear fácilmente soluciones sofisticadas de preguntas y respuestas adaptadas a tu dominio."
+  },
+  "SocialProof": {
+    "maker": "Los desarrolladores están aprovechando FastGPT para crear sus propias bases de conocimiento especializadas de IA"
+  },
+  "Feature": {
+    "title": "Ventajas Clave de FastGPT",
+    "description": "¿Por qué elegir FastGPT para tus necesidades de base de conocimiento de IA?"
+  },
+  "Ability": {
+    "title": "Listo para Implementar"
+  },
+  "Pricing": {
+    "title": "Precios",
+    "title2": "Aprobado para Uso Comercial",
+    "description": "FastGPT es una plataforma de base de conocimiento de IA de código abierto y completamente gratuita.",
+    "doYouLike": "¿Disfrutas de esta solución de base de conocimiento de IA de código abierto?",
+    "follow": "Muestra tu aprecio con una estrella 🌟"
+  },
+  "FAQ": {
+    "title": "Preguntas Frecuentes",
+    "description": "Encuentra aquí respuestas a las consultas más comunes."
+  },
+  "CTA": {
+    "title": "Comienza Hoy a Construir Tu Base de Conocimiento Específica de Dominio",
+    "description1": "Crea",
+    "description2": "tu propio soporte al cliente impulsado por IA,",
+    "description3": "intégralo con",
+    "description4": "tus productos, y",
+    "description5": "acelera",
+    "description6": "tu crecimiento!"
+  },
+  "CTAButton": {
+    "title": "Comienza Ahora"
+  }
+}

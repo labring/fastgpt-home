@@ -1,0 +1,67 @@
+{
+  "video": {
+    "speed": "速度",
+    "normal": "正常"
+  },
+  "links": [
+    {
+      "label": "特性",
+      "href": "#Ability"
+    },
+    {
+      "label": "价格",
+      "href": "#Pricing"
+    },
+    {
+      "label": "FAQ",
+      "href": "#FAQ"
+    },
+    {
+      "label": "文档",
+      "href": "https://doc.fastai.site/"
+    },
+    {
+      "label": "商务咨询",
+      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud"
+    }
+  ],
+  "Hero": {
+    "title1": "让",
+    "title2": "AI",
+    "title3": "更懂您的知识",
+    "description": "基于 LLM 大模型的开源 AI 知识库构建平台。提供了开箱即用的数据处理、模型调用、RAG 检索、可视化 AI 工作流编排等能力，帮助您轻松实现复杂的问答场景。"
+  },
+  "SocialProof": {
+    "maker": "用户正在使用 FastGPT 构建专属 AI 知识库"
+  },
+  "Feature": {
+    "title": "优势",
+    "description": "为什么选择 FastGPT？"
+  },
+  "Ability": {
+    "title": "开箱即用"
+  },
+  "Pricing": {
+    "title": "定价",
+    "title2": "允许被用于商业化",
+    "description": "这是一个开源的、免费的 AI 知识库平台。",
+    "doYouLike": "你喜欢这个开源 AI 知识库平台吗？",
+    "follow": "点个 Star 吧🌟"
+  },
+  "FAQ": {
+    "title": "问题解答",
+    "description": "这里有一些最常见的问题。"
+  },
+  "CTA": {
+    "title": "立即构建您的专有领域知识库",
+    "description1": "构建",
+    "description2": "您的专属 AI 客服，",
+    "description3": "接入",
+    "description4": "您的产品，并开始",
+    "description5": "快速增长",
+    "description6": "！"
+  },
+  "CTAButton": {
+    "title": "开始使用"
+  }
+}

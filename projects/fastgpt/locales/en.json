@@ -25,7 +25,7 @@
     "title1": "Empower",
     "title2": "AI",
     "title3": "with Your Expertise",
-    "description": "A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex Q&A systems."
+    "description": "A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex LLM applications."
   },
   "SocialProof": {
     "maker": "Users are leveraging FastGPT to create their own specialized AI knowledge bases"
@@ -55,7 +55,7 @@
     "description3": "integrate it with",
     "description4": "your products, and",
     "description5": "accelerate",
-    "description6": "your growth today!"
+    "description6": " your growth today!"
   },
   "CTAButton": {
     "title": "Get FastGPT"

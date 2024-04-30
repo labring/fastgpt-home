@@ -20,7 +20,7 @@ const SocialProof = ({ locale }: { locale: any }) => {
           })}
         </div>
         <p className="text-sm text-slate-700 dark:text-slate-400">
-          <span className="text-primary font-semibold text-base">60000+</span>{" "}
+          <span className="text-primary font-semibold text-base">90000+</span>{" "}
           {locale.maker}
         </p>
       </div>

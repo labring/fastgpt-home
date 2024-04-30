@@ -18,7 +18,7 @@ const baseSiteConfig = {
     {
       name: "labring",
       url: "https://fastgpt.in",
-      twitter: 'https://github.com/labring',
+      twitter: 'https://github.com/labring/FastGPT',
     }
   ],
   creator: '@fastgpt',

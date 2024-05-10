@@ -18,12 +18,20 @@ export default async function LangHome({
     lang && lang[0] && lang[0] !== "index" ? lang[0] : defaultLocale;
   const dict = await getDictionary(langName);
 
+  let stars = 13 * 1000;
+  try {
+    const { stargazers_count } = await (
+      await fetch('https://api.github.com/repos/labring/FastGPT')
+    ).json();
+    stars = stargazers_count;
+  } catch (error) {}
+
   return (
     <>
       <Header dict={dict} />
       <main className="flex flex-col items-center py-6">
         {/* Hero Section */}
-        <Hero locale={dict.Hero} CTALocale={dict.CTAButton} />
+        <Hero locale={dict.Hero} CTALocale={dict.CTAButton} stars={stars} />
         <SocialProof locale={dict.SocialProof} />
         {/* Can be used to display technology stack, partners, project honors, etc. */}
         {/*<ScrollingLogos />*/}
@@ -41,7 +49,7 @@ export default async function LangHome({
         <FAQ id="FAQ" locale={dict.FAQ} langName={langName} />
 
         {/* CTA (Call to Action) */}
-        <CTA locale={dict.CTA} CTALocale={dict.CTAButton} />
+        <CTA locale={dict.CTA} CTALocale={dict.CTAButton} stars={stars}/>
       </main>
     </>
   );

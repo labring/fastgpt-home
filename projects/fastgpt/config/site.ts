@@ -64,7 +64,7 @@ export const siteConfig: SiteConfig = {
     card: "summary_large_image",
     title: baseSiteConfig.name,
     description: baseSiteConfig.description,
-    images: [`${baseSiteConfig.url}/og.png`],
+    images: [`${baseSiteConfig.url}/og.png?${new Date().getTime()}`],
     creator: baseSiteConfig.creator,
   },
 }

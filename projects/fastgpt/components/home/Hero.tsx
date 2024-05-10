@@ -3,7 +3,7 @@ import { LineText } from "@/components/LineText";
 import CTAButton from "@/components/home/CTAButton";
 import { motion } from "framer-motion";
 
-const Hero = ({ locale, CTALocale }: { locale: any; CTALocale: any }) => {
+const Hero = ({ locale, CTALocale,stars }: { locale: any; CTALocale: any;stars:number }) => {
   return (
     <>
       <motion.div
@@ -30,7 +30,7 @@ const Hero = ({ locale, CTALocale }: { locale: any; CTALocale: any }) => {
           </p>
         </section>
       </motion.div>
-      <CTAButton locale={CTALocale}></CTAButton>
+      <CTAButton locale={CTALocale} stars={stars} />
     </>
   );
 };

@@ -13,7 +13,7 @@ const CTAButton = ({ locale }: { locale: any }) => {
         const { stargazers_count } = await (
           await fetch('https://api.github.com/repos/labring/FastGPT', { cache: 'force-cache' })
         ).json();
-        setStars(stargazers_count);
+        setStars(stargazers_count ? stargazers_count : 13 * 1000);
       } catch (error) {}
     };
     getStars();

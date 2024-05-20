@@ -11,7 +11,7 @@ import "@/styles/globals.css";
 import "@/styles/loading.css";
 import "@/styles/plyr.css";
 import { Analytics } from "@vercel/analytics/react";
-import { Viewport } from "next";
+import { Metadata, Viewport } from "next";
 import { Inter as FontSans } from "next/font/google";
 
 const fontSans = FontSans({
@@ -29,6 +29,9 @@ export const metadata = {
   metadataBase: siteConfig.metadataBase,
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
+  other: {
+    "baidu-site-verification": 'codeva-mpHTn35uE0',
+  },
 };
 export const viewport: Viewport = {
   themeColor: siteConfig.themeColors,

@@ -4,20 +4,22 @@ import { RocketIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
-const CTAButton = ({ locale }: { locale: any }) => {
-  const [stars, setStars] = useState(13 * 1000);
+const CTAButton = ({ locale, stars: initialStars }: { locale: any; stars: number }) => {
+  const [stars, setStars] = useState(initialStars);
 
   useEffect(() => {
     const getStars = async () => {
       try {
         const { stargazers_count } = await (
-          await fetch('https://api.github.com/repos/labring/FastGPT', { cache: 'force-cache' })
+          await fetch('https://api.github.com/repos/labring/FastGPT')
         ).json();
-        setStars(stargazers_count);
+        if (stargazers_count && stargazers_count !== initialStars) {
+          setStars(stargazers_count);
+        }
       } catch (error) {}
     };
     getStars();
-  }, []);
+  }, [initialStars]);
 
   return (
     <div className="flex items-center gap-4">

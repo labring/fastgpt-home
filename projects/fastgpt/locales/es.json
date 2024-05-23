@@ -1,12 +1,12 @@
 {
   "video": {
-    "speed": "Velocidad",  
+    "speed": "Velocidad",
     "normal": "Normal"
   },
   "links": [
     {
       "label": "Características",
-      "href": "#Ability" 
+      "href": "#Ability"
     },
     {
       "label": "Precios",
@@ -18,7 +18,7 @@
     },
     {
       "label": "Documentación",
-      "href": "https://doc.fastai.site/" 
+      "href": "https://doc.fastgpt.in/"
     }
   ],
   "Hero": {

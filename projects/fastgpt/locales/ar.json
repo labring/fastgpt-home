@@ -1,7 +1,7 @@
 {
   "video": {
     "speed": "سرعة التشغيل",
-    "normal": "عادي" 
+    "normal": "عادي"
   },
   "links": [
     {
@@ -9,7 +9,7 @@
       "href": "#Ability"
     },
     {
-      "label": "الأسعار",  
+      "label": "الأسعار",
       "href": "#Pricing"
     },
     {
@@ -18,7 +18,7 @@
     },
     {
       "label": "الوثائق",
-      "href": "https://doc.fastai.site/" 
+      "href": "https://doc.fastgpt.in/"
     }
   ],
   "Hero": {
@@ -55,7 +55,7 @@
     "description3": "ودمجه",
     "description4": "مع منتجاتك،",
     "description5": "وسرّع",
-    "description6":"نموك!"
+    "description6": "نموك!"
   },
   "CTAButton": {
     "title": "ابدأ الآن"

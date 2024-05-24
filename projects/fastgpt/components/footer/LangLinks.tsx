@@ -1,5 +1,5 @@
-import { defaultLocale, localeNames } from "@/lib/i18n";
-import Link from "next/link";
+import { defaultLocale, localeNames } from '@/lib/i18n';
+import Link from 'next/link';
 
 const LangLinks = () => {
   return (
@@ -8,7 +8,7 @@ const LangLinks = () => {
         const name = localeNames[key];
         return (
           <span key={key}>
-            <Link href={`/${key === defaultLocale ? "/" : key}`}>{name}</Link>
+            <Link href={`/${key === defaultLocale ? '/' : key}`}>{name}</Link>
           </span>
         );
       })}

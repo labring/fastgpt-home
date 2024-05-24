@@ -19,12 +19,20 @@ export const LangSwitcher = () => {
   const router = useRouter();
 
   const handleSwitchLanguage = (value: string) => {
+    localStorage.setItem('preferredLang', value);
     if (value === defaultLocale) {
       router.push('/');
       return;
     }
     router.push(value);
   };
+
+  useEffect(() => {
+    const storedLang = localStorage.getItem('preferredLang');
+    if (storedLang && storedLang !== lang) {
+      router.push(storedLang);
+    }
+  }, []);
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>

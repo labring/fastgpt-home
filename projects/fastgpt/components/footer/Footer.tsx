@@ -1,8 +1,8 @@
-import FooterLinks from "@/components/footer/FooterLinks";
-import FooterProducts from "@/components/footer/FooterProducts";
-import LangLinks from "@/components/footer/LangLinks";
-import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import FooterLinks from '@/components/footer/FooterLinks';
+import FooterProducts from '@/components/footer/FooterProducts';
+import LangLinks from '@/components/footer/LangLinks';
+import { siteConfig } from '@/config/site';
+import Link from 'next/link';
 
 const Footer = () => {
   const d = new Date();
@@ -16,10 +16,10 @@ const Footer = () => {
         <FooterProducts />
         <LangLinks />
         <div className="flex space-x-2">
-          <div>{`©${currentYear}`}</div>{" "}
+          <div>{`©${currentYear}`}</div>
           <Link href={authors[0].twitter || authors[0].url} target="_blank">
             {authors[0].name}
-          </Link>{" "}
+          </Link>
           <div>All rights reserved.</div>
         </div>
       </div>

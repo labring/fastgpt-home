@@ -1,5 +1,5 @@
 import { SiteConfig } from '@/types/siteConfig';
-import { BsGithub, BsTwitterX, BsWechat } from 'react-icons/bs';
+import { BsGithub, BsTwitterX, BsWechat, BsDiscord } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { SiBuymeacoffee, SiJuejin } from 'react-icons/si';
 
@@ -36,6 +36,11 @@ const baseSiteConfig = {
   headerLinks: [
     { name: 'repo', href: OPEN_SOURCE_URL, icon: BsGithub },
     {
+      name: 'Discord',
+      href: 'https://discord.gg/mp68xkZn2Q',
+      icon: BsDiscord
+    },
+    {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
       icon: BsWechat
@@ -44,6 +49,11 @@ const baseSiteConfig = {
   footerLinks: [
     { name: 'email', href: 'mailto:cloud-native-yang@sealos.io', icon: MdEmail },
     { name: 'github', href: 'https://github.com/labring/FastGPT', icon: BsGithub },
+    {
+      name: 'Discord',
+      href: 'https://discord.gg/mp68xkZn2Q',
+      icon: BsDiscord
+    },
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',

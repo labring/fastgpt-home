@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import Script from "next/script";
+import Script from 'next/script';
 
 const BaiDuAnalytics = () => {
   return (
@@ -19,7 +19,7 @@ const BaiDuAnalytics = () => {
                 var s = document.getElementsByTagName("script")[0]; 
                 s.parentNode.insertBefore(hm, s);
               })();
-            `,
+            `
             }}
           />
         </>

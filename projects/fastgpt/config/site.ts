@@ -12,8 +12,8 @@ const baseSiteConfig = {
   url: 'https://fastgpt.in',
   ogImage: 'https://landingpage.weijunext.com/og.png',
   metadataBase: '/',
-  keywords: ['rag', 'ai', 'workflow', 'llm', 'langchain', 'gpt', 'gpt4', 'orchestration'],
-  commercial: 'https://doc.fastgpt.in/docs/commercial/intro/',
+  keywords: ["rag", "ai", "workflow", "llm", "gpt", "gpt4", "orchestration","FastGPT","free","知识库","问答","数据处理","模型调用","RAG检索","可视化AI工作流","企业知识库"],
+  commercial: "https://doc.fastgpt.in/docs/commercial/intro/",
   authors: [
     {
       name: 'labring',

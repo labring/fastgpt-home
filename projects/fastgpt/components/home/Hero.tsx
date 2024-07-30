@@ -1,9 +1,9 @@
-"use client";
-import { LineText } from "@/components/LineText";
-import CTAButton from "@/components/home/CTAButton";
-import { motion } from "framer-motion";
+'use client';
+import { LineText } from '@/components/LineText';
+import CTAButton from '@/components/home/CTAButton';
+import { motion } from 'framer-motion';
 
-const Hero = ({ locale, CTALocale,stars }: { locale: any; CTALocale: any;stars:number }) => {
+const Hero = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars: number }) => {
   return (
     <>
       <motion.div
@@ -13,11 +13,11 @@ const Hero = ({ locale, CTALocale,stars }: { locale: any; CTALocale: any;stars:n
           duration: 0.3,
           ease: [0, 0.71, 0.2, 1],
           scale: {
-            type: "tween", // tween spring
+            type: 'tween' // tween spring
             // damping: 10, // if spring
             // stiffness: 50, // if spring
             // restDelta: 0.001, // if spring
-          },
+          }
         }}
       >
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-16 pt-16 md:pt-24 text-center">

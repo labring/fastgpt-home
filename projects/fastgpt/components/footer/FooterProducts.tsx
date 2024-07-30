@@ -1,5 +1,5 @@
-import { siteConfig } from "@/config/site";
-import Link from "next/link";
+import { siteConfig } from '@/config/site';
+import Link from 'next/link';
 
 const FooterProducts = () => {
   const footerProducts = siteConfig.footerProducts;
@@ -14,7 +14,7 @@ const FooterProducts = () => {
             </Link>
             {index !== footerProducts.length - 1 ? (
               <>
-                <span>{" • "}</span>
+                <span>{' • '}</span>
               </>
             ) : (
               <></>

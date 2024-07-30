@@ -1,31 +1,38 @@
-"use client";
+'use client';
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useParams, useRouter } from "next/navigation";
-
-import { defaultLocale, localeNames } from "@/lib/i18n";
+  SelectValue
+} from '@/components/ui/select';
+import { useParams, useRouter } from 'next/navigation';
+import { defaultLocale, localeNames } from '@/lib/i18n';
+import { useEffect } from 'react';
 
 export const LangSwitcher = () => {
   const params = useParams();
   const lang = params.lang;
 
   // const lang = (params.lang && params.lang[0]) || defaultLocale;
-  let langName =
-    lang && lang[0] && lang[0] !== "index" ? lang[0] : defaultLocale;
+  let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
   const router = useRouter();
 
   const handleSwitchLanguage = (value: string) => {
+    localStorage.setItem('preferredLang', value);
     if (value === defaultLocale) {
-      router.push("/");
+      router.push('/');
       return;
     }
     router.push(value);
   };
+
+  useEffect(() => {
+    const storedLang = localStorage.getItem('preferredLang');
+    if (storedLang && storedLang !== lang) {
+      router.push(storedLang);
+    }
+  }, []);
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
@@ -45,4 +52,3 @@ export const LangSwitcher = () => {
     </Select>
   );
 };
-

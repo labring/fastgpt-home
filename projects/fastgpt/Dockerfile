@@ -4,8 +4,8 @@ FROM node:18.18-alpine AS builder
 RUN apk add libc6-compat
 WORKDIR /app
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
+# ENV NODE_ENV production
+# ENV NEXT_TELEMETRY_DISABLED 1
 
 # copy packages and one project
 ADD . ./

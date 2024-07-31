@@ -27,7 +27,7 @@ jobs:
           images: |
             ${{ secrets.DOCKER_HUB_NAME }}/fastgpt-home
             ghcr.io/${{ github.repository_owner }}/fastgpt-home
-            registry.cn-hangzhou.aliyuncs.com/${{ secrets.ALI_HUB_USERNAME }}/fastgpt-home
+            registry.cn-hangzhou.aliyuncs.com/labring4docker/fastgpt-home
           tags: |
             ${{ steps.datetime.outputs.datetime }}
           flavor: latest=false

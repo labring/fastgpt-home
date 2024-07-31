@@ -10,6 +10,9 @@ WORKDIR /app
 # copy packages and one project
 ADD . ./
 
+RUN sed -i "s#https://fastgpt.in#https://fastgpt.cn#g" $(grep -rl "https://fastgpt.in" ./)
+RUN sed -i "s#https://doc.fastgpt.in#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.in" ./)
+
 RUN npm install
 RUN npm run build
 
@@ -17,5 +20,5 @@ FROM fholzer/nginx-brotli:latest
 
 LABEL org.opencontainers.image.source https://github.com/labring/fastgpt-home
 
-COPY --from=builder /app/public /usr/share/nginx/html
+COPY --from=builder /app/out /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf

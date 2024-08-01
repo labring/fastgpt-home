@@ -2,22 +2,18 @@
 
 import Script from 'next/script';
 
-const BaiDuAnalytics = () => {
+const BaiduAnalytics = () => {
   const key = process.env.NEXT_PUBLIC_BAIDU_TONGJI;
 
+  if (!key) return null;
+
   return (
-    <>
-      {key ? (
-        <Script
-          id="baidu-tongji"
-          strategy="afterInteractive"
-          src={`https://hm.baidu.com/hm.js?${key}`}
-        />
-      ) : (
-        <></>
-      )}
-    </>
+    <Script
+      id="baidu-tongji"
+      strategy="afterInteractive"
+      src={`https://hm.baidu.com/hm.js?${key}`}
+    />
   );
 };
 
-export default BaiDuAnalytics;
+export default BaiduAnalytics;

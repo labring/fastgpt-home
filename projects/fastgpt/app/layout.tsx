@@ -29,7 +29,9 @@ export const metadata = {
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
   other: {
-    'baidu-site-verification': 'codeva-Zu5ilzXRik'
+    'baidu-site-verification': process.env.NEXT_PUBLIC_BAIDU_KEY
+      ? process.env.NEXT_PUBLIC_BAIDU_KEY
+      : ''
   }
 };
 export const viewport: Viewport = {
@@ -53,14 +55,8 @@ export default async function RootLayout({
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>
-        {process.env.NODE_ENV === 'development' ? (
-          <></>
-        ) : (
-          <>
-            <GoogleAnalytics />
-            <BaiDuAnalytics />
-          </>
-        )}
+        <GoogleAnalytics />
+        <BaiDuAnalytics />
       </body>
     </html>
   );

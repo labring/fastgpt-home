@@ -3,9 +3,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'projects/fastgpt/**'
+      - "projects/fastgpt/**"
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   build-fastgpt-landingpage-images:
@@ -66,3 +66,6 @@ jobs:
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          build-args: |
+            NEXT_PUBLIC_BAIDU_TONGJI=${{ secrets.NEXT_PUBLIC_BAIDU_TONGJI }}
+            NEXT_PUBLIC_BAIDU_KEY=${{ secrets.NEXT_PUBLIC_BAIDU_KEY }}

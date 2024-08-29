@@ -1,5 +1,6 @@
 'use client';
 import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/config/site';
 import { RocketIcon } from 'lucide-react';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -23,7 +24,7 @@ const CTAButton = ({ locale, stars: initialStars }: { locale: any; stars: number
 
   return (
     <div className="flex items-center gap-4">
-      <Link href="https://cloud.fastgpt.in" rel="noopener noreferrer nofollow">
+      <Link href={siteConfig.userUrl} rel="noopener noreferrer nofollow">
         <Button
           variant="default"
           className="flex items-center gap-2 bg-blue-500 hover:bg-blue-600 text-white px-8 py-6 text-base"

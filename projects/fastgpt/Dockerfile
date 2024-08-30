@@ -9,14 +9,18 @@ WORKDIR /app
 
 ARG NEXT_PUBLIC_BAIDU_TONGJI
 ARG NEXT_PUBLIC_BAIDU_KEY
+ARG NEXT_PUBLIC_HOME_URL
+ARG NEXT_PUBLIC_USER_URL
 
 ENV NEXT_PUBLIC_BAIDU_TONGJI=$NEXT_PUBLIC_BAIDU_TONGJI
 ENV NEXT_PUBLIC_BAIDU_KEY=$NEXT_PUBLIC_BAIDU_KEY
+ENV NEXT_PUBLIC_HOME_URL=$NEXT_PUBLIC_HOME_URL
+ENV NEXT_PUBLIC_USER_URL=$NEXT_PUBLIC_USER_URL
 
 # copy packages and one project
 ADD . ./
 
-RUN sed -i "s#https://fastgpt.in#https://fastgpt.cn#g" $(grep -rl "https://fastgpt.in" ./)
+
 RUN sed -i "s#https://doc.fastgpt.in#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.in" ./)
 RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 

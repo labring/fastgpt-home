@@ -9,15 +9,33 @@ const baseSiteConfig = {
   name: 'FastGPT',
   description:
     'A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex Q&A systems.',
-  url: 'https://fastgpt.in',
+  url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.in',
+  userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.in',
   ogImage: 'https://landingpage.weijunext.com/og.png',
   metadataBase: '/',
-  keywords: ["rag", "ai", "workflow", "llm", "gpt", "gpt4", "orchestration","FastGPT","free","知识库","问答","数据处理","模型调用","RAG检索","可视化AI工作流","企业知识库"],
-  commercial: "https://doc.fastgpt.in/docs/commercial/intro/",
+  keywords: [
+    'rag',
+    'ai',
+    'workflow',
+    'llm',
+    'gpt',
+    'gpt4',
+    'orchestration',
+    'FastGPT',
+    'free',
+    '知识库',
+    '问答',
+    '数据处理',
+    '模型调用',
+    'RAG检索',
+    '可视化AI工作流',
+    '企业知识库'
+  ],
+  commercial: 'https://doc.fastgpt.in/docs/commercial/intro/',
   authors: [
     {
       name: 'labring',
-      url: 'https://fastgpt.in',
+      url: process.env.NEXT_PUBLIC_HOME_URL || '',
       twitter: 'https://github.com/labring/FastGPT'
     }
   ],

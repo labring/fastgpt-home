@@ -69,3 +69,5 @@ jobs:
           build-args: |
             NEXT_PUBLIC_BAIDU_TONGJI=${{ secrets.NEXT_PUBLIC_BAIDU_TONGJI }}
             NEXT_PUBLIC_BAIDU_KEY=${{ secrets.NEXT_PUBLIC_BAIDU_KEY }}
+            NEXT_PUBLIC_HOME_URL=${{ secrets.NEXT_PUBLIC_HOME_URL }}
+            NEXT_PUBLIC_USER_URL=${{ secrets.NEXT_PUBLIC_USER_URL }}

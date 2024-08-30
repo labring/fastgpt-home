@@ -4,9 +4,9 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'projects/fastgpt/**'
+      - "projects/fastgpt/**"
     branches:
-      - 'main'
+      - "main"
 
 jobs:
   deploy:
@@ -16,6 +16,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Build
+        env:
+          NEXT_PUBLIC_HOME_URL: https://tryfastgpt.ai
+          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.in
         run: |
           cd projects/fastgpt
           npm install

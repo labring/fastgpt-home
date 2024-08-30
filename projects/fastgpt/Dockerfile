@@ -20,7 +20,7 @@ ENV NEXT_PUBLIC_USER_URL=$NEXT_PUBLIC_USER_URL
 # copy packages and one project
 ADD . ./
 
-RUN sed -i "s#https://fastgpt.in#https://fastgpt.cn#g" $(grep -rl "https://fastgpt.in" ./)
+
 RUN sed -i "s#https://doc.fastgpt.in#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.in" ./)
 RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 

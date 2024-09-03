@@ -21,6 +21,11 @@ const Footer = () => {
             {authors[0].name}
           </Link>
           <div>All rights reserved.</div>
+          {process.env.NEXT_PUBLIC_FILING_ADDRESS && (
+            <Link href={'https://beian.miit.gov.cn/'}>
+              {process.env.NEXT_PUBLIC_FILING_ADDRESS}
+            </Link>
+          )}
         </div>
       </div>
     </footer>

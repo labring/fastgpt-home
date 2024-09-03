@@ -24,6 +24,7 @@ ADD . ./
 
 
 RUN sed -i "s#https://doc.fastgpt.in#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.in" ./)
+RUN sed -i "s#https://doc.tryfastgpt.ai#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.tryfastgpt.ai" ./)
 RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 
 RUN npm install

@@ -12,8 +12,11 @@ export function ThemedButton() {
     setIsClient(typeof window !== "undefined");
   }, []);
   return (
-    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")}>
+    <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="flex gap-4 font-medium">
       {theme === "light" && isClient ? <PhMoonFill /> : <PhSunBold />}
+      <div className="md:hidden">
+        {theme === "light" && isClient ? "Night Mode" : "Light Mode"}
+      </div>
     </div>
   );
 }

@@ -57,20 +57,24 @@ const VideoPlayer = ({
   return (
     <div
       id="player-container"
-      className="mx-auto max-w-3xl px-4 py-4 sm:px-6 lg:px-8 mb-12 mt-12 md:mt-20 text-center h-[270px] sm:h-[500px]"
+      className="mx-auto max-w-4xl lg:max-w-6xl mb-12 mt-6 px-4 sm:px-6 lg:px-8 md:mt-20 text-center h-[200px] sm:h-[500px] lg:h-[700px]"
+
     >
-      <video
-        id="player"
-        playsInline
-        controls
-        data-poster="/images/hero/zh/fastgpt-demo.jpg"
-      >
-        <source
-          src="https://otnvvf-imgs.oss.laf.run/fastgpt.mp4"
-          type="video/mp4"
-        />
-      </video>
+      <div className="rounded-lg overflow-hidden">
+        <video
+          id="player"
+          playsInline
+          controls
+          data-poster="/images/hero/zh/fastgpt-demo.jpg"
+        >
+          <source
+            src="https://otnvvf-imgs.oss.laf.run/fastgpt.mp4"
+            type="video/mp4"
+          />
+        </video>
+      </div>
     </div>
+
   );
 };
 

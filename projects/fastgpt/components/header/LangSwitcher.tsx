@@ -6,8 +6,8 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select';
-import { useParams, useRouter } from 'next/navigation';
 import { defaultLocale, localeNames } from '@/lib/i18n';
+import { useParams, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export const LangSwitcher = () => {
@@ -36,7 +36,7 @@ export const LangSwitcher = () => {
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
-      <SelectTrigger className="w-fit">
+      <SelectTrigger className="w-fit bg-white/20">
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>

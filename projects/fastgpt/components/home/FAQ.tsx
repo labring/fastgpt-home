@@ -2,7 +2,6 @@
 import { ALL_FAQS } from "@/config/faqs";
 import { Accordion, AccordionItem } from "@nextui-org/react";
 import { PlusIcon } from "lucide-react";
-import { RoughNotation } from "react-rough-notation";
 
 // update rough notation highlight
 function triggerResizeEvent() {
@@ -26,23 +25,27 @@ const FAQ = ({
       id={id}
       className="flex flex-col justify-center max-w-[88%] items-center py-16 gap-12"
     >
-      <div className="flex flex-col text-center gap-4">
-        <h2 className="text-center text-white">
-          <RoughNotation type="highlight" show={true} color="#2563EB">
-            {locale.title}
-          </RoughNotation>
-        </h2>
-        <p className="text-large text-default-500">{locale.description}</p>
+      <div className="flex flex-col text-center">
+        <h4 className="text-center text-gradient">
+          {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
+          {locale.title}
+          {/* </RoughNotation> */}
+        </h4>
+        <p className="text-xl font-medium"
+          style={{ color: 'var(--text-secondary)' }}
+        >
+          {locale.description}
+        </p>
       </div>
       <Accordion
         fullWidth
         keepContentMounted
         className="gap-3"
         itemClasses={{
-          base: "px-6 !bg-default-100 !shadow-none hover:!bg-default-200/50",
-          title: "font-medium",
+          base: "px-6 hover:!bg-white/90 bg-white/75 dark:bg-white/10 hover:dark:!bg-white/30",
+          title: "font-medium text-black dark:text-white text-sm md:text-base",
           trigger: "py-6",
-          content: "pt-0 pb-6 text-base text-default-500",
+          content: "pt-0 pb-6 text-sm md:text-base text-default-500",
         }}
         items={FAQS}
         selectionMode="multiple"

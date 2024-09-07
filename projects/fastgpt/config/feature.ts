@@ -1,14 +1,11 @@
-import { LucideIcon, MagnetIcon } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 import { IconType } from "react-icons";
 import { BsGithub } from "react-icons/bs";
-import { FaToolbox } from "react-icons/fa";
-import { FaEarthAsia, FaMobileScreenButton } from "react-icons/fa6";
-import { MdCloudUpload } from "react-icons/md";
-import { RiQuestionAnswerFill } from "react-icons/ri";
-import { FcWorkflow } from "react-icons/fc";
 import { GiExpander } from "react-icons/gi";
-import { VscDebugConsole } from "react-icons/vsc";
+import { RiQuestionAnswerFill } from "react-icons/ri";
 import { SiOpenai } from "react-icons/si";
+import { TiFlowMerge } from "react-icons/ti";
+import { VscDebugConsole } from "react-icons/vsc";
 
 export const FEATURES_EN = [
     {
@@ -24,7 +21,7 @@ export const FEATURES_EN = [
     {
       "title": "Visual Workflow",
       "content": "Design complex workflows with ease using the Flow module.",
-      "icon": FcWorkflow,
+      "icon": TiFlowMerge,
     },
     {
       "title": "Seamless Extensibility",
@@ -57,7 +54,7 @@ export const FEATURES_ZH = [
   {
     title: "可视化工作流",
     content: "通过 Flow 模块可视化从问题输入到模型输出的完整流程，便于调试和设计复杂流程。",
-    icon: FcWorkflow,
+    icon: TiFlowMerge,
   },
   {
     title: "无限扩展",
@@ -90,7 +87,7 @@ export const FEATURES_JA = [
   {
     "title": "ビジュアルワークフロー",
     "content": "Flowモジュールで複雑なワークフローも簡単に設計可能。",
-    "icon": FcWorkflow,
+    "icon": TiFlowMerge,
   },
   {
     "title": "シームレスな拡張性",
@@ -123,7 +120,7 @@ export const FEATURES_AR = [
   {
     "title": "سير عمل مرئي",
     "content": "تصميم سير العمل المعقد بسهولة باستخدام وحدة التدفق.",
-    "icon": FcWorkflow,
+    "icon": TiFlowMerge,
   },
   {
     "title": "قابلية توسع سلسة",
@@ -156,7 +153,7 @@ export const FEATURES_ES = [
   {
     "title": "Flujo de trabajo visual",
     "content": "Diseñe flujos de trabajo complejos fácilmente con el módulo Flow.",
-    "icon": FcWorkflow,
+    "icon": TiFlowMerge,
   },
   {
     "title": "Extensibilidad sin problemas",
@@ -189,7 +186,7 @@ export const FEATURES_RU = [
   {
     "title": "Визуальный рабочий процесс",
     "content": "Легко создавайте сложные рабочие процессы с помощью модуля Flow.",
-    "icon": FcWorkflow,
+    "icon": TiFlowMerge,
   },
   {
     "title": "Простая расширяемость",

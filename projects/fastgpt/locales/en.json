@@ -22,6 +22,7 @@
     }
   ],
   "Hero": {
+    "maker": "Users are leveraging FastGPT to create their own specialized AI knowledge bases",
     "title1": "Empower",
     "title2": "AI",
     "title3": "with Your Expertise",
@@ -32,7 +33,9 @@
   },
   "Feature": {
     "title": "Why Choose FastGPT?",
-    "description": "Discover the advantages of FastGPT"
+    "description": "Discover the advantages of FastGPT",
+    "doYouLike": "Do you find this open-source AI knowledge base platform valuable?",
+    "follow": "Show your support by giving us a star 🌟"
   },
   "Ability": {
     "title": "Features"
@@ -58,6 +61,6 @@
     "description6": " your growth today!"
   },
   "CTAButton": {
-    "title": "Get FastGPT"
+    "title": "Get Started"
   }
 }

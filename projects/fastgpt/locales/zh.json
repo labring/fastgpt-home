@@ -10,7 +10,7 @@
     },
     {
       "label": "价格",
-      "href": "#Pricing"
+      "href": "https://cloud.tryfastgpt.ai/price"
     },
     {
       "label": "FAQ",
@@ -37,7 +37,9 @@
   },
   "Feature": {
     "title": "优势",
-    "description": "为什么选择 FastGPT？"
+    "description": "为什么选择 FastGPT？",
+    "doYouLike": "你喜欢这个开源 AI 知识库平台吗？",
+    "follow": "点个 Star 吧🌟"
   },
   "Ability": {
     "title": "开箱即用"

@@ -72,7 +72,9 @@ const baseSiteConfig = {
     { url: 'https://doc.fastgpt.in', name: 'Docs' },
     { url: 'https://doc.fastgpt.in/docs/community/', name: 'Forum' },
     { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
-    { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
+  ],
+  footerService:[
+       { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
     { url: 'https://doc.fastgpt.in/docs/agreement/privacy', name: 'Privacy Policy' }
   ]
 };

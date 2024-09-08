@@ -17,7 +17,7 @@ const Ability = ({
   return (
     <section
       id={id}
-      className="flex flex-col justify-center lg:max-w-7xl md:max-w-5xl w-[90%] mx-auto gap-6 md:gap-12 py-6"
+      className="flex flex-col justify-center lg:max-w-7xl md:max-w-5xl w-[88%] mx-auto gap-6 md:gap-12 py-6"
     >
       <h4 className="text-center text-gradient">
         {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
@@ -48,7 +48,7 @@ const Ability = ({
             }}
           >
             <div className="flex flex-col w-full lg:w-1/3 h-full text-[12px] md:text-[16px] whitespace-pre-wrap">
-              <div className="p-4 w-16 h-16 mb-5 dark:text-white rounded-2xl flex items-center justify-center" style={{
+              <div className="p-3 lg:p-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mb-5 dark:text-white rounded-2xl flex items-center justify-center" style={{
                 ...(index === 0 && { background: "var(--ability-icon-0)" }),
                 ...(index === 1 && { background: "var(--ability-icon-1)" }),
                 ...(index === 2 && { background: "var(--ability-icon-2)" }),

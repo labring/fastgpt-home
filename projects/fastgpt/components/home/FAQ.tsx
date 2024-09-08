@@ -23,7 +23,7 @@ const FAQ = ({
   return (
     <section
       id={id}
-      className="flex flex-col justify-center max-w-[88%] items-center py-16 gap-12"
+      className="flex flex-col justify-center lg:max-w-6xl w-[80%] mx-auto items-center py-16 gap-12"
     >
       <div className="flex flex-col text-center">
         <h4 className="text-center text-gradient">

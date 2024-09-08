@@ -4,7 +4,6 @@ import CTA from '@/components/home/CTA';
 import FAQ from '@/components/home/FAQ';
 import Feature from '@/components/home/Feature';
 import Hero from '@/components/home/Hero';
-import Pricing from '@/components/home/Pricing';
 // import SocialProof from '@/components/home/SocialProof';
 import VideoPlayer from '@/components/home/Video';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
@@ -45,7 +44,7 @@ export default async function LangHome({ params: { lang } }: { params: { lang?: 
         {/* FAQ (Frequently Asked Questions) */}
         <FAQ id="FAQ" locale={dict.FAQ} langName={langName} />
 
-        {/* CTA (Call to Action) */}
+        {/* CTA (Call to Action) Footer */}
         <CTA locale={dict.CTA} CTALocale={dict.CTAButton} stars={stars} />
       </main>
     </>

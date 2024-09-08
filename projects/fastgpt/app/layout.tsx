@@ -2,7 +2,6 @@ import BaiDuAnalytics from '@/app/BaiDuAnalytics';
 import GoogleAnalytics from '@/app/GoogleAnalytics';
 import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import Footer from '@/components/footer/Footer';
 import { siteConfig } from '@/config/site';
 import { defaultLocale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
@@ -51,7 +50,7 @@ export default async function RootLayout({
       <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem>
           {children}
-          <Footer />
+          {/* <Footer /> */}
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>

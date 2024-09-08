@@ -10,7 +10,8 @@
     },
     {
       "label": "Precios",
-      "href": "#Pricing"
+      "href": "https://cloud.tryfastgpt.ai/price"
+
     },
     {
       "label": "Preguntas frecuentes",
@@ -33,7 +34,9 @@
   },
   "Feature": {
     "title": "Ventajas Clave de FastGPT",
-    "description": "¿Por qué elegir FastGPT para tus necesidades de base de conocimiento de IA?"
+    "description": "¿Por qué elegir FastGPT para tus necesidades de base de conocimiento de IA?",
+    "doYouLike": "¿Disfrutas de esta solución de base de conocimiento de IA de código abierto?",
+    "follow": "Muestra tu aprecio con una estrella 🌟"
   },
   "Ability": {
     "title": "Listo para Implementar"

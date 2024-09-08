@@ -17,7 +17,7 @@ const Feature = ({
   return (
     <section
       id={id}
-      className="flex flex-col justify-center lg:max-w-7xl md:max-w-5xl w-[90%] mx-auto py-6"
+      className="flex flex-col justify-center lg:max-w-7xl md:max-w-5xl w-[88%] mx-auto py-6"
     >
       <h4 className="text-center text-gradient">
         {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
@@ -39,7 +39,7 @@ const Feature = ({
               background: "var(--theme-gradient)"
             }}
           >
-            <div className="p-3 w-14 h-14 mb-5 text-white rounded-xl flex items-center justify-center"
+            <div className="p-3 lg:p-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mb-5 text-white rounded-xl flex items-center justify-center"
               style={{ background: "var(--feature-icon)" }}>
               {feature.icon &&
                 React.createElement(feature.icon, { className: "text-2xl" })}
@@ -52,7 +52,7 @@ const Feature = ({
         ))}
       </div>
 
-      <div className="inline-block mx-auto border font-bold rounded-full px-6 py-3 text-xs lg:text-sm mt-10"
+      <div className="inline-block mx-auto border font-bold rounded-full px-6 py-3 text-xs lg:text-sm mt-10 md:text-nowrap"
         style={{
           color: '#B5E8FD',
           background: 'linear-gradient(90deg, rgba(212, 212, 249, 0.15) 0%, rgba(55, 55, 214, 0.00) 100%)',

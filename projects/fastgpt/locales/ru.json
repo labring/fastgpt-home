@@ -10,7 +10,7 @@
     },
     {
       "label": "Цены",
-      "href": "#Pricing"
+      "href": "https://cloud.tryfastgpt.ai/price"
     },
     {
       "label": "Часто задаваемые вопросы",
@@ -31,7 +31,9 @@
     "maker": "разработчики создают быстро"
   },
   "Feature": {
-    "title": "Особенности"
+    "title": "Особенности",
+    "doYouLike": "Вам нравится этот шаблон лендинга?",
+    "follow": "Подписывайтесь на мой Твиттер."
   },
   "Ability": {
     "title": "Ability"

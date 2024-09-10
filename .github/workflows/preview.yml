@@ -23,9 +23,19 @@ jobs:
         deployments: write
         pull-requests: write
     runs-on: ubuntu-latest
+
+    # Job outputs
+    outputs:
+      url: ${{ steps.deploy.outputs.deployment-url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          submodules: recursive # Fetch submodules
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
@@ -45,7 +55,27 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./projects/fastgpt/out --project-name=fastgpt-home-run
-      - name: print deployment-url
+
+  docsOutput:
+    needs: [ deploy ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Write md
+        run: |
+          echo "# 📘 Preview FastGPT homepage" > report.md
+          echo "[👀 Visit Preview](${{ needs.deploy.outputs.url }})" >> report.md
+          cat report.md
+      - name: Print preview url
+        uses: labring/gh-rebot@v0.0.6
+        if: ${{ (github.event_name == 'pull_request_target') }}
+        with:
+          version: v0.0.6
         env:
-          DEPLOYMENT_URL: ${{ steps.deploy.outputs.deployment-url }}
-        run: echo $DEPLOYMENT_URL
+          GH_TOKEN: "${{ secrets.GH_PAT }}"
+          SEALOS_TYPE: "pr_comment"
+          SEALOS_FILENAME: "report.md"
+          SEALOS_REPLACE_TAG: "DEFAULT_REPLACE_DEPLOY"

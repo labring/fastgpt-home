@@ -1,0 +1,48 @@
+name: github pages
+
+on:
+  workflow_dispatch:
+  pull_request_target:
+    paths:
+      - "projects/fastgpt/**"
+    branches:
+      - "main"
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    permissions:
+        actions: read # Only required for private GitHub Repo
+        contents: read
+        deployments: write
+        pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node_version: 20
+      - name: Build
+        env:
+          NEXT_PUBLIC_HOME_URL: https://tryfastgpt.ai
+          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.in
+        run: |
+          cd projects/fastgpt
+          npm install
+          npm run build
+      - name: Deploy to Cloudflare Pages
+        uses: andykenward/github-actions-cloudflare-pages@v2.3.2
+        id: pages
+        with:
+          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          cloudflare-account-id: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          cloudflare-project-name: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+          directory: ./projects/fastgpt/out
+          github-token: ${{ secrets.GH_PAT }}
+          github-environment: ${{ vars.CLOUDFLARE_PROJECT_NAME }} ${{ (github.ref == 'refs/heads/main' && '(Production)') || '(Preview)' }}

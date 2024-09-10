@@ -1,4 +1,4 @@
-name: github pages
+name: Preview Home Page
 
 on:
   workflow_dispatch:
@@ -6,6 +6,7 @@ on:
     paths:
       - "projects/fastgpt/**"
     branches:
+      - "new-home"
       - "main"
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.

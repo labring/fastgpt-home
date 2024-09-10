@@ -26,9 +26,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node_version: 20
       - name: Build
         env:
           NEXT_PUBLIC_HOME_URL: https://tryfastgpt.ai

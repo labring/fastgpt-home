@@ -34,7 +34,7 @@ const Hero = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars
 
           <h1 className='flex justify-center items-center gap-3 md:gap-4 lg:gap-6 mt-4 text-xl sm:text-4xl md:text-5xl lg:text-6xl text-nowrap text-gradient'>
             {locale.title1}
-            <Image src="/ai.png" alt="logo" width={100}
+            <Image src="/AI.png" alt="logo" width={100}
               height={100} className='w-8 h-6 sm:w-10 sm:h-8 md:w-12 md:h-10 lg:w-20 lg:h-16' />
             {/* <LineText>{locale.title2}</LineText>  */}
             {locale.title3}

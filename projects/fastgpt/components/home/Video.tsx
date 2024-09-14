@@ -70,7 +70,7 @@ const VideoPlayer = ({
         </div>
       </div>
 
-      <div style={{ display: open ? 'block' : 'none' }} className="fixed inset-0 top-0 z-50 flex h-full w-full items-center justify-center bg-gray-600 bg-opacity-50" >
+      <div style={{ display: open ? 'block' : 'none' }} className="fixed inset-0 top-0 z-50 flex h-full w-full items-center justify-center bg-black/50" >
         <div className="relative top-[50%] mx-auto translate-y-[-50%]" >
           <div className="relative mx-auto w-3/4" id='player-container'>
             <button className="absolute right-0 top-0 z-20 pr-1 pt-1" onClick={() => setOpen(false)}>

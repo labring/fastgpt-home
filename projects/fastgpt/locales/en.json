@@ -62,5 +62,11 @@
   },
   "CTAButton": {
     "title": "Get Started"
+  },
+  "InterModal": {
+    "desc": "您当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
+    "tip": "不再提醒",
+    "button": "跳转",
+    "link":"/zh"
   }
 }

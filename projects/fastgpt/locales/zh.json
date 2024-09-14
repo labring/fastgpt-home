@@ -66,5 +66,11 @@
   },
   "CTAButton": {
     "title": "开始使用"
+  },
+  "InterModal": {
+    "desc": "Looks like you’re accessing the Chinese version from outside China. Would you prefer our international version？",
+    "tip": "Do not remind me again",
+    "button": "Switch",
+    "link":"/en"
   }
 }

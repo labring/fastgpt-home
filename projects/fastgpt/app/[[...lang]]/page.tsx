@@ -4,6 +4,7 @@ import CTA from '@/components/home/CTA';
 import FAQ from '@/components/home/FAQ';
 import Feature from '@/components/home/Feature';
 import Hero from '@/components/home/Hero';
+import InterModal from '@/components/home/InterModal';
 // import SocialProof from '@/components/home/SocialProof';
 import VideoPlayer from '@/components/home/Video';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
@@ -48,6 +49,7 @@ export default async function LangHome({ params: { lang } }: { params: { lang?: 
           {/* CTA (Call to Action) Footer */}
           <CTA locale={dict.CTA} CTALocale={dict.CTAButton} stars={stars} />
         </div>
+        <InterModal locale={dict.InterModal} />
       </main>
     </>
   );

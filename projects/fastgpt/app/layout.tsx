@@ -47,7 +47,9 @@ export default async function RootLayout({
   return (
     <html lang={(lang && lang[0]) || defaultLocale} suppressHydrationWarning>
       <head />
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)} 
+      style={{background: 'var(--background-gradient)'}}
+      >
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem>
           {children}
           {/* <Footer /> */}

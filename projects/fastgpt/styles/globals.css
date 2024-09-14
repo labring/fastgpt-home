@@ -4,7 +4,9 @@
  
 @layer base {
   :root {
-    --background: 219, 89%, 48%;
+    --background: #2B3ED5;
+    --background-gradient: linear-gradient(180deg, #2C3CD4 0%, #0D58E8 100%);
+
     --foreground: hsla(0, 0%, 100%, 0.8);
 
     --card: 0 0% 100%;
@@ -55,10 +57,13 @@
     --feature-icon: linear-gradient(180deg, #4B7FFF 0%, rgba(50, 109, 255, 0.70) 100%);
     --feature-title: #1B4EC4;
 
+    --plyr-color-main: #7789B0;
+
   }
  
   .dark {
-    --background: 231, 100%, 8%;
+    --background:  #000628;
+    --background-gradient: var(--background);
     --foreground: hsla(0, 0%, 100%, 0.8)
  
     --card: 222.2 84% 4.9%;
@@ -107,7 +112,9 @@
     --feature-icon: linear-gradient(180deg, rgba(194, 212, 255, 0.30) 0%, rgba(163, 190, 255, 0.21) 100%);
     --feature-title: #94B5FF;
 
+    --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
 
+    
 
   }
 }
@@ -182,3 +189,31 @@ main{
   -webkit-text-fill-color: transparent;
   background-clip: text;
 }
+
+.border-box {
+	backdrop-filter: blur(10px);
+}
+
+.border-box::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1px;
+	border-radius: inherit;
+	background: var(--border-gradient);
+  pointer-events: none;
+
+  /* 随便定义一个颜色 */
+  --mask-bg: linear-gradient(red, red);
+  --mask-clip: content-box, padding-box;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: var(--mask-clip);
+  /* exclude排除，只显示不重合的地方,Firefox支持4个属性 */
+  mask-composite: exclude;
+  /* 只显示下方遮罩，重合的地方不显示 */
+  -webkit-mask-composite: destination-out;
+
+ }

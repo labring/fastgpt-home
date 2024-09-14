@@ -15,10 +15,7 @@ const Feature = ({
 }) => {
   const FEATURES = ALL_FEATURES[`FEATURES_${langName.toUpperCase()}`];
   return (
-    <section
-      id={id}
-      className="flex flex-col justify-center lg:max-w-7xl md:max-w-5xl w-[88%] mx-auto py-6"
-    >
+    <section id={id} className="flex flex-col justify-center py-6">
       <h4 className="text-center text-gradient">
         {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
         {locale.title}
@@ -34,15 +31,15 @@ const Feature = ({
         {FEATURES?.map((feature, index) => (
           <div
             key={feature.title}
-            className="flex flex-col items-center text-center px-8 py-6 border-white/20 border rounded-xl  "
+            className="flex flex-col items-center text-center px-8 py-6 border-white/20 rounded-xl border-box "
             style={{
               background: "var(--theme-gradient)"
             }}
           >
-            <div className="p-3 lg:p-4 w-12 h-12 md:w-14 md:h-14 lg:w-16 lg:h-16 mb-5 text-white rounded-xl flex items-center justify-center"
+            <div className="p-2 lg:p-3 w-12 h-12 md:w-14 md:h-14 mb-5 text-white rounded-xl flex items-center justify-center"
               style={{ background: "var(--feature-icon)" }}>
               {feature.icon &&
-                React.createElement(feature.icon, { className: "text-2xl" })}
+                React.createElement(feature.icon, { className: "text-[32px]" })}
             </div>
             <h2 className={"text-xl font-semibold mb-2 "} style={{ color: "var(--feature-title)" }}>{feature.title}</h2>
             <p className="text-[#355189] dark:text-white/50">

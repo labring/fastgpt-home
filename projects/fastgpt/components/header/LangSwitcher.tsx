@@ -36,7 +36,7 @@ export const LangSwitcher = () => {
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
-      <SelectTrigger className="w-fit bg-white/20">
+      <SelectTrigger className="w-fit bg-white/20 hover:bg-white/10">
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>

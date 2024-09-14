@@ -29,7 +29,7 @@ const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars:
   </div>)
 
   return (
-    <footer className='lg:max-w-6xl w-[80%] mx-auto border-t-2 border-white/10 py-12 text-center'>
+    <footer className='w-full border-t-2 border-white/10 py-12 text-center'>
       <div className='md:hidden flex justify-center mb-5'><LogoFC /></div>
 
       <section className="relative flex flex-wrap w-full justify-center">

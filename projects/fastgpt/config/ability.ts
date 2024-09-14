@@ -1,8 +1,6 @@
+import { ApiIcon, ConnectIcon, DataBaseIcon, RobotIcon } from '@/components/icons';
 import { LucideIcon } from "lucide-react";
 import { IconType } from "react-icons";
-import { AiFillApi } from "react-icons/ai";
-import { FaDatabase, FaLayerGroup, FaRobot } from "react-icons/fa";
-
 
 export const ABILITYS_EN = [
   {
@@ -12,7 +10,7 @@ export const ABILITYS_EN = [
     image: "/images/ability/en/ai_assiatant.png",
     imageDark: "/images/ability/en/ai_assiatant_dark.png",
     tip: "Learn More >",
-    icon: FaRobot,
+    icon: RobotIcon,
   },
   {
     title: "Automated Data Preprocessing",
@@ -21,7 +19,7 @@ export const ABILITYS_EN = [
     image: "/images/ability/en/dataset_import.png",
     imageDark: "/images/ability/en/dataset_import_dark.png",
     tip: "Learn More >",
-    icon: FaDatabase,
+    icon: DataBaseIcon,
   },
   {
     title: "Workflow Orchestration",
@@ -30,7 +28,7 @@ export const ABILITYS_EN = [
     image: "/images/ability/en/advanced_settings.png",
     imageDark: "/images/ability/en/advanced_settings_dark.png",
     tip: "Learn More >",
-    icon: FaLayerGroup,
+    icon: ConnectIcon,
   },
   {
     title: "Seamless API Integration",
@@ -39,7 +37,7 @@ export const ABILITYS_EN = [
     image: "/images/ability/en/openapi.png",
     imageDark: "/images/ability/en/openapi_dark.png",
     tip: "Learn More >",
-    icon: AiFillApi,
+    icon: ApiIcon,
   },
 ];
 
@@ -50,7 +48,7 @@ export const ABILITYS_ZH = [
     image: "/images/ability/zh/ai_assiatant.png",
     imageDark: "/images/ability/zh/ai_assiatant_dark.png",
     tip: "了解更多 >",
-    icon: FaRobot,
+    icon: RobotIcon,
   },
   {
     title: "自动化数据预处理",
@@ -59,7 +57,7 @@ export const ABILITYS_ZH = [
     image: "/images/ability/zh/dataset_import.png",
     imageDark: "/images/ability/zh/dataset_import_dark.png",
     tip: "了解更多 >",
-    icon: FaDatabase,
+    icon: DataBaseIcon,
   },
   {
     title: "工作流编排",
@@ -68,7 +66,7 @@ export const ABILITYS_ZH = [
     image: "/images/ability/zh/advanced_settings.png",
     imageDark: "/images/ability/zh/advanced_settings_dark.png",
     tip: "了解更多 >",
-    icon: FaLayerGroup,
+    icon: ConnectIcon,
   },
   {
     title: "强大的 API 集成",
@@ -76,7 +74,7 @@ export const ABILITYS_ZH = [
     image: "/images/ability/zh/openapi.png",
     imageDark: "/images/ability/zh/openapi_dark.png",
     tip: "了解更多 >",
-    icon: AiFillApi,
+    icon: ApiIcon,
   },
 ];
 
@@ -87,7 +85,7 @@ export const ABILITYS_JA = [
     image: "/images/ability/en/ai_assiatant.png",
     imageDark: "/images/ability/en/ai_assiatant_dark.png",
     tip: "詳細を見る >",
-    icon: FaRobot,
+    icon: RobotIcon,
   },
   {
     title: "自動データ前処理",
@@ -96,7 +94,7 @@ export const ABILITYS_JA = [
     image: "/images/ability/en/dataset_import.png",
     imageDark: "/images/ability/en/dataset_import_dark.png",
     tip: "詳細を見る >",
-    icon: FaDatabase,
+    icon: DataBaseIcon,
   },
   {
     title: "ワークフローオーケストレーション",
@@ -105,7 +103,7 @@ export const ABILITYS_JA = [
     image: "/images/ability/zh/advanced_settings.png",
     imageDark: "/images/ability/zh/advanced_settings_dark.png",
     tip: "詳細を見る >",
-    icon: FaLayerGroup,
+    icon: ConnectIcon,
   },
   {
     title: "シームレスなAPI統合",
@@ -113,7 +111,7 @@ export const ABILITYS_JA = [
     image: "/images/ability/en/openapi.png",
     imageDark: "/images/ability/en/openapi_dark.png",
     tip: "詳細を見る >",
-    icon: AiFillApi,
+    icon: ApiIcon,
   },
 ];
 
@@ -124,7 +122,7 @@ export const ABILITYS_AR = [
     "title": "مساعد ذكاء اصطناعي خاص بالمجال",
     imageDark: "/images/ability/en/ai_assiatant_dark.png",
     tip: "اعرف المزيد >",
-    icon: FaRobot,
+    icon: RobotIcon,
   },
   {
     "content": "وفر الوقت وحسّن الكفاءة من خلال المعالجة المسبقة الآلية للنصوص، والتحويل إلى متجهات، وتقسيم الأسئلة والأجوبة.",
@@ -132,7 +130,7 @@ export const ABILITYS_AR = [
     "title": "المعالجة المسبقة الآلية للبيانات",
     imageDark: "/images/ability/en/dataset_import_dark.png",
     tip: "اعرف المزيد >",
-    icon: FaDatabase,
+    icon: DataBaseIcon,
   },
   {
     "content": "ادعم تنسيق سير عمل الذكاء الاصطناعي، وصمم سير عمل معقدًا باستخدام واجهة سحب وإفلات مرئية، ودمج مهام مثل استعلامات قواعد البيانات وفحوصات المخزون.",
@@ -140,7 +138,7 @@ export const ABILITYS_AR = [
     "title": "تنسيق سير العمل",
     imageDark: "/images/ability/en/advanced_settings_dark.png",
     tip: "اعرف المزيد >",
-    icon: FaLayerGroup,
+    icon: ConnectIcon,
   },
   {
     "content": "اتصل بسلاسة بتطبيقات ومنصات GPT الحالية مثل Discord و Slack و Telegram باستخدام واجهات برمجة التطبيقات المتوافقة مع OpenAI.",
@@ -148,7 +146,7 @@ export const ABILITYS_AR = [
     "title": "تكامل سلس لواجهة برمجة التطبيقات",
     imageDark: "/images/ability/en/openapi_dark.png",
     tip: "اعرف المزيد >",
-    icon: AiFillApi,
+    icon: ApiIcon,
   },
 ];
 
@@ -160,7 +158,7 @@ export const ABILITYS_ES = [
     image: "/images/ability/en/ai_assiatant.png",
     imageDark: "/images/ability/en/ai_assiatant_dark.png",
     tip: "Saber más >",
-    icon: FaRobot,
+    icon: RobotIcon,
   },
   {
     title: "Preprocesamiento Automatizado de Datos",
@@ -169,7 +167,7 @@ export const ABILITYS_ES = [
     image: "/images/ability/en/dataset_import.png",
     imageDark: "/images/ability/en/dataset_import_dark.png",
     tip: "Saber más >",
-    icon: FaDatabase,
+    icon: DataBaseIcon,
   },
   {
     title: "Orquestación de Flujos de Trabajo",
@@ -178,7 +176,7 @@ export const ABILITYS_ES = [
     image: "/images/ability/en/advanced_settings.png",
     imageDark: "/images/ability/en/advanced_settings_dark.png",
     tip: "Saber más >",
-    icon: FaLayerGroup,
+    icon: ConnectIcon,
   },
   {
     title: "Integración Perfecta de API",
@@ -187,7 +185,7 @@ export const ABILITYS_ES = [
     image: "/images/ability/en/openapi.png",
     imageDark: "/images/ability/en/openapi_dark.png",
     tip: "Saber más >",
-    icon: AiFillApi,
+    icon: ApiIcon,
   },
 ];
 
@@ -199,7 +197,7 @@ export const ABILITYS_RU = [
     image: "/images/ability/en/ai_assiatant.png",
     imageDark: "/images/ability/en/ai_assiatant_dark.png",
     tip: "Узнать больше >",
-    icon: FaRobot,
+    icon: RobotIcon,
   },
   {
     title: "Автоматизированная предварительная обработка данных",
@@ -208,7 +206,7 @@ export const ABILITYS_RU = [
     image: "/images/ability/en/dataset_import.png",
     imageDark: "/images/ability/en/dataset_import_dark.png",
     tip: "Узнать больше >",
-    icon: FaDatabase,
+    icon: DataBaseIcon,
   },
   {
     title: "Оркестрация рабочих процессов",
@@ -217,7 +215,7 @@ export const ABILITYS_RU = [
     image: "/images/ability/en/advanced_settings.png",
     imageDark: "/images/ability/en/advanced_settings_dark.png",
     tip: "Узнать больше >",
-    icon: FaLayerGroup,
+    icon: ConnectIcon,
   },
   {
     title: "Бесшовная интеграция API",
@@ -226,7 +224,7 @@ export const ABILITYS_RU = [
     image: "/images/ability/en/openapi.png",
     imageDark: "/images/ability/en/openapi_dark.png",
     tip: "Узнать больше >",
-    icon: AiFillApi,
+    icon: ApiIcon,
   },
 ];
 

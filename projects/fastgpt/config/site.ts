@@ -1,7 +1,8 @@
 import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub, BsWechat } from 'react-icons/bs';
+import { FaDiscord } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 import { MdEmail } from 'react-icons/md';
-
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
@@ -51,11 +52,11 @@ const baseSiteConfig = {
     apple: '/logo.svg'
   },
   headerLinks: [
-    { name: 'repo', href: OPEN_SOURCE_URL, icon: BsGithub },
+    { name: 'repo', href: OPEN_SOURCE_URL, icon: IoLogoGithub },
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: BsWechat
+      icon: FaDiscord
     }
   ],
   footerLinks: [

@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { CgClose } from "react-icons/cg";
-import { ThemedButton } from "../ThemedButton";
 
 const Header = ({
   dict,
@@ -27,7 +26,7 @@ const Header = ({
       href="/"
       aria-label="FastGPT"
       title="FastGPT"
-      className="flex items-center space-x-2 font-bold "
+      className="flex items-center space-x-3 font-bold "
     >
       <Image
         alt={siteConfig.name}
@@ -41,9 +40,9 @@ const Header = ({
       </span>
     </Link>
 
-    <ul className="hidden items-center gap-6 md:flex">
+    <ul className="hidden items-center gap-5 md:flex">
       {dict?.links.map((link) => (
-        <li key={link.label}>
+        <li key={link.label} className="cursor-pointer hover:bg-white/10 px-2 py-1 rounded-md">
           <Link
             href={link.href}
             aria-label={link.label}
@@ -61,9 +60,9 @@ const Header = ({
     <header className="relative py-2 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex justify-between">
       <nav className="z-50 flex justify-between w-full">
         <LogoFC />
-        <div className="hidden md:flex items-center gap-x-6">
+        <div className="hidden md:flex items-center gap-x-4">
           <HeaderLinks />
-          <ThemedButton />
+          {/* <ThemedButton /> */}
           <LangSwitcher />
         </div>
       </nav>
@@ -101,7 +100,7 @@ const Header = ({
                         href={link.href}
                         aria-label={link.label}
                         title={link.label}
-                        className="font-medium tracking-wide  transition-colors duration-200 hover:text-deep-purple-accent-400"
+                        className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-white/10 p-1 rounded-md"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {link.label}
@@ -110,9 +109,9 @@ const Header = ({
                   ))}
                 </ul>
               </nav>
-              <div className="mt-4 border-t-1 flex flex-col gap-6 pt-4">
+              <div className="mt-4 border-t-1 flex flex-col gap-6 pt-4 border-white/10">
                 <HeaderLinks />
-                <ThemedButton />
+                {/* <ThemedButton /> */}
                 <LangSwitcher />
               </div>
             </div>

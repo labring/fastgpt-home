@@ -1,7 +1,9 @@
 {
   "video": {
     "speed": "速度",
-    "normal": "正常"
+    "normal": "正常",
+     "video":"/images/video/zh/video.png",
+    "videoDark":"/images/video/zh/video_dark.png"
   },
   "links": [
     {

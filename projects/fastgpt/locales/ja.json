@@ -1,7 +1,9 @@
 {
   "video": {
     "speed": "再生速度",
-    "normal": "標準"
+    "normal": "標準",
+    "video":"/images/video/en/video.png",
+    "videoDark":"/images/video/en/video_dark.png"
   },
   "links": [
     {

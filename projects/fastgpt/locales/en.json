@@ -1,7 +1,9 @@
 {
   "video": {
     "speed": "Speed",
-    "normal": "Normal"
+    "normal": "Normal",
+    "video":"/images/video/en/video.png",
+    "videoDark":"/images/video/en/video_dark.png"
   },
   "links": [
     {

@@ -7,7 +7,7 @@ import { IoPlay } from "react-icons/io5";
 const VideoPlayer = ({
   dict,
 }: {
-  dict: { video: { speed: string; normal: string } };
+  dict: { video: { speed: string; normal: string ,video:string,videoDark:string} };
 }) => {
   const [open, setOpen] = useState(false)
 
@@ -62,8 +62,8 @@ const VideoPlayer = ({
   return (
     <>
       <div className="relative mb-12 mt-6 md:mt-14">
-        <img src='/images/video/video.png' style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
-        <img src='/images/video/video_dark.png' style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
+        <img src={dict?.video?.video} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
+        <img src={dict?.video?.videoDark} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
 
         <div className="absolute z-1 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]  bg-[#7789B0] hover:bg-[#4B597A] rounded-full cursor-pointer p-1 md:p-2 lg:p-3" onClick={() => setOpen(true)}>
           <IoPlay className="text-xs md:text-xl lg:text-2xl xl:text-3xl" />
@@ -79,7 +79,7 @@ const VideoPlayer = ({
             <video
               id="player"
               controls
-              autoPlay
+              // autoPlay
               data-poster="/images/hero/zh/fastgpt-demo.jpg"
             >
               <source

@@ -56,7 +56,7 @@ const Ability = ({
               </div>
               <h2
                 className={cn(
-                  "text-[16px] md:text-[28px]"
+                  "text-[16px] md:text-[28px] mb-2"
                 )}
                 style={{
                   ...(index === 0 && { color: "var(--ability-title-0)" }),

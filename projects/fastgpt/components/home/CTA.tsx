@@ -21,7 +21,7 @@ const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars:
       <Image
         alt={siteConfig.name}
         src="/logo.svg"
-        className="w-14 h-14 bg-[#E9E9E9] p-2 rounded-xl dark:bg-opacity-20"
+        className="w-10 h-10 rounded-sm sm:w-[52px] sm:h-[52px] sm:rounded-lg bg-[#E9E9E9] p-2 "
         width={32}
         height={32}
       />

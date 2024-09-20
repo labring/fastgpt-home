@@ -31,7 +31,7 @@ const Header = ({
       <Image
         alt={siteConfig.name}
         src="/logo.svg"
-        className="w-8 h-8 bg-[#E9E9E9] p-1 rounded-md dark:bg-opacity-20"
+        className="w-[30px] h-[30px] bg-[#E9E9E9] p-1 rounded-md dark:bg-opacity-20"
         width={32}
         height={32}
       />

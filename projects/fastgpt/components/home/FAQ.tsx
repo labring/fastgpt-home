@@ -46,7 +46,7 @@ const FAQ = ({
           base: "px-6 hover:!bg-white/50 bg-white/75 dark:!bg-white/10 hover:dark:!bg-white/20",
           title: "font-medium text-[#0D2657] dark:text-white/80 text-sm md:text-base",
           trigger: "py-5",
-          content: "pt-0 pb-6 text-xs text-default-500 text-[#455F93] dark:text-white/60",
+          content: "pt-0 pb-6 text-sm text-default-500 text-[#455F93] dark:text-white/60",
         }}
         items={FAQS}
         selectionMode="multiple"

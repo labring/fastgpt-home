@@ -1,5 +1,5 @@
 import { SiteConfig } from '@/types/siteConfig';
-import { BsGithub, BsWechat } from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
 import { FaDiscord } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { MdEmail } from 'react-icons/md';
@@ -65,7 +65,7 @@ const baseSiteConfig = {
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: BsWechat
+      icon: FaDiscord
     }
   ],
   footerProducts: [

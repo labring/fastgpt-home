@@ -21,7 +21,7 @@ const Hero = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars
         }}
       >
         <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8 text-center">
-          <div className='inline-block mx-auto border font-bold rounded-full px-6 py-4 text-xs lg:text-sm'
+          <div className='inline-block mx-auto border font-bold rounded-full px-6 py-3 text-xs lg:text-sm'
             style={{
               color: '#B5E8FD',
               background: 'linear-gradient(90deg, rgba(212, 212, 249, 0.15) 0%, rgba(55, 55, 214, 0.00) 100%)',

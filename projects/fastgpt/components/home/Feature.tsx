@@ -31,7 +31,7 @@ const Feature = ({
         {FEATURES?.map((feature, index) => (
           <div
             key={feature.title}
-            className="flex flex-col items-center text-center px-8 py-6 border-white/20 rounded-xl border-box "
+            className="flex flex-col items-center text-center p-10 border-white/20 rounded-xl border-box "
             style={{
               background: "var(--theme-gradient)"
             }}
@@ -41,7 +41,7 @@ const Feature = ({
               {feature.icon &&
                 React.createElement(feature.icon, { className: "text-[32px]" })}
             </div>
-            <h2 className={"text-xl font-semibold mb-2 "} style={{ color: "var(--feature-title)" }}>{feature.title}</h2>
+            <h2 className={"text-2xl font-semibold mb-2 "} style={{ color: "var(--feature-title)" }}>{feature.title}</h2>
             <p className="text-[#355189] dark:text-white/50">
               {feature.content}
             </p>

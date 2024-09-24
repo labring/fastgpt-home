@@ -4,8 +4,10 @@
  
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: #2C3CD4;
+    --background-gradient: linear-gradient(180deg, #2C3CD4 0%, #0D58E8 100%);
+
+    --foreground: hsla(0, 0%, 100%, 0.8);
 
     --card: 0 0% 100%;
     --card-foreground: 222.2 84% 4.9%;
@@ -34,19 +36,35 @@
  
     --radius: 0.5rem;
 
-    --theme-gradient-0: linear-gradient(#E1EAFF, #E1EAFF);
-    --theme-gradient-1: linear-gradient(#F0EEFF, #F0EEFF);
-    --theme-gradient-2: linear-gradient(#DBF3FF, #DBF3FF);
-    --theme-gradient-3: linear-gradient(#FFFAEB, #FFFAEB);
-    --ability-title-0: #1848BA;
-    --ability-title-1: #5E4EBD;
-    --ability-title-2: #0770BC;
-    --ability-title-3: #B54708;
+    --text-primary: #BDE7F9;
+    --text-secondary: rgba(230, 231, 255, 0.70);
+
+    --theme-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 100%);
+    --theme-gradient-0: #A0C0FF;
+    --theme-gradient-1: #B5B8FF;
+    --theme-gradient-2: #EACDD4;
+    --theme-gradient-3: #B9E1C9;
+    --ability-title-0: #0059B2;
+    --ability-title-1: #B94F4F;
+    --ability-title-2: #197E00;
+    --ability-title-3: #9947D8;
+    --ability-text: #355189;
+    --ability-icon-0: #0E90EE;
+    --ability-icon-1: #EC8591;
+    --ability-icon-2: #74AE66;
+    --ability-icon-3: #9A6FE1;
+
+    --feature-icon: linear-gradient(180deg, #4B7FFF 0%, rgba(50, 109, 255, 0.70) 100%);
+    --feature-title: #1B4EC4;
+
+    --plyr-color-main: #7789B0;
+
   }
  
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background:  #000628;
+    --background-gradient: var(--background);
+    --foreground: hsla(0, 0%, 100%, 0.8)
  
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
@@ -72,14 +90,32 @@
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
-    --theme-gradient-0: linear-gradient(to bottom right, #2D1A4D 0%, #1a7574 100%);
-    --theme-gradient-1: linear-gradient(120deg, #0F2240 0%, #1f4482 100%);
-    --theme-gradient-2: linear-gradient(to top, #1E2634 0%, #313C45 100%);
-    --theme-gradient-3: linear-gradient(to right, #1c4a2d 0%, #0c2c44 100%);
-    --ability-title-0: rgb(229 231 235 / var(--tw-text-opacity));
-    --ability-title-1: rgb(229 231 235 / var(--tw-text-opacity));
-    --ability-title-2: rgb(229 231 235 / var(--tw-text-opacity));
-    --ability-title-3: rgb(229 231 235 / var(--tw-text-opacity));
+
+    --text-primary: #BDE7F9;
+    --text-secondary: rgba(230, 231, 255, 0.70);
+
+    --theme-gradient: linear-gradient(180deg, rgba(213, 215, 255, 0.10) 0%, rgba(213, 215, 255, 0.02) 100%);
+    --theme-gradient-0: var(--theme-gradient);
+    --theme-gradient-1: var(--theme-gradient);
+    --theme-gradient-2: var(--theme-gradient);
+    --theme-gradient-3: var(--theme-gradient);
+    --ability-title-0: #80BDFA;
+    --ability-title-1: #F08B8B;
+    --ability-title-2: #8CCD7C;
+    --ability-title-3: #BD95FF;
+    --ability-text: rgba(255, 255, 255, 0.7);
+    --ability-icon-0: linear-gradient(180deg, rgba(128, 189, 250, 0.30) 0%, rgba(128, 189, 250, 0.03) 100%);
+    --ability-icon-1: linear-gradient(180deg, rgba(240, 139, 139, 0.30) 0%, rgba(240, 139, 139, 0.03) 100%);
+    --ability-icon-2: linear-gradient(180deg, rgba(140, 205, 124, 0.30) 0%, rgba(140, 205, 124, 0.03) 100%);
+    --ability-icon-3: linear-gradient(180deg, rgba(189, 149, 255, 0.30) 0%, rgba(189, 149, 255, 0.03) 100%);
+
+    --feature-icon: linear-gradient(180deg, rgba(194, 212, 255, 0.30) 0%, rgba(163, 190, 255, 0.21) 100%);
+    --feature-title: #94B5FF;
+
+    --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
+
+    
+
   }
 }
  
@@ -96,7 +132,7 @@ h1 {
   @apply text-5xl sm:text-7xl text-slate-900 dark:text-gray-200 leading-[1.25] tracking-[-0.05rem] font-bold mb-2
 }
 h2 {
-  @apply text-4xl sm:text-6xl text-slate-900 dark:text-gray-200 leading-[1.3] tracking-[-0.05rem] font-bold mb-2
+  @apply text-4xl sm:text-6xl text-slate-900 dark:text-gray-200 leading-[1.3] tracking-[-0.05rem] font-bold
 }
 h3 {
   @apply text-3xl sm:text-5xl text-slate-900 dark:text-gray-200 leading-[1.375] tracking-[-0.05rem] font-bold mb-2
@@ -110,3 +146,74 @@ h5 {
 h6 {
   @apply text-base sm:text-xl text-slate-900 dark:text-gray-200 leading-[1.625] font-semibold mb-2
 }
+
+body{
+  background-image: url('/bg.png');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    background-size: 120% auto;
+  }
+  @media (max-width: 768px) {
+    background-size: 130% auto;
+  }
+  @media (max-width: 480px) {
+    background-size: 140% auto;
+  }
+}
+
+main{
+   background-image: url('/shine.png');
+   background-size: contain;
+   background-position: center 130px;
+   background-repeat: no-repeat;
+
+  @media (max-width: 1024px) {
+    background-position: center 180px;
+  }
+
+  @media (max-width: 768px) {
+    background-position: center 200px;
+  }
+  @media (max-width: 480px) {
+     background-position: center 210px;
+  }
+}
+
+
+.text-gradient{
+  background: linear-gradient(7deg, #BDE7F8 28.98%, #ECC3FF 95.94%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.border-box {
+	backdrop-filter: blur(10px);
+}
+
+.border-box::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	padding: 1px;
+	border-radius: inherit;
+	background: var(--border-gradient);
+  pointer-events: none;
+
+  /* 随便定义一个颜色 */
+  --mask-bg: linear-gradient(red, red);
+  --mask-clip: content-box, padding-box;
+  -webkit-mask-image: var(--mask-bg), var(--mask-bg);
+  -webkit-mask-clip: var(--mask-clip);
+  /* exclude排除，只显示不重合的地方,Firefox支持4个属性 */
+  mask-composite: exclude;
+  /* 只显示下方遮罩，重合的地方不显示 */
+  -webkit-mask-composite: destination-out;
+
+ }

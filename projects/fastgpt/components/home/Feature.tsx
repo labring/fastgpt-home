@@ -1,6 +1,8 @@
 import { ALL_FEATURES } from "@/config/feature";
+import { siteConfig } from "@/config/site";
+import { Link } from "@nextui-org/react";
 import React from "react";
-import { RoughNotation } from "react-rough-notation";
+
 
 const Feature = ({
   id,
@@ -13,40 +15,58 @@ const Feature = ({
 }) => {
   const FEATURES = ALL_FEATURES[`FEATURES_${langName.toUpperCase()}`];
   return (
-    <section
-      id={id}
-      className="flex flex-col justify-center lg:max-w-7xl md:max-w-5xl w-[95%] mx-auto md:gap-14 py-6"
-    >
-      <h2 className="text-center text-white">
-        <RoughNotation type="highlight" show={true} color="#2563EB">
-          {locale.title}
-        </RoughNotation>
-      </h2>
-      <h3 className="text-center text-4xl font-medium tracking-tight">{locale.description}</h3>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+    <section id={id} className="flex flex-col justify-center py-6">
+      <h4 className="text-center text-gradient">
+        {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
+        {locale.title}
+        {/* </RoughNotation> */}
+      </h4>
+      <p
+        className="text-center text-xl font-medium tracking-tight"
+        style={{ color: 'var(--text-secondary)' }}
+      >
+        {locale.description}
+      </p>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
         {FEATURES?.map((feature, index) => (
           <div
             key={feature.title}
-            className={`
-              flex flex-col items-center text-center px-8 py-6 border-b
-              ${index === 0 ? "md:border-r" : ""}
-              ${index === 1 ? "lg:border-r" : ""}
-              ${index === 2 ? "md:border-r lg:border-r-0" : ""}
-              ${index === 3 ? "lg:border-b-0 lg:border-r" : ""}
-              ${index === 4 ? "md:border-b-0 md:border-r" : ""}
-              ${index === 5 ? "border-b-0 border-r-0" : ""}
-            `}
+            className="flex flex-col items-center text-center p-10 border-white/20 rounded-xl border-box "
+            style={{
+              background: "var(--theme-gradient)"
+            }}
           >
-            <div className="p-4 w-16 h-16 dark:text-white rounded-full flex items-center justify-center">
+            <div className="p-2 lg:p-3 w-12 h-12 md:w-14 md:h-14 mb-5 text-white rounded-xl flex items-center justify-center"
+              style={{ background: "var(--feature-icon)" }}>
               {feature.icon &&
-                React.createElement(feature.icon, { className: "text-2xl" })}
+                React.createElement(feature.icon, { className: "text-[32px]" })}
             </div>
-            <h2 className={"text-xl font-semibold mb-2"}>{feature.title}</h2>
-            <p className="text-slate-700 dark:text-slate-400">
+            <h2 className={"text-2xl font-semibold mb-2 "} style={{ color: "var(--feature-title)" }}>{feature.title}</h2>
+            <p className="text-[#355189] dark:text-white/50">
               {feature.content}
             </p>
           </div>
         ))}
+      </div>
+
+      <div className="inline-block mx-auto border font-bold rounded-full px-6 py-3 text-xs lg:text-sm mt-10 md:text-nowrap"
+        style={{
+          color: '#B5E8FD',
+          background: 'linear-gradient(90deg, rgba(212, 212, 249, 0.15) 0%, rgba(55, 55, 214, 0.00) 100%)',
+          border: '1px solid rgba(179, 220, 229, 0.40)',
+        }}>
+        <p className="text-center">
+          {locale.doYouLike}&nbsp;
+          <Link
+            href={siteConfig.authors[0].twitter}
+            underline="always"
+            rel="noopener noreferrer nofollow"
+            className="text-xs lg:text-sm"
+            style={{ color: '#F8A3FF' }}
+          >
+            {locale.follow}
+          </Link>
+        </p>
       </div>
     </section>
   );

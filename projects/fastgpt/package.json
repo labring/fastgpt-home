@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
-    "@nextui-org/react": "^2.2.10",
+    "@nextui-org/react": "^2.4.6",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@vercel/analytics": "^1.1.2",

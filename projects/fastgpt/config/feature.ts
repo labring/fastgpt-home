@@ -1,15 +1,9 @@
-import { LucideIcon, MagnetIcon } from "lucide-react";
+import { ChatBoxIcon, ConnectIcon, ExpandIcon } from '@/components/icons';
+import { LucideIcon } from "lucide-react";
 import { IconType } from "react-icons";
 import { BsGithub } from "react-icons/bs";
-import { FaToolbox } from "react-icons/fa";
-import { FaEarthAsia, FaMobileScreenButton } from "react-icons/fa6";
-import { MdCloudUpload } from "react-icons/md";
-import { RiQuestionAnswerFill } from "react-icons/ri";
-import { FcWorkflow } from "react-icons/fc";
-import { GiExpander } from "react-icons/gi";
-import { VscDebugConsole } from "react-icons/vsc";
 import { SiOpenai } from "react-icons/si";
-
+import { IoPlay } from "react-icons/io5";
 export const FEATURES_EN = [
     {
       "title": "Open Source",
@@ -19,22 +13,22 @@ export const FEATURES_EN = [
     {
       "title": "Optimized Q&A",
       "content": "Enhanced question-answering accuracy for customer service.",
-      "icon": RiQuestionAnswerFill,
+      "icon": ChatBoxIcon,
     },
     {
       "title": "Visual Workflow",
       "content": "Design complex workflows with ease using the Flow module.",
-      "icon": FcWorkflow,
+      "icon": ConnectIcon,
     },
     {
       "title": "Seamless Extensibility",
       "content": "Seamlessly integrate FastGPT into your applications via API.",
-      "icon": GiExpander,
+      "icon": ExpandIcon,
     },
     {
       "title": "Debugging Tools",
       "content": "Refine your models with comprehensive debugging features.",
-      "icon": VscDebugConsole,
+      "icon": IoPlay,
     },
     {
       "title": "Multi-Model Compatibility",
@@ -52,22 +46,22 @@ export const FEATURES_ZH = [
   {
     title: "独特的 QA 结构",
     content: "针对客服问答场景设计的 QA 结构，提高在大量数据场景中的问答准确性。",
-    icon: RiQuestionAnswerFill,
+    icon: ChatBoxIcon,
   },
   {
     title: "可视化工作流",
     content: "通过 Flow 模块可视化从问题输入到模型输出的完整流程，便于调试和设计复杂流程。",
-    icon: FcWorkflow,
+    icon: ConnectIcon,
   },
   {
     title: "无限扩展",
     content: "基于 API 进行扩展，无需修改 FastGPT 源码，也可快速接入现有的程序中。",
-    icon: GiExpander,
+    icon: ExpandIcon,
   },
   {
     title: "便于调试",
     content: "提供搜索测试、引用修改、完整对话预览等多种调试途径。",
-    icon: VscDebugConsole,
+    icon: IoPlay,
   },
   {
     title: "支持多种模型",
@@ -85,22 +79,22 @@ export const FEATURES_JA = [
   {
     "title": "最適化されたQ&A",
     "content": "カスタマーサービス向けに質問応答の精度を向上。",
-    "icon": RiQuestionAnswerFill,
+    "icon": ChatBoxIcon,
   },
   {
     "title": "ビジュアルワークフロー",
     "content": "Flowモジュールで複雑なワークフローも簡単に設計可能。",
-    "icon": FcWorkflow,
+    "icon": ConnectIcon,
   },
   {
     "title": "シームレスな拡張性",
     "content": "APIを通じてFastGPTをアプリケーションにスムーズに統合。",
-    "icon": GiExpander,
+    "icon": ExpandIcon,
   },
   {
     "title": "デバッグツール",
     "content": "充実したデバッグ機能でモデルを改良。",
-    "icon": VscDebugConsole,
+    "icon": IoPlay,
   },
   {
     "title": "マルチモデル互換性",
@@ -118,22 +112,22 @@ export const FEATURES_AR = [
   {
     "title": "أسئلة وأجوبة محسنة",
     "content": "تحسين دقة الإجابة على الأسئلة لخدمة العملاء.",
-    "icon": RiQuestionAnswerFill,
+    "icon": ChatBoxIcon,
   },
   {
     "title": "سير عمل مرئي",
     "content": "تصميم سير العمل المعقد بسهولة باستخدام وحدة التدفق.",
-    "icon": FcWorkflow,
+    "icon": ConnectIcon,
   },
   {
     "title": "قابلية توسع سلسة",
     "content": "دمج FastGPT بسلاسة في تطبيقاتك عبر واجهة برمجة التطبيقات.",
-    "icon": GiExpander,
+    "icon": ExpandIcon,
   },
   {
     "title": "أدوات تصحيح الأخطاء",
     "content": "تحسين نماذجك بميزات تصحيح أخطاء شاملة.",
-    "icon": VscDebugConsole,
+    "icon": IoPlay,
   },
   {
     "title": "توافق متعدد النماذج",
@@ -151,22 +145,22 @@ export const FEATURES_ES = [
   {
     "title": "Preguntas y respuestas optimizadas",
     "content": "Mejor precisión en las respuestas a preguntas para atención al cliente.",
-    "icon": RiQuestionAnswerFill,
+    "icon": ChatBoxIcon,
   },
   {
     "title": "Flujo de trabajo visual",
     "content": "Diseñe flujos de trabajo complejos fácilmente con el módulo Flow.",
-    "icon": FcWorkflow,
+    "icon": ConnectIcon,
   },
   {
     "title": "Extensibilidad sin problemas",
     "content": "Integre FastGPT a sus aplicaciones sin problemas vía API.",
-    "icon": GiExpander,
+    "icon": ExpandIcon,
   },
   {
     "title": "Herramientas de depuración",
     "content": "Perfeccione sus modelos con completas funciones de depuración.", 
-    "icon": VscDebugConsole,
+    "icon": IoPlay,
   },
   {
     "title": "Compatibilidad con múltiples modelos",
@@ -184,22 +178,22 @@ export const FEATURES_RU = [
   {
     "title": "Оптимизированные вопросы и ответы",
     "content": "Повышенная точность ответов на вопросы для службы поддержки клиентов.",
-    "icon": RiQuestionAnswerFill,
+    "icon": ChatBoxIcon,
   },
   {
     "title": "Визуальный рабочий процесс",
     "content": "Легко создавайте сложные рабочие процессы с помощью модуля Flow.",
-    "icon": FcWorkflow,
+    "icon": ConnectIcon,
   },
   {
     "title": "Простая расширяемость",
     "content": "Интегрируйте FastGPT в свои приложения без проблем через API.",
-    "icon": GiExpander,
+    "icon": ExpandIcon,
   },
   {
     "title": "Инструменты отладки",
     "content": "Совершенствуйте свои модели с помощью полного набора функций отладки.",
-    "icon": VscDebugConsole,
+    "icon": IoPlay,
   },
   {
     "title": "Совместимость с разными моделями",

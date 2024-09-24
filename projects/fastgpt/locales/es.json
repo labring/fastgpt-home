@@ -1,7 +1,9 @@
 {
   "video": {
     "speed": "Velocidad",
-    "normal": "Normal"
+    "normal": "Normal",
+    "video":"/images/video/en/video.png",
+    "videoDark":"/images/video/en/video_dark.png"
   },
   "links": [
     {
@@ -10,7 +12,8 @@
     },
     {
       "label": "Precios",
-      "href": "#Pricing"
+      "href": "https://cloud.tryfastgpt.ai/price"
+
     },
     {
       "label": "Preguntas frecuentes",
@@ -22,6 +25,7 @@
     }
   ],
   "Hero": {
+    "maker": "Los desarrolladores están aprovechando FastGPT para crear sus propias bases de conocimiento especializadas de IA",
     "title1": "Potencia la IA",
     "title2": "",
     "title3": "con Tu Conocimiento",
@@ -32,7 +36,9 @@
   },
   "Feature": {
     "title": "Ventajas Clave de FastGPT",
-    "description": "¿Por qué elegir FastGPT para tus necesidades de base de conocimiento de IA?"
+    "description": "¿Por qué elegir FastGPT para tus necesidades de base de conocimiento de IA?",
+    "doYouLike": "¿Disfrutas de esta solución de base de conocimiento de IA de código abierto?",
+    "follow": "Muestra tu aprecio con una estrella 🌟"
   },
   "Ability": {
     "title": "Listo para Implementar"
@@ -59,5 +65,11 @@
   },
   "CTAButton": {
     "title": "Comienza Ahora"
+  }, 
+  "InterModal": {
+    "desc": "您当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
+    "tip": "不再提醒",
+    "button": "跳转",
+    "link":"/zh"
   }
 }

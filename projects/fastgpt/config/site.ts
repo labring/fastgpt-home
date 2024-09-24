@@ -1,8 +1,8 @@
 import { SiteConfig } from '@/types/siteConfig';
-import { BsGithub, BsTwitterX, BsWechat } from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
+import { FaDiscord } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 import { MdEmail } from 'react-icons/md';
-import { SiBuymeacoffee, SiJuejin } from 'react-icons/si';
-
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
@@ -52,11 +52,11 @@ const baseSiteConfig = {
     apple: '/logo.svg'
   },
   headerLinks: [
-    { name: 'repo', href: OPEN_SOURCE_URL, icon: BsGithub },
+    { name: 'repo', href: OPEN_SOURCE_URL, icon: IoLogoGithub },
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: BsWechat
+      icon: FaDiscord
     }
   ],
   footerLinks: [
@@ -65,7 +65,7 @@ const baseSiteConfig = {
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: BsWechat
+      icon: FaDiscord
     }
   ],
   footerProducts: [
@@ -73,7 +73,9 @@ const baseSiteConfig = {
     { url: 'https://doc.fastgpt.in', name: 'Docs' },
     { url: 'https://doc.fastgpt.in/docs/community/', name: 'Forum' },
     { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
-    { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
+  ],
+  footerService:[
+       { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
     { url: 'https://doc.fastgpt.in/docs/agreement/privacy', name: 'Privacy Policy' }
   ]
 };

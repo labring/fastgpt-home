@@ -32,6 +32,7 @@ export type SiteConfig = {
   headerLinks: Link[];
   footerLinks: Link[];
   footerProducts: ProductLink[];
+  footerService: ProductLink[];
   metadataBase: URL | string;
   themeColors?: string | ThemeColor[];
   nextThemeColor?: string;

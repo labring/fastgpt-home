@@ -14,7 +14,6 @@ import {
 import { siteConfig } from "@/config/site";
 import { ALL_TIERS } from "@/config/tiers";
 import { FaCheck } from "react-icons/fa";
-import { RoughNotation } from "react-rough-notation";
 
 const Pricing = ({
   id,
@@ -32,10 +31,10 @@ const Pricing = ({
       className="flex flex-col justify-center max-w-4xl items-center pt-16"
     >
       <div className="flex flex-col text-center max-w-xl">
-        <h2 className="text-center text-white">
-          <RoughNotation type="highlight" show={true} color="#2563EB">
-            {locale.title}
-          </RoughNotation>
+        <h2 className="text-center  text-gradient text-5xl">
+          {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
+          {locale.title}
+          {/* </RoughNotation> */}
         </h2>
         <h3 className="text-4xl font-medium tracking-tight">{locale.title2}</h3>
         <Spacer y={4} />

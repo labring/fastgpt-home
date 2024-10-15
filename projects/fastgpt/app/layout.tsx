@@ -2,7 +2,6 @@ import BaiDuAnalytics from '@/app/BaiDuAnalytics';
 import GoogleAnalytics from '@/app/GoogleAnalytics';
 import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
-import Footer from '@/components/footer/Footer';
 import { siteConfig } from '@/config/site';
 import { defaultLocale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
@@ -48,10 +47,12 @@ export default async function RootLayout({
   return (
     <html lang={(lang && lang[0]) || defaultLocale} suppressHydrationWarning>
       <head />
-      <body className={cn('min-h-screen bg-background font-sans antialiased', fontSans.variable)}>
+      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)} 
+      // style={{background: 'var(--background-gradient)'}}
+      >
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem>
           {children}
-          <Footer />
+          {/* <Footer /> */}
           <Analytics />
           <TailwindIndicator />
         </ThemeProvider>

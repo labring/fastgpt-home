@@ -29,7 +29,7 @@ export const LangSwitcher = () => {
 
   useEffect(() => {
     const storedLang = localStorage.getItem('preferredLang');
-    if (storedLang && storedLang !== lang) {
+    if (storedLang && storedLang !== lang && storedLang !== defaultLocale) {
       router.push(storedLang);
     }
   }, []);

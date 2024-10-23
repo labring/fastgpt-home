@@ -6,6 +6,7 @@ import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
+  title: 'FastGPT',
   name: 'FastGPT',
   description:
     'A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex Q&A systems.',
@@ -97,4 +98,28 @@ export const siteConfig: SiteConfig = {
     images: [`${baseSiteConfig.url}/og.png?${new Date().getTime()}`],
     creator: baseSiteConfig.creator
   }
+};
+
+export const siteConfigZh: SiteConfig = {
+  ...siteConfig,
+  title: 'FastGPT - 企业级智能AI模型问答知识库',
+  description:'FastGPT是一个基于 LLM 大语言模型的知识库问答系统,提供开箱即用的数据处理、模型调用等能力.同时可以通过 Flow 可视化进行工作流编排,从而实现复杂的问答场景!',
+   keywords: [
+    'FastGPT',
+    'free',
+    '知识库',
+    '问答',
+    '数据处理',
+    '模型调用',
+    'RAG检索',
+    '可视化AI工作流',
+    '企业知识库',
+    'rag',
+    'ai',
+    'workflow',
+    'llm',
+    'gpt',
+    'gpt4',
+    'orchestration',
+  ],
 };

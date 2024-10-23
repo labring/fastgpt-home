@@ -6,7 +6,9 @@ import Feature from '@/components/home/Feature';
 import Hero from '@/components/home/Hero';
 // import SocialProof from '@/components/home/SocialProof';
 import VideoPlayer from '@/components/home/Video';
+import { siteConfig, siteConfigZh } from '@/config/site';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { SiteConfig } from '@/types/siteConfig';
 
 export default async function LangHome({ params: { lang } }: { params: { lang?: string[] } }) {
   let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
@@ -57,4 +59,11 @@ export default async function LangHome({ params: { lang } }: { params: { lang?: 
 export async function generateStaticParams() {
   const keys = Object.keys(localeNames).map((lang) => ({ lang: [lang] }));
   return [{ lang: [''] }, ...keys];
+}
+
+export async function generateMetadata(
+  { params: { lang } }: { params: { lang?: string[] } }
+): Promise<SiteConfig> {
+  let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
+  return langName === 'zh' ? siteConfigZh : siteConfig;
 }

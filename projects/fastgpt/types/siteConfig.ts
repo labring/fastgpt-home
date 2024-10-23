@@ -19,6 +19,7 @@ export type ThemeColor = {
   color: string;
 };
 export type SiteConfig = {
+  title: string;
   name: string;
   description: string;
   url: string;

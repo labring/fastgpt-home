@@ -8,6 +8,11 @@ import { useEffect, useState } from 'react';
 
 const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale: any; stars: number, showGithub?: boolean }) => {
   const [stars, setStars] = useState(initialStars);
+  const [bd_vid, setBdVid] = useState<string | null>(null);
+
+  useEffect(() => {
+    setBdVid(typeof window !== 'undefined' ? localStorage.getItem('bd_vid') : null);
+  }, []);
 
   useEffect(() => {
     const getStars = async () => {
@@ -42,7 +47,7 @@ const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale:
           </Button>
         </Link>)
       }
-      <Link href={siteConfig.userUrl} rel="noopener noreferrer nofollow">
+      <Link href={`${siteConfig.userUrl}?bd_vid=${bd_vid}`} rel="noopener noreferrer nofollow">
         <Button
           variant="default"
           className="flex items-center gap-3 bg-[#B9DFFF] hover:bg-[#91C2EB] text-[#3941DD] px-6 py-4 text-sm"

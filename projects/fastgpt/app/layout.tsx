@@ -12,6 +12,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import Script from 'next/script';
+import BdVidHandler from './BdVidHandler';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -83,6 +84,7 @@ export default async function RootLayout({
         </ThemeProvider>
         <GoogleAnalytics />
         <BaiDuAnalytics />
+        <BdVidHandler />
       </body>
     </html>
   );

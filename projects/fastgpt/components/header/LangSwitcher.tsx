@@ -20,10 +20,7 @@ export const LangSwitcher = () => {
 
   const handleSwitchLanguage = (value: string) => {
     localStorage.setItem('preferredLang', value);
-    if (value === 'zh') {
-      router.push('https://fastgpt.cn/');
-      return;
-    }else if (value === defaultLocale) {
+    if (value === defaultLocale) {
       router.push('/');
       return;
     }
@@ -35,7 +32,7 @@ export const LangSwitcher = () => {
     if (storedLang && storedLang !== lang && storedLang !== defaultLocale) {
       router.push(storedLang);
     }
-  }, []);
+  }, [lang, router]);
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>

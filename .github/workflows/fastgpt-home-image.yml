@@ -72,6 +72,7 @@ jobs:
             NEXT_PUBLIC_HOME_URL=${{ secrets.NEXT_PUBLIC_HOME_URL }}
             NEXT_PUBLIC_USER_URL=${{ secrets.NEXT_PUBLIC_USER_URL }}
             NEXT_PUBLIC_FILING_ADDRESS=${{ secrets.NEXT_PUBLIC_FILING_ADDRESS }}
+            NEXT_PUBLIC_POLICE_FILING=${{ secrets.NEXT_PUBLIC_POLICE_FILING }}
 
     outputs:
       tags: ${{ steps.datetime.outputs.datetime }}

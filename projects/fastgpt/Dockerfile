@@ -12,12 +12,14 @@ ARG NEXT_PUBLIC_BAIDU_KEY
 ARG NEXT_PUBLIC_HOME_URL
 ARG NEXT_PUBLIC_USER_URL
 ARG NEXT_PUBLIC_FILING_ADDRESS
+ARG NEXT_PUBLIC_POLICE_FILING
 
 ENV NEXT_PUBLIC_BAIDU_TONGJI=$NEXT_PUBLIC_BAIDU_TONGJI
 ENV NEXT_PUBLIC_BAIDU_KEY=$NEXT_PUBLIC_BAIDU_KEY
 ENV NEXT_PUBLIC_HOME_URL=$NEXT_PUBLIC_HOME_URL
 ENV NEXT_PUBLIC_USER_URL=$NEXT_PUBLIC_USER_URL
 ENV NEXT_PUBLIC_FILING_ADDRESS=$NEXT_PUBLIC_FILING_ADDRESS
+ENV NEXT_PUBLIC_POLICE_FILING=$NEXT_PUBLIC_POLICE_FILING
 
 # copy packages and one project
 ADD . ./
@@ -25,6 +27,7 @@ ADD . ./
 
 RUN sed -i "s#https://doc.fastgpt.in#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.in" ./)
 RUN sed -i "s#https://doc.tryfastgpt.ai#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.tryfastgpt.ai" ./)
+RUN sed -i "s#https://cloud.tryfastgpt.ai#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.tryfastgpt.ai" ./)
 RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 
 RUN npm install

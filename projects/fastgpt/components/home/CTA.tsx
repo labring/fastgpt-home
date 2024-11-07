@@ -93,12 +93,28 @@ const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars:
             })}
           </div>
           <div className='hidden xs:block'>|</div>
-          <div>
+          <div className='flex items-center gap-2'>
             <span>{`©${currentYear}`}&nbsp;</span>
-            <Link href={authors[0].twitter || authors[0].url} target="_blank">
-              {authors[0].name}
-            </Link>
-            <span>&nbsp;All rights reserved.</span>
+            <span>
+              <Link href={authors[0].twitter || authors[0].url} target="_blank">
+                {authors[0].name}
+              </Link>
+              &nbsp;All rights reserved.
+            </span>
+            {process.env.NEXT_PUBLIC_POLICE_FILING && (
+              <span className='flex items-center gap-2'>
+                <Image 
+                  alt={"Police Filing"}
+                  src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png"
+                  width={14}
+                  height={14}
+                  className='ml-2'
+                />
+                <Link href={'https://beian.mps.gov.cn/'}>
+                  {process.env.NEXT_PUBLIC_POLICE_FILING}
+                </Link>
+              </span>
+            )}
             {process.env.NEXT_PUBLIC_FILING_ADDRESS && (
               <Link href={'https://beian.miit.gov.cn/'}>
                 {process.env.NEXT_PUBLIC_FILING_ADDRESS}

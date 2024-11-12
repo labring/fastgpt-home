@@ -8,11 +8,6 @@ import { useEffect, useState } from 'react';
 
 const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale: any; stars: number, showGithub?: boolean }) => {
   const [stars, setStars] = useState(initialStars);
-  const [bd_vid, setBdVid] = useState<string | null>(null);
-
-  useEffect(() => {
-    setBdVid(typeof window !== 'undefined' ? localStorage.getItem('bd_vid') : null);
-  }, []);
 
   useEffect(() => {
     const getStars = async () => {
@@ -27,6 +22,22 @@ const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale:
     };
     getStars();
   }, [initialStars]);
+
+  const getLinkConfig = () => {
+    if (typeof window === 'undefined') return { pathname: siteConfig.userUrl };
+    
+    const urlParams = new URLSearchParams(window.location.search);
+    const bd_vid = urlParams.get('bd_vid');
+    const k = urlParams.get('k');
+    
+    return {
+      pathname: siteConfig.userUrl,
+      query: {
+        ...(bd_vid && { bd_vid }),
+        ...(k && { k })
+      }
+    };
+  };
 
   return (
     <div className="flex items-center gap-6">
@@ -47,7 +58,10 @@ const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale:
           </Button>
         </Link>)
       }
-      <Link href={`${siteConfig.userUrl}?bd_vid=${bd_vid}`} rel="noopener noreferrer nofollow">
+      <Link 
+        href={getLinkConfig()} 
+        rel="noopener noreferrer nofollow"
+      >
         <Button
           variant="default"
           className="flex items-center gap-3 bg-[#B9DFFF] hover:bg-[#91C2EB] text-[#3941DD] px-6 py-4 text-sm"

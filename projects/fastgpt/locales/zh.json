@@ -1,7 +1,9 @@
 {
   "video": {
     "speed": "速度",
-    "normal": "正常"
+    "normal": "正常",
+     "video":"/images/video/zh/video.png",
+    "videoDark":"/images/video/zh/video_dark.png"
   },
   "links": [
     {
@@ -10,7 +12,7 @@
     },
     {
       "label": "价格",
-      "href": "#Pricing"
+      "href": "https://cloud.tryfastgpt.ai/price"
     },
     {
       "label": "FAQ",
@@ -26,6 +28,7 @@
     }
   ],
   "Hero": {
+    "maker": "用户正在使用 FastGPT 构建专属 AI 知识库",
     "title1": "让",
     "title2": "AI",
     "title3": "更懂您的知识",
@@ -36,7 +39,9 @@
   },
   "Feature": {
     "title": "优势",
-    "description": "为什么选择 FastGPT？"
+    "description": "为什么选择 FastGPT？",
+    "doYouLike": "你喜欢这个开源 AI 知识库平台吗？",
+    "follow": "点个 Star 吧🌟"
   },
   "Ability": {
     "title": "开箱即用"
@@ -63,5 +68,11 @@
   },
   "CTAButton": {
     "title": "开始使用"
+  },
+  "InterModal": {
+    "desc": "Looks like you’re accessing the Chinese version from outside China. Would you prefer our international version？",
+    "tip": "Do not remind me again",
+    "button": "Switch",
+    "link":"/en"
   }
 }

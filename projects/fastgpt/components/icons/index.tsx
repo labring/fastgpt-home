@@ -1,4 +1,10 @@
-export { default as LoadingDots } from "./loading-dots";
-export { default as LoadingCircle } from "./loading-circle";
-export { default as LoadingSpinner } from "./loading-spinner";
+export { default as ApiIcon } from "./api";
+export { default as ChatBoxIcon } from "./chat-box";
+export { default as ConnectIcon } from "./connect";
+export { default as DataBaseIcon } from "./database";
+export { default as ExpandIcon } from './expand';
 export { default as ExpandingArrow } from "./expanding-arrow";
+export { default as LoadingCircle } from "./loading-circle";
+export { default as LoadingDots } from "./loading-dots";
+export { default as LoadingSpinner } from "./loading-spinner";
+export { default as RobotIcon } from "./robot";

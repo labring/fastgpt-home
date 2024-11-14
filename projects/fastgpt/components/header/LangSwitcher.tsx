@@ -6,8 +6,8 @@ import {
   SelectTrigger,
   SelectValue
 } from '@/components/ui/select';
-import { useParams, useRouter } from 'next/navigation';
 import { defaultLocale, localeNames } from '@/lib/i18n';
+import { useParams, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export const LangSwitcher = () => {
@@ -20,7 +20,10 @@ export const LangSwitcher = () => {
 
   const handleSwitchLanguage = (value: string) => {
     localStorage.setItem('preferredLang', value);
-    if (value === defaultLocale) {
+    if (value === 'zh') {
+      router.push('https://fastgpt.cn/');
+      return;
+    }else if (value === defaultLocale) {
       router.push('/');
       return;
     }
@@ -29,14 +32,14 @@ export const LangSwitcher = () => {
 
   useEffect(() => {
     const storedLang = localStorage.getItem('preferredLang');
-    if (storedLang && storedLang !== lang) {
+    if (storedLang && storedLang !== lang && storedLang !== defaultLocale) {
       router.push(storedLang);
     }
   }, []);
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
-      <SelectTrigger className="w-fit">
+      <SelectTrigger className="w-fit bg-white/20 hover:bg-white/10">
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>

@@ -1,11 +1,12 @@
 import { SiteConfig } from '@/types/siteConfig';
-import { BsGithub, BsTwitterX, BsWechat } from 'react-icons/bs';
+import { BsGithub } from 'react-icons/bs';
+import { FaDiscord } from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 import { MdEmail } from 'react-icons/md';
-import { SiBuymeacoffee, SiJuejin } from 'react-icons/si';
-
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
+  title: 'FastGPT',
   name: 'FastGPT',
   description:
     'A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex Q&A systems.',
@@ -52,11 +53,11 @@ const baseSiteConfig = {
     apple: '/logo.svg'
   },
   headerLinks: [
-    { name: 'repo', href: OPEN_SOURCE_URL, icon: BsGithub },
+    { name: 'repo', href: OPEN_SOURCE_URL, icon: IoLogoGithub },
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: BsWechat
+      icon: FaDiscord
     }
   ],
   footerLinks: [
@@ -65,7 +66,7 @@ const baseSiteConfig = {
     {
       name: 'weChat',
       href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: BsWechat
+      icon: FaDiscord
     }
   ],
   footerProducts: [
@@ -73,7 +74,9 @@ const baseSiteConfig = {
     { url: 'https://doc.fastgpt.in', name: 'Docs' },
     { url: 'https://doc.fastgpt.in/docs/community/', name: 'Forum' },
     { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
-    { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
+  ],
+  footerService:[
+       { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
     { url: 'https://doc.fastgpt.in/docs/agreement/privacy', name: 'Privacy Policy' }
   ]
 };
@@ -95,4 +98,28 @@ export const siteConfig: SiteConfig = {
     images: [`${baseSiteConfig.url}/og.png?${new Date().getTime()}`],
     creator: baseSiteConfig.creator
   }
+};
+
+export const siteConfigZh: SiteConfig = {
+  ...siteConfig,
+  title: 'FastGPT - 企业级智能AI模型问答知识库',
+  description:'FastGPT是一个基于 LLM 大语言模型的知识库问答系统,提供开箱即用的数据处理、模型调用等能力.同时可以通过 Flow 可视化进行工作流编排,从而实现复杂的问答场景!',
+   keywords: [
+    'FastGPT',
+    'free',
+    '知识库',
+    '问答',
+    '数据处理',
+    '模型调用',
+    'RAG检索',
+    '可视化AI工作流',
+    '企业知识库',
+    'rag',
+    'ai',
+    'workflow',
+    'llm',
+    'gpt',
+    'gpt4',
+    'orchestration',
+  ],
 };

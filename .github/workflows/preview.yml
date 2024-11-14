@@ -1,4 +1,4 @@
-name: github pages
+name: Preview Home Page
 
 on:
   workflow_dispatch:
@@ -6,6 +6,7 @@ on:
     paths:
       - "projects/fastgpt/**"
     branches:
+      - "new-home"
       - "main"
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
@@ -22,27 +23,59 @@ jobs:
         deployments: write
         pull-requests: write
     runs-on: ubuntu-latest
+
+    # Job outputs
+    outputs:
+      url: ${{ steps.deploy.outputs.deployment-url }}
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
         with:
-          node_version: 20
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+          submodules: recursive # Fetch submodules
+          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      - uses: pnpm/action-setup@v4
+        name: Install pnpm
+        with:
+          version: 9
       - name: Build
         env:
           NEXT_PUBLIC_HOME_URL: https://tryfastgpt.ai
-          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.in
+          NEXT_PUBLIC_USER_URL: https://cloud.tryfastgpt.ai
         run: |
           cd projects/fastgpt
           npm install
           npm run build
       - name: Deploy to Cloudflare Pages
-        uses: andykenward/github-actions-cloudflare-pages@v2.3.2
-        id: pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
         with:
-          cloudflare-api-token: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          cloudflare-account-id: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          cloudflare-project-name: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: ./projects/fastgpt/out
-          github-token: ${{ secrets.GH_PAT }}
-          github-environment: ${{ vars.CLOUDFLARE_PROJECT_NAME }} ${{ (github.ref == 'refs/heads/main' && '(Production)') || '(Preview)' }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./projects/fastgpt/out --project-name=fastgpt-home-run
+
+  docsOutput:
+    needs: [ deploy ]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.ref }}
+          repository: ${{ github.event.pull_request.head.repo.full_name }}
+      - name: Write md
+        run: |
+          echo "# 📘 Preview FastGPT homepage" > report.md
+          echo "[👀 Visit Preview](${{ needs.deploy.outputs.url }})" >> report.md
+          cat report.md
+      - name: Print preview url
+        uses: labring/gh-rebot@v0.0.6
+        if: ${{ (github.event_name == 'pull_request_target') }}
+        with:
+          version: v0.0.6
+        env:
+          GH_TOKEN: "${{ secrets.GH_PAT }}"
+          SEALOS_TYPE: "pr_comment"
+          SEALOS_FILENAME: "report.md"
+          SEALOS_REPLACE_TAG: "DEFAULT_REPLACE_DEPLOY"

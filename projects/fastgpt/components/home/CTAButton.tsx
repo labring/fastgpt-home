@@ -29,12 +29,14 @@ const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale:
     const urlParams = new URLSearchParams(window.location.search);
     const bd_vid = urlParams.get('bd_vid');
     const k = urlParams.get('k');
+    const sourceDomain = window.location.hostname;
     
     return {
       pathname: siteConfig.userUrl,
       query: {
         ...(bd_vid && { bd_vid }),
-        ...(k && { k })
+        ...(k && { k }),
+        ...(sourceDomain && { sourceDomain })
       }
     };
   };

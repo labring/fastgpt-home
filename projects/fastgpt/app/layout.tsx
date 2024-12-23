@@ -63,6 +63,9 @@ export default async function RootLayout({
             }}
           />
         )}
+        {isChineseDomain && (
+          <meta name="baidu-site-verification" content="codeva-y4DzLCh5UW" />
+        )}
       </head>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
         {!isChineseDomain && (

@@ -19,10 +19,6 @@ export default async function LangHome({ children, params: { lang } }: { childre
   );
 }
 
-export async function generateStaticParams() {
-  return Object.keys(localeNames).map((lang) => ({ lang }));
-}
-
 export async function generateMetadata(
   { params: { lang } }: { params: { lang?: string } }
 ): Promise<SiteConfig> {

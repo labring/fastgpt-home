@@ -5,7 +5,7 @@ import Feature from '@/components/home/Feature';
 import Hero from '@/components/home/Hero';
 // import SocialProof from '@/components/home/SocialProof';
 import VideoPlayer from '@/components/home/Video';
-import { defaultLocale, getDictionary } from '@/lib/i18n';
+import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getGitHubStars } from '@/lib/utils';
 
 export default async function HomePage({ params: { lang } }: { params: { lang?: string } }) {
@@ -38,4 +38,8 @@ export default async function HomePage({ params: { lang } }: { params: { lang?: 
       <CTA locale={dict.CTA} CTALocale={dict.CTAButton} stars={stars} />
     </>
   );
+}
+
+export async function generateStaticParams() {
+  return Object.keys(localeNames).map((lang) => ({ lang }));
 }

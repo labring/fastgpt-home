@@ -21,3 +21,7 @@ export default async function EnterprisePage({ params: { lang } }: { params: { l
     </>
   );
 }
+
+export async function generateStaticParams() {
+  return [{ lang: 'zh' }];
+}

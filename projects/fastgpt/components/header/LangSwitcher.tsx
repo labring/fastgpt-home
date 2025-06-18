@@ -11,11 +11,12 @@ import { useParams, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export const LangSwitcher = () => {
-  const params = useParams();
+  const params = useParams<{ lang: string }>();
   const lang = params.lang;
 
   // const lang = (params.lang && params.lang[0]) || defaultLocale;
-  let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
+  // let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
+  const langName = lang || defaultLocale;
   const router = useRouter();
 
   const handleSwitchLanguage = (value: string) => {

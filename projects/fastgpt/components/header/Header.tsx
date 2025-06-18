@@ -7,6 +7,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { CgClose } from "react-icons/cg";
+import { useParams } from 'next/navigation';
+import { defaultLocale } from "@/lib/i18n";
+import { getNavHref } from "@/lib/utils";
 
 const Header = ({
   dict,
@@ -19,7 +22,8 @@ const Header = ({
   };
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const params = useParams<{ lang: string }>();
+  const lang = params?.lang || defaultLocale;
 
   const LogoFC = () => (<div className="flex items-center md:gap-x-12">
     <Link
@@ -44,7 +48,7 @@ const Header = ({
       {dict?.links.map((link) => (
         <li key={link.label} className="cursor-pointer hover:bg-white/10 px-2 py-1 rounded-md">
           <Link
-            href={link.href}
+            href={getNavHref(link.href, lang)}
             aria-label={link.label}
             title={link.label}
             className="tracking-wide transition-colors duration-200 font-norma"
@@ -97,7 +101,7 @@ const Header = ({
                   {dict?.links.map((link) => (
                     <li key={link.label}>
                       <Link
-                        href={link.href}
+                        href={getNavHref(link.href, lang)}
                         aria-label={link.label}
                         title={link.label}
                         className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-white/10 p-1 rounded-md"

@@ -32,7 +32,8 @@ const baseSiteConfig = {
     '可视化AI工作流',
     '企业知识库'
   ],
-  commercial: 'https://doc.fastgpt.in/docs/commercial/intro/',
+  // commercial: 'https://doc.fastgpt.in/docs/commercial/intro/',
+  commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
   authors: [
     {
       name: 'labring',

@@ -25,6 +25,10 @@
     {
       "label": "商务咨询",
       "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud"
+    },
+    {
+      "label": "企业版",
+      "href": "/enterprise"
     }
   ],
   "Hero": {
@@ -74,5 +78,37 @@
     "tip": "Do not remind me again",
     "button": "Switch",
     "link":"/en"
+  },
+  "Enterprise": {
+    "Hero": {
+      "maker": "企业正在使用 FastGPT 企业版定制服务",
+      "title": "FastGPT企业版",
+      "description": "软硬一体机交付，开箱即用的大模型与FastGPT企业版，搭配Agent企业级服务，数十个成熟通用智能体与各行各业垂类智能体应用，快速助力企业大模型应用落地。"
+    },
+    "Models": {
+      "title": "产品系列",
+      "description": "为不同规模和需求的企业量身打造，提供推理、推训两种选择。"
+    },
+    "Advantages": {
+      "title": "选择FastGPT企业版",
+      "description": "我们不止提供硬件，更提供稳定、高效、开放的企业级AI底座。"
+    },
+    "Benchmark": {
+      "title": "企业级模型基准测试指标（短文本测试）",
+      "model": "模型",
+      "hardware": "配置",
+      "concurrent40": "40并发（吞吐量/TTFT）",
+      "concurrent160": "160并发（吞吐量/TTFT）",
+      "concurrent256": "256并发（吞吐量/TTFT）"
+    },
+    "Partners": {
+      "title": "服务值得信赖的客户",
+      "description": "覆盖金融、制造、电商、教育等10+行业，帮助上百家企业完成AI落地的最后一公里。"
+    },
+    "CTA": {
+      "title": "准备好部署您的FastGPT企业版了吗？",
+      "description": "立即联系我们的专家，了解FastGPT企业版如何为您的业务带来变革，并申请产品演示。",
+      "link": "申请产品演示"
+    }
   }
 }

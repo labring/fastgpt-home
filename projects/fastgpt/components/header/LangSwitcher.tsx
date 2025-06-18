@@ -7,12 +7,13 @@ import {
   SelectValue
 } from '@/components/ui/select';
 import { defaultLocale, localeNames } from '@/lib/i18n';
-import { useParams, useRouter } from 'next/navigation';
+import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 export const LangSwitcher = () => {
   const params = useParams<{ lang: string }>();
   const lang = params.lang;
+  const pathname = usePathname();
 
   // const lang = (params.lang && params.lang[0]) || defaultLocale;
   // let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
@@ -25,6 +26,9 @@ export const LangSwitcher = () => {
       router.push('https://fastgpt.cn/');
       return;
     }else if (value === defaultLocale) {
+      router.push('/');
+      return;
+    } else if (pathname.includes('enterprise')) {
       router.push('/');
       return;
     }

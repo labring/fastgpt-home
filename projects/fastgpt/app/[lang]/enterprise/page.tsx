@@ -4,7 +4,8 @@ import { defaultLocale, getDictionary } from "@/lib/i18n";
 import { getGitHubStars } from "@/lib/utils";
 
 export default async function EnterprisePage({ params: { lang } }: { params: { lang?: string } }) {
-  const langName = lang || defaultLocale;
+  // const langName = lang || defaultLocale;
+  const langName = 'zh';
   const dict = await getDictionary(langName);
   const stars = await getGitHubStars();
 

@@ -81,7 +81,7 @@ jobs:
       tags: ${{ steps.datetime.outputs.datetime }}
   update-landingpage-image:
     needs: build-fastgpt-landingpage-images
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: github.repository == 'labring/fastgpt-home'
     steps:
       - name: Checkout code

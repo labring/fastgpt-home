@@ -18,6 +18,7 @@ const ECTA = ({ locale }: Props) => {
         href={commercial}
         rel="noopener noreferrer nofollow"
         className="my-8 flex justify-center"
+        target="_blank"
       >
         <Button
           variant="default"

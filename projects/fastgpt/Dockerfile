@@ -25,9 +25,9 @@ ENV NEXT_PUBLIC_POLICE_FILING=$NEXT_PUBLIC_POLICE_FILING
 ADD . ./
 
 
-RUN sed -i "s#https://doc.fastgpt.in#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.in" ./)
-RUN sed -i "s#https://doc.tryfastgpt.ai#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.tryfastgpt.ai" ./)
-RUN sed -i "s#https://cloud.tryfastgpt.ai#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.tryfastgpt.ai" ./)
+RUN sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./)
+RUN sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./)
+RUN sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.fastgpt.io" ./)
 RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 
 RUN npm install

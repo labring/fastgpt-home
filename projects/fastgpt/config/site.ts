@@ -10,8 +10,8 @@ const baseSiteConfig = {
   name: 'FastGPT',
   description:
     'A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex Q&A systems.',
-  url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.in',
-  userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.in',
+  url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
+  userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   ogImage: 'https://landingpage.weijunext.com/og.png',
   metadataBase: '/',
   keywords: [
@@ -32,7 +32,7 @@ const baseSiteConfig = {
     '可视化AI工作流',
     '企业知识库'
   ],
-  // commercial: 'https://doc.fastgpt.in/docs/commercial/intro/',
+  // commercial: 'https://doc.fastgpt.io/docs/commercial/intro/',
   commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
   authors: [
     {
@@ -72,13 +72,13 @@ const baseSiteConfig = {
   ],
   footerProducts: [
     { url: 'https://sealos.io', name: 'Sealos' },
-    { url: 'https://doc.fastgpt.in', name: 'Docs' },
-    { url: 'https://doc.fastgpt.in/docs/community/', name: 'Forum' },
+    { url: 'https://doc.fastgpt.io', name: 'Docs' },
+    { url: 'https://doc.fastgpt.io/docs/community/', name: 'Forum' },
     { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
   ],
-  footerService:[
-       { url: 'https://doc.fastgpt.in/docs/agreement/terms', name: 'Terms of Service' },
-    { url: 'https://doc.fastgpt.in/docs/agreement/privacy', name: 'Privacy Policy' }
+  footerService: [
+    { url: 'https://doc.fastgpt.io/docs/agreement/terms', name: 'Terms of Service' },
+    { url: 'https://doc.fastgpt.io/docs/agreement/privacy', name: 'Privacy Policy' }
   ]
 };
 
@@ -104,8 +104,8 @@ export const siteConfig: SiteConfig = {
 export const siteConfigZh: SiteConfig = {
   ...siteConfig,
   title: 'FastGPT - 企业级智能AI模型问答知识库',
-  description:'FastGPT是一个基于 LLM 大语言模型的知识库问答系统,提供开箱即用的数据处理、模型调用等能力.同时可以通过 Flow 可视化进行工作流编排,从而实现复杂的问答场景!',
-   keywords: [
+  description: 'FastGPT是一个基于 LLM 大语言模型的知识库问答系统,提供开箱即用的数据处理、模型调用等能力.同时可以通过 Flow 可视化进行工作流编排,从而实现复杂的问答场景!',
+  keywords: [
     'FastGPT',
     'free',
     '知识库',

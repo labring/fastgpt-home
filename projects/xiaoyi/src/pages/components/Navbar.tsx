@@ -19,35 +19,35 @@ const Navbar = (props: { loginUrl: string; appUrl: string }) => {
   const menuList = [
     ...(false
       ? [
-          {
-            label: t('home.Commercial'),
-            key: 'Commercial',
-            onClick: () => {
-              window.open(
-                'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
-                '_blank'
-              );
-            }
-          },
-          {
-            label: t('home.Community'),
-            key: 'community',
-            onClick: () => {
-              onOpenCommunity();
-            }
+        {
+          label: t('home.Commercial'),
+          key: 'Commercial',
+          onClick: () => {
+            window.open(
+              'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
+              '_blank'
+            );
           }
-        ]
+        },
+        {
+          label: t('home.Community'),
+          key: 'community',
+          onClick: () => {
+            onOpenCommunity();
+          }
+        }
+      ]
       : []),
     ...(false
       ? [
-          {
-            label: t('home.Docs'),
-            key: 'docs',
-            onClick: () => {
-              window.open(`https://doc.fastgpt.in/docs/intro`);
-            }
+        {
+          label: t('home.Docs'),
+          key: 'docs',
+          onClick: () => {
+            window.open(`https://doc.fastgpt.io/docs/intro`);
           }
-        ]
+        }
+      ]
       : [])
   ];
   const bgOpacity = useMemo(() => {

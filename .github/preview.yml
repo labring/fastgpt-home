@@ -42,8 +42,8 @@ jobs:
           version: 9
       - name: Build
         env:
-          NEXT_PUBLIC_HOME_URL: https://tryfastgpt.ai
-          NEXT_PUBLIC_USER_URL: https://cloud.tryfastgpt.ai
+          NEXT_PUBLIC_HOME_URL: https://fastgpt.io
+          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
         run: |
           cd projects/fastgpt
           npm install

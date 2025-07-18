@@ -44,7 +44,7 @@ const Footer = ({ appUrl }: { appUrl: string }) => {
           {
             label: t('home.Footer Docs'),
             onClick: () => {
-              window.open(`https://doc.fastgpt.in/docs/intro`, '_blank');
+              window.open(`https://doc.fastgpt.io/docs/intro`, '_blank');
             }
           }
         ]

@@ -22,13 +22,6 @@ export const LangSwitcher = () => {
 
   const handleSwitchLanguage = (value: string) => {
     localStorage.setItem('preferredLang', value);
-    if (value === 'zh') {
-      router.push('https://fastgpt.cn/');
-      return;
-    } else if (value === defaultLocale || (pathname.includes('enterprise') && value !== 'zh')) {
-      router.push('/');
-      return;
-    }
     router.push(value);
   };
 

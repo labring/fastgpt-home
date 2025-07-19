@@ -45,7 +45,7 @@ export default async function RootLayout({
   children: React.ReactNode;
   params: { lang: string[] | undefined };
 }) {
-  const isChineseDomain = process.env.NEXT_PUBLIC_USER_URL?.includes('.cn') || process.env.NEXT_PUBLIC_USER_URL?.includes('.run');
+  const isChineseDomain = process.env.NEXT_PUBLIC_USER_URL?.includes('.cn')
 
   return (
     <html lang={(lang && lang[0]) || defaultLocale} suppressHydrationWarning>
@@ -67,11 +67,11 @@ export default async function RootLayout({
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
         {!isChineseDomain && (
           <noscript>
-            <iframe 
+            <iframe
               src="https://www.googletagmanager.com/ns.html?id=GTM-W9HPZZ22"
-              height="0" 
-              width="0" 
-              style={{display: 'none', visibility: 'hidden'}}
+              height="0"
+              width="0"
+              style={{ display: 'none', visibility: 'hidden' }}
             ></iframe>
           </noscript>
         )}

@@ -55,7 +55,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./projects/fastgpt/out --project-name=fastgpt-home-run
+          command: pages deploy ./projects/fastgpt/out --project-name=fastgpt-home
 
       - name: Comment Preview URL
         uses: FinleyGe/github-tools@0.0.1

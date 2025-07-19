@@ -28,7 +28,7 @@ const Hero = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars
               border: '1px solid rgba(179, 220, 229, 0.40)',
             }}
           >
-            <span style={{ color: '#F8A3FF' }}>20w+&nbsp;</span>
+            <span style={{ color: '#F8A3FF' }}>40w+&nbsp;</span>
             {locale.maker}
           </div>
 

@@ -5,9 +5,6 @@ on:
   pull_request_target:
     paths:
       - "projects/fastgpt/**"
-    branches:
-      - "new-home"
-      - "main"
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
@@ -15,14 +12,15 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: write
+  actions: read
+
 jobs:
   deploy:
-    permissions:
-        actions: read # Only required for private GitHub Repo
-        contents: read
-        deployments: write
-        pull-requests: write
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
 
     # Job outputs
     outputs:
@@ -32,14 +30,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
+          ref: ${{ github.event.pull_request.head.sha }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: recursive # Fetch submodules
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+      
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
           version: 9
+      
       - name: Build
         env:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
@@ -48,6 +48,7 @@ jobs:
           cd projects/fastgpt
           npm install
           npm run build
+      
       - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v3
@@ -56,26 +57,19 @@ jobs:
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./projects/fastgpt/out --project-name=fastgpt-home-run
 
-  docsOutput:
-    needs: [ deploy ]
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+      - name: Comment Preview URL
+        uses: FinleyGe/github-tools@0.0.1
+        if: success() && github.event_name == 'pull_request_target'
         with:
-          ref: ${{ github.event.pull_request.head.ref }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
-      - name: Write md
-        run: |
-          echo "# 📘 Preview FastGPT homepage" > report.md
-          echo "[👀 Visit Preview](${{ needs.deploy.outputs.url }})" >> report.md
-          cat report.md
-      - name: Print preview url
-        uses: labring/gh-rebot@v0.0.6
-        if: ${{ (github.event_name == 'pull_request_target') }}
-        with:
-          version: v0.0.6
-        env:
-          GH_TOKEN: "${{ secrets.GH_PAT }}"
-          SEALOS_TYPE: "pr_comment"
-          SEALOS_FILENAME: "report.md"
-          SEALOS_REPLACE_TAG: "DEFAULT_REPLACE_DEPLOY"
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tool: issue-comment
+          title: FastGPT Homepage Preview
+          body: |
+            🚀 **FastGPT Homepage Preview Ready!**
+            
+            📱 **Preview URL:** ${{ steps.deploy.outputs.deployment-url }}
+            
+            🔗 [👀 Click here to visit preview](${{ steps.deploy.outputs.deployment-url }})
+            
+            ---
+            💡 This preview will be automatically updated when you push new commits to this PR.

@@ -1,7 +1,10 @@
 import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub } from 'react-icons/bs';
-import { FaDiscord } from "react-icons/fa";
-import { IoLogoGithub } from "react-icons/io";
+import { FaDiscord, } from "react-icons/fa";
+import { IoLogoGithub, } from "react-icons/io";
+import { IoLogoWechat } from "react-icons/io5";
+import { HiUserGroup } from "react-icons/hi";
+
 import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
@@ -56,25 +59,25 @@ const baseSiteConfig = {
   headerLinks: [
     { name: 'repo', href: OPEN_SOURCE_URL, icon: IoLogoGithub },
     {
-      name: 'weChat',
-      href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: FaDiscord
+      name: 'Lark',
+      href: 'https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png',
+      icon: HiUserGroup
     }
   ],
   footerLinks: [
-    { name: 'email', href: 'mailto:cloud-native-yang@sealos.io', icon: MdEmail },
+    { name: 'email', href: 'mailto:yujinlong@sealos.io', icon: MdEmail },
     { name: 'github', href: 'https://github.com/labring/FastGPT', icon: BsGithub },
     {
-      name: 'weChat',
-      href: 'https://oss.laf.run/htr4n1-images/fastgpt-qr-code.jpg',
-      icon: FaDiscord
+      name: 'Lark',
+      href: 'https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png',
+      icon: HiUserGroup
     }
   ],
   footerProducts: [
     { url: 'https://sealos.io', name: 'Sealos' },
     { url: 'https://doc.fastgpt.io', name: 'Docs' },
     { url: 'https://doc.fastgpt.io/docs/community/', name: 'Forum' },
-    { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
+    // { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
   ],
   footerService: [
     { url: 'https://doc.fastgpt.io/docs/agreement/terms', name: 'Terms of Service' },

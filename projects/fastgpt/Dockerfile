@@ -24,18 +24,17 @@ ENV NEXT_PUBLIC_POLICE_FILING=$NEXT_PUBLIC_POLICE_FILING
 # copy packages and one project
 ADD . ./
 
-
-RUN sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./)
-RUN sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./)
-RUN sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.fastgpt.io" ./)
-RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
+# Replace URLs in files (fix sed -i syntax for Alpine Linux)
+RUN sed -i '' "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./ || true)
+RUN sed -i '' "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.fastgpt.io" ./ || true)
+RUN sed -i '' "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 
 RUN npm install
 RUN npm run build
 
 FROM fholzer/nginx-brotli:latest
 
-LABEL org.opencontainers.image.source https://github.com/labring/fastgpt-home
+LABEL org.opencontainers.image.source="https://github.com/labring/fastgpt-home"
 
 COPY --from=builder /app/out /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf

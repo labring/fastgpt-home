@@ -22,12 +22,12 @@ ENV NEXT_PUBLIC_FILING_ADDRESS=$NEXT_PUBLIC_FILING_ADDRESS
 ENV NEXT_PUBLIC_POLICE_FILING=$NEXT_PUBLIC_POLICE_FILING
 
 # copy packages and one project
-ADD . ./
+COPY . ./
 
 # Replace URLs in files (fix sed -i syntax for Alpine Linux)
-RUN sed -i '' "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./ || true)
-RUN sed -i '' "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.fastgpt.io" ./ || true)
-RUN sed -i '' "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
+RUN sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g" $(grep -rl "https://doc.fastgpt.io" ./ || true)
+RUN sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g" $(grep -rl "https://cloud.fastgpt.io" ./ || true)
+RUN sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts
 
 RUN npm install
 RUN npm run build

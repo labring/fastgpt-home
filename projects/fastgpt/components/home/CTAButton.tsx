@@ -27,6 +27,7 @@ const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale:
     if (typeof window === 'undefined') return { pathname: siteConfig.userUrl };
     
     const urlParams = new URLSearchParams(window.location.search);
+    const search = urlParams.get('search');
     const bd_vid = urlParams.get('bd_vid');
     const msclkid = urlParams.get('msclkid');
     const k = urlParams.get('k');
@@ -34,6 +35,7 @@ const CTAButton = ({ locale, stars: initialStars, showGithub = true }: { locale:
     return {
       pathname: siteConfig.userUrl,
       query: {
+        ...(search && { search }),
         ...(bd_vid && { bd_vid }),
         ...(msclkid && { msclkid }),
         ...(k && { k })

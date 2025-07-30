@@ -36,7 +36,7 @@ const baseSiteConfig = {
     '企业知识库'
   ],
   // commercial: 'https://doc.fastgpt.io/docs/commercial/intro/',
-  commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnRxj3utrzjywsom96Px4sud',
+  commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc',
   authors: [
     {
       name: 'labring',

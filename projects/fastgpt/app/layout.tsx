@@ -1,4 +1,6 @@
 import BaiDuAnalytics from '@/app/BaiDuAnalytics';
+import ClarityAnalytics from '@/app/ClarityAnalytics';
+import RybbitAnalytics from '@/app/RybbitAnalytics';
 import GoogleAnalytics from '@/app/GoogleAnalytics';
 import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
@@ -83,6 +85,8 @@ export default async function RootLayout({
         </ThemeProvider>
         <GoogleAnalytics />
         <BaiDuAnalytics />
+        <ClarityAnalytics />
+        <RybbitAnalytics />
       </body>
     </html>
   );

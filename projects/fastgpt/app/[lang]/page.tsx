@@ -21,7 +21,7 @@ export default async function HomePage({ params: { lang } }: { params: { lang?: 
       {/* <SocialProof locale={dict.SocialProof} /> */}
       {/* Can be used to display technology stack, partners, project honors, etc. */}
       {/*<ScrollingLogos />*/}
-      <VideoPlayer dict={dict} />
+      <VideoPlayer locale={dict.Video} dict={dict} />
 
       <Ability id="Ability" locale={dict.Ability} langName={langName} />
 

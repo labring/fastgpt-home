@@ -2,39 +2,35 @@
   "video": {
     "speed": "再生速度",
     "normal": "標準",
-    "video":"/images/video/en/video.png",
-    "videoDark":"/images/video/en/video_dark.png"
+    "video": "/images/video/en/video.png",
+    "videoDark": "/images/video/en/video_dark.png"
   },
   "links": [
-    {
-      "label": "特長",
-      "href": "#Ability"
-    },
     {
       "label": "価格",
       "href": "https://cloud.fastgpt.io/price"
     },
     {
-      "label": "よくある質問",
-      "href": "#FAQ"
-    },
-    {
       "label": "ドキュメント",
       "href": "https://doc.fastgpt.io/"
+    },
+    {
+      "label": "商務授権",
+      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1"
     }
   ],
   "Hero": {
     "maker": "開発者はFastGPTを活用して、独自の専門AIナレッジベースを作成しています",
-    "title1": "AIに力を",
+    "title1": "FastGPT - ",
     "title2": "",
-    "title3": "あなたの知識で与えよう",
-    "description": "FastGPTは、大規模言語モデル（LLM）を基盤とするオープンソースのAIナレッジベース構築プラットフォームです。データ処理、モデル呼び出し、RAG検索、視覚的なAIワークフローオーケストレーションなどの機能をすぐに使えるため、ドメインに特化した洗練された質問応答ソリューションを簡単に構築できます。"
+    "title3": "構築企業 AI Agent",
+    "description": "見えるか化 Workflow 編成 + 超使いやすいAI知識ベース + 革新 RAG 検索 + テンプレート生態系 = 簡単強力 AI Agent 構築できます"
   },
   "SocialProof": {
     "maker": "開発者はFastGPTを活用して、独自の専門AIナレッジベースを作成しています"
   },
   "Feature": {
-    "title": "FastGPTの主な利点",
+    "title": "主な利点",
     "description": "AIナレッジベースのニーズに FastGPTを選ぶ理由は何でしょうか？",
     "doYouLike": "このオープンソースのAIナレッジベースソリューションを気に入っていただけましたか？",
     "follow": "スター🌟で感謝の気持ちを示しましょう"
@@ -42,10 +38,13 @@
   "Ability": {
     "title": "すぐにデプロイ可能"
   },
+  "Video": {
+    "title": "動画でも👇"
+  },
   "Pricing": {
     "title": "価格",
     "title2": "商用利用が承認済み",
-    "description": "FastGPTは、オープンソースで完全に無料のAIナレッジベースプラットフォームです。",
+    "description": "は、オープンソースで完全に無料のAIナレッジベースプラットフォームです。",
     "doYouLike": "このオープンソースのAIナレッジベースソリューションを気に入っていただけましたか？",
     "follow": "スター🌟で感謝の気持ちを示しましょう"
   },
@@ -63,12 +62,13 @@
     "description6": "させましょう！"
   },
   "CTAButton": {
+    "askTitle": "販売します",
     "title": "始めましょう"
-  }, 
+  },
   "InterModal": {
     "desc": "您当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
     "tip": "不再提醒",
     "button": "跳转",
-    "link":"/zh"
+    "link": "/zh"
   }
 }

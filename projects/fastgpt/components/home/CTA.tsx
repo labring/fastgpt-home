@@ -49,7 +49,7 @@ const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars:
           </p>
         </div>
         <div className='md:absolute md:top-0 right-0'>
-          <CTAButton locale={CTALocale} stars={stars} showGithub={false} />
+          <CTAButton locale={CTALocale} stars={stars} />
         </div>
       </section>
 
@@ -103,7 +103,7 @@ const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars:
             </span>
             {process.env.NEXT_PUBLIC_POLICE_FILING && (
               <span className='flex items-center gap-2'>
-                <Image 
+                <Image
                   alt={"Police Filing"}
                   src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png"
                   width={14}

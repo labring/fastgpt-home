@@ -68,13 +68,13 @@ const Ability = ({
                 {item.title}
               </h2>
               <p>{item.content}</p>
-              <a
+              {/* <a
                 className={cn(
                   "lg:mt-14 hidden lg:block hover:text-[#1A5EFE] cursor-pointer"
                 )}
               >
                 {item.tip}
-              </a>
+              </a> */}
             </div>
             <div className={cn("relative w-full lg:w-3/5 min-h-[150px] flex justify-center items-center rounded-lg overflow-hidden")}>
               <img src={item.image} alt="ABILITYS" style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />

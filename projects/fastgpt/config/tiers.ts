@@ -16,7 +16,7 @@ export const TIERS_EN: Array<Tier> = [
       "Commercial use under certain terms",
     ],
     buttonText: "Get Started",
-    buttonColor: "primary", 
+    buttonColor: "primary",
     buttonVariant: "solid",
   },
   {
@@ -29,7 +29,7 @@ export const TIERS_EN: Array<Tier> = [
       "Customization and development",
       "Dedicated support",
       "Custom copyright notice",
-      "Web application synchronization", 
+      "Web application synchronization",
       "Full commercial licensing"
     ],
     buttonText: "Learn More",
@@ -83,7 +83,7 @@ export const TIERS_JA: Array<Tier> = [
     href: siteConfig.openSourceURL || "#",
     description: "プライベート環境への自由なデプロイと、他のアプリケーションのバックエンドサービスとしての利用が可能です。",
     features: [
-      "無料でご利用いただけます", 
+      "無料でご利用いただけます",
       "ソースコードへの完全なアクセス",
       "カスタマイズと開発が可能",
       "一定の条件下での商用利用が可能",
@@ -94,14 +94,14 @@ export const TIERS_JA: Array<Tier> = [
   },
   {
     key: TiersEnum.Customize,
-    title: "商用エディション", 
+    title: "商用エディション",
     href: siteConfig.commercial || "#",
     description: "オープンソースのFastGPTをベースに構築された、機能強化版です。",
     price: "SaaSの商用ライセンス",
     features: [
       "カスタマイズと開発が可能",
       "専任サポート",
-      "カスタム著作権表示", 
+      "カスタム著作権表示",
       "Webアプリケーションとの同期",
       "商用ライセンスを完全に取得"
     ],
@@ -139,7 +139,7 @@ export const TIERS_AR: Array<Tier> = [
       "دعم مخصص",
       "إشعار حقوق نشر مخصص",
       "مزامنة تطبيقات الويب",
-      "ترخيص تجاري كامل"  
+      "ترخيص تجاري كامل"
     ],
     buttonText: "تعرف على المزيد",
     buttonColor: "default",
@@ -149,7 +149,7 @@ export const TIERS_AR: Array<Tier> = [
 
 export const TIERS_ES: Array<Tier> = [
   {
-    key: TiersEnum.Free, 
+    key: TiersEnum.Free,
     title: "Código Abierto / Gratis",
     price: "Gratis",
     href: siteConfig.openSourceURL || "#",
@@ -169,7 +169,7 @@ export const TIERS_ES: Array<Tier> = [
     title: "Edición Comercial",
     href: siteConfig.commercial || "#",
     description: "Una versión mejorada construida sobre el FastGPT de código abierto.",
-    price: "Licencia Comercial SaaS", 
+    price: "Licencia Comercial SaaS",
     features: [
       "Personalización y desarrollo",
       "Soporte dedicado",
@@ -179,7 +179,7 @@ export const TIERS_ES: Array<Tier> = [
     ],
     buttonText: "Saber más",
     buttonColor: "default",
-    buttonVariant: "flat",  
+    buttonVariant: "flat",
   },
 ];
 
@@ -188,7 +188,7 @@ export const TIERS_RU: Array<Tier> = [
     key: TiersEnum.Free,
     title: "Открытый Исходный Код / Бесплатно",
     price: "Бесплатно",
-    href: siteConfig.openSourceURL || "#", 
+    href: siteConfig.openSourceURL || "#",
     description: "Свободно развертывайте в частных средах и используйте в качестве бэкенд-сервиса для других приложений.",
     features: [
       "Полностью бесплатно",
@@ -208,11 +208,11 @@ export const TIERS_RU: Array<Tier> = [
     price: "Коммерческая Лицензия SaaS",
     features: [
       "Возможность настройки и разработки",
-      "Выделенная поддержка", 
+      "Выделенная поддержка",
       "Пользовательское уведомление об авторских правах",
       "Синхронизация с веб-приложениями",
       "Полная коммерческая лицензия"
-    ],  
+    ],
     buttonText: "Узнать больше",
     buttonColor: "default",
     buttonVariant: "flat",

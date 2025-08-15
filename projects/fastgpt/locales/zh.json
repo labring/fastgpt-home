@@ -2,29 +2,21 @@
   "video": {
     "speed": "速度",
     "normal": "正常",
-     "video":"/images/video/zh/video.png",
-    "videoDark":"/images/video/zh/video_dark.png"
+    "video": "/images/video/zh/video.png",
+    "videoDark": "/images/video/zh/video_dark.png"
   },
   "links": [
     {
-      "label": "特性",
-      "href": "#Ability"
-    },
-    {
-      "label": "价格",
-      "href": "https://cloud.fastgpt.io/price"
-    },
-    {
-      "label": "FAQ",
-      "href": "#FAQ"
-    },
-    {
       "label": "文档",
-      "href": "https://doc.fastgpt.io/"
+      "href": "https://doc.fastgpt.cn/docs/introduction"
     },
     {
-      "label": "商务咨询",
-      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc"
+      "label": "定价",
+      "href": "https://cloud.fastgpt.cn/price"
+    },
+    {
+      "label": "商用授权",
+      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1"
     },
     {
       "label": "企业一体机",
@@ -32,52 +24,56 @@
     }
   ],
   "Hero": {
-    "maker": "用户正在使用 FastGPT 构建专属 AI 知识库",
-    "title1": "让",
-    "title2": "AI",
-    "title3": "更懂您的知识",
-    "description": "基于 LLM 大模型的开源 AI 知识库构建平台。提供了开箱即用的数据处理、模型调用、RAG 检索、可视化 AI 工作流编排等能力，帮助您轻松构建复杂的 AI 应用。"
+    "maker": "用户使用 FastGPT 构建专属 AI 知识库",
+    "title1": "FastGPT - ",
+    "title2": "",
+    "title3": "企业级 AI Agent 构建平台",
+    "description": "可视化 Workflow 编排 + 超易用 AI 知识库 + 创新 RAG 检索 + 模板生态 = 轻松构建强大 AI 应用"
   },
   "SocialProof": {
-    "maker": "用户正在使用 FastGPT 构建专属 AI 知识库"
+    "maker": "用户使用 FastGPT 构建专属 AI 知识库"
   },
   "Feature": {
     "title": "优势",
     "description": "为什么选择 FastGPT？",
-    "doYouLike": "你喜欢这个开源 AI 知识库平台吗？",
+    "doYouLike": "喜欢这个开源 AI Agent 构建平台吗？",
     "follow": "点个 Star 吧🌟"
   },
   "Ability": {
-    "title": "开箱即用"
+    "title": "产品特性介绍"
+  },
+  "Video": {
+    "title": "观看演示👇"
   },
   "Pricing": {
     "title": "定价",
     "title2": "允许被用于商业化",
-    "description": "这是一个开源的、免费的 AI 知识库平台。",
-    "doYouLike": "你喜欢这个开源 AI 知识库平台吗？",
+    "description": "这是一个开源的、免费的 AI Agent 构建平台",
+    "doYouLike": "喜欢这个开源 AI Agent 构建平台吗？",
     "follow": "点个 Star 吧🌟"
   },
   "FAQ": {
-    "title": "问题解答",
-    "description": "这里有一些最常见的问题。"
+    "title": "FAQ 解答",
+    "description": "关于 FastGPT 的常见问题解答"
   },
   "CTA": {
-    "title": "立即构建您的专有领域知识库",
-    "description1": "构建",
-    "description2": "您的专属 AI 客服，",
-    "description3": "接入",
-    "description4": "您的产品，并开始",
-    "description5": "快速增长",
-    "description6": "！"
+    "title": "现在开始构建专属你的 AI Agent。",
+    "description1": "FastGPT, 让 AI Agent 构建更轻松!",
+    "description2": "",
+    "description3": "",
+    "description4": "",
+    "description5": "",
+    "description6": ""
   },
   "CTAButton": {
-    "title": "开始使用"
+    "askTitle": "商业版咨询",
+    "title": "免费使用"
   },
   "InterModal": {
     "desc": "Looks like you’re accessing the Chinese version from outside China. Would you prefer our international version？",
     "tip": "Do not remind me again",
     "button": "Switch",
-    "link":"/en"
+    "link": "/en"
   },
   "Enterprise": {
     "Hero": {
@@ -106,8 +102,8 @@
       "description": "覆盖金融、制造、电商、教育等10+行业，帮助上百家企业完成 AI 落地的最后一公里。"
     },
     "CTA": {
-      "title": "准备好部署您的 FastGPT 企业一体机了吗？",
-      "description": "立即联系我们的专家，了解 FastGPT 企业一体机如何为您的业务带来变革，并申请产品演示。",
+      "title": "准备好部署你的 FastGPT 企业一体机了吗？",
+      "description": "立即联系我们的专家，了解 FastGPT 企业一体机如何为你的业务带来变革，并申请产品演示。",
       "link": "申请产品演示"
     }
   }

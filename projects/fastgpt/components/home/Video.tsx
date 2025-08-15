@@ -6,8 +6,10 @@ import { IoPlay } from "react-icons/io5";
 
 const VideoPlayer = ({
   dict,
+  locale,
 }: {
-  dict: { video: { speed: string; normal: string ,video:string,videoDark:string} };
+  dict: { video: { speed: string; normal: string, video: string, videoDark: string } };
+  locale: any;
 }) => {
   const [open, setOpen] = useState(false)
 
@@ -61,7 +63,11 @@ const VideoPlayer = ({
 
   return (
     <>
-      <div className="relative mb-12 mt-6 md:mt-14">
+      <div className="relative mb-12 mt-6 margin-120">
+        <h5 className="text-center text-gradient">
+          {locale.title}
+        </h5>
+        <div className="margin-top-40"></div>
         <img src={dict?.video?.video} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
         <img src={dict?.video?.videoDark} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
 

@@ -2,7 +2,7 @@ import BaiDuAnalytics from '@/app/BaiDuAnalytics';
 import ClarityAnalytics from '@/app/ClarityAnalytics';
 import RybbitAnalytics from '@/app/RybbitAnalytics';
 import GoogleAnalytics from '@/app/GoogleAnalytics';
-import { TailwindIndicator } from '@/components/TailwindIndicator';
+// import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { siteConfig } from '@/config/site';
 import { defaultLocale } from '@/lib/i18n';
@@ -81,7 +81,7 @@ export default async function RootLayout({
           {children}
           {/* <Footer /> */}
           <Analytics />
-          <TailwindIndicator />
+          {/* <TailwindIndicator /> */}
         </ThemeProvider>
         <GoogleAnalytics />
         <BaiDuAnalytics />

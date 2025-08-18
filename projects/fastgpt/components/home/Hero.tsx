@@ -75,7 +75,7 @@ const Hero = ({ locale, CTALocale, stars: initialStars }: { locale: any; CTALoca
             {/* <LineText>{locale.title2}</LineText>  */}
             {locale.title3}
           </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-s sm:text-sm md:text-xl tracking-tight" style={{ color: 'var(--text-secondary)' }}>
+          <p className="mx-auto mt-4 max-w-3xl text-s sm:text-sm md:text-large tracking-tight" style={{ color: 'var(--text-secondary)' }}>
             {locale.description}
           </p>
         </section>

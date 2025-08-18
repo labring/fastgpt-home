@@ -268,10 +268,10 @@ body {
 .rotating-border-button::before {
   content: '';
   position: absolute;
-  top: -3px;
-  left: -3px;
-  right: -3px;
-  bottom: -3px;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
   background: conic-gradient(from var(--angle),
       transparent 0deg,
       #666 30deg,
@@ -292,10 +292,10 @@ body {
 .rotating-border-button::after {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
   background: #000;
   border-radius: 6px;
   z-index: -1;
@@ -402,7 +402,7 @@ body {
   background: linear-gradient(180deg, #F9BDFD 0%, #80B8FF 100%);
   color: #3941DD;
   width: 9rem;
-  font-size: 1.23em;
+  font-size: 1.22em;
   height: 3.2rem;
 }
 
@@ -413,7 +413,7 @@ body {
 }
 
 .fix-header .start-btn {
-  font-size: 1rem;
+  font-size: 0.9rem;
   height: 2.3rem;
 }
 

@@ -46,7 +46,7 @@ jobs:
           username: ${{ secrets.ALI_HUB_USERNAME }}
           password: ${{ secrets.ALI_HUB_PASSWORD }}
 
-      - name: Build and push Docker images to ghcr.io and DockerHub
+      - name: Build and push Docker images to Aliyun
         uses: docker/build-push-action@v5
         with:
           context: projects/fastgpt
@@ -65,7 +65,7 @@ jobs:
             NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
 
     outputs:
-      tags: ${{ steps.datetime.outputs.datetime }}
+      tags: ${{ steps.meta.outputs.tags }}
   update-landingpage-image:
     needs: build-fastgpt-landingpage-images
     runs-on: ubuntu-latest

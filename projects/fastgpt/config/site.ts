@@ -9,10 +9,10 @@ import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
-  title: 'FastGPT - Enterprise AI Angent Builder',
+  title: 'FastGPT - Enterprise AI Agent Builder',
   name: 'FastGPT',
   description:
-    'A free, open-source Enterprise AI Angent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
+    'A free, open-source Enterprise AI Agent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
   url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   ogImage: 'https://landingpage.weijunext.com/og.png',

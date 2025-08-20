@@ -9,10 +9,10 @@ import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
-  title: 'FastGPT',
+  title: 'FastGPT - Enterprise AI Angent Builder',
   name: 'FastGPT',
   description:
-    'A free, open-source, and powerful AI knowledge base platform, offers out-of-the-box data processing, model invocation, RAG retrieval, and visual AI workflows. Easily build complex Q&A systems.',
+    'A free, open-source Enterprise AI Angent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
   url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   ogImage: 'https://landingpage.weijunext.com/og.png',
@@ -20,10 +20,12 @@ const baseSiteConfig = {
   keywords: [
     'rag',
     'ai',
+    'agent',
+    'ai agent',
     'workflow',
     'llm',
     'gpt',
-    'gpt4',
+    'gpt5',
     'orchestration',
     'FastGPT',
     'free',
@@ -36,7 +38,7 @@ const baseSiteConfig = {
     '企业知识库'
   ],
   // commercial: 'https://doc.fastgpt.io/docs/commercial/intro/',
-  commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc',
+  commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=G1&hide_S=1',
   authors: [
     {
       name: 'labring',
@@ -74,14 +76,14 @@ const baseSiteConfig = {
     }
   ],
   footerProducts: [
-    { url: 'https://sealos.io', name: 'Sealos' },
-    { url: 'https://doc.fastgpt.io', name: 'Docs' },
-    { url: 'https://doc.fastgpt.io/docs/community/', name: 'Forum' },
+    // { url: 'https://sealos.io', name: 'Sealos' },
+    // { url: 'https://doc.fastgpt.io/docs/introduction', name: 'Docs' },
+    // { url: 'https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png', name: '飞书讨论群' },
     // { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
   ],
   footerService: [
-    { url: 'https://doc.fastgpt.io/docs/agreement/terms', name: 'Terms of Service' },
-    { url: 'https://doc.fastgpt.io/docs/agreement/privacy', name: 'Privacy Policy' }
+    { url: 'https://doc.fastgpt.io/docs/protocol/terms', name: 'Terms of Service' },
+    { url: 'https://doc.fastgpt.io/docs/protocol/privacy', name: 'Privacy Policy' }
   ]
 };
 
@@ -106,24 +108,24 @@ export const siteConfig: SiteConfig = {
 
 export const siteConfigZh: SiteConfig = {
   ...siteConfig,
-  title: 'FastGPT - 企业级智能AI模型问答知识库',
-  description: 'FastGPT是一个基于 LLM 大语言模型的知识库问答系统,提供开箱即用的数据处理、模型调用等能力.同时可以通过 Flow 可视化进行工作流编排,从而实现复杂的问答场景!',
+  title: 'FastGPT - 企业级 AI Agent 搭建平台',
+  description: 'FastGPT是一个企业级 AI Agent 搭建平台，可以基于 LLM 大语言模型搭建 AI 知识库问答系统,提供开箱即用的AI Agent 工具集及大模型调用等能力，并通过可视化 workflow 编排功能实现复杂的AI应用能力!',
   keywords: [
     'FastGPT',
-    'free',
+    'AI Agent',
     '知识库',
     '问答',
-    '数据处理',
-    '模型调用',
+    'workflow',
+    'AI 客服',
     'RAG检索',
     '可视化AI工作流',
     '企业知识库',
     'rag',
     'ai',
-    'workflow',
+    'AI 知识库',
     'llm',
     'gpt',
-    'gpt4',
-    'orchestration',
+    'gpt5',
+    'AI自动化工具',
   ],
 };

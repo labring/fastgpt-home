@@ -1,6 +1,7 @@
 "use client";
 import HeaderLinks from "@/components/header/HeaderLinks";
 import { LangSwitcher } from "@/components/header/LangSwitcher";
+import CTAButton from '@/components/home/CTAButton';
 import { siteConfig } from "@/config/site";
 import { MenuIcon } from "lucide-react";
 import Image from "next/image";
@@ -20,21 +21,27 @@ type Dict = {
 
 const Header = ({
   dict,
+  CTALocale,
 }: {
   dict: Dict;
+  CTALocale: any;
 }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
 
+
   return (
     <header className="relative py-2 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex justify-between">
-      <nav className="z-50 flex justify-between w-full">
+      <nav className="z-50 flex justify-between w-full fix-header">
         <LogoFC dict={dict} lang={lang} />
         <div className="hidden md:flex items-center gap-x-4">
-          <HeaderLinks />
           {/* <ThemedButton /> */}
-          <LangSwitcher />
+          <div className="header-lang-area">
+            <LangSwitcher />
+          </div>
+          <CTAButton locale={CTALocale} stars={1} />
+          {/* <HeaderLinks /> */}
         </div>
       </nav>
 
@@ -81,7 +88,7 @@ const Header = ({
                 </ul>
               </nav>
               <div className="mt-4 border-t-1 flex flex-col gap-6 pt-4 border-white/10">
-                <HeaderLinks />
+                {/* <HeaderLinks /> */}
                 {/* <ThemedButton /> */}
                 <LangSwitcher />
               </div>

@@ -30,12 +30,6 @@ const HeaderLinks = () => {
           <div className="md:hidden font-medium">{link.name}</div>
         </Link>
       ))}
-      <div onClick={() => setTheme(theme === "light" ? "dark" : "light")} className="flex gap-4 font-medium p-1 hover:bg-white/10 cursor-pointer rounded-md">
-        {theme === "light" && isClient ? <PhMoonFill /> : <PhSunBold />}
-        <div className="md:hidden">
-          {theme === "light" && isClient ? "Night Mode" : "Light Mode"}
-        </div>
-      </div>
     </div>
   );
 };

@@ -30,7 +30,7 @@ jobs:
           images: |
             registry.cn-hangzhou.aliyuncs.com/labring4docker/fastgpt-home
           tags: |
-            ${{ steps.datetime.outputs.datetime }}
+            ${{ steps.datetime.outputs.datetime || github.run_number }}
           flavor: latest=false
 
       - name: Set up QEMU

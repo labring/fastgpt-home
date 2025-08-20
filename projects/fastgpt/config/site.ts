@@ -1,18 +1,18 @@
 import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub } from 'react-icons/bs';
-import { FaDiscord, } from "react-icons/fa";
-import { IoLogoGithub, } from "react-icons/io";
-import { IoLogoWechat } from "react-icons/io5";
-import { HiUserGroup } from "react-icons/hi";
+import { FaDiscord } from 'react-icons/fa';
+import { IoLogoGithub } from 'react-icons/io';
+import { IoLogoWechat } from 'react-icons/io5';
+import { HiUserGroup } from 'react-icons/hi';
 
 import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
-  title: 'FastGPT - Enterprise AI Angent Builder',
+  title: 'FastGPT - Enterprise AI Agent Builder',
   name: 'FastGPT',
   description:
-    'A free, open-source Enterprise AI Angent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
+    'A free, open-source Enterprise AI Agent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
   url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   ogImage: 'https://landingpage.weijunext.com/og.png',
@@ -38,7 +38,8 @@ const baseSiteConfig = {
     '企业知识库'
   ],
   // commercial: 'https://doc.fastgpt.io/docs/commercial/intro/',
-  commercial: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=G1&hide_S=1',
+  commercial:
+    'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=G1&hide_S=1',
   authors: [
     {
       name: 'labring',
@@ -109,7 +110,8 @@ export const siteConfig: SiteConfig = {
 export const siteConfigZh: SiteConfig = {
   ...siteConfig,
   title: 'FastGPT - 企业级 AI Agent 搭建平台',
-  description: 'FastGPT是一个企业级 AI Agent 搭建平台，可以基于 LLM 大语言模型搭建 AI 知识库问答系统,提供开箱即用的AI Agent 工具集及大模型调用等能力，并通过可视化 workflow 编排功能实现复杂的AI应用能力!',
+  description:
+    'FastGPT是一个企业级 AI Agent 搭建平台，可以基于 LLM 大语言模型搭建 AI 知识库问答系统,提供开箱即用的AI Agent 工具集及大模型调用等能力，并通过可视化 workflow 编排功能实现复杂的AI应用能力!',
   keywords: [
     'FastGPT',
     'AI Agent',
@@ -126,6 +128,6 @@ export const siteConfigZh: SiteConfig = {
     'llm',
     'gpt',
     'gpt5',
-    'AI自动化工具',
-  ],
+    'AI自动化工具'
+  ]
 };

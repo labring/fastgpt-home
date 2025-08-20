@@ -64,8 +64,12 @@ jobs:
             NEXT_PUBLIC_RYBBIT_TONGJI=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
             NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
 
+      - name: Extract tag
+        id: tag
+        run: echo "tag=${{ steps.datetime.outputs.datetime || github.run_number }}" >> "$GITHUB_OUTPUT"
+
     outputs:
-      tags: ${{ steps.meta.outputs.tags }}
+      tag: ${{ steps.tag.outputs.tag }}
   update-landingpage-image:
     needs: build-fastgpt-landingpage-images
     runs-on: ubuntu-latest
@@ -77,5 +81,5 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         with:
-          args: set image deployment/fastgpt-home fastgpt-home=registry.cn-hangzhou.aliyuncs.com/labring4docker/fastgpt-home:${{ needs.build-fastgpt-landingpage-images.outputs.tags }}
+          args: set image deployment/fastgpt-home fastgpt-home=registry.cn-hangzhou.aliyuncs.com/labring4docker/fastgpt-home:${{ needs.build-fastgpt-landingpage-images.outputs.tag }}
     

@@ -13,6 +13,8 @@ jobs:
     permissions:
       contents: read
       packages: write
+    outputs:
+      datetime: ${{ steps.datetime.outputs.datetime }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -65,15 +67,6 @@ jobs:
             NEXT_PUBLIC_RYBBIT_TONGJI=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
             NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
 
-    outputs:
-      datetime: ${{ steps.datetime.outputs.datetime }}
-  update-landingpage-image:
-    needs: build-fastgpt-landingpage-images
-    runs-on: ubuntu-latest
-    if: github.repository == 'labring/fastgpt-home'
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
       - uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}

@@ -2,8 +2,8 @@
   "video": {
     "speed": "Скорость",
     "normal": "Обычная",
-    "video":"/images/video/en/video.png",
-    "videoDark":"/images/video/en/video_dark.png"
+    "video": "/images/video/en/video.png",
+    "videoDark": "/images/video/en/video_dark.png"
   },
   "links": [
     {
@@ -12,7 +12,7 @@
     },
     {
       "label": "Цены",
-      "href": "https://cloud.fastgpt.io/price"
+      "href": "/price"
     },
     {
       "label": "Часто задаваемые вопросы",
@@ -68,11 +68,11 @@
   },
   "CTAButton": {
     "title": "Получить Шаблон"
-  }, 
+  },
   "InterModal": {
     "desc": "您当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
     "tip": "不再提醒",
     "button": "跳转",
-    "link":"/zh"
+    "link": "/zh"
   }
 }

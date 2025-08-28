@@ -200,6 +200,11 @@ body {
   background-clip: text;
 }
 
+.text-stroke {
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgba(0, 0, 0, 0.05);
+}
+
 .border-box {
   backdrop-filter: blur(10px);
 }

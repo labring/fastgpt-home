@@ -77,7 +77,7 @@ export default async function RootLayout({
             ></iframe>
           </noscript>
         )}
-        <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem>
+        <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}
           {/* <Footer /> */}
           <Analytics />

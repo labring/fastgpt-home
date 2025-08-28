@@ -1,16 +1,16 @@
-"use client";
-import HeaderLinks from "@/components/header/HeaderLinks";
-import { LangSwitcher } from "@/components/header/LangSwitcher";
+'use client';
+
+import { LangSwitcher } from '@/components/header/LangSwitcher';
 import CTAButton from '@/components/home/CTAButton';
-import { siteConfig } from "@/config/site";
-import { MenuIcon } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import { useState } from "react";
-import { CgClose } from "react-icons/cg";
+import { siteConfig } from '@/config/site';
+import { MenuIcon } from 'lucide-react';
+import Image from 'next/image';
+import Link from 'next/link';
+import { useState } from 'react';
+import { CgClose } from 'react-icons/cg';
 import { useParams } from 'next/navigation';
-import { defaultLocale } from "@/lib/i18n";
-import { getNavHref } from "@/lib/utils";
+import { defaultLocale } from '@/lib/i18n';
+import { getNavHref } from '@/lib/utils';
 
 type Dict = {
   links: {
@@ -19,17 +19,10 @@ type Dict = {
   }[];
 };
 
-const Header = ({
-  dict,
-  CTALocale,
-}: {
-  dict: Dict;
-  CTALocale: any;
-}) => {
+const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
-
 
   return (
     <header className="relative py-2 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex justify-between">
@@ -37,9 +30,7 @@ const Header = ({
         <LogoFC dict={dict} lang={lang} />
         <div className="hidden md:flex items-center gap-x-4">
           {/* <ThemedButton /> */}
-          <div className="header-lang-area">
-            <LangSwitcher />
-          </div>
+          <div className="header-lang-area">{/* <LangSwitcher /> */}</div>
           <CTAButton locale={CTALocale} stars={1} />
           {/* <HeaderLinks /> */}
         </div>
@@ -59,6 +50,7 @@ const Header = ({
             <div className="p-5 bg-background rounded shadow-sm">
               <div className="flex items-center justify-between mb-4">
                 <LogoFC dict={dict} lang={lang} />
+
                 <div>
                   <button
                     aria-label="Close Menu"
@@ -70,6 +62,7 @@ const Header = ({
                   </button>
                 </div>
               </div>
+
               <nav>
                 <ul className="space-y-4">
                   {dict?.links.map((link) => (
@@ -87,10 +80,9 @@ const Header = ({
                   ))}
                 </ul>
               </nav>
+
               <div className="mt-4 border-t-1 flex flex-col gap-6 pt-4 border-white/10">
-                {/* <HeaderLinks /> */}
-                {/* <ThemedButton /> */}
-                <LangSwitcher />
+                {/* <LangSwitcher /> */}
               </div>
             </div>
           </div>
@@ -102,7 +94,7 @@ const Header = ({
 
 export default Header;
 
-const LogoFC = ({ dict, lang }: { dict: Dict, lang: string }) => (
+const LogoFC = ({ dict, lang }: { dict: Dict; lang: string }) => (
   <div className="flex items-center md:gap-x-12">
     <Link
       href="/"
@@ -117,9 +109,7 @@ const LogoFC = ({ dict, lang }: { dict: Dict, lang: string }) => (
         width={32}
         height={32}
       />
-      <span className="text-white hidden md:block">
-        FastGPT
-      </span>
+      <span className="text-white hidden md:block">FastGPT</span>
     </Link>
 
     <ul className="hidden items-center gap-5 md:flex">

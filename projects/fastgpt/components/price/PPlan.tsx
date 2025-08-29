@@ -83,16 +83,22 @@ export default function PPlan() {
               </h3>
               <p className="text-sm text-white/50 h-[40px]">{item.content}</p>
 
-              <Link href="https://cloud.fastgpt.cn/login" target="_blank">
+              {item.key === 'free' ? (
                 <Button
                   color="primary"
                   size="sm"
                   className="w-full bg-[#487FFF] rounded-[6px]"
-                  isDisabled={item.key === 'free'}
+                  isDisabled
                 >
                   升级套餐
                 </Button>
-              </Link>
+              ) : (
+                <Link href="https://cloud.fastgpt.cn/account/info" target="_blank">
+                  <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
+                    升级套餐
+                  </Button>
+                </Link>
+              )}
 
               <div className="flex flex-col gap-2">
                 {item.features.map((feature, index) => (

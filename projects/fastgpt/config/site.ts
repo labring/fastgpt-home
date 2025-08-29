@@ -1,8 +1,6 @@
 import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub } from 'react-icons/bs';
-import { FaDiscord } from 'react-icons/fa';
 import { IoLogoGithub } from 'react-icons/io';
-import { IoLogoWechat } from 'react-icons/io5';
 import { HiUserGroup } from 'react-icons/hi';
 
 import { MdEmail } from 'react-icons/md';

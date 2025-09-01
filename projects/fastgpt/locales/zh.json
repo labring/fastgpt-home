@@ -50,7 +50,12 @@
     "title2": "允许被用于商业化",
     "description": "这是一个开源的、免费的 AI Agent 构建平台",
     "doYouLike": "喜欢这个开源 AI Agent 构建平台吗？",
-    "follow": "点个 Star 吧🌟"
+    "follow": "点个 Star 吧🌟",
+    "cloud": "云服务",
+    "self": "私有部署",
+    "annual": "按年付费",
+    "pay10": "支付10个月，畅享一年！",
+    "upgrade": "升级套餐"
   },
   "FAQ": {
     "title": "FAQ 解答",

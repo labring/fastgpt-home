@@ -46,7 +46,12 @@
     "title2": "Suitable for Commercial Use",
     "description": "FastGPT is an open-source and enterprise AI Agent builder.",
     "doYouLike": "Like this open-source AI Agent Builder?",
-    "follow": "Star it on GitHub! 🌟"
+    "follow": "Star it on GitHub! 🌟",
+    "cloud": "Cloud Service",
+    "self": "Self-Hosted",
+    "annual": "Annual",
+    "pay10": "Pay 10 months, enjoy 1 year!",
+    "upgrade": "Upgrade Plan"
   },
   "FAQ": {
     "title": "FAQ",

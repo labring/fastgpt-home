@@ -18,7 +18,7 @@ function PPlanFeatureItem({ content }: { content: string }) {
   );
 }
 
-export default function PPlan() {
+export default function PPlan({ locale }: { locale: any }) {
   const [deploy, setDeploy] = useState<Key>('cloud');
   const [annual, setAnnual] = useState(false);
 
@@ -42,7 +42,7 @@ export default function PPlan() {
                   deploy === 'cloud' ? 'w-[120px] text-[#3941DD]' : 'w-[70px]'
                 } text-center transition-all font-semibold`}
               >
-                <span>云服务</span>
+                <span>{locale.cloud}</span>
               </div>
             }
           />
@@ -54,7 +54,7 @@ export default function PPlan() {
                   deploy === 'self' ? 'w-[120px] text-[#3941DD]' : 'w-[70px]'
                 } text-center transition-all font-semibold`}
               >
-                <span>私有部署</span>
+                <span>{locale.self}</span>
               </div>
             }
           />
@@ -64,8 +64,8 @@ export default function PPlan() {
       <div className="flex justify-center">
         <Switch size="sm" isSelected={annual} onValueChange={setAnnual}>
           <div className="flex items-center gap-4 text-sm">
-            <span className="text-white">按年付费</span>
-            <span className="text-[#F8A3FF] italic">支付10个月，畅享一年！</span>
+            <span className="text-white">{locale.annual}</span>
+            <span className="text-[#F8A3FF] italic">{locale.pay10}</span>
           </div>
         </Switch>
       </div>
@@ -83,22 +83,11 @@ export default function PPlan() {
               </h3>
               <p className="text-sm text-white/50 h-[40px]">{item.content}</p>
 
-              {item.key === 'free' ? (
-                <Button
-                  color="primary"
-                  size="sm"
-                  className="w-full bg-[#487FFF] rounded-[6px]"
-                  isDisabled
-                >
-                  升级套餐
+              <Link href="https://cloud.fastgpt.cn/" target="_blank">
+                <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
+                  {locale.upgrade}
                 </Button>
-              ) : (
-                <Link href="https://cloud.fastgpt.cn/account/info" target="_blank">
-                  <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
-                    升级套餐
-                  </Button>
-                </Link>
-              )}
+              </Link>
 
               <div className="flex flex-col gap-2">
                 {item.features.map((feature, index) => (
@@ -109,7 +98,7 @@ export default function PPlan() {
           ))}
         </div>
       ) : (
-        <div className={`grid md:grid-cols-3 grid-cols-1 gap-5`}>
+        <div className={`grid lg:grid-cols-3 grid-cols-1 gap-5`}>
           {PRICE_PLANS_SELF.map((item) => (
             <div
               key={item.key}

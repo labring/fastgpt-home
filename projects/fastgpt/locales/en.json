@@ -51,7 +51,10 @@
     "self": "Self-Hosted",
     "annual": "Annual",
     "pay10": "Pay 10 months, enjoy 1 year!",
-    "upgrade": "Upgrade Plan"
+    "upgrade": "Upgrade Plan",
+    "allFeatures": "All features of the community version",
+    "moreFeatures": "More enterprise-level features please",
+    "moreFeaturesLink": "view documentation"
   },
   "FAQ": {
     "title": "FAQ",

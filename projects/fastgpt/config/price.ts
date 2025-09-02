@@ -72,10 +72,10 @@ export const PRICE_PLANS_SELF = [
     price: '免费',
     content: '免费开源，共建 Agent 社区，为 Agent 贡献力量',
     features: [
-      '基础核心功能（工作流、知识库等）',
+      '基础核心功能（Agent、Workflow、知识库、MCP等）',
+      '模型管理与模型日志',
       '单用户使用',
-      '提供社区技术支持服务',
-      '模型日志看板'
+      '社区技术支持服务'
     ]
   },
   {
@@ -83,19 +83,7 @@ export const PRICE_PLANS_SELF = [
     title: '托管版',
     price: '基于云市场',
     content: '基于 Sealos 云端托管，更安全更高效部署',
-    features: [
-      '基础核心功能（工作流、知识库等）',
-      '单用户使用',
-      '提供社区技术支持服务',
-      '模型日志看板',
-      '团队版管理功能',
-      '更精细化的运维和数据洞察看板',
-      '更高级的知识库索引能力',
-      '更安全的权限管理能力',
-      '专属工程师专业支持',
-      '商业授权许可，自定义 LOGO',
-      '支持使用云服务商托管部署'
-    ]
+    features: ['一键快速部署', '快速横纵向扩展', '多副本负载均衡', '数据库自动备份']
   },
   {
     key: 'commercial',
@@ -103,17 +91,12 @@ export const PRICE_PLANS_SELF = [
     price: '定制化',
     content: '支持更高阶功能，私有化部署',
     features: [
-      '基础核心功能（工作流、知识库等）',
-      '单用户使用',
-      '提供社区技术支持服务',
-      '模型日志看板',
-      '团队版管理功能',
-      '更精细化的运维和数据洞察看板',
-      '更高级的知识库索引能力',
-      '更安全的权限管理能力',
-      '专属工程师专业支持',
-      '商业授权许可，自定义 LOGO',
-      '支持企业私有云部署'
+      '完整商业授权',
+      '企业级可扩展部署方案',
+      '多工作空间 & 权限管理',
+      '支持多种第三方 SSO',
+      '原厂技术支持和服务支持',
+      '原厂专业应用搭建支持'
     ]
   }
 ] as const;
@@ -124,7 +107,7 @@ export const PRICE_PLANS_SELF_BUTTON_MAP = {
     href: 'https://github.com/labring/FastGPT'
   },
   host: {
-    title: '基于云市场',
+    title: '立即使用',
     href: 'https://hzh.sealos.run/?openapp=system-template?templateName=fastgpt&uid=fnWRt09fZP'
   },
   commercial: {

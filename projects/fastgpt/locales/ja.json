@@ -51,7 +51,10 @@
     "self": "自己ホスティング",
     "annual": "年額",
     "pay10": "10ヶ月支払いで1年間無料！",
-    "upgrade": "プランアップグレード"
+    "upgrade": "プランアップグレード",
+    "allFeatures": "コミュニティ版のすべての機能",
+    "moreFeatures": "より高度な機能は",
+    "moreFeaturesLink": "ドキュメントを参照してください"
   },
   "FAQ": {
     "title": "よくある質問",

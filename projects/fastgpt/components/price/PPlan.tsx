@@ -8,12 +8,14 @@ import Link from 'next/link';
 
 type Key = 'cloud' | 'self';
 
-function PPlanFeatureItem({ content }: { content: string }) {
+function PPlanFeatureItem({ children, content }: { children?: React.ReactNode; content?: string }) {
   return (
     <div className="flex gap-4 items-center">
-      <Check />
+      <div className="flex-shrink-0">
+        <Check />
+      </div>
 
-      <span>{content}</span>
+      {children ? children : <span>{content}</span>}
     </div>
   );
 }
@@ -117,9 +119,26 @@ export default function PPlan({ locale }: { locale: any }) {
               </Link>
 
               <div className="flex flex-col gap-2">
+                {item.key !== 'free' && (
+                  <p className="font-semibold text-[16px]">包含社区版所有功能</p>
+                )}
                 {item.features.map((feature, index) => (
                   <PPlanFeatureItem key={index} content={feature} />
                 ))}
+                {item.key === 'commercial' && (
+                  <PPlanFeatureItem>
+                    <div className="flex items-center">
+                      <span>{locale.moreFeatures}</span>
+                      <Link
+                        href="https://doc.fastgpt.io/docs/introduction/commercial"
+                        target="_blank"
+                        className="text-[#487FFF] underline"
+                      >
+                        {locale.moreFeaturesLink}
+                      </Link>
+                    </div>
+                  </PPlanFeatureItem>
+                )}
               </div>
             </div>
           ))}

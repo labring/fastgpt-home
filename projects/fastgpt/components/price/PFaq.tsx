@@ -1,31 +1,21 @@
 'use client';
-import { ALL_FAQS } from '@/config/faqs';
+
+import { PRICE_FAQS } from '@/config/price';
 import { Accordion, AccordionItem } from '@nextui-org/react';
 import { MinusIcon, PlusIcon } from 'lucide-react';
 
-// update rough notation highlight
 function triggerResizeEvent() {
   const event = new Event('resize');
   window.dispatchEvent(event);
 }
 
-const FAQ = ({ id, locale, langName }: { id: string; locale: any; langName: string }) => {
-  const FAQS = ALL_FAQS[`FAQS_${langName.toUpperCase()}`];
+const FAQ = ({ langName }: { langName: string }) => {
+  const FAQS = PRICE_FAQS[langName.toLowerCase()];
 
   return (
-    <section
-      id={id}
-      className="flex flex-col justify-center max-w-[928px] items-center py-16 gap-12"
-    >
+    <section className="flex flex-col justify-center max-w-[928px] items-center py-16 gap-12">
       <div className="flex flex-col text-center">
-        <h4 className="text-center text-gradient">
-          {/* <RoughNotation type="highlight" show={true} color="#2563EB"> */}
-          {locale.title}
-          {/* </RoughNotation> */}
-        </h4>
-        <p className="text-xl font-medium" style={{ color: 'var(--text-secondary)' }}>
-          {locale.description}
-        </p>
+        <h4 className="text-[40px] text-center text-gradient">FAQ</h4>
       </div>
       <Accordion
         fullWidth

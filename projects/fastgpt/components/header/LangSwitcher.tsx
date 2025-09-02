@@ -22,15 +22,35 @@ export const LangSwitcher = () => {
 
   const handleSwitchLanguage = (value: string) => {
     localStorage.setItem('preferredLang', value);
-    router.push(value);
+    let routeWithoutLang = pathname;
+
+    if (lang) {
+      const currentLangPrefix = `/${lang}`;
+      if (pathname.startsWith(currentLangPrefix)) {
+        routeWithoutLang = pathname.slice(currentLangPrefix.length) || '/';
+      }
+    }
+    const newPath = `/${value}${routeWithoutLang}`;
+
+    router.push(newPath);
   };
 
   useEffect(() => {
     const storedLang = localStorage.getItem('preferredLang');
-    if (storedLang && storedLang !== lang && storedLang !== defaultLocale) {
-      router.push(storedLang);
+    if (storedLang && storedLang !== lang) {
+      let routeWithoutLang = pathname;
+
+      if (lang) {
+        const currentLangPrefix = `/${lang}`;
+        if (pathname.startsWith(currentLangPrefix)) {
+          routeWithoutLang = pathname.slice(currentLangPrefix.length) || '/';
+        }
+      }
+
+      const newPath = `/${storedLang}${routeWithoutLang}`;
+      router.push(newPath);
     }
-  }, []);
+  }, [lang, pathname, router]);
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>

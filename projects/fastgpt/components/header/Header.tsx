@@ -30,7 +30,9 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
         <LogoFC dict={dict} lang={lang} />
         <div className="hidden md:flex items-center gap-x-4">
           {/* <ThemedButton /> */}
-          <div className="header-lang-area">{/* <LangSwitcher /> */}</div>
+          <div className="header-lang-area">
+            <LangSwitcher />
+          </div>
           <CTAButton locale={CTALocale} stars={1} />
           {/* <HeaderLinks /> */}
         </div>
@@ -82,7 +84,7 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
               </nav>
 
               <div className="mt-4 border-t-1 flex flex-col gap-6 pt-4 border-white/10">
-                {/* <LangSwitcher /> */}
+                <LangSwitcher />
               </div>
             </div>
           </div>

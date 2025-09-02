@@ -54,7 +54,10 @@
     "upgrade": "Upgrade Plan",
     "allFeatures": "All features of the community version",
     "moreFeatures": "More enterprise-level features please",
-    "moreFeaturesLink": "view documentation"
+    "moreFeaturesLink": "view documentation",
+    "chooseVersion": "Choose a version that suits you",
+    "freeUse": "Free use or upgrade to a higher package",
+    "monthly": "Monthly"
   },
   "FAQ": {
     "title": "FAQ",

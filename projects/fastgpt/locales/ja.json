@@ -54,7 +54,10 @@
     "upgrade": "プランアップグレード",
     "allFeatures": "コミュニティ版のすべての機能",
     "moreFeatures": "より高度な機能は",
-    "moreFeaturesLink": "ドキュメントを参照してください"
+    "moreFeaturesLink": "ドキュメントを参照してください",
+    "chooseVersion": "選択してください",
+    "freeUse": "無料利用または上位プランにアップグレードしてください",
+    "monthly": "月額"
   },
   "FAQ": {
     "title": "よくある質問",

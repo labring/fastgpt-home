@@ -9,9 +9,9 @@ export default async function Index({ params: { lang } }: { params: { lang?: str
 
   return (
     <div className="flex flex-col items-center gap-10 pb-10">
-      <PTitle />
+      <PTitle locale={dict.Pricing} />
 
-      <PPlan locale={dict.Pricing} />
+      <PPlan langName={langName} locale={dict.Pricing} />
 
       <PFaq langName={langName} />
     </div>

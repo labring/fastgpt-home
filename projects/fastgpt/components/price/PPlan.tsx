@@ -20,7 +20,7 @@ function PPlanFeatureItem({ children, content }: { children?: React.ReactNode; c
   );
 }
 
-export default function PPlan({ locale }: { locale: any }) {
+export default function PPlan({ langName, locale }: { langName: string; locale: any }) {
   const [deploy, setDeploy] = useState<Key>('cloud');
   const [annual, setAnnual] = useState(false);
 
@@ -41,7 +41,7 @@ export default function PPlan({ locale }: { locale: any }) {
             title={
               <div
                 className={`${
-                  deploy === 'cloud' ? 'w-[120px] text-[#3941DD]' : 'w-[70px]'
+                  deploy === 'cloud' ? 'w-[150px] text-[#3941DD]' : 'w-[110px]'
                 } text-center transition-all font-semibold`}
               >
                 <span>{locale.cloud}</span>
@@ -53,7 +53,7 @@ export default function PPlan({ locale }: { locale: any }) {
             title={
               <div
                 className={`${
-                  deploy === 'self' ? 'w-[120px] text-[#3941DD]' : 'w-[70px]'
+                  deploy === 'self' ? 'w-[150px] text-[#3941DD]' : 'w-[110px]'
                 } text-center transition-all font-semibold`}
               >
                 <span>{locale.self}</span>
@@ -63,7 +63,13 @@ export default function PPlan({ locale }: { locale: any }) {
         </Tabs>
       </div>
 
-      <div className="flex justify-center">
+      <div className="flex justify-center items-center gap-2">
+        <div
+          className="text-white text-sm cursor-pointer select-none"
+          onClick={() => setAnnual((v) => !v)}
+        >
+          {locale.monthly}
+        </div>
         <Switch size="sm" isSelected={annual} onValueChange={setAnnual}>
           <div className="flex items-center gap-4 text-sm">
             <span className="text-white">{locale.annual}</span>
@@ -74,7 +80,7 @@ export default function PPlan({ locale }: { locale: any }) {
 
       {deploy === 'cloud' ? (
         <div className={`grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5`}>
-          {PRICE_PLANS_CLOUD.map((item) => (
+          {PRICE_PLANS_CLOUD[langName].map((item) => (
             <div
               key={item.key}
               className="p-7 border-[0.5px] rounded-[16px] border-white/50 bg-[#f1f4ff1a] w-[300px] flex flex-col gap-4"
@@ -83,7 +89,9 @@ export default function PPlan({ locale }: { locale: any }) {
               <h3 style={{ color: '#fff' }} className="text-[42px] m-0">
                 ¥{item.price * (annual ? 10 : 1)}
               </h3>
-              <p className="text-sm text-white/50 h-[40px]">{item.content}</p>
+              <p className={`text-sm text-white/50 ${langName !== 'zh' ? 'h-[60px]' : 'h-[40px]'}`}>
+                {item.content}
+              </p>
 
               <Link href="https://cloud.fastgpt.cn/" target="_blank">
                 <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
@@ -92,7 +100,7 @@ export default function PPlan({ locale }: { locale: any }) {
               </Link>
 
               <div className="flex flex-col gap-2">
-                {item.features.map((feature, index) => (
+                {item.features.map((feature: string, index: number) => (
                   <PPlanFeatureItem key={index} content={feature} />
                 ))}
               </div>
@@ -101,47 +109,55 @@ export default function PPlan({ locale }: { locale: any }) {
         </div>
       ) : (
         <div className={`grid lg:grid-cols-3 grid-cols-1 gap-5`}>
-          {PRICE_PLANS_SELF.map((item) => (
-            <div
-              key={item.key}
-              className="p-7 border-[0.5px] rounded-[16px] border-white/50 bg-[#f1f4ff1a] w-[340px] flex flex-col gap-4"
-            >
-              <h2 className="text-[16px] font-bold m-0">{item.title}</h2>
-              <h3 style={{ color: '#fff' }} className="text-[42px] m-0">
-                {item.price}
-              </h3>
-              <p className="text-sm text-white/50 h-[40px]">{item.content}</p>
+          {PRICE_PLANS_SELF[langName].map((item) => {
+            return (
+              <div
+                key={item.key}
+                className="p-7 border-[0.5px] rounded-[16px] border-white/50 bg-[#f1f4ff1a] w-[340px] flex flex-col gap-4"
+              >
+                <h2 className="text-[16px] font-bold m-0">{item.title}</h2>
+                <h3
+                  style={{ color: '#fff' }}
+                  className={`text-[42px] m-0 ${langName !== 'zh' ? 'h-[84px]' : ''} break-all`}
+                >
+                  {item.price}
+                </h3>
+                <p className="text-sm text-white/50 h-[40px]">{item.content}</p>
 
-              <Link href={PRICE_PLANS_SELF_BUTTON_MAP[item.key].href} target="_blank">
-                <Button size="sm" color="primary" className="w-full" radius="sm">
-                  {PRICE_PLANS_SELF_BUTTON_MAP[item.key].title}
-                </Button>
-              </Link>
+                <Link href={PRICE_PLANS_SELF_BUTTON_MAP[item.key].href} target="_blank">
+                  <Button size="sm" color="primary" className="w-full" radius="sm">
+                    {PRICE_PLANS_SELF_BUTTON_MAP[item.key][langName]}
+                  </Button>
+                </Link>
 
-              <div className="flex flex-col gap-2">
-                {item.key !== 'free' && (
-                  <p className="font-semibold text-[16px]">包含社区版所有功能</p>
-                )}
-                {item.features.map((feature, index) => (
-                  <PPlanFeatureItem key={index} content={feature} />
-                ))}
-                {item.key === 'commercial' && (
-                  <PPlanFeatureItem>
-                    <div className="flex items-center">
-                      <span>{locale.moreFeatures}</span>
-                      <Link
-                        href="https://doc.fastgpt.io/docs/introduction/commercial"
-                        target="_blank"
-                        className="text-[#487FFF] underline"
-                      >
-                        {locale.moreFeaturesLink}
-                      </Link>
-                    </div>
-                  </PPlanFeatureItem>
-                )}
+                <div className="flex flex-col gap-2">
+                  {item.key !== 'free' && (
+                    <p className="font-semibold text-[16px]">{locale.allFeatures}</p>
+                  )}
+                  {item.features.map((feature, index) => (
+                    <PPlanFeatureItem key={index} content={feature} />
+                  ))}
+                  {item.key === 'commercial' && (
+                    <PPlanFeatureItem>
+                      <div className="flex items-center break-all">
+                        <span>
+                          {locale.moreFeatures}
+                          &nbsp;
+                          <Link
+                            href="https://doc.fastgpt.io/docs/introduction/commercial"
+                            target="_blank"
+                            className="text-[#487FFF] underline"
+                          >
+                            {locale.moreFeaturesLink}
+                          </Link>
+                        </span>
+                      </div>
+                    </PPlanFeatureItem>
+                  )}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

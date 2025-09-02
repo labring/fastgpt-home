@@ -1,117 +1,350 @@
-export const PRICE_PLANS_CLOUD = [
-  {
-    key: 'free',
-    title: '免费版',
-    price: 0,
-    content: '核心功能免费试用。30 天未登录，将会清空知识库。',
-    features: [
-      '3 个团队成员上限',
-      '30 个应用上限',
-      '10 个知识库上限',
-      '30 天对话记录保留',
-      '600 组知识库索引',
-      '100 AI 积分',
-      '训练优先级: 1'
-    ]
-  },
-  {
-    key: 'trial',
-    title: '体验版',
-    price: 59,
-    content: '可解锁 FastGPT 完整功能',
-    features: [
-      '10 个团队成员上限',
-      '80 个应用上限',
-      '30 个知识库上限',
-      '180 天对话记录保留',
-      '5000 组知识库索引',
-      '3000 AI 积分',
-      '训练优先级: 2',
-      'Web 站点同步'
-    ]
-  },
-  {
-    key: 'team',
-    title: '团队版',
-    price: 399,
-    content: '适合小团队构建知识库应用并提供对外服务',
-    features: [
-      '50 个团队成员上限',
-      '200 个应用上限',
-      '100 个知识库上限',
-      '360 天对话记录保留',
-      '40000 组知识库索引',
-      '20000 AI 积分',
-      '训练优先级: 3',
-      'Web 站点同步'
-    ]
-  },
-  {
-    key: 'enterprise',
-    title: '企业版',
-    price: 999,
-    content: '适合企业级应用，提供私有化部署',
-    features: [
-      '500 个团队成员上限',
-      '1000 个应用上限',
-      '500 个知识库上限',
-      '720 天对话记录保留',
-      '150000 组知识库索引',
-      '60000 AI 积分',
-      '训练优先级: 4',
-      'Web 站点同步',
-      '记录团队操作日志'
-    ]
-  }
-] as const;
+export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
+  zh: [
+    {
+      key: 'free',
+      title: '免费版',
+      price: 0,
+      content: '核心功能免费试用。30 天未登录，将会清空知识库。',
+      features: [
+        '3 个团队成员上限',
+        '30 个应用上限',
+        '10 个知识库上限',
+        '30 天对话记录保留',
+        '600 组知识库索引',
+        '100 AI 积分',
+        '训练优先级: 1'
+      ]
+    },
+    {
+      key: 'trial',
+      title: '体验版',
+      price: 59,
+      content: '可解锁 FastGPT 完整功能',
+      features: [
+        '10 个团队成员上限',
+        '80 个应用上限',
+        '30 个知识库上限',
+        '180 天对话记录保留',
+        '5000 组知识库索引',
+        '3000 AI 积分',
+        '训练优先级: 2',
+        'Web 站点同步'
+      ]
+    },
+    {
+      key: 'team',
+      title: '团队版',
+      price: 399,
+      content: '适合小团队构建知识库应用并提供对外服务',
+      features: [
+        '50 个团队成员上限',
+        '200 个应用上限',
+        '100 个知识库上限',
+        '360 天对话记录保留',
+        '40000 组知识库索引',
+        '20000 AI 积分',
+        '训练优先级: 3',
+        'Web 站点同步'
+      ]
+    },
+    {
+      key: 'enterprise',
+      title: '企业版',
+      price: 999,
+      content: '适合企业级应用，提供私有化部署',
+      features: [
+        '500 个团队成员上限',
+        '1000 个应用上限',
+        '500 个知识库上限',
+        '720 天对话记录保留',
+        '150000 组知识库索引',
+        '60000 AI 积分',
+        '训练优先级: 4',
+        'Web 站点同步',
+        '记录团队操作日志'
+      ]
+    }
+  ],
+  en: [
+    {
+      key: 'free',
+      title: 'Community Edition',
+      price: 0,
+      content:
+        'Core features are free to try. The knowledge base will be cleared after 30 days of inactivity.',
+      features: [
+        '3 team members limit',
+        '30 apps limit',
+        '10 knowledge bases limit',
+        '30 days conversation history retention',
+        '600 knowledge base indexes',
+        '100 AI credits',
+        'Training priority: 1'
+      ]
+    },
+    {
+      key: 'trial',
+      title: 'Trial Edition',
+      price: 59,
+      content: 'Can unlock FastGPT full features',
+      features: [
+        '10 team members limit',
+        '80 apps limit',
+        '30 knowledge bases limit',
+        '180 days conversation history retention',
+        '5000 knowledge base indexes',
+        '3000 AI credits',
+        'Training priority: 2',
+        'Web site synchronization'
+      ]
+    },
+    {
+      key: 'team',
+      title: 'Team Edition',
+      price: 399,
+      content: 'For small teams to build knowledge base applications and provide external services',
+      features: [
+        '50 team members limit',
+        '200 apps limit',
+        '100 knowledge bases limit',
+        '360 days conversation history retention',
+        '40000 knowledge base indexes',
+        '20000 AI credits',
+        'Training priority: 3',
+        'Web site synchronization'
+      ]
+    },
+    {
+      key: 'enterprise',
+      title: 'Enterprise Edition',
+      price: 999,
+      content: 'For enterprise-level applications, providing private deployment solution',
+      features: [
+        '500 team members limit',
+        '1000 apps limit',
+        '500 knowledge bases limit',
+        '720 days conversation history retention',
+        '150000 knowledge base indexes',
+        '60000 AI credits',
+        'Training priority: 4',
+        'Web site synchronization',
+        'Record team operation logs'
+      ]
+    }
+  ],
+  ja: [
+    {
+      key: 'free',
+      title: 'コミュニティ版',
+      price: 0,
+      content: '無料でご利用いただけます, 30 日未ログインで知識ベースがクリアされます',
+      features: [
+        '3 つのチームメンバー上限',
+        '30 個のアプリケーション上限',
+        '10 個の知識ベース上限',
+        '30 日間の会話記録保存',
+        '600 個の知識ベースインデックス',
+        '100 AI クレジット',
+        'トレーニング優先度: 1'
+      ]
+    },
+    {
+      key: 'trial',
+      title: '体験版',
+      price: 59,
+      content: 'FastGPT のすべての機能をロック解除',
+      features: [
+        '10 チームメンバー上限',
+        '80 個のアプリケーション上限',
+        '30 個の知識ベース上限',
+        '180 日間の会話記録保存',
+        '5000 個の知識ベースインデックス',
+        '3000 AI クレジット',
+        'トレーニング優先度: 2',
+        'ウェブサイト同期'
+      ]
+    },
+    {
+      key: 'team',
+      title: 'チーム版',
+      price: 399,
+      content: '小規模チームが知識ベースアプリケーションを構築し、専門的なサービスを提供',
+      features: [
+        '50 チームメンバー上限',
+        '200 個のアプリケーション上限',
+        '100 個の知識ベース上限',
+        '360 日間の会話記録保存',
+        '40000 個の知識ベースインデックス',
+        '20000 AI クレジット',
+        'トレーニング優先度: 3',
+        'ウェブサイト同期'
+      ]
+    },
+    {
+      key: 'enterprise',
+      title: 'エンタープライズ版',
+      price: 999,
+      content: '企業向けアプリケーションのためのプライベートデプロイ',
+      features: [
+        '500 チームメンバー上限',
+        '1000 個のアプリケーション上限',
+        '500 個の知識ベース上限',
+        '720 日間の会話記録保存',
+        '150000 個の知識ベースインデックス',
+        '60000 AI クレジット',
+        'トレーニング優先度: 4',
+        'ウェブサイト同期',
+        'チーム操作ログ記録'
+      ]
+    }
+  ]
+};
 
-export const PRICE_PLANS_SELF = [
-  {
-    key: 'free',
-    title: '免费版',
-    price: '免费',
-    content: '免费开源，共建 Agent 社区，为 Agent 贡献力量',
-    features: [
-      '基础核心功能（Agent、Workflow、知识库、MCP等）',
-      '模型管理与模型日志',
-      '单用户使用',
-      '社区技术支持服务'
-    ]
-  },
-  {
-    key: 'host',
-    title: '托管版',
-    price: '基于云市场',
-    content: '基于 Sealos 云端托管，更安全更高效部署',
-    features: ['一键快速部署', '快速横纵向扩展', '多副本负载均衡', '数据库自动备份']
-  },
-  {
-    key: 'commercial',
-    title: '商业版',
-    price: '定制化',
-    content: '支持更高阶功能，私有化部署',
-    features: [
-      '完整商业授权',
-      '企业级可扩展部署方案',
-      '多工作空间 & 权限管理',
-      '支持多种第三方 SSO',
-      '原厂技术支持和服务支持',
-      '原厂专业应用搭建支持'
-    ]
-  }
-] as const;
+export const PRICE_PLANS_SELF: {
+  [key: string]: {
+    key: string;
+    title: string;
+    price: string;
+    content: string;
+    features: string[];
+  }[];
+} = {
+  zh: [
+    {
+      key: 'free',
+      title: '社区版',
+      price: '免费',
+      content: '免费开源，共建 Agent 社区，为 Agent 贡献力量',
+      features: [
+        '基础核心功能（Agent、Workflow、知识库、MCP等）',
+        '模型管理与模型日志',
+        '单用户使用',
+        '社区技术支持服务'
+      ]
+    },
+    {
+      key: 'host',
+      title: '托管版',
+      price: '云资源计费',
+      content: '基于 Sealos 云端托管，更安全更高效部署',
+      features: ['一键快速部署', '快速横纵向扩展', '多副本负载均衡', '数据库自动备份']
+    },
+    {
+      key: 'commercial',
+      title: '商业版',
+      price: '定制化计费',
+      content: '支持更高阶功能，私有化部署',
+      features: [
+        '完整商业授权',
+        '企业级可扩展部署方案',
+        '多工作空间 & 权限管理',
+        '支持多种第三方 SSO',
+        '原厂技术支持和服务支持',
+        '原厂专业应用搭建支持'
+      ]
+    }
+  ],
+  en: [
+    {
+      key: 'free',
+      title: 'Community Edition',
+      price: 'Free',
+      content: 'Free open source,共建 Agent 社区，为 Agent 贡献力量',
+      features: [
+        'Basic core functions (Agent, Workflow, Knowledge Base, MCP, etc.)',
+        'Model management and model logs',
+        'Single user use',
+        'Community technical support service'
+      ]
+    },
+    {
+      key: 'host',
+      title: 'Hosted Edition',
+      price: 'Cloud resource billing',
+      content: 'Based on Sealos cloud hosting, more secure and efficient deployment',
+      features: [
+        'One-click quick deployment',
+        'Quick horizontal and vertical expansion',
+        'Multiple replica load balancing',
+        'Database automatic backup'
+      ]
+    },
+    {
+      key: 'commercial',
+      title: 'Commercial Edition',
+      price: 'Customized billing',
+      content: 'Support higher-level features, private deployment',
+      features: [
+        'Full commercial license',
+        'Enterprise-level scalable deployment solution',
+        'Multiple workspaces & permission management',
+        'Support for multiple third-party SSO',
+        'Original factory technical support and service support',
+        'Original factory professional application support'
+      ]
+    }
+  ],
+  ja: [
+    {
+      key: 'free',
+      title: 'コミュニティ版',
+      price: '無料',
+      content: '無料開源，共建 Agent コミュニティ，Agent に貢献しましょう',
+      features: [
+        '基礎核心機能（Agent、Workflow、知識ベース、MCP等）',
+        'モデル管理とモデルログ',
+        '単一ユーザー利用可能',
+        'コミュニティ技術サポートサービス'
+      ]
+    },
+    {
+      key: 'host',
+      title: 'ホスティング版',
+      price: 'クラウドリソース計費',
+      content: 'Sealos クラウドホスティングベースで、より安全で効率的なデプロイを提供',
+      features: [
+        '1クリックでの迅速なデプロイ',
+        '迅速な横縦方向の拡張',
+        '複数のレプリカ負荷分散',
+        'データベースの自動バックアップ'
+      ]
+    },
+    {
+      key: 'commercial',
+      title: '商用版',
+      price: 'カスタマイズ計費',
+      content: 'より高度な機能をサポートし、プライベートデプロイを提供',
+      features: [
+        '完全な商用ライセンス',
+        '企業レベルの拡張可能なデプロイソリューション',
+        '複数のワークスペース & 権限管理',
+        '複数のサードパーティーSSOのサポート',
+        '原産国技術サポートとサービスサポート',
+        '原産国専門アプリケーションのサポート'
+      ]
+    }
+  ]
+} as const;
 
-export const PRICE_PLANS_SELF_BUTTON_MAP = {
+export const PRICE_PLANS_SELF_BUTTON_MAP: {
+  [key: string]: Record<string, string>;
+} = {
   free: {
-    title: '立即使用',
+    zh: '立即使用',
+    en: 'Get Started',
+    ja: '使用開始',
     href: 'https://github.com/labring/FastGPT'
   },
   host: {
-    title: '立即使用',
+    zh: '立即使用',
+    en: 'Get Started',
+    ja: '使用開始',
     href: 'https://hzh.sealos.run/?openapp=system-template?templateName=fastgpt&uid=fnWRt09fZP'
   },
   commercial: {
-    title: '联系销售',
+    zh: '联系销售',
+    en: 'Contact Sales',
+    ja: '営業連絡',
     href: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=H1&hide_S=1'
   }
 } as const;

@@ -47,6 +47,7 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
         >
           <MenuIcon />
         </button>
+
         {isMenuOpen && (
           <div className="absolute top-0 left-0 z-50 w-screen h-screen bg-overlay/50">
             <div className="p-5 bg-background rounded shadow-sm">
@@ -68,17 +69,16 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
               <nav>
                 <ul className="space-y-4">
                   {dict?.links.map((link) => (
-                    <li key={link.label}>
-                      <Link
-                        href={getNavHref(link.href, lang)}
-                        aria-label={link.label}
-                        title={link.label}
-                        className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-white/10 p-1 rounded-md"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
+                    <Link
+                      key={link.label}
+                      href={getNavHref(link.href, lang)}
+                      aria-label={link.label}
+                      title={link.label}
+                      className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-white/10 p-1 rounded-md"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <li>{link.label}</li>
+                    </Link>
                   ))}
                 </ul>
               </nav>
@@ -116,16 +116,15 @@ const LogoFC = ({ dict, lang }: { dict: Dict; lang: string }) => (
 
     <ul className="hidden items-center gap-5 md:flex">
       {dict?.links.map((link) => (
-        <li key={link.label} className="cursor-pointer hover:bg-white/10 px-2 py-1 rounded-md">
-          <Link
-            href={getNavHref(link.href, lang)}
-            aria-label={link.label}
-            title={link.label}
-            className="tracking-wide transition-colors duration-200 font-norma"
-          >
-            {link.label}
-          </Link>
-        </li>
+        <Link
+          key={link.label}
+          href={getNavHref(link.href, lang)}
+          aria-label={link.label}
+          title={link.label}
+          className="tracking-wide transition-colors duration-200 font-norma"
+        >
+          <li className="cursor-pointer hover:bg-white/10 px-2 py-1 rounded-md">{link.label}</li>
+        </Link>
       ))}
     </ul>
   </div>

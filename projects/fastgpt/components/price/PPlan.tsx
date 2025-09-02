@@ -5,6 +5,7 @@ import { Button, Switch, Tab, Tabs } from '@nextui-org/react';
 import Check from '@/components/icons/check';
 import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from '@/config/price';
 import Link from 'next/link';
+import { siteConfig } from '@/config/site';
 
 type Key = 'cloud' | 'self';
 
@@ -63,20 +64,22 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
         </Tabs>
       </div>
 
-      <div className="flex justify-center items-center gap-2">
-        <div
-          className="text-white text-sm cursor-pointer select-none"
-          onClick={() => setAnnual((v) => !v)}
-        >
-          {locale.monthly}
-        </div>
-        <Switch size="sm" isSelected={annual} onValueChange={setAnnual}>
-          <div className="flex items-center gap-4 text-sm">
-            <span className="text-white">{locale.annual}</span>
-            <span className="text-[#F8A3FF] italic">{locale.pay10}</span>
+      {deploy === 'cloud' && (
+        <div className="flex justify-center items-center gap-2">
+          <div
+            className="text-white text-sm cursor-pointer select-none"
+            onClick={() => setAnnual((v) => !v)}
+          >
+            {locale.monthly}
           </div>
-        </Switch>
-      </div>
+          <Switch size="sm" isSelected={annual} onValueChange={setAnnual}>
+            <div className="flex items-center gap-4 text-sm">
+              <span className="text-white">{locale.annual}</span>
+              <span className="text-[#F8A3FF] italic">{locale.pay10}</span>
+            </div>
+          </Switch>
+        </div>
+      )}
 
       {deploy === 'cloud' ? (
         <div className={`grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5`}>
@@ -93,7 +96,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 {item.content}
               </p>
 
-              <Link href="https://cloud.fastgpt.cn/" target="_blank">
+              <Link href={siteConfig.userUrl} target="_blank">
                 <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
                   {locale.upgrade}
                 </Button>

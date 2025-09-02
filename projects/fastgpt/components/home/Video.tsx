@@ -14,51 +14,57 @@ const VideoPlayer = ({
   const [open, setOpen] = useState(false)
 
   useEffect(() => {
-    const Plyr = require("plyr");
-    const player = new Plyr("#player", {
-      i18n: {
-        speed: dict?.video.speed,
-        normal: dict?.video.normal,
-      },
-      controls: [
-        "play-large",
-        "restart",
-        "rewind",
-        "play",
-        "fast-forward",
-        "progress",
-        "current-time",
-        "duration",
-        "mute",
-        "volume",
-        "captions",
-        "settings",
-        "pip",
-        "airplay",
-        // 'download',
-        "fullscreen",
-      ],
-    });
-    const show = () => {
-      player.toggleControls(true);
-    };
-    const hiden = () => {
-      player.toggleControls(false);
-    };
-    player.on("ready", (e: any) => {
-      player.toggleControls(false);
-      const playerContainer = document.getElementById("player-container");
-      if (!playerContainer) return;
-      playerContainer.addEventListener("mouseenter", show);
-      playerContainer.addEventListener("mouseleave", hiden);
-    });
+    // 动态导入Plyr以避免SSR问题
+    const loadPlyr = async () => {
+      const Plyr = (await import("plyr")).default;
+      const player = new Plyr("#player", {
+        i18n: {
+          speed: dict?.video.speed,
+          normal: dict?.video.normal,
+        },
+        controls: [
+          "play-large",
+          "restart",
+          "rewind",
+          "play",
+          "fast-forward",
+          "progress",
+          "current-time",
+          "duration",
+          "mute",
+          "volume",
+          "captions",
+          "settings",
+          "pip",
+          "airplay",
+          "fullscreen",
+        ],
+      });
 
-    return () => {
-      const playerContainer = document.getElementById("player-container");
-      if (!playerContainer) return;
-      playerContainer.removeEventListener("mouseenter", show);
-      playerContainer.removeEventListener("mouseleave", hiden);
+      const show = () => {
+        player.toggleControls(true);
+      };
+      const hiden = () => {
+        player.toggleControls(false);
+      };
+
+      player.on("ready", (e: any) => {
+        player.toggleControls(false);
+        const playerContainer = document.getElementById("player-container");
+        if (!playerContainer) return;
+        playerContainer.addEventListener("mouseenter", show);
+        playerContainer.addEventListener("mouseleave", hiden);
+      });
+
+      return () => {
+        const playerContainer = document.getElementById("player-container");
+        if (!playerContainer) return;
+        playerContainer.removeEventListener("mouseenter", show);
+        playerContainer.removeEventListener("mouseleave", hiden);
+      };
     };
+
+    loadPlyr();
   }, [dict]);
 
   return (

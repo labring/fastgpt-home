@@ -11,7 +11,8 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '10 个知识库上限',
         '30 天对话记录保留',
         '600 组知识库索引',
-        '100 AI 积分',
+        // '100 AI 积分',
+        100,
         '训练优先级: 1'
       ]
     },
@@ -26,7 +27,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '30 个知识库上限',
         '180 天对话记录保留',
         '5000 组知识库索引',
-        '3000 AI 积分',
+        3000,
         '训练优先级: 2',
         'Web 站点同步'
       ]
@@ -42,7 +43,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '100 个知识库上限',
         '360 天对话记录保留',
         '40000 组知识库索引',
-        '20000 AI 积分',
+        20000,
         '训练优先级: 3',
         'Web 站点同步'
       ]
@@ -58,7 +59,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '500 个知识库上限',
         '720 天对话记录保留',
         '150000 组知识库索引',
-        '60000 AI 积分',
+        60000,
         '训练优先级: 4',
         'Web 站点同步',
         '记录团队操作日志'
@@ -78,7 +79,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '10 knowledge bases limit',
         '30 days conversation history retention',
         '600 knowledge base indexes',
-        '100 AI credits',
+        100,
         'Training priority: 1'
       ]
     },
@@ -93,7 +94,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '30 knowledge bases limit',
         '180 days conversation history retention',
         '5000 knowledge base indexes',
-        '3000 AI credits',
+        3000,
         'Training priority: 2',
         'Web site synchronization'
       ]
@@ -109,7 +110,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '100 knowledge bases limit',
         '360 days conversation history retention',
         '40000 knowledge base indexes',
-        '20000 AI credits',
+        20000,
         'Training priority: 3',
         'Web site synchronization'
       ]
@@ -125,7 +126,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '500 knowledge bases limit',
         '720 days conversation history retention',
         '150000 knowledge base indexes',
-        '60000 AI credits',
+        60000,
         'Training priority: 4',
         'Web site synchronization',
         'Record team operation logs'
@@ -144,7 +145,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '10 個の知識ベース上限',
         '30 日間の会話記録保存',
         '600 個の知識ベースインデックス',
-        '100 AI クレジット',
+        100,
         'トレーニング優先度: 1'
       ]
     },
@@ -159,7 +160,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '30 個の知識ベース上限',
         '180 日間の会話記録保存',
         '5000 個の知識ベースインデックス',
-        '3000 AI クレジット',
+        3000,
         'トレーニング優先度: 2',
         'ウェブサイト同期'
       ]
@@ -175,7 +176,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '100 個の知識ベース上限',
         '360 日間の会話記録保存',
         '40000 個の知識ベースインデックス',
-        '20000 AI クレジット',
+        20000,
         'トレーニング優先度: 3',
         'ウェブサイト同期'
       ]
@@ -191,7 +192,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '500 個の知識ベース上限',
         '720 日間の会話記録保存',
         '150000 個の知識ベースインデックス',
-        '60000 AI クレジット',
+        60000,
         'トレーニング優先度: 4',
         'ウェブサイト同期',
         'チーム操作ログ記録'

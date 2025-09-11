@@ -9,14 +9,31 @@ import { siteConfig } from '@/config/site';
 
 type Key = 'cloud' | 'self';
 
-function PPlanFeatureItem({ children, content }: { children?: React.ReactNode; content?: string }) {
+function PPlanFeatureItem({
+  children,
+  annual,
+  content,
+  locale
+}: {
+  children?: React.ReactNode;
+  annual?: boolean;
+  content?: string | number;
+  locale?: any;
+}) {
+  const description = (() => {
+    if (typeof content === 'number') {
+      return `${content * (annual ? 12 : 1)} ${locale.aiCredits}`;
+    }
+    return content;
+  })();
+
   return (
     <div className="flex gap-4 items-center">
       <div className="flex-shrink-0">
         <Check />
       </div>
 
-      {children ? children : <span>{content}</span>}
+      {children ? children : <span>{description}</span>}
     </div>
   );
 }
@@ -104,7 +121,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
 
               <div className="flex flex-col gap-2">
                 {item.features.map((feature: string, index: number) => (
-                  <PPlanFeatureItem key={index} content={feature} />
+                  <PPlanFeatureItem key={index} content={feature} annual={annual} locale={locale} />
                 ))}
               </div>
             </div>

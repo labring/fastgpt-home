@@ -57,7 +57,8 @@
     "moreFeaturesLink": "view documentation",
     "chooseVersion": "Choose a version that suits you",
     "freeUse": "Free use or upgrade to a higher package",
-    "monthly": "Monthly"
+    "monthly": "Monthly",
+    "aiCredits": "AI Credits"
   },
   "FAQ": {
     "title": "FAQ",

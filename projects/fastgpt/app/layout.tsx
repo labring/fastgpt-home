@@ -35,7 +35,7 @@ export const metadata = {
       : '',
     'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_ID
       ? process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_ID
-      : 'test'
+      : ''
   }
 };
 export const viewport: Viewport = {

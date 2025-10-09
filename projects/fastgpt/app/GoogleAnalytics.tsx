@@ -28,9 +28,7 @@ const GoogleAnalytics = () => {
           />
         </>
       )}
-      {gtag.GA_VERIFICATION_ID && (
-        <meta name="google-site-verification" content={gtag.GA_VERIFICATION_ID} />
-      )}
+
     </>
   );
 };

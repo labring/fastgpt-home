@@ -12,6 +12,7 @@ import '@/styles/plyr.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
+import GoogleAnalytics from './GoogleAnalytics';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -56,6 +57,7 @@ export default async function RootLayout({
           <Analytics />
           {/* <TailwindIndicator /> */}
         </ThemeProvider>
+        <GoogleAnalytics />
         <BaiDuAnalytics />
         <ClarityAnalytics />
         <RybbitAnalytics />

@@ -6,7 +6,7 @@ import * as gtag from "../gtag.js";
 const GoogleAnalytics = () => {
   return (
     <>
-      {gtag.GA_TRACKING_ID ? (
+      {gtag.GA_TRACKING_ID && (
         <>
           <Script
             strategy="afterInteractive"
@@ -27,8 +27,9 @@ const GoogleAnalytics = () => {
             }}
           />
         </>
-      ) : (
-        <></>
+      )}
+      {gtag.GA_VERIFICATION_ID && (
+        <meta name="google-site-verification" content={gtag.GA_VERIFICATION_ID} />
       )}
     </>
   );

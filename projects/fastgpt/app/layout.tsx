@@ -32,7 +32,10 @@ export const metadata = {
   other: {
     'baidu-site-verification': process.env.NEXT_PUBLIC_BAIDU_KEY
       ? process.env.NEXT_PUBLIC_BAIDU_KEY
-      : ''
+      : '',
+    'google-site-verification': process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_ID
+      ? process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION_ID
+      : 'test'
   }
 };
 export const viewport: Viewport = {

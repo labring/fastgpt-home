@@ -33,7 +33,7 @@ RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx
 RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "https://cloud.fastgpt.io" | xargs -r sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g"
 RUN if [ -f lib/i18n.ts ]; then sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts; fi
 
-RUN npm run install
+RUN npm install
 RUN npm run build
 
 FROM fholzer/nginx-brotli:latest

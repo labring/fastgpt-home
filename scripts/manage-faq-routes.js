@@ -14,6 +14,48 @@
 const fs = require('fs');
 const path = require('path');
 
+/**
+ * Safely rename directory (works across filesystems in Docker)
+ * Uses copy + delete instead of rename to avoid EXDEV errors
+ */
+function safeRenameSync(oldPath, newPath) {
+  if (!fs.existsSync(oldPath)) {
+    return;
+  }
+
+  try {
+    // Try native rename first (faster if on same filesystem)
+    fs.renameSync(oldPath, newPath);
+  } catch (err) {
+    if (err.code === 'EXDEV') {
+      // Cross-device error - use copy + delete approach
+      copyDirSync(oldPath, newPath);
+      fs.rmSync(oldPath, { recursive: true, force: true });
+    } else {
+      throw err;
+    }
+  }
+}
+
+/**
+ * Recursively copy directory
+ */
+function copyDirSync(src, dest) {
+  fs.mkdirSync(dest, { recursive: true });
+  const entries = fs.readdirSync(src, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const srcPath = path.join(src, entry.name);
+    const destPath = path.join(dest, entry.name);
+
+    if (entry.isDirectory()) {
+      copyDirSync(srcPath, destPath);
+    } else {
+      fs.copyFileSync(srcPath, destPath);
+    }
+  }
+}
+
 // Load environment variables from .env.local
 const envPath = path.join(__dirname, '..', '.env.local');
 if (fs.existsSync(envPath)) {
@@ -41,7 +83,7 @@ langDirs.forEach(langDir => {
     // FAQ is enabled - ensure route is active (faq/ not _faq/)
     if (fs.existsSync(disabledFaqPath)) {
       console.log(`  Enabling FAQ routes: ${langDir}/_faq → ${langDir}/faq`);
-      fs.renameSync(disabledFaqPath, faqPath);
+      safeRenameSync(disabledFaqPath, faqPath);
     } else if (fs.existsSync(faqPath)) {
       console.log(`  FAQ routes already enabled: ${langDir}/faq`);
     }
@@ -49,7 +91,7 @@ langDirs.forEach(langDir => {
     // FAQ is disabled - ensure route is inactive (faq/ → _faq/)
     if (fs.existsSync(faqPath)) {
       console.log(`  Disabling FAQ routes: ${langDir}/faq → ${langDir}/_faq`);
-      fs.renameSync(faqPath, disabledFaqPath);
+      safeRenameSync(faqPath, disabledFaqPath);
     } else if (fs.existsSync(disabledFaqPath)) {
       console.log(`  FAQ routes already disabled: ${langDir}/_faq`);
     }

@@ -2,7 +2,6 @@
 FROM node:20.14.0-alpine AS builder
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add libc6-compat
-RUN corepack enable && corepack prepare pnpm@latest --activate
 WORKDIR /app
 
 # ENV NODE_ENV production
@@ -34,8 +33,8 @@ RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx
 RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "https://cloud.fastgpt.io" | xargs -r sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g"
 RUN if [ -f lib/i18n.ts ]; then sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" lib/i18n.ts; fi
 
-RUN pnpm install
-RUN pnpm run build
+RUN npm run install
+RUN npm run build
 
 FROM fholzer/nginx-brotli:latest
 

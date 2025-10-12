@@ -145,11 +145,6 @@ export default async function FAQDetailPage({
 
 // Generate static paths for all FAQs in all languages
 export async function generateStaticParams() {
-  // Don't generate static pages if FAQ is disabled
-  if (!showFAQ) {
-    return [];
-  }
-
   const faqKeys = Object.keys(faq);
   const languages = Object.keys(localeNames);
 

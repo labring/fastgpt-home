@@ -25,3 +25,8 @@ export async function generateMetadata(
   const langName = lang || defaultLocale;
   return langName === 'zh' ? siteConfigZh : siteConfig;
 }
+
+// Generate static paths for all supported languages
+export async function generateStaticParams() {
+  return Object.keys(localeNames).map((lang) => ({ lang }));
+}

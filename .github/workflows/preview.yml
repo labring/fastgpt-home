@@ -4,12 +4,12 @@ on:
   workflow_dispatch:
   pull_request_target:
     paths:
-      - "projects/fastgpt/**"
+      - 'projects/fastgpt/**'
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "pages"
+  group: 'pages'
   cancel-in-progress: false
 
 permissions:
@@ -34,12 +34,12 @@ jobs:
           repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: recursive # Fetch submodules
           fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
-      
+
       - uses: pnpm/action-setup@v4
         name: Install pnpm
         with:
           version: 9
-      
+
       - name: Build
         env:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
@@ -48,14 +48,14 @@ jobs:
           cd projects/fastgpt
           npm install
           npm run build
-      
+
       - name: Deploy to Cloudflare Pages
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./projects/fastgpt/out --project-name=fastgpt-home
+          command: pages deploy ./out --project-name=fastgpt-home
 
       - name: Comment Preview URL
         uses: FinleyGe/github-tools@0.0.1
@@ -66,10 +66,10 @@ jobs:
           title: FastGPT Homepage Preview
           body: |
             🚀 **FastGPT Homepage Preview Ready!**
-            
+
             📱 **Preview URL:** ${{ steps.deploy.outputs.deployment-url }}
-            
+
             🔗 [👀 Click here to visit preview](${{ steps.deploy.outputs.deployment-url }})
-            
+
             ---
             💡 This preview will be automatically updated when you push new commits to this PR.

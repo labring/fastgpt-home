@@ -43,8 +43,15 @@ export default async function FAQPage({
 
 // Generate static paths for all supported languages
 export async function generateStaticParams() {
+  // Don't generate static pages if FAQ is disabled
+  if (!showFAQ) {
+    return [];
+  }
   return Object.keys(localeNames).map((lang) => ({ lang }));
 }
+
+// Disable dynamic params - only generate pages from generateStaticParams
+export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({
@@ -52,6 +59,17 @@ export async function generateMetadata({
 }: {
   params: { lang?: string };
 }) {
+  // Don't generate SEO metadata if FAQ is disabled
+  if (!showFAQ) {
+    return {
+      title: 'Page Not Found',
+      robots: {
+        index: false,
+        follow: false
+      }
+    };
+  }
+
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 

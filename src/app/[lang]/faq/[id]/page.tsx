@@ -145,11 +145,19 @@ export default async function FAQDetailPage({
 
 // Generate static paths for all FAQs in all languages
 export async function generateStaticParams() {
+  // Don't generate static pages if FAQ is disabled
+  if (!showFAQ) {
+    return [];
+  }
+
   const faqKeys = Object.keys(faq);
   const languages = Object.keys(localeNames);
 
   return languages.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
 }
+
+// Disable dynamic params - only generate pages from generateStaticParams
+export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({
@@ -157,12 +165,27 @@ export async function generateMetadata({
 }: {
   params: { lang?: string; id: string };
 }) {
+  // Don't generate SEO metadata if FAQ is disabled
+  if (!showFAQ) {
+    return {
+      title: 'Page Not Found',
+      robots: {
+        index: false,
+        follow: false
+      }
+    };
+  }
+
   const faqItem = faq[id as keyof typeof faq];
 
   if (!faqItem) {
     return {
       title: 'FAQ Not Found',
-      description: 'The requested FAQ could not be found.'
+      description: 'The requested FAQ could not be found.',
+      robots: {
+        index: false,
+        follow: false
+      }
     };
   }
 

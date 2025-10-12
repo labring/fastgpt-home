@@ -4,6 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "prebuild": "node scripts/manage-faq-routes.js",
     "postbuild": "next-sitemap",
     "build": "next build",
     "start": "npx serve@latest out",
@@ -14,6 +15,7 @@
   "dependencies": {
     "@formatjs/intl-localematcher": "^0.5.4",
     "@nextui-org/react": "^2.4.6",
+    "@playwright/test": "^1.56.0",
     "@radix-ui/react-select": "^2.0.0",
     "@radix-ui/react-slot": "^1.0.2",
     "@vercel/analytics": "^1.1.2",
@@ -36,12 +38,6 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
-    "husky": "^8.0.3",
-    "i18next": "^22.5.1",
-    "lint-staged": "^13.2.1",
-    "next-i18next": "^13.3.0",
-    "prettier": "^2.8.8",
-    "react-i18next": "^12.3.1",
     "@types/negotiator": "^0.6.3",
     "@types/node": "^20",
     "@types/react": "^18",
@@ -49,8 +45,14 @@
     "autoprefixer": "^10.0.1",
     "eslint": "^8",
     "eslint-config-next": "14.1.0",
+    "husky": "^8.0.3",
+    "i18next": "^22.5.1",
+    "lint-staged": "^13.2.1",
+    "next-i18next": "^13.3.0",
     "next-sitemap": "^4.2.3",
     "postcss": "^8",
+    "prettier": "^2.8.8",
+    "react-i18next": "^12.3.1",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
   },

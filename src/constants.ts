@@ -1,0 +1,1 @@
+export const showFAQ = process.env.NEXT_PUBLIC_FAQ === 'true'

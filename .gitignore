@@ -1,38 +1,18 @@
-# dependencies
-node_modules/
-# next.js
-.next/
-out/
-# production
-build/
-.astro/
-
-# misc
+### Node template
+.idea
 .DS_Store
-*.pem
+dist
 
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
+# Dependency directories
+node_modules/
+.env
+.env.test
+.env.local
 
-# local env files
-.env*.local
+# Next.js build output
+.next
+out
 
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
-platform.json
-testApi/
-local/
-dist/
-
-# hugo
-**/.hugo_build.lock
-docSite/public/
-docSite/resources/_gen/
-docSite/.vercel
+# sitemap
+*/sitemap*.xml
+*/robots.txt

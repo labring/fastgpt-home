@@ -15,5 +15,7 @@
   "[typescript][typescriptreact]": {
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "eslint.validate": ["javascript", "javascriptreact", "typescript"],
 }

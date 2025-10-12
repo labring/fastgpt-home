@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { Search, Home } from 'lucide-react';
+import { showFAQ } from '@/constants';
 
 export default function NotFound() {
   // Note: We can't access params in not-found.tsx, so we'll use English as default
@@ -35,13 +36,16 @@ export default function NotFound() {
             <Home className="w-5 h-5" />
             Back to Home
           </Link>
-          <Link
-            href="/faq"
-            className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium transition-colors"
-          >
-            <Search className="w-5 h-5" />
-            View FAQ
-          </Link>
+          {
+            showFAQ && <Link
+              href="/faq"
+              className="inline-flex items-center gap-2 px-6 py-3 rounded-lg bg-secondary text-secondary-foreground hover:bg-secondary/80 font-medium transition-colors"
+            >
+              <Search className="w-5 h-5" />
+              View FAQ
+            </Link>
+          }
+
         </div>
 
         {/* Additional Help */}

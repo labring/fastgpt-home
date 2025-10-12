@@ -2,7 +2,7 @@ import { faq } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import Link from 'next/link';
-import { ArrowLeft, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import { showFAQ } from '@/constants';
 
@@ -28,11 +28,6 @@ export default async function FAQDetailPage({
 
   // Get all FAQ entries
   const allFAQs = Object.entries(faq);
-  const currentIndex = allFAQs.findIndex(([key]) => key === id);
-
-  // Get previous and next FAQs
-  const prevFAQ = currentIndex > 0 ? allFAQs[currentIndex - 1] : null;
-  const nextFAQ = currentIndex < allFAQs.length - 1 ? allFAQs[currentIndex + 1] : null;
 
   // Get related FAQs (same category, excluding current)
   const relatedFAQs = allFAQs
@@ -70,50 +65,6 @@ export default async function FAQDetailPage({
             {paragraph}
           </p>
         ))}
-      </div>
-
-      {/* Navigation: Previous & Next */}
-      <div className="flex items-center justify-between gap-4 py-8 border-t border-b border-border mb-12">
-        <div className="flex-1">
-          {prevFAQ && (
-            <Link
-              href={`/${langName}/faq/${prevFAQ[0]}`}
-              className="group flex items-center gap-2 text-sm hover:text-primary transition-colors"
-            >
-              <ChevronLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
-              <div>
-                <div className="text-xs text-muted-foreground mb-1">
-                  {dict.FAQ?.previous || 'Previous'}
-                </div>
-                <div className="font-medium line-clamp-1">{prevFAQ[1].Question}</div>
-              </div>
-            </Link>
-          )}
-        </div>
-
-        <Link
-          href={`/${langName}/faq`}
-          className="px-4 py-2 text-sm font-medium rounded-md bg-secondary hover:bg-secondary/80 transition-colors"
-        >
-          {dict.FAQ?.backToList || 'Back to FAQ'}
-        </Link>
-
-        <div className="flex-1 flex justify-end">
-          {nextFAQ && (
-            <Link
-              href={`/${langName}/faq/${nextFAQ[0]}`}
-              className="group flex items-center gap-2 text-sm hover:text-primary transition-colors text-right"
-            >
-              <div>
-                <div className="text-xs text-muted-foreground mb-1">
-                  {dict.FAQ?.next || 'Next'}
-                </div>
-                <div className="font-medium line-clamp-1">{nextFAQ[1].Question}</div>
-              </div>
-              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          )}
-        </div>
       </div>
 
       {/* Related FAQs */}

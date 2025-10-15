@@ -1,9 +1,0 @@
-# *
-User-agent: *
-Allow: /
-
-# Host
-Host: https://fastgpt.io
-
-# Sitemaps
-Sitemap: https://fastgpt.io/sitemap.xml

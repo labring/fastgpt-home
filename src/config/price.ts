@@ -52,7 +52,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'enterprise',
       title: '企业版',
       price: 999,
-      content: '适合企业级应用，提供私有化部署',
+      content: '适合企业级应用',
       features: [
         '500 个团队成员上限',
         '1000 个应用上限',
@@ -119,7 +119,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'enterprise',
       title: 'Enterprise Edition',
       price: 999,
-      content: 'For enterprise-level applications, providing private deployment solution',
+      content: 'For enterprise-level applications',
       features: [
         '500 team members limit',
         '1000 apps limit',
@@ -185,7 +185,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'enterprise',
       title: 'エンタープライズ版',
       price: 999,
-      content: '企業向けアプリケーションのためのプライベートデプロイ',
+      content: '企業向けアプリケーション',
       features: [
         '500 チームメンバー上限',
         '1000 個のアプリケーション上限',

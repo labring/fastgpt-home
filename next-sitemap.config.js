@@ -1,7 +1,6 @@
 /** @type {import('next-sitemap').IConfig} */
-
 module.exports = {
-  siteUrl: process.env.NEXT_PUBLIC_HOME_URL || "https://fastgpt.io",
+  siteUrl: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   generateRobotsTxt: true,
   sitemapSize: 7000,
 
@@ -123,8 +122,6 @@ module.exports = {
         disallow: ['/api/', '/admin/']
       }
     ],
-    additionalSitemaps: [
-      `${process.env.NEXT_PUBLIC_HOME_URL || "https://fastgpt.io"}/sitemap.xml`
-    ]
+    additionalSitemaps: [`${process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'}/sitemap.xml`]
   }
-}
+};

@@ -1,7 +1,7 @@
-import { MetadataRoute } from 'next';
+import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'
 
   return {
     rules: [
@@ -12,5 +12,5 @@ export default function robots(): MetadataRoute.Robots {
       }
     ],
     sitemap: `${baseUrl}/sitemap.xml`
-  };
+  }
 }

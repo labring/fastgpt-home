@@ -4,6 +4,8 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 7000,
   outDir: './out',
+  // Enable pretty XML output
+  prettyXml: true,
 
   // Additional paths to include in the sitemap
   additionalPaths: async (config) => {
@@ -13,12 +15,19 @@ module.exports = {
     // Only include FAQ paths if FAQ feature is enabled
     const faqEnabled = process.env.NEXT_PUBLIC_FAQ === 'true';
 
+    // Helper function to format date properly (remove milliseconds)
+    const formatDate = (date) => {
+      return date.toISOString().replace(/\.\d{3}Z$/, 'Z');
+    };
+
+    const now = formatDate(new Date());
+
     // Generate paths for different locales
     for (const locale of locales) {
       // Homepage with locale
       paths.push({
         loc: `/${locale}`,
-        lastMod: new Date().toISOString(),
+        lastMod: now,
         changefreq: 'daily',
         priority: 1.0
       });
@@ -26,7 +35,7 @@ module.exports = {
       // Enterprise page
       paths.push({
         loc: `/${locale}/enterprise`,
-        lastMod: new Date().toISOString(),
+        lastMod: now,
         changefreq: 'weekly',
         priority: 0.8
       });
@@ -34,7 +43,7 @@ module.exports = {
       // Price page
       paths.push({
         loc: `/${locale}/price`,
-        lastMod: new Date().toISOString(),
+        lastMod: now,
         changefreq: 'weekly',
         priority: 0.8
       });
@@ -42,7 +51,7 @@ module.exports = {
       // FAQ page
       paths.push({
         loc: `/${locale}/faq`,
-        lastMod: new Date().toISOString(),
+        lastMod: now,
         changefreq: 'daily',
         priority: 0.9
       });
@@ -59,7 +68,7 @@ module.exports = {
           faqIds.forEach((id) => {
             paths.push({
               loc: `/${locale}/faq/${id}`,
-              lastMod: new Date().toISOString(),
+              lastMod: now,
               changefreq: 'weekly',
               priority: 0.7
             });
@@ -74,7 +83,7 @@ module.exports = {
     // Root homepage
     paths.push({
       loc: '/',
-      lastMod: new Date().toISOString(),
+      lastMod: now,
       changefreq: 'daily',
       priority: 1.0
     });

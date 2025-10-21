@@ -43,7 +43,6 @@ jobs:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
           NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
         run: |
-          cd projects/fastgpt
           npm install
           npm run build
 

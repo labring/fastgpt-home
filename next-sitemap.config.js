@@ -122,7 +122,6 @@ module.exports = {
         allow: '/',
         disallow: ['/api/', '/admin/']
       }
-    ],
-    additionalSitemaps: [`${process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'}/sitemap.xml`]
+    ]
   }
 };

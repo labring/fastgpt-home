@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "prebuild": "node scripts/manage-faq-routes.js",
-    "build": "next build && next-sitemap",
+    "build": "next build",
     "start": "npx serve@latest out",
     "lint": "next lint",
     "prepare": "husky install",
@@ -48,7 +48,6 @@
     "i18next": "^22.5.1",
     "lint-staged": "^13.2.1",
     "next-i18next": "^13.3.0",
-    "next-sitemap": "^4.2.3",
     "postcss": "^8",
     "prettier": "^2.8.8",
     "react-i18next": "^12.3.1",

@@ -116,7 +116,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
     {
       key: 'custom',
       title: 'Custom Edition',
-      price: 'Custom billing',
+      price: 'Custom',
       content: 'Help medium and large enterprises build core competitiveness',
       features: ['Priority in-depth technical support', 'Flexible resource allocation', 'Secure and controllable', 'Dedicated account manager']
     }

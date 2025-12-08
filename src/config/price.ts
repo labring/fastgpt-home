@@ -47,7 +47,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '360 天对话记录保留',
         '720 天团队操作日志记录',
         '1500 QPM',
-        '站点同步最大 500 页',
+        '站点同步最大 2000 页',
         '24 小时工单支持响应',
         '3 个应用备案'
       ]
@@ -108,7 +108,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
         '360 days conversation history retention',
         '720 days team operation log retention',
         '1500 QPM',
-        'Max 500 web page syncs',
+        'Max 2000 web page syncs',
         '24-hour ticket support response',
         '3 application registrations'
       ]

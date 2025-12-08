@@ -6,197 +6,181 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       price: 0,
       content: '核心功能免费试用。30 天未登录，将会清空知识库。',
       features: [
-        '3 个团队成员上限',
-        '30 个应用上限',
-        '10 个知识库上限',
-        '30 天对话记录保留',
-        '600 组知识库索引',
         // '100 AI 积分',
         100,
-        '训练优先级: 1'
+        '600 组知识库索引',
+        '1 个团队成员',
+        '10 个 Agent',
+        '3 个 知识库',
+        '30 天对话记录保留',
+        '30 QPM'
       ]
     },
     {
-      key: 'trial',
-      title: '体验版',
-      price: 59,
+      key: 'basic',
+      title: '基础版',
+      price: 99,
       content: '可解锁 FastGPT 完整功能',
       features: [
-        '10 个团队成员上限',
-        '80 个应用上限',
-        '30 个知识库上限',
+        4000,
+        '6000 组知识库索引',
+        '5 个团队成员',
+        '50 个 Agent',
+        '30 个知识库',
         '180 天对话记录保留',
-        '5000 组知识库索引',
-        3000,
-        '训练优先级: 2',
-        'Web 站点同步'
+        '300 QPM',
+        '站点同步最大 500 页',
+        '48 小时工单支持响应'
       ]
     },
     {
-      key: 'team',
-      title: '团队版',
-      price: 399,
-      content: '适合小团队构建知识库应用并提供对外服务',
+      key: 'advanced',
+      title: '高级版',
+      price: 599,
+      content: '适合企业级的生产工具',
       features: [
-        '50 个团队成员上限',
-        '200 个应用上限',
-        '100 个知识库上限',
+        25000,
+        '36000 组知识库索引',
+        '50 个团队成员',
+        '200 个 Agent',
+        '100 个知识库',
         '360 天对话记录保留',
-        '40000 组知识库索引',
-        20000,
-        '训练优先级: 3',
-        'Web 站点同步'
+        '720 天团队操作日志记录',
+        '1500 QPM',
+        '站点同步最大 500 页',
+        '24 小时工单支持响应',
+        '3 个应用备案'
       ]
     },
     {
-      key: 'enterprise',
-      title: '企业版',
-      price: 999,
-      content: '适合企业级应用',
-      features: [
-        '500 个团队成员上限',
-        '1000 个应用上限',
-        '500 个知识库上限',
-        '720 天对话记录保留',
-        '150000 组知识库索引',
-        60000,
-        '训练优先级: 4',
-        'Web 站点同步',
-        '记录团队操作日志'
-      ]
+      key: 'custom',
+      title: '定制版',
+      price: '定制化计费',
+      content: '助力中大型企业构建核心竞争力',
+      features: ['优先深度技术支持', '弹性资源配置', '安全可控', '专属客户经理']
     }
   ],
   en: [
     {
       key: 'free',
-      title: 'Community Edition',
+      title: 'Free Edition',
       price: 0,
-      content:
-        'Core features are free to try. The knowledge base will be cleared after 30 days of inactivity.',
+      content: 'Core features are free to try. The knowledge base will be cleared after 30 days of inactivity.',
       features: [
-        '3 team members limit',
-        '30 apps limit',
-        '10 knowledge bases limit',
-        '30 days conversation history retention',
-        '600 knowledge base indexes',
+        // '100 AI credits',
         100,
-        'Training priority: 1'
+        '600 knowledge base indexes',
+        '1 team member',
+        '10 Agents',
+        '3 knowledge bases',
+        '30 days conversation history retention',
+        '30 QPM'
       ]
     },
     {
-      key: 'trial',
-      title: 'Trial Edition',
-      price: 59,
+      key: 'basic',
+      title: 'Basic Edition',
+      price: 99,
       content: 'Can unlock FastGPT full features',
       features: [
-        '10 team members limit',
-        '80 apps limit',
-        '30 knowledge bases limit',
+        4000,
+        '6000 knowledge base indexes',
+        '5 team members',
+        '50 Agents',
+        '30 knowledge bases',
         '180 days conversation history retention',
-        '5000 knowledge base indexes',
-        3000,
-        'Training priority: 2',
-        'Web site synchronization'
+        '300 QPM',
+        'Max 500 web page syncs',
+        '48-hour ticket support response'
       ]
     },
     {
-      key: 'team',
-      title: 'Team Edition',
-      price: 399,
-      content: 'For small teams to build knowledge base applications and provide external services',
+      key: 'advanced',
+      title: 'Advanced Edition',
+      price: 599,
+      content: 'Suitable for enterprise-level production tools',
       features: [
-        '50 team members limit',
-        '200 apps limit',
-        '100 knowledge bases limit',
+        25000,
+        '36000 knowledge base indexes',
+        '50 team members',
+        '200 Agents',
+        '100 knowledge bases',
         '360 days conversation history retention',
-        '40000 knowledge base indexes',
-        20000,
-        'Training priority: 3',
-        'Web site synchronization'
+        '720 days team operation log retention',
+        '1500 QPM',
+        'Max 500 web page syncs',
+        '24-hour ticket support response',
+        '3 application registrations'
       ]
     },
     {
-      key: 'enterprise',
-      title: 'Enterprise Edition',
-      price: 999,
-      content: 'For enterprise-level applications',
-      features: [
-        '500 team members limit',
-        '1000 apps limit',
-        '500 knowledge bases limit',
-        '720 days conversation history retention',
-        '150000 knowledge base indexes',
-        60000,
-        'Training priority: 4',
-        'Web site synchronization',
-        'Record team operation logs'
-      ]
+      key: 'custom',
+      title: 'Custom Edition',
+      price: 'Custom billing',
+      content: 'Help medium and large enterprises build core competitiveness',
+      features: ['Priority in-depth technical support', 'Flexible resource allocation', 'Secure and controllable', 'Dedicated account manager']
     }
   ],
   ja: [
     {
       key: 'free',
-      title: 'コミュニティ版',
+      title: '無料版',
       price: 0,
-      content: '無料でご利用いただけます, 30 日未ログインで知識ベースがクリアされます',
+      content:
+        'コア機能を無料で試用できます。30日間ログインがない場合、ナレッジベースがクリアされます',
       features: [
-        '3 つのチームメンバー上限',
-        '30 個のアプリケーション上限',
-        '10 個の知識ベース上限',
-        '30 日間の会話記録保存',
-        '600 個の知識ベースインデックス',
+        // '100 AIクレジット',
         100,
-        'トレーニング優先度: 1'
+        '600組のナレッジベースインデックス',
+        '1チームメンバー',
+        '10個のAgent',
+        '3個のナレッジベース',
+        '30日間の会話記録保存',
+        '30 QPM'
       ]
     },
     {
-      key: 'trial',
-      title: '体験版',
-      price: 59,
-      content: 'FastGPT のすべての機能をロック解除',
+      key: 'basic',
+      title: '基本版',
+      price: 99,
+      content: 'FastGPTの完全な機能をアンロックできます',
       features: [
-        '10 チームメンバー上限',
-        '80 個のアプリケーション上限',
-        '30 個の知識ベース上限',
-        '180 日間の会話記録保存',
-        '5000 個の知識ベースインデックス',
-        3000,
-        'トレーニング優先度: 2',
-        'ウェブサイト同期'
+        4000,
+        '6000組のナレッジベースインデックス',
+        '5チームメンバー',
+        '50個のAgent',
+        '30個のナレッジベース',
+        '180日間の会話記録保存',
+        '300 QPM',
+        'サイト同期最大500ページ',
+        '48時間のチケットサポート対応'
       ]
     },
     {
-      key: 'team',
-      title: 'チーム版',
-      price: 399,
-      content: '小規模チームが知識ベースアプリケーションを構築し、専門的なサービスを提供',
+      key: 'advanced',
+      title: '高度版',
+      price: 599,
+      content: '企業レベルの生産ツールに適しています',
       features: [
-        '50 チームメンバー上限',
-        '200 個のアプリケーション上限',
-        '100 個の知識ベース上限',
-        '360 日間の会話記録保存',
-        '40000 個の知識ベースインデックス',
-        20000,
-        'トレーニング優先度: 3',
-        'ウェブサイト同期'
+        25000,
+        '36000組のナレッジベースインデックス',
+        '50チームメンバー',
+        '200個のAgent',
+        '100個のナレッジベース',
+        '360日間の会話記録保存',
+        '720日間のチーム操作ログ保存',
+        '1500 QPM',
+        'サイト同期最大500ページ',
+        '24時間のチケットサポート対応',
+        '3個のアプリケーション登録'
       ]
     },
     {
-      key: 'enterprise',
-      title: 'エンタープライズ版',
-      price: 999,
-      content: '企業向けアプリケーション',
-      features: [
-        '500 チームメンバー上限',
-        '1000 個のアプリケーション上限',
-        '500 個の知識ベース上限',
-        '720 日間の会話記録保存',
-        '150000 個の知識ベースインデックス',
-        60000,
-        'トレーニング優先度: 4',
-        'ウェブサイト同期',
-        'チーム操作ログ記録'
-      ]
+      key: 'custom',
+      title: 'カスタム版',
+      price: 'カスタマイズ料金',
+      content: '中大型企業のコア競争力構築を支援',
+      features: ['優先的な深い技術サポート', '柔軟なリソース配分', '安全で制御可能', '専任カスタマーマネージャー']
     }
   ]
 };
@@ -250,7 +234,7 @@ export const PRICE_PLANS_SELF: {
       key: 'free',
       title: 'Community Edition',
       price: 'Free',
-      content: 'Free open source,共建 Agent 社区，为 Agent 贡献力量',
+      content: 'Free open source, build Agent community together, contribute power to Agent',
       features: [
         'Basic core functions (Agent, Workflow, Knowledge Base, MCP, etc.)',
         'Model management and model logs',
@@ -273,7 +257,7 @@ export const PRICE_PLANS_SELF: {
     {
       key: 'commercial',
       title: 'Commercial Edition',
-      price: 'Customized billing',
+      price: 'Custom',
       content: 'Support higher-level features, private deployment',
       features: [
         'Full commercial license',
@@ -290,7 +274,7 @@ export const PRICE_PLANS_SELF: {
       key: 'free',
       title: 'コミュニティ版',
       price: '無料',
-      content: '無料開源，共建 Agent コミュニティ，Agent に貢献しましょう',
+      content: '無料オープンソース、共にAgentコミュニティを築き、Agentに貢献する',
       features: [
         '基礎核心機能（Agent、Workflow、知識ベース、MCP等）',
         'モデル管理とモデルログ',
@@ -313,7 +297,7 @@ export const PRICE_PLANS_SELF: {
     {
       key: 'commercial',
       title: '商用版',
-      price: 'カスタマイズ計費',
+      price: '要相談',
       content: 'より高度な機能をサポートし、プライベートデプロイを提供',
       features: [
         '完全な商用ライセンス',

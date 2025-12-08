@@ -24,6 +24,7 @@ export type SiteConfig = {
   description: string;
   url: string;
   userUrl: string;
+  customPlanUrl: string;
   keywords: string[];
   commercial: string;
   authors: AuthorsConfig[];

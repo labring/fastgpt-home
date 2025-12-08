@@ -13,6 +13,9 @@ const baseSiteConfig = {
     'A free, open-source Enterprise AI Agent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
   url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
+  customPlanUrl:
+    process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
+    'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
   ogImage: 'https://landingpage.weijunext.com/og.png',
   metadataBase: '/',
   keywords: [

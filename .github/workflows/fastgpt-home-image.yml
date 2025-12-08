@@ -63,6 +63,7 @@ jobs:
             NEXT_PUBLIC_POLICE_FILING=${{ secrets.NEXT_PUBLIC_POLICE_FILING }}
             NEXT_PUBLIC_RYBBIT_TONGJI=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
             NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
+            NEXT_PUBLIC_CUSTOM_PLAN_URL=${{ secrets.NEXT_PUBLIC_CUSTOM_PLAN_URL }}
 
       - uses: actions-hub/kubectl@master
         env:

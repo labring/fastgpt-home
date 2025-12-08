@@ -107,17 +107,25 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
             >
               <h2 className="text-[16px] font-bold m-0">{item.title}</h2>
               <h3 style={{ color: '#fff' }} className="text-[42px] m-0">
-                ¥{item.price * (annual ? 10 : 1)}
+                {typeof item.price === 'number' ? `¥${item.price * (annual ? 10 : 1)}` : item.price}
               </h3>
               <p className={`text-sm text-white/50 ${langName !== 'zh' ? 'h-[60px]' : 'h-[40px]'}`}>
                 {item.content}
               </p>
 
-              <Link href={siteConfig.userUrl} target="_blank">
-                <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
-                  {locale.upgrade}
-                </Button>
-              </Link>
+              {item.key !== 'custom' ? (
+                <Link href={siteConfig.userUrl} target="_blank">
+                  <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
+                    {locale.upgrade}
+                  </Button>
+                </Link>
+              ) : (
+                <Link href={siteConfig.customPlanUrl} target="_blank">
+                  <Button color="primary" size="sm" className="w-full bg-[#487FFF] rounded-[6px]">
+                    {locale.contact}
+                  </Button>
+                </Link>
+              )}
 
               <div className="flex flex-col gap-2">
                 {item.features.map((feature: string, index: number) => (

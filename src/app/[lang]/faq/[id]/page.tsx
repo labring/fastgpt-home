@@ -1,6 +1,7 @@
 import { faq } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { getAlternates } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
@@ -135,10 +136,13 @@ export async function generateMetadata({
     };
   }
 
+  const langName = lang || defaultLocale;
+
   return {
     title: faqItem.Title,
     description: faqItem.Description,
     keywords: faqItem.Keywords.split(', '),
+    alternates: getAlternates(langName, `/faq/${id}`),
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,

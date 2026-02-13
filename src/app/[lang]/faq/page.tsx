@@ -1,5 +1,6 @@
 import { faq } from '@/faq';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { getAlternates } from '@/lib/seo';
 import FAQList from '@/components/faq/FAQList';
 import { notFound } from 'next/navigation';
 import { showFAQ } from '@/constants';
@@ -82,6 +83,7 @@ export async function generateMetadata({
       'Customer Support',
       'AI Platform'
     ],
+    alternates: getAlternates(langName, '/faq'),
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description:

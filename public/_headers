@@ -1,0 +1,23 @@
+# Cache-Control headers for Cloudflare Pages
+# Static assets with content hash — long cache
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Image assets — 1 day cache
+/images/*
+  Cache-Control: public, max-age=86400, stale-while-revalidate=604800
+
+# Fonts
+/fonts/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Favicon and icons
+/favicon*
+  Cache-Control: public, max-age=86400
+
+/logo.svg
+  Cache-Control: public, max-age=86400
+
+# HTML pages — 1 hour cache with stale-while-revalidate
+/*
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400

@@ -52,7 +52,7 @@ export async function generateMetadata(
     openGraph: {
       ...config.openGraph,
       locale: ogLocale,
-      alternateLocales
+      alternateLocale: alternateLocales
     },
     twitter: config.twitter,
     alternates: getAlternates(langName)

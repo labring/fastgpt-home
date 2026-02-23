@@ -4,10 +4,9 @@ import {
   SelectContent,
   SelectItem,
   SelectTrigger,
-  SelectValue
 } from '@/components/ui/select';
 import { defaultLocale, localeNames } from '@/lib/i18n';
-import { useParams, usePathname, useRouter } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import { useEffect } from 'react';
 
 const langConfig: Record<string, { flag: string; label: string }> = {
@@ -21,9 +20,9 @@ export const LangSwitcher = () => {
   const lang = params.lang;
   const pathname = usePathname();
   const langName = lang || defaultLocale;
-  const router = useRouter();
 
   const handleSwitchLanguage = (value: string) => {
+    if (value === langName) return;
     localStorage.setItem('preferredLang', value);
     let routeWithoutLang = pathname;
 
@@ -34,12 +33,12 @@ export const LangSwitcher = () => {
       }
     }
     const newPath = `/${value}${routeWithoutLang}`;
-    router.push(newPath);
+    window.location.href = newPath;
   };
 
   useEffect(() => {
     const storedLang = localStorage.getItem('preferredLang');
-    if (storedLang && storedLang !== lang) {
+    if (storedLang && storedLang !== lang && Object.keys(localeNames).includes(storedLang)) {
       let routeWithoutLang = pathname;
 
       if (lang) {
@@ -50,17 +49,19 @@ export const LangSwitcher = () => {
       }
 
       const newPath = `/${storedLang}${routeWithoutLang}`;
-      router.push(newPath);
+      window.location.href = newPath;
     }
-  }, [lang, pathname, router]);
+  }, [lang, pathname]);
 
   const current = langConfig[langName];
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
-      <SelectTrigger className="w-fit gap-1.5 bg-white/20 hover:bg-white/10 border-none">
-        <span className="text-base leading-none">{current?.flag}</span>
-        <SelectValue placeholder="Language" />
+      <SelectTrigger className="w-fit gap-1.5 bg-white/20 hover:bg-white/10 border-none" aria-label="Switch language">
+        <span className="flex items-center gap-1.5">
+          <span className="text-base leading-none">{current?.flag}</span>
+          <span className="text-sm">{current?.label}</span>
+        </span>
       </SelectTrigger>
       <SelectContent>
         {Object.keys(localeNames).map((key: string) => (

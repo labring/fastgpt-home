@@ -3,9 +3,9 @@ import Negotiator from 'negotiator';
 
 export const locales = ['', 'en', 'en-US', 'zh', 'zh-CN', 'zh-TW', 'zh-HK', 'ja', 'ar', 'es'];
 export const localeNames: any = {
-  en: 'EN English',
-  zh: 'ZH 中文',
-  ja: 'JP 日本語'
+  en: '🇺🇸 English',
+  zh: '🇨🇳 中文',
+  ja: '🇯🇵 日本語'
 };
 export const defaultLocale = 'zh';
 

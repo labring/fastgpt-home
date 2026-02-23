@@ -9,14 +9,24 @@ import {
 import { defaultLocale, localeNames } from '@/lib/i18n';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
+import { Globe } from 'lucide-react';
+
+const langFlags: Record<string, string> = {
+  zh: '🇨🇳',
+  en: '🇺🇸',
+  ja: '🇯🇵'
+};
+
+const langLabels: Record<string, string> = {
+  zh: '中文',
+  en: 'English',
+  ja: '日本語'
+};
 
 export const LangSwitcher = () => {
   const params = useParams<{ lang: string }>();
   const lang = params.lang;
   const pathname = usePathname();
-
-  // const lang = (params.lang && params.lang[0]) || defaultLocale;
-  // let langName = lang && lang[0] && lang[0] !== 'index' ? lang[0] : defaultLocale;
   const langName = lang || defaultLocale;
   const router = useRouter();
 
@@ -31,7 +41,6 @@ export const LangSwitcher = () => {
       }
     }
     const newPath = `/${value}${routeWithoutLang}`;
-
     router.push(newPath);
   };
 
@@ -54,18 +63,19 @@ export const LangSwitcher = () => {
 
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
-      <SelectTrigger className="w-fit bg-white/20 hover:bg-white/10">
+      <SelectTrigger className="w-fit gap-1.5 bg-white/20 hover:bg-white/10 border-none">
+        <Globe className="h-4 w-4 shrink-0" />
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>
-        {Object.keys(localeNames).map((key: string) => {
-          const name = localeNames[key];
-          return (
-            <SelectItem className="cursor-pointer" key={key} value={key}>
-              {name}
-            </SelectItem>
-          );
-        })}
+        {Object.keys(localeNames).map((key: string) => (
+          <SelectItem className="cursor-pointer" key={key} value={key}>
+            <span className="flex items-center gap-2">
+              <span>{langFlags[key]}</span>
+              <span>{langLabels[key]}</span>
+            </span>
+          </SelectItem>
+        ))}
       </SelectContent>
     </Select>
   );

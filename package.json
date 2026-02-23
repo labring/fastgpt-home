@@ -3,7 +3,7 @@
   "version": "4.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "prebuild": "node scripts/manage-faq-routes.js",
     "build": "next build",
     "start": "npx serve@latest out",

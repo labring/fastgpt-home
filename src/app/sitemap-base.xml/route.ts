@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next'
 import { showFAQ } from '@/constants'
 
+export const dynamic = 'force-static'
+
 // 语言配置
 const locales = ['en', 'zh', 'ja']
 

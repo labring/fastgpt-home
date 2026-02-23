@@ -5,7 +5,8 @@ import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
 import { Metadata } from 'next';
 
-export default async function LangHome({ children, params: { lang } }: { children: React.ReactNode, params: { lang?: string } }) {
+export default async function LangHome({ children, params }: { children: React.ReactNode, params: Promise<{ lang?: string }> }) {
+  const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
@@ -23,8 +24,9 @@ export default async function LangHome({ children, params: { lang } }: { childre
 }
 
 export async function generateMetadata(
-  { params: { lang } }: { params: { lang?: string } }
+  { params }: { params: Promise<{ lang?: string }> }
 ): Promise<Metadata> {
+  const { lang } = await params;
   const langName = lang || defaultLocale;
   const config = langName === 'zh' ? siteConfigZh : siteConfig;
 

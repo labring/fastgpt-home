@@ -6,10 +6,11 @@ import { notFound } from 'next/navigation';
 import { showFAQ } from '@/constants';
 
 export default async function FAQPage({
-  params: { lang }
+  params
 }: {
-  params: { lang?: string };
+  params: Promise<{ lang?: string }>;
 }) {
+  const { lang } = await params;
   // Check if FAQ feature is enabled
   if (!showFAQ) {
     notFound();
@@ -52,9 +53,9 @@ export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({
-  params: { lang }
+  params
 }: {
-  params: { lang?: string };
+  params: Promise<{ lang?: string }>;
 }) {
   // Don't generate SEO metadata if FAQ is disabled
   if (!showFAQ) {
@@ -67,6 +68,7 @@ export async function generateMetadata({
     };
   }
 
+  const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 

@@ -4,6 +4,7 @@ const nextConfig = {
   // Dev mode uses dynamic server rendering for better DX
   ...(process.env.NODE_ENV === 'production' && { output: 'export' }),
   images: { unoptimized: true },
+  transpilePackages: ['@nextui-org/react', '@nextui-org/theme'],
 
   // Cache-Control headers (effective in non-export / dev mode;
   // production static export relies on public/_headers for Cloudflare Pages)

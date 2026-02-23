@@ -8,10 +8,11 @@ import FAQCard from '@/components/faq/FAQCard';
 import { showFAQ } from '@/constants';
 
 export default async function FAQDetailPage({
-  params: { lang, id }
+  params
 }: {
-  params: { lang?: string; id: string };
+  params: Promise<{ lang?: string; id: string }>;
 }) {
+  const { lang, id } = await params;
   // Check if FAQ feature is enabled
   if (!showFAQ) {
     notFound();
@@ -108,10 +109,11 @@ export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({
-  params: { lang, id }
+  params
 }: {
-  params: { lang?: string; id: string };
+  params: Promise<{ lang?: string; id: string }>;
 }) {
+  const { lang, id } = await params;
   // Don't generate SEO metadata if FAQ is disabled
   if (!showFAQ) {
     return {

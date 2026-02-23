@@ -3,7 +3,8 @@ import CTA from "@/components/home/CTA";
 import { defaultLocale, getDictionary } from "@/lib/i18n";
 import { getGitHubStars } from "@/lib/utils";
 
-export default async function EnterprisePage({ params: { lang } }: { params: { lang?: string } }) {
+export default async function EnterprisePage({ params }: { params: Promise<{ lang?: string }> }) {
+  const { lang } = await params;
   // const langName = lang || defaultLocale;
   const langName = 'zh';
   const dict = await getDictionary(langName);

@@ -1,3 +1,4 @@
+"use client";
 import { Chip } from "@heroui/react";
 import { GoDot } from "react-icons/go";
 import { ALL_ENTERPRISE } from "@/config/enterprise";

@@ -9,18 +9,11 @@ import {
 import { defaultLocale, localeNames } from '@/lib/i18n';
 import { useParams, usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
-import { Globe } from 'lucide-react';
 
-const langFlags: Record<string, string> = {
-  zh: '🇨🇳',
-  en: '🇺🇸',
-  ja: '🇯🇵'
-};
-
-const langLabels: Record<string, string> = {
-  zh: '中文',
-  en: 'English',
-  ja: '日本語'
+const langConfig: Record<string, { flag: string; label: string }> = {
+  zh: { flag: '🇨🇳', label: '中文' },
+  en: { flag: '🇺🇸', label: 'English' },
+  ja: { flag: '🇯🇵', label: '日本語' }
 };
 
 export const LangSwitcher = () => {
@@ -61,18 +54,20 @@ export const LangSwitcher = () => {
     }
   }, [lang, pathname, router]);
 
+  const current = langConfig[langName];
+
   return (
     <Select value={langName} onValueChange={handleSwitchLanguage}>
       <SelectTrigger className="w-fit gap-1.5 bg-white/20 hover:bg-white/10 border-none">
-        <Globe className="h-4 w-4 shrink-0" />
+        <span className="text-base leading-none">{current?.flag}</span>
         <SelectValue placeholder="Language" />
       </SelectTrigger>
       <SelectContent>
         {Object.keys(localeNames).map((key: string) => (
           <SelectItem className="cursor-pointer" key={key} value={key}>
             <span className="flex items-center gap-2">
-              <span>{langFlags[key]}</span>
-              <span>{langLabels[key]}</span>
+              <span className="text-base leading-none">{langConfig[key]?.flag}</span>
+              <span>{langConfig[key]?.label}</span>
             </span>
           </SelectItem>
         ))}

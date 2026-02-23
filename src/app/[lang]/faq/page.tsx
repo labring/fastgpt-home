@@ -26,7 +26,7 @@ export default async function FAQPage({
     trimmedFaq[id] = {
       Category: item.Category,
       Question: item.Question,
-      Answers: item.Answers.substring(0, 160),
+      Answers: item.Answers.substring(0, 100),
     };
   }
 

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useCallback } from 'react';
+import { useState, useMemo, useCallback, useRef, useEffect } from 'react';
 import FAQCard from './FAQCard';
 import FAQFilter from './FAQFilter';
 
@@ -22,6 +22,7 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
   const [selectedCategory, setSelectedCategory] = useState('All');
   const [searchQuery, setSearchQuery] = useState('');
   const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
+  const sentinelRef = useRef<HTMLDivElement>(null);
 
   // Reset pagination when filters change
   const handleCategoryChange = useCallback((cat: string) => {
@@ -60,6 +61,24 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
 
   const visibleFAQs = filteredFAQs.slice(0, visibleCount);
   const hasMore = visibleCount < filteredFAQs.length;
+
+  // Infinite scroll with IntersectionObserver
+  useEffect(() => {
+    const sentinel = sentinelRef.current;
+    if (!sentinel || !hasMore) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          setVisibleCount((c) => c + PAGE_SIZE);
+        }
+      },
+      { rootMargin: '200px' }
+    );
+
+    observer.observe(sentinel);
+    return () => observer.disconnect();
+  }, [hasMore, filteredFAQs.length]);
 
   return (
     <div className="w-full">
@@ -102,14 +121,7 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
             ))}
           </div>
           {hasMore && (
-            <div className="mt-8 flex justify-center">
-              <button
-                onClick={() => setVisibleCount((c) => c + PAGE_SIZE)}
-                className="px-6 py-3 text-sm font-medium rounded-lg bg-primary/10 hover:bg-primary/20 text-primary transition-colors"
-              >
-                {locale.viewMore || 'Load More'} ({filteredFAQs.length - visibleCount} {locale.questions || 'remaining'})
-              </button>
-            </div>
+            <div ref={sentinelRef} className="h-10 mt-4" />
           )}
         </>
       ) : (

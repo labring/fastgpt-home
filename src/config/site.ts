@@ -120,7 +120,7 @@ export const siteConfigZh: SiteConfig = {
     '问答',
     'workflow',
     'AI 客服',
-    'RAG检索',
+    'RAG検索',
     '可视化AI工作流',
     '企业知识库',
     'rag',
@@ -130,5 +130,25 @@ export const siteConfigZh: SiteConfig = {
     'gpt',
     'gpt5',
     'AI自动化工具'
+  ]
+};
+
+export const siteConfigJa: SiteConfig = {
+  ...siteConfig,
+  title: 'FastGPT - エンタープライズ AI エージェント構築プラットフォーム',
+  description:
+    'FastGPTは、LLM大規模言語モデルをベースにAIナレッジベースQ&Aシステムを構築できるエンタープライズAIエージェント構築プラットフォームです。すぐに使えるAIエージェントツールセットとモデル呼び出し機能を提供し、ビジュアルワークフロー編集で複雑なAIアプリケーションを実現します。',
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'AIエージェント',
+    'ナレッジベース',
+    'ワークフロー',
+    'RAG検索',
+    'AI自動化',
+    'エンタープライズAI',
+    'LLM',
+    'GPT',
+    'チャットボット'
   ]
 };

@@ -48,6 +48,7 @@ ${sitemap.map(url => `  <url>
     <xhtml:link rel="alternate" hreflang="en" href="${url.alternates?.languages?.en}" />
     <xhtml:link rel="alternate" hreflang="zh" href="${url.alternates?.languages?.zh}" />
     <xhtml:link rel="alternate" hreflang="ja" href="${url.alternates?.languages?.ja}" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="${url.alternates?.languages?.en}" />
     <lastmod>${(url.lastModified ? new Date(url.lastModified) : new Date()).toISOString()}</lastmod>
     <changefreq>${url.changeFrequency}</changefreq>
     <priority>${url.priority}</priority>

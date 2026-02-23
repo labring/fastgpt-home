@@ -1,6 +1,6 @@
 import { faq } from '@/faq';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
-import { getAlternates } from '@/lib/seo';
+import { getAlternates, localeMap } from '@/lib/seo';
 import FAQList from '@/components/faq/FAQList';
 import { notFound } from 'next/navigation';
 import { showFAQ } from '@/constants';
@@ -91,7 +91,8 @@ export async function generateMetadata({
       description:
         dict.FAQ?.description ||
         'Find answers to frequently asked questions about FastGPT.',
-      type: 'website'
+      type: 'website',
+      locale: localeMap[langName] || 'en_US'
     },
     twitter: {
       card: 'summary_large_image',

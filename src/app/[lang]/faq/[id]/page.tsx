@@ -1,7 +1,7 @@
 import { faq } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
-import { getAlternates } from '@/lib/seo';
+import { getAlternates, localeMap } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
@@ -148,7 +148,8 @@ export async function generateMetadata({
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,
-      type: 'article'
+      type: 'article',
+      locale: localeMap[langName] || 'en_US'
     },
     twitter: {
       card: 'summary_large_image',

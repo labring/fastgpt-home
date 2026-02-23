@@ -19,6 +19,17 @@ export default async function FAQPage({
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
+  // Trim FAQ data for list page - only send fields needed for cards
+  // This reduces page size from ~4.8MB to ~300KB
+  const trimmedFaq: Record<string, { Category: string; Question: string; Answers: string }> = {};
+  for (const [id, item] of Object.entries(faq)) {
+    trimmedFaq[id] = {
+      Category: item.Category,
+      Question: item.Question,
+      Answers: item.Answers.substring(0, 160),
+    };
+  }
+
   return (
     <div className="w-full min-h-screen">
       {/* FAQ Content */}
@@ -36,7 +47,7 @@ export default async function FAQPage({
           </div>
 
           {/* FAQ List with integrated search */}
-          <FAQList faqData={faq} locale={dict.FAQ} langName={langName} />
+          <FAQList faqData={trimmedFaq} locale={dict.FAQ} langName={langName} />
         </div>
       </section>
     </div>

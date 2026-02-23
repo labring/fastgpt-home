@@ -26,7 +26,7 @@ export const metadata = {
   authors: siteConfig.authors,
   creator: siteConfig.creator,
   icons: siteConfig.icons,
-  metadataBase: siteConfig.metadataBase,
+  metadataBase: new URL(siteConfig.metadataBase as string),
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
   other: {

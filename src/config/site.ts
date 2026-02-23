@@ -17,7 +17,7 @@ const baseSiteConfig = {
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
     'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
   ogImage: 'https://landingpage.weijunext.com/og.png',
-  metadataBase: '/',
+  metadataBase: 'https://fastgpt.io',
   keywords: [
     'rag',
     'ai',

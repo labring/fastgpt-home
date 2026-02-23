@@ -48,7 +48,7 @@ export async function generateMetadata(
     authors: config.authors,
     creator: config.creator,
     icons: config.icons,
-    metadataBase: new URL(config.metadataBase as string, baseUrl),
+    metadataBase: new URL(baseUrl),
     openGraph: {
       ...config.openGraph,
       locale: ogLocale,

@@ -1,4 +1,4 @@
-import { Chip } from "@nextui-org/react";
+import { Chip } from "@heroui/react";
 import { GoDot } from "react-icons/go";
 import { ALL_ENTERPRISE } from "@/config/enterprise";
 import { NormalSection } from ".";

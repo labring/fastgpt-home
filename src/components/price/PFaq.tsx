@@ -1,7 +1,7 @@
 'use client';
 
 import { PRICE_FAQS } from '@/config/price';
-import { Accordion, AccordionItem } from '@nextui-org/react';
+import { Accordion, AccordionItem } from '@heroui/react';
 import { MinusIcon, PlusIcon } from 'lucide-react';
 
 function triggerResizeEvent() {

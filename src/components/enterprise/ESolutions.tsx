@@ -1,6 +1,6 @@
 "use client";
 
-import { Tab, Tabs } from "@nextui-org/react";
+import { Tab, Tabs } from "@heroui/react";
 import { NormalCardGrid, NormalSection } from ".";
 import { ALL_ENTERPRISE } from "@/config/enterprise";
 

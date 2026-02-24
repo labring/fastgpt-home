@@ -1,4 +1,3 @@
-"use client";
 'use client';
 
 import { PRICE_FAQS } from '@/config/price';

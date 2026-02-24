@@ -78,7 +78,7 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
 
     observer.observe(sentinel);
     return () => observer.disconnect();
-  }, [hasMore, filteredFAQs.length]);
+  }, [hasMore]);
 
   return (
     <div className="w-full">

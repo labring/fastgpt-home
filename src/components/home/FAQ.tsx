@@ -1,4 +1,3 @@
-"use client";
 'use client';
 import { ALL_FAQS } from '@/config/faqs';
 import { showFAQ } from '@/constants';

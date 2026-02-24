@@ -50,7 +50,7 @@ export default async function RootLayout({
   const isChineseDomain = process.env.NEXT_PUBLIC_USER_URL?.includes('.cn')
 
   return (
-    <html suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}

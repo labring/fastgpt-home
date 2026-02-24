@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Button, Switch, Tab, Tabs } from '@nextui-org/react';
+import { Button, Switch, Tab, Tabs } from '@heroui/react';
 import Check from '@/components/icons/check';
 import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from '@/config/price';
 import Link from 'next/link';

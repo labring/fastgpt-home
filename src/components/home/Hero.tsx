@@ -52,7 +52,7 @@ const Hero = ({ locale, CTALocale, stars: initialStars }: { locale: any; CTALoca
               border: 'none',
             }}
           >
-            <span style={{ color: '#F8A3FF' }}>40w+&nbsp;</span>
+            <span style={{ color: '#F8A3FF' }}>50w+&nbsp;</span>
             {locale.maker}
           </div>
           <div className="inline-block hero-github-pos">

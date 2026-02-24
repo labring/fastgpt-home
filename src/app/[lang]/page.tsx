@@ -8,7 +8,8 @@ import VideoPlayer from '@/components/home/Video';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getGitHubStars } from '@/lib/utils';
 
-export default async function HomePage({ params: { lang } }: { params: { lang?: string } }) {
+export default async function HomePage({ params }: { params: Promise<{ lang?: string }> }) {
+  const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 

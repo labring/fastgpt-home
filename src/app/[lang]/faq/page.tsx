@@ -1,15 +1,16 @@
 import { faq } from '@/faq';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
-import { getAlternates } from '@/lib/seo';
+import { getAlternates, localeMap } from '@/lib/seo';
 import FAQList from '@/components/faq/FAQList';
 import { notFound } from 'next/navigation';
 import { showFAQ } from '@/constants';
 
 export default async function FAQPage({
-  params: { lang }
+  params
 }: {
-  params: { lang?: string };
+  params: Promise<{ lang?: string }>;
 }) {
+  const { lang } = await params;
   // Check if FAQ feature is enabled
   if (!showFAQ) {
     notFound();
@@ -17,6 +18,17 @@ export default async function FAQPage({
 
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
+
+  // Trim FAQ data for list page - only send fields needed for cards
+  // This reduces page size from ~4.8MB to ~300KB
+  const trimmedFaq: Record<string, { Category: string; Question: string; Answers: string }> = {};
+  for (const [id, item] of Object.entries(faq)) {
+    trimmedFaq[id] = {
+      Category: item.Category,
+      Question: item.Question,
+      Answers: item.Answers.substring(0, 100),
+    };
+  }
 
   return (
     <div className="w-full min-h-screen">
@@ -35,7 +47,7 @@ export default async function FAQPage({
           </div>
 
           {/* FAQ List with integrated search */}
-          <FAQList faqData={faq} locale={dict.FAQ} langName={langName} />
+          <FAQList faqData={trimmedFaq} locale={dict.FAQ} langName={langName} />
         </div>
       </section>
     </div>
@@ -52,9 +64,9 @@ export const dynamicParams = false;
 
 // Generate metadata for SEO
 export async function generateMetadata({
-  params: { lang }
+  params
 }: {
-  params: { lang?: string };
+  params: Promise<{ lang?: string }>;
 }) {
   // Don't generate SEO metadata if FAQ is disabled
   if (!showFAQ) {
@@ -67,6 +79,7 @@ export async function generateMetadata({
     };
   }
 
+  const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
@@ -89,7 +102,8 @@ export async function generateMetadata({
       description:
         dict.FAQ?.description ||
         'Find answers to frequently asked questions about FastGPT.',
-      type: 'website'
+      type: 'website',
+      locale: localeMap[langName] || 'en_US'
     },
     twitter: {
       card: 'summary_large_image',

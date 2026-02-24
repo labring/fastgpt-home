@@ -9,7 +9,7 @@ import {
   Divider,
   Link,
   Spacer,
-} from "@nextui-org/react";
+} from "@heroui/react";
 
 import { siteConfig } from "@/config/site";
 import { ALL_TIERS } from "@/config/tiers";

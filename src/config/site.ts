@@ -17,7 +17,7 @@ const baseSiteConfig = {
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
     'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
   ogImage: 'https://landingpage.weijunext.com/og.png',
-  metadataBase: '/',
+  metadataBase: 'https://fastgpt.io',
   keywords: [
     'rag',
     'ai',
@@ -130,5 +130,25 @@ export const siteConfigZh: SiteConfig = {
     'gpt',
     'gpt5',
     'AI自动化工具'
+  ]
+};
+
+export const siteConfigJa: SiteConfig = {
+  ...siteConfig,
+  title: 'FastGPT - エンタープライズ AI エージェント構築プラットフォーム',
+  description:
+    'FastGPTは、LLM大規模言語モデルをベースにAIナレッジベースQ&Aシステムを構築できるエンタープライズAIエージェント構築プラットフォームです。すぐに使えるAIエージェントツールセットとモデル呼び出し機能を提供し、ビジュアルワークフロー編集で複雑なAIアプリケーションを実現します。',
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'AIエージェント',
+    'ナレッジベース',
+    'ワークフロー',
+    'RAG检索',
+    'AI自動化',
+    'エンタープライズAI',
+    'LLM',
+    'GPT',
+    'チャットボット'
   ]
 };

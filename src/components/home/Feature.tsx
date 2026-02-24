@@ -1,6 +1,7 @@
+"use client";
 import { ALL_FEATURES } from "@/config/feature";
 import { siteConfig } from "@/config/site";
-import { Link } from "@nextui-org/react";
+import { Link } from "@heroui/react";
 import React from "react";
 
 

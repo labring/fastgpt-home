@@ -26,7 +26,7 @@ export const metadata = {
   authors: siteConfig.authors,
   creator: siteConfig.creator,
   icons: siteConfig.icons,
-  metadataBase: siteConfig.metadataBase,
+  metadataBase: new URL(siteConfig.metadataBase as string),
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
   other: {
@@ -43,16 +43,14 @@ export const viewport: Viewport = {
 };
 
 export default async function RootLayout({
-  children,
-  params: { lang }
+  children
 }: {
   children: React.ReactNode;
-  params: { lang: string[] | undefined };
 }) {
   const isChineseDomain = process.env.NEXT_PUBLIC_USER_URL?.includes('.cn')
 
   return (
-    <html lang={(lang && lang[0]) || defaultLocale} suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}

@@ -1,11 +1,12 @@
 import Header from '@/components/header/Header';
 import JsonLd from '@/components/JsonLd';
-import { siteConfig, siteConfigZh } from '@/config/site';
+import { siteConfig, siteConfigZh, siteConfigJa } from '@/config/site';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
-import { getAlternates } from '@/lib/seo';
+import { getAlternates, localeMap } from '@/lib/seo';
 import { Metadata } from 'next';
 
-export default async function LangHome({ children, params: { lang } }: { children: React.ReactNode, params: { lang?: string } }) {
+export default async function LangHome({ children, params }: { children: React.ReactNode, params: Promise<{ lang?: string }> }) {
+  const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
@@ -22,11 +23,23 @@ export default async function LangHome({ children, params: { lang } }: { childre
   );
 }
 
+function getConfigForLang(lang: string) {
+  switch (lang) {
+    case 'zh': return siteConfigZh;
+    case 'ja': return siteConfigJa;
+    default: return siteConfig;
+  }
+}
+
 export async function generateMetadata(
-  { params: { lang } }: { params: { lang?: string } }
+  { params }: { params: Promise<{ lang?: string }> }
 ): Promise<Metadata> {
+  const { lang } = await params;
   const langName = lang || defaultLocale;
-  const config = langName === 'zh' ? siteConfigZh : siteConfig;
+  const config = getConfigForLang(langName);
+  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const ogLocale = localeMap[langName] || 'en_US';
+  const alternateLocales = Object.values(localeMap).filter(l => l !== ogLocale);
 
   return {
     title: config.title,
@@ -35,8 +48,12 @@ export async function generateMetadata(
     authors: config.authors,
     creator: config.creator,
     icons: config.icons,
-    metadataBase: new URL(config.metadataBase as string, process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'),
-    openGraph: config.openGraph,
+    metadataBase: new URL(baseUrl),
+    openGraph: {
+      ...config.openGraph,
+      locale: ogLocale,
+      alternateLocale: alternateLocales
+    },
     twitter: config.twitter,
     alternates: getAlternates(langName)
   };

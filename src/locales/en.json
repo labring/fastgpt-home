@@ -13,21 +13,17 @@
     {
       "label": "Pricing",
       "href": "/price"
-    },
-    {
-      "label": "Commercial License",
-      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1"
     }
   ],
   "Hero": {
-    "maker": "Users built specialized AI knowledge bases with FastGPT",
+    "maker": "Users built specialized AI Agents with FastGPT",
     "title1": "FastGPT - ",
     "title2": "",
     "title3": "Enterprise AI Agent Builder",
     "description": "Flexible AI Workflow + AI Knowledge Base + Template System + Agentic RAG = Powerful AI Agent Builder"
   },
   "SocialProof": {
-    "maker": "Users built specialized AI knowledge bases with FastGPT"
+    "maker": "Users built specialized AI Agents with FastGPT"
   },
   "Feature": {
     "title": "Why FastGPT?",

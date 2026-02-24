@@ -13,21 +13,17 @@
     {
       "label": "ドキュメント",
       "href": "https://doc.fastgpt.io/"
-    },
-    {
-      "label": "商務授権",
-      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1"
     }
   ],
   "Hero": {
-    "maker": "開発者はFastGPTを活用して、独自の専門AIナレッジベースを作成しています",
+    "maker": "ユーザーはFastGPTを活用して、独自の専門AI Agentを作成しています",
     "title1": "FastGPT - ",
     "title2": "",
     "title3": "構築企業 AI Agent",
     "description": "見えるか化 Workflow 編成 + 超使いやすいAI知識ベース + 革新 RAG 検索 + テンプレート生態系 = 簡単強力 AI Agent 構築できます"
   },
   "SocialProof": {
-    "maker": "開発者はFastGPTを活用して、独自の専門AIナレッジベースを作成しています"
+    "maker": "ユーザーはFastGPTを活用して、独自の専門AI Agentを作成しています"
   },
   "Feature": {
     "title": "主な利点",

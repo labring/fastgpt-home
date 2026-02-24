@@ -15,23 +15,19 @@
       "href": "/price"
     },
     {
-      "label": "商用授权",
-      "href": "https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1"
-    },
-    {
       "label": "企业一体机",
       "href": "/enterprise"
     }
   ],
   "Hero": {
-    "maker": "用户使用 FastGPT 构建专属 AI 知识库",
+    "maker": "用户使用 FastGPT 构建专属 AI Agent",
     "title1": "FastGPT - ",
     "title2": "",
     "title3": "企业级 AI Agent 构建平台",
     "description": "可视化 Workflow 编排 + 超易用 AI 知识库 + 创新 RAG 检索 + 模板生态 = 轻松构建强大 AI 应用"
   },
   "SocialProof": {
-    "maker": "用户使用 FastGPT 构建专属 AI 知识库"
+    "maker": "用户使用 FastGPT 构建专属 AI Agent"
   },
   "Feature": {
     "title": "优势",

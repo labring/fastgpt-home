@@ -89,18 +89,16 @@ export const LangSwitcher = () => {
                 role="option"
                 aria-selected={key === langName}
                 key={key}
-                className="relative flex w-full cursor-pointer select-none items-center rounded-sm py-1.5 pl-8 pr-2 text-sm outline-none hover:bg-accent hover:text-accent-foreground"
+                className="relative flex w-full cursor-pointer select-none items-center rounded-sm py-1.5 px-3 text-sm outline-none hover:bg-accent hover:text-accent-foreground"
                 onClick={() => {
                   handleSwitchLanguage(key);
                   setOpen(false);
                 }}
               >
-                {key === langName && (
-                  <span className="absolute left-2 flex h-3.5 w-3.5 items-center justify-center">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
-                  </span>
-                )}
                 <span className="flex items-center gap-2">
+                  {key === langName && (
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  )}
                   <span className="text-base leading-none">{langConfig[key]?.flag}</span>
                   <span>{langConfig[key]?.label}</span>
                 </span>

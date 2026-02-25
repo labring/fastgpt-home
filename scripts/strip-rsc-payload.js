@@ -58,3 +58,11 @@ function walkDir(dir) {
 console.log(DRY_RUN ? '[DRY RUN] Scanning HTML files...' : 'Stripping RSC payload from HTML files...');
 walkDir(outDir);
 console.log(`\n${DRY_RUN ? 'Would strip' : 'Stripped'} RSC payload from ${totalFiles} files, saving ${(totalSaved / 1024).toFixed(1)}KB total.`);
+
+// Copy English page as root index.html (default language = English)
+const enHtml = path.join(outDir, 'en.html');
+const indexHtml = path.join(outDir, 'index.html');
+if (!DRY_RUN && fs.existsSync(enHtml)) {
+  fs.copyFileSync(enHtml, indexHtml);
+  console.log('Copied en.html → index.html (root defaults to English)');
+}

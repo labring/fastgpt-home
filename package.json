@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "prebuild": "node scripts/manage-faq-routes.js",
-    "build": "next build && node scripts/clean-faq-rsc.js",
+    "build": "next build && node scripts/clean-faq-rsc.js && node scripts/copy-root-index.js",
     "start": "npx serve@latest out",
     "lint": "next lint",
     "prepare": "husky",

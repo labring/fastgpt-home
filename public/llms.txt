@@ -1,0 +1,59 @@
+# FastGPT
+
+> FastGPT is a free, open-source enterprise AI Agent builder. It provides Agentic RAG retrieval, AI-powered workflows, and MCP tools to easily build powerful AI Agents.
+
+FastGPT is an enterprise-grade AI Agent building platform that enables you to build AI knowledge base Q&A systems based on LLM large language models. It provides out-of-the-box AI Agent toolsets and large model calling capabilities, and implements complex AI application capabilities through visual workflow orchestration.
+
+## Links
+
+- Website: https://fastgpt.io
+- Documentation: https://doc.fastgpt.io
+- GitHub: https://github.com/labring/FastGPT
+- Cloud Service: https://cloud.fastgpt.io
+- Pricing: https://fastgpt.io/en/price
+
+## Core Features
+
+### Domain-Specific AI Assistant
+Create AI-powered chatbots for specific domains by training models with imported documents or Q&A pairs, enabling interactive conversations based on domain-specific knowledge bases.
+
+### Automated Data Preprocessing
+Save time and improve efficiency with automated text preprocessing, vectorization, and QA segmentation. Supports manual input, direct segmentation, and LLM-powered automatic processing.
+
+### Workflow Orchestration
+Design complex AI workflows using a visual drag-and-drop interface, integrating tasks like database queries, inventory checks, and lab reservations.
+
+### Seamless API Integration
+Connect with existing GPT applications and platforms like WeChat, Feishu, Discord, Slack, and Telegram using OpenAI-aligned APIs.
+
+## Why FastGPT?
+
+- **Open Source** — Secure and reliable open-source codebase
+- **Optimized Q&A** — Enhanced question-answering accuracy for customer service scenarios
+- **Visual Workflow** — Design complex workflows with ease using the Flow module
+- **Seamless Extensibility** — Integrate FastGPT into your applications via API without modifying source code
+- **Debugging Tools** — Comprehensive debugging features including search testing, reference editing, and full conversation preview
+- **Multi-Model Support** — Compatible with GPT, Claude, Wenxin, and various other LLM models
+
+## Deployment Options
+
+- **Cloud Service** — Free to use at https://cloud.fastgpt.io
+- **Self-Hosted** — Deploy on your own infrastructure with Docker
+- **Enterprise Appliance** — Hardware + software integrated solution with enterprise-grade support
+
+## FAQ
+
+### Can the open-source version be used commercially?
+FastGPT allows commercial use, such as using it as a "Backend as a Service" for other applications or as an application development platform for enterprises. However, for multi-tenant SaaS services or when modifying the logo and copyright information, you must contact the author for a commercial license.
+
+### What document formats can FastGPT import?
+FastGPT supports importing Word, PDF, Excel, Markdown, and web link documents. It also supports syncing data from entire websites, with automated text preprocessing, vectorization, and QA segmentation.
+
+### What models does FastGPT support?
+Any model with an API compatible with the OpenAI interface can be integrated with FastGPT. You can use projects like One API to unify access to different models and provide OpenAI-compatible APIs.
+
+## Contact
+
+- Email: yujinlong@sealos.io
+- GitHub: https://github.com/labring/FastGPT
+- Feishu Community: https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png

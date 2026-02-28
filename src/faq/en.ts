@@ -6,8 +6,6 @@ export const faq = {
     "Title": "Can AI intelligent customer service platforms really reduce labor costs?-Fastgpt",
     "Description": "Yes, AI intelligent customer service platforms can significantly reduce labor costs. They achieve this primarily by automating responses to routine and high-volume customer inquiries.\n\nThese systems u",
     "Keywords": "GPT Integration, AI Knowledge Management, Smart Assistant, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-customer-service",
-    "Url": "/faq/Can-AI-intelligent-customer-service.html"
   },
   "Why-are-enterprises-paying-more": {
     "Category": "Content & Creativity",
@@ -16,8 +14,6 @@ export const faq = {
     "Title": "Why are enterprises paying more and more attention to RAG solutions?-Fastgpt",
     "Description": "Enterprises increasingly prioritize RAG (Retrieval-Augmented Generation) solutions because they significantly enhance the accuracy, reliability, and domain specificity of AI-generated outputs, while i",
     "Keywords": "API Integration, Intelligent Q&A, GPT Integration, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Why-are-enterprises-paying-more",
-    "Url": "/faq/Why-are-enterprises-paying-more.html"
   },
   "What-practical-problems-can-AI": {
     "Category": "Use Cases & Best Practices",
@@ -26,8 +22,6 @@ export const faq = {
     "Title": "What practical problems can AI automation platforms actually solve?-Fastgpt",
     "Description": "AI automation platforms solve practical problems by automating manual processes, analyzing large datasets, and enhancing decision-making. They primarily address efficiency, accuracy, and scalability c",
     "Keywords": "AI Knowledge Management, AI Platform, Open Source AI, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-practical-problems-can-AI",
-    "Url": "/faq/What-practical-problems-can-AI.html"
   },
   "What-efficiencies-can-AI-assistant": {
     "Category": "Use Cases & Best Practices",
@@ -36,8 +30,6 @@ export const faq = {
     "Title": "What efficiencies can AI assistant platforms help enterprises improve?-Fastgpt",
     "Description": "AI assistant platforms primarily enhance three core efficiencies for enterprises: operational efficiency, customer service efficiency, and data-driven decision efficiency.\n\nThey automate repetitive ta",
     "Keywords": "Task Automation AI, AI Workflow, Smart Assistant, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-efficiencies-can-AI-assistant",
-    "Url": "/faq/What-efficiencies-can-AI-assistant.html"
   },
   "What-are-the-benefits-of": {
     "Category": "Development Challenges",
@@ -46,8 +38,6 @@ export const faq = {
     "Title": "What are the benefits of HR using AI for candidate initial screening?-Fastgpt",
     "Description": "HR using AI for candidate initial screening significantly enhances efficiency and objectivity. It automates manual resume reviews, rapidly filtering large applicant pools based on predefined job crite",
     "Keywords": "Open Source AI, Vector Search, LLM Development, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-benefits-of",
-    "Url": "/faq/What-are-the-benefits-of.html"
   },
   "Can-AI-platforms-make-customer": {
     "Category": "Use Cases & Best Practices",
@@ -56,8 +46,6 @@ export const faq = {
     "Title": "Can AI platforms make customer service faster and more accurate?-Fastgpt",
     "Description": "AI platforms can significantly boost customer service speed and accuracy. These systems leverage technologies like natural language processing and machine learning to automate and enhance customer int",
     "Keywords": "Smart Assistant, Open Source AI, API Integration, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-make-customer",
-    "Url": "/faq/Can-AI-platforms-make-customer.html"
   },
   "Can-AI-intelligent-platforms-replace": {
     "Category": "Use Cases & Best Practices",
@@ -66,8 +54,6 @@ export const faq = {
     "Title": "Can AI intelligent platforms replace traditional manual processes?-Fastgpt",
     "Description": "AI intelligent platforms cannot fully replace traditional manual processes but can significantly automate and augment them. Partial replacement is feasible for specific repetitive or data-intensive ta",
     "Keywords": "LLM Development, GPT Integration, Open Source AI, AI Workflow, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-platforms-replace",
-    "Url": "/faq/Can-AI-intelligent-platforms-replace.html"
   },
   "What-business-data-can-AI": {
     "Category": "Use Cases & Best Practices",
@@ -76,8 +62,6 @@ export const faq = {
     "Title": "What business data can AI platforms help analyze?-Fastgpt",
     "Description": "AI platforms can analyze diverse business data types to extract valuable insights. This includes sales transactions, customer interactions, operational metrics, and market trends, enabling comprehensi",
     "Keywords": "AI Platform, Vector Search, AI Knowledge Management, FastGPT, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-business-data-can-AI",
-    "Url": "/faq/What-business-data-can-AI.html"
   },
   "In-what-aspects-does-the": {
     "Category": "Use Cases & Best Practices",
@@ -86,8 +70,6 @@ export const faq = {
     "Title": "In what aspects does the advantage of AI automatic information processing lie?-Fastgpt",
     "Description": "The key advantages of AI automatic information processing lie in its superior speed, accuracy, scalability, and ability to uncover complex patterns in vast datasets. It significantly outperforms tradi",
     "Keywords": "AI Platform, API Integration, AI Workflow, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/In-what-aspects-does-the",
-    "Url": "/faq/In-what-aspects-does-the.html"
   },
   "Why-should-enterprises-introduce-AI": {
     "Category": "Use Cases & Best Practices",
@@ -96,8 +78,6 @@ export const faq = {
     "Title": "Why should enterprises introduce AI Agent in digital transformation?-Fastgpt",
     "Description": "Enterprises should introduce AI Agents in digital transformation to intelligently automate complex tasks, enhance decision-making, and drive operational efficiency at scale. They enable faster adaptat",
     "Keywords": "AI Automation, Vector Search, Intelligent Q&A, Enterprise AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Why-should-enterprises-introduce-AI",
-    "Url": "/faq/Why-should-enterprises-introduce-AI.html"
   },
   "Is-the-AI-Agent-platform": {
     "Category": "Use Cases & Best Practices",
@@ -106,8 +86,6 @@ export const faq = {
     "Title": "Is the AI Agent platform useful for small and medium-sized enterprises?-Fastgpt",
     "Description": "Yes, AI Agent platforms offer significant utility and feasibility for small and medium-sized enterprises (SMEs). They provide accessible, cost-effective automation tools capable of scaling with busine",
     "Keywords": "Open Source AI, AI Platform, AI Automation, API Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Is-the-AI-Agent-platform",
-    "Url": "/faq/Is-the-AI-Agent-platform.html"
   },
   "Why-AI-Agent-is-the": {
     "Category": "Use Cases & Best Practices",
@@ -116,8 +94,6 @@ export const faq = {
     "Title": "Why AI Agent is the Inevitable Choice for Enterprise Informatization-Fastgpt",
     "Description": "AI agents represent the logical evolution in enterprise digital transformation due to their unmatched capability to automate complex processes and enhance human decision-making at scale. They offer a ",
     "Keywords": "Open Source AI, AI Platform, LLM Development, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agent-is-the",
-    "Url": "/faq/Why-AI-Agent-is-the.html"
   },
   "What-is-the-biggest-difference": {
     "Category": "Use Cases & Best Practices",
@@ -126,8 +102,6 @@ export const faq = {
     "Title": "What is the biggest difference between AI intelligent platforms and traditional software?-Fastgpt",
     "Description": "AI intelligent platforms fundamentally differ by leveraging machine learning and data to adapt and improve autonomously over time, unlike traditional software which operates on fixed, pre-defined rule",
     "Keywords": "AI Platform, Document AI, AI Automation, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-biggest-difference",
-    "Url": "/faq/What-is-the-biggest-difference.html"
   },
   "Will-AI-Agents-replace-human": {
     "Category": "Use Cases & Best Practices",
@@ -136,8 +110,6 @@ export const faq = {
     "Title": "Will AI Agents replace human customer service representatives?-Fastgpt",
     "Description": "Currently, AI agents are not positioned to fully replace human customer service representatives. Instead, they serve as powerful tools to augment and support human agents, creating hybrid support mode",
     "Keywords": "Document AI, AI Automation, Enterprise AI, FastGPT, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Will-AI-Agents-replace-human",
-    "Url": "/faq/Will-AI-Agents-replace-human.html"
   },
   "Can-AI-platforms-reduce-the": {
     "Category": "Use Cases & Best Practices",
@@ -146,8 +118,6 @@ export const faq = {
     "Title": "Can AI platforms reduce the manual input in data analysis?-Fastgpt",
     "Description": "Yes, AI platforms can significantly reduce the manual input required in data analysis. They automate numerous tasks traditionally reliant on human effort, handling both structured and unstructured dat",
     "Keywords": "AI Workflow, Smart Assistant, Enterprise AI, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-reduce-the",
-    "Url": "/faq/Can-AI-platforms-reduce-the.html"
   },
   "What-are-the-roles-of": {
     "Category": "Use Cases & Best Practices",
@@ -156,8 +126,6 @@ export const faq = {
     "Title": "What are the roles of AI Agents in the e-commerce industry?-Fastgpt",
     "Description": "AI Agents are intelligent software programs performing specific e-commerce tasks autonomously. They act as digital employees automating interactions, processes, and decision-making within the online r",
     "Keywords": "LLM Development, AI Knowledge Management, GPT Integration, FastGPT, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-roles-of",
-    "Url": "/faq/What-are-the-roles-of.html"
   },
   "How-AI-Intelligent-Platforms-Enhance": {
     "Category": "Use Cases & Best Practices",
@@ -166,8 +134,6 @@ export const faq = {
     "Title": "How AI Intelligent Platforms Enhance Customer Experience-Fastgpt",
     "Description": "AI intelligent platforms enhance customer experience by leveraging artificial intelligence to provide personalized, efficient, and proactive customer interactions. They utilize technologies like machi",
     "Keywords": "AI Platform, Task Automation AI, Intelligent Q&A, AI Chatbot, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Platforms-Enhance",
-    "Url": "/faq/How-AI-Intelligent-Platforms-Enhance.html"
   },
   "Why-AI-platforms-can-help": {
     "Category": "Use Cases & Best Practices",
@@ -176,8 +142,6 @@ export const faq = {
     "Title": "Why AI platforms can help enterprises save time-Fastgpt",
     "Description": "AI platforms enable enterprises to automate repetitive tasks, accelerate processes, and optimize workflows, significantly reducing time spent on manual operations. This translates to faster decision-m",
     "Keywords": "AI Automation, Smart Assistant, API Integration, Enterprise AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-platforms-can-help",
-    "Url": "/faq/Why-AI-platforms-can-help.html"
   },
   "Can-AI-Agents-make-corporate": {
     "Category": "Use Cases & Best Practices",
@@ -186,8 +150,6 @@ export const faq = {
     "Title": "Can AI Agents make corporate decision-making more scientific?-Fastgpt",
     "Description": "AI agents can significantly enhance the scientific rigor of corporate decision-making. They achieve this by analyzing vast datasets, identifying complex patterns, and generating objective insights bey",
     "Keywords": "AI Automation, Enterprise AI, GPT Integration, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-make-corporate",
-    "Url": "/faq/Can-AI-Agents-make-corporate.html"
   },
   "How-do-AI-intelligent-platforms": {
     "Category": "Use Cases & Best Practices",
@@ -196,8 +158,6 @@ export const faq = {
     "Title": "How do AI intelligent platforms achieve automated office work?-Fastgpt",
     "Description": "AI intelligent platforms automate office tasks by leveraging technologies like machine learning, natural language processing, and robotic process automation. They identify patterns, process informatio",
     "Keywords": "Open Source AI, Vector Search, Smart Assistant, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-intelligent-platforms",
-    "Url": "/faq/How-do-AI-intelligent-platforms.html"
   },
   "Which-industries-are-suitable-for": {
     "Category": "Use Cases & Best Practices",
@@ -206,8 +166,6 @@ export const faq = {
     "Title": "Which industries are suitable for AI Agent to get started quickly?-Fastgpt",
     "Description": "Industries with high volumes of routine, rule-based tasks and readily available digital data are most suitable for rapid AI Agent deployment. Customer service and e-commerce stand out as primary candi",
     "Keywords": "Enterprise AI, Document AI, Intelligent Q&A, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Which-industries-are-suitable-for",
-    "Url": "/faq/Which-industries-are-suitable-for.html"
   },
   "Can-enterprise-AI-platforms-really": {
     "Category": "Use Cases & Best Practices",
@@ -216,8 +174,6 @@ export const faq = {
     "Title": "Can enterprise AI platforms really reduce error rates?-Fastgpt",
     "Description": "Enterprise AI platforms can effectively reduce operational error rates when properly implemented. These systems minimize human-caused mistakes through automation and data-driven insights.\n\nKey reducti",
     "Keywords": "AI Platform, Intelligent Q&A, API Integration, Open Source AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-enterprise-AI-platforms-really",
-    "Url": "/faq/Can-enterprise-AI-platforms-really.html"
   },
   "What-are-the-advantages-of": {
     "Category": "Content & Creativity",
@@ -226,8 +182,6 @@ export const faq = {
     "Title": "What are the advantages of RAG in enterprise knowledge management?-Fastgpt",
     "Description": "RAG enhances enterprise knowledge management by significantly improving the accuracy and reliability of AI-generated responses using large language models (LLMs). It grounds answers directly in the or",
     "Keywords": "AI Workflow, Document AI, Task Automation AI, Intelligent Q&A, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-advantages-of",
-    "Url": "/faq/What-are-the-advantages-of.html"
   },
   "Can-AI-platforms-enhance-the": {
     "Category": "Use Cases & Best Practices",
@@ -236,8 +190,6 @@ export const faq = {
     "Title": "Can AI platforms enhance the overall competitiveness of enterprises?-Fastgpt",
     "Description": "AI platforms can significantly enhance enterprise competitiveness by optimizing operations and enabling data-driven decisions. These technologies offer a powerful lever for performance improvement and",
     "Keywords": "AI Workflow, API Integration, Document AI, Intelligent Q&A, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-enhance-the",
-    "Url": "/faq/Can-AI-platforms-enhance-the.html"
   },
   "Why-do-all-future-enterprises": {
     "Category": "Use Cases & Best Practices",
@@ -246,8 +198,6 @@ export const faq = {
     "Title": "Why do all future enterprises need AI intelligent assistants?-Fastgpt",
     "Description": "AI intelligent assistants are essential for all future enterprises as they enable enhanced efficiency, innovation, and competitive advantage in a rapidly evolving digital landscape.\n\nKey reasons inclu",
     "Keywords": "Open Source AI, Enterprise AI, Smart Assistant, LLM Development, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Why-do-all-future-enterprises",
-    "Url": "/faq/Why-do-all-future-enterprises.html"
   },
   "How-do-AI-platforms-help": {
     "Category": "Use Cases & Best Practices",
@@ -256,8 +206,6 @@ export const faq = {
     "Title": "How do AI platforms help enterprises save costs?-Fastgpt",
     "Description": "AI platforms enable enterprises to achieve significant cost savings primarily by automating repetitive, manual tasks and optimizing complex operational processes. This reduces labor expenses, minimize",
     "Keywords": "Open Source AI, Vector Search, AI Chatbot, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-platforms-help",
-    "Url": "/faq/How-do-AI-platforms-help.html"
   },
   "What-can-AI-Agents-do": {
     "Category": "Use Cases & Best Practices",
@@ -266,8 +214,6 @@ export const faq = {
     "Title": "What can AI Agents do in supply chain management?-Fastgpt",
     "Description": "AI Agents are software programs that automate and optimize various supply chain management tasks using artificial intelligence. They assist in decision-making, operational efficiency, and risk mitigat",
     "Keywords": "Document AI, API Integration, Intelligent Q&A, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-can-AI-Agents-do",
-    "Url": "/faq/What-can-AI-Agents-do.html"
   },
   "Is-there-a-big-difference": {
     "Category": "Enterprise Applications",
@@ -276,8 +222,6 @@ export const faq = {
     "Title": "Is there a big difference between fine-tuning and retraining a model?-Fastgpt",
     "Description": "Fine-tuning adapts a pre-existing model to a specific task using a relatively small dataset, whereas retraining involves building a new model architecture from scratch using extensive, often task-spec",
     "Keywords": "Document AI, Smart Assistant, AI Automation, API Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Is-there-a-big-difference",
-    "Url": "/faq/Is-there-a-big-difference.html"
   },
   "Why-should-enterprises-invest-in": {
     "Category": "Use Cases & Best Practices",
@@ -286,8 +230,6 @@ export const faq = {
     "Title": "Why should enterprises invest in AI Agent platform construction now?-Fastgpt",
     "Description": "Enterprises should invest in AI Agent platforms now to secure a competitive advantage through automation and innovation. Building this capability is crucial for future readiness and operational effici",
     "Keywords": "Enterprise AI, Task Automation AI, FastGPT, Open Source AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Why-should-enterprises-invest-in",
-    "Url": "/faq/Why-should-enterprises-invest-in.html"
   },
   "How-much-impact-does-the": {
     "Category": "Use Cases & Best Practices",
@@ -296,8 +238,6 @@ export const faq = {
     "Title": "How much impact does the AI platform have on traditional business models?-Fastgpt",
     "Description": "AI platforms exert substantial disruptive and transformative influence on traditional business models. This impact fundamentally alters how businesses operate, compete, and generate value.\n\nThe shift ",
     "Keywords": "AI Platform, AI Knowledge Management, AI Workflow, Document AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-much-impact-does-the",
-    "Url": "/faq/How-much-impact-does-the.html"
   },
   "What-repetitive-tasks-can-AI": {
     "Category": "Use Cases & Best Practices",
@@ -306,8 +246,6 @@ export const faq = {
     "Title": "What repetitive tasks can AI Agents solve?-Fastgpt",
     "Description": "AI agents effectively automate repetitive tasks characterized by structured data, predictable workflows, and well-defined rules. This encompasses routine activities like data entry, basic customer inq",
     "Keywords": "Intelligent Q&A, Open Source AI, AI Knowledge Management, FastGPT, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-repetitive-tasks-can-AI",
-    "Url": "/faq/What-repetitive-tasks-can-AI.html"
   },
   "The-Impact-of-AI-Intelligent": {
     "Category": "Use Cases & Best Practices",
@@ -316,8 +254,6 @@ export const faq = {
     "Title": "The Impact of AI Intelligent Platforms on Customer Satisfaction-Fastgpt",
     "Description": "AI intelligent platforms significantly enhance customer satisfaction by improving efficiency, personalization, and responsiveness in customer interactions. They achieve this through automation and dat",
     "Keywords": "Document AI, Intelligent Q&A, API Integration, AI Automation, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/The-Impact-of-AI-Intelligent",
-    "Url": "/faq/The-Impact-of-AI-Intelligent.html"
   },
   "Why-can-AI-Agents-help": {
     "Category": "Use Cases & Best Practices",
@@ -326,8 +262,6 @@ export const faq = {
     "Title": "Why can AI Agents help enterprises seize market opportunities?-Fastgpt",
     "Description": "AI agents empower enterprises to capture market opportunities by rapidly analyzing vast datasets and identifying emerging trends invisible to humans. They enhance decision-making speed, enabling proac",
     "Keywords": "Intelligent Q&A, AI Workflow, Smart Assistant, API Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Why-can-AI-Agents-help",
-    "Url": "/faq/Why-can-AI-Agents-help.html"
   },
   "Is-the-AI-platform-helpful": {
     "Category": "Use Cases & Best Practices",
@@ -336,8 +270,6 @@ export const faq = {
     "Title": "Is the AI platform helpful for data security?-Fastgpt",
     "Description": "AI platforms significantly enhance data security by providing advanced, automated tools for protection. They offer capabilities that surpass traditional security methods in speed and complexity.\n\nThes",
     "Keywords": "FastGPT, GPT Integration, Document AI, LLM Development, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Is-the-AI-platform-helpful",
-    "Url": "/faq/Is-the-AI-platform-helpful.html"
   },
   "Can-AI-Agents-seamlessly-interface": {
     "Category": "Use Cases & Best Practices",
@@ -346,8 +278,6 @@ export const faq = {
     "Title": "Can AI Agents seamlessly interface with existing systems?-Fastgpt",
     "Description": "Yes, AI agents can achieve seamless integration with existing systems. Interfacing is technologically feasible using modern integration techniques.\n\nSuccessful integration hinges on accessible APIs, s",
     "Keywords": "AI Chatbot, AI Platform, Document AI, API Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-seamlessly-interface",
-    "Url": "/faq/Can-AI-Agents-seamlessly-interface.html"
   },
   "How-AI-platforms-make-information": {
     "Category": "Use Cases & Best Practices",
@@ -356,8 +286,6 @@ export const faq = {
     "Title": "How AI platforms make information processing more accurate-Fastgpt",
     "Description": "AI platforms enhance information processing accuracy by leveraging advanced algorithms to analyze large datasets, identify subtle patterns, and minimize human error. They consistently deliver precise ",
     "Keywords": "AI Automation, LLM Development, Document AI, Vector Search, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-platforms-make-information",
-    "Url": "/faq/How-AI-platforms-make-information.html"
   },
   "Why-are-AI-Agents-regarded": {
     "Category": "Use Cases & Best Practices",
@@ -366,8 +294,6 @@ export const faq = {
     "Title": "Why are AI Agents regarded as a new trend in the next three years?-Fastgpt",
     "Description": "AI Agents represent a significant evolution in AI application, moving beyond singular tasks towards autonomous systems capable of complex reasoning and action, driven by advances like Large Language M",
     "Keywords": "AI Automation, AI Workflow, API Integration, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-regarded",
-    "Url": "/faq/Why-are-AI-Agents-regarded.html"
   },
   "How-long-does-it-take": {
     "Category": "Use Cases & Best Practices",
@@ -376,8 +302,6 @@ export const faq = {
     "Title": "How long does it take for an enterprise's AI platform to show results?-Fastgpt",
     "Description": "The time for an enterprise AI platform to demonstrate results varies significantly based on complexity, data readiness, and use case maturity, but tangible initial outcomes often emerge within 3 to 6 ",
     "Keywords": "Enterprise AI, API Integration, FastGPT, Document AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-long-does-it-take",
-    "Url": "/faq/How-long-does-it-take.html"
   },
   "Will-AI-intelligent-platforms-increase": {
     "Category": "Use Cases & Best Practices",
@@ -386,8 +310,6 @@ export const faq = {
     "Title": "Will AI intelligent platforms increase technical barriers?-Fastgpt",
     "Description": "Initially, AI intelligent platforms appear to lower technical barriers by automating complex tasks through intuitive interfaces. However, they can also unintentionally create new barriers.\n\nThese plat",
     "Keywords": "AI Platform, Open Source AI, FastGPT, LLM Development, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-AI-intelligent-platforms-increase",
-    "Url": "/faq/Will-AI-intelligent-platforms-increase.html"
   },
   "How-much-support-do-AI": {
     "Category": "Use Cases & Best Practices",
@@ -396,8 +318,6 @@ export const faq = {
     "Title": "How much support do AI platforms provide for e-commerce?-Fastgpt",
     "Description": "AI platforms provide substantial support across core e-commerce operations, enhancing efficiency, personalization, and decision-making. Their capabilities significantly augment human efforts in managi",
     "Keywords": "AI Chatbot, Smart Assistant, Intelligent Q&A, FastGPT, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-much-support-do-AI",
-    "Url": "/faq/How-much-support-do-AI.html"
   },
   "Why-is-the-AI-platform": {
     "Category": "Use Cases & Best Practices",
@@ -406,8 +326,6 @@ export const faq = {
     "Title": "Why is the AI platform the core of digital transformation?-Fastgpt",
     "Description": "An AI platform serves as the central technological foundation for driving and scaling digital transformation initiatives. It provides the essential infrastructure and tools to deploy and manage intell",
     "Keywords": "GPT Integration, Vector Search, Open Source AI, LLM Development, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Why-is-the-AI-platform",
-    "Url": "/faq/Why-is-the-AI-platform.html"
   },
   "How-can-AI-intelligent-platforms": {
     "Category": "Use Cases & Best Practices",
@@ -416,8 +334,6 @@ export const faq = {
     "Title": "How can AI intelligent platforms adapt to enterprises of different scales-Fastgpt",
     "Description": "AI intelligent platforms adapt to enterprises of different scales primarily through scalable architecture and configurable feature sets. These platforms utilize modular design principles and cloud-nat",
     "Keywords": "AI Knowledge Management, Task Automation AI, LLM Development, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-intelligent-platforms",
-    "Url": "/faq/How-can-AI-intelligent-platforms.html"
   },
   "Can-AI-Agents-help-enterprises": {
     "Category": "Use Cases & Best Practices",
@@ -426,8 +342,6 @@ export const faq = {
     "Title": "Can AI Agents help enterprises expand overseas markets?-Fastgpt",
     "Description": "Yes, AI Agents can significantly aid enterprises in expanding into overseas markets. They automate and enhance key processes critical for international growth.\n\nAI Agents can analyze vast amounts of m",
     "Keywords": "Smart Assistant, AI Platform, AI Workflow, AI Automation, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-help-enterprises",
-    "Url": "/faq/Can-AI-Agents-help-enterprises.html"
   },
   "What-are-the-main-costs": {
     "Category": "Use Cases & Best Practices",
@@ -436,8 +350,6 @@ export const faq = {
     "Title": "What are the main costs for enterprises deploying AI platforms?-Fastgpt",
     "Description": "Enterprise AI platform deployment costs primarily include infrastructure expenses, specialized talent acquisition, and data processing/compliance costs. Cloud computing resources, specialized hardware",
     "Keywords": "Vector Search, AI Automation, Document AI, Intelligent Q&A, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-main-costs",
-    "Url": "/faq/What-are-the-main-costs.html"
   },
   "Is-the-AI-intelligent-assistant": {
     "Category": "Use Cases & Best Practices",
@@ -446,8 +358,6 @@ export const faq = {
     "Title": "Is the AI intelligent assistant platform suitable for traditional manufacturing?-Fastgpt",
     "Description": "Yes, AI intelligent assistant platforms are well-suited for transformation within traditional manufacturing. They can significantly enhance operational efficiency, product quality, and decision-making",
     "Keywords": "Open Source AI, AI Knowledge Management, AI Automation, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Is-the-AI-intelligent-assistant",
-    "Url": "/faq/Is-the-AI-intelligent-assistant.html"
   },
   "How-do-AI-platforms-automatically": {
     "Category": "Use Cases & Best Practices",
@@ -456,8 +366,6 @@ export const faq = {
     "Title": "How do AI platforms automatically learn and optimize?-Fastgpt",
     "Description": "AI platforms automatically learn and optimize through iterative cycles of processing data, performing computations, evaluating outcomes, and adjusting their internal models. This continuous process en",
     "Keywords": "AI Platform, GPT Integration, FastGPT, AI Knowledge Management, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-platforms-automatically",
-    "Url": "/faq/How-do-AI-platforms-automatically.html"
   },
   "Will-AI-Agents-increase-the": {
     "Category": "Use Cases & Best Practices",
@@ -466,8 +374,6 @@ export const faq = {
     "Title": "Will AI Agents increase the complexity of enterprise management?-Fastgpt",
     "Description": "AI agents may initially increase management complexity due to new technical integration and oversight requirements. However, strategically deployed agents can ultimately streamline operations and sign",
     "Keywords": "Document AI, AI Chatbot, AI Automation, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Will-AI-Agents-increase-the",
-    "Url": "/faq/Will-AI-Agents-increase-the.html"
   },
   "Why-do-enterprises-need-to": {
     "Category": "Use Cases & Best Practices",
@@ -476,8 +382,6 @@ export const faq = {
     "Title": "Why do enterprises need to deploy AI platforms in the early stage?-Fastgpt",
     "Description": "Early deployment of AI platforms allows enterprises to establish scalable foundations for future AI initiatives, significantly improving efficiency and innovation potential.\n\nEstablishing centralized ",
     "Keywords": "AI Automation, AI Platform, GPT Integration, FastGPT, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Why-do-enterprises-need-to",
-    "Url": "/faq/Why-do-enterprises-need-to.html"
   },
   "In-which-scenarios-can-AI": {
     "Category": "Use Cases & Best Practices",
@@ -486,8 +390,6 @@ export const faq = {
     "Title": "In which scenarios can AI platforms replace humans?-Fastgpt",
     "Description": "AI platforms typically replace humans in tasks characterized by repetition, high data volume, predictable environments, and requiring speed or 24/7 availability without physical dexterity or deep emot",
     "Keywords": "Vector Search, Smart Assistant, Intelligent Q&A, API Integration, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/In-which-scenarios-can-AI",
-    "Url": "/faq/In-which-scenarios-can-AI.html"
   },
   "Can-AI-intelligent-platforms-improve": {
     "Category": "Use Cases & Best Practices",
@@ -496,8 +398,6 @@ export const faq = {
     "Title": "Can AI intelligent platforms improve financial management efficiency?-Fastgpt",
     "Description": "AI intelligent platforms can significantly enhance financial management efficiency. These systems automate repetitive tasks, enabling quicker and more accurate financial operations.\n\nThese platforms u",
     "Keywords": "AI Chatbot, Intelligent Q&A, Enterprise AI, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-platforms-improve",
-    "Url": "/faq/Can-AI-intelligent-platforms-improve.html"
   },
   "Can-AI-platforms-help-companies": {
     "Category": "Use Cases & Best Practices",
@@ -506,8 +406,6 @@ export const faq = {
     "Title": "Can AI platforms help companies achieve paperless office?-Fastgpt",
     "Description": "Yes, AI platforms can effectively enable companies to achieve a paperless office. They provide tools and capabilities that digitize and automate traditionally paper-heavy workflows.\n\nKey principles in",
     "Keywords": "LLM Development, Vector Search, Smart Assistant, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-help-companies",
-    "Url": "/faq/Can-AI-platforms-help-companies.html"
   },
   "Why-is-the-AI-Agent": {
     "Category": "Use Cases & Best Practices",
@@ -516,8 +414,6 @@ export const faq = {
     "Title": "Why is the AI Agent platform regarded as the next-generation productivity tool?-Fastgpt",
     "Description": "AI Agent platforms represent a next-generation productivity leap by automating complex workflows and executing tasks autonomously with human-like reasoning and action capabilities. They significantly ",
     "Keywords": "AI Workflow, AI Platform, FastGPT, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Why-is-the-AI-Agent",
-    "Url": "/faq/Why-is-the-AI-Agent.html"
   },
   "Are-there-any-industry-restrictions": {
     "Category": "Use Cases & Best Practices",
@@ -526,8 +422,6 @@ export const faq = {
     "Title": "Are there any industry restrictions for enterprises using AI platforms?-Fastgpt",
     "Description": "Enterprises across most industries can adopt AI platforms as core productivity tools. Their feasibility depends primarily on an industry's specific regulations, data characteristics, and operational c",
     "Keywords": "Task Automation AI, Vector Search, Open Source AI, FastGPT, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Are-there-any-industry-restrictions",
-    "Url": "/faq/Are-there-any-industry-restrictions.html"
   },
   "What-department-collaboration-problems-can": {
     "Category": "Use Cases & Best Practices",
@@ -536,8 +430,6 @@ export const faq = {
     "Title": "What department collaboration problems can AI intelligent platforms solve?-Fastgpt",
     "Description": "AI intelligent platforms primarily solve communication barriers, information silos, and workflow friction hindering collaboration between departments such as Sales, Marketing, Operations, R&D, and Cus",
     "Keywords": "Smart Assistant, FastGPT, AI Automation, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/What-department-collaboration-problems-can",
-    "Url": "/faq/What-department-collaboration-problems-can.html"
   },
   "Is-the-role-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -546,8 +438,6 @@ export const faq = {
     "Title": "Is the role of AI Agent significant in digital marketing?-Fastgpt",
     "Description": "AI Agents play a significantly impactful role in transforming digital marketing strategies. Their ability to automate tasks and analyze vast datasets makes them crucial tools for modern marketers.\n\nTh",
     "Keywords": "AI Platform, AI Knowledge Management, AI Chatbot, AI Automation, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Is-the-role-of-AI",
-    "Url": "/faq/Is-the-role-of-AI.html"
   },
   "What-impact-do-AI-platforms": {
     "Category": "Use Cases & Best Practices",
@@ -556,8 +446,6 @@ export const faq = {
     "Title": "What impact do AI platforms have on the industry competitive landscape?-Fastgpt",
     "Description": "AI platforms fundamentally reshape industry competition by enabling unprecedented capabilities and business models.  \n\nThey alter competitive dynamics through data network effects, accelerated innovat",
     "Keywords": "AI Platform, AI Chatbot, LLM Development, AI Workflow, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-impact-do-AI-platforms",
-    "Url": "/faq/What-impact-do-AI-platforms.html"
   },
   "Why-are-AI-Agents-so": {
     "Category": "Use Cases & Best Practices",
@@ -566,8 +454,6 @@ export const faq = {
     "Title": "Why are AI Agents so popular in the e-commerce industry?-Fastgpt",
     "Description": "AI Agents are popular in the e-commerce industry because they significantly enhance operational efficiency, customer experience, and personalization at scale, effectively addressing key industry chall",
     "Keywords": "Vector Search, Smart Assistant, AI Chatbot, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-so",
-    "Url": "/faq/Why-are-AI-Agents-so.html"
   },
   "How-AI-Platforms-Enhance-the": {
     "Category": "Use Cases & Best Practices",
@@ -576,8 +462,6 @@ export const faq = {
     "Title": "How AI Platforms Enhance the Processing Speed of Online Businesses-Fastgpt",
     "Description": "AI platforms significantly accelerate online business operations through machine learning and automation. They enable faster data processing, decision-making, and task execution.  \n\nThese platforms en",
     "Keywords": "AI Platform, GPT Integration, Open Source AI, Enterprise AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Platforms-Enhance-the",
-    "Url": "/faq/How-AI-Platforms-Enhance-the.html"
   },
   "Can-AI-intelligent-platforms-reduce": {
     "Category": "Use Cases & Best Practices",
@@ -586,8 +470,6 @@ export const faq = {
     "Title": "Can AI intelligent platforms reduce training costs?-Fastgpt",
     "Description": "Yes, AI intelligent platforms can significantly reduce corporate training costs. They achieve this through automation, scalability, and personalization.\n\nKey mechanisms include automating content crea",
     "Keywords": "Intelligent Q&A, Smart Assistant, AI Platform, AI Knowledge Management, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-platforms-reduce",
-    "Url": "/faq/Can-AI-intelligent-platforms-reduce.html"
   },
   "What-are-the-risks-for": {
     "Category": "Use Cases & Best Practices",
@@ -596,8 +478,6 @@ export const faq = {
     "Title": "What are the risks for enterprises introducing AI platforms?-Fastgpt",
     "Description": "Enterprise AI platform adoption entails significant risks that demand thorough evaluation. These risks stem from complex technical dependencies, amplified vulnerabilities, and novel governance challen",
     "Keywords": "AI Automation, Document AI, AI Platform, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-risks-for",
-    "Url": "/faq/What-are-the-risks-for.html"
   },
   "What-is-the-maintenance-cost": {
     "Category": "Use Cases & Best Practices",
@@ -606,8 +486,6 @@ export const faq = {
     "Title": "What is the maintenance cost of an AI intelligent assistant platform?-Fastgpt",
     "Description": "The maintenance cost of an AI intelligent assistant platform refers to the ongoing expenses required to operate, update, support, and optimize the system after its initial deployment. These costs ensu",
     "Keywords": "API Integration, FastGPT, Vector Search, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-maintenance-cost",
-    "Url": "/faq/What-is-the-maintenance-cost.html"
   },
   "Why-AI-Agents-Contribute-to": {
     "Category": "Use Cases & Best Practices",
@@ -616,8 +494,6 @@ export const faq = {
     "Title": "Why AI Agents Contribute to Enterprise Innovation-Fastgpt",
     "Description": "AI agents catalyze enterprise innovation by autonomously handling tasks, analyzing vast data volumes, and generating novel insights. They augment human capabilities, enabling the exploration of comple",
     "Keywords": "GPT Integration, AI Platform, Task Automation AI, LLM Development, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agents-Contribute-to",
-    "Url": "/faq/Why-AI-Agents-Contribute-to.html"
   },
   "What-information-silo-problems-can": {
     "Category": "Use Cases & Best Practices",
@@ -626,8 +502,6 @@ export const faq = {
     "Title": "What information silo problems can AI platforms solve?-Fastgpt",
     "Description": "AI platforms can solve information silo problems related to data fragmentation, lack of integration between disparate systems, and restricted access to critical knowledge across departments or teams. ",
     "Keywords": "Open Source AI, Intelligent Q&A, Document AI, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-information-silo-problems-can",
-    "Url": "/faq/What-information-silo-problems-can.html"
   },
   "Can-AI-intelligent-platforms-provide": {
     "Category": "Use Cases & Best Practices",
@@ -636,8 +510,6 @@ export const faq = {
     "Title": "Can AI intelligent platforms provide round-the-clock service?-Fastgpt",
     "Description": "AI intelligent platforms can indeed deliver continuous 24/7 service. Their software-based nature enables uninterrupted, round-the-clock operation without human fatigue constraints.\n\nThis capability fu",
     "Keywords": "FastGPT, AI Knowledge Management, Intelligent Q&A, LLM Development, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-platforms-provide",
-    "Url": "/faq/Can-AI-intelligent-platforms-provide.html"
   },
   "What-is-the-difference-between": {
     "Category": "Enterprise Applications",
@@ -646,8 +518,6 @@ export const faq = {
     "Title": "What is the difference between zero-shot learning and few-shot learning?-Fastgpt",
     "Description": "Zero-shot learning (ZSL) enables models to recognize or classify objects for which no labeled training examples were available during training. In contrast, few-shot learning (FSL) utilizes a very sma",
     "Keywords": "AI Platform, FastGPT, Vector Search, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-difference-between",
-    "Url": "/faq/What-is-the-difference-between.html"
   },
   "Will-employees'-roles-change-after": {
     "Category": "Use Cases & Best Practices",
@@ -656,8 +526,6 @@ export const faq = {
     "Title": "Will employees' roles change after enterprises adopt AI platforms?-Fastgpt",
     "Description": "Employees' roles will inevitably evolve with the adoption of enterprise AI platforms, not necessarily disappear. Their primary focus will shift significantly.\n\nAI automates routine, repetitive tasks, ",
     "Keywords": "AI Chatbot, Enterprise AI, AI Workflow, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-employees'-roles-change-after",
-    "Url": "/faq/Will-employees'-roles-change-after.html"
   },
   "Why-AI-Agents-are-a": {
     "Category": "Use Cases & Best Practices",
@@ -666,8 +534,6 @@ export const faq = {
     "Title": "Why AI Agents are a New Competitive Edge for Enterprises-Fastgpt",
     "Description": "AI agents are emerging as a critical competitive differentiator for enterprises, enabling automation, enhanced decision-making, and personalized customer interactions at unprecedented scales. They shi",
     "Keywords": "Smart Assistant, AI Platform, Open Source AI, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agents-are-a",
-    "Url": "/faq/Why-AI-Agents-are-a.html"
   },
   "Which-startup-companies-are-suitable": {
     "Category": "Use Cases & Best Practices",
@@ -676,8 +542,6 @@ export const faq = {
     "Title": "Which startup companies are suitable for using AI intelligent platforms?-Fastgpt",
     "Description": "Startups focusing on data-intensive operations, rapid scaling, and personalized customer interactions are particularly suitable for AI intelligent platforms. The core value lies in automating complex ",
     "Keywords": "FastGPT, Smart Assistant, AI Chatbot, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Which-startup-companies-are-suitable",
-    "Url": "/faq/Which-startup-companies-are-suitable.html"
   },
   "Can-AI-Agent-help-optimize": {
     "Category": "Use Cases & Best Practices",
@@ -686,8 +550,6 @@ export const faq = {
     "Title": "Can AI Agent help optimize production processes?-Fastgpt",
     "Description": "AI agents can optimize production processes effectively. These intelligent systems automate complex tasks and enhance operational efficiency through data analysis and adaptive decision-making.\n\nKey me",
     "Keywords": "Open Source AI, AI Workflow, Vector Search, LLM Development, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-help-optimize",
-    "Url": "/faq/Can-AI-Agent-help-optimize.html"
   },
   "Can-AI-platforms-replace-manual": {
     "Category": "Use Cases & Best Practices",
@@ -696,8 +558,6 @@ export const faq = {
     "Title": "Can AI platforms replace manual data review?-Fastgpt",
     "Description": "Currently, AI platforms cannot fully replace human manual data review. While highly effective at automating large volumes of routine checks, they complement rather than eliminate the need for human ex",
     "Keywords": "API Integration, Document AI, AI Workflow, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-replace-manual",
-    "Url": "/faq/Can-AI-platforms-replace-manual.html"
   },
   "What-conditions-are-required-for": {
     "Category": "Use Cases & Best Practices",
@@ -706,8 +566,6 @@ export const faq = {
     "Title": "What conditions are required for enterprises to deploy AI intelligent platforms?-Fastgpt",
     "Description": "Enterprises require several fundamental conditions to successfully deploy an AI intelligent platform. This includes having robust infrastructure, sufficient data, necessary expertise, clear goals, and",
     "Keywords": "AI Automation, AI Workflow, LLM Development, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/What-conditions-are-required-for",
-    "Url": "/faq/What-conditions-are-required-for.html"
   },
   "How-AI-Agents-Improve-Customer": {
     "Category": "Use Cases & Best Practices",
@@ -716,8 +574,6 @@ export const faq = {
     "Title": "How AI Agents Improve Customer Interaction Experience-Fastgpt",
     "Description": "AI agents enhance customer interaction experiences by providing instant, personalized responses across various communication channels. They leverage natural language processing and machine learning to",
     "Keywords": "AI Knowledge Management, Smart Assistant, Task Automation AI, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Improve-Customer",
-    "Url": "/faq/How-AI-Agents-Improve-Customer.html"
   },
   "Why-AI-Agents-Are-Better": {
     "Category": "Use Cases & Best Practices",
@@ -726,8 +582,6 @@ export const faq = {
     "Title": "Why AI Agents Are Better Suited for Fast-Growing Enterprises-Fastgpt",
     "Description": "AI agents offer superior scalability and efficiency advantages for enterprises experiencing rapid expansion. These solutions automate processes and adapt quickly to changing operational demands.  \n\nTh",
     "Keywords": "AI Workflow, Task Automation AI, AI Automation, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agents-Are-Better",
-    "Url": "/faq/Why-AI-Agents-Are-Better.html"
   },
   "What-are-the-applications-of": {
     "Category": "Use Cases & Best Practices",
@@ -736,8 +590,6 @@ export const faq = {
     "Title": "What are the applications of AI intelligent platforms in the medical industry?-Fastgpt",
     "Description": "AI intelligent platforms are actively applied in healthcare to enhance diagnostics, treatment, and operational efficiency. They effectively process vast medical data for actionable insights.\n\nThese pl",
     "Keywords": "Smart Assistant, Document AI, LLM Development, Enterprise AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-applications-of",
-    "Url": "/faq/What-are-the-applications-of.html"
   },
   "How-AI-Agents-Support-Multilingual": {
     "Category": "Use Cases & Best Practices",
@@ -746,8 +598,6 @@ export const faq = {
     "Title": "How AI Agents Support Multilingual Customer Service-Fastgpt",
     "Description": "AI agents support multilingual customer service by leveraging natural language processing (NLP) and machine translation (MT) technologies. They enable automated conversations across multiple languages",
     "Keywords": "FastGPT, Document AI, Task Automation AI, Enterprise AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Support-Multilingual",
-    "Url": "/faq/How-AI-Agents-Support-Multilingual.html"
   },
   "How-much-optimization-can-AI": {
     "Category": "Use Cases & Best Practices",
@@ -756,8 +606,6 @@ export const faq = {
     "Title": "How much optimization can AI platforms bring to internal approval processes?-Fastgpt",
     "Description": "AI platforms can substantially optimize internal approval processes, typically achieving time reductions of 50-90% for standard requests and significant efficiency gains.\n\nThese platforms automate rep",
     "Keywords": "Vector Search, GPT Integration, Open Source AI, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-much-optimization-can-AI",
-    "Url": "/faq/How-much-optimization-can-AI.html"
   },
   "Which-positions-can-enterprises-reduce": {
     "Category": "Use Cases & Best Practices",
@@ -766,8 +614,6 @@ export const faq = {
     "Title": "Which positions can enterprises reduce after adopting AI Agents?-Fastgpt",
     "Description": "Enterprises can reduce positions primarily focused on repetitive, routine, or rule-based tasks after adopting AI Agents. Roles involving high volumes of data entry, processing, and initial analysis ar",
     "Keywords": "LLM Development, Intelligent Q&A, GPT Integration, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Which-positions-can-enterprises-reduce",
-    "Url": "/faq/Which-positions-can-enterprises-reduce.html"
   },
   "Can-AI-platforms-reduce-human": {
     "Category": "Use Cases & Best Practices",
@@ -776,8 +622,6 @@ export const faq = {
     "Title": "Can AI platforms reduce human errors in operations?-Fastgpt",
     "Description": "AI platforms can effectively reduce human errors in operational processes. This reduction is achievable through automated execution of tasks and intelligent data analysis.\n\nKey principles include repl",
     "Keywords": "Smart Assistant, API Integration, Document AI, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-reduce-human",
-    "Url": "/faq/Can-AI-platforms-reduce-human.html"
   },
   "Why-AI-Agents-Help-Enhance": {
     "Category": "Use Cases & Best Practices",
@@ -786,8 +630,6 @@ export const faq = {
     "Title": "Why AI Agents Help Enhance Enterprise Competitiveness-Fastgpt",
     "Description": "AI agents leverage artificial intelligence to automate complex tasks and augment human capabilities, significantly boosting enterprise operational efficiency. They serve as digital workers that enhanc",
     "Keywords": "FastGPT, Smart Assistant, AI Knowledge Management, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agents-Help-Enhance",
-    "Url": "/faq/Why-AI-Agents-Help-Enhance.html"
   },
   "Will-AI-intelligent-platforms-affect": {
     "Category": "Use Cases & Best Practices",
@@ -796,8 +638,6 @@ export const faq = {
     "Title": "Will AI intelligent platforms affect enterprises' confidentiality work?-Fastgpt",
     "Description": "AI intelligent platforms can impact enterprise confidentiality both positively and negatively. They introduce new risks but also offer potential for enhancing data protection mechanisms.\n\nThese platfo",
     "Keywords": "AI Chatbot, Intelligent Q&A, AI Workflow, AI Platform, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-AI-intelligent-platforms-affect",
-    "Url": "/faq/Will-AI-intelligent-platforms-affect.html"
   },
   "How-AI-Agents-Help-Enterprises": {
     "Category": "Use Cases & Best Practices",
@@ -806,8 +646,6 @@ export const faq = {
     "Title": "How AI Agents Help Enterprises Develop Pricing Strategies-Fastgpt",
     "Description": "AI agents assist enterprises in developing pricing strategies by leveraging advanced algorithms to analyze vast amounts of market, competitor, and customer data, identifying optimal price points. They",
     "Keywords": "FastGPT, LLM Development, GPT Integration, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Help-Enterprises",
-    "Url": "/faq/How-AI-Agents-Help-Enterprises.html"
   },
   "How-efficient-are-AI-platforms": {
     "Category": "Use Cases & Best Practices",
@@ -816,8 +654,6 @@ export const faq = {
     "Title": "How efficient are AI platforms in content production?-Fastgpt",
     "Description": "AI platforms significantly enhance content production efficiency by automating tasks and accelerating processes at scale.  \n\nTheir efficiency stems from automated content generation, bulk processing c",
     "Keywords": "Vector Search, Enterprise AI, Open Source AI, Intelligent Q&A, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-efficient-are-AI-platforms",
-    "Url": "/faq/How-efficient-are-AI-platforms.html"
   },
   "Is-data-secure-after-enterprises": {
     "Category": "Use Cases & Best Practices",
@@ -826,8 +662,6 @@ export const faq = {
     "Title": "Is data secure after enterprises introduce AI intelligent platforms?-Fastgpt",
     "Description": "Yes, enterprise AI platforms can maintain data security when implemented with robust measures. However, security is not automatic and relies on stringent protocols.\n\nKey principles include end-to-end ",
     "Keywords": "Vector Search, Open Source AI, Task Automation AI, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Is-data-secure-after-enterprises",
-    "Url": "/faq/Is-data-secure-after-enterprises.html"
   },
   "Can-AI-Agents-shorten-customer": {
     "Category": "Use Cases & Best Practices",
@@ -836,8 +670,6 @@ export const faq = {
     "Title": "Can AI Agents shorten customer response time?-Fastgpt",
     "Description": "AI agents can significantly shorten customer response time in many situations. They achieve this through instant automated interactions and prioritization without human delays.\n\nKey capabilities inclu",
     "Keywords": "Open Source AI, Task Automation AI, AI Chatbot, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-shorten-customer",
-    "Url": "/faq/Can-AI-Agents-shorten-customer.html"
   },
   "In-what-aspects-do-AI": {
     "Category": "Use Cases & Best Practices",
@@ -846,8 +678,6 @@ export const faq = {
     "Title": "In what aspects do AI platforms improve after-sales service?-Fastgpt",
     "Description": "AI platforms significantly enhance after-sales service by automating tasks, providing deeper insights, and enabling personalized customer support. They improve efficiency and effectiveness across serv",
     "Keywords": "GPT Integration, AI Automation, LLM Development, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/In-what-aspects-do-AI",
-    "Url": "/faq/In-what-aspects-do-AI.html"
   },
   "Why-are-AI-Agents-called": {
     "Category": "Use Cases & Best Practices",
@@ -856,8 +686,6 @@ export const faq = {
     "Title": "Why are AI Agents called the standard configuration for future enterprises?-Fastgpt",
     "Description": "AI Agents are considered the future enterprise standard due to their ability to autonomously perform complex tasks, enhance decision-making, and drive operational efficiency at scale. They represent a",
     "Keywords": "AI Platform, AI Automation, AI Workflow, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-called",
-    "Url": "/faq/Why-are-AI-Agents-called.html"
   },
   "How-to-use-AI-intelligent": {
     "Category": "Use Cases & Best Practices",
@@ -866,8 +694,6 @@ export const faq = {
     "Title": "How to use AI intelligent platforms in the education and training industry-Fastgpt",
     "Description": "AI intelligent platforms can be effectively leveraged in education and training to enhance learning experiences, personalize instruction, improve administrative efficiency, and provide actionable insi",
     "Keywords": "Document AI, Vector Search, AI Knowledge Management, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-use-AI-intelligent",
-    "Url": "/faq/How-to-use-AI-intelligent.html"
   },
   "How-AI-Agents-Help-Companies": {
     "Category": "Use Cases & Best Practices",
@@ -876,8 +702,6 @@ export const faq = {
     "Title": "How AI Agents Help Companies Reduce Operating Costs-Fastgpt",
     "Description": "AI agents automate repetitive tasks and optimize processes, directly lowering labor expenses. They handle customer service inquiries, data entry, and report generation efficiently. This reduces relian",
     "Keywords": "FastGPT, Vector Search, Task Automation AI, LLM Development, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Help-Companies",
-    "Url": "/faq/How-AI-Agents-Help-Companies.html"
   },
   "What-impact-does-the-AI": {
     "Category": "Use Cases & Best Practices",
@@ -886,8 +710,6 @@ export const faq = {
     "Title": "What impact does the AI platform have on production scheduling?-Fastgpt",
     "Description": "Artificial intelligence significantly enhances production scheduling by optimizing processes in real-time. AI platforms enable data-driven decision-making for more efficient resource allocation and ta",
     "Keywords": "Intelligent Q&A, AI Chatbot, Enterprise AI, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/What-impact-does-the-AI",
-    "Url": "/faq/What-impact-does-the-AI.html"
   },
   "Do-enterprises-need-technical-personnel": {
     "Category": "Use Cases & Best Practices",
@@ -896,8 +718,6 @@ export const faq = {
     "Title": "Do enterprises need technical personnel after using AI intelligent assistants?-Fastgpt",
     "Description": "Yes, enterprises still fundamentally need technical personnel after implementing AI intelligent assistants. AI complements rather than replaces the need for specialized human expertise.\n\nAI assistants",
     "Keywords": "AI Chatbot, LLM Development, Task Automation AI, Open Source AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Do-enterprises-need-technical-personnel",
-    "Url": "/faq/Do-enterprises-need-technical-personnel.html"
   },
   "How-AI-Agents-Improve-Internal": {
     "Category": "Use Cases & Best Practices",
@@ -906,8 +726,6 @@ export const faq = {
     "Title": "How AI Agents Improve Internal Communication Efficiency-Fastgpt",
     "Description": "AI agents automate and optimize internal communication tasks using algorithms to filter noise, route information intelligently, and answer repetitive queries. They enhance efficiency by reducing clutt",
     "Keywords": "Vector Search, AI Workflow, API Integration, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Improve-Internal",
-    "Url": "/faq/How-AI-Agents-Improve-Internal.html"
   },
   "Can-AI-platforms-improve-a": {
     "Category": "Use Cases & Best Practices",
@@ -916,8 +734,6 @@ export const faq = {
     "Title": "Can AI platforms improve a company's inventory management?-Fastgpt",
     "Description": "Yes, AI platforms can significantly improve a company's inventory management. They leverage advanced analytics and machine learning to optimize stock levels, reduce costs, and enhance operational effi",
     "Keywords": "AI Chatbot, Open Source AI, Task Automation AI, LLM Development, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-improve-a",
-    "Url": "/faq/Can-AI-platforms-improve-a.html"
   },
   "Why-is-there-a-high": {
     "Category": "Use Cases & Best Practices",
@@ -926,8 +742,6 @@ export const faq = {
     "Title": "Why is there a high demand for AI Agents in the retail industry?-Fastgpt",
     "Description": "The high demand for AI Agents in retail stems from their ability to automate complex tasks, personalize customer interactions at scale, and extract actionable insights from vast amounts of data, direc",
     "Keywords": "GPT Integration, AI Automation, Document AI, AI Chatbot, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-is-there-a-high",
-    "Url": "/faq/Why-is-there-a-high.html"
   },
   "Can-AI-intelligent-platforms-predict": {
     "Category": "Use Cases & Best Practices",
@@ -936,8 +750,6 @@ export const faq = {
     "Title": "Can AI intelligent platforms predict customer needs?-Fastgpt",
     "Description": "Yes, AI intelligent platforms can effectively predict customer needs. They analyze vast datasets to identify patterns and anticipate future requirements.\n\nThis capability relies on machine learning al",
     "Keywords": "FastGPT, AI Workflow, Enterprise AI, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-platforms-predict",
-    "Url": "/faq/Can-AI-intelligent-platforms-predict.html"
   },
   "What-are-the-application-scenarios": {
     "Category": "Enterprise Applications",
@@ -946,8 +758,6 @@ export const faq = {
     "Title": "What are the application scenarios of few-shot learning?-Fastgpt",
     "Description": "Few-shot learning enables models to learn new concepts or perform tasks effectively with only a small number of labeled examples. Its core capability is acquiring knowledge efficiently from minimal da",
     "Keywords": "LLM Development, Smart Assistant, Vector Search, AI Automation, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-application-scenarios",
-    "Url": "/faq/What-are-the-application-scenarios.html"
   },
   "What-are-the-main-difficulties": {
     "Category": "Use Cases & Best Practices",
@@ -956,8 +766,6 @@ export const faq = {
     "Title": "What are the main difficulties in enterprise deployment of AI platforms?-Fastgpt",
     "Description": "Enterprise deployment of AI platforms faces significant hurdles related to technical complexity, data management, talent shortages, governance, and organizational adaptation. Successfully scaling AI r",
     "Keywords": "Open Source AI, Smart Assistant, LLM Development, AI Chatbot, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-main-difficulties",
-    "Url": "/faq/What-are-the-main-difficulties.html"
   },
   "How-do-AI-platforms-provide": {
     "Category": "Use Cases & Best Practices",
@@ -966,8 +774,6 @@ export const faq = {
     "Title": "How do AI platforms provide real-time data analysis for companies?-Fastgpt",
     "Description": "AI platforms provide real-time data analysis by processing continuous data streams using advanced computing, machine learning, and optimized data pipelines. This enables instant insights from live ope",
     "Keywords": "Open Source AI, AI Chatbot, Document AI, Smart Assistant, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-platforms-provide",
-    "Url": "/faq/How-do-AI-platforms-provide.html"
   },
   "Can-AI-intelligent-assistants-reduce": {
     "Category": "Use Cases & Best Practices",
@@ -976,8 +782,6 @@ export const faq = {
     "Title": "Can AI intelligent assistants reduce customer churn rate?-Fastgpt",
     "Description": "AI intelligent assistants can effectively reduce customer churn rates. Leveraging automation and predictive analytics, they proactively identify and retain at-risk customers.\n\nAI assistants continuous",
     "Keywords": "AI Automation, LLM Development, Document AI, AI Platform, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-assistants-reduce",
-    "Url": "/faq/Can-AI-intelligent-assistants-reduce.html"
   },
   "Can-AI-Agent-be-integrated": {
     "Category": "Use Cases & Best Practices",
@@ -986,8 +790,6 @@ export const faq = {
     "Title": "Can AI Agent be integrated with existing CRM systems?-Fastgpt",
     "Description": "Yes, AI Agents can be seamlessly integrated with existing CRM systems. This integration is not only feasible but increasingly common, leveraging modern APIs and data connectivity standards.\n\nSuccessfu",
     "Keywords": "Open Source AI, AI Platform, LLM Development, GPT Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-be-integrated",
-    "Url": "/faq/Can-AI-Agent-be-integrated.html"
   },
   "Why-can-AI-platforms-give": {
     "Category": "Use Cases & Best Practices",
@@ -996,8 +798,6 @@ export const faq = {
     "Title": "Why can AI platforms give enterprises more competitive advantages?-Fastgpt",
     "Description": "AI platforms provide enterprises with competitive advantages by delivering enhanced decision-making capabilities, significant operational efficiencies, and superior customer experiences through data-d",
     "Keywords": "Intelligent Q&A, LLM Development, Enterprise AI, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-can-AI-platforms-give",
-    "Url": "/faq/Why-can-AI-platforms-give.html"
   },
   "What-size-of-enterprises-is": {
     "Category": "Use Cases & Best Practices",
@@ -1006,8 +806,6 @@ export const faq = {
     "Title": "What size of enterprises is the AI intelligent platform suitable for?-Fastgpt",
     "Description": "AI intelligent platforms are designed with inherent scalability and flexibility, making them fundamentally suitable for enterprises of all sizes. From startups and small businesses to large multinatio",
     "Keywords": "FastGPT, LLM Development, AI Chatbot, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-size-of-enterprises-is",
-    "Url": "/faq/What-size-of-enterprises-is.html"
   },
   "How-AI-Agents-Simplify-Enterprise": {
     "Category": "Use Cases & Best Practices",
@@ -1016,8 +814,6 @@ export const faq = {
     "Title": "How AI Agents Simplify Enterprise Decision-Making Processes-Fastgpt",
     "Description": "AI agents streamline enterprise decision-making by automating data analysis and providing actionable insights, replacing manual efforts with intelligent systems.  \n\nThese systems continuously process ",
     "Keywords": "Document AI, Intelligent Q&A, AI Chatbot, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Simplify-Enterprise",
-    "Url": "/faq/How-AI-Agents-Simplify-Enterprise.html"
   },
   "Will-employee-satisfaction-increase-after": {
     "Category": "Use Cases & Best Practices",
@@ -1026,8 +822,6 @@ export const faq = {
     "Title": "Will employee satisfaction increase after enterprises use AI Agents?-Fastgpt",
     "Description": "Employee satisfaction can increase after enterprises implement AI Agents, but this outcome is not guaranteed and depends significantly on how they are deployed. Properly utilized AI can enhance satisf",
     "Keywords": "FastGPT, Vector Search, LLM Development, Intelligent Q&A, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-employee-satisfaction-increase-after",
-    "Url": "/faq/Will-employee-satisfaction-increase-after.html"
   },
   "Does-the-AI-intelligent-platform": {
     "Category": "Use Cases & Best Practices",
@@ -1036,8 +830,6 @@ export const faq = {
     "Title": "Does the AI intelligent platform support custom workflows?-Fastgpt",
     "Description": "AI intelligent platforms typically support custom workflow creation. This functionality allows businesses to tailor automated processes to their specific operational needs.\n\nKey capabilities usually i",
     "Keywords": "AI Knowledge Management, AI Automation, Open Source AI, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Does-the-AI-intelligent-platform",
-    "Url": "/faq/Does-the-AI-intelligent-platform.html"
   },
   "Why-are-AI-Agents-more": {
     "Category": "Use Cases & Best Practices",
@@ -1046,8 +838,6 @@ export const faq = {
     "Title": "Why are AI Agents more suitable for data-intensive industries-Fastgpt",
     "Description": "AI Agents thrive in data-intensive industries due to their unique capability to process, analyze, and learn from massive datasets far beyond human scale and speed. They automate complex data-centric t",
     "Keywords": "Intelligent Q&A, AI Workflow, AI Chatbot, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-more",
-    "Url": "/faq/Why-are-AI-Agents-more.html"
   },
   "How-AI-Platforms-Improve-Supply": {
     "Category": "Use Cases & Best Practices",
@@ -1056,8 +846,6 @@ export const faq = {
     "Title": "How AI Platforms Improve Supply Chain Transparency-Fastgpt",
     "Description": "AI platforms enhance supply chain transparency by aggregating, analyzing, and visualizing complex data from diverse sources across the supply chain network. They enable real-time visibility into mater",
     "Keywords": "AI Automation, LLM Development, Enterprise AI, AI Knowledge Management, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Platforms-Improve-Supply",
-    "Url": "/faq/How-AI-Platforms-Improve-Supply.html"
   },
   "Can-AI-intelligent-assistants-improve": {
     "Category": "Use Cases & Best Practices",
@@ -1066,8 +854,6 @@ export const faq = {
     "Title": "Can AI intelligent assistants improve meeting efficiency?-Fastgpt",
     "Description": "AI intelligent assistants can significantly improve meeting efficiency. These tools are designed to automate and optimize various aspects of the meeting process.\n\nThese assistants primarily function b",
     "Keywords": "AI Chatbot, Open Source AI, LLM Development, AI Automation, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-assistants-improve",
-    "Url": "/faq/Can-AI-intelligent-assistants-improve.html"
   },
   "How-AI-Agents-Improve-Company": {
     "Category": "Use Cases & Best Practices",
@@ -1076,8 +862,6 @@ export const faq = {
     "Title": "How AI Agents Improve Company Information Processing Speed-Fastgpt",
     "Description": "AI agents enhance corporate information processing by automatically extracting, analyzing, and interpreting vast volumes of data at high speed, far surpassing human capabilities. They significantly ac",
     "Keywords": "AI Workflow, AI Automation, Document AI, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Improve-Company",
-    "Url": "/faq/How-AI-Agents-Improve-Company.html"
   },
   "Can-AI-platforms-help-businesses": {
     "Category": "Use Cases & Best Practices",
@@ -1086,8 +870,6 @@ export const faq = {
     "Title": "Can AI platforms help businesses identify potential business opportunities?-Fastgpt",
     "Description": "Yes, AI platforms are capable of helping businesses identify potential business opportunities. They achieve this primarily by analyzing vast amounts of data to detect patterns, trends, and emerging ma",
     "Keywords": "AI Automation, Smart Assistant, LLM Development, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-help-businesses",
-    "Url": "/faq/Can-AI-platforms-help-businesses.html"
   },
   "Does-the-introduction-of-an": {
     "Category": "Use Cases & Best Practices",
@@ -1096,8 +878,6 @@ export const faq = {
     "Title": "Does the introduction of an AI intelligent platform by enterprises help their brand image?-Fastgpt",
     "Description": "Yes, the introduction of an AI intelligent platform can enhance a company's brand image when implemented effectively and responsibly. It signals technological leadership and customer-centric innovatio",
     "Keywords": "Intelligent Q&A, AI Platform, FastGPT, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Does-the-introduction-of-an",
-    "Url": "/faq/Does-the-introduction-of-an.html"
   },
   "How-can-AI-platforms-reduce": {
     "Category": "Use Cases & Best Practices",
@@ -1106,8 +886,6 @@ export const faq = {
     "Title": "How can AI platforms reduce enterprise energy consumption and waste-Fastgpt",
     "Description": "AI platforms optimize enterprise energy and waste by analyzing vast operational data to identify inefficiencies and recommend specific improvements. They enable data-driven resource management leading",
     "Keywords": "AI Workflow, AI Automation, AI Chatbot, Document AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-platforms-reduce",
-    "Url": "/faq/How-can-AI-platforms-reduce.html"
   },
   "Why-AI-Agent-is-an": {
     "Category": "Use Cases & Best Practices",
@@ -1116,8 +894,6 @@ export const faq = {
     "Title": "Why AI Agent is an important link in digital upgrading-Fastgpt",
     "Description": "AI Agents serve as crucial catalysts in digital upgrading by acting as intelligent intermediaries that automate processes, analyze data, and drive smarter decision-making. They fundamentally enhance t",
     "Keywords": "FastGPT, AI Platform, Document AI, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agent-is-an",
-    "Url": "/faq/Why-AI-Agent-is-an.html"
   },
   "How-is-the-AI-intelligent": {
     "Category": "Use Cases & Best Practices",
@@ -1126,8 +902,6 @@ export const faq = {
     "Title": "How is the AI intelligent platform applied in smart city construction?-Fastgpt",
     "Description": "The AI intelligent platform integrates artificial intelligence into urban infrastructure systems, optimizing city management and services through data analysis and automated decision-making.  \n\nIt app",
     "Keywords": "Vector Search, AI Platform, API Integration, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-is-the-AI-intelligent",
-    "Url": "/faq/How-is-the-AI-intelligent.html"
   },
   "Can-AI-platforms-assist-with": {
     "Category": "Use Cases & Best Practices",
@@ -1136,8 +910,6 @@ export const faq = {
     "Title": "Can AI platforms assist with risk management?-Fastgpt",
     "Description": "AI platforms can actively assist organizations with risk management. They offer powerful tools to detect, analyze, and mitigate various types of risk using advanced algorithms.\n\nThese platforms excel ",
     "Keywords": "Open Source AI, Enterprise AI, Task Automation AI, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-assist-with",
-    "Url": "/faq/Can-AI-platforms-assist-with.html"
   },
   "Will-the-adoption-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1146,8 +918,6 @@ export const faq = {
     "Title": "Will the adoption of AI intelligent assistants by enterprises affect the human resource structure?-Fastgpt",
     "Description": "Yes, the adoption of AI intelligent assistants significantly impacts enterprise human resource structures. It will lead to shifts in staffing needs and roles within organizations.\n\nAI primarily automa",
     "Keywords": "AI Workflow, AI Knowledge Management, FastGPT, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Will-the-adoption-of-AI",
-    "Url": "/faq/Will-the-adoption-of-AI.html"
   },
   "How-AI-Agents-Optimize-After-Sales": {
     "Category": "Use Cases & Best Practices",
@@ -1156,8 +926,6 @@ export const faq = {
     "Title": "How AI Agents Optimize After-Sales Support Processes？-Fastgpt",
     "Description": "AI agents optimize after-sales support by automating tasks and enhancing customer interactions using technologies like Natural Language Processing (NLP) and Machine Learning (ML). This automation stre",
     "Keywords": "API Integration, AI Workflow, Enterprise AI, Document AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-After-Sales",
-    "Url": "/faq/How-AI-Agents-Optimize-After-Sales.html"
   },
   "Do-AI-platforms-have-high": {
     "Category": "Use Cases & Best Practices",
@@ -1166,8 +934,6 @@ export const faq = {
     "Title": "Do AI platforms have high requirements for data storage?-Fastgpt",
     "Description": "AI platforms often have substantial data storage requirements due to the large datasets needed for training and running complex models. The volume, velocity, and variety of data essential for effectiv",
     "Keywords": "Intelligent Q&A, Smart Assistant, API Integration, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Do-AI-platforms-have-high",
-    "Url": "/faq/Do-AI-platforms-have-high.html"
   },
   "Why-are-AI-Agents-suitable": {
     "Category": "Use Cases & Best Practices",
@@ -1176,8 +942,6 @@ export const faq = {
     "Title": "Why are AI Agents suitable for industries requiring rapid response?-Fastgpt",
     "Description": "AI Agents are highly suitable for industries demanding rapid response due to their inherent capacity for instantaneous data processing and autonomous action. They can react to events or requests in ne",
     "Keywords": "AI Knowledge Management, Enterprise AI, API Integration, Open Source AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-suitable",
-    "Url": "/faq/Why-are-AI-Agents-suitable.html"
   },
   "How-AI-Intelligent-Platforms-Reduce": {
     "Category": "Use Cases & Best Practices",
@@ -1186,8 +950,6 @@ export const faq = {
     "Title": "How AI Intelligent Platforms Reduce Repetitive Approval Work？-Fastgpt",
     "Description": "AI intelligent platforms automate repetitive approval tasks by deploying rule-based workflows and machine learning algorithms. This approach transforms manual, sequential review processes into efficie",
     "Keywords": "Document AI, Enterprise AI, AI Platform, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Platforms-Reduce",
-    "Url": "/faq/How-AI-Intelligent-Platforms-Reduce.html"
   },
   "Can-AI-Agents-achieve-intelligent": {
     "Category": "Use Cases & Best Practices",
@@ -1196,8 +958,6 @@ export const faq = {
     "Title": "Can AI Agents achieve intelligent report generation?-Fastgpt",
     "Description": "Yes, AI agents can achieve intelligent report generation. This process leverages artificial intelligence to automate the creation of insightful, data-driven documents.\n\nIntelligent report generation r",
     "Keywords": "AI Automation, Document AI, FastGPT, AI Workflow, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-achieve-intelligent",
-    "Url": "/faq/Can-AI-Agents-achieve-intelligent.html"
   },
   "How-much-will-an-enterprise's": {
     "Category": "Use Cases & Best Practices",
@@ -1206,8 +966,6 @@ export const faq = {
     "Title": "How much will an enterprise's competitiveness improve after using an AI platform?-Fastgpt",
     "Description": "The extent of competitiveness improvement from using an AI platform varies significantly between enterprises. Improvements are achievable but depend heavily on specific factors.\n\nKey determinants incl",
     "Keywords": "AI Platform, Document AI, FastGPT, Task Automation AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-much-will-an-enterprise's",
-    "Url": "/faq/How-much-will-an-enterprise's.html"
   },
   "What-level-of-protection-do": {
     "Category": "Use Cases & Best Practices",
@@ -1216,8 +974,6 @@ export const faq = {
     "Title": "What level of protection do AI platforms provide for customer privacy?-Fastgpt",
     "Description": "AI platforms typically implement basic to advanced privacy protections depending on the specific service and provider. These levels vary widely, ranging from minimal security to comprehensive data han",
     "Keywords": "Task Automation AI, AI Workflow, GPT Integration, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-level-of-protection-do",
-    "Url": "/faq/What-level-of-protection-do.html"
   },
   "How-AI-Intelligent-Assistants-Support": {
     "Category": "Use Cases & Best Practices",
@@ -1226,8 +982,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Support Remote Team Collaboration-Fastgpt",
     "Description": "AI intelligent assistants enhance remote team collaboration by providing automated support, streamlining communication, and facilitating task management. These digital tools act as force multipliers f",
     "Keywords": "Vector Search, GPT Integration, AI Automation, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Support",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Support.html"
   },
   "How-AI-Agents-Enhance-a": {
     "Category": "Use Cases & Best Practices",
@@ -1236,8 +990,6 @@ export const faq = {
     "Title": "How AI Agents Enhance a Company's Data Mining Capabilities-Fastgpt",
     "Description": "AI agents significantly boost corporate data mining capabilities by automating complex analysis tasks, discovering subtle patterns at scale, and providing deeper, actionable insights faster than tradi",
     "Keywords": "Intelligent Q&A, Open Source AI, AI Platform, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Enhance-a",
-    "Url": "/faq/How-AI-Agents-Enhance-a.html"
   },
   "What-fixed-costs-can-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1246,8 +998,6 @@ export const faq = {
     "Title": "What fixed costs can AI platforms help companies reduce?-Fastgpt",
     "Description": "AI platforms help businesses reduce several fixed costs through automation and optimization. These include expenses typically independent of production volume, such as administrative, facility, and te",
     "Keywords": "AI Workflow, Enterprise AI, API Integration, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-fixed-costs-can-AI",
-    "Url": "/faq/What-fixed-costs-can-AI.html"
   },
   "Why-are-AI-Agents-gaining": {
     "Category": "Use Cases & Best Practices",
@@ -1256,8 +1006,6 @@ export const faq = {
     "Title": "Why are AI Agents gaining increasing attention from startups?-Fastgpt",
     "Description": "AI Agents are gaining significant attention from startups due to their potential to deliver scalable automation, personalized user interactions, and new business models with relatively lower initial i",
     "Keywords": "Smart Assistant, Open Source AI, Vector Search, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-gaining",
-    "Url": "/faq/Why-are-AI-Agents-gaining.html"
   },
   "The-Application-Effect-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1266,8 +1014,6 @@ export const faq = {
     "Title": "The Application Effect of AI Intelligent Platforms in Cross-border E-commerce-Fastgpt",
     "Description": "AI intelligent platforms enhance cross-border e-commerce operations by automating tasks and personalizing experiences, significantly boosting efficiency and customer satisfaction. They leverage techno",
     "Keywords": "AI Workflow, AI Automation, Enterprise AI, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/The-Application-Effect-of-AI",
-    "Url": "/faq/The-Application-Effect-of-AI.html"
   },
   "How-AI-Agents-Enable-Enterprises": {
     "Category": "Use Cases & Best Practices",
@@ -1276,8 +1022,6 @@ export const faq = {
     "Title": "How AI Agents Enable Enterprises to Adapt Faster to Market Changes-Fastgpt",
     "Description": "AI agents enable enterprises to adapt faster to market changes by continuously monitoring internal and external data sources, analyzing trends in real-time, predicting shifts, and automating responses",
     "Keywords": "Task Automation AI, GPT Integration, AI Platform, Enterprise AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Enable-Enterprises",
-    "Url": "/faq/How-AI-Agents-Enable-Enterprises.html"
   },
   "Can-AI-platforms-increase-the": {
     "Category": "Use Cases & Best Practices",
@@ -1286,8 +1030,6 @@ export const faq = {
     "Title": "Can AI platforms increase the success rate of project management?-Fastgpt",
     "Description": "AI platforms significantly enhance project management success rates by automating repetitive tasks, predicting risks, and optimizing resource allocation. They provide real-time insights for informed d",
     "Keywords": "LLM Development, Task Automation AI, AI Workflow, Open Source AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-increase-the",
-    "Url": "/faq/Can-AI-platforms-increase-the.html"
   },
   "Is-the-return-on-investment": {
     "Category": "Use Cases & Best Practices",
@@ -1296,8 +1038,6 @@ export const faq = {
     "Title": "Is the return on investment of AI intelligent assistants for enterprises high?-Fastgpt",
     "Description": "The return on investment (ROI) for enterprise AI intelligent assistants is generally high, driven by significant cost savings and enhanced operational efficiency. Successful deployments typically yiel",
     "Keywords": "Open Source AI, AI Workflow, Intelligent Q&A, Document AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Is-the-return-on-investment",
-    "Url": "/faq/Is-the-return-on-investment.html"
   },
   "How-AI-Agents-Improve-Employee": {
     "Category": "Use Cases & Best Practices",
@@ -1306,8 +1046,6 @@ export const faq = {
     "Title": "How AI Agents Improve Employee Performance Evaluation-Fastgpt",
     "Description": "AI agents enhance employee performance evaluations by automating data collection and analysis, providing objective insights, and enabling continuous feedback. This makes the process more efficient, ac",
     "Keywords": "LLM Development, Vector Search, FastGPT, Enterprise AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Improve-Employee",
-    "Url": "/faq/How-AI-Agents-Improve-Employee.html"
   },
   "What-is-the-impact-of": {
     "Category": "Use Cases & Best Practices",
@@ -1316,8 +1054,6 @@ export const faq = {
     "Title": "What is the impact of AI platforms on corporate culture?-Fastgpt",
     "Description": "AI platforms reshape corporate culture by fundamentally altering workplace dynamics, communications, and decision-making processes, enabling data-driven approaches while posing challenges like workfor",
     "Keywords": "Vector Search, AI Knowledge Management, AI Workflow, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-impact-of",
-    "Url": "/faq/What-is-the-impact-of.html"
   },
   "What-role-can-AI-intelligent": {
     "Category": "Use Cases & Best Practices",
@@ -1326,8 +1062,6 @@ export const faq = {
     "Title": "What role can AI intelligent platforms play in logistics and distribution?-Fastgpt",
     "Description": "AI intelligent platforms significantly enhance logistics and distribution efficiency through automation, prediction, and optimization. They transform traditional operations into smarter, data-driven p",
     "Keywords": "Intelligent Q&A, API Integration, AI Automation, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-role-can-AI-intelligent",
-    "Url": "/faq/What-role-can-AI-intelligent.html"
   },
   "How-can-AI-Agents-assist": {
     "Category": "Use Cases & Best Practices",
@@ -1336,8 +1070,6 @@ export const faq = {
     "Title": "How can AI Agents assist companies in formulating strategic plans-Fastgpt",
     "Description": "AI Agents assist companies in formulating strategic plans by analyzing complex datasets, identifying patterns, and generating insights to support informed decision-making. They enhance the process thr",
     "Keywords": "Smart Assistant, LLM Development, GPT Integration, API Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-assist",
-    "Url": "/faq/How-can-AI-Agents-assist.html"
   },
   "Can-AI-platforms-solve-the": {
     "Category": "Use Cases & Best Practices",
@@ -1346,8 +1078,6 @@ export const faq = {
     "Title": "Can AI platforms solve the problem of backlogged after-sales complaints?-Fastgpt",
     "Description": "AI platforms can partially address and reduce backlogged after-sales complaints, though they typically serve as augmentative tools rather than complete standalone solutions. Their core value lies in a",
     "Keywords": "FastGPT, Smart Assistant, GPT Integration, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-solve-the",
-    "Url": "/faq/Can-AI-platforms-solve-the.html"
   },
   "Does-the-use-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1356,8 +1086,6 @@ export const faq = {
     "Title": "Does the use of AI intelligent assistants by enterprises help with customer loyalty?-Fastgpt",
     "Description": "Yes, using AI intelligent assistants can significantly help businesses improve customer loyalty. This technology provides consistent, efficient, and personalized customer service, leading to stronger ",
     "Keywords": "Open Source AI, AI Automation, FastGPT, GPT Integration, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Does-the-use-of-AI",
-    "Url": "/faq/Does-the-use-of-AI.html"
   },
   "How-AI-Agents-Optimize-Internal": {
     "Category": "Use Cases & Best Practices",
@@ -1366,8 +1094,6 @@ export const faq = {
     "Title": "How AI Agents Optimize Internal Knowledge Management-Fastgpt",
     "Description": "AI agents enhance internal knowledge management by automating information handling and improving access efficiency. They serve as intelligent assistants, optimizing both storage and retrieval processe",
     "Keywords": "Document AI, AI Platform, AI Chatbot, AI Automation, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-Internal",
-    "Url": "/faq/How-AI-Agents-Optimize-Internal.html"
   },
   "Why-are-AI-Agents-developing": {
     "Category": "Use Cases & Best Practices",
@@ -1376,8 +1102,6 @@ export const faq = {
     "Title": "Why are AI Agents developing rapidly in the fintech field?-Fastgpt",
     "Description": "The rapid development of AI Agents in fintech stems from their unique ability to handle the sector's complex data, automate intricate tasks, and enhance decision-making capabilities. Fintech's data-ri",
     "Keywords": "Intelligent Q&A, AI Knowledge Management, AI Platform, API Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-developing",
-    "Url": "/faq/Why-are-AI-Agents-developing.html"
   },
   "How-AI-intelligent-platforms-enhance": {
     "Category": "Use Cases & Best Practices",
@@ -1386,8 +1110,6 @@ export const faq = {
     "Title": "How AI intelligent platforms enhance the effectiveness of corporate training-Fastgpt",
     "Description": "AI intelligent platforms enhance corporate training effectiveness by leveraging technologies like machine learning and natural language processing to deliver personalized, adaptive, and scalable learn",
     "Keywords": "AI Platform, GPT Integration, AI Chatbot, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-platforms-enhance",
-    "Url": "/faq/How-AI-intelligent-platforms-enhance.html"
   },
   "Can-the-introduction-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1396,8 +1118,6 @@ export const faq = {
     "Title": "Can the introduction of AI intelligent assistants by enterprises reduce the need for night shifts?-Fastgpt",
     "Description": "The introduction of AI intelligent assistants can significantly reduce, though not fully eliminate, the need for human night shifts in many enterprise scenarios. AI operates 24/7 without fatigue, hand",
     "Keywords": "AI Workflow, AI Automation, AI Platform, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-the-introduction-of-AI",
-    "Url": "/faq/Can-the-introduction-of-AI.html"
   },
   "How-AI-Intelligent-Platforms-Improve": {
     "Category": "Use Cases & Best Practices",
@@ -1406,8 +1126,6 @@ export const faq = {
     "Title": "How AI Intelligent Platforms Improve Customer Satisfaction Surveys-Fastgpt",
     "Description": "AI intelligent platforms enhance customer satisfaction surveys by automating feedback analysis, uncovering deep insights, and enabling proactive responses. They make surveys significantly more efficie",
     "Keywords": "Task Automation AI, Vector Search, FastGPT, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Platforms-Improve",
-    "Url": "/faq/How-AI-Intelligent-Platforms-Improve.html"
   },
   "How-AI-Agents-Optimize-Enterprise": {
     "Category": "Use Cases & Best Practices",
@@ -1416,8 +1134,6 @@ export const faq = {
     "Title": "How AI Agents Optimize Enterprise Procurement Processes-Fastgpt",
     "Description": "AI agents optimize procurement by automating workflows, analyzing data, and providing actionable insights. They enhance efficiency and cost savings through intelligent automation.\n\nSuccessful implemen",
     "Keywords": "GPT Integration, AI Workflow, AI Chatbot, Intelligent Q&A, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-Enterprise",
-    "Url": "/faq/How-AI-Agents-Optimize-Enterprise.html"
   },
   "Can-AI-platforms-improve-after-sales": {
     "Category": "Use Cases & Best Practices",
@@ -1426,8 +1142,6 @@ export const faq = {
     "Title": "Can AI platforms improve after-sales maintenance efficiency?-Fastgpt",
     "Description": "AI platforms can significantly improve after-sales maintenance efficiency. They achieve this by automating routine tasks, enabling predictive maintenance, and optimizing resource allocation.\n\nKey impr",
     "Keywords": "Document AI, API Integration, Enterprise AI, AI Platform, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-improve-after-sales",
-    "Url": "/faq/Can-AI-platforms-improve-after-sales.html"
   },
   "Do-enterprises-need-continuous-maintenance": {
     "Category": "Use Cases & Best Practices",
@@ -1436,8 +1150,6 @@ export const faq = {
     "Title": "Do enterprises need continuous maintenance after implementing AI intelligent assistants?-Fastgpt",
     "Description": "Yes, enterprises absolutely require continuous maintenance after implementing an AI intelligent assistant. Initial deployment is not the endpoint; ongoing upkeep is crucial for sustained performance a",
     "Keywords": "Smart Assistant, Enterprise AI, GPT Integration, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Do-enterprises-need-continuous-maintenance",
-    "Url": "/faq/Do-enterprises-need-continuous-maintenance.html"
   },
   "How-AI-Agents-Enhance-Internal": {
     "Category": "Use Cases & Best Practices",
@@ -1446,8 +1158,6 @@ export const faq = {
     "Title": "How AI Agents Enhance Internal Risk Control-Fastgpt",
     "Description": "AI agents enhance internal risk control by autonomously monitoring processes, detecting anomalies, and identifying potential risks in real-time. They automate data analysis to uncover subtle patterns ",
     "Keywords": "Intelligent Q&A, FastGPT, Task Automation AI, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Enhance-Internal",
-    "Url": "/faq/How-AI-Agents-Enhance-Internal.html"
   },
   "Can-enterprises-shorten-project-cycles": {
     "Category": "Use Cases & Best Practices",
@@ -1456,8 +1166,6 @@ export const faq = {
     "Title": "Can enterprises shorten project cycles by using AI intelligent assistants?-Fastgpt",
     "Description": "Enterprises can significantly shorten project cycles by deploying AI intelligent assistants. These tools automate tasks and streamline workflows to accelerate timelines.\n\nKey principles include automa",
     "Keywords": "FastGPT, AI Chatbot, Smart Assistant, Task Automation AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-enterprises-shorten-project-cycles",
-    "Url": "/faq/Can-enterprises-shorten-project-cycles.html"
   },
   "How-AI-Agents-Optimize-Customer": {
     "Category": "Use Cases & Best Practices",
@@ -1466,8 +1174,6 @@ export const faq = {
     "Title": "How AI Agents Optimize Customer Lifecycle Management-Fastgpt",
     "Description": "AI agents optimize Customer Lifecycle Management (CLM) by automating interactions and leveraging data to personalize experiences throughout the customer journey. They enhance efficiency and effectiven",
     "Keywords": "Document AI, Enterprise AI, AI Knowledge Management, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-Customer",
-    "Url": "/faq/How-AI-Agents-Optimize-Customer.html"
   },
   "Why-AI-Agents-are-suitable": {
     "Category": "Use Cases & Best Practices",
@@ -1476,8 +1182,6 @@ export const faq = {
     "Title": "Why AI Agents are suitable for enterprises needing rapid innovation-Fastgpt",
     "Description": "AI Agents enable rapid enterprise innovation by automating routine tasks and accelerating development cycles. They allow businesses to test ideas and iterate solutions at unprecedented speeds.\n\nThese ",
     "Keywords": "Intelligent Q&A, Task Automation AI, AI Platform, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agents-are-suitable",
-    "Url": "/faq/Why-AI-Agents-are-suitable.html"
   },
   "How-does-the-AI-intelligent": {
     "Category": "Development Challenges",
@@ -1486,8 +1190,6 @@ export const faq = {
     "Title": "How does the AI intelligent assistant follow up on lease expiration?-Fastgpt",
     "Description": "AI intelligent assistants automate lease expiration follow-up tasks through scheduled notifications and personalized tenant communication. They proactively manage renewal processes to minimize vacanci",
     "Keywords": "AI Chatbot, Task Automation AI, API Integration, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-does-the-AI-intelligent",
-    "Url": "/faq/How-does-the-AI-intelligent.html"
   },
   "How-much-can-AI-platforms": {
     "Category": "Use Cases & Best Practices",
@@ -1496,8 +1198,6 @@ export const faq = {
     "Title": "How much can AI platforms help improve a company's profit margin?-Fastgpt",
     "Description": "AI platforms can significantly enhance a company's profit margin by optimizing operations, reducing costs, and driving revenue growth. Potential improvements vary widely but are often substantial.\n\nIm",
     "Keywords": "Document AI, GPT Integration, AI Workflow, AI Platform, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-much-can-AI-platforms",
-    "Url": "/faq/How-much-can-AI-platforms.html"
   },
   "How-to-measure-the-effectiveness": {
     "Category": "Use Cases & Best Practices",
@@ -1506,8 +1206,6 @@ export const faq = {
     "Title": "How to measure the effectiveness after enterprises introduce AI intelligent assistants-Fastgpt",
     "Description": "Measuring AI assistant effectiveness involves tracking key performance indicators before and after implementation. It assesses impact across operational efficiency, cost reduction, and customer satisf",
     "Keywords": "Enterprise AI, FastGPT, API Integration, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-measure-the-effectiveness",
-    "Url": "/faq/How-to-measure-the-effectiveness.html"
   },
   "How-AI-Agents-Promote-Internal": {
     "Category": "Use Cases & Best Practices",
@@ -1516,8 +1214,6 @@ export const faq = {
     "Title": "How AI Agents Promote Internal Information Sharing in Enterprises-Fastgpt",
     "Description": "AI agents significantly enhance internal information sharing by automating knowledge retrieval, facilitating intelligent connections, and enabling conversational access to enterprise data. They bridge",
     "Keywords": "API Integration, AI Platform, Smart Assistant, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Promote-Internal",
-    "Url": "/faq/How-AI-Agents-Promote-Internal.html"
   },
   "What-is-the-application-prospect": {
     "Category": "Use Cases & Best Practices",
@@ -1526,8 +1222,6 @@ export const faq = {
     "Title": "What is the application prospect of AI platforms in intelligent manufacturing-Fastgpt",
     "Description": "AI platforms in intelligent manufacturing offer significant potential for optimizing production processes, enhancing quality control, and enabling predictive maintenance. Their integration holds consi",
     "Keywords": "AI Workflow, AI Platform, LLM Development, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-application-prospect",
-    "Url": "/faq/What-is-the-application-prospect.html"
   },
   "Why-AI-Agent-is-a": {
     "Category": "Use Cases & Best Practices",
@@ -1536,8 +1230,6 @@ export const faq = {
     "Title": "Why AI Agent is a Key Step in Enterprise Digital Transformation-Fastgpt",
     "Description": "AI Agents represent a fundamental shift towards intelligent automation beyond traditional RPA, making them a core enabler of sophisticated enterprise digital transformation. They offer the capability ",
     "Keywords": "Task Automation AI, AI Workflow, Enterprise AI, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Why-AI-Agent-is-a",
-    "Url": "/faq/Why-AI-Agent-is-a.html"
   },
   "How-AI-intelligent-platforms-optimize": {
     "Category": "Use Cases & Best Practices",
@@ -1546,8 +1238,6 @@ export const faq = {
     "Title": "How AI intelligent platforms optimize human resource allocation-Fastgpt",
     "Description": "AI intelligent platforms leverage predictive analytics and machine learning to enhance workforce planning and talent deployment. They analyze vast datasets to identify optimal human resource allocatio",
     "Keywords": "Enterprise AI, Document AI, AI Workflow, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-platforms-optimize",
-    "Url": "/faq/How-AI-intelligent-platforms-optimize.html"
   },
   "Can-AI-Agents-enhance-the": {
     "Category": "Use Cases & Best Practices",
@@ -1556,8 +1246,6 @@ export const faq = {
     "Title": "Can AI Agents enhance the effectiveness of corporate brand communication?-Fastgpt",
     "Description": "Yes, AI agents can significantly enhance the effectiveness of corporate brand communication. They enable scalable, personalized, and consistent messaging across diverse channels and audiences.\n\nAI age",
     "Keywords": "Intelligent Q&A, Task Automation AI, Document AI, GPT Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-enhance-the",
-    "Url": "/faq/Can-AI-Agents-enhance-the.html"
   },
   "How-can-AI-platforms-achieve": {
     "Category": "Use Cases & Best Practices",
@@ -1566,8 +1254,6 @@ export const faq = {
     "Title": "How can AI platforms achieve comprehensive monitoring of business processes?-Fastgpt",
     "Description": "AI platforms achieve comprehensive monitoring of business processes by integrating data sources across workflows, utilizing AI for real-time analysis and predictive insights. This allows continuous ov",
     "Keywords": "AI Automation, Enterprise AI, AI Workflow, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-platforms-achieve",
-    "Url": "/faq/How-can-AI-platforms-achieve.html"
   },
   "What-is-the-biggest-challenge": {
     "Category": "Use Cases & Best Practices",
@@ -1576,8 +1262,6 @@ export const faq = {
     "Title": "What is the biggest challenge for enterprises using AI intelligent assistants?-Fastgpt",
     "Description": "The biggest challenge is ensuring the AI assistant provides consistently accurate, reliable, and trustworthy responses. Incorrect or misleading information can damage business operations and reputatio",
     "Keywords": "AI Platform, Open Source AI, GPT Integration, AI Workflow, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-biggest-challenge",
-    "Url": "/faq/What-is-the-biggest-challenge.html"
   },
   "How-AI-Agents-Improve-the": {
     "Category": "Use Cases & Best Practices",
@@ -1586,8 +1270,6 @@ export const faq = {
     "Title": "How AI Agents Improve the Accuracy of Market Forecasts-Fastgpt",
     "Description": "AI agents enhance market forecasting accuracy by leveraging vast data analysis and pattern recognition capabilities beyond human capacity. They continuously process real-time and historical data to id",
     "Keywords": "Enterprise AI, Document AI, Intelligent Q&A, AI Knowledge Management, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Improve-the",
-    "Url": "/faq/How-AI-Agents-Improve-the.html"
   },
   "Is-the-adaptability-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1596,8 +1278,6 @@ export const faq = {
     "Title": "Is the adaptability of AI platforms strong across different industries?-Fastgpt",
     "Description": "AI platforms exhibit strong adaptability across diverse industries due to their reliance on transferable machine learning techniques and customizable frameworks. Their core capability to learn pattern",
     "Keywords": "Open Source AI, API Integration, FastGPT, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Is-the-adaptability-of-AI",
-    "Url": "/faq/Is-the-adaptability-of-AI.html"
   },
   "Why-are-AI-Agents-considered": {
     "Category": "Use Cases & Best Practices",
@@ -1606,8 +1286,6 @@ export const faq = {
     "Title": "Why are AI Agents considered the future trend in office work?-Fastgpt",
     "Description": "AI Agents represent the future of office work because they automate repetitive tasks, augment human capabilities, and enable significantly higher productivity. They transform how work gets done by int",
     "Keywords": "Smart Assistant, FastGPT, LLM Development, API Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Why-are-AI-Agents-considered",
-    "Url": "/faq/Why-are-AI-Agents-considered.html"
   },
   "How-fast-is-the-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1616,8 +1294,6 @@ export const faq = {
     "Title": "How fast is the AI intelligent platform in handling customer complaints?-Fastgpt",
     "Description": "The AI intelligent platform processes customer complaints at near real-time speeds, typically providing immediate automated responses or routing within seconds. This eliminates traditional wait times ",
     "Keywords": "FastGPT, Enterprise AI, AI Knowledge Management, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-fast-is-the-AI",
-    "Url": "/faq/How-fast-is-the-AI.html"
   },
   "How-AI-Agents-Enhance-Cross-Departmental": {
     "Category": "Use Cases & Best Practices",
@@ -1626,8 +1302,6 @@ export const faq = {
     "Title": "How AI Agents Enhance Cross-Departmental Collaboration-Fastgpt",
     "Description": "AI agents significantly improve cross-departmental collaboration by acting as intelligent intermediaries that automate information flow and task coordination between teams. They break down traditional",
     "Keywords": "AI Chatbot, API Integration, Enterprise AI, Smart Assistant, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Enhance-Cross-Departmental",
-    "Url": "/faq/How-AI-Agents-Enhance-Cross-Departmental.html"
   },
   "Can-AI-platforms-automatically-generate": {
     "Category": "Development Challenges",
@@ -1636,8 +1310,6 @@ export const faq = {
     "Title": "Can AI platforms automatically generate maintenance plans?-Fastgpt",
     "Description": "Yes, AI platforms can automatically generate maintenance plans. This capability leverages machine learning and data analysis to optimize equipment upkeep schedules.\n\nEffective generation requires subs",
     "Keywords": "FastGPT, Vector Search, AI Workflow, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-automatically-generate",
-    "Url": "/faq/Can-AI-platforms-automatically-generate.html"
   },
   "Will-internal-communication-within-a": {
     "Category": "Use Cases & Best Practices",
@@ -1646,8 +1318,6 @@ export const faq = {
     "Title": "Will internal communication within a company become smoother after introducing an AI intelligent assistant?-Fastgpt",
     "Description": "The introduction of an AI intelligent assistant can significantly enhance the smoothness of internal company communication. Yes, it is feasible and generally yields positive results.\n\nAI assistants pr",
     "Keywords": "Document AI, Task Automation AI, Enterprise AI, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-internal-communication-within-a",
-    "Url": "/faq/Will-internal-communication-within-a.html"
   },
   "How-strict-is-the-protection": {
     "Category": "Use Cases & Best Practices",
@@ -1656,8 +1326,6 @@ export const faq = {
     "Title": "How strict is the protection of customer data security by AI platforms?-Fastgpt",
     "Description": "AI platforms typically implement robust data security protocols, though the exact strictness varies significantly depending on the platform provider and its specific policies, technical measures, and ",
     "Keywords": "LLM Development, Task Automation AI, AI Knowledge Management, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-strict-is-the-protection",
-    "Url": "/faq/How-strict-is-the-protection.html"
   },
   "What-business-opportunities-will-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1666,8 +1334,6 @@ export const faq = {
     "Title": "What business opportunities will AI Agent platforms bring in the future?-Fastgpt",
     "Description": "AI Agent platforms will create significant new business opportunities across multiple sectors. These opportunities primarily stem from automating complex tasks, enhancing decision-making, and enabling",
     "Keywords": "AI Workflow, LLM Development, GPT Integration, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-business-opportunities-will-AI",
-    "Url": "/faq/What-business-opportunities-will-AI.html"
   },
   "Can-AI-Agent-become-the": {
     "Category": "Use Cases & Best Practices",
@@ -1676,8 +1342,6 @@ export const faq = {
     "Title": "Can AI Agent become the next core competitiveness?-Fastgpt",
     "Description": "Yes, AI Agents can potentially become a core competitiveness for organizations. Their ability to automate complex tasks, enhance decision-making, and deliver personalized interactions offers significa",
     "Keywords": "Enterprise AI, Smart Assistant, AI Platform, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-become-the",
-    "Url": "/faq/Can-AI-Agent-become-the.html"
   },
   "How-can-AI-Agent-platforms": {
     "Category": "Use Cases & Best Practices",
@@ -1686,8 +1350,6 @@ export const faq = {
     "Title": "How can AI Agent platforms help enhance brand trust-Fastgpt",
     "Description": "AI agent platforms enhance brand trust by enabling consistent, scalable, and empathetic customer interactions. They provide reliable, always-available support that directly reflects brand values.\n\nKey",
     "Keywords": "AI Automation, AI Workflow, AI Chatbot, Smart Assistant, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agent-platforms",
-    "Url": "/faq/How-can-AI-Agent-platforms.html"
   },
   "What-is-the-value-of": {
     "Category": "Use Cases & Best Practices",
@@ -1696,8 +1358,6 @@ export const faq = {
     "Title": "What is the value of AI Agent platforms for small and medium-sized enterprises?-Fastgpt",
     "Description": "AI Agent platforms provide substantial value for small and medium-sized enterprises (SMEs) by offering accessible, cost-effective automation and enhanced operational efficiency, helping them compete m",
     "Keywords": "Open Source AI, AI Chatbot, API Integration, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-value-of",
-    "Url": "/faq/What-is-the-value-of.html"
   },
   "Will-the-development-of-AI": {
     "Category": "Use Cases & Best Practices",
@@ -1706,8 +1366,6 @@ export const faq = {
     "Title": "Will the development of AI Agent platforms change the industry landscape?-Fastgpt",
     "Description": "Yes, AI Agent platforms have the significant potential to fundamentally reshape industry landscapes. These platforms enable the creation and orchestration of autonomous software agents capable of perf",
     "Keywords": "Vector Search, AI Platform, Smart Assistant, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-the-development-of-AI",
-    "Url": "/faq/Will-the-development-of-AI.html"
   },
   "Is-an-AI-Agent-platform": {
     "Category": "Use Cases & Best Practices",
@@ -1716,8 +1374,6 @@ export const faq = {
     "Title": "Is an AI Agent platform a necessary path for enterprises' digital transformation?-Fastgpt",
     "Description": "An AI Agent platform is not strictly mandatory but represents a strategic accelerator for enterprise digital transformation. It enables scalable automation, intelligent decision-making, and personaliz",
     "Keywords": "AI Knowledge Management, Vector Search, AI Platform, FastGPT, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Is-an-AI-Agent-platform",
-    "Url": "/faq/Is-an-AI-Agent-platform.html"
   },
   "How-AI-Agent-platforms-drive": {
     "Category": "Use Cases & Best Practices",
@@ -1726,8 +1382,6 @@ export const faq = {
     "Title": "How AI Agent platforms drive business innovation-Fastgpt",
     "Description": "AI Agent platforms drive business innovation by automating complex tasks, augmenting decision-making, and enabling novel business models through autonomous, intelligent software agents. They transform",
     "Keywords": "FastGPT, Document AI, GPT Integration, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agent-platforms-drive",
-    "Url": "/faq/How-AI-Agent-platforms-drive.html"
   },
   "Which-technologies-will-have-the": {
     "Category": "Use Cases & Best Practices",
@@ -1736,8 +1390,6 @@ export const faq = {
     "Title": "Which technologies will have the greatest transformative impact on AI Agent platforms in the next three years?-Fastgpt",
     "Description": "Large language model advancements, multi-agent system architectures, and embodied agent technologies stand to deliver the most profound transformation for AI Agent platforms in the next three years. T",
     "Keywords": "AI Platform, Smart Assistant, Intelligent Q&A, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Which-technologies-will-have-the",
-    "Url": "/faq/Which-technologies-will-have-the.html"
   },
   "How-HR-can-use-AI": {
     "Category": "Development Challenges",
@@ -1746,8 +1398,6 @@ export const faq = {
     "Title": "How HR can use AI intelligent assistants to improve recruitment efficiency-Fastgpt",
     "Description": "AI intelligent assistants can transform recruitment efficiency by automating repetitive tasks and accelerating screening. HR departments can effectively implement these tools to optimize hiring workfl",
     "Keywords": "AI Platform, LLM Development, GPT Integration, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-HR-can-use-AI",
-    "Url": "/faq/How-HR-can-use-AI.html"
   },
   "Is-the-AI-platform-effective": {
     "Category": "Development Challenges",
@@ -1756,8 +1406,6 @@ export const faq = {
     "Title": "Is the AI platform effective for HR to screen resumes?-Fastgpt",
     "Description": "Yes, AI resume screening platforms can be generally effective for HR, significantly accelerating the process and improving consistency. Their effectiveness is substantial but comes with inherent limit",
     "Keywords": "AI Automation, LLM Development, FastGPT, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Is-the-AI-platform-effective",
-    "Url": "/faq/Is-the-AI-platform-effective.html"
   },
   "How-can-the-human-resources": {
     "Category": "Development Challenges",
@@ -1766,8 +1414,6 @@ export const faq = {
     "Title": "How can the human resources department use AI to reduce interview workload?-Fastgpt",
     "Description": "Human resources departments can leverage AI tools to automate repetitive interview tasks, significantly reducing manual workload. AI efficiently handles initial resume screening, candidate communicati",
     "Keywords": "Intelligent Q&A, Smart Assistant, API Integration, AI Automation, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-human-resources",
-    "Url": "/faq/How-can-the-human-resources.html"
   },
   "Can-AI-assist-with-initial": {
     "Category": "Development Challenges",
@@ -1776,8 +1422,6 @@ export const faq = {
     "Title": "Can AI assist with initial interviews during the recruitment process?-Fastgpt",
     "Description": "Yes, AI can effectively assist with initial interviews in the recruitment process. AI-powered tools automate preliminary screening stages, handling tasks like analyzing candidate responses and assessi",
     "Keywords": "Smart Assistant, Vector Search, Enterprise AI, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-with-initial",
-    "Url": "/faq/Can-AI-assist-with-initial.html"
   },
   "How-AI-Intelligent-Assistants-Accelerate": {
     "Category": "Development Challenges",
@@ -1786,8 +1430,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Accelerate Talent Background Checks-Fastgpt",
     "Description": "AI intelligent assistants accelerate talent background checks by automating data collection, analysis, and verification processes. They significantly reduce the time and effort traditionally required ",
     "Keywords": "Task Automation AI, AI Knowledge Management, Vector Search, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Accelerate",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Accelerate.html"
   },
   "Which-steps-in-the-corporate": {
     "Category": "Development Challenges",
@@ -1796,8 +1438,6 @@ export const faq = {
     "Title": "Which steps in the corporate recruitment process can be delegated to AI-Fastgpt",
     "Description": "AI can handle multiple stages in the corporate recruitment workflow, including sourcing candidates, initial resume screening, scheduling interviews, pre-screening assessments, and conducting structure",
     "Keywords": "Smart Assistant, Task Automation AI, LLM Development, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Which-steps-in-the-corporate",
-    "Url": "/faq/Which-steps-in-the-corporate.html"
   },
   "How-HR-Uses-AI-to": {
     "Category": "Development Challenges",
@@ -1806,8 +1446,6 @@ export const faq = {
     "Title": "How HR Uses AI to Predict Employee Turnover Rate-Fastgpt",
     "Description": "HR leverages AI to predict employee turnover by analyzing historical and current workforce data. This application is not only feasible but increasingly adopted for proactive talent management.  \n\nAI m",
     "Keywords": "AI Workflow, Intelligent Q&A, API Integration, LLM Development, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-HR-Uses-AI-to",
-    "Url": "/faq/How-HR-Uses-AI-to.html"
   },
   "Can-AI-help-write-job": {
     "Category": "Development Challenges",
@@ -1816,8 +1454,6 @@ export const faq = {
     "Title": "Can AI help write job descriptions and recruitment advertisements?-Fastgpt",
     "Description": "Yes, AI can significantly assist in writing job descriptions and recruitment advertisements. Leveraging natural language processing and machine learning, AI tools analyze vast datasets to generate str",
     "Keywords": "Open Source AI, AI Chatbot, Enterprise AI, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-write-job",
-    "Url": "/faq/Can-AI-help-write-job.html"
   },
   "Can-the-AI-platform-automatically": {
     "Category": "Development Challenges",
@@ -1826,8 +1462,6 @@ export const faq = {
     "Title": "Can the AI platform automatically generate scheduling reports?-Fastgpt",
     "Description": "Yes, AI platforms can automatically generate scheduling reports. This is a core automation capability leveraging AI algorithms.\n\nKey principles involve analyzing schedule-related data (e.g., resource ",
     "Keywords": "API Integration, Smart Assistant, AI Platform, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-the-AI-platform-automatically",
-    "Url": "/faq/Can-the-AI-platform-automatically.html"
   },
   "How-HR-Can-Use-AI": {
     "Category": "Development Challenges",
@@ -1836,8 +1470,6 @@ export const faq = {
     "Title": "How HR Can Use AI to Improve the Interview Experience-Fastgpt",
     "Description": "HR leverages AI to streamline and enhance the candidate interview experience, making the process more efficient and data-driven. AI tools can manage scheduling, conduct preliminary screenings, and ana",
     "Keywords": "Enterprise AI, AI Knowledge Management, AI Platform, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-HR-Can-Use-AI",
-    "Url": "/faq/How-HR-Can-Use-AI.html"
   },
   "How-AI-intelligent-assistants-reduce": {
     "Category": "Development Challenges",
@@ -1846,8 +1478,6 @@ export const faq = {
     "Title": "How AI intelligent assistants reduce the time for manual contract review-Fastgpt",
     "Description": "AI intelligent assistants significantly reduce manual contract review time by automating document analysis through natural language processing and machine learning. This technology processes standard ",
     "Keywords": "Vector Search, AI Automation, AI Platform, AI Chatbot, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-reduce",
-    "Url": "/faq/How-AI-intelligent-assistants-reduce.html"
   },
   "Will-companies-using-AI-to": {
     "Category": "Development Challenges",
@@ -1856,8 +1486,6 @@ export const faq = {
     "Title": "Will companies using AI to screen resumes affect recruitment fairness?-Fastgpt",
     "Description": "Companies using AI for resume screening can both positively and negatively influence recruitment fairness. Its impact depends critically on how the AI system is designed, implemented, and monitored.\n\n",
     "Keywords": "Task Automation AI, AI Automation, Smart Assistant, Intelligent Q&A, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Will-companies-using-AI-to",
-    "Url": "/faq/Will-companies-using-AI-to.html"
   },
   "Can-AI-automatically-generate-a": {
     "Category": "Data & Knowledge",
@@ -1866,8 +1494,6 @@ export const faq = {
     "Title": "Can AI automatically generate a list of long-tail keywords?-Fastgpt",
     "Description": "Yes, AI can automatically generate lists of long-tail keywords. It achieves this through advanced Natural Language Processing (NLP) and machine learning techniques that analyze vast datasets, search t",
     "Keywords": "API Integration, AI Chatbot, Open Source AI, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-a",
-    "Url": "/faq/Can-AI-automatically-generate-a.html"
   },
   "How-AI-platforms-improve-the": {
     "Category": "Development Challenges",
@@ -1876,8 +1502,6 @@ export const faq = {
     "Title": "How AI platforms improve the accuracy of electricity trading-Fastgpt",
     "Description": "AI platforms enhance electricity trading accuracy by employing advanced machine learning algorithms to forecast prices, demand, and supply more precisely, while optimizing bidding and dispatch strateg",
     "Keywords": "Vector Search, FastGPT, Smart Assistant, Enterprise AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-platforms-improve-the",
-    "Url": "/faq/How-AI-platforms-improve-the.html"
   },
   "Can-AI-intelligent-assistants-help": {
     "Category": "Development Challenges",
@@ -1886,8 +1510,6 @@ export const faq = {
     "Title": "Can AI intelligent assistants help identify production bottlenecks?-Fastgpt",
     "Description": "Yes, AI intelligent assistants can significantly aid in identifying production bottlenecks. They analyze vast amounts of real-time operational data to pinpoint inefficiencies.\n\nThey work by continuous",
     "Keywords": "Vector Search, Enterprise AI, AI Knowledge Management, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-assistants-help",
-    "Url": "/faq/Can-AI-intelligent-assistants-help.html"
   },
   "Can-AI-assist-in-judging": {
     "Category": "Development Challenges",
@@ -1896,8 +1518,6 @@ export const faq = {
     "Title": "Can AI assist in judging the candidate's match degree?-Fastgpt",
     "Description": "Yes, AI can effectively assist in assessing candidate-job match degree. It analyzes candidate data and job requirements to provide consistent, data-driven match predictions, augmenting human judgment.",
     "Keywords": "FastGPT, LLM Development, AI Workflow, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-in-judging",
-    "Url": "/faq/Can-AI-assist-in-judging.html"
   },
   "Can-AI-help-follow-up": {
     "Category": "Development Challenges",
@@ -1906,8 +1526,6 @@ export const faq = {
     "Title": "Can AI help follow up on the candidate's onboarding status?-Fastgpt",
     "Description": "Yes, AI can effectively assist in tracking candidate onboarding status by automating follow-up processes and monitoring progress through AI-powered tools like chatbots or HR system integrations.  \n\nKe",
     "Keywords": "AI Knowledge Management, LLM Development, API Integration, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-follow-up",
-    "Url": "/faq/Can-AI-help-follow-up.html"
   },
   "How-AI-platforms-reduce-communication": {
     "Category": "Development Challenges",
@@ -1916,8 +1534,6 @@ export const faq = {
     "Title": "How AI platforms reduce communication costs in recruitment-Fastgpt",
     "Description": "AI platforms reduce communication costs in recruitment by automating repetitive interactions and streamlining information flow between candidates and recruiters. They act as efficient intermediaries, ",
     "Keywords": "Document AI, AI Workflow, FastGPT, Smart Assistant, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-platforms-reduce-communication",
-    "Url": "/faq/How-AI-platforms-reduce-communication.html"
   },
   "How-can-the-legal-department": {
     "Category": "Development Challenges",
@@ -1926,8 +1542,6 @@ export const faq = {
     "Title": "How can the legal department use AI to reduce contract risks?-Fastgpt",
     "Description": "Legal departments can leverage AI to proactively identify and mitigate contract risks, enhancing oversight and compliance. AI tools automate critical review processes while providing data-driven risk ",
     "Keywords": "Smart Assistant, Document AI, AI Platform, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-legal-department",
-    "Url": "/faq/How-can-the-legal-department.html"
   },
   "Can-AI-automatically-check-for": {
     "Category": "Development Challenges",
@@ -1936,8 +1550,6 @@ export const faq = {
     "Title": "Can AI automatically check for risk clauses in contracts?-Fastgpt",
     "Description": "Yes, AI can automatically check for risk clauses in contracts. Using advanced Natural Language Processing (NLP) algorithms, specifically trained systems can effectively identify potential legal and fi",
     "Keywords": "Smart Assistant, AI Platform, AI Knowledge Management, Task Automation AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-check-for",
-    "Url": "/faq/Can-AI-automatically-check-for.html"
   },
   "How-legal-professionals-can-use": {
     "Category": "Development Challenges",
@@ -1946,8 +1558,6 @@ export const faq = {
     "Title": "How legal professionals can use AI to quickly revise contracts-Fastgpt",
     "Description": "Legal professionals can use AI-powered contract review software to significantly accelerate contract revision. These tools analyze draft agreements to identify issues and suggest improvements efficien",
     "Keywords": "LLM Development, AI Chatbot, AI Knowledge Management, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-legal-professionals-can-use",
-    "Url": "/faq/How-legal-professionals-can-use.html"
   },
   "How-can-AI-intelligent-assistants": {
     "Category": "Development Challenges",
@@ -1956,8 +1566,6 @@ export const faq = {
     "Title": "How can AI intelligent assistants remind about follow-up consultation times-Fastgpt",
     "Description": "AI intelligent assistants efficiently automate follow-up consultation reminders through integrated systems. They directly schedule, trigger, and deliver reminders to patients based on appointment data",
     "Keywords": "API Integration, AI Chatbot, AI Workflow, AI Automation, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-intelligent-assistants",
-    "Url": "/faq/How-can-AI-intelligent-assistants.html"
   },
   "Can-AI-identify-hidden-risks": {
     "Category": "Development Challenges",
@@ -1966,8 +1574,6 @@ export const faq = {
     "Title": "Can AI identify hidden risks in contracts?-Fastgpt",
     "Description": "AI technology can identify certain hidden risks in contracts through automated analysis. This capability leverages natural language processing and machine learning techniques.  \n\nKey principles includ",
     "Keywords": "GPT Integration, Open Source AI, API Integration, AI Workflow, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-hidden-risks",
-    "Url": "/faq/Can-AI-identify-hidden-risks.html"
   },
   "What-risk-warnings-can-AI": {
     "Category": "Development Challenges",
@@ -1976,8 +1582,6 @@ export const faq = {
     "Title": "What risk warnings can AI provide before a company signs a contract?-Fastgpt",
     "Description": "AI can identify potential risks in contract drafts by analyzing clauses, language patterns, and contextual data. It flags issues such as non-standard terms, ambiguous language, unfavorable obligations",
     "Keywords": "AI Platform, AI Automation, Smart Assistant, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-risk-warnings-can-AI",
-    "Url": "/faq/What-risk-warnings-can-AI.html"
   },
   "How-can-AI-platforms-help": {
     "Category": "Development Challenges",
@@ -1986,8 +1590,6 @@ export const faq = {
     "Title": "How can AI platforms help track contract execution?-Fastgpt",
     "Description": "AI platforms automate contract execution tracking by analyzing agreement terms and performance data to monitor obligations, deadlines, and compliance. They enable proactive management through alerts a",
     "Keywords": "FastGPT, AI Workflow, Open Source AI, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-platforms-help",
-    "Url": "/faq/How-can-AI-platforms-help.html"
   },
   "How-legal-departments-use-AI": {
     "Category": "Development Challenges",
@@ -1996,8 +1598,6 @@ export const faq = {
     "Title": "How legal departments use AI to organize historical contract data-Fastgpt",
     "Description": "Legal departments can use AI to systematically organize and analyze their historical contract data. This involves applying artificial intelligence tools to digitized agreements for enhanced accessibil",
     "Keywords": "AI Knowledge Management, Task Automation AI, AI Platform, API Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-legal-departments-use-AI",
-    "Url": "/faq/How-legal-departments-use-AI.html"
   },
   "Can-AI-automatically-file-and": {
     "Category": "Development Challenges",
@@ -2006,8 +1606,6 @@ export const faq = {
     "Title": "Can AI automatically file and classify contract documents?-Fastgpt",
     "Description": "Yes, AI systems can automate the filing and classification of contract documents. This capability leverages advanced technologies to manage large volumes of contracts efficiently.\n\nAI systems primaril",
     "Keywords": "Document AI, Smart Assistant, AI Knowledge Management, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-file-and",
-    "Url": "/faq/Can-AI-automatically-file-and.html"
   },
   "Can-AI-identify-unfair-clauses": {
     "Category": "Development Challenges",
@@ -2016,8 +1614,6 @@ export const faq = {
     "Title": "Can AI identify unfair clauses in contracts?-Fastgpt",
     "Description": "AI can identify potentially unfair clauses in contracts. Using Natural Language Processing (NLP) and machine learning, AI systems scan contract text to flag terms that deviate significantly from stand",
     "Keywords": "Task Automation AI, Smart Assistant, Open Source AI, AI Automation, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-unfair-clauses",
-    "Url": "/faq/Can-AI-identify-unfair-clauses.html"
   },
   "How-can-enterprises-use-AI": {
     "Category": "Development Challenges",
@@ -2026,8 +1622,6 @@ export const faq = {
     "Title": "How can enterprises use AI to ensure legal compliance of contracts?-Fastgpt",
     "Description": "Enterprises can utilize AI to enhance contract legal compliance by automating review and risk assessment tasks. AI systems analyze contract documents to identify potential compliance issues efficientl",
     "Keywords": "GPT Integration, Smart Assistant, Task Automation AI, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-use-AI",
-    "Url": "/faq/How-can-enterprises-use-AI.html"
   },
   "Can-AI-automatically-generate-common": {
     "Category": "Development Challenges",
@@ -2036,8 +1630,6 @@ export const faq = {
     "Title": "Can AI automatically generate common contract templates?-Fastgpt",
     "Description": "Yes, AI can automatically generate common contract templates. Modern generative AI systems are capable of producing draft versions of frequently used agreements.\n\nThis capability relies on advanced na",
     "Keywords": "FastGPT, LLM Development, Enterprise AI, GPT Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-common",
-    "Url": "/faq/Can-AI-automatically-generate-common.html"
   },
   "Can-the-AI-intelligent-assistant": {
     "Category": "Development Challenges",
@@ -2046,8 +1638,6 @@ export const faq = {
     "Title": "Can the AI intelligent assistant provide a contract risk analysis report?-Fastgpt",
     "Description": "Yes, modern AI intelligent assistants are capable of generating contract risk analysis reports. They achieve this primarily through natural language processing and machine learning techniques applied ",
     "Keywords": "API Integration, Enterprise AI, Task Automation AI, LLM Development, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-the-AI-intelligent-assistant",
-    "Url": "/faq/Can-the-AI-intelligent-assistant.html"
   },
   "Can-AI-provide-clause-suggestions": {
     "Category": "Development Challenges",
@@ -2056,8 +1646,6 @@ export const faq = {
     "Title": "Can AI provide clause suggestions in contract negotiations?-Fastgpt",
     "Description": "Yes, AI can provide clause suggestions in contract negotiations. This capability leverages natural language processing and machine learning.\n\nAI clause suggestion tools analyze vast repositories of co",
     "Keywords": "AI Platform, Open Source AI, AI Automation, Document AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-clause-suggestions",
-    "Url": "/faq/Can-AI-provide-clause-suggestions.html"
   },
   "How-the-Legal-Department-Uses": {
     "Category": "Development Challenges",
@@ -2066,8 +1654,6 @@ export const faq = {
     "Title": "How the Legal Department Uses AI to Reduce Sudden Legal Risks-Fastgpt",
     "Description": "Legal departments can significantly reduce sudden legal risks by deploying artificial intelligence tools. This involves using technologies like predictive analytics and natural language processing to ",
     "Keywords": "GPT Integration, Open Source AI, API Integration, FastGPT, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-the-Legal-Department-Uses",
-    "Url": "/faq/How-the-Legal-Department-Uses.html"
   },
   "Can-AI-help-organize-arbitration": {
     "Category": "Development Challenges",
@@ -2076,8 +1662,6 @@ export const faq = {
     "Title": "Can AI help organize arbitration and litigation materials?-Fastgpt",
     "Description": "Yes, AI tools can assist in organizing arbitration and litigation materials. They leverage natural language processing and machine learning to process large volumes of legal documents efficiently, eme",
     "Keywords": "AI Knowledge Management, AI Platform, AI Workflow, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-organize-arbitration",
-    "Url": "/faq/Can-AI-help-organize-arbitration.html"
   },
   "How-do-AI-platforms-improve": {
     "Category": "Development Challenges",
@@ -2086,8 +1670,6 @@ export const faq = {
     "Title": "How do AI platforms improve the overall efficiency of contract management?-Fastgpt",
     "Description": "AI platforms significantly boost contract management efficiency by automating manual tasks and accelerating key processes through machine learning and natural language processing.  \n\nThese systems aut",
     "Keywords": "AI Platform, Intelligent Q&A, LLM Development, Enterprise AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-platforms-improve",
-    "Url": "/faq/How-do-AI-platforms-improve.html"
   },
   "How-do-financial-institutions-use": {
     "Category": "Development Challenges",
@@ -2096,8 +1678,6 @@ export const faq = {
     "Title": "How do financial institutions use AI to automatically generate reports?-Fastgpt",
     "Description": "Financial institutions utilize AI technologies to automate report generation by leveraging natural language processing (NLP) and machine learning (ML). This enables the transformation of raw data into",
     "Keywords": "Intelligent Q&A, Enterprise AI, API Integration, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-do-financial-institutions-use",
-    "Url": "/faq/How-do-financial-institutions-use.html"
   },
   "How-AI-intelligent-assistants-organize": {
     "Category": "Development Challenges",
@@ -2106,8 +1686,6 @@ export const faq = {
     "Title": "How AI intelligent assistants organize patient medical records-Fastgpt",
     "Description": "AI intelligent assistants organize patient medical records by processing unstructured clinical notes, diagnostic reports, and other healthcare data to extract, structure, and summarize key medical inf",
     "Keywords": "Intelligent Q&A, FastGPT, AI Automation, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-organize",
-    "Url": "/faq/How-AI-intelligent-assistants-organize.html"
   },
   "Can-AI-generate-real-time-market": {
     "Category": "Development Challenges",
@@ -2116,8 +1694,6 @@ export const faq = {
     "Title": "Can AI generate real-time market analysis reports-Fastgpt",
     "Description": "Yes, AI can generate real-time market analysis reports. Advanced algorithms process live data feeds, identify patterns, and synthesize insights into structured narrative summaries almost instantaneous",
     "Keywords": "FastGPT, AI Knowledge Management, Smart Assistant, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-real-time-market",
-    "Url": "/faq/Can-AI-generate-real-time-market.html"
   },
   "How-AI-Helps-Investment-Banks": {
     "Category": "Development Challenges",
@@ -2126,8 +1702,6 @@ export const faq = {
     "Title": "How AI Helps Investment Banks Prepare Client Proposals-Fastgpt",
     "Description": "AI significantly accelerates and enhances the creation of investment banking client proposals by automating data gathering and initial content generation, while providing deeper market and financial i",
     "Keywords": "Enterprise AI, Open Source AI, API Integration, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Investment-Banks",
-    "Url": "/faq/How-AI-Helps-Investment-Banks.html"
   },
   "How-Financial-Companies-Use-AI": {
     "Category": "Development Challenges",
@@ -2136,8 +1710,6 @@ export const faq = {
     "Title": "How Financial Companies Use AI to Accelerate Risk Assessment-Fastgpt",
     "Description": "Financial institutions leverage artificial intelligence to automate and enhance risk evaluation processes. AI technologies analyze vast datasets rapidly, significantly accelerating credit decisions an",
     "Keywords": "Task Automation AI, Document AI, Enterprise AI, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-Financial-Companies-Use-AI",
-    "Url": "/faq/How-Financial-Companies-Use-AI.html"
   },
   "Can-AI-platforms-automatically-organize": {
     "Category": "Development Challenges",
@@ -2146,8 +1718,6 @@ export const faq = {
     "Title": "Can AI platforms automatically organize financial statements?-Fastgpt",
     "Description": "AI platforms can automate significant portions of financial statement organization using advanced technologies like machine learning and optical character recognition (OCR). While highly capable, huma",
     "Keywords": "AI Platform, Enterprise AI, FastGPT, API Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-automatically-organize",
-    "Url": "/faq/Can-AI-platforms-automatically-organize.html"
   },
   "How-can-AI-help-fund": {
     "Category": "Development Challenges",
@@ -2156,8 +1726,6 @@ export const faq = {
     "Title": "How can AI help fund companies analyze investment portfolios-Fastgpt",
     "Description": "AI enables fund companies to significantly enhance investment portfolio analysis by processing massive datasets, identifying complex patterns, and generating predictive insights far beyond traditional",
     "Keywords": "AI Chatbot, Intelligent Q&A, Smart Assistant, Vector Search, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-fund",
-    "Url": "/faq/How-can-AI-help-fund.html"
   },
   "Can-AI-intelligent-assistants-generate": {
     "Category": "Development Challenges",
@@ -2166,8 +1734,6 @@ export const faq = {
     "Title": "Can AI intelligent assistants generate regular income reports?-Fastgpt",
     "Description": "Yes, AI intelligent assistants can reliably generate regular income reports when properly configured. They automate the data aggregation and presentation process.\n\nKey capabilities include accessing a",
     "Keywords": "Open Source AI, AI Chatbot, AI Workflow, Vector Search, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-intelligent-assistants-generate",
-    "Url": "/faq/Can-AI-intelligent-assistants-generate.html"
   },
   "Can-AI-generate-documents-that": {
     "Category": "Development Challenges",
@@ -2176,8 +1742,6 @@ export const faq = {
     "Title": "Can AI generate documents that comply with regulatory requirements?-Fastgpt",
     "Description": "Yes, AI can generate documents that comply with regulatory requirements, but it requires careful implementation and robust oversight. This capability hinges significantly on specific design choices an",
     "Keywords": "AI Chatbot, API Integration, Open Source AI, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-documents-that",
-    "Url": "/faq/Can-AI-generate-documents-that.html"
   },
   "How-Banks-Use-AI-to": {
     "Category": "Development Challenges",
@@ -2186,8 +1750,6 @@ export const faq = {
     "Title": "How Banks Use AI to Track Loan Risks-Fastgpt",
     "Description": "Banks utilize artificial intelligence (AI) algorithms to continuously analyze borrower data and predict the likelihood of loan default, enabling proactive risk management. This significantly enhances ",
     "Keywords": "AI Automation, AI Workflow, Intelligent Q&A, AI Chatbot, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-Banks-Use-AI-to",
-    "Url": "/faq/How-Banks-Use-AI-to.html"
   },
   "Can-AI-assist-in-analyzing": {
     "Category": "Development Challenges",
@@ -2196,8 +1758,6 @@ export const faq = {
     "Title": "Can AI assist in analyzing macroeconomic data?-Fastgpt",
     "Description": "Yes, AI can effectively assist in analyzing macroeconomic data. Machine learning and other AI techniques excel at processing vast datasets and identifying complex patterns that may elude traditional m",
     "Keywords": "AI Workflow, FastGPT, AI Automation, Document AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-in-analyzing",
-    "Url": "/faq/Can-AI-assist-in-analyzing.html"
   },
   "How-AI-intelligent-assistants-predict": {
     "Category": "Development Challenges",
@@ -2206,8 +1766,6 @@ export const faq = {
     "Title": "How AI intelligent assistants predict market trends-Fastgpt",
     "Description": "AI intelligent assistants predict market trends by analyzing vast datasets using machine learning algorithms to identify patterns and relationships. They provide probabilistic forecasts based on these",
     "Keywords": "Enterprise AI, LLM Development, FastGPT, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-predict",
-    "Url": "/faq/How-AI-intelligent-assistants-predict.html"
   },
   "How-financial-institutions-use-AI": {
     "Category": "Development Challenges",
@@ -2216,8 +1774,6 @@ export const faq = {
     "Title": "How financial institutions use AI to optimize data visualization-Fastgpt",
     "Description": "Financial institutions leverage AI to enhance data visualization by employing machine learning algorithms to transform complex datasets into interactive, insightful representations. This enables real-",
     "Keywords": "AI Chatbot, AI Workflow, Document AI, FastGPT, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-financial-institutions-use-AI",
-    "Url": "/faq/How-financial-institutions-use-AI.html"
   },
   "Can-AI-automatically-detect-abnormal": {
     "Category": "Productivity & Collaboration",
@@ -2226,8 +1782,6 @@ export const faq = {
     "Title": "Can AI automatically detect abnormal order situations?-Fastgpt",
     "Description": "Yes, AI can automatically detect abnormal order situations with significant accuracy and efficiency. This capability leverages machine learning and pattern recognition to identify deviations from norm",
     "Keywords": "Intelligent Q&A, Document AI, Open Source AI, Task Automation AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-detect-abnormal",
-    "Url": "/faq/Can-AI-automatically-detect-abnormal.html"
   },
   "How-AI-Accelerates-the-Creation": {
     "Category": "Development Challenges",
@@ -2236,8 +1790,6 @@ export const faq = {
     "Title": "How AI Accelerates the Creation of Quarterly and Annual Reports-Fastgpt",
     "Description": "AI significantly speeds up quarterly and annual report generation through automation and advanced data processing. It handles vast datasets quickly to extract key insights and draft initial report sec",
     "Keywords": "AI Knowledge Management, Smart Assistant, API Integration, AI Automation, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Accelerates-the-Creation",
-    "Url": "/faq/How-AI-Accelerates-the-Creation.html"
   },
   "Can-AI-platforms-integrate-multi-source": {
     "Category": "Development Challenges",
@@ -2246,8 +1798,6 @@ export const faq = {
     "Title": "Can AI platforms integrate multi-source financial data?-Fastgpt",
     "Description": "AI platforms can effectively integrate multi-source financial data. This capability is technically feasible and increasingly common within financial technology applications.\n\nThey achieve this by conn",
     "Keywords": "AI Chatbot, Intelligent Q&A, Enterprise AI, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-integrate-multi-source",
-    "Url": "/faq/Can-AI-platforms-integrate-multi-source.html"
   },
   "Can-AI-identify-potential-risks": {
     "Category": "Development Challenges",
@@ -2256,8 +1806,6 @@ export const faq = {
     "Title": "Can AI identify potential risks in investment reports?-Fastgpt",
     "Description": "AI can identify potential risks within investment reports. This capability leverages advanced algorithms to analyze textual and numerical data efficiently.\n\nAI systems employ Natural Language Processi",
     "Keywords": "AI Workflow, AI Automation, Open Source AI, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-potential-risks",
-    "Url": "/faq/Can-AI-identify-potential-risks.html"
   },
   "How-AI-improves-the-work": {
     "Category": "Development Challenges",
@@ -2266,8 +1814,6 @@ export const faq = {
     "Title": "How AI improves the work efficiency of investment research teams-Fastgpt",
     "Description": "AI significantly enhances investment research efficiency by automating labor-intensive tasks and augmenting analytical capabilities, enabling faster and deeper insights. It allows researchers to focus",
     "Keywords": "AI Platform, Enterprise AI, FastGPT, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-improves-the-work",
-    "Url": "/faq/How-AI-improves-the-work.html"
   },
   "How-can-manufacturing-companies-use": {
     "Category": "Development Challenges",
@@ -2276,8 +1822,6 @@ export const faq = {
     "Title": "How can manufacturing companies use AI to reduce production downtime?-Fastgpt",
     "Description": "Manufacturing companies can deploy AI to proactively minimize unplanned production downtime, achieving significant cost savings. AI technologies enable predictive maintenance and real-time anomaly det",
     "Keywords": "FastGPT, Vector Search, AI Chatbot, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-can-manufacturing-companies-use",
-    "Url": "/faq/How-can-manufacturing-companies-use.html"
   },
   "Can-AI-detect-equipment-failures": {
     "Category": "Development Challenges",
@@ -2286,8 +1830,6 @@ export const faq = {
     "Title": "Can AI detect equipment failures in advance?-Fastgpt",
     "Description": "Yes, AI can proactively detect equipment failures. Machine learning algorithms analyze sensor data and operational parameters to identify early warning signs of potential malfunctions before they caus",
     "Keywords": "Enterprise AI, Vector Search, GPT Integration, LLM Development, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-detect-equipment-failures",
-    "Url": "/faq/Can-AI-detect-equipment-failures.html"
   },
   "How-manufacturing-enterprises-can-use": {
     "Category": "Development Challenges",
@@ -2296,8 +1838,6 @@ export const faq = {
     "Title": "How manufacturing enterprises can use AI to optimize scheduling-Fastgpt",
     "Description": "Manufacturers can deploy AI to automate and enhance production scheduling. This leverages algorithms to optimize resource allocation and sequencing.\n\nAI scheduling systems analyze constraints like mac",
     "Keywords": "AI Automation, Vector Search, GPT Integration, Open Source AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-manufacturing-enterprises-can-use",
-    "Url": "/faq/How-manufacturing-enterprises-can-use.html"
   },
   "Can-AI-predict-the-lifespan": {
     "Category": "Development Challenges",
@@ -2306,8 +1846,6 @@ export const faq = {
     "Title": "Can AI predict the lifespan of critical components?-Fastgpt",
     "Description": "Yes, AI can predict the lifespan of critical components. Machine learning models analyze operational data to forecast when failures might occur.\n\nThis approach relies on training models with historica",
     "Keywords": "AI Workflow, API Integration, Open Source AI, Document AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-the-lifespan",
-    "Url": "/faq/Can-AI-predict-the-lifespan.html"
   },
   "How-AI-Helps-Reduce-Production": {
     "Category": "Development Challenges",
@@ -2316,8 +1854,6 @@ export const faq = {
     "Title": "How AI Helps Reduce Production Energy Consumption-Fastgpt",
     "Description": "Artificial Intelligence significantly reduces production energy consumption by optimizing operations through data analysis and automation, leading to minimized waste and enhanced efficiency.  \n\nKey pr",
     "Keywords": "Intelligent Q&A, Document AI, GPT Integration, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Reduce-Production",
-    "Url": "/faq/How-AI-Helps-Reduce-Production.html"
   },
   "How-AI-Intelligent-Assistants-Reduce": {
     "Category": "Development Challenges",
@@ -2326,8 +1862,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Reduce Return Rates-Fastgpt",
     "Description": "AI intelligent assistants help reduce return rates by proactively addressing customer uncertainties during shopping and support interactions. They offer personalized guidance and automated resolutions",
     "Keywords": "AI Platform, Intelligent Q&A, AI Knowledge Management, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Reduce",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Reduce.html"
   },
   "Can-AI-automatically-analyze-anomalies": {
     "Category": "Development Challenges",
@@ -2336,8 +1870,6 @@ export const faq = {
     "Title": "Can AI automatically analyze anomalies in production data?-Fastgpt",
     "Description": "AI can automatically analyze anomalies in production data effectively. This capability uses machine learning algorithms to detect deviations from normal operational patterns.\n\nSuccessful implementatio",
     "Keywords": "Task Automation AI, LLM Development, API Integration, AI Platform, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-anomalies",
-    "Url": "/faq/Can-AI-automatically-analyze-anomalies.html"
   },
   "How-AI-Helps-Improve-Quality": {
     "Category": "Development Challenges",
@@ -2346,8 +1878,6 @@ export const faq = {
     "Title": "How AI Helps Improve Quality Inspection Processes-Fastgpt",
     "Description": "Artificial intelligence enhances quality inspection by automating defect detection and analysis. It improves accuracy and efficiency compared to manual methods, enabling real-time monitoring of produc",
     "Keywords": "Document AI, Task Automation AI, API Integration, Enterprise AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Improve-Quality",
-    "Url": "/faq/How-AI-Helps-Improve-Quality.html"
   },
   "Can-AI-platforms-achieve-automated": {
     "Category": "Development Challenges",
@@ -2356,8 +1886,6 @@ export const faq = {
     "Title": "Can AI platforms achieve automated scheduling of production lines?-Fastgpt",
     "Description": "Yes, AI platforms can achieve automated scheduling of production lines. Leveraging machine learning, optimization algorithms, and real-time data, these systems dynamically assign tasks, sequence opera",
     "Keywords": "FastGPT, Open Source AI, Vector Search, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-achieve-automated",
-    "Url": "/faq/Can-AI-platforms-achieve-automated.html"
   },
   "Can-AI-reduce-material-waste": {
     "Category": "Development Challenges",
@@ -2366,8 +1894,6 @@ export const faq = {
     "Title": "Can AI reduce material waste-Fastgpt",
     "Description": "Yes, AI can significantly reduce material waste. By analyzing vast amounts of data and optimizing processes, AI systems help industries use resources more efficiently during design, manufacturing, and",
     "Keywords": "Intelligent Q&A, Enterprise AI, Task Automation AI, AI Chatbot, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-reduce-material-waste",
-    "Url": "/faq/Can-AI-reduce-material-waste.html"
   },
   "How-can-manufacturing-enterprises-use": {
     "Category": "Development Challenges",
@@ -2376,8 +1902,6 @@ export const faq = {
     "Title": "How can manufacturing enterprises use AI to improve capacity utilization?-Fastgpt",
     "Description": "Manufacturers can significantly improve capacity utilization by leveraging AI to optimize operations and reduce downtime. AI systems analyze production data to enhance scheduling, predict maintenance ",
     "Keywords": "LLM Development, AI Workflow, AI Chatbot, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-manufacturing-enterprises-use",
-    "Url": "/faq/How-can-manufacturing-enterprises-use.html"
   },
   "Can-AI-predict-order-demand": {
     "Category": "Development Challenges",
@@ -2386,8 +1910,6 @@ export const faq = {
     "Title": "Can AI predict order demand fluctuations?-Fastgpt",
     "Description": "Yes, AI can effectively predict order demand fluctuations. Advanced algorithms analyze patterns and trends to forecast future demand changes.\n\nAI demand forecasting relies on machine learning models t",
     "Keywords": "AI Automation, Task Automation AI, LLM Development, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-order-demand",
-    "Url": "/faq/Can-AI-predict-order-demand.html"
   },
   "How-AI-Shortens-Equipment-Maintenance": {
     "Category": "Development Challenges",
@@ -2396,8 +1918,6 @@ export const faq = {
     "Title": "How AI Shortens Equipment Maintenance Response Time-Fastgpt",
     "Description": "AI significantly shortens equipment maintenance response time by enabling faster fault detection, diagnosis, and resolution. It transforms maintenance from reactive to proactive or predictive approach",
     "Keywords": "Enterprise AI, AI Workflow, Smart Assistant, Task Automation AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Shortens-Equipment-Maintenance",
-    "Url": "/faq/How-AI-Shortens-Equipment-Maintenance.html"
   },
   "Can-the-AI-platform-help": {
     "Category": "Development Challenges",
@@ -2406,8 +1926,6 @@ export const faq = {
     "Title": "Can the AI platform help evaluate production efficiency?-Fastgpt",
     "Description": "Yes, AI platforms are highly capable of evaluating production efficiency. They analyze operational data to provide actionable insights into manufacturing performance.\n\nThese platforms process real-tim",
     "Keywords": "Smart Assistant, AI Automation, Open Source AI, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-the-AI-platform-help",
-    "Url": "/faq/Can-the-AI-platform-help.html"
   },
   "Can-AI-optimize-warehousing-and": {
     "Category": "Development Challenges",
@@ -2416,8 +1934,6 @@ export const faq = {
     "Title": "Can AI optimize warehousing and logistics processes?-Fastgpt",
     "Description": "AI can significantly optimize warehousing and logistics processes. Yes, it is feasible and increasingly adopted.\n\nThis optimization primarily relies on analyzing vast operational data (sensor readings",
     "Keywords": "AI Chatbot, FastGPT, Enterprise AI, AI Workflow, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-optimize-warehousing-and",
-    "Url": "/faq/Can-AI-optimize-warehousing-and.html"
   },
   "How-AI-Intelligent-Assistants-Enhance": {
     "Category": "Development Challenges",
@@ -2426,8 +1942,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Enhance Production Data Analysis Capabilities-Fastgpt",
     "Description": "AI intelligent assistants significantly enhance production data analysis by automating complex tasks and uncovering actionable insights from large datasets.  \n\nThey leverage real-time monitoring, mach",
     "Keywords": "Intelligent Q&A, Smart Assistant, AI Platform, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Enhance",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Enhance.html"
   },
   "How-AI-Assists-in-Dynamic": {
     "Category": "Development Challenges",
@@ -2436,8 +1950,6 @@ export const faq = {
     "Title": "How AI Assists in Dynamic Adjustment of Production Planning-Fastgpt",
     "Description": "AI enables real-time adjustment of production schedules by continuously analyzing operational data and external signals. It dynamically replans to match actual conditions, ensuring optimal resource us",
     "Keywords": "Document AI, Smart Assistant, Task Automation AI, AI Platform, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Assists-in-Dynamic",
-    "Url": "/faq/How-AI-Assists-in-Dynamic.html"
   },
   "How-can-the-retail-industry": {
     "Category": "Development Challenges",
@@ -2446,8 +1958,6 @@ export const faq = {
     "Title": "How can the retail industry use AI to enhance customer experience-Fastgpt",
     "Description": "Retailers leverage artificial intelligence to personalize shopping journeys and optimize service interactions, significantly elevating customer experience. Key methods include AI-powered recommendatio",
     "Keywords": "AI Workflow, LLM Development, AI Platform, Smart Assistant, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-retail-industry",
-    "Url": "/faq/How-can-the-retail-industry.html"
   },
   "Can-AI-achieve-intelligent-product": {
     "Category": "Development Challenges",
@@ -2456,8 +1966,6 @@ export const faq = {
     "Title": "Can AI achieve intelligent product recommendation?-Fastgpt",
     "Description": "Yes, modern AI technology is fully capable of achieving intelligent product recommendations. AI systems analyze vast datasets to identify patterns and user preferences, enabling highly relevant sugges",
     "Keywords": "Document AI, Intelligent Q&A, FastGPT, API Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-achieve-intelligent-product",
-    "Url": "/faq/Can-AI-achieve-intelligent-product.html"
   },
   "How-AI-intelligent-assistants-analyze": {
     "Category": "Development Challenges",
@@ -2466,8 +1974,6 @@ export const faq = {
     "Title": "How AI intelligent assistants analyze energy usage trends-Fastgpt",
     "Description": "AI intelligent assistants utilize machine learning algorithms to analyze historical and real-time energy consumption data, identifying patterns and predicting future trends. This automated analysis is",
     "Keywords": "Task Automation AI, GPT Integration, Open Source AI, AI Knowledge Management, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-analyze",
-    "Url": "/faq/How-AI-intelligent-assistants-analyze.html"
   },
   "How-AI-Helps-Optimize-Online": {
     "Category": "Development Challenges",
@@ -2476,8 +1982,6 @@ export const faq = {
     "Title": "How AI Helps Optimize Online and Offline Inventory-Fastgpt",
     "Description": "AI enhances inventory management by applying algorithms to optimize stock levels across physical stores and digital channels. It integrates data streams to achieve smarter replenishment decisions and ",
     "Keywords": "Document AI, LLM Development, Vector Search, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Optimize-Online",
-    "Url": "/faq/How-AI-Helps-Optimize-Online.html"
   },
   "How-Retailers-Use-AI-to": {
     "Category": "Development Challenges",
@@ -2486,8 +1990,6 @@ export const faq = {
     "Title": "How Retailers Use AI to Predict Holiday Sales-Fastgpt",
     "Description": "Retailers use artificial intelligence by analyzing historical sales data, market trends, and various demand signals to generate highly accurate forecasts of holiday sales volumes. AI systems process c",
     "Keywords": "Open Source AI, AI Automation, Intelligent Q&A, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-Retailers-Use-AI-to",
-    "Url": "/faq/How-Retailers-Use-AI-to.html"
   },
   "Can-AI-platforms-achieve-personalized": {
     "Category": "Development Challenges",
@@ -2496,8 +1998,6 @@ export const faq = {
     "Title": "Can AI platforms achieve personalized marketing?-Fastgpt",
     "Description": "AI platforms can achieve personalized marketing by leveraging algorithms to analyze user data and customize content delivery.  \n\nKey principles include collecting behavioral and demographic data, depl",
     "Keywords": "Smart Assistant, AI Chatbot, AI Platform, Enterprise AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-achieve-personalized",
-    "Url": "/faq/Can-AI-platforms-achieve-personalized.html"
   },
   "Can-AI-automatically-adjust-product": {
     "Category": "Development Challenges",
@@ -2506,8 +2006,6 @@ export const faq = {
     "Title": "Can AI automatically adjust product pricing strategies?-Fastgpt",
     "Description": "Yes, AI can automatically adjust product pricing strategies using algorithms that analyze vast amounts of data in real-time. This process is known as AI-driven dynamic pricing.\n\nKey factors enabling t",
     "Keywords": "AI Workflow, Smart Assistant, Open Source AI, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-adjust-product",
-    "Url": "/faq/Can-AI-automatically-adjust-product.html"
   },
   "How-AI-Identifies-High-Value-Customer": {
     "Category": "Development Challenges",
@@ -2516,8 +2014,6 @@ export const faq = {
     "Title": "How AI Identifies High-Value Customer Groups-Fastgpt",
     "Description": "AI identifies high-value customer groups by analyzing customer data using machine learning algorithms to pinpoint segments with the greatest potential for revenue, loyalty, or long-term profitability.",
     "Keywords": "Enterprise AI, Task Automation AI, API Integration, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Identifies-High-Value-Customer",
-    "Url": "/faq/How-AI-Identifies-High-Value-Customer.html"
   },
   "Can-AI-help-analyze-competitors'": {
     "Category": "Development Challenges",
@@ -2526,8 +2022,6 @@ export const faq = {
     "Title": "Can AI help analyze competitors' movements?-Fastgpt",
     "Description": "Yes, AI can significantly assist in analyzing competitors' movements. Modern AI systems efficiently process extensive market data to uncover insights into competitors' activities.\n\nAI analyzes competi",
     "Keywords": "AI Knowledge Management, AI Platform, AI Workflow, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-analyze-competitors'",
-    "Url": "/faq/Can-AI-help-analyze-competitors'.html"
   },
   "How-can-e-commerce-use-AI": {
     "Category": "Development Challenges",
@@ -2536,8 +2030,6 @@ export const faq = {
     "Title": "How can e-commerce use AI to improve logistics delivery speed-Fastgpt",
     "Description": "E-commerce companies can significantly accelerate logistics delivery times by integrating artificial intelligence technologies. AI enables smarter decision-making throughout the supply chain, optimizi",
     "Keywords": "Task Automation AI, Intelligent Q&A, API Integration, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-can-e-commerce-use-AI",
-    "Url": "/faq/How-can-e-commerce-use-AI.html"
   },
   "How-AI-platforms-improve-customer": {
     "Category": "Development Challenges",
@@ -2546,8 +2038,6 @@ export const faq = {
     "Title": "How AI platforms improve customer service response efficiency-Fastgpt",
     "Description": "AI platforms enhance customer service response efficiency by automating interactions and optimizing workflows using artificial intelligence. They significantly reduce wait times and handling durations",
     "Keywords": "Document AI, API Integration, AI Chatbot, AI Workflow, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-platforms-improve-customer",
-    "Url": "/faq/How-AI-platforms-improve-customer.html"
   },
   "Can-AI-automatically-generate-promotional": {
     "Category": "Data & Knowledge",
@@ -2556,8 +2046,6 @@ export const faq = {
     "Title": "Can AI automatically generate promotional content for Moments?-Fastgpt",
     "Description": "Yes, AI can automatically generate promotional content for WeChat Moments. Modern generative AI tools are specifically designed to create engaging social media text and visual concepts based on provid",
     "Keywords": "AI Workflow, GPT Integration, AI Platform, Smart Assistant, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-promotional",
-    "Url": "/faq/Can-AI-automatically-generate-promotional.html"
   },
   "How-AI-Intelligent-Assistants-Predict": {
     "Category": "Development Challenges",
@@ -2566,8 +2054,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Predict the Popularity of New Products-Fastgpt",
     "Description": "AI intelligent assistants predict new product popularity by analyzing historical and real-time data using machine learning algorithms. They can forecast demand trends before launch.  \n\nKey methods inc",
     "Keywords": "AI Workflow, FastGPT, Smart Assistant, Vector Search, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Predict",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Predict.html"
   },
   "How-AI-Improves-Member-Repurchase": {
     "Category": "Development Challenges",
@@ -2576,8 +2062,6 @@ export const faq = {
     "Title": "How AI Improves Member Repurchase Rate-Fastgpt",
     "Description": "AI leverages data analysis and predictive modeling to directly enhance member loyalty by identifying repurchase opportunities and personalizing interactions.  \nKey principles include analyzing histori",
     "Keywords": "Intelligent Q&A, Document AI, GPT Integration, AI Platform, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Improves-Member-Repurchase",
-    "Url": "/faq/How-AI-Improves-Member-Repurchase.html"
   },
   "Can-AI-platforms-optimize-supply": {
     "Category": "Development Challenges",
@@ -2586,8 +2070,6 @@ export const faq = {
     "Title": "Can AI platforms optimize supply chain structures?-Fastgpt",
     "Description": "Yes, AI platforms can effectively optimize supply chain structures. They leverage data-driven intelligence to enhance efficiency, reduce costs, and improve resilience across complex supply networks.\n\n",
     "Keywords": "GPT Integration, AI Knowledge Management, AI Automation, API Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-optimize-supply",
-    "Url": "/faq/Can-AI-platforms-optimize-supply.html"
   },
   "Can-AI-discover-potential-best-selling": {
     "Category": "Development Challenges",
@@ -2596,8 +2078,6 @@ export const faq = {
     "Title": "Can AI discover potential best-selling products-Fastgpt",
     "Description": "AI can indeed discover potential best-selling products by analyzing vast datasets to identify emerging market trends and consumer demands.\n\nIt leverages historical sales data, search trends, social me",
     "Keywords": "Smart Assistant, AI Automation, API Integration, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-discover-potential-best-selling",
-    "Url": "/faq/Can-AI-discover-potential-best-selling.html"
   },
   "How-AI-Helps-Manage-Multi-Channel": {
     "Category": "Development Challenges",
@@ -2606,8 +2086,6 @@ export const faq = {
     "Title": "How AI Helps Manage Multi-Channel Sales Data-Fastgpt",
     "Description": "AI enables the efficient unification, analysis, and interpretation of sales information aggregated from diverse online and offline channels. It automates complex data processing, transforming scattere",
     "Keywords": "AI Chatbot, AI Knowledge Management, API Integration, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Manage-Multi-Channel",
-    "Url": "/faq/How-AI-Helps-Manage-Multi-Channel.html"
   },
   "How-AI-Intelligent-Assistants-Improve": {
     "Category": "Development Challenges",
@@ -2616,8 +2094,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Improve Loading and Unloading Efficiency-Fastgpt",
     "Description": "AI intelligent assistants enhance loading and unloading operations by automating tasks, optimizing workflows, and providing real-time data-driven guidance. They improve speed, accuracy, and resource u",
     "Keywords": "API Integration, Enterprise AI, AI Platform, AI Automation, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Improve",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Improve.html"
   },
   "Can-AI-make-store-operations": {
     "Category": "Development Challenges",
@@ -2626,8 +2102,6 @@ export const faq = {
     "Title": "Can AI make store operations more intelligent?-Fastgpt",
     "Description": "AI can significantly enhance store operations through intelligent automation and data-driven insights. This transforms traditional retail management into adaptive, efficient systems.  \n\nKey applicatio",
     "Keywords": "Enterprise AI, AI Platform, AI Automation, Smart Assistant, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-make-store-operations",
-    "Url": "/faq/Can-AI-make-store-operations.html"
   },
   "How-can-the-education-industry": {
     "Category": "Development Challenges",
@@ -2636,8 +2110,6 @@ export const faq = {
     "Title": "How can the education industry use AI to improve teaching quality?-Fastgpt",
     "Description": "The education industry can leverage AI to enhance teaching quality primarily through personalizing learning experiences and automating administrative tasks. AI makes this feasible by analyzing student",
     "Keywords": "Open Source AI, Task Automation AI, API Integration, Intelligent Q&A, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-education-industry",
-    "Url": "/faq/How-can-the-education-industry.html"
   },
   "Can-AI-provide-personalized-learning": {
     "Category": "Development Challenges",
@@ -2646,8 +2118,6 @@ export const faq = {
     "Title": "Can AI provide personalized learning content recommendations?-Fastgpt",
     "Description": "Yes, AI can effectively provide personalized learning content recommendations. This capability leverages machine learning algorithms analyzing individual user data.\n\nPersonalization relies on data inp",
     "Keywords": "LLM Development, FastGPT, AI Automation, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-personalized-learning",
-    "Url": "/faq/Can-AI-provide-personalized-learning.html"
   },
   "How-AI-intelligent-assistants-grade": {
     "Category": "Development Challenges",
@@ -2656,8 +2126,6 @@ export const faq = {
     "Title": "How AI intelligent assistants grade homework and exams-Fastgpt",
     "Description": "AI intelligent assistants grade homework and exams by leveraging algorithms trained on large datasets to recognize patterns in student responses and compare them against expected answers or rubrics. A",
     "Keywords": "Task Automation AI, LLM Development, Vector Search, Document AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-grade",
-    "Url": "/faq/How-AI-intelligent-assistants-grade.html"
   },
   "How-can-AI-help-teachers": {
     "Category": "Development Challenges",
@@ -2666,8 +2134,6 @@ export const faq = {
     "Title": "How can AI help teachers develop teaching plans?-Fastgpt",
     "Description": "AI can help teachers develop teaching plans by automating routine tasks and providing personalized, data-driven suggestions for lesson content and structure. This assistance significantly speeds up th",
     "Keywords": "Enterprise AI, LLM Development, Task Automation AI, API Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-teachers",
-    "Url": "/faq/How-can-AI-help-teachers.html"
   },
   "How-training-institutions-use-AI": {
     "Category": "Development Challenges",
@@ -2676,8 +2142,6 @@ export const faq = {
     "Title": "How training institutions use AI to analyze students' proficiency levels-Fastgpt",
     "Description": "Training institutions can effectively leverage artificial intelligence to analyze student proficiency levels by processing diverse academic data. This involves deploying AI systems like machine learni",
     "Keywords": "Vector Search, LLM Development, Open Source AI, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-training-institutions-use-AI",
-    "Url": "/faq/How-training-institutions-use-AI.html"
   },
   "Can-AI-platforms-enhance-interactivity": {
     "Category": "Development Challenges",
@@ -2686,8 +2150,6 @@ export const faq = {
     "Title": "Can AI platforms enhance interactivity in online classrooms?-Fastgpt",
     "Description": "Yes, AI platforms can significantly enhance interactivity in online classrooms. They provide tools that actively engage students, moving beyond passive content delivery.\n\nAI achieves this through seve",
     "Keywords": "AI Automation, Document AI, AI Workflow, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-enhance-interactivity",
-    "Url": "/faq/Can-AI-platforms-enhance-interactivity.html"
   },
   "How-does-AI-track-students'": {
     "Category": "Development Challenges",
@@ -2696,8 +2158,6 @@ export const faq = {
     "Title": "How does AI track students' learning progress-Fastgpt",
     "Description": "AI systems track student learning progress by analyzing educational data through algorithms. This allows automated monitoring of academic development over time.\n\nKey methods include processing assignm",
     "Keywords": "LLM Development, Open Source AI, Task Automation AI, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-track-students'",
-    "Url": "/faq/How-does-AI-track-students'.html"
   },
   "How-AI-intelligent-assistants-identify": {
     "Category": "Development Challenges",
@@ -2706,8 +2166,6 @@ export const faq = {
     "Title": "How AI intelligent assistants identify learning difficulties-Fastgpt",
     "Description": "AI intelligent assistants identify learning difficulties by analyzing user interaction data, performance patterns, and behavioral signals during study sessions. This is feasible using advanced algorit",
     "Keywords": "LLM Development, Vector Search, GPT Integration, API Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-identify",
-    "Url": "/faq/How-AI-intelligent-assistants-identify.html"
   },
   "Can-AI-provide-real-time-question": {
     "Category": "Development Challenges",
@@ -2716,8 +2174,6 @@ export const faq = {
     "Title": "Can AI provide real-time question answering services?-Fastgpt",
     "Description": "AI can provide real-time question answering services. This capability is enabled by advanced natural language processing (NLP) and machine learning (ML) technologies integrated into responsive systems",
     "Keywords": "AI Automation, AI Knowledge Management, AI Workflow, Enterprise AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-real-time-question",
-    "Url": "/faq/Can-AI-provide-real-time-question.html"
   },
   "How-educational-institutions-use-AI": {
     "Category": "Development Challenges",
@@ -2726,8 +2182,6 @@ export const faq = {
     "Title": "How educational institutions use AI to reduce teachers' workload-Fastgpt",
     "Description": "Educational institutions use AI to significantly reduce teacher workload by automating administrative tasks and enhancing instructional support. AI tools can handle repetitive, time-consuming duties, ",
     "Keywords": "Intelligent Q&A, Vector Search, AI Workflow, Task Automation AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-educational-institutions-use-AI",
-    "Url": "/faq/How-educational-institutions-use-AI.html"
   },
   "How-can-AI-platforms-improve": {
     "Category": "Development Challenges",
@@ -2736,8 +2190,6 @@ export const faq = {
     "Title": "How can AI platforms improve the utilization rate of course resources-Fastgpt",
     "Description": "AI platforms boost course resource utilization primarily through adaptive learning techniques and data-driven content optimization. They intelligently match resources to learner needs, ensuring materi",
     "Keywords": "AI Automation, AI Chatbot, Enterprise AI, GPT Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-platforms-improve",
-    "Url": "/faq/How-can-AI-platforms-improve.html"
   },
   "Can-AI-generate-personalized-learning": {
     "Category": "Development Challenges",
@@ -2746,8 +2198,6 @@ export const faq = {
     "Title": "Can AI generate personalized learning reports?-Fastgpt",
     "Description": "Yes, AI can effectively generate personalized learning reports. This capability utilizes AI algorithms to analyze individual learner data and tailor insights specifically to each person's progress, st",
     "Keywords": "Vector Search, LLM Development, AI Workflow, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-personalized-learning",
-    "Url": "/faq/Can-AI-generate-personalized-learning.html"
   },
   "How-can-AI-help-parents": {
     "Category": "Development Challenges",
@@ -2756,8 +2206,6 @@ export const faq = {
     "Title": "How can AI help parents understand their children's learning situation?-Fastgpt",
     "Description": "Artificial intelligence provides tools for parents to monitor and understand their child's educational progress more effectively. These AI-powered solutions gather and analyze diverse learning data, c",
     "Keywords": "Enterprise AI, FastGPT, AI Platform, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-parents",
-    "Url": "/faq/How-can-AI-help-parents.html"
   },
   "How-AI-intelligent-assistants-optimize": {
     "Category": "Development Challenges",
@@ -2766,8 +2214,6 @@ export const faq = {
     "Title": "How AI intelligent assistants optimize class schedules-Fastgpt",
     "Description": "AI intelligent assistants optimize class schedules through automated algorithms that analyze constraints and preferences to find efficient, conflict-free timetables. This significantly reduces manual ",
     "Keywords": "Intelligent Q&A, Enterprise AI, Task Automation AI, Document AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-optimize",
-    "Url": "/faq/How-AI-intelligent-assistants-optimize.html"
   },
   "Can-AI-recommend-suitable-learning": {
     "Category": "Development Challenges",
@@ -2776,8 +2222,6 @@ export const faq = {
     "Title": "Can AI recommend suitable learning materials?-Fastgpt",
     "Description": "AI can recommend tailored learning materials through personalized algorithms and data analysis systems. This is feasible and increasingly common in educational technologies.\n\nEffective AI-based recomm",
     "Keywords": "Smart Assistant, FastGPT, AI Automation, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-suitable-learning",
-    "Url": "/faq/Can-AI-recommend-suitable-learning.html"
   },
   "How-AI-Enhances-the-Security": {
     "Category": "Development Challenges",
@@ -2786,8 +2230,6 @@ export const faq = {
     "Title": "How AI Enhances the Security of Online Exams-Fastgpt",
     "Description": "AI significantly enhances online exam security through technologies like behavior analytics, biometric verification, and automated proctoring. It enables robust detection of cheating attempts and ensu",
     "Keywords": "Document AI, AI Workflow, AI Knowledge Management, AI Chatbot, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Enhances-the-Security",
-    "Url": "/faq/How-AI-Enhances-the-Security.html"
   },
   "Can-AI-platforms-assist-in": {
     "Category": "Development Challenges",
@@ -2796,8 +2238,6 @@ export const faq = {
     "Title": "Can AI platforms assist in formulating educational policies?-Fastgpt",
     "Description": "Yes, AI platforms can significantly assist in formulating educational policies. They provide data-driven insights and analytical capabilities to support decision-making processes.\n\nAI platforms can an",
     "Keywords": "GPT Integration, Task Automation AI, AI Knowledge Management, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-assist-in",
-    "Url": "/faq/Can-AI-platforms-assist-in.html"
   },
   "Can-AI-identify-students'-potential": {
     "Category": "Development Challenges",
@@ -2806,8 +2246,6 @@ export const faq = {
     "Title": "Can AI identify students' potential strengths?-Fastgpt",
     "Description": "AI can identify potential student strengths through data analysis. This capability leverages machine learning to detect patterns and abilities beyond conventional assessments.\n\nKey principles include ",
     "Keywords": "Task Automation AI, AI Chatbot, AI Workflow, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-students'-potential",
-    "Url": "/faq/Can-AI-identify-students'-potential.html"
   },
   "How-AI-Improves-Teachers'-Teaching": {
     "Category": "Development Challenges",
@@ -2816,8 +2254,6 @@ export const faq = {
     "Title": "How AI Improves Teachers' Teaching Experience-Fastgpt",
     "Description": "Artificial intelligence enhances teachers' teaching experience by automating routine tasks and providing personalized insights. It enables educators to focus more on impactful instruction and student ",
     "Keywords": "AI Platform, Enterprise AI, Smart Assistant, GPT Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Improves-Teachers'-Teaching",
-    "Url": "/faq/How-AI-Improves-Teachers'-Teaching.html"
   },
   "How-can-the-medical-industry": {
     "Category": "Development Challenges",
@@ -2826,8 +2262,6 @@ export const faq = {
     "Title": "How can the medical industry use AI to improve diagnosis and treatment efficiency?-Fastgpt",
     "Description": "AI significantly enhances medical diagnosis and treatment efficiency by analyzing vast datasets quickly and identifying patterns beyond human capability. This improves accuracy, speeds up decision-mak",
     "Keywords": "AI Knowledge Management, Task Automation AI, Smart Assistant, AI Automation, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-medical-industry",
-    "Url": "/faq/How-can-the-medical-industry.html"
   },
   "Can-AI-assist-doctors-in": {
     "Category": "Development Challenges",
@@ -2836,8 +2270,6 @@ export const faq = {
     "Title": "Can AI assist doctors in making medical diagnoses?-Fastgpt",
     "Description": "Yes, AI can assist doctors in making medical diagnoses. It acts as a powerful tool to augment human expertise, not replace the physician's judgment and patient interaction.\n\nAI's effectiveness relies ",
     "Keywords": "Intelligent Q&A, AI Automation, Task Automation AI, AI Platform, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-doctors-in",
-    "Url": "/faq/Can-AI-assist-doctors-in.html"
   },
   "How-AI-Helps-in-Arranging": {
     "Category": "Development Challenges",
@@ -2846,8 +2278,6 @@ export const faq = {
     "Title": "How AI Helps in Arranging Surgery and Treatment Plans-Fastgpt",
     "Description": "AI assists in arranging surgery and treatment plans by analyzing patient data to recommend optimal surgical timing, procedural approaches, and personalized post-operative care pathways. It enhances th",
     "Keywords": "Open Source AI, AI Chatbot, AI Platform, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-in-Arranging",
-    "Url": "/faq/How-AI-Helps-in-Arranging.html"
   },
   "How-hospitals-use-AI-to": {
     "Category": "Development Challenges",
@@ -2856,8 +2286,6 @@ export const faq = {
     "Title": "How hospitals use AI to optimize the registration process-Fastgpt",
     "Description": "Hospitals use AI primarily to automate aspects of patient identity verification, insurance eligibility checks, and form pre-filling during registration. This significantly enhances accuracy and speeds",
     "Keywords": "Intelligent Q&A, FastGPT, AI Knowledge Management, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-hospitals-use-AI-to",
-    "Url": "/faq/How-hospitals-use-AI-to.html"
   },
   "Can-AI-platforms-predict-the": {
     "Category": "Development Challenges",
@@ -2866,8 +2294,6 @@ export const faq = {
     "Title": "Can AI platforms predict the demand for beds and medicines?-Fastgpt",
     "Description": "Yes, AI platforms can effectively predict the demand for beds and medicines. They leverage historical data and sophisticated algorithms to forecast future needs.\n\nThese predictions rely on high-qualit",
     "Keywords": "Smart Assistant, Document AI, LLM Development, Open Source AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-predict-the",
-    "Url": "/faq/Can-AI-platforms-predict-the.html"
   },
   "Can-AI-automatically-generate-discharge": {
     "Category": "Development Challenges",
@@ -2876,8 +2302,6 @@ export const faq = {
     "Title": "Can AI automatically generate discharge summaries?-Fastgpt",
     "Description": "Yes, AI can automatically generate draft discharge summaries. It functions as an assistive tool, leveraging medical data to create preliminary documents intended for clinician review and finalization.",
     "Keywords": "AI Chatbot, Smart Assistant, AI Knowledge Management, AI Workflow, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-discharge",
-    "Url": "/faq/Can-AI-automatically-generate-discharge.html"
   },
   "How-AI-Assists-in-Analyzing": {
     "Category": "Development Challenges",
@@ -2886,8 +2310,6 @@ export const faq = {
     "Title": "How AI Assists in Analyzing Medical Images-Fastgpt",
     "Description": "AI assists in analyzing medical images by using algorithms, particularly deep learning models trained on vast datasets, to automatically detect, highlight, and quantify patterns, anomalies, and potent",
     "Keywords": "AI Platform, API Integration, AI Chatbot, Open Source AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Assists-in-Analyzing",
-    "Url": "/faq/How-AI-Assists-in-Analyzing.html"
   },
   "Can-AI-monitor-patients'-rehabilitation": {
     "Category": "Development Challenges",
@@ -2896,8 +2318,6 @@ export const faq = {
     "Title": "Can AI monitor patients' rehabilitation progress?-Fastgpt",
     "Description": "AI can effectively monitor patients' rehabilitation progress. This application leverages sensors, wearables, and movement analysis technologies alongside AI algorithms to track patient performance and",
     "Keywords": "AI Knowledge Management, AI Chatbot, AI Platform, LLM Development, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-patients'-rehabilitation",
-    "Url": "/faq/Can-AI-monitor-patients'-rehabilitation.html"
   },
   "How-can-medical-institutions-use": {
     "Category": "Development Challenges",
@@ -2906,8 +2326,6 @@ export const faq = {
     "Title": "How can medical institutions use AI to reduce the misdiagnosis rate?-Fastgpt",
     "Description": "Medical institutions can leverage AI to assist doctors in diagnostic decisions, thereby reducing misdiagnosis rates. AI acts as a powerful supporting tool, analyzing vast datasets to highlight potenti",
     "Keywords": "AI Knowledge Management, Document AI, FastGPT, Smart Assistant, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-can-medical-institutions-use",
-    "Url": "/faq/How-can-medical-institutions-use.html"
   },
   "How-do-AI-platforms-protect": {
     "Category": "Development Challenges",
@@ -2916,8 +2334,6 @@ export const faq = {
     "Title": "How do AI platforms protect patients' privacy data-Fastgpt",
     "Description": "AI platforms protect patient privacy data through robust technical and administrative safeguards. Strict compliance with healthcare regulations like HIPAA and GDPR ensures legal adherence. These platf",
     "Keywords": "Open Source AI, Smart Assistant, API Integration, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-platforms-protect",
-    "Url": "/faq/How-do-AI-platforms-protect.html"
   },
   "Can-AI-identify-potential-public": {
     "Category": "Development Challenges",
@@ -2926,8 +2342,6 @@ export const faq = {
     "Title": "Can AI identify potential public health risks?-Fastgpt",
     "Description": "Yes, AI can identify potential public health risks. It analyzes vast amounts of data to detect patterns and signals indicative of emerging health threats significantly faster than traditional methods.",
     "Keywords": "GPT Integration, Open Source AI, AI Chatbot, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-potential-public",
-    "Url": "/faq/Can-AI-identify-potential-public.html"
   },
   "How-AI-Improves-Doctors'-Research": {
     "Category": "Development Challenges",
@@ -2936,8 +2350,6 @@ export const faq = {
     "Title": "How AI Improves Doctors' Research Efficiency-Fastgpt",
     "Description": "AI enhances doctors' research efficiency primarily by automating data-intensive tasks and uncovering insights within complex datasets. It enables faster analysis of large volumes of medical literature",
     "Keywords": "Vector Search, Intelligent Q&A, Enterprise AI, AI Platform, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Improves-Doctors'-Research",
-    "Url": "/faq/How-AI-Improves-Doctors'-Research.html"
   },
   "How-AI-Intelligent-Assistants-Optimize": {
     "Category": "Development Challenges",
@@ -2946,8 +2358,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Optimize the Return Process-Fastgpt",
     "Description": "AI intelligent assistants optimize the return process by automating tasks, predicting issues, and improving customer experience. They act as a central hub for managing returns more efficiently and cos",
     "Keywords": "Document AI, Enterprise AI, Open Source AI, API Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Optimize",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Optimize.html"
   },
   "Can-AI-provide-personalized-health": {
     "Category": "Development Challenges",
@@ -2956,8 +2366,6 @@ export const faq = {
     "Title": "Can AI provide personalized health advice?-Fastgpt",
     "Description": "Yes, AI can generate personalized health suggestions. It achieves this by analyzing individual health data through sophisticated algorithms to offer tailored insights.\n\nKey requirements include access",
     "Keywords": "Smart Assistant, AI Platform, AI Automation, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-personalized-health",
-    "Url": "/faq/Can-AI-provide-personalized-health.html"
   },
   "How-AI-Helps-Pharmaceutical-Companies": {
     "Category": "Development Challenges",
@@ -2966,8 +2374,6 @@ export const faq = {
     "Title": "How AI Helps Pharmaceutical Companies Develop New Drugs-Fastgpt",
     "Description": "AI accelerates and optimizes the drug discovery and development process for pharmaceutical companies by leveraging advanced computational techniques to analyze vast datasets, predict molecular behavio",
     "Keywords": "Smart Assistant, AI Knowledge Management, AI Platform, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Pharmaceutical-Companies",
-    "Url": "/faq/How-AI-Helps-Pharmaceutical-Companies.html"
   },
   "Can-AI-platforms-integrate-data": {
     "Category": "Development Challenges",
@@ -2976,8 +2382,6 @@ export const faq = {
     "Title": "Can AI platforms integrate data from different hospitals?-Fastgpt",
     "Description": "Yes, AI platforms can integrate data from different hospitals. This integration is technically feasible but requires addressing significant challenges related to standardization, governance, and priva",
     "Keywords": "Document AI, AI Workflow, Intelligent Q&A, Smart Assistant, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-integrate-data",
-    "Url": "/faq/Can-AI-platforms-integrate-data.html"
   },
   "Can-AI-predict-disease-transmission": {
     "Category": "Development Challenges",
@@ -2986,8 +2390,6 @@ export const faq = {
     "Title": "Can AI predict disease transmission trends?-Fastgpt",
     "Description": "Yes, AI can predict disease transmission trends. By analyzing vast amounts of data, AI techniques provide valuable insights into how infectious diseases may spread.\n\nAccurate predictions depend heavil",
     "Keywords": "AI Chatbot, Document AI, AI Knowledge Management, LLM Development, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-disease-transmission",
-    "Url": "/faq/Can-AI-predict-disease-transmission.html"
   },
   "How-AI-Reduces-Doctors'-Paperwork": {
     "Category": "Development Challenges",
@@ -2996,8 +2398,6 @@ export const faq = {
     "Title": "How AI Reduces Doctors' Paperwork-Fastgpt",
     "Description": "AI reduces doctors' paperwork by automating documentation tasks like note-taking and data entry, making it feasible through advanced technologies. This directly alleviates administrative burdens, allo",
     "Keywords": "Vector Search, AI Chatbot, AI Knowledge Management, Task Automation AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Reduces-Doctors'-Paperwork",
-    "Url": "/faq/How-AI-Reduces-Doctors'-Paperwork.html"
   },
   "How-can-the-logistics-industry": {
     "Category": "Development Challenges",
@@ -3006,8 +2406,6 @@ export const faq = {
     "Title": "How can the logistics industry use AI to optimize transportation routes-Fastgpt",
     "Description": "AI enables route optimization by analyzing complex variables to recommend the most efficient paths for deliveries. Logistics providers can implement AI-powered software specifically designed to solve ",
     "Keywords": "AI Chatbot, Vector Search, Intelligent Q&A, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-logistics-industry",
-    "Url": "/faq/How-can-the-logistics-industry.html"
   },
   "Can-AI-track-vehicle-positions": {
     "Category": "Development Challenges",
@@ -3016,8 +2414,6 @@ export const faq = {
     "Title": "Can AI track vehicle positions in real-time?-Fastgpt",
     "Description": "Yes, AI can track vehicle positions in real-time. This is achieved by integrating AI with positioning systems like GPS and communication networks.\n\nReal-time tracking relies on continuous data streams",
     "Keywords": "Document AI, AI Chatbot, AI Knowledge Management, Task Automation AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-track-vehicle-positions",
-    "Url": "/faq/Can-AI-track-vehicle-positions.html"
   },
   "How-do-AI-intelligent-assistants": {
     "Category": "Development Challenges",
@@ -3026,8 +2422,6 @@ export const faq = {
     "Title": "How do AI intelligent assistants predict housing price trends-Fastgpt",
     "Description": "AI intelligent assistants predict housing price trends using statistical modeling and machine learning techniques. They analyze vast datasets to identify patterns and relationships influencing propert",
     "Keywords": "GPT Integration, Document AI, Enterprise AI, AI Knowledge Management, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-intelligent-assistants",
-    "Url": "/faq/How-do-AI-intelligent-assistants.html"
   },
   "How-AI-Helps-Reduce-Transportation": {
     "Category": "Development Challenges",
@@ -3036,8 +2430,6 @@ export const faq = {
     "Title": "How AI Helps Reduce Transportation Delays-Fastgpt",
     "Description": "AI helps reduce transportation delays by analyzing data to predict disruptions and optimize logistics operations. This enables proactive adjustments to routes, schedules, and resource allocation.\n\nKey",
     "Keywords": "Vector Search, Intelligent Q&A, Enterprise AI, LLM Development, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Reduce-Transportation",
-    "Url": "/faq/How-AI-Helps-Reduce-Transportation.html"
   },
   "How-Logistics-Companies-Can-Reduce": {
     "Category": "Development Challenges",
@@ -3046,8 +2438,6 @@ export const faq = {
     "Title": "How Logistics Companies Can Reduce Fuel Consumption with AI-Fastgpt",
     "Description": "Logistics companies can significantly reduce fuel consumption by leveraging AI technologies. AI systems analyze vast datasets to identify fuel-saving opportunities across routing, driving behavior, an",
     "Keywords": "Open Source AI, Document AI, LLM Development, API Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-Logistics-Companies-Can-Reduce",
-    "Url": "/faq/How-Logistics-Companies-Can-Reduce.html"
   },
   "Can-AI-platforms-automatically-allocate": {
     "Category": "Development Challenges",
@@ -3056,8 +2446,6 @@ export const faq = {
     "Title": "Can AI platforms automatically allocate transportation capacity?-Fastgpt",
     "Description": "Yes, modern AI platforms are capable of automating transportation capacity allocation. They utilize advanced algorithms to dynamically assign carriers, routes, and vehicles to shipments without consta",
     "Keywords": "Document AI, FastGPT, AI Workflow, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-automatically-allocate",
-    "Url": "/faq/Can-AI-platforms-automatically-allocate.html"
   },
   "Can-AI-identify-high-risk-road": {
     "Category": "Development Challenges",
@@ -3066,8 +2454,6 @@ export const faq = {
     "Title": "Can AI identify high-risk road sections?-Fastgpt",
     "Description": "Yes, AI can effectively identify high-risk road sections. It utilizes machine learning to analyze vast datasets and detect patterns indicating elevated accident risks. This capability is becoming a co",
     "Keywords": "GPT Integration, Vector Search, FastGPT, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-high-risk-road",
-    "Url": "/faq/Can-AI-identify-high-risk-road.html"
   },
   "How-AI-Optimizes-Warehouse-Layout": {
     "Category": "Development Challenges",
@@ -3076,8 +2462,6 @@ export const faq = {
     "Title": "How AI Optimizes Warehouse Layout-Fastgpt",
     "Description": "AI optimizes warehouse layout by leveraging machine learning and data analytics to design efficient storage, picking paths, and workflow zones. This application enhances space utilization and operatio",
     "Keywords": "FastGPT, AI Automation, Intelligent Q&A, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Optimizes-Warehouse-Layout",
-    "Url": "/faq/How-AI-Optimizes-Warehouse-Layout.html"
   },
   "Can-AI-predict-holiday-traffic": {
     "Category": "Development Challenges",
@@ -3086,8 +2470,6 @@ export const faq = {
     "Title": "Can AI predict holiday traffic volume changes?-Fastgpt",
     "Description": "Yes, AI can predict holiday traffic volume changes with a significant degree of accuracy. Machine learning models analyze extensive datasets to forecast demand variations during specific holiday perio",
     "Keywords": "Task Automation AI, Open Source AI, AI Platform, AI Knowledge Management, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-holiday-traffic",
-    "Url": "/faq/Can-AI-predict-holiday-traffic.html"
   },
   "How-logistics-companies-can-use": {
     "Category": "Development Challenges",
@@ -3096,8 +2478,6 @@ export const faq = {
     "Title": "How logistics companies can use AI to improve customer satisfaction-Fastgpt",
     "Description": "Logistics companies can significantly boost customer satisfaction by leveraging AI technologies like predictive analytics, real-time tracking, and automated communication systems. This approach is bot",
     "Keywords": "AI Workflow, FastGPT, Intelligent Q&A, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-logistics-companies-can-use",
-    "Url": "/faq/How-logistics-companies-can-use.html"
   },
   "How-AI-platforms-reduce-empty": {
     "Category": "Development Challenges",
@@ -3106,8 +2486,6 @@ export const faq = {
     "Title": "How AI platforms reduce empty driving rates-Fastgpt",
     "Description": "AI platforms utilize advanced algorithms to minimize empty driving rates by optimizing route planning and load matching between available vehicles and transportation demands. This enables logistics op",
     "Keywords": "Enterprise AI, AI Workflow, AI Chatbot, GPT Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-platforms-reduce-empty",
-    "Url": "/faq/How-AI-platforms-reduce-empty.html"
   },
   "Can-AI-automatically-generate-freight": {
     "Category": "Development Challenges",
@@ -3116,8 +2494,6 @@ export const faq = {
     "Title": "Can AI automatically generate freight quotes?-Fastgpt",
     "Description": "AI can indeed automatically generate freight quotes. This functionality leverages machine learning and data analytics to provide rapid freight cost estimations.\n\nSuch systems typically require integra",
     "Keywords": "Document AI, Smart Assistant, API Integration, Enterprise AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-freight",
-    "Url": "/faq/Can-AI-automatically-generate-freight.html"
   },
   "How-AI-Helps-in-Planning": {
     "Category": "Development Challenges",
@@ -3126,8 +2502,6 @@ export const faq = {
     "Title": "How AI Helps in Planning Cross-Border Transportation Solutions-Fastgpt",
     "Description": "AI significantly enhances cross-border transportation planning by optimizing routes, predicting delays, analyzing costs, and managing risks using advanced data analysis and machine learning. This incr",
     "Keywords": "Task Automation AI, AI Chatbot, Document AI, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-in-Planning",
-    "Url": "/faq/How-AI-Helps-in-Planning.html"
   },
   "Can-AI-detect-abnormal-transportation": {
     "Category": "Development Challenges",
@@ -3136,8 +2510,6 @@ export const faq = {
     "Title": "Can AI detect abnormal transportation events?-Fastgpt",
     "Description": "Yes, AI can effectively detect abnormal transportation events. Leveraging vast amounts of sensor data (like GPS, cameras, and IoT devices) and advanced algorithms, AI identifies patterns signaling inc",
     "Keywords": "Intelligent Q&A, Open Source AI, Task Automation AI, GPT Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-detect-abnormal-transportation",
-    "Url": "/faq/Can-AI-detect-abnormal-transportation.html"
   },
   "How-AI-Reduces-Losses-in": {
     "Category": "Development Challenges",
@@ -3146,8 +2518,6 @@ export const faq = {
     "Title": "How AI Reduces Losses in Cold Chain Logistics-Fastgpt",
     "Description": "Yes, AI significantly reduces losses in cold chain logistics. It achieves this by providing enhanced monitoring, predictive capabilities, and optimization across the temperature-controlled supply chai",
     "Keywords": "AI Knowledge Management, Open Source AI, Document AI, Vector Search, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Reduces-Losses-in",
-    "Url": "/faq/How-AI-Reduces-Losses-in.html"
   },
   "Can-AI-help-realize-unmanned": {
     "Category": "Development Challenges",
@@ -3156,8 +2526,6 @@ export const faq = {
     "Title": "Can AI help realize unmanned delivery?-Fastgpt",
     "Description": "Yes, AI can significantly help realize unmanned delivery systems. It serves as the core technology enabling vehicles, drones, and robots to navigate autonomously and deliver goods without continuous h",
     "Keywords": "Intelligent Q&A, Vector Search, API Integration, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-realize-unmanned",
-    "Url": "/faq/Can-AI-help-realize-unmanned.html"
   },
   "How-AI-Supports-Responding-to": {
     "Category": "Development Challenges",
@@ -3166,8 +2534,6 @@ export const faq = {
     "Title": "How AI Supports Responding to Sudden Transportation Demands-Fastgpt",
     "Description": "AI enables rapid and optimized responses to sudden spikes or disruptions in transportation demand. It leverages predictive analytics, real-time data integration, and automated dispatch systems to dyna",
     "Keywords": "LLM Development, GPT Integration, Enterprise AI, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Supports-Responding-to",
-    "Url": "/faq/How-AI-Supports-Responding-to.html"
   },
   "How-can-the-real-estate": {
     "Category": "Development Challenges",
@@ -3176,8 +2542,6 @@ export const faq = {
     "Title": "How can the real estate industry use AI to improve sales conversion rates?-Fastgpt",
     "Description": "The real estate industry can significantly boost sales conversion rates by implementing AI technologies for targeted lead generation, personalized customer engagement, and predictive analytics. AI too",
     "Keywords": "Enterprise AI, Intelligent Q&A, AI Workflow, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-real-estate",
-    "Url": "/faq/How-can-the-real-estate.html"
   },
   "Can-AI-automatically-generate-real": {
     "Category": "Development Challenges",
@@ -3186,8 +2550,6 @@ export const faq = {
     "Title": "Can AI automatically generate real estate sales reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate real estate sales reports. This is achieved through specialized software that processes structured data about property listings, transactions, market trends, and age",
     "Keywords": "AI Chatbot, AI Knowledge Management, AI Automation, GPT Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-real",
-    "Url": "/faq/Can-AI-automatically-generate-real.html"
   },
   "How-AI-Helps-Customers-Match": {
     "Category": "Development Challenges",
@@ -3196,8 +2558,6 @@ export const faq = {
     "Title": "How AI Helps Customers Match Suitable Housing-Fastgpt",
     "Description": "AI helps customers match suitable housing by automating the property recommendation process. It analyzes vast datasets to identify homes aligning with a buyer's specific needs and preferences. This si",
     "Keywords": "API Integration, AI Knowledge Management, Smart Assistant, Vector Search, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Customers-Match",
-    "Url": "/faq/How-AI-Helps-Customers-Match.html"
   },
   "How-real-estate-companies-manage": {
     "Category": "Development Challenges",
@@ -3206,8 +2566,6 @@ export const faq = {
     "Title": "How real estate companies manage customer data with AI-Fastgpt",
     "Description": "Real estate companies leverage AI to systematically collect, analyze, and utilize customer data for enhanced service and decision-making. AI makes this feasible by automating complex data processing t",
     "Keywords": "FastGPT, AI Knowledge Management, Task Automation AI, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-real-estate-companies-manage",
-    "Url": "/faq/How-real-estate-companies-manage.html"
   },
   "Can-AI-platforms-automatically-handle": {
     "Category": "Development Challenges",
@@ -3216,8 +2574,6 @@ export const faq = {
     "Title": "Can AI platforms automatically handle home purchase inquiries?-Fastgpt",
     "Description": "AI platforms can automatically handle basic home purchase inquiries for qualified providers. This automation streamlines initial customer interactions and information gathering.\n\nThese systems use nat",
     "Keywords": "Smart Assistant, AI Workflow, Task Automation AI, Vector Search, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-automatically-handle",
-    "Url": "/faq/Can-AI-platforms-automatically-handle.html"
   },
   "Can-AI-optimize-real-estate": {
     "Category": "Development Challenges",
@@ -3226,8 +2582,6 @@ export const faq = {
     "Title": "Can AI optimize real estate marketing plans?-Fastgpt",
     "Description": "Yes, AI can effectively optimize real estate marketing plans. It analyzes large datasets to identify patterns and personalize outreach, improving campaign efficiency and ROI.\n\nAI requires access to qu",
     "Keywords": "AI Workflow, Enterprise AI, AI Knowledge Management, Smart Assistant, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-optimize-real-estate",
-    "Url": "/faq/Can-AI-optimize-real-estate.html"
   },
   "How-AI-Analyzes-Urban-Development": {
     "Category": "Development Challenges",
@@ -3236,8 +2590,6 @@ export const faq = {
     "Title": "How AI Analyzes Urban Development Trends-Fastgpt",
     "Description": "AI analyzes urban development trends by processing vast datasets using machine learning and advanced algorithms to identify patterns, forecast future growth, and inform planning decisions. It transfor",
     "Keywords": "AI Platform, LLM Development, Intelligent Q&A, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Analyzes-Urban-Development",
-    "Url": "/faq/How-AI-Analyzes-Urban-Development.html"
   },
   "How-AI-Intelligent-Assistants-Simplify": {
     "Category": "Development Challenges",
@@ -3246,8 +2598,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Simplify Real Estate Transaction Processes-Fastgpt",
     "Description": "AI intelligent assistants simplify real estate transactions by automating repetitive tasks, providing data-driven insights, and offering 24/7 support to all parties involved. They enhance efficiency a",
     "Keywords": "Smart Assistant, AI Workflow, LLM Development, Open Source AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Simplify",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Simplify.html"
   },
   "Can-AI-reduce-sales-follow-up": {
     "Category": "Development Challenges",
@@ -3256,8 +2606,6 @@ export const faq = {
     "Title": "Can AI reduce sales follow-up time?-Fastgpt",
     "Description": "Yes, AI can significantly reduce sales follow-up time. By automating routine tasks and optimizing processes, AI tools enable sales teams to focus their efforts more efficiently.\n\nKey mechanisms includ",
     "Keywords": "AI Workflow, Vector Search, LLM Development, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-reduce-sales-follow-up",
-    "Url": "/faq/Can-AI-reduce-sales-follow-up.html"
   },
   "How-real-estate-agents-use": {
     "Category": "Development Challenges",
@@ -3266,8 +2614,6 @@ export const faq = {
     "Title": "How real estate agents use AI to improve property viewing efficiency-Fastgpt",
     "Description": "Real estate agents can significantly enhance property viewing efficiency by implementing AI tools. AI facilitates automation, data analysis, and personalized experiences to optimize the showing proces",
     "Keywords": "LLM Development, GPT Integration, AI Workflow, Vector Search, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-real-estate-agents-use",
-    "Url": "/faq/How-real-estate-agents-use.html"
   },
   "How-do-AI-platforms-ensure": {
     "Category": "Development Challenges",
@@ -3276,8 +2622,6 @@ export const faq = {
     "Title": "How do AI platforms ensure the authenticity of housing listing information?-Fastgpt",
     "Description": "AI platforms employ automated verification tools and manual oversight processes to confirm listing authenticity. This typically involves cross-referencing data sources, scanning for anomalies, and inc",
     "Keywords": "Task Automation AI, GPT Integration, LLM Development, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-platforms-ensure",
-    "Url": "/faq/How-do-AI-platforms-ensure.html"
   },
   "Can-AI-provide-home-purchase": {
     "Category": "Development Challenges",
@@ -3286,8 +2630,6 @@ export const faq = {
     "Title": "Can AI provide home purchase risk assessment?-Fastgpt",
     "Description": "Yes, AI can provide significant support for home purchase risk assessment by analyzing large datasets to identify potential issues a human might miss.\n\nAI-powered risk assessment tools rely on algorit",
     "Keywords": "Open Source AI, FastGPT, Smart Assistant, Vector Search, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-home-purchase",
-    "Url": "/faq/Can-AI-provide-home-purchase.html"
   },
   "How-AI-Helps-in-Developing": {
     "Category": "Development Challenges",
@@ -3296,8 +2638,6 @@ export const faq = {
     "Title": "How AI Helps in Developing Rental Pricing Strategies-Fastgpt",
     "Description": "AI leverages data analysis and machine learning to recommend optimal rental prices based on market dynamics. It automates the process of assessing vast datasets to determine competitive and revenue-ma",
     "Keywords": "Enterprise AI, API Integration, FastGPT, AI Workflow, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-in-Developing",
-    "Url": "/faq/How-AI-Helps-in-Developing.html"
   },
   "Can-AI-assist-with-loan": {
     "Category": "Development Challenges",
@@ -3306,8 +2646,6 @@ export const faq = {
     "Title": "Can AI assist with loan applications and property transfers?-Fastgpt",
     "Description": "Yes, AI can significantly assist with loan applications and property transfers, primarily by automating tasks and providing guidance. It streamlines these complex processes, enhancing efficiency and u",
     "Keywords": "AI Platform, AI Workflow, API Integration, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-with-loan",
-    "Url": "/faq/Can-AI-assist-with-loan.html"
   },
   "How-does-AI-integrate-second-hand": {
     "Category": "Development Challenges",
@@ -3316,8 +2654,6 @@ export const faq = {
     "Title": "How does AI integrate second-hand housing market data-Fastgpt",
     "Description": "AI integrates second-hand housing market data by automatically collecting, processing, and analyzing vast volumes of information from diverse sources. It synthesizes disparate data points to generate ",
     "Keywords": "FastGPT, AI Platform, AI Knowledge Management, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-integrate-second-hand",
-    "Url": "/faq/How-does-AI-integrate-second-hand.html"
   },
   "Can-AI-platforms-predict-popular": {
     "Category": "Development Challenges",
@@ -3326,8 +2662,6 @@ export const faq = {
     "Title": "Can AI platforms predict popular investment regions?-Fastgpt",
     "Description": "AI platforms can predict popular investment regions by analyzing market data and identifying emerging trends. This prediction capability stems from processing diverse datasets to forecast area-specifi",
     "Keywords": "AI Chatbot, GPT Integration, AI Knowledge Management, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-predict-popular",
-    "Url": "/faq/Can-AI-platforms-predict-popular.html"
   },
   "Can-AI-Improve-the-Success": {
     "Category": "Development Challenges",
@@ -3336,8 +2670,6 @@ export const faq = {
     "Title": "Can AI Improve the Success Rate of Commercial Real Estate Leasing?-Fastgpt",
     "Description": "Yes, AI can significantly improve the success rate of commercial real estate leasing. It achieves this by automating tedious processes and applying data-driven insights to optimize pricing, tenant tar",
     "Keywords": "AI Workflow, AI Automation, AI Chatbot, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Improve-the-Success",
-    "Url": "/faq/Can-AI-Improve-the-Success.html"
   },
   "How-AI-simplifies-property-management": {
     "Category": "Development Challenges",
@@ -3346,8 +2678,6 @@ export const faq = {
     "Title": "How AI simplifies property management processes-Fastgpt",
     "Description": "Artificial intelligence simplifies property management by automating routine tasks and using data analysis for smarter operations. It enables faster tenant interactions, predictive maintenance, and da",
     "Keywords": "AI Chatbot, AI Automation, Smart Assistant, AI Workflow, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-simplifies-property-management",
-    "Url": "/faq/How-AI-simplifies-property-management.html"
   },
   "How-can-the-energy-industry": {
     "Category": "Development Challenges",
@@ -3356,8 +2686,6 @@ export const faq = {
     "Title": "How can the energy industry use AI to improve power generation efficiency?-Fastgpt",
     "Description": "The energy industry can use AI to optimize power generation operations and boost efficiency through predictive maintenance, demand forecasting, and real-time system adjustments. AI implementation is t",
     "Keywords": "Document AI, Smart Assistant, API Integration, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-energy-industry",
-    "Url": "/faq/How-can-the-energy-industry.html"
   },
   "Can-AI-predict-changes-in": {
     "Category": "Security & Compliance",
@@ -3366,8 +2694,6 @@ export const faq = {
     "Title": "Can AI predict changes in departmental workload?-Fastgpt",
     "Description": "AI can effectively predict changes in departmental workload with reasonable accuracy. Leveraging historical data, AI models forecast future demand and resource requirements.\n\nAccurate prediction relie",
     "Keywords": "Intelligent Q&A, AI Workflow, GPT Integration, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-changes-in",
-    "Url": "/faq/Can-AI-predict-changes-in.html"
   },
   "How-AI-intelligent-assistants-monitor": {
     "Category": "Development Challenges",
@@ -3376,8 +2702,6 @@ export const faq = {
     "Title": "How AI intelligent assistants monitor the operation of energy equipment-Fastgpt",
     "Description": "AI intelligent assistants monitor energy equipment operation through continuous analysis of real-time sensor data using machine learning and predictive analytics. They assess equipment health, perform",
     "Keywords": "GPT Integration, LLM Development, AI Automation, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-monitor",
-    "Url": "/faq/How-AI-intelligent-assistants-monitor.html"
   },
   "How-AI-Reduces-Energy-Loss": {
     "Category": "Development Challenges",
@@ -3386,8 +2710,6 @@ export const faq = {
     "Title": "How AI Reduces Energy Loss and Waste-Fastgpt",
     "Description": "AI significantly reduces energy loss and waste by intelligently monitoring, predicting, and optimizing energy consumption and distribution systems. It automates efficiency improvements across various ",
     "Keywords": "Open Source AI, Vector Search, GPT Integration, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Reduces-Energy-Loss",
-    "Url": "/faq/How-AI-Reduces-Energy-Loss.html"
   },
   "How-energy-companies-use-AI": {
     "Category": "Development Challenges",
@@ -3396,8 +2718,6 @@ export const faq = {
     "Title": "How energy companies use AI to optimize scheduling plans-Fastgpt",
     "Description": "Energy companies utilize artificial intelligence (AI) to optimize scheduling plans, significantly improving grid efficiency and resource allocation. AI enables more accurate forecasting and automated ",
     "Keywords": "FastGPT, Open Source AI, Vector Search, GPT Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-energy-companies-use-AI",
-    "Url": "/faq/How-energy-companies-use-AI.html"
   },
   "Can-AI-platforms-achieve-intelligent": {
     "Category": "Development Challenges",
@@ -3406,8 +2726,6 @@ export const faq = {
     "Title": "Can AI platforms achieve intelligent distribution of new energy?-Fastgpt",
     "Description": "AI platforms can achieve intelligent distribution of new energy. They leverage advanced algorithms to dynamically manage power generation, transmission, and consumption from renewable sources like sol",
     "Keywords": "AI Workflow, AI Chatbot, Document AI, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-achieve-intelligent",
-    "Url": "/faq/Can-AI-platforms-achieve-intelligent.html"
   },
   "Can-AI-predict-equipment-maintenance": {
     "Category": "Development Challenges",
@@ -3416,8 +2734,6 @@ export const faq = {
     "Title": "Can AI predict equipment maintenance needs?-Fastgpt",
     "Description": "Yes, AI can effectively predict equipment maintenance needs. This capability, known as Predictive Maintenance (PdM), leverages machine learning algorithms to forecast potential failures before they oc",
     "Keywords": "Smart Assistant, Open Source AI, AI Automation, Document AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-equipment-maintenance",
-    "Url": "/faq/Can-AI-predict-equipment-maintenance.html"
   },
   "How-AI-Helps-Balance-Peak": {
     "Category": "Development Challenges",
@@ -3426,8 +2742,6 @@ export const faq = {
     "Title": "How AI Helps Balance Peak and Off-Peak Electricity-Fastgpt",
     "Description": "AI effectively balances peak and off-peak electricity by predicting demand fluctuations and automatically optimizing energy dispatch from diverse sources, including storage systems like batteries. Thi",
     "Keywords": "Open Source AI, FastGPT, AI Chatbot, Vector Search, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Balance-Peak",
-    "Url": "/faq/How-AI-Helps-Balance-Peak.html"
   },
   "Can-AI-identify-potential-energy": {
     "Category": "Development Challenges",
@@ -3436,8 +2750,6 @@ export const faq = {
     "Title": "Can AI identify potential energy security risks?-Fastgpt",
     "Description": "Yes, AI can effectively identify potential energy security risks. Machine learning and advanced analytics provide powerful tools to proactively detect vulnerabilities and emerging threats.\n\nAI systems",
     "Keywords": "Smart Assistant, Document AI, Enterprise AI, Vector Search, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-potential-energy",
-    "Url": "/faq/Can-AI-identify-potential-energy.html"
   },
   "How-do-power-grid-companies": {
     "Category": "Development Challenges",
@@ -3446,8 +2758,6 @@ export const faq = {
     "Title": "How do power grid companies use AI to prevent large-scale power outages?-Fastgpt",
     "Description": "Power grid companies employ artificial intelligence to proactively identify and mitigate risks that could trigger large-scale outages. AI systems continuously monitor grid conditions and predict poten",
     "Keywords": "AI Workflow, Intelligent Q&A, AI Platform, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-do-power-grid-companies",
-    "Url": "/faq/How-do-power-grid-companies.html"
   },
   "Can-AI-automatically-generate-energy": {
     "Category": "Development Challenges",
@@ -3456,8 +2766,6 @@ export const faq = {
     "Title": "Can AI automatically generate energy efficiency reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate energy efficiency reports. This capability leverages machine learning and data analytics to process energy consumption data and produce structured insights.\n\nAI syst",
     "Keywords": "Task Automation AI, AI Knowledge Management, Open Source AI, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-energy",
-    "Url": "/faq/Can-AI-automatically-generate-energy.html"
   },
   "How-AI-Assists-in-Developing": {
     "Category": "Security & Compliance",
@@ -3466,8 +2774,6 @@ export const faq = {
     "Title": "How AI Assists in Developing Customer Care Plans-Fastgpt",
     "Description": "AI significantly enhances customer care plan development by automating insights generation and personalization using customer data analysis. It enables the creation of highly tailored and proactive su",
     "Keywords": "AI Automation, Enterprise AI, Open Source AI, Vector Search, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Assists-in-Developing",
-    "Url": "/faq/How-AI-Assists-in-Developing.html"
   },
   "How-AI-Intelligent-Assistants-Help": {
     "Category": "Development Challenges",
@@ -3476,8 +2782,6 @@ export const faq = {
     "Title": "How AI Intelligent Assistants Help with Carbon Emission Management-Fastgpt",
     "Description": "AI intelligent assistants support carbon emission management by automating data collection and analysis for tracking emissions across operations. These systems leverage machine learning to optimize en",
     "Keywords": "AI Chatbot, Vector Search, AI Workflow, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Intelligent-Assistants-Help",
-    "Url": "/faq/How-AI-Intelligent-Assistants-Help.html"
   },
   "Can-AI-optimize-the-operation": {
     "Category": "Development Challenges",
@@ -3486,8 +2790,6 @@ export const faq = {
     "Title": "Can AI optimize the operation of energy storage systems?-Fastgpt",
     "Description": "Yes, AI can significantly optimize the operation of energy storage systems (ESS). By analyzing vast operational data, AI enables smarter decisions to enhance performance, efficiency, and economic valu",
     "Keywords": "Task Automation AI, Open Source AI, AI Automation, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-optimize-the-operation",
-    "Url": "/faq/Can-AI-optimize-the-operation.html"
   },
   "How-AI-Predicts-Renewable-Energy": {
     "Category": "Development Challenges",
@@ -3496,8 +2798,6 @@ export const faq = {
     "Title": "How AI Predicts Renewable Energy Production-Fastgpt",
     "Description": "AI predicts renewable energy production by applying machine learning algorithms to analyze historical data and real-time inputs. This enables forecasting future output from sources like solar and wind",
     "Keywords": "Intelligent Q&A, Vector Search, AI Automation, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Predicts-Renewable-Energy",
-    "Url": "/faq/How-AI-Predicts-Renewable-Energy.html"
   },
   "Can-AI-platforms-monitor-energy": {
     "Category": "Development Challenges",
@@ -3506,8 +2806,6 @@ export const faq = {
     "Title": "Can AI platforms monitor energy market fluctuations?-Fastgpt",
     "Description": "Yes, AI platforms can effectively monitor energy market fluctuations. They utilize advanced analytics to process diverse data sources in real-time, capturing shifts in supply, demand, and pricing acro",
     "Keywords": "AI Platform, Enterprise AI, Document AI, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-platforms-monitor-energy",
-    "Url": "/faq/Can-AI-platforms-monitor-energy.html"
   },
   "Can-AI-help-achieve-green": {
     "Category": "Development Challenges",
@@ -3516,8 +2814,6 @@ export const faq = {
     "Title": "Can AI help achieve green and low-carbon goals?-Fastgpt",
     "Description": "AI can significantly advance green and low-carbon goals by optimizing energy use and reducing emissions. Its ability to analyze complex data makes it a crucial tool in the sustainability transition.\n\n",
     "Keywords": "AI Chatbot, Intelligent Q&A, Smart Assistant, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-achieve-green",
-    "Url": "/faq/Can-AI-help-achieve-green.html"
   },
   "How-AI-Improves-Service-Levels": {
     "Category": "Development Challenges",
@@ -3526,8 +2822,6 @@ export const faq = {
     "Title": "How AI Improves Service Levels in the Energy Industry-Fastgpt",
     "Description": "Artificial Intelligence enhances service levels in the energy industry by utilizing data analytics, automation, and predictive capabilities. It improves operational reliability, resource optimization,",
     "Keywords": "AI Automation, AI Chatbot, AI Knowledge Management, Smart Assistant, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Improves-Service-Levels",
-    "Url": "/faq/How-AI-Improves-Service-Levels.html"
   },
   "How-to-make-AI-intelligent": {
     "Category": "Security & Compliance",
@@ -3536,8 +2830,6 @@ export const faq = {
     "Title": "How to make AI intelligent assistants my office helpers-Fastgpt",
     "Description": "Turning AI assistants into effective office helpers involves implementing specialized tools designed for productivity enhancement. This is achievable using platforms like ChatGPT Enterprise, Microsoft",
     "Keywords": "AI Chatbot, Intelligent Q&A, FastGPT, AI Platform, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-intelligent",
-    "Url": "/faq/How-to-make-AI-intelligent.html"
   },
   "How-to-quickly-organize-meeting": {
     "Category": "Security & Compliance",
@@ -3546,8 +2838,6 @@ export const faq = {
     "Title": "How to quickly organize meeting minutes with AI-Fastgpt",
     "Description": "Organizing meeting minutes with AI uses advanced tools to automate transcription, summarization, and structuring, enabling rapid creation of concise, actionable records. This approach drastically cuts",
     "Keywords": "Intelligent Q&A, FastGPT, Enterprise AI, LLM Development, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-organize-meeting",
-    "Url": "/faq/How-to-quickly-organize-meeting.html"
   },
   "Can-AI-automatically-generate-meeting": {
     "Category": "Security & Compliance",
@@ -3556,8 +2846,6 @@ export const faq = {
     "Title": "Can AI automatically generate meeting minutes and key points?-Fastgpt",
     "Description": "Yes, AI can automatically generate meeting minutes and key points using speech recognition and natural language processing technologies. These systems transcribe spoken words and analyze the content t",
     "Keywords": "Task Automation AI, Enterprise AI, AI Chatbot, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-meeting",
-    "Url": "/faq/Can-AI-automatically-generate-meeting.html"
   },
   "How-to-get-AI-to": {
     "Category": "AI Basics & Terms",
@@ -3566,8 +2854,6 @@ export const faq = {
     "Title": "How to get AI to output success cases of similar enterprises-Fastgpt",
     "Description": "Yes, AI can generate success case studies for enterprises similar to a target company. This is achieved by training AI models on vast datasets containing business information and success stories, enab",
     "Keywords": "Vector Search, AI Chatbot, AI Workflow, GPT Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-get-AI-to",
-    "Url": "/faq/How-to-get-AI-to.html"
   },
   "Can-AI-transcribe-online-meetings": {
     "Category": "Security & Compliance",
@@ -3576,8 +2862,6 @@ export const faq = {
     "Title": "Can AI transcribe online meetings in real-time?-Fastgpt",
     "Description": "Yes, AI can transcribe online meetings in real-time. Modern automatic speech recognition (ASR) technology enables immediate conversion of spoken audio from meetings into text.\n\nThis capability relies ",
     "Keywords": "Enterprise AI, Document AI, AI Chatbot, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-transcribe-online-meetings",
-    "Url": "/faq/Can-AI-transcribe-online-meetings.html"
   },
   "How-to-make-AI-automatically": {
     "Category": "AI Basics & Terms",
@@ -3586,8 +2870,6 @@ export const faq = {
     "Title": "How to make AI automatically summarize practical experience and lessons learned-Fastgpt",
     "Description": "AI can automatically summarize practical experience and lessons learned by utilizing Natural Language Processing (NLP) techniques, specifically text summarization models. This process is feasible and ",
     "Keywords": "AI Chatbot, Intelligent Q&A, GPT Integration, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-automatically",
-    "Url": "/faq/How-to-make-AI-automatically.html"
   },
   "How-AI-assists-teams-in": {
     "Category": "Security & Compliance",
@@ -3596,8 +2878,6 @@ export const faq = {
     "Title": "How AI assists teams in assigning meeting tasks-Fastgpt",
     "Description": "AI can automate the assignment of action items discussed during meetings. This is feasible through natural language processing and integration with team workflow tools.\n\nKey principles involve analyzi",
     "Keywords": "AI Platform, AI Chatbot, Smart Assistant, Open Source AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-assists-teams-in",
-    "Url": "/faq/How-AI-assists-teams-in.html"
   },
   "Can-AI-automatically-remind-of": {
     "Category": "Security & Compliance",
@@ -3606,8 +2886,6 @@ export const faq = {
     "Title": "Can AI automatically remind of key activity nodes?-Fastgpt",
     "Description": "Yes, AI can automatically remind stakeholders of key activity nodes. Advanced AI systems are capable of identifying critical deadlines and milestones based on project data and programmed rules.  \n\nEff",
     "Keywords": "LLM Development, Open Source AI, Intelligent Q&A, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-remind-of",
-    "Url": "/faq/Can-AI-automatically-remind-of.html"
   },
   "Can-AI-generate-a-meeting": {
     "Category": "Security & Compliance",
@@ -3616,8 +2894,6 @@ export const faq = {
     "Title": "Can AI generate a meeting PPT outline with one click?-Fastgpt",
     "Description": "AI can generate meeting PPT outlines with one click by converting raw text prompts into structured slide content. This capability requires users to provide clear meeting objectives and key information",
     "Keywords": "Vector Search, FastGPT, GPT Integration, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-a-meeting",
-    "Url": "/faq/Can-AI-generate-a-meeting.html"
   },
   "How-to-use-AI-to": {
     "Category": "AI Basics & Terms",
@@ -3626,8 +2902,6 @@ export const faq = {
     "Title": "How to use AI to assist in generating new product promotion plans-Fastgpt",
     "Description": "AI can assist marketing teams in generating data-informed, creative new product promotion concepts efficiently. This involves leveraging AI tools for ideation, targeting, and message optimization.\n\nKe",
     "Keywords": "AI Chatbot, AI Platform, Open Source AI, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-use-AI-to",
-    "Url": "/faq/How-to-use-AI-to.html"
   },
   "Can-AI-automatically-assign-tasks": {
     "Category": "Security & Compliance",
@@ -3636,8 +2910,6 @@ export const faq = {
     "Title": "Can AI automatically assign tasks based on project progress?-Fastgpt",
     "Description": "Yes, AI can automatically assign tasks based on project progress when integrated with appropriate project management systems and data. This capability relies on predefined logic, machine learning mode",
     "Keywords": "Intelligent Q&A, LLM Development, Document AI, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-assign-tasks",
-    "Url": "/faq/Can-AI-automatically-assign-tasks.html"
   },
   "Can-AI-automatically-organize-key": {
     "Category": "Security & Compliance",
@@ -3646,8 +2918,6 @@ export const faq = {
     "Title": "Can AI automatically organize key information from group chats?-Fastgpt",
     "Description": "Yes, AI can automatically organize key information from group chats. This is achieved using natural language processing (NLP) and machine learning technologies.\n\nKey principles involve analyzing chat ",
     "Keywords": "Document AI, AI Workflow, AI Knowledge Management, Enterprise AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-key",
-    "Url": "/faq/Can-AI-automatically-organize-key.html"
   },
   "How-to-quickly-search-internal": {
     "Category": "Security & Compliance",
@@ -3656,8 +2926,6 @@ export const faq = {
     "Title": "How to quickly search internal company materials using AI-Fastgpt",
     "Description": "AI enables quick internal company material search by leveraging natural language understanding to locate relevant information across documents, wikis, and databases. This technology provides precise a",
     "Keywords": "Vector Search, API Integration, FastGPT, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-search-internal",
-    "Url": "/faq/How-to-quickly-search-internal.html"
   },
   "How-AI-Helps-Cross-Departmental-Access": {
     "Category": "Security & Compliance",
@@ -3666,8 +2934,6 @@ export const faq = {
     "Title": "How AI Helps Cross-Departmental Access to Required Files-Fastgpt",
     "Description": "AI facilitates secure cross-departmental access to required files by automating permissions, enhancing search, and translating content. It removes traditional barriers while maintaining governance.\n\nK",
     "Keywords": "AI Platform, Document AI, Task Automation AI, AI Chatbot, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Cross-Departmental-Access",
-    "Url": "/faq/How-AI-Helps-Cross-Departmental-Access.html"
   },
   "Can-AI-search-for-historical": {
     "Category": "Security & Compliance",
@@ -3676,8 +2942,6 @@ export const faq = {
     "Title": "Can AI search for historical emails based on keywords?-Fastgpt",
     "Description": "Yes, modern AI-powered email systems can efficiently search historical emails using keywords. This functionality leverages natural language processing and machine learning to scan large volumes of ema",
     "Keywords": "AI Chatbot, API Integration, AI Knowledge Management, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-search-for-historical",
-    "Url": "/faq/Can-AI-search-for-historical.html"
   },
   "Can-AI-automatically-organize-project-related": {
     "Category": "Security & Compliance",
@@ -3686,8 +2950,6 @@ export const faq = {
     "Title": "Can AI automatically organize project-related materials?-Fastgpt",
     "Description": "Yes, AI can automatically organize project-related materials. This capability leverages machine learning algorithms specifically designed for document processing and classification.\n\nAI-driven organiz",
     "Keywords": "Enterprise AI, Smart Assistant, AI Workflow, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-project-related",
-    "Url": "/faq/Can-AI-automatically-organize-project-related.html"
   },
   "Can-AI-automatically-generate-daily": {
     "Category": "Security & Compliance",
@@ -3696,8 +2958,6 @@ export const faq = {
     "Title": "Can AI automatically generate daily and weekly reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate daily and weekly reports. Advanced systems leverage data integration, natural language generation (NLG), and machine learning to transform structured data into coher",
     "Keywords": "AI Chatbot, Task Automation AI, Document AI, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-daily",
-    "Url": "/faq/Can-AI-automatically-generate-daily.html"
   },
   "How-to-make-AI-remind": {
     "Category": "Productivity & Collaboration",
@@ -3706,8 +2966,6 @@ export const faq = {
     "Title": "How to make AI remind the host to pay attention to customer questions-Fastgpt",
     "Description": "AI can effectively remind hosts to address customer questions during interactions by implementing real-time monitoring and alert systems.  \n\nKey elements include configuring AI with natural language p",
     "Keywords": "AI Chatbot, AI Knowledge Management, Smart Assistant, AI Platform, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-remind",
-    "Url": "/faq/How-to-make-AI-remind.html"
   },
   "How-AI-Helps-Plan-Team": {
     "Category": "Security & Compliance",
@@ -3716,8 +2974,6 @@ export const faq = {
     "Title": "How AI Helps Plan Team Work Schedules-Fastgpt",
     "Description": "AI automates team work schedule planning by intelligently matching employee availability, skills, and preferences with shift requirements and business goals. It uses optimization algorithms to create ",
     "Keywords": "LLM Development, API Integration, AI Workflow, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Plan-Team",
-    "Url": "/faq/How-AI-Helps-Plan-Team.html"
   },
   "Can-AI-automatically-count-the": {
     "Category": "Security & Compliance",
@@ -3726,8 +2982,6 @@ export const faq = {
     "Title": "Can AI automatically count the task completion status of each member?-Fastgpt",
     "Description": "Yes, AI can automatically count the task completion status of each team member. This functionality leverages AI-powered features within project management and workflow automation tools.\n\nFor this auto",
     "Keywords": "Task Automation AI, API Integration, AI Knowledge Management, AI Chatbot, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-count-the",
-    "Url": "/faq/Can-AI-automatically-count-the.html"
   },
   "Can-AI-analyze-project-risk": {
     "Category": "Security & Compliance",
@@ -3736,8 +2990,6 @@ export const faq = {
     "Title": "Can AI analyze project risk points?-Fastgpt",
     "Description": "Yes, AI can effectively analyze project risk points. Machine learning and natural language processing enable AI systems to identify, assess, and predict potential risks in projects.\n\nAI analyzes histo",
     "Keywords": "AI Knowledge Management, Intelligent Q&A, Document AI, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-project-risk",
-    "Url": "/faq/Can-AI-analyze-project-risk.html"
   },
   "How-to-make-AI-predict": {
     "Category": "AI Basics & Terms",
@@ -3746,8 +2998,6 @@ export const faq = {
     "Title": "How to make AI predict the potential of a product to become a hit in advance-Fastgpt",
     "Description": "AI can predict a product's hit potential by analyzing diverse data sources through advanced machine learning models. This approach identifies patterns indicative of future success.\n\nKey principles inc",
     "Keywords": "Open Source AI, Vector Search, AI Workflow, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-predict",
-    "Url": "/faq/How-to-make-AI-predict.html"
   },
   "Can-AI-generate-project-progress": {
     "Category": "Security & Compliance",
@@ -3756,8 +3006,6 @@ export const faq = {
     "Title": "Can AI generate project progress charts with one click?-Fastgpt",
     "Description": "AI can indeed generate project progress charts with a single click using specialized tools and platforms. Modern AI-powered project management software offers this capability, automating the chart cre",
     "Keywords": "GPT Integration, API Integration, LLM Development, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-project-progress",
-    "Url": "/faq/Can-AI-generate-project-progress.html"
   },
   "How-to-optimize-project-management": {
     "Category": "Security & Compliance",
@@ -3766,8 +3014,6 @@ export const faq = {
     "Title": "How to optimize project management processes with AI-Fastgpt",
     "Description": "Optimizing project management with AI involves leveraging algorithms to enhance efficiency, automate tasks, predict risks, and improve decision-making and resource allocation. It is achievable through",
     "Keywords": "API Integration, AI Knowledge Management, Smart Assistant, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-optimize-project-management",
-    "Url": "/faq/How-to-optimize-project-management.html"
   },
   "How-can-AI-help-improve": {
     "Category": "Security & Compliance",
@@ -3776,8 +3022,6 @@ export const faq = {
     "Title": "How can AI help improve cross-departmental collaboration?-Fastgpt",
     "Description": "AI enables enhanced cross-departmental collaboration by automating workflows, facilitating seamless information exchange, and providing actionable insights. It acts as a unifying tool to bridge organi",
     "Keywords": "Task Automation AI, AI Chatbot, AI Automation, FastGPT, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-improve",
-    "Url": "/faq/How-can-AI-help-improve.html"
   },
   "Can-AI-automatically-record-the": {
     "Category": "Security & Compliance",
@@ -3786,8 +3030,6 @@ export const faq = {
     "Title": "Can AI automatically record the outcomes of department meetings?-Fastgpt",
     "Description": "Yes, AI technology can automatically record the outcomes of department meetings. This capability relies on combining speech-to-text transcription, natural language processing (NLP), and summarization ",
     "Keywords": "Open Source AI, AI Chatbot, AI Automation, AI Platform, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-record-the",
-    "Url": "/faq/Can-AI-automatically-record-the.html"
   },
   "How-to-make-AI-improve": {
     "Category": "AI Basics & Terms",
@@ -3796,8 +3038,6 @@ export const faq = {
     "Title": "How to make AI improve the efficiency of after-sales support-Fastgpt",
     "Description": "AI significantly enhances after-sales support efficiency by automating routine tasks and enabling faster, more accurate customer resolutions. Its application spans chatbots for instant responses, inte",
     "Keywords": "Open Source AI, AI Platform, LLM Development, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-improve",
-    "Url": "/faq/How-to-make-AI-improve.html"
   },
   "Can-AI-monitor-and-remind": {
     "Category": "Security & Compliance",
@@ -3806,8 +3046,6 @@ export const faq = {
     "Title": "Can AI monitor and remind about critical deadlines?-Fastgpt",
     "Description": "Yes, AI can effectively monitor deadlines and provide proactive reminders. AI-powered systems automate the tracking of critical time constraints across various data sources.\n\nThese systems integrate w",
     "Keywords": "AI Knowledge Management, Vector Search, Task Automation AI, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-and-remind",
-    "Url": "/faq/Can-AI-monitor-and-remind.html"
   },
   "How-to-quickly-generate-a": {
     "Category": "Security & Compliance",
@@ -3816,8 +3054,6 @@ export const faq = {
     "Title": "How to quickly generate a weekly work report summary using AI-Fastgpt",
     "Description": "Using AI tools automates the creation of weekly work report summaries, significantly saving time by transforming raw activity data into concise, structured reports.\nProvide detailed input on completed",
     "Keywords": "Vector Search, Task Automation AI, AI Workflow, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-generate-a",
-    "Url": "/faq/How-to-quickly-generate-a.html"
   },
   "How-AI-Assists-in-Handling": {
     "Category": "Security & Compliance",
@@ -3826,8 +3062,6 @@ export const faq = {
     "Title": "How AI Assists in Handling Daily Repetitive Tasks-Fastgpt",
     "Description": "AI significantly automates routine daily tasks by handling rule-based, repetitive activities without human intervention. This allows individuals and organizations to reallocate time towards higher-val",
     "Keywords": "LLM Development, Vector Search, AI Platform, AI Workflow, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Assists-in-Handling",
-    "Url": "/faq/How-AI-Assists-in-Handling.html"
   },
   "Can-AI-predict-workload-based": {
     "Category": "Security & Compliance",
@@ -3836,8 +3070,6 @@ export const faq = {
     "Title": "Can AI predict workload based on historical data?-Fastgpt",
     "Description": "AI can predict future workload with significant accuracy by analyzing historical data patterns. This application leverages machine learning to identify trends and correlations.\n\nSuccessful prediction ",
     "Keywords": "AI Platform, Smart Assistant, AI Chatbot, Enterprise AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-workload-based",
-    "Url": "/faq/Can-AI-predict-workload-based.html"
   },
   "Can-AI-automatically-generate-leave": {
     "Category": "Security & Compliance",
@@ -3846,8 +3078,6 @@ export const faq = {
     "Title": "Can AI automatically generate leave reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate leave reports. Modern AI technologies, particularly Natural Language Processing (NLP) algorithms, enable the creation of structured reports based on input data.\n\nKey",
     "Keywords": "Enterprise AI, Vector Search, AI Automation, AI Workflow, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-leave",
-    "Url": "/faq/Can-AI-automatically-generate-leave.html"
   },
   "How-to-make-AI-better": {
     "Category": "Security & Compliance",
@@ -3856,8 +3086,6 @@ export const faq = {
     "Title": "How to make AI better manage daily task lists-Fastgpt",
     "Description": "Yes, AI can significantly enhance daily task list management through automation, prioritization, and smart suggestions. It acts as a powerful assistant to reduce cognitive load and improve efficiency.",
     "Keywords": "AI Platform, Document AI, AI Workflow, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-better",
-    "Url": "/faq/How-to-make-AI-better.html"
   },
   "Can-AI-automatically-arrange-work": {
     "Category": "Security & Compliance",
@@ -3866,8 +3094,6 @@ export const faq = {
     "Title": "Can AI automatically arrange work based on priority?-Fastgpt",
     "Description": "Yes, AI can automatically arrange work based on priority. Modern AI systems leverage algorithms and data analysis to intelligently sequence tasks according to their importance and urgency.\n\nAI determi",
     "Keywords": "Task Automation AI, AI Platform, Intelligent Q&A, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-arrange-work",
-    "Url": "/faq/Can-AI-automatically-arrange-work.html"
   },
   "How-to-Use-AI-to": {
     "Category": "Data & Knowledge",
@@ -3876,8 +3102,6 @@ export const faq = {
     "Title": "How to Use AI to Write Attention-Grabbing Headlines-Fastgpt",
     "Description": "Leveraging AI tools enables efficient headline generation by analyzing vast datasets to identify patterns that capture attention. These systems can produce multiple compelling options based on your co",
     "Keywords": "AI Chatbot, Vector Search, Enterprise AI, Open Source AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Use-AI-to",
-    "Url": "/faq/How-to-Use-AI-to.html"
   },
   "How-AI-Helps-Quickly-Filter": {
     "Category": "Security & Compliance",
@@ -3886,8 +3110,6 @@ export const faq = {
     "Title": "How AI Helps Quickly Filter Email Attachments-Fastgpt",
     "Description": "AI enables rapid email attachment filtering through automated analysis of file content, attributes, and context. This technology automatically identifies, sorts, and prioritizes important or relevant ",
     "Keywords": "Vector Search, AI Knowledge Management, FastGPT, AI Platform, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Quickly-Filter",
-    "Url": "/faq/How-AI-Helps-Quickly-Filter.html"
   },
   "Can-AI-automatically-reply-to": {
     "Category": "Security & Compliance",
@@ -3896,8 +3118,6 @@ export const faq = {
     "Title": "Can AI automatically reply to common work emails?-Fastgpt",
     "Description": "Yes, AI can automatically reply to common work emails using natural language processing and predefined rules. This capability is both technologically feasible and increasingly common.\n\nAI-driven email",
     "Keywords": "Open Source AI, API Integration, AI Chatbot, LLM Development, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-reply-to",
-    "Url": "/faq/Can-AI-automatically-reply-to.html"
   },
   "Can-AI-analyze-email-content": {
     "Category": "Security & Compliance",
@@ -3906,8 +3126,6 @@ export const faq = {
     "Title": "Can AI analyze email content and generate summaries?-Fastgpt",
     "Description": "Yes, AI can effectively analyze email content and automatically generate summaries. Modern Natural Language Processing (NLP) models are specifically designed to understand text, extract key points, an",
     "Keywords": "API Integration, Intelligent Q&A, Open Source AI, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-email-content",
-    "Url": "/faq/Can-AI-analyze-email-content.html"
   },
   "How-to-make-AI-intelligently": {
     "Category": "Security & Compliance",
@@ -3916,8 +3134,6 @@ export const faq = {
     "Title": "How to make AI intelligently search historical files-Fastgpt",
     "Description": "AI-powered historical file search employs natural language processing and machine learning to intelligently retrieve relevant information from archived documents. It is feasible and implemented using ",
     "Keywords": "FastGPT, Intelligent Q&A, Smart Assistant, LLM Development, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-intelligently",
-    "Url": "/faq/How-to-make-AI-intelligently.html"
   },
   "Can-AI-remind-me-to": {
     "Category": "Security & Compliance",
@@ -3926,8 +3142,6 @@ export const faq = {
     "Title": "Can AI remind me to handle urgent emails in a timely manner?-Fastgpt",
     "Description": "Yes, AI can effectively remind you to handle urgent emails in a timely manner. This capability leverages integrated features within email platforms or specialized productivity tools.\n\nKey requirements",
     "Keywords": "Vector Search, Document AI, FastGPT, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-remind-me-to",
-    "Url": "/faq/Can-AI-remind-me-to.html"
   },
   "How-AI-Helps-Automatically-Generate": {
     "Category": "Security & Compliance",
@@ -3936,8 +3150,6 @@ export const faq = {
     "Title": "How AI Helps Automatically Generate Customer Communication Records-Fastgpt",
     "Description": "AI automatically generates customer communication records by using natural language processing (NLP) and speech recognition technologies. It transcribes spoken conversations from calls or video chats ",
     "Keywords": "Vector Search, AI Chatbot, Smart Assistant, AI Knowledge Management, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Automatically-Generate",
-    "Url": "/faq/How-AI-Helps-Automatically-Generate.html"
   },
   "Can-AI-convert-voice-calls": {
     "Category": "Security & Compliance",
@@ -3946,8 +3158,6 @@ export const faq = {
     "Title": "Can AI convert voice calls into written reports?-Fastgpt",
     "Description": "Yes, AI can effectively convert voice calls into written reports. This technology automates the process of transforming spoken conversations into structured, written summaries.\n\nAI systems rely on spe",
     "Keywords": "AI Automation, AI Workflow, LLM Development, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-convert-voice-calls",
-    "Url": "/faq/Can-AI-convert-voice-calls.html"
   },
   "How-to-automatically-organize-conference": {
     "Category": "Security & Compliance",
@@ -3956,8 +3166,6 @@ export const faq = {
     "Title": "How to automatically organize conference call minutes with AI？-Fastgpt",
     "Description": "AI can automatically transcribe, summarize, and organize conference call minutes using speech recognition and natural language processing (NLP). This technology analyzes audio recordings to extract ke",
     "Keywords": "AI Platform, AI Automation, Smart Assistant, Enterprise AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-automatically-organize-conference",
-    "Url": "/faq/How-to-automatically-organize-conference.html"
   },
   "Can-AI-quickly-extract-the": {
     "Category": "Content & Creativity",
@@ -3966,8 +3174,6 @@ export const faq = {
     "Title": "Can AI quickly extract the core content of long documents?-Fastgpt",
     "Description": "Yes, AI can quickly extract core content from long documents with high accuracy. Advanced natural language processing models are specifically designed for efficient summarization and key point identif",
     "Keywords": "Task Automation AI, AI Platform, LLM Development, API Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-extract-the",
-    "Url": "/faq/Can-AI-quickly-extract-the.html"
   },
   "Can-AI-generate-customer-demand": {
     "Category": "Security & Compliance",
@@ -3976,8 +3182,6 @@ export const faq = {
     "Title": "Can AI generate customer demand analysis forms?-Fastgpt",
     "Description": "Yes, AI can generate customer demand analysis forms. Generative AI models can process large datasets and synthesize information to create structured forms capturing key customer requirements and prefe",
     "Keywords": "Vector Search, AI Workflow, Smart Assistant, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-customer-demand",
-    "Url": "/faq/Can-AI-generate-customer-demand.html"
   },
   "How-AI-Helps-Teams-Share": {
     "Category": "Security & Compliance",
@@ -3986,8 +3190,6 @@ export const faq = {
     "Title": "How AI Helps Teams Share Customer Data-Fastgpt",
     "Description": "AI automates and streamifies the process of sharing customer data across teams. It integrates diverse data sources into a centralized platform, enabling controlled and efficient access.\n\nKey elements ",
     "Keywords": "AI Platform, Document AI, Vector Search, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Teams-Share",
-    "Url": "/faq/How-AI-Helps-Teams-Share.html"
   },
   "Can-AI-automatically-generate-sales": {
     "Category": "Security & Compliance",
@@ -3996,8 +3198,6 @@ export const faq = {
     "Title": "Can AI automatically generate sales daily reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate sales daily reports. It leverages technology to transform raw sales data into structured, insightful summaries without manual effort.\n\nThis automation requires acces",
     "Keywords": "Task Automation AI, AI Knowledge Management, AI Automation, GPT Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-sales",
-    "Url": "/faq/Can-AI-automatically-generate-sales.html"
   },
   "Can-AI-integrate-customer-chat": {
     "Category": "Security & Compliance",
@@ -4006,8 +3206,6 @@ export const faq = {
     "Title": "Can AI integrate customer chat records?-Fastgpt",
     "Description": "AI is capable of integrating customer chat records. It can consolidate, analyze, and leverage conversation history from various chat platforms to generate insights and improve support.\n\nAI integration",
     "Keywords": "Document AI, Vector Search, LLM Development, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-integrate-customer-chat",
-    "Url": "/faq/Can-AI-integrate-customer-chat.html"
   },
   "Can-AI-automatically-generate-quotation": {
     "Category": "Security & Compliance",
@@ -4016,8 +3214,6 @@ export const faq = {
     "Title": "Can AI automatically generate quotation templates?-Fastgpt",
     "Description": "AI can automatically generate quotation templates using natural language processing and data analysis capabilities. This automation is both feasible and increasingly common in business settings.\n\nAI s",
     "Keywords": "Enterprise AI, FastGPT, GPT Integration, Task Automation AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-quotation",
-    "Url": "/faq/Can-AI-automatically-generate-quotation.html"
   },
   "How-AI-Helps-Prepare-Client": {
     "Category": "Security & Compliance",
@@ -4026,8 +3222,6 @@ export const faq = {
     "Title": "How AI Helps Prepare Client Presentation Slides-Fastgpt",
     "Description": "AI accelerates client presentation slide preparation by automating time-consuming tasks and enhancing content quality. It transforms raw inputs into structured, visually engaging presentations aligned",
     "Keywords": "AI Automation, Vector Search, AI Knowledge Management, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Prepare-Client",
-    "Url": "/faq/How-AI-Helps-Prepare-Client.html"
   },
   "Can-AI-automatically-organize-market": {
     "Category": "Security & Compliance",
@@ -4036,8 +3230,6 @@ export const faq = {
     "Title": "Can AI automatically organize market research data?-Fastgpt",
     "Description": "AI can automatically organize market research data using advanced algorithms and machine learning techniques. Yes, this automation is both feasible and increasingly common.\n\nThis capability relies pri",
     "Keywords": "Document AI, AI Knowledge Management, LLM Development, AI Chatbot, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-market",
-    "Url": "/faq/Can-AI-automatically-organize-market.html"
   },
   "Can-AI-extract-key-information": {
     "Category": "Security & Compliance",
@@ -4046,8 +3238,6 @@ export const faq = {
     "Title": "Can AI extract key information from multiple files?-Fastgpt",
     "Description": "Yes, AI can efficiently extract key information from multiple files. Modern AI systems, particularly those using natural language processing and machine learning, are designed to analyze vast amounts ",
     "Keywords": "Intelligent Q&A, Enterprise AI, LLM Development, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-extract-key-information",
-    "Url": "/faq/Can-AI-extract-key-information.html"
   },
   "Can-AI-generate-industry-trend": {
     "Category": "Security & Compliance",
@@ -4056,8 +3246,6 @@ export const faq = {
     "Title": "Can AI generate industry trend reports?-Fastgpt",
     "Description": "Yes, AI can generate industry trend reports. Advanced AI systems leverage natural language processing and machine learning to analyze vast datasets and identify patterns, enabling the creation of init",
     "Keywords": "AI Chatbot, Document AI, Open Source AI, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-industry-trend",
-    "Url": "/faq/Can-AI-generate-industry-trend.html"
   },
   "How-AI-Helps-Generate-Market": {
     "Category": "Security & Compliance",
@@ -4066,8 +3254,6 @@ export const faq = {
     "Title": "How AI Helps Generate Market Analysis Charts-Fastgpt",
     "Description": "AI automates the generation of market analysis charts, transforming raw data into clear visualizations like trend lines, bar charts, or heatmaps. This enables rapid, consistent chart creation without ",
     "Keywords": "GPT Integration, AI Chatbot, Open Source AI, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Generate-Market",
-    "Url": "/faq/How-AI-Helps-Generate-Market.html"
   },
   "Can-AI-predict-future-market": {
     "Category": "Security & Compliance",
@@ -4076,8 +3262,6 @@ export const faq = {
     "Title": "Can AI predict future market changes?-Fastgpt",
     "Description": "AI can predict future market changes using advanced algorithms and data analysis, though these predictions are probabilistic estimates rather than certain forecasts.\n\nPredictions rely on machine learn",
     "Keywords": "LLM Development, Intelligent Q&A, AI Knowledge Management, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-future-market",
-    "Url": "/faq/Can-AI-predict-future-market.html"
   },
   "How-to-automatically-generate-brand": {
     "Category": "Security & Compliance",
@@ -4086,8 +3270,6 @@ export const faq = {
     "Title": "How to automatically generate brand public opinion reports using AI-Fastgpt",
     "Description": "Automatic AI-generated brand public opinion reports leverage specialized software to continuously scan vast volumes of online data, analyze sentiment, identify key topics, and compile structured summa",
     "Keywords": "AI Automation, Vector Search, API Integration, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-automatically-generate-brand",
-    "Url": "/faq/How-to-automatically-generate-brand.html"
   },
   "Can-AI-automatically-summarize-internet": {
     "Category": "Security & Compliance",
@@ -4096,8 +3278,6 @@ export const faq = {
     "Title": "Can AI automatically summarize internet hot topic information?-Fastgpt",
     "Description": "AI can automatically summarize internet hot topic information efficiently. Modern natural language processing (NLP) technologies enable AI systems to process vast amounts of online data quickly and ge",
     "Keywords": "LLM Development, AI Platform, Smart Assistant, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-summarize-internet",
-    "Url": "/faq/Can-AI-automatically-summarize-internet.html"
   },
   "How-to-make-AI-optimize": {
     "Category": "Data & Knowledge",
@@ -4106,8 +3286,6 @@ export const faq = {
     "Title": "How to make AI optimize multilingual SEO articles-Fastgpt",
     "Description": "Leveraging AI to optimize multilingual SEO articles involves using machine learning tools to create and refine content for different languages while maximizing search visibility. This is achievable th",
     "Keywords": "Smart Assistant, AI Automation, API Integration, Vector Search, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-optimize",
-    "Url": "/faq/How-to-make-AI-optimize.html"
   },
   "How-to-quickly-summarize-social": {
     "Category": "Security & Compliance",
@@ -4116,8 +3294,6 @@ export const faq = {
     "Title": "How to quickly summarize social comment viewpoints with AI-Fastgpt",
     "Description": "AI technology efficiently summarizes large volumes of social comments by automatically identifying and extracting key themes and sentiment trends. This accelerates analysis significantly compared to m",
     "Keywords": "Task Automation AI, Vector Search, AI Chatbot, FastGPT, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-summarize-social",
-    "Url": "/faq/How-to-quickly-summarize-social.html"
   },
   "How-AI-Assists-in-Creating": {
     "Category": "Security & Compliance",
@@ -4126,8 +3302,6 @@ export const faq = {
     "Title": "How AI Assists in Creating Marketing Plans-Fastgpt",
     "Description": "AI assists in creating marketing plans by leveraging advanced algorithms to automate data processing and generate actionable insights, enabling marketers to develop more efficient and targeted strateg",
     "Keywords": "LLM Development, Enterprise AI, AI Knowledge Management, AI Chatbot, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Assists-in-Creating",
-    "Url": "/faq/How-AI-Assists-in-Creating.html"
   },
   "Can-AI-automatically-recommend-promotional": {
     "Category": "Security & Compliance",
@@ -4136,8 +3310,6 @@ export const faq = {
     "Title": "Can AI automatically recommend promotional keywords?-Fastgpt",
     "Description": "Yes, AI can automatically recommend relevant promotional keywords. Advanced algorithms analyze data to generate optimized keyword lists for campaigns.\n\nAI keyword tools leverage historical performance",
     "Keywords": "Vector Search, Smart Assistant, API Integration, Intelligent Q&A, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-recommend-promotional",
-    "Url": "/faq/Can-AI-automatically-recommend-promotional.html"
   },
   "Can-AI-generate-advertising-optimization": {
     "Category": "Security & Compliance",
@@ -4146,8 +3318,6 @@ export const faq = {
     "Title": "Can AI generate advertising optimization suggestions?-Fastgpt",
     "Description": "Yes, AI can effectively generate advertising optimization suggestions. AI systems analyze vast amounts of data to identify patterns and opportunities for improving ad performance.\n\nThese suggestions d",
     "Keywords": "Open Source AI, Document AI, Task Automation AI, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-advertising-optimization",
-    "Url": "/faq/Can-AI-generate-advertising-optimization.html"
   },
   "Can-AI-help-automatically-generate": {
     "Category": "Security & Compliance",
@@ -4156,8 +3326,6 @@ export const faq = {
     "Title": "Can AI help automatically generate activity schedules?-Fastgpt",
     "Description": "AI can indeed help automatically generate activity schedules by leveraging advanced algorithms and data analysis. This automation is feasible and increasingly common in various planning contexts.\n\nIt ",
     "Keywords": "Task Automation AI, AI Platform, Smart Assistant, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-automatically-generate",
-    "Url": "/faq/Can-AI-help-automatically-generate.html"
   },
   "How-AI-Automatically-Generates-Activity": {
     "Category": "Security & Compliance",
@@ -4166,8 +3334,6 @@ export const faq = {
     "Title": "How AI Automatically Generates Activity Review Reports-Fastgpt",
     "Description": "AI automatically generates activity review reports by applying natural language generation (NLG) techniques and data analytics to transform raw activity data into structured narrative summaries. This ",
     "Keywords": "LLM Development, Enterprise AI, GPT Integration, AI Automation, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Automatically-Generates-Activity",
-    "Url": "/faq/How-AI-Automatically-Generates-Activity.html"
   },
   "Can-AI-analyze-the-input-output": {
     "Category": "Security & Compliance",
@@ -4176,8 +3342,6 @@ export const faq = {
     "Title": "Can AI analyze the input-output ratio of different activities?-Fastgpt",
     "Description": "AI can effectively analyze the input-output ratio of various activities. This capability utilizes data-driven models to quantify and compare efficiency.\n\nAI algorithms process data representing inputs",
     "Keywords": "AI Chatbot, Enterprise AI, FastGPT, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-the-input-output",
-    "Url": "/faq/Can-AI-analyze-the-input-output.html"
   },
   "Can-AI-automatically-generate-financial": {
     "Category": "Security & Compliance",
@@ -4186,8 +3350,6 @@ export const faq = {
     "Title": "Can AI automatically generate financial report summaries?-Fastgpt",
     "Description": "AI can automatically generate financial report summaries using natural language processing (NLP) and machine learning algorithms. This technology analyzes financial statements and disclosures to extra",
     "Keywords": "GPT Integration, AI Platform, AI Automation, API Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-financial",
-    "Url": "/faq/Can-AI-automatically-generate-financial.html"
   },
   "How-AI-Helps-Detect-Financial": {
     "Category": "Security & Compliance",
@@ -4196,8 +3358,6 @@ export const faq = {
     "Title": "How AI Helps Detect Financial Anomalies-Fastgpt",
     "Description": "AI enables automated detection of unusual patterns and suspicious activities in financial data that may indicate fraud, errors, or operational risks. It uses machine learning and neural networks to an",
     "Keywords": "FastGPT, Enterprise AI, Vector Search, Open Source AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Detect-Financial",
-    "Url": "/faq/How-AI-Helps-Detect-Financial.html"
   },
   "Can-AI-automatically-generate-tax": {
     "Category": "Security & Compliance",
@@ -4206,8 +3366,6 @@ export const faq = {
     "Title": "Can AI automatically generate tax filing reminders?-Fastgpt",
     "Description": "Yes, AI can automatically generate tax filing reminders. This capability is based on analyzing data such as filing deadlines and individual circumstances.\n\nAI systems utilize predictive modeling and p",
     "Keywords": "AI Workflow, AI Chatbot, Vector Search, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-tax",
-    "Url": "/faq/Can-AI-automatically-generate-tax.html"
   },
   "Can-AI-predict-financial-expenditures": {
     "Category": "Security & Compliance",
@@ -4216,8 +3374,6 @@ export const faq = {
     "Title": "Can AI predict financial expenditures for the next quarter?-Fastgpt",
     "Description": "AI can predict next quarter's financial expenditures. This is feasible using AI models trained on relevant historical data.\n\nAccurate prediction requires high-quality historical spending data, account",
     "Keywords": "AI Platform, Enterprise AI, Document AI, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-financial-expenditures",
-    "Url": "/faq/Can-AI-predict-financial-expenditures.html"
   },
   "How-to-let-AI-help": {
     "Category": "AI Basics & Terms",
@@ -4226,8 +3382,6 @@ export const faq = {
     "Title": "How to let AI help plan the next product layout-Fastgpt",
     "Description": "AI can analyze market trends and user data to help identify promising areas for your next product lineup, thereby enhancing strategic alignment and efficiency. This is a feasible application of predic",
     "Keywords": "FastGPT, Task Automation AI, Smart Assistant, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-let-AI-help",
-    "Url": "/faq/How-to-let-AI-help.html"
   },
   "Can-AI-automatically-compare-financial": {
     "Category": "Security & Compliance",
@@ -4236,8 +3390,6 @@ export const faq = {
     "Title": "Can AI automatically compare financial revenue and expenditure data?-Fastgpt",
     "Description": "Yes, AI can automate the comparison of financial revenue and expenditure data effectively. This capability represents a significant advance in financial analysis tools.\n\nAI achieves this by ingesting ",
     "Keywords": "GPT Integration, AI Knowledge Management, LLM Development, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-compare-financial",
-    "Url": "/faq/Can-AI-automatically-compare-financial.html"
   },
   "How-to-generate-a-supplier": {
     "Category": "Security & Compliance",
@@ -4246,8 +3398,6 @@ export const faq = {
     "Title": "How to generate a supplier payment plan using AI-Fastgpt",
     "Description": "Generating a supplier payment plan using AI involves leveraging machine learning and data analytics to create optimized schedules. AI systems can automate this process by analyzing complex data variab",
     "Keywords": "AI Automation, GPT Integration, AI Workflow, Task Automation AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-generate-a-supplier",
-    "Url": "/faq/How-to-generate-a-supplier.html"
   },
   "How-AI-Optimizes-the-Approval": {
     "Category": "Security & Compliance",
@@ -4256,8 +3406,6 @@ export const faq = {
     "Title": "How AI Optimizes the Approval Process in Procurement-Fastgpt",
     "Description": "Artificial intelligence optimizes procurement approvals by automating review workflows and accelerating turnaround times. It reduces manual bottlenecks while maintaining governance and compliance.\n\nKe",
     "Keywords": "FastGPT, Enterprise AI, Vector Search, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Optimizes-the-Approval",
-    "Url": "/faq/How-AI-Optimizes-the-Approval.html"
   },
   "Can-AI-automatically-generate-purchase": {
     "Category": "Security & Compliance",
@@ -4266,8 +3414,6 @@ export const faq = {
     "Title": "Can AI automatically generate purchase requisitions?-Fastgpt",
     "Description": "Yes, AI can automatically generate purchase requisitions. This capability leverages technologies like natural language processing (NLP) and machine learning to understand needs from requests or predic",
     "Keywords": "Open Source AI, Enterprise AI, Document AI, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-purchase",
-    "Url": "/faq/Can-AI-automatically-generate-purchase.html"
   },
   "Can-AI-monitor-inventory-changes": {
     "Category": "Security & Compliance",
@@ -4276,8 +3422,6 @@ export const faq = {
     "Title": "Can AI monitor inventory changes in real-time?-Fastgpt",
     "Description": "Yes, AI can effectively monitor inventory changes in real-time. This capability leverages modern technologies to track stock levels accurately and continuously.\n\nReal-time AI inventory monitoring reli",
     "Keywords": "GPT Integration, AI Automation, Open Source AI, API Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-inventory-changes",
-    "Url": "/faq/Can-AI-monitor-inventory-changes.html"
   },
   "Can-AI-generate-supply-chain": {
     "Category": "Security & Compliance",
@@ -4286,8 +3430,6 @@ export const faq = {
     "Title": "Can AI generate supply chain efficiency analysis?-Fastgpt",
     "Description": "Yes, AI can effectively generate supply chain efficiency analysis. Sophisticated algorithms process vast datasets to identify patterns and insights humans might miss, automating complex evaluations of",
     "Keywords": "Document AI, FastGPT, Enterprise AI, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-supply-chain",
-    "Url": "/faq/Can-AI-generate-supply-chain.html"
   },
   "How-AI-Helps-Negotiate-Supply": {
     "Category": "Security & Compliance",
@@ -4296,8 +3438,6 @@ export const faq = {
     "Title": "How AI Helps Negotiate Supply Prices-Fastgpt",
     "Description": "AI assists in negotiating supply prices by analyzing vast datasets to objectively benchmark costs and identify optimal negotiation strategies. This enables buyers to secure improved pricing and contra",
     "Keywords": "AI Workflow, AI Automation, API Integration, Open Source AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Negotiate-Supply",
-    "Url": "/faq/How-AI-Helps-Negotiate-Supply.html"
   },
   "Can-AI-automatically-organize-supplier": {
     "Category": "Security & Compliance",
@@ -4306,8 +3446,6 @@ export const faq = {
     "Title": "Can AI automatically organize supplier information?-Fastgpt",
     "Description": "Yes, AI can automatically organize supplier information. This is achieved through specialized software applications that leverage machine learning and AI techniques.\n\nThese systems typically integrate",
     "Keywords": "AI Chatbot, Document AI, Smart Assistant, AI Automation, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-supplier",
-    "Url": "/faq/Can-AI-automatically-organize-supplier.html"
   },
   "Can-AI-optimize-warehouse-layout": {
     "Category": "Security & Compliance",
@@ -4316,8 +3454,6 @@ export const faq = {
     "Title": "Can AI optimize warehouse layout plans?-Fastgpt",
     "Description": "Yes, AI can significantly optimize warehouse layout plans. It leverages complex algorithms to analyze data and generate layouts that maximize efficiency, space utilization, and productivity, surpassin",
     "Keywords": "AI Automation, Enterprise AI, AI Workflow, GPT Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-optimize-warehouse-layout",
-    "Url": "/faq/Can-AI-optimize-warehouse-layout.html"
   },
   "Can-AI-automatically-generate-transportation": {
     "Category": "Security & Compliance",
@@ -4326,8 +3462,6 @@ export const faq = {
     "Title": "Can AI automatically generate transportation plans?-Fastgpt",
     "Description": "Yes, AI can automatically generate transportation plans. This capability leverages optimization algorithms and predictive analytics to create efficient routes and schedules.\n\nAI-driven transportation ",
     "Keywords": "FastGPT, LLM Development, Vector Search, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-transportation",
-    "Url": "/faq/Can-AI-automatically-generate-transportation.html"
   },
   "How-AI-Helps-Track-Logistics": {
     "Category": "Security & Compliance",
@@ -4336,8 +3470,6 @@ export const faq = {
     "Title": "How AI Helps Track Logistics Delivery Status-Fastgpt",
     "Description": "AI enables intelligent tracking of logistics delivery status through automation and predictive analytics. This technology provides real-time visibility across the supply chain.\n\nAI systems process dat",
     "Keywords": "Intelligent Q&A, Task Automation AI, AI Workflow, GPT Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Track-Logistics",
-    "Url": "/faq/How-AI-Helps-Track-Logistics.html"
   },
   "Can-AI-detect-transportation-anomalies": {
     "Category": "Security & Compliance",
@@ -4346,8 +3478,6 @@ export const faq = {
     "Title": "Can AI detect transportation anomalies and issue alerts?-Fastgpt",
     "Description": "Yes, AI can effectively detect transportation anomalies and issue alerts. This capability leverages advanced machine learning models trained on vast amounts of traffic data.\n\nAI systems detect anomali",
     "Keywords": "Document AI, Open Source AI, AI Automation, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-detect-transportation-anomalies",
-    "Url": "/faq/Can-AI-detect-transportation-anomalies.html"
   },
   "How-to-quickly-organize-shipping": {
     "Category": "Security & Compliance",
@@ -4356,8 +3486,6 @@ export const faq = {
     "Title": "How to quickly organize shipping records using AI-Fastgpt",
     "Description": "AI can automate and accelerate shipping record organization by processing unstructured data from documents and systems. This replaces manual compilation with intelligent extraction and sorting.\n\nAI em",
     "Keywords": "Enterprise AI, AI Chatbot, GPT Integration, LLM Development, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-organize-shipping",
-    "Url": "/faq/How-to-quickly-organize-shipping.html"
   },
   "Can-AI-automatically-analyze-the": {
     "Category": "AI Basics & Terms",
@@ -4366,8 +3494,6 @@ export const faq = {
     "Title": "Can AI automatically analyze the practices of industry benchmarks?-Fastgpt",
     "Description": "Yes, AI can automatically analyze the practices of industry benchmarks. This is achievable by processing vast amounts of data using specific AI techniques, contingent on accessible, relevant informati",
     "Keywords": "AI Automation, AI Workflow, Document AI, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-the",
-    "Url": "/faq/Can-AI-automatically-analyze-the.html"
   },
   "How-to-improve-customer-service": {
     "Category": "Security & Compliance",
@@ -4376,8 +3502,6 @@ export const faq = {
     "Title": "How to improve customer service processing efficiency with AI-Fastgpt",
     "Description": "AI significantly improves customer service processing efficiency by automating routine tasks and providing data-driven insights to agents. This enables faster resolution times and allows human agents ",
     "Keywords": "Intelligent Q&A, GPT Integration, Smart Assistant, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-customer-service",
-    "Url": "/faq/How-to-improve-customer-service.html"
   },
   "Can-AI-automatically-categorize-customer": {
     "Category": "Security & Compliance",
@@ -4386,8 +3510,6 @@ export const faq = {
     "Title": "Can AI automatically categorize customer inquiries?-Fastgpt",
     "Description": "AI can automatically categorize customer inquiries using machine learning models.\nYes, AI systems can effectively automate the categorization of incoming customer inquiries.\n\nThis capability relies pr",
     "Keywords": "GPT Integration, Intelligent Q&A, AI Automation, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-categorize-customer",
-    "Url": "/faq/Can-AI-automatically-categorize-customer.html"
   },
   "How-to-generate-a-customer": {
     "Category": "Security & Compliance",
@@ -4396,8 +3518,6 @@ export const faq = {
     "Title": "How to generate a customer service knowledge base using AI-Fastgpt",
     "Description": "Using AI to generate a customer service knowledge base involves leveraging artificial intelligence tools to analyze unstructured data (like past support tickets, manuals, and chat logs) and automatica",
     "Keywords": "Enterprise AI, GPT Integration, Vector Search, AI Workflow, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-generate-a-customer",
-    "Url": "/faq/How-to-generate-a-customer.html"
   },
   "How-AI-Automatically-Recommends-Customer": {
     "Category": "Security & Compliance",
@@ -4406,8 +3526,6 @@ export const faq = {
     "Title": "How AI Automatically Recommends Customer Service Response Content-Fastgpt",
     "Description": "AI automatically recommends customer service response content by analyzing incoming customer messages in real-time. It leverages natural language processing (NLP) and machine learning (ML) models trai",
     "Keywords": "API Integration, LLM Development, Enterprise AI, Open Source AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Automatically-Recommends-Customer",
-    "Url": "/faq/How-AI-Automatically-Recommends-Customer.html"
   },
   "Can-AI-automatically-generate-customer": {
     "Category": "AI Basics & Terms",
@@ -4416,8 +3534,6 @@ export const faq = {
     "Title": "Can AI automatically generate customer service work reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate customer service work reports. By leveraging natural language processing (NLP) and machine learning, AI systems can analyze customer interactions and relevant perfor",
     "Keywords": "AI Workflow, AI Chatbot, Task Automation AI, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-customer",
-    "Url": "/faq/Can-AI-automatically-generate-customer.html"
   },
   "Can-AI-automatically-identify-high-frequency": {
     "Category": "Security & Compliance",
@@ -4426,8 +3542,6 @@ export const faq = {
     "Title": "Can AI automatically identify high-frequency complaint issues?-Fastgpt",
     "Description": "Yes, AI can automatically identify high-frequency complaint issues. This capability leverages machine learning, particularly natural language processing (NLP), to analyze large volumes of customer fee",
     "Keywords": "API Integration, AI Platform, Vector Search, AI Automation, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-high-frequency",
-    "Url": "/faq/Can-AI-automatically-identify-high-frequency.html"
   },
   "How-to-improve-after-sales-service": {
     "Category": "Security & Compliance",
@@ -4436,8 +3550,6 @@ export const faq = {
     "Title": "How to improve after-sales service efficiency with AI-Fastgpt",
     "Description": "AI significantly enhances after-sales service efficiency by automating routine tasks, providing instant support, and enabling faster issue resolution. It offers scalable solutions for handling high vo",
     "Keywords": "AI Workflow, Enterprise AI, Intelligent Q&A, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-after-sales-service",
-    "Url": "/faq/How-to-improve-after-sales-service.html"
   },
   "Can-AI-automatically-send-customer": {
     "Category": "Security & Compliance",
@@ -4446,8 +3558,6 @@ export const faq = {
     "Title": "Can AI automatically send customer follow-up information?-Fastgpt",
     "Description": "Yes, AI can automatically send customer follow-up information. This capability leverages automation technology to streamline communication after initial customer interactions.\n\nImplementing AI for thi",
     "Keywords": "AI Knowledge Management, FastGPT, API Integration, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-send-customer",
-    "Url": "/faq/Can-AI-automatically-send-customer.html"
   },
   "Can-AI-automatically-generate-user": {
     "Category": "Security & Compliance",
@@ -4456,8 +3566,6 @@ export const faq = {
     "Title": "Can AI automatically generate user experience reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate user experience (UX) reports. Utilizing machine learning and natural language processing, AI tools synthesize user data to create structured UX insights.\n\nEffective ",
     "Keywords": "LLM Development, Enterprise AI, AI Chatbot, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-user",
-    "Url": "/faq/Can-AI-automatically-generate-user.html"
   },
   "Can-AI-analyze-team-interaction": {
     "Category": "Security & Compliance",
@@ -4466,8 +3574,6 @@ export const faq = {
     "Title": "Can AI analyze team interaction frequency-Fastgpt",
     "Description": "Yes, AI can effectively analyze team interaction frequency. This capability leverages data from digital communication platforms to quantify collaboration patterns.\n\nAI systems track communication metr",
     "Keywords": "Smart Assistant, LLM Development, AI Workflow, Enterprise AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-team-interaction",
-    "Url": "/faq/Can-AI-analyze-team-interaction.html"
   },
   "How-AI-Optimizes-Internal-Knowledge": {
     "Category": "Security & Compliance",
@@ -4476,8 +3582,6 @@ export const faq = {
     "Title": "How AI Optimizes Internal Knowledge Sharing in Companies-Fastgpt",
     "Description": "AI significantly enhances internal knowledge sharing by automating content organization, improving search capabilities, and connecting employees with relevant expertise faster. It makes vast amounts o",
     "Keywords": "API Integration, Vector Search, Task Automation AI, LLM Development, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Optimizes-Internal-Knowledge",
-    "Url": "/faq/How-AI-Optimizes-Internal-Knowledge.html"
   },
   "Can-AI-automatically-generate-internal": {
     "Category": "Security & Compliance",
@@ -4486,8 +3590,6 @@ export const faq = {
     "Title": "Can AI automatically generate internal training syllabi?-Fastgpt",
     "Description": "Yes, AI can automatically generate internal training syllabi. Modern generative AI models are well-suited for processing organizational documents, training needs, and learning objectives to draft stru",
     "Keywords": "Document AI, Task Automation AI, Open Source AI, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-internal",
-    "Url": "/faq/Can-AI-automatically-generate-internal.html"
   },
   "Can-AI-automatically-evaluate-training": {
     "Category": "Security & Compliance",
@@ -4496,8 +3598,6 @@ export const faq = {
     "Title": "Can AI automatically evaluate training effectiveness?-Fastgpt",
     "Description": "AI can indeed automatically evaluate training effectiveness using data analysis techniques. By analyzing specific metrics before, during, and after training, AI systems generate objective insights on ",
     "Keywords": "AI Knowledge Management, AI Chatbot, Document AI, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-evaluate-training",
-    "Url": "/faq/Can-AI-automatically-evaluate-training.html"
   },
   "How-to-make-AI-help": {
     "Category": "AI Basics & Terms",
@@ -4506,8 +3606,6 @@ export const faq = {
     "Title": "How to make AI help find new profit models-Fastgpt",
     "Description": "AI can effectively discover new profit models by leveraging its ability to analyze vast datasets, identify hidden patterns, and simulate business scenarios. This includes uncovering untapped revenue s",
     "Keywords": "AI Workflow, Smart Assistant, Document AI, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-help",
-    "Url": "/faq/How-to-make-AI-help.html"
   },
   "Can-AI-automatically-organize-performance": {
     "Category": "Security & Compliance",
@@ -4516,8 +3614,6 @@ export const faq = {
     "Title": "Can AI automatically organize performance appraisal data?-Fastgpt",
     "Description": "Yes, AI can automatically organize performance appraisal data. It leverages technology to aggregate, categorize, and analyze diverse feedback and metrics efficiently.\n\nEffective implementation require",
     "Keywords": "Document AI, Task Automation AI, Smart Assistant, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-performance",
-    "Url": "/faq/Can-AI-automatically-organize-performance.html"
   },
   "How-AI-Improves-the-Efficiency": {
     "Category": "Security & Compliance",
@@ -4526,8 +3622,6 @@ export const faq = {
     "Title": "How AI Improves the Efficiency of HR Data Analysis-Fastgpt",
     "Description": "AI significantly enhances HR data analysis efficiency by automating data processing, revealing complex insights, and predicting future workforce trends much faster and more accurately than manual meth",
     "Keywords": "AI Chatbot, GPT Integration, Document AI, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Improves-the-Efficiency",
-    "Url": "/faq/How-AI-Improves-the-Efficiency.html"
   },
   "Can-AI-automatically-generate-attendance": {
     "Category": "Security & Compliance",
@@ -4536,8 +3630,6 @@ export const faq = {
     "Title": "Can AI automatically generate attendance exception reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate attendance exception reports. It achieves this by processing employee attendance data to identify deviations from scheduled working hours or approved time-off patter",
     "Keywords": "Vector Search, Enterprise AI, API Integration, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-attendance",
-    "Url": "/faq/Can-AI-automatically-generate-attendance.html"
   },
   "Can-AI-adjust-work-schedules": {
     "Category": "Security & Compliance",
@@ -4546,8 +3638,6 @@ export const faq = {
     "Title": "Can AI adjust work schedules based on employees' leave requests?-Fastgpt",
     "Description": "Yes. Modern artificial intelligence can automate schedule adjustments triggered by employee leave requests. This capability utilizes machine learning and optimization algorithms.\n\nSuccessful implement",
     "Keywords": "AI Automation, AI Platform, GPT Integration, Enterprise AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-work-schedules",
-    "Url": "/faq/Can-AI-adjust-work-schedules.html"
   },
   "Can-AI-generate-a-summary": {
     "Category": "Security & Compliance",
@@ -4556,8 +3646,6 @@ export const faq = {
     "Title": "Can AI generate a summary of employee suggestions?-Fastgpt",
     "Description": "Yes, AI can effectively generate summaries of employee suggestions. Using natural language processing (NLP) techniques, AI systems can process large volumes of feedback submitted via surveys, forms, e",
     "Keywords": "FastGPT, Intelligent Q&A, Smart Assistant, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-a-summary",
-    "Url": "/faq/Can-AI-generate-a-summary.html"
   },
   "How-AI-Can-Assist-in": {
     "Category": "Security & Compliance",
@@ -4566,8 +3654,6 @@ export const faq = {
     "Title": "How AI Can Assist in Improving Welfare Programs-Fastgpt",
     "Description": "Artificial intelligence (AI) can significantly enhance welfare program effectiveness by optimizing decision-making, identifying needs faster, and improving service delivery. It enables more efficient,",
     "Keywords": "Intelligent Q&A, AI Workflow, AI Platform, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Can-Assist-in",
-    "Url": "/faq/How-AI-Can-Assist-in.html"
   },
   "Can-AI-automatically-generate-annual": {
     "Category": "AI Basics & Terms",
@@ -4576,8 +3662,6 @@ export const faq = {
     "Title": "Can AI automatically generate annual marketing summaries?-Fastgpt",
     "Description": "AI can automatically generate annual marketing summaries, leveraging machine learning to process and synthesize large datasets. This capability is increasingly feasible with modern AI tools designed f",
     "Keywords": "AI Knowledge Management, AI Automation, Task Automation AI, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-annual",
-    "Url": "/faq/Can-AI-automatically-generate-annual.html"
   },
   "Can-AI-quickly-archive-internal": {
     "Category": "Security & Compliance",
@@ -4586,8 +3670,6 @@ export const faq = {
     "Title": "Can AI quickly archive internal documents?-Fastgpt",
     "Description": "AI systems can automatically process and store high volumes of internal documents rapidly. This leverages machine learning for classification, tagging, and routing.\n\nKey capabilities include automatic",
     "Keywords": "LLM Development, GPT Integration, FastGPT, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-archive-internal",
-    "Url": "/faq/Can-AI-quickly-archive-internal.html"
   },
   "Can-AI-automatically-generate-summaries": {
     "Category": "Data & Knowledge",
@@ -4596,8 +3678,6 @@ export const faq = {
     "Title": "Can AI automatically generate summaries for articles?-Fastgpt",
     "Description": "Yes, AI can automatically generate summaries of articles. This capability is a core function of many modern AI systems based on Natural Language Processing (NLP) and Large Language Models (LLMs).\n\nThe",
     "Keywords": "API Integration, Smart Assistant, LLM Development, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-summaries",
-    "Url": "/faq/Can-AI-automatically-generate-summaries.html"
   },
   "How-to-optimize-the-document": {
     "Category": "Security & Compliance",
@@ -4606,8 +3686,6 @@ export const faq = {
     "Title": "How to optimize the document approval process with AI-Fastgpt",
     "Description": "AI optimizes document approval by automating routing, accelerating reviews, and minimizing bottlenecks. It enables faster decision cycles while maintaining compliance controls.\n\nKey principles involve",
     "Keywords": "Task Automation AI, GPT Integration, AI Workflow, Open Source AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-optimize-the-document",
-    "Url": "/faq/How-to-optimize-the-document.html"
   },
   "How-AI-Helps-Detect-File": {
     "Category": "Security & Compliance",
@@ -4616,8 +3694,6 @@ export const faq = {
     "Title": "How AI Helps Detect File Version Conflicts-Fastgpt",
     "Description": "AI helps detect file version conflicts by analyzing patterns of user access, comparing simultaneous changes, and identifying incompatible modifications. It automates conflict spotting during collabora",
     "Keywords": "Vector Search, Intelligent Q&A, API Integration, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Detect-File",
-    "Url": "/faq/How-AI-Helps-Detect-File.html"
   },
   "Can-AI-automatically-remind-about": {
     "Category": "Security & Compliance",
@@ -4626,8 +3702,6 @@ export const faq = {
     "Title": "Can AI automatically remind about file updates?-Fastgpt",
     "Description": "Yes, AI can automate file update reminders effectively. AI systems monitor designated files, databases, or cloud storage platforms for changes and trigger alerts without human intervention.\n\nThis requ",
     "Keywords": "LLM Development, Vector Search, AI Workflow, AI Automation, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-remind-about",
-    "Url": "/faq/Can-AI-automatically-remind-about.html"
   },
   "Can-AI-automatically-extract-key": {
     "Category": "Security & Compliance",
@@ -4636,8 +3710,6 @@ export const faq = {
     "Title": "Can AI automatically extract key data from files?-Fastgpt",
     "Description": "Yes, AI can automatically extract structured key data from various file formats. This capability is widely implemented using machine learning and other AI techniques.\n\nAI achieves this through technol",
     "Keywords": "AI Workflow, AI Automation, AI Knowledge Management, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-extract-key",
-    "Url": "/faq/Can-AI-automatically-extract-key.html"
   },
   "How-to-make-AI-reduce": {
     "Category": "Security & Compliance",
@@ -4646,8 +3718,6 @@ export const faq = {
     "Title": "How to make AI reduce duplicate file storage-Fastgpt",
     "Description": "AI systems reduce duplicate file storage by analyzing file content and metadata to identify redundant copies. This process involves content-based identification followed by automated deduplication act",
     "Keywords": "AI Knowledge Management, Enterprise AI, Smart Assistant, LLM Development, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-reduce",
-    "Url": "/faq/How-to-make-AI-reduce.html"
   },
   "Can-AI-enable-real-time-document": {
     "Category": "Security & Compliance",
@@ -4656,8 +3726,6 @@ export const faq = {
     "Title": "Can AI enable real-time document sharing across multiple departments?-Fastgpt",
     "Description": "Yes, AI can significantly enable real-time document sharing across multiple departments. Modern AI-powered collaboration platforms facilitate simultaneous access and editing by distributed teams.\n\nAI ",
     "Keywords": "AI Platform, Vector Search, Open Source AI, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-enable-real-time-document",
-    "Url": "/faq/Can-AI-enable-real-time-document.html"
   },
   "How-does-AI-automatically-back": {
     "Category": "Security & Compliance",
@@ -4666,8 +3734,6 @@ export const faq = {
     "Title": "How does AI automatically back up important files-Fastgpt",
     "Description": "AI automatically backs up important files using machine learning algorithms to continuously monitor, identify, and securely copy critical data based on user behavior and file attributes. This replaces",
     "Keywords": "AI Knowledge Management, LLM Development, Enterprise AI, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-automatically-back",
-    "Url": "/faq/How-does-AI-automatically-back.html"
   },
   "Can-AI-generate-data-access": {
     "Category": "Security & Compliance",
@@ -4676,8 +3742,6 @@ export const faq = {
     "Title": "Can AI generate data access permission reports?-Fastgpt",
     "Description": "Yes, AI can generate data access permission reports. Automated tools analyze access control lists (ACLs), directory services, and audit logs to map user permissions effectively.\n\nAI relies on secure i",
     "Keywords": "AI Chatbot, FastGPT, Document AI, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-data-access",
-    "Url": "/faq/Can-AI-generate-data-access.html"
   },
   "Can-AI-remind-about-upcoming": {
     "Category": "Security & Compliance",
@@ -4686,8 +3750,6 @@ export const faq = {
     "Title": "Can AI remind about upcoming file expiration?-Fastgpt",
     "Description": "Yes, AI can be used to remind about upcoming file expiration. AI systems, when integrated with document management or storage solutions, can automate the detection and notification process for files n",
     "Keywords": "AI Chatbot, FastGPT, AI Automation, GPT Integration, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-remind-about-upcoming",
-    "Url": "/faq/Can-AI-remind-about-upcoming.html"
   },
   "Can-AI-automatically-record-employees'": {
     "Category": "Security & Compliance",
@@ -4696,8 +3758,6 @@ export const faq = {
     "Title": "Can AI automatically record employees' task completion status?-Fastgpt",
     "Description": "Yes, AI can automatically record employee task completion status. This functionality is achievable through integration with digital task management platforms and productivity tools.\n\nEffective impleme",
     "Keywords": "GPT Integration, AI Platform, Vector Search, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-record-employees'",
-    "Url": "/faq/Can-AI-automatically-record-employees'.html"
   },
   "How-can-AI-help-balance": {
     "Category": "Security & Compliance",
@@ -4706,8 +3766,6 @@ export const faq = {
     "Title": "How can AI help balance the workload among teams-Fastgpt",
     "Description": "AI enables dynamic workload balancing by analyzing real-time data to identify imbalances and recommend optimal distribution strategies. It can automate task assignment based on predefined criteria.  \n",
     "Keywords": "Smart Assistant, API Integration, Vector Search, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-balance",
-    "Url": "/faq/How-can-AI-help-balance.html"
   },
   "Can-AI-automatically-detect-project": {
     "Category": "Security & Compliance",
@@ -4716,8 +3774,6 @@ export const faq = {
     "Title": "Can AI automatically detect project schedule anomalies?-Fastgpt",
     "Description": "AI can automatically detect project schedule anomalies. This capability leverages machine learning to identify deviations from expected project timelines.\n\nDetection relies on analyzing historical pro",
     "Keywords": "AI Automation, LLM Development, GPT Integration, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-detect-project",
-    "Url": "/faq/Can-AI-automatically-detect-project.html"
   },
   "Can-AI-generate-team-performance": {
     "Category": "Security & Compliance",
@@ -4726,8 +3782,6 @@ export const faq = {
     "Title": "Can AI generate team performance analysis reports?-Fastgpt",
     "Description": "Yes, AI can generate comprehensive team performance analysis reports. It automates data processing to deliver consistent, data-driven insights.\n\nAI systems ingest performance data like project managem",
     "Keywords": "FastGPT, AI Workflow, Smart Assistant, Vector Search, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-team-performance",
-    "Url": "/faq/Can-AI-generate-team-performance.html"
   },
   "Can-AI-identify-bottlenecks-in": {
     "Category": "Security & Compliance",
@@ -4736,8 +3790,6 @@ export const faq = {
     "Title": "Can AI identify bottlenecks in processes?-Fastgpt",
     "Description": "Yes, AI can identify bottlenecks in processes. It achieves this by analyzing vast amounts of operational data using machine learning and other analytical techniques to detect patterns, delays, and con",
     "Keywords": "Smart Assistant, Vector Search, FastGPT, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-bottlenecks-in",
-    "Url": "/faq/Can-AI-identify-bottlenecks-in.html"
   },
   "How-AI-Helps-Arrange-Efficient": {
     "Category": "Security & Compliance",
@@ -4746,8 +3798,6 @@ export const faq = {
     "Title": "How AI Helps Arrange Efficient Meeting Schedules-Fastgpt",
     "Description": "AI enables efficient meeting scheduling by automating coordination logistics based on participants' calendars and preferences. It significantly reduces the time spent on manual back-and-forth communic",
     "Keywords": "FastGPT, Vector Search, Task Automation AI, AI Platform, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Arrange-Efficient",
-    "Url": "/faq/How-AI-Helps-Arrange-Efficient.html"
   },
   "Can-AI-automatically-analyze-meeting": {
     "Category": "Security & Compliance",
@@ -4756,8 +3806,6 @@ export const faq = {
     "Title": "Can AI automatically analyze meeting participation?-Fastgpt",
     "Description": "Yes, AI can automatically analyze meeting participation. This technology utilizes speech recognition and computer vision to track attendee engagement levels passively.\n\nAI meeting analytics tools prim",
     "Keywords": "Document AI, AI Knowledge Management, Smart Assistant, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-meeting",
-    "Url": "/faq/Can-AI-automatically-analyze-meeting.html"
   },
   "Can-AI-generate-meeting-improvement": {
     "Category": "Security & Compliance",
@@ -4766,8 +3814,6 @@ export const faq = {
     "Title": "Can AI generate meeting improvement suggestions?-Fastgpt",
     "Description": "Yes, AI can generate meeting improvement suggestions. It utilizes advanced technologies like natural language processing and machine learning to analyze meeting data and identify potential enhancement",
     "Keywords": "Open Source AI, AI Platform, GPT Integration, AI Automation, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-meeting-improvement",
-    "Url": "/faq/Can-AI-generate-meeting-improvement.html"
   },
   "Can-AI-automatically-generate-team": {
     "Category": "Security & Compliance",
@@ -4776,8 +3822,6 @@ export const faq = {
     "Title": "Can AI automatically generate team goal achievement rates?-Fastgpt",
     "Description": "Yes, AI can automatically generate team goal achievement rates. AI systems analyze relevant data to compute and report progress towards predefined objectives efficiently.\n\nThis requires AI access to s",
     "Keywords": "LLM Development, Vector Search, AI Platform, AI Automation, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-team",
-    "Url": "/faq/Can-AI-automatically-generate-team.html"
   },
   "How-AI-helps-strengthen-team": {
     "Category": "Security & Compliance",
@@ -4786,8 +3830,6 @@ export const faq = {
     "Title": "How AI helps strengthen team spirit-Fastgpt",
     "Description": "AI significantly aids in enhancing team spirit by leveraging data-driven insights and tools that foster collaboration and shared purpose. It is feasible as organizations deploy purpose-built AI platfo",
     "Keywords": "AI Workflow, Document AI, AI Automation, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-helps-strengthen-team",
-    "Url": "/faq/How-AI-helps-strengthen-team.html"
   },
   "Can-AI-provide-suggestions-for": {
     "Category": "Security & Compliance",
@@ -4796,8 +3838,6 @@ export const faq = {
     "Title": "Can AI provide suggestions for team motivation plans?-Fastgpt",
     "Description": "AI can indeed provide valuable suggestions for team motivation plans. It leverages data analysis and pattern recognition to offer tailored recommendations.  \n\nAI-driven motivation strategies rely on a",
     "Keywords": "GPT Integration, AI Knowledge Management, FastGPT, Smart Assistant, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-suggestions-for",
-    "Url": "/faq/Can-AI-provide-suggestions-for.html"
   },
   "Can-AI-automatically-organize-the": {
     "Category": "Productivity & Collaboration",
@@ -4806,8 +3846,6 @@ export const faq = {
     "Title": "Can AI automatically organize the details of customer complaints?-Fastgpt",
     "Description": "Yes, AI can automatically organize customer complaint details. Modern Natural Language Processing (NLP) algorithms are capable of extracting key information from unstructured complaint text.\n\nAI syste",
     "Keywords": "Enterprise AI, Document AI, Vector Search, AI Platform, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-the",
-    "Url": "/faq/Can-AI-automatically-organize-the.html"
   },
   "Can-AI-help-synchronize-project": {
     "Category": "Security & Compliance",
@@ -4816,8 +3854,6 @@ export const faq = {
     "Title": "Can AI help synchronize project progress across departments?-Fastgpt",
     "Description": "Yes, AI can significantly help synchronize project progress across departments. AI systems act as intelligent central hubs, automatically aggregating and normalizing real-time data from diverse source",
     "Keywords": "AI Knowledge Management, AI Platform, AI Chatbot, API Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-synchronize-project",
-    "Url": "/faq/Can-AI-help-synchronize-project.html"
   },
   "How-to-quickly-generate-weekly": {
     "Category": "Security & Compliance",
@@ -4826,8 +3862,6 @@ export const faq = {
     "Title": "How to quickly generate weekly meeting summary reports using AI-Fastgpt",
     "Description": "Using AI can streamline the creation of weekly meeting summary reports. Specialized AI meeting assistants can automatically transcribe discussions, identify key topics, decisions, action items, and ow",
     "Keywords": "Document AI, AI Workflow, API Integration, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-generate-weekly",
-    "Url": "/faq/How-to-quickly-generate-weekly.html"
   },
   "Can-AI-automatically-track-the": {
     "Category": "Security & Compliance",
@@ -4836,8 +3870,6 @@ export const faq = {
     "Title": "Can AI automatically track the implementation of meeting decisions?-Fastgpt",
     "Description": "AI can automatically track meeting decisions using specialized automation platforms. This involves capturing decisions and assignments during or after meetings to monitor progress.\n\nKey capabilities i",
     "Keywords": "AI Workflow, LLM Development, Enterprise AI, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-track-the",
-    "Url": "/faq/Can-AI-automatically-track-the.html"
   },
   "Can-AI-automatically-integrate-data": {
     "Category": "Security & Compliance",
@@ -4846,8 +3878,6 @@ export const faq = {
     "Title": "Can AI automatically integrate data from different departments?-Fastgpt",
     "Description": "Yes, AI can automate the integration of data from different departments. Modern AI technologies, particularly leveraging machine learning and natural language processing, are capable of handling this ",
     "Keywords": "Intelligent Q&A, Enterprise AI, Smart Assistant, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-integrate-data",
-    "Url": "/faq/Can-AI-automatically-integrate-data.html"
   },
   "Can-AI-provide-real-time-reminders": {
     "Category": "Security & Compliance",
@@ -4856,8 +3886,6 @@ export const faq = {
     "Title": "Can AI provide real-time reminders for upcoming tasks that are about to expire?-Fastgpt",
     "Description": "Yes, AI systems can provide real-time reminders for upcoming tasks nearing expiration. This capability leverages automated alert mechanisms based on predefined deadlines and trigger rules.\n\nKey requir",
     "Keywords": "FastGPT, AI Chatbot, Smart Assistant, Document AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-real-time-reminders",
-    "Url": "/faq/Can-AI-provide-real-time-reminders.html"
   },
   "AI-can-automatically-generate-the": {
     "Category": "Security & Compliance",
@@ -4866,8 +3894,6 @@ export const faq = {
     "Title": "AI can automatically generate the task priority plan for next week.-Fastgpt",
     "Description": "Yes, AI can automatically generate a task priority plan for the next week. AI systems analyze your defined tasks and relevant data to suggest a prioritized schedule.\n\nAI prioritization algorithms asse",
     "Keywords": "Intelligent Q&A, AI Automation, FastGPT, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/AI-can-automatically-generate-the",
-    "Url": "/faq/AI-can-automatically-generate-the.html"
   },
   "What-is-an-enterprise-knowledge": {
     "Category": "Content & Creativity",
@@ -4876,8 +3902,6 @@ export const faq = {
     "Title": "What is an enterprise knowledge base-Fastgpt",
     "Description": "An enterprise knowledge base is a centralized digital repository that systematically stores, organizes, and manages an organization's collective information and expertise. It serves as a single source",
     "Keywords": "LLM Development, AI Workflow, AI Chatbot, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/What-is-an-enterprise-knowledge",
-    "Url": "/faq/What-is-an-enterprise-knowledge.html"
   },
   "Why-do-companies-need-to": {
     "Category": "Content & Creativity",
@@ -4886,8 +3910,6 @@ export const faq = {
     "Title": "Why do companies need to build their own knowledge bases?-Fastgpt",
     "Description": "Companies need proprietary knowledge bases to centralize critical institutional knowledge, enabling informed decision-making and supporting strategic objectives.  \n\nA corporate knowledge base consolid",
     "Keywords": "Open Source AI, GPT Integration, AI Workflow, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Why-do-companies-need-to",
-    "Url": "/faq/Why-do-companies-need-to.html"
   },
   "What-problems-can-the-company's": {
     "Category": "Content & Creativity",
@@ -4896,8 +3918,6 @@ export const faq = {
     "Title": "What problems can the company's internal knowledge base solve?-Fastgpt",
     "Description": "A company's internal knowledge base centralizes essential information, solving key operational problems like fragmented knowledge, repetitive inquiries, and inefficient onboarding. It prevents valuabl",
     "Keywords": "AI Knowledge Management, AI Chatbot, Open Source AI, Document AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-problems-can-the-company's",
-    "Url": "/faq/What-problems-can-the-company's.html"
   },
   "How-to-make-the-knowledge": {
     "Category": "Content & Creativity",
@@ -4906,8 +3926,6 @@ export const faq = {
     "Title": "How to make the knowledge base improve cross-departmental information transparency-Fastgpt",
     "Description": "Implementing a centralized knowledge base enables systematic sharing of organizational information across departments. This fosters transparency by making critical data readily accessible to all autho",
     "Keywords": "FastGPT, Intelligent Q&A, Open Source AI, GPT Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-the-knowledge",
-    "Url": "/faq/How-to-make-the-knowledge.html"
   },
   "How-to-quickly-organize-company": {
     "Category": "Content & Creativity",
@@ -4916,8 +3934,6 @@ export const faq = {
     "Title": "How to quickly organize company knowledge documents using AI-Fastgpt",
     "Description": "AI accelerates knowledge organization by processing unstructured content into searchable, centralized systems using natural language processing and machine learning. This allows companies to automatic",
     "Keywords": "Open Source AI, AI Automation, GPT Integration, AI Workflow, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-organize-company",
-    "Url": "/faq/How-to-quickly-organize-company.html"
   },
   "How-to-keep-the-content": {
     "Category": "Content & Creativity",
@@ -4926,8 +3942,6 @@ export const faq = {
     "Title": "How to keep the content of the knowledge base updated in real-time-Fastgpt",
     "Description": "Real-time knowledge base updates involve automation technologies that immediately reflect changes from source systems. This is achieved by setting up continuous synchronization between your knowledge ",
     "Keywords": "Task Automation AI, API Integration, Open Source AI, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-keep-the-content",
-    "Url": "/faq/How-to-keep-the-content.html"
   },
   "Can-AI-automatically-identify-and": {
     "Category": "Productivity & Collaboration",
@@ -4936,8 +3950,6 @@ export const faq = {
     "Title": "Can AI automatically identify and categorize customer questions?-Fastgpt",
     "Description": "Yes, AI can effectively automate the identification and categorization of customer questions. This capability primarily relies on Natural Language Processing (NLP) techniques combined with machine lea",
     "Keywords": "AI Automation, Task Automation AI, Vector Search, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-and",
-    "Url": "/faq/Can-AI-automatically-identify-and.html"
   },
   "How-can-an-enterprise-knowledge": {
     "Category": "Content & Creativity",
@@ -4946,8 +3958,6 @@ export const faq = {
     "Title": "How can an enterprise knowledge base ensure data security-Fastgpt",
     "Description": "Enterprise knowledge bases ensure data security through a combination of robust access controls, encryption technologies, and comprehensive security policies governing data handling. This requires sys",
     "Keywords": "Smart Assistant, AI Automation, Enterprise AI, FastGPT, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-an-enterprise-knowledge",
-    "Url": "/faq/How-can-an-enterprise-knowledge.html"
   },
   "How-to-improve-the-retrieval": {
     "Category": "Content & Creativity",
@@ -4956,8 +3966,6 @@ export const faq = {
     "Title": "How to improve the retrieval speed of a knowledge base-Fastgpt",
     "Description": "Improving knowledge base retrieval speed is achievable through various optimization techniques while maintaining result relevance and accuracy. This enhances user satisfaction and productivity.\n\nKey s",
     "Keywords": "AI Automation, Vector Search, Task Automation AI, Open Source AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-retrieval",
-    "Url": "/faq/How-to-improve-the-retrieval.html"
   },
   "What-types-of-materials-are": {
     "Category": "Content & Creativity",
@@ -4966,8 +3974,6 @@ export const faq = {
     "Title": "What types of materials are suitable for storage in a company knowledge base?-Fastgpt",
     "Description": "Suitable knowledge base materials include essential company documentation, procedures, policies, and valuable accumulated expertise. This encompasses employee guidelines, standard operating procedures",
     "Keywords": "AI Knowledge Management, AI Platform, AI Workflow, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-types-of-materials-are",
-    "Url": "/faq/What-types-of-materials-are.html"
   },
   "How-to-quickly-import-existing": {
     "Category": "Content & Creativity",
@@ -4976,8 +3982,6 @@ export const faq = {
     "Title": "How to quickly import existing files into a knowledge base using AI-Fastgpt",
     "Description": "AI enables rapid import of existing files into a knowledge base through automated ingestion tools that leverage machine learning for efficient data processing. This method significantly accelerates se",
     "Keywords": "Intelligent Q&A, LLM Development, GPT Integration, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-import-existing",
-    "Url": "/faq/How-to-quickly-import-existing.html"
   },
   "Can-AI-automatically-generate-the": {
     "Category": "Content & Creativity",
@@ -4986,8 +3990,6 @@ export const faq = {
     "Title": "Can AI automatically generate the directory structure of a knowledge base?-Fastgpt",
     "Description": "AI can automatically generate a directory structure for a knowledge base. This capability leverages machine learning and natural language processing technologies.\n\nKey principles involve AI analyzing ",
     "Keywords": "AI Automation, GPT Integration, Enterprise AI, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-the",
-    "Url": "/faq/Can-AI-automatically-generate-the.html"
   },
   "How-knowledge-bases-help-new": {
     "Category": "Content & Creativity",
@@ -4996,8 +3998,6 @@ export const faq = {
     "Title": "How knowledge bases help new employees get up to speed quickly-Fastgpt",
     "Description": "A knowledge base acts as a centralized repository of essential company information, significantly accelerating the onboarding process for new employees. It provides immediate, self-serve access to cru",
     "Keywords": "AI Platform, Enterprise AI, Vector Search, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-knowledge-bases-help-new",
-    "Url": "/faq/How-knowledge-bases-help-new.html"
   },
   "How-to-integrate-the-enterprise": {
     "Category": "Content & Creativity",
@@ -5006,8 +4006,6 @@ export const faq = {
     "Title": "How to integrate the enterprise knowledge base with other systems-Fastgpt",
     "Description": "Integrating an enterprise knowledge base with other systems involves establishing connections to share and synchronize data automatically. This is feasible primarily through application programming in",
     "Keywords": "AI Workflow, Open Source AI, AI Knowledge Management, AI Platform, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-integrate-the-enterprise",
-    "Url": "/faq/How-to-integrate-the-enterprise.html"
   },
   "Can-AI-automatically-detect-duplicate": {
     "Category": "Content & Creativity",
@@ -5016,8 +4014,6 @@ export const faq = {
     "Title": "Can AI automatically detect duplicate content in a knowledge base?-Fastgpt",
     "Description": "Yes, AI can automatically detect duplicate content within a knowledge base. This capability is primarily achieved through Natural Language Processing (NLP) and Machine Learning (ML) algorithms designe",
     "Keywords": "Open Source AI, Task Automation AI, Vector Search, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-detect-duplicate",
-    "Url": "/faq/Can-AI-automatically-detect-duplicate.html"
   },
   "How-to-improve-the-user": {
     "Category": "Content & Creativity",
@@ -5026,8 +4022,6 @@ export const faq = {
     "Title": "How to improve the user experience of the knowledge base-Fastgpt",
     "Description": "Knowledge base user experience can be significantly improved through strategic enhancements focusing on accessibility, content quality, and ongoing optimization.\n\nKey principles include prioritizing i",
     "Keywords": "LLM Development, Task Automation AI, AI Automation, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-user",
-    "Url": "/faq/How-to-improve-the-user.html"
   },
   "How-can-a-knowledge-base": {
     "Category": "Content & Creativity",
@@ -5036,8 +4030,6 @@ export const faq = {
     "Title": "How can a knowledge base help teams reduce communication costs-Fastgpt",
     "Description": "A knowledge base centralizes essential information, making it readily available to all team members. This significantly reduces repetitive questions and clarifies processes, thereby lowering communica",
     "Keywords": "AI Chatbot, Vector Search, Smart Assistant, Intelligent Q&A, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-can-a-knowledge-base",
-    "Url": "/faq/How-can-a-knowledge-base.html"
   },
   "What-does-RAG-retrieval-augmented-generation": {
     "Category": "Content & Creativity",
@@ -5046,8 +4038,6 @@ export const faq = {
     "Title": "What does RAG retrieval-augmented generation mean?-Fastgpt",
     "Description": "RAG (Retrieval-Augmented Generation) is a technique that enhances large language models (LLMs) by integrating external knowledge sources into the generation process. It allows AI systems to produce mo",
     "Keywords": "GPT Integration, Task Automation AI, Document AI, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/What-does-RAG-retrieval-augmented-generation",
-    "Url": "/faq/What-does-RAG-retrieval-augmented-generation.html"
   },
   "Why-is-RAG-important-for": {
     "Category": "Content & Creativity",
@@ -5056,8 +4046,6 @@ export const faq = {
     "Title": "Why is RAG important for AI question answering?-Fastgpt",
     "Description": "Retrieval-Augmented Generation (RAG) is crucial for AI question answering because it significantly improves the accuracy, reliability, and relevance of generated responses. It addresses core limitatio",
     "Keywords": "Task Automation AI, Smart Assistant, Document AI, Open Source AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Why-is-RAG-important-for",
-    "Url": "/faq/Why-is-RAG-important-for.html"
   },
   "What-are-the-differences-between": {
     "Category": "Enterprise Applications",
@@ -5066,8 +4054,6 @@ export const faq = {
     "Title": "What are the differences between the BLEU metric and ROUGE?-Fastgpt",
     "Description": "BLEU and ROUGE are both automated metrics for evaluating the quality of text generated by NLP models, but they measure different aspects. BLEU primarily assesses precision (correctness of matches), wh",
     "Keywords": "AI Automation, AI Knowledge Management, Smart Assistant, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-differences-between",
-    "Url": "/faq/What-are-the-differences-between.html"
   },
   "How-to-improve-the-accuracy": {
     "Category": "AI Basics & Terms",
@@ -5076,8 +4062,6 @@ export const faq = {
     "Title": "How to improve the accuracy of AI in sales forecasting-Fastgpt",
     "Description": "Improving AI sales forecasting accuracy is achievable through targeted enhancements in data and modeling. Continuous refinement of algorithms is essential.  \n\nHigh-quality, comprehensive historical da",
     "Keywords": "Intelligent Q&A, Smart Assistant, Open Source AI, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-accuracy",
-    "Url": "/faq/How-to-improve-the-accuracy.html"
   },
   "How-does-AI-use-RAG": {
     "Category": "Content & Creativity",
@@ -5086,8 +4070,6 @@ export const faq = {
     "Title": "How does AI use RAG to understand long documents-Fastgpt",
     "Description": "AI uses Retrieval-Augmented Generation (RAG) to understand long documents by first retrieving relevant snippets and then using that context to generate informed responses. This approach enables the AI",
     "Keywords": "Vector Search, GPT Integration, FastGPT, AI Automation, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-use-RAG",
-    "Url": "/faq/How-does-AI-use-RAG.html"
   },
   "Which-data-intensive-scenarios-is-RAG": {
     "Category": "Content & Creativity",
@@ -5096,8 +4078,6 @@ export const faq = {
     "Title": "Which data-intensive scenarios is RAG suitable for?-Fastgpt",
     "Description": "RAG enhances generative AI by integrating retrieval from large data sources, making it particularly suitable for scenarios demanding thorough information analysis and grounding. It excels in environme",
     "Keywords": "Enterprise AI, AI Workflow, AI Knowledge Management, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Which-data-intensive-scenarios-is-RAG",
-    "Url": "/faq/Which-data-intensive-scenarios-is-RAG.html"
   },
   "How-to-make-RAG-retrieve": {
     "Category": "Content & Creativity",
@@ -5106,8 +4086,6 @@ export const faq = {
     "Title": "How to make RAG retrieve the latest information in real-time-Fastgpt",
     "Description": "To enable real-time RAG for retrieving the latest information, dynamic data pipelines and indexing strategies are essential. This involves moving beyond static datasets to systems capable of ingesting",
     "Keywords": "Enterprise AI, LLM Development, AI Chatbot, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-RAG-retrieve",
-    "Url": "/faq/How-to-make-RAG-retrieve.html"
   },
   "What-underlying-technical-support-does": {
     "Category": "Content & Creativity",
@@ -5116,8 +4094,6 @@ export const faq = {
     "Title": "What underlying technical support does RAG require?-Fastgpt",
     "Description": "RAG combines retrieval models with language generation models, requiring specific backend components to function effectively. Its implementation relies on three interconnected technical pillars: embed",
     "Keywords": "GPT Integration, API Integration, AI Chatbot, Open Source AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-underlying-technical-support-does",
-    "Url": "/faq/What-underlying-technical-support-does.html"
   },
   "What-is-the-relationship-between": {
     "Category": "Enterprise Applications",
@@ -5126,8 +4102,6 @@ export const faq = {
     "Title": "What is the relationship between inference speed and model size?-Fastgpt",
     "Description": "Inference speed generally decreases as model size increases, primarily due to greater computational demands and memory bandwidth requirements. Larger models necessitate more hardware resources and tim",
     "Keywords": "GPT Integration, Document AI, Smart Assistant, Task Automation AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-relationship-between",
-    "Url": "/faq/What-is-the-relationship-between.html"
   },
   "How-to-determine-if-a": {
     "Category": "Content & Creativity",
@@ -5136,8 +4110,6 @@ export const faq = {
     "Title": "How to determine if a system uses RAG-Fastgpt",
     "Description": "Determining if a system uses Retrieval-Augmented Generation (RAG) involves examining its architecture and response patterns. It is feasible to identify RAG usage through specific indicators.\n\nKey sign",
     "Keywords": "Open Source AI, AI Workflow, FastGPT, AI Chatbot, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-determine-if-a",
-    "Url": "/faq/How-to-determine-if-a.html"
   },
   "Can-RAG-be-combined-with": {
     "Category": "Content & Creativity",
@@ -5146,8 +4118,6 @@ export const faq = {
     "Title": "Can RAG be combined with speech recognition-Fastgpt",
     "Description": "Yes, RAG (Retrieval-Augmented Generation) can be effectively combined with speech recognition technology. The integration typically involves using automated speech recognition (ASR) to convert spoken ",
     "Keywords": "GPT Integration, API Integration, AI Chatbot, FastGPT, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-RAG-be-combined-with",
-    "Url": "/faq/Can-RAG-be-combined-with.html"
   },
   "How-to-reduce-the-computational": {
     "Category": "Content & Creativity",
@@ -5156,8 +4126,6 @@ export const faq = {
     "Title": "How to reduce the computational cost of RAG-Fastgpt",
     "Description": "Reducing RAG computational cost is feasible through optimized retrieval strategies, lightweight components, and infrastructure choices.  \n\nKey principles involve minimizing the data processed by the e",
     "Keywords": "GPT Integration, LLM Development, Intelligent Q&A, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-reduce-the-computational",
-    "Url": "/faq/How-to-reduce-the-computational.html"
   },
   "Can-RAG-handle-unstructured-data?": {
     "Category": "Content & Creativity",
@@ -5166,8 +4134,6 @@ export const faq = {
     "Title": "Can RAG handle unstructured data?-Fastgpt",
     "Description": "Yes, RAG is specifically designed to handle unstructured data. Its core architecture enables it to process information like raw text documents, emails, PDFs, and web pages without predefined formats.\n",
     "Keywords": "AI Knowledge Management, AI Workflow, FastGPT, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-RAG-handle-unstructured-data?",
-    "Url": "/faq/Can-RAG-handle-unstructured-data?.html"
   },
   "How-does-RAG-ensure-the": {
     "Category": "Content & Creativity",
@@ -5176,8 +4142,6 @@ export const faq = {
     "Title": "How does RAG ensure the timeliness of retrieved content?-Fastgpt",
     "Description": "RAG ensures retrieved content timeliness by dynamically sourcing information from external, updatable data stores instead of relying solely on static pre-trained knowledge. This design allows the retr",
     "Keywords": "Open Source AI, Task Automation AI, LLM Development, AI Automation, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-does-RAG-ensure-the",
-    "Url": "/faq/How-does-RAG-ensure-the.html"
   },
   "How-much-does-RAG-help": {
     "Category": "Content & Creativity",
@@ -5186,8 +4150,6 @@ export const faq = {
     "Title": "How much does RAG help improve search accuracy?-Fastgpt",
     "Description": "Retrieval-Augmented Generation substantially improves search accuracy by grounding responses in authoritative external knowledge. It enables precise answers beyond base model knowledge cutoffs through",
     "Keywords": "AI Platform, Enterprise AI, API Integration, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-much-does-RAG-help",
-    "Url": "/faq/How-much-does-RAG-help.html"
   },
   "How-to-train-RAG-to": {
     "Category": "Content & Creativity",
@@ -5196,8 +4158,6 @@ export const faq = {
     "Title": "How to train RAG to make results more in line with requirements-Fastgpt",
     "Description": "Training RAG systems to better align results with requirements involves optimizing its retrieval and generation components. This process tailors the system's responses based on specific data and task ",
     "Keywords": "Open Source AI, API Integration, AI Automation, AI Knowledge Management, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-train-RAG-to",
-    "Url": "/faq/How-to-train-RAG-to.html"
   },
   "Is-RAG-suitable-for-mobile": {
     "Category": "Content & Creativity",
@@ -5206,8 +4166,6 @@ export const faq = {
     "Title": "Is RAG suitable for mobile applications?-Fastgpt",
     "Description": "Yes, RAG (Retrieval-Augmented Generation) is generally suitable for mobile applications. It can effectively enhance chatbot or assistant features by providing relevant, up-to-date information alongsid",
     "Keywords": "API Integration, FastGPT, Document AI, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Is-RAG-suitable-for-mobile",
-    "Url": "/faq/Is-RAG-suitable-for-mobile.html"
   },
   "How-to-evaluate-the-value": {
     "Category": "Content & Creativity",
@@ -5216,8 +4174,6 @@ export const faq = {
     "Title": "How to evaluate the value brought by RAG-Fastgpt",
     "Description": "Evaluating RAG value involves quantifying its impact on accuracy, efficiency, and task outcomes compared to alternative approaches. It is feasible through structured comparisons and defined metrics.  ",
     "Keywords": "Task Automation AI, AI Knowledge Management, AI Platform, Open Source AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-evaluate-the-value",
-    "Url": "/faq/How-to-evaluate-the-value.html"
   },
   "How-to-quickly-integrate-AI": {
     "Category": "Marketing & Support",
@@ -5226,8 +4182,6 @@ export const faq = {
     "Title": "How to quickly integrate AI Agent with third-party knowledge bases-Fastgpt",
     "Description": "Integrating AI Agents with external knowledge bases is achievable through standardized interfaces like REST APIs or dedicated libraries. This allows the Agent to query and retrieve relevant informatio",
     "Keywords": "Open Source AI, Task Automation AI, LLM Development, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-integrate-AI",
-    "Url": "/faq/How-to-quickly-integrate-AI.html"
   },
   "How-can-AI-automatically-synchronize": {
     "Category": "Content & Creativity",
@@ -5236,8 +4190,6 @@ export const faq = {
     "Title": "How can AI automatically synchronize the latest company materials-Fastgpt",
     "Description": "AI can automatically synchronize the latest company materials through centralized platforms leveraging APIs and machine learning. This enables real-time or scheduled updates across designated reposito",
     "Keywords": "Open Source AI, AI Chatbot, Task Automation AI, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-automatically-synchronize",
-    "Url": "/faq/How-can-AI-automatically-synchronize.html"
   },
   "How-to-batch-upload-files": {
     "Category": "Content & Creativity",
@@ -5246,8 +4198,6 @@ export const faq = {
     "Title": "How to batch upload files to the AI knowledge system-Fastgpt",
     "Description": "Batch uploading files to an AI knowledge system is the process of simultaneously ingesting multiple files, such as documents, spreadsheets, or presentations, into the system's repository. This feature",
     "Keywords": "Vector Search, LLM Development, GPT Integration, AI Workflow, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-batch-upload-files",
-    "Url": "/faq/How-to-batch-upload-files.html"
   },
   "Can-AI-read-and-understand": {
     "Category": "Content & Creativity",
@@ -5256,8 +4206,6 @@ export const faq = {
     "Title": "Can AI read and understand scanned documents?-Fastgpt",
     "Description": "Yes, AI can read and understand scanned documents. This capability primarily relies on Optical Character Recognition (OCR) to convert scanned images into machine-readable text and Natural Language Pro",
     "Keywords": "Document AI, Intelligent Q&A, Open Source AI, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-read-and-understand",
-    "Url": "/faq/Can-AI-read-and-understand.html"
   },
   "How-to-make-AI-recognize": {
     "Category": "Content & Creativity",
@@ -5266,8 +4214,6 @@ export const faq = {
     "Title": "How to make AI recognize different formats of documents-Fastgpt",
     "Description": "AI recognizes different document formats through specialized processing techniques designed for each type. This requires adaptive models that understand diverse file structures.\n\nKey methods include: ",
     "Keywords": "Vector Search, FastGPT, Intelligent Q&A, Enterprise AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-recognize",
-    "Url": "/faq/How-to-make-AI-recognize.html"
   },
   "Can-AI-process-text-information": {
     "Category": "Content & Creativity",
@@ -5276,8 +4222,6 @@ export const faq = {
     "Title": "Can AI process text information in images?-Fastgpt",
     "Description": "AI can accurately recognize and extract text from images through Optical Character Recognition (OCR) technology combined with natural language processing capabilities. This functionality is not only f",
     "Keywords": "Open Source AI, Intelligent Q&A, API Integration, AI Workflow, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-process-text-information",
-    "Url": "/faq/Can-AI-process-text-information.html"
   },
   "How-to-make-AI-search": {
     "Category": "Content & Creativity",
@@ -5286,8 +4230,6 @@ export const faq = {
     "Title": "How to make AI search in massive files in seconds-Fastgpt",
     "Description": "AI-powered semantic search enables sub-second retrieval across massive document collections by leveraging vector similarity. This overcomes the limitations of traditional keyword matching.\n\nKey requir",
     "Keywords": "AI Workflow, API Integration, Vector Search, Open Source AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-search",
-    "Url": "/faq/How-to-make-AI-search.html"
   },
   "How-much-storage-space-is": {
     "Category": "Content & Creativity",
@@ -5296,8 +4238,6 @@ export const faq = {
     "Title": "How much storage space is required for AI to access company documents?-Fastgpt",
     "Description": "The storage required varies significantly based on document volume and AI processing needs, typically ranging from 1 GB to over 100 TB. There is no universal fixed amount; feasibility depends entirely",
     "Keywords": "GPT Integration, Enterprise AI, Open Source AI, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-much-storage-space-is",
-    "Url": "/faq/How-much-storage-space-is.html"
   },
   "How-to-ensure-the-security": {
     "Category": "Marketing & Support",
@@ -5306,8 +4246,6 @@ export const faq = {
     "Title": "How to ensure the security of data accessed by AI Agents-Fastgpt",
     "Description": "Security for data accessed by AI agents is achievable through a combination of technological controls, strict governance policies, and continuous oversight.\n\nKey principles include implementing robust",
     "Keywords": "AI Chatbot, AI Knowledge Management, LLM Development, Enterprise AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-security",
-    "Url": "/faq/How-to-ensure-the-security.html"
   },
   "Can-AI-automatically-update-the": {
     "Category": "Content & Creativity",
@@ -5316,8 +4254,6 @@ export const faq = {
     "Title": "Can AI automatically update the index information of documents?-Fastgpt",
     "Description": "Yes, AI can automatically update the index information of documents. Automation is feasible through specialized AI systems and integrations.\n\nAI utilizes Natural Language Processing (NLP) and Machine ",
     "Keywords": "FastGPT, Open Source AI, API Integration, Enterprise AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-update-the",
-    "Url": "/faq/Can-AI-automatically-update-the.html"
   },
   "How-to-make-AI-identify": {
     "Category": "AI Basics & Terms",
@@ -5326,8 +4262,6 @@ export const faq = {
     "Title": "How to make AI identify common needs across different industries-Fastgpt",
     "Description": "AI can identify common needs across different industries by analyzing vast datasets to uncover recurring patterns and latent requirements. This is achievable through advanced machine learning techniqu",
     "Keywords": "Vector Search, Task Automation AI, LLM Development, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-identify",
-    "Url": "/faq/How-to-make-AI-identify.html"
   },
   "Can-AI-automatically-extract-the": {
     "Category": "Content & Creativity",
@@ -5336,8 +4270,6 @@ export const faq = {
     "Title": "Can AI automatically extract the content of data tables?-Fastgpt",
     "Description": "Yes, AI can automatically extract content from data tables within documents and images. It leverages computer vision and natural language processing to identify and interpret tabular structures.\n\nThis",
     "Keywords": "FastGPT, API Integration, Open Source AI, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-extract-the",
-    "Url": "/faq/Can-AI-automatically-extract-the.html"
   },
   "How-does-AI-determine-the": {
     "Category": "Content & Creativity",
@@ -5346,8 +4278,6 @@ export const faq = {
     "Title": "How does AI determine the relationship between documents?-Fastgpt",
     "Description": "AI determines document relationships by analyzing textual patterns, semantic similarities, and contextual clues. It employs techniques like Natural Language Processing (NLP) and machine learning to un",
     "Keywords": "Intelligent Q&A, AI Platform, AI Knowledge Management, Vector Search, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-determine-the",
-    "Url": "/faq/How-does-AI-determine-the.html"
   },
   "Can-AI-automatically-generate-knowledge": {
     "Category": "Content & Creativity",
@@ -5356,8 +4286,6 @@ export const faq = {
     "Title": "Can AI automatically generate knowledge graph structures?-Fastgpt",
     "Description": "Yes, AI can automatically generate knowledge graph (KG) structures. This automation leverages natural language processing (NLP) and machine learning (ML) to extract entities and relationships from var",
     "Keywords": "Smart Assistant, AI Platform, Document AI, FastGPT, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-knowledge",
-    "Url": "/faq/Can-AI-automatically-generate-knowledge.html"
   },
   "How-to-make-AI-access": {
     "Category": "Content & Creativity",
@@ -5366,8 +4294,6 @@ export const faq = {
     "Title": "How to make AI access and analyze cloud files-Fastgpt",
     "Description": "AI can securely access and analyze cloud-stored files by integrating with cloud storage services through APIs or native connectors. This enables processing files without the need for local downloads.\n",
     "Keywords": "Intelligent Q&A, AI Automation, Task Automation AI, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-access",
-    "Url": "/faq/How-to-make-AI-access.html"
   },
   "Can-AI-handle-multiple-versions": {
     "Category": "Content & Creativity",
@@ -5376,8 +4302,6 @@ export const faq = {
     "Title": "Can AI handle multiple versions of the same document?-Fastgpt",
     "Description": "Yes, AI can effectively handle multiple versions of the same document. Modern AI systems, particularly those leveraging natural language processing (NLP) and machine learning, are designed to process,",
     "Keywords": "LLM Development, Document AI, Task Automation AI, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-handle-multiple-versions",
-    "Url": "/faq/Can-AI-handle-multiple-versions.html"
   },
   "How-to-enable-AI-to": {
     "Category": "AI Basics & Terms",
@@ -5386,8 +4310,6 @@ export const faq = {
     "Title": "How to enable AI to provide integrated pre-sales and after-sales support-Fastgpt",
     "Description": "Enabling AI to provide integrated pre-sales and after-sales support requires implementing a unified conversational AI platform capable of managing the entire customer lifecycle. This is achieved by in",
     "Keywords": "Vector Search, Smart Assistant, LLM Development, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-AI-to",
-    "Url": "/faq/How-to-enable-AI-to.html"
   },
   "How-can-AI-quickly-retrieve": {
     "Category": "Content & Creativity",
@@ -5396,8 +4318,6 @@ export const faq = {
     "Title": "How can AI quickly retrieve historical contract content?-Fastgpt",
     "Description": "AI enables fast retrieval of historical contract content through specialized software combining optical character recognition (OCR), natural language processing (NLP), and semantic search.  \n\nCore pri",
     "Keywords": "Smart Assistant, Document AI, Vector Search, AI Automation, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-quickly-retrieve",
-    "Url": "/faq/How-can-AI-quickly-retrieve.html"
   },
   "Can-AI-automatically-monitor-document": {
     "Category": "Content & Creativity",
@@ -5406,8 +4326,6 @@ export const faq = {
     "Title": "Can AI automatically monitor document changes?-Fastgpt",
     "Description": "AI can automatically monitor document changes with high accuracy and efficiency. This capability is enabled through specialized algorithms and system integrations.\n\nAI systems process documents using ",
     "Keywords": "AI Chatbot, Intelligent Q&A, AI Knowledge Management, Enterprise AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-monitor-document",
-    "Url": "/faq/Can-AI-automatically-monitor-document.html"
   },
   "How-to-make-AI-provide": {
     "Category": "AI Basics & Terms",
@@ -5416,8 +4334,6 @@ export const faq = {
     "Title": "How to make AI provide continuous iterative creative support-Fastgpt",
     "Description": "AI can provide continuous iterative creative support through structured prompting and feedback loops. This approach enables progressively refined outputs that build upon previous iterations.\n\nEstablis",
     "Keywords": "Smart Assistant, AI Platform, Intelligent Q&A, GPT Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-provide",
-    "Url": "/faq/How-to-make-AI-provide.html"
   },
   "What-are-the-techniques-for": {
     "Category": "Content & Creativity",
@@ -5426,8 +4342,6 @@ export const faq = {
     "Title": "What are the techniques for knowledge updating and accuracy improvement?-Fastgpt",
     "Description": "Knowledge updating and accuracy improvement employ systematic techniques to ensure organizational knowledge bases stay current and precise. These techniques are essential for maintaining reliable info",
     "Keywords": "GPT Integration, Vector Search, API Integration, FastGPT, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-techniques-for",
-    "Url": "/faq/What-are-the-techniques-for.html"
   },
   "How-to-keep-the-knowledge": {
     "Category": "Content & Creativity",
@@ -5436,8 +4350,6 @@ export const faq = {
     "Title": "How to keep the knowledge base content fresh-Fastgpt",
     "Description": "Keeping knowledge base content fresh involves an ongoing, systematic process of review, update, and refinement to ensure accuracy, relevance, and value. It is essential and achievable through dedicate",
     "Keywords": "FastGPT, AI Platform, GPT Integration, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-keep-the-knowledge",
-    "Url": "/faq/How-to-keep-the-knowledge.html"
   },
   "Can-AI-automatically-detect-and": {
     "Category": "Data & Knowledge",
@@ -5446,8 +4358,6 @@ export const faq = {
     "Title": "Can AI automatically detect and adjust the logical structure of an article?-Fastgpt",
     "Description": "Yes, AI can automatically detect and adjust the logical structure of an article. Advanced Natural Language Processing (NLP) models are capable of analyzing text for coherence, flow, and argument progr",
     "Keywords": "Smart Assistant, LLM Development, Task Automation AI, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-detect-and",
-    "Url": "/faq/Can-AI-automatically-detect-and.html"
   },
   "How-AI-Discovers-Outdated-or": {
     "Category": "Content & Creativity",
@@ -5456,8 +4366,6 @@ export const faq = {
     "Title": "How AI Discovers Outdated or Invalid Knowledge Points-Fastgpt",
     "Description": "AI systems identify outdated or invalid knowledge points through automated processes that monitor changes in underlying information sources and user interaction signals. This capability leverages cont",
     "Keywords": "Task Automation AI, Enterprise AI, AI Automation, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Discovers-Outdated-or",
-    "Url": "/faq/How-AI-Discovers-Outdated-or.html"
   },
   "Can-the-knowledge-base-automatically": {
     "Category": "Content & Creativity",
@@ -5466,8 +4374,6 @@ export const faq = {
     "Title": "Can the knowledge base automatically recommend relevant materials?-Fastgpt",
     "Description": "Yes, modern knowledge base systems can automatically recommend relevant materials to users. This functionality leverages artificial intelligence and machine learning.\n\nAutomatic recommendations requir",
     "Keywords": "AI Platform, Vector Search, Open Source AI, Intelligent Q&A, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-the-knowledge-base-automatically",
-    "Url": "/faq/Can-the-knowledge-base-automatically.html"
   },
   "Can-AI-automatically-verify-the": {
     "Category": "Content & Creativity",
@@ -5476,8 +4382,6 @@ export const faq = {
     "Title": "Can AI automatically verify the accuracy of knowledge?-Fastgpt",
     "Description": "Current AI systems possess limited capability for fully autonomous knowledge verification. While advanced models can detect inconsistencies, they cannot guarantee comprehensive accuracy independently.",
     "Keywords": "AI Platform, LLM Development, Intelligent Q&A, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-verify-the",
-    "Url": "/faq/Can-AI-automatically-verify-the.html"
   },
   "How-to-enable-multi-person-collaborative": {
     "Category": "Content & Creativity",
@@ -5486,8 +4390,6 @@ export const faq = {
     "Title": "How to enable multi-person collaborative editing in a knowledge base-Fastgpt",
     "Description": "Multi-person collaborative editing allows multiple users to edit a knowledge base document simultaneously or asynchronously. This functionality is enabled on modern knowledge base platforms that suppo",
     "Keywords": "AI Chatbot, Vector Search, Smart Assistant, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-multi-person-collaborative",
-    "Url": "/faq/How-to-enable-multi-person-collaborative.html"
   },
   "How-does-AI-track-version": {
     "Category": "Content & Creativity",
@@ -5496,8 +4398,6 @@ export const faq = {
     "Title": "How does AI track version changes of knowledge-Fastgpt",
     "Description": "AI knowledge version tracking refers to AI systems automatically monitoring, identifying, and documenting modifications made to knowledge bases or information assets over time. It enables the recordin",
     "Keywords": "AI Knowledge Management, AI Chatbot, Task Automation AI, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-track-version",
-    "Url": "/faq/How-does-AI-track-version.html"
   },
   "Can-AI-automatically-compare-the": {
     "Category": "Content & Creativity",
@@ -5506,8 +4406,6 @@ export const faq = {
     "Title": "Can AI automatically compare the differences between two documents?-Fastgpt",
     "Description": "Yes, AI can automatically compare the differences between two documents. It leverages machine learning algorithms to analyze text, detect changes, identify additions, deletions, and modifications betw",
     "Keywords": "Smart Assistant, Document AI, AI Platform, GPT Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-compare-the",
-    "Url": "/faq/Can-AI-automatically-compare-the.html"
   },
   "How-to-improve-the-long-term": {
     "Category": "Content & Creativity",
@@ -5516,8 +4414,6 @@ export const faq = {
     "Title": "How to improve the long-term maintainability of a knowledge base-Fastgpt",
     "Description": "Enhancing knowledge base maintainability involves establishing standardized workflows, governance policies, and utilizing modern tools to ensure content remains accurate, accessible, and relevant over",
     "Keywords": "AI Workflow, Intelligent Q&A, Task Automation AI, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-long-term",
-    "Url": "/faq/How-to-improve-the-long-term.html"
   },
   "How-to-avoid-information-redundancy": {
     "Category": "Content & Creativity",
@@ -5526,8 +4422,6 @@ export const faq = {
     "Title": "How to avoid information redundancy in the knowledge base-Fastgpt",
     "Description": "Avoiding information redundancy in knowledge base management is achievable through structured content governance and technology adoption.\n\nEstablish a policy of single-sourcing unique information wher",
     "Keywords": "Open Source AI, Enterprise AI, Vector Search, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-avoid-information-redundancy",
-    "Url": "/faq/How-to-avoid-information-redundancy.html"
   },
   "Can-AI-automatically-clean-up": {
     "Category": "Content & Creativity",
@@ -5536,8 +4430,6 @@ export const faq = {
     "Title": "Can AI automatically clean up duplicate and outdated content?-Fastgpt",
     "Description": "Yes, AI can automatically clean up duplicate and outdated content. Modern AI technologies are specifically designed to automate these content maintenance tasks efficiently.\n\nThis capability relies on ",
     "Keywords": "Enterprise AI, Smart Assistant, AI Knowledge Management, AI Automation, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-clean-up",
-    "Url": "/faq/Can-AI-automatically-clean-up.html"
   },
   "How-to-enable-instant-comments": {
     "Category": "Content & Creativity",
@@ -5546,8 +4438,6 @@ export const faq = {
     "Title": "How to enable instant comments and feedback for a knowledge base-Fastgpt",
     "Description": "Enabling instant comments in a knowledge base allows users to submit immediate feedback or questions directly on articles. It is feasible using standard content management system features or dedicated",
     "Keywords": "Smart Assistant, Open Source AI, AI Knowledge Management, Task Automation AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-instant-comments",
-    "Url": "/faq/How-to-enable-instant-comments.html"
   },
   "How-AI-improves-the-efficiency": {
     "Category": "Content & Creativity",
@@ -5556,8 +4446,6 @@ export const faq = {
     "Title": "How AI improves the efficiency of content moderation-Fastgpt",
     "Description": "AI significantly enhances content moderation efficiency by automating the detection and flagging of harmful content across vast volumes of user-generated data. It enables platforms to handle massive s",
     "Keywords": "API Integration, Open Source AI, Document AI, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-AI-improves-the-efficiency",
-    "Url": "/faq/How-AI-improves-the-efficiency.html"
   },
   "Can-AI-remind-us-of": {
     "Category": "Content & Creativity",
@@ -5566,8 +4454,6 @@ export const faq = {
     "Title": "Can AI remind us of areas where knowledge is lacking?-Fastgpt",
     "Description": "Yes, AI can effectively identify areas of knowledge deficiency. By analyzing patterns in data, interactions, and performance metrics, AI systems can detect gaps or inconsistencies that indicate missin",
     "Keywords": "Document AI, LLM Development, AI Chatbot, Task Automation AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-remind-us-of",
-    "Url": "/faq/Can-AI-remind-us-of.html"
   },
   "How-to-Generate-Knowledge-Update": {
     "Category": "Content & Creativity",
@@ -5576,8 +4462,6 @@ export const faq = {
     "Title": "How to Generate Knowledge Update Reports with AI-Fastgpt",
     "Description": "Generating knowledge update reports with AI leverages natural language processing to automatically synthesize and format critical updates from unstructured data sources. This automation is feasible th",
     "Keywords": "Enterprise AI, AI Chatbot, LLM Development, AI Automation, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-Generate-Knowledge-Update",
-    "Url": "/faq/How-to-Generate-Knowledge-Update.html"
   },
   "How-to-synchronize-the-knowledge": {
     "Category": "Content & Creativity",
@@ -5586,8 +4470,6 @@ export const faq = {
     "Title": "How to synchronize the knowledge base with real-time data-Fastgpt",
     "Description": "Synchronizing a knowledge base with real-time data is feasible through automated integration mechanisms connecting the KB to relevant data sources. This ensures information reflects the latest updates",
     "Keywords": "FastGPT, Document AI, AI Chatbot, API Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-synchronize-the-knowledge",
-    "Url": "/faq/How-to-synchronize-the-knowledge.html"
   },
   "Can-AI-automatically-back-up": {
     "Category": "Content & Creativity",
@@ -5596,8 +4478,6 @@ export const faq = {
     "Title": "Can AI automatically back up old versions during updates?-Fastgpt",
     "Description": "Yes, AI can be programmed and configured to automatically back up old versions during software or system updates. This capability leverages intelligent automation for reliable data preservation.\n\nKey ",
     "Keywords": "Vector Search, AI Workflow, Task Automation AI, Open Source AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-back-up",
-    "Url": "/faq/Can-AI-automatically-back-up.html"
   },
   "How-does-AI-identify-key": {
     "Category": "Content & Creativity",
@@ -5606,8 +4486,6 @@ export const faq = {
     "Title": "How does AI identify key knowledge points and display them with weighting?-Fastgpt",
     "Description": "AI identifies key knowledge points by analyzing large datasets using natural language processing techniques to recognize terms, concepts, and relationships with high relevance to the core topic. It th",
     "Keywords": "GPT Integration, AI Chatbot, Intelligent Q&A, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-identify-key",
-    "Url": "/faq/How-does-AI-identify-key.html"
   },
   "How-AI-Helps-Develop-Knowledge": {
     "Category": "Content & Creativity",
@@ -5616,8 +4494,6 @@ export const faq = {
     "Title": "How AI Helps Develop Knowledge Update Plans-Fastgpt",
     "Description": "Artificial Intelligence streamlines knowledge base maintenance by automating the identification and prioritization of necessary updates. It significantly enhances the efficiency and accuracy of develo",
     "Keywords": "GPT Integration, API Integration, LLM Development, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Develop-Knowledge",
-    "Url": "/faq/How-AI-Helps-Develop-Knowledge.html"
   },
   "Can-AI-automatically-update-materials": {
     "Category": "Content & Creativity",
@@ -5626,8 +4502,6 @@ export const faq = {
     "Title": "Can AI automatically update materials by integrating external news?-Fastgpt",
     "Description": "Yes, AI systems can be configured to automatically update materials by integrating external news feeds. This capability leverages technologies like APIs, web scraping, and Natural Language Processing ",
     "Keywords": "AI Platform, FastGPT, API Integration, Intelligent Q&A, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-update-materials",
-    "Url": "/faq/Can-AI-automatically-update-materials.html"
   },
   "How-does-the-knowledge-base": {
     "Category": "Content & Creativity",
@@ -5636,8 +4510,6 @@ export const faq = {
     "Title": "How does the knowledge base integrate multi-source data interfaces-Fastgpt",
     "Description": "Knowledge bases integrate multi-source data interfaces through specialized technical architectures designed for connectivity and consolidation. This involves establishing secure, automated pipelines t",
     "Keywords": "Enterprise AI, Smart Assistant, Document AI, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-does-the-knowledge-base",
-    "Url": "/faq/How-does-the-knowledge-base.html"
   },
   "Can-AI-automatically-translate-updated": {
     "Category": "Content & Creativity",
@@ -5646,8 +4518,6 @@ export const faq = {
     "Title": "Can AI automatically translate updated content?-Fastgpt",
     "Description": "Yes, AI can automatically translate updated content. This capability is a core function of modern machine translation (MT) systems.\n\nAI translation engines can be integrated into content management sy",
     "Keywords": "Smart Assistant, LLM Development, GPT Integration, Open Source AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-translate-updated",
-    "Url": "/faq/Can-AI-automatically-translate-updated.html"
   },
   "How-does-AI-recommend-optimization": {
     "Category": "Content & Creativity",
@@ -5656,8 +4526,6 @@ export const faq = {
     "Title": "How does AI recommend optimization solutions based on usage conditions?-Fastgpt",
     "Description": "AI recommends optimization solutions by analyzing real-time usage data and user interactions to identify inefficiencies and suggest targeted enhancements. This process leverages predictive modeling to",
     "Keywords": "Task Automation AI, FastGPT, Vector Search, Enterprise AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-recommend-optimization",
-    "Url": "/faq/How-does-AI-recommend-optimization.html"
   },
   "Can-AI-automatically-track-external": {
     "Category": "Content & Creativity",
@@ -5666,8 +4534,6 @@ export const faq = {
     "Title": "Can AI automatically track external regulatory changes?-Fastgpt",
     "Description": "Yes, AI can automatically track external regulatory changes. This capability leverages specialized technologies designed to monitor vast amounts of regulatory sources efficiently.\n\nAI regulatory track",
     "Keywords": "Smart Assistant, Intelligent Q&A, AI Knowledge Management, AI Automation, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-track-external",
-    "Url": "/faq/Can-AI-automatically-track-external.html"
   },
   "How-AI-automatically-expands-the": {
     "Category": "Content & Creativity",
@@ -5676,8 +4542,6 @@ export const faq = {
     "Title": "How AI automatically expands the content of knowledge bases-Fastgpt",
     "Description": "AI automatically expands knowledge base content by employing algorithms like natural language processing (NLP) and machine learning to generate or retrieve new, relevant information based on existing ",
     "Keywords": "Vector Search, AI Workflow, Smart Assistant, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-automatically-expands-the",
-    "Url": "/faq/How-AI-automatically-expands-the.html"
   },
   "Does-the-knowledge-base-support": {
     "Category": "Content & Creativity",
@@ -5686,8 +4550,6 @@ export const faq = {
     "Title": "Does the knowledge base support cross-departmental data interoperability?-Fastgpt",
     "Description": "Yes, a well-designed knowledge base typically supports cross-departmental data interoperability. This is a core capability for breaking down organizational information silos.\n\nEffective interoperabili",
     "Keywords": "Open Source AI, Enterprise AI, API Integration, Document AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Does-the-knowledge-base-support",
-    "Url": "/faq/Does-the-knowledge-base-support.html"
   },
   "Can-AI-export-important-data": {
     "Category": "Content & Creativity",
@@ -5696,8 +4558,6 @@ export const faq = {
     "Title": "Can AI export important data from the knowledge base with one click?-Fastgpt",
     "Description": "AI systems can generally export key data from knowledge bases in bulk, though \"one-click\" capability depends heavily on specific platform features and configured permissions. This is feasible where in",
     "Keywords": "Open Source AI, Document AI, GPT Integration, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-export-important-data",
-    "Url": "/faq/Can-AI-export-important-data.html"
   },
   "How-to-enable-multi-dimensional-search": {
     "Category": "Content & Creativity",
@@ -5706,8 +4566,6 @@ export const faq = {
     "Title": "How to enable multi-dimensional search for a knowledge base-Fastgpt",
     "Description": "Enabling multi-dimensional search allows users to filter knowledge base content based on multiple attributes (e.g., category, author, date, tags) simultaneously, enhancing findability. Implementing th",
     "Keywords": "FastGPT, Enterprise AI, LLM Development, API Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-multi-dimensional-search",
-    "Url": "/faq/How-to-enable-multi-dimensional-search.html"
   },
   "How-to-ensure-the-stability": {
     "Category": "Content & Creativity",
@@ -5716,8 +4574,6 @@ export const faq = {
     "Title": "How to ensure the stability of the knowledge base during access peaks-Fastgpt",
     "Description": "Ensuring knowledge base stability during access peaks is achievable through proactive system design and resource management. Key strategies include scaling infrastructure and implementing robust load ",
     "Keywords": "AI Chatbot, Intelligent Q&A, AI Automation, Open Source AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-stability",
-    "Url": "/faq/How-to-ensure-the-stability.html"
   },
   "Can-AI-adjust-its-retrieval": {
     "Category": "Content & Creativity",
@@ -5726,8 +4582,6 @@ export const faq = {
     "Title": "Can AI adjust its retrieval strategy based on access records?-Fastgpt",
     "Description": "Yes, AI systems can adjust their retrieval strategies based on access records. This capability, often referred to as adaptive or dynamic retrieval, leverages historical interaction data to refine futu",
     "Keywords": "Task Automation AI, Smart Assistant, GPT Integration, AI Platform, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-its-retrieval",
-    "Url": "/faq/Can-AI-adjust-its-retrieval.html"
   },
   "How-can-AI-help-organize": {
     "Category": "Content & Creativity",
@@ -5736,8 +4590,6 @@ export const faq = {
     "Title": "How can AI help organize complex technical documents-Fastgpt",
     "Description": "AI assists in organizing complex technical documents through automated structuring, summarization, and relationship mapping. It enhances the accessibility and manageability of large documentation sets",
     "Keywords": "API Integration, AI Workflow, Open Source AI, LLM Development, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-organize",
-    "Url": "/faq/How-can-AI-help-organize.html"
   },
   "Can-AI-automatically-generate-FAQ": {
     "Category": "Content & Creativity",
@@ -5746,8 +4598,6 @@ export const faq = {
     "Title": "Can AI automatically generate FAQ knowledge Q&A?-Fastgpt",
     "Description": "Yes, AI can automatically generate FAQ knowledge bases and Q&A pairs. Advanced natural language processing models analyze large datasets, like existing support tickets, product documentation, or relev",
     "Keywords": "AI Chatbot, API Integration, Open Source AI, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-FAQ",
-    "Url": "/faq/Can-AI-automatically-generate-FAQ.html"
   },
   "How-to-implement-permission-hierarchical": {
     "Category": "Content & Creativity",
@@ -5756,8 +4606,6 @@ export const faq = {
     "Title": "How to implement permission hierarchical management for a knowledge base-Fastgpt",
     "Description": "Permission hierarchical management enables controlled content access in knowledge bases based on user roles and responsibilities. It is implemented by defining distinct access levels and assigning per",
     "Keywords": "AI Chatbot, Vector Search, Enterprise AI, AI Workflow, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-implement-permission-hierarchical",
-    "Url": "/faq/How-to-implement-permission-hierarchical.html"
   },
   "How-can-AI-quickly-locate": {
     "Category": "Content & Creativity",
@@ -5766,8 +4614,6 @@ export const faq = {
     "Title": "How can AI quickly locate the most commonly used materials-Fastgpt",
     "Description": "AI employs machine learning algorithms to automatically analyze vast datasets such as inventory transactions, project files, and design specifications. It rapidly identifies patterns and frequencies a",
     "Keywords": "Smart Assistant, Intelligent Q&A, Open Source AI, FastGPT, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-quickly-locate",
-    "Url": "/faq/How-can-AI-quickly-locate.html"
   },
   "How-to-enable-intelligent-voice": {
     "Category": "Content & Creativity",
@@ -5776,8 +4622,6 @@ export const faq = {
     "Title": "How to enable intelligent voice search for the knowledge base-Fastgpt",
     "Description": "To enable intelligent voice search for your knowledge base, integrate voice recognition technology that converts spoken queries into text for backend search execution.\n\nKey requirements include compat",
     "Keywords": "AI Chatbot, API Integration, Document AI, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-intelligent-voice",
-    "Url": "/faq/How-to-enable-intelligent-voice.html"
   },
   "How-AI-Analyzes-the-Causes": {
     "Category": "Content & Creativity",
@@ -5786,8 +4630,6 @@ export const faq = {
     "Title": "How AI Analyzes the Causes of Search Failures-Fastgpt",
     "Description": "AI analyzes search failure causes by leveraging machine learning to automatically identify why queries yield no results, irrelevant results, or slow responses. This approach efficiently pinpoints root",
     "Keywords": "API Integration, Open Source AI, AI Chatbot, GPT Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Analyzes-the-Causes",
-    "Url": "/faq/How-AI-Analyzes-the-Causes.html"
   },
   "Can-AI-predict-future-knowledge": {
     "Category": "Content & Creativity",
@@ -5796,8 +4638,6 @@ export const faq = {
     "Title": "Can AI predict future knowledge needs?-Fastgpt",
     "Description": "AI can predict future knowledge needs to some extent using data-driven techniques like trend analysis and machine learning. However, it cannot foresee entirely novel, unforeseeable events with certain",
     "Keywords": "AI Chatbot, AI Knowledge Management, Document AI, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-future-knowledge",
-    "Url": "/faq/Can-AI-predict-future-knowledge.html"
   },
   "How-to-seamlessly-integrate-a": {
     "Category": "Content & Creativity",
@@ -5806,8 +4646,6 @@ export const faq = {
     "Title": "How to seamlessly integrate a knowledge base with a chat tool-Fastgpt",
     "Description": "Seamlessly integrating a knowledge base (KB) with a chat tool is feasible using API connectors for real-time access and automated workflows. This enables chatbots and human agents to pull relevant inf",
     "Keywords": "AI Chatbot, Intelligent Q&A, FastGPT, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-seamlessly-integrate-a",
-    "Url": "/faq/How-to-seamlessly-integrate-a.html"
   },
   "How-AI-Automatically-Generates-Data": {
     "Category": "Content & Creativity",
@@ -5816,8 +4654,6 @@ export const faq = {
     "Title": "How AI Automatically Generates Data Analysis Conclusions-Fastgpt",
     "Description": "AI automatically generates data analysis conclusions by using machine learning algorithms and natural language processing (NLP) to interpret complex datasets, identify key patterns and insights, and t",
     "Keywords": "API Integration, AI Chatbot, Smart Assistant, AI Knowledge Management, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Automatically-Generates-Data",
-    "Url": "/faq/How-AI-Automatically-Generates-Data.html"
   },
   "Can-AI-identify-hidden-patterns": {
     "Category": "Content & Creativity",
@@ -5826,8 +4662,6 @@ export const faq = {
     "Title": "Can AI identify hidden patterns in data?-Fastgpt",
     "Description": "AI can indeed identify hidden patterns in data. This capability is achieved using advanced machine learning algorithms and neural networks that analyze complex datasets beyond human capacity.\n\nKey pri",
     "Keywords": "AI Platform, API Integration, Intelligent Q&A, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-hidden-patterns",
-    "Url": "/faq/Can-AI-identify-hidden-patterns.html"
   },
   "How-to-integrate-data-statistics": {
     "Category": "Content & Creativity",
@@ -5836,8 +4670,6 @@ export const faq = {
     "Title": "How to integrate data statistics function into the knowledge base-Fastgpt",
     "Description": "Integrating data statistics into a knowledge base involves embedding analytics tools and tracking scripts to monitor user engagement and content performance. This functionality is highly feasible usin",
     "Keywords": "API Integration, AI Workflow, Document AI, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-integrate-data-statistics",
-    "Url": "/faq/How-to-integrate-data-statistics.html"
   },
   "How-can-knowledge-bases-improve": {
     "Category": "Content & Creativity",
@@ -5846,8 +4678,6 @@ export const faq = {
     "Title": "How can knowledge bases improve the collaboration efficiency of cross-border teams?-Fastgpt",
     "Description": "Knowledge bases significantly enhance cross-border team collaboration efficiency by providing a centralized, always-accessible repository for information. This mitigates time zone delays and informati",
     "Keywords": "Task Automation AI, FastGPT, API Integration, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-can-knowledge-bases-improve",
-    "Url": "/faq/How-can-knowledge-bases-improve.html"
   },
   "How-does-AI-ensure-the": {
     "Category": "Content & Creativity",
@@ -5856,8 +4686,6 @@ export const faq = {
     "Title": "How does AI ensure the consistency of data and knowledge-Fastgpt",
     "Description": "AI ensures data and knowledge consistency primarily through automated monitoring, validation, and conflict resolution mechanisms applied to knowledge sources and outputs.\n\nIt establishes predefined ru",
     "Keywords": "Vector Search, Task Automation AI, AI Platform, AI Chatbot, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-does-AI-ensure-the",
-    "Url": "/faq/How-does-AI-ensure-the.html"
   },
   "Can-AI-automatically-synchronize-knowledge": {
     "Category": "Content & Creativity",
@@ -5866,8 +4694,6 @@ export const faq = {
     "Title": "Can AI automatically synchronize knowledge bases across multiple branches?-Fastgpt",
     "Description": "Yes, AI can automatically synchronize knowledge base content across geographically distributed branches.\n\nAI-driven synchronization relies on integrated platforms using APIs or middleware connections.",
     "Keywords": "FastGPT, Enterprise AI, Open Source AI, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-synchronize-knowledge",
-    "Url": "/faq/Can-AI-automatically-synchronize-knowledge.html"
   },
   "How-to-enable-offline-access": {
     "Category": "Content & Creativity",
@@ -5876,8 +4702,6 @@ export const faq = {
     "Title": "How to enable offline access for the knowledge base-Fastgpt",
     "Description": "Offline access for a knowledge base is feasible through technology enabling local data storage and synchronization. Implementing it allows users to view and sometimes edit content without active inter",
     "Keywords": "API Integration, Task Automation AI, LLM Development, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-offline-access",
-    "Url": "/faq/How-to-enable-offline-access.html"
   },
   "Can-AI-automatically-generate-data": {
     "Category": "Content & Creativity",
@@ -5886,8 +4710,6 @@ export const faq = {
     "Title": "Can AI automatically generate data security reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate data security reports. Modern AI systems leverage data ingestion, analysis, and natural language generation capabilities to create these reports autonomously.\n\nThis ",
     "Keywords": "Document AI, Intelligent Q&A, AI Workflow, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-data",
-    "Url": "/faq/Can-AI-automatically-generate-data.html"
   },
   "How-AI-helps-in-planning": {
     "Category": "Content & Creativity",
@@ -5896,8 +4718,6 @@ export const faq = {
     "Title": "How AI helps in planning data storage structures-Fastgpt",
     "Description": "AI helps plan data storage structures by using machine learning and optimization algorithms to automate the design process, recommending configurations that balance performance, cost, scalability, and",
     "Keywords": "GPT Integration, Enterprise AI, API Integration, Document AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-helps-in-planning",
-    "Url": "/faq/How-AI-helps-in-planning.html"
   },
   "Can-AI-restore-accidentally-deleted": {
     "Category": "Content & Creativity",
@@ -5906,8 +4726,6 @@ export const faq = {
     "Title": "Can AI restore accidentally deleted knowledge content with one click?-Fastgpt",
     "Description": "AI cannot fully guarantee one-click restoration of accidentally deleted knowledge content. While AI systems are employed in content backup solutions, successful recovery relies on factors beyond AI co",
     "Keywords": "Vector Search, FastGPT, Smart Assistant, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-restore-accidentally-deleted",
-    "Url": "/faq/Can-AI-restore-accidentally-deleted.html"
   },
   "How-to-enable-the-knowledge": {
     "Category": "Content & Creativity",
@@ -5916,8 +4734,6 @@ export const faq = {
     "Title": "How to enable the knowledge base to support historical version rollback?-Fastgpt",
     "Description": "Enabling historical version backtracking allows users to view and restore previous iterations of knowledge base articles. This capability is highly feasible through integrated version control mechanis",
     "Keywords": "LLM Development, GPT Integration, FastGPT, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-the-knowledge",
-    "Url": "/faq/How-to-enable-the-knowledge.html"
   },
   "How-AI-automatically-identifies-and": {
     "Category": "Content & Creativity",
@@ -5926,8 +4742,6 @@ export const faq = {
     "Title": "How AI automatically identifies and encrypts sensitive data-Fastgpt",
     "Description": "AI automatically identifies and encrypts sensitive data through machine learning algorithms and natural language processing. This approach scans large datasets to detect patterns indicating sensitive ",
     "Keywords": "AI Knowledge Management, Enterprise AI, GPT Integration, Open Source AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-automatically-identifies-and",
-    "Url": "/faq/How-AI-automatically-identifies-and.html"
   },
   "Can-AI-monitor-knowledge-access": {
     "Category": "Content & Creativity",
@@ -5936,8 +4750,6 @@ export const faq = {
     "Title": "Can AI monitor knowledge access permissions in real-time?-Fastgpt",
     "Description": "Yes, artificial intelligence systems can effectively monitor knowledge access permissions in real-time. They achieve this by utilizing advanced algorithms to continuously analyze user requests and dat",
     "Keywords": "AI Platform, AI Automation, AI Chatbot, Vector Search, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-knowledge-access",
-    "Url": "/faq/Can-AI-monitor-knowledge-access.html"
   },
   "Can-AI-automatically-identify-contradictions": {
     "Category": "Content & Creativity",
@@ -5946,8 +4758,6 @@ export const faq = {
     "Title": "Can AI automatically identify contradictions in knowledge?-Fastgpt",
     "Description": "AI can automatically identify contradictions in knowledge using natural language processing and logical reasoning techniques. This capability is feasible with current technology given appropriate data",
     "Keywords": "AI Chatbot, Intelligent Q&A, AI Workflow, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-contradictions",
-    "Url": "/faq/Can-AI-automatically-identify-contradictions.html"
   },
   "How-AI-Predicts-Which-Knowledge": {
     "Category": "Content & Creativity",
@@ -5956,8 +4766,6 @@ export const faq = {
     "Title": "How AI Predicts Which Knowledge Is About to Become Obsolete-Fastgpt",
     "Description": "AI predicts knowledge obsolescence by analyzing trends in data sources like publications, patents, or online discussions to identify subjects with declining relevance or usage signals. It assesses the",
     "Keywords": "Open Source AI, Task Automation AI, FastGPT, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Predicts-Which-Knowledge",
-    "Url": "/faq/How-AI-Predicts-Which-Knowledge.html"
   },
   "Can-AI-automatically-expand-relevant": {
     "Category": "Content & Creativity",
@@ -5966,8 +4774,6 @@ export const faq = {
     "Title": "Can AI automatically expand relevant content based on trends?-Fastgpt",
     "Description": "Yes, AI can automatically generate and expand relevant content based on detected trends. It leverages large datasets and machine learning to identify emerging topics and produce new material aligned w",
     "Keywords": "AI Platform, AI Workflow, Smart Assistant, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-expand-relevant",
-    "Url": "/faq/Can-AI-automatically-expand-relevant.html"
   },
   "How-AI-Automatically-Generates-Industry": {
     "Category": "Content & Creativity",
@@ -5976,8 +4782,6 @@ export const faq = {
     "Title": "How AI Automatically Generates Industry Knowledge Reports-Fastgpt",
     "Description": "AI automatically generates industry knowledge reports through algorithms that analyze vast datasets to identify trends, extract insights, and compile structured summaries. This process is feasible usi",
     "Keywords": "Task Automation AI, GPT Integration, AI Platform, Intelligent Q&A, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Automatically-Generates-Industry",
-    "Url": "/faq/How-AI-Automatically-Generates-Industry.html"
   },
   "Can-AI-regularly-check-the": {
     "Category": "Content & Creativity",
@@ -5986,8 +4790,6 @@ export const faq = {
     "Title": "Can AI regularly check the completeness of the knowledge base?-Fastgpt",
     "Description": "Yes, AI can automate the regular checking of knowledge base completeness. Leveraging techniques like natural language processing and machine learning, AI systems can systematically scan content to ide",
     "Keywords": "Open Source AI, Vector Search, API Integration, FastGPT, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-regularly-check-the",
-    "Url": "/faq/Can-AI-regularly-check-the.html"
   },
   "How-to-quickly-connect-a": {
     "Category": "Content & Creativity",
@@ -5996,8 +4798,6 @@ export const faq = {
     "Title": "How to quickly connect a knowledge base to external API data-Fastgpt",
     "Description": "Connecting a knowledge base to external API data allows for near real-time enrichment of content. This integration is achievable through API gateway services or integration middleware offered by most ",
     "Keywords": "AI Workflow, FastGPT, API Integration, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-connect-a",
-    "Url": "/faq/How-to-quickly-connect-a.html"
   },
   "How-to-ensure-stable-querying": {
     "Category": "Content & Creativity",
@@ -6006,8 +4806,6 @@ export const faq = {
     "Title": "How to ensure stable querying of a knowledge base under high concurrency-Fastgpt",
     "Description": "Stable knowledge base querying under high concurrency is achievable by implementing robust architecture and optimization techniques, ensuring reliable performance despite high simultaneous request vol",
     "Keywords": "Smart Assistant, LLM Development, API Integration, FastGPT, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-stable-querying",
-    "Url": "/faq/How-to-ensure-stable-querying.html"
   },
   "How-AI-Helps-Optimize-Knowledge": {
     "Category": "Content & Creativity",
@@ -6016,8 +4814,6 @@ export const faq = {
     "Title": "How AI Helps Optimize Knowledge Base Search-Fastgpt",
     "Description": "Artificial intelligence significantly enhances knowledge base search by understanding natural language queries, predicting user intent, and retrieving the most relevant content. This optimizes user ex",
     "Keywords": "Intelligent Q&A, AI Chatbot, AI Workflow, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Optimize-Knowledge",
-    "Url": "/faq/How-AI-Helps-Optimize-Knowledge.html"
   },
   "Can-AI-automatically-identify-repeated": {
     "Category": "Content & Creativity",
@@ -6026,8 +4822,6 @@ export const faq = {
     "Title": "Can AI automatically identify repeated questions and categorize them?-Fastgpt",
     "Description": "Yes, AI can automatically identify repeated questions and categorize them effectively. This capability is primarily enabled by advanced Natural Language Processing (NLP) and Machine Learning (ML) tech",
     "Keywords": "Document AI, LLM Development, Open Source AI, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-repeated",
-    "Url": "/faq/Can-AI-automatically-identify-repeated.html"
   },
   "How-can-AI-help-establish": {
     "Category": "Content & Creativity",
@@ -6036,8 +4830,6 @@ export const faq = {
     "Title": "How can AI help establish unified data standards-Fastgpt",
     "Description": "AI can assist in establishing unified data standards by automating the discovery of patterns, inconsistencies, and potential mappings across diverse data sources, enabling the rapid definition and enf",
     "Keywords": "GPT Integration, Task Automation AI, Open Source AI, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-establish",
-    "Url": "/faq/How-can-AI-help-establish.html"
   },
   "Can-AI-detect-logical-conflicts": {
     "Category": "Content & Creativity",
@@ -6046,8 +4838,6 @@ export const faq = {
     "Title": "Can AI detect logical conflicts in different documents?-Fastgpt",
     "Description": "Modern AI systems can detect logical conflicts across different documents. This capability stems from advanced natural language processing and reasoning techniques.\n\nKey requirements include robust na",
     "Keywords": "Vector Search, API Integration, AI Automation, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-detect-logical-conflicts",
-    "Url": "/faq/Can-AI-detect-logical-conflicts.html"
   },
   "How-to-integrate-knowledge-bases": {
     "Category": "Content & Creativity",
@@ -6056,8 +4846,6 @@ export const faq = {
     "Title": "How to integrate knowledge bases with automated office workflows-Fastgpt",
     "Description": "Knowledge base integration with automated office workflows connects centralized information repositories with tools like email, chatbots, and task management systems. This enables automatic informatio",
     "Keywords": "FastGPT, Document AI, AI Automation, GPT Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-integrate-knowledge-bases",
-    "Url": "/faq/How-to-integrate-knowledge-bases.html"
   },
   "How-AI-Makes-Search-Results": {
     "Category": "Content & Creativity",
@@ -6066,8 +4854,6 @@ export const faq = {
     "Title": "How AI Makes Search Results More Aligned with User Needs-Fastgpt",
     "Description": "AI enhances search alignment by personalizing results based on deeper user understanding and relevance. It uses advanced techniques to interpret intent and context.\n\nKey mechanisms include understandi",
     "Keywords": "AI Platform, Document AI, Vector Search, Open Source AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Makes-Search-Results",
-    "Url": "/faq/How-AI-Makes-Search-Results.html"
   },
   "Can-AI-automatically-optimize-search": {
     "Category": "Content & Creativity",
@@ -6076,8 +4862,6 @@ export const faq = {
     "Title": "Can AI automatically optimize search algorithms based on feedback?-Fastgpt",
     "Description": "Yes, AI can automatically optimize search algorithms using user feedback. This is a core function of modern AI-driven search systems leveraging techniques like machine learning reinforcement learning.",
     "Keywords": "Task Automation AI, API Integration, AI Workflow, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-optimize-search",
-    "Url": "/faq/Can-AI-automatically-optimize-search.html"
   },
   "How-can-the-knowledge-base": {
     "Category": "Content & Creativity",
@@ -6086,8 +4870,6 @@ export const faq = {
     "Title": "How can the knowledge base improve cross-system integration?-Fastgpt",
     "Description": "A knowledge base improves cross-system integration by acting as a centralized, structured repository that enables seamless data exchange and unified access across different systems. It eliminates data",
     "Keywords": "Intelligent Q&A, GPT Integration, AI Chatbot, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-knowledge-base",
-    "Url": "/faq/How-can-the-knowledge-base.html"
   },
   "How-can-AI-help-multiple": {
     "Category": "Content & Creativity",
@@ -6096,8 +4878,6 @@ export const faq = {
     "Title": "How can AI help multiple departments share knowledge outcomes?-Fastgpt",
     "Description": "AI enables knowledge sharing across departments by centralizing insights in intelligent repositories and automating distribution. It transforms isolated data into collective intelligence accessible th",
     "Keywords": "FastGPT, AI Platform, AI Knowledge Management, Task Automation AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-multiple",
-    "Url": "/faq/How-can-AI-help-multiple.html"
   },
   "Can-AI-predict-future-popular": {
     "Category": "AI Basics & Terms",
@@ -6106,8 +4886,6 @@ export const faq = {
     "Title": "Can AI predict future popular application directions?-Fastgpt",
     "Description": "AI can predict potential future application directions with reasonable accuracy using current technologies. However, such predictions are inherently probabilistic and not guarantees.\n\nPredictive AI re",
     "Keywords": "AI Workflow, LLM Development, AI Platform, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-future-popular",
-    "Url": "/faq/Can-AI-predict-future-popular.html"
   },
   "How-to-enable-knowledge-bases": {
     "Category": "Content & Creativity",
@@ -6116,8 +4894,6 @@ export const faq = {
     "Title": "How to enable knowledge bases to support efficient mobile search-Fastgpt",
     "Description": "Enabling knowledge bases to support efficient mobile search requires platform optimizations and a mobile-first user experience design. This ensures quick, relevant answers on small screens with variab",
     "Keywords": "Task Automation AI, LLM Development, AI Workflow, FastGPT, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-knowledge-bases",
-    "Url": "/faq/How-to-enable-knowledge-bases.html"
   },
   "How-to-implement-automatic-backup": {
     "Category": "Content & Creativity",
@@ -6126,8 +4902,6 @@ export const faq = {
     "Title": "How to implement automatic backup and disaster recovery for a knowledge base-Fastgpt",
     "Description": "Automatic backup and disaster recovery (DR) for a knowledge base involves implementing scheduled backups of all content and metadata, plus establishing a plan and infrastructure to restore operations ",
     "Keywords": "GPT Integration, Document AI, FastGPT, Task Automation AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-implement-automatic-backup",
-    "Url": "/faq/How-to-implement-automatic-backup.html"
   },
   "How-AI-Helps-Generate-Knowledge": {
     "Category": "Content & Creativity",
@@ -6136,8 +4910,6 @@ export const faq = {
     "Title": "How AI Helps Generate Knowledge Operations Reports-Fastgpt",
     "Description": "AI automates the generation of knowledge operations reports by processing large volumes of unstructured and structured data. It transforms diverse inputs like chat logs, ticketing systems, and knowled",
     "Keywords": "FastGPT, API Integration, AI Knowledge Management, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Helps-Generate-Knowledge",
-    "Url": "/faq/How-AI-Helps-Generate-Knowledge.html"
   },
   "Can-AI-automatically-identify-the": {
     "Category": "Content & Creativity",
@@ -6146,8 +4918,6 @@ export const faq = {
     "Title": "Can AI automatically identify the most frequently cited knowledge?-Fastgpt",
     "Description": "AI can automatically identify the most frequently cited knowledge points within a defined dataset. This capability leverages natural language processing (NLP) and pattern recognition techniques.\n\nThe ",
     "Keywords": "API Integration, AI Workflow, Enterprise AI, Task Automation AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-the",
-    "Url": "/faq/Can-AI-automatically-identify-the.html"
   },
   "How-to-achieve-fast-full-text": {
     "Category": "Content & Creativity",
@@ -6156,8 +4926,6 @@ export const faq = {
     "Title": "How to achieve fast full-text search in a knowledge base-Fastgpt",
     "Description": "Achieving fast full-text search in a knowledge base is feasible through dedicated search engines or database features that optimize indexing and querying.\n\nKey approaches involve implementing efficien",
     "Keywords": "Intelligent Q&A, Smart Assistant, AI Automation, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-achieve-fast-full-text",
-    "Url": "/faq/How-to-achieve-fast-full-text.html"
   },
   "How-can-AI-automatically-discover": {
     "Category": "Content & Creativity",
@@ -6166,8 +4934,6 @@ export const faq = {
     "Title": "How can AI automatically discover knowledge points that need to be supplemented?-Fastgpt",
     "Description": "AI can automatically discover knowledge points requiring supplementation by analyzing diverse data sources using techniques like natural language processing (NLP) and machine learning (ML). This proce",
     "Keywords": "AI Platform, API Integration, Enterprise AI, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-automatically-discover",
-    "Url": "/faq/How-can-AI-automatically-discover.html"
   },
   "Can-AI-generate-knowledge-usage": {
     "Category": "Content & Creativity",
@@ -6176,8 +4942,6 @@ export const faq = {
     "Title": "Can AI generate knowledge usage statistics reports?-Fastgpt",
     "Description": "Yes, AI can generate knowledge usage statistics reports. By leveraging machine learning and natural language processing (NLP), AI systems can automate the analysis of user interactions with various kn",
     "Keywords": "AI Platform, Vector Search, Intelligent Q&A, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-knowledge-usage",
-    "Url": "/faq/Can-AI-generate-knowledge-usage.html"
   },
   "Can-AI-quickly-identify-and": {
     "Category": "Content & Creativity",
@@ -6186,8 +4950,6 @@ export const faq = {
     "Title": "Can AI quickly identify and clean up duplicate files?-Fastgpt",
     "Description": "AI can quickly identify and clean duplicate files using machine learning algorithms. This automation significantly reduces manual effort compared to traditional methods.\n\nAI duplicate finders analyze ",
     "Keywords": "Task Automation AI, AI Knowledge Management, API Integration, FastGPT, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-identify-and",
-    "Url": "/faq/Can-AI-quickly-identify-and.html"
   },
   "How-to-enable-real-time-multi-person": {
     "Category": "Content & Creativity",
@@ -6196,8 +4958,6 @@ export const faq = {
     "Title": "How to enable real-time multi-person collaboration for a knowledge base-Fastgpt",
     "Description": "Enabling real-time multi-person collaboration for a knowledge base allows multiple users to edit documents simultaneously and see each other's changes instantly. It utilizes specialized technology to ",
     "Keywords": "Vector Search, Smart Assistant, AI Workflow, AI Chatbot, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-real-time-multi-person",
-    "Url": "/faq/How-to-enable-real-time-multi-person.html"
   },
   "Can-AI-automatically-discover-and": {
     "Category": "Content & Creativity",
@@ -6206,8 +4966,6 @@ export const faq = {
     "Title": "Can AI automatically discover and supplement missing data?-Fastgpt",
     "Description": "Yes, AI can automatically discover and supplement missing data using techniques like machine learning and pattern recognition to identify gaps and impute values.  \n\nThis requires analyzing existing da",
     "Keywords": "Open Source AI, Vector Search, Enterprise AI, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-discover-and",
-    "Url": "/faq/Can-AI-automatically-discover-and.html"
   },
   "Can-AI-generate-an-enterprise": {
     "Category": "Content & Creativity",
@@ -6216,8 +4974,6 @@ export const faq = {
     "Title": "Can AI generate an enterprise knowledge map with one click?-Fastgpt",
     "Description": "Current AI cannot generate a comprehensive enterprise knowledge map truly autonomously with a single click. It requires specific inputs and configuration to automate substantial portions of the proces",
     "Keywords": "Vector Search, LLM Development, GPT Integration, Enterprise AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-an-enterprise",
-    "Url": "/faq/Can-AI-generate-an-enterprise.html"
   },
   "How-to-enable-cross-department-sharing": {
     "Category": "Content & Creativity",
@@ -6226,8 +4982,6 @@ export const faq = {
     "Title": "How to enable cross-department sharing and search support in the knowledge base-Fastgpt",
     "Description": "Enabling cross-department sharing and search support in your knowledge base involves configuring system settings and establishing policies to allow controlled access and discovery of information acros",
     "Keywords": "AI Automation, AI Knowledge Management, LLM Development, Enterprise AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-cross-department-sharing",
-    "Url": "/faq/How-to-enable-cross-department-sharing.html"
   },
   "Can-AI-predict-which-knowledge": {
     "Category": "Content & Creativity",
@@ -6236,8 +4990,6 @@ export const faq = {
     "Title": "Can AI predict which knowledge is about to expire?-Fastgpt",
     "Description": "Yes, AI can predict which knowledge is likely about to expire with reasonable accuracy, provided sufficient and relevant data. This capability hinges on analyzing historical patterns and current usage",
     "Keywords": "AI Platform, API Integration, Task Automation AI, AI Automation, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-which-knowledge",
-    "Url": "/faq/Can-AI-predict-which-knowledge.html"
   },
   "Can-AI-automatically-detect-contradictions": {
     "Category": "Content & Creativity",
@@ -6246,8 +4998,6 @@ export const faq = {
     "Title": "Can AI automatically detect contradictions in knowledge?-Fastgpt",
     "Description": "Yes, AI can automatically detect contradictions within knowledge bases or datasets. This capability leverages specific techniques designed to analyze and compare information.\n\nContradiction detection ",
     "Keywords": "Document AI, Vector Search, Intelligent Q&A, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-detect-contradictions",
-    "Url": "/faq/Can-AI-automatically-detect-contradictions.html"
   },
   "How-to-make-AI-quickly": {
     "Category": "AI Basics & Terms",
@@ -6256,8 +5006,6 @@ export const faq = {
     "Title": "How to make AI quickly formulate a trial activity plan-Fastgpt",
     "Description": "Yes, AI can rapidly generate customized trial activity plans using generative models. This significantly reduces the time required compared to manual planning, delivering draft frameworks in minutes.\n",
     "Keywords": "Vector Search, Open Source AI, LLM Development, AI Workflow, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-quickly",
-    "Url": "/faq/How-to-make-AI-quickly.html"
   },
   "Can-AI-help-create-a": {
     "Category": "Content & Creativity",
@@ -6266,8 +5014,6 @@ export const faq = {
     "Title": "Can AI help create a schedule for knowledge updates?-Fastgpt",
     "Description": "Yes, AI can significantly assist in creating and managing schedules for knowledge updates. AI-powered systems can automate the process of identifying outdated information and suggesting optimal update",
     "Keywords": "Enterprise AI, AI Workflow, Document AI, Vector Search, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-create-a",
-    "Url": "/faq/Can-AI-help-create-a.html"
   },
   "Can-AI-recommend-relevant-content": {
     "Category": "Content & Creativity",
@@ -6276,8 +5022,6 @@ export const faq = {
     "Title": "Can AI recommend relevant content based on user habits?-Fastgpt",
     "Description": "Yes, AI can recommend relevant content based on user habits. This capability is a core function of personalization systems used widely across digital platforms.\n\nThe effectiveness relies heavily on su",
     "Keywords": "AI Chatbot, AI Knowledge Management, AI Workflow, Enterprise AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-relevant-content",
-    "Url": "/faq/Can-AI-recommend-relevant-content.html"
   },
   "Can-AI-automatically-generate-industry": {
     "Category": "Content & Creativity",
@@ -6286,8 +5030,6 @@ export const faq = {
     "Title": "Can AI automatically generate industry trend analysis reports?-Fastgpt",
     "Description": "Yes, AI can automatically generate industry trend analysis reports. It achieves this through machine learning, natural language processing, and big data analytics to process and interpret vast amounts",
     "Keywords": "Smart Assistant, Document AI, AI Platform, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-industry",
-    "Url": "/faq/Can-AI-automatically-generate-industry.html"
   },
   "How-to-better-integrate-knowledge": {
     "Category": "Content & Creativity",
@@ -6296,8 +5038,6 @@ export const faq = {
     "Title": "How to better integrate knowledge bases with chat tools-Fastgpt",
     "Description": "Integrating knowledge bases with chat tools enables seamless access to centralized information during customer or employee interactions. This is achievable through APIs or specialized integration plat",
     "Keywords": "API Integration, LLM Development, Enterprise AI, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-better-integrate-knowledge",
-    "Url": "/faq/How-to-better-integrate-knowledge.html"
   },
   "Can-AI-monitor-and-alert": {
     "Category": "Content & Creativity",
@@ -6306,8 +5046,6 @@ export const faq = {
     "Title": "Can AI monitor and alert about abnormal data changes?-Fastgpt",
     "Description": "AI can effectively monitor data and alert about abnormal changes. Yes, this capability is established and widely implemented using machine learning and statistical models.\n\nThese systems typically lea",
     "Keywords": "AI Workflow, Smart Assistant, FastGPT, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-and-alert",
-    "Url": "/faq/Can-AI-monitor-and-alert.html"
   },
   "Can-AI-automatically-classify-and": {
     "Category": "Content & Creativity",
@@ -6316,8 +5054,6 @@ export const faq = {
     "Title": "Can AI automatically classify and label large batches of documents?-Fastgpt",
     "Description": "AI can automatically classify and tag large batches of documents efficiently. This capability leverages machine learning and natural language processing (NLP) to process massive volumes of data at sca",
     "Keywords": "AI Workflow, FastGPT, Smart Assistant, Document AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-classify-and",
-    "Url": "/faq/Can-AI-automatically-classify-and.html"
   },
   "What-is-a-large-model?": {
     "Category": "Enterprise Applications",
@@ -6326,8 +5062,6 @@ export const faq = {
     "Title": "What is a large model?-Fastgpt",
     "Description": "A large model is an artificial intelligence system built with deep learning techniques and trained on massive datasets, enabling it to understand and generate human-like text, code, or other complex o",
     "Keywords": "Open Source AI, AI Platform, GPT Integration, LLM Development, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-is-a-large-model?",
-    "Url": "/faq/What-is-a-large-model?.html"
   },
   "What-does-LLM-mean?": {
     "Category": "Enterprise Applications",
@@ -6336,8 +5070,6 @@ export const faq = {
     "Title": "What does LLM mean?-Fastgpt",
     "Description": "LLM stands for Large Language Model. It refers to a type of artificial intelligence program designed to understand, generate, and manipulate human-like text based on patterns learned from extremely va",
     "Keywords": "FastGPT, Intelligent Q&A, AI Platform, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-does-LLM-mean?",
-    "Url": "/faq/What-does-LLM-mean?.html"
   },
   "Why-is-everyone-talking-about": {
     "Category": "Enterprise Applications",
@@ -6346,8 +5078,6 @@ export const faq = {
     "Title": "Why is everyone talking about large language models?-Fastgpt",
     "Description": "Large language models (LLMs) are transformative artificial intelligence systems capable of understanding and generating human-like text at unprecedented scale and quality, making them a focal point of",
     "Keywords": "Vector Search, Smart Assistant, Intelligent Q&A, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Why-is-everyone-talking-about",
-    "Url": "/faq/Why-is-everyone-talking-about.html"
   },
   "How-are-large-models-trained?": {
     "Category": "Enterprise Applications",
@@ -6356,8 +5086,6 @@ export const faq = {
     "Title": "How are large models trained?-Fastgpt",
     "Description": "Large model training is the process of feeding massive datasets to complex neural networks to develop sophisticated AI capabilities. Training enables these models to perform tasks like language unders",
     "Keywords": "Task Automation AI, Enterprise AI, API Integration, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-are-large-models-trained?",
-    "Url": "/faq/How-are-large-models-trained?.html"
   },
   "In-which-industries-can-large": {
     "Category": "Enterprise Applications",
@@ -6366,8 +5094,6 @@ export const faq = {
     "Title": "In which industries can large models be applied?-Fastgpt",
     "Description": "Large language models exhibit broad applicability across diverse industries due to their ability to process and generate human-like language and patterns from vast datasets. Their deployment potential",
     "Keywords": "FastGPT, Task Automation AI, Enterprise AI, API Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/In-which-industries-can-large",
-    "Url": "/faq/In-which-industries-can-large.html"
   },
   "Are-larger-language-models-smarter?": {
     "Category": "Enterprise Applications",
@@ -6376,8 +5102,6 @@ export const faq = {
     "Title": "Are larger language models smarter?-Fastgpt",
     "Description": "Not necessarily smarter universally, but larger language models typically exhibit significantly enhanced capabilities across many benchmarks. Increased scale contributes to improved reasoning, knowled",
     "Keywords": "AI Workflow, Task Automation AI, API Integration, Open Source AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Are-larger-language-models-smarter?",
-    "Url": "/faq/Are-larger-language-models-smarter?.html"
   },
   "Why-do-large-models-require": {
     "Category": "Enterprise Applications",
@@ -6386,8 +5110,6 @@ export const faq = {
     "Title": "Why do large models require massive training data?-Fastgpt",
     "Description": "Large models require massive training data to develop the capability to recognize complex patterns, generalize effectively across diverse scenarios, and capture the intricate nuances of language or ot",
     "Keywords": "Intelligent Q&A, AI Workflow, AI Automation, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-do-large-models-require",
-    "Url": "/faq/Why-do-large-models-require.html"
   },
   "How-high-is-the-demand": {
     "Category": "Enterprise Applications",
@@ -6396,8 +5118,6 @@ export const faq = {
     "Title": "How high is the demand for computing power from large models?-Fastgpt",
     "Description": "The demand for computing power from large models is exceptionally high, often reaching hundreds of petaflops for extended periods during training. This immense requirement stems from the computational",
     "Keywords": "AI Workflow, AI Chatbot, Document AI, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-high-is-the-demand",
-    "Url": "/faq/How-high-is-the-demand.html"
   },
   "What-is-Token": {
     "Category": "Enterprise Applications",
@@ -6406,8 +5126,6 @@ export const faq = {
     "Title": "What is Token-Fastgpt",
     "Description": "In blockchain and digital systems, a token is a digital unit representing a specific asset, utility, or access right, distinct from a native cryptocurrency like Bitcoin. It exists on an existing block",
     "Keywords": "Document AI, LLM Development, AI Workflow, FastGPT, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-is-Token",
-    "Url": "/faq/What-is-Token.html"
   },
   "What-does-Token-mean-in": {
     "Category": "Enterprise Applications",
@@ -6416,8 +5134,6 @@ export const faq = {
     "Title": "What does Token mean in AI?-Fastgpt",
     "Description": "In AI, a token is the fundamental unit of data that represents input or output processed by language models. It's essentially how text is broken down into manageable chunks for the AI system to unders",
     "Keywords": "Enterprise AI, AI Platform, Intelligent Q&A, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-does-Token-mean-in",
-    "Url": "/faq/What-does-Token-mean-in.html"
   },
   "Why-charge-by-Token": {
     "Category": "Enterprise Applications",
@@ -6426,8 +5142,6 @@ export const faq = {
     "Title": "Why charge by Token-Fastgpt",
     "Description": "Token-based charging reflects the actual computational resources consumed when processing text inputs and generating outputs. This method directly aligns costs with usage measured in fundamental text ",
     "Keywords": "FastGPT, AI Platform, AI Knowledge Management, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Why-charge-by-Token",
-    "Url": "/faq/Why-charge-by-Token.html"
   },
   "What-impact-does-the-number": {
     "Category": "Enterprise Applications",
@@ -6436,8 +5150,6 @@ export const faq = {
     "Title": "What impact does the number of tokens have on AI responses?-Fastgpt",
     "Description": "The number of tokens directly impacts the length, cost, and completeness of AI responses, as they are the fundamental units of text processed by the model.  \n\nToken count determines adherence to the m",
     "Keywords": "FastGPT, GPT Integration, Document AI, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/What-impact-does-the-number",
-    "Url": "/faq/What-impact-does-the-number.html"
   },
   "How-to-calculate-the-number": {
     "Category": "Enterprise Applications",
@@ -6446,8 +5158,6 @@ export const faq = {
     "Title": "How to calculate the number of tokens used in a piece of text-Fastgpt",
     "Description": "Calculating text tokens involves breaking down input text into the fundamental units a language model processes, such as words, subwords, or characters. Tools like OpenAI's `tiktoken` library or Huggi",
     "Keywords": "Vector Search, API Integration, AI Automation, Document AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-calculate-the-number",
-    "Url": "/faq/How-to-calculate-the-number.html"
   },
   "Why-higher-costs-with-more": {
     "Category": "Enterprise Applications",
@@ -6456,8 +5166,6 @@ export const faq = {
     "Title": "Why higher costs with more tokens?-Fastgpt",
     "Description": "Higher costs occur with more tokens because token processing directly consumes computational resources. Every additional token increases the workload for the AI model during both input processing and ",
     "Keywords": "Document AI, AI Workflow, Enterprise AI, AI Chatbot, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-higher-costs-with-more",
-    "Url": "/faq/Why-higher-costs-with-more.html"
   },
   "Does-the-token-affect-the": {
     "Category": "Enterprise Applications",
@@ -6466,8 +5174,6 @@ export const faq = {
     "Title": "Does the token affect the completeness of AI responses?-Fastgpt",
     "Description": "No, tokens themselves do not inherently damage the completeness of AI responses. The potential for incompleteness arises primarily when a generated response exceeds the defined maximum token output li",
     "Keywords": "AI Knowledge Management, Task Automation AI, GPT Integration, Smart Assistant, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Does-the-token-affect-the",
-    "Url": "/faq/Does-the-token-affect-the.html"
   },
   "How-to-reduce-token-waste": {
     "Category": "Enterprise Applications",
@@ -6476,8 +5182,6 @@ export const faq = {
     "Title": "How to reduce token waste-Fastgpt",
     "Description": "Token waste refers to unnecessary token consumption during AI interactions. Minimizing it enhances efficiency and cost-effectiveness.\n\nCarefully phrase queries to avoid verbosity and be clear. Choose ",
     "Keywords": "LLM Development, API Integration, GPT Integration, AI Workflow, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-reduce-token-waste",
-    "Url": "/faq/How-to-reduce-token-waste.html"
   },
   "Will-token-limits-affect-AI": {
     "Category": "Enterprise Applications",
@@ -6486,8 +5190,6 @@ export const faq = {
     "Title": "Will token limits affect AI conversations?-Fastgpt",
     "Description": "Yes, token limits directly affect AI conversations. They constrain both the amount of context the AI can process and the length of the responses it can generate.\n\nToken limits define the maximum combi",
     "Keywords": "GPT Integration, API Integration, Document AI, AI Automation, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Will-token-limits-affect-AI",
-    "Url": "/faq/Will-token-limits-affect-AI.html"
   },
   "What-is-Embedding": {
     "Category": "Enterprise Applications",
@@ -6496,8 +5198,6 @@ export const faq = {
     "Title": "What is Embedding-Fastgpt",
     "Description": "Embedding refers to a numerical vector representation that transforms discrete data, like words or categories, into dense, low-dimensional vectors capturing semantic relationships. It enables machine ",
     "Keywords": "Vector Search, Smart Assistant, AI Workflow, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-is-Embedding",
-    "Url": "/faq/What-is-Embedding.html"
   },
   "What-is-a-vector-database?": {
     "Category": "Enterprise Applications",
@@ -6506,8 +5206,6 @@ export const faq = {
     "Title": "What is a vector database?-Fastgpt",
     "Description": "A vector database is a specialized system designed to store and efficiently retrieve vector embeddings, which are mathematical representations of data (like text, images, or audio) in a high-dimension",
     "Keywords": "AI Workflow, Document AI, LLM Development, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-a-vector-database?",
-    "Url": "/faq/What-is-a-vector-database?.html"
   },
   "The-relationship-between-Embedding-and": {
     "Category": "Enterprise Applications",
@@ -6516,8 +5214,6 @@ export const faq = {
     "Title": "The relationship between Embedding and vector database-Fastgpt",
     "Description": "Embeddings are numerical vector representations of data, such as text, images, or audio. Vector databases are specialized systems designed to efficiently store, index, and search these high-dimensiona",
     "Keywords": "AI Knowledge Management, Vector Search, Smart Assistant, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/The-relationship-between-Embedding-and",
-    "Url": "/faq/The-relationship-between-Embedding-and.html"
   },
   "Why-does-AI-need-vector": {
     "Category": "Enterprise Applications",
@@ -6526,8 +5222,6 @@ export const faq = {
     "Title": "Why does AI need vector storage?-Fastgpt",
     "Description": "AI requires vector storage because it enables efficient handling of high-dimensional data representations (embeddings) crucial for understanding complex patterns in unstructured data like text, images",
     "Keywords": "GPT Integration, Vector Search, Smart Assistant, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Why-does-AI-need-vector",
-    "Url": "/faq/Why-does-AI-need-vector.html"
   },
   "How-does-Embedding-convert-text": {
     "Category": "Enterprise Applications",
@@ -6536,8 +5230,6 @@ export const faq = {
     "Title": "How does Embedding convert text into vectors?-Fastgpt",
     "Description": "Embedding converts text into dense numerical vectors using mathematical models. It represents words, phrases, or documents as points in a high-dimensional continuous space.\n\nThese models are typically",
     "Keywords": "AI Knowledge Management, Task Automation AI, AI Automation, API Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-does-Embedding-convert-text",
-    "Url": "/faq/How-does-Embedding-convert-text.html"
   },
   "What-can-vector-databases-be": {
     "Category": "Enterprise Applications",
@@ -6546,8 +5238,6 @@ export const faq = {
     "Title": "What can vector databases be used for?-Fastgpt",
     "Description": "Vector databases enable efficient similarity searches and semantic understanding of complex data for AI applications. They support real-time matching of vectors (mathematical representations) derived ",
     "Keywords": "AI Platform, Enterprise AI, AI Workflow, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/What-can-vector-databases-be",
-    "Url": "/faq/What-can-vector-databases-be.html"
   },
   "Is-a-higher-embedding-dimension": {
     "Category": "Enterprise Applications",
@@ -6556,8 +5246,6 @@ export const faq = {
     "Title": "Is a higher embedding dimension always better?-Fastgpt",
     "Description": "No, a higher embedding dimension is not inherently better. Its effectiveness depends significantly on the specific dataset and task.\n\nWhile higher dimensions offer greater capacity to encode complex r",
     "Keywords": "Task Automation AI, API Integration, FastGPT, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Is-a-higher-embedding-dimension",
-    "Url": "/faq/Is-a-higher-embedding-dimension.html"
   },
   "Why-vector-databases-are-needed": {
     "Category": "Enterprise Applications",
@@ -6566,8 +5254,6 @@ export const faq = {
     "Title": "Why vector databases are needed for search-Fastgpt",
     "Description": "Vector databases enable semantic similarity search by storing data as numerical vectors. They allow finding similar items based on meaning, not just exact keyword matches.\n\nTraditional databases strug",
     "Keywords": "Document AI, LLM Development, Intelligent Q&A, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Why-vector-databases-are-needed",
-    "Url": "/faq/Why-vector-databases-are-needed.html"
   },
   "Can-embeddings-improve-search-accuracy?": {
     "Category": "Enterprise Applications",
@@ -6576,8 +5262,6 @@ export const faq = {
     "Title": "Can embeddings improve search accuracy?-Fastgpt",
     "Description": "Yes, embeddings can significantly improve search accuracy. They transform text into numerical vectors that capture semantic meaning, enabling systems to find relevant content based on conceptual simil",
     "Keywords": "AI Knowledge Management, Task Automation AI, Intelligent Q&A, Document AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-embeddings-improve-search-accuracy?",
-    "Url": "/faq/Can-embeddings-improve-search-accuracy?.html"
   },
   "How-to-train-your-own": {
     "Category": "Enterprise Applications",
@@ -6586,8 +5270,6 @@ export const faq = {
     "Title": "How to train your own Embedding model-Fastgpt",
     "Description": "Training your Embedding model involves developing AI models that transform words, phrases, or other items into numerical vectors capturing their semantic meaning. It's feasible using modern compute re",
     "Keywords": "Open Source AI, AI Workflow, Smart Assistant, Task Automation AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-train-your-own",
-    "Url": "/faq/How-to-train-your-own.html"
   },
   "What-is-prompt-engineering": {
     "Category": "Enterprise Applications",
@@ -6596,8 +5278,6 @@ export const faq = {
     "Title": "What is prompt engineering-Fastgpt",
     "Description": "Prompt engineering is the practice of designing and refining the input instructions (prompts) given to generative AI models to optimize their outputs. It aims to elicit the most accurate, relevant, an",
     "Keywords": "Enterprise AI, Smart Assistant, AI Platform, AI Workflow, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-prompt-engineering",
-    "Url": "/faq/What-is-prompt-engineering.html"
   },
   "What-does-Prompt-Engineering-mean?": {
     "Category": "Enterprise Applications",
@@ -6606,8 +5286,6 @@ export const faq = {
     "Title": "What does Prompt Engineering mean?-Fastgpt",
     "Description": "Prompt engineering is the specialized practice of designing, refining, and optimizing instructions (prompts) given to generative AI models to elicit the most accurate, relevant, and useful outputs. It",
     "Keywords": "AI Automation, AI Knowledge Management, GPT Integration, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/What-does-Prompt-Engineering-mean?",
-    "Url": "/faq/What-does-Prompt-Engineering-mean?.html"
   },
   "Why-is-prompt-engineering-important": {
     "Category": "Enterprise Applications",
@@ -6616,8 +5294,6 @@ export const faq = {
     "Title": "Why is prompt engineering important-Fastgpt",
     "Description": "Prompt engineering optimizes communication with AI systems to elicit desired outputs efficiently. It is crucial because well-crafted prompts directly impact the relevance, accuracy, and usefulness of ",
     "Keywords": "Vector Search, AI Knowledge Management, AI Workflow, LLM Development, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-is-prompt-engineering-important",
-    "Url": "/faq/Why-is-prompt-engineering-important.html"
   },
   "Does-the-prompt-have-a": {
     "Category": "Enterprise Applications",
@@ -6626,8 +5302,6 @@ export const faq = {
     "Title": "Does the prompt have a significant impact on the AI's response?-Fastgpt",
     "Description": "Yes, prompts significantly shape the AI's response. The specific words, structure, and context provided in the prompt directly dictate the nature and quality of the AI's output.\n\nThe AI relies entirel",
     "Keywords": "FastGPT, Task Automation AI, Document AI, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Does-the-prompt-have-a",
-    "Url": "/faq/Does-the-prompt-have-a.html"
   },
   "How-to-write-an-effective": {
     "Category": "Enterprise Applications",
@@ -6636,8 +5310,6 @@ export const faq = {
     "Title": "How to write an effective prompt-Fastgpt",
     "Description": "An effective prompt is a specific instruction that clearly communicates what you want an AI or person to do, leading to more accurate and useful responses. Writing one is entirely feasible and crucial",
     "Keywords": "AI Knowledge Management, Vector Search, Task Automation AI, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-write-an-effective",
-    "Url": "/faq/How-to-write-an-effective.html"
   },
   "Is-there-a-fixed-template": {
     "Category": "Enterprise Applications",
@@ -6646,8 +5318,6 @@ export const faq = {
     "Title": "Is there a fixed template for prompt engineering?-Fastgpt",
     "Description": "No, prompt engineering does not employ a single fixed template universally applicable to all situations. Its approach fundamentally relies on adapting to the specific task, AI model, and desired outco",
     "Keywords": "Vector Search, Document AI, AI Platform, Enterprise AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Is-there-a-fixed-template",
-    "Url": "/faq/Is-there-a-fixed-template.html"
   },
   "Why-do-AIs-give-different": {
     "Category": "Enterprise Applications",
@@ -6656,8 +5326,6 @@ export const faq = {
     "Title": "Why do AIs give different answers to the same prompt?-Fastgpt",
     "Description": "AI-generated responses can vary for the same prompt primarily due to their inherent stochastic nature and configurable settings. This means they are designed to incorporate randomness, not always prod",
     "Keywords": "Smart Assistant, Enterprise AI, AI Knowledge Management, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Why-do-AIs-give-different",
-    "Url": "/faq/Why-do-AIs-give-different.html"
   },
   "Can-prompt-engineering-improve-the": {
     "Category": "Enterprise Applications",
@@ -6666,8 +5334,6 @@ export const faq = {
     "Title": "Can prompt engineering improve the accuracy of answers?-Fastgpt",
     "Description": "Yes, prompt engineering can significantly enhance the accuracy of answers generated by AI models. Crafting clear, specific, and well-structured instructions guides the model toward more relevant and p",
     "Keywords": "Enterprise AI, Smart Assistant, AI Chatbot, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-prompt-engineering-improve-the",
-    "Url": "/faq/Can-prompt-engineering-improve-the.html"
   },
   "How-to-Get-Started-with": {
     "Category": "Enterprise Applications",
@@ -6676,8 +5342,6 @@ export const faq = {
     "Title": "How to Get Started with Prompt Engineering-Fastgpt",
     "Description": "Getting started with prompt engineering involves learning to craft effective instructions for AI models. You can begin today without prior coding experience by experimenting with AI interfaces.\n\nCore ",
     "Keywords": "Document AI, AI Workflow, GPT Integration, LLM Development, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-Get-Started-with",
-    "Url": "/faq/How-to-Get-Started-with.html"
   },
   "What-is-Chain-of-Thought": {
     "Category": "Enterprise Applications",
@@ -6686,8 +5350,6 @@ export const faq = {
     "Title": "What is Chain of Thought-Fastgpt",
     "Description": "Chain of Thought (CoT) is a prompting technique for AI language models where the model is guided to articulate its reasoning step-by-step before arriving at a final answer. It enables the model to exp",
     "Keywords": "AI Chatbot, Enterprise AI, Intelligent Q&A, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-is-Chain-of-Thought",
-    "Url": "/faq/What-is-Chain-of-Thought.html"
   },
   "What-does-the-Chain-of": {
     "Category": "Enterprise Applications",
@@ -6696,8 +5358,6 @@ export const faq = {
     "Title": "What does the Chain of Thought reasoning method mean?-Fastgpt",
     "Description": "Chain of Thought reasoning is a method that improves artificial intelligence model performance by enabling systems to explicitly articulate the intermediate logical steps taken to arrive at an answer.",
     "Keywords": "Open Source AI, AI Platform, GPT Integration, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-does-the-Chain-of",
-    "Url": "/faq/What-does-the-Chain-of.html"
   },
   "Why-use-Chain-of-Thought": {
     "Category": "Enterprise Applications",
@@ -6706,8 +5366,6 @@ export const faq = {
     "Title": "Why use Chain of Thought-Fastgpt",
     "Description": "Chain of Thought (CoT) guides AI models to articulate their reasoning steps explicitly before delivering a final answer. This approach significantly improves their ability to solve complex and multi-s",
     "Keywords": "GPT Integration, Document AI, AI Chatbot, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Why-use-Chain-of-Thought",
-    "Url": "/faq/Why-use-Chain-of-Thought.html"
   },
   "Can-reasoning-chains-make-AI": {
     "Category": "Enterprise Applications",
@@ -6716,8 +5374,6 @@ export const faq = {
     "Title": "Can reasoning chains make AI smarter?-Fastgpt",
     "Description": "Yes, reasoning chains can significantly enhance an AI's problem-solving abilities and perceived intelligence. By breaking down complex problems into sequential, logical steps, they allow AI models to ",
     "Keywords": "AI Automation, AI Platform, GPT Integration, LLM Development, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-reasoning-chains-make-AI",
-    "Url": "/faq/Can-reasoning-chains-make-AI.html"
   },
   "Is-Chain-of-Thought-useful": {
     "Category": "Enterprise Applications",
@@ -6726,8 +5382,6 @@ export const faq = {
     "Title": "Is Chain of Thought useful in math problems?-Fastgpt",
     "Description": "Yes, Chain of Thought (CoT) reasoning is highly useful and effective for solving math problems. It significantly improves the performance of language models on complex mathematical reasoning tasks by ",
     "Keywords": "Enterprise AI, AI Automation, AI Platform, Document AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Is-Chain-of-Thought-useful",
-    "Url": "/faq/Is-Chain-of-Thought-useful.html"
   },
   "How-does-Chain-of-Thought": {
     "Category": "Enterprise Applications",
@@ -6736,8 +5390,6 @@ export const faq = {
     "Title": "How does Chain of Thought affect AI thinking?-Fastgpt",
     "Description": "Chain of Thought (CoT) is a prompting technique that enhances AI reasoning by instructing models to articulate intermediate logical steps before arriving at a final answer. This mimics a more human-li",
     "Keywords": "API Integration, Task Automation AI, GPT Integration, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-does-Chain-of-Thought",
-    "Url": "/faq/How-does-Chain-of-Thought.html"
   },
   "Why-can-CoT-improve-the": {
     "Category": "Enterprise Applications",
@@ -6746,8 +5398,6 @@ export const faq = {
     "Title": "Why can CoT improve the accuracy of complex tasks-Fastgpt",
     "Description": "Chain-of-Thought (CoT) reasoning improves complex task accuracy by prompting models to break problems down into intermediate reasoning steps before reaching the final answer. This step-by-step approac",
     "Keywords": "Vector Search, FastGPT, AI Chatbot, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Why-can-CoT-improve-the",
-    "Url": "/faq/Why-can-CoT-improve-the.html"
   },
   "Is-Chain-of-Thought-a": {
     "Category": "Enterprise Applications",
@@ -6756,8 +5406,6 @@ export const faq = {
     "Title": "Is Chain of Thought a form of step-by-step reasoning?-Fastgpt",
     "Description": "Chain of Thought reasoning is indeed a specialized form of step-by-step reasoning. It specifically refers to an approach in artificial intelligence where problems are solved by explicitly decomposing ",
     "Keywords": "Intelligent Q&A, AI Workflow, FastGPT, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Is-Chain-of-Thought-a",
-    "Url": "/faq/Is-Chain-of-Thought-a.html"
   },
   "What-is-a-context-window": {
     "Category": "Enterprise Applications",
@@ -6766,8 +5414,6 @@ export const faq = {
     "Title": "What is a context window in simple terms-Fastgpt",
     "Description": "A context window refers to the maximum amount of text an AI model can consider at once while processing information and generating responses. It is the model's active \"memory\" limit for a given intera",
     "Keywords": "LLM Development, Document AI, Vector Search, GPT Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-is-a-context-window",
-    "Url": "/faq/What-is-a-context-window.html"
   },
   "What-does-context-window-mean?": {
     "Category": "Enterprise Applications",
@@ -6776,8 +5422,6 @@ export const faq = {
     "Title": "What does context window mean?-Fastgpt",
     "Description": "A context window refers to the maximum number of tokens (words or word pieces) that a language model can process at one time when interpreting input or generating output. It defines the immediate scop",
     "Keywords": "AI Chatbot, AI Workflow, Task Automation AI, Open Source AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-does-context-window-mean?",
-    "Url": "/faq/What-does-context-window-mean?.html"
   },
   "Why-does-AI-need-a": {
     "Category": "Enterprise Applications",
@@ -6786,8 +5430,6 @@ export const faq = {
     "Title": "Why does AI need a context window-Fastgpt",
     "Description": "A context window is essential for AI language models to maintain a coherent and relevant understanding within a conversation or task. It allows the model to process and utilize information beyond a si",
     "Keywords": "Vector Search, AI Automation, Intelligent Q&A, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Why-does-AI-need-a",
-    "Url": "/faq/Why-does-AI-need-a.html"
   },
   "Is-a-larger-context-window": {
     "Category": "Enterprise Applications",
@@ -6796,8 +5438,6 @@ export const faq = {
     "Title": "Is a larger context window better?-Fastgpt",
     "Description": "A larger context window is not always better; its value depends on specific use cases. While it allows models to process and utilize more surrounding information simultaneously, it introduces trade-of",
     "Keywords": "Enterprise AI, Intelligent Q&A, Task Automation AI, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Is-a-larger-context-window",
-    "Url": "/faq/Is-a-larger-context-window.html"
   },
   "Will-the-context-window-affect": {
     "Category": "Enterprise Applications",
@@ -6806,8 +5446,6 @@ export const faq = {
     "Title": "Will the context window affect the response speed?-Fastgpt",
     "Description": "Yes, a larger context window generally increases response latency. Processing more tokens inherently demands more computational time and resources.\n\nLarger contexts require the model to attend to and ",
     "Keywords": "AI Workflow, Enterprise AI, GPT Integration, AI Platform, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Will-the-context-window-affect",
-    "Url": "/faq/Will-the-context-window-affect.html"
   },
   "How-to-calculate-the-size": {
     "Category": "Enterprise Applications",
@@ -6816,8 +5454,6 @@ export const faq = {
     "Title": "How to calculate the size of the context window-Fastgpt",
     "Description": "Context window size represents the maximum token capacity of an AI model for processing input and generating output within a single session. Users typically calculate it based on the specific model's ",
     "Keywords": "AI Workflow, FastGPT, Document AI, Task Automation AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-calculate-the-size",
-    "Url": "/faq/How-to-calculate-the-size.html"
   },
   "What-happens-when-the-context": {
     "Category": "Enterprise Applications",
@@ -6826,8 +5462,6 @@ export const faq = {
     "Title": "What happens when the context window is insufficient?-Fastgpt",
     "Description": "When the context window is insufficient, the model loses visibility into earlier portions of the conversation or document. This limitation prevents it from effectively recalling previously provided in",
     "Keywords": "AI Chatbot, GPT Integration, AI Workflow, Enterprise AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/What-happens-when-the-context",
-    "Url": "/faq/What-happens-when-the-context.html"
   },
   "How-to-improve-context-window": {
     "Category": "Enterprise Applications",
@@ -6836,8 +5470,6 @@ export const faq = {
     "Title": "How to improve context window utilization-Fastgpt",
     "Description": "Improving context window utilization means effectively leveraging the available input capacity of a language model to maximize performance on complex tasks. It is achievable through strategic structur",
     "Keywords": "AI Platform, AI Workflow, GPT Integration, FastGPT, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-context-window",
-    "Url": "/faq/How-to-improve-context-window.html"
   },
   "Can-the-context-window-be": {
     "Category": "Enterprise Applications",
@@ -6846,8 +5478,6 @@ export const faq = {
     "Title": "Can the context window be expanded?-Fastgpt",
     "Description": "Expanding the context window refers to techniques that allow processing information beyond a model's native token limit. While the underlying model architecture has a fixed context window size, specif",
     "Keywords": "Task Automation AI, AI Chatbot, Intelligent Q&A, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-the-context-window-be",
-    "Url": "/faq/Can-the-context-window-be.html"
   },
   "What-is-the-attention-mechanism": {
     "Category": "Enterprise Applications",
@@ -6856,8 +5486,6 @@ export const faq = {
     "Title": "What is the attention mechanism-Fastgpt",
     "Description": "The attention mechanism is a component in neural networks that enables models to dynamically focus on the most relevant parts of input data when making predictions or generating outputs. It assigns va",
     "Keywords": "Document AI, Smart Assistant, LLM Development, GPT Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-attention-mechanism",
-    "Url": "/faq/What-is-the-attention-mechanism.html"
   },
   "What-does-the-attention-mechanism": {
     "Category": "Enterprise Applications",
@@ -6866,8 +5494,6 @@ export const faq = {
     "Title": "What does the attention mechanism mean in AI?-Fastgpt",
     "Description": "The attention mechanism is an AI technique allowing models to dynamically focus on the most relevant parts of input information when generating an output. It enables adaptive weighting of input elemen",
     "Keywords": "Vector Search, GPT Integration, LLM Development, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-does-the-attention-mechanism",
-    "Url": "/faq/What-does-the-attention-mechanism.html"
   },
   "Why-is-the-attention-mechanism": {
     "Category": "Enterprise Applications",
@@ -6876,8 +5502,6 @@ export const faq = {
     "Title": "Why is the attention mechanism needed-Fastgpt",
     "Description": "The attention mechanism allows neural networks to dynamically focus on the most relevant parts of the input data when producing an output, rather than treating all parts equally. This capability is fu",
     "Keywords": "FastGPT, LLM Development, AI Workflow, Vector Search, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Why-is-the-attention-mechanism",
-    "Url": "/faq/Why-is-the-attention-mechanism.html"
   },
   "Is-the-attention-mechanism-similar": {
     "Category": "Enterprise Applications",
@@ -6886,8 +5510,6 @@ export const faq = {
     "Title": "Is the attention mechanism similar to human focus?-Fastgpt",
     "Description": "Yes, the attention mechanism in AI is fundamentally inspired by the concept of human cognitive attention. It allows models to dynamically prioritize the most relevant parts of the input data when gene",
     "Keywords": "AI Automation, Smart Assistant, Open Source AI, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Is-the-attention-mechanism-similar",
-    "Url": "/faq/Is-the-attention-mechanism-similar.html"
   },
   "How-does-the-attention-mechanism": {
     "Category": "Enterprise Applications",
@@ -6896,8 +5518,6 @@ export const faq = {
     "Title": "How does the attention mechanism work?-Fastgpt",
     "Description": "The attention mechanism is a neural network component that dynamically weights input elements based on context, enhancing model focus on relevant parts. It enables models to selectively concentrate on",
     "Keywords": "AI Chatbot, Intelligent Q&A, FastGPT, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-does-the-attention-mechanism",
-    "Url": "/faq/How-does-the-attention-mechanism.html"
   },
   "Can-the-attention-mechanism-improve": {
     "Category": "Enterprise Applications",
@@ -6906,8 +5526,6 @@ export const faq = {
     "Title": "Can the attention mechanism improve the model's comprehension ability?-Fastgpt",
     "Description": "Yes, attention mechanisms can significantly enhance a model's comprehension ability by dynamically weighting and focusing on relevant parts of input data, such as key words in text or regions in image",
     "Keywords": "Enterprise AI, AI Platform, Vector Search, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-the-attention-mechanism-improve",
-    "Url": "/faq/Can-the-attention-mechanism-improve.html"
   },
   "Does-the-attention-mechanism-increase": {
     "Category": "Enterprise Applications",
@@ -6916,8 +5534,6 @@ export const faq = {
     "Title": "Does the attention mechanism increase computational complexity?-Fastgpt",
     "Description": "Yes, attention mechanisms do increase computational complexity relative to simpler sequence models like basic RNNs. The increase stems primarily from the pairwise comparisons needed to compute attenti",
     "Keywords": "GPT Integration, AI Knowledge Management, FastGPT, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Does-the-attention-mechanism-increase",
-    "Url": "/faq/Does-the-attention-mechanism-increase.html"
   },
   "Is-there-a-strong-relationship": {
     "Category": "Enterprise Applications",
@@ -6926,8 +5542,6 @@ export const faq = {
     "Title": "Is there a strong relationship between the attention mechanism and Transformers?-Fastgpt",
     "Description": "Yes, there is a strong relationship between the attention mechanism and Transformers. The attention mechanism is a fundamental, core component of the Transformer architecture introduced in the landmar",
     "Keywords": "FastGPT, AI Platform, AI Knowledge Management, AI Workflow, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Is-there-a-strong-relationship",
-    "Url": "/faq/Is-there-a-strong-relationship.html"
   },
   "What-are-the-types-of": {
     "Category": "Enterprise Applications",
@@ -6936,8 +5550,6 @@ export const faq = {
     "Title": "What are the types of attention mechanisms?-Fastgpt",
     "Description": "The main types of attention mechanisms include Soft vs. Hard Attention, Global vs. Local Attention, Self-Attention vs. Vanilla Attention, and Additive vs. Dot-Product Attention mechanisms.\n\nEach type ",
     "Keywords": "Enterprise AI, Intelligent Q&A, Open Source AI, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-types-of",
-    "Url": "/faq/What-are-the-types-of.html"
   },
   "What-is-the-role-of": {
     "Category": "Enterprise Applications",
@@ -6946,8 +5558,6 @@ export const faq = {
     "Title": "What is the role of the BLEU metric in evaluating machine translation?-Fastgpt",
     "Description": "BLEU (Bilingual Evaluation Understudy) is an automated metric used to measure the quality of machine translation output by comparing it to one or more high-quality human reference translations. It pri",
     "Keywords": "Intelligent Q&A, LLM Development, AI Automation, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-role-of",
-    "Url": "/faq/What-is-the-role-of.html"
   },
   "What-is-the-Transformer-model": {
     "Category": "Enterprise Applications",
@@ -6956,8 +5566,6 @@ export const faq = {
     "Title": "What is the Transformer model-Fastgpt",
     "Description": "The Transformer is a deep learning architecture introduced in 2017, primarily designed for sequence-to-sequence tasks like machine translation. Its core innovation lies in using self-attention mechani",
     "Keywords": "Intelligent Q&A, AI Knowledge Management, Task Automation AI, LLM Development, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-Transformer-model",
-    "Url": "/faq/What-is-the-Transformer-model.html"
   },
   "What-does-Transformer-mean?": {
     "Category": "Enterprise Applications",
@@ -6966,8 +5574,6 @@ export const faq = {
     "Title": "What does Transformer mean?-Fastgpt",
     "Description": "Transformer refers to a deep learning model architecture introduced in 2017. It utilizes a mechanism called \"self-attention\" to process sequential data, fundamentally changing approaches to natural la",
     "Keywords": "AI Chatbot, FastGPT, Open Source AI, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-does-Transformer-mean?",
-    "Url": "/faq/What-does-Transformer-mean?.html"
   },
   "Why-is-Transformer-so-popular": {
     "Category": "Enterprise Applications",
@@ -6976,8 +5582,6 @@ export const faq = {
     "Title": "Why is Transformer so popular-Fastgpt",
     "Description": "The Transformer architecture has gained immense popularity because its self-attention mechanism overcomes key limitations of previous sequential models like RNNs and LSTMs. This allows for more effect",
     "Keywords": "Intelligent Q&A, AI Platform, AI Workflow, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Why-is-Transformer-so-popular",
-    "Url": "/faq/Why-is-Transformer-so-popular.html"
   },
   "How-does-the-Transformer-process": {
     "Category": "Enterprise Applications",
@@ -6986,8 +5590,6 @@ export const faq = {
     "Title": "How does the Transformer process text?-Fastgpt",
     "Description": "The Transformer processes text through self-attention mechanisms rather than sequential recurrence. It encodes input text into context-rich representations by analyzing relationships between all words",
     "Keywords": "Task Automation AI, Open Source AI, FastGPT, AI Platform, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-does-the-Transformer-process",
-    "Url": "/faq/How-does-the-Transformer-process.html"
   },
   "What-role-does-Transformer-play": {
     "Category": "Enterprise Applications",
@@ -6996,8 +5598,6 @@ export const faq = {
     "Title": "What role does Transformer play in large models?-Fastgpt",
     "Description": "The Transformer architecture serves as the foundational backbone for modern large language models, enabling efficient processing of sequential data through its self-attention mechanism. It replaced ol",
     "Keywords": "AI Knowledge Management, AI Workflow, GPT Integration, FastGPT, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/What-role-does-Transformer-play",
-    "Url": "/faq/What-role-does-Transformer-play.html"
   },
   "Why-are-large-language-models": {
     "Category": "Enterprise Applications",
@@ -7006,8 +5606,6 @@ export const faq = {
     "Title": "Why are large language models all based on Transformers?-Fastgpt",
     "Description": "Large language models primarily leverage the Transformer architecture because it efficiently overcomes critical limitations of prior models like RNNs and LSTMs, enabling superior performance at scale.",
     "Keywords": "Enterprise AI, GPT Integration, LLM Development, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Why-are-large-language-models",
-    "Url": "/faq/Why-are-large-language-models.html"
   },
   "Can-Transformers-process-images?": {
     "Category": "Enterprise Applications",
@@ -7016,8 +5614,6 @@ export const faq = {
     "Title": "Can Transformers process images?-Fastgpt",
     "Description": "Yes, transformers can process images. This is achieved through architectures like Vision Transformers (ViT) and other adapted transformer models specifically designed for computer vision tasks.\n\nTradi",
     "Keywords": "AI Chatbot, Task Automation AI, Enterprise AI, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-Transformers-process-images?",
-    "Url": "/faq/Can-Transformers-process-images?.html"
   },
   "What-is-the-core-structure": {
     "Category": "Enterprise Applications",
@@ -7026,8 +5622,6 @@ export const faq = {
     "Title": "What is the core structure of Transformer?-Fastgpt",
     "Description": "The Transformer's core structure consists of an encoder-decoder architecture built using stacked layers. The defining feature is the multi-head self-attention mechanism, enabling the model to weigh th",
     "Keywords": "AI Workflow, Open Source AI, Intelligent Q&A, Enterprise AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-core-structure",
-    "Url": "/faq/What-is-the-core-structure.html"
   },
   "What-are-the-advantages-and": {
     "Category": "Enterprise Applications",
@@ -7036,8 +5630,6 @@ export const faq = {
     "Title": "What are the advantages and limitations of knowledge distillation?-Fastgpt",
     "Description": "Knowledge distillation transfers capabilities from a large, complex model (teacher) to a smaller, simpler model (student), enabling deployment where resources are constrained. Its primary advantage is",
     "Keywords": "Open Source AI, AI Automation, Smart Assistant, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-advantages-and",
-    "Url": "/faq/What-are-the-advantages-and.html"
   },
   "What-is-fine-tuning": {
     "Category": "Enterprise Applications",
@@ -7046,8 +5638,6 @@ export const faq = {
     "Title": "What is fine-tuning-Fastgpt",
     "Description": "Fine-tuning is the process of taking a pre-trained machine learning model and further training it on a specialized, task-specific dataset to adapt it to a particular application. It leverages the gene",
     "Keywords": "Intelligent Q&A, Open Source AI, AI Platform, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-is-fine-tuning",
-    "Url": "/faq/What-is-fine-tuning.html"
   },
   "What-does-AI-model-fine-tuning": {
     "Category": "Enterprise Applications",
@@ -7056,8 +5646,6 @@ export const faq = {
     "Title": "What does AI model fine-tuning mean?-Fastgpt",
     "Description": "AI model fine-tuning refers to the process of adapting a pre-trained, general-purpose AI model to perform better on a specific task or domain using a smaller, task-specific dataset.\n\nIt leverages the ",
     "Keywords": "AI Automation, AI Knowledge Management, Enterprise AI, Task Automation AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-does-AI-model-fine-tuning",
-    "Url": "/faq/What-does-AI-model-fine-tuning.html"
   },
   "Why-fine-tune-the-model": {
     "Category": "Enterprise Applications",
@@ -7066,8 +5654,6 @@ export const faq = {
     "Title": "Why fine-tune the model-Fastgpt",
     "Description": "Fine-tuning adapts a pre-trained general-purpose model to excel at specific tasks or understand particular domains. It leverages the base model's broad capabilities while significantly enhancing perfo",
     "Keywords": "Open Source AI, Document AI, AI Automation, AI Workflow, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Why-fine-tune-the-model",
-    "Url": "/faq/Why-fine-tune-the-model.html"
   },
   "Can-model-fine-tuning-improve-accuracy?": {
     "Category": "Enterprise Applications",
@@ -7076,8 +5662,6 @@ export const faq = {
     "Title": "Can model fine-tuning improve accuracy?-Fastgpt",
     "Description": "Yes, fine-tuning can significantly enhance model accuracy for specific tasks. It adapts a pre-trained base model to perform better on particular data distributions or objectives.\n\nAccurate improvement",
     "Keywords": "Enterprise AI, GPT Integration, Intelligent Q&A, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-model-fine-tuning-improve-accuracy?",
-    "Url": "/faq/Can-model-fine-tuning-improve-accuracy?.html"
   },
   "What-is-parameter-efficient-fine-tuning": {
     "Category": "Enterprise Applications",
@@ -7086,8 +5670,6 @@ export const faq = {
     "Title": "What is parameter-efficient fine-tuning-Fastgpt",
     "Description": "Parameter-efficient fine-tuning (PEFT) is a technique used to adapt large pre-trained machine learning models, particularly large language models (LLMs), to new specific tasks or datasets. Its core ob",
     "Keywords": "Vector Search, Task Automation AI, Intelligent Q&A, API Integration, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-is-parameter-efficient-fine-tuning",
-    "Url": "/faq/What-is-parameter-efficient-fine-tuning.html"
   },
   "Does-fine-tuning-necessarily-require-big": {
     "Category": "Enterprise Applications",
@@ -7096,8 +5678,6 @@ export const faq = {
     "Title": "Does fine-tuning necessarily require big data?-Fastgpt",
     "Description": "No, fine-tuning does not inherently require vast amounts of big data. Its necessity depends significantly on the specific task and model type.\n\nFine-tuning leverages pre-trained knowledge, enabling ad",
     "Keywords": "AI Automation, Task Automation AI, Document AI, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Does-fine-tuning-necessarily-require-big",
-    "Url": "/faq/Does-fine-tuning-necessarily-require-big.html"
   },
   "Can-small-models-also-be": {
     "Category": "Enterprise Applications",
@@ -7106,8 +5686,6 @@ export const faq = {
     "Title": "Can small models also be fine-tuned?-Fastgpt",
     "Description": "Small models can absolutely be fine-tuned. This process is both feasible and widely practiced to enhance their performance for specific tasks.\n\nFine-tuning a small model requires labeled data relevant",
     "Keywords": "AI Workflow, Smart Assistant, Intelligent Q&A, AI Automation, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-small-models-also-be",
-    "Url": "/faq/Can-small-models-also-be.html"
   },
   "Can-fine-tuning-change-the-model": {
     "Category": "Enterprise Applications",
@@ -7116,8 +5694,6 @@ export const faq = {
     "Title": "Can fine-tuning change the model style?-Fastgpt",
     "Description": "Yes, fine-tuning can significantly alter a model's output style. This process adapts a pre-trained language model to specific stylistic preferences through targeted training.\n\nKey principles involve r",
     "Keywords": "AI Chatbot, Task Automation AI, Intelligent Q&A, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-fine-tuning-change-the-model",
-    "Url": "/faq/Can-fine-tuning-change-the-model.html"
   },
   "What-are-the-common-methods": {
     "Category": "Enterprise Applications",
@@ -7126,8 +5702,6 @@ export const faq = {
     "Title": "What are the common methods of fine-tuning?-Fastgpt",
     "Description": "Fine-tuning involves adapting pre-trained language models (LLMs) to specific tasks or datasets using additional training. Common methods include full fine-tuning and parameter-efficient fine-tuning (P",
     "Keywords": "Intelligent Q&A, LLM Development, AI Automation, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-common-methods",
-    "Url": "/faq/What-are-the-common-methods.html"
   },
   "What-is-zero-shot-learning": {
     "Category": "Enterprise Applications",
@@ -7136,8 +5710,6 @@ export const faq = {
     "Title": "What is zero-shot learning-Fastgpt",
     "Description": "Zero-shot learning is a machine learning technique enabling models to recognize and classify objects or concepts they have never encountered during training. It achieves this by leveraging semantic re",
     "Keywords": "FastGPT, AI Knowledge Management, AI Platform, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-is-zero-shot-learning",
-    "Url": "/faq/What-is-zero-shot-learning.html"
   },
   "What-does-zero-shot-learning-mean?": {
     "Category": "Enterprise Applications",
@@ -7146,8 +5718,6 @@ export const faq = {
     "Title": "What does zero-shot learning mean?-Fastgpt",
     "Description": "Zero-shot learning refers to a machine learning technique where models recognize classes or perform tasks they were never explicitly trained on. It allows AI systems to handle unseen categories withou",
     "Keywords": "Open Source AI, AI Automation, AI Knowledge Management, LLM Development, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-does-zero-shot-learning-mean?",
-    "Url": "/faq/What-does-zero-shot-learning-mean?.html"
   },
   "Why-can-AI-achieve-zero-shot": {
     "Category": "Enterprise Applications",
@@ -7156,8 +5726,6 @@ export const faq = {
     "Title": "Why can AI achieve zero-shot learning?-Fastgpt",
     "Description": "Zero-shot learning enables AI systems to perform tasks without task-specific training examples. This is achievable because modern models learn broad representations and relationships during large-scal",
     "Keywords": "AI Chatbot, Document AI, AI Automation, LLM Development, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Why-can-AI-achieve-zero-shot",
-    "Url": "/faq/Why-can-AI-achieve-zero-shot.html"
   },
   "What-is-the-principle-of": {
     "Category": "Enterprise Applications",
@@ -7166,8 +5734,6 @@ export const faq = {
     "Title": "What is the principle of knowledge distillation?-Fastgpt",
     "Description": "Knowledge distillation is a technique that transfers knowledge from a large, complex model (teacher) to a smaller, simpler one (student). It achieves model compression or performance improvement by tr",
     "Keywords": "AI Chatbot, Intelligent Q&A, Enterprise AI, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-principle-of",
-    "Url": "/faq/What-is-the-principle-of.html"
   },
   "In-which-tasks-does-zero-shot": {
     "Category": "Enterprise Applications",
@@ -7176,8 +5742,6 @@ export const faq = {
     "Title": "In which tasks does zero-shot learning perform well?-Fastgpt",
     "Description": "Zero-shot learning excels in recognition tasks where existing knowledge transfers to identifying new classes without additional training data. It performs well when classes share describable attribute",
     "Keywords": "AI Automation, AI Chatbot, Task Automation AI, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/In-which-tasks-does-zero-shot",
-    "Url": "/faq/In-which-tasks-does-zero-shot.html"
   },
   "Is-zero-shot-learning-a-manifestation": {
     "Category": "Enterprise Applications",
@@ -7186,8 +5750,6 @@ export const faq = {
     "Title": "Is zero-shot learning a manifestation of greater intelligence?-Fastgpt",
     "Description": "Zero-shot learning represents an advanced form of generalization, rather than a definitive indicator of higher intrinsic intelligence. It signifies a model's ability to handle tasks with unseen data c",
     "Keywords": "Open Source AI, AI Platform, Enterprise AI, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Is-zero-shot-learning-a-manifestation",
-    "Url": "/faq/Is-zero-shot-learning-a-manifestation.html"
   },
   "Can-zero-shot-learning-reduce-annotation": {
     "Category": "Enterprise Applications",
@@ -7196,8 +5758,6 @@ export const faq = {
     "Title": "Can zero-shot learning reduce annotation costs?-Fastgpt",
     "Description": "Yes, zero-shot learning (ZSL) can significantly reduce annotation costs. It enables models to recognize new classes without requiring labeled training data specific to those classes.\n\nZSL reduces cost",
     "Keywords": "Open Source AI, AI Platform, Vector Search, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-zero-shot-learning-reduce-annotation",
-    "Url": "/faq/Can-zero-shot-learning-reduce-annotation.html"
   },
   "Does-zero-shot-learning-have-an": {
     "Category": "Enterprise Applications",
@@ -7206,8 +5766,6 @@ export const faq = {
     "Title": "Does zero-shot learning have an error rate?-Fastgpt",
     "Description": "Yes, zero-shot learning inherently has an error rate. Like any machine learning model, it will not achieve perfect accuracy on unseen data or tasks.\n\nError rates in zero-shot learning typically stem f",
     "Keywords": "AI Chatbot, FastGPT, Open Source AI, AI Workflow, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Does-zero-shot-learning-have-an",
-    "Url": "/faq/Does-zero-shot-learning-have-an.html"
   },
   "What-kind-of-data-is": {
     "Category": "Enterprise Applications",
@@ -7216,8 +5774,6 @@ export const faq = {
     "Title": "What kind of data is suitable for zero-shot learning?-Fastgpt",
     "Description": "Suitable data for zero-shot learning possesses descriptive attributes or semantic representations for its categories, especially for new, unseen categories not present in the training data. Crucially,",
     "Keywords": "Vector Search, FastGPT, Smart Assistant, Document AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/What-kind-of-data-is",
-    "Url": "/faq/What-kind-of-data-is.html"
   },
   "Is-zero-shot-learning-highly-dependent": {
     "Category": "Enterprise Applications",
@@ -7226,8 +5782,6 @@ export const faq = {
     "Title": "Is zero-shot learning highly dependent on large models?-Fastgpt",
     "Description": "Zero-shot learning does not strictly require large models, but their emergence significantly boosts effectiveness. Traditional methods achieve recognition on unseen classes without training data via a",
     "Keywords": "GPT Integration, AI Workflow, AI Chatbot, FastGPT, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Is-zero-shot-learning-highly-dependent",
-    "Url": "/faq/Is-zero-shot-learning-highly-dependent.html"
   },
   "What-is-few-shot-learning": {
     "Category": "Enterprise Applications",
@@ -7236,8 +5790,6 @@ export const faq = {
     "Title": "What is few-shot learning-Fastgpt",
     "Description": "Few-shot learning is a machine learning approach that enables models to recognize new classes or concepts with only a limited number of training examples. It represents a significant shift from tradit",
     "Keywords": "Smart Assistant, AI Chatbot, GPT Integration, Open Source AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-is-few-shot-learning",
-    "Url": "/faq/What-is-few-shot-learning.html"
   },
   "What-does-few-shot-learning-mean?": {
     "Category": "Enterprise Applications",
@@ -7246,8 +5798,6 @@ export const faq = {
     "Title": "What does few-shot learning mean?-Fastgpt",
     "Description": "Few-shot learning is a machine learning paradigm enabling models to learn new tasks effectively with only a small number of supervised examples.\n\nIt leverages prior knowledge gained from training on l",
     "Keywords": "Smart Assistant, LLM Development, Document AI, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-does-few-shot-learning-mean?",
-    "Url": "/faq/What-does-few-shot-learning-mean?.html"
   },
   "Why-is-few-shot-learning-useful?": {
     "Category": "Enterprise Applications",
@@ -7256,8 +5806,6 @@ export const faq = {
     "Title": "Why is few-shot learning useful?-Fastgpt",
     "Description": "Few-shot learning enables models to learn new tasks effectively with only a small number of labeled examples. This addresses the significant challenge of data scarcity prevalent in many domains where ",
     "Keywords": "API Integration, AI Knowledge Management, Intelligent Q&A, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Why-is-few-shot-learning-useful?",
-    "Url": "/faq/Why-is-few-shot-learning-useful?.html"
   },
   "How-many-samples-are-needed": {
     "Category": "Enterprise Applications",
@@ -7266,8 +5814,6 @@ export const faq = {
     "Title": "How many samples are needed for few-shot learning?-Fastgpt",
     "Description": "Few-shot learning typically requires only 1 to 5 labeled examples per class or category. Its core objective is achieving effective model performance with extremely limited annotated data.\nThe precise ",
     "Keywords": "AI Automation, GPT Integration, Open Source AI, API Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-many-samples-are-needed",
-    "Url": "/faq/How-many-samples-are-needed.html"
   },
   "Which-tasks-are-suitable-for": {
     "Category": "Enterprise Applications",
@@ -7276,8 +5822,6 @@ export const faq = {
     "Title": "Which tasks are suitable for training with few-shot learning?-Fastgpt",
     "Description": "Few-shot learning is particularly suitable for natural language processing (NLP) tasks like text classification, named entity recognition (NER), sentiment analysis, and semantic parsing, especially wh",
     "Keywords": "AI Chatbot, Vector Search, Document AI, LLM Development, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Which-tasks-are-suitable-for",
-    "Url": "/faq/Which-tasks-are-suitable-for.html"
   },
   "Does-few-shot-learning-reduce-training": {
     "Category": "Enterprise Applications",
@@ -7286,8 +5830,6 @@ export const faq = {
     "Title": "Does few-shot learning reduce training costs?-Fastgpt",
     "Description": "Few-shot learning can significantly reduce training costs in specific scenarios. This approach minimizes the need for large labeled datasets and extensive computation.\n\nKey factors include the model's",
     "Keywords": "Task Automation AI, Enterprise AI, AI Automation, LLM Development, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Does-few-shot-learning-reduce-training",
-    "Url": "/faq/Does-few-shot-learning-reduce-training.html"
   },
   "Is-the-few-shot-learning-effect": {
     "Category": "Enterprise Applications",
@@ -7296,8 +5838,6 @@ export const faq = {
     "Title": "Is the few-shot learning effect stable?-Fastgpt",
     "Description": "The stability of few-shot learning results is generally not guaranteed and can vary significantly. While feasible, achieving consistent outcomes is challenging compared to methods using large labeled ",
     "Keywords": "Enterprise AI, Smart Assistant, Intelligent Q&A, Task Automation AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Is-the-few-shot-learning-effect",
-    "Url": "/faq/Is-the-few-shot-learning-effect.html"
   },
   "Can-few-shot-learning-and-fine-tuning": {
     "Category": "Enterprise Applications",
@@ -7306,8 +5846,6 @@ export const faq = {
     "Title": "Can few-shot learning and fine-tuning be combined?-Fastgpt",
     "Description": "Yes, few-shot learning and fine-tuning can indeed be effectively combined. This approach leverages the advantages of both techniques to enhance model adaptation, particularly when labeled data for a s",
     "Keywords": "Vector Search, AI Chatbot, AI Workflow, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-few-shot-learning-and-fine-tuning",
-    "Url": "/faq/Can-few-shot-learning-and-fine-tuning.html"
   },
   "What-is-RLHF": {
     "Category": "Enterprise Applications",
@@ -7316,8 +5854,6 @@ export const faq = {
     "Title": "What is RLHF-Fastgpt",
     "Description": "Reinforcement Learning from Human Feedback (RLHF) is a machine learning technique used to align AI systems, particularly large language models (LLMs), with human preferences and values. It combines re",
     "Keywords": "AI Chatbot, Enterprise AI, Document AI, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-RLHF",
-    "Url": "/faq/What-is-RLHF.html"
   },
   "What-does-RLHF-mean?": {
     "Category": "Enterprise Applications",
@@ -7326,8 +5862,6 @@ export const faq = {
     "Title": "What does RLHF mean?-Fastgpt",
     "Description": "RLHF stands for Reinforcement Learning from Human Feedback. It is a machine learning technique used to align AI systems with human preferences through iterative training.\n\nThis method involves collect",
     "Keywords": "AI Automation, LLM Development, Task Automation AI, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-does-RLHF-mean?",
-    "Url": "/faq/What-does-RLHF-mean?.html"
   },
   "Why-does-AI-need-human": {
     "Category": "Enterprise Applications",
@@ -7336,8 +5870,6 @@ export const faq = {
     "Title": "Why does AI need human feedback-Fastgpt",
     "Description": "AI requires human feedback to refine its capabilities and align outputs with human values. This feedback loop helps AI systems learn from real-world interactions and improve accuracy over time.\n\nHuman",
     "Keywords": "AI Chatbot, AI Workflow, Vector Search, Smart Assistant, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-does-AI-need-human",
-    "Url": "/faq/Why-does-AI-need-human.html"
   },
   "What-role-does-RLHF-play": {
     "Category": "Enterprise Applications",
@@ -7346,8 +5878,6 @@ export const faq = {
     "Title": "What role does RLHF play in the training of large models?-Fastgpt",
     "Description": "RLHF (Reinforcement Learning from Human Feedback) plays a crucial role in aligning large language model outputs with human values and preferences after initial pre-training and fine-tuning. Its core f",
     "Keywords": "Smart Assistant, LLM Development, Task Automation AI, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-role-does-RLHF-play",
-    "Url": "/faq/What-role-does-RLHF-play.html"
   },
   "Can-RLHF-improve-model-safety?": {
     "Category": "Enterprise Applications",
@@ -7356,8 +5886,6 @@ export const faq = {
     "Title": "Can RLHF improve model safety?-Fastgpt",
     "Description": "Reinforcement Learning from Human Feedback (RLHF) can significantly enhance model safety. Yes, it effectively improves the alignment of AI outputs with ethical guidelines and user expectations.\n\nRLHF ",
     "Keywords": "AI Workflow, Intelligent Q&A, Task Automation AI, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-RLHF-improve-model-safety?",
-    "Url": "/faq/Can-RLHF-improve-model-safety?.html"
   },
   "How-does-human-feedback-participate": {
     "Category": "Enterprise Applications",
@@ -7366,8 +5894,6 @@ export const faq = {
     "Title": "How does human feedback participate in training?-Fastgpt",
     "Description": "Human feedback participates in training Large Language Models (LLMs) primarily through a technique called Reinforcement Learning from Human Feedback (RLHF). It provides explicit, quality signals to gu",
     "Keywords": "GPT Integration, Intelligent Q&A, LLM Development, AI Chatbot, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-does-human-feedback-participate",
-    "Url": "/faq/How-does-human-feedback-participate.html"
   },
   "Can-RLHF-reduce-AI-bias?": {
     "Category": "Enterprise Applications",
@@ -7376,8 +5902,6 @@ export const faq = {
     "Title": "Can RLHF reduce AI bias?-Fastgpt",
     "Description": "RLHF can reduce AI bias by incorporating human oversight to align model outputs with desired ethical standards. However, its effectiveness is not guaranteed and depends on specific conditions.  \n\nKey ",
     "Keywords": "API Integration, Intelligent Q&A, FastGPT, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-RLHF-reduce-AI-bias?",
-    "Url": "/faq/Can-RLHF-reduce-AI-bias?.html"
   },
   "Is-RLHF-suitable-for-all": {
     "Category": "Enterprise Applications",
@@ -7386,8 +5910,6 @@ export const faq = {
     "Title": "Is RLHF suitable for all large models?-Fastgpt",
     "Description": "No, RLHF is not universally suitable for all large models. Its application depends heavily on specific goals and resource availability.\n\nRLHF excels when aligning model outputs with complex human pref",
     "Keywords": "API Integration, AI Knowledge Management, Task Automation AI, Open Source AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Is-RLHF-suitable-for-all",
-    "Url": "/faq/Is-RLHF-suitable-for-all.html"
   },
   "Will-RLHF-increase-training-costs?": {
     "Category": "Enterprise Applications",
@@ -7396,8 +5918,6 @@ export const faq = {
     "Title": "Will RLHF increase training costs?-Fastgpt",
     "Description": "Yes, RLHF significantly increases training costs compared to standard model training. This increase stems primarily from the extensive human effort required to generate high-quality preference data.\n\n",
     "Keywords": "AI Automation, AI Platform, Vector Search, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-RLHF-increase-training-costs?",
-    "Url": "/faq/Will-RLHF-increase-training-costs?.html"
   },
   "What-is-the-parameter-count?": {
     "Category": "Enterprise Applications",
@@ -7406,8 +5926,6 @@ export const faq = {
     "Title": "What is the parameter count?-Fastgpt",
     "Description": "Parameter count refers to the total number of learned weights in an artificial intelligence model, particularly deep learning models. It quantifies the model's internal complexity and capacity to lear",
     "Keywords": "Smart Assistant, Intelligent Q&A, AI Platform, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-parameter-count?",
-    "Url": "/faq/What-is-the-parameter-count?.html"
   },
   "What-does-the-parameter-count": {
     "Category": "Enterprise Applications",
@@ -7416,8 +5934,6 @@ export const faq = {
     "Title": "What does the parameter count of an AI model mean?-Fastgpt",
     "Description": "The parameter count refers to the number of adjustable weights within an artificial intelligence model, specifically deep learning models like neural networks. It is a core indicator of the model's si",
     "Keywords": "FastGPT, Document AI, Task Automation AI, Vector Search, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/What-does-the-parameter-count",
-    "Url": "/faq/What-does-the-parameter-count.html"
   },
   "Why-do-models-with-larger": {
     "Category": "Enterprise Applications",
@@ -7426,8 +5942,6 @@ export const faq = {
     "Title": "Why do models with larger parameter counts perform better?-Fastgpt",
     "Description": "Models with larger parameter counts generally achieve superior performance because they possess a greater capacity to learn intricate patterns and complex representations within the data. This enables",
     "Keywords": "Intelligent Q&A, Task Automation AI, FastGPT, Smart Assistant, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-do-models-with-larger",
-    "Url": "/faq/Why-do-models-with-larger.html"
   },
   "Is-it-true-that-the": {
     "Category": "Enterprise Applications",
@@ -7436,8 +5950,6 @@ export const faq = {
     "Title": "Is it true that the larger the number of parameters, the higher the accuracy?-Fastgpt",
     "Description": "Not necessarily. While increasing parameters can improve model capacity and accuracy up to a point, it is not an absolute guarantee of better performance.\n\nKey factors dictate whether more parameters ",
     "Keywords": "Task Automation AI, API Integration, AI Platform, Open Source AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Is-it-true-that-the",
-    "Url": "/faq/Is-it-true-that-the.html"
   },
   "Does-the-number-of-parameters": {
     "Category": "Enterprise Applications",
@@ -7446,8 +5958,6 @@ export const faq = {
     "Title": "Does the number of parameters affect inference speed?-Fastgpt",
     "Description": "Yes, the number of parameters significantly impacts model inference speed.\nLarger models with more parameters require greater computational power and memory bandwidth to process data. This increased d",
     "Keywords": "FastGPT, Smart Assistant, AI Automation, Vector Search, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Does-the-number-of-parameters",
-    "Url": "/faq/Does-the-number-of-parameters.html"
   },
   "How-to-check-the-number": {
     "Category": "Enterprise Applications",
@@ -7456,8 +5966,6 @@ export const faq = {
     "Title": "How to check the number of parameters of the model-Fastgpt",
     "Description": "To determine the total number of parameters in a machine learning model, access its architecture attributes using framework-specific methods. This provides an integer count of all trainable weights.\n\n",
     "Keywords": "Document AI, AI Workflow, Open Source AI, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-check-the-number",
-    "Url": "/faq/How-to-check-the-number.html"
   },
   "Does-the-parameter-count-have": {
     "Category": "Enterprise Applications",
@@ -7466,8 +5974,6 @@ export const faq = {
     "Title": "Does the parameter count have high storage space requirements?-Fastgpt",
     "Description": "The parameter count directly impacts storage requirements and can impose significant space demands. High parameter counts inherently require large memory allocations for model weights.\n\nStorage needs ",
     "Keywords": "FastGPT, Enterprise AI, Smart Assistant, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Does-the-parameter-count-have",
-    "Url": "/faq/Does-the-parameter-count-have.html"
   },
   "Which-tasks-are-small-parameter": {
     "Category": "Enterprise Applications",
@@ -7476,8 +5982,6 @@ export const faq = {
     "Title": "Which tasks are small parameter models suitable for?-Fastgpt",
     "Description": "Small parameter models excel in tasks with constrained computational resources and specialized goals. They efficiently handle narrow problem domains requiring moderate complexity.\n\nThese models thrive",
     "Keywords": "GPT Integration, Document AI, API Integration, Open Source AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Which-tasks-are-small-parameter",
-    "Url": "/faq/Which-tasks-are-small-parameter.html"
   },
   "Are-larger-parameter-models-always": {
     "Category": "Enterprise Applications",
@@ -7486,8 +5990,6 @@ export const faq = {
     "Title": "Are larger parameter models always better than smaller ones?-Fastgpt",
     "Description": "Larger parameter models are not universally superior to smaller ones. While increased scale often enhances capability on complex tasks, size alone does not guarantee better performance in all scenario",
     "Keywords": "FastGPT, Task Automation AI, Smart Assistant, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Are-larger-parameter-models-always",
-    "Url": "/faq/Are-larger-parameter-models-always.html"
   },
   "What-is-inference-speed": {
     "Category": "Enterprise Applications",
@@ -7496,8 +5998,6 @@ export const faq = {
     "Title": "What is inference speed-Fastgpt",
     "Description": "Inference speed refers to the time an artificial intelligence or machine learning model requires to process new input data and generate an output prediction after its training is complete. It measures",
     "Keywords": "Intelligent Q&A, Document AI, Open Source AI, LLM Development, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-is-inference-speed",
-    "Url": "/faq/What-is-inference-speed.html"
   },
   "What-does-AI-inference-speed": {
     "Category": "Enterprise Applications",
@@ -7506,8 +6006,6 @@ export const faq = {
     "Title": "What does AI inference speed mean?-Fastgpt",
     "Description": "AI inference speed refers to the time required for a trained AI model to process input data and generate an output prediction. It measures how quickly the model performs its task after being deployed.",
     "Keywords": "AI Chatbot, Smart Assistant, Open Source AI, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-does-AI-inference-speed",
-    "Url": "/faq/What-does-AI-inference-speed.html"
   },
   "Why-is-inference-speed-important": {
     "Category": "Enterprise Applications",
@@ -7516,8 +6014,6 @@ export const faq = {
     "Title": "Why is inference speed important for applications?-Fastgpt",
     "Description": "Inference speed directly impacts application responsiveness and operational efficiency, ensuring timely outputs for user tasks and processes. It is crucial for delivering satisfactory real-time experi",
     "Keywords": "AI Workflow, Document AI, Intelligent Q&A, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Why-is-inference-speed-important",
-    "Url": "/faq/Why-is-inference-speed-important.html"
   },
   "Does-slow-inference-speed-affect": {
     "Category": "Enterprise Applications",
@@ -7526,8 +6022,6 @@ export const faq = {
     "Title": "Does slow inference speed affect user experience?-Fastgpt",
     "Description": "Yes, slow inference speed significantly degrades user experience. Delays in obtaining results disrupt interaction flow and reduce satisfaction.\n\nSlow response times strain user patience, increasing ab",
     "Keywords": "AI Platform, FastGPT, AI Workflow, AI Chatbot, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Does-slow-inference-speed-affect",
-    "Url": "/faq/Does-slow-inference-speed-affect.html"
   },
   "Is-there-a-direct-relationship": {
     "Category": "Enterprise Applications",
@@ -7536,8 +6030,6 @@ export const faq = {
     "Title": "Is there a direct relationship between inference speed and computing power?-Fastgpt",
     "Description": "Inference speed and computing power generally exhibit a positive correlation, meaning higher computing power typically results in faster inference times. However, this relationship is not perfectly li",
     "Keywords": "AI Knowledge Management, LLM Development, Smart Assistant, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Is-there-a-direct-relationship",
-    "Url": "/faq/Is-there-a-direct-relationship.html"
   },
   "Can-the-inference-speed-be": {
     "Category": "Enterprise Applications",
@@ -7546,8 +6038,6 @@ export const faq = {
     "Title": "Can the inference speed be improved through optimization?-Fastgpt",
     "Description": "Yes, the inference speed of machine learning models can be significantly improved through optimization techniques. Targeted optimizations directly address computational bottlenecks to achieve faster p",
     "Keywords": "Enterprise AI, LLM Development, AI Workflow, FastGPT, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-the-inference-speed-be",
-    "Url": "/faq/Can-the-inference-speed-be.html"
   },
   "Does-inference-speed-depend-on": {
     "Category": "Enterprise Applications",
@@ -7556,8 +6046,6 @@ export const faq = {
     "Title": "Does inference speed depend on model size?-Fastgpt",
     "Description": "Yes, inference speed generally depends heavily on model size. Larger models, typically characterized by more parameters, inherently require more computations during prediction, leading to increased la",
     "Keywords": "AI Workflow, FastGPT, Open Source AI, Vector Search, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Does-inference-speed-depend-on",
-    "Url": "/faq/Does-inference-speed-depend-on.html"
   },
   "Is-faster-reasoning-speed-always": {
     "Category": "Enterprise Applications",
@@ -7566,8 +6054,6 @@ export const faq = {
     "Title": "Is faster reasoning speed always better?-Fastgpt",
     "Description": "Faster reasoning speed is not always preferable. While beneficial in time-sensitive applications, speed alone does not guarantee optimal outcomes.\n\nPrioritizing raw speed can compromise accuracy or de",
     "Keywords": "LLM Development, Smart Assistant, AI Platform, GPT Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Is-faster-reasoning-speed-always",
-    "Url": "/faq/Is-faster-reasoning-speed-always.html"
   },
   "What-is-knowledge-distillation": {
     "Category": "Enterprise Applications",
@@ -7576,8 +6062,6 @@ export const faq = {
     "Title": "What is knowledge distillation-Fastgpt",
     "Description": "Knowledge distillation is a model compression technique where a small, efficient student model learns to replicate the behavior of a larger, more complex teacher model. The core objective is achieving",
     "Keywords": "LLM Development, AI Platform, AI Chatbot, Open Source AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/What-is-knowledge-distillation",
-    "Url": "/faq/What-is-knowledge-distillation.html"
   },
   "What-does-knowledge-distillation-mean?": {
     "Category": "Enterprise Applications",
@@ -7586,8 +6070,6 @@ export const faq = {
     "Title": "What does knowledge distillation mean?-Fastgpt",
     "Description": "Knowledge distillation refers to a model compression technique in which a smaller \"student\" model is trained to mimic the behavior of a larger, more complex \"teacher\" model or ensemble of models. Its ",
     "Keywords": "Task Automation AI, Enterprise AI, AI Knowledge Management, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-does-knowledge-distillation-mean?",
-    "Url": "/faq/What-does-knowledge-distillation-mean?.html"
   },
   "Why-do-knowledge-distillation?": {
     "Category": "Enterprise Applications",
@@ -7596,8 +6078,6 @@ export const faq = {
     "Title": "Why do knowledge distillation?-Fastgpt",
     "Description": "Knowledge distillation transfers capabilities from a large, complex model (teacher) to a smaller, simpler one (student). It enables deploying performant models where computational resources or latency",
     "Keywords": "Intelligent Q&A, FastGPT, Document AI, AI Automation, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Why-do-knowledge-distillation?",
-    "Url": "/faq/Why-do-knowledge-distillation?.html"
   },
   "Can-knowledge-distillation-make-small": {
     "Category": "Enterprise Applications",
@@ -7606,8 +6086,6 @@ export const faq = {
     "Title": "Can knowledge distillation make small models stronger?-Fastgpt",
     "Description": "Yes, knowledge distillation can significantly strengthen small models by transferring learned knowledge from larger, more complex \"teacher\" models to smaller \"student\" models. This technique enhances ",
     "Keywords": "GPT Integration, Enterprise AI, LLM Development, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-knowledge-distillation-make-small",
-    "Url": "/faq/Can-knowledge-distillation-make-small.html"
   },
   "Is-knowledge-distillation-a-method": {
     "Category": "Enterprise Applications",
@@ -7616,8 +6094,6 @@ export const faq = {
     "Title": "Is knowledge distillation a method of model compression?-Fastgpt",
     "Description": "Knowledge distillation is indeed a widely recognized and effective method for model compression. It enables the training of significantly smaller neural network models without substantial performance ",
     "Keywords": "Enterprise AI, Vector Search, Intelligent Q&A, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Is-knowledge-distillation-a-method",
-    "Url": "/faq/Is-knowledge-distillation-a-method.html"
   },
   "Can-knowledge-distillation-reduce-computational": {
     "Category": "Enterprise Applications",
@@ -7626,8 +6102,6 @@ export const faq = {
     "Title": "Can knowledge distillation reduce computational power consumption?-Fastgpt",
     "Description": "Yes, knowledge distillation can effectively reduce computational power consumption, particularly during model inference. The technique achieves this by training a smaller, computationally cheaper stud",
     "Keywords": "Enterprise AI, AI Workflow, AI Automation, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-knowledge-distillation-reduce-computational",
-    "Url": "/faq/Can-knowledge-distillation-reduce-computational.html"
   },
   "Is-knowledge-distillation-suitable-for": {
     "Category": "Enterprise Applications",
@@ -7636,8 +6110,6 @@ export const faq = {
     "Title": "Is knowledge distillation suitable for mobile applications?-Fastgpt",
     "Description": "Knowledge distillation is highly suitable for mobile applications. Its core purpose is model compression, enabling complex AI models to run efficiently on resource-constrained mobile devices.\n\nIt tran",
     "Keywords": "Document AI, Vector Search, LLM Development, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Is-knowledge-distillation-suitable-for",
-    "Url": "/faq/Is-knowledge-distillation-suitable-for.html"
   },
   "Will-knowledge-distillation-affect-model": {
     "Category": "Enterprise Applications",
@@ -7646,8 +6118,6 @@ export const faq = {
     "Title": "Will knowledge distillation affect model accuracy?-Fastgpt",
     "Description": "Knowledge distillation typically introduces a small accuracy degradation for the student model compared to the original teacher model. However, it can potentially match or even slightly exceed teacher",
     "Keywords": "Task Automation AI, GPT Integration, FastGPT, Document AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Will-knowledge-distillation-affect-model",
-    "Url": "/faq/Will-knowledge-distillation-affect-model.html"
   },
   "What-is-perplexity": {
     "Category": "Enterprise Applications",
@@ -7656,8 +6126,6 @@ export const faq = {
     "Title": "What is perplexity-Fastgpt",
     "Description": "Perplexity measures how uncertain a language model is when predicting the next word in a sequence. It quantifies how well a model predicts a sample of text or data; lower values indicate better predic",
     "Keywords": "AI Knowledge Management, FastGPT, GPT Integration, Task Automation AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-is-perplexity",
-    "Url": "/faq/What-is-perplexity.html"
   },
   "What-does-perplexity-mean-in": {
     "Category": "Enterprise Applications",
@@ -7666,8 +6134,6 @@ export const faq = {
     "Title": "What does perplexity mean in AI?-Fastgpt",
     "Description": "Perplexity measures how uncertain a language model is when predicting the next token in a sequence. It quantifies a model's prediction confidence on unseen text, where lower values indicate better per",
     "Keywords": "Task Automation AI, Smart Assistant, AI Automation, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-does-perplexity-mean-in",
-    "Url": "/faq/What-does-perplexity-mean-in.html"
   },
   "Why-use-perplexity-to-measure": {
     "Category": "Enterprise Applications",
@@ -7676,8 +6142,6 @@ export const faq = {
     "Title": "Why use perplexity to measure models-Fastgpt",
     "Description": "Perplexity quantifies how accurately a probabilistic model, particularly language models, predicts a sample of text. It serves as a core intrinsic evaluation metric directly reflecting a model's predi",
     "Keywords": "Intelligent Q&A, AI Knowledge Management, Open Source AI, FastGPT, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Why-use-perplexity-to-measure",
-    "Url": "/faq/Why-use-perplexity-to-measure.html"
   },
   "What-does-a-lower-perplexity": {
     "Category": "Enterprise Applications",
@@ -7686,8 +6150,6 @@ export const faq = {
     "Title": "What does a lower perplexity value indicate?-Fastgpt",
     "Description": "A lower perplexity value indicates a better language model performance in predicting text sequences. Essentially, it signifies the model is less surprised or \"perplexed\" by new, unseen data.\n\nLower pe",
     "Keywords": "AI Platform, Open Source AI, AI Workflow, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-does-a-lower-perplexity",
-    "Url": "/faq/What-does-a-lower-perplexity.html"
   },
   "Can-perplexity-reflect-a-model's": {
     "Category": "Enterprise Applications",
@@ -7696,8 +6158,6 @@ export const faq = {
     "Title": "Can perplexity reflect a model's language ability?-Fastgpt",
     "Description": "Perplexity is a quantitative measure that evaluates how well a language model predicts a given text sequence. While it correlates with basic language modeling competence, it cannot comprehensively ref",
     "Keywords": "Smart Assistant, AI Chatbot, AI Knowledge Management, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-perplexity-reflect-a-model's",
-    "Url": "/faq/Can-perplexity-reflect-a-model's.html"
   },
   "Can-perplexity-be-used-to": {
     "Category": "Enterprise Applications",
@@ -7706,8 +6166,6 @@ export const faq = {
     "Title": "Can perplexity be used to compare different models?-Fastgpt",
     "Description": "Perplexity is a standard metric used to compare different language models, particularly in evaluating their prediction capabilities. Yes, it can be directly applied for such comparisons.\n\nPerplexity q",
     "Keywords": "Vector Search, AI Chatbot, Task Automation AI, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-perplexity-be-used-to",
-    "Url": "/faq/Can-perplexity-be-used-to.html"
   },
   "Is-a-smaller-perplexity-better?": {
     "Category": "Enterprise Applications",
@@ -7716,8 +6174,6 @@ export const faq = {
     "Title": "Is a smaller perplexity better?-Fastgpt",
     "Description": "Smaller perplexity values are generally better for language models. A lower perplexity indicates the model is more confident and accurate in its predictions of language data.\n\nPerplexity measures how ",
     "Keywords": "AI Workflow, LLM Development, AI Chatbot, AI Platform, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Is-a-smaller-perplexity-better?",
-    "Url": "/faq/Is-a-smaller-perplexity-better?.html"
   },
   "Is-perplexity-related-to-training": {
     "Category": "Enterprise Applications",
@@ -7726,8 +6182,6 @@ export const faq = {
     "Title": "Is perplexity related to training data?-Fastgpt",
     "Description": "Perplexity is directly influenced by training data quality and relevance. It quantifies how well a language model predicts a sample text based on what it learned during training.\n\nHigh perplexity ofte",
     "Keywords": "Vector Search, Open Source AI, AI Chatbot, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Is-perplexity-related-to-training",
-    "Url": "/faq/Is-perplexity-related-to-training.html"
   },
   "High-perplexity-indicates-where-the": {
     "Category": "Enterprise Applications",
@@ -7736,8 +6190,6 @@ export const faq = {
     "Title": "High perplexity indicates where the model has problems.-Fastgpt",
     "Description": "High perplexity indicates areas where a model encounters significant difficulty predicting the next token accurately, reflecting underlying uncertainty or potential problems in its understanding or th",
     "Keywords": "AI Knowledge Management, LLM Development, Vector Search, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/High-perplexity-indicates-where-the",
-    "Url": "/faq/High-perplexity-indicates-where-the.html"
   },
   "In-which-tasks-is-perplexity": {
     "Category": "Enterprise Applications",
@@ -7746,8 +6198,6 @@ export const faq = {
     "Title": "In which tasks is perplexity suitable for use?-Fastgpt",
     "Description": "Perplexity is primarily suitable for evaluating language models and comparing their prediction quality on text tasks. It serves as a key intrinsic metric for assessing how well a model predicts unseen",
     "Keywords": "AI Platform, Document AI, AI Workflow, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/In-which-tasks-is-perplexity",
-    "Url": "/faq/In-which-tasks-is-perplexity.html"
   },
   "What-is-the-BLEU-metric": {
     "Category": "Enterprise Applications",
@@ -7756,8 +6206,6 @@ export const faq = {
     "Title": "What is the BLEU metric-Fastgpt",
     "Description": "The BLEU (Bilingual Evaluation Understudy) metric is an algorithm for automatically evaluating the quality of machine-translated text. It measures the similarity between the machine-generated translat",
     "Keywords": "AI Automation, AI Knowledge Management, AI Platform, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-BLEU-metric",
-    "Url": "/faq/What-is-the-BLEU-metric.html"
   },
   "What-does-BLEU-mean?": {
     "Category": "Enterprise Applications",
@@ -7766,8 +6214,6 @@ export const faq = {
     "Title": "What does BLEU mean?-Fastgpt",
     "Description": "BLEU (Bilingual Evaluation Understudy) is an algorithm for evaluating the quality of text which has been machine-translated from one natural language to another. It provides a numerical score indicati",
     "Keywords": "API Integration, Intelligent Q&A, GPT Integration, LLM Development, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/What-does-BLEU-mean?",
-    "Url": "/faq/What-does-BLEU-mean?.html"
   },
   "Why-is-BLEU-used-to": {
     "Category": "Enterprise Applications",
@@ -7776,8 +6222,6 @@ export const faq = {
     "Title": "Why is BLEU used to evaluate translation quality?-Fastgpt",
     "Description": "BLEU (Bilingual Evaluation Understudy) is a widely adopted automatic metric for evaluating the quality of machine translation (MT) output. Its core function is to quantify the similarity between a mac",
     "Keywords": "Intelligent Q&A, Task Automation AI, LLM Development, AI Platform, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Why-is-BLEU-used-to",
-    "Url": "/faq/Why-is-BLEU-used-to.html"
   },
   "Is-a-higher-BLEU-score": {
     "Category": "Enterprise Applications",
@@ -7786,8 +6230,6 @@ export const faq = {
     "Title": "Is a higher BLEU score always better?-Fastgpt",
     "Description": "No, a higher BLEU score does not always equate to better translation quality. While it's a widely used automated metric, it has significant limitations.  \n\nBLEU measures n-gram overlap between a machi",
     "Keywords": "AI Automation, Intelligent Q&A, Open Source AI, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Is-a-higher-BLEU-score",
-    "Url": "/faq/Is-a-higher-BLEU-score.html"
   },
   "How-is-the-BLEU-score": {
     "Category": "Enterprise Applications",
@@ -7796,8 +6238,6 @@ export const faq = {
     "Title": "How is the BLEU score calculated?-Fastgpt",
     "Description": "BLEU (Bilingual Evaluation Understudy) calculates the similarity between a machine-generated translation and one or more high-quality human reference translations. It generates a score between 0 and 1",
     "Keywords": "Smart Assistant, GPT Integration, AI Chatbot, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-is-the-BLEU-score",
-    "Url": "/faq/How-is-the-BLEU-score.html"
   },
   "Can-BLEU-measure-the-fluency": {
     "Category": "Enterprise Applications",
@@ -7806,8 +6246,6 @@ export const faq = {
     "Title": "Can BLEU measure the fluency of generated text?-Fastgpt",
     "Description": "BLEU cannot directly measure the fluency of generated text. It primarily evaluates precision by comparing n-gram overlap between the generated output and reference translations.\n\nBLEU focuses on lexic",
     "Keywords": "API Integration, FastGPT, AI Automation, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-BLEU-measure-the-fluency",
-    "Url": "/faq/Can-BLEU-measure-the-fluency.html"
   },
   "Is-BLEU-only-suitable-for": {
     "Category": "Enterprise Applications",
@@ -7816,8 +6254,6 @@ export const faq = {
     "Title": "Is BLEU only suitable for translation tasks?-Fastgpt",
     "Description": "No, BLEU is not exclusively suitable for translation tasks. While originally designed and predominantly used to automatically evaluate the quality of machine translation (MT) outputs, it has found app",
     "Keywords": "AI Automation, Smart Assistant, Enterprise AI, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Is-BLEU-only-suitable-for",
-    "Url": "/faq/Is-BLEU-only-suitable-for.html"
   },
   "What-are-the-shortcomings-of": {
     "Category": "Enterprise Applications",
@@ -7826,8 +6262,6 @@ export const faq = {
     "Title": "What are the shortcomings of BLEU?-Fastgpt",
     "Description": "BLEU is popular but unreliable for evaluating text quality. Its oversimplified approach cannot accurately assess meaning or fluency.\n\nBLEU focuses only on surface n-gram matches against reference tran",
     "Keywords": "Vector Search, LLM Development, GPT Integration, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-shortcomings-of",
-    "Url": "/faq/What-are-the-shortcomings-of.html"
   },
   "Can-BLEU-replace-human-evaluation?": {
     "Category": "Enterprise Applications",
@@ -7836,8 +6270,6 @@ export const faq = {
     "Title": "Can BLEU replace human evaluation?-Fastgpt",
     "Description": "BLEU cannot fully replace human evaluation in machine translation quality assessment. As an automated metric, it measures n-gram overlap between a machine-generated output and human reference translat",
     "Keywords": "AI Workflow, GPT Integration, Intelligent Q&A, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-BLEU-replace-human-evaluation?",
-    "Url": "/faq/Can-BLEU-replace-human-evaluation?.html"
   },
   "How-exactly-do-large-language": {
     "Category": "Enterprise Applications",
@@ -7846,8 +6278,6 @@ export const faq = {
     "Title": "How exactly do large language models work?-Fastgpt",
     "Description": "Large language models function as sophisticated deep learning systems, primarily using transformer architectures, trained on vast text datasets to understand and generate human-like language. They wor",
     "Keywords": "Task Automation AI, Enterprise AI, Vector Search, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-exactly-do-large-language",
-    "Url": "/faq/How-exactly-do-large-language.html"
   },
   "What-is-the-concept-of": {
     "Category": "Enterprise Applications",
@@ -7856,8 +6286,6 @@ export const faq = {
     "Title": "What is the concept of Token in AI-Fastgpt",
     "Description": "A token represents the smallest unit of text processed by an AI model, analogous to words or word segments. It is the fundamental building block upon which language models operate, enabling them to in",
     "Keywords": "Enterprise AI, AI Workflow, LLM Development, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-concept-of",
-    "Url": "/faq/What-is-the-concept-of.html"
   },
   "A-simple-explanation-of-what": {
     "Category": "Enterprise Applications",
@@ -7866,8 +6294,6 @@ export const faq = {
     "Title": "A simple explanation of what knowledge distillation is-Fastgpt",
     "Description": "Knowledge distillation is a model compression technique where a small model (the \"student\") is trained to replicate the behavior of a large, complex model (the \"teacher\") or an ensemble of models.\n\nTh",
     "Keywords": "AI Automation, Smart Assistant, Vector Search, API Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/A-simple-explanation-of-what",
-    "Url": "/faq/A-simple-explanation-of-what.html"
   },
   "What-role-does-Embedding-play": {
     "Category": "Enterprise Applications",
@@ -7876,8 +6302,6 @@ export const faq = {
     "Title": "What role does Embedding play in AI search?-Fastgpt",
     "Description": "Embedding in AI search converts unstructured data, such as text or images, into numerical vectors that capture semantic meaning and relationships. This transformation enables AI systems to process and",
     "Keywords": "AI Platform, AI Knowledge Management, FastGPT, Vector Search, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/What-role-does-Embedding-play",
-    "Url": "/faq/What-role-does-Embedding-play.html"
   },
   "Why-can-Embeddings-improve-search": {
     "Category": "Enterprise Applications",
@@ -7886,8 +6310,6 @@ export const faq = {
     "Title": "Why can Embeddings improve search accuracy?-Fastgpt",
     "Description": "Embeddings enhance search accuracy by representing text or items as dense numerical vectors in a semantic space. This captures contextual meaning and similarity far better than simple keyword matching",
     "Keywords": "Intelligent Q&A, API Integration, AI Platform, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Why-can-Embeddings-improve-search",
-    "Url": "/faq/Why-can-Embeddings-improve-search.html"
   },
   "How-to-write-high-quality-prompts": {
     "Category": "Enterprise Applications",
@@ -7896,8 +6318,6 @@ export const faq = {
     "Title": "How to write high-quality prompts for AI-Fastgpt",
     "Description": "High-quality AI prompts are concise, clear instructions designed to elicit accurate, relevant, and useful responses from artificial intelligence systems. They effectively bridge human intent and AI ca",
     "Keywords": "Enterprise AI, API Integration, AI Automation, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-write-high-quality-prompts",
-    "Url": "/faq/How-to-write-high-quality-prompts.html"
   },
   "How-much-impact-do-prompts": {
     "Category": "Enterprise Applications",
@@ -7906,8 +6326,6 @@ export const faq = {
     "Title": "How much impact do prompts have on AI-generated results?-Fastgpt",
     "Description": "Prompts significantly shape AI-generated results, serving as direct instructions that determine the content, style, and direction of the output. Essentially, the quality and specificity of the prompt ",
     "Keywords": "Smart Assistant, LLM Development, Document AI, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-much-impact-do-prompts",
-    "Url": "/faq/How-much-impact-do-prompts.html"
   },
   "What-is-the-use-of": {
     "Category": "Enterprise Applications",
@@ -7916,8 +6334,6 @@ export const faq = {
     "Title": "What is the use of the Chain of Thought reasoning method?-Fastgpt",
     "Description": "The Chain of Thought (CoT) reasoning method enhances AI's ability to solve complex problems by decomposing them into intermediate, explainable reasoning steps. It significantly improves performance on",
     "Keywords": "Vector Search, Intelligent Q&A, AI Platform, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-use-of",
-    "Url": "/faq/What-is-the-use-of.html"
   },
   "Why-does-Chain-of-Thought": {
     "Category": "Enterprise Applications",
@@ -7926,8 +6342,6 @@ export const faq = {
     "Title": "Why does Chain of Thought improve AI reasoning accuracy-Fastgpt",
     "Description": "Chain of Thought (CoT) improves AI reasoning accuracy by guiding models to break down complex problems into sequential, intermediate reasoning steps before arriving at the final answer. This step-by-s",
     "Keywords": "Vector Search, Enterprise AI, API Integration, FastGPT, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Why-does-Chain-of-Thought",
-    "Url": "/faq/Why-does-Chain-of-Thought.html"
   },
   "Does-the-context-window-size": {
     "Category": "Enterprise Applications",
@@ -7936,8 +6350,6 @@ export const faq = {
     "Title": "Does the context window size affect AI responses?-Fastgpt",
     "Description": "The context window size directly impacts AI responses. Yes, larger windows allow AI models to process more information and maintain coherence over longer conversations or documents.\n\nLarger context wi",
     "Keywords": "Document AI, API Integration, Smart Assistant, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Does-the-context-window-size",
-    "Url": "/faq/Does-the-context-window-size.html"
   },
   "A-popular-explanation-of-what": {
     "Category": "Enterprise Applications",
@@ -7946,8 +6358,6 @@ export const faq = {
     "Title": "A popular explanation of what the attention mechanism is-Fastgpt",
     "Description": "The attention mechanism is a technique in deep learning that enables models to dynamically prioritize and focus on the most relevant parts of input data when processing information. It mimics how huma",
     "Keywords": "Document AI, AI Automation, Enterprise AI, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/A-popular-explanation-of-what",
-    "Url": "/faq/A-popular-explanation-of-what.html"
   },
   "How-does-the-Transformer-model": {
     "Category": "Enterprise Applications",
@@ -7956,8 +6366,6 @@ export const faq = {
     "Title": "How does the Transformer model process text?-Fastgpt",
     "Description": "The Transformer model processes text using a neural network architecture that relies solely on attention mechanisms, bypassing recurrent connections for efficient parallel computation.\n\nCore principle",
     "Keywords": "GPT Integration, Task Automation AI, FastGPT, AI Knowledge Management, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-does-the-Transformer-model",
-    "Url": "/faq/How-does-the-Transformer-model.html"
   },
   "Why-do-large-models-all": {
     "Category": "Enterprise Applications",
@@ -7966,8 +6374,6 @@ export const faq = {
     "Title": "Why do large models all adopt the Transformer structure?-Fastgpt",
     "Description": "Large language models predominantly utilize the Transformer structure because it efficiently overcomes critical limitations of previous architectures. Its core innovation, self-attention, directly add",
     "Keywords": "Document AI, AI Chatbot, API Integration, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Why-do-large-models-all",
-    "Url": "/faq/Why-do-large-models-all.html"
   },
   "What-is-an-introductory-explanation": {
     "Category": "Enterprise Applications",
@@ -7976,8 +6382,6 @@ export const faq = {
     "Title": "What is an introductory explanation of model fine-tuning-Fastgpt",
     "Description": "Model fine-tuning is the process of taking a pre-trained machine learning model (trained on a large, general dataset) and further training it on a smaller, domain-specific dataset. This adapts the mod",
     "Keywords": "AI Chatbot, AI Knowledge Management, AI Workflow, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-is-an-introductory-explanation",
-    "Url": "/faq/What-is-an-introductory-explanation.html"
   },
   "Is-zero-shot-learning-easy-to": {
     "Category": "Enterprise Applications",
@@ -7986,8 +6390,6 @@ export const faq = {
     "Title": "Is zero-shot learning easy to understand?-Fastgpt",
     "Description": "Zero-shot learning presents a steep initial learning curve compared to traditional supervised learning, requiring foundational knowledge in machine learning and AI. Its core concepts are not inherentl",
     "Keywords": "Intelligent Q&A, Smart Assistant, GPT Integration, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Is-zero-shot-learning-easy-to",
-    "Url": "/faq/Is-zero-shot-learning-easy-to.html"
   },
   "What-is-RLHF-(Reinforcement-Learning": {
     "Category": "Enterprise Applications",
@@ -7996,8 +6398,6 @@ export const faq = {
     "Title": "What is RLHF (Reinforcement Learning from Human Feedback) training?-Fastgpt",
     "Description": "RLHF (Reinforcement Learning from Human Feedback) is a machine learning technique that trains AI models by incorporating direct human preferences and feedback into the reinforcement learning process. ",
     "Keywords": "AI Chatbot, AI Automation, AI Knowledge Management, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/What-is-RLHF-(Reinforcement-Learning",
-    "Url": "/faq/What-is-RLHF-(Reinforcement-Learning.html"
   },
   "Why-can-RLHF-make-AI": {
     "Category": "Enterprise Applications",
@@ -8006,8 +6406,6 @@ export const faq = {
     "Title": "Why can RLHF make AI responses more in line with human expectations?-Fastgpt",
     "Description": "RLHF (Reinforcement Learning from Human Feedback) makes AI responses more aligned with human expectations by refining the model's outputs based on direct human judgments. It leverages human preference",
     "Keywords": "Smart Assistant, LLM Development, Task Automation AI, API Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Why-can-RLHF-make-AI",
-    "Url": "/faq/Why-can-RLHF-make-AI.html"
   },
   "How-does-knowledge-distillation-make": {
     "Category": "Enterprise Applications",
@@ -8016,8 +6414,6 @@ export const faq = {
     "Title": "How does knowledge distillation make small models stronger?-Fastgpt",
     "Description": "Knowledge distillation strengthens small models by transferring insights from a larger, complex teacher model rather than training solely on raw data labels. This allows the compact student model to l",
     "Keywords": "API Integration, AI Knowledge Management, AI Platform, GPT Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-does-knowledge-distillation-make",
-    "Url": "/faq/How-does-knowledge-distillation-make.html"
   },
   "What-is-perplexity-used-for": {
     "Category": "Enterprise Applications",
@@ -8026,8 +6422,6 @@ export const faq = {
     "Title": "What is perplexity used for in AI?-Fastgpt",
     "Description": "Perplexity measures how well a language model predicts a sample text. It quantifies the average uncertainty or surprise a model has when predicting the next token in a sequence.\n\nA lower perplexity sc",
     "Keywords": "AI Knowledge Management, API Integration, FastGPT, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-is-perplexity-used-for",
-    "Url": "/faq/What-is-perplexity-used-for.html"
   },
   "How-AI-intelligent-assistants-automate": {
     "Category": "Productivity & Collaboration",
@@ -8036,8 +6430,6 @@ export const faq = {
     "Title": "How AI intelligent assistants automate customer inquiries-Fastgpt",
     "Description": "AI intelligent assistants use artificial intelligence to automate the handling of inbound customer inquiries. They can effectively manage numerous requests without constant human intervention.\n\nThese ",
     "Keywords": "Task Automation AI, AI Platform, AI Knowledge Management, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-intelligent-assistants-automate",
-    "Url": "/faq/How-AI-intelligent-assistants-automate.html"
   },
   "Can-AI-answer-customers'-frequently": {
     "Category": "Productivity & Collaboration",
@@ -8046,8 +6438,6 @@ export const faq = {
     "Title": "Can AI answer customers' frequently asked questions around the clock?-Fastgpt",
     "Description": "Yes, AI can reliably answer customer frequently asked questions (FAQs) 24/7. Modern AI systems are specifically designed for automated, continuous operation without human intervention, providing immed",
     "Keywords": "Task Automation AI, LLM Development, GPT Integration, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-answer-customers'-frequently",
-    "Url": "/faq/Can-AI-answer-customers'-frequently.html"
   },
   "Can-AI-handle-multiple-customer": {
     "Category": "Productivity & Collaboration",
@@ -8056,8 +6446,6 @@ export const faq = {
     "Title": "Can AI handle multiple customer conversations simultaneously?-Fastgpt",
     "Description": "Yes, AI systems can handle multiple customer conversations simultaneously. This capability, known as concurrency, is a fundamental strength of AI-powered chatbots and virtual agents.\n\nAI achieves this",
     "Keywords": "Intelligent Q&A, Enterprise AI, Document AI, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-handle-multiple-customer",
-    "Url": "/faq/Can-AI-handle-multiple-customer.html"
   },
   "Can-AI-record-and-analyze": {
     "Category": "Productivity & Collaboration",
@@ -8066,8 +6454,6 @@ export const faq = {
     "Title": "Can AI record and analyze customer chat content?-Fastgpt",
     "Description": "Yes, AI systems are fully capable of recording and analyzing customer chat content. Modern conversational AI platforms routinely capture chat transcripts and apply sophisticated techniques like Natura",
     "Keywords": "API Integration, Smart Assistant, Intelligent Q&A, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-record-and-analyze",
-    "Url": "/faq/Can-AI-record-and-analyze.html"
   },
   "Can-AI-adjust-responses-based": {
     "Category": "Productivity & Collaboration",
@@ -8076,8 +6462,6 @@ export const faq = {
     "Title": "Can AI adjust responses based on customer emotions?-Fastgpt",
     "Description": "Yes, AI can adjust responses based on customer emotions. Modern conversational AI systems leverage emotion detection technology to analyze sentiment and tailor interactions accordingly.\n\nThis capabili",
     "Keywords": "AI Platform, AI Workflow, LLM Development, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-responses-based",
-    "Url": "/faq/Can-AI-adjust-responses-based.html"
   },
   "Can-AI-summarize-the-issues": {
     "Category": "Productivity & Collaboration",
@@ -8086,8 +6470,6 @@ export const faq = {
     "Title": "Can AI summarize the issues that customers are most concerned about?-Fastgpt",
     "Description": "Yes, AI can effectively identify and summarize the key issues most concerning to customers. This capability leverages natural language processing and machine learning.\n\nAI analyzes large volumes of cu",
     "Keywords": "Open Source AI, AI Automation, AI Chatbot, LLM Development, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-summarize-the-issues",
-    "Url": "/faq/Can-AI-summarize-the-issues.html"
   },
   "How-to-make-AI-prioritize": {
     "Category": "Productivity & Collaboration",
@@ -8096,8 +6478,6 @@ export const faq = {
     "Title": "How to make AI prioritize customer questions-Fastgpt",
     "Description": "Prioritizing customer questions with AI involves configuring algorithms to automatically assess and rank incoming queries based on predefined rules. This is achievable using conversational AI platform",
     "Keywords": "AI Chatbot, Task Automation AI, FastGPT, Smart Assistant, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-prioritize",
-    "Url": "/faq/How-to-make-AI-prioritize.html"
   },
   "Can-AI-take-over-customer": {
     "Category": "Productivity & Collaboration",
@@ -8106,8 +6486,6 @@ export const faq = {
     "Title": "Can AI take over customer service during non-manual hours?-Fastgpt",
     "Description": "Yes, AI can fully take over customer service during non-manual hours using technologies like chatbots and virtual assistants. It handles routine inquiries autonomously, providing uninterrupted support",
     "Keywords": "API Integration, LLM Development, Open Source AI, Intelligent Q&A, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-take-over-customer",
-    "Url": "/faq/Can-AI-take-over-customer.html"
   },
   "How-to-make-AI-maintain": {
     "Category": "Productivity & Collaboration",
@@ -8116,8 +6494,6 @@ export const faq = {
     "Title": "How to make AI maintain a consistent service tone-Fastgpt",
     "Description": "AI can maintain a consistent service tone through deliberate design and rigorous training processes. This involves defining clear guidelines and utilizing structured techniques throughout the AI's dev",
     "Keywords": "AI Platform, GPT Integration, Vector Search, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-maintain",
-    "Url": "/faq/How-to-make-AI-maintain.html"
   },
   "Can-AI-identify-and-block": {
     "Category": "Productivity & Collaboration",
@@ -8126,8 +6502,6 @@ export const faq = {
     "Title": "Can AI identify and block malicious information?-Fastgpt",
     "Description": "Artificial Intelligence can indeed identify and block malicious information with significant effectiveness. Leveraging machine learning and natural language processing, AI systems analyze patterns and",
     "Keywords": "AI Automation, AI Platform, FastGPT, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-and-block",
-    "Url": "/faq/Can-AI-identify-and-block.html"
   },
   "How-to-make-AI-generate": {
     "Category": "AI Basics & Terms",
@@ -8136,8 +6510,6 @@ export const faq = {
     "Title": "How to make AI generate creative application solutions across industries-Fastgpt",
     "Description": "AI can generate creative cross-industry application solutions by leveraging its ability to detect hidden patterns and novel connections between diverse datasets. This process transfers successful stra",
     "Keywords": "Intelligent Q&A, AI Platform, Document AI, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-generate",
-    "Url": "/faq/How-to-make-AI-generate.html"
   },
   "Can-AI-automatically-alert-customer": {
     "Category": "Productivity & Collaboration",
@@ -8146,8 +6518,6 @@ export const faq = {
     "Title": "Can AI automatically alert customer service about urgent issues?-Fastgpt",
     "Description": "Yes, AI can automatically alert customer service about urgent issues. Modern AI systems are designed to identify critical situations and initiate immediate notifications to relevant support agents or ",
     "Keywords": "Document AI, AI Workflow, Intelligent Q&A, FastGPT, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-alert-customer",
-    "Url": "/faq/Can-AI-automatically-alert-customer.html"
   },
   "Can-AI-reduce-repetitive-customer": {
     "Category": "Productivity & Collaboration",
@@ -8156,8 +6526,6 @@ export const faq = {
     "Title": "Can AI reduce repetitive customer inquiries?-Fastgpt",
     "Description": "AI can significantly reduce repetitive customer inquiries through automation. Yes, AI technologies are well-suited and effective for handling routine, high-frequency questions.\n\nAI-powered chatbots an",
     "Keywords": "AI Knowledge Management, Smart Assistant, Task Automation AI, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-reduce-repetitive-customer",
-    "Url": "/faq/Can-AI-reduce-repetitive-customer.html"
   },
   "How-to-Use-AI-for": {
     "Category": "Productivity & Collaboration",
@@ -8166,8 +6534,6 @@ export const faq = {
     "Title": "How to Use AI for Intelligent Recommendations in E-commerce Scenarios-Fastgpt",
     "Description": "Leveraging AI for intelligent recommendations in e-commerce involves deploying algorithms that analyze user data and product information to suggest relevant items. This is highly feasible using existi",
     "Keywords": "AI Automation, AI Knowledge Management, Enterprise AI, LLM Development, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Use-AI-for",
-    "Url": "/faq/How-to-Use-AI-for.html"
   },
   "Can-AI-analyze-customers'-purchasing": {
     "Category": "Productivity & Collaboration",
@@ -8176,8 +6542,6 @@ export const faq = {
     "Title": "Can AI analyze customers' purchasing habits?-Fastgpt",
     "Description": "Yes, AI can effectively analyze customers' purchasing habits. Machine learning algorithms process vast amounts of transactional and behavioral data to identify patterns and trends in how customers sho",
     "Keywords": "Intelligent Q&A, Task Automation AI, AI Automation, AI Chatbot, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-customers'-purchasing",
-    "Url": "/faq/Can-AI-analyze-customers'-purchasing.html"
   },
   "Can-AI-automatically-recommend-suitable": {
     "Category": "Productivity & Collaboration",
@@ -8186,8 +6550,6 @@ export const faq = {
     "Title": "Can AI automatically recommend suitable advertising channels?-Fastgpt",
     "Description": "Yes, AI can automatically recommend suitable advertising channels. This capability is enabled by algorithms that analyze extensive data to match campaign objectives with the most effective platforms, ",
     "Keywords": "Vector Search, LLM Development, Document AI, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-recommend-suitable",
-    "Url": "/faq/Can-AI-automatically-recommend-suitable.html"
   },
   "How-to-make-AI-adjust": {
     "Category": "AI Basics & Terms",
@@ -8196,8 +6558,6 @@ export const faq = {
     "Title": "How to make AI adjust customer service strategies based on public opinion-Fastgpt",
     "Description": "AI adjusts customer service strategies by analyzing public opinion data to identify trends, sentiment, and emerging issues. It then provides actionable insights to proactively inform strategy changes.",
     "Keywords": "FastGPT, Smart Assistant, AI Knowledge Management, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-adjust",
-    "Url": "/faq/How-to-make-AI-adjust.html"
   },
   "Can-AI-improve-the-conversion": {
     "Category": "Productivity & Collaboration",
@@ -8206,8 +6566,6 @@ export const faq = {
     "Title": "Can AI improve the conversion rate of product recommendations?-Fastgpt",
     "Description": "AI can effectively improve the conversion rate of product recommendations. It achieves this by generating highly personalized suggestions that resonate better with individual customers.\n\nKey factors i",
     "Keywords": "API Integration, Intelligent Q&A, Vector Search, Document AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-improve-the-conversion",
-    "Url": "/faq/Can-AI-improve-the-conversion.html"
   },
   "Can-AI-identify-customers'-potential": {
     "Category": "Productivity & Collaboration",
@@ -8216,8 +6574,6 @@ export const faq = {
     "Title": "Can AI identify customers' potential interest points?-Fastgpt",
     "Description": "Yes, AI can effectively identify customers' potential interest points. This capability is primarily achieved through analyzing large volumes of customer data using machine learning and pattern recogni",
     "Keywords": "AI Chatbot, AI Workflow, AI Automation, GPT Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-customers'-potential",
-    "Url": "/faq/Can-AI-identify-customers'-potential.html"
   },
   "How-to-make-AI-increase": {
     "Category": "Productivity & Collaboration",
@@ -8226,8 +6582,6 @@ export const faq = {
     "Title": "How to make AI increase the repurchase rate of old customers-Fastgpt",
     "Description": "AI can significantly boost customer repurchase rates by leveraging predictive analytics, personalization, and automated engagement to understand and influence past customers' buying patterns. This app",
     "Keywords": "API Integration, Smart Assistant, GPT Integration, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-increase",
-    "Url": "/faq/How-to-make-AI-increase.html"
   },
   "Can-AI-make-intelligent-recommendations": {
     "Category": "Productivity & Collaboration",
@@ -8236,8 +6590,6 @@ export const faq = {
     "Title": "Can AI make intelligent recommendations based on festivals?-Fastgpt",
     "Description": "AI can intelligently recommend products or content based on festivals. This capability leverages data analysis and machine learning to understand seasonal patterns and preferences.\n\nAI systems analyze",
     "Keywords": "Task Automation AI, AI Workflow, FastGPT, LLM Development, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-make-intelligent-recommendations",
-    "Url": "/faq/Can-AI-make-intelligent-recommendations.html"
   },
   "Can-AI-recommend-new-products": {
     "Category": "Productivity & Collaboration",
@@ -8246,8 +6598,6 @@ export const faq = {
     "Title": "Can AI recommend new products based on browsing history?-Fastgpt",
     "Description": "Yes, AI can effectively recommend new products based on a user's browsing history. This capability leverages machine learning algorithms to analyze browsing patterns and predict relevant items.\n\nAI re",
     "Keywords": "AI Chatbot, Smart Assistant, Vector Search, Open Source AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-new-products",
-    "Url": "/faq/Can-AI-recommend-new-products.html"
   },
   "How-to-prevent-AI-from": {
     "Category": "Productivity & Collaboration",
@@ -8256,8 +6606,6 @@ export const faq = {
     "Title": "How to prevent AI from recommending irrelevant products-Fastgpt",
     "Description": "To prevent AI from recommending irrelevant products, implement a combination of data-driven strategies and system tuning. This is achievable through continuous optimization of the recommendation algor",
     "Keywords": "Smart Assistant, Document AI, Enterprise AI, LLM Development, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-prevent-AI-from",
-    "Url": "/faq/How-to-prevent-AI-from.html"
   },
   "Can-AI-identify-the-price": {
     "Category": "Productivity & Collaboration",
@@ -8266,8 +6614,6 @@ export const faq = {
     "Title": "Can AI identify the price sensitivity of different customers?-Fastgpt",
     "Description": "Yes, AI can effectively identify the price sensitivity of different customers. Advanced machine learning models analyze customer data to predict their likelihood to purchase at varying price points.\n\n",
     "Keywords": "Open Source AI, Task Automation AI, Enterprise AI, AI Chatbot, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-the-price",
-    "Url": "/faq/Can-AI-identify-the-price.html"
   },
   "How-to-optimize-cross-selling-strategies": {
     "Category": "Productivity & Collaboration",
@@ -8276,8 +6622,6 @@ export const faq = {
     "Title": "How to optimize cross-selling strategies with AI-Fastgpt",
     "Description": "AI optimizes cross-selling by utilizing machine learning models to analyze customer data and identify relevant, complementary product recommendations effectively.\n\nKey principles involve leveraging di",
     "Keywords": "Enterprise AI, Document AI, Task Automation AI, AI Knowledge Management, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-optimize-cross-selling-strategies",
-    "Url": "/faq/How-to-optimize-cross-selling-strategies.html"
   },
   "AI-can-analyze-which-products": {
     "Category": "Productivity & Collaboration",
@@ -8286,8 +6630,6 @@ export const faq = {
     "Title": "AI can analyze which products are suitable for bundle sales.-Fastgpt",
     "Description": "AI can analyze purchasing patterns to identify products frequently bought together, enabling effective bundle creation. It automatically processes sales data to uncover synergistic pairing opportuniti",
     "Keywords": "Enterprise AI, AI Workflow, Smart Assistant, Task Automation AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/AI-can-analyze-which-products",
-    "Url": "/faq/AI-can-analyze-which-products.html"
   },
   "Can-AI-predict-future-best-selling": {
     "Category": "Productivity & Collaboration",
@@ -8296,8 +6638,6 @@ export const faq = {
     "Title": "Can AI predict future best-selling products-Fastgpt",
     "Description": "AI can predict potential future best-selling products using advanced data analysis and pattern recognition techniques. This capability stems from analyzing vast historical and real-time datasets.\n\nIts",
     "Keywords": "Enterprise AI, Document AI, AI Chatbot, Smart Assistant, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-future-best-selling",
-    "Url": "/faq/Can-AI-predict-future-best-selling.html"
   },
   "Can-AI-adjust-recommendations-based": {
     "Category": "Productivity & Collaboration",
@@ -8306,8 +6646,6 @@ export const faq = {
     "Title": "Can AI adjust recommendations based on regional differences?-Fastgpt",
     "Description": "Yes, AI can effectively adjust recommendations based on regional differences. This capability is enabled through machine learning models explicitly trained on geographic and cultural data.\n\nKey enabli",
     "Keywords": "Vector Search, AI Chatbot, FastGPT, Document AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-recommendations-based",
-    "Url": "/faq/Can-AI-adjust-recommendations-based.html"
   },
   "How-to-Make-AI-Develop": {
     "Category": "Productivity & Collaboration",
@@ -8316,8 +6654,6 @@ export const faq = {
     "Title": "How to Make AI Develop Recommendation Plans for Different Customer Groups-Fastgpt",
     "Description": "AI can develop personalized recommendation plans for different customer groups by analyzing customer data and leveraging machine learning algorithms. This is a well-established practice in customer re",
     "Keywords": "AI Automation, AI Chatbot, GPT Integration, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-Make-AI-Develop",
-    "Url": "/faq/How-to-Make-AI-Develop.html"
   },
   "How-can-social-media-operations": {
     "Category": "Productivity & Collaboration",
@@ -8326,8 +6662,6 @@ export const faq = {
     "Title": "How can social media operations improve efficiency with AI-Fastgpt",
     "Description": "AI enables social media operations teams to significantly improve efficiency through automation, data analysis, and intelligent tools.\n\nKey applications include AI-powered content creation (drafts, vi",
     "Keywords": "Open Source AI, Task Automation AI, Enterprise AI, GPT Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-can-social-media-operations",
-    "Url": "/faq/How-can-social-media-operations.html"
   },
   "Can-AI-automatically-generate-trending": {
     "Category": "Productivity & Collaboration",
@@ -8336,8 +6670,6 @@ export const faq = {
     "Title": "Can AI automatically generate trending topic content?-Fastgpt",
     "Description": "Yes, artificial intelligence (AI) systems can automatically generate trending topic content. They achieve this by analyzing vast amounts of real-time data sources like social media, news, and search q",
     "Keywords": "AI Platform, FastGPT, AI Workflow, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-trending",
-    "Url": "/faq/Can-AI-automatically-generate-trending.html"
   },
   "How-to-make-AI-plan": {
     "Category": "Productivity & Collaboration",
@@ -8346,8 +6678,6 @@ export const faq = {
     "Title": "How to make AI plan daily social media posts-Fastgpt",
     "Description": "AI can automate planning daily social media posts efficiently using specialized tools and platforms. This involves leveraging artificial intelligence to generate, schedule, and optimize content ideas ",
     "Keywords": "Intelligent Q&A, Enterprise AI, LLM Development, API Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-plan",
-    "Url": "/faq/How-to-make-AI-plan.html"
   },
   "Can-AI-analyze-fan-interaction": {
     "Category": "Productivity & Collaboration",
@@ -8356,8 +6686,6 @@ export const faq = {
     "Title": "Can AI analyze fan interaction data?-Fastgpt",
     "Description": "AI can effectively analyze fan interaction data. This capability leverages machine learning and natural language processing to interpret diverse engagement signals across social media, streaming platf",
     "Keywords": "Open Source AI, API Integration, Enterprise AI, AI Workflow, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-fan-interaction",
-    "Url": "/faq/Can-AI-analyze-fan-interaction.html"
   },
   "How-to-make-AI-find": {
     "Category": "Productivity & Collaboration",
@@ -8366,8 +6694,6 @@ export const faq = {
     "Title": "How to make AI find the best posting time-Fastgpt",
     "Description": "Finding the best posting time using AI involves leveraging machine learning algorithms to analyze historical engagement data and predict optimal times. It is feasible through specialized social media ",
     "Keywords": "FastGPT, Open Source AI, AI Knowledge Management, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-find",
-    "Url": "/faq/How-to-make-AI-find.html"
   },
   "Can-AI-automatically-generate-eye-catching": {
     "Category": "Productivity & Collaboration",
@@ -8376,8 +6702,6 @@ export const faq = {
     "Title": "Can AI automatically generate eye-catching titles?-Fastgpt",
     "Description": "Yes, AI can automatically generate eye-catching titles. Leveraging natural language processing and machine learning, AI analyzes vast datasets of successful headlines to identify patterns that grab at",
     "Keywords": "GPT Integration, AI Automation, Intelligent Q&A, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-eye-catching",
-    "Url": "/faq/Can-AI-automatically-generate-eye-catching.html"
   },
   "Can-AI-discover-and-recommend": {
     "Category": "Productivity & Collaboration",
@@ -8386,8 +6710,6 @@ export const faq = {
     "Title": "Can AI discover and recommend popular keywords?-Fastgpt",
     "Description": "Yes, AI can effectively discover and recommend popular keywords. Modern AI algorithms are specifically designed to analyze massive datasets and identify emerging and trending search terms across the w",
     "Keywords": "Intelligent Q&A, AI Automation, Open Source AI, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-discover-and-recommend",
-    "Url": "/faq/Can-AI-discover-and-recommend.html"
   },
   "Can-AI-identify-potential-negative": {
     "Category": "Productivity & Collaboration",
@@ -8396,8 +6718,6 @@ export const faq = {
     "Title": "Can AI identify potential negative public opinion?-Fastgpt",
     "Description": "Yes, AI can identify potential negative public sentiment. It analyzes vast amounts of online data to detect emerging trends, opinions, and emotional tones indicative of dissatisfaction or criticism to",
     "Keywords": "Vector Search, AI Automation, AI Workflow, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-potential-negative",
-    "Url": "/faq/Can-AI-identify-potential-negative.html"
   },
   "How-to-optimize-social-media": {
     "Category": "Productivity & Collaboration",
@@ -8406,8 +6726,6 @@ export const faq = {
     "Title": "How to optimize social media advertising using AI-Fastgpt",
     "Description": "AI enables efficient optimization of social media advertising campaigns through automation and intelligent data analysis. It refines targeting, ad creative performance, bidding strategies, and campaig",
     "Keywords": "API Integration, GPT Integration, Enterprise AI, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-optimize-social-media",
-    "Url": "/faq/How-to-optimize-social-media.html"
   },
   "Can-AI-automatically-create-short": {
     "Category": "Productivity & Collaboration",
@@ -8416,8 +6734,6 @@ export const faq = {
     "Title": "Can AI automatically create short video scripts?-Fastgpt",
     "Description": "Yes, AI can automatically generate short video scripts. Sophisticated generative AI models are capable of creating coherent, engaging scripts tailored to user inputs and objectives.\n\nAI script generat",
     "Keywords": "Open Source AI, AI Platform, GPT Integration, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-create-short",
-    "Url": "/faq/Can-AI-automatically-create-short.html"
   },
   "How-to-make-AI-organize": {
     "Category": "Productivity & Collaboration",
@@ -8426,8 +6742,6 @@ export const faq = {
     "Title": "How to make AI organize and categorize user feedback-Fastgpt",
     "Description": "AI effectively organizes user feedback through natural language processing (NLP) and machine learning techniques. These systems analyze textual inputs to identify patterns, themes, and actionable insi",
     "Keywords": "Enterprise AI, AI Platform, Smart Assistant, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-organize",
-    "Url": "/faq/How-to-make-AI-organize.html"
   },
   "Can-AI-track-competitors'-social": {
     "Category": "Productivity & Collaboration",
@@ -8436,8 +6750,6 @@ export const faq = {
     "Title": "Can AI track competitors' social media dynamics?-Fastgpt",
     "Description": "Yes, AI can effectively track competitors' social media dynamics. This is a core function offered by modern social media monitoring and competitive intelligence platforms.\n\nThese tools continuously co",
     "Keywords": "Intelligent Q&A, Task Automation AI, Enterprise AI, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-track-competitors'-social",
-    "Url": "/faq/Can-AI-track-competitors'-social.html"
   },
   "How-to-automatically-generate-weekly": {
     "Category": "Productivity & Collaboration",
@@ -8446,8 +6758,6 @@ export const faq = {
     "Title": "How to automatically generate weekly operation reports using AI-Fastgpt",
     "Description": "AI-driven tools can automate weekly operational report generation by integrating with data sources and employing preset algorithms. This approach eliminates manual compilation efforts, delivering cons",
     "Keywords": "Document AI, FastGPT, LLM Development, Enterprise AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-automatically-generate-weekly",
-    "Url": "/faq/How-to-automatically-generate-weekly.html"
   },
   "Can-AI-assist-in-designing": {
     "Category": "Productivity & Collaboration",
@@ -8456,8 +6766,6 @@ export const faq = {
     "Title": "Can AI assist in designing interactive lottery activities?-Fastgpt",
     "Description": "AI can significantly assist in designing interactive lottery activities. It offers creative input and data-driven insights to enhance engagement and feasibility during the planning stage.\n\nAI tools he",
     "Keywords": "LLM Development, Vector Search, AI Chatbot, Task Automation AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-in-designing",
-    "Url": "/faq/Can-AI-assist-in-designing.html"
   },
   "Can-AI-predict-social-hot": {
     "Category": "Productivity & Collaboration",
@@ -8466,8 +6774,6 @@ export const faq = {
     "Title": "Can AI predict social hot topic trends?-Fastgpt",
     "Description": "AI can predict social hot topic trends with significant feasibility, leveraging vast data analysis capabilities. Predictive models continuously process online data to forecast emerging discussions.\n\nE",
     "Keywords": "AI Automation, AI Workflow, AI Platform, Document AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-social-hot",
-    "Url": "/faq/Can-AI-predict-social-hot.html"
   },
   "Can-AI-automatically-plan-a": {
     "Category": "Productivity & Collaboration",
@@ -8476,8 +6782,6 @@ export const faq = {
     "Title": "Can AI automatically plan a monthly posting calendar?-Fastgpt",
     "Description": "Yes, AI can automate the creation of a monthly social media content posting calendar. Modern tools leverage AI algorithms to generate structured schedules for platforms like Instagram, Facebook, Twitt",
     "Keywords": "Enterprise AI, API Integration, FastGPT, Open Source AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-plan-a",
-    "Url": "/faq/Can-AI-automatically-plan-a.html"
   },
   "Can-AI-generate-multilingual-social": {
     "Category": "Productivity & Collaboration",
@@ -8486,8 +6790,6 @@ export const faq = {
     "Title": "Can AI generate multilingual social content?-Fastgpt",
     "Description": "AI can generate multilingual social content. Advanced AI models are equipped to produce various content types in numerous languages, enabling efficient global communication.\n\nSuccess depends on the AI",
     "Keywords": "Open Source AI, API Integration, Enterprise AI, Smart Assistant, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-multilingual-social",
-    "Url": "/faq/Can-AI-generate-multilingual-social.html"
   },
   "Can-AI-adjust-the-operation": {
     "Category": "Productivity & Collaboration",
@@ -8496,8 +6798,6 @@ export const faq = {
     "Title": "Can AI adjust the operation direction based on fan data?-Fastgpt",
     "Description": "Yes, AI can adjust fan operation direction based on fan data. This capability is actively implemented in advanced predictive maintenance and building management systems.\n\nAI systems analyze real-time ",
     "Keywords": "Task Automation AI, AI Chatbot, Open Source AI, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-the-operation",
-    "Url": "/faq/Can-AI-adjust-the-operation.html"
   },
   "Can-AI-generate-marketing-copy": {
     "Category": "Productivity & Collaboration",
@@ -8506,8 +6806,6 @@ export const faq = {
     "Title": "Can AI generate marketing copy with images?-Fastgpt",
     "Description": "Yes, modern AI systems can generate both marketing copy and complementary images. They integrate text generation and image synthesis capabilities to produce comprehensive marketing assets.\n\nThis is ac",
     "Keywords": "Vector Search, AI Automation, AI Workflow, Open Source AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-marketing-copy",
-    "Url": "/faq/Can-AI-generate-marketing-copy.html"
   },
   "Can-AI-monitor-live-broadcast": {
     "Category": "Productivity & Collaboration",
@@ -8516,8 +6814,6 @@ export const faq = {
     "Title": "Can AI monitor live broadcast interaction data in real time?-Fastgpt",
     "Description": "Yes, AI can effectively monitor live broadcast interaction data in real time.\n\nAI systems leverage natural language processing (NLP) for chat sentiment and topic analysis, computer vision for visual e",
     "Keywords": "Document AI, LLM Development, FastGPT, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-live-broadcast",
-    "Url": "/faq/Can-AI-monitor-live-broadcast.html"
   },
   "Can-AI-automatically-organize-sales": {
     "Category": "Productivity & Collaboration",
@@ -8526,8 +6822,6 @@ export const faq = {
     "Title": "Can AI automatically organize sales data after a live broadcast?-Fastgpt",
     "Description": "Yes, AI can automatically organize sales data after a live broadcast. It leverages algorithms to swiftly process and structure raw sales information captured during the event.  \n\nKey principles involv",
     "Keywords": "Document AI, Vector Search, LLM Development, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-sales",
-    "Url": "/faq/Can-AI-automatically-organize-sales.html"
   },
   "Can-AI-predict-popular-products": {
     "Category": "Productivity & Collaboration",
@@ -8536,8 +6830,6 @@ export const faq = {
     "Title": "Can AI predict popular products during live broadcasts?-Fastgpt",
     "Description": "AI can effectively predict popular products during live broadcasts using advanced recommendation algorithms and real-time data analysis. This capability stems from machine learning models trained on v",
     "Keywords": "LLM Development, Smart Assistant, FastGPT, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-popular-products",
-    "Url": "/faq/Can-AI-predict-popular-products.html"
   },
   "Can-AI-automatically-generate-live": {
     "Category": "Data & Knowledge",
@@ -8546,8 +6838,6 @@ export const faq = {
     "Title": "Can AI automatically generate live broadcast script lines?-Fastgpt",
     "Description": "Yes, AI can automatically generate live broadcast script lines using advanced natural language processing and machine learning models. These AI tools are designed to assist in creating content tailore",
     "Keywords": "FastGPT, Open Source AI, AI Workflow, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-live",
-    "Url": "/faq/Can-AI-automatically-generate-live.html"
   },
   "Can-AI-arrange-live-broadcast": {
     "Category": "Productivity & Collaboration",
@@ -8556,8 +6846,6 @@ export const faq = {
     "Title": "Can AI arrange live broadcast themes based on user interests?-Fastgpt",
     "Description": "Yes, AI can effectively arrange live broadcast themes based on user interests. This capability leverages data analysis and content generation algorithms to identify popular topics and tailor themes to",
     "Keywords": "Task Automation AI, AI Workflow, LLM Development, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-arrange-live-broadcast",
-    "Url": "/faq/Can-AI-arrange-live-broadcast.html"
   },
   "Can-AI-identify-potential-fraudulent": {
     "Category": "Productivity & Collaboration",
@@ -8566,8 +6854,6 @@ export const faq = {
     "Title": "Can AI identify potential fraudulent orders?-Fastgpt",
     "Description": "Yes, AI can effectively identify potential fraudulent orders. Modern fraud detection systems leverage AI and machine learning (ML) to analyze vast amounts of transaction data and identify suspicious p",
     "Keywords": "AI Automation, Enterprise AI, AI Workflow, Open Source AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-potential-fraudulent",
-    "Url": "/faq/Can-AI-identify-potential-fraudulent.html"
   },
   "Can-AI-generate-after-sales-data": {
     "Category": "Productivity & Collaboration",
@@ -8576,8 +6862,6 @@ export const faq = {
     "Title": "Can AI generate after-sales data analysis reports?-Fastgpt",
     "Description": "Yes, AI can effectively generate after-sales data analysis reports. Modern AI algorithms can autonomously process large volumes of after-sales interactions and metrics to produce structured insights.\n",
     "Keywords": "AI Chatbot, AI Platform, Document AI, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-after-sales-data",
-    "Url": "/faq/Can-AI-generate-after-sales-data.html"
   },
   "Can-AI-automatically-record-customers'": {
     "Category": "Productivity & Collaboration",
@@ -8586,8 +6870,6 @@ export const faq = {
     "Title": "Can AI automatically record customers' after-sales history?-Fastgpt",
     "Description": "Yes, AI can automatically record customers' after-sales history. This capability leverages natural language processing (NLP) to identify relevant interactions across channels like support tickets, ema",
     "Keywords": "Document AI, Intelligent Q&A, AI Platform, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-record-customers'",
-    "Url": "/faq/Can-AI-automatically-record-customers'.html"
   },
   "How-to-make-AI-judge": {
     "Category": "Productivity & Collaboration",
@@ -8596,8 +6878,6 @@ export const faq = {
     "Title": "How to make AI judge the severity of after-sales issues-Fastgpt",
     "Description": "AI can automate the assessment of after-sales issue severity by analyzing customer input and operational data. This enables rapid categorization and prioritization.\n\nKey principles involve applying ma",
     "Keywords": "AI Workflow, AI Knowledge Management, AI Chatbot, Smart Assistant, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-judge",
-    "Url": "/faq/How-to-make-AI-judge.html"
   },
   "Can-AI-generate-standard-answers": {
     "Category": "Data & Knowledge",
@@ -8606,8 +6886,6 @@ export const faq = {
     "Title": "Can AI generate standard answers for online customer service?-Fastgpt",
     "Description": "Yes, AI can generate standard answers for online customer service. Leveraging Natural Language Processing (NLP) and machine learning, AI models are trained on vast datasets of historical customer inte",
     "Keywords": "GPT Integration, AI Platform, AI Knowledge Management, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-standard-answers",
-    "Url": "/faq/Can-AI-generate-standard-answers.html"
   },
   "Can-AI-help-build-self-service": {
     "Category": "Productivity & Collaboration",
@@ -8616,8 +6894,6 @@ export const faq = {
     "Title": "Can AI help build self-service customer service?-Fastgpt",
     "Description": "Yes, AI significantly enables and enhances the building of self-service customer service systems. Key technologies like Natural Language Processing (NLP) and machine learning automate routine inquirie",
     "Keywords": "AI Workflow, Task Automation AI, Document AI, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-build-self-service",
-    "Url": "/faq/Can-AI-help-build-self-service.html"
   },
   "Can-AI-identify-early-warning": {
     "Category": "Productivity & Collaboration",
@@ -8626,8 +6902,6 @@ export const faq = {
     "Title": "Can AI identify early warning signs of customer churn?-Fastgpt",
     "Description": "Yes, AI can effectively identify early warning signals of potential customer churn. It analyzes vast datasets to detect subtle patterns indicating dissatisfaction before a customer decides to leave.\n\n",
     "Keywords": "AI Platform, Intelligent Q&A, AI Chatbot, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-early-warning",
-    "Url": "/faq/Can-AI-identify-early-warning.html"
   },
   "Can-AI-recommend-suitable-value-added": {
     "Category": "Productivity & Collaboration",
@@ -8636,8 +6910,6 @@ export const faq = {
     "Title": "Can AI recommend suitable value-added services?-Fastgpt",
     "Description": "Yes, AI can effectively recommend suitable value-added services. It utilizes sophisticated machine learning models to analyze customer data and predict relevant additional offerings that align with in",
     "Keywords": "Vector Search, AI Automation, AI Chatbot, API Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-suitable-value-added",
-    "Url": "/faq/Can-AI-recommend-suitable-value-added.html"
   },
   "Can-AI-adjust-its-communication": {
     "Category": "Productivity & Collaboration",
@@ -8646,8 +6918,6 @@ export const faq = {
     "Title": "Can AI adjust its communication style based on customer tiers?-Fastgpt",
     "Description": "Yes, AI can adjust its communication style based on customer tiers. This capability is achieved through sophisticated machine learning algorithms trained on interaction data and tier-specific guidelin",
     "Keywords": "AI Automation, Enterprise AI, AI Platform, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-its-communication",
-    "Url": "/faq/Can-AI-adjust-its-communication.html"
   },
   "Can-AI-predict-customer-lifetime": {
     "Category": "Productivity & Collaboration",
@@ -8656,8 +6926,6 @@ export const faq = {
     "Title": "Can AI predict customer lifetime value-Fastgpt",
     "Description": "Yes, AI can effectively predict customer lifetime value (CLV). It leverages historical customer data and advanced algorithms to forecast the total future revenue a customer is likely to generate.\n\nAI-",
     "Keywords": "FastGPT, API Integration, Task Automation AI, AI Chatbot, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-customer-lifetime",
-    "Url": "/faq/Can-AI-predict-customer-lifetime.html"
   },
   "Can-AI-generate-customer-loyalty": {
     "Category": "Productivity & Collaboration",
@@ -8666,8 +6934,6 @@ export const faq = {
     "Title": "Can AI generate customer loyalty analysis reports?-Fastgpt",
     "Description": "Yes, AI can generate customer loyalty analysis reports effectively. These reports are produced by processing relevant customer data through specialized AI algorithms and models.\n\nAI systems synthesize",
     "Keywords": "LLM Development, GPT Integration, Document AI, Intelligent Q&A, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-customer-loyalty",
-    "Url": "/faq/Can-AI-generate-customer-loyalty.html"
   },
   "How-to-make-AI-track": {
     "Category": "Productivity & Collaboration",
@@ -8676,8 +6942,6 @@ export const faq = {
     "Title": "How to make AI track customers' omnichannel interactions-Fastgpt",
     "Description": "AI can track customer omnichannel interactions by unifying data streams across touchpoints and applying machine learning to analyze behavior patterns. This process is technically feasible and increasi",
     "Keywords": "API Integration, Smart Assistant, FastGPT, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-track",
-    "Url": "/faq/How-to-make-AI-track.html"
   },
   "Can-AI-integrate-customer-data": {
     "Category": "Productivity & Collaboration",
@@ -8686,8 +6950,6 @@ export const faq = {
     "Title": "Can AI integrate customer data from different channels?-Fastgpt",
     "Description": "Yes, AI can effectively integrate customer data from diverse channels. It utilizes advanced algorithms to seamlessly combine and unify information sourced from various touchpoints.\n\nAI integration rel",
     "Keywords": "Document AI, Intelligent Q&A, AI Platform, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-integrate-customer-data",
-    "Url": "/faq/Can-AI-integrate-customer-data.html"
   },
   "Can-AI-monitor-customer-service": {
     "Category": "Productivity & Collaboration",
@@ -8696,8 +6958,6 @@ export const faq = {
     "Title": "Can AI monitor customer service call quality in real-time?-Fastgpt",
     "Description": "Yes, AI can monitor customer service call quality in real-time. This technology analyzes conversations as they happen, immediately evaluating agent performance.\n\nAI call monitoring relies on speech re",
     "Keywords": "API Integration, FastGPT, Smart Assistant, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-customer-service",
-    "Url": "/faq/Can-AI-monitor-customer-service.html"
   },
   "Can-AI-generate-customer-service": {
     "Category": "Productivity & Collaboration",
@@ -8706,8 +6966,6 @@ export const faq = {
     "Title": "Can AI generate customer service training suggestions?-Fastgpt",
     "Description": "AI can generate valuable customer service training suggestions. This capability stems from its ability to analyze vast amounts of interaction data and learn from best practices.\n\nAI requires access to",
     "Keywords": "AI Platform, GPT Integration, Task Automation AI, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-customer-service",
-    "Url": "/faq/Can-AI-generate-customer-service.html"
   },
   "How-to-automatically-generate-call": {
     "Category": "Productivity & Collaboration",
@@ -8716,8 +6974,6 @@ export const faq = {
     "Title": "How to automatically generate call center daily reports using AI-Fastgpt",
     "Description": "Call center daily reports can be automatically generated using artificial intelligence (AI) by leveraging speech analytics and data processing technologies.\n\nAI systems utilize speech-to-text transcri",
     "Keywords": "AI Platform, AI Knowledge Management, GPT Integration, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-automatically-generate-call",
-    "Url": "/faq/How-to-automatically-generate-call.html"
   },
   "Can-AI-analyze-the-reasons": {
     "Category": "Productivity & Collaboration",
@@ -8726,8 +6982,6 @@ export const faq = {
     "Title": "Can AI analyze the reasons for customer waiting times?-Fastgpt",
     "Description": "Yes, AI can effectively analyze the reasons for customer waiting times. It leverages historical and real-time data to identify patterns and root causes contributing to delays.\n\nAI systems ingest vario",
     "Keywords": "AI Platform, AI Chatbot, AI Automation, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-the-reasons",
-    "Url": "/faq/Can-AI-analyze-the-reasons.html"
   },
   "How-to-let-AI-optimize": {
     "Category": "Productivity & Collaboration",
@@ -8736,8 +6990,6 @@ export const faq = {
     "Title": "How to let AI optimize the queuing strategy of call centers-Fastgpt",
     "Description": "AI optimizes call center queuing strategies by leveraging data analytics and machine learning to create dynamic routing rules. This replaces static systems with automated solutions that intelligently ",
     "Keywords": "Enterprise AI, Smart Assistant, Task Automation AI, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-let-AI-optimize",
-    "Url": "/faq/How-to-let-AI-optimize.html"
   },
   "Can-AI-reduce-the-interruption": {
     "Category": "Productivity & Collaboration",
@@ -8746,8 +6998,6 @@ export const faq = {
     "Title": "Can AI reduce the interruption rate of customer calls?-Fastgpt",
     "Description": "Yes, AI can significantly reduce the interruption rate of customer calls. It achieves this by intelligently managing interactions and routing customers more effectively before they need to demand imme",
     "Keywords": "AI Knowledge Management, GPT Integration, Document AI, Vector Search, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-reduce-the-interruption",
-    "Url": "/faq/Can-AI-reduce-the-interruption.html"
   },
   "Can-AI-automatically-recommend-the": {
     "Category": "Productivity & Collaboration",
@@ -8756,8 +7006,6 @@ export const faq = {
     "Title": "Can AI automatically recommend the best responses for call center agents?-Fastgpt",
     "Description": "Yes, AI systems can automatically recommend the best responses for call center agents. This technology analyzes incoming customer inquiries and suggests contextually appropriate answers in real-time.\n",
     "Keywords": "Smart Assistant, FastGPT, API Integration, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-recommend-the",
-    "Url": "/faq/Can-AI-automatically-recommend-the.html"
   },
   "How-to-Improve-the-Work": {
     "Category": "Productivity & Collaboration",
@@ -8766,8 +7014,6 @@ export const faq = {
     "Title": "How to Improve the Work Efficiency of Call Centers with AI-Fastgpt",
     "Description": "Artificial intelligence enhances call center efficiency by automating routine queries and accelerating support processes. It handles high-volume interactions effectively.  \n\nKey applications include i",
     "Keywords": "FastGPT, LLM Development, Document AI, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-Improve-the-Work",
-    "Url": "/faq/How-to-Improve-the-Work.html"
   },
   "Can-AI-predict-the-number": {
     "Category": "Productivity & Collaboration",
@@ -8776,8 +7022,6 @@ export const faq = {
     "Title": "Can AI predict the number of calls during peak hours?-Fastgpt",
     "Description": "Yes, AI can predict the number of calls during peak hours with a significant degree of accuracy. This capability is achieved using machine learning models trained on historical interaction data, call ",
     "Keywords": "AI Platform, FastGPT, Document AI, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-the-number",
-    "Url": "/faq/Can-AI-predict-the-number.html"
   },
   "How-to-use-AI-for": {
     "Category": "AI Basics & Terms",
@@ -8786,8 +7030,6 @@ export const faq = {
     "Title": "How to use AI for low-cost internal automation-Fastgpt",
     "Description": "Using AI for low-cost internal automation involves leveraging readily available artificial intelligence tools and platforms to automate repetitive tasks and workflows within an organization without si",
     "Keywords": "Document AI, AI Platform, AI Workflow, Intelligent Q&A, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-use-AI-for",
-    "Url": "/faq/How-to-use-AI-for.html"
   },
   "How-to-make-AI-analyze": {
     "Category": "Productivity & Collaboration",
@@ -8796,8 +7038,6 @@ export const faq = {
     "Title": "How to make AI analyze the root cause of complaints-Fastgpt",
     "Description": "AI complaint root cause analysis automates identifying core issues within customer feedback using natural language processing and machine learning. This is feasible and increasingly adopted across ind",
     "Keywords": "Vector Search, Enterprise AI, Intelligent Q&A, LLM Development, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-analyze",
-    "Url": "/faq/How-to-make-AI-analyze.html"
   },
   "Can-AI-generate-improvement-plans": {
     "Category": "Productivity & Collaboration",
@@ -8806,8 +7046,6 @@ export const faq = {
     "Title": "Can AI generate improvement plans for complaint handling?-Fastgpt",
     "Description": "Yes, AI can effectively generate improvement plans for complaint handling. This capability leverages advanced data analysis and pattern recognition inherent in machine learning and Natural Language Pr",
     "Keywords": "AI Chatbot, GPT Integration, AI Platform, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-improvement-plans",
-    "Url": "/faq/Can-AI-generate-improvement-plans.html"
   },
   "Can-AI-help-automatically-assign": {
     "Category": "Productivity & Collaboration",
@@ -8816,8 +7054,6 @@ export const faq = {
     "Title": "Can AI help automatically assign complaint handlers?-Fastgpt",
     "Description": "Yes, AI can automate the assignment of complaint handlers. This application leverages machine learning algorithms to intelligently route incoming complaints to the most suitable agent or team.\n\nEffect",
     "Keywords": "AI Platform, Vector Search, Smart Assistant, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-automatically-assign",
-    "Url": "/faq/Can-AI-help-automatically-assign.html"
   },
   "How-to-improve-the-success": {
     "Category": "Productivity & Collaboration",
@@ -8826,8 +7062,6 @@ export const faq = {
     "Title": "How to improve the success rate of AI in complaint handling-Fastgpt",
     "Description": "Improving the success rate of AI in complaint handling is achievable through systematic enhancements to the underlying systems and processes. It focuses on increasing resolution accuracy and customer ",
     "Keywords": "AI Workflow, Task Automation AI, Document AI, API Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-success",
-    "Url": "/faq/How-to-improve-the-success.html"
   },
   "Can-AI-adjust-product-strategies": {
     "Category": "Productivity & Collaboration",
@@ -8836,8 +7070,6 @@ export const faq = {
     "Title": "Can AI adjust product strategies based on customer feedback?-Fastgpt",
     "Description": "Yes, AI can effectively adjust product strategies based on customer feedback. Modern AI systems are capable of analyzing large volumes of unstructured feedback data to derive actionable insights.\n\nAI ",
     "Keywords": "Open Source AI, AI Workflow, Enterprise AI, API Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-product-strategies",
-    "Url": "/faq/Can-AI-adjust-product-strategies.html"
   },
   "Can-AI-automatically-identify-customer-unfriendly": {
     "Category": "Productivity & Collaboration",
@@ -8846,8 +7078,6 @@ export const faq = {
     "Title": "Can AI automatically identify customer-unfriendly features?-Fastgpt",
     "Description": "Yes, AI can automatically identify features perceived as customer-unfriendly within digital products or services. It analyzes customer feedback and usage data to pinpoint problem areas.\n\nAI leverages ",
     "Keywords": "AI Automation, Intelligent Q&A, Smart Assistant, AI Workflow, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-customer-unfriendly",
-    "Url": "/faq/Can-AI-automatically-identify-customer-unfriendly.html"
   },
   "Can-AI-provide-data-support": {
     "Category": "Productivity & Collaboration",
@@ -8856,8 +7086,6 @@ export const faq = {
     "Title": "Can AI provide data support for product iteration?-Fastgpt",
     "Description": "Yes, AI can effectively provide crucial data support for product iteration. AI algorithms analyze vast amounts of user data to uncover actionable insights.\n\nAI leverages user behavior data (clicks, us",
     "Keywords": "Open Source AI, AI Chatbot, Enterprise AI, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-data-support",
-    "Url": "/faq/Can-AI-provide-data-support.html"
   },
   "Can-AI-automatically-extract-positive": {
     "Category": "Productivity & Collaboration",
@@ -8866,8 +7094,6 @@ export const faq = {
     "Title": "Can AI automatically extract positive and negative opinions?-Fastgpt",
     "Description": "Yes, AI can automatically extract positive and negative opinions. This capability is commonly known as sentiment analysis or opinion mining, powered by Natural Language Processing (NLP) and machine le",
     "Keywords": "AI Knowledge Management, Intelligent Q&A, Smart Assistant, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-extract-positive",
-    "Url": "/faq/Can-AI-automatically-extract-positive.html"
   },
   "Can-AI-summarize-rating-data": {
     "Category": "Productivity & Collaboration",
@@ -8876,8 +7102,6 @@ export const faq = {
     "Title": "Can AI summarize rating data from various platforms in real-time?-Fastgpt",
     "Description": "Yes, AI can effectively summarize rating data from various platforms in real-time. Modern AI systems achieve this through automated data integration and continuous processing streams. APIs enable dire",
     "Keywords": "Document AI, API Integration, AI Platform, FastGPT, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-summarize-rating-data",
-    "Url": "/faq/Can-AI-summarize-rating-data.html"
   },
   "Can-AI-recommend-measures-to": {
     "Category": "Productivity & Collaboration",
@@ -8886,8 +7110,6 @@ export const faq = {
     "Title": "Can AI recommend measures to improve product reputation?-Fastgpt",
     "Description": "Yes, AI can recommend measures to improve product reputation. It analyzes vast amounts of unstructured customer feedback and market data to identify actionable insights.\n\nAI systems utilize techniques",
     "Keywords": "Vector Search, AI Workflow, API Integration, Intelligent Q&A, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-measures-to",
-    "Url": "/faq/Can-AI-recommend-measures-to.html"
   },
   "Can-AI-generate-a-list": {
     "Category": "Productivity & Collaboration",
@@ -8896,8 +7118,6 @@ export const faq = {
     "Title": "Can AI generate a list of new features based on customer suggestions?-Fastgpt",
     "Description": "Yes, AI can effectively generate lists of new features based on customer suggestions. This capability leverages natural language processing and pattern recognition to distill insights from unstructure",
     "Keywords": "AI Knowledge Management, Open Source AI, Intelligent Q&A, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-a-list",
-    "Url": "/faq/Can-AI-generate-a-list.html"
   },
   "Can-AI-automatically-discover-new": {
     "Category": "Productivity & Collaboration",
@@ -8906,8 +7126,6 @@ export const faq = {
     "Title": "Can AI automatically discover new hotspots of customer needs?-Fastgpt",
     "Description": "Yes, AI can automatically discover new hotspots of customer needs. This is achieved by analyzing vast amounts of customer interaction data to detect emerging patterns, sentiments, and unmet demands.\n\n",
     "Keywords": "GPT Integration, Task Automation AI, FastGPT, Document AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-discover-new",
-    "Url": "/faq/Can-AI-automatically-discover-new.html"
   },
   "Can-AI-automatically-monitor-the": {
     "Category": "Productivity & Collaboration",
@@ -8916,8 +7134,6 @@ export const faq = {
     "Title": "Can AI automatically monitor the number of times a brand is mentioned?-Fastgpt",
     "Description": "Yes, AI can automatically monitor the number of times a brand is mentioned. This is a core function of AI-powered social listening and brand monitoring tools, scanning vast amounts of online data cont",
     "Keywords": "LLM Development, AI Automation, Task Automation AI, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-monitor-the",
-    "Url": "/faq/Can-AI-automatically-monitor-the.html"
   },
   "Can-AI-automatically-generate-brand": {
     "Category": "Productivity & Collaboration",
@@ -8926,8 +7142,6 @@ export const faq = {
     "Title": "Can AI automatically generate brand public opinion warnings?-Fastgpt",
     "Description": "Yes, AI can automatically generate brand public opinion warnings. Modern AI-powered monitoring systems are designed to continuously scan vast amounts of online data for potential reputation risks.\n\nTh",
     "Keywords": "GPT Integration, AI Platform, AI Automation, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-brand",
-    "Url": "/faq/Can-AI-automatically-generate-brand.html"
   },
   "Can-AI-recommend-opportunities-for": {
     "Category": "Productivity & Collaboration",
@@ -8936,8 +7150,6 @@ export const faq = {
     "Title": "Can AI recommend opportunities for co-branding promotions?-Fastgpt",
     "Description": "Yes, AI can recommend co-branding partnership opportunities. It analyzes vast datasets to identify potential brand matches with complementary strengths.\n\nAI identifies potential partners by analyzing ",
     "Keywords": "API Integration, AI Chatbot, LLM Development, Enterprise AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-opportunities-for",
-    "Url": "/faq/Can-AI-recommend-opportunities-for.html"
   },
   "Can-AI-predict-the-changing": {
     "Category": "Productivity & Collaboration",
@@ -8946,8 +7158,6 @@ export const faq = {
     "Title": "Can AI predict the changing trends of brand image?-Fastgpt",
     "Description": "Yes, AI can effectively predict changing trends in brand image. Sophisticated AI algorithms analyze vast data to forecast shifts in public perception.\n\nAI models achieve this primarily through sentime",
     "Keywords": "AI Platform, Open Source AI, LLM Development, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-the-changing",
-    "Url": "/faq/Can-AI-predict-the-changing.html"
   },
   "Can-AI-automatically-generate-holiday": {
     "Category": "Productivity & Collaboration",
@@ -8956,8 +7166,6 @@ export const faq = {
     "Title": "Can AI automatically generate holiday promotion plans?-Fastgpt",
     "Description": "Yes, AI can automatically generate draft holiday promotion plans. This is achieved through content generation tools leveraging large language models and marketing optimization algorithms.\n\nAI analyzes",
     "Keywords": "AI Automation, Intelligent Q&A, GPT Integration, Open Source AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-holiday",
-    "Url": "/faq/Can-AI-automatically-generate-holiday.html"
   },
   "How-to-make-AI-calculate": {
     "Category": "Productivity & Collaboration",
@@ -8966,8 +7174,6 @@ export const faq = {
     "Title": "How to make AI calculate the return on investment for different activities-Fastgpt",
     "Description": "Calculating ROI for different activities using AI is feasible through analyzing activity-specific costs against generated returns. AI models can process historical data to attribute value accurately p",
     "Keywords": "AI Chatbot, GPT Integration, Task Automation AI, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-calculate",
-    "Url": "/faq/How-to-make-AI-calculate.html"
   },
   "Can-AI-recommend-suitable-advertising": {
     "Category": "Productivity & Collaboration",
@@ -8976,8 +7182,6 @@ export const faq = {
     "Title": "Can AI recommend suitable advertising channels?-Fastgpt",
     "Description": "AI can indeed recommend suitable advertising channels. This is feasible using algorithms to analyze audience data and campaign objectives.\n\nAI evaluates factors such as target audience demographics, p",
     "Keywords": "AI Workflow, GPT Integration, AI Automation, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-suitable-advertising",
-    "Url": "/faq/Can-AI-recommend-suitable-advertising.html"
   },
   "Can-AI-monitor-advertising-performance": {
     "Category": "Productivity & Collaboration",
@@ -8986,8 +7190,6 @@ export const faq = {
     "Title": "Can AI monitor advertising performance in real-time?-Fastgpt",
     "Description": "Yes, AI can effectively monitor advertising performance in real-time. Advanced algorithms analyze streaming campaign data across platforms almost instantaneously, enabling continuous tracking of key m",
     "Keywords": "Smart Assistant, LLM Development, AI Automation, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-monitor-advertising-performance",
-    "Url": "/faq/Can-AI-monitor-advertising-performance.html"
   },
   "Can-AI-generate-comparison-charts": {
     "Category": "Productivity & Collaboration",
@@ -8996,8 +7198,6 @@ export const faq = {
     "Title": "Can AI generate comparison charts for advertising effectiveness?-Fastgpt",
     "Description": "AI can generate comparison charts for advertising effectiveness. It utilizes data analytics and visualization tools to transform campaign metrics into clear, visual formats like bar charts or line gra",
     "Keywords": "AI Platform, Intelligent Q&A, API Integration, LLM Development, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-comparison-charts",
-    "Url": "/faq/Can-AI-generate-comparison-charts.html"
   },
   "Can-AI-analyze-the-click-through": {
     "Category": "Productivity & Collaboration",
@@ -9006,8 +7206,6 @@ export const faq = {
     "Title": "Can AI analyze the click-through rates of different advertising materials?-Fastgpt",
     "Description": "Yes, AI can effectively analyze the click-through rates (CTR) of various advertising materials. This is achieved through machine learning algorithms that process and interpret performance data from ad",
     "Keywords": "AI Automation, Vector Search, Enterprise AI, FastGPT, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-the-click-through",
-    "Url": "/faq/Can-AI-analyze-the-click-through.html"
   },
   "Can-AI-automatically-organize-historical": {
     "Category": "Productivity & Collaboration",
@@ -9016,8 +7214,6 @@ export const faq = {
     "Title": "Can AI automatically organize historical advertising campaign data?-Fastgpt",
     "Description": "Yes, AI can automatically organize historical advertising campaign data. Modern AI and machine learning techniques are well-suited for this task.\n\nAI leverages algorithms to ingest diverse campaign da",
     "Keywords": "AI Chatbot, Enterprise AI, GPT Integration, Open Source AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-historical",
-    "Url": "/faq/Can-AI-automatically-organize-historical.html"
   },
   "Can-AI-predict-the-advertising": {
     "Category": "Productivity & Collaboration",
@@ -9026,8 +7222,6 @@ export const faq = {
     "Title": "Can AI predict the advertising effectiveness for the next quarter?-Fastgpt",
     "Description": "Yes, AI can forecast advertising effectiveness for the upcoming quarter. Predictive analytics techniques analyze historical and current data to generate forward-looking insights.\n\nAccurate predictions",
     "Keywords": "AI Knowledge Management, AI Platform, Task Automation AI, Intelligent Q&A, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-the-advertising",
-    "Url": "/faq/Can-AI-predict-the-advertising.html"
   },
   "Can-AI-automatically-plan-budgets": {
     "Category": "Productivity & Collaboration",
@@ -9036,8 +7230,6 @@ export const faq = {
     "Title": "Can AI automatically plan budgets for different channels?-Fastgpt",
     "Description": "AI can automatically plan budgets for different marketing and advertising channels. This capability leverages machine learning algorithms trained on historical campaign data.\n\nEffective AI budget plan",
     "Keywords": "Open Source AI, Document AI, AI Knowledge Management, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-plan-budgets",
-    "Url": "/faq/Can-AI-automatically-plan-budgets.html"
   },
   "Can-AI-discover-potential-partners?": {
     "Category": "Productivity & Collaboration",
@@ -9046,8 +7238,6 @@ export const faq = {
     "Title": "Can AI discover potential partners?-Fastgpt",
     "Description": "Yes, AI can discover potential partners. Machine learning algorithms analyze vast datasets to identify companies or individuals with compatible goals, capabilities, or resources.\n\nAI systems primarily",
     "Keywords": "AI Knowledge Management, GPT Integration, AI Workflow, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-discover-potential-partners?",
-    "Url": "/faq/Can-AI-discover-potential-partners?.html"
   },
   "Can-AI-generate-the-priority": {
     "Category": "Productivity & Collaboration",
@@ -9056,8 +7246,6 @@ export const faq = {
     "Title": "Can AI generate the priority order for market expansion?-Fastgpt",
     "Description": "Yes, AI can generate priority orders for market expansion. It leverages data analysis and predictive modeling to objectively rank potential markets based on predefined criteria.\n\nEffective AI prioriti",
     "Keywords": "Smart Assistant, AI Workflow, Document AI, AI Platform, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-the-priority",
-    "Url": "/faq/Can-AI-generate-the-priority.html"
   },
   "Can-AI-help-identify-emerging": {
     "Category": "Productivity & Collaboration",
@@ -9066,8 +7254,6 @@ export const faq = {
     "Title": "Can AI help identify emerging consumer trends?-Fastgpt",
     "Description": "Yes, AI can effectively help identify emerging consumer trends. It analyzes vast amounts of data to detect subtle patterns and shifts in consumer behavior and sentiment faster than traditional methods",
     "Keywords": "Intelligent Q&A, AI Workflow, LLM Development, AI Chatbot, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-identify-emerging",
-    "Url": "/faq/Can-AI-help-identify-emerging.html"
   },
   "Can-AI-analyze-competitors'-marketing": {
     "Category": "Productivity & Collaboration",
@@ -9076,8 +7262,6 @@ export const faq = {
     "Title": "Can AI analyze competitors' marketing strategies?-Fastgpt",
     "Description": "Yes, AI can effectively analyze competitors' marketing strategies. It automates the collection and processing of vast amounts of public competitor data to identify key promotional activities.\n\nAI tool",
     "Keywords": "AI Workflow, Intelligent Q&A, Document AI, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-competitors'-marketing",
-    "Url": "/faq/Can-AI-analyze-competitors'-marketing.html"
   },
   "Can-AI-generate-market-reports": {
     "Category": "Productivity & Collaboration",
@@ -9086,8 +7270,6 @@ export const faq = {
     "Title": "Can AI generate market reports for executives?-Fastgpt",
     "Description": "Yes, AI can generate foundational drafts and insights for market reports intended for executive consumption. However, human expertise remains crucial for final analysis, strategic framing, and validat",
     "Keywords": "Document AI, Vector Search, LLM Development, Task Automation AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-market-reports",
-    "Url": "/faq/Can-AI-generate-market-reports.html"
   },
   "How-can-AI-automatically-handle": {
     "Category": "Productivity & Collaboration",
@@ -9096,8 +7278,6 @@ export const faq = {
     "Title": "How can AI automatically handle customer inquiries?-Fastgpt",
     "Description": "AI can automatically handle customer inquiries using conversational AI technologies like chatbots and virtual assistants driven by natural language processing (NLP) and machine learning (ML). This inv",
     "Keywords": "AI Chatbot, AI Workflow, Intelligent Q&A, API Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-automatically-handle",
-    "Url": "/faq/How-can-AI-automatically-handle.html"
   },
   "Can-AI-answer-common-after-sales": {
     "Category": "Productivity & Collaboration",
@@ -9106,8 +7286,6 @@ export const faq = {
     "Title": "Can AI answer common after-sales questions around the clock?-Fastgpt",
     "Description": "Yes, AI can effectively handle common after-sales questions 24 hours a day, 7 days a week. This capability provides immediate, always-available support for routine customer inquiries.\n\nAI after-sales ",
     "Keywords": "Vector Search, Smart Assistant, AI Chatbot, Task Automation AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-answer-common-after-sales",
-    "Url": "/faq/Can-AI-answer-common-after-sales.html"
   },
   "Can-AI-automatically-generate-personalized": {
     "Category": "AI Basics & Terms",
@@ -9116,8 +7294,6 @@ export const faq = {
     "Title": "Can AI automatically generate personalized promotional copy?-Fastgpt",
     "Description": "Yes, AI can automatically generate personalized promotional copy. Advanced AI models are specifically designed for this marketing task.\n\nEffective personalized AI copy generation relies on sufficient ",
     "Keywords": "LLM Development, Intelligent Q&A, Vector Search, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-personalized",
-    "Url": "/faq/Can-AI-automatically-generate-personalized.html"
   },
   "How-to-make-AI-push": {
     "Category": "Productivity & Collaboration",
@@ -9126,8 +7302,6 @@ export const faq = {
     "Title": "How to make AI push suitable products based on customer interests-Fastgpt",
     "Description": "AI systems can intelligently recommend relevant products by analyzing individual customer interests and behavioral data. This personalization is achievable using AI algorithms trained on purchase hist",
     "Keywords": "Open Source AI, Enterprise AI, Task Automation AI, Smart Assistant, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-push",
-    "Url": "/faq/How-to-make-AI-push.html"
   },
   "Can-AI-predict-the-time": {
     "Category": "Productivity & Collaboration",
@@ -9136,8 +7310,6 @@ export const faq = {
     "Title": "Can AI predict the time of customers' repurchase?-Fastgpt",
     "Description": "Yes, AI can predict the timeframe when individual customers are likely to repurchase. Predictive models analyze patterns in historical customer data to forecast future repurchase timing with reasonabl",
     "Keywords": "GPT Integration, Smart Assistant, FastGPT, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-the-time",
-    "Url": "/faq/Can-AI-predict-the-time.html"
   },
   "Can-AI-generate-customer-satisfaction": {
     "Category": "AI Basics & Terms",
@@ -9146,8 +7318,6 @@ export const faq = {
     "Title": "Can AI generate customer satisfaction analysis with one click?-Fastgpt",
     "Description": "Yes, AI can generate customer satisfaction analysis with what is effectively a one-click process, provided the necessary data inputs are readily available and integrated. This automation significantly",
     "Keywords": "AI Knowledge Management, Vector Search, Smart Assistant, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-customer-satisfaction",
-    "Url": "/faq/Can-AI-generate-customer-satisfaction.html"
   },
   "Can-AI-predict-customer-churn": {
     "Category": "Productivity & Collaboration",
@@ -9156,8 +7326,6 @@ export const faq = {
     "Title": "Can AI predict customer churn risk in advance?-Fastgpt",
     "Description": "Yes, AI can effectively predict customer churn risk in advance. Advanced machine learning algorithms analyze historical customer data to identify patterns indicative of future defection.\n\nThese models",
     "Keywords": "FastGPT, Enterprise AI, Smart Assistant, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-customer-churn",
-    "Url": "/faq/Can-AI-predict-customer-churn.html"
   },
   "Can-AI-optimize-the-allocation": {
     "Category": "Productivity & Collaboration",
@@ -9166,8 +7334,6 @@ export const faq = {
     "Title": "Can AI optimize the allocation of advertising budgets?-Fastgpt",
     "Description": "Yes, AI can significantly optimize advertising budget allocation. It automates analysis and decision-making processes that are too complex or time-intensive for humans alone to manage effectively at s",
     "Keywords": "Smart Assistant, Enterprise AI, AI Platform, Open Source AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-optimize-the-allocation",
-    "Url": "/faq/Can-AI-optimize-the-allocation.html"
   },
   "Can-AI-generate-creative-copy": {
     "Category": "Data & Knowledge",
@@ -9176,8 +7342,6 @@ export const faq = {
     "Title": "Can AI generate creative copy for brand promotion?-Fastgpt",
     "Description": "Yes, AI can generate creative copy for brand promotion. AI tools leverage large language models trained on vast datasets to produce diverse marketing content.\n\nEffective AI-generated copy requires a w",
     "Keywords": "Enterprise AI, Task Automation AI, Open Source AI, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-creative-copy",
-    "Url": "/faq/Can-AI-generate-creative-copy.html"
   },
   "Can-AI-help-e-commerce-identify": {
     "Category": "Productivity & Collaboration",
@@ -9186,8 +7350,6 @@ export const faq = {
     "Title": "Can AI help e-commerce identify hot-selling trends?-Fastgpt",
     "Description": "AI can effectively assist e-commerce businesses in identifying emerging hot-selling trends. It analyzes vast datasets far beyond human capacity to spot subtle shifts in consumer demand.\n\nAI systems pr",
     "Keywords": "Task Automation AI, FastGPT, API Integration, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-e-commerce-identify",
-    "Url": "/faq/Can-AI-help-e-commerce-identify.html"
   },
   "Can-AI-adjust-marketing-plans": {
     "Category": "Productivity & Collaboration",
@@ -9196,8 +7358,6 @@ export const faq = {
     "Title": "Can AI adjust marketing plans based on public opinion?-Fastgpt",
     "Description": "Yes, AI can adjust marketing plans based on public opinion. Modern AI systems analyze vast amounts of public sentiment data from social media, reviews, and news sources to identify trends and shifts i",
     "Keywords": "Smart Assistant, LLM Development, AI Chatbot, AI Knowledge Management, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-marketing-plans",
-    "Url": "/faq/Can-AI-adjust-marketing-plans.html"
   },
   "Can-AI-automatically-track-customer": {
     "Category": "Productivity & Collaboration",
@@ -9206,8 +7366,6 @@ export const faq = {
     "Title": "Can AI automatically track customer after-sales feedback?-Fastgpt",
     "Description": "AI can automatically track customer after-sales feedback using Natural Language Processing (NLP) and sentiment analysis technologies to analyze textual data.\n\nThis requires robust AI systems integrate",
     "Keywords": "Vector Search, AI Automation, Intelligent Q&A, LLM Development, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-track-customer",
-    "Url": "/faq/Can-AI-automatically-track-customer.html"
   },
   "How-to-automatically-generate-original": {
     "Category": "Data & Knowledge",
@@ -9216,8 +7374,6 @@ export const faq = {
     "Title": "How to automatically generate original articles using AI-Fastgpt",
     "Description": "AI enables automatic generation of original articles by leveraging advanced natural language processing models trained on vast datasets. This is feasible through techniques that combine information sy",
     "Keywords": "AI Knowledge Management, API Integration, Open Source AI, GPT Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-automatically-generate-original",
-    "Url": "/faq/How-to-automatically-generate-original.html"
   },
   "Can-AI-help-me-write": {
     "Category": "Data & Knowledge",
@@ -9226,8 +7382,6 @@ export const faq = {
     "Title": "Can AI help me write a short video script?-Fastgpt",
     "Description": "Yes, AI can effectively assist in writing short video scripts. Tools leverage vast datasets and natural language processing to generate creative concepts, dialogue, scene descriptions, and structures.",
     "Keywords": "API Integration, AI Knowledge Management, AI Platform, Smart Assistant, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-me-write",
-    "Url": "/faq/Can-AI-help-me-write.html"
   },
   "Can-AI-automatically-generate-product": {
     "Category": "Data & Knowledge",
@@ -9236,8 +7390,6 @@ export const faq = {
     "Title": "Can AI automatically generate product promotion copy?-Fastgpt",
     "Description": "Yes, AI can automatically generate product promotion copy. Advanced natural language processing models are capable of producing draft promotional text based on provided inputs.\n\nEffective AI-generated",
     "Keywords": "AI Knowledge Management, Document AI, API Integration, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-product",
-    "Url": "/faq/Can-AI-automatically-generate-product.html"
   },
   "Can-AI-generate-novel-outlines": {
     "Category": "Data & Knowledge",
@@ -9246,8 +7398,6 @@ export const faq = {
     "Title": "Can AI generate novel outlines and character settings?-Fastgpt",
     "Description": "AI can generate novel outlines and character settings effectively. Current advanced language models possess capabilities tailored for creative text generation and structuring narrative elements.\n\nKey ",
     "Keywords": "FastGPT, AI Workflow, AI Knowledge Management, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-novel-outlines",
-    "Url": "/faq/Can-AI-generate-novel-outlines.html"
   },
   "How-to-Make-AI-Write": {
     "Category": "Data & Knowledge",
@@ -9256,8 +7406,6 @@ export const faq = {
     "Title": "How to Make AI Write Attractive Titles-Fastgpt",
     "Description": "AI can generate compelling titles effectively by leveraging tools like ChatGPT or dedicated title generators, which analyze language patterns and user intent. This method is efficient and widely appli",
     "Keywords": "Open Source AI, LLM Development, AI Platform, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-Make-AI-Write",
-    "Url": "/faq/How-to-Make-AI-Write.html"
   },
   "Can-AI-generate-SEO-articles": {
     "Category": "Data & Knowledge",
@@ -9266,8 +7414,6 @@ export const faq = {
     "Title": "Can AI generate SEO articles based on keywords?-Fastgpt",
     "Description": "Yes, AI can generate SEO articles based on keywords. This capability leverages advanced language models trained on vast datasets to produce text optimized for search engines.\n\nAI analyzes the target k",
     "Keywords": "AI Chatbot, AI Platform, Intelligent Q&A, Document AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-SEO-articles",
-    "Url": "/faq/Can-AI-generate-SEO-articles.html"
   },
   "Can-AI-automatically-generate-advertising": {
     "Category": "Data & Knowledge",
@@ -9276,8 +7422,6 @@ export const faq = {
     "Title": "Can AI automatically generate advertising slogans?-Fastgpt",
     "Description": "Yes, AI can automatically generate advertising slogans. Advanced language models are specifically designed to create concise, catchy phrases based on provided inputs and objectives.\n\nThese systems lev",
     "Keywords": "Task Automation AI, AI Platform, Enterprise AI, Intelligent Q&A, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-advertising",
-    "Url": "/faq/Can-AI-automatically-generate-advertising.html"
   },
   "How-to-Get-AI-to": {
     "Category": "Data & Knowledge",
@@ -9286,8 +7430,6 @@ export const faq = {
     "Title": "How to Get AI to Help Me Write a Brand Story-Fastgpt",
     "Description": "Using AI to assist in brand story creation is feasible through specialized language models and content generation platforms that can produce draft narratives based on your inputs. This approach stream",
     "Keywords": "Smart Assistant, Intelligent Q&A, AI Knowledge Management, Enterprise AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-Get-AI-to",
-    "Url": "/faq/How-to-Get-AI-to.html"
   },
   "Can-AI-generate-promotional-copy": {
     "Category": "Data & Knowledge",
@@ -9296,8 +7438,6 @@ export const faq = {
     "Title": "Can AI generate promotional copy suitable for Moments?-Fastgpt",
     "Description": "Yes, AI can effectively generate promotional copy suitable for sharing on platforms like WeChat Moments.\n\nAI copy generators leverage natural language processing trained on vast datasets, including su",
     "Keywords": "AI Workflow, API Integration, Task Automation AI, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-promotional-copy",
-    "Url": "/faq/Can-AI-generate-promotional-copy.html"
   },
   "Can-AI-quickly-write-a": {
     "Category": "Data & Knowledge",
@@ -9306,8 +7446,6 @@ export const faq = {
     "Title": "Can AI quickly write a company news briefing?-Fastgpt",
     "Description": "Yes, AI can generate company news briefings rapidly. Modern generative AI tools are specifically designed to draft coherent text quickly based on provided prompts and information.\n\nKey to successful A",
     "Keywords": "Intelligent Q&A, Task Automation AI, AI Platform, AI Automation, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-write-a",
-    "Url": "/faq/Can-AI-quickly-write-a.html"
   },
   "How-to-make-AI-write": {
     "Category": "Data & Knowledge",
@@ -9316,8 +7454,6 @@ export const faq = {
     "Title": "How to make AI write Q&A articles suitable for Zhihu-Fastgpt",
     "Description": "AI can effectively generate Zhihu-suitable Q&A articles when provided with clear instructions and guidance. This process involves leveraging the AI's content generation capabilities while tailoring th",
     "Keywords": "Smart Assistant, AI Platform, Vector Search, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-write",
-    "Url": "/faq/How-to-make-AI-write.html"
   },
   "Can-AI-write-long-popular": {
     "Category": "Data & Knowledge",
@@ -9326,8 +7462,6 @@ export const faq = {
     "Title": "Can AI write long popular science articles?-Fastgpt",
     "Description": "Yes, AI is capable of writing long-form popular science articles. Advanced language models can generate coherent, informative text on complex scientific topics at substantial length.\n\nSuccessful AI-ge",
     "Keywords": "Enterprise AI, Intelligent Q&A, LLM Development, AI Knowledge Management, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-long-popular",
-    "Url": "/faq/Can-AI-write-long-popular.html"
   },
   "How-to-generate-a-marketing": {
     "Category": "Data & Knowledge",
@@ -9336,8 +7470,6 @@ export const faq = {
     "Title": "How to generate a marketing plan using AI-Fastgpt",
     "Description": "AI can generate comprehensive marketing plans by analyzing data, predicting trends, and automating content creation. It provides a streamlined process from research to execution.\n\nStart by clearly def",
     "Keywords": "Enterprise AI, AI Knowledge Management, AI Workflow, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-generate-a-marketing",
-    "Url": "/faq/How-to-generate-a-marketing.html"
   },
   "Can-AI-write-a-video": {
     "Category": "Data & Knowledge",
@@ -9346,8 +7478,6 @@ export const faq = {
     "Title": "Can AI write a video commentary script for me?-Fastgpt",
     "Description": "Yes, AI can write video commentary scripts. Modern AI tools are specifically designed to generate script drafts based on provided inputs, fulfilling this capability directly.\n\nAI video script generati",
     "Keywords": "LLM Development, FastGPT, AI Knowledge Management, GPT Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-a-video",
-    "Url": "/faq/Can-AI-write-a-video.html"
   },
   "Can-AI-automatically-generate-children's": {
     "Category": "Data & Knowledge",
@@ -9356,8 +7486,6 @@ export const faq = {
     "Title": "Can AI automatically generate children's stories?-Fastgpt",
     "Description": "Yes, AI can automatically generate children's stories. Modern generative AI models are capable of creating original, coherent narratives tailored for young audiences.\n\nThe success of AI-generated chil",
     "Keywords": "AI Workflow, AI Platform, GPT Integration, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-children's",
-    "Url": "/faq/Can-AI-automatically-generate-children's.html"
   },
   "How-to-create-a-knowledge": {
     "Category": "Data & Knowledge",
@@ -9366,8 +7494,6 @@ export const faq = {
     "Title": "How to create a knowledge Q&A database using AI-Fastgpt",
     "Description": "Creating a knowledge Q&A database with AI involves using artificial intelligence tools to ingest, process, and organize information, enabling users to query it conversationally. It's a feasible and in",
     "Keywords": "Enterprise AI, Task Automation AI, FastGPT, Document AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-create-a-knowledge",
-    "Url": "/faq/How-to-create-a-knowledge.html"
   },
   "Can-AI-automatically-organize-frequently": {
     "Category": "Data & Knowledge",
@@ -9376,8 +7502,6 @@ export const faq = {
     "Title": "Can AI automatically organize frequently asked questions and answers?-Fastgpt",
     "Description": "Yes, AI can effectively automate the organization of frequently asked questions (FAQs) and their corresponding answers. Modern Natural Language Processing (NLP) techniques make this feasible for scali",
     "Keywords": "AI Platform, Vector Search, AI Knowledge Management, Intelligent Q&A, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-frequently",
-    "Url": "/faq/Can-AI-automatically-organize-frequently.html"
   },
   "Can-AI-generate-a-complete": {
     "Category": "Data & Knowledge",
@@ -9386,8 +7510,6 @@ export const faq = {
     "Title": "Can AI generate a complete FAQ for a website?-Fastgpt",
     "Description": "Yes, AI can generate a complete FAQ section for a website. Modern AI language models possess the capability to create relevant questions and answers based on provided context and data about the busine",
     "Keywords": "AI Knowledge Management, Vector Search, LLM Development, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-a-complete",
-    "Url": "/faq/Can-AI-generate-a-complete.html"
   },
   "Can-AI-automatically-analyze-questions": {
     "Category": "Data & Knowledge",
@@ -9396,8 +7518,6 @@ export const faq = {
     "Title": "Can AI automatically analyze questions and match answers?-Fastgpt",
     "Description": "AI can automatically analyze questions and match corresponding answers. This capability leverages natural language processing (NLP) and machine learning to understand user queries and retrieve relevan",
     "Keywords": "AI Automation, AI Workflow, Vector Search, Open Source AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-questions",
-    "Url": "/faq/Can-AI-automatically-analyze-questions.html"
   },
   "Can-AI-create-interactive-knowledge": {
     "Category": "Data & Knowledge",
@@ -9406,8 +7526,6 @@ export const faq = {
     "Title": "Can AI create interactive knowledge Q&A?-Fastgpt",
     "Description": "Yes, AI can create interactive knowledge Q&A systems. These systems utilize advanced natural language processing (NLP) and machine learning (ML) to understand user questions, find relevant information",
     "Keywords": "Enterprise AI, AI Chatbot, GPT Integration, Vector Search, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-create-interactive-knowledge",
-    "Url": "/faq/Can-AI-create-interactive-knowledge.html"
   },
   "Can-AI-generate-teaching-test": {
     "Category": "Data & Knowledge",
@@ -9416,8 +7534,6 @@ export const faq = {
     "Title": "Can AI generate teaching test question banks?-Fastgpt",
     "Description": "Yes, AI can effectively generate teaching test question banks using large language models (LLMs) and natural language processing techniques. These systems create relevant questions tailored to specifi",
     "Keywords": "Vector Search, AI Knowledge Management, FastGPT, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-teaching-test",
-    "Url": "/faq/Can-AI-generate-teaching-test.html"
   },
   "Can-AI-quickly-generate-flashcards?": {
     "Category": "Data & Knowledge",
@@ -9426,8 +7542,6 @@ export const faq = {
     "Title": "Can AI quickly generate flashcards?-Fastgpt",
     "Description": "Yes, AI can rapidly generate flashcards. It leverages natural language processing to extract key information from provided text and formats it into question-answer pairs efficiently.\n\nAI flashcard too",
     "Keywords": "Smart Assistant, Document AI, Intelligent Q&A, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-generate-flashcards?",
-    "Url": "/faq/Can-AI-quickly-generate-flashcards?.html"
   },
   "Can-AI-automatically-organize-Q&A": {
     "Category": "Data & Knowledge",
@@ -9436,8 +7550,6 @@ export const faq = {
     "Title": "Can AI automatically organize Q&A tags?-Fastgpt",
     "Description": "Yes, AI can automatically organize Q&A tags. Leveraging natural language processing (NLP) and machine learning (ML), AI systems can analyze the semantic context of questions and answers to assign and ",
     "Keywords": "API Integration, Open Source AI, GPT Integration, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-Q&A",
-    "Url": "/faq/Can-AI-automatically-organize-Q&A.html"
   },
   "How-to-make-knowledge-Q&A": {
     "Category": "Data & Knowledge",
@@ -9446,8 +7558,6 @@ export const faq = {
     "Title": "How to make knowledge Q&A more interesting with AI-Fastgpt",
     "Description": "By leveraging AI capabilities like natural language processing and personalization, knowledge Q&A can be transformed from static interactions into engaging and enjoyable experiences. AI makes Q&A feel",
     "Keywords": "AI Automation, Vector Search, LLM Development, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-knowledge-Q&A",
-    "Url": "/faq/How-to-make-knowledge-Q&A.html"
   },
   "Can-AI-split-long-materials": {
     "Category": "Data & Knowledge",
@@ -9456,8 +7566,6 @@ export const faq = {
     "Title": "Can AI split long materials into question-and-answer format?-Fastgpt",
     "Description": "Yes, AI can effectively split long materials into question-and-answer (Q&A) format. This capability leverages Natural Language Processing (NLP) techniques to identify key information points and struct",
     "Keywords": "Open Source AI, API Integration, GPT Integration, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-split-long-materials",
-    "Url": "/faq/Can-AI-split-long-materials.html"
   },
   "Can-AI-automatically-identify-missing": {
     "Category": "Data & Knowledge",
@@ -9466,8 +7574,6 @@ export const faq = {
     "Title": "Can AI automatically identify missing points in a Q&A database?-Fastgpt",
     "Description": "Yes, AI can automatically identify missing points in a Q&A database. This capability leverages advanced algorithms to analyze existing content and detect gaps in knowledge coverage.\n\nAI systems employ",
     "Keywords": "Task Automation AI, AI Knowledge Management, AI Workflow, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-missing",
-    "Url": "/faq/Can-AI-automatically-identify-missing.html"
   },
   "Can-AI-quickly-translate-and": {
     "Category": "Data & Knowledge",
@@ -9476,8 +7582,6 @@ export const faq = {
     "Title": "Can AI quickly translate and polish articles?-Fastgpt",
     "Description": "Yes, AI can quickly translate and polish articles. Advanced large language models (LLMs) specialize in rapidly processing text for these tasks, offering significant speed advantages over manual method",
     "Keywords": "Document AI, AI Automation, AI Knowledge Management, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-translate-and",
-    "Url": "/faq/Can-AI-quickly-translate-and.html"
   },
   "Can-AI-output-Chinese-English-comparisons": {
     "Category": "Data & Knowledge",
@@ -9486,8 +7590,6 @@ export const faq = {
     "Title": "Can AI output Chinese-English comparisons simultaneously?-Fastgpt",
     "Description": "Yes, modern AI models can simultaneously output Chinese and English content for comparison purposes. This capability leverages their bilingual understanding and generation capacity.\n\nThis functionalit",
     "Keywords": "AI Platform, Vector Search, AI Automation, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-output-Chinese-English-comparisons",
-    "Url": "/faq/Can-AI-output-Chinese-English-comparisons.html"
   },
   "How-to-quickly-translate-short": {
     "Category": "Data & Knowledge",
@@ -9496,8 +7598,6 @@ export const faq = {
     "Title": "How to quickly translate short video subtitles using AI-Fastgpt",
     "Description": "AI enables rapid translation of short video subtitles by automating speech recognition and language conversion. This process significantly reduces turnaround time compared to manual translation.\n\nSeve",
     "Keywords": "Document AI, AI Platform, Intelligent Q&A, LLM Development, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-translate-short",
-    "Url": "/faq/How-to-quickly-translate-short.html"
   },
   "Can-AI-automatically-generate-foreign": {
     "Category": "Data & Knowledge",
@@ -9506,8 +7606,6 @@ export const faq = {
     "Title": "Can AI automatically generate foreign language product manuals?-Fastgpt",
     "Description": "Yes, AI can effectively generate foreign language product manuals. This is achieved through advanced natural language generation (NLG) and machine translation (MT) technologies.\n\nThe process requires ",
     "Keywords": "Enterprise AI, AI Automation, Document AI, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-foreign",
-    "Url": "/faq/Can-AI-automatically-generate-foreign.html"
   },
   "Can-AI-adjust-translation-styles": {
     "Category": "Data & Knowledge",
@@ -9516,8 +7614,6 @@ export const faq = {
     "Title": "Can AI adjust translation styles according to regional cultures?-Fastgpt",
     "Description": "AI translation can adapt its output to regional cultural contexts. Modern systems achieve this localization through advanced techniques.\n\nNeural networks learn style variations from locale-specific mu",
     "Keywords": "LLM Development, GPT Integration, Smart Assistant, Open Source AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-translation-styles",
-    "Url": "/faq/Can-AI-adjust-translation-styles.html"
   },
   "Can-AI-maintain-consistent-tone": {
     "Category": "Data & Knowledge",
@@ -9526,8 +7622,6 @@ export const faq = {
     "Title": "Can AI maintain consistent tone during translation?-Fastgpt",
     "Description": "Yes, AI translation systems can maintain consistent tone. Modern neural machine translation (NMT) models are trained on vast datasets and increasingly include features specifically aimed at tone prese",
     "Keywords": "AI Chatbot, API Integration, AI Platform, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-maintain-consistent-tone",
-    "Url": "/faq/Can-AI-maintain-consistent-tone.html"
   },
   "Can-AI-select-the-most": {
     "Category": "Data & Knowledge",
@@ -9536,8 +7630,6 @@ export const faq = {
     "Title": "Can AI select the most appropriate vocabulary based on context?-Fastgpt",
     "Description": "AI can select the most appropriate vocabulary based on context effectively. Modern natural language processing models are specifically designed for this contextual understanding task.\n\nThis capability",
     "Keywords": "AI Automation, FastGPT, Intelligent Q&A, AI Chatbot, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-select-the-most",
-    "Url": "/faq/Can-AI-select-the-most.html"
   },
   "How-to-make-AI-output": {
     "Category": "Data & Knowledge",
@@ -9546,8 +7638,6 @@ export const faq = {
     "Title": "How to make AI output copy suitable for different tones-Fastgpt",
     "Description": "Adjusting AI copy for diverse tones involves providing targeted instructions to tailor outputs. This process is feasible and commonly implemented through precise input prompts.\n\nSpecify key elements i",
     "Keywords": "Enterprise AI, Open Source AI, LLM Development, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-output",
-    "Url": "/faq/How-to-make-AI-output.html"
   },
   "Can-AI-automatically-generate-multilingual": {
     "Category": "Data & Knowledge",
@@ -9556,8 +7646,6 @@ export const faq = {
     "Title": "Can AI automatically generate multilingual social media copy?-Fastgpt",
     "Description": "Modern AI-powered tools can indeed automatically generate multilingual social media copy. This capability leverages advanced Natural Language Processing and machine translation techniques.\n\nThese syst",
     "Keywords": "Task Automation AI, GPT Integration, LLM Development, API Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-multilingual",
-    "Url": "/faq/Can-AI-automatically-generate-multilingual.html"
   },
   "Can-AI-automatically-translate-and": {
     "Category": "Data & Knowledge",
@@ -9566,8 +7654,6 @@ export const faq = {
     "Title": "Can AI automatically translate and format PDF files?-Fastgpt",
     "Description": "Yes, AI can automatically translate and format PDF files. Advanced AI systems combine language translation models with layout understanding and generation capabilities to perform both tasks simultaneo",
     "Keywords": "FastGPT, GPT Integration, Enterprise AI, AI Knowledge Management, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-translate-and",
-    "Url": "/faq/Can-AI-automatically-translate-and.html"
   },
   "How-to-improve-the-translation": {
     "Category": "Data & Knowledge",
@@ -9576,8 +7662,6 @@ export const faq = {
     "Title": "How to improve the translation accuracy of professional terminology by AI-Fastgpt",
     "Description": "AI translation accuracy for professional terminology can be significantly enhanced through targeted strategies. Feasibility is high with the right approaches integrating domain knowledge and human ove",
     "Keywords": "Open Source AI, AI Chatbot, FastGPT, Enterprise AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-translation",
-    "Url": "/faq/How-to-improve-the-translation.html"
   },
   "Can-AI-generate-scripts-based": {
     "Category": "Data & Knowledge",
@@ -9586,8 +7670,6 @@ export const faq = {
     "Title": "Can AI generate scripts based on popular topics?-Fastgpt",
     "Description": "AI can generate scripts based on popular topics. This capability is technically feasible and increasingly utilized.\n\nAI models analyze vast datasets to identify trending themes, audience preferences, ",
     "Keywords": "Document AI, AI Workflow, GPT Integration, Intelligent Q&A, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-scripts-based",
-    "Url": "/faq/Can-AI-generate-scripts-based.html"
   },
   "Can-AI-generate-trendy-advertising": {
     "Category": "Data & Knowledge",
@@ -9596,8 +7678,6 @@ export const faq = {
     "Title": "Can AI generate trendy advertising ideas?-Fastgpt",
     "Description": "Yes, AI can effectively generate trendy advertising ideas. Advanced AI models are trained on vast datasets encompassing current cultural, social, and consumer trends, enabling them to propose concepts",
     "Keywords": "API Integration, Intelligent Q&A, Smart Assistant, Vector Search, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-trendy-advertising",
-    "Url": "/faq/Can-AI-generate-trendy-advertising.html"
   },
   "Can-AI-automatically-organize-popular": {
     "Category": "Data & Knowledge",
@@ -9606,8 +7686,6 @@ export const faq = {
     "Title": "Can AI automatically organize popular topics on Zhihu?-Fastgpt",
     "Description": "Yes, AI can automatically organize popular topics on Zhihu. This process leverages data mining and Natural Language Processing (NLP) techniques to identify, categorize, and summarize trending discussi",
     "Keywords": "AI Platform, LLM Development, Smart Assistant, Enterprise AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-popular",
-    "Url": "/faq/Can-AI-automatically-organize-popular.html"
   },
   "Can-AI-automatically-generate-festival-themed": {
     "Category": "Data & Knowledge",
@@ -9616,8 +7694,6 @@ export const faq = {
     "Title": "Can AI automatically generate festival-themed copy?-Fastgpt",
     "Description": "Yes, AI can automatically generate festival-themed copy. Modern generative AI models are capable of producing creative text for various occasions.\n\nThis capability relies on large language models trai",
     "Keywords": "Enterprise AI, GPT Integration, Smart Assistant, FastGPT, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-festival-themed",
-    "Url": "/faq/Can-AI-automatically-generate-festival-themed.html"
   },
   "Can-AI-recommend-creative-ideas": {
     "Category": "Data & Knowledge",
@@ -9626,8 +7702,6 @@ export const faq = {
     "Title": "Can AI recommend creative ideas that align with the brand?-Fastgpt",
     "Description": "Yes, AI can effectively recommend creative ideas that align with specific brand identities. Modern AI tools, particularly those trained on vast datasets and equipped with sophisticated prompt understa",
     "Keywords": "Vector Search, API Integration, AI Chatbot, LLM Development, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-creative-ideas",
-    "Url": "/faq/Can-AI-recommend-creative-ideas.html"
   },
   "Can-AI-automatically-generate-lottery": {
     "Category": "Data & Knowledge",
@@ -9636,8 +7710,6 @@ export const faq = {
     "Title": "Can AI automatically generate lottery and activity rules?-Fastgpt",
     "Description": "Yes, AI can automatically generate draft lottery and activity rules. Modern AI models, particularly large language models (LLMs), are capable of producing structured regulatory text based on provided ",
     "Keywords": "Task Automation AI, AI Chatbot, AI Automation, API Integration, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-lottery",
-    "Url": "/faq/Can-AI-automatically-generate-lottery.html"
   },
   "How-to-generate-a-brand": {
     "Category": "Data & Knowledge",
@@ -9646,8 +7718,6 @@ export const faq = {
     "Title": "How to generate a brand slogan with one click using AI-Fastgpt",
     "Description": "Generating a brand slogan with one click using AI involves leveraging specialized software that applies artificial intelligence to analyze your inputs and instantly produce creative tagline options. T",
     "Keywords": "Task Automation AI, GPT Integration, LLM Development, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-generate-a-brand",
-    "Url": "/faq/How-to-generate-a-brand.html"
   },
   "Can-AI-automatically-analyze-and": {
     "Category": "Data & Knowledge",
@@ -9656,8 +7726,6 @@ export const faq = {
     "Title": "Can AI automatically analyze and optimize advertising slogans?-Fastgpt",
     "Description": "Yes, AI can automatically analyze and optimize advertising slogans using advanced natural language processing (NLP) and machine learning techniques.\n\nAI systems analyze slogans based on linguistic pat",
     "Keywords": "AI Knowledge Management, Open Source AI, LLM Development, Smart Assistant, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-and",
-    "Url": "/faq/Can-AI-automatically-analyze-and.html"
   },
   "Can-AI-write-short-humorous": {
     "Category": "Data & Knowledge",
@@ -9666,8 +7734,6 @@ export const faq = {
     "Title": "Can AI write short humorous sentences?-Fastgpt",
     "Description": "Yes, AI can generate short humorous sentences. Modern language models are trained on vast datasets that include jokes, witty remarks, and comedic writing, enabling them to understand and produce humor",
     "Keywords": "Intelligent Q&A, AI Workflow, LLM Development, AI Knowledge Management, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-short-humorous",
-    "Url": "/faq/Can-AI-write-short-humorous.html"
   },
   "Can-AI-automatically-generate-interview": {
     "Category": "Data & Knowledge",
@@ -9676,8 +7742,6 @@ export const faq = {
     "Title": "Can AI automatically generate interview questions?-Fastgpt",
     "Description": "Yes, AI can automatically generate interview questions. This capability leverages natural language processing and large language models to create relevant questions based on provided inputs like job d",
     "Keywords": "Enterprise AI, AI Automation, Intelligent Q&A, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-interview",
-    "Url": "/faq/Can-AI-automatically-generate-interview.html"
   },
   "How-to-make-AI-customize": {
     "Category": "Data & Knowledge",
@@ -9686,8 +7750,6 @@ export const faq = {
     "Title": "How to make AI customize questions based on guest information-Fastgpt",
     "Description": "AI customization of questions leverages machine learning to analyze guest data and generate personalized interactions. This process adapts inquiries to fit individual profiles dynamically.\n\nImplementa",
     "Keywords": "FastGPT, AI Automation, AI Chatbot, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-customize",
-    "Url": "/faq/How-to-make-AI-customize.html"
   },
   "Can-AI-write-a-storytelling": {
     "Category": "Data & Knowledge",
@@ -9696,8 +7758,6 @@ export const faq = {
     "Title": "Can AI write a storytelling opening?-Fastgpt",
     "Description": "AI can create storytelling openings. Modern large language models are trained on vast narrative datasets and generate coherent initial passages based on prompts.\n\nEffective AI-generated openings requi",
     "Keywords": "Task Automation AI, Vector Search, AI Platform, Open Source AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-a-storytelling",
-    "Url": "/faq/Can-AI-write-a-storytelling.html"
   },
   "Can-AI-organize-the-highlights": {
     "Category": "Data & Knowledge",
@@ -9706,8 +7766,6 @@ export const faq = {
     "Title": "Can AI organize the highlights of the interview?-Fastgpt",
     "Description": "Yes, AI can effectively organize interview highlights. It utilizes speech recognition and natural language processing to automatically identify and summarize key discussion points.\n\nAI analyzes the fu",
     "Keywords": "Vector Search, Open Source AI, AI Knowledge Management, AI Automation, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-organize-the-highlights",
-    "Url": "/faq/Can-AI-organize-the-highlights.html"
   },
   "Can-AI-recommend-popular-topics": {
     "Category": "Data & Knowledge",
@@ -9716,8 +7774,6 @@ export const faq = {
     "Title": "Can AI recommend popular topics for live streams?-Fastgpt",
     "Description": "AI can effectively recommend popular live stream topics by analyzing viewer engagement patterns and trending content data. Current algorithms successfully identify themes with high audience interest p",
     "Keywords": "Enterprise AI, AI Automation, API Integration, FastGPT, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-popular-topics",
-    "Url": "/faq/Can-AI-recommend-popular-topics.html"
   },
   "Can-AI-automatically-adjust-the": {
     "Category": "Data & Knowledge",
@@ -9726,8 +7782,6 @@ export const faq = {
     "Title": "Can AI automatically adjust the style of scripting languages?-Fastgpt",
     "Description": "Yes, AI can automatically adjust the style of scripting languages. Modern language models achieve this by learning patterns from vast code datasets.\n\nThis relies on AI's ability to understand semantic",
     "Keywords": "GPT Integration, Document AI, FastGPT, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-adjust-the",
-    "Url": "/faq/Can-AI-automatically-adjust-the.html"
   },
   "Can-AI-generate-multiple-versions": {
     "Category": "Data & Knowledge",
@@ -9736,8 +7790,6 @@ export const faq = {
     "Title": "Can AI generate multiple versions of advertising scripts?-Fastgpt",
     "Description": "Yes, AI can effectively generate multiple versions of advertising scripts. This capability is powered by large language models trained on vast datasets of marketing text.\n\nThis functionality relies on",
     "Keywords": "Open Source AI, AI Automation, AI Workflow, Smart Assistant, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-multiple-versions",
-    "Url": "/faq/Can-AI-generate-multiple-versions.html"
   },
   "Can-AI-write-dialogues-that": {
     "Category": "Data & Knowledge",
@@ -9746,8 +7798,6 @@ export const faq = {
     "Title": "Can AI write dialogues that suit the tastes of young people?-Fastgpt",
     "Description": "Yes, AI can effectively write dialogues tailored to young audiences. Modern large language models (LLMs) are trained on vast datasets containing contemporary youth language, slang, and communication s",
     "Keywords": "Smart Assistant, Document AI, Enterprise AI, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-dialogues-that",
-    "Url": "/faq/Can-AI-write-dialogues-that.html"
   },
   "Can-AI-automatically-generate-stage": {
     "Category": "Data & Knowledge",
@@ -9756,8 +7806,6 @@ export const faq = {
     "Title": "Can AI automatically generate stage play dialogues?-Fastgpt",
     "Description": "Yes, AI can automatically generate stage play dialogue. Specialized large language models or AI writing tools trained on dramatic texts are capable of producing character speech and conversations desi",
     "Keywords": "LLM Development, AI Platform, AI Knowledge Management, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-stage",
-    "Url": "/faq/Can-AI-automatically-generate-stage.html"
   },
   "Can-AI-automatically-add-narration": {
     "Category": "Data & Knowledge",
@@ -9766,8 +7814,6 @@ export const faq = {
     "Title": "Can AI automatically add narration suggestions?-Fastgpt",
     "Description": "AI can automatically generate narration suggestions using natural language processing and generative algorithms. This capability is feasible in real-world applications.  \n\nKey requirements include cle",
     "Keywords": "Enterprise AI, AI Automation, AI Chatbot, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-add-narration",
-    "Url": "/faq/Can-AI-automatically-add-narration.html"
   },
   "How-to-quickly-generate-course": {
     "Category": "Data & Knowledge",
@@ -9776,8 +7822,6 @@ export const faq = {
     "Title": "How to quickly generate course teaching scripts using AI-Fastgpt",
     "Description": "AI enables rapid course script generation by automatically converting learning objectives into structured instructional content. Educators can leverage specialized AI teaching assistants for this purp",
     "Keywords": "AI Automation, Open Source AI, AI Knowledge Management, GPT Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-generate-course",
-    "Url": "/faq/How-to-quickly-generate-course.html"
   },
   "Can-AI-write-practice-exercises": {
     "Category": "Data & Knowledge",
@@ -9786,8 +7830,6 @@ export const faq = {
     "Title": "Can AI write practice exercises for training courses?-Fastgpt",
     "Description": "AI can generate customized practice exercises for training courses using generative AI tools like GPT models. This capability streamlines the creation of relevant and scalable learning activities.\n\nSu",
     "Keywords": "Enterprise AI, Vector Search, AI Automation, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-practice-exercises",
-    "Url": "/faq/Can-AI-write-practice-exercises.html"
   },
   "How-to-Make-AI-Automatically": {
     "Category": "Data & Knowledge",
@@ -9796,8 +7838,6 @@ export const faq = {
     "Title": "How to Make AI Automatically Generate a Course Syllabus-Fastgpt",
     "Description": "Creating a course syllabus using AI automation is feasible by utilizing generative AI platforms that accept structured instructor input. This leverages language models trained on educational content.\n",
     "Keywords": "AI Workflow, API Integration, Task Automation AI, AI Automation, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-Make-AI-Automatically",
-    "Url": "/faq/How-to-Make-AI-Automatically.html"
   },
   "Can-AI-write-cases-suitable": {
     "Category": "Data & Knowledge",
@@ -9806,8 +7846,6 @@ export const faq = {
     "Title": "Can AI write cases suitable for online teaching?-Fastgpt",
     "Description": "AI can generate case studies tailored for online teaching contexts. This application of natural language processing technology is increasingly feasible and effective for creating realistic learning sc",
     "Keywords": "Open Source AI, Task Automation AI, Smart Assistant, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-cases-suitable",
-    "Url": "/faq/Can-AI-write-cases-suitable.html"
   },
   "Can-AI-generate-course-summaries": {
     "Category": "Data & Knowledge",
@@ -9816,8 +7854,6 @@ export const faq = {
     "Title": "Can AI generate course summaries and key points?-Fastgpt",
     "Description": "Yes, AI can effectively generate course summaries and key points. Advanced language models analyze large volumes of course materials to extract core themes and highlight essential information.\n\nThis c",
     "Keywords": "Smart Assistant, AI Knowledge Management, Document AI, AI Platform, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-course-summaries",
-    "Url": "/faq/Can-AI-generate-course-summaries.html"
   },
   "Can-AI-automatically-generate-educational": {
     "Category": "Data & Knowledge",
@@ -9826,8 +7862,6 @@ export const faq = {
     "Title": "Can AI automatically generate educational and popular science articles?-Fastgpt",
     "Description": "Yes, AI can automatically generate educational and popular science articles. Modern language models trained on vast scientific and educational datasets possess the capability to produce coherent and i",
     "Keywords": "Vector Search, AI Platform, Document AI, Enterprise AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-educational",
-    "Url": "/faq/Can-AI-automatically-generate-educational.html"
   },
   "Can-AI-automatically-organize-textbook": {
     "Category": "Data & Knowledge",
@@ -9836,8 +7870,6 @@ export const faq = {
     "Title": "Can AI automatically organize textbook knowledge points?-Fastgpt",
     "Description": "Yes, AI can automatically organize textbook knowledge points. Modern Natural Language Processing (NLP) algorithms are designed to extract, categorize, and structure key information from textual source",
     "Keywords": "AI Knowledge Management, Vector Search, Intelligent Q&A, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-textbook",
-    "Url": "/faq/Can-AI-automatically-organize-textbook.html"
   },
   "Can-AI-automatically-generate-course": {
     "Category": "Data & Knowledge",
@@ -9846,8 +7878,6 @@ export const faq = {
     "Title": "Can AI automatically generate course test questions?-Fastgpt",
     "Description": "Yes, AI can automatically generate course test questions. Modern artificial intelligence technologies, specifically Natural Language Processing (NLP) and Large Language Models (LLMs), possess the capa",
     "Keywords": "FastGPT, AI Chatbot, Smart Assistant, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-course",
-    "Url": "/faq/Can-AI-automatically-generate-course.html"
   },
   "Can-AI-adjust-the-difficulty": {
     "Category": "Data & Knowledge",
@@ -9856,8 +7886,6 @@ export const faq = {
     "Title": "Can AI adjust the difficulty of content according to students' levels?-Fastgpt",
     "Description": "Yes, AI can effectively adjust the difficulty of educational content according to individual student levels. This capability is a core function of adaptive learning systems.\n\nSuch systems rely on algo",
     "Keywords": "LLM Development, Open Source AI, AI Automation, Enterprise AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-the-difficulty",
-    "Url": "/faq/Can-AI-adjust-the-difficulty.html"
   },
   "How-to-Make-AI-Design": {
     "Category": "Data & Knowledge",
@@ -9866,8 +7894,6 @@ export const faq = {
     "Title": "How to Make AI Design Learning Stories for Children-Fastgpt",
     "Description": "Designing AI-generated learning stories for children involves using artificial intelligence tools to create customized, educational narratives based on defined learning objectives, child profiles, and",
     "Keywords": "FastGPT, Task Automation AI, GPT Integration, Intelligent Q&A, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-Make-AI-Design",
-    "Url": "/faq/How-to-Make-AI-Design.html"
   },
   "Can-AI-write-interesting-picture": {
     "Category": "Data & Knowledge",
@@ -9876,8 +7902,6 @@ export const faq = {
     "Title": "Can AI write interesting picture book content?-Fastgpt",
     "Description": "Yes, AI can write picture book content that is potentially interesting and engaging. It excels at generating creative text concepts and drafts based on input prompts.\n\nEffective AI-generated picture b",
     "Keywords": "AI Knowledge Management, API Integration, GPT Integration, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-interesting-picture",
-    "Url": "/faq/Can-AI-write-interesting-picture.html"
   },
   "Can-AI-automatically-create-parent-child": {
     "Category": "Data & Knowledge",
@@ -9886,8 +7910,6 @@ export const faq = {
     "Title": "Can AI automatically create parent-child interactive games?-Fastgpt",
     "Description": "AI can automatically generate parent-child interactive games using advanced algorithms. This capability leverages generative AI technologies trained on diverse play patterns and educational content.\n\n",
     "Keywords": "Intelligent Q&A, FastGPT, AI Chatbot, AI Platform, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-create-parent-child",
-    "Url": "/faq/Can-AI-automatically-create-parent-child.html"
   },
   "Can-AI-automatically-translate-children's": {
     "Category": "Data & Knowledge",
@@ -9896,8 +7918,6 @@ export const faq = {
     "Title": "Can AI automatically translate children's stories into multiple languages?-Fastgpt",
     "Description": "Yes, AI can automatically translate children's stories into multiple languages. Modern neural machine translation systems possess this technical capability, producing translations rapidly at scale.\n\nE",
     "Keywords": "AI Chatbot, LLM Development, AI Platform, AI Knowledge Management, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-translate-children's",
-    "Url": "/faq/Can-AI-automatically-translate-children's.html"
   },
   "Can-AI-adjust-its-writing": {
     "Category": "Data & Knowledge",
@@ -9906,8 +7926,6 @@ export const faq = {
     "Title": "Can AI adjust its writing style according to the reader group?-Fastgpt",
     "Description": "Yes, AI can adjust its writing style based on the target reader group. This capability stems from its training on vast, diverse datasets and the ability to interpret user instructions regarding audien",
     "Keywords": "API Integration, AI Platform, Enterprise AI, FastGPT, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-its-writing",
-    "Url": "/faq/Can-AI-adjust-its-writing.html"
   },
   "Can-AI-automatically-write-business": {
     "Category": "Data & Knowledge",
@@ -9916,8 +7934,6 @@ export const faq = {
     "Title": "Can AI automatically write business case analyses?-Fastgpt",
     "Description": "Yes, AI can automatically generate business case analyses. This capability relies on advanced natural language processing and machine learning models trained on business knowledge.\n\nEffective AI-gener",
     "Keywords": "Open Source AI, Document AI, LLM Development, API Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-write-business",
-    "Url": "/faq/Can-AI-automatically-write-business.html"
   },
   "Can-AI-write-brand-annual": {
     "Category": "Data & Knowledge",
@@ -9926,8 +7942,6 @@ export const faq = {
     "Title": "Can AI write brand annual summary copy?-Fastgpt",
     "Description": "Yes, AI can write brand annual summary copy. Specialized large language models (LLMs) can analyze a brand's yearly data, goals, achievements, and market context to generate structured and coherent sum",
     "Keywords": "API Integration, AI Knowledge Management, Intelligent Q&A, AI Platform, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-brand-annual",
-    "Url": "/faq/Can-AI-write-brand-annual.html"
   },
   "Can-AI-automatically-generate-business": {
     "Category": "Data & Knowledge",
@@ -9936,8 +7950,6 @@ export const faq = {
     "Title": "Can AI automatically generate business invitation letters?-Fastgpt",
     "Description": "Yes, AI can automatically generate business invitation letters. AI-powered tools leverage natural language processing and template-based systems to create draft letters efficiently.\n\nAI requires speci",
     "Keywords": "Open Source AI, AI Chatbot, Vector Search, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-business",
-    "Url": "/faq/Can-AI-automatically-generate-business.html"
   },
   "Can-AI-generate-explanatory-scripts": {
     "Category": "Data & Knowledge",
@@ -9946,8 +7958,6 @@ export const faq = {
     "Title": "Can AI generate explanatory scripts for customer demonstrations?-Fastgpt",
     "Description": "Yes, AI can effectively generate explanatory scripts for customer demonstrations. Advanced AI models are specifically designed to handle such content creation tasks.\n\nSuccessful script generation reli",
     "Keywords": "Intelligent Q&A, AI Workflow, AI Knowledge Management, Vector Search, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-explanatory-scripts",
-    "Url": "/faq/Can-AI-generate-explanatory-scripts.html"
   },
   "Can-AI-automatically-organize-meeting": {
     "Category": "Data & Knowledge",
@@ -9956,8 +7966,6 @@ export const faq = {
     "Title": "Can AI automatically organize meeting speeches?-Fastgpt",
     "Description": "Yes, AI can now automatically organize meeting speech content through transcription, summarization, and analysis techniques. This capability is increasingly feasible and offered by various meeting pro",
     "Keywords": "Intelligent Q&A, LLM Development, AI Chatbot, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-meeting",
-    "Url": "/faq/Can-AI-automatically-organize-meeting.html"
   },
   "Can-AI-write-humorous-copy": {
     "Category": "Data & Knowledge",
@@ -9966,8 +7974,6 @@ export const faq = {
     "Title": "Can AI write humorous copy for radio advertisements?-Fastgpt",
     "Description": "Yes, AI can write humorous radio ad copy. Generative AI tools can generate jokes, puns, conversational wit, and unexpected twists.\n\nEffectiveness hinges on providing the AI with extensive training dat",
     "Keywords": "LLM Development, Vector Search, AI Chatbot, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-humorous-copy",
-    "Url": "/faq/Can-AI-write-humorous-copy.html"
   },
   "Can-AI-automatically-generate-short": {
     "Category": "Data & Knowledge",
@@ -9976,8 +7982,6 @@ export const faq = {
     "Title": "Can AI automatically generate short copy suitable for social media platforms?-Fastgpt",
     "Description": "AI can automatically generate compelling short copy for social media platforms. Modern generative AI tools are specifically designed for this task, producing concise, engaging text tailored to platfor",
     "Keywords": "GPT Integration, AI Platform, Task Automation AI, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-short",
-    "Url": "/faq/Can-AI-automatically-generate-short.html"
   },
   "Can-AI-write-short-copy": {
     "Category": "Data & Knowledge",
@@ -9986,8 +7990,6 @@ export const faq = {
     "Title": "Can AI write short copy suitable for Douyin?-Fastgpt",
     "Description": "Yes, AI can generate short copy suitable for Douyin. Leveraging large language models trained on vast datasets, AI can create concise, engaging text tailored for the platform's fast-scrolling, visuall",
     "Keywords": "Document AI, LLM Development, AI Knowledge Management, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-short-copy",
-    "Url": "/faq/Can-AI-write-short-copy.html"
   },
   "Can-AI-automatically-generate-English": {
     "Category": "Data & Knowledge",
@@ -9996,8 +7998,6 @@ export const faq = {
     "Title": "Can AI automatically generate English copy suitable for LinkedIn?-Fastgpt",
     "Description": "Yes, AI can automatically generate English copy suitable for LinkedIn. Advanced AI language models can create relevant and engaging text for posts, articles, or profile sections when provided with app",
     "Keywords": "AI Workflow, AI Chatbot, AI Platform, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-English",
-    "Url": "/faq/Can-AI-automatically-generate-English.html"
   },
   "Can-AI-automatically-adjust-content": {
     "Category": "Data & Knowledge",
@@ -10006,8 +8006,6 @@ export const faq = {
     "Title": "Can AI automatically adjust content to adapt to various platform algorithms?-Fastgpt",
     "Description": "AI can automatically tune content for platform algorithms using machine learning and optimization techniques. It dynamically adjusts elements based on algorithmic preferences and real-time data.  \n\nTh",
     "Keywords": "AI Platform, Task Automation AI, API Integration, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-adjust-content",
-    "Url": "/faq/Can-AI-automatically-adjust-content.html"
   },
   "Can-AI-automatically-optimize-the": {
     "Category": "Data & Knowledge",
@@ -10016,8 +8014,6 @@ export const faq = {
     "Title": "Can AI automatically optimize the reading experience of content?-Fastgpt",
     "Description": "AI can automatically optimize content's reading experience through advanced algorithms and data analysis. Yes, it's feasible and increasingly common in digital content delivery.  \n\nKey approaches incl",
     "Keywords": "Task Automation AI, Smart Assistant, AI Platform, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-optimize-the",
-    "Url": "/faq/Can-AI-automatically-optimize-the.html"
   },
   "Can-AI-recommend-writing-directions": {
     "Category": "Data & Knowledge",
@@ -10026,8 +8022,6 @@ export const faq = {
     "Title": "Can AI recommend writing directions based on keywords?-Fastgpt",
     "Description": "Yes, AI can effectively recommend writing directions based on provided keywords. Modern AI language models analyze keyword input to generate tailored writing prompts, topics, or stylistic suggestions.",
     "Keywords": "Vector Search, API Integration, Enterprise AI, AI Automation, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-writing-directions",
-    "Url": "/faq/Can-AI-recommend-writing-directions.html"
   },
   "How-to-Make-AI-Generate": {
     "Category": "Data & Knowledge",
@@ -10036,8 +8030,6 @@ export const faq = {
     "Title": "How to Make AI Generate High-Click Article Titles-Fastgpt",
     "Description": "Generating high-click article titles using AI involves specific prompting techniques to guide the AI model towards creating compelling and relevant options. It leverages large language models trained ",
     "Keywords": "GPT Integration, AI Chatbot, AI Platform, Document AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-Make-AI-Generate",
-    "Url": "/faq/How-to-Make-AI-Generate.html"
   },
   "Can-AI-avoid-generating-duplicate": {
     "Category": "Data & Knowledge",
@@ -10046,8 +8038,6 @@ export const faq = {
     "Title": "Can AI avoid generating duplicate sentences?-Fastgpt",
     "Description": "Modern AI systems can generally avoid generating identical duplicate sentences within a single output sequence. However, achieving this consistently depends heavily on the model's specific architectur",
     "Keywords": "Vector Search, LLM Development, AI Workflow, Document AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-avoid-generating-duplicate",
-    "Url": "/faq/Can-AI-avoid-generating-duplicate.html"
   },
   "How-to-make-AI-detect": {
     "Category": "Data & Knowledge",
@@ -10056,8 +8046,6 @@ export const faq = {
     "Title": "How to make AI detect and correct grammar issues in documents-Fastgpt",
     "Description": "AI utilizes natural language processing and machine learning to identify and rectify grammatical errors in documents. This technology powers automated proofreading tools capable of detecting spelling,",
     "Keywords": "API Integration, AI Platform, AI Workflow, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-detect",
-    "Url": "/faq/How-to-make-AI-detect.html"
   },
   "Can-AI-generate-formatted-Markdown": {
     "Category": "Data & Knowledge",
@@ -10066,8 +8054,6 @@ export const faq = {
     "Title": "Can AI generate formatted Markdown documents?-Fastgpt",
     "Description": "Yes, AI can generate formatted Markdown documents. Language models are trained on extensive data, including Markdown syntax examples, enabling them to output text with correct formatting like headers,",
     "Keywords": "Open Source AI, Smart Assistant, AI Platform, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-formatted-Markdown",
-    "Url": "/faq/Can-AI-generate-formatted-Markdown.html"
   },
   "Can-AI-automatically-generate-relevant": {
     "Category": "Data & Knowledge",
@@ -10076,8 +8062,6 @@ export const faq = {
     "Title": "Can AI automatically generate relevant extended reading links-Fastgpt",
     "Description": "Yes, AI can automatically generate relevant extended reading links. This capability leverages natural language processing and machine learning to identify semantically related content.\n\nAI systems ana",
     "Keywords": "AI Automation, AI Workflow, FastGPT, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-relevant",
-    "Url": "/faq/Can-AI-automatically-generate-relevant.html"
   },
   "Can-AI-automatically-connect-the": {
     "Category": "Data & Knowledge",
@@ -10086,8 +8070,6 @@ export const faq = {
     "Title": "Can AI automatically connect the content of multiple articles?-Fastgpt",
     "Description": "Yes, AI can automatically connect the content of multiple articles. This process, known as content synthesis or multi-document summarization, leverages Natural Language Processing (NLP) techniques.\n\nA",
     "Keywords": "Document AI, Intelligent Q&A, AI Knowledge Management, GPT Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-connect-the",
-    "Url": "/faq/Can-AI-automatically-connect-the.html"
   },
   "Can-AI-generate-style-variations": {
     "Category": "Data & Knowledge",
@@ -10096,8 +8078,6 @@ export const faq = {
     "Title": "Can AI generate style variations suitable for different audiences?-Fastgpt",
     "Description": "AI can generate style variations tailored to different audiences effectively. This capability stems from advanced natural language processing and machine learning algorithms trained on diverse dataset",
     "Keywords": "Enterprise AI, AI Automation, AI Knowledge Management, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-style-variations",
-    "Url": "/faq/Can-AI-generate-style-variations.html"
   },
   "Can-AI-organize-interviews-into": {
     "Category": "Data & Knowledge",
@@ -10106,8 +8086,6 @@ export const faq = {
     "Title": "Can AI organize interviews into story-like long articles?-Fastgpt",
     "Description": "Yes, AI can organize interview transcripts into coherent, story-like long articles. This is a feasible application of natural language generation (NLG) technologies.\n\nAchieving this requires robust AI",
     "Keywords": "Enterprise AI, Vector Search, AI Chatbot, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-organize-interviews-into",
-    "Url": "/faq/Can-AI-organize-interviews-into.html"
   },
   "Can-AI-automatically-generate-supporting": {
     "Category": "Data & Knowledge",
@@ -10116,8 +8094,6 @@ export const faq = {
     "Title": "Can AI automatically generate supporting video scripts?-Fastgpt",
     "Description": "Yes, AI can automatically generate supporting video scripts. Generative AI models are capable of producing draft scripts tailored to specific content goals, target audiences, and themes, including nar",
     "Keywords": "LLM Development, Document AI, Smart Assistant, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-supporting",
-    "Url": "/faq/Can-AI-automatically-generate-supporting.html"
   },
   "Can-AI-provide-various-material": {
     "Category": "Data & Knowledge",
@@ -10126,8 +8102,6 @@ export const faq = {
     "Title": "Can AI provide various material references for writing?-Fastgpt",
     "Description": "Yes, AI can provide diverse material references to support writing. Large language models are trained on vast datasets, enabling them to generate suggestions like quotes, research summaries, creative ",
     "Keywords": "API Integration, GPT Integration, FastGPT, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-various-material",
-    "Url": "/faq/Can-AI-provide-various-material.html"
   },
   "How-to-quickly-generate-an": {
     "Category": "Data & Knowledge",
@@ -10136,8 +8110,6 @@ export const faq = {
     "Title": "How to quickly generate an original article using AI-Fastgpt",
     "Description": "AI writing tools can rapidly generate original article drafts by leveraging your specific inputs and advanced language models. This offers significant time savings versus traditional drafting methods.",
     "Keywords": "AI Knowledge Management, Document AI, Vector Search, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-generate-an",
-    "Url": "/faq/How-to-quickly-generate-an.html"
   },
   "Can-AI-write-SEO-articles": {
     "Category": "Data & Knowledge",
@@ -10146,8 +8118,6 @@ export const faq = {
     "Title": "Can AI write SEO articles based on keywords?-Fastgpt",
     "Description": "Artificial Intelligence can effectively write SEO articles based on keywords. AI writing tools utilize Natural Language Processing (NLP) algorithms to generate relevant content optimized around specif",
     "Keywords": "Open Source AI, Vector Search, Intelligent Q&A, API Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-SEO-articles",
-    "Url": "/faq/Can-AI-write-SEO-articles.html"
   },
   "Can-AI-generate-official-account": {
     "Category": "Data & Knowledge",
@@ -10156,8 +8126,6 @@ export const faq = {
     "Title": "Can AI generate official account push content with one click?-Fastgpt",
     "Description": "AI can automatically generate draft content for official account pushes using one-click generation tools or features provided by AI platforms. These tools primarily rely on Large Language Models (LLMs",
     "Keywords": "AI Automation, AI Chatbot, Smart Assistant, Open Source AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-official-account",
-    "Url": "/faq/Can-AI-generate-official-account.html"
   },
   "Can-AI-generate-comment-articles": {
     "Category": "Data & Knowledge",
@@ -10166,8 +8134,6 @@ export const faq = {
     "Title": "Can AI generate comment articles based on hot topics?-Fastgpt",
     "Description": "AI can generate comment articles on hot topics using large language models trained on vast datasets. This capability leverages AI's ability to analyze information patterns and produce coherent text.\n\n",
     "Keywords": "Task Automation AI, Enterprise AI, Smart Assistant, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-comment-articles",
-    "Url": "/faq/Can-AI-generate-comment-articles.html"
   },
   "Can-AI-quickly-generate-podcast": {
     "Category": "Data & Knowledge",
@@ -10176,8 +8142,6 @@ export const faq = {
     "Title": "Can AI quickly generate podcast outlines?-Fastgpt",
     "Description": "Yes, AI can very quickly generate podcast episode outlines. This capability leverages large language models trained on vast amounts of text, enabling them to structure ideas rapidly.\n\nAI generates out",
     "Keywords": "AI Platform, API Integration, LLM Development, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-quickly-generate-podcast",
-    "Url": "/faq/Can-AI-quickly-generate-podcast.html"
   },
   "Can-AI-generate-interactive-question-and-answer": {
     "Category": "Data & Knowledge",
@@ -10186,8 +8150,6 @@ export const faq = {
     "Title": "Can AI generate interactive question-and-answer articles?-Fastgpt",
     "Description": "Yes, AI can generate interactive question-and-answer articles. Modern natural language processing models possess the capability to create dynamic content that responds to user input.\n\nKey requirements",
     "Keywords": "Open Source AI, AI Workflow, AI Automation, GPT Integration, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-interactive-question-and-answer",
-    "Url": "/faq/Can-AI-generate-interactive-question-and-answer.html"
   },
   "Can-AI-write-humorous-advertising": {
     "Category": "Data & Knowledge",
@@ -10196,8 +8158,6 @@ export const faq = {
     "Title": "Can AI write humorous advertising slogans?-Fastgpt",
     "Description": "AI can effectively generate humorous advertising slogans by analyzing vast datasets of existing comedic copy and applying language patterns. This capability leverages natural language processing and m",
     "Keywords": "AI Workflow, Open Source AI, AI Automation, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-humorous-advertising",
-    "Url": "/faq/Can-AI-write-humorous-advertising.html"
   },
   "Can-AI-adjust-the-style": {
     "Category": "Data & Knowledge",
@@ -10206,8 +8166,6 @@ export const faq = {
     "Title": "Can AI adjust the style of an article according to the reader group?-Fastgpt",
     "Description": "Yes, AI can effectively adjust the style of an article to match different reader groups. This capability is powered by advanced natural language processing and machine learning models trained on vast ",
     "Keywords": "AI Knowledge Management, Open Source AI, LLM Development, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-adjust-the-style",
-    "Url": "/faq/Can-AI-adjust-the-style.html"
   },
   "Can-AI-create-a-phased": {
     "Category": "Data & Knowledge",
@@ -10216,8 +8174,6 @@ export const faq = {
     "Title": "Can AI create a phased study plan?-Fastgpt",
     "Description": "Yes, AI can create effective phased study plans. AI systems leverage educational data and learning patterns to structure personalized learning journeys over defined time periods.\n\nAI generates plans b",
     "Keywords": "AI Chatbot, Enterprise AI, AI Automation, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-create-a-phased",
-    "Url": "/faq/Can-AI-create-a-phased.html"
   },
   "Can-AI-generate-multilingual-promotional": {
     "Category": "Data & Knowledge",
@@ -10226,8 +8182,6 @@ export const faq = {
     "Title": "Can AI generate multilingual promotional copy?-Fastgpt",
     "Description": "Yes, AI can effectively generate promotional copy in multiple languages. Current generative AI models possess multilingual capabilities, allowing them to craft persuasive marketing messages across num",
     "Keywords": "Intelligent Q&A, AI Workflow, Enterprise AI, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-multilingual-promotional",
-    "Url": "/faq/Can-AI-generate-multilingual-promotional.html"
   },
   "Can-AI-write-an-opening": {
     "Category": "Data & Knowledge",
@@ -10236,8 +8190,6 @@ export const faq = {
     "Title": "Can AI write an opening speech for a new product launch?-Fastgpt",
     "Description": "Yes, AI can effectively write an opening speech for a new product launch. Generative AI models trained on vast amounts of text and speech data can create coherent, relevant, and persuasive content for",
     "Keywords": "Task Automation AI, AI Workflow, AI Automation, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-write-an-opening",
-    "Url": "/faq/Can-AI-write-an-opening.html"
   },
   "Can-AI-generate-creative-short": {
     "Category": "Data & Knowledge",
@@ -10246,8 +8198,6 @@ export const faq = {
     "Title": "Can AI generate creative short sentences based on brand tone?-Fastgpt",
     "Description": "Yes, AI can effectively generate creative short sentences tailored to a specific brand tone. This capability leverages natural language processing and machine learning to analyze and replicate distinc",
     "Keywords": "Open Source AI, Intelligent Q&A, AI Platform, GPT Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-creative-short",
-    "Url": "/faq/Can-AI-generate-creative-short.html"
   },
   "How-different-industries-use-AI": {
     "Category": "AI Basics & Terms",
@@ -10256,8 +8206,6 @@ export const faq = {
     "Title": "How different industries use AI intelligent assistants in innovative ways-Fastgpt",
     "Description": "AI intelligent assistants are being adopted across various industries to innovate operations, enhance customer interactions, and drive efficiency beyond simple automation. Their potential lies in anal",
     "Keywords": "Enterprise AI, AI Platform, Open Source AI, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-different-industries-use-AI",
-    "Url": "/faq/How-different-industries-use-AI.html"
   },
   "How-AI-Brings-Innovative-Approaches": {
     "Category": "AI Basics & Terms",
@@ -10266,8 +8214,6 @@ export const faq = {
     "Title": "How AI Brings Innovative Approaches to Customer Service-Fastgpt",
     "Description": "AI transforms customer service by introducing proactive, personalized, and highly efficient solutions. It fundamentally shifts interactions from reactive problem-solving to anticipating needs and auto",
     "Keywords": "API Integration, Enterprise AI, AI Knowledge Management, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Brings-Innovative-Approaches",
-    "Url": "/faq/How-AI-Brings-Innovative-Approaches.html"
   },
   "How-can-the-manufacturing-industry": {
     "Category": "AI Basics & Terms",
@@ -10276,8 +8222,6 @@ export const faq = {
     "Title": "How can the manufacturing industry implement adaptive production using AI-Fastgpt",
     "Description": "AI-driven adaptive production enables manufacturing systems to autonomously adjust processes in real-time based on dynamic input, demand shifts, and unforeseen events. This is achieved by integrating ",
     "Keywords": "FastGPT, Vector Search, Enterprise AI, Task Automation AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-manufacturing-industry",
-    "Url": "/faq/How-can-the-manufacturing-industry.html"
   },
   "What-novel-operation-plans-can": {
     "Category": "AI Basics & Terms",
@@ -10286,8 +8230,6 @@ export const faq = {
     "Title": "What novel operation plans can e-commerce use AI for?-Fastgpt",
     "Description": "E-commerce can leverage AI for novel operational plans in hyper-personalization, predictive stock management, AI-curated live shopping, intelligent markdown optimization, and AI-driven competitive rep",
     "Keywords": "Task Automation AI, GPT Integration, Intelligent Q&A, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/What-novel-operation-plans-can",
-    "Url": "/faq/What-novel-operation-plans-can.html"
   },
   "How-can-education-and-training": {
     "Category": "AI Basics & Terms",
@@ -10296,8 +8238,6 @@ export const faq = {
     "Title": "How can education and training integrate AI into teaching management-Fastgpt",
     "Description": "Educational institutions can effectively integrate AI into teaching management by leveraging its data processing and automation capabilities to enhance administrative efficiency and pedagogical decisi",
     "Keywords": "Vector Search, Smart Assistant, AI Chatbot, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-can-education-and-training",
-    "Url": "/faq/How-can-education-and-training.html"
   },
   "How-can-the-healthcare-industry": {
     "Category": "AI Basics & Terms",
@@ -10306,8 +8246,6 @@ export const faq = {
     "Title": "How can the healthcare industry use AI to improve patient experience-Fastgpt",
     "Description": "AI can enhance patient experience in the healthcare industry by improving accessibility, convenience, and personalization of care through various technologies.\n\nKey applications include using AI-power",
     "Keywords": "AI Knowledge Management, AI Platform, AI Workflow, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-healthcare-industry",
-    "Url": "/faq/How-can-the-healthcare-industry.html"
   },
   "How-logistics-companies-optimize-delivery": {
     "Category": "AI Basics & Terms",
@@ -10316,8 +8254,6 @@ export const faq = {
     "Title": "How logistics companies optimize delivery processes with AI-Fastgpt",
     "Description": "Logistics companies leverage AI to enhance delivery efficiency, predictability, and cost-effectiveness. AI enables faster, cheaper, and more reliable deliveries by analyzing vast datasets.\n\nOptimizati",
     "Keywords": "Vector Search, GPT Integration, Task Automation AI, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-logistics-companies-optimize-delivery",
-    "Url": "/faq/How-logistics-companies-optimize-delivery.html"
   },
   "What-innovative-applications-can-financial": {
     "Category": "AI Basics & Terms",
@@ -10326,8 +8262,6 @@ export const faq = {
     "Title": "What innovative applications can financial institutions achieve with AI?-Fastgpt",
     "Description": "Financial institutions leverage AI to transform operations, enhance customer experiences, and unlock new services. Innovations span automated processes, hyper-personalization, predictive analytics, an",
     "Keywords": "Document AI, AI Chatbot, Smart Assistant, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-innovative-applications-can-financial",
-    "Url": "/faq/What-innovative-applications-can-financial.html"
   },
   "How-can-the-catering-industry": {
     "Category": "AI Basics & Terms",
@@ -10336,8 +8270,6 @@ export const faq = {
     "Title": "How can the catering industry use AI to improve ordering and supply chain?-Fastgpt",
     "Description": "AI enables the catering industry to enhance ordering accuracy and streamline supply chain operations through automated analysis and predictive optimization. By leveraging machine learning and data ins",
     "Keywords": "AI Platform, Open Source AI, GPT Integration, API Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-catering-industry",
-    "Url": "/faq/How-can-the-catering-industry.html"
   },
   "How-real-estate-uses-AI": {
     "Category": "AI Basics & Terms",
@@ -10346,8 +8278,6 @@ export const faq = {
     "Title": "How real estate uses AI to enhance the customer viewing experience-Fastgpt",
     "Description": "Real estate uses artificial intelligence to elevate customer property tours through personalized digital interactions, AI-powered recommendations, and virtual viewing technologies. This transforms tra",
     "Keywords": "Enterprise AI, Open Source AI, AI Knowledge Management, AI Automation, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-real-estate-uses-AI",
-    "Url": "/faq/How-real-estate-uses-AI.html"
   },
   "How-can-retail-stores-leverage": {
     "Category": "AI Basics & Terms",
@@ -10356,8 +8286,6 @@ export const faq = {
     "Title": "How can retail stores leverage AI for personalized marketing?-Fastgpt",
     "Description": "Retail stores can implement AI for personalized marketing by analyzing customer data to deliver tailored offers, recommendations, and communications. This is feasible through modern customer relations",
     "Keywords": "Enterprise AI, Task Automation AI, GPT Integration, FastGPT, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-can-retail-stores-leverage",
-    "Url": "/faq/How-can-retail-stores-leverage.html"
   },
   "How-the-tourism-industry-uses": {
     "Category": "AI Basics & Terms",
@@ -10366,8 +8294,6 @@ export const faq = {
     "Title": "How the tourism industry uses AI to optimize itinerary planning-Fastgpt",
     "Description": "AI enables tourism businesses to generate highly personalized and efficient travel itineraries by analyzing vast datasets. This significantly enhances the traveler planning experience.\n\nKey applicatio",
     "Keywords": "AI Automation, AI Knowledge Management, Intelligent Q&A, AI Workflow, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-the-tourism-industry-uses",
-    "Url": "/faq/How-the-tourism-industry-uses.html"
   },
   "What-intelligent-scheduling-can-energy": {
     "Category": "AI Basics & Terms",
@@ -10376,8 +8302,6 @@ export const faq = {
     "Title": "What intelligent scheduling can energy companies achieve with AI?-Fastgpt",
     "Description": "AI enables energy companies to achieve intelligent scheduling by optimizing the production, distribution, and consumption of energy resources through data-driven automation and predictive capabilities",
     "Keywords": "AI Workflow, LLM Development, Task Automation AI, FastGPT, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-intelligent-scheduling-can-energy",
-    "Url": "/faq/What-intelligent-scheduling-can-energy.html"
   },
   "How-can-the-media-industry": {
     "Category": "AI Basics & Terms",
@@ -10386,8 +8310,6 @@ export const faq = {
     "Title": "How can the media industry use AI to improve content production efficiency?-Fastgpt",
     "Description": "The media industry can significantly enhance content production efficiency by strategically integrating AI tools to automate repetitive tasks, augment human creativity, and optimize workflows. AI adop",
     "Keywords": "Open Source AI, AI Knowledge Management, Smart Assistant, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-media-industry",
-    "Url": "/faq/How-can-the-media-industry.html"
   },
   "How-do-advertising-agencies-use": {
     "Category": "AI Basics & Terms",
@@ -10396,8 +8318,6 @@ export const faq = {
     "Title": "How do advertising agencies use AI to generate creative solutions-Fastgpt",
     "Description": "Advertising agencies leverage AI-powered tools to generate and optimize creative text, visuals, and campaign concepts. This involves using algorithms and machine learning models specifically designed ",
     "Keywords": "AI Automation, Task Automation AI, Document AI, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-do-advertising-agencies-use",
-    "Url": "/faq/How-do-advertising-agencies-use.html"
   },
   "How-can-manufacturing-enterprises-embed": {
     "Category": "AI Basics & Terms",
@@ -10406,8 +8326,6 @@ export const faq = {
     "Title": "How can manufacturing enterprises embed AI into workshop management-Fastgpt",
     "Description": "Manufacturing enterprises can embed AI into workshop management by integrating AI tools with existing operational technology and management systems. Key applications include predictive maintenance, qu",
     "Keywords": "Smart Assistant, AI Workflow, Document AI, LLM Development, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-manufacturing-enterprises-embed",
-    "Url": "/faq/How-can-manufacturing-enterprises-embed.html"
   },
   "Can-AI-help-banks-innovate": {
     "Category": "AI Basics & Terms",
@@ -10416,8 +8334,6 @@ export const faq = {
     "Title": "Can AI help banks innovate wealth management services?-Fastgpt",
     "Description": "AI absolutely enables banks to innovate wealth management services. It leverages advanced technologies to enhance personalization, efficiency, and accessibility within financial planning and investmen",
     "Keywords": "AI Knowledge Management, Enterprise AI, GPT Integration, Vector Search, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-banks-innovate",
-    "Url": "/faq/Can-AI-help-banks-innovate.html"
   },
   "How-can-the-FMCG-industry": {
     "Category": "AI Basics & Terms",
@@ -10426,8 +8342,6 @@ export const faq = {
     "Title": "How can the FMCG industry use AI to seize consumption trends-Fastgpt",
     "Description": "AI empowers FMCG companies to proactively identify and capitalize on emerging consumption trends. This is achievable by deploying AI tools to analyze vast consumer data sources in real-time.\n\nKey appr",
     "Keywords": "LLM Development, AI Chatbot, AI Automation, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-FMCG-industry",
-    "Url": "/faq/How-can-the-FMCG-industry.html"
   },
   "How-can-cross-border-e-commerce-use": {
     "Category": "AI Basics & Terms",
@@ -10436,8 +8350,6 @@ export const faq = {
     "Title": "How can cross-border e-commerce use AI for localized recommendations-Fastgpt",
     "Description": "Cross-border e-commerce can effectively implement AI for localized recommendations by applying machine learning to analyze customer data and regional preferences, enabling personalized product suggest",
     "Keywords": "Open Source AI, AI Automation, AI Chatbot, AI Platform, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-can-cross-border-e-commerce-use",
-    "Url": "/faq/How-can-cross-border-e-commerce-use.html"
   },
   "How-to-embed-AI-into": {
     "Category": "AI Basics & Terms",
@@ -10446,8 +8358,6 @@ export const faq = {
     "Title": "How to embed AI into existing office workflows-Fastgpt",
     "Description": "Integrating AI into existing office workflows involves strategically incorporating artificial intelligence tools to enhance efficiency and decision-making within established operational processes. Thi",
     "Keywords": "FastGPT, Vector Search, AI Automation, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-embed-AI-into",
-    "Url": "/faq/How-to-embed-AI-into.html"
   },
   "Can-AI-seamlessly-integrate-into": {
     "Category": "AI Basics & Terms",
@@ -10456,8 +8366,6 @@ export const faq = {
     "Title": "Can AI seamlessly integrate into a company's existing systems?-Fastgpt",
     "Description": "Yes, AI can integrate effectively into existing company systems, though achieving truly \"seamless\" integration requires careful planning and execution. The feasibility depends on technical compatibili",
     "Keywords": "Vector Search, AI Knowledge Management, API Integration, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-seamlessly-integrate-into",
-    "Url": "/faq/Can-AI-seamlessly-integrate-into.html"
   },
   "How-to-integrate-AI-with": {
     "Category": "AI Basics & Terms",
@@ -10466,8 +8374,6 @@ export const faq = {
     "Title": "How to integrate AI with an existing ERP system-Fastgpt",
     "Description": "Integrating artificial intelligence with an existing ERP system involves connecting specialized AI tools or algorithms to enhance its core functionality. This is achievable through APIs, middleware, o",
     "Keywords": "Open Source AI, Enterprise AI, AI Workflow, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-integrate-AI-with",
-    "Url": "/faq/How-to-integrate-AI-with.html"
   },
   "Can-AI-be-used-with": {
     "Category": "AI Basics & Terms",
@@ -10476,8 +8382,6 @@ export const faq = {
     "Title": "Can AI be used with project management tools?-Fastgpt",
     "Description": "AI integrates effectively with project management tools, enhancing their functionality and user experience. This integration leverages artificial intelligence to automate tasks, provide insights, and ",
     "Keywords": "Intelligent Q&A, Task Automation AI, GPT Integration, Document AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-used-with",
-    "Url": "/faq/Can-AI-be-used-with.html"
   },
   "How-to-integrate-AI-into": {
     "Category": "AI Basics & Terms",
@@ -10486,8 +8390,6 @@ export const faq = {
     "Title": "How to integrate AI into the core aspects of production scheduling-Fastgpt",
     "Description": "Integrating AI into core production scheduling processes involves applying technologies like machine learning and optimization algorithms to enhance decision-making, efficiency, and responsiveness in ",
     "Keywords": "GPT Integration, API Integration, Smart Assistant, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-integrate-AI-into",
-    "Url": "/faq/How-to-integrate-AI-into.html"
   },
   "Can-AI-be-integrated-into": {
     "Category": "AI Basics & Terms",
@@ -10496,8 +8398,6 @@ export const faq = {
     "Title": "Can AI be integrated into OA office platforms?-Fastgpt",
     "Description": "Yes, AI can be effectively integrated into OA (Office Automation) platforms. This integration is not only feasible but increasingly common, enhancing traditional functionality with automation, insight",
     "Keywords": "API Integration, Document AI, AI Workflow, AI Chatbot, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-integrated-into",
-    "Url": "/faq/Can-AI-be-integrated-into.html"
   },
   "Can-AI-seamlessly-connect-to": {
     "Category": "AI Basics & Terms",
@@ -10506,8 +8406,6 @@ export const faq = {
     "Title": "Can AI seamlessly connect to corporate email?-Fastgpt",
     "Description": "AI can integrate with corporate email systems via secure APIs. This allows automated interaction with emails while maintaining necessary security protocols.\n\nConnection requires supported platforms li",
     "Keywords": "Intelligent Q&A, Smart Assistant, AI Automation, LLM Development, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-seamlessly-connect-to",
-    "Url": "/faq/Can-AI-seamlessly-connect-to.html"
   },
   "Can-AI-be-embedded-into": {
     "Category": "AI Basics & Terms",
@@ -10516,8 +8414,6 @@ export const faq = {
     "Title": "Can AI be embedded into the personnel attendance system?-Fastgpt",
     "Description": "Yes, AI can be effectively embedded into personnel attendance systems. Modern attendance solutions increasingly leverage AI technologies like facial recognition, fingerprint or behavioral biometrics, ",
     "Keywords": "FastGPT, Enterprise AI, Intelligent Q&A, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-embedded-into",
-    "Url": "/faq/Can-AI-be-embedded-into.html"
   },
   "How-to-let-AI-take": {
     "Category": "AI Basics & Terms",
@@ -10526,8 +8422,6 @@ export const faq = {
     "Title": "How to let AI take over part of process automation-Fastgpt",
     "Description": "AI can partially automate processes by handling routine, rule-based tasks within defined workflows. This approach allows human employees to focus on higher-value activities requiring judgment and crea",
     "Keywords": "Vector Search, LLM Development, Enterprise AI, Task Automation AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-let-AI-take",
-    "Url": "/faq/How-to-let-AI-take.html"
   },
   "How-can-artificial-intelligence-assist": {
     "Category": "AI Basics & Terms",
@@ -10536,8 +8430,6 @@ export const faq = {
     "Title": "How can artificial intelligence assist in cross-departmental business connections？-Fastgpt",
     "Description": "Yes, AI can significantly enhance cross-departmental business alignment. It streamlines workflows, optimizes communication, and synchronizes goals across different units by processing vast data and id",
     "Keywords": "AI Knowledge Management, Vector Search, Open Source AI, AI Workflow, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-artificial-intelligence-assist",
-    "Url": "/faq/How-can-artificial-intelligence-assist.html"
   },
   "Is-AI-compatible-with-an": {
     "Category": "AI Basics & Terms",
@@ -10546,8 +8438,6 @@ export const faq = {
     "Title": "Is AI compatible with an enterprise's security system?-Fastgpt",
     "Description": "AI can integrate securely with enterprise systems when designed and deployed appropriately. Compatibility primarily depends on robust architectural design and strict governance frameworks.\n\nSuccessful",
     "Keywords": "Open Source AI, Task Automation AI, FastGPT, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Is-AI-compatible-with-an",
-    "Url": "/faq/Is-AI-compatible-with-an.html"
   },
   "How-to-make-AI-support": {
     "Category": "AI Basics & Terms",
@@ -10556,8 +8446,6 @@ export const faq = {
     "Title": "How to make AI support simultaneous operation on different devices-Fastgpt",
     "Description": "Enabling simultaneous AI usage across devices requires cloud-based systems with real-time synchronization capabilities. This allows users to interact with the AI on smartphones, tablets, and computers",
     "Keywords": "AI Workflow, FastGPT, Open Source AI, Smart Assistant, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-support",
-    "Url": "/faq/How-to-make-AI-support.html"
   },
   "Can-AI-be-embedded-in": {
     "Category": "AI Basics & Terms",
@@ -10566,8 +8454,6 @@ export const faq = {
     "Title": "Can AI be embedded in online-offline hybrid business scenarios?-Fastgpt",
     "Description": "Yes, AI can be effectively embedded in online-offline hybrid business scenarios. Its capabilities bridge the digital and physical realms to create more cohesive and intelligent customer experiences.\n\n",
     "Keywords": "FastGPT, Enterprise AI, AI Chatbot, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-embedded-in",
-    "Url": "/faq/Can-AI-be-embedded-in.html"
   },
   "How-to-make-AI-run": {
     "Category": "AI Basics & Terms",
@@ -10576,8 +8462,6 @@ export const faq = {
     "Title": "How to make AI run without changing the system structure-Fastgpt",
     "Description": "Deploying AI without changing the system structure typically involves using non-invasive integration methods. This is feasible primarily by implementing AI as a distinct external service.\n\nKey approac",
     "Keywords": "Open Source AI, Document AI, AI Knowledge Management, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-run",
-    "Url": "/faq/How-to-make-AI-run.html"
   },
   "Can-AI-be-synchronously-connected": {
     "Category": "AI Basics & Terms",
@@ -10586,8 +8470,6 @@ export const faq = {
     "Title": "Can AI be synchronously connected with mobile applications?-Fastgpt",
     "Description": "Yes, AI systems can be synchronously connected with mobile applications. Real-time interaction between AI engines (hosted on cloud platforms or edge devices) and mobile apps is technically achievable.",
     "Keywords": "AI Workflow, Task Automation AI, GPT Integration, AI Chatbot, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-synchronously-connected",
-    "Url": "/faq/Can-AI-be-synchronously-connected.html"
   },
   "What-preparation-steps-are-needed": {
     "Category": "AI Basics & Terms",
@@ -10596,8 +8478,6 @@ export const faq = {
     "Title": "What preparation steps are needed to successfully deploy AI?-Fastgpt",
     "Description": "Successful deployment of AI requires meticulous planning and preparation to ensure the system achieves its intended goals, integrates smoothly, and delivers sustained value. This foundational phase mi",
     "Keywords": "GPT Integration, Smart Assistant, Task Automation AI, Open Source AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/What-preparation-steps-are-needed",
-    "Url": "/faq/What-preparation-steps-are-needed.html"
   },
   "What-tests-does-a-company": {
     "Category": "AI Basics & Terms",
@@ -10606,8 +8486,6 @@ export const faq = {
     "Title": "What tests does a company need to conduct before launching AI?-Fastgpt",
     "Description": "Before launching an AI system, a company must conduct a series of crucial tests to ensure it functions correctly, safely, and ethically. These tests validate performance, reliability, and adherence to",
     "Keywords": "FastGPT, API Integration, LLM Development, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-tests-does-a-company",
-    "Url": "/faq/What-tests-does-a-company.html"
   },
   "How-to-plan-an-AI": {
     "Category": "AI Basics & Terms",
@@ -10616,8 +8494,6 @@ export const faq = {
     "Title": "How to plan an AI implementation roadmap-Fastgpt",
     "Description": "An AI implementation roadmap outlines the strategic plan for adopting and scaling artificial intelligence within an organization, addressing key stages from concept to production. It ensures alignment",
     "Keywords": "FastGPT, AI Automation, API Integration, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-plan-an-AI",
-    "Url": "/faq/How-to-plan-an-AI.html"
   },
   "What-is-the-core-process": {
     "Category": "AI Basics & Terms",
@@ -10626,8 +8502,6 @@ export const faq = {
     "Title": "What is the core process of AI deployment?-Fastgpt",
     "Description": "The core process of AI deployment involves the necessary steps to move a trained machine learning model from development into a production environment where it can deliver predictions for real-world b",
     "Keywords": "LLM Development, FastGPT, AI Automation, Document AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-core-process",
-    "Url": "/faq/What-is-the-core-process.html"
   },
   "How-to-choose-a-suitable": {
     "Category": "AI Basics & Terms",
@@ -10636,8 +8510,6 @@ export const faq = {
     "Title": "How to choose a suitable AI platform or tool-Fastgpt",
     "Description": "Selecting an appropriate AI platform or tool involves matching your specific business requirements, technical capabilities, and strategic objectives with available solutions. This process requires car",
     "Keywords": "Enterprise AI, AI Platform, Smart Assistant, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-choose-a-suitable",
-    "Url": "/faq/How-to-choose-a-suitable.html"
   },
   "What-data-preparation-is-required": {
     "Category": "AI Basics & Terms",
@@ -10646,8 +8518,6 @@ export const faq = {
     "Title": "What data preparation is required before AI deployment?-Fastgpt",
     "Description": "Data preparation involves collecting, cleansing, and transforming raw data into a suitable format for training and deploying AI models; it is a mandatory step before deployment to ensure model functio",
     "Keywords": "Open Source AI, Vector Search, Document AI, LLM Development, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-data-preparation-is-required",
-    "Url": "/faq/What-data-preparation-is-required.html"
   },
   "How-to-Conduct-a-Good": {
     "Category": "AI Basics & Terms",
@@ -10656,8 +8526,6 @@ export const faq = {
     "Title": "How to Conduct a Good Risk Assessment for AI Deployment-Fastgpt",
     "Description": "A good AI deployment risk assessment is a systematic process to identify and mitigate potential harms before launch. It evaluates technical performance, ethical concerns, and operational impacts acros",
     "Keywords": "Task Automation AI, Open Source AI, AI Knowledge Management, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-Conduct-a-Good",
-    "Url": "/faq/How-to-Conduct-a-Good.html"
   },
   "How-to-ensure-business-continuity": {
     "Category": "AI Basics & Terms",
@@ -10666,8 +8534,6 @@ export const faq = {
     "Title": "How to ensure business continuity when AI goes online-Fastgpt",
     "Description": "Business continuity during AI deployment can be achieved through meticulous planning, robust safeguards, and continuous oversight. Implementing proactive measures minimizes disruption risks when integ",
     "Keywords": "GPT Integration, API Integration, AI Automation, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-business-continuity",
-    "Url": "/faq/How-to-ensure-business-continuity.html"
   },
   "How-to-handle-permission-issues": {
     "Category": "AI Basics & Terms",
@@ -10676,8 +8542,6 @@ export const faq = {
     "Title": "How to handle permission issues during AI deployment-Fastgpt",
     "Description": "Handling permission issues during AI deployment involves implementing a robust access control framework to regulate data and system usage. This is achievable through predefined roles and authorization",
     "Keywords": "Document AI, Smart Assistant, AI Workflow, FastGPT, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-handle-permission-issues",
-    "Url": "/faq/How-to-handle-permission-issues.html"
   },
   "How-to-Ensure-Data-Security": {
     "Category": "AI Basics & Terms",
@@ -10686,8 +8550,6 @@ export const faq = {
     "Title": "How to Ensure Data Security When Deploying AI-Fastgpt",
     "Description": "Deploying AI securely is achievable through a combination of technical safeguards, robust policies, and organizational vigilance.\n\nImplementing strong data encryption at rest and in-transit, strict ac",
     "Keywords": "Open Source AI, Enterprise AI, FastGPT, AI Knowledge Management, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Ensure-Data-Security",
-    "Url": "/faq/How-to-Ensure-Data-Security.html"
   },
   "How-to-evaluate-the-effect": {
     "Category": "AI Basics & Terms",
@@ -10696,8 +8558,6 @@ export const faq = {
     "Title": "How to evaluate the effect after AI implementation-Fastgpt",
     "Description": "Evaluating AI implementation effectiveness involves measuring the actual performance and business impact of the deployed AI solution against its predefined objectives. This assessment determines wheth",
     "Keywords": "GPT Integration, LLM Development, Task Automation AI, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-evaluate-the-effect",
-    "Url": "/faq/How-to-evaluate-the-effect.html"
   },
   "What-cross-departmental-collaboration-is-required": {
     "Category": "AI Basics & Terms",
@@ -10706,8 +8566,6 @@ export const faq = {
     "Title": "What cross-departmental collaboration is required for AI deployment?-Fastgpt",
     "Description": "AI deployment necessitates cross-departmental collaboration to bridge business goals with technical implementation. This typically involves key departments like IT, data science, business units, legal",
     "Keywords": "AI Automation, AI Chatbot, Task Automation AI, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-cross-departmental-collaboration-is-required",
-    "Url": "/faq/What-cross-departmental-collaboration-is-required.html"
   },
   "How-to-Develop-an-AI": {
     "Category": "AI Basics & Terms",
@@ -10716,8 +8574,6 @@ export const faq = {
     "Title": "How to Develop an AI System Operation and Maintenance Plan-Fastgpt",
     "Description": "Developing an AI system operation and maintenance (O&M) plan is a structured approach to ensure AI systems remain reliable, secure, accurate, and deliver business value after deployment. It outlines p",
     "Keywords": "GPT Integration, AI Knowledge Management, API Integration, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-Develop-an-AI",
-    "Url": "/faq/How-to-Develop-an-AI.html"
   },
   "How-to-Continuously-Optimize-AI": {
     "Category": "AI Basics & Terms",
@@ -10726,8 +8582,6 @@ export const faq = {
     "Title": "How to Continuously Optimize AI After Deployment-Fastgpt",
     "Description": "Post-deployment AI optimization is essential and feasible through continuous monitoring and iterative updates. This ensures models maintain accuracy and relevance as data and user needs evolve.\n\nKey r",
     "Keywords": "Smart Assistant, Task Automation AI, API Integration, AI Platform, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-Continuously-Optimize-AI",
-    "Url": "/faq/How-to-Continuously-Optimize-AI.html"
   },
   "How-to-train-employees-to": {
     "Category": "AI Basics & Terms",
@@ -10736,8 +8590,6 @@ export const faq = {
     "Title": "How to train employees to use the new AI system-Fastgpt",
     "Description": "Effective training for employees on a new AI system is feasible through a well-structured program focused on practical application.\n\nKey steps include thorough preparation, selecting appropriate train",
     "Keywords": "Document AI, Enterprise AI, Task Automation AI, Intelligent Q&A, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-train-employees-to",
-    "Url": "/faq/How-to-train-employees-to.html"
   },
   "What-are-the-common-reasons": {
     "Category": "AI Basics & Terms",
@@ -10746,8 +8598,6 @@ export const faq = {
     "Title": "What are the common reasons for AI implementation failures?-Fastgpt",
     "Description": "AI implementation often fails due to unclear business objectives, inadequate data quality, lack of necessary skills, poor integration with existing workflows, and underestimating change management or ",
     "Keywords": "Open Source AI, AI Workflow, AI Platform, Vector Search, API Integration",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-common-reasons",
-    "Url": "/faq/What-are-the-common-reasons.html"
   },
   "How-to-Avoid-Data-Loss": {
     "Category": "Marketing & Support",
@@ -10756,8 +8606,6 @@ export const faq = {
     "Title": "How to Avoid Data Loss When Upgrading AI Agents-Fastgpt",
     "Description": "Implementing a robust upgrade process prevents data loss in AI agent deployments. This is achievable through meticulous preparation and defined procedures.\n\nCore strategies involve comprehensive data ",
     "Keywords": "API Integration, LLM Development, AI Knowledge Management, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Avoid-Data-Loss",
-    "Url": "/faq/How-to-Avoid-Data-Loss.html"
   },
   "How-to-Develop-an-Emergency": {
     "Category": "AI Basics & Terms",
@@ -10766,8 +8614,6 @@ export const faq = {
     "Title": "How to Develop an Emergency Response Plan for AI Deployment-Fastgpt",
     "Description": "Developing an AI emergency response plan involves establishing structured procedures to address unforeseen malfunctions, safety risks, or ethical breaches during AI system deployment. It is essential ",
     "Keywords": "Task Automation AI, GPT Integration, Vector Search, API Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Develop-an-Emergency",
-    "Url": "/faq/How-to-Develop-an-Emergency.html"
   },
   "How-to-collect-feedback-after": {
     "Category": "AI Basics & Terms",
@@ -10776,8 +8622,6 @@ export const faq = {
     "Title": "How to collect feedback after AI deployment is completed-Fastgpt",
     "Description": "Collecting feedback after AI deployment is essential and achievable through multiple channels. It requires establishing structured processes to gather user insights systematically.  \n\nDesignate specif",
     "Keywords": "AI Chatbot, Smart Assistant, AI Knowledge Management, GPT Integration, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-collect-feedback-after",
-    "Url": "/faq/How-to-collect-feedback-after.html"
   },
   "How-to-Complete-AI-Deployment": {
     "Category": "AI Basics & Terms",
@@ -10786,8 +8630,6 @@ export const faq = {
     "Title": "How to Complete AI Deployment on a Limited Budget-Fastgpt",
     "Description": "Completing AI deployment on a limited budget is absolutely achievable through strategic resource allocation and leveraging cost-efficient technologies. Proven approaches like utilizing cloud services ",
     "Keywords": "FastGPT, Smart Assistant, AI Platform, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-Complete-AI-Deployment",
-    "Url": "/faq/How-to-Complete-AI-Deployment.html"
   },
   "What-are-some-good-ways": {
     "Category": "AI Basics & Terms",
@@ -10796,8 +8638,6 @@ export const faq = {
     "Title": "What are some good ways to test the waters with AI with low barriers to entry?-Fastgpt",
     "Description": "Entering the AI space with low barriers involves starting with accessible, cost-effective methods like free trials, pre-built tools, and basic automation features. These require minimal technical skil",
     "Keywords": "AI Platform, Document AI, Smart Assistant, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-are-some-good-ways",
-    "Url": "/faq/What-are-some-good-ways.html"
   },
   "How-can-small-companies-quickly": {
     "Category": "AI Basics & Terms",
@@ -10806,8 +8646,6 @@ export const faq = {
     "Title": "How can small companies quickly get started with AI-Fastgpt",
     "Description": "Small companies can effectively implement AI by leveraging accessible tools such as chatbots, process automation, and basic data analytics. Starting small with manageable pilots is both feasible and h",
     "Keywords": "Smart Assistant, Task Automation AI, Vector Search, AI Automation, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-can-small-companies-quickly",
-    "Url": "/faq/How-can-small-companies-quickly.html"
   },
   "Can-a-project-be-launched": {
     "Category": "AI Basics & Terms",
@@ -10816,8 +8654,6 @@ export const faq = {
     "Title": "Can a project be launched using AI without a technical team?-Fastgpt",
     "Description": "Yes, projects leveraging AI can often be successfully launched without an in-house technical team. This is achievable primarily through utilizing accessible no-code/low-code platforms, cloud-based AI ",
     "Keywords": "AI Platform, Intelligent Q&A, Vector Search, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-a-project-be-launched",
-    "Url": "/faq/Can-a-project-be-launched.html"
   },
   "Are-there-any-lightweight-AI": {
     "Category": "AI Basics & Terms",
@@ -10826,8 +8662,6 @@ export const faq = {
     "Title": "Are there any lightweight AI solutions suitable for startups?-Fastgpt",
     "Description": "Yes, startups can access several lightweight AI solutions. These options are typically cost-effective, require minimal technical overhead, and deliver value quickly.\n\nKey characteristics include cloud",
     "Keywords": "Enterprise AI, Smart Assistant, Document AI, AI Automation, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Are-there-any-lightweight-AI",
-    "Url": "/faq/Are-there-any-lightweight-AI.html"
   },
   "How-to-quickly-create-a": {
     "Category": "AI Basics & Terms",
@@ -10836,8 +8670,6 @@ export const faq = {
     "Title": "How to quickly create a demo prototype using AI-Fastgpt",
     "Description": "AI tools enable rapid demo prototype creation by transforming concept outlines into interactive mockups within hours, significantly reducing manual design effort. This approach is feasible for early-s",
     "Keywords": "LLM Development, FastGPT, AI Chatbot, Vector Search, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-create-a",
-    "Url": "/faq/How-to-quickly-create-a.html"
   },
   "Can-AI-directly-call-existing": {
     "Category": "AI Basics & Terms",
@@ -10846,8 +8678,6 @@ export const faq = {
     "Title": "Can AI directly call existing interface services?-Fastgpt",
     "Description": "Yes, AI systems can directly call existing interface services. This is a common and practical capability for modern AI applications.\n\nAI models can invoke APIs, web services, databases, or other softw",
     "Keywords": "Intelligent Q&A, AI Platform, Smart Assistant, AI Knowledge Management, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-directly-call-existing",
-    "Url": "/faq/Can-AI-directly-call-existing.html"
   },
   "How-to-quickly-test-AI": {
     "Category": "AI Basics & Terms",
@@ -10856,8 +8686,6 @@ export const faq = {
     "Title": "How to quickly test AI functions with open-source tools-Fastgpt",
     "Description": "Leverage open-source tools to build a streamlined testing pipeline for AI features. Key components include test automation frameworks like Testim or Cypress for UI validation, and JUnit/pytest for API",
     "Keywords": "Smart Assistant, AI Workflow, Open Source AI, FastGPT, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-test-AI",
-    "Url": "/faq/How-to-quickly-test-AI.html"
   },
   "Is-there-a-no-code-way": {
     "Category": "AI Basics & Terms",
@@ -10866,8 +8694,6 @@ export const faq = {
     "Title": "Is there a no-code way to quickly build AI?-Fastgpt",
     "Description": "Yes, there are multiple no-code platforms enabling the rapid development of AI applications without traditional programming. These platforms utilize visual interfaces and prebuilt AI components.\n\nThes",
     "Keywords": "Smart Assistant, FastGPT, AI Knowledge Management, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Is-there-a-no-code-way",
-    "Url": "/faq/Is-there-a-no-code-way.html"
   },
   "How-to-set-up-a": {
     "Category": "AI Basics & Terms",
@@ -10876,8 +8702,6 @@ export const faq = {
     "Title": "How to set up a testing environment in three days using AI-Fastgpt",
     "Description": "Setting up a testing environment using AI within three days is feasible by leveraging automated infrastructure provisioning, intelligent test data generation, and containerized deployments.\n\nSuccessfu",
     "Keywords": "AI Workflow, FastGPT, AI Knowledge Management, API Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-set-up-a",
-    "Url": "/faq/How-to-set-up-a.html"
   },
   "Can-AI-directly-generate-conversational": {
     "Category": "AI Basics & Terms",
@@ -10886,8 +8710,6 @@ export const faq = {
     "Title": "Can AI directly generate conversational services from documents?-Fastgpt",
     "Description": "Yes, AI can directly generate conversational services from documents. This is made possible through technologies like natural language processing (NLP) and machine learning that understand and utilize",
     "Keywords": "FastGPT, Enterprise AI, AI Platform, GPT Integration, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-directly-generate-conversational",
-    "Url": "/faq/Can-AI-directly-generate-conversational.html"
   },
   "How-to-quickly-connect-AI": {
     "Category": "AI Basics & Terms",
@@ -10896,8 +8718,6 @@ export const faq = {
     "Title": "How to quickly connect AI to a small amount of business data-Fastgpt",
     "Description": "Quickly integrating AI with small business datasets is feasible using pre-built tools and APIs that minimize technical overhead, enabling rapid deployment without extensive infrastructure changes.\n\nFo",
     "Keywords": "API Integration, FastGPT, LLM Development, Enterprise AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-connect-AI",
-    "Url": "/faq/How-to-quickly-connect-AI.html"
   },
   "Can-AI-run-directly-on": {
     "Category": "AI Basics & Terms",
@@ -10906,8 +8726,6 @@ export const faq = {
     "Title": "Can AI run directly on a personal computer?-Fastgpt",
     "Description": "Yes, AI can run directly on a personal computer. Modern desktop and laptop hardware is increasingly capable of running various AI models, especially for inference, locally without requiring constant i",
     "Keywords": "Task Automation AI, AI Chatbot, Smart Assistant, Intelligent Q&A, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-run-directly-on",
-    "Url": "/faq/Can-AI-run-directly-on.html"
   },
   "How-to-quickly-launch-AI": {
     "Category": "AI Basics & Terms",
@@ -10916,8 +8734,6 @@ export const faq = {
     "Title": "How to quickly launch AI on WeChat or DingTalk-Fastgpt",
     "Description": "Launching AI chatbots on WeChat Work or DingTalk is highly feasible via their official bot integration frameworks.\n\nSuccess requires accessing the platform's developer center, creating a bot applicati",
     "Keywords": "Smart Assistant, Open Source AI, FastGPT, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-launch-AI",
-    "Url": "/faq/How-to-quickly-launch-AI.html"
   },
   "Are-there-any-ready-to-use-templates": {
     "Category": "AI Basics & Terms",
@@ -10926,8 +8742,6 @@ export const faq = {
     "Title": "Are there any ready-to-use templates for AI?-Fastgpt",
     "Description": "Yes, readily available AI templates exist. Numerous platforms and libraries offer pre-built templates to accelerate the development and deployment of AI models for specific tasks.\n\nThese templates typ",
     "Keywords": "AI Platform, Open Source AI, GPT Integration, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Are-there-any-ready-to-use-templates",
-    "Url": "/faq/Are-there-any-ready-to-use-templates.html"
   },
   "How-to-rent-cloud-based-AI": {
     "Category": "AI Basics & Terms",
@@ -10936,8 +8750,6 @@ export const faq = {
     "Title": "How to rent cloud-based AI services at low cost-Fastgpt",
     "Description": "Low-cost rental of cloud-based AI services is achievable through strategic vendor and pricing model selections. Businesses can access advanced AI capabilities without major upfront investments via pay",
     "Keywords": "AI Knowledge Management, Task Automation AI, Enterprise AI, AI Platform, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-rent-cloud-based-AI",
-    "Url": "/faq/How-to-rent-cloud-based-AI.html"
   },
   "Can-AI-be-piloted-with": {
     "Category": "AI Basics & Terms",
@@ -10946,8 +8758,6 @@ export const faq = {
     "Title": "Can AI be piloted with a free plan first?-Fastgpt",
     "Description": "Yes, most major cloud AI platforms and many specialized AI software providers offer entry-level free plans specifically designed for piloting and initial testing. These allow organizations to explore ",
     "Keywords": "Open Source AI, AI Chatbot, Task Automation AI, Document AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-piloted-with",
-    "Url": "/faq/Can-AI-be-piloted-with.html"
   },
   "How-to-evaluate-the-effectiveness": {
     "Category": "AI Basics & Terms",
@@ -10956,8 +8766,6 @@ export const faq = {
     "Title": "How to evaluate the effectiveness of a small-scale AI pilot project-Fastgpt",
     "Description": "Evaluating the effectiveness of a small-scale AI pilot project is feasible and critical for guiding future decisions. Specific metrics and focused analysis are used to assess its performance and poten",
     "Keywords": "Task Automation AI, GPT Integration, AI Chatbot, AI Platform, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-evaluate-the-effectiveness",
-    "Url": "/faq/How-to-evaluate-the-effectiveness.html"
   },
   "How-to-protect-private-data": {
     "Category": "AI Basics & Terms",
@@ -10966,8 +8774,6 @@ export const faq = {
     "Title": "How to protect private data during the AI testing phase-Fastgpt",
     "Description": "Private data protection during AI testing is achievable through robust security measures and careful data handling practices. It prevents unauthorized access and misuse of sensitive information.  \n\nKe",
     "Keywords": "FastGPT, AI Automation, Intelligent Q&A, AI Workflow, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-protect-private-data",
-    "Url": "/faq/How-to-protect-private-data.html"
   },
   "What-are-the-AI-innovation": {
     "Category": "AI Basics & Terms",
@@ -10976,8 +8782,6 @@ export const faq = {
     "Title": "What are the AI innovation ideas in different industries?-Fastgpt",
     "Description": "AI innovation involves applying artificial intelligence technologies like machine learning and generative AI to transform industry-specific processes, products, and customer experiences. It centers on",
     "Keywords": "API Integration, Intelligent Q&A, Smart Assistant, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-AI-innovation",
-    "Url": "/faq/What-are-the-AI-innovation.html"
   },
   "How-can-AI-be-applied": {
     "Category": "AI Basics & Terms",
@@ -10986,8 +8790,6 @@ export const faq = {
     "Title": "How can AI be applied in warehousing and logistics?-Fastgpt",
     "Description": "Artificial intelligence optimizes warehousing and logistics by automating tasks, enhancing decision-making, and improving efficiency. It transforms operations from inventory control to last-mile deliv",
     "Keywords": "LLM Development, GPT Integration, Open Source AI, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-be-applied",
-    "Url": "/faq/How-can-AI-be-applied.html"
   },
   "What-are-the-new-inspirations": {
     "Category": "AI Basics & Terms",
@@ -10996,8 +8798,6 @@ export const faq = {
     "Title": "What are the new inspirations for using AI in the field of education?-Fastgpt",
     "Description": "AI introduces new inspirations in education primarily through personalized learning at scale and enhanced efficiency. It enables adaptive learning systems and automates administrative tasks to free ed",
     "Keywords": "Task Automation AI, AI Platform, FastGPT, API Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-new-inspirations",
-    "Url": "/faq/What-are-the-new-inspirations.html"
   },
   "How-can-AI-create-surprising": {
     "Category": "AI Basics & Terms",
@@ -11006,8 +8806,6 @@ export const faq = {
     "Title": "How can AI create surprising experiences in healthcare services-Fastgpt",
     "Description": "AI introduces surprise in healthcare by enabling unexpected personalization and predictive insights that enhance patient engagement and well-being. It transforms standard services into more proactive ",
     "Keywords": "GPT Integration, AI Platform, FastGPT, API Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-create-surprising",
-    "Url": "/faq/How-can-AI-create-surprising.html"
   },
   "How-e-commerce-uses-AI-to": {
     "Category": "AI Basics & Terms",
@@ -11016,8 +8814,6 @@ export const faq = {
     "Title": "How e-commerce uses AI to create immersive shopping experiences-Fastgpt",
     "Description": "E-commerce leverages artificial intelligence technologies such as augmented reality (AR), virtual reality (VR), sophisticated recommendation engines, and conversational AI to craft immersive shopping ",
     "Keywords": "Document AI, Task Automation AI, FastGPT, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-e-commerce-uses-AI-to",
-    "Url": "/faq/How-e-commerce-uses-AI-to.html"
   },
   "What-new-services-can-the": {
     "Category": "AI Basics & Terms",
@@ -11026,8 +8822,6 @@ export const faq = {
     "Title": "What new services can the tourism industry develop using AI?-Fastgpt",
     "Description": "The tourism industry can leverage artificial intelligence to develop innovative services that improve personalization, efficiency, and traveler experiences. AI enables data-driven enhancements across ",
     "Keywords": "Intelligent Q&A, Task Automation AI, FastGPT, GPT Integration, API Integration",
-    "URL": "https://fastgpt.io/en/faq/What-new-services-can-the",
-    "Url": "/faq/What-new-services-can-the.html"
   },
   "How-can-catering-use-AI": {
     "Category": "AI Basics & Terms",
@@ -11036,8 +8830,6 @@ export const faq = {
     "Title": "How can catering use AI to enhance store management creativity-Fastgpt",
     "Description": "AI significantly enhances catering store management creativity by providing data-driven insights and innovative solutions. It transforms traditional approaches through intelligent analysis and automat",
     "Keywords": "Task Automation AI, AI Chatbot, AI Knowledge Management, API Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-catering-use-AI",
-    "Url": "/faq/How-can-catering-use-AI.html"
   },
   "What-innovative-applications-does-AI": {
     "Category": "AI Basics & Terms",
@@ -11046,8 +8838,6 @@ export const faq = {
     "Title": "What innovative applications does AI have in financial risk control?-Fastgpt",
     "Description": "AI introduces innovations in financial risk control through machine learning, big data analytics, and automation. These technologies significantly enhance efficiency and predictive accuracy beyond tra",
     "Keywords": "AI Chatbot, AI Platform, Task Automation AI, Document AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/What-innovative-applications-does-AI",
-    "Url": "/faq/What-innovative-applications-does-AI.html"
   },
   "Can-AI-be-used-for": {
     "Category": "AI Basics & Terms",
@@ -11056,8 +8846,6 @@ export const faq = {
     "Title": "Can AI be used for virtual house viewing in real estate?-Fastgpt",
     "Description": "Yes, AI can be effectively used to power virtual house viewings in real estate. Technologies like computer vision, augmented reality (AR), and virtual reality (VR) enable the creation of immersive, in",
     "Keywords": "GPT Integration, Open Source AI, FastGPT, LLM Development, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-be-used-for",
-    "Url": "/faq/Can-AI-be-used-for.html"
   },
   "How-can-AI-optimize-travel": {
     "Category": "AI Basics & Terms",
@@ -11066,8 +8854,6 @@ export const faq = {
     "Title": "How can AI optimize travel routes for public transportation-Fastgpt",
     "Description": "AI can optimize public transportation routes by analyzing vast datasets to calculate the most efficient paths and schedules. This improves passenger travel times, reduces operational costs, and enhanc",
     "Keywords": "LLM Development, AI Knowledge Management, Vector Search, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-optimize-travel",
-    "Url": "/faq/How-can-AI-optimize-travel.html"
   },
   "What-are-the-new-creative": {
     "Category": "AI Basics & Terms",
@@ -11076,8 +8862,6 @@ export const faq = {
     "Title": "What are the new creative ideas for using AI in the entertainment industry?-Fastgpt",
     "Description": "AI introduces novel creative applications across the entertainment sector, including hyper-personalized experiences, generative content creation, and AI-driven character interaction. These innovations",
     "Keywords": "Document AI, AI Workflow, GPT Integration, Open Source AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-new-creative",
-    "Url": "/faq/What-are-the-new-creative.html"
   },
   "What-intelligent-management-can-be": {
     "Category": "AI Basics & Terms",
@@ -11086,8 +8870,6 @@ export const faq = {
     "Title": "What intelligent management can be done in agriculture using AI?-Fastgpt",
     "Description": "AI enables precision farming and data-driven decision making in agricultural management. It automates monitoring and optimizes resource use for crops, livestock, and greenhouses.\n\nKey applications uti",
     "Keywords": "GPT Integration, Open Source AI, FastGPT, AI Platform, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/What-intelligent-management-can-be",
-    "Url": "/faq/What-intelligent-management-can-be.html"
   },
   "How-can-the-environmental-protection": {
     "Category": "AI Basics & Terms",
@@ -11096,8 +8878,6 @@ export const faq = {
     "Title": "How can the environmental protection industry use AI to enhance monitoring capabilities-Fastgpt",
     "Description": "The environmental protection industry can leverage AI to significantly enhance environmental monitoring capabilities. Artificial intelligence enables automated analysis of vast environmental datasets ",
     "Keywords": "LLM Development, AI Knowledge Management, Open Source AI, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-environmental-protection",
-    "Url": "/faq/How-can-the-environmental-protection.html"
   },
   "What-innovative-membership-marketing-can": {
     "Category": "AI Basics & Terms",
@@ -11106,8 +8886,6 @@ export const faq = {
     "Title": "What innovative membership marketing can the retail industry achieve with AI?-Fastgpt",
     "Description": "AI enables highly innovative membership marketing in retail through predictive personalization and dynamic engagement strategies. Retailers can leverage AI to build smarter, adaptive loyalty programs ",
     "Keywords": "Smart Assistant, GPT Integration, Task Automation AI, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/What-innovative-membership-marketing-can",
-    "Url": "/faq/What-innovative-membership-marketing-can.html"
   },
   "What-changes-can-AI-bring": {
     "Category": "AI Basics & Terms",
@@ -11116,8 +8894,6 @@ export const faq = {
     "Title": "What changes can AI bring to news publishing?-Fastgpt",
     "Description": "AI is transforming news publishing by automating content creation, personalizing user experiences, and enhancing distribution efficiency. It enables faster news delivery and unlocks new service possib",
     "Keywords": "API Integration, Smart Assistant, AI Knowledge Management, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-changes-can-AI-bring",
-    "Url": "/faq/What-changes-can-AI-bring.html"
   },
   "How-can-the-sports-industry": {
     "Category": "AI Basics & Terms",
@@ -11126,8 +8902,6 @@ export const faq = {
     "Title": "How can the sports industry use AI to optimize the event experience?-Fastgpt",
     "Description": "The sports industry can effectively optimize event experiences using AI technology. AI offers feasible solutions to enhance both fan engagement and operational efficiency.  \n\nAI enhances live experien",
     "Keywords": "Open Source AI, Smart Assistant, AI Platform, Enterprise AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-the-sports-industry",
-    "Url": "/faq/How-can-the-sports-industry.html"
   },
   "How-can-AI-transform-traditional": {
     "Category": "AI Basics & Terms",
@@ -11136,8 +8910,6 @@ export const faq = {
     "Title": "How can AI transform traditional wholesale markets?-Fastgpt",
     "Description": "AI can significantly transform traditional wholesale markets by digitizing operations, automating processes, and enabling data-driven decision-making. This enhances efficiency, reduces costs, and unlo",
     "Keywords": "AI Chatbot, Vector Search, API Integration, LLM Development, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-transform-traditional",
-    "Url": "/faq/How-can-AI-transform-traditional.html"
   },
   "How-to-integrate-AI-applications": {
     "Category": "AI Basics & Terms",
@@ -11146,8 +8918,6 @@ export const faq = {
     "Title": "How to integrate AI applications into smart city construction-Fastgpt",
     "Description": "Integrating AI into smart city construction involves strategically deploying AI technologies like machine learning, computer vision, and natural language processing across urban infrastructure and ser",
     "Keywords": "FastGPT, AI Platform, LLM Development, AI Knowledge Management, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-integrate-AI-applications",
-    "Url": "/faq/How-to-integrate-AI-applications.html"
   },
   "What-role-can-AI-play": {
     "Category": "AI Basics & Terms",
@@ -11156,8 +8926,6 @@ export const faq = {
     "Title": "What role can AI play in insurance claims?-Fastgpt",
     "Description": "AI can play a transformative role in insurance claims processing, primarily by enhancing efficiency, improving accuracy, and detecting fraud. It automates tasks and provides intelligent decision suppo",
     "Keywords": "Open Source AI, LLM Development, AI Knowledge Management, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/What-role-can-AI-play",
-    "Url": "/faq/What-role-can-AI-play.html"
   },
   "How-to-automate-market-research": {
     "Category": "AI Basics & Terms",
@@ -11166,8 +8934,6 @@ export const faq = {
     "Title": "How to automate market research work with AI-Fastgpt",
     "Description": "AI can automate significant portions of market research work, increasing efficiency and scale. This involves using artificial intelligence technologies to handle various research tasks traditionally d",
     "Keywords": "Document AI, FastGPT, Smart Assistant, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-automate-market-research",
-    "Url": "/faq/How-to-automate-market-research.html"
   },
   "Can-AI-analyze-competitor-data": {
     "Category": "AI Basics & Terms",
@@ -11176,8 +8942,6 @@ export const faq = {
     "Title": "Can AI analyze competitor data on its own?-Fastgpt",
     "Description": "Yes, AI can autonomously analyze competitor data. This capability is feasible using machine learning algorithms and natural language processing techniques designed to extract insights from diverse dat",
     "Keywords": "AI Workflow, Enterprise AI, Intelligent Q&A, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-analyze-competitor-data",
-    "Url": "/faq/Can-AI-analyze-competitor-data.html"
   },
   "How-to-automatically-generate-market": {
     "Category": "AI Basics & Terms",
@@ -11186,8 +8950,6 @@ export const faq = {
     "Title": "How to automatically generate market analysis reports using AI-Fastgpt",
     "Description": "AI technology enables the automated generation of market analysis reports by using natural language processing (NLP), machine learning (ML), and large language models (LLMs) to process diverse data in",
     "Keywords": "LLM Development, AI Workflow, Task Automation AI, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-automatically-generate-market",
-    "Url": "/faq/How-to-automatically-generate-market.html"
   },
   "Can-AI-Discover-Hidden-Consumption": {
     "Category": "AI Basics & Terms",
@@ -11196,8 +8958,6 @@ export const faq = {
     "Title": "Can AI Discover Hidden Consumption Trends-Fastgpt",
     "Description": "AI can indeed discover hidden consumption trends. Advanced algorithms analyze vast datasets to uncover subtle shifts invisible through traditional methods.\n\nThis capability relies on processing divers",
     "Keywords": "AI Automation, LLM Development, Open Source AI, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Discover-Hidden-Consumption",
-    "Url": "/faq/Can-AI-Discover-Hidden-Consumption.html"
   },
   "Can-AI-develop-marketing-plans": {
     "Category": "AI Basics & Terms",
@@ -11206,8 +8966,6 @@ export const faq = {
     "Title": "Can AI develop marketing plans based on historical data?-Fastgpt",
     "Description": "AI can develop marketing plans leveraging historical data. Yes, leveraging AI for this purpose is technologically feasible and increasingly common in modern marketing operations.\n\nAI models analyze pa",
     "Keywords": "Task Automation AI, Vector Search, API Integration, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-develop-marketing-plans",
-    "Url": "/faq/Can-AI-develop-marketing-plans.html"
   },
   "Can-AI-automatically-analyze-changes": {
     "Category": "AI Basics & Terms",
@@ -11216,8 +8974,6 @@ export const faq = {
     "Title": "Can AI automatically analyze changes in brand reputation?-Fastgpt",
     "Description": "Yes, AI can automatically analyze changes in brand reputation. This is a primary application of AI-powered sentiment analysis and brand monitoring tools, albeit with limitations inherent to evolving t",
     "Keywords": "AI Knowledge Management, Enterprise AI, Open Source AI, API Integration, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-changes",
-    "Url": "/faq/Can-AI-automatically-analyze-changes.html"
   },
   "Can-AI-automatically-identify-potential": {
     "Category": "AI Basics & Terms",
@@ -11226,8 +8982,6 @@ export const faq = {
     "Title": "Can AI automatically identify potential high-value customers?-Fastgpt",
     "Description": "AI can automatically identify potential high-value customers using machine learning algorithms. This capability leverages historical and real-time data to pinpoint patterns indicative of significant v",
     "Keywords": "Task Automation AI, LLM Development, Open Source AI, AI Chatbot, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-potential",
-    "Url": "/faq/Can-AI-automatically-identify-potential.html"
   },
   "Can-AI-automatically-record-customer": {
     "Category": "AI Basics & Terms",
@@ -11236,8 +8990,6 @@ export const faq = {
     "Title": "Can AI automatically record customer purchase history?-Fastgpt",
     "Description": "Yes, AI can automatically record customer purchase history. This is achievable through integration with point-of-sale (POS) systems, e-commerce platforms, and CRM software using AI techniques like opt",
     "Keywords": "Smart Assistant, Vector Search, FastGPT, AI Chatbot, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-record-customer",
-    "Url": "/faq/Can-AI-automatically-record-customer.html"
   },
   "Can-AI-help-develop-differentiated": {
     "Category": "AI Basics & Terms",
@@ -11246,8 +8998,6 @@ export const faq = {
     "Title": "Can AI help develop differentiated service plans?-Fastgpt",
     "Description": "AI can significantly assist in developing differentiated service plans for customers. Yes, it enables the creation of highly personalized service strategies by leveraging data-driven insights.\n\nAI ana",
     "Keywords": "Intelligent Q&A, LLM Development, FastGPT, Smart Assistant, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-develop-differentiated",
-    "Url": "/faq/Can-AI-help-develop-differentiated.html"
   },
   "Can-AI-automatically-identify-common": {
     "Category": "AI Basics & Terms",
@@ -11256,8 +9006,6 @@ export const faq = {
     "Title": "Can AI automatically identify common issues in after-sales service?-Fastgpt",
     "Description": "Yes, AI can automatically identify common issues in after-sales service. This is achieved by analyzing large volumes of customer interaction data using machine learning and natural language processing",
     "Keywords": "AI Platform, API Integration, AI Chatbot, FastGPT, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-identify-common",
-    "Url": "/faq/Can-AI-automatically-identify-common.html"
   },
   "Can-AI-automatically-summarize-customers'": {
     "Category": "AI Basics & Terms",
@@ -11266,8 +9014,6 @@ export const faq = {
     "Title": "Can AI automatically summarize customers' common complaints?-Fastgpt",
     "Description": "AI can automatically summarize customers' common complaints. This task utilizes Natural Language Processing (NLP) techniques to analyze large volumes of unstructured text feedback and extract key them",
     "Keywords": "FastGPT, AI Platform, Intelligent Q&A, Smart Assistant, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-summarize-customers'",
-    "Url": "/faq/Can-AI-automatically-summarize-customers'.html"
   },
   "Can-AI-develop-care-plans": {
     "Category": "AI Basics & Terms",
@@ -11276,8 +9022,6 @@ export const faq = {
     "Title": "Can AI develop care plans based on customer characteristics?-Fastgpt",
     "Description": "AI can indeed develop personalized care plans based on customer characteristics by leveraging advanced machine learning algorithms and analyzing individual data.\n\nThis capability relies on processing ",
     "Keywords": "Task Automation AI, Document AI, AI Platform, API Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-develop-care-plans",
-    "Url": "/faq/Can-AI-develop-care-plans.html"
   },
   "How-to-make-AI-assist": {
     "Category": "AI Basics & Terms",
@@ -11286,8 +9030,6 @@ export const faq = {
     "Title": "How to make AI assist in optimizing the omnichannel customer service experience-Fastgpt",
     "Description": "AI can optimize the omnichannel customer service experience by unifying interactions across channels and automating processes. This integration improves efficiency and ensures consistent support regar",
     "Keywords": "Vector Search, Intelligent Q&A, LLM Development, GPT Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-assist",
-    "Url": "/faq/How-to-make-AI-assist.html"
   },
   "Can-AI-predict-hot-issues": {
     "Category": "AI Basics & Terms",
@@ -11296,8 +9038,6 @@ export const faq = {
     "Title": "Can AI predict hot issues based on historical consultations?-Fastgpt",
     "Description": "AI can predict potential hot issues by analyzing patterns in historical consultation data. This capability leverages machine learning and data analysis techniques to identify emerging trends before th",
     "Keywords": "AI Knowledge Management, AI Automation, Intelligent Q&A, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-hot-issues",
-    "Url": "/faq/Can-AI-predict-hot-issues.html"
   },
   "Can-AI-automatically-follow-up": {
     "Category": "AI Basics & Terms",
@@ -11306,8 +9046,6 @@ export const faq = {
     "Title": "Can AI automatically follow up on customers' long-term service needs?-Fastgpt",
     "Description": "Yes, AI can automate long-term customer service follow-ups effectively. Modern AI systems are specifically designed to manage and nurture ongoing customer relationships efficiently.\n\nThis capability r",
     "Keywords": "API Integration, Open Source AI, Smart Assistant, AI Workflow, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-follow-up",
-    "Url": "/faq/Can-AI-automatically-follow-up.html"
   },
   "How-to-enhance-the-intelligent": {
     "Category": "AI Basics & Terms",
@@ -11316,8 +9054,6 @@ export const faq = {
     "Title": "How to enhance the intelligent level of call centers with AI-Fastgpt",
     "Description": "Enhancing call center intelligence with AI involves strategically deploying technologies like conversational AI, analytics, and automation. This significantly improves efficiency and customer experien",
     "Keywords": "AI Platform, Open Source AI, Task Automation AI, AI Chatbot, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-enhance-the-intelligent",
-    "Url": "/faq/How-to-enhance-the-intelligent.html"
   },
   "Can-AI-automatically-optimize-work": {
     "Category": "AI Basics & Terms",
@@ -11326,8 +9062,6 @@ export const faq = {
     "Title": "Can AI automatically optimize work order assignment?-Fastgpt",
     "Description": "AI can automatically optimize work order assignment. Yes, leveraging machine learning, predictive analytics, and optimization algorithms, AI systems analyze various factors to dynamically dispatch tas",
     "Keywords": "Vector Search, GPT Integration, AI Knowledge Management, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-optimize-work",
-    "Url": "/faq/Can-AI-automatically-optimize-work.html"
   },
   "Can-AI-help-generate-customer": {
     "Category": "AI Basics & Terms",
@@ -11336,8 +9070,6 @@ export const faq = {
     "Title": "Can AI help generate customer service training content?-Fastgpt",
     "Description": "AI can significantly assist in generating customer service training content. It offers a scalable and efficient method to create diverse learning materials based on vast datasets and proven scenarios.",
     "Keywords": "Smart Assistant, LLM Development, AI Knowledge Management, AI Platform, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-generate-customer",
-    "Url": "/faq/Can-AI-help-generate-customer.html"
   },
   "Can-AI-generate-multilingual-customer": {
     "Category": "AI Basics & Terms",
@@ -11346,8 +9078,6 @@ export const faq = {
     "Title": "Can AI generate multilingual customer service scripts?-Fastgpt",
     "Description": "Yes. Modern AI systems can generate customized customer service scripts in multiple languages, significantly enhancing global support operations.  \nCore capabilities involve training language models o",
     "Keywords": "Document AI, AI Platform, AI Knowledge Management, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-multilingual-customer",
-    "Url": "/faq/Can-AI-generate-multilingual-customer.html"
   },
   "Can-AI-provide-instant-reply": {
     "Category": "AI Basics & Terms",
@@ -11356,8 +9086,6 @@ export const faq = {
     "Title": "Can AI provide instant reply suggestions for customer service?-Fastgpt",
     "Description": "Yes, AI can provide instant reply suggestions for customer service inquiries. This is achieved through technologies like natural language processing (NLP) and machine learning (ML), analyzing customer",
     "Keywords": "Intelligent Q&A, Enterprise AI, Task Automation AI, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-instant-reply",
-    "Url": "/faq/Can-AI-provide-instant-reply.html"
   },
   "Can-AI-automatically-predict-customer": {
     "Category": "AI Basics & Terms",
@@ -11366,8 +9094,6 @@ export const faq = {
     "Title": "Can AI automatically predict customer demand during holidays?-Fastgpt",
     "Description": "AI can automatically predict holiday customer demand through advanced algorithms analyzing historical and real-time data. This capability enables businesses to anticipate fluctuations and optimize res",
     "Keywords": "API Integration, FastGPT, AI Platform, Open Source AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-predict-customer",
-    "Url": "/faq/Can-AI-automatically-predict-customer.html"
   },
   "Can-AI-automatically-generate-monthly": {
     "Category": "AI Basics & Terms",
@@ -11376,8 +9102,6 @@ export const faq = {
     "Title": "Can AI automatically generate monthly customer service summaries?-Fastgpt",
     "Description": "AI can automatically generate monthly customer service summaries. This capability leverages advanced technologies like Natural Language Processing (NLP) and Machine Learning (ML) to synthesize key ins",
     "Keywords": "AI Platform, Enterprise AI, Open Source AI, AI Automation, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-monthly",
-    "Url": "/faq/Can-AI-automatically-generate-monthly.html"
   },
   "Can-AI-help-design-more": {
     "Category": "AI Basics & Terms",
@@ -11386,8 +9110,6 @@ export const faq = {
     "Title": "Can AI help design more user-friendly experiences?-Fastgpt",
     "Description": "Yes, AI can significantly assist in designing more user-friendly experiences. It analyzes vast datasets of user behavior to uncover patterns and pain points that inform design improvements.\n\nAI tools ",
     "Keywords": "Vector Search, Task Automation AI, FastGPT, AI Knowledge Management, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-design-more",
-    "Url": "/faq/Can-AI-help-design-more.html"
   },
   "Can-AI-predict-customers'-interest": {
     "Category": "AI Basics & Terms",
@@ -11396,8 +9118,6 @@ export const faq = {
     "Title": "Can AI predict customers' interest in new products?-Fastgpt",
     "Description": "Yes, AI can effectively predict customer interest in new products. It analyzes vast historical and current data to identify patterns indicating future buying behavior.\n\nAccurate predictions rely on hi",
     "Keywords": "Intelligent Q&A, AI Platform, Vector Search, API Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-predict-customers'-interest",
-    "Url": "/faq/Can-AI-predict-customers'-interest.html"
   },
   "Can-AI-automatically-output-promotional": {
     "Category": "AI Basics & Terms",
@@ -11406,8 +9126,6 @@ export const faq = {
     "Title": "Can AI automatically output promotional strategies for new product launches?-Fastgpt",
     "Description": "AI can automatically generate initial promotional strategies for new product launches based on provided data and parameters. This capability relies on advanced machine learning models trained on marke",
     "Keywords": "Smart Assistant, Open Source AI, Intelligent Q&A, FastGPT, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-output-promotional",
-    "Url": "/faq/Can-AI-automatically-output-promotional.html"
   },
   "Can-AI-automatically-track-market": {
     "Category": "AI Basics & Terms",
@@ -11416,8 +9134,6 @@ export const faq = {
     "Title": "Can AI automatically track market feedback for new products?-Fastgpt",
     "Description": "Yes, AI can automatically track market feedback for new products. It leverages advanced technologies like Natural Language Processing (NLP) and Machine Learning (ML) to efficiently gather and analyze ",
     "Keywords": "AI Automation, Smart Assistant, Vector Search, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-track-market",
-    "Url": "/faq/Can-AI-automatically-track-market.html"
   },
   "Can-AI-help-plan-the": {
     "Category": "AI Basics & Terms",
@@ -11426,8 +9142,6 @@ export const faq = {
     "Title": "Can AI help plan the direction of product iterations?-Fastgpt",
     "Description": "Yes, AI can significantly assist in planning product iteration directions. It analyzes vast amounts of data to identify trends, user needs, and potential opportunities that might be missed manually.\n\n",
     "Keywords": "Enterprise AI, GPT Integration, FastGPT, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-plan-the",
-    "Url": "/faq/Can-AI-help-plan-the.html"
   },
   "Can-AI-transform-customer-suggestions": {
     "Category": "AI Basics & Terms",
@@ -11436,8 +9150,6 @@ export const faq = {
     "Title": "Can AI transform customer suggestions into R&D tasks?-Fastgpt",
     "Description": "Yes, AI can transform customer suggestions into actionable R&D tasks. This is achieved by leveraging natural language processing (NLP) and machine learning (ML) to automate parts of the analysis and s",
     "Keywords": "LLM Development, GPT Integration, AI Workflow, AI Platform, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-transform-customer-suggestions",
-    "Url": "/faq/Can-AI-transform-customer-suggestions.html"
   },
   "Can-AI-help-record-key": {
     "Category": "AI Basics & Terms",
@@ -11446,8 +9158,6 @@ export const faq = {
     "Title": "Can AI help record key data from product testing?-Fastgpt",
     "Description": "AI can effectively automate key data recording during product testing. This leverages AI's capabilities in processing complex information and real-time capture.\n\nKey benefits include automated extract",
     "Keywords": "Task Automation AI, AI Platform, Open Source AI, AI Workflow, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-help-record-key",
-    "Url": "/faq/Can-AI-help-record-key.html"
   },
   "Can-AI-assist-in-summarizing": {
     "Category": "AI Basics & Terms",
@@ -11456,8 +9166,6 @@ export const faq = {
     "Title": "Can AI assist in summarizing industry best practices?-Fastgpt",
     "Description": "Yes, AI can effectively assist in summarizing industry best practices. It offers significant potential to accelerate the discovery and consolidation of proven methods within a specific field.\n\nAI leve",
     "Keywords": "LLM Development, AI Knowledge Management, GPT Integration, AI Chatbot, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-assist-in-summarizing",
-    "Url": "/faq/Can-AI-assist-in-summarizing.html"
   },
   "How-to-make-AI-summarize": {
     "Category": "AI Basics & Terms",
@@ -11466,8 +9174,6 @@ export const faq = {
     "Title": "How to make AI summarize best practices and recommend improvements-Fastgpt",
     "Description": "AI can effectively summarize best practices and recommend improvements by analyzing vast datasets to identify patterns and benchmark against standards. This process automates insight extraction and su",
     "Keywords": "FastGPT, Task Automation AI, AI Platform, AI Automation, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-summarize",
-    "Url": "/faq/How-to-make-AI-summarize.html"
   },
   "Can-AI-generate-innovative-solutions": {
     "Category": "AI Basics & Terms",
@@ -11476,8 +9182,6 @@ export const faq = {
     "Title": "Can AI generate innovative solutions by integrating external trends?-Fastgpt",
     "Description": "Yes, AI can generate innovative solutions by integrating external trends. It does this by processing vast amounts of data from diverse sources to identify and synthesize emerging patterns and shifts.\n",
     "Keywords": "Task Automation AI, AI Knowledge Management, FastGPT, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-innovative-solutions",
-    "Url": "/faq/Can-AI-generate-innovative-solutions.html"
   },
   "How-to-make-AI-continuously": {
     "Category": "AI Basics & Terms",
@@ -11486,8 +9190,6 @@ export const faq = {
     "Title": "How to make AI continuously explore new application inspirations-Fastgpt",
     "Description": "Enabling AI to continuously explore new applications requires establishing systematic processes that stimulate creative ideation. This is achieved through cross-functional collaboration, targeted data",
     "Keywords": "AI Chatbot, GPT Integration, AI Automation, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-continuously",
-    "Url": "/faq/How-to-make-AI-continuously.html"
   },
   "Can-AI-turn-the-creativity": {
     "Category": "AI Basics & Terms",
@@ -11496,8 +9198,6 @@ export const faq = {
     "Title": "Can AI turn the creativity of various industries into knowledge graphs?-Fastgpt",
     "Description": "Yes, AI can effectively transform the creativity expressed within various industries into structured knowledge graphs. This involves AI processing diverse creative outputs to identify and link relevan",
     "Keywords": "Vector Search, AI Workflow, Task Automation AI, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-turn-the-creativity",
-    "Url": "/faq/Can-AI-turn-the-creativity.html"
   },
   "Can-AI-automatically-recommend-gameplay": {
     "Category": "AI Basics & Terms",
@@ -11506,8 +9206,6 @@ export const faq = {
     "Title": "Can AI automatically recommend gameplay based on market demand?-Fastgpt",
     "Description": "Yes, AI can automatically recommend gameplay features based on market demand analysis. This leverages predictive analytics to align game design with player preferences and market trends.\n\nEffective re",
     "Keywords": "Open Source AI, AI Workflow, AI Chatbot, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-recommend-gameplay",
-    "Url": "/faq/Can-AI-automatically-recommend-gameplay.html"
   },
   "How-to-make-AI-update": {
     "Category": "AI Basics & Terms",
@@ -11516,8 +9214,6 @@ export const faq = {
     "Title": "How to make AI update the innovation case library in real-time-Fastgpt",
     "Description": "Real-time AI updates to innovation case libraries are achievable through automated data ingestion and processing pipelines. This involves continuous capture of new cases from designated sources couple",
     "Keywords": "Smart Assistant, Vector Search, Document AI, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-update",
-    "Url": "/faq/How-to-make-AI-update.html"
   },
   "Can-AI-transform-new-ideas": {
     "Category": "AI Basics & Terms",
@@ -11526,8 +9222,6 @@ export const faq = {
     "Title": "Can AI transform new ideas into operational steps?-Fastgpt",
     "Description": "Yes, AI can transform new ideas into operational steps. AI systems, particularly those using planning algorithms, automated reasoning, and knowledge representation, are designed to break down abstract",
     "Keywords": "API Integration, AI Workflow, AI Platform, Vector Search, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-transform-new-ideas",
-    "Url": "/faq/Can-AI-transform-new-ideas.html"
   },
   "Can-AI-provide-enterprises-with": {
     "Category": "AI Basics & Terms",
@@ -11536,8 +9230,6 @@ export const faq = {
     "Title": "Can AI provide enterprises with cross-border cooperation inspiration?-Fastgpt",
     "Description": "Yes, AI can effectively provide enterprises with inspiration for cross-border cooperation. AI systems analyze vast global datasets to uncover partnership opportunities beyond geographical and sectoral",
     "Keywords": "Enterprise AI, Intelligent Q&A, API Integration, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-enterprises-with",
-    "Url": "/faq/Can-AI-provide-enterprises-with.html"
   },
   "Can-AI-automatically-generate-cross-industry": {
     "Category": "AI Basics & Terms",
@@ -11546,8 +9238,6 @@ export const faq = {
     "Title": "Can AI automatically generate cross-industry creative combinations?-Fastgpt",
     "Description": "Yes, AI can automatically generate cross-industry creative combinations. Generative AI models, particularly large language models and specialized creative tools, are capable of identifying patterns an",
     "Keywords": "AI Chatbot, Vector Search, AI Platform, AI Automation, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-cross-industry",
-    "Url": "/faq/Can-AI-automatically-generate-cross-industry.html"
   },
   "Can-AI-automatically-output-risk": {
     "Category": "AI Basics & Terms",
@@ -11556,8 +9246,6 @@ export const faq = {
     "Title": "Can AI automatically output risk warnings for innovative applications?-Fastgpt",
     "Description": "Yes, AI can automatically output risk warnings for innovative applications. This capability leverages advanced algorithms to identify and flag potential risks based on data analysis.\n\nEffective AI ris",
     "Keywords": "Smart Assistant, AI Chatbot, Document AI, AI Workflow, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-output-risk",
-    "Url": "/faq/Can-AI-automatically-output-risk.html"
   },
   "Can-AI-generate-application-plans": {
     "Category": "AI Basics & Terms",
@@ -11566,8 +9254,6 @@ export const faq = {
     "Title": "Can AI generate application plans suitable for startups?-Fastgpt",
     "Description": "Yes, AI can generate suitable application plans for startups. AI technologies analyze vast amounts of data and established patterns to create tailored starting frameworks based on specific inputs.\n\nSu",
     "Keywords": "Open Source AI, Document AI, API Integration, Smart Assistant, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-generate-application-plans",
-    "Url": "/faq/Can-AI-generate-application-plans.html"
   },
   "How-to-make-AI-propose": {
     "Category": "AI Basics & Terms",
@@ -11576,8 +9262,6 @@ export const faq = {
     "Title": "How to make AI propose low-cost innovative gameplay-Fastgpt",
     "Description": "AI can propose low-cost innovative gameplay concepts through structured constraint-driven ideation processes, leveraging its capacity for rapid pattern remixing within defined boundaries.\n\nKey princip",
     "Keywords": "Enterprise AI, GPT Integration, Open Source AI, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-propose",
-    "Url": "/faq/How-to-make-AI-propose.html"
   },
   "Can-AI-recommend-best-practices": {
     "Category": "AI Basics & Terms",
@@ -11586,8 +9270,6 @@ export const faq = {
     "Title": "Can AI recommend best practices based on company size?-Fastgpt",
     "Description": "Yes, AI can recommend best practices tailored to company size. It analyzes vast datasets and identifies patterns of successful strategies employed by businesses within specific size categories.\n\nAI re",
     "Keywords": "Open Source AI, FastGPT, LLM Development, API Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-recommend-best-practices",
-    "Url": "/faq/Can-AI-recommend-best-practices.html"
   },
   "Can-AI-automatically-generate-commercial": {
     "Category": "AI Basics & Terms",
@@ -11596,8 +9278,6 @@ export const faq = {
     "Title": "Can AI automatically generate commercial creative solutions?-Fastgpt",
     "Description": "Yes, AI can automatically generate commercial creative solutions. Utilizing advanced techniques like natural language processing and generative AI, these systems produce diverse creative assets based ",
     "Keywords": "GPT Integration, Intelligent Q&A, Document AI, AI Automation, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-commercial",
-    "Url": "/faq/Can-AI-automatically-generate-commercial.html"
   },
   "How-to-make-AI-break": {
     "Category": "AI Basics & Terms",
@@ -11606,8 +9286,6 @@ export const faq = {
     "Title": "How to make AI break down complex processes into simple steps-Fastgpt",
     "Description": "AI can effectively break down complex processes into simple steps using specialized algorithms like chain-of-thought prompting and hierarchical task decomposition. This capability is achievable throug",
     "Keywords": "Enterprise AI, Task Automation AI, API Integration, Intelligent Q&A, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-break",
-    "Url": "/faq/How-to-make-AI-break.html"
   },
   "Can-AI-automatically-generate-easy-to-follow": {
     "Category": "AI Basics & Terms",
@@ -11616,8 +9294,6 @@ export const faq = {
     "Title": "Can AI automatically generate easy-to-follow operation guides?-Fastgpt",
     "Description": "Yes, AI can automatically generate easy-to-follow operation guides using advanced natural language generation and machine learning technologies. This is both feasible and increasingly common in practi",
     "Keywords": "AI Knowledge Management, Smart Assistant, Enterprise AI, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-easy-to-follow",
-    "Url": "/faq/Can-AI-automatically-generate-easy-to-follow.html"
   },
   "How-to-continuously-improve-existing": {
     "Category": "AI Basics & Terms",
@@ -11626,8 +9302,6 @@ export const faq = {
     "Title": "How to continuously improve existing business processes using AI-Fastgpt",
     "Description": "AI continuously improves business processes by automating the analysis of performance data, identifying bottlenecks, and suggesting optimizations. This enables ongoing refinement based on real operati",
     "Keywords": "Intelligent Q&A, Open Source AI, AI Chatbot, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-continuously-improve-existing",
-    "Url": "/faq/How-to-continuously-improve-existing.html"
   },
   "Can-AI-summarize-the-practical": {
     "Category": "AI Basics & Terms",
@@ -11636,8 +9310,6 @@ export const faq = {
     "Title": "Can AI summarize the practical experience of different teams?-Fastgpt",
     "Description": "Yes, AI can effectively summarize the practical experience of different teams. Modern natural language processing (NLP) and machine learning techniques enable AI to analyze large volumes of textual da",
     "Keywords": "AI Chatbot, Open Source AI, LLM Development, AI Knowledge Management, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-summarize-the-practical",
-    "Url": "/faq/Can-AI-summarize-the-practical.html"
   },
   "Can-AI-automatically-analyze-implementation": {
     "Category": "AI Basics & Terms",
@@ -11646,8 +9318,6 @@ export const faq = {
     "Title": "Can AI automatically analyze implementation effects and provide suggestions?-Fastgpt",
     "Description": "Yes, AI can automatically analyze implementation effects and provide suggestions. This capability leverages data analysis and pattern recognition to assess outcomes and generate insights.\n\nEffective A",
     "Keywords": "Task Automation AI, Smart Assistant, Vector Search, Document AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-analyze-implementation",
-    "Url": "/faq/Can-AI-automatically-analyze-implementation.html"
   },
   "How-to-make-AI-record": {
     "Category": "AI Basics & Terms",
@@ -11656,8 +9326,6 @@ export const faq = {
     "Title": "How to make AI record and share the entire process of innovation-Fastgpt",
     "Description": "AI can be effectively employed to systematically record and facilitate the sharing of an innovation process by leveraging specialized software tools designed for tracking progress, capturing data, and",
     "Keywords": "AI Chatbot, AI Automation, Enterprise AI, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-record",
-    "Url": "/faq/How-to-make-AI-record.html"
   },
   "Can-AI-identify-potential-optimization": {
     "Category": "AI Basics & Terms",
@@ -11666,8 +9334,6 @@ export const faq = {
     "Title": "Can AI identify potential optimization points in processes?-Fastgpt",
     "Description": "Yes, AI can effectively identify potential optimization points in processes. This capability stems from its ability to analyze large volumes of operational data, detect patterns, and pinpoint ineffici",
     "Keywords": "FastGPT, Enterprise AI, Document AI, AI Platform, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-identify-potential-optimization",
-    "Url": "/faq/Can-AI-identify-potential-optimization.html"
   },
   "How-to-bring-new-approaches": {
     "Category": "AI Basics & Terms",
@@ -11676,8 +9342,6 @@ export const faq = {
     "Title": "How to bring new approaches to customer service with AI intelligent assistants-Fastgpt",
     "Description": "AI intelligent assistants introduce transformative approaches to customer service by automating responses, providing personalized interactions, and offering 24/7 support. They leverage natural languag",
     "Keywords": "Task Automation AI, AI Knowledge Management, FastGPT, Smart Assistant, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-bring-new-approaches",
-    "Url": "/faq/How-to-bring-new-approaches.html"
   },
   "How-can-AI-be-embedded": {
     "Category": "AI Basics & Terms",
@@ -11686,8 +9350,6 @@ export const faq = {
     "Title": "How can AI be embedded into a company's daily business processes-Fastgpt",
     "Description": "Embedding AI into daily business processes involves strategically integrating artificial intelligence tools to automate tasks, enhance decision-making, and optimize operations. It is feasible across d",
     "Keywords": "Intelligent Q&A, Task Automation AI, AI Workflow, API Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-be-embedded",
-    "Url": "/faq/How-can-AI-be-embedded.html"
   },
   "How-to-quickly-test-an": {
     "Category": "AI Basics & Terms",
@@ -11696,8 +9358,6 @@ export const faq = {
     "Title": "How to quickly test an innovative small project with AI-Fastgpt",
     "Description": "AI enables rapid testing of small innovative projects through prototype generation, simulated user feedback, and minimal resource commitment. This approach accelerates idea validation without full dev",
     "Keywords": "Smart Assistant, FastGPT, API Integration, AI Platform, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-test-an",
-    "Url": "/faq/How-to-quickly-test-an.html"
   },
   "Can-AI-provide-application-inspiration": {
     "Category": "AI Basics & Terms",
@@ -11706,8 +9366,6 @@ export const faq = {
     "Title": "Can AI provide application inspiration for different industries?-Fastgpt",
     "Description": "AI can generate tailored application inspiration across diverse industries by leveraging its analytical and creative capabilities. This is feasible through pattern recognition in vast datasets to unco",
     "Keywords": "Enterprise AI, Document AI, API Integration, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-provide-application-inspiration",
-    "Url": "/faq/Can-AI-provide-application-inspiration.html"
   },
   "How-to-plan-the-key": {
     "Category": "AI Basics & Terms",
@@ -11716,8 +9374,6 @@ export const faq = {
     "Title": "How to plan the key steps and considerations for AI implementation-Fastgpt",
     "Description": "Planning AI implementation involves developing a strategic roadmap for integrating AI technologies to achieve specific business goals, supported by careful assessment and phased execution. Key steps a",
     "Keywords": "Smart Assistant, FastGPT, GPT Integration, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-plan-the-key",
-    "Url": "/faq/How-to-plan-the-key.html"
   },
   "How-can-AI-help-enterprises": {
     "Category": "AI Basics & Terms",
@@ -11726,8 +9382,6 @@ export const faq = {
     "Title": "How can AI help enterprises continuously optimize workflows-Fastgpt",
     "Description": "AI enables enterprises to continuously optimize workflows by automating repetitive tasks, providing deep process insights through data analysis, and adapting to changing conditions. It allows for ongo",
     "Keywords": "Smart Assistant, AI Platform, Open Source AI, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-help-enterprises",
-    "Url": "/faq/How-can-AI-help-enterprises.html"
   },
   "Can-AI-automatically-organize-industry": {
     "Category": "AI Basics & Terms",
@@ -11736,8 +9390,6 @@ export const faq = {
     "Title": "Can AI automatically organize industry best practices for reference?-Fastgpt",
     "Description": "AI can automatically organize industry best practices for reference. Technology enables this functionality, subject to certain conditions.  \n\nIts effectiveness depends primarily on three factors: acce",
     "Keywords": "Enterprise AI, AI Platform, Vector Search, FastGPT, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-automatically-organize-industry",
-    "Url": "/faq/Can-AI-automatically-organize-industry.html"
   },
   "What-materials-are-needed-to": {
     "Category": "Marketing & Support",
@@ -11746,8 +9398,6 @@ export const faq = {
     "Title": "What materials are needed to prepare an AI intelligent assistant from scratch-Fastgpt",
     "Description": "Preparing an AI intelligent assistant from scratch requires gathering core development materials. These include training data, computational hardware (like GPUs or cloud compute credits), software fra",
     "Keywords": "AI Knowledge Management, API Integration, Document AI, Open Source AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/What-materials-are-needed-to",
-    "Url": "/faq/What-materials-are-needed-to.html"
   },
   "Do-you-need-to-know": {
     "Category": "Marketing & Support",
@@ -11756,8 +9406,6 @@ export const faq = {
     "Title": "Do you need to know programming to make an AI Agent?-Fastgpt",
     "Description": "Making an AI agent generally does not require extensive programming knowledge. While coding skills provide deeper customization capabilities, numerous platforms now enable creation without writing any",
     "Keywords": "AI Automation, Task Automation AI, AI Workflow, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Do-you-need-to-know",
-    "Url": "/faq/Do-you-need-to-know.html"
   },
   "How-to-choose-the-right": {
     "Category": "Marketing & Support",
@@ -11766,8 +9414,6 @@ export const faq = {
     "Title": "How to choose the right model and technical framework-Fastgpt",
     "Description": "Selecting appropriate models and frameworks involves aligning technical solutions with specific business objectives, data characteristics, and operational constraints. It balances performance, cost, a",
     "Keywords": "LLM Development, Smart Assistant, AI Automation, AI Knowledge Management, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-choose-the-right",
-    "Url": "/faq/How-to-choose-the-right.html"
   },
   "What-are-the-common-technical": {
     "Category": "Marketing & Support",
@@ -11776,8 +9422,6 @@ export const faq = {
     "Title": "What are the common technical difficulties in AI Agent development?-Fastgpt",
     "Description": "Developing AI Agents encounters challenges like environmental complexity, autonomous decision-making gaps, and unreliable task execution. These difficulties stem from real-world unpredictability and c",
     "Keywords": "LLM Development, Document AI, Smart Assistant, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/What-are-the-common-technical",
-    "Url": "/faq/What-are-the-common-technical.html"
   },
   "Can-you-independently-build-an": {
     "Category": "Marketing & Support",
@@ -11786,8 +9430,6 @@ export const faq = {
     "Title": "Can you independently build an AI Agent without a technical team?-Fastgpt",
     "Description": "Building a simple AI Agent without a dedicated technical team is feasible using available no-code/low-code platforms. Individuals with clear objectives can achieve this.\n\nKey requirements include sele",
     "Keywords": "Open Source AI, AI Automation, Enterprise AI, Task Automation AI, API Integration",
-    "URL": "https://fastgpt.io/en/faq/Can-you-independently-build-an",
-    "Url": "/faq/Can-you-independently-build-an.html"
   },
   "What-should-I-do-if": {
     "Category": "Marketing & Support",
@@ -11796,8 +9438,6 @@ export const faq = {
     "Title": "What should I do if the AI Agent provides inaccurate answers after being launched?-Fastgpt",
     "Description": "Immediate action can rectify inaccurate AI agent responses. Address post-launch accuracy issues through systematic validation, monitoring, and refinement processes.\n\nImplement continuous monitoring to",
     "Keywords": "AI Platform, Smart Assistant, Task Automation AI, Open Source AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/What-should-I-do-if",
-    "Url": "/faq/What-should-I-do-if.html"
   },
   "What-server-configuration-is-required": {
     "Category": "Marketing & Support",
@@ -11806,8 +9446,6 @@ export const faq = {
     "Title": "What server configuration is required to develop an AI Agent?-Fastgpt",
     "Description": "Developing an AI Agent requires robust server configurations optimized for high-performance computation. This typically involves dedicated hardware capable of intensive parallel processing tasks.\n\nKey",
     "Keywords": "AI Automation, Task Automation AI, Smart Assistant, Vector Search, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/What-server-configuration-is-required",
-    "Url": "/faq/What-server-configuration-is-required.html"
   },
   "How-to-reduce-the-running": {
     "Category": "Marketing & Support",
@@ -11816,8 +9454,6 @@ export const faq = {
     "Title": "How to reduce the running cost of AI Agent-Fastgpt",
     "Description": "Reducing the running costs of an AI Agent is achievable through strategic optimization of resources and operations. Key principles involve minimizing unnecessary computational overhead and maximizing ",
     "Keywords": "AI Platform, LLM Development, Open Source AI, Smart Assistant, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-reduce-the-running",
-    "Url": "/faq/How-to-reduce-the-running.html"
   },
   "How-to-prevent-AI-Agent": {
     "Category": "Marketing & Support",
@@ -11826,8 +9462,6 @@ export const faq = {
     "Title": "How to prevent AI Agent from repeatedly outputting the same answer-Fastgpt",
     "Description": "To prevent AI Agent response repetition, implement techniques that introduce variability while preserving answer consistency. This is achievable through design strategies targeting output generation m",
     "Keywords": "GPT Integration, AI Workflow, FastGPT, LLM Development, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-prevent-AI-Agent",
-    "Url": "/faq/How-to-prevent-AI-Agent.html"
   },
   "How-to-plan-the-overall": {
     "Category": "Marketing & Support",
@@ -11836,8 +9470,6 @@ export const faq = {
     "Title": "How to plan the overall architecture of an AI Agent-Fastgpt",
     "Description": "Planning an AI agent's overall architecture involves designing the interconnected components and data flows enabling it to achieve its defined goals. This establishes the foundation for functionality,",
     "Keywords": "LLM Development, Vector Search, Intelligent Q&A, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-plan-the-overall",
-    "Url": "/faq/How-to-plan-the-overall.html"
   },
   "What-essential-software-tools-are": {
     "Category": "Marketing & Support",
@@ -11846,8 +9478,6 @@ export const faq = {
     "Title": "What essential software tools are required for AI Agent development?-Fastgpt",
     "Description": "Core software tools for AI Agent development include programming languages like Python, machine learning frameworks (TensorFlow, PyTorch), natural language processing libraries (spaCy, Hugging Face Tr",
     "Keywords": "Smart Assistant, AI Automation, AI Platform, Enterprise AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/What-essential-software-tools-are",
-    "Url": "/faq/What-essential-software-tools-are.html"
   },
   "How-to-design-a-more": {
     "Category": "Marketing & Support",
@@ -11856,8 +9486,6 @@ export const faq = {
     "Title": "How to design a more reasonable database structure for AI Agents-Fastgpt",
     "Description": "Designing a reasonable database structure for AI agents requires prioritizing flexibility, performance for complex queries, and efficient storage of diverse, often unstructured data like text embeddin",
     "Keywords": "FastGPT, AI Platform, Open Source AI, Intelligent Q&A, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-design-a-more",
-    "Url": "/faq/How-to-design-a-more.html"
   },
   "How-to-choose-data-storage": {
     "Category": "Marketing & Support",
@@ -11866,8 +9494,6 @@ export const faq = {
     "Title": "How to choose data storage for AI Agent-Fastgpt",
     "Description": "Selecting data storage for an AI Agent requires evaluating the specific data types, access patterns, performance needs, and scalability requirements. It involves choosing between or combining differen",
     "Keywords": "AI Chatbot, Document AI, Enterprise AI, AI Knowledge Management, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-choose-data-storage",
-    "Url": "/faq/How-to-choose-data-storage.html"
   },
   "How-to-prevent-AI-Agents": {
     "Category": "Platform Value & Trends",
@@ -11876,8 +9502,6 @@ export const faq = {
     "Title": "How to prevent AI Agents from leaking trade secrets-Fastgpt",
     "Description": "Implementing robust technical and administrative measures can effectively prevent AI agents from leaking trade secrets. This requires layered controls across data handling, access management, and agen",
     "Keywords": "FastGPT, Intelligent Q&A, LLM Development, AI Chatbot, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-prevent-AI-Agents",
-    "Url": "/faq/How-to-prevent-AI-Agents.html"
   },
   "What-tests-need-to-be": {
     "Category": "Marketing & Support",
@@ -11886,8 +9510,6 @@ export const faq = {
     "Title": "What tests need to be conducted before an AI Agent goes online?-Fastgpt",
     "Description": "Before an AI Agent goes live, rigorous testing across functionality, security, ethics, performance, and usability is essential to ensure reliability and safety. This validates its readiness for deploy",
     "Keywords": "Open Source AI, LLM Development, AI Knowledge Management, Document AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/What-tests-need-to-be",
-    "Url": "/faq/What-tests-need-to-be.html"
   },
   "How-to-enable-AI-Agent": {
     "Category": "Marketing & Support",
@@ -11896,8 +9518,6 @@ export const faq = {
     "Title": "How to enable AI Agent to achieve real-time business monitoring-Fastgpt",
     "Description": "To enable AI Agents for real-time business monitoring involves deploying autonomous software systems that continuously observe data streams and systems, automatically identifying deviations or opportu",
     "Keywords": "Smart Assistant, Open Source AI, Intelligent Q&A, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-AI-Agent",
-    "Url": "/faq/How-to-enable-AI-Agent.html"
   },
   "What-back-end-operation-and-maintenance": {
     "Category": "Marketing & Support",
@@ -11906,8 +9526,6 @@ export const faq = {
     "Title": "What back-end operation and maintenance personnel are required for AI Agent?-Fastgpt",
     "Description": "AI Agent back-end operation and maintenance requires skilled IT operations and DevOps professionals responsible for managing the underlying infrastructure and ensuring service reliability. Their core ",
     "Keywords": "Document AI, Enterprise AI, Task Automation AI, Vector Search, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-back-end-operation-and-maintenance",
-    "Url": "/faq/What-back-end-operation-and-maintenance.html"
   },
   "How-to-ensure-the-scalability": {
     "Category": "Marketing & Support",
@@ -11916,8 +9534,6 @@ export const faq = {
     "Title": "How to ensure the scalability of AI Agent-Fastgpt",
     "Description": "Ensuring AI Agent scalability involves designing architecture that efficiently handles increased workloads without degradation. Scalability is achievable through horizontal scaling strategies and mode",
     "Keywords": "Vector Search, AI Workflow, FastGPT, LLM Development, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-scalability",
-    "Url": "/faq/How-to-ensure-the-scalability.html"
   },
   "How-to-prepare-high-quality-training": {
     "Category": "Marketing & Support",
@@ -11926,8 +9542,6 @@ export const faq = {
     "Title": "How to prepare high-quality training data for AI Agents-Fastgpt",
     "Description": "High-quality training data for AI agents is clean, relevant, representative, accurately labeled information specifically designed to teach the agent effectively. Its preparation is essential for robus",
     "Keywords": "Document AI, API Integration, Open Source AI, AI Knowledge Management, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-prepare-high-quality-training",
-    "Url": "/faq/How-to-prepare-high-quality-training.html"
   },
   "What-should-be-noted-in": {
     "Category": "Marketing & Support",
@@ -11936,8 +9550,6 @@ export const faq = {
     "Title": "What should be noted in data cleaning for AI Agent?-Fastgpt",
     "Description": "Data cleaning for AI agents is a critical preparatory step to ensure the quality, consistency, and fairness of data used for training and operation, directly impacting performance and reliability. It ",
     "Keywords": "Open Source AI, Intelligent Q&A, AI Automation, FastGPT, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/What-should-be-noted-in",
-    "Url": "/faq/What-should-be-noted-in.html"
   },
   "How-to-prevent-privacy-leaks": {
     "Category": "Marketing & Support",
@@ -11946,8 +9558,6 @@ export const faq = {
     "Title": "How to prevent privacy leaks in AI Agents-Fastgpt",
     "Description": "Preventing privacy leaks in AI Agents requires a multi-layered approach combining technical safeguards and responsible operational practices. Feasibility depends on implementing strong data governance",
     "Keywords": "AI Automation, Enterprise AI, AI Platform, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-prevent-privacy-leaks",
-    "Url": "/faq/How-to-prevent-privacy-leaks.html"
   },
   "How-can-AI-Agents-ensure": {
     "Category": "Platform Value & Trends",
@@ -11956,8 +9566,6 @@ export const faq = {
     "Title": "How can AI Agents ensure the immutability of log audits?-Fastgpt",
     "Description": "AI agents ensure log audit immutability primarily through cryptographic techniques like blockchain or tamper-evident sealing. They achieve this by making log entries unchangeable after creation and re",
     "Keywords": "Vector Search, AI Automation, FastGPT, GPT Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-ensure",
-    "Url": "/faq/How-can-AI-Agents-ensure.html"
   },
   "How-to-make-AI-Agents": {
     "Category": "Platform Value & Trends",
@@ -11966,8 +9574,6 @@ export const faq = {
     "Title": "How to make AI Agents quickly respond to sudden privacy complaints-Fastgpt",
     "Description": "AI Agents enable rapid handling of unexpected privacy complaints by automating detection and initial responses, ensuring timely resolution and compliance with regulations.  \n\nKey elements include real",
     "Keywords": "AI Chatbot, GPT Integration, AI Workflow, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-Agents",
-    "Url": "/faq/How-to-make-AI-Agents.html"
   },
   "What-should-an-AI-Agent": {
     "Category": "Marketing & Support",
@@ -11976,8 +9582,6 @@ export const faq = {
     "Title": "What should an AI Agent do when encountering sudden traffic spikes?-Fastgpt",
     "Description": "When encountering sudden traffic spikes, an AI Agent should dynamically scale resources and optimize request handling to maintain performance and service availability. This ensures reliable responses ",
     "Keywords": "AI Workflow, FastGPT, Document AI, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/What-should-an-AI-Agent",
-    "Url": "/faq/What-should-an-AI-Agent.html"
   },
   "How-to-improve-the-fault": {
     "Category": "Marketing & Support",
@@ -11986,8 +9590,6 @@ export const faq = {
     "Title": "How to improve the fault tolerance of AI Agents-Fastgpt",
     "Description": "Improving AI Agent fault tolerance involves designing systems to maintain acceptable performance despite errors, unexpected inputs, or partial failures. This is achievable through specific engineering",
     "Keywords": "Intelligent Q&A, Smart Assistant, Task Automation AI, AI Automation, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-fault",
-    "Url": "/faq/How-to-improve-the-fault.html"
   },
   "How-to-ensure-the-long-term": {
     "Category": "Marketing & Support",
@@ -11996,8 +9598,6 @@ export const faq = {
     "Title": "How to ensure the long-term maintainability of AI Agents-Fastgpt",
     "Description": "Ensuring the long-term maintainability of AI agents involves implementing strategies and practices throughout their lifecycle to enable efficient updates, troubleshooting, and adaptation to changing r",
     "Keywords": "AI Knowledge Management, GPT Integration, API Integration, Task Automation AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-long-term",
-    "Url": "/faq/How-to-ensure-the-long-term.html"
   },
   "How-to-reduce-the-latency": {
     "Category": "Marketing & Support",
@@ -12006,8 +9606,6 @@ export const faq = {
     "Title": "How to reduce the latency response of AI Agent-Fastgpt",
     "Description": "Reducing AI Agent latency involves optimizing its components and infrastructure to deliver faster responses. This is achievable through targeted technical improvements across model processing, system ",
     "Keywords": "API Integration, Smart Assistant, AI Knowledge Management, Enterprise AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-reduce-the-latency",
-    "Url": "/faq/How-to-reduce-the-latency.html"
   },
   "How-to-Quickly-Recover-an": {
     "Category": "Marketing & Support",
@@ -12016,8 +9614,6 @@ export const faq = {
     "Title": "How to Quickly Recover an AI Agent After It Goes Down-Fastgpt",
     "Description": "AI agent recovery involves restoring functionality through automated monitoring, failover mechanisms, and predefined recovery protocols. This ensures minimal disruption to operations by addressing out",
     "Keywords": "Open Source AI, AI Platform, Smart Assistant, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-Quickly-Recover-an",
-    "Url": "/faq/How-to-Quickly-Recover-an.html"
   },
   "How-to-optimize-the-inference": {
     "Category": "Marketing & Support",
@@ -12026,8 +9622,6 @@ export const faq = {
     "Title": "How to optimize the inference speed of AI Agent-Fastgpt",
     "Description": "AI Agent inference speed can be significantly optimized through various techniques targeting computational efficiency and resource bottlenecks. Achieving faster response times is feasible by addressin",
     "Keywords": "AI Knowledge Management, AI Chatbot, AI Automation, Open Source AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-optimize-the-inference",
-    "Url": "/faq/How-to-optimize-the-inference.html"
   },
   "How-do-AI-Agents-seamlessly": {
     "Category": "Marketing & Support",
@@ -12036,8 +9630,6 @@ export const faq = {
     "Title": "How do AI Agents seamlessly connect with existing databases-Fastgpt",
     "Description": "AI agents achieve seamless database connectivity by leveraging standardized interfaces such as APIs, connectors, or middleware, enabling real-time data access without disrupting existing systems. This",
     "Keywords": "LLM Development, Vector Search, FastGPT, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-seamlessly",
-    "Url": "/faq/How-do-AI-Agents-seamlessly.html"
   },
   "How-to-make-AI-Agent": {
     "Category": "Platform Value & Trends",
@@ -12046,8 +9638,6 @@ export const faq = {
     "Title": "How to make AI Agent comply with privacy regulations in the medical industry-Fastgpt",
     "Description": "Ensuring AI Agent compliance with medical privacy regulations is both feasible and mandatory. This involves designing, deploying, and managing agents according to strict standards like HIPAA (US), GDP",
     "Keywords": "Enterprise AI, Vector Search, GPT Integration, Open Source AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-AI-Agent",
-    "Url": "/faq/How-to-make-AI-Agent.html"
   },
   "How-to-Implement-Personalized-Customization": {
     "Category": "Marketing & Support",
@@ -12056,8 +9646,6 @@ export const faq = {
     "Title": "How to Implement Personalized Customization for AI Agents-Fastgpt",
     "Description": "Personalized customization enables tailoring AI agents to specific user needs, goals, or brand identities. It is achievable through configuration settings and targeted training data inputs.\n\nImplement",
     "Keywords": "FastGPT, Enterprise AI, GPT Integration, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-Implement-Personalized-Customization",
-    "Url": "/faq/How-to-Implement-Personalized-Customization.html"
   },
   "How-to-restrict-the-access": {
     "Category": "Marketing & Support",
@@ -12066,8 +9654,6 @@ export const faq = {
     "Title": "How to restrict the access permissions of AI Agent-Fastgpt",
     "Description": "Controlling AI Agent permissions involves implementing access control mechanisms to define and enforce what actions or data the agent can access. This is achievable through dedicated security features",
     "Keywords": "Enterprise AI, API Integration, LLM Development, Task Automation AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-restrict-the-access",
-    "Url": "/faq/How-to-restrict-the-access.html"
   },
   "How-to-Perfectly-Adapt-AI": {
     "Category": "Marketing & Support",
@@ -12076,8 +9662,6 @@ export const faq = {
     "Title": "How to Perfectly Adapt AI Agents to Mobile Devices-Fastgpt",
     "Description": "Adapting AI agents perfectly to mobile devices requires focused optimization to overcome constraints like limited processing power, battery life, and screen size while delivering responsive, intuitive",
     "Keywords": "AI Workflow, FastGPT, Enterprise AI, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-Perfectly-Adapt-AI",
-    "Url": "/faq/How-to-Perfectly-Adapt-AI.html"
   },
   "How-AI-Agents-Automatically-Update": {
     "Category": "Marketing & Support",
@@ -12086,8 +9670,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Update Knowledge Bases-Fastgpt",
     "Description": "AI agents can automatically update knowledge bases by autonomously discovering, ingesting, processing, and integrating new or updated information. This is achieved through predefined workflows and con",
     "Keywords": "Vector Search, Task Automation AI, AI Platform, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Update",
-    "Url": "/faq/How-AI-Agents-Automatically-Update.html"
   },
   "How-to-Reduce-the-Energy": {
     "Category": "Marketing & Support",
@@ -12096,8 +9678,6 @@ export const faq = {
     "Title": "How to Reduce the Energy Consumption and Costs of AI Agents-Fastgpt",
     "Description": "Energy consumption and costs associated with AI agents can be significantly reduced through deliberate optimization strategies applied during development, deployment, and operation. It is both feasibl",
     "Keywords": "FastGPT, AI Automation, LLM Development, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Reduce-the-Energy",
-    "Url": "/faq/How-to-Reduce-the-Energy.html"
   },
   "How-do-AI-Agents-solve": {
     "Category": "Marketing & Support",
@@ -12106,8 +9686,6 @@ export const faq = {
     "Title": "How do AI Agents solve the memory problem in multi-turn conversations-Fastgpt",
     "Description": "AI Agents address the multi-turn conversation memory challenge through short-term memory buffers designed to retain and utilize relevant context. This mechanism enables them to track the ongoing dialo",
     "Keywords": "Open Source AI, Intelligent Q&A, FastGPT, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-solve",
-    "Url": "/faq/How-do-AI-Agents-solve.html"
   },
   "How-can-AI-Agents-learn": {
     "Category": "Marketing & Support",
@@ -12116,8 +9694,6 @@ export const faq = {
     "Title": "How can AI Agents learn new knowledge faster?-Fastgpt",
     "Description": "AI agents accelerate knowledge acquisition through specialized techniques like transfer learning and efficient neural architectures. They can rapidly integrate new information by building upon existin",
     "Keywords": "Document AI, Open Source AI, FastGPT, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-learn",
-    "Url": "/faq/How-can-AI-Agents-learn.html"
   },
   "How-AI-Agents-Adapt-to": {
     "Category": "Marketing & Support",
@@ -12126,8 +9702,6 @@ export const faq = {
     "Title": "How AI Agents Adapt to Different Network Environments-Fastgpt",
     "Description": "AI agents dynamically adjust their behavior and communication strategies to function effectively across varying network conditions like high latency, low bandwidth, or intermittent connectivity. This ",
     "Keywords": "API Integration, Open Source AI, GPT Integration, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Adapt-to",
-    "Url": "/faq/How-AI-Agents-Adapt-to.html"
   },
   "How-to-enable-AI-Agents": {
     "Category": "Platform Value & Trends",
@@ -12136,8 +9710,6 @@ export const faq = {
     "Title": "How to enable AI Agents to support fine-grained permission control-Fastgpt",
     "Description": "Enabling AI agents to support fine-grained permission control is technically feasible through deliberate design choices and configuration settings. This involves controlling access to specific functio",
     "Keywords": "LLM Development, AI Chatbot, AI Platform, GPT Integration, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-AI-Agents",
-    "Url": "/faq/How-to-enable-AI-Agents.html"
   },
   "What-interfaces-does-an-AI": {
     "Category": "Marketing & Support",
@@ -12146,8 +9718,6 @@ export const faq = {
     "Title": "What interfaces does an AI Agent need to communicate with external systems?-Fastgpt",
     "Description": "AI Agents primarily utilize interfaces like APIs (including RESTful, GraphQL, or SOAP), Webhooks, and Software Development Kits (SDKs) to communicate with external systems. Additionally, they may leve",
     "Keywords": "Open Source AI, FastGPT, GPT Integration, Enterprise AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-interfaces-does-an-AI",
-    "Url": "/faq/What-interfaces-does-an-AI.html"
   },
   "How-to-improve-the-concurrent": {
     "Category": "Marketing & Support",
@@ -12156,8 +9726,6 @@ export const faq = {
     "Title": "How to improve the concurrent processing capability of AI Agent-Fastgpt",
     "Description": "To enhance AI Agent concurrency, strategic infrastructure enhancements and optimized design patterns are required. This scalability is achievable and critical for handling increased workloads efficien",
     "Keywords": "Smart Assistant, Vector Search, LLM Development, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-concurrent",
-    "Url": "/faq/How-to-improve-the-concurrent.html"
   },
   "How-do-AI-Agents-ensure": {
     "Category": "Platform Value & Trends",
@@ -12166,8 +9734,6 @@ export const faq = {
     "Title": "How do AI Agents ensure secure communication between microservices-Fastgpt",
     "Description": "AI Agents ensure secure communication between microservices by acting as intelligent intermediaries that enforce security policies and protocols. They typically authenticate services and encrypt data ",
     "Keywords": "Open Source AI, AI Workflow, AI Knowledge Management, Enterprise AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-ensure",
-    "Url": "/faq/How-do-AI-Agents-ensure.html"
   },
   "How-to-monitor-the-performance": {
     "Category": "Marketing & Support",
@@ -12176,8 +9742,6 @@ export const faq = {
     "Title": "How to monitor the performance and resource consumption of AI Agents-Fastgpt",
     "Description": "Monitoring AI Agent performance and resource consumption is achievable and essential for maintaining reliability and efficiency. It involves tracking key metrics related to the agent's operation and t",
     "Keywords": "Vector Search, FastGPT, AI Platform, LLM Development, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-monitor-the-performance",
-    "Url": "/faq/How-to-monitor-the-performance.html"
   },
   "How-to-Choose-an-Open": {
     "Category": "Marketing & Support",
@@ -12186,8 +9750,6 @@ export const faq = {
     "Title": "How to Choose an Open Source Framework in AI Agent Development-Fastgpt",
     "Description": "Selecting an optimal open-source framework requires evaluating project needs against framework capabilities and support. This deliberate choice directly impacts development efficiency and agent perfor",
     "Keywords": "Smart Assistant, Intelligent Q&A, Task Automation AI, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-to-Choose-an-Open",
-    "Url": "/faq/How-to-Choose-an-Open.html"
   },
   "How-to-Handle-Failures-of": {
     "Category": "Marketing & Support",
@@ -12196,8 +9758,6 @@ export const faq = {
     "Title": "How to Handle Failures of Third-Party Services Dependent on AI Agents-Fastgpt",
     "Description": "Third-party service failures can be effectively managed through proactive design and established failure handling strategies within AI agent architectures. Robust systems are engineered to anticipate ",
     "Keywords": "AI Chatbot, AI Platform, Document AI, FastGPT, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-Handle-Failures-of",
-    "Url": "/faq/How-to-Handle-Failures-of.html"
   },
   "How-AI-Agents-Integrate-with": {
     "Category": "Marketing & Support",
@@ -12206,8 +9766,6 @@ export const faq = {
     "Title": "How AI Agents Integrate with Traditional IT Systems-Fastgpt",
     "Description": "AI agents integrate with traditional IT systems through secure API interfaces and middleware connectors, enabling data exchange and workflow automation with legacy platforms. This integration is techn",
     "Keywords": "AI Chatbot, Task Automation AI, Document AI, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Integrate-with",
-    "Url": "/faq/How-AI-Agents-Integrate-with.html"
   },
   "How-to-set-up-secure": {
     "Category": "Marketing & Support",
@@ -12216,8 +9774,6 @@ export const faq = {
     "Title": "How to set up secure user authentication for AI Agent-Fastgpt",
     "Description": "Secure user authentication verifies user identity reliably before granting access to the AI Agent. It is essential and achievable using robust protocols and best practices to protect sensitive data an",
     "Keywords": "AI Automation, GPT Integration, LLM Development, Enterprise AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-set-up-secure",
-    "Url": "/faq/How-to-set-up-secure.html"
   },
   "What-details-should-be-noted": {
     "Category": "Marketing & Support",
@@ -12226,8 +9782,6 @@ export const faq = {
     "Title": "What details should be noted in version management of AI Agent?-Fastgpt",
     "Description": "AI Agent version management tracks all code, model configurations, dataset versions, parameters, and environment details across development, training, and deployment. It ensures reproducibility, enabl",
     "Keywords": "AI Knowledge Management, AI Platform, Task Automation AI, Smart Assistant, Document AI",
-    "URL": "https://fastgpt.io/en/faq/What-details-should-be-noted",
-    "Url": "/faq/What-details-should-be-noted.html"
   },
   "How-to-control-the-log": {
     "Category": "Marketing & Support",
@@ -12236,8 +9790,6 @@ export const faq = {
     "Title": "How to control the log data volume of AI Agent-Fastgpt",
     "Description": "Yes, AI Agent log data volume can be effectively controlled through strategic configuration and management practices. This is essential for maintaining system performance and manageable storage costs.",
     "Keywords": "FastGPT, AI Knowledge Management, LLM Development, Intelligent Q&A, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-control-the-log",
-    "Url": "/faq/How-to-control-the-log.html"
   },
   "How-AI-Agents-Support-Rapid": {
     "Category": "Marketing & Support",
@@ -12246,8 +9798,6 @@ export const faq = {
     "Title": "How AI Agents Support Rapid A/B Testing-Fastgpt",
     "Description": "AI agents accelerate A/B testing by autonomously managing variations, executing tests, and learning from results in real-time. They automate deployment and analysis, drastically reducing the cycle tim",
     "Keywords": "AI Knowledge Management, FastGPT, Intelligent Q&A, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Support-Rapid",
-    "Url": "/faq/How-AI-Agents-Support-Rapid.html"
   },
   "How-to-evaluate-the-interaction": {
     "Category": "Marketing & Support",
@@ -12256,8 +9806,6 @@ export const faq = {
     "Title": "How to evaluate the interaction experience of AI Agents-Fastgpt",
     "Description": "Evaluating AI Agent interaction experience involves systematically assessing the quality, performance, and user satisfaction during human-agent engagements. This ensures the agent meets usability, eff",
     "Keywords": "AI Chatbot, Enterprise AI, Intelligent Q&A, Document AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-evaluate-the-interaction",
-    "Url": "/faq/How-to-evaluate-the-interaction.html"
   },
   "How-AI-Agents-Support-Visual": {
     "Category": "Marketing & Support",
@@ -12266,8 +9814,6 @@ export const faq = {
     "Title": "How AI Agents Support Visual Management Backends-Fastgpt",
     "Description": "AI agents enhance visual management backends by automating data processing, generating visualizations, and providing actionable insights from complex datasets through AI-driven analysis. They transfor",
     "Keywords": "AI Chatbot, FastGPT, Document AI, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Support-Visual",
-    "Url": "/faq/How-AI-Agents-Support-Visual.html"
   },
   "How-can-AI-Agents-quickly": {
     "Category": "Marketing & Support",
@@ -12276,8 +9822,6 @@ export const faq = {
     "Title": "How can AI Agents quickly integrate external API data-Fastgpt",
     "Description": "AI agents integrate external API data rapidly using standardized protocols and automated processing. They achieve this through direct API calls, authentication handling, and automated data parsing.\n\nK",
     "Keywords": "LLM Development, AI Platform, Vector Search, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-quickly",
-    "Url": "/faq/How-can-AI-Agents-quickly.html"
   },
   "How-can-AI-Agents-remain": {
     "Category": "Marketing & Support",
@@ -12286,8 +9830,6 @@ export const faq = {
     "Title": "How can AI Agents remain stable under high concurrent access?-Fastgpt",
     "Description": "AI Agents maintain stability under high concurrent access through scalable architecture and intelligent resource management. This ensures reliable performance even during significant traffic surges.  ",
     "Keywords": "AI Knowledge Management, Enterprise AI, Smart Assistant, GPT Integration, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-remain",
-    "Url": "/faq/How-can-AI-Agents-remain.html"
   },
   "How-to-prevent-malicious-abuse": {
     "Category": "Marketing & Support",
@@ -12296,8 +9838,6 @@ export const faq = {
     "Title": "How to prevent malicious abuse of AI Agents-Fastgpt",
     "Description": "Preventing malicious abuse of AI Agents requires robust technical and policy safeguards to enforce ethical usage. This is feasible through proactive design and continuous monitoring.  \n\nKey principles",
     "Keywords": "AI Automation, FastGPT, AI Platform, AI Chatbot, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-to-prevent-malicious-abuse",
-    "Url": "/faq/How-to-prevent-malicious-abuse.html"
   },
   "How-AI-Agents-Record-and": {
     "Category": "Platform Value & Trends",
@@ -12306,8 +9846,6 @@ export const faq = {
     "Title": "How AI Agents Record and Analyze All Operation Histories-Fastgpt",
     "Description": "AI agents can comprehensively record and analyze their entire operational history. This capability involves systematically capturing every action, decision, and interaction they perform during executi",
     "Keywords": "AI Workflow, Task Automation AI, AI Platform, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Record-and",
-    "Url": "/faq/How-AI-Agents-Record-and.html"
   },
   "How-AI-Agents-Handle-Sensitive": {
     "Category": "Platform Value & Trends",
@@ -12316,8 +9854,6 @@ export const faq = {
     "Title": "How AI Agents Handle Sensitive Images and Files-Fastgpt",
     "Description": "AI agents securely manage sensitive images and files through specialized protocols and privacy-preserving techniques. They implement strict measures to prevent unauthorized access, modification, or di",
     "Keywords": "AI Chatbot, API Integration, Vector Search, Intelligent Q&A, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Sensitive",
-    "Url": "/faq/How-AI-Agents-Handle-Sensitive.html"
   },
   "What-is-the-troubleshooting-process": {
     "Category": "Marketing & Support",
@@ -12326,8 +9862,6 @@ export const faq = {
     "Title": "What is the troubleshooting process for an AI Agent?-Fastgpt",
     "Description": "The troubleshooting process for an AI Agent is a systematic approach to identify, diagnose, and resolve malfunctions or unexpected behaviors within its operation. It involves steps like symptom monito",
     "Keywords": "Smart Assistant, API Integration, Document AI, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-troubleshooting-process",
-    "Url": "/faq/What-is-the-troubleshooting-process.html"
   },
   "How-to-Detect-Potential-Vulnerabilities": {
     "Category": "Marketing & Support",
@@ -12336,8 +9870,6 @@ export const faq = {
     "Title": "How to Detect Potential Vulnerabilities in AI Agents-Fastgpt",
     "Description": "Detecting potential vulnerabilities in AI agents involves proactively identifying security weaknesses that could lead to failures, data breaches, or manipulation. This is achievable through systematic",
     "Keywords": "Open Source AI, Enterprise AI, AI Automation, Smart Assistant, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-Detect-Potential-Vulnerabilities",
-    "Url": "/faq/How-to-Detect-Potential-Vulnerabilities.html"
   },
   "How-do-AI-Agents-implement": {
     "Category": "Marketing & Support",
@@ -12346,8 +9878,6 @@ export const faq = {
     "Title": "How do AI Agents implement automatic disaster recovery and backup?-Fastgpt",
     "Description": "AI agents implement automatic disaster recovery and backup by continuously monitoring system health, intelligently initiating backup operations, and triggering predefined recovery actions when failure",
     "Keywords": "Task Automation AI, API Integration, Document AI, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-implement",
-    "Url": "/faq/How-do-AI-Agents-implement.html"
   },
   "How-to-optimize-the-startup": {
     "Category": "Marketing & Support",
@@ -12356,8 +9886,6 @@ export const faq = {
     "Title": "How to optimize the startup speed of AI Agent-Fastgpt",
     "Description": "Optimizing AI Agent startup speed is both feasible and critical for improving user experience. It involves targeted strategies to reduce initialization time and resource overhead.\n\nKey principles incl",
     "Keywords": "Smart Assistant, FastGPT, GPT Integration, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-optimize-the-startup",
-    "Url": "/faq/How-to-optimize-the-startup.html"
   },
   "How-can-AI-Agents-balance": {
     "Category": "Marketing & Support",
@@ -12366,8 +9894,6 @@ export const faq = {
     "Title": "How can AI Agents balance performance and cost-Fastgpt",
     "Description": "AI agents can balance performance and cost by strategically optimizing resources and leveraging efficient architectures. This balance is achievable through careful design and deployment choices.\n\nKey ",
     "Keywords": "Enterprise AI, AI Automation, GPT Integration, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-balance",
-    "Url": "/faq/How-can-AI-Agents-balance.html"
   },
   "What-programming-languages-are-needed": {
     "Category": "Marketing & Support",
@@ -12376,8 +9902,6 @@ export const faq = {
     "Title": "What programming languages are needed for AI Agent development?-Fastgpt",
     "Description": "Developing AI Agents typically requires expertise in languages like Python, R, Java, JavaScript, and sometimes C++ or specialized frameworks. Python is overwhelmingly the dominant language due to its ",
     "Keywords": "FastGPT, Task Automation AI, AI Workflow, AI Platform, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-programming-languages-are-needed",
-    "Url": "/faq/What-programming-languages-are-needed.html"
   },
   "How-to-Determine-the-Core": {
     "Category": "Marketing & Support",
@@ -12386,8 +9910,6 @@ export const faq = {
     "Title": "How to Determine the Core Function Scope of an AI Agent-Fastgpt",
     "Description": "Determining an AI agent's core function scope involves defining the specific, essential tasks it performs to deliver primary value to its users, deliberately excluding non-essential capabilities to ma",
     "Keywords": "FastGPT, Task Automation AI, AI Knowledge Management, Vector Search, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-Determine-the-Core",
-    "Url": "/faq/How-to-Determine-the-Core.html"
   },
   "How-can-AI-Agents-prevent": {
     "Category": "Platform Value & Trends",
@@ -12396,8 +9918,6 @@ export const faq = {
     "Title": "How can AI Agents prevent the output of personal privacy information-Fastgpt",
     "Description": "AI Agents can prevent personal privacy information output through robust technical safeguards and strict data handling protocols. Techniques include input filtering, output scrubbing, and adherence to",
     "Keywords": "Smart Assistant, GPT Integration, Document AI, AI Chatbot, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-prevent",
-    "Url": "/faq/How-can-AI-Agents-prevent.html"
   },
   "How-do-AI-Agents-process": {
     "Category": "Marketing & Support",
@@ -12406,8 +9926,6 @@ export const faq = {
     "Title": "How do AI Agents process multimedia data-Fastgpt",
     "Description": "AI agents process multimedia data by utilizing advanced deep learning models to perform perceptual tasks like image recognition, audio analysis, or video understanding. They can interpret unstructured",
     "Keywords": "AI Platform, AI Chatbot, Smart Assistant, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-process",
-    "Url": "/faq/How-do-AI-Agents-process.html"
   },
   "How-AI-Agents-Prevent-Algorithmic": {
     "Category": "Marketing & Support",
@@ -12416,8 +9934,6 @@ export const faq = {
     "Title": "How AI Agents Prevent Algorithmic Bias-Fastgpt",
     "Description": "AI agents mitigate algorithmic bias through intentional design and continuous monitoring. They cannot eliminate bias entirely but significantly reduce its occurrence in automated decision-making.  \n\nK",
     "Keywords": "GPT Integration, Document AI, Intelligent Q&A, AI Automation, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Prevent-Algorithmic",
-    "Url": "/faq/How-AI-Agents-Prevent-Algorithmic.html"
   },
   "How-AI-Agents-Can-Run": {
     "Category": "Marketing & Support",
@@ -12426,8 +9942,6 @@ export const faq = {
     "Title": "How AI Agents Can Run Smoothly Under Different Network Conditions-Fastgpt",
     "Description": "AI agents maintain smooth operation across varied network conditions through adaptive connectivity management and local processing capabilities.  \n\nThey continuously monitor connection stability and l",
     "Keywords": "API Integration, Enterprise AI, AI Automation, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Can-Run",
-    "Url": "/faq/How-AI-Agents-Can-Run.html"
   },
   "How-AI-Agents-Reduce-Dependence": {
     "Category": "Marketing & Support",
@@ -12436,8 +9950,6 @@ export const faq = {
     "Title": "How AI Agents Reduce Dependence on Training Data-Fastgpt",
     "Description": "AI agents reduce reliance on large, manually annotated training datasets through techniques like reinforcement learning, simulation environments, and synthetic data generation. These methods enable le",
     "Keywords": "AI Knowledge Management, Vector Search, AI Chatbot, AI Automation, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Reduce-Dependence",
-    "Url": "/faq/How-AI-Agents-Reduce-Dependence.html"
   },
   "How-to-shorten-the-cycle": {
     "Category": "Marketing & Support",
@@ -12446,8 +9958,6 @@ export const faq = {
     "Title": "How to shorten the cycle of AI Agent from development to launch-Fastgpt",
     "Description": "To shorten the AI Agent development-to-launch cycle, focus on adopting an iterative development approach combined with automation and leveraging existing frameworks. This enables faster experimentatio",
     "Keywords": "AI Platform, AI Knowledge Management, AI Chatbot, Intelligent Q&A, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-shorten-the-cycle",
-    "Url": "/faq/How-to-shorten-the-cycle.html"
   },
   "How-AI-Agents-Handle-Massive": {
     "Category": "Marketing & Support",
@@ -12456,8 +9966,6 @@ export const faq = {
     "Title": "How AI Agents Handle Massive Simultaneous User Access-Fastgpt",
     "Description": "AI agents handle massive simultaneous user access primarily through distributed architectures and scalable cloud infrastructure. This ensures the system remains responsive and available even under pea",
     "Keywords": "AI Chatbot, FastGPT, Document AI, Enterprise AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Massive",
-    "Url": "/faq/How-AI-Agents-Handle-Massive.html"
   },
   "How-AI-Agents-Can-Quickly": {
     "Category": "Platform Value & Trends",
@@ -12466,8 +9974,6 @@ export const faq = {
     "Title": "How AI Agents Can Quickly Isolate Infected Nodes-Fastgpt",
     "Description": "AI agents can rapidly identify and isolate infected nodes within a network using automated detection and response mechanisms. This containment is a core defensive action achievable in modern security ",
     "Keywords": "Intelligent Q&A, Task Automation AI, AI Automation, Document AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Can-Quickly",
-    "Url": "/faq/How-AI-Agents-Can-Quickly.html"
   },
   "How-does-an-AI-Agent": {
     "Category": "Platform Value & Trends",
@@ -12476,8 +9982,6 @@ export const faq = {
     "Title": "How does an AI Agent handle the situation where a user withdraws usage authorization?-Fastgpt",
     "Description": "An AI Agent immediately suspends data access and related processing activities upon receiving a user's withdrawal of usage authorization. It ceases using the user's personal data for model training, p",
     "Keywords": "Vector Search, AI Chatbot, Document AI, Enterprise AI, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-does-an-AI-Agent",
-    "Url": "/faq/How-does-an-AI-Agent.html"
   },
   "How-AI-Agents-Manage-User": {
     "Category": "Marketing & Support",
@@ -12486,8 +9990,6 @@ export const faq = {
     "Title": "How AI Agents Manage User Access Permissions-Fastgpt",
     "Description": "AI agents manage user access permissions by automatically authenticating users and enforcing authorization policies based on predefined rules and dynamic context. They act as intelligent intermediarie",
     "Keywords": "Task Automation AI, Enterprise AI, GPT Integration, FastGPT, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Manage-User",
-    "Url": "/faq/How-AI-Agents-Manage-User.html"
   },
   "How-to-improve-the-recognition": {
     "Category": "Marketing & Support",
@@ -12496,8 +9998,6 @@ export const faq = {
     "Title": "How to improve the recognition rate of AI Agent for professional terms-Fastgpt",
     "Description": "Improving AI Agent recognition of professional terms is achievable through targeted strategies. Enhancing domain-specific understanding reduces errors and boosts reliability.  \n\nKey approaches include",
     "Keywords": "FastGPT, AI Workflow, Open Source AI, Vector Search, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-recognition",
-    "Url": "/faq/How-to-improve-the-recognition.html"
   },
   "How-AI-Agents-Handle-Multi-Task": {
     "Category": "Marketing & Support",
@@ -12506,8 +10006,6 @@ export const faq = {
     "Title": "How AI Agents Handle Multi-Task Parallel Requests-Fastgpt",
     "Description": "AI agents handle multi-task parallel requests by leveraging specialized architectures that enable concurrent processing. This capability is feasible through sophisticated computational systems designe",
     "Keywords": "API Integration, Enterprise AI, AI Automation, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Multi-Task",
-    "Url": "/faq/How-AI-Agents-Handle-Multi-Task.html"
   },
   "How-to-ensure-the-continuous": {
     "Category": "Marketing & Support",
@@ -12516,8 +10014,6 @@ export const faq = {
     "Title": "How to ensure the continuous update of semantic understanding for AI Agent-Fastgpt",
     "Description": "To ensure continuous updates to an AI Agent's semantic understanding, implement regular iterative training cycles using new data inputs, rigorous evaluation, and targeted model adjustments. This proce",
     "Keywords": "Intelligent Q&A, AI Workflow, Document AI, Task Automation AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-continuous",
-    "Url": "/faq/How-to-ensure-the-continuous.html"
   },
   "How-AI-Agents-Handle-Inconsistent": {
     "Category": "Marketing & Support",
@@ -12526,8 +10022,6 @@ export const faq = {
     "Title": "How AI Agents Handle Inconsistent Input Data Formats-Fastgpt",
     "Description": "AI agents utilize data preprocessing techniques and adaptable algorithms to handle inconsistent input data formats effectively. They transform varying structures into standardized forms suitable for a",
     "Keywords": "AI Platform, Smart Assistant, AI Chatbot, AI Automation, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Inconsistent",
-    "Url": "/faq/How-AI-Agents-Handle-Inconsistent.html"
   },
   "How-to-achieve-continuous-performance": {
     "Category": "Marketing & Support",
@@ -12536,8 +10030,6 @@ export const faq = {
     "Title": "How to achieve continuous performance optimization for AI Agents-Fastgpt",
     "Description": "Achieving continuous performance optimization for AI Agents is feasible through systematic monitoring, evaluation, and iterative refinement processes. It involves establishing ongoing feedback loops t",
     "Keywords": "Vector Search, AI Workflow, Document AI, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-achieve-continuous-performance",
-    "Url": "/faq/How-to-achieve-continuous-performance.html"
   },
   "How-to-avoid-AI-Agent": {
     "Category": "Marketing & Support",
@@ -12546,8 +10038,6 @@ export const faq = {
     "Title": "How to avoid AI Agent from giving circular answers-Fastgpt",
     "Description": "Circular responses from AI agents can be avoided through intentional system design and constraint implementation.  \n\nKey strategies include implementing a memory buffer to track recent conversational ",
     "Keywords": "Smart Assistant, Intelligent Q&A, GPT Integration, LLM Development, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-avoid-AI-Agent",
-    "Url": "/faq/How-to-avoid-AI-Agent.html"
   },
   "How-AI-Agents-Enhance-the": {
     "Category": "Marketing & Support",
@@ -12556,8 +10046,6 @@ export const faq = {
     "Title": "How AI Agents Enhance the Fluency of Natural Language Generation-Fastgpt",
     "Description": "AI agents enhance natural language generation fluency by leveraging advanced neural architectures and contextual adaptation techniques. They dynamically adjust outputs based on real-time interaction p",
     "Keywords": "LLM Development, AI Chatbot, GPT Integration, Vector Search, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Enhance-the",
-    "Url": "/faq/How-AI-Agents-Enhance-the.html"
   },
   "How-AI-Agents-Process-Inputs": {
     "Category": "Marketing & Support",
@@ -12566,8 +10054,6 @@ export const faq = {
     "Title": "How AI Agents Process Inputs in Multiple File Formats-Fastgpt",
     "Description": "AI agents process inputs across multiple file formats by leveraging file parsers and content extraction techniques to handle diverse data sources. This capability enables unified handling of documents",
     "Keywords": "Task Automation AI, AI Automation, API Integration, Document AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Process-Inputs",
-    "Url": "/faq/How-AI-Agents-Process-Inputs.html"
   },
   "How-to-quickly-deploy-AI": {
     "Category": "Marketing & Support",
@@ -12576,8 +10062,6 @@ export const faq = {
     "Title": "How to quickly deploy AI Agents to cloud environments-Fastgpt",
     "Description": "Quickly deploying AI Agents to cloud environments is feasible using modern cloud platforms and containerization technologies, significantly accelerating the time-to-production.\n\nKey principles involve",
     "Keywords": "AI Workflow, GPT Integration, Vector Search, FastGPT, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-deploy-AI",
-    "Url": "/faq/How-to-quickly-deploy-AI.html"
   },
   "How-to-ensure-cross-border-data": {
     "Category": "Marketing & Support",
@@ -12586,8 +10070,6 @@ export const faq = {
     "Title": "How to ensure cross-border data compliance of AI Agents-Fastgpt",
     "Description": "To ensure cross-border data compliance of AI Agents, organizations must proactively implement a governance framework adhering to relevant international, regional, and national data protection laws. Th",
     "Keywords": "Document AI, AI Automation, Intelligent Q&A, Vector Search, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-cross-border-data",
-    "Url": "/faq/How-to-ensure-cross-border-data.html"
   },
   "How-to-improve-the-anomaly": {
     "Category": "Marketing & Support",
@@ -12596,8 +10078,6 @@ export const faq = {
     "Title": "How to improve the anomaly detection capability of AI Agents-Fastgpt",
     "Description": "Improving AI Agents' anomaly detection capabilities is achievable through targeted enhancements in data handling, model architecture, and learning processes. This ensures agents accurately identify un",
     "Keywords": "FastGPT, Task Automation AI, AI Automation, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-anomaly",
-    "Url": "/faq/How-to-improve-the-anomaly.html"
   },
   "How-do-AI-Agents-learn": {
     "Category": "Marketing & Support",
@@ -12606,8 +10086,6 @@ export const faq = {
     "Title": "How do AI Agents learn in an unsupervised manner-Fastgpt",
     "Description": "AI agents learn through unsupervised methods by identifying patterns and structures in data without labeled examples or explicit guidance. This approach allows them to discover inherent relationships ",
     "Keywords": "Intelligent Q&A, API Integration, AI Automation, FastGPT, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-learn",
-    "Url": "/faq/How-do-AI-Agents-learn.html"
   },
   "How-can-AI-Agents-integrate": {
     "Category": "Marketing & Support",
@@ -12616,8 +10094,6 @@ export const faq = {
     "Title": "How can AI Agents integrate image recognition functionality-Fastgpt",
     "Description": "AI agents integrate image recognition by leveraging APIs provided by dedicated computer vision models or services. This allows them to analyze images and extract meaningful information without buildin",
     "Keywords": "AI Knowledge Management, Smart Assistant, Open Source AI, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-integrate",
-    "Url": "/faq/How-can-AI-Agents-integrate.html"
   },
   "How-AI-Agents-Reduce-Cold": {
     "Category": "Marketing & Support",
@@ -12626,8 +10102,6 @@ export const faq = {
     "Title": "How AI Agents Reduce Cold Start Time-Fastgpt",
     "Description": "AI agents significantly reduce cold start time by leveraging pre-existing knowledge bases, data, or simulated experiences instead of requiring initial real-world interaction data. This bypasses the in",
     "Keywords": "LLM Development, FastGPT, AI Automation, API Integration, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Reduce-Cold",
-    "Url": "/faq/How-AI-Agents-Reduce-Cold.html"
   },
   "How-AI-Agents-Handle-Database": {
     "Category": "Marketing & Support",
@@ -12636,8 +10110,6 @@ export const faq = {
     "Title": "How AI Agents Handle Database Writes Under High Concurrency-Fastgpt",
     "Description": "AI agents manage concurrent database writes through concurrency control mechanisms and optimized transaction handling. This ensures data integrity and system stability even during peak demand.\n\nKey pr",
     "Keywords": "AI Workflow, LLM Development, FastGPT, AI Automation, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Database",
-    "Url": "/faq/How-AI-Agents-Handle-Database.html"
   },
   "How-AI-Agents-Identify-and": {
     "Category": "Marketing & Support",
@@ -12646,8 +10118,6 @@ export const faq = {
     "Title": "How AI Agents Identify and Avoid Malicious Instructions-Fastgpt",
     "Description": "AI agents identify and malicious instructions through a combination of pre-defined safeguards, machine learning models trained on vast datasets, and input validation protocols. This capability is fund",
     "Keywords": "AI Automation, Intelligent Q&A, GPT Integration, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Identify-and",
-    "Url": "/faq/How-AI-Agents-Identify-and.html"
   },
   "How-to-Enable-AI-Agents": {
     "Category": "Marketing & Support",
@@ -12656,8 +10126,6 @@ export const faq = {
     "Title": "How to Enable AI Agents to Support Flexible Plugin Extensions-Fastgpt",
     "Description": "Enabling flexible plugin extensions for AI agents involves implementing a modular architecture and protocols that allow external functionalities to be added, removed, or replaced dynamically. This is ",
     "Keywords": "Smart Assistant, Task Automation AI, Intelligent Q&A, AI Automation, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Enable-AI-Agents",
-    "Url": "/faq/How-to-Enable-AI-Agents.html"
   },
   "How-do-AI-Agents-automatically": {
     "Category": "Marketing & Support",
@@ -12666,8 +10134,6 @@ export const faq = {
     "Title": "How do AI Agents automatically detect data anomalies-Fastgpt",
     "Description": "AI agents automatically detect data anomalies using machine learning and statistical algorithms to identify deviations from expected data patterns without constant human oversight. These systems conti",
     "Keywords": "Intelligent Q&A, AI Knowledge Management, API Integration, AI Workflow, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-automatically",
-    "Url": "/faq/How-do-AI-Agents-automatically.html"
   },
   "How-AI-Agents-Process-Time": {
     "Category": "Marketing & Support",
@@ -12676,8 +10142,6 @@ export const faq = {
     "Title": "How AI Agents Process Time Series Data-Fastgpt",
     "Description": "AI agents process time series data by analyzing sequences of data points ordered chronologically, using specialized machine learning models to capture temporal dependencies and patterns. These agents ",
     "Keywords": "AI Chatbot, AI Platform, AI Knowledge Management, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Process-Time",
-    "Url": "/faq/How-AI-Agents-Process-Time.html"
   },
   "How-AI-Agents-Automatically-Repair": {
     "Category": "Marketing & Support",
@@ -12686,8 +10150,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Repair Partial Erroneous Data-Fastgpt",
     "Description": "AI agents can automatically correct subsets of erroneous data using machine learning and pattern recognition. This involves targeted anomaly detection and applying predefined or learned correction rul",
     "Keywords": "Smart Assistant, Open Source AI, AI Chatbot, Enterprise AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Repair",
-    "Url": "/faq/How-AI-Agents-Automatically-Repair.html"
   },
   "How-AI-Agents-Protect-User": {
     "Category": "Marketing & Support",
@@ -12696,8 +10158,6 @@ export const faq = {
     "Title": "How AI Agents Protect User Privacy from Misuse-Fastgpt",
     "Description": "AI agents protect user privacy from misuse by design, employing specialized techniques and governance frameworks to prevent unauthorized access and exploitation of personal data. These systems priorit",
     "Keywords": "LLM Development, AI Workflow, Intelligent Q&A, AI Automation, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Protect-User",
-    "Url": "/faq/How-AI-Agents-Protect-User.html"
   },
   "How-AI-Agents-Reduce-Downtime": {
     "Category": "Marketing & Support",
@@ -12706,8 +10166,6 @@ export const faq = {
     "Title": "How AI Agents Reduce Downtime for Maintenance and Upgrades-Fastgpt",
     "Description": "AI agents minimize maintenance and upgrade downtime through proactive planning and automated execution. These systems leverage data to optimize scheduling and handle repetitive tasks efficiently.\n\nAI ",
     "Keywords": "AI Workflow, AI Platform, AI Chatbot, GPT Integration, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Reduce-Downtime",
-    "Url": "/faq/How-AI-Agents-Reduce-Downtime.html"
   },
   "How-AI-Agents-Automatically-Archive": {
     "Category": "Marketing & Support",
@@ -12716,8 +10174,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Archive Historical Conversation Data-Fastgpt",
     "Description": "AI agents automatically archive historical conversation data through secure backend storage systems. This process systematically converts unstructured conversations into searchable, structured records",
     "Keywords": "LLM Development, AI Automation, Vector Search, AI Workflow, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Archive",
-    "Url": "/faq/How-AI-Agents-Automatically-Archive.html"
   },
   "How-to-Prevent-Training-Data": {
     "Category": "Marketing & Support",
@@ -12726,8 +10182,6 @@ export const faq = {
     "Title": "How to Prevent Training Data Leakage in AI Agents-Fastgpt",
     "Description": "Training data leakage in AI agents is preventable through a comprehensive strategy combining access controls, data handling protocols, and technical safeguards. Implementing robust data governance min",
     "Keywords": "LLM Development, AI Chatbot, Open Source AI, Document AI, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-to-Prevent-Training-Data",
-    "Url": "/faq/How-to-Prevent-Training-Data.html"
   },
   "How-to-ensure-that-AI": {
     "Category": "Platform Value & Trends",
@@ -12736,8 +10190,6 @@ export const faq = {
     "Title": "How to ensure that AI Agents are equally secure in edge computing environments-Fastgpt",
     "Description": "Ensuring AI Agents remain secure in edge computing environments is achievable through layered security approaches. This requires addressing unique edge challenges like resource constraints and physica",
     "Keywords": "AI Knowledge Management, AI Chatbot, Document AI, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-that-AI",
-    "Url": "/faq/How-to-ensure-that-AI.html"
   },
   "How-AI-Agents-Efficiently-Manage": {
     "Category": "Marketing & Support",
@@ -12746,8 +10198,6 @@ export const faq = {
     "Title": "How AI Agents Efficiently Manage Long Text Inputs-Fastgpt",
     "Description": "AI agents effectively manage long text inputs through strategies like text chunking, context window optimization, and hierarchical processing. This allows them to analyze, summarize, and reason over e",
     "Keywords": "AI Workflow, AI Chatbot, Smart Assistant, AI Automation, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Efficiently-Manage",
-    "Url": "/faq/How-AI-Agents-Efficiently-Manage.html"
   },
   "How-do-AI-Agents-synchronize": {
     "Category": "Marketing & Support",
@@ -12756,8 +10206,6 @@ export const faq = {
     "Title": "How do AI Agents synchronize updates across multiple data centers-Fastgpt",
     "Description": "AI Agents synchronize updates across multiple data centers primarily through distributed replication protocols and consensus algorithms. This ensures data consistency even during network partitions or",
     "Keywords": "AI Knowledge Management, Open Source AI, Document AI, Vector Search, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-synchronize",
-    "Url": "/faq/How-do-AI-Agents-synchronize.html"
   },
   "How-to-improve-cross-departmental-collaboration": {
     "Category": "Marketing & Support",
@@ -12766,8 +10214,6 @@ export const faq = {
     "Title": "How to improve cross-departmental collaboration efficiency of AI Agent-Fastgpt",
     "Description": "Cross-departmental collaboration efficiency for AI Agents can be significantly improved by establishing clear integration frameworks and protocols. Focusing on interoperability and streamlined workflo",
     "Keywords": "AI Platform, Intelligent Q&A, GPT Integration, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-cross-departmental-collaboration",
-    "Url": "/faq/How-to-improve-cross-departmental-collaboration.html"
   },
   "How-to-Implement-End-to-End-Encryption": {
     "Category": "Marketing & Support",
@@ -12776,8 +10222,6 @@ export const faq = {
     "Title": "How to Implement End-to-End Encryption for AI Agents-Fastgpt",
     "Description": "Implementing end-to-end encryption (E2EE) for AI agents ensures secure communication by encrypting data so that only the intended sender and recipient can access it. This is technically feasible using",
     "Keywords": "Document AI, Smart Assistant, Open Source AI, FastGPT, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-to-Implement-End-to-End-Encryption",
-    "Url": "/faq/How-to-Implement-End-to-End-Encryption.html"
   },
   "How-to-Implement-Multi-dimensional-Data": {
     "Category": "Marketing & Support",
@@ -12786,8 +10230,6 @@ export const faq = {
     "Title": "How to Implement Multi-dimensional Data Indexing for AI Agents-Fastgpt",
     "Description": "Implementing multi-dimensional data indexing for AI agents involves creating structures that efficiently store and retrieve complex data points characterized by numerous attributes. It is feasible thr",
     "Keywords": "Open Source AI, Enterprise AI, GPT Integration, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-Implement-Multi-dimensional-Data",
-    "Url": "/faq/How-to-Implement-Multi-dimensional-Data.html"
   },
   "How-AI-Agents-Implement-Local": {
     "Category": "Marketing & Support",
@@ -12796,8 +10238,6 @@ export const faq = {
     "Title": "How AI Agents Implement Local Inference at Edge Nodes-Fastgpt",
     "Description": "Local inference at edge nodes enables AI agents to process data directly on local devices without constant cloud dependency. This approach reduces latency and operates without reliable cloud connectiv",
     "Keywords": "Smart Assistant, GPT Integration, Vector Search, Document AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Implement-Local",
-    "Url": "/faq/How-AI-Agents-Implement-Local.html"
   },
   "How-AI-Agents-Optimize-Storage": {
     "Category": "Marketing & Support",
@@ -12806,8 +10246,6 @@ export const faq = {
     "Title": "How AI Agents Optimize Storage Costs-Fastgpt",
     "Description": "AI agents leverage machine learning to autonomously reduce storage expenses by optimizing data placement, retention, and management. They dynamically analyze usage patterns, access frequency, and busi",
     "Keywords": "AI Platform, AI Chatbot, AI Workflow, AI Automation, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-Storage",
-    "Url": "/faq/How-AI-Agents-Optimize-Storage.html"
   },
   "How-do-AI-Agents-handle": {
     "Category": "Marketing & Support",
@@ -12816,8 +10254,6 @@ export const faq = {
     "Title": "How do AI Agents handle permissions and account management-Fastgpt",
     "Description": "AI Agents manage permissions and account access through defined protocols and security mechanisms to ensure secure operations while enabling appropriate interaction levels.  \n\nThey primarily leverage ",
     "Keywords": "AI Knowledge Management, AI Chatbot, AI Workflow, AI Automation, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-handle",
-    "Url": "/faq/How-do-AI-Agents-handle.html"
   },
   "How-can-AI-Agents-avoid": {
     "Category": "Platform Value & Trends",
@@ -12826,8 +10262,6 @@ export const faq = {
     "Title": "How can AI Agents avoid privacy issues caused by algorithmic bias?-Fastgpt",
     "Description": "AI Agents can avoid privacy issues stemming from algorithmic bias through proactive design, continuous monitoring, and specific mitigation strategies. Achieving this requires focused effort on both bi",
     "Keywords": "Task Automation AI, Enterprise AI, AI Workflow, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-avoid",
-    "Url": "/faq/How-can-AI-Agents-avoid.html"
   },
   "How-do-AI-Agents-compatible": {
     "Category": "Marketing & Support",
@@ -12836,8 +10270,6 @@ export const faq = {
     "Title": "How do AI Agents compatible with old and new interface standards-Fastgpt",
     "Description": "AI agents maintain compatibility across old and new interface standards through abstraction layers and API gateways. This interoperability is technically feasible and widely implemented.\n\nKey principl",
     "Keywords": "LLM Development, Task Automation AI, GPT Integration, Enterprise AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-compatible",
-    "Url": "/faq/How-do-AI-Agents-compatible.html"
   },
   "How-do-AI-Agents-support": {
     "Category": "Marketing & Support",
@@ -12846,8 +10278,6 @@ export const faq = {
     "Title": "How do AI Agents support asynchronous task processing?-Fastgpt",
     "Description": "AI Agents enable asynchronous task processing by handling tasks independently without requiring immediate human interaction or blocking other operations. They operate autonomously, executing workloads",
     "Keywords": "LLM Development, Enterprise AI, Vector Search, AI Knowledge Management, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-support",
-    "Url": "/faq/How-do-AI-Agents-support.html"
   },
   "How-AI-Agents-Respond-to": {
     "Category": "Platform Value & Trends",
@@ -12856,8 +10286,6 @@ export const faq = {
     "Title": "How AI Agents Respond to User Data Deletion Requests-Fastgpt",
     "Description": "AI agents can process verified user data deletion requests according to established policies and data privacy regulations. They enable compliant handling of such requests through automated workflows.\n",
     "Keywords": "Vector Search, Intelligent Q&A, Enterprise AI, AI Chatbot, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Respond-to",
-    "Url": "/faq/How-AI-Agents-Respond-to.html"
   },
   "How-AI-Agents-Ensure-Data": {
     "Category": "Marketing & Support",
@@ -12866,8 +10294,6 @@ export const faq = {
     "Title": "How AI Agents Ensure Data Security in Multi-Cloud Environments-Fastgpt",
     "Description": "AI agents enhance data security in multi-cloud environments through automated encryption, continuous monitoring, and strict policy enforcement. They enable proactive threat detection and response acro",
     "Keywords": "AI Platform, Task Automation AI, AI Chatbot, AI Workflow, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Ensure-Data",
-    "Url": "/faq/How-AI-Agents-Ensure-Data.html"
   },
   "How-AI-Agents-Reduce-Energy": {
     "Category": "Marketing & Support",
@@ -12876,8 +10302,6 @@ export const faq = {
     "Title": "How AI Agents Reduce Energy Consumption in Model Training-Fastgpt",
     "Description": "AI agents reduce energy consumption during model training by intelligently optimizing computational processes and resource allocation. They can automate the management of hardware utilization and trai",
     "Keywords": "Vector Search, AI Knowledge Management, AI Automation, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Reduce-Energy",
-    "Url": "/faq/How-AI-Agents-Reduce-Energy.html"
   },
   "How-to-Make-AI-Agents": {
     "Category": "Marketing & Support",
@@ -12886,8 +10310,6 @@ export const faq = {
     "Title": "How to Make AI Agents Run Safely Under Different Permissions-Fastgpt",
     "Description": "Implementing AI agents safely under varying permissions involves structured security controls and policy enforcement. This approach ensures agents operate within predefined boundaries without compromi",
     "Keywords": "API Integration, Document AI, Open Source AI, AI Chatbot, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-to-Make-AI-Agents",
-    "Url": "/faq/How-to-Make-AI-Agents.html"
   },
   "How-AI-Agents-Optimize-Memory": {
     "Category": "Marketing & Support",
@@ -12896,8 +10318,6 @@ export const faq = {
     "Title": "How AI Agents Optimize Memory Management in Long-duration Conversations-Fastgpt",
     "Description": "AI agents optimize memory in extended conversations through selective retention and recall mechanisms. This involves strategically preserving crucial information while discarding irrelevant details to",
     "Keywords": "Document AI, AI Platform, API Integration, Enterprise AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-Memory",
-    "Url": "/faq/How-AI-Agents-Optimize-Memory.html"
   },
   "How-to-plan-the-process": {
     "Category": "Marketing & Support",
@@ -12906,8 +10326,6 @@ export const faq = {
     "Title": "How to plan the process of AI Agent from development to launch-Fastgpt",
     "Description": "Developing and launching an AI Agent is a methodical process encompassing distinct phases. It involves structured planning from ideation to deployment to ensure efficiency and success.\n\nKey principles",
     "Keywords": "LLM Development, Enterprise AI, AI Chatbot, Open Source AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-plan-the-process",
-    "Url": "/faq/How-to-plan-the-process.html"
   },
   "What-basic-data-needs-to": {
     "Category": "Marketing & Support",
@@ -12916,8 +10334,6 @@ export const faq = {
     "Title": "What basic data needs to be prepared before developing an AI Agent?-Fastgpt",
     "Description": "Preparing fundamental data is essential for developing functional and effective AI Agents. Required basic data includes labeled datasets, domain-specific content, relevant knowledge sources, context d",
     "Keywords": "GPT Integration, FastGPT, Task Automation AI, AI Knowledge Management, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/What-basic-data-needs-to",
-    "Url": "/faq/What-basic-data-needs-to.html"
   },
   "Do-you-have-to-know": {
     "Category": "Marketing & Support",
@@ -12926,8 +10342,6 @@ export const faq = {
     "Title": "Do you have to know programming to develop AI Agents?-Fastgpt",
     "Description": "Programming knowledge is not strictly mandatory to develop basic AI agents due to the emergence of visual, no-code/low-code development platforms. These tools empower individuals without a programming",
     "Keywords": "Task Automation AI, Vector Search, AI Chatbot, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Do-you-have-to-know",
-    "Url": "/faq/Do-you-have-to-know.html"
   },
   "How-to-quickly-build-an": {
     "Category": "Marketing & Support",
@@ -12936,8 +10350,6 @@ export const faq = {
     "Title": "How to quickly build an AI Agent without a technical team-Fastgpt",
     "Description": "Building an AI agent without coding skills is feasible using accessible no-code/low-code platforms and services. These tools empower non-technical users through visual interfaces and pre-built compone",
     "Keywords": "Open Source AI, AI Chatbot, Smart Assistant, Document AI, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-quickly-build-an",
-    "Url": "/faq/How-to-quickly-build-an.html"
   },
   "How-much-server-and-computing": {
     "Category": "Marketing & Support",
@@ -12946,8 +10358,6 @@ export const faq = {
     "Title": "How much server and computing power does an AI Agent require?-Fastgpt",
     "Description": "AI agent requirements vary significantly based on model complexity and workload. There is no single specification; feasibility depends on the specific agent's design and usage patterns.\n\nKey factors i",
     "Keywords": "API Integration, Task Automation AI, GPT Integration, Enterprise AI, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-much-server-and-computing",
-    "Url": "/faq/How-much-server-and-computing.html"
   },
   "How-to-control-the-development": {
     "Category": "Marketing & Support",
@@ -12956,8 +10366,6 @@ export const faq = {
     "Title": "How to control the development and operation costs of AI Agents-Fastgpt",
     "Description": "Cost control for AI Agents is feasible through strategic development approaches and efficient operational practices. Focus on optimized system design and resource utilization to manage expenses effect",
     "Keywords": "LLM Development, Vector Search, API Integration, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-control-the-development",
-    "Url": "/faq/How-to-control-the-development.html"
   },
   "How-to-improve-the-stability": {
     "Category": "Marketing & Support",
@@ -12966,8 +10374,6 @@ export const faq = {
     "Title": "How to improve the stability and fault tolerance of AI Agents-Fastgpt",
     "Description": "Improving AI agent stability and fault tolerance involves designing robust systems that maintain reliable functionality even during unexpected inputs, errors, or infrastructure issues. This is achieva",
     "Keywords": "Intelligent Q&A, LLM Development, GPT Integration, API Integration, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-improve-the-stability",
-    "Url": "/faq/How-to-improve-the-stability.html"
   },
   "How-AI-Agents-Enhance-Memory": {
     "Category": "Marketing & Support",
@@ -12976,8 +10382,6 @@ export const faq = {
     "Title": "How AI Agents Enhance Memory Effectiveness in Multi-turn Conversations-Fastgpt",
     "Description": "AI agents significantly enhance memory effectiveness in multi-turn conversations by employing specialized techniques to maintain, recall, and utilize context across multiple interaction turns. This en",
     "Keywords": "Intelligent Q&A, API Integration, AI Workflow, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Enhance-Memory",
-    "Url": "/faq/How-AI-Agents-Enhance-Memory.html"
   },
   "How-AI-Agents-Regularly-Update": {
     "Category": "Marketing & Support",
@@ -12986,8 +10390,6 @@ export const faq = {
     "Title": "How AI Agents Regularly Update Their Knowledge Bases-Fastgpt",
     "Description": "AI agents automatically update their knowledge bases through scheduled synchronization and triggered refreshes. This ensures information remains current.\n\nKey mechanisms include automated crawlers fet",
     "Keywords": "Enterprise AI, LLM Development, AI Automation, API Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Regularly-Update",
-    "Url": "/faq/How-AI-Agents-Regularly-Update.html"
   },
   "How-AI-Agents-Detect-and": {
     "Category": "Marketing & Support",
@@ -12996,8 +10398,6 @@ export const faq = {
     "Title": "How AI Agents Detect and Fix Their Own Vulnerabilities-Fastgpt",
     "Description": "AI agents can autonomously detect and fix certain vulnerabilities using techniques like self-testing, adversarial simulations, and continuous monitoring. This capability enhances system resilience by ",
     "Keywords": "Smart Assistant, AI Chatbot, Open Source AI, FastGPT, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Detect-and",
-    "Url": "/faq/How-AI-Agents-Detect-and.html"
   },
   "How-AI-Agents-Optimize-Response": {
     "Category": "Marketing & Support",
@@ -13006,8 +10406,6 @@ export const faq = {
     "Title": "How AI Agents Optimize Response Speed and Latency-Fastgpt",
     "Description": "AI agents optimize response speed and latency primarily by streamlining workflows through techniques like parallelization, intelligent task routing, resource prioritization, and minimizing unnecessary",
     "Keywords": "Smart Assistant, AI Chatbot, FastGPT, AI Platform, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Optimize-Response",
-    "Url": "/faq/How-AI-Agents-Optimize-Response.html"
   },
   "How-to-seamlessly-integrate-AI": {
     "Category": "Marketing & Support",
@@ -13016,8 +10414,6 @@ export const faq = {
     "Title": "How to seamlessly integrate AI Agents into existing business systems-Fastgpt",
     "Description": "To seamlessly integrate AI Agents into existing business systems, it is feasible through standardized APIs, custom connectors, and microservices architecture. This enables data exchange and function t",
     "Keywords": "AI Automation, Smart Assistant, GPT Integration, AI Platform, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-to-seamlessly-integrate-AI",
-    "Url": "/faq/How-to-seamlessly-integrate-AI.html"
   },
   "How-to-Continuously-Optimize-the": {
     "Category": "Marketing & Support",
@@ -13026,8 +10422,6 @@ export const faq = {
     "Title": "How to Continuously Optimize the Experience After AI Agent Goes Live-Fastgpt",
     "Description": "Continuous post-launch AI agent optimization relies on monitoring performance data and user feedback to iteratively refine its responses and functionality. This is an ongoing, data-driven process esse",
     "Keywords": "AI Chatbot, Enterprise AI, AI Platform, Open Source AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-Continuously-Optimize-the",
-    "Url": "/faq/How-to-Continuously-Optimize-the.html"
   },
   "How-Enterprises-Protect-Sensitive-Data": {
     "Category": "Platform Value & Trends",
@@ -13036,8 +10430,6 @@ export const faq = {
     "Title": "How Enterprises Protect Sensitive Data in AI Agents-Fastgpt",
     "Description": "Enterprises can effectively protect sensitive data in AI agents through a combination of robust technical safeguards, stringent governance policies, and employee training. This ensures sensitive infor",
     "Keywords": "AI Workflow, AI Platform, Intelligent Q&A, AI Chatbot, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Protect-Sensitive-Data",
-    "Url": "/faq/How-Enterprises-Protect-Sensitive-Data.html"
   },
   "Which-international-privacy-standards-do": {
     "Category": "Platform Value & Trends",
@@ -13046,8 +10438,6 @@ export const faq = {
     "Title": "Which international privacy standards do AI Agents comply with?-Fastgpt",
     "Description": "Leading AI Agents adhere to internationally recognized privacy standards including the EU's General Data Protection Regulation (GDPR), California's Consumer Privacy Act (CCPA), Canada's PIPEDA, Brazil",
     "Keywords": "AI Workflow, Intelligent Q&A, Open Source AI, AI Knowledge Management, Document AI",
-    "URL": "https://fastgpt.io/en/faq/Which-international-privacy-standards-do",
-    "Url": "/faq/Which-international-privacy-standards-do.html"
   },
   "What-is-the-significance-of": {
     "Category": "Platform Value & Trends",
@@ -13056,8 +10446,6 @@ export const faq = {
     "Title": "What is the significance of the open-source license Apache-2.0 for security?-Fastgpt",
     "Description": "The Apache License 2.0 significantly enhances security by enabling the free use, modification, and distribution of open-source software, fostering transparency and collective scrutiny of the code. It ",
     "Keywords": "Vector Search, AI Workflow, Open Source AI, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/What-is-the-significance-of",
-    "Url": "/faq/What-is-the-significance-of.html"
   },
   "How-can-enterprises-prevent-AI": {
     "Category": "Platform Value & Trends",
@@ -13066,8 +10454,6 @@ export const faq = {
     "Title": "How can enterprises prevent AI Agents from being hacked?-Fastgpt",
     "Description": "Enterprises can effectively prevent AI Agents from being hacked by implementing a robust, multi-layered security framework tailored to AI systems. This proactive approach mitigates risks like data bre",
     "Keywords": "LLM Development, Open Source AI, Task Automation AI, AI Platform, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-prevent-AI",
-    "Url": "/faq/How-can-enterprises-prevent-AI.html"
   },
   "Is-it-safe-for-AI": {
     "Category": "Platform Value & Trends",
@@ -13076,8 +10462,6 @@ export const faq = {
     "Title": "Is it safe for AI Agents to store customer data?-Fastgpt",
     "Description": "Yes, AI Agents can safely store customer data, but this safety is not inherent; it is contingent on implementing robust security measures, strict access controls, and adhering to relevant data protect",
     "Keywords": "Document AI, Enterprise AI, AI Workflow, Smart Assistant, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Is-it-safe-for-AI",
-    "Url": "/faq/Is-it-safe-for-AI.html"
   },
   "How-do-enterprises-set-data": {
     "Category": "Platform Value & Trends",
@@ -13086,8 +10470,6 @@ export const faq = {
     "Title": "How do enterprises set data access permissions for AI Agents?-Fastgpt",
     "Description": "Enterprises can effectively manage data access for AI Agents through permission frameworks. This is feasible by integrating them into existing Identity and Access Management (IAM) systems.\n\nKey princi",
     "Keywords": "AI Chatbot, AI Automation, Open Source AI, FastGPT, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-do-enterprises-set-data",
-    "Url": "/faq/How-do-enterprises-set-data.html"
   },
   "How-AI-Agents-Prevent-Internal": {
     "Category": "Platform Value & Trends",
@@ -13096,8 +10478,6 @@ export const faq = {
     "Title": "How AI Agents Prevent Internal Employees from Misusing Data-Fastgpt",
     "Description": "AI agents can effectively prevent internal data misuse by automating monitoring and enforcing access controls. These systems continuously analyze employee interactions with sensitive data to identify ",
     "Keywords": "GPT Integration, LLM Development, AI Chatbot, AI Knowledge Management, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Prevent-Internal",
-    "Url": "/faq/How-AI-Agents-Prevent-Internal.html"
   },
   "Does-the-AI-Agent-support": {
     "Category": "Platform Value & Trends",
@@ -13106,8 +10486,6 @@ export const faq = {
     "Title": "Does the AI Agent support automatic identification of potential malicious requests?-Fastgpt",
     "Description": "Yes, modern AI Agents generally incorporate capabilities designed to automatically identify potential malicious requests. These systems are typically equipped to detect patterns associated with harmfu",
     "Keywords": "Enterprise AI, Intelligent Q&A, LLM Development, Smart Assistant, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Does-the-AI-Agent-support",
-    "Url": "/faq/Does-the-AI-Agent-support.html"
   },
   "How-can-AI-Agents-meet": {
     "Category": "Platform Value & Trends",
@@ -13116,8 +10494,6 @@ export const faq = {
     "Title": "How can AI Agents meet the requirements of China's Cybersecurity Law-Fastgpt",
     "Description": "AI Agents can comply with China's Cybersecurity Law by implementing specific technical and administrative safeguards designed to meet legal requirements for data handling, security, and operational ov",
     "Keywords": "API Integration, GPT Integration, Task Automation AI, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-AI-Agents-meet",
-    "Url": "/faq/How-can-AI-Agents-meet.html"
   },
   "How-do-enterprises-audit-the": {
     "Category": "Platform Value & Trends",
@@ -13126,8 +10502,6 @@ export const faq = {
     "Title": "How do enterprises audit the operation records of AI Agents-Fastgpt",
     "Description": "Enterprises can effectively audit AI Agent operation records through comprehensive logging, monitoring, and analysis systems. This involves capturing detailed data about the Agent's interactions, deci",
     "Keywords": "Task Automation AI, LLM Development, Document AI, AI Workflow, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-do-enterprises-audit-the",
-    "Url": "/faq/How-do-enterprises-audit-the.html"
   },
   "How-to-Prevent-Data-Leakage": {
     "Category": "Platform Value & Trends",
@@ -13136,8 +10510,6 @@ export const faq = {
     "Title": "How to Prevent Data Leakage When AI Agents Go Wrong-Fastgpt",
     "Description": "Preventing data leakage when AI agents go wrong requires implementing comprehensive security protocols to contain failures and protect sensitive information. This is feasible through proactive measure",
     "Keywords": "Vector Search, Intelligent Q&A, API Integration, Open Source AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-to-Prevent-Data-Leakage",
-    "Url": "/faq/How-to-Prevent-Data-Leakage.html"
   },
   "Can-AI-Agent-be-deployed": {
     "Category": "Platform Value & Trends",
@@ -13146,8 +10518,6 @@ export const faq = {
     "Title": "Can AI Agent be deployed locally and privately?-Fastgpt",
     "Description": "Yes, AI agents can be deployed locally and privately. This approach involves installing and running the agent software directly on an organization's own hardware infrastructure or within their private",
     "Keywords": "Document AI, Intelligent Q&A, AI Chatbot, Task Automation AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-be-deployed",
-    "Url": "/faq/Can-AI-Agent-be-deployed.html"
   },
   "How-to-use-AI-Agent": {
     "Category": "Platform Value & Trends",
@@ -13156,8 +10526,6 @@ export const faq = {
     "Title": "How to use AI Agent to comply with privacy laws of multiple countries simultaneously-Fastgpt",
     "Description": "Implementing AI Agents for multi-country privacy law compliance is feasible through a centralized, intelligent approach. An AI agent configured with appropriate data governance protocols can systemati",
     "Keywords": "Smart Assistant, AI Workflow, GPT Integration, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-use-AI-Agent",
-    "Url": "/faq/How-to-use-AI-Agent.html"
   },
   "How-AI-Agents-Handle-Deleted": {
     "Category": "Platform Value & Trends",
@@ -13166,8 +10534,6 @@ export const faq = {
     "Title": "How AI Agents Handle Deleted User Data-Fastgpt",
     "Description": "AI agents can handle deleted user data through established data management protocols designed to ensure its secure and permanent removal from active systems. This capability is essential for privacy c",
     "Keywords": "Intelligent Q&A, AI Platform, AI Automation, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Deleted",
-    "Url": "/faq/How-AI-Agents-Handle-Deleted.html"
   },
   "How-enterprises-manage-the-key": {
     "Category": "Platform Value & Trends",
@@ -13176,8 +10542,6 @@ export const faq = {
     "Title": "How enterprises manage the key security of AI Agents-Fastgpt",
     "Description": "Enterprise AI agent security management involves establishing governance frameworks, access controls, and monitoring processes to protect these agents throughout their lifecycle, ensuring safe and rel",
     "Keywords": "Vector Search, Intelligent Q&A, API Integration, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-manage-the-key",
-    "Url": "/faq/How-enterprises-manage-the-key.html"
   },
   "Does-AI-Agent-comply-with": {
     "Category": "Platform Value & Trends",
@@ -13186,8 +10550,6 @@ export const faq = {
     "Title": "Does AI Agent comply with PCI DSS requirements in the payment industry?-Fastgpt",
     "Description": "The use of AI Agents in payment systems can comply with PCI DSS requirements, provided they are designed, implemented, and maintained according to the standard’s strict security controls. Compliance i",
     "Keywords": "AI Platform, Open Source AI, GPT Integration, FastGPT, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/Does-AI-Agent-comply-with",
-    "Url": "/faq/Does-AI-Agent-comply-with.html"
   },
   "How-do-AI-Agents-restrict": {
     "Category": "Platform Value & Trends",
@@ -13196,8 +10558,6 @@ export const faq = {
     "Title": "How do AI Agents restrict third-party plugins from accessing data-Fastgpt",
     "Description": "AI agents restrict third-party plugin data access through controlled environments that enforce explicit permissions and scoped access. This ensures plugins only access necessary data under defined con",
     "Keywords": "Intelligent Q&A, Document AI, API Integration, Task Automation AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-restrict",
-    "Url": "/faq/How-do-AI-Agents-restrict.html"
   },
   "How-enterprises-formulate-privacy-policies": {
     "Category": "Platform Value & Trends",
@@ -13206,8 +10566,6 @@ export const faq = {
     "Title": "How enterprises formulate privacy policies for AI Agents-Fastgpt",
     "Description": "Enterprises can establish compliant privacy policies for AI Agents through deliberate design integrating legal requirements and AI-specific considerations. Feasibility is achieved by adapting existing",
     "Keywords": "Task Automation AI, AI Knowledge Management, Intelligent Q&A, API Integration, GPT Integration",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-formulate-privacy-policies",
-    "Url": "/faq/How-enterprises-formulate-privacy-policies.html"
   },
   "How-AI-Agents-Provide-Data": {
     "Category": "Platform Value & Trends",
@@ -13216,8 +10574,6 @@ export const faq = {
     "Title": "How AI Agents Provide Data Access Transparency-Fastgpt",
     "Description": "AI agents provide data access transparency by clearly disclosing what specific data they retrieve, its source, and the purpose of accessing it during an interaction. This capability enables users to u",
     "Keywords": "Intelligent Q&A, API Integration, LLM Development, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Provide-Data",
-    "Url": "/faq/How-AI-Agents-Provide-Data.html"
   },
   "Can-AI-Agents-automatically-generate": {
     "Category": "Platform Value & Trends",
@@ -13226,8 +10582,6 @@ export const faq = {
     "Title": "Can AI Agents automatically generate data compliance risk assessments?-Fastgpt",
     "Description": "AI Agents can generate preliminary data compliance risk assessments through automation, but human oversight remains essential.  \n\nThey scan policies, identify gaps against regulations like GDPR, and f",
     "Keywords": "AI Workflow, FastGPT, Task Automation AI, Open Source AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-automatically-generate",
-    "Url": "/faq/Can-AI-Agents-automatically-generate.html"
   },
   "How-can-enterprises-verify-the": {
     "Category": "Platform Value & Trends",
@@ -13236,8 +10590,6 @@ export const faq = {
     "Title": "How can enterprises verify the security of AI Agents-Fastgpt",
     "Description": "Enterprises can verify AI Agent security through comprehensive security assessments and targeted compliance testing against relevant standards. This demonstrates feasibility and identifies vulnerabili",
     "Keywords": "AI Platform, Vector Search, API Integration, AI Knowledge Management, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-verify-the",
-    "Url": "/faq/How-can-enterprises-verify-the.html"
   },
   "How-can-enterprises-control-the": {
     "Category": "Platform Value & Trends",
@@ -13246,8 +10598,6 @@ export const faq = {
     "Title": "How can enterprises control the log retention time of AI Agents?-Fastgpt",
     "Description": "Enterprises can control AI Agent log retention time by defining and implementing specific data retention policies. This is both feasible and necessary for compliance, security, and resource management",
     "Keywords": "Document AI, Smart Assistant, Task Automation AI, AI Automation, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-control-the",
-    "Url": "/faq/How-can-enterprises-control-the.html"
   },
   "How-Enterprises-Configure-AI-Agent": {
     "Category": "Platform Value & Trends",
@@ -13256,8 +10606,6 @@ export const faq = {
     "Title": "How Enterprises Configure AI Agent Access Whitelists-Fastgpt",
     "Description": "Enterprise AI agent access whitelisting involves configuring systems to permit interactions only from explicitly approved and verified sources. It is a necessary security practice for controlled AI in",
     "Keywords": "Task Automation AI, Document AI, Enterprise AI, AI Platform, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Configure-AI-Agent",
-    "Url": "/faq/How-Enterprises-Configure-AI-Agent.html"
   },
   "Can-AI-Agents-automatically-detect": {
     "Category": "Platform Value & Trends",
@@ -13266,8 +10614,6 @@ export const faq = {
     "Title": "Can AI Agents automatically detect and fix permission issues?-Fastgpt",
     "Description": "AI agents can automatically detect and fix certain types of permission issues in digital environments, utilizing machine learning and rule-based systems to identify anomalies. However, their capabilit",
     "Keywords": "Intelligent Q&A, GPT Integration, FastGPT, Smart Assistant, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-automatically-detect",
-    "Url": "/faq/Can-AI-Agents-automatically-detect.html"
   },
   "How-to-enable-multi-factor-authentication": {
     "Category": "Platform Value & Trends",
@@ -13276,8 +10622,6 @@ export const faq = {
     "Title": "How to enable multi-factor authentication for AI Agent-Fastgpt",
     "Description": "Enabling multi-factor authentication (MFA) adds a vital layer of security to your AI Agent's access, typically requiring a second verification step beyond just a password. This is widely feasible thro",
     "Keywords": "GPT Integration, LLM Development, API Integration, FastGPT, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-enable-multi-factor-authentication",
-    "Url": "/faq/How-to-enable-multi-factor-authentication.html"
   },
   "How-to-Prevent-Unauthorized-Access": {
     "Category": "Platform Value & Trends",
@@ -13286,8 +10630,6 @@ export const faq = {
     "Title": "How to Prevent Unauthorized Access by AI Agents-Fastgpt",
     "Description": "Unauthorized access by AI agents can be prevented by implementing robust security frameworks that safeguard systems and data from unintended interactions. This approach is feasible through proactive m",
     "Keywords": "GPT Integration, FastGPT, Intelligent Q&A, LLM Development, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-Prevent-Unauthorized-Access",
-    "Url": "/faq/How-to-Prevent-Unauthorized-Access.html"
   },
   "How-enterprises-isolate-different-environments": {
     "Category": "Platform Value & Trends",
@@ -13296,8 +10638,6 @@ export const faq = {
     "Title": "How enterprises isolate different environments of AI Agents-Fastgpt",
     "Description": "Enterprises can isolate different AI agent environments through partitioning or segregation techniques. This approach involves creating distinct operational zones for development, testing, and product",
     "Keywords": "Task Automation AI, LLM Development, AI Platform, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-isolate-different-environments",
-    "Url": "/faq/How-enterprises-isolate-different-environments.html"
   },
   "Can-AI-Agent-run-without": {
     "Category": "Platform Value & Trends",
@@ -13306,8 +10646,6 @@ export const faq = {
     "Title": "Can AI Agent run without internet access?-Fastgpt",
     "Description": "AI agents can run without internet access when specifically designed to operate locally. This is achieved through embedded models or applications running directly on a device's hardware.\n\nOffline oper",
     "Keywords": "API Integration, FastGPT, AI Workflow, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-run-without",
-    "Url": "/faq/Can-AI-Agent-run-without.html"
   },
   "How-AI-Agents-Handle-User": {
     "Category": "Platform Value & Trends",
@@ -13316,8 +10654,6 @@ export const faq = {
     "Title": "How AI Agents Handle User Authentication-Fastgpt",
     "Description": "AI agents handle user authentication through secure mechanisms like password verification, multi-factor authentication (MFA), biometric checks, or integration with identity providers. These agents con",
     "Keywords": "AI Automation, Open Source AI, Document AI, GPT Integration, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-User",
-    "Url": "/faq/How-AI-Agents-Handle-User.html"
   },
   "How-to-ensure-the-backup": {
     "Category": "Platform Value & Trends",
@@ -13326,8 +10662,6 @@ export const faq = {
     "Title": "How to ensure the backup data of AI Agent is equally secure-Fastgpt",
     "Description": "Yes, AI Agent backup data can be secured to a level equivalent, or even exceeding, the security of the primary environment through stringent measures. The feasibility rests on implementing specialized",
     "Keywords": "Smart Assistant, AI Automation, AI Chatbot, Intelligent Q&A, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-backup",
-    "Url": "/faq/How-to-ensure-the-backup.html"
   },
   "How-AI-Agents-Automatically-Detect": {
     "Category": "Platform Value & Trends",
@@ -13336,8 +10670,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Detect Potential Vulnerabilities-Fastgpt",
     "Description": "AI agents automatically detect potential vulnerabilities through machine learning algorithms scanning code, network configurations, and system behaviour. They identify anomalies, known insecure patter",
     "Keywords": "LLM Development, AI Workflow, API Integration, Enterprise AI, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Detect",
-    "Url": "/faq/How-AI-Agents-Automatically-Detect.html"
   },
   "How-do-enterprises-assess-the": {
     "Category": "Platform Value & Trends",
@@ -13346,8 +10678,6 @@ export const faq = {
     "Title": "How do enterprises assess the security risks of AI Agents-Fastgpt",
     "Description": "Enterprises assess AI Agent security risks through systematic processes identifying vulnerabilities in development, deployment, and operation. This ensures trust and protection against misuse.\n\nKey pr",
     "Keywords": "Enterprise AI, Smart Assistant, AI Automation, LLM Development, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-do-enterprises-assess-the",
-    "Url": "/faq/How-do-enterprises-assess-the.html"
   },
   "Can-AI-Agents-block-words": {
     "Category": "Platform Value & Trends",
@@ -13356,8 +10686,6 @@ export const faq = {
     "Title": "Can AI Agents block words according to compliance requirements?-Fastgpt",
     "Description": "Yes, AI agents can be programmed to block words according to specific compliance requirements. This functionality relies on integrating content filtering capabilities into the agent's operational fram",
     "Keywords": "API Integration, AI Knowledge Management, AI Chatbot, AI Platform, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-block-words",
-    "Url": "/faq/Can-AI-Agents-block-words.html"
   },
   "How-do-AI-Agents-record": {
     "Category": "Platform Value & Trends",
@@ -13366,8 +10694,6 @@ export const faq = {
     "Title": "How do AI Agents record and audit operational behaviors-Fastgpt",
     "Description": "AI agents record and audit operational behaviors through comprehensive logging mechanisms. They capture detailed traces of actions, decisions, data accesses, and system changes initiated during their ",
     "Keywords": "Smart Assistant, AI Chatbot, Enterprise AI, Intelligent Q&A, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-do-AI-Agents-record",
-    "Url": "/faq/How-do-AI-Agents-record.html"
   },
   "Do-AI-Agents-comply-with": {
     "Category": "Platform Value & Trends",
@@ -13376,8 +10702,6 @@ export const faq = {
     "Title": "Do AI Agents comply with children's privacy protection regulations?-Fastgpt",
     "Description": "Yes, AI agents can comply with children's privacy protection regulations, but adherence requires deliberate design and operational practices. Compliance is not automatic and depends on implementing sp",
     "Keywords": "Enterprise AI, AI Platform, FastGPT, API Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Do-AI-Agents-comply-with",
-    "Url": "/faq/Do-AI-Agents-comply-with.html"
   },
   "How-do-enterprises-manage-and": {
     "Category": "Platform Value & Trends",
@@ -13386,8 +10710,6 @@ export const faq = {
     "Title": "How do enterprises manage and control external data sources for AI Agents?-Fastgpt",
     "Description": "Enterprises manage and control external data sources for AI Agents through a combination of robust governance frameworks and dedicated technical controls. This ensures the security, compliance, and re",
     "Keywords": "AI Platform, Task Automation AI, AI Automation, Intelligent Q&A, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-do-enterprises-manage-and",
-    "Url": "/faq/How-do-enterprises-manage-and.html"
   },
   "Can-AI-Agent-run-in": {
     "Category": "Platform Value & Trends",
@@ -13396,8 +10718,6 @@ export const faq = {
     "Title": "Can AI Agent run in a completely offline environment?-Fastgpt",
     "Description": "Yes, AI agents can be designed to run in a completely offline environment. This capability is achieved by executing all necessary computations and data processing locally on the user's device or on-pr",
     "Keywords": "Enterprise AI, API Integration, AI Knowledge Management, GPT Integration, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-run-in",
-    "Url": "/faq/Can-AI-Agent-run-in.html"
   },
   "How-enterprises-set-up-account": {
     "Category": "Platform Value & Trends",
@@ -13406,8 +10726,6 @@ export const faq = {
     "Title": "How enterprises set up account security policies for AI Agents-Fastgpt",
     "Description": "Enterprises can establish robust account security policies for AI agents to protect against unauthorized access and misuse. These policies define secure authentication, authorization, and monitoring p",
     "Keywords": "LLM Development, Document AI, AI Workflow, Intelligent Q&A, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-set-up-account",
-    "Url": "/faq/How-enterprises-set-up-account.html"
   },
   "How-AI-Agents-Automatically-Back": {
     "Category": "Platform Value & Trends",
@@ -13416,8 +10734,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Back Up and Encrypt Data-Fastgpt",
     "Description": "AI agents can automatically perform data backup and encryption processes using predefined rules and machine learning capabilities. This is technically feasible and increasingly implemented for data pr",
     "Keywords": "Enterprise AI, API Integration, Vector Search, Task Automation AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Back",
-    "Url": "/faq/How-AI-Agents-Automatically-Back.html"
   },
   "Can-AI-Agents-be-deployed": {
     "Category": "Platform Value & Trends",
@@ -13426,8 +10742,6 @@ export const faq = {
     "Title": "Can AI Agents be deployed locally in data centers?-Fastgpt",
     "Description": "Yes, AI agents can be deployed locally in data centers. This approach leverages on-premises hardware infrastructure to host and run AI models independently of cloud services.\n\nDeployment requires robu",
     "Keywords": "GPT Integration, Task Automation AI, AI Workflow, API Integration, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-be-deployed",
-    "Url": "/faq/Can-AI-Agents-be-deployed.html"
   },
   "How-Enterprises-Respond-to-Security": {
     "Category": "Platform Value & Trends",
@@ -13436,8 +10750,6 @@ export const faq = {
     "Title": "How Enterprises Respond to Security Audits of AI Agents-Fastgpt",
     "Description": "Enterprises respond to AI agent security audits by proactively preparing comprehensive documentation and implementing collaborative engagement with auditors. This approach verifies compliance, identif",
     "Keywords": "AI Chatbot, GPT Integration, LLM Development, Open Source AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Respond-to-Security",
-    "Url": "/faq/How-Enterprises-Respond-to-Security.html"
   },
   "How-AI-Agents-Restrict-the": {
     "Category": "Platform Value & Trends",
@@ -13446,8 +10758,6 @@ export const faq = {
     "Title": "How AI Agents Restrict the Export of Sensitive Data-Fastgpt",
     "Description": "AI agents restrict sensitive data exports by deploying automated monitoring and control systems that prevent unauthorized transfers outside authorized environments. They actively analyze and block att",
     "Keywords": "GPT Integration, Enterprise AI, LLM Development, Vector Search, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Restrict-the",
-    "Url": "/faq/How-AI-Agents-Restrict-the.html"
   },
   "How-can-enterprises-ensure-the": {
     "Category": "Platform Value & Trends",
@@ -13456,8 +10766,6 @@ export const faq = {
     "Title": "How can enterprises ensure the security of the AI Agent development phase-Fastgpt",
     "Description": "Enterprises can ensure AI Agent development security by implementing dedicated technical and governance measures. This is achievable through a structured approach integrating security throughout the d",
     "Keywords": "Vector Search, Intelligent Q&A, LLM Development, AI Chatbot, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-ensure-the",
-    "Url": "/faq/How-can-enterprises-ensure-the.html"
   },
   "Does-the-AI-Agent-have": {
     "Category": "Platform Value & Trends",
@@ -13466,8 +10774,6 @@ export const faq = {
     "Title": "Does the AI Agent have a security incident alert function?-Fastgpt",
     "Description": "Yes, modern AI agents typically include built-in security incident alert functions as a core component of their design. This feature is fundamental to their operational safety.\n\nThe alert function rel",
     "Keywords": "Task Automation AI, AI Automation, Smart Assistant, AI Workflow, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Does-the-AI-Agent-have",
-    "Url": "/faq/Does-the-AI-Agent-have.html"
   },
   "How-can-enterprises-isolate-AI": {
     "Category": "Platform Value & Trends",
@@ -13476,8 +10782,6 @@ export const faq = {
     "Title": "How can enterprises isolate AI Agents from external network connections-Fastgpt",
     "Description": "Enterprises can isolate AI Agents from external networks through secure network architecture designs. This approach effectively prevents unauthorized external access while allowing necessary internal ",
     "Keywords": "Vector Search, API Integration, Task Automation AI, AI Automation, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-isolate-AI",
-    "Url": "/faq/How-can-enterprises-isolate-AI.html"
   },
   "Can-AI-Agents-automatically-identify": {
     "Category": "Platform Value & Trends",
@@ -13486,8 +10790,6 @@ export const faq = {
     "Title": "Can AI Agents automatically identify and block sensitive data?-Fastgpt",
     "Description": "Yes, AI agents can automatically identify and block sensitive data. This capability is a core function of modern data security solutions leveraging artificial intelligence.\n\nAI agents perform this thr",
     "Keywords": "AI Knowledge Management, GPT Integration, API Integration, AI Chatbot, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-automatically-identify",
-    "Url": "/faq/Can-AI-Agents-automatically-identify.html"
   },
   "How-AI-Agents-Prevent-Malicious": {
     "Category": "Platform Value & Trends",
@@ -13496,8 +10798,6 @@ export const faq = {
     "Title": "How AI Agents Prevent Malicious Intrusion into Systems-Fastgpt",
     "Description": "AI agents prevent malicious system intrusion by actively monitoring, detecting, and responding to security threats using advanced algorithms and data analysis. They serve as automated guardians agains",
     "Keywords": "Intelligent Q&A, Smart Assistant, API Integration, LLM Development, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Prevent-Malicious",
-    "Url": "/faq/How-AI-Agents-Prevent-Malicious.html"
   },
   "How-Enterprises-Formulate-Data-Encryption": {
     "Category": "Platform Value & Trends",
@@ -13506,8 +10806,6 @@ export const faq = {
     "Title": "How Enterprises Formulate Data Encryption Strategies for AI Agents-Fastgpt",
     "Description": "Enterprises can develop effective data encryption strategies for AI agents by implementing a structured approach tailored to sensitive data interactions. This involves categorizing data handled by AI ",
     "Keywords": "API Integration, GPT Integration, Smart Assistant, AI Platform, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Formulate-Data-Encryption",
-    "Url": "/faq/How-Enterprises-Formulate-Data-Encryption.html"
   },
   "How-AI-Agents-Can-Avoid": {
     "Category": "Platform Value & Trends",
@@ -13516,8 +10814,6 @@ export const faq = {
     "Title": "How AI Agents Can Avoid Accidentally Deleting User Data-Fastgpt",
     "Description": "AI agents can avoid accidental user data deletion through intentional system design that incorporates safeguards at multiple levels. This is achievable and essential for secure AI operations.  \n\nKey a",
     "Keywords": "Task Automation AI, AI Platform, AI Chatbot, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Can-Avoid",
-    "Url": "/faq/How-AI-Agents-Can-Avoid.html"
   },
   "Does-the-AI-Agent-provide": {
     "Category": "Platform Value & Trends",
@@ -13526,8 +10822,6 @@ export const faq = {
     "Title": "Does the AI Agent provide security risk assessment tools?-Fastgpt",
     "Description": "Yes, AI Agents can provide security risk assessment tools. These tools leverage artificial intelligence to analyze systems and data for vulnerabilities.\n\nSuch agents typically use AI techniques like m",
     "Keywords": "AI Knowledge Management, Intelligent Q&A, API Integration, Document AI, AI Workflow",
-    "URL": "https://fastgpt.io/en/faq/Does-the-AI-Agent-provide",
-    "Url": "/faq/Does-the-AI-Agent-provide.html"
   },
   "How-AI-Agents-Handle-Urgent": {
     "Category": "Platform Value & Trends",
@@ -13536,8 +10830,6 @@ export const faq = {
     "Title": "How AI Agents Handle Urgent Security Vulnerabilities-Fastgpt",
     "Description": "AI agents utilize machine learning and automation to rapidly detect, analyze, and mitigate critical security threats, significantly reducing potential damage. This approach accelerates containment and",
     "Keywords": "Smart Assistant, FastGPT, AI Workflow, Vector Search, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Urgent",
-    "Url": "/faq/How-AI-Agents-Handle-Urgent.html"
   },
   "How-to-make-an-AI": {
     "Category": "Platform Value & Trends",
@@ -13546,8 +10838,6 @@ export const faq = {
     "Title": "How to make an AI Agent ensure that all requests are logged-Fastgpt",
     "Description": "To ensure an AI Agent logs all requests, it must be designed with mandatory logging integrated directly into its core request handling process. This is technically achievable through systematic archit",
     "Keywords": "AI Workflow, AI Automation, AI Platform, FastGPT, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-to-make-an-AI",
-    "Url": "/faq/How-to-make-an-AI.html"
   },
   "How-do-enterprises-regularly-detect": {
     "Category": "Platform Value & Trends",
@@ -13556,8 +10846,6 @@ export const faq = {
     "Title": "How do enterprises regularly detect privacy risks of AI Agents-Fastgpt",
     "Description": "Enterprises can regularly detect privacy risks for AI Agents through planned, systematic assessment cycles. This involves implementing continuous monitoring and periodic formal reviews as part of the ",
     "Keywords": "Task Automation AI, Smart Assistant, AI Platform, AI Chatbot, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-do-enterprises-regularly-detect",
-    "Url": "/faq/How-do-enterprises-regularly-detect.html"
   },
   "How-AI-Agents-Automatically-Respond": {
     "Category": "Platform Value & Trends",
@@ -13566,8 +10854,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Respond to Security Incidents-Fastgpt",
     "Description": "AI agents automatically respond to security incidents by leveraging artificial intelligence to detect, analyze, and mitigate threats in real-time. This capability is feasible and increasingly deployed",
     "Keywords": "FastGPT, Intelligent Q&A, Vector Search, Task Automation AI, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Respond",
-    "Url": "/faq/How-AI-Agents-Automatically-Respond.html"
   },
   "How-can-enterprises-establish-a": {
     "Category": "Platform Value & Trends",
@@ -13576,8 +10862,6 @@ export const faq = {
     "Title": "How can enterprises establish a continuous monitoring system for AI Agents?-Fastgpt",
     "Description": "Enterprises can establish a continuous monitoring system for AI Agents to ensure their safe, reliable, and ethical operation throughout their lifecycle. This involves automated oversight integrated in",
     "Keywords": "Enterprise AI, AI Workflow, Vector Search, Open Source AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-establish-a",
-    "Url": "/faq/How-can-enterprises-establish-a.html"
   },
   "How-AI-Agents-Isolate-Data": {
     "Category": "Platform Value & Trends",
@@ -13586,8 +10870,6 @@ export const faq = {
     "Title": "How AI Agents Isolate Data from Different Customers-Fastgpt",
     "Description": "AI agents securely isolate data between customers through robust technical and organizational measures. This ensures data segregation and confidentiality during processing.\n\nKey mechanisms include uni",
     "Keywords": "Smart Assistant, Task Automation AI, Open Source AI, AI Platform, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Isolate-Data",
-    "Url": "/faq/How-AI-Agents-Isolate-Data.html"
   },
   "How-enterprises-manage-certificates-and": {
     "Category": "Platform Value & Trends",
@@ -13596,8 +10878,6 @@ export const faq = {
     "Title": "How enterprises manage certificates and keys for AI Agents-Fastgpt",
     "Description": "Enterprise AI agent certificate and key management involves centralized systems and policies to securely provision, store, rotate, revoke, and audit cryptographic credentials used for authentication a",
     "Keywords": "API Integration, Task Automation AI, Smart Assistant, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-manage-certificates-and",
-    "Url": "/faq/How-enterprises-manage-certificates-and.html"
   },
   "Does-the-AI-Agent-comply": {
     "Category": "Platform Value & Trends",
@@ -13606,8 +10886,6 @@ export const faq = {
     "Title": "Does the AI Agent comply with the latest Cybersecurity Law?-Fastgpt",
     "Description": "Yes, AI agents can be developed and deployed to comply with the latest Cybersecurity Law and related regulations like the Personal Information Protection Law (PIPL). Compliance is achievable through c",
     "Keywords": "FastGPT, Task Automation AI, Open Source AI, Document AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Does-the-AI-Agent-comply",
-    "Url": "/faq/Does-the-AI-Agent-comply.html"
   },
   "How-can-enterprises-ensure-reliable": {
     "Category": "Platform Value & Trends",
@@ -13616,8 +10894,6 @@ export const faq = {
     "Title": "How can enterprises ensure reliable identity authentication for AI Agents?-Fastgpt",
     "Description": "Enterprises can ensure reliable identity authentication for AI Agents through dedicated security frameworks implementing strong, continuous verification. This is essential for secure agent interaction",
     "Keywords": "Smart Assistant, AI Knowledge Management, Task Automation AI, Intelligent Q&A, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-ensure-reliable",
-    "Url": "/faq/How-can-enterprises-ensure-reliable.html"
   },
   "How-to-Implement-Detailed-Log": {
     "Category": "Platform Value & Trends",
@@ -13626,8 +10902,6 @@ export const faq = {
     "Title": "How to Implement Detailed Log Auditing for AI Agents-Fastgpt",
     "Description": "Implementing detailed log auditing for AI agents is essential for transparency, debugging, compliance, and security. It is technically feasible through systematic capture and management of interaction",
     "Keywords": "Open Source AI, Smart Assistant, AI Chatbot, GPT Integration, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-to-Implement-Detailed-Log",
-    "Url": "/faq/How-to-Implement-Detailed-Log.html"
   },
   "How-enterprises-can-establish-a": {
     "Category": "Platform Value & Trends",
@@ -13636,8 +10910,6 @@ export const faq = {
     "Title": "How enterprises can establish a disaster recovery plan for AI Agents-Fastgpt",
     "Description": "Enterprises can establish robust disaster recovery (DR) plans for AI Agents by integrating specialized strategies into their existing IT resilience frameworks. This involves addressing the unique depe",
     "Keywords": "Vector Search, Intelligent Q&A, AI Knowledge Management, Task Automation AI, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-can-establish-a",
-    "Url": "/faq/How-enterprises-can-establish-a.html"
   },
   "Can-AI-Agents-be-securely": {
     "Category": "Platform Value & Trends",
@@ -13646,8 +10918,6 @@ export const faq = {
     "Title": "Can AI Agents be securely deployed at edge nodes?-Fastgpt",
     "Description": "AI agents can be securely deployed at edge nodes through the implementation of robust security frameworks. This deployment is feasible and increasingly common in industrial and IoT contexts.\n\nSecure e",
     "Keywords": "AI Chatbot, AI Automation, API Integration, FastGPT, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-be-securely",
-    "Url": "/faq/Can-AI-Agents-be-securely.html"
   },
   "How-AI-Agents-Implement-Real-Time": {
     "Category": "Platform Value & Trends",
@@ -13656,8 +10926,6 @@ export const faq = {
     "Title": "How AI Agents Implement Real-Time Security Policy Updates-Fastgpt",
     "Description": "AI agents implement real-time security policy updates autonomously using machine learning and automation, enabling swift adaptation to emerging threats. This is feasible through integrated systems tha",
     "Keywords": "Intelligent Q&A, Vector Search, Document AI, Task Automation AI, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Implement-Real-Time",
-    "Url": "/faq/How-AI-Agents-Implement-Real-Time.html"
   },
   "How-enterprises-train-employees-to": {
     "Category": "Platform Value & Trends",
@@ -13666,8 +10934,6 @@ export const faq = {
     "Title": "How enterprises train employees to use AI Agents safely-Fastgpt",
     "Description": "Enterprise training for secure AI agent use equips employees with authorization protocols, policy adherence skills, and safe operational practices. Structured programs effectively mitigate risks assoc",
     "Keywords": "Vector Search, Enterprise AI, AI Workflow, API Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-train-employees-to",
-    "Url": "/faq/How-enterprises-train-employees-to.html"
   },
   "Does-the-AI-Agent-meet": {
     "Category": "Platform Value & Trends",
@@ -13676,8 +10942,6 @@ export const faq = {
     "Title": "Does the AI Agent meet the security standards for government procurement?-Fastgpt",
     "Description": "AI agents developed with government-grade security controls can meet government procurement standards after rigorous assessment. Certification depends on vendor compliance with applicable regulations ",
     "Keywords": "API Integration, Smart Assistant, Document AI, Enterprise AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Does-the-AI-Agent-meet",
-    "Url": "/faq/Does-the-AI-Agent-meet.html"
   },
   "How-to-Isolate-Development,-Testing,": {
     "Category": "Platform Value & Trends",
@@ -13686,8 +10950,6 @@ export const faq = {
     "Title": "How to Isolate Development, Testing, and Production Environments for AI Agents-Fastgpt",
     "Description": "Isolating development, testing, and production environments for AI agents is both feasible and critical, involving deploying agent instances on distinct, dedicated infrastructure per stage. This separ",
     "Keywords": "Open Source AI, Intelligent Q&A, FastGPT, AI Workflow, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-to-Isolate-Development,-Testing,",
-    "Url": "/faq/How-to-Isolate-Development,-Testing,.html"
   },
   "How-can-enterprises-uniformly-manage": {
     "Category": "Platform Value & Trends",
@@ -13696,8 +10958,6 @@ export const faq = {
     "Title": "How can enterprises uniformly manage access keys for AI Agents-Fastgpt",
     "Description": "Enterprises can centrally manage AI Agent access keys through a dedicated Identity and Access Management (IAM) platform or Privileged Access Management (PAM) solution. This enables unified control and",
     "Keywords": "LLM Development, Vector Search, Intelligent Q&A, AI Knowledge Management, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-uniformly-manage",
-    "Url": "/faq/How-can-enterprises-uniformly-manage.html"
   },
   "How-AI-Agents-Meet-Different": {
     "Category": "Platform Value & Trends",
@@ -13706,8 +10966,6 @@ export const faq = {
     "Title": "How AI Agents Meet Different Customers' Privacy Requirements-Fastgpt",
     "Description": "AI agents address diverse customer privacy requirements through configurable privacy controls and adaptable processing frameworks. This enables tailored solutions across different sensitivity levels a",
     "Keywords": "AI Platform, Smart Assistant, FastGPT, Enterprise AI, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Meet-Different",
-    "Url": "/faq/How-AI-Agents-Meet-Different.html"
   },
   "Can-AI-Agent-automatically-encrypt": {
     "Category": "Platform Value & Trends",
@@ -13716,8 +10974,6 @@ export const faq = {
     "Title": "Can AI Agent automatically encrypt backup files?-Fastgpt",
     "Description": "Yes, AI Agents can be programmed to automatically encrypt backup files during the backup process. This automation is a core function of AI-driven data protection solutions.\n\nAI encryption relies on es",
     "Keywords": "Intelligent Q&A, Open Source AI, Task Automation AI, LLM Development, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-automatically-encrypt",
-    "Url": "/faq/Can-AI-Agent-automatically-encrypt.html"
   },
   "How-enterprises-obtain-third-party-security": {
     "Category": "Platform Value & Trends",
@@ -13726,8 +10982,6 @@ export const faq = {
     "Title": "How enterprises obtain third-party security certification through AI Agent-Fastgpt",
     "Description": "Enterprises can leverage AI Agents to streamline and enhance the process of achieving third-party security certifications. These agents automate key tasks like evidence gathering and workflow manageme",
     "Keywords": "Task Automation AI, AI Automation, AI Chatbot, AI Platform, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-obtain-third-party-security",
-    "Url": "/faq/How-enterprises-obtain-third-party-security.html"
   },
   "How-AI-Agents-Handle-Multi-region": {
     "Category": "Platform Value & Trends",
@@ -13736,8 +10990,6 @@ export const faq = {
     "Title": "How AI Agents Handle Multi-region Data Synchronization Risks-Fastgpt",
     "Description": "AI agents employ specialized frameworks and algorithms to manage the risks associated with synchronizing data across geographically dispersed regions. They provide proactive mitigation against inconsi",
     "Keywords": "LLM Development, AI Automation, Smart Assistant, Document AI, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Handle-Multi-region",
-    "Url": "/faq/How-AI-Agents-Handle-Multi-region.html"
   },
   "How-AI-Agents-Identify-Insider": {
     "Category": "Platform Value & Trends",
@@ -13746,8 +10998,6 @@ export const faq = {
     "Title": "How AI Agents Identify Insider Overprivileged Operations-Fastgpt",
     "Description": "AI agents identify insider overprivileged operations by leveraging machine learning to analyze user behavior and access patterns. They detect actions where authorized users exceed their assigned permi",
     "Keywords": "GPT Integration, AI Automation, AI Workflow, Intelligent Q&A, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Identify-Insider",
-    "Url": "/faq/How-AI-Agents-Identify-Insider.html"
   },
   "How-Enterprises-Can-Plan-the": {
     "Category": "Platform Value & Trends",
@@ -13756,8 +11006,6 @@ export const faq = {
     "Title": "How Enterprises Can Plan the Security Architecture of AI Agents-Fastgpt",
     "Description": "Enterprise AI agent security architecture is achievable through a deliberate, layered approach incorporating governance, technical controls, and continuous monitoring. Planning ensures proactive risk ",
     "Keywords": "AI Chatbot, API Integration, Document AI, Smart Assistant, Open Source AI",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Can-Plan-the",
-    "Url": "/faq/How-Enterprises-Can-Plan-the.html"
   },
   "Can-AI-Agents-automatically-isolate": {
     "Category": "Platform Value & Trends",
@@ -13766,8 +11014,6 @@ export const faq = {
     "Title": "Can AI Agents automatically isolate abnormal session requests-Fastgpt",
     "Description": "Yes, AI agents can be configured to automatically isolate abnormal session requests. Modern AI systems incorporate sophisticated anomaly detection mechanisms designed to identify suspicious or irregul",
     "Keywords": "AI Platform, Enterprise AI, Vector Search, AI Workflow, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-automatically-isolate",
-    "Url": "/faq/Can-AI-Agents-automatically-isolate.html"
   },
   "How-AI-Agents-Prevent-Cross-Site": {
     "Category": "Platform Value & Trends",
@@ -13776,8 +11022,6 @@ export const faq = {
     "Title": "How AI Agents Prevent Cross-Site Scripting Attacks-Fastgpt",
     "Description": "AI agents can prevent Cross-Site Scripting (XSS) attacks by automatically identifying and blocking malicious scripts injected into web input fields or outputs before they reach users or execute. They ",
     "Keywords": "AI Workflow, Vector Search, Open Source AI, AI Chatbot, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Prevent-Cross-Site",
-    "Url": "/faq/How-AI-Agents-Prevent-Cross-Site.html"
   },
   "How-Enterprises-Establish-Encryption-Key": {
     "Category": "Platform Value & Trends",
@@ -13786,8 +11030,6 @@ export const faq = {
     "Title": "How Enterprises Establish Encryption Key Management for AI Agents-Fastgpt",
     "Description": "Organizations can implement encryption key management for AI agents through specialized hardware security modules (HSMs), cloud key management services (KMS), or dedicated key management systems. This",
     "Keywords": "Smart Assistant, AI Platform, FastGPT, AI Chatbot, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Establish-Encryption-Key",
-    "Url": "/faq/How-Enterprises-Establish-Encryption-Key.html"
   },
   "How-AI-Agents-Maintain-Security": {
     "Category": "Platform Value & Trends",
@@ -13796,8 +11038,6 @@ export const faq = {
     "Title": "How AI Agents Maintain Security in Complex Networks-Fastgpt",
     "Description": "AI agents safeguard complex networks through continuous monitoring, real-time threat detection, and automated response. They analyze vast data streams to identify anomalies and mitigate risks autonomo",
     "Keywords": "Open Source AI, FastGPT, API Integration, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Maintain-Security",
-    "Url": "/faq/How-AI-Agents-Maintain-Security.html"
   },
   "Can-AI-Agent-automatically-isolate": {
     "Category": "Platform Value & Trends",
@@ -13806,8 +11046,6 @@ export const faq = {
     "Title": "Can AI Agent automatically isolate the attacked node?-Fastgpt",
     "Description": "Yes, AI Agents can typically be designed to automatically isolate a node once an attack or severe compromise is detected. This is a core capability in security automation frameworks focused on contain",
     "Keywords": "FastGPT, Smart Assistant, AI Automation, Intelligent Q&A, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-automatically-isolate",
-    "Url": "/faq/Can-AI-Agent-automatically-isolate.html"
   },
   "How-Enterprises-Audit-the-Security": {
     "Category": "Platform Value & Trends",
@@ -13816,8 +11054,6 @@ export const faq = {
     "Title": "How Enterprises Audit the Security of Third-Party Libraries for AI Agents-Fastgpt",
     "Description": "Enterprises audit third-party library security for AI agents through a structured process involving vulnerability scanning, license compliance checks, and supply chain risk assessment. This ensures de",
     "Keywords": "AI Automation, Enterprise AI, Task Automation AI, Smart Assistant, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Audit-the-Security",
-    "Url": "/faq/How-Enterprises-Audit-the-Security.html"
   },
   "Can-AI-Agents-run-in": {
     "Category": "Platform Value & Trends",
@@ -13826,8 +11062,6 @@ export const faq = {
     "Title": "Can AI Agents run in government private networks?-Fastgpt",
     "Description": "Yes, AI agents can technically run within secure government private networks. Deployment is feasible but requires meticulous adherence to stringent security protocols and network architecture constrai",
     "Keywords": "Smart Assistant, LLM Development, Vector Search, AI Knowledge Management, FastGPT",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-run-in",
-    "Url": "/faq/Can-AI-Agents-run-in.html"
   },
   "How-AI-Agents-Meet-the": {
     "Category": "Platform Value & Trends",
@@ -13836,8 +11070,6 @@ export const faq = {
     "Title": "How AI Agents Meet the Customized Privacy Requirements of Enterprise Clients-Fastgpt",
     "Description": "AI agents can effectively meet enterprise clients' custom privacy needs through configurable architectures. Their design incorporates flexible data handling frameworks that adapt to specific regulator",
     "Keywords": "API Integration, LLM Development, Open Source AI, Smart Assistant, Vector Search",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Meet-the",
-    "Url": "/faq/How-AI-Agents-Meet-the.html"
   },
   "How-enterprises-manage-the-outsourcing": {
     "Category": "Platform Value & Trends",
@@ -13846,8 +11078,6 @@ export const faq = {
     "Title": "How enterprises manage the outsourcing development security of AI Agents-Fastgpt",
     "Description": "Enterprises can securely manage outsourced AI Agent development through a governed partnership model. This requires establishing comprehensive security requirements and oversight mechanisms throughout",
     "Keywords": "Document AI, Smart Assistant, AI Platform, Open Source AI, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-manage-the-outsourcing",
-    "Url": "/faq/How-enterprises-manage-the-outsourcing.html"
   },
   "How-AI-Agents-Automatically-Identify": {
     "Category": "Platform Value & Trends",
@@ -13856,8 +11086,6 @@ export const faq = {
     "Title": "How AI Agents Automatically Identify Potential Security Risks-Fastgpt",
     "Description": "AI agents automatically identify potential security risks by continuously analyzing diverse data streams within IT systems and networks using specialized algorithms. This enables proactive detection o",
     "Keywords": "Vector Search, Task Automation AI, AI Knowledge Management, FastGPT, API Integration",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Automatically-Identify",
-    "Url": "/faq/How-AI-Agents-Automatically-Identify.html"
   },
   "How-AI-Agents-Avoid-Data": {
     "Category": "Platform Value & Trends",
@@ -13866,8 +11094,6 @@ export const faq = {
     "Title": "How AI Agents Avoid Data Leakage in Multi-Tenant Environments-Fastgpt",
     "Description": "AI agents prevent data leakage in multi-tenant environments through architectural isolation, strict access controls, and continuous monitoring. This ensures tenant data separation and security by desi",
     "Keywords": "Enterprise AI, Intelligent Q&A, AI Automation, GPT Integration, AI Knowledge Management",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Avoid-Data",
-    "Url": "/faq/How-AI-Agents-Avoid-Data.html"
   },
   "How-to-Prevent-Internal-Test": {
     "Category": "Platform Value & Trends",
@@ -13876,8 +11102,6 @@ export const faq = {
     "Title": "How to Prevent Internal Test Data Leakage by AI Agents-Fastgpt",
     "Description": "Preventing AI agent leakage of internal test data is achievable through implementing layered security controls and rigorous process oversight. This safeguards sensitive information while enabling valu",
     "Keywords": "Task Automation AI, AI Knowledge Management, FastGPT, Enterprise AI, AI Automation",
-    "URL": "https://fastgpt.io/en/faq/How-to-Prevent-Internal-Test",
-    "Url": "/faq/How-to-Prevent-Internal-Test.html"
   },
   "How-AI-Agents-Protect-the": {
     "Category": "Platform Value & Trends",
@@ -13886,8 +11110,6 @@ export const faq = {
     "Title": "How AI Agents Protect the Implementation of the Right to Be Forgotten-Fastgpt",
     "Description": "AI agents significantly contribute to implementing the right to be forgotten by automating the identification and secure erasure of individuals' personal data upon legitimate request. They utilize the",
     "Keywords": "AI Chatbot, Task Automation AI, Enterprise AI, Open Source AI, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Protect-the",
-    "Url": "/faq/How-AI-Agents-Protect-the.html"
   },
   "Can-AI-Agents-automatically-delete": {
     "Category": "Platform Value & Trends",
@@ -13896,8 +11118,6 @@ export const faq = {
     "Title": "Can AI Agents automatically delete expired user data?-Fastgpt",
     "Description": "Yes, AI agents can be designed to automatically delete expired user data. This capability leverages predefined data retention policies and automated scheduling for execution.\n\nSuccessful implementatio",
     "Keywords": "AI Workflow, AI Chatbot, Document AI, AI Knowledge Management, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-automatically-delete",
-    "Url": "/faq/Can-AI-Agents-automatically-delete.html"
   },
   "How-enterprises-verify-the-security": {
     "Category": "Platform Value & Trends",
@@ -13906,8 +11126,6 @@ export const faq = {
     "Title": "How enterprises verify the security of AI Agents through external audits-Fastgpt",
     "Description": "External audits involve neutral third-party assessments of AI Agent systems to evaluate security controls, data practices, and adherence to standards. This process provides an independent validation o",
     "Keywords": "AI Platform, AI Automation, Open Source AI, API Integration, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-enterprises-verify-the-security",
-    "Url": "/faq/How-enterprises-verify-the-security.html"
   },
   "How-AI-Agents-Implement-Automated": {
     "Category": "Platform Value & Trends",
@@ -13916,8 +11134,6 @@ export const faq = {
     "Title": "How AI Agents Implement Automated Threat Intelligence Analysis-Fastgpt",
     "Description": "AI agents implement automated threat intelligence analysis by leveraging machine learning (ML), natural language processing (NLP), and other AI techniques. They process vast amounts of threat data fro",
     "Keywords": "Intelligent Q&A, AI Knowledge Management, Task Automation AI, GPT Integration, Smart Assistant",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Implement-Automated",
-    "Url": "/faq/How-AI-Agents-Implement-Automated.html"
   },
   "How-Enterprises-Can-Establish-an": {
     "Category": "Platform Value & Trends",
@@ -13926,8 +11142,6 @@ export const faq = {
     "Title": "How Enterprises Can Establish an Emergency Response Plan for AI Agents-Fastgpt",
     "Description": "Establishing an emergency response plan for AI agents is both feasible and essential for enterprises leveraging this technology. This plan specifically addresses unexpected incidents involving AI agen",
     "Keywords": "Vector Search, FastGPT, LLM Development, Smart Assistant, Task Automation AI",
-    "URL": "https://fastgpt.io/en/faq/How-Enterprises-Can-Establish-an",
-    "Url": "/faq/How-Enterprises-Can-Establish-an.html"
   },
   "Can-AI-Agent-automatically-identify": {
     "Category": "Platform Value & Trends",
@@ -13936,8 +11150,6 @@ export const faq = {
     "Title": "Can AI Agent automatically identify and alert about abnormal access?-Fastgpt",
     "Description": "Yes, AI agents can effectively identify and alert about abnormal access automatically. They leverage continuous monitoring and analysis to detect suspicious activities in real-time.\n\nThese systems ana",
     "Keywords": "Smart Assistant, AI Knowledge Management, Document AI, Task Automation AI, AI Platform",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agent-automatically-identify",
-    "Url": "/faq/Can-AI-Agent-automatically-identify.html"
   },
   "Can-AI-Agents-restrict-certain": {
     "Category": "Platform Value & Trends",
@@ -13946,8 +11158,6 @@ export const faq = {
     "Title": "Can AI Agents restrict certain high-risk instructions?-Fastgpt",
     "Description": "Yes, AI agents can be designed to restrict certain high-risk instructions. Restricting specific high-risk instructions is a core capability implemented in responsible AI systems.\n\nThis restriction rel",
     "Keywords": "Document AI, AI Platform, GPT Integration, Smart Assistant, AI Chatbot",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-restrict-certain",
-    "Url": "/faq/Can-AI-Agents-restrict-certain.html"
   },
   "How-AI-Agents-Achieve-Data": {
     "Category": "Platform Value & Trends",
@@ -13956,8 +11166,6 @@ export const faq = {
     "Title": "How AI Agents Achieve Data Isolation Within Multinational Corporations-Fastgpt",
     "Description": "AI agents achieve data isolation within multinational corporations by employing stringent technical and organizational controls to confine data processing and storage according to geographic and legal",
     "Keywords": "AI Knowledge Management, AI Automation, Task Automation AI, Intelligent Q&A, Enterprise AI",
-    "URL": "https://fastgpt.io/en/faq/How-AI-Agents-Achieve-Data",
-    "Url": "/faq/How-AI-Agents-Achieve-Data.html"
   },
   "How-to-ensure-the-data": {
     "Category": "Platform Value & Trends",
@@ -13966,8 +11174,6 @@ export const faq = {
     "Title": "How to ensure the data security of third-party plugins for AI Agents-Fastgpt",
     "Description": "Ensuring data security for third-party plugins in AI Agents requires a multi-layered strategy focusing on prevention, protection, and governance.\n\nImplement stringent vendor vetting assessing their se",
     "Keywords": "Task Automation AI, AI Chatbot, API Integration, Vector Search, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-to-ensure-the-data",
-    "Url": "/faq/How-to-ensure-the-data.html"
   },
   "How-can-enterprises-make-AI": {
     "Category": "Platform Value & Trends",
@@ -13976,8 +11182,6 @@ export const faq = {
     "Title": "How can enterprises make AI Agents comply with the latest Personal Information Protection Law?-Fastgpt",
     "Description": "Enterprises can ensure AI Agents comply with the Personal Information Protection Law (PIPL) by implementing robust governance and technical safeguards focused on data handling. Achieving compliance re",
     "Keywords": "AI Knowledge Management, AI Workflow, Intelligent Q&A, AI Automation, Document AI",
-    "URL": "https://fastgpt.io/en/faq/How-can-enterprises-make-AI",
-    "Url": "/faq/How-can-enterprises-make-AI.html"
   },
   "Can-AI-Agents-automatically-report": {
     "Category": "Platform Value & Trends",
@@ -13986,8 +11190,6 @@ export const faq = {
     "Title": "Can AI Agents automatically report major data breach incidents?-Fastgpt",
     "Description": "Yes, AI agents can be programmed to automatically detect potential major data breaches and trigger the reporting process. This capability exists as a technical function within specific security and co",
     "Keywords": "Open Source AI, Vector Search, Intelligent Q&A, Smart Assistant, LLM Development",
-    "URL": "https://fastgpt.io/en/faq/Can-AI-Agents-automatically-report",
-    "Url": "/faq/Can-AI-Agents-automatically-report.html"
   },
   "How-does-the-AI-Agent": {
     "Category": "Platform Value & Trends",
@@ -13996,7 +11198,5 @@ export const faq = {
     "Title": "How does the AI Agent ensure security during hybrid cloud and on-premises deployment-Fastgpt",
     "Description": "AI Agents ensure robust security in hybrid cloud and on-premises deployments through integrated security mechanisms encompassing data protection, access control, and continuous monitoring. They are de",
     "Keywords": "AI Automation, Task Automation AI, AI Knowledge Management, AI Chatbot, Intelligent Q&A",
-    "URL": "https://fastgpt.io/en/faq/How-does-the-AI-Agent",
-    "Url": "/faq/How-does-the-AI-Agent.html"
   }
 }

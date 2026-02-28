@@ -4,8 +4,8 @@ import RybbitAnalytics from '@/app/RybbitAnalytics';
 // import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { siteConfig } from '@/config/site';
-import { defaultLocale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
+import { htmlLangScript } from '@/lib/htmlLang';
 import '@/styles/globals.css';
 import '@/styles/loading.css';
 import '@/styles/plyr.css';
@@ -42,15 +42,17 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColors
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children
 }: {
   children: React.ReactNode;
 }) {
-  const isChineseDomain = process.env.NEXT_PUBLIC_USER_URL?.includes('.cn')
-
   return (
     <html lang="zh" suppressHydrationWarning>
+      <head>
+        {/* Synchronously set html[lang] from URL path — must run before hydration */}
+        <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />
+      </head>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}

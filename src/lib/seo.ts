@@ -18,6 +18,11 @@ export const localeMap: Record<string, string> = {
 export function getAlternates(lang: string, path: string = ''): Metadata['alternates'] {
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 
+  // For root page with English, canonical should point to base URL (without /en suffix)
+  // to avoid duplicate content issues
+  const canonicalPath = path === '' && lang === 'en' ? '' : `/${lang}${path}`;
+  const canonicalUrl = `${baseUrl}${canonicalPath}`;
+
   const languages = locales.reduce(
     (acc, locale) => {
       acc[locale] = `${baseUrl}/${locale}${path}`;
@@ -30,7 +35,7 @@ export function getAlternates(lang: string, path: string = ''): Metadata['altern
   languages['x-default'] = `${baseUrl}/en${path}`;
 
   return {
-    canonical: `${baseUrl}/${lang}${path}`,
+    canonical: canonicalUrl,
     languages
   };
 }

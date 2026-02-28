@@ -64,7 +64,7 @@ jobs:
             NEXT_PUBLIC_RYBBIT_TONGJI=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
             NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
             NEXT_PUBLIC_CUSTOM_PLAN_URL=${{ secrets.NEXT_PUBLIC_CUSTOM_PLAN_URL }}
-
+            NEXT_PUBLIC_FAQ=true
       - uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}

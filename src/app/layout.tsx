@@ -4,8 +4,8 @@ import RybbitAnalytics from '@/app/RybbitAnalytics';
 // import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { siteConfig } from '@/config/site';
-import { defaultLocale } from '@/lib/i18n';
 import { cn } from '@/lib/utils';
+import { htmlLangScript } from '@/lib/htmlLang';
 import '@/styles/globals.css';
 import '@/styles/loading.css';
 import '@/styles/plyr.css';
@@ -13,8 +13,6 @@ import { Analytics } from '@vercel/analytics/react';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import GoogleAnalytics from './GoogleAnalytics';
-
-import HtmlLangSetter from '@/components/HtmlLangSetter';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -49,12 +47,15 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const isChineseDomain = process.env.NEXT_PUBLIC_USER_URL?.includes('.cn')
-
   return (
-    <html lang="zh" suppressHydrationWarning>
+    // Default to 'en'; the inline script below will update to the correct locale
+    // before React hydration, ensuring search engines see the right lang attribute.
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Synchronously set html[lang] from URL path — must run before hydration */}
+        <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />
+      </head>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
-        <HtmlLangSetter />
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}
           {/* <Footer /> */}

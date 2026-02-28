@@ -6,37 +6,36 @@ import { HiUserGroup } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
+const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+
 const baseSiteConfig = {
   title: 'FastGPT - Enterprise AI Agent Builder',
   name: 'FastGPT',
   description:
-    'A free, open-source Enterprise AI Agent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
-  url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
+    'FastGPT is a free, open-source Enterprise AI Agent Builder. Build AI knowledge bases, automate workflows with RAG retrieval, MCP tools, and visual orchestration. Deploy in minutes.',
+  url: baseUrl,
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   customPlanUrl:
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
     'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
-  ogImage: 'https://landingpage.weijunext.com/og.png',
-  metadataBase: 'https://fastgpt.io',
+  ogImage: `${baseUrl}/og.png`,
+  metadataBase: baseUrl,
+  // English-only keywords (Chinese keywords are in siteConfigZh)
   keywords: [
-    'rag',
-    'ai',
-    'agent',
-    'ai agent',
-    'workflow',
-    'llm',
-    'gpt',
-    'gpt5',
-    'orchestration',
     'FastGPT',
-    'free',
-    '知识库',
-    '问答',
-    '数据处理',
-    '模型调用',
-    'RAG检索',
-    '可视化AI工作流',
-    '企业知识库'
+    'AI Agent Builder',
+    'RAG',
+    'knowledge base',
+    'AI workflow',
+    'LLM',
+    'open source AI',
+    'enterprise AI',
+    'AI Agent',
+    'workflow automation',
+    'MCP tools',
+    'agentic RAG',
+    'AI customer service',
+    'chatbot builder'
   ],
   // commercial: 'https://doc.fastgpt.io/docs/commercial/intro/',
   commercial:
@@ -44,7 +43,7 @@ const baseSiteConfig = {
   authors: [
     {
       name: 'labring',
-      url: process.env.NEXT_PUBLIC_HOME_URL || '',
+      url: baseUrl,
       twitter: 'https://github.com/labring/FastGPT'
     }
   ],
@@ -97,13 +96,21 @@ export const siteConfig: SiteConfig = {
     url: baseSiteConfig.url,
     title: baseSiteConfig.name,
     description: baseSiteConfig.description,
-    siteName: baseSiteConfig.name
+    siteName: baseSiteConfig.name,
+    images: [
+      {
+        url: baseSiteConfig.ogImage,
+        width: 1200,
+        height: 630,
+        alt: 'FastGPT - Enterprise AI Agent Builder'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: baseSiteConfig.name,
     description: baseSiteConfig.description,
-    images: [`${baseSiteConfig.url}/og.png?${new Date().getTime()}`],
+    images: [baseSiteConfig.ogImage],
     creator: baseSiteConfig.creator
   }
 };
@@ -112,43 +119,56 @@ export const siteConfigZh: SiteConfig = {
   ...siteConfig,
   title: 'FastGPT - 企业级 AI Agent 搭建平台',
   description:
-    'FastGPT是一个企业级 AI Agent 搭建平台，可以基于 LLM 大语言模型搭建 AI 知识库问答系统,提供开箱即用的AI Agent 工具集及大模型调用等能力，并通过可视化 workflow 编排功能实现复杂的AI应用能力!',
+    'FastGPT 是一款免费开源的企业级 AI Agent 搭建平台。支持 RAG 知识库问答、可视化 AI 工作流编排、MCP 工具集成，帮助企业快速构建 AI 客服、智能助手等应用。',
   keywords: [
     'FastGPT',
     'AI Agent',
-    '知识库',
-    '问答',
-    'workflow',
-    'AI 客服',
-    'RAG检索',
-    '可视化AI工作流',
-    '企业知识库',
-    'rag',
-    'ai',
     'AI 知识库',
-    'llm',
-    'gpt',
-    'gpt5',
-    'AI自动化工具'
-  ]
+    'RAG 检索',
+    '可视化 AI 工作流',
+    '企业 AI',
+    'AI 客服',
+    '大语言模型',
+    '开源 AI',
+    '知识库问答',
+    'AI 自动化',
+    '工作流编排',
+    'MCP 工具',
+    '智能助手'
+  ],
+  openGraph: {
+    ...siteConfig.openGraph,
+    locale: 'zh_CN',
+    title: 'FastGPT - 企业级 AI Agent 搭建平台',
+    description:
+      'FastGPT 是一款免费开源的企业级 AI Agent 搭建平台。支持 RAG 知识库问答、可视化 AI 工作流编排、MCP 工具集成，帮助企业快速构建 AI 客服、智能助手等应用。'
+  }
 };
 
 export const siteConfigJa: SiteConfig = {
   ...siteConfig,
   title: 'FastGPT - エンタープライズ AI エージェント構築プラットフォーム',
   description:
-    'FastGPTは、LLM大規模言語モデルをベースにAIナレッジベースQ&Aシステムを構築できるエンタープライズAIエージェント構築プラットフォームです。すぐに使えるAIエージェントツールセットとモデル呼び出し機能を提供し、ビジュアルワークフロー編集で複雑なAIアプリケーションを実現します。',
+    'FastGPT は無料オープンソースのエンタープライズ AI エージェント構築プラットフォームです。RAG ナレッジベース、ビジュアルワークフロー、MCP ツール統合で AI エージェントを素早く構築できます。',
   keywords: [
     'FastGPT',
     'AI Agent',
-    'AIエージェント',
+    'AI エージェント',
     'ナレッジベース',
-    'ワークフロー',
-    'RAG检索',
-    'AI自動化',
-    'エンタープライズAI',
+    'RAG 検索',
+    'AI ワークフロー',
+    'エンタープライズ AI',
+    'オープンソース AI',
     'LLM',
-    'GPT',
-    'チャットボット'
-  ]
+    'AI 自動化',
+    'チャットボット',
+    'MCP ツール'
+  ],
+  openGraph: {
+    ...siteConfig.openGraph,
+    locale: 'ja_JP',
+    title: 'FastGPT - エンタープライズ AI エージェント構築プラットフォーム',
+    description:
+      'FastGPT は無料オープンソースのエンタープライズ AI エージェント構築プラットフォームです。RAG ナレッジベース、ビジュアルワークフロー、MCP ツール統合で AI エージェントを素早く構築できます。'
+  }
 };

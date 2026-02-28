@@ -10,21 +10,25 @@ const path = require('path');
 const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 const isCn = baseUrl.includes('.cn');
 
-const docUrl = 'https://doc.fastgpt.io';
+const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const faqUrl = isCn ? `${baseUrl}/zh/faq` : `${baseUrl}/en/faq`;
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
+const priceUrl = isCn ? `${baseUrl}/zh/price` : `${baseUrl}/en/price`;
 
-const content = `# robots.txt for FastGPT (${baseUrl})
+const content = `# robots.txt for FastGPT — ${baseUrl}
 #
 # FastGPT is a free, open-source enterprise AI Agent builder.
 # It provides Agentic RAG retrieval, AI-powered workflows, and MCP tools
 # to help teams build powerful AI Agents — no coding required.
 #
-# Key Resources:
+# Resources:
+# - Website:       ${baseUrl}
+# - Cloud Service: ${cloudUrl}
+# - Pricing:       ${priceUrl}
 # - Documentation: ${docUrl}
 # - FAQ:           ${faqUrl}
 # - GitHub:        https://github.com/labring/FastGPT
-# - Cloud Service: ${cloudUrl}
+# - LLM Context:   ${baseUrl}/llms.txt
 
 User-agent: *
 Allow: /

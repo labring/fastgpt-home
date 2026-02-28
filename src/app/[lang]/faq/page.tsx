@@ -1,4 +1,4 @@
-import { faq } from '@/faq';
+import { getFaqData } from '@/faq';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
 import FAQList from '@/components/faq/FAQList';
@@ -21,6 +21,7 @@ export default async function FAQPage({
 
   // Trim FAQ data for list page - only send fields needed for cards
   // This reduces page size from ~4.8MB to ~300KB
+  const faq = getFaqData(langName);
   const trimmedFaq: Record<string, { Category: string; Question: string; Answers: string }> = {};
   for (const [id, item] of Object.entries(faq)) {
     trimmedFaq[id] = {

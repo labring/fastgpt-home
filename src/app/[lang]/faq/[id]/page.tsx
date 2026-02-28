@@ -1,4 +1,4 @@
-import { faq } from '@/faq';
+import { faq, getFaqItem, getFaqData } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
@@ -21,18 +21,16 @@ export default async function FAQDetailPage({
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
-  // Get FAQ item
-  const faqItem = faq[id as keyof typeof faq];
+  // Get FAQ item (localized, fallback to English)
+  const faqItem = getFaqItem(id, langName);
 
   if (!faqItem) {
     notFound();
   }
 
-  // Get all FAQ entries
-  const allFAQs = Object.entries(faq);
-
-  // Get related FAQs (same category, excluding current)
-  const relatedFAQs = allFAQs
+  // Get related FAQs (same category, excluding current, in same language)
+  const localizedFaq = getFaqData(langName);
+  const relatedFAQs = Object.entries(localizedFaq)
     .filter(([key, item]) => item.Category === faqItem.Category && key !== id)
     .slice(0, 4);
 
@@ -125,7 +123,8 @@ export async function generateMetadata({
     };
   }
 
-  const faqItem = faq[id as keyof typeof faq];
+  const langName = lang || defaultLocale;
+  const faqItem = getFaqItem(id, langName);
 
   if (!faqItem) {
     return {
@@ -137,8 +136,6 @@ export async function generateMetadata({
       }
     };
   }
-
-  const langName = lang || defaultLocale;
 
   return {
     title: faqItem.Title,

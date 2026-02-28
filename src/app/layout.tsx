@@ -42,18 +42,13 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColors
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children
 }: {
   children: React.ReactNode;
 }) {
-  // Default lang determined at build time: *.cn → zh, others → en
-  const isCnDomain = (process.env.NEXT_PUBLIC_HOME_URL || '').includes('.cn');
-  const defaultLang = isCnDomain ? 'zh' : 'en';
-
   return (
-    // SSR default lang; inline script updates it to exact locale before hydration
-    <html lang={defaultLang} suppressHydrationWarning>
+    <html lang="zh" suppressHydrationWarning>
       <head>
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />

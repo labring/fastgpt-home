@@ -1,37 +1,29 @@
-name: Preview Home Page
+name: Preview Home Page — Build
 
 on:
   workflow_dispatch:
   pull_request:
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Only one build per PR branch at a time.
 concurrency:
-  group: 'pages'
-  cancel-in-progress: false
+  group: 'preview-build-${{ github.head_ref }}'
+  cancel-in-progress: true
 
 permissions:
   contents: read
-  deployments: write
-  pull-requests: write
-  actions: read
 
 jobs:
-  deploy:
+  build:
     runs-on: ubuntu-24.04
 
-    # Job outputs
-    outputs:
-      url: ${{ steps.deploy.outputs.deployment-url }}
-
     steps:
-      - name: Checkout
+      - name: Checkout PR code
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha }}
           repository: ${{ github.event.pull_request.head.repo.full_name }}
-          submodules: recursive # Fetch submodules
-          fetch-depth: 0 # Fetch all history for .GitInfo and .Lastmod
+          submodules: recursive
+          fetch-depth: 0
 
       - uses: pnpm/action-setup@v4
         name: Install pnpm
@@ -43,30 +35,16 @@ jobs:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
           NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
         run: |
-          npm install
-          npm run build
+          pnpm install
+          pnpm run build
 
-      - name: Deploy to Cloudflare Pages
-        id: deploy
-        uses: cloudflare/wrangler-action@v3
+      # Save PR number so the deploy workflow knows which PR to comment on.
+      - name: Save PR metadata
+        run: echo "${{ github.event.pull_request.number }}" > ./out/pr-number.txt
+
+      - name: Upload build artifact
+        uses: actions/upload-artifact@v4
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./out --project-name=fastgpt-home
-
-      - name: Comment Preview URL
-        uses: FinleyGe/github-tools@0.0.1
-        if: success() && github.event_name == 'pull_request_target'
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          tool: issue-comment
-          title: FastGPT Homepage Preview
-          body: |
-            🚀 **FastGPT Homepage Preview Ready!**
-
-            📱 **Preview URL:** ${{ steps.deploy.outputs.deployment-url }}
-
-            🔗 [👀 Click here to visit preview](${{ steps.deploy.outputs.deployment-url }})
-
-            ---
-            💡 This preview will be automatically updated when you push new commits to this PR.
+          name: preview-build
+          path: ./out
+          retention-days: 1

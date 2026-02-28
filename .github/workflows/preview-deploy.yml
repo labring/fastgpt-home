@@ -1,0 +1,63 @@
+name: Preview Home Page — Deploy
+
+on:
+  workflow_run:
+    workflows: ["Preview Home Page — Build"]
+    types: [completed]
+
+# Only one deploy at a time; do not cancel in-progress deploys.
+concurrency:
+  group: 'preview-deploy'
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  deployments: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+    # Only deploy when the build succeeded.
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+
+    steps:
+      - name: Download build artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: preview-build
+          path: ./out
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Read PR number
+        id: pr
+        run: echo "number=$(cat ./out/pr-number.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy to Cloudflare Pages
+        id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy ./out --project-name=fastgpt-home
+          quiet: false
+
+      - name: Comment Preview URL on PR
+        uses: FinleyGe/github-tools@0.0.1
+        if: success() && steps.pr.outputs.number != ''
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          tool: issue-comment
+          issue-number: ${{ steps.pr.outputs.number }}
+          title: FastGPT Homepage Preview
+          body: |
+            🚀 **FastGPT Homepage Preview Ready!**
+
+            📱 **Preview URL:** ${{ steps.deploy.outputs.deployment-url }}
+
+            🔗 [👀 Click here to visit preview](${{ steps.deploy.outputs.deployment-url }})
+
+            ---
+            💡 This preview will be automatically updated when you push new commits to this PR.

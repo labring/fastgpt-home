@@ -2,6 +2,7 @@ import { getFaqData } from '@/faq';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
 import FAQList from '@/components/faq/FAQList';
+import { FaqListJsonLd } from '@/components/JsonLd';
 import { notFound } from 'next/navigation';
 import { showFAQ } from '@/constants';
 
@@ -23,16 +24,25 @@ export default async function FAQPage({
   // This reduces page size from ~4.8MB to ~300KB
   const faq = getFaqData(langName);
   const trimmedFaq: Record<string, { Category: string; Question: string; Answers: string }> = {};
+  const schemaItems: Array<{ question: string; answer: string }> = [];
+
   for (const [id, item] of Object.entries(faq)) {
     trimmedFaq[id] = {
       Category: item.Category,
       Question: item.Question,
       Answers: item.Answers.substring(0, 100),
     };
+    schemaItems.push({
+      question: item.Question,
+      answer: item.Answers.substring(0, 300)
+    });
   }
 
   return (
     <div className="w-full min-h-screen">
+      {/* FAQ Schema for AI and search engines */}
+      <FaqListJsonLd lang={langName} items={schemaItems} />
+
       {/* FAQ Content */}
       <section className="w-full pb-8">
         <div className="container mx-auto px-4">

@@ -5,6 +5,7 @@ import { getAlternates, localeMap } from '@/lib/seo';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
+import { FaqDetailJsonLd } from '@/components/JsonLd';
 import { showFAQ } from '@/constants';
 
 export default async function FAQDetailPage({
@@ -39,6 +40,15 @@ export default async function FAQDetailPage({
 
   return (
     <article className="w-full max-w-4xl mx-auto">
+      {/* JSON-LD: FAQ + Breadcrumb Schema */}
+      <FaqDetailJsonLd
+        lang={langName}
+        id={id}
+        question={faqItem.Question}
+        answer={faqItem.Answers}
+        category={faqItem.Category}
+      />
+
       {/* Back Button */}
       <Link
         href={`/${langName}/faq`}

@@ -15,4 +15,5 @@ out
 
 # sitemap
 */sitemap*.xml
-*/robots.txt
+# Allow robots.txt in public directory
+!/public/robots.txt

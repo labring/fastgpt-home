@@ -14,6 +14,8 @@ import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import GoogleAnalytics from './GoogleAnalytics';
 
+import HtmlLangSetter from '@/components/HtmlLangSetter';
+
 const fontSans = FontSans({
   subsets: ['latin'],
   variable: '--font-sans'
@@ -52,6 +54,7 @@ export default async function RootLayout({
   return (
     <html lang="zh" suppressHydrationWarning>
       <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
+        <HtmlLangSetter />
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}
           {/* <Footer /> */}

@@ -74,8 +74,8 @@ const VideoPlayer = ({
           {locale.title}
         </h5>
         <div className="margin-top-40"></div>
-        <img src={dict?.video?.video} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
-        <img src={dict?.video?.videoDark} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
+        <img src={dict?.video?.video} alt="FastGPT Demo Video" style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
+        <img src={dict?.video?.videoDark} alt="FastGPT Demo Video" style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
 
         <div className="absolute z-1 top-[50%] left-[50%] translate-y-[-50%] translate-x-[-50%]  bg-[#7789B0] hover:bg-[#4B597A] rounded-full cursor-pointer p-1 md:p-2 lg:p-3" onClick={() => setOpen(true)}>
           <IoPlay className="text-xs md:text-xl lg:text-2xl xl:text-3xl" />

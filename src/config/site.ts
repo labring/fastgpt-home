@@ -97,14 +97,7 @@ export const siteConfig: SiteConfig = {
     title: baseSiteConfig.name,
     description: baseSiteConfig.description,
     siteName: baseSiteConfig.name,
-    images: [
-      {
-        url: baseSiteConfig.ogImage,
-        width: 1200,
-        height: 630,
-        alt: 'FastGPT - Enterprise AI Agent Builder'
-      }
-    ]
+    images: [baseSiteConfig.ogImage]
   },
   twitter: {
     card: 'summary_large_image',

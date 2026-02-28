@@ -47,10 +47,13 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Default lang determined at build time: *.cn → zh, others → en
+  const isCnDomain = (process.env.NEXT_PUBLIC_HOME_URL || '').includes('.cn');
+  const defaultLang = isCnDomain ? 'zh' : 'en';
+
   return (
-    // Default to 'en'; the inline script below will update to the correct locale
-    // before React hydration, ensuring search engines see the right lang attribute.
-    <html lang="en" suppressHydrationWarning>
+    // SSR default lang; inline script updates it to exact locale before hydration
+    <html lang={defaultLang} suppressHydrationWarning>
       <head>
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />

@@ -49,7 +49,17 @@ Allow: /
 User-agent: 360Spider
 Allow: /
 
-# Allow other crawlers
+User-agent: YisouSpider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+# Allow Bing (including Bing CN)
+User-agent: Bingbot
+Allow: /
+
+# Allow other crawlers (including Quark and others)
 User-agent: *
 Allow: /
 
@@ -58,6 +68,9 @@ Sitemap: ${baseUrl}/sitemap-base.xml
 Sitemap: ${baseUrl}/sitemap-faq.xml
 `
   : `# robots.txt for FastGPT — ${baseUrl}
+#
+# This site is optimized for international search engines (Google, Bing, etc.)
+# For Chinese users, please visit https://fastgpt.cn
 #
 # FastGPT is a free, open-source enterprise AI Agent builder.
 # It provides Agentic RAG retrieval, AI-powered workflows, and MCP tools
@@ -72,6 +85,7 @@ Sitemap: ${baseUrl}/sitemap-faq.xml
 # - GitHub:        https://github.com/labring/FastGPT
 # - LLM Context:   ${baseUrl}/llms.txt
 
+# Allow all search engines (international focus)
 User-agent: *
 Allow: /
 

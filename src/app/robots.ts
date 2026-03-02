@@ -28,6 +28,18 @@ export default function robots(): MetadataRoute.Robots {
           allow: '/'
         },
         {
+          userAgent: 'YisouSpider',
+          allow: '/'
+        },
+        {
+          userAgent: 'Bytespider',
+          allow: '/'
+        },
+        {
+          userAgent: 'Bingbot',
+          allow: '/'
+        },
+        {
           userAgent: '*',
           allow: '/'
         }
@@ -40,7 +52,7 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
-  // Allow all crawlers on .io domain
+  // Allow all crawlers on .io domain (international focus)
   return {
     rules: [
       {

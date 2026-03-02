@@ -19,7 +19,7 @@ const priceUrl = isCn ? `${baseUrl}/zh/price` : `${baseUrl}/en/price`;
 const content = isCn
   ? `# robots.txt for FastGPT — ${baseUrl}
 #
-# This site is optimized for Chinese search engines (Baidu, Sogou, 360, etc.)
+# This site is optimized for Chinese search engines and AI platforms.
 # For international users, please visit https://fastgpt.io
 #
 # FastGPT is a free, open-source enterprise AI Agent builder.
@@ -39,27 +39,7 @@ const content = isCn
 User-agent: Googlebot
 Disallow: /
 
-# Allow Chinese search engines
-User-agent: Baiduspider
-Allow: /
-
-User-agent: Sogou web spider
-Allow: /
-
-User-agent: 360Spider
-Allow: /
-
-User-agent: YisouSpider
-Allow: /
-
-User-agent: Bytespider
-Allow: /
-
-# Allow Bing (including Bing CN)
-User-agent: Bingbot
-Allow: /
-
-# Allow other crawlers (including Quark and others)
+# Allow all other crawlers (search engines, AI platforms, etc.)
 User-agent: *
 Allow: /
 
@@ -69,7 +49,7 @@ Sitemap: ${baseUrl}/sitemap-faq.xml
 `
   : `# robots.txt for FastGPT — ${baseUrl}
 #
-# This site is optimized for international search engines (Google, Bing, etc.)
+# This site is optimized for international search engines and AI platforms.
 # For Chinese users, please visit https://fastgpt.cn
 #
 # FastGPT is a free, open-source enterprise AI Agent builder.
@@ -85,7 +65,7 @@ Sitemap: ${baseUrl}/sitemap-faq.xml
 # - GitHub:        https://github.com/labring/FastGPT
 # - LLM Context:   ${baseUrl}/llms.txt
 
-# Allow all search engines (international focus)
+# Allow all crawlers (search engines, AI platforms, etc.)
 User-agent: *
 Allow: /
 

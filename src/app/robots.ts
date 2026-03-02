@@ -16,30 +16,6 @@ export default function robots(): MetadataRoute.Robots {
           disallow: '/'
         },
         {
-          userAgent: 'Baiduspider',
-          allow: '/'
-        },
-        {
-          userAgent: 'Sogou web spider',
-          allow: '/'
-        },
-        {
-          userAgent: '360Spider',
-          allow: '/'
-        },
-        {
-          userAgent: 'YisouSpider',
-          allow: '/'
-        },
-        {
-          userAgent: 'Bytespider',
-          allow: '/'
-        },
-        {
-          userAgent: 'Bingbot',
-          allow: '/'
-        },
-        {
           userAgent: '*',
           allow: '/'
         }
@@ -52,7 +28,7 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
-  // Allow all crawlers on .io domain (international focus)
+  // Allow all crawlers on .io domain (maximum exposure)
   return {
     rules: [
       {

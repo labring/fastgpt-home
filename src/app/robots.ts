@@ -5,7 +5,42 @@ export const dynamic = 'force-static'
 
 export default function robots(): MetadataRoute.Robots {
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'
+  const isCn = baseUrl.includes('.cn')
 
+  // Block Googlebot on .cn domain to avoid duplicate content issues
+  if (isCn) {
+    return {
+      rules: [
+        {
+          userAgent: 'Googlebot',
+          disallow: '/'
+        },
+        {
+          userAgent: 'Baiduspider',
+          allow: '/'
+        },
+        {
+          userAgent: 'Sogou web spider',
+          allow: '/'
+        },
+        {
+          userAgent: '360Spider',
+          allow: '/'
+        },
+        {
+          userAgent: '*',
+          allow: '/'
+        }
+      ],
+      sitemap: [
+        `${baseUrl}/sitemap-base.xml`,
+        `${baseUrl}/sitemap-faq.xml`
+      ],
+      host: baseUrl
+    }
+  }
+
+  // Allow all crawlers on .io domain
   return {
     rules: [
       {

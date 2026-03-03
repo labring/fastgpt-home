@@ -46,3 +46,6 @@ LABEL org.opencontainers.image.source="https://github.com/labring/fastgpt-home"
 
 COPY --from=builder /app/out /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Copy IndexNow API Key for Bing/Yandex search engine indexing
+COPY public/ffbdd11b7b9110d3ec624f847c163084.txt /usr/share/nginx/html/

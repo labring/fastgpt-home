@@ -10,7 +10,7 @@ const ClarityAnalytics = () => {
     return (
         <Script
             id="clarity-tongji"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             src={`https://www.clarity.ms/tag/${key}`}
         />
     );

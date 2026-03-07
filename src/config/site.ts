@@ -98,14 +98,7 @@ export const siteConfig: SiteConfig = {
     title: 'FastGPT - Enterprise AI Agent Builder',
     description: 'Flexible AI Workflow + AI Knowledge Base + Template System + Agentic RAG = Powerful AI Agent Builder. Trusted by 500,000+ users worldwide.',
     siteName: baseSiteConfig.name,
-    images: [
-      {
-        url: `${baseSiteConfig.url}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'FastGPT - Enterprise AI Agent Builder'
-      }
-    ]
+    images: [`${baseSiteConfig.url}/og-image.png`]
   },
   twitter: {
     card: 'summary_large_image',
@@ -145,14 +138,7 @@ export const siteConfigZh: SiteConfig = {
     locale: 'zh_CN',
     title: 'FastGPT - 企业级 AI 智能体构建平台',
     description: '灵活的 AI 工作流 + AI 知识库 + 模板系统 + Agentic RAG = 强大的 AI 智能体构建器。全球 50 万+用户信赖。',
-    images: [
-      {
-        url: `${baseSiteConfig.url}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'FastGPT - 企业级 AI 智能体构建平台'
-      }
-    ]
+    images: [`${baseSiteConfig.url}/og-image.png`]
   },
   twitter: {
     ...siteConfig.twitter,

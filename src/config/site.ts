@@ -7,16 +7,16 @@ import { MdEmail } from 'react-icons/md';
 const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
 
 const baseSiteConfig = {
-  title: 'FastGPT - Enterprise AI Agent Builder',
+  title: 'FastGPT - Enterprise AI Agent Builder | Open Source RAG Platform',
   name: 'FastGPT',
   description:
-    'A free, open-source Enterprise AI Agent Builder, provide Agentic RAG retrieval、AI-powered workflows and MCP tools. Easy to build AI Agents.',
+    'Build powerful AI agents with FastGPT\'s visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.',
   url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   customPlanUrl:
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
     'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
-  ogImage: 'https://landingpage.weijunext.com/og.png',
+  ogImage: '/og-image.png',
   metadataBase: 'https://fastgpt.io',
   keywords: [
     'rag',
@@ -95,27 +95,36 @@ export const siteConfig: SiteConfig = {
     type: 'website',
     locale: 'en_US',
     url: baseSiteConfig.url,
-    title: baseSiteConfig.name,
-    description: baseSiteConfig.description,
-    siteName: baseSiteConfig.name
+    title: 'FastGPT - Enterprise AI Agent Builder',
+    description: 'Flexible AI Workflow + AI Knowledge Base + Template System + Agentic RAG = Powerful AI Agent Builder. Trusted by 500,000+ users worldwide.',
+    siteName: baseSiteConfig.name,
+    images: [
+      {
+        url: `${baseSiteConfig.url}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'FastGPT - Enterprise AI Agent Builder'
+      }
+    ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: baseSiteConfig.name,
-    description: baseSiteConfig.description,
-    images: [`${baseSiteConfig.url}/og.png?${new Date().getTime()}`],
+    title: 'FastGPT - Enterprise AI Agent Builder',
+    description: 'Build powerful AI agents with visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source platform.',
+    images: [`${baseSiteConfig.url}/og-image.png`],
     creator: baseSiteConfig.creator
   }
 };
 
 export const siteConfigZh: SiteConfig = {
   ...siteConfig,
-  title: 'FastGPT - 企业级 AI Agent 搭建平台',
+  title: 'FastGPT - 企业级 AI 智能体构建平台 | 开源 RAG 系统',
   description:
-    'FastGPT是一个企业级 AI Agent 搭建平台，可以基于 LLM 大语言模型搭建 AI 知识库问答系统,提供开箱即用的AI Agent 工具集及大模型调用等能力，并通过可视化 workflow 编排功能实现复杂的AI应用能力!',
+    'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、知识库和 RAG 系统。50万+用户信赖，立即免费开始。',
   keywords: [
     'FastGPT',
     'AI Agent',
+    'AI 智能体',
     '知识库',
     '问答',
     'workflow',
@@ -130,7 +139,26 @@ export const siteConfigZh: SiteConfig = {
     'gpt',
     'gpt5',
     'AI自动化工具'
-  ]
+  ],
+  openGraph: {
+    ...siteConfig.openGraph,
+    locale: 'zh_CN',
+    title: 'FastGPT - 企业级 AI 智能体构建平台',
+    description: '灵活的 AI 工作流 + AI 知识库 + 模板系统 + Agentic RAG = 强大的 AI 智能体构建器。全球 50 万+用户信赖。',
+    images: [
+      {
+        url: `${baseSiteConfig.url}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'FastGPT - 企业级 AI 智能体构建平台'
+      }
+    ]
+  },
+  twitter: {
+    ...siteConfig.twitter,
+    title: 'FastGPT - 企业级 AI 智能体构建平台',
+    description: 'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、知识库和 RAG 系统。50万+用户信赖。'
+  }
 };
 
 export const siteConfigJa: SiteConfig = {

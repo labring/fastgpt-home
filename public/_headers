@@ -21,3 +21,10 @@
 # HTML pages — 1 hour cache with stale-while-revalidate
 /*
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+  Cross-Origin-Opener-Policy: same-origin-allow-popups
+  Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googletagmanager.com *.baidu.com hm.baidu.com track.fastgpt.cn *.feishu.cn; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' *.fastgpt.io *.sealos.io *.googletagmanager.com *.google-analytics.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self';

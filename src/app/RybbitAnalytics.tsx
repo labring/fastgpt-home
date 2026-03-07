@@ -11,10 +11,9 @@ const RybbitAnalytics = () => {
     return (
         <Script
             id="rybbit-tongji"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             data-site-id={`${siteId}`}
             src={`${key}`}
-            defer
         />
     );
 };

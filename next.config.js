@@ -7,6 +7,12 @@ const nextConfig = {
   ...(isExport && { output: 'export' }),
   images: { unoptimized: true },
   transpilePackages: ['@heroui/react', '@heroui/theme'],
+  
+  // Enable compression
+  compress: true,
+  
+  // Remove X-Powered-By header
+  poweredByHeader: false,
 
   // Cache-Control headers only in dev mode;
   // production static export relies on public/_headers for Cloudflare Pages

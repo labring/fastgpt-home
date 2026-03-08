@@ -52,7 +52,7 @@ const NormalCardGrid =({ items, columns }: NormalCardProps) => {
           {
             item.image && (
               <div className="w-full lg:w-3/5 min-h-[150px] flex justify-center items-center">
-                <Image src={item.image} alt="logo" width={150} height={150} className="rounded-lg" style={{ objectFit: "contain" }} />
+                <Image src={item.image} alt={`${item.title} - ${item.description}`} width={150} height={150} className="rounded-lg" style={{ objectFit: "contain" }} />
               </div>
             )
           }

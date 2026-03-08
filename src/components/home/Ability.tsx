@@ -77,8 +77,8 @@ const Ability = ({
               </a> */}
             </div>
             <div className={cn("relative w-full lg:w-3/5 min-h-[150px] flex justify-center items-center rounded-lg overflow-hidden")}>
-              <img src={item.image} alt="ABILITYS" style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
-              <img src={item.imageDark} alt="ABILITYS" style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
+              <img src={item.image} alt={`${item.title} - ${item.content.substring(0, 100)}`} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:hidden" />
+              <img src={item.imageDark} alt={`${item.title} - ${item.content.substring(0, 100)}`} style={{ objectFit: "contain", maxWidth: "100%", height: "auto" }} className="dark:block hidden" />
             </div>
           </div>
         ))}

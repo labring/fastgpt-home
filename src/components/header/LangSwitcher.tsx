@@ -34,6 +34,9 @@ export const LangSwitcher = () => {
   };
 
   useEffect(() => {
+    // Only auto-switch language when URL has no lang parameter
+    if (lang) return;
+
     const storedLang = localStorage.getItem('preferredLang');
     if (storedLang && storedLang !== lang && Object.keys(localeNames).includes(storedLang)) {
       let routeWithoutLang = pathname;

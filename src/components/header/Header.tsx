@@ -39,8 +39,8 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
   }, [isMenuOpen]);
 
   return (
-    <header className="relative py-2 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex justify-between">
-      <nav className="z-50 flex justify-between w-full fix-header">
+    <header className="fixed top-0 left-0 right-0 z-50 py-2 px-4 sm:px-6 lg:px-8 flex justify-between bg-black/80 backdrop-blur-sm">
+      <nav className="z-50 flex justify-between w-full fix-header mx-auto max-w-8xl">
         <LogoFC dict={dict} lang={lang} />
         <div className="hidden md:flex items-center gap-x-4">
           {/* <ThemedButton /> */}
@@ -62,50 +62,48 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
           <MenuIcon />
         </button>
 
-        {isMenuOpen && (
-          <div 
-            className="absolute top-0 left-0 z-50 w-screen h-screen bg-overlay/50"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            <div className="bg-background h-screen overflow-y-auto" onClick={(e) => e.stopPropagation()}>
-              <div className="px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[56px]">
-                <LogoFC dict={dict} lang={lang} />
+        <div
+          className={`absolute top-0 left-0 z-50 w-screen h-screen  ${isMenuOpen ? 'block' : 'hidden'} bg-gradient-to-b from-black/100 via-black/95 to-black/70 backdrop-blur-md`}
+          onClick={() => setIsMenuOpen(false)}
+        >
+          <div className=" " onClick={(e) => e.stopPropagation()}>
+            <div className="px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[56px]">
+              <LogoFC dict={dict} lang={lang} />
 
-                <div>
-                  <button
-                    aria-label="Close Menu"
-                    title="Close Menu"
-                    className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <CgClose />
-                  </button>
-                </div>
-              </div>
-
-              <nav className="px-4 sm:px-6 lg:px-8">
-                <ul className="space-y-4">
-                  {dict?.links.map((link) => (
-                    <Link
-                      key={link.label}
-                      href={getNavHref(link.href, lang)}
-                      aria-label={link.label}
-                      title={link.label}
-                      className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-white/10 p-1 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      <li>{link.label}</li>
-                    </Link>
-                  ))}
-                </ul>
-              </nav>
-
-              <div className="mt-4 border-t pt-4 border-white/10 px-4 sm:px-6 lg:px-8">
-                <LangSwitcher />
+              <div>
+                <button
+                  aria-label="Close Menu"
+                  title="Close Menu"
+                  className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <CgClose />
+                </button>
               </div>
             </div>
+
+            <nav className="px-4 sm:px-6 lg:px-8 pb-4">
+              <ul className="space-y-4">
+                {dict?.links.map((link) => (
+                  <Link
+                    key={link.label}
+                    href={getNavHref(link.href, lang)}
+                    aria-label={link.label}
+                    title={link.label}
+                    className="font-medium tracking-wide transition-colors duration-200 hover:text-deep-purple-accent-400 hover:bg-white/10 p-1 rounded-md"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <li>{link.label}</li>
+                  </Link>
+                ))}
+              </ul>
+            </nav>
+
+            <div className="mt-4 border-t pt-4 border-white/10 px-4 sm:px-6 lg:px-8 pb-6">
+              <LangSwitcher />
+            </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );

@@ -16,15 +16,16 @@ const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars:
       href="/"
       aria-label="FastGPT"
       title="FastGPT"
-      className="flex items-center space-x-2 font-bold "
+      className="flex items-center space-x-3 font-bold "
     >
       <Image
         alt={siteConfig.name}
         src="/logo.svg"
-        className="w-10 h-10 rounded-sm sm:w-[52px] sm:h-[52px] sm:rounded-lg bg-[#E9E9E9] p-2 "
+        className="w-[36px] h-[36px] bg-[#E9E9E9] p-1 rounded-md dark:bg-opacity-20"
         width={32}
         height={32}
       />
+      <span className="text-white text-lg">FastGPT</span>
     </Link>
   </div>)
 

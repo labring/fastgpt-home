@@ -84,7 +84,7 @@ export const LangSwitcher = () => {
       {open && (
         <div
           role="listbox"
-          className="absolute right-0 top-full mt-1 z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
+          className="absolute left-0 top-full mt-1 z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
         >
           <div className="p-1">
             {Object.keys(localeNames).map((key: string) => (

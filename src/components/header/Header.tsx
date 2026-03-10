@@ -6,7 +6,7 @@ import { siteConfig } from '@/config/site';
 import { MenuIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CgClose } from 'react-icons/cg';
 import { useParams } from 'next/navigation';
 import { defaultLocale } from '@/lib/i18n';
@@ -23,6 +23,20 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      // 只在移动端锁定滚动
+      if (window.innerWidth < 768) {
+        document.body.style.overflow = 'hidden';
+      }
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="relative py-2 mx-auto max-w-8xl px-4 sm:px-6 lg:px-8 flex justify-between">
@@ -49,16 +63,19 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
         </button>
 
         {isMenuOpen && (
-          <div className="absolute top-0 left-0 z-50 w-screen h-screen bg-overlay/50">
-            <div className="p-5 bg-background rounded shadow-sm">
-              <div className="flex items-center justify-between mb-4">
+          <div 
+            className="absolute top-0 left-0 z-50 w-screen h-screen bg-overlay/50"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            <div className="bg-background h-screen overflow-y-auto" onClick={(e) => e.stopPropagation()}>
+              <div className="px-4 sm:px-6 lg:px-8 flex items-center justify-between h-[56px]">
                 <LogoFC dict={dict} lang={lang} />
 
                 <div>
                   <button
                     aria-label="Close Menu"
                     title="Close Menu"
-                    className="tracking-wide transition-colors duration-200 font-norma"
+                    className="p-2 -mr-1 transition duration-200 rounded focus:outline-none focus:shadow-outline"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <CgClose />
@@ -66,7 +83,7 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
                 </div>
               </div>
 
-              <nav>
+              <nav className="px-4 sm:px-6 lg:px-8">
                 <ul className="space-y-4">
                   {dict?.links.map((link) => (
                     <Link
@@ -83,7 +100,7 @@ const Header = ({ dict, CTALocale }: { dict: Dict; CTALocale: any }) => {
                 </ul>
               </nav>
 
-              <div className="mt-4 border-t-1 flex flex-col gap-6 pt-4 border-white/10">
+              <div className="mt-4 border-t pt-4 border-white/10 px-4 sm:px-6 lg:px-8">
                 <LangSwitcher />
               </div>
             </div>
@@ -111,7 +128,7 @@ const LogoFC = ({ dict, lang }: { dict: Dict; lang: string }) => (
         width={32}
         height={32}
       />
-      <span className="text-white hidden md:block">FastGPT</span>
+      <span className="text-white">FastGPT</span>
     </Link>
 
     <ul className="hidden items-center gap-5 md:flex">

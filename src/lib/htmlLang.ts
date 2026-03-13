@@ -4,12 +4,13 @@
  * Must be used as a dangerouslySetInnerHTML script in the root layout <head>.
  *
  * Root / defaults to 'en'; /zh, /ja paths override accordingly.
+ * Priority: URL lang > localStorage preferredLang > 'en'
  */
 export const htmlLangScript = `
 (function() {
   var path = window.location.pathname;
-  var lang = 'zh';
-  if (path.startsWith('/en')) lang = 'en';
+  var lang = 'en';
+  if (path.startsWith('/zh')) lang = 'zh';
   else if (path.startsWith('/ja')) lang = 'ja';
   document.documentElement.lang = lang;
 })();

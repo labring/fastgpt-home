@@ -44,8 +44,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: ${baseUrl}/sitemap-base.xml
-Sitemap: ${baseUrl}/sitemap-faq.xml
+Sitemap: ${baseUrl}/sitemap.xml
 `
   : `# robots.txt for FastGPT — ${baseUrl}
 #
@@ -70,8 +69,7 @@ User-agent: *
 Allow: /
 
 # Sitemaps
-Sitemap: ${baseUrl}/sitemap-base.xml
-Sitemap: ${baseUrl}/sitemap-faq.xml
+Sitemap: ${baseUrl}/sitemap.xml
 `;
 
 const outputPath = path.join(__dirname, '../public/robots.txt');

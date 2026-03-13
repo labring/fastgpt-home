@@ -95,7 +95,11 @@ const VideoPlayer = ({
               data-poster="/images/hero/zh/fastgpt-demo.jpg"
             >
               <source
-                src="https://otnvvf-imgs.oss.laf.run/fastgpt.mp4"
+                src="/fastgpt.webm"
+                type="video/webm"
+              />
+              <source
+                src="/fastgpt.mp4"
                 type="video/mp4"
               />
             </video>

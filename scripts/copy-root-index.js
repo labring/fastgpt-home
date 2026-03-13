@@ -5,8 +5,18 @@
 const fs = require('fs');
 const path = require('path');
 
+// Normalize locale to base language code (zh-CN → zh, en-US → en, etc.)
+function normalizeLocale(locale) {
+  if (!locale) return 'en';
+  if (locale.startsWith('zh')) return 'zh';
+  if (locale.startsWith('en')) return 'en';
+  if (locale.startsWith('ja')) return 'ja';
+  return 'en';
+}
+
 const outDir = path.join(__dirname, '..', 'out');
-const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+const rawLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+const defaultLocale = normalizeLocale(rawLocale);
 const sourceHtml = path.join(outDir, `${defaultLocale}.html`);
 const indexHtml = path.join(outDir, 'index.html');
 

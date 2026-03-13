@@ -1,7 +1,6 @@
 import Header from '@/components/header/Header';
 import JsonLd from '@/components/JsonLd';
-import { siteConfig, siteConfigZh, siteConfigJa } from '@/config/site';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary, localeNames, getConfigForLocale } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
 import { Metadata } from 'next';
 
@@ -23,20 +22,12 @@ export default async function LangHome({ children, params }: { children: React.R
   );
 }
 
-function getConfigForLang(lang: string) {
-  switch (lang) {
-    case 'zh': return siteConfigZh;
-    case 'ja': return siteConfigJa;
-    default: return siteConfig;
-  }
-}
-
 export async function generateMetadata(
   { params }: { params: Promise<{ lang?: string }> }
 ): Promise<Metadata> {
   const { lang } = await params;
   const langName = lang || defaultLocale;
-  const config = getConfigForLang(langName);
+  const config = getConfigForLocale(langName);
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
   const ogLocale = localeMap[langName] || 'en_US';
   const alternateLocales = Object.values(localeMap).filter(l => l !== ogLocale);

@@ -6,30 +6,19 @@ import Hero from '@/components/home/Hero';
 import VideoPlayer from '@/components/home/Video';
 import Header from '@/components/header/Header';
 import JsonLd from '@/components/JsonLd';
-import { defaultLocale, getDictionary } from '@/lib/i18n';
+import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
 import { getGitHubStars } from '@/lib/utils';
-import { siteConfig, siteConfigZh, siteConfigJa } from '@/config/site';
 import { Metadata } from 'next';
 
-function getConfigForLocale(locale: string) {
-  switch (locale) {
-    case 'zh': return siteConfigZh;
-    case 'ja': return siteConfigJa;
-    default: return siteConfig;
-  }
-}
-
 export async function generateMetadata(): Promise<Metadata> {
-  // Read env var at runtime to ensure it's picked up correctly
-  const locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
-  const config = getConfigForLocale(locale);
+  const config = getConfigForLocale(defaultLocale);
 
   return {
     title: config.title,
     description: config.description,
     keywords: config.keywords,
-    alternates: getAlternates(locale, '')
+    alternates: getAlternates(defaultLocale, '')
   };
 }
 

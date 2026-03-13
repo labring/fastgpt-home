@@ -7,7 +7,7 @@ export const localeNames: any = {
   zh: '中文',
   ja: '日本語'
 };
-export const defaultLocale = 'en';
+export const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
 
 // If you wish to automatically redirect users to a URL that matches their browser's language setting,
 // you can use the `getLocale` to get the browser's language.

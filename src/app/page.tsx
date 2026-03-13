@@ -12,15 +12,26 @@ import { getGitHubStars } from '@/lib/utils';
 import { siteConfig, siteConfigZh, siteConfigJa } from '@/config/site';
 import { Metadata } from 'next';
 
-const configMap: Record<string, typeof siteConfig> = { en: siteConfig, zh: siteConfigZh, ja: siteConfigJa };
-const rootConfig = configMap[defaultLocale] || siteConfig;
+function getConfigForLocale(locale: string) {
+  switch (locale) {
+    case 'zh': return siteConfigZh;
+    case 'ja': return siteConfigJa;
+    default: return siteConfig;
+  }
+}
 
-export const metadata: Metadata = {
-  title: rootConfig.title,
-  description: rootConfig.description,
-  keywords: rootConfig.keywords,
-  alternates: getAlternates(defaultLocale, '')
-};
+export async function generateMetadata(): Promise<Metadata> {
+  // Read env var at runtime to ensure it's picked up correctly
+  const locale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+  const config = getConfigForLocale(locale);
+
+  return {
+    title: config.title,
+    description: config.description,
+    keywords: config.keywords,
+    alternates: getAlternates(locale, '')
+  };
+}
 
 export default async function RootPage() {
   const dict = await getDictionary(defaultLocale);

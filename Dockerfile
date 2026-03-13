@@ -17,6 +17,7 @@ ARG NEXT_PUBLIC_RYBBIT_TONGJI
 ARG NEXT_PUBLIC_RYBBIT_TONGJI_SITEID
 ARG NEXT_PUBLIC_CUSTOM_PLAN_URL
 ARG NEXT_PUBLIC_FAQ
+ARG NEXT_PUBLIC_DEFAULT_LOCALE
 
 ENV NEXT_PUBLIC_BAIDU_TONGJI=$NEXT_PUBLIC_BAIDU_TONGJI
 ENV NEXT_PUBLIC_BAIDU_KEY=$NEXT_PUBLIC_BAIDU_KEY
@@ -28,6 +29,7 @@ ENV NEXT_PUBLIC_RYBBIT_TONGJI=$NEXT_PUBLIC_RYBBIT_TONGJI
 ENV NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=$NEXT_PUBLIC_RYBBIT_TONGJI_SITEID
 ENV NEXT_PUBLIC_CUSTOM_PLAN_URL=$NEXT_PUBLIC_CUSTOM_PLAN_URL
 ENV NEXT_PUBLIC_FAQ=$NEXT_PUBLIC_FAQ
+ENV NEXT_PUBLIC_DEFAULT_LOCALE=${NEXT_PUBLIC_DEFAULT_LOCALE:-zh}
 
 # copy packages and one project
 COPY . ./
@@ -35,7 +37,6 @@ COPY . ./
 # Replace URLs in files (fix sed -i syntax for Alpine Linux)
 RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "https://doc.fastgpt.io" | xargs -r sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g"
 RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "https://cloud.fastgpt.io" | xargs -r sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g"
-RUN if [ -f src/lib/i18n.ts ]; then sed -i "s/defaultLocale = \"en\"/defaultLocale = \"zh\"/g" src/lib/i18n.ts; fi
 
 RUN npm install
 RUN npm run build

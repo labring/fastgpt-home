@@ -6,21 +6,21 @@ import Hero from '@/components/home/Hero';
 import VideoPlayer from '@/components/home/Video';
 import Header from '@/components/header/Header';
 import JsonLd from '@/components/JsonLd';
-import { defaultLocale, getDictionary } from '@/lib/i18n';
+import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
 import { getGitHubStars } from '@/lib/utils';
-import { siteConfig, siteConfigZh, siteConfigJa } from '@/config/site';
 import { Metadata } from 'next';
 
-const configMap: Record<string, typeof siteConfig> = { en: siteConfig, zh: siteConfigZh, ja: siteConfigJa };
-const rootConfig = configMap[defaultLocale] || siteConfig;
+export async function generateMetadata(): Promise<Metadata> {
+  const config = getConfigForLocale(defaultLocale);
 
-export const metadata: Metadata = {
-  title: rootConfig.title,
-  description: rootConfig.description,
-  keywords: rootConfig.keywords,
-  alternates: getAlternates(defaultLocale, '')
-};
+  return {
+    title: config.title,
+    description: config.description,
+    keywords: config.keywords,
+    alternates: getAlternates(defaultLocale, '')
+  };
+}
 
 export default async function RootPage() {
   const dict = await getDictionary(defaultLocale);

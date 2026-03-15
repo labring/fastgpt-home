@@ -12,6 +12,7 @@ const RybbitAnalytics = () => {
         <Script
             id="rybbit-tongji"
             strategy="afterInteractive"
+            defer
             data-site-id={`${siteId}`}
             src={`${key}`}
         />

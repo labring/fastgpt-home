@@ -9,6 +9,7 @@ const BaiduAnalytics = () => {
 
   return (
     <Script
+      defer
       id="baidu-tongji"
       strategy="afterInteractive"
       src={`https://hm.baidu.com/hm.js?${key}`}

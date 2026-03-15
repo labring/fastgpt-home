@@ -9,6 +9,7 @@ const ClarityAnalytics = () => {
 
     return (
         <Script
+            defer
             id="clarity-tongji"
             strategy="afterInteractive"
             src={`https://www.clarity.ms/tag/${key}`}

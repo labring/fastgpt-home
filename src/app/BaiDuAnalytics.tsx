@@ -10,7 +10,7 @@ const BaiduAnalytics = () => {
   return (
     <Script
       id="baidu-tongji"
-      strategy="lazyOnload"
+      strategy="afterInteractive"
       src={`https://hm.baidu.com/hm.js?${key}`}
     />
   );

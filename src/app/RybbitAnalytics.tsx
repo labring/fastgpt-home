@@ -11,7 +11,7 @@ const RybbitAnalytics = () => {
     return (
         <Script
             id="rybbit-tongji"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
             data-site-id={`${siteId}`}
             src={`${key}`}
         />

@@ -7,12 +7,12 @@
   },
   "links": [
     {
-      "label": "文档",
-      "href": "https://doc.fastgpt.io/docs/introduction"
-    },
-    {
       "label": "定价",
       "href": "/price"
+    },
+    {
+      "label": "文档",
+      "href": "https://doc.fastgpt.io/docs/introduction"
     },
     {
       "label": "学习中心",

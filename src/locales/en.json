@@ -13,6 +13,10 @@
     {
       "label": "Pricing",
       "href": "/price"
+    },
+    {
+      "label": "Learning Center",
+      "href": "https://video.fastgpt.cn/videos"
     }
   ],
   "Hero": {

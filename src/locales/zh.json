@@ -7,16 +7,16 @@
   },
   "links": [
     {
-      "label": "文档",
-      "href": "https://doc.fastgpt.io/docs/introduction"
-    },
-    {
       "label": "定价",
       "href": "/price"
     },
     {
-      "label": "企业一体机",
-      "href": "/enterprise"
+      "label": "文档",
+      "href": "https://doc.fastgpt.io/docs/introduction"
+    },
+    {
+      "label": "学习中心",
+      "href": "https://video.fastgpt.cn/videos"
     }
   ],
   "Hero": {

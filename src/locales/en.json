@@ -7,12 +7,16 @@
   },
   "links": [
     {
+      "label": "Pricing",
+      "href": "/price"
+    },
+    {
       "label": "Docs",
       "href": "https://doc.fastgpt.io/"
     },
     {
-      "label": "Pricing",
-      "href": "/price"
+      "label": "Learning Center",
+      "href": "https://video.fastgpt.cn/videos"
     }
   ],
   "Hero": {

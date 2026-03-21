@@ -84,11 +84,7 @@ export const LangSwitcher = () => {
       {open && (
         <div
           role="listbox"
-<<<<<<< HEAD
           className="absolute right-0 top-full mt-1 z-50 min-w-[8rem] max-w-[calc(100vw-2rem)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
-=======
-          className="absolute right-0 top-full mt-1 z-50 min-w-[8rem] max-w-[calc(100vw-2rem)] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
->>>>>>> fe0e868 (fix: prevent language switcher dropdown from overflowing on mobile)
         >
           <div className="p-1">
             {Object.keys(localeNames).map((key: string) => (

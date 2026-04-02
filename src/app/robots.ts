@@ -25,9 +25,13 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
-  // Allow all crawlers on .io domain (maximum exposure)
+  // Block Baidu on .io domain to avoid duplicate content issues with .cn
   return {
     rules: [
+      {
+        userAgent: 'Baiduspider',
+        disallow: '/'
+      },
       {
         userAgent: '*',
         allow: '/'

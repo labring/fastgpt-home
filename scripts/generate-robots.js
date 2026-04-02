@@ -64,7 +64,11 @@ Sitemap: ${baseUrl}/sitemap.xml
 # - GitHub:        https://github.com/labring/FastGPT
 # - LLM Context:   ${baseUrl}/llms.txt
 
-# Allow all crawlers (search engines, AI platforms, etc.)
+# Block Baidu to avoid duplicate content issues with fastgpt.cn
+User-agent: Baiduspider
+Disallow: /
+
+# Allow all other crawlers (search engines, AI platforms, etc.)
 User-agent: *
 Allow: /
 

@@ -1,0 +1,277 @@
+'use client';
+
+import { useEffect, useState } from 'react';
+import { motion } from 'framer-motion';
+import SectionHeader from '@/components/home/SectionHeader';
+import { assets } from '@/components/home/assets';
+import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+
+type MetricIcon = 'arrow' | 'zap' | 'medal';
+type CaseMetric = { value: string; label: string; icon: MetricIcon };
+type LocaleCase = {
+  key: string;
+  title: string;
+  metrics: { value: string; label: string }[];
+};
+type CasesT = {
+  badge: string;
+  title: string;
+  subtitle: string;
+  learnMore: string;
+  items: LocaleCase[];
+};
+
+// Icon choice per metric is design-driven (not trend-derived) and keyed by
+// case so translators don't have to know the icon taxonomy.
+const iconByCaseKey: Record<string, MetricIcon[]> = {
+  cetc: ['zap', 'zap', 'medal'],
+  cms: ['arrow', 'medal', 'zap'],
+  snow: ['arrow', 'arrow', 'zap'],
+  zhaozhao: ['zap', 'medal', 'medal'],
+  lcfc: ['arrow', 'zap', 'medal']
+};
+const imageByCaseKey: Record<string, string> = {
+  cetc: assets.cases.cetc,
+  cms: assets.cases.cms,
+  snow: assets.cases.snow,
+  zhaozhao: assets.cases.zhaozhao,
+  lcfc: assets.cases.lcfc
+};
+
+// Reusable gradient used by all three icon variants (Framer Slate 300 → Slate 100)
+function IconDefs() {
+  return (
+    <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden>
+      <defs>
+        <linearGradient id="case-metric-gradient" x1="0.497" x2="0.502" y1="0" y2="1">
+          <stop offset="0" stopColor="rgb(203, 213, 225)" />
+          <stop offset="1" stopColor="rgb(241, 245, 249)" />
+        </linearGradient>
+      </defs>
+    </svg>
+  );
+}
+
+function MetricIconSvg({ kind }: { kind: MetricIcon }) {
+  if (kind === 'arrow') {
+    return (
+      <svg width="11" height="15" viewBox="0 0 14.431 20.008" style={{ flexShrink: 0 }} aria-hidden>
+        <path
+          d="M 7.538 0.147 L 14.326 7.925 C 14.435 8.051 14.462 8.228 14.393 8.38 C 14.325 8.532 14.173 8.63 14.007 8.63 L 10.669 8.63 C 10.457 8.628 10.277 8.785 10.249 8.995 C 9.999 10.805 8.49 18.814 1.336 19.999 C 1.143 20.039 0.948 19.94 0.866 19.761 C 0.783 19.582 0.835 19.37 0.99 19.249 C 2.216 18.289 3.817 16.427 4.268 13.116 C 4.439 11.771 4.524 10.416 4.517 9.059 C 4.516 8.823 4.328 8.63 4.092 8.624 L 0.426 8.624 C 0.259 8.625 0.107 8.527 0.038 8.375 C -0.031 8.223 -0.005 8.045 0.105 7.92 L 6.897 0.146 C 6.978 0.053 7.095 0 7.218 0 C 7.341 0 7.457 0.053 7.538 0.146 Z"
+          fill="url(#case-metric-gradient)"
+        />
+      </svg>
+    );
+  }
+  if (kind === 'zap') {
+    return (
+      <svg width="11" height="15" viewBox="0 0 14.62 20" style={{ flexShrink: 0 }} aria-hidden>
+        <path
+          d="M 4.655 11.705 L 0.732 11.705 C 0.22 11.705 -0.134 11.192 0.049 10.713 L 3.947 0.471 C 4.055 0.188 4.326 0 4.63 0 L 11.208 0 C 11.727 0 12.08 0.526 11.885 1.008 L 9.615 6.584 L 13.888 6.584 C 14.516 6.584 14.851 7.326 14.437 7.798 L 3.961 19.747 C 3.452 20.328 2.507 19.825 2.705 19.078 L 4.655 11.705 Z"
+          fill="url(#case-metric-gradient)"
+        />
+      </svg>
+    );
+  }
+  return (
+    <svg width="15" height="15" viewBox="0 0 20 19.582" style={{ flexShrink: 0 }} aria-hidden>
+      <path
+        d="M 15.67 0 C 16.374 0 16.934 0.571 16.934 1.264 L 16.934 2.747 C 18.681 3.154 20 4.725 20 6.593 C 20 8.659 18.396 10.374 16.374 10.538 C 15.415 12.725 13.35 14.322 10.879 14.595 L 10.879 17.824 L 13.297 17.824 C 13.78 17.824 14.176 18.22 14.176 18.703 C 14.176 19.187 13.78 19.582 13.297 19.582 L 6.703 19.582 C 6.22 19.582 5.824 19.187 5.824 18.703 C 5.824 18.22 6.22 17.824 6.703 17.824 L 9.121 17.824 L 9.121 14.564 C 6.766 14.217 4.806 12.663 3.879 10.549 C 1.736 10.506 0 8.747 0 6.593 C 0 4.637 1.439 3 3.308 2.692 L 3.308 1.264 C 3.308 0.56 3.879 0 4.571 0 Z M 10.527 3.67 C 10.231 3.088 9.791 3.088 9.549 3.67 L 8.769 5.286 L 7.011 5.528 C 6.418 5.626 6.275 6.066 6.714 6.505 L 7.989 7.824 L 7.692 9.681 C 7.593 10.308 7.934 10.56 8.473 10.264 L 10.044 9.385 L 11.615 10.319 C 12.154 10.615 12.494 10.374 12.396 9.736 L 12.099 7.879 L 13.374 6.56 C 13.813 6.121 13.67 5.681 13.066 5.571 L 11.308 5.33 Z M 3.308 4.494 C 2.418 4.769 1.758 5.604 1.758 6.593 C 1.758 7.604 2.44 8.462 3.363 8.703 C 3.33 8.45 3.308 8.198 3.308 7.934 Z M 16.934 7.945 C 16.934 8.176 16.912 8.396 16.89 8.626 C 17.681 8.297 18.242 7.506 18.242 6.604 C 18.243 5.734 17.73 4.945 16.934 4.593 Z"
+        fill="url(#case-metric-gradient)"
+      />
+    </svg>
+  );
+}
+
+type CaseStudy = {
+  title: string;
+  image: string;
+  metrics: CaseMetric[];
+};
+
+export default function CaseStudies({ t }: { t: CasesT }) {
+  const [index, setIndex] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  const cases: CaseStudy[] = t.items.map((it) => ({
+    title: it.title,
+    image: imageByCaseKey[it.key],
+    metrics: it.metrics.map((m, i) => ({
+      ...m,
+      icon: iconByCaseKey[it.key]?.[i] ?? 'arrow'
+    }))
+  }));
+  const total = cases.length;
+
+  const next = () => setIndex((i) => (i + 1) % total);
+  const prev = () => setIndex((i) => (i - 1 + total) % total);
+
+  useEffect(() => {
+    if (isPaused) return;
+    const id = setInterval(() => setIndex((i) => (i + 1) % total), 5000);
+    return () => clearInterval(id);
+  }, [isPaused, total]);
+
+  return (
+    <section className="py-14 md:py-20 bg-white overflow-hidden">
+      <IconDefs />
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(80vw,1300px)] mx-auto px-4 md:px-6">
+        <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
+
+        <div
+          className="relative mt-8 md:mt-12"
+          onMouseEnter={() => setIsPaused(true)}
+          onMouseLeave={() => setIsPaused(false)}
+        >
+          <div className="relative h-[520px] md:h-[600px] flex items-center justify-center overflow-hidden">
+            {cases.map((c, i) => {
+              // circular offset from the active index so cards animate between positions
+              let offset = i - index;
+              if (offset > total / 2) offset -= total;
+              if (offset < -total / 2) offset += total;
+              const isCenter = offset === 0;
+              const isAdjacent = Math.abs(offset) === 1;
+              const isVisible = isCenter || isAdjacent;
+              // Responsive: on mobile cards span full viewport, no peek
+              const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+              const xOffset = isMobile ? offset * 360 : offset * 640;
+              return (
+                <motion.div
+                  key={i}
+                  initial={false}
+                  animate={{
+                    x: xOffset,
+                    scale: isCenter ? 1 : 0.82,
+                    opacity: isVisible ? (isCenter ? 1 : 0.25) : 0,
+                    zIndex: isCenter ? 10 : isAdjacent ? 5 : 0
+                  }}
+                  transition={{ type: 'spring', stiffness: 180, damping: 26, mass: 0.9 }}
+                  className="absolute w-[90vw] max-w-[360px] md:w-[680px] md:max-w-none"
+                  style={{ pointerEvents: isCenter ? 'auto' : 'none' }}
+                >
+                  <CaseCard data={c} learnMore={t.learnMore} />
+                </motion.div>
+              );
+            })}
+          </div>
+
+          <button
+            onClick={prev}
+            aria-label="上一个案例"
+            className="absolute top-1/2 -translate-y-1/2 flex items-center justify-center transition-all z-20 left-1 md:left-[calc(50%-340px-56px)]"
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: 40,
+              backgroundColor: '#e1e1e1',
+              border: 'none',
+              padding: 0
+            }}
+          >
+            <img src="/images/home/cases/arrow-back.svg" alt="" width={40} height={40} draggable={false} />
+          </button>
+          <button
+            onClick={next}
+            aria-label="下一个案例"
+            className="absolute top-1/2 -translate-y-1/2 flex items-center justify-center transition-all z-20 right-1 md:right-[calc(50%-340px-56px)]"
+            style={{
+              width: 40,
+              height: 40,
+              borderRadius: 40,
+              backgroundColor: '#e1e1e1',
+              border: 'none',
+              padding: 0
+            }}
+          >
+            <img src="/images/home/cases/arrow-next.svg" alt="" width={40} height={40} draggable={false} />
+          </button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
+  return (
+    <div
+      className="bg-white flex flex-col"
+      style={{
+        borderRadius: 24,
+        border: '1px solid rgba(0, 0, 0, 0.06)',
+        boxShadow: '0 20px 48px -16px rgba(15, 23, 42, 0.08)',
+        padding: 16,
+        rowGap: 24
+      }}
+    >
+      <div className="relative overflow-hidden" style={{ borderRadius: 16, aspectRatio: '3 / 1' }}>
+        <img
+          src={data.image}
+          alt=""
+          className="w-full h-full object-cover block select-none"
+          draggable={false}
+        />
+      </div>
+
+      <div className="flex flex-col" style={{ rowGap: 24, padding: '0 8px 8px' }}>
+        <h3
+          style={{
+            fontSize: 28,
+            fontWeight: 300,
+            lineHeight: '36px',
+            letterSpacing: '-0.56px',
+            color: 'rgb(2, 6, 23)'
+          }}
+        >
+          {data.title}
+        </h3>
+
+        <div className="grid grid-cols-3" style={{ columnGap: 24 }}>
+          {data.metrics.map((m) => (
+            <div key={m.label} className="flex flex-col" style={{ rowGap: 4 }}>
+              <div
+                style={{
+                  fontSize: 20,
+                  fontWeight: 500,
+                  lineHeight: '28px',
+                  color: 'rgb(2, 6, 23)'
+                }}
+              >
+                {m.value}
+              </div>
+              <div className="flex items-center gap-1">
+                <span
+                  style={{
+                    fontSize: 13,
+                    fontWeight: 400,
+                    lineHeight: '20px',
+                    color: 'rgb(71, 85, 105)'
+                  }}
+                >
+                  {m.label}
+                </span>
+                <MetricIconSvg kind={m.icon} />
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <a
+          href={CONSULT_URL}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="inline-flex items-center justify-center self-start hover:bg-light-bg transition-colors"
+          style={{
+            padding: '10px 24px',
+            borderRadius: 999,
+            border: '1px solid rgba(0, 0, 0, 0.15)',
+            fontSize: 13,
+            fontWeight: 500,
+            color: 'rgb(2, 6, 23)'
+          }}
+        >
+          {learnMore}
+        </a>
+      </div>
+    </div>
+  );
+}

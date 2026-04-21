@@ -1,132 +1,120 @@
-/* eslint-disable react/no-unescaped-entities */
-import CTAButton from '@/components/home/CTAButton';
-import { siteConfig } from "@/config/site";
-import Image from "next/image";
-import Link from "next/link";
-import React from 'react';
+'use client';
 
-const CTA = ({ locale, CTALocale, stars }: { locale: any; CTALocale: any; stars: number }) => {
-  const d = new Date();
-  const currentYear = d.getFullYear();
-  const { authors, footerService, footerProducts, footerLinks } = siteConfig;
+import { motion } from 'framer-motion';
+import FadeIn from '@/components/home/motion/FadeIn';
+import GlobeCanvas from '@/components/home/GlobeCanvas';
+import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 
-
-  const LogoFC = () => (<div className="flex items-center md:gap-x-12">
-    <Link
-      href="/"
-      aria-label="FastGPT"
-      title="FastGPT"
-      className="flex items-center space-x-3 font-bold "
-    >
-      <Image
-        alt={siteConfig.name}
-        src="/logo.svg"
-        className="w-[36px] h-[36px] bg-[#E9E9E9] p-1 rounded-md dark:bg-opacity-20"
-        width={32}
-        height={32}
-      />
-      <span className="text-white text-lg">FastGPT</span>
-    </Link>
-  </div>)
-
-  return (
-    <footer className='w-full border-t-2 border-white/10 py-12 text-center'>
-      <div className='md:hidden flex justify-center mb-5'><LogoFC /></div>
-
-      <section className="relative flex flex-wrap w-full justify-center">
-        <div className="flex flex-col gap-2 mb-6 items-center md:items-start md:flex-1">
-          <h4 className="md:text-start text-gradient md:text-2xl text-base text-center">
-            {locale.title.slice(0, 20)}
-            <br />
-            {locale.title.slice(20)}
-          </h4>
-          <p className="md:text-large text-white/50 text-wrap md:text-start text-xs text-center md:max-w-[70%]" >
-            <span style={{ color: 'var(--text-primary)' }}>{locale.description1}&nbsp;</span>
-            {locale.description2}
-            <span style={{ color: 'var(--text-primary)' }}>&nbsp;{locale.description3}&nbsp;</span>
-            {locale.description4}
-            <span style={{ color: 'var(--text-primary)' }}>{locale.description5}&nbsp;</span>
-            {locale.description6}
-          </p>
-        </div>
-        <div className='md:absolute md:top-0 right-0'>
-          <CTAButton locale={CTALocale} stars={stars} />
-        </div>
-      </section>
-
-      <section className='relative mt-12 text-xs'>
-        <div className='flex flex-col gap-4 justify-center items-center md:absolute md:top-3 md:right-0 md:gap-8'>
-          {/* <FooterProducts /> */}
-          <div className='flex gap-8 text-white'>
-            {footerProducts.map((product) => {
-              return (
-                <Link href={product.url} target="_blank" key={product.url}>
-                  {product.name}
-                </Link>
-              );
-            })}
-          </div>
-          {/* <FooterLinks /> */}
-          <div className="w-full flex justify-center items-center text-white/75 md:justify-end gap-6">
-            {footerLinks.map((link) => (
-              <Link
-                key={link.name}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                className="flex max-w-[24px] flex-col items-center justify-center"
-              >
-                {link.icon && React.createElement(link.icon, { className: 'text-2xl' })}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className='hidden md:block mb-8'><LogoFC /></div>
-        <div className='flex flex-wrap justify-center text-white/65 md:justify-start mt-8 md:mt-0 '>
-          <div className="flex space-x-2 text-nowrap gap-3">
-            {footerService.map((product) => {
-              return (
-                <Link href={product.url} target="_blank" key={product.url}>
-                  {product.name}
-                </Link>
-              );
-            })}
-          </div>
-          <div className='hidden xs:block'>|</div>
-          <div className='flex items-center gap-2'>
-            <span>{`©${currentYear}`}&nbsp;</span>
-            <span>
-              <Link href={authors[0].twitter || authors[0].url} target="_blank">
-                {authors[0].name}
-              </Link>
-              &nbsp;All rights reserved.
-            </span>
-            {process.env.NEXT_PUBLIC_POLICE_FILING && (
-              <span className='flex items-center gap-2'>
-                <Image
-                  alt={"Police Filing"}
-                  src="https://beian.mps.gov.cn/web/assets/logo01.6189a29f.png"
-                  width={14}
-                  height={14}
-                  className='ml-2'
-                />
-                <Link href={'https://beian.mps.gov.cn/'}>
-                  {process.env.NEXT_PUBLIC_POLICE_FILING}
-                </Link>
-              </span>
-            )}
-            {process.env.NEXT_PUBLIC_FILING_ADDRESS && (
-              <Link href={'https://beian.miit.gov.cn/'}>
-                {process.env.NEXT_PUBLIC_FILING_ADDRESS}
-              </Link>
-            )}
-          </div>
-        </div>
-
-      </section>
-    </footer>
-  );
+type CTAT = {
+  brand: string;
+  title: string;
+  subtitle: string;
+  trial: string;
+  consult: string;
 };
 
-export default CTA;
+export default function CTA({ t }: { t: CTAT }) {
+  const startUrl = useStartUrl();
+
+  return (
+    <section className="py-14 md:py-20 bg-light-bg">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto px-4 md:px-6">
+        <FadeIn>
+          <div
+            className="relative overflow-hidden bg-white min-h-[560px] md:h-[610px] md:min-h-0"
+            style={{
+              borderRadius: 24,
+              boxShadow:
+                'rgba(3, 7, 18, 0.04) 0px 2px 4px 0px, rgba(3, 7, 18, 0.08) 0px 1px 2px -1px, rgba(3, 7, 18, 0.08) 0px 0px 0px 1px'
+            }}
+          >
+            {/* Details block: absolute on desktop (anchored bottom-left); on mobile
+                flows in normal document order at the top with padded content.
+                Lifted to z-10 so the buttons always render above the globe
+                corner peek on mobile. */}
+            <div
+              className="relative z-10 md:absolute md:left-8 md:top-[165px] flex flex-col gap-8 md:gap-[32px] p-6 md:p-0 w-full md:w-[min(46%,520px)]"
+            >
+              <div className="flex flex-col" style={{ rowGap: 24 }}>
+                <motion.h2
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="m-0 text-ink text-[28px] md:text-[36px] font-semibold leading-[36px] md:leading-[48px] tracking-[-0.56px] md:tracking-[-0.72px]"
+                >
+                  {t.brand}
+                  <br />
+                  {t.title}
+                </motion.h2>
+                <motion.p
+                  initial={{ opacity: 0, y: 15 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: '-80px' }}
+                  transition={{ duration: 0.6, delay: 0.15 }}
+                  className="m-0 text-ink-sub text-[20px] font-normal leading-[32px] tracking-[-0.2px]"
+                >
+                  {t.subtitle}
+                </motion.p>
+              </div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-80px' }}
+                transition={{ duration: 0.6, delay: 0.3 }}
+                className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8"
+              >
+                <motion.a
+                  href={startUrl}
+                  rel="noopener noreferrer nofollow"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  aria-label={t.trial}
+                  className="inline-flex items-center justify-center h-11 px-8 rounded-[99px] text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
+                >
+                  {t.trial}
+                </motion.a>
+                <motion.a
+                  href={CONSULT_URL}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  aria-label={t.consult}
+                  className="inline-flex items-center justify-center h-11 px-8 rounded-[99px] text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
+                >
+                  {t.consult}
+                </motion.a>
+              </motion.div>
+            </div>
+
+            {/* Interactive dotted globe. On mobile the canvas is oversized and
+                absolute-anchored to the bottom-right corner, so only the
+                top-left ~30% of the globe peeks into the card. Desktop keeps
+                the original right-bleed Framer layout. */}
+            <motion.div
+              initial={{ opacity: 0, scale: 0.92 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 1.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="
+                absolute z-0 left-1/5 -translate-x-1/2 -bottom-[200px] w-[440px] h-[440px]
+                md:translate-x-0 md:left-[49%] md:right-[-160px] md:top-[48px] md:bottom-auto md:w-auto md:h-[880px] md:z-auto
+                pointer-events-none md:pointer-events-auto
+              "
+              style={{
+                WebkitMaskImage:
+                  'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 70%)',
+                maskImage:
+                  'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 70%)'
+              }}
+            >
+              <GlobeCanvas />
+            </motion.div>
+          </div>
+        </FadeIn>
+      </div>
+    </section>
+  );
+}

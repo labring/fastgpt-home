@@ -1,7 +1,7 @@
 'use client';
 
 import { LangSwitcher } from '@/components/header/LangSwitcher';
-import CTAButton from '@/components/home/CTAButton';
+import CTAButton from '@/components/header/CTAButton';
 import { siteConfig } from '@/config/site';
 import { MenuIcon } from 'lucide-react';
 import Image from 'next/image';

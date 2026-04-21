@@ -100,6 +100,192 @@
     "backHome": "ホームに戻る",
     "viewFAQ": "よくある質問を見る"
   },
+  "Home": {
+    "navCta": {
+      "trial": "無料トライアル",
+      "consult": "お問い合わせ"
+    },
+    "hero": {
+      "githubStars": "Github Stars",
+      "followUs": "フォローする",
+      "brand": "FastGPT",
+      "title": "エンタープライズAI生産性エンジン",
+      "subtitle": "安全で制御可能なエンタープライズAIエージェントを構築",
+      "trial": "無料トライアル",
+      "consult": "お問い合わせ"
+    },
+    "trustedBy": {
+      "caption": "業界リーダーに信頼されています"
+    },
+    "stats": {
+      "items": [
+        { "label": "GitHub Stars", "desc": "世界中の開発者に支持" },
+        { "label": "プラットフォームユーザー", "desc": "各業界のチームを支援" },
+        { "label": "プライベート導入事例", "desc": "コア業務での実績" }
+      ]
+    },
+    "productHighlights": {
+      "badge": "プロダクトのハイライト",
+      "title": "プロダクション品質のAIエージェント",
+      "subtitle": "企業のAI導入をワンストップで",
+      "items": [
+        { "key": "blocks", "title": "ブロックを積むようにビジネスAIエージェントを構築", "desc": "ビジュアルワークフローと拡張性の高いAPIエコシステム" },
+        { "key": "kb", "title": "ハルシネーションを排除した企業向けナレッジベース", "desc": "ハイブリッド検索で幻覚を抑え、データは自動クレンジング・更新" },
+        { "key": "lifecycle", "title": "可視化・ガバナンス可能なLLMライフサイクル管理", "desc": "全モデル対応、デバッグ・監査でコンプライアンスを確保" },
+        { "key": "production", "title": "プロダクション環境向けのアーキテクチャ", "desc": "SSOとRBACに対応、パーソナライズされた安全なポータル" },
+        { "key": "partner", "title": "単なるツールではなく、AI導入の伴走パートナー", "desc": "調査から カスタムPOCまで豊富な実績で完走支援" }
+      ]
+    },
+    "solutions": {
+      "badge": "業界別ソリューション",
+      "title": "コア業務シーンを広くカバー",
+      "subtitle": "役割や業界ごとにすぐ使えるAIソリューション",
+      "consult": "お問い合わせ",
+      "tabs": [
+        {
+          "key": "sales",
+          "label": "セールス & マーケティング",
+          "items": [
+            { "key": "assistant", "title": "スマートセールスアシスタント", "desc": "プラットフォームに組み込み、AIが素早く資料とトークスクリプトを支援。" },
+            { "key": "report", "title": "金融レポート配信", "desc": "マーケットデータを自動取得し、テンプレートでチャートと日報を生成。" },
+            { "key": "training", "title": "セールストレーニング", "desc": "AIが顧客役となり演習・自動採点、新人の習熟を加速。" }
+          ]
+        },
+        {
+          "key": "service",
+          "label": "サポート & オペレーション",
+          "items": [
+            { "key": "ticket", "title": "スマートチケット振り分け", "desc": "テキストも画像も理解し、的確にアサインして対応速度を向上。" },
+            { "key": "copy", "title": "マーケティングコピー生成", "desc": "商品の強みとチャネル特性を踏まえ、NGワードを回避して量産。" },
+            { "key": "insight", "title": "顧客体験のインサイト", "desc": "顧客の感情・不満点を分析し、製品改善の提案を自動生成。" }
+          ]
+        },
+        {
+          "key": "hr",
+          "label": "人事 & 総務",
+          "items": [
+            { "key": "resume", "title": "スマート履歴書スクリーニング", "desc": "大量の履歴書をAIが読み込み、マッチングしてスコアリング・推薦。" },
+            { "key": "policy", "title": "社内制度Q&A", "desc": "社内ハンドブックを読み込み、社員の質問に即時応答。" },
+            { "key": "meeting", "title": "議事録アシスタント", "desc": "録音をリアルタイム文字起こし、要点と決定事項を自動抽出。" }
+          ]
+        },
+        {
+          "key": "finance",
+          "label": "財務 & 法務",
+          "items": [
+            { "key": "expense", "title": "経費精算レビュー", "desc": "写真を送るだけでAIが予算とルールをチェックし異常を検出。" },
+            { "key": "contract", "title": "スマート契約書レビュー", "desc": "法令と秒単位で比較、リスク条項をハイライトし修正提案。" },
+            { "key": "dd", "title": "デューデリレポート生成", "desc": "登記情報を自動収集し、構造化レポートをそのまま生成。" }
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "badge": "導入事例",
+      "title": "業界のリファレンスケース",
+      "subtitle": "1,000社以上の実業務シーンでコスト削減と成長を支援",
+      "learnMore": "詳しく見る",
+      "items": [
+        {
+          "key": "cetc",
+          "title": "新入社員の立ち上がり短縮、R&Dナレッジアシスタント",
+          "metrics": [
+            { "value": "1週間+", "label": "研修期間を短縮" },
+            { "value": "10%", "label": "重複問い合わせ削減" },
+            { "value": "30秒", "label": "検索所要時間" }
+          ]
+        },
+        {
+          "key": "cms",
+          "title": "リサーチ生産性を再定義、ファンドレポートを自動生成",
+          "metrics": [
+            { "value": "90%+", "label": "自動化率" },
+            { "value": "<1%", "label": "データエラー" },
+            { "value": "90%", "label": "制作時間短縮" }
+          ]
+        },
+        {
+          "key": "snow",
+          "title": "OA統合の経費精算レビュー",
+          "metrics": [
+            { "value": "50%", "label": "レビュー効率" },
+            { "value": "70%", "label": "異常検出向上" },
+            { "value": "60%", "label": "最終審査エラー減" }
+          ]
+        },
+        {
+          "key": "zhaozhao",
+          "title": "1日1万件超の問い合わせ、AIカスタマーサポート24/7",
+          "metrics": [
+            { "value": "1秒", "label": "秒単位の応答速度" },
+            { "value": "42%", "label": "有人対応へのエスカレーション減" },
+            { "value": "標準化", "label": "サービス品質" }
+          ]
+        },
+        {
+          "key": "lcfc",
+          "title": "万行Excelの重さから解放、自然言語で問い合わせ",
+          "metrics": [
+            { "value": "240+分", "label": "データ生産性向上" },
+            { "value": "90%", "label": "システム遅延を削減" },
+            { "value": "3%", "label": "エラー率を" }
+          ]
+        }
+      ]
+    },
+    "brandWall": {
+      "badge": "ブランドウォール",
+      "title": "導入企業",
+      "subtitle": "1,000社以上がFastGPTをAIパートナーとして選択"
+    },
+    "services": {
+      "badge": "サービスと認証",
+      "title": "プロフェッショナルな提供、確かな価値",
+      "subtitle": "コンサルから導入まで、長期にわたりAI展開を支援するパートナー。",
+      "items": [
+        { "key": "community", "title": "オープンソースエコシステム", "desc": "コミュニティのテンプレートとドキュメントで素早く開始" },
+        { "key": "consult", "title": "エキスパートコンサル", "desc": "1対1の課題診断、アーキテクチャとPOCを検証" },
+        { "key": "deploy", "title": "構築・導入支援", "desc": "実績ある手順での全工程伴走とトレーニング" },
+        { "key": "custom", "title": "企業向けカスタム開発", "desc": "業務システムへの深い統合と長期運用の保証" }
+      ]
+    },
+    "cta": {
+      "brand": "FastGPT",
+      "title": "AIをビジネス成長の新たなエンジンに",
+      "subtitle": "今すぐ試す",
+      "trial": "無料トライアル",
+      "consult": "お問い合わせ"
+    },
+    "footer": {
+      "tagline": "エンタープライズAI生産性エンジン",
+      "columns": {
+        "service": {
+          "title": "サービス",
+          "items": {
+            "cloud": "クラウド",
+            "private": "オンプレ",
+            "community": "コミュニティ版",
+            "docs": "ドキュメント"
+          }
+        },
+        "partner": {
+          "title": "パートナー"
+        },
+        "more": {
+          "title": "詳細",
+          "email": "メール: Dennis@sealos.io",
+          "lanqiao": "蓝桥云课 × FastGPTコース",
+          "book": "FastGPT公式書籍（紙書）"
+        }
+      },
+      "qr": {
+        "wechat": "公式WeChat",
+        "feishu": "Feishuコミュニティ",
+        "group": "WeChatグループ"
+      },
+      "copyright": "Copyright"
+    }
+  },
   "InterModal": {
     "desc": "您当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
     "tip": "不再提醒",

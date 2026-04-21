@@ -106,6 +106,192 @@
     "button": "Switch",
     "link": "/en"
   },
+  "Home": {
+    "navCta": {
+      "trial": "免费试用",
+      "consult": "立即咨询"
+    },
+    "hero": {
+      "githubStars": "Github Stars",
+      "followUs": "关注我们",
+      "brand": "FastGPT",
+      "title": "企业级AI生产力引擎",
+      "subtitle": "构建安全、可控的企业级 AI Agent",
+      "trial": "免费试用",
+      "consult": "立即咨询"
+    },
+    "trustedBy": {
+      "caption": "深受行业领军团队信赖"
+    },
+    "stats": {
+      "items": [
+        { "label": "GitHub Stars", "desc": "全球开发者技术背书" },
+        { "label": "平台用户", "desc": "赋能各行业业务团队" },
+        { "label": "私有化部署案例", "desc": "核心业务场景成熟落地" }
+      ]
+    },
+    "productHighlights": {
+      "badge": "产品亮点",
+      "title": "生产级 AI 智能体",
+      "subtitle": "一站式解决企业 AI 落地难题",
+      "items": [
+        { "key": "blocks", "title": "像搭积木一样，构建业务的 AI 智能体", "desc": "可视化工作流、强扩展生态 API 无缝对接" },
+        { "key": "kb", "title": "拒绝幻觉，打造精准企业知识库", "desc": "混合检索拒绝幻觉，自动清洗数据，实时更新维护" },
+        { "key": "lifecycle", "title": "看得见、管得住，大模型全生命周期管理", "desc": "兼容全模型接入，提供调试审计，确保合规可控" },
+        { "key": "production", "title": "生产级，生产环境构建的专业架构", "desc": "支持 SSO 与 RBAC 权限，打造千人千面安全门户" },
+        { "key": "partner", "title": "不仅仅是工具，更是 AI 落地的全程伙伴", "desc": "丰富企业实战经验，从调研到定制 POC，全程陪跑交付" }
+      ]
+    },
+    "solutions": {
+      "badge": "行业解决方案",
+      "title": "覆盖核心业务场景",
+      "subtitle": "针对不同职能与行业，提供开箱即用的 AI 解决方案",
+      "consult": "立即咨询",
+      "tabs": [
+        {
+          "key": "sales",
+          "label": "销售 & 市场",
+          "items": [
+            { "key": "assistant", "title": "智能销售助手", "desc": "嵌入平台，AI 实时辅助查资料、写话术，让回复快且专业。" },
+            { "key": "report", "title": "金融行情播报", "desc": "自动抓取行情数据，按模板生成图表与日报，告别繁琐人工制表。" },
+            { "key": "training", "title": "销售培训与陪练", "desc": "AI 模拟真实客户对练，自动评分纠错，帮助新人快速掌握销售话术。" }
+          ]
+        },
+        {
+          "key": "service",
+          "label": "客服 & 运营",
+          "items": [
+            { "key": "ticket", "title": "智能工单派单", "desc": "懂文字更能懂图片，自动识别诉求并精准派单，大幅提升服务效率。" },
+            { "key": "copy", "title": "营销文案生成", "desc": "懂卖点更懂平台风格，自动规避违禁词，批量产出高质量营销文案。" },
+            { "key": "insight", "title": "客户体验洞察", "desc": "自动分析客户情绪与槽点，生成改进建议，助力产品精准优化迭代。" }
+          ]
+        },
+        {
+          "key": "hr",
+          "label": "行政 & 人事",
+          "items": [
+            { "key": "resume", "title": "智能简历筛选", "desc": "AI 自动阅读海量简历，精准匹配打分并推荐，帮 HR 快速锁定人才。" },
+            { "key": "policy", "title": "员工制度问答", "desc": "导入制度手册，员工有疑问直接对话 AI，无需翻阅，即问即答。" },
+            { "key": "meeting", "title": "会议纪要助手", "desc": "录音实时转文字，AI 自动提炼核心观点与决议，一键生成结构化纪要。" }
+          ]
+        },
+        {
+          "key": "finance",
+          "label": "财务 & 法务",
+          "items": [
+            { "key": "expense", "title": "费用报销审核", "desc": "拍照上传，AI 自动核对预算与规则，智能拦截异常，解放财务双手。" },
+            { "key": "contract", "title": "合同智能审查", "desc": "秒级比对法规标准，高亮风险条款并给出修改建议，严防合同漏洞。" },
+            { "key": "dd", "title": "尽调报告生成", "desc": "自动收集工商经营数据，直接生成结构化报告，告别繁琐人工搜集。" }
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "badge": "客户成功案例",
+      "title": "行业标杆案例",
+      "subtitle": "帮助 1000+ 企业实现真实业务场景的降本增效",
+      "learnMore": "了解更多",
+      "items": [
+        {
+          "key": "cetc",
+          "title": "缩短新员工适应期，构建研发知识助手",
+          "metrics": [
+            { "value": "1 周+", "label": "培训周期缩短" },
+            { "value": "10%", "label": "重复咨询降低" },
+            { "value": "30s", "label": "检索耗时" }
+          ]
+        },
+        {
+          "key": "cms",
+          "title": "重塑投研生产力，基金研报自动化生成",
+          "metrics": [
+            { "value": "90%+", "label": "自动化率超过" },
+            { "value": "<1%", "label": "数据差错" },
+            { "value": "90%", "label": "制作耗时缩短" }
+          ]
+        },
+        {
+          "key": "snow",
+          "title": "深度集成 OA 系统，费用报销职能审核",
+          "metrics": [
+            { "value": "50%", "label": "审核提效" },
+            { "value": "70%", "label": "异常检出提升" },
+            { "value": "60%", "label": "终审错误降低" }
+          ]
+        },
+        {
+          "key": "zhaozhao",
+          "title": "日均咨询破万，AI 客服 7*24h 秒回",
+          "metrics": [
+            { "value": "1 s", "label": "响应速度秒级" },
+            { "value": "42%", "label": "转人工率降低" },
+            { "value": "标准化", "label": "服务质量" }
+          ]
+        },
+        {
+          "key": "lcfc",
+          "title": "告别万行 Excel 卡顿，自然语言即问即查",
+          "metrics": [
+            { "value": "240+ 分钟", "label": "数据提效" },
+            { "value": "90%", "label": "系统卡顿降低" },
+            { "value": "3%", "label": "错误率降低至" }
+          ]
+        }
+      ]
+    },
+    "brandWall": {
+      "badge": "品牌墙",
+      "title": "合作客户",
+      "subtitle": "1000+ 企业的优选 AI 合作客户"
+    },
+    "services": {
+      "badge": "服务与认证",
+      "title": "专业交付，价值保障",
+      "subtitle": "从咨询到交付，我们是技术服务提供者，更是您 AI 落地的长期伙伴与坚实后盾。",
+      "items": [
+        { "key": "community", "title": "开源生态支持", "desc": "社区模板文档齐备，助力快速上手" },
+        { "key": "consult", "title": "专家咨询支持", "desc": "1v1 诊断痛点，架构咨询 POC 验证" },
+        { "key": "deploy", "title": "搭建落地辅助", "desc": "成熟方案全程陪跑，系统培训落地" },
+        { "key": "custom", "title": "企业定制开发", "desc": "深度集成业务系统，长期运维保障" }
+      ]
+    },
+    "cta": {
+      "brand": "FastGPT",
+      "title": "让AI成为业务增长的新引擎",
+      "subtitle": "即刻尝试",
+      "trial": "免费试用",
+      "consult": "立即咨询"
+    },
+    "footer": {
+      "tagline": "企业级AI生产力引擎",
+      "columns": {
+        "service": {
+          "title": "服务",
+          "items": {
+            "cloud": "云服务",
+            "private": "私有化",
+            "community": "社区版",
+            "docs": "文档中心"
+          }
+        },
+        "partner": {
+          "title": "生态伙伴"
+        },
+        "more": {
+          "title": "更多信息",
+          "email": "邮箱：Dennis@sealos.io",
+          "lanqiao": "蓝桥云课 x FastGPT教程",
+          "book": "FastGPT官方教材（纸质书）"
+        }
+      },
+      "qr": {
+        "wechat": "官方公众号（微信）",
+        "feishu": "官方社群（飞书）",
+        "group": "官方社群（微信）"
+      },
+      "copyright": "Copyright"
+    }
+  },
   "Enterprise": {
     "Hero": {
       "maker": "企业正在使用 FastGPT 企业一体机定制服务",

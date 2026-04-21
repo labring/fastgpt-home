@@ -1,9 +1,17 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import dynamic from 'next/dynamic';
 import FadeIn from '@/components/home/motion/FadeIn';
-import GlobeCanvas from '@/components/home/GlobeCanvas';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+
+// Globe is heavy (WebGL + 16k samples + rAF loop). Load on the client only,
+// and defer even that to when the CTA card nears the viewport so the earlier
+// sections don't pay for globe init during their own scroll animations.
+const GlobeCanvas = dynamic(() => import('@/components/home/GlobeCanvas'), {
+  ssr: false
+});
 
 type CTAT = {
   brand: string;
@@ -15,6 +23,27 @@ type CTAT = {
 
 export default function CTA({ t }: { t: CTAT }) {
   const startUrl = useStartUrl();
+  const globeWrapRef = useRef<HTMLDivElement | null>(null);
+  const [globeReady, setGlobeReady] = useState(false);
+
+  // Only mount the WebGL canvas once the CTA card is about to scroll into view.
+  // Before that, the globe slot stays empty — no canvas, no rAF loop, no layout
+  // jank as the reader scrolls down through the preceding sections.
+  useEffect(() => {
+    const el = globeWrapRef.current;
+    if (!el || globeReady) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setGlobeReady(true);
+          io.disconnect();
+        }
+      },
+      { rootMargin: '200px 0px' }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, [globeReady]);
 
   return (
     <section className="py-14 md:py-20 bg-light-bg">
@@ -28,13 +57,10 @@ export default function CTA({ t }: { t: CTAT }) {
                 'rgba(3, 7, 18, 0.04) 0px 2px 4px 0px, rgba(3, 7, 18, 0.08) 0px 1px 2px -1px, rgba(3, 7, 18, 0.08) 0px 0px 0px 1px'
             }}
           >
-            {/* Details block: absolute on desktop (anchored bottom-left); on mobile
-                flows in normal document order at the top with padded content.
-                Lifted to z-10 so the buttons always render above the globe
-                corner peek on mobile. */}
-            <div
-              className="relative z-10 md:absolute md:left-8 md:top-[165px] flex flex-col gap-8 md:gap-[32px] p-6 md:p-0 w-full md:w-[min(46%,520px)]"
-            >
+            {/* Details block: absolute on desktop (anchored bottom-left); on
+                mobile flows in normal document order. Lifted to z-10 so the
+                buttons always render above the globe corner peek on mobile. */}
+            <div className="relative z-10 md:absolute md:left-8 md:top-[165px] flex flex-col gap-8 md:gap-[32px] p-6 md:p-0 w-full md:w-[min(46%,520px)]">
               <div className="flex flex-col" style={{ rowGap: 24 }}>
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
@@ -89,29 +115,28 @@ export default function CTA({ t }: { t: CTAT }) {
               </motion.div>
             </div>
 
-            {/* Interactive dotted globe. On mobile the canvas is oversized and
-                absolute-anchored to the bottom-right corner, so only the
-                top-left ~30% of the globe peeks into the card. Desktop keeps
-                the original right-bleed Framer layout. */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.92 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true, margin: '-80px' }}
-              transition={{ duration: 1.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            {/* Globe slot. Canvas is only created once `globeReady` flips.
+                No scale transition on the wrapper — scaling a canvas forces
+                the compositor to resample every pixel which visibly hitches
+                while cobe initializes. Fade opacity only. */}
+            <div
+              ref={globeWrapRef}
               className="
                 absolute z-0 left-1/5 -translate-x-1/2 -bottom-[200px] w-[440px] h-[440px]
                 md:translate-x-0 md:left-[49%] md:right-[-160px] md:top-[48px] md:bottom-auto md:w-auto md:h-[880px] md:z-auto
                 pointer-events-none md:pointer-events-auto
+                transition-opacity duration-700 ease-out
               "
               style={{
+                opacity: globeReady ? 1 : 0,
                 WebkitMaskImage:
                   'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 70%)',
                 maskImage:
                   'radial-gradient(circle at 50% 50%, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 70%)'
               }}
             >
-              <GlobeCanvas />
-            </motion.div>
+              {globeReady && <GlobeCanvas />}
+            </div>
           </div>
         </FadeIn>
       </div>

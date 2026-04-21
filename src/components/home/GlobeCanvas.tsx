@@ -67,10 +67,11 @@ export default function GlobeCanvas({ className, config }: Props) {
 
     const globe = createGlobe(canvasRef.current!, opts);
 
-    // cobe v0.6+ exposes `update` but onRender is set via a state-mutation pattern.
-    // Instead of passing onRender (which isn't in the type), we drive phi by calling
-    // globe.update(...) on every animation frame.
+    // Drive phi via rAF + globe.update. Only run while the canvas is actually
+    // on screen — when it scrolls off, cancel the loop so cobe stops burning
+    // GPU. Also pause when the browser tab is hidden.
     let raf = 0;
+    let visible = true;
     const tick = () => {
       if (pointerInteracting.current === null) phiRef.current += 0.005;
       globe.update({
@@ -80,7 +81,33 @@ export default function GlobeCanvas({ className, config }: Props) {
       });
       raf = requestAnimationFrame(tick);
     };
-    raf = requestAnimationFrame(tick);
+    const start = () => {
+      if (!raf) raf = requestAnimationFrame(tick);
+    };
+    const stop = () => {
+      if (raf) {
+        cancelAnimationFrame(raf);
+        raf = 0;
+      }
+    };
+
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        visible = entry.isIntersecting;
+        if (visible && !document.hidden) start();
+        else stop();
+      },
+      { threshold: 0 }
+    );
+    if (canvasRef.current) io.observe(canvasRef.current);
+
+    const onVisibility = () => {
+      if (document.hidden) stop();
+      else if (visible) start();
+    };
+    document.addEventListener('visibilitychange', onVisibility);
+
+    start();
 
     const t = setTimeout(() => {
       if (canvasRef.current) canvasRef.current.style.opacity = '1';
@@ -88,7 +115,9 @@ export default function GlobeCanvas({ className, config }: Props) {
 
     return () => {
       clearTimeout(t);
-      cancelAnimationFrame(raf);
+      stop();
+      io.disconnect();
+      document.removeEventListener('visibilitychange', onVisibility);
       globe.destroy();
       window.removeEventListener('resize', onResize);
     };

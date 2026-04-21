@@ -1,88 +1,302 @@
 'use client';
-import { Button } from '@/components/ui/button';
-import CTAButton from '@/components/home/CTAButton';
-import { motion } from 'framer-motion';
-import Image from "next/image";
-import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
-const Hero = ({ locale, CTALocale, stars: initialStars }: { locale: any; CTALocale: any; stars: number }) => {
-  const [stars, setStars] = useState(initialStars);
-  const githubLogoSty = {
-    height: '23px',
-    width: '23px'
+import { ArrowUpRight } from 'lucide-react';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
+import { assets } from '@/components/home/assets';
+import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+
+interface HeroProps {
+  stars: number;
+  t: {
+    githubStars: string;
+    followUs: string;
+    brand: string;
+    title: string;
+    subtitle: string;
+    trial: string;
+    consult: string;
   };
+}
 
+export default function Hero({ stars: initialStars, t }: HeroProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ['start start', 'end start']
+  });
+  const rotateX = useTransform(scrollYProgress, [0, 0.5], [18, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
+
+  const [stars, setStars] = useState(initialStars);
   useEffect(() => {
-    const getStars = async () => {
+    const run = async () => {
       try {
-        const { stargazers_count } = await (
-          await fetch('https://api.github.com/repos/labring/FastGPT')
-        ).json();
+        const res = await fetch('https://api.github.com/repos/labring/FastGPT');
+        const { stargazers_count } = await res.json();
         if (stargazers_count && stargazers_count !== initialStars) {
           setStars(stargazers_count);
         }
-      } catch (error) { }
+      } catch {
+        /* noop */
+      }
     };
-    getStars();
+    run();
   }, [initialStars]);
 
+  const startUrl = useStartUrl();
+  const formattedStars = stars ? `${stars.toLocaleString()}+` : '25,999+';
+
   return (
-    <>
-      <motion.div
-        initial={{ opacity: 0, scale: 0.5 }}
-        animate={{ opacity: 1, scale: 1 }}
-        transition={{
-          duration: 0.3,
-          ease: [0, 0.71, 0.2, 1],
-          scale: {
-            type: 'tween' // tween spring
-            // damping: 10, // if spring
-            // stiffness: 50, // if spring
-            // restDelta: 0.001, // if spring
-          }
+    <section
+      ref={containerRef}
+      className="relative pt-24 pb-10 md:pt-32 md:pb-14 overflow-hidden bg-white"
+    >
+      {/* On desktop, the aurora halo is anchored to the section (Framer's
+          left-offset design). On mobile it moves INSIDE the text wrapper below
+          so it centers on the headline+subtitle+buttons, not the whole hero
+          including the dashboard image. */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute hidden md:block"
+        style={{
+          top: 80,
+          left: 0,
+          width: 930,
+          height: 620,
+          filter: 'blur(100px)',
+          opacity: 0.6,
+          zIndex: 0
         }}
       >
-        <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pb-8 text-center">
-          <div className='inline-block mx-auto border font-bold rounded-full px-6 py-3 text-xs lg:text-sm'
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 520,
+            height: 520,
+            left: 40,
+            top: 40,
+            background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
+          }}
+          animate={{
+            x: [0, 180, 240, 80, -40, 0],
+            y: [0, 80, -30, 120, 30, 0],
+            scale: [1, 1.15, 0.9, 1.1, 0.95, 1]
+          }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 560,
+            height: 560,
+            left: 260,
+            top: 20,
+            background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
+          }}
+          animate={{
+            x: [0, -160, -220, -60, 40, 0],
+            y: [0, 60, 160, -50, 110, 0],
+            scale: [1, 0.9, 1.2, 0.95, 1.1, 1]
+          }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 480,
+            height: 480,
+            left: 140,
+            bottom: 10,
+            background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
+          }}
+          animate={{
+            x: [0, 140, -160, 100, -60, 0],
+            y: [0, -120, -30, 90, -60, 0],
+            scale: [1, 1.1, 0.85, 1.2, 0.9, 1]
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        />
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 400,
+            height: 400,
+            left: 400,
+            top: 140,
+            background: 'radial-gradient(circle, #EFD6FF 0%, rgba(239, 214, 255, 0) 70%)'
+          }}
+          animate={{
+            x: [0, -100, 160, -40, 100, 0],
+            y: [0, 80, -100, 140, -30, 0],
+            scale: [1, 0.95, 1.15, 0.9, 1.1, 1]
+          }}
+          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
+        />
+      </div>
+      <div
+        className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-6 md:gap-8"
+        style={{ zIndex: 1 }}
+      >
+        {/* Mobile-only halo centered ON the text block (not the whole hero).
+            Rendered as a child of the text wrapper below via a fragment
+            wouldn't work, so the trick is to absolute-position this inside
+            the content flex (z-0) and size it to only span where the text
+            sits. Dashboard lives below with its own stacking context. */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute md:hidden left-1/2 -translate-x-1/2 top-[40px] w-[130vw] h-[420px]"
+          style={{ filter: 'blur(100px)', opacity: 0.6, zIndex: 0 }}
+        >
+          <motion.div
+            className="absolute rounded-full"
             style={{
-              color: '#B5E8FD',
-              background: 'linear-gradient(90deg, rgba(212, 212, 249, 0.15) 0%, rgba(55, 55, 214, 0.00) 100%)',
-              // border: '1px solid rgba(179, 220, 229, 0.40)',
-              border: 'none',
+              width: 320,
+              height: 320,
+              left: '10%',
+              top: 30,
+              background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
             }}
-          >
-            <span style={{ color: '#F8A3FF' }}>50w+&nbsp;</span>
-            {locale.maker}
-          </div>
-          <div className="inline-block hero-github-pos">
-            <Link
-              href="https://github.com/labring/FastGPT"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <Button className="flex gap-3 cursor-pointer font-semibold text-sm px-6 py-4 bg-[transparent] hover:bg-[#000a28]">
-                <svg aria-hidden="true" focusable="false" className="octicon octicon-mark-github" viewBox="0 0 24 24" width="32" height="32" fill="currentColor" display="inline-block" overflow="visible" style={githubLogoSty}>
-                  <path d="M12.5.75C6.146.75 1 5.896 1 12.25c0 5.089 3.292 9.387 7.863 10.91.575.101.79-.244.79-.546 0-.273-.014-1.178-.014-2.142-2.889.532-3.636-.704-3.866-1.35-.13-.331-.69-1.352-1.18-1.625-.402-.216-.977-.748-.014-.762.906-.014 1.553.834 1.769 1.179 1.035 1.74 2.688 1.25 3.349.948.1-.747.402-1.25.733-1.538-2.559-.287-5.232-1.279-5.232-5.678 0-1.25.445-2.285 1.178-3.09-.115-.288-.517-1.467.115-3.048 0 0 .963-.302 3.163 1.179.92-.259 1.897-.388 2.875-.388.977 0 1.955.13 2.875.388 2.2-1.495 3.162-1.179 3.162-1.179.633 1.581.23 2.76.115 3.048.733.805 1.179 1.825 1.179 3.09 0 4.413-2.688 5.39-5.247 5.678.417.36.776 1.05.776 2.128 0 1.538-.014 2.774-.014 3.162 0 .302.216.662.79.547C20.709 21.637 24 17.324 24 12.25 24 5.896 18.854.75 12.5.75Z"></path></svg>
-                {(stars / 1000).toFixed(1)}k
-              </Button>
-            </Link>
-          </div>
-          <h1 className='flex justify-center items-center gap-3 md:gap-4 lg:gap-6 mt-6 text-xl sm:text-4xl md:text-5xl lg:text-6xl text-nowrap text-gradient big-titile-padding'>
-            {locale.title1}
-            {/* <Image src="/AI.png" alt="logo" width={100}
-              height={100} className='w-8 h-6 sm:w-10 sm:h-8 md:w-12 md:h-10 lg:w-20 lg:h-16' /> */}
-            {/* <LineText>{locale.title2}</LineText>  */}
-            {locale.title3}
-          </h1>
-          <p className="mx-auto mt-4 max-w-3xl text-s sm:text-sm md:text-large tracking-tight" style={{ color: 'var(--text-secondary)' }}>
-            {locale.description}
-          </p>
-        </section>
-      </motion.div>
-      <CTAButton locale={CTALocale} stars={stars} />
-    </>
-  );
-};
+            animate={{
+              x: [0, 60, 120, 20, -20, 0],
+              y: [0, 40, -20, 60, 20, 0],
+              scale: [1, 1.15, 0.9, 1.1, 0.95, 1]
+            }}
+            transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute rounded-full"
+            style={{
+              width: 340,
+              height: 340,
+              right: '10%',
+              top: 0,
+              background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
+            }}
+            animate={{
+              x: [0, -60, -100, -20, 20, 0],
+              y: [0, 40, 80, -30, 60, 0],
+              scale: [1, 0.9, 1.2, 0.95, 1.1, 1]
+            }}
+            transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+          />
+          <motion.div
+            className="absolute rounded-full"
+            style={{
+              width: 280,
+              height: 280,
+              left: '50%',
+              bottom: 0,
+              marginLeft: -140,
+              background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
+            }}
+            animate={{
+              x: [0, 60, -80, 40, -20, 0],
+              y: [0, -40, -10, 30, -20, 0],
+              scale: [1, 1.1, 0.85, 1.2, 0.9, 1]
+            }}
+            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+          />
+        </div>
 
-export default Hero;
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-hairline bg-white/50 backdrop-blur-sm"
+        >
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-ink">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+          </svg>
+          <span className="text-[12px] text-ink-sub leading-[18px]">{t.githubStars} {formattedStars}</span>
+          <span className="w-px h-3 bg-hairline" />
+          <a
+            href="https://github.com/labring/FastGPT"
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            className="inline-flex items-center gap-0.5 text-[12px] text-primary hover:text-primary-dark leading-[18px]"
+          >
+            {t.followUs}
+            <ArrowUpRight size={12} />
+          </a>
+        </motion.div>
+
+        <div className="flex flex-col items-center">
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+            style={{
+              fontFamily: "var(--home-font-display)",
+              fontWeight: 400,
+              color: 'rgb(78, 88, 130)'
+            }}
+            className="text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
+          >
+            {t.brand}
+          </motion.p>
+
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="text-ink text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
+          >
+            {t.title}
+          </motion.h1>
+        </div>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+          className="text-[16px] md:text-[20px] leading-[26px] md:leading-[32px] tracking-[-0.16px] md:tracking-[-0.2px] max-w-xl text-gray-600"
+        >
+          {t.subtitle}
+        </motion.p>
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
+          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-3 sm:gap-8"
+        >
+          <motion.a
+            href={startUrl}
+            rel="noopener noreferrer nofollow"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            aria-label={t.trial}
+            className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-ink bg-btn-light-bg border border-hairline-soft tracking-[0.5px] backdrop-blur-sm hover:bg-white/80 transition-colors"
+          >
+            {t.trial}
+          </motion.a>
+          <motion.a
+            href={CONSULT_URL}
+            target="_blank"
+            rel="noopener noreferrer nofollow"
+            whileHover={{ scale: 1.04 }}
+            whileTap={{ scale: 0.97 }}
+            aria-label={t.consult}
+            className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-white bg-btn-dark border border-transparent tracking-[0.5px]"
+          >
+            {t.consult}
+          </motion.a>
+        </motion.div>
+
+        <div style={{ perspective: 800 }} className="relative w-full max-w-[90vw] mx-auto">
+          <motion.div
+            style={{ rotateX, scale, transformStyle: 'preserve-3d' }}
+            initial={{ opacity: 0, y: 60 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+            className="origin-top"
+          >
+            <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
+          </motion.div>
+        </div>
+
+      </div>
+    </section>
+  );
+}

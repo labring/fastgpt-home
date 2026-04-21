@@ -1,5 +1,5 @@
 import { EAdvantages, ECTA, EHero, EModels, EPartners, ESolutions } from "@/components/enterprise";
-import CTA from "@/components/home/CTA";
+import CTA from "@/components/enterprise/LegacyFooter";
 import { defaultLocale, getDictionary } from "@/lib/i18n";
 import { getAlternates } from "@/lib/seo";
 import { getGitHubStars } from "@/lib/utils";

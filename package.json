@@ -23,6 +23,7 @@
     "autoprefixer": "^10.4.24",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
+    "cobe": "^2.0.1",
     "framer-motion": "^12.34.3",
     "lucide-react": "^0.575.0",
     "mooviejs": "^1.1.5",

@@ -128,28 +128,30 @@
   }
 }
 
-h1 {
-  @apply text-5xl sm:text-7xl text-slate-900 dark:text-gray-200 leading-[1.25] tracking-[-0.05rem] font-bold mb-2
-}
-
-h2 {
-  @apply text-4xl sm:text-6xl text-slate-900 dark:text-gray-200 leading-[1.3] tracking-[-0.05rem] font-bold
-}
-
-h3 {
-  @apply text-3xl sm:text-5xl text-slate-900 dark:text-gray-200 leading-[1.375] tracking-[-0.05rem] font-bold mb-2
-}
-
-h4 {
-  @apply text-2xl sm:text-4xl text-slate-900 dark:text-gray-200 leading-[1.375] tracking-[-0.05rem] font-semibold mb-2
-}
-
-h5 {
-  @apply text-xl sm:text-3xl text-slate-900 dark:text-gray-200 leading-[1.375] font-semibold mb-2
-}
-
-h6 {
-  @apply text-base sm:text-xl text-slate-900 dark:text-gray-200 leading-[1.625] font-semibold mb-2
+/* Legacy global heading styles for the dark marketing pages.
+   Selector uses :where() to keep specificity at 0 so any Tailwind utility
+   class applied on the element (text-ink, font-semibold, text-[36px], …)
+   wins cleanly. The `dark:` variant inside @apply expands to `.dark &` with
+   specificity 0,1,1 by default — :where() flattens that too. */
+@layer base {
+  :where(h1) {
+    @apply text-5xl sm:text-7xl text-slate-900 dark:text-gray-200 leading-[1.25] tracking-[-0.05rem] font-bold mb-2;
+  }
+  :where(h2) {
+    @apply text-4xl sm:text-6xl text-slate-900 dark:text-gray-200 leading-[1.3] tracking-[-0.05rem] font-bold;
+  }
+  :where(h3) {
+    @apply text-3xl sm:text-5xl text-slate-900 dark:text-gray-200 leading-[1.375] tracking-[-0.05rem] font-bold mb-2;
+  }
+  :where(h4) {
+    @apply text-2xl sm:text-4xl text-slate-900 dark:text-gray-200 leading-[1.375] tracking-[-0.05rem] font-semibold mb-2;
+  }
+  :where(h5) {
+    @apply text-xl sm:text-3xl text-slate-900 dark:text-gray-200 leading-[1.375] font-semibold mb-2;
+  }
+  :where(h6) {
+    @apply text-base sm:text-xl text-slate-900 dark:text-gray-200 leading-[1.625] font-semibold mb-2;
+  }
 }
 
 body {
@@ -462,4 +464,124 @@ body {
 .hero-github-pos {
   position: relative;
   top: 7px;
+}
+
+/* =========================================================
+   Home — light theme redesign tokens (scoped to .home)
+   These are opt-in to avoid colliding with existing dark pages.
+   ========================================================= */
+.home {
+  --home-dark: #020617;             /* slate-950 — primary text, headings */
+  --home-slate: #030712;            /* ≈ gray-950 — body links in footer */
+  --home-meta: #292f38;             /* rgb(41, 47, 56) — copyright, subtitles */
+  --home-secondary: #475569;        /* slate-500 — supporting text */
+  --home-muted: #898989;            /* small captions */
+  --home-btn-dark: #1a1a1a;
+  --home-btn-border: #222222;
+  --home-btn-light-border: #d1d5db;
+  --home-btn-light-bg: rgba(255, 255, 255, 0.44);
+  --home-social-bg: #8a929c;        /* slate-ish social icon disk */
+  --home-light-bg: #f8fafc;
+  --home-card-bg: #f1f5f9;
+  --home-hairline: #f1f5f9;         /* slate-100 dividers */
+  --home-border: rgba(0, 0, 0, 0.08);
+  --home-primary: #3b82f6;
+  --home-primary-dark: #2563eb;
+  --home-font-sans: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --home-font-display: "IBM Plex Sans", "Inter", "PingFang SC", sans-serif;
+  font-family: var(--home-font-sans);
+  color: var(--home-dark);
+  background: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography tokens still referenced by Services / Solutions / ProductHighlights.
+   The headline-scale tokens (t-h1 / t-h2 / t-h3 / t-sub / t-meta) were removed —
+   all headings use Tailwind responsive classes directly now. */
+.home .t-card-title { font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: -0.4px; color: var(--home-dark); }
+.home .t-card-desc { font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.16px; color: var(--home-secondary); }
+.home .t-feature-title { font-size: 16px; font-weight: 600; line-height: 24px; letter-spacing: -0.32px; color: var(--home-secondary); }
+
+/* No `.home h1..h6` override needed: the generic h* rules live in @layer base
+   (see top of file), while Tailwind utility classes applied on the element
+   sit in @layer utilities and win by cascade-layer order. Components control
+   heading typography by applying classes (text-[36px], font-semibold, text-ink,
+   m-0, …) directly on each h-element. */
+
+/* Carousel snap used by CaseStudies */
+.home .case-carousel {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+.home .case-carousel > * {
+  scroll-snap-align: start;
+}
+
+/* Tab panel transition */
+.home .tab-panel-enter { animation: home-fade-in 0.3s ease-out; }
+
+/* When the homepage is rendered, override the global dark body so overscroll
+   bounce (iOS/Safari) and any gaps don't flash black. */
+html:has(.home) {
+  background: #ffffff !important;
+  color-scheme: light !important;
+  background-image: none !important;
+}
+body:has(.home) {
+  background: #ffffff !important;
+  color: var(--home-dark);
+  background-image: none !important;
+  overflow-x: hidden;
+}
+
+/* LangSwitcher inside v2 navbar: normalize for light theme */
+.home-lang button {
+  background: transparent !important;
+  border: none !important;
+  padding: 0 6px !important;
+  height: auto !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+  color: var(--home-secondary) !important;
+  transition: color 0.2s ease;
+}
+.home-lang button:hover,
+.home-lang button:hover span,
+.home-lang button:hover svg {
+  color: var(--home-dark) !important;
+  background: transparent !important;
+}
+.home-lang button span,
+.home-lang button svg {
+  color: inherit !important;
+  opacity: 1 !important;
+}
+.home-lang .focus\:ring-ring:focus,
+.home-lang button:focus,
+.home-lang button:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+  --tw-ring-color: transparent;
+}
+
+/* LangSwitcher dropdown (listbox) inside the home navbar — white-based panel.
+   The shared LangSwitcher component uses HeroUI's `bg-popover` which is dark
+   under the legacy theme; override for the home scope. */
+.home-lang [role='listbox'] {
+  background-color: #ffffff !important;
+  color: var(--home-dark) !important;
+  border: 1px solid var(--home-hairline) !important;
+  box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.12), 0 2px 6px -2px rgba(15, 23, 42, 0.08) !important;
+}
+.home-lang [role='listbox'] [role='option'] {
+  color: var(--home-secondary) !important;
+  background: transparent !important;
+}
+.home-lang [role='listbox'] [role='option']:hover,
+.home-lang [role='listbox'] [role='option']:focus,
+.home-lang [role='listbox'] [role='option'][aria-selected='true'] {
+  background-color: var(--home-light-bg) !important;
+  color: var(--home-dark) !important;
 }

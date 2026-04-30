@@ -29,7 +29,6 @@ export default function Navbar({
   const lang = params?.lang || defaultLocale;
   const startUrl = useStartUrl();
 
-  // Lock body scroll while the mobile drawer is open.
   useEffect(() => {
     if (!mobileOpen) return;
     const prev = document.body.style.overflow;
@@ -41,15 +40,15 @@ export default function Navbar({
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-[10px] bg-white/5">
-        <div className="max-w-[min(85vw,1300px)] h-[68px] mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-10">
-            <Link href="/" className="flex items-center gap-2" aria-label="FastGPT Home">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border-b border-hairline-soft">
+        <div className="px-[32px] py-[12px] flex items-center justify-between max-w-[min(100vw,1440px)] mx-auto">
+          <div className="flex items-center gap-8">
+            <Link href="/" className="flex items-center gap-1" aria-label="FastGPT Home">
               <FastGPTLogo size={22} />
-              <span className="text-[18px] font-semibold text-ink tracking-[-0.36px]">FastGPT</span>
+              <span className="text-[18px] font-semibold text-ink tracking-[-0.36px]" style={{ fontFamily: "'PingFang SC', sans-serif" }}>FastGPT</span>
             </Link>
 
-            <div className="hidden md:flex items-center gap-8 text-[14px] text-ink-sub">
+            <div className="hidden md:flex items-center gap-6 text-[14px] text-ink-sub">
               {links.map((link) => (
                 <Link
                   key={link.label}
@@ -62,15 +61,12 @@ export default function Navbar({
             </div>
           </div>
 
-          <div className="hidden md:flex items-center gap-3">
-            <div className="home-lang">
-              <LangSwitcher />
-            </div>
+          <div className="hidden md:flex items-center gap-4">
             <a
               href={startUrl}
               rel="noopener noreferrer nofollow"
               aria-label={t.trial}
-              className="px-5 py-2 rounded-full bg-white border border-hairline-soft text-[13px] font-medium text-ink hover:bg-light-bg transition-colors"
+              className="px-4 py-1.5 rounded-full bg-white border border-hairline-soft text-[12px] font-medium text-ink hover:bg-gray-50 transition-colors"
             >
               {t.trial}
             </a>
@@ -79,7 +75,7 @@ export default function Navbar({
               target="_blank"
               rel="noopener noreferrer nofollow"
               aria-label={t.consult}
-              className="px-5 py-2 rounded-full text-[13px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
+              className="px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
             >
               {t.consult}
             </a>
@@ -95,22 +91,13 @@ export default function Navbar({
         </div>
       </nav>
 
-      {/* Mobile overlay — rendered as a SIBLING of <nav>, not a descendant.
-          A backdrop-filter on the nav creates a containing block for fixed
-          descendants, which would scope a fixed overlay to the 68px nav bar
-          instead of the full viewport. Keep it outside.
-
-          Full-viewport (fixed inset-0, h = 100vh). Background is a translucent
-          frosted white so empty space naturally shows the page behind through
-          the blur. Inner container is height-100% flex-col with mt-auto pushing
-          the CTA buttons to the bottom of the screen. */}
       {mobileOpen && (
         <div
-          className="md:hidden fixed inset-0 z-40 bg-white/70 backdrop-blur-[18px] backdrop-saturate-150"
+          className="md:hidden fixed inset-0 z-40 bg-white"
           onClick={() => setMobileOpen(false)}
         >
           <div
-            className="h-full w-full pt-[68px] pb-10 px-6 flex flex-col text-[16px] text-ink-sub"
+            className="h-full w-full pt-[52px] pb-10 px-8 flex flex-col text-[16px] text-ink-sub"
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="flex flex-col gap-1 pt-6">
@@ -130,7 +117,7 @@ export default function Navbar({
               <a
                 href={startUrl}
                 rel="noopener noreferrer nofollow"
-                className="h-11 inline-flex items-center justify-center rounded-full bg-white border border-hairline-soft text-[14px] font-medium text-ink"
+                className="h-10 inline-flex items-center justify-center rounded-full bg-white border border-hairline-soft text-[13px] font-medium text-ink"
                 onClick={() => setMobileOpen(false)}
               >
                 {t.trial}
@@ -139,7 +126,7 @@ export default function Navbar({
                 href={CONSULT_URL}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                className="h-11 inline-flex items-center justify-center rounded-full text-[14px] font-medium text-white bg-btn-dark"
+                className="h-10 inline-flex items-center justify-center rounded-full text-[13px] font-medium text-white bg-btn-dark"
                 onClick={() => setMobileOpen(false)}
               >
                 {t.consult}

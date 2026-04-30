@@ -25,8 +25,8 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
     target: containerRef,
     offset: ['start start', 'end start']
   });
-  const rotateX = useTransform(scrollYProgress, [0, 0.5], [18, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.95, 1]);
+  const rotateX = useTransform(scrollYProgress, [0, 0.5], [12, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5], [0.92, 1]);
 
   const [stars, setStars] = useState(initialStars);
   useEffect(() => {
@@ -52,10 +52,7 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
       ref={containerRef}
       className="relative pt-24 pb-10 md:pt-32 md:pb-14 overflow-hidden bg-white"
     >
-      {/* On desktop, the aurora halo is anchored to the section (Framer's
-          left-offset design). On mobile it moves INSIDE the text wrapper below
-          so it centers on the headline+subtitle+buttons, not the whole hero
-          including the dashboard image. */}
+      {/* Gradient blobs with flowing color animation */}
       <div
         aria-hidden
         className="pointer-events-none absolute hidden md:block"
@@ -66,7 +63,8 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
           height: 620,
           filter: 'blur(100px)',
           opacity: 0.6,
-          zIndex: 0
+          zIndex: 0,
+          animation: 'aurora-hue 20s ease-in-out infinite'
         }}
       >
         <motion.div
@@ -134,71 +132,69 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
           transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
         />
       </div>
+
+      {/* Mobile gradient blobs */}
+      <div
+        aria-hidden
+        className="pointer-events-none absolute md:hidden left-1/2 -translate-x-1/2 top-[40px] w-[130vw] h-[420px]"
+        style={{ filter: 'blur(100px)', opacity: 0.6, zIndex: 0, animation: 'aurora-hue 20s ease-in-out infinite' }}
+      >
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 320,
+            height: 320,
+            left: '10%',
+            top: 30,
+            background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
+          }}
+          animate={{
+            x: [0, 60, 120, 20, -20, 0],
+            y: [0, 40, -20, 60, 20, 0],
+            scale: [1, 1.15, 0.9, 1.1, 0.95, 1]
+          }}
+          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 340,
+            height: 340,
+            right: '10%',
+            top: 0,
+            background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
+          }}
+          animate={{
+            x: [0, -60, -100, -20, 20, 0],
+            y: [0, 40, 80, -30, 60, 0],
+            scale: [1, 0.9, 1.2, 0.95, 1.1, 1]
+          }}
+          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
+        />
+        <motion.div
+          className="absolute rounded-full"
+          style={{
+            width: 280,
+            height: 280,
+            left: '50%',
+            bottom: 0,
+            marginLeft: -140,
+            background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
+          }}
+          animate={{
+            x: [0, 60, -80, 40, -20, 0],
+            y: [0, -40, -10, 30, -20, 0],
+            scale: [1, 1.1, 0.85, 1.2, 0.9, 1]
+          }}
+          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
+        />
+      </div>
+
+      {/* Text content — narrow centered container */}
       <div
         className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-6 md:gap-8"
         style={{ zIndex: 1 }}
       >
-        {/* Mobile-only halo centered ON the text block (not the whole hero).
-            Rendered as a child of the text wrapper below via a fragment
-            wouldn't work, so the trick is to absolute-position this inside
-            the content flex (z-0) and size it to only span where the text
-            sits. Dashboard lives below with its own stacking context. */}
-        <div
-          aria-hidden
-          className="pointer-events-none absolute md:hidden left-1/2 -translate-x-1/2 top-[40px] w-[130vw] h-[420px]"
-          style={{ filter: 'blur(100px)', opacity: 0.6, zIndex: 0 }}
-        >
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 320,
-              height: 320,
-              left: '10%',
-              top: 30,
-              background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
-            }}
-            animate={{
-              x: [0, 60, 120, 20, -20, 0],
-              y: [0, 40, -20, 60, 20, 0],
-              scale: [1, 1.15, 0.9, 1.1, 0.95, 1]
-            }}
-            transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 340,
-              height: 340,
-              right: '10%',
-              top: 0,
-              background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
-            }}
-            animate={{
-              x: [0, -60, -100, -20, 20, 0],
-              y: [0, 40, 80, -30, 60, 0],
-              scale: [1, 0.9, 1.2, 0.95, 1.1, 1]
-            }}
-            transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-          />
-          <motion.div
-            className="absolute rounded-full"
-            style={{
-              width: 280,
-              height: 280,
-              left: '50%',
-              bottom: 0,
-              marginLeft: -140,
-              background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
-            }}
-            animate={{
-              x: [0, 60, -80, 40, -20, 0],
-              y: [0, -40, -10, 30, -20, 0],
-              scale: [1, 1.1, 0.85, 1.2, 0.9, 1]
-            }}
-            transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-          />
-        </div>
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -283,19 +279,22 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
             {t.consult}
           </motion.a>
         </motion.div>
+      </div>
 
-        <div style={{ perspective: 800 }} className="relative w-full max-w-[90vw] mx-auto">
-          <motion.div
-            style={{ rotateX, scale, transformStyle: 'preserve-3d' }}
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-            className="origin-top"
-          >
-            <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
-          </motion.div>
-        </div>
-
+      {/* Dashboard image — wider, outside the narrow text container */}
+      <div
+        className="relative mx-auto w-[92vw] md:max-w-[1200px]"
+        style={{ perspective: 800, zIndex: 1 }}
+      >
+        <motion.div
+          style={{ rotateX, scale, transformStyle: 'preserve-3d' }}
+          initial={{ opacity: 0, y: 60 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+          className="origin-bottom"
+        >
+          <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
+        </motion.div>
       </div>
     </section>
   );

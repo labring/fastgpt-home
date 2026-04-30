@@ -539,13 +539,21 @@ body:has(.home) {
 .home-lang button {
   background: transparent !important;
   border: none !important;
-  padding: 0 6px !important;
+  padding: 0 !important;
   height: auto !important;
   font-size: 14px !important;
   font-weight: 400 !important;
   letter-spacing: normal !important;
   color: var(--home-secondary) !important;
   transition: color 0.2s ease;
+}
+/* Show only flag icon in button, hide text label */
+.home-lang button > span > span + span {
+  display: none;
+}
+/* Hide chevron in icon-only mode */
+.home-lang button > svg {
+  display: none;
 }
 .home-lang button:hover,
 .home-lang button:hover span,
@@ -584,4 +592,12 @@ body:has(.home) {
 .home-lang [role='listbox'] [role='option'][aria-selected='true'] {
   background-color: var(--home-light-bg) !important;
   color: var(--home-dark) !important;
+}
+
+/* Aurora gradient hue-shift animation */
+@keyframes aurora-hue {
+  0% { filter: blur(100px) hue-rotate(0deg); }
+  33% { filter: blur(100px) hue-rotate(25deg); }
+  66% { filter: blur(100px) hue-rotate(-15deg); }
+  100% { filter: blur(100px) hue-rotate(0deg); }
 }

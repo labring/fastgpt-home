@@ -1,10 +1,9 @@
 export default function FastGPTLogo({ size = 22 }: { size?: number }) {
-  const h = size * (19 / 15);
   return (
     <svg
       width={size}
-      height={h}
-      viewBox="0 0 15 19"
+      height={size}
+      viewBox="0 0 22 22"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       aria-label="FastGPT"
@@ -15,6 +14,7 @@ export default function FastGPTLogo({ size = 22 }: { size?: number }) {
           <stop offset="1" stopColor="#8EAEFF" />
         </linearGradient>
       </defs>
+      <g transform="translate(3, 2)">
       <path
         d="M9.30125 4.47331C9.30125 3.58858 9.0285 2.72371 8.5175 1.98808C8.00649 1.25245 7.28018 0.679093 6.43041 0.34052C5.58065 0.0019463 4.64558 -0.08664 3.74347 0.0859633C2.84137 0.258567 2.01272 0.684607 1.36234 1.31021C0.711955 1.93581 0.269038 2.73288 0.0895968 3.60061C-0.0898439 4.46835 0.00225156 5.36778 0.354237 6.18517C0.706223 7.00256 1.30229 7.70119 2.06706 8.19273C2.83183 8.68426 3.73096 8.94661 4.65074 8.94661V4.47331H9.30125Z"
         fill="url(#fg-g-v2)"
@@ -34,6 +34,7 @@ export default function FastGPTLogo({ size = 22 }: { size?: number }) {
       <path d="M4.65065 4.29613L4.65064 14.3014L0 14.3014L4.32385e-07 4.29613H4.65065Z" fill="url(#fg-g-v2)" />
       <path d="M10.1805 4.47256L4.59785 4.47256L4.59785 0L10.1805 5.13911e-07V4.47256Z" fill="url(#fg-g-v2)" />
       <path d="M10.1806 11.6426H7.09104V7.84387L10.1806 7.84387V11.6426Z" fill="url(#fg-g-v2)" />
+      </g>
     </svg>
   );
 }

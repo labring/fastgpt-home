@@ -539,39 +539,20 @@ body:has(.home) {
 .home-lang button {
   background: transparent !important;
   border: none !important;
-  padding: 0 !important;
   height: auto !important;
-  font-size: 14px !important;
   font-weight: 400 !important;
   letter-spacing: normal !important;
-  color: var(--home-secondary) !important;
   transition: color 0.2s ease;
 }
-/* Show only flag icon in button, hide text label */
-.home-lang button > span > span + span {
-  display: none;
-}
-/* Hide chevron in icon-only mode */
-.home-lang button > svg {
-  display: none;
-}
-.home-lang button:hover,
-.home-lang button:hover span,
-.home-lang button:hover svg {
+.home-lang button:hover {
   color: var(--home-dark) !important;
   background: transparent !important;
-}
-.home-lang button span,
-.home-lang button svg {
-  color: inherit !important;
-  opacity: 1 !important;
 }
 .home-lang .focus\:ring-ring:focus,
 .home-lang button:focus,
 .home-lang button:focus-visible {
   outline: none !important;
   box-shadow: none !important;
-  --tw-ring-color: transparent;
 }
 
 /* LangSwitcher dropdown (listbox) inside the home navbar — white-based panel.

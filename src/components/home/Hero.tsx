@@ -57,10 +57,10 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         aria-hidden
         className="pointer-events-none absolute hidden md:block"
         style={{
-          top: 80,
-          left: 0,
-          width: 930,
-          height: 620,
+          top: 160,
+          left: '-10%',
+          width: '120%',
+          height: 800,
           filter: 'blur(100px)',
           opacity: 0.6,
           zIndex: 0,
@@ -70,9 +70,9 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         <motion.div
           className="absolute rounded-full"
           style={{
-            width: 520,
-            height: 520,
-            left: 40,
+            width: 600,
+            height: 600,
+            left: '5%',
             top: 40,
             background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
           }}
@@ -86,9 +86,9 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         <motion.div
           className="absolute rounded-full"
           style={{
-            width: 560,
-            height: 560,
-            left: 260,
+            width: 640,
+            height: 640,
+            left: '25%',
             top: 20,
             background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
           }}
@@ -102,9 +102,9 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         <motion.div
           className="absolute rounded-full"
           style={{
-            width: 480,
-            height: 480,
-            left: 140,
+            width: 560,
+            height: 560,
+            left: '15%',
             bottom: 10,
             background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
           }}
@@ -118,9 +118,9 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         <motion.div
           className="absolute rounded-full"
           style={{
-            width: 400,
-            height: 400,
-            left: 400,
+            width: 480,
+            height: 480,
+            left: '45%',
             top: 140,
             background: 'radial-gradient(circle, #EFD6FF 0%, rgba(239, 214, 255, 0) 70%)'
           }}

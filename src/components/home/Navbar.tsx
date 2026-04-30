@@ -40,11 +40,13 @@ export default function Navbar({
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] border-b border-hairline-soft">
-        <div className="px-[32px] py-[12px] flex items-center justify-between max-w-[min(100vw,1440px)] mx-auto">
+      <nav className="fixed top-0 left-0 right-0 z-50">
+        {/* Blur background — separate layer so backdrop-filter doesn't affect content rendering */}
+        <div className="absolute inset-0 backdrop-blur-[10px] bg-[rgba(255,255,255,0.05)] border-b border-hairline-soft" />
+        <div className="relative px-[32px] py-[16px] flex items-center justify-between max-w-[min(100vw,1440px)] mx-auto">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-1" aria-label="FastGPT Home">
-              <FastGPTLogo size={22} />
+              <img src="/logo-nav.svg" width={22} height={22} alt="FastGPT" draggable={false} />
               <span className="text-[18px] font-semibold text-ink tracking-[-0.36px]" style={{ fontFamily: "'PingFang SC', sans-serif" }}>FastGPT</span>
             </Link>
 
@@ -62,6 +64,9 @@ export default function Navbar({
           </div>
 
           <div className="hidden md:flex items-center gap-4">
+            <div className="home-lang">
+              <LangSwitcher iconOnly />
+            </div>
             <a
               href={startUrl}
               rel="noopener noreferrer nofollow"
@@ -97,7 +102,7 @@ export default function Navbar({
           onClick={() => setMobileOpen(false)}
         >
           <div
-            className="h-full w-full pt-[52px] pb-10 px-8 flex flex-col text-[16px] text-ink-sub"
+            className="h-full w-full pt-[58px] pb-10 px-8 flex flex-col text-[16px] text-ink-sub"
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="flex flex-col gap-1 pt-6">
@@ -132,7 +137,7 @@ export default function Navbar({
                 {t.consult}
               </a>
               <div className="home-lang flex justify-center pt-1">
-                <LangSwitcher />
+                <LangSwitcher iconOnly />
               </div>
             </div>
           </div>

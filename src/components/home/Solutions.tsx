@@ -21,8 +21,6 @@ import FadeIn from '@/components/home/motion/FadeIn';
 import { assets } from '@/components/home/assets';
 import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 
-// Icons + images are keyed by the tab/item `key` so the visible text can come
-// from the i18n dictionary while the media stays tied to the component.
 const iconByKey: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   assistant: Tag, report: AudioLines, training: Users,
   ticket: Headphones, copy: ListChecks, insight: BarChart3,
@@ -58,15 +56,11 @@ export default function Solutions({ t }: { t: SolutionsT }) {
   const current = tabs[activeTab];
 
   return (
-    <section className="py-14 md:py-20">
-      <div className="max-w-[min(92vw,960px)] md:max-w-[min(75vw,960px)] mx-auto">
-        <div className="mb-5">
-          <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
-        </div>
+    <section className="py-[80px] px-[32px] bg-white">
+      <div className="max-w-[min(92vw,960px)] md:max-w-[min(75vw,960px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
+        <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
-
-        {/* Desktop (md+): tabs with active pill + image + CTA. Completely separate
-            markup from mobile so the two layouts can diverge freely. */}
+        {/* Desktop (md+): tabs with active pill + image + CTA */}
         <FadeIn delay={0.15} className="hidden md:block">
           <div className="flex justify-center mb-12 overflow-x-auto no-scrollbar">
             <div
@@ -128,7 +122,6 @@ export default function Solutions({ t }: { t: SolutionsT }) {
               </div>
 
               <div className="mt-10 relative w-fit">
-                {/* Static aurora halo behind the CTA button */}
                 <div
                   aria-hidden
                   className="pointer-events-none absolute"
@@ -192,11 +185,9 @@ export default function Solutions({ t }: { t: SolutionsT }) {
           </div>
         </FadeIn>
 
-        {/* Mobile: no tabs, no CTA. One featured solution per tab (4 cards) —
-            each card shows the tab's illustration, the first item's title,
-            and its simplified one-line description. */}
+        {/* Mobile: no tabs, no CTA. One featured solution per tab */}
         <FadeIn delay={0.15} className="md:hidden">
-          <div className="flex flex-col gap-12 mt-2">
+          <div className="flex flex-col gap-12">
             {tabs.map((tab) => {
               const item = tab.items[0];
               return (

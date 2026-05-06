@@ -13,6 +13,7 @@ interface FadeInProps {
   distance?: number;
   once?: boolean;
   className?: string;
+  style?: React.CSSProperties;
   as?: 'div' | 'section' | 'span' | 'li';
 }
 
@@ -24,7 +25,8 @@ export default function FadeIn({
   distance = 30,
   once = true,
   className,
-  as = 'div'
+  as = 'div',
+  style
 }: FadeInProps) {
   const reduced = useReducedMotion();
   const offset = reduced ? 0 : distance;
@@ -52,6 +54,7 @@ export default function FadeIn({
   return (
     <MotionTag
       className={className}
+      style={style}
       initial="hidden"
       whileInView="visible"
       viewport={{ once, margin: '-80px' }}

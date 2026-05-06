@@ -113,13 +113,12 @@ export default function CaseStudies({ t }: { t: CasesT }) {
   }, [isPaused, total]);
 
   return (
-    <section className="py-14 md:py-20 bg-white overflow-hidden">
+    <section className="py-[80px] px-[32px] bg-white overflow-hidden">
       <IconDefs />
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(80vw,1300px)] mx-auto px-4 md:px-6">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         <div
-          className="relative mt-8 md:mt-12"
           onMouseEnter={() => setIsPaused(true)}
           onMouseLeave={() => setIsPaused(false)}
         >

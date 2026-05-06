@@ -25,14 +25,12 @@ export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
   const features = t.items.map((it) => ({ ...it, image: imageByKey[it.key] }));
 
   return (
-    <section className="py-14 md:py-20 bg-white">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto">
-        <div className="mb-8 md:mb-10">
-          <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
-        </div>
+    <section className="py-[80px] px-[32px] bg-white">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
+        <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
-        <div className="max-w-full md:max-w-[85%] mx-auto">
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <div className="w-full">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-[16px]">
             {features.slice(0, 2).map((f) => (
               <StaggerItem key={f.title}>
                 <FeatureCard {...f} tall />
@@ -40,10 +38,12 @@ export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
             ))}
           </StaggerContainer>
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-5 mt-4 md:mt-5" initialDelay={0.1}>
-            {features.slice(2).map((f) => (
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] mt-[16px]" initialDelay={0.1}>
+            {features.slice(2).map((f, i) => (
               <StaggerItem key={f.title}>
-                <FeatureCard {...f} />
+                <div className={i === features.slice(2).length - 1 ? 'sm:col-span-2 lg:col-span-1' : ''}>
+                  <FeatureCard {...f} />
+                </div>
               </StaggerItem>
             ))}
           </StaggerContainer>
@@ -68,20 +68,20 @@ function FeatureCard({
     <motion.div
       whileHover={{ y: -4, boxShadow: '0 20px 40px -10px rgba(0,0,0,0.08)' }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="group rounded-2xl bg-light-bg border border-hairline overflow-hidden h-full flex flex-col"
+      className="rounded-[16px] bg-white overflow-hidden h-full flex flex-col p-[8px] gap-[16px]"
     >
-      <div className={`${tall ? 'aspect-[16/10]' : 'aspect-[4/3]'} overflow-hidden bg-white`}>
+      <div className="overflow-hidden bg-white rounded-[8px]">
         <motion.img
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           src={image}
           alt={title}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-contain"
         />
       </div>
-      <div className="p-6">
+      <div className="pt-0 px-[16px] pb-[16px]">
         <h5 className="t-feature-title mb-2">{title}</h5>
-        <p className="t-card-desc">{desc}</p>
+        <p className="t-card-desc" style={{ color: 'rgb(71, 85, 105)', opacity: 0.6 }}>{desc}</p>
       </div>
     </motion.div>
   );

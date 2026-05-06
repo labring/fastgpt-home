@@ -27,9 +27,10 @@ export default function HomeLanding({
       <HomeThemeFix />
       <Navbar links={dict.links} t={t.navCta} />
       <main>
-        <Hero stars={stars} t={t.hero} />
-        <TrustedBy t={t.trustedBy} />
-        <Stats stars={stars} t={t.stats} />
+        <Hero stars={stars} t={t.hero}>
+          <TrustedBy t={t.trustedBy} />
+          <Stats stars={stars} t={t.stats} />
+        </Hero>
         <ProductHighlights t={t.productHighlights} />
         <Solutions t={t.solutions} />
         <CaseStudies t={t.cases} />

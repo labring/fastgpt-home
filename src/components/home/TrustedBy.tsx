@@ -1,8 +1,5 @@
 'use client';
 
-// All 8 TrustedBy logos from the Framer reference, in exact order and at
-// Framer's measured dimensions. The first two are inline SVGs Framer assembled
-// from a sprite; the rest are PNGs/SVGs served as static assets.
 const logos: { src: string; width: number; height: number; alt: string }[] = [
   { src: '/images/home/trust/logo-cpc.svg', width: 118, height: 48, alt: '中国电建 PowerChina' },
   { src: '/images/home/trust/logo-spic.svg', width: 83, height: 48, alt: '国家电投 SPIC' },
@@ -15,12 +12,10 @@ const logos: { src: string; width: number; height: number; alt: string }[] = [
 ];
 
 export default function TrustedBy({ t }: { t: { caption: string } }) {
-  // Two copies is enough to cover the viewport plus the mask fade, so the
-  // marquee can translate by exactly one set width to loop seamlessly.
   const loopedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-[80px] px-[32px] bg-white overflow-hidden">
+    <div className="py-[80px] overflow-hidden">
       <div className="max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[48px]">
         <p className="text-center text-ink-sub font-medium">{t.caption}</p>
         <div
@@ -54,6 +49,6 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }

@@ -50,7 +50,7 @@ export default function Stats({ stars, t }: StatsProps) {
   ];
 
   return (
-    <section className="mt-0 md:mt-6 py-10 md:py-20 bg-white">
+    <div className="py-[40px]">
       <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto">
         <div className="flex flex-col gap-10 items-center md:flex-row md:gap-0 md:items-start md:justify-between">
           {stats.map((stat, i) => (
@@ -58,7 +58,7 @@ export default function Stats({ stars, t }: StatsProps) {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
 
@@ -96,7 +96,7 @@ function StatItem({
         </span>
         <span className="text-ink-sub text-[14px] md:text-[16px] leading-[20px] md:leading-[24px]">{suffix}</span>
       </div>
-      <div className="flex flex-col items-center gap-3">
+      <div className="flex flex-col items-center" style={{ rowGap: 24 }}>
         <h4 className="text-ink text-[20px] font-medium leading-[28px] tracking-[-0.4px]">
           {label}
         </h4>

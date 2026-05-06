@@ -2,7 +2,7 @@
 
 import { ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, ReactNode } from 'react';
 import { assets } from '@/components/home/assets';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 
@@ -17,6 +17,7 @@ interface HeroProps {
     trial: string;
     consult: string;
   };
+  children?: ReactNode;
 }
 
 const blobs = [
@@ -32,7 +33,7 @@ const mobileBlobs = [
   { w: 300, h: 300, left: '50%', top: 160, ml: -150, color: '#C6DBFF', x: [0, 60, -80, 40, -20, 0], y: [0, -20, -5, 15, -10, 0], s: [1, 1.1, 0.85, 1.2, 0.9, 1], dur: 18, delay: 1.5 },
 ];
 
-export default function Hero({ stars: initialStars, t }: HeroProps) {
+export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
@@ -61,9 +62,9 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative pt-[160px] px-[32px] pb-[48px] overflow-hidden bg-white"
+      className="relative pt-[160px] px-[48px] pb-[48px] overflow-hidden bg-white"
     >
-      {/* Desktop gradient blobs — each blob has its own blur, no container edge */}
+      {/* Desktop gradient blobs */}
       {blobs.map((b, i) => (
         <motion.div
           key={i}
@@ -108,113 +109,119 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         />
       ))}
 
-      {/* Inner content wrapper: text + image, 32px padding */}
-      <div className="relative px-[32px]" style={{ zIndex: 1 }}>
+      {/* Main content column */}
+      <div className="relative flex flex-col gap-[50px]" style={{ zIndex: 1 }}>
 
-      {/* Text content */}
-      <div
-        className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px]"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, ease: 'easeOut' }}
-          className="inline-flex items-center gap-[12px] h-[30px] px-[8px] rounded-full border border-[rgba(0,0,0,0.06)] bg-white/40 shadow-[0_1px_4px_0_rgba(0,0,0,0.05)]"
-        >
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-ink">
-            <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
-          </svg>
-          <span className="text-[12px] leading-[18px]" style={{ color: 'rgb(71, 85, 105)' }}>{t.githubStars} {formattedStars}</span>
-          <a
-            href="https://github.com/labring/FastGPT"
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            className="inline-flex items-center gap-0.5 text-[12px] text-primary hover:text-primary-dark leading-[18px]"
-          >
-            {t.followUs}
-            <ArrowUpRight size={12} />
-          </a>
-        </motion.div>
+        {/* Text + image block (extra 32px horizontal padding) */}
+        <div className="px-[32px]">
 
-        <div className="flex flex-col items-center gap-[24px]">
-          <div className="flex flex-col items-center">
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
+          {/* Text content */}
+          <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px]">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-              style={{ fontFamily: "var(--home-font-display)", fontWeight: 400, color: 'rgb(78, 88, 130)' }}
-              className="text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
+              transition={{ duration: 0.6, ease: 'easeOut' }}
+              className="inline-flex items-center gap-[12px] h-[30px] px-[8px] rounded-full border border-[#e5e7eb] bg-white/40 shadow-[0_1px_4px_0_rgba(0,0,0,0.05)]"
             >
-              {t.brand}
-            </motion.p>
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" className="text-ink">
+                <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+              </svg>
+              <span className="text-[12px] leading-[18px]" style={{ color: 'rgb(71, 85, 105)' }}>{t.githubStars} {formattedStars}</span>
+              <a
+                href="https://github.com/labring/FastGPT"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-0.5 text-[12px] text-primary hover:text-primary-dark leading-[18px]"
+              >
+                {t.followUs}
+                <ArrowUpRight size={12} />
+              </a>
+            </motion.div>
+
+            <div className="flex flex-col items-center gap-[24px]">
+              <div className="flex flex-col items-center">
+                <motion.p
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  style={{ fontFamily: "var(--home-font-display)", fontWeight: 400, color: 'rgb(78, 88, 130)' }}
+                  className="text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
+                >
+                  {t.brand}
+                </motion.p>
+                <motion.h1
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+                  className="text-ink text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
+                >
+                  {t.title}
+                </motion.h1>
+              </div>
+
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+                className="text-[18px] md:text-[18px] leading-[26px] md:leading-[32px] tracking-[-0.18px] md:tracking-[-0.18px] max-w-xl"
+                style={{ color: 'rgb(41, 47, 56)' }}
+              >
+                {t.subtitle}
+              </motion.p>
+            </div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
-              className="text-ink text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
+              transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-3 sm:gap-8"
             >
-              {t.title}
-            </motion.h1>
+              <motion.a
+                href={startUrl}
+                rel="noopener noreferrer nofollow"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+                aria-label={t.trial}
+                className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-ink bg-btn-light-bg border border-hairline-soft tracking-[0.5px] backdrop-blur-sm hover:bg-white/80 transition-colors"
+              >
+                {t.trial}
+              </motion.a>
+              <motion.a
+                href={CONSULT_URL}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+                aria-label={t.consult}
+                className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-white bg-btn-dark border border-transparent tracking-[0.5px]"
+              >
+                {t.consult}
+              </motion.a>
+            </motion.div>
           </div>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-            className="text-[18px] md:text-[18px] leading-[26px] md:leading-[32px] tracking-[-0.18px] md:tracking-[-0.18px] max-w-xl"
-            style={{ color: 'rgb(41, 47, 56)' }}
+          {/* Dashboard image */}
+          <div
+            className="relative mx-auto mt-[50px]"
+            style={{ perspective: 800 }}
           >
-            {t.subtitle}
-          </motion.p>
-        </div>
+            <motion.div
+              style={{ rotateX, scale, transformStyle: 'preserve-3d' }}
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
+              className="origin-bottom"
+            >
+              <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
+            </motion.div>
+          </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
-          className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-3 sm:gap-8"
-        >
-          <motion.a
-            href={startUrl}
-            rel="noopener noreferrer nofollow"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            aria-label={t.trial}
-            className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-ink bg-btn-light-bg border border-hairline-soft tracking-[0.5px] backdrop-blur-sm hover:bg-white/80 transition-colors"
-          >
-            {t.trial}
-          </motion.a>
-          <motion.a
-            href={CONSULT_URL}
-            target="_blank"
-            rel="noopener noreferrer nofollow"
-            whileHover={{ scale: 1.04 }}
-            whileTap={{ scale: 0.97 }}
-            aria-label={t.consult}
-            className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-white bg-btn-dark border border-transparent tracking-[0.5px]"
-          >
-            {t.consult}
-          </motion.a>
-        </motion.div>
-      </div>
+        </div>{/* end text + image block */}
 
-      {/* Dashboard image */}
-      <div
-        className="relative mx-auto mt-[50px]"
-        style={{ perspective: 800, zIndex: 1 }}
-      >
-        <motion.div
-          style={{ rotateX, scale, transformStyle: 'preserve-3d' }}
-          initial={{ opacity: 0, y: 60 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
-          className="origin-bottom"
-        >
-          <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
-        </motion.div>
-      </div>
+        {/* TrustedBy + Stats passed as children */}
+        {children}
 
-      </div>{/* end inner content wrapper */}
+      </div>{/* end main content column */}
     </section>
   );
 }

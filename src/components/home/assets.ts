@@ -13,11 +13,11 @@ export const assets = {
     `${LOCAL}/trust/logo6.png`
   ],
   features: {
-    blocks: `${LOCAL}/product/feature1.png`,
-    kb: `${LOCAL}/product/feature2.png`,
-    lifecycle: `${LOCAL}/product/feature3.png`,
-    production: `${LOCAL}/product/feature4.png`,
-    partner: `${LOCAL}/product/feature5.png`
+    blocks: `${LOCAL}/product/feature-new/producthighlights-Image1.png`,
+    kb: `${LOCAL}/product/feature-new/producthighlights-Image2.png`,
+    lifecycle: `${LOCAL}/product/feature-new/producthighlights-Image3.png`,
+    production: `${LOCAL}/product/feature-new/producthighlights-Image4.png`,
+    partner: `${LOCAL}/product/feature-new/producthighlights-Image5.png`
   },
   solutions: {
     sales: `${LOCAL}/solutions/sol1.jpg`,

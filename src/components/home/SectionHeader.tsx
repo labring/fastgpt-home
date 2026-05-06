@@ -17,21 +17,19 @@ export default function SectionHeader({
   className = ''
 }: SectionHeaderProps) {
   return (
-    <FadeIn className={`text-center ${className}`}>
+    <FadeIn className={`text-center flex flex-col items-center ${className}`} style={{ rowGap: 24 }}>
       <span className="inline-block px-4 py-1.5 rounded-full border border-hairline bg-white text-[12px] leading-[18px] text-ink-sub">
         {badge}
       </span>
-      <div className="my-4 md:my-5">
-        <h2
-          className="
-            text-ink font-semibold
-            text-[28px] leading-[36px] tracking-[-0.56px]
-            md:text-[64px] md:leading-[78px] md:tracking-[-1.92px]
-          "
-        >
-          {title}
-        </h2>
-      </div>
+      <h2
+        className="
+          text-ink font-semibold
+          text-[28px] leading-[36px] tracking-[-0.56px]
+          md:text-[64px] md:leading-[78px] md:tracking-[-1.92px]
+        "
+      >
+        {title}
+      </h2>
       {subtitle && (
         <p
           className="

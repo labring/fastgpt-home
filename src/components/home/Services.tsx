@@ -23,11 +23,11 @@ export default function Services({ t }: { t: ServicesT }) {
   const services = t.items.map((it) => ({ ...it, icon: iconByKey[it.key] ?? Zap }));
 
   return (
-    <section className="py-14 md:py-20 bg-white">
-      <div className="max-w-[min(92vw,1200px)] md:max-w-[min(75vw,1200px)] mx-auto">
+    <section className="py-[80px] px-[32px] bg-white">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
-        <StaggerContainer className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-10 md:gap-y-16 mt-10 md:mt-16">
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-6 md:gap-x-8 gap-y-10 md:gap-y-16">
           {services.map((s) => {
             const Icon = s.icon;
             return (

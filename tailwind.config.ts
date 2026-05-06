@@ -101,8 +101,8 @@ const config = {
           to: { transform: "translateY(calc(-50% - var(--gap)/2))" },
         },
         marquee: {
-          "0%": { transform: "translateX(0)" },
-          "100%": { transform: "translateX(-50%)" },
+          "0%": { transform: "translateX(-50%)" },
+          "100%": { transform: "translateX(0)" },
         },
         "home-fade-in": {
           from: { opacity: "0", transform: "translateY(8px)" },

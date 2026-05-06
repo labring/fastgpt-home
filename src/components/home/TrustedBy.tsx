@@ -33,8 +33,7 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
           }}
         >
           <div
-            className="flex items-center w-max gap-x-8 md:gap-x-[54px]"
-            style={{ animation: 'marquee 30s linear infinite reverse' }}
+            className="flex animate-marquee items-center w-max gap-x-8 md:gap-x-[54px]"
           >
             {loopedLogos.map((logo, i) => (
               <img

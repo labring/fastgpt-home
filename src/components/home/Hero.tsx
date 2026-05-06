@@ -19,14 +19,27 @@ interface HeroProps {
   };
 }
 
+const blobs = [
+  { w: 520, h: 520, left: '10%', top: 40, color: '#FBD0DF', x: [0, 180, 240, 80, -40, 0], y: [0, 80, -30, 120, 30, 0], s: [1, 1.15, 0.9, 1.1, 0.95, 1], dur: 14 },
+  { w: 560, h: 560, left: '30%', top: 20, color: '#D4D6FF', x: [0, -160, -220, -60, 40, 0], y: [0, 60, 160, -50, 110, 0], s: [1, 0.9, 1.2, 0.95, 1.1, 1], dur: 16 },
+  { w: 480, h: 480, left: '18%', bottom: 10, color: '#C6DBFF', x: [0, 140, -160, 100, -60, 0], y: [0, -120, -30, 90, -60, 0], s: [1, 1.1, 0.85, 1.2, 0.9, 1], dur: 18, delay: 1.5 },
+  { w: 420, h: 420, left: '50%', top: 140, color: '#EFD6FF', x: [0, -100, 160, -40, 100, 0], y: [0, 80, -100, 140, -30, 0], s: [1, 0.95, 1.15, 0.9, 1.1, 1], dur: 20, delay: 3 },
+];
+
+const mobileBlobs = [
+  { w: 340, h: 340, left: '10%', top: 30, color: '#FBD0DF', x: [0, 60, 120, 20, -20, 0], y: [0, 40, -20, 60, 20, 0], s: [1, 1.15, 0.9, 1.1, 0.95, 1], dur: 14 },
+  { w: 360, h: 360, right: '10%', top: 0, color: '#D4D6FF', x: [0, -60, -100, -20, 20, 0], y: [0, 40, 80, -30, 60, 0], s: [1, 0.9, 1.2, 0.95, 1.1, 1], dur: 16 },
+  { w: 300, h: 300, left: '50%', bottom: 0, ml: -150, color: '#C6DBFF', x: [0, 60, -80, 40, -20, 0], y: [0, -40, -10, 30, -20, 0], s: [1, 1.1, 0.85, 1.2, 0.9, 1], dur: 18, delay: 1.5 },
+];
+
 export default function Hero({ stars: initialStars, t }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start']
   });
-  const rotateX = useTransform(scrollYProgress, [0, 0.5], [12, 0]);
-  const scale = useTransform(scrollYProgress, [0, 0.5], [0.92, 1]);
+  const rotateX = useTransform(scrollYProgress, [0, 0.35], [10, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.35], [0.92, 1]);
 
   const [stars, setStars] = useState(initialStars);
   useEffect(() => {
@@ -37,9 +50,7 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         if (stargazers_count && stargazers_count !== initialStars) {
           setStars(stargazers_count);
         }
-      } catch {
-        /* noop */
-      }
+      } catch { /* noop */ }
     };
     run();
   }, [initialStars]);
@@ -52,147 +63,54 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
       ref={containerRef}
       className="relative pt-24 pb-10 md:pt-32 md:pb-14 overflow-hidden bg-white"
     >
-      {/* Gradient blobs with flowing color animation */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute hidden md:block"
-        style={{
-          top: 160,
-          left: '-10%',
-          width: '120%',
-          height: 800,
-          filter: 'blur(100px)',
-          opacity: 0.6,
-          zIndex: 0,
-          animation: 'aurora-hue 20s ease-in-out infinite'
-        }}
-      >
+      {/* Desktop gradient blobs — each blob has its own blur, no container edge */}
+      {blobs.map((b, i) => (
         <motion.div
-          className="absolute rounded-full"
+          key={i}
+          aria-hidden
+          className="pointer-events-none absolute hidden md:block rounded-full"
           style={{
-            width: 600,
-            height: 600,
-            left: '5%',
-            top: 40,
-            background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
+            width: b.w,
+            height: b.h,
+            left: b.left,
+            ...(b.top !== undefined ? { top: b.top } : { bottom: b.bottom }),
+            filter: 'blur(80px)',
+            opacity: 0.6,
+            zIndex: 0,
+            background: `radial-gradient(circle, ${b.color} 0%, ${b.color}00 70%)`,
+            animation: 'aurora-hue 20s ease-in-out infinite'
           }}
-          animate={{
-            x: [0, 180, 240, 80, -40, 0],
-            y: [0, 80, -30, 120, 30, 0],
-            scale: [1, 1.15, 0.9, 1.1, 0.95, 1]
-          }}
-          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+          animate={{ x: b.x, y: b.y, scale: b.s }}
+          transition={{ duration: b.dur, repeat: Infinity, ease: 'easeInOut', delay: b.delay || 0 }}
         />
-        <motion.div
-          className="absolute rounded-full"
-          style={{
-            width: 640,
-            height: 640,
-            left: '25%',
-            top: 20,
-            background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
-          }}
-          animate={{
-            x: [0, -160, -220, -60, 40, 0],
-            y: [0, 60, 160, -50, 110, 0],
-            scale: [1, 0.9, 1.2, 0.95, 1.1, 1]
-          }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute rounded-full"
-          style={{
-            width: 560,
-            height: 560,
-            left: '15%',
-            bottom: 10,
-            background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
-          }}
-          animate={{
-            x: [0, 140, -160, 100, -60, 0],
-            y: [0, -120, -30, 90, -60, 0],
-            scale: [1, 1.1, 0.85, 1.2, 0.9, 1]
-          }}
-          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-        />
-        <motion.div
-          className="absolute rounded-full"
-          style={{
-            width: 480,
-            height: 480,
-            left: '45%',
-            top: 140,
-            background: 'radial-gradient(circle, #EFD6FF 0%, rgba(239, 214, 255, 0) 70%)'
-          }}
-          animate={{
-            x: [0, -100, 160, -40, 100, 0],
-            y: [0, 80, -100, 140, -30, 0],
-            scale: [1, 0.95, 1.15, 0.9, 1.1, 1]
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: 'easeInOut', delay: 3 }}
-        />
-      </div>
+      ))}
 
       {/* Mobile gradient blobs */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute md:hidden left-1/2 -translate-x-1/2 top-[40px] w-[130vw] h-[420px]"
-        style={{ filter: 'blur(100px)', opacity: 0.6, zIndex: 0, animation: 'aurora-hue 20s ease-in-out infinite' }}
-      >
+      {mobileBlobs.map((b, i) => (
         <motion.div
-          className="absolute rounded-full"
+          key={`m${i}`}
+          aria-hidden
+          className="pointer-events-none absolute md:hidden rounded-full"
           style={{
-            width: 320,
-            height: 320,
-            left: '10%',
-            top: 30,
-            background: 'radial-gradient(circle, #FBD0DF 0%, rgba(251, 208, 223, 0) 70%)'
+            width: b.w,
+            height: b.h,
+            ...(b.left ? { left: b.left } : { right: b.right }),
+            ...(b.top !== undefined ? { top: b.top } : { bottom: b.bottom }),
+            ...(b.ml ? { marginLeft: b.ml } : {}),
+            filter: 'blur(80px)',
+            opacity: 0.6,
+            zIndex: 0,
+            background: `radial-gradient(circle, ${b.color} 0%, ${b.color}00 70%)`,
+            animation: 'aurora-hue 20s ease-in-out infinite'
           }}
-          animate={{
-            x: [0, 60, 120, 20, -20, 0],
-            y: [0, 40, -20, 60, 20, 0],
-            scale: [1, 1.15, 0.9, 1.1, 0.95, 1]
-          }}
-          transition={{ duration: 14, repeat: Infinity, ease: 'easeInOut' }}
+          animate={{ x: b.x, y: b.y, scale: b.s }}
+          transition={{ duration: b.dur, repeat: Infinity, ease: 'easeInOut', delay: b.delay || 0 }}
         />
-        <motion.div
-          className="absolute rounded-full"
-          style={{
-            width: 340,
-            height: 340,
-            right: '10%',
-            top: 0,
-            background: 'radial-gradient(circle, #D4D6FF 0%, rgba(212, 214, 255, 0) 70%)'
-          }}
-          animate={{
-            x: [0, -60, -100, -20, 20, 0],
-            y: [0, 40, 80, -30, 60, 0],
-            scale: [1, 0.9, 1.2, 0.95, 1.1, 1]
-          }}
-          transition={{ duration: 16, repeat: Infinity, ease: 'easeInOut' }}
-        />
-        <motion.div
-          className="absolute rounded-full"
-          style={{
-            width: 280,
-            height: 280,
-            left: '50%',
-            bottom: 0,
-            marginLeft: -140,
-            background: 'radial-gradient(circle, #C6DBFF 0%, rgba(198, 219, 255, 0) 70%)'
-          }}
-          animate={{
-            x: [0, 60, -80, 40, -20, 0],
-            y: [0, -40, -10, 30, -20, 0],
-            scale: [1, 1.1, 0.85, 1.2, 0.9, 1]
-          }}
-          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 1.5 }}
-        />
-      </div>
+      ))}
 
-      {/* Text content — narrow centered container */}
+      {/* Text content */}
       <div
-        className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-6 md:gap-8"
+        className="relative px-[48px] max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-6 md:gap-8"
         style={{ zIndex: 1 }}
       >
         <motion.div
@@ -222,16 +140,11 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-            style={{
-              fontFamily: "var(--home-font-display)",
-              fontWeight: 400,
-              color: 'rgb(78, 88, 130)'
-            }}
+            style={{ fontFamily: "var(--home-font-display)", fontWeight: 400, color: 'rgb(78, 88, 130)' }}
             className="text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
           >
             {t.brand}
           </motion.p>
-
           <motion.h1
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -281,9 +194,9 @@ export default function Hero({ stars: initialStars, t }: HeroProps) {
         </motion.div>
       </div>
 
-      {/* Dashboard image — wider, outside the narrow text container */}
+      {/* Dashboard image */}
       <div
-        className="relative mx-auto w-[92vw] md:max-w-[1200px]"
+        className="relative mx-auto px-[32px] mt-20"
         style={{ perspective: 800, zIndex: 1 }}
       >
         <motion.div

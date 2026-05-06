@@ -20,9 +20,9 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
   const loopedLogos = [...logos, ...logos];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
-      <div className="max-w-[min(85vw,1300px)] mx-auto ">
-        <p className="text-center text-ink-sub font-medium mb-8">{t.caption}</p>
+    <section className="py-[80px] px-[32px] bg-white overflow-hidden">
+      <div className="max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[48px]">
+        <p className="text-center text-ink-sub font-medium">{t.caption}</p>
         <div
           className="relative overflow-hidden"
           style={{
@@ -32,7 +32,10 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
               'linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12.5%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,0) 100%)'
           }}
         >
-          <div className="flex animate-marquee items-center w-max gap-x-8 md:gap-x-[54px]">
+          <div
+            className="flex animate-marquee items-center w-max gap-x-8 md:gap-x-[54px]"
+            style={{ animationDirection: 'reverse' }}
+          >
             {loopedLogos.map((logo, i) => (
               <img
                 key={i}

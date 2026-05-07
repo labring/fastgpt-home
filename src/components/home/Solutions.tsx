@@ -61,7 +61,7 @@ export default function Solutions({ t }: { t: SolutionsT }) {
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         {/* Desktop (md+): tabs with active pill + image + CTA */}
-        <FadeIn delay={0.15} className="hidden md:block">
+        <FadeIn delay={0.5} className="hidden md:block">
           <div className="flex justify-center mb-12 overflow-x-auto no-scrollbar">
             <div
               className="inline-flex items-center"
@@ -76,12 +76,12 @@ export default function Solutions({ t }: { t: SolutionsT }) {
                 <button
                   key={tab.label}
                   onClick={() => setActiveTab(i)}
-                  className="relative z-0 inline-flex items-center justify-center"
+                  className="relative inline-flex items-center justify-center"
                   style={{
                     padding: '12px 20px',
                     borderRadius: 30,
                     fontSize: 12,
-                    fontWeight: 400,
+                    fontWeight: activeTab === i ? 500 : 400,
                     color: activeTab === i ? 'rgb(35, 35, 41)' : 'rgb(137, 137, 154)',
                     transition: 'color 0.2s'
                   }}
@@ -89,12 +89,12 @@ export default function Solutions({ t }: { t: SolutionsT }) {
                   {activeTab === i && (
                     <motion.span
                       layoutId="solutions-active-pill"
-                      className="absolute inset-0 -z-10"
-                      style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: 30 }}
-                      transition={{ type: 'spring', stiffness: 400, damping: 32 }}
+                      className="absolute inset-0"
+                      style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: 30, zIndex: 0 }}
+                      transition={{ type: 'spring', stiffness: 500, damping: 35, mass: 0.8 }}
                     />
                   )}
-                  <span className="relative z-10">{tab.label}</span>
+                  <span className="relative" style={{ zIndex: 1 }}>{tab.label}</span>
                 </button>
               ))}
             </div>
@@ -186,7 +186,7 @@ export default function Solutions({ t }: { t: SolutionsT }) {
         </FadeIn>
 
         {/* Mobile: no tabs, no CTA. One featured solution per tab */}
-        <FadeIn delay={0.15} className="md:hidden">
+        <FadeIn delay={0.5} className="md:hidden">
           <div className="flex flex-col gap-12">
             {tabs.map((tab) => {
               const item = tab.items[0];

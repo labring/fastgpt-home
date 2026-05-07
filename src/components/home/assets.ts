@@ -26,11 +26,11 @@ export const assets = {
     finance: `${LOCAL}/solutions/sol4.jpg`,
   },
   cases: {
-    snow: `${LOCAL}/cases/case1.png`,
-    zhaozhao: `${LOCAL}/cases/case2.png`,
-    lcfc: `${LOCAL}/cases/case3.png`,
-    cetc: `${LOCAL}/cases/case4.png`,
-    cms: `${LOCAL}/cases/case5.png`
+    snow: `${LOCAL}/cases/cases-new/案例1.png`,
+    zhaozhao: `${LOCAL}/cases/cases-new/案例2.png`,
+    lcfc: `${LOCAL}/cases/cases-new/案例3.png`,
+    cetc: `${LOCAL}/cases/cases-new/案例4.png`,
+    cms: `${LOCAL}/cases/cases-new/案例5.png`
   },
   brandWall: `${LOCAL}/brands/brand-wall.png`,
   cta: {

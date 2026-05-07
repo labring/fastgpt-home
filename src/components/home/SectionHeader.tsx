@@ -18,7 +18,15 @@ export default function SectionHeader({
 }: SectionHeaderProps) {
   return (
     <FadeIn className={`text-center flex flex-col items-center ${className}`} style={{ rowGap: 24 }}>
-      <span className="inline-block px-4 py-1.5 rounded-full border border-hairline bg-white text-[12px] leading-[18px] text-ink-sub">
+      <span
+        className="inline-block rounded-full border bg-white/40 text-[12px] leading-[18px]"
+        style={{
+          padding: '6px 12px',
+          borderColor: '#e5e7eb',
+          boxShadow: '0 1px 4px 0 rgba(0,0,0,0.05)',
+          color: 'rgb(71, 85, 105)'
+        }}
+      >
         {badge}
       </span>
       <h2
@@ -33,10 +41,10 @@ export default function SectionHeader({
       {subtitle && (
         <p
           className="
-            text-ink-sub
             text-[15px] leading-[24px] tracking-[-0.15px]
             md:text-[20px] md:leading-[32px] md:tracking-[-0.2px]
           "
+          style={{ color: '#292f38' }}
         >
           {subtitle}
         </p>

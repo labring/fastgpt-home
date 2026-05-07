@@ -30,7 +30,7 @@ export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         <div className="w-full">
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-[16px]">
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-[16px]" initialDelay={0.5}>
             {features.slice(0, 2).map((f) => (
               <StaggerItem key={f.title}>
                 <FeatureCard {...f} tall />
@@ -38,7 +38,7 @@ export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
             ))}
           </StaggerContainer>
 
-          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] mt-[16px]" initialDelay={0.1}>
+          <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] mt-[16px]" initialDelay={0.8}>
             {features.slice(2).map((f, i) => (
               <StaggerItem key={f.title}>
                 <div className={i === features.slice(2).length - 1 ? 'sm:col-span-2 lg:col-span-1' : ''}>

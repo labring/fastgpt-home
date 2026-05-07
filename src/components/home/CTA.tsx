@@ -123,7 +123,7 @@ export default function CTA({ t }: { t: CTAT }) {
               ref={globeWrapRef}
               className="
                 absolute z-0 left-1/5 -translate-x-1/2 -bottom-[200px] w-[440px] h-[440px]
-                md:translate-x-0 md:left-[49%] md:right-[-160px] md:top-[48px] md:bottom-auto md:w-auto md:h-[880px] md:z-auto
+                md:translate-x-0 md:left-[49%] md:right-[-160px] md:top-[48px] md:bottom-auto md:w-[880px] md:h-[880px] md:z-auto
                 pointer-events-none md:pointer-events-auto
                 transition-opacity duration-700 ease-out
               "

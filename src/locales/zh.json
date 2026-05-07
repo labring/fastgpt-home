@@ -62,7 +62,8 @@
     "aiCredits": "AI 积分"
   },
   "FAQ": {
-    "title": "常见问题",
+    "badge": "FAQ",
+    "title": "常见问题解答",
     "subtitle": "查找关于 FastGPT 的常见问题解答",
     "description": "关于 FastGPT 的常见问题解答",
     "viewMore": "查看更多",
@@ -253,6 +254,21 @@
         { "key": "consult", "title": "专家咨询支持", "desc": "1v1 诊断痛点，架构咨询 POC 验证" },
         { "key": "deploy", "title": "搭建落地辅助", "desc": "成熟方案全程陪跑，系统培训落地" },
         { "key": "custom", "title": "企业定制开发", "desc": "深度集成业务系统，长期运维保障" }
+      ]
+    },
+    "faq": {
+      "badge": "喜欢这个开源 AI Agent 构建平台吗？",
+      "badgeLink": "点个 Star 吧 🌟",
+      "badgeLinkUrl": "https://github.com/labring/FastGPT",
+      "title": "常见问题",
+      "subtitle": "关于 FastGPT 的常见问题解答",
+      "viewMore": "查看更多 →",
+      "viewMoreUrl": "/zh/faq",
+      "items": [
+        { "title": "开源版可以商业化吗？", "content": "FastGPT 允许被用于商业化，例如作为其他应用的「后端即服务」使用，或者作为应用开发平台提供给企业。然而，当涉及到多租户 SaaS 服务或者 LOGO 及版权信息时，必须联系作者获得商业许可。" },
+        { "title": "FastGPT 知识库可以导入哪些格式的文档？", "content": "FastGPT 支持导入 Word、PDF、Excel、Markdown 以及网页链接等格式文档，同时还支持同步整个 Web 站点的数据，自动完成文本预处理、向量化和 QA 分割，节省手动训练时间，提高效率。" },
+        { "title": "FastGPT 可以接入哪些模型？", "content": "只要您接入的模型接口 API 与 OpenAI 官方接口对齐，都可以接入 FastGPT。您可以使用 One API 这样的项目来统一接入不同的模型，并对外提供与 OpenAI 官方接口对齐的 API。" },
+        { "title": "如果我在使用 FastGPT 时遇到问题该怎么办？", "content": "如果你在使用 FastGPT 时遇到任何问题，请加入社群或者论坛发帖与我们联系。" }
       ]
     },
     "cta": {

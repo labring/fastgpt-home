@@ -8,6 +8,7 @@ import Solutions from '@/components/home/Solutions';
 import CaseStudies from '@/components/home/CaseStudies';
 import BrandWall from '@/components/home/BrandWall';
 import Services from '@/components/home/Services';
+import FAQ from '@/components/home/FAQ';
 import CTA from '@/components/home/CTA';
 import Footer from '@/components/home/Footer';
 
@@ -36,6 +37,7 @@ export default function HomeLanding({
         <CaseStudies t={t.cases} />
         <BrandWall t={t.brandWall} />
         <Services t={t.services} />
+        <FAQ t={t.faq} />
         <CTA t={t.cta} />
       </main>
       <Footer t={t.footer} />

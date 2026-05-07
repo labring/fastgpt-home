@@ -62,6 +62,7 @@
     "aiCredits": "AI Credits"
   },
   "FAQ": {
+    "badge": "FAQ",
     "title": "Frequently Asked Questions",
     "subtitle": "Find answers to common questions about FastGPT",
     "description": "Frequently asked questions about FastGPT",
@@ -247,6 +248,21 @@
         { "key": "consult", "title": "Expert Consulting", "desc": "1-on-1 pain-point diagnosis, architecture and POC validation" },
         { "key": "deploy", "title": "Implementation Support", "desc": "End-to-end rollouts with training and hands-on guidance" },
         { "key": "custom", "title": "Enterprise Customization", "desc": "Deep integration with your systems and long-term support" }
+      ]
+    },
+    "faq": {
+      "badge": "Like this open-source AI Agent builder?",
+      "badgeLink": "Star it on GitHub 🌟",
+      "badgeLinkUrl": "https://github.com/labring/FastGPT",
+      "title": "FAQ",
+      "subtitle": "Quick answers to common questions about FastGPT",
+      "viewMore": "View more →",
+      "viewMoreUrl": "/en/faq",
+      "items": [
+        { "title": "Can the open-source version be used commercially?", "content": "FastGPT allows commercial usage, such as serving as a backend service for other applications or as an application development platform for enterprises. However, when it comes to multi-tenant SaaS services or matters involving the LOGO and copyright information, you must contact the author to obtain a commercial license." },
+        { "title": "What document formats can be imported into the FastGPT knowledge base?", "content": "FastGPT supports importing documents in various formats, including Word, PDF, Excel, Markdown, and web links. It also enables syncing data from an entire website, automatically handling text preprocessing, vectorization, and QA splitting, which saves manual training time and improves efficiency." },
+        { "title": "Which models can be integrated with FastGPT?", "content": "As long as the API of the model you want to integrate aligns with the official OpenAI API, it can be used with FastGPT. You can utilize projects like One API to unify access to different models and provide an API that is compatible with the official OpenAI API." },
+        { "title": "What should I do if I encounter issues while using FastGPT?", "content": "If you come across any problems while using FastGPT, please join our community or forum, create a post, and reach out to us for assistance." }
       ]
     },
     "cta": {

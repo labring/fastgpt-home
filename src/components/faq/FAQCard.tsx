@@ -13,7 +13,6 @@ interface FAQCardProps {
 }
 
 export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardProps) {
-  // Create summary from answers (first 150 characters)
   const summary = data.Answers.substring(0, 150).trim() + '...';
 
   return (
@@ -21,25 +20,61 @@ export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardPr
       href={`/${langName}/faq/${id}`}
       className="group block h-full"
     >
-      <div className="h-full p-5 rounded-lg bg-card dark:bg-zinc-900 border border-border dark:border-zinc-800 hover:border-primary/50 dark:hover:border-primary/50 hover:bg-accent/50 dark:hover:bg-zinc-800/80 transition-all duration-200 hover:shadow-md dark:hover:shadow-xl dark:hover:shadow-primary/5">
-        {/* Category Badge */}
-        <div className="mb-3">
-          <span className="inline-block px-3 py-1 text-xs font-medium rounded-full bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary">
+      <div
+        className="h-full flex flex-col"
+        style={{
+          padding: 0,
+          borderRadius: 16
+        }}
+      >
+        <div className="mb-4">
+          <span
+            className="inline-block text-[12px] font-medium leading-[16px]"
+            style={{
+              padding: '4px 8px',
+              borderRadius: 1000,
+              backgroundColor: '#f7f8fa',
+              color: '#667085'
+            }}
+          >
             {data.Category}
           </span>
         </div>
 
-        {/* Question Title */}
-        <h3 className="text-lg font-semibold mb-3 line-clamp-2 text-foreground dark:text-zinc-100 group-hover:text-primary dark:group-hover:text-primary transition-colors">
+        <h3
+          title={data.Question}
+          className="text-[20px] font-normal mb-4 transition-colors cursor-default"
+          style={{
+            lineHeight: '32px',
+            height: 32,
+            color: '#020617',
+            letterSpacing: '-0.56px',
+            overflow: 'hidden',
+            textOverflow: 'ellipsis',
+            whiteSpace: 'nowrap'
+          }}
+        >
           {data.Question}
         </h3>
 
-        {/* Answer Summary */}
-        <p className="text-sm text-muted-foreground dark:text-zinc-400 line-clamp-3 mb-4">{summary}</p>
+        <p
+          className="text-[16px] mb-4"
+          style={{
+            lineHeight: '24px',
+            height: 48,
+            color: '#6d6d6d',
+            letterSpacing: '-0.16px',
+            overflow: 'hidden',
+            display: '-webkit-box',
+            WebkitLineClamp: 2,
+            WebkitBoxOrient: 'vertical'
+          }}
+        >
+          {summary}
+        </p>
 
-        {/* Read More Link */}
-        <div className="flex items-center gap-2 text-sm font-medium text-primary dark:text-primary group-hover:gap-3 transition-all">
-          <span>{locale?.readDetail || 'Read detail'}</span>
+        <div className="flex items-center gap-1 text-[16px] font-normal transition-all" style={{ color: '#3370ff' }}>
+          <span style={{ lineHeight: '24px', letterSpacing: '-0.16px' }}>{locale?.readDetail || '查看详情'}</span>
           <ArrowRight className="w-4 h-4" />
         </div>
       </div>

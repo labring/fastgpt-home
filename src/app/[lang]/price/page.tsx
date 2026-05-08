@@ -1,8 +1,11 @@
-import PFaq from '@/components/price/PFaq';
 import PPlan from '@/components/price/PPlan';
 import PTitle from '@/components/price/PTitle';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
+import Navbar from '@/components/home/Navbar';
+import HomeThemeFix from '@/components/home/HomeThemeFix';
+import GradientBlobs from '@/components/home/GradientBlobs';
+import FAQ from '@/components/home/FAQ';
 import { Metadata } from 'next';
 
 const titleMap: Record<string, string> = {
@@ -48,12 +51,25 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
   const dict = await getDictionary(langName);
 
   return (
-    <div className="flex flex-col items-center gap-10 pb-10">
-      <PTitle locale={dict.Pricing} />
+    <div className="home">
+      <HomeThemeFix />
+      <Navbar links={dict.links} t={dict.Home.navCta} />
 
-      <PPlan langName={langName} locale={dict.Pricing} />
+      <main className="pb-[80px] px-[32px] relative">
+        <GradientBlobs />
 
-      <PFaq langName={langName} />
+        <div className="w-full px-[32px] relative pt-[200px]" style={{ zIndex: 1, maxWidth: 1600, margin: '0 auto' }}>
+          <PTitle locale={dict.Pricing} />
+
+          <div className="mt-[120px]">
+            <PPlan langName={langName} locale={dict.Pricing} />
+          </div>
+
+          <div className="mt-[120px]">
+            <FAQ t={dict.Home.faq} />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }

@@ -94,12 +94,25 @@ export default async function FAQDetailPage({
           {/* Related FAQs */}
           {relatedFAQs.length > 0 && (
             <section className="pt-[120px] pb-[120px]">
-              <h2
-                className="text-center font-medium mb-16"
-                style={{ fontSize: 44, lineHeight: '56px', color: '#020617', letterSpacing: '-0.88px', maxWidth: 648, margin: '0 auto 64px' }}
-              >
-                {dict.FAQ?.relatedQuestions || '相关问题'}
-              </h2>
+              <div className="text-center flex flex-col items-center mb-16" style={{ rowGap: 24 }}>
+                <span
+                  className="inline-block rounded-full border bg-white/40 text-[12px] leading-[18px]"
+                  style={{
+                    padding: '6px 12px',
+                    borderColor: '#e5e7eb',
+                    boxShadow: '0 1px 4px 0 rgba(0,0,0,0.05)',
+                    color: 'rgb(71, 85, 105)'
+                  }}
+                >
+                  {dict.FAQ.badge}
+                </span>
+                <h2
+                  className="font-medium"
+                  style={{ fontSize: 44, lineHeight: '56px', color: '#020617', letterSpacing: '-0.88px', maxWidth: 648 }}
+                >
+                  {dict.FAQ?.relatedQuestions || '相关问题'}
+                </h2>
+              </div>
               <div className="mx-auto" style={{ maxWidth: 884 }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[80px]">
                   {relatedFAQs.map(([key, item]) => (

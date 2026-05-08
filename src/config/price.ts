@@ -4,7 +4,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'free',
       title: '免费版',
       price: 0,
-      content: '核心功能免费试用。30 天未登录，将会清空知识库。',
+      content: '核心功能免费试用',
       features: [
         // '100 AI 积分',
         100,
@@ -20,7 +20,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'basic',
       title: '基础版',
       price: 99,
-      content: '可解锁 FastGPT 完整功能',
+      content: '解锁 FastGPT 完整功能',
       features: [
         4000,
         '6000 组知识库索引',
@@ -37,7 +37,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'advanced',
       title: '高级版',
       price: 599,
-      content: '适合企业级的生产工具',
+      content: '适合企业级生产工具',
       features: [
         25000,
         '36000 组知识库索引',
@@ -55,7 +55,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
     {
       key: 'custom',
       title: '定制版',
-      price: '定制化计费',
+      price: '定制计费',
       content: '助力中大型企业构建核心竞争力',
       features: ['优先深度技术支持', '弹性资源配置', '安全可控', '专属客户经理']
     }
@@ -65,9 +65,8 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'free',
       title: 'Free Edition',
       price: 0,
-      content: 'Core features are free to try. The knowledge base will be cleared after 30 days of inactivity.',
+      content: 'Core features free to try',
       features: [
-        // '100 AI credits',
         100,
         '600 knowledge base indexes',
         '1 team member',
@@ -81,7 +80,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'basic',
       title: 'Basic Edition',
       price: 99,
-      content: 'Can unlock FastGPT full features',
+      content: 'Unlock FastGPT full features',
       features: [
         4000,
         '6000 knowledge base indexes',
@@ -98,7 +97,7 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       key: 'advanced',
       title: 'Advanced Edition',
       price: 599,
-      content: 'Suitable for enterprise-level production tools',
+      content: 'Suitable for enterprise-level production',
       features: [
         25000,
         '36000 knowledge base indexes',

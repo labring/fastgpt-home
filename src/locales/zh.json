@@ -42,6 +42,8 @@
     "title": "观看演示👇"
   },
   "Pricing": {
+    "badge": "定价",
+    "popular": "最受欢迎",
     "title": "定价",
     "title2": "允许被用于商业化",
     "description": "这是一个开源的、免费的 AI Agent 构建平台",

@@ -6,7 +6,8 @@ interface GradientBlobsProps {
   colors?: string[];
 }
 
-const defaultColors = ['#E8EB5E', '#9C5EEB'];
+const defaultColors = ['#F4F5A0', '#C9A8F5'];
+const defaultFade = ['85%', '70%'];
 
 const desktopBlobs = [
   { w: 620, h: 620, left: '15%', top: -160, x: [0, 80, 120, 40, -20, 0], y: [0, -20, 10, -15, 5, 0], s: [1, 1.05, 0.95, 1.08, 0.97, 1], dur: 10 },
@@ -20,6 +21,7 @@ const mobileBlobs = [
 
 export default function GradientBlobs({ colors = defaultColors }: GradientBlobsProps) {
   const getColor = (i: number) => colors[i % colors.length];
+  const getFade = (i: number) => (defaultFade[i % defaultFade.length]);
 
   return (
     <>
@@ -34,9 +36,9 @@ export default function GradientBlobs({ colors = defaultColors }: GradientBlobsP
             left: b.left,
             top: b.top,
             filter: 'blur(80px)',
-            opacity: 0.2,
+            opacity: 0.4,
             zIndex: 0,
-            background: `radial-gradient(circle, ${getColor(i)} 0%, ${getColor(i)}00 70%)`
+            background: `radial-gradient(circle, ${getColor(i)} 0%, ${getColor(i)}00 ${getFade(i)})`
           }}
           animate={{ x: b.x, y: b.y, scale: b.s }}
           transition={{ duration: b.dur, repeat: Infinity, ease: 'easeInOut' }}
@@ -54,9 +56,9 @@ export default function GradientBlobs({ colors = defaultColors }: GradientBlobsP
             ...(b.left ? { left: b.left } : { right: b.right }),
             top: b.top,
             filter: 'blur(80px)',
-            opacity: 0.2,
+            opacity: 0.4,
             zIndex: 0,
-            background: `radial-gradient(circle, ${getColor(i)} 0%, ${getColor(i)}00 70%)`
+            background: `radial-gradient(circle, ${getColor(i)} 0%, ${getColor(i)}00 ${getFade(i)})`
           }}
           animate={{ x: b.x, y: b.y, scale: b.s }}
           transition={{ duration: b.dur, repeat: Infinity, ease: 'easeInOut' }}

@@ -29,6 +29,7 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;
     localStorage.setItem('preferredLang', value);
+    document.cookie = `NEXT_LOCALE=${value};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
     let routeWithoutLang = pathname;
 
     if (lang) {

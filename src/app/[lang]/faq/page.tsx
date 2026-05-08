@@ -44,6 +44,25 @@ export default async function FAQPage({
         <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[200px]" style={{ zIndex: 1 }}>
           <div className="mb-12">
             <FadeIn className="text-center flex flex-col items-center" style={{ rowGap: 24 }}>
+              <span
+                className="inline-flex items-center gap-[12px] rounded-full border bg-white/40 text-[12px] leading-[18px]"
+                style={{
+                  padding: '6px 12px',
+                  borderColor: '#e5e7eb',
+                  boxShadow: '0 1px 4px 0 rgba(0,0,0,0.05)',
+                  color: 'rgb(71, 85, 105)'
+                }}
+              >
+                <span>{dict.Home.faq.badge}</span>
+                <a
+                  href={dict.Home.faq.badgeLinkUrl}
+                  target="_blank"
+                  rel="noopener noreferrer nofollow"
+                  className="inline-flex items-center gap-0.5 text-primary hover:text-primary-dark"
+                >
+                  {dict.Home.faq.badgeLink}
+                </a>
+              </span>
               <h2
                 className="
                   text-ink font-semibold

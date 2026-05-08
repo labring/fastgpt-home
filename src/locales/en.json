@@ -42,6 +42,8 @@
     "title": "Video Presentation"
   },
   "Pricing": {
+    "badge": "Pricing",
+    "popular": "Most Popular",
     "title": "Pricing",
     "title2": "Suitable for Commercial Use",
     "description": "FastGPT is an open-source and enterprise AI Agent builder.",

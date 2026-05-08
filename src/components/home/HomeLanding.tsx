@@ -27,7 +27,7 @@ export default function HomeLanding({
     <div className="home">
       <HomeThemeFix />
       <Navbar links={dict.links} t={t.navCta} />
-      <main>
+      <main className="m-0 p-0">
         <Hero stars={stars} t={t.hero}>
           <TrustedBy t={t.trustedBy} />
           <Stats stars={stars} t={t.stats} />

@@ -36,12 +36,12 @@ export default async function FAQPage({
     <div className="home">
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} />
-      <main className="pt-[80px] pb-[80px] px-[32px] relative">
+      <main className="pb-[80px] px-[32px] relative">
         {/* Background blobs layer */}
         <GradientBlobs />
 
         {/* Content layer */}
-        <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative" style={{ zIndex: 1 }}>
+        <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[200px]" style={{ zIndex: 1 }}>
           <div className="mb-12">
             <FadeIn className="text-center flex flex-col items-center" style={{ rowGap: 24 }}>
               <h2

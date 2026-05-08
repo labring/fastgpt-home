@@ -489,6 +489,8 @@ body {
   --home-primary-dark: #2563eb;
   --home-font-sans: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
   --home-font-display: "IBM Plex Sans", "Inter", "PingFang SC", sans-serif;
+  margin: 0;
+  padding: 0;
   font-family: var(--home-font-sans);
   color: var(--home-dark);
   background: #ffffff;
@@ -524,11 +526,15 @@ body {
 /* When the homepage is rendered, override the global dark body so overscroll
    bounce (iOS/Safari) and any gaps don't flash black. */
 html:has(.home) {
+  margin: 0 !important;
+  padding: 0 !important;
   background: #ffffff !important;
   color-scheme: light !important;
   background-image: none !important;
 }
 body:has(.home) {
+  margin: 0 !important;
+  padding: 0 !important;
   background: #ffffff !important;
   color: var(--home-dark);
   background-image: none !important;
@@ -581,4 +587,13 @@ body:has(.home) {
   33% { filter: blur(100px) hue-rotate(25deg); }
   66% { filter: blur(100px) hue-rotate(-15deg); }
   100% { filter: blur(100px) hue-rotate(0deg); }
+}
+
+/* Hero dashboard image fade-in */
+.hero-image-fade {
+  animation: heroImgFadeIn 1s ease 0.5s both;
+}
+@keyframes heroImgFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }

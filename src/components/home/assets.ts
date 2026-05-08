@@ -2,7 +2,7 @@ const CDN = 'https://static.step1.dev/tixzae/assets';
 const LOCAL = '/images/home';
 
 export const assets = {
-  heroDashboard: `${LOCAL}/hero/kv-border.png`,
+  heroDashboard: '/images/hero/zh/kv-border-stroke-bold.png',
   heroBg: `${LOCAL}/hero/bg.png`,
   trustLogos: [
     `${LOCAL}/trust/logo1.png`,

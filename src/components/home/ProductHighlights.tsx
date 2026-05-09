@@ -25,8 +25,8 @@ export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
   const features = t.items.map((it) => ({ ...it, image: imageByKey[it.key] }));
 
   return (
-    <section className="py-[80px] px-[32px] bg-white">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
+    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 32 }}>
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         <div className="w-full">
@@ -68,9 +68,9 @@ function FeatureCard({
     <motion.div
       whileHover={{ y: -4, boxShadow: '0 20px 40px -10px rgba(0,0,0,0.08)' }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
-      className="rounded-[16px] bg-white overflow-hidden h-full flex flex-col p-[8px] gap-[16px]"
+      className="rounded-[12px] md:rounded-[16px] bg-white overflow-hidden h-full flex flex-col p-[6px] md:p-[8px] gap-[12px] md:gap-[16px]"
     >
-      <div className="overflow-hidden bg-white rounded-[8px]">
+      <div className="overflow-hidden bg-white rounded-[6px] md:rounded-[8px]">
         <motion.img
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
@@ -79,7 +79,7 @@ function FeatureCard({
           className="w-full h-full object-contain"
         />
       </div>
-      <div className="pt-0 px-[16px] pb-[16px]">
+      <div className="pt-0 px-[12px] md:px-[16px] pb-[12px] md:pb-[16px]">
         <h5 className="t-feature-title mb-2">{title}</h5>
         <p className="t-card-desc" style={{ color: 'rgb(71, 85, 105)', opacity: 0.6 }}>{desc}</p>
       </div>

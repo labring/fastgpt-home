@@ -24,7 +24,7 @@ export default function HomeLanding({
 }) {
   const t = dict.Home;
   return (
-    <div className="home">
+    <div className="home overflow-x-hidden">
       <HomeThemeFix />
       <Navbar links={dict.links} t={t.navCta} />
       <main className="m-0 p-0">

@@ -15,8 +15,8 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
   const loopedLogos = [...logos, ...logos];
 
   return (
-    <div className="py-[80px] overflow-hidden">
-      <div className="max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[48px]">
+    <div className="py-[48px] md:py-[80px] overflow-hidden">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[32px] md:gap-[48px]">
         <p className="text-center text-ink-sub font-medium">{t.caption}</p>
         <div
           className="relative overflow-hidden"

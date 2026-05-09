@@ -56,8 +56,8 @@ export default function Solutions({ t }: { t: SolutionsT }) {
   const current = tabs[activeTab];
 
   return (
-    <section className="py-[80px] px-[32px] bg-white">
-      <div className="max-w-[min(92vw,960px)] md:max-w-[min(75vw,960px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
+    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
+      <div className="max-w-[min(92vw,960px)] md:max-w-[min(75vw,960px)] mx-auto flex flex-col" style={{ rowGap: 32 }}>
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         {/* Desktop (md+): tabs with active pill + image + CTA */}

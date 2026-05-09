@@ -28,13 +28,22 @@ const blobs = [
 ];
 
 const mobileBlobs = [
-  { w: 520, h: 520, left: '10%', top: -80, color: '#FBD0DF', x: [0, 60, 120, 20, -20, 0], y: [0, 20, -10, 30, 10, 0], s: [1, 1.15, 0.9, 1.1, 0.95, 1], dur: 14 },
-  { w: 540, h: 540, right: '10%', top: -100, color: '#D4D6FF', x: [0, -60, -100, -20, 20, 0], y: [0, 20, 40, -15, 30, 0], s: [1, 0.9, 1.2, 0.95, 1.1, 1], dur: 16 },
-  { w: 460, h: 460, left: '50%', top: 20, ml: -230, color: '#C6DBFF', x: [0, 60, -80, 40, -20, 0], y: [0, -20, -5, 15, -10, 0], s: [1, 1.1, 0.85, 1.2, 0.9, 1], dur: 18, delay: 1.5 },
+  { w: 520, h: 520, left: '10%', top: 120, color: '#FBD0DF', x: [0, 60, 120, 20, -20, 0], y: [0, 20, -10, 30, 10, 0], s: [1, 1.15, 0.9, 1.1, 0.95, 1], dur: 14 },
+  { w: 540, h: 540, right: '10%', top: 100, color: '#D4D6FF', x: [0, -60, -100, -20, 20, 0], y: [0, 20, 40, -15, 30, 0], s: [1, 0.9, 1.2, 0.95, 1.1, 1], dur: 16 },
+  { w: 460, h: 460, left: '50%', top: 200, ml: -230, color: '#C6DBFF', x: [0, 60, -80, 40, -20, 0], y: [0, -20, -5, 15, -10, 0], s: [1, 1.1, 0.85, 1.2, 0.9, 1], dur: 18, delay: 1.5 },
 ];
 
 export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    setIsMobile(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ['start start', 'end start']
@@ -65,7 +74,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative pt-[160px] px-[48px] pb-[48px] bg-white"
+      className="relative pt-[120px] px-[16px] pb-[48px] md:pt-[160px] md:px-[48px] md:pb-[48px] bg-white overflow-hidden"
     >
       {/* Desktop gradient blobs */}
       {blobs.map((b, i) => (
@@ -113,13 +122,13 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
       ))}
 
       {/* Main content column */}
-      <div className="relative flex flex-col gap-[50px]" style={{ zIndex: 1 }}>
+      <div className="relative flex flex-col gap-[32px] md:gap-[50px]" style={{ zIndex: 1 }}>
 
         {/* Text + image block (extra 32px horizontal padding) */}
-        <div className="px-[32px]">
+        <div className="px-[32px] md:px-[32px]">
 
           {/* Text content */}
-          <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[32px]">
+          <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px] md:gap-[32px]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -137,18 +146,18 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                 className="inline-flex items-center gap-0.5 text-[12px] text-primary hover:text-primary-dark leading-[18px]"
               >
                 {t.followUs}
-                <ArrowUpRight size={12} />
+                <ArrowUpRight size={14} />
               </a>
             </motion.div>
 
-            <div className="flex flex-col items-center gap-[24px]">
+            <div className="flex flex-col items-center gap-[24px] md:gap-[24px]">
               <div className="flex flex-col items-center">
                 <motion.p
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  style={{ fontFamily: "var(--home-font-display)", fontWeight: 400, color: 'rgb(78, 88, 130)' }}
-                  className="text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
+                  style={{ fontFamily: "var(--font-display)", fontWeight: 400, color: 'rgb(78, 88, 130)' }}
+                  className="text-[58px] leading-[38px] tracking-[-1.74px] mb-[16px] md:mb-0 md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
                 >
                   {t.brand}
                 </motion.p>
@@ -156,7 +165,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="text-ink text-[40px] leading-[52px] tracking-[-1.2px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
+                  className="text-ink text-[48px] leading-[62px] tracking-[-1.44px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
                 >
                   {t.title}
                 </motion.h1>
@@ -166,8 +175,8 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-                className="text-[18px] md:text-[18px] leading-[26px] md:leading-[32px] tracking-[-0.18px] md:tracking-[-0.18px] max-w-xl"
-                style={{ color: 'rgb(41, 47, 56)' }}
+                className="w-full text-[18px] md:text-[18px] leading-[26px] md:leading-[32px] tracking-[-0.18px] md:tracking-[-0.18px] max-w-xl"
+                style={{ color: '#4b5563' }}
               >
                 {t.subtitle}
               </motion.p>
@@ -177,18 +186,8 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
-              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-3 sm:gap-8"
+              className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-[32px] sm:gap-8"
             >
-              <motion.a
-                href={startUrl}
-                rel="noopener noreferrer nofollow"
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.97 }}
-                aria-label={t.trial}
-                className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-ink bg-btn-light-bg border border-hairline-soft tracking-[0.5px] backdrop-blur-sm hover:bg-white/80 transition-colors"
-              >
-                {t.trial}
-              </motion.a>
               <motion.a
                 href={CONSULT_URL}
                 target="_blank"
@@ -196,24 +195,35 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 aria-label={t.consult}
-                className="inline-flex items-center justify-center h-11 min-w-[128px] px-8 rounded-full text-[1rem] font-medium text-white bg-btn-dark border border-transparent tracking-[0.5px]"
+                className="inline-flex items-center justify-center h-11 w-full sm:w-auto sm:min-w-[128px] px-8 rounded-full text-[16px] sm:text-[1rem] font-medium text-white bg-btn-dark border border-transparent tracking-[0.5px]"
               >
                 {t.consult}
               </motion.a>
+              <motion.a
+                href={startUrl}
+                rel="noopener noreferrer nofollow"
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
+                aria-label={t.trial}
+                className="inline-flex items-center justify-center h-11 w-full sm:w-auto sm:min-w-[128px] px-8 rounded-full text-[16px] sm:text-[1rem] font-medium text-ink bg-btn-light-bg tracking-[0.5px] backdrop-blur-sm hover:bg-white/80 transition-colors"
+                style={{ border: '1px solid rgb(209, 213, 219)' }}
+              >
+                {t.trial}
+              </motion.a>
             </motion.div>
-          </div>
 
-          {/* Dashboard image */}
-          <div
-            className="relative mx-auto mt-[80px]"
-            style={{ perspective: 1900 }}
-          >
-            <motion.div
-              style={{ rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
-              className="origin-bottom hero-image-fade"
+            {/* Dashboard image */}
+            <div
+              className="relative mx-auto mt-0 md:mt-[80px]"
+              style={{ perspective: 1900 }}
             >
-              <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
-            </motion.div>
+              <motion.div
+                style={isMobile ? {} : { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
+                className="hero-image-fade origin-bottom"
+              >
+                <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
+              </motion.div>
+            </div>
           </div>
 
         </div>{/* end text + image block */}

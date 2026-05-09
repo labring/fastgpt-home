@@ -30,8 +30,8 @@ export default function Services({ t }: { t: ServicesT }) {
   const services = t.items.map((it) => ({ ...it, icon: svgByKey[it.key] }));
 
   return (
-    <section className="py-[80px] px-[32px] bg-white">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 80 }}>
+    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-[60px_24px]" initialDelay={0.5}>

@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
@@ -40,10 +39,10 @@ export default function Navbar({
 
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50">
+      <nav className="fixed top-0 left-0 right-0 z-50 overflow-x-hidden">
         {/* Blur background — separate layer so backdrop-filter doesn't affect content rendering */}
         <div className="absolute inset-0 backdrop-blur-[10px] bg-[rgba(255,255,255,0.05)] border-b border-hairline-soft" />
-        <div className="relative px-[32px] py-[16px] flex items-center justify-between max-w-[min(100vw,1440px)] mx-auto">
+        <div className="relative px-[16px] md:px-[32px] py-[12px] md:py-[16px] flex items-center justify-between w-full max-w-[1440px] mx-auto">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-1" aria-label="FastGPT Home">
               <img src="/logo-nav.svg" width={22} height={22} alt="FastGPT" draggable={false} />
@@ -91,7 +90,11 @@ export default function Navbar({
             onClick={() => setMobileOpen(!mobileOpen)}
             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           >
-            {mobileOpen ? <X size={22} /> : <Menu size={22} />}
+            {mobileOpen ? (
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="5" y1="5" x2="17" y2="17"/><line x1="17" y1="5" x2="5" y2="17"/></svg>
+            ) : (
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16.5C12 15.9477 12.4477 15.5 13 15.5H31C31.5523 15.5 32 15.9477 32 16.5V16.5C32 17.0523 31.5523 17.5 31 17.5H13C12.4477 17.5 12 17.0523 12 16.5V16.5Z" fill="#999999"/><path d="M12 27.5C12 26.9477 12.4477 26.5 13 26.5H31C31.5523 26.5 32 26.9477 32 27.5V27.5C32 28.0523 31.5523 28.5 31 28.5H13C12.4477 28.5 12 28.0523 12 27.5V27.5Z" fill="#999999"/></svg>
+            )}
           </button>
         </div>
       </nav>

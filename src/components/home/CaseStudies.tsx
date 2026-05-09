@@ -127,9 +127,9 @@ export default function CaseStudies({ t }: { t: CasesT }) {
   };
 
   return (
-    <section className="py-[80px] px-[32px] bg-white overflow-hidden">
+    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white overflow-hidden">
       <IconDefs />
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-8 md:gap-12">
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         <FadeIn delay={0.5}>
@@ -146,7 +146,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
           onTouchEnd={() => onPointerUp()}
         >
           <motion.div
-            className="h-[520px] md:h-[540px] flex items-center justify-center"
+            className="h-[460px] md:h-[540px] flex items-center justify-center"
             style={{ perspective: 1400, x: dragX }}
           >
             {cases.map((c, i) => {
@@ -170,7 +170,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
                     rotateY: isCenter ? 0 : offset > 0 ? 12 : -12
                   }}
                   transition={{ type: 'spring', stiffness: 260, damping: 30, mass: 0.8 }}
-                  className="absolute w-[90vw] max-w-[360px] md:w-[650px] md:max-w-none"
+                  className="absolute w-[82vw] max-w-[320px] md:w-[650px] md:max-w-none"
                   style={{ pointerEvents: isCenter ? 'auto' : 'none' }}
                 >
                   <CaseCard data={c} learnMore={t.learnMore} />
@@ -205,16 +205,13 @@ export default function CaseStudies({ t }: { t: CasesT }) {
 function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
   return (
     <div
-      className="flex flex-col"
+      className="flex flex-col rounded-2xl md:rounded-3xl p-4 md:p-6 gap-4 md:gap-6"
       style={{
-        borderRadius: 24,
         border: '1px solid #e2e8f0',
-        backgroundColor: 'rgb(248, 250, 252)',
-        padding: 24,
-        rowGap: 24
+        backgroundColor: 'rgb(248, 250, 252)'
       }}
     >
-      <div className="relative overflow-hidden" style={{ borderRadius: 16, height: 200 }}>
+      <div className="relative overflow-hidden rounded-xl md:rounded-2xl h-[140px] md:h-[200px]">
         <img
           src={data.image}
           alt=""
@@ -224,15 +221,12 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
       </div>
 
       <div
-        className="bg-white flex flex-col"
-        style={{ borderRadius: 16, padding: 16, rowGap: 24 }}
+        className="bg-white flex flex-col rounded-xl md:rounded-2xl p-3 md:p-4 gap-4 md:gap-6"
       >
         <h3
+          className="text-[20px] md:text-[28px] leading-7 md:leading-9 tracking-[-0.4px] md:tracking-[-0.56px]"
           style={{
-            fontSize: 28,
             fontWeight: 400,
-            lineHeight: '36px',
-            letterSpacing: '-0.56px',
             color: 'rgb(2, 6, 17)'
           }}
         >
@@ -240,39 +234,32 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
         </h3>
 
         <div
-          className="grid grid-cols-3"
-          style={{
-            columnGap: 24,
-            padding: '16px 0'
-          }}
+          className="grid grid-cols-3 gap-x-3 md:gap-x-6 py-3 md:py-4"
         >
           {data.metrics.map((m, idx) => (
             <div
               key={m.label}
-              className="flex flex-col"
+              className="flex flex-col gap-1.5 md:gap-2.5"
               style={{
-                rowGap: 10,
                 borderRight: idx < 2 ? '1px solid rgba(226, 232, 240, 0.5)' : 'none',
-                paddingRight: idx < 2 ? 24 : 0,
-                paddingLeft: idx > 0 ? 24 : 0
+                paddingRight: idx < 2 ? 12 : 0,
+                paddingLeft: idx > 0 ? 12 : 0
               }}
             >
               <div
+                className="text-[14px] md:text-lg leading-5 md:leading-[26px]"
                 style={{
-                  fontSize: 18,
                   fontWeight: 500,
-                  lineHeight: '26px',
                   color: 'rgb(2, 6, 23)'
                 }}
               >
                 {m.value}
               </div>
-              <div className="flex items-center" style={{ gap: 10 }}>
+              <div className="flex items-center gap-1 md:gap-2.5">
                 <span
+                  className="text-[11px] md:text-[13px] leading-4 md:leading-5"
                   style={{
-                    fontSize: 13,
                     fontWeight: 400,
-                    lineHeight: '20px',
                     color: 'rgb(71, 85, 105)'
                   }}
                 >
@@ -288,13 +275,9 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
           href={CONSULT_URL}
           target="_blank"
           rel="noopener noreferrer nofollow"
-          className="inline-flex items-center justify-center self-start transition-colors"
+          className="inline-flex items-center justify-center self-start transition-colors h-9 md:h-[46px] px-3 md:px-4 rounded-full text-[13px] md:text-base"
           style={{
-            height: 46,
-            padding: '0 16px',
-            borderRadius: 999,
             border: '1px solid #d3d4d4',
-            fontSize: 16,
             fontWeight: 500,
             color: 'rgb(2, 6, 23)',
             background: 'linear-gradient(#fff 0%, #f5f6f7 100%)'

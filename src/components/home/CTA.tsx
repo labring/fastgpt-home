@@ -46,11 +46,11 @@ export default function CTA({ t }: { t: CTAT }) {
   }, [globeReady]);
 
   return (
-    <section className="py-14 md:py-20 bg-light-bg">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto px-4 md:px-6">
+    <section className="py-8 md:py-20 bg-light-bg">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto px-[16px] md:px-6">
         <FadeIn>
           <div
-            className="relative overflow-hidden bg-white min-h-[560px] md:h-[610px] md:min-h-0"
+            className="relative overflow-hidden bg-white min-h-[400px] md:h-[610px] md:min-h-0"
             style={{
               borderRadius: 24,
               boxShadow:
@@ -67,7 +67,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
-                  className="m-0 text-ink text-[28px] md:text-[36px] font-semibold leading-[36px] md:leading-[48px] tracking-[-0.56px] md:tracking-[-0.72px]"
+                  className="m-0 text-ink text-[22px] md:text-[36px] font-semibold leading-[30px] md:leading-[48px] tracking-[-0.44px] md:tracking-[-0.72px]"
                 >
                   {t.brand}
                   <br />
@@ -78,7 +78,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ duration: 0.6, delay: 0.15 }}
-                  className="m-0 text-ink-sub text-[20px] font-normal leading-[32px] tracking-[-0.2px]"
+                  className="m-0 text-ink-sub text-[16px] md:text-[20px] font-normal leading-[26px] md:leading-[32px] tracking-[-0.16px] md:tracking-[-0.2px]"
                 >
                   {t.subtitle}
                 </motion.p>
@@ -97,7 +97,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.trial}
-                  className="inline-flex items-center justify-center h-11 px-8 rounded-[99px] text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
+                  className="inline-flex items-center justify-center h-10 md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
                 >
                   {t.trial}
                 </motion.a>
@@ -108,7 +108,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.consult}
-                  className="inline-flex items-center justify-center h-11 px-8 rounded-[99px] text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
+                  className="inline-flex items-center justify-center h-10 md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
                 >
                   {t.consult}
                 </motion.a>
@@ -122,7 +122,7 @@ export default function CTA({ t }: { t: CTAT }) {
             <div
               ref={globeWrapRef}
               className="
-                absolute z-0 left-1/5 -translate-x-1/2 -bottom-[200px] w-[440px] h-[440px]
+                absolute z-0 left-1/5 -translate-x-1/2 -bottom-[240px] w-[320px] h-[320px]
                 md:translate-x-0 md:left-[49%] md:right-[-160px] md:top-[48px] md:bottom-auto md:w-[880px] md:h-[880px] md:z-auto
                 pointer-events-none md:pointer-events-auto
                 transition-opacity duration-700 ease-out

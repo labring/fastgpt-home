@@ -67,8 +67,8 @@ export default function FAQ({ t }: { t: FaqT }) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section className="py-[80px] px-[32px] bg-white">
-      <div className="max-w-[min(92vw,800px)] md:max-w-[min(50vw,800px)] mx-auto flex flex-col" style={{ rowGap: 64 }}>
+    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
+      <div className="max-w-[min(92vw,800px)] md:max-w-[min(50vw,800px)] mx-auto flex flex-col" style={{ rowGap: 40 }}>
         <FadeIn className="text-center flex flex-col items-center" style={{ rowGap: 24 }}>
           <span
             className="inline-flex items-center gap-[12px] rounded-full border bg-white/40 text-[12px] leading-[18px]"
@@ -101,7 +101,7 @@ export default function FAQ({ t }: { t: FaqT }) {
 
         <FadeIn delay={0.5}>
           <div className="flex flex-col" style={{ rowGap: 24 }}>
-            <div className="bg-white" style={{ padding: '0 24px' }}>
+            <div className="bg-white" style={{ padding: '0 16px' }}>
               {t.items.map((item, i) => (
                 <AccordionItem
                   key={i}

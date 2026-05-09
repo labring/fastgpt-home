@@ -13,6 +13,7 @@ import '@/styles/plyr.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
+import { IBM_Plex_Sans as FontDisplay } from 'next/font/google';
 import GoogleAnalytics from './GoogleAnalytics';
 
 const fontSans = FontSans({
@@ -20,6 +21,13 @@ const fontSans = FontSans({
   variable: '--font-sans',
   display: 'swap',
   preload: true
+});
+
+const fontDisplay = FontDisplay({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  variable: '--font-display',
+  display: 'swap'
 });
 
 export const metadata = {
@@ -56,7 +64,7 @@ export default function RootLayout({
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />
       </head>
-      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
+      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable, fontDisplay.variable)}>
         <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
           {children}
           {/* <Footer /> */}

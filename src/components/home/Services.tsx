@@ -30,30 +30,34 @@ export default function Services({ t }: { t: ServicesT }) {
   const services = t.items.map((it) => ({ ...it, icon: svgByKey[it.key] }));
 
   return (
-    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[48px] md:gap-[88px]">
-        <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
+    <section className="p-0 md:py-[80px] md:px-[32px] bg-white">
+      <div className="w-full md:max-w-[min(85vw,1300px)] md:mx-auto flex flex-col gap-0 md:gap-[88px]">
+        <div className="py-[48px] px-[16px] md:p-0">
+          <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
+        </div>
 
-        <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-[60px_24px]" initialDelay={0.5}>
-          {services.map((s) => (
-            <StaggerItem key={s.title}>
-              <motion.div
-                whileHover={{ y: -4 }}
-                transition={{ duration: 0.3 }}
-                className="flex flex-col items-center text-center"
-                style={{ rowGap: 24 }}
-              >
-                <div className="w-12 h-12 rounded-lg bg-card-bg flex items-center justify-center flex-shrink-0">
-                  {s.icon}
-                </div>
-                <div className="flex flex-col items-center" style={{ rowGap: 16 }}>
-                  <h4 className="t-card-title">{s.title}</h4>
-                  <p className="t-card-desc">{s.desc}</p>
-                </div>
-              </motion.div>
-            </StaggerItem>
-          ))}
-        </StaggerContainer>
+        <div className="py-[80px] px-[16px] md:p-0">
+          <StaggerContainer className="grid grid-cols-2 gap-[32px] md:gap-[60px_24px]" initialDelay={0.5}>
+            {services.map((s) => (
+              <StaggerItem key={s.title}>
+                <motion.div
+                  whileHover={{ y: -4 }}
+                  transition={{ duration: 0.3 }}
+                  className="flex flex-col items-center text-center"
+                  style={{ rowGap: 24 }}
+                >
+                  <div className="w-12 h-12 rounded-lg bg-card-bg flex items-center justify-center flex-shrink-0">
+                    {s.icon}
+                  </div>
+                  <div className="flex flex-col items-center" style={{ rowGap: 16 }}>
+                    <h4 className="t-card-title">{s.title}</h4>
+                    <p className="t-card-desc">{s.desc}</p>
+                  </div>
+                </motion.div>
+              </StaggerItem>
+            ))}
+          </StaggerContainer>
+        </div>
       </div>
     </section>
   );

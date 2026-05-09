@@ -504,6 +504,10 @@ body {
 .home h1, .home h2, .home h3, .home h4, .home h5, .home p, .home span { overflow-wrap: break-word; }
 .home .t-card-title { font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: -0.4px; color: var(--home-dark); }
 .home .t-card-desc { font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.16px; color: var(--home-secondary); }
+@media (max-width: 767px) {
+  .home .t-card-title { font-size: 16px; line-height: 24px; }
+  .home .t-card-desc { font-size: 12px; line-height: 18px; }
+}
 .home .t-feature-title { font-size: 16px; font-weight: 600; line-height: 24px; letter-spacing: -0.32px; color: var(--home-secondary); }
 
 /* Case carousel: perspective only on desktop */

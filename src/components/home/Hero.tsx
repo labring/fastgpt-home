@@ -187,6 +187,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-[32px] sm:gap-8"
+              data-hero-cta
             >
               <motion.a
                 href={CONSULT_URL}

@@ -25,6 +25,7 @@ export default function Navbar({
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(false);
+  const [hideNavbar, setHideNavbar] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
   const startUrl = useStartUrl();
@@ -70,9 +71,41 @@ export default function Navbar({
     };
   }, []);
 
+  // Mobile: hide navbar when CTA section is visible on screen
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 767px)');
+    if (!mq.matches) return;
+
+    let obs: IntersectionObserver | null = null;
+    let timer: ReturnType<typeof setInterval>;
+
+    const tryObserve = () => {
+      const ctaSection = document.querySelector('[data-cta-section]');
+      if (!ctaSection) return false;
+      obs = new IntersectionObserver(
+        ([entry]) => setHideNavbar(entry.isIntersecting),
+        { threshold: 0 }
+      );
+      obs.observe(ctaSection);
+      return true;
+    };
+
+    if (!tryObserve()) {
+      timer = setInterval(() => {
+        if (tryObserve()) clearInterval(timer);
+      }, 200);
+    }
+
+    return () => {
+      obs?.disconnect();
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 md:overflow-visible overflow-x-hidden">
+      <nav className={`fixed top-0 left-0 right-0 z-50 md:overflow-visible overflow-x-hidden transition-transform duration-300 ${hideNavbar ? '-translate-y-full' : 'translate-y-0'}`}>
         {/* Blur background — separate layer so backdrop-filter doesn't affect content rendering */}
         <div className="absolute inset-0 backdrop-blur-[10px] bg-[rgba(255,255,255,0.05)] border-b border-hairline-soft" />
         <div className="relative h-[64px] md:h-auto px-[16px] md:px-[32px] py-0 md:py-[16px] flex items-center justify-between w-full max-w-[1440px] mx-auto">

@@ -46,11 +46,11 @@ export default function CTA({ t }: { t: CTAT }) {
   }, [globeReady]);
 
   return (
-    <section className="py-8 md:py-[64px] md:px-[48px] bg-light-bg">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[1280px] mx-auto px-[16px] md:px-0">
+    <section data-cta-section className="py-[32px] px-[16px] md:py-[64px] md:px-[48px] bg-light-bg">
+      <div className="mx-auto md:max-w-[1280px] md:px-0">
         <FadeIn>
           <div
-            className="relative overflow-hidden bg-white min-h-[400px] md:h-[610px] md:min-h-0"
+            className="relative overflow-hidden bg-white h-[610px] md:h-[610px]"
             style={{
               borderRadius: 24,
               boxShadow:
@@ -60,8 +60,8 @@ export default function CTA({ t }: { t: CTAT }) {
             {/* Details block: absolute on desktop (anchored bottom-left); on
                 mobile flows in normal document order. Lifted to z-10 so the
                 buttons always render above the globe corner peek on mobile. */}
-            <div className="relative z-10 md:absolute md:left-8 md:top-[165px] flex flex-col gap-8 md:gap-[32px] p-6 md:p-0 w-full md:w-[min(46%,520px)]">
-              <div className="flex flex-col" style={{ rowGap: 24 }}>
+            <div className="relative z-10 md:absolute md:left-8 md:top-[165px] flex flex-col gap-[32px] md:gap-[32px] p-6 md:p-0 w-full md:w-[min(46%,520px)]">
+              <div className="flex flex-col" style={{ rowGap: 8 }}>
                 <motion.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
@@ -89,7 +89,7 @@ export default function CTA({ t }: { t: CTAT }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8"
+                className="flex flex-row items-stretch md:items-center gap-[32px] md:gap-8 w-full"
               >
                 <motion.a
                   href={startUrl}
@@ -97,7 +97,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.trial}
-                  className="inline-flex items-center justify-center h-10 md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
+                  className="flex-1 md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
                 >
                   {t.trial}
                 </motion.a>
@@ -108,7 +108,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.consult}
-                  className="inline-flex items-center justify-center h-10 md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
+                  className="flex-1 md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
                 >
                   {t.consult}
                 </motion.a>
@@ -122,8 +122,8 @@ export default function CTA({ t }: { t: CTAT }) {
             <div
               ref={globeWrapRef}
               className="
-                absolute z-0 left-1/5 -translate-x-1/2 -bottom-[240px] w-[320px] h-[320px]
-                md:translate-x-0 md:left-[53%] md:right-[-160px] md:top-[160px] md:bottom-auto md:w-[760px] md:h-[760px] md:z-auto
+                absolute z-0 -right-[220px] -bottom-[180px] w-[560px] h-[560px]
+                md:left-[53%] md:right-[-160px] md:top-[160px] md:bottom-auto md:w-[760px] md:h-[760px] md:z-auto
                 pointer-events-none md:pointer-events-auto
                 transition-opacity duration-700 ease-out
               "

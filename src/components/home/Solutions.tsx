@@ -56,9 +56,11 @@ export default function Solutions({ t }: { t: SolutionsT }) {
   const current = tabs[activeTab];
 
   return (
-    <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
+    <section className="py-[48px] px-[8px] md:py-[80px] md:px-[32px] bg-white">
       <div className="max-w-[min(92vw,960px)] md:max-w-[min(75vw,960px)] mx-auto flex flex-col" style={{ rowGap: 32 }}>
-        <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
+        <div className="px-[16px] md:px-0">
+          <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
+        </div>
 
         {/* Desktop (md+): tabs with active pill + image + CTA */}
         <FadeIn delay={0.5} className="hidden md:block">
@@ -199,11 +201,11 @@ export default function Solutions({ t }: { t: SolutionsT }) {
                     draggable={false}
                     loading="lazy"
                   />
-                  <div className="flex flex-col gap-2">
-                    <h4 className="text-ink text-[20px] font-semibold leading-[28px] tracking-[-0.4px]">
+                  <div className="flex flex-col gap-2 px-[8px]">
+                    <h4 className="text-[16px] font-semibold leading-[24px] tracking-[-0.32px]" style={{ color: '#475569' }}>
                       {item.title}
                     </h4>
-                    <p className="text-ink-sub text-[16px] leading-[24px] tracking-[-0.16px]">
+                    <p className="text-[16px] leading-[24px] tracking-[-0.16px]" style={{ color: '#475569', opacity: 0.6 }}>
                       {item.desc}
                     </p>
                   </div>

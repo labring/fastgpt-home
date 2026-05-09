@@ -15,7 +15,7 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
   const loopedLogos = [...logos, ...logos];
 
   return (
-    <div className="py-[48px] md:py-[80px] overflow-hidden">
+    <div className="pt-[48px] pb-[96px] md:py-[80px] overflow-hidden">
       <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[32px] md:gap-[48px]">
         <p className="text-center text-ink-sub font-medium">{t.caption}</p>
         <div
@@ -42,7 +42,7 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
                   height: logo.height,
                   flexShrink: 0
                 }}
-                className="object-contain select-none origin-center scale-75 md:scale-100"
+                className="object-contain select-none origin-center scale-90 md:scale-100"
                 draggable={false}
               />
             ))}

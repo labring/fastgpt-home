@@ -41,10 +41,10 @@ export default function SectionHeader({
       {subtitle && (
         <p
           className="
-            text-[15px] leading-[24px] tracking-[-0.15px]
+            text-[16px] leading-[24px] tracking-[-0.16px]
             md:text-[20px] md:leading-[32px] md:tracking-[-0.2px]
           "
-          style={{ color: '#292f38' }}
+          style={{ color: '#475569' }}
         >
           {subtitle}
         </p>

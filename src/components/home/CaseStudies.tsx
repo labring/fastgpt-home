@@ -146,8 +146,8 @@ export default function CaseStudies({ t }: { t: CasesT }) {
           onTouchEnd={() => onPointerUp()}
         >
           <motion.div
-            className="h-[460px] md:h-[540px] flex items-center justify-center"
-            style={{ perspective: 1400, x: dragX }}
+            className="h-[380px] md:h-[540px] flex items-start md:items-center justify-center case-perspective"
+            style={{ x: dragX }}
           >
             {cases.map((c, i) => {
               let offset = i - index;
@@ -157,7 +157,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
               const isAdjacent = Math.abs(offset) === 1;
               const isVisible = isCenter || isAdjacent;
               const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-              const baseX = isMobile ? offset * 360 : offset * 700;
+              const baseX = isMobile ? offset * 340 : offset * 660;
               return (
                 <motion.div
                   key={i}
@@ -205,23 +205,23 @@ export default function CaseStudies({ t }: { t: CasesT }) {
 function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
   return (
     <div
-      className="flex flex-col rounded-2xl md:rounded-3xl p-4 md:p-6 gap-4 md:gap-6"
+      className="flex flex-col rounded-2xl md:rounded-3xl p-4 md:p-6 gap-4 md:gap-6 overflow-hidden"
       style={{
         border: '1px solid #e2e8f0',
         backgroundColor: 'rgb(248, 250, 252)'
       }}
     >
-      <div className="relative overflow-hidden rounded-xl md:rounded-2xl h-[140px] md:h-[200px]">
+      <div className="relative overflow-hidden rounded-none md:rounded-2xl h-auto md:h-[200px]">
         <img
           src={data.image}
           alt=""
-          className="w-full h-full object-cover block select-none"
+          className="w-full h-full block select-none object-contain md:object-cover"
           draggable={false}
         />
       </div>
 
       <div
-        className="bg-white flex flex-col rounded-xl md:rounded-2xl p-3 md:p-4 gap-4 md:gap-6"
+        className="bg-white flex flex-col rounded-xl md:rounded-2xl p-3 md:p-4 gap-4 md:gap-6 md:justify-between"
       >
         <h3
           className="text-[20px] md:text-[28px] leading-7 md:leading-9 tracking-[-0.4px] md:tracking-[-0.56px]"
@@ -246,16 +246,19 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
                 paddingLeft: idx > 0 ? 12 : 0
               }}
             >
-              <div
-                className="text-[14px] md:text-lg leading-5 md:leading-[26px]"
-                style={{
-                  fontWeight: 500,
-                  color: 'rgb(2, 6, 23)'
-                }}
-              >
-                {m.value}
+              <div className="flex items-center gap-1 md:gap-2">
+                <span
+                  className={`${m.value.length > 8 ? 'text-[9px] leading-3' : 'text-[12px] leading-4'} md:text-lg md:leading-[26px]`}
+                  style={{
+                    fontWeight: 500,
+                    color: 'rgb(2, 6, 23)'
+                  }}
+                >
+                  {m.value}
+                </span>
+                <span className="hidden md:inline-block"><MetricIconSvg kind={m.icon} size={20} /></span>
               </div>
-              <div className="flex items-center gap-1 md:gap-2.5">
+              <div className="flex items-center md:items-start gap-1 md:gap-2.5">
                 <span
                   className="text-[11px] md:text-[13px] leading-4 md:leading-5"
                   style={{
@@ -265,7 +268,6 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
                 >
                   {m.label}
                 </span>
-                <MetricIconSvg kind={m.icon} size={20} />
               </div>
             </div>
           ))}

@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
@@ -24,6 +24,7 @@ export default function Navbar({
   t: NavCta;
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [showMobileCta, setShowMobileCta] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
   const startUrl = useStartUrl();
@@ -37,12 +38,44 @@ export default function Navbar({
     };
   }, [mobileOpen]);
 
+  // Mobile: show CTA only after hero buttons scroll out of viewport
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    const mq = window.matchMedia('(max-width: 767px)');
+    if (!mq.matches) return;
+
+    let obs: IntersectionObserver | null = null;
+    let timer: ReturnType<typeof setInterval>;
+
+    const tryObserve = () => {
+      const heroBtns = document.querySelector('[data-hero-cta]');
+      if (!heroBtns) return false;
+      obs = new IntersectionObserver(
+        ([entry]) => setShowMobileCta(!entry.isIntersecting),
+        { threshold: 0 }
+      );
+      obs.observe(heroBtns);
+      return true;
+    };
+
+    if (!tryObserve()) {
+      timer = setInterval(() => {
+        if (tryObserve()) clearInterval(timer);
+      }, 200);
+    }
+
+    return () => {
+      obs?.disconnect();
+      clearInterval(timer);
+    };
+  }, []);
+
   return (
     <>
-      <nav className="fixed top-0 left-0 right-0 z-50 overflow-x-hidden">
+      <nav className="fixed top-0 left-0 right-0 z-50 md:overflow-visible overflow-x-hidden">
         {/* Blur background — separate layer so backdrop-filter doesn't affect content rendering */}
         <div className="absolute inset-0 backdrop-blur-[10px] bg-[rgba(255,255,255,0.05)] border-b border-hairline-soft" />
-        <div className="relative px-[16px] md:px-[32px] py-[12px] md:py-[16px] flex items-center justify-between w-full max-w-[1440px] mx-auto">
+        <div className="relative h-[64px] md:h-auto px-[16px] md:px-[32px] py-0 md:py-[16px] flex items-center justify-between w-full max-w-[1440px] mx-auto">
           <div className="flex items-center gap-8">
             <Link href="/" className="flex items-center gap-1" aria-label="FastGPT Home">
               <img src="/logo-nav.svg" width={22} height={22} alt="FastGPT" draggable={false} />
@@ -85,17 +118,28 @@ export default function Navbar({
             </a>
           </div>
 
-          <button
-            className="md:hidden p-2 text-ink relative z-[60]"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
-          >
-            {mobileOpen ? (
-              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="5" y1="5" x2="17" y2="17"/><line x1="17" y1="5" x2="5" y2="17"/></svg>
-            ) : (
-              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16.5C12 15.9477 12.4477 15.5 13 15.5H31C31.5523 15.5 32 15.9477 32 16.5V16.5C32 17.0523 31.5523 17.5 31 17.5H13C12.4477 17.5 12 17.0523 12 16.5V16.5Z" fill="#999999"/><path d="M12 27.5C12 26.9477 12.4477 26.5 13 26.5H31C31.5523 26.5 32 26.9477 32 27.5V27.5C32 28.0523 31.5523 28.5 31 28.5H13C12.4477 28.5 12 28.0523 12 27.5V27.5Z" fill="#999999"/></svg>
-            )}
-          </button>
+          <div className="flex items-center gap-3 md:hidden">
+            <a
+              href={CONSULT_URL}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              aria-label={t.consult}
+              className={`px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark transition-opacity duration-300 ${showMobileCta ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+            >
+              {t.consult}
+            </a>
+            <button
+              className="p-2 text-ink relative z-[60]"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
+            >
+              {mobileOpen ? (
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"><line x1="5" y1="5" x2="17" y2="17"/><line x1="17" y1="5" x2="5" y2="17"/></svg>
+              ) : (
+                <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 16.5C12 15.9477 12.4477 15.5 13 15.5H31C31.5523 15.5 32 15.9477 32 16.5V16.5C32 17.0523 31.5523 17.5 31 17.5H13C12.4477 17.5 12 17.0523 12 16.5V16.5Z" fill="#999999"/><path d="M12 27.5C12 26.9477 12.4477 26.5 13 26.5H31C31.5523 26.5 32 26.9477 32 27.5V27.5C32 28.0523 31.5523 28.5 31 28.5H13C12.4477 28.5 12 28.0523 12 27.5V27.5Z" fill="#999999"/></svg>
+              )}
+            </button>
+          </div>
         </div>
       </nav>
 

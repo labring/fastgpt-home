@@ -31,7 +31,7 @@ export default function Services({ t }: { t: ServicesT }) {
 
   return (
     <section className="py-[48px] px-[16px] md:py-[80px] md:px-[32px] bg-white">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col" style={{ rowGap: 48 }}>
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-[48px] md:gap-[88px]">
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
         <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 gap-[60px_24px]" initialDelay={0.5}>

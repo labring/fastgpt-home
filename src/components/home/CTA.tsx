@@ -46,8 +46,8 @@ export default function CTA({ t }: { t: CTAT }) {
   }, [globeReady]);
 
   return (
-    <section className="py-8 md:py-20 bg-light-bg">
-      <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto px-[16px] md:px-6">
+    <section className="py-8 md:py-[64px] md:px-[48px] bg-light-bg">
+      <div className="max-w-[min(92vw,1300px)] md:max-w-[1280px] mx-auto px-[16px] md:px-0">
         <FadeIn>
           <div
             className="relative overflow-hidden bg-white min-h-[400px] md:h-[610px] md:min-h-0"
@@ -123,7 +123,7 @@ export default function CTA({ t }: { t: CTAT }) {
               ref={globeWrapRef}
               className="
                 absolute z-0 left-1/5 -translate-x-1/2 -bottom-[240px] w-[320px] h-[320px]
-                md:translate-x-0 md:left-[49%] md:right-[-160px] md:top-[48px] md:bottom-auto md:w-[880px] md:h-[880px] md:z-auto
+                md:translate-x-0 md:left-[53%] md:right-[-160px] md:top-[160px] md:bottom-auto md:w-[760px] md:h-[760px] md:z-auto
                 pointer-events-none md:pointer-events-auto
                 transition-opacity duration-700 ease-out
               "

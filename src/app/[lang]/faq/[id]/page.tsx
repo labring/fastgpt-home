@@ -6,6 +6,7 @@ import { faqLocaleCodes } from '@/lib/locales';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
+import FaqLocalePreserver from '@/components/faq/FaqLocalePreserver';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
@@ -36,6 +37,7 @@ export default async function FAQDetailPage({
 
   return (
     <div className="home overflow-x-hidden">
+      <FaqLocalePreserver />
       <BreadcrumbJsonLd
         items={[
           { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}/${langName}` },

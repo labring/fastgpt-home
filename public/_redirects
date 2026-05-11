@@ -1,12 +1,6 @@
-/ja/faq /en/faq 200
 /ja/faq/* /en/faq/:splat 200
-/ar/faq /en/faq 200
 /ar/faq/* /en/faq/:splat 200
-/vi/faq /en/faq 200
 /vi/faq/* /en/faq/:splat 200
-/th/faq /en/faq 200
 /th/faq/* /en/faq/:splat 200
-/id/faq /en/faq 200
 /id/faq/* /en/faq/:splat 200
-/ms/faq /en/faq 200
 /ms/faq/* /en/faq/:splat 200

@@ -20,16 +20,12 @@ const nextConfig = {
   // next dev does not read _redirects, so mirror them here for local testing.
   ...(!isExport && {
     async rewrites() {
-      return faqRewriteLocales.flatMap((locale) => [
-        {
-          source: `/${locale}/faq`,
-          destination: '/en/faq'
-        },
-        {
-          source: `/${locale}/faq/:path*`,
+      return {
+        afterFiles: faqRewriteLocales.map((locale) => ({
+          source: `/${locale}/faq/:path+`,
           destination: '/en/faq/:path*'
-        }
-      ]);
+        }))
+      };
     }
   }),
 

@@ -2,12 +2,12 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
-import { LangSwitcher } from '@/components/header/LangSwitcher';
-import { defaultLocale } from '@/lib/i18n';
+import { defaultLocale, localeNames } from '@/lib/i18n';
 import { getNavHref } from '@/lib/utils';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { LangSwitcher } from '@/components/header/LangSwitcher';
 
 interface NavLink {
   label: string;
@@ -24,11 +24,33 @@ export default function Navbar({
   t: NavCta;
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [showMobileCta, setShowMobileCta] = useState(false);
+  const [showMobileCta, setShowMobileCta] = useState(true);
   const [hideNavbar, setHideNavbar] = useState(false);
+  const [langSheetOpen, setLangSheetOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
   const startUrl = useStartUrl();
+  const pathname = usePathname();
+
+  const handleSwitchLanguage = (value: string) => {
+    if (value === lang) return;
+    localStorage.setItem('preferredLang', value);
+    document.cookie = `NEXT_LOCALE=${value};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
+    let routeWithoutLang = pathname;
+    if (params?.lang) {
+      const currentLangPrefix = `/${params.lang}`;
+      if (pathname.startsWith(currentLangPrefix)) {
+        routeWithoutLang = pathname.slice(currentLangPrefix.length) || '/';
+      }
+    }
+    window.location.href = `/${value}${routeWithoutLang}`;
+  };
+
+  const langConfig: Record<string, { flag: string; label: string }> = {
+    zh: { flag: '🇨🇳', label: '中文' },
+    en: { flag: '🇺🇸', label: 'English' },
+    ja: { flag: '🇯🇵', label: '日本語' }
+  };
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -39,7 +61,7 @@ export default function Navbar({
     };
   }, [mobileOpen]);
 
-  // Mobile: show CTA only after hero buttons scroll out of viewport
+  // Mobile: hide CTA when hero buttons are visible (homepage only)
   useEffect(() => {
     if (typeof window === 'undefined') return;
     const mq = window.matchMedia('(max-width: 767px)');
@@ -59,10 +81,10 @@ export default function Navbar({
       return true;
     };
 
+    // Only poll on pages that have hero CTA (homepage); other pages keep CTA visible
     if (!tryObserve()) {
-      timer = setInterval(() => {
-        if (tryObserve()) clearInterval(timer);
-      }, 200);
+      // No hero CTA on this page — stop polling, CTA stays visible
+      return;
     }
 
     return () => {
@@ -105,7 +127,7 @@ export default function Navbar({
 
   return (
     <>
-      <nav className={`fixed top-0 left-0 right-0 z-50 md:overflow-visible overflow-x-hidden transition-transform duration-300 ${hideNavbar ? '-translate-y-full' : 'translate-y-0'}`}>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${hideNavbar ? '-translate-y-full' : 'translate-y-0'}`}>
         {/* Blur background — separate layer so backdrop-filter doesn't affect content rendering */}
         <div className="absolute inset-0 backdrop-blur-[10px] bg-[rgba(255,255,255,0.05)] border-b border-hairline-soft" />
         <div className="relative h-[64px] md:h-auto px-[16px] md:px-[32px] py-0 md:py-[16px] flex items-center justify-between w-full max-w-[1440px] mx-auto">
@@ -157,7 +179,7 @@ export default function Navbar({
               target="_blank"
               rel="noopener noreferrer nofollow"
               aria-label={t.consult}
-              className={`px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark transition-opacity duration-300 ${showMobileCta ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+              className={`px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark transition-opacity duration-300 ${showMobileCta && !mobileOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
             >
               {t.consult}
             </a>
@@ -196,6 +218,13 @@ export default function Navbar({
                   {link.label}
                 </Link>
               ))}
+              <button
+                className="py-3 text-left flex items-center justify-between hover:text-ink transition-colors"
+                onClick={() => setLangSheetOpen(true)}
+              >
+                <span>{langConfig[lang]?.flag} {langConfig[lang]?.label}</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><polyline points="9 18 15 12 9 6" /></svg>
+              </button>
             </nav>
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-hairline-soft">
@@ -216,9 +245,42 @@ export default function Navbar({
               >
                 {t.consult}
               </a>
-              <div className="home-lang flex justify-center pt-1">
-                <LangSwitcher iconOnly />
-              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Mobile language bottom sheet */}
+      {langSheetOpen && (
+        <div
+          className="md:hidden fixed inset-0 z-[70]"
+          onClick={() => setLangSheetOpen(false)}
+        >
+          <div className="absolute inset-0 bg-black/30" />
+          <div
+            className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-6" />
+            <div className="flex flex-col gap-1">
+              {Object.keys(localeNames).map((key) => (
+                <button
+                  key={key}
+                  className="flex items-center justify-between py-3 px-4 rounded-lg text-[16px] text-ink-sub hover:bg-gray-50 transition-colors"
+                  onClick={() => {
+                    handleSwitchLanguage(key);
+                    setLangSheetOpen(false);
+                  }}
+                >
+                  <span className="flex items-center gap-3">
+                    <span className="text-xl">{langConfig[key]?.flag}</span>
+                    <span>{langConfig[key]?.label}</span>
+                  </span>
+                  {key === lang && (
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12" /></svg>
+                  )}
+                </button>
+              ))}
             </div>
           </div>
         </div>

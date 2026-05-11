@@ -51,14 +51,14 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
   const dict = await getDictionary(langName);
 
   return (
-    <div className="home">
+    <div className="home overflow-x-hidden">
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} />
 
-      <main className="pb-[80px] px-[32px] relative">
+      <main className="pb-[80px] px-[16px] md:px-[32px] relative">
         <GradientBlobs />
 
-        <div className="w-full px-[32px] relative pt-[200px]" style={{ zIndex: 1, maxWidth: 1600, margin: '0 auto' }}>
+        <div className="w-full relative pt-[200px]" style={{ zIndex: 1, maxWidth: 1600, margin: '0 auto' }}>
           <PTitle locale={dict.Pricing} />
 
           <div className="mt-[120px]">

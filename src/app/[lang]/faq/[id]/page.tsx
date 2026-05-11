@@ -37,14 +37,14 @@ export default async function FAQDetailPage({
   const paragraphs = faqItem.Answers.split('\n\n');
 
   return (
-    <div className="home">
+    <div className="home overflow-x-hidden">
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} />
 
-      <main className="pb-[80px] px-[32px] relative">
+      <main className="pb-[80px] px-[16px] md:px-[32px] relative">
         <GradientBlobs />
 
-        <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[160px]" style={{ zIndex: 1 }}>
+        <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[80px] md:pt-[160px]" style={{ zIndex: 1 }}>
           {/* Back Link */}
           <Link
             href={`/${langName}/faq`}

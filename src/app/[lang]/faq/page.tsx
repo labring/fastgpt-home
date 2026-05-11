@@ -33,10 +33,10 @@ export default async function FAQPage({
   }
 
   return (
-    <div className="home">
+    <div className="home overflow-x-hidden">
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} />
-      <main className="pb-[80px] px-[32px] relative">
+      <main className="pb-[80px] px-[16px] md:px-[32px] relative">
         {/* Background blobs layer */}
         <GradientBlobs />
 
@@ -45,7 +45,7 @@ export default async function FAQPage({
           <div className="mb-12">
             <FadeIn className="text-center flex flex-col items-center" style={{ rowGap: 24 }}>
               <span
-                className="inline-flex items-center gap-[12px] rounded-full border bg-white/40 text-[12px] leading-[18px]"
+                className="inline-flex flex-col md:flex-row items-center gap-0 md:gap-[12px] rounded-full border bg-white/40 text-[12px] leading-[18px]"
                 style={{
                   padding: '6px 12px',
                   borderColor: '#e5e7eb',

@@ -71,7 +71,7 @@ export default function FAQ({ t }: { t: FaqT }) {
       <div className="max-w-[min(92vw,800px)] md:max-w-[min(50vw,800px)] mx-auto flex flex-col" style={{ rowGap: 40 }}>
         <FadeIn className="text-center flex flex-col items-center" style={{ rowGap: 24 }}>
           <span
-            className="inline-flex items-center gap-[12px] rounded-full border bg-white/40 text-[12px] leading-[18px]"
+            className="inline-flex flex-col md:flex-row items-center gap-0 md:gap-[12px] rounded-full border bg-white/40 text-[12px] leading-[18px]"
             style={{
               padding: '6px 12px',
               borderColor: '#e5e7eb',

@@ -57,17 +57,17 @@ export default function FAQFilter({
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1 rounded-md text-[14px]"
+        className="w-full overflow-hidden flex items-center gap-2 px-3 py-1 rounded-md text-[14px]"
         style={{ color: 'rgb(2, 6, 23)', fontWeight: 400 }}
       >
-        <span>
+        <span className="truncate block min-w-0">
           {selected === 'All'
             ? (locale?.allCategories || '全部分类')
             : selected
           }
         </span>
         <ChevronDown
-          className="w-4 h-4"
+          className="w-4 h-4 flex-shrink-0"
           style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}
         />
       </button>

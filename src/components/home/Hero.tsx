@@ -124,8 +124,6 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
       {/* Main content column */}
       <div className="relative flex flex-col gap-[32px] md:gap-[50px]" style={{ zIndex: 1 }}>
 
-        {/* Text + image block (extra 32px horizontal padding) */}
-        <div className="px-[32px] md:px-[32px]">
 
           {/* Text content */}
           <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px] md:gap-[32px]">
@@ -226,8 +224,6 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               </motion.div>
             </div>
           </div>
-
-        </div>{/* end text + image block */}
 
         {/* TrustedBy + Stats passed as children */}
         {children}

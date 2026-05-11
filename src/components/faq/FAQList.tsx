@@ -86,6 +86,27 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
 
   const [focused, setFocused] = useState(false);
 
+  // Handle mobile keyboard: scroll input into safe area above keyboard
+  useEffect(() => {
+    if (typeof window === 'undefined' || !searchRef.current) return;
+    const vv = window.visualViewport;
+    if (!vv) return;
+
+    const handleResize = () => {
+      if (!focused || !searchRef.current) return;
+      const keyboardHeight = window.innerHeight - vv.height;
+      if (keyboardHeight > 0) {
+        window.scrollTo({
+          top: searchRef.current.getBoundingClientRect().top + window.scrollY - vv.height / 3,
+          behavior: 'smooth'
+        });
+      }
+    };
+
+    vv.addEventListener('resize', handleResize);
+    return () => vv.removeEventListener('resize', handleResize);
+  }, [focused]);
+
   return (
     <div className="w-full">
       {/* Search Bar with embedded Filter */}
@@ -103,7 +124,7 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
             transition: 'background-color 0.2s, box-shadow 0.2s'
           }}
         >
-          <div className="pl-3 py-1.5">
+          <div className="pl-3 py-1.5 w-[110px] md:w-auto flex-shrink-0">
             <FAQFilter
               categories={categories}
               selected={selectedCategory}
@@ -118,9 +139,12 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
             placeholder={locale.searchPlaceholder || '搜索问题...'}
             value={searchQuery}
             onChange={handleSearchChange}
-            onFocus={() => setFocused(true)}
+            onFocus={() => {
+              setFocused(true);
+              setTimeout(() => searchRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' }), 300);
+            }}
             onBlur={() => setFocused(false)}
-            className="flex-1 px-3 bg-transparent border-0 focus:outline-none text-[14px]"
+            className="flex-1 px-3 bg-transparent border-0 focus:outline-none text-[14px] min-w-0"
             style={{ color: 'rgb(2, 6, 23)', height: '100%' }}
           />
           {searchQuery && (

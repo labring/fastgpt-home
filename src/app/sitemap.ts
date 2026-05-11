@@ -1,6 +1,5 @@
 import { MetadataRoute } from 'next'
 import { faq } from '@/faq'
-import { showFAQ } from '@/constants'
 
 export const dynamic = 'force-static'
 
@@ -22,20 +21,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     // FAQ 列表页
-    if (showFAQ) {
-      entries.push({ url: `${baseUrl}/${locale}/faq`, lastModified: now })
-    }
+    entries.push({ url: `${baseUrl}/${locale}/faq`, lastModified: now })
   }
 
   // FAQ 详情页
-  if (showFAQ) {
-    for (const locale of locales) {
-      for (const faqId of Object.keys(faq)) {
-        entries.push({
-          url: `${baseUrl}/${locale}/faq/${encodeURIComponent(faqId)}`,
-          lastModified: now
-        })
-      }
+  for (const locale of locales) {
+    for (const faqId of Object.keys(faq)) {
+      entries.push({
+        url: `${baseUrl}/${locale}/faq/${encodeURIComponent(faqId)}`,
+        lastModified: now
+      })
     }
   }
 

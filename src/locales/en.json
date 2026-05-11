@@ -493,5 +493,34 @@
       "description": "Contact our experts to learn how FastGPT Enterprise Appliance can transform your business and request a product demo.",
       "link": "Request a Demo"
     }
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Page not found",
+    "desc": "This page may have moved, been removed, or is temporarily unavailable. Go back home or search the FAQ.",
+    "home": "Back home",
+    "faq": "View FAQ",
+    "docs": "Docs",
+    "start": "Start now"
+  },
+  "JsonLd": {
+    "siteName": "FastGPT",
+    "pageTitle": "FastGPT - Enterprise AI Agent Builder | Open Source RAG Platform",
+    "description": "Build powerful AI agents with FastGPT's visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.",
+    "inLanguage": "en-US",
+    "organizationName": "FastGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offerDescription": "Free open-source version available",
+    "authorName": "labring",
+    "breadcrumbHome": "FastGPT",
+    "featureList": [
+      "Visual AI workflow orchestration",
+      "Enterprise knowledge base and Agentic RAG",
+      "AI application template system",
+      "Multi-model access with OpenAI-compatible APIs",
+      "Enterprise private deployment and permission management",
+      "No-code AI agent builder"
+    ]
   }
 }

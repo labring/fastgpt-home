@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "node scripts/manage-faq-routes.js && node scripts/generate-robots.js",
+    "prebuild": "node scripts/generate-robots.js",
     "build": "next build && node scripts/clean-faq-rsc.js && node scripts/copy-root-index.js",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
@@ -17,7 +17,6 @@
     "@heroui/react": "^2.8.9",
     "@heroui/theme": "^2.4.26",
     "@radix-ui/react-slot": "^1.0.2",
-    "@vercel/analytics": "^1.1.2",
     "autoprefixer": "^10.4.24",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",

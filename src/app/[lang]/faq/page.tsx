@@ -6,8 +6,7 @@ import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
 import FadeIn from '@/components/home/motion/FadeIn';
-import { notFound } from 'next/navigation';
-import { showFAQ } from '@/constants';
+import { BreadcrumbJsonLd, FAQJsonLd } from '@/components/JsonLd';
 
 export default async function FAQPage({
   params
@@ -15,10 +14,6 @@ export default async function FAQPage({
   params: Promise<{ lang?: string }>;
 }) {
   const { lang } = await params;
-  if (!showFAQ) {
-    notFound();
-  }
-
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
@@ -31,9 +26,21 @@ export default async function FAQPage({
       Answers: item.Answers.substring(0, 100),
     };
   }
+  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const faqSchemaItems = Object.values(faq).slice(0, 30).map((item) => ({
+    question: item.Question,
+    answer: item.Answers
+  }));
 
   return (
     <div className="home overflow-x-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}/${langName}` },
+          { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}/${langName}/faq` }
+        ]}
+      />
+      <FAQJsonLd items={faqSchemaItems} />
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} />
       <main className="pb-[80px] px-[16px] md:px-[32px] relative">
@@ -94,9 +101,6 @@ export default async function FAQPage({
 }
 
 export async function generateStaticParams() {
-  if (!showFAQ) {
-    return [];
-  }
   return Object.keys(localeNames).map((lang) => ({ lang }));
 }
 
@@ -107,13 +111,6 @@ export async function generateMetadata({
 }: {
   params: Promise<{ lang?: string }>;
 }) {
-  if (!showFAQ) {
-    return {
-      title: 'Page Not Found',
-      robots: { index: false, follow: false }
-    };
-  }
-
   const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);

@@ -493,5 +493,34 @@
       "description": "立即联系我们的专家，了解 FastGPT 企业一体机如何为你的业务带来变革，并申请产品演示。",
       "link": "申请产品演示"
     }
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "页面没有找到",
+    "desc": "这个地址可能已经移动、删除，或者暂时不可访问。你可以回到首页，或去 FAQ 查找相关问题。",
+    "home": "返回首页",
+    "faq": "查看 FAQ",
+    "docs": "文档中心",
+    "start": "立即开始"
+  },
+  "JsonLd": {
+    "siteName": "FastGPT",
+    "pageTitle": "FastGPT - 企业级 AI 智能体构建平台 | 开源 RAG 系统",
+    "description": "FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、知识库和 RAG 系统。50万+用户信赖，立即免费开始。",
+    "inLanguage": "zh-CN",
+    "organizationName": "FastGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offerDescription": "提供免费开源版本",
+    "authorName": "labring",
+    "breadcrumbHome": "FastGPT",
+    "featureList": [
+      "可视化 AI 工作流编排",
+      "企业知识库与 Agentic RAG",
+      "AI 应用模板系统",
+      "多模型接入与 OpenAI API 兼容",
+      "企业私有化部署与权限管理",
+      "免代码 AI Agent 构建"
+    ]
   }
 }

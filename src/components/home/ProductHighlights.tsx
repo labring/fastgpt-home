@@ -40,10 +40,8 @@ export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
 
           <StaggerContainer className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[16px] mt-[16px]" initialDelay={0.8}>
             {features.slice(2).map((f, i) => (
-              <StaggerItem key={f.title}>
-                <div className={i === features.slice(2).length - 1 ? 'sm:col-span-2 lg:col-span-1' : ''}>
-                  <FeatureCard {...f} />
-                </div>
+              <StaggerItem key={f.title} className={i === features.slice(2).length - 1 ? 'sm:col-span-2 lg:col-span-1' : ''}>
+                <FeatureCard {...f} />
               </StaggerItem>
             ))}
           </StaggerContainer>

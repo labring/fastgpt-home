@@ -133,7 +133,7 @@ export default function Footer({ t }: { t: FooterT }) {
   return (
     <footer className="bg-white py-8 md:py-10">
       <div
-        className="mx-auto px-4 md:px-0"
+        className="mx-auto px-4 md:px-8 lg:px-0"
         style={{
           maxWidth: 1280,
           width: '100%'

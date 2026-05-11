@@ -57,13 +57,13 @@ export default function Solutions({ t }: { t: SolutionsT }) {
 
   return (
     <section className="py-[48px] px-[8px] md:py-[80px] md:px-[32px] bg-white">
-      <div className="max-w-[min(92vw,960px)] md:max-w-[min(75vw,960px)] mx-auto flex flex-col" style={{ rowGap: 32 }}>
+      <div className="max-w-[min(92vw,960px)] md:max-w-[min(85vw,960px)] mx-auto flex flex-col" style={{ rowGap: 32 }}>
         <div className="px-[16px] md:px-0">
           <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
         </div>
 
-        {/* Desktop (md+): tabs with active pill + image + CTA */}
-        <FadeIn delay={0.5} className="hidden md:block">
+        {/* Desktop (lg+): tabs with active pill + image + CTA */}
+        <FadeIn delay={0.5} className="hidden lg:block">
           <div className="flex justify-center mb-12 overflow-x-auto no-scrollbar">
             <div
               className="inline-flex items-center"
@@ -187,8 +187,8 @@ export default function Solutions({ t }: { t: SolutionsT }) {
           </div>
         </FadeIn>
 
-        {/* Mobile: no tabs, no CTA. One featured solution per tab */}
-        <FadeIn delay={0.5} className="md:hidden">
+        {/* Mobile/Tablet: no tabs, no CTA. One featured solution per tab */}
+        <FadeIn delay={0.5} className="lg:hidden">
           <div className="flex flex-col gap-12">
             {tabs.map((tab) => {
               const item = tab.items[0];

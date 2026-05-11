@@ -1,6 +1,6 @@
 import { MetadataRoute } from 'next'
 import { faq } from '@/faq'
-import { faqLocaleCodes, supportedLocaleCodes } from '@/lib/locales'
+import { supportedLocaleCodes } from '@/lib/locales'
 
 export const dynamic = 'force-static'
 
@@ -20,9 +20,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
   }
-
-  // FAQ 目前只维护中英文版本，其他语言入口重定向到英文 FAQ
-  for (const locale of faqLocaleCodes) {
+  // FAQ 页面所有语言都生成；非中英文内容 fallback 到英文
+  for (const locale of supportedLocaleCodes) {
     entries.push({ url: `${baseUrl}/${locale}/faq`, lastModified: now })
   }
 
@@ -30,7 +29,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   entries.push({ url: `${baseUrl}/zh/enterprise`, lastModified: now })
 
   // FAQ 详情页
-  for (const locale of faqLocaleCodes) {
+  for (const locale of supportedLocaleCodes) {
     for (const faqId of Object.keys(faq)) {
       entries.push({
         url: `${baseUrl}/${locale}/faq/${encodeURIComponent(faqId)}`,

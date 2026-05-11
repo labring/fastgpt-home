@@ -2,10 +2,9 @@ import { faq, getFaqItem, getFaqData } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
-import { faqLocaleCodes } from '@/lib/locales';
+import { supportedLocaleCodes } from '@/lib/locales';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
-import FaqLocalePreserver from '@/components/faq/FaqLocalePreserver';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
@@ -36,7 +35,6 @@ export default async function FAQDetailPage({
 
   return (
     <div className="home overflow-x-hidden">
-      <FaqLocalePreserver />
       <BreadcrumbJsonLd
         items={[
           { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}/${langName}` },
@@ -160,7 +158,7 @@ export default async function FAQDetailPage({
 export async function generateStaticParams() {
   const faqKeys = Object.keys(faq);
 
-  return faqLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
+  return supportedLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
 }
 
 export const dynamicParams = false;
@@ -186,7 +184,7 @@ export async function generateMetadata({
     title: faqItem.Title,
     description: faqItem.Description,
     keywords: faqItem.Keywords.split(', '),
-    alternates: getAlternates(langName, `/faq/${id}`, faqLocaleCodes),
+    alternates: getAlternates(langName, `/faq/${id}`, supportedLocaleCodes),
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,

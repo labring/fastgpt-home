@@ -13,7 +13,6 @@ export type LocaleCode = (typeof localeConfigs)[number]['code'];
 export type LocaleDirection = (typeof localeConfigs)[number]['dir'];
 
 export const supportedLocaleCodes = localeConfigs.map((locale) => locale.code);
-export const faqLocaleCodes = ['en', 'zh'] as const;
 
 export const localeNames = localeConfigs.reduce(
   (acc, locale) => {

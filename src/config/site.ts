@@ -1,22 +1,21 @@
 import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub } from 'react-icons/bs';
-import { IoLogoGithub } from 'react-icons/io';
 import { HiUserGroup } from 'react-icons/hi';
-
 import { MdEmail } from 'react-icons/md';
-const OPEN_SOURCE_URL = 'https://github.com/labring/FastGPT';
+
+const OPENGRAPH_IMAGE = '/opengraph-image.png';
+const TWITTER_IMAGE = '/twitter-image.png';
 
 const baseSiteConfig = {
   title: 'FastGPT - Enterprise AI Agent Builder | Open Source RAG Platform',
   name: 'FastGPT',
   description:
-    'Build powerful AI agents with FastGPT\'s visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.',
+    "Build powerful AI agents with FastGPT's visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.",
   url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   customPlanUrl:
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
     'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
-  ogImage: '/og-image.png',
   metadataBase: 'https://fastgpt.io',
   keywords: [
     'rag',
@@ -60,14 +59,6 @@ const baseSiteConfig = {
     shortcut: '/favicon-16x16.png',
     apple: '/logo.svg'
   },
-  headerLinks: [
-    { name: 'repo', href: OPEN_SOURCE_URL, icon: IoLogoGithub },
-    {
-      name: 'Lark',
-      href: 'https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png',
-      icon: HiUserGroup
-    }
-  ],
   footerLinks: [
     { name: 'email', href: 'mailto:yujinlong@sealos.io', icon: MdEmail },
     { name: 'github', href: 'https://github.com/labring/FastGPT', icon: BsGithub },
@@ -76,12 +67,6 @@ const baseSiteConfig = {
       href: 'https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png',
       icon: HiUserGroup
     }
-  ],
-  footerProducts: [
-    // { url: 'https://sealos.io', name: 'Sealos' },
-    // { url: 'https://doc.fastgpt.io/docs/introduction', name: 'Docs' },
-    // { url: 'https://oss.laf.run/otnvvf-imgs/fastgpt-feishu1.png', name: '飞书讨论群' },
-    // { url: 'https://uuhyahynnudq.hzh.sealos.run/status/in', name: 'Status' },
   ],
   footerService: [
     { url: 'https://doc.fastgpt.io/docs/protocol/terms', name: 'Terms of Service' },
@@ -96,15 +81,17 @@ export const siteConfig: SiteConfig = {
     locale: 'en_US',
     url: baseSiteConfig.url,
     title: 'FastGPT - Enterprise AI Agent Builder',
-    description: 'Flexible AI Workflow + AI Knowledge Base + Template System + Agentic RAG = Powerful AI Agent Builder. Trusted by 500,000+ users worldwide.',
+    description:
+      'Flexible AI Workflow + AI Knowledge Base + Template System + Agentic RAG = Powerful AI Agent Builder. Trusted by 500,000+ users worldwide.',
     siteName: baseSiteConfig.name,
-    images: [`${baseSiteConfig.url}/og-image.png`]
+    images: [`${baseSiteConfig.url}${OPENGRAPH_IMAGE}`]
   },
   twitter: {
     card: 'summary_large_image',
     title: 'FastGPT - Enterprise AI Agent Builder',
-    description: 'Build powerful AI agents with visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source platform.',
-    images: [`${baseSiteConfig.url}/og-image.png`],
+    description:
+      'Build powerful AI agents with visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source platform.',
+    images: [`${baseSiteConfig.url}${TWITTER_IMAGE}`],
     creator: baseSiteConfig.creator
   }
 };
@@ -137,13 +124,15 @@ export const siteConfigZh: SiteConfig = {
     ...siteConfig.openGraph,
     locale: 'zh_CN',
     title: 'FastGPT - 企业级 AI 智能体构建平台',
-    description: '灵活的 AI 工作流 + AI 知识库 + 模板系统 + Agentic RAG = 强大的 AI 智能体构建器。全球 50 万+用户信赖。',
-    images: [`${baseSiteConfig.url}/og-image.png`]
+    description:
+      '灵活的 AI 工作流 + AI 知识库 + 模板系统 + Agentic RAG = 强大的 AI 智能体构建器。全球 50 万+用户信赖。',
+    images: [`${baseSiteConfig.url}${OPENGRAPH_IMAGE}`]
   },
   twitter: {
     ...siteConfig.twitter,
     title: 'FastGPT - 企业级 AI 智能体构建平台',
-    description: 'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、知识库和 RAG 系统。50万+用户信赖。'
+    description:
+      'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、知识库和 RAG 系统。50万+用户信赖。'
   }
 };
 

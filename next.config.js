@@ -5,6 +5,7 @@ const nextConfig = {
   // Only use static export for production builds
   // Dev mode uses dynamic server rendering for better DX
   ...(isExport && { output: 'export' }),
+  allowedDevOrigins: ['192.168.12.18'],
   images: { unoptimized: true },
   transpilePackages: ['@heroui/react', '@heroui/theme'],
   
@@ -14,9 +15,10 @@ const nextConfig = {
   // Remove X-Powered-By header
   poweredByHeader: false,
 
-  // Cache-Control headers only in dev mode;
-  // production static export relies on public/_headers for Cloudflare Pages
-  ...(!isExport && {
+  // Cache-Control headers only in production builds;
+  // dev mode must serve fresh assets so HMR/edits take effect immediately.
+  // Production static export relies on public/_headers for Cloudflare Pages.
+  ...(!isExport && process.env.NODE_ENV !== 'development' && {
     async headers() {
       return [
         {

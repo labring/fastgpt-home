@@ -33,7 +33,10 @@ jobs:
 
       - name: Read PR number
         id: pr
-        run: echo "number=$(cat ./out/pr-number.txt)" >> "$GITHUB_OUTPUT"
+        run: |
+          number="$(cat ./out/pr-number.txt)"
+          echo "number=$number" >> "$GITHUB_OUTPUT"
+          echo "branch=pr-$number" >> "$GITHUB_OUTPUT"
 
       - name: Deploy to Cloudflare Pages
         id: deploy
@@ -41,7 +44,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./out --project-name=fastgpt-home
+          command: pages deploy ./out --project-name=fastgpt-home --branch=${{ steps.pr.outputs.branch }}
           quiet: false
 
       - name: Comment Preview URL on PR

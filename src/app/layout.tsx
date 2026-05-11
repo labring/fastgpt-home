@@ -1,18 +1,16 @@
 import BaiDuAnalytics from '@/app/BaiDuAnalytics';
 import ClarityAnalytics from '@/app/ClarityAnalytics';
 import RybbitAnalytics from '@/app/RybbitAnalytics';
-// import { TailwindIndicator } from '@/components/TailwindIndicator';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
 import { htmlLangScript } from '@/lib/htmlLang';
 import '@/styles/globals.css';
-import '@/styles/loading.css';
-import '@/styles/plyr.css';
 import { Analytics } from '@vercel/analytics/react';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
+import { IBM_Plex_Sans as FontDisplay } from 'next/font/google';
 import GoogleAnalytics from './GoogleAnalytics';
 
 const fontSans = FontSans({
@@ -20,6 +18,13 @@ const fontSans = FontSans({
   variable: '--font-sans',
   display: 'swap',
   preload: true
+});
+
+const fontDisplay = FontDisplay({
+  subsets: ['latin'],
+  weight: ['400', '600'],
+  variable: '--font-display',
+  display: 'swap'
 });
 
 export const metadata = {
@@ -45,23 +50,28 @@ export const viewport: Viewport = {
   themeColor: siteConfig.themeColors
 };
 
-export default function RootLayout({
-  children
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang={defaultLocale} suppressHydrationWarning>
       <head>
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />
       </head>
-      <body className={cn('min-h-screen font-sans antialiased', fontSans.variable)}>
-        <ThemeProvider attribute="class" defaultTheme={siteConfig.nextThemeColor} enableSystem={false} forcedTheme="dark">
+      <body
+        className={cn(
+          'min-h-screen font-sans antialiased',
+          fontSans.variable,
+          fontDisplay.variable
+        )}
+      >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme={siteConfig.nextThemeColor}
+          enableSystem={false}
+          forcedTheme="dark"
+        >
           {children}
-          {/* <Footer /> */}
           <Analytics />
-          {/* <TailwindIndicator /> */}
         </ThemeProvider>
         <GoogleAnalytics />
         <BaiDuAnalytics />

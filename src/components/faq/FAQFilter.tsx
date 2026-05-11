@@ -1,8 +1,7 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, useCallback } from 'react';
 import { ChevronDown, Check } from 'lucide-react';
-import { cn } from '@/lib/utils';
 
 interface FAQFilterProps {
   categories: string[];
@@ -18,74 +17,108 @@ export default function FAQFilter({
   locale
 }: FAQFilterProps) {
   const [isOpen, setIsOpen] = useState(false);
-  const dropdownRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  // Close dropdown when clicking outside
+  const close = useCallback(() => {
+    setIsOpen(false);
+  }, []);
+
+  const scheduleClose = useCallback(() => {
+    timeoutRef.current = setTimeout(close, 200);
+  }, [close]);
+
+  const cancelClose = useCallback(() => {
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+      timeoutRef.current = null;
+    }
+  }, []);
+
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      if (containerRef.current && !containerRef.current.contains(event.target as Node)) {
         setIsOpen(false);
       }
     }
-
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    };
   }, []);
 
   return (
-    <div className="relative" ref={dropdownRef}>
+    <div
+      className="relative"
+      ref={containerRef}
+      onMouseEnter={cancelClose}
+      onMouseLeave={scheduleClose}
+    >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={cn(
-          'flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-colors',
-          'hover:bg-accent hover:text-accent-foreground',
-          isOpen && 'bg-accent text-accent-foreground'
-        )}
+        className="w-full overflow-hidden flex items-center gap-2 px-3 py-1 rounded-md text-[14px]"
+        style={{ color: 'rgb(2, 6, 23)', fontWeight: 400 }}
       >
-        <span className="text-sm">
+        <span className="truncate block min-w-0">
           {selected === 'All'
-            ? (locale?.allCategories || 'All Categories')
+            ? (locale?.allCategories || '全部分类')
             : selected
           }
         </span>
         <ChevronDown
-          className={cn(
-            'w-4 h-4 transition-transform',
-            isOpen && 'rotate-180'
-          )}
+          className="w-4 h-4 flex-shrink-0"
+          style={{ transform: isOpen ? 'rotate(180deg)' : 'none', transition: 'transform 0.15s' }}
         />
       </button>
 
       {isOpen && (
-        <div className="absolute top-full left-0 mt-2 w-60 z-50 rounded-lg border border-border bg-popover shadow-md">
-          <div className="p-1 max-h-80 overflow-y-auto">
-            {categories.map((category) => (
+        <div
+          className="absolute top-full z-50 w-60"
+          style={{
+            left: -12,
+            marginTop: 14,
+            borderRadius: 12,
+            border: '1px solid #d4d4d4',
+            backgroundColor: '#fff',
+            boxShadow: '0 4px 12px rgba(0,0,0,0.08)',
+            padding: 6,
+            maxHeight: 320,
+            overflowY: 'auto',
+            display: 'flex',
+            flexDirection: 'column',
+            gap: 2
+          }}
+        >
+          {categories.map((category) => {
+            const isSelected = selected === category;
+            return (
               <button
                 key={category}
                 onClick={() => {
                   onSelect(category);
                   setIsOpen(false);
                 }}
-                className={cn(
-                  'w-full flex items-center justify-between px-3 py-2 rounded-md text-sm transition-colors',
-                  'hover:bg-accent hover:text-accent-foreground',
-                  selected === category
-                    ? 'bg-accent text-accent-foreground font-medium'
-                    : 'text-foreground'
-                )}
+                className={[
+                  'w-full flex items-center justify-between px-3 py-2 rounded-lg text-[14px]',
+                  isSelected
+                    ? 'text-[#3370ff] bg-[rgba(51,112,255,0.06)]'
+                    : 'text-[rgb(2,6,23)] hover:bg-[#f5f5f5]'
+                ].join(' ')}
+                style={{ fontWeight: isSelected ? 500 : 400, transition: 'background-color 0.15s' }}
               >
                 <span>
                   {category === 'All'
-                    ? (locale?.allCategories || 'All Categories')
+                    ? (locale?.allCategories || '全部分类')
                     : category
                   }
                 </span>
-                {selected === category && (
-                  <Check className="w-4 h-4" />
+                {isSelected && (
+                  <Check className="w-4 h-4" style={{ color: '#3370ff' }} />
                 )}
               </button>
-            ))}
-          </div>
+            );
+          })}
         </div>
       )}
     </div>

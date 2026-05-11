@@ -1,20 +1,20 @@
 import { IconType } from 'react-icons';
 
-export type AuthorsConfig = {
+type AuthorsConfig = {
   name: string;
   url: string;
   twitter?: string;
 };
-export type ProductLink = {
+type ProductLink = {
   url: string;
   name: string;
 };
-export type Link = {
+type Link = {
   name: string;
   href: string;
   icon: IconType;
 };
-export type ThemeColor = {
+type ThemeColor = {
   media: string;
   color: string;
 };
@@ -30,10 +30,7 @@ export type SiteConfig = {
   authors: AuthorsConfig[];
   creator: string;
   openSourceURL?: string;
-  ogImage: string;
-  headerLinks: Link[];
   footerLinks: Link[];
-  footerProducts: ProductLink[];
   footerService: ProductLink[];
   metadataBase: URL | string;
   themeColors?: string | ThemeColor[];

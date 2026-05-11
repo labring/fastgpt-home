@@ -105,7 +105,7 @@
   },
   "Home": {
     "navCta": {
-      "trial": "Free Trial",
+      "trial": "Get Started",
       "consult": "Contact Sales"
     },
     "hero": {
@@ -114,7 +114,7 @@
       "brand": "FastGPT",
       "title": "Enterprise AI Productivity Engine",
       "subtitle": "Build secure, controllable enterprise-grade AI Agents",
-      "trial": "Free Trial",
+      "trial": "Get Started",
       "consult": "Contact Sales"
     },
     "trustedBy": {
@@ -271,7 +271,7 @@
       "brand": "FastGPT",
       "title": "Make AI the new engine of business growth",
       "subtitle": "Try it today",
-      "trial": "Free Trial",
+      "trial": "Get Started",
       "consult": "Contact Sales"
     },
     "footer": {

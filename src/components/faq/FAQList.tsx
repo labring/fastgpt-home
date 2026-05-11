@@ -124,7 +124,7 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
             transition: 'background-color 0.2s, box-shadow 0.2s'
           }}
         >
-          <div className="pl-3 py-1.5 w-[110px] md:w-auto flex-shrink-0">
+          <div className="pl-3 py-1.5 w-[140px] md:w-auto flex-shrink-0">
             <FAQFilter
               categories={categories}
               selected={selectedCategory}

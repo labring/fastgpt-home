@@ -111,8 +111,8 @@
   },
   "Home": {
     "navCta": {
-      "trial": "免费试用",
-      "consult": "立即咨询"
+      "trial": "立即开始",
+      "consult": "商务咨询"
     },
     "hero": {
       "githubStars": "Github Stars",
@@ -120,8 +120,8 @@
       "brand": "FastGPT",
       "title": "企业级AI生产力引擎",
       "subtitle": "构建安全、可控的企业级 AI Agent",
-      "trial": "免费试用",
-      "consult": "立即咨询"
+      "trial": "立即开始",
+      "consult": "商务咨询"
     },
     "trustedBy": {
       "caption": "深受行业领军团队信赖"
@@ -149,7 +149,7 @@
       "badge": "行业解决方案",
       "title": "覆盖核心业务场景",
       "subtitle": "针对不同职能与行业，提供开箱即用的 AI 解决方案",
-      "consult": "立即咨询",
+      "consult": "商务咨询",
       "tabs": [
         {
           "key": "sales",
@@ -277,8 +277,8 @@
       "brand": "FastGPT",
       "title": "让AI成为业务增长的新引擎",
       "subtitle": "即刻尝试",
-      "trial": "免费试用",
-      "consult": "立即咨询"
+      "trial": "立即开始",
+      "consult": "商务咨询"
     },
     "footer": {
       "tagline": "企业级AI生产力引擎",

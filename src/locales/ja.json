@@ -105,7 +105,7 @@
   },
   "Home": {
     "navCta": {
-      "trial": "無料トライアル",
+      "trial": "今すぐ始める",
       "consult": "お問い合わせ"
     },
     "hero": {
@@ -114,7 +114,7 @@
       "brand": "FastGPT",
       "title": "エンタープライズAI生産性エンジン",
       "subtitle": "安全で制御可能なエンタープライズAIエージェントを構築",
-      "trial": "無料トライアル",
+      "trial": "今すぐ始める",
       "consult": "お問い合わせ"
     },
     "trustedBy": {
@@ -271,7 +271,7 @@
       "brand": "FastGPT",
       "title": "AIをビジネス成長の新たなエンジンに",
       "subtitle": "今すぐ試す",
-      "trial": "無料トライアル",
+      "trial": "今すぐ始める",
       "consult": "お問い合わせ"
     },
     "footer": {

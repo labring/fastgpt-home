@@ -8,7 +8,7 @@ import FAQCard from '@/components/faq/FAQCard';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
-import { showFAQ } from '@/constants';
+import { BreadcrumbJsonLd, FAQJsonLd } from '@/components/JsonLd';
 
 export default async function FAQDetailPage({
   params
@@ -16,10 +16,6 @@ export default async function FAQDetailPage({
   params: Promise<{ lang?: string; id: string }>;
 }) {
   const { lang, id } = await params;
-  if (!showFAQ) {
-    notFound();
-  }
-
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
 
@@ -35,9 +31,18 @@ export default async function FAQDetailPage({
     .slice(0, 4);
 
   const paragraphs = faqItem.Answers.split('\n\n');
+  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 
   return (
     <div className="home overflow-x-hidden">
+      <BreadcrumbJsonLd
+        items={[
+          { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}/${langName}` },
+          { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}/${langName}/faq` },
+          { name: faqItem.Question, url: `${baseUrl}/${langName}/faq/${encodeURIComponent(id)}` }
+        ]}
+      />
+      <FAQJsonLd items={[{ question: faqItem.Question, answer: faqItem.Answers }]} />
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} />
 
@@ -151,10 +156,6 @@ export default async function FAQDetailPage({
 }
 
 export async function generateStaticParams() {
-  if (!showFAQ) {
-    return [];
-  }
-
   const faqKeys = Object.keys(faq);
   const languages = Object.keys(localeNames);
 
@@ -169,13 +170,6 @@ export async function generateMetadata({
   params: Promise<{ lang?: string; id: string }>;
 }) {
   const { lang, id } = await params;
-  if (!showFAQ) {
-    return {
-      title: 'Page Not Found',
-      robots: { index: false, follow: false }
-    };
-  }
-
   const langName = lang || defaultLocale;
   const faqItem = getFaqItem(id, langName);
 

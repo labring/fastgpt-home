@@ -1,4 +1,5 @@
 import HomeLanding from '@/components/home/HomeLanding';
+import { FAQJsonLd } from '@/components/JsonLd';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { getGitHubStars } from '@/lib/githubStars';
 
@@ -8,7 +9,17 @@ export default async function HomePage({ params }: { params: Promise<{ lang?: st
   const dict = await getDictionary(langName);
   const stars = await getGitHubStars();
 
-  return <HomeLanding dict={dict} stars={stars} />;
+  return (
+    <>
+      <FAQJsonLd
+        items={dict.Home.faq.items.map((item: { title: string; content?: string; desc?: string }) => ({
+          question: item.title,
+          answer: item.content || item.desc || ''
+        }))}
+      />
+      <HomeLanding dict={dict} stars={stars} />
+    </>
+  );
 }
 
 export async function generateStaticParams() {

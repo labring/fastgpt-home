@@ -493,5 +493,34 @@
       "description": "専門チームにお問い合わせいただき、FastGPT エンタープライズ一体機がビジネスにもたらす変革を確認し、製品デモをお申し込みください。",
       "link": "製品デモを申し込む"
     }
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "ページが見つかりません",
+    "desc": "このページは移動、削除、または一時的に利用できない可能性があります。ホームまたはFAQをご確認ください。",
+    "home": "ホームへ",
+    "faq": "FAQを見る",
+    "docs": "ドキュメント",
+    "start": "今すぐ開始"
+  },
+  "JsonLd": {
+    "siteName": "FastGPT",
+    "pageTitle": "FastGPT - エンタープライズ AI エージェント構築プラットフォーム",
+    "description": "FastGPTは、LLM大規模言語モデルをベースにAIナレッジベースQ&Aシステムを構築できるエンタープライズAIエージェント構築プラットフォームです。すぐに使えるAIエージェントツールセットとモデル呼び出し機能を提供し、ビジュアルワークフロー編集で複雑なAIアプリケーションを実現します。",
+    "inLanguage": "ja-JP",
+    "organizationName": "FastGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offerDescription": "無料のオープンソース版を提供",
+    "authorName": "labring",
+    "breadcrumbHome": "FastGPT",
+    "featureList": [
+      "ビジュアル AI ワークフロー編成",
+      "エンタープライズナレッジベースと Agentic RAG",
+      "AI アプリケーションテンプレートシステム",
+      "OpenAI 互換 API による複数モデル連携",
+      "エンタープライズ向けプライベートデプロイと権限管理",
+      "ノーコード AI エージェント構築"
+    ]
   }
 }

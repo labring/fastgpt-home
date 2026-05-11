@@ -25,7 +25,8 @@ export default function robots(): MetadataRoute.Robots {
     }
   }
 
-  // Block Baidu on .io domain to avoid duplicate content issues with .cn
+  // Block Baidu on .io domain to avoid duplicate content issues with .cn.
+  // Bing is intentionally allowed because robots.txt cannot distinguish Bing China from global Bing.
   return {
     rules: [
       {

@@ -21,7 +21,7 @@ export default async function RootPage() {
 
   return (
     <>
-      <JsonLd lang={defaultLocale} />
+      <JsonLd lang={defaultLocale} schema={dict.JsonLd} />
       <HomeLanding dict={dict} stars={stars} />
     </>
   );

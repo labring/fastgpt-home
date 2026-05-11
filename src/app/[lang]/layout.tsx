@@ -11,7 +11,7 @@ export default async function LangHome({ children, params }: { children: React.R
 
   return (
     <>
-      <JsonLd lang={langName} />
+      <JsonLd lang={langName} schema={dict.JsonLd} />
       <HomeLayoutSwitcher dict={dict}>{children}</HomeLayoutSwitcher>
     </>
   );

@@ -1,22 +1,53 @@
-import { siteConfig, siteConfigZh } from '@/config/site';
-
 interface JsonLdProps {
   lang: string;
   path?: string;
+  schema: JsonLdCopy;
 }
 
-export default function JsonLd({ lang, path = '' }: JsonLdProps) {
+type FAQSchemaItem = {
+  question: string;
+  answer: string;
+};
+
+type BreadcrumbItem = {
+  name: string;
+  url: string;
+};
+
+type JsonLdCopy = {
+  siteName: string;
+  pageTitle: string;
+  description: string;
+  inLanguage: string;
+  organizationName: string;
+  applicationCategory: string;
+  operatingSystem: string;
+  offerDescription: string;
+  authorName: string;
+  breadcrumbHome: string;
+  featureList: string[];
+};
+
+function JsonLdScript({ data }: { data: object }) {
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+    />
+  );
+}
+
+export default function JsonLd({ lang, path = '', schema }: JsonLdProps) {
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
-  const config = lang === 'zh' ? siteConfigZh : siteConfig;
   const pageUrl = `${baseUrl}/${lang}${path}`;
 
   const organizationSchema = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'FastGPT',
+    name: schema.organizationName,
     url: baseUrl,
     logo: `${baseUrl}/logo.svg`,
-    description: config.description,
+    description: schema.description,
     sameAs: [
       'https://github.com/labring/FastGPT'
     ]
@@ -25,26 +56,26 @@ export default function JsonLd({ lang, path = '' }: JsonLdProps) {
   const webSiteSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebSite',
-    name: config.name,
+    name: schema.siteName,
     url: baseUrl,
-    description: config.description,
-    inLanguage: lang === 'zh' ? 'zh-CN' : lang === 'ja' ? 'ja-JP' : 'en-US',
+    description: schema.description,
+    inLanguage: schema.inLanguage,
     publisher: {
       '@type': 'Organization',
-      name: 'FastGPT'
+      name: schema.organizationName
     }
   };
 
   const webPageSchema = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
-    name: config.title,
+    name: schema.pageTitle,
     url: pageUrl,
-    description: config.description,
-    inLanguage: lang === 'zh' ? 'zh-CN' : lang === 'ja' ? 'ja-JP' : 'en-US',
+    description: schema.description,
+    inLanguage: schema.inLanguage,
     isPartOf: {
       '@type': 'WebSite',
-      name: config.name,
+      name: schema.siteName,
       url: baseUrl
     }
   };
@@ -52,41 +83,90 @@ export default function JsonLd({ lang, path = '' }: JsonLdProps) {
   const softwareSchema = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
-    name: 'FastGPT',
-    applicationCategory: 'BusinessApplication',
-    operatingSystem: 'Web',
+    name: schema.siteName,
+    applicationCategory: schema.applicationCategory,
+    operatingSystem: schema.operatingSystem,
     url: baseUrl,
-    description: config.description,
+    description: schema.description,
+    featureList: schema.featureList,
     offers: {
       '@type': 'Offer',
       price: '0',
       priceCurrency: 'USD',
-      description: 'Free open-source version available'
+      description: schema.offerDescription
     },
     author: {
       '@type': 'Organization',
-      name: 'labring'
+      name: schema.authorName
     }
+  };
+
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: schema.breadcrumbHome,
+        item: `${baseUrl}/${lang}`
+      }
+    ]
   };
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareSchema) }}
-      />
+      <JsonLdScript data={organizationSchema} />
+      <JsonLdScript data={webSiteSchema} />
+      <JsonLdScript data={webPageSchema} />
+      <JsonLdScript data={softwareSchema} />
+      <JsonLdScript data={breadcrumbSchema} />
     </>
+  );
+}
+
+export function FAQJsonLd({ items }: { items: FAQSchemaItem[] }) {
+  const visibleItems = items
+    .filter((item) => item.question && item.answer)
+    .map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: item.answer.replace(/\s+/g, ' ').trim()
+      }
+    }));
+
+  if (!visibleItems.length) return null;
+
+  return (
+    <JsonLdScript
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: visibleItems
+      }}
+    />
+  );
+}
+
+export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
+  const listItems = items.map((item, index) => ({
+    '@type': 'ListItem',
+    position: index + 1,
+    name: item.name,
+    item: item.url
+  }));
+
+  if (!listItems.length) return null;
+
+  return (
+    <JsonLdScript
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: listItems
+      }}
+    />
   );
 }

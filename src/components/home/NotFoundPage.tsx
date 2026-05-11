@@ -10,7 +10,7 @@ import ms from '@/locales/ms.json';
 import th from '@/locales/th.json';
 import vi from '@/locales/vi.json';
 import zh from '@/locales/zh.json';
-import { getFaqLocale, supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
+import { supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
 
 const dictionaries = { en, zh, ja, ar, vi, th, id, ms };
 const languages = supportedLocaleCodes;
@@ -40,7 +40,6 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
   const t = dictionaries[lang].NotFound;
   const docsUrl = getDocsUrl(lang);
   const startUrl = getStartUrl(lang);
-  const faqLocale = getFaqLocale(lang);
 
   return (
     <div className={`not-found-locale not-found-locale-${lang} mx-auto hidden min-h-[100svh] w-full max-w-[1280px] flex-col px-4 py-6 md:px-8`}>
@@ -117,7 +116,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
                 {t.home}
               </Link>
               <Link
-                href={`/${faqLocale}/faq`}
+                href={`/${lang}/faq`}
                 className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
               >
                 <FileQuestion className="h-4 w-4" />

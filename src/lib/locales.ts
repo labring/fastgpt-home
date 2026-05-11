@@ -58,7 +58,3 @@ export function normalizeLocale(locale: string | undefined | null): LocaleCode {
 export function isSupportedLocale(locale: string | undefined | null): locale is LocaleCode {
   return !!locale && supportedLocaleCodes.includes(locale as LocaleCode);
 }
-
-export function getFaqLocale(locale: string | undefined | null): (typeof faqLocaleCodes)[number] {
-  return normalizeLocale(locale) === 'zh' ? 'zh' : 'en';
-}

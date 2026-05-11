@@ -3,7 +3,6 @@ import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
 import { faqLocaleCodes } from '@/lib/locales';
-import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import FaqLocalePreserver from '@/components/faq/FaqLocalePreserver';
@@ -54,14 +53,14 @@ export default async function FAQDetailPage({
 
         <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[80px] md:pt-[160px]" style={{ zIndex: 1 }}>
           {/* Back Link */}
-          <Link
+          <a
             href={`/${langName}/faq`}
             className="inline-flex items-center gap-1 text-[16px] font-normal transition-all mb-12 group"
             style={{ color: '#3370ff' }}
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span style={{ lineHeight: '20px', letterSpacing: '-0.14px' }}>{dict.FAQ?.backToList || '返回'}</span>
-          </Link>
+          </a>
 
           {/* Header - centered */}
           <div className="text-center mb-16" style={{ maxWidth: 648, margin: '0 auto' }}>
@@ -133,7 +132,7 @@ export default async function FAQDetailPage({
 
           {/* Back to List Button */}
           <div className="text-center">
-            <Link
+            <a
               href={`/${langName}/faq`}
               className="inline-flex items-center justify-center"
               style={{
@@ -150,7 +149,7 @@ export default async function FAQDetailPage({
               }}
             >
               {dict.FAQ?.backToList || '返回'}
-            </Link>
+            </a>
           </div>
         </div>
       </main>

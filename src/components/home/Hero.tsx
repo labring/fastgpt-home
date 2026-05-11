@@ -36,10 +36,18 @@ const mobileBlobs = [
 export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [isMobile, setIsMobile] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
     setIsMobile(mq.matches);
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
+    mq.addEventListener('change', handler);
+    return () => mq.removeEventListener('change', handler);
+  }, []);
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 1024px)');
+    setIsDesktop(mq.matches);
+    const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
     mq.addEventListener('change', handler);
     return () => mq.removeEventListener('change', handler);
   }, []);
@@ -51,7 +59,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const smoothProgress = useSpring(scrollYProgress, { stiffness: 500, damping: 60, mass: 1 });
   const rotateX = useTransform(smoothProgress, [0, 0.20], [25, 0]);
   const scale = useTransform(smoothProgress, [0, 0.20], [0.95, 1]);
-  const offsetY = useTransform(smoothProgress, [0, 0.20], [-100, 30]);
+  const offsetY = useTransform(smoothProgress, [0, 0.20], isDesktop ? [-160, 0] : [-80, 0]);
 
 
   const [stars, setStars] = useState(initialStars);
@@ -74,7 +82,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   return (
     <section
       ref={containerRef}
-      className="relative pt-[120px] px-[16px] pb-[48px] md:pt-[160px] md:px-[48px] md:pb-[48px] bg-white overflow-hidden"
+      className="relative pt-[120px] pb-[48px] md:pt-[160px] md:pb-[48px] bg-white overflow-hidden"
     >
       {/* Desktop gradient blobs */}
       {blobs.map((b, i) => (
@@ -126,7 +134,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
 
 
           {/* Text content */}
-          <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px] md:gap-[32px]">
+          <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px] md:gap-[32px] px-[16px] md:px-[32px]">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -210,19 +218,19 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                 {t.trial}
               </motion.a>
             </motion.div>
+          </div>
 
-            {/* Dashboard image */}
-            <div
-              className="relative mx-auto mt-0 md:mt-[80px]"
-              style={{ perspective: 1900 }}
+          {/* Dashboard image — outside text container, own padding */}
+          <div
+            className="relative mx-auto mt-0 md:mt-[48px] px-[16px] md:px-[32px] lg:px-[80px]"
+            style={{ perspective: 1900 }}
+          >
+            <motion.div
+              style={isMobile ? {} : { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
+              className="hero-image-fade origin-bottom"
             >
-              <motion.div
-                style={isMobile ? {} : { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
-                className="hero-image-fade origin-bottom"
-              >
-                <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
-              </motion.div>
-            </div>
+              <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
+            </motion.div>
           </div>
 
         {/* TrustedBy + Stats passed as children */}

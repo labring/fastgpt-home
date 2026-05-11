@@ -203,6 +203,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
                 alt=""
                 width={40}
                 height={40}
+                loading="lazy"
                 draggable={false}
               />
             </button>
@@ -217,6 +218,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
                 alt=""
                 width={40}
                 height={40}
+                loading="lazy"
                 draggable={false}
               />
             </button>

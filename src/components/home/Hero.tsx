@@ -36,7 +36,7 @@ const mobileBlobs = [
 ];
 
 export default function Hero({ stars: initialStars, t, children }: HeroProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
@@ -82,6 +82,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
     <section
       ref={containerRef}
       className="relative pt-[120px] pb-[48px] md:pt-[160px] md:pb-[48px] bg-white overflow-hidden"
+      style={{ position: 'relative' }}
     >
       {/* Desktop gradient blobs */}
       {blobs.map((b, i) => (
@@ -166,14 +167,11 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                 >
                   {t.brand}
                 </motion.p>
-                <motion.h1
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+                <h1
                   className="text-ink text-[48px] leading-[62px] tracking-[-1.44px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
                 >
                   {t.title}
-                </motion.h1>
+                </h1>
               </div>
 
               <motion.p
@@ -231,9 +229,10 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               <Image
                 src={assets.heroDashboard}
                 alt={t.title}
-                width={5888}
-                height={3179}
+                width={3600}
+                height={1944}
                 priority
+                sizes="100vw"
                 className="block w-full h-auto"
                 draggable={false}
               />

@@ -5,6 +5,7 @@ const nextConfig = {
   // Only use static export for production builds
   // Dev mode uses dynamic server rendering for better DX
   ...(isExport && { output: 'export' }),
+  allowedDevOrigins: ['192.168.12.18'],
   images: { unoptimized: true },
   transpilePackages: ['@heroui/react', '@heroui/theme'],
   

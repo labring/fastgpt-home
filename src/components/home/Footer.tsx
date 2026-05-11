@@ -314,6 +314,7 @@ export default function Footer({ t }: { t: FooterT }) {
                     alt=""
                     width={24}
                     height={24}
+                    loading="lazy"
                     className="select-none"
                     draggable={false}
                   />

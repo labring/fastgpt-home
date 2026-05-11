@@ -189,6 +189,7 @@ export default function Solutions({ t }: { t: SolutionsT }) {
                 width={9888}
                 height={7424}
                 sizes="(min-width: 1024px) 560px, 100vw"
+                loading="lazy"
                 className="w-full h-auto block"
               />
             </div>

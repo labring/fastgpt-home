@@ -26,8 +26,8 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
           <Image
             src="/images/home/brands/brand-wall.png"
             alt={t.title}
-            width={2022}
-            height={894}
+            width={2800}
+            height={1238}
             loading="lazy"
             className="w-full select-none object-contain"
             draggable={false}

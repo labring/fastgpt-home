@@ -7,7 +7,7 @@ const locales = ['en', 'zh', 'ja']
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'
-  const basePaths = ['', '/enterprise', '/price']
+  const localizedPaths = ['', '/price']
   const now = new Date()
   const entries: MetadataRoute.Sitemap = []
 
@@ -16,13 +16,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 各语言的基础页面
   for (const locale of locales) {
-    for (const path of basePaths) {
+    for (const path of localizedPaths) {
       entries.push({ url: `${baseUrl}/${locale}${path}`, lastModified: now })
     }
 
     // FAQ 列表页
     entries.push({ url: `${baseUrl}/${locale}/faq`, lastModified: now })
   }
+
+  // 企业一体机页面目前只提供中文版本
+  entries.push({ url: `${baseUrl}/zh/enterprise`, lastModified: now })
 
   // FAQ 详情页
   for (const locale of locales) {

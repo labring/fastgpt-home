@@ -1,0 +1,526 @@
+{
+  "links": [
+    {
+      "label": "Harga",
+      "href": "/price"
+    },
+    {
+      "label": "Dokumentasi",
+      "href": "https://doc.fastgpt.io/"
+    },
+    {
+      "label": "Pusat Pembelajaran",
+      "href": "https://video.fastgpt.cn/videos"
+    }
+  ],
+  "Pricing": {
+    "badge": "Harga",
+    "popular": "Paling Popular",
+    "cloud": "Perkhidmatan Cloud",
+    "self": "Self-Hosted",
+    "annual": "Tahunan",
+    "pay10": "Bayar 10 bulan, nikmati 1 tahun!",
+    "upgrade": "Naik Taraf Pelan",
+    "contact": "Hubungi Jualan",
+    "allFeatures": "Semua ciri versi komuniti",
+    "moreFeatures": "Untuk lebih banyak ciri perusahaan sila",
+    "moreFeaturesLink": "lihat dokumentasi",
+    "chooseVersion": "Pilih versi yang sesuai",
+    "freeUse": "Guna percuma atau naik taraf ke pelan lebih tinggi",
+    "monthly": "Bulanan",
+    "aiCredits": "AI Credits",
+    "faq": {
+      "badge": "FAQ",
+      "title": "FAQ",
+      "subtitle": "Soalan lazim tentang pelan, AI credits dan had sumber",
+      "items": [
+        {
+          "title": "Bagaimana pertukaran pelan berfungsi?",
+          "desc": "Pelan tahap lebih tinggi diberi keutamaan. Jika pelan baharu lebih tinggi daripada pelan semasa, ia berkuat kuasa serta-merta; jika tidak, pelan semasa diteruskan sehingga tamat tempoh."
+        },
+        {
+          "title": "Di mana saya boleh melihat pelan saya?",
+          "desc": "Pergi ke Akaun → Maklumat Peribadi → Butiran Pelan → Penggunaan untuk melihat tarikh mula dan tamat. Apabila pelan berbayar tamat, ia kembali automatik ke tier percuma."
+        },
+        {
+          "title": "Apakah AI credits?",
+          "desc": "Setiap panggilan model AI menggunakan sejumlah AI credits.\nUntuk butiran pengiraan, lihat “Pengiraan AI Credit” di atas.\nSistem mengutamakan penggunaan sebenar daripada penyedia model. Jika tiada, ia menganggarkan mengikut kadar GPT-3.5: 1 Token ≈ 0.7 aksara Cina ≈ 0.9 perkataan Inggeris."
+        },
+        {
+          "title": "Adakah AI credits tamat tempoh?",
+          "desc": "Ya. Apabila pelan semasa tamat, AI credits akan diset semula kepada peruntukan pelan baharu. Credits pelan tahunan sah untuk satu tahun, bukan bulanan."
+        },
+        {
+          "title": "Bagaimana storan pangkalan pengetahuan dikira?",
+          "desc": "1 unit storan pangkalan pengetahuan = 1 index pangkalan pengetahuan.\nSatu chunk biasanya mempunyai beberapa index. Anda boleh melihat “n indexes” dalam setiap collection pangkalan pengetahuan."
+        },
+        {
+          "title": "Bilakah kiraan index berkurang selepas dipadam?",
+          "desc": "Apabila anda memadam kandungan pangkalan pengetahuan, kiraan index akan berkurang dalam masa 5 minit."
+        },
+        {
+          "title": "Bolehkah pek sumber ditindih?",
+          "desc": "Ya. Setiap pek sumber yang dibeli adalah bebas dan boleh ditindih dalam tempoh sah. Credits ditolak daripada pek yang paling hampir tamat dahulu."
+        },
+        {
+          "title": "Apakah QPM?",
+          "desc": "QPM ialah jumlah maksimum request Agent yang boleh dibuat oleh pasukan anda setiap minit, tanpa mengira kerumitan Agent.\nEndpoint OpenAPI lain juga mempunyai rate limit sendiri dan dikira berasingan."
+        },
+        {
+          "title": "Berapa lama sebenarnya sebulan atau setahun?",
+          "desc": "Sebulan ialah 30 hari; setahun ialah 360 hari."
+        },
+        {
+          "title": "Adakah data tier percuma akan dibersihkan?",
+          "desc": "Jika pasukan percuma tidak log masuk selama 30 hari berturut-turut, semua kandungan pangkalan pengetahuan akan dibersihkan secara automatik."
+        }
+      ]
+    }
+  },
+  "FAQ": {
+    "badge": "FAQ",
+    "title": "Soalan Lazim",
+    "subtitle": "Cari jawapan tentang FastGPT",
+    "description": "Soalan lazim tentang FastGPT",
+    "viewMore": "Lihat lagi",
+    "allCategories": "Semua Kategori",
+    "readMore": "Baca lagi",
+    "readDetail": "Lihat butiran",
+    "backToList": "Kembali ke FAQ",
+    "relatedQuestions": "Soalan Berkaitan",
+    "searchPlaceholder": "Cari soalan...",
+    "noResults": "Tiada soalan yang sepadan",
+    "clearFilters": "Kosongkan Penapis",
+    "filterByCategory": "Tapis mengikut Kategori",
+    "showing": "Memaparkan",
+    "question": "soalan",
+    "questions": "soalan",
+    "previous": "Sebelumnya",
+    "next": "Seterusnya"
+  },
+  "CTA": {
+    "title": "Mula bina pangkalan pengetahuan khusus domain anda",
+    "description1": "Cipta",
+    "description2": "sokongan pelanggan berkuasa AI anda sendiri,",
+    "description3": "integrasikan dengan",
+    "description4": "produk anda, dan ",
+    "description5": "percepatkan",
+    "description6": " pertumbuhan hari ini!"
+  },
+  "CTAButton": {
+    "title": "Mula",
+    "askTitle": "Hubungi Jualan"
+  },
+  "Home": {
+    "navCta": {
+      "trial": "Mula",
+      "consult": "Hubungi Jualan"
+    },
+    "hero": {
+      "githubStars": "GitHub Stars",
+      "followUs": "Ikuti kami",
+      "brand": "FastGPT",
+      "title": "Enjin Produktiviti AI untuk Perusahaan",
+      "subtitle": "Bina AI Agent tahap perusahaan yang selamat dan terkawal",
+      "trial": "Mula",
+      "consult": "Hubungi Jualan"
+    },
+    "trustedBy": {
+      "caption": "Dipercayai oleh peneraju industri"
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "GitHub Stars",
+          "desc": "Disokong komuniti pembangun global"
+        },
+        {
+          "label": "Pengguna Platform",
+          "desc": "Memperkasa pasukan merentas industri"
+        },
+        {
+          "label": "Private Deployment",
+          "desc": "Terbukti dalam senario produksi"
+        }
+      ]
+    },
+    "productHighlights": {
+      "badge": "Sorotan Produk",
+      "title": "AI Agent sedia produksi",
+      "subtitle": "Satu platform untuk penyampaian AI perusahaan",
+      "items": [
+        {
+          "key": "blocks",
+          "title": "Bina AI agent untuk perniagaan seperti menyusun blok",
+          "desc": "Aliran kerja visual dan ekosistem API lengkap untuk integrasi lancar"
+        },
+        {
+          "key": "kb",
+          "title": "Kurangkan hallucination dengan pangkalan pengetahuan perusahaan yang tepat",
+          "desc": "Hybrid retrieval mengurangkan hallucination; data dibersihkan automatik dan sentiasa hidup"
+        },
+        {
+          "key": "lifecycle",
+          "title": "Pantau dan tadbir seluruh kitar hayat LLM",
+          "desc": "Integrasi sebarang model dengan debugging dan audit untuk kawalan"
+        },
+        {
+          "key": "production",
+          "title": "Seni bina sedia produksi untuk beban kerja sebenar",
+          "desc": "Sokongan SSO dan RBAC untuk portal perusahaan yang selamat"
+        },
+        {
+          "key": "partner",
+          "title": "Bukan sekadar alat, tetapi rakan perjalanan AI anda",
+          "desc": "Pengalaman perusahaan daripada discovery hingga POC tersuai dan delivery"
+        }
+      ]
+    },
+    "solutions": {
+      "badge": "Penyelesaian Industri",
+      "title": "Meliputi senario perniagaan teras",
+      "subtitle": "Penyelesaian AI siap guna mengikut peranan dan industri",
+      "consult": "Hubungi Jualan",
+      "tabs": [
+        {
+          "key": "sales",
+          "label": "Jualan & Pemasaran",
+          "items": [
+            {
+              "key": "assistant",
+              "title": "Pembantu Jualan AI",
+              "desc": "Dibenamkan dalam platform anda, membantu wakil jualan dengan jawapan dan skrip masa nyata."
+            },
+            {
+              "key": "report",
+              "title": "Laporan Pasaran Kewangan",
+              "desc": "Menarik data pasaran automatik dan menjana carta serta laporan harian daripada template."
+            },
+            {
+              "key": "training",
+              "title": "Latihan & Praktik Jualan",
+              "desc": "AI memainkan peranan pembeli sebenar, menilai prestasi dan melatih staf baharu dengan pantas."
+            }
+          ]
+        },
+        {
+          "key": "service",
+          "label": "Sokongan & Operasi",
+          "items": [
+            {
+              "key": "ticket",
+              "title": "Routing Ticket Pintar",
+              "desc": "Memahami teks dan imej, menghala ticket dengan tepat dan mempercepatkan servis."
+            },
+            {
+              "key": "copy",
+              "title": "Penjanaan Copy Pemasaran",
+              "desc": "Memahami tawaran dan suara setiap saluran; mengelakkan istilah terlarang pada skala besar."
+            },
+            {
+              "key": "insight",
+              "title": "Insight Pengalaman Pelanggan",
+              "desc": "Menganalisis sentimen dan pain point pelanggan serta mencadangkan penambahbaikan produk."
+            }
+          ]
+        },
+        {
+          "key": "hr",
+          "label": "HR & Admin",
+          "items": [
+            {
+              "key": "resume",
+              "title": "Saringan Resume Pintar",
+              "desc": "AI membaca jumlah resume yang besar, menilai kesesuaian dan menonjolkan calon terbaik."
+            },
+            {
+              "key": "policy",
+              "title": "Q&A Polisi Pekerja",
+              "desc": "Import buku panduan; pekerja bertanya secara perbualan tanpa carian manual."
+            },
+            {
+              "key": "meeting",
+              "title": "Pembantu Minit Mesyuarat",
+              "desc": "Transkripsi langsung, ekstrak perkara penting dan keputusan, minit satu klik."
+            }
+          ]
+        },
+        {
+          "key": "finance",
+          "label": "Kewangan & Undang-undang",
+          "items": [
+            {
+              "key": "expense",
+              "title": "Semakan Tuntutan Perbelanjaan",
+              "desc": "Ambil gambar resit; AI menyemak bajet dan peraturan serta menandakan anomali automatik."
+            },
+            {
+              "key": "contract",
+              "title": "Semakan Kontrak Pintar",
+              "desc": "Membandingkan dengan regulasi dalam beberapa saat, menandakan klausa berisiko dan mencadang suntingan."
+            },
+            {
+              "key": "dd",
+              "title": "Penjanaan Laporan Due Diligence",
+              "desc": "Mengumpul data pendaftaran perniagaan secara automatik dan menghasilkan laporan berstruktur."
+            }
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "badge": "Kisah Kejayaan Pelanggan",
+      "title": "Penanda Aras Industri",
+      "subtitle": "Membantu 1,000+ perusahaan mengurangkan kos dan meningkatkan hasil",
+      "learnMore": "Ketahui Lagi",
+      "items": [
+        {
+          "key": "cetc",
+          "title": "Memendekkan ramp-up pekerja baharu dengan pembantu pengetahuan R&D",
+          "metrics": [
+            {
+              "value": "1 week+",
+              "label": "Kitaran latihan dipendekkan"
+            },
+            {
+              "value": "10%",
+              "label": "Pertanyaan berulang berkurang"
+            },
+            {
+              "value": "30s",
+              "label": "Masa retrieval"
+            }
+          ]
+        },
+        {
+          "key": "cms",
+          "title": "Penyelidikan pelaburan diperbaharui; laporan fund dijana end-to-end",
+          "metrics": [
+            {
+              "value": "90%+",
+              "label": "Kadar automasi"
+            },
+            {
+              "value": "<1%",
+              "label": "Kadar ralat data"
+            },
+            {
+              "value": "90%",
+              "label": "Masa produksi dijimatkan"
+            }
+          ]
+        },
+        {
+          "key": "snow",
+          "title": "Berintegrasi mendalam dengan OA untuk kelulusan perbelanjaan",
+          "metrics": [
+            {
+              "value": "50%",
+              "label": "Kecekapan semakan"
+            },
+            {
+              "value": "70%",
+              "label": "Peningkatan pengesanan anomali"
+            },
+            {
+              "value": "60%",
+              "label": "Ralat semakan akhir berkurang"
+            }
+          ]
+        },
+        {
+          "key": "zhaozhao",
+          "title": "10k+ pertanyaan harian; servis pelanggan AI 24/7 dalam beberapa saat",
+          "metrics": [
+            {
+              "value": "1 s",
+              "label": "Respons tahap saat"
+            },
+            {
+              "value": "42%",
+              "label": "Human handoff berkurang"
+            },
+            {
+              "value": "Standardized",
+              "label": "Kualiti servis distandardkan"
+            }
+          ]
+        },
+        {
+          "key": "lcfc",
+          "title": "Tinggalkan Excel 10k baris; tanya dengan bahasa semula jadi bila-bila masa",
+          "metrics": [
+            {
+              "value": "240+ min",
+              "label": "Peningkatan produktiviti data"
+            },
+            {
+              "value": "90%",
+              "label": "Pengurangan lag sistem"
+            },
+            {
+              "value": "3%",
+              "label": "Kadar ralat turun kepada"
+            }
+          ]
+        }
+      ]
+    },
+    "brandWall": {
+      "badge": "Brand Wall",
+      "title": "Pelanggan Kami",
+      "subtitle": "1,000+ perusahaan memilih FastGPT sebagai rakan AI"
+    },
+    "services": {
+      "badge": "Perkhidmatan & Pensijilan",
+      "title": "Penyampaian profesional, nilai dilindungi",
+      "subtitle": "Daripada konsultasi hingga delivery, kami rakan jangka panjang untuk adopsi AI.",
+      "items": [
+        {
+          "key": "community",
+          "title": "Ekosistem Sumber Terbuka",
+          "desc": "Template komuniti dan dokumentasi mempercepatkan permulaan"
+        },
+        {
+          "key": "consult",
+          "title": "Konsultasi Pakar",
+          "desc": "Diagnosis pain point 1-ke-1, validasi seni bina dan POC"
+        },
+        {
+          "key": "deploy",
+          "title": "Sokongan Implementasi",
+          "desc": "Rollout end-to-end dengan latihan dan bimbingan"
+        },
+        {
+          "key": "custom",
+          "title": "Penyesuaian Perusahaan",
+          "desc": "Integrasi mendalam dengan sistem anda dan sokongan jangka panjang"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Suka pembina AI Agent sumber terbuka ini?",
+      "badgeLink": "Beri Star di GitHub 🌟",
+      "badgeLinkUrl": "https://github.com/labring/FastGPT",
+      "title": "FAQ",
+      "subtitle": "Jawapan pantas tentang FastGPT",
+      "viewMore": "Lihat lagi →",
+      "viewMoreUrl": "/en/faq",
+      "items": [
+        {
+          "title": "Bolehkah versi sumber terbuka digunakan secara komersial?",
+          "content": "FastGPT membenarkan penggunaan komersial, seperti backend service untuk aplikasi lain atau platform pembangunan aplikasi perusahaan. Namun SaaS multi-tenant atau pengubahsuaian logo dan hak cipta memerlukan lesen komersial."
+        },
+        {
+          "title": "Format dokumen apa yang boleh diimport ke pangkalan pengetahuan FastGPT?",
+          "content": "FastGPT menyokong Word, PDF, Excel, Markdown dan pautan web. Ia juga boleh menyegerakkan data daripada keseluruhan laman web dengan pemprosesan teks, vectorization dan QA splitting automatik."
+        },
+        {
+          "title": "Model apa yang boleh diintegrasikan dengan FastGPT?",
+          "content": "Selagi API model serasi dengan OpenAI API, model tersebut boleh digunakan dengan FastGPT. Anda juga boleh menggunakan One API untuk menyatukan akses pelbagai model."
+        },
+        {
+          "title": "Apa perlu dilakukan jika menghadapi masalah?",
+          "content": "Sertai komuniti atau forum kami, buat post dan hubungi kami untuk bantuan."
+        }
+      ]
+    },
+    "cta": {
+      "brand": "FastGPT",
+      "title": "Jadikan AI enjin baharu pertumbuhan perniagaan",
+      "subtitle": "Cuba hari ini",
+      "trial": "Mula",
+      "consult": "Hubungi Jualan"
+    },
+    "footer": {
+      "tagline": "Enjin Produktiviti AI untuk Perusahaan",
+      "columns": {
+        "service": {
+          "title": "Perkhidmatan",
+          "items": {
+            "cloud": "Cloud",
+            "private": "Self-Hosted",
+            "community": "Komuniti",
+            "docs": "Dokumentasi"
+          }
+        },
+        "partner": {
+          "title": "Rakan Kongsi"
+        },
+        "more": {
+          "title": "Lagi",
+          "email": "E-mel: Dennis@sealos.io",
+          "lanqiao": "Kursus Lanqiao × FastGPT",
+          "book": "Buku Rasmi FastGPT"
+        }
+      },
+      "qr": {
+        "wechat": "Official WeChat",
+        "feishu": "Feishu Community",
+        "group": "WeChat Group"
+      },
+      "copyright": "Hak Cipta"
+    }
+  },
+  "Enterprise": {
+    "Hero": {
+      "maker": "Enterprises use FastGPT Enterprise Appliance customization services",
+      "title": "FastGPT Enterprise Appliance",
+      "description": "Integrated software and hardware delivery with out-of-the-box large models and FastGPT Enterprise Appliance, paired with enterprise Agent services, mature general-purpose agents, and vertical AI applications for multiple industries to accelerate enterprise AI adoption."
+    },
+    "Models": {
+      "title": "Product Series",
+      "description": "Tailored for enterprises of different sizes and requirements, with inference and training-inference options."
+    },
+    "Advantages": {
+      "title": "Choose FastGPT Enterprise Appliance",
+      "description": "We provide more than hardware: a stable, efficient, and open enterprise AI foundation."
+    },
+    "Benchmark": {
+      "title": "Enterprise Model Benchmark Metrics (Short-text Test)",
+      "model": "Model",
+      "hardware": "Configuration",
+      "concurrent40": "40 concurrent (Throughput/TTFT)",
+      "concurrent160": "160 concurrent (Throughput/TTFT)",
+      "concurrent256": "256 concurrent (Throughput/TTFT)"
+    },
+    "Partners": {
+      "title": "Trusted Customers",
+      "description": "Covering 10+ industries including finance, manufacturing, e-commerce, and education, helping hundreds of enterprises complete the final mile of AI implementation."
+    },
+    "CTA": {
+      "title": "Ready to deploy your FastGPT Enterprise Appliance?",
+      "description": "Contact our experts to learn how FastGPT Enterprise Appliance can transform your business and request a product demo.",
+      "link": "Request a Demo"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Halaman tidak ditemui",
+    "desc": "Halaman ini mungkin telah dialihkan, dipadam atau tidak tersedia buat sementara waktu. Kembali ke halaman utama atau cari di FAQ.",
+    "home": "Kembali ke laman utama",
+    "faq": "Lihat FAQ",
+    "docs": "Dokumentasi",
+    "start": "Mula"
+  },
+  "JsonLd": {
+    "siteName": "FastGPT",
+    "pageTitle": "FastGPT - Platform AI Agent Perusahaan | RAG Sumber Terbuka",
+    "description": "Bina AI agent berkuasa dengan aliran kerja visual, pangkalan pengetahuan dan RAG FastGPT. Mula percuma hari ini.",
+    "inLanguage": "ms-MY",
+    "organizationName": "FastGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offerDescription": "Versi sumber terbuka percuma tersedia",
+    "authorName": "labring",
+    "breadcrumbHome": "FastGPT",
+    "featureList": [
+      "Orkestrasi aliran kerja AI visual",
+      "Pangkalan pengetahuan perusahaan dan Agentic RAG",
+      "Sistem template aplikasi AI",
+      "Akses pelbagai model dengan API serasi OpenAI",
+      "Private deployment dan pengurusan izin perusahaan",
+      "Pembina AI Agent tanpa kod"
+    ]
+  }
+}

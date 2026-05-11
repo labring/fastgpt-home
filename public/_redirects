@@ -1,0 +1,12 @@
+/ja/faq /en/faq 302
+/ja/faq/* /en/faq/:splat 302
+/ar/faq /en/faq 302
+/ar/faq/* /en/faq/:splat 302
+/vi/faq /en/faq 302
+/vi/faq/* /en/faq/:splat 302
+/th/faq /en/faq 302
+/th/faq/* /en/faq/:splat 302
+/id/faq /en/faq 302
+/id/faq/* /en/faq/:splat 302
+/ms/faq /en/faq 302
+/ms/faq/* /en/faq/:splat 302

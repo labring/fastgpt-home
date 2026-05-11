@@ -1,0 +1,526 @@
+{
+  "links": [
+    {
+      "label": "Bảng giá",
+      "href": "/price"
+    },
+    {
+      "label": "Tài liệu",
+      "href": "https://doc.fastgpt.io/"
+    },
+    {
+      "label": "Trung tâm học tập",
+      "href": "https://video.fastgpt.cn/videos"
+    }
+  ],
+  "Pricing": {
+    "badge": "Bảng giá",
+    "popular": "Phổ biến nhất",
+    "cloud": "Dịch vụ đám mây",
+    "self": "Tự triển khai",
+    "annual": "Hằng năm",
+    "pay10": "Trả 10 tháng, dùng 1 năm!",
+    "upgrade": "Nâng cấp gói",
+    "contact": "Liên hệ sales",
+    "allFeatures": "Tất cả tính năng của bản cộng đồng",
+    "moreFeatures": "Để xem thêm tính năng doanh nghiệp, vui lòng",
+    "moreFeaturesLink": "xem tài liệu",
+    "chooseVersion": "Chọn phiên bản phù hợp",
+    "freeUse": "Dùng miễn phí hoặc nâng cấp gói cao hơn",
+    "monthly": "Hằng tháng",
+    "aiCredits": "AI Credits",
+    "faq": {
+      "badge": "FAQ",
+      "title": "Câu hỏi thường gặp",
+      "subtitle": "Các câu hỏi về gói dịch vụ, AI credits và giới hạn tài nguyên",
+      "items": [
+        {
+          "title": "Việc chuyển đổi gói hoạt động thế nào?",
+          "desc": "Gói cao hơn được ưu tiên. Nếu gói mới cao hơn gói hiện tại, nó có hiệu lực ngay; nếu không, gói hiện tại tiếp tục đến khi hết hạn."
+        },
+        {
+          "title": "Tôi xem gói của mình ở đâu?",
+          "desc": "Vào Tài khoản → Thông tin cá nhân → Chi tiết gói → Mức sử dụng để xem ngày bắt đầu và kết thúc. Khi gói trả phí hết hạn, hệ thống tự động quay về gói miễn phí."
+        },
+        {
+          "title": "AI credits là gì?",
+          "desc": "Mỗi lần gọi mô hình AI sẽ tiêu hao một lượng AI credits.\nChi tiết tính toán xem phần “Tính AI Credit” ở trên.\nHệ thống ưu tiên số liệu thực tế từ nhà cung cấp mô hình. Nếu không có, hệ thống ước tính theo GPT-3.5: 1 Token ≈ 0.7 ký tự tiếng Trung ≈ 0.9 từ tiếng Anh."
+        },
+        {
+          "title": "AI credits có hết hạn không?",
+          "desc": "Có. Khi gói hiện tại hết hạn, AI credits sẽ được đặt lại theo hạn mức của gói mới. Credits của gói năm có hiệu lực trong một năm, không theo tháng."
+        },
+        {
+          "title": "Dung lượng kho tri thức được tính thế nào?",
+          "desc": "1 đơn vị lưu trữ kho tri thức = 1 index kho tri thức.\nMột chunk thường có nhiều index. Bạn có thể thấy “n indexes” trong từng collection của kho tri thức."
+        },
+        {
+          "title": "Sau khi xóa, khi nào số index giảm?",
+          "desc": "Khi bạn xóa nội dung kho tri thức, số index sẽ giảm trong vòng 5 phút."
+        },
+        {
+          "title": "Có thể cộng dồn gói tài nguyên không?",
+          "desc": "Có. Mỗi gói tài nguyên mua thêm là độc lập và được cộng dồn trong thời hạn hiệu lực. Credits sẽ bị trừ từ gói sắp hết hạn nhất trước."
+        },
+        {
+          "title": "QPM là gì?",
+          "desc": "QPM là số yêu cầu Agent tối đa mà team có thể gửi mỗi phút, không phụ thuộc độ phức tạp của từng Agent.\nCác endpoint OpenAPI khác cũng có giới hạn riêng và được tính riêng."
+        },
+        {
+          "title": "Một tháng hoặc một năm chính xác là bao lâu?",
+          "desc": "Một tháng là 30 ngày; một năm là 360 ngày."
+        },
+        {
+          "title": "Dữ liệu gói miễn phí có bị xóa không?",
+          "desc": "Nếu một team miễn phí không đăng nhập trong 30 ngày liên tiếp, toàn bộ nội dung kho tri thức sẽ tự động bị xóa."
+        }
+      ]
+    }
+  },
+  "FAQ": {
+    "badge": "FAQ",
+    "title": "Câu hỏi thường gặp",
+    "subtitle": "Tìm câu trả lời cho các câu hỏi phổ biến về FastGPT",
+    "description": "Câu hỏi thường gặp về FastGPT",
+    "viewMore": "Xem thêm",
+    "allCategories": "Tất cả danh mục",
+    "readMore": "Đọc thêm",
+    "readDetail": "Xem chi tiết",
+    "backToList": "Quay lại FAQ",
+    "relatedQuestions": "Câu hỏi liên quan",
+    "searchPlaceholder": "Tìm kiếm câu hỏi...",
+    "noResults": "Không tìm thấy câu hỏi phù hợp",
+    "clearFilters": "Xóa bộ lọc",
+    "filterByCategory": "Lọc theo danh mục",
+    "showing": "Đang hiển thị",
+    "question": "câu hỏi",
+    "questions": "câu hỏi",
+    "previous": "Trước",
+    "next": "Tiếp"
+  },
+  "CTA": {
+    "title": "Bắt đầu xây dựng kho tri thức chuyên ngành của bạn",
+    "description1": "Tạo",
+    "description2": "hỗ trợ khách hàng bằng AI của riêng bạn,",
+    "description3": "tích hợp với",
+    "description4": "sản phẩm của bạn và ",
+    "description5": "tăng tốc",
+    "description6": " tăng trưởng ngay hôm nay!"
+  },
+  "CTAButton": {
+    "title": "Bắt đầu",
+    "askTitle": "Liên hệ sales"
+  },
+  "Home": {
+    "navCta": {
+      "trial": "Bắt đầu",
+      "consult": "Liên hệ sales"
+    },
+    "hero": {
+      "githubStars": "GitHub Stars",
+      "followUs": "Theo dõi",
+      "brand": "FastGPT",
+      "title": "Động cơ năng suất AI cho doanh nghiệp",
+      "subtitle": "Xây dựng AI Agent cấp doanh nghiệp an toàn và có thể kiểm soát",
+      "trial": "Bắt đầu",
+      "consult": "Liên hệ sales"
+    },
+    "trustedBy": {
+      "caption": "Được các doanh nghiệp đầu ngành tin dùng"
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "GitHub Stars",
+          "desc": "Được cộng đồng lập trình viên toàn cầu ủng hộ"
+        },
+        {
+          "label": "Người dùng nền tảng",
+          "desc": "Trao quyền cho đội ngũ ở nhiều ngành"
+        },
+        {
+          "label": "Triển khai riêng",
+          "desc": "Đã kiểm chứng trong môi trường sản xuất"
+        }
+      ]
+    },
+    "productHighlights": {
+      "badge": "Điểm nổi bật",
+      "title": "AI Agent sẵn sàng sản xuất",
+      "subtitle": "Một nền tảng cho triển khai AI doanh nghiệp",
+      "items": [
+        {
+          "key": "blocks",
+          "title": "Xây dựng AI agent cho doanh nghiệp như ghép khối",
+          "desc": "Workflow trực quan với hệ sinh thái API phong phú để tích hợp mượt mà"
+        },
+        {
+          "key": "kb",
+          "title": "Giảm hallucination bằng kho tri thức doanh nghiệp chính xác",
+          "desc": "Truy xuất lai giúp hạn chế hallucination; dữ liệu được làm sạch tự động và luôn cập nhật"
+        },
+        {
+          "key": "lifecycle",
+          "title": "Quan sát và quản trị toàn bộ vòng đời LLM",
+          "desc": "Tích hợp mọi mô hình, kèm debug và audit để kiểm soát tuân thủ"
+        },
+        {
+          "key": "production",
+          "title": "Kiến trúc sẵn sàng sản xuất cho workload thực tế",
+          "desc": "SSO và RBAC hỗ trợ cổng doanh nghiệp cá nhân hóa, an toàn"
+        },
+        {
+          "key": "partner",
+          "title": "Không chỉ là công cụ, mà là đối tác AI của bạn",
+          "desc": "Kinh nghiệm doanh nghiệp sâu từ khám phá đến POC tùy chỉnh và bàn giao"
+        }
+      ]
+    },
+    "solutions": {
+      "badge": "Giải pháp ngành",
+      "title": "Bao phủ các kịch bản kinh doanh cốt lõi",
+      "subtitle": "Giải pháp AI trọn gói theo vai trò và ngành",
+      "consult": "Liên hệ sales",
+      "tabs": [
+        {
+          "key": "sales",
+          "label": "Bán hàng & Marketing",
+          "items": [
+            {
+              "key": "assistant",
+              "title": "Trợ lý bán hàng AI",
+              "desc": "Tích hợp trong nền tảng của bạn, hỗ trợ nhân viên bán hàng bằng câu trả lời và kịch bản tức thời."
+            },
+            {
+              "key": "report",
+              "title": "Báo cáo thị trường tài chính",
+              "desc": "Tự động lấy dữ liệu thị trường, tạo biểu đồ và báo cáo hằng ngày từ mẫu."
+            },
+            {
+              "key": "training",
+              "title": "Đào tạo & thực hành bán hàng",
+              "desc": "AI đóng vai người mua thật, chấm điểm và huấn luyện nhân viên mới nhanh chóng."
+            }
+          ]
+        },
+        {
+          "key": "service",
+          "label": "Hỗ trợ & Vận hành",
+          "items": [
+            {
+              "key": "ticket",
+              "title": "Định tuyến ticket thông minh",
+              "desc": "Hiểu cả văn bản và hình ảnh, định tuyến ticket chính xác, tăng tốc dịch vụ."
+            },
+            {
+              "key": "copy",
+              "title": "Tạo nội dung marketing",
+              "desc": "Hiểu ưu đãi và giọng điệu từng kênh; tránh từ cấm ở quy mô lớn."
+            },
+            {
+              "key": "insight",
+              "title": "Phân tích trải nghiệm khách hàng",
+              "desc": "Phân tích cảm xúc, điểm đau khách hàng và đề xuất cải tiến sản phẩm."
+            }
+          ]
+        },
+        {
+          "key": "hr",
+          "label": "Nhân sự & Hành chính",
+          "items": [
+            {
+              "key": "resume",
+              "title": "Sàng lọc CV thông minh",
+              "desc": "AI đọc lượng lớn CV, chấm mức độ phù hợp và đưa ra ứng viên tốt nhất."
+            },
+            {
+              "key": "policy",
+              "title": "Hỏi đáp chính sách nhân viên",
+              "desc": "Nhập sổ tay nhân viên; nhân viên hỏi đáp tự nhiên mà không cần tìm kiếm."
+            },
+            {
+              "key": "meeting",
+              "title": "Trợ lý biên bản họp",
+              "desc": "Ghi âm/chuyển biên trực tiếp, trích xuất ý chính và quyết định, tạo biên bản một chạm."
+            }
+          ]
+        },
+        {
+          "key": "finance",
+          "label": "Tài chính & Pháp lý",
+          "items": [
+            {
+              "key": "expense",
+              "title": "Duyệt hoàn phí",
+              "desc": "Chụp hóa đơn; AI kiểm tra ngân sách, quy định và phát hiện bất thường."
+            },
+            {
+              "key": "contract",
+              "title": "Rà soát hợp đồng thông minh",
+              "desc": "So sánh với quy định trong vài giây, phát hiện điều khoản rủi ro và gợi ý chỉnh sửa."
+            },
+            {
+              "key": "dd",
+              "title": "Tạo báo cáo thẩm định",
+              "desc": "Tự động thu thập dữ liệu đăng ký kinh doanh và xuất báo cáo có cấu trúc."
+            }
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "badge": "Câu chuyện khách hàng",
+      "title": "Chuẩn tham chiếu ngành",
+      "subtitle": "Giúp 1,000+ doanh nghiệp giảm chi phí và tăng doanh thu",
+      "learnMore": "Tìm hiểu thêm",
+      "items": [
+        {
+          "key": "cetc",
+          "title": "Shorter new-hire ramp with an R&D knowledge assistant",
+          "metrics": [
+            {
+              "value": "1 week+",
+              "label": "Training cycle shortened"
+            },
+            {
+              "value": "10%",
+              "label": "Repeat inquiries reduced"
+            },
+            {
+              "value": "30s",
+              "label": "Retrieval time"
+            }
+          ]
+        },
+        {
+          "key": "cms",
+          "title": "Investment research reinvented; fund reports generated end-to-end",
+          "metrics": [
+            {
+              "value": "90%+",
+              "label": "Automation rate"
+            },
+            {
+              "value": "<1%",
+              "label": "Data error rate"
+            },
+            {
+              "value": "90%",
+              "label": "Production time saved"
+            }
+          ]
+        },
+        {
+          "key": "snow",
+          "title": "Deeply integrated with OA for expense approval",
+          "metrics": [
+            {
+              "value": "50%",
+              "label": "Review efficiency"
+            },
+            {
+              "value": "70%",
+              "label": "Anomaly detection lift"
+            },
+            {
+              "value": "60%",
+              "label": "Final-review error drop"
+            }
+          ]
+        },
+        {
+          "key": "zhaozhao",
+          "title": "10k+ daily inquiries; AI customer service 24/7 in seconds",
+          "metrics": [
+            {
+              "value": "1 s",
+              "label": "Second-level response"
+            },
+            {
+              "value": "42%",
+              "label": "Human handoff reduced"
+            },
+            {
+              "value": "Standardized",
+              "label": "Service quality"
+            }
+          ]
+        },
+        {
+          "key": "lcfc",
+          "title": "Ditch 10k-row Excel lag; query natural language on demand",
+          "metrics": [
+            {
+              "value": "240+ min",
+              "label": "Data productivity gain"
+            },
+            {
+              "value": "90%",
+              "label": "System-lag reduction"
+            },
+            {
+              "value": "3%",
+              "label": "Error rate reduced to"
+            }
+          ]
+        }
+      ]
+    },
+    "brandWall": {
+      "badge": "Tường thương hiệu",
+      "title": "Khách hàng của chúng tôi",
+      "subtitle": "1,000+ doanh nghiệp chọn FastGPT làm đối tác AI"
+    },
+    "services": {
+      "badge": "Dịch vụ & Chứng nhận",
+      "title": "Triển khai chuyên nghiệp, bảo vệ giá trị",
+      "subtitle": "Từ tư vấn đến bàn giao, chúng tôi là đối tác dài hạn trong hành trình ứng dụng AI.",
+      "items": [
+        {
+          "key": "community",
+          "title": "Hệ sinh thái mã nguồn mở",
+          "desc": "Template cộng đồng và tài liệu giúp bắt đầu nhanh"
+        },
+        {
+          "key": "consult",
+          "title": "Tư vấn chuyên gia",
+          "desc": "Chẩn đoán pain point 1-1, xác thực kiến trúc và POC"
+        },
+        {
+          "key": "deploy",
+          "title": "Hỗ trợ triển khai",
+          "desc": "Triển khai end-to-end với đào tạo và hướng dẫn thực tế"
+        },
+        {
+          "key": "custom",
+          "title": "Tùy chỉnh doanh nghiệp",
+          "desc": "Tích hợp sâu với hệ thống và hỗ trợ dài hạn"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "Bạn thích trình xây AI Agent mã nguồn mở này?",
+      "badgeLink": "Star trên GitHub 🌟",
+      "badgeLinkUrl": "https://github.com/labring/FastGPT",
+      "title": "FAQ",
+      "subtitle": "Câu trả lời nhanh về FastGPT",
+      "viewMore": "Xem thêm →",
+      "viewMoreUrl": "/en/faq",
+      "items": [
+        {
+          "title": "Can the open-source version be used commercially?",
+          "content": "FastGPT allows commercial usage, such as serving as a backend service for other applications or as an application development platform for enterprises. However, when it comes to multi-tenant SaaS services or matters involving the LOGO and copyright information, you must contact the author to obtain a commercial license."
+        },
+        {
+          "title": "What document formats can be imported into the FastGPT knowledge base?",
+          "content": "FastGPT supports importing documents in various formats, including Word, PDF, Excel, Markdown, and web links. It also enables syncing data from an entire website, automatically handling text preprocessing, vectorization, and QA splitting, which saves manual training time and improves efficiency."
+        },
+        {
+          "title": "Which models can be integrated with FastGPT?",
+          "content": "As long as the API of the model you want to integrate aligns with the official OpenAI API, it can be used with FastGPT. You can utilize projects like One API to unify access to different models and provide an API that is compatible with the official OpenAI API."
+        },
+        {
+          "title": "What should I do if I encounter issues while using FastGPT?",
+          "content": "If you come across any problems while using FastGPT, please join our community or forum, create a post, and reach out to us for assistance."
+        }
+      ]
+    },
+    "cta": {
+      "brand": "FastGPT",
+      "title": "Biến AI thành động cơ tăng trưởng mới",
+      "subtitle": "Dùng thử hôm nay",
+      "trial": "Bắt đầu",
+      "consult": "Liên hệ sales"
+    },
+    "footer": {
+      "tagline": "Động cơ năng suất AI cho doanh nghiệp",
+      "columns": {
+        "service": {
+          "title": "Dịch vụ",
+          "items": {
+            "cloud": "Cloud",
+            "private": "Tự triển khai",
+            "community": "Cộng đồng",
+            "docs": "Tài liệu"
+          }
+        },
+        "partner": {
+          "title": "Đối tác"
+        },
+        "more": {
+          "title": "Thêm",
+          "email": "Email: Dennis@sealos.io",
+          "lanqiao": "Khóa học Lanqiao × FastGPT",
+          "book": "Sách chính thức FastGPT"
+        }
+      },
+      "qr": {
+        "wechat": "WeChat chính thức",
+        "feishu": "Cộng đồng Feishu",
+        "group": "Nhóm WeChat"
+      },
+      "copyright": "Bản quyền"
+    }
+  },
+  "Enterprise": {
+    "Hero": {
+      "maker": "Doanh nghiệp sử dụng dịch vụ tùy chỉnh FastGPT Enterprise Appliance",
+      "title": "FastGPT Enterprise Appliance",
+      "description": "Bàn giao phần mềm và phần cứng tích hợp, kèm mô hình lớn và FastGPT Enterprise Appliance sẵn dùng để tăng tốc ứng dụng AI trong doanh nghiệp."
+    },
+    "Models": {
+      "title": "Dòng sản phẩm",
+      "description": "Thiết kế cho doanh nghiệp nhiều quy mô và nhu cầu khác nhau."
+    },
+    "Advantages": {
+      "title": "Chọn FastGPT Enterprise Appliance",
+      "description": "Chúng tôi cung cấp không chỉ phần cứng mà còn nền tảng AI doanh nghiệp ổn định, hiệu quả và mở."
+    },
+    "Benchmark": {
+      "title": "Chỉ số benchmark mô hình doanh nghiệp",
+      "model": "Mô hình",
+      "hardware": "Cấu hình",
+      "concurrent40": "40 đồng thời (Throughput/TTFT)",
+      "concurrent160": "160 đồng thời (Throughput/TTFT)",
+      "concurrent256": "256 đồng thời (Throughput/TTFT)"
+    },
+    "Partners": {
+      "title": "Khách hàng tin cậy",
+      "description": "Bao phủ hơn 10 ngành và giúp hàng trăm doanh nghiệp hoàn tất bước cuối của triển khai AI."
+    },
+    "CTA": {
+      "title": "Sẵn sàng triển khai FastGPT Enterprise Appliance?",
+      "description": "Liên hệ chuyên gia để tìm hiểu giải pháp và yêu cầu demo sản phẩm.",
+      "link": "Yêu cầu demo"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "Không tìm thấy trang",
+    "desc": "Trang này có thể đã được di chuyển, xóa hoặc tạm thời không khả dụng. Quay về trang chủ hoặc tìm trong FAQ.",
+    "home": "Về trang chủ",
+    "faq": "Xem FAQ",
+    "docs": "Tài liệu",
+    "start": "Bắt đầu"
+  },
+  "JsonLd": {
+    "siteName": "FastGPT",
+    "pageTitle": "FastGPT - Nền tảng AI Agent doanh nghiệp | RAG mã nguồn mở",
+    "description": "Xây dựng AI agent mạnh mẽ với workflow trực quan, kho tri thức và RAG của FastGPT. Bắt đầu miễn phí hôm nay.",
+    "inLanguage": "vi-VN",
+    "organizationName": "FastGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offerDescription": "Có phiên bản mã nguồn mở miễn phí",
+    "authorName": "labring",
+    "breadcrumbHome": "FastGPT",
+    "featureList": [
+      "Điều phối workflow AI trực quan",
+      "Kho tri thức doanh nghiệp và Agentic RAG",
+      "Hệ thống template ứng dụng AI",
+      "Truy cập đa mô hình qua API tương thích OpenAI",
+      "Triển khai riêng và quản lý quyền doanh nghiệp",
+      "Trình xây dựng AI Agent không cần code"
+    ]
+  }
+}

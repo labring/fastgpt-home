@@ -11,6 +11,11 @@ function normalizeLocale(locale) {
   if (locale.startsWith('zh')) return 'zh';
   if (locale.startsWith('en')) return 'en';
   if (locale.startsWith('ja')) return 'ja';
+  if (locale.startsWith('ar')) return 'ar';
+  if (locale.startsWith('vi')) return 'vi';
+  if (locale.startsWith('th')) return 'th';
+  if (locale.startsWith('id')) return 'id';
+  if (locale.startsWith('ms')) return 'ms';
   return 'en';
 }
 

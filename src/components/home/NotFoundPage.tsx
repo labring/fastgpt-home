@@ -2,29 +2,45 @@ import Link from 'next/link';
 import { ArrowUpRight, FileQuestion, Home, Search } from 'lucide-react';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
+import ar from '@/locales/ar.json';
 import en from '@/locales/en.json';
+import id from '@/locales/id.json';
 import ja from '@/locales/ja.json';
+import ms from '@/locales/ms.json';
+import th from '@/locales/th.json';
+import vi from '@/locales/vi.json';
 import zh from '@/locales/zh.json';
+import { getFaqLocale, supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
 
-const dictionaries = { en, ja, zh };
-const languages = ['en', 'zh', 'ja'] as const;
+const dictionaries = { en, zh, ja, ar, vi, th, id, ms };
+const languages = supportedLocaleCodes;
+const localeVisibilityCss = `
+  html${languages
+    .filter((lang) => lang !== 'en')
+    .map((lang) => `:not(:lang(${lang}))`)
+    .join('')} .not-found-locale-en,
+  ${languages.map((lang) => `html:lang(${lang}) .not-found-locale-${lang}`).join(',\n  ')} {
+    display: flex;
+  }
+`;
 
-function getDocsUrl(lang: (typeof languages)[number]) {
+function getDocsUrl(lang: LocaleCode) {
   return lang === 'zh'
     ? 'https://doc.fastgpt.cn/docs/introduction'
     : 'https://doc.fastgpt.io/docs/introduction';
 }
 
-function getStartUrl(lang: (typeof languages)[number]) {
+function getStartUrl(lang: LocaleCode) {
   return process.env.NEXT_PUBLIC_USER_URL || (lang === 'zh'
     ? 'https://cloud.fastgpt.cn'
     : 'https://cloud.fastgpt.io');
 }
 
-function NotFoundContent({ lang }: { lang: (typeof languages)[number] }) {
+function NotFoundContent({ lang }: { lang: LocaleCode }) {
   const t = dictionaries[lang].NotFound;
   const docsUrl = getDocsUrl(lang);
   const startUrl = getStartUrl(lang);
+  const faqLocale = getFaqLocale(lang);
 
   return (
     <div className={`not-found-locale not-found-locale-${lang} mx-auto hidden min-h-[100svh] w-full max-w-[1280px] flex-col px-4 py-6 md:px-8`}>
@@ -101,7 +117,7 @@ function NotFoundContent({ lang }: { lang: (typeof languages)[number] }) {
                 {t.home}
               </Link>
               <Link
-                href={`/${lang}/faq`}
+                href={`/${faqLocale}/faq`}
                 className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
               >
                 <FileQuestion className="h-4 w-4" />
@@ -131,14 +147,7 @@ export default function NotFoundPage() {
       <HomeThemeFix />
       <style
         dangerouslySetInnerHTML={{
-          __html: `
-            html:not([lang="zh"]):not([lang="ja"]) .not-found-locale-en,
-            html:lang(en) .not-found-locale-en,
-            html:lang(zh) .not-found-locale-zh,
-            html:lang(ja) .not-found-locale-ja {
-              display: flex;
-            }
-          `
+          __html: localeVisibilityCss
         }}
       />
       {languages.map((lang) => (

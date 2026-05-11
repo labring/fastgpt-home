@@ -49,7 +49,7 @@ function cleanDir(dir) {
 }
 
 // Clean FAQ directories for all locales
-const locales = ['en', 'zh', 'ja'];
+const locales = ['en', 'zh'];
 for (const locale of locales) {
   const faqDir = path.join(outDir, locale, 'faq');
   if (fs.existsSync(faqDir)) {

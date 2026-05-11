@@ -44,6 +44,8 @@ function PPlanFeatureItem({
 export default function PPlan({ langName, locale }: { langName: string; locale: any }) {
   const [deploy, setDeploy] = useState<Key>('cloud');
   const [annual, setAnnual] = useState(false);
+  const cloudPlans = PRICE_PLANS_CLOUD[langName] || PRICE_PLANS_CLOUD.en;
+  const selfPlans = PRICE_PLANS_SELF[langName] || PRICE_PLANS_SELF.en;
 
   return (
     <div className="flex flex-col gap-6">
@@ -114,7 +116,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
       {/* Cloud plans */}
       {deploy === 'cloud' ? (
         <div className="mt-[40px] grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
-          {PRICE_PLANS_CLOUD[langName].map((item) => {
+          {cloudPlans.map((item) => {
             return (
               <div
                 key={item.key}
@@ -207,7 +209,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
       ) : (
         /* Self-hosted plans */
         <div className="mt-[40px] grid lg:grid-cols-3 grid-cols-1 gap-5">
-          {PRICE_PLANS_SELF[langName].map((item) => {
+          {selfPlans.map((item) => {
             return (
               <div
                 key={item.key}
@@ -275,7 +277,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                     className="w-full py-2.5 rounded-full text-[14px] font-medium transition-colors"
                     style={{ backgroundColor: '#f5f6f8', color: '#020617' }}
                   >
-                    {PRICE_PLANS_SELF_BUTTON_MAP[item.key][langName]}
+                    {PRICE_PLANS_SELF_BUTTON_MAP[item.key][langName] || PRICE_PLANS_SELF_BUTTON_MAP[item.key].en}
                   </button>
                 </Link>
               </div>

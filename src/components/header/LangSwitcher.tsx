@@ -4,12 +4,15 @@ import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
+import { localeConfigs } from '@/lib/locales';
 
-const langConfig: Record<string, { flag: string; label: string }> = {
-  zh: { flag: '🇨🇳', label: '中文' },
-  en: { flag: '🇺🇸', label: 'English' },
-  ja: { flag: '🇯🇵', label: '日本語' }
-};
+const langConfig = localeConfigs.reduce(
+  (acc, locale) => {
+    acc[locale.code] = { flag: locale.flag, label: locale.name };
+    return acc;
+  },
+  {} as Record<string, { flag: string; label: string }>
+);
 
 function TranslateIcon({ size = 20 }: { size?: number }) {
   return (

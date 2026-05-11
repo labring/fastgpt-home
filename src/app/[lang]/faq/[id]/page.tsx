@@ -1,7 +1,8 @@
 import { faq, getFaqItem, getFaqData } from '@/faq';
 import { notFound } from 'next/navigation';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
+import { faqLocaleCodes } from '@/lib/locales';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
@@ -157,9 +158,8 @@ export default async function FAQDetailPage({
 
 export async function generateStaticParams() {
   const faqKeys = Object.keys(faq);
-  const languages = Object.keys(localeNames);
 
-  return languages.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
+  return faqLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
 }
 
 export const dynamicParams = false;
@@ -185,7 +185,7 @@ export async function generateMetadata({
     title: faqItem.Title,
     description: faqItem.Description,
     keywords: faqItem.Keywords.split(', '),
-    alternates: getAlternates(langName, `/faq/${id}`),
+    alternates: getAlternates(langName, `/faq/${id}`, faqLocaleCodes),
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,

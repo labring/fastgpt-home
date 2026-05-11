@@ -1,6 +1,7 @@
 import { getFaqData } from '@/faq';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
+import { faqLocaleCodes } from '@/lib/locales';
 import FAQList from '@/components/faq/FAQList';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
@@ -101,7 +102,7 @@ export default async function FAQPage({
 }
 
 export async function generateStaticParams() {
-  return Object.keys(localeNames).map((lang) => ({ lang }));
+  return faqLocaleCodes.map((lang) => ({ lang }));
 }
 
 export const dynamicParams = false;
@@ -119,7 +120,7 @@ export async function generateMetadata({
     title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
     description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
     keywords: ['FastGPT', 'FAQ', 'AI Agent', 'Knowledge Base', 'Customer Support', 'AI Platform'],
-    alternates: getAlternates(langName, '/faq'),
+    alternates: getAlternates(langName, '/faq', faqLocaleCodes),
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',

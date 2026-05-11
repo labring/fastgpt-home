@@ -10,7 +10,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title,
     description,
-    alternates: getAlternates('zh', '/enterprise'),
+    alternates: getAlternates('zh', '/enterprise', ['zh']),
     openGraph: {
       title,
       description,

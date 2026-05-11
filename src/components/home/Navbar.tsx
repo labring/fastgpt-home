@@ -9,6 +9,7 @@ import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
+import { localeConfigs } from '@/lib/locales';
 
 interface NavLink {
   label: string;
@@ -44,11 +45,13 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
     navigateTo(`/${value}${routeWithoutLang}`);
   };
 
-  const langConfig: Record<string, { flag: string; label: string }> = {
-    zh: { flag: '🇨🇳', label: '中文' },
-    en: { flag: '🇺🇸', label: 'English' },
-    ja: { flag: '🇯🇵', label: '日本語' }
-  };
+  const langConfig = localeConfigs.reduce(
+    (acc, locale) => {
+      acc[locale.code] = { flag: locale.flag, label: locale.name };
+      return acc;
+    },
+    {} as Record<string, { flag: string; label: string }>
+  );
 
   useEffect(() => {
     if (!mobileOpen) return;

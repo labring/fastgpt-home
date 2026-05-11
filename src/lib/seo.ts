@@ -1,13 +1,7 @@
 import { Metadata } from 'next';
+import { localeMap, supportedLocaleCodes } from '@/lib/locales';
 
-const locales = ['en', 'zh', 'ja'];
-
-/** Map lang code to full BCP-47 / og:locale value */
-export const localeMap: Record<string, string> = {
-  en: 'en_US',
-  zh: 'zh_CN',
-  ja: 'ja_JP'
-};
+export { localeMap };
 
 /**
  * Generate canonical URL and hreflang alternates for a given page.
@@ -15,7 +9,11 @@ export const localeMap: Record<string, string> = {
  * @param lang - current language code
  * @param path - page path without lang prefix, e.g. '' for home, '/enterprise', '/price'
  */
-export function getAlternates(lang: string, path: string = ''): Metadata['alternates'] {
+export function getAlternates(
+  lang: string,
+  path: string = '',
+  availableLocales: readonly string[] = supportedLocaleCodes
+): Metadata['alternates'] {
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 
   // Canonical should always include the language prefix to avoid duplicate content
@@ -23,7 +21,7 @@ export function getAlternates(lang: string, path: string = ''): Metadata['altern
   const canonicalPath = `/${lang}${path}`;
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
-  const languages = locales.reduce(
+  const languages = availableLocales.reduce(
     (acc, locale) => {
       acc[locale] = `${baseUrl}/${locale}${path}`;
       return acc;

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const LOCALES = ['zh', 'en', 'ja'];
+const LOCALES = ['zh', 'en', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 const LOCALE_DIR = path.join(process.cwd(), 'src/locales');
 
 const ALLOWED_TOP_LEVEL_KEYS = new Set([
@@ -11,7 +11,9 @@ const ALLOWED_TOP_LEVEL_KEYS = new Set([
   'CTA',
   'CTAButton',
   'Home',
-  'Enterprise'
+  'Enterprise',
+  'NotFound',
+  'JsonLd'
 ]);
 
 const ALLOWED_PRICING_KEYS = new Set([

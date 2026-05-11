@@ -28,6 +28,10 @@
     "chooseVersion": "เลือกเวอร์ชันที่เหมาะกับคุณ",
     "freeUse": "ใช้ฟรีหรืออัปเกรดเป็นแพ็กเกจที่สูงขึ้น",
     "monthly": "รายเดือน",
+    "monthUnit": "เดือน",
+    "yearUnit": "ปี",
+    "monthPriceFormat": "¥{{price}}/เดือน",
+    "yearPriceFormat": "¥{{price}}/ปี",
     "aiCredits": "AI Credits",
     "faq": {
       "badge": "FAQ",
@@ -279,7 +283,7 @@
           "title": "ลดระยะเวลา onboarding ด้วยผู้ช่วยความรู้สำหรับ R&D",
           "metrics": [
             {
-              "value": "1 week+",
+              "value": "1 สัปดาห์+",
               "label": "ลดรอบการฝึกอบรม"
             },
             {
@@ -341,7 +345,7 @@
               "label": "ลดการส่งต่อให้คน"
             },
             {
-              "value": "Standardized",
+              "value": "มาตรฐาน",
               "label": "คุณภาพบริการมาตรฐาน"
             }
           ]
@@ -367,7 +371,7 @@
       ]
     },
     "brandWall": {
-      "badge": "Brand Wall",
+      "badge": "ลูกค้าที่ไว้วางใจ",
       "title": "ลูกค้าของเรา",
       "subtitle": "องค์กรกว่า 1,000 แห่งเลือก FastGPT เป็นพาร์ตเนอร์ AI"
     },
@@ -404,8 +408,6 @@
       "badgeLinkUrl": "https://github.com/labring/FastGPT",
       "title": "FAQ",
       "subtitle": "คำตอบสั้นๆ เกี่ยวกับ FastGPT",
-      "viewMore": "ดูเพิ่มเติม →",
-      "viewMoreUrl": "/th/faq",
       "items": [
         {
           "title": "เวอร์ชันโอเพนซอร์สใช้เชิงพาณิชย์ได้ไหม?",
@@ -464,40 +466,40 @@
   },
   "Enterprise": {
     "Hero": {
-      "maker": "Enterprises use FastGPT Enterprise Appliance customization services",
+      "maker": "องค์กรเลือกใช้บริการปรับแต่ง FastGPT Enterprise Appliance",
       "title": "FastGPT Enterprise Appliance",
-      "description": "Integrated software and hardware delivery with out-of-the-box large models and FastGPT Enterprise Appliance, paired with enterprise Agent services, mature general-purpose agents, and vertical AI applications for multiple industries to accelerate enterprise AI adoption."
+      "description": "ส่งมอบซอฟต์แวร์และฮาร์ดแวร์แบบครบชุด พร้อมโมเดลขนาดใหญ่และ FastGPT Enterprise Appliance ที่พร้อมใช้งาน ร่วมกับบริการ Agent สำหรับองค์กรและแอป AI เฉพาะอุตสาหกรรม เพื่อเร่งการนำ AI ไปใช้จริง"
     },
     "Models": {
-      "title": "Product Series",
-      "description": "Tailored for enterprises of different sizes and requirements, with inference and training-inference options."
+      "title": "ชุดผลิตภัณฑ์",
+      "description": "ออกแบบสำหรับองค์กรหลายขนาดและหลายความต้องการ พร้อมตัวเลือกสำหรับงาน inference และ training-inference"
     },
     "Advantages": {
-      "title": "Choose FastGPT Enterprise Appliance",
-      "description": "We provide more than hardware: a stable, efficient, and open enterprise AI foundation."
+      "title": "เลือก FastGPT Enterprise Appliance",
+      "description": "เราไม่ได้ส่งมอบแค่ฮาร์ดแวร์ แต่เป็นรากฐาน AI ระดับองค์กรที่เสถียร มีประสิทธิภาพ และเปิดกว้าง"
     },
     "Benchmark": {
-      "title": "Enterprise Model Benchmark Metrics (Short-text Test)",
-      "model": "Model",
-      "hardware": "Configuration",
+      "title": "ผลทดสอบ benchmark ของโมเดลองค์กร (ข้อความสั้น)",
+      "model": "โมเดล",
+      "hardware": "คอนฟิก",
       "concurrent40": "40 concurrent (Throughput/TTFT)",
       "concurrent160": "160 concurrent (Throughput/TTFT)",
       "concurrent256": "256 concurrent (Throughput/TTFT)"
     },
     "Partners": {
-      "title": "Trusted Customers",
-      "description": "Covering 10+ industries including finance, manufacturing, e-commerce, and education, helping hundreds of enterprises complete the final mile of AI implementation."
+      "title": "ลูกค้าที่ไว้วางใจ",
+      "description": "ครอบคลุมกว่า 10 อุตสาหกรรม เช่น การเงิน การผลิต อีคอมเมิร์ซ และการศึกษา ช่วยให้องค์กรหลายร้อยแห่งนำ AI ไปใช้จริงในขั้นตอนสุดท้าย"
     },
     "CTA": {
-      "title": "Ready to deploy your FastGPT Enterprise Appliance?",
-      "description": "Contact our experts to learn how FastGPT Enterprise Appliance can transform your business and request a product demo.",
-      "link": "Request a Demo"
+      "title": "พร้อมติดตั้ง FastGPT Enterprise Appliance แล้วหรือยัง?",
+      "description": "ติดต่อผู้เชี่ยวชาญของเราเพื่อดูว่า FastGPT Enterprise Appliance จะช่วยยกระดับธุรกิจของคุณได้อย่างไร และขอรับเดโมผลิตภัณฑ์",
+      "link": "ขอเดโม"
     }
   },
   "NotFound": {
     "eyebrow": "404",
     "title": "ไม่พบหน้า",
-    "desc": "หน้านี้อาจถูกย้าย ลบ หรือไม่พร้อมใช้งานชั่วคราว กลับหน้าแรกหรือค้นหาใน FAQ",
+    "desc": "หน้านี้อาจถูกย้าย ลบ หรือไม่พร้อมใช้งานชั่วคราว กลับหน้าแรกหรือดูเอกสาร",
     "home": "กลับหน้าแรก",
     "faq": "ดู FAQ",
     "docs": "เอกสาร",

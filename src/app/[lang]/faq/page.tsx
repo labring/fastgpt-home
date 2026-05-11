@@ -1,7 +1,6 @@
-import { getFaqData } from '@/faq';
+import { faqContentLocaleCodes, getFaqData, resolveFaqLocale } from '@/faq';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
-import { supportedLocaleCodes } from '@/lib/locales';
 import FAQList from '@/components/faq/FAQList';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
@@ -16,9 +15,10 @@ export default async function FAQPage({
 }) {
   const { lang } = await params;
   const langName = lang || defaultLocale;
-  const dict = await getDictionary(langName);
+  const faqLangName = resolveFaqLocale(langName);
+  const dict = await getDictionary(faqLangName);
 
-  const faq = getFaqData(langName);
+  const faq = getFaqData(faqLangName);
   const trimmedFaq: Record<string, { Category: string; Question: string; Answers: string }> = {};
   for (const [id, item] of Object.entries(faq)) {
     trimmedFaq[id] = {
@@ -102,7 +102,7 @@ export default async function FAQPage({
 }
 
 export async function generateStaticParams() {
-  return supportedLocaleCodes.map((lang) => ({ lang }));
+  return faqContentLocaleCodes.map((lang) => ({ lang }));
 }
 
 export const dynamicParams = false;
@@ -114,18 +114,20 @@ export async function generateMetadata({
 }) {
   const { lang } = await params;
   const langName = lang || defaultLocale;
-  const dict = await getDictionary(langName);
+  const faqLangName = resolveFaqLocale(langName);
+  const dict = await getDictionary(faqLangName);
 
   return {
     title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
     description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
     keywords: ['FastGPT', 'FAQ', 'AI Agent', 'Knowledge Base', 'Customer Support', 'AI Platform'],
-    alternates: getAlternates(langName, '/faq', supportedLocaleCodes),
+    alternates: getAlternates(faqLangName, '/faq', faqContentLocaleCodes),
+    robots: faqLangName === langName ? undefined : { index: false, follow: true },
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
       type: 'website',
-      locale: localeMap[langName] || 'en_US'
+      locale: localeMap[faqLangName] || 'en_US'
     },
     twitter: {
       card: 'summary_large_image',

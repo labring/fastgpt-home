@@ -11,8 +11,20 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Cloud Service: https://cloud.fastgpt.io
 - Pricing: https://fastgpt.io/en/price
 - FAQ: https://fastgpt.io/en/faq
+- Chinese FAQ: https://fastgpt.io/zh/faq
 - Enterprise Appliance: https://fastgpt.io/zh/enterprise
 - GitHub: https://github.com/labring/FastGPT
+
+## Localized Entry Points
+
+- English: https://fastgpt.io/en
+- 中文: https://fastgpt.io/zh
+- 日本語: https://fastgpt.io/ja
+- العربية: https://fastgpt.io/ar
+- Tiếng Việt: https://fastgpt.io/vi
+- ไทย: https://fastgpt.io/th
+- Bahasa Indonesia: https://fastgpt.io/id
+- Bahasa Melayu: https://fastgpt.io/ms
 
 ## Core Features
 
@@ -27,6 +39,28 @@ FastGPT works with model services compatible with the OpenAI API format. Teams c
 
 ### Cloud, Open Source, and Private Deployment
 FastGPT offers cloud service, open-source self-hosting, and enterprise private deployment or appliance options. The open-source edition is suitable for self-hosting and secondary development; the cloud service is suitable for fast adoption; enterprise deployment is suitable for stricter data security and internal network requirements.
+
+## Localized Summaries
+
+### 日本語
+FastGPT は、エンタープライズ向け AI Agent、ナレッジベース、RAG、ビジュアルワークフローを構築するためのオープンソースプラットフォームです。日本語ページでは、料金、導入シナリオ、クラウド利用、セルフホスト、エンタープライズ一体機の情報を日本の SaaS 利用者向けの表現で提供しています。
+
+### العربية
+FastGPT منصة مفتوحة المصدر لبناء AI Agents للمؤسسات، مع قواعد معرفة وRAG وسير عمل مرئي وتكامل متعدد النماذج. الصفحات العربية تقدم نظرة محلية على حالات الاستخدام، الأسعار، الخدمة السحابية، والنشر الخاص للمؤسسات.
+
+### Tiếng Việt
+FastGPT là nền tảng mã nguồn mở để xây dựng AI Agent cho doanh nghiệp, kết hợp kho tri thức, RAG, workflow trực quan và tích hợp đa mô hình. Trang tiếng Việt tập trung vào triển khai phần mềm doanh nghiệp, giá gói, cloud service và self-hosting.
+
+### ไทย
+FastGPT เป็นแพลตฟอร์มโอเพนซอร์สสำหรับสร้าง AI Agent ระดับองค์กร พร้อมฐานความรู้ RAG เวิร์กโฟลว์แบบภาพ และการเชื่อมต่อหลายโมเดล หน้าไทยอธิบายการใช้งานจริง ราคา บริการคลาวด์ และการติดตั้งแบบส่วนตัวในภาษาที่เหมาะกับซอฟต์แวร์ธุรกิจ
+
+### Bahasa Indonesia
+FastGPT adalah platform open-source untuk membangun AI Agent enterprise dengan knowledge base, RAG, workflow visual, dan integrasi multi-model. Halaman Bahasa Indonesia menyesuaikan istilah pricing, cloud service, deploy mandiri, dan implementasi enterprise untuk pembaca lokal.
+
+### Bahasa Melayu
+FastGPT ialah platform sumber terbuka untuk membina AI Agent perusahaan dengan pangkalan pengetahuan, RAG, aliran kerja visual dan integrasi pelbagai model. Halaman Bahasa Melayu menerangkan harga, cloud service, hos sendiri dan deploy perusahaan dengan gaya perisian tempatan.
+
+FAQ detail pages are intentionally maintained in English and Chinese for search coverage. Other localized FAQ URLs use English content and canonicalize to English to avoid duplicate indexing.
 
 ## Use Cases
 

@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "prebuild": "node scripts/generate-robots.js && node scripts/generate-llms.js",
-    "build": "next build && node scripts/clean-faq-rsc.js && node scripts/copy-root-index.js",
+    "build": "next build && node scripts/clean-faq-rsc.js && node scripts/copy-root-index.js && node scripts/fix-html-lang.js",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky",

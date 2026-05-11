@@ -17,62 +17,66 @@
     "badge": "料金",
     "popular": "一番人気",
     "cloud": "クラウドサービス",
-    "self": "自己ホスティング",
+    "self": "セルフホスト",
     "annual": "年額",
-    "pay10": "10ヶ月支払いで1年間無料！",
-    "upgrade": "プランアップグレード",
-    "contact": "営業に問い合わせ",
+    "pay10": "10か月分の料金で1年間利用できます",
+    "upgrade": "プランをアップグレード",
+    "contact": "営業に相談",
     "allFeatures": "コミュニティ版のすべての機能",
-    "moreFeatures": "より高度な機能は",
-    "moreFeaturesLink": "ドキュメントを参照してください",
-    "chooseVersion": "選択してください",
-    "freeUse": "無料利用または上位プランにアップグレードしてください",
+    "moreFeatures": "エンタープライズ向けの詳細機能は",
+    "moreFeaturesLink": "ドキュメントをご覧ください",
+    "chooseVersion": "用途に合うプランを選択",
+    "freeUse": "無料で始めるか、上位プランにアップグレード",
     "monthly": "月額",
-    "aiCredits": "AI 積分",
+    "monthUnit": "月",
+    "yearUnit": "年",
+    "monthPriceFormat": "月額 ¥{{price}}",
+    "yearPriceFormat": "年額 ¥{{price}}",
+    "aiCredits": "AIクレジット",
     "faq": {
       "badge": "FAQ",
-      "title": "FAQ",
-      "subtitle": "Common questions about plans, AI credits, and resource limits",
+      "title": "よくある質問",
+      "subtitle": "プラン、AIクレジット、リソース上限に関するよくある質問",
       "items": [
         {
-          "title": "How does plan switching work?",
-          "desc": "Higher-tier plans take priority. If the new plan is higher than the current one, it takes effect immediately; otherwise, the current plan continues until expiration."
+          "title": "プランを変更すると、いつ反映されますか？",
+          "desc": "上位プランが優先されます。現在のプランより上位のプランを購入した場合はすぐに反映されます。下位または同等のプランの場合は、現在のプランの有効期限まで継続されます。"
         },
         {
-          "title": "Where can I view my plan?",
-          "desc": "Go to Account → Personal Info → Plan Details → Usage to view your plan's start and end dates. When a paid plan expires, it automatically reverts to the free tier."
+          "title": "契約中のプランはどこで確認できますか？",
+          "desc": "アカウント → 個人情報 → プラン詳細 → 使用状況で、プランの開始日と有効期限を確認できます。有料プランの期限が切れると、自動的に無料プランへ戻ります。"
         },
         {
-          "title": "What are AI credits?",
-          "desc": "Each AI model call consumes a certain amount of AI credits.\nFor calculation details, see \"AI Credit Calculation\" above.\nThe system prioritizes actual usage reported by the model provider. If unavailable, it estimates using GPT-3.5 rates: 1 Token ≈ 0.7 Chinese characters ≈ 0.9 English words."
+          "title": "AIクレジットとは何ですか？",
+          "desc": "AIモデルを呼び出すたびに、一定量のAIクレジットが消費されます。\n計算方法は上記の「AIクレジット計算」をご確認ください。\nシステムはモデル提供元が返す実際の usage を優先します。取得できない場合は GPT-3.5 の基準で推定し、1 Token ≈ 中国語0.7文字 ≈ 英単語0.9語として計算します。"
         },
         {
-          "title": "Do AI credits expire?",
-          "desc": "Yes. When your current plan expires, AI credits reset to the new plan's allocation. Annual plan credits are valid for one year, not monthly."
+          "title": "AIクレジットに有効期限はありますか？",
+          "desc": "あります。現在のプランが期限切れになると、AIクレジットは新しいプランの付与量にリセットされます。年額プランのクレジットは月ごとではなく、1年間有効です。"
         },
         {
-          "title": "How is knowledge base storage calculated?",
-          "desc": "1 knowledge base storage unit = 1 knowledge base index.\nA single chunk typically has multiple indexes. You can see \"n indexes\" in each knowledge base collection."
+          "title": "ナレッジベース容量はどのように計算されますか？",
+          "desc": "ナレッジベース容量 1 単位は、ナレッジベースインデックス 1 件に相当します。\n通常、1つのチャンクには複数のインデックスが含まれます。各ナレッジベースコレクションで「n件のインデックス」を確認できます。"
         },
         {
-          "title": "When does the index count decrease after deletion?",
-          "desc": "When you delete knowledge base content, the index count decreases within 5 minutes."
+          "title": "削除後、インデックス数はいつ減りますか？",
+          "desc": "ナレッジベースの内容を削除すると、インデックス数は5分以内に減少します。"
         },
         {
-          "title": "Can resource packs be stacked?",
-          "desc": "Yes. Each purchased resource pack is independent and stacks within its validity period. Credits are deducted from the pack expiring soonest."
+          "title": "追加リソースパックは重ねて使えますか？",
+          "desc": "はい。購入した各リソースパックは独立しており、有効期間内であれば重ねて利用できます。クレジットは有効期限が近いパックから優先的に消費されます。"
         },
         {
-          "title": "What is QPM?",
-          "desc": "QPM is the maximum number of Agent requests your team can make per minute, regardless of individual Agent complexity.\nOther OpenAPI endpoints are also rate-limited, each calculated separately."
+          "title": "QPMとは何ですか？",
+          "desc": "QPM は、チームが1分間に送信できる Agent リクエスト数の上限です。個々の Agent の複雑さには依存しません。\nその他の OpenAPI エンドポイントにも個別のレート制限があり、それぞれ別々に計算されます。"
         },
         {
-          "title": "How long is a month or a year exactly?",
-          "desc": "A month is 30 days; a year is 360 days."
+          "title": "1か月、1年は何日として計算されますか？",
+          "desc": "1か月は30日、1年は360日として計算されます。"
         },
         {
-          "title": "Will free tier data be cleared?",
-          "desc": "If a free team (free tier with no additional plans) doesn't log in for 30 consecutive days, all knowledge base content will be automatically cleared."
+          "title": "無料プランのデータは削除されますか？",
+          "desc": "無料プランのみを利用しているチームが30日連続でログインしない場合、そのチーム内のすべてのナレッジベース内容は自動的に削除されます。"
         }
       ]
     }
@@ -108,8 +112,8 @@
     "description6": "させましょう！"
   },
   "CTAButton": {
-    "askTitle": "販売します",
-    "title": "始めましょう"
+    "askTitle": "営業に相談",
+    "title": "無料で始める"
   },
   "Home": {
     "navCta": {
@@ -404,8 +408,6 @@
       "badgeLinkUrl": "https://github.com/labring/FastGPT",
       "title": "よくある質問",
       "subtitle": "FastGPTに関するよくある質問への回答",
-      "viewMore": "もっと見る →",
-      "viewMoreUrl": "/ja/faq",
       "items": [
         {
           "title": "オープンソース版を商用利用できますか？",
@@ -497,7 +499,7 @@
   "NotFound": {
     "eyebrow": "404",
     "title": "ページが見つかりません",
-    "desc": "このページは移動、削除、または一時的に利用できない可能性があります。ホームまたはFAQをご確認ください。",
+    "desc": "このページは移動、削除、または一時的に利用できない可能性があります。ホームに戻るか、ドキュメントをご確認ください。",
     "home": "ホームへ",
     "faq": "FAQを見る",
     "docs": "ドキュメント",

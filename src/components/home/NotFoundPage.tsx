@@ -40,6 +40,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
   const t = dictionaries[lang].NotFound;
   const docsUrl = getDocsUrl(lang);
   const startUrl = getStartUrl(lang);
+  const hasFaq = lang === 'en' || lang === 'zh';
 
   return (
     <div className={`not-found-locale not-found-locale-${lang} mx-auto hidden min-h-[100svh] w-full max-w-[1280px] flex-col px-4 py-6 md:px-8`}>
@@ -115,13 +116,15 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
                 <Home className="h-4 w-4" />
                 {t.home}
               </Link>
-              <Link
-                href={`/${lang}/faq`}
-                className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
-              >
-                <FileQuestion className="h-4 w-4" />
-                {t.faq}
-              </Link>
+              {hasFaq && (
+                <Link
+                  href={`/${lang}/faq`}
+                  className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
+                >
+                  <FileQuestion className="h-4 w-4" />
+                  {t.faq}
+                </Link>
+              )}
             </div>
 
             <Link

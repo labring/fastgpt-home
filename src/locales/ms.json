@@ -17,7 +17,7 @@
     "badge": "Harga",
     "popular": "Paling Popular",
     "cloud": "Perkhidmatan Cloud",
-    "self": "Self-Hosted",
+    "self": "Hos Sendiri",
     "annual": "Tahunan",
     "pay10": "Bayar 10 bulan, nikmati 1 tahun!",
     "upgrade": "Naik Taraf Pelan",
@@ -28,6 +28,10 @@
     "chooseVersion": "Pilih versi yang sesuai",
     "freeUse": "Guna percuma atau naik taraf ke pelan lebih tinggi",
     "monthly": "Bulanan",
+    "monthUnit": "bulan",
+    "yearUnit": "tahun",
+    "monthPriceFormat": "¥{{price}}/bulan",
+    "yearPriceFormat": "¥{{price}}/tahun",
     "aiCredits": "AI Credits",
     "faq": {
       "badge": "FAQ",
@@ -139,7 +143,7 @@
           "desc": "Memperkasa pasukan merentas industri"
         },
         {
-          "label": "Private Deployment",
+          "label": "Deploy Peribadi",
           "desc": "Terbukti dalam senario produksi"
         }
       ]
@@ -226,7 +230,7 @@
         },
         {
           "key": "hr",
-          "label": "HR & Admin",
+          "label": "HR & Pentadbiran",
           "items": [
             {
               "key": "resume",
@@ -279,7 +283,7 @@
           "title": "Memendekkan ramp-up pekerja baharu dengan pembantu pengetahuan R&D",
           "metrics": [
             {
-              "value": "1 week+",
+              "value": "1 minggu+",
               "label": "Kitaran latihan dipendekkan"
             },
             {
@@ -341,7 +345,7 @@
               "label": "Human handoff berkurang"
             },
             {
-              "value": "Standardized",
+              "value": "Distandardkan",
               "label": "Kualiti servis distandardkan"
             }
           ]
@@ -404,8 +408,6 @@
       "badgeLinkUrl": "https://github.com/labring/FastGPT",
       "title": "FAQ",
       "subtitle": "Jawapan pantas tentang FastGPT",
-      "viewMore": "Lihat lagi →",
-      "viewMoreUrl": "/ms/faq",
       "items": [
         {
           "title": "Bolehkah versi sumber terbuka digunakan secara komersial?",
@@ -439,7 +441,7 @@
           "title": "Perkhidmatan",
           "items": {
             "cloud": "Cloud",
-            "private": "Self-Hosted",
+            "private": "Hos Sendiri",
             "community": "Komuniti",
             "docs": "Dokumentasi"
           }
@@ -464,40 +466,40 @@
   },
   "Enterprise": {
     "Hero": {
-      "maker": "Enterprises use FastGPT Enterprise Appliance customization services",
+      "maker": "Perusahaan menggunakan perkhidmatan kustomisasi FastGPT Enterprise Appliance",
       "title": "FastGPT Enterprise Appliance",
-      "description": "Integrated software and hardware delivery with out-of-the-box large models and FastGPT Enterprise Appliance, paired with enterprise Agent services, mature general-purpose agents, and vertical AI applications for multiple industries to accelerate enterprise AI adoption."
+      "description": "Penghantaran software dan hardware bersepadu dengan model besar sedia guna serta FastGPT Enterprise Appliance, digabungkan dengan perkhidmatan Agent perusahaan dan aplikasi AI menegak untuk mempercepat penggunaan AI."
     },
     "Models": {
-      "title": "Product Series",
-      "description": "Tailored for enterprises of different sizes and requirements, with inference and training-inference options."
+      "title": "Siri Produk",
+      "description": "Disesuaikan untuk perusahaan dengan pelbagai saiz dan keperluan, termasuk pilihan inference serta training-inference."
     },
     "Advantages": {
-      "title": "Choose FastGPT Enterprise Appliance",
-      "description": "We provide more than hardware: a stable, efficient, and open enterprise AI foundation."
+      "title": "Pilih FastGPT Enterprise Appliance",
+      "description": "Kami menyediakan lebih daripada hardware: asas AI perusahaan yang stabil, cekap dan terbuka."
     },
     "Benchmark": {
-      "title": "Enterprise Model Benchmark Metrics (Short-text Test)",
+      "title": "Metrik Benchmark Model Perusahaan (Ujian Teks Pendek)",
       "model": "Model",
-      "hardware": "Configuration",
+      "hardware": "Konfigurasi",
       "concurrent40": "40 concurrent (Throughput/TTFT)",
       "concurrent160": "160 concurrent (Throughput/TTFT)",
       "concurrent256": "256 concurrent (Throughput/TTFT)"
     },
     "Partners": {
-      "title": "Trusted Customers",
-      "description": "Covering 10+ industries including finance, manufacturing, e-commerce, and education, helping hundreds of enterprises complete the final mile of AI implementation."
+      "title": "Pelanggan Dipercayai",
+      "description": "Meliputi 10+ industri termasuk kewangan, pembuatan, e-dagang dan pendidikan, membantu ratusan perusahaan menyelesaikan langkah akhir implementasi AI."
     },
     "CTA": {
-      "title": "Ready to deploy your FastGPT Enterprise Appliance?",
-      "description": "Contact our experts to learn how FastGPT Enterprise Appliance can transform your business and request a product demo.",
-      "link": "Request a Demo"
+      "title": "Bersedia untuk deploy FastGPT Enterprise Appliance?",
+      "description": "Hubungi pakar kami untuk memahami bagaimana FastGPT Enterprise Appliance boleh mentransformasikan perniagaan anda dan minta demo produk.",
+      "link": "Minta Demo"
     }
   },
   "NotFound": {
     "eyebrow": "404",
     "title": "Halaman tidak ditemui",
-    "desc": "Halaman ini mungkin telah dialihkan, dipadam atau tidak tersedia buat sementara waktu. Kembali ke halaman utama atau cari di FAQ.",
+    "desc": "Halaman ini mungkin telah dialihkan, dipadam atau tidak tersedia buat sementara waktu. Kembali ke halaman utama atau lihat dokumentasi.",
     "home": "Kembali ke laman utama",
     "faq": "Lihat FAQ",
     "docs": "Dokumentasi",

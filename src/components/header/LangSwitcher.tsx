@@ -13,6 +13,7 @@ const langConfig = localeConfigs.reduce(
   },
   {} as Record<string, { flag: string; label: string }>
 );
+const faqLocaleCodes = ['en', 'zh'];
 
 function TranslateIcon({ size = 20 }: { size?: number }) {
   return (
@@ -29,20 +30,26 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
   const langName = lang || defaultLocale;
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+  const routeWithoutLang = (() => {
+    if (!lang) return pathname;
+    const currentLangPrefix = `/${lang}`;
+    if (pathname.startsWith(currentLangPrefix)) {
+      return pathname.slice(currentLangPrefix.length) || '/';
+    }
+    return pathname;
+  })();
+  const languageKeys = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/')
+    ? faqLocaleCodes
+    : Object.keys(localeNames);
+
+  const getLocalizedPath = (value: string) => (
+    routeWithoutLang === '/' ? `/${value}` : `/${value}${routeWithoutLang}`
+  );
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;
     rememberPreferredLanguage(value);
-    let routeWithoutLang = pathname;
-
-    if (lang) {
-      const currentLangPrefix = `/${lang}`;
-      if (pathname.startsWith(currentLangPrefix)) {
-        routeWithoutLang = pathname.slice(currentLangPrefix.length) || '/';
-      }
-    }
-    const newPath = `/${value}${routeWithoutLang}`;
-    navigateTo(newPath);
+    navigateTo(getLocalizedPath(value));
   };
 
   useEffect(() => {
@@ -59,8 +66,7 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
         }
       }
 
-      const newPath = `/${storedLang}${routeWithoutLang}`;
-      navigateTo(newPath);
+      navigateTo(routeWithoutLang === '/' ? `/${storedLang}` : `/${storedLang}${routeWithoutLang}`);
     }
   }, [lang, pathname]);
 
@@ -107,7 +113,7 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
           className="absolute right-0 top-full mt-1 z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
         >
           <div className="p-1">
-            {Object.keys(localeNames).map((key: string) => (
+            {languageKeys.map((key: string) => (
               <div
                 role="option"
                 aria-selected={key === langName}

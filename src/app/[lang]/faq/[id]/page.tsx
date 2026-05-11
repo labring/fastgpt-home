@@ -1,8 +1,7 @@
-import { faq, getFaqItem, getFaqData } from '@/faq';
+import { faq, faqContentLocaleCodes, getFaqItem, getFaqData, resolveFaqLocale } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
-import { supportedLocaleCodes } from '@/lib/locales';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import Navbar from '@/components/home/Navbar';
@@ -17,15 +16,16 @@ export default async function FAQDetailPage({
 }) {
   const { lang, id } = await params;
   const langName = lang || defaultLocale;
-  const dict = await getDictionary(langName);
+  const faqLangName = resolveFaqLocale(langName);
+  const dict = await getDictionary(faqLangName);
 
-  const faqItem = getFaqItem(id, langName);
+  const faqItem = getFaqItem(id, faqLangName);
 
   if (!faqItem) {
     notFound();
   }
 
-  const localizedFaq = getFaqData(langName);
+  const localizedFaq = getFaqData(faqLangName);
   const relatedFAQs = Object.entries(localizedFaq)
     .filter(([key, item]) => item.Category === faqItem.Category && key !== id)
     .slice(0, 4);
@@ -158,7 +158,7 @@ export default async function FAQDetailPage({
 export async function generateStaticParams() {
   const faqKeys = Object.keys(faq);
 
-  return supportedLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
+  return faqContentLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
 }
 
 export const dynamicParams = false;
@@ -170,7 +170,8 @@ export async function generateMetadata({
 }) {
   const { lang, id } = await params;
   const langName = lang || defaultLocale;
-  const faqItem = getFaqItem(id, langName);
+  const faqLangName = resolveFaqLocale(langName);
+  const faqItem = getFaqItem(id, faqLangName);
 
   if (!faqItem) {
     return {
@@ -184,12 +185,13 @@ export async function generateMetadata({
     title: faqItem.Title,
     description: faqItem.Description,
     keywords: faqItem.Keywords.split(', '),
-    alternates: getAlternates(langName, `/faq/${id}`, supportedLocaleCodes),
+    alternates: getAlternates(faqLangName, `/faq/${id}`, faqContentLocaleCodes),
+    robots: faqLangName === langName ? undefined : { index: false, follow: true },
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,
       type: 'article',
-      locale: localeMap[langName] || 'en_US'
+      locale: localeMap[faqLangName] || 'en_US'
     },
     twitter: {
       card: 'summary_large_image',

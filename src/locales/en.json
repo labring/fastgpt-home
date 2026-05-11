@@ -28,6 +28,10 @@
     "chooseVersion": "Choose a version that suits you",
     "freeUse": "Free use or upgrade to a higher package",
     "monthly": "Monthly",
+    "monthUnit": "month",
+    "yearUnit": "year",
+    "monthPriceFormat": "¥{{price}}/month",
+    "yearPriceFormat": "¥{{price}}/year",
     "aiCredits": "AI Credits",
     "faq": {
       "badge": "FAQ",
@@ -404,8 +408,6 @@
       "badgeLinkUrl": "https://github.com/labring/FastGPT",
       "title": "FAQ",
       "subtitle": "Quick answers to common questions about FastGPT",
-      "viewMore": "View more →",
-      "viewMoreUrl": "/en/faq",
       "items": [
         {
           "title": "Can the open-source version be used commercially?",

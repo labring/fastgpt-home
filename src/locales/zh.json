@@ -28,6 +28,10 @@
     "chooseVersion": "选择更适合你的版本",
     "freeUse": "免费使用或升级更高的套餐",
     "monthly": "按月",
+    "monthUnit": "月",
+    "yearUnit": "年",
+    "monthPriceFormat": "¥{{price}}/月",
+    "yearPriceFormat": "¥{{price}}/年",
     "aiCredits": "AI 积分",
     "faq": {
       "badge": "FAQ",
@@ -404,8 +408,6 @@
       "badgeLinkUrl": "https://github.com/labring/FastGPT",
       "title": "常见问题",
       "subtitle": "关于 FastGPT 的常见问题解答",
-      "viewMore": "查看更多 →",
-      "viewMoreUrl": "/zh/faq",
       "items": [
         {
           "title": "开源版可以商业化吗？",

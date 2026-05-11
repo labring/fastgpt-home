@@ -28,6 +28,10 @@
     "chooseVersion": "Chọn phiên bản phù hợp",
     "freeUse": "Dùng miễn phí hoặc nâng cấp gói cao hơn",
     "monthly": "Hằng tháng",
+    "monthUnit": "tháng",
+    "yearUnit": "năm",
+    "monthPriceFormat": "¥{{price}}/tháng",
+    "yearPriceFormat": "¥{{price}}/năm",
     "aiCredits": "AI Credits",
     "faq": {
       "badge": "FAQ",
@@ -276,91 +280,91 @@
       "items": [
         {
           "key": "cetc",
-          "title": "Shorter new-hire ramp with an R&D knowledge assistant",
+          "title": "Rút ngắn onboarding nhân sự mới bằng trợ lý tri thức R&D",
           "metrics": [
             {
-              "value": "1 week+",
-              "label": "Training cycle shortened"
+              "value": "1 tuần+",
+              "label": "Chu kỳ đào tạo được rút ngắn"
             },
             {
               "value": "10%",
-              "label": "Repeat inquiries reduced"
+              "label": "Câu hỏi lặp lại giảm"
             },
             {
               "value": "30s",
-              "label": "Retrieval time"
+              "label": "Thời gian truy xuất"
             }
           ]
         },
         {
           "key": "cms",
-          "title": "Investment research reinvented; fund reports generated end-to-end",
+          "title": "Tự động hóa nghiên cứu đầu tư và tạo báo cáo quỹ end-to-end",
           "metrics": [
             {
               "value": "90%+",
-              "label": "Automation rate"
+              "label": "Tỷ lệ tự động hóa"
             },
             {
               "value": "<1%",
-              "label": "Data error rate"
+              "label": "Tỷ lệ lỗi dữ liệu"
             },
             {
               "value": "90%",
-              "label": "Production time saved"
+              "label": "Thời gian sản xuất tiết kiệm"
             }
           ]
         },
         {
           "key": "snow",
-          "title": "Deeply integrated with OA for expense approval",
+          "title": "Tích hợp sâu với OA để phê duyệt chi phí",
           "metrics": [
             {
               "value": "50%",
-              "label": "Review efficiency"
+              "label": "Hiệu suất xét duyệt"
             },
             {
               "value": "70%",
-              "label": "Anomaly detection lift"
+              "label": "Khả năng phát hiện bất thường tăng"
             },
             {
               "value": "60%",
-              "label": "Final-review error drop"
+              "label": "Lỗi ở bước duyệt cuối giảm"
             }
           ]
         },
         {
           "key": "zhaozhao",
-          "title": "10k+ daily inquiries; AI customer service 24/7 in seconds",
+          "title": "10k+ yêu cầu mỗi ngày, chăm sóc khách hàng AI phản hồi 24/7 trong vài giây",
           "metrics": [
             {
-              "value": "1 s",
-              "label": "Second-level response"
+              "value": "1 giây",
+              "label": "Phản hồi cấp giây"
             },
             {
               "value": "42%",
-              "label": "Human handoff reduced"
+              "label": "Chuyển tiếp cho nhân viên giảm"
             },
             {
-              "value": "Standardized",
-              "label": "Service quality"
+              "value": "Chuẩn hóa",
+              "label": "Chất lượng dịch vụ"
             }
           ]
         },
         {
           "key": "lcfc",
-          "title": "Ditch 10k-row Excel lag; query natural language on demand",
+          "title": "Thoát khỏi Excel 10k dòng chậm chạp, truy vấn bằng ngôn ngữ tự nhiên",
           "metrics": [
             {
-              "value": "240+ min",
-              "label": "Data productivity gain"
+              "value": "240+ phút",
+              "label": "Năng suất dữ liệu tăng"
             },
             {
               "value": "90%",
-              "label": "System-lag reduction"
+              "label": "Độ trễ hệ thống giảm"
             },
             {
               "value": "3%",
-              "label": "Error rate reduced to"
+              "label": "Tỷ lệ lỗi giảm còn"
             }
           ]
         }
@@ -404,24 +408,22 @@
       "badgeLinkUrl": "https://github.com/labring/FastGPT",
       "title": "FAQ",
       "subtitle": "Câu trả lời nhanh về FastGPT",
-      "viewMore": "Xem thêm →",
-      "viewMoreUrl": "/vi/faq",
       "items": [
         {
-          "title": "Can the open-source version be used commercially?",
-          "content": "FastGPT allows commercial usage, such as serving as a backend service for other applications or as an application development platform for enterprises. However, when it comes to multi-tenant SaaS services or matters involving the LOGO and copyright information, you must contact the author to obtain a commercial license."
+          "title": "Bản mã nguồn mở có thể dùng thương mại không?",
+          "content": "FastGPT cho phép sử dụng thương mại, ví dụ làm dịch vụ backend cho ứng dụng khác hoặc làm nền tảng phát triển ứng dụng nội bộ doanh nghiệp. Với SaaS multi-tenant, thay đổi logo hoặc thông tin bản quyền, bạn cần liên hệ tác giả để lấy giấy phép thương mại."
         },
         {
-          "title": "What document formats can be imported into the FastGPT knowledge base?",
-          "content": "FastGPT supports importing documents in various formats, including Word, PDF, Excel, Markdown, and web links. It also enables syncing data from an entire website, automatically handling text preprocessing, vectorization, and QA splitting, which saves manual training time and improves efficiency."
+          "title": "Kho tri thức FastGPT có thể nhập những định dạng tài liệu nào?",
+          "content": "FastGPT hỗ trợ Word, PDF, Excel, Markdown và liên kết web. Nền tảng cũng có thể đồng bộ toàn bộ website, tự động xử lý văn bản, vector hóa và tách QA để giảm thao tác thủ công."
         },
         {
-          "title": "Which models can be integrated with FastGPT?",
-          "content": "As long as the API of the model you want to integrate aligns with the official OpenAI API, it can be used with FastGPT. You can utilize projects like One API to unify access to different models and provide an API that is compatible with the official OpenAI API."
+          "title": "FastGPT có thể tích hợp những mô hình nào?",
+          "content": "Miễn là API của mô hình tương thích với OpenAI API, mô hình đó có thể dùng với FastGPT. Bạn cũng có thể dùng One API để gom nhiều nhà cung cấp mô hình về một giao diện thống nhất."
         },
         {
-          "title": "What should I do if I encounter issues while using FastGPT?",
-          "content": "If you come across any problems while using FastGPT, please join our community or forum, create a post, and reach out to us for assistance."
+          "title": "Nếu gặp vấn đề khi sử dụng FastGPT thì nên làm gì?",
+          "content": "Hãy tham gia cộng đồng hoặc diễn đàn, tạo bài viết mô tả vấn đề và liên hệ với chúng tôi để được hỗ trợ."
         }
       ]
     },
@@ -497,7 +499,7 @@
   "NotFound": {
     "eyebrow": "404",
     "title": "Không tìm thấy trang",
-    "desc": "Trang này có thể đã được di chuyển, xóa hoặc tạm thời không khả dụng. Quay về trang chủ hoặc tìm trong FAQ.",
+    "desc": "Trang này có thể đã được di chuyển, xóa hoặc tạm thời không khả dụng. Quay về trang chủ hoặc xem tài liệu.",
     "home": "Về trang chủ",
     "faq": "Xem FAQ",
     "docs": "Tài liệu",

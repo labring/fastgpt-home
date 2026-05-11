@@ -9,6 +9,18 @@ import { siteConfig } from '@/config/site';
 
 type Key = 'cloud' | 'self';
 
+function formatCloudPrice(price: number, annual: boolean, locale: any) {
+  const amount = String(annual ? price * 10 : price);
+  const template = annual ? locale.yearPriceFormat : locale.monthPriceFormat;
+
+  if (typeof template === 'string') {
+    return template.replace('{{price}}', amount);
+  }
+
+  const unit = annual ? locale.yearUnit || 'year' : locale.monthUnit || 'month';
+  return `¥${amount}/${unit}`;
+}
+
 function PPlanFeatureItem({
   children,
   annual,
@@ -154,9 +166,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                   </div>
                   <h3 style={{ color: '#020617' }} className="text-[48px] font-normal m-0">
                     {typeof item.price === 'number'
-                      ? annual
-                        ? `¥${item.price * 10}/年`
-                        : `¥${item.price}/月`
+                      ? formatCloudPrice(item.price, annual, locale)
                       : item.price}
                   </h3>
                   <p className="text-[16px] m-0" style={{ color: '#475569' }}>

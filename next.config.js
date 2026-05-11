@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const isExport = process.env.NODE_ENV === 'production';
+const faqRewriteLocales = ['ja', 'ar', 'vi', 'th', 'id', 'ms'];
 
 const nextConfig = {
   // Only use static export for production builds
@@ -14,6 +15,23 @@ const nextConfig = {
   
   // Remove X-Powered-By header
   poweredByHeader: false,
+
+  // Cloudflare Pages uses public/_redirects for these 200 rewrites after export.
+  // next dev does not read _redirects, so mirror them here for local testing.
+  ...(!isExport && {
+    async rewrites() {
+      return faqRewriteLocales.flatMap((locale) => [
+        {
+          source: `/${locale}/faq`,
+          destination: '/en/faq'
+        },
+        {
+          source: `/${locale}/faq/:path*`,
+          destination: '/en/faq/:path*'
+        }
+      ]);
+    }
+  }),
 
   // Cache-Control headers only in production builds;
   // dev mode must serve fresh assets so HMR/edits take effect immediately.

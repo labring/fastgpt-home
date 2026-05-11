@@ -1,8 +1,7 @@
 import { EAdvantages, ECTA, EHero, EModels, EPartners, ESolutions } from "@/components/enterprise";
-import CTA from "@/components/enterprise/LegacyFooter";
-import { defaultLocale, getDictionary } from "@/lib/i18n";
+import EnterpriseFooter from "@/components/enterprise/EnterpriseFooter";
+import { getDictionary } from "@/lib/i18n";
 import { getAlternates } from "@/lib/seo";
-import { getGitHubStars } from "@/lib/utils";
 import { Metadata } from "next";
 
 export async function generateMetadata(): Promise<Metadata> {
@@ -26,12 +25,9 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function EnterprisePage({ params }: { params: Promise<{ lang?: string }> }) {
-  const { lang } = await params;
-  // const langName = lang || defaultLocale;
+export default async function EnterprisePage() {
   const langName = 'zh';
   const dict = await getDictionary(langName);
-  const stars = await getGitHubStars();
 
   return (
     <>
@@ -41,7 +37,7 @@ export default async function EnterprisePage({ params }: { params: Promise<{ lan
       <ESolutions langName={langName} />
       <EPartners locale={dict.Enterprise} langName={langName} />
       <ECTA locale={dict.Enterprise} />
-      <CTA locale={dict.CTA} CTALocale={dict.CTAButton} stars={stars} />
+      <EnterpriseFooter locale={dict.CTA} CTALocale={dict.CTAButton} />
     </>
   );
 }

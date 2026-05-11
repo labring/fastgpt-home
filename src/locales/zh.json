@@ -1,10 +1,4 @@
 {
-  "video": {
-    "speed": "速度",
-    "normal": "正常",
-    "video": "/images/video/zh/video.png",
-    "videoDark": "/images/video/zh/video_dark.png"
-  },
   "links": [
     {
       "label": "定价",
@@ -19,36 +13,9 @@
       "href": "https://video.fastgpt.cn/videos"
     }
   ],
-  "Hero": {
-    "maker": "用户使用 FastGPT 构建专属 AI Agent",
-    "title1": "FastGPT - ",
-    "title2": "",
-    "title3": "企业级 AI Agent 构建平台",
-    "description": "可视化 Workflow 编排 + 超易用 AI 知识库 + 创新 RAG 检索 + 模板生态 = 轻松构建强大 AI 应用"
-  },
-  "SocialProof": {
-    "maker": "用户使用 FastGPT 构建专属 AI Agent"
-  },
-  "Feature": {
-    "title": "优势",
-    "description": "为什么选择 FastGPT？",
-    "doYouLike": "喜欢这个开源 AI Agent 构建平台吗？",
-    "follow": "点个 Star 吧🌟"
-  },
-  "Ability": {
-    "title": "产品特性介绍"
-  },
-  "Video": {
-    "title": "观看演示👇"
-  },
   "Pricing": {
     "badge": "定价",
     "popular": "最受欢迎",
-    "title": "定价",
-    "title2": "允许被用于商业化",
-    "description": "这是一个开源的、免费的 AI Agent 构建平台",
-    "doYouLike": "喜欢这个开源 AI Agent 构建平台吗？",
-    "follow": "点个 Star 吧🌟",
     "cloud": "云服务",
     "self": "私有部署",
     "annual": "按年",
@@ -61,7 +28,54 @@
     "chooseVersion": "选择更适合你的版本",
     "freeUse": "免费使用或升级更高的套餐",
     "monthly": "按月",
-    "aiCredits": "AI 积分"
+    "aiCredits": "AI 积分",
+    "faq": {
+      "badge": "FAQ",
+      "title": "常见问题",
+      "subtitle": "关于套餐、AI 积分和资源限制的常见问题",
+      "items": [
+        {
+          "title": "是否切换订阅套餐？",
+          "desc": "套餐使用规则为优先使用更高级的套餐，因此，购买的新套餐若比当前套餐更高级，则新套餐立即生效：否则将继续使用当前套餐。"
+        },
+        {
+          "title": "在哪里查看已订阅的套餐？",
+          "desc": "账号-个人信息-套餐详情-使用情况。您可以查看所拥有套餐的生效和到期时间。当付费套餐到期后将自动切换免费版。"
+        },
+        {
+          "title": "什么是AI积分？",
+          "desc": "每次调用AI模型时，都会消耗一定的AI积分。具体的计算标准可参考上方的“AI 积分计算标准”。系统会优先采用模型厂商返回的实际 usage，若为空，则采用GPT3.5的计算方式进行估算，1Token≈0.7中文字符≈0.9英文单词，连续出现的字符可能被认为是1个Tokens。"
+        },
+        {
+          "title": "AI积分会过期么？",
+          "desc": "会过期。当前套餐过期后，AI积分将会清空，并更新为新套餐的AI积分。年度套餐的AI积分时长为1年，而不是每个月。"
+        },
+        {
+          "title": "知识库存储怎么计算？",
+          "desc": "1条知识库存储等于1条知识库索引。一条分块数据，通常对应多条索引，可以在单个知识库集合中看到\"n组索引\""
+        },
+        {
+          "title": "知识库索引什么时候会减少？",
+          "desc": "当你删除知识库内容时，知识库索引数量会在 5 分钟内减少。"
+        },
+        {
+          "title": "额外资源包可以叠加么？",
+          "desc": "可以的。每次购买的资源包都是独立的，在其有效期内将会叠加使用。AI积分会优先扣除最先过期的资源包。"
+        },
+        {
+          "title": "QPM 是什么？",
+          "desc": "主要指团队每分钟请求 Agent 的最大次数，与单个 Agent 复杂度无关。其他 OpenAPI 接口也受此影响，每个接口单独计算。"
+        },
+        {
+          "title": "一个月,一年具体是多长时间？",
+          "desc": "一个月按 30 天计算，一年按 360 天计算。"
+        },
+        {
+          "title": "免费版数据会清除么？",
+          "desc": "免费版团队（免费版且未购买额外套餐）连续 30 天未登录系统，系统会自动清除该团队下所有知识库内容。"
+        }
+      ]
+    }
   },
   "FAQ": {
     "badge": "FAQ",
@@ -97,18 +111,6 @@
     "askTitle": "商务咨询",
     "title": "免费使用"
   },
-  "NotFound": {
-    "title": "页面未找到",
-    "description": "抱歉，您访问的页面不存在或已被移除。",
-    "backHome": "返回首页",
-    "viewFAQ": "查看常见问题"
-  },
-  "InterModal": {
-    "desc": "Looks like you’re accessing the Chinese version from outside China. Would you prefer our international version？",
-    "tip": "Do not remind me again",
-    "button": "Switch",
-    "link": "/en"
-  },
   "Home": {
     "navCta": {
       "trial": "立即开始",
@@ -128,9 +130,18 @@
     },
     "stats": {
       "items": [
-        { "label": "GitHub Stars", "desc": "全球开发者技术背书" },
-        { "label": "平台用户", "desc": "赋能各行业业务团队" },
-        { "label": "私有化部署案例", "desc": "核心业务场景成熟落地" }
+        {
+          "label": "GitHub Stars",
+          "desc": "全球开发者技术背书"
+        },
+        {
+          "label": "平台用户",
+          "desc": "赋能各行业业务团队"
+        },
+        {
+          "label": "私有化部署案例",
+          "desc": "核心业务场景成熟落地"
+        }
       ]
     },
     "productHighlights": {
@@ -138,11 +149,31 @@
       "title": "生产级 AI 智能体",
       "subtitle": "一站式解决企业 AI 落地难题",
       "items": [
-        { "key": "blocks", "title": "像搭积木一样，构建业务的 AI 智能体", "desc": "可视化工作流、强扩展生态 API 无缝对接" },
-        { "key": "kb", "title": "拒绝幻觉，打造精准企业知识库", "desc": "混合检索拒绝幻觉，自动清洗数据，实时更新维护" },
-        { "key": "lifecycle", "title": "看得见、管得住，大模型全生命周期管理", "desc": "兼容全模型接入，提供调试审计，确保合规可控" },
-        { "key": "production", "title": "生产级，生产环境构建的专业架构", "desc": "支持 SSO 与 RBAC 权限，打造千人千面安全门户" },
-        { "key": "partner", "title": "不仅仅是工具，更是 AI 落地的全程伙伴", "desc": "丰富企业实战经验，从调研到定制 POC，全程陪跑交付" }
+        {
+          "key": "blocks",
+          "title": "像搭积木一样，构建业务的 AI 智能体",
+          "desc": "可视化工作流、强扩展生态 API 无缝对接"
+        },
+        {
+          "key": "kb",
+          "title": "拒绝幻觉，打造精准企业知识库",
+          "desc": "混合检索拒绝幻觉，自动清洗数据，实时更新维护"
+        },
+        {
+          "key": "lifecycle",
+          "title": "看得见、管得住，大模型全生命周期管理",
+          "desc": "兼容全模型接入，提供调试审计，确保合规可控"
+        },
+        {
+          "key": "production",
+          "title": "生产级，生产环境构建的专业架构",
+          "desc": "支持 SSO 与 RBAC 权限，打造千人千面安全门户"
+        },
+        {
+          "key": "partner",
+          "title": "不仅仅是工具，更是 AI 落地的全程伙伴",
+          "desc": "丰富企业实战经验，从调研到定制 POC，全程陪跑交付"
+        }
       ]
     },
     "solutions": {
@@ -155,36 +186,84 @@
           "key": "sales",
           "label": "销售 & 市场",
           "items": [
-            { "key": "assistant", "title": "智能销售助手", "desc": "嵌入平台，AI 实时辅助查资料、写话术，让回复快且专业。" },
-            { "key": "report", "title": "金融行情播报", "desc": "自动抓取行情数据，按模板生成图表与日报，告别繁琐人工制表。" },
-            { "key": "training", "title": "销售培训与陪练", "desc": "AI 模拟真实客户对练，自动评分纠错，帮助新人快速掌握销售话术。" }
+            {
+              "key": "assistant",
+              "title": "智能销售助手",
+              "desc": "嵌入平台，AI 实时辅助查资料、写话术，让回复快且专业。"
+            },
+            {
+              "key": "report",
+              "title": "金融行情播报",
+              "desc": "自动抓取行情数据，按模板生成图表与日报，告别繁琐人工制表。"
+            },
+            {
+              "key": "training",
+              "title": "销售培训与陪练",
+              "desc": "AI 模拟真实客户对练，自动评分纠错，帮助新人快速掌握销售话术。"
+            }
           ]
         },
         {
           "key": "service",
           "label": "客服 & 运营",
           "items": [
-            { "key": "ticket", "title": "智能工单派单", "desc": "懂文字更能懂图片，自动识别诉求并精准派单，大幅提升服务效率。" },
-            { "key": "copy", "title": "营销文案生成", "desc": "懂卖点更懂平台风格，自动规避违禁词，批量产出高质量营销文案。" },
-            { "key": "insight", "title": "客户体验洞察", "desc": "自动分析客户情绪与槽点，生成改进建议，助力产品精准优化迭代。" }
+            {
+              "key": "ticket",
+              "title": "智能工单派单",
+              "desc": "懂文字更能懂图片，自动识别诉求并精准派单，大幅提升服务效率。"
+            },
+            {
+              "key": "copy",
+              "title": "营销文案生成",
+              "desc": "懂卖点更懂平台风格，自动规避违禁词，批量产出高质量营销文案。"
+            },
+            {
+              "key": "insight",
+              "title": "客户体验洞察",
+              "desc": "自动分析客户情绪与槽点，生成改进建议，助力产品精准优化迭代。"
+            }
           ]
         },
         {
           "key": "hr",
           "label": "行政 & 人事",
           "items": [
-            { "key": "resume", "title": "智能简历筛选", "desc": "AI 自动阅读海量简历，精准匹配打分并推荐，帮 HR 快速锁定人才。" },
-            { "key": "policy", "title": "员工制度问答", "desc": "导入制度手册，员工有疑问直接对话 AI，无需翻阅，即问即答。" },
-            { "key": "meeting", "title": "会议纪要助手", "desc": "录音实时转文字，AI 自动提炼核心观点与决议，一键生成结构化纪要。" }
+            {
+              "key": "resume",
+              "title": "智能简历筛选",
+              "desc": "AI 自动阅读海量简历，精准匹配打分并推荐，帮 HR 快速锁定人才。"
+            },
+            {
+              "key": "policy",
+              "title": "员工制度问答",
+              "desc": "导入制度手册，员工有疑问直接对话 AI，无需翻阅，即问即答。"
+            },
+            {
+              "key": "meeting",
+              "title": "会议纪要助手",
+              "desc": "录音实时转文字，AI 自动提炼核心观点与决议，一键生成结构化纪要。"
+            }
           ]
         },
         {
           "key": "finance",
           "label": "财务 & 法务",
           "items": [
-            { "key": "expense", "title": "费用报销审核", "desc": "拍照上传，AI 自动核对预算与规则，智能拦截异常，解放财务双手。" },
-            { "key": "contract", "title": "合同智能审查", "desc": "秒级比对法规标准，高亮风险条款并给出修改建议，严防合同漏洞。" },
-            { "key": "dd", "title": "尽调报告生成", "desc": "自动收集工商经营数据，直接生成结构化报告，告别繁琐人工搜集。" }
+            {
+              "key": "expense",
+              "title": "费用报销审核",
+              "desc": "拍照上传，AI 自动核对预算与规则，智能拦截异常，解放财务双手。"
+            },
+            {
+              "key": "contract",
+              "title": "合同智能审查",
+              "desc": "秒级比对法规标准，高亮风险条款并给出修改建议，严防合同漏洞。"
+            },
+            {
+              "key": "dd",
+              "title": "尽调报告生成",
+              "desc": "自动收集工商经营数据，直接生成结构化报告，告别繁琐人工搜集。"
+            }
           ]
         }
       ]
@@ -199,45 +278,90 @@
           "key": "cetc",
           "title": "缩短新员工适应期，构建研发知识助手",
           "metrics": [
-            { "value": "1 周+", "label": "培训周期缩短" },
-            { "value": "10%", "label": "重复咨询降低" },
-            { "value": "30s", "label": "检索耗时" }
+            {
+              "value": "1 周+",
+              "label": "培训周期缩短"
+            },
+            {
+              "value": "10%",
+              "label": "重复咨询降低"
+            },
+            {
+              "value": "30s",
+              "label": "检索耗时"
+            }
           ]
         },
         {
           "key": "cms",
           "title": "重塑投研生产力，基金研报自动化生成",
           "metrics": [
-            { "value": "90%+", "label": "自动化率超过" },
-            { "value": "<1%", "label": "数据差错" },
-            { "value": "90%", "label": "制作耗时缩短" }
+            {
+              "value": "90%+",
+              "label": "自动化率超过"
+            },
+            {
+              "value": "<1%",
+              "label": "数据差错"
+            },
+            {
+              "value": "90%",
+              "label": "制作耗时缩短"
+            }
           ]
         },
         {
           "key": "snow",
           "title": "深度集成 OA 系统，费用报销职能审核",
           "metrics": [
-            { "value": "50%", "label": "审核提效" },
-            { "value": "70%", "label": "异常检出提升" },
-            { "value": "60%", "label": "终审错误降低" }
+            {
+              "value": "50%",
+              "label": "审核提效"
+            },
+            {
+              "value": "70%",
+              "label": "异常检出提升"
+            },
+            {
+              "value": "60%",
+              "label": "终审错误降低"
+            }
           ]
         },
         {
           "key": "zhaozhao",
           "title": "日均咨询破万，AI 客服 7*24h 秒回",
           "metrics": [
-            { "value": "1 s", "label": "响应速度秒级" },
-            { "value": "42%", "label": "转人工率降低" },
-            { "value": "标准化", "label": "服务质量" }
+            {
+              "value": "1 s",
+              "label": "响应速度秒级"
+            },
+            {
+              "value": "42%",
+              "label": "转人工率降低"
+            },
+            {
+              "value": "标准化",
+              "label": "服务质量"
+            }
           ]
         },
         {
           "key": "lcfc",
           "title": "告别万行 Excel 卡顿，自然语言即问即查",
           "metrics": [
-            { "value": "240+ 分钟", "label": "数据提效" },
-            { "value": "90%", "label": "系统卡顿降低" },
-            { "value": "3%", "label": "错误率降低至" }
+            {
+              "value": "240+ 分钟",
+              "label": "数据提效"
+            },
+            {
+              "value": "90%",
+              "label": "系统卡顿降低"
+            },
+            {
+              "value": "3%",
+              "label": "错误率降低至"
+            }
           ]
         }
       ]
@@ -252,10 +376,26 @@
       "title": "专业交付，价值保障",
       "subtitle": "从咨询到交付，我们是技术服务提供者，更是您 AI 落地的长期伙伴与坚实后盾。",
       "items": [
-        { "key": "community", "title": "开源生态支持", "desc": "社区模板文档齐备，助力快速上手" },
-        { "key": "consult", "title": "专家咨询支持", "desc": "1v1 诊断痛点，架构咨询 POC 验证" },
-        { "key": "deploy", "title": "搭建落地辅助", "desc": "成熟方案全程陪跑，系统培训落地" },
-        { "key": "custom", "title": "企业定制开发", "desc": "深度集成业务系统，长期运维保障" }
+        {
+          "key": "community",
+          "title": "开源生态支持",
+          "desc": "社区模板文档齐备，助力快速上手"
+        },
+        {
+          "key": "consult",
+          "title": "专家咨询支持",
+          "desc": "1v1 诊断痛点，架构咨询 POC 验证"
+        },
+        {
+          "key": "deploy",
+          "title": "搭建落地辅助",
+          "desc": "成熟方案全程陪跑，系统培训落地"
+        },
+        {
+          "key": "custom",
+          "title": "企业定制开发",
+          "desc": "深度集成业务系统，长期运维保障"
+        }
       ]
     },
     "faq": {
@@ -267,10 +407,22 @@
       "viewMore": "查看更多 →",
       "viewMoreUrl": "/zh/faq",
       "items": [
-        { "title": "开源版可以商业化吗？", "content": "FastGPT 允许被用于商业化，例如作为其他应用的「后端即服务」使用，或者作为应用开发平台提供给企业。然而，当涉及到多租户 SaaS 服务或者 LOGO 及版权信息时，必须联系作者获得商业许可。" },
-        { "title": "FastGPT 知识库可以导入哪些格式的文档？", "content": "FastGPT 支持导入 Word、PDF、Excel、Markdown 以及网页链接等格式文档，同时还支持同步整个 Web 站点的数据，自动完成文本预处理、向量化和 QA 分割，节省手动训练时间，提高效率。" },
-        { "title": "FastGPT 可以接入哪些模型？", "content": "只要您接入的模型接口 API 与 OpenAI 官方接口对齐，都可以接入 FastGPT。您可以使用 One API 这样的项目来统一接入不同的模型，并对外提供与 OpenAI 官方接口对齐的 API。" },
-        { "title": "如果我在使用 FastGPT 时遇到问题该怎么办？", "content": "如果你在使用 FastGPT 时遇到任何问题，请加入社群或者论坛发帖与我们联系。" }
+        {
+          "title": "开源版可以商业化吗？",
+          "content": "FastGPT 允许被用于商业化，例如作为其他应用的「后端即服务」使用，或者作为应用开发平台提供给企业。然而，当涉及到多租户 SaaS 服务或者 LOGO 及版权信息时，必须联系作者获得商业许可。"
+        },
+        {
+          "title": "FastGPT 知识库可以导入哪些格式的文档？",
+          "content": "FastGPT 支持导入 Word、PDF、Excel、Markdown 以及网页链接等格式文档，同时还支持同步整个 Web 站点的数据，自动完成文本预处理、向量化和 QA 分割，节省手动训练时间，提高效率。"
+        },
+        {
+          "title": "FastGPT 可以接入哪些模型？",
+          "content": "只要您接入的模型接口 API 与 OpenAI 官方接口对齐，都可以接入 FastGPT。您可以使用 One API 这样的项目来统一接入不同的模型，并对外提供与 OpenAI 官方接口对齐的 API。"
+        },
+        {
+          "title": "如果我在使用 FastGPT 时遇到问题该怎么办？",
+          "content": "如果你在使用 FastGPT 时遇到任何问题，请加入社群或者论坛发帖与我们联系。"
+        }
       ]
     },
     "cta": {

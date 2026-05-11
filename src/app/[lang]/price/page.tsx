@@ -66,7 +66,7 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
           </div>
 
           <div className="mt-[120px]">
-            <FAQ t={dict.Home.faq} />
+            <FAQ t={dict.Pricing.faq} />
           </div>
         </div>
       </main>

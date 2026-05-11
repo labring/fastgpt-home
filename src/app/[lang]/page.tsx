@@ -1,6 +1,6 @@
 import HomeLanding from '@/components/home/HomeLanding';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
-import { getGitHubStars } from '@/lib/utils';
+import { getGitHubStars } from '@/lib/githubStars';
 
 export default async function HomePage({ params }: { params: Promise<{ lang?: string }> }) {
   const { lang } = await params;

@@ -3,8 +3,10 @@
 import { ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState, ReactNode } from 'react';
+import Image from 'next/image';
 import { assets } from '@/components/home/assets';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { getCachedGitHubStars } from '@/lib/githubStarsClient';
 
 interface HeroProps {
   stars: number;
@@ -39,14 +41,14 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const [isDesktop, setIsDesktop] = useState(false);
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 767px)');
-    setIsMobile(mq.matches);
+    queueMicrotask(() => setIsMobile(mq.matches));
     const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
     mq.addEventListener('change', handler);
     return () => mq.removeEventListener('change', handler);
   }, []);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1024px)');
-    setIsDesktop(mq.matches);
+    queueMicrotask(() => setIsDesktop(mq.matches));
     const handler = (e: MediaQueryListEvent) => setIsDesktop(e.matches);
     mq.addEventListener('change', handler);
     return () => mq.removeEventListener('change', handler);
@@ -65,13 +67,10 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const [stars, setStars] = useState(initialStars);
   useEffect(() => {
     const run = async () => {
-      try {
-        const res = await fetch('https://api.github.com/repos/labring/FastGPT');
-        const { stargazers_count } = await res.json();
-        if (stargazers_count && stargazers_count !== initialStars) {
-          setStars(stargazers_count);
-        }
-      } catch { /* noop */ }
+      const nextStars = await getCachedGitHubStars(initialStars);
+      if (nextStars !== initialStars) {
+        setStars(nextStars);
+      }
     };
     run();
   }, [initialStars]);
@@ -229,7 +228,15 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               style={isMobile ? {} : { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
               className="hero-image-fade origin-bottom"
             >
-              <img src={assets.heroDashboard} alt={t.title} className="block w-full h-auto" draggable={false} />
+              <Image
+                src={assets.heroDashboard}
+                alt={t.title}
+                width={5888}
+                height={3179}
+                priority
+                className="block w-full h-auto"
+                draggable={false}
+              />
             </motion.div>
           </div>
 

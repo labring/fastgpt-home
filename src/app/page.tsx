@@ -2,7 +2,7 @@ import HomeLanding from '@/components/home/HomeLanding';
 import JsonLd from '@/components/JsonLd';
 import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
 import { getAlternates } from '@/lib/seo';
-import { getGitHubStars } from '@/lib/utils';
+import { getGitHubStars } from '@/lib/githubStars';
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {

@@ -32,7 +32,9 @@ function PPlanFeatureItem({
       <div className="flex-shrink-0 mt-0.5">
         <Check />
       </div>
-      {children ? children : (
+      {children ? (
+        children
+      ) : (
         <span style={{ fontSize: 16, lineHeight: '24px', color: '#475569' }}>{description}</span>
       )}
     </div>
@@ -98,8 +100,12 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
             classNames={{ wrapper: 'bg-[#e8ebf0]' }}
           >
             <div className="flex items-center gap-2 text-[14px]">
-              <span style={{ color: annual ? '#020617' : 'rgb(71, 85, 105)' }}>{locale.annual}</span>
-              <span style={{ color: '#3b82f6' }} className="italic">{locale.pay10}</span>
+              <span style={{ color: annual ? '#020617' : 'rgb(71, 85, 105)' }}>
+                {locale.annual}
+              </span>
+              <span style={{ color: '#3b82f6' }} className="italic">
+                {locale.pay10}
+              </span>
             </div>
           </Switch>
         </div>
@@ -121,12 +127,19 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
               >
                 <div className="flex flex-col" style={{ gap: 24 }}>
                   <div className="flex items-center justify-between">
-                    <h2 className={`${langName === 'en' ? 'text-[18px]' : 'text-[24px]'} font-normal m-0`} style={{ color: '#020617' }}>
+                    <h2
+                      className={`${
+                        langName === 'en' ? 'text-[18px]' : 'text-[24px]'
+                      } font-normal m-0`}
+                      style={{ color: '#020617' }}
+                    >
                       {item.title}
                     </h2>
                     {item.key === 'advanced' && (
                       <span
-                        className={`inline-block rounded-full font-medium leading-[18px] ${langName === 'en' ? 'text-[10px]' : 'text-[12px]'}`}
+                        className={`inline-block rounded-full font-medium leading-[18px] ${
+                          langName === 'en' ? 'text-[10px]' : 'text-[12px]'
+                        }`}
                         style={{
                           padding: langName === 'en' ? '4px 8px' : '6px 12px',
                           backgroundColor: '#f5f9ff',
@@ -138,12 +151,13 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                     )}
                   </div>
                   <h3 style={{ color: '#020617' }} className="text-[48px] font-normal m-0">
-                    {typeof item.price === 'number' ? `¥${item.price * (annual ? 10 : 1)}/月` : item.price}
+                    {typeof item.price === 'number'
+                      ? annual
+                        ? `¥${item.price * 10}/年`
+                        : `¥${item.price}/月`
+                      : item.price}
                   </h3>
-                  <p
-                    className="text-[16px] m-0"
-                    style={{ color: '#475569' }}
-                  >
+                  <p className="text-[16px] m-0" style={{ color: '#475569' }}>
                     {item.content}
                   </p>
                 </div>
@@ -152,7 +166,12 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
 
                 <div className="flex flex-col" style={{ gap: 16 }}>
                   {item.features.map((feature: string | number, index: number) => (
-                    <PPlanFeatureItem key={index} content={feature} annual={annual} locale={locale} />
+                    <PPlanFeatureItem
+                      key={index}
+                      content={feature}
+                      annual={annual}
+                      locale={locale}
+                    />
                   ))}
                 </div>
 
@@ -200,7 +219,12 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 }}
               >
                 <div className="flex flex-col" style={{ gap: 24 }}>
-                  <h2 className={`${langName === 'en' ? 'text-[18px]' : 'text-[24px]'} font-normal m-0`} style={{ color: '#020617' }}>
+                  <h2
+                    className={`${
+                      langName === 'en' ? 'text-[18px]' : 'text-[24px]'
+                    } font-normal m-0`}
+                    style={{ color: '#020617' }}
+                  >
                     {item.title}
                   </h2>
                   <h3 style={{ color: '#020617' }} className="text-[48px] font-normal m-0">
@@ -242,7 +266,11 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                   )}
                 </div>
 
-                <Link href={PRICE_PLANS_SELF_BUTTON_MAP[item.key].href} target="_blank" className="mt-auto pt-4">
+                <Link
+                  href={PRICE_PLANS_SELF_BUTTON_MAP[item.key].href}
+                  target="_blank"
+                  className="mt-auto pt-4"
+                >
                   <button
                     className="w-full py-2.5 rounded-full text-[14px] font-medium transition-colors"
                     style={{ backgroundColor: '#f5f6f8', color: '#020617' }}

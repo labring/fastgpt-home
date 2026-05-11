@@ -10,14 +10,16 @@ export function useStartUrl(): string {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
-    const incoming = new URLSearchParams(window.location.search);
-    const forwarded = new URLSearchParams();
-    CAMPAIGN_KEYS.forEach((key) => {
-      const value = incoming.get(key);
-      if (value) forwarded.set(key, value);
+    queueMicrotask(() => {
+      const incoming = new URLSearchParams(window.location.search);
+      const forwarded = new URLSearchParams();
+      CAMPAIGN_KEYS.forEach((key) => {
+        const value = incoming.get(key);
+        if (value) forwarded.set(key, value);
+      });
+      const qs = forwarded.toString();
+      setUrl(qs ? `${siteConfig.userUrl}?${qs}` : siteConfig.userUrl);
     });
-    const qs = forwarded.toString();
-    setUrl(qs ? `${siteConfig.userUrl}?${qs}` : siteConfig.userUrl);
   }, []);
 
   return url;

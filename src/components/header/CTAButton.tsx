@@ -4,25 +4,8 @@ import { siteConfig } from '@/config/site';
 import { FaArrowRight } from "react-icons/fa6";
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
-const CTAButton = ({ locale, stars: initialStars }: { locale: any; stars: number }) => {
-  const [stars, setStars] = useState(initialStars);
-
-  useEffect(() => {
-    const getStars = async () => {
-      try {
-        const { stargazers_count } = await (
-          await fetch('https://api.github.com/repos/labring/FastGPT')
-        ).json();
-        if (stargazers_count && stargazers_count !== initialStars) {
-          setStars(stargazers_count);
-        }
-      } catch (error) { }
-    };
-    getStars();
-  }, [initialStars]);
-
+const CTAButton = ({ locale }: { locale: any }) => {
   const getLinkConfig = () => {
     if (typeof window === 'undefined') return { pathname: siteConfig.userUrl };
     const urlParams = new URLSearchParams(window.location.search);

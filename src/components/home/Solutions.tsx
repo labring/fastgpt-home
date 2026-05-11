@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import {
   Tag,
   AudioLines,
@@ -182,7 +183,14 @@ export default function Solutions({ t }: { t: SolutionsT }) {
             </div>
 
             <div className="min-w-0 grow-[2] basis-0">
-              <img src={current.image} alt={current.label} className="w-full h-auto block" />
+              <Image
+                src={current.image}
+                alt={current.label}
+                width={9888}
+                height={7424}
+                sizes="(min-width: 1024px) 560px, 100vw"
+                className="w-full h-auto block"
+              />
             </div>
           </div>
         </FadeIn>
@@ -194,9 +202,12 @@ export default function Solutions({ t }: { t: SolutionsT }) {
               const item = tab.items[0];
               return (
                 <div key={tab.key} className="flex flex-col gap-4">
-                  <img
+                  <Image
                     src={tab.image}
                     alt={item.title}
+                    width={9888}
+                    height={7424}
+                    sizes="100vw"
                     className="w-full h-auto block rounded-xl"
                     draggable={false}
                     loading="lazy"

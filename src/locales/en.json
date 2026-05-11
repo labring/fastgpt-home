@@ -1,10 +1,4 @@
 {
-  "video": {
-    "speed": "Speed",
-    "normal": "Normal",
-    "video": "/images/video/en/video.png",
-    "videoDark": "/images/video/en/video_dark.png"
-  },
   "links": [
     {
       "label": "Pricing",
@@ -19,36 +13,9 @@
       "href": "https://video.fastgpt.cn/videos"
     }
   ],
-  "Hero": {
-    "maker": "Users built specialized AI Agents with FastGPT",
-    "title1": "FastGPT - ",
-    "title2": "",
-    "title3": "Enterprise AI Agent Builder",
-    "description": "Flexible AI Workflow + AI Knowledge Base + Template System + Agentic RAG = Powerful AI Agent Builder"
-  },
-  "SocialProof": {
-    "maker": "Users built specialized AI Agents with FastGPT"
-  },
-  "Feature": {
-    "title": "Why FastGPT?",
-    "description": "Discover the advantages of FastGPT",
-    "doYouLike": "Like this open-source AI Agent Builder?",
-    "follow": "Star it on GitHub! 🌟"
-  },
-  "Ability": {
-    "title": "Features"
-  },
-  "Video": {
-    "title": "Video Presentation"
-  },
   "Pricing": {
     "badge": "Pricing",
     "popular": "Most Popular",
-    "title": "Pricing",
-    "title2": "Suitable for Commercial Use",
-    "description": "FastGPT is an open-source and enterprise AI Agent builder.",
-    "doYouLike": "Like this open-source AI Agent Builder?",
-    "follow": "Star it on GitHub! 🌟",
     "cloud": "Cloud Service",
     "self": "Self-Hosted",
     "annual": "Annual",
@@ -61,7 +28,54 @@
     "chooseVersion": "Choose a version that suits you",
     "freeUse": "Free use or upgrade to a higher package",
     "monthly": "Monthly",
-    "aiCredits": "AI Credits"
+    "aiCredits": "AI Credits",
+    "faq": {
+      "badge": "FAQ",
+      "title": "FAQ",
+      "subtitle": "Common questions about plans, AI credits, and resource limits",
+      "items": [
+        {
+          "title": "How does plan switching work?",
+          "desc": "Higher-tier plans take priority. If the new plan is higher than the current one, it takes effect immediately; otherwise, the current plan continues until expiration."
+        },
+        {
+          "title": "Where can I view my plan?",
+          "desc": "Go to Account → Personal Info → Plan Details → Usage to view your plan's start and end dates. When a paid plan expires, it automatically reverts to the free tier."
+        },
+        {
+          "title": "What are AI credits?",
+          "desc": "Each AI model call consumes a certain amount of AI credits.\nFor calculation details, see \"AI Credit Calculation\" above.\nThe system prioritizes actual usage reported by the model provider. If unavailable, it estimates using GPT-3.5 rates: 1 Token ≈ 0.7 Chinese characters ≈ 0.9 English words."
+        },
+        {
+          "title": "Do AI credits expire?",
+          "desc": "Yes. When your current plan expires, AI credits reset to the new plan's allocation. Annual plan credits are valid for one year, not monthly."
+        },
+        {
+          "title": "How is knowledge base storage calculated?",
+          "desc": "1 knowledge base storage unit = 1 knowledge base index.\nA single chunk typically has multiple indexes. You can see \"n indexes\" in each knowledge base collection."
+        },
+        {
+          "title": "When does the index count decrease after deletion?",
+          "desc": "When you delete knowledge base content, the index count decreases within 5 minutes."
+        },
+        {
+          "title": "Can resource packs be stacked?",
+          "desc": "Yes. Each purchased resource pack is independent and stacks within its validity period. Credits are deducted from the pack expiring soonest."
+        },
+        {
+          "title": "What is QPM?",
+          "desc": "QPM is the maximum number of Agent requests your team can make per minute, regardless of individual Agent complexity.\nOther OpenAPI endpoints are also rate-limited, each calculated separately."
+        },
+        {
+          "title": "How long is a month or a year exactly?",
+          "desc": "A month is 30 days; a year is 360 days."
+        },
+        {
+          "title": "Will free tier data be cleared?",
+          "desc": "If a free team (free tier with no additional plans) doesn't log in for 30 consecutive days, all knowledge base content will be automatically cleared."
+        }
+      ]
+    }
   },
   "FAQ": {
     "badge": "FAQ",
@@ -97,12 +111,6 @@
     "title": "Get started",
     "askTitle": "Contact Sales"
   },
-  "NotFound": {
-    "title": "Page Not Found",
-    "description": "Sorry, the page you are looking for doesn't exist or has been moved.",
-    "backHome": "Back to Home",
-    "viewFAQ": "View FAQ"
-  },
   "Home": {
     "navCta": {
       "trial": "Get Started",
@@ -122,9 +130,18 @@
     },
     "stats": {
       "items": [
-        { "label": "GitHub Stars", "desc": "Backed by global developer community" },
-        { "label": "Platform Users", "desc": "Empowering teams across industries" },
-        { "label": "Private Deployments", "desc": "Production-proven in core scenarios" }
+        {
+          "label": "GitHub Stars",
+          "desc": "Backed by global developer community"
+        },
+        {
+          "label": "Platform Users",
+          "desc": "Empowering teams across industries"
+        },
+        {
+          "label": "Private Deployments",
+          "desc": "Production-proven in core scenarios"
+        }
       ]
     },
     "productHighlights": {
@@ -132,11 +149,31 @@
       "title": "Production-grade AI Agents",
       "subtitle": "One platform for enterprise AI delivery",
       "items": [
-        { "key": "blocks", "title": "Build AI agents for your business like stacking blocks", "desc": "Visual workflows with a rich API ecosystem for seamless integration" },
-        { "key": "kb", "title": "Reject hallucinations with an accurate enterprise knowledge base", "desc": "Hybrid retrieval avoids hallucinations; data is auto-cleansed and kept live" },
-        { "key": "lifecycle", "title": "See and govern the full LLM lifecycle", "desc": "Integrate any model, with debugging and auditing for compliance and control" },
-        { "key": "production", "title": "Production-ready architecture purpose-built for real workloads", "desc": "SSO and RBAC support power a personalized, secure enterprise portal" },
-        { "key": "partner", "title": "Not just a tool — a partner for your AI journey", "desc": "Deep enterprise experience from discovery to custom POC and delivery" }
+        {
+          "key": "blocks",
+          "title": "Build AI agents for your business like stacking blocks",
+          "desc": "Visual workflows with a rich API ecosystem for seamless integration"
+        },
+        {
+          "key": "kb",
+          "title": "Reject hallucinations with an accurate enterprise knowledge base",
+          "desc": "Hybrid retrieval avoids hallucinations; data is auto-cleansed and kept live"
+        },
+        {
+          "key": "lifecycle",
+          "title": "See and govern the full LLM lifecycle",
+          "desc": "Integrate any model, with debugging and auditing for compliance and control"
+        },
+        {
+          "key": "production",
+          "title": "Production-ready architecture purpose-built for real workloads",
+          "desc": "SSO and RBAC support power a personalized, secure enterprise portal"
+        },
+        {
+          "key": "partner",
+          "title": "Not just a tool — a partner for your AI journey",
+          "desc": "Deep enterprise experience from discovery to custom POC and delivery"
+        }
       ]
     },
     "solutions": {
@@ -149,36 +186,84 @@
           "key": "sales",
           "label": "Sales & Marketing",
           "items": [
-            { "key": "assistant", "title": "AI Sales Assistant", "desc": "Embedded in your platform, AI assists reps with real-time answers and scripts." },
-            { "key": "report", "title": "Financial Market Report", "desc": "Auto-pulls market data and generates charts and daily reports from templates." },
-            { "key": "training", "title": "Sales Training & Practice", "desc": "AI role-plays real buyers, scores performance, and coaches new reps fast." }
+            {
+              "key": "assistant",
+              "title": "AI Sales Assistant",
+              "desc": "Embedded in your platform, AI assists reps with real-time answers and scripts."
+            },
+            {
+              "key": "report",
+              "title": "Financial Market Report",
+              "desc": "Auto-pulls market data and generates charts and daily reports from templates."
+            },
+            {
+              "key": "training",
+              "title": "Sales Training & Practice",
+              "desc": "AI role-plays real buyers, scores performance, and coaches new reps fast."
+            }
           ]
         },
         {
           "key": "service",
           "label": "Support & Operations",
           "items": [
-            { "key": "ticket", "title": "Smart Ticket Routing", "desc": "Understands both text and images, routes tickets accurately, boosts service speed." },
-            { "key": "copy", "title": "Marketing Copy Generation", "desc": "Knows your offer and each channel's voice; avoids banned terms at scale." },
-            { "key": "insight", "title": "Customer Experience Insights", "desc": "Analyzes customer sentiment and pain points and suggests product improvements." }
+            {
+              "key": "ticket",
+              "title": "Smart Ticket Routing",
+              "desc": "Understands both text and images, routes tickets accurately, boosts service speed."
+            },
+            {
+              "key": "copy",
+              "title": "Marketing Copy Generation",
+              "desc": "Knows your offer and each channel's voice; avoids banned terms at scale."
+            },
+            {
+              "key": "insight",
+              "title": "Customer Experience Insights",
+              "desc": "Analyzes customer sentiment and pain points and suggests product improvements."
+            }
           ]
         },
         {
           "key": "hr",
           "label": "HR & Admin",
           "items": [
-            { "key": "resume", "title": "Intelligent Resume Screening", "desc": "AI reads large resume volumes, scores matches, and surfaces top candidates." },
-            { "key": "policy", "title": "Employee Policy Q&A", "desc": "Import your handbook; employees query policies conversationally — no searching." },
-            { "key": "meeting", "title": "Meeting Minutes Assistant", "desc": "Live transcription, extraction of key points and decisions, one-click minutes." }
+            {
+              "key": "resume",
+              "title": "Intelligent Resume Screening",
+              "desc": "AI reads large resume volumes, scores matches, and surfaces top candidates."
+            },
+            {
+              "key": "policy",
+              "title": "Employee Policy Q&A",
+              "desc": "Import your handbook; employees query policies conversationally — no searching."
+            },
+            {
+              "key": "meeting",
+              "title": "Meeting Minutes Assistant",
+              "desc": "Live transcription, extraction of key points and decisions, one-click minutes."
+            }
           ]
         },
         {
           "key": "finance",
           "label": "Finance & Legal",
           "items": [
-            { "key": "expense", "title": "Expense Reimbursement Review", "desc": "Snap a receipt; AI checks budgets and rules and flags anomalies automatically." },
-            { "key": "contract", "title": "Smart Contract Review", "desc": "Seconds to compare against regulations, flag risky clauses, and suggest edits." },
-            { "key": "dd", "title": "Due-diligence Report Generation", "desc": "Auto-collects business registry data and renders a structured report." }
+            {
+              "key": "expense",
+              "title": "Expense Reimbursement Review",
+              "desc": "Snap a receipt; AI checks budgets and rules and flags anomalies automatically."
+            },
+            {
+              "key": "contract",
+              "title": "Smart Contract Review",
+              "desc": "Seconds to compare against regulations, flag risky clauses, and suggest edits."
+            },
+            {
+              "key": "dd",
+              "title": "Due-diligence Report Generation",
+              "desc": "Auto-collects business registry data and renders a structured report."
+            }
           ]
         }
       ]
@@ -193,45 +278,90 @@
           "key": "cetc",
           "title": "Shorter new-hire ramp with an R&D knowledge assistant",
           "metrics": [
-            { "value": "1 week+", "label": "Training cycle shortened" },
-            { "value": "10%", "label": "Repeat inquiries reduced" },
-            { "value": "30s", "label": "Retrieval time" }
+            {
+              "value": "1 week+",
+              "label": "Training cycle shortened"
+            },
+            {
+              "value": "10%",
+              "label": "Repeat inquiries reduced"
+            },
+            {
+              "value": "30s",
+              "label": "Retrieval time"
+            }
           ]
         },
         {
           "key": "cms",
           "title": "Investment research reinvented; fund reports generated end-to-end",
           "metrics": [
-            { "value": "90%+", "label": "Automation rate" },
-            { "value": "<1%", "label": "Data error rate" },
-            { "value": "90%", "label": "Production time saved" }
+            {
+              "value": "90%+",
+              "label": "Automation rate"
+            },
+            {
+              "value": "<1%",
+              "label": "Data error rate"
+            },
+            {
+              "value": "90%",
+              "label": "Production time saved"
+            }
           ]
         },
         {
           "key": "snow",
           "title": "Deeply integrated with OA for expense approval",
           "metrics": [
-            { "value": "50%", "label": "Review efficiency" },
-            { "value": "70%", "label": "Anomaly detection lift" },
-            { "value": "60%", "label": "Final-review error drop" }
+            {
+              "value": "50%",
+              "label": "Review efficiency"
+            },
+            {
+              "value": "70%",
+              "label": "Anomaly detection lift"
+            },
+            {
+              "value": "60%",
+              "label": "Final-review error drop"
+            }
           ]
         },
         {
           "key": "zhaozhao",
           "title": "10k+ daily inquiries; AI customer service 24/7 in seconds",
           "metrics": [
-            { "value": "1 s", "label": "Second-level response" },
-            { "value": "42%", "label": "Human handoff reduced" },
-            { "value": "Standardized", "label": "Service quality" }
+            {
+              "value": "1 s",
+              "label": "Second-level response"
+            },
+            {
+              "value": "42%",
+              "label": "Human handoff reduced"
+            },
+            {
+              "value": "Standardized",
+              "label": "Service quality"
+            }
           ]
         },
         {
           "key": "lcfc",
           "title": "Ditch 10k-row Excel lag; query natural language on demand",
           "metrics": [
-            { "value": "240+ min", "label": "Data productivity gain" },
-            { "value": "90%", "label": "System-lag reduction" },
-            { "value": "3%", "label": "Error rate reduced to" }
+            {
+              "value": "240+ min",
+              "label": "Data productivity gain"
+            },
+            {
+              "value": "90%",
+              "label": "System-lag reduction"
+            },
+            {
+              "value": "3%",
+              "label": "Error rate reduced to"
+            }
           ]
         }
       ]
@@ -246,10 +376,26 @@
       "title": "Professional delivery, protected value",
       "subtitle": "From consulting to delivery, we are more than a vendor — we are your long-term partner for AI adoption.",
       "items": [
-        { "key": "community", "title": "Open-source Ecosystem", "desc": "Community templates and docs keep ramp-up fast" },
-        { "key": "consult", "title": "Expert Consulting", "desc": "1-on-1 pain-point diagnosis, architecture and POC validation" },
-        { "key": "deploy", "title": "Implementation Support", "desc": "End-to-end rollouts with training and hands-on guidance" },
-        { "key": "custom", "title": "Enterprise Customization", "desc": "Deep integration with your systems and long-term support" }
+        {
+          "key": "community",
+          "title": "Open-source Ecosystem",
+          "desc": "Community templates and docs keep ramp-up fast"
+        },
+        {
+          "key": "consult",
+          "title": "Expert Consulting",
+          "desc": "1-on-1 pain-point diagnosis, architecture and POC validation"
+        },
+        {
+          "key": "deploy",
+          "title": "Implementation Support",
+          "desc": "End-to-end rollouts with training and hands-on guidance"
+        },
+        {
+          "key": "custom",
+          "title": "Enterprise Customization",
+          "desc": "Deep integration with your systems and long-term support"
+        }
       ]
     },
     "faq": {
@@ -261,10 +407,22 @@
       "viewMore": "View more →",
       "viewMoreUrl": "/en/faq",
       "items": [
-        { "title": "Can the open-source version be used commercially?", "content": "FastGPT allows commercial usage, such as serving as a backend service for other applications or as an application development platform for enterprises. However, when it comes to multi-tenant SaaS services or matters involving the LOGO and copyright information, you must contact the author to obtain a commercial license." },
-        { "title": "What document formats can be imported into the FastGPT knowledge base?", "content": "FastGPT supports importing documents in various formats, including Word, PDF, Excel, Markdown, and web links. It also enables syncing data from an entire website, automatically handling text preprocessing, vectorization, and QA splitting, which saves manual training time and improves efficiency." },
-        { "title": "Which models can be integrated with FastGPT?", "content": "As long as the API of the model you want to integrate aligns with the official OpenAI API, it can be used with FastGPT. You can utilize projects like One API to unify access to different models and provide an API that is compatible with the official OpenAI API." },
-        { "title": "What should I do if I encounter issues while using FastGPT?", "content": "If you come across any problems while using FastGPT, please join our community or forum, create a post, and reach out to us for assistance." }
+        {
+          "title": "Can the open-source version be used commercially?",
+          "content": "FastGPT allows commercial usage, such as serving as a backend service for other applications or as an application development platform for enterprises. However, when it comes to multi-tenant SaaS services or matters involving the LOGO and copyright information, you must contact the author to obtain a commercial license."
+        },
+        {
+          "title": "What document formats can be imported into the FastGPT knowledge base?",
+          "content": "FastGPT supports importing documents in various formats, including Word, PDF, Excel, Markdown, and web links. It also enables syncing data from an entire website, automatically handling text preprocessing, vectorization, and QA splitting, which saves manual training time and improves efficiency."
+        },
+        {
+          "title": "Which models can be integrated with FastGPT?",
+          "content": "As long as the API of the model you want to integrate aligns with the official OpenAI API, it can be used with FastGPT. You can utilize projects like One API to unify access to different models and provide an API that is compatible with the official OpenAI API."
+        },
+        {
+          "title": "What should I do if I encounter issues while using FastGPT?",
+          "content": "If you come across any problems while using FastGPT, please join our community or forum, create a post, and reach out to us for assistance."
+        }
       ]
     },
     "cta": {
@@ -304,10 +462,36 @@
       "copyright": "Copyright"
     }
   },
-  "InterModal": {
-    "desc": "你当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
-    "tip": "不再提醒",
-    "button": "跳转",
-    "link": "/zh"
+  "Enterprise": {
+    "Hero": {
+      "maker": "Enterprises use FastGPT Enterprise Appliance customization services",
+      "title": "FastGPT Enterprise Appliance",
+      "description": "Integrated software and hardware delivery with out-of-the-box large models and FastGPT Enterprise Appliance, paired with enterprise Agent services, mature general-purpose agents, and vertical AI applications for multiple industries to accelerate enterprise AI adoption."
+    },
+    "Models": {
+      "title": "Product Series",
+      "description": "Tailored for enterprises of different sizes and requirements, with inference and training-inference options."
+    },
+    "Advantages": {
+      "title": "Choose FastGPT Enterprise Appliance",
+      "description": "We provide more than hardware: a stable, efficient, and open enterprise AI foundation."
+    },
+    "Benchmark": {
+      "title": "Enterprise Model Benchmark Metrics (Short-text Test)",
+      "model": "Model",
+      "hardware": "Configuration",
+      "concurrent40": "40 concurrent (Throughput/TTFT)",
+      "concurrent160": "160 concurrent (Throughput/TTFT)",
+      "concurrent256": "256 concurrent (Throughput/TTFT)"
+    },
+    "Partners": {
+      "title": "Trusted Customers",
+      "description": "Covering 10+ industries including finance, manufacturing, e-commerce, and education, helping hundreds of enterprises complete the final mile of AI implementation."
+    },
+    "CTA": {
+      "title": "Ready to deploy your FastGPT Enterprise Appliance?",
+      "description": "Contact our experts to learn how FastGPT Enterprise Appliance can transform your business and request a product demo.",
+      "link": "Request a Demo"
+    }
   }
 }

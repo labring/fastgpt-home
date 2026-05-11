@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const logos: { src: string; width: number; height: number; alt: string }[] = [
   { src: '/images/home/trust/logo-cpc.svg', width: 118, height: 48, alt: '中国电建 PowerChina' },
   { src: '/images/home/trust/logo-spic.svg', width: 83, height: 48, alt: '国家电投 SPIC' },
@@ -31,7 +33,7 @@ export default function TrustedBy({ t }: { t: { caption: string } }) {
             className="flex animate-marquee items-center w-max gap-x-8 md:gap-x-[54px]"
           >
             {loopedLogos.map((logo, i) => (
-              <img
+              <Image
                 key={i}
                 src={logo.src}
                 alt={logo.alt}

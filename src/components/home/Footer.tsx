@@ -1,5 +1,7 @@
 import FastGPTLogo from '@/components/home/FastGPTLogo';
 import { assets } from '@/components/home/assets';
+import Image from 'next/image';
+import { siteConfig } from '@/config/site';
 
 type ColumnLink = { label: string; href: string; external?: boolean };
 type Column = { title: string; width: number; items: (ColumnLink | { label: string })[] };
@@ -26,7 +28,7 @@ function buildColumns(t: FooterT['columns']): Column[] {
       items: [
         {
           label: t.service.items.cloud,
-          href: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnksYykUlzM5wckxFrdxhZyf?prefill_ly=GW&hide_ly=1',
+          href: siteConfig.userUrl,
           external: true
         },
         {
@@ -224,6 +226,7 @@ export default function Footer({ t }: { t: FooterT }) {
                     style={{ rowGap: 10, width: 150, alignItems: 'flex-start' }}
                   >
                     <span style={{ ...linkStyle }}>{q.label}</span>
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={q.src}
                       alt={q.label}
@@ -306,7 +309,7 @@ export default function Footer({ t }: { t: FooterT }) {
                   className="transition-transform hover:scale-110"
                   style={{ width: 24, height: 24, display: 'block' }}
                 >
-                  <img
+                  <Image
                     src={s.src}
                     alt=""
                     width={24}

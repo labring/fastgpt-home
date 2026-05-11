@@ -3,6 +3,7 @@ import { defaultLocale, localeNames } from '@/lib/i18n';
 import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
+import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 
 const langConfig: Record<string, { flag: string; label: string }> = {
   zh: { flag: '🇨🇳', label: '中文' },
@@ -28,8 +29,7 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;
-    localStorage.setItem('preferredLang', value);
-    document.cookie = `NEXT_LOCALE=${value};path=/;max-age=${60 * 60 * 24 * 365};SameSite=Lax`;
+    rememberPreferredLanguage(value);
     let routeWithoutLang = pathname;
 
     if (lang) {
@@ -39,7 +39,7 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
       }
     }
     const newPath = `/${value}${routeWithoutLang}`;
-    window.location.href = newPath;
+    navigateTo(newPath);
   };
 
   useEffect(() => {
@@ -57,7 +57,7 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
       }
 
       const newPath = `/${storedLang}${routeWithoutLang}`;
-      window.location.href = newPath;
+      navigateTo(newPath);
     }
   }, [lang, pathname]);
 

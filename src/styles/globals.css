@@ -4,8 +4,8 @@
 
 @layer base {
   :root {
-    --background: #2C3CD4;
-    --background-gradient: linear-gradient(180deg, #2C3CD4 0%, #0D58E8 100%);
+    --background: #2c3cd4;
+    --background-gradient: linear-gradient(180deg, #2c3cd4 0%, #0d58e8 100%);
 
     --foreground: hsla(0, 0%, 100%, 0.8);
 
@@ -36,36 +36,28 @@
 
     --radius: 0.5rem;
 
-    --text-primary: #BDE7F9;
-    --text-secondary: rgba(230, 231, 255, 0.70);
+    --text-primary: #bde7f9;
+    --text-secondary: rgba(230, 231, 255, 0.7);
 
-    --theme-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 255, 255, 0.75) 100%);
-    --theme-gradient-0: #A0C0FF;
-    --theme-gradient-1: #B5B8FF;
-    --theme-gradient-2: #EACDD4;
-    --theme-gradient-3: #B9E1C9;
-    --ability-title-0: #0059B2;
-    --ability-title-1: #B94F4F;
-    --ability-title-2: #197E00;
-    --ability-title-3: #9947D8;
-    --ability-text: #355189;
-    --ability-icon-0: #0E90EE;
-    --ability-icon-1: #EC8591;
-    --ability-icon-2: #74AE66;
-    --ability-icon-3: #9A6FE1;
-
-    --feature-icon: linear-gradient(180deg, #4B7FFF 0%, rgba(50, 109, 255, 0.70) 100%);
-    --feature-title: #1B4EC4;
-
-    --plyr-color-main: #7789B0;
-
+    --theme-gradient: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.85) 0%,
+      rgba(255, 255, 255, 0.75) 100%
+    );
+    --theme-gradient-0: #a0c0ff;
+    --theme-gradient-1: #b5b8ff;
+    --theme-gradient-2: #eacdd4;
+    --theme-gradient-3: #b9e1c9;
+    --feature-icon: linear-gradient(180deg, #4b7fff 0%, rgba(50, 109, 255, 0.7) 100%);
+    --feature-title: #1b4ec4;
   }
 
   .dark {
     /* --background: #000628; */
     --background: #000000;
     --background-gradient: var(--background);
-    --foreground: hsla(0, 0%, 100%, 0.8) --card: 222.2 84% 4.9%;
+    --foreground: hsla(0, 0%, 100%, 0.8);
+    --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
 
     --popover: 222.2 84% 4.9%;
@@ -90,31 +82,30 @@
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
 
-    --text-primary: #BDE7F9;
-    --text-secondary: rgba(230, 231, 255, 0.70);
+    --text-primary: #bde7f9;
+    --text-secondary: rgba(230, 231, 255, 0.7);
 
-    --theme-gradient: linear-gradient(180deg, rgba(213, 215, 255, 0.10) 0%, rgba(213, 215, 255, 0.02) 100%);
+    --theme-gradient: linear-gradient(
+      180deg,
+      rgba(213, 215, 255, 0.1) 0%,
+      rgba(213, 215, 255, 0.02) 100%
+    );
     --theme-gradient-0: var(--theme-gradient);
     --theme-gradient-1: var(--theme-gradient);
     --theme-gradient-2: var(--theme-gradient);
     --theme-gradient-3: var(--theme-gradient);
-    --ability-title-0: #80BDFA;
-    --ability-title-1: #F08B8B;
-    --ability-title-2: #8CCD7C;
-    --ability-title-3: #BD95FF;
-    --ability-text: rgba(255, 255, 255, 0.7);
-    --ability-icon-0: linear-gradient(180deg, rgba(128, 189, 250, 0.30) 0%, rgba(128, 189, 250, 0.03) 100%);
-    --ability-icon-1: linear-gradient(180deg, rgba(240, 139, 139, 0.30) 0%, rgba(240, 139, 139, 0.03) 100%);
-    --ability-icon-2: linear-gradient(180deg, rgba(140, 205, 124, 0.30) 0%, rgba(140, 205, 124, 0.03) 100%);
-    --ability-icon-3: linear-gradient(180deg, rgba(189, 149, 255, 0.30) 0%, rgba(189, 149, 255, 0.03) 100%);
+    --feature-icon: linear-gradient(
+      180deg,
+      rgba(194, 212, 255, 0.3) 0%,
+      rgba(163, 190, 255, 0.21) 100%
+    );
+    --feature-title: #94b5ff;
 
-    --feature-icon: linear-gradient(180deg, rgba(194, 212, 255, 0.30) 0%, rgba(163, 190, 255, 0.21) 100%);
-    --feature-title: #94B5FF;
-
-    --border-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.05) 100%);
-
-
-
+    --border-gradient: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
   }
 }
 
@@ -157,46 +148,10 @@
 body {
   position: relative;
   z-index: 0;
-  /*background-image: url('/bg.png');*/
-  background-size: contain;
-  background-position: top;
-  background-repeat: no-repeat;
-
-  @media (max-width: 1024px) {
-    background-size: 120% auto;
-  }
-
-  @media (max-width: 768px) {
-    background-size: 130% auto;
-  }
-
-  @media (max-width: 480px) {
-    background-size: 140% auto;
-  }
 }
-
-.main {
-  /* /*background-image: url('/shine.png');
-  background-size: contain;
-  background-position: center 130px;
-  background-repeat: no-repeat;
-
-  @media (max-width: 1024px) {
-    background-position: center 180px;
-  }
-
-  @media (max-width: 768px) {
-    background-position: center 200px;
-  }
-
-  @media (max-width: 480px) {
-    background-position: center 210px;
-  } */
-}
-
 
 .text-gradient {
-  background: linear-gradient(7deg, #BDE7F8 28.98%, #ECC3FF 95.94%);
+  background: linear-gradient(7deg, #bde7f8 28.98%, #ecc3ff 95.94%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -212,7 +167,7 @@ body {
 }
 
 .border-box::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -232,12 +187,10 @@ body {
   mask-composite: exclude;
   /* 只显示下方遮罩，重合的地方不显示 */
   -webkit-mask-composite: destination-out;
-
 }
 
 /* 跳动闪烁动画 */
 @keyframes bounce-sparkle {
-
   0%,
   100% {
     transform: translateY(0) scale(1);
@@ -279,18 +232,20 @@ body {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  background: conic-gradient(from var(--angle),
-      transparent 0deg,
-      #666 30deg,
-      #fff 45deg,
-      #666 60deg,
-      transparent 90deg,
-      transparent 180deg,
-      #666 210deg,
-      #fff 225deg,
-      #666 240deg,
-      transparent 270deg,
-      transparent 360deg);
+  background: conic-gradient(
+    from var(--angle),
+    transparent 0deg,
+    #666 30deg,
+    #fff 45deg,
+    #666 60deg,
+    transparent 90deg,
+    transparent 180deg,
+    #666 210deg,
+    #fff 225deg,
+    #666 240deg,
+    transparent 270deg,
+    transparent 360deg
+  );
   border-radius: 6px;
   z-index: -2;
   animation: spin 4s linear infinite;
@@ -329,8 +284,6 @@ body {
   cursor: pointer;
   border-radius: 6px;
 }
-
-
 
 .button-text {
   position: relative;
@@ -384,7 +337,6 @@ body {
   }
 }
 
-
 /* Others */
 @media (min-width: 768px) {
   .fix-header {
@@ -398,16 +350,15 @@ body {
   }
 }
 
-
 .ask-btn {
-  background-color: #DCDDF7;
-  color: #122F6D;
+  background-color: #dcddf7;
+  color: #122f6d;
   font-size: 1rem;
 }
 
 .start-btn {
-  background: linear-gradient(180deg, #F9BDFD 0%, #80B8FF 100%);
-  color: #3941DD;
+  background: linear-gradient(180deg, #f9bdfd 0%, #80b8ff 100%);
+  color: #3941dd;
   width: 9rem;
   font-size: 1.22em;
   height: 3.2rem;
@@ -416,7 +367,6 @@ body {
 .fix-header .ask-btn {
   font-size: 0.9rem;
   height: 2.3rem;
-
 }
 
 .fix-header .start-btn {
@@ -427,7 +377,6 @@ body {
 .fix-header .gap-6 {
   gap: 1rem;
 }
-
 
 .margin-top-40 {
   margin-top: 40px;
@@ -471,24 +420,24 @@ body {
    These are opt-in to avoid colliding with existing dark pages.
    ========================================================= */
 .home {
-  --home-dark: #020617;             /* slate-950 — primary text, headings */
-  --home-slate: #030712;            /* ≈ gray-950 — body links in footer */
-  --home-meta: #292f38;             /* rgb(41, 47, 56) — copyright, subtitles */
-  --home-secondary: #475569;        /* slate-500 — supporting text */
-  --home-muted: #898989;            /* small captions */
+  --home-dark: #020617; /* slate-950 — primary text, headings */
+  --home-slate: #030712; /* ≈ gray-950 — body links in footer */
+  --home-meta: #292f38; /* rgb(41, 47, 56) — copyright, subtitles */
+  --home-secondary: #475569; /* slate-500 — supporting text */
+  --home-muted: #898989; /* small captions */
   --home-btn-dark: #1a1a1a;
   --home-btn-border: #222222;
   --home-btn-light-border: #d1d5db;
   --home-btn-light-bg: rgba(255, 255, 255, 0.44);
-  --home-social-bg: #8a929c;        /* slate-ish social icon disk */
+  --home-social-bg: #8a929c; /* slate-ish social icon disk */
   --home-light-bg: #f8fafc;
   --home-card-bg: #f1f5f9;
-  --home-hairline: #f1f5f9;         /* slate-100 dividers */
+  --home-hairline: #f1f5f9; /* slate-100 dividers */
   --home-border: rgba(0, 0, 0, 0.08);
   --home-primary: #3b82f6;
   --home-primary-dark: #2563eb;
-  --home-font-sans: "Inter", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --home-font-display: "IBM Plex Sans", "Inter", "PingFang SC", sans-serif;
+  --home-font-sans: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+  --home-font-display: 'IBM Plex Sans', 'Inter', 'PingFang SC', sans-serif;
   margin: 0;
   padding: 0;
   font-family: var(--home-font-sans);
@@ -501,19 +450,55 @@ body {
 /* Typography tokens still referenced by Services / Solutions / ProductHighlights.
    The headline-scale tokens (t-h1 / t-h2 / t-h3 / t-sub / t-meta) were removed —
    all headings use Tailwind responsive classes directly now. */
-.home h1, .home h2, .home h3, .home h4, .home h5, .home p, .home span { overflow-wrap: break-word; }
-.home .t-card-title { font-size: 20px; font-weight: 500; line-height: 28px; letter-spacing: -0.4px; color: var(--home-dark); }
-.home .t-card-desc { font-size: 16px; font-weight: 400; line-height: 24px; letter-spacing: -0.16px; color: var(--home-secondary); }
-@media (max-width: 767px) {
-  .home .t-card-title { font-size: 16px; line-height: 24px; }
-  .home .t-card-desc { font-size: 12px; line-height: 18px; }
+.home h1,
+.home h2,
+.home h3,
+.home h4,
+.home h5,
+.home p,
+.home span {
+  overflow-wrap: break-word;
 }
-.home .t-feature-title { font-size: 16px; font-weight: 600; line-height: 24px; letter-spacing: -0.32px; color: var(--home-secondary); }
+.home .t-card-title {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  letter-spacing: -0.4px;
+  color: var(--home-dark);
+}
+.home .t-card-desc {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.16px;
+  color: var(--home-secondary);
+}
+@media (max-width: 767px) {
+  .home .t-card-title {
+    font-size: 16px;
+    line-height: 24px;
+  }
+  .home .t-card-desc {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+.home .t-feature-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  color: var(--home-secondary);
+}
 
 /* Case carousel: perspective only on desktop */
-.home .case-perspective { perspective: none; }
+.home .case-perspective {
+  perspective: none;
+}
 @media (min-width: 768px) {
-  .home .case-perspective { perspective: 1400; }
+  .home .case-perspective {
+    perspective: 1400;
+  }
 }
 
 /* No `.home h1..h6` override needed: the generic h* rules live in @layer base
@@ -532,7 +517,9 @@ body {
 }
 
 /* Tab panel transition */
-.home .tab-panel-enter { animation: home-fade-in 0.3s ease-out; }
+.home .tab-panel-enter {
+  animation: home-fade-in 0.3s ease-out;
+}
 
 /* When the homepage is rendered, override the global dark body so overscroll
    bounce (iOS/Safari) and any gaps don't flash black. */
@@ -594,10 +581,18 @@ body:has(.home) {
 
 /* Aurora gradient hue-shift animation */
 @keyframes aurora-hue {
-  0% { filter: blur(100px) hue-rotate(0deg); }
-  33% { filter: blur(100px) hue-rotate(25deg); }
-  66% { filter: blur(100px) hue-rotate(-15deg); }
-  100% { filter: blur(100px) hue-rotate(0deg); }
+  0% {
+    filter: blur(100px) hue-rotate(0deg);
+  }
+  33% {
+    filter: blur(100px) hue-rotate(25deg);
+  }
+  66% {
+    filter: blur(100px) hue-rotate(-15deg);
+  }
+  100% {
+    filter: blur(100px) hue-rotate(0deg);
+  }
 }
 
 /* Hero dashboard image fade-in */
@@ -605,6 +600,10 @@ body:has(.home) {
   animation: heroImgFadeIn 1s ease 0.5s both;
 }
 @keyframes heroImgFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

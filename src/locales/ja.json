@@ -1,10 +1,4 @@
 {
-  "video": {
-    "speed": "再生速度",
-    "normal": "標準",
-    "video": "/images/video/en/video.png",
-    "videoDark": "/images/video/en/video_dark.png"
-  },
   "links": [
     {
       "label": "価格",
@@ -19,36 +13,9 @@
       "href": "https://video.fastgpt.cn/videos"
     }
   ],
-  "Hero": {
-    "maker": "ユーザーはFastGPTを活用して、独自の専門AI Agentを作成しています",
-    "title1": "FastGPT - ",
-    "title2": "",
-    "title3": "構築企業 AI Agent",
-    "description": "見えるか化 Workflow 編成 + 超使いやすいAI知識ベース + 革新 RAG 検索 + テンプレート生態系 = 簡単強力 AI Agent 構築できます"
-  },
-  "SocialProof": {
-    "maker": "ユーザーはFastGPTを活用して、独自の専門AI Agentを作成しています"
-  },
-  "Feature": {
-    "title": "主な利点",
-    "description": "AIナレッジベースのニーズに FastGPTを選ぶ理由は何でしょうか？",
-    "doYouLike": "このオープンソースのAIナレッジベースソリューションを気に入っていただけましたか？",
-    "follow": "スター🌟で感謝の気持ちを示しましょう"
-  },
-  "Ability": {
-    "title": "すぐにデプロイ可能"
-  },
-  "Video": {
-    "title": "動画でも👇"
-  },
   "Pricing": {
     "badge": "料金",
     "popular": "一番人気",
-    "title": "価格",
-    "title2": "商用利用が承認済み",
-    "description": "は、オープンソースで完全に無料のAIナレッジベースプラットフォームです。",
-    "doYouLike": "このオープンソースのAIナレッジベースソリューションを気に入っていただけましたか？",
-    "follow": "スター🌟で感謝の気持ちを示しましょう",
     "cloud": "クラウドサービス",
     "self": "自己ホスティング",
     "annual": "年額",
@@ -61,7 +28,54 @@
     "chooseVersion": "選択してください",
     "freeUse": "無料利用または上位プランにアップグレードしてください",
     "monthly": "月額",
-    "aiCredits": "AI 積分"
+    "aiCredits": "AI 積分",
+    "faq": {
+      "badge": "FAQ",
+      "title": "FAQ",
+      "subtitle": "Common questions about plans, AI credits, and resource limits",
+      "items": [
+        {
+          "title": "How does plan switching work?",
+          "desc": "Higher-tier plans take priority. If the new plan is higher than the current one, it takes effect immediately; otherwise, the current plan continues until expiration."
+        },
+        {
+          "title": "Where can I view my plan?",
+          "desc": "Go to Account → Personal Info → Plan Details → Usage to view your plan's start and end dates. When a paid plan expires, it automatically reverts to the free tier."
+        },
+        {
+          "title": "What are AI credits?",
+          "desc": "Each AI model call consumes a certain amount of AI credits.\nFor calculation details, see \"AI Credit Calculation\" above.\nThe system prioritizes actual usage reported by the model provider. If unavailable, it estimates using GPT-3.5 rates: 1 Token ≈ 0.7 Chinese characters ≈ 0.9 English words."
+        },
+        {
+          "title": "Do AI credits expire?",
+          "desc": "Yes. When your current plan expires, AI credits reset to the new plan's allocation. Annual plan credits are valid for one year, not monthly."
+        },
+        {
+          "title": "How is knowledge base storage calculated?",
+          "desc": "1 knowledge base storage unit = 1 knowledge base index.\nA single chunk typically has multiple indexes. You can see \"n indexes\" in each knowledge base collection."
+        },
+        {
+          "title": "When does the index count decrease after deletion?",
+          "desc": "When you delete knowledge base content, the index count decreases within 5 minutes."
+        },
+        {
+          "title": "Can resource packs be stacked?",
+          "desc": "Yes. Each purchased resource pack is independent and stacks within its validity period. Credits are deducted from the pack expiring soonest."
+        },
+        {
+          "title": "What is QPM?",
+          "desc": "QPM is the maximum number of Agent requests your team can make per minute, regardless of individual Agent complexity.\nOther OpenAPI endpoints are also rate-limited, each calculated separately."
+        },
+        {
+          "title": "How long is a month or a year exactly?",
+          "desc": "A month is 30 days; a year is 360 days."
+        },
+        {
+          "title": "Will free tier data be cleared?",
+          "desc": "If a free team (free tier with no additional plans) doesn't log in for 30 consecutive days, all knowledge base content will be automatically cleared."
+        }
+      ]
+    }
   },
   "FAQ": {
     "badge": "FAQ",
@@ -97,12 +111,6 @@
     "askTitle": "販売します",
     "title": "始めましょう"
   },
-  "NotFound": {
-    "title": "ページが見つかりません",
-    "description": "申し訳ございません。お探しのページは存在しないか、移動された可能性があります。",
-    "backHome": "ホームに戻る",
-    "viewFAQ": "よくある質問を見る"
-  },
   "Home": {
     "navCta": {
       "trial": "今すぐ始める",
@@ -122,9 +130,18 @@
     },
     "stats": {
       "items": [
-        { "label": "GitHub Stars", "desc": "世界中の開発者に支持" },
-        { "label": "プラットフォームユーザー", "desc": "各業界のチームを支援" },
-        { "label": "プライベート導入事例", "desc": "コア業務での実績" }
+        {
+          "label": "GitHub Stars",
+          "desc": "世界中の開発者に支持"
+        },
+        {
+          "label": "プラットフォームユーザー",
+          "desc": "各業界のチームを支援"
+        },
+        {
+          "label": "プライベート導入事例",
+          "desc": "コア業務での実績"
+        }
       ]
     },
     "productHighlights": {
@@ -132,11 +149,31 @@
       "title": "プロダクション品質のAIエージェント",
       "subtitle": "企業のAI導入をワンストップで",
       "items": [
-        { "key": "blocks", "title": "ブロックを積むようにビジネスAIエージェントを構築", "desc": "ビジュアルワークフローと拡張性の高いAPIエコシステム" },
-        { "key": "kb", "title": "ハルシネーションを排除した企業向けナレッジベース", "desc": "ハイブリッド検索で幻覚を抑え、データは自動クレンジング・更新" },
-        { "key": "lifecycle", "title": "可視化・ガバナンス可能なLLMライフサイクル管理", "desc": "全モデル対応、デバッグ・監査でコンプライアンスを確保" },
-        { "key": "production", "title": "プロダクション環境向けのアーキテクチャ", "desc": "SSOとRBACに対応、パーソナライズされた安全なポータル" },
-        { "key": "partner", "title": "単なるツールではなく、AI導入の伴走パートナー", "desc": "調査から カスタムPOCまで豊富な実績で完走支援" }
+        {
+          "key": "blocks",
+          "title": "ブロックを積むようにビジネスAIエージェントを構築",
+          "desc": "ビジュアルワークフローと拡張性の高いAPIエコシステム"
+        },
+        {
+          "key": "kb",
+          "title": "ハルシネーションを排除した企業向けナレッジベース",
+          "desc": "ハイブリッド検索で幻覚を抑え、データは自動クレンジング・更新"
+        },
+        {
+          "key": "lifecycle",
+          "title": "可視化・ガバナンス可能なLLMライフサイクル管理",
+          "desc": "全モデル対応、デバッグ・監査でコンプライアンスを確保"
+        },
+        {
+          "key": "production",
+          "title": "プロダクション環境向けのアーキテクチャ",
+          "desc": "SSOとRBACに対応、パーソナライズされた安全なポータル"
+        },
+        {
+          "key": "partner",
+          "title": "単なるツールではなく、AI導入の伴走パートナー",
+          "desc": "調査から カスタムPOCまで豊富な実績で完走支援"
+        }
       ]
     },
     "solutions": {
@@ -149,36 +186,84 @@
           "key": "sales",
           "label": "セールス & マーケティング",
           "items": [
-            { "key": "assistant", "title": "スマートセールスアシスタント", "desc": "プラットフォームに組み込み、AIが素早く資料とトークスクリプトを支援。" },
-            { "key": "report", "title": "金融レポート配信", "desc": "マーケットデータを自動取得し、テンプレートでチャートと日報を生成。" },
-            { "key": "training", "title": "セールストレーニング", "desc": "AIが顧客役となり演習・自動採点、新人の習熟を加速。" }
+            {
+              "key": "assistant",
+              "title": "スマートセールスアシスタント",
+              "desc": "プラットフォームに組み込み、AIが素早く資料とトークスクリプトを支援。"
+            },
+            {
+              "key": "report",
+              "title": "金融レポート配信",
+              "desc": "マーケットデータを自動取得し、テンプレートでチャートと日報を生成。"
+            },
+            {
+              "key": "training",
+              "title": "セールストレーニング",
+              "desc": "AIが顧客役となり演習・自動採点、新人の習熟を加速。"
+            }
           ]
         },
         {
           "key": "service",
           "label": "サポート & オペレーション",
           "items": [
-            { "key": "ticket", "title": "スマートチケット振り分け", "desc": "テキストも画像も理解し、的確にアサインして対応速度を向上。" },
-            { "key": "copy", "title": "マーケティングコピー生成", "desc": "商品の強みとチャネル特性を踏まえ、NGワードを回避して量産。" },
-            { "key": "insight", "title": "顧客体験のインサイト", "desc": "顧客の感情・不満点を分析し、製品改善の提案を自動生成。" }
+            {
+              "key": "ticket",
+              "title": "スマートチケット振り分け",
+              "desc": "テキストも画像も理解し、的確にアサインして対応速度を向上。"
+            },
+            {
+              "key": "copy",
+              "title": "マーケティングコピー生成",
+              "desc": "商品の強みとチャネル特性を踏まえ、NGワードを回避して量産。"
+            },
+            {
+              "key": "insight",
+              "title": "顧客体験のインサイト",
+              "desc": "顧客の感情・不満点を分析し、製品改善の提案を自動生成。"
+            }
           ]
         },
         {
           "key": "hr",
           "label": "人事 & 総務",
           "items": [
-            { "key": "resume", "title": "スマート履歴書スクリーニング", "desc": "大量の履歴書をAIが読み込み、マッチングしてスコアリング・推薦。" },
-            { "key": "policy", "title": "社内制度Q&A", "desc": "社内ハンドブックを読み込み、社員の質問に即時応答。" },
-            { "key": "meeting", "title": "議事録アシスタント", "desc": "録音をリアルタイム文字起こし、要点と決定事項を自動抽出。" }
+            {
+              "key": "resume",
+              "title": "スマート履歴書スクリーニング",
+              "desc": "大量の履歴書をAIが読み込み、マッチングしてスコアリング・推薦。"
+            },
+            {
+              "key": "policy",
+              "title": "社内制度Q&A",
+              "desc": "社内ハンドブックを読み込み、社員の質問に即時応答。"
+            },
+            {
+              "key": "meeting",
+              "title": "議事録アシスタント",
+              "desc": "録音をリアルタイム文字起こし、要点と決定事項を自動抽出。"
+            }
           ]
         },
         {
           "key": "finance",
           "label": "財務 & 法務",
           "items": [
-            { "key": "expense", "title": "経費精算レビュー", "desc": "写真を送るだけでAIが予算とルールをチェックし異常を検出。" },
-            { "key": "contract", "title": "スマート契約書レビュー", "desc": "法令と秒単位で比較、リスク条項をハイライトし修正提案。" },
-            { "key": "dd", "title": "デューデリレポート生成", "desc": "登記情報を自動収集し、構造化レポートをそのまま生成。" }
+            {
+              "key": "expense",
+              "title": "経費精算レビュー",
+              "desc": "写真を送るだけでAIが予算とルールをチェックし異常を検出。"
+            },
+            {
+              "key": "contract",
+              "title": "スマート契約書レビュー",
+              "desc": "法令と秒単位で比較、リスク条項をハイライトし修正提案。"
+            },
+            {
+              "key": "dd",
+              "title": "デューデリレポート生成",
+              "desc": "登記情報を自動収集し、構造化レポートをそのまま生成。"
+            }
           ]
         }
       ]
@@ -193,45 +278,90 @@
           "key": "cetc",
           "title": "新入社員の立ち上がり短縮、R&Dナレッジアシスタント",
           "metrics": [
-            { "value": "1週間+", "label": "研修期間を短縮" },
-            { "value": "10%", "label": "重複問い合わせ削減" },
-            { "value": "30秒", "label": "検索所要時間" }
+            {
+              "value": "1週間+",
+              "label": "研修期間を短縮"
+            },
+            {
+              "value": "10%",
+              "label": "重複問い合わせ削減"
+            },
+            {
+              "value": "30秒",
+              "label": "検索所要時間"
+            }
           ]
         },
         {
           "key": "cms",
           "title": "リサーチ生産性を再定義、ファンドレポートを自動生成",
           "metrics": [
-            { "value": "90%+", "label": "自動化率" },
-            { "value": "<1%", "label": "データエラー" },
-            { "value": "90%", "label": "制作時間短縮" }
+            {
+              "value": "90%+",
+              "label": "自動化率"
+            },
+            {
+              "value": "<1%",
+              "label": "データエラー"
+            },
+            {
+              "value": "90%",
+              "label": "制作時間短縮"
+            }
           ]
         },
         {
           "key": "snow",
           "title": "OA統合の経費精算レビュー",
           "metrics": [
-            { "value": "50%", "label": "レビュー効率" },
-            { "value": "70%", "label": "異常検出向上" },
-            { "value": "60%", "label": "最終審査エラー減" }
+            {
+              "value": "50%",
+              "label": "レビュー効率"
+            },
+            {
+              "value": "70%",
+              "label": "異常検出向上"
+            },
+            {
+              "value": "60%",
+              "label": "最終審査エラー減"
+            }
           ]
         },
         {
           "key": "zhaozhao",
           "title": "1日1万件超の問い合わせ、AIカスタマーサポート24/7",
           "metrics": [
-            { "value": "1秒", "label": "秒単位の応答速度" },
-            { "value": "42%", "label": "有人対応へのエスカレーション減" },
-            { "value": "標準化", "label": "サービス品質" }
+            {
+              "value": "1秒",
+              "label": "秒単位の応答速度"
+            },
+            {
+              "value": "42%",
+              "label": "有人対応へのエスカレーション減"
+            },
+            {
+              "value": "標準化",
+              "label": "サービス品質"
+            }
           ]
         },
         {
           "key": "lcfc",
           "title": "万行Excelの重さから解放、自然言語で問い合わせ",
           "metrics": [
-            { "value": "240+分", "label": "データ生産性向上" },
-            { "value": "90%", "label": "システム遅延を削減" },
-            { "value": "3%", "label": "エラー率を" }
+            {
+              "value": "240+分",
+              "label": "データ生産性向上"
+            },
+            {
+              "value": "90%",
+              "label": "システム遅延を削減"
+            },
+            {
+              "value": "3%",
+              "label": "エラー率を"
+            }
           ]
         }
       ]
@@ -246,10 +376,26 @@
       "title": "プロフェッショナルな提供、確かな価値",
       "subtitle": "コンサルから導入まで、長期にわたりAI展開を支援するパートナー。",
       "items": [
-        { "key": "community", "title": "オープンソースエコシステム", "desc": "コミュニティのテンプレートとドキュメントで素早く開始" },
-        { "key": "consult", "title": "エキスパートコンサル", "desc": "1対1の課題診断、アーキテクチャとPOCを検証" },
-        { "key": "deploy", "title": "構築・導入支援", "desc": "実績ある手順での全工程伴走とトレーニング" },
-        { "key": "custom", "title": "企業向けカスタム開発", "desc": "業務システムへの深い統合と長期運用の保証" }
+        {
+          "key": "community",
+          "title": "オープンソースエコシステム",
+          "desc": "コミュニティのテンプレートとドキュメントで素早く開始"
+        },
+        {
+          "key": "consult",
+          "title": "エキスパートコンサル",
+          "desc": "1対1の課題診断、アーキテクチャとPOCを検証"
+        },
+        {
+          "key": "deploy",
+          "title": "構築・導入支援",
+          "desc": "実績ある手順での全工程伴走とトレーニング"
+        },
+        {
+          "key": "custom",
+          "title": "企業向けカスタム開発",
+          "desc": "業務システムへの深い統合と長期運用の保証"
+        }
       ]
     },
     "faq": {
@@ -261,10 +407,22 @@
       "viewMore": "もっと見る →",
       "viewMoreUrl": "/ja/faq",
       "items": [
-        { "title": "オープンソース版を商用利用できますか？", "content": "FastGPTは、他のアプリケーションのバックエンドサービスとして、あるいは企業向けのアプリケーション開発プラットフォームとして商用利用が可能です。ただし、マルチテナントSaaSサービスやロゴ、著作権情報に関わる場合は、商用ライセンスを取得するために作者にご連絡ください。" },
-        { "title": "FastGPTのナレッジベースにインポート可能なドキュメント形式は何ですか？", "content": "FastGPTは、Word、PDF、Excel、Markdown、Webリンクなど、さまざまな形式のドキュメントのインポートに対応しています。また、Webサイト全体のデータを同期し、テキストの前処理、ベクトル化、QA分割を自動的に行うことで、手動でのトレーニング時間を節約し、効率を高めることができます。" },
-        { "title": "FastGPTと連携可能なモデルは何ですか？", "content": "連携するモデルのAPIが公式のOpenAI APIに準拠していれば、FastGPTで利用できます。One APIのようなプロジェクトを活用することで、異なるモデルへのアクセスを統一し、公式のOpenAI APIと互換性のあるAPIを提供できます。" },
-        { "title": "FastGPTの使用中に問題が発生した場合はどうすればよいですか？", "content": "FastGPTの使用中に問題が発生した場合は、コミュニティやフォーラムに参加して投稿し、私たちにお問い合わせください。サポートいたします。" }
+        {
+          "title": "オープンソース版を商用利用できますか？",
+          "content": "FastGPTは、他のアプリケーションのバックエンドサービスとして、あるいは企業向けのアプリケーション開発プラットフォームとして商用利用が可能です。ただし、マルチテナントSaaSサービスやロゴ、著作権情報に関わる場合は、商用ライセンスを取得するために作者にご連絡ください。"
+        },
+        {
+          "title": "FastGPTのナレッジベースにインポート可能なドキュメント形式は何ですか？",
+          "content": "FastGPTは、Word、PDF、Excel、Markdown、Webリンクなど、さまざまな形式のドキュメントのインポートに対応しています。また、Webサイト全体のデータを同期し、テキストの前処理、ベクトル化、QA分割を自動的に行うことで、手動でのトレーニング時間を節約し、効率を高めることができます。"
+        },
+        {
+          "title": "FastGPTと連携可能なモデルは何ですか？",
+          "content": "連携するモデルのAPIが公式のOpenAI APIに準拠していれば、FastGPTで利用できます。One APIのようなプロジェクトを活用することで、異なるモデルへのアクセスを統一し、公式のOpenAI APIと互換性のあるAPIを提供できます。"
+        },
+        {
+          "title": "FastGPTの使用中に問題が発生した場合はどうすればよいですか？",
+          "content": "FastGPTの使用中に問題が発生した場合は、コミュニティやフォーラムに参加して投稿し、私たちにお問い合わせください。サポートいたします。"
+        }
       ]
     },
     "cta": {
@@ -304,10 +462,36 @@
       "copyright": "Copyright"
     }
   },
-  "InterModal": {
-    "desc": "您当前正在访问国际版网站，可以点击右侧按钮跳转至国内版。",
-    "tip": "不再提醒",
-    "button": "跳转",
-    "link": "/zh"
+  "Enterprise": {
+    "Hero": {
+      "maker": "企業が FastGPT エンタープライズ一体機のカスタマイズサービスを利用しています",
+      "title": "FastGPT エンタープライズ一体機",
+      "description": "ソフトウェアとハードウェアを一体で提供し、大規模モデルと FastGPT エンタープライズ一体機をすぐに利用できます。エンタープライズ向け Agent サービス、成熟した汎用エージェント、各業界向けの専門 AI アプリケーションにより、企業の大規模モデル活用を迅速に支援します。"
+    },
+    "Models": {
+      "title": "製品シリーズ",
+      "description": "企業規模と要件に合わせて、推論向けと推論・学習一体型の選択肢を提供します。"
+    },
+    "Advantages": {
+      "title": "FastGPT エンタープライズ一体機を選ぶ理由",
+      "description": "ハードウェアだけでなく、安定性・効率性・開放性を備えたエンタープライズ AI 基盤を提供します。"
+    },
+    "Benchmark": {
+      "title": "エンタープライズモデル ベンチマーク指標（短文テスト）",
+      "model": "モデル",
+      "hardware": "構成",
+      "concurrent40": "40 並行（スループット/TTFT）",
+      "concurrent160": "160 並行（スループット/TTFT）",
+      "concurrent256": "256 並行（スループット/TTFT）"
+    },
+    "Partners": {
+      "title": "信頼されるお客様",
+      "description": "金融、製造、EC、教育など 10 以上の業界をカバーし、数百社の AI 導入を支援しています。"
+    },
+    "CTA": {
+      "title": "FastGPT エンタープライズ一体機を導入する準備はできましたか？",
+      "description": "専門チームにお問い合わせいただき、FastGPT エンタープライズ一体機がビジネスにもたらす変革を確認し、製品デモをお申し込みください。",
+      "link": "製品デモを申し込む"
+    }
   }
 }

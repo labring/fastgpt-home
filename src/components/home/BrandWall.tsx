@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import SectionHeader from '@/components/home/SectionHeader';
 
 type BrandWallT = { badge: string; title: string; subtitle: string };
@@ -22,9 +23,11 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto py-6 md:py-20"
         >
-          <img
+          <Image
             src="/images/home/brands/brand-wall.png"
             alt={t.title}
+            width={2022}
+            height={894}
             loading="lazy"
             className="w-full select-none object-contain"
             draggable={false}

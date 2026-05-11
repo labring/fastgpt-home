@@ -4,15 +4,15 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import FadeIn from '@/components/home/motion/FadeIn';
 
-type FaqItem = { title: string; content: string };
+type FaqItem = { title: string; content?: string; desc?: string };
 type FaqT = {
   badge: string;
-  badgeLink: string;
-  badgeLinkUrl: string;
+  badgeLink?: string;
+  badgeLinkUrl?: string;
   title: string;
-  subtitle: string;
-  viewMore: string;
-  viewMoreUrl: string;
+  subtitle?: string;
+  viewMore?: string;
+  viewMoreUrl?: string;
   items: FaqItem[];
 };
 
@@ -54,7 +54,7 @@ function AccordionItem({ item, isOpen, onToggle }: { item: FaqItem; isOpen: bool
               className="pb-5 md:pb-6 text-[14px] md:text-[15px] leading-[22px] md:leading-[24px]"
               style={{ color: 'rgb(71, 85, 105)' }}
             >
-              {item.content}
+              {item.content || item.desc}
             </p>
           </motion.div>
         )}
@@ -80,23 +80,27 @@ export default function FAQ({ t }: { t: FaqT }) {
             }}
           >
             <span>{t.badge}</span>
-            <a
-              href={t.badgeLinkUrl}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              className="inline-flex items-center gap-0.5 text-primary hover:text-primary-dark"
-            >
-              {t.badgeLink}
-            </a>
+            {t.badgeLink && t.badgeLinkUrl && (
+              <a
+                href={t.badgeLinkUrl}
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="inline-flex items-center gap-0.5 text-primary hover:text-primary-dark"
+              >
+                {t.badgeLink}
+              </a>
+            )}
           </span>
 
           <h2 className="text-ink font-semibold text-[28px] leading-[36px] tracking-[-0.56px] md:text-[64px] md:leading-[78px] md:tracking-[-1.92px]">
             {t.title}
           </h2>
 
-          <p className="text-[15px] leading-[24px] tracking-[-0.15px] md:text-[20px] md:leading-[32px] md:tracking-[-0.2px]" style={{ color: '#292f38' }}>
-            {t.subtitle}
-          </p>
+          {t.subtitle && (
+            <p className="text-[15px] leading-[24px] tracking-[-0.15px] md:text-[20px] md:leading-[32px] md:tracking-[-0.2px]" style={{ color: '#292f38' }}>
+              {t.subtitle}
+            </p>
+          )}
         </FadeIn>
 
         <FadeIn delay={0.5}>
@@ -112,22 +116,24 @@ export default function FAQ({ t }: { t: FaqT }) {
               ))}
             </div>
 
-            <a
-              href={t.viewMoreUrl}
-              className="inline-flex items-center justify-center self-center transition-colors"
-              style={{
-                height: 46,
-                padding: '0 16px',
-                borderRadius: 999,
-                border: '1px solid #d3d4d4',
-                fontSize: 16,
-                fontWeight: 500,
-                color: 'rgb(2, 6, 23)',
-                background: 'linear-gradient(#fff 0%, #f5f6f7 100%)'
-              }}
-            >
-              {t.viewMore}
-            </a>
+            {t.viewMore && t.viewMoreUrl && (
+              <a
+                href={t.viewMoreUrl}
+                className="inline-flex items-center justify-center self-center transition-colors"
+                style={{
+                  height: 46,
+                  padding: '0 16px',
+                  borderRadius: 999,
+                  border: '1px solid #d3d4d4',
+                  fontSize: 16,
+                  fontWeight: 500,
+                  color: 'rgb(2, 6, 23)',
+                  background: 'linear-gradient(#fff 0%, #f5f6f7 100%)'
+                }}
+              >
+                {t.viewMore}
+              </a>
+            )}
           </div>
         </FadeIn>
       </div>

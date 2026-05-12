@@ -1,34 +1,160 @@
 #!/usr/bin/env node
 /**
  * generate-llms.js
- * Generates public/llms.txt at build time for the target domain.
+ * Generates language-specific llms.txt files at build time for the target domain.
  */
 const fs = require('fs');
 const path = require('path');
 
 const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 const isCn = baseUrl.includes('.cn');
+const publicDir = path.join(__dirname, '../public');
+const englishFallbackLocales = ['ja', 'ar', 'vi', 'th', 'id', 'ms'];
 
 const links = isCn
   ? {
       website: 'https://fastgpt.cn',
       documentation: 'https://doc.fastgpt.cn',
       cloud: 'https://cloud.fastgpt.cn',
-      pricing: 'https://fastgpt.cn/zh/price',
-      faq: 'https://fastgpt.cn/zh/faq',
+      pricingEn: 'https://fastgpt.cn/en/price',
+      pricingZh: 'https://fastgpt.cn/zh/price',
+      faqEn: 'https://fastgpt.cn/en/faq',
+      faqZh: 'https://fastgpt.cn/zh/faq',
       enterprise: 'https://fastgpt.cn/zh/enterprise'
     }
   : {
       website: 'https://fastgpt.io',
       documentation: 'https://doc.fastgpt.io',
       cloud: 'https://cloud.fastgpt.io',
-      pricing: 'https://fastgpt.io/en/price',
-      faq: 'https://fastgpt.io/en/faq',
+      pricingEn: 'https://fastgpt.io/en/price',
+      pricingZh: 'https://fastgpt.io/zh/price',
+      faqEn: 'https://fastgpt.io/en/faq',
+      faqZh: 'https://fastgpt.io/zh/faq',
       enterprise: 'https://fastgpt.io/zh/enterprise'
     };
 
-const content = isCn
-  ? `# FastGPT
+const languageIndex = `# FastGPT LLM Context
+
+FastGPT provides separate LLM context files for English and Chinese.
+FastGPT 提供英文和中文两份独立的 LLM 上下文文件。
+
+- English: ${baseUrl}/en/llms.txt
+- 中文: ${baseUrl}/zh/llms.txt
+
+Other localized pages use the English LLM context:
+其他语言页面统一使用英文 LLM 上下文：
+
+- 日本語: ${baseUrl}/en/llms.txt
+- العربية: ${baseUrl}/en/llms.txt
+- Tiếng Việt: ${baseUrl}/en/llms.txt
+- ไทย: ${baseUrl}/en/llms.txt
+- Bahasa Indonesia: ${baseUrl}/en/llms.txt
+- Bahasa Melayu: ${baseUrl}/en/llms.txt
+`;
+
+const englishContent = `# FastGPT
+
+> FastGPT is a free, open-source enterprise AI Agent builder. It provides knowledge bases, Agentic RAG retrieval, visual AI workflows, MCP tools, and multi-model integration to help teams build secure and production-ready AI applications.
+
+FastGPT is designed for enterprise knowledge base Q&A, AI customer service, internal assistants, workflow automation, and industry-specific AI agents. It supports document, website, manual Q&A, and API-based data ingestion, and orchestrates model calls, retrieval, database queries, HTTP requests, conditional logic, and external tools through visual workflows.
+
+## Links
+
+- Website: ${links.website}
+- Documentation: ${links.documentation}
+- Cloud Service: ${links.cloud}
+- Pricing: ${links.pricingEn}
+- FAQ: ${links.faqEn}
+- Chinese FAQ: ${links.faqZh}
+- Chinese LLM Context: ${baseUrl}/zh/llms.txt
+- Enterprise Appliance: ${links.enterprise}
+- GitHub: https://github.com/labring/FastGPT
+
+## Localized Entry Points
+
+- English: ${baseUrl}/en
+- 中文: ${baseUrl}/zh
+- 日本語: ${baseUrl}/ja
+- العربية: ${baseUrl}/ar
+- Tiếng Việt: ${baseUrl}/vi
+- ไทย: ${baseUrl}/th
+- Bahasa Indonesia: ${baseUrl}/id
+- Bahasa Melayu: ${baseUrl}/ms
+
+The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses ${baseUrl}/zh/llms.txt.
+
+## Core Features
+
+### Enterprise Knowledge Base and Agentic RAG
+FastGPT supports Word, PDF, Excel, Markdown, website links, and structured Q&A data. It provides text preprocessing, vectorization, QA segmentation, retrieval testing, and reference editing for enterprise and customer service knowledge bases.
+
+### Visual AI Workflow Orchestration
+FastGPT lets teams compose model calls, knowledge retrieval, condition branches, HTTP requests, database queries, and external tools into production workflows for AI agents and business automation.
+
+### Multi-Model Support and OpenAI-Compatible APIs
+FastGPT works with model services compatible with the OpenAI API format. Teams can use gateways such as One API to unify access to GPT, Claude, Wenxin, Tongyi, DeepSeek, private models, and other LLM providers.
+
+### Cloud, Open Source, and Private Deployment
+FastGPT offers cloud service, open-source self-hosting, and enterprise private deployment or appliance options. The open-source edition is suitable for self-hosting and secondary development; the cloud service is suitable for fast adoption; enterprise deployment is suitable for stricter data security and internal network requirements.
+
+## Localized Summaries
+
+### 日本語
+FastGPT は、エンタープライズ向け AI Agent、ナレッジベース、RAG、ビジュアルワークフローを構築するためのオープンソースプラットフォームです。日本語ページでは、料金、導入シナリオ、クラウド利用、セルフホスト、エンタープライズ一体機の情報を日本の SaaS 利用者向けの表現で提供しています。
+
+### العربية
+FastGPT منصة مفتوحة المصدر لبناء AI Agents للمؤسسات، مع قواعد معرفة وRAG وسير عمل مرئي وتكامل متعدد النماذج. الصفحات العربية تقدم نظرة محلية على حالات الاستخدام، الأسعار، الخدمة السحابية، والنشر الخاص للمؤسسات.
+
+### Tiếng Việt
+FastGPT là nền tảng mã nguồn mở để xây dựng AI Agent cho doanh nghiệp, kết hợp kho tri thức, RAG, workflow trực quan và tích hợp đa mô hình. Trang tiếng Việt tập trung vào triển khai phần mềm doanh nghiệp, giá gói, cloud service và self-hosting.
+
+### ไทย
+FastGPT เป็นแพลตฟอร์มโอเพนซอร์สสำหรับสร้าง AI Agent ระดับองค์กร พร้อมฐานความรู้ RAG เวิร์กโฟลว์แบบภาพ และการเชื่อมต่อหลายโมเดล หน้าไทยอธิบายการใช้งานจริง ราคา บริการคลาวด์ และการติดตั้งแบบส่วนตัวในภาษาที่เหมาะกับซอฟต์แวร์ธุรกิจ
+
+### Bahasa Indonesia
+FastGPT adalah platform open-source untuk membangun AI Agent enterprise dengan knowledge base, RAG, workflow visual, dan integrasi multi-model. Halaman Bahasa Indonesia menyesuaikan istilah pricing, cloud service, deploy mandiri, dan implementasi enterprise untuk pembaca lokal.
+
+### Bahasa Melayu
+FastGPT ialah platform sumber terbuka untuk membina AI Agent perusahaan dengan pangkalan pengetahuan, RAG, aliran kerja visual dan integrasi pelbagai model. Halaman Bahasa Melayu menerangkan harga, cloud service, hos sendiri dan deploy perusahaan dengan gaya perisian tempatan.
+
+FAQ detail pages are intentionally maintained in English and Chinese for search coverage.
+
+## Use Cases
+
+- Enterprise knowledge base Q&A
+- AI customer service
+- Internal employee assistants
+- Document retrieval and question answering
+- Sales, support, and operations automation
+- Data query and business workflow orchestration
+- Industry-specific agents and enterprise AI agent platforms
+
+## Commercial Licensing
+
+The open-source version of FastGPT can be used commercially, such as for internal applications or as a backend capability. Multi-tenant SaaS services, logo removal, copyright modification, and similar scenarios require a commercial license from the authors.
+
+## FAQ
+
+### What is FastGPT?
+FastGPT is an open-source enterprise AI Agent builder with knowledge bases, RAG, workflows, and model integration capabilities.
+
+### What document formats can FastGPT import?
+FastGPT supports Word, PDF, Excel, Markdown, website links, and Q&A data, with automated preprocessing, vectorization, and QA segmentation.
+
+### What models does FastGPT support?
+FastGPT can integrate with model APIs compatible with the OpenAI interface and can use model gateways to manage multiple providers.
+
+### Is FastGPT suitable for private deployment?
+Yes. FastGPT supports open-source self-hosting, enterprise private deployment, and appliance delivery for organizations with data security or internal network requirements.
+
+## Contact
+
+- Email: Dennis@sealos.io
+- GitHub: https://github.com/labring/FastGPT
+- Website: ${links.website}
+`;
+
+const chineseContent = `# FastGPT
 
 > FastGPT 是开源的企业级 AI Agent 构建平台，提供知识库、Agentic RAG、可视化工作流、MCP 工具和多模型接入能力，帮助团队构建安全、可控、可落地的企业级 AI 应用。
 
@@ -39,8 +165,9 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - 官网：${links.website}
 - 文档：${links.documentation}
 - 云服务：${links.cloud}
-- 定价：${links.pricing}
-- FAQ：${links.faq}
+- 定价：${links.pricingZh}
+- FAQ：${links.faqZh}
+- 英文 LLM Context：${baseUrl}/en/llms.txt
 - 企业一体机：${links.enterprise}
 - GitHub：https://github.com/labring/FastGPT
 
@@ -91,106 +218,32 @@ FastGPT 支持 Word、PDF、Excel、Markdown、网页链接等格式，并支持
 - 邮箱：Dennis@sealos.io
 - GitHub：https://github.com/labring/FastGPT
 - 官网：${links.website}
-`
-  : `# FastGPT
-
-> FastGPT is a free, open-source enterprise AI Agent builder. It provides knowledge bases, Agentic RAG retrieval, visual AI workflows, MCP tools, and multi-model integration to help teams build secure and production-ready AI applications.
-
-FastGPT is designed for enterprise knowledge base Q&A, AI customer service, internal assistants, workflow automation, and industry-specific AI agents. It supports document, website, manual Q&A, and API-based data ingestion, and orchestrates model calls, retrieval, database queries, HTTP requests, conditional logic, and external tools through visual workflows.
-
-## Links
-
-- Website: ${links.website}
-- Documentation: ${links.documentation}
-- Cloud Service: ${links.cloud}
-- Pricing: ${links.pricing}
-- FAQ: ${links.faq}
-- Chinese FAQ: https://fastgpt.io/zh/faq
-- Enterprise Appliance: ${links.enterprise}
-- GitHub: https://github.com/labring/FastGPT
-
-## Localized Entry Points
-
-- English: https://fastgpt.io/en
-- 中文: https://fastgpt.io/zh
-- 日本語: https://fastgpt.io/ja
-- العربية: https://fastgpt.io/ar
-- Tiếng Việt: https://fastgpt.io/vi
-- ไทย: https://fastgpt.io/th
-- Bahasa Indonesia: https://fastgpt.io/id
-- Bahasa Melayu: https://fastgpt.io/ms
-
-## Core Features
-
-### Enterprise Knowledge Base and Agentic RAG
-FastGPT supports Word, PDF, Excel, Markdown, website links, and structured Q&A data. It provides text preprocessing, vectorization, QA segmentation, retrieval testing, and reference editing for enterprise and customer service knowledge bases.
-
-### Visual AI Workflow Orchestration
-FastGPT lets teams compose model calls, knowledge retrieval, condition branches, HTTP requests, database queries, and external tools into production workflows for AI agents and business automation.
-
-### Multi-Model Support and OpenAI-Compatible APIs
-FastGPT works with model services compatible with the OpenAI API format. Teams can use gateways such as One API to unify access to GPT, Claude, Wenxin, Tongyi, DeepSeek, private models, and other LLM providers.
-
-### Cloud, Open Source, and Private Deployment
-FastGPT offers cloud service, open-source self-hosting, and enterprise private deployment or appliance options. The open-source edition is suitable for self-hosting and secondary development; the cloud service is suitable for fast adoption; enterprise deployment is suitable for stricter data security and internal network requirements.
-
-## Localized Summaries
-
-### 日本語
-FastGPT は、エンタープライズ向け AI Agent、ナレッジベース、RAG、ビジュアルワークフローを構築するためのオープンソースプラットフォームです。日本語ページでは、料金、導入シナリオ、クラウド利用、セルフホスト、エンタープライズ一体機の情報を日本の SaaS 利用者向けの表現で提供しています。
-
-### العربية
-FastGPT منصة مفتوحة المصدر لبناء AI Agents للمؤسسات، مع قواعد معرفة وRAG وسير عمل مرئي وتكامل متعدد النماذج. الصفحات العربية تقدم نظرة محلية على حالات الاستخدام، الأسعار، الخدمة السحابية، والنشر الخاص للمؤسسات.
-
-### Tiếng Việt
-FastGPT là nền tảng mã nguồn mở để xây dựng AI Agent cho doanh nghiệp, kết hợp kho tri thức, RAG, workflow trực quan và tích hợp đa mô hình. Trang tiếng Việt tập trung vào triển khai phần mềm doanh nghiệp, giá gói, cloud service và self-hosting.
-
-### ไทย
-FastGPT เป็นแพลตฟอร์มโอเพนซอร์สสำหรับสร้าง AI Agent ระดับองค์กร พร้อมฐานความรู้ RAG เวิร์กโฟลว์แบบภาพ และการเชื่อมต่อหลายโมเดล หน้าไทยอธิบายการใช้งานจริง ราคา บริการคลาวด์ และการติดตั้งแบบส่วนตัวในภาษาที่เหมาะกับซอฟต์แวร์ธุรกิจ
-
-### Bahasa Indonesia
-FastGPT adalah platform open-source untuk membangun AI Agent enterprise dengan knowledge base, RAG, workflow visual, dan integrasi multi-model. Halaman Bahasa Indonesia menyesuaikan istilah pricing, cloud service, deploy mandiri, dan implementasi enterprise untuk pembaca lokal.
-
-### Bahasa Melayu
-FastGPT ialah platform sumber terbuka untuk membina AI Agent perusahaan dengan pangkalan pengetahuan, RAG, aliran kerja visual dan integrasi pelbagai model. Halaman Bahasa Melayu menerangkan harga, cloud service, hos sendiri dan deploy perusahaan dengan gaya perisian tempatan.
-
-FAQ detail pages are intentionally maintained in English and Chinese for search coverage. Other localized FAQ URLs use English content and canonicalize to English to avoid duplicate indexing.
-
-## Use Cases
-
-- Enterprise knowledge base Q&A
-- AI customer service
-- Internal employee assistants
-- Document retrieval and question answering
-- Sales, support, and operations automation
-- Data query and business workflow orchestration
-- Industry-specific agents and enterprise AI agent platforms
-
-## Commercial Licensing
-
-The open-source version of FastGPT can be used commercially, such as for internal applications or as a backend capability. Multi-tenant SaaS services, logo removal, copyright modification, and similar scenarios require a commercial license from the authors.
-
-## FAQ
-
-### What is FastGPT?
-FastGPT is an open-source enterprise AI Agent builder with knowledge bases, RAG, workflows, and model integration capabilities.
-
-### What document formats can FastGPT import?
-FastGPT supports Word, PDF, Excel, Markdown, website links, and Q&A data, with automated preprocessing, vectorization, and QA segmentation.
-
-### What models does FastGPT support?
-FastGPT can integrate with model APIs compatible with the OpenAI interface and can use model gateways to manage multiple providers.
-
-### Is FastGPT suitable for private deployment?
-Yes. FastGPT supports open-source self-hosting, enterprise private deployment, and appliance delivery for organizations with data security or internal network requirements.
-
-## Contact
-
-- Email: Dennis@sealos.io
-- GitHub: https://github.com/labring/FastGPT
-- Website: ${links.website}
 `;
 
-const outputPath = path.join(__dirname, '../public/llms.txt');
-fs.writeFileSync(outputPath, content, 'utf-8');
-console.log(`[generate-llms] Generated ${outputPath} for ${baseUrl}`);
+function writeText(relativePath, content) {
+  const outputPath = path.join(publicDir, relativePath);
+  fs.mkdirSync(path.dirname(outputPath), { recursive: true });
+  fs.writeFileSync(outputPath, content.endsWith('\n') ? content : `${content}\n`, 'utf-8');
+  console.log(`[generate-llms] Generated ${outputPath}`);
+}
+
+function englishAliasContent(locale) {
+  return `# FastGPT LLM Context
+
+This locale uses the English LLM context.
+
+- English LLM Context: ${baseUrl}/en/llms.txt
+- Chinese LLM Context: ${baseUrl}/zh/llms.txt
+- Localized Page: ${baseUrl}/${locale}
+`;
+}
+
+writeText('llms.txt', languageIndex);
+writeText('en/llms.txt', englishContent);
+writeText('zh/llms.txt', chineseContent);
+
+for (const locale of englishFallbackLocales) {
+  writeText(`${locale}/llms.txt`, englishAliasContent(locale));
+}
+
+console.log(`[generate-llms] Generated language-specific llms.txt files for ${baseUrl}`);

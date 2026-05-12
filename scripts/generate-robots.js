@@ -14,6 +14,7 @@ const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const faqUrl = isCn ? `${baseUrl}/zh/faq` : `${baseUrl}/en/faq`;
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
 const priceUrl = isCn ? `${baseUrl}/zh/price` : `${baseUrl}/en/price`;
+const llmsUrl = isCn ? `${baseUrl}/zh/llms.txt` : `${baseUrl}/en/llms.txt`;
 
 // Generate different robots.txt for .cn vs .io domains
 const content = isCn
@@ -33,7 +34,8 @@ const content = isCn
 # - Documentation: ${docUrl}
 # - FAQ:           ${faqUrl}
 # - GitHub:        https://github.com/labring/FastGPT
-# - LLM Context:   ${baseUrl}/llms.txt
+# - LLM Context:   ${llmsUrl}
+# - LLM Index:     ${baseUrl}/llms.txt
 
 # Block Google to avoid duplicate content issues with fastgpt.io
 User-agent: Googlebot
@@ -62,7 +64,8 @@ Sitemap: ${baseUrl}/sitemap.xml
 # - Documentation: ${docUrl}
 # - FAQ:           ${faqUrl}
 # - GitHub:        https://github.com/labring/FastGPT
-# - LLM Context:   ${baseUrl}/llms.txt
+# - LLM Context:   ${llmsUrl}
+# - LLM Index:     ${baseUrl}/llms.txt
 
 # Block Baidu to avoid duplicate content issues with fastgpt.cn
 User-agent: Baiduspider

@@ -1,8 +1,7 @@
-import { faq, getFaqItem, getFaqData } from '@/faq';
+import { faq, faqContentLocaleCodes, getFaqItem, getFaqData, resolveFaqLocale } from '@/faq';
 import { notFound } from 'next/navigation';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
-import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import Navbar from '@/components/home/Navbar';
@@ -17,15 +16,16 @@ export default async function FAQDetailPage({
 }) {
   const { lang, id } = await params;
   const langName = lang || defaultLocale;
-  const dict = await getDictionary(langName);
+  const faqLangName = resolveFaqLocale(langName);
+  const dict = await getDictionary(faqLangName);
 
-  const faqItem = getFaqItem(id, langName);
+  const faqItem = getFaqItem(id, faqLangName);
 
   if (!faqItem) {
     notFound();
   }
 
-  const localizedFaq = getFaqData(langName);
+  const localizedFaq = getFaqData(faqLangName);
   const relatedFAQs = Object.entries(localizedFaq)
     .filter(([key, item]) => item.Category === faqItem.Category && key !== id)
     .slice(0, 4);
@@ -51,14 +51,14 @@ export default async function FAQDetailPage({
 
         <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[80px] md:pt-[160px]" style={{ zIndex: 1 }}>
           {/* Back Link */}
-          <Link
+          <a
             href={`/${langName}/faq`}
             className="inline-flex items-center gap-1 text-[16px] font-normal transition-all mb-12 group"
             style={{ color: '#3370ff' }}
           >
             <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
             <span style={{ lineHeight: '20px', letterSpacing: '-0.14px' }}>{dict.FAQ?.backToList || '返回'}</span>
-          </Link>
+          </a>
 
           {/* Header - centered */}
           <div className="text-center mb-16" style={{ maxWidth: 648, margin: '0 auto' }}>
@@ -130,7 +130,7 @@ export default async function FAQDetailPage({
 
           {/* Back to List Button */}
           <div className="text-center">
-            <Link
+            <a
               href={`/${langName}/faq`}
               className="inline-flex items-center justify-center"
               style={{
@@ -147,7 +147,7 @@ export default async function FAQDetailPage({
               }}
             >
               {dict.FAQ?.backToList || '返回'}
-            </Link>
+            </a>
           </div>
         </div>
       </main>
@@ -157,9 +157,8 @@ export default async function FAQDetailPage({
 
 export async function generateStaticParams() {
   const faqKeys = Object.keys(faq);
-  const languages = Object.keys(localeNames);
 
-  return languages.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
+  return faqContentLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
 }
 
 export const dynamicParams = false;
@@ -171,7 +170,8 @@ export async function generateMetadata({
 }) {
   const { lang, id } = await params;
   const langName = lang || defaultLocale;
-  const faqItem = getFaqItem(id, langName);
+  const faqLangName = resolveFaqLocale(langName);
+  const faqItem = getFaqItem(id, faqLangName);
 
   if (!faqItem) {
     return {
@@ -185,12 +185,13 @@ export async function generateMetadata({
     title: faqItem.Title,
     description: faqItem.Description,
     keywords: faqItem.Keywords.split(', '),
-    alternates: getAlternates(langName, `/faq/${id}`),
+    alternates: getAlternates(faqLangName, `/faq/${id}`, faqContentLocaleCodes),
+    robots: faqLangName === langName ? undefined : { index: false, follow: true },
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,
       type: 'article',
-      locale: localeMap[langName] || 'en_US'
+      locale: localeMap[faqLangName] || 'en_US'
     },
     twitter: {
       card: 'summary_large_image',

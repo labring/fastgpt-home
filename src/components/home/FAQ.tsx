@@ -11,8 +11,6 @@ type FaqT = {
   badgeLinkUrl?: string;
   title: string;
   subtitle?: string;
-  viewMore?: string;
-  viewMoreUrl?: string;
   items: FaqItem[];
 };
 
@@ -115,25 +113,6 @@ export default function FAQ({ t }: { t: FaqT }) {
                 />
               ))}
             </div>
-
-            {t.viewMore && t.viewMoreUrl && (
-              <a
-                href={t.viewMoreUrl}
-                className="inline-flex items-center justify-center self-center transition-colors"
-                style={{
-                  height: 46,
-                  padding: '0 16px',
-                  borderRadius: 999,
-                  border: '1px solid #d3d4d4',
-                  fontSize: 16,
-                  fontWeight: 500,
-                  color: 'rgb(2, 6, 23)',
-                  background: 'linear-gradient(#fff 0%, #f5f6f7 100%)'
-                }}
-              >
-                {t.viewMore}
-              </a>
-            )}
           </div>
         </FadeIn>
       </div>

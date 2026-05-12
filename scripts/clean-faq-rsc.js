@@ -43,13 +43,23 @@ function cleanDir(dir) {
         cleanDir(fullPath);
       }
     } else {
-      kept++;
+      const shouldRemoveFaqPayload =
+        entry.name.endsWith('.txt') &&
+        !entry.name.startsWith('__next.') &&
+        fs.existsSync(path.join(dir, entry.name.replace(/\.txt$/, '.html')));
+
+      if (shouldRemoveFaqPayload) {
+        fs.unlinkSync(fullPath);
+        removed++;
+      } else {
+        kept++;
+      }
     }
   }
 }
 
 // Clean FAQ directories for all locales
-const locales = ['en', 'zh', 'ja'];
+const locales = ['en', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 for (const locale of locales) {
   const faqDir = path.join(outDir, locale, 'faq');
   if (fs.existsSync(faqDir)) {

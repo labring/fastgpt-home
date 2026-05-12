@@ -6,6 +6,7 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
 import { htmlLangScript } from '@/lib/htmlLang';
+import { localeDirections } from '@/lib/locales';
 import '@/styles/globals.css';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
@@ -51,7 +52,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={defaultLocale} suppressHydrationWarning>
+    <html lang={defaultLocale} dir={localeDirections[defaultLocale] || 'ltr'} suppressHydrationWarning>
       <head>
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />

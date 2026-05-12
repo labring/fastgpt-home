@@ -4,35 +4,41 @@
  * Must be used as a dangerouslySetInnerHTML script in the root layout <head>.
  *
  * Root / redirects to stored language preference or the build-time default locale.
- * /zh, /ja, /en paths are respected as-is.
+ * Supported locale paths are respected as-is.
  */
 
+import { localeDirections, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
+
 const buildDefaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
-const normalizedBuildDefaultLocale = (() => {
-  if (buildDefaultLocale.startsWith('zh')) return 'zh';
-  if (buildDefaultLocale.startsWith('ja')) return 'ja';
-  return 'en';
-})();
+const normalizedBuildDefaultLocale = normalizeLocale(buildDefaultLocale);
+const localesJson = JSON.stringify(supportedLocaleCodes);
+const directionsJson = JSON.stringify(localeDirections);
 
 export const htmlLangScript = `
 (function() {
   var path = window.location.pathname;
-  var locales = ['en', 'zh', 'ja'];
+  var locales = ${localesJson};
+  var directions = ${directionsJson};
   var defaultLocale = '${normalizedBuildDefaultLocale}';
   function normalize(locale) {
     if (!locale) return '';
     locale = String(locale).toLowerCase();
-    if (locale.indexOf('zh') === 0) return 'zh';
-    if (locale.indexOf('ja') === 0) return 'ja';
-    if (locale.indexOf('en') === 0) return 'en';
+    for (var i = 0; i < locales.length; i++) {
+      if (locale.indexOf(locales[i]) === 0) return locales[i];
+    }
     return '';
   }
 
   var lang = defaultLocale;
-  if (/^\\/zh(?:\\/|$)/.test(path)) lang = 'zh';
-  else if (/^\\/ja(?:\\/|$)/.test(path)) lang = 'ja';
-  else if (/^\\/en(?:\\/|$)/.test(path)) lang = 'en';
+  for (var p = 0; p < locales.length; p++) {
+    var code = locales[p];
+    if (path === '/' + code || path.indexOf('/' + code + '/') === 0) {
+      lang = code;
+      break;
+    }
+  }
   document.documentElement.lang = lang;
+  document.documentElement.dir = directions[lang] || 'ltr';
 
   if (path === '/') {
     var stored = '';

@@ -9,6 +9,7 @@ import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
+import { localeConfigs } from '@/lib/locales';
 
 interface NavLink {
   label: string;
@@ -16,6 +17,7 @@ interface NavLink {
 }
 
 type NavCta = { trial: string; consult: string };
+const faqLocaleCodes = ['en', 'zh'];
 
 function isExternalHref(href: string) {
   return /^(https?:)?\/\//.test(href);
@@ -30,25 +32,34 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
   const lang = params?.lang || defaultLocale;
   const startUrl = useStartUrl();
   const pathname = usePathname();
+  const routeWithoutLang = (() => {
+    if (!params?.lang) return pathname;
+    const currentLangPrefix = `/${params.lang}`;
+    if (pathname.startsWith(currentLangPrefix)) {
+      return pathname.slice(currentLangPrefix.length) || '/';
+    }
+    return pathname;
+  })();
+  const languageKeys = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/')
+    ? faqLocaleCodes
+    : Object.keys(localeNames);
+  const getLocalizedPath = (value: string) => (
+    routeWithoutLang === '/' ? `/${value}` : `/${value}${routeWithoutLang}`
+  );
 
   const handleSwitchLanguage = (value: string) => {
     if (value === lang) return;
     rememberPreferredLanguage(value);
-    let routeWithoutLang = pathname;
-    if (params?.lang) {
-      const currentLangPrefix = `/${params.lang}`;
-      if (pathname.startsWith(currentLangPrefix)) {
-        routeWithoutLang = pathname.slice(currentLangPrefix.length) || '/';
-      }
-    }
-    navigateTo(`/${value}${routeWithoutLang}`);
+    navigateTo(getLocalizedPath(value));
   };
 
-  const langConfig: Record<string, { flag: string; label: string }> = {
-    zh: { flag: '🇨🇳', label: '中文' },
-    en: { flag: '🇺🇸', label: 'English' },
-    ja: { flag: '🇯🇵', label: '日本語' }
-  };
+  const langConfig = localeConfigs.reduce(
+    (acc, locale) => {
+      acc[locale.code] = { flag: locale.flag, label: locale.name };
+      return acc;
+    },
+    {} as Record<string, { flag: string; label: string }>
+  );
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -307,7 +318,7 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
           >
             <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-6" />
             <div className="flex flex-col gap-1">
-              {Object.keys(localeNames).map((key) => (
+              {languageKeys.map((key) => (
                 <button
                   key={key}
                   className="flex items-center justify-between py-3 px-4 rounded-lg text-[16px] text-ink-sub hover:bg-gray-50 transition-colors"

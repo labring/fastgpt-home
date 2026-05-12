@@ -11,13 +11,23 @@ import { Metadata } from 'next';
 const titleMap: Record<string, string> = {
   zh: 'FastGPT 定价 - 选择适合你的方案',
   en: 'FastGPT Pricing - Choose Your Plan',
-  ja: 'FastGPT 料金プラン - あなたに最適なプランを選択'
+  ja: 'FastGPT 料金プラン - あなたに最適なプランを選択',
+  ar: 'أسعار FastGPT - اختر الخطة المناسبة',
+  vi: 'Bảng giá FastGPT - Chọn gói phù hợp',
+  th: 'ราคา FastGPT - เลือกแพ็กเกจที่เหมาะกับคุณ',
+  id: 'Harga FastGPT - Pilih paket yang sesuai',
+  ms: 'Harga FastGPT - Pilih pelan yang sesuai'
 };
 
 const descMap: Record<string, string> = {
   zh: 'FastGPT 提供免费开源版和多种付费方案，满足个人开发者到企业级用户的不同需求。查看定价详情，选择最适合你的 AI Agent 构建方案。',
   en: 'FastGPT offers a free open-source version and multiple paid plans for individual developers to enterprise users. View pricing details and choose the best AI Agent building plan.',
-  ja: 'FastGPTは無料オープンソース版と複数の有料プランを提供し、個人開発者からエンタープライズユーザーまで対応します。料金詳細を確認して最適なプランを選択してください。'
+  ja: 'FastGPTは無料オープンソース版と複数の有料プランを提供し、個人開発者からエンタープライズユーザーまで対応します。料金詳細を確認して最適なプランを選択してください。',
+  ar: 'يوفر FastGPT إصدارا مفتوح المصدر مجانيا وخططا مدفوعة متعددة للمطورين الأفراد وفرق المؤسسات. راجع تفاصيل الأسعار واختر الخطة الأنسب لبناء AI Agent.',
+  vi: 'FastGPT cung cấp bản mã nguồn mở miễn phí và nhiều gói trả phí cho nhà phát triển cá nhân đến người dùng doanh nghiệp. Xem chi tiết giá và chọn phương án xây dựng AI Agent phù hợp.',
+  th: 'FastGPT มีเวอร์ชันโอเพนซอร์สฟรีและแพ็กเกจแบบชำระเงินหลายระดับ สำหรับนักพัฒนาไปจนถึงองค์กร ดูรายละเอียดราคาและเลือกแผนสร้าง AI Agent ที่เหมาะสม',
+  id: 'FastGPT menyediakan versi open-source gratis dan berbagai paket berbayar untuk pengembang individu hingga pengguna perusahaan. Lihat detail harga dan pilih paket AI Agent yang paling sesuai.',
+  ms: 'FastGPT menyediakan versi sumber terbuka percuma dan pelbagai pelan berbayar untuk pembangun individu hingga pengguna perusahaan. Lihat butiran harga dan pilih pelan AI Agent yang paling sesuai.'
 };
 
 export async function generateMetadata(

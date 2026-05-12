@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
 interface FAQCardProps {
@@ -16,7 +15,7 @@ export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardPr
   const summary = data.Answers.substring(0, 150).trim() + '...';
 
   return (
-    <Link
+    <a
       href={`/${langName}/faq/${id}`}
       className="group block h-full"
     >
@@ -78,6 +77,6 @@ export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardPr
           <ArrowRight className="w-4 h-4" />
         </div>
       </div>
-    </Link>
+    </a>
   );
 }

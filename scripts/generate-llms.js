@@ -35,21 +35,102 @@ const links = isCn
 
 const languageIndex = `# FastGPT LLM Context
 
-FastGPT provides separate LLM context files for English and Chinese.
-FastGPT 提供英文和中文两份独立的 LLM 上下文文件。
+FastGPT provides separate LLM context files for English and Chinese. Use this file as the language and documentation index for AI crawlers, search engines, and agents that need to understand which FastGPT resources to read first.
 
-- English: ${baseUrl}/en/llms.txt
-- 中文: ${baseUrl}/zh/llms.txt
+FastGPT 提供英文和中文两份独立的 LLM 上下文文件。这个文件是给 AI 爬虫、搜索引擎和智能体使用的语言与文档索引，用于判断应优先读取哪些 FastGPT 资源。
 
-Other localized pages use the English LLM context:
-其他语言页面统一使用英文 LLM 上下文：
+## Primary LLM Context Files
 
-- 日本語: ${baseUrl}/en/llms.txt
-- العربية: ${baseUrl}/en/llms.txt
-- Tiếng Việt: ${baseUrl}/en/llms.txt
-- ไทย: ${baseUrl}/en/llms.txt
-- Bahasa Indonesia: ${baseUrl}/en/llms.txt
-- Bahasa Melayu: ${baseUrl}/en/llms.txt
+- English LLM context: ${baseUrl}/en/llms.txt
+- 中文 LLM 上下文：${baseUrl}/zh/llms.txt
+
+## Official Documentation
+
+FastGPT documentation is split by deployment region:
+
+- International documentation: https://doc.fastgpt.io
+- International getting started guide: https://doc.fastgpt.io/en/guide/getting-started
+- International documentation table of contents: https://doc.fastgpt.io/docs/toc
+- Domestic documentation: https://doc.fastgpt.cn
+- 国内文档入口：https://doc.fastgpt.cn
+
+文档按部署区域拆分：
+
+- 国际站文档： https://doc.fastgpt.io
+- 国际站快速开始： https://doc.fastgpt.io/en/guide/getting-started
+- 国际站文档目录： https://doc.fastgpt.io/docs/toc
+- 国内站文档： https://doc.fastgpt.cn
+- 国内站文档入口： https://doc.fastgpt.cn
+
+## What FastGPT Is
+
+FastGPT is an open-source enterprise AI Agent platform built around knowledge bases, Agentic RAG, visual workflow orchestration, model integration, and OpenAI-compatible APIs. It is used to build enterprise knowledge base Q&A, AI customer service, internal assistants, document search, and workflow automation.
+
+FastGPT 是开源的企业级 AI Agent 构建平台，核心能力包括知识库、Agentic RAG、可视化工作流编排、多模型接入和 OpenAI 兼容 API。它适用于企业知识库问答、AI 客服、内部助手、文档检索和业务流程自动化。
+
+## Recommended Reading Order
+
+For international users and crawlers:
+
+1. Read the English LLM context: ${baseUrl}/en/llms.txt
+2. Read the international documentation: https://doc.fastgpt.io
+3. Read the getting started guide: https://doc.fastgpt.io/en/guide/getting-started
+4. Read product and pricing pages: ${baseUrl}/en and ${links.pricingEn}
+5. Read FAQ pages: ${links.faqEn}
+
+面向中文用户和爬虫：
+
+1. 读取中文 LLM 上下文：${baseUrl}/zh/llms.txt
+2. 读取国内文档： https://doc.fastgpt.cn
+3. 读取国内官网： https://fastgpt.cn
+4. 读取中文官网与定价页：${baseUrl}/zh 和 ${links.pricingZh}
+5. 读取中文 FAQ：${links.faqZh}
+
+## Documentation Topics To Prioritize
+
+- Getting started and product overview
+- Knowledge base fundamentals, ingestion, chunking, search, and website sync
+- Visual workflow orchestration and workflow nodes
+- App publishing and integrations
+- OpenAI-compatible API usage
+- FastGPT Cloud, community edition, commercial edition, and private deployment
+
+建议优先阅读的文档主题：
+
+- 快速开始与产品概览
+- 知识库基础、数据导入、分块、搜索和网站同步
+- 可视化工作流编排与工作流节点
+- 应用发布与第三方集成
+- OpenAI 兼容 API 使用
+- FastGPT 云服务、社区版、商业版和私有化部署
+
+## Localized Pages
+
+The website provides localized homepage and pricing pages:
+
+- English: ${baseUrl}/en
+- 中文: ${baseUrl}/zh
+- 日本語: ${baseUrl}/ja
+- العربية: ${baseUrl}/ar
+- Tiếng Việt: ${baseUrl}/vi
+- ไทย: ${baseUrl}/th
+- Bahasa Indonesia: ${baseUrl}/id
+- Bahasa Melayu: ${baseUrl}/ms
+
+Other localized pages use the English LLM context unless a dedicated context file is listed above.
+除英文和中文外，其他语言页面统一使用英文 LLM 上下文。
+
+## Region Guidance
+
+- Use https://fastgpt.io and https://doc.fastgpt.io for international users.
+- Use https://fastgpt.cn and https://doc.fastgpt.cn for mainland China users.
+- FAQ detail pages are maintained in English and Chinese only.
+- Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages should point AI systems back to the English LLM context.
+
+- 国际用户优先使用 https://fastgpt.io 和 https://doc.fastgpt.io。
+- 中国大陆用户优先使用 https://fastgpt.cn 和 https://doc.fastgpt.cn。
+- FAQ 详情页只维护英文和中文。
+- 日语、阿拉伯语、越南语、泰语、印尼语和马来语页面应指向英文 LLM 上下文。
 `;
 
 const englishContent = `# FastGPT

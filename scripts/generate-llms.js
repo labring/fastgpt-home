@@ -244,7 +244,8 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 ## 关键链接
 
 - 官网：${links.website}
-- 文档：${links.documentation}
+- 国内文档：https://doc.fastgpt.cn
+- 国际文档：https://doc.fastgpt.io
 - 云服务：${links.cloud}
 - 定价：${links.pricingZh}
 - FAQ：${links.faqZh}

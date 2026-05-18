@@ -17,6 +17,7 @@ const links = isCn
       documentation: 'https://doc.fastgpt.cn',
       cloud: 'https://cloud.fastgpt.cn',
       pricingEn: 'https://fastgpt.cn/en/price',
+      pricingZhHant: 'https://fastgpt.cn/zh-hant/price',
       pricingZh: 'https://fastgpt.cn/zh/price',
       faqEn: 'https://fastgpt.cn/en/faq',
       faqZh: 'https://fastgpt.cn/zh/faq',
@@ -27,6 +28,7 @@ const links = isCn
       documentation: 'https://doc.fastgpt.io',
       cloud: 'https://cloud.fastgpt.io',
       pricingEn: 'https://fastgpt.io/en/price',
+      pricingZhHant: 'https://fastgpt.io/zh-hant/price',
       pricingZh: 'https://fastgpt.io/zh/price',
       faqEn: 'https://fastgpt.io/en/faq',
       faqZh: 'https://fastgpt.io/zh/faq',
@@ -46,15 +48,17 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Cloud Service: ${links.cloud}
 - Pricing: ${links.pricingEn}
 - FAQ: ${links.faqEn}
-- Chinese FAQ: ${links.faqZh}
-- Chinese LLM Context: ${baseUrl}/zh/llms.txt
+- Simplified Chinese FAQ: ${links.faqZh}
+- Simplified Chinese LLM Context: ${baseUrl}/zh/llms.txt
+- Traditional Chinese LLM Context: ${baseUrl}/zh-hant/llms.txt
 - Enterprise Appliance: ${links.enterprise}
 - GitHub: https://github.com/labring/FastGPT
 
 ## Localized Entry Points
 
 - English: ${baseUrl}/en
-- 中文: ${baseUrl}/zh
+- 简体中文: ${baseUrl}/zh
+- 繁體中文: ${baseUrl}/zh-hant
 - 日本語: ${baseUrl}/ja
 - العربية: ${baseUrl}/ar
 - Tiếng Việt: ${baseUrl}/vi
@@ -62,7 +66,7 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Bahasa Indonesia: ${baseUrl}/id
 - Bahasa Melayu: ${baseUrl}/ms
 
-The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses ${baseUrl}/zh/llms.txt.
+The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses ${baseUrl}/zh/llms.txt, and Traditional Chinese uses ${baseUrl}/zh-hant/llms.txt.
 
 ## Core Features
 
@@ -79,6 +83,9 @@ FastGPT works with model services compatible with the OpenAI API format. Teams c
 FastGPT offers cloud service, open-source self-hosting, and enterprise private deployment or appliance options. The open-source edition is suitable for self-hosting and secondary development; the cloud service is suitable for fast adoption; enterprise deployment is suitable for stricter data security and internal network requirements.
 
 ## Localized Summaries
+
+### 繁體中文
+FastGPT 是開源的企業級 AI Agent 構建平台，結合知識庫、Agentic RAG、可視化工作流與多模型接入。繁體中文頁面面向使用繁體中文的企業軟體採購者，提供產品能力、雲服務、開源自部署、私有化部署與價格方案說明。
 
 ### 日本語
 FastGPT は、エンタープライズ向け AI Agent、ナレッジベース、RAG、ビジュアルワークフローを構築するためのオープンソースプラットフォームです。日本語ページでは、料金、導入シナリオ、クラウド利用、セルフホスト、エンタープライズ一体機の情報を日本の SaaS 利用者向けの表現で提供しています。
@@ -149,6 +156,7 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - 云服务：${links.cloud}
 - 定价：${links.pricingZh}
 - FAQ：${links.faqZh}
+- 繁体中文 LLM Context：${baseUrl}/zh-hant/llms.txt
 - 英文 LLM Context：${baseUrl}/en/llms.txt
 - 企业一体机：${links.enterprise}
 - GitHub：https://github.com/labring/FastGPT
@@ -202,6 +210,76 @@ FastGPT 支持 Word、PDF、Excel、Markdown、网页链接等格式，并支持
 - 官网：${links.website}
 `;
 
+const traditionalChineseContent = `# FastGPT
+
+> FastGPT 是開源的企業級 AI Agent 構建平台，提供知識庫、Agentic RAG、可視化工作流、MCP 工具與多模型接入能力，協助團隊構建安全、可控、可落地的企業級 AI 應用。
+
+FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化與產業智能體場景。它支援透過文件、網頁、手動問答與 API 資料構建知識庫，並透過可視化工作流編排模型呼叫、檢索、資料庫查詢、HTTP 請求、條件分支與外部系統整合。
+
+## 關鍵連結
+
+- 官網：${links.website}
+- 國內文件：https://doc.fastgpt.cn
+- 國際文件：https://doc.fastgpt.io
+- 雲服務：${links.cloud}
+- 定價：${links.pricingZhHant}
+- FAQ：${links.faqZh}
+- 簡體中文 LLM Context：${baseUrl}/zh/llms.txt
+- 英文 LLM Context：${baseUrl}/en/llms.txt
+- 企業一體機：${links.enterprise}
+- GitHub：https://github.com/labring/FastGPT
+
+## 核心能力
+
+### 企業知識庫與 Agentic RAG
+FastGPT 支援 Word、PDF、Excel、Markdown、網頁連結等資料匯入，提供文字預處理、向量化、QA 分割、檢索測試與引用編輯能力，適合構建企業內部知識庫、客服知識庫與產業問答系統。
+
+### 可視化 AI 工作流
+FastGPT 提供可視化工作流編排能力，可以組合模型呼叫、知識庫檢索、條件判斷、HTTP 請求、資料庫查詢與外部工具，構建複雜的 AI Agent 和自動化業務流程。
+
+### 多模型與 OpenAI 相容 API
+FastGPT 可以接入與 OpenAI API 對齊的模型服務，並可透過 One API 等閘道統一管理多模型呼叫，適配 GPT、Claude、文心、通義、DeepSeek 與私有化模型等場景。
+
+### 雲服務、開源版與私有化部署
+FastGPT 提供雲服務、開源自部署與企業級私有化/一體機方案。開源版適合自主部署與二次開發；雲服務適合快速使用；企業一體機適合對資料安全、內網部署、硬體交付與服務支援有要求的組織。
+
+## 適用場景
+
+- 企業知識庫問答
+- AI 智能客服
+- 內部員工助手
+- 文件檢索與問答
+- 銷售、售後、營運自動化
+- 資料查詢與業務流程編排
+- 產業智能體和企業級 Agent 平台
+
+## 商業授權邊界
+
+FastGPT 開源版可以用於商業化場景，例如作為應用後端能力或企業內部應用開發平台。若涉及多租戶 SaaS 服務、移除或修改 LOGO 與版權資訊等場景，需要聯繫作者取得商業授權。
+
+## FAQ
+
+### FastGPT 是什麼？
+FastGPT 是開源的企業級 AI Agent 構建平台，提供知識庫、RAG、工作流與模型接入能力，用於構建企業 AI 應用。
+
+### FastGPT 可以匯入哪些文件？
+FastGPT 支援 Word、PDF、Excel、Markdown、網頁連結等格式，並支援自動文字預處理、向量化與 QA 分割。
+
+### FastGPT 可以接入哪些模型？
+只要模型 API 與 OpenAI 介面相容，通常都可以接入 FastGPT。也可以透過模型閘道統一管理不同模型。
+
+### FastGPT 適合私有化部署嗎？
+適合。FastGPT 支援開源自部署，也提供企業私有化與軟硬一體機方案，適用於資料安全與內網部署要求較高的企業。
+
+FAQ 詳細頁目前僅維護英文與簡體中文版本；繁體中文定價頁內含本地化價格 FAQ。
+
+## 聯繫方式
+
+- 郵箱：Dennis@sealos.io
+- GitHub：https://github.com/labring/FastGPT
+- 官網：${links.website}
+`;
+
 function writeText(relativePath, content) {
   const outputPath = path.join(publicDir, relativePath);
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
@@ -215,13 +293,15 @@ function englishAliasContent(locale) {
 This locale uses the English LLM context.
 
 - English LLM Context: ${baseUrl}/en/llms.txt
-- Chinese LLM Context: ${baseUrl}/zh/llms.txt
+- Simplified Chinese LLM Context: ${baseUrl}/zh/llms.txt
+- Traditional Chinese LLM Context: ${baseUrl}/zh-hant/llms.txt
 - Localized Page: ${baseUrl}/${locale}
 `;
 }
 
 writeText('llms.txt', englishContent);
 writeText('en/llms.txt', englishContent);
+writeText('zh-hant/llms.txt', traditionalChineseContent);
 writeText('zh/llms.txt', chineseContent);
 
 for (const locale of englishFallbackLocales) {

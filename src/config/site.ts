@@ -136,6 +136,46 @@ export const siteConfigZh: SiteConfig = {
   }
 };
 
+export const siteConfigZhHant: SiteConfig = {
+  ...siteConfig,
+  title: 'FastGPT - 企業級 AI 智能體構建平台 | 開源 RAG 系統',
+  description:
+    'FastGPT 是開源的企業級 AI 智能體構建平台，提供可視化工作流、知識庫和 RAG 系統。50 萬+ 使用者信賴，立即免費開始。',
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'AI 智能體',
+    '知識庫',
+    '問答',
+    'workflow',
+    'AI 客服',
+    'RAG 檢索',
+    '可視化 AI 工作流',
+    '企業知識庫',
+    'rag',
+    'ai',
+    'AI 知識庫',
+    'llm',
+    'gpt',
+    'gpt5',
+    'AI 自動化工具'
+  ],
+  openGraph: {
+    ...siteConfig.openGraph,
+    locale: 'zh_Hant',
+    title: 'FastGPT - 企業級 AI 智能體構建平台',
+    description:
+      '靈活的 AI 工作流 + AI 知識庫 + 模板系統 + Agentic RAG = 強大的 AI 智能體構建器。全球 50 萬+ 使用者信賴。',
+    images: [`${baseSiteConfig.url}${OPENGRAPH_IMAGE}`]
+  },
+  twitter: {
+    ...siteConfig.twitter,
+    title: 'FastGPT - 企業級 AI 智能體構建平台',
+    description:
+      'FastGPT 是開源的企業級 AI 智能體構建平台，提供可視化工作流、知識庫和 RAG 系統。50 萬+ 使用者信賴。'
+  }
+};
+
 export const siteConfigJa: SiteConfig = {
   ...siteConfig,
   title: 'FastGPT - エンタープライズ AI エージェント構築プラットフォーム',
@@ -207,7 +247,15 @@ export const siteConfigAr = createLocalizedSiteConfig({
   title: 'FastGPT - منصة بناء وكلاء ذكاء اصطناعي للمؤسسات',
   description:
     'FastGPT منصة مفتوحة المصدر لبناء وكلاء ذكاء اصطناعي للمؤسسات، تجمع بين سير العمل المرئي وقواعد المعرفة وRAG لبناء تطبيقات AI آمنة وقابلة للإنتاج.',
-  keywords: ['FastGPT', 'وكيل ذكاء اصطناعي', 'RAG', 'قاعدة معرفة', 'سير عمل AI', 'LLM', 'أتمتة مؤسسية'],
+  keywords: [
+    'FastGPT',
+    'وكيل ذكاء اصطناعي',
+    'RAG',
+    'قاعدة معرفة',
+    'سير عمل AI',
+    'LLM',
+    'أتمتة مؤسسية'
+  ],
   locale: 'ar_SA',
   ogTitle: 'FastGPT - منصة وكلاء AI للمؤسسات',
   ogDescription: 'ابن وكلاء AI للمؤسسات باستخدام سير عمل مرئي، قواعد معرفة، وAgentic RAG.'
@@ -217,17 +265,34 @@ export const siteConfigVi = createLocalizedSiteConfig({
   title: 'FastGPT - Nền tảng xây dựng AI Agent cho doanh nghiệp',
   description:
     'FastGPT là nền tảng mã nguồn mở để xây dựng AI Agent cho doanh nghiệp, cung cấp workflow trực quan, kho tri thức và RAG để triển khai ứng dụng AI an toàn.',
-  keywords: ['FastGPT', 'AI Agent', 'RAG', 'kho tri thức', 'workflow AI', 'LLM', 'tự động hóa doanh nghiệp'],
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'RAG',
+    'kho tri thức',
+    'workflow AI',
+    'LLM',
+    'tự động hóa doanh nghiệp'
+  ],
   locale: 'vi_VN',
   ogTitle: 'FastGPT - Nền tảng AI Agent cho doanh nghiệp',
-  ogDescription: 'Xây dựng AI Agent sẵn sàng sản xuất với workflow trực quan, kho tri thức và Agentic RAG.'
+  ogDescription:
+    'Xây dựng AI Agent sẵn sàng sản xuất với workflow trực quan, kho tri thức và Agentic RAG.'
 });
 
 export const siteConfigTh = createLocalizedSiteConfig({
   title: 'FastGPT - แพลตฟอร์มสร้าง AI Agent สำหรับองค์กร',
   description:
     'FastGPT เป็นแพลตฟอร์มโอเพนซอร์สสำหรับสร้าง AI Agent ระดับองค์กร พร้อมเวิร์กโฟลว์แบบภาพ ฐานความรู้ และ RAG เพื่อสร้างแอป AI ที่ปลอดภัยและใช้งานจริงได้',
-  keywords: ['FastGPT', 'AI Agent', 'RAG', 'ฐานความรู้', 'เวิร์กโฟลว์ AI', 'LLM', 'ระบบอัตโนมัติองค์กร'],
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'RAG',
+    'ฐานความรู้',
+    'เวิร์กโฟลว์ AI',
+    'LLM',
+    'ระบบอัตโนมัติองค์กร'
+  ],
   locale: 'th_TH',
   ogTitle: 'FastGPT - แพลตฟอร์ม AI Agent สำหรับองค์กร',
   ogDescription: 'สร้าง AI Agent สำหรับงานจริงด้วยเวิร์กโฟลว์แบบภาพ ฐานความรู้ และ Agentic RAG.'
@@ -237,18 +302,36 @@ export const siteConfigId = createLocalizedSiteConfig({
   title: 'FastGPT - Platform pembuat AI Agent untuk perusahaan',
   description:
     'FastGPT adalah platform open-source untuk membangun AI Agent perusahaan, dengan workflow visual, knowledge base, dan RAG untuk aplikasi AI yang aman dan siap produksi.',
-  keywords: ['FastGPT', 'AI Agent', 'RAG', 'knowledge base', 'workflow AI', 'LLM', 'otomatisasi perusahaan'],
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'RAG',
+    'knowledge base',
+    'workflow AI',
+    'LLM',
+    'otomatisasi perusahaan'
+  ],
   locale: 'id_ID',
   ogTitle: 'FastGPT - Platform AI Agent untuk perusahaan',
-  ogDescription: 'Bangun AI Agent siap produksi dengan workflow visual, knowledge base, dan Agentic RAG.'
+  ogDescription:
+    'Bangun AI Agent siap produksi dengan workflow visual, knowledge base, dan Agentic RAG.'
 });
 
 export const siteConfigMs = createLocalizedSiteConfig({
   title: 'FastGPT - Platform membina AI Agent untuk perusahaan',
   description:
     'FastGPT ialah platform sumber terbuka untuk membina AI Agent perusahaan, dengan aliran kerja visual, pangkalan pengetahuan dan RAG untuk aplikasi AI yang selamat dan sedia produksi.',
-  keywords: ['FastGPT', 'AI Agent', 'RAG', 'pangkalan pengetahuan', 'aliran kerja AI', 'LLM', 'automasi perusahaan'],
+  keywords: [
+    'FastGPT',
+    'AI Agent',
+    'RAG',
+    'pangkalan pengetahuan',
+    'aliran kerja AI',
+    'LLM',
+    'automasi perusahaan'
+  ],
   locale: 'ms_MY',
   ogTitle: 'FastGPT - Platform AI Agent untuk perusahaan',
-  ogDescription: 'Bina AI Agent sedia produksi dengan aliran kerja visual, pangkalan pengetahuan dan Agentic RAG.'
+  ogDescription:
+    'Bina AI Agent sedia produksi dengan aliran kerja visual, pangkalan pengetahuan dan Agentic RAG.'
 });

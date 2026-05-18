@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const LOCALES = ['zh', 'en', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
+const LOCALES = ['zh', 'zh-hant', 'en', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 const LOCALE_DIR = path.join(process.cwd(), 'src/locales');
 
 const ALLOWED_TOP_LEVEL_KEYS = new Set([
@@ -28,9 +28,13 @@ const ALLOWED_PRICING_KEYS = new Set([
   'allFeatures',
   'moreFeatures',
   'moreFeaturesLink',
+  'monthPriceFormat',
+  'monthUnit',
   'chooseVersion',
   'freeUse',
   'monthly',
+  'yearPriceFormat',
+  'yearUnit',
   'aiCredits',
   'faq'
 ]);
@@ -62,7 +66,9 @@ function listLeafPaths(value, prefix = '') {
   }
 
   if (value && typeof value === 'object') {
-    return Object.keys(value).flatMap((key) => listLeafPaths(value[key], prefix ? `${prefix}.${key}` : key));
+    return Object.keys(value).flatMap((key) =>
+      listLeafPaths(value[key], prefix ? `${prefix}.${key}` : key)
+    );
   }
 
   return [prefix];

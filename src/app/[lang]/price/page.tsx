@@ -10,6 +10,7 @@ import { Metadata } from 'next';
 
 const titleMap: Record<string, string> = {
   zh: 'FastGPT 定价 - 选择适合你的方案',
+  'zh-hant': 'FastGPT 定價 - 選擇適合你的方案',
   en: 'FastGPT Pricing - Choose Your Plan',
   ja: 'FastGPT 料金プラン - あなたに最適なプランを選択',
   ar: 'أسعار FastGPT - اختر الخطة المناسبة',
@@ -21,6 +22,8 @@ const titleMap: Record<string, string> = {
 
 const descMap: Record<string, string> = {
   zh: 'FastGPT 提供免费开源版和多种付费方案，满足个人开发者到企业级用户的不同需求。查看定价详情，选择最适合你的 AI Agent 构建方案。',
+  'zh-hant':
+    'FastGPT 提供免費開源版和多種付費方案，滿足個人開發者到企業級使用者的不同需求。查看定價詳情，選擇最適合你的 AI Agent 構建方案。',
   en: 'FastGPT offers a free open-source version and multiple paid plans for individual developers to enterprise users. View pricing details and choose the best AI Agent building plan.',
   ja: 'FastGPTは無料オープンソース版と複数の有料プランを提供し、個人開発者からエンタープライズユーザーまで対応します。料金詳細を確認して最適なプランを選択してください。',
   ar: 'يوفر FastGPT إصدارا مفتوح المصدر مجانيا وخططا مدفوعة متعددة للمطورين الأفراد وفرق المؤسسات. راجع تفاصيل الأسعار واختر الخطة الأنسب لبناء AI Agent.',
@@ -30,9 +33,11 @@ const descMap: Record<string, string> = {
   ms: 'FastGPT menyediakan versi sumber terbuka percuma dan pelbagai pelan berbayar untuk pembangun individu hingga pengguna perusahaan. Lihat butiran harga dan pilih pelan AI Agent yang paling sesuai.'
 };
 
-export async function generateMetadata(
-  { params }: { params: Promise<{ lang?: string }> }
-): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang?: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const langName = lang || defaultLocale;
   const title = titleMap[langName] || titleMap.en;
@@ -68,7 +73,10 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
       <main className="pb-[80px] px-[16px] md:px-[32px] relative">
         <GradientBlobs />
 
-        <div className="w-full relative pt-[200px]" style={{ zIndex: 1, maxWidth: 1600, margin: '0 auto' }}>
+        <div
+          className="w-full relative pt-[200px]"
+          style={{ zIndex: 1, maxWidth: 1600, margin: '0 auto' }}
+        >
           <PTitle locale={dict.Pricing} />
 
           <div className="mt-[120px]">

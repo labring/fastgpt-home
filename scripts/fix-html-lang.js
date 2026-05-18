@@ -8,6 +8,7 @@ const path = require('path');
 
 const localeConfigs = [
   { code: 'en', htmlLang: 'en-US', dir: 'ltr' },
+  { code: 'zh-hant', htmlLang: 'zh-Hant', dir: 'ltr' },
   { code: 'zh', htmlLang: 'zh-CN', dir: 'ltr' },
   { code: 'ja', htmlLang: 'ja-JP', dir: 'ltr' },
   { code: 'ar', htmlLang: 'ar-SA', dir: 'rtl' },
@@ -23,7 +24,15 @@ const defaultLocale = normalizeLocale(process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 
 
 function normalizeLocale(locale) {
   if (!locale) return 'en';
-  const normalized = String(locale).toLowerCase();
+  const normalized = String(locale).toLowerCase().replace(/_/g, '-');
+  if (
+    normalized.startsWith('zh-hant') ||
+    normalized.startsWith('zh-tw') ||
+    normalized.startsWith('zh-hk') ||
+    normalized.startsWith('zh-mo')
+  ) {
+    return 'zh-hant';
+  }
   for (const config of localeConfigs) {
     if (normalized.startsWith(config.code)) return config.code;
   }

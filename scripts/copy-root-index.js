@@ -5,17 +5,26 @@
 const fs = require('fs');
 const path = require('path');
 
-// Normalize locale to base language code (zh-CN → zh, en-US → en, etc.)
+// Normalize locale to the static route code (zh-CN → zh, zh-Hant → zh-hant, etc.)
 function normalizeLocale(locale) {
   if (!locale) return 'en';
-  if (locale.startsWith('zh')) return 'zh';
-  if (locale.startsWith('en')) return 'en';
-  if (locale.startsWith('ja')) return 'ja';
-  if (locale.startsWith('ar')) return 'ar';
-  if (locale.startsWith('vi')) return 'vi';
-  if (locale.startsWith('th')) return 'th';
-  if (locale.startsWith('id')) return 'id';
-  if (locale.startsWith('ms')) return 'ms';
+  const normalized = String(locale).toLowerCase().replace(/_/g, '-');
+  if (
+    normalized.startsWith('zh-hant') ||
+    normalized.startsWith('zh-tw') ||
+    normalized.startsWith('zh-hk') ||
+    normalized.startsWith('zh-mo')
+  ) {
+    return 'zh-hant';
+  }
+  if (normalized.startsWith('zh')) return 'zh';
+  if (normalized.startsWith('en')) return 'en';
+  if (normalized.startsWith('ja')) return 'ja';
+  if (normalized.startsWith('ar')) return 'ar';
+  if (normalized.startsWith('vi')) return 'vi';
+  if (normalized.startsWith('th')) return 'th';
+  if (normalized.startsWith('id')) return 'id';
+  if (normalized.startsWith('ms')) return 'ms';
   return 'en';
 }
 

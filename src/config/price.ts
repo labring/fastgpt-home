@@ -60,6 +60,67 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       features: ['优先深度技术支持', '弹性资源配置', '安全可控', '专属客户经理']
     }
   ],
+  'zh-hant': [
+    {
+      key: 'free',
+      title: '免費版',
+      price: 0,
+      content: '核心功能免費試用',
+      features: [
+        // '100 AI 積分',
+        100,
+        '600 組知識庫索引',
+        '1 個團隊成員',
+        '10 個 Agent',
+        '3 個知識庫',
+        '30 天對話記錄保留',
+        '30 QPM'
+      ]
+    },
+    {
+      key: 'basic',
+      title: '基礎版',
+      price: 99,
+      content: '解鎖 FastGPT 完整功能',
+      features: [
+        4000,
+        '6000 組知識庫索引',
+        '5 個團隊成員',
+        '50 個 Agent',
+        '30 個知識庫',
+        '180 天對話記錄保留',
+        '300 QPM',
+        '站點同步最大 500 頁',
+        '48 小時工單支援回應'
+      ]
+    },
+    {
+      key: 'advanced',
+      title: '進階版',
+      price: 599,
+      content: '適合企業級生產工具',
+      features: [
+        25000,
+        '36000 組知識庫索引',
+        '50 個團隊成員',
+        '200 個 Agent',
+        '100 個知識庫',
+        '360 天對話記錄保留',
+        '720 天團隊操作日誌記錄',
+        '1500 QPM',
+        '站點同步最大 2000 頁',
+        '24 小時工單支援回應',
+        '3 個應用備案'
+      ]
+    },
+    {
+      key: 'custom',
+      title: '客製版',
+      price: '客製計費',
+      content: '協助中大型企業建立核心競爭力',
+      features: ['優先深度技術支援', '彈性資源配置', '安全可控', '專屬客戶經理']
+    }
+  ],
   en: [
     {
       key: 'free',
@@ -309,7 +370,12 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       title: 'Gói tùy chỉnh',
       price: 'Tùy chỉnh',
       content: 'Hỗ trợ doanh nghiệp vừa và lớn xây dựng năng lực AI cốt lõi',
-      features: ['Ưu tiên hỗ trợ kỹ thuật chuyên sâu', 'Cấu hình tài nguyên linh hoạt', 'Bảo mật và kiểm soát', 'Quản lý tài khoản riêng']
+      features: [
+        'Ưu tiên hỗ trợ kỹ thuật chuyên sâu',
+        'Cấu hình tài nguyên linh hoạt',
+        'Bảo mật và kiểm soát',
+        'Quản lý tài khoản riêng'
+      ]
     }
   ],
   th: [
@@ -369,7 +435,12 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       title: 'แพ็กเกจองค์กร',
       price: 'ราคาตามความต้องการ',
       content: 'สำหรับองค์กรขนาดกลางและใหญ่ที่ต้องการความสามารถเฉพาะทาง',
-      features: ['ซัพพอร์ตเทคนิคเชิงลึกแบบเร่งด่วน', 'จัดสรรทรัพยากรยืดหยุ่น', 'ปลอดภัยและควบคุมได้', 'ผู้จัดการบัญชีเฉพาะ']
+      features: [
+        'ซัพพอร์ตเทคนิคเชิงลึกแบบเร่งด่วน',
+        'จัดสรรทรัพยากรยืดหยุ่น',
+        'ปลอดภัยและควบคุมได้',
+        'ผู้จัดการบัญชีเฉพาะ'
+      ]
     }
   ],
   id: [
@@ -429,7 +500,12 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       title: 'Paket Kustom',
       price: 'Kustom',
       content: 'Untuk perusahaan menengah dan besar yang membutuhkan kapabilitas khusus',
-      features: ['Prioritas support teknis mendalam', 'Alokasi resource fleksibel', 'Aman dan terkendali', 'Account manager khusus']
+      features: [
+        'Prioritas support teknis mendalam',
+        'Alokasi resource fleksibel',
+        'Aman dan terkendali',
+        'Account manager khusus'
+      ]
     }
   ],
   ms: [
@@ -489,7 +565,12 @@ export const PRICE_PLANS_CLOUD: Record<string, Record<string, any>[]> = {
       title: 'Pelan Tersuai',
       price: 'Tersuai',
       content: 'Untuk perusahaan sederhana dan besar yang memerlukan keupayaan khusus',
-      features: ['Keutamaan sokongan teknikal mendalam', 'Peruntukan sumber fleksibel', 'Selamat dan terkawal', 'Pengurus akaun khusus']
+      features: [
+        'Keutamaan sokongan teknikal mendalam',
+        'Peruntukan sumber fleksibel',
+        'Selamat dan terkawal',
+        'Pengurus akaun khusus'
+      ]
     }
   ]
 };
@@ -535,6 +616,41 @@ export const PRICE_PLANS_SELF: {
         '支持多种第三方 SSO',
         '原厂技术支持和服务支持',
         '原厂专业应用搭建支持'
+      ]
+    }
+  ],
+  'zh-hant': [
+    {
+      key: 'free',
+      title: '社區版',
+      price: '免費',
+      content: '免費開源，共建 Agent 社群，為 Agent 貢獻力量',
+      features: [
+        '基礎核心功能（Agent、Workflow、知識庫、MCP 等）',
+        '模型管理與模型日誌',
+        '單使用者使用',
+        '社群技術支援服務'
+      ]
+    },
+    {
+      key: 'host',
+      title: '託管版',
+      price: '雲資源計費',
+      content: '基於 Sealos 雲端託管，更安全、更高效部署',
+      features: ['一鍵快速部署', '快速橫向/縱向擴展', '多副本負載均衡', '資料庫自動備份']
+    },
+    {
+      key: 'commercial',
+      title: '商業版',
+      price: '客製化計費',
+      content: '支援更高階功能與私有化部署',
+      features: [
+        '完整商業授權',
+        '企業級可擴展部署方案',
+        '多工作空間與權限管理',
+        '支援多種第三方 SSO',
+        '原廠技術支援和服務支援',
+        '原廠專業應用建置支援'
       ]
     }
   ],
@@ -636,7 +752,12 @@ export const PRICE_PLANS_SELF: {
       title: 'الإصدار المستضاف',
       price: 'حسب موارد السحابة',
       content: 'استضافة على Sealos Cloud لنشر أكثر أمانا وكفاءة',
-      features: ['نشر سريع بنقرة واحدة', 'توسّع أفقي وعمودي سريع', 'موازنة حمل متعددة النسخ', 'نسخ احتياطي تلقائي لقاعدة البيانات']
+      features: [
+        'نشر سريع بنقرة واحدة',
+        'توسّع أفقي وعمودي سريع',
+        'موازنة حمل متعددة النسخ',
+        'نسخ احتياطي تلقائي لقاعدة البيانات'
+      ]
     },
     {
       key: 'commercial',
@@ -671,7 +792,12 @@ export const PRICE_PLANS_SELF: {
       title: 'Bản hosted',
       price: 'Tính theo tài nguyên cloud',
       content: 'Triển khai trên Sealos Cloud để vận hành an toàn và hiệu quả hơn',
-      features: ['Triển khai nhanh một chạm', 'Mở rộng ngang/dọc nhanh', 'Cân bằng tải nhiều replica', 'Tự động sao lưu database']
+      features: [
+        'Triển khai nhanh một chạm',
+        'Mở rộng ngang/dọc nhanh',
+        'Cân bằng tải nhiều replica',
+        'Tự động sao lưu database'
+      ]
     },
     {
       key: 'commercial',
@@ -706,7 +832,12 @@ export const PRICE_PLANS_SELF: {
       title: 'Hosted Edition',
       price: 'คิดค่าบริการตามทรัพยากรคลาวด์',
       content: 'โฮสต์บน Sealos Cloud เพื่อ deploy ได้ปลอดภัยและมีประสิทธิภาพขึ้น',
-      features: ['deploy ได้รวดเร็วในคลิกเดียว', 'ขยายแนวนอนและแนวตั้งได้รวดเร็ว', 'โหลดบาลานซ์หลาย replica', 'สำรองฐานข้อมูลอัตโนมัติ']
+      features: [
+        'deploy ได้รวดเร็วในคลิกเดียว',
+        'ขยายแนวนอนและแนวตั้งได้รวดเร็ว',
+        'โหลดบาลานซ์หลาย replica',
+        'สำรองฐานข้อมูลอัตโนมัติ'
+      ]
     },
     {
       key: 'commercial',
@@ -741,7 +872,12 @@ export const PRICE_PLANS_SELF: {
       title: 'Edisi Hosted',
       price: 'Biaya resource cloud',
       content: 'Di-hosting di Sealos Cloud untuk deployment yang lebih aman dan efisien',
-      features: ['Deployment cepat sekali klik', 'Skalabilitas horizontal dan vertikal cepat', 'Load balancing multi-replica', 'Backup database otomatis']
+      features: [
+        'Deployment cepat sekali klik',
+        'Skalabilitas horizontal dan vertikal cepat',
+        'Load balancing multi-replica',
+        'Backup database otomatis'
+      ]
     },
     {
       key: 'commercial',
@@ -776,7 +912,12 @@ export const PRICE_PLANS_SELF: {
       title: 'Edisi Hosted',
       price: 'Bil sumber cloud',
       content: 'Dihoskan di Sealos Cloud untuk deployment yang lebih selamat dan cekap',
-      features: ['Deployment pantas satu klik', 'Penskalaan mendatar dan menegak pantas', 'Load balancing berbilang replica', 'Backup database automatik']
+      features: [
+        'Deployment pantas satu klik',
+        'Penskalaan mendatar dan menegak pantas',
+        'Load balancing berbilang replica',
+        'Backup database automatik'
+      ]
     },
     {
       key: 'commercial',
@@ -800,6 +941,7 @@ export const PRICE_PLANS_SELF_BUTTON_MAP: {
 } = {
   free: {
     zh: '立即使用',
+    'zh-hant': '立即使用',
     en: 'Get Started',
     ja: '使用開始',
     ar: 'ابدأ الآن',
@@ -811,6 +953,7 @@ export const PRICE_PLANS_SELF_BUTTON_MAP: {
   },
   host: {
     zh: '立即使用',
+    'zh-hant': '立即使用',
     en: 'Get Started',
     ja: '使用開始',
     ar: 'ابدأ الآن',
@@ -822,6 +965,7 @@ export const PRICE_PLANS_SELF_BUTTON_MAP: {
   },
   commercial: {
     zh: '联系销售',
+    'zh-hant': '聯繫銷售',
     en: 'Contact Sales',
     ja: '営業に相談',
     ar: 'تواصل مع المبيعات',

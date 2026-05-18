@@ -11,15 +11,17 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Cloud Service: https://cloud.fastgpt.io
 - Pricing: https://fastgpt.io/en/price
 - FAQ: https://fastgpt.io/en/faq
-- Chinese FAQ: https://fastgpt.io/zh/faq
-- Chinese LLM Context: https://fastgpt.io/zh/llms.txt
+- Simplified Chinese FAQ: https://fastgpt.io/zh/faq
+- Simplified Chinese LLM Context: https://fastgpt.io/zh/llms.txt
+- Traditional Chinese LLM Context: https://fastgpt.io/zh-hant/llms.txt
 - Enterprise Appliance: https://fastgpt.io/zh/enterprise
 - GitHub: https://github.com/labring/FastGPT
 
 ## Localized Entry Points
 
 - English: https://fastgpt.io/en
-- 中文: https://fastgpt.io/zh
+- 简体中文: https://fastgpt.io/zh
+- 繁體中文: https://fastgpt.io/zh-hant
 - 日本語: https://fastgpt.io/ja
 - العربية: https://fastgpt.io/ar
 - Tiếng Việt: https://fastgpt.io/vi
@@ -27,7 +29,7 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Bahasa Indonesia: https://fastgpt.io/id
 - Bahasa Melayu: https://fastgpt.io/ms
 
-The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses https://fastgpt.io/zh/llms.txt.
+The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses https://fastgpt.io/zh/llms.txt, and Traditional Chinese uses https://fastgpt.io/zh-hant/llms.txt.
 
 ## Core Features
 
@@ -44,6 +46,9 @@ FastGPT works with model services compatible with the OpenAI API format. Teams c
 FastGPT offers cloud service, open-source self-hosting, and enterprise private deployment or appliance options. The open-source edition is suitable for self-hosting and secondary development; the cloud service is suitable for fast adoption; enterprise deployment is suitable for stricter data security and internal network requirements.
 
 ## Localized Summaries
+
+### 繁體中文
+FastGPT 是開源的企業級 AI Agent 構建平台，結合知識庫、Agentic RAG、可視化工作流與多模型接入。繁體中文頁面面向使用繁體中文的企業軟體採購者，提供產品能力、雲服務、開源自部署、私有化部署與價格方案說明。
 
 ### 日本語
 FastGPT は、エンタープライズ向け AI Agent、ナレッジベース、RAG、ビジュアルワークフローを構築するためのオープンソースプラットフォームです。日本語ページでは、料金、導入シナリオ、クラウド利用、セルフホスト、エンタープライズ一体機の情報を日本の SaaS 利用者向けの表現で提供しています。

@@ -6,6 +6,7 @@ import {
   siteConfigMs,
   siteConfigTh,
   siteConfigVi,
+  siteConfigZhHant,
   siteConfigZh
 } from '@/config/site';
 import { localeNames, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
@@ -20,6 +21,8 @@ export const defaultLocale = normalizeLocale(process.env.NEXT_PUBLIC_DEFAULT_LOC
 export function getConfigForLocale(locale: string) {
   const normalized = normalizeLocale(locale);
   switch (normalized) {
+    case 'zh-hant':
+      return siteConfigZhHant;
     case 'zh':
       return siteConfigZh;
     case 'ja':
@@ -41,6 +44,7 @@ export function getConfigForLocale(locale: string) {
 
 const dictionaries: any = {
   en: () => import('@/locales/en.json').then((module) => module.default),
+  'zh-hant': () => import('@/locales/zh-hant.json').then((module) => module.default),
   zh: () => import('@/locales/zh.json').then((module) => module.default),
   ja: () => import('@/locales/ja.json').then((module) => module.default),
   ar: () => import('@/locales/ar.json').then((module) => module.default),

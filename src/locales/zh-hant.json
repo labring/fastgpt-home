@@ -1,0 +1,528 @@
+{
+  "links": [
+    {
+      "label": "定價",
+      "href": "/price"
+    },
+    {
+      "label": "文檔",
+      "href": "https://doc.fastgpt.io/docs/introduction"
+    },
+    {
+      "label": "學習中心",
+      "href": "https://video.fastgpt.cn/videos"
+    }
+  ],
+  "Pricing": {
+    "badge": "定價",
+    "popular": "最受歡迎",
+    "cloud": "雲服務",
+    "self": "私有部署",
+    "annual": "按年",
+    "pay10": "支付10個月，暢享一年！",
+    "upgrade": "升級套餐",
+    "contact": "聯繫商務",
+    "allFeatures": "包含社區版所有功能",
+    "moreFeatures": "更多企業級功能請",
+    "moreFeaturesLink": "查看文檔",
+    "chooseVersion": "選擇更適合你的版本",
+    "freeUse": "免費使用或升級更高的套餐",
+    "monthly": "按月",
+    "monthUnit": "月",
+    "yearUnit": "年",
+    "monthPriceFormat": "¥{{price}}/月",
+    "yearPriceFormat": "¥{{price}}/年",
+    "aiCredits": "AI 積分",
+    "faq": {
+      "badge": "FAQ",
+      "title": "常見問題",
+      "subtitle": "關於套餐、AI 積分和資源限制的常見問題",
+      "items": [
+        {
+          "title": "是否切換訂閱套餐？",
+          "desc": "套餐使用規則為優先使用更高級的套餐，因此，購買的新套餐若比當前套餐更高級，則新套餐立即生效：否則將繼續使用當前套餐。"
+        },
+        {
+          "title": "在哪裡查看已訂閱的套餐？",
+          "desc": "賬號-個人信息-套餐詳情-使用情況。您可以查看所擁有套餐的生效和到期時間。當付費套餐到期後將自動切換免費版。"
+        },
+        {
+          "title": "什麼是AI積分？",
+          "desc": "每次調用AI模型時，都會消耗一定的AI積分。具體的計算標準可參考上方的“AI 積分計算標準”。系統會優先採用模型廠商返回的實際 usage，若為空，則採用GPT3.5的計算方式進行估算，1Token≈0.7中文字符≈0.9英文單詞，連續出現的字符可能被認為是1個Tokens。"
+        },
+        {
+          "title": "AI積分會過期麼？",
+          "desc": "會過期。當前套餐過期後，AI積分將會清空，並更新為新套餐的AI積分。年度套餐的AI積分時長為1年，而不是每個月。"
+        },
+        {
+          "title": "知識庫存儲怎麼計算？",
+          "desc": "1條知識庫存儲等於1條知識庫索引。一條分塊數據，通常對應多條索引，可以在單個知識庫集合中看到\"n組索引\""
+        },
+        {
+          "title": "知識庫索引什麼時候會減少？",
+          "desc": "當你刪除知識庫內容時，知識庫索引數量會在 5 分鐘內減少。"
+        },
+        {
+          "title": "額外資源包可以疊加麼？",
+          "desc": "可以的。每次購買的資源包都是獨立的，在其有效期內將會疊加使用。AI積分會優先扣除最先過期的資源包。"
+        },
+        {
+          "title": "QPM 是什麼？",
+          "desc": "主要指團隊每分鐘請求 Agent 的最大次數，與單個 Agent 複雜度無關。其他 OpenAPI 接口也受此影響，每個接口單獨計算。"
+        },
+        {
+          "title": "一個月,一年具體是多長時間？",
+          "desc": "一個月按 30 天計算，一年按 360 天計算。"
+        },
+        {
+          "title": "免費版數據會清除麼？",
+          "desc": "免費版團隊（免費版且未購買額外套餐）連續 30 天未登錄系統，系統會自動清除該團隊下所有知識庫內容。"
+        }
+      ]
+    }
+  },
+  "FAQ": {
+    "badge": "FAQ",
+    "title": "常見問題解答",
+    "subtitle": "查找關於 FastGPT 的常見問題解答",
+    "description": "關於 FastGPT 的常見問題解答",
+    "viewMore": "查看更多",
+    "allCategories": "全部分類",
+    "readMore": "閱讀更多",
+    "readDetail": "查看詳情",
+    "backToList": "返回",
+    "relatedQuestions": "相關問題",
+    "searchPlaceholder": "搜索問題...",
+    "noResults": "未找到匹配的問題",
+    "clearFilters": "清除篩選",
+    "filterByCategory": "按分類篩選",
+    "showing": "顯示",
+    "question": "個問題",
+    "questions": "個問題",
+    "previous": "上一個",
+    "next": "下一個"
+  },
+  "CTA": {
+    "title": "現在開始構建專屬你的 AI Agent。",
+    "description1": "FastGPT, 讓 AI Agent 構建更輕鬆!",
+    "description2": "",
+    "description3": "",
+    "description4": "",
+    "description5": "",
+    "description6": ""
+  },
+  "CTAButton": {
+    "askTitle": "商務諮詢",
+    "title": "免費使用"
+  },
+  "Home": {
+    "navCta": {
+      "trial": "立即開始",
+      "consult": "商務諮詢"
+    },
+    "hero": {
+      "githubStars": "Github Stars",
+      "followUs": "關注我們",
+      "brand": "FastGPT",
+      "title": "企業級AI生產力引擎",
+      "subtitle": "構建安全、可控的企業級 AI Agent",
+      "trial": "立即開始",
+      "consult": "商務諮詢"
+    },
+    "trustedBy": {
+      "caption": "深受行業領軍團隊信賴"
+    },
+    "stats": {
+      "items": [
+        {
+          "label": "GitHub Stars",
+          "desc": "全球開發者技術背書"
+        },
+        {
+          "label": "平臺用戶",
+          "desc": "賦能各行業業務團隊"
+        },
+        {
+          "label": "私有化部署案例",
+          "desc": "核心業務場景成熟落地"
+        }
+      ]
+    },
+    "productHighlights": {
+      "badge": "產品亮點",
+      "title": "生產級 AI 智能體",
+      "subtitle": "一站式解決企業 AI 落地難題",
+      "items": [
+        {
+          "key": "blocks",
+          "title": "像搭積木一樣，構建業務的 AI 智能體",
+          "desc": "可視化工作流、強擴展生態 API 無縫對接"
+        },
+        {
+          "key": "kb",
+          "title": "拒絕幻覺，打造精準企業知識庫",
+          "desc": "混合檢索拒絕幻覺，自動清洗數據，實時更新維護"
+        },
+        {
+          "key": "lifecycle",
+          "title": "看得見、管得住，大模型全生命週期管理",
+          "desc": "兼容全模型接入，提供調試審計，確保合規可控"
+        },
+        {
+          "key": "production",
+          "title": "生產級，生產環境構建的專業架構",
+          "desc": "支持 SSO 與 RBAC 權限，打造千人千面安全門戶"
+        },
+        {
+          "key": "partner",
+          "title": "不僅僅是工具，更是 AI 落地的全程夥伴",
+          "desc": "豐富企業實戰經驗，從調研到定製 POC，全程陪跑交付"
+        }
+      ]
+    },
+    "solutions": {
+      "badge": "行業解決方案",
+      "title": "覆蓋核心業務場景",
+      "subtitle": "針對不同職能與行業，提供開箱即用的 AI 解決方案",
+      "consult": "商務諮詢",
+      "tabs": [
+        {
+          "key": "sales",
+          "label": "銷售 & 市場",
+          "items": [
+            {
+              "key": "assistant",
+              "title": "智能銷售助手",
+              "desc": "嵌入平臺，AI 實時輔助查資料、寫話術，讓回覆快且專業。"
+            },
+            {
+              "key": "report",
+              "title": "金融行情播報",
+              "desc": "自動抓取行情數據，按模板生成圖表與日報，告別繁瑣人工製表。"
+            },
+            {
+              "key": "training",
+              "title": "銷售培訓與陪練",
+              "desc": "AI 模擬真實客戶對練，自動評分糾錯，幫助新人快速掌握銷售話術。"
+            }
+          ]
+        },
+        {
+          "key": "service",
+          "label": "客服 & 運營",
+          "items": [
+            {
+              "key": "ticket",
+              "title": "智能工單派單",
+              "desc": "懂文字更能懂圖片，自動識別訴求並精準派單，大幅提升服務效率。"
+            },
+            {
+              "key": "copy",
+              "title": "營銷文案生成",
+              "desc": "懂賣點更懂平臺風格，自動規避違禁詞，批量產出高質量營銷文案。"
+            },
+            {
+              "key": "insight",
+              "title": "客戶體驗洞察",
+              "desc": "自動分析客戶情緒與槽點，生成改進建議，助力產品精準優化迭代。"
+            }
+          ]
+        },
+        {
+          "key": "hr",
+          "label": "行政 & 人事",
+          "items": [
+            {
+              "key": "resume",
+              "title": "智能簡歷篩選",
+              "desc": "AI 自動閱讀海量簡歷，精準匹配打分並推薦，幫 HR 快速鎖定人才。"
+            },
+            {
+              "key": "policy",
+              "title": "員工制度問答",
+              "desc": "導入制度手冊，員工有疑問直接對話 AI，無需翻閱，即問即答。"
+            },
+            {
+              "key": "meeting",
+              "title": "會議紀要助手",
+              "desc": "錄音實時轉文字，AI 自動提煉核心觀點與決議，一鍵生成結構化紀要。"
+            }
+          ]
+        },
+        {
+          "key": "finance",
+          "label": "財務 & 法務",
+          "items": [
+            {
+              "key": "expense",
+              "title": "費用報銷審核",
+              "desc": "拍照上傳，AI 自動核對預算與規則，智能攔截異常，解放財務雙手。"
+            },
+            {
+              "key": "contract",
+              "title": "合同智能審查",
+              "desc": "秒級比對法規標準，高亮風險條款並給出修改建議，嚴防合同漏洞。"
+            },
+            {
+              "key": "dd",
+              "title": "盡調報告生成",
+              "desc": "自動收集工商經營數據，直接生成結構化報告，告別繁瑣人工蒐集。"
+            }
+          ]
+        }
+      ]
+    },
+    "cases": {
+      "badge": "客戶成功案例",
+      "title": "行業標杆案例",
+      "subtitle": "幫助 1000+ 企業實現真實業務場景的降本增效",
+      "learnMore": "瞭解更多",
+      "items": [
+        {
+          "key": "cetc",
+          "title": "縮短新員工適應期，構建研發知識助手",
+          "metrics": [
+            {
+              "value": "1 周+",
+              "label": "培訓週期縮短"
+            },
+            {
+              "value": "10%",
+              "label": "重複諮詢降低"
+            },
+            {
+              "value": "30s",
+              "label": "檢索耗時"
+            }
+          ]
+        },
+        {
+          "key": "cms",
+          "title": "重塑投研生產力，基金研報自動化生成",
+          "metrics": [
+            {
+              "value": "90%+",
+              "label": "自動化率超過"
+            },
+            {
+              "value": "<1%",
+              "label": "數據差錯"
+            },
+            {
+              "value": "90%",
+              "label": "製作耗時縮短"
+            }
+          ]
+        },
+        {
+          "key": "snow",
+          "title": "深度集成 OA 系統，費用報銷職能審核",
+          "metrics": [
+            {
+              "value": "50%",
+              "label": "審核提效"
+            },
+            {
+              "value": "70%",
+              "label": "異常檢出提升"
+            },
+            {
+              "value": "60%",
+              "label": "終審錯誤降低"
+            }
+          ]
+        },
+        {
+          "key": "zhaozhao",
+          "title": "日均諮詢破萬，AI 客服 7*24h 秒回",
+          "metrics": [
+            {
+              "value": "1 s",
+              "label": "響應速度秒級"
+            },
+            {
+              "value": "42%",
+              "label": "轉人工率降低"
+            },
+            {
+              "value": "標準化",
+              "label": "服務質量"
+            }
+          ]
+        },
+        {
+          "key": "lcfc",
+          "title": "告別萬行 Excel 卡頓，自然語言即問即查",
+          "metrics": [
+            {
+              "value": "240+ 分鐘",
+              "label": "數據提效"
+            },
+            {
+              "value": "90%",
+              "label": "系統卡頓降低"
+            },
+            {
+              "value": "3%",
+              "label": "錯誤率降低至"
+            }
+          ]
+        }
+      ]
+    },
+    "brandWall": {
+      "badge": "品牌牆",
+      "title": "合作客戶",
+      "subtitle": "1000+ 企業的優選 AI 合作客戶"
+    },
+    "services": {
+      "badge": "服務與認證",
+      "title": "專業交付，價值保障",
+      "subtitle": "從諮詢到交付，我們是技術服務提供者，更是您 AI 落地的長期夥伴與堅實後盾。",
+      "items": [
+        {
+          "key": "community",
+          "title": "開源生態支持",
+          "desc": "社區模板文檔齊備，助力快速上手"
+        },
+        {
+          "key": "consult",
+          "title": "專家諮詢支持",
+          "desc": "1v1 診斷痛點，架構諮詢 POC 驗證"
+        },
+        {
+          "key": "deploy",
+          "title": "搭建落地輔助",
+          "desc": "成熟方案全程陪跑，系統培訓落地"
+        },
+        {
+          "key": "custom",
+          "title": "企業定製開發",
+          "desc": "深度集成業務系統，長期運維保障"
+        }
+      ]
+    },
+    "faq": {
+      "badge": "喜歡這個開源 AI Agent 構建平臺嗎？",
+      "badgeLink": "點個 Star 吧 🌟",
+      "badgeLinkUrl": "https://github.com/labring/FastGPT",
+      "title": "常見問題",
+      "subtitle": "關於 FastGPT 的常見問題解答",
+      "items": [
+        {
+          "title": "開源版可以商業化嗎？",
+          "content": "FastGPT 允許被用於商業化，例如作為其他應用的「後端即服務」使用，或者作為應用開發平臺提供給企業。然而，當涉及到多租戶 SaaS 服務或者 LOGO 及版權信息時，必須聯繫作者獲得商業許可。"
+        },
+        {
+          "title": "FastGPT 知識庫可以導入哪些格式的文檔？",
+          "content": "FastGPT 支持導入 Word、PDF、Excel、Markdown 以及網頁鏈接等格式文檔，同時還支持同步整個 Web 站點的數據，自動完成文本預處理、向量化和 QA 分割，節省手動訓練時間，提高效率。"
+        },
+        {
+          "title": "FastGPT 可以接入哪些模型？",
+          "content": "只要您接入的模型接口 API 與 OpenAI 官方接口對齊，都可以接入 FastGPT。您可以使用 One API 這樣的項目來統一接入不同的模型，並對外提供與 OpenAI 官方接口對齊的 API。"
+        },
+        {
+          "title": "如果我在使用 FastGPT 時遇到問題該怎麼辦？",
+          "content": "如果你在使用 FastGPT 時遇到任何問題，請加入社群或者論壇發帖與我們聯繫。"
+        }
+      ]
+    },
+    "cta": {
+      "brand": "FastGPT",
+      "title": "讓AI成為業務增長的新引擎",
+      "subtitle": "即刻嘗試",
+      "trial": "立即開始",
+      "consult": "商務諮詢"
+    },
+    "footer": {
+      "tagline": "企業級AI生產力引擎",
+      "columns": {
+        "service": {
+          "title": "服務",
+          "items": {
+            "cloud": "雲服務",
+            "private": "私有化",
+            "community": "社區版",
+            "docs": "文檔中心"
+          }
+        },
+        "partner": {
+          "title": "生態夥伴"
+        },
+        "more": {
+          "title": "更多信息",
+          "email": "郵箱：Dennis@sealos.io",
+          "lanqiao": "藍橋雲課 x FastGPT教程",
+          "book": "FastGPT官方教材（紙質書）"
+        }
+      },
+      "qr": {
+        "wechat": "官方公眾號（微信）",
+        "feishu": "官方社群（飛書）",
+        "group": "官方社群（微信）"
+      },
+      "copyright": "Copyright"
+    }
+  },
+  "Enterprise": {
+    "Hero": {
+      "maker": "企業正在使用 FastGPT 企業一體機定製服務",
+      "title": "FastGPT 企業一體機",
+      "description": "軟硬一體機交付，開箱即用的大模型與 FastGPT 企業一體機，搭配 Agent 企業級服務，數十個成熟通用智能體與各行各業垂類智能體應用，快速助力企業大模型應用落地。"
+    },
+    "Models": {
+      "title": "產品系列",
+      "description": "為不同規模和需求的企業量身打造，提供推理、推訓兩種選擇。"
+    },
+    "Advantages": {
+      "title": "選擇 FastGPT 企業一體機",
+      "description": "我們不止提供硬件，更提供穩定、高效、開放的企業級 AI 底座。"
+    },
+    "Benchmark": {
+      "title": "企業級模型基準測試指標（短文本測試）",
+      "model": "模型",
+      "hardware": "配置",
+      "concurrent40": "40併發（吞吐量/TTFT）",
+      "concurrent160": "160併發（吞吐量/TTFT）",
+      "concurrent256": "256併發（吞吐量/TTFT）"
+    },
+    "Partners": {
+      "title": "服務值得信賴的客戶",
+      "description": "覆蓋金融、製造、電商、教育等10+行業，幫助上百家企業完成 AI 落地的最後一公里。"
+    },
+    "CTA": {
+      "title": "準備好部署你的 FastGPT 企業一體機了嗎？",
+      "description": "立即聯繫我們的專家，瞭解 FastGPT 企業一體機如何為你的業務帶來變革，並申請產品演示。",
+      "link": "申請產品演示"
+    }
+  },
+  "NotFound": {
+    "eyebrow": "404",
+    "title": "頁面沒有找到",
+    "desc": "這個地址可能已經移動、刪除，或者暫時不可訪問。你可以回到首頁，或去 FAQ 查找相關問題。",
+    "home": "返回首頁",
+    "faq": "查看 FAQ",
+    "docs": "文檔中心",
+    "start": "立即開始"
+  },
+  "JsonLd": {
+    "siteName": "FastGPT",
+    "pageTitle": "FastGPT - 企業級 AI 智能體構建平臺 | 開源 RAG 系統",
+    "description": "FastGPT 是開源的企業級 AI 智能體構建平臺，提供可視化工作流、知識庫和 RAG 系統。50萬+用戶信賴，立即免費開始。",
+    "inLanguage": "zh-Hant",
+    "organizationName": "FastGPT",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web",
+    "offerDescription": "提供免費開源版本",
+    "authorName": "labring",
+    "breadcrumbHome": "FastGPT",
+    "featureList": [
+      "可視化 AI 工作流編排",
+      "企業知識庫與 Agentic RAG",
+      "AI 應用模板系統",
+      "多模型接入與 OpenAI API 兼容",
+      "企業私有化部署與權限管理",
+      "免代碼 AI Agent 構建"
+    ]
+  }
+}

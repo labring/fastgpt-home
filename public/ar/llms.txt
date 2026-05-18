@@ -3,5 +3,6 @@
 This locale uses the English LLM context.
 
 - English LLM Context: https://fastgpt.io/en/llms.txt
-- Chinese LLM Context: https://fastgpt.io/zh/llms.txt
+- Simplified Chinese LLM Context: https://fastgpt.io/zh/llms.txt
+- Traditional Chinese LLM Context: https://fastgpt.io/zh-hant/llms.txt
 - Localized Page: https://fastgpt.io/ar

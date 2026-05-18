@@ -9,10 +9,11 @@ import ja from '@/locales/ja.json';
 import ms from '@/locales/ms.json';
 import th from '@/locales/th.json';
 import vi from '@/locales/vi.json';
+import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
 import { supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
 
-const dictionaries = { en, zh, ja, ar, vi, th, id, ms };
+const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
 const languages = supportedLocaleCodes;
 const localeVisibilityCss = `
   html${languages
@@ -31,9 +32,10 @@ function getDocsUrl(lang: LocaleCode) {
 }
 
 function getStartUrl(lang: LocaleCode) {
-  return process.env.NEXT_PUBLIC_USER_URL || (lang === 'zh'
-    ? 'https://cloud.fastgpt.cn'
-    : 'https://cloud.fastgpt.io');
+  return (
+    process.env.NEXT_PUBLIC_USER_URL ||
+    (lang === 'zh' ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io')
+  );
 }
 
 function NotFoundContent({ lang }: { lang: LocaleCode }) {
@@ -43,7 +45,9 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
   const hasFaq = lang === 'en' || lang === 'zh';
 
   return (
-    <div className={`not-found-locale not-found-locale-${lang} mx-auto hidden min-h-[100svh] w-full max-w-[1280px] flex-col px-4 py-6 md:px-8`}>
+    <div
+      className={`not-found-locale not-found-locale-${lang} mx-auto hidden min-h-[100svh] w-full max-w-[1280px] flex-col px-4 py-6 md:px-8`}
+    >
       <header className="flex items-center justify-between">
         <Link href={`/${lang}`} className="flex items-center gap-2" aria-label="FastGPT">
           <FastGPTLogo size={24} />
@@ -74,7 +78,8 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
           <div
             className="pointer-events-none absolute left-1/2 top-1/2 h-[420px] w-[min(82vw,720px)] -translate-x-1/2 -translate-y-1/2 rounded-full"
             style={{
-              background: 'radial-gradient(circle, rgba(50,109,255,0.14) 0%, rgba(50,109,255,0.06) 42%, rgba(255,255,255,0) 72%)'
+              background:
+                'radial-gradient(circle, rgba(50,109,255,0.14) 0%, rgba(50,109,255,0.06) 42%, rgba(255,255,255,0) 72%)'
             }}
           />
 

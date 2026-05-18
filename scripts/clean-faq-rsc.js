@@ -25,7 +25,7 @@ function cleanDir(dir) {
       if (entry.name.startsWith('__next')) continue;
       // Check if this is a FAQ detail directory (contains __next.*.txt files)
       const subEntries = fs.readdirSync(fullPath);
-      const hasRscFiles = subEntries.some(f => f.startsWith('__next.') && f.endsWith('.txt'));
+      const hasRscFiles = subEntries.some((f) => f.startsWith('__next.') && f.endsWith('.txt'));
       if (hasRscFiles) {
         // Remove RSC txt files, keep the directory if it has other content
         for (const sub of subEntries) {
@@ -59,7 +59,7 @@ function cleanDir(dir) {
 }
 
 // Clean FAQ directories for all locales
-const locales = ['en', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
+const locales = ['en', 'zh-hant', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 for (const locale of locales) {
   const faqDir = path.join(outDir, locale, 'faq');
   if (fs.existsSync(faqDir)) {

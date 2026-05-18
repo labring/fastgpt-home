@@ -12,6 +12,7 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - 云服务：https://cloud.fastgpt.io
 - 定价：https://fastgpt.io/zh/price
 - FAQ：https://fastgpt.io/zh/faq
+- 繁体中文 LLM Context：https://fastgpt.io/zh-hant/llms.txt
 - 英文 LLM Context：https://fastgpt.io/en/llms.txt
 - 企业一体机：https://fastgpt.io/zh/enterprise
 - GitHub：https://github.com/labring/FastGPT

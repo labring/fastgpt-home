@@ -25,11 +25,10 @@ export const assets = {
     finance: `${LOCAL}/solutions/sol4.webp`
   },
   cases: {
-    snow: `${LOCAL}/cases/cases-new/案例1.webp`,
-    zhaozhao: `${LOCAL}/cases/cases-new/案例2.webp`,
-    lcfc: `${LOCAL}/cases/cases-new/案例3.webp`,
-    cetc: `${LOCAL}/cases/cases-new/案例4.webp`,
-    cms: `${LOCAL}/cases/cases-new/案例5.webp`
+    cetc: `${LOCAL}/cases/cases-new/案例2.webp`,
+    cms: `${LOCAL}/cases/cases-new/案例3.webp`,
+    snow: `${LOCAL}/cases/cases-new/案例4.webp`,
+    zhaozhao: `${LOCAL}/cases/cases-new/案例5.webp`
   },
   brandWall: `${LOCAL}/brands/brand-wall.png`,
   qr: {

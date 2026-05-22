@@ -349,24 +349,6 @@
               "label": "Service quality"
             }
           ]
-        },
-        {
-          "key": "lcfc",
-          "title": "Ditch 10k-row Excel lag; query natural language on demand",
-          "metrics": [
-            {
-              "value": "240+ min",
-              "label": "Data productivity gain"
-            },
-            {
-              "value": "90%",
-              "label": "System-lag reduction"
-            },
-            {
-              "value": "3%",
-              "label": "Error rate reduced to"
-            }
-          ]
         }
       ]
     },

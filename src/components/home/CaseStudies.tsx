@@ -27,15 +27,13 @@ const iconByCaseKey: Record<string, MetricIcon[]> = {
   cetc: ['zap', 'zap', 'medal'],
   cms: ['arrow', 'medal', 'zap'],
   snow: ['arrow', 'arrow', 'zap'],
-  zhaozhao: ['zap', 'medal', 'medal'],
-  lcfc: ['arrow', 'zap', 'medal']
+  zhaozhao: ['zap', 'medal', 'medal']
 };
 const imageByCaseKey: Record<string, string> = {
   cetc: assets.cases.cetc,
   cms: assets.cases.cms,
   snow: assets.cases.snow,
-  zhaozhao: assets.cases.zhaozhao,
-  lcfc: assets.cases.lcfc
+  zhaozhao: assets.cases.zhaozhao
 };
 
 function IconDefs() {

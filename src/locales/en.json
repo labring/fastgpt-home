@@ -11,6 +11,10 @@
     {
       "label": "Learning Center",
       "href": "https://video.fastgpt.cn/videos"
+    },
+    {
+      "label": "Case Studies",
+      "href": "https://solutions.fastgpt.cn/"
     }
   ],
   "Pricing": {

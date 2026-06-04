@@ -11,6 +11,10 @@
     {
       "label": "學習中心",
       "href": "https://video.fastgpt.cn/videos"
+    },
+    {
+      "label": "案例中心",
+      "href": "https://solutions.fastgpt.cn/"
     }
   ],
   "Pricing": {

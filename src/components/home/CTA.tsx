@@ -89,7 +89,7 @@ export default function CTA({ t }: { t: CTAT }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
-                className="flex flex-row items-stretch md:items-center gap-[32px] md:gap-8 w-full"
+                className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8 w-full"
               >
                 <motion.a
                   href={startUrl}
@@ -97,7 +97,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.trial}
-                  className="flex-1 md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
+                  className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
                 >
                   {t.trial}
                 </motion.a>
@@ -108,7 +108,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.consult}
-                  className="flex-1 md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
+                  className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
                 >
                   {t.consult}
                 </motion.a>

@@ -1,8 +1,6 @@
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
-import Hero from '@/components/home/Hero';
-import TrustedBy from '@/components/home/TrustedBy';
-import Stats from '@/components/home/Stats';
+import HomeHeroSection from '@/components/home/HomeHeroSection';
 import ProductHighlights from '@/components/home/ProductHighlights';
 import Solutions from '@/components/home/Solutions';
 import CaseStudies from '@/components/home/CaseStudies';
@@ -28,10 +26,7 @@ export default function HomeLanding({
       <HomeThemeFix />
       <Navbar links={dict.links} t={t.navCta} />
       <main className="m-0 p-0">
-        <Hero stars={stars} t={t.hero}>
-          <TrustedBy t={t.trustedBy} />
-          <Stats stars={stars} t={t.stats} />
-        </Hero>
+        <HomeHeroSection stars={stars} t={t} />
         <ProductHighlights t={t.productHighlights} />
         <Solutions t={t.solutions} />
         <CaseStudies t={t.cases} />

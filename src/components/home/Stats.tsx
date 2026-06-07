@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
+import { formatGitHubStarsInThousands } from '@/lib/githubStarsDisplay';
 
 function useCountUp(end: number, decimals = 0, duration = 2000) {
   const [value, setValue] = useState(0);
@@ -41,7 +42,7 @@ interface StatsProps {
 }
 
 export default function Stats({ stars, t }: StatsProps) {
-  const githubStarsK = stars ? parseFloat((stars / 1000).toFixed(2)) : 26;
+  const githubStarsK = formatGitHubStarsInThousands(stars);
 
   const stats = [
     { end: githubStarsK, decimals: 2, suffix: 'k', ...t.items[0] },
@@ -54,7 +55,7 @@ export default function Stats({ stars, t }: StatsProps) {
       <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto">
         <div className="flex flex-col gap-[32px] items-center md:flex-row md:gap-0 md:items-start md:justify-between">
           {stats.map((stat, i) => (
-            <StatItem key={stat.label} {...stat} delay={i * 0.12} />
+            <StatItem key={`${stat.label}-${stat.end}`} {...stat} delay={i * 0.12} />
           ))}
         </div>
       </div>

@@ -1,7 +1,8 @@
 import 'server-only';
 
+import { GITHUB_STARS_FALLBACK, getGitHubStarsFallback, isValidGitHubStars } from '@/lib/githubStarsDisplay';
+
 const GITHUB_REPO_API = 'https://api.github.com/repos/labring/FastGPT';
-const DEFAULT_STARS = 25000;
 const CACHE_FILE = '.cache/github-stars.json';
 
 type GitHubStarsCache = {
@@ -9,17 +10,13 @@ type GitHubStarsCache = {
   updatedAt: number;
 };
 
-function isValidStars(value: unknown): value is number {
-  return typeof value === 'number' && Number.isFinite(value) && value > 0;
-}
-
 async function readStarsCache(): Promise<GitHubStarsCache | null> {
   try {
     const [{ readFile }, path] = await Promise.all([import('fs/promises'), import('path')]);
     const cachePath = path.join(process.cwd(), CACHE_FILE);
     const cache = JSON.parse(await readFile(cachePath, 'utf8')) as GitHubStarsCache;
 
-    if (!isValidStars(cache.stars) || !isValidStars(cache.updatedAt)) {
+    if (!isValidGitHubStars(cache.stars) || !isValidGitHubStars(cache.updatedAt)) {
       return null;
     }
 
@@ -53,7 +50,7 @@ async function fetchGitHubStars(): Promise<number> {
   }
 
   const data = (await response.json()) as { stargazers_count?: unknown };
-  if (!isValidStars(data.stargazers_count)) {
+  if (!isValidGitHubStars(data.stargazers_count)) {
     throw new Error('GitHub API response did not include stargazers_count');
   }
 
@@ -68,6 +65,6 @@ export async function getGitHubStars(): Promise<number> {
     await writeStarsCache(stars);
     return stars;
   } catch {
-    return cache?.stars || DEFAULT_STARS;
+    return getGitHubStarsFallback(cache?.stars || GITHUB_STARS_FALLBACK);
   }
 }

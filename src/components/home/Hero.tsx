@@ -6,7 +6,7 @@ import { useEffect, useRef, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import { assets } from '@/components/home/assets';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
-import { getCachedGitHubStars } from '@/lib/githubStarsClient';
+import { formatGitHubStars } from '@/lib/githubStarsDisplay';
 
 interface HeroProps {
   stars: number;
@@ -63,20 +63,8 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
   const scale = useTransform(smoothProgress, [0, 0.20], [0.95, 1]);
   const offsetY = useTransform(smoothProgress, [0, 0.20], isDesktop ? [-160, 0] : [-80, 0]);
 
-
-  const [stars, setStars] = useState(initialStars);
-  useEffect(() => {
-    const run = async () => {
-      const nextStars = await getCachedGitHubStars(initialStars);
-      if (nextStars !== initialStars) {
-        setStars(nextStars);
-      }
-    };
-    run();
-  }, [initialStars]);
-
   const startUrl = useStartUrl();
-  const formattedStars = stars ? `${stars.toLocaleString()}+` : '25,999+';
+  const formattedStars = formatGitHubStars(initialStars);
 
   return (
     <section

@@ -1,3 +1,5 @@
+import { getGitHubStarsFallback } from '@/lib/githubStarsDisplay';
+
 const GITHUB_REPO_API = 'https://api.github.com/repos/labring/FastGPT';
 const CACHE_KEY = 'fastgpt:github-stars';
 
@@ -51,6 +53,6 @@ export async function getCachedGitHubStars(fallback: number): Promise<number> {
     writeStarsCache(data.stargazers_count);
     return data.stargazers_count;
   } catch {
-    return cache?.stars || fallback;
+    return getGitHubStarsFallback(cache?.stars || fallback);
   }
 }

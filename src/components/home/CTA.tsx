@@ -22,7 +22,7 @@ type CTAT = {
 };
 
 export default function CTA({ t }: { t: CTAT }) {
-  const startUrl = useStartUrl();
+  const startUrl = useStartUrl('home_bottom_trial');
   const globeWrapRef = useRef<HTMLDivElement | null>(null);
   const [globeReady, setGlobeReady] = useState(false);
 

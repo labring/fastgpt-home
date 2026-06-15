@@ -1,27 +1,15 @@
 'use client';
 import { Button } from '@/components/ui/button';
-import { siteConfig } from '@/config/site';
-import { FaArrowRight } from "react-icons/fa6";
+import { buildCloudEntryUrl } from '@/lib/cloudEntryUrl';
 
 import Link from 'next/link';
 
 const CTAButton = ({ locale }: { locale: any }) => {
   const getLinkConfig = () => {
-    if (typeof window === 'undefined') return { pathname: siteConfig.userUrl };
-    const urlParams = new URLSearchParams(window.location.search);
-    const search = urlParams.get('search');
-    const bd_vid = urlParams.get('bd_vid');
-    const msclkid = urlParams.get('msclkid');
-    const k = urlParams.get('k');
-    return {
-      pathname: siteConfig.userUrl,
-      query: {
-        ...(search && { search }),
-        ...(bd_vid && { bd_vid }),
-        ...(msclkid && { msclkid }),
-        ...(k && { k })
-      }
-    };
+    return buildCloudEntryUrl(
+      'enterprise_footer_trial',
+      typeof window === 'undefined' ? '' : window.location.search
+    );
   };
 
   return (

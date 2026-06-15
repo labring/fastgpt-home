@@ -1,26 +1,17 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { siteConfig } from '@/config/site';
+import { buildCloudEntryUrl } from '@/lib/cloudEntryUrl';
 
-const CAMPAIGN_KEYS = ['search', 'bd_vid', 'msclkid', 'k'] as const;
-
-export function useStartUrl(): string {
-  const [url, setUrl] = useState<string>(siteConfig.userUrl);
+export function useStartUrl(source: string, targetUrl?: string): string {
+  const [url, setUrl] = useState<string>(() => buildCloudEntryUrl(source, '', targetUrl));
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     queueMicrotask(() => {
-      const incoming = new URLSearchParams(window.location.search);
-      const forwarded = new URLSearchParams();
-      CAMPAIGN_KEYS.forEach((key) => {
-        const value = incoming.get(key);
-        if (value) forwarded.set(key, value);
-      });
-      const qs = forwarded.toString();
-      setUrl(qs ? `${siteConfig.userUrl}?${qs}` : siteConfig.userUrl);
+      setUrl(buildCloudEntryUrl(source, window.location.search, targetUrl));
     });
-  }, []);
+  }, [source, targetUrl]);
 
   return url;
 }

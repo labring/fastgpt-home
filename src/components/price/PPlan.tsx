@@ -6,8 +6,25 @@ import Check from '@/components/icons/check';
 import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from '@/config/price';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
+import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 
 type Key = 'cloud' | 'self';
+
+function CloudPlanLink({
+  source,
+  children
+}: {
+  source: string;
+  children: React.ReactNode;
+}) {
+  const href = useStartUrl(source);
+
+  return (
+    <Link href={href} target="_blank" className="mt-auto pt-4">
+      {children}
+    </Link>
+  );
+}
 
 function formatCloudPrice(price: number, annual: boolean, locale: any) {
   const amount = String(annual ? price * 10 : price);
@@ -188,7 +205,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 </div>
 
                 {item.key !== 'custom' ? (
-                  <Link href={siteConfig.userUrl} target="_blank" className="mt-auto pt-4">
+                  <CloudPlanLink source={`price_cloud_${item.key}`}>
                     <button
                       className="w-full py-2.5 rounded-full text-[14px] font-medium transition-colors"
                       style={{
@@ -198,7 +215,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                     >
                       {locale.upgrade}
                     </button>
-                  </Link>
+                  </CloudPlanLink>
                 ) : (
                   <Link href={siteConfig.customPlanUrl} target="_blank" className="mt-auto pt-4">
                     <button

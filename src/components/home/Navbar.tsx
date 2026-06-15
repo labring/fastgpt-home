@@ -30,7 +30,8 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
   const [langSheetOpen, setLangSheetOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
-  const startUrl = useStartUrl();
+  const desktopStartUrl = useStartUrl('home_nav_trial');
+  const mobileStartUrl = useStartUrl('home_nav_mobile_trial');
   const pathname = usePathname();
   const routeWithoutLang = (() => {
     if (!params?.lang) return pathname;
@@ -173,7 +174,7 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
               <LangSwitcher iconOnly />
             </div>
             <a
-              href={startUrl}
+              href={desktopStartUrl}
               rel="noopener noreferrer nofollow"
               aria-label={t.trial}
               className="px-4 py-1.5 rounded-full bg-white border border-hairline-soft text-[12px] font-medium text-ink hover:bg-gray-50 transition-colors"
@@ -287,7 +288,7 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-hairline-soft">
               <a
-                href={startUrl}
+                href={mobileStartUrl}
                 rel="noopener noreferrer nofollow"
                 className="h-10 inline-flex items-center justify-center rounded-full bg-white border border-hairline-soft text-[13px] font-medium text-ink"
                 onClick={() => setMobileOpen(false)}

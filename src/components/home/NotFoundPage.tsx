@@ -12,6 +12,7 @@ import vi from '@/locales/vi.json';
 import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
 import { supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
+import CloudEntryLink from '@/components/home/CloudEntryLink';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
 const languages = supportedLocaleCodes;
@@ -32,10 +33,12 @@ function getDocsUrl(lang: LocaleCode) {
 }
 
 function getStartUrl(lang: LocaleCode) {
-  return (
+  const isChinaLocale = lang === 'zh';
+  const cloudUrl =
     process.env.NEXT_PUBLIC_USER_URL ||
-    (lang === 'zh' ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io')
-  );
+    (isChinaLocale ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io');
+
+  return cloudUrl;
 }
 
 function NotFoundContent({ lang }: { lang: LocaleCode }) {
@@ -62,15 +65,16 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
             FastGPT
           </span>
         </Link>
-        <Link
-          href={startUrl}
+        <CloudEntryLink
+          source="not_found_start"
+          targetUrl={startUrl}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex h-10 items-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-4 text-[14px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa]"
         >
           {t.start}
           <ArrowUpRight className="h-4 w-4" />
-        </Link>
+        </CloudEntryLink>
       </header>
 
       <main className="flex flex-1 items-center justify-center py-16">

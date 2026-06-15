@@ -2,8 +2,9 @@ import FastGPTLogo from '@/components/home/FastGPTLogo';
 import { assets } from '@/components/home/assets';
 import Image from 'next/image';
 import { siteConfig } from '@/config/site';
+import CloudEntryLink from '@/components/home/CloudEntryLink';
 
-type ColumnLink = { label: string; href: string; external?: boolean };
+type ColumnLink = { label: string; href: string; external?: boolean; cloudEntrySource?: string };
 type Column = { title: string; width: number; items: (ColumnLink | { label: string })[] };
 
 type FooterT = {
@@ -29,6 +30,7 @@ function buildColumns(t: FooterT['columns']): Column[] {
         {
           label: t.service.items.cloud,
           href: siteConfig.userUrl,
+          cloudEntrySource: 'footer_cloud',
           external: true
         },
         {
@@ -189,6 +191,23 @@ export default function Footer({ t }: { t: FooterT }) {
                     </h4>
                     {col.items.map((item) => {
                       if ('href' in item) {
+                        if (item.cloudEntrySource) {
+                          return (
+                            <CloudEntryLink
+                              key={item.label}
+                              source={item.cloudEntrySource}
+                              targetUrl={item.href}
+                              {...(item.external
+                                ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
+                                : {})}
+                              className="hover:text-black  text-ink-sub"
+                              style={{ ...linkStyle, textAlign: 'left' }}
+                            >
+                              {item.label}
+                            </CloudEntryLink>
+                          );
+                        }
+
                         return (
                           <a
                             key={item.label}

@@ -1,6 +1,8 @@
 export const RYBBIT_EVENTS = {
   businessConsultClick: 'business_consult_click',
-  cloudServiceClick: 'cloud_service_click'
+  cloudServiceClick: 'cloud_service_click',
+  caseCenterClick: 'case_center_click',
+  learningCenterClick: 'learning_center_click'
 } as const;
 
 type RybbitEventName = (typeof RYBBIT_EVENTS)[keyof typeof RYBBIT_EVENTS];

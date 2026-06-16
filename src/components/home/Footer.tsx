@@ -3,6 +3,7 @@ import { assets } from '@/components/home/assets';
 import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 type ColumnLink = { label: string; href: string; external?: boolean; cloudEntrySource?: string };
 type Column = { title: string; width: number; items: (ColumnLink | { label: string })[] };
@@ -214,6 +215,9 @@ export default function Footer({ t }: { t: FooterT }) {
                             href={item.href}
                             {...(item.external
                               ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
+                              : {})}
+                            {...(item.href.includes('feishu.cn')
+                              ? rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'footer_private_deploy')
                               : {})}
                             className="hover:text-black  text-ink-sub"
                             style={{ ...linkStyle, textAlign: 'left' }}

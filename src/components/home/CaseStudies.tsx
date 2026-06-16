@@ -7,6 +7,7 @@ import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { assets } from '@/components/home/assets';
 import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 type MetricIcon = 'arrow' | 'zap' | 'medal';
 type CaseMetric = { value: string; label: string; icon: MetricIcon };
@@ -81,7 +82,7 @@ function MetricIconSvg({ kind, size }: { kind: MetricIcon; size?: number }) {
   );
 }
 
-type CaseStudy = { title: string; image: string; metrics: CaseMetric[] };
+type CaseStudy = { key: string; title: string; image: string; metrics: CaseMetric[] };
 
 export default function CaseStudies({ t }: { t: CasesT }) {
   const [index, setIndex] = useState(0);
@@ -92,6 +93,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
   const dragStartVal = useRef(0);
 
   const cases: CaseStudy[] = t.items.map((it) => ({
+    key: it.key,
     title: it.title,
     image: imageByCaseKey[it.key],
     metrics: it.metrics.map((m, i) => ({ ...m, icon: iconByCaseKey[it.key]?.[i] ?? 'arrow' }))
@@ -305,6 +307,9 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
           href={CONSULT_URL}
           target="_blank"
           rel="noopener noreferrer nofollow"
+          {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_case_study_consult', {
+            case: data.key
+          })}
           className="inline-flex items-center justify-center self-start transition-colors h-9 md:h-[46px] px-3 md:px-4 rounded-full text-[13px] md:text-base"
           style={{
             border: '1px solid #d3d4d4',

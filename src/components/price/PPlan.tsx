@@ -7,6 +7,7 @@ import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 type Key = 'cloud' | 'self';
 
@@ -20,7 +21,12 @@ function CloudPlanLink({
   const href = useStartUrl(source);
 
   return (
-    <Link href={href} target="_blank" className="mt-auto pt-4">
+    <Link
+      href={href}
+      target="_blank"
+      className="mt-auto pt-4"
+      {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, source)}
+    >
       {children}
     </Link>
   );
@@ -217,7 +223,12 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                     </button>
                   </CloudPlanLink>
                 ) : (
-                  <Link href={siteConfig.customPlanUrl} target="_blank" className="mt-auto pt-4">
+                  <Link
+                    href={siteConfig.customPlanUrl}
+                    target="_blank"
+                    className="mt-auto pt-4"
+                    {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'price_cloud_custom')}
+                  >
                     <button
                       className="w-full py-2.5 rounded-full text-[14px] font-medium transition-colors"
                       style={{
@@ -237,6 +248,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
         /* Self-hosted plans */
         <div className="mt-[40px] grid lg:grid-cols-3 grid-cols-1 gap-5">
           {selfPlans.map((item) => {
+            const buttonConfig = PRICE_PLANS_SELF_BUTTON_MAP[item.key];
             return (
               <div
                 key={item.key}
@@ -296,15 +308,18 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 </div>
 
                 <Link
-                  href={PRICE_PLANS_SELF_BUTTON_MAP[item.key].href}
+                  href={buttonConfig.href}
                   target="_blank"
                   className="mt-auto pt-4"
+                  {...(buttonConfig.href.includes('feishu.cn')
+                    ? rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, `price_self_${item.key}`)
+                    : {})}
                 >
                   <button
                     className="w-full py-2.5 rounded-full text-[14px] font-medium transition-colors"
                     style={{ backgroundColor: '#f5f6f8', color: '#020617' }}
                   >
-                    {PRICE_PLANS_SELF_BUTTON_MAP[item.key][langName] || PRICE_PLANS_SELF_BUTTON_MAP[item.key].en}
+                    {buttonConfig[langName] || buttonConfig.en}
                   </button>
                 </Link>
               </div>

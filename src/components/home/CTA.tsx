@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import dynamic from 'next/dynamic';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 // Globe is heavy (WebGL + 16k samples + rAF loop). Load on the client only,
 // and defer even that to when the CTA card nears the viewport so the earlier
@@ -94,6 +95,7 @@ export default function CTA({ t }: { t: CTAT }) {
                 <motion.a
                   href={startUrl}
                   rel="noopener noreferrer nofollow"
+                  {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_bottom_trial')}
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.trial}
@@ -105,6 +107,7 @@ export default function CTA({ t }: { t: CTAT }) {
                   href={CONSULT_URL}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
+                  {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_bottom_consult')}
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}
                   aria-label={t.consult}

@@ -1,6 +1,7 @@
 'use client';
 import { Button } from '@/components/ui/button';
 import { buildCloudEntryUrl } from '@/lib/cloudEntryUrl';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 import Link from 'next/link';
 
@@ -18,6 +19,7 @@ const CTAButton = ({ locale }: { locale: any }) => {
         href="https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C2&hide_S=1"
         target="_blank"
         rel="noopener noreferrer nofollow"
+        {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'enterprise_footer_consult')}
       >
         <Button
           variant="default"
@@ -31,6 +33,7 @@ const CTAButton = ({ locale }: { locale: any }) => {
         <Link
           href={getLinkConfig()}
           rel="noopener noreferrer nofollow"
+          {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'enterprise_footer_trial')}
         >
           <Button
             variant="default"

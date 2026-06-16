@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { assets } from '@/components/home/assets';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { formatGitHubStars } from '@/lib/githubStarsDisplay';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 interface HeroProps {
   stars: number;
@@ -184,6 +185,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
                 href={CONSULT_URL}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
+                {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_hero_consult')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 aria-label={t.consult}
@@ -194,6 +196,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               <motion.a
                 href={startUrl}
                 rel="noopener noreferrer nofollow"
+                {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_hero_trial')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}
                 aria-label={t.trial}

@@ -21,6 +21,7 @@ import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { assets } from '@/components/home/assets';
 import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 const iconByKey: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   assistant: Tag, report: AudioLines, training: Users,
@@ -174,6 +175,9 @@ export default function Solutions({ t }: { t: SolutionsT }) {
                   href={CONSULT_URL}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
+                  {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_solutions_consult', {
+                    solution: current.key
+                  })}
                   className="relative inline-flex px-8 py-3 rounded-full text-[13px] font-medium text-white w-fit bg-btn-dark hover:opacity-90 transition-opacity"
                   style={{ zIndex: 1 }}
                 >

@@ -24,6 +24,18 @@ function isExternalHref(href: string) {
   return /^(https?:)?\/\//.test(href);
 }
 
+function getNavLinkRybbitAttrs(link: NavLink) {
+  if (link.href.includes('video.fastgpt.cn/videos')) {
+    return rybbitClickAttrs(RYBBIT_EVENTS.learningCenterClick, 'home_nav_learning_center');
+  }
+
+  if (link.href.includes('solutions.fastgpt.cn')) {
+    return rybbitClickAttrs(RYBBIT_EVENTS.caseCenterClick, 'home_nav_case_center');
+  }
+
+  return {};
+}
+
 export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(true);
@@ -162,6 +174,7 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
                   href={getNavHref(link.href, lang)}
                   target={isExternalHref(link.href) ? '_blank' : undefined}
                   rel={isExternalHref(link.href) ? 'noopener noreferrer nofollow' : undefined}
+                  {...getNavLinkRybbitAttrs(link)}
                   className="hover:text-ink transition-colors"
                 >
                   {link.label}
@@ -262,6 +275,7 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
                   href={getNavHref(link.href, lang)}
                   target={isExternalHref(link.href) ? '_blank' : undefined}
                   rel={isExternalHref(link.href) ? 'noopener noreferrer nofollow' : undefined}
+                  {...getNavLinkRybbitAttrs(link)}
                   className="py-3 hover:text-ink transition-colors"
                   onClick={() => setMobileOpen(false)}
                 >

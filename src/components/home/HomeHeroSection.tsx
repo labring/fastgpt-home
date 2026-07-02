@@ -8,9 +8,11 @@ import { getCachedGitHubStars } from '@/lib/githubStarsClient';
 
 export default function HomeHeroSection({
   stars: initialStars,
+  locale,
   t
 }: {
   stars: number;
+  locale: string;
   t: {
     hero: Parameters<typeof Hero>[0]['t'];
     trustedBy: Parameters<typeof TrustedBy>[0]['t'];
@@ -30,7 +32,7 @@ export default function HomeHeroSection({
   }, [initialStars]);
 
   return (
-    <Hero stars={stars} t={t.hero}>
+    <Hero stars={stars} locale={locale} t={t.hero}>
       <TrustedBy t={t.trustedBy} />
       <Stats stars={stars} t={t.stats} />
     </Hero>

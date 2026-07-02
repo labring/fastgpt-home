@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState, useCallback } from 'react';
 import { motion, useMotionValue, animate } from 'framer-motion';
 import Image from 'next/image';
+import { useParams } from 'next/navigation';
 import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
-import { assets } from '@/components/home/assets';
+import { getCasesAssets } from '@/components/home/assets';
 import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
@@ -30,13 +31,6 @@ const iconByCaseKey: Record<string, MetricIcon[]> = {
   snow: ['arrow', 'arrow', 'zap'],
   zhaozhao: ['zap', 'medal', 'medal']
 };
-const imageByCaseKey: Record<string, string> = {
-  cetc: assets.cases.cetc,
-  cms: assets.cases.cms,
-  snow: assets.cases.snow,
-  zhaozhao: assets.cases.zhaozhao
-};
-
 function IconDefs() {
   return (
     <svg width="0" height="0" style={{ position: 'absolute' }} aria-hidden>
@@ -91,6 +85,14 @@ export default function CaseStudies({ t }: { t: CasesT }) {
   const isDragging = useRef(false);
   const dragStartClientX = useRef(0);
   const dragStartVal = useRef(0);
+  const params = useParams<{ lang: string }>();
+  const caseAssets = getCasesAssets(params?.lang || 'en');
+  const imageByCaseKey: Record<string, string> = {
+    cetc: caseAssets.cetc,
+    cms: caseAssets.cms,
+    snow: caseAssets.snow,
+    zhaozhao: caseAssets.zhaozhao
+  };
 
   const cases: CaseStudy[] = t.items.map((it) => ({
     key: it.key,

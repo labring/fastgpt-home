@@ -17,7 +17,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang?: st
           answer: item.content || item.desc || ''
         }))}
       />
-      <HomeLanding dict={dict} stars={stars} />
+      <HomeLanding dict={dict} locale={langName} stars={stars} />
     </>
   );
 }

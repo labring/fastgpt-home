@@ -19,9 +19,10 @@ import {
 } from 'lucide-react';
 import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
-import { assets } from '@/components/home/assets';
+import { getSolutionsAssets } from '@/components/home/assets';
 import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { useParams } from 'next/navigation';
 
 const iconByKey: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   assistant: Tag, report: AudioLines, training: Users,
@@ -29,13 +30,6 @@ const iconByKey: Record<string, React.ComponentType<{ size?: number; className?:
   resume: User, policy: GraduationCap, meeting: ClipboardCheck,
   expense: Receipt, contract: FileText, dd: ShieldCheck
 };
-const imageByTabKey: Record<string, string> = {
-  sales: assets.solutions.sales,
-  service: assets.solutions.service,
-  hr: assets.solutions.hr,
-  finance: assets.solutions.finance
-};
-
 type SolutionsT = {
   badge: string;
   title: string;
@@ -50,6 +44,14 @@ type SolutionsT = {
 
 export default function Solutions({ t }: { t: SolutionsT }) {
   const [activeTab, setActiveTab] = useState(0);
+  const params = useParams<{ lang: string }>();
+  const solutionAssets = getSolutionsAssets(params?.lang || 'en');
+  const imageByTabKey: Record<string, string> = {
+    sales: solutionAssets.sales,
+    service: solutionAssets.service,
+    hr: solutionAssets.hr,
+    finance: solutionAssets.finance
+  };
   const tabs = t.tabs.map((tab) => ({
     ...tab,
     image: imageByTabKey[tab.key],

@@ -4,13 +4,14 @@ import { ArrowUpRight } from 'lucide-react';
 import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
 import { useEffect, useRef, useState, ReactNode } from 'react';
 import Image from 'next/image';
-import { assets } from '@/components/home/assets';
+import { getHeroDashboardAsset } from '@/components/home/assets';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { formatGitHubStars } from '@/lib/githubStarsDisplay';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 interface HeroProps {
   stars: number;
+  locale: string;
   t: {
     githubStars: string;
     followUs: string;
@@ -36,7 +37,7 @@ const mobileBlobs = [
   { w: 460, h: 460, left: '50%', top: 200, ml: -230, color: '#C6DBFF', x: [0, 60, -80, 40, -20, 0], y: [0, -20, -5, 15, -10, 0], s: [1, 1.1, 0.85, 1.2, 0.9, 1], dur: 18, delay: 1.5 },
 ];
 
-export default function Hero({ stars: initialStars, t, children }: HeroProps) {
+export default function Hero({ stars: initialStars, locale, t, children }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
   const [isMobile, setIsMobile] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
@@ -66,6 +67,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
 
   const startUrl = useStartUrl('home_hero_trial');
   const formattedStars = formatGitHubStars(initialStars);
+  const heroDashboard = getHeroDashboardAsset(locale);
 
   return (
     <section
@@ -218,7 +220,7 @@ export default function Hero({ stars: initialStars, t, children }: HeroProps) {
               className="hero-image-fade origin-bottom"
             >
               <Image
-                src={assets.heroDashboard}
+                src={heroDashboard}
                 alt={t.title}
                 width={3600}
                 height={1944}

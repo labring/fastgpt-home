@@ -79,10 +79,10 @@ const enlargeLogos = new Set([
 ]);
 
 function logoHeight(logo: string) {
-  if (extraShrinkLogos.has(logo)) return 'h-[12px] md:h-[16px] lg:h-[19px]';
-  if (shrinkLogos.has(logo)) return 'h-[14px] md:h-[18px] lg:h-[22px]';
-  if (enlargeLogos.has(logo)) return 'h-[26px] md:h-[34px] lg:h-[38px]';
-  return 'h-[20px] md:h-[26px] lg:h-[30px]';
+  if (extraShrinkLogos.has(logo)) return 'h-[16px] md:h-[22px] lg:h-[26px]';
+  if (shrinkLogos.has(logo)) return 'h-[18px] md:h-[24px] lg:h-[30px]';
+  if (enlargeLogos.has(logo)) return 'h-[34px] md:h-[44px] lg:h-[50px]';
+  return 'h-[26px] md:h-[34px] lg:h-[40px]';
 }
 
 export default function BrandWall({ t }: { t: BrandWallT }) {
@@ -105,11 +105,11 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
           transition={{ duration: 0.8, delay: 0.5, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto py-6 md:py-10 lg:py-20"
         >
-          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-2 md:gap-2 lg:gap-2">
+          <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-3 md:gap-3 lg:gap-3">
             {logos.map((logo) => (
               <div
                 key={logo}
-                className="flex items-center justify-center bg-white rounded-md h-[32px] md:h-[40px] lg:h-[48px]"
+                className="flex items-center justify-center bg-white rounded-md h-[40px] md:h-[52px] lg:h-[64px]"
               >
                 <Image
                   src={`${LOGO_DIR}/${logo}`}

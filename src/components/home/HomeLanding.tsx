@@ -15,9 +15,11 @@ import Footer from '@/components/home/Footer';
 // resolve their locale/dict and pass data in.
 export default function HomeLanding({
   dict,
+  locale,
   stars
 }: {
   dict: any;
+  locale: string;
   stars: number;
 }) {
   const t = dict.Home;
@@ -26,7 +28,7 @@ export default function HomeLanding({
       <HomeThemeFix />
       <Navbar links={dict.links} t={t.navCta} />
       <main className="m-0 p-0">
-        <HomeHeroSection stars={stars} t={t} />
+        <HomeHeroSection stars={stars} locale={locale} t={t} />
         <ProductHighlights t={t.productHighlights} />
         <Solutions t={t.solutions} />
         <CaseStudies t={t.cases} />

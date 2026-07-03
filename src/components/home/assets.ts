@@ -1,8 +1,56 @@
+import { normalizeLocale } from '@/lib/locales';
+
 const CDN = 'https://static.step1.dev/tixzae/assets';
 const LOCAL = '/images/home';
+const HERO_LOCAL = '/images/hero';
+const SOLUTIONS_LOCAL = `${LOCAL}/solutions/sol-i18n`;
+const CASES_LOCAL = `${LOCAL}/cases/cases-i18n`;
+
+/**
+ * 根据构建目标域名和当前语言选择首页 Hero 主图。
+ * 中文（含繁体）统一使用中文图，其它语言统一使用英文图。
+ */
+export function getHeroDashboardAsset(locale: string) {
+  const normalizedLocale = normalizeLocale(locale);
+  const language = normalizedLocale === 'zh' || normalizedLocale === 'zh-hant' ? 'zh' : 'en';
+  const domain = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').includes('.cn') ? 'cn' : 'io';
+
+  return `${HERO_LOCAL}/kv-border-stroke-bold-${domain}-${language}.png`;
+}
+
+/**
+ * 根据当前语言选择行业方案图片。
+ * 简体中文和繁体中文统一使用中文图，其它语言统一使用英文图。
+ */
+export function getSolutionsAssets(locale: string) {
+  const normalizedLocale = normalizeLocale(locale);
+  const language = normalizedLocale === 'zh' || normalizedLocale === 'zh-hant' ? 'zh' : 'en';
+
+  return {
+    sales: `${SOLUTIONS_LOCAL}/sol1-${language}.png`,
+    service: `${SOLUTIONS_LOCAL}/sol2-${language}.png`,
+    hr: `${SOLUTIONS_LOCAL}/sol3-${language}.png`,
+    finance: `${SOLUTIONS_LOCAL}/sol4-${language}.png`
+  };
+}
+
+/**
+ * 根据当前语言选择客户案例图片。
+ * 简体中文和繁体中文统一使用中文图，其它语言统一使用英文图。
+ */
+export function getCasesAssets(locale: string) {
+  const normalizedLocale = normalizeLocale(locale);
+  const language = normalizedLocale === 'zh' || normalizedLocale === 'zh-hant' ? 'zh' : 'en';
+
+  return {
+    cetc: `${CASES_LOCAL}/case1-${language}.png`,
+    cms: `${CASES_LOCAL}/case2-${language}.png`,
+    snow: `${CASES_LOCAL}/case3-${language}.png`,
+    zhaozhao: `${CASES_LOCAL}/case4-${language}.png`
+  };
+}
 
 export const assets = {
-  heroDashboard: '/images/hero/zh/kv-border-stroke-bold.webp',
   trustLogos: [
     `${LOCAL}/trust/logo1.png`,
     `${LOCAL}/trust/logo2.png`,
@@ -17,12 +65,6 @@ export const assets = {
     lifecycle: `${LOCAL}/product/feature-new/producthighlights-Image3.jpg`,
     production: `${LOCAL}/product/feature-new/producthighlights-Image4.jpg`,
     partner: `${LOCAL}/product/feature-new/producthighlights-Image5.jpg`
-  },
-  solutions: {
-    sales: `${LOCAL}/solutions/sol1.webp`,
-    service: `${LOCAL}/solutions/sol2.jpg`,
-    hr: `${LOCAL}/solutions/sol3.webp`,
-    finance: `${LOCAL}/solutions/sol4.webp`
   },
   cases: {
     cetc: `${LOCAL}/cases/cases-new/案例2.webp`,

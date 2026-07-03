@@ -3,7 +3,7 @@ import { normalizeLocale } from '@/lib/locales';
 const CDN = 'https://static.step1.dev/tixzae/assets';
 const LOCAL = '/images/home';
 const HERO_LOCAL = '/images/hero';
-const SOLUTIONS_LOCAL = `${LOCAL}/solutions/sol-zh:en`;
+const SOLUTIONS_LOCAL = `${LOCAL}/solutions/sol-i18n`;
 const CASES_LOCAL = `${LOCAL}/cases/cases-i18n`;
 
 /**

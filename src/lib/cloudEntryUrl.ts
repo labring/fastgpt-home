@@ -1,6 +1,13 @@
 import { siteConfig } from '@/config/site';
+import { getAttributionPayload, trackVisit } from '@/lib/leadAttribution';
 
 const CAMPAIGN_KEYS = ['search', 'bd_vid', 'msclkid', 'k'] as const;
+
+function appendAttributionParams(params: URLSearchParams) {
+  trackVisit();
+  const source = getAttributionPayload();
+  if (source.visitor_id) params.set('source', JSON.stringify(source));
+}
 
 export function buildCloudEntryUrl(
   source: string,
@@ -15,6 +22,7 @@ export function buildCloudEntryUrl(
     if (value) forwarded.set(key, value);
   });
   forwarded.set('fastgpt_source', source);
+  appendAttributionParams(forwarded);
 
   const separator = targetUrl.includes('?') ? '&' : '?';
   return `${targetUrl}${separator}${forwarded.toString()}`;

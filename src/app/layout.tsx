@@ -1,5 +1,6 @@
 import BaiDuAnalytics from '@/app/BaiDuAnalytics';
 import ClarityAnalytics from '@/app/ClarityAnalytics';
+import LeadAttribution from '@/app/LeadAttribution';
 import RybbitAnalytics from '@/app/RybbitAnalytics';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import { siteConfig } from '@/config/site';
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <BaiDuAnalytics />
         <ClarityAnalytics />
         <RybbitAnalytics />
+        <LeadAttribution />
       </body>
     </html>
   );

@@ -1,11 +1,11 @@
 'use client';
 
 import { useEffect } from 'react';
-import { reportAnonymousAttribution } from '@/lib/leadAttribution';
+import { reportAnonymousVisitor } from '@/lib/leadAttribution';
 
 const LeadAttribution = () => {
   useEffect(() => {
-    void reportAnonymousAttribution();
+    void reportAnonymousVisitor();
   }, []);
 
   return null;

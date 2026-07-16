@@ -1,19 +1,14 @@
 import { siteConfig } from '@/config/site';
-import { getAttributionPayload, trackVisit } from '@/lib/leadAttribution';
+import { getVisitorId } from '@/lib/leadAttribution';
 
 const CAMPAIGN_KEYS = ['search', 'bd_vid', 'msclkid', 'k'] as const;
 
-function appendAttributionParams(params: URLSearchParams) {
-  trackVisit();
-  const source = getAttributionPayload();
-  if (source.visitor_id) params.set('source', JSON.stringify(source));
+function appendVisitorId(params: URLSearchParams) {
+  const visitorId = getVisitorId();
+  if (visitorId) params.set('visitor_id', visitorId);
 }
 
-export function buildCloudEntryUrl(
-  source: string,
-  search = '',
-  targetUrl = siteConfig.userUrl
-) {
+export function buildCloudEntryUrl(source: string, search = '', targetUrl = siteConfig.userUrl) {
   const incoming = new URLSearchParams(search);
   const forwarded = new URLSearchParams();
 
@@ -22,7 +17,7 @@ export function buildCloudEntryUrl(
     if (value) forwarded.set(key, value);
   });
   forwarded.set('fastgpt_source', source);
-  appendAttributionParams(forwarded);
+  appendVisitorId(forwarded);
 
   const separator = targetUrl.includes('?') ? '&' : '?';
   return `${targetUrl}${separator}${forwarded.toString()}`;

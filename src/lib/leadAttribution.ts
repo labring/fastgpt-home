@@ -399,9 +399,6 @@ export function reportAnonymousAttribution(): Promise<void> {
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,
         body: JSON.stringify({
-          name: 'FastGPT 官网访客',
-          email: 'anonymous-lead@fastgpt.io',
-          message: 'FastGPT 官网匿名访客来源采集',
           locale: document.documentElement.lang || 'zh',
           ...attribution
         })

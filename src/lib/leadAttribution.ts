@@ -70,7 +70,7 @@ export interface AttributionPayload {
 
 const STORAGE_KEY = 'xs_attr';
 const VISITOR_ID_KEY = 'fastgpt_visitor_id';
-const REPORTED_VISITOR_ID_KEY = 'fastgpt_reported_visitor_id';
+const REPORTED_ATTRIBUTION_KEY = 'fastgpt_reported_attribution';
 let pendingAttributionReport: Promise<void> | undefined;
 
 // 域名关键词 → 来源名（取域名里命中的第一个）
@@ -378,7 +378,7 @@ export function getAttributionPayload(): AttributionPayload {
   };
 }
 
-/** 首次访问时将匿名访客及来源提交到 CRM；未配置地址或已提交成功时跳过。 */
+/** 归因变化时将匿名访客提交到 CRM；未配置地址或当前快照已提交成功时跳过。 */
 export function reportAnonymousAttribution(): Promise<void> {
   if (typeof window === 'undefined') return Promise.resolve();
   if (pendingAttributionReport) return pendingAttributionReport;
@@ -391,7 +391,8 @@ export function reportAnonymousAttribution(): Promise<void> {
       trackVisit();
       const attribution = getAttributionPayload();
       if (!attribution.visitor_id) return;
-      if (localStorage.getItem(REPORTED_VISITOR_ID_KEY) === attribution.visitor_id) return;
+      const attributionSnapshot = JSON.stringify(attribution);
+      if (localStorage.getItem(REPORTED_ATTRIBUTION_KEY) === attributionSnapshot) return;
 
       const response = await fetch(`${crmApiUrl}/contacts/submit`, {
         method: 'POST',
@@ -407,7 +408,7 @@ export function reportAnonymousAttribution(): Promise<void> {
       });
 
       if (response.ok) {
-        localStorage.setItem(REPORTED_VISITOR_ID_KEY, attribution.visitor_id);
+        localStorage.setItem(REPORTED_ATTRIBUTION_KEY, attributionSnapshot);
       }
     } catch {
       // 归因上报失败不能影响官网访问，后续页面加载会重试。

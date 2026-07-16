@@ -8,7 +8,7 @@ function appendVisitorId(params: URLSearchParams) {
   if (visitorId) params.set('visitor_id', visitorId);
 }
 
-export function buildCloudEntryUrl(source: string, search = '', targetUrl = siteConfig.userUrl) {
+export function buildCloudEntryUrl(search = '', targetUrl = siteConfig.userUrl) {
   const incoming = new URLSearchParams(search);
   const forwarded = new URLSearchParams();
 
@@ -16,7 +16,6 @@ export function buildCloudEntryUrl(source: string, search = '', targetUrl = site
     const value = incoming.get(key);
     if (value) forwarded.set(key, value);
   });
-  forwarded.set('fastgpt_source', source);
   appendVisitorId(forwarded);
 
   const separator = targetUrl.includes('?') ? '&' : '?';

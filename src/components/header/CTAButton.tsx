@@ -7,10 +7,7 @@ import Link from 'next/link';
 
 const CTAButton = ({ locale }: { locale: any }) => {
   const getLinkConfig = () => {
-    return buildCloudEntryUrl(
-      'enterprise_footer_trial',
-      typeof window === 'undefined' ? '' : window.location.search
-    );
+    return buildCloudEntryUrl(typeof window === 'undefined' ? '' : window.location.search);
   };
 
   return (

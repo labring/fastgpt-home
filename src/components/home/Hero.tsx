@@ -65,7 +65,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
   const scale = useTransform(smoothProgress, [0, 0.20], [0.95, 1]);
   const offsetY = useTransform(smoothProgress, [0, 0.20], isDesktop ? [-160, 0] : [-80, 0]);
 
-  const startUrl = useStartUrl('home_hero_trial');
+  const startUrl = useStartUrl();
   const formattedStars = formatGitHubStars(initialStars);
   const heroDashboard = getHeroDashboardAsset(locale);
 

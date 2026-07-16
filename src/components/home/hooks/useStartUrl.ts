@@ -3,15 +3,15 @@
 import { useEffect, useState } from 'react';
 import { buildCloudEntryUrl } from '@/lib/cloudEntryUrl';
 
-export function useStartUrl(source: string, targetUrl?: string): string {
-  const [url, setUrl] = useState<string>(() => buildCloudEntryUrl(source, '', targetUrl));
+export function useStartUrl(targetUrl?: string): string {
+  const [url, setUrl] = useState<string>(() => buildCloudEntryUrl('', targetUrl));
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
     queueMicrotask(() => {
-      setUrl(buildCloudEntryUrl(source, window.location.search, targetUrl));
+      setUrl(buildCloudEntryUrl(window.location.search, targetUrl));
     });
-  }, [source, targetUrl]);
+  }, [targetUrl]);
 
   return url;
 }

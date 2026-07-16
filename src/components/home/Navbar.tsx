@@ -43,8 +43,8 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
   const [langSheetOpen, setLangSheetOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || defaultLocale;
-  const desktopStartUrl = useStartUrl('home_nav_trial');
-  const mobileStartUrl = useStartUrl('home_nav_mobile_trial');
+  const desktopStartUrl = useStartUrl();
+  const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
   const routeWithoutLang = (() => {
     if (!params?.lang) return pathname;

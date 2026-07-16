@@ -18,7 +18,7 @@ function CloudPlanLink({
   source: string;
   children: React.ReactNode;
 }) {
-  const href = useStartUrl(source);
+  const href = useStartUrl();
 
   return (
     <Link

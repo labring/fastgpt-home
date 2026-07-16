@@ -16,7 +16,7 @@ export default function CloudEntryLink({
   children,
   ...props
 }: CloudEntryLinkProps) {
-  const href = useStartUrl(source, targetUrl);
+  const href = useStartUrl(targetUrl);
 
   return (
     <a

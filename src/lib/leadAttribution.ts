@@ -70,6 +70,8 @@ export interface AttributionPayload {
 
 const STORAGE_KEY = 'xs_attr';
 const VISITOR_ID_KEY = 'fastgpt_visitor_id';
+const REPORTED_VISITOR_ID_KEY = 'fastgpt_reported_visitor_id';
+let pendingAttributionReport: Promise<void> | undefined;
 
 // 域名关键词 → 来源名（取域名里命中的第一个）
 const SEARCH_ENGINES: [string, string][] = [
@@ -374,4 +376,45 @@ export function getAttributionPayload(): AttributionPayload {
     click_id: first.click_id,
     referrer_url: first.referrer
   };
+}
+
+/** 首次访问时将匿名访客及来源提交到 CRM；未配置地址或已提交成功时跳过。 */
+export function reportAnonymousAttribution(): Promise<void> {
+  if (typeof window === 'undefined') return Promise.resolve();
+  if (pendingAttributionReport) return pendingAttributionReport;
+
+  const crmApiUrl = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '');
+  if (!crmApiUrl) return Promise.resolve();
+
+  pendingAttributionReport = (async () => {
+    try {
+      trackVisit();
+      const attribution = getAttributionPayload();
+      if (!attribution.visitor_id) return;
+      if (localStorage.getItem(REPORTED_VISITOR_ID_KEY) === attribution.visitor_id) return;
+
+      const response = await fetch(`${crmApiUrl}/contacts/submit`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        keepalive: true,
+        body: JSON.stringify({
+          name: 'FastGPT 官网访客',
+          email: 'anonymous-lead@fastgpt.io',
+          message: 'FastGPT 官网匿名访客来源采集',
+          locale: document.documentElement.lang || 'zh',
+          ...attribution
+        })
+      });
+
+      if (response.ok) {
+        localStorage.setItem(REPORTED_VISITOR_ID_KEY, attribution.visitor_id);
+      }
+    } catch {
+      // 归因上报失败不能影响官网访问，后续页面加载会重试。
+    }
+  })().finally(() => {
+    pendingAttributionReport = undefined;
+  });
+
+  return pendingAttributionReport;
 }

@@ -62,7 +62,7 @@ export const htmlLangScript = `
 
     var target = normalize(stored) || browser || defaultLocale;
     if (locales.indexOf(target) !== -1) {
-      window.location.replace('/' + target);
+      window.location.replace('/' + target + window.location.search + window.location.hash);
     }
   }
 })();

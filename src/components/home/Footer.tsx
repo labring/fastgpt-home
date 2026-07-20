@@ -285,18 +285,15 @@ export default function Footer({ t }: { t: FooterT }) {
             style={{ rowGap: 16 }}
           >
             <div className="flex flex-wrap justify-center md:justify-start items-center text-center md:text-left" style={{ columnGap: 24, rowGap: 8 }}>
-              <span style={legalStyle}>
-                {t.copyright} ©{new Date().getFullYear()}{' '}
-                <a
-                  href="https://github.com/labring/FastGPT"
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  className="hover:opacity-70 transition-opacity"
-                  style={{ color: 'inherit' }}
-                >
-                  labring
-                </a>
-              </span>
+              <a
+                href="https://github.com/labring/FastGPT"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
+                className="hover:opacity-70 transition-opacity"
+                style={{ ...legalStyle, color: 'inherit' }}
+              >
+                {t.copyright.replace('{year}', String(new Date().getFullYear()))}
+              </a>
               {process.env.NEXT_PUBLIC_POLICE_FILING && (
                 <a
                   href="https://beian.mps.gov.cn/"

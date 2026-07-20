@@ -71,6 +71,7 @@ export interface AttributionPayload {
 const STORAGE_KEY = 'xs_attr';
 const VISITOR_ID_KEY = 'fastgpt_visitor_id';
 const REPORTED_ATTRIBUTION_KEY = 'fastgpt_reported_attribution';
+const VISITOR_ID_MAX_LENGTH = 64;
 let pendingAttributionReport: Promise<void> | undefined;
 
 // 域名关键词 → 来源名（取域名里命中的第一个）
@@ -250,9 +251,14 @@ function createVisitorId(): string {
   return `fg_${Date.now().toString(36)}_${random}`;
 }
 
+function normalizeVisitorId(value?: string | null): string {
+  const visitorId = value?.trim() || '';
+  return visitorId.length <= VISITOR_ID_MAX_LENGTH ? visitorId : '';
+}
+
 function getIncomingVisitorId(): string {
   try {
-    return new URLSearchParams(window.location.search).get('visitor_id') || '';
+    return normalizeVisitorId(new URLSearchParams(window.location.search).get('visitor_id'));
   } catch {
     return '';
   }
@@ -261,7 +267,7 @@ function getIncomingVisitorId(): string {
 export function getVisitorId(): string {
   if (typeof window === 'undefined') return '';
   try {
-    const storedVisitorId = localStorage.getItem(VISITOR_ID_KEY);
+    const storedVisitorId = normalizeVisitorId(localStorage.getItem(VISITOR_ID_KEY));
     if (storedVisitorId) return storedVisitorId;
 
     const incomingVisitorId = getIncomingVisitorId();
@@ -271,9 +277,10 @@ export function getVisitorId(): string {
     }
 
     const storedAttribution = safeGet();
-    if (storedAttribution?.visitor_id) {
-      localStorage.setItem(VISITOR_ID_KEY, storedAttribution.visitor_id);
-      return storedAttribution.visitor_id;
+    const attributionVisitorId = normalizeVisitorId(storedAttribution?.visitor_id);
+    if (attributionVisitorId) {
+      localStorage.setItem(VISITOR_ID_KEY, attributionVisitorId);
+      return attributionVisitorId;
     }
 
     const visitorId = createVisitorId();

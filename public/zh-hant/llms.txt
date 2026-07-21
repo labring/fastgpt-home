@@ -14,7 +14,6 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 - FAQ：https://fastgpt.io/zh/faq
 - 簡體中文 LLM Context：https://fastgpt.io/zh/llms.txt
 - 英文 LLM Context：https://fastgpt.io/en/llms.txt
-- 企業一體機：https://fastgpt.io/zh/enterprise
 - GitHub：https://github.com/labring/FastGPT
 
 ## 核心能力

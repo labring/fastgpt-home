@@ -25,9 +25,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url: `${baseUrl}/${locale}/faq`, lastModified: now })
   }
 
-  // 企业一体机页面目前只提供中文版本
-  entries.push({ url: `${baseUrl}/zh/enterprise`, lastModified: now })
-
   // FAQ 详情页
   for (const locale of faqContentLocaleCodes) {
     for (const faqId of Object.keys(faq)) {

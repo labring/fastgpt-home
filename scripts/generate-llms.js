@@ -20,8 +20,7 @@ const links = isCn
       pricingZhHant: 'https://fastgpt.cn/zh-hant/price',
       pricingZh: 'https://fastgpt.cn/zh/price',
       faqEn: 'https://fastgpt.cn/en/faq',
-      faqZh: 'https://fastgpt.cn/zh/faq',
-      enterprise: 'https://fastgpt.cn/zh/enterprise'
+      faqZh: 'https://fastgpt.cn/zh/faq'
     }
   : {
       website: 'https://fastgpt.io',
@@ -31,8 +30,7 @@ const links = isCn
       pricingZhHant: 'https://fastgpt.io/zh-hant/price',
       pricingZh: 'https://fastgpt.io/zh/price',
       faqEn: 'https://fastgpt.io/en/faq',
-      faqZh: 'https://fastgpt.io/zh/faq',
-      enterprise: 'https://fastgpt.io/zh/enterprise'
+      faqZh: 'https://fastgpt.io/zh/faq'
     };
 
 const englishContent = `# FastGPT
@@ -51,7 +49,6 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Simplified Chinese FAQ: ${links.faqZh}
 - Simplified Chinese LLM Context: ${baseUrl}/zh/llms.txt
 - Traditional Chinese LLM Context: ${baseUrl}/zh-hant/llms.txt
-- Enterprise Appliance: ${links.enterprise}
 - GitHub: https://github.com/labring/FastGPT
 
 ## Localized Entry Points
@@ -158,7 +155,6 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - FAQ：${links.faqZh}
 - 繁体中文 LLM Context：${baseUrl}/zh-hant/llms.txt
 - 英文 LLM Context：${baseUrl}/en/llms.txt
-- 企业一体机：${links.enterprise}
 - GitHub：https://github.com/labring/FastGPT
 
 ## 核心能力
@@ -226,7 +222,6 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 - FAQ：${links.faqZh}
 - 簡體中文 LLM Context：${baseUrl}/zh/llms.txt
 - 英文 LLM Context：${baseUrl}/en/llms.txt
-- 企業一體機：${links.enterprise}
 - GitHub：https://github.com/labring/FastGPT
 
 ## 核心能力

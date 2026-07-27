@@ -1,13 +1,13 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { siteConfig } from '@/config/site';
 import { buildCloudEntryUrl } from '@/lib/cloudEntryUrl';
 
 export function useStartUrl(targetUrl?: string): string {
-  const [url, setUrl] = useState<string>(() => buildCloudEntryUrl('', targetUrl));
+  const [url, setUrl] = useState<string>(targetUrl || siteConfig.userUrl);
 
   useEffect(() => {
-    if (typeof window === 'undefined') return;
     queueMicrotask(() => {
       setUrl(buildCloudEntryUrl(window.location.search, targetUrl));
     });

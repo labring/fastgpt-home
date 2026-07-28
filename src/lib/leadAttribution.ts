@@ -401,7 +401,7 @@ export function reportAnonymousAttribution(): Promise<void> {
       const attributionSnapshot = JSON.stringify(attribution);
       if (localStorage.getItem(REPORTED_ATTRIBUTION_KEY) === attributionSnapshot) return;
 
-      const response = await fetch(`${crmApiUrl}/contacts/submit`, {
+      const response = await fetch(`${crmApiUrl}/visitors/track`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,

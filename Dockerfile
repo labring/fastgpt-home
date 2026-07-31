@@ -47,3 +47,4 @@ LABEL org.opencontainers.image.source="https://github.com/labring/fastgpt-home"
 
 COPY --from=builder /app/out /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx-security-headers.conf /etc/nginx/security-headers.conf

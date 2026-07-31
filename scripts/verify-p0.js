@@ -8,6 +8,7 @@ const outDir = path.join(rootDir, 'out');
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
 const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 const faqId = 'Why-are-enterprises-paying-more';
+const maxSocialImageBytes = 200_000;
 
 function resolveHtml(route) {
   const relativeRoute = route.replace(/^\//, '');
@@ -49,10 +50,22 @@ function verifyFaqPage(route) {
 
 async function verifyImage() {
   const imagePath = path.join(rootDir, 'public', 'faq-social-preview.png');
+  const exportedImagePath = path.join(outDir, 'faq-social-preview.png');
   const metadata = await sharp(imagePath).metadata();
+  const { size } = fs.statSync(imagePath);
 
+  assert(fs.existsSync(exportedImagePath), 'Missing exported FAQ social image');
   assert.equal(metadata.width, 1200, 'FAQ social image width must be 1200');
   assert.equal(metadata.height, 630, 'FAQ social image height must be 630');
+  assert(
+    size < maxSocialImageBytes,
+    `FAQ social image must be smaller than ${maxSocialImageBytes} bytes`
+  );
+  assert.equal(
+    fs.statSync(exportedImagePath).size,
+    size,
+    'Exported FAQ social image must match the source asset'
+  );
 }
 
 function verifyNginxHeaders() {

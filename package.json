@@ -11,7 +11,8 @@
     "prepare": "husky",
     "format-code": "prettier --config \"./.prettierrc.js\" --write \"./**/src/**/*.{ts,tsx,scss}\"",
     "clean-locales": "node scripts/clean-locales.js",
-    "convert-images": "node scripts/convert-images.js"
+    "convert-images": "node scripts/convert-images.js",
+    "verify:p0": "node scripts/verify-p0.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

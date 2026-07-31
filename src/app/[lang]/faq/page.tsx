@@ -116,6 +116,9 @@ export async function generateMetadata({
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
   const dict = await getDictionary(faqLangName);
+  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
+  const socialImageAlt = `${dict.FAQ?.title || 'FAQ'} - FastGPT`;
 
   return {
     title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
@@ -127,12 +130,21 @@ export async function generateMetadata({
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
       type: 'website',
-      locale: localeMap[faqLangName] || 'en_US'
+      locale: localeMap[faqLangName] || 'en_US',
+      images: [
+        {
+          url: socialImageUrl,
+          width: 1200,
+          height: 630,
+          alt: socialImageAlt
+        }
+      ]
     },
     twitter: {
       card: 'summary_large_image',
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
-      description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.'
+      description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
+      images: [socialImageUrl]
     }
   };
 }

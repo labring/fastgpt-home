@@ -172,6 +172,8 @@ export async function generateMetadata({
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
   const faqItem = getFaqItem(id, faqLangName);
+  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 
   if (!faqItem) {
     return {
@@ -191,12 +193,21 @@ export async function generateMetadata({
       title: faqItem.Title,
       description: faqItem.Description,
       type: 'article',
-      locale: localeMap[faqLangName] || 'en_US'
+      locale: localeMap[faqLangName] || 'en_US',
+      images: [
+        {
+          url: socialImageUrl,
+          width: 1200,
+          height: 630,
+          alt: `${faqItem.Question} - FastGPT FAQ`
+        }
+      ]
     },
     twitter: {
       card: 'summary_large_image',
       title: faqItem.Title,
-      description: faqItem.Description
+      description: faqItem.Description,
+      images: [socialImageUrl]
     }
   };
 }

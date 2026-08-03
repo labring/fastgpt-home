@@ -164,7 +164,14 @@ export default function FAQList({ faqData, locale, langName }: FAQListProps) {
         <>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-[80px]">
             {visibleFAQs.map(([id, item]) => (
-              <FAQCard key={id} id={id} data={item} langName={langName} locale={locale} />
+              <FAQCard
+                key={id}
+                id={id}
+                data={item}
+                langName={langName}
+                locale={locale}
+                headingLevel="h2"
+              />
             ))}
           </div>
           {hasMore && (

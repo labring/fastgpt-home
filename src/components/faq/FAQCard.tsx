@@ -9,14 +9,22 @@ interface FAQCardProps {
   };
   langName?: string;
   locale?: any;
+  headingLevel?: 'h2' | 'h3';
 }
 
-export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardProps) {
+export default function FAQCard({
+  id,
+  data,
+  langName = 'zh',
+  locale,
+  headingLevel = 'h3'
+}: FAQCardProps) {
   const summary = data.Answers.substring(0, 150).trim() + '...';
+  const Heading = headingLevel === 'h2' ? 'h2' : 'h3';
 
   return (
     <a
-      href={`/${langName}/faq/${id}`}
+      href={`/${langName}/faq/${encodeURIComponent(id)}`}
       className="group block h-full"
     >
       <div
@@ -40,7 +48,7 @@ export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardPr
           </span>
         </div>
 
-        <h3
+        <Heading
           title={data.Question}
           className="text-[20px] font-normal mb-4 transition-colors cursor-default"
           style={{
@@ -54,7 +62,7 @@ export default function FAQCard({ id, data, langName = 'zh', locale }: FAQCardPr
           }}
         >
           {data.Question}
-        </h3>
+        </Heading>
 
         <p
           className="text-[16px] mb-4"

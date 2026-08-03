@@ -71,7 +71,7 @@ export default async function FAQPage({
                   {dict.Home.faq.badgeLink}
                 </a>
               </span>
-              <h2
+              <h1
                 className="
                   text-ink font-semibold
                   text-[28px] leading-[36px] tracking-[-0.56px]
@@ -79,7 +79,7 @@ export default async function FAQPage({
                 "
               >
                 {dict.FAQ?.title || 'Frequently Asked Questions'}
-              </h2>
+              </h1>
               {dict.FAQ?.subtitle && (
                 <p
                   className="

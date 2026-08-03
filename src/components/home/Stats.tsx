@@ -98,9 +98,9 @@ function StatItem({
         <span className="text-ink-sub text-[12px] md:text-[16px] leading-[18px] md:leading-[24px]">{suffix}</span>
       </div>
       <div className="flex flex-col items-center" style={{ rowGap: 24 }}>
-        <h4 className="text-ink text-[16px] md:text-[20px] font-medium leading-[24px] md:leading-[28px] tracking-[-0.32px] md:tracking-[-0.4px]">
+        <p className="m-0 text-ink text-[16px] md:text-[20px] font-medium leading-[24px] md:leading-[28px] tracking-[-0.32px] md:tracking-[-0.4px]">
           {label}
-        </h4>
+        </p>
         <p className="text-ink-sub text-[12px] md:text-[16px] leading-[18px] md:leading-[24px]">{desc}</p>
       </div>
     </m.div>

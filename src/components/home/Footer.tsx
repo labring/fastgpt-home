@@ -187,9 +187,9 @@ export default function Footer({ t }: { t: FooterT }) {
                     className={`flex flex-col w-full ${col.width === 220 ? 'md:w-[220px]' : 'md:w-[150px]'}`}
                     style={{ rowGap: 10, alignItems: 'flex-start' }}
                   >
-                    <h4 style={{ ...headingStyle, margin: 0, textAlign: 'left', width: '100%' }}>
+                    <h2 style={{ ...headingStyle, margin: 0, textAlign: 'left', width: '100%' }}>
                       {col.title}
-                    </h4>
+                    </h2>
                     {col.items.map((item) => {
                       if ('href' in item) {
                         if (item.cloudEntrySource) {

@@ -81,7 +81,7 @@ function FeatureCard({
         />
       </div>
       <div className="pt-0 px-[12px] md:px-[16px] pb-[12px] md:pb-[16px]">
-        <h5 className="t-feature-title mb-2">{title}</h5>
+        <h3 className="t-feature-title mb-2">{title}</h3>
         <p className="t-card-desc" style={{ color: 'rgb(71, 85, 105)', opacity: 0.6 }}>{desc}</p>
       </div>
     </m.div>

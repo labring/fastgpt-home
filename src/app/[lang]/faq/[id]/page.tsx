@@ -2,12 +2,21 @@ import { faq, faqContentLocaleCodes, getFaqItem, getFaqData, resolveFaqLocale } 
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
+import { normalizeFaqMetadata } from '@/lib/faqMetadata';
 import { ArrowLeft } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
 import { BreadcrumbJsonLd, FAQJsonLd } from '@/components/JsonLd';
+
+function decodeFaqId(id: string) {
+  try {
+    return decodeURIComponent(id);
+  } catch {
+    return id;
+  }
+}
 
 export default async function FAQDetailPage({
   params
@@ -18,8 +27,9 @@ export default async function FAQDetailPage({
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
   const dict = await getDictionary(faqLangName);
+  const faqId = decodeFaqId(id);
 
-  const faqItem = getFaqItem(id, faqLangName);
+  const faqItem = getFaqItem(faqId, faqLangName);
 
   if (!faqItem) {
     notFound();
@@ -27,7 +37,7 @@ export default async function FAQDetailPage({
 
   const localizedFaq = getFaqData(faqLangName);
   const relatedFAQs = Object.entries(localizedFaq)
-    .filter(([key, item]) => item.Category === faqItem.Category && key !== id)
+    .filter(([key, item]) => item.Category === faqItem.Category && key !== faqId)
     .slice(0, 4);
 
   const paragraphs = faqItem.Answers.split('\n\n');
@@ -39,7 +49,7 @@ export default async function FAQDetailPage({
         items={[
           { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}/${langName}` },
           { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}/${langName}/faq` },
-          { name: faqItem.Question, url: `${baseUrl}/${langName}/faq/${encodeURIComponent(id)}` }
+          { name: faqItem.Question, url: `${baseUrl}/${langName}/faq/${encodeURIComponent(faqId)}` }
         ]}
       />
       <FAQJsonLd items={[{ question: faqItem.Question, answer: faqItem.Answers }]} />
@@ -121,7 +131,14 @@ export default async function FAQDetailPage({
               <div className="mx-auto" style={{ maxWidth: 884 }}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[80px]">
                   {relatedFAQs.map(([key, item]) => (
-                    <FAQCard key={key} id={key} data={{ ...item, Answers: item.Answers.substring(0, 100) }} langName={langName} locale={dict.FAQ} />
+                    <FAQCard
+                      key={key}
+                      id={key}
+                      data={{ ...item, Answers: item.Answers.substring(0, 100) }}
+                      langName={langName}
+                      locale={dict.FAQ}
+                      headingLevel="h3"
+                    />
                   ))}
                 </div>
               </div>
@@ -171,7 +188,8 @@ export async function generateMetadata({
   const { lang, id } = await params;
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
-  const faqItem = getFaqItem(id, faqLangName);
+  const faqId = decodeFaqId(id);
+  const faqItem = getFaqItem(faqId, faqLangName);
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
   const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 
@@ -183,18 +201,20 @@ export async function generateMetadata({
     };
   }
 
+  const metadata = normalizeFaqMetadata(faqItem);
+
   return {
-    title: faqItem.Title,
-    description: faqItem.Description,
+    title: metadata.title,
+    description: metadata.description,
     keywords: faqItem.Keywords.split(', '),
-    alternates: getAlternates(faqLangName, `/faq/${id}`, faqContentLocaleCodes),
+    alternates: getAlternates(faqLangName, `/faq/${encodeURIComponent(faqId)}`, faqContentLocaleCodes),
     robots:
       faqLangName === langName
         ? { index: true, follow: true }
         : { index: false, follow: true },
     openGraph: {
-      title: faqItem.Title,
-      description: faqItem.Description,
+      title: metadata.title,
+      description: metadata.description,
       type: 'article',
       locale: localeMap[faqLangName] || 'en_US',
       images: [
@@ -208,8 +228,8 @@ export async function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      title: faqItem.Title,
-      description: faqItem.Description,
+      title: metadata.title,
+      description: metadata.description,
       images: [socialImageUrl]
     }
   };

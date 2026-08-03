@@ -117,7 +117,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
                     <div key={item.title} className="flex items-start gap-3">
                       <Icon size={18} className="text-ink-sub mt-1 flex-shrink-0" strokeWidth={1.5} />
                       <div>
-                        <h4 className="t-card-title mb-1">{item.title}</h4>
+                        <h3 className="t-card-title mb-1">{item.title}</h3>
                         <p className="t-card-desc">{item.desc}</p>
                       </div>
                     </div>
@@ -218,9 +218,9 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
                     loading="lazy"
                   />
                   <div className="flex flex-col gap-2 px-[8px]">
-                    <h4 className="text-[16px] font-semibold leading-[24px] tracking-[-0.32px]" style={{ color: '#475569' }}>
+                    <h3 className="text-[16px] font-semibold leading-[24px] tracking-[-0.32px]" style={{ color: '#475569' }}>
                       {item.title}
-                    </h4>
+                    </h3>
                     <p className="text-[16px] leading-[24px] tracking-[-0.16px]" style={{ color: '#475569', opacity: 0.6 }}>
                       {item.desc}
                     </p>

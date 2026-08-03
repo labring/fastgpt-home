@@ -50,7 +50,7 @@ export default function Services({ t }: { t: ServicesT }) {
                     {s.icon}
                   </div>
                   <div className="flex flex-col items-center" style={{ rowGap: 16 }}>
-                    <h4 className="t-card-title">{s.title}</h4>
+                    <h3 className="t-card-title">{s.title}</h3>
                     <p className="t-card-desc">{s.desc}</p>
                   </div>
                 </m.div>

@@ -11,7 +11,7 @@ const BaiduAnalytics = () => {
     <Script
       defer
       id="baidu-tongji"
-      strategy="afterInteractive"
+      strategy="lazyOnload"
       src={`https://hm.baidu.com/hm.js?${key}`}
     />
   );

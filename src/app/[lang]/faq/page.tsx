@@ -125,7 +125,10 @@ export async function generateMetadata({
     description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
     keywords: ['FastGPT', 'FAQ', 'AI Agent', 'Knowledge Base', 'Customer Support', 'AI Platform'],
     alternates: getAlternates(faqLangName, '/faq', faqContentLocaleCodes),
-    robots: faqLangName === langName ? undefined : { index: false, follow: true },
+    robots:
+      faqLangName === langName
+        ? { index: true, follow: true }
+        : { index: false, follow: true },
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',

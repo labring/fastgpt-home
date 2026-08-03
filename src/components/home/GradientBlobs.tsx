@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 
 interface GradientBlobsProps {
   colors?: string[];
@@ -26,7 +26,7 @@ export default function GradientBlobs({ colors = defaultColors }: GradientBlobsP
   return (
     <>
       {desktopBlobs.map((b, i) => (
-        <motion.div
+        <m.div
           key={i}
           aria-hidden
           className="pointer-events-none absolute hidden md:block rounded-full"
@@ -46,7 +46,7 @@ export default function GradientBlobs({ colors = defaultColors }: GradientBlobsP
       ))}
 
       {mobileBlobs.map((b, i) => (
-        <motion.div
+        <m.div
           key={`m${i}`}
           aria-hidden
           className="pointer-events-none absolute md:hidden rounded-full"

@@ -7,7 +7,7 @@ const OPENGRAPH_IMAGE = '/opengraph-image.png';
 const TWITTER_IMAGE = '/twitter-image.png';
 
 const baseSiteConfig = {
-  title: 'FastGPT - Enterprise AI Agent Builder | Open Source RAG Platform',
+  title: 'FastGPT - Enterprise AI Agent Builder & Open Source RAG',
   name: 'FastGPT',
   description:
     "Build powerful AI agents with FastGPT's visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.",
@@ -100,7 +100,7 @@ export const siteConfigZh: SiteConfig = {
   ...siteConfig,
   title: 'FastGPT - 企业级 AI 智能体构建平台 | 开源 RAG 系统',
   description:
-    'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、知识库和 RAG 系统。50万+用户信赖，立即免费开始。',
+    'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、企业知识库、RAG 检索、模型接入与应用编排能力，帮助团队快速构建、发布和管理安全可控的生产级 AI 应用，支持云服务与私有化部署，已服务全球 50 万+ 用户。',
   keywords: [
     'FastGPT',
     'AI Agent',

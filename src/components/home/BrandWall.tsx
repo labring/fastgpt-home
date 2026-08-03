@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import Image from 'next/image';
 import SectionHeader from '@/components/home/SectionHeader';
 
@@ -98,7 +98,7 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
       </div>
 
       <div className="bg-light-bg">
-        <motion.div
+        <m.div
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '-80px' }}
@@ -123,7 +123,7 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
               </div>
             ))}
           </div>
-        </motion.div>
+        </m.div>
       </div>
     </section>
   );

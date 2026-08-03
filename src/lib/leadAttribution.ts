@@ -14,6 +14,10 @@
  * channel_l1 为 canonical key（后端 / 飞书侧做中文映射），channel_l2 为具体来源名。
  */
 
+import { getVisitorId } from '@/lib/visitorId';
+
+export { getVisitorId } from '@/lib/visitorId';
+
 export type ChannelL1 =
   | 'paid_search'
   | 'paid_feed'
@@ -69,9 +73,7 @@ export interface AttributionPayload {
 }
 
 const STORAGE_KEY = 'xs_attr';
-const VISITOR_ID_KEY = 'fastgpt_visitor_id';
 const REPORTED_ATTRIBUTION_KEY = 'fastgpt_reported_attribution';
-const VISITOR_ID_MAX_LENGTH = 64;
 let pendingAttributionReport: Promise<void> | undefined;
 
 // 域名关键词 → 来源名（取域名里命中的第一个）
@@ -239,55 +241,6 @@ function safeGet(): StoredAttribution | null {
     return JSON.parse(raw) as StoredAttribution;
   } catch {
     return null;
-  }
-}
-
-function createVisitorId(): string {
-  const cryptoApi = globalThis.crypto;
-  if (cryptoApi && typeof cryptoApi.randomUUID === 'function') {
-    return cryptoApi.randomUUID();
-  }
-  const random = Math.random().toString(36).slice(2, 12);
-  return `fg_${Date.now().toString(36)}_${random}`;
-}
-
-function normalizeVisitorId(value?: string | null): string {
-  const visitorId = value?.trim() || '';
-  return visitorId.length <= VISITOR_ID_MAX_LENGTH ? visitorId : '';
-}
-
-function getIncomingVisitorId(): string {
-  try {
-    return normalizeVisitorId(new URLSearchParams(window.location.search).get('visitor_id'));
-  } catch {
-    return '';
-  }
-}
-
-export function getVisitorId(): string {
-  if (typeof window === 'undefined') return '';
-  try {
-    const storedVisitorId = normalizeVisitorId(localStorage.getItem(VISITOR_ID_KEY));
-    if (storedVisitorId) return storedVisitorId;
-
-    const incomingVisitorId = getIncomingVisitorId();
-    if (incomingVisitorId) {
-      localStorage.setItem(VISITOR_ID_KEY, incomingVisitorId);
-      return incomingVisitorId;
-    }
-
-    const storedAttribution = safeGet();
-    const attributionVisitorId = normalizeVisitorId(storedAttribution?.visitor_id);
-    if (attributionVisitorId) {
-      localStorage.setItem(VISITOR_ID_KEY, attributionVisitorId);
-      return attributionVisitorId;
-    }
-
-    const visitorId = createVisitorId();
-    localStorage.setItem(VISITOR_ID_KEY, visitorId);
-    return visitorId;
-  } catch {
-    return '';
   }
 }
 

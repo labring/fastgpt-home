@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import dynamic from 'next/dynamic';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
@@ -63,7 +63,7 @@ export default function CTA({ t }: { t: CTAT }) {
                 buttons always render above the globe corner peek on mobile. */}
             <div className="relative z-10 md:absolute md:left-8 md:top-[165px] flex flex-col gap-[32px] md:gap-[32px] p-6 md:p-0 w-full md:w-[min(46%,520px)]">
               <div className="flex flex-col" style={{ rowGap: 8 }}>
-                <motion.h2
+                <m.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
@@ -73,8 +73,8 @@ export default function CTA({ t }: { t: CTAT }) {
                   {t.brand}
                   <br />
                   {t.title}
-                </motion.h2>
-                <motion.p
+                </m.h2>
+                <m.p
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
@@ -82,17 +82,17 @@ export default function CTA({ t }: { t: CTAT }) {
                   className="m-0 text-ink-sub text-[16px] md:text-[20px] font-normal leading-[26px] md:leading-[32px] tracking-[-0.16px] md:tracking-[-0.2px]"
                 >
                   {t.subtitle}
-                </motion.p>
+                </m.p>
               </div>
 
-              <motion.div
+              <m.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.6, delay: 0.3 }}
                 className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8 w-full"
               >
-                <motion.a
+                <m.a
                   href={startUrl}
                   rel="noopener noreferrer nofollow"
                   {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_bottom_trial')}
@@ -102,8 +102,8 @@ export default function CTA({ t }: { t: CTAT }) {
                   className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
                 >
                   {t.trial}
-                </motion.a>
-                <motion.a
+                </m.a>
+                <m.a
                   href={CONSULT_URL}
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -114,8 +114,8 @@ export default function CTA({ t }: { t: CTAT }) {
                   className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
                 >
                   {t.consult}
-                </motion.a>
-              </motion.div>
+                </m.a>
+              </m.div>
             </div>
 
             {/* Globe slot. Canvas is only created once `globeReady` flips.

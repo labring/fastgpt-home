@@ -26,12 +26,12 @@ export default function HomeLanding({
   return (
     <div className="home overflow-x-hidden">
       <HomeThemeFix />
-      <Navbar links={dict.links} t={t.navCta} />
+      <Navbar links={dict.links} t={t.navCta} locale={locale} />
       <main className="m-0 p-0">
         <HomeHeroSection stars={stars} locale={locale} t={t} />
         <ProductHighlights t={t.productHighlights} />
-        <Solutions t={t.solutions} />
-        <CaseStudies t={t.cases} />
+        <Solutions t={t.solutions} locale={locale} />
+        <CaseStudies t={t.cases} locale={locale} />
         <BrandWall t={t.brandWall} />
         <Services t={t.services} />
         <FAQ t={t.faq} />

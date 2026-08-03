@@ -36,13 +36,21 @@ function getNavLinkRybbitAttrs(link: NavLink) {
   return {};
 }
 
-export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta }) {
+export default function Navbar({
+  links = [],
+  t,
+  locale
+}: {
+  links?: NavLink[];
+  t: NavCta;
+  locale?: string;
+}) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(true);
   const [hideNavbar, setHideNavbar] = useState(false);
   const [langSheetOpen, setLangSheetOpen] = useState(false);
   const params = useParams<{ lang: string }>();
-  const lang = params?.lang || defaultLocale;
+  const lang = params?.lang || locale || defaultLocale;
   const desktopStartUrl = useStartUrl();
   const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
@@ -185,7 +193,7 @@ export default function Navbar({ links = [], t }: { links?: NavLink[]; t: NavCta
 
           <div className="hidden md:flex items-center gap-4">
             <div className="home-lang">
-              <LangSwitcher iconOnly />
+              <LangSwitcher iconOnly locale={lang} />
             </div>
             <a
               href={desktopStartUrl}

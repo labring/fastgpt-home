@@ -1,9 +1,8 @@
 'use client';
 
 import { useEffect, useRef, useState, useCallback } from 'react';
-import { motion, useMotionValue, animate } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import Image from 'next/image';
-import { useParams } from 'next/navigation';
 import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { getCasesAssets } from '@/components/home/assets';
@@ -78,15 +77,16 @@ function MetricIconSvg({ kind, size }: { kind: MetricIcon; size?: number }) {
 
 type CaseStudy = { key: string; title: string; image: string; metrics: CaseMetric[] };
 
-export default function CaseStudies({ t }: { t: CasesT }) {
+export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }) {
   const [index, setIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
-  const dragX = useMotionValue(0);
-  const isDragging = useRef(false);
+  const [dragX, setDragX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const dragXRef = useRef(0);
+  const isDraggingRef = useRef(false);
   const dragStartClientX = useRef(0);
   const dragStartVal = useRef(0);
-  const params = useParams<{ lang: string }>();
-  const caseAssets = getCasesAssets(params?.lang || 'en');
+  const caseAssets = getCasesAssets(locale);
   const imageByCaseKey: Record<string, string> = {
     cetc: caseAssets.cetc,
     cms: caseAssets.cms,
@@ -114,28 +114,32 @@ export default function CaseStudies({ t }: { t: CasesT }) {
   const MAX_DRAG = 700;
 
   const onPointerDown = (clientX: number) => {
-    isDragging.current = true;
+    isDraggingRef.current = true;
+    setIsDragging(true);
     dragStartClientX.current = clientX;
-    dragStartVal.current = dragX.get();
+    dragStartVal.current = dragXRef.current;
   };
 
   const onPointerMove = (clientX: number) => {
-    if (!isDragging.current) return;
+    if (!isDraggingRef.current) return;
     const delta = clientX - dragStartClientX.current;
-    const next = dragStartVal.current + delta;
-    dragX.set(Math.max(-MAX_DRAG, Math.min(MAX_DRAG, next)));
+    const nextDragX = Math.max(-MAX_DRAG, Math.min(MAX_DRAG, dragStartVal.current + delta));
+    dragXRef.current = nextDragX;
+    setDragX(nextDragX);
   };
 
   const onPointerUp = () => {
-    if (!isDragging.current) return;
-    isDragging.current = false;
-    const d = dragX.get();
+    if (!isDraggingRef.current) return;
+    isDraggingRef.current = false;
+    setIsDragging(false);
+    const d = dragXRef.current;
     if (d < -100) {
       next();
     } else if (d > 100) {
       prev();
     }
-    animate(dragX, 0, { type: 'spring', stiffness: 300, damping: 30 });
+    dragXRef.current = 0;
+    setDragX(0);
   };
 
   return (
@@ -160,9 +164,14 @@ export default function CaseStudies({ t }: { t: CasesT }) {
             onTouchMove={(e) => onPointerMove(e.touches[0].clientX)}
             onTouchEnd={() => onPointerUp()}
           >
-            <motion.div
+            <m.div
               className="h-[380px] md:h-[540px] flex items-start md:items-center justify-center case-perspective"
-              style={{ x: dragX }}
+              animate={{ x: dragX }}
+              transition={
+                isDragging
+                  ? { duration: 0 }
+                  : { type: 'spring', stiffness: 300, damping: 30 }
+              }
             >
               {cases.map((c, i) => {
                 let offset = i - index;
@@ -174,7 +183,7 @@ export default function CaseStudies({ t }: { t: CasesT }) {
                 const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
                 const baseX = isMobile ? offset * 340 : offset * 660;
                 return (
-                  <motion.div
+                  <m.div
                     key={i}
                     initial={false}
                     animate={{
@@ -189,10 +198,10 @@ export default function CaseStudies({ t }: { t: CasesT }) {
                     style={{ pointerEvents: isCenter ? 'auto' : 'none' }}
                   >
                     <CaseCard data={c} learnMore={t.learnMore} />
-                  </motion.div>
+                  </m.div>
                 );
               })}
-            </motion.div>
+            </m.div>
 
             <button
               onClick={prev}

@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import SectionHeader from '@/components/home/SectionHeader';
 import { StaggerContainer, StaggerItem } from '@/components/home/motion/Stagger';
 import { assets } from '@/components/home/assets';
@@ -63,13 +63,13 @@ function FeatureCard({
   tall?: boolean;
 }) {
   return (
-    <motion.div
+    <m.div
       whileHover={{ y: -4, boxShadow: '0 20px 40px -10px rgba(0,0,0,0.08)' }}
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className="rounded-[12px] md:rounded-[16px] bg-white overflow-hidden h-full flex flex-col p-[8px] md:p-[8px] gap-[12px] md:gap-[16px]"
     >
       <div className="overflow-hidden bg-white rounded-[6px] md:rounded-[8px]">
-        <motion.img
+        <m.img
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
           src={image}
@@ -84,6 +84,6 @@ function FeatureCard({
         <h5 className="t-feature-title mb-2">{title}</h5>
         <p className="t-card-desc" style={{ color: 'rgb(71, 85, 105)', opacity: 0.6 }}>{desc}</p>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

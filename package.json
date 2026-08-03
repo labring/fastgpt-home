@@ -5,14 +5,15 @@
   "scripts": {
     "dev": "next dev --turbopack",
     "prebuild": "node scripts/generate-robots.js && node scripts/generate-llms.js",
-    "build": "next build && node scripts/clean-faq-rsc.js && node scripts/copy-root-index.js && node scripts/fix-html-lang.js",
+    "build": "next build && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky",
     "format-code": "prettier --config \"./.prettierrc.js\" --write \"./**/src/**/*.{ts,tsx,scss}\"",
     "clean-locales": "node scripts/clean-locales.js",
     "convert-images": "node scripts/convert-images.js",
-    "verify:p0": "node scripts/verify-p0.js"
+    "verify:p0": "node scripts/verify-p0.js",
+    "verify:p1": "node scripts/verify-p1.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

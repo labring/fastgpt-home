@@ -1,7 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { AnimatePresence } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import FadeIn from '@/components/home/motion/FadeIn';
 
 type FaqItem = { title: string; content?: string; desc?: string };
@@ -28,7 +29,7 @@ function AccordionItem({ item, isOpen, onToggle }: { item: FaqItem; isOpen: bool
         >
           {item.title}
         </span>
-        <motion.span
+        <m.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.2 }}
           className="flex-shrink-0 w-6 h-6 flex items-center justify-center text-slate-400"
@@ -37,11 +38,11 @@ function AccordionItem({ item, isOpen, onToggle }: { item: FaqItem; isOpen: bool
             <path d="M10 4.1665V15.8332" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
             <path d="M4.1665 10H15.8332" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           </svg>
-        </motion.span>
+        </m.span>
       </button>
       <AnimatePresence initial={false}>
         {isOpen && (
-          <motion.div
+          <m.div
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -54,7 +55,7 @@ function AccordionItem({ item, isOpen, onToggle }: { item: FaqItem; isOpen: bool
             >
               {item.content || item.desc}
             </p>
-          </motion.div>
+          </m.div>
         )}
       </AnimatePresence>
     </div>

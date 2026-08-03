@@ -23,11 +23,17 @@ function TranslateIcon({ size = 20 }: { size?: number }) {
   );
 }
 
-export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
+export const LangSwitcher = ({
+  iconOnly = false,
+  locale
+}: {
+  iconOnly?: boolean;
+  locale?: string;
+}) => {
   const params = useParams<{ lang: string }>();
   const lang = params.lang;
   const pathname = usePathname();
-  const langName = lang || defaultLocale;
+  const langName = lang || locale || defaultLocale;
   const [open, setOpen] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const routeWithoutLang = (() => {
@@ -51,24 +57,6 @@ export const LangSwitcher = ({ iconOnly = false }: { iconOnly?: boolean }) => {
     rememberPreferredLanguage(value);
     navigateTo(getLocalizedPath(value));
   };
-
-  useEffect(() => {
-    if (lang) return;
-
-    const storedLang = localStorage.getItem('preferredLang');
-    if (storedLang && storedLang !== lang && Object.keys(localeNames).includes(storedLang)) {
-      let routeWithoutLang = pathname;
-
-      if (lang) {
-        const currentLangPrefix = `/${lang}`;
-        if (pathname.startsWith(currentLangPrefix)) {
-          routeWithoutLang = pathname.slice(currentLangPrefix.length) || '/';
-        }
-      }
-
-      navigateTo(routeWithoutLang === '/' ? `/${storedLang}` : `/${storedLang}${routeWithoutLang}`);
-    }
-  }, [lang, pathname]);
 
   useEffect(() => {
     const handler = (e: MouseEvent) => {

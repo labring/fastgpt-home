@@ -1,6 +1,6 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import SectionHeader from '@/components/home/SectionHeader';
 import { StaggerContainer, StaggerItem } from '@/components/home/motion/Stagger';
 
@@ -40,7 +40,7 @@ export default function Services({ t }: { t: ServicesT }) {
           <StaggerContainer className="grid grid-cols-2 gap-[32px] md:gap-[60px_24px]" initialDelay={0.5}>
             {services.map((s) => (
               <StaggerItem key={s.title}>
-                <motion.div
+                <m.div
                   whileHover={{ y: -4 }}
                   transition={{ duration: 0.3 }}
                   className="flex flex-col items-center text-center"
@@ -53,7 +53,7 @@ export default function Services({ t }: { t: ServicesT }) {
                     <h4 className="t-card-title">{s.title}</h4>
                     <p className="t-card-desc">{s.desc}</p>
                   </div>
-                </motion.div>
+                </m.div>
               </StaggerItem>
             ))}
           </StaggerContainer>

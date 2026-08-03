@@ -1,7 +1,8 @@
 'use client';
 
 import { ArrowUpRight } from 'lucide-react';
-import { motion, useScroll, useSpring, useTransform } from 'framer-motion';
+import { useScroll, useSpring, useTransform } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import { useEffect, useRef, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import { getHeroDashboardAsset } from '@/components/home/assets';
@@ -77,7 +78,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
     >
       {/* Desktop gradient blobs */}
       {blobs.map((b, i) => (
-        <motion.div
+        <m.div
           key={i}
           aria-hidden
           className="pointer-events-none absolute hidden md:block rounded-full"
@@ -99,7 +100,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
 
       {/* Mobile gradient blobs */}
       {mobileBlobs.map((b, i) => (
-        <motion.div
+        <m.div
           key={`m${i}`}
           aria-hidden
           className="pointer-events-none absolute md:hidden rounded-full"
@@ -126,7 +127,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
 
           {/* Text content */}
           <div className="relative max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px] md:gap-[32px] px-[16px] md:px-[32px]">
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: 'easeOut' }}
@@ -145,11 +146,11 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                 {t.followUs}
                 <ArrowUpRight size={14} />
               </a>
-            </motion.div>
+            </m.div>
 
             <div className="flex flex-col items-center gap-[24px] md:gap-[24px]">
               <div className="flex flex-col items-center">
-                <motion.p
+                <m.p
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.1, ease: [0.21, 0.47, 0.32, 0.98] }}
@@ -157,15 +158,13 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                   className="text-[58px] leading-[38px] tracking-[-1.74px] mb-[16px] md:mb-0 md:text-[58px] md:leading-[78px] md:tracking-[-1.74px]"
                 >
                   {t.brand}
-                </motion.p>
-                <h1
-                  className="text-ink text-[48px] leading-[62px] tracking-[-1.44px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold"
-                >
+                </m.p>
+                <h1 className="text-ink text-[48px] leading-[62px] tracking-[-1.44px] md:text-[58px] md:leading-[78px] md:tracking-[-1.74px] font-semibold">
                   {t.title}
                 </h1>
               </div>
 
-              <motion.p
+              <m.p
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
@@ -173,17 +172,17 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                 style={{ color: '#4b5563' }}
               >
                 {t.subtitle}
-              </motion.p>
+              </m.p>
             </div>
 
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.45, ease: 'easeOut' }}
               className="flex flex-col sm:flex-row items-stretch sm:items-center justify-center w-full sm:w-auto gap-[32px] sm:gap-8"
               data-hero-cta
             >
-              <motion.a
+              <m.a
                 href={CONSULT_URL}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
@@ -194,8 +193,8 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                 className="inline-flex items-center justify-center h-11 w-full sm:w-auto sm:min-w-[128px] px-8 rounded-full text-[16px] sm:text-[1rem] font-medium text-white bg-btn-dark border border-transparent tracking-[0.5px]"
               >
                 {t.consult}
-              </motion.a>
-              <motion.a
+              </m.a>
+              <m.a
                 href={startUrl}
                 rel="noopener noreferrer nofollow"
                 {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_hero_trial')}
@@ -206,8 +205,8 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                 style={{ border: '1px solid rgb(209, 213, 219)' }}
               >
                 {t.trial}
-              </motion.a>
-            </motion.div>
+              </m.a>
+            </m.div>
           </div>
 
           {/* Dashboard image — outside text container, own padding */}
@@ -215,7 +214,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
             className="relative mx-auto mt-0 md:mt-[48px] px-[16px] md:px-[32px] lg:px-[80px]"
             style={{ perspective: 1900 }}
           >
-            <motion.div
+            <m.div
               style={isMobile ? {} : { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
               className="hero-image-fade origin-bottom"
             >
@@ -224,12 +223,13 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                 alt={t.title}
                 width={3600}
                 height={1944}
-                priority
+                loading="eager"
+                fetchPriority="low"
                 sizes="100vw"
                 className="block w-full h-auto"
                 draggable={false}
               />
-            </motion.div>
+            </m.div>
           </div>
 
         {/* TrustedBy + Stats passed as children */}

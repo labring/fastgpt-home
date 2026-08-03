@@ -15,7 +15,7 @@ export function getHeroDashboardAsset(locale: string) {
   const language = normalizedLocale === 'zh' || normalizedLocale === 'zh-hant' ? 'zh' : 'en';
   const domain = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').includes('.cn') ? 'cn' : 'io';
 
-  return `${HERO_LOCAL}/kv-border-stroke-bold-${domain}-${language}.png`;
+  return `${HERO_LOCAL}/kv-border-stroke-bold-${domain}-${language}.webp`;
 }
 
 /**
@@ -27,10 +27,10 @@ export function getSolutionsAssets(locale: string) {
   const language = normalizedLocale === 'zh' || normalizedLocale === 'zh-hant' ? 'zh' : 'en';
 
   return {
-    sales: `${SOLUTIONS_LOCAL}/sol1-${language}.png`,
-    service: `${SOLUTIONS_LOCAL}/sol2-${language}.png`,
-    hr: `${SOLUTIONS_LOCAL}/sol3-${language}.png`,
-    finance: `${SOLUTIONS_LOCAL}/sol4-${language}.png`
+    sales: `${SOLUTIONS_LOCAL}/sol1-${language}.webp`,
+    service: `${SOLUTIONS_LOCAL}/sol2-${language}.webp`,
+    hr: `${SOLUTIONS_LOCAL}/sol3-${language}.webp`,
+    finance: `${SOLUTIONS_LOCAL}/sol4-${language}.webp`
   };
 }
 

@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import { formatGitHubStarsInThousands } from '@/lib/githubStarsDisplay';
 
 function useCountUp(end: number, decimals = 0, duration = 2000) {
@@ -82,7 +82,7 @@ function StatItem({
   const formatted = decimals > 0 ? value.toFixed(decimals) : value.toLocaleString();
 
   return (
-    <motion.div
+    <m.div
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
@@ -103,6 +103,6 @@ function StatItem({
         </h4>
         <p className="text-ink-sub text-[12px] md:text-[16px] leading-[18px] md:leading-[24px]">{desc}</p>
       </div>
-    </motion.div>
+    </m.div>
   );
 }

@@ -1,6 +1,7 @@
 'use client';
 
-import { motion, useReducedMotion, type Variants } from 'framer-motion';
+import { useReducedMotion, type Variants } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import type { ReactNode } from 'react';
 
 type Direction = 'up' | 'down' | 'left' | 'right' | 'none';
@@ -49,7 +50,7 @@ export default function FadeIn({
     }
   };
 
-  const MotionTag = motion[as];
+  const MotionTag = m[as] as typeof m.div;
 
   return (
     <MotionTag

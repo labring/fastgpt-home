@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { motion } from 'framer-motion';
+import * as m from 'framer-motion/m';
 import Image from 'next/image';
 import {
   Tag,
@@ -22,7 +22,6 @@ import FadeIn from '@/components/home/motion/FadeIn';
 import { getSolutionsAssets } from '@/components/home/assets';
 import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
-import { useParams } from 'next/navigation';
 
 const iconByKey: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   assistant: Tag, report: AudioLines, training: Users,
@@ -42,10 +41,9 @@ type SolutionsT = {
   }[];
 };
 
-export default function Solutions({ t }: { t: SolutionsT }) {
+export default function Solutions({ t, locale }: { t: SolutionsT; locale: string }) {
   const [activeTab, setActiveTab] = useState(0);
-  const params = useParams<{ lang: string }>();
-  const solutionAssets = getSolutionsAssets(params?.lang || 'en');
+  const solutionAssets = getSolutionsAssets(locale);
   const imageByTabKey: Record<string, string> = {
     sales: solutionAssets.sales,
     service: solutionAssets.service,
@@ -93,7 +91,7 @@ export default function Solutions({ t }: { t: SolutionsT }) {
                   }}
                 >
                   {activeTab === i && (
-                    <motion.span
+                    <m.span
                       layoutId="solutions-active-pill"
                       className="absolute inset-0"
                       style={{ backgroundColor: 'rgb(255, 255, 255)', borderRadius: 30, zIndex: 0 }}

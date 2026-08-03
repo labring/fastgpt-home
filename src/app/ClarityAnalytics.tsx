@@ -11,11 +11,10 @@ const ClarityAnalytics = () => {
         <Script
             defer
             id="clarity-tongji"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             src={`https://www.clarity.ms/tag/${key}`}
         />
     );
 };
 
 export default ClarityAnalytics;
-

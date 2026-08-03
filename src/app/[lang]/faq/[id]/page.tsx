@@ -188,7 +188,10 @@ export async function generateMetadata({
     description: faqItem.Description,
     keywords: faqItem.Keywords.split(', '),
     alternates: getAlternates(faqLangName, `/faq/${id}`, faqContentLocaleCodes),
-    robots: faqLangName === langName ? undefined : { index: false, follow: true },
+    robots:
+      faqLangName === langName
+        ? { index: true, follow: true }
+        : { index: false, follow: true },
     openGraph: {
       title: faqItem.Title,
       description: faqItem.Description,

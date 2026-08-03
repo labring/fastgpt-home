@@ -1,5 +1,5 @@
 import { siteConfig } from '@/config/site';
-import { getVisitorId } from '@/lib/leadAttribution';
+import { getVisitorId } from '@/lib/visitorId';
 
 const CAMPAIGN_KEYS = ['search', 'bd_vid', 'msclkid', 'k'] as const;
 

@@ -3,6 +3,7 @@ import ClarityAnalytics from '@/app/ClarityAnalytics';
 import LeadAttribution from '@/app/LeadAttribution';
 import RybbitAnalytics from '@/app/RybbitAnalytics';
 import { ThemeProvider } from '@/components/ThemeProvider';
+import MotionProvider from '@/components/home/motion/MotionProvider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
@@ -36,6 +37,10 @@ export const metadata = {
   creator: siteConfig.creator,
   icons: siteConfig.icons,
   metadataBase: new URL(siteConfig.metadataBase as string),
+  robots: {
+    index: true,
+    follow: true
+  },
   openGraph: siteConfig.openGraph,
   twitter: siteConfig.twitter,
   other: {
@@ -71,7 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem={false}
           forcedTheme="dark"
         >
-          {children}
+          <MotionProvider>{children}</MotionProvider>
         </ThemeProvider>
         <GoogleAnalytics />
         <BaiDuAnalytics />

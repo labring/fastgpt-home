@@ -3,6 +3,10 @@ import { localeMap, supportedLocaleCodes } from '@/lib/locales';
 
 export { localeMap };
 
+function getBaseUrl() {
+  return (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+}
+
 /**
  * Generate canonical URL and hreflang alternates for a given page.
  * Includes x-default pointing to the English version.
@@ -14,7 +18,7 @@ export function getAlternates(
   path: string = '',
   availableLocales: readonly string[] = supportedLocaleCodes
 ): Metadata['alternates'] {
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = getBaseUrl();
 
   // Canonical should always include the language prefix to avoid duplicate content
   // This ensures each language version has a unique canonical URL
@@ -35,5 +39,21 @@ export function getAlternates(
   return {
     canonical: canonicalUrl,
     languages
+  };
+}
+
+/**
+ * Generate alternates for the unprefixed root page.
+ * The root page is the canonical default-locale homepage for each site variant.
+ */
+export function getRootAlternates(
+  lang: string,
+  availableLocales: readonly string[] = supportedLocaleCodes
+): Metadata['alternates'] {
+  const alternates = getAlternates(lang, '', availableLocales);
+
+  return {
+    ...alternates,
+    canonical: `${getBaseUrl()}/`
   };
 }

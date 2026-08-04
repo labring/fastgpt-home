@@ -80,7 +80,13 @@ Plans:
   2. 2,000 条分类建议全部产生九类体系下的导入结果，每条结果保留置信度、人工复核状态、原分类和新分类。
   3. 发布人员可以通过逐条哈希或结构化快照证明批量导入前后的正文、slug 与 URL 一致。
   4. 发布人员可以 dry-run 批次、幂等重放相同输入、查看失败清单和批次记录，并使用回滚输入恢复写入前状态。
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+
+- [x] 04-01-PLAN.md — Import and validate the first 100 Meta records
+- [x] 04-02-PLAN.md — Build the fail-closed category batch engine
+- [x] 04-03-PLAN.md — Phase 4 integration audit
 **UI hint**: yes
 
 ### Phase 5: 整批发布验收与交接
@@ -105,5 +111,5 @@ Plans:
 | 1. 源数据与身份基线 | 3/3 | Complete | 2026-08-04 |
 | 2. 新增 FAQ 发布与双域 SEO | 3/3 | Complete | 2026-08-04 |
 | 3. 竞品对比页发布 | 5/5 | Complete (preview gate) | 2026-08-04 |
-| 4. 存量 FAQ 批量修复 | 0/TBD | Next | - |
-| 5. 整批发布验收与交接 | 0/TBD | Not started | - |
+| 4. 存量 FAQ 批量修复 | 3/3 | Complete (76 Meta ready; category full batch blocked) | 2026-08-04 |
+| 5. 整批发布验收与交接 | 0/TBD | Next | - |

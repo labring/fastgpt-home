@@ -16,7 +16,8 @@
     "verify:p1": "node scripts/verify-p1.js",
     "verify:p2": "node scripts/verify-p2.js",
     "verify:i18n-seo": "node scripts/verify-i18n-seo.js",
-    "verify:p3": "node scripts/verify-p3.js"
+    "verify:p3": "node scripts/verify-p3.js",
+    "verify:p4": "node scripts/verify-p4.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

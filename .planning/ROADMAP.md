@@ -61,7 +61,14 @@ Plans:
   3. 每个页面都输出独立 Meta、Open Graph、Twitter、Article 与 BreadcrumbList 结构化数据。
   4. 用户与复核人员可以看到或追溯真实内链、信息图、事实来源、核验日期、版本或套餐、更新记录及 90 天复核日期。
   5. 产品、销售与法务签发证据完整的页面可以公开发布；待签发页面保持预览状态并进入失败清单。
-**Plans**: TBD
+**Plans**: 5 plans
+
+Plans:
+- [ ] 03-01-PLAN.md — Define comparison contracts and import Dify/self-build source data
+- [ ] 03-02-PLAN.md — Import RAGFlow/MaxKB source data and close the four-record index
+- [ ] 03-03-PLAN.md — Build source manifest and fail-closed three-party signoff gate
+- [ ] 03-04-PLAN.md — Wire Chinese routes, SEO/JSON-LD, sitemap, and responsive template
+- [ ] 03-05-PLAN.md — Audit static build output and add repeatable Phase 3 verification
 **UI hint**: yes
 
 ### Phase 4: 存量 FAQ 批量修复

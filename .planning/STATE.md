@@ -2,16 +2,16 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: W2 官网内容上线
-current_phase: 1
-current_phase_name: 源数据与身份基线
-status: verifying
-stopped_at: Phase 1 execution complete
-last_updated: "2026-08-04T08:02:00.000Z"
+current_phase: 2
+current_phase_name: 新增 FAQ 发布与双域 SEO
+status: planning
+stopped_at: Phase 1 verified
+last_updated: "2026-08-04T08:08:00.000Z"
 last_activity: 2026-08-04
-last_activity_desc: Executed all three Phase 1 plans and generated source, identity, category, and gate evidence
+last_activity_desc: Verified Phase 1 goal backward, automated tests, source fingerprints, and production-file boundary
 progress:
   total_phases: 5
-  completed_phases: 0
+  completed_phases: 1
   total_plans: 3
   completed_plans: 3
   percent: 20
@@ -24,14 +24,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-04)
 
 **Core value:** 让用户与搜索引擎稳定获得准确、可核验、可访问的 FastGPT 产品信息。
-**Current focus:** Phase 1 — 源数据与身份基线
+**Current focus:** Phase 2 — 新增 FAQ 发布与双域 SEO
 
 ## Current Position
 
-Phase: 1 of 5 (源数据与身份基线)
-Plan: 3 of 3 in current phase
-Status: Ready to verify
-Last activity: 2026-08-04 — Executed all three Phase 1 plans and generated source, identity, category, and gate evidence
+Phase: 2 of 5 (新增 FAQ 发布与双域 SEO)
+Plan: 0 of TBD in current phase
+Status: Ready to discuss
+Last activity: 2026-08-04 — Verified Phase 1 goal backward, automated tests, source fingerprints, and production-file boundary
 
 Progress: [██░░░░░░░░] 20%
 

@@ -14,7 +14,7 @@
 | Publish verified static items and retain open gates as blocked | ✓ |
 | Omit unresolved rows from the handoff | |
 
-The handoff keeps every source row and uses the strictest gate result. Local static verification proves the implemented surface; pending signoffs, identity gaps, browser evidence, and live reachability remain visible release conditions.
+The handoff keeps every source row and uses the strictest gate result. Local static and browser verification prove the implemented surface; pending signoffs, identity gaps, and live reachability remain visible release conditions.
 
 ## Counting boundary
 
@@ -34,7 +34,17 @@ The new-content and legacy-repair arrays preserve separate source versions and b
 | Record macOS limitations and require case-sensitive CI evidence | ✓ |
 | Ignore the route-count discrepancy | |
 
-The handoff records the 2,830/2,860 macOS FAQ output gap and the existing P0 image check as explicit findings. The build itself passed; publication requires the documented case-sensitive gate.
+The handoff records the 2,830/2,860 macOS FAQ output gap as an explicit finding. The build itself passed, the locale-aware P0 image check passed, and publication requires the documented case-sensitive gate.
+
+## Browser evidence
+
+| Surface | Viewport | Result | Evidence |
+|---|---:|---|---|
+| Dify comparison page | 1,440 x 900 | PASS | `artifacts/phase5/uat/compare-desktop.png` |
+| Dify comparison page | 390 x 844 | PASS | `artifacts/phase5/uat/compare-mobile-harness.png` |
+| FAQ detail page | 1,440 x 900 | PASS | `artifacts/phase5/uat/faq-desktop.png` |
+
+The CDP layout report confirms each surface fits its viewport and preserves the expected content and structured-data markers.
 
 ## Rollback
 

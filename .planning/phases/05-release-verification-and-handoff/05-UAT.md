@@ -1,7 +1,7 @@
 # Phase 5 UAT: 整批发布验收与交接
 
 **Date:** 2026-08-04
-**Environment:** macOS worktree, Node static build output
+**Environment:** macOS worktree, Node static build output, Chrome CDP browser harness
 
 ## Automated scenarios
 
@@ -16,13 +16,14 @@
 | Production static build | PASS | 2,889 static pages |
 | Phase 3 preview/signoff gate | PASS as preview gate | 12 signoff blockers retained |
 | Phase 4 replay/rollback contract | PASS | `npm run verify:p4` |
+| Browser evidence report | PASS | `node scripts/phase5/test_browser_evidence.mjs` |
 
 ## Operational scenarios
 
 | Scenario | Result | Reason |
 |---|---|---|
-| Desktop browser inspection | PENDING | No browser executable is available in this environment |
-| Mobile browser inspection | PENDING | No browser executable is available in this environment |
+| Desktop browser inspection | PASS | `artifacts/phase5/uat/compare-desktop.png`, `artifacts/phase5/uat/faq-desktop.png` |
+| Mobile browser inspection | PASS | `artifacts/phase5/uat/compare-mobile-harness.png`; 390px layout bounds verified |
 | Live URL reachability | PENDING | Requires deployment/remote access |
 | Search crawl and dual-domain SEO evidence | PENDING | Requires deployed URLs and search tooling |
 
@@ -32,4 +33,3 @@
 - 606 category identity conflicts block the 2,000-row full batch and keep writes at zero.
 - Four comparison pages require product, sales, and legal signoffs.
 - Case-sensitive CI exact-set evidence remains required for the known macOS route collision.
-- Existing `verify:p0` reports a missing `og:image` on `/zh/faq/Why-are-enterprises-paying-more`.

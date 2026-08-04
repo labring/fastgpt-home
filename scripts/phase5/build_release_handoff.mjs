@@ -29,6 +29,11 @@ function buildHandoff() {
   const meta = readJson('artifacts/phase4/meta-overlay-report.json');
   const category = readJson('artifacts/phase4/category-batch-dry-run.json');
   const identity = readJson('artifacts/phase1/identity-baseline.json');
+  const browserEvidenceFile = path.join(ROOT, 'artifacts/phase5/uat/browser-evidence.json');
+  const browserEvidence = fs.existsSync(browserEvidenceFile)
+    ? JSON.parse(fs.readFileSync(browserEvidenceFile, 'utf8'))
+    : null;
+  const browserPassed = browserEvidence?.passed === true;
 
   const faqBatch = `faq-${faq.source.source_sha256.slice(0, 16)}`;
   const metaBatch = `meta-${meta.source.source_sha256.slice(0, 16)}-${meta.report_digest.slice(0, 12)}`;
@@ -121,21 +126,23 @@ function buildHandoff() {
       message: 'Product, sales, and legal signoffs remain pending for comparison pages.',
       evidence: 'artifacts/phase3/competitor-pages-manifest.json',
     },
-    {
+  ];
+  if (!browserPassed) {
+    blockers.push({
       id: 'browser-evidence-pending',
       requirement: 'REL-03',
       count: 1,
       message: 'Desktop and mobile browser evidence requires a browser-capable environment.',
       evidence: '.planning/phases/05-release-verification-and-handoff/05-UAT.md',
-    },
-    {
-      id: 'live-reachability-pending',
-      requirement: 'REL-04',
-      count: 1,
-      message: 'Live URL reachability and search crawl evidence are pending handoff execution.',
-      evidence: '.planning/phases/05-release-verification-and-handoff/05-UAT.md',
-    },
-  ];
+    });
+  }
+  blockers.push({
+    id: 'live-reachability-pending',
+    requirement: 'REL-04',
+    count: 1,
+    message: 'Live URL reachability and search crawl evidence are pending handoff execution.',
+    evidence: '.planning/phases/05-release-verification-and-handoff/05-UAT.md',
+  });
 
   const handoff = {
     id: 'w2-release-handoff',
@@ -185,7 +192,7 @@ function buildHandoff() {
       lint: 'passed',
       staticBuild: 'passed',
       caseSensitiveExactSet: 'required-in-ci',
-      browser: 'pending',
+      browser: browserPassed ? 'passed' : 'pending',
       liveReachability: 'pending',
     },
     blockers,
@@ -201,11 +208,12 @@ function buildHandoff() {
         'node scripts/phase2/test_faq_routes.mjs',
         'COMPARE_BUILD_OUT=out npm run verify:p3',
         'npm run verify:p4',
+        'node scripts/phase5/test_browser_evidence.mjs',
         'npm run verify:p5',
       ],
       knownEnvironmentFindings: [
         'macOS case-insensitive output reports 2,830 FAQ detail files against 2,860 sitemap routes because of 15 pre-existing case-only slug pairs.',
-        'Existing verify:p0 reports a missing og:image on /zh/faq/Why-are-enterprises-paying-more; this is outside the W2 overlay and remains a release finding.',
+        'Live URL reachability and search crawl evidence require the deployed handoff environment.',
       ],
     },
     rollback: {

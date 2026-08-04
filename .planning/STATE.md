@@ -5,10 +5,10 @@ milestone_name: W2 官网内容上线
 current_phase: 5
 current_phase_name: 整批发布验收与交接
 status: blocked
-stopped_at: Phase 5 verified; release handoff is blocked by unresolved identity, signoff, browser, and live-reachability gates
-last_updated: "2026-08-04T13:05:00.000Z"
+stopped_at: Phase 5 verified; release handoff is blocked by unresolved identity, signoff, and live-reachability gates
+last_updated: "2026-08-04T14:20:00.000Z"
 last_activity: 2026-08-04
-last_activity_desc: Verified the 64/2,100 release handoff and retained five publication blockers
+last_activity_desc: Added Chrome CDP browser evidence and retained four publication blockers in the 64/2,100 release handoff
 progress:
   total_phases: 5
   completed_phases: 5
@@ -31,7 +31,7 @@ See: .planning/PROJECT.md (updated 2026-08-04)
 Phase: 5 of 5 (整批发布验收与交接)
 Plan: 2 of 2 in current phase
 Status: Release blocked with handoff complete
-Last activity: 2026-08-04 — Verified 64 new items and 2,100 legacy rows in the release handoff
+Last activity: 2026-08-04 — Added desktop/mobile browser evidence and verified 64 new items and 2,100 legacy rows
 
 Progress: [██████████] 100%
 
@@ -69,6 +69,7 @@ Recent decisions affecting current work:
 - [Phase 2]: W2 FAQ 作为中文独有记录合并到 1,460 条中文运行时数据，中文 canonical 使用 `fastgpt.cn`，英文 canonical 使用 `fastgpt.io`。
 - [Phase 2]: 静态 FAQ exact-set 门禁在大小写敏感构建环境验证 1,400 条英文与 1,460 条中文物理页面；macOS 默认卷对 15 组既有大小写变体 fail closed，Ubuntu CI 是部署构建环境。
 - [Phase 4]: 首批 Meta 源表 100 行中 76 行完成唯一身份覆盖，24 行保留 unresolved-source；分类全量 dry-run 固定为 606 冲突、0 写入，显式 allowlist 才能建立独立子批次。
+- [Phase 5]: Chrome CDP desktop/mobile evidence passes; live reachability remains an external operational gate.
 
 ### Pending Todos
 

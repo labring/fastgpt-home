@@ -12,7 +12,8 @@ Produce one release handoff that enumerates all 64 new content items and 2,100 l
 - The four competitor pages are enumerated from `artifacts/phase3/competitor-pages-manifest.json`. Their static pages remain preview pages while product, sales, and legal signoffs are pending.
 - The 100 Meta rows and 2,000 category rows remain separate arrays in the handoff. Meta records keep their source URLs and report matched/unresolved status; category records keep their source URLs, category IDs, identity status, confidence, review flag, and full-batch dry-run result.
 - A release gate requires all item-level blockers to be resolved, the case-sensitive deployment build to pass, browser evidence to be captured, and live URL reachability to be checked. The current handoff therefore has `blocked` status with explicit evidence rather than a false published claim.
-- Phase 2's macOS case-insensitive route count gap and the existing P0 `og:image` check are recorded as environment/regression findings. The case-sensitive CI build is the exact-set authority.
+- Phase 2's macOS case-insensitive route count gap is recorded as an environment finding. The case-sensitive CI build is the exact-set authority. The locale-aware FAQ social image fix passes the P0 check.
+- Browser evidence uses the local static output served through Chrome CDP at 1,440px desktop and 390px mobile viewports. The evidence report covers the comparison page desktop/mobile surfaces and an English FAQ detail page.
 - Rollback instructions point to the immutable Phase 4 batch artifacts. The category full batch has zero writes; any future allowlist batch must provide its own batch ID, snapshot, and matching rollback.
 
 ## Verification Contract

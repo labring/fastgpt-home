@@ -6,7 +6,10 @@ const sharp = require('sharp');
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
+const cnBaseUrl = (
+  process.env.NEXT_PUBLIC_CN_HOME_URL ||
+  (new URL(baseUrl).hostname.endsWith('.cn') ? baseUrl : 'https://fastgpt.cn')
+).replace(/\/$/, '');
 const faqId = 'Why-are-enterprises-paying-more';
 const maxSocialImageBytes = 200_000;
 
@@ -32,7 +35,7 @@ function hasMeta(html, attribute, value, content) {
   );
 }
 
-function verifyFaqPage(route) {
+function verifyFaqPage(route, socialImageUrl) {
   const html = resolveHtml(route);
 
   assert(hasMeta(html, 'property', 'og:image', socialImageUrl), `${route} is missing og:image`);
@@ -145,6 +148,12 @@ async function main() {
 
   verifyFaqPage('/faq');
   verifyFaqPage(`/faq/${faqId}`);
+
+  for (const locale of ['en', 'zh']) {
+    const socialImageUrl = `${locale === 'zh' ? cnBaseUrl : baseUrl}/faq-social-preview.png`;
+    verifyFaqPage(`/${locale}/faq`, socialImageUrl);
+    verifyFaqPage(`/${locale}/faq/${faqId}`, socialImageUrl);
+  }
 
   console.log(`P0 verification passed for ${baseUrl}`);
 }

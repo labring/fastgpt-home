@@ -1,0 +1,485 @@
+{
+  "id": "competitor-pages-manifest",
+  "schemaVersion": 1,
+  "generatedOn": "2026-08-04",
+  "reviewPolicy": {
+    "sourceVerifiedOn": "2026-07-20",
+    "nextReviewDays": 90,
+    "publicationStatuses": [
+      "preview",
+      "published"
+    ],
+    "evidenceStatuses": [
+      "official-public",
+      "not-publicly-listed",
+      "poc-required",
+      "contract-required"
+    ]
+  },
+  "sourceInputs": [
+    {
+      "id": "selection-memo-v1.1",
+      "title": "FastGPT 竞品对比页选型与口径",
+      "localPath": "W2-内容方向与首批内容-20260730/FastGPT-竞品对比页选型与口径-V1.1-星触达-20260730.md",
+      "sha256": "5877bce6f14d209c07bbf21c37cfd489fec1510c2022194ad2226e3010707a52",
+      "version": "V1.1 (2026-07-30)"
+    },
+    {
+      "id": "competitor-readme-v1.0",
+      "title": "竞品对比页首批四篇交付说明",
+      "localPath": "content/competitors/README.md",
+      "sha256": "77616d2543fd3a58a54f11ff201ae5e33890ba99dc1d15e6d2dbd12454a378b1",
+      "version": "V1.0 (2026-07-30)"
+    }
+  ],
+  "pages": [
+    {
+      "slug": "dify-vs-fastgpt",
+      "lang": "zh",
+      "status": "preview",
+      "sourcePath": "content/competitors/dify-vs-fastgpt.md",
+      "sourceHash": "c25614d6a8c7a1c294a5b828f93cd35fae00cc566b2355a27afb0e6f50adc27c",
+      "sourceRefs": [
+        {
+          "id": "draft-body",
+          "title": "Dify 与 FastGPT 怎么选：四种项目的分野与 POC 判据",
+          "localPath": "content/competitors/dify-vs-fastgpt.md",
+          "section": "全文五段与事实来源页脚",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.0",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "dify-docs",
+          "title": "Dify official documentation",
+          "url": "https://docs.dify.ai/",
+          "section": "官方公开资料",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-docs",
+          "title": "FastGPT official documentation",
+          "url": "https://doc.fastgpt.cn/",
+          "section": "官方公开资料",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        }
+      ],
+      "dates": {
+        "sourceVerifiedOn": "2026-07-20",
+        "datePublished": "2026-08-04",
+        "dateModified": "2026-07-30",
+        "nextReviewOn": "2026-10-28"
+      },
+      "publicFooter": {
+        "source": "Dify 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录",
+        "verifiedOn": "2026-07-20",
+        "version": "Dify Cloud / Community / Enterprise；FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
+        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+      },
+      "asset": {
+        "path": "/images/compare/dify-vs-fastgpt.svg",
+        "alt": "Dify 与 FastGPT 的能力、验证与选型路径示意图",
+        "width": 1200,
+        "height": 630
+      },
+      "internalLinks": [
+        {
+          "label": "私有化部署边界",
+          "target": "/zh/faq/private-deployment-data-boundary",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "开源版与商业版说明",
+          "target": "/zh/faq/open-source-vs-commercial-edition",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "官方定价页",
+          "target": "/zh/price",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        }
+      ],
+      "signoffs": [
+        {
+          "role": "product",
+          "status": "pending",
+          "signer": "FastGPT product",
+          "timestamp": "",
+          "evidenceRef": "pending-product-version-review"
+        },
+        {
+          "role": "sales",
+          "status": "pending",
+          "signer": "FastGPT sales",
+          "timestamp": "",
+          "evidenceRef": "pending-commercial-review"
+        },
+        {
+          "role": "legal",
+          "status": "pending",
+          "signer": "FastGPT legal",
+          "timestamp": "",
+          "evidenceRef": "pending-trademark-license-review"
+        }
+      ],
+      "gates": {
+        "source": "passed",
+        "contentAudit": "passed",
+        "asset": "passed",
+        "links": "passed",
+        "signoffs": "pending"
+      },
+      "failures": [
+        "signoffs:product signoff is pending or incomplete.",
+        "signoffs:sales signoff is pending or incomplete.",
+        "signoffs:legal signoff is pending or incomplete."
+      ]
+    },
+    {
+      "slug": "self-build-vs-platform",
+      "lang": "zh",
+      "status": "preview",
+      "sourcePath": "content/competitors/self-build-vs-platform.md",
+      "sourceHash": "311664f8f4dbbd77d4480675d0cdaef640584c5b944f1db6d0e166f7f378ca20",
+      "sourceRefs": [
+        {
+          "id": "draft-body",
+          "title": "自研或直接跑开源与用平台怎么选：四组必算成本",
+          "localPath": "content/competitors/self-build-vs-platform.md",
+          "section": "全文五段与事实来源页脚",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.0",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-docs",
+          "title": "FastGPT official documentation",
+          "url": "https://doc.fastgpt.cn/",
+          "section": "平台能力与交付路径",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-license",
+          "title": "FastGPT source repository and license",
+          "url": "https://github.com/labring/FastGPT",
+          "section": "许可证与商业边界",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        }
+      ],
+      "dates": {
+        "sourceVerifiedOn": "2026-07-20",
+        "datePublished": "2026-08-04",
+        "dateModified": "2026-07-30",
+        "nextReviewOn": "2026-10-28"
+      },
+      "publicFooter": {
+        "source": "FastGPT 官方文档、官方仓库、官方定价页与公开发布记录",
+        "verifiedOn": "2026-07-20",
+        "version": "FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
+        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+      },
+      "asset": {
+        "path": "/images/compare/self-build-vs-platform.svg",
+        "alt": "自研与平台方案的解析、运行时、安全和运维成本结构示意图",
+        "width": 1200,
+        "height": 630
+      },
+      "internalLinks": [
+        {
+          "label": "开源版与商业版说明",
+          "target": "/zh/faq/open-source-vs-commercial-edition",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "私有化部署边界",
+          "target": "/zh/faq/private-deployment-data-boundary",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "POC 测量清单",
+          "target": "/zh/faq/poc-design-checklist",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        }
+      ],
+      "signoffs": [
+        {
+          "role": "product",
+          "status": "pending",
+          "signer": "FastGPT product",
+          "timestamp": "",
+          "evidenceRef": "pending-product-version-review"
+        },
+        {
+          "role": "sales",
+          "status": "pending",
+          "signer": "FastGPT sales",
+          "timestamp": "",
+          "evidenceRef": "pending-commercial-review"
+        },
+        {
+          "role": "legal",
+          "status": "pending",
+          "signer": "FastGPT legal",
+          "timestamp": "",
+          "evidenceRef": "pending-license-review"
+        }
+      ],
+      "gates": {
+        "source": "passed",
+        "contentAudit": "passed",
+        "asset": "passed",
+        "links": "passed",
+        "signoffs": "pending"
+      },
+      "failures": [
+        "signoffs:product signoff is pending or incomplete.",
+        "signoffs:sales signoff is pending or incomplete.",
+        "signoffs:legal signoff is pending or incomplete."
+      ]
+    },
+    {
+      "slug": "ragflow-vs-fastgpt",
+      "lang": "zh",
+      "status": "preview",
+      "sourcePath": "content/competitors/ragflow-vs-fastgpt.md",
+      "sourceHash": "aff17f5fffdbdc9f2186334cdfef59267a0d69697cd7a069d41daf1360f8f1c1",
+      "sourceRefs": [
+        {
+          "id": "draft-body",
+          "title": "RAGFlow 与 FastGPT 怎么选：复杂文档与完整链路的分野",
+          "localPath": "content/competitors/ragflow-vs-fastgpt.md",
+          "section": "全文五段与事实来源页脚",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.0",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "ragflow-docs",
+          "title": "RAGFlow official documentation",
+          "url": "https://ragflow.io/docs/",
+          "section": "复杂文档解析与连接器",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-docs",
+          "title": "FastGPT official documentation",
+          "url": "https://doc.fastgpt.cn/",
+          "section": "知识工程与运营闭环",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        }
+      ],
+      "dates": {
+        "sourceVerifiedOn": "2026-07-20",
+        "datePublished": "2026-08-04",
+        "dateModified": "2026-07-30",
+        "nextReviewOn": "2026-10-28"
+      },
+      "publicFooter": {
+        "source": "RAGFlow 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录",
+        "verifiedOn": "2026-07-20",
+        "version": "RAGFlow Community / Enterprise；FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
+        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+      },
+      "asset": {
+        "path": "/images/compare/ragflow-vs-fastgpt.svg",
+        "alt": "RAGFlow 与 FastGPT 的复杂文档、POC 与完整链路对照示意图",
+        "width": 1200,
+        "height": 630
+      },
+      "internalLinks": [
+        {
+          "label": "复杂文档解析能力说明",
+          "target": "/zh/faq/poc-design-checklist",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "私有化部署边界",
+          "target": "/zh/faq/private-deployment-data-boundary",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "POC 测量清单",
+          "target": "/zh/faq/poc-design-checklist",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        }
+      ],
+      "signoffs": [
+        {
+          "role": "product",
+          "status": "pending",
+          "signer": "FastGPT product",
+          "timestamp": "",
+          "evidenceRef": "pending-product-version-review"
+        },
+        {
+          "role": "sales",
+          "status": "pending",
+          "signer": "FastGPT sales",
+          "timestamp": "",
+          "evidenceRef": "pending-commercial-review"
+        },
+        {
+          "role": "legal",
+          "status": "pending",
+          "signer": "FastGPT legal",
+          "timestamp": "",
+          "evidenceRef": "pending-trademark-license-review"
+        }
+      ],
+      "gates": {
+        "source": "passed",
+        "contentAudit": "passed",
+        "asset": "passed",
+        "links": "passed",
+        "signoffs": "pending"
+      },
+      "failures": [
+        "signoffs:product signoff is pending or incomplete.",
+        "signoffs:sales signoff is pending or incomplete.",
+        "signoffs:legal signoff is pending or incomplete."
+      ]
+    },
+    {
+      "slug": "maxkb-vs-fastgpt",
+      "lang": "zh",
+      "status": "preview",
+      "sourcePath": "content/competitors/maxkb-vs-fastgpt.md",
+      "sourceHash": "60162fa80f25cae929f5ca60c5461d6e57760f319d2f2b42f23b28dff7bb7002",
+      "sourceRefs": [
+        {
+          "id": "draft-body",
+          "title": "MaxKB 与 FastGPT 怎么选：采购可预测性与生产细粒度",
+          "localPath": "content/competitors/maxkb-vs-fastgpt.md",
+          "section": "全文五段与事实来源页脚",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.0",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "maxkb-docs",
+          "title": "MaxKB official documentation",
+          "url": "https://maxkb.cn/docs/",
+          "section": "私有化交付与采购形态",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-docs",
+          "title": "FastGPT official documentation",
+          "url": "https://doc.fastgpt.cn/",
+          "section": "生产运行时与治理",
+          "verifiedOn": "2026-07-20",
+          "version": "公开稳定资料",
+          "evidenceStatus": "official-public"
+        }
+      ],
+      "dates": {
+        "sourceVerifiedOn": "2026-07-20",
+        "datePublished": "2026-08-04",
+        "dateModified": "2026-07-30",
+        "nextReviewOn": "2026-10-28"
+      },
+      "publicFooter": {
+        "source": "MaxKB 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录",
+        "verifiedOn": "2026-07-20",
+        "version": "MaxKB 社区自托管 / 专业版 / 企业版；FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
+        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+      },
+      "asset": {
+        "path": "/images/compare/maxkb-vs-fastgpt.svg",
+        "alt": "MaxKB 与 FastGPT 的采购、治理、POC 与三年成本对照示意图",
+        "width": 1200,
+        "height": 630
+      },
+      "internalLinks": [
+        {
+          "label": "私有化部署边界",
+          "target": "/zh/faq/private-deployment-data-boundary",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "开源版与商业版说明",
+          "target": "/zh/faq/open-source-vs-commercial-edition",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        },
+        {
+          "label": "POC 测量清单",
+          "target": "/zh/faq/poc-design-checklist",
+          "locale": "zh",
+          "external": false,
+          "verified": true
+        }
+      ],
+      "signoffs": [
+        {
+          "role": "product",
+          "status": "pending",
+          "signer": "FastGPT product",
+          "timestamp": "",
+          "evidenceRef": "pending-product-version-review"
+        },
+        {
+          "role": "sales",
+          "status": "pending",
+          "signer": "FastGPT sales",
+          "timestamp": "",
+          "evidenceRef": "pending-commercial-review"
+        },
+        {
+          "role": "legal",
+          "status": "pending",
+          "signer": "FastGPT legal",
+          "timestamp": "",
+          "evidenceRef": "pending-trademark-license-review"
+        }
+      ],
+      "gates": {
+        "source": "passed",
+        "contentAudit": "passed",
+        "asset": "passed",
+        "links": "passed",
+        "signoffs": "pending"
+      },
+      "failures": [
+        "signoffs:product signoff is pending or incomplete.",
+        "signoffs:sales signoff is pending or incomplete.",
+        "signoffs:legal signoff is pending or incomplete."
+      ]
+    }
+  ]
+}

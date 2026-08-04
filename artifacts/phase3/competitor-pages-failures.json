@@ -1,0 +1,78 @@
+{
+  "id": "competitor-pages-failures",
+  "generatedOn": "2026-08-04",
+  "failures": [
+    {
+      "slug": "dify-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "product signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[0]"
+    },
+    {
+      "slug": "dify-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "sales signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[0]"
+    },
+    {
+      "slug": "dify-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "legal signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[0]"
+    },
+    {
+      "slug": "self-build-vs-platform",
+      "gate": "signoffs",
+      "reason": "product signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[1]"
+    },
+    {
+      "slug": "self-build-vs-platform",
+      "gate": "signoffs",
+      "reason": "sales signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[1]"
+    },
+    {
+      "slug": "self-build-vs-platform",
+      "gate": "signoffs",
+      "reason": "legal signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[1]"
+    },
+    {
+      "slug": "ragflow-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "product signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[2]"
+    },
+    {
+      "slug": "ragflow-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "sales signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[2]"
+    },
+    {
+      "slug": "ragflow-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "legal signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[2]"
+    },
+    {
+      "slug": "maxkb-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "product signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[3]"
+    },
+    {
+      "slug": "maxkb-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "sales signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[3]"
+    },
+    {
+      "slug": "maxkb-vs-fastgpt",
+      "gate": "signoffs",
+      "reason": "legal signoff is pending or incomplete.",
+      "evidencePath": "artifacts/phase3/competitor-pages-manifest.json#pages[3]"
+    }
+  ]
+}

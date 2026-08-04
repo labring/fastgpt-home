@@ -32,7 +32,12 @@ type JsonLdCopy = {
 
 function JsonLdScript({ data }: { data: object }) {
   return (
-    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(data).replace(/</g, '\\u003c')
+      }}
+    />
   );
 }
 
@@ -163,6 +168,48 @@ export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
         '@context': 'https://schema.org',
         '@type': 'BreadcrumbList',
         itemListElement: listItems
+      }}
+    />
+  );
+}
+
+export interface ArticleJsonLdProps {
+  headline: string;
+  description: string;
+  image: string;
+  url: string;
+  inLanguage: string;
+  datePublished?: string;
+  dateModified: string;
+  authorName?: string;
+  publisherName?: string;
+}
+
+export function ArticleJsonLd({
+  headline,
+  description,
+  image,
+  url,
+  inLanguage,
+  datePublished,
+  dateModified,
+  authorName = 'FastGPT',
+  publisherName = 'FastGPT'
+}: ArticleJsonLdProps) {
+  return (
+    <JsonLdScript
+      data={{
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline,
+        description,
+        image: [image],
+        inLanguage,
+        author: { '@type': 'Organization', name: authorName },
+        publisher: { '@type': 'Organization', name: publisherName },
+        mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+        ...(datePublished ? { datePublished } : {}),
+        dateModified
       }}
     />
   );

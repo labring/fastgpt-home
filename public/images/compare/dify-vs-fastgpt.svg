@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Dify and FastGPT comparison map</title>
+  <desc id="desc">A neutral comparison map for capability, proof of concept, and selection criteria.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="#ffffff" stroke="#dbe4f0" stroke-width="3"/>
+  <path d="M220 315h760" stroke="#b8c8dd" stroke-width="4" stroke-dasharray="12 14"/>
+  <circle cx="300" cy="315" r="92" fill="#e8f0ff" stroke="#3370ff" stroke-width="4"/>
+  <circle cx="900" cy="315" r="92" fill="#e8f7ef" stroke="#1e9c68" stroke-width="4"/>
+  <circle cx="600" cy="315" r="66" fill="#fff4dc" stroke="#d88918" stroke-width="4"/>
+  <text x="300" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#173b8f">Dify</text>
+  <text x="300" y="344" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#36547e">ecosystem</text>
+  <text x="900" y="307" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" font-weight="700" fill="#176b4c">FastGPT</text>
+  <text x="900" y="344" text-anchor="middle" font-family="Arial, sans-serif" font-size="19" fill="#356850">knowledge</text>
+  <text x="600" y="309" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" font-weight="700" fill="#8a5910">POC</text>
+  <text x="600" y="339" text-anchor="middle" font-family="Arial, sans-serif" font-size="17" fill="#8a5910">same conditions</text>
+  <text x="600" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#16243a">Compare the work, then verify</text>
+  <text x="600" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#5a6b82">capability  ·  license  ·  TCO  ·  evidence</text>
+</svg>

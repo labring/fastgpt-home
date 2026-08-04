@@ -99,7 +99,12 @@ Plans:
   3. 验收人员可以在桌面端与移动端核验列表、搜索、分类、详情、响应式表格、Meta、canonical、hreflang、内链与社交预览。
   4. 线上证据证明全部目标 URL 可访问、内容版本正确、搜索引擎可抓取且双域名 SEO 信号一致。
   5. 发布交接包包含源文件指纹、代码提交、构建版本、导入批次、自动与人工验收结果、开放项和可执行回滚步骤。
-**Plans**: TBD
+**Plans**: 2 plans
+
+Plans:
+
+- [x] 05-01-PLAN.md — Build the complete W2 release handoff
+- [x] 05-02-PLAN.md — Run final checks and document handoff gates
 **UI hint**: yes
 
 ## Progress
@@ -112,4 +117,4 @@ Plans:
 | 2. 新增 FAQ 发布与双域 SEO | 3/3 | Complete | 2026-08-04 |
 | 3. 竞品对比页发布 | 5/5 | Complete (preview gate) | 2026-08-04 |
 | 4. 存量 FAQ 批量修复 | 3/3 | Complete (76 Meta ready; category full batch blocked) | 2026-08-04 |
-| 5. 整批发布验收与交接 | 0/TBD | Next | - |
+| 5. 整批发布验收与交接 | 2/2 | Complete (release blocked) | 2026-08-04 |

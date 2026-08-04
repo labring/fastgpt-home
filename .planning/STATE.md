@@ -4,17 +4,17 @@ milestone: v1.0
 milestone_name: W2 官网内容上线
 current_phase: 5
 current_phase_name: 整批发布验收与交接
-status: planning
-stopped_at: Phase 4 verified with fail-closed legacy import blockers; Phase 5 ready to discuss
-last_updated: "2026-08-04T12:45:00.000Z"
+status: blocked
+stopped_at: Phase 5 verified; release handoff is blocked by unresolved identity, signoff, browser, and live-reachability gates
+last_updated: "2026-08-04T13:05:00.000Z"
 last_activity: 2026-08-04
-last_activity_desc: Verified Meta overlay, category dry-run, replay/rollback contract, and static build
+last_activity_desc: Verified the 64/2,100 release handoff and retained five publication blockers
 progress:
   total_phases: 5
-  completed_phases: 4
+  completed_phases: 5
   total_plans: 14
   completed_plans: 14
-  percent: 80
+  percent: 100
 ---
 
 # Project State
@@ -29,17 +29,17 @@ See: .planning/PROJECT.md (updated 2026-08-04)
 ## Current Position
 
 Phase: 5 of 5 (整批发布验收与交接)
-Plan: 0 of TBD in current phase
-Status: Ready to discuss
-Last activity: 2026-08-04 — Verified Phase 4 Meta overlay and fail-closed category batch
+Plan: 2 of 2 in current phase
+Status: Release blocked with handoff complete
+Last activity: 2026-08-04 — Verified 64 new items and 2,100 legacy rows in the release handoff
 
-Progress: [████████░░] 80%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 11
+- Total plans completed: 14
 - Average duration: —
 - Total execution time: 0 hours
 
@@ -89,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-04T12:45:00.000Z
-Stopped at: Phase 4 verified; Phase 5 ready to discuss
+Last session: 2026-08-04T13:05:00.000Z
+Stopped at: Phase 5 verified; release handoff blocked by explicit open gates
 Resume file: .planning/ROADMAP.md

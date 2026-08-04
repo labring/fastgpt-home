@@ -1,3 +1,5 @@
+import { faqW2Zh } from './w2';
+
 export type FaqItem = {
   Category: string;
   Question: string;
@@ -7,7 +9,7 @@ export type FaqItem = {
   Keywords: string;
 };
 
-export const faqZh: Record<string, FaqItem> = {
+const faqZhLegacy: Record<string, FaqItem> = {
   "Can-AI-intelligent-customer-service": {
     Category: `使用场景与最佳实践`,
     Question: `AI 智能客服平台真的能降低人力成本吗？`,
@@ -11208,4 +11210,9 @@ export const faqZh: Record<string, FaqItem> = {
     Description: `AI Agent 通过网络分段、零信任 IAM、全程加密和持续监控，确保混合云和本地部署的安全，统一执行合规框架并提供全面审计追踪，降低入侵风险并自动化合规报告。`,
     Keywords: `AI 自动化, 任务自动化 AI, AI 知识管理, AI 智能客服, 智能问答`,
   },
+};
+
+export const faqZh: Record<string, FaqItem> = {
+  ...faqZhLegacy,
+  ...faqW2Zh,
 };

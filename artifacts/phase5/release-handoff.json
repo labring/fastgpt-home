@@ -1,8 +1,8 @@
 {
   "id": "w2-release-handoff",
   "schemaVersion": "W2-2026-08-04-v1",
-  "generatedOn": "2026-08-04T12:33:14.805Z",
-  "preparedFromCommit": "bd37ec1b9113fcd542eae83a362d0654a62ed8a3",
+  "generatedOn": "2026-08-04T12:36:40.196Z",
+  "preparedFromCommit": "4387dada2109bbd692ca3ecc8254aefa01851bff",
   "releaseStatus": "blocked",
   "counts": {
     "newContent": 64,

@@ -66,13 +66,37 @@ Deferred to later content cycles.
 
 ## Traceability
 
-Roadmap creation will map every v1 requirement to exactly one phase.
+| Requirement | Phase | Status |
+|-------------|-------|--------|
+| FAQ-01 | Phase 1 | Pending |
+| FAQ-02 | Phase 1 | Pending |
+| FAQ-03 | Phase 2 | Pending |
+| FAQ-04 | Phase 2 | Pending |
+| FAQ-05 | Phase 2 | Pending |
+| FAQ-06 | Phase 2 | Pending |
+| FAQ-07 | Phase 5 | Pending |
+| CMP-01 | Phase 3 | Pending |
+| CMP-02 | Phase 3 | Pending |
+| CMP-03 | Phase 3 | Pending |
+| CMP-04 | Phase 3 | Pending |
+| CMP-05 | Phase 3 | Pending |
+| LEG-01 | Phase 1 | Pending |
+| LEG-02 | Phase 1 | Pending |
+| LEG-03 | Phase 4 | Pending |
+| LEG-04 | Phase 4 | Pending |
+| LEG-05 | Phase 4 | Pending |
+| LEG-06 | Phase 4 | Pending |
+| REL-01 | Phase 5 | Pending |
+| REL-02 | Phase 5 | Pending |
+| REL-03 | Phase 5 | Pending |
+| REL-04 | Phase 5 | Pending |
+| REL-05 | Phase 5 | Pending |
 
 **Coverage:**
 - v1 requirements: 23 total
-- Mapped to phases: 0
-- Unmapped: 23
+- Mapped to phases: 23
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-08-04*
-*Last updated: 2026-08-04 after requirements confirmation*
+*Last updated: 2026-08-04 after roadmap creation*

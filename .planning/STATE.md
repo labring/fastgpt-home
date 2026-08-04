@@ -5,14 +5,14 @@ milestone_name: W2 官网内容上线
 current_phase: 2
 current_phase_name: 新增 FAQ 发布与双域 SEO
 status: planning
-stopped_at: Phase 1 verified
-last_updated: "2026-08-04T08:08:00.000Z"
+stopped_at: Phase 2 plans created
+last_updated: "2026-08-04T08:16:00.000Z"
 last_activity: 2026-08-04
-last_activity_desc: Verified Phase 1 goal backward, automated tests, source fingerprints, and production-file boundary
+last_activity_desc: Created three executable Phase 2 plans covering W2 data, locale routes, dual-domain SEO, and build evidence
 progress:
   total_phases: 5
   completed_phases: 1
-  total_plans: 3
+  total_plans: 6
   completed_plans: 3
   percent: 20
 ---
@@ -29,9 +29,9 @@ See: .planning/PROJECT.md (updated 2026-08-04)
 ## Current Position
 
 Phase: 2 of 5 (新增 FAQ 发布与双域 SEO)
-Plan: 0 of TBD in current phase
-Status: Ready to discuss
-Last activity: 2026-08-04 — Verified Phase 1 goal backward, automated tests, source fingerprints, and production-file boundary
+Plan: 0 of 3 in current phase
+Status: Ready to execute
+Last activity: 2026-08-04 — Created three executable Phase 2 plans covering W2 data, locale routes, dual-domain SEO, and build evidence
 
 Progress: [██░░░░░░░░] 20%
 

@@ -12,7 +12,7 @@
 
 - [x] **Phase 1: 源数据与身份基线** - 锁定有效输入，完成 60 条新增 FAQ 校验、2,000 行存量身份对齐与九类分类契约。
 - [x] **Phase 2: 新增 FAQ 发布与双域 SEO** - 让 60 条中文 FAQ 可发现、可访问、可索引，并输出准确的页面与双域 SEO 信息。
-- [ ] **Phase 3: 竞品对比页发布** - 通过签发门禁发布四篇信息完整、响应式且可持续复核的竞品对比页。
+- [x] **Phase 3: 竞品对比页发布** - 通过签发门禁发布四篇信息完整、响应式且可持续复核的竞品对比页。
 - [ ] **Phase 4: 存量 FAQ 批量修复** - 在身份基线上安全写入 100 条 Meta 与 2,000 条分类，并保全正文和 URL。
 - [ ] **Phase 5: 整批发布验收与交接** - 以构建、自动化、人工和线上证据验收 64 条新内容与 2,100 条存量修复。
 
@@ -64,11 +64,11 @@ Plans:
 **Plans**: 5 plans
 
 Plans:
-- [ ] 03-01-PLAN.md — Define comparison contracts and import Dify/self-build source data
-- [ ] 03-02-PLAN.md — Import RAGFlow/MaxKB source data and close the four-record index
-- [ ] 03-03-PLAN.md — Build source manifest and fail-closed three-party signoff gate
-- [ ] 03-04-PLAN.md — Wire Chinese routes, SEO/JSON-LD, sitemap, and responsive template
-- [ ] 03-05-PLAN.md — Audit static build output and add repeatable Phase 3 verification
+- [x] 03-01-PLAN.md — Define comparison contracts and import Dify/self-build source data
+- [x] 03-02-PLAN.md — Import RAGFlow/MaxKB source data and close the four-record index
+- [x] 03-03-PLAN.md — Build source manifest and fail-closed three-party signoff gate
+- [x] 03-04-PLAN.md — Wire Chinese routes, SEO/JSON-LD, sitemap, and responsive template
+- [x] 03-05-PLAN.md — Audit static build output and add repeatable Phase 3 verification
 **UI hint**: yes
 
 ### Phase 4: 存量 FAQ 批量修复
@@ -104,6 +104,6 @@ Plans:
 |-------|----------------|--------|-----------|
 | 1. 源数据与身份基线 | 3/3 | Complete | 2026-08-04 |
 | 2. 新增 FAQ 发布与双域 SEO | 3/3 | Complete | 2026-08-04 |
-| 3. 竞品对比页发布 | 0/TBD | Not started | - |
-| 4. 存量 FAQ 批量修复 | 0/TBD | Not started | - |
+| 3. 竞品对比页发布 | 5/5 | Complete (preview gate) | 2026-08-04 |
+| 4. 存量 FAQ 批量修复 | 0/TBD | Next | - |
 | 5. 整批发布验收与交接 | 0/TBD | Not started | - |

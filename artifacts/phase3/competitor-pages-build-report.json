@@ -1,0 +1,66 @@
+{
+  "id": "competitor-pages-build-report",
+  "generatedOn": "2026-08-04T11:27:41.864Z",
+  "buildOut": "out",
+  "passed": true,
+  "expectedPageCount": 4,
+  "actualPageCount": 4,
+  "pages": [
+    {
+      "slug": "dify-vs-fastgpt",
+      "file": "out/zh/compare/dify-vs-fastgpt.html",
+      "status": "preview",
+      "passed": true,
+      "errors": [],
+      "exemptions": [
+        {
+          "pattern": "准确率更高",
+          "context": "」一个勾 最后一条纪律：这篇文章不主张任何一方「准确率更高」或「性能更好」。这类结论没有同条件的第三方测试"
+        },
+        {
+          "pattern": "性能更好",
+          "context": "条纪律：这篇文章不主张任何一方「准确率更高」或「性能更好」。这类结论没有同条件的第三方测试或可复现自测就"
+        }
+      ]
+    },
+    {
+      "slug": "self-build-vs-platform",
+      "file": "out/zh/compare/self-build-vs-platform.html",
+      "status": "preview",
+      "passed": true,
+      "errors": [],
+      "exemptions": []
+    },
+    {
+      "slug": "ragflow-vs-fastgpt",
+      "file": "out/zh/compare/ragflow-vs-fastgpt.html",
+      "status": "preview",
+      "passed": true,
+      "errors": [],
+      "exemptions": []
+    },
+    {
+      "slug": "maxkb-vs-fastgpt",
+      "file": "out/zh/compare/maxkb-vs-fastgpt.html",
+      "status": "preview",
+      "passed": true,
+      "errors": [],
+      "exemptions": [
+        {
+          "pattern": "准确率更高",
+          "context": "验收，而不是写成负面断言。同样也不主张任何一方「准确率更高」，这类结论只能由企业真实黄金集与统一压测条件给"
+        },
+        {
+          "pattern": "更安全",
+          "context": "有化路径完整 最后两条纪律：本文不主张任何一方「更安全」或「更可靠」——公开资料未说明某项控制，正确的"
+        },
+        {
+          "pattern": "更可靠",
+          "context": " 最后两条纪律：本文不主张任何一方「更安全」或「更可靠」——公开资料未说明某项控制，正确的处理是把它纳"
+        }
+      ]
+    }
+  ],
+  "comparisonSitemap": [],
+  "blockingFailures": []
+}

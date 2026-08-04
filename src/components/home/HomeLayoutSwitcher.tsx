@@ -18,7 +18,7 @@ export default function HomeLayoutSwitcher({ dict, children }: HomeLayoutSwitche
   const isHome = /^\/([a-z]{2,3}(?:-[A-Za-z]{2,4})?)?$/.test(pathname);
   const isTechArticle =
     /\/(?:api|dataset|deploy|integration|node|troubleshoot|tutorial)\/[^/]+$/.test(pathname);
-  const isSelfContained = /\/faq|\/price|\/tech-center/.test(pathname) || isTechArticle;
+  const isSelfContained = /\/faq|\/price|\/tech-center|\/compare/.test(pathname) || isTechArticle;
 
   if (isHome || isSelfContained) {
     return <>{children}</>;
@@ -26,6 +26,7 @@ export default function HomeLayoutSwitcher({ dict, children }: HomeLayoutSwitche
 
   return (
     <>
+      <JsonLd lang={pathname.split('/')[1] || 'en'} schema={dict.JsonLd} />
       <Navbar links={dict.links} t={t.navCta} />
       <main className="flex flex-col items-center mt-12 sm:mt-14 lg:mt-20">
         <div className="mx-4 sm:mx-6 md:mx-12 xl:mx-[60px] 2xl:max-w-7xl 2xl:mx-auto flex flex-col items-center margin-top-40">

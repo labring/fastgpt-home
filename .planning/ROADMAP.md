@@ -44,6 +44,11 @@ Plans:
   3. 每个新增详情页都在 HTML head、Open Graph 与 Twitter 中输出独立 Title 和 Description，并提供 Keywords、BreadcrumbList 与 FAQPage 结构化数据。
   4. `fastgpt.cn` 中文页面输出自身 canonical，`fastgpt.io/zh` 同文页面指向对应 `.cn` 页面，显式真实译文映射决定 hreflang 输出。
 **Plans**: TBD
+
+Plans:
+- [ ] 02-01-PLAN.md — Generate and validate the 60 W2 Chinese FAQ runtime records
+- [ ] 02-02-PLAN.md — Add locale-specific route enumeration and dual-domain FAQ SEO
+- [ ] 02-03-PLAN.md — Verify W2 static build output and extend P2 checks
 **UI hint**: yes
 
 ### Phase 3: 竞品对比页发布

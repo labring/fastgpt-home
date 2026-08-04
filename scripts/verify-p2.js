@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const rootDir = path.join(__dirname, '..');
-const outDir = path.join(rootDir, 'out');
+const outDir = path.resolve(process.env.FAQ_BUILD_OUT || path.join(rootDir, 'out'));
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
 const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
 const sampleFaqId = 'Why-are-enterprises-paying-more';
@@ -12,6 +12,8 @@ const {
   TITLE_MAX_LENGTH,
   DESCRIPTION_MAX_LENGTH
 } = require('../src/lib/faqMetadata.constants.json');
+const w2Baseline = require('../artifacts/phase1/faq-source-baseline.json');
+const w2FaqId = w2Baseline.rows[0].values.slug;
 
 function resolveHtml(route, required = true) {
   const relativeRoute = route.replace(/^\/+|\/+$/g, '');
@@ -168,6 +170,16 @@ function verifyAllFaqMetadata() {
   const faqFiles = walkHtmlFiles(outDir).filter(isFaqDetailFile);
   assert(faqFiles.length > 0, 'No FAQ detail HTML files found');
 
+  const sitemapPath = path.join(outDir, 'sitemap.xml');
+  assert(fs.existsSync(sitemapPath), 'Missing sitemap.xml');
+  const sitemap = fs.readFileSync(sitemapPath, 'utf8');
+  const expectedFaqUrls = (sitemap.match(/<loc>[^<]+\/faq\/[^<]+<\/loc>/g) || []).length;
+  assert.equal(
+    faqFiles.length,
+    expectedFaqUrls,
+    `Static FAQ detail count ${faqFiles.length} does not match sitemap route count ${expectedFaqUrls}`
+  );
+
   for (const filePath of faqFiles) {
     const html = fs.readFileSync(filePath, 'utf8');
     const relativePath = `/${path.relative(outDir, filePath).split(path.sep).join('/')}`;
@@ -198,6 +210,29 @@ function verifyDefaultLocaleMigrationCoverage() {
   }
 
   return legacyFaqFiles.length;
+}
+
+function verifyW2Faq() {
+  const source = w2Baseline.rows[0].values;
+  const route = `/zh/faq/${w2FaqId}`;
+  const html = resolveHtml(route);
+  verifyPageMetadata(route, html, { enforceLength: true });
+
+  const titleBase = source.title.replace(/\s*(?:[-|｜]\s*)?FastGPT\s*$/i, '').trim();
+  assert(getTitle(html).includes(titleBase), `${route} title must include its source title`);
+  assert(
+    getMetaContent(html, 'name', 'description').includes(source.description),
+    `${route} description must come from the source row`
+  );
+  const canonical = getTags(html, 'link').find((tag) => getAttribute(tag, 'rel') === 'canonical');
+  assert.equal(
+    new URL(getAttribute(canonical, 'href')).href,
+    `${baseUrl}${defaultLocale === 'zh' ? '/faq' : '/zh/faq'}/${encodeURIComponent(w2FaqId)}`,
+    `${route} must canonicalize to fastgpt.cn`
+  );
+  assert(html.includes('"@type":"FAQPage"'), `${route} is missing FAQPage JSON-LD`);
+  assert(html.includes('"@type":"BreadcrumbList"'), `${route} is missing BreadcrumbList JSON-LD`);
+  assert(!fs.existsSync(path.join(outDir, 'en', 'faq', `${w2FaqId}.html`)), 'W2 FAQ must not create an English page');
 }
 
 function main() {
@@ -257,8 +292,9 @@ function main() {
 
   const faqFileCount = verifyAllFaqMetadata();
   const migratedFaqFileCount = verifyDefaultLocaleMigrationCoverage();
+  verifyW2Faq();
   console.log(
-    `P2 verification passed for ${baseUrl}: ${faqFileCount} FAQ detail pages checked, ${migratedFaqFileCount} ${defaultLocale} migration targets matched`
+    `P2 verification passed for ${baseUrl}: ${faqFileCount} FAQ detail pages checked, ${migratedFaqFileCount} ${defaultLocale} migration targets matched, W2 sample ${w2FaqId} checked`
   );
 }
 

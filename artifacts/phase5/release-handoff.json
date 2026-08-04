@@ -1,8 +1,8 @@
 {
   "id": "w2-release-handoff",
   "schemaVersion": "W2-2026-08-04-v1",
-  "generatedOn": "2026-08-04T12:36:40.196Z",
-  "preparedFromCommit": "4387dada2109bbd692ca3ecc8254aefa01851bff",
+  "generatedOn": "2026-08-04T13:08:08.927Z",
+  "preparedFromCommit": "67b6e01d77e75121e8f2b0c0013b383338e0c985",
   "releaseStatus": "blocked",
   "counts": {
     "newContent": 64,
@@ -46,7 +46,7 @@
     "lint": "passed",
     "staticBuild": "passed",
     "caseSensitiveExactSet": "required-in-ci",
-    "browser": "pending",
+    "browser": "passed",
     "liveReachability": "pending"
   },
   "blockers": [
@@ -70,13 +70,6 @@
       "count": 12,
       "message": "Product, sales, and legal signoffs remain pending for comparison pages.",
       "evidence": "artifacts/phase3/competitor-pages-manifest.json"
-    },
-    {
-      "id": "browser-evidence-pending",
-      "requirement": "REL-03",
-      "count": 1,
-      "message": "Desktop and mobile browser evidence requires a browser-capable environment.",
-      "evidence": ".planning/phases/05-release-verification-and-handoff/05-UAT.md"
     },
     {
       "id": "live-reachability-pending",
@@ -34780,11 +34773,12 @@
       "node scripts/phase2/test_faq_routes.mjs",
       "COMPARE_BUILD_OUT=out npm run verify:p3",
       "npm run verify:p4",
+      "node scripts/phase5/test_browser_evidence.mjs",
       "npm run verify:p5"
     ],
     "knownEnvironmentFindings": [
       "macOS case-insensitive output reports 2,830 FAQ detail files against 2,860 sitemap routes because of 15 pre-existing case-only slug pairs.",
-      "Existing verify:p0 reports a missing og:image on /zh/faq/Why-are-enterprises-paying-more; this is outside the W2 overlay and remains a release finding."
+      "Live URL reachability and search crawl evidence require the deployed handoff environment."
     ]
   },
   "rollback": {

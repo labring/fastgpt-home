@@ -27,7 +27,12 @@
   2. 数据审计报告证明 60 条记录覆盖 14 类，所有 slug 唯一且符合规则，必填字段完整，逐字段内容与有效源文件一致。
   3. 2,000 行存量清单中的每一行都获得唯一内容身份或明确冲突状态，报告可以解释仓内 1,400 条、590 个缺失对象和 10 组重复 URL 的差异。
   4. 发布人员可以通过九个稳定分类 ID 管理分类，中英文页面分别显示对应本地化标签。
-**Plans**: TBD
+**Plans**: 3 plans
+
+Plans:
+- [ ] 01-01-PLAN.md — Build the deterministic V1.1 XLSX reader and source manifest contract
+- [ ] 01-02-PLAN.md — Validate and snapshot the 60-row FAQ source baseline
+- [ ] 01-03-PLAN.md — Resolve 2,000 inventory identities and validate the nine-category gate contract
 
 ### Phase 2: 新增 FAQ 发布与双域 SEO
 **Goal**: 用户与搜索引擎可以在正确域名和语言关系下发现、访问并理解全部 60 条新增中文 FAQ。
@@ -85,7 +90,7 @@
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. 源数据与身份基线 | 0/TBD | Not started | - |
+| 1. 源数据与身份基线 | 0/3 | Planned | - |
 | 2. 新增 FAQ 发布与双域 SEO | 0/TBD | Not started | - |
 | 3. 竞品对比页发布 | 0/TBD | Not started | - |
 | 4. 存量 FAQ 批量修复 | 0/TBD | Not started | - |

@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: W2 官网内容上线
-current_phase: 2
-current_phase_name: 新增 FAQ 发布与双域 SEO
+current_phase: 3
+current_phase_name: 竞品对比页发布
 status: planning
-stopped_at: Phase 2 plans created
-last_updated: "2026-08-04T08:16:00.000Z"
+stopped_at: Phase 2 verified
+last_updated: "2026-08-04T09:15:00.000Z"
 last_activity: 2026-08-04
-last_activity_desc: Created three executable Phase 2 plans covering W2 data, locale routes, dual-domain SEO, and build evidence
+last_activity_desc: Verified W2 data, dual-domain SEO, complete case-sensitive static route coverage, and build metadata
 progress:
   total_phases: 5
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 6
-  completed_plans: 3
-  percent: 20
+  completed_plans: 6
+  percent: 40
 ---
 
 # Project State
@@ -28,12 +28,12 @@ See: .planning/PROJECT.md (updated 2026-08-04)
 
 ## Current Position
 
-Phase: 2 of 5 (新增 FAQ 发布与双域 SEO)
-Plan: 0 of 3 in current phase
-Status: Ready to execute
-Last activity: 2026-08-04 — Created three executable Phase 2 plans covering W2 data, locale routes, dual-domain SEO, and build evidence
+Phase: 3 of 5 (竞品对比页发布)
+Plan: 0 of TBD in current phase
+Status: Ready to discuss
+Last activity: 2026-08-04 — Verified Phase 2 W2 FAQ release and deployment-equivalent static output
 
-Progress: [██░░░░░░░░] 20%
+Progress: [████░░░░░░] 40%
 
 ## Performance Metrics
 
@@ -66,6 +66,8 @@ Recent decisions affecting current work:
 - [Phase 1]: 2,000 行身份对齐审计是所有存量写入的前置门禁。
 - [Phase 3]: 竞品公开页需要产品、销售与法务签发证据。
 - [Phase 5]: 64 条新内容与 2,100 条存量修复共同进入最终验收。
+- [Phase 2]: W2 FAQ 作为中文独有记录合并到 1,460 条中文运行时数据，中文 canonical 使用 `fastgpt.cn`，英文 canonical 使用 `fastgpt.io`。
+- [Phase 2]: 静态 FAQ exact-set 门禁在大小写敏感构建环境验证 1,400 条英文与 1,460 条中文物理页面；macOS 默认卷对 15 组既有大小写变体 fail closed，Ubuntu CI 是部署构建环境。
 
 ### Pending Todos
 
@@ -75,6 +77,7 @@ None yet.
 
 - [Phase 1]: 100 条 Meta 尚有 24 条需要补齐真实对象来源。
 - [Phase 1]: 2,000 行分类输入包含 590 个仓内缺失对象和 10 组重复 URL，需在身份报告中逐条落定。
+- [Phase 2]: 15 组既有 FAQ slug 仅大小写不同，macOS 默认卷无法同时落盘；发布前需保持 Ubuntu/大小写敏感构建门禁。
 
 ## Deferred Items
 

@@ -11,7 +11,7 @@
 ## Phases
 
 - [x] **Phase 1: 源数据与身份基线** - 锁定有效输入，完成 60 条新增 FAQ 校验、2,000 行存量身份对齐与九类分类契约。
-- [ ] **Phase 2: 新增 FAQ 发布与双域 SEO** - 让 60 条中文 FAQ 可发现、可访问、可索引，并输出准确的页面与双域 SEO 信息。
+- [x] **Phase 2: 新增 FAQ 发布与双域 SEO** - 让 60 条中文 FAQ 可发现、可访问、可索引，并输出准确的页面与双域 SEO 信息。
 - [ ] **Phase 3: 竞品对比页发布** - 通过签发门禁发布四篇信息完整、响应式且可持续复核的竞品对比页。
 - [ ] **Phase 4: 存量 FAQ 批量修复** - 在身份基线上安全写入 100 条 Meta 与 2,000 条分类，并保全正文和 URL。
 - [ ] **Phase 5: 整批发布验收与交接** - 以构建、自动化、人工和线上证据验收 64 条新内容与 2,100 条存量修复。
@@ -46,9 +46,9 @@ Plans:
 **Plans**: TBD
 
 Plans:
-- [ ] 02-01-PLAN.md — Generate and validate the 60 W2 Chinese FAQ runtime records
-- [ ] 02-02-PLAN.md — Add locale-specific route enumeration and dual-domain FAQ SEO
-- [ ] 02-03-PLAN.md — Verify W2 static build output and extend P2 checks
+- [x] 02-01-PLAN.md — Generate and validate the 60 W2 Chinese FAQ runtime records
+- [x] 02-02-PLAN.md — Add locale-specific route enumeration and dual-domain FAQ SEO
+- [x] 02-03-PLAN.md — Verify W2 static build output and extend P2 checks
 **UI hint**: yes
 
 ### Phase 3: 竞品对比页发布
@@ -96,7 +96,7 @@ Plans:
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. 源数据与身份基线 | 3/3 | Complete | 2026-08-04 |
-| 2. 新增 FAQ 发布与双域 SEO | 0/TBD | Not started | - |
+| 2. 新增 FAQ 发布与双域 SEO | 3/3 | Complete | 2026-08-04 |
 | 3. 竞品对比页发布 | 0/TBD | Not started | - |
 | 4. 存量 FAQ 批量修复 | 0/TBD | Not started | - |
 | 5. 整批发布验收与交接 | 0/TBD | Not started | - |

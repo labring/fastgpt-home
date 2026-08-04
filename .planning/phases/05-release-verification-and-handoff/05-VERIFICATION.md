@@ -5,16 +5,16 @@
 
 ## Goal-backward result
 
-The repository now contains a complete, machine-readable W2 release handoff. The exact 64/2,100 scope is preserved, every source row has a URL and batch/result record, and the strict gate retains all unresolved blockers. The evidence supports a controlled handoff and a deterministic next release step after source resolution and operational checks.
+The repository now contains a complete, machine-readable W2 release handoff. The exact 64/2,100 scope is preserved, every source row has a URL and batch/result record, browser evidence covers desktop and mobile surfaces, and the strict gate retains all unresolved blockers. The evidence supports a controlled handoff and a deterministic next release step after source resolution, signoffs, and online checks.
 
 ## Requirement evidence
 
 | Requirement | Result | Evidence |
 |---|---|---|
-| FAQ-07 | PARTIAL | Phase 2 data/route/SEO checks pass; macOS exact-set and existing P0 findings remain open |
+| FAQ-07 | PARTIAL | Phase 2 data/route/SEO checks pass; macOS exact-set evidence remains required for the case-sensitive deployment build |
 | REL-01 | PARTIAL | TypeScript, lint, build, Phase 1/3/4 checks pass; strict Phase 2 CI gate remains required |
 | REL-02 | PASS | Handoff has 64 new items and 2,100 legacy rows with URL/source/batch/result |
-| REL-03 | PENDING | Browser desktop/mobile evidence is recorded as pending |
+| REL-03 | PASS | Chrome CDP evidence covers the comparison page at desktop/mobile viewports and an FAQ detail page; layout bounds fit each viewport |
 | REL-04 | PENDING | Live reachability and crawl evidence require deployed environment |
 | REL-05 | PASS | Source fingerprints, commits, commands, blockers, and rollback instructions are present |
 
@@ -34,4 +34,4 @@ The repository now contains a complete, machine-readable W2 release handoff. The
 
 - `artifacts/phase5/release-handoff.json`
 
-It records source SHA-256 values, canonical digests, code preparation commit, per-item URLs, batch IDs, status/result, five blockers, known environment findings, and rollback commands.
+It records source SHA-256 values, canonical digests, code preparation commit, per-item URLs, batch IDs, status/result, four blockers, browser evidence, known environment findings, and rollback commands.

@@ -28,7 +28,9 @@ assert.equal(handoff.legacyRepairItems.every((item) => item.url && item.sourceSh
 assert.equal(handoff.newContentItems.filter((item) => item.type === 'comparison-page').every((item) => item.status === 'preview'), true);
 assert.equal(handoff.blockers.some((blocker) => blocker.id === 'legacy-category-conflicts'), true);
 assert.equal(handoff.blockers.some((blocker) => blocker.id === 'comparison-signoffs'), true);
+assert.equal(handoff.blockers.some((blocker) => blocker.id === 'browser-evidence-pending'), false);
 assert.equal(handoff.gateResults.legacyCategories, 'blocked');
+assert.equal(handoff.gateResults.browser, 'passed');
 assert.equal(fs.existsSync('artifacts/phase5/release-handoff.json'), true, 'run the handoff builder before this test');
 
 console.log(`Release handoff validation passed: ${handoff.counts.newContent} new items, ${handoff.counts.legacyRepairs} legacy repair rows, ${handoff.blockers.length} blockers retained.`);

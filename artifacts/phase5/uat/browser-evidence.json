@@ -1,0 +1,220 @@
+{
+  "schemaVersion": "W2-2026-08-04-browser-v1",
+  "passed": true,
+  "capturedWith": "browser-harness CDP against local static out server",
+  "screenshots": [
+    {
+      "id": "comparison-desktop",
+      "file": "compare-desktop.png",
+      "width": 1440,
+      "height": 900,
+      "route": "/zh/compare/dify-vs-fastgpt",
+      "path": "artifacts/phase5/uat/compare-desktop.png"
+    },
+    {
+      "id": "comparison-mobile",
+      "file": "compare-mobile-harness.png",
+      "width": 390,
+      "height": 844,
+      "route": "/zh/compare/dify-vs-fastgpt",
+      "path": "artifacts/phase5/uat/compare-mobile-harness.png"
+    },
+    {
+      "id": "faq-desktop",
+      "file": "faq-desktop.png",
+      "width": 1440,
+      "height": 900,
+      "route": "/en/faq/Can-AI-intelligent-customer-service",
+      "path": "artifacts/phase5/uat/faq-desktop.png"
+    }
+  ],
+  "layouts": {
+    "comparison-mobile": {
+      "route": "/zh/compare/dify-vs-fastgpt",
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "document": {
+        "scrollWidth": 390,
+        "bodyScrollWidth": 390
+      },
+      "elements": {
+        "page": {
+          "x": 0,
+          "y": 0,
+          "width": 390,
+          "height": 13113.6171875,
+          "top": 0,
+          "right": 390,
+          "bottom": 13113.6171875,
+          "left": 0
+        },
+        "inner": {
+          "x": 12,
+          "y": 65,
+          "width": 366,
+          "height": 13048.6171875,
+          "top": 65,
+          "right": 378,
+          "bottom": 13113.6171875,
+          "left": 12
+        },
+        "hero": {
+          "x": 12,
+          "y": 153,
+          "width": 366,
+          "height": 360.1328125,
+          "top": 153,
+          "right": 378,
+          "bottom": 513.1328125,
+          "left": 12
+        },
+        "h1": {
+          "x": 12,
+          "y": 190,
+          "width": 366,
+          "height": 120.3515625,
+          "top": 190,
+          "right": 378,
+          "bottom": 310.3515625,
+          "left": 12
+        },
+        "figure": {
+          "x": 12,
+          "y": 549.1328125,
+          "width": 366,
+          "height": 222.1484375,
+          "top": 549.1328125,
+          "right": 378,
+          "bottom": 771.28125,
+          "left": 12
+        },
+        "image": {
+          "x": 12,
+          "y": 549.1328125,
+          "width": 366,
+          "height": 192.1484375,
+          "top": 549.1328125,
+          "right": 378,
+          "bottom": 741.28125,
+          "left": 12
+        }
+      }
+    },
+    "comparison-desktop": {
+      "route": "/zh/compare/dify-vs-fastgpt",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "elements": {
+        "page": {
+          "x": 0,
+          "y": 0,
+          "width": 1440,
+          "height": 8066.0234375,
+          "top": 0,
+          "right": 1440,
+          "bottom": 8066.0234375,
+          "left": 0
+        },
+        "inner": {
+          "x": 160,
+          "y": 43,
+          "width": 1120,
+          "height": 8023.0234375,
+          "top": 43,
+          "right": 1280,
+          "bottom": 8066.0234375,
+          "left": 160
+        },
+        "hero": {
+          "x": 310,
+          "y": 163,
+          "width": 820,
+          "height": 288.71875,
+          "top": 163,
+          "right": 1130,
+          "bottom": 451.71875,
+          "left": 310
+        },
+        "h1": {
+          "x": 310,
+          "y": 200,
+          "width": 820,
+          "height": 122.71875,
+          "top": 200,
+          "right": 1130,
+          "bottom": 322.71875,
+          "left": 310
+        },
+        "figure": {
+          "x": 240,
+          "y": 487.71875,
+          "width": 960,
+          "height": 534,
+          "top": 487.71875,
+          "right": 1200,
+          "bottom": 1021.71875,
+          "left": 240
+        },
+        "image": {
+          "x": 240,
+          "y": 487.71875,
+          "width": 960,
+          "height": 504,
+          "top": 487.71875,
+          "right": 1200,
+          "bottom": 991.71875,
+          "left": 240
+        }
+      }
+    },
+    "faq-desktop": {
+      "route": "/en/faq/Can-AI-intelligent-customer-service",
+      "viewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "document": {
+        "scrollWidth": 1440,
+        "bodyScrollWidth": 1440
+      },
+      "h1": {
+        "x": 396,
+        "y": 277.5,
+        "width": 648,
+        "height": 168,
+        "top": 277.5,
+        "right": 1044,
+        "bottom": 445.5,
+        "left": 396
+      },
+      "main": {
+        "x": 0,
+        "y": 0,
+        "width": 1440,
+        "height": 1922.5,
+        "top": 0,
+        "right": 1440,
+        "bottom": 1922.5,
+        "left": 0
+      },
+      "title": "Can AI intelligent customer service platforms really reduce labor costs?"
+    }
+  },
+  "staticDom": {
+    "comparisonRoute": "/zh/compare/dify-vs-fastgpt",
+    "faqRoute": "/en/faq/Can-AI-intelligent-customer-service",
+    "comparisonContent": "present",
+    "comparisonPreviewState": "present",
+    "comparisonJsonLd": "present",
+    "faqTitle": "present",
+    "faqSocialImage": "present"
+  }
+}

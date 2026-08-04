@@ -10,7 +10,7 @@
 
 ## Phases
 
-- [ ] **Phase 1: 源数据与身份基线** - 锁定有效输入，完成 60 条新增 FAQ 校验、2,000 行存量身份对齐与九类分类契约。
+- [x] **Phase 1: 源数据与身份基线** - 锁定有效输入，完成 60 条新增 FAQ 校验、2,000 行存量身份对齐与九类分类契约。
 - [ ] **Phase 2: 新增 FAQ 发布与双域 SEO** - 让 60 条中文 FAQ 可发现、可访问、可索引，并输出准确的页面与双域 SEO 信息。
 - [ ] **Phase 3: 竞品对比页发布** - 通过签发门禁发布四篇信息完整、响应式且可持续复核的竞品对比页。
 - [ ] **Phase 4: 存量 FAQ 批量修复** - 在身份基线上安全写入 100 条 Meta 与 2,000 条分类，并保全正文和 URL。
@@ -30,9 +30,9 @@
 **Plans**: 3 plans
 
 Plans:
-- [ ] 01-01-PLAN.md — Build the deterministic V1.1 XLSX reader and source manifest contract
-- [ ] 01-02-PLAN.md — Validate and snapshot the 60-row FAQ source baseline
-- [ ] 01-03-PLAN.md — Resolve 2,000 inventory identities and validate the nine-category gate contract
+- [x] 01-01-PLAN.md — Build the deterministic V1.1 XLSX reader and source manifest contract
+- [x] 01-02-PLAN.md — Validate and snapshot the 60-row FAQ source baseline
+- [x] 01-03-PLAN.md — Resolve 2,000 inventory identities and validate the nine-category gate contract
 
 ### Phase 2: 新增 FAQ 发布与双域 SEO
 **Goal**: 用户与搜索引擎可以在正确域名和语言关系下发现、访问并理解全部 60 条新增中文 FAQ。
@@ -90,7 +90,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 1. 源数据与身份基线 | 0/3 | Planned | - |
+| 1. 源数据与身份基线 | 3/3 | Executed; verification pending | 2026-08-04 |
 | 2. 新增 FAQ 发布与双域 SEO | 0/TBD | Not started | - |
 | 3. 竞品对比页发布 | 0/TBD | Not started | - |
 | 4. 存量 FAQ 批量修复 | 0/TBD | Not started | - |

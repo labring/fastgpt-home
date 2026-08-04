@@ -2,19 +2,19 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: W2 官网内容上线
-current_phase: 4
-current_phase_name: 存量 FAQ 批量修复
+current_phase: 5
+current_phase_name: 整批发布验收与交接
 status: planning
-stopped_at: Phase 3 verified; Phase 4 ready to discuss
-last_updated: "2026-08-04T12:30:00.000Z"
+stopped_at: Phase 4 verified with fail-closed legacy import blockers; Phase 5 ready to discuss
+last_updated: "2026-08-04T12:45:00.000Z"
 last_activity: 2026-08-04
-last_activity_desc: Verified four comparison pages, preview SEO, source manifest, and exact static build audit
+last_activity_desc: Verified Meta overlay, category dry-run, replay/rollback contract, and static build
 progress:
   total_phases: 5
-  completed_phases: 3
-  total_plans: 11
-  completed_plans: 11
-  percent: 60
+  completed_phases: 4
+  total_plans: 14
+  completed_plans: 14
+  percent: 80
 ---
 
 # Project State
@@ -24,16 +24,16 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-04)
 
 **Core value:** 让用户与搜索引擎稳定获得准确、可核验、可访问的 FastGPT 产品信息。
-**Current focus:** Phase 4 — 存量 FAQ 批量修复
+**Current focus:** Phase 5 — 整批发布验收与交接
 
 ## Current Position
 
-Phase: 3 of 5 (竞品对比页发布)
+Phase: 5 of 5 (整批发布验收与交接)
 Plan: 0 of TBD in current phase
 Status: Ready to discuss
-Last activity: 2026-08-04 — Verified Phase 3 comparison pages and fail-closed preview state
+Last activity: 2026-08-04 — Verified Phase 4 Meta overlay and fail-closed category batch
 
-Progress: [██████░░░░] 60%
+Progress: [████████░░] 80%
 
 ## Performance Metrics
 
@@ -68,6 +68,7 @@ Recent decisions affecting current work:
 - [Phase 5]: 64 条新内容与 2,100 条存量修复共同进入最终验收。
 - [Phase 2]: W2 FAQ 作为中文独有记录合并到 1,460 条中文运行时数据，中文 canonical 使用 `fastgpt.cn`，英文 canonical 使用 `fastgpt.io`。
 - [Phase 2]: 静态 FAQ exact-set 门禁在大小写敏感构建环境验证 1,400 条英文与 1,460 条中文物理页面；macOS 默认卷对 15 组既有大小写变体 fail closed，Ubuntu CI 是部署构建环境。
+- [Phase 4]: 首批 Meta 源表 100 行中 76 行完成唯一身份覆盖，24 行保留 unresolved-source；分类全量 dry-run 固定为 606 冲突、0 写入，显式 allowlist 才能建立独立子批次。
 
 ### Pending Todos
 
@@ -78,6 +79,7 @@ None yet.
 - [Phase 1]: 100 条 Meta 尚有 24 条需要补齐真实对象来源。
 - [Phase 1]: 2,000 行分类输入包含 590 个仓内缺失对象和 10 组重复 URL，需在身份报告中逐条落定。
 - [Phase 2]: 15 组既有 FAQ slug 仅大小写不同，macOS 默认卷无法同时落盘；发布前需保持 Ubuntu/大小写敏感构建门禁。
+- [Phase 4]: 24 条 Meta 对象与 606 条分类冲突需要权威源补齐，Phase 5 维持发布阻断。
 
 ## Deferred Items
 
@@ -87,6 +89,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-04T10:39:18.266Z
-Stopped at: Phase 3 verified; Phase 4 ready to discuss
+Last session: 2026-08-04T12:45:00.000Z
+Stopped at: Phase 4 verified; Phase 5 ready to discuss
 Resume file: .planning/ROADMAP.md

@@ -6,7 +6,7 @@
 <domain>
 ## Phase Boundary
 
-本阶段把 W2 存量修复包接入现有英文 FAQ：精确读取补 Meta 工作簿的 100 行，形成 English FAQ 的 Title/Description/Keywords overlay；读取分类重挂工作簿的完整 2,000 行，保留九类稳定分类 ID、原分类、置信度、人工复核标记和每行导入结果。写入只作用于已经存在且身份唯一的线上 FAQ 元数据与分类字段，正文、问题、slug、线上 URL 永久保持原值。批次必须先 dry-run，完整批次在身份冲突时 fail-closed；任何可写子集只能由显式源行 allowlist 授权，并以独立批次记录、前置快照和可验证回滚完成。
+本阶段把 W2 存量修复包接入现有英文 FAQ：精确读取补 Meta 工作簿的 100 行，形成 English FAQ 的 Title/Description overlay；读取分类重挂工作簿的完整 2,000 行，保留九类稳定分类 ID、原分类、置信度、人工复核标记和每行导入结果。源表中的 Keywords 只作为审计证据，运行时保留既有值。写入只作用于已经存在且身份唯一的线上 FAQ 元数据与分类字段，正文、问题、slug、线上 URL永久保持原值。批次必须先 dry-run，完整批次在身份冲突时 fail-closed；任何可写子集只能由显式源行 allowlist 授权，并以独立批次记录、前置快照和可验证回滚完成。
 
 </domain>
 
@@ -17,7 +17,7 @@
 
 - **D-401:** Meta 的唯一权威输入是 `/Users/longnv/bin/repo/fastgpt-data/W2-内容方向与首批内容-20260730/存量修复/FastGPT-存量FAQ补Meta-首批100条-V1.0-星触达-20260728.xlsx` 的 `FAQ Data` sheet。文件指纹固定为 SHA-256 `d9aeb3ede23d29a2c2a65eee61df381366db68c0301df9cedeee2e7ae9489811`、30,716 bytes；表头顺序为 `no`、`category`、`question`、`title`、`description`、`keywords`、`url`、`字符数(T/D)`、`生成方式`，数据区为第 2–101 行，恰好 100 行。
 - **D-402:** 100 行是一个完整、可审计的 overlay 数据集：100 个唯一 `question`、100 个唯一 `url`、源行号和 `no` 都保留。每一行先按 Phase 1 的 URL → 问句 → repo key 证据优先级解析到唯一仓内 key；当前按问句可命中 76 行，24 行需要补齐真实对象或进入失败清单。未形成唯一身份的行不会被静默丢弃，也不会让批次宣称完成 100 行。
-- **D-403:** Meta 写入字段严格来自源行的 `title`、`description`、`keywords`；`category` 仅作为源证据，分类改挂由独立分类批次负责。Meta 批次只更新 English FAQ 记录，保持现有 Chinese overlay、locale fallback、路由集合和 hreflang 关系；不生成翻译、不新增别名 URL。
+- **D-403:** Meta 写入字段严格限定为源行的 `title`、`description`；源 `keywords` 只进入审计报告，既有关键词值保持原样。`category` 仅作为源证据，分类改挂由独立分类批次负责。Meta 批次只更新 English FAQ 记录，保持现有 Chinese overlay、locale fallback、路由集合和 hreflang 关系；不生成翻译、不新增别名 URL。
 - **D-404:** 每行 Meta 通过既有源审计纪律：Title 35–58 个英文字符且不超过 60，Description 125–155 个英文字符；Title 不复述问句或追加固定后缀，Description 不截取答案前缀；跨行 Title/Description 不重复；内容只使用该条已发布答案中的事实；`100%`、`guaranteed`、`the best`、`fully secure` 等绝对化表述阻断导入。工作簿的 100/100、Title 40–58、Description 126–155、重复 0 作为输入验收基线。
 
 ### Category rehang and identity conflicts

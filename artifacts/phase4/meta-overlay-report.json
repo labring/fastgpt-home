@@ -1,0 +1,1942 @@
+{
+  "status": "preview",
+  "source": {
+    "workbook": "/Users/longnv/bin/repo/fastgpt-data/W2-内容方向与首批内容-20260730/存量修复/FastGPT-存量FAQ补Meta-首批100条-V1.0-星触达-20260728.xlsx",
+    "source_sha256": "d9aeb3ede23d29a2c2a65eee61df381366db68c0301df9cedeee2e7ae9489811",
+    "source_bytes": 30716,
+    "sheet": "FAQ Data",
+    "headers": [
+      "no",
+      "category",
+      "question",
+      "title",
+      "description",
+      "keywords",
+      "url",
+      "字符数(T/D)",
+      "生成方式"
+    ],
+    "data_row_count": 100
+  },
+  "repository": {
+    "file": "/Users/longnv/.codex/worktrees/0493/fastgpt-home/src/faq/en.ts",
+    "record_count": 1400,
+    "unique_questions": 1400
+  },
+  "summary": {
+    "source_rows": 100,
+    "matched_rows": 76,
+    "unresolved_rows": 24,
+    "source_errors": 0,
+    "applied_fields": [
+      "Title",
+      "Description"
+    ],
+    "writes": 0
+  },
+  "source_errors": [],
+  "rows": [
+    {
+      "source_row": 2,
+      "serial": "1",
+      "url": "https://fastgpt.io/en/faq/Can-AI-intelligent-customer-service-platforms-really-reduce-labor-costs",
+      "question": "Can AI intelligent customer service platforms really reduce labor costs?",
+      "repo_key": "Can-AI-intelligent-customer-service",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "How AI Lowers Customer Service Labor Costs",
+        "description": "Discover how automating routine inquiries with NLP and ML reduces labor costs by handling order status and troubleshooting 24/7.",
+        "keywords": "GPT Integration, AI Knowledge Management, Smart Assistant, AI Platform, Task Automation AI"
+      },
+      "before_hash": "1855273164bee4f1c0cbd35d878101c6507483f390856c0f7af574f884b8955e",
+      "after_hash": "c22ae1ef9b81d05f2e1d31037ba5e7d1dfdd93c8705619e01a529c8f0943863f",
+      "immutable_before_hash": "73573e901b4a73df65b3b1e16308a190c79c1799b5ceae298036cc85652e37ac",
+      "immutable_after_hash": "73573e901b4a73df65b3b1e16308a190c79c1799b5ceae298036cc85652e37ac"
+    },
+    {
+      "source_row": 3,
+      "serial": "6",
+      "url": "https://fastgpt.io/en/faq/Can-AI-platforms-make-customer-service-faster-and-more-accurate",
+      "question": "Can AI platforms make customer service faster and more accurate?",
+      "repo_key": "Can-AI-platforms-make-customer",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI Platforms: Faster, More Accurate Customer Service",
+        "description": "Learn how NLP and ML power chatbots, intelligent routing, and real-time suggestions to enhance speed and accuracy in customer service.",
+        "keywords": "Smart Assistant, Open Source AI, API Integration, AI Platform, Document AI"
+      },
+      "before_hash": "61a5a45396e876ad5dc70be217386ea6a742a7af3a2cbe855565a53995022ebc",
+      "after_hash": "e8b4564a6985871c33ce086cc2e4482c6734e48df21149cf6c37251a2259bb34",
+      "immutable_before_hash": "096a13f218257c230e0d33e8462d14e983fb126860a5b7ee5e90cf15dd32adb7",
+      "immutable_after_hash": "096a13f218257c230e0d33e8462d14e983fb126860a5b7ee5e90cf15dd32adb7"
+    },
+    {
+      "source_row": 4,
+      "serial": "14",
+      "url": "https://fastgpt.io/en/faq/Will-AI-Agents-replace-human-customer-service-representatives",
+      "question": "Will AI Agents replace human customer service representatives?",
+      "repo_key": "Will-AI-Agents-replace-human",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI Agents: Augmenting, Not Replacing, Human Agents",
+        "description": "Explore how AI agents handle routine inquiries, freeing human agents to focus on complex, emotionally nuanced customer interactions.",
+        "keywords": "Document AI, AI Automation, Enterprise AI, FastGPT, LLM Development"
+      },
+      "before_hash": "e8343dc40a22b2d1c06f04fd762880e25206e7527f226149b31388b44c43e6df",
+      "after_hash": "2f90c7c43fa8dde9c7dff65bdde207fc0769a982233f39fa25bf7d9a30b410fe",
+      "immutable_before_hash": "c475a98cadfdcb1db7786aa3b4bd4c444973c8c4e6d0b1aa049c51e1df4083bc",
+      "immutable_after_hash": "c475a98cadfdcb1db7786aa3b4bd4c444973c8c4e6d0b1aa049c51e1df4083bc"
+    },
+    {
+      "source_row": 5,
+      "serial": "44",
+      "url": "https://fastgpt.io/en/faq/What-are-the-main-costs-for-enterprises-deploying-AI-platforms",
+      "question": "What are the main costs for enterprises deploying AI platforms?",
+      "repo_key": "What-are-the-main-costs",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Understanding the Main Costs of Enterprise AI Deployment",
+        "description": "Explore infrastructure, specialized talent, and data processing costs that make up the budget for deploying AI platforms in enterprises.",
+        "keywords": "Vector Search, AI Automation, Document AI, Intelligent Q&A, FastGPT"
+      },
+      "before_hash": "734a996b5f0c21fe0c5399ef76fee2068b7f6e6fc0c252b73f835bf53f40243a",
+      "after_hash": "c05dc293abf047784e98f24bf5f54c5a3e4e92ace3a0615783d6db94d73f8dcf",
+      "immutable_before_hash": "fb96fcbdea2d05ffc5d0ed3693c7912b80edccda8af296cc2947b9f7c24095fc",
+      "immutable_after_hash": "fb96fcbdea2d05ffc5d0ed3693c7912b80edccda8af296cc2947b9f7c24095fc"
+    },
+    {
+      "source_row": 6,
+      "serial": "48",
+      "url": "https://fastgpt.io/en/faq/Why-do-enterprises-need-to-deploy-AI-platforms-in-the-early-stage",
+      "question": "Why do enterprises need to deploy AI platforms in the early stage?",
+      "repo_key": "Why-do-enterprises-need-to",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Benefits of Early AI Platform Deployment for Enterprises",
+        "description": "Understand how early AI platform adoption creates a scalable foundation, unifies data, and accelerates innovation, giving enterprises a competitive edge.",
+        "keywords": "AI Automation, AI Platform, GPT Integration, FastGPT, AI Chatbot"
+      },
+      "before_hash": "bb7e631638058a8a9c8a2f6755853ceca42d2b973893aa727129df5755622283",
+      "after_hash": "d0cac8736af9ffa1152ba56fd57faa70c8b2a4d7a35d979477d5b195028cd476",
+      "immutable_before_hash": "9891ecd9cc55d7fbc0e8cfa7a4aa6079fcd609739261c080c024f167833a06b9",
+      "immutable_after_hash": "9891ecd9cc55d7fbc0e8cfa7a4aa6079fcd609739261c080c024f167833a06b9"
+    },
+    {
+      "source_row": 7,
+      "serial": "57",
+      "url": "https://fastgpt.io/en/faq/What-impact-do-AI-platforms-have-on-traditional-customer-service-positions",
+      "question": "What impact do AI platforms have on traditional customer service positions?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Reshaping Traditional Customer Service Roles with AI",
+        "description": "Learn how AI automates routine tasks, enabling human agents to transition to complex, emotionally nuanced customer interactions and skill development.",
+        "keywords": "AI Knowledge Management, Open Source AI, Vector Search, Document AI, Intelligent Q&A"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 8,
+      "serial": "74",
+      "url": "https://fastgpt.io/en/faq/What-conditions-are-required-for-enterprises-to-deploy-AI-intelligent-platforms",
+      "question": "What conditions are required for enterprises to deploy AI intelligent platforms?",
+      "repo_key": "What-conditions-are-required-for",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Prerequisites for Deploying AI Platforms in Enterprises",
+        "description": "Discover the essential infrastructure, data, expertise, and resource requirements for successfully deploying an AI intelligent platform in enterprises.",
+        "keywords": "AI Automation, AI Workflow, LLM Development, Intelligent Q&A, Open Source AI"
+      },
+      "before_hash": "58446f5812539c3d9193eb7a77b60d2d40ca0744e3b6d716758ec4670fe37b28",
+      "after_hash": "a73dc8330114650b45daecdd82f6a44390e9f626112d5dc1834047645cdb7bb2",
+      "immutable_before_hash": "8440a203fda09853a091a091f0ca039924e67edf9af5a0cb22741d3818cde1bc",
+      "immutable_after_hash": "8440a203fda09853a091a091f0ca039924e67edf9af5a0cb22741d3818cde1bc"
+    },
+    {
+      "source_row": 9,
+      "serial": "79",
+      "url": "https://fastgpt.io/en/faq/How-AI-Agents-Support-Multilingual-Customer-Service",
+      "question": "How AI Agents Support Multilingual Customer Service",
+      "repo_key": "How-AI-Agents-Support-Multilingual",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Enabling Multilingual Customer Service with AI Agents",
+        "description": "Explore how AI agents use NLP and machine translation to provide real-time multilingual support, breaking language barriers for global customer service.",
+        "keywords": "FastGPT, Document AI, Task Automation AI, Enterprise AI, API Integration"
+      },
+      "before_hash": "f1b6d6575daa991c852d1d120c4cd7dc49bdc8cdb9b57e74ff46f4c4d235ce73",
+      "after_hash": "5919966e43ea36190dbf4ac20de1ed58366ee6f77c11b8b89bcaa2c872165317",
+      "immutable_before_hash": "b1c4880d7ef18b377ac7197b34220a9453873dd091e5c6fc50454750aec4d89c",
+      "immutable_after_hash": "b1c4880d7ef18b377ac7197b34220a9453873dd091e5c6fc50454750aec4d89c"
+    },
+    {
+      "source_row": 10,
+      "serial": "101",
+      "url": "https://fastgpt.io/en/faq/What-are-the-main-difficulties-in-enterprise-deployment-of-AI-platforms",
+      "question": "What are the main difficulties in enterprise deployment of AI platforms?",
+      "repo_key": "What-are-the-main-difficulties",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Overcoming Key Hurdles in Enterprise AI Deployment",
+        "description": "Learn about integrating legacy systems, ensuring data quality, and addressing organizational adaptation for successful AI implementation.",
+        "keywords": "Open Source AI, Smart Assistant, LLM Development, AI Chatbot, Vector Search"
+      },
+      "before_hash": "74e4633e4d88a52c55b3631a7aa669c354cc9e42c12efac8751d675f0cd9a111",
+      "after_hash": "abbb543b81f287bcd9256f788c84e66739ed6138afd6097346c91dcde458cd19",
+      "immutable_before_hash": "ce96e1681a3a06b30e885a9975ed4d0f591400e988c2836f79f3fce2a3f0fcf0",
+      "immutable_after_hash": "ce96e1681a3a06b30e885a9975ed4d0f591400e988c2836f79f3fce2a3f0fcf0"
+    },
+    {
+      "source_row": 11,
+      "serial": "104",
+      "url": "https://fastgpt.io/en/faq/Can-AI-Agent-be-integrated-with-existing-CRM-systems",
+      "question": "Can AI Agent be integrated with existing CRM systems?",
+      "repo_key": "Can-AI-Agent-be-integrated",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "How AI Agents Seamlessly Connect to Your CRM",
+        "description": "AI agents connect to CRMs via APIs, webhooks, and authentication, enabling efficient data mapping and boosting customer management workflows.",
+        "keywords": "Open Source AI, AI Platform, LLM Development, GPT Integration, Intelligent Q&A"
+      },
+      "before_hash": "a6e743050e8ea89e39b14c3ff5839b508079a8ffc6d5e108fa730b0d67bf1115",
+      "after_hash": "c9be43b94b885ee40825bd04aa65f8f64145fc2abe9fad6706208b60de009d03",
+      "immutable_before_hash": "ed1819224aef6bd30296e4e80ab82e54ab0a4fb9c4ec30038b30d4a829dd4664",
+      "immutable_after_hash": "ed1819224aef6bd30296e4e80ab82e54ab0a4fb9c4ec30038b30d4a829dd4664"
+    },
+    {
+      "source_row": 12,
+      "serial": "117",
+      "url": "https://fastgpt.io/en/faq/What-are-the-advantages-of-AI-Agents-in-customer-support",
+      "question": "What are the advantages of AI Agents in customer support?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "How AI Agents Elevate Customer Support Efficiency",
+        "description": "AI agents provide instant responses, 24/7 availability, and personalized service, reducing costs and streamlining routine tasks for support teams.",
+        "keywords": "AI Platform, GPT Integration, AI Workflow, LLM Development, Vector Search"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 13,
+      "serial": "125",
+      "url": "https://fastgpt.io/en/faq/Do-AI-platforms-have-high-requirements-for-data-storage",
+      "question": "Do AI platforms have high requirements for data storage?",
+      "repo_key": "Do-AI-platforms-have-high",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Data Storage Demands for AI Platforms Explained",
+        "description": "AI platforms require scalable storage for massive training data and diverse types, driven by volume, velocity, and variety for model performance.",
+        "keywords": "Intelligent Q&A, Smart Assistant, API Integration, Open Source AI, AI Chatbot"
+      },
+      "before_hash": "27d4eec865987c49f3964b6b9284cb35bfb46f7f911f72f0cf7e114d331bbf27",
+      "after_hash": "203ae7b516c1320fd67202d7947bbed2fb83d19138d0729445f0e31dc9c471e9",
+      "immutable_before_hash": "a1fbd316dcc305fa05a57a96434b274d637bf766f1475de7a2d46a203ed2da09",
+      "immutable_after_hash": "a1fbd316dcc305fa05a57a96434b274d637bf766f1475de7a2d46a203ed2da09"
+    },
+    {
+      "source_row": 14,
+      "serial": "126",
+      "url": "https://fastgpt.io/en/faq/Why-are-AI-Agents-suitable-for-industries-requiring-rapid-response",
+      "question": "Why are AI Agents suitable for industries requiring rapid response?",
+      "repo_key": "Why-are-AI-Agents-suitable",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI Agents Enable Instant Response in Critical Industries",
+        "description": "AI agents deliver near real-time reactions through continuous operation and real-time data processing, surpassing human speed in time-sensitive sectors.",
+        "keywords": "AI Knowledge Management, Enterprise AI, API Integration, Open Source AI, LLM Development"
+      },
+      "before_hash": "3c69acf0345b3a700464abcebe49bb20b64ef287c567803bf229a10dfd7f2ce0",
+      "after_hash": "4f1a0fa9ef5d28ad8f6c232591ae9ecbdd9d6f72572803eb5be4b5c09a2ad866",
+      "immutable_before_hash": "10462dbdbf5d40aeee8712be565b91e3871ded05db7f05f0e4f47bf6d5a5ae43",
+      "immutable_after_hash": "10462dbdbf5d40aeee8712be565b91e3871ded05db7f05f0e4f47bf6d5a5ae43"
+    },
+    {
+      "source_row": 15,
+      "serial": "130",
+      "url": "https://fastgpt.io/en/faq/What-level-of-protection-do-AI-platforms-provide-for-customer-privacy",
+      "question": "What level of protection do AI platforms provide for customer privacy?",
+      "repo_key": "What-level-of-protection-do",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Privacy Protections in AI Platforms: What to Expect",
+        "description": "AI platforms implement data encryption, access controls, and varying privacy levels to safeguard customer information, from basic to advanced protections.",
+        "keywords": "Task Automation AI, AI Workflow, GPT Integration, LLM Development, FastGPT"
+      },
+      "before_hash": "b2dca82d90f78de28b4762b44829b39a26c9ca08fa9a84e010b71ff72dae674a",
+      "after_hash": "dbd3f54e6ed9974464215a65fb4bcb0cded2d4d3a89e238eb437e0bd1f07c538",
+      "immutable_before_hash": "508865e66c998e85580be599ead9051e3867f8d00dcc0685b5704e2a0aeae0f7",
+      "immutable_after_hash": "508865e66c998e85580be599ead9051e3867f8d00dcc0685b5704e2a0aeae0f7"
+    },
+    {
+      "source_row": 16,
+      "serial": "148",
+      "url": "https://fastgpt.io/en/faq/Why-are-AI-Agents-developing-rapidly-in-the-fintech-field",
+      "question": "Why are AI Agents developing rapidly in the fintech field?",
+      "repo_key": "Why-are-AI-Agents-developing",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Key Drivers of AI Agent Adoption in Fintech",
+        "description": "AI agents handle complex financial data, automate intricate tasks, and improve decision-making in fintech's data-rich, precision-focused environment.",
+        "keywords": "Intelligent Q&A, AI Knowledge Management, AI Platform, API Integration, LLM Development"
+      },
+      "before_hash": "94950fed91859b9246a1d30dc89c7dad460889a5d26645bfa547eeff34ba068b",
+      "after_hash": "eaf2bb9f52693aa161dba37b50e89729fd80bdcb52835acf0b4ad478c4fe3325",
+      "immutable_before_hash": "38679d6eb72b2b8e426f7b2ae44dd3d99b1e0d4b240876b5365d263a6d3b4fa6",
+      "immutable_after_hash": "38679d6eb72b2b8e426f7b2ae44dd3d99b1e0d4b240876b5365d263a6d3b4fa6"
+    },
+    {
+      "source_row": 17,
+      "serial": "169",
+      "url": "https://fastgpt.io/en/faq/Why-AI-Agents-are-suitable-for-enterprises-needing-rapid-innovation",
+      "question": "Why AI Agents are suitable for enterprises needing rapid innovation",
+      "repo_key": "Why-AI-Agents-are-suitable",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Accelerating Enterprise Innovation with AI Agents",
+        "description": "AI agents speed innovation by automating tasks, enabling rapid testing, and processing data continuously to uncover opportunities faster than human teams.",
+        "keywords": "Intelligent Q&A, Task Automation AI, AI Platform, Document AI, AI Chatbot"
+      },
+      "before_hash": "87d82f60990bf05ebaafe095320694797458cbf952b82460be8b148d100062a1",
+      "after_hash": "3a995ad248354dd8179bf4eeaad5ac328d6c0e307cdf60e07185ae57a94df892",
+      "immutable_before_hash": "9e2200420ee14b3dfa02a1d558929f97587a96a19c8ff40e87e7cbfbf087d30c",
+      "immutable_after_hash": "9e2200420ee14b3dfa02a1d558929f97587a96a19c8ff40e87e7cbfbf087d30c"
+    },
+    {
+      "source_row": 18,
+      "serial": "170",
+      "url": "https://fastgpt.io/en/faq/How-does-the-AI-intelligent-platform-support-multi-channel-customer-service",
+      "question": "How does the AI intelligent platform support multi-channel customer service",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Unifying Multi-Channel Customer Service with AI",
+        "description": "Learn how AI unifies multi-channel customer service using API data integration, NLP query analysis, and automated workflows for channel-free interactions.",
+        "keywords": "AI Automation, Task Automation AI, API Integration, AI Workflow, AI Platform"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 19,
+      "serial": "232",
+      "url": "https://fastgpt.io/en/faq/How-can-enterprises-use-AI-to-ensure-legal-compliance-of-contracts",
+      "question": "How can enterprises use AI to ensure legal compliance of contracts?",
+      "repo_key": "How-can-enterprises-use-AI",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Automating Contract Compliance Checks with AI",
+        "description": "Discover how AI automates contract review to flag non-standard clauses and compliance risks using data, legal rules, and trained models.",
+        "keywords": "GPT Integration, Smart Assistant, Task Automation AI, Document AI, AI Chatbot"
+      },
+      "before_hash": "9e72b4fc80329c648b27e3e291683eab266209bbea37cdf40c76840d37e42c85",
+      "after_hash": "090f25fc270e5afc40dd6cd85230d36cb33235a62eef9725b67dc9e12345c4e8",
+      "immutable_before_hash": "23d20bdfda37d0f1fb723a1a1e0b80869c67a76b1dc8bf54ff9b73b20e545049",
+      "immutable_after_hash": "23d20bdfda37d0f1fb723a1a1e0b80869c67a76b1dc8bf54ff9b73b20e545049"
+    },
+    {
+      "source_row": 20,
+      "serial": "251",
+      "url": "https://fastgpt.io/en/faq/How-AI-platforms-improve-the-accuracy-of-audit-reports",
+      "question": "How AI platforms improve the accuracy of audit reports",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Enhancing Audit Accuracy Through AI Analysis",
+        "description": "Learn how AI boosts audit accuracy by automating analysis, detecting anomalies, and reducing errors using machine learning and NLP on large datasets.",
+        "keywords": "Task Automation AI, GPT Integration, AI Platform, AI Workflow, LLM Development"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 21,
+      "serial": "257",
+      "url": "https://fastgpt.io/en/faq/Can-AI-platforms-integrate-multi-source-financial-data",
+      "question": "Can AI platforms integrate multi-source financial data?",
+      "repo_key": "Can-AI-platforms-integrate-multi-source",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI-Powered Integration of Multi-Source Financial Data",
+        "description": "Discover how AI connects market feeds, internal databases, and APIs via secure protocols to integrate financial data with machine learning.",
+        "keywords": "AI Chatbot, Intelligent Q&A, Enterprise AI, Vector Search, Task Automation AI"
+      },
+      "before_hash": "85ba4b6ab792eefed1785d45de326cac1655178f614ea3918aa3e542990a8d2c",
+      "after_hash": "b6b880f1046c1587b6d65cbc755a8e736e46dca860cb9788ce7b637da337d6dc",
+      "immutable_before_hash": "e27648e219d194f1f27d5d48f69bec542f2cf4210ab6705d0cef7a41ad8dcae9",
+      "immutable_after_hash": "e27648e219d194f1f27d5d48f69bec542f2cf4210ab6705d0cef7a41ad8dcae9"
+    },
+    {
+      "source_row": 22,
+      "serial": "292",
+      "url": "https://fastgpt.io/en/faq/How-AI-platforms-improve-customer-service-response-efficiency",
+      "question": "How AI platforms improve customer service response efficiency",
+      "repo_key": "How-AI-platforms-improve-customer",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI-Enabled Faster Customer Service Responses",
+        "description": "Learn how AI cuts wait times and handling durations via automated interactions, workflow optimization, and NLP for fast query resolution.",
+        "keywords": "Document AI, API Integration, AI Chatbot, AI Workflow, GPT Integration"
+      },
+      "before_hash": "f0416eabffea6db93eade43f5de504c81e13135c12a934d81c7a8f32d5f5e4f8",
+      "after_hash": "21fb55b0cace0456456a1574a2c447c15b2a16cf6e562493ec4cca4ba1b978c7",
+      "immutable_before_hash": "78043324c68bcb1db30266747d489fb67bf076897cdc8c6c743482a595a6aa9b",
+      "immutable_after_hash": "78043324c68bcb1db30266747d489fb67bf076897cdc8c6c743482a595a6aa9b"
+    },
+    {
+      "source_row": 23,
+      "serial": "332",
+      "url": "https://fastgpt.io/en/faq/How-do-AI-platforms-protect-patients'-privacy-data",
+      "question": "How do AI platforms protect patients' privacy data",
+      "repo_key": "How-do-AI-platforms-protect",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI-Driven Protection for Patient Privacy Data",
+        "description": "Learn how AI ensures patient data privacy using encryption, access controls, and audit trails in compliance with HIPAA and GDPR.",
+        "keywords": "Open Source AI, Smart Assistant, API Integration, Enterprise AI, AI Automation"
+      },
+      "before_hash": "5de62418a1d33d4e1e80cdf1da87fa8deb0568c4c38958269de57d4d09295e77",
+      "after_hash": "d678cceef20c61ab181377bbd29db63bb821484a0e81b0cefd54047443efa605",
+      "immutable_before_hash": "166b3e49bb45d7504a652a0a181c5276333fbee6239dcdbbaa5ddb2435e38d51",
+      "immutable_after_hash": "166b3e49bb45d7504a652a0a181c5276333fbee6239dcdbbaa5ddb2435e38d51"
+    },
+    {
+      "source_row": 24,
+      "serial": "338",
+      "url": "https://fastgpt.io/en/faq/Can-AI-platforms-integrate-data-from-different-hospitals",
+      "question": "Can AI platforms integrate data from different hospitals?",
+      "repo_key": "Can-AI-platforms-integrate-data",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Seamless Hospital Data Integration via AI",
+        "description": "Learn how AI integrates hospital data using standards like HL7 and FHIR, addressing governance and privacy challenges for semantic interoperability.",
+        "keywords": "Document AI, AI Workflow, Intelligent Q&A, Smart Assistant, Vector Search"
+      },
+      "before_hash": "fb29de3d39188244673567ee658ec807a2789e3f061ed2c9c7616604f01516be",
+      "after_hash": "041e4258f85ea476582fb147d30c271ab45a1b94ce9a711e9af94d07c09e27a3",
+      "immutable_before_hash": "c8c91242c0b3ebdd5de838d6b58c3ad08736e196421057d64c69a75aef13eba5",
+      "immutable_after_hash": "c8c91242c0b3ebdd5de838d6b58c3ad08736e196421057d64c69a75aef13eba5"
+    },
+    {
+      "source_row": 25,
+      "serial": "377",
+      "url": "https://fastgpt.io/en/faq/How-does-AI-integrate-second-hand-housing-market-data",
+      "question": "How does AI integrate second-hand housing market data",
+      "repo_key": "How-does-AI-integrate-second-hand",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Unifying Second-Hand Housing Data with AI",
+        "description": "Learn how AI collects and processes second-hand housing data, using NLP to extract key details and generate insights on valuations, trends, and pricing.",
+        "keywords": "FastGPT, AI Platform, AI Knowledge Management, AI Workflow, Intelligent Q&A"
+      },
+      "before_hash": "30d481c9c3e9a48896c7a6a59b7d4c08ede65f73ec0586c2be961ff02cba3cf1",
+      "after_hash": "1e0468b06d1181961b252d0d2a7ae91b1f28bc6bad67fb79669caef4bf89dc51",
+      "immutable_before_hash": "1d894daed4e1f0dacde083a7bb7b4990d232aa6eada8f7fbb6dd39b56bb4eb91",
+      "immutable_after_hash": "1d894daed4e1f0dacde083a7bb7b4990d232aa6eada8f7fbb6dd39b56bb4eb91"
+    },
+    {
+      "source_row": 26,
+      "serial": "396",
+      "url": "https://fastgpt.io/en/faq/Can-AI-optimize-the-operation-of-energy-storage-systems",
+      "question": "Can AI optimize the operation of energy storage systems?",
+      "repo_key": "Can-AI-optimize-the-operation",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Enhancing Energy Storage Performance with AI Optimization",
+        "description": "Learn how AI forecasts energy supply and prices to schedule charging and discharging, boosting storage system efficiency and economic returns.",
+        "keywords": "Task Automation AI, Open Source AI, AI Automation, AI Platform, Document AI"
+      },
+      "before_hash": "47e8ad0fe4a291059fcb83f768d72bebc4366af7257ca4d4d381b9a8d1302239",
+      "after_hash": "db242bef7c9c4be245ff4be7094655dbf73e2a92a28cf3082bdd352b010cf81d",
+      "immutable_before_hash": "1f5151241420a0d6db74d4ec1172af81dc782827c626c9939e378571610b2e3b",
+      "immutable_after_hash": "1f5151241420a0d6db74d4ec1172af81dc782827c626c9939e378571610b2e3b"
+    },
+    {
+      "source_row": 27,
+      "serial": "418",
+      "url": "https://fastgpt.io/en/faq/How-to-use-AI-to-improve-document-retrieval-efficiency",
+      "question": "How to use AI to improve document retrieval efficiency",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Transforming Document Retrieval with AI for Faster Results",
+        "description": "AI uses NLP for contextual understanding and semantic matching to locate documents quickly across large datasets, improving retrieval efficiency.",
+        "keywords": "LLM Development, AI Knowledge Management, AI Platform, Document AI, AI Automation"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 28,
+      "serial": "459",
+      "url": "https://fastgpt.io/en/faq/Can-AI-integrate-customer-chat-records",
+      "question": "Can AI integrate customer chat records?",
+      "repo_key": "Can-AI-integrate-customer-chat",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "How AI Integrates and Analyzes Customer Chat Records",
+        "description": "AI consolidates chat histories across platforms, analyzing sentiment, themes, and intent to improve support insights while ensuring data security.",
+        "keywords": "Document AI, Vector Search, LLM Development, AI Automation, AI Knowledge Management"
+      },
+      "before_hash": "872409de5fc688b5b107e9e0f27a73f6af76abd7a6bbcd11bb534bff25da76ba",
+      "after_hash": "01dc8dd1f357adf6960bee78db7e28bcea701a6bb977115019ed3477dbd63985",
+      "immutable_before_hash": "b94f0674c2f5a64be60143ef0a3105c8dd2268df77a84aff004ccd8e924fadd5",
+      "immutable_after_hash": "b94f0674c2f5a64be60143ef0a3105c8dd2268df77a84aff004ccd8e924fadd5"
+    },
+    {
+      "source_row": 29,
+      "serial": "516",
+      "url": "https://fastgpt.io/en/faq/How-to-improve-customer-service-processing-efficiency-with-AI",
+      "question": "How to improve customer service processing efficiency with AI",
+      "repo_key": "How-to-improve-customer-service",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Boosting Service Efficiency Through AI-Driven Automation",
+        "description": "AI automates routine service tasks and provides insights, using chatbots for common queries and sentiment analysis to let agents focus on complex issues.",
+        "keywords": "Intelligent Q&A, GPT Integration, Smart Assistant, Vector Search, Enterprise AI"
+      },
+      "before_hash": "5b46b2e3b92a01fbcb6f8c9c859f1c78ae51025a64c71dd7a7f6c15c9297dec5",
+      "after_hash": "cd980f683ec76a0491dc4b43610790d2729d48c1bb24d93eff18d1c8286509d3",
+      "immutable_before_hash": "d0d60be702b38e5ac5176192cfdc364e3beef005ff23beb590de0c4d0d61839c",
+      "immutable_after_hash": "d0d60be702b38e5ac5176192cfdc364e3beef005ff23beb590de0c4d0d61839c"
+    },
+    {
+      "source_row": 30,
+      "serial": "518",
+      "url": "https://fastgpt.io/en/faq/How-to-generate-a-customer-service-knowledge-base-using-AI",
+      "question": "How to generate a customer service knowledge base using AI",
+      "repo_key": "How-to-generate-a-customer",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Automating Knowledge Base Generation with AI Analysis",
+        "description": "AI turns unstructured data like tickets and manuals into searchable knowledge base articles, automating a manual process for self-service.",
+        "keywords": "Enterprise AI, GPT Integration, Vector Search, AI Workflow, AI Knowledge Management"
+      },
+      "before_hash": "a14b6a10bc4a77aa51a1acfb8297e9f949735b9516f224a19c23401cc4e0b27c",
+      "after_hash": "e19db00e92f445d626e2de7773873ceca9488d24040f52da5d255d127086bcfb",
+      "immutable_before_hash": "a9c7b6be663364f7a66e218a6ccb8c98503f46e79ad7a0f90cad2b15f3484e0a",
+      "immutable_after_hash": "a9c7b6be663364f7a66e218a6ccb8c98503f46e79ad7a0f90cad2b15f3484e0a"
+    },
+    {
+      "source_row": 31,
+      "serial": "519",
+      "url": "https://fastgpt.io/en/faq/How-AI-Automatically-Recommends-Customer-Service-Response-Content",
+      "question": "How AI Automatically Recommends Customer Service Response Content",
+      "repo_key": "How-AI-Automatically-Recommends-Customer",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI-Powered Response Recommendations for Customer Service",
+        "description": "AI uses NLP and ML trained on historical interactions to recommend real-time responses based on customer intent, sentiment, and entities.",
+        "keywords": "API Integration, LLM Development, Enterprise AI, Open Source AI, FastGPT"
+      },
+      "before_hash": "1b6f8ee6cf894cb83271bf83c00690dda066b2c7a5a0e3cdcf65a6ca6c1f6e22",
+      "after_hash": "380902eb8ec715e2a229ca24d80e6db188109bd24562f39c2fafb5c37b4b7fe5",
+      "immutable_before_hash": "6bb811e6edb83ae8406f76512c1b1d43d2ddc84a900a23a5c49d8fdf9dcb0add",
+      "immutable_after_hash": "6bb811e6edb83ae8406f76512c1b1d43d2ddc84a900a23a5c49d8fdf9dcb0add"
+    },
+    {
+      "source_row": 32,
+      "serial": "521",
+      "url": "https://fastgpt.io/en/faq/How-to-use-AI-to-record-customer-service-communication-details",
+      "question": "How to use AI to record customer service communication details",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Efficiently Recording Customer Service Calls with AI",
+        "description": "AI records voice, chat, and email conversations using ASR and NLP, enabling real-time or post-call analysis to capture communication details.",
+        "keywords": "Open Source AI, API Integration, Document AI, GPT Integration, AI Automation"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 33,
+      "serial": "558",
+      "url": "https://fastgpt.io/en/faq/How-to-make-AI-reduce-duplicate-file-storage",
+      "question": "How to make AI reduce duplicate file storage",
+      "repo_key": "How-to-make-AI-reduce",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Eliminating File Redundancy Through AI Deduplication",
+        "description": "AI uses digital fingerprints and similarity algorithms to detect and eliminate duplicate files by analyzing content and metadata, optimizing storage usage.",
+        "keywords": "AI Knowledge Management, Enterprise AI, Smart Assistant, LLM Development, Vector Search"
+      },
+      "before_hash": "814bd47b9c9ca5131f2b618f213fa930042b96ac99e726ec6d3134e68b8df199",
+      "after_hash": "6264d9015279ab1a56aace133a71f508d3c5c628aebf901ba590c80c4ff4506e",
+      "immutable_before_hash": "f4e28fc86d333c5ff593fbea486a9613b013ad400dbfba084b5bab274a39b2a3",
+      "immutable_after_hash": "f4e28fc86d333c5ff593fbea486a9613b013ad400dbfba084b5bab274a39b2a3"
+    },
+    {
+      "source_row": 34,
+      "serial": "562",
+      "url": "https://fastgpt.io/en/faq/Can-AI-generate-data-access-permission-reports",
+      "question": "Can AI generate data access permission reports?",
+      "repo_key": "Can-AI-generate-data-access",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Streamline Permission Audits via AI-Generated Reports",
+        "description": "Discover how AI integrates with identity providers to analyze access control lists, producing reports that map user rights across systems.",
+        "keywords": "AI Chatbot, FastGPT, Document AI, AI Automation, API Integration"
+      },
+      "before_hash": "0514e4d8c60ded83ce73c10b507083f1fcbc46d449364c7052bf87347646176b",
+      "after_hash": "d4bf52e9fa71bf77759ccf4d0159b0301af26d09f40c78cde8041735bd099cf7",
+      "immutable_before_hash": "cfb0d928467fe800dca460391c9e1ed7e43d4a16ef8456dab5acf07f53aa34a1",
+      "immutable_after_hash": "cfb0d928467fe800dca460391c9e1ed7e43d4a16ef8456dab5acf07f53aa34a1"
+    },
+    {
+      "source_row": 35,
+      "serial": "592",
+      "url": "https://fastgpt.io/en/faq/Can-AI-automatically-integrate-data-from-different-departments",
+      "question": "Can AI automatically integrate data from different departments?",
+      "repo_key": "Can-AI-automatically-integrate-data",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Cross-Department Data Unification with AI Automation",
+        "description": "Explore how AI integrates departmental data via ML and NLP, understanding semantics, with API access required for effective unification.",
+        "keywords": "Intelligent Q&A, Enterprise AI, Smart Assistant, AI Chatbot, AI Platform"
+      },
+      "before_hash": "981804ca186766151016668adc0205296ae86e24d1c863c078ee4f3e094f51a6",
+      "after_hash": "7b678c338f28083481c2366add53416c8b8bb55368f59b89762be0be95629719",
+      "immutable_before_hash": "b4a241401e5d9b1fef4f1ed7bb22b4091ef12174220c8fc41397710a084e1263",
+      "immutable_after_hash": "b4a241401e5d9b1fef4f1ed7bb22b4091ef12174220c8fc41397710a084e1263"
+    },
+    {
+      "source_row": 36,
+      "serial": "601",
+      "url": "https://fastgpt.io/en/faq/What-is-an-enterprise-knowledge-base",
+      "question": "What is an enterprise knowledge base",
+      "repo_key": "What-is-an-enterprise-knowledge",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Leverage a Central Repository for Knowledge Access",
+        "description": "Understand how a digital repository organizes company expertise into a searchable hub for efficient access to documents, FAQs, and best practices.",
+        "keywords": "LLM Development, AI Workflow, AI Chatbot, Document AI, Intelligent Q&A"
+      },
+      "before_hash": "b848781b1704956a6c5243970027e544531967681e0fca7261fb7557429b701d",
+      "after_hash": "a67420483a3b7d8d32d0771f28cbb8ea0d3f7319dd4bd45e4b08493497797385",
+      "immutable_before_hash": "f99307b9fc9e414a5e91b2c5a38995fc4275d67e675ca67da57ae2ce4b8eaf37",
+      "immutable_after_hash": "f99307b9fc9e414a5e91b2c5a38995fc4275d67e675ca67da57ae2ce4b8eaf37"
+    },
+    {
+      "source_row": 37,
+      "serial": "602",
+      "url": "https://fastgpt.io/en/faq/Why-do-companies-need-to-build-their-own-knowledge-bases",
+      "question": "Why do companies need to build their own knowledge bases?",
+      "repo_key": "Why-do-companies-need-to",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Centralize Know-How to Boost Decision-Making and Retention",
+        "description": "Discover why centralized knowledge bases reduce redundant queries, retain expertise during turnover, and support informed decision-making.",
+        "keywords": "Open Source AI, GPT Integration, AI Workflow, Vector Search, Document AI"
+      },
+      "before_hash": "0865f72b15c6dc5c8b1aa6ff72d2748d3f59b5d80560aa0b40ee1589bc87ed89",
+      "after_hash": "1f03dc71b0bd0dc26df34fe2e622f2e198e928db801c5560f90dae6959f856a7",
+      "immutable_before_hash": "36c475af1b07d1b552ffebef8e0b515ed0fcaa91a9f5e98b0bce5ecd0763222d",
+      "immutable_after_hash": "36c475af1b07d1b552ffebef8e0b515ed0fcaa91a9f5e98b0bce5ecd0763222d"
+    },
+    {
+      "source_row": 38,
+      "serial": "603",
+      "url": "https://fastgpt.io/en/faq/What-problems-can-the-company's-internal-knowledge-base-solve",
+      "question": "What problems can the company's internal knowledge base solve?",
+      "repo_key": "What-problems-can-the-company's",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Solve Fragmented Info & Onboarding Gaps with Internal KB",
+        "description": "Learn how an internal KB resolves fragmented knowledge, repetitive queries, and slow onboarding while safeguarding expert knowledge from staff turnover.",
+        "keywords": "AI Knowledge Management, AI Chatbot, Open Source AI, Document AI, FastGPT"
+      },
+      "before_hash": "84b451d1242605ea512d9c3028a2cb454b8a1a14a785128f97445a8fd0194f51",
+      "after_hash": "97eaeabb54906a03555d4ee1abdc90de8b3722e4c0c8ac9e1d7fa4db8de1505a",
+      "immutable_before_hash": "138df685a6d64f1d569520784bd21e938c4061bc708331ffbf8ebe60efc699aa",
+      "immutable_after_hash": "138df685a6d64f1d569520784bd21e938c4061bc708331ffbf8ebe60efc699aa"
+    },
+    {
+      "source_row": 39,
+      "serial": "604",
+      "url": "https://fastgpt.io/en/faq/How-to-make-the-knowledge-base-convenient-for-all-staff-to-find-information",
+      "question": "How to make the knowledge base convenient for all staff to find information",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Make Knowledge Easy to Find with Structured KB and Search",
+        "description": "Discover how to set up a digital KB with organized categories, robust search filters, and natural language queries for convenient staff access.",
+        "keywords": "Document AI, Open Source AI, Intelligent Q&A, LLM Development, Smart Assistant"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 40,
+      "serial": "605",
+      "url": "https://fastgpt.io/en/faq/What-is-the-difference-between-an-enterprise-knowledge-base-and-an-ordinary-folder",
+      "question": "What is the difference between an enterprise knowledge base and an ordinary folder?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Beyond Folders: How KBs Elevate Information Management",
+        "description": "Learn key differences: KBs provide advanced search, tag-based organization, collaborative editing, and version control, not just basic folders.",
+        "keywords": "FastGPT, API Integration, Document AI, AI Knowledge Management, GPT Integration"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 41,
+      "serial": "607",
+      "url": "https://fastgpt.io/en/faq/How-to-keep-the-content-of-the-knowledge-base-updated-in-real-time",
+      "question": "How to keep the content of the knowledge base updated in real-time",
+      "repo_key": "How-to-keep-the-content",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Ensure Instant KB Updates Through API and Webhook Syncing",
+        "description": "Learn how continuous synchronization with source systems via APIs and webhooks keeps knowledge base content instantly updated as data changes.",
+        "keywords": "Task Automation AI, API Integration, Open Source AI, Intelligent Q&A, Vector Search"
+      },
+      "before_hash": "8de785c7ea0abd8585d6902f35fdc2fe078bc71a8e0efff103cbc7cfe522bde7",
+      "after_hash": "b86d42a6a4c47e4e34084e294c079ca0dda05e054b28075e8585cd03c8ffa2e3",
+      "immutable_before_hash": "55e877d66fead09328b2bd8489d60e01819846031d57746f382c73fcadc2eeba",
+      "immutable_after_hash": "55e877d66fead09328b2bd8489d60e01819846031d57746f382c73fcadc2eeba"
+    },
+    {
+      "source_row": 42,
+      "serial": "609",
+      "url": "https://fastgpt.io/en/faq/How-to-make-the-knowledge-base-support-multilingual-content",
+      "question": "How to make the knowledge base support multilingual content",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Expand Your KB's Reach with Multilingual Support",
+        "description": "Implement multilingual support using translation workflows, AI tools, and terminology management for consistent global content.",
+        "keywords": "AI Knowledge Management, Open Source AI, AI Automation, Vector Search, Document AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 43,
+      "serial": "610",
+      "url": "https://fastgpt.io/en/faq/How-can-an-enterprise-knowledge-base-ensure-data-security",
+      "question": "How can an enterprise knowledge base ensure data security",
+      "repo_key": "How-can-an-enterprise-knowledge",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Enterprise KB Security: Access Control & Encryption",
+        "description": "Implement data security in enterprise KBs using RBAC, encryption, and policies for authentication, authorization, and protection.",
+        "keywords": "Smart Assistant, AI Automation, Enterprise AI, FastGPT, AI Platform"
+      },
+      "before_hash": "f8874b9f73c9334f713edcaad25a0cdf2119a55179c226e997af5956a0bbeb39",
+      "after_hash": "d81ed6f975eac6e256d3440bcf3f7b2fa3eb939146651d0b4c1e0f51424c4959",
+      "immutable_before_hash": "f20ff839ad3ace5f5142d6b5ff1c482da25cd7141b6c0c15402a341ac6f7bb1d",
+      "immutable_after_hash": "f20ff839ad3ace5f5142d6b5ff1c482da25cd7141b6c0c15402a341ac6f7bb1d"
+    },
+    {
+      "source_row": 44,
+      "serial": "611",
+      "url": "https://fastgpt.io/en/faq/What-is-the-difference-between-a-knowledge-base-and-an-internal-search-engine",
+      "question": "What is the difference between a knowledge base and an internal search engine?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "KB vs. Internal Search: Key Differences Explained",
+        "description": "Learn the distinct roles of a knowledge base as a curated content hub versus an internal search engine that indexes diverse digital assets for discovery.",
+        "keywords": "LLM Development, API Integration, Enterprise AI, GPT Integration, Open Source AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 45,
+      "serial": "612",
+      "url": "https://fastgpt.io/en/faq/How-to-improve-the-retrieval-speed-of-a-knowledge-base",
+      "question": "How to improve the retrieval speed of a knowledge base",
+      "repo_key": "How-to-improve-the-retrieval",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Accelerate KB Retrieval: Indexing & Caching Tips",
+        "description": "Learn to speed up knowledge base searches using efficient indexing, query optimization, and caching strategies to maintain result accuracy.",
+        "keywords": "AI Automation, Vector Search, Task Automation AI, Open Source AI, Document AI"
+      },
+      "before_hash": "ec678835f1507c25e911b8cd86d6e558f1fba2960f386a12ba9f261ff4fef7ec",
+      "after_hash": "926ad6ca14f8ab7e706950e3e902b50d776f3c9d62d06dce16251814730d9fb8",
+      "immutable_before_hash": "64da8b17f782862331c0cf4cb840ede4dea52895431be4fe0f6b12aeef356d00",
+      "immutable_after_hash": "64da8b17f782862331c0cf4cb840ede4dea52895431be4fe0f6b12aeef356d00"
+    },
+    {
+      "source_row": 46,
+      "serial": "613",
+      "url": "https://fastgpt.io/en/faq/What-types-of-materials-are-suitable-for-storage-in-a-company-knowledge-base",
+      "question": "What types of materials are suitable for storage in a company knowledge base?",
+      "repo_key": "What-types-of-materials-are",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Essential Materials for Your Company's Knowledge Base",
+        "description": "Discover which materials to include in a company knowledge base, such as SOPs, product specs, and troubleshooting guides, to boost employee efficiency.",
+        "keywords": "AI Knowledge Management, AI Platform, AI Workflow, AI Chatbot, Document AI"
+      },
+      "before_hash": "9cda228ae6b14974c802b08b74a99a98f7cb2b538fc085df3e6acc96c342f751",
+      "after_hash": "385da0231f60df09bc1dfbd0b1d64dc871b3f43d44ff85a63b88ff81baefaa27",
+      "immutable_before_hash": "6a1c4fb8246dbf2bdd93c4bfb623d9d81558504e5a3076d1ee25b5464e31be85",
+      "immutable_after_hash": "6a1c4fb8246dbf2bdd93c4bfb623d9d81558504e5a3076d1ee25b5464e31be85"
+    },
+    {
+      "source_row": 47,
+      "serial": "614",
+      "url": "https://fastgpt.io/en/faq/How-to-quickly-import-existing-files-into-a-knowledge-base-using-AI",
+      "question": "How to quickly import existing files into a knowledge base using AI",
+      "repo_key": "How-to-quickly-import-existing",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI-Powered File Import for Knowledge Bases",
+        "description": "Use AI ingestion tools to extract text and metadata from files, rapidly populating your knowledge base while maintaining accuracy.",
+        "keywords": "Intelligent Q&A, LLM Development, GPT Integration, AI Platform, Document AI"
+      },
+      "before_hash": "ec808225b4cf7134f51d79d4376cb0df2701a5acd51bed33dd88d274bdf25c8c",
+      "after_hash": "450442a4f0e6284a4d30988baced4c3257064099ad98772a8a5399cb6b9da203",
+      "immutable_before_hash": "0be73529eb9ba8e98f400bfe6abea31851e0b925a99983dc168dc0862baffb95",
+      "immutable_after_hash": "0be73529eb9ba8e98f400bfe6abea31851e0b925a99983dc168dc0862baffb95"
+    },
+    {
+      "source_row": 48,
+      "serial": "615",
+      "url": "https://fastgpt.io/en/faq/Can-AI-automatically-generate-the-directory-structure-of-a-knowledge-base",
+      "question": "Can AI automatically generate the directory structure of a knowledge base?",
+      "repo_key": "Can-AI-automatically-generate-the",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "AI-Generated Directory Structures for KBs",
+        "description": "Learn how AI uses topic modeling and clustering to automatically organize knowledge base content into logical directory structures for better navigation.",
+        "keywords": "AI Automation, GPT Integration, Enterprise AI, Document AI, Open Source AI"
+      },
+      "before_hash": "234920f89d93df8f1324475c4312a35a81ea6df0029387655cfdf3b1c7bb3247",
+      "after_hash": "abdbb89441244b409ccd9e7ac51d48b59a511c78499e86aacb255dffd4ab1a2f",
+      "immutable_before_hash": "df394836898b1453f7c0b1bf3d911ddb57f9af82fe511a1445f82fb9ae3fa079",
+      "immutable_after_hash": "df394836898b1453f7c0b1bf3d911ddb57f9af82fe511a1445f82fb9ae3fa079"
+    },
+    {
+      "source_row": 49,
+      "serial": "616",
+      "url": "https://fastgpt.io/en/faq/How-knowledge-bases-help-new-employees-get-up-to-speed-quickly",
+      "question": "How knowledge bases help new employees get up to speed quickly",
+      "repo_key": "How-knowledge-bases-help-new",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Onboard New Hires Faster with a Knowledge Base",
+        "description": "Discover how a well-organized knowledge base accelerates new hire onboarding with instant access to policies, procedures, and role-specific information.",
+        "keywords": "AI Platform, Enterprise AI, Vector Search, AI Workflow, Intelligent Q&A"
+      },
+      "before_hash": "69d3260684d187ef065b3c8c998f2a85768f0b0554417ca633c0883ae3c9c9d1",
+      "after_hash": "7d8c8eb1210b9c820101c339a934386019f326678d04a0ba31771137872708e6",
+      "immutable_before_hash": "a926da56b3692e268f11df7d3f695b3d1a37dbf6535f59750a963d65b48b68c7",
+      "immutable_after_hash": "a926da56b3692e268f11df7d3f695b3d1a37dbf6535f59750a963d65b48b68c7"
+    },
+    {
+      "source_row": 50,
+      "serial": "617",
+      "url": "https://fastgpt.io/en/faq/How-to-integrate-the-enterprise-knowledge-base-with-other-systems",
+      "question": "How to integrate the enterprise knowledge base with other systems",
+      "repo_key": "How-to-integrate-the-enterprise",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Connect Your Knowledge Base with Other Systems via APIs",
+        "description": "Learn how APIs and connectors enable data sharing between your knowledge base and other systems, plus key requirements for success.",
+        "keywords": "AI Workflow, Open Source AI, AI Knowledge Management, AI Platform, Smart Assistant"
+      },
+      "before_hash": "76cf045d9186daa8c06ad3c044f193e1e6d4d32084014c3f9c5947ec6ea553cd",
+      "after_hash": "32fd2fdac4eef402eb35b3f4742f17f9b6eb62113ac5b17b537f01d4e22157c1",
+      "immutable_before_hash": "d3ea832ff9cd759b2e11d9a9f2f68531b09102f585b9affaeb183372a3b1a412",
+      "immutable_after_hash": "d3ea832ff9cd759b2e11d9a9f2f68531b09102f585b9affaeb183372a3b1a412"
+    },
+    {
+      "source_row": 51,
+      "serial": "618",
+      "url": "https://fastgpt.io/en/faq/Can-AI-automatically-detect-duplicate-content-in-a-knowledge-base",
+      "question": "Can AI automatically detect duplicate content in a knowledge base?",
+      "repo_key": "Can-AI-automatically-detect-duplicate",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "How AI Identifies Duplicate Content in Your Knowledge Base",
+        "description": "Understand how NLP and ML algorithms go beyond word matching to analyze content semantically, calculating similarity scores to pinpoint duplicates.",
+        "keywords": "Open Source AI, Task Automation AI, Vector Search, AI Platform, AI Workflow"
+      },
+      "before_hash": "b5cbdcd1700facad3388e7f60a67cc44449ca006494e127962c32e88d558be75",
+      "after_hash": "72938f216741d08551fb7cedef298171d0b7469edd3c8c9df4ea7326fbf2eefe",
+      "immutable_before_hash": "a6c7ff469c4f521b250a4a9df15809b3f53d31759a7e1f8e400ac70eeb6f167f",
+      "immutable_after_hash": "a6c7ff469c4f521b250a4a9df15809b3f53d31759a7e1f8e400ac70eeb6f167f"
+    },
+    {
+      "source_row": 52,
+      "serial": "619",
+      "url": "https://fastgpt.io/en/faq/How-to-improve-the-user-experience-of-the-knowledge-base",
+      "question": "How to improve the user experience of the knowledge base",
+      "repo_key": "How-to-improve-the-user",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Enhance Your Knowledge Base User Experience Effectively",
+        "description": "Learn to enhance your knowledge base UX with robust search, clear information architecture, and content updates for improved accessibility.",
+        "keywords": "LLM Development, Task Automation AI, AI Automation, Smart Assistant, Open Source AI"
+      },
+      "before_hash": "906123f034469af8c1d33c086e75cb524b20e03821f69b140da51e6a3465594c",
+      "after_hash": "6033704fee54aee71f949efe58009ea36f6a2b88afec5a27a447bfa64118e82d",
+      "immutable_before_hash": "85fdf421a7da45d39fac682897e2ab36a9d7b0daef159c2f4d0a86063de53650",
+      "immutable_after_hash": "85fdf421a7da45d39fac682897e2ab36a9d7b0daef159c2f4d0a86063de53650"
+    },
+    {
+      "source_row": 53,
+      "serial": "620",
+      "url": "https://fastgpt.io/en/faq/How-can-a-knowledge-base-help-teams-reduce-communication-costs",
+      "question": "How can a knowledge base help teams reduce communication costs",
+      "repo_key": "How-can-a-knowledge-base",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Cut Team Communication Costs with a Central Knowledge Base",
+        "description": "See how a knowledge base cuts repetitive questions, provides documented procedures, and enables independent answer access to reduce communication overhead.",
+        "keywords": "AI Chatbot, Vector Search, Smart Assistant, Intelligent Q&A, AI Workflow"
+      },
+      "before_hash": "bf0ed561dd7d28771dd7a77b6907c7164864d8ae3f61e11bafc2f231bac84150",
+      "after_hash": "66388d36952d3484b8d06173130eed010ecbebd6d857b8e0d6ea63531b762e97",
+      "immutable_before_hash": "ea801a7f9de9dfd6af578f4eac31fd57e9dad2af74cb5a6545bb5e2ed608ce69",
+      "immutable_after_hash": "ea801a7f9de9dfd6af578f4eac31fd57e9dad2af74cb5a6545bb5e2ed608ce69"
+    },
+    {
+      "source_row": 54,
+      "serial": "621",
+      "url": "https://fastgpt.io/en/faq/What-does-RAG-retrieval-augmented-generation-mean",
+      "question": "What does RAG retrieval-augmented generation mean?",
+      "repo_key": "What-does-RAG-retrieval-augmented-generation",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Understand RAG: AI with External Knowledge Integration",
+        "description": "Learn how RAG blends retrieval with generation to produce more accurate, up-to-date AI responses grounded in relevant external information.",
+        "keywords": "GPT Integration, Task Automation AI, Document AI, AI Knowledge Management, LLM Development"
+      },
+      "before_hash": "f383ce37765d91624dd1120cce9329c27af54ec5a0233613a0fd09872dfc4bec",
+      "after_hash": "a89b515783aacf035b4f68f9dd3bcbf388bac7f22f0ffc05d257a9f2b8aa5b58",
+      "immutable_before_hash": "24358535d44a8c7467bb4941dc9c8e7fc1889c8add87d82459fe7c14f6b50d9b",
+      "immutable_after_hash": "24358535d44a8c7467bb4941dc9c8e7fc1889c8add87d82459fe7c14f6b50d9b"
+    },
+    {
+      "source_row": 55,
+      "serial": "622",
+      "url": "https://fastgpt.io/en/faq/Why-is-RAG-important-for-AI-question-answering",
+      "question": "Why is RAG important for AI question answering?",
+      "repo_key": "Why-is-RAG-important-for",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Why RAG Matters for Accurate AI Question Answering",
+        "description": "Discover why RAG is key for AI question answering, as it retrieves information chunks from sources to deliver more accurate and trustworthy responses.",
+        "keywords": "Task Automation AI, Smart Assistant, Document AI, Open Source AI, AI Workflow"
+      },
+      "before_hash": "a72f315dc8cce66ee62f853a095b4120e68b6cde86b171cb7e1a41907709d561",
+      "after_hash": "e64b42cebdf381db9907be7ff629ab5b9e53ada0ad565e6b1fd96beb5c05dc5c",
+      "immutable_before_hash": "61b2b2fdcf547247e141de2a59c5356419ffae74f63546a4fdae8f2eefd96a84",
+      "immutable_after_hash": "61b2b2fdcf547247e141de2a59c5356419ffae74f63546a4fdae8f2eefd96a84"
+    },
+    {
+      "source_row": 56,
+      "serial": "623",
+      "url": "https://fastgpt.io/en/faq/What-are-the-differences-between-RAG-and-traditional-search",
+      "question": "What are the differences between RAG and traditional search?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "RAG vs. Traditional Search: Key Answering Differences",
+        "description": "Learn how RAG generates answers by blending retrieval with AI, unlike traditional search that merely retrieves documents matching keywords.",
+        "keywords": "AI Chatbot, AI Automation, AI Workflow, Vector Search, Open Source AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 57,
+      "serial": "624",
+      "url": "https://fastgpt.io/en/faq/How-to-improve-the-accuracy-of-RAG's-answers",
+      "question": "How to improve the accuracy of RAG's answers",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Boost RAG Accuracy: Optimize Retrieval and Generation",
+        "description": "Learn to enhance RAG accuracy by improving source data quality, vector indexing, and prompt design, along with refining retriever and generator components.",
+        "keywords": "API Integration, Intelligent Q&A, Open Source AI, AI Chatbot, LLM Development"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 58,
+      "serial": "625",
+      "url": "https://fastgpt.io/en/faq/How-does-AI-use-RAG-to-understand-long-documents",
+      "question": "How does AI use RAG to understand long documents",
+      "repo_key": "How-does-AI-use-RAG",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Extract Insights from Lengthy Texts Using RAG",
+        "description": "Learn how RAG chunks long documents, retrieves snippets via embeddings, and generates informed responses using retrieved context.",
+        "keywords": "Vector Search, GPT Integration, FastGPT, AI Automation, LLM Development"
+      },
+      "before_hash": "239d542888716c653eb9507caf5e8716785e341f979fe09194e309fc44069533",
+      "after_hash": "196b65b01662b46053d6680caa927dcf778f4fceb661922e9100035283b888f6",
+      "immutable_before_hash": "a70e0751d381e727d5ac3e3d7335a68e7fd0be1cfd61beabddd16dfd9b5bd233",
+      "immutable_after_hash": "a70e0751d381e727d5ac3e3d7335a68e7fd0be1cfd61beabddd16dfd9b5bd233"
+    },
+    {
+      "source_row": 59,
+      "serial": "626",
+      "url": "https://fastgpt.io/en/faq/Which-data-intensive-scenarios-is-RAG-suitable-for",
+      "question": "Which data-intensive scenarios is RAG suitable for?",
+      "repo_key": "Which-data-intensive-scenarios-is-RAG",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Data-Heavy Environments Where RAG AI Excels",
+        "description": "Explore how RAG suits data-intensive tasks by retrieving from large sources to synthesize grounded, informed responses from specific datasets.",
+        "keywords": "Enterprise AI, AI Workflow, AI Knowledge Management, Intelligent Q&A, LLM Development"
+      },
+      "before_hash": "164998628b5005429754c8fa31096369adc53428b6803596bcf319fade830a6a",
+      "after_hash": "312bf9d5858f552a109550ff0935cdcb5597425090d7e3853709b91e46d16ee9",
+      "immutable_before_hash": "3eaa834e7b2ce7d6c9ab9da8234ac50151218a195320b702c9f88057f0fe6af6",
+      "immutable_after_hash": "3eaa834e7b2ce7d6c9ab9da8234ac50151218a195320b702c9f88057f0fe6af6"
+    },
+    {
+      "source_row": 60,
+      "serial": "627",
+      "url": "https://fastgpt.io/en/faq/How-to-make-RAG-retrieve-the-latest-information-in-real-time",
+      "question": "How to make RAG retrieve the latest information in real-time",
+      "repo_key": "How-to-make-RAG-retrieve",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Keep RAG Current with Real-Time Data Ingestion",
+        "description": "Learn how dynamic data pipelines and indexing strategies enable RAG to ingest and process new information almost immediately for real-time retrieval.",
+        "keywords": "Enterprise AI, LLM Development, AI Chatbot, AI Workflow, Document AI"
+      },
+      "before_hash": "41d46d583be3aa6f706d72c680600fab9f441f7b93884ed4209d482a090945ac",
+      "after_hash": "4b2ac026f284a4077627ab45fb4427afb672efd90d82104fcc47497e190cdd6f",
+      "immutable_before_hash": "1d26c21c0804004f4cfdfb39f0d2755b36b18546f3f119f8c5313cbb5e57a2a7",
+      "immutable_after_hash": "1d26c21c0804004f4cfdfb39f0d2755b36b18546f3f119f8c5313cbb5e57a2a7"
+    },
+    {
+      "source_row": 61,
+      "serial": "628",
+      "url": "https://fastgpt.io/en/faq/What-underlying-technical-support-does-RAG-require",
+      "question": "What underlying technical support does RAG require?",
+      "repo_key": "What-underlying-technical-support-does",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Building RAG: Key Technical Components You Need",
+        "description": "Discover the three key technical pillars—embedding models, vector databases, and integration pipelines—alongside LLMs required for RAG systems.",
+        "keywords": "GPT Integration, API Integration, AI Chatbot, Open Source AI, AI Automation"
+      },
+      "before_hash": "249b892b6bd2a9df43b8bc700165203338c59183abb790c3c40678c35d7c01b4",
+      "after_hash": "de7ece6938bb2805cc1d5790d6718ebcc01011347a9190812b85b18db91b05d6",
+      "immutable_before_hash": "c96ca2f9872aa00e833cdc33595c13ecfc5d10e6098954a2b46c85cea19a069a",
+      "immutable_after_hash": "c96ca2f9872aa00e833cdc33595c13ecfc5d10e6098954a2b46c85cea19a069a"
+    },
+    {
+      "source_row": 62,
+      "serial": "629",
+      "url": "https://fastgpt.io/en/faq/What-is-the-relationship-between-RAG-and-vector-databases",
+      "question": "What is the relationship between RAG and vector databases?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Vector Databases: The Backbone of RAG Systems",
+        "description": "Learn how vector databases store document embeddings and execute semantic similarity searches to provide quick, relevant context for RAG responses.",
+        "keywords": "Open Source AI, Intelligent Q&A, API Integration, AI Chatbot, Smart Assistant"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 63,
+      "serial": "630",
+      "url": "https://fastgpt.io/en/faq/How-to-determine-if-a-system-uses-RAG",
+      "question": "How to determine if a system uses RAG",
+      "repo_key": "How-to-determine-if-a",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Identify RAG Systems by These Telltale Signs",
+        "description": "Learn to recognize RAG systems by checking documentation, looking for separate retrieval components, and observing query phases in the architecture.",
+        "keywords": "Open Source AI, AI Workflow, FastGPT, AI Chatbot, AI Knowledge Management"
+      },
+      "before_hash": "a4aed76804856dae2cd2cd827aad43f71a46d7d3f9b816736bfae694a7e41e4c",
+      "after_hash": "2c15194096db8e843a919390ac69a25f9494739d41d6e45dedeb67461d223c98",
+      "immutable_before_hash": "61d02e2d23aa351db13e51ecefd890554b1dfd69ba37fdf12fc6feb6a073f0d6",
+      "immutable_after_hash": "61d02e2d23aa351db13e51ecefd890554b1dfd69ba37fdf12fc6feb6a073f0d6"
+    },
+    {
+      "source_row": 64,
+      "serial": "631",
+      "url": "https://fastgpt.io/en/faq/Can-RAG-be-combined-with-multiple-AI-models",
+      "question": "Can RAG be combined with multiple AI models?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Modular AI: Pairing RAG with Other Models",
+        "description": "Learn how integrating RAG with multiple specialized AI models in a modular design leverages complementary strengths for superior performance.",
+        "keywords": "AI Knowledge Management, Enterprise AI, GPT Integration, Vector Search, Document AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 65,
+      "serial": "632",
+      "url": "https://fastgpt.io/en/faq/What-are-the-advantages-of-RAG-in-enterprise-knowledge-management",
+      "question": "What are the advantages of RAG in enterprise knowledge management?",
+      "repo_key": "What-are-the-advantages-of",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Why RAG Is Key for Enterprise Knowledge Accuracy",
+        "description": "Learn how RAG grounds answers in authoritative docs to reduce factual errors, improving accuracy and reliability for enterprise knowledge management.",
+        "keywords": "AI Workflow, Document AI, Task Automation AI, Intelligent Q&A, AI Automation"
+      },
+      "before_hash": "c7731d9f97225fb999c540e4627cf71be2b1dfb8be7614acfdc74f90aa520b42",
+      "after_hash": "e93408034d7308c44aa5b312736c1ca1455e603e34ebf50fa32b39344fc08394",
+      "immutable_before_hash": "661d10dabccb8ed24b33ce280c9cee58cf8723acbf0795a0e2e26088378dfe55",
+      "immutable_after_hash": "661d10dabccb8ed24b33ce280c9cee58cf8723acbf0795a0e2e26088378dfe55"
+    },
+    {
+      "source_row": 66,
+      "serial": "633",
+      "url": "https://fastgpt.io/en/faq/How-to-reduce-the-computational-cost-of-RAG",
+      "question": "How to reduce the computational cost of RAG",
+      "repo_key": "How-to-reduce-the-computational",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Lower RAG Compute Costs Through Strategic Optimizations",
+        "description": "Explore practical techniques like metadata filtering, lightweight rerankers, hybrid search, and model quantization to reduce RAG computation costs.",
+        "keywords": "GPT Integration, LLM Development, Intelligent Q&A, AI Knowledge Management, AI Chatbot"
+      },
+      "before_hash": "9acbfd3153237e85e1368e34cdfd27c02b919ed937e315fb04457b4d2235dd7a",
+      "after_hash": "217614aca72a35faa948e10bbeb8515d1a9a539d7a2a963bdde2fbe4963bff44",
+      "immutable_before_hash": "3c7c7d7d8ce8402f6ee72b83ede591655af4ea0dd0f9d7280c095786025b1369",
+      "immutable_after_hash": "3c7c7d7d8ce8402f6ee72b83ede591655af4ea0dd0f9d7280c095786025b1369"
+    },
+    {
+      "source_row": 67,
+      "serial": "634",
+      "url": "https://fastgpt.io/en/faq/Can-RAG-handle-unstructured-data",
+      "question": "Can RAG handle unstructured data?",
+      "repo_key": "Can-RAG-handle-unstructured-data?",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "How RAG Processes Unstructured Data Like PDFs and Emails",
+        "description": "Learn how RAG manages unstructured data by chunking documents, creating embeddings, and retrieving relevant pieces from PDFs, emails, and more.",
+        "keywords": "AI Knowledge Management, AI Workflow, FastGPT, GPT Integration, Document AI"
+      },
+      "before_hash": "9c8b474159387cb0e6e13f8057bf49e3cee81c52075f847504cb33f7a270aa85",
+      "after_hash": "5e94dc206f8a85b9da83716d3fe5f3b8772f3f8c2512d5b40c0fc69c1c71b30c",
+      "immutable_before_hash": "e2e397771dc16add7354584510f8c929371f9395b3eb8bd3f6cba517357d4eae",
+      "immutable_after_hash": "e2e397771dc16add7354584510f8c929371f9395b3eb8bd3f6cba517357d4eae"
+    },
+    {
+      "source_row": 68,
+      "serial": "635",
+      "url": "https://fastgpt.io/en/faq/How-does-RAG-ensure-the-timeliness-of-retrieved-content",
+      "question": "How does RAG ensure the timeliness of retrieved content?",
+      "repo_key": "How-does-RAG-ensure-the",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Keep RAG Responses Timely With Up-to-Date Data Sources",
+        "description": "Learn how RAG achieves content timeliness by dynamically pulling from updatable external data stores and performing regular data refreshes.",
+        "keywords": "Open Source AI, Task Automation AI, LLM Development, AI Automation, Document AI"
+      },
+      "before_hash": "eeb6ae93b1675136277a835cfcf2b01f3f7a439dfebfb479a174ab6202659d25",
+      "after_hash": "2e33330d30b09a6e2c4b28bb43a9c841a155ce2917f242258f9f16398fe92114",
+      "immutable_before_hash": "8b1d5d6ae0309e0c9b313b0bfd8ff870b46ad3eb6354aef78a657322783935dd",
+      "immutable_after_hash": "8b1d5d6ae0309e0c9b313b0bfd8ff870b46ad3eb6354aef78a657322783935dd"
+    },
+    {
+      "source_row": 69,
+      "serial": "636",
+      "url": "https://fastgpt.io/en/faq/Why-are-enterprises-paying-more-and-more-attention-to-RAG-solutions",
+      "question": "Why are enterprises paying more and more attention to RAG solutions?",
+      "repo_key": "Why-are-enterprises-paying-more",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Key Enterprise Benefits of RAG: Accuracy & Cost Control",
+        "description": "See how RAG improves enterprise AI with verified data grounding, boosting accuracy, domain specificity, and data security while cutting costs.",
+        "keywords": "API Integration, Intelligent Q&A, GPT Integration, Smart Assistant, AI Knowledge Management"
+      },
+      "before_hash": "100948ea4947b9597a9fada0f33563e62d39206ddbb663faf468c187be292aa9",
+      "after_hash": "83a12fb6fa3af46c59b7af6283cc92f1e12d9936ab872446137701dfc890ea13",
+      "immutable_before_hash": "a1f7a54eb08d79b087ce6077680462cf1b942834e5e92ee41892bbea433fc9dd",
+      "immutable_after_hash": "a1f7a54eb08d79b087ce6077680462cf1b942834e5e92ee41892bbea433fc9dd"
+    },
+    {
+      "source_row": 70,
+      "serial": "637",
+      "url": "https://fastgpt.io/en/faq/How-much-does-RAG-help-improve-search-accuracy",
+      "question": "How much does RAG help improve search accuracy?",
+      "repo_key": "How-much-does-RAG-help",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Boosting Search Precision: RAG’s Role in Accurate Answers",
+        "description": "Learn how RAG improves search accuracy via semantic document retrieval and authoritative data grounding, going beyond built-in model knowledge.",
+        "keywords": "AI Platform, Enterprise AI, API Integration, Smart Assistant, AI Workflow"
+      },
+      "before_hash": "9d7c1f6222c46ea3b6d54d8e6a44086b2ea6b0455c7dff56cfdb0c532653fda8",
+      "after_hash": "05066841fa467943bc644e25dbf454f4d1e3525ed1d51382773c7ef79505cdd8",
+      "immutable_before_hash": "9f0f5beb7ef72035c73a2d5d0b7faddd6734055ff6f6ad6e09056cdb185414ca",
+      "immutable_after_hash": "9f0f5beb7ef72035c73a2d5d0b7faddd6734055ff6f6ad6e09056cdb185414ca"
+    },
+    {
+      "source_row": 71,
+      "serial": "638",
+      "url": "https://fastgpt.io/en/faq/How-to-train-RAG-to-make-results-more-in-line-with-requirements",
+      "question": "How to train RAG to make results more in line with requirements",
+      "repo_key": "How-to-train-RAG-to",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Achieve Precise RAG Outputs Through Targeted Training",
+        "description": "Discover how to tailor RAG to your requirements by preparing domain-specific data and optimizing retrieval and generation components.",
+        "keywords": "Open Source AI, API Integration, AI Automation, AI Knowledge Management, Task Automation AI"
+      },
+      "before_hash": "cf148f42f93bf752d96a62f35ef42960f5c0d712e6c79ba35af0d8e8bda4f7e1",
+      "after_hash": "206571f849591aa4659a52592ba7797cc25a17b865b12ca47050086d7231fc98",
+      "immutable_before_hash": "29a5559891086d9bdbf5a4369a10917d9a7ced9d06680ac4922e802e9b7104f3",
+      "immutable_after_hash": "29a5559891086d9bdbf5a4369a10917d9a7ced9d06680ac4922e802e9b7104f3"
+    },
+    {
+      "source_row": 72,
+      "serial": "639",
+      "url": "https://fastgpt.io/en/faq/Can-RAG-be-combined-with-speech-recognition",
+      "question": "Can RAG be combined with speech recognition",
+      "repo_key": "Can-RAG-be-combined-with",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Combining RAG and Speech Recognition: A Voice AI Guide",
+        "description": "Learn how RAG and ASR combine by converting speech to text, and discover why managing recognition accuracy is key to avoiding error propagation.",
+        "keywords": "GPT Integration, API Integration, AI Chatbot, FastGPT, AI Workflow"
+      },
+      "before_hash": "64f604900c678f89e573780eeb927244121ce394e34f5ef629216ae8535a7439",
+      "after_hash": "e43bcdcbc84447599fb2aa12cce6af333556ed57c4f000e51e2fdaff61387475",
+      "immutable_before_hash": "7b0bbe0d2e0db01bec53540427d6352ef6254dd1bd06a9ee70907322e80a0855",
+      "immutable_after_hash": "7b0bbe0d2e0db01bec53540427d6352ef6254dd1bd06a9ee70907322e80a0855"
+    },
+    {
+      "source_row": 73,
+      "serial": "640",
+      "url": "https://fastgpt.io/en/faq/Is-RAG-suitable-for-mobile-applications",
+      "question": "Is RAG suitable for mobile applications?",
+      "repo_key": "Is-RAG-suitable-for-mobile",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Mobile RAG: Choosing Between On-Device and Cloud",
+        "description": "Explore mobile RAG implementation strategies by weighing on-device vs cloud trade-offs for latency, storage, and connectivity.",
+        "keywords": "API Integration, FastGPT, Document AI, Vector Search, AI Workflow"
+      },
+      "before_hash": "46089015012f17cf1b877cd597b165cea8a8025d577462d8d9a9c84aa1e3b900",
+      "after_hash": "0ba927df03379b60c8f6a1e2a22a4c87466fa11b89f3a37928b653b31080b2cd",
+      "immutable_before_hash": "cf0f3b167d6015ff9181162b2d32c8d7d848d79a323e660ff6b22049b21c27ce",
+      "immutable_after_hash": "cf0f3b167d6015ff9181162b2d32c8d7d848d79a323e660ff6b22049b21c27ce"
+    },
+    {
+      "source_row": 74,
+      "serial": "641",
+      "url": "https://fastgpt.io/en/faq/How-to-evaluate-the-value-brought-by-RAG",
+      "question": "How to evaluate the value brought by RAG",
+      "repo_key": "How-to-evaluate-the-value",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Key Metrics for Measuring RAG's Business Impact",
+        "description": "Metrics quantifying RAG's impact on accuracy, relevance, and efficiency, evaluating value through KPIs like answer correctness and operational gains.",
+        "keywords": "Task Automation AI, AI Knowledge Management, AI Platform, Open Source AI, LLM Development"
+      },
+      "before_hash": "9d6e65cb1db2175adc573310eb80cac519787b1184f9512dbbc5ec302c5d9dec",
+      "after_hash": "215d5fbbedea8969e4f2578ee55d96c363d51062f00fda81fa475ef4d1942ab2",
+      "immutable_before_hash": "515d9981f7b279560146bbe13f9a4e0763aac58790293a19b44fdd4a9fc4f8b7",
+      "immutable_after_hash": "515d9981f7b279560146bbe13f9a4e0763aac58790293a19b44fdd4a9fc4f8b7"
+    },
+    {
+      "source_row": 75,
+      "serial": "642",
+      "url": "https://fastgpt.io/en/faq/How-to-quickly-integrate-AI-into-company-documents",
+      "question": "How to quickly integrate AI into company documents",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Quickly Add AI to Company Documents Without Heavy Dev",
+        "description": "Discover how AI platforms add intelligence to documents swiftly, with key considerations for data security and format compatibility.",
+        "keywords": "Open Source AI, AI Chatbot, Task Automation AI, Smart Assistant, Vector Search"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 76,
+      "serial": "649",
+      "url": "https://fastgpt.io/en/faq/How-much-storage-space-is-required-for-AI-to-access-company-documents",
+      "question": "How much storage space is required for AI to access company documents?",
+      "repo_key": "How-much-storage-space-is",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Storage Requirements for AI Access to Company Documents",
+        "description": "Learn typical storage needs from 1 GB to 100+ TB, with key factors like document volume, type, and AI format influencing requirements.",
+        "keywords": "GPT Integration, Enterprise AI, Open Source AI, AI Chatbot, AI Platform"
+      },
+      "before_hash": "7f298898d2450270b7cf3b0920da433cbd3632f9d738d0d345c72d0d5644dff1",
+      "after_hash": "bc7da0e4913efd64b0a41394983db44130085184be1bb3c571091652fcd5e518",
+      "immutable_before_hash": "ee55db3b12d5dbca527bc9dd31ee2a53226797b0fd014aa1b7b247102e85dc47",
+      "immutable_after_hash": "ee55db3b12d5dbca527bc9dd31ee2a53226797b0fd014aa1b7b247102e85dc47"
+    },
+    {
+      "source_row": 77,
+      "serial": "651",
+      "url": "https://fastgpt.io/en/faq/Can-AI-automatically-update-the-index-information-of-documents",
+      "question": "Can AI automatically update the index information of documents?",
+      "repo_key": "Can-AI-automatically-update-the",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Automate Document Index Updates with NLU",
+        "description": "AI applies NLP and ML to auto-extract entities and topics, updating index metadata like keywords and categories with minimal manual work.",
+        "keywords": "FastGPT, Open Source AI, API Integration, Enterprise AI, LLM Development"
+      },
+      "before_hash": "ddd3d0b7b1b762ffbf8d830a7d7e565676d12f59dd3ee171c52c0926ef57ff2a",
+      "after_hash": "e098cd0169611c09d6c7f59b6044a769ecbd718d2a22386d150ea0cd77b26db0",
+      "immutable_before_hash": "f35c84a6a2128a5134d6b7a744a521c75d1682a1408966d7292880e14a8538dc",
+      "immutable_after_hash": "f35c84a6a2128a5134d6b7a744a521c75d1682a1408966d7292880e14a8538dc"
+    },
+    {
+      "source_row": 78,
+      "serial": "659",
+      "url": "https://fastgpt.io/en/faq/How-to-enable-AI-to-access-data-under-permission-control",
+      "question": "How to enable AI to access data under permission control",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Enforcing Permission Controls for AI Data Access",
+        "description": "Combine IAM and authorization layers to authenticate AI, enforcing granular permissions for limited data access for defined purposes.",
+        "keywords": "AI Automation, Enterprise AI, LLM Development, Open Source AI, Smart Assistant"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 79,
+      "serial": "660",
+      "url": "https://fastgpt.io/en/faq/How-can-AI-quickly-retrieve-historical-contract-content",
+      "question": "How can AI quickly retrieve historical contract content?",
+      "repo_key": "How-can-AI-quickly-retrieve",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Fast AI-Powered Historical Contract Retrieval",
+        "description": "AI uses OCR, NLP, and semantic search with vector databases to digitize and quickly find contract content through concept-level similarity matching.",
+        "keywords": "Smart Assistant, Document AI, Vector Search, AI Automation, Open Source AI"
+      },
+      "before_hash": "013c1c380f5c04f0032f52cb812d25f28d425dfe4052cedc4691e27838b4d8e8",
+      "after_hash": "40f7b155fd72219df5269d88cb85b895fc874ca05405acf13ad286bd8a84a6d5",
+      "immutable_before_hash": "f9241a3a711a64a45881db14c2b7922e437ee2ebb9b1b73c710d082b72dcc2af",
+      "immutable_after_hash": "f9241a3a711a64a45881db14c2b7922e437ee2ebb9b1b73c710d082b72dcc2af"
+    },
+    {
+      "source_row": 80,
+      "serial": "664",
+      "url": "https://fastgpt.io/en/faq/How-to-keep-the-knowledge-base-content-fresh",
+      "question": "How to keep the knowledge base content fresh",
+      "repo_key": "How-to-keep-the-knowledge",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Systematic Processes to Keep Knowledge Base Up-to-Date",
+        "description": "Learn to establish regular review cycles like quarterly audits and event-triggered updates to continuously refine content for accuracy and relevance.",
+        "keywords": "FastGPT, AI Platform, GPT Integration, Intelligent Q&A, Smart Assistant"
+      },
+      "before_hash": "31724c9f5251446eb9b14877a7c1ffbffa1b873e5f62ff170d6ef4008ef6175d",
+      "after_hash": "2140f1cbbce1b4b6ed757c8a7453767e02e716926fe54edb208a5ac496e8d91e",
+      "immutable_before_hash": "8ee528bfb5cba34a9e5d69f15cda4e7f36e31a317a7b040d473883afc2f964fd",
+      "immutable_after_hash": "8ee528bfb5cba34a9e5d69f15cda4e7f36e31a317a7b040d473883afc2f964fd"
+    },
+    {
+      "source_row": 81,
+      "serial": "666",
+      "url": "https://fastgpt.io/en/faq/How-to-make-the-knowledge-base-content-more-in-line-with-the-latest-policies",
+      "question": "How to make the knowledge base content more in line with the latest policies",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Aligning Knowledge Base Content with the Latest Policies",
+        "description": "Set up proactive monitoring of authoritative policy sources to detect changes early, enabling systematic updates for knowledge base compliance.",
+        "keywords": "Smart Assistant, Vector Search, AI Knowledge Management, LLM Development, FastGPT"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 82,
+      "serial": "668",
+      "url": "https://fastgpt.io/en/faq/Can-the-knowledge-base-automatically-remind-for-updates",
+      "question": "Can the knowledge base automatically remind for updates?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Enable Automated Reminders for Knowledge Base Updates",
+        "description": "Learn how to configure knowledge base update reminders by enabling content monitoring and defining notification rules for stakeholder alerts.",
+        "keywords": "AI Platform, Open Source AI, AI Knowledge Management, Intelligent Q&A, Smart Assistant"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 83,
+      "serial": "671",
+      "url": "https://fastgpt.io/en/faq/How-to-enable-multi-person-collaborative-editing-in-a-knowledge-base",
+      "question": "How to enable multi-person collaborative editing in a knowledge base",
+      "repo_key": "How-to-enable-multi-person-collaborative",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Enable Real-Time Collaborative Knowledge Base Editing",
+        "description": "Discover how to set up multi-person editing with user access control, real-time synchronization, and version history tracking for effective collaboration.",
+        "keywords": "AI Chatbot, Vector Search, Smart Assistant, AI Workflow, Open Source AI"
+      },
+      "before_hash": "4ddba36c4cff2e2d193e797f943af4c47ed7af6db80bb55eaddd184af83630e9",
+      "after_hash": "40f7274c8697684f37d24e6ace529e3d55a4319b2ebe66a1a0b1dcedc4a22772",
+      "immutable_before_hash": "b8fcadf938cf4f94a085d3b8e35820ae905963419f9e9cc54fca4b420acc641b",
+      "immutable_after_hash": "b8fcadf938cf4f94a085d3b8e35820ae905963419f9e9cc54fca4b420acc641b"
+    },
+    {
+      "source_row": 84,
+      "serial": "674",
+      "url": "https://fastgpt.io/en/faq/How-to-improve-the-long-term-maintainability-of-a-knowledge-base",
+      "question": "How to improve the long-term maintainability of a knowledge base",
+      "repo_key": "How-to-improve-the-long-term",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Ensure Long-Term Knowledge Base Maintainability",
+        "description": "Strategies for long-term knowledge base maintenance through standardized workflows, governance policies, and clear accountability for content updates.",
+        "keywords": "AI Workflow, Intelligent Q&A, Task Automation AI, AI Chatbot, Open Source AI"
+      },
+      "before_hash": "75a061af758bef3ccec9f88fecdccf7ebfe863297627216899aa053d2cbd7b29",
+      "after_hash": "9897fde0cef76abffbd0b5692f62fc02b5ef74358c991315f5230dc25554cecf",
+      "immutable_before_hash": "f8cc2fc82ca38998fc415ee93d4b49e2289298823c2a9b8d9c74fab3fa89958f",
+      "immutable_after_hash": "f8cc2fc82ca38998fc415ee93d4b49e2289298823c2a9b8d9c74fab3fa89958f"
+    },
+    {
+      "source_row": 85,
+      "serial": "675",
+      "url": "https://fastgpt.io/en/faq/How-to-avoid-information-redundancy-in-the-knowledge-base",
+      "question": "How to avoid information redundancy in the knowledge base",
+      "repo_key": "How-to-avoid-information-redundancy",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Reduce Knowledge Base Redundancy Through Better Governance",
+        "description": "Learn to prevent knowledge base redundancy with single-sourcing, clear ownership, and stakeholder review cycles for content consolidation.",
+        "keywords": "Open Source AI, Enterprise AI, Vector Search, Smart Assistant, AI Knowledge Management"
+      },
+      "before_hash": "de2a20d9c043c1910d0513eb2bc3d5e12709ec515bdeff5c403a278287b76d14",
+      "after_hash": "df6f3c55121d58d31f0aa8f4185af55331d8ecad350d35f5f12e67df443fe5f0",
+      "immutable_before_hash": "87a2e4bfabe427a6f88935f849eae07f839327c8c4b35c46d7779d538a7b4b18",
+      "immutable_after_hash": "87a2e4bfabe427a6f88935f849eae07f839327c8c4b35c46d7779d538a7b4b18"
+    },
+    {
+      "source_row": 86,
+      "serial": "677",
+      "url": "https://fastgpt.io/en/faq/How-to-enable-instant-comments-and-feedback-for-a-knowledge-base",
+      "question": "How to enable instant comments and feedback for a knowledge base",
+      "repo_key": "How-to-enable-instant-comments",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Add Instant Feedback Comments to Knowledge Base Articles",
+        "description": "Learn how to set up instant feedback comments on knowledge base articles using content management system features or dedicated plugins.",
+        "keywords": "Smart Assistant, Open Source AI, AI Knowledge Management, Task Automation AI, GPT Integration"
+      },
+      "before_hash": "30f8695291476a0654c42c2939b47a7693e9cb2b9e3b89acae7738d640ebf95b",
+      "after_hash": "b09c9554e98496c854861783966875859dd5e3235c74f485f62fd04ee948fb18",
+      "immutable_before_hash": "bdd2b29ba6a78441fdd57f105dd6bdd4bfc1b3efb4d2afe8a9aac774ace4cd77",
+      "immutable_after_hash": "bdd2b29ba6a78441fdd57f105dd6bdd4bfc1b3efb4d2afe8a9aac774ace4cd77"
+    },
+    {
+      "source_row": 87,
+      "serial": "681",
+      "url": "https://fastgpt.io/en/faq/How-to-synchronize-the-knowledge-base-with-real-time-data",
+      "question": "How to synchronize the knowledge base with real-time data",
+      "repo_key": "How-to-synchronize-the-knowledge",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Sync Knowledge Base with Real-Time Data Automatically",
+        "description": "Discover methods to synchronize knowledge base data in real time via APIs, webhooks, or integration platforms and event triggers.",
+        "keywords": "FastGPT, Document AI, AI Chatbot, API Integration, Intelligent Q&A"
+      },
+      "before_hash": "add64d1f014e2384405f49f2bfa30dcbbbc86a7dbbce1a9e1cbefb0907e50660",
+      "after_hash": "9736807536f3f1e2fba3231ab31f9423865e34fc110a7e289d211dfdb4554e78",
+      "immutable_before_hash": "ae3753df759aade9ce462cb7abeedbc1f7d11320bee4e3c9cdb9a7c260e3fa3f",
+      "immutable_after_hash": "ae3753df759aade9ce462cb7abeedbc1f7d11320bee4e3c9cdb9a7c260e3fa3f"
+    },
+    {
+      "source_row": 88,
+      "serial": "683",
+      "url": "https://fastgpt.io/en/faq/How-to-make-the-knowledge-base-automatically-adapt-to-company-structure-changes",
+      "question": "How to make the knowledge base automatically adapt to company structure changes",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Auto-Adapt Knowledge Base to Organizational Changes",
+        "description": "Learn to set up automatic knowledge base adaptation to org changes, adjusting visibility, ownership, and organization dynamically.",
+        "keywords": "AI Platform, AI Automation, FastGPT, Open Source AI, Enterprise AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 89,
+      "serial": "685",
+      "url": "https://fastgpt.io/en/faq/Can-the-knowledge-base-automatically-recommend-relevant-materials",
+      "question": "Can the knowledge base automatically recommend relevant materials?",
+      "repo_key": "Can-the-knowledge-base-automatically",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Enable Auto-Recommendations for Knowledge Base Content",
+        "description": "Set up AI-driven auto-recommendations in your knowledge base by analyzing content, user intent, and patterns to suggest relevant materials.",
+        "keywords": "AI Platform, Vector Search, Open Source AI, Intelligent Q&A, Document AI"
+      },
+      "before_hash": "dd303ad0294dd4509e6202d7611beeda91963dbe6074e8860f751196a559801f",
+      "after_hash": "1e8819222f7440b35a461064c87d2715710b670d4edaa4e4b9330b8abed4e99e",
+      "immutable_before_hash": "d7210b5c13d1d167c6078ac4103f204f512b09fa4bf5ce745af7bba1a767f946",
+      "immutable_after_hash": "d7210b5c13d1d167c6078ac4103f204f512b09fa4bf5ce745af7bba1a767f946"
+    },
+    {
+      "source_row": 90,
+      "serial": "688",
+      "url": "https://fastgpt.io/en/faq/Can-AI-automatically-update-materials-by-integrating-external-news",
+      "question": "Can AI automatically update materials by integrating external news?",
+      "repo_key": "Can-AI-automatically-update-materials",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Automate Content Updates Using AI and News Feeds",
+        "description": "Learn how AI leverages APIs, web scraping, and NLP to automatically refresh materials from news sources, requiring reliable feeds and analysis.",
+        "keywords": "AI Platform, FastGPT, API Integration, Intelligent Q&A, AI Automation"
+      },
+      "before_hash": "60c3ee7b802726d07d59bb749c911db1227c3c12be63fb23e3267d6746e471be",
+      "after_hash": "55bdb50093071776f4eebc681f292a061a6640bd6f9d810181b63ec3abd041c0",
+      "immutable_before_hash": "6d4e93ae375bc4239de893a1e5c5d4f9247e21f3d71f6eebba2ffa47990999b0",
+      "immutable_after_hash": "6d4e93ae375bc4239de893a1e5c5d4f9247e21f3d71f6eebba2ffa47990999b0"
+    },
+    {
+      "source_row": 91,
+      "serial": "689",
+      "url": "https://fastgpt.io/en/faq/How-to-make-the-knowledge-base-quickly-adapt-to-business-adjustments",
+      "question": "How to make the knowledge base quickly adapt to business adjustments",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Adapt Knowledge Bases Quickly with Modular Content Design",
+        "description": "Learn to use modular content design, version control, and automated checks to enable quick knowledge base updates when business requirements change.",
+        "keywords": "API Integration, AI Chatbot, Open Source AI, Enterprise AI, FastGPT"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 92,
+      "serial": "690",
+      "url": "https://fastgpt.io/en/faq/How-does-the-knowledge-base-achieve-automatic-error-correction",
+      "question": "How does the knowledge base achieve automatic error correction?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Maintain Error-Free Knowledge Bases with Auto-Correction",
+        "description": "Discover how knowledge bases use text analysis and rules to automatically detect and fix typos, inconsistencies, and formatting errors.",
+        "keywords": "Intelligent Q&A, GPT Integration, Vector Search, AI Chatbot, API Integration"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 93,
+      "serial": "693",
+      "url": "https://fastgpt.io/en/faq/How-does-the-knowledge-base-ensure-the-consistency-of-internal-knowledge",
+      "question": "How does the knowledge base ensure the consistency of internal knowledge?",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Maintain Consistent Knowledge with Governance and Controls",
+        "description": "Discover how version control, regular reviews, and owner validation ensure knowledge base information stays consistent and accurate.",
+        "keywords": "GPT Integration, Intelligent Q&A, FastGPT, AI Knowledge Management, AI Chatbot"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 94,
+      "serial": "696",
+      "url": "https://fastgpt.io/en/faq/How-to-make-the-knowledge-base-adaptable-to-multi-terminal-access",
+      "question": "How to make the knowledge base adaptable to multi-terminal access",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Enable Multi-Device Access with Responsive Knowledge Bases",
+        "description": "Learn how to build knowledge bases with responsive frameworks and flexible delivery to ensure smooth access on desktops, tablets, and phones.",
+        "keywords": "AI Knowledge Management, Intelligent Q&A, AI Workflow, AI Automation, Document AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 95,
+      "serial": "697",
+      "url": "https://fastgpt.io/en/faq/How-does-the-knowledge-base-improve-mobile-search-speed",
+      "question": "How does the knowledge base improve mobile search speed",
+      "repo_key": null,
+      "match_method": "none",
+      "status": "unmatched-source",
+      "conflict_reason": "No unique repository FAQ has the normalized source question",
+      "source_fields": {
+        "title": "Speed Up Mobile Searches with Optimized Knowledge Bases",
+        "description": "Discover how optimized indexing, intelligent caching, and efficient retrieval techniques accelerate mobile search within knowledge bases.",
+        "keywords": "Intelligent Q&A, AI Knowledge Management, Smart Assistant, API Integration, Enterprise AI"
+      },
+      "before_hash": null,
+      "after_hash": null,
+      "immutable_before_hash": null,
+      "immutable_after_hash": null
+    },
+    {
+      "source_row": 96,
+      "serial": "700",
+      "url": "https://fastgpt.io/en/faq/How-AI-automatically-expands-the-content-of-knowledge-bases",
+      "question": "How AI automatically expands the content of knowledge bases",
+      "repo_key": "How-AI-automatically-expands-the",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Auto-Expand Knowledge Base Content with AI and NLP",
+        "description": "Learn how AI uses NLP and machine learning to semantically analyze existing data and automatically generate or retrieve new knowledge base content.",
+        "keywords": "Vector Search, AI Workflow, Smart Assistant, LLM Development, AI Automation"
+      },
+      "before_hash": "0a9a531926e55b2aa09ef01ac230a489c47abebc893cf46e5cabb316fd9ab378",
+      "after_hash": "299c69ee6c7e36ad2d03721bb3a36fbb5b8f9122ba08135cac318e2d7648f5e4",
+      "immutable_before_hash": "5d09d7418f7df3fbcb348f79f20f2b06cb30dc453cb4b4a2f04d70f783bdb4bc",
+      "immutable_after_hash": "5d09d7418f7df3fbcb348f79f20f2b06cb30dc453cb4b4a2f04d70f783bdb4bc"
+    },
+    {
+      "source_row": 97,
+      "serial": "701",
+      "url": "https://fastgpt.io/en/faq/Does-the-knowledge-base-support-cross-departmental-data-interoperability",
+      "question": "Does the knowledge base support cross-departmental data interoperability?",
+      "repo_key": "Does-the-knowledge-base-support",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Achieve Cross-Department Data Sharing with Knowledge Bases",
+        "description": "Learn how permission controls, standardized taxonomies, and metadata enable knowledge bases to share data across departments and eliminate silos.",
+        "keywords": "Open Source AI, Enterprise AI, API Integration, Document AI, AI Workflow"
+      },
+      "before_hash": "f8c30aceb4fcb71bddc123ae5b33317e6713ed53661b07e241dcf50e50d5e80b",
+      "after_hash": "32e5d223a46c88d71303f73592ee160b18028aa7dbf685bfa85f78fc41df56c2",
+      "immutable_before_hash": "2bc66495d782ede50f7ea2f4b37fa8f6b8e731166b2d81917d0dba42e213b790",
+      "immutable_after_hash": "2bc66495d782ede50f7ea2f4b37fa8f6b8e731166b2d81917d0dba42e213b790"
+    },
+    {
+      "source_row": 98,
+      "serial": "702",
+      "url": "https://fastgpt.io/en/faq/Can-AI-export-important-data-from-the-knowledge-base-with-one-click",
+      "question": "Can AI export important data from the knowledge base with one click?",
+      "repo_key": "Can-AI-export-important-data",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Efficiently Export Knowledge Base Data with AI Tools",
+        "description": "Learn how AI can assist in exporting knowledge base data, covering platform features, permissions, and the need for secure API access or built-in tools.",
+        "keywords": "Open Source AI, Document AI, GPT Integration, LLM Development, AI Knowledge Management"
+      },
+      "before_hash": "ca70d005f64c2a21c203eb1831bf426478455fa08c11f52da8de4e340dd028b8",
+      "after_hash": "c7dda1437a0dfdea6280091d8a911052eb2eda2bab0af1ee3eb34cd97d3b4fa3",
+      "immutable_before_hash": "66972ce64cf4640797f40023f4654f8fd3410695dc5e6b53be260c3a2674ba31",
+      "immutable_after_hash": "66972ce64cf4640797f40023f4654f8fd3410695dc5e6b53be260c3a2674ba31"
+    },
+    {
+      "source_row": 99,
+      "serial": "703",
+      "url": "https://fastgpt.io/en/faq/How-to-enable-multi-dimensional-search-for-a-knowledge-base",
+      "question": "How to enable multi-dimensional search for a knowledge base",
+      "repo_key": "How-to-enable-multi-dimensional-search",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Achieve Multi-Dimensional Search for Your Knowledge Base",
+        "description": "Discover how to implement multi-dimensional search, letting users filter by category, author, date, and tags to enhance findability via metadata.",
+        "keywords": "FastGPT, Enterprise AI, LLM Development, API Integration, Task Automation AI"
+      },
+      "before_hash": "5fb61eb2d33c3fb6ffcef9de8fc057975fafb9d04e54ce028ae49e3f5859e99a",
+      "after_hash": "28c7ef5edf79aa7bc36028608873be4e1bd7c60172e276f538549a320b551da8",
+      "immutable_before_hash": "0d706cd8ff2cb6087872ec28606a539044670a809972ab529e6925dd36ce8868",
+      "immutable_after_hash": "0d706cd8ff2cb6087872ec28606a539044670a809972ab529e6925dd36ce8868"
+    },
+    {
+      "source_row": 100,
+      "serial": "704",
+      "url": "https://fastgpt.io/en/faq/How-to-ensure-the-stability-of-the-knowledge-base-during-access-peaks",
+      "question": "How to ensure the stability of the knowledge base during access peaks",
+      "repo_key": "How-to-ensure-the-stability",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Strategies for Stable Knowledge Base Under Peak Load",
+        "description": "Learn how to maintain knowledge base stability during traffic spikes by scaling infrastructure and using load balancing to evenly distribute user requests.",
+        "keywords": "AI Chatbot, Intelligent Q&A, AI Automation, Open Source AI, Document AI"
+      },
+      "before_hash": "19775b3b89087d2bff42ae194b2740b4593b6467f0b957451be31498f4786e99",
+      "after_hash": "92927408a943cfd92be7c3fca16208ac34d244257305220b0da8f39715c16095",
+      "immutable_before_hash": "8979a63dd32541dace7bdc240f0de91bd0a354612e447f845caee460c04b0d41",
+      "immutable_after_hash": "8979a63dd32541dace7bdc240f0de91bd0a354612e447f845caee460c04b0d41"
+    },
+    {
+      "source_row": 101,
+      "serial": "705",
+      "url": "https://fastgpt.io/en/faq/Can-AI-adjust-its-retrieval-strategy-based-on-access-records",
+      "question": "Can AI adjust its retrieval strategy based on access records?",
+      "repo_key": "Can-AI-adjust-its-retrieval",
+      "match_method": "question",
+      "status": "matched",
+      "conflict_reason": null,
+      "source_fields": {
+        "title": "Adaptive AI Retrieval Using Historical Access Data",
+        "description": "Discover how AI adapts retrieval strategies using access records, leveraging reinforcement learning to analyze patterns and refine search results.",
+        "keywords": "Task Automation AI, Smart Assistant, GPT Integration, AI Platform, API Integration"
+      },
+      "before_hash": "ccdf949956217c49dccfb904bcf60a9c7ab8ba9f8723d59c4b530b25e55a575f",
+      "after_hash": "f29ae4bb11ff46f3ab97f51734d45dd3109cb2cba49c88b05d04b136bb93048d",
+      "immutable_before_hash": "7efa2491dd51811d13a9d97a57bb22b5523b5f8717b336fa0aa2cac1203e468e",
+      "immutable_after_hash": "7efa2491dd51811d13a9d97a57bb22b5523b5f8717b336fa0aa2cac1203e468e"
+    }
+  ],
+  "generated_at": "2026-08-04T12:20:43.997Z",
+  "report_digest": "3d818beacc6af81133d3d52037e99162c8bd2ff7b8995411e4096e25f15d717f"
+}

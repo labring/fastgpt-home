@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "sample_repo_key": "Can-AI-intelligent-customer-service",
+  "checked_fields": [
+    "title",
+    "description",
+    "existing-keywords",
+    "FAQPage"
+  ],
+  "matched_rows": 76,
+  "generated_at": "2026-08-04T12:20:45.094Z"
+}

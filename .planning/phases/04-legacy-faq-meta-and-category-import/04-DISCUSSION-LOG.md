@@ -19,7 +19,7 @@
 
 **User's choice:** 自动锁定 Phase 1 的 URL → 问句 → repo key 优先级；保留精确 100 行 source set。
 
-**Notes:** The Meta workbook is `FAQ Data`, 100 data rows, 100 unique questions/URLs, SHA-256 `d9aeb3ede23d29a2c2a65eee61df381366db68c0301df9cedeee2e7ae9489811`. Current evidence resolves 76 rows by question and leaves 24 rows for source confirmation or failure reporting. The overlay writes source `title`, `description`, and `keywords`; source category stays evidence for the separate category operation. English records receive the overlay while existing Chinese locale data and route relationships remain intact.
+**Notes:** The Meta workbook is `FAQ Data`, 100 data rows, 100 unique questions/URLs, SHA-256 `d9aeb3ede23d29a2c2a65eee61df381366db68c0301df9cedeee2e7ae9489811`. Current evidence resolves 76 rows by question and leaves 24 rows for source confirmation or failure reporting. The overlay writes source `title` and `description`; source keywords remain audit evidence and existing runtime values remain intact. Source category stays evidence for the separate category operation. English records receive the overlay while existing Chinese locale data and route relationships remain intact.
 
 ## Category batch conflict policy
 
@@ -50,7 +50,7 @@
 | Option | Description | Selected |
 |--------|-------------|----------|
 | Metadata plus identity edits | Permit the importer to normalize slug/URL while applying metadata and categories. | |
-| Metadata/category overlay only | Write Title/Description/Keywords and the stable category ID; keep body, Question, repo key/slug, and URL read-only with before/after hashes. | ✓ |
+| Metadata/category overlay only | Write Title/Description and the stable category ID; keep existing Keywords, body, Question, repo key/slug, and URL read-only with before/after hashes. | ✓ |
 | Snapshot-only report | Produce reports without any apply capability. | |
 
 **User's choice:** 自动锁定 body/Question/slug/URL immutability。

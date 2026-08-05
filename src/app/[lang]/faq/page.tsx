@@ -1,6 +1,7 @@
 import { faqContentLocaleCodes, getFaqData, resolveFaqLocale } from '@/faq';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
-import { getAlternates, localeMap } from '@/lib/seo';
+import { getFaqAlternates, localeMap } from '@/lib/seo';
+import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
 import FAQList from '@/components/faq/FAQList';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
@@ -8,11 +9,7 @@ import GradientBlobs from '@/components/home/GradientBlobs';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { BreadcrumbJsonLd, FAQJsonLd } from '@/components/JsonLd';
 
-export default async function FAQPage({
-  params
-}: {
-  params: Promise<{ lang?: string }>;
-}) {
+export default async function FAQPage({ params }: { params: Promise<{ lang?: string }> }) {
   const { lang } = await params;
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
@@ -24,21 +21,23 @@ export default async function FAQPage({
     trimmedFaq[id] = {
       Category: item.Category,
       Question: item.Question,
-      Answers: item.Answers.substring(0, 100),
+      Answers: item.Answers.substring(0, 100)
     };
   }
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
-  const faqSchemaItems = Object.values(faq).slice(0, 30).map((item) => ({
-    question: item.Question,
-    answer: item.Answers
-  }));
+  const faqSchemaItems = Object.values(faq)
+    .slice(0, 30)
+    .map((item) => ({
+      question: item.Question,
+      answer: item.Answers
+    }));
 
   return (
     <div className="home overflow-x-hidden">
       <BreadcrumbJsonLd
         items={[
-          { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}/${langName}` },
-          { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}/${langName}/faq` }
+          { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}${getDefaultLocalePath(langName)}` },
+          { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}${getFaqPath(langName)}` }
         ]}
       />
       <FAQJsonLd items={faqSchemaItems} />
@@ -49,7 +48,10 @@ export default async function FAQPage({
         <GradientBlobs />
 
         {/* Content layer */}
-        <div className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[200px]" style={{ zIndex: 1 }}>
+        <div
+          className="max-w-[min(92vw,1340px)] md:max-w-[min(85vw,1340px)] mx-auto relative pt-[200px]"
+          style={{ zIndex: 1 }}
+        >
           <div className="mb-12">
             <FadeIn className="text-center flex flex-col items-center" style={{ rowGap: 24 }}>
               <span
@@ -107,11 +109,7 @@ export async function generateStaticParams() {
 
 export const dynamicParams = false;
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ lang?: string }>;
-}) {
+export async function generateMetadata({ params }: { params: Promise<{ lang?: string }> }) {
   const { lang } = await params;
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
@@ -122,16 +120,16 @@ export async function generateMetadata({
 
   return {
     title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
-    description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
+    description:
+      dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
     keywords: ['FastGPT', 'FAQ', 'AI Agent', 'Knowledge Base', 'Customer Support', 'AI Platform'],
-    alternates: getAlternates(faqLangName, '/faq', faqContentLocaleCodes),
+    alternates: getFaqAlternates(faqLangName, undefined, faqContentLocaleCodes),
     robots:
-      faqLangName === langName
-        ? { index: true, follow: true }
-        : { index: false, follow: true },
+      faqLangName === langName ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
-      description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
+      description:
+        dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
       type: 'website',
       locale: localeMap[faqLangName] || 'en_US',
       images: [
@@ -146,7 +144,8 @@ export async function generateMetadata({
     twitter: {
       card: 'summary_large_image',
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
-      description: dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
+      description:
+        dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
       images: [socialImageUrl]
     }
   };

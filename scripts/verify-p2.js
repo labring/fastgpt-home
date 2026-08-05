@@ -6,16 +6,17 @@ const path = require('node:path');
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
 const sampleFaqId = 'Why-are-enterprises-paying-more';
-const { TITLE_MAX_LENGTH, DESCRIPTION_MAX_LENGTH } = require('../src/lib/faqMetadata.constants.json');
+const {
+  TITLE_MAX_LENGTH,
+  DESCRIPTION_MAX_LENGTH
+} = require('../src/lib/faqMetadata.constants.json');
 
 function resolveHtml(route) {
   const relativeRoute = route.replace(/^\/+|\/+$/g, '');
   const candidates = relativeRoute
-    ? [
-        path.join(outDir, `${relativeRoute}.html`),
-        path.join(outDir, relativeRoute, 'index.html')
-      ]
+    ? [path.join(outDir, `${relativeRoute}.html`), path.join(outDir, relativeRoute, 'index.html')]
     : [path.join(outDir, 'index.html')];
   const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
 
@@ -28,9 +29,7 @@ function decodeHtmlEntities(value) {
     .replace(/&#x([0-9a-f]+);/gi, (_, codePoint) =>
       String.fromCodePoint(Number.parseInt(codePoint, 16))
     )
-    .replace(/&#([0-9]+);/g, (_, codePoint) =>
-      String.fromCodePoint(Number.parseInt(codePoint, 10))
-    )
+    .replace(/&#([0-9]+);/g, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 10)))
     .replaceAll('&amp;', '&')
     .replaceAll('&quot;', '"')
     .replaceAll('&#39;', "'")
@@ -62,9 +61,7 @@ function getTitle(html) {
 }
 
 function getHeadingLevels(html) {
-  return [...html.matchAll(/<h([1-6])\b[^>]*>[\s\S]*?<\/h\1>/gi)].map((match) =>
-    Number(match[1])
-  );
+  return [...html.matchAll(/<h([1-6])\b[^>]*>[\s\S]*?<\/h\1>/gi)].map((match) => Number(match[1]));
 }
 
 function verifyHeadingSequence(route, html) {
@@ -87,15 +84,34 @@ function verifyHeadingSequence(route, html) {
   return levels;
 }
 
-function verifyCanonical(route, html) {
-  const canonical = getTags(html, 'link').find(
-    (tag) => getAttribute(tag, 'rel') === 'canonical'
-  );
-  assert(canonical, `Missing canonical for ${route}`);
-  assert(getAttribute(canonical, 'href'), `Canonical is missing an href for ${route}`);
+function getExpectedCanonicalPath(route) {
+  const defaultFaqPrefix = `/${defaultLocale}/faq`;
+  if (route === defaultFaqPrefix || route.startsWith(`${defaultFaqPrefix}/`)) {
+    return route.slice(`/${defaultLocale}`.length);
+  }
+  return route;
 }
 
-function verifyPageMetadata(route, html, { enforceLength = false } = {}) {
+function verifyCanonical(route, html, expectedPath) {
+  const canonical = getTags(html, 'link').find((tag) => getAttribute(tag, 'rel') === 'canonical');
+  assert(canonical, `Missing canonical for ${route}`);
+  const canonicalHref = getAttribute(canonical, 'href');
+  assert(canonicalHref, `Canonical is missing an href for ${route}`);
+
+  if (expectedPath) {
+    assert.equal(
+      new URL(canonicalHref).href,
+      new URL(`${baseUrl}${expectedPath}`).href,
+      `Unexpected canonical for ${route}`
+    );
+  }
+}
+
+function verifyPageMetadata(
+  route,
+  html,
+  { enforceLength = false, verifyCanonicalTarget = true } = {}
+) {
   const title = getTitle(html);
   const description = getMetaContent(html, 'name', 'description');
 
@@ -106,7 +122,9 @@ function verifyPageMetadata(route, html, { enforceLength = false } = {}) {
     );
     assert(
       Array.from(description).length <= DESCRIPTION_MAX_LENGTH,
-      `${route} description exceeds ${DESCRIPTION_MAX_LENGTH} characters: ${Array.from(description).length}`
+      `${route} description exceeds ${DESCRIPTION_MAX_LENGTH} characters: ${
+        Array.from(description).length
+      }`
     );
 
     for (const [attribute, value, expected] of [
@@ -122,7 +140,7 @@ function verifyPageMetadata(route, html, { enforceLength = false } = {}) {
       );
     }
   }
-  verifyCanonical(route, html);
+  verifyCanonical(route, html, verifyCanonicalTarget ? getExpectedCanonicalPath(route) : undefined);
 }
 
 function walkHtmlFiles(dir) {
@@ -151,10 +169,32 @@ function verifyAllFaqMetadata() {
   for (const filePath of faqFiles) {
     const html = fs.readFileSync(filePath, 'utf8');
     const relativePath = `/${path.relative(outDir, filePath).split(path.sep).join('/')}`;
-    verifyPageMetadata(relativePath, html, { enforceLength: true });
+    verifyPageMetadata(relativePath, html, {
+      enforceLength: true,
+      verifyCanonicalTarget: false
+    });
   }
 
   return faqFiles.length;
+}
+
+function verifyFaqMigrationCoverage() {
+  const legacyFaqDir = path.join(outDir, 'zh', 'faq');
+  const canonicalFaqDir = path.join(outDir, 'faq');
+  const legacyFaqFiles = walkHtmlFiles(legacyFaqDir);
+
+  assert(legacyFaqFiles.length > 0, 'No legacy Chinese FAQ detail HTML files found');
+
+  for (const legacyFilePath of legacyFaqFiles) {
+    const relativePath = path.relative(legacyFaqDir, legacyFilePath);
+    const canonicalFilePath = path.join(canonicalFaqDir, relativePath);
+    assert(
+      fs.existsSync(canonicalFilePath),
+      `Missing canonical FAQ migration target for /zh/faq/${relativePath}`
+    );
+  }
+
+  return legacyFaqFiles.length;
 }
 
 function main() {
@@ -162,8 +202,10 @@ function main() {
     '/',
     '/en',
     '/zh',
+    '/faq',
     '/en/faq',
     '/zh/faq',
+    `/faq/${sampleFaqId}`,
     `/en/faq/${sampleFaqId}`,
     `/zh/faq/${sampleFaqId}`
   ];
@@ -177,24 +219,30 @@ function main() {
 
   for (const route of ['/en', '/zh']) {
     const levels = getHeadingLevels(htmlByRoute.get(route));
-    assert(levels.every((level) => level <= 3), `${route} must use h1 through h3 only`);
+    assert(
+      levels.every((level) => level <= 3),
+      `${route} must use h1 through h3 only`
+    );
     assert(!levels.includes(4), `${route} still contains h4 headings`);
     assert(!levels.includes(5), `${route} still contains h5 headings`);
   }
 
-  for (const route of ['/en/faq', '/zh/faq']) {
+  for (const route of ['/faq', '/en/faq', '/zh/faq']) {
     const levels = getHeadingLevels(htmlByRoute.get(route));
     assert.equal(levels[0], 1, `${route} must expose the FAQ title as h1`);
     assert(levels.includes(2), `${route} must expose FAQ card headings as h2`);
   }
 
-  for (const route of [`/en/faq/${sampleFaqId}`, `/zh/faq/${sampleFaqId}`]) {
+  for (const route of [`/faq/${sampleFaqId}`, `/en/faq/${sampleFaqId}`, `/zh/faq/${sampleFaqId}`]) {
     const levels = getHeadingLevels(htmlByRoute.get(route));
     assert.deepEqual(levels.slice(0, 3), [1, 2, 3], `${route} must keep h1 -> h2 -> h3 order`);
   }
 
   const faqFileCount = verifyAllFaqMetadata();
-  console.log(`P2 verification passed for ${baseUrl}: ${faqFileCount} FAQ detail pages checked`);
+  const migratedFaqFileCount = verifyFaqMigrationCoverage();
+  console.log(
+    `P2 verification passed for ${baseUrl}: ${faqFileCount} FAQ detail pages checked, ${migratedFaqFileCount} Chinese migration targets matched`
+  );
 }
 
 try {

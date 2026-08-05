@@ -103,6 +103,13 @@
     "showing": "显示",
     "question": "个问题",
     "questions": "个问题",
+    "answerLabel": "核心解答",
+    "answerTitle": "答案",
+    "keywordsTitle": "相关关键词",
+    "sidebarEyebrow": "FastGPT 企业知识库",
+    "sidebarTitle": "让企业知识真正被 AI 用起来",
+    "sidebarDescription": "导入企业文档，构建准确、可靠、可追溯的智能问答。",
+    "sidebarCta": "免费开始",
     "previous": "上一个",
     "next": "下一个"
   },

@@ -20,7 +20,7 @@ const links = isCn
       pricingZhHant: 'https://fastgpt.cn/zh-hant/price',
       pricingZh: 'https://fastgpt.cn/zh/price',
       faqEn: 'https://fastgpt.cn/en/faq',
-      faqZh: 'https://fastgpt.cn/zh/faq'
+      faqZh: 'https://fastgpt.cn/faq'
     }
   : {
       website: 'https://fastgpt.io',
@@ -29,7 +29,7 @@ const links = isCn
       pricingEn: 'https://fastgpt.io/en/price',
       pricingZhHant: 'https://fastgpt.io/zh-hant/price',
       pricingZh: 'https://fastgpt.io/zh/price',
-      faqEn: 'https://fastgpt.io/en/faq',
+      faqEn: 'https://fastgpt.io/faq',
       faqZh: 'https://fastgpt.io/zh/faq'
     };
 

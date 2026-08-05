@@ -1,8 +1,8 @@
 {
   "id": "w2-direct-release",
   "schemaVersion": "W2-2026-08-05-direct-v1",
-  "generatedOn": "2026-08-05T02:33:18.567Z",
-  "preparedFromCommit": "4a1c6534fa42ffd1ba0d93e5c36d2ad1ae5193b4",
+  "generatedOn": "2026-08-05T02:43:21.021Z",
+  "preparedFromCommit": "0a1600f2f8249b1c7b09a9dc4329ef150ddc58fe",
   "authorization": {
     "mode": "direct-publish",
     "authorizedOn": "2026-08-05",
@@ -37,9 +37,28 @@
     }
   ],
   "operationalGate": {
-    "status": "pending-deployment",
+    "status": "verified",
+    "verifiedOn": "2026-08-05",
     "workflow": ".github/workflows/fastgpt-home-image.yml",
     "trigger": "push upstream/main",
+    "workflowRun": {
+      "id": 30969755418,
+      "jobId": 92191321931,
+      "headSha": "0a1600f2f8249b1c7b09a9dc4329ef150ddc58fe",
+      "conclusion": "success",
+      "url": "https://github.com/labring/fastgpt-home/actions/runs/30969755418"
+    },
+    "liveEvidence": {
+      "checkedAt": "2026-08-05",
+      "sitemapStatus": 200,
+      "zhFaqRoutes": 1460,
+      "comparisonRoutes": 4,
+      "checkedW2FaqUrls": 60,
+      "checkedComparisonUrls": 4,
+      "allCheckedUrlsStatus": 200,
+      "canonicalDomain": "fastgpt.cn",
+      "robots": "index, follow"
+    },
     "liveVerification": [
       "comparison URLs",
       "FAQ sitemap counts",

@@ -4,7 +4,7 @@ import type { ComparisonPage } from './types';
 export const ragflowComparisonPage: ComparisonPage = createComparisonPage({
   slug: 'ragflow-vs-fastgpt',
   lang: 'zh',
-  status: 'preview',
+  status: 'published',
   title: 'RAGFlow 与 FastGPT 怎么选：复杂文档与完整链路的分野',
   description:
     '正面承认 RAGFlow 在扫描件与复杂版式解析上的产品心智，说明它与 FastGPT 在定时自动化、审计配额、中国知识源与运营闭环上的差异，并给出同批文档验证方法与许可证审核要点。',

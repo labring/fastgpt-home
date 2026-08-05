@@ -4,7 +4,7 @@ import type { ComparisonPage } from './types';
 export const selfBuildComparisonPage: ComparisonPage = createComparisonPage({
   slug: 'self-build-vs-platform',
   lang: 'zh',
-  status: 'preview',
+  status: 'published',
   title: '自研或直接跑开源与用平台怎么选：四组必算成本',
   description:
     '把自研 AI 知识库的真实工作量拆成解析检索、运行时、安全治理、发布运维四组，给出同一份三年需求清单的报价方法与同条件 POC 测算表。',

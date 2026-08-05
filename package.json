@@ -18,7 +18,8 @@
     "verify:i18n-seo": "node scripts/verify-i18n-seo.js",
     "verify:p3": "node scripts/verify-p3.js",
     "verify:p4": "node scripts/verify-p4.js",
-    "verify:p5": "node scripts/verify-p5.js"
+    "verify:p5": "node scripts/verify-p5.js",
+    "verify:direct-release": "node scripts/phase5/build_direct_release.mjs && node scripts/phase5/test_direct_release.mjs"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

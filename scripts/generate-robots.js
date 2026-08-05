@@ -11,7 +11,7 @@ const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 const isCn = baseUrl.includes('.cn');
 
 const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
-const faqUrl = isCn ? `${baseUrl}/zh/faq` : `${baseUrl}/en/faq`;
+const faqUrl = `${baseUrl}/faq`;
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
 const priceUrl = isCn ? `${baseUrl}/zh/price` : `${baseUrl}/en/price`;
 const llmsUrl = isCn ? `${baseUrl}/zh/llms.txt` : `${baseUrl}/en/llms.txt`;

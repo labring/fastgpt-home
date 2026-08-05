@@ -86,11 +86,27 @@ function verifyNginxHeaders() {
   const includeCount = (nginxConfig.match(/include \/etc\/nginx\/security-headers\.conf;/g) || [])
     .length;
   assert.equal(includeCount, 11, 'Security headers must cover the server and all cache locations');
+
+  const faqRedirectScope = 'if ($host ~* ^(?:www\\.)?fastgpt\\.cn$) {';
+  const faqListRedirect = 'rewrite ^/zh/faq/?$ https://fastgpt.cn/faq permanent;';
+  const faqDetailRedirect = 'rewrite ^/zh/faq/(.+?)/?$ https://fastgpt.cn/faq/$1 permanent;';
+  const trailingSlashRule = 'location ~ ^(.+)/$ {';
+
+  assert(nginxConfig.includes(faqRedirectScope), 'FAQ redirects must be scoped to fastgpt.cn');
+  assert(nginxConfig.includes(faqListRedirect), 'Missing permanent FAQ list redirect');
+  assert(nginxConfig.includes(faqDetailRedirect), 'Missing permanent FAQ detail redirect');
+  assert(
+    nginxConfig.indexOf(faqRedirectScope) < nginxConfig.indexOf(trailingSlashRule),
+    'FAQ redirects must run before the generic trailing-slash redirect'
+  );
 }
 
 async function main() {
   await verifyImage();
   verifyNginxHeaders();
+
+  verifyFaqPage('/faq');
+  verifyFaqPage(`/faq/${faqId}`);
 
   for (const locale of ['en', 'zh']) {
     verifyFaqPage(`/${locale}/faq`);

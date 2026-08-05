@@ -1,4 +1,5 @@
 import { ArrowRight } from 'lucide-react';
+import { getFaqPath } from '@/lib/localizedRoutes';
 
 interface FAQCardProps {
   id: string;
@@ -23,10 +24,7 @@ export default function FAQCard({
   const Heading = headingLevel === 'h2' ? 'h2' : 'h3';
 
   return (
-    <a
-      href={`/${langName}/faq/${encodeURIComponent(id)}`}
-      className="group block h-full"
-    >
+    <a href={getFaqPath(langName, id)} className="group block h-full">
       <div
         className="h-full flex flex-col"
         style={{
@@ -80,8 +78,13 @@ export default function FAQCard({
           {summary}
         </p>
 
-        <div className="flex items-center gap-1 text-[16px] font-normal transition-all" style={{ color: '#3370ff' }}>
-          <span style={{ lineHeight: '24px', letterSpacing: '-0.16px' }}>{locale?.readDetail || '查看详情'}</span>
+        <div
+          className="flex items-center gap-1 text-[16px] font-normal transition-all"
+          style={{ color: '#3370ff' }}
+        >
+          <span style={{ lineHeight: '24px', letterSpacing: '-0.16px' }}>
+            {locale?.readDetail || '查看详情'}
+          </span>
           <ArrowRight className="w-4 h-4" />
         </div>
       </div>

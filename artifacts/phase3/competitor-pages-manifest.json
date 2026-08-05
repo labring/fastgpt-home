@@ -1,7 +1,7 @@
 {
   "id": "competitor-pages-manifest",
   "schemaVersion": 1,
-  "generatedOn": "2026-08-04",
+  "generatedOn": "2026-08-05",
   "reviewPolicy": {
     "sourceVerifiedOn": "2026-07-20",
     "nextReviewDays": 90,
@@ -15,6 +15,13 @@
       "poc-required",
       "contract-required"
     ]
+  },
+  "publicationOverride": {
+    "mode": "direct-publish",
+    "authorizedOn": "2026-08-05",
+    "waivedGate": "comparison-signoffs",
+    "reason": "User explicitly authorized direct publication without three-party signoff.",
+    "runtimeStatus": "published"
   },
   "sourceInputs": [
     {
@@ -36,7 +43,7 @@
     {
       "slug": "dify-vs-fastgpt",
       "lang": "zh",
-      "status": "preview",
+      "status": "published",
       "sourcePath": "content/competitors/dify-vs-fastgpt.md",
       "sourceHash": "c25614d6a8c7a1c294a5b828f93cd35fae00cc566b2355a27afb0e6f50adc27c",
       "sourceRefs": [
@@ -139,7 +146,8 @@
         "links": "passed",
         "signoffs": "pending"
       },
-      "failures": [
+      "failures": [],
+      "waivedFailures": [
         "signoffs:product signoff is pending or incomplete.",
         "signoffs:sales signoff is pending or incomplete.",
         "signoffs:legal signoff is pending or incomplete."
@@ -148,7 +156,7 @@
     {
       "slug": "self-build-vs-platform",
       "lang": "zh",
-      "status": "preview",
+      "status": "published",
       "sourcePath": "content/competitors/self-build-vs-platform.md",
       "sourceHash": "311664f8f4dbbd77d4480675d0cdaef640584c5b944f1db6d0e166f7f378ca20",
       "sourceRefs": [
@@ -251,7 +259,8 @@
         "links": "passed",
         "signoffs": "pending"
       },
-      "failures": [
+      "failures": [],
+      "waivedFailures": [
         "signoffs:product signoff is pending or incomplete.",
         "signoffs:sales signoff is pending or incomplete.",
         "signoffs:legal signoff is pending or incomplete."
@@ -260,7 +269,7 @@
     {
       "slug": "ragflow-vs-fastgpt",
       "lang": "zh",
-      "status": "preview",
+      "status": "published",
       "sourcePath": "content/competitors/ragflow-vs-fastgpt.md",
       "sourceHash": "aff17f5fffdbdc9f2186334cdfef59267a0d69697cd7a069d41daf1360f8f1c1",
       "sourceRefs": [
@@ -363,7 +372,8 @@
         "links": "passed",
         "signoffs": "pending"
       },
-      "failures": [
+      "failures": [],
+      "waivedFailures": [
         "signoffs:product signoff is pending or incomplete.",
         "signoffs:sales signoff is pending or incomplete.",
         "signoffs:legal signoff is pending or incomplete."
@@ -372,7 +382,7 @@
     {
       "slug": "maxkb-vs-fastgpt",
       "lang": "zh",
-      "status": "preview",
+      "status": "published",
       "sourcePath": "content/competitors/maxkb-vs-fastgpt.md",
       "sourceHash": "60162fa80f25cae929f5ca60c5461d6e57760f319d2f2b42f23b28dff7bb7002",
       "sourceRefs": [
@@ -475,7 +485,8 @@
         "links": "passed",
         "signoffs": "pending"
       },
-      "failures": [
+      "failures": [],
+      "waivedFailures": [
         "signoffs:product signoff is pending or incomplete.",
         "signoffs:sales signoff is pending or incomplete.",
         "signoffs:legal signoff is pending or incomplete."

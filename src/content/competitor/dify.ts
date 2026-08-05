@@ -4,7 +4,7 @@ import type { ComparisonPage } from './types';
 export const difyComparisonPage: ComparisonPage = createComparisonPage({
   slug: 'dify-vs-fastgpt',
   lang: 'zh',
-  status: 'preview',
+  status: 'published',
   title: 'Dify 与 FastGPT 怎么选：四种项目的分野与 POC 判据',
   description:
     '从产品重心、能力对照、许可证与商业边界三层说明 Dify 与 FastGPT 的分野，给出插件广度优先应选谁、知识工程深度优先应选谁的中性判据，并附同条件 POC 测量表。',

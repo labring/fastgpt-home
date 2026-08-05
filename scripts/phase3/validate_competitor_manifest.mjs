@@ -46,6 +46,8 @@ function checkHash(relativePath, expected) {
 function validateManifest({ write = true } = {}) {
   const manifest = readJson(manifestPath);
   const failures = [];
+  const waivedFailures = [];
+  const directPublish = manifest.publicationOverride?.mode === 'direct-publish';
   const pages = Array.isArray(manifest.pages) ? manifest.pages : [];
   const actualSlugs = pages.map((page) => page.slug);
   if (pages.length !== expectedSlugs.length || [...actualSlugs].sort().join(',') !== [...expectedSlugs].sort().join(',')) {
@@ -55,6 +57,7 @@ function validateManifest({ write = true } = {}) {
   for (const page of pages) {
     const pagePath = `artifacts/phase3/competitor-pages-manifest.json#pages[${pages.indexOf(page)}]`;
     const pageFailures = [];
+    const pageWaivedFailures = [];
     if (!expectedSlugs.includes(page.slug)) pageFailures.push(['exact-set', 'Unregistered comparison slug.']);
     if (!allowedStatuses.has(page.status)) pageFailures.push(['status', `Invalid page status: ${page.status}`]);
     if (page.lang !== 'zh') pageFailures.push(['locale', 'Comparison pages are Chinese-only.']);
@@ -93,7 +96,8 @@ function validateManifest({ write = true } = {}) {
     for (const role of requiredRoles) {
       const signoff = (page.signoffs || []).find((item) => item.role === role);
       if (!signoff || signoff.status !== 'approved' || !signoff.signer || !signoff.timestamp || !signoff.evidenceRef) {
-        pageFailures.push(['signoffs', `${role} signoff is pending or incomplete.`]);
+        const failure = ['signoffs', `${role} signoff is pending or incomplete.`];
+        (directPublish ? pageWaivedFailures : pageFailures).push(failure);
       }
     }
     if (page.gates?.contentAudit !== 'passed') pageFailures.push(['content-audit', 'Content audit has not passed.']);
@@ -101,8 +105,17 @@ function validateManifest({ write = true } = {}) {
     if (page.gates?.asset !== 'passed') pageFailures.push(['asset', 'Asset gate has not passed.']);
     if (page.gates?.links !== 'passed') pageFailures.push(['links', 'Link gate has not passed.']);
     const pageFailureRows = pageFailures.map(([gate, reason]) => ({ gate, reason, evidencePath: pagePath }));
+    const pageWaivedRows = pageWaivedFailures.map(([gate, reason]) => ({
+      slug: page.slug,
+      gate,
+      reason,
+      evidencePath: pagePath,
+      waived: true,
+    }));
     for (const row of pageFailureRows) addFailure(failures, page.slug, row.gate, row.reason, row.evidencePath);
+    waivedFailures.push(...pageWaivedRows);
     page.failures = pageFailureRows.map((row) => `${row.gate}:${row.reason}`);
+    page.waivedFailures = pageWaivedRows.map((row) => `${row.gate}:${row.reason}`);
     page.status = pageFailureRows.length === 0 ? 'published' : 'preview';
   }
 
@@ -110,19 +123,21 @@ function validateManifest({ write = true } = {}) {
   const report = {
     id: 'competitor-pages-failures',
     generatedOn: manifest.generatedOn,
-    failures
+    directPublish,
+    failures,
+    waivedFailures,
   };
   if (write) {
     fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
     fs.writeFileSync(failuresPath, `${JSON.stringify(report, null, 2)}\n`);
   }
-  return { manifest, failures, report };
+  return { manifest, failures, waivedFailures, report };
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) {
   const result = validateManifest();
   const pageCount = result.manifest.pages?.length || 0;
-  console.log(`Phase 3 manifest: ${pageCount} pages, ${result.failures.length} blocking failures, ${result.manifest.pages.filter((page) => page.status === 'published').length} published.`);
+  console.log(`Phase 3 manifest: ${pageCount} pages, ${result.failures.length} blocking failures, ${result.waivedFailures.length} waived failures, ${result.manifest.pages.filter((page) => page.status === 'published').length} published.`);
   if (result.failures.length) process.exitCode = 1;
 }
 

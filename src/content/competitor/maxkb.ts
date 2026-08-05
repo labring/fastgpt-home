@@ -4,7 +4,7 @@ import type { ComparisonPage } from './types';
 export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
   slug: 'maxkb-vs-fastgpt',
   lang: 'zh',
-  status: 'preview',
+  status: 'published',
   title: 'MaxKB 与 FastGPT 怎么选：采购可预测性与生产细粒度',
   description:
     '说明 MaxKB 在国内私有化交付形式与采购可预测性上的强项，对照 FastGPT 在隔离沙箱、工作流人工恢复、统一配额与图片向量检索上的差异，并给出买断与订阅按同一三年规模比较的方法。',

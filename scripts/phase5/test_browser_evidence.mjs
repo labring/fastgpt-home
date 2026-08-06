@@ -60,7 +60,8 @@ async function main() {
 
   const comparisonHtml = readHtml('compare/dify-vs-fastgpt.html');
   const faqHtml = readHtml('en/faq/Can-AI-intelligent-customer-service.html');
-  assert.match(comparisonHtml, /Dify 与 FastGPT 怎么选/);
+  assert.match(comparisonHtml, /Dify 与 FastGPT：四种项目的选型分野/);
+  assert.match(comparisonHtml, /原厂支持/);
   assert.match(comparisonHtml, /https:\/\/fastgpt\.cn\/compare\/dify-vs-fastgpt/);
   assert.match(comparisonHtml, /application\/ld\+json/);
   assert.match(faqHtml, /Can AI intelligent customer service platforms really reduce labor costs\?/);

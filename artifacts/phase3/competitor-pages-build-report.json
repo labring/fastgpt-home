@@ -1,6 +1,6 @@
 {
   "id": "competitor-pages-build-report",
-  "generatedOn": "2026-08-05T02:33:07.729Z",
+  "generatedOn": "2026-08-06T17:18:32.821Z",
   "buildOut": "out",
   "passed": true,
   "expectedPageCount": 4,
@@ -15,7 +15,7 @@
       "exemptions": [
         {
           "pattern": "准确率更高",
-          "context": "」一个勾 最后一条纪律：这篇文章不主张任何一方「准确率更高」或「性能更好」。这类结论没有同条件的第三方测试"
+          "context": "合同确认 最后一条纪律：这篇文章不主张任何一方「准确率更高」或「性能更好」。这类结论没有同条件的第三方测试"
         },
         {
           "pattern": "性能更好",

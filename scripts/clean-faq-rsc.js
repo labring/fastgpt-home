@@ -58,18 +58,11 @@ function cleanDir(dir) {
   }
 }
 
-// Clean the default-locale root FAQ and explicitly localized FAQ directories.
-const rootFaqDir = path.join(outDir, 'faq');
-if (fs.existsSync(rootFaqDir)) {
-  console.log('Cleaning root FAQ ...');
-  cleanDir(rootFaqDir);
-}
-
-const locales = ['en', 'zh-hant', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
+const locales = ['', 'en', 'zh-hant', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 for (const locale of locales) {
   const faqDir = path.join(outDir, locale, 'faq');
   if (fs.existsSync(faqDir)) {
-    console.log(`Cleaning RSC files in ${locale}/faq ...`);
+    console.log(`Cleaning RSC files in ${path.relative(outDir, faqDir)} ...`);
     cleanDir(faqDir);
   }
 }

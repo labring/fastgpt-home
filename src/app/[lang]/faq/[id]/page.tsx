@@ -4,9 +4,9 @@ import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getFaqAlternates, localeMap } from '@/lib/seo';
 import { normalizeFaqMetadata } from '@/lib/faqMetadata';
 import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, ArrowRight, ArrowUpRight, Workflow } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
-import FAQSidebar from '@/components/faq/FAQSidebar';
+import CloudEntryLink from '@/components/home/CloudEntryLink';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
@@ -45,9 +45,7 @@ export default async function FAQDetailPage({
   const paragraphs = faqItem.Answers.split('\n\n');
   const summary = paragraphs[0] || '';
   const answerParagraphs = paragraphs.length > 1 ? paragraphs.slice(1) : paragraphs;
-  const keywords = faqItem.Keywords.split(/[,，]/)
-    .map((keyword) => keyword.trim())
-    .filter(Boolean);
+  const keywords = faqItem.Keywords.split(', ');
   const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 
   return (
@@ -145,24 +143,95 @@ export default async function FAQDetailPage({
               )}
             </article>
 
-            <div className="self-start lg:sticky lg:top-[104px] lg:col-start-2 lg:row-span-2 lg:row-start-1">
-              <FAQSidebar
-                category={faqItem.Category}
-                langName={langName}
-                relatedFAQs={relatedFAQs.map(([relatedId, item]) => ({
-                  id: relatedId,
-                  question: item.Question
-                }))}
-                copy={{
-                  eyebrow: dict.FAQ.sidebarEyebrow,
-                  title: dict.FAQ.sidebarTitle,
-                  description: dict.FAQ.sidebarDescription,
-                  cta: dict.FAQ.sidebarCta,
-                  relatedQuestions: dict.FAQ.relatedQuestions,
-                  viewAll: dict.FAQ.viewMore
-                }}
-              />
-            </div>
+            <aside
+              className="self-start lg:sticky lg:top-[104px] lg:col-start-2 lg:row-span-2 lg:row-start-1"
+              aria-label={dict.FAQ.sidebarTitle}
+            >
+              <section
+                className="relative overflow-hidden rounded-[8px] bg-[#070d1d] px-6 pb-6 pt-7 text-white shadow-[0_20px_45px_rgba(15,23,42,0.16)]"
+                aria-labelledby="faq-sidebar-title"
+              >
+                <div
+                  className="pointer-events-none absolute inset-0 opacity-[0.08]"
+                  style={{
+                    backgroundImage:
+                      'linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.45) 1px, transparent 1px)',
+                    backgroundSize: '32px 32px',
+                    maskImage: 'linear-gradient(to bottom left, black, transparent 68%)',
+                    WebkitMaskImage: 'linear-gradient(to bottom left, black, transparent 68%)'
+                  }}
+                  aria-hidden="true"
+                />
+
+                <div className="relative">
+                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-[8px] bg-white/10">
+                    <Workflow className="h-5 w-5" strokeWidth={1.7} aria-hidden="true" />
+                  </div>
+                  <p className="mb-3 text-[11px] font-semibold leading-4 text-white/60">
+                    {dict.FAQ.sidebarEyebrow}
+                  </p>
+                  <p
+                    id="faq-sidebar-title"
+                    className="mb-3 text-[24px] font-semibold leading-[32px] text-white [text-wrap:balance]"
+                  >
+                    {dict.FAQ.sidebarTitle}
+                  </p>
+                  <p className="mb-6 text-[14px] leading-[22px] text-white/65 [text-wrap:pretty]">
+                    {dict.FAQ.sidebarDescription}
+                  </p>
+                  <CloudEntryLink
+                    source="faq_detail_sidebar_trial"
+                    data-rybbit-prop-category={faqItem.Category}
+                    rel="noopener noreferrer nofollow"
+                    aria-label={`${dict.FAQ.sidebarCta}: ${dict.FAQ.sidebarTitle}`}
+                    className="group inline-flex h-11 w-full items-center justify-center gap-2 rounded-[6px] bg-white px-5 text-[14px] font-semibold text-[#070d1d] transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-[#f1f5f9] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#070d1d]"
+                  >
+                    <span>{dict.FAQ.sidebarCta}</span>
+                    <ArrowUpRight
+                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </CloudEntryLink>
+                </div>
+              </section>
+
+              {relatedFAQs.length > 0 && (
+                <nav
+                  className="mt-4 hidden rounded-[8px] bg-white px-5 py-5 shadow-[0_12px_34px_rgba(65,78,100,0.07)] ring-1 ring-slate-200/70 lg:block"
+                  aria-labelledby="faq-sidebar-related"
+                >
+                  <p
+                    id="faq-sidebar-related"
+                    className="mb-2 text-[13px] font-semibold leading-5 text-[#020617]"
+                  >
+                    {dict.FAQ.relatedQuestions}
+                  </p>
+                  <div>
+                    {relatedFAQs.slice(0, 3).map(([relatedId, item]) => (
+                      <a
+                        key={relatedId}
+                        href={getFaqPath(langName, relatedId)}
+                        className="block border-b border-slate-100 py-3 text-[13px] leading-5 text-slate-500 transition-colors duration-200 hover:text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                      >
+                        {item.Question}
+                      </a>
+                    ))}
+                  </div>
+                  <a
+                    href={getFaqPath(langName)}
+                    className="group mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+                  >
+                    <span>{dict.FAQ.viewMore}</span>
+                    <ArrowRight
+                      className="h-3.5 w-3.5 transition-transform duration-200 group-hover:translate-x-0.5"
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </a>
+                </nav>
+              )}
+            </aside>
 
             {relatedFAQs.length > 0 && (
               <section className="pb-10 pt-6 lg:col-start-1 lg:row-start-2 lg:pt-20">

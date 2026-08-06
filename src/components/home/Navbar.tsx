@@ -11,6 +11,7 @@ import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
 import { localeConfigs } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 interface NavLink {
   label: string;
@@ -62,12 +63,12 @@ export default function Navbar({
     }
     return pathname;
   })();
-  const languageKeys = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/')
-    ? faqLocaleCodes
-    : Object.keys(localeNames);
-  const getLocalizedPath = (value: string) => (
-    routeWithoutLang === '/' ? `/${value}` : `/${value}${routeWithoutLang}`
-  );
+  const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
+  const languageKeys = isFaqRoute ? faqLocaleCodes : Object.keys(localeNames);
+  const getLocalizedPath = (value: string) => {
+    if (isFaqRoute) return getDefaultLocalePath(value, routeWithoutLang);
+    return routeWithoutLang === '/' ? `/${value}` : `/${value}${routeWithoutLang}`;
+  };
 
   const handleSwitchLanguage = (value: string) => {
     if (value === lang) return;
@@ -75,13 +76,10 @@ export default function Navbar({
     navigateTo(getLocalizedPath(value));
   };
 
-  const langConfig = localeConfigs.reduce(
-    (acc, locale) => {
-      acc[locale.code] = { flag: locale.flag, label: locale.name };
-      return acc;
-    },
-    {} as Record<string, { flag: string; label: string }>
-  );
+  const langConfig = localeConfigs.reduce((acc, locale) => {
+    acc[locale.code] = { flag: locale.flag, label: locale.name };
+    return acc;
+  }, {} as Record<string, { flag: string; label: string }>);
 
   useEffect(() => {
     if (!mobileOpen) return;
@@ -326,7 +324,10 @@ export default function Navbar({
                 href={CONSULT_URL}
                 target="_blank"
                 rel="noopener noreferrer nofollow"
-                {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_mobile_menu_consult')}
+                {...rybbitClickAttrs(
+                  RYBBIT_EVENTS.businessConsultClick,
+                  'home_nav_mobile_menu_consult'
+                )}
                 className="h-10 inline-flex items-center justify-center rounded-full text-[13px] font-medium text-white bg-btn-dark"
                 onClick={() => setMobileOpen(false)}
               >

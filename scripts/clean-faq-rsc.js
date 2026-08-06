@@ -58,12 +58,11 @@ function cleanDir(dir) {
   }
 }
 
-// Clean FAQ directories for all locales
-const locales = ['en', 'zh-hant', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
+const locales = ['', 'en', 'zh-hant', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 for (const locale of locales) {
   const faqDir = path.join(outDir, locale, 'faq');
   if (fs.existsSync(faqDir)) {
-    console.log(`Cleaning RSC files in ${locale}/faq ...`);
+    console.log(`Cleaning RSC files in ${path.relative(outDir, faqDir)} ...`);
     cleanDir(faqDir);
   }
 }

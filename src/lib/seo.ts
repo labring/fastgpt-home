@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import { localeMap, supportedLocaleCodes } from '@/lib/locales';
+import { getFaqPath } from '@/lib/localizedRoutes';
 
 export { localeMap };
 
@@ -25,19 +26,36 @@ export function getAlternates(
   const canonicalPath = `/${lang}${path}`;
   const canonicalUrl = `${baseUrl}${canonicalPath}`;
 
-  const languages = availableLocales.reduce(
-    (acc, locale) => {
-      acc[locale] = `${baseUrl}/${locale}${path}`;
-      return acc;
-    },
-    {} as Record<string, string>
-  );
+  const languages = availableLocales.reduce((acc, locale) => {
+    acc[locale] = `${baseUrl}/${locale}${path}`;
+    return acc;
+  }, {} as Record<string, string>);
 
   // x-default tells search engines which URL to use for unmatched languages
   languages['x-default'] = `${baseUrl}/en${path}`;
 
   return {
     canonical: canonicalUrl,
+    languages
+  };
+}
+
+export function getFaqAlternates(
+  lang: string,
+  faqId?: string,
+  availableLocales: readonly string[] = supportedLocaleCodes
+): Metadata['alternates'] {
+  const baseUrl = getBaseUrl();
+  const canonical = `${baseUrl}${getFaqPath(lang, faqId)}`;
+  const languages = availableLocales.reduce((acc, locale) => {
+    acc[locale] = `${baseUrl}${getFaqPath(locale, faqId)}`;
+    return acc;
+  }, {} as Record<string, string>);
+
+  languages['x-default'] = `${baseUrl}${getFaqPath('en', faqId)}`;
+
+  return {
+    canonical,
     languages
   };
 }

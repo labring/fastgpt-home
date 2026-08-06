@@ -22,10 +22,7 @@ const faqId = 'Why-are-enterprises-paying-more';
 function resolveHtml(route) {
   const relativeRoute = route.replace(/^\/|\/$/g, '');
   const candidates = relativeRoute
-    ? [
-        path.join(outDir, `${relativeRoute}.html`),
-        path.join(outDir, relativeRoute, 'index.html')
-      ]
+    ? [path.join(outDir, `${relativeRoute}.html`), path.join(outDir, relativeRoute, 'index.html')]
     : [path.join(outDir, 'index.html')];
   const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
 
@@ -47,9 +44,7 @@ function decodeHtmlEntities(value) {
     .replace(/&#x([0-9a-f]+);/gi, (_, codePoint) =>
       String.fromCodePoint(Number.parseInt(codePoint, 16))
     )
-    .replace(/&#([0-9]+);/g, (_, codePoint) =>
-      String.fromCodePoint(Number.parseInt(codePoint, 10))
-    )
+    .replace(/&#([0-9]+);/g, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 10)))
     .replaceAll('&amp;', '&')
     .replaceAll('&quot;', '"')
     .replaceAll('&#39;', "'")
@@ -96,9 +91,7 @@ function verifyRootMetadata() {
   const rootHtml = resolveHtml('/');
   const localizedHtml = resolveHtml(`/${defaultLocale}`);
   const expectedRootTitle =
-    defaultLocale === 'zh'
-      ? 'FastGPT - 企业级 AI 智能体构建平台 | 开源 RAG 系统'
-      : englishTitle;
+    defaultLocale === 'zh' ? 'FastGPT - 企业级 AI 智能体构建平台 | 开源 RAG 系统' : englishTitle;
   const expectedSocialTitle =
     defaultLocale === 'zh'
       ? 'FastGPT - 企业级 AI 智能体构建平台'
@@ -116,10 +109,15 @@ function verifyRootMetadata() {
   verifyCanonical(localizedHtml, `${baseUrl}/${defaultLocale}`);
   verifyCanonical(resolveHtml('/en'), `${baseUrl}/en`);
   verifyCanonical(resolveHtml('/zh'), `${baseUrl}/zh`);
+  verifyCanonical(resolveHtml('/faq'), `${baseUrl}/faq`);
+  verifyCanonical(resolveHtml(`/faq/${faqId}`), `${baseUrl}/faq/${faqId}`);
+  verifyCanonical(resolveHtml(`/${defaultLocale}/faq`), `${baseUrl}/faq`);
+  verifyCanonical(resolveHtml(`/${defaultLocale}/faq/${faqId}`), `${baseUrl}/faq/${faqId}`);
 
   for (const [route, html] of [
     ['/', rootHtml],
     [`/${defaultLocale}`, localizedHtml],
+    ['/faq', resolveHtml('/faq')],
     ['/en/faq', resolveHtml('/en/faq')],
     ['/zh/faq', resolveHtml('/zh/faq')]
   ]) {
@@ -137,15 +135,9 @@ function verifyRootMetadata() {
   );
   assert.equal(getMetaContent(rootHtml, 'property', 'og:title'), expectedSocialTitle);
   assert.equal(getMetaContent(rootHtml, 'property', 'og:locale'), expectedOgLocale);
-  assert.equal(
-    getMetaContent(rootHtml, 'property', 'og:image'),
-    `${baseUrl}/opengraph-image.png`
-  );
+  assert.equal(getMetaContent(rootHtml, 'property', 'og:image'), `${baseUrl}/opengraph-image.png`);
   assert.equal(getMetaContent(rootHtml, 'name', 'twitter:title'), expectedSocialTitle);
-  assert.equal(
-    getMetaContent(rootHtml, 'name', 'twitter:image'),
-    `${baseUrl}/twitter-image.png`
-  );
+  assert.equal(getMetaContent(rootHtml, 'name', 'twitter:image'), `${baseUrl}/twitter-image.png`);
   assert(rootHtml.includes('"@type":"Organization"'), 'Root page is missing Organization JSON-LD');
   assert(rootHtml.includes('"@type":"FAQPage"'), 'Root page is missing FAQPage JSON-LD');
   assert(
@@ -165,7 +157,7 @@ function verifyRootMetadata() {
 function verifyTargetCopy() {
   const englishHtml = resolveHtml('/en');
   const englishTitleMatch = englishHtml.match(/<title>([^<]+)<\/title>/);
-  const faqHtml = resolveHtml(`/zh/faq/${faqId}`);
+  const faqHtml = resolveHtml(defaultLocale === 'zh' ? `/faq/${faqId}` : `/zh/faq/${faqId}`);
   const faqDescription = getMetaContent(faqHtml, 'name', 'description');
 
   assert(englishTitleMatch, 'English homepage is missing a title');
@@ -303,7 +295,11 @@ function verifyInitialJavaScript(rootHtml) {
   const externalScripts = getTags(rootHtml, 'script').filter((tag) =>
     /^https?:\/\//.test(getAttribute(tag, 'src') || '')
   );
-  assert.equal(externalScripts.length, 0, 'Analytics scripts must not render into the initial HTML');
+  assert.equal(
+    externalScripts.length,
+    0,
+    'Analytics scripts must not render into the initial HTML'
+  );
 
   return gzipBytes;
 }

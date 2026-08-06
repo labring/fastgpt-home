@@ -12,6 +12,7 @@ import vi from '@/locales/vi.json';
 import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
 import { supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
+import { getFaqPath } from '@/lib/localizedRoutes';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
@@ -127,7 +128,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
               </Link>
               {hasFaq && (
                 <Link
-                  href={`/${lang}/faq`}
+                  href={getFaqPath(lang)}
                   className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
                 >
                   <FileQuestion className="h-4 w-4" />

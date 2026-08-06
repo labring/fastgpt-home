@@ -103,6 +103,13 @@
     "showing": "Showing",
     "question": "question",
     "questions": "questions",
+    "answerLabel": "Core answer",
+    "answerTitle": "Answer",
+    "keywordsTitle": "Related keywords",
+    "sidebarEyebrow": "FastGPT knowledge base",
+    "sidebarTitle": "Put your business knowledge to work with AI",
+    "sidebarDescription": "Import company documents and build accurate, reliable, traceable AI answers.",
+    "sidebarCta": "Start for free",
     "previous": "Previous",
     "next": "Next"
   },

@@ -88,11 +88,15 @@ function verifyNginxHeaders() {
   assert.equal(includeCount, 11, 'Security headers must cover the server and all cache locations');
 
   const faqRedirectScope = 'if ($host ~* ^(?:www\\.)?fastgpt\\.cn$) {';
+  const defaultHomeRedirect = 'rewrite ^/zh/?$ https://fastgpt.cn/ permanent;';
+  const defaultPriceRedirect = 'rewrite ^/zh/price/?$ https://fastgpt.cn/price permanent;';
   const faqListRedirect = 'rewrite ^/zh/faq/?$ https://fastgpt.cn/faq permanent;';
   const faqDetailRedirect = 'rewrite ^/zh/faq/(.+?)/?$ https://fastgpt.cn/faq/$1 permanent;';
   const trailingSlashRule = 'location ~ ^(.+)/$ {';
 
   assert(nginxConfig.includes(faqRedirectScope), 'FAQ redirects must be scoped to fastgpt.cn');
+  assert(nginxConfig.includes(defaultHomeRedirect), 'Missing default Chinese home redirect');
+  assert(nginxConfig.includes(defaultPriceRedirect), 'Missing default Chinese price redirect');
   assert(nginxConfig.includes(faqListRedirect), 'Missing permanent FAQ list redirect');
   assert(nginxConfig.includes(faqDetailRedirect), 'Missing permanent FAQ detail redirect');
   assert(
@@ -101,9 +105,37 @@ function verifyNginxHeaders() {
   );
 }
 
+function verifyCloudflareRedirects() {
+  const sourcePath = path.join(rootDir, 'public', '_redirects');
+  const exportedPath = path.join(outDir, '_redirects');
+  const source = fs.readFileSync(sourcePath, 'utf8');
+  const exported = fs.existsSync(exportedPath) ? fs.readFileSync(exportedPath, 'utf8') : '';
+  const requiredRules = [
+    '/en/ / 301',
+    '/en / 301',
+    '/en/price/ /price 301',
+    '/en/price /price 301',
+    '/en/faq/ /faq 301',
+    '/en/faq /faq 301',
+    '/en/faq/*/ /faq/:splat 301',
+    '/en/faq/* /faq/:splat 301'
+  ];
+
+  for (const rule of requiredRules) {
+    assert(source.includes(rule), `Missing Cloudflare Pages redirect: ${rule}`);
+    assert(exported.includes(rule), `Missing exported Cloudflare Pages redirect: ${rule}`);
+  }
+
+  assert(
+    source.indexOf('/en/faq /faq 301') < source.indexOf('/en/faq/* /faq/:splat 301'),
+    'Cloudflare FAQ exact redirect must precede the dynamic redirect'
+  );
+}
+
 async function main() {
   await verifyImage();
   verifyNginxHeaders();
+  verifyCloudflareRedirects();
 
   verifyFaqPage('/faq');
   verifyFaqPage(`/faq/${faqId}`);

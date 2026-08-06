@@ -1,37 +1,38 @@
 import { MetadataRoute } from 'next';
 import { faq, faqContentLocaleCodes } from '@/faq';
 import { supportedLocaleCodes } from '@/lib/locales';
-import { getFaqPath } from '@/lib/localizedRoutes';
+import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
   const localizedPaths = ['', '/price'];
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
+  const seenUrls = new Set<string>();
 
-  // 根首页
-  entries.push({ url: baseUrl, lastModified: now });
+  const addEntry = (url: string, lastModified: Date) => {
+    if (seenUrls.has(url)) return;
+    seenUrls.add(url);
+    entries.push({ url, lastModified });
+  };
 
-  // 各语言的基础页面
   for (const locale of supportedLocaleCodes) {
     for (const path of localizedPaths) {
-      entries.push({ url: `${baseUrl}/${locale}${path}`, lastModified: now });
+      addEntry(`${baseUrl}${getDefaultLocalePath(locale, path)}`, now);
     }
   }
+
   // FAQ 只作为 SEO 页面提交中英文；其他语言 URL 可访问但内容 fallback 到英文
   for (const locale of faqContentLocaleCodes) {
-    entries.push({ url: `${baseUrl}${getFaqPath(locale)}`, lastModified: now });
+    addEntry(`${baseUrl}${getFaqPath(locale)}`, now);
   }
 
   // FAQ 详情页
   for (const locale of faqContentLocaleCodes) {
     for (const faqId of Object.keys(faq)) {
-      entries.push({
-        url: `${baseUrl}${getFaqPath(locale, faqId)}`,
-        lastModified: now
-      });
+      addEntry(`${baseUrl}${getFaqPath(locale, faqId)}`, now);
     }
   }
 

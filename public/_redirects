@@ -1,1 +1,15 @@
 /zh/enterprise / 301
+
+# Default English homepage
+/en/ / 301
+/en / 301
+
+# Default English pricing
+/en/price/ /price 301
+/en/price /price 301
+
+# Default English FAQ
+/en/faq/ /faq 301
+/en/faq /faq 301
+/en/faq/*/ /faq/:splat 301
+/en/faq/* /faq/:splat 301

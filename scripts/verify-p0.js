@@ -92,6 +92,7 @@ function verifyNginxHeaders() {
   const defaultPriceRedirect = 'rewrite ^/zh/price/?$ https://fastgpt.cn/price permanent;';
   const faqListRedirect = 'rewrite ^/zh/faq/?$ https://fastgpt.cn/faq permanent;';
   const faqDetailRedirect = 'rewrite ^/zh/faq/(.+?)/?$ https://fastgpt.cn/faq/$1 permanent;';
+  const compareDetailRedirect = 'rewrite ^/zh/compare/(.+?)/?$ https://fastgpt.cn/compare/$1 permanent;';
   const trailingSlashRule = 'location ~ ^(.+)/$ {';
 
   assert(nginxConfig.includes(faqRedirectScope), 'FAQ redirects must be scoped to fastgpt.cn');
@@ -99,6 +100,7 @@ function verifyNginxHeaders() {
   assert(nginxConfig.includes(defaultPriceRedirect), 'Missing default Chinese price redirect');
   assert(nginxConfig.includes(faqListRedirect), 'Missing permanent FAQ list redirect');
   assert(nginxConfig.includes(faqDetailRedirect), 'Missing permanent FAQ detail redirect');
+  assert(nginxConfig.includes(compareDetailRedirect), 'Missing permanent comparison detail redirect');
   assert(
     nginxConfig.indexOf(faqRedirectScope) < nginxConfig.indexOf(trailingSlashRule),
     'FAQ redirects must run before the generic trailing-slash redirect'

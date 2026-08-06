@@ -30,149 +30,149 @@
   ],
   "layouts": {
     "comparison-mobile": {
-      "route": "/compare/dify-vs-fastgpt",
-      "viewport": {
-        "width": 390,
-        "height": 844
-      },
       "document": {
-        "scrollWidth": 390,
-        "bodyScrollWidth": 390
+        "bodyScrollWidth": 390,
+        "scrollWidth": 390
       },
       "elements": {
-        "page": {
-          "x": 0,
-          "y": 0,
-          "width": 390,
-          "height": 13113.6171875,
-          "top": 0,
-          "right": 390,
-          "bottom": 13113.6171875,
-          "left": 0
-        },
-        "inner": {
-          "x": 12,
-          "y": 65,
-          "width": 366,
-          "height": 13048.6171875,
-          "top": 65,
+        "figure": {
+          "bottom": 666.1640625,
+          "height": 222.1484375,
+          "left": 12,
           "right": 378,
-          "bottom": 13113.6171875,
-          "left": 12
-        },
-        "hero": {
-          "x": 12,
-          "y": 153,
+          "top": 444.015625,
           "width": 366,
-          "height": 360.1328125,
-          "top": 153,
-          "right": 378,
-          "bottom": 513.1328125,
-          "left": 12
+          "x": 12,
+          "y": 444.015625
         },
         "h1": {
-          "x": 12,
-          "y": 190,
-          "width": 366,
-          "height": 120.3515625,
-          "top": 190,
+          "bottom": 205.234375,
+          "height": 80.234375,
+          "left": 12,
           "right": 378,
-          "bottom": 310.3515625,
-          "left": 12
+          "top": 125,
+          "width": 366,
+          "x": 12,
+          "y": 125
         },
-        "figure": {
-          "x": 12,
-          "y": 549.1328125,
-          "width": 366,
-          "height": 222.1484375,
-          "top": 549.1328125,
+        "hero": {
+          "bottom": 408.015625,
+          "height": 320.015625,
+          "left": 12,
           "right": 378,
-          "bottom": 771.28125,
-          "left": 12
+          "top": 88,
+          "width": 366,
+          "x": 12,
+          "y": 88
         },
         "image": {
-          "x": 12,
-          "y": 549.1328125,
-          "width": 366,
+          "bottom": 636.1640625,
           "height": 192.1484375,
-          "top": 549.1328125,
+          "left": 12,
           "right": 378,
-          "bottom": 741.28125,
-          "left": 12
+          "top": 444.015625,
+          "width": 366,
+          "x": 12,
+          "y": 444.015625
+        },
+        "inner": {
+          "bottom": 13874.171875,
+          "height": 13874.171875,
+          "left": 12,
+          "right": 378,
+          "top": 0,
+          "width": 366,
+          "x": 12,
+          "y": 0
+        },
+        "page": {
+          "bottom": 13874.171875,
+          "height": 13874.171875,
+          "left": 0,
+          "right": 390,
+          "top": 0,
+          "width": 390,
+          "x": 0,
+          "y": 0
         }
+      },
+      "route": "/compare/dify-vs-fastgpt",
+      "viewport": {
+        "height": 844,
+        "width": 390
       }
     },
     "comparison-desktop": {
-      "route": "/compare/dify-vs-fastgpt",
-      "viewport": {
-        "width": 1440,
-        "height": 900
-      },
       "document": {
-        "scrollWidth": 1440,
-        "bodyScrollWidth": 1440
+        "bodyScrollWidth": 1440,
+        "scrollWidth": 1440
       },
       "elements": {
-        "page": {
-          "x": 0,
-          "y": 0,
-          "width": 1440,
-          "height": 8066.0234375,
-          "top": 0,
-          "right": 1440,
-          "bottom": 8066.0234375,
-          "left": 0
-        },
-        "inner": {
-          "x": 160,
-          "y": 43,
-          "width": 1120,
-          "height": 8023.0234375,
-          "top": 43,
-          "right": 1280,
-          "bottom": 8066.0234375,
-          "left": 160
-        },
-        "hero": {
-          "x": 310,
-          "y": 163,
-          "width": 820,
-          "height": 288.71875,
-          "top": 163,
-          "right": 1130,
-          "bottom": 451.71875,
-          "left": 310
+        "figure": {
+          "bottom": 978.71875,
+          "height": 534,
+          "left": 240,
+          "right": 1200,
+          "top": 444.71875,
+          "width": 960,
+          "x": 240,
+          "y": 444.71875
         },
         "h1": {
-          "x": 310,
-          "y": 200,
-          "width": 820,
+          "bottom": 279.71875,
           "height": 122.71875,
-          "top": 200,
+          "left": 310,
           "right": 1130,
-          "bottom": 322.71875,
-          "left": 310
+          "top": 157,
+          "width": 820,
+          "x": 310,
+          "y": 157
         },
-        "figure": {
-          "x": 240,
-          "y": 487.71875,
-          "width": 960,
-          "height": 534,
-          "top": 487.71875,
-          "right": 1200,
-          "bottom": 1021.71875,
-          "left": 240
+        "hero": {
+          "bottom": 408.71875,
+          "height": 288.71875,
+          "left": 310,
+          "right": 1130,
+          "top": 120,
+          "width": 820,
+          "x": 310,
+          "y": 120
         },
         "image": {
-          "x": 240,
-          "y": 487.71875,
-          "width": 960,
+          "bottom": 948.71875,
           "height": 504,
-          "top": 487.71875,
+          "left": 240,
           "right": 1200,
-          "bottom": 991.71875,
-          "left": 240
+          "top": 444.71875,
+          "width": 960,
+          "x": 240,
+          "y": 444.71875
+        },
+        "inner": {
+          "bottom": 8424.8046875,
+          "height": 8424.8046875,
+          "left": 160,
+          "right": 1280,
+          "top": 0,
+          "width": 1120,
+          "x": 160,
+          "y": 0
+        },
+        "page": {
+          "bottom": 8424.8046875,
+          "height": 8424.8046875,
+          "left": 0,
+          "right": 1440,
+          "top": 0,
+          "width": 1440,
+          "x": 0,
+          "y": 0
         }
+      },
+      "route": "/compare/dify-vs-fastgpt",
+      "viewport": {
+        "height": 900,
+        "width": 1440
       }
     },
     "faq-desktop": {

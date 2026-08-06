@@ -14,10 +14,16 @@ const css = fs.readFileSync(cssPath, 'utf8');
 const forbiddenCompetitors = ['Coze', '腾讯元器', '阿里百炼', 'n8n', 'HiAgent'];
 const knownLocales = new Set(['en', 'zh', 'zh-hant', 'ja', 'ar', 'vi', 'th', 'id', 'ms']);
 const expectedTitles = {
-  'dify-vs-fastgpt': 'Dify 与 FastGPT 怎么选：四种项目的分野与 POC 判据',
+  'dify-vs-fastgpt': 'Dify 与 FastGPT：四种项目的选型分野',
   'self-build-vs-platform': '自研或直接跑开源与用平台怎么选：四组必算成本',
-  'ragflow-vs-fastgpt': 'RAGFlow 与 FastGPT 怎么选：复杂文档与完整链路的分野',
-  'maxkb-vs-fastgpt': 'MaxKB 与 FastGPT 怎么选：采购可预测性与生产细粒度'
+  'ragflow-vs-fastgpt': 'RAGFlow 与 FastGPT：复杂文档与完整链路',
+  'maxkb-vs-fastgpt': 'MaxKB 与 FastGPT：采购可预测性与细粒度'
+};
+const requiredSupportPhrases = {
+  'dify-vs-fastgpt': ['原厂支持', '责任矩阵', '故障分级', '恢复目标', '升级回滚责任方'],
+  'self-build-vs-platform': ['原厂支持', '覆盖时段与首次响应目标', '安全补丁与版本升级', '故障定位与恢复责任', '首次部署与调试', '支持渠道'],
+  'ragflow-vs-fastgpt': ['原厂支持', '责任矩阵', '故障分级', '恢复目标', '升级回滚责任方'],
+  'maxkb-vs-fastgpt': ['原厂支持档位', '责任矩阵', '故障分级', '恢复目标', '升级回滚责任方', '次年起的维保是否维持同档服务时间']
 };
 const pricePattern = /(?:¥|￥|\$)\s*\d|\d+(?:\.\d+)?\s*(?:元|万元|美元|人民币)/i;
 const absolutePatterns = [/准确率更高/, /性能更好/, /性能更高/, /更安全/, /更可靠/];
@@ -94,6 +100,9 @@ function auditPage(page) {
   if ((html.match(/data-label=/gi) || []).length < 3) errors.push('responsive:data-label');
   if (!html.includes('comparison-table-capability') || !html.includes('comparison-table-poc') || !html.includes('comparison-table-tco')) errors.push('content:table-kinds');
   if (!html.includes('事实来源') || !html.includes('核验日期') || !html.includes('版本与套餐') || !html.includes('更新记录')) errors.push('content:source-footer');
+  for (const phrase of requiredSupportPhrases[page.slug] || []) {
+    if (!text.includes(phrase)) errors.push(`content:support-dimension:${phrase}`);
+  }
   for (const link of page.internalLinks || []) {
     const target = expectedInternalLinkTarget(link);
     if (!html.includes(`href="${target}"`) && !html.includes(`href='${target}'`)) errors.push(`link:${target}`);

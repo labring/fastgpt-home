@@ -1,7 +1,7 @@
 {
   "id": "competitor-pages-manifest",
   "schemaVersion": 1,
-  "generatedOn": "2026-08-05",
+  "generatedOn": "2026-08-06",
   "reviewPolicy": {
     "sourceVerifiedOn": "2026-07-20",
     "nextReviewDays": 90,
@@ -32,11 +32,11 @@
       "version": "V1.1 (2026-07-30)"
     },
     {
-      "id": "competitor-readme-v1.0",
+      "id": "competitor-readme-v1.1",
       "title": "竞品对比页首批四篇交付说明",
       "localPath": "content/competitors/README.md",
-      "sha256": "77616d2543fd3a58a54f11ff201ae5e33890ba99dc1d15e6d2dbd12454a378b1",
-      "version": "V1.0 (2026-07-30)"
+      "sha256": "55ed6ef34db643053c5fc61d3c70fc436ae6652145202a656076b357dab8db48",
+      "version": "V1.1 (2026-08-05)"
     }
   ],
   "pages": [
@@ -45,7 +45,7 @@
       "lang": "zh",
       "status": "published",
       "sourcePath": "content/competitors/dify-vs-fastgpt.md",
-      "sourceHash": "c25614d6a8c7a1c294a5b828f93cd35fae00cc566b2355a27afb0e6f50adc27c",
+      "sourceHash": "c49042c4ce7f3132d2de8fda9f13cd3c33a2677248ce16c74b472cd74549db5d",
       "sourceRefs": [
         {
           "id": "draft-body",
@@ -53,7 +53,7 @@
           "localPath": "content/competitors/dify-vs-fastgpt.md",
           "section": "全文五段与事实来源页脚",
           "verifiedOn": "2026-07-20",
-          "version": "V1.0",
+          "version": "V1.1",
           "evidenceStatus": "official-public"
         },
         {
@@ -73,19 +73,27 @@
           "verifiedOn": "2026-07-20",
           "version": "公开稳定资料",
           "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-support-contract",
+          "title": "FastGPT product knowledge base support and procurement sections",
+          "section": "KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.1 revision (2026-08-05)",
+          "evidenceStatus": "contract-required"
         }
       ],
       "dates": {
         "sourceVerifiedOn": "2026-07-20",
         "datePublished": "2026-08-04",
-        "dateModified": "2026-07-30",
-        "nextReviewOn": "2026-10-28"
+        "dateModified": "2026-08-05",
+        "nextReviewOn": "2026-11-03"
       },
       "publicFooter": {
         "source": "Dify 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录",
         "verifiedOn": "2026-07-20",
         "version": "Dify Cloud / Community / Enterprise；FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
-        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+        "updateRecord": "V1.0（2026-07-30）首次发布；V1.1（2026-08-05）新增原厂支持维度与合同责任说明；设 90 天复核周期"
       },
       "asset": {
         "path": "/images/compare/dify-vs-fastgpt.svg",
@@ -158,7 +166,7 @@
       "lang": "zh",
       "status": "published",
       "sourcePath": "content/competitors/self-build-vs-platform.md",
-      "sourceHash": "311664f8f4dbbd77d4480675d0cdaef640584c5b944f1db6d0e166f7f378ca20",
+      "sourceHash": "ac5e7f297e7ddfdca9c2aaf6e03aac56b9f1860f0cbd0c014904695ae96b7da2",
       "sourceRefs": [
         {
           "id": "draft-body",
@@ -166,7 +174,7 @@
           "localPath": "content/competitors/self-build-vs-platform.md",
           "section": "全文五段与事实来源页脚",
           "verifiedOn": "2026-07-20",
-          "version": "V1.0",
+          "version": "V1.1",
           "evidenceStatus": "official-public"
         },
         {
@@ -186,19 +194,27 @@
           "verifiedOn": "2026-07-20",
           "version": "公开稳定资料",
           "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-support-contract",
+          "title": "FastGPT product knowledge base support and procurement sections",
+          "section": "KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.1 revision (2026-08-05)",
+          "evidenceStatus": "contract-required"
         }
       ],
       "dates": {
         "sourceVerifiedOn": "2026-07-20",
         "datePublished": "2026-08-04",
-        "dateModified": "2026-07-30",
-        "nextReviewOn": "2026-10-28"
+        "dateModified": "2026-08-05",
+        "nextReviewOn": "2026-11-03"
       },
       "publicFooter": {
         "source": "FastGPT 官方文档、官方仓库、官方定价页与公开发布记录",
         "verifiedOn": "2026-07-20",
         "version": "FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
-        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+        "updateRecord": "V1.0（2026-07-30）首次发布；V1.1（2026-08-05）新增原厂支持成本、责任边界与值班折算；设 90 天复核周期"
       },
       "asset": {
         "path": "/images/compare/self-build-vs-platform.svg",
@@ -271,7 +287,7 @@
       "lang": "zh",
       "status": "published",
       "sourcePath": "content/competitors/ragflow-vs-fastgpt.md",
-      "sourceHash": "aff17f5fffdbdc9f2186334cdfef59267a0d69697cd7a069d41daf1360f8f1c1",
+      "sourceHash": "72583645e2dcc6202cec90cd9ca185a4ca4d498c5818192824076c20944a3faf",
       "sourceRefs": [
         {
           "id": "draft-body",
@@ -279,7 +295,7 @@
           "localPath": "content/competitors/ragflow-vs-fastgpt.md",
           "section": "全文五段与事实来源页脚",
           "verifiedOn": "2026-07-20",
-          "version": "V1.0",
+          "version": "V1.1",
           "evidenceStatus": "official-public"
         },
         {
@@ -299,19 +315,27 @@
           "verifiedOn": "2026-07-20",
           "version": "公开稳定资料",
           "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-support-contract",
+          "title": "FastGPT product knowledge base support and procurement sections",
+          "section": "KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.1 revision (2026-08-05)",
+          "evidenceStatus": "contract-required"
         }
       ],
       "dates": {
         "sourceVerifiedOn": "2026-07-20",
         "datePublished": "2026-08-04",
-        "dateModified": "2026-07-30",
-        "nextReviewOn": "2026-10-28"
+        "dateModified": "2026-08-05",
+        "nextReviewOn": "2026-11-03"
       },
       "publicFooter": {
         "source": "RAGFlow 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录",
         "verifiedOn": "2026-07-20",
         "version": "RAGFlow Community / Enterprise；FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
-        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+        "updateRecord": "V1.0（2026-07-30）首次发布；V1.1（2026-08-05）新增原厂支持维度与合同责任说明；设 90 天复核周期"
       },
       "asset": {
         "path": "/images/compare/ragflow-vs-fastgpt.svg",
@@ -384,7 +408,7 @@
       "lang": "zh",
       "status": "published",
       "sourcePath": "content/competitors/maxkb-vs-fastgpt.md",
-      "sourceHash": "60162fa80f25cae929f5ca60c5461d6e57760f319d2f2b42f23b28dff7bb7002",
+      "sourceHash": "03bd67735815b229b3e402ed7dc94e1f768089e5920432e57cee05930efa5b5e",
       "sourceRefs": [
         {
           "id": "draft-body",
@@ -392,7 +416,7 @@
           "localPath": "content/competitors/maxkb-vs-fastgpt.md",
           "section": "全文五段与事实来源页脚",
           "verifiedOn": "2026-07-20",
-          "version": "V1.0",
+          "version": "V1.1",
           "evidenceStatus": "official-public"
         },
         {
@@ -412,19 +436,27 @@
           "verifiedOn": "2026-07-20",
           "version": "公开稳定资料",
           "evidenceStatus": "official-public"
+        },
+        {
+          "id": "fastgpt-support-contract",
+          "title": "FastGPT product knowledge base support and procurement sections",
+          "section": "KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界",
+          "verifiedOn": "2026-07-20",
+          "version": "V1.1 revision (2026-08-05)",
+          "evidenceStatus": "contract-required"
         }
       ],
       "dates": {
         "sourceVerifiedOn": "2026-07-20",
         "datePublished": "2026-08-04",
-        "dateModified": "2026-07-30",
-        "nextReviewOn": "2026-10-28"
+        "dateModified": "2026-08-05",
+        "nextReviewOn": "2026-11-03"
       },
       "publicFooter": {
         "source": "MaxKB 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录",
         "verifiedOn": "2026-07-20",
         "version": "MaxKB 社区自托管 / 专业版 / 企业版；FastGPT Cloud / 社区自托管 / 托管与自托管商业版",
-        "updateRecord": "V1.0（2026-07-30）首次发布；设 90 天复核周期"
+        "updateRecord": "V1.0（2026-07-30）首次发布；V1.1（2026-08-05）补齐原厂支持档位、合同责任与次年维保确认项；设 90 天复核周期"
       },
       "asset": {
         "path": "/images/compare/maxkb-vs-fastgpt.svg",

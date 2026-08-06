@@ -5,13 +5,13 @@ export const ragflowComparisonPage: ComparisonPage = createComparisonPage({
   slug: 'ragflow-vs-fastgpt',
   lang: 'zh',
   status: 'published',
-  title: 'RAGFlow 与 FastGPT 怎么选：复杂文档与完整链路的分野',
+  title: 'RAGFlow 与 FastGPT：复杂文档与完整链路',
   description:
-    '正面承认 RAGFlow 在扫描件与复杂版式解析上的产品心智，说明它与 FastGPT 在定时自动化、审计配额、中国知识源与运营闭环上的差异，并给出同批文档验证方法与许可证审核要点。',
+    '正面承认 RAGFlow 在扫描件与复杂版式解析上的强项，说明两者在定时自动化、审计配额、中国知识源与运营闭环上的差异，并给出让两家跑同一批文档的验证方法。',
   keywords: ['RAGFlow 对比', 'FastGPT', '复杂文档解析', '黄金集验证', '开源许可证'],
   sourceFile: 'ragflow-vs-fastgpt.md',
-  sourceHash: 'aff17f5fffdbdc9f2186334cdfef59267a0d69697cd7a069d41daf1360f8f1c1',
-  draftVersion: 'V1.0 (2026-07-30)',
+  sourceHash: '72583645e2dcc6202cec90cd9ca185a4ca4d498c5818192824076c20944a3faf',
+  draftVersion: 'V1.1 (2026-08-05)',
   sourceRefs: [
     {
       id: 'draft-body',
@@ -19,7 +19,7 @@ export const ragflowComparisonPage: ComparisonPage = createComparisonPage({
       localPath: 'content/competitors/ragflow-vs-fastgpt.md',
       section: '全文五段与事实来源页脚',
       verifiedOn: '2026-07-20',
-      version: 'V1.0',
+      version: 'V1.1',
       evidenceStatus: 'official-public'
     },
     {
@@ -39,13 +39,21 @@ export const ragflowComparisonPage: ComparisonPage = createComparisonPage({
       verifiedOn: '2026-07-20',
       version: '公开稳定资料',
       evidenceStatus: 'official-public'
+    },
+    {
+      id: 'fastgpt-support-contract',
+      title: 'FastGPT product knowledge base support and procurement sections',
+      section: 'KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界',
+      verifiedOn: '2026-07-20',
+      version: 'V1.1 revision (2026-08-05)',
+      evidenceStatus: 'contract-required'
     }
   ],
   dates: {
     sourceVerifiedOn: '2026-07-20',
     datePublished: '2026-08-04',
-    dateModified: '2026-07-30',
-    nextReviewOn: '2026-10-28'
+    dateModified: '2026-08-05',
+    nextReviewOn: '2026-11-03'
   },
   asset: {
     path: '/images/compare/ragflow-vs-fastgpt.svg',
@@ -67,7 +75,7 @@ export const ragflowComparisonPage: ComparisonPage = createComparisonPage({
     source: 'RAGFlow 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录',
     verifiedOn: '2026-07-20',
     version: 'RAGFlow Community / Enterprise；FastGPT Cloud / 社区自托管 / 托管与自托管商业版',
-    updateRecord: 'V1.0（2026-07-30）首次发布；解析能力、连接器与版本边界设 90 天复核周期'
+    updateRecord: 'V1.0（2026-07-30）首次发布；V1.1（2026-08-05）新增原厂支持维度与合同责任说明；解析能力、连接器、版本边界与支持档位设 90 天复核周期'
   },
   officialSources: ['https://ragflow.io/docs/', 'https://doc.fastgpt.cn/']
 });

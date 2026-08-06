@@ -21,6 +21,8 @@ assert.equal(handoff.newContentItems.length, 64);
 assert.equal(handoff.legacyRepairItems.length, 2100);
 assert.equal(handoff.newContentItems.filter((item) => item.type === 'new-faq').length, 60);
 assert.equal(handoff.newContentItems.filter((item) => item.type === 'comparison-page').length, 4);
+assert.equal(handoff.newContentItems.filter((item) => item.type === 'comparison-page').every((item) => item.sourceVersion === 'V1.1'), true);
+assert.equal(handoff.sourceInputs.comparisons.pagesReadmeVersion, 'V1.1 (2026-08-05)');
 assert.equal(handoff.legacyRepairItems.filter((item) => item.type === 'legacy-meta').length, 100);
 assert.equal(handoff.legacyRepairItems.filter((item) => item.type === 'legacy-category').length, 2000);
 assert.equal(handoff.newContentItems.every((item) => item.url && item.sourceSha256 && item.batch && item.result), true);

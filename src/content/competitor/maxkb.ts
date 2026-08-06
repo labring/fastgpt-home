@@ -5,13 +5,13 @@ export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
   slug: 'maxkb-vs-fastgpt',
   lang: 'zh',
   status: 'published',
-  title: 'MaxKB 与 FastGPT 怎么选：采购可预测性与生产细粒度',
+  title: 'MaxKB 与 FastGPT：采购可预测性与细粒度',
   description:
-    '说明 MaxKB 在国内私有化交付形式与采购可预测性上的强项，对照 FastGPT 在隔离沙箱、工作流人工恢复、统一配额与图片向量检索上的差异，并给出买断与订阅按同一三年规模比较的方法。',
+    '说明 MaxKB 在国内私有化交付与采购可预测性上的强项，对照隔离沙箱、工作流人工恢复、统一配额与图片向量检索上的差异，并给出买断与订阅按同一三年规模比较的方法。',
   keywords: ['MaxKB 对比', 'FastGPT', '私有化部署', '三年 TCO', '代码沙箱'],
   sourceFile: 'maxkb-vs-fastgpt.md',
-  sourceHash: '60162fa80f25cae929f5ca60c5461d6e57760f319d2f2b42f23b28dff7bb7002',
-  draftVersion: 'V1.0 (2026-07-30)',
+  sourceHash: '03bd67735815b229b3e402ed7dc94e1f768089e5920432e57cee05930efa5b5e',
+  draftVersion: 'V1.1 (2026-08-05)',
   sourceRefs: [
     {
       id: 'draft-body',
@@ -19,7 +19,7 @@ export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
       localPath: 'content/competitors/maxkb-vs-fastgpt.md',
       section: '全文五段与事实来源页脚',
       verifiedOn: '2026-07-20',
-      version: 'V1.0',
+      version: 'V1.1',
       evidenceStatus: 'official-public'
     },
     {
@@ -39,13 +39,21 @@ export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
       verifiedOn: '2026-07-20',
       version: '公开稳定资料',
       evidenceStatus: 'official-public'
+    },
+    {
+      id: 'fastgpt-support-contract',
+      title: 'FastGPT product knowledge base support and procurement sections',
+      section: 'KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界',
+      verifiedOn: '2026-07-20',
+      version: 'V1.1 revision (2026-08-05)',
+      evidenceStatus: 'contract-required'
     }
   ],
   dates: {
     sourceVerifiedOn: '2026-07-20',
     datePublished: '2026-08-04',
-    dateModified: '2026-07-30',
-    nextReviewOn: '2026-10-28'
+    dateModified: '2026-08-05',
+    nextReviewOn: '2026-11-03'
   },
   asset: {
     path: '/images/compare/maxkb-vs-fastgpt.svg',
@@ -67,7 +75,7 @@ export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
     source: 'MaxKB 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录',
     verifiedOn: '2026-07-20',
     version: 'MaxKB 社区自托管 / 专业版 / 企业版；FastGPT Cloud / 社区自托管 / 托管与自托管商业版',
-    updateRecord: 'V1.0（2026-07-30）首次发布；授权价、维保、版本号与支持档位设 90 天复核周期'
+    updateRecord: 'V1.0（2026-07-30）首次发布；V1.1（2026-08-05）补齐原厂支持档位、合同责任与次年维保确认项；授权价、维保、版本号与支持档位设 90 天复核周期'
   },
   officialSources: ['https://maxkb.cn/docs/', 'https://doc.fastgpt.cn/']
 });

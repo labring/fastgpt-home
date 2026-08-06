@@ -6,10 +6,6 @@ const sharp = require('sharp');
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-const cnBaseUrl = (
-  process.env.NEXT_PUBLIC_CN_HOME_URL ||
-  (new URL(baseUrl).hostname.endsWith('.cn') ? baseUrl : 'https://fastgpt.cn')
-).replace(/\/$/, '');
 const faqId = 'Why-are-enterprises-paying-more';
 const maxSocialImageBytes = 200_000;
 
@@ -146,11 +142,12 @@ async function main() {
   verifyNginxHeaders();
   verifyCloudflareRedirects();
 
-  verifyFaqPage('/faq');
-  verifyFaqPage(`/faq/${faqId}`);
+  const defaultSocialImageUrl = `${baseUrl}/faq-social-preview.png`;
+  verifyFaqPage('/faq', defaultSocialImageUrl);
+  verifyFaqPage(`/faq/${faqId}`, defaultSocialImageUrl);
 
   for (const locale of ['en', 'zh']) {
-    const socialImageUrl = `${locale === 'zh' ? cnBaseUrl : baseUrl}/faq-social-preview.png`;
+    const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
     verifyFaqPage(`/${locale}/faq`, socialImageUrl);
     verifyFaqPage(`/${locale}/faq/${faqId}`, socialImageUrl);
   }

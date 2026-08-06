@@ -8,7 +8,7 @@
       "file": "compare-desktop.png",
       "width": 1440,
       "height": 900,
-      "route": "/zh/compare/dify-vs-fastgpt",
+      "route": "/compare/dify-vs-fastgpt",
       "path": "artifacts/phase5/uat/compare-desktop.png"
     },
     {
@@ -16,7 +16,7 @@
       "file": "compare-mobile-harness.png",
       "width": 390,
       "height": 844,
-      "route": "/zh/compare/dify-vs-fastgpt",
+      "route": "/compare/dify-vs-fastgpt",
       "path": "artifacts/phase5/uat/compare-mobile-harness.png"
     },
     {
@@ -30,7 +30,7 @@
   ],
   "layouts": {
     "comparison-mobile": {
-      "route": "/zh/compare/dify-vs-fastgpt",
+      "route": "/compare/dify-vs-fastgpt",
       "viewport": {
         "width": 390,
         "height": 844
@@ -103,7 +103,7 @@
       }
     },
     "comparison-desktop": {
-      "route": "/zh/compare/dify-vs-fastgpt",
+      "route": "/compare/dify-vs-fastgpt",
       "viewport": {
         "width": 1440,
         "height": 900
@@ -209,10 +209,10 @@
     }
   },
   "staticDom": {
-    "comparisonRoute": "/zh/compare/dify-vs-fastgpt",
+    "comparisonRoute": "/compare/dify-vs-fastgpt",
     "faqRoute": "/en/faq/Can-AI-intelligent-customer-service",
     "comparisonContent": "present",
-    "comparisonPreviewState": "present",
+    "comparisonPreviewState": "published",
     "comparisonJsonLd": "present",
     "faqTitle": "present",
     "faqSocialImage": "present"

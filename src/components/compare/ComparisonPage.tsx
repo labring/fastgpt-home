@@ -2,7 +2,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ExternalLink } from 'lucide-react';
 import type { ComparisonPage as ComparisonPageData, ComparisonTable, MarkdownBlock } from '@/content/competitor';
+import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
 import ComparisonTables from './ComparisonTables';
+
+function getInternalLinkHref(target: string, locale: string) {
+  const path = locale === 'zh' && target.startsWith('/zh/') ? target.slice('/zh'.length) : target;
+  return getDefaultLocalePath(locale, path);
+}
 
 function renderBlock(block: MarkdownBlock, key: string) {
   if (block.type === 'paragraph') return <p key={key}>{block.text}</p>;
@@ -36,7 +42,7 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
         </div>
       )}
       <div className="comparison-page-inner">
-        <Link href="/zh/faq" className="comparison-back-link">
+        <Link href={getFaqPath('zh')} className="comparison-back-link">
           <span aria-hidden="true">←</span>
           <span>{homeLabel}</span>
         </Link>
@@ -73,7 +79,7 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
           <p>把页面里的判断放回真实部署、许可与同条件 POC 环境，沿着这些站内入口继续取证。</p>
           <div className="comparison-link-grid">
             {page.internalLinks.map((link) => (
-              <a href={link.target} key={`${link.target}-${link.label}`}>
+              <a href={getInternalLinkHref(link.target, link.locale)} key={`${link.target}-${link.label}`}>
                 <span>{link.label}</span>
                 <ExternalLink aria-hidden="true" size={16} />
               </a>

@@ -8,7 +8,7 @@
   "pages": [
     {
       "slug": "dify-vs-fastgpt",
-      "file": "out/zh/compare/dify-vs-fastgpt.html",
+      "file": "out/compare/dify-vs-fastgpt.html",
       "status": "published",
       "passed": true,
       "errors": [],
@@ -25,7 +25,7 @@
     },
     {
       "slug": "self-build-vs-platform",
-      "file": "out/zh/compare/self-build-vs-platform.html",
+      "file": "out/compare/self-build-vs-platform.html",
       "status": "published",
       "passed": true,
       "errors": [],
@@ -33,7 +33,7 @@
     },
     {
       "slug": "ragflow-vs-fastgpt",
-      "file": "out/zh/compare/ragflow-vs-fastgpt.html",
+      "file": "out/compare/ragflow-vs-fastgpt.html",
       "status": "published",
       "passed": true,
       "errors": [],
@@ -41,7 +41,7 @@
     },
     {
       "slug": "maxkb-vs-fastgpt",
-      "file": "out/zh/compare/maxkb-vs-fastgpt.html",
+      "file": "out/compare/maxkb-vs-fastgpt.html",
       "status": "published",
       "passed": true,
       "errors": [],
@@ -62,10 +62,10 @@
     }
   ],
   "comparisonSitemap": [
-    "https://fastgpt.cn/zh/compare/dify-vs-fastgpt",
-    "https://fastgpt.cn/zh/compare/maxkb-vs-fastgpt",
-    "https://fastgpt.cn/zh/compare/ragflow-vs-fastgpt",
-    "https://fastgpt.cn/zh/compare/self-build-vs-platform"
+    "https://fastgpt.cn/compare/dify-vs-fastgpt",
+    "https://fastgpt.cn/compare/maxkb-vs-fastgpt",
+    "https://fastgpt.cn/compare/ragflow-vs-fastgpt",
+    "https://fastgpt.cn/compare/self-build-vs-platform"
   ],
   "blockingFailures": []
 }

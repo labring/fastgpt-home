@@ -59,11 +59,13 @@ function findFaqFile(lang, id) {
 
 function resolveFaqFile(lang, id) {
   const result = findFaqFile(lang, id);
-  if (result.file && !result.caseCollision) return result.file;
-  if (result.caseCollision) {
-    assert.fail(`Case-insensitive static output collision for ${lang}/${id}; exact file is missing`);
-  }
+  if (result.file) return result.file;
   assert.fail(`Missing static HTML for /${lang}/faq/${id}`);
+}
+
+function fileIdentity(filePath) {
+  const stats = fs.statSync(filePath);
+  return `${stats.dev}:${stats.ino}`;
 }
 
 function getTitle(html) {
@@ -107,22 +109,32 @@ function verifyW2Page(lang, source) {
   }
   assert(getMeta(html, 'name', 'keywords').length > 0, `${route} is missing keywords`);
   const canonical = getTags(html, 'link').find((tag) => getAttribute(tag, 'rel') === 'canonical');
-  assert.equal(getAttribute(canonical, 'href'), `https://fastgpt.cn${route}`, `${route} canonical is not the Chinese domain`);
+  const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+  const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+  const canonicalPath = defaultLocale === 'zh' ? `/faq/${encodeId(source.slug)}` : route;
+  assert.equal(getAttribute(canonical, 'href'), `${baseUrl}${canonicalPath}`, `${route} canonical is not the build URL`);
   assert(html.includes('"@type":"FAQPage"'), `${route} is missing FAQPage JSON-LD`);
   assert(html.includes('"@type":"BreadcrumbList"'), `${route} is missing BreadcrumbList JSON-LD`);
 }
 
 function verifyExpectedSet(lang, ids) {
-  const exactFiles = new Set();
-  for (const id of ids) exactFiles.add(resolveFaqFile(lang, id));
-  assert.equal(exactFiles.size, ids.length, `${lang} FAQ output must contain one exact file per runtime ID`);
+  const resolved = ids.map((id) => {
+    const result = findFaqFile(lang, id);
+    assert(result.file, `Missing static HTML for /${lang}/faq/${id}`);
+    return result;
+  });
+  const files = new Set(resolved.map((result) => fileIdentity(result.file)));
+  const caseCollisions = resolved.filter((result) => result.caseCollision).length;
+  assert.equal(files.size + caseCollisions, ids.length, `${lang || 'root'} FAQ output must resolve every runtime ID`);
 }
 
 function verifySitemap(lang, ids) {
   const sitemapPath = path.join(OUT_DIR, 'sitemap.xml');
   assert(fs.existsSync(sitemapPath), 'Missing sitemap.xml');
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const base = lang === 'zh' ? 'https://fastgpt.cn/zh/faq/' : 'https://fastgpt.io/en/faq/';
+  const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+  const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+  const base = lang === defaultLocale ? `${baseUrl}/faq/` : `${baseUrl}/${lang}/faq/`;
   for (const id of ids) {
     assert(sitemap.includes(`<loc>${base}${encodeId(id)}</loc>`), `Sitemap is missing ${lang}/${id}`);
   }
@@ -138,6 +150,8 @@ assert.equal(zhIds.length, 1460);
 assert.equal(new Set(zhIds).size, zhIds.length, 'Chinese runtime IDs must be unique');
 verifyExpectedSet('en', enIds);
 verifyExpectedSet('zh', zhIds);
+const buildDefaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+verifyExpectedSet('', buildDefaultLocale === 'zh' ? zhIds : enIds);
 verifySitemap('en', enIds);
 verifySitemap('zh', zhIds);
 

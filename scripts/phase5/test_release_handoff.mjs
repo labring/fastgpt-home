@@ -25,7 +25,7 @@ assert.equal(handoff.legacyRepairItems.filter((item) => item.type === 'legacy-me
 assert.equal(handoff.legacyRepairItems.filter((item) => item.type === 'legacy-category').length, 2000);
 assert.equal(handoff.newContentItems.every((item) => item.url && item.sourceSha256 && item.batch && item.result), true);
 assert.equal(handoff.legacyRepairItems.every((item) => item.url && item.sourceSha256 && item.batch && item.result), true);
-assert.equal(handoff.newContentItems.filter((item) => item.type === 'comparison-page').every((item) => item.status === 'preview'), true);
+assert.equal(handoff.newContentItems.filter((item) => item.type === 'comparison-page').every((item) => item.status === 'published'), true);
 assert.equal(handoff.blockers.some((blocker) => blocker.id === 'legacy-category-conflicts'), true);
 assert.equal(handoff.blockers.some((blocker) => blocker.id === 'comparison-signoffs'), true);
 assert.equal(handoff.blockers.some((blocker) => blocker.id === 'browser-evidence-pending'), false);

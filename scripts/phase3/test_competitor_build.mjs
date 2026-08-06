@@ -21,11 +21,19 @@ const expectedTitles = {
 };
 const pricePattern = /(?:¥|￥|\$)\s*\d|\d+(?:\.\d+)?\s*(?:元|万元|美元|人民币)/i;
 const absolutePatterns = [/准确率更高/, /性能更好/, /性能更高/, /更安全/, /更可靠/];
+const buildDefaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+
+function expectedInternalLinkTarget(link) {
+  if (link.locale === buildDefaultLocale && link.target.startsWith(`/${link.locale}/`)) {
+    return link.target.slice(link.locale.length + 1) || '/';
+  }
+  return link.target;
+}
 
 function resolveHtml(slug) {
   const candidates = [
-    path.join(outRoot, 'zh', 'compare', slug, 'index.html'),
-    path.join(outRoot, 'zh', 'compare', `${slug}.html`)
+    path.join(outRoot, 'compare', slug, 'index.html'),
+    path.join(outRoot, 'compare', `${slug}.html`)
   ].filter((file) => fs.existsSync(file));
   assert.equal(candidates.length, 1, `Expected exactly one static HTML file for ${slug}`);
   return candidates[0];
@@ -70,7 +78,7 @@ function auditPage(page) {
   const text = textFromHtml(html);
   const errors = [];
   const exemptions = [];
-  const canonical = `https://fastgpt.cn/zh/compare/${page.slug}`;
+  const canonical = `https://fastgpt.cn/compare/${page.slug}`;
   const expectedTitle = expectedTitles[page.slug];
   if (!html.includes(`<title>${expectedTitle}</title>`)) errors.push('metadata:title');
   if (!metaContent(html, 'name', 'description')) errors.push('metadata:description');
@@ -87,7 +95,8 @@ function auditPage(page) {
   if (!html.includes('comparison-table-capability') || !html.includes('comparison-table-poc') || !html.includes('comparison-table-tco')) errors.push('content:table-kinds');
   if (!html.includes('事实来源') || !html.includes('核验日期') || !html.includes('版本与套餐') || !html.includes('更新记录')) errors.push('content:source-footer');
   for (const link of page.internalLinks || []) {
-    if (!html.includes(`href="${link.target}"`) && !html.includes(`href='${link.target}'`)) errors.push(`link:${link.target}`);
+    const target = expectedInternalLinkTarget(link);
+    if (!html.includes(`href="${target}"`) && !html.includes(`href='${target}'`)) errors.push(`link:${target}`);
   }
   if (!html.includes(page.asset.path)) errors.push('asset:page-image');
   if (page.status === 'preview' && !text.includes('预览页面')) errors.push('state:preview-marker');
@@ -115,8 +124,8 @@ function auditPage(page) {
 const pages = manifest.pages.filter((page) => expectedSlugs.includes(page.slug));
 assert.equal(pages.length, expectedSlugs.length, 'Manifest page count must be four');
 const results = pages.map(auditPage);
-const compareRoot = path.join(outRoot, 'zh', 'compare');
-if (fs.existsSync(compareRoot)) {
+for (const compareRoot of [path.join(outRoot, 'compare'), path.join(outRoot, 'zh', 'compare')]) {
+  assert(fs.existsSync(compareRoot), `Missing static comparison route root: ${path.relative(outRoot, compareRoot)}`);
   const actualDirs = fs.readdirSync(compareRoot, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => entry.name).sort();
   assert.deepEqual(actualDirs, [...expectedSlugs].sort(), 'Static comparison output contains an unexpected route set');
 }
@@ -125,8 +134,8 @@ for (const locale of localeDirs.filter((value) => knownLocales.has(value) && val
   assert.equal(fs.existsSync(path.join(outRoot, locale, 'compare')), false, `Unexpected ${locale} comparison route`);
 }
 const sitemap = parseSitemap();
-const publishedUrls = pages.filter((page) => page.status === 'published').map((page) => `https://fastgpt.cn/zh/compare/${page.slug}`);
-const comparisonSitemap = sitemap.filter((url) => url.includes('/zh/compare/'));
+const publishedUrls = pages.filter((page) => page.status === 'published').map((page) => `https://fastgpt.cn/compare/${page.slug}`);
+const comparisonSitemap = sitemap.filter((url) => url.includes('/compare/') && !url.includes('/zh/compare/'));
 assert.deepEqual(comparisonSitemap.sort(), publishedUrls.sort(), 'Sitemap must contain published comparison URLs only');
 assert.ok(css.includes('.comparison-table-row') && css.includes('data-label'), 'Responsive comparison CSS contract is missing');
 

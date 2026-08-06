@@ -7,24 +7,27 @@ import ComparisonPage from '@/components/compare/ComparisonPage';
 import { comparisonSlugs, getComparisonPage } from '@/content/competitor';
 import { getDictionary } from '@/lib/i18n';
 import { getCompareAlternates, getCompareCanonicalUrl } from '@/lib/seo';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 export default async function CompetitorComparisonPage({
   params
 }: {
-  params: Promise<{ lang: string; slug: string }>;
+  params: Promise<{ lang?: string; slug: string }>;
 }) {
   const { lang, slug } = await params;
-  if (lang !== 'zh') notFound();
+  const langName = lang || 'zh';
+  if (langName !== 'zh') notFound();
   const page = getComparisonPage(slug);
   if (!page) notFound();
   const dict = await getDictionary('zh');
   const canonical = getCompareCanonicalUrl(page.slug);
+  const siteBaseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
 
   return (
     <div className="home overflow-x-hidden comparison-page-shell">
       <BreadcrumbJsonLd
         items={[
-          { name: dict.JsonLd.breadcrumbHome, url: `${canonical.split('/zh/')[0]}/zh` },
+          { name: dict.JsonLd.breadcrumbHome, url: `${siteBaseUrl}${getDefaultLocalePath('zh')}` },
           { name: page.title, url: canonical }
         ]}
       />
@@ -55,11 +58,12 @@ export const dynamicParams = false;
 export async function generateMetadata({
   params
 }: {
-  params: Promise<{ lang: string; slug: string }>;
+  params: Promise<{ lang?: string; slug: string }>;
 }): Promise<Metadata> {
   const { lang, slug } = await params;
+  const langName = lang || 'zh';
   const page = getComparisonPage(slug);
-  if (!page || lang !== 'zh') {
+  if (!page || langName !== 'zh') {
     return { title: 'Comparison page not found', robots: { index: false, follow: false } };
   }
   const canonical = getCompareCanonicalUrl(page.slug);

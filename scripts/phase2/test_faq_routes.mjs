@@ -26,6 +26,21 @@ function loadSeoModule() {
     if (request === '@/lib/locales') {
       return { localeMap: { en: 'en_US', zh: 'zh_CN' }, supportedLocaleCodes: ['en', 'zh'] };
     }
+    if (request === '@/lib/localizedRoutes') {
+      const getDefaultLocalePath = (locale, route = '') => {
+        const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+        const normalizedRoute = route ? (route.startsWith('/') ? route : `/${route}`) : '';
+        const canonicalRoute = normalizedRoute === '/' ? '' : normalizedRoute.replace(/\/$/, '');
+        return locale === defaultLocale ? canonicalRoute || '/' : `/${locale}${canonicalRoute}`;
+      };
+      return {
+        getDefaultLocalePath,
+        getFaqPath(locale, id) {
+          const route = id ? `/faq/${encodeURIComponent(id)}` : '/faq';
+          return getDefaultLocalePath(locale, route);
+        }
+      };
+    }
     return originalRequire(request);
   };
   seoModule._compile(compiled, SEO_FILE);
@@ -46,40 +61,38 @@ assert.match(sitemapSource, /getFaqIds\(locale\)/);
 assert.match(sitemapSource, /getFaqCanonicalUrl/);
 
 const seo = loadSeoModule();
-delete process.env.NEXT_PUBLIC_HOME_URL;
-delete process.env.NEXT_PUBLIC_IO_HOME_URL;
-delete process.env.NEXT_PUBLIC_CN_HOME_URL;
+process.env.NEXT_PUBLIC_HOME_URL = 'https://fastgpt.cn';
+process.env.NEXT_PUBLIC_DEFAULT_LOCALE = 'zh';
 
 assert.equal(
   seo.getFaqCanonicalUrl('zh', '/faq/private-deployment-data-boundary'),
-  'https://fastgpt.cn/zh/faq/private-deployment-data-boundary',
+  'https://fastgpt.cn/faq/private-deployment-data-boundary',
 );
 assert.equal(
   seo.getFaqCanonicalUrl('en', '/faq/Can-AI-intelligent-customer-service'),
-  'https://fastgpt.io/en/faq/Can-AI-intelligent-customer-service',
+  'https://fastgpt.cn/en/faq/Can-AI-intelligent-customer-service',
 );
 
-const translated = seo.getFaqAlternates('zh', '/faq/Can-AI-intelligent-customer-service', true);
-assert.equal(translated.canonical, 'https://fastgpt.cn/zh/faq/Can-AI-intelligent-customer-service');
+const translated = seo.getFaqAlternates('zh', 'Can-AI-intelligent-customer-service', ['en', 'zh'], true);
+assert.equal(translated.canonical, 'https://fastgpt.cn/faq/Can-AI-intelligent-customer-service');
 assert.equal(translated.languages.zh, translated.canonical);
-assert.equal(translated.languages['zh-CN'], translated.canonical);
-assert.equal(translated.languages.en, 'https://fastgpt.io/en/faq/Can-AI-intelligent-customer-service');
+assert.equal(translated.languages.en, 'https://fastgpt.cn/en/faq/Can-AI-intelligent-customer-service');
 assert.equal(translated.languages['x-default'], translated.languages.en);
 
-const chineseOnly = seo.getFaqAlternates('zh', '/faq/private-deployment-data-boundary', false);
-assert.equal(chineseOnly.canonical, 'https://fastgpt.cn/zh/faq/private-deployment-data-boundary');
+const chineseOnly = seo.getFaqAlternates('zh', 'private-deployment-data-boundary', ['en', 'zh'], false);
+assert.equal(chineseOnly.canonical, 'https://fastgpt.cn/faq/private-deployment-data-boundary');
 assert.equal('en' in chineseOnly.languages, false);
 assert.equal(chineseOnly.languages['x-default'], chineseOnly.canonical);
 
-process.env.NEXT_PUBLIC_IO_HOME_URL = 'https://preview.example.io';
-process.env.NEXT_PUBLIC_CN_HOME_URL = 'https://preview.example.cn';
+process.env.NEXT_PUBLIC_HOME_URL = 'https://fastgpt.io';
+process.env.NEXT_PUBLIC_DEFAULT_LOCALE = 'en';
 assert.equal(
   seo.getFaqCanonicalUrl('zh', '/faq/foo'),
-  'https://preview.example.cn/zh/faq/foo',
+  'https://fastgpt.io/zh/faq/foo',
 );
 assert.equal(
   seo.getFaqCanonicalUrl('en', '/faq/foo'),
-  'https://preview.example.io/en/faq/foo',
+  'https://fastgpt.io/faq/foo',
 );
 
 console.log('FAQ route and dual-domain SEO tests passed');

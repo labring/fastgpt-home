@@ -10,6 +10,8 @@ const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
 const isCn = baseUrl.includes('.cn');
 const publicDir = path.join(__dirname, '../public');
 const englishFallbackLocales = ['ja', 'ar', 'vi', 'th', 'id', 'ms'];
+const englishHomeUrl = isCn ? `${baseUrl}/en` : baseUrl;
+const chineseHomeUrl = isCn ? baseUrl : `${baseUrl}/zh`;
 
 const links = isCn
   ? {
@@ -18,7 +20,7 @@ const links = isCn
       cloud: 'https://cloud.fastgpt.cn',
       pricingEn: 'https://fastgpt.cn/en/price',
       pricingZhHant: 'https://fastgpt.cn/zh-hant/price',
-      pricingZh: 'https://fastgpt.cn/zh/price',
+      pricingZh: 'https://fastgpt.cn/price',
       faqEn: 'https://fastgpt.cn/en/faq',
       faqZh: 'https://fastgpt.cn/faq'
     }
@@ -26,7 +28,7 @@ const links = isCn
       website: 'https://fastgpt.io',
       documentation: 'https://doc.fastgpt.io',
       cloud: 'https://cloud.fastgpt.io',
-      pricingEn: 'https://fastgpt.io/en/price',
+      pricingEn: 'https://fastgpt.io/price',
       pricingZhHant: 'https://fastgpt.io/zh-hant/price',
       pricingZh: 'https://fastgpt.io/zh/price',
       faqEn: 'https://fastgpt.io/faq',
@@ -53,8 +55,8 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 
 ## Localized Entry Points
 
-- English: ${baseUrl}/en
-- 简体中文: ${baseUrl}/zh
+- English: ${englishHomeUrl}
+- 简体中文: ${chineseHomeUrl}
 - 繁體中文: ${baseUrl}/zh-hant
 - 日本語: ${baseUrl}/ja
 - العربية: ${baseUrl}/ar

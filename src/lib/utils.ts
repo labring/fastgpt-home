@@ -1,5 +1,6 @@
 import { type ClassValue, clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 export function cn(...inputs: ClassValue[]) {
@@ -15,16 +16,22 @@ export function getNavHref(href: string, lang: string): string {
   }
 
   if (href.startsWith('#')) {
-    return `/${lang}${href}`;
+    return `${getDefaultLocalePath(lang)}${href}`;
   }
 
-  if (href === '/faq' || href.startsWith('/faq/')) {
-    return getDefaultLocalePath(lang, href);
+  if (!href.startsWith('/')) {
+    return href;
   }
 
-  if (href.startsWith('/') && !href.startsWith(`/${lang}`)) {
-    return `/${lang}${href}`;
+  const normalizedLang = normalizeLocale(lang);
+  const explicitLocale = supportedLocaleCodes.find(
+    (locale) => href === `/${locale}` || href.startsWith(`/${locale}/`)
+  );
+
+  if (explicitLocale && explicitLocale !== normalizedLang) {
+    return href;
   }
 
-  return href;
+  const routePath = explicitLocale ? href.slice(`/${explicitLocale}`.length) || '/' : href;
+  return getDefaultLocalePath(lang, routePath);
 }

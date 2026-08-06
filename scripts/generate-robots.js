@@ -13,7 +13,7 @@ const isCn = baseUrl.includes('.cn');
 const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const faqUrl = `${baseUrl}/faq`;
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
-const priceUrl = isCn ? `${baseUrl}/zh/price` : `${baseUrl}/en/price`;
+const priceUrl = `${baseUrl}/price`;
 const llmsUrl = isCn ? `${baseUrl}/zh/llms.txt` : `${baseUrl}/en/llms.txt`;
 
 // Generate different robots.txt for .cn vs .io domains

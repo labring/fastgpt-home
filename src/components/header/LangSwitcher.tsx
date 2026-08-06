@@ -56,10 +56,7 @@ export const LangSwitcher = ({
   })();
   const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
   const languageKeys = isFaqRoute ? faqLocaleCodes : Object.keys(localeNames);
-  const getLocalizedPath = (value: string) => {
-    if (isFaqRoute) return getDefaultLocalePath(value, routeWithoutLang);
-    return routeWithoutLang === '/' ? `/${value}` : `/${value}${routeWithoutLang}`;
-  };
+  const getLocalizedPath = (value: string) => getDefaultLocalePath(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;

@@ -85,9 +85,11 @@ function verifyHeadingSequence(route, html) {
 }
 
 function getExpectedCanonicalPath(route) {
-  const defaultFaqPrefix = `/${defaultLocale}/faq`;
-  if (route === defaultFaqPrefix || route.startsWith(`${defaultFaqPrefix}/`)) {
-    return route.slice(`/${defaultLocale}`.length);
+  const defaultPrefix = `/${defaultLocale}`;
+  if (route === defaultPrefix) return '/';
+  if (route === `${defaultPrefix}/price`) return '/price';
+  if (route === `${defaultPrefix}/faq` || route.startsWith(`${defaultPrefix}/faq/`)) {
+    return route.slice(defaultPrefix.length);
   }
   return route;
 }
@@ -178,19 +180,23 @@ function verifyAllFaqMetadata() {
   return faqFiles.length;
 }
 
-function verifyFaqMigrationCoverage() {
-  const legacyFaqDir = path.join(outDir, 'zh', 'faq');
+function verifyDefaultLocaleMigrationCoverage() {
+  const legacyLocaleDir = path.join(outDir, defaultLocale);
+  assert(resolveHtml(`/${defaultLocale}`), `Missing legacy ${defaultLocale} home page`);
+  assert(resolveHtml(`/${defaultLocale}/price`), `Missing legacy ${defaultLocale} price page`);
+
+  const legacyFaqDir = path.join(legacyLocaleDir, 'faq');
   const canonicalFaqDir = path.join(outDir, 'faq');
   const legacyFaqFiles = walkHtmlFiles(legacyFaqDir);
 
-  assert(legacyFaqFiles.length > 0, 'No legacy Chinese FAQ detail HTML files found');
+  assert(legacyFaqFiles.length > 0, `No legacy ${defaultLocale} FAQ detail HTML files found`);
 
   for (const legacyFilePath of legacyFaqFiles) {
     const relativePath = path.relative(legacyFaqDir, legacyFilePath);
     const canonicalFilePath = path.join(canonicalFaqDir, relativePath);
     assert(
       fs.existsSync(canonicalFilePath),
-      `Missing canonical FAQ migration target for /zh/faq/${relativePath}`
+      `Missing canonical FAQ migration target for /${defaultLocale}/faq/${relativePath}`
     );
   }
 
@@ -202,6 +208,8 @@ function main() {
     '/',
     '/en',
     '/zh',
+    '/price',
+    `/${defaultLocale}/price`,
     '/faq',
     '/en/faq',
     '/zh/faq',
@@ -238,10 +246,20 @@ function main() {
     assert.deepEqual(levels.slice(0, 3), [1, 2, 3], `${route} must keep h1 -> h2 -> h3 order`);
   }
 
+  const sitemapPath = path.join(outDir, 'sitemap.xml');
+  if (fs.existsSync(sitemapPath)) {
+    const sitemap = fs.readFileSync(sitemapPath, 'utf8');
+    const legacyPrefix = `${baseUrl}/${defaultLocale}`;
+    const legacySitemapUrls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)]
+      .map((match) => match[1])
+      .filter((url) => url === legacyPrefix || url.startsWith(`${legacyPrefix}/`));
+    assert.equal(legacySitemapUrls.length, 0, 'Sitemap contains default-locale prefixed URLs');
+  }
+
   const faqFileCount = verifyAllFaqMetadata();
-  const migratedFaqFileCount = verifyFaqMigrationCoverage();
+  const migratedFaqFileCount = verifyDefaultLocaleMigrationCoverage();
   console.log(
-    `P2 verification passed for ${baseUrl}: ${faqFileCount} FAQ detail pages checked, ${migratedFaqFileCount} Chinese migration targets matched`
+    `P2 verification passed for ${baseUrl}: ${faqFileCount} FAQ detail pages checked, ${migratedFaqFileCount} ${defaultLocale} migration targets matched`
   );
 }
 

@@ -5,12 +5,13 @@ export const buildDefaultLocale = normalizeLocale(process.env.NEXT_PUBLIC_DEFAUL
 export function getDefaultLocalePath(locale: string, path = '') {
   const normalizedLocale = normalizeLocale(locale);
   const normalizedPath = path ? (path.startsWith('/') ? path : `/${path}`) : '';
+  const canonicalPath = normalizedPath === '/' ? '' : normalizedPath.replace(/\/$/, '');
 
   if (normalizedLocale === buildDefaultLocale) {
-    return normalizedPath || '/';
+    return canonicalPath || '/';
   }
 
-  return `/${normalizedLocale}${normalizedPath}`;
+  return `/${normalizedLocale}${canonicalPath}`;
 }
 
 export function getFaqPath(locale: string, id?: string) {

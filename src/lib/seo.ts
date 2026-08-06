@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { localeMap, supportedLocaleCodes } from '@/lib/locales';
-import { getFaqPath } from '@/lib/localizedRoutes';
+import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
 
 export { localeMap };
 
@@ -21,18 +21,14 @@ export function getAlternates(
 ): Metadata['alternates'] {
   const baseUrl = getBaseUrl();
 
-  // Canonical should always include the language prefix to avoid duplicate content
-  // This ensures each language version has a unique canonical URL
-  const canonicalPath = `/${lang}${path}`;
-  const canonicalUrl = `${baseUrl}${canonicalPath}`;
+  const canonicalUrl = `${baseUrl}${getDefaultLocalePath(lang, path)}`;
 
   const languages = availableLocales.reduce((acc, locale) => {
-    acc[locale] = `${baseUrl}/${locale}${path}`;
+    acc[locale] = `${baseUrl}${getDefaultLocalePath(locale, path)}`;
     return acc;
   }, {} as Record<string, string>);
 
-  // x-default tells search engines which URL to use for unmatched languages
-  languages['x-default'] = `${baseUrl}/en${path}`;
+  languages['x-default'] = `${baseUrl}${getDefaultLocalePath('en', path)}`;
 
   return {
     canonical: canonicalUrl,

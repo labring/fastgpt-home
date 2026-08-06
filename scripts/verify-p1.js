@@ -106,9 +106,11 @@ function verifyRootMetadata() {
     'Root page title is incorrect'
   );
   verifyCanonical(rootHtml, `${baseUrl}/`);
-  verifyCanonical(localizedHtml, `${baseUrl}/${defaultLocale}`);
-  verifyCanonical(resolveHtml('/en'), `${baseUrl}/en`);
-  verifyCanonical(resolveHtml('/zh'), `${baseUrl}/zh`);
+  verifyCanonical(localizedHtml, `${baseUrl}/`);
+  verifyCanonical(resolveHtml('/en'), `${baseUrl}${defaultLocale === 'en' ? '/' : '/en'}`);
+  verifyCanonical(resolveHtml('/zh'), `${baseUrl}${defaultLocale === 'zh' ? '/' : '/zh'}`);
+  verifyCanonical(resolveHtml('/price'), `${baseUrl}/price`);
+  verifyCanonical(resolveHtml(`/${defaultLocale}/price`), `${baseUrl}/price`);
   verifyCanonical(resolveHtml('/faq'), `${baseUrl}/faq`);
   verifyCanonical(resolveHtml(`/faq/${faqId}`), `${baseUrl}/faq/${faqId}`);
   verifyCanonical(resolveHtml(`/${defaultLocale}/faq`), `${baseUrl}/faq`);
@@ -129,7 +131,7 @@ function verifyRootMetadata() {
       (tag) =>
         getAttribute(tag, 'rel') === 'alternate' &&
         getAttribute(tag, 'hreflang') === 'x-default' &&
-        getAttribute(tag, 'href') === `${baseUrl}/en`
+        getAttribute(tag, 'href') === `${baseUrl}${defaultLocale === 'en' ? '' : '/en'}`
     ),
     'Root page is missing the x-default alternate'
   );

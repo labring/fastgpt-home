@@ -48,7 +48,7 @@ function buildHandoff() {
     sourceRow: row.source_row,
     serial: row.values.no,
     slug: row.values.slug,
-    url: `https://fastgpt.cn/zh/faq/${row.values.slug}`,
+    url: `https://fastgpt.cn/faq/${row.values.slug}`,
     sourceVersion: 'W2 V1.1',
     sourceSha256: faq.source.source_sha256,
     batch: faqBatch,
@@ -59,7 +59,7 @@ function buildHandoff() {
   const compareItems = compare.pages.map((page) => ({
     type: 'comparison-page',
     slug: page.slug,
-    url: `https://fastgpt.cn/zh/compare/${page.slug}`,
+    url: `https://fastgpt.cn/compare/${page.slug}`,
     sourceVersion: page.sourceRefs.find((ref) => ref.id === 'draft-body')?.version || 'V1.0',
     sourceSha256: page.sourceHash,
     batch: compareBatch,

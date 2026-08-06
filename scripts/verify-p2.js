@@ -162,8 +162,37 @@ function isFaqDetailFile(filePath) {
   const faqIndex = relativePath.indexOf('faq');
   if (faqIndex < 0) return false;
 
+  // The default locale has both a root canonical page and a prefixed
+  // compatibility copy. Count the canonical root page and alternate locales
+  // that are represented in the sitemap.
+  if (faqIndex > 0 && relativePath[0] === defaultLocale) return false;
+
   const afterFaq = relativePath.slice(faqIndex + 1);
   return afterFaq.length > 0 && !(afterFaq.length === 1 && afterFaq[0] === 'index.html');
+}
+
+function resolveStaticHtmlPath(url) {
+  const pathname = new URL(url).pathname.replace(/^\/+/, '');
+  const decodedPathname = (() => {
+    try {
+      return decodeURIComponent(pathname);
+    } catch {
+      return pathname;
+    }
+  })();
+  const candidates = new Set([
+    path.join(outDir, `${pathname}.html`),
+    path.join(outDir, pathname, 'index.html'),
+    path.join(outDir, `${decodedPathname}.html`),
+    path.join(outDir, decodedPathname, 'index.html')
+  ]);
+
+  return [...candidates].find((candidate) => fs.existsSync(candidate));
+}
+
+function fileIdentity(filePath) {
+  const stats = fs.statSync(filePath);
+  return `${stats.dev}:${stats.ino}`;
 }
 
 function verifyAllFaqMetadata() {
@@ -173,11 +202,25 @@ function verifyAllFaqMetadata() {
   const sitemapPath = path.join(outDir, 'sitemap.xml');
   assert(fs.existsSync(sitemapPath), 'Missing sitemap.xml');
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const expectedFaqUrls = (sitemap.match(/<loc>[^<]+\/faq\/[^<]+<\/loc>/g) || []).length;
+  const expectedFaqUrls = [...sitemap.matchAll(/<loc>([^<]+\/faq\/[^<]+)<\/loc>/g)].map(
+    (match) => match[1]
+  );
+  const expectedFaqFiles = expectedFaqUrls.map((url) => {
+    const filePath = resolveStaticHtmlPath(url);
+    assert(filePath, `Missing static FAQ target for ${new URL(url).pathname}`);
+    return fileIdentity(filePath);
+  });
+  const staticFaqFiles = new Set(faqFiles.map(fileIdentity));
+  const sitemapFaqFiles = new Set(expectedFaqFiles);
   assert.equal(
-    faqFiles.length,
-    expectedFaqUrls,
-    `Static FAQ detail count ${faqFiles.length} does not match sitemap route count ${expectedFaqUrls}`
+    staticFaqFiles.size,
+    sitemapFaqFiles.size,
+    `Static FAQ detail files ${staticFaqFiles.size} do not match sitemap targets ${sitemapFaqFiles.size}`
+  );
+  assert.deepEqual(
+    [...staticFaqFiles].sort(),
+    [...sitemapFaqFiles].sort(),
+    'Static FAQ detail files must match sitemap targets'
   );
 
   for (const filePath of faqFiles) {
@@ -189,7 +232,7 @@ function verifyAllFaqMetadata() {
     });
   }
 
-  return faqFiles.length;
+  return staticFaqFiles.size;
 }
 
 function verifyDefaultLocaleMigrationCoverage() {
@@ -228,7 +271,7 @@ function verifyW2Faq() {
   assert.equal(
     new URL(getAttribute(canonical, 'href')).href,
     `${baseUrl}${defaultLocale === 'zh' ? '/faq' : '/zh/faq'}/${encodeURIComponent(w2FaqId)}`,
-    `${route} must canonicalize to fastgpt.cn`
+    `${route} must use the build canonical URL`
   );
   assert(html.includes('"@type":"FAQPage"'), `${route} is missing FAQPage JSON-LD`);
   assert(html.includes('"@type":"BreadcrumbList"'), `${route} is missing BreadcrumbList JSON-LD`);

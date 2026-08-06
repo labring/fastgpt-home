@@ -11,8 +11,8 @@ const OUT_DIR = path.join(ROOT, 'out');
 const OUTPUT = path.join(UAT_DIR, 'browser-evidence.json');
 
 const screenshotSpecs = [
-  { id: 'comparison-desktop', file: 'compare-desktop.png', width: 1440, height: 900, route: '/zh/compare/dify-vs-fastgpt' },
-  { id: 'comparison-mobile', file: 'compare-mobile-harness.png', width: 390, height: 844, route: '/zh/compare/dify-vs-fastgpt' },
+  { id: 'comparison-desktop', file: 'compare-desktop.png', width: 1440, height: 900, route: '/compare/dify-vs-fastgpt' },
+  { id: 'comparison-mobile', file: 'compare-mobile-harness.png', width: 390, height: 844, route: '/compare/dify-vs-fastgpt' },
   { id: 'faq-desktop', file: 'faq-desktop.png', width: 1440, height: 900, route: '/en/faq/Can-AI-intelligent-customer-service' }
 ];
 
@@ -58,10 +58,10 @@ async function main() {
     layouts[spec.id] = layout;
   }
 
-  const comparisonHtml = readHtml('zh/compare/dify-vs-fastgpt.html');
+  const comparisonHtml = readHtml('compare/dify-vs-fastgpt.html');
   const faqHtml = readHtml('en/faq/Can-AI-intelligent-customer-service.html');
   assert.match(comparisonHtml, /Dify 与 FastGPT 怎么选/);
-  assert.match(comparisonHtml, /预览页面/);
+  assert.match(comparisonHtml, /https:\/\/fastgpt\.cn\/compare\/dify-vs-fastgpt/);
   assert.match(comparisonHtml, /application\/ld\+json/);
   assert.match(faqHtml, /Can AI intelligent customer service platforms really reduce labor costs\?/);
   assert.match(faqHtml, /faq-social-preview\.png/);
@@ -73,10 +73,10 @@ async function main() {
     screenshots,
     layouts,
     staticDom: {
-      comparisonRoute: '/zh/compare/dify-vs-fastgpt',
+      comparisonRoute: '/compare/dify-vs-fastgpt',
       faqRoute: '/en/faq/Can-AI-intelligent-customer-service',
       comparisonContent: 'present',
-      comparisonPreviewState: 'present',
+      comparisonPreviewState: 'published',
       comparisonJsonLd: 'present',
       faqTitle: 'present',
       faqSocialImage: 'present'

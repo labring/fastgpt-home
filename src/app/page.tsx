@@ -3,11 +3,12 @@ import JsonLd, { FAQJsonLd } from '@/components/JsonLd';
 import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
 import { getRootAlternates, localeMap } from '@/lib/seo';
 import { getGitHubStars } from '@/lib/githubStars';
+import { currentSiteBaseUrl } from '@/lib/siteRouting';
 import { Metadata } from 'next';
 
 export async function generateMetadata(): Promise<Metadata> {
   const config = getConfigForLocale(defaultLocale);
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = currentSiteBaseUrl;
   const ogLocale = localeMap[defaultLocale] || 'en_US';
   const alternateLocales = Object.values(localeMap).filter((locale) => locale !== ogLocale);
 

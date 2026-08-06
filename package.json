@@ -14,7 +14,8 @@
     "convert-images": "node scripts/convert-images.js",
     "verify:p0": "node scripts/verify-p0.js",
     "verify:p1": "node scripts/verify-p1.js",
-    "verify:p2": "node scripts/verify-p2.js"
+    "verify:p2": "node scripts/verify-p2.js",
+    "verify:i18n-seo": "node scripts/verify-i18n-seo.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

@@ -1,12 +1,10 @@
 import { MetadataRoute } from 'next';
-import { faq, faqContentLocaleCodes } from '@/faq';
-import { supportedLocaleCodes } from '@/lib/locales';
-import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
+import { faqContentLocaleCodes, getFaqIds } from '@/faq';
+import { getOwnedFaqUrl, getOwnedLocaleUrl, getPublishedLocaleCodes } from '@/lib/siteRouting';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
   const localizedPaths = ['', '/price'];
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
@@ -18,21 +16,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url, lastModified });
   };
 
-  for (const locale of supportedLocaleCodes) {
+  for (const locale of getPublishedLocaleCodes()) {
     for (const path of localizedPaths) {
-      addEntry(`${baseUrl}${getDefaultLocalePath(locale, path)}`, now);
+      addEntry(getOwnedLocaleUrl(locale, path), now);
     }
   }
 
-  // FAQ 只作为 SEO 页面提交中英文；其他语言 URL 可访问但内容 fallback 到英文
-  for (const locale of faqContentLocaleCodes) {
-    addEntry(`${baseUrl}${getFaqPath(locale)}`, now);
+  const publishedFaqLocales = faqContentLocaleCodes.filter((code) =>
+    getPublishedLocaleCodes().includes(code)
+  );
+
+  for (const locale of publishedFaqLocales) {
+    addEntry(getOwnedFaqUrl(locale), now);
   }
 
-  // FAQ 详情页
-  for (const locale of faqContentLocaleCodes) {
-    for (const faqId of Object.keys(faq)) {
-      addEntry(`${baseUrl}${getFaqPath(locale, faqId)}`, now);
+  for (const locale of publishedFaqLocales) {
+    for (const faqId of getFaqIds(locale)) {
+      addEntry(getOwnedFaqUrl(locale, faqId), now);
     }
   }
 

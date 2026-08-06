@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 import { localeConfigs } from '@/lib/locales';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 const langConfig = localeConfigs.reduce((acc, locale) => {
   acc[locale.code] = { flag: locale.flag, label: locale.name };
@@ -56,7 +56,7 @@ export const LangSwitcher = ({
   })();
   const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
   const languageKeys = isFaqRoute ? faqLocaleCodes : Object.keys(localeNames);
-  const getLocalizedPath = (value: string) => getDefaultLocalePath(value, routeWithoutLang);
+  const getLocalizedPath = (value: string) => getOwnedLocaleUrl(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;

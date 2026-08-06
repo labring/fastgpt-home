@@ -1,10 +1,17 @@
 import HomeLayoutSwitcher from '@/components/home/HomeLayoutSwitcher';
 import JsonLd from '@/components/JsonLd';
-import { defaultLocale, getDictionary, localeNames, getConfigForLocale } from '@/lib/i18n';
+import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
+import { currentSiteBaseUrl, getBuildLocaleCodes } from '@/lib/siteRouting';
 import { Metadata } from 'next';
 
-export default async function LangHome({ children, params }: { children: React.ReactNode, params: Promise<{ lang?: string }> }) {
+export default async function LangHome({
+  children,
+  params
+}: {
+  children: React.ReactNode;
+  params: Promise<{ lang?: string }>;
+}) {
   const { lang } = await params;
   const langName = lang || defaultLocale;
   const dict = await getDictionary(langName);
@@ -17,15 +24,17 @@ export default async function LangHome({ children, params }: { children: React.R
   );
 }
 
-export async function generateMetadata(
-  { params }: { params: Promise<{ lang?: string }> }
-): Promise<Metadata> {
+export async function generateMetadata({
+  params
+}: {
+  params: Promise<{ lang?: string }>;
+}): Promise<Metadata> {
   const { lang } = await params;
   const langName = lang || defaultLocale;
   const config = getConfigForLocale(langName);
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = currentSiteBaseUrl;
   const ogLocale = localeMap[langName] || 'en_US';
-  const alternateLocales = Object.values(localeMap).filter(l => l !== ogLocale);
+  const alternateLocales = Object.values(localeMap).filter((l) => l !== ogLocale);
 
   return {
     title: config.title,
@@ -41,11 +50,15 @@ export async function generateMetadata(
       alternateLocale: alternateLocales
     },
     twitter: config.twitter,
+    robots:
+      lang && langName === defaultLocale
+        ? { index: false, follow: true }
+        : { index: true, follow: true },
     alternates: getAlternates(langName)
   };
 }
 
 // Generate static paths for all supported languages
 export async function generateStaticParams() {
-  return Object.keys(localeNames).map((lang) => ({ lang }));
+  return getBuildLocaleCodes(defaultLocale).map((lang) => ({ lang }));
 }

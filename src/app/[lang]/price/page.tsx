@@ -1,7 +1,8 @@
 import PPlan from '@/components/price/PPlan';
 import PTitle from '@/components/price/PTitle';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, localeMap } from '@/lib/seo';
+import { getBuildLocaleCodes } from '@/lib/siteRouting';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
@@ -56,7 +57,11 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title,
       description
-    }
+    },
+    robots:
+      lang && langName === defaultLocale
+        ? { index: false, follow: true }
+        : { index: true, follow: true }
   };
 }
 
@@ -93,5 +98,5 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
 }
 
 export async function generateStaticParams() {
-  return Object.keys(localeNames).map((lang) => ({ lang }));
+  return getBuildLocaleCodes(defaultLocale).map((lang) => ({ lang }));
 }

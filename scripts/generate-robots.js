@@ -1,81 +1,39 @@
 #!/usr/bin/env node
 /**
- * generate-robots.js
- * Generates public/robots.txt at build time based on environment variables.
- * Runs as part of the prebuild step.
+ * Generates public/robots.txt at build time.
+ * Both site variants are crawlable; canonical and hreflang metadata handle duplication.
  */
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
-const isCn = baseUrl.includes('.cn');
-
+const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+const isCn = new URL(baseUrl).hostname.endsWith('.cn');
+const cnUrl = 'https://fastgpt.cn';
+const ioUrl = 'https://fastgpt.io';
 const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
-const faqUrl = `${baseUrl}/faq`;
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
-const priceUrl = `${baseUrl}/price`;
-const llmsUrl = isCn ? `${baseUrl}/zh/llms.txt` : `${baseUrl}/en/llms.txt`;
+const primaryLlmUrl = isCn ? `${cnUrl}/llms.txt` : `${ioUrl}/llms.txt`;
 
-// Generate different robots.txt for .cn vs .io domains
-const content = isCn
-  ? `# robots.txt for FastGPT — ${baseUrl}
+const content = `# robots.txt for FastGPT - ${baseUrl}
 #
-# This site is optimized for Chinese search engines and AI platforms.
-# For international users, please visit https://fastgpt.io
-#
-# FastGPT is a free, open-source enterprise AI Agent builder.
-# It provides Agentic RAG retrieval, AI-powered workflows, and MCP tools
-# to help teams build powerful AI Agents — no coding required.
+# This site publishes canonical localized pages for its target audience.
+# Both major search engines and AI crawlers may access the site.
 #
 # Resources:
 # - Website:       ${baseUrl}
+# - Simplified Chinese website: ${cnUrl}
+# - International website: ${ioUrl}
 # - Cloud Service: ${cloudUrl}
-# - Pricing:       ${priceUrl}
 # - Documentation: ${docUrl}
-# - FAQ:           ${faqUrl}
+# - Pricing:       ${baseUrl}/price
+# - FAQ:           ${baseUrl}/faq
 # - GitHub:        https://github.com/labring/FastGPT
-# - LLM Context:   ${llmsUrl}
+# - LLM Context:   ${primaryLlmUrl}
 # - LLM Index:     ${baseUrl}/llms.txt
 
-# Block Google to avoid duplicate content issues with fastgpt.io
-User-agent: Googlebot
-Disallow: /
-
-# Allow all other crawlers (search engines, AI platforms, etc.)
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: ${baseUrl}/sitemap.xml
-`
-  : `# robots.txt for FastGPT — ${baseUrl}
-#
-# This site is optimized for international search engines and AI platforms.
-# For Chinese users, please visit https://fastgpt.cn
-#
-# FastGPT is a free, open-source enterprise AI Agent builder.
-# It provides Agentic RAG retrieval, AI-powered workflows, and MCP tools
-# to help teams build powerful AI Agents — no coding required.
-#
-# Resources:
-# - Website:       ${baseUrl}
-# - Cloud Service: ${cloudUrl}
-# - Pricing:       ${priceUrl}
-# - Documentation: ${docUrl}
-# - FAQ:           ${faqUrl}
-# - GitHub:        https://github.com/labring/FastGPT
-# - LLM Context:   ${llmsUrl}
-# - LLM Index:     ${baseUrl}/llms.txt
-
-# Block Baidu to avoid duplicate content issues with fastgpt.cn
-User-agent: Baiduspider
-Disallow: /
-
-# Allow all other crawlers (search engines, AI platforms, etc.)
-User-agent: *
-Allow: /
-
-# Sitemaps
 Sitemap: ${baseUrl}/sitemap.xml
 `;
 

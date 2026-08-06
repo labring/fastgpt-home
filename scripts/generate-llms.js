@@ -6,34 +6,32 @@
 const fs = require('fs');
 const path = require('path');
 
-const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
-const isCn = baseUrl.includes('.cn');
+const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+const isCn = new URL(baseUrl).hostname.endsWith('.cn');
 const publicDir = path.join(__dirname, '../public');
 const englishFallbackLocales = ['ja', 'ar', 'vi', 'th', 'id', 'ms'];
-const englishHomeUrl = isCn ? `${baseUrl}/en` : baseUrl;
-const chineseHomeUrl = isCn ? baseUrl : `${baseUrl}/zh`;
+const cnBaseUrl = 'https://fastgpt.cn';
+const ioBaseUrl = 'https://fastgpt.io';
+const englishHomeUrl = ioBaseUrl;
+const chineseHomeUrl = cnBaseUrl;
+const traditionalHomeUrl = `${ioBaseUrl}/zh-hant`;
+const englishLlmUrl = `${ioBaseUrl}/llms.txt`;
+const chineseLlmUrl = `${cnBaseUrl}/llms.txt`;
+const traditionalLlmUrl = `${ioBaseUrl}/zh-hant/llms.txt`;
 
-const links = isCn
-  ? {
-      website: 'https://fastgpt.cn',
-      documentation: 'https://doc.fastgpt.cn',
-      cloud: 'https://cloud.fastgpt.cn',
-      pricingEn: 'https://fastgpt.cn/en/price',
-      pricingZhHant: 'https://fastgpt.cn/zh-hant/price',
-      pricingZh: 'https://fastgpt.cn/price',
-      faqEn: 'https://fastgpt.cn/en/faq',
-      faqZh: 'https://fastgpt.cn/faq'
-    }
-  : {
-      website: 'https://fastgpt.io',
-      documentation: 'https://doc.fastgpt.io',
-      cloud: 'https://cloud.fastgpt.io',
-      pricingEn: 'https://fastgpt.io/price',
-      pricingZhHant: 'https://fastgpt.io/zh-hant/price',
-      pricingZh: 'https://fastgpt.io/zh/price',
-      faqEn: 'https://fastgpt.io/faq',
-      faqZh: 'https://fastgpt.io/zh/faq'
-    };
+const links = {
+  website: ioBaseUrl,
+  chineseWebsite: cnBaseUrl,
+  documentation: 'https://doc.fastgpt.io',
+  chineseDocumentation: 'https://doc.fastgpt.cn',
+  cloud: 'https://cloud.fastgpt.io',
+  chineseCloud: 'https://cloud.fastgpt.cn',
+  pricingEn: `${ioBaseUrl}/price`,
+  pricingZhHant: `${ioBaseUrl}/zh-hant/price`,
+  pricingZh: `${cnBaseUrl}/price`,
+  faqEn: `${ioBaseUrl}/faq`,
+  faqZh: `${cnBaseUrl}/faq`
+};
 
 const englishContent = `# FastGPT
 
@@ -49,23 +47,23 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Pricing: ${links.pricingEn}
 - FAQ: ${links.faqEn}
 - Simplified Chinese FAQ: ${links.faqZh}
-- Simplified Chinese LLM Context: ${baseUrl}/zh/llms.txt
-- Traditional Chinese LLM Context: ${baseUrl}/zh-hant/llms.txt
+- Simplified Chinese LLM Context: ${chineseLlmUrl}
+- Traditional Chinese LLM Context: ${traditionalLlmUrl}
 - GitHub: https://github.com/labring/FastGPT
 
 ## Localized Entry Points
 
 - English: ${englishHomeUrl}
 - 简体中文: ${chineseHomeUrl}
-- 繁體中文: ${baseUrl}/zh-hant
-- 日本語: ${baseUrl}/ja
-- العربية: ${baseUrl}/ar
-- Tiếng Việt: ${baseUrl}/vi
-- ไทย: ${baseUrl}/th
-- Bahasa Indonesia: ${baseUrl}/id
-- Bahasa Melayu: ${baseUrl}/ms
+- 繁體中文: ${traditionalHomeUrl}
+- 日本語: ${ioBaseUrl}/ja
+- العربية: ${ioBaseUrl}/ar
+- Tiếng Việt: ${ioBaseUrl}/vi
+- ไทย: ${ioBaseUrl}/th
+- Bahasa Indonesia: ${ioBaseUrl}/id
+- Bahasa Melayu: ${ioBaseUrl}/ms
 
-The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses ${baseUrl}/zh/llms.txt, and Traditional Chinese uses ${baseUrl}/zh-hant/llms.txt.
+The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses ${chineseLlmUrl}, and Traditional Chinese uses ${traditionalLlmUrl}.
 
 ## Core Features
 
@@ -149,14 +147,14 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 
 ## 关键链接
 
-- 官网：${links.website}
-- 国内文档：https://doc.fastgpt.cn
-- 国际文档：https://doc.fastgpt.io
-- 云服务：${links.cloud}
+- 官网：${links.chineseWebsite}
+- 国内文档：${links.chineseDocumentation}
+- 国际文档：${links.documentation}
+- 云服务：${links.chineseCloud}
 - 定价：${links.pricingZh}
 - FAQ：${links.faqZh}
-- 繁体中文 LLM Context：${baseUrl}/zh-hant/llms.txt
-- 英文 LLM Context：${baseUrl}/en/llms.txt
+- 繁体中文 LLM Context：${traditionalLlmUrl}
+- 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
 
 ## 核心能力
@@ -205,7 +203,7 @@ FastGPT 支持 Word、PDF、Excel、Markdown、网页链接等格式，并支持
 
 - 邮箱：Dennis@sealos.io
 - GitHub：https://github.com/labring/FastGPT
-- 官网：${links.website}
+- 官网：${links.chineseWebsite}
 `;
 
 const traditionalChineseContent = `# FastGPT
@@ -217,13 +215,13 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 ## 關鍵連結
 
 - 官網：${links.website}
-- 國內文件：https://doc.fastgpt.cn
-- 國際文件：https://doc.fastgpt.io
+- 國內文件：${links.chineseDocumentation}
+- 國際文件：${links.documentation}
 - 雲服務：${links.cloud}
 - 定價：${links.pricingZhHant}
 - FAQ：${links.faqZh}
-- 簡體中文 LLM Context：${baseUrl}/zh/llms.txt
-- 英文 LLM Context：${baseUrl}/en/llms.txt
+- 簡體中文 LLM Context：${chineseLlmUrl}
+- 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
 
 ## 核心能力
@@ -289,14 +287,14 @@ function englishAliasContent(locale) {
 
 This locale uses the English LLM context.
 
-- English LLM Context: ${baseUrl}/en/llms.txt
-- Simplified Chinese LLM Context: ${baseUrl}/zh/llms.txt
-- Traditional Chinese LLM Context: ${baseUrl}/zh-hant/llms.txt
-- Localized Page: ${baseUrl}/${locale}
+- English LLM Context: ${englishLlmUrl}
+- Simplified Chinese LLM Context: ${chineseLlmUrl}
+- Traditional Chinese LLM Context: ${traditionalLlmUrl}
+- Localized Page: ${ioBaseUrl}/${locale}
 `;
 }
 
-writeText('llms.txt', englishContent);
+writeText('llms.txt', isCn ? chineseContent : englishContent);
 writeText('en/llms.txt', englishContent);
 writeText('zh-hant/llms.txt', traditionalChineseContent);
 writeText('zh/llms.txt', chineseContent);

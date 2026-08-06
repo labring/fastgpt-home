@@ -1,7 +1,12 @@
 import { faqContentLocaleCodes, getFaqData, resolveFaqLocale } from '@/faq';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getFaqAlternates, localeMap } from '@/lib/seo';
-import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
+import {
+  currentSiteBaseUrl,
+  getBuildLocaleCodes,
+  getOwnedFaqUrl,
+  getOwnedLocaleUrl
+} from '@/lib/siteRouting';
 import FAQList from '@/components/faq/FAQList';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
@@ -24,7 +29,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
       Answers: item.Answers.substring(0, 100)
     };
   }
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = currentSiteBaseUrl;
   const faqSchemaItems = Object.values(faq)
     .slice(0, 30)
     .map((item) => ({
@@ -36,8 +41,8 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
     <div className="home overflow-x-hidden">
       <BreadcrumbJsonLd
         items={[
-          { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}${getDefaultLocalePath(langName)}` },
-          { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}${getFaqPath(langName)}` }
+          { name: dict.JsonLd.breadcrumbHome, url: getOwnedLocaleUrl(langName) },
+          { name: dict.FAQ?.title || 'FAQ', url: getOwnedFaqUrl(langName) }
         ]}
       />
       <FAQJsonLd items={faqSchemaItems} />
@@ -104,7 +109,11 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
 }
 
 export async function generateStaticParams() {
-  return faqContentLocaleCodes.map((lang) => ({ lang }));
+  return getBuildLocaleCodes(defaultLocale)
+    .filter((lang) =>
+      faqContentLocaleCodes.includes(lang as (typeof faqContentLocaleCodes)[number])
+    )
+    .map((lang) => ({ lang }));
 }
 
 export const dynamicParams = false;
@@ -114,7 +123,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang?: st
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
   const dict = await getDictionary(faqLangName);
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = currentSiteBaseUrl;
   const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
   const socialImageAlt = `${dict.FAQ?.title || 'FAQ'} - FastGPT`;
 
@@ -125,7 +134,9 @@ export async function generateMetadata({ params }: { params: Promise<{ lang?: st
     keywords: ['FastGPT', 'FAQ', 'AI Agent', 'Knowledge Base', 'Customer Support', 'AI Platform'],
     alternates: getFaqAlternates(faqLangName, undefined, faqContentLocaleCodes),
     robots:
-      faqLangName === langName ? { index: true, follow: true } : { index: false, follow: true },
+      !lang || faqLangName !== langName
+        ? { index: true, follow: true }
+        : { index: false, follow: true },
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description:

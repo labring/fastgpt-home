@@ -12,7 +12,7 @@ import vi from '@/locales/vi.json';
 import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
 import { supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
-import { getFaqPath } from '@/lib/localizedRoutes';
+import { getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
@@ -53,7 +53,11 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
       className={`not-found-locale not-found-locale-${lang} mx-auto hidden min-h-[100svh] w-full max-w-[1280px] flex-col px-4 py-6 md:px-8`}
     >
       <header className="flex items-center justify-between">
-        <Link href={`/${lang}`} className="flex items-center gap-2" aria-label="FastGPT">
+        <Link
+          href={getOwnedLocaleUrl(lang)}
+          className="flex items-center gap-2"
+          aria-label="FastGPT"
+        >
           <FastGPTLogo size={24} />
           <span
             style={{
@@ -120,7 +124,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
 
             <div className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
               <Link
-                href={`/${lang}`}
+                href={getOwnedLocaleUrl(lang)}
                 className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#020617] px-6 text-[15px] font-medium text-white transition-colors hover:bg-[#172033] sm:w-auto"
               >
                 <Home className="h-4 w-4" />
@@ -128,7 +132,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
               </Link>
               {hasFaq && (
                 <Link
-                  href={getFaqPath(lang)}
+                  href={getOwnedFaqUrl(lang)}
                   className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
                 >
                   <FileQuestion className="h-4 w-4" />

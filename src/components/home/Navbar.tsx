@@ -11,7 +11,7 @@ import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
 import { localeConfigs } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 interface NavLink {
   label: string;
@@ -65,7 +65,7 @@ export default function Navbar({
   })();
   const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
   const languageKeys = isFaqRoute ? faqLocaleCodes : Object.keys(localeNames);
-  const getLocalizedPath = (value: string) => getDefaultLocalePath(value, routeWithoutLang);
+  const getLocalizedPath = (value: string) => getOwnedLocaleUrl(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === lang) return;

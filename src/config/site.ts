@@ -2,6 +2,7 @@ import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub } from 'react-icons/bs';
 import { HiUserGroup } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
+import { currentSiteBaseUrl } from '@/lib/siteRouting';
 
 const OPENGRAPH_IMAGE = '/opengraph-image.png';
 const TWITTER_IMAGE = '/twitter-image.png';
@@ -11,12 +12,12 @@ const baseSiteConfig = {
   name: 'FastGPT',
   description:
     "Build powerful AI agents with FastGPT's visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.",
-  url: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
+  url: currentSiteBaseUrl,
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   customPlanUrl:
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
     'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
-  metadataBase: 'https://fastgpt.io',
+  metadataBase: currentSiteBaseUrl,
   keywords: [
     'rag',
     'ai',
@@ -43,7 +44,7 @@ const baseSiteConfig = {
   authors: [
     {
       name: 'labring',
-      url: process.env.NEXT_PUBLIC_HOME_URL || '',
+      url: currentSiteBaseUrl,
       twitter: 'https://github.com/labring/FastGPT'
     }
   ],

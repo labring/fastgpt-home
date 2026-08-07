@@ -1,9 +1,22 @@
-import { faq, faqContentLocaleCodes, getFaqItem, getFaqData, resolveFaqLocale } from '@/faq';
+import {
+  faqContentLocaleCodes,
+  getFaqData,
+  getFaqIds,
+  getFaqItem,
+  getFaqTranslationLocales,
+  resolveFaqLocale
+} from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getFaqAlternates, localeMap } from '@/lib/seo';
 import { normalizeFaqMetadata } from '@/lib/faqMetadata';
-import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
+import {
+  currentSiteBaseUrl,
+  getOwnedFaqPath,
+  getOwnedFaqUrl,
+  getOwnedLocaleUrl,
+  getPublishedPrefixedLocaleCodes
+} from '@/lib/siteRouting';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Workflow } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
@@ -46,15 +59,13 @@ export default async function FAQDetailPage({
   const summary = paragraphs[0] || '';
   const answerParagraphs = paragraphs.length > 1 ? paragraphs.slice(1) : paragraphs;
   const keywords = faqItem.Keywords.split(', ');
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
-
   return (
     <div className="home overflow-x-hidden">
       <BreadcrumbJsonLd
         items={[
-          { name: dict.JsonLd.breadcrumbHome, url: `${baseUrl}${getDefaultLocalePath(langName)}` },
-          { name: dict.FAQ?.title || 'FAQ', url: `${baseUrl}${getFaqPath(langName)}` },
-          { name: faqItem.Question, url: `${baseUrl}${getFaqPath(langName, faqId)}` }
+          { name: dict.JsonLd.breadcrumbHome, url: getOwnedLocaleUrl(langName) },
+          { name: dict.FAQ?.title || 'FAQ', url: getOwnedFaqUrl(langName) },
+          { name: faqItem.Question, url: getOwnedFaqUrl(langName, faqId) }
         ]}
       />
       <FAQJsonLd items={[{ question: faqItem.Question, answer: faqItem.Answers }]} />
@@ -66,7 +77,7 @@ export default async function FAQDetailPage({
 
         <div className="relative z-[1] mx-auto w-full max-w-[1240px] pt-[96px] md:pt-[128px]">
           <a
-            href={getFaqPath(langName)}
+            href={getOwnedFaqPath(langName)}
             className="group mb-10 inline-flex items-center gap-2 text-[14px] font-medium text-slate-500 transition-colors duration-200 hover:text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <ArrowLeft
@@ -211,7 +222,7 @@ export default async function FAQDetailPage({
                     {relatedFAQs.slice(0, 3).map(([relatedId, item]) => (
                       <a
                         key={relatedId}
-                        href={getFaqPath(langName, relatedId)}
+                        href={getOwnedFaqPath(langName, relatedId)}
                         className="block border-b border-slate-100 py-3 text-[13px] leading-5 text-slate-500 transition-colors duration-200 hover:text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         {item.Question}
@@ -219,7 +230,7 @@ export default async function FAQDetailPage({
                     ))}
                   </div>
                   <a
-                    href={getFaqPath(langName)}
+                    href={getOwnedFaqPath(langName)}
                     className="group mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                   >
                     <span>{dict.FAQ.viewMore}</span>
@@ -257,7 +268,7 @@ export default async function FAQDetailPage({
                 </div>
 
                 <a
-                  href={getFaqPath(langName)}
+                  href={getOwnedFaqPath(langName)}
                   className="mt-14 inline-flex h-11 items-center justify-center rounded-[6px] border border-slate-300 bg-white px-6 text-[14px] font-semibold text-slate-700 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-slate-50 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
                   {dict.FAQ?.backToList || 'Back to FAQ'}
@@ -272,9 +283,15 @@ export default async function FAQDetailPage({
 }
 
 export async function generateStaticParams() {
-  const faqKeys = Object.keys(faq);
+  const localizedFaqLocales = getPublishedPrefixedLocaleCodes(defaultLocale).filter((lang) =>
+    faqContentLocaleCodes.includes(lang as (typeof faqContentLocaleCodes)[number])
+  );
+  if (!localizedFaqLocales.length) {
+    const [probeId] = getFaqIds(defaultLocale);
+    return probeId ? [{ lang: defaultLocale, id: probeId }] : [];
+  }
 
-  return faqContentLocaleCodes.flatMap((lang) => faqKeys.map((id) => ({ lang, id })));
+  return localizedFaqLocales.flatMap((lang) => getFaqIds(lang).map((id) => ({ lang, id })));
 }
 
 export const dynamicParams = false;
@@ -289,7 +306,7 @@ export async function generateMetadata({
   const faqLangName = resolveFaqLocale(langName);
   const faqId = decodeFaqId(id);
   const faqItem = getFaqItem(faqId, faqLangName);
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+  const baseUrl = currentSiteBaseUrl;
   const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 
   if (!faqItem) {
@@ -306,9 +323,16 @@ export async function generateMetadata({
     title: metadata.title,
     description: metadata.description,
     keywords: faqItem.Keywords.split(', '),
-    alternates: getFaqAlternates(faqLangName, faqId, faqContentLocaleCodes),
+    alternates: getFaqAlternates(
+      faqLangName,
+      faqId,
+      getFaqTranslationLocales(faqId),
+      getFaqTranslationLocales(faqId).includes('en')
+    ),
     robots:
-      faqLangName === langName ? { index: true, follow: true } : { index: false, follow: true },
+      !lang || faqLangName !== langName
+        ? { index: true, follow: true }
+        : { index: false, follow: true },
     openGraph: {
       title: metadata.title,
       description: metadata.description,

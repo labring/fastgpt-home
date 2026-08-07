@@ -9,7 +9,7 @@ export type FaqContentLocale = (typeof faqContentLocaleCodes)[number];
 
 // 按语言索引的翻译数据（新增语言在此扩展）
 const faqByLocale: Record<string, Record<string, FaqItem>> = {
-  zh: faqZh,
+  zh: faqZh
 };
 
 export function resolveFaqLocale(lang: string): FaqContentLocale {
@@ -33,6 +33,17 @@ export function getFaqItem(id: string, lang: string): FaqItem | undefined {
   const locale = resolveFaqLocale(lang);
   const localized = locale === 'zh' ? faqByLocale[locale]?.[id] : undefined;
   return localized ?? faqEn[id as keyof typeof faqEn];
+}
+
+export function getFaqIds(lang: string): string[] {
+  return Object.keys(getFaqData(lang));
+}
+
+export function getFaqTranslationLocales(id: string): FaqContentLocale[] {
+  return faqContentLocaleCodes.filter((locale) => {
+    if (locale === 'en') return Boolean(faqEn[id as keyof typeof faqEn]);
+    return Boolean(faqByLocale[locale]?.[id]);
+  });
 }
 
 // 英文原始数据，用于 URL 生成（generateStaticParams / sitemap）

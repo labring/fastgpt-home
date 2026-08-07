@@ -1,7 +1,8 @@
 import HomeLanding from '@/components/home/HomeLanding';
 import { FAQJsonLd } from '@/components/JsonLd';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getGitHubStars } from '@/lib/githubStars';
+import { getBuildLocaleCodes } from '@/lib/siteRouting';
 
 export default async function HomePage({ params }: { params: Promise<{ lang?: string }> }) {
   const { lang } = await params;
@@ -12,10 +13,12 @@ export default async function HomePage({ params }: { params: Promise<{ lang?: st
   return (
     <>
       <FAQJsonLd
-        items={dict.Home.faq.items.map((item: { title: string; content?: string; desc?: string }) => ({
-          question: item.title,
-          answer: item.content || item.desc || ''
-        }))}
+        items={dict.Home.faq.items.map(
+          (item: { title: string; content?: string; desc?: string }) => ({
+            question: item.title,
+            answer: item.content || item.desc || ''
+          })
+        )}
       />
       <HomeLanding dict={dict} locale={langName} stars={stars} />
     </>
@@ -23,5 +26,5 @@ export default async function HomePage({ params }: { params: Promise<{ lang?: st
 }
 
 export async function generateStaticParams() {
-  return Object.keys(localeNames)?.map((lang) => ({ lang }));
+  return getBuildLocaleCodes(defaultLocale).map((lang) => ({ lang }));
 }

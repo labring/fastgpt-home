@@ -1,34 +1,26 @@
 import { Metadata } from 'next';
 import { localeMap, supportedLocaleCodes } from '@/lib/locales';
-import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
+import { getLocaleHreflang, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 export { localeMap };
 
-function getBaseUrl() {
-  return (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-}
-
 /**
- * Generate canonical URL and hreflang alternates for a given page.
- * Includes x-default pointing to the English version.
+ * Generate cross-domain canonical and hreflang metadata for a page.
  * @param lang - current language code
- * @param path - page path without lang prefix, e.g. '' for home, '/enterprise', '/price'
+ * @param path - page path without a locale prefix
  */
 export function getAlternates(
   lang: string,
   path: string = '',
   availableLocales: readonly string[] = supportedLocaleCodes
 ): Metadata['alternates'] {
-  const baseUrl = getBaseUrl();
-
-  const canonicalUrl = `${baseUrl}${getDefaultLocalePath(lang, path)}`;
-
+  const canonicalUrl = getOwnedLocaleUrl(lang, path);
   const languages = availableLocales.reduce((acc, locale) => {
-    acc[locale] = `${baseUrl}${getDefaultLocalePath(locale, path)}`;
+    acc[getLocaleHreflang(locale)] = getOwnedLocaleUrl(locale, path);
     return acc;
   }, {} as Record<string, string>);
 
-  languages['x-default'] = `${baseUrl}${getDefaultLocalePath('en', path)}`;
+  languages['x-default'] = getOwnedLocaleUrl('en', path);
 
   return {
     canonical: canonicalUrl,
@@ -39,35 +31,29 @@ export function getAlternates(
 export function getFaqAlternates(
   lang: string,
   faqId?: string,
-  availableLocales: readonly string[] = supportedLocaleCodes
+  availableLocales: readonly string[] = supportedLocaleCodes,
+  hasEnglishTranslation = true
 ): Metadata['alternates'] {
-  const baseUrl = getBaseUrl();
-  const canonical = `${baseUrl}${getFaqPath(lang, faqId)}`;
-  const languages = availableLocales.reduce((acc, locale) => {
-    acc[locale] = `${baseUrl}${getFaqPath(locale, faqId)}`;
+  const canonical = getOwnedFaqUrl(lang, faqId);
+  const translatedLocales = availableLocales.filter(
+    (locale) => hasEnglishTranslation || locale !== 'en'
+  );
+
+  if (translatedLocales.length < 2) {
+    return { canonical };
+  }
+
+  const languages = translatedLocales.reduce((acc, locale) => {
+    acc[getLocaleHreflang(locale)] = getOwnedFaqUrl(locale, faqId);
     return acc;
   }, {} as Record<string, string>);
 
-  languages['x-default'] = `${baseUrl}${getFaqPath('en', faqId)}`;
+  if (hasEnglishTranslation) {
+    languages['x-default'] = getOwnedFaqUrl('en', faqId);
+  }
 
   return {
     canonical,
     languages
-  };
-}
-
-/**
- * Generate alternates for the unprefixed root page.
- * The root page is the canonical default-locale homepage for each site variant.
- */
-export function getRootAlternates(
-  lang: string,
-  availableLocales: readonly string[] = supportedLocaleCodes
-): Metadata['alternates'] {
-  const alternates = getAlternates(lang, '', availableLocales);
-
-  return {
-    ...alternates,
-    canonical: `${getBaseUrl()}/`
   };
 }

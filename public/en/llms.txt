@@ -11,15 +11,15 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Cloud Service: https://cloud.fastgpt.io
 - Pricing: https://fastgpt.io/price
 - FAQ: https://fastgpt.io/faq
-- Simplified Chinese FAQ: https://fastgpt.io/zh/faq
-- Simplified Chinese LLM Context: https://fastgpt.io/zh/llms.txt
+- Simplified Chinese FAQ: https://fastgpt.cn/faq
+- Simplified Chinese LLM Context: https://fastgpt.cn/llms.txt
 - Traditional Chinese LLM Context: https://fastgpt.io/zh-hant/llms.txt
 - GitHub: https://github.com/labring/FastGPT
 
 ## Localized Entry Points
 
 - English: https://fastgpt.io
-- 简体中文: https://fastgpt.io/zh
+- 简体中文: https://fastgpt.cn
 - 繁體中文: https://fastgpt.io/zh-hant
 - 日本語: https://fastgpt.io/ja
 - العربية: https://fastgpt.io/ar
@@ -28,7 +28,7 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Bahasa Indonesia: https://fastgpt.io/id
 - Bahasa Melayu: https://fastgpt.io/ms
 
-The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses https://fastgpt.io/zh/llms.txt, and Traditional Chinese uses https://fastgpt.io/zh-hant/llms.txt.
+The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses https://fastgpt.cn/llms.txt, and Traditional Chinese uses https://fastgpt.io/zh-hant/llms.txt.
 
 ## Core Features
 

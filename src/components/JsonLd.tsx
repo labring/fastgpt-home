@@ -1,3 +1,5 @@
+import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+
 interface JsonLdProps {
   lang: string;
   path?: string;
@@ -30,16 +32,13 @@ type JsonLdCopy = {
 
 function JsonLdScript({ data }: { data: object }) {
   return (
-    <script
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
-    />
+    <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }
 
 export default function JsonLd({ lang, path = '', schema }: JsonLdProps) {
-  const baseUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
-  const pageUrl = `${baseUrl}/${lang}${path}`;
+  const baseUrl = new URL(getOwnedLocaleUrl(lang)).origin;
+  const pageUrl = getOwnedLocaleUrl(lang, path);
 
   const organizationSchema = {
     '@context': 'https://schema.org',
@@ -48,9 +47,7 @@ export default function JsonLd({ lang, path = '', schema }: JsonLdProps) {
     url: baseUrl,
     logo: `${baseUrl}/logo.svg`,
     description: schema.description,
-    sameAs: [
-      'https://github.com/labring/FastGPT'
-    ]
+    sameAs: ['https://github.com/labring/FastGPT']
   };
 
   const webSiteSchema = {
@@ -109,7 +106,7 @@ export default function JsonLd({ lang, path = '', schema }: JsonLdProps) {
         '@type': 'ListItem',
         position: 1,
         name: schema.breadcrumbHome,
-        item: `${baseUrl}/${lang}`
+        item: getOwnedLocaleUrl(lang)
       }
     ]
   };

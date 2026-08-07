@@ -41,7 +41,7 @@ export default async function CompetitorComparisonPage({
         dateModified={page.dates.dateModified}
       />
       <HomeThemeFix />
-      <Navbar links={dict.links} t={dict.Home.navCta} />
+      <Navbar links={dict.links} t={dict.Home.navCta} variant="comparison" />
       <main className="comparison-page">
         <ComparisonPage page={page} homeLabel="返回内容中心" />
       </main>

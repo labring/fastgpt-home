@@ -19,6 +19,7 @@ interface NavLink {
 }
 
 type NavCta = { trial: string; consult: string };
+type NavbarVariant = 'default' | 'comparison';
 const faqLocaleCodes = ['en', 'zh'];
 
 function isExternalHref(href: string) {
@@ -40,11 +41,13 @@ function getNavLinkRybbitAttrs(link: NavLink) {
 export default function Navbar({
   links = [],
   t,
-  locale
+  locale,
+  variant = 'default'
 }: {
   links?: NavLink[];
   t: NavCta;
   locale?: string;
+  variant?: NavbarVariant;
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(true);
@@ -154,7 +157,7 @@ export default function Navbar({
       <nav
         className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
           hideNavbar ? '-translate-y-full' : 'translate-y-0'
-        }`}
+        } ${variant === 'comparison' ? 'comparison-navbar' : ''}`}
       >
         {/* Blur background — separate layer so backdrop-filter doesn't affect content rendering */}
         <div className="absolute inset-0 backdrop-blur-[10px] bg-[rgba(255,255,255,0.05)] border-b border-hairline-soft" />
@@ -266,7 +269,10 @@ export default function Navbar({
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 z-40 bg-white" onClick={() => setMobileOpen(false)}>
+        <div
+          className={`md:hidden fixed inset-0 z-40 bg-white ${variant === 'comparison' ? 'comparison-mobile-menu' : ''}`}
+          onClick={() => setMobileOpen(false)}
+        >
           <div
             className="h-full w-full pt-[58px] pb-10 px-8 flex flex-col text-[16px] text-ink-sub"
             onClick={(e) => e.stopPropagation()}
@@ -340,7 +346,9 @@ export default function Navbar({
         <div className="md:hidden fixed inset-0 z-[70]" onClick={() => setLangSheetOpen(false)}>
           <div className="absolute inset-0 bg-black/30" />
           <div
-            className="absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6"
+            className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 ${
+              variant === 'comparison' ? 'comparison-language-sheet' : ''
+            }`}
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-6" />

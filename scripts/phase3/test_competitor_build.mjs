@@ -97,6 +97,9 @@ function auditPage(page) {
   if (!html.toLowerCase().includes(expectedRobots)) errors.push('seo:robots');
   if ((html.match(/<h1\b/gi) || []).length !== 1) errors.push('content:h1-count');
   if ((html.match(/<h2\b/gi) || []).length !== 5) errors.push('content:h2-count');
+  if (!html.includes('comparison-hero-copy') || !html.includes('comparison-hero-side')) errors.push('layout:split-hero');
+  if (!html.includes('comparison-toc') || (html.match(/id="comparison-section-/g) || []).length !== 5) errors.push('layout:section-navigation');
+  if (!html.includes('comparison-table-caption') || !html.includes('comparison-cta')) errors.push('layout:comparison-utility-panels');
   if ((html.match(/data-label=/gi) || []).length < 3) errors.push('responsive:data-label');
   if (!html.includes('comparison-table-capability') || !html.includes('comparison-table-poc') || !html.includes('comparison-table-tco')) errors.push('content:table-kinds');
   if (!html.includes('事实来源') || !html.includes('核验日期') || !html.includes('版本与套餐') || !html.includes('更新记录')) errors.push('content:source-footer');
@@ -146,7 +149,10 @@ const sitemap = parseSitemap();
 const publishedUrls = pages.filter((page) => page.status === 'published').map((page) => `https://fastgpt.cn/compare/${page.slug}`);
 const comparisonSitemap = sitemap.filter((url) => url.includes('/compare/') && !url.includes('/zh/compare/'));
 assert.deepEqual(comparisonSitemap.sort(), publishedUrls.sort(), 'Sitemap must contain published comparison URLs only');
-assert.ok(css.includes('.comparison-table-row') && css.includes('data-label'), 'Responsive comparison CSS contract is missing');
+assert.ok(
+  css.includes('.comparison-table-row') && css.includes('data-label') && css.includes('.comparison-toc'),
+  'Responsive comparison CSS contract is missing'
+);
 
 const failures = results.flatMap((result) => result.errors.map((reason) => ({ slug: result.slug, gate: 'build', reason, evidencePath: result.file })));
 const report = {

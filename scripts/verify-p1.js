@@ -19,23 +19,14 @@ const chineseFaqDescription =
   '企业日益重视 RAG（检索增强生成）解决方案，因为它能将大语言模型连接到实时、可信的企业知识库，显著提升回答的准确性、可靠性和领域适配能力，同时强化数据安全与治理，并以更低成本持续更新业务知识，帮助企业构建可追溯、可维护的智能问答与知识服务。';
 const faqId = 'Why-are-enterprises-paying-more';
 
-function resolveHtml(route) {
+function resolveHtml(route, required = true) {
   const relativeRoute = route.replace(/^\/|\/$/g, '');
   const candidates = relativeRoute
     ? [path.join(outDir, `${relativeRoute}.html`), path.join(outDir, relativeRoute, 'index.html')]
     : [path.join(outDir, 'index.html')];
   const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
 
-  assert(htmlPath, `Missing static HTML for ${route}`);
-  return fs.readFileSync(htmlPath, 'utf8');
-}
-
-function tryResolveHtml(route) {
-  const relativeRoute = route.replace(/^\/+|\/+$/g, '');
-  const candidates = relativeRoute
-    ? [path.join(outDir, `${relativeRoute}.html`), path.join(outDir, relativeRoute, 'index.html')]
-    : [path.join(outDir, 'index.html')];
-  const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
+  if (required) assert(htmlPath, `Missing static HTML for ${route}`);
   return htmlPath ? fs.readFileSync(htmlPath, 'utf8') : null;
 }
 
@@ -98,7 +89,7 @@ function verifyDescriptionLength(description, label) {
 
 function verifyRootMetadata() {
   const rootHtml = resolveHtml('/');
-  const localizedHtml = tryResolveHtml(`/${defaultLocale}`) || rootHtml;
+  const localizedHtml = resolveHtml(`/${defaultLocale}`, false) || rootHtml;
   const expectedRootTitle =
     defaultLocale === 'zh' ? 'FastGPT - 企业级 AI 智能体构建平台 | 开源 RAG 系统' : englishTitle;
   const expectedSocialTitle =
@@ -116,20 +107,20 @@ function verifyRootMetadata() {
   );
   verifyCanonical(rootHtml, `${baseUrl}/`);
   verifyCanonical(localizedHtml, `${baseUrl}/`);
-  const englishHtml = tryResolveHtml('/en');
-  const chineseHtml = tryResolveHtml('/zh');
+  const englishHtml = resolveHtml('/en', false);
+  const chineseHtml = resolveHtml('/zh', false);
   if (englishHtml)
     verifyCanonical(englishHtml, `${baseUrl}${defaultLocale === 'en' ? '/' : '/en'}`);
   if (chineseHtml)
     verifyCanonical(chineseHtml, `${baseUrl}${defaultLocale === 'zh' ? '/' : '/zh'}`);
   verifyCanonical(resolveHtml('/price'), `${baseUrl}/price`);
-  const localizedPriceHtml = tryResolveHtml(`/${defaultLocale}/price`);
+  const localizedPriceHtml = resolveHtml(`/${defaultLocale}/price`, false);
   if (localizedPriceHtml) verifyCanonical(localizedPriceHtml, `${baseUrl}/price`);
   verifyCanonical(resolveHtml('/faq'), `${baseUrl}/faq`);
   verifyCanonical(resolveHtml(`/faq/${faqId}`), `${baseUrl}/faq/${faqId}`);
-  const localizedFaqHtml = tryResolveHtml(`/${defaultLocale}/faq`);
+  const localizedFaqHtml = resolveHtml(`/${defaultLocale}/faq`, false);
   if (localizedFaqHtml) verifyCanonical(localizedFaqHtml, `${baseUrl}/faq`);
-  const localizedFaqDetailHtml = tryResolveHtml(`/${defaultLocale}/faq/${faqId}`);
+  const localizedFaqDetailHtml = resolveHtml(`/${defaultLocale}/faq/${faqId}`, false);
   if (localizedFaqDetailHtml) {
     verifyCanonical(localizedFaqDetailHtml, `${baseUrl}/faq/${faqId}`);
   }
@@ -172,7 +163,7 @@ function verifyRootMetadata() {
 }
 
 function verifyTargetCopy() {
-  const englishHtml = defaultLocale === 'en' ? resolveHtml('/') : tryResolveHtml('/en');
+  const englishHtml = defaultLocale === 'en' ? resolveHtml('/') : resolveHtml('/en', false);
   if (englishHtml) {
     const englishTitleMatch = englishHtml.match(/<title>([^<]+)<\/title>/);
     assert(englishTitleMatch, 'English homepage is missing a title');

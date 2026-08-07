@@ -59,8 +59,6 @@ export default async function FAQDetailPage({
   const summary = paragraphs[0] || '';
   const answerParagraphs = paragraphs.length > 1 ? paragraphs.slice(1) : paragraphs;
   const keywords = faqItem.Keywords.split(', ');
-  const baseUrl = currentSiteBaseUrl;
-
   return (
     <div className="home overflow-x-hidden">
       <BreadcrumbJsonLd

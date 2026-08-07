@@ -1,7 +1,7 @@
 import HomeLanding from '@/components/home/HomeLanding';
 import JsonLd, { FAQJsonLd } from '@/components/JsonLd';
 import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
-import { getRootAlternates, localeMap } from '@/lib/seo';
+import { getAlternates, localeMap } from '@/lib/seo';
 import { getGitHubStars } from '@/lib/githubStars';
 import { currentSiteBaseUrl } from '@/lib/siteRouting';
 import { Metadata } from 'next';
@@ -26,7 +26,7 @@ export async function generateMetadata(): Promise<Metadata> {
       alternateLocale: alternateLocales
     },
     twitter: config.twitter,
-    alternates: getRootAlternates(defaultLocale)
+    alternates: getAlternates(defaultLocale)
   };
 }
 

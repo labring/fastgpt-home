@@ -31,18 +31,9 @@ export function getAlternates(
 export function getFaqAlternates(
   lang: string,
   faqId?: string,
-  availableLocalesOrTranslation: readonly string[] | boolean = supportedLocaleCodes,
+  availableLocales: readonly string[] = supportedLocaleCodes,
   hasEnglishTranslation = true
 ): Metadata['alternates'] {
-  const availableLocales =
-    typeof availableLocalesOrTranslation === 'boolean'
-      ? supportedLocaleCodes
-      : availableLocalesOrTranslation;
-
-  if (typeof availableLocalesOrTranslation === 'boolean') {
-    hasEnglishTranslation = availableLocalesOrTranslation;
-  }
-
   const canonical = getOwnedFaqUrl(lang, faqId);
   const translatedLocales = availableLocales.filter(
     (locale) => hasEnglishTranslation || locale !== 'en'
@@ -65,14 +56,4 @@ export function getFaqAlternates(
     canonical,
     languages
   };
-}
-
-/**
- * Generate alternates for the unprefixed root page.
- */
-export function getRootAlternates(
-  lang: string,
-  availableLocales: readonly string[] = supportedLocaleCodes
-): Metadata['alternates'] {
-  return getAlternates(lang, '', availableLocales);
 }

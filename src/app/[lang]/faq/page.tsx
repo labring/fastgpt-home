@@ -29,7 +29,6 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
       Answers: item.Answers.substring(0, 100)
     };
   }
-  const baseUrl = currentSiteBaseUrl;
   const faqSchemaItems = Object.values(faq)
     .slice(0, 30)
     .map((item) => ({

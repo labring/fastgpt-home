@@ -13,23 +13,14 @@ const {
   DESCRIPTION_MAX_LENGTH
 } = require('../src/lib/faqMetadata.constants.json');
 
-function resolveHtml(route) {
+function resolveHtml(route, required = true) {
   const relativeRoute = route.replace(/^\/+|\/+$/g, '');
   const candidates = relativeRoute
     ? [path.join(outDir, `${relativeRoute}.html`), path.join(outDir, relativeRoute, 'index.html')]
     : [path.join(outDir, 'index.html')];
   const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
 
-  assert(htmlPath, `Missing static HTML for ${route}`);
-  return fs.readFileSync(htmlPath, 'utf8');
-}
-
-function tryResolveHtml(route) {
-  const relativeRoute = route.replace(/^\/+|\/+$/g, '');
-  const candidates = relativeRoute
-    ? [path.join(outDir, `${relativeRoute}.html`), path.join(outDir, relativeRoute, 'index.html')]
-    : [path.join(outDir, 'index.html')];
-  const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
+  if (required) assert(htmlPath, `Missing static HTML for ${route}`);
   return htmlPath ? fs.readFileSync(htmlPath, 'utf8') : null;
 }
 
@@ -191,9 +182,6 @@ function verifyAllFaqMetadata() {
 
 function verifyDefaultLocaleMigrationCoverage() {
   const legacyLocaleDir = path.join(outDir, defaultLocale);
-  tryResolveHtml(`/${defaultLocale}`);
-  tryResolveHtml(`/${defaultLocale}/price`);
-
   const legacyFaqDir = path.join(legacyLocaleDir, 'faq');
   const canonicalFaqDir = path.join(outDir, 'faq');
   const legacyFaqFiles = walkHtmlFiles(legacyFaqDir);
@@ -216,11 +204,11 @@ function main() {
   const routes = ['/', '/price', '/faq', `/faq/${sampleFaqId}`];
 
   for (const route of ['/en', '/zh', `/${defaultLocale}/price`, '/en/faq', '/zh/faq']) {
-    if (tryResolveHtml(route)) routes.push(route);
+    if (resolveHtml(route, false)) routes.push(route);
   }
 
   for (const route of [`/en/faq/${sampleFaqId}`, `/zh/faq/${sampleFaqId}`]) {
-    if (tryResolveHtml(route)) routes.push(route);
+    if (resolveHtml(route, false)) routes.push(route);
   }
 
   const htmlByRoute = new Map(routes.map((route) => [route, resolveHtml(route)]));
@@ -230,7 +218,7 @@ function main() {
     verifyPageMetadata(route, html, { enforceLength: route.includes('/faq/') });
   }
 
-  for (const route of ['/en', '/zh'].filter((candidate) => tryResolveHtml(candidate))) {
+  for (const route of ['/en', '/zh'].filter((candidate) => resolveHtml(candidate, false))) {
     const levels = getHeadingLevels(htmlByRoute.get(route));
     assert(
       levels.every((level) => level <= 3),
@@ -241,7 +229,7 @@ function main() {
   }
 
   for (const route of ['/faq', '/en/faq', '/zh/faq'].filter((candidate) =>
-    tryResolveHtml(candidate)
+    resolveHtml(candidate, false)
   )) {
     const levels = getHeadingLevels(htmlByRoute.get(route));
     assert.equal(levels[0], 1, `${route} must expose the FAQ title as h1`);
@@ -252,7 +240,7 @@ function main() {
     `/faq/${sampleFaqId}`,
     `/en/faq/${sampleFaqId}`,
     `/zh/faq/${sampleFaqId}`
-  ].filter((candidate) => tryResolveHtml(candidate))) {
+  ].filter((candidate) => resolveHtml(candidate, false))) {
     const levels = getHeadingLevels(htmlByRoute.get(route));
     assert.deepEqual(levels.slice(0, 3), [1, 2, 3], `${route} must keep h1 -> h2 -> h3 order`);
   }

@@ -108,11 +108,11 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
 }
 
 export async function generateStaticParams() {
-  return getBuildLocaleCodes(defaultLocale)
-    .filter((lang) =>
-      faqContentLocaleCodes.includes(lang as (typeof faqContentLocaleCodes)[number])
-    )
-    .map((lang) => ({ lang }));
+  const faqLocales = getBuildLocaleCodes(defaultLocale).filter((lang) =>
+    faqContentLocaleCodes.includes(lang as (typeof faqContentLocaleCodes)[number])
+  );
+
+  return (faqLocales.length ? faqLocales : [defaultLocale]).map((lang) => ({ lang }));
 }
 
 export const dynamicParams = false;

@@ -1,6 +1,13 @@
 import { MetadataRoute } from 'next';
 import { faqContentLocaleCodes, getFaqIds } from '@/faq';
-import { getOwnedFaqUrl, getOwnedLocaleUrl, getPublishedLocaleCodes } from '@/lib/siteRouting';
+import {
+  currentSiteVariant,
+  getOwnedFaqUrl,
+  getOwnedLocaleUrl,
+  getPublishedLocaleCodes
+} from '@/lib/siteRouting';
+import { TECH_ENTRIES } from '@/components/tech-center/data';
+import { getTechArticleLastModified, getTechCenterLastModified } from '@/lib/tech-center-content';
 
 export const dynamic = 'force-static';
 
@@ -33,6 +40,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const locale of publishedFaqLocales) {
     for (const faqId of getFaqIds(locale)) {
       addEntry(getOwnedFaqUrl(locale, faqId), now);
+    }
+  }
+
+  // Simplified Chinese technical content is owned and indexed by fastgpt.cn.
+  if (currentSiteVariant === 'cn') {
+    addEntry(getOwnedLocaleUrl('zh', '/zh/tech-center'), getTechCenterLastModified());
+    for (const article of TECH_ENTRIES) {
+      addEntry(getOwnedLocaleUrl('zh', article.slug), getTechArticleLastModified(article));
     }
   }
 

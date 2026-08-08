@@ -20,6 +20,11 @@ interface NavLink {
 
 type NavCta = { trial: string; consult: string };
 const faqLocaleCodes = ['en', 'zh'];
+const techCenterLabels: Record<string, string> = {
+  zh: '技术中心',
+  'zh-hant': '技術中心',
+  ja: '技術センター'
+};
 
 function isExternalHref(href: string) {
   return /^(https?:)?\/\//.test(href);
@@ -55,6 +60,10 @@ export default function Navbar({
   const desktopStartUrl = useStartUrl();
   const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
+  const techCenterHref = getDefaultLocalePath(lang, '/tech-center');
+  const resolvedLinks = links.some((link) => link.href === '/tech-center')
+    ? links.map((link) => (link.href === '/tech-center' ? { ...link, href: techCenterHref } : link))
+    : [{ label: techCenterLabels[lang] || 'Tech Center', href: techCenterHref }, ...links];
   const routeWithoutLang = (() => {
     if (!params?.lang) return pathname;
     const currentLangPrefix = `/${params.lang}`;
@@ -171,18 +180,26 @@ export default function Navbar({
             </Link>
 
             <div className="hidden md:flex items-center gap-6 text-[14px] text-ink-sub">
-              {links.map((link) => (
-                <Link
-                  key={link.label}
-                  href={getNavHref(link.href, lang)}
-                  target={isExternalHref(link.href) ? '_blank' : undefined}
-                  rel={isExternalHref(link.href) ? 'noopener noreferrer nofollow' : undefined}
-                  {...getNavLinkRybbitAttrs(link)}
-                  className="hover:text-ink transition-colors"
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {resolvedLinks.map((link) => {
+                const href = getNavHref(link.href, lang);
+                const current =
+                  !isExternalHref(link.href) &&
+                  (pathname === href || (href !== '/' && pathname.startsWith(`${href}/`)));
+
+                return (
+                  <Link
+                    key={link.label}
+                    href={href}
+                    target={isExternalHref(link.href) ? '_blank' : undefined}
+                    rel={isExternalHref(link.href) ? 'noopener noreferrer nofollow' : undefined}
+                    aria-current={current ? 'page' : undefined}
+                    {...getNavLinkRybbitAttrs(link)}
+                    className="hover:text-ink transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
             </div>
           </div>
 
@@ -272,19 +289,27 @@ export default function Navbar({
             onClick={(e) => e.stopPropagation()}
           >
             <nav className="flex flex-col gap-1 pt-6">
-              {links.map((link) => (
-                <Link
-                  key={link.label}
-                  href={getNavHref(link.href, lang)}
-                  target={isExternalHref(link.href) ? '_blank' : undefined}
-                  rel={isExternalHref(link.href) ? 'noopener noreferrer nofollow' : undefined}
-                  {...getNavLinkRybbitAttrs(link)}
-                  className="py-3 hover:text-ink transition-colors"
-                  onClick={() => setMobileOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              ))}
+              {resolvedLinks.map((link) => {
+                const href = getNavHref(link.href, lang);
+                const current =
+                  !isExternalHref(link.href) &&
+                  (pathname === href || (href !== '/' && pathname.startsWith(`${href}/`)));
+
+                return (
+                  <Link
+                    key={link.label}
+                    href={href}
+                    target={isExternalHref(link.href) ? '_blank' : undefined}
+                    rel={isExternalHref(link.href) ? 'noopener noreferrer nofollow' : undefined}
+                    aria-current={current ? 'page' : undefined}
+                    {...getNavLinkRybbitAttrs(link)}
+                    className="py-3 hover:text-ink transition-colors"
+                    onClick={() => setMobileOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                );
+              })}
               <button
                 className="py-3 text-left flex items-center justify-between hover:text-ink transition-colors"
                 onClick={() => setLangSheetOpen(true)}

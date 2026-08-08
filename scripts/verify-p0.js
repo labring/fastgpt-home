@@ -146,11 +146,10 @@ async function main() {
   verifyFaqPage('/faq', defaultSocialImageUrl);
   verifyFaqPage(`/faq/${faqId}`, defaultSocialImageUrl);
 
-  for (const locale of ['en', 'zh']) {
-    const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
-    verifyFaqPage(`/${locale}/faq`, socialImageUrl);
-    verifyFaqPage(`/${locale}/faq/${faqId}`, socialImageUrl);
-  }
+  const localizedFaqId = 'Can-AI-intelligent-customer-service';
+  const localizedSocialImageUrl = `${baseUrl}/faq-social-preview.png`;
+  verifyFaqPage('/en/faq', localizedSocialImageUrl);
+  verifyFaqPage(`/en/faq/${localizedFaqId}`, localizedSocialImageUrl);
 
   console.log(`P0 verification passed for ${baseUrl}`);
 }

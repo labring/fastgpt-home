@@ -1,5 +1,7 @@
 import { faq as faqEn } from './en';
 import { faqZh, type FaqItem } from './zh';
+import { legacyFaqMeta } from './legacyMeta';
+import { applyLegacyCategoryOverlay } from './legacyCategories';
 
 export type { FaqItem };
 export type FaqData = Record<string, FaqItem>;
@@ -12,6 +14,13 @@ const faqByLocale: Record<string, Record<string, FaqItem>> = {
   zh: faqZh
 };
 
+const faqEnWithLegacyMeta: Record<string, FaqItem> = Object.fromEntries(
+  Object.entries(faqEn).map(([id, item]) => [
+    id,
+    legacyFaqMeta[id] ? { ...item, ...legacyFaqMeta[id] } : item,
+  ]),
+);
+
 export function resolveFaqLocale(lang: string): FaqContentLocale {
   if (lang.startsWith('zh')) return 'zh';
   return 'en';
@@ -22,8 +31,8 @@ export function resolveFaqLocale(lang: string): FaqContentLocale {
  */
 export function getFaqData(lang: string): FaqData {
   const locale = resolveFaqLocale(lang);
-  if (locale === 'en') return faqEn as FaqData;
-  return { ...faqEn, ...faqByLocale[locale] };
+  if (locale === 'en') return applyLegacyCategoryOverlay(faqEnWithLegacyMeta, locale);
+  return applyLegacyCategoryOverlay({ ...faqEnWithLegacyMeta, ...faqByLocale[locale] }, locale);
 }
 
 /**
@@ -32,7 +41,8 @@ export function getFaqData(lang: string): FaqData {
 export function getFaqItem(id: string, lang: string): FaqItem | undefined {
   const locale = resolveFaqLocale(lang);
   const localized = locale === 'zh' ? faqByLocale[locale]?.[id] : undefined;
-  return localized ?? faqEn[id as keyof typeof faqEn];
+  const item = localized ?? faqEnWithLegacyMeta[id];
+  return item ? applyLegacyCategoryOverlay({ [id]: item }, locale)[id] : undefined;
 }
 
 export function getFaqIds(lang: string): string[] {
@@ -47,4 +57,4 @@ export function getFaqTranslationLocales(id: string): FaqContentLocale[] {
 }
 
 // 英文原始数据，用于 URL 生成（generateStaticParams / sitemap）
-export { faqEn as faq };
+export { faqEnWithLegacyMeta as faq };

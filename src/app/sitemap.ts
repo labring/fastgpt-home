@@ -1,6 +1,8 @@
 import { MetadataRoute } from 'next';
 import { faqContentLocaleCodes, getFaqIds } from '@/faq';
-import { getOwnedFaqUrl, getOwnedLocaleUrl, getPublishedLocaleCodes } from '@/lib/siteRouting';
+import { getCompareCanonicalUrl, getFaqCanonicalUrl } from '@/lib/seo';
+import { getOwnedLocaleUrl, getPublishedLocaleCodes } from '@/lib/siteRouting';
+import { comparisonPages } from '@/content/competitor';
 
 export const dynamic = 'force-static';
 
@@ -27,13 +29,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
   );
 
   for (const locale of publishedFaqLocales) {
-    addEntry(getOwnedFaqUrl(locale), now);
+    addEntry(getFaqCanonicalUrl(locale, '/faq'), now);
   }
 
   for (const locale of publishedFaqLocales) {
     for (const faqId of getFaqIds(locale)) {
-      addEntry(getOwnedFaqUrl(locale, faqId), now);
+      addEntry(getFaqCanonicalUrl(locale, `/faq/${encodeURIComponent(faqId)}`), now);
     }
+  }
+
+  for (const page of Object.values(comparisonPages)) {
+    if (page.status !== 'published') continue;
+    addEntry(getCompareCanonicalUrl(page.slug), new Date(page.dates.dateModified));
   }
 
   return entries;

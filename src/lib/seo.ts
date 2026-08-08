@@ -1,9 +1,32 @@
 import { Metadata } from 'next';
 import { localeMap, supportedLocaleCodes } from '@/lib/locales';
-import { getLocaleHreflang, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import {
+  getLocaleHreflang,
+  getOwnedFaqUrl,
+  getOwnedLocaleUrl
+} from '@/lib/siteRouting';
 
 export { localeMap };
 
+export function getFaqCanonicalUrl(lang: string, path: string = '') {
+  return getOwnedLocaleUrl(lang, path);
+}
+
+export function getCompareCanonicalUrl(slug: string) {
+  return getOwnedLocaleUrl('zh', `/compare/${slug}`);
+}
+
+export function getCompareAlternates(slug: string): Metadata['alternates'] {
+  const canonical = getCompareCanonicalUrl(slug);
+  return {
+    canonical,
+    languages: {
+      zh: canonical,
+      'zh-CN': canonical,
+      'x-default': canonical
+    }
+  };
+}
 /**
  * Generate cross-domain canonical and hreflang metadata for a page.
  * @param lang - current language code

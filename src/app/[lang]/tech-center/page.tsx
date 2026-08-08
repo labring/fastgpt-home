@@ -2,7 +2,7 @@ import TechCenterPage from '@/components/tech-center/TechCenterPage';
 import { TechCenterHubJsonLd } from '@/components/tech-center/TechCenterJsonLd';
 import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
 import { localeMap } from '@/lib/seo';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { getOwnedLocaleUrl } from '@/lib/siteRouting';
 import { normalizeLocale } from '@/lib/locales';
 import { Metadata } from 'next';
 
@@ -61,8 +61,8 @@ export async function generateMetadata({
   const locale = normalizeLocale(lang || defaultLocale);
   const title = titleMap[locale] || titleMap.en;
   const description = descriptionMap[locale] || descriptionMap.en;
-  const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-  const canonical = `${baseUrl}${getDefaultLocalePath(locale, '/tech-center')}`;
+  const canonical = getOwnedLocaleUrl(locale, '/tech-center');
+  const baseUrl = new URL(canonical).origin;
   const indexable = locale === 'zh';
 
   return {

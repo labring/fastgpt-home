@@ -9,6 +9,7 @@ import {
   getTechArticleParams
 } from '@/lib/tech-center-content';
 import { normalizeLocale } from '@/lib/locales';
+import { getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 type TechArticleRouteParams = {
   lang: string;
@@ -61,8 +62,8 @@ export async function generateMetadata({
 
   if (!article) return {};
 
-  const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-  const canonical = `${baseUrl}${article.slug}`;
+  const canonical = getOwnedLocaleUrl('zh', article.slug);
+  const baseUrl = new URL(canonical).origin;
   const title = `${article.title}｜FastGPT 技术中心`;
 
   return {

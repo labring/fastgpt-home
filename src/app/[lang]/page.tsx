@@ -1,5 +1,5 @@
 import HomeLanding from '@/components/home/HomeLanding';
-import { FAQJsonLd } from '@/components/JsonLd';
+import JsonLd, { FAQJsonLd } from '@/components/JsonLd';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getGitHubStars } from '@/lib/githubStars';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
@@ -12,6 +12,7 @@ export default async function HomePage({ params }: { params: Promise<{ lang?: st
 
   return (
     <>
+      <JsonLd lang={langName} schema={dict.JsonLd} includePageSchemas includeSiteSchemas={false} />
       <FAQJsonLd
         items={dict.Home.faq.items.map(
           (item: { title: string; content?: string; desc?: string }) => ({

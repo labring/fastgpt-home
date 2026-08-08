@@ -36,7 +36,7 @@ export default async function RootPage() {
 
   return (
     <>
-      <JsonLd lang={defaultLocale} schema={dict.JsonLd} />
+      <JsonLd lang={defaultLocale} schema={dict.JsonLd} includePageSchemas />
       <FAQJsonLd
         items={dict.Home.faq.items.map(
           (item: { title: string; content?: string; desc?: string }) => ({

@@ -4,6 +4,8 @@ interface JsonLdProps {
   lang: string;
   path?: string;
   schema: JsonLdCopy;
+  includePageSchemas?: boolean;
+  includeSiteSchemas?: boolean;
 }
 
 type FAQSchemaItem = {
@@ -16,7 +18,7 @@ type BreadcrumbItem = {
   url: string;
 };
 
-type JsonLdCopy = {
+export type JsonLdCopy = {
   siteName: string;
   pageTitle: string;
   description: string;
@@ -30,13 +32,19 @@ type JsonLdCopy = {
   featureList: string[];
 };
 
-function JsonLdScript({ data }: { data: object }) {
+export function JsonLdScript({ data }: { data: object }) {
   return (
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }} />
   );
 }
 
-export default function JsonLd({ lang, path = '', schema }: JsonLdProps) {
+export default function JsonLd({
+  lang,
+  path = '',
+  schema,
+  includePageSchemas = false,
+  includeSiteSchemas = true
+}: JsonLdProps) {
   const baseUrl = new URL(getOwnedLocaleUrl(lang)).origin;
   const pageUrl = getOwnedLocaleUrl(lang, path);
 
@@ -113,11 +121,11 @@ export default function JsonLd({ lang, path = '', schema }: JsonLdProps) {
 
   return (
     <>
-      <JsonLdScript data={organizationSchema} />
-      <JsonLdScript data={webSiteSchema} />
-      <JsonLdScript data={webPageSchema} />
-      <JsonLdScript data={softwareSchema} />
-      <JsonLdScript data={breadcrumbSchema} />
+      {includeSiteSchemas && <JsonLdScript data={organizationSchema} />}
+      {includeSiteSchemas && <JsonLdScript data={webSiteSchema} />}
+      {includePageSchemas && <JsonLdScript data={webPageSchema} />}
+      {includePageSchemas && <JsonLdScript data={softwareSchema} />}
+      {includePageSchemas && <JsonLdScript data={breadcrumbSchema} />}
     </>
   );
 }

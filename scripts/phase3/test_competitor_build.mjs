@@ -19,6 +19,33 @@ const expectedTitles = {
   'ragflow-vs-fastgpt': 'RAGFlow 与 FastGPT：复杂文档与完整链路',
   'maxkb-vs-fastgpt': 'MaxKB 与 FastGPT：采购可预测性与细粒度'
 };
+const expectedHeroSignals = {
+  'dify-vs-fastgpt': '全球插件和海外协作生态',
+  'self-build-vs-platform': '已有平台工程团队并追求底层控制',
+  'ragflow-vs-fastgpt': '扫描件与复杂版式解析是首要任务',
+  'maxkb-vs-fastgpt': '私有化交付与采购可预测性优先'
+};
+const visibleEditorialPhrases = [
+  '核验日期',
+  '页面版本',
+  '章节',
+  '事实来源',
+  '更新记录',
+  '表述纪律',
+  '快速读取',
+  '阅读提示',
+  '先看分野，再做验证',
+  '对照表分三列',
+  '本文只使用',
+  '关于价格，本文不列',
+  '原厂支持这一行',
+  '最后一条纪律',
+  '最后两条纪律',
+  '等待产品、销售、法务',
+  '项目核验',
+  '对方公开资料状态',
+  '截至 2026-07-20'
+];
 const requiredSupportPhrases = {
   'dify-vs-fastgpt': ['原厂支持', '责任矩阵', '故障分级', '恢复目标', '升级回滚责任方'],
   'self-build-vs-platform': ['原厂支持', '覆盖时段与首次响应目标', '安全补丁与版本升级', '故障定位与恢复责任', '首次部署与调试', '支持渠道'],
@@ -97,12 +124,17 @@ function auditPage(page) {
   if (!html.toLowerCase().includes(expectedRobots)) errors.push('seo:robots');
   if ((html.match(/<h1\b/gi) || []).length !== 1) errors.push('content:h1-count');
   if ((html.match(/<h2\b/gi) || []).length !== 5) errors.push('content:h2-count');
+  if (!text.includes(expectedHeroSignals[page.slug])) errors.push('content:hero-summary');
   if (!html.includes('comparison-hero-copy') || !html.includes('comparison-hero-side')) errors.push('layout:split-hero');
   if (!html.includes('comparison-toc') || (html.match(/id="comparison-section-/g) || []).length !== 5) errors.push('layout:section-navigation');
   if (!html.includes('comparison-table-caption') || !html.includes('comparison-cta')) errors.push('layout:comparison-utility-panels');
   if ((html.match(/data-label=/gi) || []).length < 3) errors.push('responsive:data-label');
   if (!html.includes('comparison-table-capability') || !html.includes('comparison-table-poc') || !html.includes('comparison-table-tco')) errors.push('content:table-kinds');
-  if (!html.includes('事实来源') || !html.includes('核验日期') || !html.includes('版本与套餐') || !html.includes('更新记录')) errors.push('content:source-footer');
+  if (html.includes('comparison-hero-meta')) errors.push('content:hero-meta-visible');
+  if (html.includes('comparison-source-footer')) errors.push('content:source-footer-visible');
+  for (const phrase of visibleEditorialPhrases) {
+    if (text.includes(phrase)) errors.push(`content:editorial-phrase:${phrase}`);
+  }
   for (const phrase of requiredSupportPhrases[page.slug] || []) {
     if (!text.includes(phrase)) errors.push(`content:support-dimension:${phrase}`);
   }

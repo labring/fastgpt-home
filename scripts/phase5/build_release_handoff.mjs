@@ -39,7 +39,7 @@ function buildHandoff() {
   const metaBatch = `meta-${meta.source.source_sha256.slice(0, 16)}-${meta.report_digest.slice(0, 12)}`;
   const categoryBatch = category.batch_id;
   const selectionMemo = compare.sourceInputs.find((input) => input.id === 'selection-memo-v1.1');
-  const compareReadme = compare.sourceInputs.find((input) => input.id === 'competitor-readme-v1.1');
+  const compareReadme = compare.sourceInputs.find((input) => input.id === 'competitor-readme-v1.2');
   if (!selectionMemo || !compareReadme) throw new Error('Comparison source manifest is missing the selection memo or README fingerprint');
   const compareBatch = `compare-${selectionMemo.sha256.slice(0, 16)}`;
 
@@ -60,7 +60,7 @@ function buildHandoff() {
     type: 'comparison-page',
     slug: page.slug,
     url: `https://fastgpt.cn/compare/${page.slug}`,
-    sourceVersion: page.sourceRefs.find((ref) => ref.id === 'draft-body')?.version || 'V1.1',
+    sourceVersion: page.sourceRefs.find((ref) => ref.id === 'draft-body')?.version || 'V1.2',
     sourceSha256: page.sourceHash,
     batch: compareBatch,
     status: page.status,

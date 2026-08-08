@@ -1,1 +1,184 @@
-{"document":{"bodyScrollWidth":390,"scrollWidth":390},"elements":{"figure":{"bottom":666.1640625,"height":222.1484375,"left":12,"right":378,"top":444.015625,"width":366,"x":12,"y":444.015625},"h1":{"bottom":205.234375,"height":80.234375,"left":12,"right":378,"top":125,"width":366,"x":12,"y":125},"hero":{"bottom":408.015625,"height":320.015625,"left":12,"right":378,"top":88,"width":366,"x":12,"y":88},"image":{"bottom":636.1640625,"height":192.1484375,"left":12,"right":378,"top":444.015625,"width":366,"x":12,"y":444.015625},"inner":{"bottom":13874.171875,"height":13874.171875,"left":12,"right":378,"top":0,"width":366,"x":12,"y":0},"page":{"bottom":13874.171875,"height":13874.171875,"left":0,"right":390,"top":0,"width":390,"x":0,"y":0}},"route":"/compare/dify-vs-fastgpt","viewport":{"height":844,"width":390}}
+{
+  "computed": {
+    "body": {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(30, 41, 59)",
+      "color": "rgb(2, 6, 23)"
+    },
+    "bodyText": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "rgb(30, 41, 59)",
+      "color": "rgb(71, 85, 105)"
+    },
+    "cta": {
+      "background": "rgb(239, 246, 255)",
+      "border": "rgb(191, 219, 254)",
+      "color": "rgb(2, 6, 23)"
+    },
+    "heading": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "rgb(30, 41, 59)",
+      "color": "rgb(2, 6, 23)"
+    },
+    "html": {
+      "background": "rgb(255, 255, 255)",
+      "colorScheme": "light"
+    },
+    "nav": {
+      "background": "rgba(255, 255, 255, 0.86)",
+      "border": "rgba(15, 23, 42, 0.1)",
+      "color": "rgb(2, 6, 23)"
+    },
+    "primaryButton": {
+      "background": "rgb(26, 26, 26)",
+      "border": "rgba(0, 0, 0, 0)",
+      "color": "rgb(255, 255, 255)"
+    },
+    "root": {
+      "background": "rgb(255, 255, 255)",
+      "border": "rgb(30, 41, 59)",
+      "color": "rgb(2, 6, 23)"
+    },
+    "table": {
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "rgb(203, 213, 225)",
+      "color": "rgb(71, 85, 105)"
+    },
+    "tableHead": {
+      "background": "rgb(241, 245, 249)",
+      "border": "rgb(30, 41, 59)",
+      "color": "rgb(2, 6, 23)"
+    }
+  },
+  "document": {
+    "bodyScrollWidth": 390,
+    "scrollWidth": 390
+  },
+  "elements": {
+    ".comparison-cta": {
+      "bottom": 13586.25,
+      "height": 309.796875,
+      "left": 0,
+      "right": 390,
+      "top": 13276.453125,
+      "width": 390,
+      "x": 0,
+      "y": 13276.453125
+    },
+    ".comparison-hero": {
+      "bottom": 1130.4765625,
+      "height": 1020.4765625,
+      "left": 0,
+      "right": 390,
+      "top": 110,
+      "width": 390,
+      "x": 0,
+      "y": 110
+    },
+    ".comparison-hero-figure": {
+      "bottom": 1081.4765625,
+      "height": 238.6953125,
+      "left": 21,
+      "right": 369,
+      "top": 842.78125,
+      "width": 348,
+      "x": 21,
+      "y": 842.78125
+    },
+    ".comparison-hero-figure img": {
+      "bottom": 1055.4765625,
+      "height": 182.6953125,
+      "left": 21,
+      "right": 369,
+      "top": 872.78125,
+      "width": 348,
+      "x": 21,
+      "y": 872.78125
+    },
+    ".comparison-intro-grid": {
+      "bottom": 1700.7734375,
+      "height": 512.296875,
+      "left": 0,
+      "right": 390,
+      "top": 1188.4765625,
+      "width": 390,
+      "x": 0,
+      "y": 1188.4765625
+    },
+    ".comparison-page": {
+      "bottom": 13586.25,
+      "height": 13586.25,
+      "left": 0,
+      "right": 390,
+      "top": 0,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    ".comparison-page-inner": {
+      "bottom": 13586.25,
+      "height": 13586.25,
+      "left": 0,
+      "right": 390,
+      "top": 0,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    ".comparison-page-shell": {
+      "bottom": 13586.25,
+      "height": 13586.25,
+      "left": 0,
+      "right": 390,
+      "top": 0,
+      "width": 390,
+      "x": 0,
+      "y": 0
+    },
+    ".comparison-section": {
+      "bottom": 2665.734375,
+      "height": 964.9609375,
+      "left": 0,
+      "right": 390,
+      "top": 1700.7734375,
+      "width": 390,
+      "x": 0,
+      "y": 1700.7734375
+    },
+    ".comparison-table": {
+      "bottom": 4055.125,
+      "height": 1060.890625,
+      "left": 21,
+      "right": 369,
+      "top": 2994.234375,
+      "width": 348,
+      "x": 21,
+      "y": 2994.234375
+    },
+    ".comparison-toc": {
+      "bottom": 1188.4765625,
+      "height": 58,
+      "left": 0,
+      "right": 390,
+      "top": 1130.4765625,
+      "width": 390,
+      "x": 0,
+      "y": 1130.4765625
+    },
+    "h1": {
+      "bottom": 335.234375,
+      "height": 135.234375,
+      "left": 21,
+      "right": 369,
+      "top": 200,
+      "width": 348,
+      "x": 21,
+      "y": 200
+    }
+  },
+  "route": "/compare/dify-vs-fastgpt",
+  "viewport": {
+    "height": 844,
+    "width": 390
+  }
+}

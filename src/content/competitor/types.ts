@@ -78,6 +78,11 @@ export interface PageAsset {
   height: number;
 }
 
+export interface ComparisonHighlight {
+  label: string;
+  value: string;
+}
+
 export interface DateFields {
   sourceVerifiedOn: string;
   datePublished: string;
@@ -106,6 +111,8 @@ export interface ComparisonPage {
   status: PageStatus;
   title: string;
   description: string;
+  heroSummary: string;
+  heroHighlights: ComparisonHighlight[];
   keywords: string[];
   sourcePath: string;
   sourceHash: string;

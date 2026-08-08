@@ -1,8 +1,8 @@
 {
   "id": "w2-release-handoff",
   "schemaVersion": "W2-2026-08-04-v1",
-  "generatedOn": "2026-08-06T17:21:08.011Z",
-  "preparedFromCommit": "37df314514c94cf6d1c955d47eacef8dcebe0fed",
+  "generatedOn": "2026-08-08T06:58:55.045Z",
+  "preparedFromCommit": "a039ae89da08e81ea97a22e17daa9b0c4648076d",
   "releaseStatus": "blocked",
   "counts": {
     "newContent": 64,
@@ -34,8 +34,8 @@
     },
     "comparisons": {
       "selectionMemoSha256": "5877bce6f14d209c07bbf21c37cfd489fec1510c2022194ad2226e3010707a52",
-      "pagesReadmeSha256": "55ed6ef34db643053c5fc61d3c70fc436ae6652145202a656076b357dab8db48",
-      "pagesReadmeVersion": "V1.1 (2026-08-05)"
+      "pagesReadmeSha256": "9ed947fc41d595a2cdd14ffffbc2df2ff7c9a8b20b57d69c09a481920378f701",
+      "pagesReadmeVersion": "V1.2 (2026-08-08)"
     }
   },
   "gateResults": {
@@ -805,8 +805,8 @@
       "type": "comparison-page",
       "slug": "dify-vs-fastgpt",
       "url": "https://fastgpt.cn/compare/dify-vs-fastgpt",
-      "sourceVersion": "V1.1",
-      "sourceSha256": "c49042c4ce7f3132d2de8fda9f13cd3c33a2677248ce16c74b472cd74549db5d",
+      "sourceVersion": "V1.2",
+      "sourceSha256": "14f928dbbfbea1bd4a90b76d32b33aca413b7edc55da32734a912b69a5bc8ae7",
       "batch": "compare-5877bce6f14d209c",
       "status": "published",
       "result": "ready-for-release-gate",
@@ -820,8 +820,8 @@
       "type": "comparison-page",
       "slug": "self-build-vs-platform",
       "url": "https://fastgpt.cn/compare/self-build-vs-platform",
-      "sourceVersion": "V1.1",
-      "sourceSha256": "ac5e7f297e7ddfdca9c2aaf6e03aac56b9f1860f0cbd0c014904695ae96b7da2",
+      "sourceVersion": "V1.2",
+      "sourceSha256": "11cb14b7e9220870464c0fb32d5cabe81233141676af94a9360d611d426c29f0",
       "batch": "compare-5877bce6f14d209c",
       "status": "published",
       "result": "ready-for-release-gate",
@@ -835,8 +835,8 @@
       "type": "comparison-page",
       "slug": "ragflow-vs-fastgpt",
       "url": "https://fastgpt.cn/compare/ragflow-vs-fastgpt",
-      "sourceVersion": "V1.1",
-      "sourceSha256": "72583645e2dcc6202cec90cd9ca185a4ca4d498c5818192824076c20944a3faf",
+      "sourceVersion": "V1.2",
+      "sourceSha256": "40b7ae9face789519cdcc5f95979040c57392263cf79c74918a52a70a46e5684",
       "batch": "compare-5877bce6f14d209c",
       "status": "published",
       "result": "ready-for-release-gate",
@@ -850,8 +850,8 @@
       "type": "comparison-page",
       "slug": "maxkb-vs-fastgpt",
       "url": "https://fastgpt.cn/compare/maxkb-vs-fastgpt",
-      "sourceVersion": "V1.1",
-      "sourceSha256": "03bd67735815b229b3e402ed7dc94e1f768089e5920432e57cee05930efa5b5e",
+      "sourceVersion": "V1.2",
+      "sourceSha256": "f118df2860058b5da52a5cb4d89494715a0b64b9e0a8313cbd1de3c65f4b4cd0",
       "batch": "compare-5877bce6f14d209c",
       "status": "published",
       "result": "ready-for-release-gate",

@@ -7,19 +7,26 @@ export const selfBuildComparisonPage: ComparisonPage = createComparisonPage({
   status: 'published',
   title: '自研或直接跑开源与用平台怎么选：四组必算成本',
   description:
-    '把自研 AI 知识库的真实工作量拆成解析检索、运行时、安全治理、发布运维四组，给出同一份三年需求清单的报价方法，并说明平台层带来的调用链开销该怎么验证。',
+    '自研或直接跑开源与平台方案的差异在长期人力、运行时、安全治理、运维升级和原厂支持。用同一份三年需求清单核算人天、基础设施、许可与服务责任，再决定自建或采购。',
+  heroSummary:
+    '已有平台工程团队并追求底层控制时，自研或直接跑开源更有空间；希望快速上线并获得成熟运行时、升级路径与支持渠道时，平台方案更匹配。',
+  heroHighlights: [
+    { label: '自研 / 开源', value: '底层控制与团队自运维' },
+    { label: '平台方案', value: '现成运行时、升级路径与原厂支持' },
+    { label: '验收重点', value: '三年 TCO、故障恢复、迁移成本' }
+  ],
   keywords: ['自研成本', '三年 TCO', '平台工程', '原厂支持', '开源自托管'],
   sourceFile: 'self-build-vs-platform.md',
-  sourceHash: 'ac5e7f297e7ddfdca9c2aaf6e03aac56b9f1860f0cbd0c014904695ae96b7da2',
-  draftVersion: 'V1.1 (2026-08-05)',
+  sourceHash: '11cb14b7e9220870464c0fb32d5cabe81233141676af94a9360d611d426c29f0',
+  draftVersion: 'V1.2 (2026-08-08)',
   sourceRefs: [
     {
       id: 'draft-body',
       title: '自研或直接跑开源与用平台怎么选：四组必算成本',
       localPath: 'content/competitors/self-build-vs-platform.md',
-      section: '全文五段与事实来源页脚',
+      section: '五段正文与内部证据',
       verifiedOn: '2026-07-20',
-      version: 'V1.1',
+      version: 'V1.2',
       evidenceStatus: 'official-public'
     },
     {
@@ -45,15 +52,15 @@ export const selfBuildComparisonPage: ComparisonPage = createComparisonPage({
       title: 'FastGPT product knowledge base support and procurement sections',
       section: 'KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界',
       verifiedOn: '2026-07-20',
-      version: 'V1.1 revision (2026-08-05)',
+      version: 'V1.1 fact set (2026-08-05)',
       evidenceStatus: 'contract-required'
     }
   ],
   dates: {
     sourceVerifiedOn: '2026-07-20',
     datePublished: '2026-08-04',
-    dateModified: '2026-08-05',
-    nextReviewOn: '2026-11-03'
+    dateModified: '2026-08-08',
+    nextReviewOn: '2026-11-06'
   },
   asset: {
     path: '/images/compare/self-build-vs-platform.svg',
@@ -75,7 +82,7 @@ export const selfBuildComparisonPage: ComparisonPage = createComparisonPage({
     source: 'FastGPT 官方文档、官方仓库、官方定价页与公开发布记录',
     verifiedOn: '2026-07-20',
     version: 'FastGPT Cloud / 社区自托管 / 托管与自托管商业版',
-    updateRecord: 'V1.0（2026-07-30）首次发布；V1.1（2026-08-05）新增原厂支持成本、责任边界与值班折算；模型、基础设施、版本与支持范围设 90 天复核周期'
+    updateRecord: 'V1.2（2026-08-08）重写可见文案与页面包装；模型、基础设施、版本与支持范围设 90 天复核周期'
   },
   officialSources: ['https://doc.fastgpt.cn/', 'https://github.com/labring/FastGPT']
 });

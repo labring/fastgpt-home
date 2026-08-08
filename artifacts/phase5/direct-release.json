@@ -1,8 +1,8 @@
 {
   "id": "w2-direct-release",
   "schemaVersion": "W2-2026-08-05-direct-v1",
-  "generatedOn": "2026-08-06T17:21:12.607Z",
-  "preparedFromCommit": "37df314514c94cf6d1c955d47eacef8dcebe0fed",
+  "generatedOn": "2026-08-08T06:59:26.347Z",
+  "preparedFromCommit": "a039ae89da08e81ea97a22e17daa9b0c4648076d",
   "authorization": {
     "mode": "direct-publish",
     "authorizedOn": "2026-08-05",
@@ -10,7 +10,7 @@
   },
   "sourceHandoff": {
     "file": "artifacts/phase5/release-handoff.json",
-    "sha256": "483655a0faf1233af0c2bbf4133626380192773a2f7afff3297b1bdaa567889b"
+    "sha256": "31cb58137b7c8199c05dba9f6f4a8a9a3d3989657de18cbd5ef183053bab006c"
   },
   "publishable": {
     "newFaq": 60,

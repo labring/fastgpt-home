@@ -1,15 +1,19 @@
 import assert from 'node:assert/strict';
+import crypto from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { expectedSlugs, validateManifest } from './validate_competitor_manifest.mjs';
 
 const result = validateManifest({ write: true });
+const readmeInput = result.manifest.sourceInputs.find((input) => input.id === 'competitor-readme-v1.2');
+const readmeHash = crypto.createHash('sha256').update(fs.readFileSync(path.join(process.cwd(), 'content/competitors/README.md'))).digest('hex');
 assert.deepEqual(result.manifest.pages.map((page) => page.slug).sort(), [...expectedSlugs].sort());
 assert.equal(result.manifest.publicationOverride?.mode, 'direct-publish');
-assert.equal(result.manifest.sourceInputs.some((input) => input.id === 'competitor-readme-v1.1' && input.version === 'V1.1 (2026-08-05)'), true);
-assert.equal(result.manifest.pages.every((page) => page.sourceRefs.some((ref) => ref.id === 'draft-body' && ref.version === 'V1.1')), true);
+assert.equal(readmeInput?.version, 'V1.2 (2026-08-08)');
+assert.equal(readmeInput?.sha256, readmeHash, 'README fingerprint must match the V1.2 source file');
+assert.equal(result.manifest.pages.every((page) => page.sourceRefs.some((ref) => ref.id === 'draft-body' && ref.version === 'V1.2')), true);
 assert.equal(result.manifest.pages.every((page) => page.sourceRefs.some((ref) => ref.id === 'fastgpt-support-contract' && ref.evidenceStatus === 'contract-required')), true);
-assert.equal(result.manifest.pages.every((page) => page.dates.dateModified === '2026-08-05' && page.dates.nextReviewOn === '2026-11-03'), true);
+assert.equal(result.manifest.pages.every((page) => page.dates.dateModified === '2026-08-08' && page.dates.nextReviewOn === '2026-11-06'), true);
 assert.equal(result.manifest.pages.every((page) => page.status === 'published'), true, 'direct-publish override must retain published status');
 assert.equal(result.failures.some((failure) => failure.gate === 'signoffs'), false);
 assert.equal(result.waivedFailures.filter((failure) => failure.gate === 'signoffs').length, 12);

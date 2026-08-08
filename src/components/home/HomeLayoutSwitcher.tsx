@@ -16,7 +16,9 @@ export default function HomeLayoutSwitcher({ dict, children }: HomeLayoutSwitche
   const pathname = usePathname() || '/';
   const t = dict.Home;
   const isHome = /^\/([a-z]{2,3}(?:-[A-Za-z]{2,4})?)?$/.test(pathname);
-  const isSelfContained = /\/faq|\/price/.test(pathname);
+  const isTechArticle =
+    /\/(?:api|dataset|deploy|integration|node|troubleshoot|tutorial)\/[^/]+$/.test(pathname);
+  const isSelfContained = /\/faq|\/price|\/tech-center/.test(pathname) || isTechArticle;
 
   if (isHome || isSelfContained) {
     return <>{children}</>;

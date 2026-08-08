@@ -1,22 +1,8 @@
 import { Metadata } from 'next';
 import { localeMap, supportedLocaleCodes } from '@/lib/locales';
-import {
-  getLocaleHreflang,
-  getLocaleOwner,
-  getOwnedFaqUrl,
-  getOwnedLocaleUrl,
-  getSiteBaseUrl
-} from '@/lib/siteRouting';
+import { getLocaleHreflang, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 export { localeMap };
-
-export function getFaqCanonicalBaseUrl(lang: string) {
-  return getSiteBaseUrl(getLocaleOwner(lang));
-}
-
-export function getFaqCanonicalUrl(lang: string, path: string = '') {
-  return getOwnedLocaleUrl(lang, path);
-}
 
 export function getCompareCanonicalUrl(slug: string) {
   return getOwnedLocaleUrl('zh', `/compare/${slug}`);

@@ -134,12 +134,7 @@ function verifySitemap() {
   assert(urls.length > 1000, `Sitemap contains too few URLs: ${urls.length}`);
   assert.equal(new Set(urls).size, urls.length, 'Sitemap contains duplicate URLs');
   assert(
-    urls.every(
-      (url) =>
-        url.startsWith(`${baseUrl}/`) ||
-        url === baseUrl ||
-        url.startsWith('https://fastgpt.cn/compare/')
-    ),
+    urls.every((url) => url.startsWith(`${baseUrl}/`) || url === baseUrl),
     'Sitemap contains a foreign host'
   );
 

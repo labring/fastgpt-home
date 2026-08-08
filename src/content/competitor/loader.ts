@@ -1,13 +1,11 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import type {
-  ComparisonFact,
   ComparisonPage,
   ComparisonSection,
   ComparisonTable,
   ComparisonTableKind,
-  MarkdownBlock,
-  SourceRef
+  MarkdownBlock
 } from './types';
 
 const SOURCE_ROOT = path.join(process.cwd(), 'content', 'competitors');
@@ -29,11 +27,11 @@ function cellsFromTableRow(line: string) {
 
 function tableKind(title: string | undefined, fallbackText = ''): ComparisonTableKind {
   const value = title || '';
-  if (/能力|产品重心|实现路径/.test(value)) return 'capability';
+  if (/能力|产品重心|实现路径|长期工作|工作组/.test(value)) return 'capability';
   if (/POC|验证|测量|怎么自己|必测/.test(value)) return 'poc';
   if (/TCO|成本|采购形态|许可证|许可|公开边界|买断/.test(value)) return 'tco';
   if (/选型建议|第一成败因素|第一约束/.test(value)) return 'selection';
-  if (/能力|实现路径/.test(fallbackText)) return 'capability';
+  if (/能力|实现路径|长期工作|工作组/.test(fallbackText)) return 'capability';
   if (/POC|验证|测量|必测/.test(fallbackText)) return 'poc';
   if (/TCO|成本|采购形态|许可证|许可|公开边界|买断/.test(fallbackText)) return 'tco';
   return 'generic';
@@ -137,7 +135,6 @@ function parseDocument(markdown: string) {
     if (paragraph.length) blocks.push({ type: 'paragraph', text: paragraph.join(' ') });
   }
 
-  const titleBlock = blocks.find((block) => block.type === 'heading' && block.level === 1);
   const sectionBlocks = blocks.filter((block) => !(block.type === 'heading' && block.level === 1));
   const sections: ComparisonSection[] = [];
   let section: ComparisonSection | undefined;
@@ -147,8 +144,7 @@ function parseDocument(markdown: string) {
       section = {
         id: `section-${sections.length + 1}`,
         title: block.text || `Section ${sections.length + 1}`,
-        blocks: [],
-        facts: []
+        blocks: []
       };
       sections.push(section);
       continue;
@@ -158,74 +154,22 @@ function parseDocument(markdown: string) {
       continue;
     }
     section.blocks.push(block);
-    if (block.type === 'paragraph' && block.text) {
-      section.facts.push({
-        id: `${section.id}-fact-${section.facts.length + 1}`,
-        text: block.text,
-        sourceIds: ['draft-body'],
-        evidenceStatus: evidenceStatus(block.text)
-      });
-    }
-    if (block.type === 'table' && block.table) {
-      for (const row of block.table.rows) {
-        section.facts.push({
-          id: `${section.id}-${row.id}`,
-          text: row.cells.join(' | '),
-          sourceIds: row.sourceIds,
-          evidenceStatus: row.evidenceStatus
-        });
-      }
-    }
   }
-  const facts: ComparisonFact[] = sections.flatMap((item) => item.facts);
-  return { titleText: titleBlock?.text || '', intro, sections, facts };
+  return { intro, sections };
 }
 
-interface PageInput extends Omit<ComparisonPage, 'sourcePath' | 'titleText' | 'intro' | 'sections' | 'facts'> {
+interface PageInput extends Omit<ComparisonPage, 'intro' | 'sections'> {
   sourceFile: string;
 }
 
 export function createComparisonPage(input: PageInput): ComparisonPage {
-  const sourceFile = input.sourceFile;
+  const { sourceFile, ...pageInput } = input;
   const sourcePath = path.join(SOURCE_ROOT, sourceFile);
   const markdown = fs.readFileSync(sourcePath, 'utf8');
   const parsed = parseDocument(markdown);
-  if (input.slug === 'self-build-vs-platform') {
-    const target = parsed.sections.find((section) => section.title.startsWith('2.'));
-    if (target && !target.blocks.some((block) => block.type === 'table' && block.table?.kind === 'capability')) {
-      const table: ComparisonTable = {
-        id: 'self-build-capability-groups',
-        title: '自研与平台的四组长期工作',
-        kind: 'capability',
-        columns: ['工作组', '自研 / 直接跑开源', '采购平台', '验证方式'],
-        rows: [
-          { id: 'self-build-capability-1', cells: ['解析、检索与知识维护', '自行维护多版式解析、索引、引用与重训队列', '使用平台既有知识工程链路并核对版本边界', '同一黄金集与解析样本 POC'], sourceIds: ['draft-body'], evidenceStatus: 'poc-required' },
-          { id: 'self-build-capability-2', cells: ['Agent 与工作流运行时', '自行建设失败恢复、人工交互、调试与评测', '按平台能力配置并核对交互状态与工具边界', '同一工作流故障注入与恢复测试'], sourceIds: ['draft-body'], evidenceStatus: 'poc-required' },
-          { id: 'self-build-capability-3', cells: ['安全与治理', '自行承担模型适配、密钥、沙箱、权限、审计与多租户', '按版本与合同核对治理能力和责任边界', '同一威胁用例与权限矩阵'], sourceIds: ['draft-body'], evidenceStatus: 'contract-required' },
-          { id: 'self-build-capability-4', cells: ['发布、运维与支持', '自行维护渠道、升级、备份、监控、值班与支持', '按采购形态核对渠道、升级路径与支持档位', '三年 TCO 与上线演练'], sourceIds: ['draft-body'], evidenceStatus: 'poc-required' }
-        ]
-      };
-      target.blocks.unshift({ type: 'table', table });
-      target.facts.unshift(...table.rows.map((row) => ({ id: `${target.id}-${row.id}`, text: row.cells.join(' | '), sourceIds: row.sourceIds, evidenceStatus: row.evidenceStatus })));
-      parsed.facts.unshift(...target.facts.slice(0, table.rows.length));
-    }
-  }
   return {
-    ...input,
-    sourcePath: `content/competitors/${sourceFile}`,
-    titleText: parsed.titleText,
+    ...pageInput,
     intro: parsed.intro,
-    sections: parsed.sections,
-    facts: parsed.facts
+    sections: parsed.sections
   };
-}
-
-export function getPageTables(page: ComparisonPage) {
-  return page.sections.flatMap((section) =>
-    section.blocks.flatMap((block) => (block.type === 'table' && block.table ? [block.table] : []))
-  );
-}
-
-export function getSourceRef(page: ComparisonPage, id: string): SourceRef | undefined {
-  return page.sourceRefs.find((source) => source.id === id);
 }

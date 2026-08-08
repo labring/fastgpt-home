@@ -17,50 +17,9 @@ export const selfBuildComparisonPage: ComparisonPage = createComparisonPage({
   ],
   keywords: ['自研成本', '三年 TCO', '平台工程', '原厂支持', '开源自托管'],
   sourceFile: 'self-build-vs-platform.md',
-  sourceHash: '11cb14b7e9220870464c0fb32d5cabe81233141676af94a9360d611d426c29f0',
-  draftVersion: 'V1.2 (2026-08-08)',
-  sourceRefs: [
-    {
-      id: 'draft-body',
-      title: '自研或直接跑开源与用平台怎么选：四组必算成本',
-      localPath: 'content/competitors/self-build-vs-platform.md',
-      section: '五段正文与内部证据',
-      verifiedOn: '2026-07-20',
-      version: 'V1.2',
-      evidenceStatus: 'official-public'
-    },
-    {
-      id: 'fastgpt-docs',
-      title: 'FastGPT official documentation',
-      url: 'https://doc.fastgpt.cn/',
-      section: '平台能力与交付路径',
-      verifiedOn: '2026-07-20',
-      version: '公开稳定资料',
-      evidenceStatus: 'official-public'
-    },
-    {
-      id: 'fastgpt-license',
-      title: 'FastGPT source repository and license',
-      url: 'https://github.com/labring/FastGPT',
-      section: '许可证与商业边界',
-      verifiedOn: '2026-07-20',
-      version: '公开稳定资料',
-      evidenceStatus: 'official-public'
-    },
-    {
-      id: 'fastgpt-support-contract',
-      title: 'FastGPT product knowledge base support and procurement sections',
-      section: 'KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界',
-      verifiedOn: '2026-07-20',
-      version: 'V1.1 fact set (2026-08-05)',
-      evidenceStatus: 'contract-required'
-    }
-  ],
   dates: {
-    sourceVerifiedOn: '2026-07-20',
     datePublished: '2026-08-04',
-    dateModified: '2026-08-08',
-    nextReviewOn: '2026-11-06'
+    dateModified: '2026-08-08'
   },
   asset: {
     path: '/images/compare/self-build-vs-platform.svg',
@@ -69,22 +28,11 @@ export const selfBuildComparisonPage: ComparisonPage = createComparisonPage({
     height: 630
   },
   internalLinks: [
-    { label: '开源版与商业版说明', target: '/zh/faq/open-source-vs-commercial-edition', locale: 'zh', external: false, verified: true },
-    { label: '私有化部署边界', target: '/zh/faq/private-deployment-data-boundary', locale: 'zh', external: false, verified: true },
-    { label: 'POC 测量清单', target: '/zh/faq/poc-design-checklist', locale: 'zh', external: false, verified: true }
+    { label: '开源版与商业版说明', target: '/zh/faq/open-source-vs-commercial-edition', locale: 'zh' },
+    { label: '私有化部署边界', target: '/zh/faq/private-deployment-data-boundary', locale: 'zh' },
+    { label: 'POC 测量清单', target: '/zh/faq/poc-design-checklist', locale: 'zh' }
   ],
-  signoffs: [
-    { role: 'product', status: 'pending', signer: 'FastGPT product', timestamp: '', evidenceRef: 'pending-product-version-review' },
-    { role: 'sales', status: 'pending', signer: 'FastGPT sales', timestamp: '', evidenceRef: 'pending-commercial-review' },
-    { role: 'legal', status: 'pending', signer: 'FastGPT legal', timestamp: '', evidenceRef: 'pending-license-review' }
-  ],
-  sourceFooter: {
-    source: 'FastGPT 官方文档、官方仓库、官方定价页与公开发布记录',
-    verifiedOn: '2026-07-20',
-    version: 'FastGPT Cloud / 社区自托管 / 托管与自托管商业版',
-    updateRecord: 'V1.2（2026-08-08）重写可见文案与页面包装；模型、基础设施、版本与支持范围设 90 天复核周期'
-  },
-  officialSources: ['https://doc.fastgpt.cn/', 'https://github.com/labring/FastGPT']
+  officialSource: 'https://doc.fastgpt.cn/'
 });
 
 export default selfBuildComparisonPage;

@@ -668,8 +668,7 @@ body {
 
 .comparison-link-content p { max-width: 62ch; margin: 0 0 25px; color: var(--comparison-body); font-size: 17px; line-height: 1.78; }
 .comparison-link-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
-.comparison-link-grid a,
-.comparison-official-sources a {
+.comparison-link-grid a {
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -685,8 +684,7 @@ body {
   transition: border-color 180ms ease, background 180ms ease, transform 180ms ease;
 }
 
-.comparison-link-grid a:hover,
-.comparison-official-sources a:hover { border-color: var(--comparison-accent); background: var(--comparison-accent-soft); transform: translateY(-2px); }
+.comparison-link-grid a:hover { border-color: var(--comparison-accent); background: var(--comparison-accent-soft); transform: translateY(-2px); }
 
 .comparison-cta {
   align-items: center;

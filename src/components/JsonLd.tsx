@@ -189,8 +189,6 @@ export interface ArticleJsonLdProps {
   inLanguage: string;
   datePublished?: string;
   dateModified: string;
-  authorName?: string;
-  publisherName?: string;
 }
 
 export function ArticleJsonLd({
@@ -200,9 +198,7 @@ export function ArticleJsonLd({
   url,
   inLanguage,
   datePublished,
-  dateModified,
-  authorName = 'FastGPT',
-  publisherName = 'FastGPT'
+  dateModified
 }: ArticleJsonLdProps) {
   return (
     <JsonLdScript
@@ -213,8 +209,8 @@ export function ArticleJsonLd({
         description,
         image: [image],
         inLanguage,
-        author: { '@type': 'Organization', name: authorName },
-        publisher: { '@type': 'Organization', name: publisherName },
+        author: { '@type': 'Organization', name: 'FastGPT' },
+        publisher: { '@type': 'Organization', name: 'FastGPT' },
         mainEntityOfPage: { '@type': 'WebPage', '@id': url },
         ...(datePublished ? { datePublished } : {}),
         dateModified

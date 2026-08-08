@@ -17,50 +17,9 @@ export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
   ],
   keywords: ['MaxKB 对比', 'FastGPT', '私有化部署', '三年 TCO', '代码沙箱'],
   sourceFile: 'maxkb-vs-fastgpt.md',
-  sourceHash: 'f118df2860058b5da52a5cb4d89494715a0b64b9e0a8313cbd1de3c65f4b4cd0',
-  draftVersion: 'V1.2 (2026-08-08)',
-  sourceRefs: [
-    {
-      id: 'draft-body',
-      title: 'MaxKB 与 FastGPT 怎么选：采购可预测性与生产细粒度',
-      localPath: 'content/competitors/maxkb-vs-fastgpt.md',
-      section: '五段正文与内部证据',
-      verifiedOn: '2026-07-20',
-      version: 'V1.2',
-      evidenceStatus: 'official-public'
-    },
-    {
-      id: 'maxkb-docs',
-      title: 'MaxKB official documentation',
-      url: 'https://maxkb.cn/docs/',
-      section: '私有化交付与采购形态',
-      verifiedOn: '2026-07-20',
-      version: '公开稳定资料',
-      evidenceStatus: 'official-public'
-    },
-    {
-      id: 'fastgpt-docs',
-      title: 'FastGPT official documentation',
-      url: 'https://doc.fastgpt.cn/',
-      section: '生产运行时与治理',
-      verifiedOn: '2026-07-20',
-      version: '公开稳定资料',
-      evidenceStatus: 'official-public'
-    },
-    {
-      id: 'fastgpt-support-contract',
-      title: 'FastGPT product knowledge base support and procurement sections',
-      section: 'KB 5.4 / 6.3：原厂支持档位、交付范围与采购责任边界',
-      verifiedOn: '2026-07-20',
-      version: 'V1.1 fact set (2026-08-05)',
-      evidenceStatus: 'contract-required'
-    }
-  ],
   dates: {
-    sourceVerifiedOn: '2026-07-20',
     datePublished: '2026-08-04',
-    dateModified: '2026-08-08',
-    nextReviewOn: '2026-11-06'
+    dateModified: '2026-08-08'
   },
   asset: {
     path: '/images/compare/maxkb-vs-fastgpt.svg',
@@ -69,22 +28,11 @@ export const maxkbComparisonPage: ComparisonPage = createComparisonPage({
     height: 630
   },
   internalLinks: [
-    { label: '私有化部署边界', target: '/zh/faq/private-deployment-data-boundary', locale: 'zh', external: false, verified: true },
-    { label: '开源版与商业版说明', target: '/zh/faq/open-source-vs-commercial-edition', locale: 'zh', external: false, verified: true },
-    { label: 'POC 测量清单', target: '/zh/faq/poc-design-checklist', locale: 'zh', external: false, verified: true }
+    { label: '私有化部署边界', target: '/zh/faq/private-deployment-data-boundary', locale: 'zh' },
+    { label: '开源版与商业版说明', target: '/zh/faq/open-source-vs-commercial-edition', locale: 'zh' },
+    { label: 'POC 测量清单', target: '/zh/faq/poc-design-checklist', locale: 'zh' }
   ],
-  signoffs: [
-    { role: 'product', status: 'pending', signer: 'FastGPT product', timestamp: '', evidenceRef: 'pending-product-version-review' },
-    { role: 'sales', status: 'pending', signer: 'FastGPT sales', timestamp: '', evidenceRef: 'pending-commercial-review' },
-    { role: 'legal', status: 'pending', signer: 'FastGPT legal', timestamp: '', evidenceRef: 'pending-trademark-license-review' }
-  ],
-  sourceFooter: {
-    source: 'MaxKB 与 FastGPT 双方官网、官方文档、官方仓库、官方定价页与公开发布记录',
-    verifiedOn: '2026-07-20',
-    version: 'MaxKB 社区自托管 / 专业版 / 企业版；FastGPT Cloud / 社区自托管 / 托管与自托管商业版',
-    updateRecord: 'V1.2（2026-08-08）重写可见文案与页面包装；授权价、维保、版本号与支持档位设 90 天复核周期'
-  },
-  officialSources: ['https://maxkb.cn/docs/', 'https://doc.fastgpt.cn/']
+  officialSource: 'https://maxkb.cn/docs/'
 });
 
 export default maxkbComparisonPage;

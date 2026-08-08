@@ -17,5 +17,4 @@ export function getComparisonPage(slug: string) {
   return comparisonPages[slug as keyof typeof comparisonPages];
 }
 
-export { getPageTables } from './loader';
 export type * from './types';

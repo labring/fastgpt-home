@@ -24,7 +24,7 @@ export default function ComparisonTables({ table }: { table: ComparisonTable }) 
         <span>{tableKindLabels[table.kind]}</span>
         <span>{table.rows.length} 项对照</span>
       </div>
-      <div className="comparison-table-head" role="row" style={{ gridTemplateColumns: 'var(--comparison-grid)' }}>
+      <div className="comparison-table-head" role="row">
         {table.columns.map((column) => <div key={column} role="columnheader">{column}</div>)}
       </div>
       <div className="comparison-table-body" role="rowgroup">
@@ -34,7 +34,6 @@ export default function ComparisonTables({ table }: { table: ComparisonTable }) 
             role="row"
             key={row.id}
             data-evidence-status={row.evidenceStatus}
-            style={{ gridTemplateColumns: 'var(--comparison-grid)' }}
           >
             {row.cells.map((cell, index) => (
               <div

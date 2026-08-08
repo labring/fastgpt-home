@@ -73,7 +73,7 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
               </a>
               <a
                 className="comparison-button comparison-button-secondary"
-                href={page.officialSources[0]}
+                href={page.officialSource}
                 target="_blank"
                 rel="noreferrer"
               >
@@ -162,7 +162,7 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
               <span>设计同条件 POC</span>
               <ArrowRight aria-hidden="true" size={16} />
             </a>
-            <a className="comparison-cta-text-link" href={page.officialSources[0]} target="_blank" rel="noreferrer">
+            <a className="comparison-cta-text-link" href={page.officialSource} target="_blank" rel="noreferrer">
               官方资料入口
               <ExternalLink aria-hidden="true" size={14} />
             </a>
@@ -172,5 +172,3 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
     </>
   );
 }
-
-export { renderBlock };

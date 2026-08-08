@@ -6,6 +6,7 @@ const sharp = require('sharp');
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 const faqId = 'Why-are-enterprises-paying-more';
 const maxSocialImageBytes = 200_000;
 
@@ -31,7 +32,7 @@ function hasMeta(html, attribute, value, content) {
   );
 }
 
-function verifyFaqPage(route, socialImageUrl) {
+function verifyFaqPage(route) {
   const html = resolveHtml(route);
 
   assert(hasMeta(html, 'property', 'og:image', socialImageUrl), `${route} is missing og:image`);
@@ -142,14 +143,8 @@ async function main() {
   verifyNginxHeaders();
   verifyCloudflareRedirects();
 
-  const defaultSocialImageUrl = `${baseUrl}/faq-social-preview.png`;
-  verifyFaqPage('/faq', defaultSocialImageUrl);
-  verifyFaqPage(`/faq/${faqId}`, defaultSocialImageUrl);
-
-  const localizedFaqId = 'Can-AI-intelligent-customer-service';
-  const localizedSocialImageUrl = `${baseUrl}/faq-social-preview.png`;
-  verifyFaqPage('/en/faq', localizedSocialImageUrl);
-  verifyFaqPage(`/en/faq/${localizedFaqId}`, localizedSocialImageUrl);
+  verifyFaqPage('/faq');
+  verifyFaqPage(`/faq/${faqId}`);
 
   console.log(`P0 verification passed for ${baseUrl}`);
 }

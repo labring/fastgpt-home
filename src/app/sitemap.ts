@@ -8,6 +8,8 @@ import {
 } from '@/lib/siteRouting';
 import { TECH_ENTRIES } from '@/components/tech-center/data';
 import { getTechArticleLastModified, getTechCenterLastModified } from '@/lib/tech-center-content';
+import { getCompareCanonicalUrl } from '@/lib/seo';
+import { comparisonPages } from '@/content/competitor';
 
 export const dynamic = 'force-static';
 
@@ -48,6 +50,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addEntry(getOwnedLocaleUrl('zh', '/zh/tech-center'), getTechCenterLastModified());
     for (const article of TECH_ENTRIES) {
       addEntry(getOwnedLocaleUrl('zh', article.slug), getTechArticleLastModified(article));
+    }
+    for (const page of Object.values(comparisonPages)) {
+      if (page.status !== 'published') continue;
+      addEntry(getCompareCanonicalUrl(page.slug), new Date(page.dates.dateModified));
     }
   }
 

@@ -4,6 +4,21 @@ import { getLocaleHreflang, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/site
 
 export { localeMap };
 
+export function getCompareCanonicalUrl(slug: string) {
+  return getOwnedLocaleUrl('zh', `/compare/${slug}`);
+}
+
+export function getCompareAlternates(slug: string): Metadata['alternates'] {
+  const canonical = getCompareCanonicalUrl(slug);
+  return {
+    canonical,
+    languages: {
+      zh: canonical,
+      'zh-CN': canonical,
+      'x-default': canonical
+    }
+  };
+}
 /**
  * Generate cross-domain canonical and hreflang metadata for a page.
  * @param lang - current language code

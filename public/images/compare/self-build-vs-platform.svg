@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Self-build and platform cost map</title>
+  <desc id="desc">Four cost groups for comparing a self-built AI knowledge system with a platform.</desc>
+  <rect width="1200" height="630" fill="#f8fafc"/>
+  <rect x="72" y="72" width="1056" height="486" rx="24" fill="#ffffff" stroke="#dbe4f0" stroke-width="3"/>
+  <text x="600" y="128" text-anchor="middle" font-family="Arial, sans-serif" font-size="34" font-weight="700" fill="#16243a">Count the whole operating system</text>
+  <g font-family="Arial, sans-serif" font-size="23" font-weight="700" text-anchor="middle">
+    <rect x="160" y="190" width="370" height="116" rx="18" fill="#e8f0ff" stroke="#3370ff" stroke-width="3"/>
+    <text x="345" y="242" fill="#173b8f">Parse and retrieve</text>
+    <text x="345" y="278" font-size="17" font-weight="400" fill="#36547e">documents · indexes · evaluation</text>
+    <rect x="670" y="190" width="370" height="116" rx="18" fill="#e8f7ef" stroke="#1e9c68" stroke-width="3"/>
+    <text x="855" y="242" fill="#176b4c">Runtime and workflow</text>
+    <text x="855" y="278" font-size="17" font-weight="400" fill="#356850">recovery · tools · human review</text>
+    <rect x="160" y="354" width="370" height="116" rx="18" fill="#fff4dc" stroke="#d88918" stroke-width="3"/>
+    <text x="345" y="406" fill="#8a5910">Security and governance</text>
+    <text x="345" y="442" font-size="17" font-weight="400" fill="#8a5910">identity · isolation · audit</text>
+    <rect x="670" y="354" width="370" height="116" rx="18" fill="#f2eafd" stroke="#8d63c7" stroke-width="3"/>
+    <text x="855" y="406" fill="#60429a">Release and support</text>
+    <text x="855" y="442" font-size="17" font-weight="400" fill="#60429a">channels · upgrades · on-call</text>
+  </g>
+  <text x="600" y="520" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" fill="#5a6b82">three-year scope  ·  same assumptions  ·  evidence before conclusion</text>
+</svg>

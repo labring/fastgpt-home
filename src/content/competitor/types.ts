@@ -1,4 +1,5 @@
 export type PageStatus = 'preview' | 'published';
+export type CompareLocale = 'zh' | 'en';
 
 export type EvidenceStatus =
   | 'official-public'
@@ -45,7 +46,7 @@ export interface ComparisonSection {
 export interface InternalLink {
   label: string;
   target: string;
-  locale: string;
+  locale: CompareLocale;
 }
 
 export interface PageAsset {
@@ -60,6 +61,15 @@ export interface ComparisonHighlight {
   value: string;
 }
 
+export interface ComparisonPageCtaCopy {
+  primaryHeroCta?: string;
+  secondaryHeroCta?: string;
+  nextStepTitle?: string;
+  nextStepDescription?: string;
+  ctaTitle?: string;
+  ctaButton?: string;
+}
+
 export interface DateFields {
   datePublished: string;
   dateModified: string;
@@ -67,7 +77,7 @@ export interface DateFields {
 
 export interface ComparisonPage {
   slug: string;
-  lang: 'zh';
+  lang: CompareLocale;
   status: PageStatus;
   title: string;
   description: string;
@@ -78,6 +88,11 @@ export interface ComparisonPage {
   sections: ComparisonSection[];
   dates: DateFields;
   asset: PageAsset;
+  ctaCopy?: ComparisonPageCtaCopy;
+  trustSignals?: string[];
+  contextualLinks?: InternalLink[];
   internalLinks: InternalLink[];
   officialSource: string;
 }
+
+export type ComparisonPagesByLocale = Record<CompareLocale, ComparisonPage>;

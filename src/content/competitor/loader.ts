@@ -26,21 +26,32 @@ function cellsFromTableRow(line: string) {
 }
 
 function tableKind(title: string | undefined, fallbackText = ''): ComparisonTableKind {
-  const value = title || '';
-  if (/能力|产品重心|实现路径|长期工作|工作组/.test(value)) return 'capability';
-  if (/POC|验证|测量|怎么自己|必测/.test(value)) return 'poc';
-  if (/TCO|成本|采购形态|许可证|许可|公开边界|买断/.test(value)) return 'tco';
-  if (/选型建议|第一成败因素|第一约束/.test(value)) return 'selection';
-  if (/能力|实现路径|长期工作|工作组/.test(fallbackText)) return 'capability';
-  if (/POC|验证|测量|必测/.test(fallbackText)) return 'poc';
-  if (/TCO|成本|采购形态|许可证|许可|公开边界|买断/.test(fallbackText)) return 'tco';
+  const value = `${title || ''} ${fallbackText}`;
+  if (/能力|产品重心|实现路径|长期工作|工作组|capability|product focus|implementation path|long-term work|work group/i.test(value)) {
+    return 'capability';
+  }
+  if (/POC|验证|测量|怎么自己|必测|poc|validation|measurement|same-condition|must test/i.test(value)) {
+    return 'poc';
+  }
+  if (/TCO|成本|采购形态|许可证|许可|公开边界|买断|tco|cost|procurement|license|licensing|boundary|buyout/i.test(value)) {
+    return 'tco';
+  }
+  if (/选型建议|第一成败因素|第一约束|selection|criteria|recommendation|decision/i.test(value)) {
+    return 'selection';
+  }
   return 'generic';
 }
 
 function evidenceStatus(text: string) {
-  if (/待合同|合同确认|合同验收/.test(text)) return 'contract-required' as const;
-  if (/待 POC|待POC|POC|自行验证|同条件/.test(text)) return 'poc-required' as const;
-  if (/未列出|未证明|未固化|未说明|未公开|公开资料未/.test(text)) return 'not-publicly-listed' as const;
+  if (/待合同|合同确认|合同验收|contract required|contract confirmation|to be confirmed in contract/i.test(text)) {
+    return 'contract-required' as const;
+  }
+  if (/待 POC|待POC|POC|自行验证|同条件|poc required|same-condition|requires pOC|requires POC/i.test(text)) {
+    return 'poc-required' as const;
+  }
+  if (/未列出|未证明|未固化|未说明|未公开|公开资料未|not publicly listed|not publicly disclosed|not official/i.test(text)) {
+    return 'not-publicly-listed' as const;
+  }
   return 'official-public' as const;
 }
 
@@ -81,9 +92,9 @@ function parseDocument(markdown: string) {
       cursor += 1;
       continue;
     }
-    if (/^> \*\*事实来源\*\*/.test(line)) break;
+    if (/^> \*\*(事实来源|Sources?|Source)\*\*/.test(line)) break;
     if (/^---+$/.test(line)) {
-      if (/^> \*\*事实来源\*\*/.test(lines[cursor + 1]?.trim() || '')) break;
+      if (/^> \*\*(事实来源|Sources?|Source)\*\*/.test(lines[cursor + 1]?.trim() || '')) break;
       cursor += 1;
       continue;
     }

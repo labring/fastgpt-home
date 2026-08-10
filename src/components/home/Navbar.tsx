@@ -77,7 +77,8 @@ export default function Navbar({
     return pathname;
   })();
   const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
-  const languageKeys = isFaqRoute ? faqLocaleCodes : Object.keys(localeNames);
+  const isCompareRoute = routeWithoutLang === '/compare' || routeWithoutLang.startsWith('/compare/');
+  const languageKeys = isFaqRoute || isCompareRoute ? faqLocaleCodes : Object.keys(localeNames);
   const getLocalizedPath = (value: string) => getOwnedLocaleUrl(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {

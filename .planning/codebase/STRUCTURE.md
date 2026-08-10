@@ -4,181 +4,198 @@
 
 ## Directory Layout
 
-```
+```text
 fastgpt-home/
-|-- src/                   # Application source, content, and UI
-|   |-- app/               # Next.js App Router routes and metadata
-|   |-- components/        # Feature components by page area
-|   |-- config/            # Site, pricing, and enterprise config
-|   |-- content/           # Long-form markdown content and registries
-|   |-- faq/               # FAQ datasets and legacy metadata
-|   |-- lib/               # Shared helpers for locale, SEO, routing, and data
-|   |-- locales/           # Locale JSON dictionaries
-|   |-- styles/            # Global CSS
-|   `-- types/             # Shared TypeScript types
-|-- public/                # Static assets, redirects, robots, and exported images
-|-- scripts/               # Generate, clean, and verify scripts
-|-- .planning/             # Planning output and codebase maps
-|-- package.json           # Scripts, dependencies, and engine settings
-|-- package-lock.json      # npm lockfile
-|-- next.config.js         # Next.js build and export configuration
-|-- tailwind.config.ts     # Tailwind tokens and animations
-|-- tsconfig.json          # TypeScript compiler settings
-|-- postcss.config.js      # PostCSS pipeline
-|-- .prettierrc.js         # Formatting rules
-|-- gtag.js                # Google Analytics tracking id helper
-|-- nginx.conf             # Static hosting config
-`-- nginx-security-headers.conf  # Security header include set
+├── content/                # comparison markdown sources
+├── public/                 # static images, llms.txt files, redirects, headers
+├── scripts/                # build, verification, and maintenance scripts
+├── src/                    # app routes, components, config, content, libs, styles
+├── .planning/codebase/     # generated architecture and structure docs
+├── .claude/                # local agent and skill metadata
+└── .codegraph/             # repository index used for code navigation
 ```
 
 ## Directory Purposes
 
-**src/app/**
-- Purpose: route entry points, metadata, and locale-aware page composition
-- Contains: `page.tsx`, `layout.tsx`, `not-found.tsx`, dynamic route folders
-- Key files: `src/app/layout.tsx`, `src/app/page.tsx`, `src/app/[lang]/page.tsx`, `src/app/[lang]/price/page.tsx`, `src/app/[lang]/tech-center/page.tsx`, `src/app/[lang]/faq/[id]/page.tsx`
-- Subdirectories: `faq/`, `compare/`, `tech-center/`, `[lang]/`, and nested dynamic content routes
+**`src/app`:**
+- Purpose: App Router entry points, route layouts, metadata, and route handlers.
+- Contains: `page.tsx`, `layout.tsx`, `not-found.tsx`, `robots.ts`, `sitemap.ts`, and localized route trees.
+- Key files: `src/app/layout.tsx`, `src/app/page.tsx`, `src/app/[lang]/layout.tsx`, `src/app/[lang]/price/page.tsx`, `src/app/[lang]/faq/page.tsx`, `src/app/[lang]/tech-center/page.tsx`, `src/app/[lang]/compare/[slug]/page.tsx`.
 
-**src/components/**
-- Purpose: reusable UI sections and feature components
-- Contains: React components grouped by feature area
-- Key files: `src/components/home/*`, `src/components/faq/*`, `src/components/tech-center/*`, `src/components/price/*`, `src/components/compare/*`, `src/components/ui/button.tsx`
-- Subdirectories: `home/`, `tech-center/`, `faq/`, `enterprise/`, `price/`, `compare/`, `icons/`, `ui/`
+**`src/components`:**
+- Purpose: reusable UI and page sections.
+- Contains: home shell sections, FAQ components, compare components, price components, tech-center views, icon wrappers, and UI primitives.
+- Key files: `src/components/home/HomeLanding.tsx`, `src/components/home/Navbar.tsx`, `src/components/home/Hero.tsx`, `src/components/faq/FAQList.tsx`, `src/components/compare/ComparisonPage.tsx`, `src/components/tech-center/TechCenterPage.tsx`, `src/components/ui/button.tsx`, `src/components/icons/index.tsx`.
 
-**src/content/**
-- Purpose: source documents and content registries
-- Contains: Markdown articles and supporting registry files
-- Key files: `src/content/tech-center/entries.json`, `src/content/competitor/*.ts`
-- Subdirectories: `tech-center/api/`, `tech-center/dataset/`, `tech-center/deploy/`, `tech-center/integration/`, `tech-center/node/`, `tech-center/troubleshoot/`, `tech-center/tutorial/`
+**`src/config`:**
+- Purpose: site-wide configuration objects and pricing data.
+- Contains: locale-specific config, pricing plans, and enterprise content data.
+- Key files: `src/config/site.ts`, `src/config/price.ts`, `src/config/enterprise.ts`.
 
-**src/faq/**
-- Purpose: FAQ source data and legacy compatibility helpers
-- Contains: locale datasets, category helpers, and metadata
-- Key files: `src/faq/en.ts`, `src/faq/zh.ts`, `src/faq/w2.ts`, `src/faq/index.ts`, `src/faq/legacyMeta.ts`
-- Subdirectories: flat module set
+**`src/content`:**
+- Purpose: typed content loaders and markdown-backed article data.
+- Contains: tech-center loaders and comparison page modules.
+- Key files: `src/content/tech-center/**`, `src/content/competitor/index.ts`, `src/content/competitor/loader.ts`, `src/content/competitor/types.ts`.
 
-**src/lib/**
-- Purpose: shared routing, SEO, content loading, analytics, and utility helpers
-- Contains: pure helpers and server-side loaders
-- Key files: `src/lib/i18n.ts`, `src/lib/siteRouting.ts`, `src/lib/seo.ts`, `src/lib/tech-center-content.ts`, `src/lib/githubStars.ts`, `src/lib/leadAttribution.ts`
-- Subdirectories: flat module set
+**`src/faq`:**
+- Purpose: FAQ dictionaries, legacy overlays, and locale resolution helpers.
+- Contains: English FAQ data, Chinese FAQ data, alternate FAQ entries, category overlays, and metadata overlays.
+- Key files: `src/faq/index.ts`, `src/faq/en.ts`, `src/faq/zh.ts`, `src/faq/w2.ts`, `src/faq/legacyCategories.ts`, `src/faq/legacyMeta.ts`.
 
-**src/locales/**
-- Purpose: locale dictionaries loaded by `getDictionary()`
-- Contains: JSON translation files
-- Key files: `en.json`, `zh.json`, `zh-hant.json`, `ja.json`, `ar.json`, `vi.json`, `th.json`, `id.json`, `ms.json`
-- Subdirectories: none
+**`src/lib`:**
+- Purpose: shared logic for locale routing, SEO, analytics, attribution, content loading, and utility helpers.
+- Contains: URL builders, locale maps, metadata helpers, visitor IDs, idle callbacks, and GitHub star helpers.
+- Key files: `src/lib/siteRouting.ts`, `src/lib/localizedRoutes.ts`, `src/lib/seo.ts`, `src/lib/i18n.ts`, `src/lib/locales.ts`, `src/lib/leadAttribution.ts`, `src/lib/tech-center-content.ts`, `src/lib/utils.ts`.
 
-**public/**
-- Purpose: static export assets and hosting support files
-- Contains: images, social cards, robots, redirects, and favicon assets
-- Key files: `public/robots.txt`, `public/_redirects`, `public/opengraph-image.png`, `public/twitter-image.png`
-- Subdirectories: image trees for hero, home, FAQ, and social assets
+**`src/locales`:**
+- Purpose: localized dictionary files consumed by `src/lib/i18n.ts`.
+- Contains: per-language JSON dictionaries.
+- Key files: `src/locales/en.json`, `src/locales/zh.json`, `src/locales/zh-hant.json`, `src/locales/ja.json`, `src/locales/ar.json`, `src/locales/vi.json`, `src/locales/th.json`, `src/locales/id.json`, `src/locales/ms.json`.
 
-**scripts/**
-- Purpose: build-time generation, cleanup, and verification scripts
-- Contains: Node.js scripts that act on the exported site
-- Key files: `scripts/generate-robots.js`, `scripts/generate-llms.js`, `scripts/clean-locales.js`, `scripts/verify-p0.js`, `scripts/verify-p1.js`, `scripts/verify-p2.js`, `scripts/verify-i18n-seo.js`
-- Subdirectories: flat module set
+**`src/styles`:**
+- Purpose: global CSS and theme variables.
+- Contains: app-wide CSS tokens and page shell rules.
+- Key files: `src/styles/globals.css`.
+
+**`public`:**
+- Purpose: static assets served directly by the framework.
+- Contains: logos, social previews, favicon files, locale `llms.txt` files, home page imagery, comparison diagrams, and enterprise imagery.
+- Key files: `public/llms.txt`, `public/en/llms.txt`, `public/zh/llms.txt`, `public/zh-hant/llms.txt`, `public/ja/llms.txt`, `public/ar/llms.txt`, `public/vi/llms.txt`, `public/th/llms.txt`, `public/id/llms.txt`, `public/ms/llms.txt`, `public/images/**`, `public/opengraph-image.png`, `public/twitter-image.png`.
+
+**`content`:**
+- Purpose: source markdown for comparison pages.
+- Contains: four comparison articles used by the compare route family.
+- Key files: `content/competitors/dify-vs-fastgpt.md`, `content/competitors/maxkb-vs-fastgpt.md`, `content/competitors/ragflow-vs-fastgpt.md`, `content/competitors/self-build-vs-platform.md`.
+
+**`scripts`:**
+- Purpose: repo automation for verification and content maintenance.
+- Contains: build checks, locale cleanup, image conversion, and verification scripts.
+- Key files: `scripts/verify-p0.js`, `scripts/verify-p1.js`, `scripts/verify-p2.js`, `scripts/verify-i18n-seo.js`.
+
+**`.planning/codebase`:**
+- Purpose: generated repository maps for downstream planning phases.
+- Contains: architecture and structure documents.
+- Key files: `.planning/codebase/ARCHITECTURE.md`, `.planning/codebase/STRUCTURE.md`.
 
 ## Key File Locations
 
 **Entry Points:**
-- `src/app/layout.tsx` - root HTML shell and providers
-- `src/app/page.tsx` - root home page
-- `src/app/[lang]/page.tsx` - localized home page
-- `src/app/[lang]/price/page.tsx` - localized pricing page
-- `src/app/[lang]/tech-center/page.tsx` - localized tech-center hub
-- `src/app/[lang]/faq/[id]/page.tsx` - localized FAQ detail page
-- `src/app/[lang]/[section]/[slug]/page.tsx` - localized tech article route
+- `src/app/layout.tsx`: root document shell and providers.
+- `src/app/page.tsx`: default home page.
+- `src/app/[lang]/layout.tsx`: localized home shell and locale metadata.
+- `src/app/[lang]/price/page.tsx`: localized pricing page.
+- `src/app/[lang]/faq/page.tsx`: FAQ index page.
+- `src/app/[lang]/faq/[id]/page.tsx`: FAQ detail page.
+- `src/app/[lang]/tech-center/page.tsx`: tech center hub.
+- `src/app/[lang]/[section]/[slug]/page.tsx`: tech article detail page.
+- `src/app/[lang]/compare/[slug]/page.tsx`: comparison article page.
+- `src/app/robots.ts`: robots route handler.
+- `src/app/sitemap.ts`: sitemap route handler.
 
 **Configuration:**
-- `package.json` - scripts, dependencies, engines
-- `next.config.js` - static export, headers, and image settings
-- `tsconfig.json` - path alias and compiler flags
-- `tailwind.config.ts` - theme tokens and animations
-- `postcss.config.js` - PostCSS pipeline
-- `.prettierrc.js` - formatting rules
-- `gtag.js` - Google Analytics id helper
+- `package.json`: scripts, dependencies, engine version, and package metadata.
+- `next.config.js`: static export, image handling, and production headers.
+- `tsconfig.json`: TypeScript strictness and `@/*` path alias.
+- `eslint.config.mjs`: lint rules.
+- `.prettierrc.js`: formatting rules.
+- `tailwind.config.ts`: Tailwind theme setup.
+- `postcss.config.js`: PostCSS pipeline.
 
 **Core Logic:**
-- `src/lib/i18n.ts` - locale selection and dictionary loading
-- `src/lib/siteRouting.ts` - domain ownership and locale URL helpers
-- `src/lib/seo.ts` - canonical and alternate metadata helpers
-- `src/lib/tech-center-content.ts` - markdown loading and article description derivation
-- `src/lib/githubStars.ts` - GitHub star fetch and local fallback cache
-- `src/lib/leadAttribution.ts` - browser attribution capture and CRM reporting
+- `src/components/home/HomeLanding.tsx`: home page composition.
+- `src/components/home/Navbar.tsx`: navigation, locale switcher, and CTA wiring.
+- `src/components/home/HomeLayoutSwitcher.tsx`: shell selection across page families.
+- `src/components/faq/FAQList.tsx`: searchable FAQ grid.
+- `src/components/compare/ComparisonPage.tsx`: comparison article layout.
+- `src/components/tech-center/TechCenterPage.tsx`: hub search, filtering, sorting, and pagination.
+- `src/components/tech-center/TechArticlePage.tsx`: article layout and sidebar.
+- `src/components/JsonLd.tsx`: structured data output.
 
-**Testing:**
-- `scripts/verify-p0.js` - static asset and redirect checks
-- `scripts/verify-p1.js` - metadata and image checks
-- `scripts/verify-p2.js` - heading and route checks
-- `scripts/verify-i18n-seo.js` - canonical and hreflang checks
+**Shared Data and Helpers:**
+- `src/lib/siteRouting.ts`: site variant, locale publication, and owned URLs.
+- `src/lib/localizedRoutes.ts`: default-locale route helpers.
+- `src/lib/seo.ts`: canonical and alternate link helpers.
+- `src/lib/i18n.ts`: locale config and dictionary loading.
+- `src/lib/locales.ts`: locale maps, display names, and normalization.
+- `src/lib/tech-center-content.ts`: markdown-backed tech article loader.
+- `src/lib/leadAttribution.ts`: visit classification and CRM payloads.
+- `src/lib/visitorId.ts`: visitor identity storage.
+
+**Content Sources:**
+- `src/faq/en.ts`, `src/faq/zh.ts`, `src/faq/w2.ts`: FAQ content sources.
+- `src/content/tech-center/**`: tech article markdown grouped by category.
+- `src/content/competitor/*`: comparison page descriptors and loader types.
+- `content/competitors/*.md`: comparison article markdown source.
+
+**Styling:**
+- `src/styles/globals.css`: global CSS tokens and page shells.
+- `src/components/tech-center/TechCenterPage.module.css`: hub layout styles.
+- `src/components/tech-center/TechArticlePage.module.css`: article layout styles.
 
 ## Naming Conventions
 
 **Files:**
-- `page.tsx`, `layout.tsx`, `not-found.tsx` for route files
-- `PascalCase.tsx` for React components
-- `camelCase.ts` for helpers and services
-- `kebab-case.md` for content articles
-- `*.json` for locale dictionaries and registries
+- Route modules use framework names: `page.tsx`, `layout.tsx`, `not-found.tsx`, `robots.ts`, and `sitemap.ts`.
+- Locale dictionaries use lowercase locale codes: `en.json`, `zh.json`, `zh-hant.json`, `ja.json`, `ar.json`, `vi.json`, `th.json`, `id.json`, `ms.json`.
+- FAQ content files use locale-centric names: `src/faq/en.ts`, `src/faq/zh.ts`, `src/faq/w2.ts`.
+- Comparison source files use kebab-case descriptors: `dify-vs-fastgpt.md`, `self-build-vs-platform.md`.
+- Tech article files use kebab-case slugs inside category folders under `src/content/tech-center/`.
+- CSS Modules use `.module.css` for route-scoped page styles.
 
 **Directories:**
-- `kebab-case` for most folders
-- `src/app/[lang]/...` for locale-aware routes
-- `src/content/tech-center/<category>/` for article groups
-
-**Special Patterns:**
-- `index.ts` for barrel exports and data entry points
-- `[lang]`, `[id]`, `[slug]`, and `[section]` for dynamic routes
-- `entries.json` for the tech-center registry
+- App route segments follow the App Router structure: `src/app/[lang]/...`, `src/app/[section]/[slug]/...`.
+- Content categories use plain nouns: `src/content/tech-center/api`, `src/content/tech-center/node`, `src/content/tech-center/dataset`, `src/content/tech-center/integration`.
+- Static asset folders use descriptive groups: `public/images/home`, `public/images/compare`, `public/images/enterprise`.
 
 ## Where to Add New Code
 
 **New Feature:**
-- Primary code: `src/components/<feature>/` and `src/app/[lang]/...`
-- Tests: `scripts/verify-*.js` style checks or a future test folder
-- Config if needed: `src/config/` and `src/lib/`
+- Primary code: place route entry points under `src/app/[lang]/...` and shared UI in `src/components/<feature>/`.
+- Tests and checks: place or update verification scripts under `scripts/` and content coverage in the relevant data modules.
 
 **New Component/Module:**
-- Implementation: `src/components/<area>/`
-- Types: `src/types/` or colocated `type` declarations
-- Tests: script-level verification or a future `tests/` tree
-
-**New Route:**
-- Definition: `src/app/[lang]/.../page.tsx` or `src/app/.../page.tsx`
-- Shared helpers: `src/lib/`
-- Metadata: route-local `generateMetadata()` plus `src/lib/seo.ts`
+- Implementation: keep page sections in `src/components/home/`, FAQ widgets in `src/components/faq/`, comparison views in `src/components/compare/`, tech-center views in `src/components/tech-center/`, and shared primitives in `src/components/ui/` or `src/components/icons/`.
 
 **Utilities:**
-- Shared helpers: `src/lib/`
-- Type definitions: `src/types/`
-- Locale data: `src/locales/`
+- Shared helpers: place locale, SEO, routing, and analytics helpers in `src/lib/`.
+- Locale copy: add dictionaries in `src/locales/` and wire them through `src/lib/i18n.ts` and `src/config/site.ts`.
+
+**Content Pages:**
+- FAQ content: update `src/faq/en.ts`, `src/faq/zh.ts`, `src/faq/w2.ts`, and overlay maps in `src/faq/legacyCategories.ts` or `src/faq/legacyMeta.ts`.
+- Tech-center content: add markdown to `src/content/tech-center/<category>/`, then refresh `src/components/tech-center/entries.json` and `src/lib/tech-center-content.ts`.
+- Comparison content: add markdown to `content/competitors/*.md`, then update `src/content/competitor/*.ts` and `src/content/competitor/loader.ts` if the shape changes.
+
+**Media and Static Files:**
+- Images and previews: place assets in `public/images/...`.
+- Search-engine files: place locale `llms.txt` files in `public/`.
 
 ## Special Directories
 
-**public/**
-- Purpose: static assets and deployment support files
-- Source: authored assets and generated redirects
-- Committed: yes
+**`public/`:**
+- Purpose: direct static serving for images, previews, `llms.txt`, redirects, and headers.
+- Generated: no.
+- Committed: yes.
 
-**.cache/**
-- Purpose: local runtime cache for GitHub stars
-- Source: created by `src/lib/githubStars.ts`
-- Committed: no
+**`content/competitors/`:**
+- Purpose: source markdown for comparison pages.
+- Generated: no.
+- Committed: yes.
 
-**out/**
-- Purpose: static export artifact
-- Source: generated by `next build`
-- Committed: no
+**`src/content/tech-center/`:**
+- Purpose: markdown corpus for the tech center knowledge base.
+- Generated: no.
+- Committed: yes.
 
-**src/content/tech-center/**
-- Purpose: long-form technical content source
-- Source: authored markdown and registry data
-- Committed: yes
+**`scripts/`:**
+- Purpose: repo automation and verification helpers.
+- Generated: no.
+- Committed: yes.
+
+**`.planning/codebase/`:**
+- Purpose: generated repository maps for GSD planning phases.
+- Generated: yes.
+- Committed: yes.
 
 ---
 
 *Structure analysis: 2026-08-10*
-*Update when directory structure changes*

@@ -12,6 +12,12 @@ const baseUrls = {
 };
 const baseUrl = baseUrls[variant];
 const faqId = 'Why-are-enterprises-paying-more';
+const compareSlugs = [
+  'dify-vs-fastgpt',
+  'ragflow-vs-fastgpt',
+  'maxkb-vs-fastgpt',
+  'self-build-vs-platform'
+];
 const localePaths = {
   en: '',
   'zh-CN': '',
@@ -46,6 +52,15 @@ function getAttribute(tag, attribute) {
   return tag.match(new RegExp(`\\s${attribute}="([^"]*)"`, 'i'))?.[1];
 }
 
+function getTitle(html) {
+  return html.match(/<title>([^<]+)<\/title>/i)?.[1] || '';
+}
+
+function getMetaDescription(html) {
+  const meta = getTags(html, 'meta').find((tag) => getAttribute(tag, 'name') === 'description');
+  return getAttribute(meta || '', 'content') || '';
+}
+
 function getCanonical(html, route) {
   const tag = getTags(html, 'link').find(
     (candidate) => getAttribute(candidate, 'rel') === 'canonical'
@@ -65,7 +80,7 @@ function getAlternates(html) {
 
 function expectedLocaleUrl(language, pathSuffix) {
   const suffix = pathSuffix || '';
-  if (language === 'zh-CN') return `${baseUrls.cn}${suffix}`;
+  if (language === 'zh' || language === 'zh-CN') return `${baseUrls.cn}${suffix}`;
   if (language === 'en') return `${baseUrls.io}${suffix}`;
   return `${baseUrls.io}${localePaths[language]}${suffix}`;
 }
@@ -148,6 +163,40 @@ function verifySitemap() {
   assert(urls.includes(`${baseUrl}/price`), 'Sitemap is missing the canonical pricing URL');
   assert(urls.includes(`${baseUrl}/faq`), 'Sitemap is missing the canonical FAQ URL');
   assert(urls.includes(`${baseUrl}/faq/${faqId}`), 'Sitemap is missing a canonical FAQ detail URL');
+  assert(urls.includes(`${baseUrl}/compare`), 'Sitemap is missing the canonical compare hub URL');
+  for (const slug of compareSlugs) {
+    assert(
+      urls.includes(`${baseUrl}/compare/${slug}`),
+      `Sitemap is missing the canonical compare URL for ${slug}`
+    );
+  }
+}
+
+function verifyCompareMetadataLengths() {
+  if (variant !== 'io') return;
+
+  const routes = ['/compare', ...compareSlugs.map((slug) => `/compare/${slug}`)];
+  for (const route of routes) {
+    const html = resolveHtml(route);
+    const title = getTitle(html);
+    const description = getMetaDescription(html);
+    assert(
+      title.length >= 50 && title.length <= 60,
+      `Title for ${route} is outside the target range: ${title.length}`
+    );
+    assert(
+      description.length >= 150 && description.length <= 160,
+      `Description for ${route} is outside the target range: ${description.length}`
+    );
+  }
+}
+
+function verifyComparePages() {
+  const compareLanguages = ['en', 'zh', 'zh-CN'];
+  verifyPage('/compare', '/compare', compareLanguages);
+  for (const slug of compareSlugs) {
+    verifyPage(`/compare/${slug}`, `/compare/${slug}`, compareLanguages);
+  }
 }
 
 function main() {
@@ -160,6 +209,8 @@ function main() {
   verifyPage('/price', '/price', pageLanguages);
   verifyPage('/faq', '/faq', faqLanguages);
   verifyPage(`/faq/${faqId}`, `/faq/${faqId}`, faqLanguages);
+  verifyComparePages();
+  verifyCompareMetadataLengths();
   verifySitemap();
 
   console.log(`i18n SEO verification passed for ${variant} (${baseUrl})`);

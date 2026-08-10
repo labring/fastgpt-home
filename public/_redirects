@@ -6,6 +6,8 @@
 /zh/faq/* https://fastgpt.cn/faq/:splat 301
 /zh/faq/ https://fastgpt.cn/faq 301
 /zh/faq https://fastgpt.cn/faq 301
+/zh/compare/ https://fastgpt.cn/compare 301
+/zh/compare https://fastgpt.cn/compare 301
 /zh/compare/*/ https://fastgpt.cn/compare/:splat 301
 /zh/compare/* https://fastgpt.cn/compare/:splat 301
 /zh/ https://fastgpt.cn/ 301

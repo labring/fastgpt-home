@@ -4,6 +4,7 @@ import { ArrowDownRight, ArrowLeft, ArrowRight, ExternalLink } from 'lucide-reac
 import type { ComparisonPage as ComparisonPageData, MarkdownBlock } from '@/content/competitor';
 import { getDefaultLocalePath, getFaqPath } from '@/lib/localizedRoutes';
 import ComparisonTables from './ComparisonTables';
+import { getComparisonCopy } from './comparisonCopy';
 
 function getInternalLinkHref(target: string, locale: string) {
   const path = locale === 'zh' && target.startsWith('/zh/') ? target.slice('/zh'.length) : target;
@@ -15,10 +16,10 @@ function sectionAnchorId(index: number) {
 }
 
 function sectionNavLabel(title: string) {
-  return title.replace(/^\d+\.\s*/, '').split('：')[0] || title;
+  return title.replace(/^\d+\.\s*/, '').split(/[:：]/)[0] || title;
 }
 
-function renderBlock(block: MarkdownBlock, key: string) {
+function renderBlock(block: MarkdownBlock, key: string, locale: ComparisonPageData['lang']) {
   if (block.type === 'paragraph') return <p key={key}>{block.text}</p>;
   if (block.type === 'quote') return <blockquote key={key}>{block.text}</blockquote>;
   if (block.type === 'list') {
@@ -28,7 +29,7 @@ function renderBlock(block: MarkdownBlock, key: string) {
     const Heading = block.level === 3 ? 'h3' : 'h4';
     return <Heading key={key}>{block.text}</Heading>;
   }
-  if (block.type === 'table' && block.table) return <ComparisonTables key={key} table={block.table} />;
+  if (block.type === 'table' && block.table) return <ComparisonTables key={key} table={block.table} locale={locale} />;
   return null;
 }
 
@@ -41,19 +42,22 @@ function PageImage({ page }: { page: ComparisonPageData }) {
   );
 }
 
-export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPageData; homeLabel: string }) {
+export default function ComparisonPage({ page }: { page: ComparisonPageData }) {
+  const copy = getComparisonCopy(page.lang);
+  const pageCopy = page.ctaCopy || {};
+
   return (
     <>
       {page.status === 'preview' && (
         <div className="comparison-preview-banner" role="status">
-          内容预览 · 页面状态待确认
+          {copy.previewBanner}
         </div>
       )}
       <div className="comparison-page-inner">
         <div className="comparison-topline">
-          <Link href={getFaqPath('zh')} className="comparison-back-link">
+          <Link href={getFaqPath(page.lang)} className="comparison-back-link">
             <ArrowLeft aria-hidden="true" size={15} />
-            <span>{homeLabel}</span>
+            <span>{copy.backLabel}</span>
           </Link>
           <span className="comparison-topline-code">FASTGPT / COMPARE</span>
         </div>
@@ -62,13 +66,13 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
           <div className="comparison-hero-copy">
             <p className="comparison-eyebrow">
               <span className="comparison-eyebrow-mark" aria-hidden="true" />
-              <span>FastGPT 选型指南</span>
+              <span>{copy.heroEyebrow}</span>
             </p>
             <h1>{page.title}</h1>
             <p className="comparison-dek">{page.heroSummary}</p>
             <div className="comparison-hero-actions">
               <a className="comparison-button comparison-button-primary" href={`#${sectionAnchorId(1)}`}>
-                <span>查看能力矩阵</span>
+                <span>{pageCopy.primaryHeroCta || copy.primaryHeroCta}</span>
                 <ArrowDownRight aria-hidden="true" size={16} />
               </a>
               <a
@@ -77,14 +81,21 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
                 target="_blank"
                 rel="noreferrer"
               >
-                <span>打开官方资料</span>
+                <span>{pageCopy.secondaryHeroCta || copy.secondaryHeroCta}</span>
                 <ExternalLink aria-hidden="true" size={15} />
               </a>
             </div>
+            {!!page.trustSignals?.length && (
+              <div className="comparison-trust-strip" aria-label={copy.trustStripAriaLabel}>
+                {page.trustSignals.map((signal) => (
+                  <span key={signal}>{signal}</span>
+                ))}
+              </div>
+            )}
           </div>
           <div className="comparison-hero-side">
             <div className="comparison-hero-side-head">
-              <span>选型速览</span>
+              <span>{copy.heroSideLabel}</span>
               <span>01—{String(page.sections.length).padStart(2, '0')}</span>
             </div>
             <div className="comparison-hero-highlights">
@@ -99,8 +110,8 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
           </div>
         </header>
 
-        <nav className="comparison-toc" aria-label="页面章节导航">
-          <span className="comparison-toc-label">比较维度</span>
+        <nav className="comparison-toc" aria-label={copy.tocAriaLabel}>
+          <span className="comparison-toc-label">{copy.tocLabel}</span>
           {page.sections.map((section, index) => (
             <a href={`#${sectionAnchorId(index)}`} key={section.id}>
               <span>{String(index + 1).padStart(2, '0')}</span>
@@ -111,11 +122,24 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
 
         <div className="comparison-intro-grid">
           <aside className="comparison-intro-lead">
-            <span className="comparison-section-kicker">核心判断</span>
-            <h3>按项目约束做选择</h3>
+            <span className="comparison-section-kicker">{copy.coreKicker}</span>
+            <h3>{copy.coreTitle}</h3>
           </aside>
           <div className="comparison-intro">
-            {page.intro.map((block, index) => renderBlock(block, `intro-${index}`))}
+            {page.intro.map((block, index) => renderBlock(block, `intro-${index}`, page.lang))}
+            {!!page.contextualLinks?.length && (
+              <nav className="comparison-context-links" aria-label={copy.contextLinksAriaLabel}>
+                <span>{copy.contextLinksLabel}</span>
+                <div>
+                  {page.contextualLinks.map((link) => (
+                    <a href={getInternalLinkHref(link.target, link.locale)} key={`${link.target}-${link.label}`}>
+                      {link.label}
+                      <ArrowRight aria-hidden="true" size={14} />
+                    </a>
+                  ))}
+                </div>
+              </nav>
+            )}
           </div>
         </div>
 
@@ -128,7 +152,7 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
                 <h2>{section.title}</h2>
               </div>
               <div className="comparison-section-content">
-                {section.blocks.map((block, blockIndex) => renderBlock(block, `${section.id}-${blockIndex}`))}
+                {section.blocks.map((block, blockIndex) => renderBlock(block, `${section.id}-${blockIndex}`, page.lang))}
               </div>
             </section>
           ))}
@@ -136,11 +160,11 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
 
         <section className="comparison-link-panel" aria-labelledby="comparison-next-step">
           <div className="comparison-link-lead">
-            <span className="comparison-section-kicker">继续核对</span>
-            <h3 id="comparison-next-step">查看部署与采购细节</h3>
+            <span className="comparison-section-kicker">{copy.nextStepKicker}</span>
+            <h3 id="comparison-next-step">{pageCopy.nextStepTitle || copy.nextStepTitle}</h3>
           </div>
           <div className="comparison-link-content">
-            <p>从私有化、许可和 POC 清单继续核对落地条件。</p>
+            <p>{pageCopy.nextStepDescription || copy.nextStepDescription}</p>
             <div className="comparison-link-grid">
               {page.internalLinks.map((link) => (
                 <a href={getInternalLinkHref(link.target, link.locale)} key={`${link.target}-${link.label}`}>
@@ -152,18 +176,18 @@ export default function ComparisonPage({ page, homeLabel }: { page: ComparisonPa
           </div>
         </section>
 
-        <section className="comparison-cta" aria-label="继续核验">
+        <section className="comparison-cta" aria-label={copy.ctaAriaLabel}>
           <div>
-            <span className="comparison-section-kicker">FastGPT / compare</span>
-            <h3>把关键指标写进验收表</h3>
+            <span className="comparison-section-kicker">{copy.ctaKicker}</span>
+            <h3>{pageCopy.ctaTitle || copy.ctaTitle}</h3>
           </div>
           <div className="comparison-cta-actions">
             <a className="comparison-button comparison-button-primary" href={`#${sectionAnchorId(3)}`}>
-              <span>设计同条件 POC</span>
+              <span>{pageCopy.ctaButton || copy.ctaButton}</span>
               <ArrowRight aria-hidden="true" size={16} />
             </a>
             <a className="comparison-cta-text-link" href={page.officialSource} target="_blank" rel="noreferrer">
-              官方资料入口
+              {copy.officialSourceLink}
               <ExternalLink aria-hidden="true" size={14} />
             </a>
           </div>

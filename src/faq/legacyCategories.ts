@@ -29,7 +29,7 @@ export type LegacyCategoryId = keyof typeof legacyCategoryLabels.en;
 
 // Direct-publish override: apply every uniquely matched runtime row from the W2 source report.
 // Source SHA-256: 751a479680bfc987b9394c7429100d8f09269cc7ad8a698ff97b34415a6733b0
-// Runtime coverage: 1394 rows; unresolved source rows remain absent from this static runtime.
+// Runtime coverage: 1400 rows; this pass fills the last 6 gaps in the static runtime.
 export const legacyFaqCategoryIds: Record<string, LegacyCategoryId> = {
   "Can-AI-intelligent-customer-service": "customer-service-and-support",
   "What-practical-problems-can-AI": "platform-value-and-trends",
@@ -1425,6 +1425,12 @@ export const legacyFaqCategoryIds: Record<string, LegacyCategoryId> = {
   "How-to-make-AI-Agents": "deployment-and-security",
   "Can-AI-Agents-automatically-report": "deployment-and-security",
   "How-does-the-AI-Agent": "deployment-and-security",
+  "What-is-the-difference-between": "concepts-and-selection",
+  "Can-AI-automatically-generate-data": "deployment-and-security",
+  "What-does-Prompt-Engineering-mean?": "concepts-and-selection",
+  "Can-AI-analyze-competitors'-marketing": "data-and-document-processing",
+  "Can-AI-help-me-write": "content-and-creativity",
+  "How-to-ensure-the-long-term": "integration-and-development",
 };
 
 export function applyLegacyCategoryOverlay(

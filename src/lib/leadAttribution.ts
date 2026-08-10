@@ -14,7 +14,30 @@
  * channel_l1 为 canonical key（后端 / 飞书侧做中文映射），channel_l2 为具体来源名。
  */
 
-import { getVisitorId } from '@/lib/visitorId';
+import {
+  clearAttribution as clearStoredAttribution,
+  getAttributionStorageStatus as getStoredAttributionStatus,
+  loadAttributionSnapshot,
+  saveAttributionSnapshot,
+  type AttributionStorageStatusSnapshot
+} from '@/lib/attribution/storage/adapter';
+import {
+  emitStorageDiagnostics,
+  getConfiguredCookieDomain,
+  getStorageOptions
+} from '@/lib/attribution/config';
+import { resolveCookieDomain } from '@/lib/attribution/primitives/domain';
+import { canonicalizeUrl } from '@/lib/attribution/primitives/url';
+import { getVisitorId, resetGeneratedVisitorId } from '@/lib/visitorId';
+
+export {
+  configureAttribution,
+  type AttributionConfiguration,
+  type AttributionDiagnosticCallback,
+  type AttributionDiagnosticEvent,
+  type AttributionDiagnosticKind,
+  type AttributionDiagnosticScope
+} from '@/lib/attribution/config';
 
 export { getVisitorId } from '@/lib/visitorId';
 
@@ -51,7 +74,7 @@ export interface StoredAttribution {
   last: TouchPoint;
 }
 
-/** 表单提交时并入 body 的扁平归因字段 */
+/** 匿名追踪上报时并入 body 的扁平归因字段 */
 export interface AttributionPayload {
   visitor_id: string;
   first_touch_channel: string;
@@ -72,9 +95,24 @@ export interface AttributionPayload {
   referrer_url: string;
 }
 
-const STORAGE_KEY = 'xs_attr';
 const REPORTED_ATTRIBUTION_KEY = 'fastgpt_reported_attribution';
 let pendingAttributionReport: Promise<void> | undefined;
+
+function getReportedAttributionSnapshot(): string {
+  try {
+    return window.localStorage.getItem(REPORTED_ATTRIBUTION_KEY) || '';
+  } catch {
+    return '';
+  }
+}
+
+function saveReportedAttributionSnapshot(snapshot: string): void {
+  try {
+    window.localStorage.setItem(REPORTED_ATTRIBUTION_KEY, snapshot);
+  } catch {
+    /* ignore */
+  }
+}
 
 // 域名关键词 → 来源名（取域名里命中的第一个）
 const SEARCH_ENGINES: [string, string][] = [
@@ -165,8 +203,8 @@ export function classifyVisit(input: {
     utm_term,
     utm_content,
     click_id,
-    referrer: input.referrer || '',
-    landing_url: input.landingUrl,
+    referrer: input.referrer ? canonicalizeUrl(input.referrer) : '',
+    landing_url: canonicalizeUrl(input.landingUrl),
     at: input.now
   };
 
@@ -234,14 +272,38 @@ export function classifyVisit(input: {
   return make('direct', '', false);
 }
 
-function safeGet(): StoredAttribution | null {
+function isInternalReferrer(referrer: string): boolean {
   try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    return JSON.parse(raw) as StoredAttribution;
+    const referrerUrl = new URL(referrer);
+    if (referrerUrl.origin === window.location.origin) return true;
+    const decision = resolveCookieDomain(getConfiguredCookieDomain(), window.location.hostname);
+    if (decision.scope !== 'shared') return false;
+    const referrerHost = referrerUrl.hostname.toLowerCase();
+    return (
+      referrerHost === decision.normalizedDomain ||
+      referrerHost.endsWith(`.${decision.normalizedDomain}`)
+    );
   } catch {
-    return null;
+    return false;
   }
+}
+
+function loadStoredAttribution(): StoredAttribution | null {
+  const result = loadAttributionSnapshot(getStorageOptions());
+  emitStorageDiagnostics(result);
+  return result.value;
+}
+
+/** Remove all attribution state from both Cookie scopes and legacy compatibility storage. */
+export function clearAttribution(): void {
+  const result = clearStoredAttribution(getStorageOptions());
+  emitStorageDiagnostics(result);
+  resetGeneratedVisitorId();
+}
+
+/** Return the current bounded storage channel and internal reason code. */
+export function getAttributionStorageStatus(): AttributionStorageStatusSnapshot {
+  return getStoredAttributionStatus();
 }
 
 /**
@@ -256,7 +318,7 @@ export function trackVisit(): void {
     let referrer = document.referrer || '';
     // 站内跳转：referrer 与当前同 origin → 当作无来源，避免把站内点击记成 Referral
     try {
-      if (referrer && new URL(referrer).origin === window.location.origin) {
+      if (referrer && isInternalReferrer(referrer)) {
         referrer = '';
       }
     } catch {
@@ -270,7 +332,7 @@ export function trackVisit(): void {
       now
     });
 
-    const stored = safeGet();
+    const stored = loadStoredAttribution();
 
     // first_touch：只在第一次写入
     const first = stored?.first ?? current;
@@ -282,13 +344,14 @@ export function trackVisit(): void {
     }
 
     const next: StoredAttribution = { visitor_id, first, last };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(next));
+    const result = saveAttributionSnapshot(next, getStorageOptions());
+    emitStorageDiagnostics(result);
   } catch {
     /* 归因失败绝不影响页面 */
   }
 }
 
-/** 表单提交时取扁平归因字段；无数据时返回全空（后端按 Direct 兜底）。 */
+/** 匿名追踪上报时取扁平归因字段；无数据时返回全空（后端按 Direct 兜底）。 */
 export function getAttributionPayload(): AttributionPayload {
   const empty: AttributionPayload = {
     visitor_id: '',
@@ -311,7 +374,7 @@ export function getAttributionPayload(): AttributionPayload {
   };
   if (typeof window === 'undefined') return empty;
 
-  const stored = safeGet();
+  const stored = loadStoredAttribution();
   const visitor_id = getVisitorId();
   if (!stored) return { ...empty, visitor_id };
 
@@ -338,7 +401,7 @@ export function getAttributionPayload(): AttributionPayload {
   };
 }
 
-/** 归因变化时将匿名访客提交到 CRM；未配置地址或当前快照已提交成功时跳过。 */
+/** Submit anonymous attribution to CRM after the local browser snapshot changes. */
 export function reportAnonymousAttribution(): Promise<void> {
   if (typeof window === 'undefined') return Promise.resolve();
   if (pendingAttributionReport) return pendingAttributionReport;
@@ -351,8 +414,9 @@ export function reportAnonymousAttribution(): Promise<void> {
       trackVisit();
       const attribution = getAttributionPayload();
       if (!attribution.visitor_id) return;
+
       const attributionSnapshot = JSON.stringify(attribution);
-      if (localStorage.getItem(REPORTED_ATTRIBUTION_KEY) === attributionSnapshot) return;
+      if (getReportedAttributionSnapshot() === attributionSnapshot) return;
 
       const response = await fetch(`${crmApiUrl}/visitors/track`, {
         method: 'POST',
@@ -365,10 +429,10 @@ export function reportAnonymousAttribution(): Promise<void> {
       });
 
       if (response.ok) {
-        localStorage.setItem(REPORTED_ATTRIBUTION_KEY, attributionSnapshot);
+        saveReportedAttributionSnapshot(attributionSnapshot);
       }
     } catch {
-      // 归因上报失败不能影响官网访问，后续页面加载会重试。
+      /* ignore */
     }
   })().finally(() => {
     pendingAttributionReport = undefined;

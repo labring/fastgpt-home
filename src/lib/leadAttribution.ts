@@ -21,22 +21,14 @@ import {
   saveAttributionSnapshot,
   type AttributionStorageStatusSnapshot
 } from '@/lib/attribution/storage/adapter';
-import {
-  emitStorageDiagnostics,
-  getConfiguredCookieDomain,
-  getStorageOptions
-} from '@/lib/attribution/config';
+import { getConfiguredCookieDomain, getStorageOptions } from '@/lib/attribution/config';
 import { resolveCookieDomain } from '@/lib/attribution/primitives/domain';
 import { canonicalizeUrl } from '@/lib/attribution/primitives/url';
 import { getVisitorId, resetGeneratedVisitorId } from '@/lib/visitorId';
 
 export {
   configureAttribution,
-  type AttributionConfiguration,
-  type AttributionDiagnosticCallback,
-  type AttributionDiagnosticEvent,
-  type AttributionDiagnosticKind,
-  type AttributionDiagnosticScope
+  type AttributionConfiguration
 } from '@/lib/attribution/config';
 
 export { getVisitorId } from '@/lib/visitorId';
@@ -290,14 +282,12 @@ function isInternalReferrer(referrer: string): boolean {
 
 function loadStoredAttribution(): StoredAttribution | null {
   const result = loadAttributionSnapshot(getStorageOptions());
-  emitStorageDiagnostics(result);
   return result.value;
 }
 
 /** Remove all attribution state from both Cookie scopes and legacy compatibility storage. */
 export function clearAttribution(): void {
-  const result = clearStoredAttribution(getStorageOptions());
-  emitStorageDiagnostics(result);
+  clearStoredAttribution(getStorageOptions());
   resetGeneratedVisitorId();
 }
 
@@ -344,8 +334,7 @@ export function trackVisit(): void {
     }
 
     const next: StoredAttribution = { visitor_id, first, last };
-    const result = saveAttributionSnapshot(next, getStorageOptions());
-    emitStorageDiagnostics(result);
+    saveAttributionSnapshot(next, getStorageOptions());
   } catch {
     /* 归因失败绝不影响页面 */
   }

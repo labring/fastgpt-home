@@ -14,11 +14,7 @@ const LeadAttribution = () => {
             storageMode:
               process.env.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE === 'localStorage'
                 ? 'localStorage'
-                : 'cookie',
-            diagnostics:
-              process.env.NEXT_PUBLIC_ATTRIBUTION_DIAGNOSTICS === 'console'
-                ? (event) => console.info('FastGPT attribution diagnostic', event)
-                : undefined
+                : 'cookie'
           });
           void reportAnonymousAttribution();
         }

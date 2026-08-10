@@ -7,7 +7,6 @@ export type DomainReason =
   | 'unsafe-ip'
   | 'unsafe-loopback'
   | 'unsafe-localhost'
-  | 'public-suffix'
   | 'non-suffix'
   | 'invalid-current-host';
 
@@ -21,30 +20,6 @@ export type DomainDecision =
   | { scope: 'host'; domain: null; normalizedDomain: string; reason: DomainReason };
 
 const DEFAULT_DOMAIN = '.fastgpt.io';
-const PUBLIC_SUFFIX_LIKE = new Set([
-  'co.uk',
-  'com.cn',
-  'com.au',
-  'co.jp',
-  'co.kr',
-  'co.nz',
-  'co.in',
-  'co.id',
-  'co.th',
-  'co.za',
-  'co.il',
-  'co.tr',
-  'co.ph',
-  'co.ug',
-  'com.hk',
-  'com.sg',
-  'com.br',
-  'com.tw',
-  'com.mx',
-  'com.my',
-  'co.ve',
-  'com.ar'
-]);
 
 function isIpv4(host: string): boolean {
   return /^(25[0-5]|2[0-4]\d|1?\d?\d)(?:\.(25[0-5]|2[0-4]\d|1?\d?\d)){3}$/.test(host);
@@ -85,8 +60,7 @@ function normalizeDomain(value: string): { domain: string; reason?: DomainReason
     };
   if (isIpv4(domain)) return { domain: '', reason: 'unsafe-ip' };
   if (domain.startsWith('[') && domain.endsWith(']')) return { domain: '', reason: 'unsafe-ip' };
-  if (PUBLIC_SUFFIX_LIKE.has(domain)) return { domain: '', reason: 'public-suffix' };
-  if (!domain.includes('.')) return { domain: '', reason: 'public-suffix' };
+  if (!domain.includes('.')) return { domain: '', reason: 'invalid-syntax' };
   if (!/^[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\.[a-z0-9](?:[a-z0-9-]*[a-z0-9])?)+$/.test(domain)) {
     return { domain: '', reason: 'invalid-syntax' };
   }

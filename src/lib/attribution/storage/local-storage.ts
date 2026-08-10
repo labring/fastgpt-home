@@ -6,8 +6,6 @@ import type { StorageResult } from './status';
 export const LEGACY_ATTRIBUTION_KEY = 'xs_attr';
 export const LEGACY_VISITOR_ID_KEY = 'fastgpt_visitor_id';
 
-export type LegacyAttributionValue = StoredAttribution | StoredAttributionV1;
-
 function getStorage(): Storage | null {
   if (typeof window === 'undefined') return null;
   try {
@@ -50,8 +48,8 @@ export function readLegacyAttribution(): StorageResult<StoredAttributionV1> {
 }
 
 export function writeLegacyAttribution(
-  value: LegacyAttributionValue
-): StorageResult<LegacyAttributionValue> {
+  value: StoredAttribution
+): StorageResult<StoredAttribution> {
   const storage = getStorage();
   if (!storage) return buildFailure('localStorage-blocked');
   try {

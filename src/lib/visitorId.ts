@@ -1,8 +1,5 @@
-import { emitStorageDiagnostics, getStorageOptions } from '@/lib/attribution/config';
-import {
-  getAttributionStorageStatus,
-  loadStoredVisitorId
-} from '@/lib/attribution/storage/adapter';
+import { getStorageOptions } from '@/lib/attribution/config';
+import { loadStoredVisitorId } from '@/lib/attribution/storage/adapter';
 import { LEGACY_VISITOR_ID_KEY } from '@/lib/attribution/storage/local-storage';
 
 const VISITOR_ID_MAX_LENGTH = 64;
@@ -52,7 +49,6 @@ export function getVisitorId(): string {
 
   try {
     const storedVisitorId = normalizeVisitorId(loadStoredVisitorId(getStorageOptions()));
-    emitStorageDiagnostics(getAttributionStorageStatus());
     if (storedVisitorId) {
       syncVisitorId(storedVisitorId);
       return storedVisitorId;

@@ -64,11 +64,20 @@ export async function generateMetadata({
 
   const canonical = getOwnedLocaleUrl('zh', article.slug);
   const baseUrl = new URL(canonical).origin;
-  const title = `${article.title}｜FastGPT 技术中心`;
+  const title = article.metaTitle;
+  const openGraphImage = article.image
+    ? {
+        url: `${baseUrl}${article.image.path}`,
+        width: article.image.width,
+        height: article.image.height,
+        alt: article.image.alt
+      }
+    : { url: `${baseUrl}/opengraph-image.png` };
 
   return {
     title,
     description: article.seoDescription,
+    ...(article.keywords.length ? { keywords: article.keywords } : {}),
     robots: { index: true, follow: true },
     alternates: { canonical },
     openGraph: {
@@ -77,13 +86,15 @@ export async function generateMetadata({
       type: 'article',
       locale: 'zh_CN',
       url: canonical,
-      images: [{ url: `${baseUrl}/opengraph-image.png` }]
+      ...(article.datePublished ? { publishedTime: article.datePublished } : {}),
+      ...(article.dateModified ? { modifiedTime: article.dateModified } : {}),
+      images: [openGraphImage]
     },
     twitter: {
       card: 'summary_large_image',
       title,
       description: article.seoDescription,
-      images: [`${baseUrl}/twitter-image.png`]
+      images: [article.image ? openGraphImage.url : `${baseUrl}/twitter-image.png`]
     }
   };
 }

@@ -7,6 +7,17 @@ import { TECH_ENTRIES, type TechEntry } from '@/components/tech-center/data';
 const CONTENT_ROOT = path.join(process.cwd(), 'src/content/tech-center');
 
 export type TechArticle = TechEntry & {
+  contentType: 'Article' | 'TechArticle';
+  dateModified?: string;
+  datePublished?: string;
+  image?: {
+    alt: string;
+    height: number;
+    path: string;
+    width: number;
+  };
+  keywords: string[];
+  metaTitle: string;
   pageType: string;
   markdown: string;
   seoDescription: string;
@@ -133,9 +144,27 @@ function readTechArticle(entry: TechEntry): TechArticle {
 
   return {
     ...entry,
+    contentType: metadata.schema_type === 'Article' ? 'Article' : 'TechArticle',
+    dateModified: metadata.date_modified,
+    datePublished: metadata.date_published,
+    image: metadata.image
+      ? {
+          alt: metadata.image_alt || entry.title,
+          height: Number(metadata.image_height) || 630,
+          path: metadata.image,
+          width: Number(metadata.image_width) || 1200
+        }
+      : undefined,
+    keywords: metadata.keywords
+      ? metadata.keywords
+          .split(',')
+          .map((keyword) => keyword.trim())
+          .filter(Boolean)
+      : [],
+    metaTitle: metadata.meta_title || `${entry.title}｜FastGPT 技术中心`,
     pageType: metadata.page_type || entry.categoryLabel,
     markdown: body,
-    seoDescription: getTechArticleDescription(entry, body)
+    seoDescription: metadata.meta_description || getTechArticleDescription(entry, body)
   };
 }
 
@@ -144,13 +173,17 @@ export function getTechArticle(section: string, slug: string) {
   return entry ? readTechArticle(entry) : null;
 }
 
-export function getTechArticleLastModified(article: Pick<TechEntry, 'slug'>) {
-  return fs.statSync(getEntryPath(article)).mtime;
+export function getTechArticleLastModified(article: TechEntry) {
+  const fileModified = fs.statSync(getEntryPath(article)).mtime;
+  if (article.sourceType !== '深度场景内容') return fileModified;
+
+  const dateModified = readTechArticle(article).dateModified;
+  return dateModified ? new Date(`${dateModified}T00:00:00Z`) : fileModified;
 }
 
 export function getTechCenterLastModified() {
   return new Date(
-    Math.max(...TECH_ENTRIES.map((entry) => fs.statSync(getEntryPath(entry)).mtimeMs))
+    Math.max(...TECH_ENTRIES.map((entry) => getTechArticleLastModified(entry).getTime()))
   );
 }
 

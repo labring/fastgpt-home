@@ -1,5 +1,6 @@
 import type { ComponentProps } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowUpRight, Workflow } from 'lucide-react';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
@@ -64,32 +65,46 @@ export default function TechArticlePage({
               <span className={styles.badge}>{article.categoryLabel}</span>
               <span className={`${styles.badge} ${styles.sourceBadge}`}>{article.sourceType}</span>
               <span>{article.minutes} 分钟阅读</span>
-              <span>{article.pageType}</span>
+              {article.pageType !== article.sourceType && <span>{article.pageType}</span>}
             </div>
             <h1>{article.title}</h1>
             <p className={styles.summary}>{article.seoDescription}</p>
           </header>
 
-          <div className={styles.layout}>
+          <div className={`${styles.layout} ${article.image ? styles.layoutWithHero : ''}`}>
+            {article.image && (
+              <figure className={styles.heroFigure}>
+                <Image
+                  src={article.image.path}
+                  alt={article.image.alt}
+                  width={article.image.width}
+                  height={article.image.height}
+                  priority
+                />
+                <figcaption>{article.image.alt}</figcaption>
+              </figure>
+            )}
             <article className={styles.article}>
               <MarkdownContent markdown={article.markdown} title={article.title} />
-              <footer className={styles.sourceFooter} aria-label="本文来源">
-                <span className={styles.sourceLabel}>本文来源</span>
-                <span className={styles.sourceType}>{article.sourceType}</span>
-                <a
-                  className={styles.sourceLink}
-                  href={article.source}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>查看原始来源</span>
-                  <ArrowUpRight
-                    className={styles.sourceIcon}
-                    strokeWidth={1.8}
-                    aria-hidden="true"
-                  />
-                </a>
-              </footer>
+              {article.source && (
+                <footer className={styles.sourceFooter} aria-label="本文来源">
+                  <span className={styles.sourceLabel}>本文来源</span>
+                  <span className={styles.sourceType}>{article.sourceType}</span>
+                  <a
+                    className={styles.sourceLink}
+                    href={article.source}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <span>查看原始来源</span>
+                    <ArrowUpRight
+                      className={styles.sourceIcon}
+                      strokeWidth={1.8}
+                      aria-hidden="true"
+                    />
+                  </a>
+                </footer>
+              )}
               {relatedArticles.length > 0 && (
                 <section className={styles.related} aria-labelledby="related-title">
                   <div className={styles.relatedHeader}>

@@ -68,6 +68,7 @@ export function TechArticleJsonLd({
   const hubUrl = getOwnedLocaleUrl('zh', '/tech-center');
   const siteUrl = new URL(articleUrl).origin;
   const homeUrl = getOwnedLocaleUrl('zh');
+  const imageUrl = article.image ? getOwnedLocaleUrl('zh', article.image.path) : undefined;
 
   return (
     <JsonLdScript
@@ -75,13 +76,17 @@ export function TechArticleJsonLd({
         '@context': 'https://schema.org',
         '@graph': [
           {
-            '@type': 'TechArticle',
+            '@type': article.contentType,
             '@id': `${articleUrl}#tech-article`,
             url: articleUrl,
             headline: article.title,
             description: article.seoDescription,
             inLanguage: 'zh-CN',
             articleSection: article.categoryLabel,
+            ...(article.datePublished ? { datePublished: article.datePublished } : {}),
+            ...(article.dateModified ? { dateModified: article.dateModified } : {}),
+            ...(imageUrl ? { image: [imageUrl] } : {}),
+            ...(article.keywords.length ? { keywords: article.keywords.join(', ') } : {}),
             author: {
               '@type': 'Organization',
               name: schema.authorName,
@@ -106,7 +111,7 @@ export function TechArticleJsonLd({
               '@type': 'WebPage',
               '@id': articleUrl
             },
-            citation: article.source
+            ...(article.source ? { citation: article.source } : {})
           },
           {
             '@type': 'BreadcrumbList',

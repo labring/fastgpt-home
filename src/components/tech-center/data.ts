@@ -11,14 +11,14 @@ export type TechCategoryKey =
   | 'api';
 
 export type TechCategory = Exclude<TechCategoryKey, 'all'>;
-export type TechSource = '官方文档' | 'GitHub issue';
+export type TechSource = '官方文档' | 'GitHub issue' | '深度场景内容';
 
 export type TechEntry = {
   title: string;
   slug: string;
   category: TechCategory;
   categoryLabel: string;
-  source: string;
+  source?: string;
   sourceType: TechSource;
   summary: string;
   minutes: number;
@@ -37,7 +37,7 @@ export const FEATURED_ENTRY =
   TECH_ENTRIES.find((entry) => entry.slug === '/zh/api/fastgpt-chat-api-guide') || TECH_ENTRIES[0]!;
 
 export const CATEGORY_META: CategoryMeta[] = [
-  { key: 'tutorial', label: '教程', icon: '◎', count: 82 },
+  { key: 'tutorial', label: '教程', icon: '◎', count: 86 },
   { key: 'deploy', label: '部署与升级', icon: '▰', count: 306 },
   { key: 'troubleshoot', label: '故障排查', icon: '◇', count: 196 },
   { key: 'dataset', label: '知识库', icon: '◉', count: 10 },

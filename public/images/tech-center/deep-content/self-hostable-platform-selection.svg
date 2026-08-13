@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">开源 AI 应用平台选型的四个固定变量</title>
+  <desc id="desc">许可证边界、部署门槛、治理能力版本和三年总成本共同汇入同条件 POC。</desc>
+  <rect width="1200" height="630" fill="#f7f9fc"/>
+  <rect x="44" y="36" width="1112" height="558" rx="20" fill="#ffffff" stroke="#dfe4ec" stroke-width="2"/>
+  <text x="80" y="88" fill="#172033" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">平台选型：四个固定比较变量</text>
+  <text x="80" y="119" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17">先缩小候选，再用同条件 POC 验证</text>
+
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif">
+    <rect x="80" y="156" width="492" height="136" rx="14" fill="#f3f6ff" stroke="#b7c9f5" stroke-width="2"/>
+    <rect x="80" y="156" width="10" height="136" rx="5" fill="#326dff"/>
+    <text x="116" y="198" fill="#2458d8" font-size="15" font-weight="700">变量 01</text>
+    <text x="116" y="230" fill="#172033" font-size="23" font-weight="700">许可证边界</text>
+    <text x="116" y="260" fill="#667085" font-size="15">SaaS · 去品牌 · 二次分发</text>
+
+    <rect x="628" y="156" width="492" height="136" rx="14" fill="#eefaf6" stroke="#a9dfce" stroke-width="2"/>
+    <rect x="628" y="156" width="10" height="136" rx="5" fill="#2fcaa0"/>
+    <text x="664" y="198" fill="#17684f" font-size="15" font-weight="700">变量 02</text>
+    <text x="664" y="230" fill="#172033" font-size="23" font-weight="700">部署门槛</text>
+    <text x="664" y="260" fill="#667085" font-size="15">资源下限 · 架构 · 运维栈</text>
+
+    <rect x="80" y="324" width="492" height="136" rx="14" fill="#fff8e8" stroke="#efd491" stroke-width="2"/>
+    <rect x="80" y="324" width="10" height="136" rx="5" fill="#f0b429"/>
+    <text x="116" y="366" fill="#725116" font-size="15" font-weight="700">变量 03</text>
+    <text x="116" y="398" fill="#172033" font-size="23" font-weight="700">治理能力所属版本</text>
+    <text x="116" y="428" fill="#667085" font-size="15">SSO · 权限 · 审计 · 配额</text>
+
+    <rect x="628" y="324" width="492" height="136" rx="14" fill="#f7f3ff" stroke="#d2c8f8" stroke-width="2"/>
+    <rect x="628" y="324" width="10" height="136" rx="5" fill="#8b7cf6"/>
+    <text x="664" y="366" fill="#5443b8" font-size="15" font-weight="700">变量 04</text>
+    <text x="664" y="398" fill="#172033" font-size="23" font-weight="700">三年总成本</text>
+    <text x="664" y="428" fill="#667085" font-size="15">许可 · 模型 · 运维 · 升级 · 退出</text>
+  </g>
+
+  <path d="M326 460V492M874 460V492M326 492H874" fill="none" stroke="#9aa7ba" stroke-width="3"/>
+  <path d="M600 492V514" fill="none" stroke="#9aa7ba" stroke-width="3"/>
+  <path d="M592 506L600 517L608 506" fill="none" stroke="#9aa7ba" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="365" y="514" width="470" height="54" rx="12" fill="#172033"/>
+  <text x="600" y="548" fill="#ffffff" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="19" font-weight="700">同一黄金集 · 同一模型 · 同一机型 · 同一数据量</text>
+  <text x="80" y="574" fill="#8a94a6" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14">FastGPT 深度场景内容</text>
+</svg>

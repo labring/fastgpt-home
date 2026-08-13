@@ -48,7 +48,7 @@ function buildColumns(t: FooterT['columns']): Column[] {
       width: 150,
       items: [
         { label: 'Sealos', href: 'https://sealos.run/?s=%E9%A6%96%E9%A1%B5', external: true },
-        { label: 'AI Proxy', href: 'https://sealos.run/aiproxy/?s=AiProxy', external: true }
+        { label: 'AI Proxy', href: 'https://sealos.run/products/aiproxy', external: true }
       ]
     },
     {

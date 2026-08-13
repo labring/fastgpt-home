@@ -1,5 +1,41 @@
 [
   {
+    "title": "私有化部署企业知识库：组件拓扑、数据流与出站边界怎么定",
+    "slug": "/zh/tutorial/private-deployment-topology",
+    "category": "tutorial",
+    "categoryLabel": "教程",
+    "sourceType": "深度场景内容",
+    "summary": "从组件拓扑、向量库选型、六类出站源三层说明私有化部署的数据边界，给出采购前的数据流确认清单与出站策略验证方法。",
+    "minutes": 10
+  },
+  {
+    "title": "可私有化的开源 AI 应用平台怎么选：四个固定比较变量",
+    "slug": "/zh/tutorial/self-hostable-platform-selection",
+    "category": "tutorial",
+    "categoryLabel": "教程",
+    "sourceType": "深度场景内容",
+    "summary": "用许可证边界、部署门槛、治理能力所属版本与三年总成本四个变量筛选可私有化的开源 AI 应用平台。",
+    "minutes": 12
+  },
+  {
+    "title": "开源版和商业版差在哪：付费买到的功能与服务分别是什么",
+    "slug": "/zh/tutorial/open-source-vs-commercial",
+    "category": "tutorial",
+    "categoryLabel": "教程",
+    "sourceType": "深度场景内容",
+    "summary": "拆分开源版与商业版的功能、服务和治理边界，给出私有部署档位选择与必选、可选、未来需求表。",
+    "minutes": 11
+  },
+  {
+    "title": "企业上智能客服：自建开源方案还是买 SaaS 客服系统",
+    "slug": "/zh/tutorial/ai-support-build-or-buy",
+    "category": "tutorial",
+    "categoryLabel": "教程",
+    "sourceType": "深度场景内容",
+    "summary": "从数据敏感度、业务系统连接和长期运营责任三条依据判断智能客服自建或采购，并给出转人工与分流验证方法。",
+    "minutes": 12
+  },
+  {
     "title": "FastGPT智能体绑定与调用已发布技能的操作说明",
     "slug": "/zh/tutorial/agent-skill-integration",
     "category": "tutorial",

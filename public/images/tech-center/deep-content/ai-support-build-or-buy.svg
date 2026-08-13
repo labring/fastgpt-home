@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">智能客服咨询分流与转人工流程</title>
+  <desc id="desc">咨询经意图识别后分为标准问题自动应答、信息收集工作流和复杂问题带上下文转人工。</desc>
+  <rect width="1200" height="630" fill="#f7f9fc"/>
+  <rect x="44" y="36" width="1112" height="558" rx="20" fill="#ffffff" stroke="#dfe4ec" stroke-width="2"/>
+  <text x="80" y="88" fill="#172033" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">智能客服：咨询分流与转人工</text>
+  <text x="80" y="119" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17">自动化上限由问题结构与人工交接设计共同决定</text>
+
+  <g font-family="PingFang SC, Microsoft YaHei, sans-serif">
+    <rect x="80" y="236" width="180" height="104" rx="52" fill="#f3f6ff" stroke="#b7c9f5" stroke-width="2"/>
+    <circle cx="123" cy="288" r="18" fill="#326dff"/>
+    <path d="M115 288H131M123 280V296" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+    <text x="176" y="282" fill="#172033" text-anchor="middle" font-size="20" font-weight="700">咨询进入</text>
+    <text x="176" y="310" fill="#667085" text-anchor="middle" font-size="14">主渠道</text>
+
+    <path d="M260 288H326" fill="none" stroke="#8eaef8" stroke-width="4"/>
+    <path d="M318 278L332 288L318 298" fill="none" stroke="#8eaef8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+
+    <rect x="332" y="218" width="230" height="140" rx="16" fill="#326dff"/>
+    <text x="447" y="268" fill="#dce7ff" text-anchor="middle" font-size="15" font-weight="700">步骤 01</text>
+    <text x="447" y="307" fill="#ffffff" text-anchor="middle" font-size="25" font-weight="700">意图识别</text>
+    <text x="447" y="334" fill="#dce7ff" text-anchor="middle" font-size="14">判断答案与办理路径</text>
+
+    <path d="M562 288H626M626 183V439" fill="none" stroke="#9aa7ba" stroke-width="3"/>
+    <path d="M626 183H686M626 288H686M626 439H686" fill="none" stroke="#9aa7ba" stroke-width="3"/>
+
+    <rect x="686" y="132" width="434" height="102" rx="14" fill="#eefaf6" stroke="#a9dfce" stroke-width="2"/>
+    <circle cx="730" cy="183" r="18" fill="#2fcaa0"/>
+    <path d="M721 183L728 190L740 176" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="768" y="176" fill="#17684f" font-size="15" font-weight="700">可标准化问题</text>
+    <text x="768" y="207" fill="#172033" font-size="22" font-weight="700">知识检索 + 自动应答</text>
+
+    <rect x="686" y="258" width="434" height="102" rx="14" fill="#fff8e8" stroke="#efd491" stroke-width="2"/>
+    <circle cx="730" cy="309" r="18" fill="#f0b429"/>
+    <path d="M723 300H737V318H723Z" fill="none" stroke="#ffffff" stroke-width="2"/>
+    <text x="768" y="302" fill="#725116" font-size="15" font-weight="700">需要办理</text>
+    <text x="768" y="333" fill="#172033" font-size="22" font-weight="700">信息收集 + 业务工作流</text>
+
+    <rect x="686" y="384" width="434" height="110" rx="14" fill="#fff3f1" stroke="#f5bbb5" stroke-width="2"/>
+    <circle cx="730" cy="439" r="18" fill="#ef665b"/>
+    <path d="M722 441C722 433 738 433 738 441M730 428A4 4 0 1 0 730 436A4 4 0 1 0 730 428" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+    <text x="768" y="426" fill="#7d2b26" font-size="15" font-weight="700">复杂 / 高风险问题</text>
+    <text x="768" y="457" fill="#172033" font-size="22" font-weight="700">携带对话上下文转人工</text>
+    <text x="768" y="481" fill="#667085" font-size="14">人工入口始终可见</text>
+  </g>
+
+  <rect x="332" y="409" width="230" height="74" rx="12" fill="#172033"/>
+  <text x="447" y="440" fill="#ffffff" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17" font-weight="700">无依据时拒答</text>
+  <text x="447" y="465" fill="#c6cfdd" text-anchor="middle" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13">错误可发现 · 可修正</text>
+  <text x="80" y="574" fill="#8a94a6" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14">FastGPT 深度场景内容</text>
+</svg>

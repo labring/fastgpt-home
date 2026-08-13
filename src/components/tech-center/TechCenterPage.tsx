@@ -31,7 +31,8 @@ const FLOW_NODES = [
 const SOURCE_OPTIONS: { value: SourceFilter; label: string }[] = [
   { value: 'all', label: '全部来源' },
   { value: '官方文档', label: '官方文档' },
-  { value: 'GitHub issue', label: 'GitHub Issue' }
+  { value: 'GitHub issue', label: 'GitHub Issue' },
+  { value: '深度场景内容', label: '深度场景内容' }
 ];
 
 const CATEGORY_ITEMS = [

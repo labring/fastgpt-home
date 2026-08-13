@@ -1,4 +1,5 @@
 import { createElement, type ElementType, type ReactNode } from 'react';
+import Link from 'next/link';
 
 type MarkdownBlock =
   | { type: 'heading'; level: number; text: string }
@@ -146,9 +147,13 @@ function renderInline(text: string): ReactNode[] {
     if (token.startsWith('`')) {
       nodes.push(<code key={key++}>{token.slice(1, -1)}</code>);
     } else if (match[2] && match[3]) {
-      const href = /^(https?:\/\/|mailto:)/.test(match[3]) ? match[3] : undefined;
+      const href = /^(https?:\/\/|mailto:|\/(?!\/))/.test(match[3]) ? match[3] : undefined;
       nodes.push(
-        href ? (
+        href?.startsWith('/') ? (
+          <Link key={key++} href={href}>
+            {match[2]}
+          </Link>
+        ) : href ? (
           <a key={key++} href={href} target="_blank" rel="noopener noreferrer">
             {match[2]}
           </a>
@@ -165,6 +170,38 @@ function renderInline(text: string): ReactNode[] {
   }
 
   if (lastIndex < text.length) nodes.push(text.slice(lastIndex));
+  return nodes;
+}
+
+function renderBlockquote(lines: string[]) {
+  const nodes: ReactNode[] = [];
+  let items: string[] = [];
+  let key = 0;
+
+  const flushList = () => {
+    if (!items.length) return;
+    nodes.push(
+      <ul key={key++}>
+        {items.map((item, itemIndex) => (
+          <li key={itemIndex}>{renderInline(item)}</li>
+        ))}
+      </ul>
+    );
+    items = [];
+  };
+
+  for (const line of lines) {
+    const item = line.match(/^[-*]\s+(.+)/);
+    if (item) {
+      items.push(item[1]);
+      continue;
+    }
+
+    flushList();
+    if (line) nodes.push(<p key={key++}>{renderInline(line)}</p>);
+  }
+  flushList();
+
   return nodes;
 }
 
@@ -198,13 +235,7 @@ export default function MarkdownContent({ markdown, title }: { markdown: string;
           );
         }
         if (block.type === 'blockquote') {
-          return (
-            <blockquote key={index}>
-              {block.lines.map((line, lineIndex) => (
-                <p key={lineIndex}>{renderInline(line)}</p>
-              ))}
-            </blockquote>
-          );
+          return <blockquote key={index}>{renderBlockquote(block.lines)}</blockquote>;
         }
         if (block.type === 'list') {
           const List = block.ordered ? 'ol' : 'ul';

@@ -973,6 +973,6 @@ export const PRICE_PLANS_SELF_BUTTON_MAP: {
     th: 'ติดต่อฝ่ายขาย',
     id: 'Hubungi Sales',
     ms: 'Hubungi Jualan',
-    href: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=H1&hide_S=1'
+    href: '/contact'
   }
 } as const;

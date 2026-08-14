@@ -6,18 +6,13 @@ import Check from '@/components/icons/check';
 import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from '@/config/price';
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
+import { isContactHref } from '@/lib/consultation';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 type Key = 'cloud' | 'self';
 
-function CloudPlanLink({
-  source,
-  children
-}: {
-  source: string;
-  children: React.ReactNode;
-}) {
+function CloudPlanLink({ source, children }: { source: string; children: React.ReactNode }) {
   const href = useStartUrl();
 
   return (
@@ -225,8 +220,13 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 ) : (
                   <Link
                     href={siteConfig.customPlanUrl}
-                    target="_blank"
                     className="mt-auto pt-4"
+                    {...(isContactHref(siteConfig.customPlanUrl)
+                      ? {}
+                      : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
+                    {...(isContactHref(siteConfig.customPlanUrl)
+                      ? { 'data-consultation-link': 'true' }
+                      : {})}
                     {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'price_cloud_custom')}
                   >
                     <button
@@ -309,9 +309,11 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
 
                 <Link
                   href={buttonConfig.href}
-                  target="_blank"
+                  {...(isContactHref(buttonConfig.href)
+                    ? { 'data-consultation-link': 'true' }
+                    : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
                   className="mt-auto pt-4"
-                  {...(buttonConfig.href.includes('feishu.cn')
+                  {...(isContactHref(buttonConfig.href) || buttonConfig.href.includes('feishu.cn')
                     ? rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, `price_self_${item.key}`)
                     : {})}
                 >

@@ -173,8 +173,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
                 </div>
                 <a
                   href={CONSULT_URL}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
+                  data-consultation-link="true"
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_solutions_consult', {
                     solution: current.key
                   })}

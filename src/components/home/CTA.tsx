@@ -93,6 +93,17 @@ export default function CTA({ t }: { t: CTAT }) {
                 className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8 w-full"
               >
                 <m.a
+                  href={CONSULT_URL}
+                  data-consultation-link="true"
+                  {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_bottom_consult')}
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.97 }}
+                  aria-label={t.consult}
+                  className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
+                >
+                  {t.consult}
+                </m.a>
+                <m.a
                   href={startUrl}
                   rel="noopener noreferrer nofollow"
                   {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_bottom_trial')}
@@ -102,18 +113,6 @@ export default function CTA({ t }: { t: CTAT }) {
                   className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-semibold leading-[1.5em] bg-btn-light-bg border border-btn-light-border text-[#3d3d3d] transition-colors hover:bg-white/80"
                 >
                   {t.trial}
-                </m.a>
-                <m.a
-                  href={CONSULT_URL}
-                  target="_blank"
-                  rel="noopener noreferrer nofollow"
-                  {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_bottom_consult')}
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.97 }}
-                  aria-label={t.consult}
-                  className="w-full md:w-auto md:flex-initial inline-flex items-center justify-center h-[44px] md:h-11 px-6 md:px-8 rounded-[99px] text-[14px] md:text-[16px] font-medium leading-[20px] tracking-[-0.12px] bg-btn-dark border border-btn-border text-white transition-opacity hover:opacity-90"
-                >
-                  {t.consult}
                 </m.a>
               </m.div>
             </div>

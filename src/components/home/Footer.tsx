@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { siteConfig } from '@/config/site';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { isContactHref } from '@/lib/consultation';
 
 type ColumnLink = { label: string; href: string; external?: boolean; cloudEntrySource?: string };
 type Column = { title: string; width: number; items: (ColumnLink | { label: string })[] };
@@ -36,11 +37,19 @@ function buildColumns(t: FooterT['columns']): Column[] {
         },
         {
           label: t.service.items.private,
-          href: 'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?hide_S=1&prefill_S=C2',
+          href: '/contact',
+          external: false
+        },
+        {
+          label: t.service.items.community,
+          href: 'https://github.com/labring/FastGPT',
           external: true
         },
-        { label: t.service.items.community, href: 'https://github.com/labring/FastGPT', external: true },
-        { label: t.service.items.docs, href: 'https://doc.fastgpt.io/docs/introduction', external: true }
+        {
+          label: t.service.items.docs,
+          href: 'https://doc.fastgpt.io/docs/introduction',
+          external: true
+        }
       ]
     },
     {
@@ -57,7 +66,11 @@ function buildColumns(t: FooterT['columns']): Column[] {
       items: [
         { label: t.more.email },
         { label: t.more.lanqiao, href: 'https://www.lanqiao.cn/courses/6666', external: true },
-        { label: t.more.book, href: 'https://item.m.jd.com/product/10204687656446.html', external: true }
+        {
+          label: t.more.book,
+          href: 'https://item.m.jd.com/product/10204687656446.html',
+          external: true
+        }
       ]
     }
   ];
@@ -105,7 +118,7 @@ const linkStyle = {
   fontSize: 16,
   fontWeight: 400,
   lineHeight: '22px',
-  letterSpacing: '-0.01em',
+  letterSpacing: '-0.01em'
 } as const;
 
 const headingStyle = {
@@ -180,11 +193,16 @@ export default function Footer({ t }: { t: FooterT }) {
                 Mobile: link cols and QRs all stack vertically (no flex-wrap). */}
             <div className="flex flex-col w-full lg:w-auto" style={{ rowGap: 32 }}>
               {/* 3 link columns — vertical on mobile, row on md+ */}
-              <div className="flex flex-col md:flex-row md:flex-wrap" style={{ columnGap: 10, rowGap: 24 }}>
+              <div
+                className="flex flex-col md:flex-row md:flex-wrap"
+                style={{ columnGap: 10, rowGap: 24 }}
+              >
                 {columns.map((col) => (
                   <div
                     key={col.title}
-                    className={`flex flex-col w-full ${col.width === 220 ? 'md:w-[220px]' : 'md:w-[150px]'}`}
+                    className={`flex flex-col w-full ${
+                      col.width === 220 ? 'md:w-[220px]' : 'md:w-[150px]'
+                    }`}
                     style={{ rowGap: 10, alignItems: 'flex-start' }}
                   >
                     <h2 style={{ ...headingStyle, margin: 0, textAlign: 'left', width: '100%' }}>
@@ -216,12 +234,17 @@ export default function Footer({ t }: { t: FooterT }) {
                             {...(item.external
                               ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
                               : {})}
-                            {...(item.href.includes('feishu.cn')
-                              ? rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'footer_private_deploy')
+                            {...(isContactHref(item.href) || item.href.includes('feishu.cn')
+                              ? rybbitClickAttrs(
+                                  RYBBIT_EVENTS.businessConsultClick,
+                                  'footer_private_deploy'
+                                )
+                              : {})}
+                            {...(isContactHref(item.href)
+                              ? { 'data-consultation-link': 'true' }
                               : {})}
                             className="hover:text-black  text-ink-sub"
                             style={{ ...linkStyle, textAlign: 'left' }}
-
                           >
                             {item.label}
                           </a>
@@ -241,7 +264,10 @@ export default function Footer({ t }: { t: FooterT }) {
               </div>
 
               {/* QR row — vertical on mobile, row on md+ */}
-              <div className="flex flex-col md:flex-row md:flex-wrap" style={{ columnGap: 10, rowGap: 16 }}>
+              <div
+                className="flex flex-col md:flex-row md:flex-wrap"
+                style={{ columnGap: 10, rowGap: 16 }}
+              >
                 {qrs.map((q) => (
                   <div
                     key={q.label}
@@ -284,7 +310,10 @@ export default function Footer({ t }: { t: FooterT }) {
             className="flex flex-col items-center md:flex-row md:items-center md:justify-between w-full"
             style={{ rowGap: 16 }}
           >
-            <div className="flex flex-wrap justify-center md:justify-start items-center text-center md:text-left" style={{ columnGap: 24, rowGap: 8 }}>
+            <div
+              className="flex flex-wrap justify-center md:justify-start items-center text-center md:text-left"
+              style={{ columnGap: 24, rowGap: 8 }}
+            >
               <a
                 href="https://github.com/labring/FastGPT"
                 target="_blank"

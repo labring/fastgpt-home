@@ -4,6 +4,7 @@ import LeadAttribution from '@/app/LeadAttribution';
 import RybbitAnalytics from '@/app/RybbitAnalytics';
 import { ThemeProvider } from '@/components/ThemeProvider';
 import MotionProvider from '@/components/home/motion/MotionProvider';
+import ConsultationProvider from '@/components/contact/ConsultationProvider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
@@ -76,7 +77,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           enableSystem={false}
           forcedTheme="dark"
         >
-          <MotionProvider>{children}</MotionProvider>
+          <MotionProvider>
+            <ConsultationProvider defaultLocale={defaultLocale}>{children}</ConsultationProvider>
+          </MotionProvider>
         </ThemeProvider>
         <GoogleAnalytics />
         <BaiDuAnalytics />

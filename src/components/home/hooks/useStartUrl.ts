@@ -16,5 +16,4 @@ export function useStartUrl(targetUrl?: string): string {
   return url;
 }
 
-export const CONSULT_URL =
-  'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C2&hide_S=1';
+export const CONSULT_URL = '/contact';

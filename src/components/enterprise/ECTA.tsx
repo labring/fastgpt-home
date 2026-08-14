@@ -1,8 +1,9 @@
-import Link from "next/link";
-import { Button } from "@/components/ui/button";
-import { FaArrowRight } from "react-icons/fa6";
-import { NormalSection } from ".";
-import { siteConfig } from "@/config/site";
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { FaArrowRight } from 'react-icons/fa6';
+import { NormalSection } from '.';
+import { siteConfig } from '@/config/site';
+import { isContactHref } from '@/lib/consultation';
 
 interface Props {
   locale: any;
@@ -16,9 +17,10 @@ const ECTA = ({ locale }: Props) => {
     <NormalSection id="ECTA" title={ctaLocale.title} description={ctaLocale.description}>
       <Link
         href={commercial}
-        rel="noopener noreferrer nofollow"
         className="my-8 flex justify-center"
-        target="_blank"
+        {...(isContactHref(commercial)
+          ? { 'data-consultation-link': 'true' }
+          : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
       >
         <Button
           variant="default"
@@ -26,7 +28,7 @@ const ECTA = ({ locale }: Props) => {
           aria-label="Get Boilerplate"
         >
           {ctaLocale.link}
-          <FaArrowRight className='text-base' />
+          <FaArrowRight className="text-base" />
         </Button>
       </Link>
     </NormalSection>

@@ -213,6 +213,15 @@ export default function Navbar({
               <LangSwitcher iconOnly locale={lang} />
             </div>
             <a
+              href={CONSULT_URL}
+              data-consultation-link="true"
+              {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_consult')}
+              aria-label={t.consult}
+              className="px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
+            >
+              {t.consult}
+            </a>
+            <a
               href={desktopStartUrl}
               rel="noopener noreferrer nofollow"
               {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_nav_trial')}
@@ -221,23 +230,12 @@ export default function Navbar({
             >
               {t.trial}
             </a>
-            <a
-              href={CONSULT_URL}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-              {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_consult')}
-              aria-label={t.consult}
-              className="px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
-            >
-              {t.consult}
-            </a>
           </div>
 
           <div className="flex items-center gap-3 md:hidden">
             <a
               href={CONSULT_URL}
-              target="_blank"
-              rel="noopener noreferrer nofollow"
+              data-consultation-link="true"
               {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_mobile_consult')}
               aria-label={t.consult}
               className={`px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark transition-opacity duration-300 ${
@@ -342,6 +340,15 @@ export default function Navbar({
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-hairline-soft">
               <a
+                href={CONSULT_URL}
+                data-consultation-link="true"
+                {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_mobile_menu_consult')}
+                className="h-10 inline-flex items-center justify-center rounded-full text-[13px] font-medium text-white bg-btn-dark"
+                onClick={() => setMobileOpen(false)}
+              >
+                {t.consult}
+              </a>
+              <a
                 href={mobileStartUrl}
                 rel="noopener noreferrer nofollow"
                 {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_nav_mobile_trial')}
@@ -349,19 +356,6 @@ export default function Navbar({
                 onClick={() => setMobileOpen(false)}
               >
                 {t.trial}
-              </a>
-              <a
-                href={CONSULT_URL}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
-                {...rybbitClickAttrs(
-                  RYBBIT_EVENTS.businessConsultClick,
-                  'home_nav_mobile_menu_consult'
-                )}
-                className="h-10 inline-flex items-center justify-center rounded-full text-[13px] font-medium text-white bg-btn-dark"
-                onClick={() => setMobileOpen(false)}
-              >
-                {t.consult}
               </a>
             </div>
           </div>

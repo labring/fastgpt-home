@@ -19,6 +19,19 @@ npm install
 npm run dev
 ```
 
+商务咨询表单需要在构建时配置 CRM API 地址（必须包含 `/api/v1`）：
+
+```bash
+NEXT_PUBLIC_CRM_API_URL=https://crm.example.com/api/v1 npm run build
+```
+
+同时在 CRM 服务中将官网域名加入 `CORS_ORIGINS`。如果未配置
+`NEXT_PUBLIC_CRM_API_URL`，表单会明确显示 CRM 未配置错误，不会提交数据。
+
+外部推广链接统一使用标准 UTM 参数，例如
+`?utm_source=feishu&utm_medium=referral&utm_campaign=launch`。官网会通过 Cookie
+保留并将这些 UTM 字段随表单提交给 CRM，不需要额外维护 `source` 参数。
+
 ## Build
 
 ```bash

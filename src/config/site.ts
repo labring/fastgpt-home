@@ -16,7 +16,7 @@ const baseSiteConfig = {
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
   customPlanUrl:
     process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
-    'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=C1&hide_S=1',
+    '/contact',
   metadataBase: currentSiteBaseUrl,
   keywords: [
     'rag',
@@ -39,8 +39,7 @@ const baseSiteConfig = {
     'enterprise knowledge base'
   ],
   // commercial: 'https://doc.fastgpt.io/docs/commercial/intro/',
-  commercial:
-    'https://fael3z0zfze.feishu.cn/share/base/form/shrcnjJWtKqjOI9NbQTzhNyzljc?prefill_S=G1&hide_S=1',
+  commercial: '/contact',
   authors: [
     {
       name: 'labring',

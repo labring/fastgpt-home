@@ -14,7 +14,7 @@ import { getComparisonPagesForLocale } from '@/content/competitor';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const localizedPaths = ['', '/price'];
+  const localizedPaths = ['', '/price', '/contact'];
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
   const seenUrls = new Set<string>();

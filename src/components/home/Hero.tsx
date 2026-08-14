@@ -184,8 +184,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
             >
               <m.a
                 href={CONSULT_URL}
-                target="_blank"
-                rel="noopener noreferrer nofollow"
+                data-consultation-link="true"
                 {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_hero_consult')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}

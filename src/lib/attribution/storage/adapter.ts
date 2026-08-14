@@ -26,11 +26,7 @@ export interface AttributionStorageStatusSnapshot {
   scope: AttributionStorageScope;
 }
 
-export type AttributionStorageMode = 'cookie' | 'localStorage';
-
-export type AttributionAdapterOptions = AttributionStorageOptions & {
-  storageMode?: AttributionStorageMode;
-};
+export type AttributionAdapterOptions = AttributionStorageOptions;
 
 const defaultStatus: AttributionStorageStatusSnapshot = {
   status: 'unavailable',
@@ -48,23 +44,6 @@ function setCurrentStatus(result: AttributionSnapshotResult): AttributionSnapsho
 export function loadAttributionSnapshot(
   options: AttributionAdapterOptions = {}
 ): AttributionSnapshotResult {
-  if (options.storageMode === 'localStorage') {
-    const legacy = readLegacyAttribution();
-    if (legacy.ok && legacy.value) {
-      return setCurrentStatus({
-        status: 'localStorage-fallback',
-        reason: 'legacy-pair-valid',
-        value: legacy.value,
-        scope: 'host'
-      });
-    }
-    return setCurrentStatus({
-      status: 'unavailable',
-      reason: legacy.reason,
-      value: null,
-      scope: 'host'
-    });
-  }
   return setCurrentStatus(resolveAttributionSnapshot(options));
 }
 
@@ -95,23 +74,6 @@ export function saveAttributionSnapshot(
   snapshot: StoredAttribution,
   options: AttributionAdapterOptions = {}
 ): AttributionSnapshotResult {
-  if (options.storageMode === 'localStorage') {
-    const legacy = writeLegacyAttribution(snapshot);
-    if (legacy.ok) {
-      return setCurrentStatus({
-        status: 'localStorage-fallback',
-        reason: legacy.reason,
-        value: { ...snapshot, v: 1 } as StoredAttributionV1,
-        scope: 'host'
-      });
-    }
-    return setCurrentStatus({
-      status: 'unavailable',
-      reason: legacy.reason,
-      value: null,
-      scope: 'host'
-    });
-  }
   const written = writeAttributionCookiePair(snapshot, options);
   if (written.status === 'cookie' && written.value) {
     void clearLegacyAttribution();

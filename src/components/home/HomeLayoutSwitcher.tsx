@@ -18,7 +18,8 @@ export default function HomeLayoutSwitcher({ dict, children }: HomeLayoutSwitche
   const isHome = /^\/([a-z]{2,3}(?:-[A-Za-z]{2,4})?)?$/.test(pathname);
   const isTechArticle =
     /\/(?:api|dataset|deploy|integration|node|troubleshoot|tutorial)\/[^/]+$/.test(pathname);
-  const isSelfContained = /\/faq|\/price|\/tech-center|\/compare/.test(pathname) || isTechArticle;
+  const isSelfContained =
+    /\/faq|\/price|\/tech-center|\/compare|\/contact/.test(pathname) || isTechArticle;
 
   if (isHome || isSelfContained) {
     return <>{children}</>;

@@ -68,7 +68,7 @@ const zh: ContactCopy = {
   optional: '选填',
   fields: {
     name: '姓名',
-    phone: '手机号',
+    phone: '手机号或邮箱',
     company: '公司名称',
     position: '职位',
     usedOpenSource: '是否使用过开源版',
@@ -79,7 +79,7 @@ const zh: ContactCopy = {
   },
   placeholders: {
     name: '请输入姓名',
-    phone: '请输入手机号',
+    phone: '请输入手机号或邮箱',
     company: '请输入公司名称',
     position: '请输入职位',
     notes: '可补充使用场景、部署规模或其他需求'
@@ -97,7 +97,7 @@ const zh: ContactCopy = {
   visitorError: '无法获取 CRM 访客标识，请允许浏览器使用本地存储后重试。',
   genericError: '提交失败，请稍后重试。',
   rateLimitError: '提交过于频繁，请稍后再试。',
-  phoneError: '请输入有效的手机号。',
+  phoneError: '请输入有效的手机号或邮箱。',
   requiredError: '请完整填写所有必填项。'
 };
 
@@ -111,7 +111,7 @@ const en: ContactCopy = {
   optional: 'Optional',
   fields: {
     name: 'Name',
-    phone: 'Phone number',
+    phone: 'Phone number or email',
     company: 'Company',
     position: 'Job title',
     usedOpenSource: 'Have you used the open-source edition?',
@@ -122,7 +122,7 @@ const en: ContactCopy = {
   },
   placeholders: {
     name: 'Your name',
-    phone: 'Your phone number',
+    phone: 'Your phone number or email',
     company: 'Company name',
     position: 'Your role',
     notes: 'Use case, deployment scale, or other requirements'
@@ -157,7 +157,7 @@ const en: ContactCopy = {
     'We could not create your CRM visitor ID. Allow local browser storage and try again.',
   genericError: 'Your inquiry could not be sent. Please try again later.',
   rateLimitError: 'Too many submissions. Please try again later.',
-  phoneError: 'Enter a valid phone number.',
+  phoneError: 'Enter a valid phone number or email.',
   requiredError: 'Complete all required fields.'
 };
 
@@ -172,7 +172,7 @@ const zhHant: ContactCopy = {
   optional: '選填',
   fields: {
     name: '姓名',
-    phone: '手機號碼',
+    phone: '手機號碼或電子郵件',
     company: '公司名稱',
     position: '職位',
     usedOpenSource: '是否使用過開源版',
@@ -193,7 +193,7 @@ const zhHant: ContactCopy = {
   visitorError: '無法取得 CRM 訪客識別碼，請允許瀏覽器使用本機儲存後重試。',
   genericError: '提交失敗，請稍後重試。',
   rateLimitError: '提交過於頻繁，請稍後再試。',
-  phoneError: '請輸入有效的手機號碼。',
+  phoneError: '請輸入有效的手機號碼或電子郵件。',
   requiredError: '請完整填寫所有必填項。'
 };
 

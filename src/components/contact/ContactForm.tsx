@@ -25,6 +25,7 @@ type ContactFormProps = {
 
 const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '') || '';
 const CN_MOBILE_PHONE_PATTERN = /^1[3-9]\d{9}$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function FieldLabel({
   children,
@@ -325,8 +326,11 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     if (!value.trim()) return getRequiredFieldError(locale, copy, name, isSelect);
 
     if (name === 'phone') {
-      const normalizedPhone = value.replace(/[\s-]/g, '');
-      if (!CN_MOBILE_PHONE_PATTERN.test(normalizedPhone)) return copy.phoneError;
+      const normalizedValue = value.trim();
+      const normalizedPhone = normalizedValue.replace(/[\s-]/g, '');
+      const isMainlandPhone = CN_MOBILE_PHONE_PATTERN.test(normalizedPhone);
+      const isEmail = EMAIL_PATTERN.test(normalizedValue);
+      if (!isMainlandPhone && !isEmail) return copy.phoneError;
     }
 
     return '';
@@ -531,8 +535,8 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
               </FieldLabel>
               <input
                 name={name}
-                type={name === 'phone' ? 'tel' : 'text'}
-                inputMode={name === 'phone' ? 'tel' : undefined}
+                type="text"
+                inputMode={name === 'phone' ? 'email' : undefined}
                 autoComplete={
                   name === 'name'
                     ? 'name'
@@ -545,7 +549,13 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
                 value={values[name]}
                 required
                 maxLength={
-                  name === 'phone' ? 30 : name === 'company' ? 200 : name === 'position' ? 100 : 120
+                  name === 'phone'
+                    ? 254
+                    : name === 'company'
+                    ? 200
+                    : name === 'position'
+                    ? 100
+                    : 120
                 }
                 onChange={(event) => updateValue(name, event.target.value)}
                 onBlur={() => handleFieldBlur(name)}

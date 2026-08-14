@@ -41,10 +41,9 @@ jobs:
       - name: Build
         env:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_SITE_VARIANT: io
+          NEXT_PUBLIC_LANGUAGE_REGION: international
           NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
           NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_DEFAULT_LOCALE: en
           NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
           NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
         run: |

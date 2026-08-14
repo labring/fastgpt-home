@@ -5,7 +5,8 @@ const path = require('node:path');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
-const variant = process.env.NEXT_PUBLIC_SITE_VARIANT === 'cn' ? 'cn' : 'io';
+const homeUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.cn';
+const variant = new URL(homeUrl).hostname.endsWith('.cn') ? 'cn' : 'io';
 const baseUrls = {
   cn: 'https://fastgpt.cn',
   io: 'https://fastgpt.io'

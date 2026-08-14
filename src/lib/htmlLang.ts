@@ -8,9 +8,9 @@
  */
 
 import { localeDirections, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
+import { getDefaultLocaleForLanguageRegion } from '@/lib/siteRouting';
 
-const buildDefaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
-const normalizedBuildDefaultLocale = normalizeLocale(buildDefaultLocale);
+const normalizedBuildDefaultLocale = getDefaultLocaleForLanguageRegion();
 const localesJson = JSON.stringify(supportedLocaleCodes);
 const directionsJson = JSON.stringify(localeDirections);
 

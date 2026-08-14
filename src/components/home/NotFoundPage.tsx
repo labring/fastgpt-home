@@ -11,12 +11,12 @@ import th from '@/locales/th.json';
 import vi from '@/locales/vi.json';
 import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
-import { supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
-import { getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { type LocaleCode } from '@/lib/locales';
+import { getAvailableLocaleCodes, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
-const languages = supportedLocaleCodes;
+const languages = getAvailableLocaleCodes();
 const localeVisibilityCss = `
   html${languages
     .filter((lang) => lang !== 'en')

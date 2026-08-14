@@ -1,11 +1,11 @@
 'use client';
-import { defaultLocale, localeNames } from '@/lib/i18n';
+import { defaultLocale } from '@/lib/i18n';
 import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 import { localeConfigs } from '@/lib/locales';
-import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { getAvailableLocaleCodes, getOwnedLocalePath } from '@/lib/siteRouting';
 
 const langConfig = localeConfigs.reduce((acc, locale) => {
   acc[locale.code] = { flag: locale.flag, label: locale.name };
@@ -55,8 +55,11 @@ export const LangSwitcher = ({
     return pathname;
   })();
   const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
-  const languageKeys = isFaqRoute ? faqLocaleCodes : Object.keys(localeNames);
-  const getLocalizedPath = (value: string) => getOwnedLocaleUrl(value, routeWithoutLang);
+  const availableLocaleCodes = getAvailableLocaleCodes();
+  const languageKeys = (isFaqRoute ? faqLocaleCodes : availableLocaleCodes).filter((key) =>
+    availableLocaleCodes.includes(key as (typeof availableLocaleCodes)[number])
+  );
+  const getLocalizedPath = (value: string) => getOwnedLocalePath(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;
@@ -73,6 +76,8 @@ export const LangSwitcher = ({
     document.addEventListener('mousedown', handler);
     return () => document.removeEventListener('mousedown', handler);
   }, []);
+
+  if (languageKeys.length < 2) return null;
 
   const current = langConfig[langName];
 

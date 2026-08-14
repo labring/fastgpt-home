@@ -6,7 +6,8 @@ const path = require('node:path');
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+const languageRegion = process.env.NEXT_PUBLIC_LANGUAGE_REGION === 'international' ? 'international' : 'zh';
+const defaultLocale = languageRegion === 'zh' ? 'zh' : 'en';
 const sampleFaqId = 'Why-are-enterprises-paying-more';
 const {
   TITLE_MAX_LENGTH,

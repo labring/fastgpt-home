@@ -98,5 +98,5 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
 }
 
 export async function generateStaticParams() {
-  return getBuildLocaleCodes(defaultLocale).map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }

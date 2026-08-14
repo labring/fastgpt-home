@@ -108,7 +108,7 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
 }
 
 export async function generateStaticParams() {
-  const faqLocales = getBuildLocaleCodes(defaultLocale).filter((lang) =>
+  const faqLocales = getBuildLocaleCodes().filter((lang) =>
     faqContentLocaleCodes.includes(lang as (typeof faqContentLocaleCodes)[number])
   );
 

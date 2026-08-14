@@ -33,8 +33,7 @@ export default function ContactPage({ locale }: { locale: string }) {
         </div>
       </header>
 
-      <main className="relative overflow-hidden bg-[#f8fafc] px-5 py-10 sm:px-8 sm:py-14 lg:py-16">
-        <div className="absolute inset-y-0 left-0 hidden w-[7px] bg-[#155eef] sm:block" aria-hidden />
+      <main className="bg-[#f8fafc] px-5 py-10 sm:px-8 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-[820px]">
           <div className="mb-8 max-w-[680px] sm:mb-10">
             <span className="mb-3 block text-[11px] font-semibold uppercase text-[#155eef]">

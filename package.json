@@ -16,7 +16,8 @@
     "verify:p1": "node scripts/verify-p1.js",
     "verify:p2": "node scripts/verify-p2.js",
     "verify:i18n-seo": "node scripts/verify-i18n-seo.js",
-    "verify:deep-content": "node scripts/verify-deep-content.js"
+    "verify:deep-content": "node scripts/verify-deep-content.js",
+    "sync:w3-faq": "python3 scripts/sync-w3-faq.py"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

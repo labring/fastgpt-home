@@ -24,6 +24,7 @@ type ContactFormProps = {
 };
 
 const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '') || '';
+const CN_MOBILE_PHONE_PATTERN = /^1[3-9]\d{9}$/;
 
 function FieldLabel({
   children,
@@ -324,8 +325,8 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     if (!value.trim()) return getRequiredFieldError(locale, copy, name, isSelect);
 
     if (name === 'phone') {
-      const phoneDigits = value.replace(/\D/g, '');
-      if (phoneDigits.length < 6 || phoneDigits.length > 20) return copy.phoneError;
+      const normalizedPhone = value.replace(/[\s-]/g, '');
+      if (!CN_MOBILE_PHONE_PATTERN.test(normalizedPhone)) return copy.phoneError;
     }
 
     return '';

@@ -1,4 +1,5 @@
 import { faqW2Zh } from './w2';
+import { faqW3Zh } from './w3';
 
 export type FaqItem = {
   Category: string;
@@ -11215,4 +11216,5 @@ const faqZhLegacy: Record<string, FaqItem> = {
 export const faqZh: Record<string, FaqItem> = {
   ...faqZhLegacy,
   ...faqW2Zh,
+  ...faqW3Zh,
 };

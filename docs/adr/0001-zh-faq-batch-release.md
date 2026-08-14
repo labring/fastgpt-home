@@ -1,0 +1,3 @@
+# Chinese FAQ batches ship zh-only with hand-maintained slugs
+
+Each 精选规范 FAQ batch (first 60 items, then items 61–90) is transcribed from the client-deliverable xlsx into a zh-only runtime snapshot (`src/faq/w2.ts`, `src/faq/w3.ts`) and merged into the Chinese FAQ data; the English site keeps its legacy 1,400-item set untouched. Slug keys are hand-maintained per row instead of derived from the question, because the legacy online rule (first 5 words of the question truncated) already collided 154 URLs and left 602 items unreachable (30% of published content). The source xlsx stays in the client deliverable repo; the site repo holds runtime data plus a drift-check script rather than a baseline snapshot.

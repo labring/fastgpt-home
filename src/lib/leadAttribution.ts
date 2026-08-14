@@ -25,6 +25,7 @@ import { getConfiguredCookieDomain, getStorageOptions } from '@/lib/attribution/
 import { resolveCookieDomain } from '@/lib/attribution/primitives/domain';
 import { canonicalizeUrl } from '@/lib/attribution/primitives/url';
 import { getVisitorId, resetGeneratedVisitorId } from '@/lib/visitorId';
+import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 
 export {
   configureAttribution,
@@ -407,7 +408,7 @@ export function reportAnonymousAttribution(): Promise<void> {
       const attributionSnapshot = JSON.stringify(attribution);
       if (getReportedAttributionSnapshot() === attributionSnapshot) return;
 
-      const response = await fetch(`${crmApiUrl}/visitors/track`, {
+      const response = await fetchWithTimeout(`${crmApiUrl}/visitors/track`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         keepalive: true,

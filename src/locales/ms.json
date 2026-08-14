@@ -446,8 +446,16 @@
           "items": {
             "cloud": "Cloud",
             "private": "Hos Sendiri",
-            "community": "Komuniti",
-            "docs": "Dokumentasi"
+            "community": "Komuniti"
+          }
+        },
+        "links": {
+          "title": "Pautan",
+          "items": {
+            "docs": "Dokumentasi Rasmi",
+            "learning": "Pusat Pembelajaran",
+            "cases": "Pusat Kajian Kes",
+            "tech": "Pusat Teknikal"
           }
         },
         "partner": {

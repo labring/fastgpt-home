@@ -446,8 +446,16 @@
           "items": {
             "cloud": "Cloud",
             "private": "Tự triển khai",
-            "community": "Cộng đồng",
-            "docs": "Tài liệu"
+            "community": "Cộng đồng"
+          }
+        },
+        "links": {
+          "title": "Liên kết",
+          "items": {
+            "docs": "Tài liệu chính thức",
+            "learning": "Trung tâm học tập",
+            "cases": "Trung tâm case study",
+            "tech": "Trung tâm kỹ thuật"
           }
         },
         "partner": {

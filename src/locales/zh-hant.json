@@ -446,8 +446,16 @@
           "items": {
             "cloud": "雲服務",
             "private": "私有化",
-            "community": "社區版",
-            "docs": "文檔中心"
+            "community": "社區版"
+          }
+        },
+        "links": {
+          "title": "連結",
+          "items": {
+            "docs": "官方文檔",
+            "learning": "學習中心",
+            "cases": "案例中心",
+            "tech": "技術中心"
           }
         },
         "partner": {

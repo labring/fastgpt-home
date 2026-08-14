@@ -428,8 +428,16 @@
           "items": {
             "cloud": "クラウド",
             "private": "オンプレ",
-            "community": "コミュニティ版",
-            "docs": "ドキュメント"
+            "community": "コミュニティ版"
+          }
+        },
+        "links": {
+          "title": "リンク",
+          "items": {
+            "docs": "公式ドキュメント",
+            "learning": "ラーニングセンター",
+            "cases": "導入事例",
+            "tech": "テクニカルセンター"
           }
         },
         "partner": {

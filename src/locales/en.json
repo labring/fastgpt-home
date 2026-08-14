@@ -435,8 +435,16 @@
           "items": {
             "cloud": "Cloud",
             "private": "Self-Hosted",
-            "community": "Community",
-            "docs": "Docs"
+            "community": "Community"
+          }
+        },
+        "links": {
+          "title": "Links",
+          "items": {
+            "docs": "Official Docs",
+            "learning": "Learning Center",
+            "cases": "Case Studies",
+            "tech": "Technical Center"
           }
         },
         "partner": {

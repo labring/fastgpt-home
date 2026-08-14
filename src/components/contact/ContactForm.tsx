@@ -8,6 +8,7 @@ import {
   reportAnonymousAttribution,
   trackVisit
 } from '@/lib/leadAttribution';
+import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 import {
   CONTACT_OPTIONS,
   INITIAL_CONTACT_FORM,
@@ -162,9 +163,11 @@ export default function ContactForm({
     setStatus('submitting');
     try {
       trackVisit();
-      await reportAnonymousAttribution();
+      // Attribution is best-effort telemetry and must not block the contact
+      // form when its tracking endpoint is unavailable.
+      void reportAnonymousAttribution();
       const attribution = getAttributionPayload();
-      const response = await fetch(`${CRM_API_URL}/contacts/submit`, {
+      const response = await fetchWithTimeout(`${CRM_API_URL}/contacts/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

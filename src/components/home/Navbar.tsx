@@ -12,7 +12,6 @@ import Image from 'next/image';
 import { localeConfigs } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { getOwnedLocaleUrl } from '@/lib/siteRouting';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 interface NavLink {
   label: string;
@@ -22,11 +21,6 @@ interface NavLink {
 type NavCta = { trial: string; consult: string };
 type NavbarVariant = 'default' | 'comparison';
 const faqLocaleCodes = ['en', 'zh'];
-const techCenterLabels: Record<string, string> = {
-  zh: '技术中心',
-  'zh-hant': '技術中心',
-  ja: '技術センター'
-};
 
 function isExternalHref(href: string) {
   return /^(https?:)?\/\//.test(href);
@@ -64,10 +58,7 @@ export default function Navbar({
   const desktopStartUrl = useStartUrl();
   const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
-  const techCenterHref = getDefaultLocalePath(lang, '/tech-center');
-  const resolvedLinks = links.some((link) => link.href === '/tech-center')
-    ? links.map((link) => (link.href === '/tech-center' ? { ...link, href: techCenterHref } : link))
-    : [{ label: techCenterLabels[lang] || 'Tech Center', href: techCenterHref }, ...links];
+  const resolvedLinks = links.filter((link) => link.href !== '/tech-center');
   const routeWithoutLang = (() => {
     if (!params?.lang) return pathname;
     const currentLangPrefix = `/${params.lang}`;
@@ -234,15 +225,15 @@ export default function Navbar({
 
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href={CONSULT_URL}
-              data-consultation-link="true"
-              {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_mobile_consult')}
-              aria-label={t.consult}
-              className={`px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark transition-opacity duration-300 ${
+              href={mobileStartUrl}
+              rel="noopener noreferrer nofollow"
+              {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_nav_mobile_trial')}
+              aria-label={t.trial}
+              className={`px-4 py-1.5 rounded-full bg-white border border-hairline-soft text-[12px] font-medium text-ink hover:bg-gray-50 transition-opacity duration-300 ${
                 showMobileCta && !mobileOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
             >
-              {t.consult}
+              {t.trial}
             </a>
             <button
               className="p-2 text-ink relative z-[60]"

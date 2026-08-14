@@ -10,13 +10,11 @@ import {
   siteConfigZh
 } from '@/config/site';
 import { localeNames, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
-import { currentSiteVariant } from '@/lib/siteRouting';
+import { getDefaultLocaleForLanguageRegion } from '@/lib/siteRouting';
 
 export { localeNames, normalizeLocale, supportedLocaleCodes };
 
-export const defaultLocale = normalizeLocale(
-  process.env.NEXT_PUBLIC_DEFAULT_LOCALE || (currentSiteVariant === 'cn' ? 'zh' : 'en')
-);
+export const defaultLocale = getDefaultLocaleForLanguageRegion();
 
 /**
  * Get site config for a given locale

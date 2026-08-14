@@ -60,5 +60,5 @@ export async function generateMetadata({
 
 // Generate static paths for all supported languages
 export async function generateStaticParams() {
-  return getBuildLocaleCodes(defaultLocale).map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }

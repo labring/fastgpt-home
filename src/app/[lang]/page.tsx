@@ -27,5 +27,5 @@ export default async function HomePage({ params }: { params: Promise<{ lang?: st
 }
 
 export async function generateStaticParams() {
-  return getBuildLocaleCodes(defaultLocale).map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }

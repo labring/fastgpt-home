@@ -48,7 +48,7 @@ export async function ComparisonRoute({ locale, slug }: { locale: CompareLocale;
         <ComparisonPage page={page} />
       </main>
       <div className="comparison-footer">
-        <Footer t={dict.Home.footer} />
+        <Footer t={dict.Home.footer} locale={locale} />
       </div>
     </div>
   );

@@ -20,24 +20,12 @@ const localeConfigs = [
 
 const locales = new Map(localeConfigs.map((locale) => [locale.code, locale]));
 const outDir = path.join(__dirname, '..', 'out');
-const defaultLocale = normalizeLocale(process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en');
-
-function normalizeLocale(locale) {
-  if (!locale) return 'en';
-  const normalized = String(locale).toLowerCase().replace(/_/g, '-');
-  if (
-    normalized.startsWith('zh-hant') ||
-    normalized.startsWith('zh-tw') ||
-    normalized.startsWith('zh-hk') ||
-    normalized.startsWith('zh-mo')
-  ) {
-    return 'zh-hant';
-  }
-  for (const config of localeConfigs) {
-    if (normalized.startsWith(config.code)) return config.code;
-  }
-  return 'en';
-}
+const configuredRegion = process.env.NEXT_PUBLIC_LANGUAGE_REGION;
+const languageRegion =
+  configuredRegion === 'zh' || configuredRegion === 'international'
+    ? configuredRegion
+    : 'zh';
+const defaultLocale = languageRegion === 'zh' ? 'zh' : 'en';
 
 function inferLocale(filePath) {
   const relative = path.relative(outDir, filePath).split(path.sep).join('/');

@@ -435,8 +435,16 @@
           "items": {
             "cloud": "云服务",
             "private": "私有化",
-            "community": "社区版",
-            "docs": "文档中心"
+            "community": "社区版"
+          }
+        },
+        "links": {
+          "title": "链接",
+          "items": {
+            "docs": "官网文档",
+            "learning": "学习中心",
+            "cases": "案例中心",
+            "tech": "技术中心"
           }
         },
         "partner": {

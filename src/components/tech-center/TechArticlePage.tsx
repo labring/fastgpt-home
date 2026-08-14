@@ -162,7 +162,7 @@ export default function TechArticlePage({
           </div>
         </div>
       </main>
-      <Footer t={footer} />
+      <Footer t={footer} locale={locale} />
     </div>
   );
 }

@@ -35,10 +35,10 @@ npm run verify:i18n-seo         # Check domain ownership, hreflang, canonicals, 
 
 ```bash
 export NEXT_PUBLIC_HOME_URL=https://fastgpt.io
-export NEXT_PUBLIC_SITE_VARIANT=io
+export NEXT_PUBLIC_HOME_URL=https://fastgpt.io
 export NEXT_PUBLIC_CN_HOME_URL=https://fastgpt.cn
 export NEXT_PUBLIC_IO_HOME_URL=https://fastgpt.io
-export NEXT_PUBLIC_DEFAULT_LOCALE=en
+export NEXT_PUBLIC_LANGUAGE_REGION=international
 npm run build
 npm run verify:p0
 npm run verify:p1
@@ -50,10 +50,10 @@ npm run verify:i18n-seo
 
 ```bash
 export NEXT_PUBLIC_HOME_URL=https://fastgpt.cn
-export NEXT_PUBLIC_SITE_VARIANT=cn
+export NEXT_PUBLIC_HOME_URL=https://fastgpt.cn
 export NEXT_PUBLIC_CN_HOME_URL=https://fastgpt.cn
 export NEXT_PUBLIC_IO_HOME_URL=https://fastgpt.io
-export NEXT_PUBLIC_DEFAULT_LOCALE=zh
+export NEXT_PUBLIC_LANGUAGE_REGION=zh
 npm run build
 npm run verify:p0
 npm run verify:p1
@@ -132,9 +132,9 @@ try {
 | Command | Primary contracts | Inputs | File |
 |---------|-------------------|--------|------|
 | `npm run verify:p0` | FAQ Open Graph/Twitter image tags, FAQ JSON-LD, 1200x630 image under 200,000 bytes, exported asset equality, Nginx security headers and redirect order, Cloudflare redirect presence/order | `out/`, `public/faq-social-preview.png`, `public/_redirects`, `nginx.conf`, `nginx-security-headers.conf` | `scripts/verify-p0.js` |
-| `npm run verify:p1` | Canonicals, robots meta, target homepage/FAQ copy, social metadata, JSON-LD, hero and solution dimensions/size/export equality, selected locale asset, initial JavaScript at or below 260 KiB gzip, deferred analytics | `out/`, `public/images/`, `NEXT_PUBLIC_HOME_URL`, `NEXT_PUBLIC_DEFAULT_LOCALE` | `scripts/verify-p1.js` |
-| `npm run verify:p2` | One `h1`, sequential heading levels, FAQ title/description limits, social metadata parity, canonical targets, all FAQ detail metadata, default-locale migration coverage, sitemap prefix cleanup | `out/`, `NEXT_PUBLIC_HOME_URL`, `NEXT_PUBLIC_DEFAULT_LOCALE`, `src/lib/faqMetadata.constants.json` | `scripts/verify-p2.js` |
-| `npm run verify:i18n-seo` | Variant-owned robots/sitemap, cross-domain redirects, canonical and hreflang maps, comparison routes, comparison metadata lengths, sitemap uniqueness and ownership | `out/`, `public/robots.txt`, `public/_redirects`, `nginx.conf`, `NEXT_PUBLIC_SITE_VARIANT` | `scripts/verify-i18n-seo.js` |
+| `npm run verify:p1` | Canonicals, robots meta, target homepage/FAQ copy, social metadata, JSON-LD, hero and solution dimensions/size/export equality, selected locale asset, initial JavaScript at or below 260 KiB gzip, deferred analytics | `out/`, `public/images/`, `NEXT_PUBLIC_HOME_URL`, `NEXT_PUBLIC_LANGUAGE_REGION` | `scripts/verify-p1.js` |
+| `npm run verify:p2` | One `h1`, sequential heading levels, FAQ title/description limits, social metadata parity, canonical targets, all FAQ detail metadata, default-locale migration coverage, sitemap prefix cleanup | `out/`, `NEXT_PUBLIC_HOME_URL`, `NEXT_PUBLIC_LANGUAGE_REGION`, `src/lib/faqMetadata.constants.json` | `scripts/verify-p2.js` |
+| `npm run verify:i18n-seo` | Variant-owned robots/sitemap, cross-domain redirects, canonical and hreflang maps, comparison routes, comparison metadata lengths, sitemap uniqueness and ownership | `out/`, `public/robots.txt`, `public/_redirects`, `nginx.conf`, `NEXT_PUBLIC_HOME_URL` | `scripts/verify-i18n-seo.js` |
 
 ## Mocking
 

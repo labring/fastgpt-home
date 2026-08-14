@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { isContactHref } from '@/lib/consultation';
+import { getOwnedLocalePath } from '@/lib/siteRouting';
 
 type ColumnLink = { label: string; href: string; external?: boolean; cloudEntrySource?: string };
 type Column = { title: string; width: number; items: (ColumnLink | { label: string })[] };
@@ -14,7 +15,11 @@ type FooterT = {
   columns: {
     service: {
       title: string;
-      items: { cloud: string; private: string; community: string; docs: string };
+      items: { cloud: string; private: string; community: string };
+    };
+    links: {
+      title: string;
+      items: { docs: string; learning: string; cases: string; tech: string };
     };
     partner: { title: string };
     more: { title: string; email: string; lanqiao: string; book: string };
@@ -23,7 +28,9 @@ type FooterT = {
   copyright: string;
 };
 
-function buildColumns(t: FooterT['columns']): Column[] {
+function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
+  const techCenterHref = locale ? getOwnedLocalePath(locale, '/tech-center') : '/tech-center';
+
   return [
     {
       title: t.service.title,
@@ -45,11 +52,28 @@ function buildColumns(t: FooterT['columns']): Column[] {
           href: 'https://github.com/labring/FastGPT',
           external: true
         },
+      ]
+    },
+    {
+      title: t.links.title,
+      width: 150,
+      items: [
         {
-          label: t.service.items.docs,
+          label: t.links.items.docs,
           href: 'https://doc.fastgpt.io/docs/introduction',
           external: true
-        }
+        },
+        {
+          label: t.links.items.learning,
+          href: 'https://video.fastgpt.cn/videos',
+          external: true
+        },
+        {
+          label: t.links.items.cases,
+          href: 'https://solutions.fastgpt.cn/',
+          external: true
+        },
+        { label: t.links.items.tech, href: techCenterHref, external: false }
       ]
     },
     {
@@ -145,8 +169,8 @@ const legalStyle = {
   color: 'rgb(41, 47, 56)'
 } as const;
 
-export default function Footer({ t }: { t: FooterT }) {
-  const columns = buildColumns(t.columns);
+export default function Footer({ t, locale }: { t: FooterT; locale?: string }) {
+  const columns = buildColumns(t.columns, locale);
   const qrs = buildQrs(t.qr);
   return (
     <footer className="bg-white py-8 md:py-10">

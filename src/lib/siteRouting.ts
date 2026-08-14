@@ -3,6 +3,9 @@ import { normalizeLocale, supportedLocaleCodes, type LocaleCode } from '@/lib/lo
 export const siteVariants = ['cn', 'io'] as const;
 export type SiteVariant = (typeof siteVariants)[number];
 
+export const languageRegions = ['zh', 'international'] as const;
+export type LanguageRegion = (typeof languageRegions)[number];
+
 type LocaleRouting = {
   owner: SiteVariant;
   hreflang: string;
@@ -25,7 +28,8 @@ const siteBaseUrls: Record<SiteVariant, string> = {
   io: stripTrailingSlash(process.env.NEXT_PUBLIC_IO_HOME_URL || 'https://fastgpt.io')
 };
 
-export const currentSiteVariant = parseSiteVariant(process.env.NEXT_PUBLIC_SITE_VARIANT);
+export const currentSiteVariant = parseSiteVariant(process.env.NEXT_PUBLIC_HOME_URL);
+export const currentLanguageRegion = parseLanguageRegion(process.env.NEXT_PUBLIC_LANGUAGE_REGION);
 export const currentSiteBaseUrl = siteBaseUrls[currentSiteVariant];
 
 export function getSiteBaseUrl(variant: SiteVariant) {
@@ -44,6 +48,27 @@ export function getPublishedLocaleCodes(variant: SiteVariant = currentSiteVarian
   return supportedLocaleCodes.filter((locale) => localeRouting[locale].owner === variant);
 }
 
+/**
+ * Returns the locales included in this deployment's static build.
+ *
+ * The language region is deliberately independent from site ownership: `zh`
+ * builds only Simplified Chinese, while `international` builds every locale
+ * except Simplified Chinese. The site variant still controls canonical hosts
+ * and cross-domain ownership.
+ */
+export function getAvailableLocaleCodes(
+  region: LanguageRegion = currentLanguageRegion
+): LocaleCode[] {
+  if (region === 'zh') return ['zh'];
+  return supportedLocaleCodes.filter((locale) => locale !== 'zh');
+}
+
+export function getDefaultLocaleForLanguageRegion(
+  region: LanguageRegion = currentLanguageRegion
+): LocaleCode {
+  return region === 'zh' ? 'zh' : 'en';
+}
+
 export function getPublishedPrefixedLocaleCodes(
   defaultLocale: string,
   variant: SiteVariant = currentSiteVariant
@@ -52,12 +77,12 @@ export function getPublishedPrefixedLocaleCodes(
   return getPublishedLocaleCodes(variant).filter((locale) => locale !== normalizedDefaultLocale);
 }
 
-export function getBuildLocaleCodes(
-  defaultLocale: string,
-  variant: SiteVariant = currentSiteVariant
-) {
-  const publishedLocales = getPublishedPrefixedLocaleCodes(defaultLocale, variant);
-  return publishedLocales.length ? publishedLocales : [normalizeLocale(defaultLocale)];
+export function getBuildLocaleCodes(region: LanguageRegion = currentLanguageRegion) {
+  const normalizedDefaultLocale = getDefaultLocaleForLanguageRegion(region);
+  const prefixedLocales = getAvailableLocaleCodes(region).filter(
+    (locale) => locale !== normalizedDefaultLocale
+  );
+  return prefixedLocales.length ? prefixedLocales : [normalizedDefaultLocale];
 }
 
 export function getOwnedLocalePath(locale: string, path = '') {
@@ -92,11 +117,15 @@ export function getOwnedFaqUrl(locale: string, faqId?: string) {
   )}`;
 }
 
-function parseSiteVariant(value: string | undefined): SiteVariant {
-  if (value === 'cn' || value === 'io') return value;
-
-  const configuredHomeUrl = process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io';
+function parseSiteVariant(homeUrl: string | undefined): SiteVariant {
+  const configuredHomeUrl = homeUrl || 'https://fastgpt.cn';
   return new URL(configuredHomeUrl).hostname.endsWith('.cn') ? 'cn' : 'io';
+}
+
+function parseLanguageRegion(value: string | undefined): LanguageRegion {
+  if (value === 'zh' || value === 'international') return value;
+  // Keep the safe default on the domestic Simplified Chinese build.
+  return 'zh';
 }
 
 function stripTrailingSlash(value: string) {

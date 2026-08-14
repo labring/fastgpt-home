@@ -1,13 +1,14 @@
 'use client';
 
 import { FormEvent, useEffect, useRef, useState } from 'react';
-import { AlertTriangle, CheckCircle2, ChevronDown, LoaderCircle } from 'lucide-react';
+import { AlertTriangle, Check, CheckCircle2, ChevronDown, LoaderCircle } from 'lucide-react';
 import {
   getAttributionPayload,
   getVisitorId,
   reportAnonymousAttribution,
   trackVisit
 } from '@/lib/leadAttribution';
+import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 import {
   CONTACT_OPTIONS,
   INITIAL_CONTACT_FORM,
@@ -23,17 +24,17 @@ type ContactFormProps = {
 };
 
 const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '') || '';
+const CN_MOBILE_PHONE_PATTERN = /^1[3-9]\d{9}$/;
+const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function FieldLabel({
   children,
   required,
-  requiredText,
-  optionalText
+  requiredText
 }: {
   children: string;
   required?: boolean;
   requiredText: string;
-  optionalText: string;
 }) {
   return (
     <span className="mb-2 flex items-center gap-1 text-[13px] font-medium leading-5 text-[#1d2939]">
@@ -43,15 +44,42 @@ function FieldLabel({
         </span>
       )}
       {children}
-      {!required && (
-        <span aria-hidden="true" className="text-[11px] font-normal text-[#98a2b3]">
-          {optionalText}
-        </span>
-      )}
-      <span className="sr-only">{required ? requiredText : optionalText}</span>
+      {required && <span className="sr-only">{requiredText}</span>}
     </span>
   );
 }
+
+function FieldError({ id, message }: { id: string; message?: string }) {
+  if (!message) return null;
+
+  return (
+    <p id={id} role="alert" className="mt-1.5 text-[12px] leading-5 text-[#d92d20]">
+      {message}
+    </p>
+  );
+}
+
+function getRequiredFieldError(
+  locale: string,
+  copy: ReturnType<typeof getContactCopy>,
+  field: keyof ContactFormValues,
+  select = false
+) {
+  const label = copy.fields[field];
+  if (locale === 'zh-hant') return (select ? '請選擇' : '請輸入') + label;
+  if (locale === 'zh') return (select ? '请选择' : '请输入') + label;
+  return (select ? 'Select ' : 'Enter ') + label;
+}
+
+const REQUIRED_CONTACT_FIELDS = [
+  'name',
+  'phone',
+  'company',
+  'position',
+  'usedOpenSource',
+  'consultationTopic',
+  'projectStage'
+] as const;
 
 function SelectField({
   label,
@@ -62,7 +90,9 @@ function SelectField({
   copy,
   required,
   fullWidth,
-  onChange
+  onChange,
+  error,
+  onBlur
 }: {
   label: string;
   name: keyof ContactFormValues;
@@ -73,19 +103,87 @@ function SelectField({
   required?: boolean;
   fullWidth?: boolean;
   onChange: (name: keyof ContactFormValues, value: string) => void;
+  error?: string;
+  onBlur?: () => void;
 }) {
+  const [open, setOpen] = useState(false);
+  const selectedIndex = Math.max(
+    options.findIndex((option) => option === value),
+    0
+  );
+  const [activeIndex, setActiveIndex] = useState(selectedIndex);
+  const containerRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
+  const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
+  const menuOptions = options.map((option) => ({
+    value: option,
+    label: getContactOptionLabel(copy, option)
+  }));
+
+  useEffect(() => {
+    if (!open) return;
+
+    const handlePointerDown = (event: PointerEvent) => {
+      if (!containerRef.current?.contains(event.target as Node)) setOpen(false);
+    };
+    const handleEscape = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
+    };
+
+    document.addEventListener('pointerdown', handlePointerDown);
+    document.addEventListener('keydown', handleEscape);
+    return () => {
+      document.removeEventListener('pointerdown', handlePointerDown);
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [open]);
+
+  useEffect(() => {
+    if (open) optionRefs.current[activeIndex]?.focus();
+  }, [activeIndex, open]);
+
+  const closeMenu = (restoreFocus = false) => {
+    setOpen(false);
+    if (restoreFocus) requestAnimationFrame(() => buttonRef.current?.focus());
+  };
+
+  const selectOption = (nextValue: string) => {
+    onChange(name, nextValue);
+    closeMenu(true);
+  };
+
+  const moveActiveOption = (direction: 1 | -1) => {
+    setActiveIndex((current) => (current + direction + menuOptions.length) % menuOptions.length);
+  };
+
   return (
-    <label className={`block min-w-0 ${fullWidth ? 'sm:col-span-2' : ''}`}>
-      <FieldLabel required={required} requiredText={copy.required} optionalText={copy.optional}>
-        {label}
-      </FieldLabel>
-      <span className="relative block">
+    <div
+      className={'block min-w-0 ' + (fullWidth ? 'sm:col-span-2' : '')}
+      ref={containerRef}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setOpen(false);
+          onBlur?.();
+        }
+      }}
+    >
+      <label htmlFor={name + '-button'} className="block">
+        <FieldLabel required={required} requiredText={copy.required}>
+          {label}
+        </FieldLabel>
+      </label>
+      <div className="relative">
         <select
           name={name}
           value={value}
           required={required}
           onChange={(event) => onChange(name, event.target.value)}
-          className="h-11 w-full appearance-none rounded-md border border-[#d0d5dd] bg-white px-3 pr-10 text-[14px] text-[#101828] outline-none transition-colors focus:border-[#155eef] focus:ring-2 focus:ring-[#155eef]/15 disabled:cursor-not-allowed disabled:bg-[#f9fafb]"
+          tabIndex={-1}
+          aria-hidden="true"
+          className="sr-only"
         >
           <option value="">{placeholder}</option>
           {options.map((option) => (
@@ -94,28 +192,124 @@ function SelectField({
             </option>
           ))}
         </select>
-        <ChevronDown
-          aria-hidden
-          size={16}
-          strokeWidth={1.8}
-          className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[#667085]"
-        />
-      </span>
-    </label>
+        <button
+          ref={buttonRef}
+          id={name + '-button'}
+          type="button"
+          aria-label={label}
+          aria-haspopup="listbox"
+          aria-expanded={open}
+          aria-controls={name + '-options'}
+          aria-describedby={error ? name + '-error' : undefined}
+          onClick={() => {
+            setActiveIndex(selectedIndex);
+            setOpen((current) => !current);
+          }}
+          onKeyDown={(event) => {
+            if (event.key === 'ArrowDown' || event.key === 'ArrowUp') {
+              event.preventDefault();
+              setActiveIndex(selectedIndex);
+              setOpen(true);
+            }
+            if (event.key === 'Escape' && open) closeMenu(true);
+          }}
+          className={
+            'flex h-11 w-full items-center justify-between gap-3 rounded-md border bg-white px-3 text-left text-[14px] outline-none transition-[border-color,box-shadow] focus-visible:ring-2 focus-visible:ring-[#155eef]/15 ' +
+            (open
+              ? error
+                ? 'border-[#d92d20] ring-2 ring-[#f04438]/15'
+                : 'border-[#155eef] ring-2 ring-[#155eef]/15'
+              : error
+              ? 'border-[#d92d20] hover:border-[#b42318]'
+              : 'border-[#d0d5dd] hover:border-[#98a2b3]')
+          }
+        >
+          <span className={'truncate ' + (value ? 'text-[#101828]' : 'text-[#98a2b3]')}>
+            {value ? getContactOptionLabel(copy, value) : placeholder}
+          </span>
+          <ChevronDown
+            aria-hidden
+            size={16}
+            strokeWidth={1.8}
+            className={
+              'shrink-0 text-[#667085] transition-transform duration-200 ' +
+              (open ? 'rotate-180' : '')
+            }
+          />
+        </button>
+
+        {open && (
+          <div
+            id={name + '-options'}
+            role="listbox"
+            aria-label={label}
+            className="absolute left-0 right-0 top-full z-30 mt-2 max-h-60 overflow-y-auto rounded-lg border border-[#e4e7ec] bg-white p-1 shadow-[0_12px_28px_rgba(16,24,40,0.12)] ring-1 ring-black/[0.03]"
+          >
+            {menuOptions.map((option, index) => {
+              const selected = value === option.value;
+              return (
+                <button
+                  key={option.value}
+                  ref={(element) => {
+                    optionRefs.current[index] = element;
+                  }}
+                  type="button"
+                  role="option"
+                  aria-selected={selected}
+                  onClick={() => selectOption(option.value)}
+                  onKeyDown={(event) => {
+                    if (event.key === 'ArrowDown') {
+                      event.preventDefault();
+                      moveActiveOption(1);
+                    } else if (event.key === 'ArrowUp') {
+                      event.preventDefault();
+                      moveActiveOption(-1);
+                    } else if (event.key === 'Home') {
+                      event.preventDefault();
+                      setActiveIndex(0);
+                    } else if (event.key === 'End') {
+                      event.preventDefault();
+                      setActiveIndex(menuOptions.length - 1);
+                    } else if (event.key === 'Escape') {
+                      event.preventDefault();
+                      closeMenu(true);
+                    }
+                  }}
+                  className={
+                    'flex min-h-10 w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef]/25 ' +
+                    (selected
+                      ? 'bg-[#eef4ff] text-[#155eef] hover:bg-[#dbe8ff]'
+                      : 'text-[#344054] hover:bg-[#eaecf0] hover:text-[#101828]')
+                  }
+                >
+                  <span className="flex size-4 shrink-0 items-center justify-center">
+                    {selected && <Check size={15} strokeWidth={2.2} aria-hidden />}
+                  </span>
+                  <span>{option.label}</span>
+                </button>
+              );
+            })}
+          </div>
+        )}
+      </div>
+      <FieldError id={name + '-error'} message={error} />
+    </div>
   );
 }
 
-export default function ContactForm({
-  locale,
-  variant = 'page',
-  onDone
-}: ContactFormProps) {
+export default function ContactForm({ locale, variant = 'page', onDone }: ContactFormProps) {
   const copy = getContactCopy(locale);
   const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState<ContactFormValues>(INITIAL_CONTACT_FORM);
   const [visitorId, setVisitorId] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof ContactFormValues, string>>>(
+    {}
+  );
+  const [touchedFields, setTouchedFields] = useState<
+    Partial<Record<keyof ContactFormValues, boolean>>
+  >({});
 
   useEffect(() => {
     queueMicrotask(() => {
@@ -123,14 +317,77 @@ export default function ContactForm({
     });
   }, []);
 
+  const validateField = (name: keyof ContactFormValues, value: string) => {
+    const isRequired = (REQUIRED_CONTACT_FIELDS as readonly string[]).includes(name);
+    if (!isRequired) return '';
+
+    const isSelect =
+      name === 'usedOpenSource' || name === 'consultationTopic' || name === 'projectStage';
+    if (!value.trim()) return getRequiredFieldError(locale, copy, name, isSelect);
+
+    if (name === 'phone') {
+      const normalizedValue = value.trim();
+      const normalizedPhone = normalizedValue.replace(/[\s-]/g, '');
+      const isMainlandPhone = CN_MOBILE_PHONE_PATTERN.test(normalizedPhone);
+      const isEmail = EMAIL_PATTERN.test(normalizedValue);
+      if (!isMainlandPhone && !isEmail) return copy.phoneError;
+    }
+
+    return '';
+  };
+
+  const setFieldError = (name: keyof ContactFormValues, message: string) => {
+    setFieldErrors((current) => {
+      const next = { ...current };
+      if (message) next[name] = message;
+      else delete next[name];
+      return next;
+    });
+  };
+
   const updateValue = (name: keyof ContactFormValues, value: string) => {
     setValues((current) => ({ ...current, [name]: value }));
     if (error) setError('');
+
+    if (name === 'phone' || touchedFields[name]) {
+      setFieldError(name, validateField(name, value));
+      if (name === 'phone') {
+        setTouchedFields((current) => ({ ...current, phone: true }));
+      }
+    }
+  };
+
+  const handleFieldBlur = (name: keyof ContactFormValues) => {
+    setTouchedFields((current) => ({ ...current, [name]: true }));
+    setFieldError(name, validateField(name, values[name]));
+  };
+
+  const validateForm = () => {
+    const nextErrors: Partial<Record<keyof ContactFormValues, string>> = {};
+    for (const field of REQUIRED_CONTACT_FIELDS) {
+      const message = validateField(field, values[field]);
+      if (message) nextErrors[field] = message;
+    }
+
+    setTouchedFields((current) => ({
+      ...current,
+      name: true,
+      phone: true,
+      company: true,
+      position: true,
+      usedOpenSource: true,
+      consultationTopic: true,
+      projectStage: true
+    }));
+    setFieldErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
   };
 
   const reset = () => {
     setValues(INITIAL_CONTACT_FORM);
     setError('');
+    setFieldErrors({});
+    setTouchedFields({});
     setStatus('idle');
   };
 
@@ -142,19 +399,11 @@ export default function ContactForm({
       setError(copy.configErrorBody);
       return;
     }
+    if (!validateForm()) return;
+
     const currentVisitorId = visitorId || getVisitorId();
     if (!currentVisitorId) {
       setError(copy.visitorError);
-      return;
-    }
-    if (!values.usedOpenSource) {
-      setError(copy.requiredError);
-      return;
-    }
-
-    const phoneDigits = values.phone.replace(/\D/g, '');
-    if (phoneDigits.length < 6 || phoneDigits.length > 20) {
-      setError(copy.phoneError);
       return;
     }
     if (!formRef.current?.reportValidity()) return;
@@ -162,9 +411,11 @@ export default function ContactForm({
     setStatus('submitting');
     try {
       trackVisit();
-      await reportAnonymousAttribution();
+      // Attribution is best-effort telemetry and must not block the contact
+      // form when its tracking endpoint is unavailable.
+      void reportAnonymousAttribution();
       const attribution = getAttributionPayload();
-      const response = await fetch(`${CRM_API_URL}/contacts/submit`, {
+      const response = await fetchWithTimeout(`${CRM_API_URL}/contacts/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -267,38 +518,61 @@ export default function ContactForm({
     'h-11 w-full rounded-md border border-[#d0d5dd] bg-white px-3 text-[14px] text-[#101828] outline-none placeholder:text-[#98a2b3] transition-colors focus:border-[#155eef] focus:ring-2 focus:ring-[#155eef]/15';
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="px-5 pb-6 pt-5 sm:px-8 sm:pb-8">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      noValidate
+      className="px-5 pb-6 pt-5 sm:px-8 sm:pb-8"
+    >
       <input type="hidden" name="visitor_id" value={visitorId} />
       <div className="grid grid-cols-1 gap-x-5 gap-y-5 sm:grid-cols-2">
-        {(['name', 'phone', 'company', 'position'] as const).map((name) => (
-          <label key={name} className="block min-w-0">
-            <FieldLabel required requiredText={copy.required} optionalText={copy.optional}>
-              {copy.fields[name]}
-            </FieldLabel>
-            <input
-              name={name}
-              type={name === 'phone' ? 'tel' : 'text'}
-              inputMode={name === 'phone' ? 'tel' : undefined}
-              autoComplete={
-                name === 'name'
-                  ? 'name'
-                  : name === 'phone'
-                  ? 'tel'
-                  : name === 'company'
-                  ? 'organization'
-                  : 'organization-title'
-              }
-              value={values[name]}
-              required
-              maxLength={
-                name === 'phone' ? 30 : name === 'company' ? 200 : name === 'position' ? 100 : 120
-              }
-              onChange={(event) => updateValue(name, event.target.value)}
-              placeholder={copy.placeholders[name]}
-              className={textInputClass}
-            />
-          </label>
-        ))}
+        {(['name', 'phone', 'company', 'position'] as const).map((name) => {
+          const fieldError = fieldErrors[name];
+          return (
+            <label key={name} className="block min-w-0">
+              <FieldLabel required requiredText={copy.required}>
+                {copy.fields[name]}
+              </FieldLabel>
+              <input
+                name={name}
+                type="text"
+                inputMode={name === 'phone' ? 'email' : undefined}
+                autoComplete={
+                  name === 'name'
+                    ? 'name'
+                    : name === 'phone'
+                    ? 'tel'
+                    : name === 'company'
+                    ? 'organization'
+                    : 'organization-title'
+                }
+                value={values[name]}
+                required
+                maxLength={
+                  name === 'phone'
+                    ? 254
+                    : name === 'company'
+                    ? 200
+                    : name === 'position'
+                    ? 100
+                    : 120
+                }
+                onChange={(event) => updateValue(name, event.target.value)}
+                onBlur={() => handleFieldBlur(name)}
+                placeholder={copy.placeholders[name]}
+                aria-invalid={Boolean(fieldError)}
+                aria-describedby={fieldError ? name + '-error' : undefined}
+                className={
+                  textInputClass +
+                  (fieldError
+                    ? ' border-[#d92d20] focus:border-[#d92d20] focus:ring-[#f04438]/15'
+                    : '')
+                }
+              />
+              <FieldError id={name + '-error'} message={fieldError} />
+            </label>
+          );
+        })}
 
         <SelectField
           label={copy.fields.consultationTopic}
@@ -309,10 +583,12 @@ export default function ContactForm({
           copy={copy}
           required
           onChange={updateValue}
+          error={fieldErrors.consultationTopic}
+          onBlur={() => handleFieldBlur('consultationTopic')}
         />
         <fieldset className="min-w-0">
           <legend>
-            <FieldLabel required requiredText={copy.required} optionalText={copy.optional}>
+            <FieldLabel required requiredText={copy.required}>
               {copy.fields.usedOpenSource}
             </FieldLabel>
           </legend>
@@ -325,6 +601,8 @@ export default function ContactForm({
                   className={`flex h-11 cursor-pointer items-center justify-start gap-2 rounded-md border px-3 text-[14px] font-medium transition-colors focus-within:ring-2 focus-within:ring-[#155eef]/20 focus-within:ring-offset-1 ${
                     selected
                       ? 'border-[#155eef] bg-[#eef4ff] text-[#155eef]'
+                      : fieldErrors.usedOpenSource
+                      ? 'border-[#d92d20] bg-[#fffafa] text-[#344054] hover:border-[#b42318]'
                       : 'border-[#d0d5dd] bg-white text-[#344054] hover:border-[#98a2b3] hover:bg-[#f9fafb]'
                   }`}
                 >
@@ -335,6 +613,9 @@ export default function ContactForm({
                     checked={selected}
                     required
                     onChange={() => updateValue('usedOpenSource', option)}
+                    aria-describedby={
+                      fieldErrors.usedOpenSource ? 'usedOpenSource-error' : undefined
+                    }
                     className="sr-only"
                   />
                   <span
@@ -350,6 +631,7 @@ export default function ContactForm({
               );
             })}
           </div>
+          <FieldError id="usedOpenSource-error" message={fieldErrors.usedOpenSource} />
         </fieldset>
         <SelectField
           label={copy.fields.projectStage}
@@ -360,6 +642,8 @@ export default function ContactForm({
           copy={copy}
           required
           onChange={updateValue}
+          error={fieldErrors.projectStage}
+          onBlur={() => handleFieldBlur('projectStage')}
         />
         <SelectField
           label={copy.fields.budget}
@@ -371,9 +655,7 @@ export default function ContactForm({
           onChange={updateValue}
         />
         <label className="block min-w-0 sm:col-span-2">
-          <FieldLabel requiredText={copy.required} optionalText={copy.optional}>
-            {copy.fields.notes}
-          </FieldLabel>
+          <FieldLabel requiredText={copy.required}>{copy.fields.notes}</FieldLabel>
           <textarea
             name="notes"
             value={values.notes}

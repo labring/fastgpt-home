@@ -15,7 +15,7 @@ import {
   getOwnedFaqPath,
   getOwnedFaqUrl,
   getOwnedLocaleUrl,
-  getPublishedPrefixedLocaleCodes
+  getBuildLocaleCodes
 } from '@/lib/siteRouting';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Workflow } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
@@ -283,7 +283,7 @@ export default async function FAQDetailPage({
 }
 
 export async function generateStaticParams() {
-  const localizedFaqLocales = getPublishedPrefixedLocaleCodes(defaultLocale).filter((lang) =>
+  const localizedFaqLocales = getBuildLocaleCodes().filter((lang) =>
     faqContentLocaleCodes.includes(lang as (typeof faqContentLocaleCodes)[number])
   );
   if (!localizedFaqLocales.length) {

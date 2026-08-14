@@ -4,15 +4,34 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
+import { useEffect, useState } from 'react';
 import ContactForm from '@/components/contact/ContactForm';
 import { getContactCopy } from '@/components/contact/contactCopy';
 import { normalizeLocale } from '@/lib/locales';
 
 export default function ContactPage({ locale }: { locale: string }) {
   const router = useRouter();
+  const [canGoBack, setCanGoBack] = useState(false);
   const normalizedLocale = normalizeLocale(locale);
   const copy = getContactCopy(normalizedLocale);
   const homeHref = `/${normalizedLocale}`;
+
+  useEffect(() => {
+    const referrer = document.referrer;
+    let hasSameOriginReferrer = false;
+
+    if (referrer) {
+      try {
+        hasSameOriginReferrer = new URL(referrer).origin === window.location.origin;
+      } catch {
+        hasSameOriginReferrer = false;
+      }
+    }
+
+    queueMicrotask(() => {
+      setCanGoBack(window.history.length > 1 && hasSameOriginReferrer);
+    });
+  }, []);
 
   return (
     <div className="home min-h-screen bg-white text-[#101828]">
@@ -22,19 +41,20 @@ export default function ContactPage({ locale }: { locale: string }) {
             <Image src="/logo-nav.svg" width={24} height={24} alt="" draggable={false} />
             <span className="text-[17px] font-semibold text-[#101828]">FastGPT</span>
           </Link>
-          <button
-            type="button"
-            onClick={() => router.back()}
-            className="inline-flex items-center gap-2 text-[13px] font-medium text-[#475467] transition-colors hover:text-[#101828] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef]"
-          >
-            <ArrowLeft size={15} strokeWidth={1.8} aria-hidden />
-            {copy.back}
-          </button>
+          {canGoBack && (
+            <button
+              type="button"
+              onClick={() => router.back()}
+              className="inline-flex items-center gap-2 text-[13px] font-medium text-[#475467] transition-colors hover:text-[#101828] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef]"
+            >
+              <ArrowLeft size={15} strokeWidth={1.8} aria-hidden />
+              {copy.back}
+            </button>
+          )}
         </div>
       </header>
 
-      <main className="relative overflow-hidden bg-[#f8fafc] px-5 py-10 sm:px-8 sm:py-14 lg:py-16">
-        <div className="absolute inset-y-0 left-0 hidden w-[7px] bg-[#155eef] sm:block" aria-hidden />
+      <main className="bg-[#f8fafc] px-5 py-10 sm:px-8 sm:py-14 lg:py-16">
         <div className="mx-auto max-w-[820px]">
           <div className="mb-8 max-w-[680px] sm:mb-10">
             <span className="mb-3 block text-[11px] font-semibold uppercase text-[#155eef]">

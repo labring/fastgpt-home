@@ -446,8 +446,16 @@
           "items": {
             "cloud": "Cloud",
             "private": "Deploy Mandiri",
-            "community": "Komunitas",
-            "docs": "Dokumentasi"
+            "community": "Komunitas"
+          }
+        },
+        "links": {
+          "title": "Tautan",
+          "items": {
+            "docs": "Dokumentasi Resmi",
+            "learning": "Pusat Pembelajaran",
+            "cases": "Pusat Studi Kasus",
+            "tech": "Pusat Teknis"
           }
         },
         "partner": {

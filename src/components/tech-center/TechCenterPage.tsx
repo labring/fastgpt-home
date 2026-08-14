@@ -534,7 +534,7 @@ export default function TechCenterPage({
           </div>
         </section>
       </main>
-      <Footer t={footer} />
+      <Footer t={footer} locale={locale} />
     </div>
   );
 }

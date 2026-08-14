@@ -37,7 +37,7 @@ export default function HomeLanding({
         <FAQ t={t.faq} />
         <CTA t={t.cta} />
       </main>
-      <Footer t={t.footer} />
+      <Footer t={t.footer} locale={locale} />
     </div>
   );
 }

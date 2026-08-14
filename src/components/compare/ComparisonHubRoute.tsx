@@ -69,7 +69,7 @@ export async function ComparisonHubRoute({ locale }: { locale: CompareLocale }) 
         <ComparisonHubPage locale={locale} />
       </main>
       <div className="comparison-footer">
-        <Footer t={dict.Home.footer} />
+        <Footer t={dict.Home.footer} locale={locale} />
       </div>
     </div>
   );

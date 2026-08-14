@@ -1,8 +1,8 @@
 import TechCenterPage from '@/components/tech-center/TechCenterPage';
 import { TechCenterHubJsonLd } from '@/components/tech-center/TechCenterJsonLd';
-import { defaultLocale, getDictionary, localeNames } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { localeMap } from '@/lib/seo';
-import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { getBuildLocaleCodes, getOwnedLocaleUrl } from '@/lib/siteRouting';
 import { normalizeLocale } from '@/lib/locales';
 import { Metadata } from 'next';
 
@@ -88,5 +88,5 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return Object.keys(localeNames).map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }

@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
-import { defaultLocale, localeNames } from '@/lib/i18n';
+import { defaultLocale } from '@/lib/i18n';
 import { getNavHref } from '@/lib/utils';
 import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
@@ -11,8 +11,7 @@ import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
 import { localeConfigs } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
-import { getOwnedLocaleUrl } from '@/lib/siteRouting';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { getAvailableLocaleCodes, getOwnedLocalePath } from '@/lib/siteRouting';
 
 interface NavLink {
   label: string;
@@ -22,11 +21,6 @@ interface NavLink {
 type NavCta = { trial: string; consult: string };
 type NavbarVariant = 'default' | 'comparison';
 const faqLocaleCodes = ['en', 'zh'];
-const techCenterLabels: Record<string, string> = {
-  zh: '技术中心',
-  'zh-hant': '技術中心',
-  ja: '技術センター'
-};
 
 function isExternalHref(href: string) {
   return /^(https?:)?\/\//.test(href);
@@ -64,10 +58,7 @@ export default function Navbar({
   const desktopStartUrl = useStartUrl();
   const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
-  const techCenterHref = getDefaultLocalePath(lang, '/tech-center');
-  const resolvedLinks = links.some((link) => link.href === '/tech-center')
-    ? links.map((link) => (link.href === '/tech-center' ? { ...link, href: techCenterHref } : link))
-    : [{ label: techCenterLabels[lang] || 'Tech Center', href: techCenterHref }, ...links];
+  const resolvedLinks = links.filter((link) => link.href !== '/tech-center');
   const routeWithoutLang = (() => {
     if (!params?.lang) return pathname;
     const currentLangPrefix = `/${params.lang}`;
@@ -78,8 +69,12 @@ export default function Navbar({
   })();
   const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
   const isCompareRoute = routeWithoutLang === '/compare' || routeWithoutLang.startsWith('/compare/');
-  const languageKeys = isFaqRoute || isCompareRoute ? faqLocaleCodes : Object.keys(localeNames);
-  const getLocalizedPath = (value: string) => getOwnedLocaleUrl(value, routeWithoutLang);
+  const availableLocaleCodes = getAvailableLocaleCodes();
+  const languageKeys = (
+    isFaqRoute || isCompareRoute ? faqLocaleCodes : availableLocaleCodes
+  ).filter((key) => availableLocaleCodes.includes(key as (typeof availableLocaleCodes)[number]));
+  const hasLanguageSwitcher = languageKeys.length > 1;
+  const getLocalizedPath = (value: string) => getOwnedLocalePath(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === lang) return;
@@ -209,9 +204,11 @@ export default function Navbar({
           </div>
 
           <div className="hidden md:flex items-center gap-4">
-            <div className="home-lang">
-              <LangSwitcher iconOnly locale={lang} />
-            </div>
+            {hasLanguageSwitcher && (
+              <div className="home-lang">
+                <LangSwitcher iconOnly locale={lang} />
+              </div>
+            )}
             <a
               href={CONSULT_URL}
               data-consultation-link="true"
@@ -234,15 +231,15 @@ export default function Navbar({
 
           <div className="flex items-center gap-3 md:hidden">
             <a
-              href={CONSULT_URL}
-              data-consultation-link="true"
-              {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_mobile_consult')}
-              aria-label={t.consult}
-              className={`px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark transition-opacity duration-300 ${
+              href={mobileStartUrl}
+              rel="noopener noreferrer nofollow"
+              {...rybbitClickAttrs(RYBBIT_EVENTS.cloudServiceClick, 'home_nav_mobile_trial')}
+              aria-label={t.trial}
+              className={`px-4 py-1.5 rounded-full bg-white border border-hairline-soft text-[12px] font-medium text-ink hover:bg-gray-50 transition-opacity duration-300 ${
                 showMobileCta && !mobileOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'
               }`}
             >
-              {t.consult}
+              {t.trial}
             </a>
             <button
               className="p-2 text-ink relative z-[60]"
@@ -316,26 +313,28 @@ export default function Navbar({
                   </Link>
                 );
               })}
-              <button
-                className="py-3 text-left flex items-center justify-between hover:text-ink transition-colors"
-                onClick={() => setLangSheetOpen(true)}
-              >
-                <span>
-                  {langConfig[lang]?.flag} {langConfig[lang]?.label}
-                </span>
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
+              {hasLanguageSwitcher && (
+                <button
+                  className="py-3 text-left flex items-center justify-between hover:text-ink transition-colors"
+                  onClick={() => setLangSheetOpen(true)}
                 >
-                  <polyline points="9 18 15 12 9 6" />
-                </svg>
-              </button>
+                  <span>
+                    {langConfig[lang]?.flag} {langConfig[lang]?.label}
+                  </span>
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  >
+                    <polyline points="9 18 15 12 9 6" />
+                  </svg>
+                </button>
+              )}
             </nav>
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-hairline-soft">
@@ -363,7 +362,7 @@ export default function Navbar({
       )}
 
       {/* Mobile language bottom sheet */}
-      {langSheetOpen && (
+      {hasLanguageSwitcher && langSheetOpen && (
         <div className="md:hidden fixed inset-0 z-[70]" onClick={() => setLangSheetOpen(false)}>
           <div className="absolute inset-0 bg-black/30" />
           <div

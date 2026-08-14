@@ -2,7 +2,8 @@ import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
 import { getAlternates } from '@/lib/seo';
-import { localeNames, normalizeLocale } from '@/lib/i18n';
+import { defaultLocale, normalizeLocale } from '@/lib/i18n';
+import { getBuildLocaleCodes } from '@/lib/siteRouting';
 
 export async function generateMetadata({
   params
@@ -29,5 +30,5 @@ export default async function LocalizedContactPage({
 }
 
 export function generateStaticParams() {
-  return Object.keys(localeNames).map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }

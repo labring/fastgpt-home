@@ -28,13 +28,11 @@ const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '
 function FieldLabel({
   children,
   required,
-  requiredText,
-  optionalText
+  requiredText
 }: {
   children: string;
   required?: boolean;
   requiredText: string;
-  optionalText: string;
 }) {
   return (
     <span className="mb-2 flex items-center gap-1 text-[13px] font-medium leading-5 text-[#1d2939]">
@@ -44,15 +42,42 @@ function FieldLabel({
         </span>
       )}
       {children}
-      {!required && (
-        <span aria-hidden="true" className="text-[11px] font-normal text-[#98a2b3]">
-          {optionalText}
-        </span>
-      )}
-      <span className="sr-only">{required ? requiredText : optionalText}</span>
+      {required && <span className="sr-only">{requiredText}</span>}
     </span>
   );
 }
+
+function FieldError({ id, message }: { id: string; message?: string }) {
+  if (!message) return null;
+
+  return (
+    <p id={id} role="alert" className="mt-1.5 text-[12px] leading-5 text-[#d92d20]">
+      {message}
+    </p>
+  );
+}
+
+function getRequiredFieldError(
+  locale: string,
+  copy: ReturnType<typeof getContactCopy>,
+  field: keyof ContactFormValues,
+  select = false
+) {
+  const label = copy.fields[field];
+  if (locale === 'zh-hant') return (select ? '請選擇' : '請輸入') + label;
+  if (locale === 'zh') return (select ? '请选择' : '请输入') + label;
+  return (select ? 'Select ' : 'Enter ') + label;
+}
+
+const REQUIRED_CONTACT_FIELDS = [
+  'name',
+  'phone',
+  'company',
+  'position',
+  'usedOpenSource',
+  'consultationTopic',
+  'projectStage'
+] as const;
 
 function SelectField({
   label,
@@ -63,7 +88,9 @@ function SelectField({
   copy,
   required,
   fullWidth,
-  onChange
+  onChange,
+  error,
+  onBlur
 }: {
   label: string;
   name: keyof ContactFormValues;
@@ -74,6 +101,8 @@ function SelectField({
   required?: boolean;
   fullWidth?: boolean;
   onChange: (name: keyof ContactFormValues, value: string) => void;
+  error?: string;
+  onBlur?: () => void;
 }) {
   const [open, setOpen] = useState(false);
   const selectedIndex = Math.max(options.findIndex((option) => option === value) + 1, 0);
@@ -130,11 +159,14 @@ function SelectField({
       className={'block min-w-0 ' + (fullWidth ? 'sm:col-span-2' : '')}
       ref={containerRef}
       onBlur={(event) => {
-        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setOpen(false);
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+          setOpen(false);
+          onBlur?.();
+        }
       }}
     >
       <label htmlFor={name + '-button'} className="block">
-        <FieldLabel required={required} requiredText={copy.required} optionalText={copy.optional}>
+        <FieldLabel required={required} requiredText={copy.required}>
           {label}
         </FieldLabel>
       </label>
@@ -163,6 +195,7 @@ function SelectField({
           aria-haspopup="listbox"
           aria-expanded={open}
           aria-controls={name + '-options'}
+          aria-describedby={error ? name + '-error' : undefined}
           onClick={() => {
             setActiveIndex(selectedIndex);
             setOpen((current) => !current);
@@ -178,7 +211,11 @@ function SelectField({
           className={
             'flex h-11 w-full items-center justify-between gap-3 rounded-md border bg-white px-3 text-left text-[14px] outline-none transition-[border-color,box-shadow] focus-visible:ring-2 focus-visible:ring-[#155eef]/15 ' +
             (open
-              ? 'border-[#155eef] ring-2 ring-[#155eef]/15'
+              ? error
+                ? 'border-[#d92d20] ring-2 ring-[#f04438]/15'
+                : 'border-[#155eef] ring-2 ring-[#155eef]/15'
+              : error
+              ? 'border-[#d92d20] hover:border-[#b42318]'
               : 'border-[#d0d5dd] hover:border-[#98a2b3]')
           }
         >
@@ -253,6 +290,7 @@ function SelectField({
           </div>
         )}
       </div>
+      <FieldError id={name + '-error'} message={error} />
     </div>
   );
 }
@@ -264,6 +302,12 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
   const [visitorId, setVisitorId] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [error, setError] = useState('');
+  const [fieldErrors, setFieldErrors] = useState<Partial<Record<keyof ContactFormValues, string>>>(
+    {}
+  );
+  const [touchedFields, setTouchedFields] = useState<
+    Partial<Record<keyof ContactFormValues, boolean>>
+  >({});
 
   useEffect(() => {
     queueMicrotask(() => {
@@ -271,14 +315,74 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     });
   }, []);
 
+  const validateField = (name: keyof ContactFormValues, value: string) => {
+    const isRequired = (REQUIRED_CONTACT_FIELDS as readonly string[]).includes(name);
+    if (!isRequired) return '';
+
+    const isSelect =
+      name === 'usedOpenSource' || name === 'consultationTopic' || name === 'projectStage';
+    if (!value.trim()) return getRequiredFieldError(locale, copy, name, isSelect);
+
+    if (name === 'phone') {
+      const phoneDigits = value.replace(/\D/g, '');
+      if (phoneDigits.length < 6 || phoneDigits.length > 20) return copy.phoneError;
+    }
+
+    return '';
+  };
+
+  const setFieldError = (name: keyof ContactFormValues, message: string) => {
+    setFieldErrors((current) => {
+      const next = { ...current };
+      if (message) next[name] = message;
+      else delete next[name];
+      return next;
+    });
+  };
+
   const updateValue = (name: keyof ContactFormValues, value: string) => {
     setValues((current) => ({ ...current, [name]: value }));
     if (error) setError('');
+
+    if (name === 'phone' || touchedFields[name]) {
+      setFieldError(name, validateField(name, value));
+      if (name === 'phone') {
+        setTouchedFields((current) => ({ ...current, phone: true }));
+      }
+    }
+  };
+
+  const handleFieldBlur = (name: keyof ContactFormValues) => {
+    setTouchedFields((current) => ({ ...current, [name]: true }));
+    setFieldError(name, validateField(name, values[name]));
+  };
+
+  const validateForm = () => {
+    const nextErrors: Partial<Record<keyof ContactFormValues, string>> = {};
+    for (const field of REQUIRED_CONTACT_FIELDS) {
+      const message = validateField(field, values[field]);
+      if (message) nextErrors[field] = message;
+    }
+
+    setTouchedFields((current) => ({
+      ...current,
+      name: true,
+      phone: true,
+      company: true,
+      position: true,
+      usedOpenSource: true,
+      consultationTopic: true,
+      projectStage: true
+    }));
+    setFieldErrors(nextErrors);
+    return Object.keys(nextErrors).length === 0;
   };
 
   const reset = () => {
     setValues(INITIAL_CONTACT_FORM);
     setError('');
+    setFieldErrors({});
+    setTouchedFields({});
     setStatus('idle');
   };
 
@@ -290,23 +394,11 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
       setError(copy.configErrorBody);
       return;
     }
+    if (!validateForm()) return;
+
     const currentVisitorId = visitorId || getVisitorId();
     if (!currentVisitorId) {
       setError(copy.visitorError);
-      return;
-    }
-    if (!values.usedOpenSource) {
-      setError(copy.requiredError);
-      return;
-    }
-    if (!values.consultationTopic || !values.projectStage) {
-      setError(copy.requiredError);
-      return;
-    }
-
-    const phoneDigits = values.phone.replace(/\D/g, '');
-    if (phoneDigits.length < 6 || phoneDigits.length > 20) {
-      setError(copy.phoneError);
       return;
     }
     if (!formRef.current?.reportValidity()) return;
@@ -421,38 +513,55 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     'h-11 w-full rounded-md border border-[#d0d5dd] bg-white px-3 text-[14px] text-[#101828] outline-none placeholder:text-[#98a2b3] transition-colors focus:border-[#155eef] focus:ring-2 focus:ring-[#155eef]/15';
 
   return (
-    <form ref={formRef} onSubmit={handleSubmit} className="px-5 pb-6 pt-5 sm:px-8 sm:pb-8">
+    <form
+      ref={formRef}
+      onSubmit={handleSubmit}
+      noValidate
+      className="px-5 pb-6 pt-5 sm:px-8 sm:pb-8"
+    >
       <input type="hidden" name="visitor_id" value={visitorId} />
       <div className="grid grid-cols-1 gap-x-5 gap-y-5 sm:grid-cols-2">
-        {(['name', 'phone', 'company', 'position'] as const).map((name) => (
-          <label key={name} className="block min-w-0">
-            <FieldLabel required requiredText={copy.required} optionalText={copy.optional}>
-              {copy.fields[name]}
-            </FieldLabel>
-            <input
-              name={name}
-              type={name === 'phone' ? 'tel' : 'text'}
-              inputMode={name === 'phone' ? 'tel' : undefined}
-              autoComplete={
-                name === 'name'
-                  ? 'name'
-                  : name === 'phone'
-                  ? 'tel'
-                  : name === 'company'
-                  ? 'organization'
-                  : 'organization-title'
-              }
-              value={values[name]}
-              required
-              maxLength={
-                name === 'phone' ? 30 : name === 'company' ? 200 : name === 'position' ? 100 : 120
-              }
-              onChange={(event) => updateValue(name, event.target.value)}
-              placeholder={copy.placeholders[name]}
-              className={textInputClass}
-            />
-          </label>
-        ))}
+        {(['name', 'phone', 'company', 'position'] as const).map((name) => {
+          const fieldError = fieldErrors[name];
+          return (
+            <label key={name} className="block min-w-0">
+              <FieldLabel required requiredText={copy.required}>
+                {copy.fields[name]}
+              </FieldLabel>
+              <input
+                name={name}
+                type={name === 'phone' ? 'tel' : 'text'}
+                inputMode={name === 'phone' ? 'tel' : undefined}
+                autoComplete={
+                  name === 'name'
+                    ? 'name'
+                    : name === 'phone'
+                    ? 'tel'
+                    : name === 'company'
+                    ? 'organization'
+                    : 'organization-title'
+                }
+                value={values[name]}
+                required
+                maxLength={
+                  name === 'phone' ? 30 : name === 'company' ? 200 : name === 'position' ? 100 : 120
+                }
+                onChange={(event) => updateValue(name, event.target.value)}
+                onBlur={() => handleFieldBlur(name)}
+                placeholder={copy.placeholders[name]}
+                aria-invalid={Boolean(fieldError)}
+                aria-describedby={fieldError ? name + '-error' : undefined}
+                className={
+                  textInputClass +
+                  (fieldError
+                    ? ' border-[#d92d20] focus:border-[#d92d20] focus:ring-[#f04438]/15'
+                    : '')
+                }
+              />
+              <FieldError id={name + '-error'} message={fieldError} />
+            </label>
+          );
+        })}
 
         <SelectField
           label={copy.fields.consultationTopic}
@@ -463,10 +572,12 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
           copy={copy}
           required
           onChange={updateValue}
+          error={fieldErrors.consultationTopic}
+          onBlur={() => handleFieldBlur('consultationTopic')}
         />
         <fieldset className="min-w-0">
           <legend>
-            <FieldLabel required requiredText={copy.required} optionalText={copy.optional}>
+            <FieldLabel required requiredText={copy.required}>
               {copy.fields.usedOpenSource}
             </FieldLabel>
           </legend>
@@ -479,6 +590,8 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
                   className={`flex h-11 cursor-pointer items-center justify-start gap-2 rounded-md border px-3 text-[14px] font-medium transition-colors focus-within:ring-2 focus-within:ring-[#155eef]/20 focus-within:ring-offset-1 ${
                     selected
                       ? 'border-[#155eef] bg-[#eef4ff] text-[#155eef]'
+                      : fieldErrors.usedOpenSource
+                      ? 'border-[#d92d20] bg-[#fffafa] text-[#344054] hover:border-[#b42318]'
                       : 'border-[#d0d5dd] bg-white text-[#344054] hover:border-[#98a2b3] hover:bg-[#f9fafb]'
                   }`}
                 >
@@ -489,6 +602,9 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
                     checked={selected}
                     required
                     onChange={() => updateValue('usedOpenSource', option)}
+                    aria-describedby={
+                      fieldErrors.usedOpenSource ? 'usedOpenSource-error' : undefined
+                    }
                     className="sr-only"
                   />
                   <span
@@ -504,6 +620,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
               );
             })}
           </div>
+          <FieldError id="usedOpenSource-error" message={fieldErrors.usedOpenSource} />
         </fieldset>
         <SelectField
           label={copy.fields.projectStage}
@@ -514,6 +631,8 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
           copy={copy}
           required
           onChange={updateValue}
+          error={fieldErrors.projectStage}
+          onBlur={() => handleFieldBlur('projectStage')}
         />
         <SelectField
           label={copy.fields.budget}
@@ -525,9 +644,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
           onChange={updateValue}
         />
         <label className="block min-w-0 sm:col-span-2">
-          <FieldLabel requiredText={copy.required} optionalText={copy.optional}>
-            {copy.fields.notes}
-          </FieldLabel>
+          <FieldLabel requiredText={copy.required}>{copy.fields.notes}</FieldLabel>
           <textarea
             name="notes"
             value={values.notes}

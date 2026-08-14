@@ -68,7 +68,7 @@ const zh: ContactCopy = {
   optional: '选填',
   fields: {
     name: '姓名',
-    phone: '手机号或邮箱',
+    phone: '联系方式',
     company: '公司名称',
     position: '职位',
     usedOpenSource: '是否使用过开源版',
@@ -111,7 +111,7 @@ const en: ContactCopy = {
   optional: 'Optional',
   fields: {
     name: 'Name',
-    phone: 'Phone number or email',
+    phone: 'Contact information',
     company: 'Company',
     position: 'Job title',
     usedOpenSource: 'Have you used the open-source edition?',
@@ -172,7 +172,7 @@ const zhHant: ContactCopy = {
   optional: '選填',
   fields: {
     name: '姓名',
-    phone: '手機號碼或電子郵件',
+    phone: '聯絡方式',
     company: '公司名稱',
     position: '職位',
     usedOpenSource: '是否使用過開源版',

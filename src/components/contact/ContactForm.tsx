@@ -107,15 +107,18 @@ function SelectField({
   onBlur?: () => void;
 }) {
   const [open, setOpen] = useState(false);
-  const selectedIndex = Math.max(options.findIndex((option) => option === value) + 1, 0);
+  const selectedIndex = Math.max(
+    options.findIndex((option) => option === value),
+    0
+  );
   const [activeIndex, setActiveIndex] = useState(selectedIndex);
   const containerRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
   const optionRefs = useRef<Array<HTMLButtonElement | null>>([]);
-  const menuOptions = [
-    { value: '', label: placeholder },
-    ...options.map((option) => ({ value: option, label: getContactOptionLabel(copy, option) }))
-  ];
+  const menuOptions = options.map((option) => ({
+    value: option,
+    label: getContactOptionLabel(copy, option)
+  }));
 
   useEffect(() => {
     if (!open) return;
@@ -244,10 +247,9 @@ function SelectField({
           >
             {menuOptions.map((option, index) => {
               const selected = value === option.value;
-              const isPlaceholder = option.value === '';
               return (
                 <button
-                  key={option.value || 'placeholder'}
+                  key={option.value}
                   ref={(element) => {
                     optionRefs.current[index] = element;
                   }}
@@ -276,16 +278,14 @@ function SelectField({
                   className={
                     'flex min-h-10 w-full items-center gap-2 rounded-md px-2.5 py-2 text-left text-[14px] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef]/25 ' +
                     (selected
-                      ? 'bg-[#eef4ff] text-[#155eef]'
-                      : 'text-[#344054] hover:bg-[#f9fafb] hover:text-[#101828]')
+                      ? 'bg-[#eef4ff] text-[#155eef] hover:bg-[#dbe8ff]'
+                      : 'text-[#344054] hover:bg-[#eaecf0] hover:text-[#101828]')
                   }
                 >
                   <span className="flex size-4 shrink-0 items-center justify-center">
-                    {selected && !isPlaceholder && (
-                      <Check size={15} strokeWidth={2.2} aria-hidden />
-                    )}
+                    {selected && <Check size={15} strokeWidth={2.2} aria-hidden />}
                   </span>
-                  <span className={isPlaceholder ? 'text-[#98a2b3]' : ''}>{option.label}</span>
+                  <span>{option.label}</span>
                 </button>
               );
             })}

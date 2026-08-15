@@ -19,7 +19,8 @@ const ROOT = path.resolve(__dirname, '..');
 const FAQ_SOURCE = path.join(ROOT, 'src/faq/en.ts');
 const EVIDENCE_OUTPUT = path.join(ROOT, 'src/faq/english-route-evidence.json');
 const REGISTRY_OUTPUT = path.join(ROOT, 'src/faq/generated-en-route-registry.json');
-const SAFE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_REPAIRED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_PRESERVED_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
 const EVIDENCE_SOURCES = new Set(['week04-online-url', 'repository-current-key']);
 
 function fail(message) {
@@ -414,7 +415,7 @@ function buildRegistry(faqRecords, evidence) {
     const collided =
       collisionById.has(record.contentId) || collisionSourceSlugs.has(evidenceRecord.sourceSlug);
     const preserve =
-      SAFE_SLUG.test(evidenceRecord.sourceSlug) &&
+      SAFE_PRESERVED_SLUG.test(evidenceRecord.sourceSlug) &&
       !collided &&
       sourceSlugs.get(evidenceRecord.sourceSlug) === record.contentId;
     if (preserve) reserved.add(evidenceRecord.sourceSlug);
@@ -428,7 +429,7 @@ function buildRegistry(faqRecords, evidence) {
       repairReason: preserve
         ? []
         : [
-            ...(SAFE_SLUG.test(evidenceRecord.sourceSlug) ? [] : ['unsafe-source']),
+            ...(SAFE_PRESERVED_SLUG.test(evidenceRecord.sourceSlug) ? [] : ['unsafe-source']),
             ...(collided ? ['collided-source'] : []),
             ...(evidenceRecord.evidenceSource === 'repository-current-key'
               ? ['missing-online-evidence']
@@ -449,7 +450,9 @@ function buildRegistry(faqRecords, evidence) {
 
   const seenCanonical = new Set();
   for (const record of records) {
-    if (!SAFE_SLUG.test(record.canonicalSlug)) {
+    const safeCanonicalSlug =
+      record.routeStatus === 'repaired' ? SAFE_REPAIRED_SLUG : SAFE_PRESERVED_SLUG;
+    if (!safeCanonicalSlug.test(record.canonicalSlug)) {
       fail(`Unsafe canonical slug for ${record.contentId}: ${record.canonicalSlug}`);
     }
     if (seenCanonical.has(record.canonicalSlug)) {

@@ -4,6 +4,7 @@ import { legacyFaqMeta } from './legacyMeta';
 import { applyLegacyCategoryOverlay } from './legacyCategories';
 import { faqPublishedLocaleCodes } from '@/lib/publishedLocales';
 import englishRouteRegistry from './generated-en-route-registry.json';
+import approvedEnglishFaqMetadata from './generated-en-metadata.json';
 
 export type { FaqItem };
 export type FaqData = Record<string, FaqItem>;
@@ -20,6 +21,9 @@ const englishRouteBySlug = new Map(
 const englishRouteByContentId = new Map(
   englishRouteRecords.map((record) => [record.contentId, record]),
 );
+const approvedEnglishFaqMetadataByContentId = new Map(
+  approvedEnglishFaqMetadata.records.map((record) => [record.contentId, record]),
+);
 
 // 按语言索引的翻译数据（新增语言在此扩展）
 const faqByLocale: Record<string, Record<string, FaqItem>> = {
@@ -33,7 +37,24 @@ const faqEnWithLegacyMeta: Record<string, FaqItem> = Object.fromEntries(
   ]),
 );
 
-const faqEnWithLegacyCategories = applyLegacyCategoryOverlay(faqEnWithLegacyMeta, 'en');
+const faqEnWithApprovedMetadata: Record<string, FaqItem> = Object.fromEntries(
+  Object.entries(faqEnWithLegacyMeta).map(([id, item]) => {
+    const approved = approvedEnglishFaqMetadataByContentId.get(id);
+    return approved
+      ? [
+          id,
+          {
+            ...item,
+            Title: approved.title,
+            Description: approved.description,
+            Keywords: approved.keywords
+          }
+        ]
+      : [id, item];
+  }),
+);
+
+const faqEnWithLegacyCategories = applyLegacyCategoryOverlay(faqEnWithApprovedMetadata, 'en');
 
 const faqEnByCanonicalSlug: Record<string, FaqItem> = Object.fromEntries(
   englishRouteRecords.map((record) => {

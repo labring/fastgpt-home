@@ -25,16 +25,16 @@ Every in-scope English FAQ has a stable, reachable canonical URL and renders its
 - ✓ FAQ detail pages already emit canonical, cross-domain hreflang, JSON-LD, and static parameters — existing
 - ✓ Existing site-routing helpers already own domain and locale URL generation — existing
 - ✓ Existing build scripts already produce a static export and run repository verification checks — existing
+- ✓ Approved Week04 metadata is imported for 1,195 mapped English FAQ records with authored fields preserved — Phase 2
+- ✓ Healthy English FAQ URLs remain stable and missing or unsafe records receive deterministic canonical slugs — Phase 1
+- ✓ Changed legacy paths with unique destinations receive registry-backed one-hop redirects, with collisions denied — Phase 4
+- ✓ Canonical, hreflang, list, related, static-param, and sitemap surfaces share the final route registry — Phase 3
+- ✓ A single release command verifies redirect safety, route identity, metadata, SEO graph, and static export evidence — Phase 4
+- ✓ Case-sensitive io and cn production exports prove complete final FAQ route coverage — Phase 4
 
 ### Active
 
-- [ ] Import all 1,195 approved English FAQ title, description, and keyword records from the Week04 workbook
-- [ ] Preserve every current HTTP 200 FAQ URL whose rendered page identity is correct
-- [ ] Assign deterministic, safe, unique slugs only to in-scope entries whose current routes are missing or unsafe
-- [ ] Generate redirects for each changed legacy path that has a unique destination
-- [ ] Keep canonical, hreflang, internal links, sitemap entries, and static parameters aligned with the final slug registry
-- [ ] Add a runnable verification check covering metadata fidelity, slug uniqueness, redirect integrity, and zero missing in-scope static routes
-- [ ] Complete the production build successfully with the repaired FAQ dataset
+None.
 
 ### Out of Scope
 
@@ -67,11 +67,11 @@ The current code already has metadata normalization and legacy overrides in `src
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| Limit restoration to the roughly 1,400 FAQ records currently in the repository | The missing historical FAQ bodies lack an authoritative local source, and the user explicitly excluded them | — Pending |
-| Use incremental slug repair | Preserves healthy indexed URLs and reduces redirect and ranking risk | — Pending |
-| Treat the Week04 workbook as metadata authority for its 1,195 rows | It contains reviewed online URLs and approved title, description, and keyword values | — Pending |
-| End at release-ready code | The user selected implementation, verification, and production build as the delivery endpoint | — Pending |
-| Extend existing FAQ routing and metadata patterns | A single content path keeps static params, metadata, and redirects consistent | — Pending |
+| Limit restoration to the roughly 1,400 FAQ records currently in the repository | The missing historical FAQ bodies lack an authoritative local source, and the user explicitly excluded them | Validated — Phase 1 |
+| Use incremental slug repair | Preserves healthy indexed URLs and reduces redirect and ranking risk | Validated — Phase 1 |
+| Treat the Week04 workbook as metadata authority for its 1,195 rows | It contains reviewed online URLs and approved title, description, and keyword values | Validated — Phase 2 |
+| End at release-ready code | The user selected implementation, verification, and production build as the delivery endpoint | Validated — Phase 4 |
+| Extend existing FAQ routing and metadata patterns | A single content path keeps static params, metadata, and redirects consistent | Validated — Phase 3 |
 
 ## Evolution
 
@@ -91,4 +91,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-15 after initialization*
+*Last updated: 2026-08-16 after Phase 4*

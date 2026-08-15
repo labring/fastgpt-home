@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-status: executing
-stopped_at: Phase 4 plan executed; ready for verification
-last_updated: "2026-08-15T21:20:00.000Z"
-last_activity: 2026-08-16
-last_activity_desc: Phase 4 redirects and release gate executed; APFS evidence recorded
-progress:
-  total_phases: 4
-  completed_phases: 3
-  total_plans: 4
-  completed_plans: 4
 current_phase: 4
 current_phase_name: Redirects and Release Gate
+status: completed
+stopped_at: Phase 4 verification passed; milestone ready to close
+last_updated: "2026-08-16T05:40:00+08:00"
+last_activity: 2026-08-16
+last_activity_desc: Phase 4 UAT and goal-backward verification passed; all v1 phases complete
+progress:
+  total_phases: 4
+  completed_phases: 4
+  total_plans: 4
+  completed_plans: 4
 ---
 
 # Project State
@@ -23,14 +23,14 @@ current_phase_name: Redirects and Release Gate
 See: .planning/PROJECT.md (updated 2026-08-16)
 
 **Core value:** Every in-scope English FAQ has a stable, reachable canonical URL and renders its approved metadata without disrupting healthy indexed URLs.
-**Current focus:** Phase 4 — Redirects and Release Gate
+**Current focus:** Milestone complete — release-ready code
 
 ## Current Position
 
 Phase: 4 of 4 (Redirects and Release Gate)
-Plan: 1 of 1 — executed
-Status: Ready for verification
-Last activity: 2026-08-16 — Phase 4 source and case-sensitive APFS release checks completed
+Plan: 1 of 1 — complete
+Status: All phases complete
+Last activity: 2026-08-16 — Phase 4 UAT and verification passed
 
 Progress: [██████████] 100%
 
@@ -84,11 +84,11 @@ None yet.
 |----------|------|--------|-------------|
 | Historical recovery | Restore FAQ bodies absent from the repository | Deferred | 2026-08-15 |
 | Release operations | Production deployment and live-site verification | Deferred | 2026-08-15 |
-| Redirects | Project changed legacy paths and collision policy | Phase 4 | 2026-08-16 |
-| Release verification | Aggregate VERIFY-01/02/03 command and release gate | Phase 4 | 2026-08-16 |
+| Redirects | Project changed legacy paths and collision policy | Complete | 2026-08-16 |
+| Release verification | Aggregate VERIFY-01/02/03 command and release gate | Complete | 2026-08-16 |
 
 ## Session Continuity
 
-Last session: 2026-08-15T21:20:00.000Z
-Stopped at: Phase 4 plan executed; ready for verify-work
-Resume file: .planning/phases/04-redirects-and-release-gate/04-01-SUMMARY.md
+Last session: 2026-08-16T05:40:00+08:00
+Stopped at: Phase 4 complete; milestone ready to close
+Resume file: None

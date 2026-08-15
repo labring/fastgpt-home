@@ -19,9 +19,7 @@ const ROOT = path.resolve(__dirname, '..');
 const FAQ_SOURCE = path.join(ROOT, 'src/faq/en.ts');
 const EVIDENCE_OUTPUT = path.join(ROOT, 'src/faq/english-route-evidence.json');
 const REGISTRY_OUTPUT = path.join(ROOT, 'src/faq/generated-en-route-registry.json');
-const SAFE_REPAIRED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const SAFE_SOURCE_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
-const SAFE_PRESERVED_SLUG = SAFE_REPAIRED_SLUG;
+const SAFE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const EVIDENCE_SOURCES = new Set(['week04-online-url', 'repository-current-key']);
 
 function fail(message) {
@@ -399,18 +397,6 @@ function buildRegistry(faqRecords, evidence) {
   const collisionSourceSlugs = new Set(
     normalized.collisionLedger.map((entry) => entry.sourceSlug),
   );
-  const sourceSlugGroups = new Map();
-  for (const record of normalized.records) {
-    const foldedSlug = record.sourceSlug.toLowerCase();
-    const group = sourceSlugGroups.get(foldedSlug) || [];
-    group.push(record);
-    sourceSlugGroups.set(foldedSlug, group);
-  }
-  const foldedCollisionIds = new Set(
-    [...sourceSlugGroups.values()]
-      .filter((group) => group.length > 1)
-      .flatMap((group) => group.map((record) => record.contentId)),
-  );
   const sourceSlugs = new Map();
   for (const record of faqRecords) {
     const evidenceRecord = byContentId.get(record.contentId);
@@ -426,25 +412,23 @@ function buildRegistry(faqRecords, evidence) {
   for (const record of faqRecords) {
     const evidenceRecord = byContentId.get(record.contentId);
     const collided =
-      collisionById.has(record.contentId) ||
-      collisionSourceSlugs.has(evidenceRecord.sourceSlug) ||
-      foldedCollisionIds.has(record.contentId);
+      collisionById.has(record.contentId) || collisionSourceSlugs.has(evidenceRecord.sourceSlug);
     const preserve =
-      SAFE_SOURCE_SLUG.test(evidenceRecord.sourceSlug) &&
+      SAFE_SLUG.test(evidenceRecord.sourceSlug) &&
       !collided &&
       sourceSlugs.get(evidenceRecord.sourceSlug) === record.contentId;
-    if (preserve) reserved.add(evidenceRecord.sourceSlug.toLowerCase());
+    if (preserve) reserved.add(evidenceRecord.sourceSlug);
     records.push({
       contentId: record.contentId,
       sourceSlug: evidenceRecord.sourceSlug,
-      canonicalSlug: preserve ? evidenceRecord.sourceSlug.toLowerCase() : '',
+      canonicalSlug: preserve ? evidenceRecord.sourceSlug : '',
       routeStatus: preserve ? 'preserved' : 'repaired',
       evidenceSource: evidenceRecord.evidenceSource,
       collisionDisposition: collided ? 'no-redirect' : 'none',
       repairReason: preserve
         ? []
         : [
-            ...(SAFE_SOURCE_SLUG.test(evidenceRecord.sourceSlug) ? [] : ['unsafe-source']),
+            ...(SAFE_SLUG.test(evidenceRecord.sourceSlug) ? [] : ['unsafe-source']),
             ...(collided ? ['collided-source'] : []),
             ...(evidenceRecord.evidenceSource === 'repository-current-key'
               ? ['missing-online-evidence']
@@ -465,9 +449,7 @@ function buildRegistry(faqRecords, evidence) {
 
   const seenCanonical = new Set();
   for (const record of records) {
-    const safeCanonicalSlug =
-      record.routeStatus === 'repaired' ? SAFE_REPAIRED_SLUG : SAFE_PRESERVED_SLUG;
-    if (!safeCanonicalSlug.test(record.canonicalSlug)) {
+    if (!SAFE_SLUG.test(record.canonicalSlug)) {
       fail(`Unsafe canonical slug for ${record.contentId}: ${record.canonicalSlug}`);
     }
     if (seenCanonical.has(record.canonicalSlug)) {

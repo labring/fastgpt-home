@@ -1,6 +1,6 @@
 ---
 phase: 01-canonical-faq-routes
-verified: 2026-08-15T17:38:00Z
+verified: 2026-08-15T17:30:47Z
 status: passed
 score: 3/3 must-haves verified
 behavior_unverified: 0
@@ -9,7 +9,7 @@ behavior_unverified: 0
 # Phase 1: Canonical FAQ Routes Verification Report
 
 **Phase Goal:** Every English FAQ currently in the repository is reachable at one safe canonical URL, with healthy public URLs preserved.
-**Verified:** 2026-08-15T17:38:00Z
+**Verified:** 2026-08-15T17:30:47Z
 **Status:** passed
 
 ## Goal Achievement
@@ -89,5 +89,5 @@ None — automated route checks and the `io` static export smoke test cover the 
 **Human checks required:** 0
 
 ---
-*Verified: 2026-08-15T17:38:00Z*
+*Verified: 2026-08-15T17:30:47Z*
 *Verifier: the agent (subagent)*

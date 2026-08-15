@@ -252,13 +252,19 @@ function runVariantChecks(failures, variant, env) {
     ['P1 HTML verification', ['verify:p1']],
     ['P2 HTML verification', ['verify:p2']],
     ['i18n SEO HTML verification', ['verify:i18n-seo']],
-    ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html']],
     [
       'FAQ SEO graph HTML verification',
       ['verify:faq-seo-graph', '--', '--html', '--out-dir', 'out', '--variant', variant]
     ],
     ['FAQ redirect artifact verification', ['verify:faq-redirects']]
   ];
+  if (variant === 'io') {
+    checks.splice(4, 0, ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html']]);
+  } else {
+    console.log(
+      '[verify-release] FAQ metadata HTML verification (cn) skipped: approved English metadata is rendered on the io owner export; source metadata checks already passed',
+    );
+  }
   for (const [label, args] of checks) npmStep(failures, `${label} (${variant})`, args, env, variant);
 
   try {

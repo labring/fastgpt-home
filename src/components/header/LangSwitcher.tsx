@@ -3,10 +3,13 @@ import { defaultLocale } from '@/lib/i18n';
 import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
-import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
+import {
+  getDefaultLocalePath,
+  navigateTo,
+  rememberPreferredLanguage
+} from '@/lib/clientNavigation';
 import { localeConfigs, type LocaleCode } from '@/lib/locales';
 import { getPublishedLocaleCodes } from '@/lib/siteRouting';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 const langConfig = localeConfigs.reduce((acc, locale) => {
   acc[locale.code] = { flag: locale.flag, label: locale.name };

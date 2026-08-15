@@ -1,31 +1,12 @@
-import { normalizeLocale } from '@/lib/locales';
-import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
-import { getFaqRouteKey, resolveFaqContentId, resolveFaqLocale } from '@/faq';
+import { buildDefaultLocale, getDefaultLocalePath } from '@/lib/clientNavigation';
 
-export const buildDefaultLocale = getDefaultLocaleForSiteVariant();
-
-export function getDefaultLocalePath(locale: string, path = '') {
-  const normalizedLocale = normalizeLocale(locale);
-  const normalizedPath = path ? (path.startsWith('/') ? path : `/${path}`) : '';
-  const canonicalPath = normalizedPath === '/' ? '' : normalizedPath.replace(/\/$/, '');
-
-  if (normalizedLocale === buildDefaultLocale) {
-    return canonicalPath || '/';
-  }
-
-  return `/${normalizedLocale}${canonicalPath}`;
-}
+export { buildDefaultLocale, getDefaultLocalePath };
 
 export function getFaqPath(locale: string, id?: string) {
   if (!id) return getDefaultLocalePath(locale, '/faq');
 
-  const faqLocale = resolveFaqLocale(locale);
-  const contentId = resolveFaqContentId(id, faqLocale);
-  const routeKey = contentId ? getFaqRouteKey(contentId, faqLocale) : undefined;
-  if (!contentId || !routeKey) {
-    throw new Error(`Unknown FAQ route identity: ${id} (${faqLocale})`);
-  }
-
-  const path = `/faq/${encodeURIComponent(routeKey)}`;
+  // Server FAQ routes resolve contentId with resolveFaqContentId/getFaqRouteKey and reject
+  // Unknown FAQ route identity values before rendering.
+  const path = `/faq/${encodeURIComponent(id)}`;
   return getDefaultLocalePath(locale, path);
 }

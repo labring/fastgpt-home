@@ -5,14 +5,17 @@ import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 import { defaultLocale } from '@/lib/i18n';
 import { getNavHref } from '@/lib/utils';
-import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
+import {
+  getDefaultLocalePath,
+  navigateTo,
+  rememberPreferredLanguage
+} from '@/lib/clientNavigation';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
 import { localeConfigs, type LocaleCode } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { getPublishedLocaleCodes } from '@/lib/siteRouting';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 interface NavLink {
   label: string;

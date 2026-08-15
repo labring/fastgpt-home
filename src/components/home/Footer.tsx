@@ -5,7 +5,7 @@ import { siteConfig } from '@/config/site';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { isContactHref } from '@/lib/consultation';
-import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { getDefaultLocalePath } from '@/lib/clientNavigation';
 import { normalizeLocale } from '@/lib/locales';
 import { getContactPublishedLocale } from '@/lib/publishedLocales';
 

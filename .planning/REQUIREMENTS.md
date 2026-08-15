@@ -22,9 +22,9 @@ Requirements for the release-ready repair milestone. Each requirement maps to ex
 
 ### SEO Surface
 
-- [ ] **SEO-01**: Every final FAQ page renders an H1 and FAQ JSON-LD question that match the intended record identity.
-- [ ] **SEO-02**: Every final FAQ page emits a self-referencing canonical URL and valid `en`, `zh-CN`, and `x-default` alternates for published counterpart routes.
-- [ ] **SEO-03**: FAQ list links, related links, static parameters, sitemap entries, and redirect targets all use the same final slug mapping; the sitemap contains each canonical FAQ URL once and excludes legacy aliases.
+- [x] **SEO-01**: Every final FAQ page renders an H1 and FAQ JSON-LD question that match the intended record identity.
+- [x] **SEO-02**: Every final FAQ page emits a self-referencing canonical URL and valid `en`, `zh-CN`, and `x-default` alternates for published counterpart routes.
+- [x] **SEO-03**: FAQ list links, related links, static parameters, sitemap entries, and redirect targets all use the same final slug mapping; the sitemap contains each canonical FAQ URL once and excludes legacy aliases.
 
 ### Release Verification
 
@@ -76,9 +76,9 @@ Roadmap creation assigns each v1 requirement to exactly one phase.
 | URL-02 | Phase 1 | Complete |
 | URL-03 | Phase 1 | Complete |
 | URL-04 | Phase 4 | Pending |
-| SEO-01 | Phase 3 | Pending |
-| SEO-02 | Phase 3 | Pending |
-| SEO-03 | Phase 3 | Pending |
+| SEO-01 | Phase 3 | Complete |
+| SEO-02 | Phase 3 | Complete |
+| SEO-03 | Phase 3 | Complete |
 | VERIFY-01 | Phase 4 | Pending |
 | VERIFY-02 | Phase 4 | Pending |
 | VERIFY-03 | Phase 4 | Pending |

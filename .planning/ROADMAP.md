@@ -13,7 +13,7 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
 
 - [x] **Phase 1: Canonical FAQ Routes** - Give every current English FAQ a stable identity and safe canonical path while preserving healthy URLs. (completed 2026-08-16)
 - [x] **Phase 2: Approved Metadata** - Import and render the approved Week04 metadata without altering authored FAQ content. (completed 2026-08-16)
-- [ ] **Phase 3: Coherent SEO Graph** - Make final FAQ pages, alternates, links, and sitemap agree on canonical identity.
+- [x] **Phase 3: Coherent SEO Graph** - Make final FAQ pages, alternates, links, and sitemap agree on canonical identity. (completed 2026-08-16)
 - [ ] **Phase 4: Redirects and Release Gate** - Project safe legacy redirects and verify the complete static release artifact.
 
 ## Phase Details
@@ -63,7 +63,10 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
   2. Every final FAQ page provides its self-referencing canonical URL and valid published `en`, `zh-CN`, and `x-default` alternates.
   3. FAQ lists, related links, static routes, and the sitemap use final canonical slugs; the sitemap contains each canonical FAQ URL once and contains no legacy alias.
 
-**Plans**: TBD
+**Plans**: 1/1 plans executed
+
+- [x] 03-01-PLAN.md
+
 **UI hint**: yes
 
 ### Phase 4: Redirects and Release Gate
@@ -90,5 +93,5 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
 |-------|----------------|--------|-----------|
 | 1. Canonical FAQ Routes | 1/1 | Complete    | 2026-08-16 |
 | 2. Approved Metadata | 1/1 | Complete    | 2026-08-16 |
-| 3. Coherent SEO Graph | 0/TBD | Not started | - |
+| 3. Coherent SEO Graph | 1/1 | Complete    | 2026-08-16 |
 | 4. Redirects and Release Gate | 0/TBD | Not started | - |

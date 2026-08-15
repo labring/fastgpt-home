@@ -5,8 +5,44 @@ This context defines the language used for the shared FastGPT marketing website 
 ## Language
 
 **Site Variant**:
-A domain-specific publication of the shared FastGPT website, currently the China site at `fastgpt.cn` and the international site at `fastgpt.io`.
-_Avoid_: Separate site, fork
+A publication profile for the shared FastGPT website: the China Site, International Site, or a Preview Host. It determines locale and search behavior.
+_Avoid_: Separate site, fork, deployment environment, domain mode
+
+**China Site**:
+The production website at `fastgpt.cn`, serving Simplified Chinese content for Mainland China.
+_Avoid_: Chinese site
+
+**International Site**:
+The production website at `fastgpt.io`, serving English, Traditional Chinese, Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay content.
+_Avoid_: English site, overseas site
+
+**Simplified Chinese**:
+The Chinese locale owned by the China Site.
+_Avoid_: Chinese
+
+**Traditional Chinese**:
+The Chinese locale owned by the International Site.
+_Avoid_: Chinese
+
+**Locale Owner**:
+The production site that provides the canonical URLs for a locale.
+_Avoid_: Default domain
+
+**Primary Locale**:
+The locale served at a production site's root URL. Simplified Chinese is primary on the China Site, and English is primary on the International Site.
+_Avoid_: Default language
+
+**Supported Locale**:
+A locale available on a production site across its localized experience. Individual pages may publish a narrower locale set.
+_Avoid_: Published language
+
+**Published Locale Set**:
+The locales for which a specific page has complete, indexable localized content.
+_Avoid_: Supported languages, available languages
+
+**Preview Host**:
+A temporary website used to review every supported locale before release. Search indexing is outside its purpose.
+_Avoid_: Other domain, preview domain
 
 **FAQ Social Preview**:
 The branded title, description, and image shown when an FAQ list or detail URL is shared.

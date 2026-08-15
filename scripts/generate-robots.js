@@ -1,19 +1,28 @@
 #!/usr/bin/env node
 /**
  * Generates public/robots.txt at build time.
- * Both site variants are crawlable; canonical and hreflang metadata handle duplication.
+ * Production variants are crawlable; preview HTML and responses carry noindex directives.
  */
 const fs = require('fs');
 const path = require('path');
+const {
+  getProductionBaseUrls,
+  resolveSiteVariant,
+  stripTrailingSlash
+} = require('./lib/site-variant');
 
-const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-const isCn = new URL(baseUrl).hostname.endsWith('.cn');
-const cnUrl = 'https://fastgpt.cn';
-const ioUrl = 'https://fastgpt.io';
+const variant = resolveSiteVariant();
+const configuredBaseUrl = stripTrailingSlash(
+  process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io'
+);
+const { cn: cnUrl, io: ioUrl } = getProductionBaseUrls();
+const baseUrl = variant === 'cn' ? cnUrl : variant === 'io' ? ioUrl : configuredBaseUrl;
+const isCn = variant === 'cn';
 const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
 const primaryLlmUrl = isCn ? `${cnUrl}/llms.txt` : `${ioUrl}/llms.txt`;
 
+const sitemap = variant === 'preview' ? '' : `\nSitemap: ${baseUrl}/sitemap.xml`;
 const content = `# robots.txt for FastGPT - ${baseUrl}
 #
 # This site publishes canonical localized pages for its target audience.
@@ -33,10 +42,9 @@ const content = `# robots.txt for FastGPT - ${baseUrl}
 
 User-agent: *
 Allow: /
-
-Sitemap: ${baseUrl}/sitemap.xml
+${sitemap}
 `;
 
 const outputPath = path.join(__dirname, '../public/robots.txt');
 fs.writeFileSync(outputPath, content, 'utf-8');
-console.log(`[generate-robots] Generated ${outputPath} for ${baseUrl}`);
+console.log(`[generate-robots] Generated ${outputPath} for ${variant} (${baseUrl})`);

@@ -2,12 +2,19 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {
+  getCanonicalBaseUrl,
+  getDefaultLocale,
+  getProductionBaseUrls,
+  resolveSiteVariant
+} = require('./lib/site-variant');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
-const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-const languageRegion = process.env.NEXT_PUBLIC_LANGUAGE_REGION === 'international' ? 'international' : 'zh';
-const defaultLocale = languageRegion === 'zh' ? 'zh' : 'en';
+const variant = resolveSiteVariant();
+const productionBaseUrls = getProductionBaseUrls();
+const baseUrl = getCanonicalBaseUrl(variant);
+const defaultLocale = getDefaultLocale(variant);
 const sampleFaqId = 'Why-are-enterprises-paying-more';
 const {
   TITLE_MAX_LENGTH,
@@ -89,6 +96,7 @@ function getExpectedCanonicalPath(route) {
   const defaultPrefix = `/${defaultLocale}`;
   if (route === defaultPrefix) return '/';
   if (route === `${defaultPrefix}/price`) return '/price';
+  if (route === `${defaultPrefix}/contact`) return '/contact';
   if (route === `${defaultPrefix}/faq` || route.startsWith(`${defaultPrefix}/faq/`)) {
     return route.slice(defaultPrefix.length);
   }
@@ -102,9 +110,17 @@ function verifyCanonical(route, html, expectedPath) {
   assert(canonicalHref, `Canonical is missing an href for ${route}`);
 
   if (expectedPath) {
+    const expectedBaseUrl =
+      variant === 'preview' && (route === '/zh' || route.startsWith('/zh/'))
+        ? productionBaseUrls.cn
+        : baseUrl;
+    const canonicalPath =
+      expectedBaseUrl === productionBaseUrls.cn && variant === 'preview'
+        ? route.slice('/zh'.length) || '/'
+        : expectedPath;
     assert.equal(
       new URL(canonicalHref).href,
-      new URL(`${baseUrl}${expectedPath}`).href,
+      new URL(`${expectedBaseUrl}${canonicalPath}`).href,
       `Unexpected canonical for ${route}`
     );
   }
@@ -182,6 +198,8 @@ function verifyAllFaqMetadata() {
 }
 
 function verifyDefaultLocaleMigrationCoverage() {
+  if (variant === 'preview') return 0;
+
   const legacyLocaleDir = path.join(outDir, defaultLocale);
   const legacyFaqDir = path.join(legacyLocaleDir, 'faq');
   const canonicalFaqDir = path.join(outDir, 'faq');
@@ -202,9 +220,17 @@ function verifyDefaultLocaleMigrationCoverage() {
 }
 
 function main() {
-  const routes = ['/', '/price', '/faq', `/faq/${sampleFaqId}`];
+  const routes = ['/', '/price', '/contact', '/faq', `/faq/${sampleFaqId}`];
 
-  for (const route of ['/en', '/zh', `/${defaultLocale}/price`, '/en/faq', '/zh/faq']) {
+  for (const route of [
+    '/en',
+    '/zh',
+    `/${defaultLocale}/price`,
+    `/${defaultLocale}/contact`,
+    '/zh-hant/contact',
+    '/en/faq',
+    '/zh/faq'
+  ]) {
     if (resolveHtml(route, false)) routes.push(route);
   }
 

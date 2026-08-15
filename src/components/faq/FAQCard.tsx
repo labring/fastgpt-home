@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { getOwnedFaqPath } from '@/lib/siteRouting';
+import { getFaqPath } from '@/lib/localizedRoutes';
 
 interface FAQCardProps {
   id: string;
@@ -24,7 +24,7 @@ export default function FAQCard({
   const Heading = headingLevel === 'h2' ? 'h2' : 'h3';
 
   return (
-    <a href={getOwnedFaqPath(langName, id)} className="group block h-full">
+    <a href={getFaqPath(langName, id)} className="group block h-full">
       <div
         className="h-full flex flex-col"
         style={{

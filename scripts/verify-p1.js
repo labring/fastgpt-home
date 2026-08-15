@@ -3,13 +3,18 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const sharp = require('sharp');
+const {
+  getCanonicalBaseUrl,
+  getDefaultLocale,
+  resolveSiteVariant
+} = require('./lib/site-variant');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
-const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
-const languageRegion = process.env.NEXT_PUBLIC_LANGUAGE_REGION === 'international' ? 'international' : 'zh';
-const defaultLocale = languageRegion === 'zh' ? 'zh' : 'en';
-const domain = baseUrl.includes('.cn') ? 'cn' : 'io';
+const variant = resolveSiteVariant();
+const baseUrl = getCanonicalBaseUrl(variant);
+const defaultLocale = getDefaultLocale(variant);
+const domain = variant === 'cn' ? 'cn' : 'io';
 const maxHeroBytes = 300 * 1024;
 const maxSolutionBytes = 250 * 1024;
 const maxInitialJavaScriptGzipBytes = 260 * 1024;
@@ -78,7 +83,11 @@ function verifyCanonical(html, expectedUrl) {
 
 function verifyRobots(html, route) {
   const robots = getMetaContent(html, 'name', 'robots');
-  assert.equal(robots, 'index, follow', `${route} must explicitly allow indexing and following`);
+  assert.equal(
+    robots,
+    variant === 'preview' ? 'noindex, nofollow' : 'index, follow',
+    `${route} has an unexpected robots policy`
+  );
 }
 
 function verifyDescriptionLength(description, label) {
@@ -110,11 +119,10 @@ function verifyRootMetadata() {
   verifyCanonical(localizedHtml, `${baseUrl}/`);
   const englishHtml = resolveHtml('/en', false);
   const chineseHtml = resolveHtml('/zh', false);
-  if (englishHtml)
-    verifyCanonical(englishHtml, `${baseUrl}${defaultLocale === 'en' ? '/' : '/en'}`);
-  if (chineseHtml)
-    verifyCanonical(chineseHtml, `${baseUrl}${defaultLocale === 'zh' ? '/' : '/zh'}`);
+  if (englishHtml) verifyCanonical(englishHtml, 'https://fastgpt.io/');
+  if (chineseHtml) verifyCanonical(chineseHtml, 'https://fastgpt.cn/');
   verifyCanonical(resolveHtml('/price'), `${baseUrl}/price`);
+  verifyCanonical(resolveHtml('/contact'), `${baseUrl}/contact`);
   const localizedPriceHtml = resolveHtml(`/${defaultLocale}/price`, false);
   if (localizedPriceHtml) verifyCanonical(localizedPriceHtml, `${baseUrl}/price`);
   verifyCanonical(resolveHtml('/faq'), `${baseUrl}/faq`);

@@ -9,9 +9,10 @@ import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
 import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
-import { localeConfigs } from '@/lib/locales';
+import { localeConfigs, type LocaleCode } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
-import { getAvailableLocaleCodes, getOwnedLocalePath } from '@/lib/siteRouting';
+import { getPublishedLocaleCodes } from '@/lib/siteRouting';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 interface NavLink {
   label: string;
@@ -20,7 +21,6 @@ interface NavLink {
 
 type NavCta = { trial: string; consult: string };
 type NavbarVariant = 'default' | 'comparison';
-const faqLocaleCodes = ['en', 'zh'];
 
 function isExternalHref(href: string) {
   return /^(https?:)?\/\//.test(href);
@@ -42,12 +42,14 @@ export default function Navbar({
   links = [],
   t,
   locale,
-  variant = 'default'
+  variant = 'default',
+  publishedLocales
 }: {
   links?: NavLink[];
   t: NavCta;
   locale?: string;
   variant?: NavbarVariant;
+  publishedLocales?: readonly LocaleCode[];
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(true);
@@ -67,14 +69,11 @@ export default function Navbar({
     }
     return pathname;
   })();
-  const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
-  const isCompareRoute = routeWithoutLang === '/compare' || routeWithoutLang.startsWith('/compare/');
-  const availableLocaleCodes = getAvailableLocaleCodes();
-  const languageKeys = (
-    isFaqRoute || isCompareRoute ? faqLocaleCodes : availableLocaleCodes
-  ).filter((key) => availableLocaleCodes.includes(key as (typeof availableLocaleCodes)[number]));
+  const availableLocaleCodes = getPublishedLocaleCodes();
+  const pageLocaleCodes: readonly LocaleCode[] = publishedLocales ?? availableLocaleCodes;
+  const languageKeys = pageLocaleCodes.filter((key) => availableLocaleCodes.includes(key));
   const hasLanguageSwitcher = languageKeys.length > 1;
-  const getLocalizedPath = (value: string) => getOwnedLocalePath(value, routeWithoutLang);
+  const getLocalizedPath = (value: string) => getDefaultLocalePath(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === lang) return;
@@ -206,7 +205,7 @@ export default function Navbar({
           <div className="hidden md:flex items-center gap-4">
             {hasLanguageSwitcher && (
               <div className="home-lang">
-                <LangSwitcher iconOnly locale={lang} />
+                <LangSwitcher iconOnly locale={lang} publishedLocales={publishedLocales} />
               </div>
             )}
             <a
@@ -284,7 +283,9 @@ export default function Navbar({
 
       {mobileOpen && (
         <div
-          className={`md:hidden fixed inset-0 z-40 bg-white ${variant === 'comparison' ? 'comparison-mobile-menu' : ''}`}
+          className={`md:hidden fixed inset-0 z-40 bg-white ${
+            variant === 'comparison' ? 'comparison-mobile-menu' : ''
+          }`}
           onClick={() => setMobileOpen(false)}
         >
           <div
@@ -341,7 +342,10 @@ export default function Navbar({
               <a
                 href={CONSULT_URL}
                 data-consultation-link="true"
-                {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_mobile_menu_consult')}
+                {...rybbitClickAttrs(
+                  RYBBIT_EVENTS.businessConsultClick,
+                  'home_nav_mobile_menu_consult'
+                )}
                 className="h-10 inline-flex items-center justify-center rounded-full text-[13px] font-medium text-white bg-btn-dark"
                 onClick={() => setMobileOpen(false)}
               >

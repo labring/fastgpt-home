@@ -1,4 +1,7 @@
-import type { LocaleCode } from '@/lib/locales';
+import {
+  getContactPublishedLocale,
+  type ContactPublishedLocale
+} from '@/lib/publishedLocales';
 
 export type ContactFormValues = {
   name: string;
@@ -181,7 +184,30 @@ const zhHant: ContactCopy = {
     budget: '專案預算',
     notes: '補充說明'
   },
+  placeholders: {
+    name: '請輸入姓名',
+    phone: '請輸入手機號碼或電子郵件',
+    company: '請輸入公司名稱',
+    position: '請輸入職位',
+    notes: '可補充使用情境、部署規模或其他需求'
+  },
   selectPlaceholder: '請選擇',
+  options: {
+    是: '是',
+    否: '否',
+    私有化部署: '私有化部署',
+    'SaaS 版': 'SaaS 版',
+    渠道合作: '通路合作',
+    其他: '其他',
+    '调研阶段/竞品对比': '調研階段／競品比較',
+    '立项阶段/测试使用': '立項階段／測試使用',
+    '采购阶段/最终决策': '採購階段／最終決策',
+    '0-3 万元': '人民幣 0–3 萬元',
+    '3-10 万元': '人民幣 3–10 萬元',
+    '10-30 万元': '人民幣 10–30 萬元',
+    '30-100 万元': '人民幣 30–100 萬元',
+    '100 万元以上': '人民幣 100 萬元以上'
+  },
   submit: '提交諮詢',
   submitting: '正在提交',
   successTitle: '諮詢已提交',
@@ -197,14 +223,14 @@ const zhHant: ContactCopy = {
   requiredError: '請完整填寫所有必填項。'
 };
 
-const contactCopy: Partial<Record<LocaleCode, ContactCopy>> = {
+const contactCopy: Record<ContactPublishedLocale, ContactCopy> = {
   zh,
   'zh-hant': zhHant,
   en
 };
 
 export function getContactCopy(locale: string): ContactCopy {
-  return contactCopy[locale as LocaleCode] || en;
+  return contactCopy[getContactPublishedLocale(locale)];
 }
 
 export function getContactOptionLabel(copy: ContactCopy, value: string): string {

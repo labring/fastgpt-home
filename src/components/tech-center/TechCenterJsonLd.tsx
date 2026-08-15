@@ -1,5 +1,6 @@
 import type { JsonLdCopy } from '@/components/JsonLd';
 import { JsonLdScript } from '@/components/JsonLd';
+import { getTechEntryPath } from '@/components/tech-center/data';
 import { getOwnedLocaleUrl } from '@/lib/siteRouting';
 import type { TechArticle } from '@/lib/tech-center-content';
 
@@ -64,7 +65,7 @@ export function TechArticleJsonLd({
   schema: JsonLdCopy;
   article: TechArticle;
 }) {
-  const articleUrl = getOwnedLocaleUrl('zh', article.slug);
+  const articleUrl = getOwnedLocaleUrl('zh', getTechEntryPath(article));
   const hubUrl = getOwnedLocaleUrl('zh', '/tech-center');
   const siteUrl = new URL(articleUrl).origin;
   const homeUrl = getOwnedLocaleUrl('zh');

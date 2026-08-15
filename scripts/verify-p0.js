@@ -2,10 +2,12 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const sharp = require('sharp');
+const { getCanonicalBaseUrl, resolveSiteVariant } = require('./lib/site-variant');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
-const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
+const variant = resolveSiteVariant();
+const baseUrl = getCanonicalBaseUrl(variant);
 const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 const faqId = 'Why-are-enterprises-paying-more';
 const maxSocialImageBytes = 200_000;
@@ -71,6 +73,7 @@ async function verifyImage() {
 function verifyNginxHeaders() {
   const headerConfig = fs.readFileSync(path.join(rootDir, 'nginx-security-headers.conf'), 'utf8');
   const nginxConfig = fs.readFileSync(path.join(rootDir, 'nginx.conf'), 'utf8');
+  const dockerfile = fs.readFileSync(path.join(rootDir, 'Dockerfile'), 'utf8');
   const requiredHeaders = [
     'Strict-Transport-Security',
     'X-Frame-Options',
@@ -87,55 +90,44 @@ function verifyNginxHeaders() {
     .length;
   assert.equal(includeCount, 11, 'Security headers must cover the server and all cache locations');
 
-  const faqRedirectScope = 'if ($host ~* ^(?:www\\.)?fastgpt\\.cn$) {';
-  const defaultHomeRedirect = 'rewrite ^/zh/?$ https://fastgpt.cn/ permanent;';
-  const defaultPriceRedirect = 'rewrite ^/zh/price/?$ https://fastgpt.cn/price permanent;';
-  const faqListRedirect = 'rewrite ^/zh/faq/?$ https://fastgpt.cn/faq permanent;';
-  const faqDetailRedirect = 'rewrite ^/zh/faq/(.+?)/?$ https://fastgpt.cn/faq/$1 permanent;';
-  const compareDetailRedirect =
-    'rewrite ^/zh/compare/(.+?)/?$ https://fastgpt.cn/compare/$1 permanent;';
-  const trailingSlashRule = 'location ~ ^(.+)/$ {';
+  assert(
+    nginxConfig.includes('include /etc/nginx/generated-redirects.conf;'),
+    'Nginx is missing the generated redirect map'
+  );
+  assert(
+    nginxConfig.includes('return 301 $locale_redirect_target$is_args$args;'),
+    'Nginx must preserve query parameters on canonical redirects'
+  );
+  assert(nginxConfig.includes('map_hash_bucket_size 256;'), 'Nginx map hash bucket is too small');
+  assert(nginxConfig.includes('map_hash_max_size 16384;'), 'Nginx map hash table is too small');
+  assert(
+    dockerfile.includes('Docker publication supports only NEXT_PUBLIC_SITE_VARIANT=cn'),
+    'Docker build does not enforce its CN-only publication boundary'
+  );
+  assert(dockerfile.includes('RUN nginx -t'), 'Docker image does not validate the Nginx config');
 
-  assert(nginxConfig.includes(faqRedirectScope), 'FAQ redirects must be scoped to fastgpt.cn');
-  assert(nginxConfig.includes(defaultHomeRedirect), 'Missing default Chinese home redirect');
-  assert(nginxConfig.includes(defaultPriceRedirect), 'Missing default Chinese price redirect');
-  assert(nginxConfig.includes(faqListRedirect), 'Missing permanent FAQ list redirect');
-  assert(nginxConfig.includes(faqDetailRedirect), 'Missing permanent FAQ detail redirect');
-  assert(
-    nginxConfig.includes(compareDetailRedirect),
-    'Missing permanent comparison detail redirect'
-  );
-  assert(
-    nginxConfig.indexOf(faqRedirectScope) < nginxConfig.indexOf(trailingSlashRule),
-    'FAQ redirects must run before the generic trailing-slash redirect'
-  );
+  const redirectMap = fs.readFileSync(path.join(rootDir, '.next', 'nginx-redirects.conf'), 'utf8');
+  if (variant === 'cn') {
+    assert(redirectMap.includes('"/zh" "https://fastgpt.cn/";'));
+    assert(redirectMap.includes(`"/en/faq/${faqId}" "https://fastgpt.io/faq/${faqId}";`));
+    assert(!redirectMap.includes('"/ja/faq"'), 'Nginx redirects an unpublished locale page');
+  } else {
+    assert(!redirectMap.includes('"https://'), `${variant} build contains Nginx redirects`);
+  }
 }
 
 function verifyCloudflareRedirects() {
-  const sourcePath = path.join(rootDir, 'public', '_redirects');
-  const exportedPath = path.join(outDir, '_redirects');
-  const source = fs.readFileSync(sourcePath, 'utf8');
-  const exported = fs.existsSync(exportedPath) ? fs.readFileSync(exportedPath, 'utf8') : '';
-  const requiredRules = [
-    '/en/ / 301',
-    '/en / 301',
-    '/en/price/ /price 301',
-    '/en/price /price 301',
-    '/en/faq/ /faq 301',
-    '/en/faq /faq 301',
-    '/en/faq/*/ /faq/:splat 301',
-    '/en/faq/* /faq/:splat 301'
-  ];
+  assert(!fs.existsSync(path.join(outDir, '_redirects')), 'Legacy Cloudflare redirects were exported');
+  if (variant === 'cn') return;
 
-  for (const rule of requiredRules) {
-    assert(source.includes(rule), `Missing Cloudflare Pages redirect: ${rule}`);
-    assert(exported.includes(rule), `Missing exported Cloudflare Pages redirect: ${rule}`);
+  const worker = fs.readFileSync(path.join(outDir, '_worker.js'), 'utf8');
+  if (variant === 'preview') {
+    assert(worker.includes('new Map([])'), 'Preview worker contains redirect rules');
+    assert(worker.includes("X-Robots-Tag', 'noindex, nofollow"));
+  } else {
+    assert(worker.includes(`/zh/faq/${faqId}`));
+    assert(worker.includes(`https://fastgpt.cn/faq/${faqId}`));
   }
-
-  assert(
-    source.indexOf('/en/faq /faq 301') < source.indexOf('/en/faq/* /faq/:splat 301'),
-    'Cloudflare FAQ exact redirect must precede the dynamic redirect'
-  );
 }
 
 async function main() {

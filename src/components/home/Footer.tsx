@@ -5,7 +5,9 @@ import { siteConfig } from '@/config/site';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { isContactHref } from '@/lib/consultation';
-import { getOwnedLocalePath } from '@/lib/siteRouting';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { normalizeLocale } from '@/lib/locales';
+import { getContactPublishedLocale } from '@/lib/publishedLocales';
 
 type ColumnLink = { label: string; href: string; external?: boolean; cloudEntrySource?: string };
 type Column = { title: string; width: number; items: (ColumnLink | { label: string })[] };
@@ -29,7 +31,7 @@ type FooterT = {
 };
 
 function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
-  const techCenterHref = locale ? getOwnedLocalePath(locale, '/tech-center') : '/tech-center';
+  const normalizedLocale = normalizeLocale(locale);
 
   return [
     {
@@ -44,7 +46,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
         },
         {
           label: t.service.items.private,
-          href: '/contact',
+          href: getDefaultLocalePath(getContactPublishedLocale(normalizedLocale), '/contact'),
           external: false
         },
         {
@@ -73,7 +75,15 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           href: 'https://solutions.fastgpt.cn/',
           external: true
         },
-        { label: t.links.items.tech, href: techCenterHref, external: false }
+        ...(normalizedLocale === 'zh'
+          ? [
+              {
+                label: t.links.items.tech,
+                href: getDefaultLocalePath(normalizedLocale, '/tech-center'),
+                external: false
+              }
+            ]
+          : [])
       ]
     },
     {

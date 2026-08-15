@@ -11,6 +11,7 @@ import {
   getCompareHubCanonicalUrl
 } from '@/lib/seo';
 import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { comparisonPublishedLocaleCodes } from '@/lib/publishedLocales';
 import ComparisonHubPage from './ComparisonHubPage';
 
 const hubLanguage: Record<CompareLocale, string> = {
@@ -64,7 +65,13 @@ export async function ComparisonHubRoute({ locale }: { locale: CompareLocale }) 
         }}
       />
       <HomeThemeFix />
-      <Navbar links={dict.links} t={dict.Home.navCta} locale={locale} variant="comparison" />
+      <Navbar
+        links={dict.links}
+        t={dict.Home.navCta}
+        locale={locale}
+        variant="comparison"
+        publishedLocales={comparisonPublishedLocaleCodes}
+      />
       <main className="comparison-page">
         <ComparisonHubPage locale={locale} />
       </main>

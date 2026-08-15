@@ -41,7 +41,7 @@ jobs:
       - name: Build
         env:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_LANGUAGE_REGION: international
+          NEXT_PUBLIC_SITE_VARIANT: preview
           NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
           NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
           NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
@@ -49,6 +49,7 @@ jobs:
         run: |
           pnpm install
           pnpm run build
+          pnpm run verify:i18n-seo
 
       # Save PR number so the deploy workflow knows which PR to comment on.
       - name: Save PR metadata

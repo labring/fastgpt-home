@@ -2,11 +2,12 @@ import { faq as faqEn } from './en';
 import { faqZh, type FaqItem } from './zh';
 import { legacyFaqMeta } from './legacyMeta';
 import { applyLegacyCategoryOverlay } from './legacyCategories';
+import { faqPublishedLocaleCodes } from '@/lib/publishedLocales';
 
 export type { FaqItem };
 export type FaqData = Record<string, FaqItem>;
 
-export const faqContentLocaleCodes = ['en', 'zh'] as const;
+export const faqContentLocaleCodes = faqPublishedLocaleCodes;
 export type FaqContentLocale = (typeof faqContentLocaleCodes)[number];
 
 // 按语言索引的翻译数据（新增语言在此扩展）
@@ -26,22 +27,17 @@ export function resolveFaqLocale(lang: string): FaqContentLocale {
   return 'en';
 }
 
-/**
- * 返回指定语言的完整 FAQ 数据，未翻译条目 fallback 到英文
- */
+/** Return only FAQ entries with complete content in the requested locale. */
 export function getFaqData(lang: string): FaqData {
   const locale = resolveFaqLocale(lang);
   if (locale === 'en') return applyLegacyCategoryOverlay(faqEnWithLegacyMeta, locale);
-  return applyLegacyCategoryOverlay({ ...faqEnWithLegacyMeta, ...faqByLocale[locale] }, locale);
+  return applyLegacyCategoryOverlay(faqByLocale[locale] || {}, locale);
 }
 
-/**
- * 返回指定语言的单条 FAQ，未翻译时 fallback 到英文
- */
+/** Return an FAQ entry only when it is published in the requested locale. */
 export function getFaqItem(id: string, lang: string): FaqItem | undefined {
   const locale = resolveFaqLocale(lang);
-  const localized = locale === 'zh' ? faqByLocale[locale]?.[id] : undefined;
-  const item = localized ?? faqEnWithLegacyMeta[id];
+  const item = locale === 'en' ? faqEnWithLegacyMeta[id] : faqByLocale[locale]?.[id];
   return item ? applyLegacyCategoryOverlay({ [id]: item }, locale)[id] : undefined;
 }
 
@@ -56,5 +52,5 @@ export function getFaqTranslationLocales(id: string): FaqContentLocale[] {
   });
 }
 
-// 英文原始数据，用于 URL 生成（generateStaticParams / sitemap）
+// English source data for URL generation (generateStaticParams / sitemap).
 export { faqEnWithLegacyMeta as faq };

@@ -4,14 +4,14 @@ import { useParams, usePathname } from 'next/navigation';
 import { useEffect, useRef, useState } from 'react';
 import { ChevronDown } from 'lucide-react';
 import { navigateTo, rememberPreferredLanguage } from '@/lib/clientNavigation';
-import { localeConfigs } from '@/lib/locales';
-import { getAvailableLocaleCodes, getOwnedLocalePath } from '@/lib/siteRouting';
+import { localeConfigs, type LocaleCode } from '@/lib/locales';
+import { getPublishedLocaleCodes } from '@/lib/siteRouting';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 const langConfig = localeConfigs.reduce((acc, locale) => {
   acc[locale.code] = { flag: locale.flag, label: locale.name };
   return acc;
 }, {} as Record<string, { flag: string; label: string }>);
-const faqLocaleCodes = ['en', 'zh'];
 
 function TranslateIcon({ size = 20 }: { size?: number }) {
   return (
@@ -35,10 +35,12 @@ function TranslateIcon({ size = 20 }: { size?: number }) {
 
 export const LangSwitcher = ({
   iconOnly = false,
-  locale
+  locale,
+  publishedLocales
 }: {
   iconOnly?: boolean;
   locale?: string;
+  publishedLocales?: readonly LocaleCode[];
 }) => {
   const params = useParams<{ lang: string }>();
   const lang = params.lang;
@@ -54,12 +56,10 @@ export const LangSwitcher = ({
     }
     return pathname;
   })();
-  const isFaqRoute = routeWithoutLang === '/faq' || routeWithoutLang.startsWith('/faq/');
-  const availableLocaleCodes = getAvailableLocaleCodes();
-  const languageKeys = (isFaqRoute ? faqLocaleCodes : availableLocaleCodes).filter((key) =>
-    availableLocaleCodes.includes(key as (typeof availableLocaleCodes)[number])
-  );
-  const getLocalizedPath = (value: string) => getOwnedLocalePath(value, routeWithoutLang);
+  const availableLocaleCodes = getPublishedLocaleCodes();
+  const pageLocaleCodes: readonly LocaleCode[] = publishedLocales ?? availableLocaleCodes;
+  const languageKeys = pageLocaleCodes.filter((key) => availableLocaleCodes.includes(key));
+  const getLocalizedPath = (value: string) => getDefaultLocalePath(value, routeWithoutLang);
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;

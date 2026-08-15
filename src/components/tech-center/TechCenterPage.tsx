@@ -4,6 +4,7 @@ import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import type { ComponentProps } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
@@ -11,6 +12,7 @@ import {
   CATEGORY_META,
   COMMON_TOPICS,
   FEATURED_ENTRY,
+  getTechEntryPath,
   PAGE_SIZE,
   TECH_ENTRIES,
   type TechCategoryKey,
@@ -205,7 +207,12 @@ export default function TechCenterPage({
   return (
     <div className="home tech-center-reference-page">
       <HomeThemeFix />
-      <Navbar links={links} t={navCta} locale={locale} />
+      <Navbar
+        links={links}
+        t={navCta}
+        locale={locale}
+        publishedLocales={techPublishedLocaleCodes}
+      />
       <main id="main-content" className={`${styles.page} ${styles.main}`}>
         <a className={styles.skipLink} href="#main-content">
           跳至主要内容
@@ -315,7 +322,10 @@ export default function TechCenterPage({
             </h2>
             <p className={styles.featuredSummary}>{FEATURED_ENTRY.summary}</p>
             <div className={styles.featuredActions}>
-              <a className={styles.primaryLink} href={FEATURED_ENTRY.slug}>
+              <a
+                className={styles.primaryLink}
+                href={getDefaultLocalePath(locale, getTechEntryPath(FEATURED_ENTRY))}
+              >
                 阅读 API 指南 <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />
               </a>
               <a
@@ -459,7 +469,9 @@ export default function TechCenterPage({
                         <span className={styles.cardSource}>{entry.sourceType}</span>
                       </div>
                       <h3 className={styles.cardTitle}>
-                        <a href={entry.slug}>{entry.title}</a>
+                        <a href={getDefaultLocalePath(locale, getTechEntryPath(entry))}>
+                          {entry.title}
+                        </a>
                       </h3>
                       <p className={styles.cardSummary}>{entry.summary}</p>
                       <div className={styles.cardFooter}>

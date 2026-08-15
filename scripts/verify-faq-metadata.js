@@ -20,8 +20,6 @@ const {
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
 const FAQ_INDEX_SOURCE = path.join(ROOT, 'src/faq/index.ts');
-const FAQ_SOURCE = path.join(ROOT, 'src/faq/en.ts');
-const TITLE_SUFFIX = ' - FastGPT';
 
 function readArtifact() {
   try {
@@ -152,6 +150,10 @@ function getMetaContent(html, attribute, value) {
   return decodeHtmlEntities(getAttribute(tag, 'content') || '');
 }
 
+function serializeKeywords(value) {
+  return value.split(', ').join(',');
+}
+
 function getTitle(html) {
   const match = html.match(/<title>([^<]*)<\/title>/i);
   assert(match, 'Missing document title');
@@ -205,7 +207,7 @@ function verifyFaqHtml(record, route) {
   );
   assert.equal(
     getMetaContent(html, 'name', 'keywords'),
-    record.keywords,
+    serializeKeywords(record.keywords),
     `${record.contentId} keywords mismatch in ${htmlPath}`,
   );
 
@@ -217,8 +219,26 @@ function verifyFaqHtml(record, route) {
   assert(questions.includes(authored.Question), `${record.contentId} FAQ JSON-LD question identity drift`);
 }
 
+function verifyCaseInsensitiveExportCollisions(artifact, routeIdentity) {
+  if (process.platform !== 'darwin') return;
+  const paths = new Map();
+  for (const record of artifact.records) {
+    const route = routeIdentity.byContentId.get(record.contentId);
+    const exportPath = path.join(OUT_DIR, 'faq', `${route.canonicalSlug}.html`);
+    const key = exportPath.toLowerCase();
+    const previous = paths.get(key);
+    if (previous && previous !== route.canonicalSlug) {
+      throw new Error(
+        `[faq-metadata] macOS case-insensitive export collision: ${previous} and ${route.canonicalSlug}; run --html on a case-sensitive build host`,
+      );
+    }
+    paths.set(key, route.canonicalSlug);
+  }
+}
+
 function verifyHtmlExport(artifact, faqRecords, routeIdentity) {
   const faqById = new Map(faqRecords.map((record) => [record.contentId, record]));
+  verifyCaseInsensitiveExportCollisions(artifact, routeIdentity);
   for (const record of artifact.records) {
     const route = routeIdentity.byContentId.get(record.contentId);
     assert(route, `${record.contentId} is missing from the route registry`);

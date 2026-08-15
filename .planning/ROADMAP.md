@@ -45,7 +45,10 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
   2. A visitor to each mapped FAQ page sees its approved title with exactly one ` - FastGPT` suffix, approved description, and approved keywords.
   3. Each imported FAQ page continues to present its existing question, answer, and category verbatim.
 
-**Plans**: TBD
+**Plans**: 1/1 plans executed
+
+- [x] 02-01-PLAN.md
+
 **UI hint**: yes
 
 ### Phase 3: Coherent SEO Graph
@@ -86,6 +89,6 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Canonical FAQ Routes | 1/1 | Complete    | 2026-08-16 |
-| 2. Approved Metadata | 0/TBD | Not started | - |
+| 2. Approved Metadata | 1/1 | In Progress|  |
 | 3. Coherent SEO Graph | 0/TBD | Not started | - |
 | 4. Redirects and Release Gate | 0/TBD | Not started | - |

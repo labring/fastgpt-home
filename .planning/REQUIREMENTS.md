@@ -9,9 +9,9 @@ Requirements for the release-ready repair milestone. Each requirement maps to ex
 
 ### Metadata Import
 
-- [ ] **META-01**: A maintainer can regenerate the committed metadata data from the approved Week04 workbook, consuming exactly 1,195 unique rows and failing on duplicate or unmapped rows.
-- [ ] **META-02**: Each of the 1,195 mapped English FAQ pages renders the approved title with exactly one ` - FastGPT` suffix, the approved description, and the approved keywords.
-- [ ] **META-03**: Importing approved metadata preserves every in-scope FAQ question, answer, and category verbatim.
+- [x] **META-01**: A maintainer can regenerate the committed metadata data from the approved Week04 workbook, consuming exactly 1,195 unique rows and failing on duplicate or unmapped rows.
+- [x] **META-02**: Each of the 1,195 mapped English FAQ pages renders the approved title with exactly one ` - FastGPT` suffix, the approved description, and the approved keywords.
+- [x] **META-03**: Importing approved metadata preserves every in-scope FAQ question, answer, and category verbatim.
 
 ### FAQ Identity and URLs
 
@@ -69,9 +69,9 @@ Roadmap creation assigns each v1 requirement to exactly one phase.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| META-01 | Phase 2 | Pending |
-| META-02 | Phase 2 | Pending |
-| META-03 | Phase 2 | Pending |
+| META-01 | Phase 2 | Complete |
+| META-02 | Phase 2 | Complete |
+| META-03 | Phase 2 | Complete |
 | URL-01 | Phase 1 | Complete |
 | URL-02 | Phase 1 | Complete |
 | URL-03 | Phase 1 | Complete |

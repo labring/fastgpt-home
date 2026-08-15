@@ -14,7 +14,7 @@ affects: [approved-metadata, coherent-seo-graph, redirects-release-gate]
 actuals:
   tokens: 280180
   tasks: 3
-  commits: 3
+  commits: 5
 
 tech-stack:
   added: []
@@ -104,6 +104,8 @@ status: complete
 1. **Task 1: Generate the committed English route registry** - `737855a`
 2. **Task 2: Wire canonical slugs into FAQ lookup and static routes** - `67c47a2`
 3. **Task 3: Add the focused route and registry regression command** - `5682186`
+4. **Follow-up: Preserve safe mixed-case legacy slugs** - `65b14e9`
+5. **Follow-up: Record the updated preservation boundary and UAT evidence** - `c0a3e2c`
 
 ## Files Created/Modified
 

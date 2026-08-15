@@ -18,7 +18,7 @@ Requirements for the release-ready repair milestone. Each requirement maps to ex
 - [x] **URL-01**: Every English FAQ record currently present in the repository has one stable identity and one safe, unique canonical slug.
 - [x] **URL-02**: Every current FAQ route that returns the intended record keeps its existing public URL.
 - [x] **URL-03**: Every in-scope record with a missing or unsafe route receives a deterministic repaired slug that resolves to its intended FAQ page.
-- [ ] **URL-04**: Every changed legacy path with one valid destination redirects permanently to that canonical page in one hop, while ambiguous collision paths remain without a guessed redirect.
+- [x] **URL-04**: Every changed legacy path with one valid destination redirects permanently to that canonical page in one hop, while ambiguous collision paths remain without a guessed redirect.
 
 ### SEO Surface
 
@@ -28,9 +28,9 @@ Requirements for the release-ready repair milestone. Each requirement maps to ex
 
 ### Release Verification
 
-- [ ] **VERIFY-01**: A single repository command validates workbook coverage, exact metadata, preserved URL stability, final-slug uniqueness, redirect integrity, route identity, and SEO-surface alignment with record-level failures.
-- [ ] **VERIFY-02**: The production build succeeds with every final in-scope English FAQ route included in the static export.
-- [ ] **VERIFY-03**: Exported FAQ HTML verifies the intended H1, approved metadata, canonical URL, and expected hreflang values for every applicable final route.
+- [x] **VERIFY-01**: A single repository command validates workbook coverage, exact metadata, preserved URL stability, final-slug uniqueness, redirect integrity, route identity, and SEO-surface alignment with record-level failures.
+- [x] **VERIFY-02**: The production build succeeds with every final in-scope English FAQ route included in the static export.
+- [x] **VERIFY-03**: Exported FAQ HTML verifies the intended H1, approved metadata, canonical URL, and expected hreflang values for every applicable final route.
 
 ## v2 Requirements
 
@@ -75,13 +75,13 @@ Roadmap creation assigns each v1 requirement to exactly one phase.
 | URL-01 | Phase 1 | Complete |
 | URL-02 | Phase 1 | Complete |
 | URL-03 | Phase 1 | Complete |
-| URL-04 | Phase 4 | Pending |
+| URL-04 | Phase 4 | Complete |
 | SEO-01 | Phase 3 | Complete |
 | SEO-02 | Phase 3 | Complete |
 | SEO-03 | Phase 3 | Complete |
-| VERIFY-01 | Phase 4 | Pending |
-| VERIFY-02 | Phase 4 | Pending |
-| VERIFY-03 | Phase 4 | Pending |
+| VERIFY-01 | Phase 4 | Complete |
+| VERIFY-02 | Phase 4 | Complete |
+| VERIFY-03 | Phase 4 | Complete |
 
 **Coverage:**
 

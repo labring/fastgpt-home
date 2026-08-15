@@ -18,7 +18,7 @@ affects: [03-coherent-seo-graph, 04-redirects-and-release-gate]
 actuals:
   tokens: 240545
   tasks: 2
-  commits: 4
+  commits: 5
 
 # Tech tracking
 tech-stack:
@@ -123,6 +123,7 @@ Follow-up correctness fix:
 
 3. **HTML export collision diagnostics and keyword serialization** - `e30a2a0` (fix(02))
 4. **P2 sample route registry compatibility** - `51d7395` (fix(02))
+5. **Relative workbook path CLI compatibility** - `23df9ff` (fix(02))
 
 **Plan metadata:** `5e0cb62` (docs(02): create approved metadata plan)
 
@@ -177,7 +178,15 @@ Follow-up correctness fix:
 - **Verification:** `NEXT_PUBLIC_SITE_VARIANT=io NEXT_PUBLIC_HOME_URL=https://fastgpt.io npm run verify:p2` passes with 1,398 discovered FAQ detail files and one `en` migration target.
 - **Committed in:** `51d7395`
 
-**Total deviations:** 4 auto-fixed (correctness, runtime fidelity, diagnostics, compatibility)
+**5. [CLI compatibility] Relative workbook path parsing**
+- **Found during:** Generator source review
+- **Issue:** The initial argument guard compared a relative input path with its resolved absolute form and rejected valid relative workbook paths.
+- **Fix:** Parse `--workbook` as a flag/value pair and validate remaining flags independently.
+- **Files modified:** `scripts/generate-faq-metadata.js`
+- **Verification:** `node scripts/generate-faq-metadata.js --check`, source verifier, and syntax checks pass.
+- **Committed in:** `23df9ff`
+
+**Total deviations:** 5 auto-fixed (correctness, runtime fidelity, diagnostics, compatibility, CLI)
 **Impact on plan:** Metadata source delivery is complete; static HTML proof remains host-dependent and requires a case-sensitive build environment.
 
 ## Issues Encountered

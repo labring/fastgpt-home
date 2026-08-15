@@ -360,7 +360,11 @@ function verifyHtmlGraph(outDir, variant, identity) {
     const folded = filePath.toLowerCase();
     const previous = foldedPaths.get(folded);
     if (previous && previous !== filePath) {
-      fail(`Case-insensitive export collision: ${previous} and ${filePath}; use a case-sensitive export host`);
+      const previousRealPath = fs.realpathSync.native(previous);
+      const currentRealPath = fs.realpathSync.native(filePath);
+      if (previousRealPath === currentRealPath) {
+        fail(`Case-insensitive export collision: ${previous} and ${filePath}; use a case-sensitive export host`);
+      }
     }
     foldedPaths.set(folded, filePath);
 

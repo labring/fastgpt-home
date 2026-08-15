@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import type { CompareLocale } from '@/content/competitor';
+import { faqContentLocaleCodes, getFaqRouteKey, resolveFaqLocale } from '@/faq';
 import { localeMap, supportedLocaleCodes } from '@/lib/locales';
 import { getLocaleHreflang, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
@@ -68,26 +69,35 @@ export function getAlternates(
 
 export function getFaqAlternates(
   lang: string,
-  faqId?: string,
-  availableLocales: readonly string[] = supportedLocaleCodes,
-  hasEnglishTranslation = true
+  contentId?: string,
+  availableLocales: readonly string[] = faqContentLocaleCodes
 ): Metadata['alternates'] {
-  const canonical = getOwnedFaqUrl(lang, faqId);
-  const translatedLocales = availableLocales.filter(
-    (locale) => hasEnglishTranslation || locale !== 'en'
+  const currentLocale = resolveFaqLocale(lang);
+  const publishedLocales = Array.from(
+    new Set(
+      availableLocales
+        .map((locale) => resolveFaqLocale(locale))
+        .filter((locale) => faqContentLocaleCodes.includes(locale))
+    )
   );
+  if (!publishedLocales.includes(currentLocale)) publishedLocales.push(currentLocale);
 
-  if (translatedLocales.length < 2) {
-    return { canonical };
+  const routeKey = contentId ? getFaqRouteKey(contentId, currentLocale) : undefined;
+  if (contentId && !routeKey) {
+    throw new Error(`FAQ alternate identity is unpublished: ${contentId} (${currentLocale})`);
   }
 
-  const languages = translatedLocales.reduce((acc, locale) => {
-    acc[getLocaleHreflang(locale)] = getOwnedFaqUrl(locale, faqId);
+  const canonical = getOwnedFaqUrl(currentLocale, routeKey);
+  const languages = publishedLocales.reduce((acc, locale) => {
+    const targetRouteKey = contentId ? getFaqRouteKey(contentId, locale) : undefined;
+    if (contentId && !targetRouteKey) return acc;
+    acc[getLocaleHreflang(locale)] = getOwnedFaqUrl(locale, targetRouteKey);
     return acc;
   }, {} as Record<string, string>);
 
-  if (hasEnglishTranslation) {
-    languages['x-default'] = getOwnedFaqUrl('en', faqId);
+  const englishRouteKey = contentId ? getFaqRouteKey(contentId, 'en') : publishedLocales.includes('en') ? undefined : null;
+  if (contentId ? englishRouteKey : publishedLocales.includes('en')) {
+    languages['x-default'] = getOwnedFaqUrl('en', englishRouteKey || undefined);
   }
 
   return {

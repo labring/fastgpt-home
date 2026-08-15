@@ -74,6 +74,31 @@ export function getEnglishFaqCanonicalSlug(id: string): string | undefined {
   return englishRouteBySlug.get(id)?.canonicalSlug || englishRouteByContentId.get(id)?.canonicalSlug;
 }
 
+/** Resolve a published locale route key to the durable cross-locale FAQ identity. */
+export function resolveFaqContentId(routeKey: string, lang: string): string | undefined {
+  if (!routeKey) return undefined;
+
+  const locale = resolveFaqLocale(lang);
+  if (locale === 'en') {
+    return englishRouteBySlug.get(routeKey)?.contentId || englishRouteByContentId.get(routeKey)?.contentId;
+  }
+
+  return englishRouteByContentId.has(routeKey) && faqByLocale[locale]?.[routeKey]
+    ? routeKey
+    : undefined;
+}
+
+/** Return the published route key for a durable FAQ identity in a locale. */
+export function getFaqRouteKey(contentId: string, lang: string): string | undefined {
+  const locale = resolveFaqLocale(lang);
+  if (locale === 'en') {
+    const canonicalSlug = englishRouteByContentId.get(contentId)?.canonicalSlug;
+    return canonicalSlug && faqEnByCanonicalSlug[canonicalSlug] ? canonicalSlug : undefined;
+  }
+
+  return faqByLocale[locale]?.[contentId] ? contentId : undefined;
+}
+
 export function resolveFaqLocale(lang: string): FaqContentLocale {
   if (lang.startsWith('zh')) return 'zh';
   return 'en';
@@ -89,23 +114,31 @@ export function getFaqData(lang: string): FaqData {
 /** Return an FAQ entry only when it is published in the requested locale. */
 export function getFaqItem(id: string, lang: string): FaqItem | undefined {
   const locale = resolveFaqLocale(lang);
+  const contentId = resolveFaqContentId(id, locale);
+  const routeKey = contentId ? getFaqRouteKey(contentId, locale) : undefined;
+  if (!routeKey) return undefined;
+
   if (locale === 'en') {
-    return resolveEnglishFaqContentId(id) ? faqEnByCanonicalSlug[id] : undefined;
+    return faqEnByCanonicalSlug[routeKey];
   }
-  const item = faqByLocale[locale]?.[id];
-  return item ? applyLegacyCategoryOverlay({ [id]: item }, locale)[id] : undefined;
+  const item = faqByLocale[locale]?.[routeKey];
+  return item ? applyLegacyCategoryOverlay({ [routeKey]: item }, locale)[routeKey] : undefined;
 }
 
 export function getFaqIds(lang: string): string[] {
-  return Object.keys(getFaqData(lang));
+  const locale = resolveFaqLocale(lang);
+  if (locale === 'en') return englishRouteRecords.map((record) => record.canonicalSlug);
+  return Object.keys(faqByLocale[locale] || {});
 }
 
-export function getFaqTranslationLocales(id: string): FaqContentLocale[] {
-  const englishContentId = resolveEnglishFaqContentId(id) || id;
-  return faqContentLocaleCodes.filter((locale) => {
-    if (locale === 'en') return Boolean(faqEn[englishContentId as keyof typeof faqEn]);
-    return Boolean(faqByLocale[locale]?.[englishContentId]);
-  });
+export function getFaqTranslationLocales(routeKey: string, lang = 'en'): FaqContentLocale[] {
+  const contentId =
+    resolveFaqContentId(routeKey, lang) ||
+    resolveFaqContentId(routeKey, 'en') ||
+    resolveFaqContentId(routeKey, 'zh');
+  if (!contentId) return [];
+
+  return faqContentLocaleCodes.filter((locale) => Boolean(getFaqRouteKey(contentId, locale)));
 }
 
 // English source data for URL generation (generateStaticParams / sitemap).

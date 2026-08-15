@@ -17,6 +17,7 @@
     "verify:p2": "node scripts/verify-p2.js",
     "verify:i18n-seo": "node scripts/verify-i18n-seo.js",
     "verify:deep-content": "node scripts/verify-deep-content.js",
+    "verify:faq-routes": "node scripts/verify-faq-routes.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py"
   },
   "dependencies": {

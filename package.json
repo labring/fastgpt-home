@@ -19,6 +19,7 @@
     "verify:deep-content": "node scripts/verify-deep-content.js",
     "verify:faq-routes": "node scripts/verify-faq-routes.js",
     "verify:faq-metadata": "node scripts/verify-faq-metadata.js",
+    "verify:faq-seo-graph": "node scripts/verify-faq-seo-graph.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py"
   },
   "dependencies": {

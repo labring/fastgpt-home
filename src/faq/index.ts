@@ -83,9 +83,7 @@ export function resolveFaqContentId(routeKey: string, lang: string): string | un
     return englishRouteBySlug.get(routeKey)?.contentId || englishRouteByContentId.get(routeKey)?.contentId;
   }
 
-  return englishRouteByContentId.has(routeKey) && faqByLocale[locale]?.[routeKey]
-    ? routeKey
-    : undefined;
+  return faqByLocale[locale]?.[routeKey] ? routeKey : undefined;
 }
 
 /** Return the published route key for a durable FAQ identity in a locale. */

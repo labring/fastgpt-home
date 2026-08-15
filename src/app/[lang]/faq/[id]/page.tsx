@@ -25,11 +25,12 @@ import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
 import { BreadcrumbJsonLd, FAQJsonLd } from '@/components/JsonLd';
 
-function decodeFaqId(id: string) {
+function decodeFaqId(id: string): string | undefined {
   try {
-    return decodeURIComponent(id);
+    const decoded = decodeURIComponent(id);
+    return decoded || undefined;
   } catch {
-    return id;
+    return undefined;
   }
 }
 
@@ -43,10 +44,11 @@ export default async function FAQDetailPage({
   const faqLangName = resolveFaqLocale(langName);
   const dict = await getDictionary(faqLangName);
   const faqId = decodeFaqId(id);
+  if (!faqId) notFound();
 
   const faqItem = getFaqItem(faqId, faqLangName);
 
-  if (!faqItem) {
+  if (!faqId || !faqItem) {
     notFound();
   }
 
@@ -309,11 +311,11 @@ export async function generateMetadata({
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
   const faqId = decodeFaqId(id);
-  const faqItem = getFaqItem(faqId, faqLangName);
+  const faqItem = faqId ? getFaqItem(faqId, faqLangName) : undefined;
   const baseUrl = currentSiteBaseUrl;
   const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 
-  if (!faqItem) {
+  if (!faqId || !faqItem) {
     return {
       title: 'FAQ Not Found',
       description: 'The requested FAQ could not be found.',

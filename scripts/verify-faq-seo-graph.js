@@ -23,7 +23,7 @@ const ZH_SOURCES = [
 const IO_BASE_URL = stripTrailingSlash(process.env.NEXT_PUBLIC_IO_HOME_URL || 'https://fastgpt.io');
 const CN_BASE_URL = stripTrailingSlash(process.env.NEXT_PUBLIC_CN_HOME_URL || 'https://fastgpt.cn');
 const EXPECTED_ENGLISH_COUNT = 1400;
-const SAFE_PRESERVED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_PRESERVED_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
 const SAFE_REPAIRED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const FAQ_LOCALES = ['en', 'zh'];
 
@@ -129,10 +129,11 @@ function loadRegistry() {
     assert(['preserved', 'repaired'].includes(record.routeStatus), `Invalid routeStatus for ${record.contentId}`);
     assert(SAFE_PRESERVED_SLUG.test(record.canonicalSlug), `Unsafe canonical slug for ${record.contentId}`);
     if (record.routeStatus === 'preserved') {
-      assert.equal(record.sourceSlug.toLowerCase(), record.canonicalSlug, `Preserved slug was not normalized for ${record.contentId}`);
+      assert.equal(record.sourceSlug, record.canonicalSlug, `Preserved slug changed for ${record.contentId}`);
       assert.equal(record.collisionDisposition, 'none', `Preserved collision for ${record.contentId}`);
     } else {
       assert(SAFE_REPAIRED_SLUG.test(record.canonicalSlug), `Repaired slug is not lowercase for ${record.contentId}`);
+      assert.notEqual(record.canonicalSlug, record.sourceSlug, `Repaired slug did not change for ${record.contentId}`);
     }
     byContentId.set(record.contentId, record);
     byCanonicalSlug.set(record.canonicalSlug, record);
@@ -206,8 +207,14 @@ function verifySourceGraph() {
     }
   }
 
-  const preserved = registry.records.find((record) => record.routeStatus === 'preserved');
-  assert(preserved, 'No preserved lowercase fixture is available');
+  const preservedMixedCase = registry.records.find(
+    (record) => record.routeStatus === 'preserved' && record.evidenceSource === 'week04-online-url' && /[A-Z]/.test(record.canonicalSlug)
+  );
+  const repaired = registry.records.find((record) => record.routeStatus === 'repaired');
+  assert(preservedMixedCase, 'No preserved mixed-case Week04 fixture is available');
+  assert(repaired, 'No repaired lowercase fixture is available');
+  assert(chinese.has(preservedMixedCase.contentId), `Mixed-case fixture has no Chinese counterpart: ${preservedMixedCase.contentId}`);
+  assert(chinese.has(repaired.contentId), `Repaired fixture has no Chinese counterpart: ${repaired.contentId}`);
 
   const bilingual = registry.records.find((record) => chinese.has(record.contentId));
   assert(bilingual, 'No bilingual fixture is available');
@@ -221,8 +228,13 @@ function verifySourceGraph() {
   assert.equal(enBilingual['x-default'], enBilingual.en, `x-default drift for ${bilingual.contentId}`);
   assert.equal(zhBilingual['x-default'], zhBilingual.en, `Chinese x-default drift for ${bilingual.contentId}`);
 
+  const repairedMap = expectedAlternateMap('en', repaired.contentId, byContentId, chinese);
+  assert.equal(repairedMap['zh-CN'], routeUrl('zh', repaired.contentId), `Repaired Chinese route drift: ${repaired.contentId}`);
+  assert.equal(repairedMap.en, routeUrl('en', repaired.canonicalSlug), `Repaired English route drift: ${repaired.contentId}`);
+  assert.equal(repairedMap['x-default'], repairedMap.en, `Repaired x-default drift: ${repaired.contentId}`);
+
   console.log(
-    `[verify-faq-seo-graph] source checks passed (SEO-01/02/03, ${registry.records.length} English identities, ${chinese.size} Chinese routes; preserved fixture=${preserved.canonicalSlug}, bilingual=${bilingual.contentId}${missingCounterpart ? `, missing-counterpart=${missingCounterpart.contentId}` : ', missing-counterpart=none'})`
+    `[verify-faq-seo-graph] source checks passed (SEO-01/02/03, ${registry.records.length} English identities, ${chinese.size} Chinese routes; preserved fixture=${preservedMixedCase.canonicalSlug}, repaired fixture=${repaired.canonicalSlug}, bilingual=${bilingual.contentId}${missingCounterpart ? `, missing-counterpart=${missingCounterpart.contentId}` : ', missing-counterpart=none'})`
   );
   return { english, chinese, registry, byContentId, byCanonicalSlug };
 }
@@ -348,11 +360,7 @@ function verifyHtmlGraph(outDir, variant, identity) {
     const folded = filePath.toLowerCase();
     const previous = foldedPaths.get(folded);
     if (previous && previous !== filePath) {
-      const previousRealPath = fs.realpathSync.native(previous);
-      const currentRealPath = fs.realpathSync.native(filePath);
-      if (previousRealPath === currentRealPath) {
-        fail(`Case-insensitive export collision: ${previous} and ${filePath}; use a case-sensitive export host`);
-      }
+      fail(`Case-insensitive export collision: ${previous} and ${filePath}; use a case-sensitive export host`);
     }
     foldedPaths.set(folded, filePath);
 

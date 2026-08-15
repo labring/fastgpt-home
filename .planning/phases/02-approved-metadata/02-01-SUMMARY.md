@@ -18,7 +18,7 @@ affects: [03-coherent-seo-graph, 04-redirects-and-release-gate]
 actuals:
   tokens: 240545
   tasks: 2
-  commits: 5
+  commits: 6
 
 # Tech tracking
 tech-stack:
@@ -73,9 +73,8 @@ coverage:
         status: pass
       - kind: e2e
         ref: "npm run verify:faq-metadata -- --html"
-        status: fail
-    human_judgment: true
-    rationale: "HTML evidence requires a case-sensitive export host; macOS overwrites three preserved mixed-case route pairs."
+        status: pass
+    human_judgment: false
   - id: D3
     description: "Authored Question, Answers, and Category values remain source-owned and digest-stable for all mapped records."
     requirement: META-03
@@ -124,6 +123,7 @@ Follow-up correctness fix:
 3. **HTML export collision diagnostics and keyword serialization** - `e30a2a0` (fix(02))
 4. **P2 sample route registry compatibility** - `51d7395` (fix(02))
 5. **Relative workbook path CLI compatibility** - `23df9ff` (fix(02))
+6. **Filesystem-aware HTML collision detection** - `9b2a451` (fix(02))
 
 **Plan metadata:** `5e0cb62` (docs(02): create approved metadata plan)
 
@@ -167,7 +167,7 @@ Follow-up correctness fix:
 - **Issue:** Three pairs of healthy mixed-case slugs map to one local filename on the case-insensitive filesystem.
 - **Fix:** Added a clear case-sensitive-host diagnostic without changing canonical route allocation.
 - **Files modified:** `scripts/verify-faq-metadata.js`
-- **Verification:** `npm run verify:faq-metadata -- --html` reports the collision before comparing the overwritten page.
+- **Verification:** `npm run verify:faq-metadata -- --html` reports the collision on the original macOS volume; a case-sensitive APFS image contains both files and passes the full 1,195-page HTML check.
 - **Committed in:** `e30a2a0`
 
 **4. [Compatibility] Stale P2 sample route**
@@ -187,13 +187,13 @@ Follow-up correctness fix:
 - **Committed in:** `23df9ff`
 
 **Total deviations:** 5 auto-fixed (correctness, runtime fidelity, diagnostics, compatibility, CLI)
-**Impact on plan:** Metadata source delivery is complete; static HTML proof remains host-dependent and requires a case-sensitive build environment.
+**Impact on plan:** Metadata source delivery and static HTML proof are complete; release verification should use a case-sensitive build environment.
 
 ## Issues Encountered
 
-- `npm run build` with the repository's default Turbopack path fails before application compilation because `@vercel/turbopack-next/internal/font/google/font` is absent and the requested Google font assets return 404. `npx next build --webpack` succeeds and generates 1,445 static pages; post-build cleanup succeeds with the io variant.
-- `npm run verify:faq-metadata -- --html` stops on the documented macOS case-insensitive mixed-case route collision. The Phase 1 route policy remains intact for case-sensitive static hosts.
-- `verify:p2` now resolves its sample through the Phase 1 registry and passes on the webpack export. It reports 1,398 discovered FAQ detail files because three preserved mixed-case pairs collapse on macOS; the focused metadata verifier surfaces that host limitation explicitly.
+- The first `npm run build` attempt with the repository's default Turbopack path failed before application compilation because `@vercel/turbopack-next/internal/font/google/font` was unavailable and requested Google font assets returned 404. After the successful webpack build warmed the local Next cache, a subsequent `npm run build` completed and generated 1,445 static pages; the case-sensitive APFS image also completed a clean webpack export.
+- `npm run verify:faq-metadata -- --html` stops on the original macOS case-insensitive mixed-case route collision. The filesystem-aware guard passes on the case-sensitive APFS image and verifies all 1,195 mapped pages.
+- `verify:p2` now resolves its sample through the Phase 1 registry and passes on both the original export and the case-sensitive image.
 
 ## User Setup Required
 
@@ -201,7 +201,7 @@ None - no external service configuration required.
 
 ## Next Phase Readiness
 
-Phase 3 can consume `generated-en-metadata.json`, the contentId overlay, and the Phase 1 route registry. Run the full HTML verifier and release checks on a case-sensitive build host; the existing P2 verifier now resolves its sample through the same registry.
+Phase 3 can consume `generated-en-metadata.json`, the contentId overlay, and the Phase 1 route registry. Full HTML evidence is proven on a case-sensitive APFS image; CI/release verification should use an equivalent case-sensitive host. The existing P2 verifier resolves its sample through the same registry.
 
 ---
 *Phase: 02-approved-metadata*

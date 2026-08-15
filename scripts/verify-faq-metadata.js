@@ -228,6 +228,14 @@ function verifyCaseInsensitiveExportCollisions(artifact, routeIdentity) {
     const key = exportPath.toLowerCase();
     const previous = paths.get(key);
     if (previous && previous !== route.canonicalSlug) {
+      const previousPath = path.join(OUT_DIR, 'faq', `${previous}.html`);
+      const bothExist = fs.existsSync(previousPath) && fs.existsSync(exportPath);
+      const sameFile = bothExist &&
+        fs.realpathSync.native(previousPath) === fs.realpathSync.native(exportPath);
+      if (!sameFile) {
+        paths.set(key, route.canonicalSlug);
+        continue;
+      }
       throw new Error(
         `[faq-metadata] macOS case-insensitive export collision: ${previous} and ${route.canonicalSlug}; run --html on a case-sensitive build host`,
       );

@@ -500,8 +500,14 @@ function parseArgs(argv) {
   if (workbookIndex >= 0 && !args[workbookIndex + 1]) fail('--workbook requires a path');
   const workbookPath = workbookIndex >= 0 ? path.resolve(args[workbookIndex + 1]) : null;
   if (write && !workbookPath) fail('--write requires --workbook <path>');
-  if (args.some((arg) => !['--write', '--check', '--workbook', workbookPath].includes(arg))) {
-    fail(`Unknown argument: ${args.find((arg) => !['--write', '--check', '--workbook', workbookPath].includes(arg))}`);
+  for (let index = 0; index < args.length; index += 1) {
+    if (args[index] === '--workbook') {
+      index += 1;
+      continue;
+    }
+    if (args[index] !== '--write' && args[index] !== '--check') {
+      fail(`Unknown argument: ${args[index]}`);
+    }
   }
   return { mode: write ? 'write' : 'check', workbookPath };
 }

@@ -1,6 +1,6 @@
 ---
 phase: 01-canonical-faq-routes
-verified: 2026-08-15T17:31:00Z
+verified: 2026-08-15T17:38:00Z
 status: passed
 score: 3/3 must-haves verified
 behavior_unverified: 0
@@ -9,7 +9,7 @@ behavior_unverified: 0
 # Phase 1: Canonical FAQ Routes Verification Report
 
 **Phase Goal:** Every English FAQ currently in the repository is reachable at one safe canonical URL, with healthy public URLs preserved.
-**Verified:** 2026-08-15T17:31:00Z
+**Verified:** 2026-08-15T17:38:00Z
 **Status:** passed
 
 ## Goal Achievement
@@ -18,8 +18,8 @@ behavior_unverified: 0
 
 | # | Truth | Status | Evidence |
 |---|-------|--------|----------|
-| 1 | A visitor can reach every current English FAQ record through one safe, unique canonical URL. | ✓ VERIFIED | Registry verifier covers all 1,400 source keys; `canonicalSlug` syntax and uniqueness pass; the `io` static export contains 1,400 canonical FAQ HTML routes. |
-| 2 | A visitor using a healthy existing English FAQ URL reaches the same intended FAQ page at that public URL. | ✓ VERIFIED | Evidence snapshot records Week04 online URLs and repository keys; preserve/repair decisions are identity-bound; route resolver accepts only the committed canonical mapping, while legacy projection remains deferred to Phase 4. |
+| 1 | A visitor can reach every current English FAQ record through one safe, unique canonical URL. | ✓ VERIFIED | Registry verifier covers all 1,400 source keys; preserved mixed-case and repaired lowercase syntax/uniqueness pass; the `io` static export contains 1,400 canonical FAQ HTML routes. |
+| 2 | A visitor using a healthy existing English FAQ URL reaches the same intended FAQ page at that public URL. | ✓ VERIFIED | 786 evidence-bound mixed-case routes remain exact canonical slugs and all 786 are present in the `io` export; unsafe/collided sources are explicitly repaired for later redirect projection. |
 | 3 | A visitor can reach every in-scope FAQ with a missing or unsafe route through its deterministic repaired canonical URL and see the intended content. | ✓ VERIFIED | Question-derived slug allocation is deterministic; encoded route round-trips and malformed/unknown IDs are asserted; sampled exported canonical HTML contains the intended question. |
 
 **Score:** 3/3 truths verified
@@ -30,7 +30,7 @@ behavior_unverified: 0
 |----------|----------|--------|---------|
 | `scripts/generate-faq-route-registry.js` | Deterministic `--write`/`--check` registry generator | ✓ EXISTS + SUBSTANTIVE | 523-line Node standard-library generator parses FAQ AST, workbook XML, evidence, and collision ledger. |
 | `src/faq/english-route-evidence.json` | Committed normalized evidence snapshot | ✓ EXISTS + SUBSTANTIVE | 1,400 records: 1,195 Week04 online URL rows and 205 repository-current-key rows. |
-| `src/faq/generated-en-route-registry.json` | Build-time canonical mapping | ✓ EXISTS + SUBSTANTIVE | 1,400 sorted records, 149 explicit `no-redirect` collision entries, safe unique slugs. |
+| `src/faq/generated-en-route-registry.json` | Build-time canonical mapping | ✓ EXISTS + SUBSTANTIVE | 1,400 sorted records (786 preserved, 614 repaired), 149 explicit `no-redirect` collision entries, safe unique slugs. |
 | `src/faq/index.ts` | Registry-backed English FAQ lookup/catalog | ✓ EXISTS + SUBSTANTIVE + WIRED | Canonical slug maps are imported by route consumers and preserve authored fields. |
 | `src/lib/localizedRoutes.ts` | Canonical path adapter | ✓ EXISTS + SUBSTANTIVE + WIRED | English IDs normalize to committed canonical slugs before encoding. |
 | `src/app/[lang]/faq/[id]/page.tsx` | Canonical detail route and static params | ✓ EXISTS + SUBSTANTIVE + WIRED | Static params use `getFaqIds`; decode failures and unknown IDs call `notFound()`. |
@@ -84,10 +84,10 @@ None — automated route checks and the `io` static export smoke test cover the 
 - `npx tsc --noEmit`
 - `NEXT_PUBLIC_SITE_VARIANT=io NEXT_PUBLIC_HOME_URL=https://fastgpt.io npm run build`
 
-**Static export evidence:** `out/faq/` contains 1,400 canonical `.html` routes; sampled canonical HTML includes the intended question and its legacy source path is absent from the export.
+**Static export evidence:** `out/faq/` contains 1,400 canonical `.html` routes; all 786 preserved mixed-case paths and 614 repaired lowercase paths are present, sampled preserved HTML includes the intended question, and a sampled repaired legacy path is absent from the export.
 **Decision coverage:** 4/4 CONTEXT decisions honored (`gsd-tools check.decision-coverage-verify`).
 **Human checks required:** 0
 
 ---
-*Verified: 2026-08-15T17:31:00Z*
+*Verified: 2026-08-15T17:38:00Z*
 *Verifier: the agent (subagent)*

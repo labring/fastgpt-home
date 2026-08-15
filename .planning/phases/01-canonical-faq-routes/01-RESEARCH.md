@@ -41,7 +41,7 @@ Generator behavior:
 
 1. Parse `src/faq/en.ts` object keys with the existing TypeScript AST pattern in `scripts/lib/redirects.js` or a shared helper. Fail on unsupported syntax, duplicate keys, or an empty catalog.
 2. Read the approved Week04 URL evidence through the existing standard-library XLSX pattern in `scripts/sync-w3-faq.py` only when the phase source is available. Join by stable source identity/approved URL evidence, never by mutable title or regenerated slug. Report unmatched, duplicate, or ambiguous rows at record level.
-3. Validate a current route as safe only when it matches lowercase ASCII slug syntax, is unique, and resolves to the intended `contentId`. Reserve every preserved slug before allocation.
+3. Validate a current route as safe when it matches ASCII letter/digit/hyphen syntax in its existing case, is unique, and resolves to the intended `contentId`. Reserve every preserved slug before allocation.
 4. For each repair, slugify the complete English question with lowercase ASCII `a-z0-9-hyphen`, collapse repeated separators, and trim boundary hyphens. If the candidate is reserved, append a fixed short SHA-256 digest of the stable `contentId` (and retain a deterministic fallback counter only if the digest itself collides). Persist the chosen result in the committed registry.
 5. Validate a one-to-one mapping from every canonical slug to exactly one `contentId`; fail closed on unsafe syntax, missing IDs, duplicate IDs, or unresolved allocations. Keep ambiguous old sources in a collision ledger and leave redirect destination empty for Phase 4.
 6. Make the generator idempotent: `--check` compares generated output with the committed artifact; `--write` writes sorted stable records. No new npm package is required.

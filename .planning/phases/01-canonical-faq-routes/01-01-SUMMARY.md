@@ -36,6 +36,7 @@ key-files:
 
 key-decisions:
   - Existing English object keys remain durable content IDs; canonical routes resolve through the committed registry.
+  - Healthy mixed-case source slugs remain exact canonical paths when evidence-bound and unique; repaired allocations remain lowercase.
   - Historical collision candidates outside the current catalog remain opaque legacy-row IDs in explicit no-redirect ledger entries.
   - Root FAQ alias keeps its existing delegation and automatically consumes canonical IDs through getFaqIds(defaultLocale).
 
@@ -94,7 +95,7 @@ status: complete
 ## Accomplishments
 
 - Captured 1,195 Week04 online URL rows plus 205 repository-current-key rows in a normalized evidence snapshot.
-- Generated 1,400 sorted canonical records and 149 explicit no-redirect collision ledger entries with deterministic question-derived repairs.
+- Generated 1,400 sorted canonical records (786 preserved mixed-case routes, 614 deterministic repairs) and 149 explicit no-redirect collision ledger entries.
 - Wired canonical English slugs into FAQ data lookup, path generation, localized static params, root alias coverage, and malformed-ID handling.
 - Added route/registry checks under `npm run verify:faq-routes`.
 
@@ -117,7 +118,7 @@ status: complete
 
 ## Decisions Made
 
-- Preserved existing English object keys as durable content identities.
+- Preserved existing English object keys as durable content identities and retained safe mixed-case online slugs exactly.
 - Kept ambiguous legacy sources as no-redirect ledger entries, including opaque IDs for historical rows absent from the current catalog.
 - Left metadata, sitemap, hreflang, and deployment redirect projection to their owning phases.
 

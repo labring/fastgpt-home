@@ -17,10 +17,10 @@ Give every current English FAQ record a stable durable identity and one safe can
 - **D-01:** Keep each existing `src/faq/en.ts` object key as the durable `contentId`; store `contentId` to `canonicalSlug` records in one generated English registry consumed by the catalog and every route consumer. This keeps authored content stable while public paths evolve.
 
 ### Preserve-versus-repair policy
-- **D-02:** Preserve an exact current slug only when it is safe, unique, and maps to the intended record. Use the Week04 online-URL evidence for the 1,195 approved reachable rows and repair only missing, unsafe, or collided records. Keep the migration incremental to protect indexed URLs.
+- **D-02:** Preserve an exact current slug when it is safe, unique, and maps to the intended record. Safe preserved segments may contain ASCII letters in either case, digits, and hyphens. Use the Week04 online-URL evidence for the 1,195 approved reachable rows and repair only missing, unsafe, or collided records. Keep the migration incremental to protect indexed URLs.
 
 ### Deterministic repaired slugs
-- **D-03:** Derive readable ASCII slugs from the full question using lowercase `a-z0-9-hyphen` syntax. Reserve preserved and previously allocated slugs; append a deterministic short digest from the stable content identity when a collision remains. Commit the mapping so later builds never regenerate a different public path.
+- **D-03:** Derive repaired slugs from the full question using lowercase ASCII `a-z0-9-hyphen` syntax. Reserve preserved and previously allocated slugs; append a deterministic short digest from the stable content identity when a collision remains. Commit the mapping so later builds never regenerate a different public path.
 
 ### Legacy alias and collision handling
 - **D-04:** Emit a permanent one-hop redirect only when one legacy source maps to exactly one final `contentId` and the destination is a verified canonical route. Keep collided sources in an audit-only collision ledger without a guessed redirect; preserve existing query-string behavior through deployment projection.

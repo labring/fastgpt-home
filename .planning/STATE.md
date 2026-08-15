@@ -5,8 +5,8 @@ milestone_name: milestone
 current_phase: 2
 current_phase_name: Approved Metadata
 status: executing
-stopped_at: Phase 2 UAT recorded; HTML evidence blocked by macOS case-insensitive export
-last_updated: "2026-08-15T18:27:53.892Z"
+stopped_at: Phase 2 UAT complete; case-sensitive HTML evidence verified
+last_updated: "2026-08-15T18:35:23.662Z"
 last_activity: 2026-08-16
 last_activity_desc: Phase 1 complete, transitioned to Phase 2
 progress:
@@ -74,7 +74,6 @@ None yet.
 ### Blockers/Concerns
 
 - Phase 3 requires explicit validation of English-to-Chinese alternate pairing for repaired routes.
-- Phase 2 HTML UAT requires a case-sensitive static export host because macOS collapses three preserved mixed-case route pairs.
 
 ## Deferred Items
 
@@ -85,6 +84,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-15T18:27:33.263Z
-Stopped at: Phase 2 UAT recorded; HTML evidence blocked by macOS case-insensitive export
-Resume file: .planning/phases/02-approved-metadata/02-UAT.md
+Last session: 2026-08-15T18:35:23.649Z
+Stopped at: Phase 2 UAT complete; case-sensitive HTML evidence verified
+Resume file: None

@@ -48,8 +48,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const locale of publishedFaqLocales) {
-    for (const faqId of getFaqIds(locale)) {
-      addEntry(getOwnedFaqUrl(locale, faqId), now);
+    // getFaqIds returns only final registry/catalog route keys for published FAQ locales.
+    for (const routeKey of getFaqIds(locale)) {
+      addEntry(getOwnedFaqUrl(locale, routeKey), now);
     }
   }
 

@@ -12,7 +12,7 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
 - Decimal phases are urgent insertions placed between their surrounding integer phases.
 
 - [x] **Phase 1: Canonical FAQ Routes** - Give every current English FAQ a stable identity and safe canonical path while preserving healthy URLs. (completed 2026-08-16)
-- [ ] **Phase 2: Approved Metadata** - Import and render the approved Week04 metadata without altering authored FAQ content.
+- [x] **Phase 2: Approved Metadata** - Import and render the approved Week04 metadata without altering authored FAQ content. (completed 2026-08-16)
 - [ ] **Phase 3: Coherent SEO Graph** - Make final FAQ pages, alternates, links, and sitemap agree on canonical identity.
 - [ ] **Phase 4: Redirects and Release Gate** - Project safe legacy redirects and verify the complete static release artifact.
 
@@ -89,6 +89,6 @@ This MVP repairs the SEO surface for English FAQ records already present in the 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Canonical FAQ Routes | 1/1 | Complete    | 2026-08-16 |
-| 2. Approved Metadata | 1/1 | In Progress|  |
+| 2. Approved Metadata | 1/1 | Complete    | 2026-08-16 |
 | 3. Coherent SEO Graph | 0/TBD | Not started | - |
 | 4. Redirects and Release Gate | 0/TBD | Not started | - |

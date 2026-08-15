@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
 const sharp = require('sharp');
+const { getPublishedFaqIds } = require('./lib/redirects');
 const {
   getCanonicalBaseUrl,
   getDefaultLocale,
@@ -23,7 +24,10 @@ const chineseDescription =
   'FastGPT 是开源的企业级 AI 智能体构建平台，提供可视化工作流、企业知识库、RAG 检索、模型接入与应用编排能力，帮助团队快速构建、发布和管理安全可控的生产级 AI 应用，支持云服务与私有化部署，已服务全球 50 万+ 用户。';
 const chineseFaqDescription =
   '企业日益重视 RAG（检索增强生成）解决方案，因为它能将大语言模型连接到实时、可信的企业知识库，显著提升回答的准确性、可靠性和领域适配能力，同时强化数据安全与治理，并以更低成本持续更新业务知识，帮助企业构建可追溯、可维护的智能问答与知识服务。';
-const faqId = 'Why-are-enterprises-paying-more';
+const faqId = getPublishedFaqIds(rootDir).english.find(
+  (id) => id === 'A-popular-explanation-of-what',
+);
+if (!faqId) throw new Error('Missing stable bilingual FAQ fixture in the route registry');
 
 function resolveHtml(route, required = true) {
   const relativeRoute = route.replace(/^\/|\/$/g, '');

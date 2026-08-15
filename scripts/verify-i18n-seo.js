@@ -18,7 +18,6 @@ const variant = resolveSiteVariant();
 const defaultLocale = getDefaultLocale(variant);
 const baseUrls = getProductionBaseUrls();
 const baseUrl = getCanonicalBaseUrl(variant);
-const faqId = 'Why-are-enterprises-paying-more';
 const encodedFaqId = 'Why-is-few-shot-learning-useful%3F';
 const techPath = '/tutorial/private-deployment-topology';
 const compareSlugs = [
@@ -42,6 +41,10 @@ const localePaths = {
   ms: '/ms'
 };
 const siteLocaleCodes = getPublishedLocaleCodes(variant);
+const faqId = getPublishedFaqIds(rootDir).english.find(
+  (id) => id === 'A-popular-explanation-of-what',
+);
+if (!faqId) throw new Error('Missing stable bilingual FAQ fixture in the route registry');
 
 function read(relativePath) {
   return fs.readFileSync(path.join(rootDir, relativePath), 'utf8');

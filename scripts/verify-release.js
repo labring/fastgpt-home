@@ -299,10 +299,12 @@ function reportFailures(failures, advisories, retainedPaths) {
       console.warn(`  baseline: c77cf48 APFS io build measured 266.9 KiB gzip against the same 260 KiB budget`);
     }
   }
-  if (retainedPaths.length) {
-    console.error(`\n[verify-release] retained failure artifacts: ${retainedPaths.join(', ')}`);
-  } else {
-    console.error('[verify-release] rerun with --keep-artifacts to retain failing .next/out evidence');
+  if (failures.length) {
+    if (retainedPaths.length) {
+      console.error(`\n[verify-release] retained failure artifacts: ${retainedPaths.join(', ')}`);
+    } else {
+      console.error('[verify-release] rerun with --keep-artifacts to retain failing .next/out evidence');
+    }
   }
 }
 

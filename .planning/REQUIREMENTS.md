@@ -15,9 +15,9 @@ Requirements for the release-ready repair milestone. Each requirement maps to ex
 
 ### FAQ Identity and URLs
 
-- [ ] **URL-01**: Every English FAQ record currently present in the repository has one stable identity and one safe, unique canonical slug.
-- [ ] **URL-02**: Every current FAQ route that returns the intended record keeps its existing public URL.
-- [ ] **URL-03**: Every in-scope record with a missing or unsafe route receives a deterministic repaired slug that resolves to its intended FAQ page.
+- [x] **URL-01**: Every English FAQ record currently present in the repository has one stable identity and one safe, unique canonical slug.
+- [x] **URL-02**: Every current FAQ route that returns the intended record keeps its existing public URL.
+- [x] **URL-03**: Every in-scope record with a missing or unsafe route receives a deterministic repaired slug that resolves to its intended FAQ page.
 - [ ] **URL-04**: Every changed legacy path with one valid destination redirects permanently to that canonical page in one hop, while ambiguous collision paths remain without a guessed redirect.
 
 ### SEO Surface
@@ -72,9 +72,9 @@ Roadmap creation assigns each v1 requirement to exactly one phase.
 | META-01 | Phase 2 | Pending |
 | META-02 | Phase 2 | Pending |
 | META-03 | Phase 2 | Pending |
-| URL-01 | Phase 1 | Pending |
-| URL-02 | Phase 1 | Pending |
-| URL-03 | Phase 1 | Pending |
+| URL-01 | Phase 1 | Complete |
+| URL-02 | Phase 1 | Complete |
+| URL-03 | Phase 1 | Complete |
 | URL-04 | Phase 4 | Pending |
 | SEO-01 | Phase 3 | Pending |
 | SEO-02 | Phase 3 | Pending |
@@ -84,6 +84,7 @@ Roadmap creation assigns each v1 requirement to exactly one phase.
 | VERIFY-03 | Phase 4 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 13 total
 - Mapped to phases: 13
 - Unmapped: 0

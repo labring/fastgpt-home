@@ -2,43 +2,43 @@
 gsd_state_version: 1.0
 milestone: v1.0
 milestone_name: milestone
-current_phase: 1
-current_phase_name: Canonical FAQ Routes
-status: executing
-stopped_at: Phase 1 context gathered
-last_updated: "2026-08-15T16:49:12.235Z"
-last_activity: 2026-08-15
-last_activity_desc: Roadmap created; all v1 requirements mapped.
+current_phase: 2
+current_phase_name: Approved Metadata
+status: planning
+stopped_at: Phase 1 complete, ready to plan Phase 2
+last_updated: "2026-08-15T17:32:00.000Z"
+last_activity: 2026-08-16
+last_activity_desc: Phase 1 complete, transitioned to Phase 2
 progress:
-  total_phases: 1
-  completed_phases: 0
+  total_phases: 4
+  completed_phases: 1
   total_plans: 1
-  completed_plans: 0
+  completed_plans: 1
 ---
 
 # Project State
 
 ## Project Reference
 
-See: .planning/PROJECT.md (updated 2026-08-15)
+See: .planning/PROJECT.md (updated 2026-08-16)
 
 **Core value:** Every in-scope English FAQ has a stable, reachable canonical URL and renders its approved metadata without disrupting healthy indexed URLs.
-**Current focus:** Phase 1 — Canonical FAQ Routes
+**Current focus:** Phase 2 — Approved Metadata
 
 ## Current Position
 
-Phase: 1 of 4 (Canonical FAQ Routes)
-Plan: TBD
-Status: Ready to execute
-Last activity: 2026-08-15 — Roadmap created; all v1 requirements mapped.
+Phase: 2 of 4 (Approved Metadata)
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-08-16 — Phase 1 complete, transitioned to Phase 2
 
-Progress: [░░░░░░░░░░] 0%
+Progress: [██░░░░░░░░] 25%
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 0
+- Total plans completed: 1
 - Average duration: -
 - Total execution time: 0 hours
 
@@ -46,7 +46,7 @@ Progress: [░░░░░░░░░░] 0%
 
 | Phase | Plans | Total | Avg/Plan |
 |-------|-------|-------|----------|
-| - | - | - | - |
+| 1 | 1 | - | - |
 
 **Recent Trend:**
 
@@ -67,7 +67,6 @@ None yet.
 
 ### Blockers/Concerns
 
-- Phase 1 requires verified workbook-to-content-ID mapping and collision dispositions before registry generation.
 - Phase 3 requires explicit validation of English-to-Chinese alternate pairing for repaired routes.
 
 ## Deferred Items
@@ -79,6 +78,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-15T16:23:18.574Z
-Stopped at: Phase 1 context gathered
-Resume file: .planning/phases/01-canonical-faq-routes/01-CONTEXT.md
+Last session: 2026-08-16T01:32:00+08:00
+Stopped at: Phase 1 complete, ready to plan Phase 2
+Resume file: None

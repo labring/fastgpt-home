@@ -33,6 +33,10 @@ export type CategoryMeta = {
 
 export const TECH_ENTRIES = entries as TechEntry[];
 
+export function getTechEntryPath(entry: Pick<TechEntry, 'slug'>) {
+  return entry.slug.replace(/^\/zh(?=\/)/, '');
+}
+
 export const FEATURED_ENTRY =
   TECH_ENTRIES.find((entry) => entry.slug === '/zh/api/fastgpt-chat-api-guide') || TECH_ENTRIES[0]!;
 

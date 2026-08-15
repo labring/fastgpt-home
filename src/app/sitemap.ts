@@ -6,15 +6,16 @@ import {
   getOwnedLocaleUrl,
   getPublishedLocaleCodes
 } from '@/lib/siteRouting';
-import { TECH_ENTRIES } from '@/components/tech-center/data';
+import { getTechEntryPath, TECH_ENTRIES } from '@/components/tech-center/data';
 import { getTechArticleLastModified, getTechCenterLastModified } from '@/lib/tech-center-content';
 import { getCompareCanonicalUrl, getCompareHubCanonicalUrl } from '@/lib/seo';
 import { getComparisonPagesForLocale } from '@/content/competitor';
+import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const localizedPaths = ['', '/price', '/contact'];
+  const localizedPaths = ['', '/price'];
   const now = new Date();
   const entries: MetadataRoute.Sitemap = [];
   const seenUrls = new Set<string>();
@@ -25,14 +26,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     entries.push({ url, lastModified });
   };
 
-  for (const locale of getPublishedLocaleCodes()) {
+  const siteLocales = getPublishedLocaleCodes();
+  for (const locale of siteLocales) {
     for (const path of localizedPaths) {
       addEntry(getOwnedLocaleUrl(locale, path), now);
     }
   }
 
+  for (const locale of contactPublishedLocaleCodes.filter((locale) =>
+    siteLocales.includes(locale)
+  )) {
+    addEntry(getOwnedLocaleUrl(locale, '/contact'), now);
+  }
+
   const publishedFaqLocales = faqContentLocaleCodes.filter((code) =>
-    getPublishedLocaleCodes().includes(code)
+    siteLocales.includes(code)
   );
 
   for (const locale of publishedFaqLocales) {
@@ -47,9 +55,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Simplified Chinese technical content is owned and indexed by fastgpt.cn.
   if (currentSiteVariant === 'cn') {
-    addEntry(getOwnedLocaleUrl('zh', '/zh/tech-center'), getTechCenterLastModified());
+    addEntry(getOwnedLocaleUrl('zh', '/tech-center'), getTechCenterLastModified());
     for (const article of TECH_ENTRIES) {
-      addEntry(getOwnedLocaleUrl('zh', article.slug), getTechArticleLastModified(article));
+      addEntry(
+        getOwnedLocaleUrl('zh', getTechEntryPath(article)),
+        getTechArticleLastModified(article)
+      );
     }
   }
 

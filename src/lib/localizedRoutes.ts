@@ -1,7 +1,7 @@
 import { normalizeLocale } from '@/lib/locales';
-import { getDefaultLocaleForLanguageRegion } from '@/lib/siteRouting';
+import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
-export const buildDefaultLocale = getDefaultLocaleForLanguageRegion();
+export const buildDefaultLocale = getDefaultLocaleForSiteVariant();
 
 export function getDefaultLocalePath(locale: string, path = '') {
   const normalizedLocale = normalizeLocale(locale);

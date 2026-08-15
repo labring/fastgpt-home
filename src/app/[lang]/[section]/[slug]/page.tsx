@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import TechArticlePage from '@/components/tech-center/TechArticlePage';
 import { TechArticleJsonLd } from '@/components/tech-center/TechCenterJsonLd';
+import { getTechEntryPath } from '@/components/tech-center/data';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import {
   getRelatedTechArticles,
@@ -9,7 +10,7 @@ import {
   getTechArticleParams
 } from '@/lib/tech-center-content';
 import { normalizeLocale } from '@/lib/locales';
-import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 type TechArticleRouteParams = {
   lang: string;
@@ -62,7 +63,7 @@ export async function generateMetadata({
 
   if (!article) return {};
 
-  const canonical = getOwnedLocaleUrl('zh', article.slug);
+  const canonical = getOwnedLocaleUrl('zh', getTechEntryPath(article));
   const baseUrl = new URL(canonical).origin;
   const title = article.metaTitle;
   const openGraphImage = article.image
@@ -100,7 +101,8 @@ export async function generateMetadata({
 }
 
 export function generateStaticParams() {
-  return getTechArticleParams();
+  const params = getTechArticleParams();
+  return currentSiteVariant === 'preview' ? params : params.slice(0, 1);
 }
 
 export const dynamicParams = false;

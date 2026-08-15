@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { ArrowUpRight, FileQuestion, Home, Search } from 'lucide-react';
+import { ArrowUpRight, Home, Search } from 'lucide-react';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import ar from '@/locales/ar.json';
@@ -11,17 +11,88 @@ import th from '@/locales/th.json';
 import vi from '@/locales/vi.json';
 import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
-import { type LocaleCode } from '@/lib/locales';
-import { getAvailableLocaleCodes, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { defaultLocale } from '@/lib/i18n';
+import { localeNames, supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
+import { getOwnedLocaleUrl, getPublishedLocaleCodes, isPreviewSite } from '@/lib/siteRouting';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import {
+  comparisonPublishedLocaleCodes,
+  contactPublishedLocaleCodes,
+  faqPublishedLocaleCodes,
+  techPublishedLocaleCodes
+} from '@/lib/publishedLocales';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
-const languages = getAvailableLocaleCodes();
+const languages = getPublishedLocaleCodes();
+const fallbackLocale = languages.includes(defaultLocale) ? defaultLocale : languages[0];
+const recoveryGroups = [
+  { sections: ['faq'], label: 'FAQ', path: '/faq', locales: faqPublishedLocaleCodes },
+  {
+    sections: ['contact'],
+    label: 'Contact',
+    path: '/contact',
+    locales: contactPublishedLocaleCodes
+  },
+  {
+    sections: ['compare'],
+    label: 'Compare',
+    path: '/compare',
+    locales: comparisonPublishedLocaleCodes
+  },
+  {
+    sections: [
+      'tech-center',
+      'api',
+      'dataset',
+      'deploy',
+      'integration',
+      'node',
+      'troubleshoot',
+      'tutorial'
+    ],
+    label: 'Tech Center',
+    path: '/tech-center',
+    locales: techPublishedLocaleCodes
+  }
+] as const;
+const recoveryPayload = recoveryGroups.map((group) => ({
+  sections: group.sections,
+  links: group.locales.map((locale) => ({
+    href: isPreviewSite
+      ? getDefaultLocalePath(locale, group.path)
+      : getOwnedLocaleUrl(locale, group.path),
+    label: `${localeNames[locale]} · ${group.label}`
+  }))
+}));
+const recoveryScript = `
+  (() => {
+    const segments = location.pathname.split('/').filter(Boolean);
+    if (${JSON.stringify(supportedLocaleCodes)}.includes(segments[0])) segments.shift();
+    const section = segments[0];
+    if (!section) return;
+    const group = ${JSON.stringify(recoveryPayload)}.find(({ sections }) =>
+      sections.includes(section)
+    );
+    if (!group) return;
+    document.querySelectorAll('[data-not-found-recovery]').forEach((container) => {
+      group.links.forEach(({ href, label }) => {
+        const link = document.createElement('a');
+        link.href = href;
+        link.textContent = label;
+        link.className =
+          'inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto';
+        container.append(link);
+      });
+      container.style.display = 'contents';
+    });
+  })();
+`;
 const localeVisibilityCss = `
   html${languages
-    .filter((lang) => lang !== 'en')
+    .filter((lang) => lang !== fallbackLocale)
     .map((lang) => `:not(:lang(${lang}))`)
-    .join('')} .not-found-locale-en,
+    .join('')} .not-found-locale-${fallbackLocale},
   ${languages.map((lang) => `html:lang(${lang}) .not-found-locale-${lang}`).join(',\n  ')} {
     display: flex;
   }
@@ -46,7 +117,6 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
   const t = dictionaries[lang].NotFound;
   const docsUrl = getDocsUrl(lang);
   const startUrl = getStartUrl(lang);
-  const hasFaq = lang === 'en' || lang === 'zh';
 
   return (
     <div
@@ -54,7 +124,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
     >
       <header className="flex items-center justify-between">
         <Link
-          href={getOwnedLocaleUrl(lang)}
+          href={getDefaultLocalePath(lang)}
           className="flex items-center gap-2"
           aria-label="FastGPT"
         >
@@ -122,23 +192,15 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
               {t.desc}
             </p>
 
-            <div className="mt-9 flex w-full flex-col items-center justify-center gap-3 sm:flex-row">
+            <div className="mt-9 flex w-full flex-col flex-wrap items-center justify-center gap-3 sm:flex-row">
               <Link
-                href={getOwnedLocaleUrl(lang)}
+                href={getDefaultLocalePath(lang)}
                 className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full bg-[#020617] px-6 text-[15px] font-medium text-white transition-colors hover:bg-[#172033] sm:w-auto"
               >
                 <Home className="h-4 w-4" />
                 {t.home}
               </Link>
-              {hasFaq && (
-                <Link
-                  href={getOwnedFaqUrl(lang)}
-                  className="inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto"
-                >
-                  <FileQuestion className="h-4 w-4" />
-                  {t.faq}
-                </Link>
-              )}
+              <span data-not-found-recovery style={{ display: 'none' }} />
             </div>
 
             <Link
@@ -169,6 +231,7 @@ export default function NotFoundPage() {
       {languages.map((lang) => (
         <NotFoundContent key={lang} lang={lang} />
       ))}
+      <script dangerouslySetInnerHTML={{ __html: recoveryScript }} />
     </div>
   );
 }

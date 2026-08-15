@@ -4,6 +4,10 @@ import { getContactCopy } from '@/components/contact/contactCopy';
 import { getAlternates } from '@/lib/seo';
 import { defaultLocale, normalizeLocale } from '@/lib/i18n';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
+import {
+  contactPublishedLocaleCodes,
+  isContactPublishedLocale
+} from '@/lib/publishedLocales';
 
 export async function generateMetadata({
   params
@@ -16,7 +20,7 @@ export async function generateMetadata({
   return {
     title: `${copy.title} | FastGPT`,
     description: copy.subtitle,
-    alternates: getAlternates(locale, '/contact')
+    alternates: getAlternates(locale, '/contact', contactPublishedLocaleCodes)
   };
 }
 
@@ -30,5 +34,9 @@ export default async function LocalizedContactPage({
 }
 
 export function generateStaticParams() {
-  return getBuildLocaleCodes().map((lang) => ({ lang }));
+  return getBuildLocaleCodes()
+    .filter(isContactPublishedLocale)
+    .map((lang) => ({ lang }));
 }
+
+export const dynamicParams = false;

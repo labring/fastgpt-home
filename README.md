@@ -43,9 +43,14 @@ npm run build
 ## Docker
 
 ```bash
-docker build -t fastgpt-home .
+docker build \
+  --build-arg NEXT_PUBLIC_SITE_VARIANT=cn \
+  --build-arg NEXT_PUBLIC_HOME_URL=https://fastgpt.cn \
+  -t fastgpt-home .
 docker run -p 80:80 fastgpt-home
 ```
+
+The Docker image publishes the `cn` Site Variant. The `io` and `preview` variants publish through Cloudflare Pages.
 
 ## License
 

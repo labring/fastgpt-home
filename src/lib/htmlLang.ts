@@ -8,9 +8,9 @@
  */
 
 import { localeDirections, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
-import { getDefaultLocaleForLanguageRegion } from '@/lib/siteRouting';
+import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
-const normalizedBuildDefaultLocale = getDefaultLocaleForLanguageRegion();
+const normalizedBuildDefaultLocale = getDefaultLocaleForSiteVariant();
 const localesJson = JSON.stringify(supportedLocaleCodes);
 const directionsJson = JSON.stringify(localeDirections);
 

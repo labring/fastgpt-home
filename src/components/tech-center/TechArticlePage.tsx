@@ -7,8 +7,9 @@ import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
 import type { TechArticle } from '@/lib/tech-center-content';
-import type { TechEntry } from './data';
+import { getTechEntryPath, type TechEntry } from './data';
 import MarkdownContent from './MarkdownContent';
 import styles from './TechArticlePage.module.css';
 
@@ -45,11 +46,20 @@ export default function TechArticlePage({
 }) {
   const homeHref = getDefaultLocalePath(locale);
   const hubHref = getDefaultLocalePath(locale, '/tech-center');
+  const localizedMarkdown = article.markdown.replace(
+    /\]\(\/zh(\/[^)]+)\)/g,
+    (_match, href: string) => `](${getDefaultLocalePath(locale, href)})`
+  );
 
   return (
     <div className="home tech-center-article-page">
       <HomeThemeFix />
-      <Navbar links={links} t={navCta} locale={locale} />
+      <Navbar
+        links={links}
+        t={navCta}
+        locale={locale}
+        publishedLocales={techPublishedLocaleCodes}
+      />
       <main className={styles.page}>
         <div className={styles.container}>
           <nav className={styles.breadcrumbs} aria-label="面包屑">
@@ -85,7 +95,7 @@ export default function TechArticlePage({
               </figure>
             )}
             <article className={styles.article}>
-              <MarkdownContent markdown={article.markdown} title={article.title} />
+              <MarkdownContent markdown={localizedMarkdown} title={article.title} />
               {article.source && (
                 <footer className={styles.sourceFooter} aria-label="本文来源">
                   <span className={styles.sourceLabel}>本文来源</span>
@@ -115,7 +125,7 @@ export default function TechArticlePage({
                     {relatedArticles.map((relatedArticle) => (
                       <Link
                         className={styles.relatedLink}
-                        href={relatedArticle.slug}
+                        href={getDefaultLocalePath(locale, getTechEntryPath(relatedArticle))}
                         key={relatedArticle.slug}
                       >
                         <span>

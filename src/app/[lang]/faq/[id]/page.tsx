@@ -12,11 +12,11 @@ import { getFaqAlternates, localeMap } from '@/lib/seo';
 import { normalizeFaqMetadata } from '@/lib/faqMetadata';
 import {
   currentSiteBaseUrl,
-  getOwnedFaqPath,
   getOwnedFaqUrl,
   getOwnedLocaleUrl,
   getBuildLocaleCodes
 } from '@/lib/siteRouting';
+import { getFaqPath } from '@/lib/localizedRoutes';
 import { ArrowLeft, ArrowRight, ArrowUpRight, Workflow } from 'lucide-react';
 import FAQCard from '@/components/faq/FAQCard';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
@@ -70,14 +70,18 @@ export default async function FAQDetailPage({
       />
       <FAQJsonLd items={[{ question: faqItem.Question, answer: faqItem.Answers }]} />
       <HomeThemeFix />
-      <Navbar links={dict.links} t={dict.Home.navCta} />
+      <Navbar
+        links={dict.links}
+        t={dict.Home.navCta}
+        publishedLocales={getFaqTranslationLocales(faqId)}
+      />
 
       <main className="relative px-[16px] pb-[80px] md:px-[32px]">
         <GradientBlobs />
 
         <div className="relative z-[1] mx-auto w-full max-w-[1240px] pt-[96px] md:pt-[128px]">
           <a
-            href={getOwnedFaqPath(langName)}
+            href={getFaqPath(langName)}
             className="group mb-10 inline-flex items-center gap-2 text-[14px] font-medium text-slate-500 transition-colors duration-200 hover:text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
           >
             <ArrowLeft
@@ -222,7 +226,7 @@ export default async function FAQDetailPage({
                     {relatedFAQs.slice(0, 3).map(([relatedId, item]) => (
                       <a
                         key={relatedId}
-                        href={getOwnedFaqPath(langName, relatedId)}
+                        href={getFaqPath(langName, relatedId)}
                         className="block border-b border-slate-100 py-3 text-[13px] leading-5 text-slate-500 transition-colors duration-200 hover:text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                       >
                         {item.Question}
@@ -230,7 +234,7 @@ export default async function FAQDetailPage({
                     ))}
                   </div>
                   <a
-                    href={getOwnedFaqPath(langName)}
+                    href={getFaqPath(langName)}
                     className="group mt-4 inline-flex items-center gap-1.5 text-[13px] font-semibold text-[#020617] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                   >
                     <span>{dict.FAQ.viewMore}</span>
@@ -268,7 +272,7 @@ export default async function FAQDetailPage({
                 </div>
 
                 <a
-                  href={getOwnedFaqPath(langName)}
+                  href={getFaqPath(langName)}
                   className="mt-14 inline-flex h-11 items-center justify-center rounded-[6px] border border-slate-300 bg-white px-6 text-[14px] font-semibold text-slate-700 transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-slate-50 active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
                 >
                   {dict.FAQ?.backToList || 'Back to FAQ'}

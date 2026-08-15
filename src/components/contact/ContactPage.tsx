@@ -7,14 +7,17 @@ import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import ContactForm from '@/components/contact/ContactForm';
 import { getContactCopy } from '@/components/contact/contactCopy';
+import { LangSwitcher } from '@/components/header/LangSwitcher';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import { normalizeLocale } from '@/lib/locales';
+import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 
 export default function ContactPage({ locale }: { locale: string }) {
   const router = useRouter();
   const [canGoBack, setCanGoBack] = useState(false);
   const normalizedLocale = normalizeLocale(locale);
   const copy = getContactCopy(normalizedLocale);
-  const homeHref = `/${normalizedLocale}`;
+  const homeHref = getDefaultLocalePath(normalizedLocale);
 
   useEffect(() => {
     const referrer = document.referrer;
@@ -41,16 +44,23 @@ export default function ContactPage({ locale }: { locale: string }) {
             <Image src="/logo-nav.svg" width={24} height={24} alt="" draggable={false} />
             <span className="text-[17px] font-semibold text-[#101828]">FastGPT</span>
           </Link>
-          {canGoBack && (
-            <button
-              type="button"
-              onClick={() => router.back()}
-              className="inline-flex items-center gap-2 text-[13px] font-medium text-[#475467] transition-colors hover:text-[#101828] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef]"
-            >
-              <ArrowLeft size={15} strokeWidth={1.8} aria-hidden />
-              {copy.back}
-            </button>
-          )}
+          <div className="flex items-center gap-2">
+            <LangSwitcher
+              iconOnly
+              locale={normalizedLocale}
+              publishedLocales={contactPublishedLocaleCodes}
+            />
+            {canGoBack && (
+              <button
+                type="button"
+                onClick={() => router.back()}
+                className="inline-flex items-center gap-2 text-[13px] font-medium text-[#475467] transition-colors hover:text-[#101828] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef]"
+              >
+                <ArrowLeft size={15} strokeWidth={1.8} aria-hidden />
+                {copy.back}
+              </button>
+            )}
+          </div>
         </div>
       </header>
 

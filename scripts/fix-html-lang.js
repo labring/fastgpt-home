@@ -5,27 +5,12 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { locales } = require('../src/config/site-routing.json');
+const { getDefaultLocale, resolveSiteVariant } = require('./lib/site-variant');
 
-const localeConfigs = [
-  { code: 'en', htmlLang: 'en-US', dir: 'ltr' },
-  { code: 'zh-hant', htmlLang: 'zh-Hant', dir: 'ltr' },
-  { code: 'zh', htmlLang: 'zh-CN', dir: 'ltr' },
-  { code: 'ja', htmlLang: 'ja-JP', dir: 'ltr' },
-  { code: 'ar', htmlLang: 'ar-SA', dir: 'rtl' },
-  { code: 'vi', htmlLang: 'vi-VN', dir: 'ltr' },
-  { code: 'th', htmlLang: 'th-TH', dir: 'ltr' },
-  { code: 'id', htmlLang: 'id-ID', dir: 'ltr' },
-  { code: 'ms', htmlLang: 'ms-MY', dir: 'ltr' }
-];
-
-const locales = new Map(localeConfigs.map((locale) => [locale.code, locale]));
 const outDir = path.join(__dirname, '..', 'out');
-const configuredRegion = process.env.NEXT_PUBLIC_LANGUAGE_REGION;
-const languageRegion =
-  configuredRegion === 'zh' || configuredRegion === 'international'
-    ? configuredRegion
-    : 'zh';
-const defaultLocale = languageRegion === 'zh' ? 'zh' : 'en';
+const variant = resolveSiteVariant();
+const defaultLocale = getDefaultLocale(variant);
 
 function inferLocale(filePath) {
   const relative = path.relative(outDir, filePath).split(path.sep).join('/');
@@ -34,8 +19,8 @@ function inferLocale(filePath) {
   const [firstSegment] = relative.split('/');
   const rootPageLocale = firstSegment.replace(/\.html$/, '');
 
-  if (locales.has(rootPageLocale)) return rootPageLocale;
-  if (locales.has(firstSegment)) return firstSegment;
+  if (Object.hasOwn(locales, rootPageLocale)) return rootPageLocale;
+  if (Object.hasOwn(locales, firstSegment)) return firstSegment;
 
   return null;
 }
@@ -76,7 +61,7 @@ for (const filePath of walkHtmlFiles(outDir)) {
   const localeCode = inferLocale(filePath);
   if (!localeCode) continue;
 
-  const locale = locales.get(localeCode);
+  const locale = locales[localeCode];
   const html = fs.readFileSync(filePath, 'utf8');
   const patchedHtml = patchHtmlTag(html, locale);
 

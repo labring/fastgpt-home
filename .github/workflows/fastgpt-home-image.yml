@@ -62,7 +62,7 @@ jobs:
             NEXT_PUBLIC_BAIDU_TONGJI=${{ secrets.NEXT_PUBLIC_BAIDU_TONGJI }}
             NEXT_PUBLIC_BAIDU_KEY=${{ secrets.NEXT_PUBLIC_BAIDU_KEY }}
             NEXT_PUBLIC_HOME_URL=${{ secrets.NEXT_PUBLIC_HOME_URL }}
-            NEXT_PUBLIC_LANGUAGE_REGION=zh
+            NEXT_PUBLIC_SITE_VARIANT=cn
             NEXT_PUBLIC_CN_HOME_URL=https://fastgpt.cn
             NEXT_PUBLIC_IO_HOME_URL=https://fastgpt.io
             NEXT_PUBLIC_USER_URL=${{ secrets.NEXT_PUBLIC_USER_URL }}

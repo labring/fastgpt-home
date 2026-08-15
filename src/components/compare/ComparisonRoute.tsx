@@ -11,6 +11,7 @@ import { getDictionary } from '@/lib/i18n';
 import { localeMap } from '@/lib/locales';
 import { getCompareAlternates, getCompareCanonicalUrl } from '@/lib/seo';
 import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { comparisonPublishedLocaleCodes } from '@/lib/publishedLocales';
 
 const articleLanguage: Record<CompareLocale, string> = {
   en: 'en-US',
@@ -43,7 +44,13 @@ export async function ComparisonRoute({ locale, slug }: { locale: CompareLocale;
         dateModified={page.dates.dateModified}
       />
       <HomeThemeFix />
-      <Navbar links={dict.links} t={dict.Home.navCta} locale={locale} variant="comparison" />
+      <Navbar
+        links={dict.links}
+        t={dict.Home.navCta}
+        locale={locale}
+        variant="comparison"
+        publishedLocales={comparisonPublishedLocaleCodes}
+      />
       <main className="comparison-page">
         <ComparisonPage page={page} />
       </main>

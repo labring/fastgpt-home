@@ -10,11 +10,11 @@ import {
   siteConfigZh
 } from '@/config/site';
 import { localeNames, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
-import { getDefaultLocaleForLanguageRegion } from '@/lib/siteRouting';
+import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
 export { localeNames, normalizeLocale, supportedLocaleCodes };
 
-export const defaultLocale = getDefaultLocaleForLanguageRegion();
+export const defaultLocale = getDefaultLocaleForSiteVariant();
 
 /**
  * Get site config for a given locale

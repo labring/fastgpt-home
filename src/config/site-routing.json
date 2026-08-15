@@ -1,0 +1,90 @@
+{
+  "siteVariants": {
+    "cn": { "defaultLocale": "zh" },
+    "io": { "defaultLocale": "en" },
+    "preview": { "defaultLocale": "en" }
+  },
+  "locales": {
+    "en": {
+      "name": "English",
+      "flag": "🇺🇸",
+      "dir": "ltr",
+      "ogLocale": "en_US",
+      "htmlLang": "en-US",
+      "owner": "io",
+      "hreflang": "en"
+    },
+    "zh": {
+      "name": "简体中文",
+      "flag": "🇨🇳",
+      "dir": "ltr",
+      "ogLocale": "zh_CN",
+      "htmlLang": "zh-CN",
+      "owner": "cn",
+      "hreflang": "zh-CN"
+    },
+    "zh-hant": {
+      "name": "繁體中文",
+      "flag": "🇨🇳",
+      "dir": "ltr",
+      "ogLocale": "zh_Hant",
+      "htmlLang": "zh-Hant",
+      "owner": "io",
+      "hreflang": "zh-Hant"
+    },
+    "ja": {
+      "name": "日本語",
+      "flag": "🇯🇵",
+      "dir": "ltr",
+      "ogLocale": "ja_JP",
+      "htmlLang": "ja-JP",
+      "owner": "io",
+      "hreflang": "ja"
+    },
+    "ar": {
+      "name": "العربية",
+      "flag": "🇸🇦",
+      "dir": "rtl",
+      "ogLocale": "ar_SA",
+      "htmlLang": "ar-SA",
+      "owner": "io",
+      "hreflang": "ar"
+    },
+    "vi": {
+      "name": "Tiếng Việt",
+      "flag": "🇻🇳",
+      "dir": "ltr",
+      "ogLocale": "vi_VN",
+      "htmlLang": "vi-VN",
+      "owner": "io",
+      "hreflang": "vi"
+    },
+    "th": {
+      "name": "ไทย",
+      "flag": "🇹🇭",
+      "dir": "ltr",
+      "ogLocale": "th_TH",
+      "htmlLang": "th-TH",
+      "owner": "io",
+      "hreflang": "th"
+    },
+    "id": {
+      "name": "Bahasa Indonesia",
+      "flag": "🇮🇩",
+      "dir": "ltr",
+      "ogLocale": "id_ID",
+      "htmlLang": "id-ID",
+      "owner": "io",
+      "hreflang": "id"
+    },
+    "ms": {
+      "name": "Bahasa Melayu",
+      "flag": "🇲🇾",
+      "dir": "ltr",
+      "ogLocale": "ms_MY",
+      "htmlLang": "ms-MY",
+      "owner": "io",
+      "hreflang": "ms"
+    }
+  }
+}

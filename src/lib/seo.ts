@@ -18,7 +18,6 @@ export function getCompareAlternates(locale: CompareLocale, slug: string): Metad
     canonical,
     languages: {
       en: englishUrl,
-      zh: chineseUrl,
       'zh-CN': chineseUrl,
       'x-default': englishUrl
     }
@@ -38,7 +37,6 @@ export function getCompareHubAlternates(locale: CompareLocale): Metadata['altern
     canonical,
     languages: {
       en: englishUrl,
-      zh: chineseUrl,
       'zh-CN': chineseUrl,
       'x-default': englishUrl
     }

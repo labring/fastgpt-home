@@ -18,7 +18,7 @@ affects: [03-coherent-seo-graph, 04-redirects-and-release-gate]
 actuals:
   tokens: 240545
   tasks: 2
-  commits: 3
+  commits: 4
 
 # Tech tracking
 tech-stack:
@@ -34,6 +34,7 @@ key-files:
     - scripts/verify-faq-metadata.js
   modified:
     - src/faq/index.ts
+    - scripts/verify-p2.js
     - package.json
 
 key-decisions:
@@ -103,7 +104,7 @@ status: complete
 - **Started:** 2026-08-16T01:58:00+08:00
 - **Completed:** 2026-08-16T02:16:19+08:00
 - **Tasks:** 2
-- **Files modified:** 5 production files plus this summary
+- **Files modified:** 6 production files plus this summary
 
 ## Accomplishments
 
@@ -121,6 +122,7 @@ Each task was committed atomically:
 Follow-up correctness fix:
 
 3. **HTML export collision diagnostics and keyword serialization** - `e30a2a0` (fix(02))
+4. **P2 sample route registry compatibility** - `51d7395` (fix(02))
 
 **Plan metadata:** `5e0cb62` (docs(02): create approved metadata plan)
 
@@ -137,6 +139,7 @@ Follow-up correctness fix:
 - Kept raw approved keyword punctuation and ordering in the artifact; normalized only the framework's serialized HTML representation for export comparison.
 - Preserved all Phase 1 mixed-case routes. The verifier reports case-insensitive local filesystem collisions so release verification runs on a case-sensitive host.
 - Used webpack only as a build diagnostic because the repository's existing Turbopack font resolver is unavailable in this environment; no dependency or build configuration was added.
+- Updated the existing P2 verifier's sample to resolve the same `Why-are-enterprises-paying-more` contentId through the Phase 1 registry, keeping the page/SEO assertions aligned with canonical route allocation.
 
 ## Deviations from Plan
 
@@ -166,14 +169,22 @@ Follow-up correctness fix:
 - **Verification:** `npm run verify:faq-metadata -- --html` reports the collision before comparing the overwritten page.
 - **Committed in:** `e30a2a0`
 
-**Total deviations:** 3 auto-fixed (correctness, runtime fidelity, diagnostics)
+**4. [Compatibility] Stale P2 sample route**
+- **Found during:** Plan-level `npm run verify:p2`
+- **Issue:** The verifier hard-coded the pre-Phase-1 content key as a public path, so it stopped before checking the generated export.
+- **Fix:** Resolve the sample contentId through `generated-en-route-registry.json` before building the existing route assertions.
+- **Files modified:** `scripts/verify-p2.js`
+- **Verification:** `NEXT_PUBLIC_SITE_VARIANT=io NEXT_PUBLIC_HOME_URL=https://fastgpt.io npm run verify:p2` passes with 1,398 discovered FAQ detail files and one `en` migration target.
+- **Committed in:** `51d7395`
+
+**Total deviations:** 4 auto-fixed (correctness, runtime fidelity, diagnostics, compatibility)
 **Impact on plan:** Metadata source delivery is complete; static HTML proof remains host-dependent and requires a case-sensitive build environment.
 
 ## Issues Encountered
 
 - `npm run build` with the repository's default Turbopack path fails before application compilation because `@vercel/turbopack-next/internal/font/google/font` is absent and the requested Google font assets return 404. `npx next build --webpack` succeeds and generates 1,445 static pages; post-build cleanup succeeds with the io variant.
 - `npm run verify:faq-metadata -- --html` stops on the documented macOS case-insensitive mixed-case route collision. The Phase 1 route policy remains intact for case-sensitive static hosts.
-- `npm run verify:p2` reaches the pre-existing hard-coded `Why-are-enterprises-paying-more` sample path, while Phase 1 now assigns that content a repaired canonical slug. The focused Phase 2 source and route verifiers pass.
+- `verify:p2` now resolves its sample through the Phase 1 registry and passes on the webpack export. It reports 1,398 discovered FAQ detail files because three preserved mixed-case pairs collapse on macOS; the focused metadata verifier surfaces that host limitation explicitly.
 
 ## User Setup Required
 
@@ -181,7 +192,7 @@ None - no external service configuration required.
 
 ## Next Phase Readiness
 
-Phase 3 can consume `generated-en-metadata.json`, the contentId overlay, and the Phase 1 route registry. Run the full HTML verifier and release checks on a case-sensitive build host, then update the stale Phase 1 sample route in the existing P2 verifier as part of the SEO graph/release verification work.
+Phase 3 can consume `generated-en-metadata.json`, the contentId overlay, and the Phase 1 route registry. Run the full HTML verifier and release checks on a case-sensitive build host; the existing P2 verifier now resolves its sample through the same registry.
 
 ---
 *Phase: 02-approved-metadata*

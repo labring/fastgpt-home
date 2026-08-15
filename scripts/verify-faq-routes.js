@@ -16,7 +16,8 @@ const EVIDENCE_PATH = path.join(ROOT, 'src/faq/english-route-evidence.json');
 const REGISTRY_PATH = path.join(ROOT, 'src/faq/generated-en-route-registry.json');
 const LOCALIZED_ROUTE = path.join(ROOT, 'src/app/[lang]/faq/[id]/page.tsx');
 const ROOT_ROUTE = path.join(ROOT, 'src/app/faq/[id]/page.tsx');
-const SAFE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_REPAIRED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+const SAFE_PRESERVED_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
 const EVIDENCE_SOURCES = new Set(['week04-online-url', 'repository-current-key']);
 
 function unwrapExpression(expression) {
@@ -122,7 +123,7 @@ function verifyRegistry(records, evidence, registry) {
     assert(sourceById.has(entry.contentId), `Registry references unknown ${entry.contentId}`);
     assert(!registryById.has(entry.contentId), `Duplicate registry contentId ${entry.contentId}`);
     assert(!canonicalBySlug.has(entry.canonicalSlug), `Duplicate canonical slug ${entry.canonicalSlug}`);
-    assert(SAFE_SLUG.test(entry.canonicalSlug), `Unsafe canonical slug ${entry.canonicalSlug}`);
+    assert(SAFE_PRESERVED_SLUG.test(entry.canonicalSlug), `Unsafe canonical slug ${entry.canonicalSlug}`);
     assert.equal(entry.evidenceSource, evidenceById.get(entry.contentId).evidenceSource);
     assert.equal(entry.sourceSlug, evidenceById.get(entry.contentId).sourceSlug);
     assert(['preserved', 'repaired'].includes(entry.routeStatus), `Invalid route status ${entry.contentId}`);
@@ -131,6 +132,7 @@ function verifyRegistry(records, evidence, registry) {
       assert.equal(entry.sourceSlug, entry.canonicalSlug, `Preserved slug changed for ${entry.contentId}`);
       assert.equal(entry.collisionDisposition, 'none', `Collided record was preserved ${entry.contentId}`);
     } else {
+      assert(SAFE_REPAIRED_SLUG.test(entry.canonicalSlug), `Repaired slug is not lowercase ${entry.contentId}`);
       assert.notEqual(entry.canonicalSlug, '', `Repaired slug is empty ${entry.contentId}`);
       assert(entry.repairReason.length > 0, `Repaired record lacks reason ${entry.contentId}`);
     }
@@ -163,6 +165,20 @@ function verifyRegistry(records, evidence, registry) {
       assert(sourceById.has(contentId) || /^legacy-row-[1-9][0-9]*$/.test(contentId), `Unknown collision candidate ${contentId}`);
     }
     ledgerSlugs.add(entry.sourceSlug);
+  }
+  const preserved = registry.records.filter((entry) => entry.routeStatus === 'preserved');
+  assert(preserved.length > 0, 'No healthy source slugs were preserved');
+  assert(
+    preserved.some((entry) => entry.evidenceSource === 'week04-online-url' && /[A-Z]/.test(entry.canonicalSlug)),
+    'Mixed-case Week04 source slugs were not preserved',
+  );
+  for (const entry of registry.records) {
+    if (!SAFE_PRESERVED_SLUG.test(entry.sourceSlug)) {
+      assert.equal(entry.routeStatus, 'repaired', `Unsafe source was preserved ${entry.contentId}`);
+    }
+    if (entry.collisionDisposition === 'no-redirect') {
+      assert.equal(entry.routeStatus, 'repaired', `Collided source was preserved ${entry.contentId}`);
+    }
   }
   return { canonicalBySlug, sourceById };
 }

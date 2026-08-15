@@ -1,12 +1,11 @@
 import { buildDefaultLocale, getDefaultLocalePath } from '@/lib/clientNavigation';
+import { getEnglishFaqCanonicalSlug, resolveFaqLocale } from '@/faq';
 
 export { buildDefaultLocale, getDefaultLocalePath };
 
 export function getFaqPath(locale: string, id?: string) {
-  if (!id) return getDefaultLocalePath(locale, '/faq');
-
-  // Server FAQ routes resolve contentId with resolveFaqContentId/getFaqRouteKey and reject
-  // Unknown FAQ route identity values before rendering.
-  const path = `/faq/${encodeURIComponent(id)}`;
+  const canonicalId =
+    id && resolveFaqLocale(locale) === 'en' ? getEnglishFaqCanonicalSlug(id) || id : id;
+  const path = canonicalId ? `/faq/${encodeURIComponent(canonicalId)}` : '/faq';
   return getDefaultLocalePath(locale, path);
 }

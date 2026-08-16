@@ -76,6 +76,10 @@ async function verifyImage() {
 
 function verifyNginxHeaders() {
   const headerConfig = fs.readFileSync(path.join(rootDir, 'nginx-security-headers.conf'), 'utf8');
+  const embeddableHeaderConfig = fs.readFileSync(
+    path.join(rootDir, 'nginx-embeddable-security-headers.conf'),
+    'utf8'
+  );
   const nginxConfig = fs.readFileSync(path.join(rootDir, 'nginx.conf'), 'utf8');
   const dockerfile = fs.readFileSync(path.join(rootDir, 'Dockerfile'), 'utf8');
   const requiredHeaders = [
@@ -93,6 +97,33 @@ function verifyNginxHeaders() {
   const includeCount = (nginxConfig.match(/include \/etc\/nginx\/security-headers\.conf;/g) || [])
     .length;
   assert.equal(includeCount, 11, 'Security headers must cover the server and all cache locations');
+  assert(headerConfig.includes('add_header X-Frame-Options "DENY"'), 'Default pages must deny framing');
+  assert(
+    !embeddableHeaderConfig.includes('X-Frame-Options'),
+    'Embeddable pages must not send X-Frame-Options'
+  );
+  assert(
+    embeddableHeaderConfig.includes('frame-ancestors *'),
+    'Embeddable pages must allow framing from external pages'
+  );
+  assert(
+    nginxConfig.includes('location ~ ^/(?:contact|(?:en|zh|zh-hant|ja|ar|vi|th|id|ms)/contact)$'),
+    'Contact routes must use a dedicated embeddable location'
+  );
+  assert(
+    nginxConfig.includes('include /etc/nginx/embeddable-security-headers.conf;'),
+    'Contact routes must use the embeddable security headers'
+  );
+
+  const cloudflareHeaders = fs.readFileSync(path.join(rootDir, 'public', '_headers'), 'utf8');
+  assert(
+    cloudflareHeaders.includes('/contact\n  ! X-Frame-Options'),
+    'Cloudflare contact rule must detach X-Frame-Options'
+  );
+  assert(
+    cloudflareHeaders.includes('/*/contact\n  ! X-Frame-Options'),
+    'Cloudflare localized contact rule must detach X-Frame-Options'
+  );
 
   assert(
     nginxConfig.includes('include /etc/nginx/generated-redirects.conf;'),

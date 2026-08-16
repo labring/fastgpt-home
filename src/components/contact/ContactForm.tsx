@@ -10,6 +10,11 @@ import {
 } from '@/lib/leadAttribution';
 import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 import {
+  clearContactFormDraft,
+  readContactFormDraft,
+  writeContactFormDraft
+} from '@/lib/contactFormStorage';
+import {
   CONTACT_OPTIONS,
   INITIAL_CONTACT_FORM,
   type ContactFormValues,
@@ -310,6 +315,22 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
   const [touchedFields, setTouchedFields] = useState<
     Partial<Record<keyof ContactFormValues, boolean>>
   >({});
+  const [hasLoadedDraft, setHasLoadedDraft] = useState(false);
+
+  useEffect(() => {
+    const draft = readContactFormDraft();
+    if (draft) setValues(draft);
+    setHasLoadedDraft(true);
+  }, []);
+
+  useEffect(() => {
+    if (!hasLoadedDraft) return;
+    if (Object.values(values).some((value) => value.length > 0)) {
+      writeContactFormDraft(values);
+    } else {
+      clearContactFormDraft();
+    }
+  }, [hasLoadedDraft, values]);
 
   useEffect(() => {
     queueMicrotask(() => {
@@ -384,6 +405,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
   };
 
   const reset = () => {
+    clearContactFormDraft();
     setValues(INITIAL_CONTACT_FORM);
     setError('');
     setFieldErrors({});
@@ -450,6 +472,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
         );
       }
 
+      clearContactFormDraft();
       setStatus('success');
     } catch (submitError) {
       setError(submitError instanceof Error ? submitError.message : copy.genericError);

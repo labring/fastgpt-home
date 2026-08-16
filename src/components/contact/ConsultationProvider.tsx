@@ -137,9 +137,6 @@ export default function ConsultationProvider({
         createPortal(
           <div
             className="fixed inset-0 z-[100] flex items-end justify-center bg-[#101828]/55 p-0 backdrop-blur-[2px] sm:items-center sm:p-6"
-            onMouseDown={(event) => {
-              if (event.target === event.currentTarget) close();
-            }}
           >
             <div
               ref={dialogRef}

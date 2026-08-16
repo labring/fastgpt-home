@@ -3,7 +3,9 @@ import {
   getFaqData,
   getFaqIds,
   getFaqItem,
+  getFaqRouteKey,
   getFaqTranslationLocales,
+  resolveFaqContentId,
   resolveFaqLocale
 } from '@/faq';
 import { notFound } from 'next/navigation';
@@ -25,11 +27,12 @@ import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
 import { BreadcrumbJsonLd, FAQJsonLd } from '@/components/JsonLd';
 
-function decodeFaqId(id: string) {
+function decodeFaqId(id: string): string | undefined {
   try {
-    return decodeURIComponent(id);
+    const decoded = decodeURIComponent(id);
+    return decoded || undefined;
   } catch {
-    return id;
+    return undefined;
   }
 }
 
@@ -43,16 +46,19 @@ export default async function FAQDetailPage({
   const faqLangName = resolveFaqLocale(langName);
   const dict = await getDictionary(faqLangName);
   const faqId = decodeFaqId(id);
+  if (!faqId) notFound();
 
-  const faqItem = getFaqItem(faqId, faqLangName);
+  const contentId = resolveFaqContentId(faqId, faqLangName);
+  const routeKey = contentId ? getFaqRouteKey(contentId, faqLangName) : undefined;
+  const faqItem = routeKey ? getFaqItem(routeKey, faqLangName) : undefined;
 
-  if (!faqItem) {
+  if (!faqId || !contentId || !routeKey || !faqItem) {
     notFound();
   }
 
   const localizedFaq = getFaqData(faqLangName);
   const relatedFAQs = Object.entries(localizedFaq)
-    .filter(([key, item]) => item.Category === faqItem.Category && key !== faqId)
+    .filter(([key, item]) => item.Category === faqItem.Category && key !== routeKey)
     .slice(0, 4);
 
   const paragraphs = faqItem.Answers.split('\n\n');
@@ -65,7 +71,7 @@ export default async function FAQDetailPage({
         items={[
           { name: dict.JsonLd.breadcrumbHome, url: getOwnedLocaleUrl(langName) },
           { name: dict.FAQ?.title || 'FAQ', url: getOwnedFaqUrl(langName) },
-          { name: faqItem.Question, url: getOwnedFaqUrl(langName, faqId) }
+          { name: faqItem.Question, url: getOwnedFaqUrl(langName, routeKey) }
         ]}
       />
       <FAQJsonLd items={[{ question: faqItem.Question, answer: faqItem.Answers }]} />
@@ -73,7 +79,7 @@ export default async function FAQDetailPage({
       <Navbar
         links={dict.links}
         t={dict.Home.navCta}
-        publishedLocales={getFaqTranslationLocales(faqId)}
+        publishedLocales={getFaqTranslationLocales(routeKey, faqLangName)}
       />
 
       <main className="relative px-[16px] pb-[80px] md:px-[32px]">
@@ -309,11 +315,13 @@ export async function generateMetadata({
   const langName = lang || defaultLocale;
   const faqLangName = resolveFaqLocale(langName);
   const faqId = decodeFaqId(id);
-  const faqItem = getFaqItem(faqId, faqLangName);
+  const contentId = faqId ? resolveFaqContentId(faqId, faqLangName) : undefined;
+  const routeKey = contentId ? getFaqRouteKey(contentId, faqLangName) : undefined;
+  const faqItem = routeKey ? getFaqItem(routeKey, faqLangName) : undefined;
   const baseUrl = currentSiteBaseUrl;
   const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 
-  if (!faqItem) {
+  if (!faqId || !faqItem) {
     return {
       title: 'FAQ Not Found',
       description: 'The requested FAQ could not be found.',
@@ -329,9 +337,8 @@ export async function generateMetadata({
     keywords: faqItem.Keywords.split(', '),
     alternates: getFaqAlternates(
       faqLangName,
-      faqId,
-      getFaqTranslationLocales(faqId),
-      getFaqTranslationLocales(faqId).includes('en')
+      contentId,
+      getFaqTranslationLocales(routeKey || faqId, faqLangName)
     ),
     robots:
       !lang || faqLangName !== langName

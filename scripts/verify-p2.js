@@ -15,7 +15,13 @@ const variant = resolveSiteVariant();
 const productionBaseUrls = getProductionBaseUrls();
 const baseUrl = getCanonicalBaseUrl(variant);
 const defaultLocale = getDefaultLocale(variant);
-const sampleFaqId = 'Why-are-enterprises-paying-more';
+const englishRouteRegistry = require('../src/faq/generated-en-route-registry.json');
+const repairedSampleFaqId = englishRouteRegistry.records.find(
+  (record) => record.contentId === 'Why-are-enterprises-paying-more',
+)?.canonicalSlug;
+const bilingualSampleFaqId = 'How-to-check-the-number';
+const sampleFaqId = variant === 'cn' ? bilingualSampleFaqId : repairedSampleFaqId;
+assert(sampleFaqId, 'Missing canonical route for the P2 FAQ sample contentId');
 const {
   TITLE_MAX_LENGTH,
   DESCRIPTION_MAX_LENGTH

@@ -3,6 +3,8 @@ const path = require('node:path');
 const ts = require('typescript');
 const { localeCodes } = require('./site-variant');
 
+const EN_ROUTE_REGISTRY = path.join('src', 'faq', 'generated-en-route-registry.json');
+
 function readObjectKeys(rootDir, relativePath, variableName) {
   const filePath = path.join(rootDir, relativePath);
   const source = fs.readFileSync(filePath, 'utf8');
@@ -42,7 +44,8 @@ function readObjectKeys(rootDir, relativePath, variableName) {
 }
 
 function getPublishedFaqIds(rootDir) {
-  const english = readObjectKeys(rootDir, 'src/faq/en.ts', 'faq');
+  const registry = readRouteRegistry(rootDir);
+  const english = registry.records.map((record) => record.canonicalSlug);
   const chinese = [
     ...new Set([
       ...readObjectKeys(rootDir, 'src/faq/zh.ts', 'faqZhLegacy'),
@@ -52,7 +55,113 @@ function getPublishedFaqIds(rootDir) {
   ];
 
   if (!english.length || !chinese.length) throw new Error('Published FAQ IDs must not be empty');
+  if (new Set(english).size !== english.length) {
+    throw new Error('Published English FAQ canonical slugs must be unique');
+  }
   return { chinese, english };
+}
+
+function readRouteRegistry(rootDir) {
+  const registryPath = path.join(rootDir, EN_ROUTE_REGISTRY);
+  const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+  if (!Array.isArray(registry.records) || !registry.records.length) {
+    throw new Error('English FAQ route registry must contain records');
+  }
+  if (!Array.isArray(registry.collisionLedger)) {
+    throw new Error('English FAQ route registry must contain a collision ledger');
+  }
+  return registry;
+}
+
+function getFaqRedirectProjection(rootDir) {
+  const registry = readRouteRegistry(rootDir);
+  const byCanonicalSlug = new Map();
+  const byLegacySource = new Map();
+
+  for (const record of registry.records) {
+    if (!record.contentId || !record.canonicalSlug) {
+      throw new Error('English FAQ route registry contains an incomplete record');
+    }
+    if (byCanonicalSlug.has(record.canonicalSlug)) {
+      throw new Error(`Duplicate canonical FAQ slug: ${record.canonicalSlug}`);
+    }
+    byCanonicalSlug.set(record.canonicalSlug, record);
+    if (!Array.isArray(record.legacySources) || !record.legacySources.length) {
+      throw new Error(`FAQ registry record has no legacy source: ${record.contentId}`);
+    }
+    for (const sourceSlug of record.legacySources) {
+      if (typeof sourceSlug !== 'string' || !sourceSlug) {
+        throw new Error(`FAQ registry has an invalid legacy source: ${record.contentId}`);
+      }
+      const candidates = byLegacySource.get(sourceSlug) || [];
+      candidates.push(record);
+      byLegacySource.set(sourceSlug, candidates);
+    }
+  }
+
+  const deniedSources = new Set(
+    registry.records
+      .filter((record) => record.collisionDisposition === 'no-redirect')
+      .flatMap((record) => record.legacySources)
+  );
+  for (const ledgerEntry of registry.collisionLedger) {
+    if (ledgerEntry.disposition !== 'no-redirect' || !ledgerEntry.sourceSlug) {
+      throw new Error(`Collision ledger contains an invalid entry: ${ledgerEntry.sourceSlug || '<missing>'}`);
+    }
+    deniedSources.add(ledgerEntry.sourceSlug);
+  }
+
+  const eligible = [];
+  for (const record of registry.records) {
+    if (record.routeStatus !== 'repaired' || record.collisionDisposition !== 'none') continue;
+    for (const sourceSlug of record.legacySources) {
+      const candidates = byLegacySource.get(sourceSlug) || [];
+      if (candidates.length !== 1 || candidates[0].contentId !== record.contentId) {
+        throw new Error(
+          `Ambiguous FAQ redirect source ${sourceSlug} (${candidates.map((candidate) => candidate.contentId).join(', ')})`
+        );
+      }
+      if (deniedSources.has(sourceSlug)) {
+        throw new Error(`Eligible FAQ redirect source is explicitly denied: ${sourceSlug}`);
+      }
+      if (!byCanonicalSlug.has(record.canonicalSlug)) {
+        throw new Error(`Missing FAQ redirect target: ${record.canonicalSlug}`);
+      }
+      const targetOwner = byLegacySource.get(record.canonicalSlug);
+      if (targetOwner && targetOwner[0].contentId !== record.contentId) {
+        throw new Error(`FAQ redirect target points to a legacy alias: ${record.canonicalSlug}`);
+      }
+      eligible.push({
+        contentId: record.contentId,
+        sourceSlug,
+        canonicalSlug: record.canonicalSlug
+      });
+    }
+  }
+
+  const eligibleTargets = new Map();
+  for (const entry of eligible) {
+    const targets = eligibleTargets.get(entry.canonicalSlug) || [];
+    targets.push(entry);
+    eligibleTargets.set(entry.canonicalSlug, targets);
+  }
+  for (const [canonicalSlug, entries] of eligibleTargets) {
+    if (entries.length > 1) {
+      throw new Error(
+        `Many-to-one FAQ redirect candidates for ${canonicalSlug}: ${entries
+          .map((entry) => entry.sourceSlug)
+          .join(', ')}`
+      );
+    }
+  }
+
+  return {
+    registry,
+    byCanonicalSlug,
+    byLegacySource,
+    deniedSources,
+    eligible
+  };
 }
 
 function getTechPaths(rootDir) {
@@ -62,14 +171,31 @@ function getTechPaths(rootDir) {
 }
 
 function addRedirect(redirects, source, target) {
-  redirects.set(source, target);
-  if (source !== '/' && !source.endsWith('/')) redirects.set(`${source}/`, target);
+  const setRedirect = (sourcePath) => {
+    const currentTarget = redirects.get(sourcePath);
+    if (currentTarget && currentTarget !== target) {
+      throw new Error(`Conflicting redirect source ${sourcePath}: ${currentTarget} vs ${target}`);
+    }
+    redirects.set(sourcePath, target);
+  };
+  setRedirect(source);
+  if (source !== '/' && !source.endsWith('/')) setRedirect(`${source}/`);
+}
+
+function addFaqAliasRedirect(redirects, prefix, entry) {
+  const target = `https://fastgpt.io/faq/${encodeURIComponent(entry.canonicalSlug)}`;
+  const encodedSource = encodeURIComponent(entry.sourceSlug);
+  const sourceVariants = new Set([encodedSource, entry.sourceSlug]);
+  for (const sourceSlug of sourceVariants) {
+    addRedirect(redirects, `${prefix}/${sourceSlug}`, target);
+  }
 }
 
 function buildRedirects(rootDir) {
   const cnUrl = 'https://fastgpt.cn';
   const ioUrl = 'https://fastgpt.io';
   const { chinese: chineseFaqIds, english: englishFaqIds } = getPublishedFaqIds(rootDir);
+  const faqProjection = getFaqRedirectProjection(rootDir);
   const compareSlugs = fs
     .readdirSync(path.join(rootDir, 'content', 'competitors', 'en'))
     .filter((file) => file.endsWith('.md'))
@@ -112,6 +238,12 @@ function buildRedirects(rootDir) {
       addRedirect(redirects, `${sourcePrefix}/${encodedId}`, target);
       if (encodedId !== id) addRedirect(redirects, `${sourcePrefix}/${id}`, target);
     }
+  }
+
+  for (const entry of faqProjection.eligible) {
+    addFaqAliasRedirect(ioRedirects, '/faq', entry);
+    addFaqAliasRedirect(ioRedirects, '/en/faq', entry);
+    addFaqAliasRedirect(cnRedirects, '/en/faq', entry);
   }
 
   for (const [sourcePrefix, targetUrl, redirects] of [
@@ -181,6 +313,7 @@ function writeNginxRedirectMap(nextDir, redirects) {
 
 module.exports = {
   buildRedirects,
+  getFaqRedirectProjection,
   getPublishedFaqIds,
   getTechPaths,
   writeCloudflareWorker,

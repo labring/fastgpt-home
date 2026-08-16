@@ -1,0 +1,208 @@
+---
+phase: 02-approved-metadata
+plan: 01
+subsystem: seo
+tags: [faq, metadata, static-export, node]
+
+# Dependency graph
+requires:
+  - phase: 01-canonical-faq-routes
+    provides: "Durable English contentId/sourceSlug evidence and canonical route registry"
+provides:
+  - "Deterministic 1,195-row approved metadata snapshot keyed by contentId"
+  - "Build-time English FAQ metadata overlay with legacy fallback for 205 records"
+  - "Source verifier with mutation diagnostics and optional exported-HTML fidelity checks"
+affects: [03-coherent-seo-graph, 04-redirects-and-release-gate]
+
+# Actuals (#2632)
+actuals:
+  tokens: 240545
+  tasks: 2
+  commits: 6
+
+# Tech tracking
+tech-stack:
+  added: []
+  patterns:
+    - "Dependency-free Node XLSX/XML parsing with deterministic atomic JSON snapshots"
+    - "ContentId-keyed metadata overlays preserve authored FAQ fields and route identity"
+
+key-files:
+  created:
+    - scripts/generate-faq-metadata.js
+    - src/faq/generated-en-metadata.json
+    - scripts/verify-faq-metadata.js
+  modified:
+    - src/faq/index.ts
+    - scripts/verify-p2.js
+    - package.json
+
+key-decisions:
+  - "The workbook FAQ Data online URL is decoded once and joined through Phase 1 evidence to a durable contentId."
+  - "Artifact records retain raw approved title, description, and keyword strings while runtime title/description expectations mirror the shared normalizer policy."
+  - "HTML keyword verification compares Next's comma-joined keyword-array serialization; source verification retains the exact approved comma-space string."
+  - "Healthy mixed-case route preservation remains authoritative; macOS case-insensitive export collisions are surfaced as an environment diagnostic for case-sensitive hosts."
+
+patterns-established:
+  - "Generator --write requires the reviewed workbook; --check reads only committed JSON and repository source."
+  - "Verifier mutation checks prove duplicate, authored-digest, and missing-field failures include record diagnostics."
+
+requirements-completed: [META-01, META-02, META-03]
+
+coverage:
+  - id: D1
+    description: "Exactly 1,195 workbook rows map one-to-one to Phase 1 content identities in a deterministic snapshot."
+    requirement: META-01
+    verification:
+      - kind: integration
+        ref: "node scripts/generate-faq-metadata.js --write --workbook <Week04 workbook>"
+        status: pass
+      - kind: integration
+        ref: "node scripts/generate-faq-metadata.js --check"
+        status: pass
+      - kind: integration
+        ref: "npm run verify:faq-metadata"
+        status: pass
+    human_judgment: false
+  - id: D2
+    description: "Mapped FAQ records receive approved metadata through the existing static route catalog."
+    requirement: META-02
+    verification:
+      - kind: integration
+        ref: "npm run verify:faq-metadata"
+        status: pass
+      - kind: e2e
+        ref: "npm run verify:faq-metadata -- --html"
+        status: pass
+    human_judgment: false
+  - id: D3
+    description: "Authored Question, Answers, and Category values remain source-owned and digest-stable for all mapped records."
+    requirement: META-03
+    verification:
+      - kind: integration
+        ref: "npm run verify:faq-metadata (authored digest and mutation diagnostics)"
+        status: pass
+      - kind: integration
+        ref: "npm run verify:faq-routes"
+        status: pass
+    human_judgment: false
+
+# Metrics
+duration: 18m
+completed: 2026-08-16
+status: complete
+---
+
+# Phase 2: Approved Metadata Summary
+
+**The approved Week04 metadata now flows from a deterministic 1,195-row workbook snapshot into the English FAQ catalog with authored-content protection and record-level verification.**
+
+## Performance
+
+- **Duration:** 18 min
+- **Started:** 2026-08-16T01:58:00+08:00
+- **Completed:** 2026-08-16T02:16:19+08:00
+- **Tasks:** 2
+- **Files modified:** 6 production files plus this summary
+
+## Accomplishments
+
+- Added a dependency-free workbook parser and deterministic `--write`/`--check` generator for exactly 1,195 approved rows.
+- Added the contentId-keyed overlay, preserving legacy fallback metadata for 205 out-of-batch FAQ records and leaving authored Question, Answers, Category, and Phase 1 routes intact.
+- Added source and optional static-HTML verification with raw metadata fidelity, title/description policy checks, authored SHA-256 digests, full catalog coverage, mutation diagnostics, H1/FAQ JSON-LD identity checks, and a runnable npm command.
+
+## Task Commits
+
+Each task was committed atomically:
+
+1. **Task 1: Generate and consume the approved metadata snapshot** - `9814db4` (feat(02))
+2. **Task 2: Verify approved metadata and static export fidelity** - `0367391` (test(02))
+
+Follow-up correctness fix:
+
+3. **HTML export collision diagnostics and keyword serialization** - `e30a2a0` (fix(02))
+4. **P2 sample route registry compatibility** - `51d7395` (fix(02))
+5. **Relative workbook path CLI compatibility** - `23df9ff` (fix(02))
+6. **Filesystem-aware HTML collision detection** - `9b2a451` (fix(02))
+
+**Plan metadata:** `5e0cb62` (docs(02): create approved metadata plan)
+
+## Files Created/Modified
+
+- `scripts/generate-faq-metadata.js` - Dependency-free XLSX/XML reader, contentId join, policy-equivalent metadata normalization, authored digest snapshot, atomic writer, and offline check mode.
+- `src/faq/generated-en-metadata.json` - 1,195 sorted approved records with raw source fields and provenance.
+- `src/faq/index.ts` - Approved Title/Description/Keywords overlay before the existing category overlay.
+- `scripts/verify-faq-metadata.js` - Source verifier, mutation diagnostics, and optional HTML metadata/H1/FAQ JSON-LD checks.
+- `package.json` - `verify:faq-metadata` command.
+
+## Decisions Made
+
+- Kept raw approved keyword punctuation and ordering in the artifact; normalized only the framework's serialized HTML representation for export comparison.
+- Preserved all Phase 1 mixed-case routes. The verifier reports case-insensitive local filesystem collisions so release verification runs on a case-sensitive host.
+- Used webpack only as a build diagnostic because the repository's existing Turbopack font resolver is unavailable in this environment; no dependency or build configuration was added.
+- Updated the existing P2 verifier's sample to resolve the same `Why-are-enterprises-paying-more` contentId through the Phase 1 registry, keeping the page/SEO assertions aligned with canonical route allocation.
+
+## Deviations from Plan
+
+### Auto-fixed Issues
+
+**1. [Correctness] Deterministic contentId ordering**
+- **Found during:** Task 1 generator acceptance checks
+- **Issue:** Locale-aware sorting differed from bytewise validation for mixed-case content IDs.
+- **Fix:** Added one bytewise comparator shared by artifact generation ordering and validation.
+- **Files modified:** `scripts/generate-faq-metadata.js`
+- **Verification:** Workbook `--write`, `--check`, source verifier, and TypeScript check pass.
+- **Committed in:** `9814db4`
+
+**2. [Runtime fidelity] Keyword metadata serialization**
+- **Found during:** Task 2 HTML verification
+- **Issue:** Next serializes the route keyword array with comma separators while the source artifact intentionally retains comma-space wording.
+- **Fix:** Compared HTML against the framework's comma-joined array while keeping source-mode exact raw-string checks.
+- **Files modified:** `scripts/verify-faq-metadata.js`
+- **Verification:** Source verifier passes; HTML mode reaches the environment collision guard.
+- **Committed in:** `e30a2a0`
+
+**3. [Diagnostics] Case-insensitive static export collision**
+- **Found during:** Task 2 HTML verification on macOS
+- **Issue:** Three pairs of healthy mixed-case slugs map to one local filename on the case-insensitive filesystem.
+- **Fix:** Added a clear case-sensitive-host diagnostic without changing canonical route allocation.
+- **Files modified:** `scripts/verify-faq-metadata.js`
+- **Verification:** `npm run verify:faq-metadata -- --html` reports the collision on the original macOS volume; a case-sensitive APFS image contains both files and passes the full 1,195-page HTML check.
+- **Committed in:** `e30a2a0`
+
+**4. [Compatibility] Stale P2 sample route**
+- **Found during:** Plan-level `npm run verify:p2`
+- **Issue:** The verifier hard-coded the pre-Phase-1 content key as a public path, so it stopped before checking the generated export.
+- **Fix:** Resolve the sample contentId through `generated-en-route-registry.json` before building the existing route assertions.
+- **Files modified:** `scripts/verify-p2.js`
+- **Verification:** `NEXT_PUBLIC_SITE_VARIANT=io NEXT_PUBLIC_HOME_URL=https://fastgpt.io npm run verify:p2` passes with 1,398 discovered FAQ detail files and one `en` migration target.
+- **Committed in:** `51d7395`
+
+**5. [CLI compatibility] Relative workbook path parsing**
+- **Found during:** Generator source review
+- **Issue:** The initial argument guard compared a relative input path with its resolved absolute form and rejected valid relative workbook paths.
+- **Fix:** Parse `--workbook` as a flag/value pair and validate remaining flags independently.
+- **Files modified:** `scripts/generate-faq-metadata.js`
+- **Verification:** `node scripts/generate-faq-metadata.js --check`, source verifier, and syntax checks pass.
+- **Committed in:** `23df9ff`
+
+**Total deviations:** 5 auto-fixed (correctness, runtime fidelity, diagnostics, compatibility, CLI)
+**Impact on plan:** Metadata source delivery and static HTML proof are complete; release verification should use a case-sensitive build environment.
+
+## Issues Encountered
+
+- The first `npm run build` attempt with the repository's default Turbopack path failed before application compilation because `@vercel/turbopack-next/internal/font/google/font` was unavailable and requested Google font assets returned 404. After the successful webpack build warmed the local Next cache, a subsequent `npm run build` completed and generated 1,445 static pages; the case-sensitive APFS image also completed a clean webpack export.
+- `npm run verify:faq-metadata -- --html` stops on the original macOS case-insensitive mixed-case route collision. The filesystem-aware guard passes on the case-sensitive APFS image and verifies all 1,195 mapped pages.
+- `verify:p2` now resolves its sample through the Phase 1 registry and passes on both the original export and the case-sensitive image.
+
+## User Setup Required
+
+None - no external service configuration required.
+
+## Next Phase Readiness
+
+Phase 3 can consume `generated-en-metadata.json`, the contentId overlay, and the Phase 1 route registry. Full HTML evidence is proven on a case-sensitive APFS image; CI/release verification should use an equivalent case-sensitive host. The existing P2 verifier resolves its sample through the same registry.
+
+---
+*Phase: 02-approved-metadata*
+*Completed: 2026-08-16*

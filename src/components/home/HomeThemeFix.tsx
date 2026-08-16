@@ -3,8 +3,7 @@
 import { useEffect } from 'react';
 
 // Forces light color-scheme + white html background on the homepage only.
-// Needed because the root ThemeProvider uses forcedTheme="dark", which HeroUI
-// translates into a black `html` background via the `.dark` class.
+// The static root shell starts dark so non-home pages retain their dark background.
 export default function HomeThemeFix() {
   useEffect(() => {
     const html = document.documentElement;

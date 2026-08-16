@@ -17,6 +17,12 @@
     "verify:p2": "node scripts/verify-p2.js",
     "verify:i18n-seo": "node scripts/verify-i18n-seo.js",
     "verify:deep-content": "node scripts/verify-deep-content.js",
+    "verify:faq-routes": "node scripts/verify-faq-routes.js",
+    "verify:faq-redirects": "node scripts/verify-faq-redirects.js",
+    "verify:faq-metadata": "node scripts/verify-faq-metadata.js",
+    "verify:faq-seo-graph": "node scripts/verify-faq-seo-graph.js",
+    "verify:release": "node scripts/verify-release.js",
+    "verify:release-regression": "node --test scripts/verify-release.test.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py"
   },
   "dependencies": {

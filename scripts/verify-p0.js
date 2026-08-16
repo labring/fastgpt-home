@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const sharp = require('sharp');
+const { getPublishedFaqIds } = require('./lib/redirects');
 const { getCanonicalBaseUrl, resolveSiteVariant } = require('./lib/site-variant');
 
 const rootDir = path.join(__dirname, '..');
@@ -9,7 +10,10 @@ const outDir = path.join(rootDir, 'out');
 const variant = resolveSiteVariant();
 const baseUrl = getCanonicalBaseUrl(variant);
 const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
-const faqId = 'Why-are-enterprises-paying-more';
+const faqId = getPublishedFaqIds(rootDir).english.find(
+  (id) => id === 'How-to-check-the-number',
+);
+if (!faqId) throw new Error('Missing stable bilingual FAQ fixture in the route registry');
 const maxSocialImageBytes = 200_000;
 
 function resolveHtml(route) {

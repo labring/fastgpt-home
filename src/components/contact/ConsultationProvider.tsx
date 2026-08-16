@@ -2,10 +2,9 @@
 
 import { useEffect, useRef, useState, type ReactNode } from 'react';
 import { createPortal } from 'react-dom';
-import { X } from 'lucide-react';
+import dynamic from 'next/dynamic';
 import { usePathname } from 'next/navigation';
-import ContactForm from '@/components/contact/ContactForm';
-import { getContactCopy } from '@/components/contact/contactCopy';
+import { getDialogCopy } from '@/components/contact/dialogCopy';
 import { getLocaleFromPathname, isContactHref } from '@/lib/consultation';
 
 type ConsultationProviderProps = {
@@ -13,13 +12,32 @@ type ConsultationProviderProps = {
   defaultLocale: string;
 };
 
+function LoadingContactForm() {
+  const copy = getDialogCopy(
+    typeof document === 'undefined' ? 'en' : document.documentElement.lang
+  );
+
+  return (
+    <div className="flex min-h-[420px] items-center justify-center px-5 py-10">
+      <p role="status" aria-live="polite" aria-atomic="true" className="text-sm text-[#667085]">
+        {copy.formLoading}
+      </p>
+    </div>
+  );
+}
+
+const ModalContactForm = dynamic(() => import('@/components/contact/ContactForm'), {
+  ssr: false,
+  loading: LoadingContactForm
+});
+
 export default function ConsultationProvider({
   children,
   defaultLocale
 }: ConsultationProviderProps) {
   const pathname = usePathname() || '/';
   const locale = getLocaleFromPathname(pathname, defaultLocale);
-  const copy = getContactCopy(locale);
+  const copy = getDialogCopy(locale);
   const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
@@ -151,15 +169,23 @@ export default function ConsultationProvider({
                   title={copy.close}
                   className="absolute right-4 top-4 inline-flex size-9 items-center justify-center rounded-md text-[#667085] transition-colors hover:bg-[#f2f4f7] hover:text-[#101828] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef] sm:right-6 sm:top-6"
                 >
-                  <X size={19} strokeWidth={1.8} aria-hidden />
+                  <svg
+                    width="19"
+                    height="19"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1.8"
+                    strokeLinecap="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M18 6 6 18" />
+                    <path d="m6 6 12 12" />
+                  </svg>
                 </button>
               </header>
               <div className="min-h-0 overflow-y-auto overscroll-contain">
-                <ContactForm
-                  locale={locale}
-                  variant="modal"
-                  onDone={close}
-                />
+                <ModalContactForm locale={locale} variant="modal" onDone={close} />
               </div>
             </div>
           </div>,

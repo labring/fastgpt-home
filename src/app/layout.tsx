@@ -1,8 +1,4 @@
-import BaiDuAnalytics from '@/app/BaiDuAnalytics';
-import ClarityAnalytics from '@/app/ClarityAnalytics';
-import LeadAttribution from '@/app/LeadAttribution';
-import RybbitAnalytics from '@/app/RybbitAnalytics';
-import { ThemeProvider } from '@/components/ThemeProvider';
+import DeferredSiteIntegrations from '@/app/DeferredSiteIntegrations';
 import MotionProvider from '@/components/home/motion/MotionProvider';
 import ConsultationProvider from '@/components/contact/ConsultationProvider';
 import { siteConfig } from '@/config/site';
@@ -14,7 +10,6 @@ import '@/styles/globals.css';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
 import { IBM_Plex_Sans as FontDisplay } from 'next/font/google';
-import GoogleAnalytics from './GoogleAnalytics';
 
 const fontSans = FontSans({
   subsets: ['latin'],
@@ -59,7 +54,13 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang={defaultLocale} dir={localeDirections[defaultLocale] || 'ltr'} suppressHydrationWarning>
+    <html
+      lang={defaultLocale}
+      dir={localeDirections[defaultLocale] || 'ltr'}
+      className="dark"
+      style={{ colorScheme: 'dark' }}
+      suppressHydrationWarning
+    >
       <head>
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />
@@ -71,21 +72,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           fontDisplay.variable
         )}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme={siteConfig.nextThemeColor}
-          enableSystem={false}
-          forcedTheme="dark"
-        >
-          <MotionProvider>
-            <ConsultationProvider defaultLocale={defaultLocale}>{children}</ConsultationProvider>
-          </MotionProvider>
-        </ThemeProvider>
-        <GoogleAnalytics />
-        <BaiDuAnalytics />
-        <ClarityAnalytics />
-        <RybbitAnalytics />
-        <LeadAttribution />
+        <MotionProvider>
+          <ConsultationProvider defaultLocale={defaultLocale}>{children}</ConsultationProvider>
+        </MotionProvider>
+        <DeferredSiteIntegrations />
       </body>
     </html>
   );

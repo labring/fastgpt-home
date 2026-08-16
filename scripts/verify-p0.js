@@ -11,7 +11,7 @@ const variant = resolveSiteVariant();
 const baseUrl = getCanonicalBaseUrl(variant);
 const socialImageUrl = `${baseUrl}/faq-social-preview.png`;
 const faqId = getPublishedFaqIds(rootDir).english.find(
-  (id) => id === 'How-to-check-the-number',
+  (id) => id === 'how-to-check-the-number',
 );
 if (!faqId) throw new Error('Missing stable bilingual FAQ fixture in the route registry');
 const maxSocialImageBytes = 200_000;

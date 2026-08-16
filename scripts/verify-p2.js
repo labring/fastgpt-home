@@ -17,9 +17,9 @@ const baseUrl = getCanonicalBaseUrl(variant);
 const defaultLocale = getDefaultLocale(variant);
 const englishRouteRegistry = require('../src/faq/generated-en-route-registry.json');
 const repairedSampleFaqId = englishRouteRegistry.records.find(
-  (record) => record.contentId === 'Why-are-enterprises-paying-more',
+  (record) => record.contentId === 'why-are-enterprises-paying-more-and-more-attention-to-rag-solutions',
 )?.canonicalSlug;
-const bilingualSampleFaqId = 'How-to-check-the-number';
+const bilingualSampleFaqId = 'how-to-check-the-number';
 const sampleFaqId = variant === 'cn' ? bilingualSampleFaqId : repairedSampleFaqId;
 assert(sampleFaqId, 'Missing canonical route for the P2 FAQ sample contentId');
 const {

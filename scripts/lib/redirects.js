@@ -1,6 +1,5 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const ts = require('typescript');
 const { localeCodes } = require('./site-variant');
 
 const EN_ROUTE_REGISTRY = path.join('src', 'faq', 'generated-en-route-registry.json');
@@ -8,6 +7,7 @@ const EN_ROUTE_REGISTRY = path.join('src', 'faq', 'generated-en-route-registry.j
 function readObjectKeys(rootDir, relativePath, variableName) {
   const filePath = path.join(rootDir, relativePath);
   const source = fs.readFileSync(filePath, 'utf8');
+  const ts = require('typescript');
   const sourceFile = ts.createSourceFile(filePath, source, ts.ScriptTarget.Latest, true);
 
   for (const statement of sourceFile.statements) {
@@ -305,10 +305,53 @@ export default {
 
 function writeNginxRedirectMap(nextDir, redirects) {
   const lines = ['map $uri $locale_redirect_target {', '  default "";'];
-  for (const [source, target] of redirects) lines.push(`  "${source}" "${target}";`);
+  const sourceGroups = new Map();
+  for (const [source] of redirects) {
+    const key = source.toLowerCase();
+    const group = sourceGroups.get(key) || [];
+    group.push(source);
+    sourceGroups.set(key, group);
+  }
+  const caseSensitiveSources = new Set(
+    [...sourceGroups.values()]
+      .filter((sources) => new Set(sources).size > 1)
+      .flat(),
+  );
+  const escapeRegex = (value) => value.replace(/[\\^$.*+?()[\]{}|]/g, '\\$&');
+
+  for (const [source, target] of redirects) {
+    const key = caseSensitiveSources.has(source)
+      ? `~^${escapeRegex(source)}$`
+      : `"${source}"`;
+    lines.push(`  ${key} "${target}";`);
+  }
   lines.push('}', '');
   fs.mkdirSync(nextDir, { recursive: true });
   fs.writeFileSync(path.join(nextDir, 'nginx-redirects.conf'), lines.join('\n'));
+}
+
+function parseNginxRedirectMap(content) {
+  const literal = new Map(
+    [...content.matchAll(/^  "([^"]+)" "([^"]+)";$/gm)].map((match) => [match[1], match[2]]),
+  );
+  const patterns = [...content.matchAll(/^  ~\^(.*)\$ "([^"]+)";$/gm)].map((match) => ({
+    pattern: new RegExp(`^${match[1]}$`),
+    target: match[2],
+  }));
+
+  return {
+    get(source) {
+      const literalTarget = literal.get(source);
+      if (literalTarget !== undefined) return literalTarget;
+      return patterns.find(({ pattern }) => pattern.test(source))?.target;
+    },
+    has(source) {
+      return this.get(source) !== undefined;
+    },
+    get size() {
+      return literal.size + patterns.length;
+    },
+  };
 }
 
 module.exports = {
@@ -316,6 +359,7 @@ module.exports = {
   getFaqRedirectProjection,
   getPublishedFaqIds,
   getTechPaths,
+  parseNginxRedirectMap,
   writeCloudflareWorker,
   writeNginxRedirectMap
 };

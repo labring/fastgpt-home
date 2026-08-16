@@ -25,11 +25,6 @@ const approvedEnglishFaqMetadataByContentId = new Map(
   approvedEnglishFaqMetadata.records.map((record) => [record.contentId, record]),
 );
 
-// 按语言索引的翻译数据（新增语言在此扩展）
-const faqByLocale: Record<string, Record<string, FaqItem>> = {
-  zh: faqZh
-};
-
 const faqEnWithLegacyMeta: Record<string, FaqItem> = Object.fromEntries(
   Object.entries(faqEn).map(([id, item]) => [
     id,
@@ -55,6 +50,7 @@ const faqEnWithApprovedMetadata: Record<string, FaqItem> = Object.fromEntries(
 );
 
 const faqEnWithLegacyCategories = applyLegacyCategoryOverlay(faqEnWithApprovedMetadata, 'en');
+const faqZhWithLegacyCategories = applyLegacyCategoryOverlay(faqZh, 'zh');
 
 const faqEnByCanonicalSlug: Record<string, FaqItem> = Object.fromEntries(
   englishRouteRecords.map((record) => {
@@ -83,7 +79,7 @@ export function resolveFaqContentId(routeKey: string, lang: string): string | un
     return englishRouteBySlug.get(routeKey)?.contentId || englishRouteByContentId.get(routeKey)?.contentId;
   }
 
-  return faqByLocale[locale]?.[routeKey] ? routeKey : undefined;
+  return faqZhWithLegacyCategories[routeKey] ? routeKey : undefined;
 }
 
 /** Return the published route key for a durable FAQ identity in a locale. */
@@ -94,7 +90,7 @@ export function getFaqRouteKey(contentId: string, lang: string): string | undefi
     return canonicalSlug && faqEnByCanonicalSlug[canonicalSlug] ? canonicalSlug : undefined;
   }
 
-  return faqByLocale[locale]?.[contentId] ? contentId : undefined;
+  return faqZhWithLegacyCategories[contentId] ? contentId : undefined;
 }
 
 export function resolveFaqLocale(lang: string): FaqContentLocale {
@@ -106,7 +102,7 @@ export function resolveFaqLocale(lang: string): FaqContentLocale {
 export function getFaqData(lang: string): FaqData {
   const locale = resolveFaqLocale(lang);
   if (locale === 'en') return faqEnByCanonicalSlug;
-  return applyLegacyCategoryOverlay(faqByLocale[locale] || {}, locale);
+  return faqZhWithLegacyCategories;
 }
 
 /** Return an FAQ entry only when it is published in the requested locale. */
@@ -119,14 +115,13 @@ export function getFaqItem(id: string, lang: string): FaqItem | undefined {
   if (locale === 'en') {
     return faqEnByCanonicalSlug[routeKey];
   }
-  const item = faqByLocale[locale]?.[routeKey];
-  return item ? applyLegacyCategoryOverlay({ [routeKey]: item }, locale)[routeKey] : undefined;
+  return faqZhWithLegacyCategories[routeKey];
 }
 
 export function getFaqIds(lang: string): string[] {
   const locale = resolveFaqLocale(lang);
   if (locale === 'en') return englishRouteRecords.map((record) => record.canonicalSlug);
-  return Object.keys(faqByLocale[locale] || {});
+  return Object.keys(faqZhWithLegacyCategories);
 }
 
 export function getFaqTranslationLocales(routeKey: string, lang = 'en'): FaqContentLocale[] {

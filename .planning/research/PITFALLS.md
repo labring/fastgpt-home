@@ -1,282 +1,285 @@
 # Pitfalls Research
 
-**Domain:** Next.js static-export FAQ metadata and URL migration
-**Researched:** 2026-08-15
-**Confidence:** MEDIUM
+**Domain:** FastGPT bilingual Guide content center on Next.js static export
+**Researched:** 2026-08-16
+**Confidence:** HIGH for repository-specific risks; MEDIUM for current external platform guidance
 
 ## Critical Pitfalls
 
-### Pitfall 1: Metadata import changes the approved value during rendering
+### Pitfall 1: Domain ownership is bypassed by a locale-prefixed or single-domain Guide route
 
 **What goes wrong:**
-The workbook value is imported correctly but the browser emits a different title or description. In the current code, `normalizeFaqMetadata` truncates titles to a 60-character budget including ` - FastGPT`, adds the suffix, normalizes whitespace, and can append `...`. The audit has already recorded 38 title failures caused by truncation.
+Guide pages appear under `/zh/guide/<slug>`, `/en/guide/<slug>`, or both domains. The required public URLs are exactly `https://fastgpt.cn/guide/<slug>` for Chinese and `https://fastgpt.io/guide/<slug>` for English. Publishing English on `.cn` is especially costly because the supplied release specification records a Googlebot restriction there.
 
 **Why it happens:**
-Metadata presentation rules are treated as harmless formatting and applied after a fidelity import. A character-count rule also differs from a search-snippet preference: approved metadata is an exact delivery requirement for this milestone.
+The repository has both legacy locale-prefixed technical routes and domain-owned default-locale routes. A route copied from `src/app/[lang]/[section]/[slug]` follows the former topology, while `getOwnedLocalePath()` deliberately treats `en` and `zh` as unprefixed paths.
 
 **How to avoid:**
-Keep the approved workbook fields verbatim in one generated data file. Give exact imported values priority over the generic normalizer, with a narrow explicit policy for brand suffix ownership. Compare the rendered HTML `title`, description, and keywords against the approved source after build; count Unicode code points only where a documented limit is genuinely required.
+Use `getOwnedLocaleUrl('zh', '/guide/...')` and `getOwnedLocaleUrl('en', '/guide/...')` as the sole URL source. Add a small Guide route helper/registry that accepts only the paired `zh` and `en` records, then assert every canonical, link, sitemap entry, and JSON-LD URL uses it. Treat `/zh/guide/**` and `/en/guide/**` as absent routes unless a deliberate migration contract is added.
 
 **Warning signs:**
-- A title ends in `...`, has a duplicated `FastGPT` suffix, or differs only in collapsed whitespace.
-- Imported-record count is 1,195 while exact rendered-title count is smaller.
-- A metadata helper receives every FAQ item without distinguishing approved records.
-
-**Smallest runnable check:**
-Run a Node assertion that loads the approved registry and emitted `out/faq/*.html`, then requires exact equality for each approved title, description, and keyword sequence.
+- A static export contains `out/zh/guide` or `out/en/guide`.
+- A Guide canonical contains a language prefix, the wrong host, or a preview host.
+- An English article is discoverable in the cn sitemap or a Chinese article in the io sitemap.
 
 **Phase to address:**
-Phase 2 — approved-metadata import and fidelity regression check.
+Phase 1 — Guide registry and owned-route contract.
 
 ---
 
-### Pitfall 2: A short-slug collision serves a plausible HTTP 200 page with the wrong FAQ identity
+### Pitfall 2: The two source sets drift from their required same-slug one-to-one mapping
 
 **What goes wrong:**
-Two distinct questions share a legacy short slug, so one static page overwrites or represents the group. The URL returns HTTP 200, canonical and hreflang look valid, yet the H1 and JSON-LD belong to a different question. The audit measured 150 real collision groups after deduplication and 24 identity failures in the sampled import.
+One language is published without its counterpart, two filenames produce divergent route keys, or an article is accidentally mapped to a neighboring translation. The page can render and still form an invalid international SEO pair.
 
 **Why it happens:**
-Availability is used as a proxy for identity. Keys derived from the first few words collapse semantically different questions, and `Record<string, FaqItem>` silently admits only one value per key.
+The 16 source filenames are editorial labels, while slug/canonical data live inside an HTML comment. The eight slugs must be read from the source metadata, then joined as a set; filename order is not a route identity.
 
 **How to avoid:**
-Create a versioned FAQ route registry keyed by immutable source identity. Preserve a healthy existing key only when it maps to exactly one in-scope question; assign a deterministic repaired slug to each missing or unsafe identity. Hard-fail the generator on duplicate canonical slugs, duplicate normalized route paths, duplicate independent questions, or a registry entry lacking content.
+Build one committed Guide registry from the approved documents with `{ slug, zh, en }` records. Validate exactly eight unique lower-case slugs, every record has both language bodies, and `new Set(zhSlugs) === new Set(enSlugs)`. The route, hub cards, metadata, sitemap, related links, and release verifier must consume this registry.
 
 **Warning signs:**
-- More source questions than canonical IDs or generated static parameters.
-- A route has 200 status but H1, JSON-LD question, or approved metadata belongs to another source record.
-- Collision resolution selects the first array element without a documented identity decision.
-
-**Smallest runnable check:**
-Run `node scripts/verify-faq-migration.js` with assertions that canonical slug count equals in-scope identity count and every registry slug resolves to the expected `Question`.
+- Static params are created independently for Chinese and English.
+- A fallback lets a missing translation render the other language.
+- Registry cardinality differs from `8 × 2`, or a hub card’s href lacks a paired source record.
 
 **Phase to address:**
-Phase 1 — identity inventory, deduplication, and canonical-slug registry.
+Phase 1 — source intake, pairing, and fidelity validation.
 
 ---
 
-### Pitfall 3: A collided legacy URL receives an arbitrary redirect destination
+### Pitfall 3: Canonical and hreflang form a conflicting or incomplete cluster
 
 **What goes wrong:**
-A single old path represents multiple distinct FAQ identities. Emitting several redirect rows makes the final destination depend on map order, and choosing a default silently sends visitors and search signals to unrelated content. This is redirect ambiguity, not an implementation detail.
+The Chinese and English pages point a canonical at each other, emit different alternate sets, omit self references, or send `x-default` to the Chinese URL. Search engines then receive conflicting consolidation and locale signals.
 
 **Why it happens:**
-Redirects are generated from a source-to-target list that assumes every legacy path has one target. `Map#set` overwrites a prior value, so ambiguity can disappear during generation.
+Existing `getAlternates()` supports broad locale collections, while Guide needs a strict two-language cluster. Existing `verify-i18n-seo.js` only checks fixed representative paths and four comparison slugs; it contains no Guide traversal.
 
 **How to avoid:**
-Model redirect sources separately from canonical routes. Emit a 301 only when one legacy source has one approved destination. Preserve a healthy old URL as canonical when that keeps identity intact. For a collided source with no unambiguous equivalent, retain the serving page only for its verified identity and route remaining repair through new canonical URLs, with a documented no-redirect exception for the ambiguous source.
+For every member of a Guide pair, generate a self canonical plus the identical three alternates: `zh-CN → cn/guide/<slug>`, `en → io/guide/<slug>`, and `x-default → io/guide/<slug>`. Use a Guide-specific equivalent of `getCompareAlternates()` and verify all 16 exported HTML files from the registry, including metadata URL, `og:url`, and Article/BreadcrumbList URLs.
 
 **Warning signs:**
-- The number of unique redirect sources is lower than redirect input rows.
-- A redirect map has the same source repeated in input or a target selected by insertion order.
-- The migration table labels a multi-question legacy slug as a one-to-one 301.
-
-**Smallest runnable check:**
-Assert `new Set(source).size === source.length` after grouping; permit every source group only when its target set has size one, otherwise require an explicit `ambiguous: true` disposition and emit no redirect row.
+- The two exported pages have different `hreflang` key sets or values.
+- A canonical target does not equal its page’s owned URL.
+- The cn or io sitemap contains a foreign-host Guide URL.
 
 **Phase to address:**
-Phase 3 — redirect decision table and generated edge configuration.
+Phase 2 — routes, metadata, structured data, and SEO graph.
 
 ---
 
-### Pitfall 4: Encoding, punctuation, or case creates a second route identity
+### Pitfall 4: Delivery metadata leaks into the public article body
 
 **What goes wrong:**
-IDs with spaces, `%`, apostrophes, Unicode punctuation, or differing case are encoded in one subsystem and decoded in another. Static parameters, canonical URLs, sitemap URLs, HTML file paths, and redirect-map keys then describe different URL strings. A double-encoded `%25`, decoded redirect-map lookup, or trailing slash can produce a 404 or duplicate indexable page.
+The source documents begin with an HTML-comment delivery block containing canonical, keyword, internal-link, source, and approval information. `MarkdownContent` has no HTML-comment token and will treat those lines as ordinary paragraph text if it receives the raw file.
 
 **Why it happens:**
-The route page decodes `id`, while `getOwnedFaqPath` encodes it, and the redirect generator separately builds `encodeURIComponent(id)` values plus raw-ID aliases. These transformations are currently distributed across several modules.
+The existing tech loader expects YAML-like front matter delimited by `---`, while the Week04 Guide package uses `<!-- ... -->`. Reusing the renderer without a source adapter publishes editorial instructions, including approval context, in the article body.
 
 **How to avoid:**
-Make canonical registry slugs ASCII-safe and lower-case by construction for repaired entries. For preserved keys, define one route-segment encoder and one decoder contract, then use the canonical encoded path everywhere. Keep legacy raw-path aliases only where real request logs or the audit establish that form. Treat encoded, decoded, slash-terminated, and case variants as explicit test vectors.
+At the repository-owned content boundary, parse and remove exactly one leading delivery comment; reject missing, unterminated, duplicate, or trailing delivery comments. Map approved fields to typed metadata and pass only the original Markdown body beginning at its `#` title to the renderer. Assert the exported HTML excludes delivery-only labels and retains the intended H1/body.
 
 **Warning signs:**
-- `decodeURIComponent` errors are swallowed and the raw string is used as an ID.
-- A sitemap location contains `%25` unexpectedly, a canonical URL differs from its anchor `href`, or Nginx and Worker maps use different source spellings.
-- Two IDs normalize to the same encoded URL or differ only by case.
-
-**Smallest runnable check:**
-For every registry and legacy source, assert `decodeURIComponent(encodeURIComponent(id)) === id`, unique canonical encoded paths, and existence of the corresponding emitted `out/faq/<encoded-id>.html` file.
+- Rendered HTML includes `Delivery metadata`, `交付元数据`, `canonical:`, `签发:`, or `配图需求:`.
+- The first visible text precedes the H1, or a delivery field becomes an H2/paragraph.
+- A parser silently accepts a malformed comment block.
 
 **Phase to address:**
-Phase 1 — route-registry contract; Phase 4 — encoded-route build verification.
+Phase 1 — source adapter and content-fidelity gate.
 
 ---
 
-### Pitfall 5: Canonical and hreflang point at a slug that is absent or belongs to another locale record
+### Pitfall 5: “Helpful” normalization changes approved editorial content or facts
 
 **What goes wrong:**
-The English repair changes an ID while Chinese data still uses the old ID. `getFaqTranslationLocales` determines language availability by identical keys, while `getFaqAlternates` generates cross-domain URLs from that key. The page can therefore emit a Chinese alternate that 404s, a false translation pair, or lose the intended alternate silently.
+Article bodies, titles, descriptions, tables, inline links, dates, numbers, case-study anonymization, or English wording change during import. A successful build can still violate the approved Week04 source of truth.
 
 **Why it happens:**
-The current architecture uses the FAQ ID as both route identity and translation join key. A migration that changes only one locale breaks that hidden join.
+The current tech-content parser derives descriptions when metadata is absent, normalizes Markdown, and supports a limited grammar. The source package also includes irregular delivery fields, including blank/malformed image guidance, so a generic fallback can conceal input defects.
 
 **How to avoid:**
-Add a translation mapping to the route registry for each repaired FAQ: English canonical ID, Chinese canonical ID, and an explicit `none` state when no equivalent published content exists. Generate canonical, hreflang, navigation links, JSON-LD breadcrumb URLs, and sitemap records from this mapping. Require reciprocal alternate links only for verified translation pairs.
+Preserve each approved body byte-for-byte after newline normalization and keep title/description as approved values. Validate a manifest of source body hashes, exact slugs, metadata, heading sequence, and prohibited delivery-text markers before build; do not derive alternate copy. Escalate malformed metadata for an explicit editorial decision instead of guessing.
 
 **Warning signs:**
-- English and Chinese FAQ ID sets diverge after the migration.
-- `getFaqTranslationLocales` drops `zh` for a record that should be paired, or its target output page is missing.
-- Canonical URL uses the repaired slug while an alternate still uses the legacy slug.
-
-**Smallest runnable check:**
-Build the site and parse each FAQ HTML document: every canonical must be self-referencing; every `hreflang` target must exist in the matching site export and reciprocate with the same language pair; `x-default` must equal the English canonical where English exists.
+- A generated description comes from `getTechArticleDescription()` rather than an approved Guide field.
+- Numeric tokens, dates, named/anonymous case descriptions, or external links differ from source.
+- Markdown conversion flattens a table, nested list, code block, or allowed relative link.
 
 **Phase to address:**
-Phase 4 — SEO graph and cross-domain export verification.
+Phase 1 — approved-content import and manifest verification.
 
 ---
 
-### Pitfall 6: Sitemap, internal links, static params, and page metadata read different FAQ key sets
+### Pitfall 6: Required images become broken, oversized, or unverified social previews
 
 **What goes wrong:**
-The visible list links to a repaired URL while `generateStaticParams` excludes it, or the sitemap indexes an old alias while `generateMetadata` chooses a new canonical. With `dynamicParams = false`, any omitted parameter becomes a 404 in the static export even though related features appear healthy.
+Articles whose delivery metadata requests diagrams launch with missing assets, wrong alt text, source-only files, or large hero images that degrade the static export. An absent image can be intentional only where the approved document specifies no image.
 
 **Why it happens:**
-Route consumers pull IDs through independent calls (`getFaqData`, `getFaqIds`, locale overlays, page wrappers, and sitemap generation). A one-off slug map applied in one location fails to propagate through every build-time consumer.
+The reusable article component renders `next/image` only when its typed article image exists, while the Week04 image requests are prose in the stripped delivery block. Current image checks focus on existing FAQ/home assets, not Guide source-to-asset mapping.
 
 **How to avoid:**
-Expose final canonical FAQ IDs only through the registry-backed FAQ accessors already used by page, sitemap, and redirect generation. Keep aliases outside the published ID collection. Make the migration verifier compare exact sets: in-scope canonical paths, static params, sitemap URLs, rendered internal FAQ links, and canonical links.
+Make image disposition explicit per Guide record: `none` or a committed public asset with approved alt text, dimensions, and both output and Open Graph references. Keep images static and local; extend the existing Sharp/export-equality checks to every declared Guide asset. A source request with no supplied image needs a recorded release decision before it can be marked `none`.
 
 **Warning signs:**
-- Sitemap URL count, `generateStaticParams` count, and canonical-registry count disagree.
-- Build succeeds but a direct request to a sitemap FAQ URL is 404.
-- An internal FAQ link points at `/en/faq/`, an old slug, or a route missing from output.
-
-**Smallest runnable check:**
-Extract `getFaqIds('en')`, sitemap FAQ URLs, static parameter IDs, and `out/faq/*.html`; assert equal canonical sets and reject aliases in the sitemap.
+- A requested image is lost when delivery metadata is stripped.
+- Exported Guide HTML references an asset missing under `out/`.
+- Hero image dimensions, alt text, or social-image URL differ by language without an approved record.
 
 **Phase to address:**
-Phase 4 — single-source route wiring and static-export regression suite.
+Phase 1 — content asset inventory; Phase 3 — artifact budget and export checks.
 
 ---
 
-### Pitfall 7: Redirect behavior drifts across Cloudflare Worker, Nginx, and obsolete `_redirects` files
+### Pitfall 7: Static generation produces only a subset, the wrong variant, or case-colliding output
 
 **What goes wrong:**
-One host redirects `/en/faq/<id>` while another serves 404, retains a stale destination, drops the query string, or applies a differently encoded key. This repository deliberately removes `out/_redirects`, creates `_worker.js`, and generates an Nginx map from the same build step; reintroducing a hand-edited `_redirects` restores a third conflicting source of truth.
+All pages work in development but one owner build omits eight routes, emits a 404 for the hub, or writes paths that collide on a case-insensitive workstation. With `output: 'export'` and `dynamicParams = false`, omitted params have no runtime recovery.
 
 **Why it happens:**
-Static export has no runtime Next.js redirect layer. Edge and server behavior must be built separately, and hand-maintained host rules drift from application data.
+The existing tech route intentionally slices parameters outside preview. The repository also has a release gate that fails closed on case-insensitive hosts because content filename/path collisions have already occurred. Adding dynamic Guide routes without an explicit variant-aware inventory repeats both failure modes.
 
 **How to avoid:**
-Generate both Worker and Nginx mappings exclusively from the validated redirect decision table. Keep `_redirects` absent, preserve query strings in the Worker, and test the Nginx `$uri` matching form with encoded and trailing-slash legacy fixtures. Include the generated `.next/nginx-redirects.conf` in the production image as the Dockerfile already expects.
+Generate Guide hub and detail static params from the paired registry for the current owner variant, then assert exact expected files in `out/` after each clean io and cn build. Run the full release gate on Linux, Docker, or case-sensitive APFS. Reject case-insensitive duplicate normalized paths at source-check time.
 
 **Warning signs:**
-- `out/_redirects` exists, Worker and Nginx source counts differ, or a redirect fixture has different destinations by host.
-- A legacy URL with `?utm_source=` loses its query string.
-- A generated Nginx map is empty for the IO variant after a migration that has legacy paths.
-
-**Smallest runnable check:**
-After `npm run build`, assert `_redirects` is absent; parse `_worker.js` and `.next/nginx-redirects.conf` into maps; require equal source-to-target pairs and test representative raw, encoded, and slash variants.
+- `generateStaticParams()` contains a sample slice, a hard-coded slug list, or locale fallback.
+- A build passes while its `out/guide` count is less than eight.
+- Output inspection runs only once, after the second owner build has overwritten `out/`.
 
 **Phase to address:**
-Phase 3 — generated redirect artifacts; Phase 5 — production-build release gate.
+Phase 3 — two-owner static-export release gate.
 
 ---
 
-### Pitfall 8: Static export verifies code paths but release assets omit new FAQ pages or routing artifacts
+### Pitfall 8: Hub, article links, sitemap, and JSON-LD use separate inventories
 
 **What goes wrong:**
-The TypeScript registry passes unit-like checks, while the production export lacks an HTML file, contains an outdated sitemap, or lacks the generated Nginx redirect map in the container. Static hosting serves only generated assets, so production behavior follows `out/` and the container copy step.
+The 16 detail pages exist, yet the hub omits an article, internal links lead to legacy/prefixed routes, the sitemap omits a canonical URL, or structured data names a different page. The pages become difficult for visitors and crawlers to discover.
 
 **Why it happens:**
-Developing with `next dev` exercises on-demand routes. Static export executes at build time, and `dynamicParams = false` converts a missing build-time path into a permanent 404 until the next deployment.
+The current site has several content registries and hard-coded route fixtures. `sitemap.ts`, navigation-shell exclusions, and `verify-i18n-seo.js` all require direct Guide updates; copying content into one component leaves the other surfaces stale.
 
 **How to avoid:**
-Treat `npm run build` as the acceptance environment. Run the migration verifier before and after build, inspect exported page files and sitemap output, and run the existing SEO verification scripts. Keep one deterministic fixture for each repaired slug and each redirect disposition.
+Derive both hubs, detail links, breadcrumb items, related links, sitemap entries, and Article JSON-LD from the same Guide registry. Extend the release verifier to traverse all 16 output documents and assert: one H1, canonical URL, three alternates, Article plus BreadcrumbList, owner sitemap membership, a hub-to-detail link, and only reachable internal targets.
 
 **Warning signs:**
-- Dev works for a route that has no corresponding file under `out/faq/`.
-- A release build skips `clean-locale-output.js`, or Docker cannot copy `.next/nginx-redirects.conf`.
-- The post-build sitemap has fewer in-scope English canonical URLs than the registry.
-
-**Smallest runnable check:**
-Run `npm run build && node scripts/verify-faq-migration.js`; require zero missing canonical files, zero missing in-scope static routes, complete sitemap coverage, and present Worker/Nginx artifacts.
+- The hub is hard-coded separately from `generateStaticParams()`.
+- A sitemap count increases by fewer than nine URLs per owner (hub plus eight details).
+- `HomeLayoutSwitcher` or nav handling leaves Guide inside the landing-page shell unexpectedly.
 
 **Phase to address:**
-Phase 5 — release-ready production build and artifact audit.
+Phase 2 — hub/article integration; Phase 3 — output graph verification.
+
+---
+
+### Pitfall 9: Deployment publishes a correct local build with stale routing, cache, or crawl policy
+
+**What goes wrong:**
+The code and local `out/` pass, yet production serves a previous artifact, a target-specific routing policy, cached 404, wrong HTML language, or stale sitemap. Preview validates only one environment while China and international deployment paths differ.
+
+**Why it happens:**
+Cloudflare and Nginx keep redirects/headers separately, production image tooling performs source rewrites, and existing CI does not enforce the complete verifier matrix. Static files have no application server that can repair a bad deployment after upload.
+
+**How to avoid:**
+Promote only the exact two verified build artifacts and retain the prior artifact/image for rollback. Before release, record deployment revision, owner-variant environment, route count, sitemap digest, and cache purge scope. After release, fetch each canonical URL without following redirects and inspect the final HTML, `robots.txt`, and sitemap from both public domains; roll back on any identity, indexability, or owner mismatch.
+
+**Warning signs:**
+- Preview evidence is used as production evidence.
+- The deployed sitemap timestamp or hash differs from the tested artifact.
+- A CDN returns 404/old HTML for a new Guide URL while the origin build contains it.
+
+**Phase to address:**
+Phase 4 — deployment runbook, rollback, and live verification.
 
 ## Technical Debt Patterns
 
 | Shortcut | Immediate Benefit | Long-term Cost | When Acceptable |
 |----------|-------------------|----------------|-----------------|
-| Apply a first-five-words slug rule to every FAQ | Small generator | Recreates known collision groups and wrong-page 200s | Never for canonical URLs |
-| Use a `Map` of redirects without pre-grouping sources | Few lines of code | Last-write-wins masks collision ambiguity | Only after a one-to-one validator runs |
-| Keep title truncation in the approved metadata path | Uniform snippets | Fails exact metadata fidelity and weakens intended query coverage | Only for unapproved, authored fallback metadata |
-| Hand-edit Worker, Nginx, or `_redirects` independently | Fast emergency patch | Hosts diverge and next build overwrites part of the change | A time-boxed incident patch with a same-release generator update |
-| Generate only changed routes in static params | Faster local build | Repaired or preserved URLs can become exported 404s | Never with `dynamicParams = false` |
+| Copy the tech-center parser and route unchanged | Fast first render | It assumes `/zh/<section>/<slug>`, only Chinese content, and YAML front matter | Never for Guide routing or source parsing |
+| Hard-code eight slugs in page, sitemap, and verifier | Few lines now | Drift creates silent discovery and hreflang gaps | Never; one typed registry is smaller than three lists |
+| Render the raw source after deleting the first few lines | Minimal importer | Comment layout changes leak metadata or truncate body | Never; parse one bounded leading block |
+| Rebuild on the deploy host without owner-specific artifact evidence | Fewer CI steps | Dependency/environment drift and case sensitivity invalidate the proof | Only for an emergency rollback to an already verified revision |
+| Treat all image requests as optional | Avoids asset work | Approved visual requirements and social previews silently disappear | Only after a documented content-owner decision per record |
 
 ## Integration Gotchas
 
 | Integration | Common Mistake | Correct Approach |
 |-------------|----------------|------------------|
-| Approved metadata workbook | Join rows by mutable slug or title | Join by stable source identity; report missing, duplicate, and unused records before writing data |
-| Next.js App Router export | Expect `redirects`, rewrites, or on-demand dynamic routes from `next.config.js` | Generate every canonical FAQ parameter at build and serve redirects at Worker/Nginx |
-| Cloudflare Worker and Nginx | Encode map keys independently or update only one host | Build both maps from the validated redirect table and diff their entries |
-| Cross-domain locales | Infer a translation from matching short slugs | Use an explicit verified translation mapping and require reciprocal `hreflang` targets |
+| `siteRouting.ts` | Compose host/path strings locally or use `/zh` and `/en` prefixes | Use owned URL helpers from the Guide registry for every public URL |
+| Next.js static export | Depend on runtime dynamic routing or check one build only | Enumerate owner-variant params and verify concrete `out/guide` files in both builds |
+| `MarkdownContent` | Send delivery-comment source directly to renderer | Strip and validate the leading comment before passing the approved body |
+| Sitemap/robots | Add only detail routes or inspect source sitemap code | Include each owner hub plus eight owner details and inspect generated XML/robots |
+| Nginx and Cloudflare | Assume preview redirect/cache behavior equals production | Validate the deployed target’s headers, status, canonical HTML, and sitemap separately |
 
 ## Performance Traps
 
 | Trap | Symptoms | Prevention | When It Breaks |
 |------|----------|------------|----------------|
-| Reparse the workbook or scan all exported HTML once per FAQ | Slow verification and high memory churn | Parse authoritative generated data once; build maps and sets; scan output once | Around 1,195 records in CI, sooner on slower runners |
-| O(n²) duplicate/collision checks | Local verifier feels slow as FAQ records grow | Group IDs and encoded paths with `Map`/`Set` in one pass | Current 1,400-record data is manageable; recurring migrations make it needless friction |
-| Add all legacy aliases to sitemap | Inflated crawl surface and duplicate canonical signals | Sitemap only final canonical URLs; redirects remain outside it | Immediately, because aliases are never canonical |
+| Add client-side Guide catalog/search for eight documents | Extra hydration and initial JavaScript over the fixed 260 KiB gzip gate | Render a server hub from the registry; defer interaction until a concrete need exists | Immediately on the existing P1 budget |
+| Parse all article files repeatedly during build | Longer builds and needless filesystem work | Read/validate registry once per build process and keep article loading deterministic | As content centers grow beyond this batch |
+| Ship large unoptimized requested diagrams | Slow LCP and large static artifacts | Pre-size/compress local images and assert source/export dimensions and byte budgets | The first large hero image on mobile |
+| Rely on static pages alone for discovery | Pages exist but have weak crawl paths | Hub links, sitemap entries, breadcrumbs, and related links from one registry | At launch for orphaned details |
 
 ## Security Mistakes
 
 | Mistake | Risk | Prevention |
 |---------|------|------------|
-| Serialize spreadsheet fields into TS/JSON without escaping validation | Build breakage or injected markup in metadata/JSON-LD | Parse structured data, validate required string fields, and use serializers rather than source-text interpolation |
-| Let a decoded path select arbitrary object keys | Route confusion through malformed percent encoding | Catch invalid decoding as a hard 404; look up only registry IDs and verify the encoded canonical path |
-| Redirect a collision to an unrelated commercial FAQ | Misleading navigation and search-quality loss | Require unique source-to-target mapping or an explicit no-redirect disposition |
+| Treat delivery comments as trusted renderable Markdown | Approval notes, internal source details, or editorial instructions become public | Parse delivery metadata at a strict boundary and render body only |
+| Allow arbitrary Markdown link protocols or raw HTML during Guide import | Unsafe link schemes or unreviewed markup reach public pages | Retain the renderer’s URL allowlist and validate source links against it before import |
+| Add a cross-domain redirect for guessed Guide aliases | Visitors and crawlers land on unrelated localized content | Publish only registry-backed, one-to-one aliases; all other paths stay absent |
 
 ## UX Pitfalls
 
 | Pitfall | User Impact | Better Approach |
 |---------|-------------|-----------------|
-| Redirecting a collided legacy slug to an arbitrary FAQ | Visitor lands on a convincing but irrelevant answer | Preserve the verified legacy identity and give repaired questions their own clear canonical URLs |
-| Preserving a 200 URL whose H1 has changed identity | Search visitor sees an answer for a different question | Verify H1, JSON-LD question, title, and canonical target as one identity tuple |
-| Publishing alternates for unpaired languages | Language switcher or search alternate reaches 404/wrong content | Emit alternate links only for verified published counterparts |
+| Hub shows only one language or mismatched cards | Visitors cannot discover their language’s full eight-article set | Render a complete owner-language hub from the paired registry |
+| Article shell retains tech-center labels, `/tech-center` breadcrumb, or Chinese chrome on English pages | Content context and navigation feel incorrect | Parameterize reusable presentation with Guide label, hub path, locale, and published language set |
+| Article Markdown begins with duplicate H1 or leaked delivery metadata | Heading hierarchy and reading flow degrade | Use the approved H1 once, strip delivery block, and validate exported headings |
+| Internal recommendations target absent pages | Visitors hit 404s and crawl paths weaken | Resolve editorial link suggestions through a verified destination map; omit unresolved suggestions from launch |
 
 ## "Looks Done But Isn't" Checklist
 
-- [ ] **Metadata import:** 1,195 rows appear in generated data — verify rendered title, description, and keywords exactly match every approved row.
-- [ ] **Slug repair:** every repaired ID is unique — verify H1 and JSON-LD question match the registry identity for every canonical path.
-- [ ] **Redirects:** every old path returns 301 — verify each source has one approved destination and each final destination is a static 200 page.
-- [ ] **Canonical/hreflang:** HTML tags are present — verify targets are final canonical URLs, exported, and reciprocal across verified language pairs.
-- [ ] **Sitemap:** URL count rises — verify it contains each canonical FAQ exactly once and contains no redirect aliases.
-- [ ] **Static export:** `next build` succeeds — verify `out/faq/` files, `_worker.js`, and `.next/nginx-redirects.conf` contain the migration artifacts.
-- [ ] **Route aliases:** `/en/faq/` redirects in a browser — verify raw, encoded, query-string, and trailing-slash forms consistently at every hosting edge.
+- [ ] **Pair registry:** exactly eight unique slugs, each with Chinese and English body, approved title/description, and explicit image disposition.
+- [ ] **Content fidelity:** exported H1/body contain no delivery-comment fields; hashes or equivalent exact source checks pass after newline normalization.
+- [ ] **Owner paths:** only cn `/guide` plus eight Chinese details and io `/guide` plus eight English details exist in their respective exports.
+- [ ] **SEO pair:** each of 16 documents has a self canonical and the same `zh-CN`, `en`, and `x-default` alternate targets.
+- [ ] **Discovery graph:** both sitemaps have the owner hub plus eight owner details; hub, breadcrumb, JSON-LD, and related/internal links use those routes.
+- [ ] **Static artifacts:** clean io and cn builds each have all expected, case-safe Guide HTML and exported assets; P1 remains within 260 KiB gzip.
+- [ ] **Production:** all 16 canonical URLs return 200 without a redirect, match the deployed sitemap/robots policy, and expose the verified canonical/hreflang HTML.
+- [ ] **Rollback:** release revision, prior artifact/image, cache-purge path, and a stop condition for mismatched live output are recorded.
 
 ## Recovery Strategies
 
 | Pitfall | Recovery Cost | Recovery Steps |
 |---------|---------------|----------------|
-| Wrong-page 200 from slug collision | HIGH | Remove the ambiguous canonical assignment, restore the verified legacy identity, allocate unique repaired routes, regenerate artifacts, and re-submit final sitemap URLs. |
-| Metadata title mutation | MEDIUM | Restore exact approved value, change the metadata policy for approved records, run HTML fidelity checks, and rebuild. |
-| Ambiguous redirect deployed | HIGH | Remove the redirect immediately, preserve only confirmed one-to-one mappings, publish a documented disposition for the source, then rebuild Worker and Nginx artifacts. |
-| Encoded-path 404 | MEDIUM | Identify raw versus encoded request form from the registry and edge logs, repair the shared path generator/map key, add the fixture, and rebuild. |
-| Sitemap/static-param mismatch | MEDIUM | Rewire both consumers to registry-backed IDs, regenerate output, then compare output file, sitemap, and canonical sets. |
+| Wrong owner route or canonical | HIGH | Stop rollout, restore prior artifact, correct the registry-derived route/metadata, rebuild both owners, then validate live before re-purge/release |
+| Missing or mismatched language pair | MEDIUM | Remove the incomplete page from hub/sitemap, restore the pair from approved source, regenerate alternates and both owner outputs |
+| Delivery metadata visible in article | MEDIUM | Roll back or unpublish affected artifact, fix bounded comment parsing, compare rendered bodies with source, then redeploy |
+| Missing/broken image | LOW to MEDIUM | Add the approved optimized asset or record `none`, rerun export/image verification, purge asset and page caches |
+| Partial/stale deployment | HIGH | Roll back to prior verified revision, invalidate affected cache paths, compare live artifact digest/route list to release evidence, redeploy immutable verified artifacts |
 
 ## Pitfall-to-Phase Mapping
 
 | Pitfall | Prevention Phase | Verification |
 |---------|------------------|--------------|
-| Duplicate question and canonical-slug collision | Phase 1 — identity inventory and registry | Independent questions, canonical slugs, and encoded route paths have one-to-one set equality. |
-| Metadata mutation and title truncation | Phase 2 — approved metadata import | Built HTML values exactly equal all approved source fields. |
-| Collision redirect ambiguity and alias drift | Phase 3 — redirect decision table | Every emitted source maps to one target; ambiguous sources have an explicit no-redirect disposition. |
-| Canonical, hreflang, sitemap, and static-param divergence | Phase 4 — SEO graph and export validation | Parse generated HTML/sitemap and compare final canonical route sets. |
-| Worker/Nginx artifact drift and release-only 404s | Phase 5 — production release gate | Successful production build plus generated-artifact map diff and static-file assertions. |
+| Wrong domain/prefix ownership | Phase 1 — registry contract | Registry URL assertions plus owner-output path inventory |
+| Missing same-slug counterpart | Phase 1 — source intake | Exact eight-pair set equality and source-body presence assertions |
+| Comment metadata leakage or source drift | Phase 1 — content adapter | Delivery-block parser tests, body/metadata manifest, exported text scan |
+| Canonical/hreflang conflict | Phase 2 — metadata/SEO | All-16 output inspection for canonical and exact alternate map |
+| Missing hub/internal/sitemap/JSON-LD links | Phase 2 — integration | Registry-to-hub, sitemap, breadcrumb, and structured-data graph traversal |
+| Incomplete static export or path case collision | Phase 3 — release gate | Clean case-sensitive io/cn build, expected files, assets, route cardinality, P1 budget |
+| Deployment/caching/crawl failure | Phase 4 — live release | Public 200/no-redirect crawl matrix, live HTML/robots/sitemap assertions, recorded rollback evidence |
 
 ## Sources
 
-- [Next.js static export guide](https://nextjs.org/docs/app/guides/static-exports) — MEDIUM confidence, verified against the repository’s `output: 'export'` configuration.
-- [Next.js generateStaticParams reference](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) — MEDIUM confidence, verified against FAQ dynamic routes using `dynamicParams = false`.
-- [Google Search Central: site moves with URL changes](https://developers.google.com/search/docs/crawling-indexing/site-move-with-url-changes) — MEDIUM confidence, verified against the migration requirements.
-- [Nginx map module](https://nginx.org/en/docs/http/ngx_http_map_module.html) — MEDIUM confidence, verified against the generated `$uri` redirect map.
-- Internal evidence: `.planning/PROJECT.md`, `src/lib/faqMetadata.ts`, `src/faq/index.ts`, `src/app/[lang]/faq/[id]/page.tsx`, `src/app/sitemap.ts`, `scripts/lib/redirects.js`, `nginx.conf`, and the 2026-08-14 acceptance audit.
+- Repository routing helpers and current SEO implementation: `src/lib/siteRouting.ts`, `src/lib/seo.ts`, `src/app/sitemap.ts`, `scripts/verify-i18n-seo.js` — HIGH.
+- Existing Markdown/content behavior: `src/lib/tech-center-content.ts`, `src/components/tech-center/MarkdownContent.tsx`, `src/components/tech-center/TechArticlePage.tsx` — HIGH.
+- Existing static-release risks and test coverage: `.planning/codebase/CONCERNS.md`, `.planning/codebase/TESTING.md`, `.planning/milestones/v1.0-phases/04-redirects-and-release-gate/04-VERIFICATION.md` — HIGH.
+- Approved Week04 source package and Guide route/hreflang specification: `/Users/longnv/bin/repo/fastgpt-data/Week04/README.md`, `附-深度内容栏目路由与hreflang规格.md`, and the 16 paired Markdown documents — HIGH.
+- [Next.js static export guidance](https://nextjs.org/docs/app/guides/static-exports), [generateStaticParams reference](https://nextjs.org/docs/app/api-reference/functions/generate-static-params), [Google canonical guidance](https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls) — MEDIUM, verified 2026-08-16.
 
 ---
-*Pitfalls research for: FastGPT English FAQ SEO repair*
-*Researched: 2026-08-15*
+*Pitfalls research for: FastGPT v1.1 Guide Content Center*
+*Researched: 2026-08-16*

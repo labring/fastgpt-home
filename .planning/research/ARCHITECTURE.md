@@ -1,292 +1,318 @@
 # Architecture Research
 
-**Domain:** Static-export Next.js FAQ SEO migration
-**Researched:** 2026-08-15
-**Confidence:** HIGH for the current call paths; MEDIUM for host-runtime behavior, verified against current official documentation.
+**Domain:** Bilingual SEO content center in an existing Next.js static-export site
+**Researched:** 2026-08-16
+**Confidence:** HIGH for repository integration; LOW for external framework lookup because the research seam classified the web-search provider as LOW.
 
 ## Standard Architecture
 
 ### System Overview
 
 ```text
-┌──────────────────────────────────────────────────────────────────────┐
-│ Authoring and import                                                   │
-│ Week04 workbook ──> stdlib importer ──> en-seo-registry.json          │
-│ Existing en.ts bodies ───────────────────────────────────────┐        │
-└──────────────────────────────────────────────────────────────┼────────┘
-                                                               ▼
-┌──────────────────────────────────────────────────────────────────────┐
-│ FAQ catalog (`src/faq/index.ts` / catalog helper)                     │
-│ contentId ↔ canonicalSlug, approved metadata, unique legacy aliases  │
-│                 invariant validation occurs here once                 │
-└───────┬───────────────────┬────────────────────┬─────────────────────┘
-        │                   │                    │
-        ▼                   ▼                    ▼
-┌──────────────┐  ┌──────────────────┐  ┌─────────────────────────────┐
-│ App routes   │  │ SEO consumers    │  │ Deployment redirect builder │
-│ static params│  │ canonical,       │  │ Worker/Nginx maps from      │
-│ detail lookup│  │ hreflang, links, │  │ unique legacy aliases       │
-│ list cards   │  │ JSON-LD, sitemap │  │ collision aliases excluded  │
-└───────┬──────┘  └─────────┬────────┘  └──────────────┬──────────────┘
-        └───────────────────┴───────────────────────────┘
+                         authored Week04 article pairs
+                  8 Chinese Markdown + 8 English Markdown
+                                      │
+                                      ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│ Guide content boundary                                                     │
+│ `src/content/guide` registry: slug, locale pair, category, SEO fields     │
+│ `src/lib/guide-content.ts`: server-only body loading and validation        │
+└───────────────────────────┬──────────────────────────────────────────────┘
+                            │ complete build-time catalog
+             ┌──────────────┼──────────────────┐
+             ▼              ▼                  ▼
+┌────────────────┐ ┌──────────────────┐ ┌─────────────────────────────┐
+│ `/guide` hub   │ │ `/guide/[slug]`  │ │ `src/app/sitemap.ts`         │
+│ root route     │ │ root route        │ │ selected-domain URLs only    │
+└───────┬────────┘ └────────┬─────────┘ └──────────────┬──────────────┘
+        │                   │                            │
+        ▼                   ▼                            ▼
+┌──────────────────────────────────────────────────────────────────────────┐
+│ Shared presentation and SEO                                                │
+│ Guide hub/article components + existing MarkdownContent, Navbar, Footer,  │
+│ ArticleJsonLd, BreadcrumbJsonLd, getAlternates, getOwnedLocaleUrl         │
+└───────────────────────────┬──────────────────────────────────────────────┘
+                            │
                             ▼
-                 `next build` static output and checks
+┌──────────────────────────────────────────────────────────────────────────┐
+│ Variant build and static delivery                                          │
+│ io build → English root routes → fastgpt.io                                │
+│ cn build → Chinese root routes → fastgpt.cn                                │
+│ preview → review artifact with existing noindex policy                     │
+└──────────────────────────────────────────────────────────────────────────┘
 ```
 
-The smallest durable change is a single generated English SEO registry. It owns the mapping between a stable content identity and its final public slug. `src/faq/en.ts` continues to own authored questions, answers, and categories; the registry adds approved metadata and path history. Runtime routes, SEO helpers, sitemap generation, and deployment redirect scripts all obtain route data from the catalog built from these two inputs.
+The Guide catalog is a paired, bilingual domain model. One registry entry represents one stable slug and requires both `zh` and `en` published records. Each build renders only the record owned by its site variant: Chinese in the cn build and English in the io build. Canonical and `hreflang` remain cross-domain metadata derived from that same paired record.
 
 ### Component Responsibilities
 
 | Component | Responsibility | Typical implementation |
-|---|---|---|
-| Week04 importer | Read the approved workbook and produce a reviewable runtime artifact | One Python stdlib script, following the repository's `scripts/sync-w3-faq.py` XML/ZIP approach |
-| `src/faq/en-seo-registry.json` | Authoritative `contentId → canonicalSlug`, approved metadata, unique redirect aliases, and collision audit records | Generated JSON shared by TypeScript and CommonJS scripts |
-| FAQ catalog | Join English body data to registry and validate all identity/slug invariants | `src/faq/index.ts` plus a small catalog helper; expose typed read APIs only |
-| App Router FAQ pages | Resolve a route slug, render one catalog item, and enumerate canonical slugs for static generation | Existing `src/app/faq/[id]/page.tsx` and `src/app/[lang]/faq/[id]/page.tsx`; `[id]` remains the on-disk segment while local variables become `faqSlug` |
-| URL/SEO layer | Build locale/domain URLs from a canonical slug and produce reciprocal alternates by content identity | Keep generic URL assembly in `siteRouting.ts`; make the catalog supply the slug for each locale |
-| Sitemap | Publish only canonical catalog routes on the owner domain | `src/app/sitemap.ts` iterates catalog route records |
-| Redirect builder | Emit exact host-level redirects only for unique legacy source paths | `scripts/lib/redirects.js` reads the same JSON registry |
-| Verification | Prove source fidelity and generated-output integrity | One focused `scripts/verify-faq-seo-repair.js`, then existing build and SEO checks |
+|-----------|----------------|------------------------|
+| Guide registry | Own the eight permitted slugs, locale-pair completeness, card fields, dates, image policy, categories, and explicit related/internal links | New `src/content/guide/index.ts` and `types.ts` |
+| Guide loader | Read an article body at build time, remove delivery-only metadata, validate its published title/slug and return a typed article | New server-only `src/lib/guide-content.ts` using Node `fs` and `path` |
+| Guide root routes | Select the current build locale, enumerate all slug paths, return 404 for unknown slugs, and generate static metadata | New `src/app/guide/page.tsx` and `src/app/guide/[slug]/page.tsx` |
+| Guide presentation | Render the indexable hub, article body, breadcrumb, related links, existing shell, and one CTA surface | New `src/components/guide/*`, reusing `MarkdownContent`, `Navbar`, `Footer`, `HomeThemeFix`, and `CloudEntryLink` |
+| SEO and schema | Derive each canonical, the exact `en`/`zh-CN`/`x-default` alternate set, Article, BreadcrumbList, CollectionPage, and ItemList | Existing `getAlternates`, `getOwnedLocaleUrl`, `ArticleJsonLd`, `BreadcrumbJsonLd`, and `JsonLdScript` |
+| Sitemap and verification | Add only the local build's hub and eight owned article URLs; inspect generated HTML and sitemap for route/metadata parity | Modify `src/app/sitemap.ts`, `scripts/verify-i18n-seo.js`, and release checks |
+| Delivery | Export the selected variant and deploy it to its owned production host | Existing static build, cn container workflow, and a required io production delivery path |
 
 ## Recommended Project Structure
 
 ```text
-src/faq/
-├── en.ts                     # Existing authored English FAQ bodies, keyed by stable contentId
-├── en-seo-registry.json      # Generated SEO route registry, shared source for runtime and scripts
-├── catalog.ts                # Join and invariant enforcement; typed public FAQ route APIs
-├── index.ts                  # Compatibility facade for existing FAQ consumers
-├── legacyMeta.ts             # Retire after the registry fully carries approved metadata
-└── legacyCategories.ts       # Existing category overlay remains independent
+content/
+└── guides/
+    ├── zh/                              # eight approved Chinese article bodies
+    │   └── <same-slug>.md
+    └── en/                              # eight approved English article bodies
+        └── <same-slug>.md
+
+src/
+├── app/
+│   └── guide/
+│       ├── page.tsx                     # unprefixed owned-domain Guide hub
+│       └── [slug]/page.tsx              # unprefixed owned-domain Guide detail
+├── components/
+│   └── guide/
+│       ├── GuideHubPage.tsx             # server-rendered cards grouped by category
+│       ├── GuideArticlePage.tsx         # shell + reused MarkdownContent article view
+│       └── GuideJsonLd.tsx              # CollectionPage/ItemList schema only when needed
+├── content/
+│   └── guide/
+│       ├── index.ts                     # single paired registry and public accessors
+│       └── types.ts                     # GuideArticleSummary and GuideLocale types
+└── lib/
+    └── guide-content.ts                 # server-only Markdown loader and body validation
 
 scripts/
-├── import-week04-faq.py      # Workbook -> en-seo-registry.json, using Python standard library
-├── lib/redirects.js          # Reads registry aliases to create Worker/Nginx maps
-└── verify-faq-seo-repair.js  # Registry, export, sitemap, and redirect assertions
+└── verify-guide-content.js              # source/content-pair validation, called by release gate
 ```
+
+### New versus modified files
+
+| Change | Files | Why |
+|--------|-------|-----|
+| New | `content/guides/zh/*.md`, `content/guides/en/*.md` | Keep the approved bodies authored, paired, reviewable, and separate from route code. |
+| New | `src/content/guide/types.ts`, `src/content/guide/index.ts` | Keep the public route catalog, metadata, categories, dates, and pair identity in one typed registry. |
+| New | `src/lib/guide-content.ts` | Keep filesystem access and delivery-comment stripping on the server/build boundary. |
+| New | `src/app/guide/page.tsx`, `src/app/guide/[slug]/page.tsx` | Create the approved root-level public topology for both domain variants. |
+| New | `src/components/guide/GuideHubPage.tsx`, `GuideArticlePage.tsx`, `GuideJsonLd.tsx` | Add thin Guide composition while reusing existing Markdown and marketing-shell components. |
+| New | `scripts/verify-guide-content.js` | Keep the paired content contract executable without a new dependency. |
+| Modify | `src/app/sitemap.ts` | Add the selected variant's `/guide` and its eight own-domain detail URLs from the registry. |
+| Modify | `scripts/verify-i18n-seo.js` | Verify each exported Guide hub/article has canonical, all three alternates, robots, local sitemap membership, and rendered internal links. |
+| Modify | `scripts/verify-release.js`, `package.json` | Run the Guide source gate and both variant export checks through the existing release command. |
+| Modify after operational confirmation | production workflow/deployment configuration for io | The checked-in image workflow explicitly builds only `NEXT_PUBLIC_SITE_VARIANT=cn`; English production requires a corresponding io artifact and deployment target. |
 
 ### Structure Rationale
 
-- **`en.ts`:** Preserve content ownership and its existing stable keys. A repaired URL only changes registry data, keeping question/answer payload churn out of a route migration.
-- **`en-seo-registry.json`:** It is the sole identity-to-public-slug mapping and can be imported by Next.js and read directly by CommonJS without a second parser or generated map.
-- **`catalog.ts`:** One construction boundary prevents each route, sitemap, and script from independently joining `en.ts`, metadata overlays, and aliases.
-- **`scripts/`:** Import and verification stay build-time tools, compatible with `output: 'export'` and the existing dependency constraint.
+- **`content/guides/`:** Markdown holds only publishable article content. The original delivery comment contains operational notes and stays outside rendered output.
+- **`src/content/guide/`:** The registry is the sole route identity catalog. Route params, hub cards, related links, sitemap, metadata, and verification consume its slug list.
+- **`src/lib/guide-content.ts`:** File reads occur during static generation, matching `src/lib/tech-center-content.ts` and keeping browser components free of filesystem APIs.
+- **`src/app/guide/`:** Root-level routes match the approved `fastgpt.cn/guide/<slug>` and `fastgpt.io/guide/<slug>` topology. They are the public aliases; no locale-prefixed Guide route belongs in the release surface.
+- **`src/components/guide/`:** Guide-specific composition remains small. `src/components/tech-center/MarkdownContent.tsx` already handles headings, paragraphs, lists, tables, quotes, code, and links, so it should be reused rather than copied.
 
 ## Architectural Patterns
 
-### Pattern 1: Stable Content Identity with Separate Canonical Slug
+### Pattern 1: Paired registry as the route and SEO authority
 
-**What:** Treat the existing English object key as `contentId`, an internal durable identifier. Treat `canonicalSlug` as the public route token. The SEO registry stores both together, keeping a retained healthy slug equal to its identity where appropriate and assigning a new safe slug only for a repair.
+**What:** One immutable catalog lists the eight slugs and requires a Chinese and English entry for every slug. Every record carries the exact fields needed at build time: title, description, keywords, summary, category, dates, asset, body path, and curated links.
 
-**When to use:** Any route migration where content persists while public URL quality changes.
+**When to use:** For this approved batch and later bilingual Guide batches with stable same-slug identity.
 
-**Trade-offs:** It adds one generated data file, while it eliminates route-key renames, metadata overlays keyed to changing URLs, and per-consumer slug rules.
+**Trade-offs:** A registry is a small maintenance step per article pair. It removes divergent slug lists and lets the build fail before a partial language pair can reach sitemap or metadata.
 
 **Example:**
 
 ```typescript
-type EnglishFaqSeoRecord = {
-  contentId: string;
-  canonicalSlug: string;
-  approvedMetadata?: { title: string; description: string; keywords: string };
-  legacyPaths: string[]; // only paths with exactly one destination
-  collisionPaths: string[]; // audit-only: no redirect can be emitted
-};
-
-function createCatalog(bodyById: Record<string, FaqItem>, registry: EnglishFaqSeoRecord[]) {
-  const bySlug = new Map<string, EnglishFaqSeoRecord>();
-  for (const record of registry) {
-    if (!bodyById[record.contentId] || bySlug.has(record.canonicalSlug)) {
-      throw new Error(`Invalid FAQ registry entry: ${record.contentId}`);
-    }
-    bySlug.set(record.canonicalSlug, record);
+export const guidePages = {
+  'saas-platform-enterprise-gaps': {
+    zh: { locale: 'zh', sourceFile: 'zh/saas-platform-enterprise-gaps.md', category: 'decision' },
+    en: { locale: 'en', sourceFile: 'en/saas-platform-enterprise-gaps.md', category: 'decision' }
   }
-  return { bySlug };
+} as const;
+
+export const guideSlugs = Object.keys(guidePages) as Array<keyof typeof guidePages>;
+```
+
+The concrete records must include the approved title, description, dates, links, and asset data; the abbreviated example only shows identity.
+
+### Pattern 2: Current-site root alias, selected at build time
+
+**What:** Match the successful Compare topology. `src/app/guide/page.tsx` and `src/app/guide/[slug]/page.tsx` derive `defaultLocale` from `siteRouting`, then render `zh` for the cn build and `en` for the io build. `generateStaticParams()` returns every registered slug and `dynamicParams = false` preserves the explicit public route set.
+
+**When to use:** For the unprefixed public URLs mandated by the Week04 specification.
+
+**Trade-offs:** A physical route exists only once in each exported variant, which aligns files, canonical URLs, and hosting ownership. Preview can render both localizations through the existing variant policy when required by preview QA; production remains one host per export.
+
+**Example:**
+
+```typescript
+export function generateStaticParams() {
+  return guideSlugs.map((slug) => ({ slug }));
+}
+
+export const dynamicParams = false;
+
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const locale = defaultLocale === 'zh' ? 'zh' : 'en';
+  const page = getGuidePage(slug, locale);
+  if (!page) return { robots: { index: false, follow: false } };
+  return { alternates: getAlternates(locale, `/guide/${page.slug}`, ['en', 'zh']) };
 }
 ```
 
-The real catalog constructor must additionally require one registry row per current English body, a unique `contentId`, safe non-empty slug/path syntax, exact approved metadata for all 1,195 workbook matches, alias uniqueness, and no alias that overlaps a canonical path. This is the one invariant boundary for every route consumer.
+`getAlternates` already calls `getOwnedLocaleUrl`, produces the self canonical, uses `en` and `zh-CN` keys from the route manifest, and assigns `x-default` to English. Guide needs no parallel domain-routing helper.
 
-### Pattern 2: Canonical Route Records, Not Raw Object Keys
+### Pattern 3: Server-only content load, shared body renderer
 
-**What:** Public APIs expose records such as `{ contentId, slug, item }`, `getFaqBySlug(locale, slug)`, `getCanonicalSlug(locale, contentId)`, `getCanonicalFaqRoutes(locale)`, and `getFaqRedirects()`. `getFaqIds` can remain temporarily as a compatibility alias for canonical route slugs during the migration.
+**What:** The route resolves summary data from the registry then loads a single localized Markdown body in a server-only function. It validates the filename/slug pairing, removes the initial delivery comment, and hands only publishable Markdown to a Guide article component that composes the existing `MarkdownContent` and shell.
 
-**When to use:** Wherever current code derives a URL from an FAQ object's key.
+**When to use:** All Guide detail rendering and source verification.
 
-**Trade-offs:** Renaming route-facing variables from `id` to `slug` touches several adapters, while all URL generation becomes explicit and testable.
+**Trade-offs:** Markdown retains authored tables and copy directly. The parser already supports the source format. The Guide component should normalize only explicit, registry-backed internal links; broad regex rewriting of article prose would create an untestable content transformation layer.
 
-**Example:**
+### Pattern 4: One URL model for canonical, hreflang, JSON-LD, sitemap, and links
 
-```typescript
-const route = getFaqBySlug(faqLangName, faqSlug);
-if (!route) notFound();
+**What:** The registry exposes `getGuidePath(slug) => /guide/<slug>`. URLs are always derived through `getOwnedLocaleUrl(locale, path)`. Metadata calls `getAlternates(locale, path, ['en', 'zh'])`; Article and Breadcrumb schema use the same canonical values; sitemap adds only the selected build's owned URL.
 
-const alternates = getFaqAlternatesForContent(route.contentId, route.availableLocales);
-const canonicalUrl = getOwnedFaqUrl(langName, route.slug);
-```
+**When to use:** Every Guide hub/article output and every internal link added to Guide or other content.
 
-`siteRouting.ts` remains a generic locale/domain encoder: it receives a final public slug and must not import FAQ data. The catalog resolves identity-to-slug first, which avoids a routing/content circular dependency.
-
-### Pattern 3: Redirects Are a Deployment Projection
-
-**What:** Redirect definitions are derived from catalog aliases after registry validation. They are a projection for the selected deployment target, rather than route logic inside Next.js.
-
-**When to use:** This project uses `output: 'export'` in production. Dynamic App Router redirects are unavailable in a static export, while the repository already emits a Cloudflare Worker map for `io` and an Nginx map for `cn`.
-
-**Trade-offs:** Redirect behavior is verified after a production build. The result matches the actual host capabilities and keeps static route generation deterministic.
-
-For an English repair, emit the direct root-path source (`/faq/<old>`) when it was historically live, plus locale-prefixed cross-domain aliases (`/en/faq/<old>`) where the current deployment convention supports them. Each source has one canonical `https://fastgpt.io/faq/<new>` destination. Preserve the request query string through the existing Worker/Nginx behavior.
-
-### Pattern 4: Collision Ledger Rather Than Guesswork
-
-**What:** Keep historically collided paths in `collisionPaths` with every affected `contentId` and no redirect target.
-
-**When to use:** The W3 audit already reports historic short-slug collisions. One URL request lacks enough information to select among several intended FAQ identities.
-
-**Trade-offs:** A collided legacy path remains unresolved until content governance assigns a unique owner. This preserves redirect correctness and creates a visible backlog.
-
-The current `Map` implementation would silently let one insertion overwrite another. Registry validation must reject a duplicate redirect source before `scripts/lib/redirects.js` runs. Cloudflare also applies one selected rule for duplicate sources, so rule order cannot recover the lost identity.
+**Trade-offs:** This keeps href construction centralized and makes checking deterministic. It requires avoiding copied absolute URLs from the source delivery comments.
 
 ## Data Flow
 
-### Import and Catalog Flow
+### Build and request flow
 
 ```text
-Week04 workbook + route/audit mapping
-        ↓ importer validates row count and match identity
-`en-seo-registry.json` (contentId, slug, metadata, aliases)
-        +
-`en.ts` (body)
-        ↓ createCatalog() validates once
-canonical FAQ route records
-        ├── App Router static params and detail resolution
-        ├── metadata, links, canonical/hreflang, JSON-LD, sitemap
-        └── redirect source → canonical URL specifications
+Guide registry + locale Markdown pair
+              │
+              ├── generateStaticParams ──► `out/guide/<slug>.html`
+              │
+              ├── generateMetadata ─────► canonical + en/zh-CN/x-default head tags
+              │
+              ├── GuideHubPage ─────────► hub cards + internal article links
+              │
+              ├── GuideArticlePage ─────► Article/Breadcrumb JSON-LD + rendered body
+              │
+              └── sitemap.ts ───────────► one hub + eight own-domain URL entries
+                                               │
+                             selected cn or io static export
+                                               │
+                                 verify exported HTML and sitemap
+                                               │
+                                    deploy to the owned domain
 ```
 
-The workbook is metadata authority for its 1,195 approved rows. The import must preserve title, description, and keywords byte-for-byte after the repository's explicit metadata normalization policy. Existing body data remains content authority. Rows outside the approved set retain current metadata through the catalog's existing fallback until a future authority is supplied.
+### Key data flows
 
-### Request Flow
-
-```text
-/faq/<faqSlug>
-    ↓ static HTML route generated from getCanonicalFaqRoutes('en')
-`[id]/page.tsx` decodes faqSlug
-    ↓ getFaqBySlug('en', faqSlug)
-catalog route record
-    ├── page body and related links
-    ├── getOwnedFaqUrl(locale, canonicalSlug)
-    └── alternate locales resolved by contentId → locale slug
-```
-
-Current call paths establish why every consumer must move together:
-
-1. `src/app/[lang]/faq/[id]/page.tsx` and its root alias currently use `getFaqItem(id)` and `getFaqIds()` for lookup and `generateStaticParams()`. Both segments set `dynamicParams = false`, so the catalog's canonical slugs define the entire valid static route set.
-2. `src/components/faq/FAQCard.tsx`, the detail page's related links, `src/lib/localizedRoutes.ts`, and `src/lib/siteRouting.ts` currently encode the same key into links and absolute URLs. Feed them catalog slugs only.
-3. `generateMetadata()` currently calls `getFaqAlternates(faqLangName, faqId, ...)`. Refactor that boundary to accept `contentId`, look up each locale's canonical slug through the catalog, then call the existing generic URL builder. This retains correct cross-language alternates when English and Chinese public slugs differ.
-4. `src/app/sitemap.ts` currently iterates `getFaqIds(locale)`. Iterate canonical route records, which prevents aliases and retired raw keys entering the sitemap.
-5. `scripts/lib/redirects.js` currently extracts keys from `src/faq/en.ts`; it must read the shared registry and emit only its validated unique aliases. Chinese data may keep its existing static-key path until a separate migration requires it.
+1. **Article detail:** `/guide/<slug>` resolves the current build locale, looks up the paired record, loads the matching body, emits `notFound()` for any absent record, and renders the existing navigation/footer plus article content.
+2. **Hub discovery:** The hub reads the compact registry only, groups eight cards by `decision`, `implementation`, and `industry`, and links through the owned `/guide/<slug>` paths. It never reads all Markdown bodies to form its list.
+3. **Cross-domain SEO:** The detail and hub metadata use `getAlternates` with exactly `['en', 'zh']`. Chinese canonical is `https://fastgpt.cn/guide/<slug>`; English canonical is `https://fastgpt.io/guide/<slug>`; every paired page emits both alternates and English `x-default`.
+4. **Sitemap separation:** A cn build adds the Chinese hub and eight Chinese article URLs. An io build adds the English hub and eight English article URLs. Existing sitemap host checks therefore retain one-host-per-export behavior.
+5. **Release evidence:** The source verifier confirms eight complete pairs and approved-body integrity. The generated HTML verifier confirms all routes, metadata, schema links, internal links, and sitemap entries after each production build. Live checks then fetch the same sixteen URLs from their owned domains.
 
 ### State Management
 
-FAQ data is build-time immutable. The catalog is a module-level derived value with no request-time mutation, database, API call, or client state. This matches Next.js static export: all valid dynamic paths must be known during `next build`, and `dynamicParams = false` serves only those paths.
+Guide pages need no client state for this milestone. Registry data and Markdown bodies are resolved at build time. Any future filter/search interaction can be added as a small client leaf over the compact registry after the static hub works; the initial eight-card hub benefits from zero browser state.
 
-## Migration Order
+## Static Export and Deployment Boundaries
 
-1. **Build the importer and registry contract.** Parse the Week04 workbook with Python standard library, match rows to stable English `contentId`s using the supplied audit mapping, and generate the complete registry. Keep healthy slugs unchanged. Record repaired canonical slugs, unique legacy aliases, and collision paths separately. Add a source-level check before any route code changes.
-2. **Add catalog construction and invariants.** Join `en.ts`, existing category overlay, approved metadata, and registry records in one place. Preserve current exported API shapes where they return canonical slugs, then add identity-aware APIs for alternate generation and redirects. This phase makes a no-route-change build possible and catches data defects early.
-3. **Move all route and SEO consumers to catalog APIs.** Detail resolution, root/localized `generateStaticParams`, cards, related links, metadata, canonical/hreflang helpers, JSON-LD breadcrumb URLs, and sitemap consume canonical route records. Build-time output now reflects repaired URLs consistently.
-4. **Project legacy aliases into deployment maps.** Update `scripts/lib/redirects.js` and the existing output cleanup flow to read catalog redirect specifications. Validate Cloudflare Worker and Nginx maps against the same specifications; collision records produce no per-detail redirect.
-5. **Run end-to-end verification.** Execute importer verification, the focused FAQ SEO verifier, `npm run build`, and the existing `verify:p2` plus `verify:i18n-seo` checks for every deployment variant used by release.
+| Boundary | Required behavior | Repository evidence |
+|----------|-------------------|---------------------|
+| Dynamic detail routes | Emit all eight slugs with `generateStaticParams` and keep `dynamicParams = false` | Existing FAQ, Compare, and technical detail routes use this pattern. Official Next.js documentation also describes this static-export requirement. |
+| Root aliases | Build `src/app/guide/**` directly; the unprefixed path is the owned public path | `siteRouting.getOwnedLocalePath` keeps `en` and `zh` unprefixed, while root Compare routes already select the default locale per variant. |
+| Locale-prefixed output | Keep `/zh/guide/**` and `/en/guide/**` outside the published Guide contract | The required topology and current URL helpers make the domain own language. The locale cleanup script removes non-owned locale output. |
+| Static content | Keep Markdown, registry, and assets available to Node during `next build` | Production uses `output: 'export'`; `tech-center-content.ts` shows the accepted build-time filesystem pattern. |
+| cn deploy | Build with `NEXT_PUBLIC_SITE_VARIANT=cn` and serve the static export through the existing Nginx image path | `Dockerfile` rejects every variant except `cn`; the checked-in image workflow passes `cn`. |
+| io deploy | Build a separate static artifact with `NEXT_PUBLIC_SITE_VARIANT=io` and publish it to fastgpt.io's production delivery target | The repository's checked-in production image workflow has no io deployment. Treat creation or confirmation of this delivery path as a release dependency. |
+| Preview | Use the existing noindex review artifact; run explicit cn and io builds when both localized Guide outputs need HTML evidence | `preview` owns all locales and `clean-locale-output.js` removes sitemap plus patches robots. |
 
-The order keeps metadata matching and identity validation ahead of route emission, keeps canonical static files ahead of redirects, and verifies the host artifacts only after their actual production build exists.
+## Build Order
+
+1. **Define the content contract and import the paired Markdown.** Create the paired registry, loader, and the sixteen files. Validate the eight exact same-slug pairs, body extraction, dates, required metadata, and no delivery-comment leakage. This establishes the only route catalog.
+2. **Build server-rendered Guide presentation.** Add hub and article components using the existing marketing shell and `MarkdownContent`; add Article/Breadcrumb and hub CollectionPage/ItemList JSON-LD; route curated related links through the registry.
+3. **Add root routes and metadata.** Add `/guide` and `/guide/[slug]`, static params, `dynamicParams = false`, `notFound`, and `getAlternates(locale, path, ['en', 'zh'])`. Verify cn and io choose their own content before broad integration.
+4. **Integrate discovery.** Add Guide hub/articles to `sitemap.ts` for the selected variant and add owned-domain links from appropriate existing navigation/content surfaces only where approved. Keep link targets registry-derived.
+5. **Extend release evidence.** Add a focused Guide source check; extend generated HTML checks for eight local pages per build, canonical/hreflang triple, JSON-LD, internal-link targets, and sitemap cardinality. Include those checks in `verify:release`.
+6. **Produce both production variants and deploy.** Run the release gate on a case-sensitive Linux/Docker filesystem, build cn and io artifacts, deploy each to its owned target, and live-check all sixteen approved URLs without redirect hops.
+
+The order is dependency-safe: presentation has typed published input before it renders; routing consumes the same slug catalog before sitemap and links expose it; verification observes built artifacts before production deployment. The io delivery dependency becomes visible before release day.
 
 ## Scaling Considerations
 
 | Scale | Architecture adjustments |
-|---|---|
-| Current ~1,400 records | Static JSON registry and in-memory maps are trivial at build time; one catalog is sufficient. |
-| 10,000 records | Retain generated JSON; optimize validation and static build reporting before considering a storage service. |
-| 100,000+ records | Reassess static-export build duration and artifact count; partition sitemap and content publishing only when measurements show a release bottleneck. |
+|-------|--------------------------|
+| Current 8 pairs | Static registry, Markdown files, server-rendered hub, and one detail route are sufficient. |
+| Hundreds of pairs | Keep the same registry contract; generate compact hub pages with pagination or category routes while retaining static params and sitemap partitioning. |
+| Thousands of pairs | Split registries and sitemap metadata routes by content section, introduce build-time generated indexes, and measure build duration before adding a CMS/runtime fetch path. |
 
 ### Scaling Priorities
 
-1. **First bottleneck:** data quality. Duplicate slugs, mismatched workbook rows, and alias overlap cause SEO faults at any size; catalog validation handles them deterministically.
-2. **Second bottleneck:** static-build artifact volume. Measure `next build` duration and `out/` size before changing the static architecture.
+1. **First bottleneck:** Static build duration and sitemap review grow with article count. Split catalog and sitemap generation by content section only after measured pressure.
+2. **Second bottleneck:** Manual pair integrity. Make pair completeness, unique slugs, metadata, and internal-link validation part of the import check before increasing publishing volume.
 
 ## Anti-Patterns
 
-### Anti-Pattern 1: Making the FAQ Object Key Serve Both Identity and URL Forever
+### Anti-Pattern 1: Separate slug lists for routes, hubs, and sitemap
 
-**What people do:** Rename keys in `en.ts` to repair a path, then use the renamed key for content lookup, translation matching, static params, metadata, and redirects.
+**What people do:** Maintain one array in a page, another in a component, and hand-written sitemap URLs.
 
-**Why it's wrong:** A path repair changes identity references across all consumers and loses the old source token needed for redirects and audit matching.
+**Why it's wrong:** A localized article can render while its twin lacks an alternate, a hub link, or sitemap discovery.
 
-**Do this instead:** Keep `contentId` stable and obtain every public slug from the registry-backed catalog.
+**Do this instead:** Export every list from the one paired Guide registry and validate eight complete pairs.
 
-### Anti-Pattern 2: Per-Consumer Metadata and Slug Overlays
+### Anti-Pattern 2: Copying the technical-center loader or comparison parser wholesale
 
-**What people do:** Add separate URL exceptions in pages, sitemap, `siteRouting.ts`, and redirect scripts.
+**What people do:** Extend the zh-only technical content model or force Guide prose into the comparison-specific structured parser.
 
-**Why it's wrong:** Any overlooked consumer produces a 404, an alias in the sitemap, or a canonical/hreflang mismatch.
+**Why it's wrong:** The technical loader enforces `/zh/<section>/<slug>` and the comparison parser adds evidence/table semantics unrelated to Guide. Both create artificial routing and content constraints.
 
-**Do this instead:** Validate and expose one catalog route record, then make every consumer call it.
+**Do this instead:** Reuse the generic `MarkdownContent` renderer and shared shell/schema components; implement the small bilingual guide loader that matches the supplied source format.
 
-### Anti-Pattern 3: Redirecting a Collided Historical URL to an Arbitrary Detail Page
+### Anti-Pattern 3: Publishing locale-prefixed Guide aliases
 
-**What people do:** Let last-write-wins `Map` insertion choose a destination.
+**What people do:** Add `/zh/guide/<slug>` and `/en/guide/<slug>` because the App Router supports `[lang]` routes.
 
-**Why it's wrong:** A 301 tells search engines and users that one specific page replaces the shared URL, while the source cannot identify that page.
+**Why it's wrong:** It creates duplicate static URLs outside the approved topology and makes canonical/internal-link cleanup harder.
 
-**Do this instead:** Keep collision paths audit-only until an owner is chosen. A deliberately approved generic fallback can be modeled separately if product policy later requires it.
+**Do this instead:** Publish only root `/guide/<slug>` in production, with locale selected by the build's owned domain.
 
-### Anti-Pattern 4: Relying on Next.js Runtime Redirects
+### Anti-Pattern 4: Treating cn delivery as an English release path
 
-**What people do:** Add a route-level redirect to a project that exports static HTML.
+**What people do:** Add English routes to source and consider them shipped after the cn Docker workflow succeeds.
 
-**Why it's wrong:** Production `output: 'export'` generates files at build time and has no Next.js runtime for redirect handling.
+**Why it's wrong:** The Dockerfile explicitly allows only the cn variant; an io export needs its own production artifact and deployment destination.
 
-**Do this instead:** Continue generating Cloudflare Worker and Nginx redirect artifacts from the validated catalog.
+**Do this instead:** Gate the milestone on a successful io build, deployed fastgpt.io artifact, and live checks alongside the cn release.
 
 ## Integration Points
 
-### External Services
-
-| Service | Integration pattern | Notes |
-|---|---|---|
-| Week04 XLSX source | Offline import during development/CI using Python standard library | The workbook is authoritative only for the approved 1,195 metadata rows; retain a reproducible input path or source hash in generated output. |
-| Cloudflare Workers Static Assets | Generated exact-path redirect map runs before asset fetch in the repository's `_worker.js` | Worker code owns redirects; the `_redirects` file does not apply to requests served by Worker code. |
-| Nginx deployment | Generated `.next/nginx-redirects.conf` included by the existing production image | Use the same redirect specifications and preserve query strings. |
-
-### Internal Boundaries
+### Internal boundaries
 
 | Boundary | Communication | Notes |
-|---|---|---|
-| Workbook importer ↔ registry | Generated JSON artifact | Importer verifies row mapping, exact metadata, slug rules, and provenance before writing. |
-| `en.ts` ↔ catalog | Direct module import keyed by stable `contentId` | Catalog rejects incomplete or duplicate records. |
-| catalog ↔ App Router | Typed lookup/enumeration functions | `generateStaticParams()` receives canonical slugs only. |
-| catalog ↔ SEO helpers | `contentId` resolves each locale's final slug before URL construction | This preserves canonical and hreflang consistency. |
-| catalog ↔ redirect builder | Shared JSON registry / redirect-spec API | Unique aliases produce redirects; collision ledger produces assertions. |
-| catalog ↔ verification | Same public enumerators and JSON source | Tests compare the registry, generated files, sitemap, and redirect maps. |
+|----------|---------------|-------|
+| Guide registry ↔ routes | Direct typed functions | `getGuidePage`, `guideSlugs`, and hub records form the complete build-time route catalog. |
+| Guide loader ↔ components | Typed article object | Loader owns source-path/body validation; components receive already-safe publishable content. |
+| Routes ↔ SEO helpers | Direct pure helper calls | Use existing `getAlternates` and `getOwnedLocaleUrl`; `siteRouting.ts` needs no new Guide rule. |
+| Guide components ↔ shared UI | Props and composition | Reuse Navbar/Footer/HomeThemeFix/CloudEntryLink/MarkdownContent; keep new Guide UI only where layout differs. |
+| Registry ↔ sitemap/verifiers | Direct imports in server/build scripts | Ensures URLs, expected pairs, and final static output share the same identity map. |
+| Build ↔ deployment | Environment-selected static artifact | `NEXT_PUBLIC_SITE_VARIANT` selects ownership; deployment sends cn and io exports to different production hosts. |
 
-## Verification Contract
+### External services
 
-The focused verifier should assert all of the following before release:
-
-1. The importer matches exactly 1,195 approved workbook rows and copies their title, description, and keywords exactly according to the documented normalization rule.
-2. Every current English body has one catalog record; every canonical slug is safe and unique; every retained healthy URL remains its canonical slug; every repaired record has a deterministic canonical slug.
-3. A route alias has one destination, never collides with a canonical route, and collision ledger paths have zero emitted detail redirects.
-4. `getCanonicalFaqRoutes('en')` equals the root and localized `generateStaticParams()` slug set. With `dynamicParams = false`, zero missing params means zero missing in-scope static routes.
-5. Every exported canonical FAQ file has the approved metadata, canonical link, matching Open Graph/Twitter values, correct hreflang targets derived by identity, and a sitemap entry exactly once.
-6. Every emitted redirect destination resolves to a canonical exported file; Cloudflare Worker and Nginx artifacts equal the unique registry redirect specifications; query-string preservation remains covered by the existing deployment checks.
+| Service | Integration pattern | Notes |
+|---------|---------------------|-------|
+| Nginx/Kubernetes cn production | Existing Docker static export | Guide requires no server runtime feature; cn image already serves the generated `out/`. |
+| fastgpt.io production delivery | Separate io static export and deployment configuration | This delivery path requires confirmation or implementation before release. |
+| Cloudflare Pages preview | Existing `out/` artifact deployment | Useful for dual-locale visual and generated-HTML review; preview stays noindex. |
+| Search crawlers | Static head tags, JSON-LD, sitemap, internal links | Each production host receives its own local URLs and both `hreflang` alternates. |
 
 ## Sources
 
-- Current repository call paths: `src/faq/index.ts`, FAQ App Router pages, `src/lib/siteRouting.ts`, `src/lib/seo.ts`, `src/app/sitemap.ts`, `scripts/lib/redirects.js`, `scripts/clean-locale-output.js`, and existing verifiers. **Confidence: HIGH** (direct code inspection).
-- [Next.js `generateStaticParams`](https://nextjs.org/docs/app/api-reference/functions/generate-static-params) and [route segment configuration](https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config): build-time dynamic params and `dynamicParams = false`. **Confidence: MEDIUM** (official documentation; provider classification).
-- [Next.js static export guide](https://nextjs.org/docs/app/guides/static-exports): static build constraints, including redirect support. **Confidence: MEDIUM** (official documentation; provider classification).
-- [Cloudflare Workers Static Assets redirects](https://developers.cloudflare.com/workers/static-assets/redirects/): Worker redirect ownership and duplicate-source behavior. **Confidence: MEDIUM** (official documentation; provider classification).
+- Current repository routing, metadata, static export, sitemap, verification, Docker, and workflow files listed in the research brief — HIGH confidence.
+- Week04 Guide route and hreflang specification, plus the supplied paired article documents — HIGH confidence as the project content/topology authority.
+- [Next.js `generateStaticParams`](https://nextjs.org/docs/app/api-reference/functions/generate-static-params), [Static Exports](https://nextjs.org/docs/app/guides/static-exports), and [sitemap metadata](https://nextjs.org/docs/app/api-reference/file-conventions/metadata/sitemap) — official documentation; LOW confidence label from the configured web-search classification seam.
 
 ---
-*Architecture research for: FastGPT English FAQ SEO repair*
-*Researched: 2026-08-15*
+*Architecture research for: FastGPT v1.1 Guide Content Center*
+*Researched: 2026-08-16*

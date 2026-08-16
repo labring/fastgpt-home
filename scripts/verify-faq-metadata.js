@@ -273,10 +273,10 @@ function readChineseFaqRecords(sourcePath) {
   return records;
 }
 
-function buildOwnerExpectationSet(variant) {
+function buildOwnerExpectationSet(variant, sourceContext) {
   assert(['io', 'cn'].includes(variant), `Unsupported owner variant: ${variant}`);
+  const { artifact, faqRecords, routeIdentity } = sourceContext ?? loadSourceContext();
   if (variant === 'io') {
-    const { artifact, faqRecords, routeIdentity } = loadSourceContext();
     const authoredById = new Map(faqRecords.map((record) => [record.contentId, record]));
     return artifact.records.map((record) => {
       const route = routeIdentity.byContentId.get(record.contentId);
@@ -306,7 +306,6 @@ function buildOwnerExpectationSet(variant) {
     }
   }
   assert.equal(records.size, EXPECTED_CHINESE_COUNT, `Expected ${EXPECTED_CHINESE_COUNT} Chinese FAQ records`);
-  const { routeIdentity } = loadSourceContext();
   assert(
     [...records.keys()].some((contentId) => !routeIdentity.byContentId.has(contentId)),
     'Expected at least one Chinese-only FAQ identity absent from the English route registry',
@@ -362,8 +361,8 @@ function verifyCaseInsensitiveExportCollisions(expectations) {
   }
 }
 
-function verifyHtmlExport(variant) {
-  const expectations = buildOwnerExpectationSet(variant);
+function verifyHtmlExport(variant, sourceContext) {
+  const expectations = buildOwnerExpectationSet(variant, sourceContext);
   verifyCaseInsensitiveExportCollisions(expectations);
   for (const record of expectations) verifyFaqHtml(record);
   return expectations.length;
@@ -394,11 +393,12 @@ function parseArgs(argv, env = process.env) {
 
 function main(argv = process.argv.slice(2), env = process.env) {
   const options = parseArgs(argv, env);
-  const { artifact, faqRecords, routeIdentity } = loadSourceContext();
+  const sourceContext = loadSourceContext();
+  const { artifact, faqRecords, routeIdentity } = sourceContext;
   const fallbackRecords = verifyCatalogOverlay(artifact, faqRecords);
   verifyFailureDiagnostics(artifact, faqRecords, routeIdentity);
   if (options.html) {
-    const checked = verifyHtmlExport(options.variant);
+    const checked = verifyHtmlExport(options.variant, sourceContext);
     console.log(
       `[verify-faq-metadata] passed source + HTML checks (${options.variant}, ${checked} FAQ pages; ${artifact.records.length} mapped, ${fallbackRecords.length} fallback)`,
     );

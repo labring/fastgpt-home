@@ -8,8 +8,48 @@ const {
   appendP1HistoricalBaselineAdvisories
 } = require('./verify-release');
 const { buildOwnerExpectationSet, parseArgs } = require('./verify-faq-metadata');
+const { normalizeFaqMetadataPolicy } = require('./generate-faq-metadata');
 
 const ROOT = path.resolve(__dirname, '..');
+const OUT_DIR = path.join(ROOT, 'out');
+
+function escapeHtml(value) {
+  return value
+    .replaceAll('&', '&amp;')
+    .replaceAll('<', '&lt;')
+    .replaceAll('>', '&gt;')
+    .replaceAll('"', '&quot;')
+    .replaceAll("'", '&#39;');
+}
+
+function writeFaqFixture(record) {
+  const metadata = normalizeFaqMetadataPolicy({
+    title: record.Title,
+    description: record.Description
+  });
+  const jsonLd = JSON.stringify({ '@type': 'Question', name: record.Question }).replaceAll('<', '\\u003c');
+  const html = [
+    '<!doctype html>',
+    `<title>${escapeHtml(metadata.title)}</title>`,
+    `<meta name="description" content="${escapeHtml(metadata.description)}">`,
+    `<meta name="keywords" content="${escapeHtml(record.Keywords.split(', ').join(','))}">`,
+    `<h1>${escapeHtml(record.Question)}</h1>`,
+    `<script type="application/ld+json">${jsonLd}</script>`
+  ].join('');
+  const fixturePath = path.join(OUT_DIR, 'faq', `${record.routeKey}.html`);
+  fs.mkdirSync(path.dirname(fixturePath), { recursive: true });
+  fs.writeFileSync(fixturePath, html);
+}
+
+function hasCaseInsensitiveRouteCollision(records) {
+  const routeKeys = new Set();
+  for (const { routeKey } of records) {
+    const normalized = routeKey.toLowerCase();
+    if (routeKeys.has(normalized)) return true;
+    routeKeys.add(normalized);
+  }
+  return false;
+}
 
 function failure(label, output, variant = 'io') {
   return { label, variant, command: 'npm run verify:p1', output };
@@ -68,6 +108,66 @@ test('owner expectation sets use published owner route keys and source data', ()
     assert(chineseOnly[field].length > 0, `Chinese-only ${field} must be populated`);
   }
 });
+
+const ioExpectations = buildOwnerExpectationSet('io');
+const caseInsensitiveFixtureSkip = process.platform === 'darwin' && hasCaseInsensitiveRouteCollision(ioExpectations);
+
+test(
+  'metadata HTML CLI reuses one loaded source context across every io fixture',
+  {
+    skip: caseInsensitiveFixtureSkip &&
+      'io route keys require a case-sensitive filesystem; CI runs this regression on a compatible host'
+  },
+  () => {
+    const temporaryDir = fs.mkdtempSync(path.join(path.dirname(ROOT), 'fastgpt-faq-metadata-'));
+    const preservedOutDir = path.join(temporaryDir, 'out');
+    const readCounterPath = path.join(temporaryDir, 'read-counter.js');
+    let preservedOut = false;
+
+    try {
+      if (fs.existsSync(OUT_DIR)) {
+        fs.renameSync(OUT_DIR, preservedOutDir);
+        preservedOut = true;
+      }
+      fs.mkdirSync(OUT_DIR, { recursive: true });
+      for (const record of ioExpectations) writeFaqFixture(record);
+
+      const artifactPath = path.join(ROOT, 'src/faq/generated-en-metadata.json');
+      fs.writeFileSync(
+        readCounterPath,
+        [
+          "const fs = require('node:fs');",
+          "const path = require('node:path');",
+          `const artifactPath = ${JSON.stringify(artifactPath)};`,
+          'const readFileSync = fs.readFileSync;',
+          'let artifactReads = 0;',
+          'fs.readFileSync = function readFileSyncWithCounter(file, ...args) {',
+          '  if (path.resolve(String(file)) === artifactPath) artifactReads += 1;',
+          '  return readFileSync.call(this, file, ...args);',
+          '};',
+          "process.on('exit', () => {",
+          '  if (artifactReads !== 1) {',
+          "    process.stderr.write(`[faq-metadata] expected one approved-artifact read, received ${artifactReads}\\n`);",
+          '    process.exitCode = 1;',
+          '  }',
+          '});'
+        ].join('\n'),
+      );
+
+      const result = spawnSync(
+        process.execPath,
+        ['--require', readCounterPath, 'scripts/verify-faq-metadata.js', '--html', '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' },
+      );
+      assert.equal(result.status, 0, result.stderr);
+      assert.match(result.stdout, /io, 1195 FAQ pages/);
+    } finally {
+      fs.rmSync(OUT_DIR, { recursive: true, force: true });
+      if (preservedOut) fs.renameSync(preservedOutDir, OUT_DIR);
+      fs.rmSync(temporaryDir, { recursive: true, force: true });
+    }
+  },
+);
 
 test('metadata CLI arguments are explicit and HTML-scoped', () => {
   assert.deepEqual(parseArgs([], { NEXT_PUBLIC_SITE_VARIANT: 'cn' }), { html: false, variant: undefined });

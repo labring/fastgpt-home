@@ -56,10 +56,10 @@ The architecture is a build-time content pipeline. Approved Markdown files live 
 
 **Major components:**
 
-1. **Guide registry (`src/content/guide/`):** Sole authority for all eight paired route identities, source metadata, assets, categories, related links, and public accessors.
-2. **Guide loader (`src/lib/guide-content.ts`):** Server-only file reader that strips and validates one leading delivery metadata comment, checks source integrity, then returns publishable Markdown.
-3. **Root routes (`src/app/guide/**`):** Generate the unprefixed owned-domain hub and static detail pages, select `zh` in cn builds and `en` in io builds, and return static 404s for unknown slugs.
-4. **Guide composition (`src/components/guide/`):** Thin hub/article rendering that reuses existing Markdown, navigation, footer, CTA, image, and schema building blocks.
+1. **Planned Guide registry:** Sole authority for all eight paired route identities, source metadata, assets, categories, related links, and public accessors.
+2. **Planned Guide loader:** A server-only file reader that strips and validates one leading delivery metadata comment, checks source integrity, then returns publishable Markdown.
+3. **Planned root routes:** Generate the unprefixed owned-domain hub and static detail pages, select `zh` in cn builds and `en` in io builds, and return static 404s for unknown slugs.
+4. **Planned Guide composition:** Thin hub/article rendering that reuses existing Markdown, navigation, footer, CTA, image, and schema building blocks.
 5. **Discovery and evidence:** `sitemap.ts` and release scripts consume the registry, check all exported Guide pages, and preserve one-host-per-export routing.
 
 ### Critical Pitfalls

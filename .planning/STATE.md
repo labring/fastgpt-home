@@ -1,19 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.0
-milestone_name: milestone
-current_phase: 4
-current_phase_name: Redirects and Release Gate
-status: "Phase 04 shipped — PR #206"
-stopped_at: Release gates passed after the P1 bundle optimization
-last_updated: "2026-08-16T09:51:00.080Z"
+milestone: v1.1
+milestone_name: Guide Content Center
+status: planning
+last_updated: "2026-08-16T13:17:01.178Z"
 last_activity: 2026-08-16
 progress:
-  total_phases: 4
-  completed_phases: 4
-  total_plans: 4
-  completed_plans: 4
-last_activity_desc: Quick plan 260816-m0t reduced initial JavaScript to the fixed P1 budget; release source gates passed
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -27,12 +24,10 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 
 ## Current Position
 
-Phase: 4 of 4 (Redirects and Release Gate)
-Plan: Not started
-Status: Phase 04 shipped — PR #206
-Last activity: 2026-08-16
-
-Progress: [██████████] 100%
+Phase: Not started (defining requirements)
+Plan: —
+Status: Defining requirements
+Last activity: 2026-08-16 — Milestone v1.1 started
 
 ## Performance Metrics
 

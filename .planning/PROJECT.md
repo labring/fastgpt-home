@@ -1,20 +1,29 @@
-# FastGPT English FAQ SEO Repair
+# FastGPT SEO Content Publishing
 
 ## What This Is
 
-This project repairs the English FAQ SEO surface in the existing FastGPT website. It imports the approved metadata for 1,195 currently reachable FAQ pages and incrementally repairs unsafe or missing routes within the roughly 1,400 English FAQ records already present in the repository.
+This project improves FastGPT's organic-search surfaces across `fastgpt.cn` and `fastgpt.io`. It preserves the verified English FAQ foundation and adds paired Chinese and English content with stable routes, coherent cross-domain SEO, static-export verification, and production release evidence.
 
-The work preserves healthy indexed URLs, produces stable canonical paths for repaired entries, and leaves the static export ready for release.
+The work keeps approved content faithful while making every published page discoverable, correctly localized, and safe to release.
 
 ## Core Value
 
-Every in-scope English FAQ has a stable, reachable canonical URL and renders its approved metadata without disrupting healthy indexed URLs.
+Every in-scope SEO page has one stable canonical URL, renders its approved localized content and metadata, and is proven release-safe.
+
+## Current Milestone: v1.1 Guide Content Center
+
+**Goal:** Publish a discoverable `/guide` content center with eight paired Chinese and English articles on the two production domains.
+
+**Target features:**
+- `/guide` hub pages and eight same-slug article pairs
+- Cross-domain canonical, hreflang, sitemap, internal-link, and structured-data integrity
+- Static-export release verification and production deployment for all 16 article URLs
 
 ## Business Context
 
-- **Customer**: English-speaking FastGPT prospects arriving through organic search
+- **Customer**: Chinese- and English-speaking FastGPT prospects arriving through organic search
 - **Revenue model**: SEO traffic supports FastGPT product discovery and commercial conversion
-- **Success metric**: 1,195 approved metadata records render exactly, all in-scope FAQ routes build successfully, and repaired routes have deterministic redirects
+- **Success metric**: All 16 approved Guide articles render at their owned-domain URLs with coherent SEO output and pass production verification
 - **Strategy notes**: `/Users/longnv/bin/repo/fastgpt-data/Week04/README.md` and `/Users/longnv/bin/repo/fastgpt-data/W3-深度内容与FAQ61-90-20260803/存量核查/FastGPT-存量FAQ修复验收清单-V1.1-星触达-20260814.md`
 
 ## Requirements
@@ -34,7 +43,9 @@ Every in-scope English FAQ has a stable, reachable canonical URL and renders its
 
 ### Active
 
-None.
+- [ ] Visitors can browse the Chinese and English `/guide` hubs and open all eight paired articles on their owned domains.
+- [ ] Search crawlers receive coherent canonical, hreflang, sitemap, structured-data, and internal-link signals for every Guide page.
+- [ ] Maintainers can build, verify, deploy, and live-check the complete 16-page Guide release.
 
 ### Out of Scope
 
@@ -42,7 +53,10 @@ None.
 - Restoring all 1,990 independent questions from the historical 2,000-row source — requires the missing authoritative answer source
 - Rewriting FAQ questions or answers — this milestone preserves authored content
 - Bulk category remapping — independent content-governance work
-- Production deployment, pushing, and live-site verification — the approved endpoint is release-ready code
+- Deploying the completed v1.0 FAQ migration — managed separately from the v1.1 Guide release
+- Programmatic technical-page publishing — tracked as a later milestone
+- First-party lead form delivery — tracked as a later milestone
+- Additional Guide authoring beyond the approved Week04 article pairs — this milestone publishes the supplied 16 documents
 
 ## Context
 
@@ -51,6 +65,8 @@ The website is a Next.js App Router application that exports static HTML. Englis
 The Week04 workbook contains approved metadata for 1,195 reachable English FAQ pages and identifies collision or 404 groups separately. The newer W3 audit recalculates the historical dataset as 2,000 source rows, 1,990 independent questions, and 1,398 historical short slugs. This milestone follows the user's narrower decision to repair only the FAQ records currently present in the website repository.
 
 The current code already has metadata normalization and legacy overrides in `src/lib/faqMetadata.ts` and `src/faq/legacyMeta.ts`. The implementation should extend the existing content and routing patterns with generated data or a small registry rather than introduce a parallel FAQ system.
+
+The v1.1 source package provides eight Chinese Markdown articles and eight English counterparts with matching slugs, authored metadata, canonical targets, hreflang pairs, internal-link suggestions, and image requirements. The approved public topology is `/guide/<slug>` on both domains, with `fastgpt.cn` owning Chinese and `fastgpt.io` owning English.
 
 ## Constraints
 
@@ -62,6 +78,10 @@ The current code already has metadata normalization and legacy overrides in `src
 - **Content fidelity**: Preserve the existing FAQ questions and answers verbatim
 - **Dependencies**: Reuse the current Node.js and repository tooling; add no package for spreadsheet conversion or slug mapping
 - **Verification**: Leave one runnable regression check plus a successful production build
+- **Guide source of truth**: Use the 16 Week04 Markdown documents and preserve their authored body content
+- **Guide routing**: Publish both locales at `/guide/<slug>` with matching slugs and owned-domain canonical URLs
+- **Guide presentation**: Reuse existing content-center and article components before adding Guide-specific UI
+- **Guide release**: Complete production deployment and live verification on both domains
 
 ## Key Decisions
 
@@ -72,6 +92,9 @@ The current code already has metadata normalization and legacy overrides in `src
 | Treat the Week04 workbook as metadata authority for its 1,195 rows | It contains reviewed online URLs and approved title, description, and keyword values | Validated — Phase 2 |
 | End at release-ready code | The user selected implementation, verification, and production build as the delivery endpoint | Validated — Phase 4 |
 | Extend existing FAQ routing and metadata patterns | A single content path keeps static params, metadata, and redirects consistent | Validated — Phase 3 |
+| Publish Guide pages as paired same-slug routes on the two owned domains | The approved Week04 content and hreflang specification use this topology | — Pending |
+| Reuse existing content components for Guide | This keeps the milestone focused on publishing and SEO integrity | — Pending |
+| Include production deployment in v1.1 | The user selected production-live completion | — Pending |
 
 ## Evolution
 
@@ -91,4 +114,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-16 after Phase 4*
+*Last updated: 2026-08-16 for milestone v1.1 initialization*

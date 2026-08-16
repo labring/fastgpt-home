@@ -51,6 +51,18 @@ function hasCaseInsensitiveRouteCollision(records) {
   return false;
 }
 
+function isCaseSensitiveFilesystem() {
+  const probeDir = fs.mkdtempSync(path.join(ROOT, '.faq-case-probe-'));
+  const uppercaseProbe = path.join(probeDir, 'CaseProbe');
+  const lowercaseProbe = path.join(probeDir, 'caseprobe');
+  try {
+    fs.writeFileSync(uppercaseProbe, 'case probe');
+    return !fs.existsSync(lowercaseProbe);
+  } finally {
+    fs.rmSync(probeDir, { recursive: true, force: true });
+  }
+}
+
 function failure(label, output, variant = 'io') {
   return { label, variant, command: 'npm run verify:p1', output };
 }
@@ -110,7 +122,8 @@ test('owner expectation sets use published owner route keys and source data', ()
 });
 
 const ioExpectations = buildOwnerExpectationSet('io');
-const caseInsensitiveFixtureSkip = process.platform === 'darwin' && hasCaseInsensitiveRouteCollision(ioExpectations);
+const caseInsensitiveFixtureSkip =
+  !isCaseSensitiveFilesystem() && hasCaseInsensitiveRouteCollision(ioExpectations);
 
 test(
   'metadata HTML CLI reuses one loaded source context across every io fixture',

@@ -45,8 +45,8 @@ key-files:
 key-decisions:
   - "Only repaired, non-collided English records project aliases; preserved routes and collision-ledger sources remain absent from edge maps."
   - "The stable bilingual fixture is How-to-check-the-number because its approved Chinese description satisfies the existing P1 length contract."
-  - "Approved metadata HTML is verified on the io owner export; the cn export runs source metadata checks because it publishes Chinese FAQ pages."
-  - "The inherited 260 KiB initial-JavaScript budget drift is reported as an advisory after c77cf48 APFS baseline evidence; no threshold or UI change was made."
+  - "Approved metadata HTML is verified on the io owner export and authored metadata HTML is verified on the cn owner export."
+  - "The unchanged 260 KiB P1 failure blocks release; c77cf48 at 266.9 KiB is advisory comparison context."
 
 requirements-completed: [URL-04, VERIFY-01, VERIFY-02, VERIFY-03]
 
@@ -76,18 +76,18 @@ coverage:
     verification:
       - kind: e2e
         ref: "npm run verify:release on case-sensitive APFS (io=1,400; cn=1,490)"
-        status: pass
+        status: fail
     human_judgment: true
-    rationale: "The release run includes an inherited P1 JavaScript budget advisory and owner-scoped CN metadata HTML skip that require release-owner acceptance."
+    rationale: "The aggregate release gate exits 1 until the initial JavaScript meets the unchanged 260 KiB P1 budget."
   - id: D4
     description: "Exported HTML checks preserve H1, approved metadata, canonical, hreflang, FAQ JSON-LD, and authored identity while client route helpers remain lightweight."
     requirement: VERIFY-03
     verification:
       - kind: e2e
-        ref: "verify:p0, verify:p2, verify:i18n-seo, verify:faq-metadata -- --html (io), verify:faq-seo-graph -- --html (io/cn)"
+        ref: "verify:faq-metadata -- --html --variant io|cn; verify:faq-seo-graph --html --variant io|cn"
         status: pass
     human_judgment: true
-    rationale: "P1's 260 KiB budget is inherited drift (c77cf48 baseline 266.9 KiB; current 267.0 KiB) and remains an explicit advisory."
+    rationale: "Metadata HTML is independently verified, while the aggregate release remains blocked by P1."
 ---
 
 # Phase 4: Redirects and Release Gate Summary
@@ -106,7 +106,7 @@ Registry-backed redirect maps and a single case-sensitive release gate now prove
 
 - `scripts/lib/redirects.js` now projects exactly 42 repaired/non-collided English sources to absolute `https://fastgpt.io/faq/<canonicalSlug>` targets, keeps direct encoded and trailing-slash forms, and omits 572 denied repairs plus all 149 collision-ledger sources.
 - `scripts/verify-faq-redirects.js` validates source and generated Worker/Nginx artifacts, duplicate/many-to-one safety, canonical ownership, one-hop slash behavior, and query-preserving writer contracts.
-- `scripts/verify-release.js` coordinates source checks, case-sensitive filesystem policy, isolated io/cn builds, immediate HTML/sitemap checks, exact 1,400/1,490 route counts, failure artifact retention, and cleanup. The APFS full run exited 0 with two documented inherited P1 budget advisories.
+- `scripts/verify-release.js` coordinates source checks, case-sensitive filesystem policy, isolated io/cn builds, immediate HTML/sitemap checks, exact 1,400/1,490 route counts, failure artifact retention, and cleanup. Quick plan `260816-j3z` corrected release status: a current P1 failure remains an aggregate failure and exits 1.
 - Existing P0/P1/P2/i18n fixtures resolve a stable bilingual final route through the registry. Client navigation no longer imports the full FAQ content module; APFS bundle measurement dropped from 1,711.8 KiB with the old client dependency to a 267.0 KiB baseline-equivalent bundle.
 
 ## Task Commits
@@ -132,8 +132,8 @@ Registry-backed redirect maps and a single case-sensitive release gate now prove
 
 - Registry disposition and collision ledger are authoritative for redirect eligibility; no guessed aliases are emitted.
 - Query preservation remains owned by the existing Worker and Nginx writers.
-- English metadata HTML is checked on the io export, while CN source checks and SEO HTML prove the Chinese owner artifact.
-- Baseline comparison preserves the existing P1 budget contract as an advisory instead of changing its threshold.
+- English metadata HTML is checked on the io export for 1,195 approved mappings; Chinese metadata HTML is checked on the cn export for 1,490 authored records.
+- Baseline comparison preserves the existing P1 budget contract as advisory context while the current P1 failure blocks release.
 
 ## Deviations from Plan
 
@@ -158,9 +158,9 @@ Registry-backed redirect maps and a single case-sensitive release gate now prove
 **3. [Rule 1 - Correctness] Classified inherited P1 bundle budget drift**
 - **Found during:** APFS baseline comparison
 - **Issue:** c77cf48 already measured 266.9 KiB gzip against the 260 KiB P1 budget.
-- **Fix:** Kept the existing threshold and report matching 267.0 KiB values as a release advisory with baseline evidence.
+- **Fix:** Kept the existing threshold and report matching 267.0 KiB values with baseline evidence.
 - **Files modified:** `scripts/verify-release.js`
-- **Verification:** Full APFS release exits 0 while printing both variant advisories; source-only remains strict.
+- **Verification:** Superseded by the corrective review below.
 - **Committed in:** `c27d342`, `7f79e5d`
 
 **Total deviations:** 3 auto-fixed correctness issues
@@ -179,7 +179,20 @@ None - no external service configuration required.
 
 ## Next Phase Readiness
 
-Phase 4 implementation is ready for independent verify-work/UAT. Run `npm run verify:release` on Linux, Docker, or case-sensitive APFS; review the two P1 baseline advisories and the owner-scoped CN metadata evidence before release approval.
+Phase 4 implementation is ready for bundle optimization. Run `npm run verify:release` on Linux, Docker, or case-sensitive APFS after initial JavaScript satisfies 260 KiB.
+
+## Corrective Review — 2026-08-16 (quick plan `260816-j3z`)
+
+This note preserves the original execution history and supersedes its P1 failure reclassification and cn metadata HTML omission.
+
+- `npm run verify:release-regression` exited 0 with five Node built-in regressions.
+- `npm run verify:release -- --source-only` exited 0.
+- On temporary case-sensitive APFS, `npm run verify:faq-metadata -- --html --variant io` exited 0 for 1,195 approved English mappings.
+- On the matching cn retained artifact, `npm run verify:faq-metadata -- --html --variant cn` exited 0 for 1,490 authored Chinese pages; `npm run verify:faq-seo-graph -- --html --out-dir out --variant cn` exited 0 for 1,490 pages.
+- `npm run verify:p1` on that cn retained artifact exited 1: `Initial JavaScript is 267.0 KiB gzip, budget is 260 KiB`.
+- `npm run verify:release -- --keep-artifacts` exits 1 while that P1 assertion fails. The separate c77cf48 historical comparison is 266.9 KiB, a +0.1 KiB delta, and has no release-acceptance authority.
+
+Release remains blocked until the product bundle meets the unchanged 260 KiB P1 budget.
 
 ---
 *Phase: 04-redirects-and-release-gate*

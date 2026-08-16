@@ -4,11 +4,11 @@ milestone: v1.0
 milestone_name: milestone
 current_phase: 4
 current_phase_name: Redirects and Release Gate
-status: completed
-stopped_at: Phase 4 verification passed; milestone ready to close
-last_updated: "2026-08-16T05:40:00+08:00"
+status: blocked
+stopped_at: Release gate blocked by P1 initial JavaScript budget
+last_updated: "2026-08-16T14:25:00+08:00"
 last_activity: 2026-08-16
-last_activity_desc: Phase 4 UAT and goal-backward verification passed; all v1 phases complete
+last_activity_desc: Quick plan 260816-j3z restored fail-closed P1 handling and CN metadata HTML coverage; APFS replay remains human-needed
 progress:
   total_phases: 4
   completed_phases: 4
@@ -23,14 +23,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-16)
 
 **Core value:** Every in-scope English FAQ has a stable, reachable canonical URL and renders its approved metadata without disrupting healthy indexed URLs.
-**Current focus:** Milestone complete — release-ready code
+**Current focus:** Optimize initial JavaScript below the unchanged 260 KiB P1 budget, then rerun the release gate.
 
 ## Current Position
 
 Phase: 4 of 4 (Redirects and Release Gate)
 Plan: 1 of 1 — complete
-Status: All phases complete
-Last activity: 2026-08-16 — Phase 4 UAT and verification passed
+Status: Implementation complete; release gate blocked
+Last activity: 2026-08-16 — Completed quick task 260816-j3z: corrected release gate failure semantics and CN metadata coverage
 
 Progress: [██████████] 100%
 
@@ -66,8 +66,8 @@ Progress: [██████████] 100%
 - Phase 3: Emit only published counterpart alternates and x-default English; Chinese-only records remain canonical on fastgpt.cn without synthetic English URLs.
 - Phase 3: Require exact sitemap URL sets and case-sensitive export evidence; redirect projection and aggregate release verification remain Phase 4.
 - Phase 4: Project only repaired/non-collided legacy aliases, preserve Worker/Nginx query contracts, and deny every collision-ledger source.
-- Phase 4: Run approved metadata HTML checks on the io owner export; CN release evidence uses source metadata plus Chinese SEO HTML.
-- Phase 4: Keep the inherited P1 260 KiB budget unchanged and report the c77cf48 APFS baseline drift as an advisory.
+- Quick 260816-j3z: Verify approved metadata HTML on the io owner export (1,195 records) and authored metadata HTML on the cn owner export (1,490 records).
+- Quick 260816-j3z: Keep the inherited P1 260 KiB budget unchanged; c77cf48 at 266.9 KiB remains advisory context while the current 267.0 KiB P1 result blocks release.
 
 ### Pending Todos
 
@@ -75,8 +75,14 @@ None yet.
 
 ### Blockers/Concerns
 
-- Default macOS volumes collapse distinct preserved mixed-case route filenames; CI/release HTML verification requires a case-sensitive filesystem. Full io/cn evidence passed on a case-sensitive APFS volume.
-- P1 initial JavaScript gzip is 267.0 KiB on both owner exports; c77cf48 APFS baseline is 266.9 KiB against the same 260 KiB budget. Release gate reports this inherited drift as an advisory.
+- Default macOS volumes collapse distinct preserved mixed-case route filenames; CI/release HTML verification requires a case-sensitive filesystem. A temporary case-sensitive APFS workspace verified io metadata HTML for 1,195 pages and cn metadata HTML for 1,490 pages.
+- P1 initial JavaScript gzip is 267.0 KiB on the retained case-sensitive cn artifact against the unchanged 260 KiB budget. c77cf48 APFS at 266.9 KiB is historical advisory context. `npm run verify:release -- --keep-artifacts` exits 1 until product optimization satisfies P1.
+
+### Quick Tasks Completed
+
+| # | Description | Date | Commit | Status | Directory |
+|---|-------------|------|--------|--------|-----------|
+| 260816-j3z | Correct release-gate P1 failure semantics and add owner-aware CN metadata HTML verification | 2026-08-16 | 61dd0ac, a368090 | Needs Review | [260816-j3z-fix-release-gate-p1-baseline-handling-an](./quick/260816-j3z-fix-release-gate-p1-baseline-handling-an/) |
 
 ## Deferred Items
 
@@ -85,10 +91,10 @@ None yet.
 | Historical recovery | Restore FAQ bodies absent from the repository | Deferred | 2026-08-15 |
 | Release operations | Production deployment and live-site verification | Deferred | 2026-08-15 |
 | Redirects | Project changed legacy paths and collision policy | Complete | 2026-08-16 |
-| Release verification | Aggregate VERIFY-01/02/03 command and release gate | Complete | 2026-08-16 |
+| Release verification | Aggregate VERIFY-01/02/03 command and release gate | Blocked by P1 bundle budget | 2026-08-16 |
 
 ## Session Continuity
 
 Last session: 2026-08-16T05:40:00+08:00
-Stopped at: Phase 4 complete; milestone ready to close
+Stopped at: Release blocked by the 260 KiB P1 initial-JavaScript budget
 Resume file: None

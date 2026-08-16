@@ -1,14 +1,14 @@
 ---
-status: complete
+status: blocked
 phase: 04-redirects-and-release-gate
 source: 04-01-SUMMARY.md
 started: 2026-08-16T05:20:00+08:00
-updated: 2026-08-16T05:36:00+08:00
+updated: 2026-08-16T14:25:00+08:00
 ---
 
 ## Current Test
 
-[testing complete]
+Release remains blocked by P1 initial JavaScript at 267.0 KiB gzip against the unchanged 260 KiB budget.
 
 ## Tests
 
@@ -28,17 +28,17 @@ evidence: `npm run verify:release -- --source-only` passed route registry, metad
 
 ### 3. Case-sensitive owner-site exports
 expected: Clean case-sensitive io and cn production exports contain the exact FAQ and sitemap cardinalities, canonical SEO graph, redirect artifacts, and cleanup behavior required for release.
-result: pass
+result: blocked
 source: delegated-release-review
 coverage_id: D3
-evidence: `npm run verify:release` on case-sensitive APFS exited 0; io emitted 1,400 FAQ routes and cn emitted 1,490, with HTML, sitemap, SEO graph, redirect, and cleanup checks passing. The inherited P1 267.0 KiB gzip advisory was accepted against the c77cf48 266.9 KiB baseline.
+evidence: Quick plan `260816-j3z` ran the aggregate gate on a temporary case-sensitive APFS workspace. Its actual release result is exit 1 because `verify:p1` reports `Initial JavaScript is 267.0 KiB gzip, budget is 260 KiB`. c77cf48 at 266.9 KiB is a labeled historical comparison with zero authority over the aggregate result. Owner exports retained their 1,400 io and 1,490 cn route evidence.
 
 ### 4. Exported FAQ identity and metadata evidence
 expected: Exported FAQ HTML preserves H1, approved metadata, canonical, hreflang, FAQ JSON-LD, authored identity, and lightweight client route helpers across both owner exports.
 result: pass
 source: delegated-release-review
 coverage_id: D4
-evidence: The APFS release gate passed P0, P2, i18n SEO, FAQ metadata (io owner), FAQ SEO graph, sitemap, and redirect checks for io and cn. CN metadata HTML is owner-scoped to io; source metadata verification passed. P1's inherited 267.0 KiB advisory remains explicit.
+evidence: `npm run verify:faq-metadata -- --html --variant io` passed 1,195 approved English mappings after the io export. The matching cn retained artifact passed `npm run verify:faq-metadata -- --html --variant cn` for 1,490 authored Chinese pages, including Chinese-only identities; its matching SEO graph check also passed 1,490 pages. P1 remains a separate hard release failure.
 
 ## UI Verification
 
@@ -47,12 +47,12 @@ UI checkpoints: 0 auto-verified, 0 queued for manual review. Phase4 changes redi
 ## Summary
 
 total: 4
-passed: 4
-issues: 0
+passed: 3
+issues: 1
 pending: 0
 skipped: 0
-blocked: 0
+blocked: 1
 
 ## Gaps
 
-None.
+P1 initial JavaScript is 267.0 KiB gzip against the unchanged 260 KiB budget. Optimize the product bundle, then rerun the case-sensitive aggregate release gate.

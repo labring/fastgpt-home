@@ -7,6 +7,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const ts = require('typescript');
 const {
   EXPECTED_FAQ_COUNT,
   EXPECTED_RECORD_COUNT,
@@ -20,6 +21,12 @@ const {
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
 const FAQ_INDEX_SOURCE = path.join(ROOT, 'src/faq/index.ts');
+const ZH_SOURCES = [
+  path.join(ROOT, 'src/faq/zh.ts'),
+  path.join(ROOT, 'src/faq/w2.ts'),
+  path.join(ROOT, 'src/faq/w3.ts')
+];
+const EXPECTED_CHINESE_COUNT = 1490;
 
 function readArtifact() {
   try {
@@ -193,79 +200,198 @@ function extractJsonLdQuestions(html) {
   return questions;
 }
 
-function verifyFaqHtml(record, route) {
-  const { htmlPath, html } = resolveHtml(`/faq/${route.canonicalSlug}`);
-  const expectedMetadata = normalizeFaqMetadataPolicy({
-    title: record.title,
-    description: record.description
-  });
-  assert.equal(getTitle(html), expectedMetadata.title, `${record.contentId} title mismatch in ${htmlPath}`);
-  assert.equal(
-    getMetaContent(html, 'name', 'description'),
-    expectedMetadata.description,
-    `${record.contentId} description mismatch in ${htmlPath}`,
-  );
-  assert.equal(
-    getMetaContent(html, 'name', 'keywords'),
-    serializeKeywords(record.keywords),
-    `${record.contentId} keywords mismatch in ${htmlPath}`,
-  );
-
-  const headings = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi)].map((match) => stripHtml(match[1]));
-  assert.equal(headings.length, 1, `${record.contentId} must contain one H1`);
-  const authored = route.authored;
-  assert.equal(headings[0], authored.Question, `${record.contentId} H1/question identity drift`);
-  const questions = extractJsonLdQuestions(html);
-  assert(questions.includes(authored.Question), `${record.contentId} FAQ JSON-LD question identity drift`);
+function propertyKey(property) {
+  const { name } = property;
+  if (name && (ts.isStringLiteral(name) || ts.isNumericLiteral(name) || ts.isIdentifier(name))) {
+    return name.text;
+  }
+  return undefined;
 }
 
-function verifyCaseInsensitiveExportCollisions(artifact, routeIdentity) {
+function unwrapExpression(expression) {
+  let current = expression;
+  while (
+    current &&
+    (ts.isAsExpression(current) ||
+      ts.isSatisfiesExpression(current) ||
+      ts.isParenthesizedExpression(current) ||
+      ts.isTypeAssertionExpression(current))
+  ) {
+    current = current.expression;
+  }
+  return current;
+}
+
+function stringProperty(objectLiteral, propertyName, sourcePath, contentId) {
+  const property = objectLiteral.properties.find(
+    (candidate) => ts.isPropertyAssignment(candidate) && propertyKey(candidate) === propertyName,
+  );
+  const value = property && unwrapExpression(property.initializer);
+  assert(
+    value && ts.isStringLiteralLike(value) && value.text,
+    `${path.relative(ROOT, sourcePath)} contentId=${contentId} requires ${propertyName}`,
+  );
+  return value.text;
+}
+
+function readChineseFaqRecords(sourcePath) {
+  const source = fs.readFileSync(sourcePath, 'utf8');
+  const sourceFile = ts.createSourceFile(sourcePath, source, ts.ScriptTarget.Latest, true);
+  const records = new Map();
+  const requiredFields = ['Question', 'Answers', 'Category', 'Title', 'Description', 'Keywords'];
+
+  function visit(node) {
+    if (ts.isObjectLiteralExpression(node)) {
+      for (const property of node.properties) {
+        if (!ts.isPropertyAssignment(property)) continue;
+        const contentId = propertyKey(property);
+        const value = unwrapExpression(property.initializer);
+        if (!contentId || !value || !ts.isObjectLiteralExpression(value)) continue;
+        if (!value.properties.some((candidate) => propertyKey(candidate) === 'Question')) continue;
+        assert(!records.has(contentId), `Duplicate ${path.basename(sourcePath)} contentId=${contentId}`);
+        const record = { contentId, sourcePath };
+        for (const field of requiredFields) {
+          record[field] = stringProperty(value, field, sourcePath, contentId);
+        }
+        records.set(contentId, record);
+      }
+    }
+    ts.forEachChild(node, visit);
+  }
+
+  visit(sourceFile);
+  assert(records.size, `No Chinese FAQ records found in ${path.relative(ROOT, sourcePath)}`);
+  return records;
+}
+
+function buildOwnerExpectationSet(variant) {
+  assert(['io', 'cn'].includes(variant), `Unsupported owner variant: ${variant}`);
+  if (variant === 'io') {
+    const { artifact, faqRecords, routeIdentity } = loadSourceContext();
+    const authoredById = new Map(faqRecords.map((record) => [record.contentId, record]));
+    return artifact.records.map((record) => {
+      const route = routeIdentity.byContentId.get(record.contentId);
+      const authored = authoredById.get(record.contentId);
+      assert(route, `io contentId=${record.contentId} is missing from the route registry`);
+      assert(authored, `io contentId=${record.contentId} is missing from English FAQ source`);
+      return {
+        variant,
+        contentId: record.contentId,
+        routeKey: route.canonicalSlug,
+        canonicalSlug: route.canonicalSlug,
+        sourcePath: path.join(ROOT, 'src/faq/en.ts'),
+        Title: record.title,
+        Description: record.description,
+        Keywords: record.keywords,
+        Question: authored.Question,
+        Answers: authored.Answers
+      };
+    });
+  }
+
+  const records = new Map();
+  for (const sourcePath of ZH_SOURCES) {
+    for (const [contentId, record] of readChineseFaqRecords(sourcePath)) {
+      assert(!records.has(contentId), `Duplicate Chinese FAQ contentId=${contentId}`);
+      records.set(contentId, record);
+    }
+  }
+  assert.equal(records.size, EXPECTED_CHINESE_COUNT, `Expected ${EXPECTED_CHINESE_COUNT} Chinese FAQ records`);
+  const { routeIdentity } = loadSourceContext();
+  assert(
+    [...records.keys()].some((contentId) => !routeIdentity.byContentId.has(contentId)),
+    'Expected at least one Chinese-only FAQ identity absent from the English route registry',
+  );
+  return [...records.values()]
+    .sort((left, right) => left.contentId.localeCompare(right.contentId, 'en'))
+    .map((record) => ({ ...record, variant, routeKey: record.contentId }));
+}
+
+function verifyFaqHtml(record) {
+  const route = `/faq/${record.routeKey}`;
+  try {
+    const { htmlPath, html } = resolveHtml(route);
+    const expectedMetadata = normalizeFaqMetadataPolicy({
+      title: record.Title,
+      description: record.Description
+    });
+    assert.equal(getTitle(html), expectedMetadata.title, 'title mismatch');
+    assert.equal(getMetaContent(html, 'name', 'description'), expectedMetadata.description, 'description mismatch');
+    assert.equal(getMetaContent(html, 'name', 'keywords'), serializeKeywords(record.Keywords), 'keywords mismatch');
+    const headings = [...html.matchAll(/<h1\b[^>]*>([\s\S]*?)<\/h1>/gi)].map((match) => stripHtml(match[1]));
+    assert.equal(headings.length, 1, 'must contain one H1');
+    assert.equal(headings[0], record.Question, 'H1/question identity drift');
+    assert(extractJsonLdQuestions(html).includes(record.Question), 'FAQ JSON-LD question identity drift');
+  } catch (error) {
+    throw new Error(
+      `[faq-metadata] variant=${record.variant} contentId=${record.contentId} route=${route} source=${path.relative(ROOT, record.sourcePath)}: ${error.message}`,
+    );
+  }
+}
+
+function verifyCaseInsensitiveExportCollisions(expectations) {
   if (process.platform !== 'darwin') return;
   const paths = new Map();
-  for (const record of artifact.records) {
-    const route = routeIdentity.byContentId.get(record.contentId);
-    const exportPath = path.join(OUT_DIR, 'faq', `${route.canonicalSlug}.html`);
+  for (const record of expectations) {
+    const exportPath = path.join(OUT_DIR, 'faq', `${record.routeKey}.html`);
     const key = exportPath.toLowerCase();
     const previous = paths.get(key);
-    if (previous && previous !== route.canonicalSlug) {
+    if (previous && previous !== record.routeKey) {
       const previousPath = path.join(OUT_DIR, 'faq', `${previous}.html`);
       const bothExist = fs.existsSync(previousPath) && fs.existsSync(exportPath);
       const sameFile = bothExist &&
         fs.realpathSync.native(previousPath) === fs.realpathSync.native(exportPath);
       if (!sameFile) {
-        paths.set(key, route.canonicalSlug);
+        paths.set(key, record.routeKey);
         continue;
       }
       throw new Error(
-        `[faq-metadata] macOS case-insensitive export collision: ${previous} and ${route.canonicalSlug}; run --html on a case-sensitive build host`,
+        `[faq-metadata] macOS case-insensitive export collision: ${previous} and ${record.routeKey}; run --html on a case-sensitive build host`,
       );
     }
-    paths.set(key, route.canonicalSlug);
+    paths.set(key, record.routeKey);
   }
 }
 
-function verifyHtmlExport(artifact, faqRecords, routeIdentity) {
-  const faqById = new Map(faqRecords.map((record) => [record.contentId, record]));
-  verifyCaseInsensitiveExportCollisions(artifact, routeIdentity);
-  for (const record of artifact.records) {
-    const route = routeIdentity.byContentId.get(record.contentId);
-    assert(route, `${record.contentId} is missing from the route registry`);
-    verifyFaqHtml(record, { ...route, authored: faqById.get(record.contentId) });
-  }
-  return artifact.records.length;
+function verifyHtmlExport(variant) {
+  const expectations = buildOwnerExpectationSet(variant);
+  verifyCaseInsensitiveExportCollisions(expectations);
+  for (const record of expectations) verifyFaqHtml(record);
+  return expectations.length;
 }
 
-function main(argv = process.argv.slice(2)) {
-  const htmlMode = argv.includes('--html');
-  const unexpected = argv.filter((arg) => arg !== '--html');
-  assert.equal(unexpected.length, 0, `Unknown arguments: ${unexpected.join(', ')}`);
+function parseArgs(argv, env = process.env) {
+  const options = { html: false, variant: undefined };
+  for (let index = 0; index < argv.length; index += 1) {
+    const token = argv[index];
+    if (token === '--html') options.html = true;
+    else if (token === '--variant') {
+      const variant = argv[++index];
+      if (!variant) throw new Error('--variant requires io or cn');
+      if (!['io', 'cn'].includes(variant)) throw new Error(`Unsupported --variant: ${variant}; use io or cn`);
+      options.variant = variant;
+    } else {
+      throw new Error(`Unknown argument: ${token}`);
+    }
+  }
+  if (options.variant && !options.html) throw new Error('--variant requires --html');
+  if (options.html && !options.variant) {
+    const variant = env.NEXT_PUBLIC_SITE_VARIANT;
+    if (!['io', 'cn'].includes(variant)) throw new Error('--html requires --variant io|cn or NEXT_PUBLIC_SITE_VARIANT=io|cn');
+    options.variant = variant;
+  }
+  return options;
+}
+
+function main(argv = process.argv.slice(2), env = process.env) {
+  const options = parseArgs(argv, env);
   const { artifact, faqRecords, routeIdentity } = loadSourceContext();
   const fallbackRecords = verifyCatalogOverlay(artifact, faqRecords);
   verifyFailureDiagnostics(artifact, faqRecords, routeIdentity);
-  if (htmlMode) {
-    const checked = verifyHtmlExport(artifact, faqRecords, routeIdentity);
+  if (options.html) {
+    const checked = verifyHtmlExport(options.variant);
     console.log(
-      `[verify-faq-metadata] passed source + HTML checks (${checked} mapped, ${fallbackRecords.length} fallback)`,
+      `[verify-faq-metadata] passed source + HTML checks (${options.variant}, ${checked} FAQ pages; ${artifact.records.length} mapped, ${fallbackRecords.length} fallback)`,
     );
     return;
   }
@@ -274,9 +400,13 @@ function main(argv = process.argv.slice(2)) {
   );
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(error.message);
-  process.exitCode = 1;
+if (require.main === module) {
+  try {
+    main();
+  } catch (error) {
+    console.error(error.message);
+    process.exitCode = 1;
+  }
 }
+
+module.exports = { parseArgs, buildOwnerExpectationSet };

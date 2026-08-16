@@ -16,6 +16,8 @@ const NEXT_DIR = path.join(ROOT, '.next');
 const OUT_DIR = path.join(ROOT, 'out');
 const RETAIN_DIR = path.join(ROOT, '.release-artifacts');
 const EXPECTED_FAQ_COUNTS = { io: 1400, cn: 1490 };
+const P1_BASELINE_KIB = 266.9;
+const P1_BUDGET_KIB = 260;
 const GENERATED_PUBLIC_PATHS = [
   'public/llms.txt',
   'public/robots.txt',
@@ -252,19 +254,13 @@ function runVariantChecks(failures, variant, env) {
     ['P1 HTML verification', ['verify:p1']],
     ['P2 HTML verification', ['verify:p2']],
     ['i18n SEO HTML verification', ['verify:i18n-seo']],
+    ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html', '--variant', variant]],
     [
       'FAQ SEO graph HTML verification',
       ['verify:faq-seo-graph', '--', '--html', '--out-dir', 'out', '--variant', variant]
     ],
     ['FAQ redirect artifact verification', ['verify:faq-redirects']]
   ];
-  if (variant === 'io') {
-    checks.splice(4, 0, ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html']]);
-  } else {
-    console.log(
-      '[verify-release] FAQ metadata HTML verification (cn) skipped: approved English metadata is rendered on the io owner export; source metadata checks already passed',
-    );
-  }
   for (const [label, args] of checks) npmStep(failures, `${label} (${variant})`, args, env, variant);
 
   try {
@@ -282,6 +278,25 @@ function runVariantChecks(failures, variant, env) {
   return true;
 }
 
+function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) {
+  for (const failure of failures.slice(startIndex)) {
+    const budgetMatch = failure.output.match(
+      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/,
+    );
+    if (!failure.label.startsWith('P1 HTML verification') || !budgetMatch) continue;
+    const currentKib = Number.parseFloat(budgetMatch[1]);
+    const deltaKib = currentKib - P1_BASELINE_KIB;
+    advisories.push({
+      ...failure,
+      label: 'P1 historical baseline comparison',
+      output:
+        `current=${currentKib.toFixed(1)} KiB gzip; c77cf48 APFS baseline=${P1_BASELINE_KIB.toFixed(1)} KiB gzip; ` +
+        `delta=${deltaKib >= 0 ? '+' : ''}${deltaKib.toFixed(1)} KiB; budget=${P1_BUDGET_KIB} KiB; ` +
+        `command=${failure.command}; variant=${failure.variant}`
+    });
+  }
+}
+
 function reportFailures(failures, advisories, retainedPaths) {
   if (!failures.length && !advisories.length) return;
   if (failures.length) console.error(`\n[verify-release] failed with ${failures.length} check(s)`);
@@ -296,7 +311,6 @@ function reportFailures(failures, advisories, retainedPaths) {
       console.warn(`\n- ${advisory.label}${advisory.variant ? ` [variant=${advisory.variant}]` : ''}`);
       console.warn(`  command: ${advisory.command}`);
       console.warn(`  evidence: ${advisory.output}`);
-      console.warn(`  baseline: c77cf48 APFS io build measured 266.9 KiB gzip against the same 260 KiB budget`);
     }
   }
   if (failures.length) {
@@ -355,20 +369,8 @@ function main() {
       clearBuildArtifacts();
       const env = variantEnvironment(variant);
       const beforeFailures = failures.length;
-      const beforeVariantFailures = failures.length;
       runVariantChecks(failures, variant, env);
-      for (let index = failures.length - 1; index >= beforeVariantFailures; index -= 1) {
-        const failure = failures[index];
-        const budgetMatch = failure.output.match(
-          /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/,
-        );
-        if (!failure.label.startsWith('P1 HTML verification') || !budgetMatch) continue;
-        failures.splice(index, 1);
-        advisories.push({
-          ...failure,
-          output: `${budgetMatch[0]}; accepted as the measured pre-Phase1 budget drift advisory`,
-        });
-      }
+      appendP1HistoricalBaselineAdvisories(failures, beforeFailures, advisories);
       const variantFailed = failures.length > beforeFailures;
       if (variantFailed && options.keepArtifacts) {
         try {
@@ -398,9 +400,13 @@ function main() {
   }
 }
 
-try {
-  main();
-} catch (error) {
-  console.error(`[verify-release] ${error.message}`);
-  process.exitCode = 1;
+if (require.main === module) {
+  try {
+    main();
+  } catch (error) {
+    console.error(`[verify-release] ${error.message}`);
+    process.exitCode = 1;
+  }
 }
+
+module.exports = { appendP1HistoricalBaselineAdvisories };

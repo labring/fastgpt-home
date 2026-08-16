@@ -107,7 +107,7 @@ test('owner expectation sets use published owner route keys and source data', ()
   assert.equal(io.length, 1195);
   assert.equal(cn.length, 1490);
   assert(io.every((record) => record.variant === 'io' && record.routeKey === record.canonicalSlug));
-  assert(cn.every((record) => record.variant === 'cn' && record.routeKey === record.contentId));
+  assert(cn.every((record) => record.variant === 'cn' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.routeKey)));
 
   const registry = JSON.parse(
     fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8'),

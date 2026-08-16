@@ -3,7 +3,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const vm = require('node:vm');
-const { getPublishedFaqIds } = require('./lib/redirects');
+const { getPublishedFaqIds, parseNginxRedirectMap } = require('./lib/redirects');
 const {
   getCanonicalBaseUrl,
   getDefaultLocale,
@@ -18,7 +18,7 @@ const variant = resolveSiteVariant();
 const defaultLocale = getDefaultLocale(variant);
 const baseUrls = getProductionBaseUrls();
 const baseUrl = getCanonicalBaseUrl(variant);
-const encodedFaqId = 'Why-is-few-shot-learning-useful%3F';
+const encodedFaqId = 'why-is-few-shot-learning-useful';
 const techPath = '/tutorial/private-deployment-topology';
 const compareSlugs = [
   'dify-vs-fastgpt',
@@ -42,7 +42,7 @@ const localePaths = {
 };
 const siteLocaleCodes = getPublishedLocaleCodes(variant);
 const faqId = getPublishedFaqIds(rootDir).english.find(
-  (id) => id === 'How-to-check-the-number',
+  (id) => id === 'how-to-check-the-number',
 );
 if (!faqId) throw new Error('Missing stable bilingual FAQ fixture in the route registry');
 
@@ -173,11 +173,7 @@ function parseWorkerRedirects() {
 }
 
 function parseNginxRedirects() {
-  return new Map(
-    [...read('.next/nginx-redirects.conf').matchAll(/^  "([^"]+)" "([^"]+)";$/gm)].map(
-      (match) => [match[1], match[2]]
-    )
-  );
+  return parseNginxRedirectMap(read('.next/nginx-redirects.conf'));
 }
 
 function verifyFaqRedirects(redirects, prefix, targetBaseUrl, ids) {

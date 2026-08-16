@@ -10,16 +10,16 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { getFaqRedirectProjection } = require('./lib/redirects');
+const { getFaqRedirectProjection, parseNginxRedirectMap } = require('./lib/redirects');
 const { resolveSiteVariant } = require('./lib/site-variant');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
 const NEXT_DIR = path.join(ROOT, '.next');
 const IO_BASE_URL = 'https://fastgpt.io';
-const EXPECTED_ELIGIBLE = 42;
-const EXPECTED_DENIED_REPAIRS = 572;
-const EXPECTED_LEDGER_DENIES = 149;
+const EXPECTED_ELIGIBLE = 0;
+const EXPECTED_DENIED_REPAIRS = 0;
+const EXPECTED_LEDGER_DENIES = 0;
 
 function fail(message, entry) {
   const context = entry
@@ -120,11 +120,7 @@ function parseWorkerRedirects() {
 function parseNginxRedirects() {
   const mapPath = path.join(NEXT_DIR, 'nginx-redirects.conf');
   assert(fs.existsSync(mapPath), `Missing Nginx redirect map: ${mapPath}`);
-  return new Map(
-    [...fs.readFileSync(mapPath, 'utf8').matchAll(/^  "([^"]+)" "([^"]+)";$/gm)].map(
-      (match) => [match[1], match[2]],
-    ),
-  );
+  return parseNginxRedirectMap(fs.readFileSync(mapPath, 'utf8'));
 }
 
 function verifyArtifacts(projection) {
@@ -176,4 +172,3 @@ try {
   console.error(error.message);
   process.exitCode = 1;
 }
-

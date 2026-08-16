@@ -17,7 +17,8 @@ const REGISTRY_PATH = path.join(ROOT, 'src/faq/generated-en-route-registry.json'
 const LOCALIZED_ROUTE = path.join(ROOT, 'src/app/[lang]/faq/[id]/page.tsx');
 const ROOT_ROUTE = path.join(ROOT, 'src/app/faq/[id]/page.tsx');
 const SAFE_REPAIRED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const SAFE_PRESERVED_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
+const SAFE_SOURCE_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
+const SAFE_PRESERVED_SLUG = SAFE_REPAIRED_SLUG;
 const EVIDENCE_SOURCES = new Set(['week04-online-url', 'repository-current-key']);
 
 function unwrapExpression(expression) {
@@ -129,7 +130,7 @@ function verifyRegistry(records, evidence, registry) {
     assert(['preserved', 'repaired'].includes(entry.routeStatus), `Invalid route status ${entry.contentId}`);
     assert(['none', 'no-redirect'].includes(entry.collisionDisposition), `Invalid collision disposition ${entry.contentId}`);
     if (entry.routeStatus === 'preserved') {
-      assert.equal(entry.sourceSlug, entry.canonicalSlug, `Preserved slug changed for ${entry.contentId}`);
+      assert.equal(entry.sourceSlug.toLowerCase(), entry.canonicalSlug, `Preserved slug was not normalized for ${entry.contentId}`);
       assert.equal(entry.collisionDisposition, 'none', `Collided record was preserved ${entry.contentId}`);
     } else {
       assert(SAFE_REPAIRED_SLUG.test(entry.canonicalSlug), `Repaired slug is not lowercase ${entry.contentId}`);
@@ -169,11 +170,11 @@ function verifyRegistry(records, evidence, registry) {
   const preserved = registry.records.filter((entry) => entry.routeStatus === 'preserved');
   assert(preserved.length > 0, 'No healthy source slugs were preserved');
   assert(
-    preserved.some((entry) => entry.evidenceSource === 'week04-online-url' && /[A-Z]/.test(entry.canonicalSlug)),
-    'Mixed-case Week04 source slugs were not preserved',
+    preserved.some((entry) => entry.evidenceSource === 'week04-online-url'),
+    'Week04 source slugs were not retained',
   );
   for (const entry of registry.records) {
-    if (!SAFE_PRESERVED_SLUG.test(entry.sourceSlug)) {
+    if (!SAFE_SOURCE_SLUG.test(entry.sourceSlug)) {
       assert.equal(entry.routeStatus, 'repaired', `Unsafe source was preserved ${entry.contentId}`);
     }
     if (entry.collisionDisposition === 'no-redirect') {

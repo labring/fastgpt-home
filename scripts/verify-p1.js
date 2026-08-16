@@ -25,7 +25,7 @@ const chineseDescription =
 const chineseFaqDescription =
   '在PyTorch中使用sum(p.numel() for p in model.parameters())，在TensorFlow/Keras中使用model.count_params()，可查看模型中所有可训练权重的总数。';
 const faqId = getPublishedFaqIds(rootDir).english.find(
-  (id) => id === 'How-to-check-the-number',
+  (id) => id === 'how-to-check-the-number',
 );
 if (!faqId) throw new Error('Missing stable bilingual FAQ fixture in the route registry');
 

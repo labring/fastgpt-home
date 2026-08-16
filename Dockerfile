@@ -59,4 +59,5 @@ COPY --from=builder /app/out /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY nginx-security-headers.conf /etc/nginx/security-headers.conf
 COPY --from=builder /app/.next/nginx-redirects.conf /etc/nginx/generated-redirects.conf
+COPY nginx-embeddable-security-headers.conf /etc/nginx/embeddable-security-headers.conf
 RUN nginx -t

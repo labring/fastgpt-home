@@ -6,9 +6,9 @@ current_phase: 4
 current_phase_name: Redirects and Release Gate
 status: blocked
 stopped_at: Release gate blocked by P1 initial JavaScript budget
-last_updated: "2026-08-16T14:25:00+08:00"
+last_updated: "2026-08-16T15:19:03+08:00"
 last_activity: 2026-08-16
-last_activity_desc: Quick plan 260816-j3z restored fail-closed P1 handling and CN metadata HTML coverage; APFS replay remains human-needed
+last_activity_desc: Quick plan 260816-kq6 reused the validated metadata context; case-sensitive fixture replay remains human-needed
 progress:
   total_phases: 4
   completed_phases: 4
@@ -30,7 +30,7 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 Phase: 4 of 4 (Redirects and Release Gate)
 Plan: 1 of 1 — complete
 Status: Implementation complete; release gate blocked
-Last activity: 2026-08-16 — Completed quick task 260816-j3z: corrected release gate failure semantics and CN metadata coverage
+Last activity: 2026-08-16 — Completed quick task 260816-kq6: reused the validated FAQ metadata source context
 
 Progress: [██████████] 100%
 
@@ -68,6 +68,7 @@ Progress: [██████████] 100%
 - Phase 4: Project only repaired/non-collided legacy aliases, preserve Worker/Nginx query contracts, and deny every collision-ledger source.
 - Quick 260816-j3z: Verify approved metadata HTML on the io owner export (1,195 records) and authored metadata HTML on the cn owner export (1,490 records).
 - Quick 260816-j3z: Keep the inherited P1 260 KiB budget unchanged; c77cf48 at 266.9 KiB remains advisory context while the current 267.0 KiB P1 result blocks release.
+- Quick 260816-kq6: Thread one validated FAQ metadata source context through HTML verification; direct helper calls retain their fallback and fixture tests probe actual filesystem case sensitivity.
 
 ### Pending Todos
 
@@ -77,12 +78,14 @@ None yet.
 
 - Default macOS volumes collapse distinct preserved mixed-case route filenames; CI/release HTML verification requires a case-sensitive filesystem. A temporary case-sensitive APFS workspace verified io metadata HTML for 1,195 pages and cn metadata HTML for 1,490 pages.
 - P1 initial JavaScript gzip is 267.0 KiB on the retained case-sensitive cn artifact against the unchanged 260 KiB budget. c77cf48 APFS at 266.9 KiB is historical advisory context. `npm run verify:release -- --keep-artifacts` exits 1 until product optimization satisfies P1.
+- The 260816-kq6 1,195-fixture CLI regression is human-needed on this case-insensitive volume; its CaseProbe runs the full test on Linux and case-sensitive APFS.
 
 ### Quick Tasks Completed
 
 | # | Description | Date | Commit | Status | Directory |
 |---|-------------|------|--------|--------|-----------|
 | 260816-j3z | Correct release-gate P1 failure semantics and add owner-aware CN metadata HTML verification | 2026-08-16 | 61dd0ac, a368090 | Needs Review | [260816-j3z-fix-release-gate-p1-baseline-handling-an](./quick/260816-j3z-fix-release-gate-p1-baseline-handling-an/) |
+| 260816-kq6 | Reuse loaded FAQ metadata source context in HTML verification | 2026-08-16 | e08266b, c3e37ab | Needs Review | [260816-kq6-reuse-loaded-faq-metadata-source-context](./quick/260816-kq6-reuse-loaded-faq-metadata-source-context/) |
 
 ## Deferred Items
 

@@ -169,8 +169,17 @@ function getTitle(html) {
 
 function resolveHtml(route) {
   const relativeRoute = route.replace(/^\/+|\/+$/g, '');
-  const candidates = relativeRoute
-    ? [path.join(OUT_DIR, `${relativeRoute}.html`), path.join(OUT_DIR, relativeRoute, 'index.html')]
+  const encodedRoute = relativeRoute
+    .split('/')
+    .filter(Boolean)
+    .map((segment) => encodeURIComponent(segment))
+    .join('/');
+  const routes = [...new Set([relativeRoute, encodedRoute].filter(Boolean))];
+  const candidates = routes.length
+    ? routes.flatMap((candidateRoute) => [
+        path.join(OUT_DIR, `${candidateRoute}.html`),
+        path.join(OUT_DIR, candidateRoute, 'index.html')
+      ])
     : [path.join(OUT_DIR, 'index.html')];
   const htmlPath = candidates.find((candidate) => fs.existsSync(candidate));
   assert(htmlPath, `Missing static HTML for ${route}; checked ${candidates.join(', ')}`);

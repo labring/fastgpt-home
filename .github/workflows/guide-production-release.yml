@@ -62,7 +62,7 @@ jobs:
       - name: Prepare immutable archives from retained trees only
         run: |
           node scripts/release-artifact.js package --out-dir "$RELEASE_ROOT/cn/out" --variant cn --source-commit "$GITHUB_SHA" --rollback-target '${{ inputs.cn_rollback_target }}' --archive-dir release-bundle/cn
-          node scripts/release-artifact.js package --out-dir "$RELEASE_ROOT/io/out" --variant io --source-commit "$GITHUB_SHA" --rollback-target '${{ inputs.io_rollback_target }}' --archive-dir release-bundle/io
+          node scripts/release-artifact.js package --out-dir "$RELEASE_ROOT/io/out" --variant io --source-commit "$GITHUB_SHA" --rollback-target '${{ inputs.io_rollback_target }}' --inject-release-headers --archive-dir release-bundle/io
       - uses: actions/upload-artifact@v4
         with:
           name: guide-release-bundle-${{ github.sha }}

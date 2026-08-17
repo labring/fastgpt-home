@@ -110,6 +110,7 @@ test('production delivery consumes retained archives and records immutable provi
   const nginx = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
   const headers = fs.readFileSync(path.join(ROOT, 'public/_headers'), 'utf8');
   for (const marker of ['verify:release -- --retain-success-artifacts', 'sha256sum -c', 'tar -xzf', 'target: release-runtime', 'docker/build-push-action@v5', 'kubectl set image', 'kubectl rollout status', 'cloudflare/wrangler-action@v3', 'pages deploy release-out', '--commit-hash', 'pages deployment list --project-name=fastgpt-home --json', 'rollbackTarget', 'provider-receipt']) assert(workflow.includes(marker), marker);
+  assert(workflow.includes('--inject-release-headers'));
   assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));
   assert.doesNotMatch(dockerfile.slice(dockerfile.indexOf('AS release-runtime')), /npm run build/);

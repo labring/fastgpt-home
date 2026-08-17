@@ -46,7 +46,7 @@ export async function GuideArticleRoute({ locale, slug }: { locale: GuidePublish
       />
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} locale={locale} />
-      <GuideArticlePage document={document} locale={locale} slug={entry.slug} />
+      <GuideArticlePage document={document} locale={locale} />
       <Footer t={dict.Home.footer} locale={locale} />
     </div>
   );

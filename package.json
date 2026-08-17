@@ -32,7 +32,9 @@
     "release:artifact-regression": "node --test scripts/release-artifact.test.js",
     "release:purge-cloudflare": "node scripts/purge-cloudflare-cache.js",
     "release:purge-cloudflare-regression": "node --test scripts/purge-cloudflare-cache.test.js",
-    "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
+    "verify:guide-live": "node scripts/verify-guide-live.js",
+    "verify:guide-live-regression": "node --test scripts/verify-guide-live.test.js",
+    "sync:w3-faq": "python3 scripts/sync:w3-faq.py",
     "verify:contact": "node scripts/verify-contact-page.js"
   },
   "dependencies": {

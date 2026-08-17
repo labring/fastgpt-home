@@ -73,9 +73,16 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
   2. A maintainer can produce clean case-sensitive cn and io production exports, each containing exactly one owned Guide hub and eight owned Guide article paths while retaining the existing initial-JavaScript release budget.
 
 **Plans**: 3 plans
+**Wave 1**
 
 - [ ] 07-01-PLAN.md — Add the registry-driven standalone Guide export verifier and exact dual-variant inventory.
+
+**Wave 2** *(blocked on Wave 1 completion)*
+
 - [ ] 07-02-PLAN.md — Prove every Guide artifact surface, diagnostic, route, case, and sitemap failure through isolated regressions.
+
+**Wave 3** *(blocked on Wave 2 completion)*
+
 - [ ] 07-03-PLAN.md — Compose the unified release gate and add case-sensitive Ubuntu plus container evidence.
 
 ### Phase 8: Production Delivery & Live Verification

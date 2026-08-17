@@ -96,6 +96,14 @@ test('release coordinator composes Guide checks around each fresh variant export
   assert(variantLoop.indexOf('runVariantChecks') < secondCleanup);
 });
 
+test('successful verified outputs can be retained before lifecycle cleanup', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  assert.match(source, /--retain-success-artifacts/);
+  assert.match(source, /retainSuccessArtifacts\(variant, options\.retainSuccessArtifacts\)/);
+  const variantLoop = source.slice(source.indexOf('for (const variant of variants)'));
+  assert(variantLoop.indexOf('retainSuccessArtifacts') < variantLoop.indexOf('clearBuildArtifacts()', variantLoop.indexOf('runVariantChecks')));
+});
+
 test('P1 successful evidence keeps the emitted KiB measurement', () => {
   const output = 'P1 verification passed for https://fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
   assert.equal(extractP1SuccessMeasurement(output), '259.8 KiB initial JavaScript gzip');

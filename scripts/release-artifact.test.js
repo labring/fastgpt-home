@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
+const packageJson = require('../package.json');
 
 const {
   buildManifest,
@@ -75,7 +76,10 @@ test('invalid release identity and drift include scoped diagnostics', () => {
   const { root, outDir } = createFixture('io');
   try {
     assert.throws(() => prepareReleaseOutput({ ...releaseOptions('io', outDir), rollbackTarget: '' }), /variant=io.*rollback/i);
-    assert.throws(() => prepareReleaseOutput({ ...releaseOptions('cn', outDir) }), /variant=cn.*route/i);
+    assert.throws(
+      () => prepareReleaseOutput({ ...releaseOptions('cn', outDir), expectedHost: 'https://fastgpt.io' }),
+      /variant=cn.*expected-host/i
+    );
 
     const prepared = prepareReleaseOutput(releaseOptions('io', outDir));
     fs.writeFileSync(path.join(outDir, 'assets', 'app.js'), 'changed');
@@ -87,4 +91,29 @@ test('invalid release identity and drift include scoped diagnostics', () => {
 
 test('packager import is silent and argument parsing stays fail-closed', () => {
   assert.equal(typeof packageReleaseArtifact, 'function');
+});
+
+test('archive and filesystem attacks are rejected before provider use', () => {
+  const { root, outDir } = createFixture('cn');
+  try {
+    const options = releaseOptions('cn', outDir);
+    const packaged = packageReleaseArtifact({ ...options, archiveDir: path.join(root, 'archives') });
+    const tamperedDigest = `${packaged.archiveDigest[0] === 'a' ? 'b' : 'a'}${packaged.archiveDigest.slice(1)}`;
+    fs.writeFileSync(`${packaged.archivePath}.sha256`, `${tamperedDigest}  archive.tar.gz\n`);
+    assert.throws(
+      () => verifyReleaseArtifact({ ...packaged }),
+      /variant=cn.*archive-digest/i
+    );
+
+    const symlinkPath = path.join(outDir, 'assets', 'outside');
+    fs.symlinkSync(os.tmpdir(), symlinkPath);
+    assert.throws(() => prepareReleaseOutput(options), /surface=filesystem.*symlink/i);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('package commands expose dependency-free release artifact regression', () => {
+  assert.equal(packageJson.scripts['release:artifact'], 'node scripts/release-artifact.js');
+  assert.equal(packageJson.scripts['release:artifact-regression'], 'node --test scripts/release-artifact.test.js');
 });

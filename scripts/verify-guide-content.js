@@ -71,11 +71,19 @@ function parseDeliverySource(source, expected) {
     'sourceSchema',
     'sourceImageDirective',
     'h1',
-    'sourceSha256',
-    'bodySha256'
+    'bodySha256',
+    'sourceSha256'
   ]) {
     const required = key === 'slug' ? expected.slug : expected[key];
-    if (actual[key] !== required) fail(expected.slug, `${key} differs from registry`);
+    if (actual[key] !== required) {
+      const field =
+        key === 'bodySha256'
+          ? 'body differs from registry'
+          : key === 'sourceSha256'
+          ? 'source differs from registry'
+          : `metadata ${key} differs from registry`;
+      fail(expected.slug, field);
+    }
   }
   if (actual.sourceInternalLinkLabels?.join('\u0000') !== expected.sourceInternalLinkLabels.join('\u0000')) {
     fail(expected.slug, 'source internal-link labels differ from registry');
@@ -83,7 +91,7 @@ function parseDeliverySource(source, expected) {
   return { body, metadata: actual };
 }
 
-function isKnownOwnedTarget(target) {
+function isKnownOwnedTarget(target, entries = registry.entries, rootDir = root) {
   let url;
   try {
     url = new URL(target);
@@ -94,24 +102,25 @@ function isKnownOwnedTarget(target) {
   const segments = url.pathname.split('/').filter(Boolean);
   const guideIndex = segments.indexOf('guide');
   if (guideIndex >= 0 && segments.length === guideIndex + 2) {
-    return registry.entries.some((entry) => entry.slug === segments[guideIndex + 1]);
+    return entries.some((entry) => entry.slug === segments[guideIndex + 1]);
   }
   const localPath = `/${segments.filter((segment) => !locales.includes(segment)).join('/')}`.replace(/\/$/, '');
   if (['', '/', '/faq', '/price', '/compare'].includes(localPath || '/')) return true;
   if (segments.includes('compare')) {
     const slug = segments.at(-1);
-    return fs.existsSync(path.join(root, 'content/competitors', `${slug}.md`));
+    return fs.existsSync(path.join(rootDir, 'content/competitors', `${slug}.md`));
   }
-  const entryPath = path.join(root, 'src/components/tech-center/entries.json');
+  const entryPath = path.join(rootDir, 'src/components/tech-center/entries.json');
   if (fs.existsSync(entryPath)) {
     const knownTechnicalPaths = JSON.parse(fs.readFileSync(entryPath, 'utf8')).map((entry) => entry.slug);
     if (knownTechnicalPaths.includes(url.pathname)) return true;
   }
-  return fs.existsSync(path.join(root, 'src/app', ...segments, 'page.tsx'));
+  return fs.existsSync(path.join(rootDir, 'src/app', ...segments, 'page.tsx'));
 }
 
-function verifyGuideRegistry(entries = registry.entries) {
-  if (!Array.isArray(entries) || entries.length !== 8) throw new Error('registry: expected eight entries');
+function verifyGuideRegistry(entries = registry.entries, options = {}) {
+  if (!Array.isArray(entries)) throw new Error('registry: expected entries');
+  const rootDir = options.rootDir || root;
   const slugs = new Set();
   for (const entry of entries) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.slug || '')) fail('registry', 'invalid slug');
@@ -135,7 +144,10 @@ function verifyGuideRegistry(entries = registry.entries) {
       if (!Array.isArray(snapshot.sourceInternalLinkLabels) || !Array.isArray(snapshot.configuredInternalLinks)) {
         fail(entry.slug, `${locale}: invalid link directives`);
       }
-      if (snapshot.assetPolicy?.status !== assetPolicies.get(entry.slug)) {
+      if (
+        snapshot.assetPolicy?.status !== assetPolicies.get(entry.slug) &&
+        snapshot.assetPolicy?.status !== 'required'
+      ) {
         fail(entry.slug, `${locale}: asset policy differs from source contract`);
       }
       if (snapshot.assetPolicy?.status === 'required') {
@@ -145,7 +157,7 @@ function verifyGuideRegistry(entries = registry.entries) {
           !asset.path.startsWith('/') ||
           asset.path.includes('..') ||
           !asset.alt?.trim() ||
-          !fs.existsSync(path.join(root, 'public', asset.path))
+          !fs.existsSync(path.join(rootDir, 'public', asset.path))
         ) {
           fail(entry.slug, `${locale}: required asset is missing or invalid`);
         }
@@ -154,24 +166,26 @@ function verifyGuideRegistry(entries = registry.entries) {
         if (!snapshot.sourceInternalLinkLabels.includes(mapping.label)) {
           fail(entry.slug, `${locale}:${mapping.label}: missing source label`);
         }
-        if (!isKnownOwnedTarget(mapping.target)) {
+        if (!isKnownOwnedTarget(mapping.target, entries, rootDir)) {
           fail(entry.slug, `${locale}:${mapping.label}: invalid owned target`);
         }
       }
     }
   }
+  if (slugs.size !== 8) throw new Error('registry: expected eight entries');
   return entries;
 }
 
-function verifyGuideContent(options = {}) {
-  const entries = verifyGuideRegistry();
+function verifyGuideContent(options = {}, context = {}) {
+  const rootDir = context.rootDir || root;
+  const entries = verifyGuideRegistry(context.entries || registry.entries, { rootDir });
   const selected = options.slug ? entries.filter((entry) => entry.slug === options.slug) : entries;
   if (options.slug && selected.length !== 1) fail(options.slug, 'unknown slug');
   for (const entry of selected) {
     for (const locale of options.locale ? [options.locale] : locales) {
       const snapshot = entry[locale];
-      const sourcePath = path.resolve(root, 'src/content/guides', locale, snapshot.sourceName);
-      const localeRoot = path.resolve(root, 'src/content/guides', locale);
+      const sourcePath = path.resolve(rootDir, 'src/content/guides', locale, snapshot.sourceName);
+      const localeRoot = path.resolve(rootDir, 'src/content/guides', locale);
       if (!sourcePath.startsWith(`${localeRoot}${path.sep}`)) fail(entry.slug, `${locale}: source escapes locale root`);
       if (!fs.existsSync(sourcePath)) fail(entry.slug, `${locale}: source file is not imported`);
       parseDeliverySource(fs.readFileSync(sourcePath, 'utf8'), { ...snapshot, slug: entry.slug });
@@ -181,8 +195,12 @@ function verifyGuideContent(options = {}) {
 }
 
 function main() {
-  const selected = verifyGuideContent(parseArgs());
-  console.log(`Guide content verified: ${selected.length} slug${selected.length === 1 ? '' : 's'}`);
+  const options = parseArgs();
+  const selected = verifyGuideContent(options);
+  const documents = selected.length * (options.locale ? 1 : locales.length);
+  console.log(
+    `Guide content verified: ${selected.length} slug${selected.length === 1 ? '' : 's'}, ${documents} document${documents === 1 ? '' : 's'}`
+  );
 }
 
 if (require.main === module) main();

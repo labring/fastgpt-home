@@ -267,7 +267,7 @@ function runGuideSourceChecks(failures, env, variant) {
 }
 
 function extractP1SuccessMeasurement(output) {
-  return output.match(/P1 verification passed for [^:]+: ([0-9.]+ KiB initial JavaScript gzip)/)?.[1];
+  return output.match(/P1 verification passed for .*:\s*([0-9.]+ KiB initial JavaScript gzip)/)?.[1];
 }
 
 function runVariantChecks(failures, variant, env) {

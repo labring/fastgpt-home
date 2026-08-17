@@ -112,6 +112,7 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(workflow, /RELEASE_ROOT: release-root/);
   assert.doesNotMatch(workflow, /RELEASE_ROOT:.*runner\.temp/);
   assert.equal((workflow.match(/path: release-root/g) || []).length, 2);
+  assert.equal((workflow.match(/sha256sum -c "\$archive_name\.sha256"/g) || []).length, 2);
   for (const marker of ['verify:release -- --retain-success-artifacts', 'sha256sum -c', 'tar -xzf', 'target: release-runtime', 'docker/build-push-action@v5', 'kubectl set image', 'kubectl rollout status', 'cloudflare/wrangler-action@v3', 'pages deploy release-out', '--commit-hash', 'pages deployment list --project-name=', 'rollbackTarget', 'provider-receipt']) assert(workflow.includes(marker), marker);
   const cnRollback = workflow.indexOf('Capture provider-derived CN rollback target');
   const cnBuild = workflow.indexOf('docker/build-push-action@v5');

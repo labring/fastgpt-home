@@ -144,7 +144,10 @@ jobs:
         id: cn_identity
         run: |
           archive=$(find release-bundle/cn -name '*.tar.gz' -print -quit)
-          sha256sum -c "$archive.sha256"
+          test -n "$archive" || { echo 'blocked: CN release archive missing'; exit 1; }
+          archive_dir=$(dirname "$archive")
+          archive_name=$(basename "$archive")
+          (cd "$archive_dir" && sha256sum -c "$archive_name.sha256")
           mkdir release-out && tar -xzf "$archive" -C .
           test -f release-out/__release/manifest.json
           node scripts/release-artifact.js verify --out-dir release-out --variant cn --archive "$archive"
@@ -244,7 +247,10 @@ jobs:
         id: io_identity
         run: |
           archive=$(find release-bundle/io -name '*.tar.gz' -print -quit)
-          sha256sum -c "$archive.sha256"
+          test -n "$archive" || { echo 'blocked: IO release archive missing'; exit 1; }
+          archive_dir=$(dirname "$archive")
+          archive_name=$(basename "$archive")
+          (cd "$archive_dir" && sha256sum -c "$archive_name.sha256")
           mkdir release-out && tar -xzf "$archive" -C .
           node scripts/release-artifact.js verify --out-dir release-out --variant io --archive "$archive"
           ARCHIVE="$archive" node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const a=fs.readFileSync(process.env.ARCHIVE+'.sha256','utf8').trim().split(/\\s+/)[0];for(const [k,v] of Object.entries({revision:m.releaseRevision,tree:m.treeDigest,archive:a}))fs.appendFileSync(process.env.GITHUB_OUTPUT,k+'='+v+'\\n')"

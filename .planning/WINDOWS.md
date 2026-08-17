@@ -1,10 +1,10 @@
 ---
 schema_version: 1
-open_count: 2
+open_count: 3
 waived_count: 0
 fixed_count: 0
-total_count: 2
-last_updated: 2026-08-17T04:15:43.205Z
+total_count: 3
+last_updated: 2026-08-17T05:36:50.690Z
 ---
 
 # Broken Windows Ledger
@@ -17,6 +17,7 @@ last_updated: 2026-08-17T04:15:43.205Z
 |----|-------|------|------|------|-------------|--------|--------|-------------|-------------|
 | 1 | quick | skipped-test | scripts/verify-release.test.js |  | The fixture regression skips only on actually case-insensitive volumes; case-sensitive Linux and APFS hosts execute the complete 1,195-page CLI. | open |  | 2026-08-16T07:11:06.218Z |  |
 | 2 | 05 | deviation | scripts/verify-guide-content.js |  | The established full verifier validates both locale records but reports only verified slugs. | open |  | 2026-08-17T04:15:43.205Z |  |
+| 3 | 06 | deviation | src/lib/guideSeo.ts |  | Guide localized metadata now emits noindex-follow through the option-based helper. | open |  | 2026-08-17T05:36:50.690Z |  |
 
 ````json
 [
@@ -42,6 +43,18 @@ last_updated: 2026-08-17T04:15:43.205Z
     "status": "open",
     "reason": "",
     "recorded_at": "2026-08-17T04:15:43.205Z",
+    "resolved_at": null
+  },
+  {
+    "id": 3,
+    "kind": "deviation",
+    "phase": "06",
+    "file": "src/lib/guideSeo.ts",
+    "line": null,
+    "description": "Guide localized metadata now emits noindex-follow through the option-based helper.",
+    "status": "open",
+    "reason": "",
+    "recorded_at": "2026-08-17T05:36:50.690Z",
     "resolved_at": null
   }
 ]

@@ -5,14 +5,14 @@ milestone_name: Guide Content Center
 current_phase: 6
 current_phase_name: Guide Hubs, Articles & SEO Graph
 status: executing
-stopped_at: Completed 06-01-PLAN.md
-last_updated: "2026-08-17T05:28:36.986Z"
+stopped_at: Completed 06-02-PLAN.md
+last_updated: "2026-08-17T05:36:51.474Z"
 last_activity: 2026-08-17
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 8
-  completed_plans: 5
+  completed_plans: 6
 last_activity_desc: Published the closed root Guide article tracer and registry-backed SEO graph in 06-01.
 ---
 
@@ -28,11 +28,11 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 ## Current Position
 
 Phase: 6 — Guide Hubs, Articles & SEO Graph
-Plan: 2 of 4
-Status: executing
+Plan: 3 of 4
+Status: Ready to execute
 Last activity: 2026-08-17
 
-Progress: [██████░░░░] 63%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
@@ -60,6 +60,7 @@ Progress: [██████░░░░] 63%
 | Phase 05 P03 | 4m | 2 tasks | 7 files |
 | Phase 05 P04 | 8m | 2 tasks | 3 files |
 | Phase 06 P01 | 5m | 3 tasks | 9 files |
+| Phase 06 P02 | 3m | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -81,6 +82,9 @@ Progress: [██████░░░░] 63%
 - [Phase 6]: D-01 publishes closed owned root /guide/<slug> article routes.
 - [Phase 6]: Guide publication groups and 2026-08-11 date pairs are registry validation contracts.
 - [Phase 6]: Guide metadata, schema, and visible breadcrumbs share the owned URL projection.
+- [Phase ?]: Guide article H1, visible breadcrumbs, and JSON-LD names share one localized copy record.
+- [Phase ?]: Localized adapters retain their owned root canonicals and use noindex-follow metadata.
+- [Phase ?]: Asset and internal-link UI remains gated by validated registry records.
 
 ### Pending Todos
 
@@ -102,6 +106,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T05:28:36.978Z
-Stopped at: Completed 06-01-PLAN.md
+Last session: 2026-08-17T05:36:51.465Z
+Stopped at: Completed 06-02-PLAN.md
 Resume file: None

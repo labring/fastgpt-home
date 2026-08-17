@@ -2,11 +2,11 @@
 gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Guide Content Center
-current_phase: 5
-current_phase_name: Guide Content Contract
-status: verifying
-stopped_at: Completed 05-04-PLAN.md
-last_updated: "2026-08-17T04:24:30.016Z"
+current_phase: 6
+current_phase_name: Guide Hubs, Articles & SEO Graph
+status: planning
+stopped_at: Phase 5 complete; ready to plan Phase 6
+last_updated: "2026-08-17T04:33:54.279Z"
 last_activity: 2026-08-17
 last_activity_desc: Created the v1.1 Guide Content Center roadmap and requirement traceability.
 progress:
@@ -23,14 +23,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-16)
 
 **Core value:** Every in-scope SEO page has one stable canonical URL, renders its approved localized content and metadata, and is proven release-safe.
-**Current focus:** Phase 5 — Guide Content Contract
+**Current focus:** Phase 6 — Guide Hubs, Articles & SEO Graph
 
 ## Current Position
 
-Phase: 5 (Guide Content Contract) — EXECUTING
-Plan: 4 of 4
-Status: Phase complete — ready for verification
-Last activity: 2026-08-17 — Phase 5 execution started
+Phase: 6 — Guide Hubs, Articles & SEO Graph
+Plan: Not started
+Status: Ready to plan
+Last activity: 2026-08-17 — Phase 5 complete, transitioned to Phase 6
 
 Progress: [██████████] 100%
 
@@ -38,7 +38,7 @@ Progress: [██████████] 100%
 
 **Velocity:**
 
-- Total plans completed: 4
+- Total plans completed: 8
 - Average duration: 55m
 - Total execution time: 223 minutes
 
@@ -50,6 +50,7 @@ Progress: [██████████] 100%
 | 2 | 1 | 18m | 18m |
 | 3 | 1 | 35m | 35m |
 | 4 | 1 | - | - |
+| 5 | 4 | - | - |
 **Per-Plan Metrics:**
 
 | Plan | Duration | Tasks | Files |
@@ -97,6 +98,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T04:24:30.008Z
-Stopped at: Completed 05-04-PLAN.md
+Last session: 2026-08-17T04:33:54.271Z
+Stopped at: Phase 5 complete; ready to plan Phase 6
 Resume file: None

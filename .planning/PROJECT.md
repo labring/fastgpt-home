@@ -40,6 +40,9 @@ Every in-scope SEO page has one stable canonical URL, renders its approved local
 - ✓ Canonical, hreflang, list, related, static-param, and sitemap surfaces share the final route registry — Phase 3
 - ✓ A single release command verifies redirect safety, route identity, metadata, SEO graph, and static export evidence — Phase 4
 - ✓ Case-sensitive io and cn production exports prove complete final FAQ route coverage — Phase 4
+- ✓ Eight unique bilingual Guide slugs map to one approved Chinese and one approved English source — Phase 5
+- ✓ Guide bodies remove one leading delivery comment while preserving approved normalized content — Phase 5
+- ✓ Guide source contracts reject duplicate pairs, metadata/schema drift, invalid assets, and unresolved links with slug-specific failures — Phase 5
 
 ### Active
 
@@ -93,6 +96,9 @@ The v1.1 source package provides eight Chinese Markdown articles and eight Engli
 | End at release-ready code | The user selected implementation, verification, and production build as the delivery endpoint | Validated — Phase 4 |
 | Extend existing FAQ routing and metadata patterns | A single content path keeps static params, metadata, and redirects consistent | Validated — Phase 3 |
 | Publish Guide pages as paired same-slug routes on the two owned domains | The approved Week04 content and hreflang specification use this topology | — Pending |
+| Use one typed eight-pair Guide registry and server-only source boundary | Keeps source identity, body fidelity, and later route consumers reproducible | Validated — Phase 5 |
+| Preserve approved Guide bytes and exclude the English GSC appendix | Keeps the Week04 delivery package source-faithful and scoped to 8×2 articles | Validated — Phase 5 |
+| Keep asset requests and internal-link labels explicit until approved mappings exist | Prevents inferred assets or URLs from entering published content | Validated — Phase 5 |
 | Reuse existing content components for Guide | This keeps the milestone focused on publishing and SEO integrity | — Pending |
 | Include production deployment in v1.1 | The user selected production-live completion | — Pending |
 
@@ -114,4 +120,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-16 for milestone v1.1 initialization*
+*Last updated: 2026-08-17 after Phase 5*

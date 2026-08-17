@@ -73,6 +73,6 @@ COPY release-out/ /usr/share/nginx/html/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY nginx-security-headers.conf /etc/nginx/security-headers.conf
 RUN test -n "$RELEASE_SOURCE_COMMIT" && test -n "$RELEASE_TREE_DIGEST" && test -n "$RELEASE_ARTIFACT_ID" && test "$RELEASE_PROVIDER" = "kubernetes" \
-  && printf '' > /etc/nginx/generated-redirects.conf \
+  && printf '%s\n' 'map $uri $locale_redirect_target {' '  default "";' '}' > /etc/nginx/generated-redirects.conf \
   && sed -i "s/__RELEASE_REVISION__/$RELEASE_ARTIFACT_ID/g; s/__RELEASE_ARTIFACT__/$RELEASE_TREE_DIGEST/g" /etc/nginx/conf.d/default.conf \
   && nginx -t

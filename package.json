@@ -28,6 +28,8 @@
     "verify:guide-seo-graph": "node scripts/verify-guide-seo-graph.js && node --test scripts/verify-guide-seo-graph.test.js",
     "verify:guide-export": "node scripts/verify-guide-export.js",
     "verify:guide-export-regression": "node --test scripts/verify-guide-export.test.js",
+    "release:artifact": "node scripts/release-artifact.js",
+    "release:artifact-regression": "node --test scripts/release-artifact.test.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
     "verify:contact": "node scripts/verify-contact-page.js"
   },

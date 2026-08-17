@@ -21,7 +21,7 @@ type FooterT = {
     };
     links: {
       title: string;
-      items: { docs: string; learning: string; cases: string; tech: string };
+      items: { docs: string; faq: string; learning: string; cases: string; tech: string };
     };
     partner: { title: string };
     more: { title: string; email: string; lanqiao: string; book: string };
@@ -83,7 +83,12 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
                 external: false
               }
             ]
-          : [])
+          : []),
+        {
+          label: t.links.items.faq,
+          href: getDefaultLocalePath(normalizedLocale, '/faq'),
+          external: false
+        }
       ]
     },
     {

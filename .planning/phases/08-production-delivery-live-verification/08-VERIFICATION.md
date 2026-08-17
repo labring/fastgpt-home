@@ -49,7 +49,7 @@ gaps:
 | # | Truth | Status | Evidence |
 | --- | --- | --- | --- |
 | 1 | A verified cn/io static tree becomes a content-addressed archive with prepared manifest, route inventory, tree digest, archive checksum, and rollback target. | ✓ VERIFIED | `npm run release:artifact-regression` passed 6/6; the packager consumes `buildGuideExpectation()` from the registry-backed export verifier. |
-| 2 | The local workflow captures provider-derived rollback state before mutation and records final immutable CN/IO provider receipts after successful deployment. | ✓ VERIFIED | The CN job reads the current digest-pinned Kubernetes image before build/mutation, waits for `kubectl rollout status`, then writes a receipt with `rollout.status: completed`. The IO job reads the current Pages deployment ID/URL before `pages deploy`, writes its final ID/URL plus `previousDeploymentUrl`, and retains `io-purge.json`. `verify-release.test.js` passes its ordering/receipt structural test; `verify-guide-live.test.js` rejects a CN receipt without completed rollout. |
+| 2 | The local workflow captures provider-derived rollback state before mutation and records final immutable CN/IO provider receipts after successful deployment. | ✓ VERIFIED | The CN job authenticates GHCR, preserves an existing digest or resolves a tag with `docker buildx imagetools inspect`, compares the normalized `repo@sha256:...` target, waits for `kubectl rollout status`, then writes a receipt with `rollout.status: completed`. The IO job reads the active production Pages deployment ID/URL before `pages deploy`; a first publish may use the explicit `initial-production` sentinel and records `previousDeploymentUrl: null`, while subsequent releases require the exact active production ID. `verify-release.test.js` covers workflow ordering and identity guards; `verify-guide-live.test.js` covers the first-publish receipt shape. |
 | 3 | The native live-matrix command fails closed and a local 18-page fixture proves route SEO, cache, manifest-header, sitemap, and receipt validation. | ✓ VERIFIED | `npm run verify:guide-live-regression` passed 4/4, including the complete 18-route fixture and CN receipt completion guard. |
 | 4 | An operator currently has an executable published production workflow with real provider revisions and rollback targets recorded. | ✗ FAILED | GitHub API probes returned HTTP 404 for `.github/workflows/guide-production-release.yml` on `main` in both `yangchuansheng/fastgpt-home` and `labring/fastgpt-home`; no real provider receipt exists in the worktree. |
 | 5 | Both public hubs and all 16 public article URLs return final 200 with H1, canonical, alternates, indexability, sitemap, cache, and deployed-revision evidence. | ✗ FAILED | The fresh baseline records 18 Guide route 404s and two manifest 404s. Both sitemaps return 200, while their Guide rows and release identity cannot be present before promotion. |
@@ -77,7 +77,7 @@ gaps:
 | --- | --- | --- | --- | --- |
 | `release-artifact.js` | Guide registry | `verify-guide-export.js` → `buildGuideExpectation()` | ✓ WIRED | The indirect registry link is present in source; the generic link query misses the indirect import. |
 | `verify-release.js` | retained `cn/io/out` | `--retain-success-artifacts` before cleanup | ✓ WIRED | The workflow supplies `$RELEASE_ROOT`; packaging reads retained output only. |
-| CN archive | Kubernetes receipt | checksum → extract → `release-runtime` image → provider current digest → rollout → final receipt | ✓ WIRED LOCALLY | Dispatch target is compared with `kubectl get`; completion is required before receipt write. |
+| CN archive | Kubernetes receipt | checksum → extract → `release-runtime` image → provider current tag/digest normalized through GHCR → rollout → final receipt | ✓ WIRED LOCALLY | Dispatch target is compared with the normalized `kubectl get` image; completion is required before receipt write. |
 | IO archive | Pages receipt and purge evidence | checksum → extract → current Pages ID/URL → Wrangler deploy → final receipt → purge JSON | ✓ WIRED LOCALLY | The receipt carries prior deployment URL and the workflow retains `io-purge.json`. |
 | Provider receipts | live verifier | evidence job passes both `--provider-evidence` paths | ✓ WIRED LOCALLY | Live verifier requires CN digest-pinned Kubernetes reference and completed rollout, plus IO Pages deployment ID/URL. |
 | Local workflow | production providers | published GitHub Actions workflow and real credentials | ✗ NOT WIRED REMOTELY | Both probed default branches lack the workflow, so this link has no executable production path. |
@@ -88,7 +88,7 @@ gaps:
 | --- | --- | --- | --- |
 | Release archive | route inventory, tree and archive digests | retained Phase 7 output plus registry-backed expectations | Yes, in local regression fixtures | ✓ FLOWING |
 | CN release path | current image → rollback target → digest-pinned rollout → receipt | Kubernetes `kubectl get deployment` and build digest | Source path and ordering test pass; provider run absent | ⚠️ BLOCKED REMOTELY |
-| IO release path | previous ID/URL → rollback target → deployment ID/URL → purge evidence | Wrangler deployment lists and Pages deployment output | Source path and ordering test pass; provider run absent | ⚠️ BLOCKED REMOTELY |
+| IO release path | previous production ID/URL or `initial-production` sentinel → rollback target → deployment ID/URL → purge evidence | Wrangler deployment lists and Pages deployment output | Source path and ordering test pass; provider run absent | ⚠️ BLOCKED REMOTELY |
 | Public live report | response/status/headers/body digest → receipt comparison | public HTTP and explicit provider receipts | Public HTTP data flows; current release/receipts absent | ⚠️ BLOCKED |
 
 ### Behavioral Spot-Checks
@@ -121,7 +121,7 @@ gaps:
 
 ### Gaps Summary
 
-The local delivery workflow now enforces provider-derived rollback capture, final CN rollout receipts, IO prior-deployment and purge evidence, and completed-rollout receipt validation. Production evidence remains absent: the workflow has not reached either configured remote default branch, no authorized provider run has emitted receipts, and the public Guide release still returns 404. DEPLOY-01 and DEPLOY-02 remain blocked until that remote promotion and strict live verification complete.
+The local delivery workflow now enforces provider-derived rollback capture, CN tag-to-digest normalization through authenticated GHCR, explicit IO first-publish sentinel handling, final CN rollout receipts, IO prior-deployment and purge evidence, and completed-rollout receipt validation. Production evidence remains absent: the workflow has not reached either configured remote default branch, no authorized provider run has emitted receipts, and the public Guide release still returns 404. DEPLOY-01 and DEPLOY-02 remain blocked until that remote promotion and strict live verification complete.
 
 ---
 

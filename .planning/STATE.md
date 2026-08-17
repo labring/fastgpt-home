@@ -5,15 +5,15 @@ milestone_name: Guide Content Center
 current_phase: 8
 current_phase_name: Production Delivery & Live Verification
 status: planning
-stopped_at: Completed 08-02-PLAN.md
-last_updated: "2026-08-17T12:44:26.135Z"
+stopped_at: Phase 8 tooling complete; awaiting authorized provider promotion
+last_updated: "2026-08-17T12:54:13.088Z"
 last_activity: 2026-08-17
 last_activity_desc: Published the closed root Guide article tracer and registry-backed SEO graph in 06-01.
 progress:
   total_phases: 4
-  completed_phases: 3
+  completed_phases: 4
   total_plans: 14
-  completed_plans: 13
+  completed_plans: 14
 ---
 
 # Project State
@@ -32,7 +32,7 @@ Plan: Not started
 Status: Ready to plan
 Last activity: 2026-08-17 — Phase 7 complete, transitioned to Phase 8
 
-Progress: [█████████░] 93%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -67,6 +67,7 @@ Progress: [█████████░] 93%
 | Phase 06-guide-hubs-articles-seo-graph P04 | 5m | 2 tasks | 4 files |
 | Phase 08 P01 | 16m | 2 tasks | 3 files |
 | Phase 08 P02 | 18m | 2 tasks | 9 files |
+| Phase 08 P03 | 14m | 2 tasks | 6 files |
 
 ## Accumulated Context
 
@@ -97,6 +98,7 @@ Progress: [█████████░] 93%
 - [Phase ?]: Guide source graph regression uses isolated registry and source-map mutations; Phase 7 owns export evidence.
 - [Phase ?]: Prepared manifests identify verified trees while provider receipts carry deployed revisions.
 - [Phase ?]: Provider promotion consumes retained verified archives and fails before mutation when credentials or rollback targets are absent.
+- [Phase ?]: Live verification requires exact alternate clusters and explicit provider receipts; the current 404 public matrix is blocked evidence.
 
 ### Pending Todos
 
@@ -107,6 +109,7 @@ None yet.
 - Phase 5: Inspect the 16 supplied documents to confirm delivery-comment syntax and record a release decision for every ambiguous or absent required asset.
 - Phase 7: cn and io export verification requires Linux, Docker, or a case-sensitive APFS workspace to detect route-case collisions.
 - Phase 8: The repository documents cn image deployment; `fastgpt.io` needs a confirmed or implemented immutable artifact-and-deploy path, including cache purge and rollback evidence.
+- Production Guide deployment remains blocked: both public release manifests and all 18 Guide paths return 404; authorized CN/IO credentials and rollback targets are required.
 
 ## Deferred Items
 
@@ -118,6 +121,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T12:44:26.127Z
-Stopped at: Completed 08-02-PLAN.md
-Resume file: .planning/phases/08-production-delivery-live-verification/08-03-PLAN.md
+Last session: 2026-08-17T12:54:13.081Z
+Stopped at: Phase 8 tooling complete; awaiting authorized provider promotion
+Resume file: .planning/phases/08-production-delivery-live-verification/08-LIVE-EVIDENCE.json

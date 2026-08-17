@@ -1,0 +1,101 @@
+name: Provider Access Audit (Read Only)
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_read_only:
+        description: Type READ_ONLY to capture current CN and IO rollback metadata without changing providers.
+        required: true
+        type: choice
+        options:
+          - READ_ONLY
+          - CANCEL
+
+permissions:
+  contents: read
+
+jobs:
+  audit-cn:
+    if: ${{ inputs.confirm_read_only == 'READ_ONLY' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: azure/setup-kubectl@v4
+      - name: Guard CN audit credentials
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        run: |
+          test -n "$KUBE_CONFIG" || { echo 'blocked: missing KUBE_CONFIG'; exit 1; }
+      - name: Read current CN deployment image
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        run: |
+          printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
+          current_image=$(KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl get deployment/fastgpt-home -o jsonpath='{.spec.template.spec.containers[?(@.name=="fastgpt-home")].image}')
+          namespace=$(KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl config view --minify -o jsonpath='{.contexts[0].context.namespace}')
+          test -n "$current_image" || { echo 'blocked: current CN deployment image unavailable'; exit 1; }
+          CURRENT_IMAGE="$current_image" NAMESPACE="$namespace" node - <<'NODE'
+          const fs = require('node:fs');
+          const image = process.env.CURRENT_IMAGE;
+          const digest = image.match(/@(?<digest>sha256:[a-f0-9]{64})$/i)?.groups?.digest ?? null;
+          fs.writeFileSync('provider-audit-cn.json', `${JSON.stringify({
+            schemaVersion: 1,
+            capturedAt: new Date().toISOString(),
+            provider: 'kubernetes',
+            deployment: 'fastgpt-home',
+            namespace: process.env.NAMESPACE || null,
+            rollbackTarget: image,
+            imageDigest: digest,
+            readOnly: true,
+          }, null, 2)}\n`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: provider-access-audit-cn-${{ github.run_id }}
+          path: provider-audit-cn.json
+          retention-days: 7
+
+  audit-io:
+    if: ${{ inputs.confirm_read_only == 'READ_ONLY' }}
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Guard IO audit credentials
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PROJECT_NAME: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo 'blocked: missing CLOUDFLARE_API_TOKEN'; exit 1; }
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo 'blocked: missing CLOUDFLARE_ACCOUNT_ID'; exit 1; }
+          test -n "$CLOUDFLARE_PROJECT_NAME" || { echo 'blocked: missing CLOUDFLARE_PROJECT_NAME'; exit 1; }
+      - name: Read current IO Pages deployment
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_PROJECT_NAME: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+        run: |
+          npx --yes wrangler@3 pages deployment list --project-name="$CLOUDFLARE_PROJECT_NAME" --json > "$RUNNER_TEMP/io-deployments.json"
+          PROJECT_NAME="$CLOUDFLARE_PROJECT_NAME" node - <<'NODE'
+          const fs = require('node:fs');
+          const raw = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + '/io-deployments.json', 'utf8'));
+          const rows = Array.isArray(raw) ? raw : raw.result || [];
+          const deployment = rows[0];
+          if (!deployment?.id || !deployment?.url) throw new Error('blocked: current IO Pages deployment ID/URL unavailable');
+          fs.writeFileSync('provider-audit-io.json', `${JSON.stringify({
+            schemaVersion: 1,
+            capturedAt: new Date().toISOString(),
+            provider: 'cloudflare-pages',
+            project: process.env.PROJECT_NAME,
+            rollbackTarget: deployment.id,
+            deploymentId: deployment.id,
+            deploymentUrl: deployment.url,
+            readOnly: true,
+          }, null, 2)}\n`);
+          NODE
+      - uses: actions/upload-artifact@v4
+        with:
+          name: provider-access-audit-io-${{ github.run_id }}
+          path: provider-audit-io.json
+          retention-days: 7

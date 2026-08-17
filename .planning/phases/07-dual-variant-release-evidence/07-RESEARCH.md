@@ -316,12 +316,12 @@ This order follows the locked freshness policy and the existing build/check loop
 | A1 | `scripts/verify-guide-export.js` and `scripts/verify-guide-export.test.js` are the selected filenames. | Recommended Project Structure / Code Examples | The planner can rename both files while retaining the standalone-command and regression requirements. |
 | A2 | The focused verifier emits one exact diagnostic prefix containing variant, slug/hub, path, and surface. | Architecture Patterns | The planner must lock the exact error formatting while preserving the required diagnostic fields. |
 
-## Open Questions
+## Open Questions (RESOLVED)
 
-1. **Linux evidence command for both variants**
-   - What we know: Ubuntu CI is an existing Linux runner, local Docker is unavailable, and the Dockerfile has a cn-only guard. [VERIFIED: .github/workflows/preview.yml:18-52] [VERIFIED: Dockerfile:42-52] [VERIFIED: local environment audit, 2026-08-17]
-   - What's unclear: the final CI workflow location and whether Phase 7 should add an io-compatible verification container command. [ASSUMED]
-   - Recommendation: add a repository verification workflow/job that runs `npm run verify:release` on Ubuntu with explicit io/cn owner variables; keep Docker as a documented cn-only local/Linux path until its publication guard is deliberately changed. [ASSUMED]
+1. **Linux evidence command for both variants — RESOLVED**
+   - Decision: add `.github/workflows/guide-release-verification.yml` on `ubuntu-24.04` to run the single `npm run verify:release -- --keep-artifacts` command for both `io` and `cn`; add `Dockerfile.verify` as a build-only container-local fallback that runs the same command. [DECIDED: 07-CONTEXT.md D-05/D-06/D-08; 07-03-PLAN.md]
+   - Constraint: preserve the production `Dockerfile` and its `cn` publication guard byte-for-byte. The verification Dockerfile is evidence-only and carries no deployment, live HTTP, cache, revision, or rollback operation. [DECIDED: 07-03-PLAN.md]
+   - Evidence: Ubuntu CI is an existing case-sensitive runner, local Docker is unavailable, and the production Dockerfile has a cn-only guard. [VERIFIED: .github/workflows/preview.yml:18-52] [VERIFIED: Dockerfile:42-52] [VERIFIED: local environment audit, 2026-08-17]
 
 ## Environment Availability
 

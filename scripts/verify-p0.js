@@ -92,7 +92,8 @@ function verifyNginxHeaders() {
 
   const includeCount = (nginxConfig.match(/include \/etc\/nginx\/security-headers\.conf;/g) || [])
     .length;
-  assert.equal(includeCount, 11, 'Security headers must cover the server and all cache locations');
+  // Keep the release manifest endpoint covered alongside the server and cache locations.
+  assert.equal(includeCount, 12, 'Security headers must cover the server, release manifest, and cache locations');
 
   assert(
     nginxConfig.includes('include /etc/nginx/generated-redirects.conf;'),

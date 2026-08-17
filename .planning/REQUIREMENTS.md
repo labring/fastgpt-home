@@ -15,17 +15,17 @@ Requirements for the Guide Content Center production milestone. Each requirement
 
 ### Guide Visitor Experience
 
-- [ ] **HUB-01**: A visitor can open `/guide` on `fastgpt.cn` and `fastgpt.io` and see exactly eight localized article cards grouped as decision, implementation, and industry content.
-- [ ] **ARTICLE-01**: A visitor can open every owned-domain `/guide/<slug>` URL and read the approved localized H1 and complete long-form body, including headings, lists, tables, and code where authored.
-- [ ] **ARTICLE-02**: A visitor can navigate from each Guide article through its Home → Guide → article breadcrumb, return to the localized Guide hub, and follow every configured internal link to its owned canonical destination.
-- [ ] **ARTICLE-03**: A visitor sees each required approved article image through the existing responsive image surface with authored alternative text.
+- [x] **HUB-01**: A visitor can open `/guide` on `fastgpt.cn` and `fastgpt.io` and see exactly eight localized article cards grouped as decision, implementation, and industry content.
+- [x] **ARTICLE-01**: A visitor can open every owned-domain `/guide/<slug>` URL and read the approved localized H1 and complete long-form body, including headings, lists, tables, and code where authored.
+- [x] **ARTICLE-02**: A visitor can navigate from each Guide article through its Home → Guide → article breadcrumb, return to the localized Guide hub, and follow every configured internal link to its owned canonical destination.
+- [x] **ARTICLE-03**: A visitor sees each required approved article image through the existing responsive image surface with authored alternative text.
 
 ### Guide SEO Surface
 
-- [ ] **SEO-04**: Each Guide hub and article emits localized title and description metadata, one self-referencing owned-domain canonical URL, and an Open Graph URL equal to that canonical URL.
-- [ ] **SEO-05**: Each Guide hub and article emits a reciprocal `zh-CN`, `en`, and `x-default` alternate cluster whose Chinese target belongs to `fastgpt.cn`, whose English and `x-default` targets belong to `fastgpt.io`, and whose article targets share the same slug.
-- [ ] **SEO-06**: Each Guide article emits approved article and breadcrumb structured data, while each Guide hub emits collection, item-list, and breadcrumb structured data using owned canonical URLs.
-- [ ] **SEO-07**: Each site variant's sitemap contains its owned Guide hub and eight owned article canonical URLs exactly once, and every Guide card, breadcrumb, related link, static parameter, and schema URL derives from the same Guide registry.
+- [x] **SEO-04**: Each Guide hub and article emits localized title and description metadata, one self-referencing owned-domain canonical URL, and an Open Graph URL equal to that canonical URL.
+- [x] **SEO-05**: Each Guide hub and article emits a reciprocal `zh-CN`, `en`, and `x-default` alternate cluster whose Chinese target belongs to `fastgpt.cn`, whose English and `x-default` targets belong to `fastgpt.io`, and whose article targets share the same slug.
+- [x] **SEO-06**: Each Guide article emits approved article and breadcrumb structured data, while each Guide hub emits collection, item-list, and breadcrumb structured data using owned canonical URLs.
+- [x] **SEO-07**: Each site variant's sitemap contains its owned Guide hub and eight owned article canonical URLs exactly once, and every Guide card, breadcrumb, related link, static parameter, and schema URL derives from the same Guide registry.
 
 ### Release Verification
 
@@ -77,14 +77,14 @@ Roadmap creation assigns each v1.1 requirement to exactly one phase.
 | GUIDE-01 | Phase 5 | Complete |
 | GUIDE-02 | Phase 5 | Complete |
 | GUIDE-03 | Phase 5 | Complete |
-| HUB-01 | Phase 6 | Pending |
-| ARTICLE-01 | Phase 6 | Pending |
-| ARTICLE-02 | Phase 6 | Pending |
-| ARTICLE-03 | Phase 6 | Pending |
-| SEO-04 | Phase 6 | Pending |
-| SEO-05 | Phase 6 | Pending |
-| SEO-06 | Phase 6 | Pending |
-| SEO-07 | Phase 6 | Pending |
+| HUB-01 | Phase 6 | Complete |
+| ARTICLE-01 | Phase 6 | Complete |
+| ARTICLE-02 | Phase 6 | Complete |
+| ARTICLE-03 | Phase 6 | Complete |
+| SEO-04 | Phase 6 | Complete |
+| SEO-05 | Phase 6 | Complete |
+| SEO-06 | Phase 6 | Complete |
+| SEO-07 | Phase 6 | Complete |
 | VERIFY-04 | Phase 7 | Pending |
 | VERIFY-05 | Phase 7 | Pending |
 | DEPLOY-01 | Phase 8 | Pending |

@@ -4,16 +4,16 @@ milestone: v1.1
 milestone_name: Guide Content Center
 current_phase: 6
 current_phase_name: Guide Hubs, Articles & SEO Graph
-status: planning
-stopped_at: Phase 6 context gathered
-last_updated: "2026-08-17T04:43:47.657Z"
+status: executing
+stopped_at: Completed 06-01-PLAN.md
+last_updated: "2026-08-17T05:28:36.986Z"
 last_activity: 2026-08-17
 progress:
   total_phases: 2
   completed_phases: 1
-  total_plans: 4
-  completed_plans: 4
-last_activity_desc: Created the v1.1 Guide Content Center roadmap and requirement traceability.
+  total_plans: 8
+  completed_plans: 5
+last_activity_desc: Published the closed root Guide article tracer and registry-backed SEO graph in 06-01.
 ---
 
 # Project State
@@ -28,11 +28,11 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 ## Current Position
 
 Phase: 6 — Guide Hubs, Articles & SEO Graph
-Plan: Not started
-Status: planning
+Plan: 2 of 4
+Status: executing
 Last activity: 2026-08-17
 
-Progress: [██████████] 100%
+Progress: [██████░░░░] 63%
 
 ## Performance Metrics
 
@@ -59,6 +59,7 @@ Progress: [██████████] 100%
 | Phase 05 P02 | 2min | 2 tasks | 7 files |
 | Phase 05 P03 | 4m | 2 tasks | 7 files |
 | Phase 05 P04 | 8m | 2 tasks | 3 files |
+| Phase 06 P01 | 5m | 3 tasks | 9 files |
 
 ## Accumulated Context
 
@@ -77,6 +78,9 @@ Progress: [██████████] 100%
 - [Phase ?]: Use isolated cloned registries and temporary source roots for Guide contract regression coverage.
 - [Phase ?]: Future required Guide assets must use an existing contained public path and non-empty authored alt text.
 - [Phase ?]: Guide source verification reports both slug and document counts for the complete 8x2 corpus.
+- [Phase 6]: D-01 publishes closed owned root /guide/<slug> article routes.
+- [Phase 6]: Guide publication groups and 2026-08-11 date pairs are registry validation contracts.
+- [Phase 6]: Guide metadata, schema, and visible breadcrumbs share the owned URL projection.
 
 ### Pending Todos
 
@@ -98,6 +102,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T04:43:47.647Z
-Stopped at: Phase 6 context gathered
-Resume file: .planning/phases/06-guide-hubs-articles-seo-graph/06-CONTEXT.md
+Last session: 2026-08-17T05:28:36.978Z
+Stopped at: Completed 06-01-PLAN.md
+Resume file: None

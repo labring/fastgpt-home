@@ -54,10 +54,10 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
   4. A search crawler receives localized title and description metadata, a self-referencing owned-domain canonical and matching Open Graph URL, plus reciprocal `zh-CN`, `en`, and `x-default` alternates for every Guide hub and article.
   5. A search crawler receives the required article, collection, item-list, and breadcrumb structured data, while each variant sitemap lists its one Guide hub and eight owned article canonicals exactly once from the shared Guide registry.
 
-**Plans**: 0/4 plans executed
+**Plans**: 1/4 plans executed
 **UI hint**: yes
 
-- [ ] 06-01-PLAN.md — Prove one root article tracer, then add validated groups, dates, and all root article routes.
+- [x] 06-01-PLAN.md — Prove one root article tracer, then add validated groups, dates, and all root article routes.
 - [ ] 06-02-PLAN.md — Complete all article rendering surfaces and closed localized adapters.
 - [ ] 06-03-PLAN.md — Publish the exact three-group, eight-card owned Guide hubs.
 - [ ] 06-04-PLAN.md — Add registry-derived sitemap rows and the complete Phase 6 regression gate.
@@ -94,6 +94,6 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 5. Guide Content Contract | 4/4 | Complete    | 2026-08-17 |
-| 6. Guide Hubs, Articles & SEO Graph | 0/4 | Planned    |  |
+| 6. Guide Hubs, Articles & SEO Graph | 1/4 | In Progress|  |
 | 7. Dual-Variant Release Evidence | 0/TBD | Not started | - |
 | 8. Production Delivery & Live Verification | 0/TBD | Not started | - |

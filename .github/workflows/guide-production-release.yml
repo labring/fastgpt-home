@@ -214,7 +214,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > io-previous-deployments.json
-          node -e "const fs=require('fs');const raw=JSON.parse(fs.readFileSync('io-previous-deployments.json'));const rows=Array.isArray(raw)?raw:(raw.result||[]);const d=rows[0]||{};const id=d.id||d.deployment_id||d.short_id;const url=d.url||d.deployment_url||d.metadata?.url||(Array.isArray(d.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: current Pages deployment ID/URL unavailable');if(id!=='${{ inputs.io_rollback_target }}')throw new Error('blocked: io rollback input does not match provider current deployment');fs.appendFileSync(process.env.GITHUB_OUTPUT,'id='+id+'\nurl='+url+'\n')"
+          node -e "const fs=require('fs');const raw=JSON.parse(fs.readFileSync('io-previous-deployments.json'));const rows=Array.isArray(raw)?raw:(raw.result||[]);const isProductionActive=(row)=>String(row.Environment||row.environment||'').toLowerCase()==='production'&&String(row.Status||row.status||'').toLowerCase()==='active';const d=rows.find(isProductionActive);const id=d?.id||d?.Id||d?.deployment_id||d?.short_id;const url=d?.url||d?.Url||d?.Deployment||d?.deployment_url||d?.metadata?.url||(Array.isArray(d?.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: current active production Pages deployment ID/URL unavailable');if(id!=='${{ inputs.io_rollback_target }}')throw new Error('blocked: io rollback input does not match provider current deployment');fs.appendFileSync(process.env.GITHUB_OUTPUT,'id='+id+'\nurl='+url+'\n')"
       - name: Verify and extract exact IO archive
         id: io_identity
         run: |
@@ -239,7 +239,7 @@ jobs:
           PROJECT_NAME: ${{ env.PROJECT_NAME }}
         run: |
           npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > io-deployments.json
-          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const rows=JSON.parse(fs.readFileSync('io-deployments.json'));const d=Array.isArray(rows)?rows[0]:(rows.result||[])[0]||{};const id=d.id||d.deployment_id||d.short_id;const url=d.url||d.deployment_url||d.metadata?.url||(Array.isArray(d.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: Pages deployment ID/URL unavailable');if(!process.env.ROLLBACK_ID)throw new Error('blocked: provider rollback target unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_ID,provider:{project:process.env.PROJECT_NAME,deploymentId:id,deploymentUrl:url,previousDeploymentUrl:process.env.ROLLBACK_URL},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const rows=JSON.parse(fs.readFileSync('io-deployments.json'));const list=Array.isArray(rows)?rows:(rows.result||[]);const isProductionActive=(row)=>String(row.Environment||row.environment||'').toLowerCase()==='production'&&String(row.Status||row.status||'').toLowerCase()==='active';const d=list.find(isProductionActive);const id=d?.id||d?.Id||d?.deployment_id||d?.short_id;const url=d?.url||d?.Url||d?.Deployment||d?.deployment_url||d?.metadata?.url||(Array.isArray(d?.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: current active production Pages deployment ID/URL unavailable');if(!process.env.ROLLBACK_ID)throw new Error('blocked: provider rollback target unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_ID,provider:{project:process.env.PROJECT_NAME,deploymentId:id,deploymentUrl:url,previousDeploymentUrl:process.env.ROLLBACK_URL},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
           if [ '${{ inputs.purge_cloudflare }}' = 'true' ]; then node scripts/purge-cloudflare-cache.js --url https://fastgpt.io/guide --evidence-out io-purge.json; fi
       - uses: actions/upload-artifact@v4
         with:
@@ -369,16 +369,20 @@ jobs:
           }
           if (raw) {
             const rows = Array.isArray(raw) ? raw : Array.isArray(raw.result) ? raw.result : [];
-            const first = rows[0] && typeof rows[0] === 'object' ? rows[0] : null;
+            const isProductionActive = (row) => String(row?.Environment || row?.environment || '').toLowerCase() === 'production' && String(row?.Status || row?.status || '').toLowerCase() === 'active';
+            const candidates = rows.filter(isProductionActive);
+            const first = (candidates[0] || rows[0]) && typeof (candidates[0] || rows[0]) === 'object' ? (candidates[0] || rows[0]) : null;
             report.diagnostics.rawType = Array.isArray(raw) ? 'array' : typeof raw;
             report.diagnostics.topLevelKeys = raw && typeof raw === 'object' && !Array.isArray(raw) ? Object.keys(raw).slice(0, 30) : [];
             report.diagnostics.rowsLength = rows.length;
+            report.diagnostics.productionActiveCandidates = candidates.length;
+            report.diagnostics.selectionMode = candidates.length ? 'production-active' : 'fallback-first';
             report.diagnostics.firstObjectKeys = first ? Object.keys(first).slice(0, 30) : [];
             report.diagnostics.firstObjectValues = first ? redact(first) : null;
-            const deploymentId = first?.id || first?.deployment_id || first?.short_id || null;
-            const deploymentUrl = first?.url || first?.deployment_url || first?.metadata?.url || (Array.isArray(first?.aliases) ? first.aliases.find((value) => /^https?:\/\//.test(value)) : null) || null;
-            if (!deploymentId || !deploymentUrl) {
-              report.blockedReason = rows.length ? 'current Pages deployment is missing id or url' : 'Pages deployment list is empty';
+            const deploymentId = first?.id || first?.Id || first?.deployment_id || first?.short_id || null;
+            const deploymentUrl = first?.url || first?.Url || first?.Deployment || first?.deployment_url || first?.metadata?.url || (Array.isArray(first?.aliases) ? first.aliases.find((value) => /^https?:\/\//.test(value)) : null) || null;
+            if (!deploymentId || !deploymentUrl || !candidates.length) {
+              report.blockedReason = !rows.length ? 'Pages deployment list is empty' : !candidates.length ? 'Pages deployment list has no active production row' : 'current production Pages deployment is missing id or url';
               report.diagnostics.derivedId = deploymentId;
               report.diagnostics.derivedUrl = deploymentUrl;
               process.exitCode = 1;

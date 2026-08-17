@@ -138,6 +138,10 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(workflow, /firstObjectValues/);
   assert.match(workflow, /Pages deployment list is empty/);
   assert.match(workflow, /deployment_id/);
+  assert.match(workflow, /Environment/);
+  assert.match(workflow, /Deployment/);
+  assert.match(workflow, /productionActiveCandidates/);
+  assert.match(workflow, /fallback-first/);
   assert.match(workflow, /if: always\(\)/);
   assert(workflow.includes('--inject-release-headers'));
   assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));

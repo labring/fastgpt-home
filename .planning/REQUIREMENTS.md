@@ -29,8 +29,8 @@ Requirements for the Guide Content Center production milestone. Each requirement
 
 ### Release Verification
 
-- [ ] **VERIFY-04**: A maintainer can run one repository command that validates the Guide pair registry, source fidelity, metadata, required assets, internal links, route inventory, SEO graph, sitemap coverage, and exported HTML with slug-specific failures.
-- [ ] **VERIFY-05**: Clean case-sensitive production builds for the cn and io variants each succeed with exactly one owned Guide hub and eight owned Guide article paths while preserving the existing initial-JavaScript release budget.
+- [x] **VERIFY-04**: A maintainer can run one repository command that validates the Guide pair registry, source fidelity, metadata, required assets, internal links, route inventory, SEO graph, sitemap coverage, and exported HTML with slug-specific failures.
+- [x] **VERIFY-05**: Clean case-sensitive production builds for the cn and io variants each succeed with exactly one owned Guide hub and eight owned Guide article paths while preserving the existing initial-JavaScript release budget.
 
 ### Production Delivery
 
@@ -85,8 +85,8 @@ Roadmap creation assigns each v1.1 requirement to exactly one phase.
 | SEO-05 | Phase 6 | Complete |
 | SEO-06 | Phase 6 | Complete |
 | SEO-07 | Phase 6 | Complete |
-| VERIFY-04 | Phase 7 | Pending |
-| VERIFY-05 | Phase 7 | Pending |
+| VERIFY-04 | Phase 7 | Complete |
+| VERIFY-05 | Phase 7 | Complete |
 | DEPLOY-01 | Phase 8 | Pending |
 | DEPLOY-02 | Phase 8 | Pending |
 

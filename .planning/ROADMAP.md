@@ -18,7 +18,7 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 
 - [x] **Phase 5: Guide Content Contract** - Establish the complete, faithful bilingual source contract for the fixed Guide corpus. (completed 2026-08-17)
 - [x] **Phase 6: Guide Hubs, Articles & SEO Graph** - Publish the bilingual visitor experience and one coherent discovery graph from that contract. (completed 2026-08-17)
-- [ ] **Phase 7: Dual-Variant Release Evidence** - Prove the complete cn and io static artifacts meet the Guide release contract.
+- [x] **Phase 7: Dual-Variant Release Evidence** - Prove the complete cn and io static artifacts meet the Guide release contract. (completed 2026-08-17)
 - [ ] **Phase 8: Production Delivery & Live Verification** - Deliver both verified artifacts and record production evidence for every Guide URL.
 
 ## Phase Details
@@ -83,7 +83,7 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 
 **Wave 3** *(blocked on Wave 2 completion)*
 
-- [ ] 07-03-PLAN.md — Compose the unified release gate and add case-sensitive Ubuntu plus container evidence.
+- [x] 07-03-PLAN.md — Compose the unified release gate and add case-sensitive Ubuntu plus container evidence.
 
 ### Phase 8: Production Delivery & Live Verification
 
@@ -96,7 +96,11 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
   1. A release operator can deploy the verified immutable cn and io artifacts to `fastgpt.cn` and `fastgpt.io`, with each deployed revision and rollback target recorded.
   2. A release operator can verify both production Guide hubs and all 16 production article URLs for final `200` responses, localized H1, self canonical, reciprocal alternates, indexability, sitemap presence, cache freshness, and deployed revision evidence.
 
-**Plans**: TBD
+**Plans**: 3/3 plans executed
+
+- [x] 08-01-PLAN.md
+- [x] 08-02-PLAN.md
+- [x] 08-03-PLAN.md
 
 ## Progress
 
@@ -106,5 +110,5 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 |-------|----------------|--------|-----------|
 | 5. Guide Content Contract | 4/4 | Complete    | 2026-08-17 |
 | 6. Guide Hubs, Articles & SEO Graph | 4/4 | Complete    | 2026-08-17 |
-| 7. Dual-Variant Release Evidence | 2/3 | In Progress|  |
-| 8. Production Delivery & Live Verification | 0/TBD | Not started | - |
+| 7. Dual-Variant Release Evidence | 3/3 | Complete    | 2026-08-17 |
+| 8. Production Delivery & Live Verification | 3/3 | In Progress|  |

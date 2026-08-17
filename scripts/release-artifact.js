@@ -100,8 +100,12 @@ function computeTreeDigest(outDir) {
   const digest = crypto.createHash('sha256');
   for (const file of walkRegularFiles(resolved)) {
     if (file.relativePath === RELEASE_MANIFEST) continue;
-    digest.update(`${file.relativePath}\0${file.size}\0`);
-    digest.update(fs.readFileSync(file.filePath));
+    const content = fs.readFileSync(file.filePath);
+    const normalized = file.relativePath === '_headers'
+      ? Buffer.from(content.toString('utf8').replace(/X-Release-(Revision|Artifact):\s*[^\r\n]*/g, (_, field) => `X-Release-${field}: __RELEASE_${field.toUpperCase()}__`))
+      : content;
+    digest.update(`${file.relativePath}\0${normalized.length}\0`);
+    digest.update(normalized);
     digest.update('\0');
   }
   return digest.digest('hex');
@@ -133,10 +137,23 @@ function buildManifest(options) {
 }
 
 function prepareReleaseOutput(options) {
+  if (options.injectReleaseHeaders) {
+    const headersPath = path.join(path.resolve(options.outDir), '_headers');
+    const existing = fs.existsSync(headersPath) ? fs.readFileSync(headersPath, 'utf8') : '';
+    const hasReleaseBlock = /\/__release\/manifest\.json\r?\n\s*X-Release-Revision:/i.test(existing);
+    const normalized = existing
+      .replace(/X-Release-Revision:\s*[^\r\n]*/g, 'X-Release-Revision: __RELEASE_REVISION__')
+      .replace(/X-Release-Artifact:\s*[^\r\n]*/g, 'X-Release-Artifact: __RELEASE_ARTIFACT__');
+    fs.writeFileSync(headersPath, hasReleaseBlock ? normalized : `${normalized.trimEnd()}\n\n/__release/manifest.json\n  X-Release-Revision: __RELEASE_REVISION__\n  X-Release-Artifact: __RELEASE_ARTIFACT__\n`);
+  }
   const manifest = buildManifest(options);
   const manifestPath = path.join(path.resolve(options.outDir), RELEASE_MANIFEST);
   fs.mkdirSync(path.dirname(manifestPath), { recursive: true });
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
+  if (options.injectReleaseHeaders) {
+    const headersPath = path.join(path.resolve(options.outDir), '_headers');
+    fs.writeFileSync(headersPath, fs.readFileSync(headersPath, 'utf8').replace('__RELEASE_REVISION__', manifest.releaseRevision).replace('__RELEASE_ARTIFACT__', manifest.artifactDigest));
+  }
   return { manifest, manifestPath, outDir: path.resolve(options.outDir) };
 }
 
@@ -292,6 +309,7 @@ function parseArgs(argv) {
   const keys = { '--out-dir': 'outDir', '--variant': 'variant', '--source-commit': 'sourceCommit', '--rollback-target': 'rollbackTarget', '--expected-host': 'expectedHost', '--archive-dir': 'archiveDir', '--archive': 'archivePath', '--manifest': 'manifestPath', '--provider-receipt': 'providerReceiptPath' };
   for (let index = 0; index < tokens.length; index += 1) {
     const key = tokens[index];
+    if (key === '--inject-release-headers') { options.injectReleaseHeaders = true; continue; }
     const name = keys[key];
     const value = tokens[++index];
     if (!name || !value || value.startsWith('--')) throw new Error(`[release-artifact] surface=arguments invalid ${key}`);

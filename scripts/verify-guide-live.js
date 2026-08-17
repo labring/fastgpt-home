@@ -1,0 +1,74 @@
+#!/usr/bin/env node
+
+const crypto = require('node:crypto');
+const fs = require('node:fs');
+const path = require('node:path');
+const { buildGuideExpectation } = require('./verify-guide-export.js');
+
+function fail(message) { throw new Error(`[verify-guide-live] ${message}`); }
+function buildExpectedMatrix() {
+  return Object.fromEntries(['cn', 'io'].map((variant) => {
+    const expectation = buildGuideExpectation(variant);
+    return [variant, { host: expectation.host, routes: [...expectation.routes.values()].map(({ slug, route, source }) => ({ slug, route, h1: source.h1 })) }];
+  }));
+}
+function parseArgs(argv) {
+  const options = { baseUrlCn: 'https://fastgpt.cn', baseUrlIo: 'https://fastgpt.io', timeoutMs: 10_000, providerEvidence: [] };
+  const keys = { '--base-url-cn': 'baseUrlCn', '--base-url-io': 'baseUrlIo', '--manifest': 'manifest', '--report': 'report', '--timeout-ms': 'timeoutMs', '--provider-evidence': 'providerEvidence' };
+  for (let index = 0; index < argv.length; index += 1) {
+    const token = argv[index];
+    if (token === '--allow-blocked-baseline') { options.allowBlockedBaseline = true; continue; }
+    const key = keys[token]; const value = argv[++index];
+    if (!key || !value || value.startsWith('--')) fail(`unknown or incomplete argument ${token}`);
+    if (key === 'providerEvidence') options.providerEvidence.push(value); else options[key] = key === 'timeoutMs' ? Number(value) : value;
+  }
+  if (!Number.isFinite(options.timeoutMs) || options.timeoutMs < 1) fail('timeout must be positive');
+  return options;
+}
+function headersOf(headers) { return Object.fromEntries(['cache-control', 'etag', 'last-modified', 'age', 'cf-cache-status', 'x-cache-status', 'x-release-revision', 'x-release-artifact'].map((key) => [key, headers.get(key) || undefined])); }
+function getTag(html, tag, attr, value) { return [...html.matchAll(new RegExp(`<${tag}\\b[^>]*>`, 'gi'))].find((candidate) => new RegExp(`\\s${attr}=["']${value}["']`, 'i').test(candidate[0]))?.[0]; }
+function attr(tag, name) { return tag?.match(new RegExp(`\\s${name}=["']([^"']*)["']`, 'i'))?.[1]; }
+function checkHtml(body, expected, host) {
+  const errors = [];
+  const h1 = body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  if (h1 !== expected.h1) errors.push('h1');
+  const canonical = attr(getTag(body, 'link', 'rel', 'canonical'), 'href');
+  if (canonical !== `${host}${expected.route}`) errors.push('canonical');
+  const alternate = Object.fromEntries([...body.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*>/gi)].map((match) => [attr(match[0], 'hreflang'), attr(match[0], 'href')]));
+  for (const [lang, url] of Object.entries({ 'zh-CN': `https://fastgpt.cn${expected.route}`, en: `https://fastgpt.io${expected.route}`, 'x-default': `https://fastgpt.io${expected.route}` })) if (alternate[lang] !== url) errors.push(`alternate:${lang}`);
+  if (/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(body)) errors.push('robots');
+  return errors;
+}
+function validateProviderReceipt(receipt, manifest) {
+  if (!receipt || receipt.schemaVersion !== 1 || receipt.variant !== manifest.variant) fail('provider receipt schema/variant mismatch');
+  for (const key of ['releaseRevision', 'artifactDigest', 'treeDigest', 'archiveDigest', 'rollbackTarget']) if (!receipt[key]) fail(`provider receipt missing ${key}`);
+  for (const key of ['releaseRevision', 'artifactDigest', 'treeDigest', 'rollbackTarget']) if (receipt[key] !== manifest[key]) fail(`provider receipt ${key} mismatch`);
+  if (receipt.variant === 'cn' && (!String(receipt.provider?.imageDigest || '').startsWith('sha256:') || !String(receipt.provider?.kubernetesImage || '').includes('@sha256:'))) fail('provider receipt CN image digest/Kubernetes reference missing');
+  if (receipt.variant === 'io' && (!receipt.provider?.deploymentId || !receipt.provider?.deploymentUrl)) fail('provider receipt IO deployment ID/URL missing');
+  return receipt;
+}
+async function fetchWithTimeout(url, timeoutMs, fetchImpl = fetch) { const controller = new AbortController(); const timer = setTimeout(() => controller.abort(), timeoutMs); try { return await fetchImpl(url, { redirect: 'manual', signal: controller.signal }); } finally { clearTimeout(timer); } }
+async function runLiveVerification(options, fetchImpl) {
+  const matrix = buildExpectedMatrix(); const startedAt = new Date().toISOString(); const report = { schemaVersion: 1, startedAt, status: 'passed', variants: {}, providerEvidence: options.providerEvidence.map((filePath) => ({ path: filePath, digest: crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex') })) };
+  const receipts = Object.fromEntries(options.providerEvidence.map((filePath) => { const receipt = JSON.parse(fs.readFileSync(filePath, 'utf8')); return [receipt.variant, receipt]; }));
+  for (const [variant, expected] of Object.entries(matrix)) {
+    const host = variant === 'cn' ? options.baseUrlCn : options.baseUrlIo; const result = { routes: [], failures: [] };
+    let sitemap = ''; let manifest;
+    for (const surface of ['/sitemap.xml', '/__release/manifest.json']) {
+      try { const response = await fetchWithTimeout(`${host}${surface}`, options.timeoutMs, fetchImpl); const body = await response.text(); if (response.status !== 200) result.failures.push(`${surface}:status=${response.status}`); if (surface.endsWith('.xml')) sitemap = body; else manifest = JSON.parse(body); } catch (error) { result.failures.push(`${surface}:${error.name}`); }
+    }
+    if (manifest) { try { if (manifest.variant !== variant || !manifest.releaseRevision || !manifest.artifactDigest || !manifest.rollbackTarget) fail('manifest identity missing'); if (!options.allowBlockedBaseline) validateProviderReceipt(receipts[variant], manifest); result.manifest = { releaseRevision: manifest.releaseRevision, artifactDigest: manifest.artifactDigest, rollbackTarget: manifest.rollbackTarget }; } catch (error) { result.failures.push(`manifest:${error.message}`); } }
+    for (const expectedRoute of expected.routes) {
+      const url = `${host}${expectedRoute.route}`; const item = { slug: expectedRoute.slug, path: expectedRoute.route };
+      try { const response = await fetchWithTimeout(url, options.timeoutMs, fetchImpl); const body = await response.text(); item.status = response.status; item.finalUrl = response.url; item.headers = headersOf(response.headers); item.bodyDigest = crypto.createHash('sha256').update(body).digest('hex'); const surfaces = [];
+        if (response.status !== 200) surfaces.push(`status=${response.status}`); if (response.url !== url) surfaces.push('redirect'); if (response.status === 200) surfaces.push(...checkHtml(body, expectedRoute, expected.host)); if (!sitemap.includes(`<loc>${expected.host}${expectedRoute.route}</loc>`)) surfaces.push('sitemap'); if (!/max-age=\d*[1-9]/i.test(item.headers['cache-control'] || '') && !item.headers['cf-cache-status'] && !item.headers['x-cache-status']) surfaces.push('cache'); if (!options.allowBlockedBaseline && (!item.headers['x-release-revision'] || item.headers['x-release-revision'] !== manifest?.releaseRevision || item.headers['x-release-artifact'] !== manifest?.artifactDigest)) surfaces.push('release-headers'); if (surfaces.length) { item.failures = surfaces; result.failures.push(`${expectedRoute.route}:${surfaces.join(',')}`); } } catch (error) { item.failures = [error.name]; result.failures.push(`${expectedRoute.route}:${error.name}`); }
+      result.routes.push(item);
+    }
+    report.variants[variant] = result;
+  }
+  const failureCount = Object.values(report.variants).reduce((count, result) => count + result.failures.length, 0);
+  report.finishedAt = new Date().toISOString(); report.status = failureCount ? (options.allowBlockedBaseline ? 'blocked' : 'failed') : 'passed'; return report;
+}
+async function main(argv = process.argv.slice(2)) { const options = parseArgs(argv); const report = await runLiveVerification(options); if (options.report) { fs.mkdirSync(path.dirname(path.resolve(options.report)), { recursive: true }); fs.writeFileSync(options.report, `${JSON.stringify(report, null, 2)}\n`); fs.writeFileSync(`${options.report}.txt`, `[verify-guide-live] status=${report.status}\n`); } console.log(`[verify-guide-live] status=${report.status}`); if (report.status === 'blocked') process.exitCode = 2; if (report.status === 'failed') process.exitCode = 1; return report; }
+if (require.main === module) main().catch((error) => { console.error(error.message); process.exitCode = 1; });
+module.exports = { buildExpectedMatrix, parseArgs, validateProviderReceipt, fetchWithTimeout, runLiveVerification, main };

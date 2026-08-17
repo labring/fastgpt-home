@@ -38,6 +38,8 @@ export async function GuideArticleRoute({ locale, slug }: { locale: GuidePublish
           description: document.source.metaDescription,
           inLanguage: articleLanguage[locale],
           mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+          datePublished: document.source.datePublished,
+          dateModified: document.source.dateModified,
           author: { '@type': 'Organization', name: 'FastGPT' },
           publisher: { '@type': 'Organization', name: 'FastGPT' }
         }}

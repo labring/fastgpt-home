@@ -135,6 +135,10 @@ test('production delivery consumes retained archives and records immutable provi
   assert.equal((workflow.match(/PROJECT_NAME: fastgpt-home/g) || []).length, 2);
   assert.doesNotMatch(workflow, /CLOUDFLARE_PROJECT_NAME: \$\{\{ vars\.CLOUDFLARE_PROJECT_NAME \}\}/);
   assert.match(workflow, /provider:\{project:process\.env\.PROJECT_NAME/);
+  assert.match(workflow, /firstObjectValues/);
+  assert.match(workflow, /Pages deployment list is empty/);
+  assert.match(workflow, /deployment_id/);
+  assert.match(workflow, /if: always\(\)/);
   assert(workflow.includes('--inject-release-headers'));
   assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));

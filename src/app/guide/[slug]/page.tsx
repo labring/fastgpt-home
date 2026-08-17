@@ -23,5 +23,5 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  return getGuideArticleMetadata(locale, slug);
+  return getGuideArticleMetadata(locale, slug, { indexable: true });
 }

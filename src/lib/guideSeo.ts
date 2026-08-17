@@ -10,6 +10,7 @@ import {
 
 export const GUIDE_PUBLISHED_LOCALES = ['zh', 'en'] as const;
 export type GuidePublishedLocale = (typeof GUIDE_PUBLISHED_LOCALES)[number];
+type GuideMetadataOptions = { indexable?: boolean };
 
 const GUIDE_HUB_COPY = {
   en: {
@@ -71,7 +72,7 @@ export function getGuideAlternates(
 export function getGuideArticleMetadata(
   locale: GuidePublishedLocale,
   slug: string,
-  indexable = true
+  { indexable = true }: GuideMetadataOptions = {}
 ): Metadata {
   const snapshot = getGuideSnapshot(locale, slug);
   const canonical = getGuideCanonicalUrl(locale, slug);
@@ -81,7 +82,7 @@ export function getGuideArticleMetadata(
     description: snapshot.metaDescription,
     keywords: snapshot.keywords,
     alternates: getGuideAlternates(locale, slug),
-    robots: indexable ? undefined : { index: false, follow: false },
+    robots: indexable ? undefined : { index: false, follow: true },
     openGraph: {
       type: 'article',
       url: canonical,
@@ -105,13 +106,16 @@ export function getGuideArticleMetadata(
   };
 }
 
-export function getGuideHubMetadata(locale: GuidePublishedLocale, indexable = true): Metadata {
+export function getGuideHubMetadata(
+  locale: GuidePublishedLocale,
+  { indexable = true }: GuideMetadataOptions = {}
+): Metadata {
   const copy = GUIDE_HUB_COPY[locale];
   return {
     title: copy.title,
     description: copy.description,
     alternates: getGuideAlternates(locale),
-    robots: indexable ? undefined : { index: false, follow: false },
+    robots: indexable ? undefined : { index: false, follow: true },
     openGraph: {
       type: 'website',
       url: getGuideCanonicalUrl(locale),

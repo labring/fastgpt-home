@@ -102,6 +102,38 @@ test('P1 successful evidence keeps the emitted KiB measurement', () => {
   assert.equal(extractP1SuccessMeasurement('P1 verification passed'), undefined);
 });
 
+test('Linux release evidence stays build-only', () => {
+  const workflowPath = path.join(ROOT, '.github/workflows/guide-release-verification.yml');
+  const dockerfilePath = path.join(ROOT, 'Dockerfile.verify');
+  const workflow = fs.existsSync(workflowPath) ? fs.readFileSync(workflowPath, 'utf8') : '';
+  const dockerfile = fs.existsSync(dockerfilePath) ? fs.readFileSync(dockerfilePath, 'utf8') : '';
+
+  assert.match(workflow, /runs-on: ubuntu-24\.04/);
+  assert.match(workflow, /permissions:\s*\n\s*contents: read/);
+  assert.match(workflow, /actions\/checkout@v4/);
+  assert.match(workflow, /actions\/setup-node@v4/);
+  assert.match(workflow, /node-version: 24/);
+  assert.match(workflow, /cache: npm/);
+  assert.match(workflow, /npm ci/);
+  assert.match(workflow, /npm run verify:release -- --keep-artifacts/);
+  assert.match(workflow, /if: failure\(\)/);
+  assert.match(workflow, /actions\/upload-artifact@v4/);
+  assert.match(workflow, /\.release-artifacts/);
+
+  assert.match(dockerfile, /^FROM node:24/m);
+  assert.match(dockerfile, /COPY package\.json package-lock\.json \.\//);
+  assert.match(dockerfile, /RUN npm ci/);
+  assert.match(dockerfile, /COPY \. \./);
+  assert.match(dockerfile, /RUN npm run verify:release/);
+  assert.match(dockerfile, /docker build --file Dockerfile\.verify --tag fastgpt-guide-release-verify \./);
+
+  const executable = [
+    ...workflow.split('\n').filter((line) => /^\s*run:|^\s*- run:/.test(line)),
+    ...dockerfile.split('\n').filter((line) => /^(RUN|CMD|ENTRYPOINT)\b/.test(line))
+  ].join('\n');
+  assert.doesNotMatch(executable, /\b(deploy|curl|rollback|kubectl|docker push|cache purge|revision)\b/i);
+});
+
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {
   const failures = [
     failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 260 KiB')

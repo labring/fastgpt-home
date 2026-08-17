@@ -8,11 +8,11 @@ const { buildExpectedMatrix, runLiveVerification, validateProviderReceipt, parse
 
 async function fixture(variant, hosts) {
   const expected = buildExpectedMatrix()[variant];
-  const manifest = { schemaVersion: 1, variant, releaseRevision: `${variant}-revision`, artifactDigest: `${variant}-tree`, treeDigest: `${variant}-tree`, rollbackTarget: `${variant}-rollback` };
+  const manifest = { schemaVersion: 1, variant, expectedHost: `https://fastgpt.${variant === 'cn' ? 'cn' : 'io'}`, sourceCommit: 'abcdef1', provider: variant === 'cn' ? 'kubernetes' : 'cloudflare-pages', releaseRevision: `${variant}-revision`, artifactDigest: `${variant}-tree`, treeDigest: `${variant}-tree`, rollbackTarget: `${variant}-rollback` };
   const server = http.createServer((request, response) => {
     const route = request.url;
     if (route === '/sitemap.xml') return response.end(`<urlset>${expected.routes.map((item) => `<loc>${hosts[variant]}${item.route}</loc>`).join('')}</urlset>`);
-    if (route === '/__release/manifest.json') { response.setHeader('Cache-Control', 'no-store'); return response.end(JSON.stringify(manifest)); }
+    if (route === '/__release/manifest.json') { response.setHeader('Cache-Control', 'no-store'); response.setHeader('X-Release-Revision', manifest.releaseRevision); response.setHeader('X-Release-Artifact', manifest.artifactDigest); return response.end(JSON.stringify(manifest)); }
     const page = expected.routes.find((item) => item.route === route);
     if (!page) { response.statusCode = 404; return response.end(); }
     response.setHeader('Cache-Control', 'public, max-age=60'); response.setHeader('X-Release-Revision', manifest.releaseRevision); response.setHeader('X-Release-Artifact', manifest.artifactDigest);

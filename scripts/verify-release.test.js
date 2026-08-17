@@ -116,7 +116,7 @@ test('Linux release evidence stays build-only', () => {
   assert.match(workflow, /cache: npm/);
   assert.match(workflow, /npm ci/);
   assert.match(workflow, /npm run verify:release -- --keep-artifacts/);
-  assert.match(workflow, /if: failure\(\)/);
+  assert.match(workflow, /if: \$\{\{ failure\(\)/);
   assert.match(workflow, /actions\/upload-artifact@v4/);
   assert.match(workflow, /\.release-artifacts/);
 

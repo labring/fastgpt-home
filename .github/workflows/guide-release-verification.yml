@@ -1,0 +1,60 @@
+name: Guide Release Verification
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/guide-release-verification.yml'
+      - 'Dockerfile.verify'
+      - 'next.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'scripts/clean-locale-output.js'
+      - 'scripts/verify-release.js'
+      - 'scripts/verify-release.test.js'
+      - 'scripts/verify-guide-*.js'
+      - 'src/app/guide/**'
+      - 'src/app/[lang]/guide/**'
+      - 'src/components/guide/**'
+      - 'src/content/guides/**'
+      - 'src/lib/guideContent.ts'
+      - 'src/lib/guideSeo.ts'
+      - 'src/app/sitemap.ts'
+
+concurrency:
+  group: guide-release-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Verify dual-variant release evidence
+        run: |
+          npm ci
+          npm run verify:release -- --keep-artifacts
+
+      - name: Upload failure artifacts
+        if: ${{ failure() && hashFiles('.release-artifacts/**') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: guide-release-failure-artifacts
+          path: .release-artifacts
+          retention-days: 3
+          if-no-files-found: ignore

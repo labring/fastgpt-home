@@ -84,8 +84,27 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
   if (!policy || !['none', 'requested-unapproved', 'source-exception', 'required'].includes(String(policy.status))) {
     fail(`${slug}:${locale}: invalid asset policy`);
   }
-  if (policy.status === 'required' && (!isBasename(String(policy.path).split('/').pop()) || !policy.alt)) {
-    fail(`${slug}:${locale}: required asset needs a contained path and alt`);
+  if (policy.status === 'required') {
+    if (
+      typeof policy.path !== 'string' ||
+      !policy.path.startsWith('/') ||
+      policy.path.includes('..') ||
+      typeof policy.alt !== 'string' ||
+      !policy.alt.trim()
+    ) {
+      fail(`${slug}:${locale}: required asset needs a contained public path and alt`);
+    }
+  }
+  for (const mapping of snapshot.configuredInternalLinks as unknown[]) {
+    if (!mapping || typeof mapping !== 'object') fail(`${slug}:${locale}: invalid configured link`);
+    const link = mapping as Record<string, unknown>;
+    if (
+      typeof link.label !== 'string' ||
+      !snapshot.sourceInternalLinkLabels.includes(link.label) ||
+      typeof link.target !== 'string'
+    ) {
+      fail(`${slug}:${locale}: configured link needs an exact source label and target`);
+    }
   }
 }
 

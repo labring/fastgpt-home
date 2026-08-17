@@ -49,10 +49,11 @@ export function normalizeGuideSource(source: string) {
 }
 
 export function parseGuideDeliverySource(source: string, expected: GuideSourceSnapshot): GuideDocument {
+  const slug = expected.canonical.split('/').pop() || expected.sourceName;
   const normalized = normalizeGuideSource(source);
   const match = normalized.match(/^(<!--[\s\S]*?-->)([\s\S]*)$/);
   if (!match || !match[2].startsWith('\n\n#')) {
-    guideError(expected.sourceName, 'expected one leading delivery comment followed by \\n\\n#');
+    guideError(slug, 'expected one leading delivery comment followed by \\n\\n#');
   }
   const lines = match[1].slice(4, -3).split('\n');
   const fields: Record<string, string> = {};
@@ -62,15 +63,15 @@ export function parseGuideDeliverySource(source: string, expected: GuideSourceSn
   }
   const body = match[2];
   const metadata: GuideDeliveryMetadata = {
-    slug: requireField(expected.sourceName, fields, 'slug'),
-    canonical: requireField(expected.sourceName, fields, 'canonical'),
-    hreflang: requireField(expected.sourceName, fields, 'hreflang'),
-    metaTitle: requireField(expected.sourceName, fields, 'Meta title'),
-    metaDescription: requireField(expected.sourceName, fields, 'Meta description'),
-    keywords: requireField(expected.sourceName, fields, 'keywords'),
-    sourceSchema: requireField(expected.sourceName, fields, '结构化数据'),
-    sourceImageDirective: requireField(expected.sourceName, fields, '配图需求'),
-    sourceInternalLinkLabels: requireField(expected.sourceName, fields, '内链').split(' / ')
+    slug: requireField(slug, fields, 'slug'),
+    canonical: requireField(slug, fields, 'canonical'),
+    hreflang: requireField(slug, fields, 'hreflang'),
+    metaTitle: requireField(slug, fields, 'Meta title'),
+    metaDescription: requireField(slug, fields, 'Meta description'),
+    keywords: requireField(slug, fields, 'keywords'),
+    sourceSchema: requireField(slug, fields, '结构化数据'),
+    sourceImageDirective: requireField(slug, fields, '配图需求'),
+    sourceInternalLinkLabels: requireField(slug, fields, '内链').split(' / ')
   };
   const h1 = body.match(/^\n\n# (.+)$/m)?.[1];
   const matches = [
@@ -87,10 +88,10 @@ export function parseGuideDeliverySource(source: string, expected: GuideSourceSn
     ['body hash', sha256(body), expected.bodySha256]
   ];
   for (const [label, actual, required] of matches) {
-    if (actual !== required) guideError(expected.sourceName, `${label} differs from registry`);
+    if (actual !== required) guideError(slug, `${label} differs from registry`);
   }
   if (metadata.sourceInternalLinkLabels.join('\u0000') !== expected.sourceInternalLinkLabels.join('\u0000')) {
-    guideError(expected.sourceName, 'internal-link labels differ from registry');
+    guideError(slug, 'internal-link labels differ from registry');
   }
   return { body, metadata, source: expected };
 }

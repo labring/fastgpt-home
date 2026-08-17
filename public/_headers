@@ -31,4 +31,5 @@
 
 # Release identity must remain uncached so revision evidence reflects the deployed artifact.
 /__release/manifest.json
+  ! Cache-Control
   Cache-Control: no-store

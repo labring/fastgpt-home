@@ -5,14 +5,14 @@ milestone_name: Guide Content Center
 current_phase: 6
 current_phase_name: Guide Hubs, Articles & SEO Graph
 status: executing
-stopped_at: Completed 06-02-PLAN.md
-last_updated: "2026-08-17T05:36:51.474Z"
+stopped_at: Completed 06-03-PLAN.md
+last_updated: "2026-08-17T05:42:34.144Z"
 last_activity: 2026-08-17
 progress:
   total_phases: 2
   completed_phases: 1
   total_plans: 8
-  completed_plans: 6
+  completed_plans: 7
 last_activity_desc: Published the closed root Guide article tracer and registry-backed SEO graph in 06-01.
 ---
 
@@ -28,11 +28,11 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 ## Current Position
 
 Phase: 6 — Guide Hubs, Articles & SEO Graph
-Plan: 3 of 4
+Plan: 4 of 4
 Status: Ready to execute
 Last activity: 2026-08-17
 
-Progress: [████████░░] 75%
+Progress: [█████████░] 88%
 
 ## Performance Metrics
 
@@ -61,6 +61,7 @@ Progress: [████████░░] 75%
 | Phase 05 P04 | 8m | 2 tasks | 3 files |
 | Phase 06 P01 | 5m | 3 tasks | 9 files |
 | Phase 06 P02 | 3m | 2 tasks | 6 files |
+| Phase 06-guide-hubs-articles-seo-graph P03 | 2m | 2 tasks | 5 files |
 
 ## Accumulated Context
 
@@ -85,6 +86,8 @@ Progress: [████████░░] 75%
 - [Phase ?]: Guide article H1, visible breadcrumbs, and JSON-LD names share one localized copy record.
 - [Phase ?]: Localized adapters retain their owned root canonicals and use noindex-follow metadata.
 - [Phase ?]: Asset and internal-link UI remains gated by validated registry records.
+- [Phase ?]: Guide hub cards and ItemList share registry order and owned URL projection.
+- [Phase ?]: Localized Guide hub adapters retain root canonicals with noindex-follow metadata.
 
 ### Pending Todos
 
@@ -106,6 +109,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T05:36:51.465Z
-Stopped at: Completed 06-02-PLAN.md
+Last session: 2026-08-17T05:42:34.132Z
+Stopped at: Completed 06-03-PLAN.md
 Resume file: None

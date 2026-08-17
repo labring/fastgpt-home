@@ -80,7 +80,21 @@ export function getGuideArticleMetadata(
       type: 'article',
       url: canonical,
       title: snapshot.metaTitle,
-      description: snapshot.metaDescription
+      description: snapshot.metaDescription,
+      publishedTime: snapshot.datePublished,
+      modifiedTime: snapshot.dateModified,
+      ...(snapshot.assetPolicy.status === 'required'
+        ? {
+            images: [
+              {
+                url: getOwnedLocaleUrl(locale, snapshot.assetPolicy.path),
+                width: snapshot.assetPolicy.width,
+                height: snapshot.assetPolicy.height,
+                alt: snapshot.assetPolicy.alt
+              }
+            ]
+          }
+        : {})
     }
   };
 }

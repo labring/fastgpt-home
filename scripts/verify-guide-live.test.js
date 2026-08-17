@@ -33,6 +33,7 @@ test('provider receipts require actual immutable provider revisions', () => {
   const manifest = { variant: 'cn', releaseRevision: 'revision', artifactDigest: 'tree', treeDigest: 'tree', rollbackTarget: 'previous' };
   assert.throws(() => validateProviderReceipt({}, manifest), /provider receipt/i);
   assert.throws(() => validateProviderReceipt({ schemaVersion: 1, variant: 'cn', releaseRevision: 'revision', artifactDigest: 'tree', treeDigest: 'tree', archiveDigest: 'archive', rollbackTarget: 'previous', provider: {} }, manifest), /image digest/i);
+  assert.throws(() => validateProviderReceipt({ schemaVersion: 1, variant: 'cn', releaseRevision: 'revision', artifactDigest: 'tree', treeDigest: 'tree', archiveDigest: 'archive', rollbackTarget: 'previous', provider: { imageDigest: 'sha256:abc', kubernetesImage: 'image@sha256:abc' } }, manifest), /completed rollout/i);
 });
 
 test('CLI only accepts baseline mode as an explicit flag', () => {
@@ -44,7 +45,7 @@ test('local 18-page fixture validates SEO, cache, manifest headers, sitemap, and
   const hosts = { cn: '', io: '' }; const cn = await fixture('cn', hosts); hosts.cn = `http://127.0.0.1:${cn.port}`; const io = await fixture('io', hosts); hosts.io = `http://127.0.0.1:${io.port}`;
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'guide-live-'));
   try {
-    const receipt = (variant, manifest) => ({ schemaVersion: 1, ...manifest, archiveDigest: `${variant}-archive`, provider: variant === 'cn' ? { imageDigest: 'sha256:abc', kubernetesImage: 'image@sha256:abc' } : { deploymentId: 'pages-id', deploymentUrl: 'https://pages.example' } });
+    const receipt = (variant, manifest) => ({ schemaVersion: 1, ...manifest, archiveDigest: `${variant}-archive`, provider: variant === 'cn' ? { imageDigest: 'sha256:abc', kubernetesImage: 'image@sha256:abc', rollout: { status: 'completed' } } : { deploymentId: 'pages-id', deploymentUrl: 'https://pages.example' } });
     const cnReceipt = path.join(root, 'cn.json'); const ioReceipt = path.join(root, 'io.json'); fs.writeFileSync(cnReceipt, JSON.stringify(receipt('cn', cn.manifest))); fs.writeFileSync(ioReceipt, JSON.stringify(receipt('io', io.manifest)));
     const result = await runLiveVerification({ baseUrlCn: hosts.cn, baseUrlIo: hosts.io, timeoutMs: 1000, providerEvidence: [cnReceipt, ioReceipt] });
     assert.equal(result.status, 'passed'); assert.equal(result.variants.cn.routes.length + result.variants.io.routes.length, 18); assert.equal(result.variants.io.manifest.headers['cache-control'], 'no-store');

@@ -64,7 +64,7 @@ test('manifest, archive, and digest fixtures are stable for io and cn', () => {
         treeDigest: packaged.manifest.treeDigest,
         archiveDigest: packaged.archiveDigest,
         rollbackTarget: packaged.manifest.rollbackTarget,
-        provider: variant === 'cn' ? { imageDigest: 'sha256:published', kubernetesImage: 'ghcr.io/fastgpt/home@sha256:published' } : { deploymentId: 'pages-current-id', deploymentUrl: 'https://release.example.pages.dev' }
+        provider: variant === 'cn' ? { imageDigest: 'sha256:published', kubernetesImage: 'ghcr.io/fastgpt/home@sha256:published', rollout: { status: 'completed' } } : { deploymentId: 'pages-current-id', deploymentUrl: 'https://release.example.pages.dev' }
       } }).variant, variant);
     } finally {
       fs.rmSync(root, { recursive: true, force: true });

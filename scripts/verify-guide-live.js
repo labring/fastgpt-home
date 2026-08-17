@@ -46,7 +46,7 @@ function validateProviderReceipt(receipt, manifest) {
   if (!receipt || receipt.schemaVersion !== 1 || receipt.variant !== manifest.variant) fail('provider receipt schema/variant mismatch');
   for (const key of ['releaseRevision', 'artifactDigest', 'treeDigest', 'archiveDigest', 'rollbackTarget']) if (!receipt[key]) fail(`provider receipt missing ${key}`);
   for (const key of ['releaseRevision', 'artifactDigest', 'treeDigest', 'rollbackTarget']) if (receipt[key] !== manifest[key]) fail(`provider receipt ${key} mismatch`);
-  if (receipt.variant === 'cn' && (!String(receipt.provider?.imageDigest || '').startsWith('sha256:') || !String(receipt.provider?.kubernetesImage || '').includes('@sha256:'))) fail('provider receipt CN image digest/Kubernetes reference missing');
+  if (receipt.variant === 'cn' && (!String(receipt.provider?.imageDigest || '').startsWith('sha256:') || !String(receipt.provider?.kubernetesImage || '').includes('@sha256:') || receipt.provider?.rollout?.status !== 'completed')) fail('provider receipt CN image digest/Kubernetes reference/completed rollout missing');
   if (receipt.variant === 'io' && (!receipt.provider?.deploymentId || !receipt.provider?.deploymentUrl)) fail('provider receipt IO deployment ID/URL missing');
   return receipt;
 }

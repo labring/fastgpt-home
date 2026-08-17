@@ -270,8 +270,8 @@ function validateProviderReceipt({ providerReceipt, manifest, variant, artifactP
     }
   }
   if (variant === 'cn') {
-    if (!String(providerReceipt.provider?.imageDigest || '').startsWith('sha256:') || !String(providerReceipt.provider?.kubernetesImage || '').includes('@sha256:')) {
-      fail({ variant, artifactPath, surface: 'provider-receipt' }, 'CN receipt requires image digest and digest-pinned Kubernetes image');
+    if (!String(providerReceipt.provider?.imageDigest || '').startsWith('sha256:') || !String(providerReceipt.provider?.kubernetesImage || '').includes('@sha256:') || providerReceipt.provider?.rollout?.status !== 'completed') {
+      fail({ variant, artifactPath, surface: 'provider-receipt' }, 'CN receipt requires image digest, digest-pinned Kubernetes image, and completed rollout');
     }
   } else if (!providerReceipt.provider?.deploymentId || !providerReceipt.provider?.deploymentUrl) {
     fail({ variant, artifactPath, surface: 'provider-receipt' }, 'IO receipt requires Pages deployment ID and URL');

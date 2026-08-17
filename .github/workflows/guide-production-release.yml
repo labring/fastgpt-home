@@ -54,7 +54,9 @@ jobs:
         with: { node-version: 24, cache: npm }
       - run: npm ci
       - uses: actions/download-artifact@v4
-        with: { name: guide-verified-trees-${{ github.sha }}, path: ${{ runner.temp }}/guide-verified }
+        with:
+          name: guide-verified-trees-${{ github.sha }}
+          path: ${{ runner.temp }}/guide-verified
       - name: Guard rollback inputs before artifact mutation
         run: |
           test -n '${{ inputs.cn_rollback_target }}' || { echo 'blocked: missing cn rollback target'; exit 1; }
@@ -76,12 +78,26 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        with: { name: guide-release-bundle-${{ github.sha }}, path: release-bundle }
+        with:
+          name: guide-release-bundle-${{ github.sha }}
+          path: release-bundle
       - name: Guard CN provider credentials before mutation
-        env: { KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }} }
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
           test -n "$KUBE_CONFIG" || { echo 'blocked: missing KUBE_CONFIG'; exit 1; }
           test -n '${{ inputs.cn_rollback_target }}' || { echo 'blocked: missing cn rollback target'; exit 1; }
+      - uses: azure/setup-kubectl@v4
+      - name: Capture provider-derived CN rollback target
+        id: cn_rollback
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        run: |
+          printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
+          current_image=$(KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl get deployment/fastgpt-home -o jsonpath='{.spec.template.spec.containers[?(@.name=="fastgpt-home")].image}')
+          echo "$current_image" | grep -Eq '@sha256:[a-f0-9]{64}$' || { echo 'blocked: current CN image is not immutable'; exit 1; }
+          test "$current_image" = '${{ inputs.cn_rollback_target }}' || { echo 'blocked: cn rollback input does not match provider current image'; exit 1; }
+          printf 'target=%s\n' "$current_image" >> "$GITHUB_OUTPUT"
       - name: Verify and extract exact CN archive
         id: cn_identity
         run: |
@@ -92,7 +108,10 @@ jobs:
           node scripts/release-artifact.js verify --out-dir release-out --variant cn --archive "$archive"
           ARCHIVE="$archive" node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const a=fs.readFileSync(process.env.ARCHIVE+'.sha256','utf8').trim().split(/\\s+/)[0];for(const [k,v] of Object.entries({revision:m.releaseRevision,tree:m.treeDigest,archive:a}))fs.appendFileSync(process.env.GITHUB_OUTPUT,k+'='+v+'\\n')"
       - uses: docker/login-action@v3
-        with: { registry: ghcr.io, username: ${{ github.actor }}, password: ${{ secrets.GITHUB_TOKEN }} }
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
       - id: image
         uses: docker/build-push-action@v5
         with:
@@ -105,22 +124,35 @@ jobs:
             RELEASE_SOURCE_COMMIT=${{ github.sha }}
             RELEASE_TREE_DIGEST=${{ steps.cn_identity.outputs.tree }}
             RELEASE_ARTIFACT_ID=${{ steps.cn_identity.outputs.revision }}
-            RELEASE_ROLLBACK_TARGET=${{ inputs.cn_rollback_target }}
+            RELEASE_ROLLBACK_TARGET=${{ steps.cn_rollback.outputs.target }}
             RELEASE_PROVIDER=kubernetes
-      - name: Resolve immutable digest and write CN provider receipt
-        env: { IMAGE_DIGEST: ${{ steps.image.outputs.digest }}, ARCHIVE_DIGEST: ${{ steps.cn_identity.outputs.archive }}, RELEASE_TREE: ${{ steps.cn_identity.outputs.tree }}, RELEASE_REVISION: ${{ steps.cn_identity.outputs.revision }} }
+      - name: Resolve immutable CN image digest
+        env:
+          IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
+          ROLLBACK_TARGET: ${{ steps.cn_rollback.outputs.target }}
         run: |
           test -n "$IMAGE_DIGEST" || { echo 'blocked: image digest unavailable'; exit 1; }
-          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));fs.writeFileSync('cn-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'cn',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:m.rollbackTarget,provider:{imageDigest:process.env.IMAGE_DIGEST,kubernetesImage:process.env.IMAGE_NAME+'@'+process.env.IMAGE_DIGEST},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
-      - uses: azure/setup-kubectl@v4
+          test -n "$ROLLBACK_TARGET" || { echo 'blocked: provider rollback target unavailable'; exit 1; }
       - name: Roll out digest-pinned CN image
-        env: { KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}, IMAGE_DIGEST: ${{ steps.image.outputs.digest }} }
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+          IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
         run: |
           printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
           KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl set image deployment/fastgpt-home fastgpt-home="$IMAGE_NAME@$IMAGE_DIGEST"
           KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl rollout status deployment/fastgpt-home --timeout=5m
+      - name: Write final CN provider receipt after rollout
+        env:
+          IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
+          ARCHIVE_DIGEST: ${{ steps.cn_identity.outputs.archive }}
+          ROLLBACK_TARGET: ${{ steps.cn_rollback.outputs.target }}
+        run: |
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));if(!process.env.ROLLBACK_TARGET)throw new Error('blocked: provider rollback target missing');fs.writeFileSync('cn-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'cn',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_TARGET,provider:{imageDigest:process.env.IMAGE_DIGEST,kubernetesImage:process.env.IMAGE_NAME+'@'+process.env.IMAGE_DIGEST,rollout:{status:'completed',deployment:'fastgpt-home'}},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
       - uses: actions/upload-artifact@v4
-        with: { name: guide-cn-provider-evidence-${{ github.sha }}, path: cn-provider-receipt.json, retention-days: 30 }
+        with:
+          name: guide-cn-provider-evidence-${{ github.sha }}
+          path: cn-provider-receipt.json
+          retention-days: 30
 
   deploy-io:
     needs: package-variants
@@ -128,14 +160,29 @@ jobs:
     environment: production-io
     steps:
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
       - uses: actions/download-artifact@v4
-        with: { name: guide-release-bundle-${{ github.sha }}, path: release-bundle }
+        with:
+          name: guide-release-bundle-${{ github.sha }}
+          path: release-bundle
       - name: Guard IO provider credentials before mutation
-        env: { CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}, CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }} }
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           test -n "$CLOUDFLARE_API_TOKEN" || { echo 'blocked: missing Cloudflare token'; exit 1; }
           test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo 'blocked: missing Cloudflare account'; exit 1; }
           test -n '${{ inputs.io_rollback_target }}' || { echo 'blocked: missing io rollback target'; exit 1; }
+      - name: Capture provider-derived IO rollback target
+        id: io_rollback
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npx --no-install wrangler pages deployment list --project-name=fastgpt-home --json > io-previous-deployments.json
+          node -e "const fs=require('fs');const raw=JSON.parse(fs.readFileSync('io-previous-deployments.json'));const rows=Array.isArray(raw)?raw:(raw.result||[]);const d=rows[0]||{};if(!d.id||!d.url)throw new Error('blocked: current Pages deployment ID/URL unavailable');if(d.id!=='${{ inputs.io_rollback_target }}')throw new Error('blocked: io rollback input does not match provider current deployment');fs.appendFileSync(process.env.GITHUB_OUTPUT,'id='+d.id+'\nurl='+d.url+'\n')"
       - name: Verify and extract exact IO archive
         id: io_identity
         run: |
@@ -151,13 +198,26 @@ jobs:
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy release-out --project-name=fastgpt-home --branch=main --commit-hash=${{ github.sha }}
       - name: Record Pages revision, receipt, and optional purge evidence
-        env: { CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}, CLOUDFLARE_ZONE_ID: ${{ vars.CLOUDFLARE_ZONE_ID }}, ARCHIVE_DIGEST: ${{ steps.io_identity.outputs.archive }} }
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ZONE_ID: ${{ vars.CLOUDFLARE_ZONE_ID }}
+          ARCHIVE_DIGEST: ${{ steps.io_identity.outputs.archive }}
+          ROLLBACK_ID: ${{ steps.io_rollback.outputs.id }}
+          ROLLBACK_URL: ${{ steps.io_rollback.outputs.url }}
         run: |
           npx --no-install wrangler pages deployment list --project-name=fastgpt-home --json > io-deployments.json
-          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const d=JSON.parse(fs.readFileSync('io-deployments.json'))[0]||{};if(!d.id||!d.url)throw new Error('blocked: Pages deployment ID/URL unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:m.rollbackTarget,provider:{deploymentId:d.id,deploymentUrl:d.url},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const rows=JSON.parse(fs.readFileSync('io-deployments.json'));const d=Array.isArray(rows)?rows[0]:(rows.result||[])[0]||{};if(!d.id||!d.url)throw new Error('blocked: Pages deployment ID/URL unavailable');if(!process.env.ROLLBACK_ID)throw new Error('blocked: provider rollback target unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_ID,provider:{deploymentId:d.id,deploymentUrl:d.url,previousDeploymentUrl:process.env.ROLLBACK_URL},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
           if [ '${{ inputs.purge_cloudflare }}' = 'true' ]; then node scripts/purge-cloudflare-cache.js --url https://fastgpt.io/guide --evidence-out io-purge.json; fi
       - uses: actions/upload-artifact@v4
-        with: { name: guide-io-provider-evidence-${{ github.sha }}, path: 'io-provider-receipt.json\nio-deployments.json\nio-purge.json', if-no-files-found: ignore, retention-days: 30 }
+        with:
+          name: guide-io-provider-evidence-${{ github.sha }}
+          path: |
+            io-provider-receipt.json
+            io-previous-deployments.json
+            io-deployments.json
+            io-purge.json
+          if-no-files-found: ignore
+          retention-days: 30
 
   evidence:
     needs: [deploy-cn, deploy-io]
@@ -165,10 +225,19 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        with: { name: guide-cn-provider-evidence-${{ github.sha }}, path: evidence/cn }
+        with:
+          name: guide-cn-provider-evidence-${{ github.sha }}
+          path: evidence/cn
       - uses: actions/download-artifact@v4
-        with: { name: guide-io-provider-evidence-${{ github.sha }}, path: evidence/io }
+        with:
+          name: guide-io-provider-evidence-${{ github.sha }}
+          path: evidence/io
       - name: Fail closed on public Guide, cache, manifest, and provider evidence drift
         run: node scripts/verify-guide-live.js --base-url-cn https://fastgpt.cn --base-url-io https://fastgpt.io --provider-evidence evidence/cn/cn-provider-receipt.json --provider-evidence evidence/io/io-provider-receipt.json --report guide-live-evidence.json
       - uses: actions/upload-artifact@v4
-        with: { name: guide-live-evidence-${{ github.sha }}, path: 'guide-live-evidence.json\nguide-live-evidence.json.txt', retention-days: 30 }
+        with:
+          name: guide-live-evidence-${{ github.sha }}
+          path: |
+            guide-live-evidence.json
+            guide-live-evidence.json.txt
+          retention-days: 30

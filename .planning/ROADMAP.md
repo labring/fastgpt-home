@@ -72,7 +72,7 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
   1. A maintainer can run one repository command that validates the Guide pair registry, source fidelity, metadata, assets, internal links, route inventory, SEO graph, sitemap coverage, and exported HTML with slug-specific failures.
   2. A maintainer can produce clean case-sensitive cn and io production exports, each containing exactly one owned Guide hub and eight owned Guide article paths while retaining the existing initial-JavaScript release budget.
 
-**Plans**: 2/3 plans executed
+**Plans**: 3/3 plans executed
 **Wave 1**
 
 - [x] 07-01-PLAN.md — Add the registry-driven standalone Guide export verifier and exact dual-variant inventory.

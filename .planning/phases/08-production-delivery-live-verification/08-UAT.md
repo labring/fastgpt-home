@@ -7,13 +7,13 @@ source:
   - 08-03-SUMMARY.md
   - 08-VERIFICATION.md
 started: 2026-08-17T12:59:32Z
-updated: 2026-08-17T13:08:48Z
+updated: 2026-08-17T13:23:31Z
 decision_mode: automated-authorized
 ---
 
 ## Current Test
 
-[re-verification complete — blocked]
+[re-verification complete — gaps found]
 
 ## Tests
 
@@ -23,54 +23,62 @@ result: pass
 source: automated
 evidence: npm run release:artifact-regression — 6 passed
 
-### 2. Published provider delivery path
+### 2. Local provider rollback and receipt controls
+expected: Before provider mutation, the workflow validates each dispatch rollback target against the provider-derived current revision. CN writes its final receipt after completed rollout; IO retains its previous deployment URL and purge evidence.
+result: pass
+source: automated
+evidence: Ruby YAML/ordering assertions passed; node --test scripts/verify-release.test.js passed 10 tests with one documented case-sensitive filesystem skip; verify-guide-live receipt tests reject CN entries without completed rollout.
+
+### 3. Published provider delivery path
 expected: The authorized production repository exposes the guarded workflow and a completed run records provider-derived CN/IO rollback targets plus final immutable provider revisions.
 result: issue
 severity: blocker
 source: automated
-reported: Both configured GitHub default branches return 404 for guide-production-release.yml; no provider receipt or release bundle exists. The local workflow also trusts dispatch rollback strings, reads Pages deployment state after deploy, and writes the CN receipt before Kubernetes rollout status without preserving the final rollout result.
+reported: GitHub API returned 404 for guide-production-release.yml on main in both configured repositories. The local workflow is provider-safe, while no published workflow run, provider receipt, release bundle, deployed revision, or rollback record exists.
 
-### 3. Public bilingual Guide release
-expected: `/guide` and all eight Guide articles return 200 on each owned domain with the required SEO, cache, sitemap, manifest, and provider-revision evidence.
+### 4. Public bilingual Guide release
+expected: /guide and all eight Guide articles return 200 on each owned domain with the required SEO, cache, sitemap, manifest, and provider-revision evidence.
 result: issue
 severity: blocker
 source: automated
-reported: Baseline at 2026-08-17T13:07:31Z found 9/9 Guide paths returning 404 on fastgpt.cn, 9/9 returning 404 on fastgpt.io, and both release manifests returning 404. Both sitemaps returned 200 without Guide rows.
+reported: Baseline started 2026-08-17T13:21:26.839Z found 18 Guide route 404s and two release-manifest 404s. Both sitemaps returned 200; every route and support surface records status, finalUrl, headers, and bodyDigest.
 
-### 4. Auditable sitemap and manifest evidence
+### 5. Auditable sitemap and manifest evidence
 expected: The live JSON report records structured HTTP status, final URL, headers, body digest, and timestamps for the two sitemaps and two release manifests.
 result: pass
 source: automated
-evidence: `verify-guide-live.js` emits `variants.<variant>.surfaces` entries for `/sitemap.xml` and `/__release/manifest.json`; the 4-case fixture regression asserts these fields for both variants.
+evidence: Fresh 08-LIVE-EVIDENCE.json assertion verified two sitemap 200s, two manifest 404s, and all required structured fields.
 
 ## Summary
 
-total: 4
-passed: 2
+total: 5
+passed: 3
 issues: 2
 pending: 0
 skipped: 0
 blocked: 0
 
+DEPLOY-01 and DEPLOY-02 remain blocked pending a published authorized workflow run, provider receipts, and public 200 evidence.
+
 ## Gaps
 
-- gap_id: G-08-2
+- gap_id: G-08-3
   truth: "The production workflow is published and has recorded immutable provider revisions and provider-derived rollback targets."
   status: failed
   severity: blocker
-  test: 2
-  reason: "The workflow is absent from both checked remote defaults; local receipt ordering and rollback capture are incomplete."
+  test: 3
+  reason: "Both checked remote defaults lack guide-production-release.yml and no completed provider evidence exists."
   artifacts:
     - path: .github/workflows/guide-production-release.yml
-      issue: CN receipt precedes rollout status; provider rollback state is never read before mutation.
+      issue: Local source guards pass; the authorized remote workflow and receipts remain absent.
   missing:
-    - Read each current provider revision before mutation and bind it as rollback target.
-    - Persist final post-rollout CN and final IO receipts, then publish and run the guarded workflow with authorized credentials.
-- gap_id: G-08-3
+    - Publish and run the guarded workflow with authorized provider credentials.
+    - Preserve the final CN/IO receipts, IO purge evidence, archives, manifests, and live matrix.
+- gap_id: G-08-4
   truth: "Both domains expose the full 18-page Guide release with final 200 and release identity evidence."
   status: failed
   severity: blocker
-  test: 3
+  test: 4
   reason: "All 18 Guide page probes and both manifest probes returned 404."
   artifacts:
     - path: .planning/phases/08-production-delivery-live-verification/08-LIVE-EVIDENCE.json

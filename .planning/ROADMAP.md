@@ -34,7 +34,12 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
   2. A maintainer can build every publishable Guide body with its one leading delivery-metadata comment removed and the approved article content preserved after newline normalization.
   3. A maintainer receives a slug-specific build failure for a duplicate slug, incomplete pair, mismatched metadata or schema, required missing asset, or unresolved configured internal link.
 
-**Plans**: TBD
+**Plans**: 1/4 plans executed
+
+- [x] 05-01-PLAN.md
+- [ ] 05-02-PLAN.md
+- [ ] 05-03-PLAN.md
+- [ ] 05-04-PLAN.md
 
 ### Phase 6: Guide Hubs, Articles & SEO Graph
 
@@ -83,7 +88,7 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 5. Guide Content Contract | 0/TBD | Not started | - |
+| 5. Guide Content Contract | 1/4 | In Progress|  |
 | 6. Guide Hubs, Articles & SEO Graph | 0/TBD | Not started | - |
 | 7. Dual-Variant Release Evidence | 0/TBD | Not started | - |
 | 8. Production Delivery & Live Verification | 0/TBD | Not started | - |

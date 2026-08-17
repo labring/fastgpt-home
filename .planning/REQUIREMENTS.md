@@ -9,9 +9,9 @@ Requirements for the Guide Content Center production milestone. Each requirement
 
 ### Guide Content Contract
 
-- [ ] **GUIDE-01**: A maintainer can enumerate exactly eight unique Guide slugs, each backed by one approved Chinese document and one approved English document from the Week04 source package.
-- [ ] **GUIDE-02**: A maintainer can build a publishable body for each Guide document by removing exactly one leading delivery-metadata comment while preserving the approved article body after newline normalization.
-- [ ] **GUIDE-03**: A maintainer receives a slug-specific build failure for any duplicate slug, incomplete locale pair, metadata mismatch, invalid schema type, missing required approved asset, or unresolved configured internal link.
+- [x] **GUIDE-01**: A maintainer can enumerate exactly eight unique Guide slugs, each backed by one approved Chinese document and one approved English document from the Week04 source package.
+- [x] **GUIDE-02**: A maintainer can build a publishable body for each Guide document by removing exactly one leading delivery-metadata comment while preserving the approved article body after newline normalization.
+- [x] **GUIDE-03**: A maintainer receives a slug-specific build failure for any duplicate slug, incomplete locale pair, metadata mismatch, invalid schema type, missing required approved asset, or unresolved configured internal link.
 
 ### Guide Visitor Experience
 
@@ -74,9 +74,9 @@ Roadmap creation assigns each v1.1 requirement to exactly one phase.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| GUIDE-01 | Phase 5 | Pending |
-| GUIDE-02 | Phase 5 | Pending |
-| GUIDE-03 | Phase 5 | Pending |
+| GUIDE-01 | Phase 5 | Complete |
+| GUIDE-02 | Phase 5 | Complete |
+| GUIDE-03 | Phase 5 | Complete |
 | HUB-01 | Phase 6 | Pending |
 | ARTICLE-01 | Phase 6 | Pending |
 | ARTICLE-02 | Phase 6 | Pending |

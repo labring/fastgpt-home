@@ -40,9 +40,9 @@ npm run build
 不要填写密钥等敏感信息。
 
 商务表单的业务来源使用独立的 `source` query 参数，例如
-`/zh/contact?source=feishu`。官网会通过 Cookie 保留该来源，并在商机表单请求 JSON
-的 `source` 字段中发送给 CRM；没有该参数时来源为 `未知`。UTM 仍可用于匿名渠道分析，但不参与
-表单提交来源，也不再作为飞书客户来源；显式 `source` 只在提交商机时发送给 CRM。
+`/zh/contact?source=feishu`。每次提交时，官网实时读取当前 URL 的 `source`；没有该参数时使用
+构建时默认值，未配置则为 `未知`。提交来源不读取 Cookie 或其他本地归因状态。UTM 仍可用于匿名渠道分析，
+但不参与表单提交来源，也不再作为飞书客户来源；显式 `source` 只在提交商机时发送给 CRM。
 表单接口只接收表单字段、`visitor_id` 和 `source`，UTM/channel 等字段由匿名访客上报接口独立发送。
 
 ## Build

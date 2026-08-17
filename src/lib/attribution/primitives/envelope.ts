@@ -79,7 +79,6 @@ function canonicalizeTouchPoint(value: Record<string, unknown>): TouchPoint {
   return {
     channel_l1: value.channel_l1 as ChannelL1,
     channel_l2: value.channel_l2 as string,
-    source: typeof value.source === 'string' ? value.source : '未知',
     is_paid: value.is_paid as boolean,
     label: value.label as string,
     utm_source: value.utm_source as string,

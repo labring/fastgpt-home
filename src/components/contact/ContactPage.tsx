@@ -12,23 +12,22 @@ import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import { normalizeLocale } from '@/lib/locales';
 import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 
-function isEmbeddedPage() {
-  try {
-    return window.self !== window.top;
-  } catch {
-    return true;
-  }
-}
-
-export default function ContactPage({ locale }: { locale: string }) {
+export default function ContactPage({
+  locale,
+  embedded = false
+}: {
+  locale: string;
+  embedded?: boolean;
+}) {
   const router = useRouter();
   const [canGoBack, setCanGoBack] = useState(false);
-  const [isEmbedded, setIsEmbedded] = useState(false);
   const normalizedLocale = normalizeLocale(locale);
   const copy = getContactCopy(normalizedLocale);
   const homeHref = getDefaultLocalePath(normalizedLocale);
 
   useEffect(() => {
+    if (embedded) return;
+
     const referrer = document.referrer;
     let hasSameOriginReferrer = false;
 
@@ -40,20 +39,17 @@ export default function ContactPage({ locale }: { locale: string }) {
       }
     }
 
-    const embedded = isEmbeddedPage();
-
     queueMicrotask(() => {
-      setIsEmbedded(embedded);
       setCanGoBack(window.history.length > 1 && hasSameOriginReferrer);
     });
-  }, []);
+  }, [embedded]);
 
   return (
     <div
       className="home min-h-screen bg-white text-[#101828]"
-      data-embedded={isEmbedded ? 'true' : undefined}
+      data-embedded={embedded ? 'true' : undefined}
     >
-      {!isEmbedded && (
+      {!embedded && (
         <header className="border-b border-[#eaecf0] bg-white">
           <div className="mx-auto flex h-16 max-w-[1180px] items-center justify-between px-5 sm:px-8">
             <Link href={homeHref} className="flex items-center gap-2" aria-label="FastGPT Home">
@@ -83,11 +79,11 @@ export default function ContactPage({ locale }: { locale: string }) {
 
       <main
         className={
-          isEmbedded ? 'bg-white px-0 py-0' : 'bg-[#f8fafc] px-5 py-10 sm:px-8 sm:py-14 lg:py-16'
+          embedded ? 'bg-white px-0 py-0' : 'bg-[#f8fafc] px-5 py-10 sm:px-8 sm:py-14 lg:py-16'
         }
       >
-        <div className={isEmbedded ? 'mx-auto max-w-none' : 'mx-auto max-w-[820px]'}>
-          {!isEmbedded && (
+        <div className={embedded ? 'mx-auto max-w-none' : 'mx-auto max-w-[820px]'}>
+          {!embedded && (
             <div className="mb-8 max-w-[680px] sm:mb-10">
               <span className="mb-3 block text-[11px] font-semibold uppercase text-[#155eef]">
                 {copy.eyebrow}
@@ -104,7 +100,7 @@ export default function ContactPage({ locale }: { locale: string }) {
           <section
             aria-label={copy.title}
             className={
-              isEmbedded
+              embedded
                 ? 'overflow-hidden bg-white'
                 : 'overflow-hidden rounded-lg border border-[#dfe3e8] bg-white shadow-[0_8px_30px_rgba(16,24,40,0.06)]'
             }

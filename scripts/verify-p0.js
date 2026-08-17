@@ -114,6 +114,10 @@ function verifyNginxHeaders() {
     nginxConfig.includes('include /etc/nginx/embeddable-security-headers.conf;'),
     'Contact routes must use the embeddable security headers'
   );
+  assert(
+    nginxConfig.includes('location ~ ^/(?:contact/embed|(?:en|zh|zh-hant)/contact/embed)$'),
+    'Contact embed routes must use a dedicated embeddable location'
+  );
 
   const cloudflareHeaders = fs.readFileSync(path.join(rootDir, 'public', '_headers'), 'utf8');
   assert(
@@ -123,6 +127,14 @@ function verifyNginxHeaders() {
   assert(
     cloudflareHeaders.includes('/*/contact\n  ! X-Frame-Options'),
     'Cloudflare localized contact rule must detach X-Frame-Options'
+  );
+  assert(
+    cloudflareHeaders.includes('/contact/embed\n  ! X-Frame-Options'),
+    'Cloudflare contact embed rule must detach X-Frame-Options'
+  );
+  assert(
+    cloudflareHeaders.includes('/*/contact/embed\n  ! X-Frame-Options'),
+    'Cloudflare localized contact embed rule must detach X-Frame-Options'
   );
 
   assert(

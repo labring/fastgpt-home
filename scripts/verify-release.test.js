@@ -135,6 +135,9 @@ test('production delivery consumes retained archives and records immutable provi
   assert(ioRollback >= 0 && ioRollback < ioDeploy);
   assert.match(workflow, /io-previous-deployments\.json/);
   assert.match(workflow, /ROLLBACK_ID/);
+  assert.match(workflow, /pages-deployment-id/);
+  assert.match(workflow, /DEPLOYMENT_ID/);
+  assert.match(workflow, /deploymentEnvironment/);
   assert.match(workflow, /ROLLBACK_INPUT/);
   assert.match(workflow, /initial-production/);
   assert.match(workflow, /previousDeploymentUrl:process\.env\.ROLLBACK_URL\|\|null/);

@@ -23,6 +23,8 @@
     "verify:faq-seo-graph": "node scripts/verify-faq-seo-graph.js",
     "verify:release": "node scripts/verify-release.js",
     "verify:release-regression": "node --test scripts/verify-release.test.js",
+    "verify:guide-content": "node scripts/verify-guide-content.js",
+    "verify:guide-content-regression": "node --test scripts/verify-guide-content.test.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
     "verify:contact": "node scripts/verify-contact-page.js"
   },

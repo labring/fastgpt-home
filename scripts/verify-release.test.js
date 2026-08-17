@@ -162,7 +162,7 @@ test('production delivery consumes retained archives and records immutable provi
   assert.doesNotMatch(dockerfile.slice(dockerfile.indexOf('AS release-runtime')), /npm run build/);
   assert.match(nginx, /location = \/__release\/manifest\.json/);
   assert.match(nginx, /Cache-Control "no-store"/);
-  assert.match(headers, /\/__release\/manifest\.json\n  Cache-Control: no-store/);
+  assert.match(headers, /\/__release\/manifest\.json\n  ! Cache-Control\n  Cache-Control: no-store/);
   assert.equal((guideSeo.match(/robots: indexable \? \{ index: true, follow: true \}/g) || []).length, 2);
   assert.doesNotMatch(workflow, /echo \$\{\{ secrets\./);
 });

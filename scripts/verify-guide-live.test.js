@@ -36,6 +36,12 @@ test('provider receipts require actual immutable provider revisions', () => {
   assert.throws(() => validateProviderReceipt({ schemaVersion: 1, variant: 'cn', releaseRevision: 'revision', artifactDigest: 'tree', treeDigest: 'tree', archiveDigest: 'archive', rollbackTarget: 'previous', provider: { imageDigest: 'sha256:abc', kubernetesImage: 'image@sha256:abc' } }, manifest), /completed rollout/i);
 });
 
+test('IO first publish keeps the initial-production rollback sentinel', () => {
+  const manifest = { schemaVersion: 1, variant: 'io', releaseRevision: 'revision', artifactDigest: 'tree', treeDigest: 'tree', rollbackTarget: 'initial-production' };
+  const receipt = { schemaVersion: 1, variant: 'io', releaseRevision: 'revision', artifactDigest: 'tree', treeDigest: 'tree', archiveDigest: 'archive', rollbackTarget: 'initial-production', provider: { deploymentId: 'new-pages-id', deploymentUrl: 'https://new-pages.example', previousDeploymentUrl: null } };
+  assert.doesNotThrow(() => validateProviderReceipt(receipt, manifest));
+});
+
 test('CLI only accepts baseline mode as an explicit flag', () => {
   assert.equal(parseArgs(['--allow-blocked-baseline']).allowBlockedBaseline, true);
   assert.throws(() => parseArgs(['--unknown']), /unknown/i);

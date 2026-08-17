@@ -24,10 +24,10 @@ source: automated
 evidence: npm run release:artifact-regression — 6 passed
 
 ### 2. Local provider rollback and receipt controls
-expected: Before provider mutation, the workflow validates each dispatch rollback target against the provider-derived current revision. CN writes its final receipt after completed rollout; IO retains its previous deployment URL and purge evidence.
+expected: Before provider mutation, the workflow validates each dispatch rollback target against the provider-derived current revision. CN normalizes a current tag through authenticated GHCR metadata before exact input comparison. IO accepts the explicit initial-production sentinel for the first publish when no active production row exists, then records a null previous URL; later releases require the exact active production ID. CN writes its final receipt after completed rollout; IO retains its previous deployment URL and purge evidence.
 result: pass
 source: automated
-evidence: Ruby YAML/ordering assertions passed; node --test scripts/verify-release.test.js passed 10 tests with one documented case-sensitive filesystem skip; verify-guide-live receipt tests reject CN entries without completed rollout.
+evidence: Ruby YAML/ordering assertions passed; node --test scripts/verify-release.test.js and scripts/verify-guide-live.test.js cover tag-to-digest normalization, the initial-production receipt sentinel, provider ordering, and completed-rollout guards; one documented case-sensitive filesystem skip remains.
 
 ### 3. Published provider delivery path
 expected: The authorized production repository exposes the guarded workflow and a completed run records provider-derived CN/IO rollback targets plus final immutable provider revisions.

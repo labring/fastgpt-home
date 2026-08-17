@@ -73,36 +73,38 @@ function getSingleTagContent(html, tagName, context) {
 }
 
 function getMetaContent(html, name, context) {
-  const tag = getTags(html, 'meta').find(
+  const tags = getTags(html, 'meta').filter(
     (candidate) => getAttribute(candidate, 'name').toLowerCase() === name.toLowerCase()
   );
-  if (!tag) fail(context, `missing meta name=${name}`);
-  return getAttribute(tag, 'content');
+  if (tags.length !== 1) fail(context, `expected exactly one meta name=${name}`);
+  return getAttribute(tags[0], 'content');
 }
 
 function getOpenGraphUrl(html, context) {
-  const tag = getTags(html, 'meta').find(
+  const tags = getTags(html, 'meta').filter(
     (candidate) => getAttribute(candidate, 'property').toLowerCase() === 'og:url'
   );
-  if (!tag) fail(context, 'missing Open Graph URL');
-  return getAttribute(tag, 'content');
+  if (tags.length !== 1) fail(context, 'expected exactly one Open Graph URL');
+  return getAttribute(tags[0], 'content');
 }
 
 function getCanonical(html, context) {
-  const tag = getTags(html, 'link').find(
+  const tags = getTags(html, 'link').filter(
     (candidate) => getAttribute(candidate, 'rel').toLowerCase() === 'canonical'
   );
-  if (!tag) fail(context, 'missing canonical link');
-  return getAttribute(tag, 'href');
+  if (tags.length !== 1) fail(context, 'expected exactly one canonical link');
+  return getAttribute(tags[0], 'href');
 }
 
-function getAlternates(html) {
+function getAlternates(html, context) {
   const alternates = {};
   for (const tag of getTags(html, 'link')) {
     if (getAttribute(tag, 'rel').toLowerCase() !== 'alternate') continue;
     const language = getAttribute(tag, 'hreflang');
     const href = getAttribute(tag, 'href');
-    if (language && href) alternates[language] = href;
+    if (!language || !href) fail(context, 'alternate link requires hreflang and href');
+    if (alternates[language]) fail(context, `duplicate alternate key ${language}`);
+    alternates[language] = href;
   }
   return alternates;
 }
@@ -114,16 +116,14 @@ function getAnchors(html) {
   }));
 }
 
-function getJsonLdTypes(html, context) {
-  const types = new Set();
+function getJsonLdNodes(html, context) {
+  const nodes = [];
   const scripts = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
   if (!scripts.length) fail(context, 'missing JSON-LD script');
 
   const visit = (value) => {
     if (!value || typeof value !== 'object') return;
-    const type = value['@type'];
-    if (Array.isArray(type)) type.forEach((item) => types.add(item));
-    else if (typeof type === 'string') types.add(type);
+    if (typeof value['@type'] === 'string' || Array.isArray(value['@type'])) nodes.push(value);
     for (const child of Object.values(value)) visit(child);
   };
 
@@ -134,22 +134,53 @@ function getJsonLdTypes(html, context) {
       fail(context, `invalid JSON-LD: ${error.message}`);
     }
   }
-  return types;
+  return nodes;
 }
 
-function loadRegistry(variant) {
-  const context = { variant, slug: 'hub', filePath: REGISTRY_PATH, surface: 'registry' };
-  let registry;
-  try {
-    registry = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8'));
-  } catch (error) {
-    fail(context, `unable to read registry: ${error.message}`);
+function hasJsonLdType(node, type) {
+  return node['@type'] === type || (Array.isArray(node['@type']) && node['@type'].includes(type));
+}
+
+function getJsonLdNode(nodes, type, context, surface) {
+  const node = nodes.find((candidate) => hasJsonLdType(candidate, type));
+  if (!node) fail({ ...context, surface }, `missing JSON-LD type ${type}`);
+  return node;
+}
+
+function assertSchemaValue(context, actual, expected, surface, field) {
+  if (actual !== expected) {
+    fail({ ...context, surface }, `${surface} ${field} expected ${JSON.stringify(expected)}, received ${JSON.stringify(actual)}`);
   }
-  if (!Array.isArray(registry.entries) || registry.entries.length !== 8) {
+}
+
+function assertBreadcrumbUrls(context, node, expectedUrls, surface) {
+  const actualUrls = node.itemListElement?.map((item) => item.item || item.url) || [];
+  if (
+    actualUrls.length !== expectedUrls.length ||
+    actualUrls.some((url, index) => url !== expectedUrls[index])
+  ) {
+    fail(
+      { ...context, surface },
+      `${surface} expected ordered breadcrumb URLs ${expectedUrls.join(', ')}, received ${actualUrls.join(', ') || '(none)'}`
+    );
+  }
+}
+
+function loadRegistry(variant, entries) {
+  const context = { variant, slug: 'hub', filePath: REGISTRY_PATH, surface: 'registry' };
+  let resolvedEntries = entries;
+  if (!resolvedEntries) {
+    try {
+      resolvedEntries = JSON.parse(fs.readFileSync(REGISTRY_PATH, 'utf8')).entries;
+    } catch (error) {
+      fail(context, `unable to read registry: ${error.message}`);
+    }
+  }
+  if (!Array.isArray(resolvedEntries) || resolvedEntries.length !== 8) {
     fail(context, 'registry must contain exactly eight Guide entries');
   }
   const slugs = new Set();
-  for (const entry of registry.entries) {
+  for (const entry of resolvedEntries) {
     if (!entry || typeof entry.slug !== 'string' || !GUIDE_SLUG.test(entry.slug)) {
       fail(context, 'registry contains an unsafe Guide slug');
     }
@@ -162,18 +193,18 @@ function loadRegistry(variant) {
       }
     }
   }
-  return registry.entries;
+  return resolvedEntries;
 }
 
-function buildGuideExpectation(variant) {
+function buildGuideExpectation(variant, { entries } = {}) {
   const projection = VARIANTS[variant];
   if (!projection) {
     fail({ variant: variant || 'missing', slug: 'hub', filePath: '<arguments>', surface: 'arguments' }, 'variant must be io or cn');
   }
-  const entries = loadRegistry(variant);
+  const resolvedEntries = loadRegistry(variant, entries);
   const routes = new Map();
   routes.set('/guide', { slug: 'hub', route: '/guide', source: HUB_COPY[projection.locale], hub: true });
-  for (const entry of entries) {
+  for (const entry of resolvedEntries) {
     routes.set(`/guide/${entry.slug}`, {
       slug: entry.slug,
       route: `/guide/${entry.slug}`,
@@ -181,7 +212,7 @@ function buildGuideExpectation(variant) {
       hub: false
     });
   }
-  return { variant, ...projection, entries, routes };
+  return { variant, ...projection, entries: resolvedEntries, routes };
 }
 
 function walkHtmlFiles(directory) {
@@ -247,7 +278,7 @@ function verifyMetadata(html, page, expectation, filePath) {
   assertEqual(context, getCanonical(html, context), canonical, 'canonical');
   assertEqual(context, getOpenGraphUrl(html, context), canonical, 'og:url');
 
-  const alternates = getAlternates(html);
+  const alternates = getAlternates(html, { ...context, surface: 'alternates' });
   const expected = expectedAlternates(page.route);
   const languages = Object.keys(alternates).sort();
   const expectedLanguages = Object.keys(expected).sort();
@@ -262,10 +293,38 @@ function verifyMetadata(html, page, expectation, filePath) {
 
 function verifyHub(html, page, expectation, filePath) {
   const context = { variant: expectation.variant, slug: page.slug, filePath, surface: 'schema' };
-  const schemaTypes = getJsonLdTypes(html, context);
+  const nodes = getJsonLdNodes(html, context);
   for (const type of ['CollectionPage', 'ItemList', 'BreadcrumbList']) {
-    if (!schemaTypes.has(type)) fail({ ...context, surface: 'schema' }, `missing JSON-LD type ${type}`);
+    getJsonLdNode(nodes, type, context, `schema:${type}`);
   }
+  const canonical = `${expectation.host}${page.route}`;
+  const collectionPage = getJsonLdNode(nodes, 'CollectionPage', context, 'schema:CollectionPage');
+  assertSchemaValue(context, collectionPage.url, canonical, 'schema:CollectionPage', 'url');
+  assertSchemaValue(context, collectionPage.name, page.source.h1, 'schema:CollectionPage', 'name');
+  assertSchemaValue(context, collectionPage.description, page.source.description, 'schema:CollectionPage', 'description');
+  assertSchemaValue(
+    context,
+    collectionPage.inLanguage,
+    expectation.locale === 'zh' ? 'zh-CN' : 'en-US',
+    'schema:CollectionPage',
+    'inLanguage'
+  );
+  const itemList = getJsonLdNode(nodes, 'ItemList', context, 'schema:ItemList');
+  const expectedItems = expectation.entries.map((entry, index) => ({
+    position: index + 1,
+    name: entry[expectation.locale].h1,
+    url: `${expectation.host}/guide/${entry.slug}`
+  }));
+  const actualItems = (itemList.itemListElement || []).map(({ position, name, url }) => ({ position, name, url }));
+  if (JSON.stringify(actualItems) !== JSON.stringify(expectedItems)) {
+    fail({ ...context, surface: 'schema:ItemList' }, 'ItemList entries must match the ordered registry projection');
+  }
+  assertBreadcrumbUrls(
+    context,
+    getJsonLdNode(nodes, 'BreadcrumbList', context, 'schema:BreadcrumbList'),
+    [`${expectation.host}/`, canonical],
+    'schema:BreadcrumbList'
+  );
   const targets = new Set(getAnchors(html).map((anchor) => absoluteUrl(expectation.host, anchor.href)));
   for (const entry of expectation.entries) {
     const target = `${expectation.host}/guide/${entry.slug}`;
@@ -275,9 +334,29 @@ function verifyHub(html, page, expectation, filePath) {
 
 function verifyArticle(html, page, expectation, filePath) {
   const context = { variant: expectation.variant, slug: page.slug, filePath, surface: 'schema' };
-  const schemaTypes = getJsonLdTypes(html, context);
+  const nodes = getJsonLdNodes(html, context);
   for (const type of page.source.schemaTokens) {
-    if (!schemaTypes.has(type)) fail({ ...context, surface: 'schema' }, `missing JSON-LD type ${type}`);
+    getJsonLdNode(nodes, type, context, `schema:${type}`);
+  }
+  const canonical = `${expectation.host}${page.route}`;
+  const language = expectation.locale === 'zh' ? 'zh-CN' : 'en-US';
+  const article = getJsonLdNode(nodes, 'Article', context, 'schema:Article');
+  assertSchemaValue(context, article.headline, page.source.h1, 'schema:Article', 'headline');
+  assertSchemaValue(context, article.description, page.source.metaDescription, 'schema:Article', 'description');
+  assertSchemaValue(context, article.inLanguage, language, 'schema:Article', 'inLanguage');
+  assertSchemaValue(context, article.mainEntityOfPage?.['@id'], canonical, 'schema:Article', 'mainEntityOfPage.@id');
+  assertBreadcrumbUrls(
+    context,
+    getJsonLdNode(nodes, 'BreadcrumbList', context, 'schema:BreadcrumbList'),
+    [`${expectation.host}/`, `${expectation.host}/guide`, canonical],
+    'schema:BreadcrumbList'
+  );
+  if (page.source.schemaTokens.includes('HowTo')) {
+    const howTo = getJsonLdNode(nodes, 'HowTo', context, 'schema:HowTo');
+    assertSchemaValue(context, howTo.name, page.source.h1, 'schema:HowTo', 'name');
+    assertSchemaValue(context, howTo.description, page.source.metaDescription, 'schema:HowTo', 'description');
+    assertSchemaValue(context, howTo.url, canonical, 'schema:HowTo', 'url');
+    assertSchemaValue(context, howTo.inLanguage, language, 'schema:HowTo', 'inLanguage');
   }
 
   const anchors = getAnchors(html);
@@ -313,14 +392,15 @@ function parseSitemapUrls(outDir, expectation) {
 function verifySitemap(outDir, expectation) {
   const urls = parseSitemapUrls(outDir, expectation);
   const context = { variant: expectation.variant, slug: 'hub', filePath: path.join(outDir, 'sitemap.xml'), surface: 'sitemap' };
-  const actual = urls.filter((url) => {
+  const actual = [];
+  for (const url of urls) {
     try {
       const parsed = new URL(url);
-      return parsed.pathname === '/guide' || /^\/guide\/[^/]+$/.test(parsed.pathname);
+      if (parsed.pathname === '/guide' || parsed.pathname.startsWith('/guide/')) actual.push(url);
     } catch {
-      return false;
+      fail(context, `invalid sitemap URL ${url}`);
     }
-  });
+  }
   const expected = [...expectation.routes.keys()].map((route) => `${expectation.host}${route}`);
   if (new Set(actual).size !== actual.length) fail(context, 'contains duplicate Guide URLs');
   const sortedActual = [...actual].sort();
@@ -331,9 +411,9 @@ function verifySitemap(outDir, expectation) {
   return actual.length;
 }
 
-function verifyGuideExport({ outDir, variant }) {
+function verifyGuideExport({ outDir, variant, entries }) {
   const safeOutDir = outDir ? path.resolve(outDir) : '<missing>';
-  const expectation = buildGuideExpectation(variant);
+  const expectation = buildGuideExpectation(variant, { entries });
   if (!outDir || !fs.existsSync(safeOutDir) || !fs.statSync(safeOutDir).isDirectory()) {
     fail({ variant, slug: 'hub', filePath: safeOutDir, surface: 'output' }, 'output directory does not exist');
   }

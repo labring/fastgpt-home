@@ -291,7 +291,7 @@ test('Guide export surface mutations reject localized hub and article drift with
         {
           slug: 'hub',
           route: 'guide',
-          surface: 'schema',
+          surface: 'schema:CollectionPage',
           reason: /CollectionPage/,
           mutate: (html) => html.replace('CollectionPage', 'WrongPage')
         },

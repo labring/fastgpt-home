@@ -155,7 +155,7 @@ test('delivery parser rejects each malformed leading-comment boundary', () => {
   const malformedSources = [
     `\n${source}`,
     source.replace('-->', ''),
-    source.replace('-->\n\n#', '-->\n<!-- second -->\n#')
+    source.replace(/-->\r?\n\r?\n#/, '-->\n<!-- second -->\n#')
   ];
 
   for (const malformed of malformedSources) {

@@ -1,0 +1,160 @@
+name: Guide Production Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      cn_rollback_target:
+        description: Previous immutable CN image reference
+        required: true
+        type: string
+      io_rollback_target:
+        description: Previous production Pages deployment ID
+        required: true
+        type: string
+      purge_cloudflare:
+        description: Purge Pages URLs after deployment
+        required: true
+        default: true
+        type: boolean
+
+concurrency:
+  group: guide-production-release
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  RELEASE_ROOT: ${{ runner.temp }}/guide-verified
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - name: Verify and retain both exact output trees
+        run: npm run verify:release -- --retain-success-artifacts "$RELEASE_ROOT"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guide-verified-trees-${{ github.sha }}
+          path: ${{ runner.temp }}/guide-verified
+          retention-days: 7
+
+  package-variants:
+    needs: verify
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 24, cache: npm }
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with: { name: guide-verified-trees-${{ github.sha }}, path: ${{ runner.temp }}/guide-verified }
+      - name: Guard rollback inputs before artifact mutation
+        run: |
+          test -n '${{ inputs.cn_rollback_target }}' || { echo 'blocked: missing cn rollback target'; exit 1; }
+          test -n '${{ inputs.io_rollback_target }}' || { echo 'blocked: missing io rollback target'; exit 1; }
+      - name: Prepare immutable archives from retained trees only
+        run: |
+          node scripts/release-artifact.js package --out-dir "$RELEASE_ROOT/cn/out" --variant cn --source-commit "$GITHUB_SHA" --rollback-target '${{ inputs.cn_rollback_target }}' --archive-dir release-bundle/cn
+          node scripts/release-artifact.js package --out-dir "$RELEASE_ROOT/io/out" --variant io --source-commit "$GITHUB_SHA" --rollback-target '${{ inputs.io_rollback_target }}' --archive-dir release-bundle/io
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guide-release-bundle-${{ github.sha }}
+          path: release-bundle
+          retention-days: 30
+
+  deploy-cn:
+    needs: package-variants
+    runs-on: ubuntu-24.04
+    environment: production-cn
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: guide-release-bundle-${{ github.sha }}, path: release-bundle }
+      - name: Guard CN provider credentials before mutation
+        env: { KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }} }
+        run: |
+          test -n "$KUBE_CONFIG" || { echo 'blocked: missing KUBE_CONFIG'; exit 1; }
+          test -n '${{ inputs.cn_rollback_target }}' || { echo 'blocked: missing cn rollback target'; exit 1; }
+      - name: Verify and extract exact CN archive
+        id: cn_identity
+        run: |
+          archive=$(find release-bundle/cn -name '*.tar.gz' -print -quit)
+          sha256sum -c "$archive.sha256"
+          mkdir release-out && tar -xzf "$archive" -C .
+          test -f release-out/__release/manifest.json
+          node scripts/release-artifact.js verify --out-dir release-out --variant cn --archive "$archive"
+          ARCHIVE="$archive" node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const a=fs.readFileSync(process.env.ARCHIVE+'.sha256','utf8').trim().split(/\\s+/)[0];for(const [k,v] of Object.entries({revision:m.releaseRevision,tree:m.treeDigest,archive:a}))fs.appendFileSync(process.env.GITHUB_OUTPUT,k+'='+v+'\\n')"
+      - uses: docker/login-action@v3
+        with: { registry: ghcr.io, username: ${{ github.actor }}, password: ${{ secrets.GITHUB_TOKEN }} }
+      - id: image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: Dockerfile
+          target: release-runtime
+          push: true
+          tags: ${{ env.IMAGE_NAME }}:${{ github.sha }}
+          build-args: |
+            RELEASE_SOURCE_COMMIT=${{ github.sha }}
+            RELEASE_TREE_DIGEST=${{ steps.cn_identity.outputs.tree }}
+            RELEASE_ARTIFACT_ID=${{ steps.cn_identity.outputs.revision }}
+            RELEASE_ROLLBACK_TARGET=${{ inputs.cn_rollback_target }}
+            RELEASE_PROVIDER=kubernetes
+      - name: Resolve immutable digest and write CN provider receipt
+        env: { IMAGE_DIGEST: ${{ steps.image.outputs.digest }}, ARCHIVE_DIGEST: ${{ steps.cn_identity.outputs.archive }}, RELEASE_TREE: ${{ steps.cn_identity.outputs.tree }}, RELEASE_REVISION: ${{ steps.cn_identity.outputs.revision }} }
+        run: |
+          test -n "$IMAGE_DIGEST" || { echo 'blocked: image digest unavailable'; exit 1; }
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));fs.writeFileSync('cn-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'cn',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:m.rollbackTarget,provider:{imageDigest:process.env.IMAGE_DIGEST,kubernetesImage:process.env.IMAGE_NAME+'@'+process.env.IMAGE_DIGEST},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
+      - uses: azure/setup-kubectl@v4
+      - name: Roll out digest-pinned CN image
+        env: { KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}, IMAGE_DIGEST: ${{ steps.image.outputs.digest }} }
+        run: |
+          printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
+          KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl set image deployment/fastgpt-home fastgpt-home="$IMAGE_NAME@$IMAGE_DIGEST"
+          KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl rollout status deployment/fastgpt-home --timeout=5m
+      - uses: actions/upload-artifact@v4
+        with: { name: guide-cn-provider-evidence-${{ github.sha }}, path: cn-provider-receipt.json, retention-days: 30 }
+
+  deploy-io:
+    needs: package-variants
+    runs-on: ubuntu-24.04
+    environment: production-io
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: guide-release-bundle-${{ github.sha }}, path: release-bundle }
+      - name: Guard IO provider credentials before mutation
+        env: { CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}, CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }} }
+        run: |
+          test -n "$CLOUDFLARE_API_TOKEN" || { echo 'blocked: missing Cloudflare token'; exit 1; }
+          test -n "$CLOUDFLARE_ACCOUNT_ID" || { echo 'blocked: missing Cloudflare account'; exit 1; }
+          test -n '${{ inputs.io_rollback_target }}' || { echo 'blocked: missing io rollback target'; exit 1; }
+      - name: Verify and extract exact IO archive
+        id: io_identity
+        run: |
+          archive=$(find release-bundle/io -name '*.tar.gz' -print -quit)
+          sha256sum -c "$archive.sha256"
+          mkdir release-out && tar -xzf "$archive" -C .
+          node scripts/release-artifact.js verify --out-dir release-out --variant io --archive "$archive"
+          ARCHIVE="$archive" node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const a=fs.readFileSync(process.env.ARCHIVE+'.sha256','utf8').trim().split(/\\s+/)[0];for(const [k,v] of Object.entries({revision:m.releaseRevision,tree:m.treeDigest,archive:a}))fs.appendFileSync(process.env.GITHUB_OUTPUT,k+'='+v+'\\n')"
+      - id: deploy
+        uses: cloudflare/wrangler-action@v3
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy release-out --project-name=fastgpt-home --branch=main --commit-hash=${{ github.sha }}
+      - name: Record Pages revision, receipt, and optional purge evidence
+        env: { CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}, CLOUDFLARE_ZONE_ID: ${{ vars.CLOUDFLARE_ZONE_ID }}, ARCHIVE_DIGEST: ${{ steps.io_identity.outputs.archive }} }
+        run: |
+          npx --no-install wrangler pages deployment list --project-name=fastgpt-home --json > io-deployments.json
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const d=JSON.parse(fs.readFileSync('io-deployments.json'))[0]||{};if(!d.id||!d.url)throw new Error('blocked: Pages deployment ID/URL unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:m.rollbackTarget,provider:{deploymentId:d.id,deploymentUrl:d.url},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
+          if [ '${{ inputs.purge_cloudflare }}' = 'true' ]; then node scripts/purge-cloudflare-cache.js --url https://fastgpt.io/guide --evidence-out io-purge.json; fi
+      - uses: actions/upload-artifact@v4
+        with: { name: guide-io-provider-evidence-${{ github.sha }}, path: 'io-provider-receipt.json\nio-deployments.json\nio-purge.json', if-no-files-found: ignore, retention-days: 30 }

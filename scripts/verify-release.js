@@ -33,11 +33,16 @@ const GENERATED_PUBLIC_PATHS = [
 ];
 
 function parseArgs(argv) {
-  const options = { sourceOnly: false, keepArtifacts: false, variant: undefined };
+  const options = { sourceOnly: false, keepArtifacts: false, retainSuccessArtifacts: undefined, variant: undefined };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
     if (token === '--source-only') options.sourceOnly = true;
     else if (token === '--keep-artifacts') options.keepArtifacts = true;
+    else if (token === '--retain-success-artifacts') {
+      const retainDir = argv[++index];
+      if (!retainDir || retainDir.startsWith('--')) throw new Error('--retain-success-artifacts requires a directory');
+      options.retainSuccessArtifacts = path.resolve(ROOT, retainDir);
+    }
     else if (token === '--variant') {
       const variant = argv[++index];
       if (!['io', 'cn'].includes(variant)) throw new Error('--variant requires io or cn');
@@ -233,6 +238,14 @@ function retainFailureArtifacts(variant) {
   return retainedPath;
 }
 
+function retainSuccessArtifacts(variant, retainDir) {
+  const retainedPath = path.join(retainDir, variant);
+  fs.rmSync(retainedPath, { recursive: true, force: true });
+  fs.mkdirSync(retainedPath, { recursive: true });
+  fs.cpSync(OUT_DIR, path.join(retainedPath, 'out'), { recursive: true });
+  return retainedPath;
+}
+
 function runSourceChecks(failures, env) {
   const checks = [
     ['route registry check', 'scripts/generate-faq-route-registry.js', ['--check']],
@@ -420,6 +433,13 @@ function main() {
             command: 'in-process failure artifact copy',
             output: error.message
           });
+        }
+      }
+      if (!variantFailed && options.retainSuccessArtifacts) {
+        try {
+          console.log(`[verify-release] retained verified ${variant} output: ${retainSuccessArtifacts(variant, options.retainSuccessArtifacts)}`);
+        } catch (error) {
+          failures.push({ label: `success artifact retention (${variant})`, variant, command: 'in-process verified output copy', output: error.message });
         }
       }
       clearBuildArtifacts();

@@ -1,8 +1,8 @@
 ---
 phase: 08-production-delivery-live-verification
-verified: 2026-08-17T12:59:32Z
+verified: 2026-08-17T13:18:00Z
 status: gaps_found
-score: 3/6 must-haves verified
+score: 4/6 must-haves verified
 behavior_unverified: 0
 overrides_applied: 0
 gaps:
@@ -15,14 +15,6 @@ gaps:
     missing:
       - "Publish the guarded workflow to the authorized production repository and run it with real CN and IO rollback targets and credentials."
       - "Preserve CN post-rollout evidence in its receipt and collect the final release bundle with archive, manifest, receipts, purge evidence, and live report."
-  - truth: "The verifier records structured status, headers, body digest, final URL, and timestamp for both sitemaps and both release manifests."
-    status: partial
-    reason: "`verify-guide-live.js` stores those fields only for pages; support surfaces are reduced to failure strings, and parsed `--manifest` is unused."
-    artifacts:
-      - path: "scripts/verify-guide-live.js"
-        issue: "Lines 60-63 omit structured sitemap/manifest response records; line 17 parses `--manifest` with no later consumer."
-    missing:
-      - "Emit one structured evidence object per sitemap and manifest, then add success and failure regression assertions."
   - truth: "Both production Guide hubs and all sixteen article URLs satisfy the final public 200/SEO/cache/revision contract."
     status: failed
     reason: "The independent public baseline at 2026-08-17T12:56:43Z found 9/9 Guide paths returning 404 on each domain and both public release manifests returning 404."
@@ -36,9 +28,9 @@ gaps:
 # Phase 8: Production Delivery & Live Verification Report
 
 **Phase Goal:** The verified bilingual Guide release is live on both owned domains with traceable artifact and health evidence.
-**Verified:** 2026-08-17T12:59:32Z
+**Verified:** 2026-08-17T13:18:00Z
 **Status:** gaps_found
-**Re-verification:** No — initial verification
+**Re-verification:** Yes — structured support-surface evidence fix
 
 ## Goal Achievement
 
@@ -51,9 +43,9 @@ gaps:
 | 3 | The native live-matrix command fails closed and a local 18-page fixture proves route SEO, cache, manifest-header, sitemap, and receipt validation. | ✓ VERIFIED | `npm run verify:guide-live-regression` passed 4/4, including 18 pages and both variant receipts. |
 | 4 | An operator currently has an executable published production workflow with real provider revisions and rollback targets recorded. | ✗ FAILED | GitHub REST found no `guide-production-release.yml` in either configured remote's default branch; repository has no provider receipts or release bundle. |
 | 5 | Both public hubs and all 16 public article URLs return final 200 with H1, canonical, alternates, indexability, sitemap, cache, and deployed-revision evidence. | ✗ FAILED | Fresh independent probe: cn 9/9 Guide paths 404; io 9/9 Guide paths 404; both `__release/manifest.json` endpoints 404. |
-| 6 | The live report preserves a complete structured support-surface status/cache/revision matrix. | ✗ FAILED | The script records page fields, while sitemap/manifest results remain only failure strings; it also accepts unused `--manifest`. |
+| 6 | The live report preserves a complete structured support-surface status/cache/revision matrix. | ✓ VERIFIED | `verify-guide-live.js` records status, final URL, headers, body digest, and scoped failures for each sitemap and manifest; fixture assertions cover both variants. |
 
-**Score:** 3/6 truths verified.
+**Score:** 4/6 truths verified.
 
 ### Required Artifacts
 
@@ -65,7 +57,7 @@ gaps:
 | `scripts/verify-release.js` | Same-lifecycle verified-output retention | ✓ VERIFIED | Regression passed; successful `out` is copied before `clearBuildArtifacts()`. |
 | `Dockerfile`, `nginx.conf`, `public/_headers` | CN direct archive-tree runtime and manifest/cache serving contract | ✓ VERIFIED | `release-runtime` copies `release-out/`; Nginx and Pages headers configure `__release/manifest.json` as `no-store`. Public endpoints remain unavailable. |
 | `.github/workflows/guide-production-release.yml` | Provider promotion, receipt, purge, and live-gate wiring | ⚠️ PRESENT, NOT PUBLISHED | Source wires all jobs and the live gate; it is absent from both checked GitHub default branches and therefore cannot supply real receipts. |
-| `scripts/verify-guide-live.js` | Route and support-surface public evidence matrix | ⚠️ PARTIAL | 18-page fixture and blocked baseline work. Sitemaps/manifests lack structured response entries and `--manifest` has no effect. |
+| `scripts/verify-guide-live.js` | Route and support-surface public evidence matrix | ✓ VERIFIED LOCALLY | 18-page fixture and blocked baseline work; each sitemap/manifest has structured status, final URL, headers, body digest, and failures. |
 | `08-LIVE-EVIDENCE.json` | Timestamped public baseline | ✓ VERIFIED | Existing committed baseline is `blocked`, contains both variants, 18 path results, and manifest failures; no false deployment claim. |
 
 ### Key Link Verification
@@ -85,7 +77,7 @@ gaps:
 | Release archive | route inventory → manifest/tree/archive digests | Phase 7 retained output → `buildGuideExpectation()` | ✓ FLOWING locally |
 | CN deployment | archive → `release-out/` → Docker image digest → Kubernetes image reference | checksum-verified archive | ✓ FLOWING in workflow source; provider execution absent |
 | IO deployment | archive → `release-out/` → Pages deployment ID/URL → purge evidence | checksum-verified archive | ✓ FLOWING in workflow source; provider execution absent |
-| Public live report | pages → sitemap/manifest checks → receipt comparison | public HTTP + explicit receipt files | ⚠️ PARTIAL: support-surface response objects are not emitted |
+| Public live report | pages → sitemap/manifest checks → receipt comparison | public HTTP + explicit receipt files | ✓ FLOWING locally: support surfaces retain status, URL, headers, body digest, and failure diagnostics |
 
 ### Local Regression and Integrity Checks
 
@@ -94,7 +86,7 @@ gaps:
 | `npm run release:artifact-regression` | ✓ 6 passed, 0 failed |
 | `npm run release:purge-cloudflare-regression` | ✓ 3 passed, 0 failed |
 | `node --test scripts/verify-release.test.js` | ✓ 10 passed, 1 documented case-sensitive skip |
-| `npm run verify:guide-live-regression` | ✓ 4 passed, 0 failed |
+| `npm run verify:guide-live-regression` | ✓ 4 passed, 0 failed (includes structured sitemap/manifest surfaces) |
 | `npm run verify:release -- --source-only` | ✓ passed, including strict TypeScript source verification |
 | `git diff --check` | ✓ passed |
 | `git diff --exit-code -- package-lock.json` | ✓ passed |
@@ -124,7 +116,7 @@ The HTTP header probes also identify the currently serving edges as `istio-envoy
 | Requirement | Status | Evidence |
 | --- | --- | --- |
 | DEPLOY-01 | ✗ BLOCKED | The immutable artifact and guarded source workflow exist locally, while neither remote default branch exposes the workflow and no provider-run receipt, deployed revision, rollback target, release manifest, or combined release evidence bundle exists. |
-| DEPLOY-02 | ✗ BLOCKED | Fixture regression passes, while public production has 18 Guide 404s, two manifest 404s, absent receipts/revisions, absent Guide sitemap rows, and incomplete structured support-surface report fields. |
+| DEPLOY-02 | ✗ BLOCKED | Fixture regression and structured matrix pass locally, while public production has 18 Guide 404s, two manifest 404s, absent receipts/revisions, and absent Guide sitemap rows. |
 
 ### Anti-Patterns and Disconfirmation Findings
 
@@ -132,13 +124,13 @@ The HTTP header probes also identify the currently serving edges as `istio-envoy
 | --- | --- | --- | --- |
 | Public release | A passing fixture proves only a simulated endpoint; the independently probed owned domains remain entirely 404 for the Guide surface. | 🛑 BLOCKER | Prevents both deployment and live-verification requirements. |
 | Workflow evidence | CN receipt is written before `kubectl rollout status`; final receipt has no rollout-result field. Package, provider, and live evidence are uploaded as separate artifacts. | ⚠️ WARNING | A successful operational record requires a post-rollout receipt update and one retained final bundle. |
-| Live matrix | Sitemap/manifest response details are dropped after validation; `--manifest` is accepted but unused. | 🛑 BLOCKER | The requested support-surface status/cache/revision evidence cannot be audited from the generated report. |
+| Live matrix | Structured sitemap/manifest response details are now retained; public production still lacks those surfaces until deployment occurs. | ⚠️ WARNING | The local evidence contract is complete and the live public baseline remains blocked by external deployment state. |
 
 ### Gaps Summary
 
-The local release primitives and negative-path tests are solid, while Phase 8's result is a release-ready implementation rather than a completed production delivery. Publishing and executing the guarded workflow with authorized provider access is the external prerequisite. The verifier must also preserve structured sitemap/manifest outcomes so that the succeeding provider run produces an auditable DEPLOY-02 matrix.
+The local release primitives, negative-path tests, and structured live matrix are solid, while Phase 8's result is a release-ready implementation rather than a completed production delivery. Publishing and executing the guarded workflow with authorized provider access is the external prerequisite for DEPLOY-01/02.
 
 ---
 
-_Verified: 2026-08-17T12:59:32Z_
+_Verified: 2026-08-17T13:18:00Z_
 _Verifier: the agent (gsd-verifier)_

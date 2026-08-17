@@ -55,10 +55,42 @@ async function runLiveVerification(options, fetchImpl) {
   const matrix = buildExpectedMatrix(); const startedAt = new Date().toISOString(); const report = { schemaVersion: 1, startedAt, status: 'passed', variants: {}, providerEvidence: options.providerEvidence.map((filePath) => ({ path: filePath, digest: crypto.createHash('sha256').update(fs.readFileSync(filePath)).digest('hex') })) };
   const receipts = Object.fromEntries(options.providerEvidence.map((filePath) => { const receipt = JSON.parse(fs.readFileSync(filePath, 'utf8')); return [receipt.variant, receipt]; }));
   for (const [variant, expected] of Object.entries(matrix)) {
-    const host = variant === 'cn' ? options.baseUrlCn : options.baseUrlIo; const result = { routes: [], failures: [] };
+    const host = variant === 'cn' ? options.baseUrlCn : options.baseUrlIo; const result = { surfaces: {}, routes: [], failures: [] };
     let sitemap = ''; let manifest; let manifestHeaders;
     for (const surface of ['/sitemap.xml', '/__release/manifest.json']) {
-      try { const response = await fetchWithTimeout(`${host}${surface}`, options.timeoutMs, fetchImpl); const body = await response.text(); const headers = headersOf(response.headers); if (response.status !== 200) result.failures.push(`${surface}:status=${response.status}`); if (surface.endsWith('.xml')) sitemap = body; else { manifest = JSON.parse(body); manifestHeaders = headers; if (!/no-store/i.test(headers['cache-control'] || '')) result.failures.push('/__release/manifest.json:cache'); } } catch (error) { result.failures.push(`${surface}:${error.name}`); }
+      const surfaceResult = { status: null, finalUrl: null, headers: {}, bodyDigest: null, failures: [] };
+      try {
+        const response = await fetchWithTimeout(`${host}${surface}`, options.timeoutMs, fetchImpl);
+        const body = await response.text();
+        const headers = headersOf(response.headers);
+        surfaceResult.status = response.status;
+        surfaceResult.finalUrl = response.url || `${host}${surface}`;
+        surfaceResult.headers = headers;
+        surfaceResult.bodyDigest = crypto.createHash('sha256').update(body).digest('hex');
+        if (response.status !== 200) {
+          surfaceResult.failures.push(`status=${response.status}`);
+          result.failures.push(`${surface}:status=${response.status}`);
+        }
+        if (surface.endsWith('.xml')) {
+          if (response.status === 200) sitemap = body;
+        } else if (response.status === 200) {
+          try {
+            manifest = JSON.parse(body);
+            manifestHeaders = headers;
+            if (!/no-store/i.test(headers['cache-control'] || '')) {
+              surfaceResult.failures.push('cache');
+              result.failures.push('/__release/manifest.json:cache');
+            }
+          } catch (error) {
+            surfaceResult.failures.push(`json=${error.name}`);
+            result.failures.push(`${surface}:${error.name}`);
+          }
+        }
+      } catch (error) {
+        surfaceResult.failures.push(error.name);
+        result.failures.push(`${surface}:${error.name}`);
+      }
+      result.surfaces[surface] = surfaceResult;
     }
     if (manifest) { try { if (manifest.variant !== variant || !manifest.expectedHost || !manifest.sourceCommit || !manifest.provider || !manifest.releaseRevision || !manifest.artifactDigest || !manifest.treeDigest || !manifest.rollbackTarget) fail('manifest identity missing'); if (!options.allowBlockedBaseline && (manifestHeaders?.['x-release-revision'] !== manifest.releaseRevision || manifestHeaders?.['x-release-artifact'] !== manifest.artifactDigest)) fail('manifest release headers mismatch'); if (!options.allowBlockedBaseline) validateProviderReceipt(receipts[variant], manifest); result.manifest = { sourceCommit: manifest.sourceCommit, provider: manifest.provider, expectedHost: manifest.expectedHost, releaseRevision: manifest.releaseRevision, artifactDigest: manifest.artifactDigest, rollbackTarget: manifest.rollbackTarget, headers: manifestHeaders }; } catch (error) { result.failures.push(`manifest:${error.message}`); } }
     for (const expectedRoute of expected.routes) {

@@ -97,7 +97,7 @@ test('release coordinator composes Guide checks around each fresh variant export
 });
 
 test('P1 successful evidence keeps the emitted KiB measurement', () => {
-  const output = 'P1 verification passed for fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
+  const output = 'P1 verification passed for https://fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
   assert.equal(extractP1SuccessMeasurement(output), '259.8 KiB initial JavaScript gzip');
   assert.equal(extractP1SuccessMeasurement('P1 verification passed'), undefined);
 });

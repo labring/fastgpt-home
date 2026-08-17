@@ -130,6 +130,8 @@ test('production delivery consumes retained archives and records immutable provi
   assert(ioRollback >= 0 && ioRollback < ioDeploy);
   assert.match(workflow, /io-previous-deployments\.json/);
   assert.match(workflow, /ROLLBACK_ID/);
+  assert.equal((workflow.match(/npx --yes wrangler@4 pages deployment list/g) || []).length, 3);
+  assert.doesNotMatch(workflow, /npx --no-install wrangler pages deployment list/);
   assert(workflow.includes('--inject-release-headers'));
   assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));

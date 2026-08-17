@@ -140,11 +140,20 @@ function prepareReleaseOutput(options) {
   if (options.injectReleaseHeaders) {
     const headersPath = path.join(path.resolve(options.outDir), '_headers');
     const existing = fs.existsSync(headersPath) ? fs.readFileSync(headersPath, 'utf8') : '';
-    const hasReleaseBlock = /\/__release\/manifest\.json\r?\n\s*X-Release-Revision:/i.test(existing);
     const normalized = existing
       .replace(/X-Release-Revision:\s*[^\r\n]*/g, 'X-Release-Revision: __RELEASE_REVISION__')
       .replace(/X-Release-Artifact:\s*[^\r\n]*/g, 'X-Release-Artifact: __RELEASE_ARTIFACT__');
-    fs.writeFileSync(headersPath, hasReleaseBlock ? normalized : `${normalized.trimEnd()}\n\n/__release/manifest.json\n  X-Release-Revision: __RELEASE_REVISION__\n  X-Release-Artifact: __RELEASE_ARTIFACT__\n`);
+    const releaseBlock = [
+      '/__release/manifest.json',
+      '  ! Cache-Control',
+      '  Cache-Control: no-store',
+      '  X-Release-Revision: __RELEASE_REVISION__',
+      '  X-Release-Artifact: __RELEASE_ARTIFACT__'
+    ].join('\n');
+    const withoutReleaseBlocks = normalized
+      .replace(/\/__release\/manifest\.json\r?\n(?:(?:[ \t]+)[^\r\n]*(?:\r?\n|$))*/gi, '')
+      .trimEnd();
+    fs.writeFileSync(headersPath, `${withoutReleaseBlocks ? `${withoutReleaseBlocks}\n\n` : ''}${releaseBlock}\n`);
   }
   const manifest = buildManifest(options);
   const manifestPath = path.join(path.resolve(options.outDir), RELEASE_MANIFEST);
@@ -152,7 +161,12 @@ function prepareReleaseOutput(options) {
   fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`);
   if (options.injectReleaseHeaders) {
     const headersPath = path.join(path.resolve(options.outDir), '_headers');
-    fs.writeFileSync(headersPath, fs.readFileSync(headersPath, 'utf8').replace('__RELEASE_REVISION__', manifest.releaseRevision).replace('__RELEASE_ARTIFACT__', manifest.artifactDigest));
+    fs.writeFileSync(
+      headersPath,
+      fs.readFileSync(headersPath, 'utf8')
+        .replace(/__RELEASE_REVISION__/g, manifest.releaseRevision)
+        .replace(/__RELEASE_ARTIFACT__/g, manifest.artifactDigest)
+    );
   }
   return { manifest, manifestPath, outDir: path.resolve(options.outDir) };
 }

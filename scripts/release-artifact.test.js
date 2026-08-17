@@ -121,12 +121,22 @@ test('package commands expose dependency-free release artifact regression', () =
 test('release header injection preserves the prepared tree identity', () => {
   const { root, outDir } = createFixture('io');
   try {
-    fs.writeFileSync(path.join(outDir, '_headers'), '/*\n  Cache-Control: public, max-age=60\n');
+    fs.writeFileSync(
+      path.join(outDir, '_headers'),
+      '/*\n  Cache-Control: public, max-age=60\n\n/__release/manifest.json\n  Cache-Control: public, max-age=3600\n'
+    );
     const prepared = prepareReleaseOutput({ ...releaseOptions('io', outDir), injectReleaseHeaders: true });
     assert.equal(computeTreeDigest(outDir), prepared.manifest.treeDigest);
     const headers = fs.readFileSync(path.join(outDir, '_headers'), 'utf8');
+    assert.match(
+      headers,
+      /\/__release\/manifest\.json\n  ! Cache-Control\n  Cache-Control: no-store\n  X-Release-Revision:/
+    );
     assert(headers.includes(`X-Release-Revision: ${prepared.manifest.releaseRevision}`));
     assert(headers.includes(`X-Release-Artifact: ${prepared.manifest.artifactDigest}`));
-    assert.equal(prepareReleaseOutput({ ...releaseOptions('io', outDir), injectReleaseHeaders: true }).manifest.releaseRevision, prepared.manifest.releaseRevision);
+    assert.equal((headers.match(/^\/__release\/manifest\.json$/gm) || []).length, 1);
+    const second = prepareReleaseOutput({ ...releaseOptions('io', outDir), injectReleaseHeaders: true });
+    assert.equal(second.manifest.releaseRevision, prepared.manifest.releaseRevision);
+    assert.equal(fs.readFileSync(path.join(outDir, '_headers'), 'utf8'), headers);
   } finally { fs.rmSync(root, { recursive: true, force: true }); }
 });

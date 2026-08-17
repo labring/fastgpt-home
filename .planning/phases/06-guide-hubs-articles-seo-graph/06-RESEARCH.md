@@ -327,20 +327,18 @@ The locale values are verbatim from `export const GUIDE_LOCALES = ['zh', 'en'] a
 
 | # | Claim | Section | Risk if Wrong |
 |---|---|---|---|
-| A1 | Delivery metadata can supply an approved, auditable ISO article published/modified date for each localized registry snapshot. | Common Pitfalls | The D-07 timing field needs a product/source decision before implementation. |
+| A1 | The approved Week04 delivery date `2026-08-11` is the authoritative published/modified date for every localized Guide snapshot. | Common Pitfalls | Resolved: registry and verifier carry the same typed ISO value for both fields. |
 | A2 | A new Guide CSS module can reuse technical-article light-theme layout rules without a user-design checkpoint. | Recommended Project Structure | Visual details could require a focused design review. |
 
 ## Open Questions
 
-1. **Approved article timing value and update policy**
-   - What we know: D-07 requires registry-derived article timing, and current snapshots lack typed date fields. [VERIFIED: src/content/guides/registry.ts:17-33]
-   - What's unclear: whether the delivery date, content verification date, or a separately approved publishing date is authoritative for `datePublished` and `dateModified`.
-   - Recommendation: create a brief human decision/checkpoint before writing the new registry field values; the implementation itself should preserve these values as typed data and validate their ISO format.
+1. **RESOLVED — Approved article timing value and update policy**
+   - Authority: the approved Week04 delivery date `2026-08-11` is authoritative for both `datePublished` and `dateModified` on every localized Guide snapshot.
+   - Implementation consequence: add typed ISO date fields to the registry, validate real calendar dates in both TypeScript and the dependency-free Node verifier, and source Open Graph, Article JSON-LD, and sitemap timing from those fields.
 
-2. **Configured internal-link inventory**
-   - What we know: current Guide registry link mappings are empty and the contract validates mappings only when explicit targets are supplied. [VERIFIED: src/content/guides/registry.ts:30-32] [VERIFIED: scripts/verify-guide-content.js:165-171]
-   - What's unclear: which existing owned pages are approved destinations for the delivery labels.
-   - Recommendation: map only approved route inventory targets during Phase 6 and record each source-only label that remains unpublished; no guessed URL enters UI or JSON-LD.
+2. **RESOLVED — Configured internal-link inventory**
+   - Authority: launch `configuredInternalLinks` arrays remain empty because the delivery package contains no approved owned targets. Source labels remain registry data only.
+   - Implementation consequence: render the configured-links section conditionally from explicit mappings, retain the Phase 5 owned-target validator, and publish zero inferred destinations at launch. [VERIFIED: src/content/guides/registry.ts:30-32] [VERIFIED: scripts/verify-guide-content.js:165-171]
 
 ## Environment Availability
 

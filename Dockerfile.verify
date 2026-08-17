@@ -1,0 +1,10 @@
+# Run with: docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify .
+FROM node:24
+
+WORKDIR /app
+
+COPY package.json package-lock.json ./
+RUN npm ci
+
+COPY . .
+RUN npm run verify:release

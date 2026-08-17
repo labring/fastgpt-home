@@ -5,7 +5,8 @@ const path = require('node:path');
 const test = require('node:test');
 
 const {
-  appendP1HistoricalBaselineAdvisories
+  appendP1HistoricalBaselineAdvisories,
+  extractP1SuccessMeasurement
 } = require('./verify-release');
 const { buildOwnerExpectationSet, parseArgs } = require('./verify-faq-metadata');
 const { normalizeFaqMetadataPolicy } = require('./generate-faq-metadata');
@@ -66,6 +67,40 @@ function isCaseSensitiveFilesystem() {
 function failure(label, output, variant = 'io') {
   return { label, variant, command: 'npm run verify:p1', output };
 }
+
+test('release coordinator composes Guide checks around each fresh variant export', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  const faqSteps = [
+    'scripts/generate-faq-route-registry.js',
+    'scripts/generate-faq-metadata.js',
+    'scripts/verify-faq-routes.js',
+    'scripts/verify-faq-metadata.js',
+    'scripts/verify-faq-seo-graph.js',
+    'scripts/verify-faq-redirects.js'
+  ];
+  const positions = faqSteps.map((step) => source.indexOf(step));
+
+  assert(positions.every((position) => position >= 0));
+  assert.deepEqual([...positions].sort((left, right) => left - right), positions);
+  assert(source.includes('scripts/verify-guide-content.js'));
+  assert(source.includes('scripts/verify-guide-seo-graph.js'));
+  assert(source.includes('scripts/verify-guide-export.js'));
+  assert(source.includes("const variants = options.variant ? [options.variant] : ['io', 'cn'];"));
+
+  const variantLoop = source.slice(source.indexOf('for (const variant of variants)'));
+  const firstCleanup = variantLoop.indexOf('clearBuildArtifacts()');
+  const secondCleanup = variantLoop.indexOf('clearBuildArtifacts()', firstCleanup + 1);
+
+  assert(firstCleanup < variantLoop.indexOf('runGuideSourceChecks'));
+  assert(variantLoop.indexOf('runGuideSourceChecks') < variantLoop.indexOf('runVariantChecks'));
+  assert(variantLoop.indexOf('runVariantChecks') < secondCleanup);
+});
+
+test('P1 successful evidence keeps the emitted KiB measurement', () => {
+  const output = 'P1 verification passed for fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
+  assert.equal(extractP1SuccessMeasurement(output), '259.8 KiB initial JavaScript gzip');
+  assert.equal(extractP1SuccessMeasurement('P1 verification passed'), undefined);
+});
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {
   const failures = [

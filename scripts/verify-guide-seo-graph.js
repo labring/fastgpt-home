@@ -2,7 +2,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const root = process.cwd();
-const registry = JSON.parse(fs.readFileSync(path.join(root, 'src/content/guides/registry.json'), 'utf8'));
+const registry = JSON.parse(
+  fs.readFileSync(path.join(root, 'src/content/guides/registry.json'), 'utf8')
+);
 const tracerSlug = 'saas-platform-enterprise-gaps';
 
 function fail(slug, message) {
@@ -15,7 +17,9 @@ function parseArgs(argv = process.argv.slice(2)) {
   if (argv.length === 1 && ['--root-articles', '--articles', '--hubs'].includes(argv[0])) {
     return { [argv[0].slice(2)]: true };
   }
-  throw new Error('Usage: node scripts/verify-guide-seo-graph.js [--slug <slug> | --root-articles | --articles | --hubs]');
+  throw new Error(
+    'Usage: node scripts/verify-guide-seo-graph.js [--slug <slug> | --root-articles | --articles | --hubs]'
+  );
 }
 
 function getEntry(slug) {
@@ -41,7 +45,8 @@ function verifyAlternates(slug) {
     fail(slug, 'alternate cluster must contain exactly the two owned URLs');
   }
   for (const locale of ['en', 'zh']) {
-    if (getEntry(slug)[locale].canonical !== urls[locale]) fail(slug, `${locale}: canonical is not an owned root URL`);
+    if (getEntry(slug)[locale].canonical !== urls[locale])
+      fail(slug, `${locale}: canonical is not an owned root URL`);
   }
   return urls;
 }
@@ -53,13 +58,22 @@ function verifyTracer(slug) {
   const shell = readSource('src/components/guide/GuideArticleRoute.tsx');
   const page = readSource('src/components/guide/GuideArticlePage.tsx');
   const seo = readSource('src/lib/guideSeo.ts');
-  if (!route.includes('GuideArticleRoute') || !route.includes('getGuideArticleMetadata')) fail(slug, 'root route must delegate rendering and metadata');
-  if (!shell.includes('readGuideDocument') || !shell.includes('JsonLdScript') || !shell.includes('BreadcrumbJsonLd')) fail(slug, 'article shell must load body and emit Article plus breadcrumb schema');
-  if (!page.includes('MarkdownContent') || !page.includes('getGuideOwnedPath')) fail(slug, 'article page must render the approved body with visible owned breadcrumbs');
-  if (!seo.includes('getOwnedLocalePath') || !seo.includes('getOwnedLocaleUrl')) fail(slug, 'SEO projection must use owned URL helpers');
+  if (!route.includes('GuideArticleRoute') || !route.includes('getGuideArticleMetadata'))
+    fail(slug, 'root route must delegate rendering and metadata');
+  if (
+    !shell.includes('readGuideDocument') ||
+    !shell.includes('JsonLdScript') ||
+    !shell.includes('BreadcrumbJsonLd')
+  )
+    fail(slug, 'article shell must load body and emit Article plus breadcrumb schema');
+  if (!page.includes('MarkdownContent') || !page.includes('getGuideOwnedPath'))
+    fail(slug, 'article page must render the approved body with visible owned breadcrumbs');
+  if (!seo.includes('getOwnedLocalePath') || !seo.includes('getOwnedLocaleUrl'))
+    fail(slug, 'SEO projection must use owned URL helpers');
   for (const locale of ['zh', 'en']) {
     const snapshot = entry[locale];
-    if (snapshot.assetPolicy.status === 'required' || snapshot.configuredInternalLinks.length) fail(slug, `${locale}: tracer expects no published asset or configured links`);
+    if (snapshot.assetPolicy.status === 'required' || snapshot.configuredInternalLinks.length)
+      fail(slug, `${locale}: tracer expects no published asset or configured links`);
   }
   return urls;
 }
@@ -68,24 +82,40 @@ function verifyRootArticles() {
   const route = readSource('src/app/guide/[slug]/page.tsx');
   const seo = readSource('src/lib/guideSeo.ts');
   const shell = readSource('src/components/guide/GuideArticleRoute.tsx');
-  if (!route.includes('guideSlugs.map((slug) => ({ slug }))') || !route.includes('dynamicParams = false')) {
+  if (
+    !route.includes('guideSlugs.map((slug) => ({ slug }))') ||
+    !route.includes('dynamicParams = false')
+  ) {
     throw new Error('root articles: route inventory must be closed');
   }
-  if (!seo.includes('publishedTime: snapshot.datePublished') || !seo.includes('modifiedTime: snapshot.dateModified')) {
+  if (
+    !seo.includes('publishedTime: snapshot.datePublished') ||
+    !seo.includes('modifiedTime: snapshot.dateModified')
+  ) {
     throw new Error('root articles: Open Graph timing must use registry dates');
   }
-  if (!shell.includes('datePublished: document.source.datePublished') || !shell.includes('dateModified: document.source.dateModified')) {
+  if (
+    !shell.includes('datePublished: document.source.datePublished') ||
+    !shell.includes('dateModified: document.source.dateModified')
+  ) {
     throw new Error('root articles: Article schema timing must use registry dates');
   }
   return registry.entries.map((entry) => {
     const urls = verifyAlternates(entry.slug);
     const rootPath = urls.pathName;
-    if (!/^\/guide\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(rootPath)) fail(entry.slug, 'invalid root article path');
+    if (!/^\/guide\/[a-z0-9]+(?:-[a-z0-9]+)*$/.test(rootPath))
+      fail(entry.slug, 'invalid root article path');
     for (const locale of ['zh', 'en']) {
       const snapshot = entry[locale];
-      if (snapshot.canonical !== urls[locale]) fail(entry.slug, `${locale}: canonical does not match projection`);
-      for (const [hreflang, url] of Object.entries({ 'zh-CN': urls['zh-CN'], en: urls.en, 'x-default': urls['x-default'] })) {
-        if (!snapshot.hreflang.includes(`${hreflang} → ${url}`)) fail(entry.slug, `${locale}: ${hreflang} alternate does not match projection`);
+      if (snapshot.canonical !== urls[locale])
+        fail(entry.slug, `${locale}: canonical does not match projection`);
+      for (const [hreflang, url] of Object.entries({
+        'zh-CN': urls['zh-CN'],
+        en: urls.en,
+        'x-default': urls['x-default']
+      })) {
+        if (!snapshot.hreflang.includes(`${hreflang} → ${url}`))
+          fail(entry.slug, `${locale}: ${hreflang} alternate does not match projection`);
       }
       if (snapshot.datePublished !== '2026-08-11' || snapshot.dateModified !== '2026-08-11') {
         fail(entry.slug, `${locale}: registry timing does not match approved date`);
@@ -95,10 +125,79 @@ function verifyRootArticles() {
   });
 }
 
+function verifyArticles() {
+  const rootRoute = readSource('src/app/guide/[slug]/page.tsx');
+  const localizedRoute = readSource('src/app/[lang]/guide/[slug]/page.tsx');
+  const shell = readSource('src/components/guide/GuideArticleRoute.tsx');
+  const page = readSource('src/components/guide/GuideArticlePage.tsx');
+  const seo = readSource('src/lib/guideSeo.ts');
+
+  verifyRootArticles();
+  if (
+    !rootRoute.includes('defaultLocale') ||
+    !rootRoute.includes('getGuideArticleMetadata(locale, slug, { indexable: true })')
+  ) {
+    throw new Error('articles: root route must remain the indexable default-locale alias');
+  }
+  if (
+    !localizedRoute.includes('getGuideBuildLocales().flatMap') ||
+    !localizedRoute.includes('guideSlugs.map((slug) => ({ lang, slug }))') ||
+    !localizedRoute.includes('dynamicParams = false') ||
+    !localizedRoute.includes('if (!locale || !guideSlugs.includes(slug)) notFound()') ||
+    !localizedRoute.includes('getGuideArticleMetadata(locale, slug, { indexable: false })')
+  ) {
+    throw new Error(
+      'articles: localized route must use closed owned-locale params and noindex metadata'
+    );
+  }
+  if (!seo.includes('robots: indexable ? undefined : { index: false, follow: true }')) {
+    throw new Error('articles: localized metadata must be noindex-follow');
+  }
+  if (
+    !page.includes('MarkdownContent markdown={document.body} title={document.source.h1}') ||
+    !page.includes("assetPolicy.status === 'required'") ||
+    !page.includes('configuredInternalLinks.length > 0') ||
+    !page.includes('getOwnedLocalePath(locale)')
+  ) {
+    throw new Error(
+      'articles: article page must render the approved body and guarded visitor surfaces'
+    );
+  }
+  if (!shell.includes("document.source.schemaTokens.includes('HowTo')")) {
+    throw new Error('articles: HowTo schema must be token-gated');
+  }
+
+  const howToSlugs = new Set([
+    'server-sizing-guide',
+    'complex-doc-golden-set',
+    'support-bot-four-steps'
+  ]);
+  for (const entry of registry.entries) {
+    for (const locale of ['zh', 'en']) {
+      const snapshot = entry[locale];
+      const isHowTo = snapshot.schemaTokens.includes('HowTo');
+      if (isHowTo !== howToSlugs.has(entry.slug))
+        fail(entry.slug, `${locale}: unexpected HowTo schema token`);
+      if (
+        !snapshot.schemaTokens.includes('Article') ||
+        !snapshot.schemaTokens.includes('BreadcrumbList')
+      ) {
+        fail(entry.slug, `${locale}: Article and BreadcrumbList schema tokens are required`);
+      }
+      if (snapshot.assetPolicy.status === 'required')
+        fail(entry.slug, `${locale}: current article projection expects no image`);
+      if (snapshot.configuredInternalLinks.length)
+        fail(entry.slug, `${locale}: current article projection expects no configured links`);
+    }
+  }
+
+  return registry.entries.map((entry) => projectGuideUrls(entry.slug).pathName);
+}
+
 function verify(options) {
   if (options.slug) return verifyTracer(options.slug);
   if (options.rootArticles) return verifyRootArticles();
-  if (options.articles) return registry.entries.map((entry) => verifyTracer(entry.slug));
+  if (options.articles) return verifyArticles();
   if (options.hubs) return true;
   return registry.entries.map((entry) => verifyTracer(entry.slug));
 }
@@ -112,4 +211,13 @@ function main() {
 
 if (require.main === module) main();
 
-module.exports = { parseArgs, projectGuideUrls, verifyAlternates, verifyTracer, verifyRootArticles, verify, main };
+module.exports = {
+  parseArgs,
+  projectGuideUrls,
+  verifyAlternates,
+  verifyTracer,
+  verifyRootArticles,
+  verifyArticles,
+  verify,
+  main
+};

@@ -107,6 +107,34 @@ test('a required asset must be a contained public path with authored alt text', 
   assertFailure(() => verifyGuideRegistry(entries), /server-sizing-guide: zh: required asset/);
 });
 
+test('registry requires approved publication groups and release dates', () => {
+  const entry = findEntry(registry.entries, 'saas-platform-enterprise-gaps');
+  assert.equal(entry.group, 'decision');
+  assert.equal(entry.zh.datePublished, '2026-08-11');
+  assert.equal(entry.en.dateModified, '2026-08-11');
+
+  const invalidGroup = structuredClone(registry.entries);
+  findEntry(invalidGroup, 'saas-platform-enterprise-gaps').group = 'unknown';
+  assertFailure(() => verifyGuideRegistry(invalidGroup), /invalid publication group/);
+
+  const invalidDate = structuredClone(registry.entries);
+  findEntry(invalidDate, 'saas-platform-enterprise-gaps').zh.datePublished = '2026-02-30';
+  assertFailure(() => verifyGuideRegistry(invalidDate), /invalid datePublished/);
+});
+
+test('required assets need positive responsive dimensions', () => {
+  const entries = structuredClone(registry.entries);
+  findEntry(entries, 'server-sizing-guide').zh.assetPolicy = {
+    status: 'required',
+    path: '/logo.svg',
+    alt: 'FastGPT logo',
+    width: 0,
+    height: 640
+  };
+
+  assertFailure(() => verifyGuideRegistry(entries), /positive dimensions/);
+});
+
 test('configured links fail with the source label for every invalid target category', () => {
   for (const target of ['', '#guide', 'https://example.com/guide/x', 'not a URL', 'https://fastgpt.io/guide/unknown']) {
     const entries = structuredClone(registry.entries);

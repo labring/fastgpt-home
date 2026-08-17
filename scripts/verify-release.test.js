@@ -112,7 +112,7 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(workflow, /RELEASE_ROOT: \.release-root/);
   assert.doesNotMatch(workflow, /RELEASE_ROOT:.*runner\.temp/);
   assert.equal((workflow.match(/path: \.release-root/g) || []).length, 2);
-  for (const marker of ['verify:release -- --retain-success-artifacts', 'sha256sum -c', 'tar -xzf', 'target: release-runtime', 'docker/build-push-action@v5', 'kubectl set image', 'kubectl rollout status', 'cloudflare/wrangler-action@v3', 'pages deploy release-out', '--commit-hash', 'pages deployment list --project-name=fastgpt-home --json', 'rollbackTarget', 'provider-receipt']) assert(workflow.includes(marker), marker);
+  for (const marker of ['verify:release -- --retain-success-artifacts', 'sha256sum -c', 'tar -xzf', 'target: release-runtime', 'docker/build-push-action@v5', 'kubectl set image', 'kubectl rollout status', 'cloudflare/wrangler-action@v3', 'pages deploy release-out', '--commit-hash', 'pages deployment list --project-name=', 'rollbackTarget', 'provider-receipt']) assert(workflow.includes(marker), marker);
   const cnRollback = workflow.indexOf('Capture provider-derived CN rollback target');
   const cnBuild = workflow.indexOf('docker/build-push-action@v5');
   const cnRollout = workflow.indexOf('Roll out digest-pinned CN image');
@@ -132,6 +132,9 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(workflow, /ROLLBACK_ID/);
   assert.equal((workflow.match(/npx --yes wrangler@4 pages deployment list/g) || []).length, 3);
   assert.doesNotMatch(workflow, /npx --no-install wrangler pages deployment list/);
+  assert.equal((workflow.match(/PROJECT_NAME: fastgpt-home/g) || []).length, 2);
+  assert.doesNotMatch(workflow, /CLOUDFLARE_PROJECT_NAME: \$\{\{ vars\.CLOUDFLARE_PROJECT_NAME \}\}/);
+  assert.match(workflow, /provider:\{project:process\.env\.PROJECT_NAME/);
   assert(workflow.includes('--inject-release-headers'));
   assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));

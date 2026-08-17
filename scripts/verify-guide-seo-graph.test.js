@@ -33,7 +33,11 @@ test('sitemap projects one owned hub and eight dated articles per variant', () =
   ]) {
     const entries = projectGuideSitemap(locale, cloneEntries());
     assert.equal(entries.length, 9, `${locale}: sitemap count`);
-    assert.equal(new Set(entries.map((entry) => entry.url)).size, 9, `${locale}: sitemap uniqueness`);
+    assert.equal(
+      new Set(entries.map((entry) => entry.url)).size,
+      9,
+      `${locale}: sitemap uniqueness`
+    );
     assert.equal(entries[0].url, `https://${host}/guide`, `${locale}: hub URL`);
     for (const entry of entries.slice(1)) {
       assert.match(entry.url, new RegExp(`^https://${host}/guide/[a-z0-9-]+$`));
@@ -93,11 +97,15 @@ test('optional article projection activates only approved required assets and co
     width: 1200,
     height: 630
   };
-  source.configuredInternalLinks = [{ label: source.sourceInternalLinkLabels[0], target: '/guide' }];
+  source.configuredInternalLinks = [
+    { label: source.sourceInternalLinkLabels[0], target: '/guide' }
+  ];
 
   const projection = projectArticleSurface(entries[0], 'en');
   assert.equal(projection.asset.path, '/guide-approved.png');
-  assert.deepEqual(projection.links, [{ label: source.sourceInternalLinkLabels[0], target: '/guide' }]);
+  assert.deepEqual(projection.links, [
+    { label: source.sourceInternalLinkLabels[0], target: '/guide' }
+  ]);
   assert.equal(projectArticleSurface(cloneEntries()[0], 'en').asset, undefined);
   assert.deepEqual(projectArticleSurface(cloneEntries()[0], 'en').links, []);
 });
@@ -107,15 +115,39 @@ test('source mutations identify route, schema, and sitemap drift without editing
   const context = buildGraphContext({ entries: cloneEntries() });
 
   assertFailure(
-    () => verifyGraph({ ...context, sources: { ...context.sources, sitemap: originalSitemap.replace('guideEntries', 'guideRecords') } }),
+    () =>
+      verifyGraph({
+        ...context,
+        sources: {
+          ...context.sources,
+          sitemap: originalSitemap.replaceAll('guideEntries', 'guideRecords')
+        }
+      }),
     /sitemap: guideEntries: missing registry identity/
   );
   assertFailure(
-    () => verifyGraph({ ...context, sources: { ...context.sources, hubRoute: context.sources.hubRoute.replace("'ItemList'", "'List'") } }),
+    () =>
+      verifyGraph({
+        ...context,
+        sources: {
+          ...context.sources,
+          hubRoute: context.sources.hubRoute.replace("'ItemList'", "'List'")
+        }
+      }),
     /hubs: schema: ItemList is missing/
   );
   assertFailure(
-    () => verifyGraph({ ...context, sources: { ...context.sources, localizedArticleRoute: context.sources.localizedArticleRoute.replace('dynamicParams = false', 'dynamicParams = true') } }),
+    () =>
+      verifyGraph({
+        ...context,
+        sources: {
+          ...context.sources,
+          localizedArticleRoute: context.sources.localizedArticleRoute.replace(
+            'dynamicParams = false',
+            'dynamicParams = true'
+          )
+        }
+      }),
     /articles: localized routes: closed params are missing/
   );
   assert.equal(fs.readFileSync(path.join(ROOT, 'src/app/sitemap.ts'), 'utf8'), originalSitemap);

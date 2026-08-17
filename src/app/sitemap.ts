@@ -11,6 +11,8 @@ import { getTechArticleLastModified, getTechCenterLastModified } from '@/lib/tec
 import { getCompareCanonicalUrl, getCompareHubCanonicalUrl } from '@/lib/seo';
 import { getComparisonPagesForLocale } from '@/content/competitor';
 import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
+import { guideEntries } from '@/content/guides/registry';
+import { getGuideCanonicalUrl } from '@/lib/guideSeo';
 
 export const dynamic = 'force-static';
 
@@ -39,9 +41,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addEntry(getOwnedLocaleUrl(locale, '/contact'), now);
   }
 
-  const publishedFaqLocales = faqContentLocaleCodes.filter((code) =>
-    siteLocales.includes(code)
-  );
+  const publishedFaqLocales = faqContentLocaleCodes.filter((code) => siteLocales.includes(code));
 
   for (const locale of publishedFaqLocales) {
     addEntry(getOwnedFaqUrl(locale), now);
@@ -70,6 +70,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const page of getComparisonPagesForLocale(compareLocale)) {
     if (page.status !== 'published') continue;
     addEntry(getCompareCanonicalUrl(compareLocale, page.slug), new Date(page.dates.dateModified));
+  }
+
+  const guideLocale = currentSiteVariant === 'cn' ? 'zh' : 'en';
+  addEntry(getGuideCanonicalUrl(guideLocale), now);
+  for (const entry of guideEntries) {
+    addEntry(
+      getGuideCanonicalUrl(guideLocale, entry.slug),
+      new Date(entry[guideLocale].dateModified)
+    );
   }
 
   return entries;

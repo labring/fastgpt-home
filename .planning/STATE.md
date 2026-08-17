@@ -5,15 +5,15 @@ milestone_name: Guide Content Center
 current_phase: 5
 current_phase_name: Guide Content Contract
 status: executing
-stopped_at: Completed 05-02-PLAN.md
-last_updated: "2026-08-17T04:08:27.522Z"
+stopped_at: Completed 05-03-PLAN.md
+last_updated: "2026-08-17T04:15:44.014Z"
 last_activity: 2026-08-17
 last_activity_desc: Created the v1.1 Guide Content Center roadmap and requirement traceability.
 progress:
   total_phases: 1
   completed_phases: 0
   total_plans: 4
-  completed_plans: 2
+  completed_plans: 3
 ---
 
 # Project State
@@ -28,11 +28,11 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 ## Current Position
 
 Phase: 5 (Guide Content Contract) — EXECUTING
-Plan: 3 of 4
+Plan: 4 of 4
 Status: Ready to execute
 Last activity: 2026-08-17 — Phase 5 execution started
 
-Progress: [█████░░░░░] 50%
+Progress: [████████░░] 75%
 
 ## Performance Metrics
 
@@ -56,6 +56,7 @@ Progress: [█████░░░░░] 50%
 |------|----------|-------|-------|
 | Phase 05-guide-content-contract P01 | 9m | 2 tasks | 6 files |
 | Phase 05 P02 | 2min | 2 tasks | 7 files |
+| Phase 05 P03 | 4m | 2 tasks | 7 files |
 
 ## Accumulated Context
 
@@ -69,6 +70,8 @@ Progress: [█████░░░░░] 50%
 - [Phase ?]: Guide registry is the single identity source for future route and publication work.
 - [Phase ?]: Guide asset and internal-link directives remain source data until approved records exist.
 - [Phase ?]: Preserve Chinese Guide delivery bytes and basenames as the source-fidelity contract.
+- [Phase ?]: Preserve approved English Guide bytes, including truncated metadata and the self-build malformed directive.
+- [Phase ?]: Keep the English GSC appendix outside the Guide corpus and retain the established verifier output.
 
 ### Pending Todos
 
@@ -90,6 +93,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T04:08:27.505Z
-Stopped at: Completed 05-02-PLAN.md
+Last session: 2026-08-17T04:15:43.991Z
+Stopped at: Completed 05-03-PLAN.md
 Resume file: None

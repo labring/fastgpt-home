@@ -1,10 +1,10 @@
 ---
 schema_version: 1
-open_count: 1
+open_count: 2
 waived_count: 0
 fixed_count: 0
-total_count: 1
-last_updated: 2026-08-16T07:11:06.218Z
+total_count: 2
+last_updated: 2026-08-17T04:15:43.205Z
 ---
 
 # Broken Windows Ledger
@@ -16,6 +16,7 @@ last_updated: 2026-08-16T07:11:06.218Z
 | id | phase | kind | file | line | description | status | reason | recorded_at | resolved_at |
 |----|-------|------|------|------|-------------|--------|--------|-------------|-------------|
 | 1 | quick | skipped-test | scripts/verify-release.test.js |  | The fixture regression skips only on actually case-insensitive volumes; case-sensitive Linux and APFS hosts execute the complete 1,195-page CLI. | open |  | 2026-08-16T07:11:06.218Z |  |
+| 2 | 05 | deviation | scripts/verify-guide-content.js |  | The established full verifier validates both locale records but reports only verified slugs. | open |  | 2026-08-17T04:15:43.205Z |  |
 
 ````json
 [
@@ -29,6 +30,18 @@ last_updated: 2026-08-16T07:11:06.218Z
     "status": "open",
     "reason": "",
     "recorded_at": "2026-08-16T07:11:06.218Z",
+    "resolved_at": null
+  },
+  {
+    "id": 2,
+    "kind": "deviation",
+    "phase": "05",
+    "file": "scripts/verify-guide-content.js",
+    "line": null,
+    "description": "The established full verifier validates both locale records but reports only verified slugs.",
+    "status": "open",
+    "reason": "",
+    "recorded_at": "2026-08-17T04:15:43.205Z",
     "resolved_at": null
   }
 ]

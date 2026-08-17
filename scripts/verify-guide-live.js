@@ -28,15 +28,15 @@ function parseArgs(argv) {
 function headersOf(headers) { return Object.fromEntries(['cache-control', 'etag', 'last-modified', 'age', 'cf-cache-status', 'x-cache-status', 'x-release-revision', 'x-release-artifact'].map((key) => [key, headers.get(key) || undefined])); }
 function getTag(html, tag, attr, value) { return [...html.matchAll(new RegExp(`<${tag}\\b[^>]*>`, 'gi'))].find((candidate) => new RegExp(`\\s${attr}=["']${value}["']`, 'i').test(candidate[0]))?.[0]; }
 function attr(tag, name) { return tag?.match(new RegExp(`\\s${name}=["']([^"']*)["']`, 'i'))?.[1]; }
-function checkHtml(body, expected, host) {
+function checkHtml(body, expected, host, hosts) {
   const errors = [];
   const h1 = body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
   if (h1 !== expected.h1) errors.push('h1');
   const canonical = attr(getTag(body, 'link', 'rel', 'canonical'), 'href');
   if (canonical !== `${host}${expected.route}`) errors.push('canonical');
   const alternate = Object.fromEntries([...body.matchAll(/<link\b[^>]*rel=["']alternate["'][^>]*>/gi)].map((match) => [attr(match[0], 'hreflang'), attr(match[0], 'href')]));
-  for (const [lang, url] of Object.entries({ 'zh-CN': `https://fastgpt.cn${expected.route}`, en: `https://fastgpt.io${expected.route}`, 'x-default': `https://fastgpt.io${expected.route}` })) if (alternate[lang] !== url) errors.push(`alternate:${lang}`);
-  if (/name=["']robots["'][^>]*content=["'][^"']*noindex/i.test(body)) errors.push('robots');
+  for (const [lang, url] of Object.entries({ 'zh-CN': `${hosts.cn}${expected.route}`, en: `${hosts.io}${expected.route}`, 'x-default': `${hosts.io}${expected.route}` })) if (alternate[lang] !== url) errors.push(`alternate:${lang}`);
+  if (/<meta\b[^>]*(?:name=["']robots["'][^>]*content=["'][^"']*noindex|content=["'][^"']*noindex[^>]*name=["']robots["'])/i.test(body)) errors.push('robots');
   return errors;
 }
 function validateProviderReceipt(receipt, manifest) {
@@ -53,15 +53,15 @@ async function runLiveVerification(options, fetchImpl) {
   const receipts = Object.fromEntries(options.providerEvidence.map((filePath) => { const receipt = JSON.parse(fs.readFileSync(filePath, 'utf8')); return [receipt.variant, receipt]; }));
   for (const [variant, expected] of Object.entries(matrix)) {
     const host = variant === 'cn' ? options.baseUrlCn : options.baseUrlIo; const result = { routes: [], failures: [] };
-    let sitemap = ''; let manifest;
+    let sitemap = ''; let manifest; let manifestHeaders;
     for (const surface of ['/sitemap.xml', '/__release/manifest.json']) {
-      try { const response = await fetchWithTimeout(`${host}${surface}`, options.timeoutMs, fetchImpl); const body = await response.text(); if (response.status !== 200) result.failures.push(`${surface}:status=${response.status}`); if (surface.endsWith('.xml')) sitemap = body; else manifest = JSON.parse(body); } catch (error) { result.failures.push(`${surface}:${error.name}`); }
+      try { const response = await fetchWithTimeout(`${host}${surface}`, options.timeoutMs, fetchImpl); const body = await response.text(); const headers = headersOf(response.headers); if (response.status !== 200) result.failures.push(`${surface}:status=${response.status}`); if (surface.endsWith('.xml')) sitemap = body; else { manifest = JSON.parse(body); manifestHeaders = headers; if (!/no-store/i.test(headers['cache-control'] || '')) result.failures.push('/__release/manifest.json:cache'); } } catch (error) { result.failures.push(`${surface}:${error.name}`); }
     }
-    if (manifest) { try { if (manifest.variant !== variant || !manifest.releaseRevision || !manifest.artifactDigest || !manifest.rollbackTarget) fail('manifest identity missing'); if (!options.allowBlockedBaseline) validateProviderReceipt(receipts[variant], manifest); result.manifest = { releaseRevision: manifest.releaseRevision, artifactDigest: manifest.artifactDigest, rollbackTarget: manifest.rollbackTarget }; } catch (error) { result.failures.push(`manifest:${error.message}`); } }
+    if (manifest) { try { if (manifest.variant !== variant || !manifest.releaseRevision || !manifest.artifactDigest || !manifest.treeDigest || !manifest.rollbackTarget) fail('manifest identity missing'); if (!options.allowBlockedBaseline) validateProviderReceipt(receipts[variant], manifest); result.manifest = { releaseRevision: manifest.releaseRevision, artifactDigest: manifest.artifactDigest, rollbackTarget: manifest.rollbackTarget, headers: manifestHeaders }; } catch (error) { result.failures.push(`manifest:${error.message}`); } }
     for (const expectedRoute of expected.routes) {
       const url = `${host}${expectedRoute.route}`; const item = { slug: expectedRoute.slug, path: expectedRoute.route };
       try { const response = await fetchWithTimeout(url, options.timeoutMs, fetchImpl); const body = await response.text(); item.status = response.status; item.finalUrl = response.url; item.headers = headersOf(response.headers); item.bodyDigest = crypto.createHash('sha256').update(body).digest('hex'); const surfaces = [];
-        if (response.status !== 200) surfaces.push(`status=${response.status}`); if (response.url !== url) surfaces.push('redirect'); if (response.status === 200) surfaces.push(...checkHtml(body, expectedRoute, expected.host)); if (!sitemap.includes(`<loc>${expected.host}${expectedRoute.route}</loc>`)) surfaces.push('sitemap'); if (!/max-age=\d*[1-9]/i.test(item.headers['cache-control'] || '') && !item.headers['cf-cache-status'] && !item.headers['x-cache-status']) surfaces.push('cache'); if (!options.allowBlockedBaseline && (!item.headers['x-release-revision'] || item.headers['x-release-revision'] !== manifest?.releaseRevision || item.headers['x-release-artifact'] !== manifest?.artifactDigest)) surfaces.push('release-headers'); if (surfaces.length) { item.failures = surfaces; result.failures.push(`${expectedRoute.route}:${surfaces.join(',')}`); } } catch (error) { item.failures = [error.name]; result.failures.push(`${expectedRoute.route}:${error.name}`); }
+        if (response.status !== 200) surfaces.push(`status=${response.status}`); if (response.url !== url) surfaces.push('redirect'); if (response.status === 200) surfaces.push(...checkHtml(body, expectedRoute, host, { cn: options.baseUrlCn, io: options.baseUrlIo })); if (!sitemap.includes(`<loc>${host}${expectedRoute.route}</loc>`)) surfaces.push('sitemap'); if (!/max-age=\d*[1-9]/i.test(item.headers['cache-control'] || '') && !item.headers['cf-cache-status'] && !item.headers['x-cache-status']) surfaces.push('cache'); if (!options.allowBlockedBaseline && (!item.headers['x-release-revision'] || item.headers['x-release-revision'] !== manifest?.releaseRevision || item.headers['x-release-artifact'] !== manifest?.artifactDigest)) surfaces.push('release-headers'); if (surfaces.length) { item.failures = surfaces; result.failures.push(`${expectedRoute.route}:${surfaces.join(',')}`); } } catch (error) { item.failures = [error.name]; result.failures.push(`${expectedRoute.route}:${error.name}`); }
       result.routes.push(item);
     }
     report.variants[variant] = result;

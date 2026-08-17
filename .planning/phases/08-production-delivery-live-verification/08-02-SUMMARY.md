@@ -53,7 +53,7 @@ status: complete
 
 - Retained each successful `verify:release` output before cleanup for exact archive packaging.
 - Added a native, timeout-bounded Cloudflare URL purge command with dry-run and JSON evidence.
-- Added manual CN/IO provider jobs that verify archives before direct Nginx/Pages delivery and capture receipt inputs.
+- Added manual CN/IO provider jobs that verify archives before direct Nginx/Pages delivery, read provider-derived rollback revisions before mutation, and write final receipts only after successful provider promotion.
 
 ## Task Commits
 
@@ -63,7 +63,7 @@ status: complete
 ## Decisions Made
 
 - Nginx `release-runtime` copies only the extracted `release-out/` tree and has no build command.
-- Provider receipts bind logical artifact identity to external revisions after credential guards.
+- Provider receipts bind logical artifact identity to external revisions after credential guards; CN receipts include completed rollout status and IO receipts include the pre-deploy Pages revision/URL.
 
 ## Deviations from Plan
 
@@ -79,7 +79,7 @@ status: complete
 
 ## Issues Encountered
 
-Provider credentials and current production rollback state are unavailable locally. The workflow records blocked guards before deployment mutation; no provider success is claimed.
+Provider credentials and current production rollback state are unavailable locally. The workflow reads and validates provider rollback state before deployment mutation, records blocked guards when unavailable, and claims no provider success locally.
 
 ## User Setup Required
 
@@ -92,5 +92,5 @@ Authorized CI needs Kubernetes context/registry access for CN and Cloudflare tok
 ## Self-Check: PASSED
 
 - Required purge, retained-output, Docker, cache-policy, and workflow files exist.
-- Commits `a43fa2c`, `5f6f2ef`, `d96ff54`, and `6999190` exist.
+- Commits `a43fa2c`, `5f6f2ef`, `d96ff54`, `6999190`, and `7be01e9` exist.
 - `npm run release:purge-cloudflare-regression` and `node --test scripts/verify-release.test.js` passed.

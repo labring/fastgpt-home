@@ -48,5 +48,11 @@ test('local 18-page fixture validates SEO, cache, manifest headers, sitemap, and
     const cnReceipt = path.join(root, 'cn.json'); const ioReceipt = path.join(root, 'io.json'); fs.writeFileSync(cnReceipt, JSON.stringify(receipt('cn', cn.manifest))); fs.writeFileSync(ioReceipt, JSON.stringify(receipt('io', io.manifest)));
     const result = await runLiveVerification({ baseUrlCn: hosts.cn, baseUrlIo: hosts.io, timeoutMs: 1000, providerEvidence: [cnReceipt, ioReceipt] });
     assert.equal(result.status, 'passed'); assert.equal(result.variants.cn.routes.length + result.variants.io.routes.length, 18); assert.equal(result.variants.io.manifest.headers['cache-control'], 'no-store');
+    for (const variant of ['cn', 'io']) {
+      assert.equal(result.variants[variant].surfaces['/sitemap.xml'].status, 200);
+      assert.equal(result.variants[variant].surfaces['/__release/manifest.json'].status, 200);
+      assert.match(result.variants[variant].surfaces['/sitemap.xml'].bodyDigest, /^[a-f0-9]{64}$/);
+      assert.equal(result.variants[variant].surfaces['/__release/manifest.json'].headers['cache-control'], 'no-store');
+    }
   } finally { fs.rmSync(root, { recursive: true, force: true }); await Promise.all([new Promise((resolve) => cn.server.close(resolve)), new Promise((resolve) => io.server.close(resolve))]); }
 });

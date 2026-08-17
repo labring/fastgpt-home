@@ -7,13 +7,13 @@ source:
   - 08-03-SUMMARY.md
   - 08-VERIFICATION.md
 started: 2026-08-17T12:59:32Z
-updated: 2026-08-17T12:59:32Z
+updated: 2026-08-17T13:18:00Z
 decision_mode: automated-authorized
 ---
 
 ## Current Test
 
-[testing complete]
+[re-verification complete]
 
 ## Tests
 
@@ -39,16 +39,16 @@ reported: Independent public baseline at 2026-08-17T12:56:43Z found 9/9 Guide pa
 
 ### 4. Auditable sitemap and manifest evidence
 expected: The live JSON report records structured HTTP status, final URL, headers, body digest, and timestamps for the two sitemaps and two release manifests.
-result: issue
-severity: major
+result: pass
+severity: none
 source: automated
-reported: verify-guide-live.js emits page records only; sitemap and manifest details collapse into failure strings and parsed --manifest is unused.
+reported: `verify-guide-live.js` now emits `variants.<variant>.surfaces` entries for `/sitemap.xml` and `/__release/manifest.json`; fixture assertions cover status, cache headers, and body digests for both variants.
 
 ## Summary
 
 total: 4
-passed: 1
-issues: 3
+passed: 2
+issues: 2
 pending: 0
 skipped: 0
 blocked: 0
@@ -77,14 +77,3 @@ blocked: 0
       issue: Blocked baseline records current public absence.
   missing:
     - Complete provider promotion, purge/propagation, and strict live verification with receipts.
-- gap_id: G-08-4
-  truth: "The live evidence JSON fully records sitemap and manifest response surfaces."
-  status: failed
-  severity: major
-  test: 4
-  reason: "Support-surface HTTP records and the declared manifest input are incomplete."
-  artifacts:
-    - path: scripts/verify-guide-live.js
-      issue: Support response fields are discarded after validation.
-  missing:
-    - Add structured support-surface report entries and regression coverage.

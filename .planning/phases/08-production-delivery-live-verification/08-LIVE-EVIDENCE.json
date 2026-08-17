@@ -1,9 +1,34 @@
 {
   "schemaVersion": 1,
-  "startedAt": "2026-08-17T12:50:18.335Z",
+  "startedAt": "2026-08-17T13:02:59.496Z",
   "status": "blocked",
   "variants": {
     "cn": {
+      "surfaces": {
+        "/sitemap.xml": {
+          "status": 200,
+          "finalUrl": "https://fastgpt.cn/sitemap.xml",
+          "headers": {
+            "cache-control": "public, max-age=3600",
+            "etag": "\"6a82a29e-4519c\"",
+            "last-modified": "Mon, 17 Aug 2026 05:56:46 GMT",
+            "x-cache-status": "HIT-DATA"
+          },
+          "bodyDigest": "f8da183fc7458fc4b59adad0337e4464db8d46bf3bb63c3847dfd5b9e2f40de2",
+          "failures": []
+        },
+        "/__release/manifest.json": {
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/__release/manifest.json",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404"
+          ]
+        }
+      },
       "routes": [
         {
           "slug": "hub",
@@ -143,7 +168,6 @@
       ],
       "failures": [
         "/__release/manifest.json:status=404",
-        "/__release/manifest.json:SyntaxError",
         "/guide:status=404,sitemap,cache",
         "/guide/saas-platform-enterprise-gaps:status=404,sitemap,cache",
         "/guide/self-build-three-year-tco:status=404,sitemap,cache",
@@ -156,6 +180,31 @@
       ]
     },
     "io": {
+      "surfaces": {
+        "/sitemap.xml": {
+          "status": 200,
+          "finalUrl": "https://fastgpt.io/sitemap.xml",
+          "headers": {
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"fc7df4ae9d28bb6bf84bea9b03aa4fc4\"",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "9cadd21048076b131cba4790a3997bd661f46faacac28fbb311c89d3faeac832",
+          "failures": []
+        },
+        "/__release/manifest.json": {
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/__release/manifest.json",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404"
+          ]
+        }
+      },
       "routes": [
         {
           "slug": "hub",
@@ -295,7 +344,6 @@
       ],
       "failures": [
         "/__release/manifest.json:status=404",
-        "/__release/manifest.json:SyntaxError",
         "/guide:status=404,sitemap",
         "/guide/saas-platform-enterprise-gaps:status=404,sitemap",
         "/guide/self-build-three-year-tco:status=404,sitemap",
@@ -309,5 +357,5 @@
     }
   },
   "providerEvidence": [],
-  "finishedAt": "2026-08-17T12:50:26.945Z"
+  "finishedAt": "2026-08-17T13:03:08.572Z"
 }

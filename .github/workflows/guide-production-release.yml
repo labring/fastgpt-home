@@ -32,7 +32,7 @@ permissions:
 
 env:
   IMAGE_NAME: ghcr.io/${{ github.repository }}
-  RELEASE_ROOT: .release-root
+  RELEASE_ROOT: release-root
 
 jobs:
   verify:
@@ -48,7 +48,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: guide-verified-trees-${{ github.sha }}
-          path: .release-root
+          path: release-root
           retention-days: 7
 
   package-variants:
@@ -63,7 +63,7 @@ jobs:
       - uses: actions/download-artifact@v4
         with:
           name: guide-verified-trees-${{ github.sha }}
-          path: .release-root
+          path: release-root
       - name: Guard rollback inputs before artifact mutation
         run: |
           test -n '${{ inputs.cn_rollback_target }}' || { echo 'blocked: missing cn rollback target'; exit 1; }

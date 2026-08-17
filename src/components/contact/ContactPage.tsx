@@ -21,6 +21,7 @@ import { getContactCopy, getContactExperienceCopy } from '@/components/contact/c
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import { getCasesAssets } from '@/components/home/assets';
 import { getContactLocale, getContactUrl } from '@/lib/contact';
+import { defaultLocale } from '@/lib/i18n';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
@@ -60,7 +61,7 @@ const SERVICE_ICONS = {
 };
 
 function getHomeHref(locale: string) {
-  return `/${locale}`;
+  return locale === defaultLocale ? '/' : `/${locale}`;
 }
 
 export default function ContactPage({
@@ -195,7 +196,11 @@ export default function ContactPage({
             </span>
           </Link>
 
-          <div className="flex items-center gap-1 sm:gap-2">
+          <div
+            role="group"
+            aria-label="Switch language"
+            className="flex items-center gap-1 sm:gap-2"
+          >
             <span className="mr-2 hidden text-[13px] font-medium text-ink-sub md:block">
               {copy.nav.sales}
             </span>

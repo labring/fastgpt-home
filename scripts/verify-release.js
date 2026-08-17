@@ -62,7 +62,7 @@ function createFailure(label, command, args, output, variant) {
   };
 }
 
-function runStep(failures, label, command, args, env, variant) {
+function runStep(failures, label, command, args, env, variant, formatSuccess) {
   const result = spawnSync(command, args, {
     cwd: ROOT,
     env,
@@ -83,7 +83,8 @@ function runStep(failures, label, command, args, env, variant) {
     console.error(`[verify-release] ${label} failed`);
     return false;
   }
-  console.log(`[verify-release] ${label} passed`);
+  const successEvidence = formatSuccess ? formatSuccess(output) : undefined;
+  console.log(`[verify-release] ${label} passed${successEvidence ? `: ${successEvidence}` : ''}`);
   return true;
 }
 
@@ -91,9 +92,9 @@ function nodeStep(failures, label, script, args, env, variant) {
   return runStep(failures, label, process.execPath, [script, ...args], env, variant);
 }
 
-function npmStep(failures, label, args, env, variant) {
+function npmStep(failures, label, args, env, variant, formatSuccess) {
   const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-  return runStep(failures, label, npm, ['run', ...args], env, variant);
+  return runStep(failures, label, npm, ['run', ...args], env, variant, formatSuccess);
 }
 
 function clearBuildArtifacts() {
@@ -149,7 +150,7 @@ function assertCaseSensitiveFilesystem() {
     if (!caseSensitive) {
       const [first, second] = findCaseFoldCollisionPair();
       throw new Error(
-        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run full release on Linux/Docker or a case-sensitive APFS workspace (source-only remains available)`,
+        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`,
       );
     }
   } finally {
@@ -245,13 +246,37 @@ function runSourceChecks(failures, env) {
   runStep(failures, 'TypeScript source verification', 'npx', ['--no-install', 'tsc', '--noEmit'], env);
 }
 
+function runGuideSourceChecks(failures, env, variant) {
+  const suffix = variant ? ` (${variant})` : '';
+  nodeStep(
+    failures,
+    `Guide content source verification${suffix}`,
+    'scripts/verify-guide-content.js',
+    [],
+    env,
+    variant,
+  );
+  nodeStep(
+    failures,
+    `Guide SEO graph source verification${suffix}`,
+    'scripts/verify-guide-seo-graph.js',
+    [],
+    env,
+    variant,
+  );
+}
+
+function extractP1SuccessMeasurement(output) {
+  return output.match(/P1 verification passed for [^:]+: ([0-9.]+ KiB initial JavaScript gzip)/)?.[1];
+}
+
 function runVariantChecks(failures, variant, env) {
   const buildPassed = npmStep(failures, `build ${variant}`, ['build'], env, variant);
   if (!buildPassed) return false;
 
   const checks = [
     ['P0 HTML verification', ['verify:p0']],
-    ['P1 HTML verification', ['verify:p1']],
+    ['P1 HTML verification', ['verify:p1'], extractP1SuccessMeasurement],
     ['P2 HTML verification', ['verify:p2']],
     ['i18n SEO HTML verification', ['verify:i18n-seo']],
     ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html', '--variant', variant]],
@@ -261,7 +286,9 @@ function runVariantChecks(failures, variant, env) {
     ],
     ['FAQ redirect artifact verification', ['verify:faq-redirects']]
   ];
-  for (const [label, args] of checks) npmStep(failures, `${label} (${variant})`, args, env, variant);
+  for (const [label, args, formatSuccess] of checks) {
+    npmStep(failures, `${label} (${variant})`, args, env, variant, formatSuccess);
+  }
 
   try {
     verifyExportCardinality(variant);
@@ -275,6 +302,15 @@ function runVariantChecks(failures, variant, env) {
     });
     console.error(`[verify-release] export cardinality (${variant}) failed`);
   }
+
+  nodeStep(
+    failures,
+    `Guide export artifact verification (${variant})`,
+    'scripts/verify-guide-export.js',
+    ['--out-dir', 'out', '--variant', variant],
+    env,
+    variant,
+  );
   return true;
 }
 
@@ -340,6 +376,7 @@ function main() {
 
   try {
     runSourceChecks(failures, sourceEnv);
+    runGuideSourceChecks(failures, sourceEnv);
     if (failures.length || options.sourceOnly) {
       reportFailures(failures, advisories, retainedPaths);
       if (!failures.length) {
@@ -369,6 +406,7 @@ function main() {
       clearBuildArtifacts();
       const env = variantEnvironment(variant);
       const beforeFailures = failures.length;
+      runGuideSourceChecks(failures, env, variant);
       runVariantChecks(failures, variant, env);
       appendP1HistoricalBaselineAdvisories(failures, beforeFailures, advisories);
       const variantFailed = failures.length > beforeFailures;
@@ -409,4 +447,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { appendP1HistoricalBaselineAdvisories };
+module.exports = { appendP1HistoricalBaselineAdvisories, extractP1SuccessMeasurement };

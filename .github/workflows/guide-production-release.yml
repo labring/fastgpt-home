@@ -101,7 +101,28 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
-          printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
+          KUBE_RAW="$KUBE_CONFIG" KUBE_OUTPUT="$RUNNER_TEMP/kubeconfig" node - <<'NODE'
+          const fs = require('node:fs');
+          const raw = String(process.env.KUBE_RAW || '');
+          if (!raw.trim()) throw new Error('blocked: KUBE_CONFIG is empty');
+          let value = raw.trim();
+          try {
+            const parsed = JSON.parse(value);
+            value = typeof parsed === 'string' ? parsed : JSON.stringify(parsed);
+          } catch {}
+          if (!value.includes('\n') && /\\n/.test(value)) value = value.replace(/\\r?\\n/g, '\n').replace(/\\"/g, '"');
+          const looksLikeConfig = (text) => /["']?apiVersion["']?\s*:/i.test(text);
+          if (!looksLikeConfig(value)) {
+            const compact = value.replace(/\s+/g, '');
+            if (/^[A-Za-z0-9+/]+={0,2}$/.test(compact) && compact.length > 32) {
+              const decoded = Buffer.from(compact, 'base64').toString('utf8');
+              if (looksLikeConfig(decoded)) value = decoded;
+            }
+          }
+          if (!looksLikeConfig(value)) throw new Error('blocked: KUBE_CONFIG format unsupported');
+          fs.writeFileSync(process.env.KUBE_OUTPUT, value);
+          NODE
+          KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl config view --minify >/dev/null
           current_image=$(KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl get deployment/fastgpt-home -o jsonpath='{.spec.template.spec.containers[?(@.name=="fastgpt-home")].image}')
           echo "$current_image" | grep -Eq '@sha256:[a-f0-9]{64}$' || { echo 'blocked: current CN image is not immutable'; exit 1; }
           test "$current_image" = '${{ inputs.cn_rollback_target }}' || { echo 'blocked: cn rollback input does not match provider current image'; exit 1; }
@@ -146,7 +167,7 @@ jobs:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
           IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
         run: |
-          printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
+          test -s "$RUNNER_TEMP/kubeconfig" || { echo 'blocked: decoded kubeconfig unavailable'; exit 1; }
           KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl set image deployment/fastgpt-home fastgpt-home="$IMAGE_NAME@$IMAGE_DIGEST"
           KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl rollout status deployment/fastgpt-home --timeout=5m
       - name: Write final CN provider receipt after rollout
@@ -242,7 +263,28 @@ jobs:
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
         run: |
-          printf '%s' "$KUBE_CONFIG" > "$RUNNER_TEMP/kubeconfig"
+          KUBE_RAW="$KUBE_CONFIG" KUBE_OUTPUT="$RUNNER_TEMP/kubeconfig" node - <<'NODE'
+          const fs = require('node:fs');
+          const raw = String(process.env.KUBE_RAW || '');
+          if (!raw.trim()) throw new Error('blocked: KUBE_CONFIG is empty');
+          let value = raw.trim();
+          try {
+            const parsed = JSON.parse(value);
+            value = typeof parsed === 'string' ? parsed : JSON.stringify(parsed);
+          } catch {}
+          if (!value.includes('\n') && /\\n/.test(value)) value = value.replace(/\\r?\\n/g, '\n').replace(/\\"/g, '"');
+          const looksLikeConfig = (text) => /["']?apiVersion["']?\s*:/i.test(text);
+          if (!looksLikeConfig(value)) {
+            const compact = value.replace(/\s+/g, '');
+            if (/^[A-Za-z0-9+/]+={0,2}$/.test(compact) && compact.length > 32) {
+              const decoded = Buffer.from(compact, 'base64').toString('utf8');
+              if (looksLikeConfig(decoded)) value = decoded;
+            }
+          }
+          if (!looksLikeConfig(value)) throw new Error('blocked: KUBE_CONFIG format unsupported');
+          fs.writeFileSync(process.env.KUBE_OUTPUT, value);
+          NODE
+          KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl config view --minify >/dev/null
           current_image=$(KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl get deployment/fastgpt-home -o jsonpath='{.spec.template.spec.containers[?(@.name=="fastgpt-home")].image}')
           namespace=$(KUBECONFIG="$RUNNER_TEMP/kubeconfig" kubectl config view --minify -o jsonpath='{.contexts[0].context.namespace}')
           test -n "$current_image" || { echo 'blocked: current CN deployment image unavailable'; exit 1; }

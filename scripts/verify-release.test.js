@@ -121,6 +121,10 @@ test('production delivery consumes retained archives and records immutable provi
   assert(cnBuild < cnRollout && cnRollout < cnReceipt);
   assert.match(workflow, /kubectl get deployment\/fastgpt-home/);
   assert.match(workflow, /rollout:\{status:'completed'/);
+  assert.equal((workflow.match(/KUBE_RAW=\"\$KUBE_CONFIG\" KUBE_OUTPUT=/g) || []).length, 2);
+  assert.match(workflow, /Buffer\.from\(compact, 'base64'\)/);
+  assert.match(workflow, /KUBE_CONFIG format unsupported/);
+  assert.match(workflow, /kubectl config view --minify/);
   const ioRollback = workflow.indexOf('Capture provider-derived IO rollback target');
   const ioDeploy = workflow.indexOf('pages deploy release-out');
   assert(ioRollback >= 0 && ioRollback < ioDeploy);

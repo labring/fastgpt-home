@@ -28,9 +28,10 @@ function parseArgs(argv) {
 function headersOf(headers) { return Object.fromEntries(['cache-control', 'etag', 'last-modified', 'age', 'cf-cache-status', 'x-cache-status', 'x-release-revision', 'x-release-artifact'].map((key) => [key, headers.get(key) || undefined])); }
 function getTag(html, tag, attr, value) { return [...html.matchAll(new RegExp(`<${tag}\\b[^>]*>`, 'gi'))].find((candidate) => new RegExp(`\\s${attr}=["']${value}["']`, 'i').test(candidate[0]))?.[0]; }
 function attr(tag, name) { return tag?.match(new RegExp(`\\s${name}=["']([^"']*)["']`, 'i'))?.[1]; }
+function decodeHtml(value) { return value.replace(/&(amp|lt|gt|quot|#39|#x27);/g, (_, entity) => ({ amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", '#x27': "'" })[entity]); }
 function checkHtml(body, expected, host, hosts) {
   const errors = [];
-  const h1 = body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+  const h1 = decodeHtml(body.match(/<h1\b[^>]*>([\s\S]*?)<\/h1>/i)?.[1]?.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim() || '');
   if (h1 !== expected.h1) errors.push('h1');
   const canonical = attr(getTag(body, 'link', 'rel', 'canonical'), 'href');
   if (canonical !== `${host}${expected.route}`) errors.push('canonical');

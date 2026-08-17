@@ -82,7 +82,7 @@ export function getGuideArticleMetadata(
     description: snapshot.metaDescription,
     keywords: snapshot.keywords,
     alternates: getGuideAlternates(locale, slug),
-    robots: indexable ? undefined : { index: false, follow: true },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
       type: 'article',
       url: canonical,
@@ -115,7 +115,7 @@ export function getGuideHubMetadata(
     title: copy.title,
     description: copy.description,
     alternates: getGuideAlternates(locale),
-    robots: indexable ? undefined : { index: false, follow: true },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
     openGraph: {
       type: 'website',
       url: getGuideCanonicalUrl(locale),

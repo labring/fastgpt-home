@@ -1,94 +1,101 @@
-# Requirements: FastGPT English FAQ SEO Repair
+# Requirements: FastGPT SEO Content Publishing
 
-**Defined:** 2026-08-15
-**Core Value:** Every in-scope English FAQ has a stable, reachable canonical URL and renders its approved metadata without disrupting healthy indexed URLs.
+**Defined:** 2026-08-17
+**Core Value:** Every in-scope SEO page has one stable canonical URL, renders its approved localized content and metadata, and is proven release-safe.
 
-## v1 Requirements
+## v1.1 Requirements
 
-Requirements for the release-ready repair milestone. Each requirement maps to exactly one roadmap phase.
+Requirements for the Guide Content Center production milestone. Each requirement maps to exactly one roadmap phase.
 
-### Metadata Import
+### Guide Content Contract
 
-- [x] **META-01**: A maintainer can regenerate the committed metadata data from the approved Week04 workbook, consuming exactly 1,195 unique rows and failing on duplicate or unmapped rows.
-- [x] **META-02**: Each of the 1,195 mapped English FAQ pages renders the approved title with exactly one ` - FastGPT` suffix, the approved description, and the approved keywords.
-- [x] **META-03**: Importing approved metadata preserves every in-scope FAQ question, answer, and category verbatim.
+- [ ] **GUIDE-01**: A maintainer can enumerate exactly eight unique Guide slugs, each backed by one approved Chinese document and one approved English document from the Week04 source package.
+- [ ] **GUIDE-02**: A maintainer can build a publishable body for each Guide document by removing exactly one leading delivery-metadata comment while preserving the approved article body after newline normalization.
+- [ ] **GUIDE-03**: A maintainer receives a slug-specific build failure for any duplicate slug, incomplete locale pair, metadata mismatch, invalid schema type, missing required approved asset, or unresolved configured internal link.
 
-### FAQ Identity and URLs
+### Guide Visitor Experience
 
-- [x] **URL-01**: Every English FAQ record currently present in the repository has one stable identity and one safe, unique canonical slug.
-- [x] **URL-02**: Every current FAQ route that returns the intended record keeps its existing public URL.
-- [x] **URL-03**: Every in-scope record with a missing or unsafe route receives a deterministic repaired slug that resolves to its intended FAQ page.
-- [x] **URL-04**: Every changed legacy path with one valid destination redirects permanently to that canonical page in one hop, while ambiguous collision paths remain without a guessed redirect.
+- [ ] **HUB-01**: A visitor can open `/guide` on `fastgpt.cn` and `fastgpt.io` and see exactly eight localized article cards grouped as decision, implementation, and industry content.
+- [ ] **ARTICLE-01**: A visitor can open every owned-domain `/guide/<slug>` URL and read the approved localized H1 and complete long-form body, including headings, lists, tables, and code where authored.
+- [ ] **ARTICLE-02**: A visitor can navigate from each Guide article through its Home → Guide → article breadcrumb, return to the localized Guide hub, and follow every configured internal link to its owned canonical destination.
+- [ ] **ARTICLE-03**: A visitor sees each required approved article image through the existing responsive image surface with authored alternative text.
 
-### SEO Surface
+### Guide SEO Surface
 
-- [x] **SEO-01**: Every final FAQ page renders an H1 and FAQ JSON-LD question that match the intended record identity.
-- [x] **SEO-02**: Every final FAQ page emits a self-referencing canonical URL and valid `en`, `zh-CN`, and `x-default` alternates for published counterpart routes.
-- [x] **SEO-03**: FAQ list links, related links, static parameters, sitemap entries, and redirect targets all use the same final slug mapping; the sitemap contains each canonical FAQ URL once and excludes legacy aliases.
+- [ ] **SEO-04**: Each Guide hub and article emits localized title and description metadata, one self-referencing owned-domain canonical URL, and an Open Graph URL equal to that canonical URL.
+- [ ] **SEO-05**: Each Guide hub and article emits a reciprocal `zh-CN`, `en`, and `x-default` alternate cluster whose Chinese target belongs to `fastgpt.cn`, whose English and `x-default` targets belong to `fastgpt.io`, and whose article targets share the same slug.
+- [ ] **SEO-06**: Each Guide article emits approved article and breadcrumb structured data, while each Guide hub emits collection, item-list, and breadcrumb structured data using owned canonical URLs.
+- [ ] **SEO-07**: Each site variant's sitemap contains its owned Guide hub and eight owned article canonical URLs exactly once, and every Guide card, breadcrumb, related link, static parameter, and schema URL derives from the same Guide registry.
 
 ### Release Verification
 
-- [x] **VERIFY-01**: A single repository command validates workbook coverage, exact metadata, preserved URL stability, final-slug uniqueness, redirect integrity, route identity, and SEO-surface alignment with record-level failures.
-- [x] **VERIFY-02**: The production build succeeds with every final in-scope English FAQ route included in the static export.
-- [x] **VERIFY-03**: Exported FAQ HTML verifies the intended H1, approved metadata, canonical URL, and expected hreflang values for every applicable final route.
+- [ ] **VERIFY-04**: A maintainer can run one repository command that validates the Guide pair registry, source fidelity, metadata, required assets, internal links, route inventory, SEO graph, sitemap coverage, and exported HTML with slug-specific failures.
+- [ ] **VERIFY-05**: Clean case-sensitive production builds for the cn and io variants each succeed with exactly one owned Guide hub and eight owned Guide article paths while preserving the existing initial-JavaScript release budget.
 
-## v2 Requirements
+### Production Delivery
 
-Deferred capabilities tracked outside the current roadmap.
+- [ ] **DEPLOY-01**: A release operator can deploy the verified immutable cn and io artifacts to `fastgpt.cn` and `fastgpt.io` with recorded artifact revisions and rollback targets.
+- [ ] **DEPLOY-02**: A release operator can verify both production Guide hubs and all 16 production article URLs for final `200` responses, localized H1, self canonical, reciprocal alternates, indexability, sitemap presence, cache freshness, and deployed revision evidence.
 
-### Reporting
+## Future Requirements
 
-- **REPORT-01**: A maintainer can generate a durable record-by-record migration decision report.
-- **REPORT-02**: A maintainer can compare a future approved workbook revision with committed metadata and view an idempotent drift report.
+Capabilities tracked for later milestones.
 
-### Historical Recovery
+### Guide Enhancements
 
-- **HIST-01**: A maintainer can restore historical FAQ records after receiving an authoritative source containing their missing answer bodies.
+- **ARTICLE-04**: A visitor can move directly from a Guide article to its same-slug language counterpart.
+- **HUB-02**: A visitor can search or filter the Guide hub after the article corpus grows beyond the fixed launch set.
+- **REPORT-03**: A maintainer can generate a durable registry-derived publishing report containing the complete locale, source, asset, URL, and validation matrix.
+- **CMS-01**: An editor can author, preview, review, and publish recurring Guide batches through a governed content workflow.
 
 ## Out of Scope
 
 | Feature | Reason |
 |---------|--------|
-| Recovering the full historical 1,990-question catalog | The current repository lacks authoritative answer bodies for roughly 590 questions, and the user limited this milestone to current records. |
-| Rewriting FAQ questions, answers, or categories | This milestone isolates metadata and routing repairs while preserving authored content. |
-| Full-catalog slug normalization | Incremental repair preserves healthy indexed URLs and limits migration risk. |
-| Guessed redirects for ambiguous historical collision paths | One shared old path cannot identify multiple destinations safely. |
-| Production deployment and live crawl monitoring | The approved delivery endpoint is verified, release-ready code. |
+| Machine translation, article rewriting, or regenerated metadata | The supplied Chinese and English documents are the approved content authority for this milestone. |
+| Additional Guide articles or taxonomy expansion | v1.1 publishes the fixed Week04 8×2 corpus. |
+| Programmatic technical/reference pages | This is an independent publishing inventory with separate demand and duplication gates. |
+| FAQ expansion or further FAQ migration | The v1.0 FAQ milestone is complete and archived. |
+| First-party lead form delivery | This is an independent conversion and CRM integration milestone. |
+| Client-side Guide sorting, pagination, or catalog state | Eight fixed articles remain fully discoverable through three server-rendered groups. |
 
 ## Definition of Done
 
-- All v1 requirements pass the runnable FAQ SEO repair verifier.
-- The production static export completes successfully.
-- Existing authored FAQ content remains byte-for-byte equivalent for question, answer, and category fields.
-- Every preserved or repaired in-scope route has coherent page identity and SEO output.
-- All implementation and verification changes are committed.
+- All v1.1 requirements pass the runnable Guide release verifier.
+- Clean cn and io production static exports each contain one localized Guide hub and eight localized article pages.
+- All approved article bodies remain faithful after the delivery-comment boundary is removed.
+- Both production Guide hubs and all 16 production article URLs pass the recorded live verification matrix.
+- Verified immutable artifacts, deployment revisions, rollback targets, and live evidence are recorded.
+- All implementation, verification, and planning changes are committed.
 
 ## Traceability
 
-Roadmap creation assigns each v1 requirement to exactly one phase.
+Roadmap creation assigns each v1.1 requirement to exactly one phase.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| META-01 | Phase 2 | Complete |
-| META-02 | Phase 2 | Complete |
-| META-03 | Phase 2 | Complete |
-| URL-01 | Phase 1 | Complete |
-| URL-02 | Phase 1 | Complete |
-| URL-03 | Phase 1 | Complete |
-| URL-04 | Phase 4 | Complete |
-| SEO-01 | Phase 3 | Complete |
-| SEO-02 | Phase 3 | Complete |
-| SEO-03 | Phase 3 | Complete |
-| VERIFY-01 | Phase 4 | Complete |
-| VERIFY-02 | Phase 4 | Complete |
-| VERIFY-03 | Phase 4 | Complete |
+| GUIDE-01 | TBD | Pending |
+| GUIDE-02 | TBD | Pending |
+| GUIDE-03 | TBD | Pending |
+| HUB-01 | TBD | Pending |
+| ARTICLE-01 | TBD | Pending |
+| ARTICLE-02 | TBD | Pending |
+| ARTICLE-03 | TBD | Pending |
+| SEO-04 | TBD | Pending |
+| SEO-05 | TBD | Pending |
+| SEO-06 | TBD | Pending |
+| SEO-07 | TBD | Pending |
+| VERIFY-04 | TBD | Pending |
+| VERIFY-05 | TBD | Pending |
+| DEPLOY-01 | TBD | Pending |
+| DEPLOY-02 | TBD | Pending |
 
 **Coverage:**
 
-- v1 requirements: 13 total
-- Mapped to phases: 13
-- Unmapped: 0
+- v1.1 requirements: 15 total
+- Mapped to phases: 0
+- Unmapped: 15
 
 ---
-*Requirements defined: 2026-08-15*
-*Last updated: 2026-08-16 after Phase 4 verification*
+*Requirements defined: 2026-08-17*
+*Last updated: 2026-08-17 after initial v1.1 definition*

@@ -7,12 +7,10 @@ import styles from '@/components/tech-center/TechArticlePage.module.css';
 
 export default function GuideArticlePage({
   document,
-  locale,
-  slug
+  locale
 }: {
   document: GuideDocument;
   locale: GuidePublishedLocale;
-  slug: string;
 }) {
   const labels = locale === 'zh' ? { home: '首页', guide: '指南', back: '返回指南' } : { home: 'Home', guide: 'Guide', back: 'Back to guides' };
 

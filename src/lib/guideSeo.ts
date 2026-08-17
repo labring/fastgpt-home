@@ -1,7 +1,12 @@
 import type { Metadata } from 'next';
 
 import { getGuideSource } from '@/content/guides/registry';
-import { getBuildLocaleCodes, getOwnedLocalePath, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import {
+  getBuildLocaleCodes,
+  getDefaultLocaleForSiteVariant,
+  getOwnedLocalePath,
+  getOwnedLocaleUrl
+} from '@/lib/siteRouting';
 
 export const GUIDE_PUBLISHED_LOCALES = ['zh', 'en'] as const;
 export type GuidePublishedLocale = (typeof GUIDE_PUBLISHED_LOCALES)[number];
@@ -33,7 +38,8 @@ export function getGuideBuildLocales(): GuidePublishedLocale[] {
   const locales = getBuildLocaleCodes()
     .map(resolveGuideLocale)
     .filter((locale): locale is GuidePublishedLocale => Boolean(locale));
-  return locales.length ? Array.from(new Set(locales)) : ['en'];
+  const defaultLocale = resolveGuideLocale(getDefaultLocaleForSiteVariant());
+  return locales.length ? Array.from(new Set(locales)) : defaultLocale ? [defaultLocale] : ['en'];
 }
 
 export function getGuidePath(slug?: string): string {

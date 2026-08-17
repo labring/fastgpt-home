@@ -1,12 +1,12 @@
 const assert = require('node:assert/strict');
-const { execFileSync } = require('node:child_process');
+const { execFileSync, spawnSync } = require('node:child_process');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
 const registry = require('../src/content/guides/registry.json');
-const { parseArgs, verifyGuideExport } = require('./verify-guide-export');
+const { assertNoCaseFoldCollisions, parseArgs, verifyGuideExport } = require('./verify-guide-export');
 
 const HUB_COPY = {
   en: {
@@ -370,5 +370,120 @@ test('Guide export surface mutations reject localized hub and article drift with
       fs.rmSync(outDir, { recursive: true, force: true });
     }
   }
+  assert.deepEqual(fs.readFileSync(path.join(__dirname, '../src/content/guides/registry.json')), sourceBefore);
+});
+
+test('Guide export inventory and CLI regressions reject route, sitemap, and argument drift', () => {
+  const sourceBefore = fs.readFileSync(path.join(__dirname, '../src/content/guides/registry.json'));
+  const script = path.join(__dirname, 'verify-guide-export.js');
+
+  for (const variant of ['io', 'cn']) {
+    const host = variant === 'cn' ? 'https://fastgpt.cn' : 'https://fastgpt.io';
+    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), `verify-guide-export-inventory-${variant}-`));
+    try {
+      writeFixture(outDir, variant, { style: 'nested' });
+      assert.deepEqual(verifyGuideExport({ outDir, variant }), { variant, pages: 9, sitemapUrls: 9 });
+      fs.rmSync(outDir, { recursive: true, force: true });
+      fs.mkdirSync(outDir);
+
+      const inventoryCases = [
+        {
+          name: 'missing route',
+          mutate: () => fs.rmSync(path.join(outDir, 'guide', `${registry.entries[0].slug}.html`)),
+          reason: /expected exact Guide routes/
+        },
+        {
+          name: 'extra route',
+          mutate: () => writeRoute(outDir, 'guide/unapproved-guide', '<html></html>'),
+          reason: /expected exact Guide routes/
+        },
+        {
+          name: 'flat and nested duplicate',
+          mutate: () => writeRoute(outDir, 'guide', '<html></html>', 'nested'),
+          reason: /duplicate Guide HTML route \/guide/
+        },
+        {
+          name: 'unsafe nested route',
+          mutate: () => writeRoute(outDir, 'guide/unapproved/nested', '<html></html>'),
+          reason: /invalid Guide HTML output path/
+        }
+      ];
+      for (const inventoryCase of inventoryCases) {
+        writeFixture(outDir, variant);
+        inventoryCase.mutate();
+        assertScopedFailure(() => verifyGuideExport({ outDir, variant }), {
+          variant,
+          slug: 'hub',
+          filePath: outDir,
+          surface: 'inventory',
+          reason: inventoryCase.reason
+        });
+        fs.rmSync(outDir, { recursive: true, force: true });
+        fs.mkdirSync(outDir);
+      }
+
+      writeFixture(outDir, variant);
+      writeRoute(outDir, 'en/guide', '<html><body>adapter</body></html>');
+      writeRoute(outDir, 'zh/guide', '<html><body>adapter</body></html>');
+      assert.deepEqual(verifyGuideExport({ outDir, variant }), { variant, pages: 9, sitemapUrls: 9 });
+
+      const sitemapCases = [
+        ['wrong owner', (xml) => xml.replace(host, variant === 'cn' ? 'https://fastgpt.io' : 'https://fastgpt.cn'), /expected exact Guide sitemap URLs/],
+        ['duplicate', (xml) => xml.replace('</urlset>', `<url><loc>${host}/guide</loc></url></urlset>`), /duplicate Guide URLs/],
+        ['extra', (xml) => xml.replace('</urlset>', `<url><loc>${host}/guide/unapproved-guide</loc></url></urlset>`), /expected exact Guide sitemap URLs/],
+        ['missing', (xml) => xml.replace(`<url><loc>${host}/guide/${registry.entries[0].slug}</loc></url>`, ''), /expected exact Guide sitemap URLs/],
+        ['malformed', (xml) => xml.replace('</urlset>', '<url><loc>https://[bad</loc></url></urlset>'), /invalid sitemap URL/]
+      ];
+      for (const [, mutate, reason] of sitemapCases) {
+        writeFixture(outDir, variant);
+        const sitemapPath = path.join(outDir, 'sitemap.xml');
+        fs.writeFileSync(sitemapPath, mutate(fs.readFileSync(sitemapPath, 'utf8')));
+        assertScopedFailure(() => verifyGuideExport({ outDir, variant }), {
+          variant,
+          slug: 'hub',
+          filePath: sitemapPath,
+          surface: 'sitemap',
+          reason
+        });
+        fs.rmSync(outDir, { recursive: true, force: true });
+        fs.mkdirSync(outDir);
+      }
+
+      writeFixture(outDir, variant === 'io' ? 'cn' : 'io');
+      assert.throws(() => verifyGuideExport({ outDir, variant }), /variant=.* slug=hub path=.* surface=title/);
+
+      writeFixture(outDir, variant);
+      for (const args of [[], ['--out-dir', outDir], ['--variant', variant], ['--unknown', 'value'], ['--out-dir', outDir, '--variant', 'invalid']]) {
+        const result = spawnSync(process.execPath, [script, ...args], { encoding: 'utf8' });
+        assert.notEqual(result.status, 0);
+        assert.match(result.stderr, /variant=.* slug=hub path=.* surface=arguments/);
+      }
+      const success = spawnSync(process.execPath, [script, '--out-dir', outDir, '--variant', variant], { encoding: 'utf8' });
+      assert.equal(success.status, 0);
+      assert.match(success.stdout, new RegExp(`variant=${variant} Guide HTML verified: 9 pages, 9 sitemap URLs`));
+      fs.rmSync(path.join(outDir, 'guide', `${registry.entries[0].slug}.html`));
+      const failed = spawnSync(process.execPath, [script, '--out-dir', outDir, '--variant', variant], { encoding: 'utf8' });
+      assert.notEqual(failed.status, 0);
+      assert.match(failed.stderr, /variant=.* slug=hub path=.* surface=inventory/);
+    } finally {
+      fs.rmSync(outDir, { recursive: true, force: true });
+    }
+  }
+
+  assert.throws(
+    () =>
+      assertNoCaseFoldCollisions(
+        ['/guide/Case-Sensitive.html', '/guide/case-sensitive.html'],
+        { variant: 'io', slug: 'hub', filePath: '<fixture>', surface: 'inventory' }
+      ),
+    /variant=io slug=hub path=<fixture> surface=inventory.*Case-Sensitive.*case-sensitive.*case-sensitive export host/
+  );
+  const importCheck = spawnSync(process.execPath, ['-e', "require('./scripts/verify-guide-export')"], {
+    cwd: path.join(__dirname, '..'),
+    encoding: 'utf8'
+  });
+  assert.equal(importCheck.status, 0);
+  assert.equal(importCheck.stdout, '');
+  assert.equal(importCheck.stderr, '');
   assert.deepEqual(fs.readFileSync(path.join(__dirname, '../src/content/guides/registry.json')), sourceBefore);
 });

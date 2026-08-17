@@ -46,6 +46,7 @@ jobs:
           NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
           NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
           NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
+          NEXT_PUBLIC_ATTRIBUTION_SOURCE: ${{ vars.NEXT_PUBLIC_ATTRIBUTION_SOURCE }}
         run: |
           pnpm install
           pnpm run build

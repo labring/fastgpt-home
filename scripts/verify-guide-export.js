@@ -236,16 +236,32 @@ function guideRouteFromFile(outDir, filePath) {
   }
 }
 
+function assertNoCaseFoldCollisions(routes, context) {
+  const byFoldedRoute = new Map();
+  for (const route of routes) {
+    const folded = route.toLocaleLowerCase('en-US');
+    const previous = byFoldedRoute.get(folded);
+    if (previous && previous !== route) {
+      fail(
+        context,
+        `case-fold Guide route collision ${previous} and ${route}; use a case-sensitive export host`
+      );
+    }
+    byFoldedRoute.set(folded, route);
+  }
+}
+
 function collectGuideRoutes(outDir, expectation) {
   const hubContext = { variant: expectation.variant, slug: 'hub', filePath: outDir, surface: 'inventory' };
   const files = [path.join(outDir, 'guide.html'), ...walkHtmlFiles(path.join(outDir, 'guide'))].filter((filePath) => fs.existsSync(filePath));
   const routes = new Map();
   for (const filePath of files) {
     const route = guideRouteFromFile(outDir, filePath);
-    if (!route) continue;
+    if (!route) fail(hubContext, `invalid Guide HTML output path ${filePath}`);
     if (routes.has(route)) fail(hubContext, `duplicate Guide HTML route ${route}`);
     routes.set(route, filePath);
   }
+  assertNoCaseFoldCollisions([...routes.keys()], hubContext);
   const actualRoutes = [...routes.keys()].sort();
   const expectedRoutes = [...expectation.routes.keys()].sort();
   if (actualRoutes.length !== expectedRoutes.length || actualRoutes.some((route, index) => route !== expectedRoutes[index])) {
@@ -465,4 +481,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { parseArgs, buildGuideExpectation, verifyGuideExport, main };
+module.exports = { assertNoCaseFoldCollisions, parseArgs, buildGuideExpectation, verifyGuideExport, main };

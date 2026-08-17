@@ -28,9 +28,22 @@ NEXT_PUBLIC_CRM_API_URL=https://crm.example.com/api/v1 npm run build
 同时在 CRM 服务中将官网域名加入 `CORS_ORIGINS`。如果未配置
 `NEXT_PUBLIC_CRM_API_URL`，表单会明确显示 CRM 未配置错误，不会提交数据。
 
-外部推广链接统一使用标准 UTM 参数，例如
-`?utm_source=feishu&utm_medium=referral&utm_campaign=launch`。官网会通过 Cookie
-保留并将这些 UTM 字段随表单提交给 CRM，不需要额外维护 `source` 参数。
+如果官网表单链接本身没有携带 `?source=...`，可以通过构建时变量设置 Home 的默认业务来源：
+
+```bash
+NEXT_PUBLIC_ATTRIBUTION_SOURCE=home \
+NEXT_PUBLIC_CRM_API_URL=https://crm.example.com/api/v1 \
+npm run build
+```
+
+显式的 `source` query 参数优先于该默认值；变量未配置时回退为 `未知`。该变量是公开构建配置，
+不要填写密钥等敏感信息。
+
+商务表单的业务来源使用独立的 `source` query 参数，例如
+`/zh/contact?source=feishu`。官网会通过 Cookie 保留该来源，并在商机表单请求 JSON
+的 `source` 字段中发送给 CRM；没有该参数时来源为 `未知`。UTM 仍可用于匿名渠道分析，但不参与
+表单提交来源，也不再作为飞书客户来源；显式 `source` 只在提交商机时发送给 CRM。
+表单接口只接收表单字段、`visitor_id` 和 `source`，UTM/channel 等字段由匿名访客上报接口独立发送。
 
 ## Build
 

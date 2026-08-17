@@ -27,10 +27,7 @@ import { canonicalizeUrl } from '@/lib/attribution/primitives/url';
 import { getVisitorId, resetGeneratedVisitorId } from '@/lib/visitorId';
 import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 
-export {
-  configureAttribution,
-  type AttributionConfiguration
-} from '@/lib/attribution/config';
+export { configureAttribution, type AttributionConfiguration } from '@/lib/attribution/config';
 
 export { getVisitorId } from '@/lib/visitorId';
 
@@ -45,9 +42,13 @@ export type ChannelL1 =
   | 'owned'
   | 'direct';
 
+const configuredAttributionSource = process.env.NEXT_PUBLIC_ATTRIBUTION_SOURCE?.trim();
+export const DEFAULT_ATTRIBUTION_SOURCE = configuredAttributionSource?.slice(0, 128) || '未知';
+
 export interface TouchPoint {
   channel_l1: ChannelL1;
   channel_l2: string; // 具体来源，如 Bing / 豆包 / 知乎；无则空串
+  source: string; // 显式业务来源；无则“未知”
   is_paid: boolean;
   label: string; // 人类可读：l2 ? `${l1中文? no -> l1} · ${l2}` : l1（这里用 l1 key 拼，中文在后端映射）
   utm_source: string;
@@ -67,7 +68,7 @@ export interface StoredAttribution {
   last: TouchPoint;
 }
 
-/** 匿名追踪上报时并入 body 的扁平归因字段 */
+/** 匿名访客上报使用的扁平归因字段；提交 source 由 getSubmissionSource() 单独提供。 */
 export interface AttributionPayload {
   visitor_id: string;
   first_touch_channel: string;
@@ -176,6 +177,7 @@ export function classifyVisit(input: {
   now: string;
 }): TouchPoint {
   const params = new URLSearchParams(input.search || '');
+  const source = (params.get('source') || '').trim() || DEFAULT_ATTRIBUTION_SOURCE;
   const utm_source = params.get('utm_source') || '';
   const utm_medium = (params.get('utm_medium') || '').toLowerCase();
   const utm_campaign = params.get('utm_campaign') || '';
@@ -190,6 +192,7 @@ export function classifyVisit(input: {
     '';
 
   const base = {
+    source,
     utm_source,
     utm_medium,
     utm_campaign,
@@ -328,10 +331,16 @@ export function trackVisit(): void {
     // first_touch：只在第一次写入
     const first = stored?.first ?? current;
 
-    // last_touch：Last Non-Direct Click —— 非 Direct 才更新；Direct 不覆盖已有
+    // last_touch：非 Direct 或显式 source 才更新；无 source 的 Direct 不覆盖已有
     let last = stored?.last ?? current;
-    if (current.channel_l1 !== 'direct') {
-      last = current;
+    if (current.channel_l1 !== 'direct' || current.source !== DEFAULT_ATTRIBUTION_SOURCE) {
+      last = {
+        ...current,
+        source:
+          current.source === DEFAULT_ATTRIBUTION_SOURCE
+            ? stored?.last.source ?? DEFAULT_ATTRIBUTION_SOURCE
+            : current.source
+      };
     }
 
     const next: StoredAttribution = { visitor_id, first, last };
@@ -341,7 +350,7 @@ export function trackVisit(): void {
   }
 }
 
-/** 匿名追踪上报时取扁平归因字段；无数据时返回全空（后端按 Direct 兜底）。 */
+/** 取匿名访客上报的扁平归因字段；提交 source 由 getSubmissionSource() 单独提供。 */
 export function getAttributionPayload(): AttributionPayload {
   const empty: AttributionPayload = {
     visitor_id: '',
@@ -389,6 +398,15 @@ export function getAttributionPayload(): AttributionPayload {
     click_id: first.click_id,
     referrer_url: first.referrer
   };
+}
+
+/** Return the explicit source for the current business submission only. */
+export function getSubmissionSource(): string {
+  if (typeof window === 'undefined') return DEFAULT_ATTRIBUTION_SOURCE;
+  const stored = loadStoredAttribution();
+  if (!stored) return DEFAULT_ATTRIBUTION_SOURCE;
+  const { first, last } = stored;
+  return last.source !== DEFAULT_ATTRIBUTION_SOURCE ? last.source : first.source;
 }
 
 /** Submit anonymous attribution to CRM after the local browser snapshot changes. */

@@ -3,6 +3,7 @@ import type { ChannelL1, StoredAttribution, TouchPoint } from '../../leadAttribu
 export const FIELD_CAPS = {
   visitor_id: 64,
   channel_l2: 128,
+  source: 128,
   label: 160,
   utm_source: 128,
   utm_medium: 128,
@@ -59,6 +60,7 @@ const TOUCH_FIELDS = [
   'landing_url',
   'at'
 ] as const;
+const OPTIONAL_TOUCH_FIELDS = ['source'] as const;
 const TOP_LEVEL_FIELDS = ['v', 'visitor_id', 'first', 'last'] as const;
 const TOUCH_EXTRA_FIELDS = ['visitor_id'] as const;
 
@@ -77,6 +79,7 @@ function canonicalizeTouchPoint(value: Record<string, unknown>): TouchPoint {
   return {
     channel_l1: value.channel_l1 as ChannelL1,
     channel_l2: value.channel_l2 as string,
+    source: typeof value.source === 'string' ? value.source : '未知',
     is_paid: value.is_paid as boolean,
     label: value.label as string,
     utm_source: value.utm_source as string,
@@ -100,6 +103,7 @@ function validateTouchPoint(
   for (const key of Object.keys(value)) {
     if (
       !TOUCH_FIELDS.includes(key as (typeof TOUCH_FIELDS)[number]) &&
+      !OPTIONAL_TOUCH_FIELDS.includes(key as (typeof OPTIONAL_TOUCH_FIELDS)[number]) &&
       !TOUCH_EXTRA_FIELDS.includes(key as 'visitor_id')
     ) {
       return { ok: false, reason: 'unknown-field', path: `${path}.${key}` };
@@ -127,6 +131,10 @@ function validateTouchPoint(
     const cap = FIELD_CAPS[key];
     if (value[key].length > cap)
       return { ok: false, reason: 'field-too-long', path: `${path}.${key}` };
+  }
+  if ('source' in value) {
+    if (typeof value.source !== 'string') return { ok: false, reason: 'invalid-field', path: `${path}.source` };
+    if (value.source.length > FIELD_CAPS.source) return { ok: false, reason: 'field-too-long', path: `${path}.source` };
   }
   if (!validIso(value.at as string))
     return { ok: false, reason: 'invalid-timestamp', path: `${path}.at` };

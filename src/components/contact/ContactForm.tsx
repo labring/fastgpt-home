@@ -3,7 +3,7 @@
 import { FormEvent, useEffect, useRef, useState } from 'react';
 import { AlertTriangle, Check, CheckCircle2, ChevronDown, LoaderCircle } from 'lucide-react';
 import {
-  getAttributionPayload,
+  getSubmissionSource,
   getVisitorId,
   reportAnonymousAttribution,
   trackVisit
@@ -436,7 +436,6 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
       // Attribution is best-effort telemetry and must not block the contact
       // form when its tracking endpoint is unavailable.
       void reportAnonymousAttribution();
-      const attribution = getAttributionPayload();
       const response = await fetchWithTimeout(`${CRM_API_URL}/contacts/submit`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -450,9 +449,8 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
           project_stage: values.projectStage,
           budget: values.budget || null,
           notes: values.notes.trim() || null,
-          locale,
-          ...attribution,
-          visitor_id: currentVisitorId
+          visitor_id: currentVisitorId,
+          source: getSubmissionSource()
         })
       });
 

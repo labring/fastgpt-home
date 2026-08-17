@@ -4,15 +4,15 @@ milestone: v1.1
 milestone_name: Guide Content Center
 current_phase: 6
 current_phase_name: Guide Hubs, Articles & SEO Graph
-status: executing
-stopped_at: Completed 06-03-PLAN.md
-last_updated: "2026-08-17T05:42:34.144Z"
+status: verifying
+stopped_at: Completed 06-04-PLAN.md
+last_updated: "2026-08-17T05:49:31.950Z"
 last_activity: 2026-08-17
 progress:
   total_phases: 2
-  completed_phases: 1
+  completed_phases: 2
   total_plans: 8
-  completed_plans: 7
+  completed_plans: 8
 last_activity_desc: Published the closed root Guide article tracer and registry-backed SEO graph in 06-01.
 ---
 
@@ -29,10 +29,10 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 
 Phase: 6 — Guide Hubs, Articles & SEO Graph
 Plan: 4 of 4
-Status: Ready to execute
+Status: Phase complete — ready for verification
 Last activity: 2026-08-17
 
-Progress: [█████████░] 88%
+Progress: [██████████] 100%
 
 ## Performance Metrics
 
@@ -62,6 +62,7 @@ Progress: [█████████░] 88%
 | Phase 06 P01 | 5m | 3 tasks | 9 files |
 | Phase 06 P02 | 3m | 2 tasks | 6 files |
 | Phase 06-guide-hubs-articles-seo-graph P03 | 2m | 2 tasks | 5 files |
+| Phase 06-guide-hubs-articles-seo-graph P04 | 5m | 2 tasks | 4 files |
 
 ## Accumulated Context
 
@@ -88,6 +89,8 @@ Progress: [█████████░] 88%
 - [Phase ?]: Asset and internal-link UI remains gated by validated registry records.
 - [Phase ?]: Guide hub cards and ItemList share registry order and owned URL projection.
 - [Phase ?]: Localized Guide hub adapters retain root canonicals with noindex-follow metadata.
+- [Phase ?]: Guide sitemap emits only the current owned locale's one hub and eight registry article canonicals through seenUrls.
+- [Phase ?]: Guide source graph regression uses isolated registry and source-map mutations; Phase 7 owns export evidence.
 
 ### Pending Todos
 
@@ -109,6 +112,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T05:42:34.132Z
-Stopped at: Completed 06-03-PLAN.md
+Last session: 2026-08-17T05:49:31.941Z
+Stopped at: Completed 06-04-PLAN.md
 Resume file: None

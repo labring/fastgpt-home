@@ -15,7 +15,6 @@ const CTAButton = ({ locale }: { locale: any }) => {
       <div className="inline-block rotating-border-button">
         <Link
           href="/contact"
-          data-consultation-link="true"
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'enterprise_footer_consult')}
         >
           <Button

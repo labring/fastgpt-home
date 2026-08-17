@@ -224,9 +224,6 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                     {...(isContactHref(siteConfig.customPlanUrl)
                       ? {}
                       : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
-                    {...(isContactHref(siteConfig.customPlanUrl)
-                      ? { 'data-consultation-link': 'true' }
-                      : {})}
                     {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'price_cloud_custom')}
                   >
                     <button
@@ -310,7 +307,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 <Link
                   href={buttonConfig.href}
                   {...(isContactHref(buttonConfig.href)
-                    ? { 'data-consultation-link': 'true' }
+                    ? {}
                     : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
                   className="mt-auto pt-4"
                   {...(isContactHref(buttonConfig.href) || buttonConfig.href.includes('feishu.cn')

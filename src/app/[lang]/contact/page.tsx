@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
 import { getAlternates } from '@/lib/seo';
-import { defaultLocale, normalizeLocale } from '@/lib/i18n';
+import { normalizeLocale } from '@/lib/i18n';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
 import {
   contactPublishedLocaleCodes,

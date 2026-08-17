@@ -19,7 +19,7 @@ const ECTA = ({ locale }: Props) => {
         href={commercial}
         className="my-8 flex justify-center"
         {...(isContactHref(commercial)
-          ? { 'data-consultation-link': 'true' }
+          ? {}
           : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
       >
         <Button

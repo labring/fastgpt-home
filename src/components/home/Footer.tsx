@@ -279,9 +279,6 @@ export default function Footer({ t, locale }: { t: FooterT; locale?: string }) {
                                   'footer_private_deploy'
                                 )
                               : {})}
-                            {...(isContactHref(item.href)
-                              ? { 'data-consultation-link': 'true' }
-                              : {})}
                             className="hover:text-black  text-ink-sub"
                             style={{ ...linkStyle, textAlign: 'left' }}
                           >

@@ -316,7 +316,6 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
 
         <a
           href={CONSULT_URL}
-          data-consultation-link="true"
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_case_study_consult', {
             case: data.key
           })}

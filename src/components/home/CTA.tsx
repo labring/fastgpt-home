@@ -94,7 +94,6 @@ export default function CTA({ t }: { t: CTAT }) {
               >
                 <m.a
                   href={CONSULT_URL}
-                  data-consultation-link="true"
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_bottom_consult')}
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}

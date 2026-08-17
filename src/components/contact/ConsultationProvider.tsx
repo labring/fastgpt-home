@@ -61,9 +61,9 @@ export default function ConsultationProvider({
         return;
       }
       const target =
-        event.target instanceof Element
+          event.target instanceof Element
           ? event.target.closest<HTMLAnchorElement>(
-              'a[data-consultation-link], a[href*="/contact"]'
+              'a[data-consultation-link]'
             )
           : null;
       if (

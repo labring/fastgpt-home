@@ -51,6 +51,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Validate production CRM configuration
+        env:
+          NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
+        run: test -n "$NEXT_PUBLIC_CRM_API_URL"
+
       - name: Build and push Docker image to GitHub Container Registry
         uses: docker/build-push-action@v5
         with:

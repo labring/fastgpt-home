@@ -23,9 +23,11 @@
     "verify:faq-seo-graph": "node scripts/verify-faq-seo-graph.js",
     "verify:release": "node scripts/verify-release.js",
     "verify:release-regression": "node --test scripts/verify-release.test.js",
-    "sync:w3-faq": "python3 scripts/sync-w3-faq.py"
+    "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
+    "verify:contact": "node scripts/verify-contact-page.js"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@heroui/react": "^2.8.9",
     "@heroui/theme": "^2.4.26",
     "@radix-ui/react-slot": "^1.0.2",
@@ -34,6 +36,7 @@
     "clsx": "^2.1.0",
     "cobe": "^2.0.1",
     "framer-motion": "^12.34.3",
+    "gsap": "^3.15.0",
     "lucide-react": "^0.575.0",
     "next": "^16.2.6",
     "next-themes": "^0.4.6",

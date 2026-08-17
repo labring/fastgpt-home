@@ -1,11 +1,12 @@
 const assert = require('node:assert/strict');
+const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
 const registry = require('../src/content/guides/registry.json');
-const { verifyGuideExport } = require('./verify-guide-export');
+const { parseArgs, verifyGuideExport } = require('./verify-guide-export');
 
 const HUB_COPY = {
   en: {
@@ -13,7 +14,7 @@ const HUB_COPY = {
     title: 'FastGPT Guides',
     description: 'Practical enterprise AI implementation and decision guides.',
     home: 'Home',
-    guide: 'Guides',
+    guide: 'Guide',
     back: 'Back to guides'
   },
   zh: {
@@ -123,9 +124,44 @@ test('tracer accepts exact io Guide inventory', () => {
   }
 });
 
+test('happy artifact matrix accepts exact io and cn Guide inventories', () => {
+  for (const variant of ['io', 'cn']) {
+    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), `verify-guide-export-${variant}-`));
+    try {
+      writeFixture(outDir, variant);
+      assert.deepEqual(verifyGuideExport({ outDir, variant }), {
+        variant,
+        pages: 9,
+        sitemapUrls: 9
+      });
+      assert.equal(fs.existsSync(path.join(outDir, 'guide.html')), true);
+      assert.equal(fs.readdirSync(path.join(outDir, 'guide')).filter((name) => name.endsWith('.html')).length, 8);
+    } finally {
+      fs.rmSync(outDir, { recursive: true, force: true });
+    }
+  }
+});
+
 test('rejects invalid arguments and missing artifacts with scoped diagnostics', () => {
   assert.throws(
     () => verifyGuideExport({ outDir: path.join(os.tmpdir(), 'missing-guide-export'), variant: 'unknown' }),
     /variant=unknown slug=hub path=.* surface=arguments/
   );
+  assert.throws(() => parseArgs(['--variant', 'io']), /variant=io slug=hub path=<missing> surface=arguments/);
+  assert.throws(() => parseArgs(['--out-dir', 'fixture']), /variant=missing slug=hub path=.* surface=arguments/);
+});
+
+test('CLI reports the selected variant and exact Guide counts', () => {
+  const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-guide-export-cli-'));
+  try {
+    writeFixture(outDir, 'cn');
+    const output = execFileSync(
+      process.execPath,
+      [path.join(__dirname, 'verify-guide-export.js'), '--out-dir', outDir, '--variant', 'cn'],
+      { encoding: 'utf8' }
+    );
+    assert.match(output, /variant=cn Guide HTML verified: 9 pages, 9 sitemap URLs/);
+  } finally {
+    fs.rmSync(outDir, { recursive: true, force: true });
+  }
 });

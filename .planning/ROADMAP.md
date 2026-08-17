@@ -17,7 +17,7 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 - Decimal phases are urgent insertions placed between their surrounding integer phases.
 
 - [x] **Phase 5: Guide Content Contract** - Establish the complete, faithful bilingual source contract for the fixed Guide corpus. (completed 2026-08-17)
-- [ ] **Phase 6: Guide Hubs, Articles & SEO Graph** - Publish the bilingual visitor experience and one coherent discovery graph from that contract.
+- [x] **Phase 6: Guide Hubs, Articles & SEO Graph** - Publish the bilingual visitor experience and one coherent discovery graph from that contract. (completed 2026-08-17)
 - [ ] **Phase 7: Dual-Variant Release Evidence** - Prove the complete cn and io static artifacts meet the Guide release contract.
 - [ ] **Phase 8: Production Delivery & Live Verification** - Deliver both verified artifacts and record production evidence for every Guide URL.
 
@@ -94,6 +94,6 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 5. Guide Content Contract | 4/4 | Complete    | 2026-08-17 |
-| 6. Guide Hubs, Articles & SEO Graph | 4/4 | In Progress|  |
+| 6. Guide Hubs, Articles & SEO Graph | 4/4 | Complete    | 2026-08-17 |
 | 7. Dual-Variant Release Evidence | 0/TBD | Not started | - |
 | 8. Production Delivery & Live Verification | 0/TBD | Not started | - |

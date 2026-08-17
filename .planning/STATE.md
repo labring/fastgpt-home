@@ -3,17 +3,17 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Guide Content Center
 current_phase: 8
-current_phase_name: Production Delivery & Live Verification
-status: planning
-stopped_at: Phase 8 tooling complete; awaiting authorized provider promotion
-last_updated: "2026-08-17T12:54:13.088Z"
-last_activity: 2026-08-17
-last_activity_desc: Published the closed root Guide article tracer and registry-backed SEO graph in 06-01.
+status: completed
+stopped_at: Phase 8 complete; production run 32053216857 passed strict live verification
+last_updated: "2026-08-17T18:20:28.512Z"
+last_activity: 2026-08-18
+last_activity_desc: Phase 8 complete
 progress:
   total_phases: 4
   completed_phases: 4
-  total_plans: 14
-  completed_plans: 14
+  total_plans: 18
+  completed_plans: 18
+current_phase_name: Production Delivery & Live Verification
 ---
 
 # Project State
@@ -23,14 +23,14 @@ progress:
 See: .planning/PROJECT.md (updated 2026-08-16)
 
 **Core value:** Every in-scope SEO page has one stable canonical URL, renders its approved localized content and metadata, and is proven release-safe.
-**Current focus:** Phase 7 — Dual-Variant Release Evidence
+**Current focus:** Phase 8 complete — Production Delivery & Live Verification
 
 ## Current Position
 
-Phase: 8 — Production Delivery & Live Verification
-Plan: Not started
-Status: Ready to plan
-Last activity: 2026-08-17 — Phase 7 complete, transitioned to Phase 8
+Phase: 8
+Plan: 08-03 complete
+Status: All phases complete
+Last activity: 2026-08-18 — Phase 8 complete
 
 Progress: [██████████] 100%
 
@@ -38,7 +38,7 @@ Progress: [██████████] 100%
 
 **Velocity:**
 
-- Total plans completed: 15
+- Total plans completed: 18
 - Average duration: 55m
 - Total execution time: 223 minutes
 
@@ -53,6 +53,7 @@ Progress: [██████████] 100%
 | 5 | 4 | - | - |
 | 6 | 4 | - | - |
 | 7 | 3 | - | - |
+| 8 | 3 | - | - |
 **Per-Plan Metrics:**
 
 | Plan | Duration | Tasks | Files |
@@ -98,7 +99,7 @@ Progress: [██████████] 100%
 - [Phase ?]: Guide source graph regression uses isolated registry and source-map mutations; Phase 7 owns export evidence.
 - [Phase ?]: Prepared manifests identify verified trees while provider receipts carry deployed revisions.
 - [Phase ?]: Provider promotion consumes retained verified archives and fails before mutation when credentials or rollback targets are absent.
-- [Phase ?]: Live verification requires exact alternate clusters and explicit provider receipts; the current 404 public matrix is blocked evidence.
+- [Phase 8]: Live verification requires exact alternate clusters and explicit provider receipts; run 32053216857 passed the strict 18-route matrix with matching receipts.
 
 ### Pending Todos
 
@@ -107,9 +108,7 @@ None yet.
 ### Blockers/Concerns
 
 - Phase 5: Inspect the 16 supplied documents to confirm delivery-comment syntax and record a release decision for every ambiguous or absent required asset.
-- Phase 7: cn and io export verification requires Linux, Docker, or a case-sensitive APFS workspace to detect route-case collisions.
-- Phase 8: The repository documents cn image deployment; `fastgpt.io` needs a confirmed or implemented immutable artifact-and-deploy path, including cache purge and rollback evidence.
-- Production Guide deployment remains blocked: both public release manifests and all 18 Guide paths return 404; authorized CN/IO credentials and rollback targets are required.
+- Phase 7: Local cn and io export verification requires Linux, Docker, or a case-sensitive APFS workspace to detect route-case collisions; the hosted Ubuntu release gate passed.
 
 ## Deferred Items
 
@@ -121,6 +120,6 @@ None yet.
 
 ## Session Continuity
 
-Last session: 2026-08-17T12:54:13.081Z
-Stopped at: Phase 8 tooling complete; awaiting authorized provider promotion
+Last session: 2026-08-17T18:20:28.512Z
+Stopped at: Phase 8 complete; production run 32053216857 passed strict live verification
 Resume file: .planning/phases/08-production-delivery-live-verification/08-LIVE-EVIDENCE.json

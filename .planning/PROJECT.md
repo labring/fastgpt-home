@@ -44,11 +44,11 @@ Every in-scope SEO page has one stable canonical URL, renders its approved local
 - ✓ Guide bodies remove one leading delivery comment while preserving approved normalized content — Phase 5
 - ✓ Guide source contracts reject duplicate pairs, metadata/schema drift, invalid assets, and unresolved links with slug-specific failures — Phase 5
 
-### Active
+### Phase 8 outcome
 
-- [ ] Visitors can browse the Chinese and English `/guide` hubs and open all eight paired articles on their owned domains.
-- [ ] Search crawlers receive coherent canonical, hreflang, sitemap, structured-data, and internal-link signals for every Guide page.
-- [ ] Maintainers can build, verify, deploy, and live-check the complete 16-page Guide release.
+- [x] Visitors can browse the Chinese and English `/guide` hubs and open all eight paired articles on their owned domains — Phase 8 live evidence.
+- [x] Search crawlers receive coherent canonical, hreflang, sitemap, structured-data, and internal-link signals for every Guide page — Phase 8 strict matrix.
+- [x] Maintainers can build, verify, deploy, and live-check the complete 16-page Guide release — workflow run 32053216857.
 
 ### Out of Scope
 
@@ -95,12 +95,12 @@ The v1.1 source package provides eight Chinese Markdown articles and eight Engli
 | Treat the Week04 workbook as metadata authority for its 1,195 rows | It contains reviewed online URLs and approved title, description, and keyword values | Validated — Phase 2 |
 | End at release-ready code | The user selected implementation, verification, and production build as the delivery endpoint | Validated — Phase 4 |
 | Extend existing FAQ routing and metadata patterns | A single content path keeps static params, metadata, and redirects consistent | Validated — Phase 3 |
-| Publish Guide pages as paired same-slug routes on the two owned domains | The approved Week04 content and hreflang specification use this topology | — Pending |
+| Publish Guide pages as paired same-slug routes on the two owned domains | The approved Week04 content and hreflang specification use this topology | Validated — Phase 8 |
 | Use one typed eight-pair Guide registry and server-only source boundary | Keeps source identity, body fidelity, and later route consumers reproducible | Validated — Phase 5 |
 | Preserve approved Guide bytes and exclude the English GSC appendix | Keeps the Week04 delivery package source-faithful and scoped to 8×2 articles | Validated — Phase 5 |
 | Keep asset requests and internal-link labels explicit until approved mappings exist | Prevents inferred assets or URLs from entering published content | Validated — Phase 5 |
-| Reuse existing content components for Guide | This keeps the milestone focused on publishing and SEO integrity | — Pending |
-| Include production deployment in v1.1 | The user selected production-live completion | — Pending |
+| Reuse existing content components for Guide | This keeps the milestone focused on publishing and SEO integrity | Validated — Phase 6 |
+| Include production deployment in v1.1 | The user selected production-live completion | Validated — Phase 8 |
 
 ## Evolution
 
@@ -120,4 +120,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-17 after Phase 6*
+*Last updated: 2026-08-18 after Phase 8 production verification*

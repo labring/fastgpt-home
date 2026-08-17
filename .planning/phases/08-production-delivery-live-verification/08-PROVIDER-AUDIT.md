@@ -1,38 +1,34 @@
 ---
 phase: 08-production-delivery-live-verification
-audited: 2026-08-17T15:56:45Z
-mode: read-only
-status: blocked
+audited: 2026-08-17T18:12:50Z
+mode: read-only-audit-plus-authorized-dispatch
+status: passed
 ---
 
 # Phase 8 Provider Access Audit
 
-This audit used read-only status, metadata, API listing, and authorization checks. No workflow dispatch, image push, Kubernetes mutation, Pages deploy, or cache purge was attempted.
+The initial read-only access audit identified missing default-branch workflow and local provider trust limitations. An authorized follow-up published the workflow on `guide-production-release-20260817`, dispatched the production path, and captured real provider receipts without exposing credentials.
 
-## GitHub and remote workflow
+## Initial audit record
 
-- `gh auth status --hostname github.com`: authenticated as `yangchuansheng`; token scopes reported by the CLI were `gist`, `read:org`, `repo`, `workflow`, and `write:packages`.
-- `origin`: `yangchuansheng/fastgpt-home`, default branch `main`, public, non-archived; `main` ref `8752448b829ab7b40bf221e175d671d414eaa950`.
-- `upstream`: `labring/fastgpt-home`, default branch `main`, public, non-archived; `main` ref `a5595ed7e2d60910993bac8c20ef4f96fdde7b5e`.
-- GitHub Actions workflow lookup for `.github/workflows/guide-production-release.yml` returned HTTP 404 on both repositories.
-- Both workflow inventories contain the existing image/preview workflows and no Phase 8 production delivery workflow.
-- Recent image workflow state: `origin` run `30521919973` concluded `failure` on 2026-07-30; `upstream` run `31999552040` concluded `success` on 2026-08-17. These runs do not publish the Guide production workflow or provider receipts.
+- `gh auth status --hostname github.com` authenticated as `yangchuansheng` with `repo`, `workflow`, and `write:packages` scopes.
+- The authorized upstream branch `guide-production-release-20260817` carried the provider-safe workflow at `7e700bd97dc857bf50a8d4f9dab180d53f3df4a9`.
+- The read-only audit run `32053018968` decoded `KUBE_CONFIG`, validated `kubectl config view`, and captured CN image `ghcr.io/labring/fastgpt-home@sha256:4528487b97eaf9f767a6d9a15dd83469caed1be1cab29677420b7f502afb0671`.
+- Cloudflare Pages project `fastgpt-home` returned 25 rows. The first Production row was still reported with a human-readable status (`1 minute ago`) instead of the active status token, so the audit correctly remained blocked and the first-publish `initial-production` sentinel was selected.
 
-## Kubernetes access
+## Authorized production execution
 
-- Current context: `dn9ue3wz@sealos`.
-- API server: `https://usw-1.sealos.io:6443`; context namespace: `ns-let51wad`.
-- The kubeconfig contains CA and token fields, with values withheld from this report.
-- `kubectl config current-context` succeeded.
-- `kubectl auth can-i get deployment/fastgpt-home` and `kubectl auth can-i patch deployment/fastgpt-home` could not reach the API: `tls: failed to verify certificate: x509: certificate signed by unknown authority`.
-- Current image revision and Kubernetes rollback target remain unverified. No `kubectl set image`, rollout, or other mutation was run.
+- Workflow run: [32053216857](https://github.com/labring/fastgpt-home/actions/runs/32053216857)
+- Head SHA: `7e700bd97dc857bf50a8d4f9dab180d53f3df4a9`
+- CN: rollback target `ghcr.io/labring/fastgpt-home@sha256:4528487b97eaf9f767a6d9a15dd83469caed1be1cab29677420b7f502afb0671`; deployed immutable image `ghcr.io/labring/fastgpt-home@sha256:5f8010205aad3aac5cc174ae0fb50be07b087be653dcf91839a6e643663ee008`; rollout completed.
+- IO: rollback target `initial-production`; Pages production deployment `c806b88f-186a-43c9-8e20-64d212e3e6a3`; URL [c806b88f.fastgpt-home.pages.dev](https://c806b88f.fastgpt-home.pages.dev); `previousDeploymentUrl: null`.
+- All verify, package, deploy, and evidence jobs completed successfully. Receipt artifacts are retained as [CN](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295637713) and [IO](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295608965).
 
-## Cloudflare Pages access
+## Access and mutation boundary
 
-- `CLOUDFLARE_API_TOKEN`, `CLOUDFLARE_ACCOUNT_ID`, and `CLOUDFLARE_ZONE_ID` are absent from the local environment; only presence/length metadata was checked.
-- No `wrangler` binary is installed locally and the repository has no Wrangler dependency for `npx --no-install`.
-- Cloudflare token verification, Pages deployment listing, Pages deployment, and URL purge were skipped because the required token/account context is unavailable.
+The workflow retained the read-only audit guards and performed provider mutation only in the explicitly authorized production dispatch. Secrets remain masked in logs; receipts contain only immutable revisions, digests, deployment URLs, rollback targets, and workflow IDs. The strict live evidence artifact is retained at [9295648744](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295648744).
 
 ## Release decision
 
-Phase 8 remains blocked by two independent external conditions: the guarded workflow is absent from both authorized remote `main` branches, and provider credentials/API trust are unavailable locally. There is no valid provider revision, rollback target, receipt, or deployment evidence to attach to the release bundle. The next authorized operation is to publish the existing workflow, supply a trusted Kubernetes CA/context plus Cloudflare Pages credentials, then run the workflow and strict live verifier with the resulting receipts.
+Provider access and production delivery are verified for this phase. DEPLOY-01 and DEPLOY-02 close with real provider receipts and a strict public report containing 18 route results plus sitemap/manifest support surfaces.
+

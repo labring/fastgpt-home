@@ -1,1 +1,1 @@
-[verify-guide-live] status=blocked
+[verify-guide-live] status=passed

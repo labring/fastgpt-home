@@ -34,8 +34,8 @@ Requirements for the Guide Content Center production milestone. Each requirement
 
 ### Production Delivery
 
-- [ ] **DEPLOY-01**: A release operator can deploy the verified immutable cn and io artifacts to `fastgpt.cn` and `fastgpt.io` with recorded artifact revisions and rollback targets.
-- [ ] **DEPLOY-02**: A release operator can verify both production Guide hubs and all 16 production article URLs for final `200` responses, localized H1, self canonical, reciprocal alternates, indexability, sitemap presence, cache freshness, and deployed revision evidence.
+- [x] **DEPLOY-01**: A release operator can deploy the verified immutable cn and io artifacts to `fastgpt.cn` and `fastgpt.io` with recorded artifact revisions and rollback targets.
+- [x] **DEPLOY-02**: A release operator can verify both production Guide hubs and all 16 production article URLs for final `200` responses, localized H1, self canonical, reciprocal alternates, indexability, sitemap presence, cache freshness, and deployed revision evidence.
 
 ## Future Requirements
 
@@ -87,8 +87,8 @@ Roadmap creation assigns each v1.1 requirement to exactly one phase.
 | SEO-07 | Phase 6 | Complete |
 | VERIFY-04 | Phase 7 | Complete |
 | VERIFY-05 | Phase 7 | Complete |
-| DEPLOY-01 | Phase 8 | Pending |
-| DEPLOY-02 | Phase 8 | Pending |
+| DEPLOY-01 | Phase 8 | Complete |
+| DEPLOY-02 | Phase 8 | Complete |
 
 **Coverage:**
 

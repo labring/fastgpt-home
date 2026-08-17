@@ -19,7 +19,7 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 - [x] **Phase 5: Guide Content Contract** - Establish the complete, faithful bilingual source contract for the fixed Guide corpus. (completed 2026-08-17)
 - [x] **Phase 6: Guide Hubs, Articles & SEO Graph** - Publish the bilingual visitor experience and one coherent discovery graph from that contract. (completed 2026-08-17)
 - [x] **Phase 7: Dual-Variant Release Evidence** - Prove the complete cn and io static artifacts meet the Guide release contract. (completed 2026-08-17)
-- [ ] **Phase 8: Production Delivery & Live Verification** - Deliver both verified artifacts and record production evidence for every Guide URL.
+- [x] **Phase 8: Production Delivery & Live Verification** - Deliver both verified artifacts and record production evidence for every Guide URL. (completed 2026-08-18)
 
 ## Phase Details
 
@@ -111,4 +111,4 @@ v1.1 turns the approved Week04 Chinese and English Guide corpus into a productio
 | 5. Guide Content Contract | 4/4 | Complete    | 2026-08-17 |
 | 6. Guide Hubs, Articles & SEO Graph | 4/4 | Complete    | 2026-08-17 |
 | 7. Dual-Variant Release Evidence | 3/3 | Complete    | 2026-08-17 |
-| 8. Production Delivery & Live Verification | 3/3 | In Progress|  |
+| 8. Production Delivery & Live Verification | 3/3 | Complete    | 2026-08-18 |

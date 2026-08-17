@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
-  "startedAt": "2026-08-17T13:21:26.839Z",
-  "status": "blocked",
+  "startedAt": "2026-08-17T18:12:40.033Z",
+  "status": "passed",
   "variants": {
     "cn": {
       "surfaces": {
@@ -10,174 +10,162 @@
           "finalUrl": "https://fastgpt.cn/sitemap.xml",
           "headers": {
             "cache-control": "public, max-age=3600",
-            "etag": "\"6a82a29e-4519c\"",
-            "last-modified": "Mon, 17 Aug 2026 05:56:46 GMT",
+            "etag": "\"6a834e60-41688\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
             "x-cache-status": "HIT-DATA"
           },
-          "bodyDigest": "f8da183fc7458fc4b59adad0337e4464db8d46bf3bb63c3847dfd5b9e2f40de2",
+          "bodyDigest": "c56fbf85550d1abf693b95e478053febaff34a4c1c2be8a4b08ecfe28b6d651b",
           "failures": []
         },
         "/__release/manifest.json": {
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/__release/manifest.json",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "no-store",
+            "etag": "\"6a834e60-400\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-release-revision": "52b673022aad5344232676359b3af5cf9e5cda2213d6b94d9f5c84a28b3ec313",
+            "x-release-artifact": "3c0afe9001c6605a6d0387615fc2dac99656e3747a387cb3aa5dca1b10a4d099"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404"
-          ]
+          "bodyDigest": "fca34966cb688f510daf8f4306b28aca9372295694e16f03b60e0501cede82d1",
+          "failures": []
         }
       },
       "routes": [
         {
           "slug": "hub",
           "path": "/guide",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-14081\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "0cb81b9188183bd26b408ba8a2f333ff190887eba9f7d7757bb9410674aecdbb"
         },
         {
           "slug": "saas-platform-enterprise-gaps",
           "path": "/guide/saas-platform-enterprise-gaps",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/saas-platform-enterprise-gaps",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-1a44a\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "c585c22ac1932af447758cfe8d5b424d59c69621b321205b03a4f0dab26e8cee"
         },
         {
           "slug": "self-build-three-year-tco",
           "path": "/guide/self-build-three-year-tco",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/self-build-three-year-tco",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-1ae02\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "5c247584d64c3d49a18344bc1cba4608c20fd8cce918cbd9f6d7851fc4853b62"
         },
         {
           "slug": "server-sizing-guide",
           "path": "/guide/server-sizing-guide",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/server-sizing-guide",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-18927\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "75bc7d34ec3e22016b27fe61ccdb83f2ebe0a3a7d572c9fe68ad7c840df02f35"
         },
         {
           "slug": "complex-doc-golden-set",
           "path": "/guide/complex-doc-golden-set",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/complex-doc-golden-set",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-1895c\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "4dbde8a10da906becc885a302af6b97390f0eb7276166282bf2b95ed78296791"
         },
         {
           "slug": "support-bot-four-steps",
           "path": "/guide/support-bot-four-steps",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/support-bot-four-steps",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-1ab23\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "18f6a627676391be52968386c9a5aa41e8fa659a44878039a6aff96708381100"
         },
         {
           "slug": "manufacturing-itops-invoice-audit",
           "path": "/guide/manufacturing-itops-invoice-audit",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/manufacturing-itops-invoice-audit",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-16ce1\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "d239ebffed2f3a2179f0edf275656b2fa47ab9454432a97996839a6952f94a67"
         },
         {
           "slug": "pharma-compliance-docs",
           "path": "/guide/pharma-compliance-docs",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/pharma-compliance-docs",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-1dcec\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "4b487a38941f5eb09c542e9639ca60c09b47a601ae334978c0cc83b61c2091a0"
         },
         {
           "slug": "education-retail-support-insight",
           "path": "/guide/education-retail-support-insight",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.cn/guide/education-retail-support-insight",
           "headers": {
-            "etag": "W/\"6a82a29e-be25\""
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
+            "etag": "W/\"6a834e60-17f80\"",
+            "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+            "x-cache-status": "HIT-HTML"
           },
-          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
-          "failures": [
-            "status=404",
-            "sitemap",
-            "cache"
-          ]
+          "bodyDigest": "a62f1f569630b5b473d8d7eb553acb65756bae2e23c521d373ebf1538337fbee"
         }
       ],
-      "failures": [
-        "/__release/manifest.json:status=404",
-        "/guide:status=404,sitemap,cache",
-        "/guide/saas-platform-enterprise-gaps:status=404,sitemap,cache",
-        "/guide/self-build-three-year-tco:status=404,sitemap,cache",
-        "/guide/server-sizing-guide:status=404,sitemap,cache",
-        "/guide/complex-doc-golden-set:status=404,sitemap,cache",
-        "/guide/support-bot-four-steps:status=404,sitemap,cache",
-        "/guide/manufacturing-itops-invoice-audit:status=404,sitemap,cache",
-        "/guide/pharma-compliance-docs:status=404,sitemap,cache",
-        "/guide/education-retail-support-insight:status=404,sitemap,cache"
-      ]
+      "failures": [],
+      "manifest": {
+        "sourceCommit": "7e700bd97dc857bf50a8d4f9dab180d53f3df4a9",
+        "provider": "kubernetes",
+        "expectedHost": "https://fastgpt.cn",
+        "releaseRevision": "52b673022aad5344232676359b3af5cf9e5cda2213d6b94d9f5c84a28b3ec313",
+        "artifactDigest": "3c0afe9001c6605a6d0387615fc2dac99656e3747a387cb3aa5dca1b10a4d099",
+        "rollbackTarget": "ghcr.io/labring/fastgpt-home@sha256:4528487b97eaf9f767a6d9a15dd83469caed1be1cab29677420b7f502afb0671",
+        "headers": {
+          "cache-control": "no-store",
+          "etag": "\"6a834e60-400\"",
+          "last-modified": "Mon, 17 Aug 2026 18:09:36 GMT",
+          "x-release-revision": "52b673022aad5344232676359b3af5cf9e5cda2213d6b94d9f5c84a28b3ec313",
+          "x-release-artifact": "3c0afe9001c6605a6d0387615fc2dac99656e3747a387cb3aa5dca1b10a4d099"
+        }
+      }
     },
     "io": {
       "surfaces": {
@@ -186,176 +174,155 @@
           "finalUrl": "https://fastgpt.io/sitemap.xml",
           "headers": {
             "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
-            "etag": "W/\"fc7df4ae9d28bb6bf84bea9b03aa4fc4\"",
+            "etag": "W/\"37942de6d40ea4c80ce2a1bca31f413e\"",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "9cadd21048076b131cba4790a3997bd661f46faacac28fbb311c89d3faeac832",
+          "bodyDigest": "b8d594d2a3d578b6806ebb630963d6d67cb8467222563d2c8d7af6320dd84060",
           "failures": []
         },
         "/__release/manifest.json": {
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/__release/manifest.json",
           "headers": {
             "cache-control": "no-store",
-            "cf-cache-status": "DYNAMIC"
+            "etag": "W/\"cc595e6b89d0adab252d372cf6dd89bb\"",
+            "cf-cache-status": "DYNAMIC",
+            "x-release-revision": "3be314ef102f224259f51b289e095d7f58ca8fca26fcf90505d142568b04e451",
+            "x-release-artifact": "efa418c814c04417db0c11ec211fe7f6bb02e96dac1a1041dae1e8c1baed3054"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404"
-          ]
+          "bodyDigest": "0aaf1481d95e798a13a036aaac24e8d103dbf03b9e182472ef26a418d585852a",
+          "failures": []
         }
       },
       "routes": [
         {
           "slug": "hub",
           "path": "/guide",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "b0dab80b5b37985feb61710d8ef99cd80f812e5a2df88e08838a46b649025239"
         },
         {
           "slug": "saas-platform-enterprise-gaps",
           "path": "/guide/saas-platform-enterprise-gaps",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/saas-platform-enterprise-gaps",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "9e478b733a24bce13a04f0705e2ac49c7b1f72add77e4df738940550bd3217b6"
         },
         {
           "slug": "self-build-three-year-tco",
           "path": "/guide/self-build-three-year-tco",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/self-build-three-year-tco",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "94befe10b07b9dbcedc1f1540023d25a2f6417db4f129a3319a79aabda8c0b25"
         },
         {
           "slug": "server-sizing-guide",
           "path": "/guide/server-sizing-guide",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/server-sizing-guide",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "7f73347f4121f252d60df41755af392a01defa3bf05f76a5140c62dc4a576a1b"
         },
         {
           "slug": "complex-doc-golden-set",
           "path": "/guide/complex-doc-golden-set",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/complex-doc-golden-set",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "2de36d9f04dac0c37023022e14ce44f3dc901dabab12b6a3edde28be573ec9c7"
         },
         {
           "slug": "support-bot-four-steps",
           "path": "/guide/support-bot-four-steps",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/support-bot-four-steps",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "3352d7b5a066e9628ee5042310d1a916745aaedd7fbfaf47423b0e751e463291"
         },
         {
           "slug": "manufacturing-itops-invoice-audit",
           "path": "/guide/manufacturing-itops-invoice-audit",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/manufacturing-itops-invoice-audit",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "825fa9d38742103d20cd7e63ac09694e7c0b088c923ec95b0f4ff13437307dee"
         },
         {
           "slug": "pharma-compliance-docs",
           "path": "/guide/pharma-compliance-docs",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/pharma-compliance-docs",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "46fe46cd5178b113d81ced1dd71ebfabadbfbad6e59534aaee43ec066accf064"
         },
         {
           "slug": "education-retail-support-insight",
           "path": "/guide/education-retail-support-insight",
-          "status": 404,
+          "status": 200,
           "finalUrl": "https://fastgpt.io/guide/education-retail-support-insight",
           "headers": {
-            "cache-control": "no-store",
+            "cache-control": "public, max-age=3600, stale-while-revalidate=86400",
             "cf-cache-status": "DYNAMIC"
           },
-          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
-          "failures": [
-            "status=404",
-            "sitemap"
-          ]
+          "bodyDigest": "804bdd7500655434a7e76f7745b56e2d1e57a2d1471598cc3c6d7c2c5226ed8c"
         }
       ],
-      "failures": [
-        "/__release/manifest.json:status=404",
-        "/guide:status=404,sitemap",
-        "/guide/saas-platform-enterprise-gaps:status=404,sitemap",
-        "/guide/self-build-three-year-tco:status=404,sitemap",
-        "/guide/server-sizing-guide:status=404,sitemap",
-        "/guide/complex-doc-golden-set:status=404,sitemap",
-        "/guide/support-bot-four-steps:status=404,sitemap",
-        "/guide/manufacturing-itops-invoice-audit:status=404,sitemap",
-        "/guide/pharma-compliance-docs:status=404,sitemap",
-        "/guide/education-retail-support-insight:status=404,sitemap"
-      ]
+      "failures": [],
+      "manifest": {
+        "sourceCommit": "7e700bd97dc857bf50a8d4f9dab180d53f3df4a9",
+        "provider": "cloudflare-pages",
+        "expectedHost": "https://fastgpt.io",
+        "releaseRevision": "3be314ef102f224259f51b289e095d7f58ca8fca26fcf90505d142568b04e451",
+        "artifactDigest": "efa418c814c04417db0c11ec211fe7f6bb02e96dac1a1041dae1e8c1baed3054",
+        "rollbackTarget": "initial-production",
+        "headers": {
+          "cache-control": "no-store",
+          "etag": "W/\"cc595e6b89d0adab252d372cf6dd89bb\"",
+          "cf-cache-status": "DYNAMIC",
+          "x-release-revision": "3be314ef102f224259f51b289e095d7f58ca8fca26fcf90505d142568b04e451",
+          "x-release-artifact": "efa418c814c04417db0c11ec211fe7f6bb02e96dac1a1041dae1e8c1baed3054"
+        }
+      }
     }
   },
-  "providerEvidence": [],
-  "finishedAt": "2026-08-17T13:21:36.152Z"
+  "providerEvidence": [
+    {
+      "path": "evidence/cn/cn-provider-receipt.json",
+      "digest": "faf68e0072705e6ea2a5693671398f62d8687d6e058b966e5002d081757659f0"
+    },
+    {
+      "path": "evidence/io/io-provider-receipt.json",
+      "digest": "c9bc91aa0cd5f366746e03e19f29f9f0f52730cb9945a8f5aa55c2cd205f87b0"
+    }
+  ],
+  "finishedAt": "2026-08-17T18:12:47.419Z"
 }
+

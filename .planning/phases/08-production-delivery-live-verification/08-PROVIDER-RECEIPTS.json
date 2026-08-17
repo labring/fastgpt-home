@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "workflowRun": "32053216857",
+  "headSha": "7e700bd97dc857bf50a8d4f9dab180d53f3df4a9",
+  "cn": {
+    "schemaVersion": 1,
+    "variant": "cn",
+    "releaseRevision": "52b673022aad5344232676359b3af5cf9e5cda2213d6b94d9f5c84a28b3ec313",
+    "artifactDigest": "3c0afe9001c6605a6d0387615fc2dac99656e3747a387cb3aa5dca1b10a4d099",
+    "treeDigest": "3c0afe9001c6605a6d0387615fc2dac99656e3747a387cb3aa5dca1b10a4d099",
+    "archiveDigest": "8f3891cfba85971b9b90345a937684d6dc24d297509d97936ec81df96ba8a2be",
+    "rollbackTarget": "ghcr.io/labring/fastgpt-home@sha256:4528487b97eaf9f767a6d9a15dd83469caed1be1cab29677420b7f502afb0671",
+    "provider": {
+      "imageDigest": "sha256:5f8010205aad3aac5cc174ae0fb50be07b087be653dcf91839a6e643663ee008",
+      "kubernetesImage": "ghcr.io/labring/fastgpt-home@sha256:5f8010205aad3aac5cc174ae0fb50be07b087be653dcf91839a6e643663ee008",
+      "rollout": { "status": "completed", "deployment": "fastgpt-home" }
+    }
+  },
+  "io": {
+    "schemaVersion": 1,
+    "variant": "io",
+    "releaseRevision": "3be314ef102f224259f51b289e095d7f58ca8fca26fcf90505d142568b04e451",
+    "artifactDigest": "efa418c814c04417db0c11ec211fe7f6bb02e96dac1a1041dae1e8c1baed3054",
+    "treeDigest": "efa418c814c04417db0c11ec211fe7f6bb02e96dac1a1041dae1e8c1baed3054",
+    "archiveDigest": "2bf6d96527291c2bf4fb33a506698aae3b2743364e22d4b934ecbea8ff8516ac",
+    "rollbackTarget": "initial-production",
+    "provider": {
+      "project": "fastgpt-home",
+      "deploymentId": "c806b88f-186a-43c9-8e20-64d212e3e6a3",
+      "deploymentUrl": "https://c806b88f.fastgpt-home.pages.dev",
+      "deploymentEnvironment": "production",
+      "previousDeploymentUrl": null
+    }
+  }
+}
+

@@ -1,129 +1,113 @@
 ---
 phase: 08-production-delivery-live-verification
-verified: 2026-08-17T13:23:31Z
-status: gaps_found
-score: 4/6 must-haves verified
+verified: 2026-08-17T18:12:50Z
+status: passed
+score: 6/6 must-haves verified
 behavior_unverified: 0
 overrides_applied: 0
 re_verification:
   previous_status: gaps_found
-  previous_score: 3/6
+  previous_score: 4/6
   gaps_closed:
-    - "The local CN and IO workflow captures provider-derived rollback state before mutation and records final immutable provider receipts after successful deployment."
-  gaps_remaining:
-    - "A release operator can deploy the verified immutable cn and io artifacts with recorded deployed revisions and rollback targets."
-    - "Both production Guide hubs and all sixteen article URLs satisfy the final public 200/SEO/cache/revision contract."
+    - "The authorized workflow produced immutable CN and IO provider receipts with deployed revisions and rollback targets."
+    - "Both production Guide domains passed the strict 18-route and support-surface verifier."
+  gaps_remaining: []
   regressions: []
-gaps:
-  - truth: "A release operator can deploy the verified immutable cn and io artifacts with recorded deployed revisions and rollback targets."
-    status: failed
-    reason: "The guarded workflow exists only in this local worktree. Both configured production remotes return HTTP 404 for it on main, and no real CN/IO provider receipt, release bundle, deployed revision, or rollback record is available."
-    artifacts:
-      - path: ".github/workflows/guide-production-release.yml"
-        issue: "The provider-safe source workflow has no published, completed production execution."
-    missing:
-      - "Publish the guarded workflow to the authorized production repository and run it with real CN Kubernetes and IO Cloudflare credentials."
-      - "Retain the final CN/IO provider receipts, IO purge evidence, archive, manifests, and live matrix as one release bundle."
-  - truth: "Both production Guide hubs and all sixteen article URLs satisfy the final public 200/SEO/cache/revision contract."
-    status: failed
-    reason: "The fresh 2026-08-17T13:21:26Z public baseline is blocked: all 18 Guide routes and both public release manifests return 404."
-    artifacts:
-      - path: ".planning/phases/08-production-delivery-live-verification/08-LIVE-EVIDENCE.json"
-        issue: "The structured public report records the current absence of the release rather than deployment success."
-    missing:
-      - "Complete the authorized provider promotion, cache purge, and propagation."
-      - "Rerun the live verifier without --allow-blocked-baseline using both final provider receipts, with every Guide route returning 200."
+gaps: []
 ---
 
 # Phase 8: Production Delivery & Live Verification Report
 
-**Phase Goal:** The verified bilingual Guide release is live on both owned domains with traceable artifact and health evidence.
-**Verified:** 2026-08-17T13:23:31Z
-**Status:** gaps_found
-**Re-verification:** Yes — after provider rollback and final-receipt guards
+**Phase Goal:** The verified bilingual Guide release is live on both owned domains with traceable artifact and health evidence.  
+**Verified:** 2026-08-17T18:12:50Z  
+**Status:** passed  
+**Workflow run:** [32053216857](https://github.com/labring/fastgpt-home/actions/runs/32053216857)  
+**Head SHA:** `7e700bd97dc857bf50a8d4f9dab180d53f3df4a9`
 
 ## Goal Achievement
 
-### Observable Truths
-
 | # | Truth | Status | Evidence |
 | --- | --- | --- | --- |
-| 1 | A verified cn/io static tree becomes a content-addressed archive with prepared manifest, route inventory, tree digest, archive checksum, and rollback target. | ✓ VERIFIED | `npm run release:artifact-regression` passed 6/6; the packager consumes `buildGuideExpectation()` from the registry-backed export verifier. |
-| 2 | The local workflow captures provider-derived rollback state before mutation and records final immutable CN/IO provider receipts after successful deployment. | ✓ VERIFIED | The CN job authenticates GHCR, preserves an existing digest or resolves a tag with `docker buildx imagetools inspect`, compares the normalized `repo@sha256:...` target, waits for `kubectl rollout status`, then writes a receipt with `rollout.status: completed`. The IO job reads the active production Pages deployment ID/URL before `pages deploy`; a first publish may use the explicit `initial-production` sentinel and records `previousDeploymentUrl: null`, while subsequent releases require the exact active production ID. `verify-release.test.js` covers workflow ordering and identity guards; `verify-guide-live.test.js` covers the first-publish receipt shape. |
-| 3 | The native live-matrix command fails closed and a local 18-page fixture proves route SEO, cache, manifest-header, sitemap, and receipt validation. | ✓ VERIFIED | `npm run verify:guide-live-regression` passed 4/4, including the complete 18-route fixture and CN receipt completion guard. |
-| 4 | An operator currently has an executable published production workflow with real provider revisions and rollback targets recorded. | ✗ FAILED | GitHub API probes returned HTTP 404 for `.github/workflows/guide-production-release.yml` on `main` in both `yangchuansheng/fastgpt-home` and `labring/fastgpt-home`; no real provider receipt exists in the worktree. |
-| 5 | Both public hubs and all 16 public article URLs return final 200 with H1, canonical, alternates, indexability, sitemap, cache, and deployed-revision evidence. | ✗ FAILED | The fresh baseline records 18 Guide route 404s and two manifest 404s. Both sitemaps return 200, while their Guide rows and release identity cannot be present before promotion. |
-| 6 | The live report preserves a complete structured support-surface status/cache/revision matrix. | ✓ VERIFIED | `08-LIVE-EVIDENCE.json` records `status`, `finalUrl`, selected headers, and a SHA-256 `bodyDigest` for every route, sitemap, and manifest surface. |
+| 1 | Verified CN/IO static trees become content-addressed archives with manifests, route inventories, tree digests, archive checksums, and rollback targets. | ✓ VERIFIED | `npm run release:artifact-regression` passed 6/6; production verify and package jobs retained the exact trees and release bundle. |
+| 2 | Provider-derived rollback state is checked before mutation and final immutable provider receipts are written after successful deployment. | ✓ VERIFIED | Run 32053216857: CN digest-pinned rollout completed; IO Pages deployment completed with deployment ID/URL and `initial-production` rollback sentinel. |
+| 3 | The live matrix fails closed and validates SEO, cache, manifests, sitemaps, and receipts. | ✓ VERIFIED | `npm run verify:guide-live-regression` passed 5/5; strict public verification with both downloaded receipts returned `status=passed`. |
+| 4 | An authorized production workflow run records deployed revisions and rollback targets for both providers. | ✓ VERIFIED | [Run 32053216857](https://github.com/labring/fastgpt-home/actions/runs/32053216857) completed verify, package, CN, IO, and evidence jobs successfully. |
+| 5 | Both public Guide hubs and all 16 article URLs satisfy final 200/SEO/cache/sitemap/revision evidence. | ✓ VERIFIED | The live artifact contains 9 CN + 9 IO routes, every route has status 200 and zero failures; both manifests and sitemaps return 200. |
+| 6 | The live report preserves a structured support-surface status/cache/revision matrix. | ✓ VERIFIED | [Live evidence artifact](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295648744) records status, final URL, selected headers, body digest, and failures for every route, sitemap, and manifest. |
 
-**Score:** 4/6 truths verified (0 present, behavior-unverified).
+**Score:** 6/6 truths verified.
 
-### Required Artifacts
+## Provider and Artifact Evidence
 
-| Artifact | Expected | Status | Details |
+| Variant | Release revision | Artifact/tree digest | Archive digest | Rollback target | Deployed provider revision |
+| --- | --- | --- | --- | --- | --- |
+| CN | `52b673022aad5344232676359b3af5cf9e5cda2213d6b94d9f5c84a28b3ec313` | `3c0afe9001c6605a6d0387615fc2dac99656e3747a387cb3aa5dca1b10a4d099` | `8f3891cfba85971b9b90345a937684d6dc24d297509d97936ec81df96ba8a2be` | `ghcr.io/labring/fastgpt-home@sha256:4528487b97eaf9f767a6d9a15dd83469caed1be1cab29677420b7f502afb0671` | `ghcr.io/labring/fastgpt-home@sha256:5f8010205aad3aac5cc174ae0fb50be07b087be653dcf91839a6e643663ee008`; rollout completed |
+| IO | `3be314ef102f224259f51b289e095d7f58ca8fca26fcf90505d142568b04e451` | `efa418c814c04417db0c11ec211fe7f6bb02e96dac1a1041dae1e8c1baed3054` | `2bf6d96527291c2bf4fb33a506698aae3b2743364e22d4b934ecbea8ff8516ac` | `initial-production` | Pages deployment `c806b88f-186a-43c9-8e20-64d212e3e6a3`, [URL](https://c806b88f.fastgpt-home.pages.dev), environment production |
+
+Receipts are retained in the [CN provider artifact](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295637713) and [IO provider artifact](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295608965). The verified trees and immutable archives are retained in [workflow artifacts](https://github.com/labring/fastgpt-home/actions/runs/32053216857).
+
+## Public Live Matrix
+
+| Variant | Sitemap | Manifest | Guide routes | Manifest cache policy | Revision headers |
+| --- | --- | --- | --- | --- | --- |
+| CN | 200 | 200 | 9/9 at 200, zero failures | `no-store` | revision `52b673...`, artifact `3c0afe...` |
+| IO | 200 | 200 | 9/9 at 200, zero failures | `no-store` | revision `3be314...`, artifact `efa418...` |
+
+The strict verifier recorded reciprocal `zh-CN`, `en`, and `x-default` alternates, localized H1 values, self canonicals, explicit indexable robots metadata, sitemap membership, cache freshness, and body digests for all 18 routes.
+
+## Required Artifacts
+
+| Artifact | Status | Evidence |
+| --- | --- | --- |
+| `scripts/release-artifact.js` | ✓ VERIFIED | Idempotent injected `/__release/manifest.json` block includes `! Cache-Control`, `Cache-Control: no-store`, and X-Release identity headers. |
+| `scripts/release-artifact.test.js` | ✓ VERIFIED | 6/6 tests pass, including existing-block normalization and repeated invocation stability. |
+| `scripts/purge-cloudflare-cache.js` | ✓ VERIFIED | Purge regression passes 3/3 with credential redaction. |
+| `scripts/verify-release.js` | ✓ VERIFIED | Source/release checks pass; production verify retained both exact output trees. |
+| `Dockerfile`, `nginx.conf`, `public/_headers` | ✓ VERIFIED | CN runtime copies the verified archive tree; manifest is explicitly uncached on both providers. |
+| `.github/workflows/guide-production-release.yml` | ✓ VERIFIED | Run 32053216857 completed all provider and evidence jobs successfully. |
+| `scripts/verify-guide-live.js` | ✓ VERIFIED | Strict public report passed with both provider receipts. |
+| `08-LIVE-EVIDENCE.json` | ✓ VERIFIED | Updated from the real run artifact with `status=passed`, 18 route results, and four support surfaces. |
+| Provider receipts and release bundle | ✓ VERIFIED | [CN receipt](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295637713), [IO receipt](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295608965), [bundle](https://github.com/labring/fastgpt-home/actions/runs/32053216857/artifacts/9295569552). |
+
+## Key Link Verification
+
+| From | To | Via | Status |
 | --- | --- | --- | --- |
-| `scripts/release-artifact.js` | Immutable archive, prepared manifest, checksum, and receipt identity seam | ✓ VERIFIED | 357 substantive lines; import-safe and 6 regression cases pass. |
-| `scripts/release-artifact.test.js` | Archive and identity mutation regressions | ✓ VERIFIED | 6/6 Node tests pass. |
-| `scripts/purge-cloudflare-cache.js` | Credential-guarded Cloudflare purge evidence | ✓ VERIFIED | 3/3 Node tests pass; evidence redacts credentials. |
-| `scripts/verify-release.js` | Same-lifecycle verified-output retention and workflow structure | ✓ VERIFIED | `npm run verify:release -- --source-only` passes; structural suite passes 10 tests with one documented case-sensitive filesystem skip. |
-| `Dockerfile`, `nginx.conf`, `public/_headers` | CN archive runtime and release-manifest cache policy | ✓ VERIFIED | The runtime copies `release-out/`; both server configurations mark `__release/manifest.json` `no-store`. |
-| `.github/workflows/guide-production-release.yml` | Provider promotion, provider-derived rollback capture, final receipts, purge, and live-gate wiring | ✓ VERIFIED LOCALLY | YAML parses; dispatch inputs are required; explicit structural checks prove provider reads precede each mutation and final CN receipt follows rollout. |
-| `scripts/verify-guide-live.js` | Route and support-surface public evidence matrix | ✓ VERIFIED LOCALLY | Fixture tests prove all 18 routes, sitemap, manifest/cache, and provider receipt checks. |
-| `08-LIVE-EVIDENCE.json` | Timestamped public baseline | ✓ VERIFIED | Current `blocked` report has full route/surface evidence and makes no release-success claim. |
-| CN/IO provider receipts and release bundle | Actual deployed revisions, rollback targets, and purge evidence | ✗ MISSING | Produced only by an authorized successful remote workflow execution. |
+| Retained CN/IO trees | Immutable archives | `verify:release --retain-success-artifacts` → `release-artifact.js package` | ✓ WIRED AND EXECUTED |
+| CN archive | Kubernetes revision | checksum → exact extraction → release-runtime image → GHCR digest → digest-pinned rollout → receipt | ✓ WIRED AND EXECUTED |
+| IO archive | Pages revision | checksum → exact extraction → Pages deploy → deployment ID/URL receipt | ✓ WIRED AND EXECUTED |
+| Provider receipts | Public verifier | evidence job passes both receipt paths to `verify-guide-live.js` | ✓ WIRED AND EXECUTED |
+| Public routes | SEO and cache contract | strict 18-route matrix, sitemap, manifest, header, body-digest checks | ✓ WIRED AND EXECUTED |
 
-### Key Link Verification
+## Behavioral Spot-Checks
 
-| From | To | Via | Status | Details |
-| --- | --- | --- | --- | --- |
-| `release-artifact.js` | Guide registry | `verify-guide-export.js` → `buildGuideExpectation()` | ✓ WIRED | The indirect registry link is present in source; the generic link query misses the indirect import. |
-| `verify-release.js` | retained `cn/io/out` | `--retain-success-artifacts` before cleanup | ✓ WIRED | The workflow supplies `$RELEASE_ROOT`; packaging reads retained output only. |
-| CN archive | Kubernetes receipt | checksum → extract → `release-runtime` image → provider current tag/digest normalized through GHCR → rollout → final receipt | ✓ WIRED LOCALLY | Dispatch target is compared with the normalized `kubectl get` image; completion is required before receipt write. |
-| IO archive | Pages receipt and purge evidence | checksum → extract → current Pages ID/URL → Wrangler deploy → final receipt → purge JSON | ✓ WIRED LOCALLY | The receipt carries prior deployment URL and the workflow retains `io-purge.json`. |
-| Provider receipts | live verifier | evidence job passes both `--provider-evidence` paths | ✓ WIRED LOCALLY | Live verifier requires CN digest-pinned Kubernetes reference and completed rollout, plus IO Pages deployment ID/URL. |
-| Local workflow | production providers | published GitHub Actions workflow and real credentials | ✗ NOT WIRED REMOTELY | Both probed default branches lack the workflow, so this link has no executable production path. |
+| Behavior | Command or evidence | Result |
+| --- | --- | --- |
+| Immutable artifact contract | `npm run release:artifact-regression` | 6 passed, 0 failed |
+| Cloudflare purge boundary | `npm run release:purge-cloudflare-regression` | 3 passed, 0 failed |
+| Local live matrix | `npm run verify:guide-live-regression` | 5 passed, 0 failed |
+| Release workflow structure | `node --test scripts/verify-release.test.js` | 10 passed, 1 documented case-sensitive skip |
+| Production build | `npm run build` | Next.js build and 3,695 static pages completed, exit 0 |
+| Strict public matrix | `node scripts/verify-guide-live.js --provider-evidence ...` | `status=passed`; 18 routes and 4 support surfaces |
+| Provider delivery | [Run 32053216857](https://github.com/labring/fastgpt-home/actions/runs/32053216857) | verify/package/deploy/evidence jobs all successful |
 
-### Data-Flow Trace (Level 4)
+## Requirements Coverage
 
-| Artifact | Data Variable | Source | Produces Real Data | Status |
-| --- | --- | --- | --- |
-| Release archive | route inventory, tree and archive digests | retained Phase 7 output plus registry-backed expectations | Yes, in local regression fixtures | ✓ FLOWING |
-| CN release path | current image → rollback target → digest-pinned rollout → receipt | Kubernetes `kubectl get deployment` and build digest | Source path and ordering test pass; provider run absent | ⚠️ BLOCKED REMOTELY |
-| IO release path | previous production ID/URL or `initial-production` sentinel → rollback target → deployment ID/URL → purge evidence | Wrangler deployment lists and Pages deployment output | Source path and ordering test pass; provider run absent | ⚠️ BLOCKED REMOTELY |
-| Public live report | response/status/headers/body digest → receipt comparison | public HTTP and explicit provider receipts | Public HTTP data flows; current release/receipts absent | ⚠️ BLOCKED |
+| Requirement | Status | Evidence |
+| --- | --- | --- |
+| DEPLOY-01 | ✓ VERIFIED | Immutable CN and IO artifacts were consumed by the production workflow; deployed provider revisions, archive/tree/artifact digests, and rollback targets are recorded in final receipts. |
+| DEPLOY-02 | ✓ VERIFIED | Both domains expose 9 Guide routes, 2 support surfaces, status 200, localized H1, self canonical, reciprocal alternates, indexability, sitemap membership, cache freshness, no-store manifests, and matching revision headers. |
 
-### Behavioral Spot-Checks
+## Disconfirmation Findings
 
-| Behavior | Command | Result | Status |
-| --- | --- | --- | --- |
-| Immutable archive validation | `npm run release:artifact-regression` | 6 passed, 0 failed | ✓ PASS |
-| Cloudflare purge boundary | `npm run release:purge-cloudflare-regression` | 3 passed, 0 failed | ✓ PASS |
-| Local live matrix | `npm run verify:guide-live-regression` | 4 passed, 0 failed | ✓ PASS |
-| Release workflow structure | `node --test scripts/verify-release.test.js` | 10 passed, 1 documented case-sensitive filesystem skip | ✓ PASS |
-| Release source graph | `npm run verify:release -- --source-only` | passed | ✓ PASS |
-| Workflow YAML and dispatch/sequencing | Ruby YAML parse plus required-input/order assertions | parsed; CN and IO provider reads precede mutation; CN final receipt follows rollout | ✓ PASS |
-| Public production matrix | `node scripts/verify-guide-live.js --allow-blocked-baseline --report .planning/phases/08-production-delivery-live-verification/08-LIVE-EVIDENCE.json` | exit 2; 18 Guide 404s, 2 sitemap 200s, and 2 manifest 404s | ✗ BLOCKED |
+- No route, sitemap, manifest, cache, revision, or provider-receipt failures remain in the strict live report.
+- The IO first publish uses the explicit `initial-production` rollback sentinel with a null previous deployment URL; this is recorded as the expected first-publish state.
+- The local case-insensitive filesystem skip remains a documented host limitation; the hosted Ubuntu verification job passed the production release gate.
 
-### Requirements Coverage
-
-| Requirement | Source Plan | Description | Status | Evidence |
-| --- | --- | --- | --- | --- |
-| DEPLOY-01 | 08-01, 08-02 | Immutable CN/IO provider delivery with recorded revisions and rollback targets | ✗ BLOCKED | Provider-safe local wiring passes, while no remote workflow is published or has produced authenticated provider receipts, revisions, rollback records, or a release bundle. |
-| DEPLOY-02 | 08-03 | Both Guide hubs and 16 articles have complete public health/revision evidence | ✗ BLOCKED | The fresh public report records 18 Guide 404s and 2 manifest 404s; strict verification requires 200 responses and final receipts. |
-
-### Anti-Patterns and Disconfirmation Findings
-
-| Area | Finding | Severity | Impact |
-| --- | --- | --- | --- |
-| Workflow sequencing | Required dispatch-target and ordering assertions pass: provider reads precede mutation; CN receipt follows a completed rollout. | ℹ️ INFO | The earlier local source gap is closed. |
-| Structural regression scope | The workflow test proves source ordering and receipt fields. A hosted workflow run with real Kubernetes/Cloudflare responses remains unexercised. | ⚠️ WARNING | Production receipts remain required evidence for DEPLOY-01. |
-| Local fixture scope | The 18-route fixture passes against controlled content, while the public domains currently return 404. | 🛑 BLOCKER | DEPLOY-02 remains blocked. |
-| Source hygiene | No unresolved `TBD`, `FIXME`, `XXX`, `TODO`, `HACK`, or user-visible placeholder markers appeared in phase implementation files. | ℹ️ INFO | No debt-marker blocker. |
-
-### Gaps Summary
-
-The local delivery workflow now enforces provider-derived rollback capture, CN tag-to-digest normalization through authenticated GHCR, explicit IO first-publish sentinel handling, final CN rollout receipts, IO prior-deployment and purge evidence, and completed-rollout receipt validation. Production evidence remains absent: the workflow has not reached either configured remote default branch, no authorized provider run has emitted receipts, and the public Guide release still returns 404. DEPLOY-01 and DEPLOY-02 remain blocked until that remote promotion and strict live verification complete.
+**Verification result:** Phase 8 DEPLOY-01 and DEPLOY-02 are satisfied by the immutable release artifacts, provider receipts, and strict public evidence from run 32053216857.
 
 ---
 
-_Verified: 2026-08-17T13:23:31Z_
-_Verifier: the agent (gsd-verifier)_
+_Verified: 2026-08-17T18:12:50Z_  
+_Verifier: Phase 8 production workflow and strict live verifier_
+

@@ -19,6 +19,17 @@ const assetPolicies = new Map([
   ['manufacturing-itops-invoice-audit', 'requested-unapproved'],
   ['education-retail-support-insight', 'requested-unapproved']
 ]);
+const publicationGroups = new Map([
+  ['saas-platform-enterprise-gaps', 'decision'],
+  ['self-build-three-year-tco', 'decision'],
+  ['server-sizing-guide', 'decision'],
+  ['complex-doc-golden-set', 'decision'],
+  ['support-bot-four-steps', 'implementation'],
+  ['manufacturing-itops-invoice-audit', 'industry'],
+  ['pharma-compliance-docs', 'industry'],
+  ['education-retail-support-insight', 'industry']
+]);
+const approvedGuideDate = '2026-08-11';
 
 function fail(slug, message) {
   throw new Error(`${slug}: ${message}`);
@@ -26,6 +37,15 @@ function fail(slug, message) {
 
 function sha256(value) {
   return crypto.createHash('sha256').update(value).digest('hex');
+}
+
+function isApprovedGuideDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== approvedGuideDate) {
+    return false;
+  }
+  const [year, month, day] = value.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
 
 function parseArgs(argv = process.argv.slice(2)) {
@@ -126,7 +146,10 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
     if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(entry.slug || '')) fail('registry', 'invalid slug');
     if (slugs.has(entry.slug)) fail(entry.slug, 'duplicate slug');
     slugs.add(entry.slug);
-    if (Object.keys(entry).sort().join(',') !== 'en,slug,zh') fail(entry.slug, 'exact zh/en locale pair required');
+    if (Object.keys(entry).sort().join(',') !== 'en,group,slug,zh') {
+      fail(entry.slug, 'exact zh/en locale pair and group required');
+    }
+    if (entry.group !== publicationGroups.get(entry.slug)) fail(entry.slug, 'invalid publication group');
     for (const locale of locales) {
       const snapshot = entry[locale];
       if (!snapshot || snapshot.sourceName !== path.basename(snapshot.sourceName) || /[\\/]|\.\./.test(snapshot.sourceName)) {
@@ -144,6 +167,9 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       if (!Array.isArray(snapshot.sourceInternalLinkLabels) || !Array.isArray(snapshot.configuredInternalLinks)) {
         fail(entry.slug, `${locale}: invalid link directives`);
       }
+      for (const field of ['datePublished', 'dateModified']) {
+        if (!isApprovedGuideDate(snapshot[field])) fail(entry.slug, `${locale}: invalid ${field}`);
+      }
       if (
         snapshot.assetPolicy?.status !== assetPolicies.get(entry.slug) &&
         snapshot.assetPolicy?.status !== 'required'
@@ -157,9 +183,13 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
           !asset.path.startsWith('/') ||
           asset.path.includes('..') ||
           !asset.alt?.trim() ||
+          !Number.isInteger(asset.width) ||
+          !Number.isInteger(asset.height) ||
+          asset.width <= 0 ||
+          asset.height <= 0 ||
           !fs.existsSync(path.join(rootDir, 'public', asset.path))
         ) {
-          fail(entry.slug, `${locale}: required asset is missing or invalid`);
+          fail(entry.slug, `${locale}: required asset is missing, invalid, or lacks positive dimensions`);
         }
       }
       for (const mapping of snapshot.configuredInternalLinks) {

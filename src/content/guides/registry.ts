@@ -2,12 +2,15 @@ import registry from './registry.json';
 
 export const GUIDE_LOCALES = ['zh', 'en'] as const;
 export type GuideLocale = (typeof GUIDE_LOCALES)[number];
+export const GUIDE_PUBLICATION_GROUPS = ['decision', 'implementation', 'industry'] as const;
+export type GuidePublicationGroup = (typeof GUIDE_PUBLICATION_GROUPS)[number];
+export type GuideIsoDate = `${number}-${number}-${number}`;
 export const GUIDE_SCHEMA_TYPES = ['Article', 'BreadcrumbList', 'HowTo'] as const;
 export type GuideSchemaType = (typeof GUIDE_SCHEMA_TYPES)[number];
 
 export type GuideAssetPolicy =
   | { status: 'none' | 'requested-unapproved' | 'source-exception' }
-  | { status: 'required'; path: string; alt: string };
+  | { status: 'required'; path: string; alt: string; width: number; height: number };
 
 export interface GuideInternalLinkMapping {
   label: string;
@@ -30,10 +33,13 @@ export interface GuideSourceSnapshot {
   sourceInternalLinkLabels: string[];
   assetPolicy: GuideAssetPolicy;
   configuredInternalLinks: GuideInternalLinkMapping[];
+  datePublished: GuideIsoDate;
+  dateModified: GuideIsoDate;
 }
 
 export interface GuideEntry {
   slug: string;
+  group: GuidePublicationGroup;
   zh: GuideSourceSnapshot;
   en: GuideSourceSnapshot;
 }
@@ -50,6 +56,13 @@ function isBasename(value: unknown): value is string {
     !value.includes('\\') &&
     !value.includes('..')
   );
+}
+
+function isApprovedGuideDate(value: unknown): value is GuideIsoDate {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== '2026-08-11') return false;
+  const [year, month, day] = value.split('-').map(Number);
+  const date = new Date(Date.UTC(year, month - 1, day));
+  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
 
 function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): asserts value is GuideSourceSnapshot {
@@ -69,6 +82,9 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
     'sourceImageDirective'
   ]) {
     if (typeof snapshot[field] !== 'string') fail(`${slug}:${locale}: invalid ${field}`);
+  }
+  for (const field of ['datePublished', 'dateModified']) {
+    if (!isApprovedGuideDate(snapshot[field])) fail(`${slug}:${locale}: invalid ${field}`);
   }
   if (
     !Array.isArray(snapshot.schemaTokens) ||
@@ -90,9 +106,15 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
       !policy.path.startsWith('/') ||
       policy.path.includes('..') ||
       typeof policy.alt !== 'string' ||
-      !policy.alt.trim()
+      !policy.alt.trim() ||
+      typeof policy.width !== 'number' ||
+      typeof policy.height !== 'number' ||
+      !Number.isInteger(policy.width) ||
+      !Number.isInteger(policy.height) ||
+      policy.width <= 0 ||
+      policy.height <= 0
     ) {
-      fail(`${slug}:${locale}: required asset needs a contained public path and alt`);
+      fail(`${slug}:${locale}: required asset needs a contained public path, alt, and positive dimensions`);
     }
   }
   for (const mapping of snapshot.configuredInternalLinks as unknown[]) {
@@ -124,7 +146,10 @@ function validateRegistry(value: unknown): asserts value is { entries: GuideEntr
     if (slugs.has(record.slug)) fail(`${record.slug}: duplicate slug`);
     slugs.add(record.slug);
     const keys = Object.keys(record).sort().join(',');
-    if (keys !== 'en,slug,zh') fail(`${record.slug}: exact zh/en locale pair required`);
+    if (keys !== 'en,group,slug,zh') fail(`${record.slug}: exact zh/en locale pair and group required`);
+    if (!GUIDE_PUBLICATION_GROUPS.includes(record.group as GuidePublicationGroup)) {
+      fail(`${record.slug}: invalid publication group`);
+    }
     for (const locale of GUIDE_LOCALES) validateSnapshot(record.slug, locale, record[locale]);
   }
 }

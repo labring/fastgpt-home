@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "startedAt": "2026-08-17T12:46:27.720Z",
+  "status": "blocked",
+  "variants": {
+    "cn": {
+      "routes": [
+        {
+          "slug": "hub",
+          "path": "/guide",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "saas-platform-enterprise-gaps",
+          "path": "/guide/saas-platform-enterprise-gaps",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/saas-platform-enterprise-gaps",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "self-build-three-year-tco",
+          "path": "/guide/self-build-three-year-tco",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/self-build-three-year-tco",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "server-sizing-guide",
+          "path": "/guide/server-sizing-guide",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/server-sizing-guide",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "complex-doc-golden-set",
+          "path": "/guide/complex-doc-golden-set",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/complex-doc-golden-set",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "support-bot-four-steps",
+          "path": "/guide/support-bot-four-steps",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/support-bot-four-steps",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "manufacturing-itops-invoice-audit",
+          "path": "/guide/manufacturing-itops-invoice-audit",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/manufacturing-itops-invoice-audit",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "pharma-compliance-docs",
+          "path": "/guide/pharma-compliance-docs",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/pharma-compliance-docs",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        },
+        {
+          "slug": "education-retail-support-insight",
+          "path": "/guide/education-retail-support-insight",
+          "status": 404,
+          "finalUrl": "https://fastgpt.cn/guide/education-retail-support-insight",
+          "headers": {
+            "etag": "W/\"6a82a29e-be25\""
+          },
+          "bodyDigest": "25624e908007a36cfe6cce64267491520a32c62cc5ef7c2aa60a194b89575492",
+          "failures": [
+            "status=404",
+            "sitemap",
+            "cache"
+          ]
+        }
+      ],
+      "failures": [
+        "/__release/manifest.json:status=404",
+        "/__release/manifest.json:SyntaxError",
+        "/guide:status=404,sitemap,cache",
+        "/guide/saas-platform-enterprise-gaps:status=404,sitemap,cache",
+        "/guide/self-build-three-year-tco:status=404,sitemap,cache",
+        "/guide/server-sizing-guide:status=404,sitemap,cache",
+        "/guide/complex-doc-golden-set:status=404,sitemap,cache",
+        "/guide/support-bot-four-steps:status=404,sitemap,cache",
+        "/guide/manufacturing-itops-invoice-audit:status=404,sitemap,cache",
+        "/guide/pharma-compliance-docs:status=404,sitemap,cache",
+        "/guide/education-retail-support-insight:status=404,sitemap,cache"
+      ]
+    },
+    "io": {
+      "routes": [
+        {
+          "slug": "hub",
+          "path": "/guide",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "saas-platform-enterprise-gaps",
+          "path": "/guide/saas-platform-enterprise-gaps",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/saas-platform-enterprise-gaps",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "self-build-three-year-tco",
+          "path": "/guide/self-build-three-year-tco",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/self-build-three-year-tco",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "server-sizing-guide",
+          "path": "/guide/server-sizing-guide",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/server-sizing-guide",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "complex-doc-golden-set",
+          "path": "/guide/complex-doc-golden-set",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/complex-doc-golden-set",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "support-bot-four-steps",
+          "path": "/guide/support-bot-four-steps",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/support-bot-four-steps",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "manufacturing-itops-invoice-audit",
+          "path": "/guide/manufacturing-itops-invoice-audit",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/manufacturing-itops-invoice-audit",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "pharma-compliance-docs",
+          "path": "/guide/pharma-compliance-docs",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/pharma-compliance-docs",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        },
+        {
+          "slug": "education-retail-support-insight",
+          "path": "/guide/education-retail-support-insight",
+          "status": 404,
+          "finalUrl": "https://fastgpt.io/guide/education-retail-support-insight",
+          "headers": {
+            "cache-control": "no-store",
+            "cf-cache-status": "DYNAMIC"
+          },
+          "bodyDigest": "405fd9d37f3b09c5a6609b969c99626455a019b495c66953e685566e88f61b16",
+          "failures": [
+            "status=404",
+            "sitemap"
+          ]
+        }
+      ],
+      "failures": [
+        "/__release/manifest.json:status=404",
+        "/__release/manifest.json:SyntaxError",
+        "/guide:status=404,sitemap",
+        "/guide/saas-platform-enterprise-gaps:status=404,sitemap",
+        "/guide/self-build-three-year-tco:status=404,sitemap",
+        "/guide/server-sizing-guide:status=404,sitemap",
+        "/guide/complex-doc-golden-set:status=404,sitemap",
+        "/guide/support-bot-four-steps:status=404,sitemap",
+        "/guide/manufacturing-itops-invoice-audit:status=404,sitemap",
+        "/guide/pharma-compliance-docs:status=404,sitemap",
+        "/guide/education-retail-support-insight:status=404,sitemap"
+      ]
+    }
+  },
+  "providerEvidence": [],
+  "finishedAt": "2026-08-17T12:46:36.369Z"
+}

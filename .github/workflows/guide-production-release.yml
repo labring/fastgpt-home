@@ -158,3 +158,17 @@ jobs:
           if [ '${{ inputs.purge_cloudflare }}' = 'true' ]; then node scripts/purge-cloudflare-cache.js --url https://fastgpt.io/guide --evidence-out io-purge.json; fi
       - uses: actions/upload-artifact@v4
         with: { name: guide-io-provider-evidence-${{ github.sha }}, path: 'io-provider-receipt.json\nio-deployments.json\nio-purge.json', if-no-files-found: ignore, retention-days: 30 }
+
+  evidence:
+    needs: [deploy-cn, deploy-io]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with: { name: guide-cn-provider-evidence-${{ github.sha }}, path: evidence/cn }
+      - uses: actions/download-artifact@v4
+        with: { name: guide-io-provider-evidence-${{ github.sha }}, path: evidence/io }
+      - name: Fail closed on public Guide, cache, manifest, and provider evidence drift
+        run: node scripts/verify-guide-live.js --base-url-cn https://fastgpt.cn --base-url-io https://fastgpt.io --provider-evidence evidence/cn/cn-provider-receipt.json --provider-evidence evidence/io/io-provider-receipt.json --report guide-live-evidence.json
+      - uses: actions/upload-artifact@v4
+        with: { name: guide-live-evidence-${{ github.sha }}, path: 'guide-live-evidence.json\nguide-live-evidence.json.txt', retention-days: 30 }

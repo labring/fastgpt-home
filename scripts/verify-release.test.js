@@ -104,6 +104,21 @@ test('successful verified outputs can be retained before lifecycle cleanup', () 
   assert(variantLoop.indexOf('retainSuccessArtifacts') < variantLoop.indexOf('clearBuildArtifacts()', variantLoop.indexOf('runVariantChecks')));
 });
 
+test('production delivery consumes retained archives and records immutable provider evidence', () => {
+  const workflow = fs.readFileSync(path.join(ROOT, '.github/workflows/guide-production-release.yml'), 'utf8');
+  const dockerfile = fs.readFileSync(path.join(ROOT, 'Dockerfile'), 'utf8');
+  const nginx = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
+  const headers = fs.readFileSync(path.join(ROOT, 'public/_headers'), 'utf8');
+  for (const marker of ['verify:release -- --retain-success-artifacts', 'sha256sum -c', 'tar -xzf', 'target: release-runtime', 'docker/build-push-action@v5', 'kubectl set image', 'kubectl rollout status', 'cloudflare/wrangler-action@v3', 'pages deploy release-out', '--commit-hash', 'pages deployment list --project-name=fastgpt-home --json', 'rollbackTarget', 'provider-receipt']) assert(workflow.includes(marker), marker);
+  assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
+  assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));
+  assert.doesNotMatch(dockerfile.slice(dockerfile.indexOf('AS release-runtime')), /npm run build/);
+  assert.match(nginx, /location = \/__release\/manifest\.json/);
+  assert.match(nginx, /Cache-Control "no-store"/);
+  assert.match(headers, /\/__release\/manifest\.json\n  Cache-Control: no-store/);
+  assert.doesNotMatch(workflow, /echo \$\{\{ secrets\./);
+});
+
 test('P1 successful evidence keeps the emitted KiB measurement', () => {
   const output = 'P1 verification passed for https://fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
   assert.equal(extractP1SuccessMeasurement(output), '259.8 KiB initial JavaScript gzip');

@@ -51,7 +51,7 @@ RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx
 RUN npm install
 RUN npm run build
 
-FROM fholzer/nginx-brotli:latest
+FROM fholzer/nginx-brotli:latest AS runtime
 
 LABEL org.opencontainers.image.source="https://github.com/labring/fastgpt-home"
 
@@ -60,3 +60,18 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY nginx-security-headers.conf /etc/nginx/security-headers.conf
 COPY --from=builder /app/.next/nginx-redirects.conf /etc/nginx/generated-redirects.conf
 RUN nginx -t
+
+# Immutable release path: CI extracts a checksum-verified release-out tree before build.
+FROM fholzer/nginx-brotli:latest AS release-runtime
+ARG RELEASE_SOURCE_COMMIT
+ARG RELEASE_TREE_DIGEST
+ARG RELEASE_ROLLBACK_TARGET
+ARG RELEASE_ARTIFACT_ID
+ARG RELEASE_PROVIDER
+COPY release-out/ /usr/share/nginx/html/
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx-security-headers.conf /etc/nginx/security-headers.conf
+RUN test -n "$RELEASE_SOURCE_COMMIT" && test -n "$RELEASE_TREE_DIGEST" && test -n "$RELEASE_ARTIFACT_ID" && test "$RELEASE_PROVIDER" = "kubernetes" \
+  && printf '' > /etc/nginx/generated-redirects.conf \
+  && sed -i "s/__RELEASE_REVISION__/$RELEASE_ARTIFACT_ID/g; s/__RELEASE_ARTIFACT__/$RELEASE_TREE_DIGEST/g" /etc/nginx/conf.d/default.conf \
+  && nginx -t

@@ -70,10 +70,22 @@ result: pass
 source: automated
 coverage_id: D3-0604
 
+### 10. Hub responsive and keyboard surface
+expected: Both owned Guide hubs expose localized 4/1/3 card groups with visible focus treatment, narrow-screen one-column layout, and article links that preserve the owned `/guide/<slug>` graph.
+result: pass
+source: evidence-review
+evidence: GuideHubPage semantic sections/links, GuideHubPage.module.css focus-visible and responsive rules, and `npm run verify:guide-seo-graph`.
+
+### 11. Conditional optional article surfaces
+expected: The article image and related-link branches remain absent for the current corpus and activate only for validated required-asset or configured-link records with owned targets.
+result: pass
+source: evidence-review
+evidence: Registry policy gate plus isolated required-asset/configured-link mutation coverage in `scripts/verify-guide-seo-graph.test.js`.
+
 ## Summary
 
-total: 9
-passed: 9
+total: 11
+passed: 11
 issues: 0
 pending: 0
 blocked: 0
@@ -82,12 +94,3 @@ skipped: 0
 ## Gaps
 
 None.
-
-## Deferred Follow-Ups
-
-- test: browser-1
-  idea: "Run desktop and narrow-viewport browser checks for both owned Guide hubs, including keyboard focus and one article navigation per group."
-  deferred_at: 2026-08-17
-- test: optional-1
-  idea: "Inspect a staging registry fixture after an approved required asset or configured internal-link mapping is introduced."
-  deferred_at: 2026-08-17

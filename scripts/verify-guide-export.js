@@ -197,7 +197,12 @@ function guideRouteFromFile(outDir, filePath) {
   const relative = path.relative(outDir, filePath).split(path.sep).join('/');
   if (relative === 'guide.html' || relative === 'guide/index.html') return '/guide';
   const match = relative.match(/^guide\/([^/]+)(?:\.html|\/index\.html)$/);
-  return match ? `/guide/${decodeURIComponent(match[1])}` : undefined;
+  if (!match) return undefined;
+  try {
+    return `/guide/${decodeURIComponent(match[1])}`;
+  } catch {
+    return undefined;
+  }
 }
 
 function collectGuideRoutes(outDir, expectation) {

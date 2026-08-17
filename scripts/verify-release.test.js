@@ -154,6 +154,7 @@ test('production delivery consumes retained archives and records immutable provi
   assert(workflow.includes('--inject-release-headers'));
   assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));
+  assert(dockerfile.includes('map $uri $locale_redirect_target'));
   assert.doesNotMatch(dockerfile.slice(dockerfile.indexOf('AS release-runtime')), /npm run build/);
   assert.match(nginx, /location = \/__release\/manifest\.json/);
   assert.match(nginx, /Cache-Control "no-store"/);

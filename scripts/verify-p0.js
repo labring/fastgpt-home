@@ -110,6 +110,10 @@ function verifyNginxHeaders() {
     'Docker build does not enforce its CN-only publication boundary'
   );
   assert(dockerfile.includes('RUN nginx -t'), 'Docker image does not validate the Nginx config');
+  assert(
+    dockerfile.includes('map $uri $locale_redirect_target'),
+    'Release runtime must define the Nginx redirect map before config validation'
+  );
 
   const redirectMap = fs.readFileSync(path.join(rootDir, '.next', 'nginx-redirects.conf'), 'utf8');
   if (variant === 'cn') {

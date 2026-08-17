@@ -48,7 +48,6 @@ export const DEFAULT_ATTRIBUTION_SOURCE = configuredAttributionSource?.slice(0, 
 export interface TouchPoint {
   channel_l1: ChannelL1;
   channel_l2: string; // 具体来源，如 Bing / 豆包 / 知乎；无则空串
-  source: string; // 显式业务来源；无则“未知”
   is_paid: boolean;
   label: string; // 人类可读：l2 ? `${l1中文? no -> l1} · ${l2}` : l1（这里用 l1 key 拼，中文在后端映射）
   utm_source: string;
@@ -177,7 +176,6 @@ export function classifyVisit(input: {
   now: string;
 }): TouchPoint {
   const params = new URLSearchParams(input.search || '');
-  const source = (params.get('source') || '').trim() || DEFAULT_ATTRIBUTION_SOURCE;
   const utm_source = params.get('utm_source') || '';
   const utm_medium = (params.get('utm_medium') || '').toLowerCase();
   const utm_campaign = params.get('utm_campaign') || '';
@@ -192,7 +190,6 @@ export function classifyVisit(input: {
     '';
 
   const base = {
-    source,
     utm_source,
     utm_medium,
     utm_campaign,
@@ -331,17 +328,9 @@ export function trackVisit(): void {
     // first_touch：只在第一次写入
     const first = stored?.first ?? current;
 
-    // last_touch：非 Direct 或显式 source 才更新；无 source 的 Direct 不覆盖已有
+    // last_touch：Last Non-Direct Click —— 非 Direct 才更新；Direct 不覆盖已有
     let last = stored?.last ?? current;
-    if (current.channel_l1 !== 'direct' || current.source !== DEFAULT_ATTRIBUTION_SOURCE) {
-      last = {
-        ...current,
-        source:
-          current.source === DEFAULT_ATTRIBUTION_SOURCE
-            ? stored?.last.source ?? DEFAULT_ATTRIBUTION_SOURCE
-            : current.source
-      };
-    }
+    if (current.channel_l1 !== 'direct') last = current;
 
     const next: StoredAttribution = { visitor_id, first, last };
     saveAttributionSnapshot(next, getStorageOptions());
@@ -403,10 +392,8 @@ export function getAttributionPayload(): AttributionPayload {
 /** Return the explicit source for the current business submission only. */
 export function getSubmissionSource(): string {
   if (typeof window === 'undefined') return DEFAULT_ATTRIBUTION_SOURCE;
-  const stored = loadStoredAttribution();
-  if (!stored) return DEFAULT_ATTRIBUTION_SOURCE;
-  const { first, last } = stored;
-  return last.source !== DEFAULT_ATTRIBUTION_SOURCE ? last.source : first.source;
+  const source = new URLSearchParams(window.location.search).get('source')?.trim();
+  return source?.slice(0, 128) || DEFAULT_ATTRIBUTION_SOURCE;
 }
 
 /** Submit anonymous attribution to CRM after the local browser snapshot changes. */

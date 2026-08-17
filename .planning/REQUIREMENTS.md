@@ -74,28 +74,28 @@ Roadmap creation assigns each v1.1 requirement to exactly one phase.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| GUIDE-01 | TBD | Pending |
-| GUIDE-02 | TBD | Pending |
-| GUIDE-03 | TBD | Pending |
-| HUB-01 | TBD | Pending |
-| ARTICLE-01 | TBD | Pending |
-| ARTICLE-02 | TBD | Pending |
-| ARTICLE-03 | TBD | Pending |
-| SEO-04 | TBD | Pending |
-| SEO-05 | TBD | Pending |
-| SEO-06 | TBD | Pending |
-| SEO-07 | TBD | Pending |
-| VERIFY-04 | TBD | Pending |
-| VERIFY-05 | TBD | Pending |
-| DEPLOY-01 | TBD | Pending |
-| DEPLOY-02 | TBD | Pending |
+| GUIDE-01 | Phase 5 | Pending |
+| GUIDE-02 | Phase 5 | Pending |
+| GUIDE-03 | Phase 5 | Pending |
+| HUB-01 | Phase 6 | Pending |
+| ARTICLE-01 | Phase 6 | Pending |
+| ARTICLE-02 | Phase 6 | Pending |
+| ARTICLE-03 | Phase 6 | Pending |
+| SEO-04 | Phase 6 | Pending |
+| SEO-05 | Phase 6 | Pending |
+| SEO-06 | Phase 6 | Pending |
+| SEO-07 | Phase 6 | Pending |
+| VERIFY-04 | Phase 7 | Pending |
+| VERIFY-05 | Phase 7 | Pending |
+| DEPLOY-01 | Phase 8 | Pending |
+| DEPLOY-02 | Phase 8 | Pending |
 
 **Coverage:**
 
 - v1.1 requirements: 15 total
-- Mapped to phases: 0
-- Unmapped: 15
+- Mapped to phases: 15
+- Unmapped: 0
 
 ---
 *Requirements defined: 2026-08-17*
-*Last updated: 2026-08-17 after initial v1.1 definition*
+*Last updated: 2026-08-17 after v1.1 roadmap creation*

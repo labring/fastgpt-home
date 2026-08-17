@@ -16,7 +16,8 @@ async function fixture(variant, hosts) {
     const page = expected.routes.find((item) => item.route === route);
     if (!page) { response.statusCode = 404; return response.end(); }
     response.setHeader('Cache-Control', 'public, max-age=60'); response.setHeader('X-Release-Revision', manifest.releaseRevision); response.setHeader('X-Release-Artifact', manifest.artifactDigest);
-    return response.end(`<h1>${page.h1}</h1><link rel="canonical" href="${hosts[variant]}${route}"><link rel="alternate" hreflang="zh-CN" href="${hosts.cn}${route}"><link rel="alternate" hreflang="en" href="${hosts.io}${route}"><link rel="alternate" hreflang="x-default" href="${hosts.io}${route}"><meta name="robots" content="index,follow">`);
+    const escapedH1 = page.h1.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
+    return response.end(`<h1>${escapedH1}</h1><link rel="canonical" href="${hosts[variant]}${route}"><link rel="alternate" hreflang="zh-CN" href="${hosts.cn}${route}"><link rel="alternate" hreflang="en" href="${hosts.io}${route}"><link rel="alternate" hreflang="x-default" href="${hosts.io}${route}"><meta name="robots" content="index,follow">`);
   });
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
   return { server, manifest, port: server.address().port };

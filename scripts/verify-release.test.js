@@ -109,6 +109,7 @@ test('production delivery consumes retained archives and records immutable provi
   const dockerfile = fs.readFileSync(path.join(ROOT, 'Dockerfile'), 'utf8');
   const nginx = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
   const headers = fs.readFileSync(path.join(ROOT, 'public/_headers'), 'utf8');
+  const guideSeo = fs.readFileSync(path.join(ROOT, 'src/lib/guideSeo.ts'), 'utf8');
   assert.match(workflow, /RELEASE_ROOT: release-root/);
   assert.doesNotMatch(workflow, /RELEASE_ROOT:.*runner\.temp/);
   assert.equal((workflow.match(/path: release-root/g) || []).length, 2);
@@ -162,6 +163,7 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(nginx, /location = \/__release\/manifest\.json/);
   assert.match(nginx, /Cache-Control "no-store"/);
   assert.match(headers, /\/__release\/manifest\.json\n  Cache-Control: no-store/);
+  assert.equal((guideSeo.match(/robots: indexable \? \{ index: true, follow: true \}/g) || []).length, 2);
   assert.doesNotMatch(workflow, /echo \$\{\{ secrets\./);
 });
 

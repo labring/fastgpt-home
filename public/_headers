@@ -18,9 +18,6 @@
 /logo.svg
   Cache-Control: public, max-age=86400
 
-/__release/manifest.json
-  Cache-Control: no-store
-
 # HTML pages — 1 hour cache with stale-while-revalidate
 /*
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
@@ -31,3 +28,7 @@
   Permissions-Policy: camera=(), microphone=(), geolocation=()
   Cross-Origin-Opener-Policy: same-origin-allow-popups
   Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' *.googletagmanager.com *.baidu.com hm.baidu.com track.fastgpt.cn *.feishu.cn cloudflareinsights.com *.cloudflareinsights.com rybbit.io *.rybbit.io www.clarity.ms *.clarity.ms; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' *.fastgpt.io *.fastgpt.cn *.sealos.io *.sealoshzh.site *.googletagmanager.com *.google-analytics.com cloudflareinsights.com *.cloudflareinsights.com rybbit.io *.rybbit.io www.clarity.ms *.clarity.ms api.github.com; frame-ancestors 'none'; base-uri 'self'; form-action 'self'; media-src 'self' https:;
+
+# Release identity must remain uncached so revision evidence reflects the deployed artifact.
+/__release/manifest.json
+  Cache-Control: no-store

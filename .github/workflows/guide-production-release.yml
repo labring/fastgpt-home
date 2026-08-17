@@ -214,7 +214,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > io-previous-deployments.json
-          node -e "const fs=require('fs');const raw=JSON.parse(fs.readFileSync('io-previous-deployments.json'));const rows=Array.isArray(raw)?raw:(raw.result||[]);const d=rows[0]||{};if(!d.id||!d.url)throw new Error('blocked: current Pages deployment ID/URL unavailable');if(d.id!=='${{ inputs.io_rollback_target }}')throw new Error('blocked: io rollback input does not match provider current deployment');fs.appendFileSync(process.env.GITHUB_OUTPUT,'id='+d.id+'\nurl='+d.url+'\n')"
+          node -e "const fs=require('fs');const raw=JSON.parse(fs.readFileSync('io-previous-deployments.json'));const rows=Array.isArray(raw)?raw:(raw.result||[]);const d=rows[0]||{};const id=d.id||d.deployment_id||d.short_id;const url=d.url||d.deployment_url||d.metadata?.url||(Array.isArray(d.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: current Pages deployment ID/URL unavailable');if(id!=='${{ inputs.io_rollback_target }}')throw new Error('blocked: io rollback input does not match provider current deployment');fs.appendFileSync(process.env.GITHUB_OUTPUT,'id='+id+'\nurl='+url+'\n')"
       - name: Verify and extract exact IO archive
         id: io_identity
         run: |
@@ -239,7 +239,7 @@ jobs:
           PROJECT_NAME: ${{ env.PROJECT_NAME }}
         run: |
           npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > io-deployments.json
-          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const rows=JSON.parse(fs.readFileSync('io-deployments.json'));const d=Array.isArray(rows)?rows[0]:(rows.result||[])[0]||{};if(!d.id||!d.url)throw new Error('blocked: Pages deployment ID/URL unavailable');if(!process.env.ROLLBACK_ID)throw new Error('blocked: provider rollback target unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_ID,provider:{project:process.env.PROJECT_NAME,deploymentId:d.id,deploymentUrl:d.url,previousDeploymentUrl:process.env.ROLLBACK_URL},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
+          node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const rows=JSON.parse(fs.readFileSync('io-deployments.json'));const d=Array.isArray(rows)?rows[0]:(rows.result||[])[0]||{};const id=d.id||d.deployment_id||d.short_id;const url=d.url||d.deployment_url||d.metadata?.url||(Array.isArray(d.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: Pages deployment ID/URL unavailable');if(!process.env.ROLLBACK_ID)throw new Error('blocked: provider rollback target unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_ID,provider:{project:process.env.PROJECT_NAME,deploymentId:id,deploymentUrl:url,previousDeploymentUrl:process.env.ROLLBACK_URL},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
           if [ '${{ inputs.purge_cloudflare }}' = 'true' ]; then node scripts/purge-cloudflare-cache.js --url https://fastgpt.io/guide --evidence-out io-purge.json; fi
       - uses: actions/upload-artifact@v4
         with:
@@ -324,33 +324,87 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
+          set +e
           npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > "$RUNNER_TEMP/io-deployments.json"
-          node - <<'NODE'
+          wrangler_status=$?
+          set -e
+          WRANGLER_STATUS="$wrangler_status" node - <<'NODE'
           const fs = require('node:fs');
-          const raw = JSON.parse(fs.readFileSync(process.env.RUNNER_TEMP + '/io-deployments.json', 'utf8'));
-          const rows = Array.isArray(raw) ? raw : raw.result || [];
-          const deployment = rows[0];
-          if (!deployment?.id || !deployment?.url) throw new Error('blocked: current IO Pages deployment ID/URL unavailable');
-          fs.writeFileSync('provider-audit-io.json', `${JSON.stringify({
+          const outputPath = 'provider-audit-io.json';
+          const sourcePath = process.env.RUNNER_TEMP + '/io-deployments.json';
+          const redact = (value, key = '') => {
+            if (/token|secret|password|authorization|credential|private.?key/i.test(key)) return '<redacted>';
+            if (Array.isArray(value)) return value.slice(0, 5).map((item) => redact(item));
+            if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).slice(0, 30).map(([k, v]) => [k, redact(v, k)]));
+            if (typeof value === 'string' && value.length > 512) return `${value.slice(0, 512)}<truncated>`;
+            return value;
+          };
+          const report = {
             schemaVersion: 1,
             capturedAt: new Date().toISOString(),
             provider: 'cloudflare-pages',
             project: process.env.PROJECT_NAME,
-            rollbackTarget: deployment.id,
-            deploymentId: deployment.id,
-            deploymentUrl: deployment.url,
             readOnly: true,
-          }, null, 2)}\n`);
+            status: 'blocked',
+            diagnostics: { wranglerExitCode: Number(process.env.WRANGLER_STATUS || 1) },
+          };
+          let raw;
+          let rawText = '';
+          try {
+            rawText = fs.readFileSync(sourcePath, 'utf8');
+            raw = JSON.parse(rawText);
+          } catch (error) {
+            report.blockedReason = 'wrangler output was not valid JSON';
+            report.diagnostics.parseError = error.name;
+            report.diagnostics.outputBytes = Buffer.byteLength(rawText);
+            fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);
+            console.error(`[provider-audit] ${JSON.stringify(report.diagnostics)}`);
+            process.exitCode = 1;
+          }
+          if (!raw) {
+            report.blockedReason ||= 'Wrangler returned an empty JSON value';
+            fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);
+            console.error(`[provider-audit] ${JSON.stringify(report.diagnostics)}`);
+            process.exitCode = 1;
+          }
+          if (raw) {
+            const rows = Array.isArray(raw) ? raw : Array.isArray(raw.result) ? raw.result : [];
+            const first = rows[0] && typeof rows[0] === 'object' ? rows[0] : null;
+            report.diagnostics.rawType = Array.isArray(raw) ? 'array' : typeof raw;
+            report.diagnostics.topLevelKeys = raw && typeof raw === 'object' && !Array.isArray(raw) ? Object.keys(raw).slice(0, 30) : [];
+            report.diagnostics.rowsLength = rows.length;
+            report.diagnostics.firstObjectKeys = first ? Object.keys(first).slice(0, 30) : [];
+            report.diagnostics.firstObjectValues = first ? redact(first) : null;
+            const deploymentId = first?.id || first?.deployment_id || first?.short_id || null;
+            const deploymentUrl = first?.url || first?.deployment_url || first?.metadata?.url || (Array.isArray(first?.aliases) ? first.aliases.find((value) => /^https?:\/\//.test(value)) : null) || null;
+            if (!deploymentId || !deploymentUrl) {
+              report.blockedReason = rows.length ? 'current Pages deployment is missing id or url' : 'Pages deployment list is empty';
+              report.diagnostics.derivedId = deploymentId;
+              report.diagnostics.derivedUrl = deploymentUrl;
+              process.exitCode = 1;
+            } else {
+              report.status = 'ready';
+              report.rollbackTarget = deploymentId;
+              report.deploymentId = deploymentId;
+              report.deploymentUrl = deploymentUrl;
+            }
+            fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);
+            if (report.status === 'blocked') console.error(`[provider-audit] ${JSON.stringify(report.diagnostics)}`);
+          }
           NODE
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: provider-audit-cn-${{ github.run_id }}
           path: provider-audit-cn.json
+          if-no-files-found: warn
           retention-days: 7
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: provider-audit-io-${{ github.run_id }}
           path: provider-audit-io.json
+          if-no-files-found: warn
           retention-days: 7
 
   evidence:

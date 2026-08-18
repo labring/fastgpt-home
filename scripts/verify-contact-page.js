@@ -18,13 +18,16 @@ const titles = {
 const variant = resolveSiteVariant();
 const defaultLocale = getDefaultLocale(variant);
 const publishedLocales = getPublishedLocaleCodes(variant);
+const contactLocales = publishedLocales.filter((locale) => titles[locale]);
 
 const pages = [
   ['contact.html', titles[defaultLocale] || titles.en],
-  ...publishedLocales.map((locale) => [
-    `${locale}/contact.html`,
-    titles[locale] || titles.en
-  ])
+  ...contactLocales
+    .filter((locale) => locale !== defaultLocale)
+    .map((locale) => [
+      `${locale}/contact.html`,
+      titles[locale] || titles.en
+    ])
 ];
 
 for (const [file, title] of pages) {
@@ -41,9 +44,8 @@ for (const [file, title] of pages) {
 }
 
 const homepageLinks = [
-  ['index.html', `/${defaultLocale}/contact`],
   ...publishedLocales.map((locale) => [
-    `${locale}.html`,
+    locale === defaultLocale ? 'index.html' : `${locale}.html`,
     `/${locale === 'zh' || locale === 'zh-hant' ? locale : 'en'}/contact`
   ])
 ];

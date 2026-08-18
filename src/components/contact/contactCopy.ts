@@ -52,6 +52,7 @@ type ContactCopy = {
   submitAnother: string;
   configErrorTitle: string;
   configErrorBody: string;
+  previewNotice: string;
   visitorError: string;
   genericError: string;
   rateLimitError: string;
@@ -96,6 +97,7 @@ const zh: ContactCopy = {
   submitAnother: '再提交一份',
   configErrorTitle: '商务咨询暂不可用',
   configErrorBody: 'CRM 服务尚未配置，请联系网站管理员。',
+  previewNotice: '当前为预览环境，表单不会提交真实线索。',
   visitorError: '无法获取 CRM 访客标识，请允许浏览器使用本地存储后重试。',
   genericError: '提交失败，请稍后重试。',
   rateLimitError: '提交过于频繁，请稍后再试。',
@@ -156,6 +158,7 @@ const en: ContactCopy = {
   configErrorTitle: 'Sales inquiries are unavailable',
   configErrorBody:
     'The CRM service has not been configured. Please contact the site administrator.',
+  previewNotice: 'This is a preview environment. Form submissions are disabled.',
   visitorError:
     'We could not create your CRM visitor ID. Allow local browser storage and try again.',
   genericError: 'Your inquiry could not be sent. Please try again later.',
@@ -217,6 +220,7 @@ const zhHant: ContactCopy = {
   submitAnother: '再提交一份',
   configErrorTitle: '商務諮詢暫不可用',
   configErrorBody: 'CRM 服務尚未配置，請聯絡網站管理員。',
+  previewNotice: '目前為預覽環境，表單不會提交真實線索。',
   visitorError: '無法取得 CRM 訪客識別碼，請允許瀏覽器使用本機儲存後重試。',
   genericError: '提交失敗，請稍後重試。',
   rateLimitError: '提交過於頻繁，請稍後再試。',

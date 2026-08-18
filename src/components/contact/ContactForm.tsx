@@ -21,6 +21,7 @@ import {
   getContactCopy,
   getContactOptionLabel
 } from '@/components/contact/contactCopy';
+import { isPreviewSite } from '@/lib/siteRouting';
 
 type ContactFormProps = {
   locale: string;
@@ -418,6 +419,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     setError('');
 
     if (!CRM_API_URL) {
+      if (isPreviewSite) return;
       setError(copy.configErrorBody);
       return;
     }
@@ -483,7 +485,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     }
   };
 
-  if (!CRM_API_URL) {
+  if (!CRM_API_URL && !isPreviewSite) {
     return (
       <div
         role="alert"
@@ -694,9 +696,19 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
         </label>
       </div>
 
+      {isPreviewSite && !CRM_API_URL && (
+        <p
+          role="status"
+          data-crm-preview="true"
+          className="mt-6 rounded-md border border-[#dbe7ff] bg-[#f5f8ff] px-3 py-2.5 text-[13px] leading-5 text-[#475467]"
+        >
+          {copy.previewNotice}
+        </p>
+      )}
+
       <button
         type="submit"
-        disabled={status === 'submitting'}
+        disabled={status === 'submitting' || !CRM_API_URL}
         className="mt-6 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-[#155eef] px-5 text-[14px] font-medium text-white transition-colors hover:bg-[#004eeb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-[#84adff]"
       >
         {status === 'submitting' && <LoaderCircle className="animate-spin" size={17} aria-hidden />}

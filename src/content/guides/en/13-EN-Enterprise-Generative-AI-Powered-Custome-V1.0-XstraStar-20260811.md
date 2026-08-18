@@ -23,8 +23,6 @@ Case clearance: 三诺生物、延锋、昭昭医考、长株潭烟草 —— �
 
 **Enterprise customer support teams do not need to build generative AI-powered support tools from scratch. A standardized four-step deployment workflow, focused first on high-volume repetitive user queries, enables rapid reduction of manual agent workloads and delivery of consistent 7x24-hour service. All product capabilities and version boundaries referenced in this guide are sourced from official public vendor documentation, verified July 20, 2026.**
 
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
-
 This playbook outlines a phased, gate-controlled deployment sequence to roll out generative AI-powered customer support, with clear checkpoints to validate progress before advancing to subsequent stages, ensuring consistent, efficient service delivery from initial setup to long-term optimization.
 
 ## Pre-Deployment Operational Gap Review
@@ -150,15 +148,3 @@ Common operational errors during AI customer support deployment can directly har
 Following successful deployment of the first high-volume repetitive query scenario, the scope of the knowledge base can be gradually expanded to cover additional business modules, agent handover rules can be optimized, multimodal capabilities can be added to handle image and video-based queries, and integrations with additional business systems can be implemented to enable automated workflows, continuously expanding the intelligent support system’s service scope and performance.
 
 ---
-> **Fact Source**: Official vendor knowledge base content collection checklist KB 2.3 Scenario 3 + 8.1 (Education/Biomedical Support Cases)
-> **Verification Date**: 2026-07-20
-> **Version and Package**: Self-hosted / Commercial Edition / Cloud Service; capability boundaries are subject to official public documentation as of the verification date
-> **Update Record**: V1.0 (2026-08-11) First Draft. Product capabilities and version boundaries are subject to change with platform updates, with a 90-day review cycle
----
-
-> **Source of facts**: vendor knowledge base, sections KB 2.3 场景 3 + 8.1（教育/生物医药客服案例）；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

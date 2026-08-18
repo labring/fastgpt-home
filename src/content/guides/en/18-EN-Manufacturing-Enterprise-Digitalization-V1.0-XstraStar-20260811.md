@@ -22,8 +22,6 @@ Case clearance: 南京商络、商络电子、延锋 —— 均出自客户 2026
 # Manufacturing Enterprise Digitalization Decision Guide: RAG + Rule Engine for IT Operations and Financial Auditing
 
 **This combined RAG knowledge base and rule engine solution enables lightweight deployment for manufacturing enterprise IT operations and financial document review workflows by reusing existing business system interfaces, reducing repetitive manual labor and improving operational efficiency.**
-
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
 All product capabilities and version boundaries are sourced from official public customer materials, verified as of 2026-07-20.
 
 ## High-Volume Workflows: IT vs. Finance
@@ -99,11 +97,3 @@ Digital transformation solutions inherently carry potential risks. Clear manual 
 - **Verification Date**: 2026-07-20
 - **Version and Tiers**: Self-hosted community edition / commercial edition / SaaS-hosted service; capability boundaries are subject to official public materials as of the verification date
 - **Update Record**: V1.0 (2026-08-11) Initial drafting. Product capabilities and version boundaries are data that changes with version updates, with a 90-day review cycle.
----
-
-> **Source of facts**: vendor knowledge base, sections KB 8.1 制造组（延锋 iSAP 运维机器人处理 70%+ 重复咨询；财务智能审单；供应商智能推荐）；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

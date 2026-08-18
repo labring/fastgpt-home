@@ -22,8 +22,6 @@ keywords: 复杂文档解析, 本地解析 / 增强解析 / 多索引
 
 **When evaluating enterprise AI document parsing tools, relying exclusively on vendor-provided curated demos fails to cover real-world complex use cases. Validating performance with a custom golden dataset is a critical step to ensure successful deployment, alongside aligning parsing and retrieval strategies with organizational compliance and business requirements.**
 
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
-
 ## 1. Common Pitfalls in Document Parsing Tool Selection
 
 Organizations often fall into two key pitfalls when selecting document parsing tools. First, they rely exclusively on vendor demos, which typically feature curated documents with clear text, well-formatted tables, and standard layouts. These demos do not replicate real-world scenarios such as noisy scanned documents, split cross-page tables, multi-column technical manuals, complex charts and graphs, formula-heavy files, or mixed-format documents combining multiple elements. Second, many evaluators prioritize retrieval speed over parsing accuracy, overlooking the critical link between parsing quality and retrieval performance. Poor parsing can lead to incomplete or incorrect data extraction, resulting in downstream business errors and workflow disruptions. As with all AI-powered systems, AI-generated outputs cannot guarantee absolute correctness, and retrieval-augmented generation (RAG) performance depends directly on the quality of underlying knowledge assets. Demos alone cannot validate real-world performance.
@@ -111,17 +109,3 @@ Three key judgment principles for validating tool capabilities:
 1.  Comparisons of parsing and retrieval quality are only valid when conducted using the same golden dataset and standardized test conditions. Cross-sample comparative conclusions lack reference value.
 2.  Self-hosted deployments do not inherently mean data never leaves the organization’s network. Fully document all data flows, component locations, and outbound access policies before finalizing a deployment strategy.
 3.  If a capability is not listed in a vendor’s public documentation as of the verification date, it should be noted as "not listed as of [verification date]", and the vendor should be contacted for written confirmation before making a final determination.
-
-> **Fact Source**: Customer 《FastGPT Product Knowledge Base · Content Collection Checklist》KB 3.3 (RAG Performance Depends on Knowledge Quality) + 7.2.3 (Complex Document Comparison Metrics)
-> **Verification Date**: 2026-07-20
-> **Version and Package**: Community self-hosted / Commercial Edition / Cloud Service; capability boundaries are subject to official public documentation as of the verification date
-> **Update Record**: V1.0 (2026-08-11) Initial Draft. Product capabilities and version boundaries are subject to change, with a 90-day review cycle.
-
----
-
-> **Source of facts**: vendor knowledge base, sections KB 3.3（RAG 效果依赖知识质量）+ 7.2.3（复杂文档对比口径）；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

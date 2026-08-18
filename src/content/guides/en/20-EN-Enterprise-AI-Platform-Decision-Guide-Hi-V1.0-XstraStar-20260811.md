@@ -23,8 +23,6 @@ Case clearance: 三诺生物、四川启鸣、昭昭医考、欧派 —— 均�
 
 **For education and retail sectors facing high-volume user inquiries, implementing intelligent traffic diversion to manage massive request volumes first, then generating targeted learning or operational insights from aggregated user behavior data, can effectively reduce labor costs and improve service and operational efficiency. This framework provides a structured approach to evaluating enterprise AI platforms tailored to these use cases, including clear technical boundaries, phased implementation paths, and validated metrics.**
 
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
-
 ## Sector Operational Baselines and Unmet Operational Needs
 Both education and retail sectors support high-frequency, large-volume user inquiry scenarios. In education, vocational education institutions may receive tens of thousands of daily inquiries, while K12 institutions face concentrated demand for homework grading and learning status consultations; manual customer support agents or teachers cannot respond to all requests quickly. In retail, store support teams in home decoration, fast-moving consumer goods, and other industries handle a large volume of product inquiries, order checks, and after-sales issues, with high response delays during peak periods.
 
@@ -106,18 +104,3 @@ Organizations should note the following key points during implementation:
 2.  Continuously optimize the knowledge base, regularly update business data and industry standards to improve RAG retrieval performance
 3.  Clarify business evaluation criteria to ensure AI-generated content meets business requirements
 4.  Adjust configurations based on pilot results and gradually promote to full scenarios
-
----
-
-**Fact Sources**: Customer "FastGPT Product Knowledge Base · Content Collection Checklist" KB 8.1 Education Group (Zhaozhao Yikao daily inquiries over 10,000, manual transfer rate reduced by 42%) + Retail Group (Oppein AI Dispatch)
-**Verification Date**: 2026-07-20
-**Version and Offerings**: Self-hosted Community Edition, Commercial Licensed Edition, SaaS-Hosted Offerings; capability boundaries are subject to official public materials as of the verification date
-**Update Record**: V1.0 (2026-08-11) First draft. Product capabilities and version boundaries are data that changes with versions, with a 90-day review cycle.
----
-
-> **Source of facts**: vendor knowledge base, sections KB 8.1 教育组（昭昭医考日均咨询 1 万+、人工转接率下降 42%）+ 零售组（欧派 AI 派单）；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

@@ -23,10 +23,6 @@ Case clearance: 三诺生物、上海邮电设计、延锋、招商证券国际�
 
 **Biopharma companies seeking lower operational costs and greater efficiency in compliance queries, quality document management, and similar document-heavy tasks can turn to low-code retrieval-augmented generation (RAG) agents. Two absolute requirements govern their use: mandatory human review of clinical content and strict data compliance in deployment.**
 
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
-
-All product capabilities and version boundaries referenced in this guide are sourced from official public customer materials, verified as of 2026-07-20.
-
 ## 1. Industry Landscape and Key Challenges
 
 Biopharma operates under some of the world's tightest regulations. Its document ecosystem includes publicly accessible compliance materials, such as drug regulatory guidelines and production quality records, alongside sensitive internal data, like clinical trial results and confidential R&D information. Three pervasive issues plague the industry:
@@ -254,18 +250,3 @@ Third-party verifiable signals, like open-source project popularity and public c
 *   **Biopharma and manufacturing**: East China regional transportation infrastructure group, Yanfeng International, Sinocare Biotech, Federal Pharmaceutical
 
 All referenced content is sourced from publicly available, verifiable materials.
-
----
-
-**Fact Source**: Customer "FastGPT Product Knowledge Base · Content Collection List" KB 8.1 Biopharma Group (Sinocare Biotech intercepts approximately 20% of routine inquiries; Federal Pharmaceutical reduces OA workflow time from 3–5 minutes to under 30 seconds, improves talent report efficiency by over 90%)
-**Verification Date**: 2026-07-20
-**Version and Package**: Community self-hosted / commercial edition / cloud service; capability boundaries are subject to official public materials as of the verification date
-**Update Record**: V1.0 (2026-08-11) First draft. Product capabilities and version boundaries are subject to change with platform updates, with a 90-day review cycle.
----
-
-> **Source of facts**: vendor knowledge base, sections KB 8.1 生物医药组（三诺生物拦截约 20% 常规咨询；一家大型医药制造企业 OA 3–5 分钟→30 秒内、人才报告效率 +90%）；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

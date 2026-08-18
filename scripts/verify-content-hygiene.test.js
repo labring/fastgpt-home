@@ -1,0 +1,143 @@
+const assert = require('node:assert/strict');
+const { spawnSync } = require('node:child_process');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const test = require('node:test');
+
+const ROOT = path.resolve(__dirname, '..');
+const SCRIPT = path.join(ROOT, 'scripts/verify-content-hygiene.js');
+
+function writeFixture(root, relativePath, content) {
+  const destination = path.join(root, relativePath);
+  fs.mkdirSync(path.dirname(destination), { recursive: true });
+  fs.writeFileSync(destination, content);
+}
+
+function createFixture(files) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-'));
+  for (const [relativePath, content] of Object.entries(files)) writeFixture(root, relativePath, content);
+  return root;
+}
+
+function runFixture(root, args = []) {
+  return spawnSync(process.execPath, [SCRIPT, '--mode', 'source', '--root', root, ...args], {
+    cwd: ROOT,
+    encoding: 'utf8'
+  });
+}
+
+function withFixture(files, assertion) {
+  const root = createFixture(files);
+  try {
+    assertion(root);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+}
+
+const hiddenMetadata = '<!--\ninternal KB: delivery schedule and sign-off\n-->\n\n';
+const cleanGuide = `${hiddenMetadata}# Durable guide\n\nAcme reduced handling time by 42%, with a caveat for incomplete source data.\n\n## Sources\n\n- [Public source](https://example.com/research)\n`;
+
+test('source CLI accepts publishable markdown and keeps a leading hidden comment outside inspection', () => {
+  withFixture(
+    { 'src/content/guides/en/durable-guide.md': cleanGuide },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+      assert.match(result.stdout, /Content hygiene passed: 1 source file/);
+      assert.equal(result.stderr, '');
+      assert.equal(
+        fs.readFileSync(path.join(root, 'src/content/guides/en/durable-guide.md'), 'utf8'),
+        cleanGuide,
+      );
+    },
+  );
+});
+
+test('source CLI aggregates visible editorial findings with stable actionable locations', () => {
+  withFixture(
+    {
+      'src/content/guides/zh/dirty.md': '# 标题\n\n事实来源: 客户 KB 7.4；核验日 2026-07-20\n\n签发: 客户确认\n',
+      'content/competitors/en/dirty.md': '# Comparison\n\n> Delivery schedule: Week 4\n\nRevision log: client review complete\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal(result.stdout, '');
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=zh \| path=src\/content\/guides\/zh\/dirty\.md \| source=dirty \| line=2/);
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=en \| path=content\/competitors\/en\/dirty\.md \| source=dirty \| line=2/);
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=en \| path=content\/competitors\/en\/dirty\.md \| source=dirty \| line=4/);
+    },
+  );
+});
+
+test('source CLI requires public HTTPS markdown citations in Sources and References blocks', () => {
+  const cases = [
+    ['plain internal reference', '## Sources\n\n- Internal KB 7.4\n', /D-07 citation-policy/],
+    ['localhost URL', '## References\n\n- [Local](https://localhost/reference)\n', /D-07 citation-policy/],
+    ['private URL', '## Sources\n\n- [Private](https://10.1.2.3/reference)\n', /D-07 citation-policy/],
+    ['credentials URL', '## Sources\n\n- [Credentials](https://user:pass@example.com/reference)\n', /D-07 citation-policy/],
+    ['HTTP URL', '## Sources\n\n- [HTTP](http://example.com/reference)\n', /D-07 citation-policy/]
+  ];
+
+  for (const [name, body, expected] of cases) {
+    withFixture({ 'content/competitors/dirty.md': `# Comparison\n\n${body}` }, (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1, name);
+      assert.match(result.stderr, expected, name);
+    });
+  }
+});
+
+test('source CLI accepts ordinary generic technical prose outside structured editorial metadata', () => {
+  withFixture(
+    {
+      'src/content/guides/zh/ordinary.md': '# 技术说明\n\n更新记录、source、delivery 和 编辑 是团队日常术语。\n',
+      'content/competitors/en/ordinary.md': '# Comparison\n\nThe source delivery editor validates technical content.\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+      assert.match(result.stdout, /2 source files/);
+    },
+  );
+});
+
+test('source CLI validates its public argument protocol', () => {
+  for (const argv of [[], ['--mode'], ['--mode', 'html'], ['--root'], ['--unknown']]) {
+    const result = spawnSync(process.execPath, [SCRIPT, ...argv], { cwd: ROOT, encoding: 'utf8' });
+    assert.equal(result.status, 1, argv.join(' '));
+    assert.match(result.stderr, /Usage: verify-content-hygiene/);
+  }
+});
+
+test('source CLI defaults to the repository root', () => {
+  const result = spawnSync(process.execPath, [SCRIPT, '--mode', 'source'], {
+    cwd: ROOT,
+    encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stderr);
+  assert.match(result.stdout, /Content hygiene passed: \d+ source files/);
+});
+
+test('the cleaned corpus keeps named cases, outcome metrics, and caveats', () => {
+  const result = spawnSync(process.execPath, [SCRIPT, '--mode', 'source'], {
+    cwd: ROOT,
+    encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stderr);
+
+  const manufacturing = fs.readFileSync(
+    path.join(ROOT, 'src/content/guides/zh/18-制造企业数字化运维与审单场景的落地选型指南-V1.0-星触达-20260811.md'),
+    'utf8',
+  );
+  const biopharma = fs.readFileSync(
+    path.join(ROOT, 'src/content/guides/en/19-EN-AI-Agent-Selection-and-Compliance-Best-P-V1.0-XstraStar-20260811.md'),
+    'utf8',
+  );
+  assert.match(manufacturing, /延锋国际/);
+  assert.match(manufacturing, /70%/);
+  assert.match(manufacturing, /不构成对其他项目效果的承诺/);
+  assert.match(biopharma, /Sinocare Biotech/);
+});

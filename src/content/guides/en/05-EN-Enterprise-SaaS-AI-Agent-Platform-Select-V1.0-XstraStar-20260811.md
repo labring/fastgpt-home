@@ -22,8 +22,6 @@ keywords: SaaS 平台替代, 私有化 / 数据出域 / 迁移
 
 **When evaluating SaaS-hosted AI agent platforms for enterprise deployment, written verification of four core operational and compliance areas will mitigate three common categories of deployment friction: compliance risks, unaligned customization boundaries, and unplanned migration costs.**
 
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
-
 ## 1. Common Enterprise Deployment Frictions for SaaS AI Agent Platforms
 
 Three core deployment barriers frequently arise when enterprises adopt SaaS-hosted AI agent platforms. First, compliance friction: many enterprises lack clarity on data flow pathways, face potential cross-border data transfer risks, and cannot verify undisclosed outbound traffic rules for self-hosted platform components, creating gaps in meeting internal data security policies. Second, customization boundary friction: standardized SaaS functionality often fails to align with an enterprise’s unique business processes and permission control frameworks, and unpublicized custom support capabilities cannot be validated in advance, leading to unbudgeted post-adoption adaptation work. Third, migration friction: unforeseen platform lock-in risks, including undocumented costs and feasibility of application configuration exports, data migration, and third-party integration compatibility, can result in overbudget long-term migration expenses.
@@ -106,16 +104,3 @@ After completing all verification and validation steps, the selection process ca
 The selection process should remain objective, with decisions based solely on actual enterprise requirements and validation results, avoiding influence from non-core factors including brand reputation or ecosystem size.
 
 ---
-> **Fact Source**: Customer 《FastGPT Product Knowledge Base · Content Collection Checklist》KB 7.4.2 (Prohibited Phrasing) + 7.5 Objection Response
-> **Verification Date**: 2026-07-20
-> **Version and Package**: Community Self-Hosted / Commercial Edition / Cloud Service; capability boundaries are based on official public materials as of verification date
-> **Update Record**: V1.0 (2026-08-11) Initial Draft. Product capabilities and version boundaries are subject to change, with a 90-day review cycle
-
----
-
-> **Source of facts**: vendor knowledge base, sections KB 7.4.2（建议避免的表述）+ 7.5 异议应对；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

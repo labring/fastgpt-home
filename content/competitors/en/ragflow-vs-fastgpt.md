@@ -136,12 +136,3 @@ Put the following metrics into the "not publicly listed / POC required / contrac
 When document parsing and complete operations are both core constraints, run one parallel POC with both vendors: use the same golden documents for parsing, record person-days and implementation barriers during the application and operations stage, then combine the results into a total cost table.
 
 Parsing quality should be measured with the enterprise golden set under unified conditions. Uncovered capabilities should enter the POC checklist or vendor written confirmation.
-
----
-
-> **Sources**: RAGFlow and FastGPT official websites, official documentation, official repositories, official pricing pages, and public release records
-> **Verification date**: 2026-07-20
-> **Versions and plans**: RAGFlow Cloud / Apache-2.0 self-hosting / Enterprise; FastGPT Cloud / community self-hosting / managed and self-hosted commercial editions. RAGFlow capabilities on the main branch that are not formally released are excluded
-> **Update record**: V1.2 (2026-08-08) rewrote visible copy while preserving facts on parsing, operations, support responsibility, and POC. Pricing, version numbers, connector and plugin counts, and Cloud quotas use a 90-day review cycle
-
-> **Update record addendum**: On 2026-08-08, page framing and body copy were unified around applicable scenarios, production differences, contract responsibility, and same-condition POC. Evidence remains stored in delivery metadata and the manifest.

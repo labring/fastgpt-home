@@ -119,12 +119,3 @@ Put the following metrics into the "not publicly listed / POC required / contrac
 | Response coverage, recovery responsibility, and upgrade rollback must be written into the contract | Ask both sides for a responsibility matrix and service checklist. FastGPT's support tier structure is public; Dify Enterprise SLA is contract-confirmed |
 
 Accuracy, performance, data egress, and SLA should be confirmed through same-condition POC, data-flow inventory, and contract terms. For private deployment, list outbound paths for external models, OCR, plugins, connectors, version updates, and telemetry item by item.
-
----
-
-> **Sources**: Dify and FastGPT official websites, official documentation, official repositories, official pricing pages, and public release records
-> **Verification date**: 2026-07-20
-> **Versions and plans**: Dify Cloud / Community / Enterprise; FastGPT Cloud / community self-hosting / managed and self-hosted commercial editions. Capability status in this article is based on stable official public materials available on the verification date; experimental and pre-release branches are excluded
-> **Update record**: V1.2 (2026-08-08) rewrote visible copy while preserving facts on capabilities, licensing, support, and POC. Pricing, version numbers, templates, plugin counts, and Cloud quotas use a 90-day review cycle
-
-> **Update record addendum**: On 2026-08-08, page framing and body copy were unified around applicable scenarios, production differences, contract responsibility, and same-condition POC. Evidence remains stored in delivery metadata and the manifest.

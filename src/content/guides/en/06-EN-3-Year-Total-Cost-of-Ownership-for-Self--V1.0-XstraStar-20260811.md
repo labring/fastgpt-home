@@ -22,8 +22,6 @@ keywords: 自建成本核算, 平台工程 / 运维 / 模型消耗
 
 **For enterprise teams evaluating AI knowledge base solutions, accurate 3-year total cost of ownership (TCO) accounting requires inclusion of both core operational costs and often-overlooked hidden expenses, rather than only initial infrastructure and model invocation fees. Unbiased cross-platform comparison must use a unified, full-cycle framework to avoid budget overruns and unforeseen operational gaps.**
 
-Product capabilities and version boundaries in this article come from the vendor's published material, verified on **2026-07-20**.
-
 ## 1. Current Cost Evaluation Gaps for Self-Hosted AI Knowledge Bases
 Most enterprise teams conducting initial evaluations of self-hosted AI knowledge bases only account for visible upfront costs such as infrastructure and large language model (LLM) invocation fees, while ignoring long-term maintenance costs including platform engineering labor and security operations. Many teams assume that deploying open-source components is sufficient to launch a functional solution, but fail to recognize the full scope of platform governance and ongoing maintenance required. Without full-cycle cost accounting upfront, teams frequently face budget overruns, insufficient operational capacity, or failed project rollouts. For example, teams focused only on short-term demo builds often do not anticipate the ongoing labor investment required to maintain core functions such as parsing queues, workflow recovery, and permission control, leading to project stagnation or unplanned cost increases.
 
@@ -113,17 +111,3 @@ Enterprise technology and procurement decision makers can advance the selection 
 3. Conduct POC validation, compare the actual effects and costs of self-hosted and purchased platforms: Performed by testing and business teams, using enterprise real gold standard datasets and workflows.
 4. Confirm the service level terms of support services and exit migration plans, avoiding platform lock-in risks: Liaise with vendors via procurement and legal teams, clarifying all relevant terms.
 5. Combine the enterprise's budget and operational capabilities to determine the final selection plan: Decided by the decision-making team, comprehensively evaluating all factors to ensure the plan aligns with the enterprise's long-term development needs.
-
-> **Fact Sources**: Customer 《FastGPT Product Knowledge Base · Content Collection Checklist》KB 7.1.5 (Self-Hosted Cost List) + 7.5 Objection 01 + 5.4 / 6.3
-> **Verification Date**: 2026-07-20
-> **Version and Package**: Community Self-Hosted / Commercial Edition / Cloud Service; Capability boundaries subject to official public materials as of verification date
-> **Update Log**: V1.0 (2026-08-11) Initial Draft. Product capabilities and version boundaries are subject to change, with a 90-day review cycle
-
----
-
-> **Source of facts**: vendor knowledge base, sections KB 7.1.5（自研成本清单）+ 7.5 异议 01 + 5.4 / 6.3；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

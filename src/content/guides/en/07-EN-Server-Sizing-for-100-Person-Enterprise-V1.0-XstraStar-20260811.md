@@ -123,17 +123,3 @@ C --> D[Adjust Resource Configurations for Optimization]
 D --> E[72-Hour Steady-State Validation]
 E --> F[Finalize Formal Server Specifications]
 ```
-
-> **Fact Sources**: Customer 《FastGPT Product Knowledge Base · Content Collection Checklist》KB 3.3 (Scale and Performance Depend on Deployment) + 7.3.2 (Metrics That Should Not Be Hardcoded)
-> **Verification Date**: 2026-07-20
-> **Version and Package**: Community Self-Hosted / Commercial Edition / Cloud Service; capability boundaries are subject to official public documentation as of the verification date
-> **Update Record**: V1.0 (2026-08-11) Initial Draft. Product capabilities and version boundaries are subject to change with version updates, with a 90-day review cycle.
-
----
-
-> **Source of facts**: vendor knowledge base, sections KB 3.3（规模与性能取决于部署）+ 7.3.2（不该填死的指标）；核验日 2026-07-20
-> **Verified on**: 2026-07-20
-> **Editions**: community self-hosted / commercial / cloud — capability boundaries per the vendor's
-> published material on the verification date
-> **Revision**: V1.0 (2026-08-11) first English edition, rewritten from the approved
-> Chinese article without introducing new figures; product capability statements carry a 90-day review cycle（90 天复核）

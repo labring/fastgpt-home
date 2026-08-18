@@ -1003,10 +1003,28 @@ test('HTML projection stores compact offset runs for multi-megabyte text', () =>
   assert.equal(projectedRawOffset(projection, projection.text.indexOf(body)), html.indexOf(body));
 });
 
+test('HTML projection fails closed before entity-dense content fragments offset runs', () => {
+  const html = `<html><body>${'&amp;'.repeat(50_001)}</body></html>`;
+  assert.throws(() => projectVisibleHtml(html), /HTML projection exceeds 50000 offset runs/);
+});
+
+test('HTML CLI reports entity-dense projection run limits without exhausting memory', () => {
+  withFixture({ 'index.html': `<html><body>${'&amp;'.repeat(50_001)}</body></html>` }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 1);
+    assert.match(result.stderr, /HTML projection exceeds 50000 offset runs/);
+  });
+});
+
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
   let requests = 0;
   let dirtyCitation = false;
   let dirtyEditorial = false;
+  let fragmentedProjection = false;
   const server = http.createServer((request, response) => {
     requests += 1;
     const baseUrl = `http://${request.headers.host}`;
@@ -1017,7 +1035,9 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     }
     response.setHeader('content-type', 'text/html');
     response.end(
-      dirtyEditorial
+      fragmentedProjection
+        ? `<html><body>${'&amp;'.repeat(50_001)}</body></html>`
+        : dirtyEditorial
         ? '<html><body><p>计划：W4</p><p>实施计划：reader rollout</p></body></html>'
         : dirtyCitation
         ? '<html><body><p>REFERENCE<!-- -->: Internal KB</p></body></html>'
@@ -1091,6 +1111,12 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     const editorial = await runAsync(args);
     assert.equal(editorial.status, 1);
     assert.match(editorial.stderr, /D-01 editorial-metadata/);
+
+    fragmentedProjection = true;
+    const fragmented = await runAsync(args);
+    assert.equal(fragmented.status, 1);
+    assert.match(fragmented.stderr, /D-08 page-fetch/);
+    assert.match(fragmented.stderr, /HTML projection exceeds 50000 offset runs/);
 
     requests = 0;
     const invalid = await runAsync([...args, '--max-urls', '10001']);

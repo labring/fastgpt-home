@@ -156,6 +156,8 @@ const EDITORIAL_MATCHER = new RegExp(
 const EDITORIAL_PREAMBLE =
   /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
+// Bound offset metadata before entity-heavy HTML can grow heap usage disproportionately.
+const MAX_HTML_PROJECTION_RUNS = 50_000;
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -935,7 +937,12 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
       ? previous.rawStart + (previous.projectedEnd - previous.projectedStart) === rawStart
       : previous.rawStart === rawStart);
   if (adjacent) previous.projectedEnd = projectedEnd;
-  else projection.runs.push({ projectedStart, projectedEnd, rawStart, linear });
+  else {
+    if (projection.runs.length >= MAX_HTML_PROJECTION_RUNS) {
+      throw new Error(`HTML projection exceeds ${MAX_HTML_PROJECTION_RUNS} offset runs`);
+    }
+    projection.runs.push({ projectedStart, projectedEnd, rawStart, linear });
+  }
   projection.chunks.push(value);
   projection.length = projectedEnd;
 }
@@ -1239,6 +1246,11 @@ function liveViolation(rule, host, url, detail) {
   return { rule, host, path: new URL(url).pathname, url, detail };
 }
 
+function errorDetail(error) {
+  if (error instanceof Error && error.message) return error.message.slice(0, 500);
+  return typeof error?.name === 'string' ? error.name : 'Unknown error';
+}
+
 async function discoverInventory(options, baseUrls) {
   const sitemapDocuments = new Map();
   const pages = new Set();
@@ -1272,7 +1284,12 @@ async function discoverInventory(options, baseUrls) {
       response = await fetchTextWithTimeout(item.url, options.timeoutMs);
     } catch (error) {
       violations.push(
-        liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, error.name)
+        liveViolation(
+          'D-08 sitemap-fetch',
+          new URL(item.baseUrl).host,
+          item.url,
+          errorDetail(error)
+        )
       );
       continue;
     }
@@ -1457,7 +1474,7 @@ async function inspectLivePage(url, options, baseUrls) {
       url,
       status: 0,
       contentSha256: null,
-      violations: [liveViolation('D-08 page-fetch', host, url, error.name)]
+      violations: [liveViolation('D-08 page-fetch', host, url, errorDetail(error))]
     };
   }
 }

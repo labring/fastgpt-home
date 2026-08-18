@@ -1362,7 +1362,7 @@ test('source CLI preserves quote depth, raw HTML blocks, paired delimiters, and 
     (root) => {
       const result = runFixture(root);
       assert.equal(result.status, 1);
-      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
       assert.equal(
         (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
         3,
@@ -1397,10 +1397,79 @@ test('source CLI streams nested HTML blocks and preserves literal Markdown delim
     (root) => {
       const result = runFixture(root);
       assert.equal(result.status, 1);
-      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
       assert.match(result.stderr, /streaming\.md.*line=3/);
-      assert.match(result.stderr, /streaming\.md.*line=4/);
+      assert.doesNotMatch(result.stderr, /streaming\.md.*line=4/);
       assert.doesNotMatch(result.stderr, /streaming\.md.*line=5/);
+    }
+  );
+});
+
+test('source CLI deduplicates logical policy labels by original source range', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/ranges.md': [
+        '# Guide',
+        '',
+        '<div>Demand basis: internal</div>',
+        '<div>Sources: Internal KB</div>',
+        'Demand basis: internal',
+        'Sources: Internal KB',
+        'Demand',
+        'basis: internal',
+        'Sources',
+        ': Internal KB',
+        '<div>Sources: [Public documentation](https://example.com/docs)</div>',
+        '<div>Demand basis: a</div><div>Demand basis: b</div>',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        5,
+        result.stderr
+      );
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+      assert.match(result.stderr, /ranges\.md.*line=3/);
+      assert.match(result.stderr, /ranges\.md.*line=4/);
+      assert.match(result.stderr, /ranges\.md.*line=7/);
+      assert.match(result.stderr, /ranges\.md.*line=9/);
+      assert.doesNotMatch(result.stderr, /Public documentation/);
+    }
+  );
+});
+
+test('source CLI reports each logical policy label once at its original range', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/same-editorial.md':
+        '# Guide\n\n<div>Demand basis: internal</div>\n',
+      'src/content/tech-center/tutorial/same-citation.md':
+        '# Guide\n\n<div>Sources: Internal KB</div>\n',
+      'src/content/tech-center/tutorial/plain.md': '# Guide\n\nDemand basis: internal\n',
+      'src/content/tech-center/tutorial/cross-line.md': '# Guide\n\nDemand\nbasis: internal\n',
+      'src/content/tech-center/tutorial/valid-anchor.md':
+        '# Guide\n\n<div>Sources: [Public documentation](https://example.com/docs)</div>\n',
+      'src/content/tech-center/tutorial/multiple.md':
+        '# Guide\n\n<div>Demand basis: a</div><div>Demand basis: b</div>\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      const count = (rule, relativePath) =>
+        result.stderr
+          .split('\n')
+          .filter((line) => line.includes(rule) && line.includes(relativePath)).length;
+
+      assert.equal(result.status, 1);
+      assert.equal(count('D-01 editorial-metadata', 'same-editorial.md'), 1, result.stderr);
+      assert.equal(count('D-07 citation-policy', 'same-citation.md'), 1, result.stderr);
+      assert.equal(count('D-01 editorial-metadata', 'plain.md'), 1, result.stderr);
+      assert.equal(count('D-01 editorial-metadata', 'cross-line.md'), 1, result.stderr);
+      assert.equal(count('D-07 citation-policy', 'valid-anchor.md'), 0, result.stderr);
+      assert.equal(count('D-01 editorial-metadata', 'multiple.md'), 2, result.stderr);
     }
   );
 });

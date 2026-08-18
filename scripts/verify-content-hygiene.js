@@ -1263,15 +1263,9 @@ function inspectMarkdown(relativePath, source) {
       continue;
     }
     if (heading) inSources = false;
-    if (hasEditorialLabel(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
+    if (EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
-      );
-    }
-    for (const citation of labelledCitationValues(line)) {
-      if (validPublicCitationValue(citation)) continue;
-      findings.push(
-        finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, citation)
       );
     }
     if (inSources && line.trim() && !validPublicCitation(line)) {
@@ -1296,6 +1290,11 @@ function inspectMarkdown(relativePath, source) {
     }
     return bodyStartLine + right;
   };
+  const sourceLineAtOffset = (offset) => {
+    const start = body.lastIndexOf('\n', Math.max(0, offset - 1)) + 1;
+    const end = body.indexOf('\n', offset);
+    return body.slice(start, end < 0 ? body.length : end).trim();
+  };
   const seenCitationRanges = new Set();
   const seenEditorialRanges = new Set();
   for (const block of markdownLogicalBlocks(lines, lineStarts)) {
@@ -1310,7 +1309,6 @@ function inspectMarkdown(relativePath, source) {
       for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
         const start = projection.offsets[match.index];
         const end = projection.offsets[match.index + match[0].length - 1];
-        if (lineAtOffset(start) === lineAtOffset(end)) continue;
         const range = `${start}:${end}`;
         if (seenEditorialRanges.has(range)) continue;
         seenEditorialRanges.add(range);
@@ -1320,14 +1318,13 @@ function inspectMarkdown(relativePath, source) {
             'markdown-body',
             relativePath,
             lineAtOffset(start),
-            match[0]
+            sourceLineAtOffset(start)
           )
         );
       }
       for (const citation of markdownCitationEntries(projection.text)) {
         const start = projection.offsets[citation.index];
         const end = projection.offsets[citation.labelEnd - 1] ?? start;
-        if (lineAtOffset(start) === lineAtOffset(end)) continue;
         const range = `${start}:${end}`;
         if (seenCitationRanges.has(range) || validPublicCitationValue(citation.value)) continue;
         seenCitationRanges.add(range);
@@ -1337,7 +1334,7 @@ function inspectMarkdown(relativePath, source) {
             'markdown-body',
             relativePath,
             lineAtOffset(start),
-            citation.value
+            sourceLineAtOffset(start)
           )
         );
       }

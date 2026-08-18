@@ -983,25 +983,58 @@ function markdownLogicalBlocks(lines, lineStarts) {
       ...options
     });
   };
-  const listMarker = (line) => {
-    const indentation = markdownIndentation(line);
-    if (indentation.column > 3) return undefined;
-    const marker = /^(?:[-*+]|\d{1,9}[.)])/.exec(line.slice(indentation.offset));
+  const sliceRecord = (record, contentOffset, contentColumn) => ({
+    ...record,
+    text: record.text.slice(contentOffset),
+    offset: record.offset + contentOffset,
+    baseColumn: contentColumn
+  });
+  const listMarker = (record) => {
+    const baseColumn = record.baseColumn ?? 0;
+    const indentation = markdownIndentation(record.text, 0, baseColumn);
+    if (indentation.column - baseColumn > 3) return undefined;
+    const marker = /^(?:[-*+]|\d{1,9}[.)])/.exec(record.text.slice(indentation.offset));
     if (!marker) return undefined;
     const markerEndOffset = indentation.offset + marker[0].length;
     const markerEndColumn = indentation.column + marker[0].length;
-    const content = markdownIndentation(line, markerEndOffset, markerEndColumn);
-    return content.characters
-      ? {
-          contentColumn: content.column,
-          contentOffset: content.offset
-        }
-      : undefined;
+    if (markerEndOffset === record.text.length) {
+      return {
+        contentColumn: markerEndColumn + 1,
+        contentOffset: markerEndOffset
+      };
+    }
+    const content = markdownIndentation(record.text, markerEndOffset, markerEndColumn);
+    if (!content.characters) return undefined;
+    return {
+      contentColumn: content.column,
+      contentOffset: content.offset
+    };
   };
-  const quoteMarker = (line) => /^ {0,3}>[\t ]?/.exec(line);
-  const startsBlock = (line) =>
+  const quoteMarker = (record) => {
+    const baseColumn = record.baseColumn ?? 0;
+    const indentation = markdownIndentation(record.text, 0, baseColumn);
+    if (indentation.column - baseColumn > 3 || record.text[indentation.offset] !== '>') {
+      return undefined;
+    }
+    const markerEndOffset = indentation.offset + 1;
+    const markerEndColumn = indentation.column + 1;
+    const content = markdownIndentation(
+      record.text,
+      markerEndOffset,
+      markerEndColumn,
+      markerEndColumn + 1
+    );
+    return {
+      contentColumn: content.column,
+      contentOffset: content.offset
+    };
+  };
+  const startsBlock = (record) =>
     Boolean(
-      atxHeading(line) || listMarker(line) || quoteMarker(line) || markdownHtmlBlockStart(line)
+      atxHeading(record.text) ||
+        listMarker(record) ||
+        quoteMarker(record) ||
+        markdownHtmlBlockStart(record.text)
     );
   const consumeHtmlBlock = (records, start) => {
     const htmlStart = markdownHtmlBlockStart(records[start].text);
@@ -1022,7 +1055,26 @@ function markdownLogicalBlocks(lines, lineStarts) {
     }
     return { content, htmlStart, next: index };
   };
-  const observeChildBlock = (tracker, value) => {
+  const deepestChildRecord = (record) => {
+    let child = record;
+    while (child.text.trim()) {
+      const quote = quoteMarker(child);
+      if (quote) {
+        child = sliceRecord(child, quote.contentOffset, quote.contentColumn);
+        continue;
+      }
+      const list = listMarker(child);
+      if (list) {
+        child = sliceRecord(child, list.contentOffset, list.contentColumn);
+        continue;
+      }
+      break;
+    }
+    return child;
+  };
+  const observeChildBlock = (tracker, record) => {
+    const child = deepestChildRecord(record);
+    const value = child.text;
     if (tracker.html) {
       if (tracker.html.blankTerminated && !value.trim()) {
         tracker.html = undefined;
@@ -1049,7 +1101,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
       tracker.type = 'heading';
       return;
     }
-    tracker.type = listMarker(value) || quoteMarker(value) ? 'container' : 'paragraph';
+    tracker.type = 'paragraph';
   };
 
   const parseBlocks = (records, context) => {
@@ -1065,6 +1117,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
         appendBlock(
           [
             {
+              ...record,
               text: heading.text,
               offset: record.offset + heading.offset
             }
@@ -1076,7 +1129,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
         continue;
       }
 
-      const quote = quoteMarker(record.text);
+      const quote = quoteMarker(record);
       if (quote) {
         const group = ++quoteGroup;
         const depth = context.quoteDepth + 1;
@@ -1088,16 +1141,14 @@ function markdownLogicalBlocks(lines, lineStarts) {
         let cursor = index;
         while (cursor < records.length) {
           const current = records[cursor];
-          const marker = quoteMarker(current.text);
+          const marker = quoteMarker(current);
           if (marker) {
             const stripped = {
-              ...current,
-              text: current.text.slice(marker[0].length),
-              offset: current.offset + marker[0].length,
+              ...sliceRecord(current, marker.contentOffset, marker.contentColumn),
               quoteContainerBoundary: true
             };
             quoted.push(stripped);
-            observeChildBlock(child, stripped.text);
+            observeChildBlock(child, stripped);
             cursor += 1;
             continue;
           }
@@ -1106,10 +1157,10 @@ function markdownLogicalBlocks(lines, lineStarts) {
             quoted.length &&
             child.type === 'paragraph' &&
             !current.quoteContainerBoundary &&
-            !startsBlock(current.text)
+            !startsBlock(current)
           ) {
             quoted.push(current);
-            observeChildBlock(child, current.text);
+            observeChildBlock(child, current);
             cursor += 1;
             continue;
           }
@@ -1120,18 +1171,12 @@ function markdownLogicalBlocks(lines, lineStarts) {
         continue;
       }
 
-      const list = listMarker(record.text);
+      const list = listMarker(record);
       if (list) {
         const itemContext = childContext(context, `${context.container}:list:${++listItem}`);
-        const itemRecords = [
-          {
-            ...record,
-            text: record.text.slice(list.contentOffset),
-            offset: record.offset + list.contentOffset
-          }
-        ];
+        const itemRecords = [sliceRecord(record, list.contentOffset, list.contentColumn)];
         const child = { type: 'blank', html: undefined };
-        observeChildBlock(child, itemRecords[0].text);
+        observeChildBlock(child, itemRecords[0]);
         let cursor = index + 1;
         while (cursor < records.length) {
           const current = records[cursor];
@@ -1139,31 +1184,34 @@ function markdownLogicalBlocks(lines, lineStarts) {
             let next = cursor + 1;
             while (next < records.length && !records[next].text.trim()) next += 1;
             if (next >= records.length) break;
-            const indentation = markdownIndentation(records[next].text);
+            const nextRecord = records[next];
+            const indentation = markdownIndentation(nextRecord.text, 0, nextRecord.baseColumn ?? 0);
             if (indentation.column < list.contentColumn) break;
             while (cursor < next) {
-              itemRecords.push({ ...records[cursor], text: '' });
-              observeChildBlock(child, '');
+              const blank = { ...records[cursor], text: '' };
+              itemRecords.push(blank);
+              observeChildBlock(child, blank);
               cursor += 1;
             }
             continue;
           }
-          const indentation = markdownIndentation(current.text);
+          const indentation = markdownIndentation(current.text, 0, current.baseColumn ?? 0);
           if (indentation.column >= list.contentColumn) {
-            const content = markdownIndentation(current.text, 0, 0, list.contentColumn);
-            const stripped = {
-              ...current,
-              text: current.text.slice(content.offset),
-              offset: current.offset + content.offset
-            };
+            const content = markdownIndentation(
+              current.text,
+              0,
+              current.baseColumn ?? 0,
+              list.contentColumn
+            );
+            const stripped = sliceRecord(current, content.offset, content.column);
             itemRecords.push(stripped);
-            observeChildBlock(child, stripped.text);
+            observeChildBlock(child, stripped);
             cursor += 1;
             continue;
           }
-          if (child.type === 'paragraph' && !startsBlock(current.text)) {
+          if (child.type === 'paragraph' && !startsBlock(current)) {
             itemRecords.push(current);
-            observeChildBlock(child, current.text);
+            observeChildBlock(child, current);
             cursor += 1;
             continue;
           }
@@ -1187,11 +1235,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
 
       const paragraph = [record];
       index += 1;
-      while (
-        index < records.length &&
-        records[index].text.trim() &&
-        !startsBlock(records[index].text)
-      ) {
+      while (index < records.length && records[index].text.trim() && !startsBlock(records[index])) {
         paragraph.push(records[index]);
         index += 1;
       }
@@ -1203,7 +1247,8 @@ function markdownLogicalBlocks(lines, lineStarts) {
     lines.map((text, index) => ({
       text,
       offset: lineStarts[index],
-      separatorOffset: lineStarts[index] - 1
+      separatorOffset: lineStarts[index] - 1,
+      baseColumn: 0
     })),
     rootContext
   );

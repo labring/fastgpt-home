@@ -1645,6 +1645,39 @@ test('source CLI limits lazy continuation to active paragraph children', () => {
   });
 });
 
+test('source CLI follows the deepest paragraph for nested lazy continuation', () => {
+  const body = [
+    '# Guide',
+    '',
+    '> > Sources',
+    ': Internal KB',
+    '',
+    '- - Sources',
+    ': Internal KB',
+    '',
+    '> > ## Sources',
+    'Root copy after nested quote heading.',
+    '',
+    '- - ## Sources',
+    'Root copy after nested list heading.',
+    '',
+    '> > <div>Sources</div>',
+    ': Internal KB after nested quote HTML.',
+    '',
+    '- - <div>Sources</div>',
+    ': Internal KB after nested list HTML.',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/nested-lazy.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+    assert.match(result.stderr, /nested-lazy\.md.*line=3/);
+    assert.match(result.stderr, /nested-lazy\.md.*line=6/);
+    assert.doesNotMatch(result.stderr, /nested-lazy\.md.*line=9|line=12|line=15|line=18/);
+  });
+});
+
 test('source CLI resolves list indentation with four-column tab stops', () => {
   const body = [
     '# Guide',
@@ -1674,6 +1707,69 @@ test('source CLI resolves list indentation with four-column tab stops', () => {
     }
     assert.doesNotMatch(result.stderr, /tab-lists\.md.*line=10|line=16/);
   });
+});
+
+test('source CLI preserves original columns through nested list stripping', () => {
+  const body = [
+    '# Guide',
+    '',
+    '- Parent',
+    ' \t- \t## Sources',
+    '  \tInternal KB',
+    '',
+    '- Parent',
+    ' \t- \t## Sources',
+    '  \t\tInternal KB',
+    '',
+    '- Parent',
+    '    -   ## Sources',
+    '    Internal KB',
+    '',
+    '- Parent',
+    '    -   ## Sources',
+    '        Internal KB',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/base-columns.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+    assert.match(result.stderr, /base-columns\.md.*line=9/);
+    assert.match(result.stderr, /base-columns\.md.*line=17/);
+    assert.doesNotMatch(result.stderr, /base-columns\.md.*line=5|line=13/);
+  });
+});
+
+test('source CLI scopes headings beneath empty list markers', () => {
+  for (const [marker, indentation] of [
+    ['-', '  '],
+    ['+', '  '],
+    ['*', '  '],
+    ['1.', '   ']
+  ]) {
+    const dirty = [
+      '# Guide',
+      '',
+      marker,
+      `${indentation}## Sources`,
+      `${indentation}Internal KB`,
+      ''
+    ].join('\n');
+    withFixture({ 'src/content/tech-center/tutorial/empty-list.md': dirty }, (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+      assert.match(result.stderr, /empty-list\.md.*line=5/);
+    });
+
+    const clean = ['# Guide', '', marker, `${indentation}## Sources`, '', 'Internal KB', ''].join(
+      '\n'
+    );
+    withFixture({ 'src/content/tech-center/tutorial/empty-list.md': clean }, (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    });
+  }
 });
 
 test('source CLI type-terminates raw HTML blocks inside block quotes', () => {

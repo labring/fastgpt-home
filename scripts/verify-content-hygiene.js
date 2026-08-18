@@ -161,50 +161,48 @@ const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 const MAX_HTML_PROJECTION_RUNS = 50_000;
 const HTML_POLICY_NAMED_REFERENCES = new Map(
   Object.entries({
-    Tab: ' ',
-    NewLine: ' ',
-    nbsp: ' ',
-    NonBreakingSpace: ' ',
-    ensp: ' ',
-    emsp: ' ',
-    emsp13: ' ',
-    emsp14: ' ',
-    numsp: ' ',
-    puncsp: ' ',
-    thinsp: ' ',
-    ThinSpace: ' ',
-    hairsp: ' ',
-    VeryThinSpace: ' ',
-    MediumSpace: ' ',
-    ThickSpace: ' ',
-    NegativeVeryThinSpace: ' ',
-    NegativeThinSpace: ' ',
-    NegativeMediumSpace: ' ',
-    NegativeThickSpace: ' ',
-    ApplyFunction: ' ',
-    InvisibleTimes: ' ',
-    InvisibleComma: ' ',
-    af: ' ',
-    it: ' ',
-    ic: ' ',
-    ZeroWidthSpace: ' ',
-    NoBreak: ' ',
-    zwnj: ' ',
-    zwj: ' ',
-    lrm: ' ',
-    rlm: ' ',
-    hyphen: '-',
-    nbhy: '-',
-    dash: '-',
-    ndash: '-',
-    mdash: '-',
-    figdash: '-',
-    horbar: '-',
-    minus: '-',
-    shy: '-',
+    Tab: '\t',
+    NewLine: '\n',
+    nbsp: '\u00a0',
+    NonBreakingSpace: '\u00a0',
+    ensp: '\u2002',
+    emsp: '\u2003',
+    emsp13: '\u2004',
+    emsp14: '\u2005',
+    numsp: '\u2007',
+    puncsp: '\u2008',
+    thinsp: '\u2009',
+    ThinSpace: '\u2009',
+    hairsp: '\u200a',
+    VeryThinSpace: '\u200a',
+    MediumSpace: '\u205f',
+    ThickSpace: '\u205f\u200a',
+    NegativeVeryThinSpace: '\u200b',
+    NegativeThinSpace: '\u200b',
+    NegativeMediumSpace: '\u200b',
+    NegativeThickSpace: '\u200b',
+    ApplyFunction: '\u2061',
+    InvisibleTimes: '\u2062',
+    InvisibleComma: '\u2063',
+    af: '\u2061',
+    it: '\u2062',
+    ic: '\u2063',
+    ZeroWidthSpace: '\u200b',
+    NoBreak: '\u2060',
+    zwnj: '\u200c',
+    zwj: '\u200d',
+    lrm: '\u200e',
+    rlm: '\u200f',
+    hyphen: '\u2010',
+    dash: '\u2010',
+    ndash: '\u2013',
+    mdash: '\u2014',
+    horbar: '\u2015',
+    minus: '\u2212',
+    shy: '\u00ad',
     colon: ':',
-    Colon: ':',
-    ratio: ':',
+    Colon: '\u2237',
+    ratio: '\u2236',
     amp: '&',
     quot: '"',
     apos: "'",
@@ -212,7 +210,7 @@ const HTML_POLICY_NAMED_REFERENCES = new Map(
     gt: '>'
   })
 );
-const HTML_LEGACY_NAMED_REFERENCES = new Set(['nbsp', 'amp', 'quot', 'lt', 'gt']);
+const HTML_LEGACY_NAMED_REFERENCES = new Set(['nbsp', 'shy', 'amp', 'quot', 'lt', 'gt']);
 const HTML_C1_REPLACEMENTS = new Map([
   [0x80, 0x20ac],
   [0x82, 0x201a],
@@ -1279,6 +1277,15 @@ function decodeHtml(value) {
   return output;
 }
 
+function policyEntityText(value) {
+  return [...value]
+    .map((character) => {
+      if (character === '\u00ad' || /[\p{Dash_Punctuation}\u2212]/u.test(character)) return '-';
+      return /[\p{White_Space}\p{Cf}]/u.test(character) ? ' ' : character;
+    })
+    .join('');
+}
+
 function appendProjectedHtml(projection, value, rawStart, linear) {
   if (!value) return;
   const projectedStart = projection.length;
@@ -1302,13 +1309,18 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
   projection.length = projectedEnd;
 }
 
-function appendDecodedHtml(projection, value, offset) {
+function appendDecodedHtml(projection, value, offset, normalizePolicyEntity = false) {
   let cursor = 0;
   for (let index = 0; index < value.length; index += 1) {
     const reference = htmlReferenceAt(value, index);
     if (!reference) continue;
     appendProjectedHtml(projection, value.slice(cursor, index), offset + cursor, true);
-    appendProjectedHtml(projection, reference.value, offset + index, false);
+    appendProjectedHtml(
+      projection,
+      normalizePolicyEntity ? policyEntityText(reference.value) : reference.value,
+      offset + index,
+      false
+    );
     index += reference.length - 1;
     cursor = index + 1;
   }
@@ -1344,17 +1356,17 @@ function htmlHref(tag, tagOffset) {
   };
 }
 
-function projectVisibleHtml(visible) {
+function projectVisibleHtml(visible, normalizePolicyEntities = false) {
   const projection = { chunks: [], length: 0, runs: [] };
   const anchors = [];
   let cursor = 0;
   while (cursor < visible.length) {
     const tagStart = visible.indexOf('<', cursor);
     if (tagStart < 0) {
-      appendDecodedHtml(projection, visible.slice(cursor), cursor);
+      appendDecodedHtml(projection, visible.slice(cursor), cursor, normalizePolicyEntities);
       break;
     }
-    appendDecodedHtml(projection, visible.slice(cursor, tagStart), cursor);
+    appendDecodedHtml(projection, visible.slice(cursor, tagStart), cursor, normalizePolicyEntities);
     if (visible.startsWith('<!--', tagStart)) {
       const commentEnd = visible.indexOf('-->', tagStart + 4);
       cursor = commentEnd < 0 ? visible.length : commentEnd + 3;
@@ -1364,7 +1376,7 @@ function projectVisibleHtml(visible) {
     const tag = visible.slice(tagStart, tagEnd + 1);
     const match = /^<\s*(\/)?\s*([a-z][\w:-]*)\b/i.exec(tag);
     if (!match) {
-      appendDecodedHtml(projection, tag, tagStart);
+      appendDecodedHtml(projection, tag, tagStart, normalizePolicyEntities);
       cursor = tagEnd + 1;
       continue;
     }
@@ -1375,7 +1387,12 @@ function projectVisibleHtml(visible) {
         const anchor = anchors.pop();
         if (anchor?.href) {
           appendSyntheticHtml(projection, '](', tagStart);
-          appendDecodedHtml(projection, anchor.href.value, anchor.href.offset);
+          appendDecodedHtml(
+            projection,
+            anchor.href.value,
+            anchor.href.offset,
+            normalizePolicyEntities
+          );
           appendSyntheticHtml(projection, ')', tagStart);
         }
       } else {
@@ -1444,7 +1461,7 @@ function projectionRangeAppender(source) {
 
 function normalizePolicyProjection(source) {
   const projection = { chunks: [], length: 0, runs: [] };
-  const separator = /[\p{White_Space}\p{Cf}]+|[\p{Dash_Punctuation}\u2212]/gu;
+  const separator = /[\p{White_Space}\p{Cf}]+|[\p{Dash_Punctuation}\u00ad\u2212]/gu;
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
   let cursor = 0;
@@ -1452,7 +1469,7 @@ function normalizePolicyProjection(source) {
     appendRange(projection, cursor, match.index);
     appendSyntheticHtml(
       projection,
-      /[\p{Dash_Punctuation}\u2212]/u.test(match[0]) ? '-' : ' ',
+      /[\p{Dash_Punctuation}\u00ad\u2212]/u.test(match[0]) ? '-' : ' ',
       rawOffsetAt(match.index)
     );
     cursor = match.index + match[0].length;
@@ -1484,27 +1501,72 @@ function stripPayloadKeyQuotes(source) {
   return { text: projection.chunks.join(''), runs: projection.runs };
 }
 
+function serializedEscapeAt(value, start) {
+  const marker = value[start + 1];
+  const simple = { b: '\b', f: '\f', n: '\n', r: '\r', t: '\t', v: '\v' };
+  if (simple[marker]) return { length: 2, value: simple[marker] };
+  if (marker === '0' && !/[0-9]/.test(value[start + 2] ?? '')) return { length: 2, value: '\0' };
+  if (marker === 'x' && /^[0-9a-f]{2}$/i.test(value.slice(start + 2, start + 4))) {
+    return {
+      length: 4,
+      value: normalizedNumericReference(Number.parseInt(value.slice(start + 2, start + 4), 16))
+    };
+  }
+  if (marker !== 'u') return undefined;
+  if (value[start + 2] === '{') {
+    const closingBrace = value.indexOf('}', start + 3);
+    const codePoint = value.slice(start + 3, closingBrace);
+    if (closingBrace > start + 3 && /^[0-9a-f]+$/i.test(codePoint)) {
+      return {
+        length: closingBrace - start + 1,
+        value: normalizedNumericReference(Number.parseInt(codePoint, 16))
+      };
+    }
+    return undefined;
+  }
+  const codeUnit = value.slice(start + 2, start + 6);
+  if (!/^[0-9a-f]{4}$/i.test(codeUnit)) return undefined;
+  const high = Number.parseInt(codeUnit, 16);
+  const lowEscape = value.slice(start + 6, start + 12);
+  if (
+    high >= 0xd800 &&
+    high <= 0xdbff &&
+    /^\\u[0-9a-fA-F]{4}$/.test(lowEscape) &&
+    Number.parseInt(lowEscape.slice(2), 16) >= 0xdc00 &&
+    Number.parseInt(lowEscape.slice(2), 16) <= 0xdfff
+  ) {
+    const low = Number.parseInt(lowEscape.slice(2), 16);
+    return {
+      length: 12,
+      value: normalizedNumericReference(0x10000 + (high - 0xd800) * 0x400 + (low - 0xdc00))
+    };
+  }
+  return { length: 6, value: normalizedNumericReference(high) };
+}
+
 function decodeSerializedEscapes(source) {
   const projection = { chunks: [], length: 0, runs: [] };
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
-  const escapePattern =
-    /\\u([dD][89aAbB][0-9a-f]{2})\\u([dD][c-fC-F][0-9a-f]{2})|\\u\{([0-9a-f]+)\}|\\u([0-9a-f]{4})|\\x([0-9a-f]{2})/gi;
   let cursor = 0;
-  for (const match of source.text.matchAll(escapePattern)) {
-    appendRange(projection, cursor, match.index);
-    const codePoint =
-      match[1] && match[2]
-        ? 0x10000 +
-          (Number.parseInt(match[1], 16) - 0xd800) * 0x400 +
-          (Number.parseInt(match[2], 16) - 0xdc00)
-        : Number.parseInt(match[3] ?? match[4] ?? match[5], 16);
-    appendSyntheticHtml(
-      projection,
-      normalizedNumericReference(codePoint),
-      rawOffsetAt(match.index)
-    );
-    cursor = match.index + match[0].length;
+  for (let index = 0; index < source.text.length; index += 1) {
+    if (source.text[index] !== '\\') continue;
+    let slashEnd = index;
+    while (source.text[slashEnd] === '\\') slashEnd += 1;
+    if ((slashEnd - index) % 2 === 0) {
+      index = slashEnd - 1;
+      continue;
+    }
+    const escapeStart = slashEnd - 1;
+    const escape = serializedEscapeAt(source.text, escapeStart);
+    if (!escape) {
+      index = slashEnd - 1;
+      continue;
+    }
+    appendRange(projection, cursor, escapeStart);
+    appendSyntheticHtml(projection, escape.value, rawOffsetAt(escapeStart));
+    cursor = escapeStart + escape.length;
+    index = cursor - 1;
   }
   appendRange(projection, cursor, source.text.length);
   return { text: projection.chunks.join(''), runs: projection.runs };
@@ -1548,6 +1610,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const findings = [];
   const visibleProjection = projectVisibleHtml(visible);
   const visiblePolicyProjection = normalizePolicyProjection(visibleProjection);
+  const citationProjection = projectVisibleHtml(visible, true);
   for (const match of visiblePolicyProjection.text.matchAll(
     new RegExp(EDITORIAL_MATCHER.source, 'giu')
   )) {
@@ -1583,7 +1646,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
     );
     lineStart += line.length + 1;
   }
-  for (const citation of visibleCitationBlocks(visibleProjection)) {
+  for (const citation of visibleCitationBlocks(citationProjection)) {
     if (!validPublicCitation(citation.value)) {
       findings.push(
         htmlFinding(
@@ -1591,7 +1654,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
           'visible',
           identity,
           html,
-          projectedRawOffset(visibleProjection, citation.index),
+          projectedRawOffset(citationProjection, citation.index),
           'Sources and References require public HTTPS anchors'
         )
       );

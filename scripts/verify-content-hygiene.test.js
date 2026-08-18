@@ -1277,8 +1277,8 @@ test('HTML CLI classifies optional policy entities and inspects real script bodi
     {
       'index.html': [
         '<html><body>',
-        '<p>Version&nbhy;plan: internal</p>',
-        '<p>Update&figdash;log: internal</p>',
+        '<p>Version&hyphen;plan: internal</p>',
+        '<p>Update&mdash;log: internal</p>',
         '<p>Sign&horbar;off: internal</p>',
         '<p>Demand&#32basis: internal</p>',
         '<p>Demand&#160;basis: internal</p>',
@@ -1304,7 +1304,7 @@ test('HTML CLI classifies optional policy entities and inspects real script bodi
   );
 });
 
-test('HTML CLI decodes exact policy entities, numeric references, and escaped script or template payloads', () => {
+test('HTML CLI follows WHATWG entities and tokenizes escaped script or template payloads', () => {
   withFixture(
     {
       'index.html': [
@@ -1312,13 +1312,18 @@ test('HTML CLI decodes exact policy entities, numeric references, and escaped sc
         '<p>Version&emsp13;plan: internal</p>',
         '<p>Update&emsp14;log: internal</p>',
         '<p>Sign&#150off: pending</p>',
-        '<p>Demand&nbspbasis: internal</p>',
+        '<p>Sign&shyoff: pending</p>',
+        '<p>Sign&shy;off: pending</p>',
         '<p>Sources&colon; Internal KB</p>',
+        '<p>Sources&Colon; Internal KB</p>',
+        '<p>Sources&ratio; Internal KB</p>',
+        '<p>Sign&nbhy;off: clean</p>',
+        '<p>Sign&figdash;off: clean</p>',
         '<p>Demand&enspbasis: clean</p>',
         '<p>Demand&HilbertSpacebasis: clean</p>',
         '<p>Demand&vdashbasis: clean</p>',
-        '<script>{"copy":"Demand\\u0020basis: internal","signoff":"Sign\\u{20}off: pending","hex":"Demand\\x20basis: internal"}</script>',
-        '<template>{"schedule":"\\u8ba1\\u5212\\uff1aW4"}</template>',
+        '<script>{"copy":"Demand\\u0020basis: internal","signoff":"Sign\\u{20}off: pending","hex":"Demand\\x20basis: internal","newline":"Sign\\noff: pending","vertical":"Version\\vplan: internal","form":"Demand\\fbasis: internal","return":"Demand\\rbasis: internal","backspace":"Demand\\bbasis: clean","literal":"Demand\\\\u0020basis: clean","upper":"Demand\\U0020basis: clean","upperHex":"Demand\\X20basis: clean","nul":"Demand\\0basis: clean","surrogate":"Demand\\uD83D\\uDE00basis: clean"}</script>',
+        '<template>{"schedule":"\\u8ba1\\u5212\\uff1aW4","tab":"Demand\\tbasis: internal"}</template>',
         '</body></html>'
       ].join('\n')
     },
@@ -1331,15 +1336,18 @@ test('HTML CLI decodes exact policy entities, numeric references, and escaped sc
       assert.equal(result.status, 1);
       assert.equal(
         (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
-        9,
+        15,
         result.stderr
       );
       assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1);
       assert.match(result.stderr, /visible .*line=2/);
-      assert.match(result.stderr, /visible .*line=5/);
-      assert.match(result.stderr, /payload .*line=10/);
-      assert.match(result.stderr, /payload .*line=11/);
-      assert.doesNotMatch(result.stderr, /enspbasis|HilbertSpacebasis|vdashbasis/);
+      assert.match(result.stderr, /visible .*line=6/);
+      assert.match(result.stderr, /payload .*line=15/);
+      assert.match(result.stderr, /payload .*line=16/);
+      assert.doesNotMatch(
+        result.stderr,
+        /Colon;|ratio;|nbhy;|figdash;|enspbasis|HilbertSpacebasis|vdashbasis|U0020|X20/
+      );
     }
   );
 });

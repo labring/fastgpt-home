@@ -153,6 +153,9 @@ test('production delivery consumes retained archives and records immutable provi
   const auditWranglerInstall = workflow.indexOf('Install locked Wrangler CLI without lifecycle scripts');
   const auditWranglerList = workflow.lastIndexOf('./node_modules/.bin/wrangler pages deployment list');
   assert(auditWranglerInstall >= 0 && auditWranglerInstall < auditWranglerList);
+  const auditJob = workflow.indexOf('provider-audit:');
+  const auditCheckout = workflow.indexOf('- uses: actions/checkout@v4', auditJob);
+  assert(auditCheckout >= auditJob && auditCheckout < auditWranglerInstall);
   assert.equal((workflow.match(/PROJECT_NAME: fastgpt-home/g) || []).length, 2);
   assert.doesNotMatch(workflow, /CLOUDFLARE_PROJECT_NAME: \$\{\{ vars\.CLOUDFLARE_PROJECT_NAME \}\}/);
   assert.match(workflow, /provider:\{project:process\.env\.PROJECT_NAME/);

@@ -1333,6 +1333,208 @@ test('source CLI respects CommonMark lazy boundaries and reader-visible Markdown
   );
 });
 
+test('source CLI projects ATX heading text and retains citation section state', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/headings.md': [
+        '# Guide',
+        '',
+        '## Demand basis: internal research',
+        '## Sources: Internal KB',
+        '## Sources',
+        '- Internal KB',
+        '## Other',
+        '- Internal KB',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        1,
+        result.stderr
+      );
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.match(result.stderr, /headings\.md.*line=3/);
+      assert.match(result.stderr, /headings\.md.*line=4/);
+      assert.match(result.stderr, /headings\.md.*line=6/);
+      assert.doesNotMatch(result.stderr, /headings\.md.*line=8/);
+    }
+  );
+});
+
+test('source CLI follows CommonMark emphasis, escaping, and code span semantics', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/dirty-delimiters.md': [
+        '# Guide',
+        '',
+        '***Demand**',
+        'basis: internal*',
+        '**Sources**: Internal KB',
+        '`Sources: Internal KB`',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        1,
+        result.stderr
+      );
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.match(result.stderr, /dirty-delimiters\.md.*line=3/);
+      assert.match(result.stderr, /dirty-delimiters\.md.*line=5/);
+      assert.match(result.stderr, /dirty-delimiters\.md.*line=6/);
+    }
+  );
+
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/clean-delimiters.md': [
+        '# Guide',
+        '',
+        'Demand**',
+        'basis**: internal',
+        '',
+        'Demand_',
+        'basis_: internal',
+        '',
+        '*Demand**\u200Bbasis: internal*',
+        '',
+        '\\*Demand',
+        'basis: internal*',
+        '',
+        '`<p>Sources</p><p>: Internal KB</p>`',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+
+  const implementation = fs.readFileSync(SCRIPT, 'utf8');
+  assert.doesNotMatch(implementation, /indexOf\(delimiter/);
+  assert.match(implementation, /function violatesRuleOfThree\(/);
+});
+
+test('source CLI treats the complete CommonMark type-6 tag set as block boundaries', () => {
+  const blockTags = [
+    'address',
+    'article',
+    'aside',
+    'base',
+    'basefont',
+    'blockquote',
+    'body',
+    'caption',
+    'center',
+    'col',
+    'colgroup',
+    'dd',
+    'details',
+    'dialog',
+    'dir',
+    'div',
+    'dl',
+    'dt',
+    'fieldset',
+    'figcaption',
+    'figure',
+    'footer',
+    'form',
+    'frame',
+    'frameset',
+    'h1',
+    'h2',
+    'h3',
+    'h4',
+    'h5',
+    'h6',
+    'head',
+    'header',
+    'hgroup',
+    'hr',
+    'html',
+    'iframe',
+    'legend',
+    'li',
+    'link',
+    'main',
+    'menu',
+    'menuitem',
+    'nav',
+    'noframes',
+    'ol',
+    'optgroup',
+    'option',
+    'p',
+    'param',
+    'search',
+    'section',
+    'summary',
+    'table',
+    'tbody',
+    'td',
+    'tfoot',
+    'th',
+    'thead',
+    'title',
+    'tr',
+    'track',
+    'ul'
+  ];
+  const body = blockTags
+    .flatMap((tag) => [`<${tag}>Sources</${tag}>`, `<${tag}>: Internal KB</${tag}>`])
+    .join('\n');
+  withFixture(
+    { 'src/content/tech-center/tutorial/type-6-blocks.md': `# Guide\n\n${body}\n` },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+});
+
+test('source and HTML CLIs validate entries after raw HTML citation headings', () => {
+  const dirty = '<h2>Sources</h2>\n<p>Internal KB</p>\n';
+  const clean =
+    '<h2>References</h2>\n<p>\n<a href="https://example.com/docs">Official docs</a>\n</p>\n';
+  withFixture({ 'src/content/tech-center/tutorial/raw-heading.md': dirty }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+    assert.match(result.stderr, /raw-heading\.md.*line=2/);
+  });
+  withFixture({ 'src/content/tech-center/tutorial/raw-heading.md': clean }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+  });
+  withFixture({ 'index.html': `<html><body>${dirty}</body></html>` }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+  });
+  withFixture({ 'index.html': `<html><body>${clean}</body></html>` }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('source CLI preserves quote depth, raw HTML blocks, paired delimiters, and UTF-16 offsets', () => {
   withFixture(
     {

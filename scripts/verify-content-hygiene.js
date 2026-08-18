@@ -41,10 +41,12 @@ const CITATION_LABEL_TEXT = new RegExp(
   `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_CITATION_LABEL})\\s*[:：]\\s*|(?:${CHINESE_CITATION_LABEL})\\s*[:：]\\s*`,
   'giu'
 );
-const HTML_BLOCK_TAGS = new Set([
+const COMMONMARK_TYPE_6_HTML_BLOCK_TAGS = [
   'address',
   'article',
   'aside',
+  'base',
+  'basefont',
   'blockquote',
   'body',
   'caption',
@@ -62,23 +64,35 @@ const HTML_BLOCK_TAGS = new Set([
   'figcaption',
   'figure',
   'footer',
+  'form',
   'frame',
   'frameset',
-  'form',
-  'header',
   'h1',
   'h2',
   'h3',
   'h4',
   'h5',
   'h6',
+  'head',
+  'header',
+  'hgroup',
   'hr',
+  'html',
+  'iframe',
+  'legend',
   'li',
+  'link',
   'main',
+  'menu',
+  'menuitem',
   'nav',
+  'noframes',
   'ol',
+  'optgroup',
+  'option',
   'p',
-  'pre',
+  'param',
+  'search',
   'section',
   'summary',
   'table',
@@ -87,24 +101,17 @@ const HTML_BLOCK_TAGS = new Set([
   'tfoot',
   'th',
   'thead',
+  'title',
   'tr',
-  'ul'
-]);
-const HTML_VOID_TAGS = new Set([
-  'area',
-  'base',
-  'br',
-  'col',
-  'embed',
-  'hr',
-  'img',
-  'input',
-  'link',
-  'meta',
-  'param',
-  'source',
   'track',
-  'wbr'
+  'ul'
+];
+const HTML_BLOCK_TAGS = new Set([
+  ...COMMONMARK_TYPE_6_HTML_BLOCK_TAGS,
+  'pre',
+  'script',
+  'style',
+  'textarea'
 ]);
 const BLOCK_BOUNDARY = '\uE000';
 const CHINESE_EDITORIAL_LABELS = [
@@ -636,9 +643,241 @@ function markdownCitationEntries(value) {
   }));
 }
 
+function atxHeading(line) {
+  const opening = /^( {0,3})(#{1,6})(?:[\t ]+|$)/.exec(line);
+  if (!opening) return undefined;
+  const contentStart = opening[0].length;
+  let text = line.slice(contentStart);
+  const closing = /[\t ]+#+[\t ]*$/.exec(text);
+  if (closing) text = text.slice(0, closing.index);
+  return { text: text.replace(/[\t ]+$/, ''), offset: contentStart };
+}
+
+function isEscapedMarkdownPunctuation(value, index) {
+  let slashes = 0;
+  while (value[index - slashes - 1] === '\\') slashes += 1;
+  return slashes % 2 === 1;
+}
+
+function previousUnicodeCharacter(value, index) {
+  if (index <= 0) return undefined;
+  const last = value.charCodeAt(index - 1);
+  const start =
+    last >= 0xdc00 &&
+    last <= 0xdfff &&
+    index > 1 &&
+    value.charCodeAt(index - 2) >= 0xd800 &&
+    value.charCodeAt(index - 2) <= 0xdbff
+      ? index - 2
+      : index - 1;
+  return value.slice(start, index);
+}
+
+function nextUnicodeCharacter(value, index) {
+  if (index >= value.length) return undefined;
+  return String.fromCodePoint(value.codePointAt(index));
+}
+
+function isMarkdownWhitespace(character) {
+  return character === undefined || /\p{White_Space}/u.test(character);
+}
+
+function isMarkdownPunctuation(character) {
+  return Boolean(character && (/[!-/:-@[-`{-~]/.test(character) || /\p{P}/u.test(character)));
+}
+
+function markdownCodeSpans(value, hidden) {
+  const runs = [];
+  for (let index = 0; index < value.length; ) {
+    if (value[index] !== '`') {
+      index += 1;
+      continue;
+    }
+    if (isEscapedMarkdownPunctuation(value, index)) {
+      index += 1;
+      continue;
+    }
+    let end = index + 1;
+    while (value[end] === '`') end += 1;
+    runs.push({ start: index, length: end - index });
+    index = end;
+  }
+
+  const nextSameLength = new Array(runs.length);
+  const nextByLength = new Map();
+  for (let index = runs.length - 1; index >= 0; index -= 1) {
+    nextSameLength[index] = nextByLength.get(runs[index].length);
+    nextByLength.set(runs[index].length, index);
+  }
+
+  const spans = [];
+  for (let index = 0; index < runs.length; ) {
+    const closingIndex = nextSameLength[index];
+    if (closingIndex === undefined) {
+      index += 1;
+      continue;
+    }
+    const opening = runs[index];
+    const closing = runs[closingIndex];
+    const contentStart = opening.start + opening.length;
+    const contentEnd = closing.start;
+    hidden.fill(1, opening.start, contentStart);
+    hidden.fill(1, closing.start, closing.start + closing.length);
+    const normalizedContent = value.slice(contentStart, contentEnd).replaceAll('\n', ' ');
+    if (
+      normalizedContent.startsWith(' ') &&
+      normalizedContent.endsWith(' ') &&
+      /[^ ]/.test(normalizedContent)
+    ) {
+      hidden[contentStart] = 1;
+      hidden[contentEnd - 1] = 1;
+    }
+    spans.push({
+      fullStart: opening.start,
+      contentStart,
+      contentEnd,
+      fullEnd: closing.start + closing.length
+    });
+    index = closingIndex + 1;
+  }
+  return spans;
+}
+
+function markdownDelimiterRuns(value, codeSpans) {
+  const delimiters = [];
+  let spanIndex = 0;
+  for (let index = 0; index < value.length; ) {
+    while (codeSpans[spanIndex]?.fullEnd <= index) spanIndex += 1;
+    if (
+      codeSpans[spanIndex] &&
+      index >= codeSpans[spanIndex].fullStart &&
+      index < codeSpans[spanIndex].fullEnd
+    ) {
+      index = codeSpans[spanIndex].fullEnd;
+      continue;
+    }
+    const marker = value[index];
+    if (!'*_'.includes(marker) || isEscapedMarkdownPunctuation(value, index)) {
+      index += 1;
+      continue;
+    }
+    let end = index + 1;
+    while (value[end] === marker) end += 1;
+    const before = previousUnicodeCharacter(value, index);
+    const after = nextUnicodeCharacter(value, end);
+    const leftFlanking =
+      !isMarkdownWhitespace(after) &&
+      (!isMarkdownPunctuation(after) ||
+        isMarkdownWhitespace(before) ||
+        isMarkdownPunctuation(before));
+    const rightFlanking =
+      !isMarkdownWhitespace(before) &&
+      (!isMarkdownPunctuation(before) ||
+        isMarkdownWhitespace(after) ||
+        isMarkdownPunctuation(after));
+    const canOpen =
+      marker === '*'
+        ? leftFlanking
+        : leftFlanking && (!rightFlanking || isMarkdownPunctuation(before));
+    const canClose =
+      marker === '*'
+        ? rightFlanking
+        : rightFlanking && (!leftFlanking || isMarkdownPunctuation(after));
+    const delimiterIndex = delimiters.length;
+    delimiters.push({
+      marker,
+      start: index,
+      length: end - index,
+      canOpen,
+      canClose,
+      previous: delimiterIndex - 1,
+      next: delimiterIndex + 1,
+      active: true
+    });
+    index = end;
+  }
+  if (delimiters.length) delimiters.at(-1).next = -1;
+  return delimiters;
+}
+
+function violatesRuleOfThree(opener, closer) {
+  if (!closer.canOpen && !opener.canClose) return false;
+  return (
+    (opener.length + closer.length) % 3 === 0 &&
+    (opener.length % 3 !== 0 || closer.length % 3 !== 0)
+  );
+}
+
+function unlinkMarkdownDelimiter(delimiters, index) {
+  const delimiter = delimiters[index];
+  if (!delimiter.active) return;
+  if (delimiter.previous >= 0) delimiters[delimiter.previous].next = delimiter.next;
+  if (delimiter.next >= 0) delimiters[delimiter.next].previous = delimiter.previous;
+  delimiter.active = false;
+}
+
+function consumeMarkdownEmphasis(value, hidden, codeSpans) {
+  const delimiters = markdownDelimiterRuns(value, codeSpans);
+  const openersBottom = new Map();
+  let current = delimiters.length ? 0 : -1;
+  while (current >= 0) {
+    const closer = delimiters[current];
+    if (!closer.active) {
+      current = closer.next;
+      continue;
+    }
+    if (closer.canClose) {
+      const bottomKey = `${closer.marker}:${closer.canOpen ? 1 : 0}:${closer.length % 3}`;
+      const bottom = openersBottom.get(bottomKey) ?? -1;
+      let openerIndex = closer.previous;
+      while (openerIndex > bottom) {
+        const opener = delimiters[openerIndex];
+        if (
+          opener.marker === closer.marker &&
+          opener.canOpen &&
+          !violatesRuleOfThree(opener, closer)
+        ) {
+          break;
+        }
+        openerIndex = opener.previous;
+      }
+      if (openerIndex > bottom) {
+        const opener = delimiters[openerIndex];
+        const used = opener.length >= 2 && closer.length >= 2 ? 2 : 1;
+        hidden.fill(1, opener.start + opener.length - used, opener.start + opener.length);
+        hidden.fill(1, closer.start, closer.start + used);
+        opener.length -= used;
+        closer.start += used;
+        closer.length -= used;
+
+        for (let between = opener.next; between >= 0 && between !== current; ) {
+          const next = delimiters[between].next;
+          unlinkMarkdownDelimiter(delimiters, between);
+          between = next;
+        }
+        if (opener.length === 0) unlinkMarkdownDelimiter(delimiters, openerIndex);
+        if (closer.length === 0) {
+          const next = closer.next;
+          unlinkMarkdownDelimiter(delimiters, current);
+          current = next;
+        }
+        continue;
+      }
+      openersBottom.set(bottomKey, closer.previous);
+      if (!closer.canOpen) {
+        const next = closer.next;
+        unlinkMarkdownDelimiter(delimiters, current);
+        current = next;
+        continue;
+      }
+    }
+    current = closer.next;
+  }
+}
+
 function markdownLogicalBlocks(lines, lineStarts) {
   const blocks = [];
-  const appendBlock = (parts, html = false) => {
+  const appendBlock = (parts, html = false, heading = false) => {
     let text = '';
     const offsets = [];
     for (const [value, offset] of parts) {
@@ -649,23 +888,44 @@ function markdownLogicalBlocks(lines, lineStarts) {
       text += value;
       for (let index = 0; index < value.length; index += 1) offsets.push(offset + index);
     }
-    blocks.push({ text, offsets, html });
+    blocks.push({ text, offsets, html, heading });
   };
   const htmlBlock = new RegExp(`^\\s*</?(?:${[...HTML_BLOCK_TAGS].join('|')})\\b`, 'i');
   const boundary = (line) =>
     !line.trim() ||
-    /^#{1,6}\s+/.test(line) ||
+    Boolean(atxHeading(line)) ||
     /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(line) ||
     htmlBlock.test(line);
   const plainLine = (line) =>
     Boolean(line.trim()) &&
-    !/^#{1,6}\s+/.test(line) &&
+    !atxHeading(line) &&
     !/^\s*(?:[-*+]\s+|\d+[.)]\s+|>)/.test(line) &&
     !htmlBlock.test(line);
   for (let index = 0; index < lines.length; ) {
+    const heading = atxHeading(lines[index]);
+    if (heading) {
+      if (heading.text) {
+        appendBlock([[heading.text, lineStarts[index] + heading.offset]], false, true);
+      }
+      index += 1;
+      continue;
+    }
     const quote = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
     const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
     if (quote) {
+      const value = lines[index].slice(quote[0].length);
+      const quotedHeading = atxHeading(value);
+      if (quotedHeading) {
+        if (quotedHeading.text) {
+          appendBlock(
+            [[quotedHeading.text, lineStarts[index] + quote[0].length + quotedHeading.offset]],
+            false,
+            true
+          );
+        }
+        index += 1;
+        continue;
+      }
       const parts = [];
       const depth = (quote[0].match(/>/g) || []).length;
       while (index < lines.length) {
@@ -675,7 +935,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
         const offset = lineStarts[index] + (marker ? marker[0].length : 0);
         if (
           !value.trim() ||
-          /^#{1,6}\s+/.test(value) ||
+          atxHeading(value) ||
           /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(value) ||
           htmlBlock.test(value)
         )
@@ -689,7 +949,20 @@ function markdownLogicalBlocks(lines, lineStarts) {
       continue;
     }
     if (list) {
-      const parts = [[lines[index].slice(list[0].length), lineStarts[index] + list[0].length]];
+      const firstValue = lines[index].slice(list[0].length);
+      const listHeading = atxHeading(firstValue);
+      if (listHeading) {
+        if (listHeading.text) {
+          appendBlock(
+            [[listHeading.text, lineStarts[index] + list[0].length + listHeading.offset]],
+            false,
+            true
+          );
+        }
+        index += 1;
+        continue;
+      }
+      const parts = [[firstValue, lineStarts[index] + list[0].length]];
       index += 1;
       while (index < lines.length && !boundary(lines[index])) {
         const continuation = /^\s+/.exec(lines[index])?.[0].length ?? 0;
@@ -734,35 +1007,11 @@ function normalizedMarkdownBlock(block) {
       )
     };
   }
+  const hidden = new Uint8Array(block.text.length);
+  const codeSpans = markdownCodeSpans(block.text, hidden);
+  consumeMarkdownEmphasis(block.text, hidden, codeSpans);
   let text = '';
   const offsets = [];
-  const pairedDelimiters = new Set();
-  for (let index = 0; index < block.text.length; ) {
-    const marker = block.text[index];
-    let slashes = 0;
-    for (let cursor = index - 1; block.text[cursor] === '\\'; cursor -= 1) slashes += 1;
-    if (!'*_`'.includes(marker) || slashes % 2) {
-      index += 1;
-      continue;
-    }
-    let length = 1;
-    while (block.text[index + length] === marker) length += 1;
-    const delimiter = marker.repeat(length);
-    let closing = block.text.indexOf(delimiter, index + length);
-    while (
-      closing >= 0 &&
-      (block.text[closing - 1] === marker || block.text[closing + length] === marker)
-    ) {
-      closing = block.text.indexOf(delimiter, closing + 1);
-    }
-    if (closing >= 0) {
-      for (let offset = 0; offset < length; offset += 1) {
-        pairedDelimiters.add(index + offset);
-        pairedDelimiters.add(closing + offset);
-      }
-      index = closing + length;
-    } else index += length;
-  }
   const append = (value, offset) => {
     for (const character of value) {
       const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
@@ -776,7 +1025,18 @@ function normalizedMarkdownBlock(block) {
       }
     }
   };
+  let codeSpanIndex = 0;
   for (let index = 0; index < block.text.length; index += 1) {
+    if (hidden[index]) continue;
+    while (codeSpans[codeSpanIndex]?.contentEnd <= index) codeSpanIndex += 1;
+    if (
+      codeSpans[codeSpanIndex] &&
+      index >= codeSpans[codeSpanIndex].contentStart &&
+      index < codeSpans[codeSpanIndex].contentEnd
+    ) {
+      append(block.text[index], block.offsets[index]);
+      continue;
+    }
     if (block.text[index] === '<') {
       const tagEnd = block.text.indexOf('>', index + 1);
       if (tagEnd >= 0) {
@@ -785,7 +1045,6 @@ function normalizedMarkdownBlock(block) {
         continue;
       }
     }
-    if (pairedDelimiters.has(index)) continue;
     if ('*_`'.includes(block.text[index])) {
       append('_', block.offsets[index]);
       continue;
@@ -1252,25 +1511,13 @@ function inspectMarkdown(relativePath, source) {
   const body = publishableBody(source);
   const lines = body.split('\n');
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
-  let inSources = false;
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     const lineNumber = bodyStartLine + index;
-    const heading = line.match(/^#{1,6}\s+/);
-    if (SOURCE_SECTION.test(line)) {
-      inSources = true;
-      continue;
-    }
-    if (heading) inSources = false;
     if (EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
-      );
-    }
-    if (inSources && line.trim() && !validPublicCitation(line)) {
-      findings.push(
-        finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim())
       );
     }
   }
@@ -1297,6 +1544,7 @@ function inspectMarkdown(relativePath, source) {
   };
   const seenCitationRanges = new Set();
   const seenEditorialRanges = new Set();
+  let inSources = false;
   for (const block of markdownLogicalBlocks(lines, lineStarts)) {
     const blockProjection = normalizedMarkdownBlock(block);
     for (let segmentStart = 0; segmentStart <= blockProjection.text.length; ) {
@@ -1306,6 +1554,27 @@ function inspectMarkdown(relativePath, source) {
         text: blockProjection.text.slice(segmentStart, segmentEnd),
         offsets: blockProjection.offsets.slice(segmentStart, segmentEnd)
       };
+      const htmlHeading = /^(#{1,6})[\t ]+(.*?)[\t ]*$/.exec(projection.text);
+      const headingText = block.heading ? projection.text : htmlHeading?.[2];
+      if (headingText !== undefined) inSources = CITATION_KEY.test(headingText.trim());
+      if (headingText === undefined && inSources && projection.text.trim()) {
+        const firstVisible = projection.text.search(/\S/);
+        const start = projection.offsets[firstVisible];
+        const end = projection.offsets.at(-1) ?? start;
+        const range = `${start}:${end}`;
+        if (!seenCitationRanges.has(range) && !validPublicCitationValue(projection.text)) {
+          seenCitationRanges.add(range);
+          findings.push(
+            finding(
+              'D-07 citation-policy',
+              'markdown-body',
+              relativePath,
+              lineAtOffset(start),
+              sourceLineAtOffset(start)
+            )
+          );
+        }
+      }
       for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
         const start = projection.offsets[match.index];
         const end = projection.offsets[match.index + match[0].length - 1];
@@ -1584,6 +1853,8 @@ function appendSyntheticHtml(projection, value, offset) {
 }
 
 function appendBlockBoundary(projection, offset) {
+  const previous = projection.runs.at(-1);
+  if (previous?.boundary && previous.projectedEnd === projection.length) return;
   appendProjectedHtml(projection, '\n', offset, false, true);
 }
 

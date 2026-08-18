@@ -3,6 +3,8 @@ const { spawnSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 const test = require('node:test');
+const packageJson = require('../package.json');
+const packageLock = require('../package-lock.json');
 
 const {
   appendP1HistoricalBaselineAdvisories,
@@ -142,8 +144,15 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(workflow, /ROLLBACK_INPUT/);
   assert.match(workflow, /initial-production/);
   assert.match(workflow, /previousDeploymentUrl:process\.env\.ROLLBACK_URL\|\|null/);
-  assert.equal((workflow.match(/npx --yes wrangler@4 pages deployment list/g) || []).length, 3);
-  assert.doesNotMatch(workflow, /npx --no-install wrangler pages deployment list/);
+  assert.equal((workflow.match(/\.\/node_modules\/\.bin\/wrangler pages deployment list/g) || []).length, 3);
+  assert.doesNotMatch(workflow, /npx --(?:yes )?wrangler@4 pages deployment list/);
+  assert.match(workflow, /Install locked Wrangler CLI without lifecycle scripts[\s\S]*npm ci --ignore-scripts/);
+  assert.equal(packageJson.devDependencies.wrangler, '4.123.0');
+  assert.equal(packageLock.packages[''].devDependencies.wrangler, '4.123.0');
+  assert.equal(packageLock.packages['node_modules/wrangler'].version, '4.123.0');
+  const auditWranglerInstall = workflow.indexOf('Install locked Wrangler CLI without lifecycle scripts');
+  const auditWranglerList = workflow.lastIndexOf('./node_modules/.bin/wrangler pages deployment list');
+  assert(auditWranglerInstall >= 0 && auditWranglerInstall < auditWranglerList);
   assert.equal((workflow.match(/PROJECT_NAME: fastgpt-home/g) || []).length, 2);
   assert.doesNotMatch(workflow, /CLOUDFLARE_PROJECT_NAME: \$\{\{ vars\.CLOUDFLARE_PROJECT_NAME \}\}/);
   assert.match(workflow, /provider:\{project:process\.env\.PROJECT_NAME/);
@@ -156,7 +165,7 @@ test('production delivery consumes retained archives and records immutable provi
   assert.match(workflow, /fallback-first/);
   assert.match(workflow, /if: always\(\)/);
   assert(workflow.includes('--inject-release-headers'));
-  assert(dockerfile.includes('FROM fholzer/nginx-brotli:latest AS release-runtime'));
+  assert.equal((dockerfile.match(/FROM fholzer\/nginx-brotli@sha256:1982def7c54f70db5186b30fa2e4a1fdf6116f42b45d95627594bd872a75cf6e AS (?:runtime|release-runtime)/g) || []).length, 2);
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));
   assert(dockerfile.includes('map $uri $locale_redirect_target'));
   assert.doesNotMatch(dockerfile.slice(dockerfile.indexOf('AS release-runtime')), /npm run build/);

@@ -51,7 +51,7 @@ RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx
 RUN npm install
 RUN npm run build
 
-FROM fholzer/nginx-brotli:latest AS runtime
+FROM fholzer/nginx-brotli@sha256:1982def7c54f70db5186b30fa2e4a1fdf6116f42b45d95627594bd872a75cf6e AS runtime
 
 LABEL org.opencontainers.image.source="https://github.com/labring/fastgpt-home"
 
@@ -63,7 +63,7 @@ COPY nginx-embeddable-security-headers.conf /etc/nginx/embeddable-security-heade
 RUN nginx -t
 
 # Immutable release path: CI extracts a checksum-verified release-out tree before build.
-FROM fholzer/nginx-brotli:latest AS release-runtime
+FROM fholzer/nginx-brotli@sha256:1982def7c54f70db5186b30fa2e4a1fdf6116f42b45d95627594bd872a75cf6e AS release-runtime
 ARG RELEASE_SOURCE_COMMIT
 ARG RELEASE_TREE_DIGEST
 ARG RELEASE_ROLLBACK_TARGET

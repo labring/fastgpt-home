@@ -207,6 +207,75 @@ test('source CLI enforces citation grammar for labelled Markdown and structured 
   });
 });
 
+test('source CLI normalizes the full citation vocabulary and rich structured values', () => {
+  const cleanEnglishCitation = JSON.stringify({
+    copy: [
+      '<p><strong>Sources:</strong> <a href="https://example.com/docs">Official docs</a>, ',
+      '<a href="https://www.iana.org/domains/reserved">IANA registry</a></p>',
+    ].join(''),
+  }) + '\n';
+  const cleanChineseCitation = [
+    '{"资料来源":"**资料来源：** [官方文档](https://example.com/docs)；',
+    '[IANA 注册表](https://www.iana.org/domains/reserved)"}\n',
+  ].join('');
+  withFixture(
+    {
+      'src/content/guides/en/dirty.md': [
+        '# Guide',
+        '',
+        '- **Source:** Internal KB',
+        '> **references**: Internal KB',
+        '',
+      ].join('\n'),
+      'src/content/guides/zh/dirty.md': '# 指南\n\n> **资料来源：** 内部 KB\n',
+      'src/locales/en.json': [
+        '{"copy":"<p><strong>Sources:</strong> Internal KB</p>"}',
+        '{"Schedule":"weekly"}',
+        '{"copy":"<p>Version-plan: enterprise</p>"}',
+        '{"copy":"<p>Update-log: pending</p>"}',
+        '{"copy":"<p>Review-cycle: monthly</p>"}',
+        '{"copy":"<p>案例引用: approved</p>"}',
+      ].join('\n'),
+      'src/locales/zh.json': JSON.stringify({
+        '参考资料': '<section><strong>资料来源：</strong> 内部 KB</section>',
+      }) + '\n',
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-07 citation-policy \| markdown-body .*dirty\.md/);
+      assert.match(result.stderr, /D-07 citation-policy \| structured-copy .*zh\.json/);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 5);
+    },
+  );
+  withFixture(
+    {
+      'src/content/guides/zh/dirty.md': '# 指南\n\n> 来源：Internal KB\n',
+      'src/locales/en.json': JSON.stringify({
+        copy: [
+          '<p><strong>Sources:</strong> ',
+          '<a href="http://example.com/docs">Official docs</a></p>',
+        ].join(''),
+      }) + '\n',
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2);
+    },
+  );
+  withFixture(
+    {
+      'src/locales/en.json': cleanEnglishCitation,
+      'src/locales/zh.json': cleanChineseCitation,
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
 test('source CLI scans structured FAQ and locale copy without treating syntax as published Markdown', () => {
   withFixture(
     {
@@ -379,6 +448,67 @@ test('HTML CLI applies shared editorial labels and citation grammar to visible a
   );
 });
 
+test('HTML CLI normalizes nested bilingual citation labels across visible containers', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<div><strong>Source:</strong> Internal KB</div>',
+        '<section><strong>资料来源：</strong> 内部 KB</section>',
+        '<aside><strong>参考资料</strong>：Internal KB</aside>',
+        '<dl><dt><strong>References:</strong> Internal KB</dt>',
+        '<dd><strong>来源：</strong> Internal KB</dd></dl>',
+        '<p>Schedule: weekly</p><script>{"Update-log":"pending"}</script>',
+        '</body></html>',
+      ].join(''),
+    },
+    (root) => {
+      const result = spawnSync(process.execPath, [
+        SCRIPT,
+        '--mode',
+        'html',
+        '--root',
+        root,
+        '--variant',
+        'io',
+      ], {
+        cwd: ROOT,
+        encoding: 'utf8',
+      });
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 5);
+      assert.match(result.stderr, /Schedule/);
+      assert.match(result.stderr, /Update-log/);
+    },
+  );
+  withFixture(
+    {
+      'index.html': [
+        '<html><body><section><strong>资料来源：</strong> ',
+        '<a href="https://example.com/docs">官方文档</a>；',
+        '<a href="https://www.iana.org/domains/reserved">IANA 注册表</a></section>',
+        '<aside><strong>Source:</strong> ',
+        '<a href="https://example.com/research">Published research</a></aside></body></html>',
+      ].join(''),
+    },
+    (root) => {
+      const result = spawnSync(process.execPath, [
+        SCRIPT,
+        '--mode',
+        'html',
+        '--root',
+        root,
+        '--variant',
+        'io',
+      ], {
+        cwd: ROOT,
+        encoding: 'utf8',
+      });
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
 test('HTML CLI fails closed for a missing or empty output root', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-html-'));
   try {
@@ -448,6 +578,7 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     assert.deepEqual(JSON.parse(fs.readFileSync(report, 'utf8')).totals, {
       sitemapDocuments: 1,
       pages: 1,
+      checkedPages: 1,
       boundedInventory: 2
     });
 
@@ -521,7 +652,7 @@ test('live CLI fetches each canonical sitemap once when nested indexes point to 
 
 test('live CLI requires inventory from each host and never fetches pages after a sitemap budget violation', async () => {
   const counts = { cnPages: 0, ioPages: 0, budgetPages: 0 };
-  const createServer = ({ empty = false, budget = false, counter }) => http.createServer((request, response) => {
+  const createServer = ({ empty = false, counter }) => http.createServer((request, response) => {
     const baseUrl = `http://${request.headers.host}`;
     if (request.url === '/sitemap.xml') {
       response.setHeader('content-type', 'application/xml');
@@ -553,8 +684,8 @@ test('live CLI requires inventory from each host and never fetches pages after a
     assert.equal(missingReport.inventory.find((entry) => entry.host === new URL(ioBaseUrl).host).pages, 0);
     assert.match(fs.readFileSync(`${report}.txt`, 'utf8'), /inventory host=/);
 
-    const budgetCn = createServer({ budget: true, counter: 'budgetPages' });
-    const budgetIo = createServer({ budget: true, counter: 'budgetPages' });
+    const budgetCn = createServer({ counter: 'budgetPages' });
+    const budgetIo = createServer({ counter: 'budgetPages' });
     await Promise.all([
       new Promise((resolve) => budgetCn.listen(0, '127.0.0.1', resolve)),
       new Promise((resolve) => budgetIo.listen(0, '127.0.0.1', resolve)),
@@ -564,11 +695,19 @@ test('live CLI requires inventory from each host and never fetches pages after a
         '--mode', 'live',
         '--base-url-cn', `http://127.0.0.1:${budgetCn.address().port}`,
         '--base-url-io', `http://127.0.0.1:${budgetIo.address().port}`,
-        '--report', report, '--allow-http-for-tests', '--max-urls', '2',
+        '--report', report, '--allow-http-for-tests', '--max-urls', '3',
       ]);
       assert.equal(budgetResult.status, 1);
       assert.match(budgetResult.stderr, /D-08 sitemap-budget/);
       assert.equal(counts.budgetPages, 0);
+      const budgetReport = JSON.parse(fs.readFileSync(report, 'utf8'));
+      assert(budgetReport.totals.pages > 0);
+      assert.equal(budgetReport.totals.checkedPages, 0);
+      assert.equal(
+        budgetReport.totals.boundedInventory,
+        budgetReport.totals.sitemapDocuments + budgetReport.totals.pages,
+      );
+      assert.match(fs.readFileSync(`${report}.txt`, 'utf8'), /checkedPages=0/);
     } finally {
       await Promise.all([
         new Promise((resolve) => budgetCn.close(resolve)),

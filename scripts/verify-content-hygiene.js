@@ -14,22 +14,30 @@ const { resolveSiteVariant, getDefaultLocale } = require('./lib/site-variant');
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
-const SOURCE_SECTION = /^(#{1,6})\s*(sources?|references|来源|参考资料|资料来源)\s*[:：]?\s*$/i;
+const CITATION_LABEL_NAME = 'Sources?|References|来源|参考资料|资料来源';
+const CITATION_SEPARATOR = /^[\s,;，；、·|/]*$/;
+const SOURCE_SECTION = new RegExp(`^(#{1,6})\\s*(?:${CITATION_LABEL_NAME})\\s*[:：]?\\s*$`, 'i');
 const EDITORIAL_LABEL_NAME = [
-  '事实来源', '需求依据', '需求锚点', 'GSC *来源', '案例授权', '案例清理', '发布落点', '核验流程', '验证流程', '复核周期',
+  '事实来源', '需求依据', '需求锚点', 'GSC *来源', '案例授权', '案例清理',
+  '案例引用',
+  '发布落点', '核验流程', '验证流程', '复核周期',
   '核验日', '核验日期', '验证日期', '排期', '签发', '修订记录', '更新记录', '版本与套餐', '版本与档位',
   '计划(?:安排)?', '附录', '补充说明', '审核(?:状态)?', '交付(?:排期)?', '来源依据', '客户 *KB', '内部 *KB',
   'internal +KB', 'client +KB', 'fact +source', 'source +of +facts', 'source +material', 'demand +anchor(?: *\([^)]*\))?',
   'GSC +provenance', 'case +clearance', 'publish +target', 'verification +workflow', 'review +cycle',
-  'verification +date', 'verified +on', 'delivery +schedule', 'sign[- ]off', 'revision +log', 'review +status',
-  'version(?:s)? +and +(?:plans|tiers)', 'version +and +(?:package|tiers)', 'version +plan',
-  'update +(record|log)(?: +addendum)?', 'revision', 'addendum',
+  'verification +date', 'verified +on', 'delivery +schedule', 'schedule', 'sign[- ]off',
+  'revision +log',
+  'review +status', 'version(?:s)? +and +(?:plans|tiers)', 'version +and +(?:package|tiers)',
+  'version[- ]plan', 'update[- ](?:record|log)(?:[- ]addendum)?', 'review[- ]cycle',
+  'revision', 'addendum',
 ].join('|');
-const EDITORIAL_LABEL = new RegExp(`^(?:>\\s*)?(?:[-*]\\s+)?(?:\\*\\*)?(?:${EDITORIAL_LABEL_NAME})(?:\\*\\*)?\\s*[:：]`, 'i');
+const EDITORIAL_LABEL = new RegExp(
+  `^(?:>\\s*)?(?:[-*]\\s+)?(?:\\*\\*)?(?:${EDITORIAL_LABEL_NAME})(?:\\*\\*)?\\s*[:：]`,
+  'i',
+);
 const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
 const HTML_EDITORIAL_MARKER = new RegExp(`(?:${EDITORIAL_LABEL_NAME})\\s*["']?\\s*[:：]`, 'gi');
-const CITATION_LABEL = /^(?:>\s*)?(?:[-*+]\s+)?(?:\*\*)?(?:sources|references)(?:\*\*)?\s*[:：]\s*(.*)$/i;
-const CITATION_LABEL_TEXT = /^(?:sources|references)\s*[:：]\s*/i;
+const CITATION_LABEL_TEXT = new RegExp(`^(?:${CITATION_LABEL_NAME})\\s*[:：]\\s*`, 'i');
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 
 function usage(message) {
@@ -253,12 +261,12 @@ function isPrivateHostname(hostname) {
 }
 
 function validPublicCitation(value) {
-  const entry = value.trim().replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
+  const entry = stripCitationLabel(value) ?? value.trim().replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
   const linkPattern = /\[([^\]\n]+)\]\(([^()\s]+)\)/g;
   let previousEnd = 0;
   let count = 0;
   for (const match of entry.matchAll(linkPattern)) {
-    if (!/^[\s,;，；、·|/]*$/.test(entry.slice(previousEnd, match.index))) return false;
+    if (!CITATION_SEPARATOR.test(entry.slice(previousEnd, match.index))) return false;
     if (!isDescriptiveCitationLabel(match[1], match[2])) return false;
     try {
       const url = new URL(match[2]);
@@ -271,7 +279,7 @@ function validPublicCitation(value) {
     previousEnd = match.index + match[0].length;
     count += 1;
   }
-  return count > 0 && /^[\s,;，；、·|/]*$/.test(entry.slice(previousEnd));
+  return count > 0 && CITATION_SEPARATOR.test(entry.slice(previousEnd));
 }
 
 function isDescriptiveCitationLabel(label, href) {
@@ -279,8 +287,91 @@ function isDescriptiveCitationLabel(label, href) {
   return Boolean(text) && text !== href && !/^https?:\/\//i.test(text);
 }
 
-function citationValue(value) {
-  return value.trim().match(CITATION_LABEL)?.[1];
+function normalizedCitationText(value) {
+  return htmlText(value).replaceAll('**', '').trim().replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
+}
+
+function citationLabelMatch(value) {
+  const text = normalizedCitationText(value);
+  return { match: text.match(CITATION_LABEL_TEXT), text };
+}
+
+function stripCitationLabel(value) {
+  const { match, text } = citationLabelMatch(value);
+  return match ? text.slice(match[0].length) : undefined;
+}
+
+function isCitationLabelled(value) {
+  const { match } = citationLabelMatch(value);
+  return Boolean(match);
+}
+
+function validPublicHtmlCitation(value) {
+  const anchors = [...value.matchAll(/<a\b[^>]*href=["']([^"']+)[^>]*>([\s\S]*?)<\/a\s*>/gi)];
+  const outsideText = htmlText(value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, ''));
+  const remainingText = stripCitationLabel(outsideText) ?? outsideText;
+  return anchors.length > 0
+    && CITATION_SEPARATOR.test(remainingText)
+    && anchors.every((anchor) => validPublicHtmlUrl(anchor[1])
+      && isDescriptiveCitationLabel(htmlText(anchor[2]), anchor[1]));
+}
+
+function validPublicCitationValue(value) {
+  return /<a\b/i.test(value) ? validPublicHtmlCitation(value) : validPublicCitation(value);
+}
+
+function structuredStringValues(line) {
+  return [...line.matchAll(/[:=]\s*(["'`])([\s\S]*?)\1/g)].map((match) => match[2]);
+}
+
+function structuredProperties(line) {
+  const property = /(?:["']([^"']+)["']|([A-Za-z\u4e00-\u9fff-]+))\s*[:=]\s*(["'`])([\s\S]*?)\3/g;
+  return [...line.matchAll(property)].map((match) => ({
+    key: match[1] || match[2],
+    value: match[4],
+  }));
+}
+
+function collectJsonEntries(value, source, entries, key) {
+  if (typeof value === 'string') {
+    const index = source.indexOf(JSON.stringify(value));
+    const line = index < 0 ? 1 : source.slice(0, index).split(/\r\n?|\n/).length;
+    entries.push({ key, value, line });
+    return;
+  }
+  if (Array.isArray(value)) {
+    for (const item of value) collectJsonEntries(item, source, entries);
+    return;
+  }
+  if (value && typeof value === 'object') {
+    for (const [childKey, childValue] of Object.entries(value)) {
+      collectJsonEntries(childValue, source, entries, childKey);
+    }
+  }
+}
+
+function structuredEntries(relativePath, source) {
+  if (relativePath.endsWith('.json')) {
+    try {
+      const entries = [];
+      collectJsonEntries(JSON.parse(source), source, entries);
+      return entries;
+    } catch {
+      return source.split(/\r\n?|\n/).flatMap((line, index) => {
+        try {
+          const entries = [];
+          collectJsonEntries(JSON.parse(line), line, entries);
+          return entries.map((entry) => ({ ...entry, line: index + 1 }));
+        } catch {
+          return [];
+        }
+      });
+    }
+  }
+  return source.replace(/\r\n?/g, '\n').split('\n').flatMap((line, index) => [
+    ...structuredStringValues(line).map((value) => ({ value, line: index + 1 })),
+    ...structuredProperties(line).map(({ key, value }) => ({ key, value, line: index + 1 })),
+  ]);
 }
 
 function inspectMarkdown(relativePath, source) {
@@ -303,8 +394,7 @@ function inspectMarkdown(relativePath, source) {
     if (EDITORIAL_LABEL.test(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim()));
     }
-    const labelledCitation = citationValue(line);
-    if (labelledCitation !== undefined && !validPublicCitation(labelledCitation)) {
+    if (isCitationLabelled(line) && !validPublicCitationValue(line)) {
       findings.push(finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim()));
     }
     if (inSources && line.trim() && !validPublicCitation(line)) {
@@ -315,24 +405,44 @@ function inspectMarkdown(relativePath, source) {
 }
 
 function inspectStructuredCopy(relativePath, source) {
-  const normalized = source.replace(/\r\n?/g, '\n');
-  const findings = normalized.split('\n').flatMap((line, index) => {
-    const quotedValue = line.match(/[:=]\s*["'`]([^"'`]+)["'`]/)?.[1];
-    if (!quotedValue || (!EDITORIAL_LABEL.test(quotedValue) && !EDITORIAL_PREAMBLE.test(quotedValue))) {
-      return [];
+  const findings = [];
+  for (const { key, value, line } of structuredEntries(relativePath, source)) {
+    const plainValue = normalizedCitationText(value);
+    if (EDITORIAL_LABEL.test(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
+        findings.push(finding(
+          'D-01 editorial-metadata',
+          'structured-copy',
+          relativePath,
+          line,
+          value,
+        ));
     }
-    return [finding('D-01 editorial-metadata', 'structured-copy', relativePath, index + 1, quotedValue)];
-  });
-  const structuredLabel = new RegExp('(?:["\'](?:' + EDITORIAL_LABEL_NAME + ')["\']|(?:' + EDITORIAL_LABEL_NAME + '))\\s*[:=]\\s*["\'`]([^"\'`]+)["\'`]', 'gi');
-  const structuredCitation = /(?:["'](?:sources|references)["']|(?:sources|references))\s*[:=]\s*["'`]([^"'`]+)["'`]/gi;
-  for (const [index, line] of normalized.split('\n').entries()) {
-    for (const match of line.matchAll(structuredLabel)) {
-      findings.push(finding('D-01 editorial-metadata', 'structured-copy', relativePath, index + 1, match[0]));
+    if (isCitationLabelled(value) && !validPublicCitationValue(value)) {
+      findings.push(finding(
+        'D-07 citation-policy',
+        'structured-copy',
+        relativePath,
+        line,
+        value,
+      ));
     }
-    for (const match of line.matchAll(structuredCitation)) {
-      if (!validPublicCitation(match[1])) {
-        findings.push(finding('D-07 citation-policy', 'structured-copy', relativePath, index + 1, match[0]));
-      }
+    if (key && EDITORIAL_LABEL.test(`${key}:`)) {
+        findings.push(finding(
+          'D-01 editorial-metadata',
+          'structured-copy',
+          relativePath,
+          line,
+          key,
+        ));
+    }
+    if (key && isCitationLabelled(`${key}:`) && !validPublicCitationValue(value)) {
+      findings.push(finding(
+        'D-07 citation-policy',
+        'structured-copy',
+        relativePath,
+        line,
+        key,
+      ));
     }
   }
   return findings;
@@ -428,12 +538,19 @@ function visibleCitationBlocks(visible) {
   const sections = matches.flatMap((match, index) => {
     if (!/^(sources?|references|来源|参考资料|资料来源)\s*[:：]?$/i.test(htmlText(match[2]))) return [];
     const end = matches[index + 1]?.index ?? visible.length;
-    return [{ index: match.index, value: visible.slice(match.index + match[0].length, end), labelled: false }];
+    return [{ index: match.index, value: visible.slice(match.index + match[0].length, end) }];
   });
-  const labelled = /<(p|li|blockquote)\b[^>]*>([\s\S]*?)<\/\1\s*>/gi;
-  for (const match of visible.matchAll(labelled)) {
-    if (CITATION_LABEL_TEXT.test(htmlText(match[2]))) {
-      sections.push({ index: match.index, value: match[2], labelled: true });
+  const openingTag = /<([a-z][\w:-]*)\b[^>]*>/gi;
+  for (const match of visible.matchAll(openingTag)) {
+    if (/^(?:strong|b|em|span)$/i.test(match[1])) continue;
+    const closingTag = `</${match[1]}>`;
+    const closingIndex = visible.indexOf(closingTag, match.index + match[0].length);
+    if (closingIndex < 0) continue;
+    const value = visible.slice(match.index + match[0].length, closingIndex);
+    const directContent = value.trim().replace(/^<(?:strong|b|em|span)\b[^>]*>/i, '');
+    if (directContent.startsWith('<')) continue;
+    if (isCitationLabelled(directContent)) {
+      sections.push({ index: match.index, value });
     }
   }
   return sections;
@@ -450,15 +567,15 @@ function inspectHtmlArtifact(relativePath, html, variant) {
     findings.push(htmlFinding('D-01 editorial-metadata', 'visible', identity, visible, match.index, match[0].trim()));
   }
   for (const citation of visibleCitationBlocks(visible)) {
-    const anchors = [...citation.value.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>[\s\S]*?<\/a\s*>/gi)];
-    const outsideAnchors = htmlText(citation.value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, '')).replace(CITATION_LABEL_TEXT, '').trim();
-    if (!anchors.length || outsideAnchors) {
-      findings.push(htmlFinding('D-07 citation-policy', 'visible', identity, visible, citation.index, 'Sources and References require public HTTPS anchors'));
-    }
-    for (const anchor of anchors) {
-      if (!validPublicHtmlUrl(anchor[1]) || !isDescriptiveCitationLabel(htmlText(anchor[0]), anchor[1])) {
-        findings.push(htmlFinding('D-07 citation-policy', 'visible', identity, visible, citation.index, anchor[1]));
-      }
+    if (!validPublicHtmlCitation(citation.value)) {
+      findings.push(htmlFinding(
+        'D-07 citation-policy',
+        'visible',
+        identity,
+        visible,
+        citation.index,
+        'Sources and References require public HTTPS anchors',
+      ));
     }
   }
   for (const match of payload.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
@@ -711,6 +828,7 @@ function writeLiveReport(reportPath, report) {
     `status=${report.status}`,
     `sitemapDocuments=${report.totals.sitemapDocuments}`,
     `pages=${report.totals.pages}`,
+    `checkedPages=${report.totals.checkedPages}`,
     `boundedInventory=${report.totals.boundedInventory}`,
     `violations=${report.violations.length}`,
     ...report.inventory.map((entry) => `inventory host=${entry.host} sitemapDocuments=${entry.sitemapDocuments} pages=${entry.pages} boundedInventory=${entry.boundedInventory}`),
@@ -735,7 +853,8 @@ async function inspectLive(options) {
     status: violations.length ? 'failed' : 'passed',
     totals: {
       sitemapDocuments: inventory.sitemapDocuments.size,
-      pages: pages.length,
+      pages: inventory.pages.size,
+      checkedPages: pages.length,
       boundedInventory: inventory.sitemapDocuments.size + inventory.pages.size
     },
     inventory: inventory.inventory,

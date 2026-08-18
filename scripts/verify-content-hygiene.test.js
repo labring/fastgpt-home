@@ -1381,6 +1381,34 @@ test('source CLI preserves quote depth, raw HTML blocks, paired delimiters, and 
   );
 });
 
+test('source CLI streams nested HTML blocks and preserves literal Markdown delimiters', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/streaming.md': [
+        '# Guide',
+        '',
+        '<div><div>Reader</div>Sources',
+        ': Internal KB</div><details>Sources</details><summary>: Internal KB</summary><hr><p>Sources</p><p>: Internal KB</p>',
+        '<p>Sources',
+        ': [Public documentation](https://example.com/docs)</p>',
+        '\\*Demand',
+        'basis: clean',
+        '__Sources__',
+        ': Internal KB',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.match(result.stderr, /streaming\.md.*line=3/);
+      assert.match(result.stderr, /streaming\.md.*line=9/);
+      assert.doesNotMatch(result.stderr, /streaming\.md.*line=4|streaming\.md.*line=5/);
+    }
+  );
+});
+
 test('HTML CLI projects br tags as inline whitespace without crossing block boundaries', () => {
   withFixture(
     {

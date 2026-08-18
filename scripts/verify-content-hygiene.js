@@ -41,13 +41,17 @@ const CITATION_LABEL_TEXT = new RegExp(
   `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_CITATION_LABEL})\\s*[:：]\\s*|(?:${CHINESE_CITATION_LABEL})\\s*[:：]\\s*`,
   'giu'
 );
-const BLOCK_TAGS = new Set([
+const HTML_BLOCK_TAGS = new Set([
   'address',
   'article',
   'aside',
   'blockquote',
   'body',
+  'caption',
+  'col',
+  'colgroup',
   'dd',
+  'details',
   'div',
   'dl',
   'dt',
@@ -71,6 +75,7 @@ const BLOCK_TAGS = new Set([
   'p',
   'pre',
   'section',
+  'summary',
   'table',
   'tbody',
   'td',
@@ -611,7 +616,7 @@ function markdownCitationEntries(value) {
 
 function markdownLogicalBlocks(lines, lineStarts) {
   const blocks = [];
-  const appendBlock = (parts) => {
+  const appendBlock = (parts, html = false) => {
     let text = '';
     const offsets = [];
     for (const [value, offset] of parts) {
@@ -622,10 +627,9 @@ function markdownLogicalBlocks(lines, lineStarts) {
       text += value;
       for (let index = 0; index < value.length; index += 1) offsets.push(offset + index);
     }
-    blocks.push({ text, offsets });
+    blocks.push({ text, offsets, html });
   };
-  const htmlBlock =
-    /^\s*<\/?(?:address|article|aside|blockquote|div|figure|h[1-6]|li|ol|p|section|table|ul)\b/i;
+  const htmlBlock = new RegExp(`^\\s*</?(?:${[...HTML_BLOCK_TAGS].join('|')})\\b`, 'i');
   const boundary = (line) =>
     !line.trim() ||
     /^#{1,6}\s+/.test(line) ||
@@ -673,44 +677,20 @@ function markdownLogicalBlocks(lines, lineStarts) {
       appendBlock(parts);
       continue;
     }
-    const openBlock =
-      /<(address|article|aside|blockquote|div|figure|footer|header|h[1-6]|li|main|nav|ol|p|pre|section|table|tbody|td|th|tr|ul)\b[^>]*>/gi;
-    if (openBlock.test(lines[index])) {
-      openBlock.lastIndex = 0;
-      let cursor = 0;
-      while (cursor < lines[index].length) {
-        openBlock.lastIndex = cursor;
-        const opener = openBlock.exec(lines[index]);
-        if (!opener) break;
-        const closing = new RegExp(`</${opener[1]}\\s*>`, 'i');
-        const parts = [];
-        let lineIndex = index;
-        let segmentStart = opener.index;
-        while (lineIndex < lines.length) {
-          const close = closing.exec(lines[lineIndex].slice(segmentStart));
-          if (close) {
-            const end = segmentStart + close.index + close[0].length;
-            parts.push([
-              lines[lineIndex].slice(segmentStart, end),
-              lineStarts[lineIndex] + segmentStart
-            ]);
-            appendBlock(parts);
-            index = lineIndex;
-            cursor = end;
-            break;
-          }
-          parts.push([lines[lineIndex].slice(segmentStart), lineStarts[lineIndex] + segmentStart]);
-          lineIndex += 1;
-          segmentStart = 0;
+    if (htmlBlock.test(lines[index])) {
+      const parts = [];
+      let depth = 0;
+      do {
+        const line = lines[index];
+        parts.push([line, lineStarts[index]]);
+        for (const tag of line.matchAll(/<\s*(\/)?\s*([a-z][\w:-]*)\b[^>]*>/gi)) {
+          const name = tag[2].toLowerCase();
+          if (!HTML_BLOCK_TAGS.has(name) || ['hr'].includes(name)) continue;
+          depth += tag[1] ? -1 : 1;
         }
-        if (lineIndex >= lines.length) {
-          appendBlock(parts);
-          index = lineIndex;
-          cursor = 0;
-          break;
-        }
-      }
-      index += 1;
+        index += 1;
+      } while (index < lines.length && depth > 0);
+      appendBlock(parts, true);
       continue;
     }
     if (!plainLine(lines[index])) {
@@ -728,6 +708,16 @@ function markdownLogicalBlocks(lines, lineStarts) {
 }
 
 function normalizedMarkdownBlock(block) {
+  if (block.html) {
+    const projection = normalizePolicyProjection(projectVisibleHtml(block.text), true);
+    return {
+      text: projection.text,
+      offsets: Array.from(
+        { length: projection.text.length },
+        (_, index) => block.offsets[projectedRawOffset(projection, index)]
+      )
+    };
+  }
   let text = '';
   const offsets = [];
   const pairedDelimiters = new Set();
@@ -1245,8 +1235,7 @@ function inspectMarkdown(relativePath, source) {
   const lines = body.split('\n');
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   let inSources = false;
-  const containsHtmlBlock =
-    /<\/?(?:address|article|aside|blockquote|div|figure|footer|header|h[1-6]|li|main|nav|ol|p|pre|section|table|tbody|td|th|tr|ul)\b/i;
+  const containsHtmlBlock = new RegExp(`</?(?:${[...HTML_BLOCK_TAGS].join('|')})\\b`, 'i');
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
@@ -1641,7 +1630,7 @@ function projectVisibleHtml(visible) {
     if (/^h[1-6]$/.test(name)) {
       appendBlockBoundary(projection, tagStart);
       if (!closing) appendSyntheticHtml(projection, '## ', tagStart);
-    } else if (BLOCK_TAGS.has(name)) {
+    } else if (HTML_BLOCK_TAGS.has(name)) {
       appendBlockBoundary(projection, tagStart);
     }
     cursor = tagEnd + 1;

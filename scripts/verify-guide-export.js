@@ -286,6 +286,26 @@ function assertEqual(context, actual, expected, surface) {
   if (actual !== expected) fail({ ...context, surface }, `expected ${JSON.stringify(expected)}, received ${JSON.stringify(actual)}`);
 }
 
+function expectedUpdatedText(dateModified, locale) {
+  const date = new Date(`${dateModified}T00:00:00Z`);
+  const formatted = new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
+    timeZone: 'UTC',
+    year: 'numeric',
+    month: locale === 'zh' ? 'numeric' : 'long',
+    day: 'numeric'
+  }).format(date);
+  return locale === 'zh' ? `更新于 ${formatted}` : `Last updated ${formatted}`;
+}
+
+function verifyUpdatedTime(html, page, expectation, context) {
+  const summary = new RegExp(`<p\\b[^>]*class=["'][^"']*\\bsummary\\b[^"']*["'][^>]*>[\\s\\S]*?<\\/p>\\s*<time\\b([^>]*)>([\\s\\S]*?)<\\/time>`, 'i').exec(html);
+  if (!summary) fail({ ...context, surface: 'updated' }, 'updated time must immediately follow the summary');
+  const times = [...html.matchAll(/<time\b([^>]*)>([\s\S]*?)<\/time>/gi)];
+  if (times.length !== 1) fail({ ...context, surface: 'updated' }, 'expected exactly one updated time element');
+  assertEqual(context, getAttribute(`<time ${times[0][1]}>`, 'datetime'), page.source.dateModified, 'updated');
+  assertEqual(context, stripHtml(times[0][2]), expectedUpdatedText(page.source.dateModified, expectation.locale), 'updated');
+}
+
 function verifyMetadata(html, page, expectation, filePath) {
   const context = { variant: expectation.variant, slug: page.slug, filePath, surface: 'metadata' };
   const canonical = `${expectation.host}${page.route}`;
@@ -357,6 +377,7 @@ function verifyArticle(html, page, expectation, filePath) {
   const canonical = `${expectation.host}${page.route}`;
   const language = expectation.locale === 'zh' ? 'zh-CN' : 'en-US';
   const article = getJsonLdNode(nodes, 'Article', context, 'schema:Article');
+  verifyUpdatedTime(html, page, expectation, context);
   assertSchemaValue(context, article.headline, page.source.h1, 'schema:Article', 'headline');
   assertSchemaValue(context, article.description, page.source.metaDescription, 'schema:Article', 'description');
   assertSchemaValue(context, article.inLanguage, language, 'schema:Article', 'inLanguage');

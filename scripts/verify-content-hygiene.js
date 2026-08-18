@@ -6,8 +6,10 @@
  */
 
 const fs = require('node:fs');
+const crypto = require('node:crypto');
 const net = require('node:net');
 const path = require('node:path');
+const { resolveSiteVariant, getDefaultLocale } = require('./lib/site-variant');
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
@@ -19,25 +21,83 @@ const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官�
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
   process.stderr.write('Usage: verify-content-hygiene --mode source [--root <repository-root>]\n');
+  process.stderr.write('       verify-content-hygiene --mode html --root <output-root> [--variant io|cn|preview]\n');
+  process.stderr.write('       verify-content-hygiene --mode live --base-url-cn <https-url> --base-url-io <https-url> --report <path> [--allow-http-for-tests]\n');
 }
 
 function parseArgs(argv) {
-  const options = { mode: undefined, root: REPOSITORY_ROOT };
+  const options = {
+    mode: undefined,
+    root: REPOSITORY_ROOT,
+    rootProvided: false,
+    variant: undefined,
+    baseUrlCn: undefined,
+    baseUrlIo: undefined,
+    report: undefined,
+    allowHttpForTests: false,
+    concurrency: 8,
+    timeoutMs: 15000,
+    maxUrls: 5000,
+    maxSitemapDepth: 3
+  };
+  const numericOptions = {
+    '--concurrency': ['concurrency', 1, 32],
+    '--timeout-ms': ['timeoutMs', 100, 60000],
+    '--max-urls': ['maxUrls', 1, 10000],
+    '--max-sitemap-depth': ['maxSitemapDepth', 0, 5]
+  };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
     if (token === '--mode') {
       const mode = argv[++index];
-      if (!mode || mode.startsWith('--')) throw new Error('--mode requires source');
+      if (!mode || mode.startsWith('--')) throw new Error('--mode requires source, html, or live');
       options.mode = mode;
     } else if (token === '--root') {
       const root = argv[++index];
-      if (!root || root.startsWith('--')) throw new Error('--root requires a repository root');
+      if (!root || root.startsWith('--')) throw new Error('--root requires a directory');
       options.root = path.resolve(root);
+      options.rootProvided = true;
+    } else if (token === '--variant') {
+      const variant = argv[++index];
+      if (!variant || variant.startsWith('--')) throw new Error('--variant requires io, cn, or preview');
+      options.variant = variant;
+    } else if (token === '--base-url-cn' || token === '--base-url-io' || token === '--report') {
+      const value = argv[++index];
+      if (!value || value.startsWith('--')) throw new Error(`${token} requires a value`);
+      if (token === '--base-url-cn') options.baseUrlCn = value;
+      else if (token === '--base-url-io') options.baseUrlIo = value;
+      else options.report = path.resolve(value);
+    } else if (token === '--allow-http-for-tests') {
+      options.allowHttpForTests = true;
+    } else if (numericOptions[token]) {
+      const value = argv[++index];
+      const [key, minimum, maximum] = numericOptions[token];
+      if (!/^(?:0|[1-9]\d*)$/.test(value || '')) {
+        throw new Error(`${token} requires an integer from ${minimum} to ${maximum}`);
+      }
+      const numericValue = Number(value);
+      if (numericValue < minimum || numericValue > maximum) {
+        throw new Error(`${token} must be from ${minimum} to ${maximum}`);
+      }
+      options[key] = numericValue;
     } else {
       throw new Error(`Unknown option: ${token}`);
     }
   }
-  if (options.mode !== 'source') throw new Error('--mode source is required');
+  if (!['source', 'html', 'live'].includes(options.mode)) throw new Error('--mode source, html, or live is required');
+  if (options.mode === 'source') return options;
+  if (options.mode === 'html') {
+    if (!options.rootProvided) throw new Error('--mode html requires --root');
+    const variant = options.variant || resolveSiteVariant(process.env);
+    if (!['io', 'cn', 'preview'].includes(variant)) throw new Error('--variant must be io, cn, or preview');
+    options.variant = variant;
+    return options;
+  }
+  if (!options.baseUrlCn || !options.baseUrlIo || !options.report) {
+    throw new Error('--mode live requires --base-url-cn, --base-url-io, and --report');
+  }
+  options.baseUrlCn = validateLiveBaseUrl(options.baseUrlCn, options.allowHttpForTests, '--base-url-cn');
+  options.baseUrlIo = validateLiveBaseUrl(options.baseUrlIo, options.allowHttpForTests, '--base-url-io');
   return options;
 }
 
@@ -255,7 +315,319 @@ function formatFinding(entry) {
   return `${entry.rule} | ${entry.surface} | locale=${entry.locale} | path=${entry.path} | source=${entry.source} | line=${entry.line} | ${entry.detail}`;
 }
 
-function main(argv = process.argv.slice(2)) {
+function htmlLine(content, index) {
+  return content.slice(0, index).split('\n').length;
+}
+
+function htmlIdentity(relativePath, variant) {
+  const file = relativePath.replaceAll(path.sep, '/');
+  const route = file === 'index.html'
+    ? '/'
+    : file.endsWith('/index.html')
+      ? `/${file.slice(0, -'/index.html'.length)}`
+      : `/${file.slice(0, -'.html'.length)}`;
+  const segments = route.split('/').filter(Boolean);
+  const localePrefix = ['en', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms', 'zh-hant'].includes(segments[0])
+    ? segments.shift()
+    : undefined;
+  const locale = localePrefix || getDefaultLocale(variant);
+  const surfaceSegment = segments[0];
+  const surface = surfaceSegment === 'guide' ? 'guide'
+    : surfaceSegment === 'faq' ? 'faq'
+      : surfaceSegment === 'compare' ? 'comparison'
+        : surfaceSegment === 'price' ? 'pricing'
+          : ['tech', 'technical-center'].includes(surfaceSegment) ? 'technical'
+            : route === '/' ? 'home'
+              : 'page';
+  return { file, route, surface, locale, slug: segments.at(-1) || 'home' };
+}
+
+function htmlFinding(rule, projection, identity, content, index, detail) {
+  return {
+    rule,
+    projection,
+    ...identity,
+    line: htmlLine(content, index),
+    detail
+  };
+}
+
+function formatHtmlFinding(entry) {
+  return `${entry.rule} | ${entry.projection} | locale=${entry.locale} | route=${entry.route} | surface=${entry.surface} | slug=${entry.slug} | file=${entry.file} | line=${entry.line} | ${entry.detail}`;
+}
+
+function splitHtmlProjections(html) {
+  const payloads = [];
+  const visible = html.replace(/<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, (block) => {
+    payloads.push(block);
+    return '';
+  });
+  return { visible, payload: payloads.join('\n') };
+}
+
+function htmlText(value) {
+  return decodeHtml(value.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
+}
+
+function decodeHtml(value) {
+  return value
+    .replace(/&#x([0-9a-f]+);/gi, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 16)))
+    .replace(/&#([0-9]+);/g, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 10)))
+    .replaceAll('&amp;', '&')
+    .replaceAll('&quot;', '"')
+    .replaceAll('&#39;', "'")
+    .replaceAll('&lt;', '<')
+    .replaceAll('&gt;', '>');
+}
+
+function visibleCitationBlocks(visible) {
+  const heading = /<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi;
+  const matches = [...visible.matchAll(heading)];
+  return matches.flatMap((match, index) => {
+    if (!/^(sources?|references|来源|参考资料|资料来源)\s*[:：]?$/i.test(htmlText(match[2]))) return [];
+    const end = matches[index + 1]?.index ?? visible.length;
+    return [{ index: match.index, value: visible.slice(match.index + match[0].length, end) }];
+  });
+}
+
+function inspectHtmlArtifact(relativePath, html, variant) {
+  const identity = htmlIdentity(relativePath, variant);
+  const { visible, payload } = splitHtmlProjections(html);
+  const findings = [];
+  for (const match of visible.matchAll(new RegExp(EDITORIAL_LABEL.source, 'gi'))) {
+    findings.push(htmlFinding('D-01 editorial-metadata', 'visible', identity, visible, match.index, match[0].trim()));
+  }
+  for (const match of visible.matchAll(new RegExp(EDITORIAL_PREAMBLE.source, 'gi'))) {
+    findings.push(htmlFinding('D-01 editorial-metadata', 'visible', identity, visible, match.index, match[0].trim()));
+  }
+  for (const citation of visibleCitationBlocks(visible)) {
+    const anchors = [...citation.value.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>[\s\S]*?<\/a\s*>/gi)];
+    const outsideAnchors = htmlText(citation.value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, ''));
+    if (!anchors.length || outsideAnchors) {
+      findings.push(htmlFinding('D-07 citation-policy', 'visible', identity, visible, citation.index, 'Sources and References require public HTTPS anchors'));
+    }
+    for (const anchor of anchors) {
+      if (!validPublicHtmlUrl(anchor[1])) {
+        findings.push(htmlFinding('D-07 citation-policy', 'visible', identity, visible, citation.index, anchor[1]));
+      }
+    }
+  }
+  const payloadMarker = /(?:事实来源|需求依据|核验日(?:期)?|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|审核(?:状态)?|交付(?:排期)?|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|update\s+(?:record|log))/gi;
+  for (const match of payload.matchAll(payloadMarker)) {
+    findings.push(htmlFinding('D-01 editorial-metadata', 'payload', identity, html, html.indexOf(match[0]), match[0]));
+  }
+  return findings;
+}
+
+function validPublicHtmlUrl(value) {
+  try {
+    const url = new URL(decodeHtml(value));
+    return url.protocol === 'https:' && !url.username && !url.password && !isPrivateHostname(url.hostname);
+  } catch {
+    return false;
+  }
+}
+
+function htmlFiles(root) {
+  return walkFiles(root, '.', (name) => name.endsWith('.html'))
+    .map((file) => file.replace(/^\.\//, ''))
+    .sort((left, right) => left.localeCompare(right));
+}
+
+function inspectHtmlRoot(root, variant) {
+  const files = htmlFiles(root);
+  const findings = files.flatMap((file) => inspectHtmlArtifact(file, fs.readFileSync(path.join(root, file), 'utf8'), variant));
+  findings.sort((left, right) =>
+    [left.file, left.line, left.projection, left.rule].join('\0').localeCompare(
+      [right.file, right.line, right.projection, right.rule].join('\0'),
+    ),
+  );
+  return { files, findings };
+}
+
+function validateLiveBaseUrl(value, allowHttpForTests, label) {
+  let url;
+  try {
+    url = new URL(value);
+  } catch {
+    throw new Error(`${label} must be an absolute URL`);
+  }
+  const loopback = url.hostname === '127.0.0.1' || url.hostname === '::1' || url.hostname === 'localhost';
+  if (url.protocol !== 'https:' && !(allowHttpForTests && url.protocol === 'http:' && loopback)) {
+    throw new Error(`${label} must use HTTPS`);
+  }
+  if (url.username || url.password || url.pathname !== '/' || url.search || url.hash) {
+    throw new Error(`${label} must be an origin URL`);
+  }
+  return url.href.replace(/\/$/, '');
+}
+
+function sameOrigin(url, baseUrl) {
+  return new URL(url).origin === new URL(baseUrl).origin;
+}
+
+function sitemapLocs(xml) {
+  return [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/gi)].map((match) => decodeHtml(match[1].trim()));
+}
+
+async function fetchWithTimeout(url, timeoutMs) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { redirect: 'manual', signal: controller.signal });
+  } finally {
+    clearTimeout(timeout);
+  }
+}
+
+async function runBounded(items, concurrency, worker) {
+  const results = [];
+  let cursor = 0;
+  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, async () => {
+    while (cursor < items.length) {
+      const item = items[cursor++];
+      results.push(await worker(item));
+    }
+  }));
+  return results;
+}
+
+function liveViolation(rule, host, url, detail) {
+  return { rule, host, path: new URL(url).pathname, url, detail };
+}
+
+async function discoverInventory(options, baseUrls) {
+  const sitemapDocuments = new Map();
+  const pages = new Set();
+  const violations = [];
+  const queue = baseUrls.map((baseUrl) => ({ url: new URL('/sitemap.xml', baseUrl).href, baseUrl, depth: 0 }));
+  for (const item of queue) sitemapDocuments.set(item.url, item);
+  let cursor = 0;
+  while (cursor < queue.length) {
+    const item = queue[cursor++];
+    let response;
+    try {
+      response = await fetchWithTimeout(item.url, options.timeoutMs);
+    } catch (error) {
+      violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, error.name));
+      continue;
+    }
+    if (response.status !== 200 || response.url !== item.url || !sameOrigin(response.url, item.baseUrl)) {
+      violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, `status=${response.status}`));
+      continue;
+    }
+    const xml = await response.text();
+    const isIndex = /<sitemapindex\b/i.test(xml);
+    for (const location of sitemapLocs(xml)) {
+      let discovered;
+      try {
+        discovered = new URL(location).href;
+      } catch {
+        violations.push(liveViolation('D-08 sitemap-inventory', new URL(item.baseUrl).host, item.url, `invalid location ${location}`));
+        continue;
+      }
+      if (!sameOrigin(discovered, item.baseUrl)) {
+        violations.push(liveViolation('D-08 sitemap-inventory', new URL(item.baseUrl).host, item.url, `foreign location ${discovered}`));
+        continue;
+      }
+      if (isIndex) {
+        if (item.depth + 1 > options.maxSitemapDepth) {
+          violations.push(liveViolation('D-08 sitemap-depth', new URL(item.baseUrl).host, discovered, `max-depth=${options.maxSitemapDepth}`));
+          continue;
+        }
+        if (!sitemapDocuments.has(discovered)) {
+          if (sitemapDocuments.size + pages.size >= options.maxUrls) {
+            violations.push(liveViolation('D-08 sitemap-budget', new URL(item.baseUrl).host, discovered, `max-urls=${options.maxUrls}`));
+            continue;
+          }
+          const child = { url: discovered, baseUrl: item.baseUrl, depth: item.depth + 1 };
+          sitemapDocuments.set(discovered, child);
+          queue.push(child);
+        }
+      } else if (!pages.has(discovered)) {
+        if (sitemapDocuments.size + pages.size >= options.maxUrls) {
+          violations.push(liveViolation('D-08 sitemap-budget', new URL(item.baseUrl).host, discovered, `max-urls=${options.maxUrls}`));
+          continue;
+        }
+        pages.add(discovered);
+      }
+    }
+  }
+  return { sitemapDocuments, pages, violations };
+}
+
+async function inspectLivePage(url, options, baseUrls) {
+  const baseUrl = baseUrls.find((candidate) => sameOrigin(url, candidate));
+  const host = new URL(baseUrl).host;
+  try {
+    const response = await fetchWithTimeout(url, options.timeoutMs);
+    const content = await response.text();
+    const digest = crypto.createHash('sha256').update(content).digest('hex');
+    const violations = [];
+    if (response.status !== 200 || response.url !== url || !sameOrigin(response.url, baseUrl)) {
+      violations.push(liveViolation('D-08 page-fetch', host, url, `status=${response.status} final=${response.url}`));
+    }
+    if (!/text\/html/i.test(response.headers.get('content-type') || '')) {
+      violations.push(liveViolation('D-08 page-content-type', host, url, response.headers.get('content-type') || 'missing'));
+    }
+    const identity = htmlIdentity(new URL(url).pathname.replace(/^\//, '') || 'index.html', 'preview');
+    const hygiene = inspectHtmlArtifact(identity.file, content, 'preview').map((entry) => ({
+      rule: entry.rule,
+      host,
+      path: new URL(url).pathname,
+      url,
+      detail: `${entry.projection}: ${entry.detail}`
+    }));
+    return { host, path: new URL(url).pathname, url, status: response.status, contentSha256: digest, violations: [...violations, ...hygiene] };
+  } catch (error) {
+    return { host, path: new URL(url).pathname, url, status: 0, contentSha256: null, violations: [liveViolation('D-08 page-fetch', host, url, error.name)] };
+  }
+}
+
+function writeLiveReport(reportPath, report) {
+  const ordered = {
+    status: report.status,
+    totals: report.totals,
+    pages: report.pages,
+    violations: report.violations
+  };
+  fs.mkdirSync(path.dirname(reportPath), { recursive: true });
+  fs.writeFileSync(reportPath, `${JSON.stringify(ordered, null, 2)}\n`);
+  const receipt = [
+    `status=${report.status}`,
+    `sitemapDocuments=${report.totals.sitemapDocuments}`,
+    `pages=${report.totals.pages}`,
+    `boundedInventory=${report.totals.boundedInventory}`,
+    `violations=${report.violations.length}`,
+    ...report.pages.map((page) => `${page.host} ${page.path} status=${page.status} sha256=${page.contentSha256 || 'none'}`),
+    ...report.violations.map((violation) => `${violation.rule} ${violation.host}${violation.path} ${violation.detail}`)
+  ];
+  fs.writeFileSync(`${reportPath}.txt`, `${receipt.join('\n')}\n`);
+}
+
+async function inspectLive(options) {
+  const baseUrls = [options.baseUrlCn, options.baseUrlIo];
+  const inventory = await discoverInventory(options, baseUrls);
+  const pages = await runBounded([...inventory.pages].sort(), options.concurrency, (url) => inspectLivePage(url, options, baseUrls));
+  pages.sort((left, right) => left.url.localeCompare(right.url));
+  const violations = [...inventory.violations, ...pages.flatMap((page) => page.violations)].sort((left, right) =>
+    [left.url, left.rule, left.detail].join('\0').localeCompare([right.url, right.rule, right.detail].join('\0')),
+  );
+  const report = {
+    status: violations.length ? 'failed' : 'passed',
+    totals: {
+      sitemapDocuments: inventory.sitemapDocuments.size,
+      pages: pages.length,
+      boundedInventory: inventory.sitemapDocuments.size + inventory.pages.size
+    },
+    pages,
+    violations
+  };
+  writeLiveReport(options.report, report);
+  return report;
+}
+
+async function main(argv = process.argv.slice(2)) {
   let options;
   try {
     options = parseArgs(argv);
@@ -264,15 +636,27 @@ function main(argv = process.argv.slice(2)) {
     process.exitCode = 1;
     return;
   }
-  const { files, findings } = inspectRoot(options.root);
+  if (options.mode === 'live') {
+    const report = await inspectLive(options);
+    if (report.status === 'failed') {
+      for (const violation of report.violations) process.stderr.write(`${violation.rule} | ${violation.host}${violation.path} | ${violation.detail}\n`);
+      process.exitCode = 1;
+      return;
+    }
+    console.log(`Content hygiene passed: ${report.totals.pages} live pages`);
+    return;
+  }
+  const { files, findings } = options.mode === 'html'
+    ? inspectHtmlRoot(options.root, options.variant)
+    : inspectRoot(options.root);
   if (findings.length) {
-    for (const entry of findings) process.stderr.write(`${formatFinding(entry)}\n`);
+    for (const entry of findings) process.stderr.write(`${options.mode === 'html' ? formatHtmlFinding(entry) : formatFinding(entry)}\n`);
     process.exitCode = 1;
     return;
   }
-  console.log(`Content hygiene passed: ${files.length} source file${files.length === 1 ? '' : 's'}`);
+  console.log(`Content hygiene passed: ${files.length} ${options.mode === 'html' ? 'HTML' : 'source'} file${files.length === 1 ? '' : 's'}`);
 }
 
 if (require.main === module) main();
 
-module.exports = { inspectRoot, main, parseArgs, publishableBody };
+module.exports = { inspectHtmlRoot, inspectLive, inspectRoot, main, parseArgs, publishableBody };

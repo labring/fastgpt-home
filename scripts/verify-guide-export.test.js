@@ -57,6 +57,17 @@ function jsonLd(data) {
   return `<script type="application/ld+json">${JSON.stringify(data)}</script>`;
 }
 
+function updatedAt(source, locale) {
+  const date = new Date(`${source.dateModified}T00:00:00Z`);
+  const label = new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
+    timeZone: 'UTC',
+    year: 'numeric',
+    month: locale === 'zh' ? 'numeric' : 'long',
+    day: 'numeric'
+  }).format(date);
+  return locale === 'zh' ? `更新于 ${label}` : `Last updated ${label}`;
+}
+
 function writeFixture(outDir, variant, { entries = registry.entries, style = 'flat' } = {}) {
   const locale = variant === 'cn' ? 'zh' : 'en';
   const host = variant === 'cn' ? 'https://fastgpt.cn' : 'https://fastgpt.io';
@@ -145,7 +156,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
       `guide/${entry.slug}`,
       `<html><head><title>${escapeHtml(source.metaTitle)}</title><meta name="description" content="${escapeHtml(source.metaDescription)}"><link rel="canonical" href="${canonical}"><meta property="og:url" content="${canonical}">${alternates(entry.slug)}${jsonLd({
         '@graph': schema
-      })}</head><body><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1>${asset}${related}<a href="/guide">${hub.back}</a></body></html>`,
+      })}</head><body><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="summary">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${asset}${related}<a href="/guide">${hub.back}</a></body></html>`,
       style
     );
   }
@@ -336,6 +347,7 @@ test('Guide export surface mutations reject localized hub and article drift with
           ['og:url', /received/, (html) => html.replace(`property="og:url" content="${host}/guide/${entry.slug}"`, `property="og:url" content="${host}/wrong"`)],
           ['alternate:zh-CN', /received/, (html) => html.replace(`hreflang="zh-CN" href="https://fastgpt.cn/guide/${entry.slug}"`, 'hreflang="zh-CN" href="https://fastgpt.cn/wrong"')],
           ['h1', /received/, (html) => html.replace(`<h1>${escapeHtml(source.h1)}</h1>`, '<h1>Wrong H1</h1>')],
+          ['updated', /updated/, (html) => html.replace(`datetime="${source.dateModified}"`, 'datetime="2026-01-01"')],
           ['schema:Article', /Article/, (html) => html.replace('"headline":', '"wrongHeadline":')],
           ['schema:BreadcrumbList', /BreadcrumbList/, (html) => html.replace(`"item":"${host}/guide"`, `"item":"${host}/wrong"`)],
           ['breadcrumb', /breadcrumb target/, (html) => html.replace(`href="/">${HUB_COPY[locale].home}`, `href="/wrong">${HUB_COPY[locale].home}`)],

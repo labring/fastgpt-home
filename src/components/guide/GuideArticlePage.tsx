@@ -12,13 +12,27 @@ const guideArticleCopy = {
     home: 'Home',
     guide: 'Guide',
     back: 'Back to guides',
-    configuredLinks: 'Related resources'
+    configuredLinks: 'Related resources',
+    updated: (date: string) =>
+      `Last updated ${new Intl.DateTimeFormat('en-US', {
+        timeZone: 'UTC',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(new Date(`${date}T00:00:00Z`))}`
   },
   zh: {
     home: '首页',
     guide: '指南',
     back: '返回指南',
-    configuredLinks: '相关资源'
+    configuredLinks: '相关资源',
+    updated: (date: string) =>
+      `更新于 ${new Intl.DateTimeFormat('zh-CN', {
+        timeZone: 'UTC',
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric'
+      }).format(new Date(`${date}T00:00:00Z`))}`
   }
 } as const;
 
@@ -49,6 +63,9 @@ export default function GuideArticlePage({
         <header className={styles.header}>
           <h1>{document.source.h1}</h1>
           <p className={styles.summary}>{document.source.metaDescription}</p>
+          <time className={styles.updated} dateTime={document.source.dateModified}>
+            {labels.updated(document.source.dateModified)}
+          </time>
         </header>
         <div className={styles.layout}>
           <article className={styles.article}>

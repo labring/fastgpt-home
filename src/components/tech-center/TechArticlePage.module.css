@@ -97,6 +97,13 @@
   line-height: 1.8;
 }
 
+.updated {
+  display: block;
+  margin-top: 10px;
+  color: var(--article-muted);
+  font-size: 14px;
+}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;

@@ -1,9 +1,10 @@
 const assert = require('node:assert/strict');
-const { spawnSync } = require('node:child_process');
+const { spawn, spawnSync } = require('node:child_process');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
+const http = require('node:http');
 
 const ROOT = path.resolve(__dirname, '..');
 const SCRIPT = path.join(ROOT, 'scripts/verify-content-hygiene.js');
@@ -34,6 +35,18 @@ function withFixture(files, assertion) {
   } finally {
     fs.rmSync(root, { recursive: true, force: true });
   }
+}
+
+function runAsync(args) {
+  return new Promise((resolve, reject) => {
+    const child = spawn(process.execPath, [SCRIPT, ...args], { cwd: ROOT });
+    let stdout = '';
+    let stderr = '';
+    child.stdout.on('data', (chunk) => { stdout += chunk; });
+    child.stderr.on('data', (chunk) => { stderr += chunk; });
+    child.once('error', reject);
+    child.once('close', (status) => resolve({ status, stdout, stderr }));
+  });
 }
 
 const hiddenMetadata = '<!--\ninternal KB: delivery schedule and sign-off\n-->\n\n';
@@ -212,4 +225,84 @@ test('the cleaned corpus keeps named cases, outcome metrics, and caveats', () =>
   assert.match(manufacturing, /70%/);
   assert.match(manufacturing, /不构成对其他项目效果的承诺/);
   assert.match(biopharma, /Sinocare Biotech/);
+});
+
+test('HTML CLI recursively scans visible content separately from serialized payloads', () => {
+  withFixture(
+    {
+      'index.html': '<html><body><h1>Home</h1><section><h2>Sources</h2><a href="https://example.com/research">Public source</a></section></body></html>',
+      'guide/nested/index.html': '<html><body><script type="application/json">{"citation":"https://example.com/payload"}</script><p>Clean page</p></body></html>'
+    },
+    (root) => {
+      const clean = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], {
+        cwd: ROOT,
+        encoding: 'utf8'
+      });
+      assert.equal(clean.status, 0, clean.stderr);
+      assert.match(clean.stdout, /Content hygiene passed: 2 HTML files/);
+
+      fs.writeFileSync(
+        path.join(root, 'guide/nested/index.html'),
+        '<html><body><script type="application/json">{"Fact Source":"internal KB"}</script></body></html>',
+      );
+      const dirty = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], {
+        cwd: ROOT,
+        encoding: 'utf8'
+      });
+      assert.equal(dirty.status, 1);
+      assert.match(dirty.stderr, /payload/);
+      assert.match(dirty.stderr, /editorial-metadata/);
+    },
+  );
+});
+
+test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
+  let requests = 0;
+  const server = http.createServer((request, response) => {
+    requests += 1;
+    const baseUrl = `http://${request.headers.host}`;
+    if (request.url === '/sitemap.xml') {
+      response.setHeader('content-type', 'application/xml');
+      response.end(`<urlset><url><loc>${baseUrl}/clean</loc></url></urlset>`);
+      return;
+    }
+    response.setHeader('content-type', 'text/html');
+    response.end('<html><body><h1>Clean</h1></body></html>');
+  });
+  await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  const { port } = server.address();
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-live-'));
+  const report = path.join(root, 'report.json');
+  const args = [
+    '--mode', 'live',
+    '--base-url-cn', `http://127.0.0.1:${port}`,
+    '--base-url-io', `http://127.0.0.1:${port}`,
+    '--report', report,
+    '--allow-http-for-tests',
+    '--concurrency', '1',
+    '--timeout-ms', '100',
+    '--max-urls', '10',
+    '--max-sitemap-depth', '0'
+  ];
+  try {
+    const clean = await runAsync(args);
+    assert.equal(clean.status, 0, clean.stderr);
+    assert.match(clean.stdout, /1 live pages/);
+    assert.equal(fs.existsSync(report), true);
+    assert.equal(fs.existsSync(`${report}.txt`), true);
+    assert.deepEqual(JSON.parse(fs.readFileSync(report, 'utf8')).totals, {
+      sitemapDocuments: 1,
+      pages: 1,
+      boundedInventory: 2
+    });
+
+    requests = 0;
+    const invalid = await runAsync([...args, '--max-urls', '10001']);
+    assert.equal(invalid.status, 1);
+    assert.match(invalid.stderr, /--max-urls must be from 1 to 10000/);
+    assert.equal(requests, 0);
+  } finally {
+    await new Promise((resolve) => server.close(resolve));
+    fs.rmSync(root, { recursive: true, force: true });
+  }
 });

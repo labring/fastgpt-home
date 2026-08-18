@@ -29,7 +29,7 @@ type ContactFormProps = {
 };
 
 const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '') || '';
-const CN_MOBILE_PHONE_PATTERN = /^1[3-9]\d{9}$/;
+const INTERNATIONAL_PHONE_PATTERN = /^\+?[1-9]\d{6,14}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function FieldLabel({
@@ -348,10 +348,10 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
 
     if (name === 'phone') {
       const normalizedValue = value.trim();
-      const normalizedPhone = normalizedValue.replace(/[\s-]/g, '');
-      const isMainlandPhone = CN_MOBILE_PHONE_PATTERN.test(normalizedPhone);
+      const normalizedPhone = normalizedValue.replace(/[\s\-().]/g, '');
+      const isPhone = INTERNATIONAL_PHONE_PATTERN.test(normalizedPhone);
       const isEmail = EMAIL_PATTERN.test(normalizedValue);
-      if (!isMainlandPhone && !isEmail) return copy.phoneError;
+      if (!isPhone && !isEmail) return copy.phoneError;
     }
 
     return '';
@@ -473,7 +473,12 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
       clearContactFormDraft();
       setStatus('success');
     } catch (submitError) {
-      setError(submitError instanceof Error ? submitError.message : copy.genericError);
+      const isNetworkError =
+        submitError instanceof TypeError ||
+        (submitError instanceof Error && submitError.name === 'AbortError');
+      setError(
+        !isNetworkError && submitError instanceof Error ? submitError.message : copy.genericError
+      );
       setStatus('idle');
     }
   };
@@ -557,7 +562,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
               <input
                 name={name}
                 type="text"
-                inputMode={name === 'phone' ? 'email' : undefined}
+                inputMode={name === 'phone' ? 'text' : undefined}
                 autoComplete={
                   name === 'name'
                     ? 'name'

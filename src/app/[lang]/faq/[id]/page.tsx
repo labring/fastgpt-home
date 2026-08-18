@@ -79,6 +79,7 @@ export default async function FAQDetailPage({
       <Navbar
         links={dict.links}
         t={dict.Home.navCta}
+        locale={langName}
         publishedLocales={getFaqTranslationLocales(routeKey, faqLangName)}
       />
 

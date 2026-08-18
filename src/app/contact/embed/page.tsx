@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
-import { defaultLocale } from '@/lib/i18n';
+import { defaultLocale, getDictionary } from '@/lib/i18n';
 
 export function generateMetadata(): Metadata {
   const copy = getContactCopy(defaultLocale);
@@ -15,6 +15,7 @@ export function generateMetadata(): Metadata {
   };
 }
 
-export default function DefaultContactEmbedPage() {
-  return <ContactPage locale={defaultLocale} embedded />;
+export default async function DefaultContactEmbedPage() {
+  const dict = await getDictionary(defaultLocale);
+  return <ContactPage locale={defaultLocale} dict={dict} embedded />;
 }

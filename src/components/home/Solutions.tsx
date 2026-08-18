@@ -20,8 +20,8 @@ import {
 import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { getSolutionsAssets } from '@/components/home/assets';
-import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { getContactUrl } from '@/lib/contact';
 
 const iconByKey: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   assistant: Tag, report: AudioLines, training: Users,
@@ -172,7 +172,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
                   />
                 </div>
                 <a
-                  href={CONSULT_URL}
+                  href={getContactUrl(locale)}
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_solutions_consult', {
                     solution: current.key
                   })}

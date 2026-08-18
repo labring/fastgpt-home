@@ -10,12 +10,13 @@ import {
   navigateTo,
   rememberPreferredLanguage
 } from '@/lib/clientNavigation';
-import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
 import Image from 'next/image';
 import { localeConfigs, type LocaleCode } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { getPublishedLocaleCodes } from '@/lib/siteRouting';
+import { getContactUrl } from '@/lib/contact';
 
 interface NavLink {
   label: string;
@@ -212,7 +213,7 @@ export default function Navbar({
               </div>
             )}
             <a
-              href={CONSULT_URL}
+              href={getContactUrl(lang)}
               {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_consult')}
               aria-label={t.consult}
               className="px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
@@ -342,7 +343,7 @@ export default function Navbar({
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-hairline-soft">
               <a
-                href={CONSULT_URL}
+                href={getContactUrl(lang)}
                 {...rybbitClickAttrs(
                   RYBBIT_EVENTS.businessConsultClick,
                   'home_nav_mobile_menu_consult'

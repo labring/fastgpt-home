@@ -1,6 +1,11 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const {
+  getDefaultLocale,
+  getPublishedLocaleCodes,
+  resolveSiteVariant
+} = require('./lib/site-variant');
 
 const root = path.resolve(__dirname, '..');
 const output = path.join(root, 'out');
@@ -10,13 +15,16 @@ const titles = {
   zh: 'FastGPT 商务咨询',
   'zh-hant': 'FastGPT 商務諮詢'
 };
-const defaultLocale = process.env.NEXT_PUBLIC_DEFAULT_LOCALE || 'en';
+const variant = resolveSiteVariant();
+const defaultLocale = getDefaultLocale(variant);
+const publishedLocales = getPublishedLocaleCodes(variant);
 
 const pages = [
   ['contact.html', titles[defaultLocale] || titles.en],
-  ['zh/contact.html', 'FastGPT 商务咨询'],
-  ['en/contact.html', 'Contact FastGPT Sales'],
-  ['zh-hant/contact.html', 'FastGPT 商務諮詢']
+  ...publishedLocales.map((locale) => [
+    `${locale}/contact.html`,
+    titles[locale] || titles.en
+  ])
 ];
 
 for (const [file, title] of pages) {
@@ -33,10 +41,11 @@ for (const [file, title] of pages) {
 }
 
 const homepageLinks = [
-  ['zh.html', '/zh/contact'],
-  ['en.html', '/en/contact'],
-  ['zh-hant.html', '/zh-hant/contact'],
-  ['ja.html', '/en/contact']
+  ['index.html', `/${defaultLocale}/contact`],
+  ...publishedLocales.map((locale) => [
+    `${locale}.html`,
+    `/${locale === 'zh' || locale === 'zh-hant' ? locale : 'en'}/contact`
+  ])
 ];
 
 for (const [file, href] of homepageLinks) {
@@ -61,5 +70,5 @@ for (const file of sourceFiles(path.join(root, 'src'))) {
 }
 
 console.log(
-  'Contact page verification passed: 4 routes, 4 localized entry paths, 0 legacy form links.'
+  `Contact page verification passed: ${pages.length} routes, ${homepageLinks.length} localized entry paths, 0 legacy form links.`
 );

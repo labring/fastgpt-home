@@ -18,18 +18,14 @@ import {
 } from 'lucide-react';
 import ContactForm from '@/components/contact/ContactForm';
 import { getContactCopy, getContactExperienceCopy } from '@/components/contact/contactCopy';
+import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
+import Navbar from '@/components/home/Navbar';
 import { getCasesAssets } from '@/components/home/assets';
-import { getContactLocale, getContactUrl } from '@/lib/contact';
-import { defaultLocale } from '@/lib/i18n';
+import { getDefaultLocalePath } from '@/lib/clientNavigation';
+import { getContactLocale } from '@/lib/contact';
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
-
-const CONTACT_LOCALES = [
-  { code: 'zh', label: '简体中文' },
-  { code: 'en', label: 'English' },
-  { code: 'zh-hant', label: '繁體中文' }
-] as const;
 
 const BRAND_LOGOS = [
   'image-143.png',
@@ -60,21 +56,19 @@ const SERVICE_ICONS = {
   custom: Network
 };
 
-function getHomeHref(locale: string) {
-  return locale === defaultLocale ? '/' : `/${locale}`;
-}
-
 export default function ContactPage({
   locale,
+  dict,
   embedded = false
 }: {
   locale: string;
+  dict: any;
   embedded?: boolean;
 }) {
   const contactLocale = getContactLocale(locale);
   const formCopy = getContactCopy(contactLocale);
   const copy = getContactExperienceCopy(contactLocale);
-  const homeHref = getHomeHref(contactLocale);
+  const homeHref = getDefaultLocalePath(contactLocale, '/');
   const caseAssets = getCasesAssets(contactLocale);
   const caseImages: Record<string, string> = {
     cetc: caseAssets.cetc,
@@ -183,44 +177,7 @@ export default function ContactPage({
       />
       <HomeThemeFix />
 
-      <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 sm:px-6">
-        <nav className="mx-auto flex h-14 max-w-[1180px] items-center justify-between rounded-full border border-hairline-soft bg-white/85 px-4 shadow-[0_16px_50px_rgba(15,23,42,0.08)] backdrop-blur-xl sm:px-6">
-          <Link
-            href={homeHref}
-            className="group flex items-center gap-2 rounded-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary"
-            aria-label="FastGPT Home"
-          >
-            <Image src="/logo-nav.svg" width={24} height={24} alt="" draggable={false} />
-            <span className="text-[16px] font-semibold tracking-[-0.02em] text-ink transition-opacity group-hover:opacity-70">
-              FastGPT
-            </span>
-          </Link>
-
-          <div
-            role="group"
-            aria-label="Switch language"
-            className="flex items-center gap-1 sm:gap-2"
-          >
-            <span className="mr-2 hidden text-[13px] font-medium text-ink-sub md:block">
-              {copy.nav.sales}
-            </span>
-            {CONTACT_LOCALES.map((item) => (
-              <Link
-                key={item.code}
-                href={getContactUrl(item.code)}
-                aria-current={contactLocale === item.code ? 'page' : undefined}
-                className={`rounded-full px-2.5 py-1.5 text-[11px] font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:px-3 sm:text-[12px] ${
-                  contactLocale === item.code
-                    ? 'bg-btn-dark text-white'
-                    : 'text-ink-sub hover:bg-light-bg hover:text-ink'
-                }`}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </div>
-        </nav>
-      </header>
+      <Navbar links={dict.links} t={dict.Home.navCta} locale={contactLocale} />
 
       <main className="overflow-x-hidden w-full max-w-full">
         <section className="relative overflow-hidden bg-white px-5 pb-32 pt-36 text-ink sm:px-8 md:pb-48 md:pt-44">
@@ -495,40 +452,7 @@ export default function ContactPage({
         </section>
       </main>
 
-      <footer className="bg-white px-5 py-10 text-ink sm:px-8">
-        <div className="mx-auto flex max-w-[1240px] flex-col gap-8 border-t border-hairline-soft pt-8 sm:flex-row sm:items-end sm:justify-between">
-          <div>
-            <Link href={homeHref} className="inline-flex items-center gap-2 text-ink">
-              <Image src="/logo-nav.svg" width={24} height={24} alt="" draggable={false} />
-              <span className="text-[16px] font-semibold">FastGPT</span>
-            </Link>
-            <p className="mt-3 text-[12px] leading-5 text-ink-muted">
-              © {new Date().getFullYear()} {copy.footer.copyright}
-            </p>
-          </div>
-          <nav className="flex flex-wrap gap-x-6 gap-y-3 text-[13px] text-ink-sub">
-            <Link href={homeHref} className="transition-colors hover:text-ink">
-              {copy.footer.home}
-            </Link>
-            <a
-              href="https://doc.fastgpt.io/docs/introduction"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-ink"
-            >
-              {copy.footer.docs}
-            </a>
-            <a
-              href="https://github.com/labring/FastGPT"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="transition-colors hover:text-ink"
-            >
-              {copy.footer.github}
-            </a>
-          </nav>
-        </div>
-      </footer>
+      <Footer t={dict.Home.footer} locale={contactLocale} />
 
       <style jsx global>{`
         @keyframes contact-marquee {

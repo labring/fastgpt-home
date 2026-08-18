@@ -6,8 +6,8 @@ import Image from 'next/image';
 import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { getCasesAssets } from '@/components/home/assets';
-import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { getContactUrl } from '@/lib/contact';
 
 type MetricIcon = 'arrow' | 'zap' | 'medal';
 type CaseMetric = { value: string; label: string; icon: MetricIcon };
@@ -197,7 +197,7 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
                     className="absolute w-[82vw] max-w-[320px] md:w-[650px] md:max-w-none"
                     style={{ pointerEvents: isCenter ? 'auto' : 'none' }}
                   >
-                    <CaseCard data={c} learnMore={t.learnMore} />
+                    <CaseCard data={c} learnMore={t.learnMore} locale={locale} />
                   </m.div>
                 );
               })}
@@ -240,7 +240,15 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
   );
 }
 
-function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
+function CaseCard({
+  data,
+  learnMore,
+  locale
+}: {
+  data: CaseStudy;
+  learnMore: string;
+  locale: string;
+}) {
   return (
     <div
       className="flex flex-col rounded-2xl md:rounded-3xl p-4 md:p-6 gap-4 md:gap-6 overflow-hidden"
@@ -315,7 +323,7 @@ function CaseCard({ data, learnMore }: { data: CaseStudy; learnMore: string }) {
         </div>
 
         <a
-          href={CONSULT_URL}
+          href={getContactUrl(locale)}
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_case_study_consult', {
             case: data.key
           })}

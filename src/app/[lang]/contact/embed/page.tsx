@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
-import { normalizeLocale } from '@/lib/i18n';
+import { getDictionary, normalizeLocale } from '@/lib/i18n';
 import { isContactPublishedLocale } from '@/lib/publishedLocales';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
 
@@ -29,7 +29,8 @@ export default async function LocalizedContactEmbedPage({
   params: Promise<{ lang: string }>;
 }) {
   const { lang } = await params;
-  return <ContactPage locale={lang} embedded />;
+  const dict = await getDictionary(lang);
+  return <ContactPage locale={lang} dict={dict} embedded />;
 }
 
 export function generateStaticParams() {

@@ -6,9 +6,10 @@ import * as m from 'framer-motion/m';
 import { useEffect, useRef, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import { getHeroDashboardAsset } from '@/components/home/assets';
-import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { formatGitHubStars } from '@/lib/githubStarsDisplay';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { getContactUrl } from '@/lib/contact';
 
 interface HeroProps {
   stars: number;
@@ -183,7 +184,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
               data-hero-cta
             >
               <m.a
-                href={CONSULT_URL}
+                href={getContactUrl(locale)}
                 {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_hero_consult')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}

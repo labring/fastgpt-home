@@ -7,6 +7,7 @@ import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from
 import Link from 'next/link';
 import { siteConfig } from '@/config/site';
 import { isContactHref } from '@/lib/consultation';
+import { getContactUrl } from '@/lib/contact';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
@@ -76,6 +77,9 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
   const [annual, setAnnual] = useState(false);
   const cloudPlans = PRICE_PLANS_CLOUD[langName] || PRICE_PLANS_CLOUD.en;
   const selfPlans = PRICE_PLANS_SELF[langName] || PRICE_PLANS_SELF.en;
+  const customPlanHref = isContactHref(siteConfig.customPlanUrl)
+    ? getContactUrl(langName)
+    : siteConfig.customPlanUrl;
 
   return (
     <div className="flex flex-col gap-6">
@@ -219,9 +223,9 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                   </CloudPlanLink>
                 ) : (
                   <Link
-                    href={siteConfig.customPlanUrl}
+                    href={customPlanHref}
                     className="mt-auto pt-4"
-                    {...(isContactHref(siteConfig.customPlanUrl)
+                    {...(isContactHref(customPlanHref)
                       ? {}
                       : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
                     {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'price_cloud_custom')}
@@ -305,7 +309,11 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 </div>
 
                 <Link
-                  href={buttonConfig.href}
+                  href={
+                    isContactHref(buttonConfig.href)
+                      ? getContactUrl(langName)
+                      : buttonConfig.href
+                  }
                   {...(isContactHref(buttonConfig.href)
                     ? {}
                     : { target: '_blank', rel: 'noopener noreferrer nofollow' })}

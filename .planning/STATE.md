@@ -3,17 +3,17 @@ gsd_state_version: 1.0
 milestone: v1.1
 milestone_name: Guide Content Center
 current_phase: 8
-status: completed
+status: "Phase 8 shipped — PR #1"
 stopped_at: Phase 8 complete; production run 32053216857 passed strict live verification
-last_updated: "2026-08-17T18:23:19.143Z"
+last_updated: "2026-08-18T02:50:53.445Z"
 last_activity: 2026-08-18
-last_activity_desc: Phase 8 complete
 progress:
   total_phases: 4
   completed_phases: 4
   total_plans: 18
   completed_plans: 18
 current_phase_name: Production Delivery & Live Verification
+last_activity_desc: Phase 8 complete
 ---
 
 # Project State
@@ -29,8 +29,8 @@ See: .planning/PROJECT.md (updated 2026-08-16)
 
 Phase: 8
 Plan: 08-03 complete
-Status: All phases complete
-Last activity: 2026-08-18 — Phase 8 complete
+Status: Phase 8 shipped — PR #1
+Last activity: 2026-08-18
 
 Progress: [██████████] 100%
 

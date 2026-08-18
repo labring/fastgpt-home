@@ -6,6 +6,7 @@
  */
 
 const fs = require('node:fs');
+const net = require('node:net');
 const path = require('node:path');
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
@@ -13,7 +14,7 @@ const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
 const SOURCE_SECTION = /^(#{1,6})\s*(sources?|references|来源|参考资料|资料来源)\s*[:：]?\s*$/i;
 const EDITORIAL_LABEL = /^(?:>\s*)?(?:[-*]\s+)?(?:\*\*)?(?:事实来源|需求依据|核验日|核验日期|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|版本与套餐|版本与档位|计划(?:安排)?|附录|补充说明|审核(?:状态)?|交付(?:排期)?|来源依据|客户\s*KB|内部\s*KB|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|version\s+and\s+(?:package|tiers)|version\s+plan|update\s+(?:record|log)(?:\s+addendum)?|revision|addendum)(?:\*\*)?\s*[:：]/i;
-const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:2026-07-20|July 20, 2026))/i;
+const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -95,32 +96,106 @@ function finding(rule, surface, relativePath, line, detail) {
   };
 }
 
+function inIpv4Range(address, base, prefixLength) {
+  const value = address.split('.').reduce((result, part) => (result << 8n) | BigInt(Number(part)), 0n);
+  const baseValue = base.split('.').reduce((result, part) => (result << 8n) | BigInt(Number(part)), 0n);
+  const mask = ((1n << BigInt(prefixLength)) - 1n) << BigInt(32 - prefixLength);
+  return (value & mask) === (baseValue & mask);
+}
+
+function isReservedIpv4(address) {
+  return [
+    ['0.0.0.0', 8],
+    ['10.0.0.0', 8],
+    ['100.64.0.0', 10],
+    ['127.0.0.0', 8],
+    ['169.254.0.0', 16],
+    ['172.16.0.0', 12],
+    ['192.0.0.0', 24],
+    ['192.0.2.0', 24],
+    ['192.88.99.0', 24],
+    ['192.168.0.0', 16],
+    ['198.18.0.0', 15],
+    ['198.51.100.0', 24],
+    ['203.0.113.0', 24],
+    ['224.0.0.0', 3]
+  ].some(([base, prefixLength]) => inIpv4Range(address, base, prefixLength));
+}
+
+function parseIpv6(address) {
+  const value = address.toLowerCase().replace(/^\[|\]$/g, '');
+  const [left, right] = value.split('::');
+  if (value.split('::').length > 2) return undefined;
+  const leftParts = left ? left.split(':') : [];
+  const rightParts = right ? right.split(':') : [];
+  const parts = [...leftParts, ...Array(8 - leftParts.length - rightParts.length).fill('0'), ...rightParts];
+  if (parts.length !== 8 || parts.some((part) => !/^[0-9a-f]{1,4}$/.test(part))) return undefined;
+  return parts.reduce((result, part) => (result << 16n) | BigInt(`0x${part}`), 0n);
+}
+
+function inIpv6Range(address, base, prefixLength) {
+  const value = parseIpv6(address);
+  const baseValue = parseIpv6(base);
+  if (value === undefined || baseValue === undefined) return true;
+  const mask = ((1n << BigInt(prefixLength)) - 1n) << BigInt(128 - prefixLength);
+  return (value & mask) === (baseValue & mask);
+}
+
+function isReservedIpv6(address) {
+  if (inIpv6Range(address, '::ffff:0:0', 96)) {
+    const value = parseIpv6(address);
+    const mappedIpv4 = [24n, 16n, 8n, 0n].map((shift) => Number((value >> shift) & 255n)).join('.');
+    return isReservedIpv4(mappedIpv4);
+  }
+  return [
+    ['::', 128],
+    ['::1', 128],
+    ['100::', 64],
+    ['2001::', 23],
+    ['2002::', 16],
+    ['3fff::', 20],
+    ['fc00::', 7],
+    ['fe80::', 10],
+    ['ff00::', 8]
+  ].some(([base, prefixLength]) => inIpv6Range(address, base, prefixLength));
+}
+
 function isPrivateHostname(hostname) {
-  const value = hostname.toLowerCase();
-  if (value === 'localhost' || value.endsWith('.localhost')) return true;
-  if (value === '::1' || value.startsWith('fc') || value.startsWith('fd') || value.startsWith('fe80:')) return true;
-  const parts = value.split('.').map(Number);
-  if (parts.length !== 4 || parts.some((part) => !Number.isInteger(part) || part < 0 || part > 255)) return false;
-  return (
-    parts[0] === 10 ||
-    parts[0] === 127 ||
-    (parts[0] === 169 && parts[1] === 254) ||
-    (parts[0] === 172 && parts[1] >= 16 && parts[1] <= 31) ||
-    (parts[0] === 192 && parts[1] === 168)
-  );
+  const value = hostname.toLowerCase().replace(/^\[|\]$/g, '');
+  if (
+    value === 'localhost' ||
+    value.endsWith('.localhost') ||
+    value.endsWith('.local') ||
+    value.endsWith('.internal') ||
+    value.endsWith('.home.arpa')
+  ) {
+    return true;
+  }
+  const family = net.isIP(value);
+  if (family === 4) return isReservedIpv4(value);
+  if (family === 6) return isReservedIpv6(value);
+  return false;
 }
 
 function validPublicCitation(value) {
-  const links = [...value.matchAll(/\[[^\]]+\]\(([^)\s]+)\)/g)];
-  if (!links.length) return false;
-  return links.every((match) => {
+  const entry = value.trim().replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
+  const linkPattern = /\[[^\]\n]+\]\(([^()\s]+)\)/g;
+  let previousEnd = 0;
+  let count = 0;
+  for (const match of entry.matchAll(linkPattern)) {
+    if (!/^[\s,;，；、·|/]*$/.test(entry.slice(previousEnd, match.index))) return false;
     try {
       const url = new URL(match[1]);
-      return url.protocol === 'https:' && !url.username && !url.password && !isPrivateHostname(url.hostname);
+      if (url.protocol !== 'https:' || url.username || url.password || isPrivateHostname(url.hostname)) {
+        return false;
+      }
     } catch {
       return false;
     }
-  });
+    previousEnd = match.index + match[0].length;
+    count += 1;
+  }
+  return count > 0 && /^[\s,;，；、·|/]*$/.test(entry.slice(previousEnd));
 }
 
 function inspectMarkdown(relativePath, source) {

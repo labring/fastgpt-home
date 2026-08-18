@@ -93,6 +93,61 @@ test('source CLI requires public HTTPS markdown citations in Sources and Referen
   }
 });
 
+test('source CLI requires every citation entry to contain only public HTTPS Markdown links', () => {
+  const invalidEntries = [
+    ' - [Public](https://example.com/reference) Internal KB 7.4',
+    '- [Public](https://example.com/reference), [HTTP](http://example.com/reference)',
+    '- [Public](https://example.com/reference); [Mapped loopback](https://[::ffff:127.0.0.1]/reference)',
+    '- [Public](https://example.com/reference) and [Unspecified](https://0.0.0.0/reference)',
+    '- [Loopback](https://127.0.0.1/reference)',
+    '- [Private](https://10.0.0.1/reference)',
+    '- [Link local](https://169.254.1.1/reference)',
+    '- [Documentation](https://192.0.2.1/reference)',
+    '- [Benchmark](https://198.18.0.1/reference)',
+    '- [Reserved](https://240.0.0.1/reference)',
+    '- [IPv6 unspecified](https://[::]/reference)',
+    '- [IPv6 loopback](https://[::1]/reference)',
+    '- [IPv6 unique local](https://[fd00::1]/reference)',
+    '- [IPv6 link local](https://[fe80::1]/reference)',
+    '- [Credentials](https://user:pass@example.com/reference)',
+    '- [Localhost](https://subdomain.localhost/reference)'
+  ];
+
+  for (const entry of invalidEntries) {
+    withFixture({ 'content/competitors/citation.md': `# Comparison\n\n## Sources\n\n${entry}\n` }, (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1, entry);
+      assert.match(result.stderr, /D-07 citation-policy/, entry);
+    });
+  }
+
+  withFixture(
+    {
+      'content/competitors/citation.md':
+        '# Comparison\n\n## References\n\n> [Public source](https://example.com/research); [Second public source](https://www.iana.org/domains/reserved)\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
+test('source CLI rejects future-dated editorial verification preambles', () => {
+  withFixture(
+    {
+      'src/content/guides/en/future-date.md':
+        '# Guide\n\nProduct capabilities and version boundaries are sourced from official public materials, verified as of 2027-01-01.\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-01 editorial-metadata/);
+      assert.match(result.stderr, /line=3/);
+    },
+  );
+});
+
 test('source CLI scans structured FAQ and locale copy without treating syntax as published Markdown', () => {
   withFixture(
     {

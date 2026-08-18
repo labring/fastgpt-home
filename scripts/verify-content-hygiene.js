@@ -31,12 +31,15 @@ const ts = loadTypeScript();
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
-const CITATION_LABEL_NAME = 'Source(?:s)?|Reference(?:s)?|来源|参考资料|资料来源';
+const ENGLISH_CITATION_LABEL = 'Source(?:s)?|Reference(?:s)?';
+const CHINESE_CITATION_LABEL = '资料来源|参考资料|来源';
+const CITATION_LABEL_NAME = `${ENGLISH_CITATION_LABEL}|${CHINESE_CITATION_LABEL}`;
 const CITATION_SEPARATOR = /^[\s,;，；、·|/]*$/;
+const CITATION_KEY = new RegExp(`^(?:${CITATION_LABEL_NAME})$`, 'i');
 const SOURCE_SECTION = new RegExp(`^(#{1,6})\\s*(?:${CITATION_LABEL_NAME})\\s*[:：]?\\s*$`, 'i');
 const CITATION_LABEL_TEXT = new RegExp(
-  `(?:^|[\\s.。!！?？])(?:${CITATION_LABEL_NAME})\\s*[:：]\\s*`,
-  'gi'
+  `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_CITATION_LABEL})\\s*[:：]\\s*|(?:${CHINESE_CITATION_LABEL})\\s*[:：]\\s*`,
+  'giu'
 );
 const BLOCK_TAGS = new Set([
   'address',
@@ -134,6 +137,10 @@ const EDITORIAL_LABEL_NAME = [
 ].join('|');
 const EDITORIAL_LABEL = new RegExp(
   `^(?:>\\s*)?(?:[-*]\\s+)?(?:\\*\\*)?(?:${EDITORIAL_LABEL_NAME})(?:\\*\\*)?\\s*[:：]`,
+  'i'
+);
+const EDITORIAL_LABEL_ANYWHERE = new RegExp(
+  `(?:^|[\\s.。!！?？])(?:${EDITORIAL_LABEL_NAME})\\s*[:：]`,
   'i'
 );
 const EDITORIAL_PREAMBLE =
@@ -435,7 +442,7 @@ function normalizedCitationText(value) {
 
 function citationLabelMatches(value) {
   const text = normalizedCitationText(value);
-  const pattern = new RegExp(CITATION_LABEL_TEXT.source, 'gi');
+  const pattern = new RegExp(CITATION_LABEL_TEXT.source, 'giu');
   return { matches: [...text.matchAll(pattern)], text };
 }
 
@@ -453,11 +460,22 @@ function isCitationLabelled(value) {
   return citationLabelMatches(value).matches.length > 0;
 }
 
+function isCitationKey(value) {
+  return CITATION_KEY.test(value.trim());
+}
+
 function labelledCitationValues(value) {
+  return labelledCitationEntries(value).map((entry) => entry.value);
+}
+
+function labelledCitationEntries(value) {
   const { matches, text } = citationLabelMatches(value);
   return matches.map((match, index) => {
     const end = matches[index + 1]?.index ?? text.length;
-    return text.slice(match.index + match[0].length, end).trim();
+    return {
+      token: match[0].trim(),
+      value: text.slice(match.index + match[0].length, end).trim()
+    };
   });
 }
 
@@ -502,10 +520,54 @@ function propertyName(node, sourceFile) {
 
 function expressionText(node) {
   if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) return node.text;
+  if (
+    ts.isParenthesizedExpression(node) ||
+    ts.isAsExpression(node) ||
+    ts.isSatisfiesExpression(node) ||
+    ts.isNonNullExpression(node)
+  ) {
+    return expressionText(node.expression);
+  }
+  if (ts.isBinaryExpression(node) && node.operatorToken.kind === ts.SyntaxKind.PlusToken) {
+    const left = expressionText(node.left);
+    const right = expressionText(node.right);
+    return left === undefined || right === undefined ? undefined : `${left}${right}`;
+  }
   if (ts.isTemplateExpression(node)) {
-    return [node.head.text, ...node.templateSpans.map((span) => span.literal.text)].join('');
+    let value = node.head.text;
+    for (const span of node.templateSpans) {
+      const expression = expressionText(span.expression);
+      if (expression === undefined) return undefined;
+      value += expression + span.literal.text;
+    }
+    return value;
   }
   return undefined;
+}
+
+function staticJsxProjection(node, sourceFile) {
+  if (ts.isJsxText(node)) return node.getText(sourceFile);
+  if (ts.isJsxExpression(node)) return node.expression ? expressionText(node.expression) || '' : '';
+  if (ts.isJsxFragment(node))
+    return node.children.map((child) => staticJsxProjection(child, sourceFile)).join('');
+  if (ts.isJsxElement(node)) {
+    const opening = node.openingElement.getText(sourceFile);
+    const children = node.children.map((child) => staticJsxProjection(child, sourceFile)).join('');
+    return `${opening}${children}${node.closingElement.getText(sourceFile)}`;
+  }
+  if (ts.isJsxSelfClosingElement(node)) return node.getText(sourceFile);
+  return '';
+}
+
+function isStaticExpressionCandidate(node) {
+  return (
+    ts.isBinaryExpression(node) ||
+    ts.isTemplateExpression(node) ||
+    ts.isParenthesizedExpression(node) ||
+    ts.isAsExpression(node) ||
+    ts.isSatisfiesExpression(node) ||
+    ts.isNonNullExpression(node)
+  );
 }
 
 function collectTypeScriptEntries(relativePath, source) {
@@ -537,7 +599,7 @@ function collectTypeScriptEntries(relativePath, source) {
     if (ts.isPropertyAssignment(node) || ts.isPropertyDeclaration(node)) {
       const key = propertyName(node.name, sourceFile);
       const value = expressionText(node.initializer);
-      if (key && value !== undefined && isCitationLabelled(`${key}:`)) {
+      if (key && value !== undefined && isCitationKey(key)) {
         add(node.initializer, value, key);
         return;
       }
@@ -548,22 +610,22 @@ function collectTypeScriptEntries(relativePath, source) {
         node.initializer && ts.isStringLiteral(node.initializer)
           ? node.initializer.text
           : undefined;
-      if (value !== undefined && isCitationLabelled(`${key}:`)) {
+      if (value !== undefined && isCitationKey(key)) {
         add(node.initializer, value, key);
         return;
       }
     }
     if (ts.isJsxElement(node) || ts.isJsxFragment(node)) {
-      add(node, node.getText(sourceFile));
+      add(node, staticJsxProjection(node, sourceFile));
+      return;
+    }
+    if (isStaticExpressionCandidate(node)) {
+      const value = expressionText(node);
+      if (value !== undefined) add(node, value);
       return;
     }
     if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
       add(node, node.text);
-    } else if (ts.isTemplateExpression(node)) {
-      add(node.head, node.head.text);
-      for (const span of node.templateSpans) add(span.literal, span.literal.text);
-    } else if (ts.isJsxText(node)) {
-      add(node, node.getText(sourceFile));
     }
     ts.forEachChild(node, visit);
   };
@@ -637,7 +699,7 @@ function inspectStructuredCopy(relativePath, source) {
       continue;
     }
     const plainValue = normalizedCitationText(value);
-    if (EDITORIAL_LABEL.test(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
+    if (EDITORIAL_LABEL_ANYWHERE.test(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
       findings.push(
         finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, value)
       );
@@ -651,7 +713,7 @@ function inspectStructuredCopy(relativePath, source) {
     if (key && EDITORIAL_LABEL.test(`${key}:`)) {
       findings.push(finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, key));
     }
-    if (key && isCitationLabelled(`${key}:`) && !validPublicCitationValue(value)) {
+    if (key && isCitationKey(key) && !validPublicCitationValue(value)) {
       findings.push(finding('D-07 citation-policy', 'structured-copy', relativePath, line, key));
     }
   }
@@ -765,12 +827,16 @@ function decodeHtml(value) {
 }
 
 function visibleCitationProjection(visible) {
-  const links = visible.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, (_, attributes, content) => {
-    const href = attributes.match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
-    const label = htmlText(content);
-    const url = href?.[1] ?? href?.[2] ?? href?.[3];
-    return url ? `[${label}](${decodeHtml(url)})` : label;
-  });
+  const withoutComments = visible.replace(/<!--[\s\S]*?-->/g, '');
+  const links = withoutComments.replace(
+    /<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi,
+    (_, attributes, content) => {
+      const href = attributes.match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+      const label = htmlText(content);
+      const url = href?.[1] ?? href?.[2] ?? href?.[3];
+      return url ? `[${label}](${decodeHtml(url)})` : label;
+    }
+  );
   return decodeHtml(
     links.replace(/<(\/)?([a-z][\w:-]*)\b[^>]*>/gi, (_, closing, tagName) => {
       const name = tagName.toLowerCase();
@@ -782,10 +848,26 @@ function visibleCitationProjection(visible) {
     .replace(/\n[ \t]+/g, '\n');
 }
 
+function visibleCitationIndex(visible, token, start) {
+  const linkLabel = token.match(/\[([^\]]+)\]/)?.[1];
+  const label = (linkLabel || token)
+    .replace(/^#+\s*/, '')
+    .replace(/[:：].*$/, '')
+    .trim();
+  const index = visible.toLowerCase().indexOf(label.toLowerCase(), start);
+  return index < 0 ? start : index;
+}
+
 function visibleCitationBlocks(visible) {
   const projection = visibleCitationProjection(visible);
   const citations = [];
   let inSources = false;
+  let searchStart = 0;
+  const add = (value, token) => {
+    const index = visibleCitationIndex(visible, token, searchStart);
+    searchStart = Math.max(searchStart, index + token.length);
+    citations.push({ index, value });
+  };
   for (const line of projection.split('\n')) {
     const heading = line.match(/^#{1,6}\s+/);
     if (SOURCE_SECTION.test(line)) {
@@ -793,8 +875,8 @@ function visibleCitationBlocks(visible) {
       continue;
     }
     if (heading) inSources = false;
-    if (inSources && line.trim()) citations.push({ index: 0, value: line });
-    for (const value of labelledCitationValues(line)) citations.push({ index: 0, value });
+    if (inSources && line.trim()) add(line, line);
+    for (const entry of labelledCitationEntries(line)) add(entry.value, entry.token);
   }
   return citations;
 }

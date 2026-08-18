@@ -355,6 +355,62 @@ test('source CLI finds singular and later citation labels in structured source v
   );
 });
 
+test('source CLI applies Chinese citation labels and editorial fields anywhere in static copy', () => {
+  const clean = 'resources: Internal KB\n';
+  withFixture(
+    {
+      'src/content/guides/zh/dirty.md': '# 指南\n\n本文资料来源：内部 KB\n',
+      'src/locales/zh.json': JSON.stringify({ copy: '本文资料来源：内部 KB' }) + '\n',
+      'src/locales/en.json': JSON.stringify({ copy: 'Intro. Schedule: weekly' }) + '\n',
+      'src/faq/fold.ts': [
+        'export const dirty = "Sou" + "rces: Internal KB";',
+        'export const template = `Sou${"rces: Internal KB"}`;',
+        'export const clean = "Sources: " + \'<a href="https://example.com/docs">Official docs</a>\';',
+        ''
+      ].join('\n'),
+      'src/faq/resources.ts': `export const copy = '${clean.trim()}';\n`
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 4);
+      assert.match(result.stderr, /D-01 editorial-metadata/);
+      assert.doesNotMatch(result.stderr, /resources\.ts/);
+    }
+  );
+});
+
+test('source CLI projects static JSX citation content without child duplicates', () => {
+  withFixture(
+    {
+      'src/faq/dirty.tsx': [
+        "export const english = <><span>{'Sources'}</span>: Internal KB</>;",
+        "export const chinese = <section><strong>{'资料来源'}</strong>：内部 KB</section>;",
+        'export const template = <p>{`Sou${"rces: Internal KB"}`}</p>;',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3);
+    }
+  );
+  withFixture(
+    {
+      'src/faq/clean.tsx': [
+        'export const clean = <section><span>Sources</span>: ',
+        '<a href="https://example.com/docs">Official docs</a></section>;',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+});
+
 test('source CLI fails closed for unparseable production structured copy', () => {
   withFixture({ 'src/locales/en.json': '{"copy":\n' }, (root) => {
     const result = runFixture(root);
@@ -744,6 +800,40 @@ test('HTML CLI projects mixed-case nested citation labels and links', () => {
   });
 });
 
+test('HTML CLI strips citation comments and retains visible source offsets', () => {
+  const dirty = [
+    '<html>',
+    '<body>',
+    '<p>Clean</p>',
+    '<div>',
+    '<p>Sources<!-- -->: Internal KB</p>',
+    '<p>本文资料来源：内部 KB</p>',
+    '</div>',
+    '</body>',
+    '</html>'
+  ].join('\n');
+  const clean =
+    '<html><body><p>Sources<!-- -->: <a href="https://example.com/docs">Official docs</a></p></body></html>';
+  withFixture({ 'index.html': dirty }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2);
+    assert.match(result.stderr, /line=5/);
+  });
+  withFixture({ 'index.html': clean }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('HTML CLI fails closed for a missing or empty output root', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-html-'));
   try {
@@ -778,8 +868,8 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     response.setHeader('content-type', 'text/html');
     response.end(
       dirtyCitation
-        ? '<html><body><p>REFERENCE: Internal KB</p></body></html>'
-        : '<html><body><p>REFERENCE: <a href="https://example.com/docs">Official docs</a></p></body></html>'
+        ? '<html><body><p>REFERENCE<!-- -->: Internal KB</p></body></html>'
+        : '<html><body><p>REFERENCE<!-- -->: <a href="https://example.com/docs">Official docs</a></p></body></html>'
     );
   });
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));

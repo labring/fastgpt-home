@@ -1238,6 +1238,77 @@ test('HTML CLI joins inline paragraph whitespace while retaining block boundarie
   );
 });
 
+test('source CLI projects CommonMark quote and list continuations with label offsets', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/blocks.md': [
+        '# Guide',
+        '',
+        '> Sources',
+        '> : Internal KB',
+        '',
+        '> Sources',
+        '> : [Public documentation](https://example.com/docs)',
+        '',
+        '- Sources',
+        '  : Internal KB',
+        '',
+        '- Sources',
+        '  : [Public documentation](https://example.com/docs)',
+        '',
+        'Introductory text',
+        'Sources: [Public documentation](https://example.com/docs)',
+        'References',
+        ': Internal KB',
+        '',
+        '<p>Sources</p>',
+        '<p>: Internal KB</p>',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+      assert.match(result.stderr, /blocks\.md.*line=3/);
+      assert.match(result.stderr, /blocks\.md.*line=9/);
+      assert.match(result.stderr, /blocks\.md.*line=17/);
+      assert.doesNotMatch(result.stderr, /blocks\.md.*line=20|blocks\.md.*line=21/);
+    }
+  );
+});
+
+test('HTML CLI projects br tags as inline whitespace without crossing block boundaries', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<p>Sources<br>: Internal KB</p>',
+        '<p>Demand<br/>basis: internal</p>',
+        '<p>Sources</p><p>: Internal KB</p>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        1,
+        result.stderr
+      );
+      assert.match(result.stderr, /visible .*line=2/);
+      assert.match(result.stderr, /visible .*line=3/);
+      assert.doesNotMatch(result.stderr, /line=4/);
+    }
+  );
+});
+
 test('HTML CLI applies expanded editorial labels to visible and serialized content', () => {
   withFixture(
     {

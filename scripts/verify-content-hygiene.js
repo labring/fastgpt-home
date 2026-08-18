@@ -604,8 +604,91 @@ function markdownCitationEntries(value) {
   const matches = [...value.matchAll(pattern)];
   return matches.map((match, index) => ({
     index: match.index,
+    labelEnd: match.index + match[0].length,
     value: value.slice(match.index + match[0].length, matches[index + 1]?.index).trim()
   }));
+}
+
+function markdownLogicalBlocks(lines, lineStarts) {
+  const blocks = [];
+  const appendBlock = (parts) => {
+    let text = '';
+    const offsets = [];
+    for (const [value, offset] of parts) {
+      if (text) {
+        text += '\n';
+        offsets.push(offset - 1);
+      }
+      text += value;
+      for (let index = 0; index < value.length; index += 1) offsets.push(offset + index);
+    }
+    blocks.push({ text, offsets });
+  };
+  const htmlBlock =
+    /^\s*<\/?(?:address|article|aside|blockquote|div|figure|h[1-6]|li|ol|p|section|table|ul)\b/i;
+  const plainLine = (line) =>
+    Boolean(line.trim()) &&
+    !/^#{1,6}\s+/.test(line) &&
+    !/^\s*(?:[-*+]\s+|\d+[.)]\s+|>)/.test(line) &&
+    !htmlBlock.test(line);
+  for (let index = 0; index < lines.length; ) {
+    const quote = /^\s{0,3}>\s?/.exec(lines[index]);
+    const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
+    if (quote) {
+      const parts = [];
+      while (index < lines.length) {
+        const marker = /^\s{0,3}>\s?/.exec(lines[index]);
+        if (!marker) break;
+        parts.push([lines[index].slice(marker[0].length), lineStarts[index] + marker[0].length]);
+        index += 1;
+      }
+      appendBlock(parts);
+      continue;
+    }
+    if (list) {
+      const parts = [[lines[index].slice(list[0].length), lineStarts[index] + list[0].length]];
+      index += 1;
+      while (index < lines.length && /^\s{2,}\S/.test(lines[index])) {
+        const continuation = /^\s+/.exec(lines[index])[0].length;
+        parts.push([lines[index].slice(continuation), lineStarts[index] + continuation]);
+        index += 1;
+      }
+      appendBlock(parts);
+      continue;
+    }
+    if (!plainLine(lines[index])) {
+      index += 1;
+      continue;
+    }
+    const parts = [];
+    while (index < lines.length && plainLine(lines[index])) {
+      parts.push([lines[index], lineStarts[index]]);
+      index += 1;
+    }
+    appendBlock(parts);
+  }
+  return blocks;
+}
+
+function normalizedMarkdownBlock(block) {
+  let text = '';
+  const offsets = [];
+  for (let index = 0; index < block.text.length; index += 1) {
+    const character = block.text[index];
+    const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
+    const dash = /[\p{Dash_Punctuation}\u2212]/u.test(character);
+    if (!whitespace && !dash) {
+      text += character;
+      offsets.push(block.offsets[index]);
+      continue;
+    }
+    if (whitespace) {
+      while (/[\p{White_Space}\p{Cf}]/u.test(block.text[index + 1] || '')) index += 1;
+    }
+    text += dash ? '-' : ' ';
+    offsets.push(block.offsets[index]);
+  }
+  return { text, offsets };
 }
 
 function validPublicCitationValue(value) {
@@ -1090,43 +1173,50 @@ function inspectMarkdown(relativePath, source) {
     }
   }
 
-  for (let index = 0; index < lines.length; ) {
-    if (!isInlineLine(lines[index])) {
-      index += 1;
-      continue;
+  const lineStarts = [];
+  for (let offset = 0, index = 0; index < lines.length; index += 1) {
+    lineStarts.push(offset);
+    offset += lines[index].length + 1;
+  }
+  const lineAtOffset = (offset) => {
+    let index = 0;
+    while (index + 1 < lineStarts.length && lineStarts[index + 1] <= offset) index += 1;
+    return bodyStartLine + index;
+  };
+  const seenCitationRanges = new Set();
+  for (const block of markdownLogicalBlocks(lines, lineStarts)) {
+    const projection = normalizedMarkdownBlock(block);
+    for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+      const start = projection.offsets[match.index];
+      const end = projection.offsets[match.index + match[0].length - 1];
+      if (lineAtOffset(start) === lineAtOffset(end)) continue;
+      findings.push(
+        finding(
+          'D-01 editorial-metadata',
+          'markdown-body',
+          relativePath,
+          lineAtOffset(start),
+          match[0]
+        )
+      );
     }
-    let end = index + 1;
-    while (end < lines.length && isInlineLine(lines[end])) end += 1;
-    if (end > index + 1) {
-      const block = lines.slice(index, end);
-      const logical = block.join('\n');
-      if (!block.some((line) => hasEditorialLabel(line)) && hasEditorialLabel(logical)) {
-        findings.push(
-          finding(
-            'D-01 editorial-metadata',
-            'markdown-body',
-            relativePath,
-            bodyStartLine + index,
-            logical.trim()
-          )
-        );
-      }
-      if (!block.some((line) => labelledCitationValues(line).length)) {
-        for (const citation of markdownCitationEntries(policyTextProjection(logical))) {
-          if (validPublicCitationValue(citation.value)) continue;
-          findings.push(
-            finding(
-              'D-07 citation-policy',
-              'markdown-body',
-              relativePath,
-              bodyStartLine + index,
-              citation.value
-            )
-          );
-        }
-      }
+    for (const citation of markdownCitationEntries(projection.text)) {
+      const start = projection.offsets[citation.index];
+      const end = projection.offsets[citation.labelEnd - 1] ?? start;
+      if (lineAtOffset(start) === lineAtOffset(end)) continue;
+      const range = `${start}:${end}`;
+      if (seenCitationRanges.has(range) || validPublicCitationValue(citation.value)) continue;
+      seenCitationRanges.add(range);
+      findings.push(
+        finding(
+          'D-07 citation-policy',
+          'markdown-body',
+          relativePath,
+          lineAtOffset(start),
+          citation.value
+        )
+      );
     }
-    index = end;
   }
   return findings;
 }
@@ -1424,7 +1514,9 @@ function projectVisibleHtml(visible) {
     }
     const closing = Boolean(match[1]);
     const name = match[2].toLowerCase();
-    if (name === 'a') {
+    if (name === 'br' && !closing) {
+      appendSyntheticHtml(projection, ' ', tagStart);
+    } else if (name === 'a') {
       if (closing) {
         const anchor = anchors.pop();
         if (anchor?.href) {

@@ -290,7 +290,7 @@ export type ContactExperienceCopy = {
 const zhExperience: ContactExperienceCopy = {
   nav: { home: '返回首页', sales: '商务咨询' },
   hero: {
-    title: '把复杂的 AI 落地，交给真正懂业务的团队',
+    title: '把复杂的 AI 落地\n交给真正懂业务的团队',
     body: '从需求诊断、架构设计到 POC 验证与生产交付，让每一步都围绕真实业务价值推进。',
     primaryAction: '开始咨询',
     secondaryAction: '了解 FastGPT'

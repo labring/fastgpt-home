@@ -8,6 +8,7 @@ const http = require('node:http');
 
 const ROOT = path.resolve(__dirname, '..');
 const SCRIPT = path.join(ROOT, 'scripts/verify-content-hygiene.js');
+const { projectVisibleHtml, projectedRawOffset } = require(SCRIPT);
 
 function writeFixture(root, relativePath, content) {
   const destination = path.join(root, relativePath);
@@ -468,6 +469,41 @@ test('source CLI keeps static fragments around dynamic expressions and JSX polic
     const result = runFixture(root);
     assert.equal(result.status, 0, result.stderr);
   });
+});
+
+test('source CLI applies the full editorial vocabulary while preserving Chinese implementation plans', () => {
+  withFixture(
+    {
+      'src/content/guides/en/editorial.md': [
+        '# Guide',
+        '',
+        'Demand basis: internal research',
+        'Fact sources: internal research',
+        'Edition: preview',
+        '计划：W4',
+        '实施计划：reader rollout',
+        ''
+      ].join('\n'),
+      'src/locales/en.json':
+        '{"Demand basis":"opaque","copy":"Fact sources: opaque","计划":"W4","clean":"实施计划：reader rollout"}\n',
+      'src/faq/editorial.ts': [
+        'const dynamic = getValue();',
+        'export const copy = "Edition: preview";',
+        'export const metadata = { "Demand basis": dynamic, 计划安排: dynamic, copy: "实施计划：reader rollout" };',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 10);
+      assert.match(result.stderr, /Demand basis/);
+      assert.match(result.stderr, /Fact sources/);
+      assert.match(result.stderr, /Edition/);
+      assert.match(result.stderr, /计划/);
+      assert.doesNotMatch(result.stderr, /实施计划/);
+    }
+  );
 });
 
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
@@ -931,9 +967,46 @@ test('HTML CLI maps projected visible findings to raw source offsets', () => {
   });
 });
 
+test('HTML CLI applies expanded editorial labels to visible and serialized content', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<p>Demand basis: internal research</p><p>Fact sources: internal research</p>',
+        '<p>Edition: preview</p><p>计划：W4</p><p>实施计划：reader rollout</p>',
+        '<script>{"Demand basis":"internal","Fact sources":"internal","Edition":"preview","计划":"W4","clean":"实施计划：reader rollout"}</script>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 8);
+      assert.match(result.stderr, /editorial-metadata \| visible/);
+      assert.match(result.stderr, /editorial-metadata \| payload/);
+      assert.doesNotMatch(result.stderr, /实施计划/);
+    }
+  );
+});
+
+test('HTML projection stores compact offset runs for multi-megabyte text', () => {
+  const body = 'x'.repeat(2 * 1024 * 1024);
+  const html = `<html><body>${body}</body></html>`;
+  const projection = projectVisibleHtml(html);
+  assert.equal(projection.text.includes(body), true);
+  assert.equal('offsets' in projection, false);
+  assert(projection.runs.length <= 4);
+  assert.equal(projectedRawOffset(projection, projection.text.indexOf(body)), html.indexOf(body));
+});
+
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
   let requests = 0;
   let dirtyCitation = false;
+  let dirtyEditorial = false;
   const server = http.createServer((request, response) => {
     requests += 1;
     const baseUrl = `http://${request.headers.host}`;
@@ -944,7 +1017,9 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     }
     response.setHeader('content-type', 'text/html');
     response.end(
-      dirtyCitation
+      dirtyEditorial
+        ? '<html><body><p>计划：W4</p><p>实施计划：reader rollout</p></body></html>'
+        : dirtyCitation
         ? '<html><body><p>REFERENCE<!-- -->: Internal KB</p></body></html>'
         : '<html><body><p>REFERENCE<!-- -->: <a href="https://example.com/docs">Official docs</a></p></body></html>'
     );
@@ -1011,6 +1086,11 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     const dirty = await runAsync(args);
     assert.equal(dirty.status, 1);
     assert.match(dirty.stderr, /D-07 citation-policy/);
+
+    dirtyEditorial = true;
+    const editorial = await runAsync(args);
+    assert.equal(editorial.status, 1);
+    assert.match(editorial.stderr, /D-01 editorial-metadata/);
 
     requests = 0;
     const invalid = await runAsync([...args, '--max-urls', '10001']);

@@ -113,10 +113,11 @@ const CHINESE_EDITORIAL_LABELS = [
 const ENGLISH_EDITORIAL_LABELS = [
   'internal +KB',
   'client +KB',
-  'fact +source',
+  'fact +sources?',
   'source +of +facts',
   'source +material',
   'demand +anchor(?: *\\([^)]*\\))?',
+  'demand +basis',
   'GSC +provenance',
   'case +clearance',
   'publish +target',
@@ -132,6 +133,7 @@ const ENGLISH_EDITORIAL_LABELS = [
   'version(?:s)? +and +(?:plans|tiers)',
   'version +and +(?:package|tiers)',
   'version[- ]plan',
+  'editions?',
   'update[- ](?:record|log)(?:[- ]addendum)?',
   'review[- ]cycle',
   'revision',
@@ -142,10 +144,13 @@ const EDITORIAL_KEY = new RegExp(`^(?:${EDITORIAL_LABEL_NAME})$`, 'i');
 const CHINESE_EDITORIAL_INLINE = CHINESE_EDITORIAL_LABELS.filter(
   (label) => label !== '计划(?:安排)?'
 );
+const CHINESE_STANDALONE_EDITORIAL = '计划(?:安排)?';
 const EDITORIAL_MATCHER = new RegExp(
   `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_EDITORIAL_LABELS.join(
     '|'
-  )})\\s*[:：]|(?:${CHINESE_EDITORIAL_INLINE.join('|')})\\s*[:：]`,
+  )})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?:${CHINESE_EDITORIAL_INLINE.join(
+    '|'
+  )})\\s*[:：]`,
   'iu'
 );
 const EDITORIAL_PREAMBLE =
@@ -872,12 +877,12 @@ function htmlIdentity(relativePath, variant) {
   return { file, route, surface, locale, slug: segments.at(-1) || 'home' };
 }
 
-function htmlFinding(rule, projection, identity, content, index, detail, offsets) {
+function htmlFinding(rule, projection, identity, content, rawIndex, detail) {
   return {
     rule,
     projection,
     ...identity,
-    line: htmlLine(content, offsets?.[index] ?? index),
+    line: htmlLine(content, rawIndex),
     detail
   };
 }
@@ -917,32 +922,37 @@ function decodeHtml(value) {
     .replaceAll('&gt;', '>');
 }
 
+function appendProjectedHtml(projection, value, rawStart, linear) {
+  if (!value) return;
+  const projectedStart = projection.length;
+  const projectedEnd = projectedStart + value.length;
+  const previous = projection.runs.at(-1);
+  const adjacent =
+    previous &&
+    previous.projectedEnd === projectedStart &&
+    previous.linear === linear &&
+    (linear
+      ? previous.rawStart + (previous.projectedEnd - previous.projectedStart) === rawStart
+      : previous.rawStart === rawStart);
+  if (adjacent) previous.projectedEnd = projectedEnd;
+  else projection.runs.push({ projectedStart, projectedEnd, rawStart, linear });
+  projection.chunks.push(value);
+  projection.length = projectedEnd;
+}
+
 function appendDecodedHtml(projection, value, offset) {
   const entityPattern = /&(?:#x[0-9a-f]+|#[0-9]+|amp|quot|#39|lt|gt);/gi;
   let cursor = 0;
-  const append = (text, start) => {
-    for (let index = 0; index < text.length; index += 1) {
-      projection.text += text[index];
-      projection.offsets.push(start + index);
-    }
-  };
   for (const match of value.matchAll(entityPattern)) {
-    append(value.slice(cursor, match.index), offset + cursor);
-    const decoded = decodeHtml(match[0]);
-    for (let index = 0; index < decoded.length; index += 1) {
-      projection.text += decoded[index];
-      projection.offsets.push(offset + match.index);
-    }
+    appendProjectedHtml(projection, value.slice(cursor, match.index), offset + cursor, true);
+    appendProjectedHtml(projection, decodeHtml(match[0]), offset + match.index, false);
     cursor = match.index + match[0].length;
   }
-  append(value.slice(cursor), offset + cursor);
+  appendProjectedHtml(projection, value.slice(cursor), offset + cursor, true);
 }
 
 function appendSyntheticHtml(projection, value, offset) {
-  for (let index = 0; index < value.length; index += 1) {
-    projection.text += value[index];
-    projection.offsets.push(offset);
-  }
+  appendProjectedHtml(projection, value, offset, false);
 }
 
 function htmlTagEnd(html, start) {
@@ -971,7 +981,7 @@ function htmlHref(tag, tagOffset) {
 }
 
 function projectVisibleHtml(visible) {
-  const projection = { text: '', offsets: [] };
+  const projection = { chunks: [], length: 0, runs: [] };
   const anchors = [];
   let cursor = 0;
   while (cursor < visible.length) {
@@ -1017,7 +1027,20 @@ function projectVisibleHtml(visible) {
     }
     cursor = tagEnd + 1;
   }
-  return projection;
+  return { text: projection.chunks.join(''), runs: projection.runs };
+}
+
+function projectedRawOffset(projection, index) {
+  let left = 0;
+  let right = projection.runs.length - 1;
+  while (left <= right) {
+    const middle = Math.floor((left + right) / 2);
+    const run = projection.runs[middle];
+    if (index < run.projectedStart) right = middle - 1;
+    else if (index >= run.projectedEnd) left = middle + 1;
+    else return run.linear ? run.rawStart + index - run.projectedStart : run.rawStart;
+  }
+  return 0;
 }
 
 function visibleCitationProjection(visible) {
@@ -1068,9 +1091,8 @@ function inspectHtmlArtifact(relativePath, html, variant) {
         'visible',
         identity,
         html,
-        index,
-        token,
-        visibleProjection.offsets
+        projectedRawOffset(visibleProjection, index),
+        token
       )
     );
     lineStart += line.length + 1;
@@ -1083,9 +1105,8 @@ function inspectHtmlArtifact(relativePath, html, variant) {
           'visible',
           identity,
           html,
-          citation.index,
-          'Sources and References require public HTTPS anchors',
-          visibleProjection.offsets
+          projectedRawOffset(visibleProjection, citation.index),
+          'Sources and References require public HTTPS anchors'
         )
       );
     }
@@ -1558,4 +1579,13 @@ async function main(argv = process.argv.slice(2)) {
 
 if (require.main === module) main();
 
-module.exports = { inspectHtmlRoot, inspectLive, inspectRoot, main, parseArgs, publishableBody };
+module.exports = {
+  inspectHtmlRoot,
+  inspectLive,
+  inspectRoot,
+  main,
+  parseArgs,
+  projectVisibleHtml,
+  projectedRawOffset,
+  publishableBody
+};

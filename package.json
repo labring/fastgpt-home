@@ -41,7 +41,6 @@
     "verify:contact": "node scripts/verify-contact-page.js"
   },
   "dependencies": {
-    "@gsap/react": "^2.1.2",
     "@heroui/react": "^2.8.9",
     "@heroui/theme": "^2.4.26",
     "@radix-ui/react-slot": "^1.0.2",

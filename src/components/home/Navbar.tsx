@@ -16,7 +16,7 @@ import Image from 'next/image';
 import { localeConfigs, type LocaleCode } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { getPublishedLocaleCodes } from '@/lib/siteRouting';
-import { getContactUrl } from '@/lib/contact';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 
 interface NavLink {
   label: string;
@@ -61,6 +61,7 @@ export default function Navbar({
   const [langSheetOpen, setLangSheetOpen] = useState(false);
   const params = useParams<{ lang: string }>();
   const lang = params?.lang || locale || defaultLocale;
+  const contactUrl = useContactUrl(lang);
   const desktopStartUrl = useStartUrl();
   const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
@@ -213,7 +214,7 @@ export default function Navbar({
               </div>
             )}
             <a
-              href={getContactUrl(lang)}
+              href={contactUrl}
               {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_consult')}
               aria-label={t.consult}
               className="px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
@@ -343,7 +344,7 @@ export default function Navbar({
 
             <div className="flex flex-col gap-3 mt-6 pt-6 border-t border-hairline-soft">
               <a
-                href={getContactUrl(lang)}
+                href={contactUrl}
                 {...rybbitClickAttrs(
                   RYBBIT_EVENTS.businessConsultClick,
                   'home_nav_mobile_menu_consult'

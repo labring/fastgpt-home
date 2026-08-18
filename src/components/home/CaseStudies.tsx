@@ -7,7 +7,7 @@ import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { getCasesAssets } from '@/components/home/assets';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
-import { getContactUrl } from '@/lib/contact';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 
 type MetricIcon = 'arrow' | 'zap' | 'medal';
 type CaseMetric = { value: string; label: string; icon: MetricIcon };
@@ -249,6 +249,8 @@ function CaseCard({
   learnMore: string;
   locale: string;
 }) {
+  const contactUrl = useContactUrl(locale);
+
   return (
     <div
       className="flex flex-col rounded-2xl md:rounded-3xl p-4 md:p-6 gap-4 md:gap-6 overflow-hidden"
@@ -323,7 +325,7 @@ function CaseCard({
         </div>
 
         <a
-          href={getContactUrl(locale)}
+          href={contactUrl}
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_case_study_consult', {
             case: data.key
           })}

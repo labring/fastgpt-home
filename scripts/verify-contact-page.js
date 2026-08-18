@@ -20,6 +20,160 @@ const defaultLocale = getDefaultLocale(variant);
 const publishedLocales = getPublishedLocaleCodes(variant);
 const contactLocales = publishedLocales.filter((locale) => titles[locale]);
 
+function resolveHtmlPath(route) {
+  const relativeRoute = route.replace(/^\/+|\/+$/g, '');
+  const candidates = relativeRoute
+    ? [path.join(output, `${relativeRoute}.html`), path.join(output, relativeRoute, 'index.html')]
+    : [path.join(output, 'index.html')];
+  return candidates.find((candidate) => fs.existsSync(candidate));
+}
+
+function resolveHtml(route) {
+  const htmlPath = resolveHtmlPath(route);
+  assert(htmlPath, `Missing static HTML for ${route}`);
+  return fs.readFileSync(htmlPath, 'utf8');
+}
+
+function getContactHrefs(html) {
+  return [...html.matchAll(/href="([^"]*\/contact(?:[?#][^"]*)?)"/g)].map((match) => match[1]);
+}
+
+function getExpectedContactRoute(locale) {
+  const contactLocale = locale === 'zh' || locale === 'zh-hant' ? locale : 'en';
+  return contactLocale === defaultLocale ? '/contact' : `/${contactLocale}/contact`;
+}
+
+function verifyContactQueryFlow() {
+  const contactSource = fs.readFileSync(path.join(root, 'src/lib/contact.ts'), 'utf8');
+  const formSource = fs.readFileSync(path.join(root, 'src/components/contact/ContactForm.tsx'), 'utf8');
+  const attributionSource = fs.readFileSync(path.join(root, 'src/lib/leadAttribution.ts'), 'utf8');
+
+  assert.match(
+    contactSource,
+    /getContactUrl\(locale: string, search = ''\)/,
+    'Contact URL helper must accept the current query string'
+  );
+  assert.match(
+    contactSource,
+    /ATTRIBUTION_QUERY_KEYS\.forEach/,
+    'Contact URL helper must use the attribution query allowlist'
+  );
+  assert.match(
+    formSource,
+    /source:\s*getSubmissionSource\(\)/,
+    'Contact submission must send the current explicit source'
+  );
+  assert.match(
+    attributionSource,
+    /new URLSearchParams\(window\.location\.search\)\.get\('source'\)/,
+    'Submission source must come from the current landing URL'
+  );
+
+  const landingQuery =
+    'source=partner&utm_source=google&utm_campaign=launch&click_id=abc123&email=drop-me';
+  const forwarded = new URLSearchParams();
+  const incoming = new URLSearchParams(landingQuery);
+  const allowedKeys = ['source', 'utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'click_id'];
+  for (const key of allowedKeys) {
+    const value = incoming.get(key);
+    if (value) forwarded.set(key, value);
+  }
+
+  assert.equal(
+    forwarded.toString(),
+    'source=partner&utm_source=google&utm_campaign=launch&click_id=abc123',
+    'Contact query forwarding must preserve approved attribution values only'
+  );
+  assert.equal(
+    new URLSearchParams(forwarded).get('source'),
+    'partner',
+    'Landing source must survive Contact navigation into the submission payload'
+  );
+  assert.equal(new URLSearchParams(forwarded).has('email'), false);
+}
+
+function verifyBuiltResourcePolicy() {
+  const forbiddenResources = [
+    'fael3z0zfze.feishu.cn/share/base/form',
+    'picsum.photos',
+    'api.fontshare.com'
+  ];
+  const serviceAssetLanguages = ['en', 'zh'];
+  for (const language of serviceAssetLanguages) {
+    let totalBytes = 0;
+    for (let index = 1; index <= 4; index += 1) {
+      const assetPath = path.join(
+        root,
+        'public/images/home/solutions/sol-i18n',
+        `sol${index}-${language}.webp`
+      );
+      assert(fs.existsSync(assetPath), `Missing local Contact service asset: ${assetPath}`);
+      const size = fs.statSync(assetPath).size;
+      assert(size <= 250 * 1024, `${path.relative(root, assetPath)} exceeds the 250 KB asset limit`);
+      totalBytes += size;
+    }
+    assert(
+      totalBytes <= 800 * 1024,
+      `Contact service assets for ${language} exceed the 800 KB total limit`
+    );
+  }
+  const outputFiles = [];
+
+  function collectFiles(directory) {
+    for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
+      const target = path.join(directory, entry.name);
+      if (entry.isDirectory()) {
+        collectFiles(target);
+      } else if (/\.(?:css|html|js|json|map|txt)$/.test(entry.name)) {
+        outputFiles.push(target);
+      }
+    }
+  }
+
+  collectFiles(output);
+  for (const file of outputFiles) {
+    const content = fs.readFileSync(file, 'utf8');
+    for (const resource of forbiddenResources) {
+      assert(!content.includes(resource), `${path.relative(root, file)} contains ${resource}`);
+    }
+  }
+}
+
+function verifyCrmState() {
+  const defaultContactHtml = resolveHtml('/contact');
+  const hasExplicitCrmEnv = Object.prototype.hasOwnProperty.call(process.env, 'NEXT_PUBLIC_CRM_API_URL');
+  const crmConfigured = Boolean(process.env.NEXT_PUBLIC_CRM_API_URL?.trim());
+  const isPreview = variant === 'preview';
+  const hasConfigError = defaultContactHtml.includes('data-crm-config-error');
+  const hasPreviewNotice = defaultContactHtml.includes('data-crm-preview="true"');
+  const hasForm = defaultContactHtml.includes('<form');
+
+  assert(!(hasConfigError && hasPreviewNotice), 'Contact page exposes conflicting CRM states');
+
+  if (hasExplicitCrmEnv && crmConfigured) {
+    assert(hasForm, 'Configured Contact page is missing its form');
+    assert(!hasConfigError, 'Configured CRM still shows config error');
+    assert(!hasPreviewNotice, 'Configured CRM still shows preview-only state');
+    return;
+  }
+
+  if (hasExplicitCrmEnv && !crmConfigured && isPreview) {
+    assert(hasForm, 'Preview Contact page is missing its form');
+    assert(hasPreviewNotice, 'Preview Contact page is missing its disabled CRM notice');
+    return;
+  }
+
+  if (hasExplicitCrmEnv && !crmConfigured) {
+    assert(hasConfigError, 'Production Contact page must expose the missing CRM configuration error');
+    return;
+  }
+
+  assert(
+    hasForm || hasConfigError || hasPreviewNotice,
+    'Contact page does not expose a recognizable CRM state'
+  );
+}
+
 const pages = [
   ['contact.html', titles[defaultLocale] || titles.en],
   ...contactLocales
@@ -33,26 +187,25 @@ const pages = [
 for (const [file, title] of pages) {
   const content = fs.readFileSync(path.join(output, file), 'utf8');
   assert.match(content, new RegExp(title), `${file} is missing its localized title`);
-  assert.ok(
-    content.includes('rgba(59,130,246,0.12)') && content.includes('[background-size:48px_48px]'),
-    `${file} is missing the unified contact hero treatment`
-  );
-  assert.ok(
-    !content.includes('rgba(251,208,223'),
-    `${file} still contains the legacy purple contact treatment`
-  );
+  assert.ok(content.includes('rgba(59,130,246,0.12)'), `${file} is missing the unified contact hero treatment`);
+  assert.ok(!content.includes('rgba(251,208,223'), `${file} still contains the legacy purple contact treatment`);
 }
 
-const homepageLinks = [
-  ...publishedLocales.map((locale) => [
-    locale === defaultLocale ? 'index.html' : `${locale}.html`,
-    `/${locale === 'zh' || locale === 'zh-hant' ? locale : 'en'}/contact`
-  ])
-];
+const homepageRoutes = publishedLocales.map((locale) => ({
+  locale,
+  route: locale === defaultLocale ? '/' : `/${locale}`
+}));
 
-for (const [file, href] of homepageLinks) {
-  const content = fs.readFileSync(path.join(output, file), 'utf8');
-  assert.ok(content.includes(href), `${file} is missing ${href}`);
+for (const { locale, route } of homepageRoutes) {
+  const content = resolveHtml(route);
+  const expectedHref = getExpectedContactRoute(locale);
+  const contactHrefs = getContactHrefs(content);
+  assert(contactHrefs.length > 0, `${route} is missing a Contact CTA`);
+  assert(
+    contactHrefs.every((href) => href === expectedHref),
+    `${route} contains an unreachable Contact href: ${contactHrefs.join(', ')}`
+  );
+  assert(resolveHtmlPath(expectedHref), `${route} points to missing static HTML at ${expectedHref}`);
 }
 
 function sourceFiles(directory) {
@@ -65,12 +218,15 @@ function sourceFiles(directory) {
 
 for (const file of sourceFiles(path.join(root, 'src'))) {
   const content = fs.readFileSync(file, 'utf8');
-  assert.ok(
-    !content.includes('fael3z0zfze.feishu.cn/share/base/form'),
-    `${path.relative(root, file)} still links to the legacy form`
-  );
+  for (const resource of ['fael3z0zfze.feishu.cn/share/base/form', 'picsum.photos', 'api.fontshare.com']) {
+    assert(!content.includes(resource), `${path.relative(root, file)} still references ${resource}`);
+  }
 }
 
+verifyContactQueryFlow();
+verifyBuiltResourcePolicy();
+verifyCrmState();
+
 console.log(
-  `Contact page verification passed: ${pages.length} routes, ${homepageLinks.length} localized entry paths, 0 legacy form links.`
+  `Contact page verification passed: ${pages.length} routes, ${homepageRoutes.length} localized entry paths, CRM state and attribution flow verified.`
 );

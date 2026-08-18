@@ -16,6 +16,16 @@ export const FIELD_CAPS = {
   at: 40
 } as const;
 
+export const ATTRIBUTION_QUERY_KEYS = [
+  'source',
+  'utm_source',
+  'utm_medium',
+  'utm_campaign',
+  'utm_term',
+  'utm_content',
+  'click_id'
+] as const satisfies readonly (keyof typeof FIELD_CAPS)[];
+
 export type StoredAttributionV1 = StoredAttribution & { v: 1 };
 export type ValidationFailureReason =
   | 'not-object'

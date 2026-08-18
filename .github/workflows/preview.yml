@@ -38,7 +38,10 @@ jobs:
         with:
           version: 9
 
-      - name: Build
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build and verify CRM-disabled preview
         env:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io
           NEXT_PUBLIC_SITE_VARIANT: preview
@@ -49,9 +52,29 @@ jobs:
           NEXT_PUBLIC_CRM_API_URL: ''
           NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
         run: |
-          pnpm install
+          rm -rf out
           pnpm run build
+          pnpm run verify:contact
           pnpm run verify:i18n-seo
+          mv out .preview-build-crm-disabled
+
+      - name: Build and verify configured CRM preview
+        env:
+          NEXT_PUBLIC_HOME_URL: https://fastgpt.io
+          NEXT_PUBLIC_SITE_VARIANT: preview
+          NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+          NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
+          # This URL is intentionally unreachable; it only exercises the configured form build.
+          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
+          NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
+        run: |
+          rm -rf out
+          pnpm run build
+          pnpm run verify:contact
+          pnpm run verify:i18n-seo
+          rm -rf out
+          mv .preview-build-crm-disabled out
 
       # Save PR number so the deploy workflow knows which PR to comment on.
       - name: Save PR metadata

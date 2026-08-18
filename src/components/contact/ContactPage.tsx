@@ -21,7 +21,7 @@ import { getContactCopy, getContactExperienceCopy } from '@/components/contact/c
 import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
-import { getCasesAssets } from '@/components/home/assets';
+import { getCasesAssets, getSolutionsAssets } from '@/components/home/assets';
 import { getDefaultLocalePath } from '@/lib/clientNavigation';
 import { getContactLocale } from '@/lib/contact';
 
@@ -42,13 +42,6 @@ const BRAND_LOGOS = [
   'image-223.png'
 ];
 
-const SERVICE_IMAGES: Record<string, string> = {
-  community: 'https://picsum.photos/seed/fastgpt-open-source/1600/1200',
-  consult: 'https://picsum.photos/seed/fastgpt-consulting/1600/1200',
-  deploy: 'https://picsum.photos/seed/fastgpt-deployment/1600/1200',
-  custom: 'https://picsum.photos/seed/fastgpt-enterprise/1600/1200'
-};
-
 const SERVICE_ICONS = {
   community: Blocks,
   consult: MessagesSquare,
@@ -58,18 +51,23 @@ const SERVICE_ICONS = {
 
 export default function ContactPage({
   locale,
-  dict,
-  embedded = false
+  dict
 }: {
   locale: string;
   dict: any;
-  embedded?: boolean;
 }) {
   const contactLocale = getContactLocale(locale);
   const formCopy = getContactCopy(contactLocale);
   const copy = getContactExperienceCopy(contactLocale);
   const homeHref = getDefaultLocalePath(contactLocale, '/');
   const caseAssets = getCasesAssets(contactLocale);
+  const solutionAssets = getSolutionsAssets(contactLocale);
+  const serviceImages: Record<string, string> = {
+    community: solutionAssets.service,
+    consult: solutionAssets.sales,
+    deploy: solutionAssets.hr,
+    custom: solutionAssets.finance
+  };
   const caseImages: Record<string, string> = {
     cetc: caseAssets.cetc,
     cms: caseAssets.cms,
@@ -150,14 +148,6 @@ export default function ContactPage({
     { scope: rootRef }
   );
 
-  if (embedded) {
-    return (
-      <div className="home min-h-screen bg-white text-ink">
-        <ContactForm locale={contactLocale} variant="modal" />
-      </div>
-    );
-  }
-
   const moveToCase = (offset: number) => {
     const nextIndex = (activeCase + offset + copy.cases.items.length) % copy.cases.items.length;
     const cards = casesRef.current?.querySelectorAll<HTMLElement>('[data-case-card]');
@@ -168,13 +158,8 @@ export default function ContactPage({
   return (
     <div
       ref={rootRef}
-      className="home min-h-screen bg-white text-ink"
-      style={{ fontFamily: "'Satoshi', 'PingFang SC', 'Microsoft YaHei', sans-serif" }}
+      className="home min-h-screen bg-white font-sans text-ink"
     >
-      <link
-        rel="stylesheet"
-        href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,600,700&display=swap"
-      />
       <HomeThemeFix />
 
       <Navbar links={dict.links} t={dict.Home.navCta} locale={contactLocale} />
@@ -274,12 +259,15 @@ export default function ContactPage({
                       active ? 'lg:flex-[2.2]' : 'lg:flex-1'
                     }`}
                   >
-                    <span
-                      aria-hidden="true"
-                      className={`absolute inset-0 bg-cover bg-center grayscale contrast-125 transition-transform duration-700 ease-out group-hover:scale-105 ${
+                    <Image
+                      src={serviceImages[item.key]}
+                      alt=""
+                      fill
+                      loading="lazy"
+                      sizes="(min-width: 1280px) 25vw, (min-width: 768px) 50vw, 100vw"
+                      className={`object-cover object-center transition-transform duration-700 ease-out group-hover:scale-105 ${
                         active ? 'scale-105' : 'scale-100'
                       }`}
-                      style={{ backgroundImage: `url('${SERVICE_IMAGES[item.key]}')` }}
                     />
                     <span
                       aria-hidden="true"

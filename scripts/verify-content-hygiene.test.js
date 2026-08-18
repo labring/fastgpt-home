@@ -1334,6 +1334,53 @@ test('source CLI respects CommonMark lazy boundaries and reader-visible Markdown
   );
 });
 
+test('source CLI preserves quote depth, raw HTML blocks, paired delimiters, and UTF-16 offsets', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/final-blocks.md': [
+        '# Guide',
+        '',
+        '> Sources',
+        '>> : Internal KB',
+        '',
+        '> > Sources',
+        '> : Internal KB',
+        '',
+        '> Sources',
+        ': Internal KB',
+        '',
+        '<div>Demand',
+        'basis: internal</div><section>Sources</section><section>: Internal KB</section>',
+        '<p>😀😀😀😀😀😀😀😀😀😀Demand',
+        'basis: internal</p>',
+        '*Demand',
+        'basis: clean',
+        '**Demand**',
+        '__basis__: internal',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        3,
+        result.stderr
+      );
+      assert.match(result.stderr, /final-blocks\.md.*line=9/);
+      assert.match(result.stderr, /final-blocks\.md.*line=12/);
+      assert.match(result.stderr, /final-blocks\.md.*line=14/);
+      assert.match(result.stderr, /final-blocks\.md.*line=18/);
+      assert.doesNotMatch(
+        result.stderr,
+        /final-blocks\.md.*line=3|final-blocks\.md.*line=5|final-blocks\.md.*line=16/
+      );
+    }
+  );
+});
+
 test('HTML CLI projects br tags as inline whitespace without crossing block boundaries', () => {
   withFixture(
     {

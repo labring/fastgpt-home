@@ -641,8 +641,10 @@ function markdownLogicalBlocks(lines, lineStarts) {
     const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
     if (quote) {
       const parts = [];
+      const depth = (quote[0].match(/>/g) || []).length;
       while (index < lines.length) {
         const marker = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
+        if (marker && (marker[0].match(/>/g) || []).length !== depth) break;
         const value = marker ? lines[index].slice(marker[0].length) : lines[index];
         const offset = lineStarts[index] + (marker ? marker[0].length : 0);
         if (
@@ -671,15 +673,44 @@ function markdownLogicalBlocks(lines, lineStarts) {
       appendBlock(parts);
       continue;
     }
-    if (/^\s*<p\b/i.test(lines[index])) {
-      const parts = [];
-      do {
-        parts.push([lines[index], lineStarts[index]]);
-        const complete = /<\/p\s*>/i.test(lines[index]);
-        index += 1;
-        if (complete || index >= lines.length) break;
-      } while (true);
-      appendBlock(parts);
+    const openBlock =
+      /<(address|article|aside|blockquote|div|figure|footer|header|h[1-6]|li|main|nav|ol|p|pre|section|table|tbody|td|th|tr|ul)\b[^>]*>/gi;
+    if (openBlock.test(lines[index])) {
+      openBlock.lastIndex = 0;
+      let cursor = 0;
+      while (cursor < lines[index].length) {
+        openBlock.lastIndex = cursor;
+        const opener = openBlock.exec(lines[index]);
+        if (!opener) break;
+        const closing = new RegExp(`</${opener[1]}\\s*>`, 'i');
+        const parts = [];
+        let lineIndex = index;
+        let segmentStart = opener.index;
+        while (lineIndex < lines.length) {
+          const close = closing.exec(lines[lineIndex].slice(segmentStart));
+          if (close) {
+            const end = segmentStart + close.index + close[0].length;
+            parts.push([
+              lines[lineIndex].slice(segmentStart, end),
+              lineStarts[lineIndex] + segmentStart
+            ]);
+            appendBlock(parts);
+            index = lineIndex;
+            cursor = end;
+            break;
+          }
+          parts.push([lines[lineIndex].slice(segmentStart), lineStarts[lineIndex] + segmentStart]);
+          lineIndex += 1;
+          segmentStart = 0;
+        }
+        if (lineIndex >= lines.length) {
+          appendBlock(parts);
+          index = lineIndex;
+          cursor = 0;
+          break;
+        }
+      }
+      index += 1;
       continue;
     }
     if (!plainLine(lines[index])) {
@@ -699,13 +730,38 @@ function markdownLogicalBlocks(lines, lineStarts) {
 function normalizedMarkdownBlock(block) {
   let text = '';
   const offsets = [];
+  const pairedDelimiters = new Set();
+  for (let index = 0; index < block.text.length; ) {
+    const marker = block.text[index];
+    if (!'*_`'.includes(marker)) {
+      index += 1;
+      continue;
+    }
+    let length = 1;
+    while (block.text[index + length] === marker) length += 1;
+    const delimiter = marker.repeat(length);
+    let closing = block.text.indexOf(delimiter, index + length);
+    while (
+      closing >= 0 &&
+      (block.text[closing - 1] === marker || block.text[closing + length] === marker)
+    ) {
+      closing = block.text.indexOf(delimiter, closing + 1);
+    }
+    if (closing >= 0) {
+      for (let offset = 0; offset < length; offset += 1) {
+        pairedDelimiters.add(index + offset);
+        pairedDelimiters.add(closing + offset);
+      }
+      index = closing + length;
+    } else index += length;
+  }
   const append = (value, offset) => {
     for (const character of value) {
       const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
       const dash = /[\p{Dash_Punctuation}\u2212]/u.test(character);
       if (!whitespace && !dash) {
         text += character;
-        offsets.push(offset);
+        for (let index = 0; index < character.length; index += 1) offsets.push(offset + index);
       } else if (text.at(-1) !== (dash ? '-' : ' ')) {
         text += dash ? '-' : ' ';
         offsets.push(offset);
@@ -721,7 +777,11 @@ function normalizedMarkdownBlock(block) {
         continue;
       }
     }
-    if ('*_`'.includes(block.text[index])) continue;
+    if (pairedDelimiters.has(index)) continue;
+    if ('*_`'.includes(block.text[index])) {
+      append('_', block.offsets[index]);
+      continue;
+    }
     const reference = htmlReferenceAt(block.text, index);
     if (reference) {
       append(reference.value, block.offsets[index]);
@@ -1185,6 +1245,8 @@ function inspectMarkdown(relativePath, source) {
   const lines = body.split('\n');
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   let inSources = false;
+  const containsHtmlBlock =
+    /<\/?(?:address|article|aside|blockquote|div|figure|footer|header|h[1-6]|li|main|nav|ol|p|pre|section|table|tbody|td|th|tr|ul)\b/i;
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
@@ -1195,6 +1257,7 @@ function inspectMarkdown(relativePath, source) {
       continue;
     }
     if (heading) inSources = false;
+    if (containsHtmlBlock.test(line)) continue;
     if (hasEditorialLabel(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())

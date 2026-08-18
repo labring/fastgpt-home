@@ -113,6 +113,10 @@ const HTML_BLOCK_TAGS = new Set([
   'style',
   'textarea'
 ]);
+const MARKDOWN_TYPE_6_HTML_BLOCK = new RegExp(
+  `^</?(?:${COMMONMARK_TYPE_6_HTML_BLOCK_TAGS.join('|')})\\b`,
+  'i'
+);
 const BLOCK_BOUNDARY = '\uE000';
 const CHINESE_EDITORIAL_LABELS = [
   '事实来源',
@@ -650,7 +654,11 @@ function atxHeading(line) {
   let text = line.slice(contentStart);
   const closing = /[\t ]+#+[\t ]*$/.exec(text);
   if (closing) text = text.slice(0, closing.index);
-  return { text: text.replace(/[\t ]+$/, ''), offset: contentStart };
+  return {
+    text: text.replace(/[\t ]+$/, ''),
+    offset: contentStart,
+    level: opening[2].length
+  };
 }
 
 function isEscapedMarkdownPunctuation(value, index) {
@@ -679,11 +687,17 @@ function nextUnicodeCharacter(value, index) {
 }
 
 function isMarkdownWhitespace(character) {
-  return character === undefined || /\p{White_Space}/u.test(character);
+  return (
+    character === undefined || character === BLOCK_BOUNDARY || /\p{White_Space}/u.test(character)
+  );
+}
+
+function isAsciiPunctuation(character) {
+  return Boolean(character && /[!-/:-@[-`{-~]/.test(character));
 }
 
 function isMarkdownPunctuation(character) {
-  return Boolean(character && (/[!-/:-@[-`{-~]/.test(character) || /\p{P}/u.test(character)));
+  return isAsciiPunctuation(character) || Boolean(character && /\p{P}/u.test(character));
 }
 
 function markdownCodeSpans(value, hidden) {
@@ -875,9 +889,63 @@ function consumeMarkdownEmphasis(value, hidden, codeSpans) {
   }
 }
 
+function markdownHtmlBlockStart(line) {
+  const value = line.replace(/^ {0,3}/, '');
+  const typeOne = /^<(pre|script|style|textarea)(?:[\t >]|$)/i.exec(value);
+  if (typeOne) {
+    return {
+      endPattern: new RegExp(`</${typeOne[1]}\\s*>`, 'i'),
+      sourceComment: false
+    };
+  }
+  if (value.startsWith('<!--')) return { endPattern: /-->/, sourceComment: true };
+  if (value.startsWith('<?')) return { endPattern: /\?>/, sourceComment: false };
+  if (value.startsWith('<![CDATA[')) return { endPattern: /\]\]>/, sourceComment: false };
+  if (/^<![A-Z]/.test(value)) return { endPattern: />/, sourceComment: false };
+  return MARKDOWN_TYPE_6_HTML_BLOCK.test(value)
+    ? { blankTerminated: true, sourceComment: false }
+    : undefined;
+}
+
+function markdownSourceCommentsBlock(value) {
+  let text = '';
+  const offsets = [];
+  let cursor = 0;
+  let commentCount = 0;
+  while (cursor < value.length) {
+    const opening = value.indexOf('<!--', cursor);
+    if (opening < 0) break;
+    const closing = value.indexOf('-->', opening + 4);
+    const contentStart = opening + 4;
+    const contentEnd = closing < 0 ? value.length : closing;
+    if (commentCount) {
+      text += BLOCK_BOUNDARY;
+      offsets.push(opening);
+    }
+    text += value.slice(contentStart, contentEnd);
+    for (let index = contentStart; index < contentEnd; index += 1) offsets.push(index);
+    commentCount += 1;
+    if (closing < 0) break;
+    cursor = closing + 3;
+  }
+  return commentCount
+    ? {
+        text,
+        offsets,
+        html: false,
+        sourceComment: false,
+        container: 'source-comments'
+      }
+    : undefined;
+}
+
 function markdownLogicalBlocks(lines, lineStarts) {
   const blocks = [];
-  const appendBlock = (parts, html = false, heading = false) => {
+  let listItem = 0;
+  let quoteGroup = 0;
+  let currentQuoteGroup = 0;
+  let lastQuoteLine = -2;
+  const appendBlock = (parts, options = {}) => {
     let text = '';
     const offsets = [];
     for (const [value, offset] of parts) {
@@ -888,100 +956,148 @@ function markdownLogicalBlocks(lines, lineStarts) {
       text += value;
       for (let index = 0; index < value.length; index += 1) offsets.push(offset + index);
     }
-    blocks.push({ text, offsets, html, heading });
+    blocks.push({
+      text,
+      offsets,
+      html: false,
+      sourceComment: false,
+      container: 'root',
+      ...options
+    });
   };
-  const htmlBlock = new RegExp(`^\\s*</?(?:${[...HTML_BLOCK_TAGS].join('|')})\\b`, 'i');
   const boundary = (line) =>
     !line.trim() ||
     Boolean(atxHeading(line)) ||
     /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(line) ||
-    htmlBlock.test(line);
+    Boolean(markdownHtmlBlockStart(line));
   const plainLine = (line) =>
     Boolean(line.trim()) &&
     !atxHeading(line) &&
     !/^\s*(?:[-*+]\s+|\d+[.)]\s+|>)/.test(line) &&
-    !htmlBlock.test(line);
+    !markdownHtmlBlockStart(line);
+
   for (let index = 0; index < lines.length; ) {
     const heading = atxHeading(lines[index]);
     if (heading) {
-      if (heading.text) {
-        appendBlock([[heading.text, lineStarts[index] + heading.offset]], false, true);
-      }
+      appendBlock([[heading.text, lineStarts[index] + heading.offset]], {
+        headingLevel: heading.level
+      });
       index += 1;
       continue;
     }
+
     const quote = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
-    const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
     if (quote) {
+      if (index !== lastQuoteLine + 1) currentQuoteGroup = ++quoteGroup;
+      const depth = (quote[0].match(/>/g) || []).length;
+      const container = `quote:${currentQuoteGroup}:${depth}`;
       const value = lines[index].slice(quote[0].length);
       const quotedHeading = atxHeading(value);
+      lastQuoteLine = index;
       if (quotedHeading) {
-        if (quotedHeading.text) {
+        appendBlock(
+          [[quotedHeading.text, lineStarts[index] + quote[0].length + quotedHeading.offset]],
+          { container, headingLevel: quotedHeading.level }
+        );
+        index += 1;
+        continue;
+      }
+
+      const quotedList = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(value);
+      if (quotedList) {
+        const itemContainer = `${container}:list:${++listItem}`;
+        const firstValue = value.slice(quotedList[0].length);
+        const listHeading = atxHeading(firstValue);
+        if (listHeading) {
           appendBlock(
-            [[quotedHeading.text, lineStarts[index] + quote[0].length + quotedHeading.offset]],
-            false,
-            true
+            [
+              [
+                listHeading.text,
+                lineStarts[index] + quote[0].length + quotedList[0].length + listHeading.offset
+              ]
+            ],
+            { container: itemContainer, headingLevel: listHeading.level }
           );
+        } else {
+          appendBlock([[firstValue, lineStarts[index] + quote[0].length + quotedList[0].length]], {
+            container: itemContainer
+          });
         }
         index += 1;
         continue;
       }
+
       const parts = [];
-      const depth = (quote[0].match(/>/g) || []).length;
       while (index < lines.length) {
         const marker = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
         if (marker && (marker[0].match(/>/g) || []).length !== depth) break;
-        const value = marker ? lines[index].slice(marker[0].length) : lines[index];
+        const lineValue = marker ? lines[index].slice(marker[0].length) : lines[index];
         const offset = lineStarts[index] + (marker ? marker[0].length : 0);
         if (
-          !value.trim() ||
-          atxHeading(value) ||
-          /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(value) ||
-          htmlBlock.test(value)
-        )
+          !lineValue.trim() ||
+          atxHeading(lineValue) ||
+          /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(lineValue) ||
+          markdownHtmlBlockStart(lineValue)
+        ) {
           break;
+        }
         if (!marker && boundary(lines[index])) break;
-        parts.push([value, offset]);
+        parts.push([lineValue, offset]);
+        lastQuoteLine = index;
         index += 1;
       }
-      if (parts.length) appendBlock(parts);
+      if (parts.length) appendBlock(parts, { container });
       else index += 1;
       continue;
     }
+
+    const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
     if (list) {
+      const container = `list:${++listItem}`;
       const firstValue = lines[index].slice(list[0].length);
       const listHeading = atxHeading(firstValue);
+      const parts = [];
       if (listHeading) {
-        if (listHeading.text) {
-          appendBlock(
-            [[listHeading.text, lineStarts[index] + list[0].length + listHeading.offset]],
-            false,
-            true
-          );
-        }
-        index += 1;
-        continue;
+        appendBlock([[listHeading.text, lineStarts[index] + list[0].length + listHeading.offset]], {
+          container,
+          headingLevel: listHeading.level
+        });
+      } else {
+        parts.push([firstValue, lineStarts[index] + list[0].length]);
       }
-      const parts = [[firstValue, lineStarts[index] + list[0].length]];
       index += 1;
       while (index < lines.length && !boundary(lines[index])) {
         const continuation = /^\s+/.exec(lines[index])?.[0].length ?? 0;
         parts.push([lines[index].slice(continuation), lineStarts[index] + continuation]);
         index += 1;
       }
-      appendBlock(parts);
+      if (parts.length) appendBlock(parts, { container });
       continue;
     }
-    if (htmlBlock.test(lines[index])) {
+
+    const htmlStart = markdownHtmlBlockStart(lines[index]);
+    if (htmlStart) {
       const parts = [];
-      do {
-        const line = lines[index];
-        parts.push([line, lineStarts[index]]);
-        index += 1;
-      } while (index < lines.length && lines[index].trim());
-      appendBlock(parts, true);
+      if (htmlStart.blankTerminated) {
+        do {
+          parts.push([lines[index], lineStarts[index]]);
+          index += 1;
+        } while (index < lines.length && lines[index].trim());
+      } else {
+        while (index < lines.length) {
+          const line = lines[index];
+          parts.push([line, lineStarts[index]]);
+          index += 1;
+          if (htmlStart.endPattern.test(line)) break;
+        }
+      }
+      appendBlock(parts, {
+        html: true,
+        sourceComment: htmlStart.sourceComment
+      });
       continue;
     }
+
     if (!plainLine(lines[index])) {
       index += 1;
       continue;
@@ -997,6 +1113,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
 }
 
 function normalizedMarkdownBlock(block) {
+  if (block.sourceComment) return { text: '', offsets: [] };
   if (block.html) {
     const projection = normalizePolicyProjection(projectVisibleHtml(block.text), true);
     return {
@@ -1037,6 +1154,13 @@ function normalizedMarkdownBlock(block) {
       append(block.text[index], block.offsets[index]);
       continue;
     }
+    if (
+      block.text[index] === '\\' &&
+      !isEscapedMarkdownPunctuation(block.text, index) &&
+      isAsciiPunctuation(block.text[index + 1])
+    ) {
+      continue;
+    }
     if (block.text[index] === '<') {
       const tagEnd = block.text.indexOf('>', index + 1);
       if (tagEnd >= 0) {
@@ -1046,7 +1170,7 @@ function normalizedMarkdownBlock(block) {
       }
     }
     if ('*_`'.includes(block.text[index])) {
-      append('_', block.offsets[index]);
+      append(block.text[index], block.offsets[index]);
       continue;
     }
     const reference = htmlReferenceAt(block.text, index);
@@ -1505,6 +1629,10 @@ function structuredEntries(relativePath, source) {
   return collectTypeScriptEntries(relativePath, source);
 }
 
+function isCitationSectionHeading(value) {
+  return CITATION_KEY.test(value.trim().replace(/[:：][\t ]*$/, ''));
+}
+
 function inspectMarkdown(relativePath, source) {
   const findings = [];
   const normalized = source.replace(/\r\n?/g, '\n');
@@ -1544,8 +1672,20 @@ function inspectMarkdown(relativePath, source) {
   };
   const seenCitationRanges = new Set();
   const seenEditorialRanges = new Set();
-  let inSources = false;
-  for (const block of markdownLogicalBlocks(lines, lineStarts)) {
+  const sourceSectionLevels = new Map();
+  const sourceSectionLevelFor = (container) => {
+    const local = sourceSectionLevels.get(container);
+    if (local === null) return undefined;
+    if (local !== undefined) return local;
+    const rootLevel = sourceSectionLevels.get('root');
+    return container === 'root' || container === 'source-comments' || rootLevel === null
+      ? undefined
+      : rootLevel;
+  };
+  const blocks = markdownLogicalBlocks(lines, lineStarts);
+  const sourceComments = markdownSourceCommentsBlock(body);
+  if (sourceComments) blocks.push(sourceComments);
+  for (const block of blocks) {
     const blockProjection = normalizedMarkdownBlock(block);
     for (let segmentStart = 0; segmentStart <= blockProjection.text.length; ) {
       const boundary = blockProjection.text.indexOf(BLOCK_BOUNDARY, segmentStart);
@@ -1555,9 +1695,22 @@ function inspectMarkdown(relativePath, source) {
         offsets: blockProjection.offsets.slice(segmentStart, segmentEnd)
       };
       const htmlHeading = /^(#{1,6})[\t ]+(.*?)[\t ]*$/.exec(projection.text);
-      const headingText = block.heading ? projection.text : htmlHeading?.[2];
-      if (headingText !== undefined) inSources = CITATION_KEY.test(headingText.trim());
-      if (headingText === undefined && inSources && projection.text.trim()) {
+      const headingLevel = block.headingLevel ?? htmlHeading?.[1].length;
+      const headingText = block.headingLevel ? projection.text : htmlHeading?.[2];
+      const citationHeading =
+        headingLevel !== undefined && isCitationSectionHeading(headingText || '');
+      if (headingLevel !== undefined) {
+        const activeLevel = sourceSectionLevelFor(block.container);
+        if (activeLevel !== undefined && headingLevel <= activeLevel) {
+          sourceSectionLevels.set(block.container, null);
+        }
+        if (citationHeading) sourceSectionLevels.set(block.container, headingLevel);
+      }
+      if (
+        headingLevel === undefined &&
+        sourceSectionLevelFor(block.container) !== undefined &&
+        projection.text.trim()
+      ) {
         const firstVisible = projection.text.search(/\S/);
         const start = projection.offsets[firstVisible];
         const end = projection.offsets.at(-1) ?? start;
@@ -1592,6 +1745,7 @@ function inspectMarkdown(relativePath, source) {
         );
       }
       for (const citation of markdownCitationEntries(projection.text)) {
+        if (citationHeading) continue;
         const start = projection.offsets[citation.index];
         const end = projection.offsets[citation.labelEnd - 1] ?? start;
         const range = `${start}:${end}`;

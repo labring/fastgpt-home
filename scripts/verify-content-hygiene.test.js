@@ -1375,6 +1375,11 @@ test('source CLI follows CommonMark emphasis, escaping, and code span semantics'
         'basis: internal*',
         '**Sources**: Internal KB',
         '`Sources: Internal KB`',
+        '*Demand',
+        'basis: internal',
+        '\\*Demand',
+        'basis: internal',
+        '`Reference: Internal KB',
         ''
       ].join('\n')
     },
@@ -1383,13 +1388,16 @@ test('source CLI follows CommonMark emphasis, escaping, and code span semantics'
       assert.equal(result.status, 1);
       assert.equal(
         (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
-        1,
+        3,
         result.stderr
       );
-      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
       assert.match(result.stderr, /dirty-delimiters\.md.*line=3/);
       assert.match(result.stderr, /dirty-delimiters\.md.*line=5/);
       assert.match(result.stderr, /dirty-delimiters\.md.*line=6/);
+      assert.match(result.stderr, /dirty-delimiters\.md.*line=7/);
+      assert.match(result.stderr, /dirty-delimiters\.md.*line=9/);
+      assert.match(result.stderr, /dirty-delimiters\.md.*line=11/);
     }
   );
 
@@ -1406,9 +1414,6 @@ test('source CLI follows CommonMark emphasis, escaping, and code span semantics'
         '',
         '*Demand**\u200Bbasis: internal*',
         '',
-        '\\*Demand',
-        'basis: internal*',
-        '',
         '`<p>Sources</p><p>: Internal KB</p>`',
         ''
       ].join('\n')
@@ -1422,6 +1427,191 @@ test('source CLI follows CommonMark emphasis, escaping, and code span semantics'
   const implementation = fs.readFileSync(SCRIPT, 'utf8');
   assert.doesNotMatch(implementation, /indexOf\(delimiter/);
   assert.match(implementation, /function violatesRuleOfThree\(/);
+});
+
+test('source CLI keeps CommonMark type-1 HTML blocks open through blank lines', () => {
+  const blocks = ['pre', 'script', 'style', 'textarea']
+    .map((tag) => `<${tag}>\nDemand\n\nbasis: internal\n</${tag}>`)
+    .join('\n\n');
+  withFixture(
+    { 'src/content/tech-center/tutorial/type-1-blocks.md': `# Guide\n\n${blocks}\n` },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        4,
+        result.stderr
+      );
+      for (const line of [4, 10, 16, 22]) {
+        assert.match(result.stderr, new RegExp(`type-1-blocks\\.md.*line=${line}`));
+      }
+    }
+  );
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/type-1-boundary.md':
+        '# Guide\n\n<pre>Sources\n</pre>\n: Internal KB\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+});
+
+test('source CLI terminates special HTML blocks with their CommonMark delimiters', () => {
+  const dirty = [
+    '# Guide',
+    '',
+    '<!--',
+    'Demand',
+    '',
+    'basis: internal',
+    '-->',
+    '<?Demand',
+    '',
+    'basis: internal?>',
+    '<!DOCTYPE',
+    'Demand',
+    '',
+    'basis: internal',
+    '>',
+    '<![CDATA[',
+    'Sources',
+    '',
+    ': Internal KB',
+    ']]>',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/special-blocks.md': dirty }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 3, result.stderr);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+  });
+  const clean = [
+    '# Guide',
+    '',
+    '<!-- Sources -->',
+    ': Internal KB',
+    '<?Sources?>',
+    ': Internal KB',
+    '<!DOCTYPE Sources>',
+    ': Internal KB',
+    '<![CDATA[Sources]]>',
+    ': Internal KB',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/special-boundaries.md': clean }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
+test('source CLI scopes citation headings to contiguous logical containers', () => {
+  const body = [
+    '# Guide',
+    '',
+    '## Other',
+    '> Internal KB',
+    '- Internal KB',
+    'Root copy after containers.',
+    '',
+    '> ## Sources:',
+    '> Internal KB',
+    '',
+    'Root copy after quote.',
+    '',
+    '- ## Sources:',
+    '  Internal KB',
+    '- Internal KB',
+    '',
+    '## Sources',
+    '### Notes',
+    'Internal KB',
+    '## Other',
+    'Internal KB',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/containers.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+    assert.match(result.stderr, /containers\.md.*line=9/);
+    assert.match(result.stderr, /containers\.md.*line=14/);
+    assert.match(result.stderr, /containers\.md.*line=19/);
+    assert.doesNotMatch(
+      result.stderr,
+      /containers\.md.*line=4|line=5|line=6|line=11|line=15|line=21/
+    );
+  });
+});
+
+test('source and HTML CLIs accept colon citation headings and empty ATX resets', () => {
+  const markdown = ['# Guide', '', '## Sources:', 'Internal KB', '##', 'Internal KB', ''].join(
+    '\n'
+  );
+  withFixture({ 'src/content/tech-center/tutorial/colon-heading.md': markdown }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+    assert.match(result.stderr, /colon-heading\.md.*line=4/);
+    assert.doesNotMatch(result.stderr, /colon-heading\.md.*line=6/);
+  });
+  withFixture(
+    { 'index.html': '<html><body><h2>资料来源：</h2><p>内部 KB</p></body></html>' },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'cn'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+    }
+  );
+});
+
+test('source CLI scans every non-leading Markdown HTML comment with raw offsets', () => {
+  const body = [
+    '<!-- Demand basis: hidden delivery metadata -->',
+    '# Guide',
+    '',
+    '<!-- clean comment -->',
+    '<!--',
+    'Demand',
+    '',
+    'basis: internal',
+    'Sources: Internal KB',
+    '-->',
+    '<!-- Fact sources: internal -->',
+    '<div><!-- Case clearance: nested --></div>',
+    'Reader <!-- Demand basis: inline --> copy',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/comments.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 4, result.stderr);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+    assert.match(result.stderr, /comments\.md.*line=6/);
+    assert.match(result.stderr, /comments\.md.*line=9/);
+    assert.match(result.stderr, /comments\.md.*line=11/);
+    assert.match(result.stderr, /comments\.md.*line=12/);
+    assert.match(result.stderr, /comments\.md.*line=13/);
+    assert.doesNotMatch(result.stderr, /hidden delivery metadata/);
+  });
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/comment-citation.md':
+        '# Guide\n\n<!-- Sources: [Official docs](https://example.com/docs) -->\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
 });
 
 test('source CLI treats the complete CommonMark type-6 tag set as block boundaries', () => {

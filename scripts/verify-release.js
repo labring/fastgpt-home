@@ -257,7 +257,7 @@ function runSourceChecks(failures, env) {
     ['FAQ redirect source verification', 'scripts/verify-faq-redirects.js', ['--source']]
   ];
   for (const [label, script, args] of checks) nodeStep(failures, label, script, args, env);
-  runStep(failures, 'TypeScript source verification', 'npx', ['--no-install', 'tsc', '--noEmit'], env);
+  runStep(failures, 'TypeScript source verification', 'npx', ['--no-install', 'tsc', '--noEmit', '--incremental', 'false'], env);
 }
 
 function runGuideSourceChecks(failures, env, variant) {

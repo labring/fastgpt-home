@@ -17,7 +17,7 @@ const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
 const SOURCE_SECTION = /^(#{1,6})\s*(sources?|references|来源|参考资料|资料来源)\s*[:：]?\s*$/i;
 const EDITORIAL_LABEL = /^(?:>\s*)?(?:[-*]\s+)?(?:\*\*)?(?:事实来源|需求依据|核验日|核验日期|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|版本与套餐|版本与档位|计划(?:安排)?|附录|补充说明|审核(?:状态)?|交付(?:排期)?|来源依据|客户\s*KB|内部\s*KB|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|version\s+and\s+(?:package|tiers)|version\s+plan|update\s+(?:record|log)(?:\s+addendum)?|revision|addendum)(?:\*\*)?\s*[:：]/i;
 const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
-const HTML_EDITORIAL_MARKER = /(?:事实来源|需求依据|核验日(?:期)?|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|审核(?:状态)?|交付(?:排期)?|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|update\s+(?:record|log))\s*["']?\s*[:：]/gi;
+const HTML_EDITORIAL_MARKER = /(?:事实来源|需求依据|核验日(?:期)?|验证日期|排期|签发|修订记录|更新记录|审核(?:状态)?|交付(?:排期)?|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|update\s+(?:record|log))\s*["']?\s*[:：]/gi;
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 
 function usage(message) {
@@ -98,8 +98,9 @@ function parseArgs(argv) {
   if (!options.baseUrlCn || !options.baseUrlIo || !options.report) {
     throw new Error('--mode live requires --base-url-cn, --base-url-io, and --report');
   }
-  options.baseUrlCn = validateLiveBaseUrl(options.baseUrlCn, options.allowHttpForTests, '--base-url-cn');
-  options.baseUrlIo = validateLiveBaseUrl(options.baseUrlIo, options.allowHttpForTests, '--base-url-io');
+  if (options.maxUrls < 2) throw new Error('--max-urls must be at least 2 for the two root sitemaps');
+  options.baseUrlCn = validateLiveBaseUrl(options.baseUrlCn, options.allowHttpForTests, '--base-url-cn', 'https://fastgpt.cn');
+  options.baseUrlIo = validateLiveBaseUrl(options.baseUrlIo, options.allowHttpForTests, '--base-url-io', 'https://fastgpt.io');
   return options;
 }
 
@@ -446,7 +447,7 @@ function inspectHtmlRoot(root, variant) {
   return { files, findings };
 }
 
-function validateLiveBaseUrl(value, allowHttpForTests, label) {
+function validateLiveBaseUrl(value, allowHttpForTests, label, productionOrigin) {
   let url;
   try {
     url = new URL(value);
@@ -454,14 +455,15 @@ function validateLiveBaseUrl(value, allowHttpForTests, label) {
     throw new Error(`${label} must be an absolute URL`);
   }
   const loopback = url.hostname === '127.0.0.1' || url.hostname === '::1' || url.hostname === 'localhost';
-  if (isPrivateHostname(url.hostname) && !(allowHttpForTests && loopback)) {
-    throw new Error(`${label} requires --allow-http-for-tests for loopback URLs`);
-  }
-  if (url.protocol !== 'https:' && !(allowHttpForTests && url.protocol === 'http:' && loopback)) {
-    throw new Error(`${label} must use HTTPS`);
-  }
   if (url.username || url.password || url.pathname !== '/' || url.search || url.hash) {
     throw new Error(`${label} must be an origin URL`);
+  }
+  if (allowHttpForTests) {
+    if (!loopback || url.protocol !== 'http:') throw new Error(`${label} test URLs must use HTTP loopback origins`);
+    return url.href.replace(/\/$/, '');
+  }
+  if (url.href.replace(/\/$/, '') !== productionOrigin) {
+    throw new Error(`${label} must be exactly ${productionOrigin}`);
   }
   return url.href.replace(/\/$/, '');
 }
@@ -523,8 +525,9 @@ async function discoverInventory(options, baseUrls) {
   const sitemapDocuments = new Map();
   const pages = new Set();
   const violations = [];
-  const queue = baseUrls.map((baseUrl) => ({ url: new URL('/sitemap.xml', baseUrl).href, baseUrl, depth: 0 }));
-  for (const item of queue) sitemapDocuments.set(item.url, item);
+  const sitemapKey = (baseUrl, url) => `${baseUrl}\0${url}`;
+  const queue = baseUrls.map((baseUrl, index) => ({ url: new URL('/sitemap.xml', baseUrl).href, baseUrl, depth: 0, index }));
+  for (const item of queue) sitemapDocuments.set(`root:${item.index}`, item);
   let cursor = 0;
   while (cursor < queue.length) {
     const item = queue[cursor++];
@@ -563,13 +566,14 @@ async function discoverInventory(options, baseUrls) {
           violations.push(liveViolation('D-08 sitemap-depth', new URL(item.baseUrl).host, discovered, `max-depth=${options.maxSitemapDepth}`));
           continue;
         }
-        if (!sitemapDocuments.has(discovered)) {
+        const childKey = sitemapKey(item.baseUrl, discovered);
+        if (!sitemapDocuments.has(childKey)) {
           if (sitemapDocuments.size + pages.size >= options.maxUrls) {
             violations.push(liveViolation('D-08 sitemap-budget', new URL(item.baseUrl).host, discovered, `max-urls=${options.maxUrls}`));
             continue;
           }
           const child = { url: discovered, baseUrl: item.baseUrl, depth: item.depth + 1 };
-          sitemapDocuments.set(discovered, child);
+          sitemapDocuments.set(childKey, child);
           queue.push(child);
         }
       } else if (!pages.has(discovered)) {

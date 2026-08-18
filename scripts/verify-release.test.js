@@ -122,6 +122,8 @@ test('release source checks run content hygiene first and block dirty published 
     });
     const dirtyPath = path.join(fixtureRoot, 'src/content/guides/temporary-content-hygiene-dirty.md');
     fs.writeFileSync(dirtyPath, '# Temporary fixture\n\nFact Source: internal KB\n');
+    const buildInfoPath = path.join(fixtureRoot, 'tsconfig.tsbuildinfo');
+    const buildInfoBefore = fs.readFileSync(buildInfoPath);
     const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
       cwd: fixtureRoot,
       encoding: 'utf8',
@@ -133,9 +135,21 @@ test('release source checks run content hygiene first and block dirty published 
     assert.equal(result.status, 1, result.stdout + result.stderr);
     assert.match(result.stderr, /content hygiene source verification/);
     assert.match(result.stderr, /temporary-content-hygiene-dirty\.md/);
+    assert.deepEqual(fs.readFileSync(buildInfoPath), buildInfoBefore);
   } finally {
     fs.rmSync(temporaryRoot, { recursive: true, force: true });
   }
+});
+
+test('source-only release leaves the existing build info bytes unchanged', () => {
+  const buildInfoPath = path.join(ROOT, 'tsconfig.tsbuildinfo');
+  const before = fs.readFileSync(buildInfoPath);
+  const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
+    cwd: ROOT,
+    encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.deepEqual(fs.readFileSync(buildInfoPath), before);
 });
 
 test('release build and workflow wiring preserve source hygiene while enforcing completed HTML exports', () => {
@@ -148,6 +162,7 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   assert.match(packageJson.scripts.build, /fix-html-lang\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/);
   assert(release.indexOf("['build']") < release.indexOf("['--mode', 'html', '--root', 'out', '--variant', variant]"));
   assert.match(release, /Complete HTML hygiene \(\$\{variant\}\)/);
+  assert.match(release, /--incremental', 'false/);
   for (const pattern of ['src/**', 'content/competitors/**', 'scripts/verify-content-hygiene.js', 'scripts/fix-html-lang.js']) assert(verificationWorkflow.includes(pattern), pattern);
   assert.match(productionWorkflow, /verify-content-hygiene\.js --mode live --base-url-cn https:\/\/fastgpt\.cn --base-url-io https:\/\/fastgpt\.io --report content-hygiene-live-evidence\.json/);
   assert.match(productionWorkflow, /content-hygiene-live-evidence\.json\.txt/);

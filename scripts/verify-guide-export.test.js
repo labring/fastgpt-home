@@ -158,7 +158,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
       `guide/${entry.slug}`,
       `<html><head><title>${escapeHtml(source.metaTitle)}</title><meta name="description" content="${escapeHtml(source.metaDescription)}"><link rel="canonical" href="${canonical}"><meta property="og:url" content="${canonical}">${alternates(entry.slug)}${jsonLd({
         '@graph': schema
-      })}</head><body><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="summary">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${asset}${related}<a href="/guide">${hub.back}</a></body></html>`,
+      })}</head><body><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="GuideArticlePage_summary__fixture">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${asset}${related}<a href="/guide">${hub.back}</a></body></html>`,
       style
     );
   }

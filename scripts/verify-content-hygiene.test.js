@@ -268,6 +268,31 @@ test('HTML CLI recursively scans visible content separately from serialized payl
   );
 });
 
+test('HTML CLI accepts published version labels and rejects adjacent editorial workflow fields', () => {
+  withFixture(
+    {
+      'zh/price.html': '<html><body><h2>版本：</h2><p>企业版</p></body></html>',
+      'zh/internal.html': '<html><body><p>版本：企业版</p><p>事实来源：内部 KB</p></body></html>'
+    },
+    (root) => {
+      fs.rmSync(path.join(root, 'zh/internal.html'));
+      const clean = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'cn'], {
+        cwd: ROOT,
+        encoding: 'utf8'
+      });
+      assert.equal(clean.status, 0, clean.stderr);
+
+      writeFixture(root, 'zh/internal.html', '<html><body><p>版本：企业版</p><p>事实来源：内部 KB</p></body></html>');
+      const dirty = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'cn'], {
+        cwd: ROOT,
+        encoding: 'utf8'
+      });
+      assert.equal(dirty.status, 1);
+      assert.match(dirty.stderr, /事实来源/);
+    },
+  );
+});
+
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
   let requests = 0;
   const server = http.createServer((request, response) => {
@@ -297,15 +322,31 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     '--max-sitemap-depth', '0'
   ];
   try {
+    const productionOnly = await runAsync([
+      '--mode', 'live',
+      '--base-url-cn', 'https://example.com',
+      '--base-url-io', 'https://iana.org',
+      '--report', report,
+      '--max-urls', '2'
+    ]);
+    assert.equal(productionOnly.status, 1);
+    assert.match(productionOnly.stderr, /must be exactly https:\/\/fastgpt\.cn/);
+    assert.equal(requests, 0);
+
+    const belowRootBudget = await runAsync([...args, '--max-urls', '1']);
+    assert.equal(belowRootBudget.status, 1);
+    assert.match(belowRootBudget.stderr, /--max-urls must be at least 2/);
+    assert.equal(requests, 0);
+
     const clean = await runAsync(args);
     assert.equal(clean.status, 0, clean.stderr);
     assert.match(clean.stdout, /1 live pages/);
     assert.equal(fs.existsSync(report), true);
     assert.equal(fs.existsSync(`${report}.txt`), true);
     assert.deepEqual(JSON.parse(fs.readFileSync(report, 'utf8')).totals, {
-      sitemapDocuments: 1,
+      sitemapDocuments: 2,
       pages: 1,
-      boundedInventory: 2
+      boundedInventory: 3
     });
 
     requests = 0;
@@ -316,7 +357,7 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
 
     const loopbackWithoutTestFlag = await runAsync(args.filter((argument) => argument !== '--allow-http-for-tests'));
     assert.equal(loopbackWithoutTestFlag.status, 1);
-    assert.match(loopbackWithoutTestFlag.stderr, /requires --allow-http-for-tests/);
+    assert.match(loopbackWithoutTestFlag.stderr, /must be exactly https:\/\/fastgpt\.cn/);
     assert.equal(requests, 0);
   } finally {
     await new Promise((resolve) => server.close(resolve));

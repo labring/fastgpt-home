@@ -300,12 +300,14 @@ function expectedUpdatedText(dateModified, locale) {
 }
 
 function verifyUpdatedTime(html, page, expectation, context) {
-  const summary = new RegExp(`<p\\b[^>]*class=["'][^"']*\\bsummary\\b[^"']*["'][^>]*>[\\s\\S]*?<\\/p>\\s*<time\\b([^>]*)>([\\s\\S]*?)<\\/time>`, 'i').exec(html);
+  const summary = [...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>\s*<time\b([^>]*)>([\s\S]*?)<\/time>/gi)].find(
+    (match) => stripHtml(match[1]) === page.source.metaDescription,
+  );
   if (!summary) fail({ ...context, surface: 'updated' }, 'updated time must immediately follow the summary');
   const times = [...html.matchAll(/<time\b([^>]*)>([\s\S]*?)<\/time>/gi)];
   if (times.length !== 1) fail({ ...context, surface: 'updated' }, 'expected exactly one updated time element');
-  assertEqual(context, getAttribute(`<time ${times[0][1]}>`, 'datetime'), page.source.dateModified, 'updated');
-  assertEqual(context, stripHtml(times[0][2]), expectedUpdatedText(page.source.dateModified, expectation.locale), 'updated');
+  assertEqual(context, getAttribute(`<time ${summary[2]}>`, 'datetime'), page.source.dateModified, 'updated');
+  assertEqual(context, stripHtml(summary[3]), expectedUpdatedText(page.source.dateModified, expectation.locale), 'updated');
 }
 
 function verifyMetadata(html, page, expectation, filePath) {

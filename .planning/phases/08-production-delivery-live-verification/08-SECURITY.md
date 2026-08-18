@@ -1,7 +1,8 @@
 ---
-phase: 08-production-delivery-live-verification
+phase: 08
+slug: production-delivery-live-verification
 audited: 2026-08-18T02:34:00Z
-status: secured
+status: verified
 asvs_level: 1
 security_block_on: high
 threats_registered: 15
@@ -11,6 +12,18 @@ register_authored_at_plan_time: true
 ---
 
 # Phase 8 Security Audit
+
+> Per-phase security contract: threat register, accepted risks, and audit trail.
+
+## Trust Boundaries
+
+| Boundary | Description | Data Crossing |
+| --- | --- | --- |
+| Artifact build → release archive | Verified static output becomes a content-addressed release bundle. | HTML, assets, manifest, tree and archive digests |
+| Workflow inputs/secrets → provider APIs | GitHub Actions receives deployment targets and provider credentials. | Rollback targets, kubeconfig, Cloudflare credentials |
+| Archive/manifest → providers | Verified bundles are consumed by Docker/Kubernetes and Cloudflare Pages. | Immutable archive, image digest, Pages deployment |
+| Public HTTP → release verdict | Live responses are compared with the release contract. | Status, HTML identity, headers and body digests |
+| Evidence → phase completion | Provider receipts and live reports support the deployment decision. | Revision, artifact/tree/archive digests and verification reports |
 
 ## Verdict
 
@@ -52,6 +65,10 @@ Provider delivery baseline: `32053216857`
 - Existing local Docker CLI absence prevented local `docker buildx imagetools inspect`; the exact multi-arch digest is pinned in both Dockerfile runtime stages and enforced by structural tests.
 - Historical `npm audit --omit=dev --audit-level=high` reports pre-existing application dependency advisories (Next.js/PostCSS/sharp/nanoid/picomatch); this audit scope covers the T-08-SC control implementation and does not claim those unrelated advisories are remediated.
 
+## Accepted Risks Log
+
+No accepted risks.
+
 ## Audit Trail
 
 | Date | Action | Result |
@@ -61,5 +78,11 @@ Provider delivery baseline: `32053216857`
 | 2026-08-18 | T-08-10/T-08-SC remediation commit 43780c7 | Manifest host binding, mutation regression, and provider-audit checkout added. |
 | 2026-08-18 | gsd-security-auditor re-audit | 15/15 closed; `threats_open: 0`. |
 
-**Security gate:** passed. No high-severity threats remain open.
+## Sign-Off
 
+- [x] All threats have a disposition (mitigate / accept / transfer)
+- [x] Accepted risks documented in Accepted Risks Log
+- [x] `threats_open: 0` confirmed
+- [x] `status: verified` set in frontmatter
+
+**Approval:** verified 2026-08-18

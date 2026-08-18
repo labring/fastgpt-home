@@ -66,7 +66,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
         </div>
 
         {/* Desktop (lg+): tabs with active pill + image + CTA */}
-        <FadeIn delay={0.5} className="hidden lg:block">
+        <FadeIn delay={0.15} className="hidden lg:block">
           <div className="flex justify-center mb-12 overflow-x-auto no-scrollbar">
             <div
               className="inline-flex items-center"
@@ -200,7 +200,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
         </FadeIn>
 
         {/* Mobile/Tablet: no tabs, no CTA. One featured solution per tab */}
-        <FadeIn delay={0.5} className="lg:hidden">
+        <FadeIn delay={0.15} className="lg:hidden">
           <div className="flex flex-col gap-12">
             {tabs.map((tab) => {
               const item = tab.items[0];

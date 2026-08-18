@@ -148,7 +148,7 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
       <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-8 md:gap-12">
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.15}>
           <div
             className="relative select-none"
             style={{ cursor: 'grab' }}

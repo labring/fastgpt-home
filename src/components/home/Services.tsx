@@ -37,7 +37,7 @@ export default function Services({ t }: { t: ServicesT }) {
         </div>
 
         <div className="py-[80px] px-[16px] md:p-0">
-          <StaggerContainer className="grid grid-cols-2 gap-[32px] md:gap-[60px_24px]" initialDelay={0.5}>
+          <StaggerContainer className="grid grid-cols-2 gap-[32px] md:gap-[60px_24px]" initialDelay={0.15}>
             {services.map((s) => (
               <StaggerItem key={s.title}>
                 <m.div

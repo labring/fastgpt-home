@@ -114,7 +114,7 @@ const EDITORIAL_LABEL_NAME = [
   'fact +source',
   'source +of +facts',
   'source +material',
-  'demand +anchor(?: *([^)]*))?',
+  'demand +anchor(?: *\\([^)]*\\))?',
   'GSC +provenance',
   'case +clearance',
   'publish +target',
@@ -141,6 +141,10 @@ const EDITORIAL_LABEL = new RegExp(
 );
 const EDITORIAL_LABEL_ANYWHERE = new RegExp(
   `(?:^|[\\s.。!！?？])(?:${EDITORIAL_LABEL_NAME})\\s*[:：]`,
+  'i'
+);
+const CHINESE_EDITORIAL_LABEL = new RegExp(
+  '(?:事实来源|需求依据|需求锚点|案例授权|案例清理|案例引用|发布落点|核验流程|验证流程|复核周期|核验日|核验日期|验证日期)\\s*[:：]',
   'i'
 );
 const EDITORIAL_PREAMBLE =
@@ -484,6 +488,15 @@ function validPublicCitationValue(value) {
   return validPublicCitation(projection);
 }
 
+function hasEditorialLabel(value) {
+  const text = normalizedCitationText(value);
+  return (
+    EDITORIAL_LABEL.test(text) ||
+    EDITORIAL_LABEL_ANYWHERE.test(text) ||
+    CHINESE_EDITORIAL_LABEL.test(text)
+  );
+}
+
 function collectJsonEntries(value, source, entries, key) {
   if (typeof value === 'string') {
     const index = source.indexOf(JSON.stringify(value));
@@ -545,17 +558,38 @@ function expressionText(node) {
   return undefined;
 }
 
+function jsxAttributeText(attribute, sourceFile) {
+  if (!ts.isJsxAttribute(attribute)) return '';
+  if (!attribute.initializer) return ` ${attribute.name.getText(sourceFile)}`;
+  if (ts.isStringLiteral(attribute.initializer)) {
+    return ` ${attribute.name.getText(sourceFile)}="${attribute.initializer.text}"`;
+  }
+  if (ts.isJsxExpression(attribute.initializer)) {
+    const value =
+      attribute.initializer.expression && expressionText(attribute.initializer.expression);
+    return value === undefined ? '' : ` ${attribute.name.getText(sourceFile)}="${value}"`;
+  }
+  return '';
+}
+
+function jsxOpeningText(element, sourceFile) {
+  const attributes = element.attributes.properties
+    .map((attribute) => jsxAttributeText(attribute, sourceFile))
+    .join('');
+  return `<${element.tagName.getText(sourceFile)}${attributes}>`;
+}
+
 function staticJsxProjection(node, sourceFile) {
   if (ts.isJsxText(node)) return node.getText(sourceFile);
   if (ts.isJsxExpression(node)) return node.expression ? expressionText(node.expression) || '' : '';
   if (ts.isJsxFragment(node))
     return node.children.map((child) => staticJsxProjection(child, sourceFile)).join('');
   if (ts.isJsxElement(node)) {
-    const opening = node.openingElement.getText(sourceFile);
+    const opening = jsxOpeningText(node.openingElement, sourceFile);
     const children = node.children.map((child) => staticJsxProjection(child, sourceFile)).join('');
     return `${opening}${children}${node.closingElement.getText(sourceFile)}`;
   }
-  if (ts.isJsxSelfClosingElement(node)) return node.getText(sourceFile);
+  if (ts.isJsxSelfClosingElement(node)) return jsxOpeningText(node, sourceFile);
   return '';
 }
 
@@ -593,26 +627,28 @@ function collectTypeScriptEntries(relativePath, source) {
     const identity = `${node.pos}:${node.end}:${key || ''}`;
     if (seen.has(identity)) return;
     seen.add(identity);
-    entries.push({ key, value, line: sourceLine(sourceFile, node) });
+    entries.push({ key, value: value || '', line: sourceLine(sourceFile, node) });
   };
   const visit = (node) => {
     if (ts.isPropertyAssignment(node) || ts.isPropertyDeclaration(node)) {
       const key = propertyName(node.name, sourceFile);
-      const value = expressionText(node.initializer);
-      if (key && value !== undefined && isCitationKey(key)) {
-        add(node.initializer, value, key);
-        return;
+      const value = node.initializer ? expressionText(node.initializer) : undefined;
+      if (key && (isCitationKey(key) || EDITORIAL_LABEL.test(`${key}:`))) {
+        add(node.initializer || node, value, key);
+        if (value !== undefined) return;
       }
     }
     if (ts.isJsxAttribute(node)) {
       const key = node.name.getText(sourceFile);
       const value =
-        node.initializer && ts.isStringLiteral(node.initializer)
+        node.initializer && ts.isJsxExpression(node.initializer)
+          ? expressionText(node.initializer.expression)
+          : node.initializer && ts.isStringLiteral(node.initializer)
           ? node.initializer.text
           : undefined;
-      if (value !== undefined && isCitationKey(key)) {
-        add(node.initializer, value, key);
-        return;
+      if (isCitationKey(key) || EDITORIAL_LABEL.test(`${key}:`)) {
+        add(node.initializer || node, value, key);
+        if (value !== undefined) return;
       }
     }
     if (ts.isJsxElement(node) || ts.isJsxFragment(node)) {
@@ -621,8 +657,10 @@ function collectTypeScriptEntries(relativePath, source) {
     }
     if (isStaticExpressionCandidate(node)) {
       const value = expressionText(node);
-      if (value !== undefined) add(node, value);
-      return;
+      if (value !== undefined) {
+        add(node, value);
+        return;
+      }
     }
     if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
       add(node, node.text);
@@ -663,7 +701,7 @@ function inspectMarkdown(relativePath, source) {
       continue;
     }
     if (heading) inSources = false;
-    if (EDITORIAL_LABEL.test(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
+    if (hasEditorialLabel(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
       );
@@ -699,7 +737,7 @@ function inspectStructuredCopy(relativePath, source) {
       continue;
     }
     const plainValue = normalizedCitationText(value);
-    if (EDITORIAL_LABEL_ANYWHERE.test(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
+    if (hasEditorialLabel(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
       findings.push(
         finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, value)
       );
@@ -885,15 +923,18 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const identity = htmlIdentity(relativePath, variant);
   const { visible, payload } = splitHtmlProjections(html);
   const findings = [];
-  for (const match of visible.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
+  const visibleProjection = visibleCitationProjection(visible);
+  for (const line of visibleProjection.split('\n')) {
+    if (!hasEditorialLabel(line)) continue;
+    const token = line.match(/[A-Za-z]+|[\u4e00-\u9fff]{2,}/)?.[0] || line.trim();
     findings.push(
       htmlFinding(
         'D-01 editorial-metadata',
         'visible',
         identity,
         visible,
-        match.index,
-        match[0].trim()
+        visibleCitationIndex(visible, token, 0),
+        token
       )
     );
   }

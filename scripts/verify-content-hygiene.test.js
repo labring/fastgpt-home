@@ -419,6 +419,26 @@ test('source CLI fails closed for unparseable production structured copy', () =>
   });
 });
 
+test('source CLI fails closed for dynamic policy keys and traverses dynamic expressions', () => {
+  withFixture(
+    {
+      'src/faq/dynamic.tsx': [
+        'const value = getValue();',
+        'export const copy = { Sources: value, Schedule: value };',
+        'export const branch = value ? "Sources: Internal KB" : "Clean";',
+        'export const jsx = <a Sources={value} Schedule={value} href={value}>Sources: Internal KB</a>;',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-01 editorial-metadata/);
+      assert((result.stderr.match(/D-07 citation-policy/g) || []).length >= 3);
+    }
+  );
+});
+
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
   withFixture(
     {

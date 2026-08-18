@@ -18,7 +18,7 @@ const LOCALIZED_ROUTE = path.join(ROOT, 'src/app/[lang]/faq/[id]/page.tsx');
 const ROOT_ROUTE = path.join(ROOT, 'src/app/faq/[id]/page.tsx');
 const SAFE_REPAIRED_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 const SAFE_SOURCE_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
-const SAFE_PRESERVED_SLUG = /^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$/;
+const SAFE_PRESERVED_SLUG = SAFE_REPAIRED_SLUG;
 const EVIDENCE_SOURCES = new Set(['week04-online-url', 'repository-current-key']);
 
 function unwrapExpression(expression) {
@@ -170,10 +170,8 @@ function verifyRegistry(records, evidence, registry) {
   const preserved = registry.records.filter((entry) => entry.routeStatus === 'preserved');
   assert(preserved.length > 0, 'No healthy source slugs were preserved');
   assert(
-    preserved.some(
-      (entry) => entry.evidenceSource === 'week04-online-url' && /[A-Z]/.test(entry.canonicalSlug),
-    ),
-    'Mixed-case Week04 source slugs were not preserved',
+    preserved.some((entry) => entry.evidenceSource === 'week04-online-url'),
+    'Week04 source slugs were not retained',
   );
   for (const entry of registry.records) {
     if (!SAFE_SOURCE_SLUG.test(entry.sourceSlug)) {

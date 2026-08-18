@@ -138,6 +138,22 @@ test('release source checks run content hygiene first and block dirty published 
   }
 });
 
+test('release build and workflow wiring preserve source hygiene while enforcing completed HTML exports', () => {
+  const release = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  const verificationWorkflow = fs.readFileSync(path.join(ROOT, '.github/workflows/guide-release-verification.yml'), 'utf8');
+  const productionWorkflow = fs.readFileSync(path.join(ROOT, '.github/workflows/guide-production-release.yml'), 'utf8');
+
+  assert.equal(packageJson.scripts.prebuild.split(' && ')[0], 'node scripts/verify-content-hygiene.js --mode source');
+  assert.equal(packageJson.scripts['verify:content-hygiene-html'], 'node scripts/verify-content-hygiene.js --mode html --root out');
+  assert.match(packageJson.scripts.build, /fix-html-lang\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/);
+  assert(release.indexOf("['build']") < release.indexOf("['--mode', 'html', '--root', 'out', '--variant', variant]"));
+  assert.match(release, /Complete HTML hygiene \(\$\{variant\}\)/);
+  for (const pattern of ['src/**', 'content/competitors/**', 'scripts/verify-content-hygiene.js', 'scripts/fix-html-lang.js']) assert(verificationWorkflow.includes(pattern), pattern);
+  assert.match(productionWorkflow, /verify-content-hygiene\.js --mode live --base-url-cn https:\/\/fastgpt\.cn --base-url-io https:\/\/fastgpt\.io --report content-hygiene-live-evidence\.json/);
+  assert.match(productionWorkflow, /content-hygiene-live-evidence\.json\.txt/);
+  assert(productionWorkflow.indexOf('verify-guide-live.js') < productionWorkflow.indexOf('verify-content-hygiene.js --mode live'));
+});
+
 test('successful verified outputs can be retained before lifecycle cleanup', () => {
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
   assert.match(source, /--retain-success-artifacts/);

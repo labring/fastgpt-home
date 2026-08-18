@@ -477,10 +477,14 @@ jobs:
           path: evidence/io
       - name: Fail closed on public Guide, cache, manifest, and provider evidence drift
         run: node scripts/verify-guide-live.js --base-url-cn https://fastgpt.cn --base-url-io https://fastgpt.io --provider-evidence evidence/cn/cn-provider-receipt.json --provider-evidence evidence/io/io-provider-receipt.json --report guide-live-evidence.json
+      - name: Verify global production content hygiene
+        run: node scripts/verify-content-hygiene.js --mode live --base-url-cn https://fastgpt.cn --base-url-io https://fastgpt.io --report content-hygiene-live-evidence.json
       - uses: actions/upload-artifact@v4
         with:
           name: guide-live-evidence-${{ github.sha }}
           path: |
             guide-live-evidence.json
             guide-live-evidence.json.txt
+            content-hygiene-live-evidence.json
+            content-hygiene-live-evidence.json.txt
           retention-days: 30

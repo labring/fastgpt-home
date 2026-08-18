@@ -288,6 +288,15 @@ function runVariantChecks(failures, variant, env) {
   const buildPassed = npmStep(failures, `build ${variant}`, ['build'], env, variant);
   if (!buildPassed) return false;
 
+  nodeStep(
+    failures,
+    `Complete HTML hygiene (${variant})`,
+    'scripts/verify-content-hygiene.js',
+    ['--mode', 'html', '--root', 'out', '--variant', variant],
+    env,
+    variant,
+  );
+
   const checks = [
     ['P0 HTML verification', ['verify:p0']],
     ['P1 HTML verification', ['verify:p1'], extractP1SuccessMeasurement],

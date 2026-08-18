@@ -80,7 +80,7 @@ const BLOCK_TAGS = new Set([
   'tr',
   'ul'
 ]);
-const EDITORIAL_LABEL_NAME = [
+const CHINESE_EDITORIAL_LABELS = [
   '事实来源',
   '需求依据',
   '需求锚点',
@@ -108,7 +108,9 @@ const EDITORIAL_LABEL_NAME = [
   '交付(?:排期)?',
   '来源依据',
   '客户 *KB',
-  '内部 *KB',
+  '内部 *KB'
+];
+const ENGLISH_EDITORIAL_LABELS = [
   'internal +KB',
   'client +KB',
   'fact +source',
@@ -134,22 +136,20 @@ const EDITORIAL_LABEL_NAME = [
   'review[- ]cycle',
   'revision',
   'addendum'
-].join('|');
-const EDITORIAL_LABEL = new RegExp(
-  `^(?:>\\s*)?(?:[-*]\\s+)?(?:\\*\\*)?(?:${EDITORIAL_LABEL_NAME})(?:\\*\\*)?\\s*[:：]`,
-  'i'
+];
+const EDITORIAL_LABEL_NAME = [...CHINESE_EDITORIAL_LABELS, ...ENGLISH_EDITORIAL_LABELS].join('|');
+const EDITORIAL_KEY = new RegExp(`^(?:${EDITORIAL_LABEL_NAME})$`, 'i');
+const CHINESE_EDITORIAL_INLINE = CHINESE_EDITORIAL_LABELS.filter(
+  (label) => label !== '计划(?:安排)?'
 );
-const EDITORIAL_LABEL_ANYWHERE = new RegExp(
-  `(?:^|[\\s.。!！?？])(?:${EDITORIAL_LABEL_NAME})\\s*[:：]`,
-  'i'
-);
-const CHINESE_EDITORIAL_LABEL = new RegExp(
-  '(?:事实来源|需求依据|需求锚点|案例授权|案例清理|案例引用|发布落点|核验流程|验证流程|复核周期|核验日|核验日期|验证日期)\\s*[:：]',
-  'i'
+const EDITORIAL_MATCHER = new RegExp(
+  `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_EDITORIAL_LABELS.join(
+    '|'
+  )})\\s*[:：]|(?:${CHINESE_EDITORIAL_INLINE.join('|')})\\s*[:：]`,
+  'iu'
 );
 const EDITORIAL_PREAMBLE =
   /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
-const HTML_EDITORIAL_MARKER = new RegExp(`(?:${EDITORIAL_LABEL_NAME})\\s*["']?\\s*[:：]`, 'gi');
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 
 function usage(message) {
@@ -490,11 +490,7 @@ function validPublicCitationValue(value) {
 
 function hasEditorialLabel(value) {
   const text = normalizedCitationText(value);
-  return (
-    EDITORIAL_LABEL.test(text) ||
-    EDITORIAL_LABEL_ANYWHERE.test(text) ||
-    CHINESE_EDITORIAL_LABEL.test(text)
-  );
+  return EDITORIAL_MATCHER.test(text);
 }
 
 function collectJsonEntries(value, source, entries, key) {
@@ -633,7 +629,7 @@ function collectTypeScriptEntries(relativePath, source) {
     if (ts.isPropertyAssignment(node) || ts.isPropertyDeclaration(node)) {
       const key = propertyName(node.name, sourceFile);
       const value = node.initializer ? expressionText(node.initializer) : undefined;
-      if (key && (isCitationKey(key) || EDITORIAL_LABEL.test(`${key}:`))) {
+      if (key && (isCitationKey(key) || EDITORIAL_KEY.test(key))) {
         add(node.initializer || node, value, key);
         if (value !== undefined) return;
       }
@@ -646,7 +642,7 @@ function collectTypeScriptEntries(relativePath, source) {
           : node.initializer && ts.isStringLiteral(node.initializer)
           ? node.initializer.text
           : undefined;
-      if (isCitationKey(key) || EDITORIAL_LABEL.test(`${key}:`)) {
+      if (isCitationKey(key) || EDITORIAL_KEY.test(key)) {
         add(node.initializer || node, value, key);
         if (value !== undefined) return;
       }
@@ -748,7 +744,7 @@ function inspectStructuredCopy(relativePath, source) {
         finding('D-07 citation-policy', 'structured-copy', relativePath, line, citation)
       );
     }
-    if (key && EDITORIAL_LABEL.test(`${key}:`)) {
+    if (key && EDITORIAL_KEY.test(key)) {
       findings.push(finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, key));
     }
     if (key && isCitationKey(key) && !validPublicCitationValue(value)) {
@@ -964,7 +960,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
       );
     }
   }
-  for (const match of payload.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
+  for (const match of payload.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
     findings.push(
       htmlFinding(
         'D-01 editorial-metadata',

@@ -476,6 +476,16 @@ function sitemapLocs(xml) {
   return [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/gi)].map((match) => decodeHtml(match[1].trim()));
 }
 
+function canonicalSitemapUrl(value) {
+  const url = new URL(value);
+  url.hash = '';
+  return url.href;
+}
+
+function sitemapKey(url) {
+  return canonicalSitemapUrl(url);
+}
+
 async function fetchTextWithTimeout(url, timeoutMs) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
@@ -525,9 +535,15 @@ async function discoverInventory(options, baseUrls) {
   const sitemapDocuments = new Map();
   const pages = new Set();
   const violations = [];
-  const sitemapKey = (baseUrl, url) => `${baseUrl}\0${url}`;
-  const queue = baseUrls.map((baseUrl, index) => ({ url: new URL('/sitemap.xml', baseUrl).href, baseUrl, depth: 0, index }));
-  for (const item of queue) sitemapDocuments.set(`root:${item.index}`, item);
+  const queue = [];
+  for (const baseUrl of baseUrls) {
+    const url = canonicalSitemapUrl(new URL('/sitemap.xml', baseUrl).href);
+    const key = sitemapKey(url);
+    if (sitemapDocuments.has(key)) continue;
+    const item = { url, baseUrl, depth: 0 };
+    sitemapDocuments.set(key, item);
+    queue.push(item);
+  }
   let cursor = 0;
   while (cursor < queue.length) {
     const item = queue[cursor++];
@@ -552,7 +568,7 @@ async function discoverInventory(options, baseUrls) {
     for (const location of sitemapLocs(xml)) {
       let discovered;
       try {
-        discovered = new URL(location).href;
+        discovered = canonicalSitemapUrl(new URL(location).href);
       } catch {
         violations.push(liveViolation('D-08 sitemap-inventory', new URL(item.baseUrl).host, item.url, `invalid location ${location}`));
         continue;
@@ -566,7 +582,7 @@ async function discoverInventory(options, baseUrls) {
           violations.push(liveViolation('D-08 sitemap-depth', new URL(item.baseUrl).host, discovered, `max-depth=${options.maxSitemapDepth}`));
           continue;
         }
-        const childKey = sitemapKey(item.baseUrl, discovered);
+        const childKey = sitemapKey(discovered);
         if (!sitemapDocuments.has(childKey)) {
           if (sitemapDocuments.size + pages.size >= options.maxUrls) {
             violations.push(liveViolation('D-08 sitemap-budget', new URL(item.baseUrl).host, discovered, `max-urls=${options.maxUrls}`));

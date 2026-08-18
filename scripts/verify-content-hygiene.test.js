@@ -344,9 +344,9 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     assert.equal(fs.existsSync(report), true);
     assert.equal(fs.existsSync(`${report}.txt`), true);
     assert.deepEqual(JSON.parse(fs.readFileSync(report, 'utf8')).totals, {
-      sitemapDocuments: 2,
+      sitemapDocuments: 1,
       pages: 1,
-      boundedInventory: 3
+      boundedInventory: 2
     });
 
     requests = 0;
@@ -361,6 +361,58 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     assert.equal(requests, 0);
   } finally {
     await new Promise((resolve) => server.close(resolve));
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('live CLI fetches each canonical sitemap once when nested indexes point to the root', async () => {
+  const counts = new Map();
+  const createServer = () => http.createServer((request, response) => {
+    const baseUrl = `http://${request.headers.host}`;
+    const key = `${baseUrl}${request.url}`;
+    counts.set(key, (counts.get(key) || 0) + 1);
+    response.setHeader('content-type', request.url.endsWith('.xml') ? 'application/xml' : 'text/html');
+    if (request.url === '/sitemap.xml') {
+      response.end(`<sitemapindex><sitemap><loc>${baseUrl}/sitemap-a.xml</loc></sitemap><sitemap><loc>${baseUrl}/sitemap-b.xml</loc></sitemap></sitemapindex>`);
+      return;
+    }
+    if (request.url === '/sitemap-a.xml') {
+      response.end(`<sitemapindex><sitemap><loc>${baseUrl}/sitemap.xml</loc></sitemap></sitemapindex>`);
+      return;
+    }
+    if (request.url === '/sitemap-b.xml') {
+      response.end(`<urlset><url><loc>${baseUrl}/clean</loc></url></urlset>`);
+      return;
+    }
+    response.end('<html><body>Clean</body></html>');
+  });
+  const cnServer = createServer();
+  const ioServer = createServer();
+  await Promise.all([
+    new Promise((resolve) => cnServer.listen(0, '127.0.0.1', resolve)),
+    new Promise((resolve) => ioServer.listen(0, '127.0.0.1', resolve))
+  ]);
+  const cnBaseUrl = `http://127.0.0.1:${cnServer.address().port}`;
+  const ioBaseUrl = `http://127.0.0.1:${ioServer.address().port}`;
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-cycle-'));
+  const report = path.join(root, 'report.json');
+  try {
+    const result = await runAsync([
+      '--mode', 'live',
+      '--base-url-cn', cnBaseUrl,
+      '--base-url-io', ioBaseUrl,
+      '--report', report,
+      '--allow-http-for-tests',
+      '--max-urls', '10'
+    ]);
+    assert.equal(result.status, 0, result.stderr);
+    assert.equal(JSON.parse(fs.readFileSync(report, 'utf8')).totals.sitemapDocuments, 6);
+    for (const count of counts.values()) assert.equal(count, 1);
+  } finally {
+    await Promise.all([
+      new Promise((resolve) => cnServer.close(resolve)),
+      new Promise((resolve) => ioServer.close(resolve))
+    ]);
     fs.rmSync(root, { recursive: true, force: true });
   }
 });

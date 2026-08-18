@@ -287,14 +287,16 @@ function assertEqual(context, actual, expected, surface) {
 }
 
 function expectedUpdatedText(dateModified, locale) {
-  const date = new Date(`${dateModified}T00:00:00Z`);
+  const [year, month, day] = dateModified.split('-').map(Number);
+  if (locale === 'zh') return `更新于 ${year}年${month}月${day}日`;
+  const date = new Date(Date.UTC(year, month - 1, day));
   const formatted = new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
     timeZone: 'UTC',
     year: 'numeric',
     month: locale === 'zh' ? 'numeric' : 'long',
     day: 'numeric'
   }).format(date);
-  return locale === 'zh' ? `更新于 ${formatted}` : `Last updated ${formatted}`;
+  return `Last updated ${formatted}`;
 }
 
 function verifyUpdatedTime(html, page, expectation, context) {

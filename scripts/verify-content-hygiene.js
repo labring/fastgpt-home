@@ -17,6 +17,8 @@ const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
 const SOURCE_SECTION = /^(#{1,6})\s*(sources?|references|来源|参考资料|资料来源)\s*[:：]?\s*$/i;
 const EDITORIAL_LABEL = /^(?:>\s*)?(?:[-*]\s+)?(?:\*\*)?(?:事实来源|需求依据|核验日|核验日期|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|版本与套餐|版本与档位|计划(?:安排)?|附录|补充说明|审核(?:状态)?|交付(?:排期)?|来源依据|客户\s*KB|内部\s*KB|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|version\s+and\s+(?:package|tiers)|version\s+plan|update\s+(?:record|log)(?:\s+addendum)?|revision|addendum)(?:\*\*)?\s*[:：]/i;
 const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
+const HTML_EDITORIAL_MARKER = /(?:事实来源|需求依据|核验日(?:期)?|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|审核(?:状态)?|交付(?:排期)?|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|update\s+(?:record|log))\s*["']?\s*[:：]/gi;
+const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -394,7 +396,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const identity = htmlIdentity(relativePath, variant);
   const { visible, payload } = splitHtmlProjections(html);
   const findings = [];
-  for (const match of visible.matchAll(new RegExp(EDITORIAL_LABEL.source, 'gi'))) {
+  for (const match of visible.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
     findings.push(htmlFinding('D-01 editorial-metadata', 'visible', identity, visible, match.index, match[0].trim()));
   }
   for (const match of visible.matchAll(new RegExp(EDITORIAL_PREAMBLE.source, 'gi'))) {
@@ -412,8 +414,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
       }
     }
   }
-  const payloadMarker = /(?:事实来源|需求依据|核验日(?:期)?|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|审核(?:状态)?|交付(?:排期)?|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|update\s+(?:record|log))/gi;
-  for (const match of payload.matchAll(payloadMarker)) {
+  for (const match of payload.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
     findings.push(htmlFinding('D-01 editorial-metadata', 'payload', identity, html, html.indexOf(match[0]), match[0]));
   }
   return findings;
@@ -453,6 +454,9 @@ function validateLiveBaseUrl(value, allowHttpForTests, label) {
     throw new Error(`${label} must be an absolute URL`);
   }
   const loopback = url.hostname === '127.0.0.1' || url.hostname === '::1' || url.hostname === 'localhost';
+  if (isPrivateHostname(url.hostname) && !(allowHttpForTests && loopback)) {
+    throw new Error(`${label} requires --allow-http-for-tests for loopback URLs`);
+  }
   if (url.protocol !== 'https:' && !(allowHttpForTests && url.protocol === 'http:' && loopback)) {
     throw new Error(`${label} must use HTTPS`);
   }
@@ -470,11 +474,30 @@ function sitemapLocs(xml) {
   return [...xml.matchAll(/<loc>([\s\S]*?)<\/loc>/gi)].map((match) => decodeHtml(match[1].trim()));
 }
 
-async function fetchWithTimeout(url, timeoutMs) {
+async function fetchTextWithTimeout(url, timeoutMs) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), timeoutMs);
   try {
-    return await fetch(url, { redirect: 'manual', signal: controller.signal });
+    const response = await fetch(url, { redirect: 'manual', signal: controller.signal });
+    const contentLength = Number(response.headers.get('content-length'));
+    if (Number.isFinite(contentLength) && contentLength > MAX_RESPONSE_BYTES) {
+      throw new Error(`response exceeds ${MAX_RESPONSE_BYTES} bytes`);
+    }
+    const reader = response.body?.getReader();
+    if (!reader) return { response, content: '' };
+    const chunks = [];
+    let received = 0;
+    while (true) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      received += value.byteLength;
+      if (received > MAX_RESPONSE_BYTES) {
+        await reader.cancel();
+        throw new Error(`response exceeds ${MAX_RESPONSE_BYTES} bytes`);
+      }
+      chunks.push(value);
+    }
+    return { response, content: new TextDecoder().decode(Buffer.concat(chunks)) };
   } finally {
     clearTimeout(timeout);
   }
@@ -507,16 +530,21 @@ async function discoverInventory(options, baseUrls) {
     const item = queue[cursor++];
     let response;
     try {
-      response = await fetchWithTimeout(item.url, options.timeoutMs);
+      response = await fetchTextWithTimeout(item.url, options.timeoutMs);
     } catch (error) {
       violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, error.name));
       continue;
     }
-    if (response.status !== 200 || response.url !== item.url || !sameOrigin(response.url, item.baseUrl)) {
-      violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, `status=${response.status}`));
+    if (response.response.status !== 200 || response.response.url !== item.url || !sameOrigin(response.response.url, item.baseUrl)) {
+      violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, `status=${response.response.status}`));
       continue;
     }
-    const xml = await response.text();
+    const contentType = response.response.headers.get('content-type') || '';
+    const xml = response.content;
+    if (!/(?:application|text)\/(?:xml|[a-z0-9.+-]+\+xml)/i.test(contentType) || !/<(?:[a-z0-9-]+:)?(?:urlset|sitemapindex)\b/i.test(xml)) {
+      violations.push(liveViolation('D-08 sitemap-format', new URL(item.baseUrl).host, item.url, contentType || 'missing XML content type'));
+      continue;
+    }
     const isIndex = /<sitemapindex\b/i.test(xml);
     for (const location of sitemapLocs(xml)) {
       let discovered;
@@ -553,6 +581,9 @@ async function discoverInventory(options, baseUrls) {
       }
     }
   }
+  if (!pages.size) {
+    for (const baseUrl of baseUrls) violations.push(liveViolation('D-08 sitemap-inventory', new URL(baseUrl).host, baseUrl, 'no page URLs discovered'));
+  }
   return { sitemapDocuments, pages, violations };
 }
 
@@ -560,8 +591,7 @@ async function inspectLivePage(url, options, baseUrls) {
   const baseUrl = baseUrls.find((candidate) => sameOrigin(url, candidate));
   const host = new URL(baseUrl).host;
   try {
-    const response = await fetchWithTimeout(url, options.timeoutMs);
-    const content = await response.text();
+    const { response, content } = await fetchTextWithTimeout(url, options.timeoutMs);
     const digest = crypto.createHash('sha256').update(content).digest('hex');
     const violations = [];
     if (response.status !== 200 || response.url !== url || !sameOrigin(response.url, baseUrl)) {

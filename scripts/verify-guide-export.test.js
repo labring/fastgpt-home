@@ -58,14 +58,16 @@ function jsonLd(data) {
 }
 
 function updatedAt(source, locale) {
-  const date = new Date(`${source.dateModified}T00:00:00Z`);
+  const [year, month, day] = source.dateModified.split('-').map(Number);
+  if (locale === 'zh') return `更新于 ${year}年${month}月${day}日`;
+  const date = new Date(Date.UTC(year, month - 1, day));
   const label = new Intl.DateTimeFormat(locale === 'zh' ? 'zh-CN' : 'en-US', {
     timeZone: 'UTC',
     year: 'numeric',
     month: locale === 'zh' ? 'numeric' : 'long',
     day: 'numeric'
   }).format(date);
-  return locale === 'zh' ? `更新于 ${label}` : `Last updated ${label}`;
+  return `Last updated ${label}`;
 }
 
 function writeFixture(outDir, variant, { entries = registry.entries, style = 'flat' } = {}) {

@@ -243,6 +243,18 @@ test('HTML CLI recursively scans visible content separately from serialized payl
 
       fs.writeFileSync(
         path.join(root, 'guide/nested/index.html'),
+        '<html><body><p>Fact Source: internal KB</p></body></html>',
+      );
+      const visible = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], {
+        cwd: ROOT,
+        encoding: 'utf8'
+      });
+      assert.equal(visible.status, 1);
+      assert.match(visible.stderr, /visible/);
+      assert.match(visible.stderr, /editorial-metadata/);
+
+      fs.writeFileSync(
+        path.join(root, 'guide/nested/index.html'),
         '<html><body><script type="application/json">{"Fact Source":"internal KB"}</script></body></html>',
       );
       const dirty = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], {
@@ -300,6 +312,11 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     const invalid = await runAsync([...args, '--max-urls', '10001']);
     assert.equal(invalid.status, 1);
     assert.match(invalid.stderr, /--max-urls must be from 1 to 10000/);
+    assert.equal(requests, 0);
+
+    const loopbackWithoutTestFlag = await runAsync(args.filter((argument) => argument !== '--allow-http-for-tests'));
+    assert.equal(loopbackWithoutTestFlag.status, 1);
+    assert.match(loopbackWithoutTestFlag.stderr, /requires --allow-http-for-tests/);
     assert.equal(requests, 0);
   } finally {
     await new Promise((resolve) => server.close(resolve));

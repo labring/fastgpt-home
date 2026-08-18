@@ -26,15 +26,21 @@ const guideArticleCopy = {
     guide: '指南',
     back: '返回指南',
     configuredLinks: '相关资源',
-    updated: (date: string) =>
-      `更新于 ${new Intl.DateTimeFormat('zh-CN', {
-        timeZone: 'UTC',
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric'
-      }).format(new Date(`${date}T00:00:00Z`))}`
+    updated: (date: string) => `更新于 ${formatGuideDate(date, 'zh')}`
   }
 } as const;
+
+function formatGuideDate(date: string, locale: GuidePublishedLocale) {
+  const [year, month, day] = date.split('-').map(Number);
+  return locale === 'zh'
+    ? `${year}年${month}月${day}日`
+    : new Intl.DateTimeFormat('en-US', {
+        timeZone: 'UTC',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      }).format(new Date(Date.UTC(year, month - 1, day)));
+}
 
 export function getGuideArticleCopy(locale: GuidePublishedLocale) {
   return guideArticleCopy[locale];

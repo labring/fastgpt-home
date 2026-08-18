@@ -20,6 +20,9 @@ const variant = resolveSiteVariant();
 const defaultLocale = getDefaultLocale(variant);
 const publishedLocales = getPublishedLocaleCodes(variant);
 const contactLocales = publishedLocales.filter((locale) => titles[locale]);
+const fallbackContactLocales = publishedLocales.filter(
+  (locale) => !contactLocales.includes(locale)
+);
 
 function resolveHtmlPath(route) {
   const relativeRoute = route.replace(/^\/+|\/+$/g, '');
@@ -237,6 +240,7 @@ function verifyContactEmbedRoutes() {
   }
 
   const buildLocales = contactLocales.filter((locale) => locale !== defaultLocale);
+  buildLocales.push(...fallbackContactLocales.filter((locale) => locale !== defaultLocale));
   if (buildLocales.length === 0) buildLocales.push(defaultLocale);
   const routes = ['/contact/embed', ...buildLocales.map((locale) => `/${locale}/contact/embed`)];
 
@@ -261,7 +265,8 @@ async function main() {
     ['contact.html', titles[defaultLocale] || titles.en],
     ...contactLocales
       .filter((locale) => locale !== defaultLocale)
-      .map((locale) => [`${locale}/contact.html`, titles[locale] || titles.en])
+      .map((locale) => [`${locale}/contact.html`, titles[locale] || titles.en]),
+    ...fallbackContactLocales.map((locale) => [`${locale}/contact.html`, titles.en])
   ];
 
   for (const [file, title] of pages) {

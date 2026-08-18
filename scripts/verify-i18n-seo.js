@@ -279,7 +279,11 @@ function verifyPublishedRoutes() {
   assert.equal(Boolean(resolveHtmlPath('/zh')), variant === 'cn' || variant === 'preview');
   assert.equal(Boolean(resolveHtmlPath('/ja')), variant === 'io' || variant === 'preview');
   assert(!resolveHtmlPath('/ja/faq'), 'Japanese FAQ must resolve as a real 404');
-  assert(!resolveHtmlPath('/ja/contact'), 'Japanese Contact must resolve as a real 404');
+  assert.equal(
+    Boolean(resolveHtmlPath('/ja/contact')),
+    variant === 'io' || variant === 'preview',
+    'Japanese Contact must be generated for international variants and absent from the CN build'
+  );
   assert(!resolveHtmlPath('/ja/tech-center'), 'Japanese technical center must resolve as a real 404');
   assert.equal(Boolean(resolveHtmlPath('/zh/contact')), variant === 'cn' || variant === 'preview');
   assert.equal(
@@ -359,6 +363,11 @@ function verifyContactExperience() {
   if (variant === 'cn') return;
 
   const traditionalContactHtml = resolveHtml('/zh-hant/contact');
+  const japaneseContactHtml = resolveHtml('/ja/contact');
+  assert(
+    japaneseContactHtml.includes('Contact FastGPT Sales'),
+    'Japanese Contact must fall back to the English Contact copy'
+  );
   if (process.env.NEXT_PUBLIC_CRM_API_URL) {
     for (const expectedCopy of [
       'placeholder="請輸入姓名"',

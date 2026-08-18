@@ -34,7 +34,7 @@ export default async function LocalizedContactEmbedPage({
   const copy = getContactCopy(locale);
 
   return (
-    <main className="home min-h-screen bg-white font-sans text-ink">
+    <main data-contact-embed="true" className="home min-h-screen bg-white font-sans text-ink">
       <div className="mx-auto max-w-2xl px-5 py-8 sm:px-8">
         <header className="mb-6">
           <p className="m-0 text-[12px] font-medium uppercase tracking-[0.16em] text-ink-muted">

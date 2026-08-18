@@ -7,29 +7,31 @@
  * Supported locale paths are respected as-is.
  */
 
-import { localeDirections, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
+import { localeDirections, localeHtmlLangs, supportedLocaleCodes } from '@/lib/locales';
 import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
 const normalizedBuildDefaultLocale = getDefaultLocaleForSiteVariant();
 const localesJson = JSON.stringify(supportedLocaleCodes);
 const directionsJson = JSON.stringify(localeDirections);
+const htmlLangsJson = JSON.stringify(localeHtmlLangs);
 
 export const htmlLangScript = `
 (function() {
   var path = window.location.pathname;
   var locales = ${localesJson};
   var directions = ${directionsJson};
+  var htmlLangs = ${htmlLangsJson};
   var defaultLocale = '${normalizedBuildDefaultLocale}';
-  var lang = defaultLocale;
+  var localeCode = defaultLocale;
   for (var p = 0; p < locales.length; p++) {
     var code = locales[p];
     if (path === '/' + code || path.indexOf('/' + code + '/') === 0) {
-      lang = code;
+      localeCode = code;
       break;
     }
   }
-  document.documentElement.lang = lang;
-  document.documentElement.dir = directions[lang] || 'ltr';
+  document.documentElement.lang = htmlLangs[localeCode] || localeCode;
+  document.documentElement.dir = directions[localeCode] || 'ltr';
 
 })();
 `.trim();

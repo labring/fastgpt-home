@@ -11,6 +11,7 @@ const {
   getProductionBaseUrls,
   resolveSiteVariant
 } = require('./lib/site-variant');
+const { locales } = require('../src/config/site-routing.json');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
@@ -29,6 +30,9 @@ const compareSlugs = [
 const pageLanguages = ['en', 'zh-CN', 'zh-Hant', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
 const faqLanguages = ['en', 'zh-CN'];
 const contactLanguages = ['en', 'zh-CN', 'zh-Hant'];
+const htmlLangs = Object.fromEntries(
+  Object.values(locales).map((locale) => [locale.hreflang, locale.htmlLang])
+);
 const localePaths = {
   en: '',
   'zh-CN': '',
@@ -81,6 +85,10 @@ function getMetaDescription(html) {
   return getAttribute(meta || '', 'content') || '';
 }
 
+function getHtmlLang(html) {
+  return getAttribute(getTags(html, 'html')[0] || '', 'lang') || '';
+}
+
 function getRobots(html) {
   const meta = getTags(html, 'meta').find((tag) => getAttribute(tag, 'name') === 'robots');
   return getAttribute(meta || '', 'content') || '';
@@ -115,6 +123,11 @@ function normalizeUrl(url) {
 
 function verifyPage(route, locale, pathSuffix, languages) {
   const html = resolveHtml(route);
+  assert.equal(
+    getHtmlLang(html),
+    htmlLangs[locale] || locale,
+    `${route} has an unexpected html lang`
+  );
   assert.equal(
     normalizeUrl(getCanonical(html, route)),
     normalizeUrl(expectedLocaleUrl(locale, pathSuffix)),

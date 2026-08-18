@@ -32,6 +32,7 @@ type FooterT = {
 
 function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
   const normalizedLocale = normalizeLocale(locale);
+  const faqLocale = normalizedLocale === 'zh' ? 'zh' : 'en';
 
   return [
     {
@@ -75,6 +76,11 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           href: 'https://solutions.fastgpt.cn/',
           external: true
         },
+        {
+          label: t.links.items.faq,
+          href: getDefaultLocalePath(faqLocale, '/faq'),
+          external: false
+        },
         ...(normalizedLocale === 'zh'
           ? [
               {
@@ -83,12 +89,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
                 external: false
               }
             ]
-          : []),
-        {
-          label: t.links.items.faq,
-          href: getDefaultLocalePath(normalizedLocale, '/faq'),
-          external: false
-        }
+          : [])
       ]
     },
     {

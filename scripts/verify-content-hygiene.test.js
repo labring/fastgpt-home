@@ -1150,6 +1150,94 @@ test('HTML CLI normalizes entity and cross-node policy labels with raw offsets',
   );
 });
 
+test('source CLI joins inline paragraph whitespace while retaining Markdown block boundaries', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/inline.md': [
+        '# Guide',
+        '',
+        'Sources',
+        ': Internal KB',
+        '',
+        'Demand\u00adbasis: internal',
+        '',
+        'Sources\u00ad: Internal KB',
+        ''
+      ].join('\n'),
+      'src/content/tech-center/tutorial/boundaries.md': [
+        '# Guide',
+        '',
+        'Sources',
+        '',
+        ': Internal KB',
+        '## Other',
+        ': Internal KB',
+        '- Sources',
+        '- : Internal KB',
+        '',
+        'Sources',
+        ': [Public documentation](https://example.com/docs)',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        1,
+        result.stderr
+      );
+      assert.match(result.stderr, /path=src\/content\/tech-center\/tutorial\/inline\.md.*line=3/);
+      assert.match(result.stderr, /path=src\/content\/tech-center\/tutorial\/inline\.md.*line=6/);
+      assert.match(result.stderr, /path=src\/content\/tech-center\/tutorial\/inline\.md.*line=8/);
+      assert.doesNotMatch(result.stderr, /boundaries\.md/);
+    }
+  );
+});
+
+test('HTML CLI joins inline paragraph whitespace while retaining block boundaries', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<p><span>Sources</span>',
+        '<span>: Internal KB</span></p>',
+        '<p>Sources',
+        ': Internal KB</p>',
+        '<p>Demand\u00adbasis: internal</p>',
+        '<p>Sources\u00ad: Internal KB</p>',
+        '<p>Sources</p><p>: Internal KB</p>',
+        '<h2>Other</h2><p>: Internal KB</p>',
+        '<ul><li>Sources</li><li>: Internal KB</li></ul>',
+        '<p>Sources',
+        ': <a href="https://example.com/docs">Public documentation</a></p>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        1,
+        result.stderr
+      );
+      assert.match(result.stderr, /visible .*line=2/);
+      assert.match(result.stderr, /visible .*line=4/);
+      assert.match(result.stderr, /visible .*line=6/);
+      assert.match(result.stderr, /visible .*line=7/);
+      assert.doesNotMatch(result.stderr, /line=8|line=9|line=10|line=11/);
+    }
+  );
+});
+
 test('HTML CLI applies expanded editorial labels to visible and serialized content', () => {
   withFixture(
     {

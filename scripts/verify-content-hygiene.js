@@ -599,6 +599,15 @@ function labelledCitationEntries(value) {
   });
 }
 
+function markdownCitationEntries(value) {
+  const pattern = new RegExp(CITATION_LABEL_TEXT.source, 'giu');
+  const matches = [...value.matchAll(pattern)];
+  return matches.map((match, index) => ({
+    index: match.index,
+    value: value.slice(match.index + match[0].length, matches[index + 1]?.index).trim()
+  }));
+}
+
 function validPublicCitationValue(value) {
   if (typeof value !== 'string') return false;
   return validPublicCitation(policyTextProjection(value));
@@ -1051,6 +1060,9 @@ function inspectMarkdown(relativePath, source) {
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   let inSources = false;
 
+  const isInlineLine = (line) =>
+    Boolean(line.trim()) && !/^#{1,6}\s+/.test(line) && !/^\s*(?:[-*+]\s+|\d+\.\s+|>)/.test(line);
+
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     const lineNumber = bodyStartLine + index;
@@ -1076,6 +1088,45 @@ function inspectMarkdown(relativePath, source) {
         finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim())
       );
     }
+  }
+
+  for (let index = 0; index < lines.length; ) {
+    if (!isInlineLine(lines[index])) {
+      index += 1;
+      continue;
+    }
+    let end = index + 1;
+    while (end < lines.length && isInlineLine(lines[end])) end += 1;
+    if (end > index + 1) {
+      const block = lines.slice(index, end);
+      const logical = block.join('\n');
+      if (!block.some((line) => hasEditorialLabel(line)) && hasEditorialLabel(logical)) {
+        findings.push(
+          finding(
+            'D-01 editorial-metadata',
+            'markdown-body',
+            relativePath,
+            bodyStartLine + index,
+            logical.trim()
+          )
+        );
+      }
+      if (!block.some((line) => labelledCitationValues(line).length)) {
+        for (const citation of markdownCitationEntries(policyTextProjection(logical))) {
+          if (validPublicCitationValue(citation.value)) continue;
+          findings.push(
+            finding(
+              'D-07 citation-policy',
+              'markdown-body',
+              relativePath,
+              bodyStartLine + index,
+              citation.value
+            )
+          );
+        }
+      }
+    }
+    index = end;
   }
   return findings;
 }
@@ -1277,16 +1328,7 @@ function decodeHtml(value) {
   return output;
 }
 
-function policyEntityText(value) {
-  return [...value]
-    .map((character) => {
-      if (character === '\u00ad' || /[\p{Dash_Punctuation}\u2212]/u.test(character)) return '-';
-      return /[\p{White_Space}\p{Cf}]/u.test(character) ? ' ' : character;
-    })
-    .join('');
-}
-
-function appendProjectedHtml(projection, value, rawStart, linear) {
+function appendProjectedHtml(projection, value, rawStart, linear, boundary = false) {
   if (!value) return;
   const projectedStart = projection.length;
   const projectedEnd = projectedStart + value.length;
@@ -1295,6 +1337,7 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
     previous &&
     previous.projectedEnd === projectedStart &&
     previous.linear === linear &&
+    previous.boundary === boundary &&
     (linear
       ? previous.rawStart + (previous.projectedEnd - previous.projectedStart) === rawStart
       : previous.rawStart === rawStart);
@@ -1303,24 +1346,19 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
     if (projection.runs.length >= MAX_HTML_PROJECTION_RUNS) {
       throw new Error(`HTML projection exceeds ${MAX_HTML_PROJECTION_RUNS} offset runs`);
     }
-    projection.runs.push({ projectedStart, projectedEnd, rawStart, linear });
+    projection.runs.push({ projectedStart, projectedEnd, rawStart, linear, boundary });
   }
   projection.chunks.push(value);
   projection.length = projectedEnd;
 }
 
-function appendDecodedHtml(projection, value, offset, normalizePolicyEntity = false) {
+function appendDecodedHtml(projection, value, offset) {
   let cursor = 0;
   for (let index = 0; index < value.length; index += 1) {
     const reference = htmlReferenceAt(value, index);
     if (!reference) continue;
     appendProjectedHtml(projection, value.slice(cursor, index), offset + cursor, true);
-    appendProjectedHtml(
-      projection,
-      normalizePolicyEntity ? policyEntityText(reference.value) : reference.value,
-      offset + index,
-      false
-    );
+    appendProjectedHtml(projection, reference.value, offset + index, false);
     index += reference.length - 1;
     cursor = index + 1;
   }
@@ -1329,6 +1367,10 @@ function appendDecodedHtml(projection, value, offset, normalizePolicyEntity = fa
 
 function appendSyntheticHtml(projection, value, offset) {
   appendProjectedHtml(projection, value, offset, false);
+}
+
+function appendBlockBoundary(projection, offset) {
+  appendProjectedHtml(projection, '\n', offset, false, true);
 }
 
 function htmlTagEnd(html, start) {
@@ -1356,17 +1398,17 @@ function htmlHref(tag, tagOffset) {
   };
 }
 
-function projectVisibleHtml(visible, normalizePolicyEntities = false) {
+function projectVisibleHtml(visible) {
   const projection = { chunks: [], length: 0, runs: [] };
   const anchors = [];
   let cursor = 0;
   while (cursor < visible.length) {
     const tagStart = visible.indexOf('<', cursor);
     if (tagStart < 0) {
-      appendDecodedHtml(projection, visible.slice(cursor), cursor, normalizePolicyEntities);
+      appendDecodedHtml(projection, visible.slice(cursor), cursor);
       break;
     }
-    appendDecodedHtml(projection, visible.slice(cursor, tagStart), cursor, normalizePolicyEntities);
+    appendDecodedHtml(projection, visible.slice(cursor, tagStart), cursor);
     if (visible.startsWith('<!--', tagStart)) {
       const commentEnd = visible.indexOf('-->', tagStart + 4);
       cursor = commentEnd < 0 ? visible.length : commentEnd + 3;
@@ -1376,7 +1418,7 @@ function projectVisibleHtml(visible, normalizePolicyEntities = false) {
     const tag = visible.slice(tagStart, tagEnd + 1);
     const match = /^<\s*(\/)?\s*([a-z][\w:-]*)\b/i.exec(tag);
     if (!match) {
-      appendDecodedHtml(projection, tag, tagStart, normalizePolicyEntities);
+      appendDecodedHtml(projection, tag, tagStart);
       cursor = tagEnd + 1;
       continue;
     }
@@ -1387,12 +1429,7 @@ function projectVisibleHtml(visible, normalizePolicyEntities = false) {
         const anchor = anchors.pop();
         if (anchor?.href) {
           appendSyntheticHtml(projection, '](', tagStart);
-          appendDecodedHtml(
-            projection,
-            anchor.href.value,
-            anchor.href.offset,
-            normalizePolicyEntities
-          );
+          appendDecodedHtml(projection, anchor.href.value, anchor.href.offset);
           appendSyntheticHtml(projection, ')', tagStart);
         }
       } else {
@@ -1402,9 +1439,10 @@ function projectVisibleHtml(visible, normalizePolicyEntities = false) {
       }
     }
     if (/^h[1-6]$/.test(name)) {
-      appendSyntheticHtml(projection, closing ? '\n' : '\n## ', tagStart);
+      appendBlockBoundary(projection, tagStart);
+      if (!closing) appendSyntheticHtml(projection, '## ', tagStart);
     } else if (BLOCK_TAGS.has(name)) {
-      appendSyntheticHtml(projection, '\n', tagStart);
+      appendBlockBoundary(projection, tagStart);
     }
     cursor = tagEnd + 1;
   }
@@ -1448,7 +1486,8 @@ function projectionRangeAppender(source) {
         target,
         source.text.slice(rangeStart, rangeEnd),
         run.linear ? run.rawStart + rangeStart - run.projectedStart : run.rawStart,
-        run.linear
+        run.linear,
+        run.boundary
       );
       if (run.projectedEnd <= end) runCursor = index + 1;
       else {
@@ -1459,20 +1498,41 @@ function projectionRangeAppender(source) {
   };
 }
 
-function normalizePolicyProjection(source) {
+function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   const projection = { chunks: [], length: 0, runs: [] };
-  const separator = /[\p{White_Space}\p{Cf}]+|[\p{Dash_Punctuation}\u00ad\u2212]/gu;
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
+  let runCursor = 0;
+  const isBoundary = (index) => {
+    while (source.runs[runCursor]?.projectedEnd <= index) runCursor += 1;
+    return Boolean(source.runs[runCursor]?.boundary);
+  };
   let cursor = 0;
-  for (const match of source.text.matchAll(separator)) {
-    appendRange(projection, cursor, match.index);
-    appendSyntheticHtml(
-      projection,
-      /[\p{Dash_Punctuation}\u00ad\u2212]/u.test(match[0]) ? '-' : ' ',
-      rawOffsetAt(match.index)
-    );
-    cursor = match.index + match[0].length;
+  for (let index = 0; index < source.text.length; index += 1) {
+    if (preserveBlockBoundaries && isBoundary(index)) {
+      appendRange(projection, cursor, index);
+      appendBlockBoundary(projection, rawOffsetAt(index));
+      cursor = index + 1;
+      continue;
+    }
+    const character = source.text[index];
+    const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
+    const dash = /[\p{Dash_Punctuation}\u2212]/u.test(character);
+    if (!whitespace && !dash) continue;
+    let end = index + 1;
+    if (whitespace) {
+      while (
+        end < source.text.length &&
+        !(preserveBlockBoundaries && isBoundary(end)) &&
+        /[\p{White_Space}\p{Cf}]/u.test(source.text[end])
+      ) {
+        end += 1;
+      }
+    }
+    appendRange(projection, cursor, index);
+    appendSyntheticHtml(projection, dash ? '-' : ' ', rawOffsetAt(index));
+    cursor = end;
+    index = end - 1;
   }
   appendRange(projection, cursor, source.text.length);
   return { text: projection.chunks.join(''), runs: projection.runs };
@@ -1609,8 +1669,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const { visible, payloads } = splitHtmlProjections(html);
   const findings = [];
   const visibleProjection = projectVisibleHtml(visible);
-  const visiblePolicyProjection = normalizePolicyProjection(visibleProjection);
-  const citationProjection = projectVisibleHtml(visible, true);
+  const visiblePolicyProjection = normalizePolicyProjection(visibleProjection, true);
   for (const match of visiblePolicyProjection.text.matchAll(
     new RegExp(EDITORIAL_MATCHER.source, 'giu')
   )) {
@@ -1646,7 +1705,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
     );
     lineStart += line.length + 1;
   }
-  for (const citation of visibleCitationBlocks(citationProjection)) {
+  for (const citation of visibleCitationBlocks(visiblePolicyProjection)) {
     if (!validPublicCitation(citation.value)) {
       findings.push(
         htmlFinding(
@@ -1654,7 +1713,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
           'visible',
           identity,
           html,
-          projectedRawOffset(citationProjection, citation.index),
+          projectedRawOffset(visiblePolicyProjection, citation.index),
           'Sources and References require public HTTPS anchors'
         )
       );

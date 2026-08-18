@@ -159,11 +159,89 @@ const EDITORIAL_PREAMBLE =
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 // Bound offset metadata before entity-heavy HTML can grow heap usage disproportionately.
 const MAX_HTML_PROJECTION_RUNS = 50_000;
-const HTML_WHITESPACE_ENTITY =
-  /(?:sp$|space$|^tab$|^newline$|^nbsp$|^nobreak$|^zwnj$|^zwj$|^lrm$|^rlm$)/;
-const HTML_DASH_ENTITY = /(?:dash$|hyphen$|^minus$|^horbar$|^nbhy$)/;
-const HTML_LEGACY_SPACE_ENTITIES =
-  'nbsp|ensp|emsp|emsp13|emsp14|numsp|puncsp|thinsp|hairsp|verythinspace|mediumspace|thickspace';
+const HTML_POLICY_NAMED_REFERENCES = new Map(
+  Object.entries({
+    Tab: ' ',
+    NewLine: ' ',
+    nbsp: ' ',
+    NonBreakingSpace: ' ',
+    ensp: ' ',
+    emsp: ' ',
+    emsp13: ' ',
+    emsp14: ' ',
+    numsp: ' ',
+    puncsp: ' ',
+    thinsp: ' ',
+    ThinSpace: ' ',
+    hairsp: ' ',
+    VeryThinSpace: ' ',
+    MediumSpace: ' ',
+    ThickSpace: ' ',
+    NegativeVeryThinSpace: ' ',
+    NegativeThinSpace: ' ',
+    NegativeMediumSpace: ' ',
+    NegativeThickSpace: ' ',
+    ApplyFunction: ' ',
+    InvisibleTimes: ' ',
+    InvisibleComma: ' ',
+    af: ' ',
+    it: ' ',
+    ic: ' ',
+    ZeroWidthSpace: ' ',
+    NoBreak: ' ',
+    zwnj: ' ',
+    zwj: ' ',
+    lrm: ' ',
+    rlm: ' ',
+    hyphen: '-',
+    nbhy: '-',
+    dash: '-',
+    ndash: '-',
+    mdash: '-',
+    figdash: '-',
+    horbar: '-',
+    minus: '-',
+    shy: '-',
+    colon: ':',
+    Colon: ':',
+    ratio: ':',
+    amp: '&',
+    quot: '"',
+    apos: "'",
+    lt: '<',
+    gt: '>'
+  })
+);
+const HTML_LEGACY_NAMED_REFERENCES = new Set(['nbsp', 'amp', 'quot', 'lt', 'gt']);
+const HTML_C1_REPLACEMENTS = new Map([
+  [0x80, 0x20ac],
+  [0x82, 0x201a],
+  [0x83, 0x0192],
+  [0x84, 0x201e],
+  [0x85, 0x2026],
+  [0x86, 0x2020],
+  [0x87, 0x2021],
+  [0x88, 0x02c6],
+  [0x89, 0x2030],
+  [0x8a, 0x0160],
+  [0x8b, 0x2039],
+  [0x8c, 0x0152],
+  [0x8e, 0x017d],
+  [0x91, 0x2018],
+  [0x92, 0x2019],
+  [0x93, 0x201c],
+  [0x94, 0x201d],
+  [0x95, 0x2022],
+  [0x96, 0x2013],
+  [0x97, 0x2014],
+  [0x98, 0x02dc],
+  [0x99, 0x2122],
+  [0x9a, 0x0161],
+  [0x9b, 0x203a],
+  [0x9c, 0x0153],
+  [0x9e, 0x017e],
+  [0x9f, 0x0178]
+]);
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -1138,9 +1216,9 @@ function splitHtmlProjections(html) {
   const visible = html.replace(
     /<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi,
     (block, tagName, offset) => {
-      if (tagName.toLowerCase() === 'script') {
+      if (['script', 'template'].includes(tagName.toLowerCase())) {
         const openingEnd = htmlTagEnd(block, 0);
-        const closingStart = block.toLowerCase().lastIndexOf('</script');
+        const closingStart = block.toLowerCase().lastIndexOf(`</${tagName.toLowerCase()}`);
         payloads.push({
           content: block.slice(openingEnd + 1, closingStart),
           offset: offset + openingEnd + 1
@@ -1158,26 +1236,47 @@ function htmlText(value) {
     .trim();
 }
 
+function normalizedNumericReference(codePoint) {
+  const normalized = HTML_C1_REPLACEMENTS.get(codePoint) ?? codePoint;
+  if (normalized <= 0 || normalized > 0x10ffff || (normalized >= 0xd800 && normalized <= 0xdfff))
+    return '\ufffd';
+  return String.fromCodePoint(normalized);
+}
+
+function htmlReferenceAt(value, start) {
+  if (value[start] !== '&') return undefined;
+  const numeric = /^&#(?:x([0-9a-f]+)|([0-9]+));?/i.exec(value.slice(start));
+  if (numeric) {
+    const codePoint = Number.parseInt(numeric[1] ?? numeric[2], numeric[1] ? 16 : 10);
+    return { length: numeric[0].length, value: normalizedNumericReference(codePoint) };
+  }
+  const name = /^[a-z][a-z0-9]*/i.exec(value.slice(start + 1))?.[0];
+  if (!name) return undefined;
+  const semicolon = value[start + name.length + 1] === ';';
+  if (semicolon && HTML_POLICY_NAMED_REFERENCES.has(name)) {
+    return { length: name.length + 2, value: HTML_POLICY_NAMED_REFERENCES.get(name) };
+  }
+  if (!semicolon) {
+    for (let length = name.length; length > 0; length -= 1) {
+      const candidate = name.slice(0, length);
+      if (HTML_LEGACY_NAMED_REFERENCES.has(candidate)) {
+        return { length: candidate.length + 1, value: HTML_POLICY_NAMED_REFERENCES.get(candidate) };
+      }
+    }
+  }
+  return undefined;
+}
+
 function decodeHtml(value) {
-  return value
-    .replace(/&#x([0-9a-f]+);?/gi, (_, codePoint) =>
-      String.fromCodePoint(Number.parseInt(codePoint, 16))
-    )
-    .replace(/&#([0-9]+);?/g, (_, codePoint) =>
-      String.fromCodePoint(Number.parseInt(codePoint, 10))
-    )
-    .replaceAll('&amp;', '&')
-    .replaceAll('&quot;', '"')
-    .replaceAll('&#39;', "'")
-    .replaceAll('&lt;', '<')
-    .replaceAll('&gt;', '>')
-    .replace(new RegExp(`&(?:${HTML_LEGACY_SPACE_ENTITIES});?`, 'gi'), ' ')
-    .replace(/&([a-z][a-z0-9]*);?/gi, (entity, name) => {
-      const normalized = name.toLowerCase();
-      if (HTML_WHITESPACE_ENTITY.test(normalized)) return ' ';
-      if (HTML_DASH_ENTITY.test(normalized)) return '-';
-      return normalized === 'colon' ? ':' : entity;
-    });
+  let output = '';
+  for (let index = 0; index < value.length; index += 1) {
+    const reference = htmlReferenceAt(value, index);
+    if (reference) {
+      output += reference.value;
+      index += reference.length - 1;
+    } else output += value[index];
+  }
+  return output;
 }
 
 function appendProjectedHtml(projection, value, rawStart, linear) {
@@ -1204,15 +1303,14 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
 }
 
 function appendDecodedHtml(projection, value, offset) {
-  const entityPattern = new RegExp(
-    `&(?:#[0-9]+;?|#x[0-9a-f]+;?|(?:${HTML_LEGACY_SPACE_ENTITIES});?|[a-z][a-z0-9]*;)`,
-    'gi'
-  );
   let cursor = 0;
-  for (const match of value.matchAll(entityPattern)) {
-    appendProjectedHtml(projection, value.slice(cursor, match.index), offset + cursor, true);
-    appendProjectedHtml(projection, decodeHtml(match[0]), offset + match.index, false);
-    cursor = match.index + match[0].length;
+  for (let index = 0; index < value.length; index += 1) {
+    const reference = htmlReferenceAt(value, index);
+    if (!reference) continue;
+    appendProjectedHtml(projection, value.slice(cursor, index), offset + cursor, true);
+    appendProjectedHtml(projection, reference.value, offset + index, false);
+    index += reference.length - 1;
+    cursor = index + 1;
   }
   appendProjectedHtml(projection, value.slice(cursor), offset + cursor, true);
 }
@@ -1309,6 +1407,16 @@ function projectedRawOffset(projection, index) {
   return 0;
 }
 
+function projectionOffsetResolver(source) {
+  let runCursor = 0;
+  return (index) => {
+    while (source.runs[runCursor]?.projectedEnd <= index) runCursor += 1;
+    const run = source.runs[runCursor];
+    if (!run || index < run.projectedStart) return 0;
+    return run.linear ? run.rawStart + index - run.projectedStart : run.rawStart;
+  };
+}
+
 function projectionRangeAppender(source) {
   let runCursor = 0;
   return (target, start, end) => {
@@ -1336,15 +1444,16 @@ function projectionRangeAppender(source) {
 
 function normalizePolicyProjection(source) {
   const projection = { chunks: [], length: 0, runs: [] };
-  const separator = /[\s\u00a0\u200b-\u200f]+|[\u2010-\u2015\u2212]/g;
+  const separator = /[\p{White_Space}\p{Cf}]+|[\p{Dash_Punctuation}\u2212]/gu;
   const appendRange = projectionRangeAppender(source);
+  const rawOffsetAt = projectionOffsetResolver(source);
   let cursor = 0;
   for (const match of source.text.matchAll(separator)) {
     appendRange(projection, cursor, match.index);
     appendSyntheticHtml(
       projection,
-      /[\u2010-\u2015\u2212]/.test(match[0]) ? '-' : ' ',
-      projectedRawOffset(source, match.index)
+      /[\p{Dash_Punctuation}\u2212]/u.test(match[0]) ? '-' : ' ',
+      rawOffsetAt(match.index)
     );
     cursor = match.index + match[0].length;
   }
@@ -1375,9 +1484,35 @@ function stripPayloadKeyQuotes(source) {
   return { text: projection.chunks.join(''), runs: projection.runs };
 }
 
+function decodeSerializedEscapes(source) {
+  const projection = { chunks: [], length: 0, runs: [] };
+  const appendRange = projectionRangeAppender(source);
+  const rawOffsetAt = projectionOffsetResolver(source);
+  const escapePattern =
+    /\\u([dD][89aAbB][0-9a-f]{2})\\u([dD][c-fC-F][0-9a-f]{2})|\\u\{([0-9a-f]+)\}|\\u([0-9a-f]{4})|\\x([0-9a-f]{2})/gi;
+  let cursor = 0;
+  for (const match of source.text.matchAll(escapePattern)) {
+    appendRange(projection, cursor, match.index);
+    const codePoint =
+      match[1] && match[2]
+        ? 0x10000 +
+          (Number.parseInt(match[1], 16) - 0xd800) * 0x400 +
+          (Number.parseInt(match[2], 16) - 0xdc00)
+        : Number.parseInt(match[3] ?? match[4] ?? match[5], 16);
+    appendSyntheticHtml(
+      projection,
+      normalizedNumericReference(codePoint),
+      rawOffsetAt(match.index)
+    );
+    cursor = match.index + match[0].length;
+  }
+  appendRange(projection, cursor, source.text.length);
+  return { text: projection.chunks.join(''), runs: projection.runs };
+}
+
 function projectPayloadHtml(content, offset) {
   const projection = projectText(content, offset);
-  return normalizePolicyProjection(stripPayloadKeyQuotes(projection));
+  return normalizePolicyProjection(decodeSerializedEscapes(stripPayloadKeyQuotes(projection)));
 }
 
 function visibleCitationProjection(visible) {
@@ -1960,12 +2095,3 @@ async function main(argv = process.argv.slice(2)) {
 }
 
 if (require.main === module) main();
-
-module.exports = {
-  inspectHtmlRoot,
-  inspectLive,
-  inspectRoot,
-  main,
-  parseArgs,
-  publishableBody
-};

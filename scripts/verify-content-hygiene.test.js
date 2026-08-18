@@ -1304,6 +1304,46 @@ test('HTML CLI classifies optional policy entities and inspects real script bodi
   );
 });
 
+test('HTML CLI decodes exact policy entities, numeric references, and escaped script or template payloads', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<p>Version&emsp13;plan: internal</p>',
+        '<p>Update&emsp14;log: internal</p>',
+        '<p>Sign&#150off: pending</p>',
+        '<p>Demand&nbspbasis: internal</p>',
+        '<p>Sources&colon; Internal KB</p>',
+        '<p>Demand&enspbasis: clean</p>',
+        '<p>Demand&HilbertSpacebasis: clean</p>',
+        '<p>Demand&vdashbasis: clean</p>',
+        '<script>{"copy":"Demand\\u0020basis: internal","signoff":"Sign\\u{20}off: pending","hex":"Demand\\x20basis: internal"}</script>',
+        '<template>{"schedule":"\\u8ba1\\u5212\\uff1aW4"}</template>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        9,
+        result.stderr
+      );
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1);
+      assert.match(result.stderr, /visible .*line=2/);
+      assert.match(result.stderr, /visible .*line=5/);
+      assert.match(result.stderr, /payload .*line=10/);
+      assert.match(result.stderr, /payload .*line=11/);
+      assert.doesNotMatch(result.stderr, /enspbasis|HilbertSpacebasis|vdashbasis/);
+    }
+  );
+});
+
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
   let requests = 0;
   let dirtyCitation = false;

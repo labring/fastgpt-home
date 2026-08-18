@@ -48,10 +48,13 @@ const HTML_BLOCK_TAGS = new Set([
   'blockquote',
   'body',
   'caption',
+  'center',
   'col',
   'colgroup',
   'dd',
   'details',
+  'dialog',
+  'dir',
   'div',
   'dl',
   'dt',
@@ -59,6 +62,8 @@ const HTML_BLOCK_TAGS = new Set([
   'figcaption',
   'figure',
   'footer',
+  'frame',
+  'frameset',
   'form',
   'header',
   'h1',
@@ -85,6 +90,23 @@ const HTML_BLOCK_TAGS = new Set([
   'tr',
   'ul'
 ]);
+const HTML_VOID_TAGS = new Set([
+  'area',
+  'base',
+  'br',
+  'col',
+  'embed',
+  'hr',
+  'img',
+  'input',
+  'link',
+  'meta',
+  'param',
+  'source',
+  'track',
+  'wbr'
+]);
+const BLOCK_BOUNDARY = '\uE000';
 const CHINESE_EDITORIAL_LABELS = [
   '事实来源',
   '需求依据',
@@ -679,17 +701,11 @@ function markdownLogicalBlocks(lines, lineStarts) {
     }
     if (htmlBlock.test(lines[index])) {
       const parts = [];
-      let depth = 0;
       do {
         const line = lines[index];
         parts.push([line, lineStarts[index]]);
-        for (const tag of line.matchAll(/<\s*(\/)?\s*([a-z][\w:-]*)\b[^>]*>/gi)) {
-          const name = tag[2].toLowerCase();
-          if (!HTML_BLOCK_TAGS.has(name) || ['hr'].includes(name)) continue;
-          depth += tag[1] ? -1 : 1;
-        }
         index += 1;
-      } while (index < lines.length && depth > 0);
+      } while (index < lines.length && lines[index].trim());
       appendBlock(parts, true);
       continue;
     }
@@ -723,7 +739,9 @@ function normalizedMarkdownBlock(block) {
   const pairedDelimiters = new Set();
   for (let index = 0; index < block.text.length; ) {
     const marker = block.text[index];
-    if (!'*_`'.includes(marker)) {
+    let slashes = 0;
+    for (let cursor = index - 1; block.text[cursor] === '\\'; cursor -= 1) slashes += 1;
+    if (!'*_`'.includes(marker) || slashes % 2) {
       index += 1;
       continue;
     }
@@ -1235,7 +1253,6 @@ function inspectMarkdown(relativePath, source) {
   const lines = body.split('\n');
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   let inSources = false;
-  const containsHtmlBlock = new RegExp(`</?(?:${[...HTML_BLOCK_TAGS].join('|')})\\b`, 'i');
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
@@ -1246,7 +1263,6 @@ function inspectMarkdown(relativePath, source) {
       continue;
     }
     if (heading) inSources = false;
-    if (containsHtmlBlock.test(line)) continue;
     if (hasEditorialLabel(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
@@ -1281,38 +1297,52 @@ function inspectMarkdown(relativePath, source) {
     return bodyStartLine + right;
   };
   const seenCitationRanges = new Set();
+  const seenEditorialRanges = new Set();
   for (const block of markdownLogicalBlocks(lines, lineStarts)) {
-    const projection = normalizedMarkdownBlock(block);
-    for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
-      const start = projection.offsets[match.index];
-      const end = projection.offsets[match.index + match[0].length - 1];
-      if (lineAtOffset(start) === lineAtOffset(end)) continue;
-      findings.push(
-        finding(
-          'D-01 editorial-metadata',
-          'markdown-body',
-          relativePath,
-          lineAtOffset(start),
-          match[0]
-        )
-      );
-    }
-    for (const citation of markdownCitationEntries(projection.text)) {
-      const start = projection.offsets[citation.index];
-      const end = projection.offsets[citation.labelEnd - 1] ?? start;
-      if (lineAtOffset(start) === lineAtOffset(end)) continue;
-      const range = `${start}:${end}`;
-      if (seenCitationRanges.has(range) || validPublicCitationValue(citation.value)) continue;
-      seenCitationRanges.add(range);
-      findings.push(
-        finding(
-          'D-07 citation-policy',
-          'markdown-body',
-          relativePath,
-          lineAtOffset(start),
-          citation.value
-        )
-      );
+    const blockProjection = normalizedMarkdownBlock(block);
+    for (let segmentStart = 0; segmentStart <= blockProjection.text.length; ) {
+      const boundary = blockProjection.text.indexOf(BLOCK_BOUNDARY, segmentStart);
+      const segmentEnd = boundary < 0 ? blockProjection.text.length : boundary;
+      const projection = {
+        text: blockProjection.text.slice(segmentStart, segmentEnd),
+        offsets: blockProjection.offsets.slice(segmentStart, segmentEnd)
+      };
+      for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+        const start = projection.offsets[match.index];
+        const end = projection.offsets[match.index + match[0].length - 1];
+        if (lineAtOffset(start) === lineAtOffset(end)) continue;
+        const range = `${start}:${end}`;
+        if (seenEditorialRanges.has(range)) continue;
+        seenEditorialRanges.add(range);
+        findings.push(
+          finding(
+            'D-01 editorial-metadata',
+            'markdown-body',
+            relativePath,
+            lineAtOffset(start),
+            match[0]
+          )
+        );
+      }
+      for (const citation of markdownCitationEntries(projection.text)) {
+        const start = projection.offsets[citation.index];
+        const end = projection.offsets[citation.labelEnd - 1] ?? start;
+        if (lineAtOffset(start) === lineAtOffset(end)) continue;
+        const range = `${start}:${end}`;
+        if (seenCitationRanges.has(range) || validPublicCitationValue(citation.value)) continue;
+        seenCitationRanges.add(range);
+        findings.push(
+          finding(
+            'D-07 citation-policy',
+            'markdown-body',
+            relativePath,
+            lineAtOffset(start),
+            citation.value
+          )
+        );
+      }
+      if (boundary < 0) break;
+      segmentStart = boundary + 1;
     }
   }
   return findings;
@@ -1700,7 +1730,7 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   for (let index = 0; index < source.text.length; index += 1) {
     if (preserveBlockBoundaries && isBoundary(index)) {
       appendRange(projection, cursor, index);
-      appendBlockBoundary(projection, rawOffsetAt(index));
+      appendProjectedHtml(projection, BLOCK_BOUNDARY, rawOffsetAt(index), false, true);
       cursor = index + 1;
       continue;
     }
@@ -1830,7 +1860,7 @@ function visibleCitationBlocks(projection) {
   const citations = [];
   let inSources = false;
   let lineStart = 0;
-  for (const line of projection.text.split('\n')) {
+  for (const line of projection.text.replaceAll(BLOCK_BOUNDARY, '\n').split('\n')) {
     const heading = line.match(/^#{1,6}\s+/);
     if (SOURCE_SECTION.test(line)) {
       inSources = true;

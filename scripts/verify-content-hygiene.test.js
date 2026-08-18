@@ -1318,14 +1318,13 @@ test('source CLI respects CommonMark lazy boundaries and reader-visible Markdown
       assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
       assert.equal(
         (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
-        2,
+        1,
         result.stderr
       );
       assert.match(result.stderr, /commonmark\.md.*line=3/);
       assert.match(result.stderr, /commonmark\.md.*line=17/);
       assert.match(result.stderr, /commonmark\.md.*line=22/);
       assert.match(result.stderr, /commonmark\.md.*line=20/);
-      assert.match(result.stderr, /commonmark\.md.*line=26/);
       assert.doesNotMatch(
         result.stderr,
         /commonmark\.md.*line=9|commonmark\.md.*line=13|commonmark\.md.*line=24/
@@ -1363,7 +1362,7 @@ test('source CLI preserves quote depth, raw HTML blocks, paired delimiters, and 
     (root) => {
       const result = runFixture(root);
       assert.equal(result.status, 1);
-      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
       assert.equal(
         (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
         3,
@@ -1372,11 +1371,8 @@ test('source CLI preserves quote depth, raw HTML blocks, paired delimiters, and 
       assert.match(result.stderr, /final-blocks\.md.*line=9/);
       assert.match(result.stderr, /final-blocks\.md.*line=12/);
       assert.match(result.stderr, /final-blocks\.md.*line=14/);
-      assert.match(result.stderr, /final-blocks\.md.*line=18/);
-      assert.doesNotMatch(
-        result.stderr,
-        /final-blocks\.md.*line=3|final-blocks\.md.*line=5|final-blocks\.md.*line=16/
-      );
+      assert.match(result.stderr, /final-blocks\.md.*line=16/);
+      assert.doesNotMatch(result.stderr, /final-blocks\.md.*line=3|final-blocks\.md.*line=5/);
     }
   );
 });
@@ -1401,10 +1397,10 @@ test('source CLI streams nested HTML blocks and preserves literal Markdown delim
     (root) => {
       const result = runFixture(root);
       assert.equal(result.status, 1);
-      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
       assert.match(result.stderr, /streaming\.md.*line=3/);
-      assert.match(result.stderr, /streaming\.md.*line=9/);
-      assert.doesNotMatch(result.stderr, /streaming\.md.*line=4|streaming\.md.*line=5/);
+      assert.match(result.stderr, /streaming\.md.*line=4/);
+      assert.doesNotMatch(result.stderr, /streaming\.md.*line=5/);
     }
   );
 });

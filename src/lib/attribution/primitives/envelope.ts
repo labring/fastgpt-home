@@ -1,5 +1,7 @@
 import type { ChannelL1, StoredAttribution, TouchPoint } from '../../leadAttribution';
 
+export { ATTRIBUTION_QUERY_KEYS } from '../query.mjs';
+
 export const FIELD_CAPS = {
   visitor_id: 64,
   channel_l2: 128,
@@ -15,16 +17,6 @@ export const FIELD_CAPS = {
   landing_url: 2048,
   at: 40
 } as const;
-
-export const ATTRIBUTION_QUERY_KEYS = [
-  'source',
-  'utm_source',
-  'utm_medium',
-  'utm_campaign',
-  'utm_term',
-  'utm_content',
-  'click_id'
-] as const satisfies readonly (keyof typeof FIELD_CAPS)[];
 
 export type StoredAttributionV1 = StoredAttribution & { v: 1 };
 export type ValidationFailureReason =

@@ -5,6 +5,7 @@ import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
 import { htmlLangScript } from '@/lib/htmlLang';
+import { contactLinkAttributionScript } from '@/lib/contactLinkAttribution';
 import { localeDirections } from '@/lib/locales';
 import '@/styles/globals.css';
 import { Viewport } from 'next';
@@ -64,6 +65,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         {/* Synchronously set html[lang] from URL path — must run before hydration */}
         <script dangerouslySetInnerHTML={{ __html: htmlLangScript }} />
+        {/* Preserve approved attribution query keys before interactive hydration. */}
+        <script dangerouslySetInnerHTML={{ __html: contactLinkAttributionScript }} />
       </head>
       <body
         className={cn(

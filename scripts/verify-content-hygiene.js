@@ -907,37 +907,44 @@ function markdownHtmlBlockStart(line) {
     : undefined;
 }
 
-function markdownSourceCommentsBlock(value) {
-  let text = '';
-  const offsets = [];
+function markdownSourceCommentBlocks(block) {
+  const comments = [];
   let cursor = 0;
-  let commentCount = 0;
-  while (cursor < value.length) {
-    const opening = value.indexOf('<!--', cursor);
+  while (cursor < block.text.length) {
+    const opening = block.text.indexOf('<!--', cursor);
     if (opening < 0) break;
-    const closing = value.indexOf('-->', opening + 4);
+    const closing = block.text.indexOf('-->', opening + 4);
     const contentStart = opening + 4;
-    const contentEnd = closing < 0 ? value.length : closing;
-    if (commentCount) {
-      text += BLOCK_BOUNDARY;
-      offsets.push(opening);
-    }
-    text += value.slice(contentStart, contentEnd);
-    for (let index = contentStart; index < contentEnd; index += 1) offsets.push(index);
-    commentCount += 1;
+    const contentEnd = closing < 0 ? block.text.length : closing;
+    comments.push({
+      text: block.text.slice(contentStart, contentEnd),
+      offsets: block.offsets.slice(contentStart, contentEnd),
+      html: false,
+      sourceComment: false,
+      policyComment: true,
+      container: block.container,
+      ancestors: block.ancestors
+    });
     if (closing < 0) break;
     cursor = closing + 3;
   }
-  return commentCount
-    ? {
-        text,
-        offsets,
-        html: false,
-        sourceComment: false,
-        container: 'source-comments',
-        ancestors: []
-      }
-    : undefined;
+  return comments;
+}
+
+function markdownIndentation(value, startOffset = 0, startColumn = 0, targetColumn = Infinity) {
+  let offset = startOffset;
+  let column = startColumn;
+  while (offset < value.length && column < targetColumn) {
+    if (value[offset] === ' ') {
+      column += 1;
+    } else if (value[offset] === '\t') {
+      column += 4 - (column % 4);
+    } else {
+      break;
+    }
+    offset += 1;
+  }
+  return { column, offset, characters: offset - startOffset };
 }
 
 function markdownLogicalBlocks(lines, lineStarts) {
@@ -958,10 +965,10 @@ function markdownLogicalBlocks(lines, lineStarts) {
   const appendBlock = (records, context, options = {}) => {
     let text = '';
     const offsets = [];
-    for (const { text: value, offset } of records) {
+    for (const { text: value, offset, separatorOffset } of records) {
       if (text) {
         text += '\n';
-        offsets.push(offset - 1);
+        offsets.push(separatorOffset ?? offset - 1);
       }
       text += value;
       for (let index = 0; index < value.length; index += 1) offsets.push(offset + index);
@@ -976,7 +983,21 @@ function markdownLogicalBlocks(lines, lineStarts) {
       ...options
     });
   };
-  const listMarker = (line) => /^( *)(?:[-*+]|\d+[.)])([\t ]+)/.exec(line);
+  const listMarker = (line) => {
+    const indentation = markdownIndentation(line);
+    if (indentation.column > 3) return undefined;
+    const marker = /^(?:[-*+]|\d{1,9}[.)])/.exec(line.slice(indentation.offset));
+    if (!marker) return undefined;
+    const markerEndOffset = indentation.offset + marker[0].length;
+    const markerEndColumn = indentation.column + marker[0].length;
+    const content = markdownIndentation(line, markerEndOffset, markerEndColumn);
+    return content.characters
+      ? {
+          contentColumn: content.column,
+          contentOffset: content.offset
+        }
+      : undefined;
+  };
   const quoteMarker = (line) => /^ {0,3}>[\t ]?/.exec(line);
   const startsBlock = (line) =>
     Boolean(
@@ -1000,6 +1021,35 @@ function markdownLogicalBlocks(lines, lineStarts) {
       }
     }
     return { content, htmlStart, next: index };
+  };
+  const observeChildBlock = (tracker, value) => {
+    if (tracker.html) {
+      if (tracker.html.blankTerminated && !value.trim()) {
+        tracker.html = undefined;
+        tracker.type = 'blank';
+        return;
+      }
+      tracker.type = 'html';
+      if (!tracker.html.blankTerminated && tracker.html.endPattern.test(value)) {
+        tracker.html = undefined;
+      }
+      return;
+    }
+    if (!value.trim()) {
+      tracker.type = 'blank';
+      return;
+    }
+    const html = markdownHtmlBlockStart(value);
+    if (html) {
+      tracker.type = 'html';
+      if (html.blankTerminated || !html.endPattern.test(value)) tracker.html = html;
+      return;
+    }
+    if (atxHeading(value)) {
+      tracker.type = 'heading';
+      return;
+    }
+    tracker.type = listMarker(value) || quoteMarker(value) ? 'container' : 'paragraph';
   };
 
   const parseBlocks = (records, context) => {
@@ -1034,26 +1084,32 @@ function markdownLogicalBlocks(lines, lineStarts) {
           quoteDepth: depth
         });
         const quoted = [];
+        const child = { type: 'blank', html: undefined };
         let cursor = index;
         while (cursor < records.length) {
           const current = records[cursor];
           const marker = quoteMarker(current.text);
           if (marker) {
-            quoted.push({
+            const stripped = {
+              ...current,
               text: current.text.slice(marker[0].length),
               offset: current.offset + marker[0].length,
               quoteContainerBoundary: true
-            });
+            };
+            quoted.push(stripped);
+            observeChildBlock(child, stripped.text);
             cursor += 1;
             continue;
           }
           if (
             current.text.trim() &&
             quoted.length &&
+            child.type === 'paragraph' &&
             !current.quoteContainerBoundary &&
             !startsBlock(current.text)
           ) {
             quoted.push(current);
+            observeChildBlock(child, current.text);
             cursor += 1;
             continue;
           }
@@ -1067,42 +1123,47 @@ function markdownLogicalBlocks(lines, lineStarts) {
       const list = listMarker(record.text);
       if (list) {
         const itemContext = childContext(context, `${context.container}:list:${++listItem}`);
-        const contentIndent = list[0].length;
         const itemRecords = [
           {
-            text: record.text.slice(contentIndent),
-            offset: record.offset + contentIndent
+            ...record,
+            text: record.text.slice(list.contentOffset),
+            offset: record.offset + list.contentOffset
           }
         ];
+        const child = { type: 'blank', html: undefined };
+        observeChildBlock(child, itemRecords[0].text);
         let cursor = index + 1;
-        let canLazyContinue = true;
         while (cursor < records.length) {
           const current = records[cursor];
           if (!current.text.trim()) {
             let next = cursor + 1;
             while (next < records.length && !records[next].text.trim()) next += 1;
             if (next >= records.length) break;
-            const indentation = /^ */.exec(records[next].text)[0].length;
-            if (indentation < contentIndent) break;
+            const indentation = markdownIndentation(records[next].text);
+            if (indentation.column < list.contentColumn) break;
             while (cursor < next) {
-              itemRecords.push({ text: '', offset: records[cursor].offset });
+              itemRecords.push({ ...records[cursor], text: '' });
+              observeChildBlock(child, '');
               cursor += 1;
             }
-            canLazyContinue = false;
             continue;
           }
-          const indentation = /^ */.exec(current.text)[0].length;
-          if (indentation >= contentIndent) {
-            itemRecords.push({
-              text: current.text.slice(contentIndent),
-              offset: current.offset + contentIndent
-            });
+          const indentation = markdownIndentation(current.text);
+          if (indentation.column >= list.contentColumn) {
+            const content = markdownIndentation(current.text, 0, 0, list.contentColumn);
+            const stripped = {
+              ...current,
+              text: current.text.slice(content.offset),
+              offset: current.offset + content.offset
+            };
+            itemRecords.push(stripped);
+            observeChildBlock(child, stripped.text);
             cursor += 1;
-            canLazyContinue = true;
             continue;
           }
-          if (canLazyContinue && !startsBlock(current.text)) {
+          if (child.type === 'paragraph' && !startsBlock(current.text)) {
             itemRecords.push(current);
+            observeChildBlock(child, current.text);
             cursor += 1;
             continue;
           }
@@ -1139,7 +1200,11 @@ function markdownLogicalBlocks(lines, lineStarts) {
   };
 
   parseBlocks(
-    lines.map((text, index) => ({ text, offset: lineStarts[index] })),
+    lines.map((text, index) => ({
+      text,
+      offset: lineStarts[index],
+      separatorOffset: lineStarts[index] - 1
+    })),
     rootContext
   );
   return blocks;
@@ -1714,9 +1779,10 @@ function inspectMarkdown(relativePath, source) {
     }
     return { kind: 'reset' };
   };
-  const blocks = markdownLogicalBlocks(lines, lineStarts);
-  const sourceComments = markdownSourceCommentsBlock(body);
-  if (sourceComments) blocks.push(sourceComments);
+  const blocks = markdownLogicalBlocks(lines, lineStarts).flatMap((block) => [
+    block,
+    ...markdownSourceCommentBlocks(block)
+  ]);
   for (const block of blocks) {
     const blockProjection = normalizedMarkdownBlock(block);
     for (let segmentStart = 0; segmentStart <= blockProjection.text.length; ) {
@@ -1726,8 +1792,12 @@ function inspectMarkdown(relativePath, source) {
         text: blockProjection.text.slice(segmentStart, segmentEnd),
         offsets: blockProjection.offsets.slice(segmentStart, segmentEnd)
       };
-      const htmlHeading = /^(#{1,6})[\t ]+(.*?)[\t ]*$/.exec(projection.text);
-      const headingLevel = block.headingLevel ?? htmlHeading?.[1].length;
+      const htmlHeading = block.policyComment
+        ? undefined
+        : /^(#{1,6})[\t ]+(.*?)[\t ]*$/.exec(projection.text);
+      const headingLevel = block.policyComment
+        ? undefined
+        : block.headingLevel ?? htmlHeading?.[1].length;
       const headingText = block.headingLevel ? projection.text : htmlHeading?.[2];
       const citationHeading =
         headingLevel !== undefined && isCitationSectionHeading(headingText || '');

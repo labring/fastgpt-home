@@ -1612,6 +1612,70 @@ test('source CLI preserves loose and nested list-item citation scope', () => {
   });
 });
 
+test('source CLI limits lazy continuation to active paragraph children', () => {
+  const body = [
+    '# Guide',
+    '',
+    '> ## Sources',
+    'Root copy after quote heading.',
+    '',
+    '- ## Sources',
+    'Root copy after list heading.',
+    '',
+    '> <div>Sources</div>',
+    ': Internal KB after quote HTML.',
+    '',
+    '- <div>Sources</div>',
+    ': Internal KB after list HTML.',
+    '',
+    '> Sources',
+    ': Internal KB',
+    '',
+    '- Sources',
+    ': Internal KB',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/lazy-children.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+    assert.match(result.stderr, /lazy-children\.md.*line=15/);
+    assert.match(result.stderr, /lazy-children\.md.*line=18/);
+    assert.doesNotMatch(result.stderr, /lazy-children\.md.*line=3|line=6|line=9|line=12/);
+  });
+});
+
+test('source CLI resolves list indentation with four-column tab stops', () => {
+  const body = [
+    '# Guide',
+    '',
+    '- ## Sources',
+    '\tInternal KB',
+    '',
+    '-\t## Sources',
+    '\tInternal KB',
+    '',
+    '-\t## Sources',
+    '   Internal KB',
+    '',
+    '-\t## Sources',
+    '\t-\tInternal KB',
+    '',
+    '-\t## Sources',
+    '   - Internal KB',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/tab-lists.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+    for (const line of [4, 7, 13]) {
+      assert.match(result.stderr, new RegExp(`tab-lists\\.md.*line=${line}`));
+    }
+    assert.doesNotMatch(result.stderr, /tab-lists\.md.*line=10|line=16/);
+  });
+});
+
 test('source CLI type-terminates raw HTML blocks inside block quotes', () => {
   const body = [
     '# Guide',
@@ -1712,6 +1776,45 @@ test('source CLI scans every non-leading Markdown HTML comment with raw offsets'
     (root) => {
       const result = runFixture(root);
       assert.equal(result.status, 0, result.stderr);
+    }
+  );
+});
+
+test('source CLI strips container markers from later multiline Markdown comments', () => {
+  const body = [
+    '<!-- Demand basis: hidden delivery metadata -->',
+    '# Guide',
+    '',
+    '> <!--',
+    '> Demand',
+    '> basis: internal',
+    '> -->',
+    '> - <!--',
+    '>   Fact',
+    '>   sources: internal',
+    '>   -->',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/container-comments.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 2, result.stderr);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+    assert.match(result.stderr, /container-comments\.md.*line=5/);
+    assert.match(result.stderr, /container-comments\.md.*line=9/);
+    assert.doesNotMatch(result.stderr, /hidden delivery metadata/);
+  });
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/comment-state.md':
+        '# Guide\n\n## Sources\n<!-- ## Other -->\nInternal KB\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+      assert.match(result.stderr, /comment-state\.md.*line=4/);
+      assert.match(result.stderr, /comment-state\.md.*line=5/);
     }
   );
 });

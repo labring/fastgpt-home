@@ -4,7 +4,8 @@ import { useEffect, useRef, useState } from 'react';
 import * as m from 'framer-motion/m';
 import dynamic from 'next/dynamic';
 import FadeIn from '@/components/home/motion/FadeIn';
-import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { useStartUrl } from '@/components/home/hooks/useStartUrl';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
 // Globe is heavy (WebGL + 16k samples + rAF loop). Load on the client only,
@@ -22,8 +23,9 @@ type CTAT = {
   consult: string;
 };
 
-export default function CTA({ t }: { t: CTAT }) {
+export default function CTA({ t, locale }: { t: CTAT; locale: string }) {
   const startUrl = useStartUrl();
+  const contactUrl = useContactUrl(locale);
   const globeWrapRef = useRef<HTMLDivElement | null>(null);
   const [globeReady, setGlobeReady] = useState(false);
 
@@ -93,8 +95,7 @@ export default function CTA({ t }: { t: CTAT }) {
                 className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8 w-full"
               >
                 <m.a
-                  href={CONSULT_URL}
-                  data-consultation-link="true"
+                  href={contactUrl}
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_bottom_consult')}
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}

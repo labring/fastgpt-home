@@ -5,8 +5,8 @@ import { Switch } from '@heroui/react';
 import Check from '@/components/icons/check';
 import { PRICE_PLANS_CLOUD, PRICE_PLANS_SELF, PRICE_PLANS_SELF_BUTTON_MAP } from '@/config/price';
 import Link from 'next/link';
-import { siteConfig } from '@/config/site';
 import { isContactHref } from '@/lib/consultation';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
@@ -76,6 +76,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
   const [annual, setAnnual] = useState(false);
   const cloudPlans = PRICE_PLANS_CLOUD[langName] || PRICE_PLANS_CLOUD.en;
   const selfPlans = PRICE_PLANS_SELF[langName] || PRICE_PLANS_SELF.en;
+  const contactUrl = useContactUrl(langName);
 
   return (
     <div className="flex flex-col gap-6">
@@ -219,14 +220,8 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                   </CloudPlanLink>
                 ) : (
                   <Link
-                    href={siteConfig.customPlanUrl}
+                    href={contactUrl}
                     className="mt-auto pt-4"
-                    {...(isContactHref(siteConfig.customPlanUrl)
-                      ? {}
-                      : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
-                    {...(isContactHref(siteConfig.customPlanUrl)
-                      ? { 'data-consultation-link': 'true' }
-                      : {})}
                     {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'price_cloud_custom')}
                   >
                     <button
@@ -249,6 +244,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
         <div className="mt-[40px] grid lg:grid-cols-3 grid-cols-1 gap-5">
           {selfPlans.map((item) => {
             const buttonConfig = PRICE_PLANS_SELF_BUTTON_MAP[item.key];
+            const contactLink = isContactHref(buttonConfig.href);
             return (
               <div
                 key={item.key}
@@ -308,12 +304,12 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 </div>
 
                 <Link
-                  href={buttonConfig.href}
-                  {...(isContactHref(buttonConfig.href)
-                    ? { 'data-consultation-link': 'true' }
+                  href={contactLink ? contactUrl : buttonConfig.href}
+                  {...(contactLink
+                    ? {}
                     : { target: '_blank', rel: 'noopener noreferrer nofollow' })}
                   className="mt-auto pt-4"
-                  {...(isContactHref(buttonConfig.href) || buttonConfig.href.includes('feishu.cn')
+                  {...(contactLink || buttonConfig.href.includes('feishu.cn')
                     ? rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, `price_self_${item.key}`)
                     : {})}
                 >

@@ -35,7 +35,7 @@ export default function HomeLanding({
         <BrandWall t={t.brandWall} />
         <Services t={t.services} />
         <FAQ t={t.faq} />
-        <CTA t={t.cta} />
+        <CTA t={t.cta} locale={locale} />
       </main>
       <Footer t={t.footer} locale={locale} />
     </div>

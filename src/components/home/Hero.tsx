@@ -6,7 +6,8 @@ import * as m from 'framer-motion/m';
 import { useEffect, useRef, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import { getHeroDashboardAsset } from '@/components/home/assets';
-import { useStartUrl, CONSULT_URL } from '@/components/home/hooks/useStartUrl';
+import { useStartUrl } from '@/components/home/hooks/useStartUrl';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 import { formatGitHubStars } from '@/lib/githubStarsDisplay';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
@@ -67,6 +68,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
   const offsetY = useTransform(smoothProgress, [0, 0.20], isDesktop ? [-160, 0] : [-80, 0]);
 
   const startUrl = useStartUrl();
+  const contactUrl = useContactUrl(locale);
   const formattedStars = formatGitHubStars(initialStars);
   const heroDashboard = getHeroDashboardAsset(locale);
 
@@ -183,8 +185,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
               data-hero-cta
             >
               <m.a
-                href={CONSULT_URL}
-                data-consultation-link="true"
+                href={contactUrl}
                 {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_hero_consult')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}

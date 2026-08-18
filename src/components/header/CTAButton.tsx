@@ -2,10 +2,12 @@
 import { Button } from '@/components/ui/button';
 import { buildCloudEntryUrl } from '@/lib/cloudEntryUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 
 import Link from 'next/link';
 
 const CTAButton = ({ locale }: { locale: any }) => {
+  const contactUrl = useContactUrl();
   const getLinkConfig = () => {
     return buildCloudEntryUrl(typeof window === 'undefined' ? '' : window.location.search);
   };
@@ -14,8 +16,7 @@ const CTAButton = ({ locale }: { locale: any }) => {
     <div className="flex items-center gap-6">
       <div className="inline-block rotating-border-button">
         <Link
-          href="/contact"
-          data-consultation-link="true"
+          href={contactUrl}
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'enterprise_footer_consult')}
         >
           <Button

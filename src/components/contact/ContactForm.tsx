@@ -21,6 +21,7 @@ import {
   getContactCopy,
   getContactOptionLabel
 } from '@/components/contact/contactCopy';
+import { isPreviewSite } from '@/lib/siteRouting';
 
 type ContactFormProps = {
   locale: string;
@@ -29,7 +30,7 @@ type ContactFormProps = {
 };
 
 const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '') || '';
-const CN_MOBILE_PHONE_PATTERN = /^1[3-9]\d{9}$/;
+const INTERNATIONAL_PHONE_PATTERN = /^\+?[1-9]\d{6,14}$/;
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 function FieldLabel({
@@ -348,10 +349,10 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
 
     if (name === 'phone') {
       const normalizedValue = value.trim();
-      const normalizedPhone = normalizedValue.replace(/[\s-]/g, '');
-      const isMainlandPhone = CN_MOBILE_PHONE_PATTERN.test(normalizedPhone);
+      const normalizedPhone = normalizedValue.replace(/[\s\-().]/g, '');
+      const isPhone = INTERNATIONAL_PHONE_PATTERN.test(normalizedPhone);
       const isEmail = EMAIL_PATTERN.test(normalizedValue);
-      if (!isMainlandPhone && !isEmail) return copy.phoneError;
+      if (!isPhone && !isEmail) return copy.phoneError;
     }
 
     return '';
@@ -418,6 +419,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
     setError('');
 
     if (!CRM_API_URL) {
+      if (isPreviewSite) return;
       setError(copy.configErrorBody);
       return;
     }
@@ -473,12 +475,17 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
       clearContactFormDraft();
       setStatus('success');
     } catch (submitError) {
-      setError(submitError instanceof Error ? submitError.message : copy.genericError);
+      const isNetworkError =
+        submitError instanceof TypeError ||
+        (submitError instanceof Error && submitError.name === 'AbortError');
+      setError(
+        !isNetworkError && submitError instanceof Error ? submitError.message : copy.genericError
+      );
       setStatus('idle');
     }
   };
 
-  if (!CRM_API_URL) {
+  if (!CRM_API_URL && !isPreviewSite) {
     return (
       <div
         role="alert"
@@ -557,7 +564,7 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
               <input
                 name={name}
                 type="text"
-                inputMode={name === 'phone' ? 'email' : undefined}
+                inputMode={name === 'phone' ? 'text' : undefined}
                 autoComplete={
                   name === 'name'
                     ? 'name'
@@ -689,9 +696,19 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
         </label>
       </div>
 
+      {isPreviewSite && !CRM_API_URL && (
+        <p
+          role="status"
+          data-crm-preview="true"
+          className="mt-6 rounded-md border border-[#dbe7ff] bg-[#f5f8ff] px-3 py-2.5 text-[13px] leading-5 text-[#475467]"
+        >
+          {copy.previewNotice}
+        </p>
+      )}
+
       <button
         type="submit"
-        disabled={status === 'submitting'}
+        disabled={status === 'submitting' || !CRM_API_URL}
         className="mt-6 inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-[#155eef] px-5 text-[14px] font-medium text-white transition-colors hover:bg-[#004eeb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef] focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-[#84adff]"
       >
         {status === 'submitting' && <LoaderCircle className="animate-spin" size={17} aria-hidden />}

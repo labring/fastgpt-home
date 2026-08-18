@@ -73,7 +73,7 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
   return (
     <div className="home overflow-x-hidden">
       <HomeThemeFix />
-      <Navbar links={dict.links} t={dict.Home.navCta} />
+      <Navbar links={dict.links} t={dict.Home.navCta} locale={langName} />
 
       <main className="pb-[80px] px-[16px] md:px-[32px] relative">
         <GradientBlobs />

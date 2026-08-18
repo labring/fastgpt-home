@@ -14,9 +14,6 @@ const baseSiteConfig = {
     "Build powerful AI agents with FastGPT's visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.",
   url: currentSiteBaseUrl,
   userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
-  customPlanUrl:
-    process.env.NEXT_PUBLIC_CUSTOM_PLAN_URL ||
-    '/contact',
   metadataBase: currentSiteBaseUrl,
   keywords: [
     'rag',

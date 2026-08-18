@@ -20,8 +20,8 @@ import {
 import SectionHeader from '@/components/home/SectionHeader';
 import FadeIn from '@/components/home/motion/FadeIn';
 import { getSolutionsAssets } from '@/components/home/assets';
-import { CONSULT_URL } from '@/components/home/hooks/useStartUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 
 const iconByKey: Record<string, React.ComponentType<{ size?: number; className?: string; strokeWidth?: number }>> = {
   assistant: Tag, report: AudioLines, training: Users,
@@ -43,6 +43,7 @@ type SolutionsT = {
 
 export default function Solutions({ t, locale }: { t: SolutionsT; locale: string }) {
   const [activeTab, setActiveTab] = useState(0);
+  const contactUrl = useContactUrl(locale);
   const solutionAssets = getSolutionsAssets(locale);
   const imageByTabKey: Record<string, string> = {
     sales: solutionAssets.sales,
@@ -172,8 +173,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
                   />
                 </div>
                 <a
-                  href={CONSULT_URL}
-                  data-consultation-link="true"
+                  href={contactUrl}
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_solutions_consult', {
                     solution: current.key
                   })}

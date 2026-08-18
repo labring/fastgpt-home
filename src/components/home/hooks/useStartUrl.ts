@@ -15,5 +15,3 @@ export function useStartUrl(targetUrl?: string): string {
 
   return url;
 }
-
-export const CONSULT_URL = '/contact';

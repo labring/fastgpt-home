@@ -359,6 +359,11 @@ function verifyContactExperience() {
         `Traditional Chinese Contact is missing ${expectedCopy}`
       );
     }
+  } else if (variant === 'preview') {
+    assert(
+      traditionalContactHtml.includes('data-crm-preview="true"'),
+      'Preview Traditional Chinese Contact is missing its disabled CRM notice'
+    );
   } else {
     assert(
       traditionalContactHtml.includes('data-crm-config-error="true"'),

@@ -51,6 +51,11 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Validate production CRM configuration
+        env:
+          NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
+        run: test -n "$NEXT_PUBLIC_CRM_API_URL"
+
       - name: Build and push Docker image to GitHub Container Registry
         uses: docker/build-push-action@v5
         with:
@@ -70,7 +75,6 @@ jobs:
             NEXT_PUBLIC_POLICE_FILING=${{ secrets.NEXT_PUBLIC_POLICE_FILING }}
             NEXT_PUBLIC_RYBBIT_TONGJI=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
             NEXT_PUBLIC_RYBBIT_TONGJI_SITEID=${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
-            NEXT_PUBLIC_CUSTOM_PLAN_URL=${{ secrets.NEXT_PUBLIC_CUSTOM_PLAN_URL }}
             NEXT_PUBLIC_CRM_API_URL=${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
             NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN=.fastgpt.cn
             NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE=${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}

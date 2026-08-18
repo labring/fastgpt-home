@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查出的具体问题调整反向代理配置，例如修正静态资源的转发路径、保留上传所需的请求头信息。调整完成后，通过反向代理访问FastGPT的logo资源，确认可以正常加载；尝试上传文件，验证上传服务是否恢复正常。若问题仍未解决，需结合实际代理环境进一步排查相关配置。
 
-> 来源：https://github.com/labring/FastGPT/issues/6541
+> 来源：[FastGPT GitHub Issue #6541](https://github.com/labring/FastGPT/issues/6541)

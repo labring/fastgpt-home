@@ -21,4 +21,4 @@ FastGPT 数据集采用分离式存储设计，文件数据与业务数据分别
 ## 页面辅助说明
 该页面提供了快捷编辑入口，你可以在 GitHub 上直接编辑当前文档内容。本页的核心导航内容包含文件与数据的关系说明、文件导入流程详解两个部分，方便你快速定位所需信息。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/design/dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/design/dataset)

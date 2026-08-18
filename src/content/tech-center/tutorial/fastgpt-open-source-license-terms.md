@@ -17,4 +17,4 @@ FastGPT 社区版项目基于 Apache License 2.0 许可开源，同时存在两�
 ## 许可咨询操作步骤
 若你的使用场景符合需要额外授权的情况（如运营多租户 SaaS 服务），请通过电子邮件 dennis@sealos.io 联系咨询许可事宜。对于其他合法的商业化使用场景，无需额外联系即可正常开展业务。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license)

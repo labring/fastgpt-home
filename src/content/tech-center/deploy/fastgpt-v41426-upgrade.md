@@ -19,4 +19,4 @@ source_type: 官方文档
 ### 版本变更详情
 V4.14.26版本的核心优化为锁定Node.js版本，该调整可有效避免使用最新版本Node.js引发的流式响应接收异常问题。该版本属于4.14.x系列的稳定迭代版本，用户可根据自身部署需求选择是否升级。若需查看其他同系列版本的升级说明，可参考页面内的版本导航列表获取对应内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41426)

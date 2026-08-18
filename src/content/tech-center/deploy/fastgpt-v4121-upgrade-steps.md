@@ -36,4 +36,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4121 \
 #### 工具更新
 支持对系统工具单独配置Tool description，帮助模型更好地理解工具用途。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121)

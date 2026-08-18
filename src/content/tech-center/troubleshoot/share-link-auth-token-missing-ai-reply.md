@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现authToken校验逻辑存在问题，需按照官方文档修正对应配置；若为历史对话数据存储或读取异常，需检查数据库连接与数据完整性；若为权限配置问题，需调整部署环境的访问策略。验证方式为：重新使用带有有效authToken的分享链接打开对话框，查看历史对话是否同时展示用户提问与AI回复的内容。
 
-> 来源：https://github.com/labring/FastGPT/issues/6796
+> 来源：[FastGPT GitHub Issue #6796](https://github.com/labring/FastGPT/issues/6796)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决方法需匹配排查出的具体根因：若为配置缓存问题，可通过重启服务实例清除缓存；若为配置未同步，则需重新发布工作流以同步最新配置。验证时可直接调用发布后的接口，检查返回结果是否匹配更新后的模型，同时再次在编辑页测试运行工作流，对比两次运行结果是否一致，确认问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/7258
+> 来源：[FastGPT GitHub Issue #7258](https://github.com/labring/FastGPT/issues/7258)

@@ -23,4 +23,4 @@ FastGPT V4.12.3版本于2025年9月8日发布，本次升级需更新指定镜�
 #### 插件更新
 系统工具类型迁移至plugin；模型提供商配置移动至plugin，支持热更新；应用模板移动至plugin。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4123
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4123)

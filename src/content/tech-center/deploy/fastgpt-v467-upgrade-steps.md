@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv467 \
 ## 升级补充说明
 本版本为专属升级脚本版本，需严格按照上述步骤执行初始化操作，确保升级后功能正常生效。执行过程中需确保环境变量配置正确，避免因参数错误导致初始化流程异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/467
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/467)

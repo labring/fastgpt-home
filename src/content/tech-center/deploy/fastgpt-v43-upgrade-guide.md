@@ -27,4 +27,4 @@ FastGPT V4.3版本升级包含数据库结构调整与环境变量新增两项�
 
 需要注意的是，数据库初始化API仅需在首次升级到V4.3时执行一次，重复执行不会对数据库造成额外影响，但无需多次操作。若请求未携带正确的`rootkey`，将无法完成数据库结构更新，此时请检查鉴权凭证是否正确。此外，未正确新增`FILE_TOKEN_KEY`环境变量将无法正常生成文件预览链接，影响文件相关功能的使用。升级完成后，建议重启FastGPT服务以加载新的环境变量配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43)

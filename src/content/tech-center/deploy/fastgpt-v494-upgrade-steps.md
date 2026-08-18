@@ -24,4 +24,4 @@ FastGPT V4.9.4版本升级涉及环境变量变更与升级脚本执行，升级
 ### 修复问题
 修复搜索应用与知识库时无法点击目录进入下一层的问题，解决重新训练时参数未成功初始化的问题，修复package/service部分请求在多应用中不一致的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494)

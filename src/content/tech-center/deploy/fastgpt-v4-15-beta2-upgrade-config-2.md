@@ -21,4 +21,4 @@ source_type: 官方文档
 优化内容包括OTEL日志采集格式调整、工作流无效连接模式禁用、节点名称超长适配等。修复了工作流单节点调试的异常默认值、模型配置defaultConfig覆盖异常、切换团队时本地chat缓存未清除等问题，同时优化了对话流恢复逻辑，刷新或断线续传后表单输入值可正确回填，避免出现空表单或文件丢失的情况。
 需要注意，异常中断会话的恢复逻辑已优化，结合Redis stream活动检测可在约2分钟内将卡住的「生成中」会话纠正为已完成，同时保留30分钟MongoDB兜底策略，Redis短暂异常时不会误修改正在生成的会话；切换应用时会记住最近会话，同一浏览器内切换应用将恢复对应应用的上次chatId，不再共用全局会话ID。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41502)

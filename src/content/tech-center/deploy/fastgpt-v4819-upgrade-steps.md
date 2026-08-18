@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4819 \
 ## 升级前置提醒
 执行升级脚本前，请确保已正确配置环境变量中的rootkey与FastGPT域名，避免因参数错误导致升级失败。升级过程中请勿中断终端连接，以免数据迁移不完整。Sandbox镜像无需额外更新或配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4819)

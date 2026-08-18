@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决方法：首先确保所配置的大模型能够生成完整的、格式正确的JSON数组格式的猜你想问结果。若因响应长度触发分段生成，可调整大模型的响应长度限制参数（需按实际环境配置）。验证方式：重新创建应用并开启猜你想问功能，发起对话后查看猜你想问是否生成正常的推荐问题列表，同时检查日志中是否不再出现`WRN ai:functions         Question guide response missing JSON array`的警告。
 
-> 来源：https://github.com/labring/FastGPT/issues/6486
+> 来源：[FastGPT GitHub Issue #6486](https://github.com/labring/FastGPT/issues/6486)

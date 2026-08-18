@@ -32,4 +32,4 @@ source_type: 官方文档
    ```
    接口参数`dryRun`默认值为`true`，用于控制是否仅扫描验证而不写入数据库。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)

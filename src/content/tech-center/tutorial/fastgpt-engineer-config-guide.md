@@ -19,4 +19,4 @@ FastGPT具备五大核心能力与多项优势。核心能力包括：一是全�
 3. 在工作流编辑器中拖拽功能节点，按需编排业务流程；
 4. 配置API接入，对齐官方接口即可完成对接，支持快速接入多类业务平台。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)

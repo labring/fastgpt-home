@@ -21,4 +21,4 @@ SOMARK_API_KEY=your_access_key
 ```
 若需使用Cloudflare R2对象存储，需配置对应兼容S3 API的环境变量。完成镜像更新与环境变量配置后，重启服务即可应用本次升级的全部内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4155
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4155)

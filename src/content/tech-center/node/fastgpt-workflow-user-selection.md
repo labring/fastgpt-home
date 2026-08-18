@@ -20,4 +20,4 @@ source_type: 官方文档
 ### 使用边界与注意事项
 该节点仅适用于需要用户做出明确选择的交互场景，无法支持开放式的用户输入需求，此类场景可使用表单输入节点。当工作流流程可自动完成、无需用户介入时，不应使用该节点，避免不必要的交互打断流程运行。此外，触发该节点后，工作流会进入暂停状态，需确保对话上下文的状态保存正常，否则可能出现流程恢复异常的问题。同时，该节点仅在对话模式下生效，非对话类工作流场景无法触发该节点的交互逻辑。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection)

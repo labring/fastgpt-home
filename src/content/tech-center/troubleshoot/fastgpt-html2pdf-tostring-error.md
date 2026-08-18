@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现为脚本加载顺序问题，可调整脚本加载顺序，将html2pdf.min.js的加载置于其他自定义脚本之前，避免全局属性被提前重定义；若为依赖版本冲突，需替换或更新html2pdf.min.js的版本，具体操作需按实际环境确认。验证方式为：重新加载目标页面，查看控制台是否仍出现`Uncaught TypeError: Cannot redefine property: toString`报错，同时确认相关PDF生成功能可正常触发与使用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6382
+> 来源：[FastGPT GitHub Issue #6382](https://github.com/labring/FastGPT/issues/6382)

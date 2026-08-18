@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 首先尝试重新保存「工具调用AI流输出」的关闭配置，重启FastGPT服务后再次抓包验证stream参数。若配置仍未生效，需检查FastGPT的模型调用代码中，是否正确将流输出开关的配置映射为stream参数。验证标准为：关闭流输出配置后，发起工具调用请求时抓包得到的stream参数为false，此时使用qwen-2.5 72b模型即可获取正确的tool_call信息。
 
-> 来源：https://github.com/labring/FastGPT/issues/6481
+> 来源：[FastGPT GitHub Issue #6481](https://github.com/labring/FastGPT/issues/6481)

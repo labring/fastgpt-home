@@ -26,4 +26,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查结果调整对应配置：若为容器网络连接问题，将`S3_ENDPOINT`修改为可被FastGPT容器解析的S3服务地址；若为`S3_EXTERNAL_BASE_URL`配置问题，需按实际环境调整为正确的访问地址。修改配置后重启FastGPT服务，再次尝试上传知识库文件，验证日志中不再出现`Failed to create post presigned url`报错，且文件可以正常上传并进入处理流程。
 
-> 来源：https://github.com/labring/FastGPT/issues/6181
+> 来源：[FastGPT GitHub Issue #6181](https://github.com/labring/FastGPT/issues/6181)

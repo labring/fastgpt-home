@@ -26,4 +26,4 @@ FastGPT V4.8.8版本包含多项功能重构与优化，核心更新包括重构
 ## 升级注意事项
 升级过程中需注意以下细节：镜像标签不可混淆，开源版与商业版的tag存在差异；初始化请求的接口路径`/api/admin/initv488`不可修改，参数替换需确保准确，否则会导致初始化失败。若此前遇到简易模式首次进入无法获取知识库配置、Log debug level配置无效等问题，升级至V4.8.8版本可完成修复。此外，插件独立运行时的变量替换异常问题也已在该版本中修复。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488)

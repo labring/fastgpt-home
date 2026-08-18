@@ -46,4 +46,4 @@ FastGPT V4.8.16为配置变更版本，核心更新包括镜像版本升级、�
 ## 完整更新内容
 本次更新新增多项功能：包括SearXNG搜索插件、商业版API知识库与链接集合定时同步、猜你想问的模型选择与自定义提示词支持、钉钉和企微机器人webhook插件、商业版钉钉SSO登录配置、商业版飞书与语雀知识库导入，以及sandbox新增`createHmac`加密全局方法、工作流右键全部折叠功能。同时优化了模型选择器、SSR渲染逻辑、工作流变量初始化代码与数据类型转换逻辑。修复了无法自动切换默认语言、数组选择器兼容4.8.13以前的数据、站点同步知识库链接未使用选择器等多项问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816)

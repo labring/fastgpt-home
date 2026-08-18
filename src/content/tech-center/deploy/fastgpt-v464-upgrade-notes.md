@@ -22,4 +22,4 @@ curl --location --request POST https://{{host}}/api/admin/initv464 \
 ### V4.6.4功能变更与优化
 该版本包含多项核心更新：重写分享链接身份逻辑，采用localID记录用户ID；商业版新增分享链接SSO鉴权方案，通过身份鉴权地址，仅需3个接口即可完全接入已有用户系统，具体可参考分享链接身份鉴权相关文档；新增分享链接更多嵌入方式提示，支持更多自定义DIY配置；优化历史记录模块，弃用旧版历史记录模块，直接在对应位置填写配置数值即可；调整知识库搜索模块的topk逻辑，采用MaxToken计算方式，兼容不同长度的文本块；调整鉴权顺序，提高apikey的鉴权优先级，避免cookie抢占apikey的鉴权结果；链接读取支持多选择器，具体可参考Web站点同步用法；修复了分享链接图片上传鉴权问题、Mongo连接池未释放问题、Dataset Intro无法更新问题、md代码块显示问题以及root权限相关问题；同时优化了Dockerfile配置文件。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464)

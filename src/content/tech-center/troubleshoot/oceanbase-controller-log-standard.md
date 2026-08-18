@@ -24,4 +24,4 @@ Oceanbase向量数据库控制器未参照PGVector控制器的日志规划配置
 2.  重启FastGPT服务，触发Oceanbase向量数据库的相关操作，例如向量数据插入、向量检索等。
 3.  查看控制器生成的日志文件，确认已输出与PGVector控制器格式一致的标准化日志，验证配置生效。
 
-> 来源：https://github.com/labring/FastGPT/issues/6195
+> 来源：[FastGPT GitHub Issue #6195](https://github.com/labring/FastGPT/issues/6195)

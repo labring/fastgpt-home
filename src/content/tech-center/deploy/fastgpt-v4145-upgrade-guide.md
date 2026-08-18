@@ -39,4 +39,4 @@ source_type: 官方文档
 ## 新增、优化与修复内容
 新增内容包括工作流画布演示模式、嵌套应用快速跳转按钮、工作流导出敏感信息过滤选项、对话记录软删除与日志管理删除功能、门户页应用可见度配置等；优化了Redis key获取逻辑、Mongo/Redis/MQ重连逻辑、变量输入框复制功能、LLM空响应判断等；修复了工作流并行合并后重复运行、MCP工具自定义鉴权报错、对话日志列表头像为空抛错等多个问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145)

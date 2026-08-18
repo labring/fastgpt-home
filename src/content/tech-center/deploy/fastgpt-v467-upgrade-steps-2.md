@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv467 \
 ## 升级注意事项
 本次升级脚本仅适用于V4.6.7版本的升级流程，需确认当前运行的FastGPT版本符合前置升级要求，避免跨版本直接执行该脚本导致异常。操作前需确保环境变量中已正确配置rootkey，若参数填写错误将导致初始化请求失败。升级完成后，建议检查知识库配置、对话功能及团队切换功能是否正常运行，确认更新后的交互与功能符合使用预期。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/467
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/467)

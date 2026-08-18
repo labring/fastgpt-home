@@ -18,4 +18,4 @@ FastGPT V4.15.2版本包含多项核心配置与镜像变更，涵盖OpenSandbox
 
 该版本新增了工作流节点实时错误提示、自定义工具参数节点支持手动输入JSON Schema与必填选项等功能，优化了Skill未关联应用时的删除弹窗文案、对话框流输出淡入效果性能等内容，修复了PPTX解析高风险依赖、循环运行节点耗时计算错误等问题。同时需注意，文件上传下载已改用短访问链接，旧版链接仍保持兼容；系统工具生成的文件不再设置1小时过期时间，将跟随会话一起删除。使用`short-redirect`模式时，必须配置`STORAGE_EXTERNAL_ENDPOINT`，否则会出现配置错误。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)

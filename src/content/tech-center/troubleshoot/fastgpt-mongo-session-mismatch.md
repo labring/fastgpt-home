@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前已知v4.14.9.x版本无此异常，可临时降级至该版本验证问题是否消失；若需使用v4.14.10.x及以上版本，需按实际环境排查MongoDB客户端会话的使用逻辑是否符合要求。
 
-> 来源：https://github.com/labring/FastGPT/issues/6739
+> 来源：[FastGPT GitHub Issue #6739](https://github.com/labring/FastGPT/issues/6739)

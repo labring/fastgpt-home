@@ -36,4 +36,4 @@ curl --location --request POST https://{{host}}/api/admin/initv47 \
 ## 新增与优化修复内容
 本版本新增工具调用模块，支持LLM模型根据用户意图动态选择其他模型或插件执行；分类和内容提取支持functionCall模式，需在LLM模型配置中将`functionCall`设为`true`、`toolChoice`设为`false`；新增HTTP插件可快速生成OpenAPI插件，同时支持Helm安装方式。优化项包括高级编排性能、抽离Flow controller到packages、AI模型选择、弹窗交互优化、Docker部署自动初始化副本集，以及浏览器读取文件自动推断编码减少乱码。修复内容包括社区版重排模型选择异常、HTTP请求body传入undefined导致GET请求失败、PG HNSW索引未生效、Safari浏览器语音输入异常、自定义分割规则输入特殊字符导致前端崩溃等问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47)

@@ -21,4 +21,4 @@ source_type: 官方文档
 ### 常见注意事项与FAQ
 配置过程中需注意两点：一是需准确复制FastGPT生成的回调地址，避免因地址错误导致机器人无法接收消息；二是需完成钉钉应用的版本发布，否则机器人功能无法正常生效。若需要重置聊天记录，可向机器人发送大小写敏感的`Reset`消息，即可新开一个聊天记录。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk)

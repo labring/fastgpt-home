@@ -25,4 +25,4 @@ source_type: GitHub issue
 2.  重新发起对`/api/core/app/logs/list`接口的调用，查看FastGPT日志是否不再出现该Validation error报错。
 3.  确认接口返回正常的应用日志列表数据，验证问题已完全解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6164
+> 来源：[FastGPT GitHub Issue #6164](https://github.com/labring/FastGPT/issues/6164)

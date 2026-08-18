@@ -26,4 +26,4 @@ source_type: GitHub issue
 4.  再次检查配置界面，确认配置按键已正常显示，可重复进行参数配置操作
 5.  若需调整参数，可通过新增的配置按键重新打开面板进行修改，验证流程的可用性
 
-> 来源：https://github.com/labring/FastGPT/issues/6187
+> 来源：[FastGPT GitHub Issue #6187](https://github.com/labring/FastGPT/issues/6187)

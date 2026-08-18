@@ -30,4 +30,4 @@ Cannot read properties of undefined (reading 'map')
 2.  调用对话接口发起测试请求，确认不再触发SSE报错
 3.  查看服务端日志，确认无上述`Cannot read properties of undefined (reading 'map')`错误记录。
 
-> 来源：https://github.com/labring/FastGPT/issues/6280
+> 来源：[FastGPT GitHub Issue #6280](https://github.com/labring/FastGPT/issues/6280)

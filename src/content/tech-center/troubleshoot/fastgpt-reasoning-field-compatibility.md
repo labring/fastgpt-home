@@ -23,4 +23,4 @@ FastGPT的现有内容提取逻辑仅针对`reasoning_content`字段进行了适
 ## 解决与验证
 解决该问题的核心是让FastGPT同时兼容`reasoning`和`reasoning_content`两个字段，提取任意一个字段中的思考内容。具体操作需在FastGPT的模型响应解析逻辑中，增加对`reasoning`字段的识别与提取逻辑，确保两个字段的内容都能被正确处理。验证时，使用返回`reasoning`字段的模型发起对话，确认思考内容可以正常在对话界面展示，且思考内容能被正确传递到后续的对话流程中，达到预期的输出效果。
 
-> 来源：https://github.com/labring/FastGPT/issues/6748
+> 来源：[FastGPT GitHub Issue #6748](https://github.com/labring/FastGPT/issues/6748)

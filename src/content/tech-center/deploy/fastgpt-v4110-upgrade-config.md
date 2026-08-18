@@ -18,4 +18,4 @@ V4.11.0是FastGPT带有环境变量变更的重要升级版本，包含镜像更
 ## 变更细节与易错点
 该版本新增商业版应用评测（Beta版）、工作流节点报错捕获分支、对话页独立tab页面UX优化，支持Signoz traces和logs系统追踪，新增Gemini2.5、grok4、kimi模型配置，模型调用日志新增首字响应时长和请求IP信息。优化内容包括优化代码降低递归导致的内存堆积，尤其在高并发知识库预处理场景可降低内存消耗；知识库训练支持全部重试当前集合异常数据；修复工作流中问题分类和内容提取节点默认模型无法通过前端校验，导致工作流无法运行和保存发布的问题；同时优化工作流valueTypeFormat避免数据类型不一致，修复知识库列表搜索时正则未替换特殊词的问题。工具更新方面新增Markdown文本转Docx和Xlsx文件的功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110)

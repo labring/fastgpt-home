@@ -27,4 +27,4 @@ source_type: GitHub issue
 3.  若为部署配置异常，对照官方文档修正相关配置项，重启服务后验证功能恢复情况；
 4.  若为其他未知问题，在提供完整排查信息后等待维护者反馈解决方案，验证修复后的功能是否符合预期。
 
-> 来源：https://github.com/labring/FastGPT/issues/6374
+> 来源：[FastGPT GitHub Issue #6374](https://github.com/labring/FastGPT/issues/6374)

@@ -28,4 +28,4 @@ LOG_OTEL_URL = http://localhost:4318/v1/logs # OTLP收集器地址
 重启FastGPT后，进入Signoz管理台，首次注册账号（数据存储于本地数据库，可随意填写信息），若右侧COMPLETED的步骤条中logs和traces均亮起，则说明配置成功。
 Signoz监控服务占用磁盘资源较多，请勿将FastGPT的debug日志存入监控系统，建议将日志存储时长调整为7天。若出现Signoz数据不再更新且内存持续增长的情况，说明磁盘已满，需扩大存储容量。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)

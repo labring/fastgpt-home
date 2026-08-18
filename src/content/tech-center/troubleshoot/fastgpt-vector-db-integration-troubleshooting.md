@@ -30,4 +30,4 @@ source_type: GitHub issue
 3. 修复排查出的控制器代码异常，确保各向量数据库的操作兼容稳定；
 4. 使用实际业务数据验证向量数据库功能的运行稳定性，确认异常问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6194
+> 来源：[FastGPT GitHub Issue #6194](https://github.com/labring/FastGPT/issues/6194)

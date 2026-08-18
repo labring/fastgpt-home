@@ -19,4 +19,4 @@ Agent Sandbox通用配置适用于opensandbox和sealosdevbox两种提供商，�
 ## 额外配置与常见问题
 可通过环境变量配置沙盒内的依赖源，如AGENT_SANDBOX_NPM_REGISTRY用于配置npm等包管理器的镜像源，默认使用https://registry.npmmirror.com；AGENT_SANDBOX_PYPI_INDEX_URL用于配置PyPI镜像源，默认使用https://pypi.tuna.tsinghua.edu.cn/simple。同时可配置资源限制参数，包括单实例CPU核数上限默认1核、内存上限默认2048MiB、存储容量默认1GiB等，以及生命周期参数，如自动暂停时间默认60分钟、自动归档时间默认7天。若启用Agent Sandbox后出现`AGENT_SANDBOX_PROXY_URL or AGENT_SANDBOX_PREVIEW_PROXY_URL is required`报错，需检查对应环境变量是否配置完整。此外，预览链接为短期只读权限，请勿分享给未授权访问该工作区的用户。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common)

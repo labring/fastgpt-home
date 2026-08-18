@@ -21,4 +21,4 @@ FastGPT的智能体应用支持集成已发布的自定义技能，通过该能�
 智能自动调用的前提是使用的模型足够智能，此时无需手动命令智能体运行代码，AI会根据用户的输入自动判断是否需要调用该技能，并在后台虚拟机中安全执行代码。
 用户还可点击聊天气泡底部的"虚拟机"按钮或右上角的电脑图标，在弹出的侧边栏中直接查看虚拟机内当前最新的所有文件内容和代码状态。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/integration)

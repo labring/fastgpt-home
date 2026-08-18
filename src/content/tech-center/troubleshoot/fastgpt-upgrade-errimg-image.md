@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现为新版本逻辑适配问题，需按照FastGPT官方文档的私有部署附件配置要求完成对应调整；若为存储权限或路径配置异常，需修正对应的存储配置项。验证方式为：重新上传一张图片附件，检查其链接不再显示为errimg.png，且可正常加载预览。
 
-> 来源：https://github.com/labring/FastGPT/issues/6618
+> 来源：[FastGPT GitHub Issue #6618](https://github.com/labring/FastGPT/issues/6618)

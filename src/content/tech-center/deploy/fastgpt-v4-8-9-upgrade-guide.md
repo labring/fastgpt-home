@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/init/489 --header root
 ## 升级注意事项
 本次升级无需额外复杂配置，仅需按上述步骤操作即可。需注意，初始化请求仅针对多租户通知方式的初始化，非内部使用的场景请务必执行该步骤以确保功能完整。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489)

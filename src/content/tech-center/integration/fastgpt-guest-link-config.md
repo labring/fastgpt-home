@@ -20,4 +20,4 @@ source_type: 官方文档
 该功能仅商业版支持，用于将免登录对话框快速接入现有系统。需配置POST请求的根地址，分享链接的初始化、开始对话以及对话结束都会向该地址的特定接口发送请求。接口统一响应格式为`{ success: true, message: 错误提示, msg: 同message, data: { uid: 用户唯一凭证 } }`，其中success为布尔值，message与msg等效，success为false时会展示对应错误提示。uid需为不包含|、/、“、\\字符、长度≤255字节的字符串，否则会返回`Invalid UID`错误，且uid将用于拉取和保存对话记录。
 最小配置示例步骤：1. 配置身份校验根地址，无需填写完整请求路径；2. 在分享链接中添加`authToken`参数，例如将原始链接`https://share.fastgpt.io/chat/share?shareId=648aaf5ae121349a16d62192`修改为`https://share.fastgpt.io/chat/share?shareId=648aaf5ae121349a16d62192&authToken=userid12345`；3. 实现三个接口：`/shareAuth/init`（聊天初始化校验）、`/shareAuth/start`（对话前校验）、`/shareAuth/finish`（可选对话结果上报），其中前两个接口需返回校验结果，第三个接口无强制返回格式要求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/link
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/link)

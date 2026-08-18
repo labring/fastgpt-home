@@ -25,4 +25,4 @@ source_type: GitHub issue
 3. 重新生成部署文件：执行`pnpm run gen:deploy`命令，重新生成`deploy/dev/`、`deploy/docker/`和`document/public/deploy/docker/`目录下的部署文件；
 4. 验证配置：检查生成的部署文件，确认OpenSandbox相关镜像已从`deploy/args.json`读取配置，无`undefined`相关报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6707
+> 来源：[FastGPT GitHub Issue #6707](https://github.com/labring/FastGPT/issues/6707)

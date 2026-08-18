@@ -23,4 +23,4 @@ source_type: 官方文档
 1.  微信发布渠道场景下，当微信接口出现特殊异常时，会触发快速轮询的异常行为，该问题已被修复，避免了不必要的接口请求消耗；
 2.  针对v1接口在`stream=false`且`detail=true`的请求场景，补回了缺失的type字段以保证接口兼容性，解决了因字段缺失导致的接口调用异常问题，提升了接口调用的稳定性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153)

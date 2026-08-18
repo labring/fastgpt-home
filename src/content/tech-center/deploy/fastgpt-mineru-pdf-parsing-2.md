@@ -45,4 +45,4 @@ FastGPT内置的PDF解析依赖pdfjs库，基于逻辑解析逻辑，无法有�
 ## 注意事项与边界
 需注意，该功能仅支持通过指定的MinerU服务解析PDF，无法处理其他格式文件。配置完成后必须重启FastGPT服务才能生效。若未勾选「PDF增强解析」，将使用内置的默认解析器。同时需确保MinerU服务正常运行，否则PDF上传可能会出现解析失败的情况。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)

@@ -65,4 +65,4 @@ curl --location --request POST https://domain/v1/chat/completions \
 ## 使用注意事项
 创建知识库时选择 M3E 模型后，将无法再修改该知识库的向量模型。应用仅能绑定使用同一向量模型的知识库，跨模型绑定不可行。不同向量模型的相似度计算逻辑存在差异，需自行测试调整相似度阈值。使用 ChatGLM2 模型时，直接在模型选择界面选中 `chatglm2` 即可完成调用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2-m3e)

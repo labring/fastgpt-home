@@ -25,4 +25,4 @@ FastGPT公有云版本的前端表单中，输入值的长度被默认限制为2
 2. 重新加载或重启FastGPT服务，使新的配置生效；
 3. 再次在前端表单中输入超过200字符的内容，确认不再触发长度限制，表单可正常提交。
 
-> 来源：https://github.com/labring/FastGPT/issues/6268
+> 来源：[FastGPT GitHub Issue #6268](https://github.com/labring/FastGPT/issues/6268)

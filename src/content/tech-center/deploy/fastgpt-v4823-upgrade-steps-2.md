@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4823 \
 ### 更新内容与注意事项
 本次更新新增默认“知识库文本理解模型”配置、AI proxy V1版以及工单入口支持；优化了模型配置表单的必填项校验、集合列表大数据量统计性能、Latex格式数学公式转义、大尺寸文档图片自动忽略逻辑、时间选择器的默认时间设置，同时升级了mongoose库版本依赖。修复了标签过滤时子文件夹未生效、离开团队未刷新成员列表、PPTX解析编码错误、知识库单条数据删除后全文索引未同步删除、Mongo Dataset text索引查询失效等问题。需要注意，本次暂时移除了md阅读优化功能以避免链接分割错误，请勿自行恢复该功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823)

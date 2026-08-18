@@ -20,4 +20,4 @@ source_type: 官方文档
 ### 工具管理与常见问题
 工具管理包含查看、上传、删除三类操作，其中上传和删除仅root用户可执行。常见问题仅收录该场景：若无法看到「导入/更新」按钮，原因是当前用户非root用户，解决方案为使用root账户重新登录FastGPT。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/tools/system-plugins/upload_system_tool
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/tools/system-plugins/upload_system_tool)

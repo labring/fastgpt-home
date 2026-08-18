@@ -32,4 +32,4 @@ source_type: 官方文档
 ## 升级注意事项
 本次升级需严格遵循操作顺序，不可跳过备份步骤。初始化请求仅需执行一次，重复执行可能引发未知数据异常。需注意普通版与商业版的初始化接口不同，请勿混淆使用。若升级后出现功能异常，请先检查镜像tag是否正确配置为`v4.8.5`，以及初始化请求的参数是否替换正确。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485)

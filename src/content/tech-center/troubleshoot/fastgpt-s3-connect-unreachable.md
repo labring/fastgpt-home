@@ -27,4 +27,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对排查出的具体问题进行处理：若S3服务异常则重启恢复；若网络连通性异常则修复对应问题；若配置的S3信息有误则修正IP、端口等参数。处理完成后，重启FastGPT相关容器，访问页面确认可以正常打开，再次查看容器日志，确认不再出现S3连接不可达的报错，即可验证问题已解决。需注意，FastGPT正常运行需正确配置S3信息，未配置或配置错误会导致服务启动失败。
 
-> 来源：https://github.com/labring/FastGPT/issues/7296
+> 来源：[FastGPT GitHub Issue #7296](https://github.com/labring/FastGPT/issues/7296)

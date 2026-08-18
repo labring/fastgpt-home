@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查后确认具体异常原因，可针对对应问题进行针对性修复。验证时需确认异常功能恢复正常，相关配置生效且无新的报错产生。若无法定位具体原因，需补充更多异常相关信息后再进行进一步排查。
 
-> 来源：https://github.com/labring/FastGPT/issues/6598
+> 来源：[FastGPT GitHub Issue #6598](https://github.com/labring/FastGPT/issues/6598)

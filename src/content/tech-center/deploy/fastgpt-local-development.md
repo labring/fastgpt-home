@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 常见问题排查
 若出现端口冲突，需先关闭本地已启动的FastGPT服务；连接Mongo数据库时，需在连接地址中添加`directConnection=true`参数以适配副本集。若执行`pnpm i`后`postinstall.sh`脚本无权限，可先执行`chmod -R +x ./scripts/`后重新执行`pnpm i`，仍无法解决可手动执行脚本内的内容。若遇到`TypeError: Cannot read properties of null (reading 'useMemo')`报错，可删除所有`node_modules`目录，使用Node.js 18版本重新执行安装流程。当用户时区为Asia/Shanghai且处于非Linux环境时，会出现系统时间获取异常，需将本地时区调整为UTC（+0）。连接远程数据库时需检查端口是否开放，本地运行的数据库可尝试将host修改为localhost或127.0.0.1。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/dev
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/dev)

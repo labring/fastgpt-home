@@ -25,4 +25,4 @@ FastGPT首页会展示“从模板创建”功能入口，所有访问用户均�
 2. 切换至有权限的用户账号，确认该按钮仍可正常展示并使用。
 3. 验证无权限用户访问时，不会再触发“无权限操作该团队”的报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6547
+> 来源：[FastGPT GitHub Issue #6547](https://github.com/labring/FastGPT/issues/6547)

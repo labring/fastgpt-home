@@ -28,4 +28,4 @@ source_type: GitHub issue
 3. 若数据库数据未丢失，清理系统缓存并重启服务（缓存清理方式需按实际环境确认）。
 4. 验证：重启服务后登录系统，查看知识库与应用列表是否恢复正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6731
+> 来源：[FastGPT GitHub Issue #6731](https://github.com/labring/FastGPT/issues/6731)

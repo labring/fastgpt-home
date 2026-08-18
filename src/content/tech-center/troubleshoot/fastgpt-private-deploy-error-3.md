@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查出的具体原因进行对应修复，例如启动未运行的依赖服务、修正错误的配置项、更换正常可用的API Key等。修复完成后，重新触发原报错场景，确认异常不再出现，功能恢复正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6298
+> 来源：[FastGPT GitHub Issue #6298](https://github.com/labring/FastGPT/issues/6298)

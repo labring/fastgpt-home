@@ -35,4 +35,4 @@ AGENT_SANDBOX_STORAGE_SIZE_GI = 1
 3.  浏览器 WebSocket 连接失败：检查代理服务是否能被浏览器访问，并确认反向代理已支持 WebSocket Upgrade；如果 FastGPT 通过 HTTPS 访问，`AGENT_SANDBOX_PROXY_URL` 也应使用 `wss://` 协议，避免浏览器拦截混合内容。
 4.  proxy 校验失败或返回 401：确认 `fastgpt-app` 和 `fastgpt-agent-sandbox-proxy` 中的 `AGENT_SANDBOX_PROXY_SECRET` 完全一致，并且长度不少于 32 位。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox)

@@ -19,4 +19,4 @@ source_type: 官方文档
 服务费用以官方公布的价格为准，若官方调整费用标准，最终以用户付款时刻的价格为准。若发现账户存在异常或违法情况，需立即修改账号密码，并联系官方客服（邮箱：archer@fastgpt.io）。
 需注意，因用户自身误操作导致的数据丢失、损坏，官方不承担责任；使用生成式AI功能需遵守所在地相关法律法规，例如中国生成式人工智能服务管理办法。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/cloud/terms
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/terms)

@@ -37,4 +37,4 @@ source_type: 官方文档
 ## 交互与展示
 用户可切换全屏、预览、源代码三种模式查看与控制嵌入的HTML内容。iframe会自适应父容器宽度，确保内容正常显示。需注意，sandbox属性已限制HTML内的脚本执行、表单提交等行为，无法在嵌入的HTML中运行JS代码。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/chat/htmlRendering
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/chat/htmlRendering)

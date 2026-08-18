@@ -37,4 +37,4 @@ curl --location --request POST https://your-domain/v1/chat/completions \
 ```
 其中`your-domain`为模型部署的实际地址。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)

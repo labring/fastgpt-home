@@ -21,4 +21,4 @@ source_type: 官方文档
 ## 核心应用价值
 该模块的功能类似于程序开发中的埋点操作，能够帮助开发者观测对话流程中的数据情况，无需修改核心对话逻辑即可新增数据记录点，辅助后续的对话流程优化与业务数据分析。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback)

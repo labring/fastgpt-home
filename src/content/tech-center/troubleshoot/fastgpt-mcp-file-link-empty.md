@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现MCP工具传递的参数格式有误，调整参数格式后重新调用，确认FastGPT应用能正确接收文件链接参数；若MCP服务暴露配置存在问题，重新配置MCP服务的暴露地址，确保参数可正确传递到FastGPT应用；若FastGPT应用的参数解析逻辑存在异常，需按实际环境确认应用的参数接收配置，确保可正确解析MCP传入的文件链接参数。验证方式为：在MCP工具中传入有效的文件链接，调用FastGPT应用，检查应用是否能正常接收到文件链接参数，确认参数不为空。
 
-> 来源：https://github.com/labring/FastGPT/issues/6309
+> 来源：[FastGPT GitHub Issue #6309](https://github.com/labring/FastGPT/issues/6309)

@@ -45,4 +45,4 @@ fastgpt             |
 ### 验证方法
 修改完成后，重新发起Postgre MCP的数据查询操作，确认可以正常获取到数据，且FastGPT后台不再输出该重复连接的错误日志。
 
-> 来源：https://github.com/labring/FastGPT/issues/6509
+> 来源：[FastGPT GitHub Issue #6509](https://github.com/labring/FastGPT/issues/6509)

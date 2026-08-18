@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前可通过临时规避方案缓解问题：将MCP工具节点调整为串行调用，避免并发请求。若需支持并发调用，需排查MCP服务端的并发请求限制、FastGPT的MCP客户端配置，或等待官方修复。验证方式为：修改工作流为串行调用后，再次触发多工具调用，确认无SSE 400报错；或排查修复并发请求的根因后，验证并发调用正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6393
+> 来源：[FastGPT GitHub Issue #6393](https://github.com/labring/FastGPT/issues/6393)

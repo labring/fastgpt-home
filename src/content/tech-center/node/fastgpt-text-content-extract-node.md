@@ -28,4 +28,4 @@ source_type: 官方文档
 3.  添加目标字段：第一个`key`设为`user_name`，`字段描述`为“用户姓名”，勾选`必须`；第二个`key`设为`user_phone`，`字段描述`为“用户联系电话”，勾选`必须`。
 4.  保存配置并触发节点，即可获取对应的结构化提取结果。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract)

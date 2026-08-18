@@ -20,4 +20,4 @@ FastGPT的AI配置用于调整应用或工作流中AI对话节点的模型、回
 4.  验证配置：保存配置后测试对话，若出现"该模型不支持多模态识别"的提示，需更换支持对应能力的模型。
 思考配置仅部分模型支持，可选择默认、不思考或不同强度的思考档位，其对齐OpenAI的reasoning_effort参数，通过ai-proxy适配不同平台的参数格式。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/ai_settings)

@@ -18,4 +18,4 @@ FastGPT Agent V2的辅助生成与调试功能，包含辅助生成和调试预�
 
 辅助生成与调试功能仅支持商业版，且当前感知范围有限，使用时需基于左侧面板已配置的模型、知识库与工具。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/debug
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/debug)

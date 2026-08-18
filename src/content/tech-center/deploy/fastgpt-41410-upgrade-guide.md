@@ -35,4 +35,4 @@ AGENT_SANDBOX_VOLUME_MANAGER_TOKEN: *x-volume-manager-auth-token
 ## 新增优化与注意事项
 本版本新增OpenSandbox Docker部署方案与volume数据持久化支持，新增沙盒文件读取链接工具、微信个人号及飞书发布渠道，支持流输出，同时新增目录与rerank模型上限配置，以及LLM梯度计量计费模式。优化内容包括简化工作流runtime计算、限制大变量计算避免线程阻塞，统一模型配置为“测试模型”标志，仅可在AI聊天场景使用。修复了子工作流全局变量默认值失效、rerank模型不显示、bge-m3向量模型输出为0、MCP并发调用异常、登录与SSRF安全漏洞等问题。需注意：旧版sandbox镜像名需替换，环境变量配置需严格匹配要求，避免出现服务启动异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410)

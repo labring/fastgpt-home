@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决该问题需要修改copyObjectInSelfBucket方法的代码：调整targetKey与sourceKey的传入顺序，移除对sourceKey的编码步骤。正确的代码逻辑应为：直接使用原始的sourceKey，将targetKey和sourceKey按正确顺序传入OSS客户端的copy接口。修改完成后，重新上传插件即可正常完成文件复制，插件可正常部署使用。需注意该问题在@fastgpt-sdk/storage的0.6.6与0.6.15版本均存在。
 
-> 来源：https://github.com/labring/FastGPT/issues/6787
+> 来源：[FastGPT GitHub Issue #6787](https://github.com/labring/FastGPT/issues/6787)

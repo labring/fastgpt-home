@@ -25,4 +25,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对第一个问题：FastGPT原版升级无需运行商业版部署脚本，需使用官方提供的原版专属升级脚本。针对http插件缺失问题：若已使用商业版脚本恢复了自定义与MCP插件，需手动检查http插件的配置文件是否完整，或重新导入http插件的配置；验证方法：重启服务后进入"我的工具"页面，确认http插件是否正常显示在插件列表中。
 
-> 来源：https://github.com/labring/FastGPT/issues/6161
+> 来源：[FastGPT GitHub Issue #6161](https://github.com/labring/FastGPT/issues/6161)

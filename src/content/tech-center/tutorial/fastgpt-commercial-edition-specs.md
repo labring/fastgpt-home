@@ -17,4 +17,4 @@ FastGPT商业版是基于社区版的增强版本，仅需安装商业版镜像�
 ## 快速配置步骤
 1. 完成社区版部署，获取其内网地址；2. 拉取官方提供的商业版镜像；3. 在商业版配置页面填写社区版内网地址，并使用官方提供的License启动商业版服务。完整版应用由社区版镜像与商业版镜像组合而成，启动商业版镜像必须绑定有效License。如需跨版本更新或复杂更新，可参考官方文档自行操作，或付费获取技术支持，收费标准与技术服务费一致。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/commercial
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/commercial)

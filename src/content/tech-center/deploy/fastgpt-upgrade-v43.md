@@ -29,4 +29,4 @@ FILE_TOKEN_KEY=filetokenkey
 ```
 请根据实际业务安全需求，将示例中的`filetokenkey`替换为自定义的高强度密钥值，确保文件预览链接的安全性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/43)

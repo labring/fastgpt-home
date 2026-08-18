@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 内置函数与使用示例
 沙盒内置`SystemHelper.httpRequest`函数用于发起外部HTTP请求，自动拦截内网地址以防护SSRF攻击。该函数单次请求超时最大为60秒，响应体最大2MB，仅支持http/https协议，每次执行最多可发起30个请求。JavaScript和Python均有对应的使用示例，同时支持使用白名单内的模块：JavaScript可通过`require()`使用`lodash`、`moment`、`dayjs`等npm模块，禁止使用`fs`、`child_process`等模块；Python可导入`math`、`numpy`、`pandas`等标准库和第三方库，禁止使用`os`、`sys`、`subprocess`等涉及系统调用、网络访问或文件操作的模块。以下为最小配置示例：JavaScript代码将逗号分隔的字符串转为数组，输入变量为`input`，代码为`function main ({ input }){ const items = input.split(',').map(s => s.trim()).filter(Boolean); return { items }; }`，在自定义输出中添加`items`即可获取转换后的数组。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)

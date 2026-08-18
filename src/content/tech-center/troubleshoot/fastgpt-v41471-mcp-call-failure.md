@@ -25,4 +25,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决方法分为两点：一是补充传递正确的toolName参数值，避免该参数为undefined；二是修正请求参数中格式异常的字段，将filter内的drgnamecn等参数转换为合法的字符串或可序列化格式，消除未解析的对象格式。验证方式为：重新发起MCP工具调用，确认不再出现toolName为undefined的报错，以及"Invalid input: expected string, received undefined"的校验错误，调用结果符合预期，且v4.14.7.1版本下可正常完成MCP服务器调用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6456
+> 来源：[FastGPT GitHub Issue #6456](https://github.com/labring/FastGPT/issues/6456)

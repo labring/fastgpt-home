@@ -27,4 +27,4 @@ V4.14.7版本对日志系统进行了全面重构，移除了原有的日志相�
 ## 关键注意事项
 该版本移除了MongoDB的日志存储功能，需使用OTEL收集器进行日志采集。LLM请求追踪默认保留6小时，可通过`LLM_REQUEST_TRACKING_RETENTION_HOURS`变量调整保留时长。工作流场景修复了全局变量默认值类型错误、节点渲染异常等问题，工具调用时会自动补充空的arguments参数，无需手动处理。使用MCP服务时，需注意权限控制已优化，避免越权调用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)

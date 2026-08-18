@@ -25,4 +25,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对部署配置与技术栈不兼容的问题，需调整FastGPT部署配置以适配对应组件，验证配置生效后服务可正常启动与运行；针对跨境API对接问题，需核对对接参数、权限与通信协议配置，验证API调用可正常完成；针对SLA维运配置异常的问题，需完善监控与自动运维设置，确认服务可实现7×24稳定运行与故障响应。
 
-> 来源：https://github.com/labring/FastGPT/issues/6804
+> 来源：[FastGPT GitHub Issue #6804](https://github.com/labring/FastGPT/issues/6804)

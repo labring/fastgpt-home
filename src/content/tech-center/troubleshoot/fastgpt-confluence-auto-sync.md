@@ -30,4 +30,4 @@ source_type: GitHub issue
 3. 设置自动同步规则，调整同步频率，验证知识库是否可自动从Confluence拉取更新内容；
 4. 对比Confluence与FastGPT知识库的内容，确认无需手动上传即可完成同步。
 
-> 来源：https://github.com/labring/FastGPT/issues/6577
+> 来源：[FastGPT GitHub Issue #6577](https://github.com/labring/FastGPT/issues/6577)

@@ -22,4 +22,4 @@ source_type: 官方文档
 2. 找到fastgpt-pro（FastGPT商业版）的配置项，将其镜像tag设置为`v4.14.15`。
 3. 保存配置文件后，重新启动对应服务即可完成升级。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41415
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41415)

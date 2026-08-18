@@ -33,4 +33,4 @@ FastGPT私有部署4.14.5版本中，所有容器可正常启动，但安装插�
 ## 解决与验证
 若排查发现S3_ENDPOINT配置为容器名（如fastgpt-minio）但插件容器与存储服务容器不在同一网络，可将S3_ENDPOINT修改为宿主机IP:端口（与S3_EXTERNAL_BASE_URL保持一致），或调整容器网络使两者处于同一网络中。修改配置后重启fastgpt-plugin容器，重新尝试安装插件，查看容器日志中是否仍出现ECONNREFUSED相关报错。若日志中无存储桶连接失败的报错，则问题解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6262
+> 来源：[FastGPT GitHub Issue #6262](https://github.com/labring/FastGPT/issues/6262)

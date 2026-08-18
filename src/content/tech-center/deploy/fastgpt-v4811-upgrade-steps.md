@@ -71,4 +71,4 @@ curl --location --request POST "https://{{host}}/api/admin/init/4811" \
 ```
 该请求将初始化团队成员组。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)

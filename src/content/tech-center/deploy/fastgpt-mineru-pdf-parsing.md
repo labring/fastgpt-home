@@ -35,4 +35,4 @@ docker run --gpus all -itd -p 7231:8001 --name mode_pdf_minerU crpi-h3snc261q1do
 ### 测试与使用说明
 上传PDF文件并勾选「PDF增强解析」选项，可通过日志验证解析是否生效，有效日志包含`[Info] 2024-12-05 15:04:42 Parsing files from an external service`和`[Info] 2024-12-05 15:07:08 Custom file parsing is complete, time: 1316ms`，需确保`LOG_LEVEL`设置为`info`或`debug`。此外，MinerU采用GPL-3.0协议，需在遵守协议的前提下使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/mineru)

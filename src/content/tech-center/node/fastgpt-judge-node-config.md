@@ -21,4 +21,4 @@ FastGPT判断器是工作流中的专用节点，具备可重复添加、支持�
 ## 场景扩展说明
 判断器节点支持灵活扩展判断条件与分支，可适配更多复杂的业务判断需求。例如可通过叠加多个判断规则，实现多层级的变量校验、多维度的内容筛选等场景。同时该节点可重复添加至工作流中，满足不同环节的判断需求，无需重复创建新的节点实例。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tfswitch
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tfswitch)

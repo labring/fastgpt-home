@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若目标API的SSL证书确实过期，可联系API服务方更新证书后重新发起请求，即可恢复正常。若暂时无法更新目标API的SSL证书，需找到FastGPT中关闭SSL证书验证的配置项：该配置项的具体位置需按实际FastGPT版本的界面确认；若官方未提供可视化开关，则需通过修改对应部署配置文件或环境变量实现（需按实际部署环境确认具体操作步骤）。配置完成后重新发起HTTP请求，即可验证请求是否可以正常返回内容。
 
-> 来源：https://github.com/labring/FastGPT/issues/6200
+> 来源：[FastGPT GitHub Issue #6200](https://github.com/labring/FastGPT/issues/6200)

@@ -23,4 +23,4 @@ LLM stream调用默认超时时间已调大；部分确认交互流程得到优�
 #### 修复内容
 修复了多知识库全文检索时排序得分不正确的问题；修复了流响应捕获`finish_reason`可能不正确的问题；修复了工具调用模式下未保存思考输出的问题；修复了知识库`indexSize`参数未生效的问题；修复了工作流嵌套2层后，获取预览引用、上下文不正确的问题；修复了xlsx转Markdown时前置多出空格的问题；修复了读取Markdown文件时，Base64图片未进行转换保存的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910)

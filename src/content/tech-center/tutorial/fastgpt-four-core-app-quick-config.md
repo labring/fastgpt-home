@@ -17,4 +17,4 @@ FastGPT提供四类核心应用类型，覆盖不同业务场景。对话Agent�
 ## 选型与落地注意事项
 技术选型时需结合业务需求匹配应用类型：轻量内容生成优先选对话Agent，需依赖自有资料的问答场景搭配知识库与对话Agent，多步骤任务编排使用工作流，数据分析场景选用Agent V2。落地时需注意，正式环境中Email工具建议先生成邮件草稿，经用户确认后再执行发送，避免误发；知识库导入的文档需与业务场景匹配，否则会导致检索结果无效。此外，所有应用的提示词、工具参数均可替换为业务专属配置，无需局限于示例内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)

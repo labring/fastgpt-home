@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4143 \
 ### 优化与修复内容
 本次更新优化了工作流工具文件上传的用户体验，添加权限表校验中间件以增强系统鲁棒性。修复内容包括：工作流调试预览窗口重新渲染导致输入丢失的问题；S3服务与主服务相同Origin域名时，文件请求URL被错误替换引发的404报错；插件工具缓存未正确刷新的问题；开发模式下刷新缓存导致静态文件重复上传的问题；上传pkg后图片未正确上传的问题。此外，微信公众号工具集新增支持同时上传多篇文档到草稿箱的功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4143
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4143)

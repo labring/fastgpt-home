@@ -22,4 +22,4 @@ FastGPT从v4.14.10起，在嵌入请求中强制传入`encoding_format: 'float'`
 ## 解决与验证
 目前该问题已在main分支通过#6807修复，新增`decodeEmbedding()`函数将base64字符串解码为`number[]`，再执行后续的归一化、截断、向量存储流程。但截至v4.14.15最新正式版，该修复尚未被包含。临时解决方式可等待官方发布包含该修复的新版本，或自行基于#6807的修复代码进行本地编译部署。验证方式：配置嵌入请求为Voyage API并覆盖`encoding_format`为base64，发起请求后无400错误且无类型报错，嵌入结果可正常使用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6820
+> 来源：[FastGPT GitHub Issue #6820](https://github.com/labring/FastGPT/issues/6820)

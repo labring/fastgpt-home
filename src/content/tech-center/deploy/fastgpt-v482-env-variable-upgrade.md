@@ -27,4 +27,4 @@ FastGPT V4.8.2版本核心变更为环境变量配置调整，同时新增了部
 ## 配置验证要点
 完成配置后，可通过查看FastGPT应用的环境变量是否正确加载SANDBOX_URL参数，测试新增的JS代码运行节点、内容提取节点功能是否正常生效，同时确认站点同步、定时任务功能恢复正常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482)

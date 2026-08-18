@@ -22,4 +22,4 @@ source_type: 官方文档
 2.  `OPENAI_API_KEY`：填写上一步获取到的APIKey，推荐在请求体中传入`appId`；若第三方应用仅支持配置单一密钥，可使用`apiKey-appId`的兼容格式完成配置。
 部分第三方应用可直接沿用上述变量完成对接，具体调用逻辑需参考对应应用的官方文档。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/openapi)

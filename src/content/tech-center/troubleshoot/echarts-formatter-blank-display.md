@@ -23,4 +23,4 @@ FastGPT的ECharts渲染模块对JSON配置中的函数类型参数存在限制�
 ## 解决与验证
 将ECharts配置中的`formatter`函数替换为FastGPT兼容的非函数形式，或调整配置逻辑以避免直接传入JavaScript函数。修改完成后重新提交配置，验证图表可正常显示且tooltip内容符合预期。若需保留自定义格式化逻辑，需确认FastGPT是否支持通过其他方式注入自定义渲染函数，需按实际环境确认。
 
-> 来源：https://github.com/labring/FastGPT/issues/6536
+> 来源：[FastGPT GitHub Issue #6536](https://github.com/labring/FastGPT/issues/6536)

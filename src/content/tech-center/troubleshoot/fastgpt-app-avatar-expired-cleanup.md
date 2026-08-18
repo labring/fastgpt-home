@@ -26,4 +26,4 @@ source_type: GitHub issue
 ### 验证步骤
 重新上传头像后，等待预设的时间周期，确认头像未被自动清理，且可正常再次修改应用头像，无`Failed to upload`类报错出现。
 
-> 来源：https://github.com/labring/FastGPT/issues/6513
+> 来源：[FastGPT GitHub Issue #6513](https://github.com/labring/FastGPT/issues/6513)

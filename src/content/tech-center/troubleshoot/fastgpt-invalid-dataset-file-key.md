@@ -25,4 +25,4 @@ source_type: GitHub issue
 2. 针对版本升级后的校验逻辑变更，需按照部署配置规范重新生成或同步数据集文件密钥（具体操作需按实际环境确认）。
 3. 完成调整后，重新访问原上传的文件，确认报错"Invalid dataset file key"不再出现，文件可正常查看。
 
-> 来源：https://github.com/labring/FastGPT/issues/6608
+> 来源：[FastGPT GitHub Issue #6608](https://github.com/labring/FastGPT/issues/6608)

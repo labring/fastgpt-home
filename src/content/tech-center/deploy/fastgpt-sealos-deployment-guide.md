@@ -21,4 +21,4 @@ FastGPT 使用 one-api 项目管理模型池，可兼容多种模型类型。Sea
 ### 后续配置与升级操作
 在 Sealos 应用管理中可查看部署的 FastGPT 应用与对应数据库，暂停或删除服务时需同步操作数据库。修改环境变量或配置文件时，选中 FastGPT 应用点击变更即可操作。如需更新 FastGPT，需先查看更新文档确认目标版本，避免跨版本升级：在应用管理中找到对应应用（fastgpt、fastgpt-pro），点击右侧三点或详情页右上角的变更，修改镜像版本号后点击变更/重启，自动拉取最新镜像更新，若目标版本需要初始化则执行对应脚本。此外，可通过修改环境变量调整系统名称、描述与 favicon，挂载 logo 需新增挂载文件 /app/projects/app/public/icon/logo.svg 并填入对应 SVG 内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos)

@@ -31,4 +31,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查确认是镜像名称或标签错误，修正镜像地址后重新执行拉取命令即可解决；若为网络连通问题，可调整网络配置或配置代理以访问目标镜像仓库；若为权限不足，需为当前账号配置对应镜像仓库的拉取权限。验证方式为：成功拉取所有所需镜像后，继续执行FastGPT的后续部署步骤，确认服务可以正常启动运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/7351
+> 来源：[FastGPT GitHub Issue #7351](https://github.com/labring/FastGPT/issues/7351)

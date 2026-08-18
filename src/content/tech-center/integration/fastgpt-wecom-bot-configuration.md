@@ -22,4 +22,4 @@ source_type: 官方文档
 ## 常见问题与使用说明
 完成配置后，可在企业微信通讯录中找到创建的机器人并发送消息测试。若发送消息无响应，可按以下顺序排查：1. 检查可信域名配置是否正确；2. 检查Token和Encoding-AESKey是否填写正确；3. 查看FastGPT对话日志是否存在对应提问记录，若无记录则可能是应用运行报错，可先尝试最简单的机器人进行测试。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom)

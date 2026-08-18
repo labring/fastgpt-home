@@ -25,4 +25,4 @@ source_type: GitHub issue
 ## 解决与验证
 若通过排查步骤定位到具体的报错原因，可根据官方文档提供的对应方案进行修复。修复完成后重启FastGPT服务，验证核心功能是否可正常调用，确认报错不再出现。若经过上述排查后仍未解决问题，需补充完整的报错日志、配置文件片段（脱敏后）等信息，以便进一步协助排查。
 
-> 来源：https://github.com/labring/FastGPT/issues/6633
+> 来源：[FastGPT GitHub Issue #6633](https://github.com/labring/FastGPT/issues/6633)

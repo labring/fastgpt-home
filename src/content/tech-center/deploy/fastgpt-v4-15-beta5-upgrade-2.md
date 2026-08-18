@@ -23,4 +23,4 @@ V4.15.0-beta5版本存在多项核心调整，包括环境变量变更、镜像�
 
 该版本新增多项功能与修复，包括HTTP节点支持配置忽略TLS证书校验（适用于调用自签名或内部证书的HTTPS服务）、支持目录深度环境变量、对话框新增快速滚动到底部按键、优化流输出动效、支持通过模型生成对话标题（需配置`CHAT_TITLE_MODEL`）、调整Skill Edit编辑交互、支持快速回复的输出语法等。同时修复了S3私有对象key未绑定鉴权资源时的跨资源文件访问风险，优化了知识库训练错误提示、工具空响应自动补充`none`、过滤无效知识库引用角标、优化重定向后的SSRF校验等场景。需注意，该版本移除了所有内置LLM请求中的`temperature`和`max_tokens`参数以避免部分模型不兼容，系统工具运行前会新增二次权限校验。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505)

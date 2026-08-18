@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 首先停止所有FastGPT相关容器，避免在修改配置时产生数据写入冲突。接着进入MongoDB数据目录，编辑持久化的副本集配置，将其中的`mongo:27017`替换为当前compose文件中配置的MongoDB服务名（如`fastgpt-mongo:27017`）。完成修改后重启MongoDB容器，等待其正常启动后，再依次启动plugin、fastgpt-app等其他关联服务。最后通过容器内的ping命令或MongoDB客户端连接`fastgpt-mongo:27017`，验证DNS解析与连接是否正常，确认所有服务启动无报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6844
+> 来源：[FastGPT GitHub Issue #6844](https://github.com/labring/FastGPT/issues/6844)

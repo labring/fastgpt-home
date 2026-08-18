@@ -48,4 +48,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4822 \
 11. 修复用户选择节点无法正常连线的问题；
 12. 修复对话记录保存时source字段未正常记录的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4822)

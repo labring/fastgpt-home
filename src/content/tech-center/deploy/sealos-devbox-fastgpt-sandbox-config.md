@@ -27,4 +27,4 @@ source_type: 官方文档
 4.  Proxy校验失败或返回401：需确认`fastgpt-app`和`fastgpt-agent-sandbox-proxy`中的`AGENT_SANDBOX_PROXY_SECRET`参数完全一致，且参数长度不少于32位。
 需注意，该功能仅支持商业版用户，非商业场景无法使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/sealosdevbox)

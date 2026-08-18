@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 操作说明补充
 该操作属于无额外配置的简单迁移方式，仅依赖本地目录的复制，无需调整任何数据库配置参数。操作过程中需确保复制操作完整，避免出现目录缺失或文件损坏的情况，保障数据的完整性。此外，该操作适用于同版本的FastGPT数据库迁移与备份场景，若涉及跨版本升级，需参考对应版本的升级文档。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_db
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_db)

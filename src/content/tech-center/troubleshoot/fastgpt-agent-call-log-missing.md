@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 首先按照排查步骤逐一确认问题点：若为筛选条件设置错误，调整筛选参数后刷新调用日志页面即可查看对应记录；若为日志上报异常，需结合官方文档排查服务运行状态与配置项。验证方式为：重新发起对话Agent的对话请求，确认能正常获取模型回复后，刷新调用日志页面，查看是否新增对应调用记录。
 
-> 来源：https://github.com/labring/FastGPT/issues/6271
+> 来源：[FastGPT GitHub Issue #6271](https://github.com/labring/FastGPT/issues/6271)

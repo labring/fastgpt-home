@@ -26,4 +26,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现是字符匹配细节问题（如全半角字符、多余空格），修正匹配文本后重新发布配置即可恢复跳转功能；若为配置同步异常，重新发布后即可完成配置同步。验证方式为：在表单中输入“理解”内容，确认页面是否正常跳转至下一个表单输入界面。
 
-> 来源：https://github.com/labring/FastGPT/issues/6715
+> 来源：[FastGPT GitHub Issue #6715](https://github.com/labring/FastGPT/issues/6715)

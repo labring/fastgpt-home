@@ -31,4 +31,4 @@ FastGPT从v4.14.9升级到v4.14.10.1私有部署版本后，使用voyage系列�
 2. 重新执行知识库向量化、重建或数据更新操作。
 3. 检查请求日志确认不再携带`encoding_format=float`参数，且向量模型服务返回正常，知识库操作无异常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6744
+> 来源：[FastGPT GitHub Issue #6744](https://github.com/labring/FastGPT/issues/6744)

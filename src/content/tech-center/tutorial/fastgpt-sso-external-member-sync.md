@@ -32,4 +32,4 @@ fastgpt-sso:
 ## 内置提供商配置说明
 目前支持飞书、企业微信、钉钉等内置提供商，以飞书为例，需完成权限配置、重定向URL设置等基础操作，重定向URL需替换为部署后公开可访问的FastGPT域名，格式为`https://{your-fastgpt-domain}/login/provider`。对接时需在SSO-service的环境变量中补充对应提供商的专属配置项，如飞书的`FEISHU_APP_ID`、`FEISHU_APP_SECRET`等。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/admin/sso
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/sso)

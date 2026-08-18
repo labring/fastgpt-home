@@ -32,4 +32,4 @@ source_type: GitHub issue
 ### 长期适配方案
 等待官方发布适配fastgpt-plugin:v0.6.3的@fastgpt-plugin/sdk-client新版本，或从fastgpt-plugin仓库源码/未发布分支获取已适配的版本后，重新构建应用并部署。
 
-> 来源：https://github.com/labring/FastGPT/issues/7075
+> 来源：[FastGPT GitHub Issue #7075](https://github.com/labring/FastGPT/issues/7075)

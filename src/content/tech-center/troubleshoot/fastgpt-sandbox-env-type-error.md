@@ -23,4 +23,4 @@ docker-compose配置中，`LOG_ENABLE_CONSOLE`、`LOG_ENABLE_OTEL`两个布尔�
 ## 解决与验证
 解决方法：将`LOG_ENABLE_CONSOLE`、`LOG_ENABLE_OTEL`的单引号移除，直接赋值为布尔值，即修改为`LOG_ENABLE_CONSOLE: true`和`LOG_ENABLE_OTEL: false`。验证步骤：重新启动code-sandbox容器，查看容器日志，确认无dotenv环境变量类型报错，容器不再自动重启，功能恢复正常。需注意，布尔类型环境变量无需添加引号包裹，直接使用`true`/`false`即可。
 
-> 来源：https://github.com/labring/FastGPT/issues/6631
+> 来源：[FastGPT GitHub Issue #6631](https://github.com/labring/FastGPT/issues/6631)

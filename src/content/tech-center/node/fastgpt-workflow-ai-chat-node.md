@@ -22,4 +22,4 @@ FastGPT工作流中的AI对话节点是核心执行模块，支持重复添加�
 5. 根据业务需求调整模型的相关参数，完成后保存节点配置；
 6. 将工作流的触发节点与该AI对话节点进行连线，即可通过触发机制启动该节点的执行流程，完成AI对话任务。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/ai_chat
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/ai_chat)

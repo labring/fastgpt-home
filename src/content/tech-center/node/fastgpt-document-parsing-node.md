@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 关联节点说明
 文档解析节点可与AI对话、知识库搜索、文本拼接等工作流节点配合使用，支持搭建包含文档处理的完整业务流程。该节点的配置可参考工作流通用配置项完成基础参数调整，适配不同的文档处理需求。同时其功能定位与指定回复、HTTP请求等节点形成互补，共同支撑复杂工作流的搭建。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/document_parsing
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/document_parsing)

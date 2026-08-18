@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv469 \
 ## 外部接口调整说明
 由于计费系统变更，分享链接对话上报接口需进行对应调整：原`price`字段被`totalPoints`字段取代；`inputToken`和`outputToken`不再提供，仅保留`token`字段用于表示总token数量。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若为配置开关未在工具调用场景生效，重新开启开关并保存配置后重新发起工具调用；若为thought-signature参数缺失，补充对应参数的生成逻辑并确保传递正常。验证方式为发起工具调用请求，检查返回结果中是否包含thinking思考过程内容以及thought-signature参数。
 
-> 来源：https://github.com/labring/FastGPT/issues/6363
+> 来源：[FastGPT GitHub Issue #6363](https://github.com/labring/FastGPT/issues/6363)

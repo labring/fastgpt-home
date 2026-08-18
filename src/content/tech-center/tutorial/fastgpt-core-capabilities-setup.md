@@ -20,4 +20,4 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集知识库问�
 ### 使用边界与注意事项
 FastGPT的数据智能解析能力可智能处理PDF文档的复杂结构，保留图片、表格和LaTeX公式，自动识别扫描文件并将内容转换为清晰的Markdown格式，同时支持图片自动标注和索引，确保知识在问答中完整准确呈现。使用过程中需注意：工作流编排需匹配实际业务需求，避免添加冗余功能节点；API集成需严格对齐官方接口要求，否则可能出现调用错误。当需要实现超出现有功能节点覆盖的自定义逻辑时，可通过二次开发完成适配。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/getting-started
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started)

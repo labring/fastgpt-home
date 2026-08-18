@@ -48,4 +48,4 @@ LOG_ENABLE_OTEL=false
 2.  重新启动code-sandbox服务。
 3.  查看启动日志，确认不再出现`Invalid environment variables`相关的报错，服务正常启动即可。
 
-> 来源：https://github.com/labring/FastGPT/issues/6621
+> 来源：[FastGPT GitHub Issue #6621](https://github.com/labring/FastGPT/issues/6621)

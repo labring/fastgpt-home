@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对当前应用图标为空的问题，可通过添加自定义应用图标来替换当前的空状态。具体的配置操作流程需结合实际的系统界面进行确认，无统一的固定步骤。验证方式为：完成图标设置并保存配置后，刷新应用的展示页面，查看图标区域是否显示为自定义设置的图标，同时确认该图标是否能提升视觉识别效果，满足使用需求。
 
-> 来源：https://github.com/labring/FastGPT/issues/7240
+> 来源：[FastGPT GitHub Issue #7240](https://github.com/labring/FastGPT/issues/7240)

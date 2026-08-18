@@ -27,4 +27,4 @@ source_type: GitHub issue
 2.  再次执行依赖检查命令，确认模块可被正常解析，无`Cannot find module`报错。
 3.  启动服务并测试Pi Agent工作流，确认聊天消息可返回正常内容。
 
-> 来源：https://github.com/labring/FastGPT/issues/6865
+> 来源：[FastGPT GitHub Issue #6865](https://github.com/labring/FastGPT/issues/6865)

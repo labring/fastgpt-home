@@ -22,4 +22,4 @@ curl --location --request POST https://{{host}}/api/admin/initv442 \
 ## 操作注意事项
 该初始化API仅可用于升级到V4.4.2版本的场景，请勿在其他版本的FastGPT中执行该请求，否则可能导致数据库异常。发起请求前需确认`{{host}}`为你的FastGPT部署服务的实际访问地址，`{{rootkey}}`为正确的环境变量值，若请求返回错误，需检查这两个参数是否配置正确，以及网络是否可以正常访问该API端点。此外，该操作不会直接修改业务数据，但建议在执行前完成系统备份以规避潜在风险。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/442
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/442)

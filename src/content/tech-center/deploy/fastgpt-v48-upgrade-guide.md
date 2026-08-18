@@ -17,4 +17,4 @@ FastGPT V4.8上线了新工作流Workflow V2，相比旧版模式更简洁。由
 ## 升级注意事项
 本次升级需执行对应升级脚本。本次更新还包含多项优化与修复：优化了工作流连线支持四向连接以构建循环流程，提升了工作流上下文传递性能；优化了chat中存储变量的配置逻辑，避免修改变量影响旧对话；优化了worker进程管理，将Token计算任务分配给worker进程；支持为工具调用指定string、boolean、number等数据类型。修复了工具调用名称不能以数字开头、分享链接query全局变量缓存、HTTP模块url光标位置异常等问题。对话记录将截取为偶数轮，最大长度调整至50轮，以兼容部分不支持奇数历史记录的模型。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48)

@@ -28,4 +28,4 @@ source_type: GitHub issue
 2.  使用正确的请求参数重新调用`/api/core/app/logs/list`接口，验证是否不再返回`Data validation error`报错。
 3.  打开FastGPT的对话日志页面，确认页面可以正常加载日志数据，无异常报错提示。
 
-> 来源：https://github.com/labring/FastGPT/issues/6512
+> 来源：[FastGPT GitHub Issue #6512](https://github.com/labring/FastGPT/issues/6512)

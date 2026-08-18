@@ -19,4 +19,4 @@ FastGPT 使用 Sealos 部署时，通过 OneAPI 管理模型池，可兼容多�
 ## 配置与升级注意事项
 在 Sealos 中可通过应用管理修改环境变量和配置文件，FastGPT 运行包含1个服务和2个数据库，暂停或删除服务时需同步操作数据库，可通过日间启动、夜间暂停节省成本。升级 FastGPT 时禁止跨版本升级，需先查看更新文档确认目标版本，进入应用管理页面点击对应应用的变更选项，修改镜像版本号后点击变更/重启拉取最新镜像更新，若目标版本有初始化脚本需执行对应操作。此外还可通过变更选项配置自定义域名，或挂载 `/app/projects/app/public/icon/logo.svg` 文件替换系统 logo（暂不支持替换浏览器 favicon，需等待后续可视化功能支持）。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/sealos)

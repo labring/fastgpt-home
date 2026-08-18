@@ -24,4 +24,4 @@ source_type: GitHub issue
 1. 若排查发现Redis连接异常，修复Redis连接配置或重启Redis服务；若为Redis事务操作存在错误，修正事务内的操作顺序或逻辑。
 2. 重新调用chatTest接口，确认不再出现`EXECABORT Transaction discarded because of previous errors`的Redis报错，验证问题是否解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6316
+> 来源：[FastGPT GitHub Issue #6316](https://github.com/labring/FastGPT/issues/6316)

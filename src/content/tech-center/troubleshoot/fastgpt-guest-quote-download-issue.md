@@ -30,4 +30,4 @@ source_type: GitHub issue
 3. 针对下载限流问题：调整下载接口的限流阈值配置，修改每60秒允许的请求次数，需按实际环境确认配置项；若无需下载功能，可直接隐藏【下载数据】选项。
 4. 验证：免登录场景下点击引用文档、【打开原文】不再提示无权限，下载操作不再返回429报错，或对应功能按钮已按需求隐藏。
 
-> 来源：https://github.com/labring/FastGPT/issues/6328
+> 来源：[FastGPT GitHub Issue #6328](https://github.com/labring/FastGPT/issues/6328)

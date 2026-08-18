@@ -19,4 +19,4 @@ source_type: 官方文档
 ### 修复的已知问题
 本次版本修复了多个此前版本存在的异常：1. 对话日志的日期范围选择异常，修复后可正常筛选指定时间段的对话日志；2. API调用时传入的system提示词可能重复的问题，避免了提示词重复导致的模型输出异常；3. AI对话或工具调用未选择文件链接时，仍从历史记录读取文件的问题，修正了文件读取的触发逻辑；4. 手动更新知识库索引时，错误删除旧索引导致手动索引无效的问题，保障了手动索引更新的有效性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913)

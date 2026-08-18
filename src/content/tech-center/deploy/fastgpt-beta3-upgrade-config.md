@@ -41,4 +41,4 @@ source_type: 官方文档
     ```
 4.  重启服务完成版本升级与配置生效。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41503)

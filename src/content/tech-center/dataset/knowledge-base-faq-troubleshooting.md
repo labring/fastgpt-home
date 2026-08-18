@@ -20,4 +20,4 @@ source_type: 官方文档
 3.  调整上下文预留空间（私有化部署）：在后台模型参数配置页面，将128000的模型上下文配置值设为120000，预留剩余空间用于输出内容。
 4.  解决文件中文乱码：将出现乱码的文件另存为UTF-8编码格式后重新上传。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/faq
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/faq)

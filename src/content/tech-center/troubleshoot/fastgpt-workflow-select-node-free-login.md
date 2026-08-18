@@ -26,4 +26,4 @@ source_type: GitHub issue
 2.  若仅选择节点存在异常，可尝试升级至FastGPT最新版本，验证问题是否仍存在。
 3.  若需定位根因，需收集工作流运行日志、节点配置信息，提交至项目仓库获取官方支持。
 
-> 来源：https://github.com/labring/FastGPT/issues/7183
+> 来源：[FastGPT GitHub Issue #7183](https://github.com/labring/FastGPT/issues/7183)

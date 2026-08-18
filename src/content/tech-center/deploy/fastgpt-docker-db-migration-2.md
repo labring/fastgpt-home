@@ -16,4 +16,4 @@ source_type: 官方文档
 
 执行该操作时还有几个需要注意的易错点：必须在服务完全停止后进行，若在服务运行时复制目录，可能导致数据文件损坏或不一致，引发后续服务启动异常。该方案无需额外工具，操作流程简单，但仅适用于同架构的数据库迁移，若需跨大版本升级，需参考对应版本的升级说明文档，避免出现兼容性问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_db
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_db)

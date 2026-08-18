@@ -20,4 +20,4 @@ HTTP请求节点是FastGPT工作流的核心模块，可重复添加并手动配
 ## 返回值解析与格式化
 该节点支持配置多个返回值提取规则，通过JSONPath语法解析接口响应内容，语法可参考https://github.com/JSONPath-Plus/JSONPath?tab=readme-ov-file。例如接口响应为`{"message": "测试", "data": {"user": {"name": "xxx"}}}`，可配置key为`message`提取`测试`，或配置key为`data.user.name`提取`xxx`。FastGPT v4.6.8及以上版本新增出参格式化功能，当输出类型选择字符串时，会将提取的JSON值转为字符串格式，方便后续文本加工、AI对话等节点直接使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http)

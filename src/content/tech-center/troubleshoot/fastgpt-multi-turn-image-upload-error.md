@@ -26,4 +26,4 @@ FastGPT私有部署版本v4.14.4存在如下问题：首次对话上传图片可
 2.  重新发起多轮对话，上传图片后检查是否能正常获取回复。
 3.  再次查看fastgpt-aiproxy日志，确认不再出现该400报错。若首次对话正常、后续对话仍报错，则需进一步排查会话上下文的格式传递逻辑。
 
-> 来源：https://github.com/labring/FastGPT/issues/6256
+> 来源：[FastGPT GitHub Issue #6256](https://github.com/labring/FastGPT/issues/6256)

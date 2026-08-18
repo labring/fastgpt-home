@@ -54,4 +54,4 @@ curl --location --request POST http://localhost:3000/api/v1/chat/completions \
 ## 响应格式说明
 接口响应分为四种组合场景：`detail=false&stream=false`、`detail=false&stream=true`、`detail=true&stream=false`、`detail=true&stream=true`。非流式非详情模式下，响应结构与GPT接口类似，包含`id`、`model`、`usage`、`choices`等字段；流式模式下会通过`event`区分不同的`data`块，逐段返回内容。开启`detail=true`后，非流式模式下的完整模块响应会存入`responseData`，包含各模块的名称、消耗、模型、tokens等信息。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/chat
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/chat)

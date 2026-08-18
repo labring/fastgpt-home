@@ -25,4 +25,4 @@ MongoServerError: The dollar ($) prefixed field '$schema' in 'data.secretSchema.
 ## 解决与验证
 解决方法为更换为支持`data.secretSchema.$schema`字段存储的MongoDB版本，替换原MongoDB 4.4.29实例。验证步骤：重新上传插件并完成确认流程，确认不再出现报错且插件上传成功。需按实际环境确认替换后的MongoDB版本是否适配当前FastGPT部署。
 
-> 来源：https://github.com/labring/FastGPT/issues/7106
+> 来源：[FastGPT GitHub Issue #7106](https://github.com/labring/FastGPT/issues/7106)

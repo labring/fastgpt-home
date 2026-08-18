@@ -20,4 +20,4 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集知识库问�
 ## 关键特性与支持渠道
 FastGPT具备五大核心特性：开箱即用的知识库系统、可视化低代码工作流编排、支持主流大模型、简单易用的API接口、灵活的数据处理能力。其中，知识库系统可轻松导入各类文档并完成知识结构化处理，支持多轮上下文理解的智能问答，同时支持图片自动标注和索引，确保知识在问答中完整准确呈现；API完全对齐官方接口，支持一键接入企业微信、公众号、飞书、钉钉等平台，可将AI能力融入各类业务场景。作为开源项目，FastGPT由用户和贡献者参与推动，可通过飞书交流群获取使用支持，或提交Bug、需求至GitHub Issue。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/getting-started
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 临时解决方式为重新在知识库搜索节点中选择对应的全局引用变量，完成保存发布后验证。若为页面临时异常，可尝试刷新页面后重新编辑工作流。验证标准为：再次进入该工作流的知识库搜索节点时，“选择知识库”选项可正常显示此前保存的引用变量，点击运行工作流不再提示“工作流校验失败”。若问题反复出现，需结合实际使用环境进一步排查。
 
-> 来源：https://github.com/labring/FastGPT/issues/6221
+> 来源：[FastGPT GitHub Issue #6221](https://github.com/labring/FastGPT/issues/6221)

@@ -21,4 +21,4 @@ curl --location --request POST https://{{host}}/api/admin/initv44 \
 
 除V4.4版本外，官方文档中还整理了多个历史版本的升级说明，例如V4.4.1、V4.3、V4.10.0等版本，其中部分版本存在环境变量变更的要求，需在升级前提前调整对应环境变量的配置；带有升级脚本标注的版本，则需先执行对应脚本完成前置操作，再完成镜像更新与服务重启。在正式升级前，需先确认当前运行的FastGPT版本，查找对应版本的升级指引，避免遗漏必要的操作步骤。同时，升级过程中需做好数据备份，以防出现异常导致数据丢失，影响业务正常运行。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/44
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/44)

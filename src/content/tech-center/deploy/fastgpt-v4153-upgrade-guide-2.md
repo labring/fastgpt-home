@@ -19,4 +19,4 @@ source_type: 官方文档
 ### 适用场景说明
 本次V4.15.3版本升级适用于当前使用4.15.x系列旧版本的自部署用户，若您的业务未遇到上述修复的异常问题，也可根据自身需求选择是否升级。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4153)

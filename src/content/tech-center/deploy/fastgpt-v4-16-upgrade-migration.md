@@ -39,4 +39,4 @@ FastGPT V4.16.0-beta1 对 Agent Sandbox 配置进行了更新。启用 Agent San
 ### 迁移逻辑与边界说明
 本版本将 Agent Sandbox 从“每个对话一个实例”调整为“同一 App、同一用户共享一个实例”，不同对话文件仍保存在 sessions/chatId 目录，已发布 Skill 统一保存在 projects 目录。迁移会先执行前置逻辑，补齐旧数据字段、清理孤立资源，待归一化待处理数归零后才会归档旧 Workspace。若归档阶段存在失败，将无法进入安装阶段。脚本可安全重试，已完成的操作不会重复执行，新 Sandbox 会在安装完成后暂停，首次使用时正常启动。需注意预览 URL 为短期只读 bearer 凭证，获得链接的用户可在有效期内修改路径访问同 Workspace 其他文件，请勿随意分享。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601)

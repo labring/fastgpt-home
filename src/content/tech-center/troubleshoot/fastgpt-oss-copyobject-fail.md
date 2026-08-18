@@ -28,4 +28,4 @@ source_type: GitHub issue
 2. 确认接口返回200成功状态，插件保存完成。
 3. 登录OSS控制台，检查`system/plugin/tools/`目录下是否生成了对应的插件文件，临时目录中的临时文件已被正确处理。
 
-> 来源：https://github.com/labring/FastGPT/issues/6648
+> 来源：[FastGPT GitHub Issue #6648](https://github.com/labring/FastGPT/issues/6648)

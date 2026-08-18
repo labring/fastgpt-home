@@ -58,4 +58,4 @@ fastgpt-aiproxy-pg
 fastgpt-volume-manager
 ```
 
-> 来源：https://github.com/labring/FastGPT/issues/6705
+> 来源：[FastGPT GitHub Issue #6705](https://github.com/labring/FastGPT/issues/6705)

@@ -31,4 +31,4 @@ source_type: 官方文档
 3.  本次升级仅适用于已部署V4.14.x系列版本的用户，若使用更早版本需先完成同系列版本适配
 4.  若未遇到本次修复的三类问题，可根据自身业务需求选择是否执行升级操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41412
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41412)

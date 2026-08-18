@@ -24,4 +24,4 @@ FastGPT V4.8.18为自带升级脚本的自部署版本，仅适用于需要升�
 ## 升级注意事项
 本次升级后，系统默认开启全量跨域访问，如需自定义跨域安全策略可通过对应配置项调整。文件上传与阅读逻辑已优化，HTML文件将直接下载而非在线阅读，CSV文件乱码概率有所降低。迁移全文检索表期间，请勿执行与全文检索相关的操作，确保数据迁移完整。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818)

@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前暂无公开的官方标准化修复方案，可尝试以下临时验证与缓解步骤：1. 调整iframe嵌入的窗口尺寸限制，避免使用触发抖动的浏览器宽度区间；2. 暂时减少单条引用内容内的换行数量，观察抖动现象是否消失。验证方式为：在完成调整后重新复现原触发场景，确认引用区域不再出现循环抖动。若问题仍持续存在，需等待官方后续版本更新修复，或联系对应技术支持获取针对性排查方案。
 
-> 来源：https://github.com/labring/FastGPT/issues/7039
+> 来源：[FastGPT GitHub Issue #7039](https://github.com/labring/FastGPT/issues/7039)

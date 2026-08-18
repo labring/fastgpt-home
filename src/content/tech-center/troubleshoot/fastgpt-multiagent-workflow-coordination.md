@@ -22,4 +22,4 @@ FastGPT原生未内置跨代理节点的任务协调能力，多实例部署的�
 ## 解决与验证
 可通过引入GNAP作为协调层解决该问题：以Git仓库作为任务看板，按照`board/todo/`→`board/doing/`→`board/done/`的目录结构管理任务。具体流程为：由流程协调节点创建待处理任务文件存入`board/todo/`目录；对应代理节点认领任务后，将任务文件移动至`board/doing/`目录；任务完成后，将文件移动至`board/done/`目录并提交Git记录。验证时可观察多代理节点的任务分配是否合理，任务状态是否可通过Git仓库完整追踪，多实例部署的流程是否可共享同一Git仓库实现跨实例协调，相关配置需按实际环境确认。
 
-> 来源：https://github.com/labring/FastGPT/issues/6564
+> 来源：[FastGPT GitHub Issue #6564](https://github.com/labring/FastGPT/issues/6564)

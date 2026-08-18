@@ -40,4 +40,4 @@ function main (){
 ## 注意事项与部署配置
 使用时需注意：并行执行节点内不可嵌套其他并行或批量运行节点，不支持表单输入、用户选择等交互节点；成功任务内对全局变量的修改可能存在竞争，需通过节点汇总结果获取稳定输出；执行逻辑内的AI节点建议关闭流式输出。私有化部署时可调整两个环境变量：`WORKFLOW_MAX_LOOP_TIMES`默认值100（输入数组最大长度），`WORKFLOW_PARALLEL_MAX_CONCURRENCY`默认值10（最大并发数上限）。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)

@@ -19,4 +19,4 @@ FastGPT云服务版自v4.14.4版本后支持配置自定义域名。配置前需
 ## 解析失效与修改规则
 系统每日会自动检查DNS解析记录，若发现解析失效将停用该自定义域名，可在「自定义域名」管理界面点击「编辑」重新完成解析流程。若需要修改自定义域名或更换服务商，需先删除原有配置后再重新进行添加操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain)

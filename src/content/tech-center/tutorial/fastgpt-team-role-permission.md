@@ -18,4 +18,4 @@ FastGPT 权限系统融合基于属性和角色的管理范式，支持成员、
 
 ### 开发者权限设计参考
 FastGPT 权限系统参考 Linux 权限设计，以二进制存储权限位，权限位为1表示拥有该权限，0表示无权限，Owner权限标记为全1。权限信息存储在 MongoDB 的 `resource_permissions` 集合中，核心字段包括：`teamId`（团队标识）、`tmbId/groupId/orgId`（权限主体三选一）、`resourceType`（资源类型：team/app/dataset）、`permission`（权限值数字）、`resourceId`（资源ID，团队资源为null）。其 Schema 定义在 `packages/service/support/permission/schema.ts` 文件中。
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)

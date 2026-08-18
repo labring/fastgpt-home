@@ -43,4 +43,4 @@ curl --location --request POST https://{{host}}/api/admin/initv41451 \
 4. 手动复制弹窗，换行丢失
 5. 未传入文件上传类型变量时，对话接口报错
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41451
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41451)

@@ -31,4 +31,4 @@ FastGPT V4.14.7版本对日志系统进行了重构，涵盖日志打印、采�
 # 接口与功能调整说明
 该版本对对话记录接口进行了优化，/api/core/chat/getPaginationRecords接口的value字段已移除type属性，调用时需直接判断text、tools等字段是否存在以解析数据。此外新增了基于上下文工程的Agent测试模式、LLM请求追踪功能（默认保留6小时，可通过LLM_REQUEST_TRACKING_RETENTION_HOURS调整）、知识库搜索的collectionIds筛选能力等功能，同时修复了工作流节点渲染、MCP权限控制、工具调用格式等多个问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4147)

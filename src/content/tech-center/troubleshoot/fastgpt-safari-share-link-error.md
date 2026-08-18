@@ -28,4 +28,4 @@ source_type: GitHub issue
 3. 重复多次测试，确认问题不再复现；
 4. 对比电脑Chrome浏览器的访问情况，确认功能不受影响。
 
-> 来源：https://github.com/labring/FastGPT/issues/6335
+> 来源：[FastGPT GitHub Issue #6335](https://github.com/labring/FastGPT/issues/6335)

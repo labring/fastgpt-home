@@ -29,4 +29,4 @@ source_type: GitHub issue
 3. 若网络不通：调整服务器防火墙规则，开放18089和3100端口，或配置网络策略确保两端互通，需按实际环境确认。
 4. 验证效果：在FastGPT对话界面尝试调用文件操作类工具，或访问工作区查看器地址，确认可正常使用功能。
 
-> 来源：https://github.com/labring/FastGPT/issues/6197
+> 来源：[FastGPT GitHub Issue #6197](https://github.com/labring/FastGPT/issues/6197)

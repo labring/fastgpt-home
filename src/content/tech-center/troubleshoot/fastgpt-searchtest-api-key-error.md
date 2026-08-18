@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现searchTest接口的API key配置与其他接口不一致，将其修正为与正常接口一致的API key后即可解决问题。若为接口校验逻辑存在特殊限制，则需结合实际环境调整对应校验规则。验证方式为重新调用searchTest接口，确认不再返回指定的API key错误，且接口功能正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6274
+> 来源：[FastGPT GitHub Issue #6274](https://github.com/labring/FastGPT/issues/6274)

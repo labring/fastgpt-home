@@ -22,4 +22,4 @@ FastGPT v4.9.6版本及以上新增MCP工具集应用类型，支持传入MCP的
 工具调用分为两种模式：一是调用单个工具，选中指定工具后向AI提问，AI会智能匹配并调用对应工具获取所需信息，再基于结果生成回答；二是调用整个工具集，添加工具集类型的节点并使用工具调用节点连接，AI会自动选取符合需求的工具执行，最终返回整理后的回答。
 若填入的SSE URL格式错误或目标服务不可用，解析步骤将失败，无法生成可用的工具列表。当需要使用非MCP标准的自定义工具时，该功能并不适用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools)

@@ -27,4 +27,4 @@ source_type: GitHub issue
 2. 检查FastGPT与代码沙箱的连接日志，确认无连接报错。
 3. 测试代码沙箱相关功能（如代码执行）是否正常生效。
 
-> 来源：https://github.com/labring/FastGPT/issues/6689
+> 来源：[FastGPT GitHub Issue #6689](https://github.com/labring/FastGPT/issues/6689)

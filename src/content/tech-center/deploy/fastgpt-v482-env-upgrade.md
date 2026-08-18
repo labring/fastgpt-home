@@ -25,4 +25,4 @@ V4.8.2版本存在环境变量变更，同时附带多项功能更新与问题�
 ## 配置与使用注意事项
 配置SANDBOX_URL时必须使用sandbox容器的内网地址，切勿使用公网地址，否则将无法正常建立连接。若使用商业版的fastgpt-pro容器，同样需要配置该环境变量，否则相关依赖沙盒的功能将无法正常运行。若出现站点同步失败、定时任务输入异常等问题，可优先检查SANDBOX_URL的配置是否正确。此外，sandbox容器未做安全校验，严禁对外网暴露，避免引发安全问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/482)

@@ -21,4 +21,4 @@ FastGPT是基于大语言模型的AI Agent应用开发平台，集成知识库�
 ## 功能边界与注意事项
 需注意，FastGPT的工作流编排仅支持基于Flow模块的可视化操作，暂不支持非可视化的代码编写；API集成需严格遵循OpenAI官方接口格式，否则会出现调用异常；数据解析仅支持处理常规文档及数据，暂不支持加密文档的自动处理。此外，平台支持的二次开发需通过标准API完成，不建议直接修改源码。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)

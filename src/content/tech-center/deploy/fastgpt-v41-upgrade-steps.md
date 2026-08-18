@@ -26,4 +26,4 @@ FastGPT V4.1版本重新设计了对话存储结构，同时优化了数据库�
 ### 升级后续注意事项
 执行初始化请求后，系统将自动完成原有存储结构的适配，无需额外手动干预。请确保部署的新版服务可以正常访问数据库实例，若出现连接报错，请检查环境变量中的数据库URL配置是否正确，或尝试移除MongoDB连接中的`authSource`参数。初始化请求仅需执行一次，重复执行不会对系统造成影响。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/41
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/41)

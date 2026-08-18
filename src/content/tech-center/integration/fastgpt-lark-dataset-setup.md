@@ -23,4 +23,4 @@ FastGPT v4.8.16版本起，商业版用户支持飞书知识库导入功能。�
 ### 补充说明
 配置过程中需确保权限配置正确，否则会出现无法获取文档内容的问题。当前功能的交互细节仍在优化中，使用过程中可关注官方更新。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/lark_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/lark_dataset)

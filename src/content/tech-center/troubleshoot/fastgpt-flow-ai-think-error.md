@@ -27,4 +27,4 @@ source_type: GitHub issue
 若需彻底解决该问题，需按实际环境排查以下方向：确认版本升级的具体变更内容，排查流程配置与新版本的兼容性，或等待官方发布后续版本更新。
 验证方式为：完成修复后，老流程的AI对话思考过程可正常显示，AI对话节点的思考过程模块不再报红，且重新打开流程后不会再次出现爆红现象。
 
-> 来源：https://github.com/labring/FastGPT/issues/6306
+> 来源：[FastGPT GitHub Issue #6306](https://github.com/labring/FastGPT/issues/6306)

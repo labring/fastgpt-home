@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现为接口数据未正确传递或代码逻辑异常，需参考对应环节的实现细节进行修复。验证方式为：切换至工作流模式绑定知识库进行问答，查看调试界面是否正常渲染引用列表，同时确认getPaginationRecords接口返回的totalQuoteList字段包含有效数据。
 
-> 来源：https://github.com/labring/FastGPT/issues/6487
+> 来源：[FastGPT GitHub Issue #6487](https://github.com/labring/FastGPT/issues/6487)

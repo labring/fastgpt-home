@@ -27,4 +27,4 @@ source_type: GitHub issue
 3.  若为私有部署场景，可检查前端静态资源的部署配置（相关参数需按实际环境确认）。
 验证标准为：无需手动刷新页面即可正常播放视频，且页面内图片加载不受影响。
 
-> 来源：https://github.com/labring/FastGPT/issues/6157
+> 来源：[FastGPT GitHub Issue #6157](https://github.com/labring/FastGPT/issues/6157)

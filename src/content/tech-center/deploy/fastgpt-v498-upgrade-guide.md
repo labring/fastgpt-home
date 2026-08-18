@@ -21,4 +21,4 @@ FastGPT V4.9.8版本包含新增功能、体验优化与问题修复。新增功
 ## 关键配置说明
 部分新增功能需要额外配置才能生效：例如当内置任务的stream模式不符合需求时，可在模型的额外Body参数中添加`stream=false`强制使用非stream模式；可通过Admin后台配置密码过期时间，以及发布渠道、第三方知识库的显示隐藏状态；语雀知识库创建时可直接设置根目录路径。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498)

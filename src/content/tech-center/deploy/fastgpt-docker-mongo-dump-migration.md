@@ -51,4 +51,4 @@ source_type: 官方文档
 ## 迁移注意事项
 迁移过程中需注意备份文件的完整性，若跨环境传输后文件数量不一致，可能导致导入后无数据。建议先在过渡环境校验解压后的文件，确认无误后再传输至目标环境。同时需确保目标环境的MongoDB版本符合FastGPT的兼容要求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo)

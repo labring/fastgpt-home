@@ -22,4 +22,4 @@ source_type: 官方文档
 ## 虚拟机与技能细节
 开启虚拟机后，系统会为每个独立会话在后台分配专属的Linux沙盒运行环境，支持执行代码、读写文件及配置启动脚本等操作。具体设计与联调操作可参考虚拟机文档，启动脚本的去重与执行细节可参考虚拟机生命周期文档。技能自带的入口脚本会随虚拟机拉起自动执行，若需自定义编写与打包技能，可参考开发与调试文档。用户也可在GitHub上编辑当前页面的内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/settings)

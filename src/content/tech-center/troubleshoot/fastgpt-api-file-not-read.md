@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查结果修正对应问题：若为参数配置错误则调整传入的API参数；若日志存在异常则根据报错信息修复对应环节。修正后重新调用API对话接口，验证对话能否正常读取文件内容并生成对应回答。
 
-> 来源：https://github.com/labring/FastGPT/issues/6300
+> 来源：[FastGPT GitHub Issue #6300](https://github.com/labring/FastGPT/issues/6300)

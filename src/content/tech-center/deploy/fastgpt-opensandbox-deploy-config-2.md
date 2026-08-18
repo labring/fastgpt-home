@@ -16,4 +16,4 @@ OpenSandbox 适用于需要自托管 Agent/Skill 沙盒运行环境的场景。�
 
 配置过程中需注意多个细节：若使用 OrbStack 或 Docker 自动注入的 NO_PROXY 包含 IPv6 CIDR，可能导致 httpx 解析错误，需显式覆盖 NO_PROXY 配置；单实例沙盒的 CPU 和内存上限可通过 AGENT_SANDBOX_CPU_COUNT、AGENT_SANDBOX_MEMORY_MIB 调整，默认分别为 1 核和 2048MiB，持久卷容量仅在 K8s 模式下创建 PVC 时生效。此外，所有配置的密钥需保持一致，例如 OpenSandbox Server API Key 需与 FastGPT 中的 AGENT_SANDBOX_OPENSANDBOX_API_KEY 匹配，Volume Manager 的认证 Token 需与 AGENT_SANDBOX_OPENSANDBOX_VOLUME_MANAGER_TOKEN 一致。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)

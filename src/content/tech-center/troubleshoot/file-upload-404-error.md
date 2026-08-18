@@ -24,4 +24,4 @@ FastGPT V4.9.4私有部署版本中，用户在会话内上传文件时，页面
 ## 解决与验证
 根据排查定位到的具体原因进行针对性修复：若为接口路径配置错误，需修正配置文件中的对应路径；若为后端服务异常，需重启对应服务进程；若为网络拦截问题，需调整网络策略放行对应接口。修复完成后，重新执行文件上传操作，若不再弹出"Request failed with status code 404"的报错信息，则验证问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6217
+> 来源：[FastGPT GitHub Issue #6217](https://github.com/labring/FastGPT/issues/6217)

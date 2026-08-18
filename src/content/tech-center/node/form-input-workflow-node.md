@@ -20,4 +20,4 @@ source_type: 官方文档
 ### 使用边界与注意事项
 该节点仅适用于需要用户主动提供信息的场景，无法自动完成信息收集，也不能替代其他无需用户交互的节点的功能。使用时需注意，若未配置必填项，可能导致流程无法正常推进或后续节点无法获取有效信息。在工作流需要完全自动执行、无需用户介入的场景下，不应使用该节点，否则流程会因等待用户交互而停滞。此外，该节点会记录工作流状态，仅在用户提交表单后才会恢复流程执行，因此在对流程执行效率有严格要求的场景下需谨慎使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/form_input
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/form_input)

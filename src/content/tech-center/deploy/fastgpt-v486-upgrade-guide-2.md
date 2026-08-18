@@ -26,4 +26,4 @@ curl --location --request POST https://{{host}}/api/admin/initv486 \\
 ## 升级注意事项
 执行升级需注意以下要点：所有镜像需统一使用v4.8.6的tag，避免版本不一致引发异常；必须执行初始化请求，否则新增的应用权限继承功能无法正常生效；请求中的`{{rootkey}}`需替换为环境变量内的rootkey，`{{host}}`需替换为FastGPT域名，参数错误将导致初始化失败；升级过程中需保持终端网络连接稳定，避免请求中断。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/486
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/486)

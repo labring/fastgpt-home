@@ -64,4 +64,4 @@ curl --location --request POST "https://{{host}}/api/init/v468" \
 ```
 其中`{{rootkey}}`需替换为环境变量中的rootkey，`{{host}}`需替换为商业版部署的域名，执行请求后将初始化计费系统。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468)

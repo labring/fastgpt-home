@@ -22,4 +22,4 @@ source_type: 官方文档
 ## 模型与索引问题专项排查
 通过任何方式部署FastGPT，均存在索引模型的长度限制，不同索引模型的配置需在后台修改参数。针对非内置模型的工具调用与知识库索引问题，可按以下思路排查：若日志提示`JSON invalid`、`not support tool`等，说明该模型不支持工具/函数调用，需设置`toolChoice=false`和`functionCall=false`，默认走提示词模式；若配置正常且无错误日志，可修改`customCQPrompt`自定义提示词。知识库索引无进度或缓慢的排查方向：可正常对话但无索引进度，说明未配置向量模型`vectorModels`；无法对话且无索引，代表API调用失败，需检查模型连接；索引缓慢可能源于API key调用次数限制、网络异常，或FastGPT与OneAPI不在同一网络。开启内容补全后响应变慢，因需进行3~5轮AI查询，数据库性能不足会产生明显影响。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/faq
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/faq)

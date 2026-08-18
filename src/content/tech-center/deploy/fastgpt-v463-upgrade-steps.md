@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv463 \
 ## 版本功能优化与修复
 V4.6.3版本包含多项功能调整：商业版新增web站点同步、集合元数据记录功能；优化了URL内容读取逻辑，同时升级流式读取文件的处理方式，避免服务出现内存溢出问题；支持4v模型自动将URL转换为base64格式，可在本地环境进行调试；调整了图片压缩等级，优化图片处理体验。此外，该版本修复了图片压缩失败报错的问题，防止文件读取过程中服务卡死。需要注意的是，web站点同步等功能仅在商业版中可用，社区版无法使用此类专属功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/463
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/463)

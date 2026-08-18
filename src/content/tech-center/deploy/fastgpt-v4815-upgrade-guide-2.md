@@ -31,4 +31,4 @@ V4.8.15是FastGPT的带升级脚本版本，本次更新包含多项新功能、
 ## 使用注意事项
 使用过程中需注意以下边界与易错点：Markdown中的HTML代码仅可在预览模式下展示，会自动限制script脚本执行；集合调整参数无需删除后重新导入，但需确保操作权限合规；API知识库将替代外部文件库，建议尽快完成迁移；升级操作需使用rootkey权限，请勿泄露该密钥以避免未授权操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815)

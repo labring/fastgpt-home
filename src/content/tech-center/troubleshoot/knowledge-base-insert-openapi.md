@@ -28,4 +28,4 @@ source_type: GitHub issue
 2. 若官方文档未明确说明该接口，可通过浏览器开发者工具抓取点击插入按钮时的网络请求，获取完整的接口地址与请求参数；
 3. 验证方法：使用抓取到的接口地址与正确参数发起请求，若能成功插入知识库分片，则确认该接口为目标接口。
 
-> 来源：https://github.com/labring/FastGPT/issues/6593
+> 来源：[FastGPT GitHub Issue #6593](https://github.com/labring/FastGPT/issues/6593)

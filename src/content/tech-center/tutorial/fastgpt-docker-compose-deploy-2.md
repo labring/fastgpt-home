@@ -30,4 +30,4 @@ source_type: 官方文档
 ## 部署注意事项
 部署过程中需注意：生成的docker-compose.yml文件需妥善保存，后续升级需基于该文件调整，不可直接丢弃生成的密码与密钥。若使用Zilliz Cloud向量库，无需占用本地资源。若出现模型调用问题，需先通过OneAPI测试校验API可用性，再排查向量库连接或配置问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现为前端输入控件异常，可尝试手动修改配置文件中的端口号参数（需按实际环境确认配置文件路径与对应参数名）；若为服务临时异常，重启服务后即可恢复输入功能。验证方式为：在数据库连接工具的端口号输入框中输入内容，确认可正常输入并完成后续配置保存。
 
-> 来源：https://github.com/labring/FastGPT/issues/6703
+> 来源：[FastGPT GitHub Issue #6703](https://github.com/labring/FastGPT/issues/6703)

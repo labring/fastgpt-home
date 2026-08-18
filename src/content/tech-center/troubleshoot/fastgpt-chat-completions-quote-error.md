@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 若该问题由版本升级带来的接口逻辑变更导致，可参考官方最新版本的更新说明调整接口调用逻辑；若为返回格式异常，可尝试重新配置引用详情的返回参数，或回退至4.16.8版本验证问题是否复现。验证方式为：调用`v1/chat/completions`接口并设置`detail`、`stream`为`true`，检查返回的`quoteList`字段是否完整包含预期的引用详情，无截断或格式错误。
 
-> 来源：https://github.com/labring/FastGPT/issues/6976
+> 来源：[FastGPT GitHub Issue #6976](https://github.com/labring/FastGPT/issues/6976)

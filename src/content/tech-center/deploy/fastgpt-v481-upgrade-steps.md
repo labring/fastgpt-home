@@ -31,4 +31,4 @@ curl --location --request POST https://{{host}}/api/admin/clearInvalidData \
 ## 版本更新细节
 V4.8.1版本的Chat API接口新增了`event: updateVariables`事件，用于实现变量更新功能。此前系统内置的定时脏数据清理定时器存在异常，导致部分数据未被自动清理，因此需在初始化完成后手动执行脏数据清理命令，完成数据清理工作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/481
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/481)

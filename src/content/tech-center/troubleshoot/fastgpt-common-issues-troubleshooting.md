@@ -28,4 +28,4 @@ source_type: GitHub issue
 4.  MCP工具鉴权：若出现鉴权类型恢复异常，可将问题反馈至官方仓库排查保存逻辑问题；
 5.  MongoDB升级：需在部署配置中同步将Mongo镜像版本修改为5.0.32，重启服务后验证数据库连接正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6237
+> 来源：[FastGPT GitHub Issue #6237](https://github.com/labring/FastGPT/issues/6237)

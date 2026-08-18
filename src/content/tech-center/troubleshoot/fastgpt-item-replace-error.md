@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查确认是知识库返回的匹配项为非字符串类型，需修正知识库数据内容或调整匹配逻辑，确保传递给replace方法的变量为合法字符串。验证方式为：修改触发报错的配置或数据后，重新发起相同的用户提问，确认`item.replace is not a function`报错不再出现，且对话能正常返回符合要求的回答。若未找到明确的异常数据或配置，需结合实际环境进一步排查代码调用逻辑。
 
-> 来源：https://github.com/labring/FastGPT/issues/6483
+> 来源：[FastGPT GitHub Issue #6483](https://github.com/labring/FastGPT/issues/6483)

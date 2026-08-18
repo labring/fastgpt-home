@@ -25,4 +25,4 @@ source_type: GitHub issue
 2. 对齐处理流程：参考互联网端的PDF处理逻辑，调整FastGPT本地的PDF处理模块配置，确保与互联网端的处理规则保持一致；
 3. 验证修复效果：重新上传该票据扫描PDF到FastGPT，调用qwen3-max进行识别，查看AI日志是否不再显示处理对象为图片，且能成功提取PDF内的具体信息。若仍未解决问题，需进一步排查FastGPT本地PDF处理模块的适配逻辑。
 
-> 来源：https://github.com/labring/FastGPT/issues/6251
+> 来源：[FastGPT GitHub Issue #6251](https://github.com/labring/FastGPT/issues/6251)

@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 若未升级到最新版本，将FastGPT升级至官方最新版本后重新进入发布页面重试；若未查看README确认功能支持，需仔细查阅文档完成对应配置。验证方式为：重新进入Web应用发布页面，查看是否出现"对话"或"内容生成"的选择选项，完成对应模式的发布配置后，即可正常生成目标Web应用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6522
+> 来源：[FastGPT GitHub Issue #6522](https://github.com/labring/FastGPT/issues/6522)

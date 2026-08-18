@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 可通过自定义开发的方式添加隐藏免登录分享窗口菜单选项的功能，具体实现细节需结合FastGPT的源码结构与实际开发环境确认，例如修改分享菜单的渲染逻辑，添加对应的隐藏配置项；验证时，在对应智能客服场景下打开分享窗口，确认需隐藏的菜单选项已不再显示，且分享功能的其他流程可正常运行，未出现异常报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6171
+> 来源：[FastGPT GitHub Issue #6171](https://github.com/labring/FastGPT/issues/6171)

@@ -76,4 +76,4 @@ curl --location --request POST http://localhost:3000/api/channels/import/oneapi 
 ## 升级注意事项
 升级过程中请勿提前删除OneAPI配置，系统初始化会自动同步OneAPI的原有配置。PG容器的健康检查配置需严格按照示例配置，确保数据库正常启动。若未使用AI Proxy替代OneAPI，则无需执行上述可选配置步骤。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490)

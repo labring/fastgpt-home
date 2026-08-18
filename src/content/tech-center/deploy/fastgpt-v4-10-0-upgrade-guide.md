@@ -35,4 +35,4 @@ MINIO_BUCKET=存储桶名
 
 本次升级新增独立系统工具服务，支持系统工具的独立开发与调试，官方同时更新了系统工具开发指南与插件系统说明文档，开发者可通过对应文档获取最新开发规范。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100)

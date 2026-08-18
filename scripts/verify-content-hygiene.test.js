@@ -276,6 +276,41 @@ test('source CLI normalizes the full citation vocabulary and rich structured val
   );
 });
 
+test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
+  withFixture(
+    {
+      'src/content/guides/zh/dirty.md': '# 指南\n\n> 来源：https://doc.fastgpt.cn/zh-CN/guide\n',
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-07 citation-policy/);
+    },
+  );
+  withFixture(
+    {
+      'src/content/guides/zh/clean.md': [
+        '# 指南',
+        '',
+        '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)',
+        '> 来源：[FastGPT GitHub Issue #42](https://github.com/labring/FastGPT/issues/42)',
+        '',
+      ].join('\n'),
+      'src/content/tech-center/tutorial/metadata.md': [
+        '# 技术文档',
+        'source: https://doc.fastgpt.cn/zh-CN/guide',
+        '',
+        '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)',
+        '',
+      ].join('\n'),
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
 test('source CLI scans structured FAQ and locale copy without treating syntax as published Markdown', () => {
   withFixture(
     {

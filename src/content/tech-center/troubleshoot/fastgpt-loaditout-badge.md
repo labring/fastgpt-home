@@ -23,4 +23,4 @@ FastGPT项目收到Loaditout平台发送的安全评级通知，显示项目通�
 ## 解决与验证
 解决方法为将官方提供的徽章Markdown代码添加到项目的README.md文件中。验证方式分为两步：一是查看README页面是否正常显示安全徽章，无加载失败或格式错误；二是点击徽章链接，确认可跳转至Loaditout平台的FastGPT评级详情页，且页面显示的评级信息与通知内容一致。
 
-> 来源：https://github.com/labring/FastGPT/issues/6724
+> 来源：[FastGPT GitHub Issue #6724](https://github.com/labring/FastGPT/issues/6724)

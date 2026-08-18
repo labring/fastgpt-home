@@ -24,4 +24,4 @@ Bind Mount是直接将主机指定目录映射到容器内部，服务数据存�
 若直接修改配置为Named Volume而不迁移数据，原有Bind Mount目录中的数据不会自动复制到新的Named Volume中，新容器将无法读取原有配置、知识库等业务数据，可能引发服务异常。若需要保留原有数据，需手动将Bind Mount对应目录下的所有数据复制到Docker Named Volume中，具体操作步骤需按实际环境确认。
 验证方式为：启动更新后的FastGPT容器，检查服务能否正常加载原有配置、知识库等数据，确认业务功能恢复正常。操作前需备份原有Bind Mount目录的全部数据，避免迁移过程中出现数据丢失。
 
-> 来源：https://github.com/labring/FastGPT/issues/6765
+> 来源：[FastGPT GitHub Issue #6765](https://github.com/labring/FastGPT/issues/6765)

@@ -26,4 +26,4 @@ source_type: GitHub issue
 ## 解决与验证
 若节点无法连通目标地址，需配置网络代理或开放对应端口的访问权限；若请求地址格式错误，修正为官方标准请求地址。完成调整后，重新进入模型渠道配置页面保存设置，点击测试按钮，确认不再出现`fetch failed`或404错误，即可验证问题解决。若问题仍存在，需按实际环境进一步排查服务端的请求转发相关配置。
 
-> 来源：https://github.com/labring/FastGPT/issues/6525
+> 来源：[FastGPT GitHub Issue #6525](https://github.com/labring/FastGPT/issues/6525)

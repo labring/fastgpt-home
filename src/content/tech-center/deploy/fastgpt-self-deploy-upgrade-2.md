@@ -22,4 +22,4 @@ FastGPT自部署升级分为两个核心步骤：修改镜像与执行升级初�
 ## 常见问题与注意事项
 升级脚本用于处理数据表大幅变更、无法通过默认值设置完成的字段更新，严格按照流程操作不会导致旧数据丢失。模板中的`{{host}}`代表服务器的域名或IP变量，在Sealos中可通过对应页面获取域名，在docker-compose.yml的environment模块中可获取ROOT_KEY变量值，Sealos部署则可从左侧环境变量模块获取ROOT_KEY。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction)

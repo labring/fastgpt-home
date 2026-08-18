@@ -40,4 +40,4 @@ REDIS_URL=redis://default:mypassword@redis:6379
 ### 修复内容
 修复 debug 模式下全局变量未传递、前方节点参数无法传递至后方节点的问题；修复调试模式开启自动执行时跳过外部变量填写的问题；修复自动语音回复未生效的问题；修复节点复制时报错捕获配置丢失的问题；修复「猜你想问」自定义提示词保存时上一次值被置空的问题；修复二级路由下知识库检索图片地址拼接异常的问题；修复 Prompt 编辑器键盘输入时清除 Markdown 标记的问题；修复知识库集合页面有训练数据时无法自动刷新的问题；修复工作流快速添加节点弹窗二次打开为空的问题；修复 PPTX 文件解析顺序错误的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4130
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4130)

@@ -26,4 +26,4 @@ source_type: GitHub issue
 3.  重新启动FastGPT容器，等待初始化完成后访问页面，确认页面可以正常加载。
 4.  验证插件下载功能恢复正常，确认存储相关功能可正常使用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6253
+> 来源：[FastGPT GitHub Issue #6253](https://github.com/labring/FastGPT/issues/6253)

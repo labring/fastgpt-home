@@ -21,4 +21,4 @@ FastGPT 4.8.10及以上商业版支持直接接入微信公众号，无需额外
 
 使用过程中，若需要重置当前聊天记录，可向公众号机器人发送大小写敏感的「Reset」消息，即可开启全新的对话会话。需要注意，IP白名单配置错误会导致无法正常接收和转发公众号消息，需确保配置的IP与当前访问的FastGPT服务版本匹配。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account)

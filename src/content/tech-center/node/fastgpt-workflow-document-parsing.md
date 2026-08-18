@@ -18,4 +18,4 @@ source_type: 官方文档
 ### 使用边界与注意事项
 使用文档解析节点时需明确其适用边界，仅在工作流存在文档类输入处理需求的场景下才需配置该节点。若未开启文件上传功能，该节点将无法正常执行解析逻辑，无法为后续工作流节点提供有效数据。同时，该节点的功能与作用需结合实际业务需求确认，无文档处理需求的工作流无需添加该节点，避免造成工作流配置的冗余。此外，使用该节点前需确认当前应用的权限配置，确保具备调用文档解析能力的权限。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/document_parsing
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/document_parsing)

@@ -48,4 +48,4 @@ curl --location --request POST https://domain/v1/chat/completions \
 ## 使用注意事项
 部署时需确保机器资源满足对应量化等级的要求，否则会出现模型加载失败的报错；接口访问需携带正确的`Authorization`头和模型名称，否则会返回验证错误或模型不存在的错误；该模型仅支持中英双语，商业使用需遵守官方授权要求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/chatglm2)

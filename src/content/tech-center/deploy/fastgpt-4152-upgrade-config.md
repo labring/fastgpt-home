@@ -20,4 +20,4 @@ V4.15.2版本包含多项关键配置变更与功能优化，主要涉及环境�
 ## 核心优化与修复说明
 该版本新增工作流节点实时错误提示、自定义工具参数节点支持手动输入JSON Schema与必填选项，文件上传下载改用短链接以减少长链接对上下文的占用与模型输出异常。优化内容包括Skill未关联应用时的删除弹窗文案、对话框流输出淡入效果性能，升级LiteParse版本解决PDF并发解析报错问题，调整文件解析worker默认数量为5（可通过`PARSE_FILE_WORKERS`配置）。修复方面包括移除PPTX解析依赖的高风险解压库、修复循环与并行节点耗时计算错误、优化企微版本客户付款自动购买license的逻辑，同时统一了Agent执行内核与事件生命周期，优化了工具调度规则。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4152)

@@ -21,4 +21,4 @@ curl --location --request POST https://{{host}}/api/admin/initv44 \
 
 升级过程中需注意多个易错点：未正确携带`rootkey`请求头会导致初始化请求失败，部分旧版本升级时不可直接跳过中间版本，需按版本顺序逐步完成升级。此外，仅适用于官方文档标注的对应版本升级场景，请勿用于未提及的版本升级，若涉及环境变量变更的版本，需提前完成环境变量的配置调整，避免升级后出现功能异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/44
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/44)

@@ -18,4 +18,4 @@ FastGPT的变量更新节点是工作流内置的基础配置节点，具备可�
 
 使用该节点时需注意其使用边界与易错点：仅能修改当前工作流内的全局变量与前置节点输出，无法跨工作流操作数据；更新节点输出时，仅能修改该节点之前的工作流节点输出值，后续使用该值的节点才会加载新内容。若未正确配置目标对象或更新值，节点执行时可能出现参数缺失或无更新效果的报错。该节点适合需要动态调整全局变量或前置节点输出的场景，若仅需静态赋值，可直接通过全局变量配置完成，无需添加该节点。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/variable_update
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/variable_update)

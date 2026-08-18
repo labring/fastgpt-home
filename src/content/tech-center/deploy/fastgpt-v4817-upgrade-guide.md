@@ -28,4 +28,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4817 \
 ### 修复问题
 文件返回接口缺少`Content-Length`头，导致非同源文件上传时阿里vision模型无法识别图片；去除判断器两端字符串的隐藏换行符，避免判断器失效；修复变量更新节点手动输入非字符串类型数据时无法自动转换的问题；修复豆包模型无法进行工具调用的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817)

@@ -22,4 +22,4 @@ FastGPT V4.9.0版本包含环境变量变更与升级脚本相关调整，升级
 ### 升级注意事项
 本次升级需注意多个细节：首先，环境变量变更需严格按照官方配置调整，不可随意修改默认参数；替换OneAPI时切勿提前删除原有配置，否则会导致初始化同步失败；PG容器更新后需确保挂载的本地卷路径正确，避免数据丢失。若无需使用AI Proxy功能，则无需执行替换OneAPI的相关步骤。同时，升级过程中需确保服务器网络正常，否则可能导致镜像拉取或脚本执行失败。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/490)

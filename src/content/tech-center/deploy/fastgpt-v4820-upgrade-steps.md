@@ -26,4 +26,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4820 \
 ## 版本新增与优化修复
 该版本新增多项功能与优化项：新增可视化模型参数配置，可替代原配置文件的模型配置方式，预设超100个模型配置且支持一键测试；新增DeepSeek resoner模型的思考过程输出；新增使用记录导出与仪表盘功能；新增markdown音视频代码块（`audio`与`video`）支持；调整`max_tokens`计算逻辑，优先保证配置值，超出上下文时自动缩减历史记录。同时优化了上下文过滤、页面组件抽离、全文检索大小写忽略、问答生成与增强索引的流输出逻辑，自动给assistant空content补充null并合并连续的text assistant内容避免模型报错；调整图片Host，取消上传时补充`FE_DOMAIN`，改为发送对话前补充，避免替换域名后原图片失效。此外修复了部分场景成员列表无法触底加载、工作流递归执行异常等问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4820)

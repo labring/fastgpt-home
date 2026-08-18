@@ -21,4 +21,4 @@ source_type: 官方文档
 本次V4.14.20版本的修复包含两处核心优化：一是增强了工作流的zod数据类型适配性，可解决工作流中涉及zod数据类型校验时的异常问题，确保工作流的配置校验逻辑正常运行；二是修复了模型配置无法完全覆盖defaultConfig的问题，可确保模型配置完整覆盖defaultConfig，避免出现配置项无法完整生效的情况。
 需要注意，本次升级仅适用于FastGPT 4.14.x系列的自部署实例，请勿在其他版本分支的实例中直接执行该升级操作。若升级过程中遇到相关异常，可参考官方通用排查流程处理。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41420
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41420)

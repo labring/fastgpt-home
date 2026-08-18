@@ -21,4 +21,4 @@ FastGPT工作流中的知识库搜索节点是实现向量搜索知识库的核�
 
 该节点的使用存在明确边界，仅用于向量搜索知识库内容，需搭配其他工作流节点完成后续内容处理。若后续节点需要处理引用内容，需提前兼容空数组的情况，避免因无搜索结果导致流程异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search)

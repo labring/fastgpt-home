@@ -22,4 +22,4 @@ source_type: 官方文档
 ## 修复与代码优化
 本次更新修复了模型获取多模态文件链接异常、`training`接口潜在越权风险、HTTP tool parse的SSRF风险、交互节点后MCP工具展开异常等问题。代码优化方面，将插件服务从旧runtime结构调整为pnpm workspace monorepo，拆分为HTTP服务入口、领域模型、用例、API adapter、基础设施、SDK和CLI；将app API接口全部用zod schema编写并生成文档；及时处理worker内图片，不再存留base64以降低内存消耗。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41504
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41504)

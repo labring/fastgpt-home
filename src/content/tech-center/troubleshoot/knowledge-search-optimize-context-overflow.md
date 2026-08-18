@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对上下文窗口溢出问题，需结合实际使用的大模型上下文窗口限制，调整问题优化功能使用的对话轮次数量，减少传入模型的对话内容总量；针对对话范围的疑问，需参考官方文档明确"根据对话记录"指代的节点对话数据（需按实际环境确认）。验证时，重新配置知识库搜索节点的问题优化功能，发起测试对话，确认不再触发模型上下文窗口溢出，且AI补全问题的逻辑符合预期。
 
-> 来源：https://github.com/labring/FastGPT/issues/6289
+> 来源：[FastGPT GitHub Issue #6289](https://github.com/labring/FastGPT/issues/6289)

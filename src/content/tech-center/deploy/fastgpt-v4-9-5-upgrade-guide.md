@@ -21,4 +21,4 @@ source_type: 官方文档
 体验优化包括：完善了繁体中文翻译内容，同时完成了Arm架构的镜像打包，适配更多硬件环境。
 问题修复包括：修复了password检测规则错误的问题；解决了分享链接无法隐藏知识库检索结果的缺陷；修复了IOS低版本下的正则兼容问题；修复了问答提取队列出现错误后计数器未清零，导致队列失效的问题；修复了Debug模式下交互节点下一步操作可能触发死循环的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495)

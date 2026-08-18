@@ -21,4 +21,4 @@ source_type: 官方文档
 # 使用注意事项
 配置时需确保分类内容与系统提示词匹配，避免出现分类定义模糊的情况。若未明确系统提示词的分类规则，可能导致分类结果不符合预期。此外，该节点仅能基于预设的分类项完成归类，无法自动生成通用分类逻辑，且不支持无明确边界的模糊分类场景。同时，该节点依赖function_call模块，需确保当前工作流环境支持该模块的调用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify)

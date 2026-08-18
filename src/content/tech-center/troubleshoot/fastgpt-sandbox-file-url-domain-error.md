@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 临时可先手动移除链接中错误添加的二级域名，验证链接是否可以正常访问。后续需排查sandbox_get_file_url工具的域名拼接逻辑，修正错误的域名附加规则。验证方式为重新调用该工具生成临时链接，确认生成的链接仅包含正确的有效域名，无额外未配置的二级域名，访问链接确认可正常打开。
 
-> 来源：https://github.com/labring/FastGPT/issues/6950
+> 来源：[FastGPT GitHub Issue #6950](https://github.com/labring/FastGPT/issues/6950)

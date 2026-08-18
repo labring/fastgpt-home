@@ -35,4 +35,4 @@ FastGPT V4.9.6版本包含多项更新：新增MCP方式对外提供应用调用
     商业版：在Admin后台的系统配置-基础配置-系统参数的MCP转发服务地址中，设置fastgpt-mcp-server的公网访问地址。
 3.  **更新镜像tag**：将FastGPT社区版、商业版镜像tag设为v4.9.6，Sandbox镜像tag设为v4.9.6，新增的mcp server镜像tag为v4.9.6。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/496)

@@ -23,4 +23,4 @@ FastGPT工作流中的知识库搜索节点，是用于实现向量知识库内�
 3. 点击「搜索参数」配置项，参考官方文档的参数说明完成基础配置，无需特殊调整可保留默认设置；
 4. 保存节点配置，即可将该节点接入工作流的链路中，通过「引用内容」输出链路获取检索到的知识库内容，供后续节点使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/dataset_search)

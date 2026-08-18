@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv451 \
 ## 升级注意事项
 本次升级仅适用于V4.5.1版本的部署升级，V4.5版本需进行较为复杂的更新操作。执行初始化接口时，请勿手动修改或干预数据库内容，避免引发数据异常。若升级过程中出现日志报错，需优先排查环境变量配置与服务域名指向是否正确。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/451
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/451)

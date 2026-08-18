@@ -22,4 +22,4 @@ FastGPT 支持通过钉钉企业内部应用接入钉钉知识库，可实现钉
 
 使用过程中需注意：User ID 并非手机号、姓名或 unionId，若成员详情页未展示 User ID，可通过导出成员列表获取；专属账号无权限访问的钉钉知识库，不会出现在FastGPT的添加文件列表中。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/dingtalk_dataset)

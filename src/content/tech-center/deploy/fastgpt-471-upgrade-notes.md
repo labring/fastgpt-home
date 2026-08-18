@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/clearInvalidData \
 ## 功能与修复细节
 本次更新的语音输入配置支持控制是否开启语音输入（含分享页面）、语音输入后自动发送与自动流式语音播放；文件读取新增对pptx和xlsx格式的支持，但所有文件读取将转移至服务端执行，会增加服务器资源消耗且上传时无法预览更多内容；新增定时器进行小范围垃圾数据清理，若长时间未运行服务可手动调用上述初始化接口完成全量清理；修复了工具调用模块连线数据类型校验错误、自定义索引输入解构失败、rerank模型数据格式异常、问题补全历史记录BUG以及分享页面特殊场景加载缓慢的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471)

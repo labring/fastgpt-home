@@ -24,4 +24,4 @@ FastGPT 4.14.5版本中，使用官方插件市场的BI图表生成插件生成�
 ## 解决与验证
 首先补充或修正fastgpt-plugin容器的S3服务配置，确保配置参数与minio服务的实际配置一致，需按实际环境填写相关参数。随后重启fastgpt-plugin容器，使新配置生效。验证时，重新使用BI图表生成插件尝试生成图片，确认不再出现指定报错，且图片生成成功。同时再次查看fastgpt-plugin容器的日志，确认无该初始化相关报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6413
+> 来源：[FastGPT GitHub Issue #6413](https://github.com/labring/FastGPT/issues/6413)

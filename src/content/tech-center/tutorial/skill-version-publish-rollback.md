@@ -23,4 +23,4 @@ source_type: 官方文档
 ## 使用边界与易错提示
 该功能的核心是隔离调试与生产环境，因此不建议直接在生产环境的运行实例中修改代码，所有改动应先在调试区完成验证后再发布。同时需注意，发布前需确认未被忽略的文件总体积未超限，否则会导致发布失败；回滚操作仅恢复未被忽略的文件，无法恢复本地依赖等被过滤的内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/skill/version
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/version)

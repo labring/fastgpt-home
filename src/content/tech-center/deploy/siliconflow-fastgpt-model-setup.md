@@ -24,4 +24,4 @@ SiliconCloud（硅基流动）是专注开源模型调用的平台，自带加�
 ## 使用建议
 若需快速体验开源模型或快速搭建FastGPT应用，无需申请多服务商API密钥时，可优先选择该平台的模型。若计划后续私有化部署模型与FastGPT，可先通过该平台进行测试验证，减少前期POC的时间与成本。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud)

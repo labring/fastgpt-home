@@ -24,4 +24,4 @@ source_type: 官方文档
 3. 依赖脚本权限问题：若`postinstall.sh`执行失败，Windows环境可使用Git Bash添加执行权限再执行脚本，Linux环境可先执行`chmod -R +x ./scripts/`再重新执行`pnpm i`。
 4. 特定报错处理：若出现`TypeError: Cannot read properties of null (reading useMemo )`，可删除所有`node_modules`，使用Node18重新执行`pnpm i`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/dev
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/dev)

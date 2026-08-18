@@ -17,4 +17,4 @@ source_type: 官方文档
 ### 优化修复与代码改进
 本次更新优化了多项底层逻辑：统一工作区依赖版本管理，将更多子项目依赖迁移到pnpm catalog并刷新锁定文件；Agent Sandbox镜像补充了中英文运行时字体，改善文本和图像任务的字体显示效果；OSS适配器支持IStorage契约中的字符串上传，在无法覆盖响应Content-Type的场景下沿用对象原始类型；COS适配器对缺失对象的下载请求添加预检，确保符合统一下载错误契约。同时修复了多个已知问题：阿里云OSS getObjectMetadata从错误字段读取ETag，导致ETag缺失并触发下游元数据校验失败的问题；S3/MinIO源文件不存在时API返回Unknown的问题，改为返回文件找不到并使用HTTP 404状态码；旧插件节点升级后输入框消失的问题；头像URL被重复编码的问题。此外还新增了跨MinIO、AWS S3、Cloudflare R2、OSS和COS的通用集成测试，覆盖公私bucket、公开URL和预签名URL的真实访问场景，提升存储模块的兼容性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4155
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/4155)

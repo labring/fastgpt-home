@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决方法为将传入的字符串形式的应用_id转换为数据库支持的ObjectId类型，修正插件引用时的参数传递格式。验证方式为：重新在工作流中引用该新增插件执行，确认不再出现该_id类型转换报错，且能正常返回对应工具的执行结果。
 
-> 来源：https://github.com/labring/FastGPT/issues/6785
+> 来源：[FastGPT GitHub Issue #6785](https://github.com/labring/FastGPT/issues/6785)

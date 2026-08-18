@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 由于未明确具体异常类型，暂无通用解决方法，需根据排查步骤确认的具体异常原因进行针对性修复。验证方式需结合实际异常场景，确认操作后异常是否消失、对应功能是否恢复正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6230
+> 来源：[FastGPT GitHub Issue #6230](https://github.com/labring/FastGPT/issues/6230)

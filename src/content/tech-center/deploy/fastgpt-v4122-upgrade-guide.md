@@ -30,4 +30,4 @@ V4.12.2版本发布于2025年8月26日，针对自部署场景的升级需更新
 ### 工具更新
 修复Doc2x工具的响应值异常问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4122
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4122)

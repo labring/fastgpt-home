@@ -18,4 +18,4 @@ FastGPT 自部署配置包含环境、模型、对象存储、沙箱等多个独
 
 除基础运行配置外，还可通过 `/self-host/config/remote-debug-suite` 配置远程调试环境，通过 `/self-host/config/sandbox/` 下的子路径配置运行沙箱，也可通过 `/self-host/custom-models/` 下的文档配置自定义模型如bge-rerank、chatglm2。此外，插件系统、工作流节点的相关配置也可对应参考目录下的对应文档，完成应用功能的扩展与调试。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/toc
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/toc)

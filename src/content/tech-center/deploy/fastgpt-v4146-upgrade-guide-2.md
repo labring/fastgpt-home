@@ -22,4 +22,4 @@ source_type: 官方文档
 ### 问题修复
 修复系统工具集设置系统密钥后子工具无法读取密钥的问题；修复日期选择器溢出问题，新增动态位置适配；修复工作流编排页面系统工具“探索更多”跳转地址错误的问题；修复模型头像缺省值`/imgs/model/huggingface.svg`路径错误的问题；过滤设置工具标签时的多余空值；新增飞书多维表格引导教程、企微相关插件（获取企微企业access_token、企微智能表工具集）；新增模型`qwen-flash`，调整`qwen3-max`和`qwen-plus`的预设参数。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146)

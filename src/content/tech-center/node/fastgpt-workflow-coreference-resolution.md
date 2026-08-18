@@ -21,4 +21,4 @@ source_type: 官方文档
 ## 模块核心特性
 该模块具备三个基础特性：支持重复添加使用、带有外部输入可接入自定义对话数据、可通过触发执行逻辑自动运行，适配不同的工作流编排需求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution)

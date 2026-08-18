@@ -19,4 +19,4 @@ V4.15.0版本引入了更为严格的环境变量检查机制，升级后需针�
 
 ## 可选配置与易错提醒
 部分环境变量带有默认值，不配置也可正常使用，例如PARSE_FILE_WORKERS默认值为10、SYNC_INDEX需设置为布尔字符串（如"true"而非0或1）。需注意TRUSTED_PROXY_ENABLE默认值为false，仅当设置为true时，TRUSTED_PROXY_IPS配置才会生效。此外工作流相关变量如WORKFLOW_MAX_LOOP_TIMES默认值为100，WORKFLOW_PARALLEL_MAX_CONCURRENCY默认值为10，可根据实际业务需求调整。升级过程中需特别注意：INVOKE_TOKEN_SECRET的长度必须≥32位，且fastgpt-app、fastgpt-pro与fastgpt-plugin的相关密钥需保持一致；开源版不再支持通过volume挂载config.json配置文件。
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)

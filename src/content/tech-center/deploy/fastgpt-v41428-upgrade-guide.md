@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 本次变更说明
 本次V4.14.28版本仅包含一项核心修复变更：修复admin服务的Node.js版本兼容问题。在自部署过程中，若部署环境的Node.js版本与官方要求不匹配，可能导致admin服务启动异常、运行报错或功能失效，本次变更针对该问题进行了优化，可有效避免因版本不匹配引发的服务异常，提升了版本部署的兼容性与稳定性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428)

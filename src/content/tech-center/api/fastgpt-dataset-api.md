@@ -31,4 +31,4 @@ curl --location --request POST http://localhost:3000/api/core/dataset/create \
 ## 通用参数说明
 通用入参中，`datasetId`为必填的知识库ID，`trainingType`支持`chunk`（按文本长度分割）和`qa`（问答对提取）两种模式。`customPdfParse`默认关闭，设为`true`可开启PDF增强解析。`vectorModel`、`agentModel`、`vlmModel`建议留空以使用系统默认配置。`autoIndexes`和`imageIndex`仅商业版支持，分别用于自动生成索引和图片索引。此外，创建知识库时`parentId`可设为`null`或不传以使用根目录，`type`可选`dataset`或`folder`，默认创建普通知识库。其他接口如获取知识库列表、详情、删除等，需对应传入`id`或`parentId`参数，具体可参考官方文档的对应示例。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)

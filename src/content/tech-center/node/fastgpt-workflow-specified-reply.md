@@ -19,4 +19,4 @@ FastGPT工作流中的指定回复节点，是用于特殊状态回复的基础�
 ### 使用边界与注意事项
 该节点仅适用于返回预设内容的场景，无法实现基于实时计算、动态生成的非固定内容回复，不适合需要依赖外部数据或知识库检索结果的回复场景。需注意，重复添加节点时需确保流程逻辑合理，避免出现重复回复或流程执行冲突。若选择变量引用作为回复内容，需确保对应变量已在工作流中正确定义，否则可能导致输出内容不符合预期。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply)

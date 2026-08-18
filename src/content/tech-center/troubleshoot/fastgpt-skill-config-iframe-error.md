@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 修复方案分为两部分：一是修改`proxy.ts`，使用adapter返回的`endpoint.url`替代`host:port`拼接逻辑；二是在Dockerfile的builder阶段，使用esbuild编译`server.ts`并覆盖standalone默认server，示例命令为`cd projects/app && ./node_modules/.bin/esbuild server.ts --bundle --platform=node --format=cjs --outfile=server-proxy.js --external:next`，并将编译后的文件复制到对应目录。完成修改并重新部署后，打开Skill详情页的“skill配置”，确认iframe正确加载sandbox编辑器内容，而非FastGPT自身页面，同时检查网络请求中的iframe URL是否为正确的转发地址。
 
-> 来源：https://github.com/labring/FastGPT/issues/6909
+> 来源：[FastGPT GitHub Issue #6909](https://github.com/labring/FastGPT/issues/6909)

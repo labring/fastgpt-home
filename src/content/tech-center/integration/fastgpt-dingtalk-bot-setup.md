@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 常见使用问题
 若需要重置当前聊天记录，可向机器人发送大小写敏感的「Reset」消息，机器人将自动新开一个独立的聊天会话。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/dingtalk)

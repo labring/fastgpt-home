@@ -37,4 +37,4 @@ FastGPT V4.6版本新增团队管理功能，支持邀请其他用户参与资�
 ### 功能与修复说明
 该版本新增多项核心功能：团队空间功能，支持多用户协作管理资源；多路向量功能，支持多个向量映射一组数据；TTS语音功能；支持知识库配置文本预处理模型；线上环境新增ReRank向量召回，可提高召回精度。同时优化了知识库导出功能，支持直接触发流下载，无需等待转码完成。另外修复了旧版4.6版本因缺少字段导致的文件导入知识库数据无法显示的问题，可通过上述修复脚本解决。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46)

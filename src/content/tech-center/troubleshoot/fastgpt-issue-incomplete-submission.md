@@ -30,4 +30,4 @@ source_type: GitHub issue
 2. 若为私有部署版本，需按实际环境确认配置文件与环境参数是否正确，例如密钥配置、网络连接等；
 3. 等待维护者跟进排查，若需进一步测试可按要求提供额外的日志或配置信息，配合完成排查工作。
 
-> 来源：https://github.com/labring/FastGPT/issues/6375
+> 来源：[FastGPT GitHub Issue #6375](https://github.com/labring/FastGPT/issues/6375)

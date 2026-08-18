@@ -32,4 +32,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4124 \
 ### 插件更新
 本次升级涉及fastgpt-plugin镜像更新，其他插件无强制更新要求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4124
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4124)

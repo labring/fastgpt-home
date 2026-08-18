@@ -29,4 +29,4 @@ curl --location --request POST https://{{host}}/api/admin/initv486 \
 ### 升级补充说明
 本版本的升级操作依托专属初始化接口完成，无需手动执行复杂的数据库脚本，仅需按照上述步骤操作即可完成升级。升级过程中请确保网络连接稳定，避免中断请求导致配置不完整。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/486
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/486)

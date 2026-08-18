@@ -35,4 +35,4 @@ AGENT_SANDBOX_STORAGE_SIZE_GI = 1
 ## 异常处理说明
 若在OrbStack/Docker环境中启动失败，可能是httpx误解析自动注入的IPv6 CIDR导致，此时需显式覆盖NO_PROXY配置，避免内部调用被代理劫持。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/opensandbox)

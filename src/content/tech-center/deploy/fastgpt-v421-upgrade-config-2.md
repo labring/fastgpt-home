@@ -21,4 +21,4 @@ VectorModels : [ { model : text-embedding-ada-002 , name : Embedding-2 , price :
 ## 升级注意事项
 仅当你自定义了配置文件时才需要执行上述修改，若未自定义配置文件则无需额外操作。若未正确配置`VectorModels`字段，可能会导致知识库分段逻辑异常，影响后续的问答与知识库处理流程。请严格遵循官方建议，将`maxToken`的数值控制在3000以内，避免超出模型支持的token上限。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421)

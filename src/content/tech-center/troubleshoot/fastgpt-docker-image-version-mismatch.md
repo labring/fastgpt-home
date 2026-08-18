@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 当完成上述排查步骤后，若本地已正确拉取4.14.8.3版本的镜像且配置文件无误，重新启动服务后后台显示的版本号应与docker-compose.yaml中指定的镜像标签一致。若仍存在问题，需按实际环境进一步确认配置与镜像状态。
 
-> 来源：https://github.com/labring/FastGPT/issues/6592
+> 来源：[FastGPT GitHub Issue #6592](https://github.com/labring/FastGPT/issues/6592)

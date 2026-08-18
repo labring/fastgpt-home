@@ -21,4 +21,4 @@ FastGPT数据集中，文件会存储在MongoDB的FS中，具体业务数据则�
 ## 使用边界与易错提示
 该数据集设计仅支持通过标准流程关联文件与数据，手动输入或标注的数据无需经过文件上传环节，直接使用对应的特殊file_id即可。当需要调整数据关联的文件时，无法通过修改已有数据的file_id实现，因为该字段不可变更。若需修改关联关系，需重新插入新的数据条目，而非直接修改原有数据的file_id。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/design/dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/design/dataset)

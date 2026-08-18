@@ -19,4 +19,4 @@ source_type: 官方文档
 2.  实现插件逻辑：单工具插件需在`index.ts`中默认导出SDK实例，示例代码需导入`createToolHandler`、`defineTool`与zod库，定义密钥schema（如`z.object({ apiKey: z.string().min(1).meta({ title: "API Key", isSecret: true }) })`）、输入输出schema，最后编写执行逻辑，支持通过`ctx.invoke.uploadFile()`处理文件上传、`ctx.streamResponse()`实现流式输出。
 3.  验证与打包：执行`pnpm test`完成测试，`pnpm build`构建产物，`pnpm pack`生成最终的.pkg插件包。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)

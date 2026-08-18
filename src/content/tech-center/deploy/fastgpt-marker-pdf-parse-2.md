@@ -34,4 +34,4 @@ docker run --gpus all -itd -p 7231:7232 --name model_pdf_v2 -e PROCESSES_PER_GPU
 ## 注意事项与边界
 需注意当前适配的 Marker 镜像版本为 v0.2，FastGPT V4.9.0 之前的旧版本需使用 v0.1 镜像，且配置方式为修改环境变量 `CUSTOM_READ_FILE_URL`、`CUSTOM_READ_FILE_EXTENSION`，接口路径为 `/v1/parse/file`。此外，部署 Marker 需使用 GPU 资源，且需确保 FastGPT 的日志级别设置为 `info` 或 `debug` 才能查看解析相关日志。如果未勾选「PDF 增强解析」，FastGPT 将默认使用内置解析器，不会调用 Marker 服务。配置中的 `url` 需替换为实际部署的 Marker 服务访问地址，`key` 和 `doc2xKey` 为可选配置项，可留空。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)

@@ -17,4 +17,4 @@ FastGPT 支持三种团队模式，分别为多团队模式（默认模式）、
 ## 团队模式配置步骤
 配置 FastGPT 团队模式需在 fastgpt-pro 的系统配置-成员配置 模块中完成，具体操作流程为：1. 登录 FastGPT 管理员后台；2. 进入系统配置页面；3. 找到成员配置板块；4. 选择需要启用的团队模式并保存配置即可。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/admin/teamMode
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/admin/teamMode)

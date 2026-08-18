@@ -31,4 +31,4 @@ source_type: 官方文档
 ## 配置注意事项
 使用内置词库时，你仅需在FastGPT后台的对应配置页面直接录入预设问题即可。无论选择哪种配置方式，都需注意`searchKey`的长度不能超过50个字符，否则可能导致匹配失败。同时，自定义词库接口必须保证跨域权限正常，否则用户浏览器将无法正常调用接口，无法获取引导问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/general/chat_input_guide
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/chat_input_guide)

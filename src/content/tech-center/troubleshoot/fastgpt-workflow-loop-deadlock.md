@@ -23,4 +23,4 @@ FastGPT v4.14.0及以上私有部署版本中，运行包含复杂循环拓扑�
 ## 解决与验证
 解决该问题需要修正`splitNodeEdges`函数的逻辑，正确区分循环连线与常规连线，避免将循环结构的连线错误归类。验证步骤如下：1. 完成代码修复后重新部署FastGPT服务。2. 导入原复现用的工作流文件，运行工作流，确认不再出现极短时间内无声结束的情况。3. 查看工作流执行日志，确认流程可正常执行至结束，未出现死锁异常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6596
+> 来源：[FastGPT GitHub Issue #6596](https://github.com/labring/FastGPT/issues/6596)

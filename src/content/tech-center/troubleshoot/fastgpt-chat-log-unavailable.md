@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 该问题的具体解决方案需按实际环境确认，暂无通用的修复步骤。完成上述排查步骤后，若问题仍存在，可结合实际的升级日志与部署环境进一步定位问题。
 
-> 来源：https://github.com/labring/FastGPT/issues/6213
+> 来源：[FastGPT GitHub Issue #6213](https://github.com/labring/FastGPT/issues/6213)

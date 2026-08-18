@@ -32,4 +32,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4120 \
 ### 工具更新
 系统工具可返回citeLinks响应值，实现对话框内引用链接展示。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120)

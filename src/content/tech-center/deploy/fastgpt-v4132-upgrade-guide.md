@@ -25,4 +25,4 @@ FastGPT V4.13.2版本包含环境变量调整、升级脚本及多项功能优�
 ## 新增优化与修复内容
 本次更新新增HTTP工具集手动创建模式、OpenAPI框架、APIKey有效性检测接口及带版本全局变量的对话日志导出功能；优化团队审计日志权限（非管理员不可查看）、S3存储应用头像能力及工作流画布性能；修复了LLM图片请求错误、Mongo多副本切换时watch未触发、文本分块LastText未处理、number=0时输入框校验失败、工作流复杂循环并行判断异常等问题。插件端新增十余种工具，同时支持配置系统工具是否在Worker中运行。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4132
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-13/4132)

@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4120 \
 ## 使用边界与易错提示
 本次升级脚本仅面向商业版用户，非商业版部署无需执行该脚本。修改环境变量时，`FILE_TOKEN_KEY`需与`fastgpt`镜像中的对应变量保持完全一致，否则可能导致文件读取功能异常。`mcp_server`、`Sandbox`、`AIProxy`三个组件无需更新，避免不必要的配置变动。部分新增与优化功能仅对商业版用户开放，例如应用日志数据看板与简易对话页，使用前需确认当前部署的版本类型。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4120)

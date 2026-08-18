@@ -27,4 +27,4 @@ source_type: 官方文档
 ### 问题修复
 修复子工作流全局变量默认值未生效、agent模式下rerank模型不显示、bge-m3 embedding向量模型输出全为0、MCP并发调用连接异常、登录接口安全、MCP SSRF安全、工作流工具错误未捕获等问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41410)

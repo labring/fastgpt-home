@@ -25,4 +25,4 @@ source_type: 官方文档
 ### 升级注意事项
 原先手动安装的JS插件包将失效，需重新打包安装。当前插件仅包含工具类型，后续将支持工作流触发器、文档解析器、数据分块策略、索引增强策略等类型。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4140
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4140)

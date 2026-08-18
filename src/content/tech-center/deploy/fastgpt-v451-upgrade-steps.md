@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv451 \
 ## 升级补充说明
 本次V4.5.1版本升级无需复杂的配置调整，仅需执行上述初始化API即可完成版本升级。相较于V4.5版本需进行复杂更新的流程，V4.5.1的升级操作更为简洁便捷，可快速完成版本迭代。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/451
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/451)

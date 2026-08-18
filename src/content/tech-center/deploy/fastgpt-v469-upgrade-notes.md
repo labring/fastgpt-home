@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv469 \
 优化内容包括：问题补全功能新增英文类型，可设置为独立模块方便复用；重写了计量模式；Token过滤历史记录保持偶数条，防止部分模型报错；分享链接SEO优化，可直接展示应用名和头像。修复的问题包括标注功能异常、qa生成线程计数错误、问题分类连线类型错误。
 需要注意的是，该升级脚本仅适用于V4.6.9版本的升级操作，执行前需确认当前部署版本符合要求，替换参数时需确保rootkey与host的正确性，避免接口调用失败。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/469)

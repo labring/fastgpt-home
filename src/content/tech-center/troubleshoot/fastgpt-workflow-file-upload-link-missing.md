@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现是文件上传节点的配置遗漏，可重新勾选对应异常的文件类型，保存工作流配置后重新上传测试，验证是否可正常生成文件链接。若排查发现为程序逻辑层面的异常，需结合实际环境的后台日志进一步定位修复。验证方式为上传对应曾无法获取链接的文件，在AI对话界面中确认是否正常展示文件链接。
 
-> 来源：https://github.com/labring/FastGPT/issues/6548
+> 来源：[FastGPT GitHub Issue #6548](https://github.com/labring/FastGPT/issues/6548)

@@ -17,4 +17,4 @@ FastGPT Docker Compose部署包含核心组件：MongoDB用于存储非向量类
 ## 快速部署步骤
 在Linux/MacOS/Windows WSL环境下，可通过交互式脚本快速部署：执行命令`bash <(curl -fsSL https://doc.fastgpt.cn/deploy/install.sh)`，脚本将自动完成下载docker-compose.yml、引导选择S3与MCP外部访问地址、随机生成root登录密码、服务间Token、应用密钥与组件密码、自动检测并替换宿主机Docker socket挂载路径等操作。执行完成后终端会输出本次生成的root登录密码，需妥善保存，后续升级需基于生成的docker-compose.yml调整配置，请勿直接丢弃密码与密钥。如需固定使用特定配置文件，可手动下载对应向量库的配置文件，例如PgVector国内镜像执行`curl -fsSL https://doc.fastgpt.cn/deploy/docker/v4.15/cn/docker-compose.pg.yml -o docker-compose.source.yml`，再通过本地install.sh模式生成最终配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)

@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4810 \
 --header Content-Type: application/json
 ```
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810)

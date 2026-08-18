@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查结果修正对应的问题：若为路径错误则修正API请求中的文件路径；若为权限问题则调整文件目录的访问权限；若为参数不匹配则补全或修正API请求参数。修正完成后，重新发起API调用测试图片识别功能，若此时API可以正常识别图片，且与手动调试的结果一致，则问题解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6332
+> 来源：[FastGPT GitHub Issue #6332](https://github.com/labring/FastGPT/issues/6332)

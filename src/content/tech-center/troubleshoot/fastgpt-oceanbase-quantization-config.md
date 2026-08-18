@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决方法是参考官方半精度配置的实现逻辑，添加对应的环境变量以指定量化等级，具体的环境变量名称和参数值需按实际环境确认。验证方法为重启FastGPT服务后，查看Oceanbase向量存储的配置信息，确认量化等级已更改为指定值，且向量存储相关功能可正常运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/6202
+> 来源：[FastGPT GitHub Issue #6202](https://github.com/labring/FastGPT/issues/6202)

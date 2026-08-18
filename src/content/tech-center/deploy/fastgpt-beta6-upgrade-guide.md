@@ -33,4 +33,4 @@ source_type: 官方文档
 ## 升级注意事项
 本次升级存在两项关键风险与注意点：一是LLM请求追踪记录（`llm_request_records`）新增`teamId`字段，需注意后续相关数据的兼容性；二是数据迁移接口不会回填历史App Chat的`sourceType`字段，且仅会清理旧Skill Debug对话数据与异常sandbox实例。对于无有效归属的orphan sandbox，仅在非dry-run模式下会删除远端资源、归档文件与Mongo记录，dry-run模式仅统计数量。此外，配置Agent Sandbox镜像源仅会在sandbox初始化时写入镜像配置，不影响已运行的sandbox实例。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506)

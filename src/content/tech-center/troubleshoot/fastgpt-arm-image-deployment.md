@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若FastGPT官方提供arm架构的部署镜像，直接拉取对应arm架构的镜像文件，按照常规私有化部署流程完成部署即可；若未提供arm架构镜像，需按实际环境确认适配方案。验证部署是否成功的方式为：启动FastGPT容器后，检查容器运行状态无异常，且服务可正常访问、功能可用，即为问题解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/7125
+> 来源：[FastGPT GitHub Issue #7125](https://github.com/labring/FastGPT/issues/7125)

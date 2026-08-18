@@ -29,4 +29,4 @@ image with reference registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-code-sand
 3.  修改配置后，执行`docker-compose up -d fastgpt-code-sandbox`重新启动代码沙箱服务。
 4.  执行`docker-compose logs fastgpt-code-sandbox`查看容器日志，确认无架构匹配报错；也可通过配置中的健康检查命令验证容器健康状态。
 
-> 来源：https://github.com/labring/FastGPT/issues/7227
+> 来源：[FastGPT GitHub Issue #7227](https://github.com/labring/FastGPT/issues/7227)

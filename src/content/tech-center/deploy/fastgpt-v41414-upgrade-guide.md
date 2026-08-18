@@ -20,4 +20,4 @@ FastGPT V4.14.14版本针对多项功能进行了优化与问题修复。其中�
 ## 新增环境变量说明
 本次版本新增了`WECHAT_CHANNEL_CONCURRENCY`环境变量，用于控制微信渠道poll worker的并发数量，该变量的默认值为1000。用户可根据自身业务的在线渠道峰值调整该参数的取值，建议配置值不低于在线渠道的峰值，以保障微信发布渠道的运行稳定性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41414
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41414)

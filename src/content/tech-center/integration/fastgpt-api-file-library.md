@@ -27,4 +27,4 @@ FastGPT默认支持本地文件导入，但当用户已搭建自有文档库时�
 
 最小配置示例：仅需填入`baseURL`为`https://your-custom-file-api.com`，`authorization`为`Bearer your-auth-token`，即可完成基础配置，系统将自动拉取并展示自有文档库的文件列表，支持按需选择性导入文件到FastGPT知识库。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/api_dataset)

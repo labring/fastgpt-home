@@ -32,4 +32,4 @@ TRUSTED_PROXY_ENABLE=false
 ## 新增、优化与修复内容
 该版本新增循环节点并弃用旧的批量执行功能，全局变量输入框支持输入object类型数据，工具调用开启虚拟机时用户上传的文件会直接注入虚拟机，新增第三方知识库钉钉接入（beta版，存在富文本获取异常问题），同时增加文件解析、HTML转Markdown、文本切块的worker pool，可通过环境变量调整池数量，还新增模型思考配置、S3 CDN配置以及Rerank defaultConfig配置。优化内容包括父子节点选中互斥功能、调整文件注入messages位置以提升缓存命中率、优化余额不足提示、隐藏无创建权限的模板功能、加强SSRF与IP检测防护等。修复了Agent v2模式下模型响应报错导致step重复执行的问题，以及知识库源文件预览和下载时文本类型响应缺少charset的问题。此外还进行了代码结构调整、构建工具升级等优化。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501)

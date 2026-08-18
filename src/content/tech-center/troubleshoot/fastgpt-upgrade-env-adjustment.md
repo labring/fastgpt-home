@@ -23,4 +23,4 @@ FastGPT新版本的升级文档中明确要求对部分环境变量进行调整�
 ## 解决与验证
 按照升级文档的要求，逐一调整记录的环境变量参数。调整完成后，根据实际部署方式重启FastGPT相关服务（如容器实例、系统服务等）。验证环节：等待服务启动完成后，测试原异常的业务功能是否恢复正常，同时查看服务日志确认无新的异常报错。若功能恢复且日志正常，则问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/7370
+> 来源：[FastGPT GitHub Issue #7370](https://github.com/labring/FastGPT/issues/7370)

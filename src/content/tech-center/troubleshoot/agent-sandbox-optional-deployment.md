@@ -22,4 +22,4 @@ agent-sandbox是FastGPT的可选组件，主要用于提供沙箱执行环境，
 ## 解决与验证
 agent-sandbox属于可选项，并非FastGPT部署的必选组件。若不配置agent-sandbox，需按实际环境确认是否会影响FastGPT的核心功能运行，目前无明确的强制依赖场景说明。无需使用agent-sandbox时，无需配置`/var/run/docker.sock:/var/run/docker.sock:ro`挂载项，可避免相关权限风险。验证方式为：移除agent-sandbox的部署配置后，重新启动FastGPT服务，检查核心基础功能是否可正常使用，具体功能影响需结合实际业务场景确认。
 
-> 来源：https://github.com/labring/FastGPT/issues/6688
+> 来源：[FastGPT GitHub Issue #6688](https://github.com/labring/FastGPT/issues/6688)

@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 该问题需根据具体原因修复：若为配置缺失则补充完整OSS存储的必要环境变量；若为代码逻辑漏洞则需更新至官方修复后的版本。验证时，重新配置正确的OSS存储参数后，重新上传文件并点击「分块预览」按钮，确认接口不再返回500错误，且能正常展示文件分块内容，同时后端日志无`name is not defined`相关报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6678
+> 来源：[FastGPT GitHub Issue #6678](https://github.com/labring/FastGPT/issues/6678)

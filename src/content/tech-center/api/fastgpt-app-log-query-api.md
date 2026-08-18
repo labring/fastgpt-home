@@ -28,4 +28,4 @@ curl --location --request POST "https://cloud.fastgpt.cn/api/proApi/core/app/log
 对于获取应用总体数据统计的接口，成功响应的`data`字段包含三个核心统计值：`totalUsers`（累积使用用户数量）、`totalChats`（累积对话数量）、`totalPoints`（累积积分消耗）。
 对于获取应用图表数据的接口，成功响应的`data`包含三个数组：`userData`为用户分时段统计数据，每个元素包含`timestamp`（时间戳）与`summary`，其中`summary`包含`userCount`（活跃用户数）、`newUserCount`（新用户数）、`retentionUserCount`（留存用户数）、`points`（总积分消耗）、`sourceCountMap`（各来源用户数量）；`chatData`为对话分时段统计数据，包含`chatItemCount`（对话次数）、`chatCount`（会话次数）、`errorCount`（错误对话次数）、`points`（总积分消耗）；`appData`为应用分时段统计数据，包含`goodFeedBackCount`（好评反馈数）、`badFeedBackCount`（差评反馈数）、`chatCount`（对话次数）、`totalResponseTime`（总响应时间）。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/app
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/app)

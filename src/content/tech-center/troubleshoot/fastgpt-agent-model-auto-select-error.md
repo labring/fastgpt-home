@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 临时恢复方案：可手动点击"历史已发布版本"选项，切换到正确的已发布AI模型。长期修复需等待官方后续版本修复该同步逻辑。验证方式：重新打开Agent编辑页，确认首次加载时自动显示已发布版本的正确选中模型与提示词，多次刷新页面后选中状态不再出现异常变化。
 
-> 来源：https://github.com/labring/FastGPT/issues/6853
+> 来源：[FastGPT GitHub Issue #6853](https://github.com/labring/FastGPT/issues/6853)

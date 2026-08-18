@@ -25,4 +25,4 @@ source_type: GitHub issue
 2.  修正上传文件相关的错误配置后，重新发起工具调用测试。
 3.  验证工具调用时不再出现`上传文件失败: 反向调用上传文件失败: [object Object]`的报错，且上传流程正常完成。
 
-> 来源：https://github.com/labring/FastGPT/issues/7247
+> 来源：[FastGPT GitHub Issue #7247](https://github.com/labring/FastGPT/issues/7247)

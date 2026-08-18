@@ -19,4 +19,4 @@ FastGPT v4.15.0及以上版本支持系统工具插件开发，插件分为单�
 2. 创建插件骨架：单工具插件执行`pnpx @fastgpt-plugin/cli create my-tool --type tool --cwd packages/tools`，工具集插件替换`--type`参数为"tool-suite"，命令将自动生成包含`index.ts`、`package.json`、`tsconfig.json`等文件的插件目录。
 3. 实现插件逻辑：单工具插件需在`index.ts`中默认导出SDK factory实例，可通过`zod`定义`secretSchema`、输入输出schema，例如使用`z.object({ apiKey: z.string().min(1).meta({ title: "API Key", isSecret: true }) })`配置密钥信息。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/system-tool-development)

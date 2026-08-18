@@ -35,4 +35,4 @@ source_type: 官方文档
 ## 适用与禁用场景
 该功能适用于需要统一用户提问方向、引导用户规范提问的场景，例如固定主题的客服咨询、特定业务的问答应用。当应用需要处理高度个性化、无明确预设可能的用户提问时，不建议使用该功能，避免限制用户的提问自由度。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/general/chat_input_guide
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/chat_input_guide)

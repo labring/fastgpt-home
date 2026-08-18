@@ -26,4 +26,4 @@ source_type: GitHub issue
 调整container_name配置，要么删除该配置项，要么将其值设置为与service key完全一致的内容。
 修改完成后，重新执行docker-compose相关启动命令，验证所有服务能够正常启动，且相关功能（如数据库连接、代码沙箱调用、代理服务等）均可正常运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/6708
+> 来源：[FastGPT GitHub Issue #6708](https://github.com/labring/FastGPT/issues/6708)

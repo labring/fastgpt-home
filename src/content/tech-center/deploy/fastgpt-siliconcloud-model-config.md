@@ -24,4 +24,4 @@ SiliconCloud（硅基流动）是提供开源模型调用的平台，拥有自�
 ## 使用边界与注意事项
 本方案适合快速体验开源模型或前期POC测试，可帮助减少私有化部署前的验证时间与成本。若计划长期使用私有化部署模型，需提前规划对应硬件资源。配置过程中需注意API key的保密，若模型无法正常调用，需检查API key有效性与模型渠道的配置匹配情况。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/siliconCloud)

@@ -27,4 +27,4 @@ FastGPT默认使用的ollama调用API路径与qwen3.5系列模型对`think:false
 2. 发起包含`think:false`参数的qwen3.5系列模型调用；
 3. 确认模型未输出思考过程，`think:false`参数生效。
 
-> 来源：https://github.com/labring/FastGPT/issues/6670
+> 来源：[FastGPT GitHub Issue #6670](https://github.com/labring/FastGPT/issues/6670)

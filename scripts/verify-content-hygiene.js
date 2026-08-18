@@ -31,8 +31,6 @@ const ts = loadTypeScript();
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
-// Build-time registries are not reader-facing copy surfaces.
-const STRUCTURED_COPY_REGISTRIES = new Set(['src/faq/generated-en-metadata.json']);
 const ENGLISH_CITATION_LABEL = 'Source(?:s)?|Reference(?:s)?';
 const CHINESE_CITATION_LABEL = '资料来源|参考资料|来源';
 const CITATION_LABEL_NAME = `${ENGLISH_CITATION_LABEL}|${CHINESE_CITATION_LABEL}`;
@@ -161,6 +159,12 @@ const EDITORIAL_PREAMBLE =
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 // Bound offset metadata before entity-heavy HTML can grow heap usage disproportionately.
 const MAX_HTML_PROJECTION_RUNS = 50_000;
+const HTML_WHITESPACE_ENTITIES = new Set(
+  'tab newline nbsp nonbreakingspace ensp emsp emsp13 emsp14 numsp puncsp thinsp hairsp verythinspace mediumspace thickspace negativeverythinspace negativethinspace negativemediumspace negativethickspace zerowidthspace zwnj zwj lrm rlm nobreak'.split(
+    ' '
+  )
+);
+const HTML_DASH_ENTITIES = new Set('hyphen ndash mdash dash minus'.split(' '));
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -288,9 +292,7 @@ function publishedMarkdownFiles(root) {
 
 function publishedStructuredCopyFiles(root) {
   return STRUCTURED_COPY_ROOTS.flatMap((relativeRoot) =>
-    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name)).filter(
-      (relativePath) => !STRUCTURED_COPY_REGISTRIES.has(relativePath.replaceAll(path.sep, '/'))
-    )
+    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name))
   ).sort((left, right) => left.localeCompare(right));
 }
 
@@ -539,12 +541,15 @@ function collectJsonEntries(source) {
   for (let index = source.indexOf('\n'); index >= 0; index = source.indexOf('\n', index + 1)) {
     lineStarts.push(index + 1);
   }
-  let lineCursor = 0;
   const lineAt = (index) => {
-    while (lineStarts[lineCursor + 1] !== undefined && lineStarts[lineCursor + 1] <= index) {
-      lineCursor += 1;
+    let left = 0;
+    let right = lineStarts.length - 1;
+    while (left <= right) {
+      const middle = Math.floor((left + right) / 2);
+      if (lineStarts[middle] <= index) left = middle + 1;
+      else right = middle - 1;
     }
-    return lineCursor + 1;
+    return right + 1;
   };
   const skipWhitespace = () => {
     while (/\s/.test(source[cursor] || '')) cursor += 1;
@@ -558,7 +563,7 @@ function collectJsonEntries(source) {
     }
     return { start, value: JSON.parse(source.slice(start, cursor)) };
   };
-  const parseValue = (arrayLeaf = false) => {
+  const parseValue = (arrayLeaf = false, valuePath = []) => {
     skipWhitespace();
     const start = cursor;
     if (source[cursor] === '"') {
@@ -568,7 +573,8 @@ function collectJsonEntries(source) {
           key: undefined,
           value: string.value,
           line: lineAt(start),
-          valueOffset: start
+          valueOffset: start,
+          path: valuePath
         });
       }
       return string.value;
@@ -582,14 +588,16 @@ function collectJsonEntries(source) {
         cursor += 1;
         skipWhitespace();
         const valueOffset = cursor;
-        const value = parseValue();
+        const childPath = [...valuePath, key.value];
+        const value = parseValue(false, childPath);
         entries.push({
           key: key.value,
           value,
           line: lineAt(key.start),
           keyOffset: key.start,
           valueOffset,
-          valueLine: lineAt(valueOffset)
+          valueLine: lineAt(valueOffset),
+          path: childPath
         });
         skipWhitespace();
         if (source[cursor] === ',') {
@@ -604,7 +612,7 @@ function collectJsonEntries(source) {
       cursor += 1;
       skipWhitespace();
       while (source[cursor] !== ']') {
-        parseValue(true);
+        parseValue(true, valuePath);
         skipWhitespace();
         if (source[cursor] === ',') {
           cursor += 1;
@@ -637,10 +645,13 @@ function sourceEntryLine(sourceFile, node, value) {
   const editorial = new RegExp(EDITORIAL_MATCHER.source, 'iu').exec(value);
   const citation = new RegExp(CITATION_LABEL_TEXT.source, 'iu').exec(value);
   const token = editorial?.[0] || citation?.[0];
-  const offset = token && node.getText(sourceFile).indexOf(token);
-  return offset < 0 || offset === undefined
+  const nodeText = node.getText(sourceFile);
+  const offset = token && nodeText.indexOf(token);
+  const fallback = token?.match(/[\p{L}\p{N}_]+/u)?.[0];
+  const resolvedOffset = offset < 0 && fallback ? nodeText.indexOf(fallback) : offset;
+  return resolvedOffset < 0 || resolvedOffset === undefined
     ? sourceLine(sourceFile, node)
-    : sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile) + offset).line + 1;
+    : sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile) + resolvedOffset).line + 1;
 }
 
 function propertyName(node, sourceFile) {
@@ -783,6 +794,11 @@ function collectTypeScriptEntries(relativePath, source) {
       !key &&
       typeof value === 'string' &&
       value.includes('\n') &&
+      !new RegExp(`(?:${CITATION_LABEL_NAME})\\s*[:：]\\s*$`, 'mi').test(value) &&
+      !(
+        hasEditorialLabel(value) &&
+        !value.split('\n').some((lineValue) => hasEditorialLabel(lineValue))
+      ) &&
       !ts.isJsxElement(node) &&
       !ts.isJsxFragment(node)
     ) {
@@ -807,6 +823,10 @@ function collectTypeScriptEntries(relativePath, source) {
     entries.push({ key, value: value || '', line: sourceEntryLine(sourceFile, node, value) });
   };
   const inspectPolicyProperty = (property) => {
+    if (ts.isSpreadAssignment(property)) {
+      inspectSpreadExpression(property.expression);
+      return undefined;
+    }
     if (
       !ts.isPropertyAssignment(property) &&
       !ts.isPropertyDeclaration(property) &&
@@ -867,6 +887,7 @@ function collectTypeScriptEntries(relativePath, source) {
     } else if (ts.isJsxFragment(node)) {
       for (const child of node.children) inspectJsxTree(child);
     } else if (ts.isJsxExpression(node) && node.expression) {
+      inspectJsxTree(node.expression);
       ts.forEachChild(node.expression, inspectJsxTree);
     }
   };
@@ -908,7 +929,16 @@ function collectTypeScriptEntries(relativePath, source) {
       return;
     }
     if (ts.isJsxFragment(node)) {
+      inspectJsxTree(node);
       add(node, staticJsxProjection(node, sourceFile));
+      return;
+    }
+    if (ts.isJsxExpression(node)) {
+      inspectJsxTree(node);
+      return;
+    }
+    if (ts.isSpreadAssignment(node)) {
+      inspectPolicyProperty(node);
       return;
     }
     const value = staticExpressionProjection(node);
@@ -926,7 +956,11 @@ function structuredEntries(relativePath, source) {
   if (relativePath.endsWith('.json')) {
     try {
       JSON.parse(source);
-      return collectJsonEntries(source);
+      const entries = collectJsonEntries(source);
+      // The runtime renders approved metadata from records; source is workbook provenance.
+      return relativePath.replaceAll(path.sep, '/') === 'src/faq/generated-en-metadata.json'
+        ? entries.filter((entry) => entry.path?.[0] === 'records')
+        : entries;
     } catch (error) {
       return [{ error: error.message, line: 1 }];
     }
@@ -1129,14 +1163,12 @@ function decodeHtml(value) {
     .replaceAll('&#39;', "'")
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
-    .replaceAll('&nbsp;', ' ')
-    .replaceAll('&colon;', ':')
-    .replaceAll('&Tab;', '\t')
-    .replaceAll('&NewLine;', '\n')
-    .replaceAll('&hyphen;', '-')
-    .replaceAll('&ndash;', '-')
-    .replaceAll('&mdash;', '-')
-    .replaceAll('&minus;', '-');
+    .replace(/&([a-z][a-z0-9]*);/gi, (entity, name) => {
+      const normalized = name.toLowerCase();
+      if (HTML_WHITESPACE_ENTITIES.has(normalized)) return ' ';
+      if (HTML_DASH_ENTITIES.has(normalized)) return '-';
+      return normalized === 'colon' ? ':' : entity;
+    });
 }
 
 function appendProjectedHtml(projection, value, rawStart, linear) {
@@ -1163,8 +1195,7 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
 }
 
 function appendDecodedHtml(projection, value, offset) {
-  const entityPattern =
-    /&(?:#x[0-9a-f]+|#[0-9]+|amp|quot|#39|lt|gt|nbsp|colon|Tab|NewLine|hyphen|ndash|mdash|minus);/gi;
+  const entityPattern = /&(?:#[0-9]+|#x[0-9a-f]+|[a-z][a-z0-9]*);/gi;
   let cursor = 0;
   for (const match of value.matchAll(entityPattern)) {
     appendProjectedHtml(projection, value.slice(cursor, match.index), offset + cursor, true);
@@ -1282,7 +1313,7 @@ function projectionRange(target, source, start, end) {
 
 function normalizePolicyProjection(source) {
   const projection = { chunks: [], length: 0, runs: [] };
-  const separator = /[\s\u00a0]+|[\u2010-\u2015\u2212]/g;
+  const separator = /[\s\u00a0\u200b-\u200f]+|[\u2010-\u2015\u2212]/g;
   let cursor = 0;
   for (const match of source.text.matchAll(separator)) {
     projectionRange(projection, source, cursor, match.index);
@@ -1329,7 +1360,18 @@ function projectPayloadHtml(content, offset) {
       break;
     }
     appendDecodedHtml(projection, content.slice(cursor, tagStart), offset + cursor);
-    cursor = htmlTagEnd(content, tagStart) + 1;
+    if (content.startsWith('<!--', tagStart)) {
+      const commentEnd = content.indexOf('-->', tagStart + 4);
+      cursor = commentEnd < 0 ? content.length : commentEnd + 3;
+      continue;
+    }
+    const tag = content.slice(tagStart, htmlTagEnd(content, tagStart) + 1);
+    if (!/^<\/?[a-z][\w:-]*(?:\s[^<>]*)?\/?>$/i.test(tag)) {
+      appendDecodedHtml(projection, '<', offset + tagStart);
+      cursor = tagStart + 1;
+      continue;
+    }
+    cursor = tagStart + tag.length;
   }
   return normalizePolicyProjection(
     stripPayloadKeyQuotes({ text: projection.chunks.join(''), runs: projection.runs })

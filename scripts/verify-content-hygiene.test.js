@@ -609,6 +609,55 @@ test('source CLI normalizes policy whitespace, lowercase JSON keys, and JSX expr
   );
 });
 
+test('source CLI scans public FAQ metadata records while excluding top-level provenance', () => {
+  withFixture(
+    {
+      'src/faq/generated-en-metadata.json': [
+        '{',
+        '  "source": { "Sources": null },',
+        '  "records": [{ "title": "Demand basis: internal", "description": "clean" }]',
+        '}',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-01 editorial-metadata/);
+      assert.doesNotMatch(result.stderr, /D-07 citation-policy/);
+      assert.match(result.stderr, /line=3/);
+    }
+  );
+});
+
+test('source CLI keeps cross-line HTTPS citations intact and catches JSX expression branches', () => {
+  withFixture(
+    {
+      'src/faq/expressions.tsx': [
+        'const dynamic = getValue();',
+        'export const clean = `Sources:',
+        '[Public docs](https://example.com/docs)`;',
+        'export const root = <>{<Copy Sources={dynamic} />}</>;',
+        'export const nested = { ...{ ...{ Schedule: "W4" } } };',
+        'export const crossLabel = `Demand',
+        'basis: internal`;',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 2);
+      assert.match(
+        result.stderr,
+        /path=src\/faq\/expressions\.tsx \| source=expressions \| line=6/
+      );
+      assert.doesNotMatch(result.stderr, /Public docs/);
+    }
+  );
+});
+
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
   withFixture(
     {
@@ -1180,6 +1229,33 @@ test('HTML CLI preserves payload source lines through normalization', () => {
   );
 });
 
+test('HTML CLI preserves literal script comparisons and decodes policy entity categories', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<p>Sources&NewLine;: Internal KB</p>',
+        '<p>Version&dash;plan: internal</p>',
+        '<script>if (a < b) {}',
+        'Demand basis: internal</script>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-07 citation-policy/);
+      assert.match(result.stderr, /visible .*line=2/);
+      assert.match(result.stderr, /visible .*line=3/);
+      assert.match(result.stderr, /payload .*line=5/);
+    }
+  );
+});
+
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
   let requests = 0;
   let dirtyCitation = false;
@@ -1199,7 +1275,7 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
       fragmentedProjection
         ? `<html><body>${'&amp;'.repeat(50_001)}</body></html>`
         : normalizedProjection
-        ? '<html><body><p>Sources&colon; Internal KB</p><span>Demand\n</span><span>basis: internal research</span></body></html>'
+        ? '<html><body><p>Sources&NewLine;: Internal KB</p><span>Demand\n</span><span>basis: internal research</span></body></html>'
         : dirtyEditorial
         ? '<html><body><p>计划：W4</p><p>实施计划：reader rollout</p></body></html>'
         : dirtyCitation

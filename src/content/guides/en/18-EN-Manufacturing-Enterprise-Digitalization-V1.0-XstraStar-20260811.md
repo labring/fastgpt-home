@@ -22,7 +22,6 @@ Case clearance: 南京商络、商络电子、延锋 —— 均出自客户 2026
 # Manufacturing Enterprise Digitalization Decision Guide: RAG + Rule Engine for IT Operations and Financial Auditing
 
 **This combined RAG knowledge base and rule engine solution enables lightweight deployment for manufacturing enterprise IT operations and financial document review workflows by reusing existing business system interfaces, reducing repetitive manual labor and improving operational efficiency.**
-All product capabilities and version boundaries are sourced from official public customer materials, verified as of 2026-07-20.
 
 ## High-Volume Workflows: IT vs. Finance
 
@@ -90,10 +89,3 @@ Digital transformation solutions inherently carry potential risks. Clear manual 
 > Yanfeng International (a subsidiary of SAIC Motor): The iSAP IT operations robot achieved automated processing of over 70% of repeated service desk queries, reducing problem response times from hours to seconds; the financial AI intelligent document review system processed more than 520,000 annual documents, enabling instant initial review of submitted documents.
 > Nanjing Shangluo Electronics: The AI electronic component part number parsing system fully automated part number parsing workflows, replacing manual data entry, and significantly improving the accuracy of non-standard component identification.
 > The above results depend on each enterprise’s material quality, scenario boundaries, and operational investment, and do not constitute a commitment to the effect of other implementation projects.
-
-## Official Reference and Version Details
-
-- **Fact Source**: Customer *FastGPT Product Knowledge Base · Content Collection Checklist* KB 8.1 Manufacturing Group (iSAP operations robot handles 70%+ repeated queries; financial intelligent document review; supplier intelligent recommendation)
-- **Verification Date**: 2026-07-20
-- **Version and Tiers**: Self-hosted community edition / commercial edition / SaaS-hosted service; capability boundaries are subject to official public materials as of the verification date
-- **Update Record**: V1.0 (2026-08-11) Initial drafting. Product capabilities and version boundaries are data that changes with version updates, with a 90-day review cycle.

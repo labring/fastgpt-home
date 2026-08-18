@@ -59,15 +59,17 @@ test('source CLI aggregates visible editorial findings with stable actionable lo
   withFixture(
     {
       'src/content/guides/zh/dirty.md': '# 标题\n\n事实来源: 客户 KB 7.4；核验日 2026-07-20\n\n签发: 客户确认\n',
-      'content/competitors/en/dirty.md': '# Comparison\n\n> Delivery schedule: Week 4\n\nRevision log: client review complete\n'
+      'content/competitors/en/dirty.md': '# Comparison\n\n> Delivery schedule: Week 4\n\nRevision log: client review complete\n',
+      'content/competitors/crlf-dirty.md': '# Comparison\r\n\r\nFact Source: internal KB\r\n'
     },
     (root) => {
       const result = runFixture(root);
       assert.equal(result.status, 1);
       assert.equal(result.stdout, '');
-      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=zh \| path=src\/content\/guides\/zh\/dirty\.md \| source=dirty \| line=2/);
-      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=en \| path=content\/competitors\/en\/dirty\.md \| source=dirty \| line=2/);
-      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=en \| path=content\/competitors\/en\/dirty\.md \| source=dirty \| line=4/);
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=zh \| path=src\/content\/guides\/zh\/dirty\.md \| source=dirty \| line=3/);
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=en \| path=content\/competitors\/en\/dirty\.md \| source=dirty \| line=3/);
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=en \| path=content\/competitors\/en\/dirty\.md \| source=dirty \| line=5/);
+      assert.match(result.stderr, /D-01 editorial-metadata \| markdown-body \| locale=default \| path=content\/competitors\/crlf-dirty\.md \| source=crlf-dirty \| line=3/);
     },
   );
 });
@@ -78,7 +80,8 @@ test('source CLI requires public HTTPS markdown citations in Sources and Referen
     ['localhost URL', '## References\n\n- [Local](https://localhost/reference)\n', /D-07 citation-policy/],
     ['private URL', '## Sources\n\n- [Private](https://10.1.2.3/reference)\n', /D-07 citation-policy/],
     ['credentials URL', '## Sources\n\n- [Credentials](https://user:pass@example.com/reference)\n', /D-07 citation-policy/],
-    ['HTTP URL', '## Sources\n\n- [HTTP](http://example.com/reference)\n', /D-07 citation-policy/]
+    ['HTTP URL', '## Sources\n\n- [HTTP](http://example.com/reference)\n', /D-07 citation-policy/],
+    ['mixed URL list', '## Sources\n\n- [Public](https://example.com/reference) and [Private](http://127.0.0.1/reference)\n', /D-07 citation-policy/]
   ];
 
   for (const [name, body, expected] of cases) {
@@ -88,6 +91,20 @@ test('source CLI requires public HTTPS markdown citations in Sources and Referen
       assert.match(result.stderr, expected, name);
     });
   }
+});
+
+test('source CLI scans structured FAQ and locale copy without treating syntax as published Markdown', () => {
+  withFixture(
+    {
+      'src/faq/clean.ts': "export const answer = 'source delivery editor';\n",
+      'src/locales/en.json': '{"answer":"Fact Source: internal KB"}\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-01 editorial-metadata \| structured-copy \| locale=default \| path=src\/locales\/en\.json \| source=en \| line=1/);
+    },
+  );
 });
 
 test('source CLI accepts ordinary generic technical prose outside structured editorial metadata', () => {

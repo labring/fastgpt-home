@@ -21,7 +21,7 @@ Case clearance: 三诺生物、延锋、昭昭医考、长株潭烟草 —— �
 
 # Enterprise Generative AI-Powered Customer Support Deployment Playbook
 
-**Enterprise customer support teams do not need to build generative AI-powered support tools from scratch. A standardized four-step deployment workflow, focused first on high-volume repetitive user queries, enables rapid reduction of manual agent workloads and delivery of consistent 7x24-hour service. All product capabilities and version boundaries referenced in this guide are sourced from official public vendor documentation, verified July 20, 2026.**
+**Enterprise customer support teams do not need to build generative AI-powered support tools from scratch. A standardized four-step deployment workflow, focused first on high-volume repetitive user queries, enables rapid reduction of manual agent workloads and delivery of consistent 7x24-hour service.**
 
 This playbook outlines a phased, gate-controlled deployment sequence to roll out generative AI-powered customer support, with clear checkpoints to validate progress before advancing to subsequent stages, ensuring consistent, efficient service delivery from initial setup to long-term optimization.
 

@@ -1,6 +1,7 @@
 const assert = require('node:assert/strict');
 const { spawnSync } = require('node:child_process');
 const fs = require('node:fs');
+const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 const packageJson = require('../package.json');
@@ -112,18 +113,28 @@ test('release source checks run content hygiene first and block dirty published 
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
   assert(source.indexOf('scripts/verify-content-hygiene.js') < source.indexOf('TypeScript source verification'));
 
-  const dirtyPath = path.join(ROOT, 'src/content/guides/temporary-content-hygiene-dirty.md');
+  const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-release-hygiene-'));
+  const fixtureRoot = path.join(temporaryRoot, 'repo');
   try {
+    fs.cpSync(ROOT, fixtureRoot, {
+      recursive: true,
+      filter: (source) => !['.git', '.next', 'node_modules', 'out', '.release-artifacts'].includes(path.basename(source))
+    });
+    const dirtyPath = path.join(fixtureRoot, 'src/content/guides/temporary-content-hygiene-dirty.md');
     fs.writeFileSync(dirtyPath, '# Temporary fixture\n\nFact Source: internal KB\n');
     const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
-      cwd: ROOT,
-      encoding: 'utf8'
+      cwd: fixtureRoot,
+      encoding: 'utf8',
+      env: {
+        ...process.env,
+        PATH: `${path.join(ROOT, 'node_modules/.bin')}${path.delimiter}${process.env.PATH}`
+      }
     });
     assert.equal(result.status, 1, result.stdout + result.stderr);
     assert.match(result.stderr, /content hygiene source verification/);
     assert.match(result.stderr, /temporary-content-hygiene-dirty\.md/);
   } finally {
-    fs.rmSync(dirtyPath, { force: true });
+    fs.rmSync(temporaryRoot, { recursive: true, force: true });
   }
 });
 

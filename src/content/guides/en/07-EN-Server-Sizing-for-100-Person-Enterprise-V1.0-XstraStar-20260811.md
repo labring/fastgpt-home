@@ -22,8 +22,6 @@ keywords: 资源规格估算, 并发 / 向量规模 / 本地推理
 
 **For 100-person enterprise retrieval-augmented generation (RAG) knowledge base deployments, generic fixed server configurations lead to either unnecessary cost overhead or insufficient performance. Instead, align resource specifications to four core business and operational dimensions, define clear deployment boundaries, and use proof-of-concept (POC) testing to validate sizing before full rollout.**
 
-*Product capabilities and version boundaries are sourced from official public customer documentation, verified on 2026-07-20.*
-
 ## 1. Common Pitfalls in Enterprise Knowledge Base Server Selection
 
 Many IT operations teams encounter two key mistakes when selecting servers for 100-person enterprise knowledge bases: first, applying generic server configurations without accounting for unique business contexts, leading to either wasted resources or unmet performance demands; second, overprovisioning high-end hardware without baselining against actual concurrent requests, data volumes, and response requirements. Public industry documentation confirms that RAG knowledge base performance and scale depend on deployment setup and resource configuration, with no standardized public metrics for key indicators such as steady-state concurrency or peak request volume. This eliminates the possibility of a one-size-fits-all configuration, requiring organizations to use a structured, context-aware approach to sizing.

@@ -10,9 +10,10 @@ const path = require('node:path');
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
+const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
 const SOURCE_SECTION = /^(#{1,6})\s*(sources?|references|来源|参考资料|资料来源)\s*[:：]?\s*$/i;
-const EDITORIAL_LABEL = /^(?:>\s*)?(?:\*\*)?(?:事实来源|需求依据|核验日|核验日期|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|版本与套餐|计划(?:安排)?|附录|补充说明|审核(?:状态)?|交付(?:排期)?|来源依据|客户\s*KB|内部\s*KB|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+plans|version\s+plan|update\s+record(?:\s+addendum)?|addendum)(?:\*\*)?\s*[:：]/i;
-const EDITORIAL_PREAMBLE = /^(?:文中产品能力与版本边界来自客户官方公开资料，核验日|All product capabilities and version boundaries referenced in this guide are sourced from official public customer materials, verified as of)/i;
+const EDITORIAL_LABEL = /^(?:>\s*)?(?:[-*]\s+)?(?:\*\*)?(?:事实来源|需求依据|核验日|核验日期|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|版本与套餐|版本与档位|计划(?:安排)?|附录|补充说明|审核(?:状态)?|交付(?:排期)?|来源依据|客户\s*KB|内部\s*KB|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|version\s+and\s+(?:package|tiers)|version\s+plan|update\s+(?:record|log)(?:\s+addendum)?|revision|addendum)(?:\*\*)?\s*[:：]/i;
+const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:2026-07-20|July 20, 2026))/i;
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -39,7 +40,7 @@ function parseArgs(argv) {
   return options;
 }
 
-function walkMarkdown(root, relativeRoot) {
+function walkFiles(root, relativeRoot, matcher) {
   const directory = path.join(root, relativeRoot);
   if (!fs.existsSync(directory)) return [];
   return fs.readdirSync(directory, { withFileTypes: true })
@@ -47,16 +48,22 @@ function walkMarkdown(root, relativeRoot) {
     .flatMap((entry) => {
       const relativePath = path.join(relativeRoot, entry.name);
       return entry.isDirectory()
-        ? walkMarkdown(root, relativePath)
-        : entry.isFile() && entry.name.endsWith('.md')
+        ? walkFiles(root, relativePath, matcher)
+        : entry.isFile() && matcher(entry.name)
           ? [relativePath]
           : [];
     });
 }
 
 function publishedMarkdownFiles(root) {
-  return MARKDOWN_ROOTS.flatMap((relativeRoot) => walkMarkdown(root, relativeRoot))
+  return MARKDOWN_ROOTS.flatMap((relativeRoot) => walkFiles(root, relativeRoot, (name) => name.endsWith('.md')))
     .sort((left, right) => left.localeCompare(right));
+}
+
+function publishedStructuredCopyFiles(root) {
+  return STRUCTURED_COPY_ROOTS.flatMap((relativeRoot) =>
+    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name)),
+  ).sort((left, right) => left.localeCompare(right));
 }
 
 function publishableBody(source) {
@@ -73,7 +80,7 @@ function inferLocale(relativePath) {
 }
 
 function sourceIdentity(relativePath) {
-  return path.basename(relativePath, '.md');
+  return path.parse(relativePath).name;
 }
 
 function finding(rule, surface, relativePath, line, detail) {
@@ -104,25 +111,29 @@ function isPrivateHostname(hostname) {
 }
 
 function validPublicCitation(value) {
-  const match = value.match(/\[[^\]]+\]\(([^)\s]+)\)/);
-  if (!match) return false;
-  try {
-    const url = new URL(match[1]);
-    return url.protocol === 'https:' && !url.username && !url.password && !isPrivateHostname(url.hostname);
-  } catch {
-    return false;
-  }
+  const links = [...value.matchAll(/\[[^\]]+\]\(([^)\s]+)\)/g)];
+  if (!links.length) return false;
+  return links.every((match) => {
+    try {
+      const url = new URL(match[1]);
+      return url.protocol === 'https:' && !url.username && !url.password && !isPrivateHostname(url.hostname);
+    } catch {
+      return false;
+    }
+  });
 }
 
 function inspectMarkdown(relativePath, source) {
   const findings = [];
+  const normalized = source.replace(/\r\n?/g, '\n');
   const body = publishableBody(source);
   const lines = body.split('\n');
+  const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   let inSources = false;
 
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
-    const lineNumber = source.slice(0, source.indexOf(body) + [...lines.slice(0, index)].join('\n').length).split(/\r\n?|\n/).length;
+    const lineNumber = bodyStartLine + index;
     const heading = line.match(/^#{1,6}\s+/);
     if (SOURCE_SECTION.test(line)) {
       inSources = true;
@@ -139,11 +150,26 @@ function inspectMarkdown(relativePath, source) {
   return findings;
 }
 
+function inspectStructuredCopy(relativePath, source) {
+  const normalized = source.replace(/\r\n?/g, '\n');
+  return normalized.split('\n').flatMap((line, index) => {
+    const quotedValue = line.match(/[:=]\s*["'`]([^"'`]+)["'`]/)?.[1];
+    if (!quotedValue || (!EDITORIAL_LABEL.test(quotedValue) && !EDITORIAL_PREAMBLE.test(quotedValue))) {
+      return [];
+    }
+    return [finding('D-01 editorial-metadata', 'structured-copy', relativePath, index + 1, quotedValue)];
+  });
+}
+
 function inspectRoot(root) {
-  const files = publishedMarkdownFiles(root);
-  const findings = files.flatMap((relativePath) =>
+  const markdownFiles = publishedMarkdownFiles(root);
+  const structuredFiles = publishedStructuredCopyFiles(root);
+  const files = [...markdownFiles, ...structuredFiles].sort((left, right) => left.localeCompare(right));
+  const findings = markdownFiles.flatMap((relativePath) =>
     inspectMarkdown(relativePath, fs.readFileSync(path.join(root, relativePath), 'utf8')),
-  );
+  ).concat(structuredFiles.flatMap((relativePath) =>
+    inspectStructuredCopy(relativePath, fs.readFileSync(path.join(root, relativePath), 'utf8')),
+  ));
   findings.sort((left, right) =>
     [left.path, left.line, left.rule].join('\0').localeCompare([right.path, right.line, right.rule].join('\0')),
   );

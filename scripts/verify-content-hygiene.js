@@ -891,8 +891,10 @@ function consumeMarkdownEmphasis(value, hidden, codeSpans) {
   }
 }
 
-function markdownHtmlBlockStart(line) {
-  const value = line.replace(/^ {0,3}/, '');
+function markdownHtmlBlockStart(line, baseColumn = 0) {
+  const indentation = markdownIndentation(line, 0, baseColumn);
+  if (indentation.column - baseColumn > 3) return undefined;
+  const value = line.slice(indentation.offset);
   const typeOne = /^<(pre|script|style|textarea)(?:[\t >]|$)/i.exec(value);
   if (typeOne) {
     return {
@@ -1036,10 +1038,10 @@ function markdownLogicalBlocks(lines, lineStarts) {
       atxHeading(record.text, record.baseColumn ?? 0) ||
         listMarker(record) ||
         quoteMarker(record) ||
-        markdownHtmlBlockStart(record.text)
+        markdownHtmlBlockStart(record.text, record.baseColumn ?? 0)
     );
   const consumeHtmlBlock = (records, start) => {
-    const htmlStart = markdownHtmlBlockStart(records[start].text);
+    const htmlStart = markdownHtmlBlockStart(records[start].text, records[start].baseColumn ?? 0);
     const content = [];
     let index = start;
     if (htmlStart.blankTerminated) {
@@ -1093,7 +1095,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
       tracker.type = 'blank';
       return;
     }
-    const html = markdownHtmlBlockStart(value);
+    const html = markdownHtmlBlockStart(value, child.baseColumn ?? 0);
     if (html) {
       tracker.type = 'html';
       if (html.blankTerminated || !html.endPattern.test(value)) tracker.html = html;
@@ -1224,7 +1226,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
         continue;
       }
 
-      const htmlStart = markdownHtmlBlockStart(record.text);
+      const htmlStart = markdownHtmlBlockStart(record.text, record.baseColumn ?? 0);
       if (htmlStart) {
         const htmlBlock = consumeHtmlBlock(records, index);
         appendBlock(htmlBlock.content, context, {

@@ -1763,6 +1763,36 @@ test('source CLI recognizes tab-indented ATX headings inside list items', () => 
   });
 });
 
+test('source CLI recognizes tab-indented raw HTML blocks inside list items', () => {
+  const dirty = [
+    '# Guide',
+    '',
+    '- Parent',
+    '  \t<h2>Sources</h2>',
+    '  \t<p>Internal KB</p>',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/tab-html.md': dirty }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+    assert.match(result.stderr, /tab-html\.md.*line=5/);
+  });
+
+  const clean = [
+    '# Guide',
+    '',
+    '- Parent',
+    '  \t<h2>Sources</h2>',
+    '  \t<p><a href="https://example.com/docs">Public documentation</a></p>',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/tab-html.md': clean }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('source CLI scopes headings beneath empty list markers', () => {
   for (const [marker, indentation] of [
     ['-', '  '],

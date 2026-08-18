@@ -225,7 +225,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           ROLLBACK_INPUT: ${{ inputs.io_rollback_target }}
         run: |
-          npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > io-previous-deployments.json
+          ./node_modules/.bin/wrangler pages deployment list --project-name="$PROJECT_NAME" --json > io-previous-deployments.json
           node - <<'NODE'
           const fs = require('node:fs');
           const raw = JSON.parse(fs.readFileSync('io-previous-deployments.json'));
@@ -272,7 +272,7 @@ jobs:
           DEPLOYMENT_ENVIRONMENT: ${{ steps.deploy.outputs.pages-environment }}
           PROJECT_NAME: ${{ env.PROJECT_NAME }}
         run: |
-          npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > io-deployments.json
+          ./node_modules/.bin/wrangler pages deployment list --project-name="$PROJECT_NAME" --json > io-deployments.json
           node -e "const fs=require('fs');const m=JSON.parse(fs.readFileSync('release-out/__release/manifest.json'));const rows=JSON.parse(fs.readFileSync('io-deployments.json'));const list=Array.isArray(rows)?rows:(rows.result||[]);const isProductionActive=(row)=>String(row.Environment||row.environment||'').toLowerCase()==='production'&&String(row.Status||row.status||'').toLowerCase()==='active';const d=list.find((row)=>String(row.id||row.Id||row.deployment_id||row.short_id||'')===process.env.DEPLOYMENT_ID)||list.find(isProductionActive);const id=process.env.DEPLOYMENT_ID||d?.id||d?.Id||d?.deployment_id||d?.short_id;const url=process.env.DEPLOYMENT_URL||d?.url||d?.Url||d?.Deployment||d?.deployment_url||d?.metadata?.url||(Array.isArray(d?.aliases)?d.aliases.find((value)=>/^https?:\\/\\//.test(value)):null);if(!id||!url)throw new Error('blocked: Pages deployment action/list ID/URL unavailable');if(!process.env.ROLLBACK_ID)throw new Error('blocked: provider rollback target unavailable');fs.writeFileSync('io-provider-receipt.json',JSON.stringify({schemaVersion:1,variant:'io',releaseRevision:m.releaseRevision,artifactDigest:m.artifactDigest,treeDigest:m.treeDigest,archiveDigest:process.env.ARCHIVE_DIGEST,rollbackTarget:process.env.ROLLBACK_ID,provider:{project:process.env.PROJECT_NAME,deploymentId:id,deploymentUrl:url,deploymentEnvironment:process.env.DEPLOYMENT_ENVIRONMENT||null,previousDeploymentUrl:process.env.ROLLBACK_URL||null},workflowRun:process.env.GITHUB_RUN_ID},null,2)+'\\n')"
           if [ '${{ inputs.purge_cloudflare }}' = 'true' ]; then node scripts/purge-cloudflare-cache.js --url https://fastgpt.io/guide --evidence-out io-purge.json; fi
       - uses: actions/upload-artifact@v4
@@ -358,6 +358,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      - name: Install locked Wrangler CLI without lifecycle scripts
+        run: npm ci --ignore-scripts
       - name: Guard IO audit credentials
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -372,7 +374,7 @@ jobs:
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set +e
-          npx --yes wrangler@4 pages deployment list --project-name="$PROJECT_NAME" --json > "$RUNNER_TEMP/io-deployments.json"
+          ./node_modules/.bin/wrangler pages deployment list --project-name="$PROJECT_NAME" --json > "$RUNNER_TEMP/io-deployments.json"
           wrangler_status=$?
           set -e
           WRANGLER_STATUS="$wrangler_status" node - <<'NODE'

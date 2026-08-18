@@ -296,17 +296,50 @@ test('source CLI rejects bare labelled URLs and accepts descriptive technical ci
         '> 来源：[FastGPT GitHub Issue #42](https://github.com/labring/FastGPT/issues/42)',
         '',
       ].join('\n'),
-      'src/content/tech-center/tutorial/metadata.md': [
-        '# 技术文档',
-        'source: https://doc.fastgpt.cn/zh-CN/guide',
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
+test('source CLI excludes byte-zero YAML front matter across Markdown surfaces', () => {
+  const frontMatter = [
+    '---',
+    'source: https://doc.fastgpt.cn/zh-CN/guide',
+    '---',
+    '<!-- internal metadata -->',
+    '',
+  ].join('\n');
+  const citation = '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)\n';
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/metadata.md': `${frontMatter}${citation}`,
+      'src/content/guides/zh/front-matter.md': `${frontMatter}${citation}`,
+      'content/competitors/front-matter.md': `${frontMatter}${citation}`,
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
+test('source CLI enforces citation policy for source labels in reader bodies', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/reader-body.md': [
+        '# Guide',
         '',
-        '> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide)',
+        'source: https://doc.fastgpt.cn/zh-CN/guide',
         '',
       ].join('\n'),
     },
     (root) => {
       const result = runFixture(root);
-      assert.equal(result.status, 0, result.stderr);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /D-07 citation-policy/);
     },
   );
 });

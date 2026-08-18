@@ -152,8 +152,12 @@ function publishedStructuredCopyFiles(root) {
 
 function publishableBody(source) {
   const normalized = source.replace(/\r\n?/g, '\n');
-  const leadingComment = normalized.match(/^<!--[\s\S]*?-->/);
-  return leadingComment ? normalized.slice(leadingComment[0].length) : normalized;
+  const leadingFrontMatter = normalized.match(/^---\n[\s\S]*?\n(?:---|\.\.\.)(?:\n|$)/);
+  const withoutFrontMatter = leadingFrontMatter
+    ? normalized.slice(leadingFrontMatter[0].length)
+    : normalized;
+  const leadingComment = withoutFrontMatter.match(/^<!--[\s\S]*?-->/);
+  return leadingComment ? withoutFrontMatter.slice(leadingComment[0].length) : withoutFrontMatter;
 }
 
 function inferLocale(relativePath) {
@@ -306,12 +310,6 @@ function isCitationLabelled(value) {
   return Boolean(match);
 }
 
-function isTechnicalSourceMetadata(relativePath, value) {
-  return relativePath.startsWith('src/content/tech-center/')
-    && /^source:\s*https:\/\/(?:doc\.fastgpt\.cn\/|github\.com\/labring\/FastGPT\/issues\/\d+$)/i
-      .test(value.trim());
-}
-
 function validPublicHtmlCitation(value) {
   const anchors = [...value.matchAll(/<a\b[^>]*href=["']([^"']+)[^>]*>([\s\S]*?)<\/a\s*>/gi)];
   const outsideText = htmlText(value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, ''));
@@ -400,11 +398,7 @@ function inspectMarkdown(relativePath, source) {
     if (EDITORIAL_LABEL.test(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim()));
     }
-    if (
-      !isTechnicalSourceMetadata(relativePath, line)
-      && isCitationLabelled(line)
-      && !validPublicCitationValue(line)
-    ) {
+    if (isCitationLabelled(line) && !validPublicCitationValue(line)) {
       findings.push(finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim()));
     }
     if (inSources && line.trim() && !validPublicCitation(line)) {

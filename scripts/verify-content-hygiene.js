@@ -15,9 +15,21 @@ const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
 const SOURCE_SECTION = /^(#{1,6})\s*(sources?|references|来源|参考资料|资料来源)\s*[:：]?\s*$/i;
-const EDITORIAL_LABEL = /^(?:>\s*)?(?:[-*]\s+)?(?:\*\*)?(?:事实来源|需求依据|核验日|核验日期|验证日期|排期|签发|修订记录|更新记录|版本(?:信息)?|版本与套餐|版本与档位|计划(?:安排)?|附录|补充说明|审核(?:状态)?|交付(?:排期)?|来源依据|客户\s*KB|内部\s*KB|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|version(?:s)?\s+and\s+(?:plans|tiers)|version\s+and\s+(?:package|tiers)|version\s+plan|update\s+(?:record|log)(?:\s+addendum)?|revision|addendum)(?:\*\*)?\s*[:：]/i;
+const EDITORIAL_LABEL_NAME = [
+  '事实来源', '需求依据', '需求锚点', 'GSC *来源', '案例授权', '案例清理', '发布落点', '核验流程', '验证流程', '复核周期',
+  '核验日', '核验日期', '验证日期', '排期', '签发', '修订记录', '更新记录', '版本与套餐', '版本与档位',
+  '计划(?:安排)?', '附录', '补充说明', '审核(?:状态)?', '交付(?:排期)?', '来源依据', '客户 *KB', '内部 *KB',
+  'internal +KB', 'client +KB', 'fact +source', 'source +of +facts', 'source +material', 'demand +anchor(?: *\([^)]*\))?',
+  'GSC +provenance', 'case +clearance', 'publish +target', 'verification +workflow', 'review +cycle',
+  'verification +date', 'verified +on', 'delivery +schedule', 'sign[- ]off', 'revision +log', 'review +status',
+  'version(?:s)? +and +(?:plans|tiers)', 'version +and +(?:package|tiers)', 'version +plan',
+  'update +(record|log)(?: +addendum)?', 'revision', 'addendum',
+].join('|');
+const EDITORIAL_LABEL = new RegExp(`^(?:>\\s*)?(?:[-*]\\s+)?(?:\\*\\*)?(?:${EDITORIAL_LABEL_NAME})(?:\\*\\*)?\\s*[:：]`, 'i');
 const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
-const HTML_EDITORIAL_MARKER = /(?:事实来源|需求依据|核验日(?:期)?|验证日期|排期|签发|修订记录|更新记录|审核(?:状态)?|交付(?:排期)?|internal\s+KB|client\s+KB|fact\s+source|source\s+of\s+facts|source\s+material|verification\s+date|verified\s+on|delivery\s+schedule|sign[- ]off|revision\s+log|review\s+status|update\s+(?:record|log))\s*["']?\s*[:：]/gi;
+const HTML_EDITORIAL_MARKER = new RegExp(`(?:${EDITORIAL_LABEL_NAME})\\s*["']?\\s*[:：]`, 'gi');
+const CITATION_LABEL = /^(?:>\s*)?(?:[-*+]\s+)?(?:\*\*)?(?:sources|references)(?:\*\*)?\s*[:：]\s*(.*)$/i;
+const CITATION_LABEL_TEXT = /^(?:sources|references)\s*[:：]\s*/i;
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 
 function usage(message) {
@@ -242,13 +254,14 @@ function isPrivateHostname(hostname) {
 
 function validPublicCitation(value) {
   const entry = value.trim().replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
-  const linkPattern = /\[[^\]\n]+\]\(([^()\s]+)\)/g;
+  const linkPattern = /\[([^\]\n]+)\]\(([^()\s]+)\)/g;
   let previousEnd = 0;
   let count = 0;
   for (const match of entry.matchAll(linkPattern)) {
     if (!/^[\s,;，；、·|/]*$/.test(entry.slice(previousEnd, match.index))) return false;
+    if (!isDescriptiveCitationLabel(match[1], match[2])) return false;
     try {
-      const url = new URL(match[1]);
+      const url = new URL(match[2]);
       if (url.protocol !== 'https:' || url.username || url.password || isPrivateHostname(url.hostname)) {
         return false;
       }
@@ -259,6 +272,15 @@ function validPublicCitation(value) {
     count += 1;
   }
   return count > 0 && /^[\s,;，；、·|/]*$/.test(entry.slice(previousEnd));
+}
+
+function isDescriptiveCitationLabel(label, href) {
+  const text = label.trim();
+  return Boolean(text) && text !== href && !/^https?:\/\//i.test(text);
+}
+
+function citationValue(value) {
+  return value.trim().match(CITATION_LABEL)?.[1];
 }
 
 function inspectMarkdown(relativePath, source) {
@@ -281,6 +303,10 @@ function inspectMarkdown(relativePath, source) {
     if (EDITORIAL_LABEL.test(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim()));
     }
+    const labelledCitation = citationValue(line);
+    if (labelledCitation !== undefined && !validPublicCitation(labelledCitation)) {
+      findings.push(finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim()));
+    }
     if (inSources && line.trim() && !validPublicCitation(line)) {
       findings.push(finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim()));
     }
@@ -290,13 +316,26 @@ function inspectMarkdown(relativePath, source) {
 
 function inspectStructuredCopy(relativePath, source) {
   const normalized = source.replace(/\r\n?/g, '\n');
-  return normalized.split('\n').flatMap((line, index) => {
+  const findings = normalized.split('\n').flatMap((line, index) => {
     const quotedValue = line.match(/[:=]\s*["'`]([^"'`]+)["'`]/)?.[1];
     if (!quotedValue || (!EDITORIAL_LABEL.test(quotedValue) && !EDITORIAL_PREAMBLE.test(quotedValue))) {
       return [];
     }
     return [finding('D-01 editorial-metadata', 'structured-copy', relativePath, index + 1, quotedValue)];
   });
+  const structuredLabel = new RegExp('(?:["\'](?:' + EDITORIAL_LABEL_NAME + ')["\']|(?:' + EDITORIAL_LABEL_NAME + '))\\s*[:=]\\s*["\'`]([^"\'`]+)["\'`]', 'gi');
+  const structuredCitation = /(?:["'](?:sources|references)["']|(?:sources|references))\s*[:=]\s*["'`]([^"'`]+)["'`]/gi;
+  for (const [index, line] of normalized.split('\n').entries()) {
+    for (const match of line.matchAll(structuredLabel)) {
+      findings.push(finding('D-01 editorial-metadata', 'structured-copy', relativePath, index + 1, match[0]));
+    }
+    for (const match of line.matchAll(structuredCitation)) {
+      if (!validPublicCitation(match[1])) {
+        findings.push(finding('D-07 citation-policy', 'structured-copy', relativePath, index + 1, match[0]));
+      }
+    }
+  }
+  return findings;
 }
 
 function inspectRoot(root) {
@@ -386,11 +425,18 @@ function decodeHtml(value) {
 function visibleCitationBlocks(visible) {
   const heading = /<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi;
   const matches = [...visible.matchAll(heading)];
-  return matches.flatMap((match, index) => {
+  const sections = matches.flatMap((match, index) => {
     if (!/^(sources?|references|来源|参考资料|资料来源)\s*[:：]?$/i.test(htmlText(match[2]))) return [];
     const end = matches[index + 1]?.index ?? visible.length;
-    return [{ index: match.index, value: visible.slice(match.index + match[0].length, end) }];
+    return [{ index: match.index, value: visible.slice(match.index + match[0].length, end), labelled: false }];
   });
+  const labelled = /<(p|li|blockquote)\b[^>]*>([\s\S]*?)<\/\1\s*>/gi;
+  for (const match of visible.matchAll(labelled)) {
+    if (CITATION_LABEL_TEXT.test(htmlText(match[2]))) {
+      sections.push({ index: match.index, value: match[2], labelled: true });
+    }
+  }
+  return sections;
 }
 
 function inspectHtmlArtifact(relativePath, html, variant) {
@@ -405,12 +451,12 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   }
   for (const citation of visibleCitationBlocks(visible)) {
     const anchors = [...citation.value.matchAll(/<a\b[^>]*href=["']([^"']+)["'][^>]*>[\s\S]*?<\/a\s*>/gi)];
-    const outsideAnchors = htmlText(citation.value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, ''));
+    const outsideAnchors = htmlText(citation.value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, '')).replace(CITATION_LABEL_TEXT, '').trim();
     if (!anchors.length || outsideAnchors) {
       findings.push(htmlFinding('D-07 citation-policy', 'visible', identity, visible, citation.index, 'Sources and References require public HTTPS anchors'));
     }
     for (const anchor of anchors) {
-      if (!validPublicHtmlUrl(anchor[1])) {
+      if (!validPublicHtmlUrl(anchor[1]) || !isDescriptiveCitationLabel(htmlText(anchor[0]), anchor[1])) {
         findings.push(htmlFinding('D-07 citation-policy', 'visible', identity, visible, citation.index, anchor[1]));
       }
     }
@@ -437,7 +483,10 @@ function htmlFiles(root) {
 }
 
 function inspectHtmlRoot(root, variant) {
+  if (!fs.existsSync(root)) throw new Error(`HTML root does not exist: ${root}`);
+  if (!fs.statSync(root).isDirectory()) throw new Error(`HTML root is not a directory: ${root}`);
   const files = htmlFiles(root);
+  if (!files.length) throw new Error(`HTML root contains zero .html files: ${root}`);
   const findings = files.flatMap((file) => inspectHtmlArtifact(file, fs.readFileSync(path.join(root, file), 'utf8'), variant));
   findings.sort((left, right) =>
     [left.file, left.line, left.projection, left.rule].join('\0').localeCompare(
@@ -536,6 +585,11 @@ async function discoverInventory(options, baseUrls) {
   const pages = new Set();
   const violations = [];
   const queue = [];
+  const inventoryByHost = new Map(baseUrls.map((baseUrl) => [new URL(baseUrl).host, {
+    host: new URL(baseUrl).host,
+    sitemapDocuments: new Set(),
+    pages: new Set(),
+  }]));
   for (const baseUrl of baseUrls) {
     const url = canonicalSitemapUrl(new URL('/sitemap.xml', baseUrl).href);
     const key = sitemapKey(url);
@@ -547,6 +601,8 @@ async function discoverInventory(options, baseUrls) {
   let cursor = 0;
   while (cursor < queue.length) {
     const item = queue[cursor++];
+    const host = new URL(item.baseUrl).host;
+    const hostInventory = inventoryByHost.get(host);
     let response;
     try {
       response = await fetchTextWithTimeout(item.url, options.timeoutMs);
@@ -558,6 +614,7 @@ async function discoverInventory(options, baseUrls) {
       violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, `status=${response.response.status}`));
       continue;
     }
+    hostInventory.sitemapDocuments.add(sitemapKey(item.url));
     const contentType = response.response.headers.get('content-type') || '';
     const xml = response.content;
     if (!/(?:application|text)\/(?:xml|[a-z0-9.+-]+\+xml)/i.test(contentType) || !/<(?:[a-z0-9-]+:)?(?:urlset|sitemapindex)\b/i.test(xml)) {
@@ -598,13 +655,19 @@ async function discoverInventory(options, baseUrls) {
           continue;
         }
         pages.add(discovered);
+        hostInventory.pages.add(discovered);
       }
     }
   }
-  if (!pages.size) {
-    for (const baseUrl of baseUrls) violations.push(liveViolation('D-08 sitemap-inventory', new URL(baseUrl).host, baseUrl, 'no page URLs discovered'));
+  for (const baseUrl of baseUrls) {
+    const host = new URL(baseUrl).host;
+    if (!inventoryByHost.get(host).pages.size) {
+      violations.push(liveViolation('D-08 sitemap-inventory', host, baseUrl, 'no page URLs discovered'));
+    }
   }
-  return { sitemapDocuments, pages, violations };
+  return { sitemapDocuments, pages, violations, inventory: [...inventoryByHost.values()]
+    .map((entry) => ({ host: entry.host, sitemapDocuments: entry.sitemapDocuments.size, pages: entry.pages.size, boundedInventory: entry.sitemapDocuments.size + entry.pages.size }))
+    .sort((left, right) => left.host.localeCompare(right.host)) };
 }
 
 async function inspectLivePage(url, options, baseUrls) {
@@ -638,6 +701,7 @@ function writeLiveReport(reportPath, report) {
   const ordered = {
     status: report.status,
     totals: report.totals,
+    inventory: report.inventory,
     pages: report.pages,
     violations: report.violations
   };
@@ -649,6 +713,7 @@ function writeLiveReport(reportPath, report) {
     `pages=${report.totals.pages}`,
     `boundedInventory=${report.totals.boundedInventory}`,
     `violations=${report.violations.length}`,
+    ...report.inventory.map((entry) => `inventory host=${entry.host} sitemapDocuments=${entry.sitemapDocuments} pages=${entry.pages} boundedInventory=${entry.boundedInventory}`),
     ...report.pages.map((page) => `${page.host} ${page.path} status=${page.status} sha256=${page.contentSha256 || 'none'}`),
     ...report.violations.map((violation) => `${violation.rule} ${violation.host}${violation.path} ${violation.detail}`)
   ];
@@ -658,7 +723,10 @@ function writeLiveReport(reportPath, report) {
 async function inspectLive(options) {
   const baseUrls = [options.baseUrlCn, options.baseUrlIo];
   const inventory = await discoverInventory(options, baseUrls);
-  const pages = await runBounded([...inventory.pages].sort(), options.concurrency, (url) => inspectLivePage(url, options, baseUrls));
+  const budgetExceeded = inventory.violations.some((violation) => violation.rule === 'D-08 sitemap-budget');
+  const pages = budgetExceeded
+    ? []
+    : await runBounded([...inventory.pages].sort(), options.concurrency, (url) => inspectLivePage(url, options, baseUrls));
   pages.sort((left, right) => left.url.localeCompare(right.url));
   const violations = [...inventory.violations, ...pages.flatMap((page) => page.violations)].sort((left, right) =>
     [left.url, left.rule, left.detail].join('\0').localeCompare([right.url, right.rule, right.detail].join('\0')),
@@ -670,6 +738,7 @@ async function inspectLive(options) {
       pages: pages.length,
       boundedInventory: inventory.sitemapDocuments.size + inventory.pages.size
     },
+    inventory: inventory.inventory,
     pages,
     violations
   };
@@ -696,9 +765,17 @@ async function main(argv = process.argv.slice(2)) {
     console.log(`Content hygiene passed: ${report.totals.pages} live pages`);
     return;
   }
-  const { files, findings } = options.mode === 'html'
-    ? inspectHtmlRoot(options.root, options.variant)
-    : inspectRoot(options.root);
+  let result;
+  try {
+    result = options.mode === 'html'
+      ? inspectHtmlRoot(options.root, options.variant)
+      : inspectRoot(options.root);
+  } catch (error) {
+    process.stderr.write(`${error.message}\n`);
+    process.exitCode = 1;
+    return;
+  }
+  const { files, findings } = result;
   if (findings.length) {
     for (const entry of findings) process.stderr.write(`${options.mode === 'html' ? formatHtmlFinding(entry) : formatFinding(entry)}\n`);
     process.exitCode = 1;

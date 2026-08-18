@@ -161,6 +161,52 @@ test('source CLI rejects future-dated editorial verification preambles', () => {
   );
 });
 
+test('source CLI rejects the shared editorial workflow labels in Markdown and structured copy', () => {
+  withFixture(
+    {
+      'src/content/guides/en/editorial.md': [
+        '# Guide',
+        '',
+        'Demand anchor: GSC demand data',
+        'GSC provenance: Search Console export',
+        'Case clearance: signed customer approval',
+        'Publish target: fastgpt.io',
+        'Verification workflow: release checklist',
+        'Review cycle: quarterly',
+        'Version plan: enterprise tier',
+        '',
+      ].join('\n'),
+      'src/locales/en.json': '{"copy":"Demand anchor: Search Console export"}\n',
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 8);
+      assert.match(result.stderr, /structured-copy .*src\/locales\/en\.json/);
+    },
+  );
+});
+
+test('source CLI enforces citation grammar for labelled Markdown and structured copy', () => {
+  const dirtyMarkdown = '# Guide\n\n> **Sources**: client KB\n';
+  const cleanMarkdown = '# Guide\n\n**References**: [Official documentation](https://example.com/docs)\n';
+  withFixture(
+    {
+      'src/content/guides/en/dirty.md': dirtyMarkdown,
+      'src/locales/en.json': '{"References":"Internal KB"}\n',
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2);
+    },
+  );
+  withFixture({ 'src/content/guides/en/clean.md': cleanMarkdown, 'src/locales/en.json': '{"References":"[Official documentation](https://example.com/docs)"}\n' }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('source CLI scans structured FAQ and locale copy without treating syntax as published Markdown', () => {
   withFixture(
     {
@@ -221,10 +267,20 @@ test('the cleaned corpus keeps named cases, outcome metrics, and caveats', () =>
     path.join(ROOT, 'src/content/guides/en/19-EN-AI-Agent-Selection-and-Compliance-Best-P-V1.0-XstraStar-20260811.md'),
     'utf8',
   );
+  const biopharmaZh = fs.readFileSync(
+    path.join(ROOT, 'src/content/guides/zh/19-生物医药企业文档密集场景的AI选型与合规实践-V1.0-星触达-20260811.md'),
+    'utf8',
+  );
   assert.match(manufacturing, /延锋国际/);
   assert.match(manufacturing, /70%/);
   assert.match(manufacturing, /不构成对其他项目效果的承诺/);
   assert.match(biopharma, /Sinocare Biotech/);
+  assert.match(biopharma, /about 20% of routine inquiries/);
+  assert.match(biopharma, /3–5 minutes to under 30 seconds/);
+  assert.match(biopharma, /90%/);
+  assert.match(biopharmaZh, /约 20% 常规咨询/);
+  assert.match(biopharmaZh, /OA 流程发起从 3–5 分钟缩短至 30 秒内/);
+  assert.match(biopharmaZh, /人才报告生成效率提升 90%/);
 });
 
 test('HTML CLI recursively scans visible content separately from serialized payloads', () => {
@@ -291,6 +347,52 @@ test('HTML CLI accepts published version labels and rejects adjacent editorial w
       assert.match(dirty.stderr, /事实来源/);
     },
   );
+});
+
+test('HTML CLI applies shared editorial labels and citation grammar to visible and payload projections', () => {
+  withFixture(
+    {
+      'index.html': '<html><body><p>Demand anchor: Search Console</p><p><strong>Sources:</strong> Internal KB</p><script>{"Publish target":"fastgpt.io"}</script></body></html>',
+    },
+    (root) => {
+      const result = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], {
+        cwd: ROOT,
+        encoding: 'utf8',
+      });
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /editorial-metadata \| visible/);
+      assert.match(result.stderr, /editorial-metadata \| payload/);
+      assert.match(result.stderr, /citation-policy/);
+    },
+  );
+  withFixture(
+    {
+      'index.html': '<html><body><blockquote><strong>References:</strong> <a href="https://example.com/docs">Official documentation</a></blockquote><ul><li>Sources: <a href="https://example.com/research">Published research</a></li></ul></body></html>',
+    },
+    (root) => {
+      const result = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], {
+        cwd: ROOT,
+        encoding: 'utf8',
+      });
+      assert.equal(result.status, 0, result.stderr);
+    },
+  );
+});
+
+test('HTML CLI fails closed for a missing or empty output root', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-html-'));
+  try {
+    for (const outputRoot of [path.join(root, 'missing'), root]) {
+      const result = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', outputRoot, '--variant', 'io'], {
+        cwd: ROOT,
+        encoding: 'utf8',
+      });
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /HTML root.*\.html files|HTML root does not exist/);
+    }
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
 });
 
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
@@ -412,6 +514,71 @@ test('live CLI fetches each canonical sitemap once when nested indexes point to 
     await Promise.all([
       new Promise((resolve) => cnServer.close(resolve)),
       new Promise((resolve) => ioServer.close(resolve))
+    ]);
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
+test('live CLI requires inventory from each host and never fetches pages after a sitemap budget violation', async () => {
+  const counts = { cnPages: 0, ioPages: 0, budgetPages: 0 };
+  const createServer = ({ empty = false, budget = false, counter }) => http.createServer((request, response) => {
+    const baseUrl = `http://${request.headers.host}`;
+    if (request.url === '/sitemap.xml') {
+      response.setHeader('content-type', 'application/xml');
+      response.end(empty ? '<urlset></urlset>' : `<urlset><url><loc>${baseUrl}/page</loc></url></urlset>`);
+      return;
+    }
+    counts[counter] += 1;
+    response.setHeader('content-type', 'text/html');
+    response.end('<html><body>Clean</body></html>');
+  });
+  const cnServer = createServer({ counter: 'cnPages' });
+  const ioServer = createServer({ empty: true, counter: 'ioPages' });
+  await Promise.all([
+    new Promise((resolve) => cnServer.listen(0, '127.0.0.1', resolve)),
+    new Promise((resolve) => ioServer.listen(0, '127.0.0.1', resolve)),
+  ]);
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-hosts-'));
+  const report = path.join(root, 'report.json');
+  const cnBaseUrl = `http://127.0.0.1:${cnServer.address().port}`;
+  const ioBaseUrl = `http://127.0.0.1:${ioServer.address().port}`;
+  try {
+    const missingInventory = await runAsync([
+      '--mode', 'live', '--base-url-cn', cnBaseUrl, '--base-url-io', ioBaseUrl, '--report', report,
+      '--allow-http-for-tests', '--max-urls', '10',
+    ]);
+    assert.equal(missingInventory.status, 1);
+    const missingReport = JSON.parse(fs.readFileSync(report, 'utf8'));
+    assert.equal(missingReport.inventory.length, 2);
+    assert.equal(missingReport.inventory.find((entry) => entry.host === new URL(ioBaseUrl).host).pages, 0);
+    assert.match(fs.readFileSync(`${report}.txt`, 'utf8'), /inventory host=/);
+
+    const budgetCn = createServer({ budget: true, counter: 'budgetPages' });
+    const budgetIo = createServer({ budget: true, counter: 'budgetPages' });
+    await Promise.all([
+      new Promise((resolve) => budgetCn.listen(0, '127.0.0.1', resolve)),
+      new Promise((resolve) => budgetIo.listen(0, '127.0.0.1', resolve)),
+    ]);
+    try {
+      const budgetResult = await runAsync([
+        '--mode', 'live',
+        '--base-url-cn', `http://127.0.0.1:${budgetCn.address().port}`,
+        '--base-url-io', `http://127.0.0.1:${budgetIo.address().port}`,
+        '--report', report, '--allow-http-for-tests', '--max-urls', '2',
+      ]);
+      assert.equal(budgetResult.status, 1);
+      assert.match(budgetResult.stderr, /D-08 sitemap-budget/);
+      assert.equal(counts.budgetPages, 0);
+    } finally {
+      await Promise.all([
+        new Promise((resolve) => budgetCn.close(resolve)),
+        new Promise((resolve) => budgetIo.close(resolve)),
+      ]);
+    }
+  } finally {
+    await Promise.all([
+      new Promise((resolve) => cnServer.close(resolve)),
+      new Promise((resolve) => ioServer.close(resolve)),
     ]);
     fs.rmSync(root, { recursive: true, force: true });
   }

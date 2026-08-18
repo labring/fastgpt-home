@@ -197,8 +197,8 @@ All tables below retain the original content and structure, with minor wording a
 
 Case references are sourced from official public customer materials:
 
-*   **Federal Pharmaceutical**: Deployed three internal AI office agents. These covered talent data decision support, employee self-service queries, and OA workflow initiation. Significant improvements were seen in talent report generation efficiency, employee consultation response time (hours to seconds), and OA workflow initiation time.
-*   **Sinocare Biotech**: During periods of high customer service load, a dedicated knowledge base and dialogue assistant for CGM-related queries were deployed. This reduced routine inquiries and improved response speed for user queries.
+*   **A large pharmaceutical manufacturer**: Deployed three internal AI office agents covering talent data decision support, employee self-service queries, and OA workflow initiation. Talent report generation efficiency increased by 90%, employee consultation response time moved from hours to seconds, and OA workflow initiation fell from 3–5 minutes to under 30 seconds.
+*   **Sinocare Biotech**: During periods of high customer service load, a dedicated knowledge base and dialogue assistant for CGM-related queries intercepted about 20% of routine inquiries and improved response speed for user queries.
 *   **A large-scale pharmaceutical enterprise with annual revenue exceeding 100 billion RMB**: Compliance query and quality inspection agents were deployed. This led to significant improvements in regulatory document retrieval speed, reduced inspection material retrieval time, and cut manual workload for clinical trial pre-screening.
 *   **Shanghai Post Design Consulting Institute**: A regulatory document query agent and Text-to-SQL project data query agent were deployed. This enabled isolated storage of enterprise documents and natural language retrieval, allowing employees quick access to project data reports.
 

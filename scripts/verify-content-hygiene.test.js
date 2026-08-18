@@ -2291,6 +2291,18 @@ test('HTML CLI accepts multi-megabyte plain projections with compact metadata', 
   );
 });
 
+test('HTML CLI compacts ordinary hub whitespace into linear offset runs', () => {
+  const hubCopy = 'FAQ question answer route detail '.repeat(25_000);
+  withFixture({ 'index.html': `<html><body><main>${hubCopy}</main></body></html>` }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('HTML CLI reports entity-dense projection run limits without exhausting memory', () => {
   withFixture({ 'index.html': `<html><body>${'&amp;'.repeat(50_001)}</body></html>` }, (root) => {
     const result = spawnSync(

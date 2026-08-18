@@ -1,11 +1,8 @@
 'use client';
 
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useGSAP } from '@gsap/react';
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   ArrowDown,
   ArrowLeft,
@@ -24,8 +21,6 @@ import Navbar from '@/components/home/Navbar';
 import { getCasesAssets, getSolutionsAssets } from '@/components/home/assets';
 import { getDefaultLocalePath } from '@/lib/clientNavigation';
 import { getContactLocale } from '@/lib/contact';
-
-gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const BRAND_LOGOS = [
   'image-143.png',
@@ -49,13 +44,7 @@ const SERVICE_ICONS = {
   custom: Network
 };
 
-export default function ContactPage({
-  locale,
-  dict
-}: {
-  locale: string;
-  dict: any;
-}) {
+export default function ContactPage({ locale, dict }: { locale: string; dict: any }) {
   const contactLocale = getContactLocale(locale);
   const formCopy = getContactCopy(contactLocale);
   const copy = getContactExperienceCopy(contactLocale);
@@ -79,74 +68,95 @@ export default function ContactPage({
   const casesRef = useRef<HTMLElement>(null);
   const casesTitleRef = useRef<HTMLDivElement>(null);
 
-  useGSAP(
-    () => {
-      const media = gsap.matchMedia();
-      media.add('(prefers-reduced-motion: no-preference)', () => {
-        gsap.from('[data-hero-reveal]', {
-          opacity: 0,
-          y: 30,
-          duration: 0.9,
-          stagger: 0.12,
-          ease: 'power3.out'
+  useEffect(() => {
+    let cancelled = false;
+    let context: gsap.Context | undefined;
+    let media: gsap.MatchMedia | undefined;
+
+    const initializeAnimations = async () => {
+      const [{ gsap: gsapRuntime }, { ScrollTrigger }] = await Promise.all([
+        import('gsap'),
+        import('gsap/ScrollTrigger')
+      ]);
+      const scope = rootRef.current;
+      if (cancelled || !scope) return;
+
+      gsapRuntime.registerPlugin(ScrollTrigger);
+      context = gsapRuntime.context(() => {
+        media = gsapRuntime.matchMedia();
+        media.add('(prefers-reduced-motion: no-preference)', () => {
+          gsapRuntime.from('[data-hero-reveal]', {
+            opacity: 0,
+            y: 30,
+            duration: 0.9,
+            stagger: 0.12,
+            ease: 'power3.out'
+          });
         });
-      });
 
-      media.add('(min-width: 1024px) and (prefers-reduced-motion: no-preference)', () => {
-        const section = casesRef.current;
-        const title = casesTitleRef.current;
-        if (!section || !title) return;
+        media.add('(min-width: 1024px) and (prefers-reduced-motion: no-preference)', () => {
+          const section = casesRef.current;
+          const title = casesTitleRef.current;
+          if (!section || !title) return;
 
-        ScrollTrigger.create({
-          trigger: section,
-          start: 'top top+=96',
-          end: 'bottom bottom-=120',
-          pin: title,
-          pinSpacing: false
-        });
+          ScrollTrigger.create({
+            trigger: section,
+            start: 'top top+=96',
+            end: 'bottom bottom-=120',
+            pin: title,
+            pinSpacing: false
+          });
 
-        const cards = gsap.utils.toArray<HTMLElement>('[data-case-card]', section);
-        cards.forEach((card, index) => {
-          gsap.fromTo(
-            card,
-            { opacity: 0.35, scale: 0.86, y: 90 },
-            {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              ease: 'none',
-              scrollTrigger: {
-                trigger: card,
-                start: 'top 88%',
-                end: 'top 28%',
-                scrub: true,
-                onEnter: () => setActiveCase(index),
-                onEnterBack: () => setActiveCase(index)
+          const cards = gsapRuntime.utils.toArray<HTMLElement>('[data-case-card]', section);
+          cards.forEach((card, index) => {
+            gsapRuntime.fromTo(
+              card,
+              { opacity: 0.35, scale: 0.86, y: 90 },
+              {
+                opacity: 1,
+                scale: 1,
+                y: 0,
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: card,
+                  start: 'top 88%',
+                  end: 'top 28%',
+                  scrub: true,
+                  onEnter: () => setActiveCase(index),
+                  onEnterBack: () => setActiveCase(index)
+                }
               }
+            );
+
+            if (index < cards.length - 1) {
+              gsapRuntime.to(card, {
+                opacity: 0.28,
+                scale: 0.92,
+                filter: 'brightness(0.55)',
+                ease: 'none',
+                scrollTrigger: {
+                  trigger: cards[index + 1],
+                  start: 'top 82%',
+                  end: 'top 32%',
+                  scrub: true
+                }
+              });
             }
-          );
-
-          if (index < cards.length - 1) {
-            gsap.to(card, {
-              opacity: 0.28,
-              scale: 0.92,
-              filter: 'brightness(0.55)',
-              ease: 'none',
-              scrollTrigger: {
-                trigger: cards[index + 1],
-                start: 'top 82%',
-                end: 'top 32%',
-                scrub: true
-              }
-            });
-          }
+          });
         });
-      });
+      }, scope);
+    };
 
-      return () => media.revert();
-    },
-    { scope: rootRef }
-  );
+    void initializeAnimations().catch((error) => {
+      if (!cancelled) console.error('[ContactPage] Failed to initialize animations', error);
+    });
+
+    return () => {
+      cancelled = true;
+      media?.revert();
+      context?.revert();
+    };
+  }, []);
 
   const moveToCase = (offset: number) => {
     const nextIndex = (activeCase + offset + copy.cases.items.length) % copy.cases.items.length;
@@ -156,10 +166,7 @@ export default function ContactPage({
   };
 
   return (
-    <div
-      ref={rootRef}
-      className="home min-h-screen bg-white font-sans text-ink"
-    >
+    <div ref={rootRef} className="home min-h-screen bg-white font-sans text-ink">
       <HomeThemeFix />
 
       <Navbar links={dict.links} t={dict.Home.navCta} locale={contactLocale} />
@@ -297,10 +304,7 @@ export default function ContactPage({
           </div>
         </section>
 
-        <section
-          ref={casesRef}
-          className="relative bg-white px-5 py-32 text-ink sm:px-8 md:py-48"
-        >
+        <section ref={casesRef} className="relative bg-white px-5 py-32 text-ink sm:px-8 md:py-48">
           <div className="mx-auto grid max-w-[1240px] gap-16 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
             <div ref={casesTitleRef} className="self-start">
               <h2 className="m-0 max-w-xl text-balance text-[40px] font-semibold leading-[1.05] tracking-[-0.045em] text-ink sm:text-[56px] lg:text-[68px]">

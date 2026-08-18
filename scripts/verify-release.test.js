@@ -141,6 +141,29 @@ test('release source checks run content hygiene first and block dirty published 
   }
 });
 
+test('contact animations load GSAP only after the client mounts', () => {
+  const source = fs.readFileSync(
+    path.join(ROOT, 'src/components/contact/ContactPage.tsx'),
+    'utf8'
+  );
+
+  assert.doesNotMatch(source, /^import .* from ['"](?:@gsap\/react|gsap(?:\/ScrollTrigger)?)['"];$/m);
+  assert.match(source, /import\('gsap'\)/);
+  assert.match(source, /import\('gsap\/ScrollTrigger'\)/);
+  assert(source.indexOf('gsapRuntime.registerPlugin') > source.indexOf('useEffect('));
+  assert.match(source, /context\?\.revert\(\)/);
+});
+
+test('root layout keeps the retired consultation modal out of initial JavaScript', () => {
+  const layout = fs.readFileSync(path.join(ROOT, 'src/app/layout.tsx'), 'utf8');
+
+  assert.doesNotMatch(layout, /ConsultationProvider/);
+  assert.equal(
+    fs.existsSync(path.join(ROOT, 'src/components/contact/ConsultationProvider.tsx')),
+    false
+  );
+});
+
 test('source-only release leaves the existing build info bytes unchanged', () => {
   const buildInfoPath = path.join(ROOT, 'tsconfig.tsbuildinfo');
   const before = fs.readFileSync(buildInfoPath);

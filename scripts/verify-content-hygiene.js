@@ -2259,12 +2259,20 @@ function projectedRawOffset(projection, index) {
   return 0;
 }
 
-function projectionOffsetResolver(source) {
+function projectionRunResolver(source) {
   let runCursor = 0;
   return (index) => {
     while (source.runs[runCursor]?.projectedEnd <= index) runCursor += 1;
     const run = source.runs[runCursor];
-    if (!run || index < run.projectedStart) return 0;
+    return run && index >= run.projectedStart ? run : undefined;
+  };
+}
+
+function projectionOffsetResolver(source) {
+  const runAt = projectionRunResolver(source);
+  return (index) => {
+    const run = runAt(index);
+    if (!run) return 0;
     return run.linear ? run.rawStart + index - run.projectedStart : run.rawStart;
   };
 }
@@ -2299,11 +2307,9 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   const projection = { chunks: [], length: 0, runs: [] };
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
-  let runCursor = 0;
-  const isBoundary = (index) => {
-    while (source.runs[runCursor]?.projectedEnd <= index) runCursor += 1;
-    return Boolean(source.runs[runCursor]?.boundary);
-  };
+  const sourceRunAt = projectionRunResolver(source);
+  const boundaryRunAt = projectionRunResolver(source);
+  const isBoundary = (index) => Boolean(boundaryRunAt(index)?.boundary);
   let cursor = 0;
   for (let index = 0; index < source.text.length; index += 1) {
     if (preserveBlockBoundaries && isBoundary(index)) {
@@ -2327,7 +2333,14 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
       }
     }
     appendRange(projection, cursor, index);
-    appendSyntheticHtml(projection, dash ? '-' : ' ', rawOffsetAt(index));
+    const rawOffset = rawOffsetAt(index);
+    const sourceRun = sourceRunAt(index);
+    const linear =
+      end === index + 1 &&
+      sourceRun?.linear === true &&
+      !sourceRun.boundary &&
+      sourceRun.rawStart + index - sourceRun.projectedStart === rawOffset;
+    appendProjectedHtml(projection, dash ? '-' : ' ', rawOffset, linear);
     cursor = end;
     index = end - 1;
   }

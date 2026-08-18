@@ -236,12 +236,9 @@ function verifyContactEmbedRoutes() {
     );
   }
 
-  const routes = [
-    '/contact/embed',
-    ...contactLocales.map((locale) => `/${locale}/contact/embed`)
-  ].filter(
-    (route, index, allRoutes) => allRoutes.indexOf(route) === index && resolveHtmlPath(route)
-  );
+  const buildLocales = contactLocales.filter((locale) => locale !== defaultLocale);
+  if (buildLocales.length === 0) buildLocales.push(defaultLocale);
+  const routes = ['/contact/embed', ...buildLocales.map((locale) => `/${locale}/contact/embed`)];
 
   for (const route of routes) {
     const html = resolveHtml(route);

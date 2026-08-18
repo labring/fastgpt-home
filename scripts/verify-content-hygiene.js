@@ -11,40 +11,145 @@ const net = require('node:net');
 const path = require('node:path');
 const { resolveSiteVariant, getDefaultLocale } = require('./lib/site-variant');
 
+function loadTypeScript() {
+  try {
+    return require('typescript');
+  } catch {
+    for (const directory of (process.env.PATH || '').split(path.delimiter)) {
+      try {
+        return require(path.resolve(directory, '..', 'typescript'));
+      } catch {
+        // Continue through the configured executable paths.
+      }
+    }
+  }
+  throw new Error('Unable to load the TypeScript compiler API');
+}
+
+const ts = loadTypeScript();
+
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
-const CITATION_LABEL_NAME = 'Sources?|References|来源|参考资料|资料来源';
+const CITATION_LABEL_NAME = 'Source(?:s)?|Reference(?:s)?|来源|参考资料|资料来源';
 const CITATION_SEPARATOR = /^[\s,;，；、·|/]*$/;
 const SOURCE_SECTION = new RegExp(`^(#{1,6})\\s*(?:${CITATION_LABEL_NAME})\\s*[:：]?\\s*$`, 'i');
+const CITATION_LABEL_TEXT = new RegExp(
+  `(?:^|[\\s.。!！?？])(?:${CITATION_LABEL_NAME})\\s*[:：]\\s*`,
+  'gi'
+);
+const BLOCK_TAGS = new Set([
+  'address',
+  'article',
+  'aside',
+  'blockquote',
+  'body',
+  'dd',
+  'div',
+  'dl',
+  'dt',
+  'fieldset',
+  'figcaption',
+  'figure',
+  'footer',
+  'form',
+  'header',
+  'h1',
+  'h2',
+  'h3',
+  'h4',
+  'h5',
+  'h6',
+  'hr',
+  'li',
+  'main',
+  'nav',
+  'ol',
+  'p',
+  'pre',
+  'section',
+  'table',
+  'tbody',
+  'td',
+  'tfoot',
+  'th',
+  'thead',
+  'tr',
+  'ul'
+]);
 const EDITORIAL_LABEL_NAME = [
-  '事实来源', '需求依据', '需求锚点', 'GSC *来源', '案例授权', '案例清理',
+  '事实来源',
+  '需求依据',
+  '需求锚点',
+  'GSC *来源',
+  '案例授权',
+  '案例清理',
   '案例引用',
-  '发布落点', '核验流程', '验证流程', '复核周期',
-  '核验日', '核验日期', '验证日期', '排期', '签发', '修订记录', '更新记录', '版本与套餐', '版本与档位',
-  '计划(?:安排)?', '附录', '补充说明', '审核(?:状态)?', '交付(?:排期)?', '来源依据', '客户 *KB', '内部 *KB',
-  'internal +KB', 'client +KB', 'fact +source', 'source +of +facts', 'source +material', 'demand +anchor(?: *\([^)]*\))?',
-  'GSC +provenance', 'case +clearance', 'publish +target', 'verification +workflow', 'review +cycle',
-  'verification +date', 'verified +on', 'delivery +schedule', 'schedule', 'sign[- ]off',
+  '发布落点',
+  '核验流程',
+  '验证流程',
+  '复核周期',
+  '核验日',
+  '核验日期',
+  '验证日期',
+  '排期',
+  '签发',
+  '修订记录',
+  '更新记录',
+  '版本与套餐',
+  '版本与档位',
+  '计划(?:安排)?',
+  '附录',
+  '补充说明',
+  '审核(?:状态)?',
+  '交付(?:排期)?',
+  '来源依据',
+  '客户 *KB',
+  '内部 *KB',
+  'internal +KB',
+  'client +KB',
+  'fact +source',
+  'source +of +facts',
+  'source +material',
+  'demand +anchor(?: *([^)]*))?',
+  'GSC +provenance',
+  'case +clearance',
+  'publish +target',
+  'verification +workflow',
+  'review +cycle',
+  'verification +date',
+  'verified +on',
+  'delivery +schedule',
+  'schedule',
+  'sign[- ]off',
   'revision +log',
-  'review +status', 'version(?:s)? +and +(?:plans|tiers)', 'version +and +(?:package|tiers)',
-  'version[- ]plan', 'update[- ](?:record|log)(?:[- ]addendum)?', 'review[- ]cycle',
-  'revision', 'addendum',
+  'review +status',
+  'version(?:s)? +and +(?:plans|tiers)',
+  'version +and +(?:package|tiers)',
+  'version[- ]plan',
+  'update[- ](?:record|log)(?:[- ]addendum)?',
+  'review[- ]cycle',
+  'revision',
+  'addendum'
 ].join('|');
 const EDITORIAL_LABEL = new RegExp(
   `^(?:>\\s*)?(?:[-*]\\s+)?(?:\\*\\*)?(?:${EDITORIAL_LABEL_NAME})(?:\\*\\*)?\\s*[:：]`,
-  'i',
+  'i'
 );
-const EDITORIAL_PREAMBLE = /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
+const EDITORIAL_PREAMBLE =
+  /(?:文中产品能力与版本边界来自客户官方公开资料，核验日|(?:All )?product capabilities and version boundaries(?: referenced in this guide| in this article| are)? .*verified (?:as of |on )?\*?\*?(?:\d{4}-\d{2}-\d{2}|[A-Z][a-z]+ \d{1,2}, \d{4}))/i;
 const HTML_EDITORIAL_MARKER = new RegExp(`(?:${EDITORIAL_LABEL_NAME})\\s*["']?\\s*[:：]`, 'gi');
-const CITATION_LABEL_TEXT = new RegExp(`^(?:${CITATION_LABEL_NAME})\\s*[:：]\\s*`, 'i');
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
   process.stderr.write('Usage: verify-content-hygiene --mode source [--root <repository-root>]\n');
-  process.stderr.write('       verify-content-hygiene --mode html --root <output-root> [--variant io|cn|preview]\n');
-  process.stderr.write('       verify-content-hygiene --mode live --base-url-cn <https-url> --base-url-io <https-url> --report <path> [--allow-http-for-tests]\n');
+  process.stderr.write(
+    '       verify-content-hygiene --mode html --root <output-root> [--variant io|cn|preview]\n'
+  );
+  process.stderr.write(
+    '       verify-content-hygiene --mode live --base-url-cn <https-url> --base-url-io <https-url> --report <path> [--allow-http-for-tests]\n'
+  );
 }
 
 function parseArgs(argv) {
@@ -81,7 +186,8 @@ function parseArgs(argv) {
       options.rootProvided = true;
     } else if (token === '--variant') {
       const variant = argv[++index];
-      if (!variant || variant.startsWith('--')) throw new Error('--variant requires io, cn, or preview');
+      if (!variant || variant.startsWith('--'))
+        throw new Error('--variant requires io, cn, or preview');
       options.variant = variant;
     } else if (token === '--base-url-cn' || token === '--base-url-io' || token === '--report') {
       const value = argv[++index];
@@ -106,47 +212,62 @@ function parseArgs(argv) {
       throw new Error(`Unknown option: ${token}`);
     }
   }
-  if (!['source', 'html', 'live'].includes(options.mode)) throw new Error('--mode source, html, or live is required');
+  if (!['source', 'html', 'live'].includes(options.mode))
+    throw new Error('--mode source, html, or live is required');
   if (options.mode === 'source') return options;
   if (options.mode === 'html') {
     if (!options.rootProvided) throw new Error('--mode html requires --root');
     const variant = options.variant || resolveSiteVariant(process.env);
-    if (!['io', 'cn', 'preview'].includes(variant)) throw new Error('--variant must be io, cn, or preview');
+    if (!['io', 'cn', 'preview'].includes(variant))
+      throw new Error('--variant must be io, cn, or preview');
     options.variant = variant;
     return options;
   }
   if (!options.baseUrlCn || !options.baseUrlIo || !options.report) {
     throw new Error('--mode live requires --base-url-cn, --base-url-io, and --report');
   }
-  if (options.maxUrls < 2) throw new Error('--max-urls must be at least 2 for the two root sitemaps');
-  options.baseUrlCn = validateLiveBaseUrl(options.baseUrlCn, options.allowHttpForTests, '--base-url-cn', 'https://fastgpt.cn');
-  options.baseUrlIo = validateLiveBaseUrl(options.baseUrlIo, options.allowHttpForTests, '--base-url-io', 'https://fastgpt.io');
+  if (options.maxUrls < 2)
+    throw new Error('--max-urls must be at least 2 for the two root sitemaps');
+  options.baseUrlCn = validateLiveBaseUrl(
+    options.baseUrlCn,
+    options.allowHttpForTests,
+    '--base-url-cn',
+    'https://fastgpt.cn'
+  );
+  options.baseUrlIo = validateLiveBaseUrl(
+    options.baseUrlIo,
+    options.allowHttpForTests,
+    '--base-url-io',
+    'https://fastgpt.io'
+  );
   return options;
 }
 
 function walkFiles(root, relativeRoot, matcher) {
   const directory = path.join(root, relativeRoot);
   if (!fs.existsSync(directory)) return [];
-  return fs.readdirSync(directory, { withFileTypes: true })
+  return fs
+    .readdirSync(directory, { withFileTypes: true })
     .sort((left, right) => left.name.localeCompare(right.name))
     .flatMap((entry) => {
       const relativePath = path.join(relativeRoot, entry.name);
       return entry.isDirectory()
         ? walkFiles(root, relativePath, matcher)
         : entry.isFile() && matcher(entry.name)
-          ? [relativePath]
-          : [];
+        ? [relativePath]
+        : [];
     });
 }
 
 function publishedMarkdownFiles(root) {
-  return MARKDOWN_ROOTS.flatMap((relativeRoot) => walkFiles(root, relativeRoot, (name) => name.endsWith('.md')))
-    .sort((left, right) => left.localeCompare(right));
+  return MARKDOWN_ROOTS.flatMap((relativeRoot) =>
+    walkFiles(root, relativeRoot, (name) => name.endsWith('.md'))
+  ).sort((left, right) => left.localeCompare(right));
 }
 
 function publishedStructuredCopyFiles(root) {
   return STRUCTURED_COPY_ROOTS.flatMap((relativeRoot) =>
-    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name)),
+    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name))
   ).sort((left, right) => left.localeCompare(right));
 }
 
@@ -184,8 +305,12 @@ function finding(rule, surface, relativePath, line, detail) {
 }
 
 function inIpv4Range(address, base, prefixLength) {
-  const value = address.split('.').reduce((result, part) => (result << 8n) | BigInt(Number(part)), 0n);
-  const baseValue = base.split('.').reduce((result, part) => (result << 8n) | BigInt(Number(part)), 0n);
+  const value = address
+    .split('.')
+    .reduce((result, part) => (result << 8n) | BigInt(Number(part)), 0n);
+  const baseValue = base
+    .split('.')
+    .reduce((result, part) => (result << 8n) | BigInt(Number(part)), 0n);
   const mask = ((1n << BigInt(prefixLength)) - 1n) << BigInt(32 - prefixLength);
   return (value & mask) === (baseValue & mask);
 }
@@ -215,7 +340,11 @@ function parseIpv6(address) {
   if (value.split('::').length > 2) return undefined;
   const leftParts = left ? left.split(':') : [];
   const rightParts = right ? right.split(':') : [];
-  const parts = [...leftParts, ...Array(8 - leftParts.length - rightParts.length).fill('0'), ...rightParts];
+  const parts = [
+    ...leftParts,
+    ...Array(8 - leftParts.length - rightParts.length).fill('0'),
+    ...rightParts
+  ];
   if (parts.length !== 8 || parts.some((part) => !/^[0-9a-f]{1,4}$/.test(part))) return undefined;
   return parts.reduce((result, part) => (result << 16n) | BigInt(`0x${part}`), 0n);
 }
@@ -274,7 +403,12 @@ function validPublicCitation(value) {
     if (!isDescriptiveCitationLabel(match[1], match[2])) return false;
     try {
       const url = new URL(match[2]);
-      if (url.protocol !== 'https:' || url.username || url.password || isPrivateHostname(url.hostname)) {
+      if (
+        url.protocol !== 'https:' ||
+        url.username ||
+        url.password ||
+        isPrivateHostname(url.hostname)
+      ) {
         return false;
       }
     } catch {
@@ -292,12 +426,22 @@ function isDescriptiveCitationLabel(label, href) {
 }
 
 function normalizedCitationText(value) {
-  return htmlText(value).replaceAll('**', '').trim().replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
+  const projection = /<[a-z][^>]*>/i.test(value) ? visibleCitationProjection(value) : value;
+  return projection
+    .replaceAll('**', '')
+    .trim()
+    .replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
+}
+
+function citationLabelMatches(value) {
+  const text = normalizedCitationText(value);
+  const pattern = new RegExp(CITATION_LABEL_TEXT.source, 'gi');
+  return { matches: [...text.matchAll(pattern)], text };
 }
 
 function citationLabelMatch(value) {
-  const text = normalizedCitationText(value);
-  return { match: text.match(CITATION_LABEL_TEXT), text };
+  const { matches, text } = citationLabelMatches(value);
+  return { match: matches[0], text };
 }
 
 function stripCitationLabel(value) {
@@ -306,34 +450,20 @@ function stripCitationLabel(value) {
 }
 
 function isCitationLabelled(value) {
-  const { match } = citationLabelMatch(value);
-  return Boolean(match);
+  return citationLabelMatches(value).matches.length > 0;
 }
 
-function validPublicHtmlCitation(value) {
-  const anchors = [...value.matchAll(/<a\b[^>]*href=["']([^"']+)[^>]*>([\s\S]*?)<\/a\s*>/gi)];
-  const outsideText = htmlText(value.replace(/<a\b[^>]*>[\s\S]*?<\/a\s*>/gi, ''));
-  const remainingText = stripCitationLabel(outsideText) ?? outsideText;
-  return anchors.length > 0
-    && CITATION_SEPARATOR.test(remainingText)
-    && anchors.every((anchor) => validPublicHtmlUrl(anchor[1])
-      && isDescriptiveCitationLabel(htmlText(anchor[2]), anchor[1]));
+function labelledCitationValues(value) {
+  const { matches, text } = citationLabelMatches(value);
+  return matches.map((match, index) => {
+    const end = matches[index + 1]?.index ?? text.length;
+    return text.slice(match.index + match[0].length, end).trim();
+  });
 }
 
 function validPublicCitationValue(value) {
-  return /<a\b/i.test(value) ? validPublicHtmlCitation(value) : validPublicCitation(value);
-}
-
-function structuredStringValues(line) {
-  return [...line.matchAll(/[:=]\s*(["'`])([\s\S]*?)\1/g)].map((match) => match[2]);
-}
-
-function structuredProperties(line) {
-  const property = /(?:["']([^"']+)["']|([A-Za-z\u4e00-\u9fff-]+))\s*[:=]\s*(["'`])([\s\S]*?)\3/g;
-  return [...line.matchAll(property)].map((match) => ({
-    key: match[1] || match[2],
-    value: match[4],
-  }));
+  const projection = /<a\b/i.test(value) ? visibleCitationProjection(value) : value;
+  return validPublicCitation(projection);
 }
 
 function collectJsonEntries(value, source, entries, key) {
@@ -354,28 +484,104 @@ function collectJsonEntries(value, source, entries, key) {
   }
 }
 
+function scriptKind(relativePath) {
+  if (/\.tsx$/i.test(relativePath)) return ts.ScriptKind.TSX;
+  if (/\.jsx$/i.test(relativePath)) return ts.ScriptKind.JSX;
+  if (/\.[cm]?js$/i.test(relativePath)) return ts.ScriptKind.JS;
+  return ts.ScriptKind.TS;
+}
+
+function sourceLine(sourceFile, node) {
+  return sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile)).line + 1;
+}
+
+function propertyName(node, sourceFile) {
+  if (!node || ts.isComputedPropertyName(node)) return undefined;
+  return node.getText(sourceFile).replace(/^['"]|['"]$/g, '');
+}
+
+function expressionText(node) {
+  if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) return node.text;
+  if (ts.isTemplateExpression(node)) {
+    return [node.head.text, ...node.templateSpans.map((span) => span.literal.text)].join('');
+  }
+  return undefined;
+}
+
+function collectTypeScriptEntries(relativePath, source) {
+  const sourceFile = ts.createSourceFile(
+    relativePath,
+    source,
+    ts.ScriptTarget.Latest,
+    true,
+    scriptKind(relativePath)
+  );
+  if (sourceFile.parseDiagnostics.length) {
+    const diagnostic = sourceFile.parseDiagnostics[0];
+    return [
+      {
+        error: ts.flattenDiagnosticMessageText(diagnostic.messageText, ' '),
+        line: sourceFile.getLineAndCharacterOfPosition(diagnostic.start || 0).line + 1
+      }
+    ];
+  }
+  const entries = [];
+  const seen = new Set();
+  const add = (node, value, key) => {
+    const identity = `${node.pos}:${node.end}:${key || ''}`;
+    if (seen.has(identity)) return;
+    seen.add(identity);
+    entries.push({ key, value, line: sourceLine(sourceFile, node) });
+  };
+  const visit = (node) => {
+    if (ts.isPropertyAssignment(node) || ts.isPropertyDeclaration(node)) {
+      const key = propertyName(node.name, sourceFile);
+      const value = expressionText(node.initializer);
+      if (key && value !== undefined && isCitationLabelled(`${key}:`)) {
+        add(node.initializer, value, key);
+        return;
+      }
+    }
+    if (ts.isJsxAttribute(node)) {
+      const key = node.name.getText(sourceFile);
+      const value =
+        node.initializer && ts.isStringLiteral(node.initializer)
+          ? node.initializer.text
+          : undefined;
+      if (value !== undefined && isCitationLabelled(`${key}:`)) {
+        add(node.initializer, value, key);
+        return;
+      }
+    }
+    if (ts.isJsxElement(node) || ts.isJsxFragment(node)) {
+      add(node, node.getText(sourceFile));
+      return;
+    }
+    if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
+      add(node, node.text);
+    } else if (ts.isTemplateExpression(node)) {
+      add(node.head, node.head.text);
+      for (const span of node.templateSpans) add(span.literal, span.literal.text);
+    } else if (ts.isJsxText(node)) {
+      add(node, node.getText(sourceFile));
+    }
+    ts.forEachChild(node, visit);
+  };
+  visit(sourceFile);
+  return entries;
+}
+
 function structuredEntries(relativePath, source) {
   if (relativePath.endsWith('.json')) {
     try {
       const entries = [];
       collectJsonEntries(JSON.parse(source), source, entries);
       return entries;
-    } catch {
-      return source.split(/\r\n?|\n/).flatMap((line, index) => {
-        try {
-          const entries = [];
-          collectJsonEntries(JSON.parse(line), line, entries);
-          return entries.map((entry) => ({ ...entry, line: index + 1 }));
-        } catch {
-          return [];
-        }
-      });
+    } catch (error) {
+      return [{ error: error.message, line: 1 }];
     }
   }
-  return source.replace(/\r\n?/g, '\n').split('\n').flatMap((line, index) => [
-    ...structuredStringValues(line).map((value) => ({ value, line: index + 1 })),
-    ...structuredProperties(line).map(({ key, value }) => ({ key, value, line: index + 1 })),
-  ]);
+  return collectTypeScriptEntries(relativePath, source);
 }
 
 function inspectMarkdown(relativePath, source) {
@@ -396,13 +602,20 @@ function inspectMarkdown(relativePath, source) {
     }
     if (heading) inSources = false;
     if (EDITORIAL_LABEL.test(line) || EDITORIAL_PREAMBLE.test(line.trim())) {
-      findings.push(finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim()));
+      findings.push(
+        finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
+      );
     }
-    if (isCitationLabelled(line) && !validPublicCitationValue(line)) {
-      findings.push(finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim()));
+    for (const citation of labelledCitationValues(line)) {
+      if (validPublicCitationValue(citation)) continue;
+      findings.push(
+        finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, citation)
+      );
     }
     if (inSources && line.trim() && !validPublicCitation(line)) {
-      findings.push(finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim()));
+      findings.push(
+        finding('D-07 citation-policy', 'markdown-body', relativePath, lineNumber, line.trim())
+      );
     }
   }
   return findings;
@@ -410,43 +623,36 @@ function inspectMarkdown(relativePath, source) {
 
 function inspectStructuredCopy(relativePath, source) {
   const findings = [];
-  for (const { key, value, line } of structuredEntries(relativePath, source)) {
+  for (const { error, key, value, line } of structuredEntries(relativePath, source)) {
+    if (error) {
+      findings.push(
+        finding(
+          'D-07 citation-policy',
+          'structured-copy',
+          relativePath,
+          line,
+          `Unable to parse structured source: ${error}`
+        )
+      );
+      continue;
+    }
     const plainValue = normalizedCitationText(value);
     if (EDITORIAL_LABEL.test(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
-        findings.push(finding(
-          'D-01 editorial-metadata',
-          'structured-copy',
-          relativePath,
-          line,
-          value,
-        ));
+      findings.push(
+        finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, value)
+      );
     }
-    if (isCitationLabelled(value) && !validPublicCitationValue(value)) {
-      findings.push(finding(
-        'D-07 citation-policy',
-        'structured-copy',
-        relativePath,
-        line,
-        value,
-      ));
+    for (const citation of labelledCitationValues(value)) {
+      if (validPublicCitationValue(citation)) continue;
+      findings.push(
+        finding('D-07 citation-policy', 'structured-copy', relativePath, line, citation)
+      );
     }
     if (key && EDITORIAL_LABEL.test(`${key}:`)) {
-        findings.push(finding(
-          'D-01 editorial-metadata',
-          'structured-copy',
-          relativePath,
-          line,
-          key,
-        ));
+      findings.push(finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, key));
     }
     if (key && isCitationLabelled(`${key}:`) && !validPublicCitationValue(value)) {
-      findings.push(finding(
-        'D-07 citation-policy',
-        'structured-copy',
-        relativePath,
-        line,
-        key,
-      ));
+      findings.push(finding('D-07 citation-policy', 'structured-copy', relativePath, line, key));
     }
   }
   return findings;
@@ -455,14 +661,22 @@ function inspectStructuredCopy(relativePath, source) {
 function inspectRoot(root) {
   const markdownFiles = publishedMarkdownFiles(root);
   const structuredFiles = publishedStructuredCopyFiles(root);
-  const files = [...markdownFiles, ...structuredFiles].sort((left, right) => left.localeCompare(right));
-  const findings = markdownFiles.flatMap((relativePath) =>
-    inspectMarkdown(relativePath, fs.readFileSync(path.join(root, relativePath), 'utf8')),
-  ).concat(structuredFiles.flatMap((relativePath) =>
-    inspectStructuredCopy(relativePath, fs.readFileSync(path.join(root, relativePath), 'utf8')),
-  ));
+  const files = [...markdownFiles, ...structuredFiles].sort((left, right) =>
+    left.localeCompare(right)
+  );
+  const findings = markdownFiles
+    .flatMap((relativePath) =>
+      inspectMarkdown(relativePath, fs.readFileSync(path.join(root, relativePath), 'utf8'))
+    )
+    .concat(
+      structuredFiles.flatMap((relativePath) =>
+        inspectStructuredCopy(relativePath, fs.readFileSync(path.join(root, relativePath), 'utf8'))
+      )
+    );
   findings.sort((left, right) =>
-    [left.path, left.line, left.rule].join('\0').localeCompare([right.path, right.line, right.rule].join('\0')),
+    [left.path, left.line, left.rule]
+      .join('\0')
+      .localeCompare([right.path, right.line, right.rule].join('\0'))
   );
   return { files, findings };
 }
@@ -477,24 +691,34 @@ function htmlLine(content, index) {
 
 function htmlIdentity(relativePath, variant) {
   const file = relativePath.replaceAll(path.sep, '/');
-  const route = file === 'index.html'
-    ? '/'
-    : file.endsWith('/index.html')
+  const route =
+    file === 'index.html'
+      ? '/'
+      : file.endsWith('/index.html')
       ? `/${file.slice(0, -'/index.html'.length)}`
       : `/${file.slice(0, -'.html'.length)}`;
   const segments = route.split('/').filter(Boolean);
-  const localePrefix = ['en', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms', 'zh-hant'].includes(segments[0])
+  const localePrefix = ['en', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms', 'zh-hant'].includes(
+    segments[0]
+  )
     ? segments.shift()
     : undefined;
   const locale = localePrefix || getDefaultLocale(variant);
   const surfaceSegment = segments[0];
-  const surface = surfaceSegment === 'guide' ? 'guide'
-    : surfaceSegment === 'faq' ? 'faq'
-      : surfaceSegment === 'compare' ? 'comparison'
-        : surfaceSegment === 'price' ? 'pricing'
-          : ['tech', 'technical-center'].includes(surfaceSegment) ? 'technical'
-            : route === '/' ? 'home'
-              : 'page';
+  const surface =
+    surfaceSegment === 'guide'
+      ? 'guide'
+      : surfaceSegment === 'faq'
+      ? 'faq'
+      : surfaceSegment === 'compare'
+      ? 'comparison'
+      : surfaceSegment === 'price'
+      ? 'pricing'
+      : ['tech', 'technical-center'].includes(surfaceSegment)
+      ? 'technical'
+      : route === '/'
+      ? 'home'
+      : 'page';
   return { file, route, surface, locale, slug: segments.at(-1) || 'home' };
 }
 
@@ -522,12 +746,16 @@ function splitHtmlProjections(html) {
 }
 
 function htmlText(value) {
-  return decodeHtml(value.replace(/<[^>]*>/g, ' ')).replace(/\s+/g, ' ').trim();
+  return decodeHtml(value.replace(/<[^>]*>/g, ' '))
+    .replace(/\s+/g, ' ')
+    .trim();
 }
 
 function decodeHtml(value) {
   return value
-    .replace(/&#x([0-9a-f]+);/gi, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 16)))
+    .replace(/&#x([0-9a-f]+);/gi, (_, codePoint) =>
+      String.fromCodePoint(Number.parseInt(codePoint, 16))
+    )
     .replace(/&#([0-9]+);/g, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 10)))
     .replaceAll('&amp;', '&')
     .replaceAll('&quot;', '"')
@@ -536,28 +764,39 @@ function decodeHtml(value) {
     .replaceAll('&gt;', '>');
 }
 
-function visibleCitationBlocks(visible) {
-  const heading = /<h([1-6])\b[^>]*>([\s\S]*?)<\/h\1\s*>/gi;
-  const matches = [...visible.matchAll(heading)];
-  const sections = matches.flatMap((match, index) => {
-    if (!/^(sources?|references|来源|参考资料|资料来源)\s*[:：]?$/i.test(htmlText(match[2]))) return [];
-    const end = matches[index + 1]?.index ?? visible.length;
-    return [{ index: match.index, value: visible.slice(match.index + match[0].length, end) }];
+function visibleCitationProjection(visible) {
+  const links = visible.replace(/<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi, (_, attributes, content) => {
+    const href = attributes.match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
+    const label = htmlText(content);
+    const url = href?.[1] ?? href?.[2] ?? href?.[3];
+    return url ? `[${label}](${decodeHtml(url)})` : label;
   });
-  const openingTag = /<([a-z][\w:-]*)\b[^>]*>/gi;
-  for (const match of visible.matchAll(openingTag)) {
-    if (/^(?:strong|b|em|span)$/i.test(match[1])) continue;
-    const closingTag = `</${match[1]}>`;
-    const closingIndex = visible.indexOf(closingTag, match.index + match[0].length);
-    if (closingIndex < 0) continue;
-    const value = visible.slice(match.index + match[0].length, closingIndex);
-    const directContent = value.trim().replace(/^<(?:strong|b|em|span)\b[^>]*>/i, '');
-    if (directContent.startsWith('<')) continue;
-    if (isCitationLabelled(directContent)) {
-      sections.push({ index: match.index, value });
+  return decodeHtml(
+    links.replace(/<(\/)?([a-z][\w:-]*)\b[^>]*>/gi, (_, closing, tagName) => {
+      const name = tagName.toLowerCase();
+      if (/^h[1-6]$/i.test(name)) return closing ? '\n' : '\n## ';
+      return BLOCK_TAGS.has(name) ? '\n' : '';
+    })
+  )
+    .replace(/[ \t]+\n/g, '\n')
+    .replace(/\n[ \t]+/g, '\n');
+}
+
+function visibleCitationBlocks(visible) {
+  const projection = visibleCitationProjection(visible);
+  const citations = [];
+  let inSources = false;
+  for (const line of projection.split('\n')) {
+    const heading = line.match(/^#{1,6}\s+/);
+    if (SOURCE_SECTION.test(line)) {
+      inSources = true;
+      continue;
     }
+    if (heading) inSources = false;
+    if (inSources && line.trim()) citations.push({ index: 0, value: line });
+    for (const value of labelledCitationValues(line)) citations.push({ index: 0, value });
   }
-  return sections;
+  return citations;
 }
 
 function inspectHtmlArtifact(relativePath, html, variant) {
@@ -565,36 +804,56 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const { visible, payload } = splitHtmlProjections(html);
   const findings = [];
   for (const match of visible.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
-    findings.push(htmlFinding('D-01 editorial-metadata', 'visible', identity, visible, match.index, match[0].trim()));
-  }
-  for (const match of visible.matchAll(new RegExp(EDITORIAL_PREAMBLE.source, 'gi'))) {
-    findings.push(htmlFinding('D-01 editorial-metadata', 'visible', identity, visible, match.index, match[0].trim()));
-  }
-  for (const citation of visibleCitationBlocks(visible)) {
-    if (!validPublicHtmlCitation(citation.value)) {
-      findings.push(htmlFinding(
-        'D-07 citation-policy',
+    findings.push(
+      htmlFinding(
+        'D-01 editorial-metadata',
         'visible',
         identity,
         visible,
-        citation.index,
-        'Sources and References require public HTTPS anchors',
-      ));
+        match.index,
+        match[0].trim()
+      )
+    );
+  }
+  for (const match of visible.matchAll(new RegExp(EDITORIAL_PREAMBLE.source, 'gi'))) {
+    findings.push(
+      htmlFinding(
+        'D-01 editorial-metadata',
+        'visible',
+        identity,
+        visible,
+        match.index,
+        match[0].trim()
+      )
+    );
+  }
+  for (const citation of visibleCitationBlocks(visible)) {
+    if (!validPublicCitation(citation.value)) {
+      findings.push(
+        htmlFinding(
+          'D-07 citation-policy',
+          'visible',
+          identity,
+          visible,
+          citation.index,
+          'Sources and References require public HTTPS anchors'
+        )
+      );
     }
   }
   for (const match of payload.matchAll(new RegExp(HTML_EDITORIAL_MARKER.source, 'gi'))) {
-    findings.push(htmlFinding('D-01 editorial-metadata', 'payload', identity, html, html.indexOf(match[0]), match[0]));
+    findings.push(
+      htmlFinding(
+        'D-01 editorial-metadata',
+        'payload',
+        identity,
+        html,
+        html.indexOf(match[0]),
+        match[0]
+      )
+    );
   }
   return findings;
-}
-
-function validPublicHtmlUrl(value) {
-  try {
-    const url = new URL(decodeHtml(value));
-    return url.protocol === 'https:' && !url.username && !url.password && !isPrivateHostname(url.hostname);
-  } catch {
-    return false;
-  }
 }
 
 function htmlFiles(root) {
@@ -608,11 +867,13 @@ function inspectHtmlRoot(root, variant) {
   if (!fs.statSync(root).isDirectory()) throw new Error(`HTML root is not a directory: ${root}`);
   const files = htmlFiles(root);
   if (!files.length) throw new Error(`HTML root contains zero .html files: ${root}`);
-  const findings = files.flatMap((file) => inspectHtmlArtifact(file, fs.readFileSync(path.join(root, file), 'utf8'), variant));
+  const findings = files.flatMap((file) =>
+    inspectHtmlArtifact(file, fs.readFileSync(path.join(root, file), 'utf8'), variant)
+  );
   findings.sort((left, right) =>
-    [left.file, left.line, left.projection, left.rule].join('\0').localeCompare(
-      [right.file, right.line, right.projection, right.rule].join('\0'),
-    ),
+    [left.file, left.line, left.projection, left.rule]
+      .join('\0')
+      .localeCompare([right.file, right.line, right.projection, right.rule].join('\0'))
   );
   return { files, findings };
 }
@@ -624,12 +885,14 @@ function validateLiveBaseUrl(value, allowHttpForTests, label, productionOrigin) 
   } catch {
     throw new Error(`${label} must be an absolute URL`);
   }
-  const loopback = url.hostname === '127.0.0.1' || url.hostname === '::1' || url.hostname === 'localhost';
+  const loopback =
+    url.hostname === '127.0.0.1' || url.hostname === '::1' || url.hostname === 'localhost';
   if (url.username || url.password || url.pathname !== '/' || url.search || url.hash) {
     throw new Error(`${label} must be an origin URL`);
   }
   if (allowHttpForTests) {
-    if (!loopback || url.protocol !== 'http:') throw new Error(`${label} test URLs must use HTTP loopback origins`);
+    if (!loopback || url.protocol !== 'http:')
+      throw new Error(`${label} test URLs must use HTTP loopback origins`);
     return url.href.replace(/\/$/, '');
   }
   if (url.href.replace(/\/$/, '') !== productionOrigin) {
@@ -688,12 +951,14 @@ async function fetchTextWithTimeout(url, timeoutMs) {
 async function runBounded(items, concurrency, worker) {
   const results = [];
   let cursor = 0;
-  await Promise.all(Array.from({ length: Math.min(concurrency, items.length) }, async () => {
-    while (cursor < items.length) {
-      const item = items[cursor++];
-      results.push(await worker(item));
-    }
-  }));
+  await Promise.all(
+    Array.from({ length: Math.min(concurrency, items.length) }, async () => {
+      while (cursor < items.length) {
+        const item = items[cursor++];
+        results.push(await worker(item));
+      }
+    })
+  );
   return results;
 }
 
@@ -706,11 +971,16 @@ async function discoverInventory(options, baseUrls) {
   const pages = new Set();
   const violations = [];
   const queue = [];
-  const inventoryByHost = new Map(baseUrls.map((baseUrl) => [new URL(baseUrl).host, {
-    host: new URL(baseUrl).host,
-    sitemapDocuments: new Set(),
-    pages: new Set(),
-  }]));
+  const inventoryByHost = new Map(
+    baseUrls.map((baseUrl) => [
+      new URL(baseUrl).host,
+      {
+        host: new URL(baseUrl).host,
+        sitemapDocuments: new Set(),
+        pages: new Set()
+      }
+    ])
+  );
   for (const baseUrl of baseUrls) {
     const url = canonicalSitemapUrl(new URL('/sitemap.xml', baseUrl).href);
     const key = sitemapKey(url);
@@ -728,18 +998,41 @@ async function discoverInventory(options, baseUrls) {
     try {
       response = await fetchTextWithTimeout(item.url, options.timeoutMs);
     } catch (error) {
-      violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, error.name));
+      violations.push(
+        liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, error.name)
+      );
       continue;
     }
-    if (response.response.status !== 200 || response.response.url !== item.url || !sameOrigin(response.response.url, item.baseUrl)) {
-      violations.push(liveViolation('D-08 sitemap-fetch', new URL(item.baseUrl).host, item.url, `status=${response.response.status}`));
+    if (
+      response.response.status !== 200 ||
+      response.response.url !== item.url ||
+      !sameOrigin(response.response.url, item.baseUrl)
+    ) {
+      violations.push(
+        liveViolation(
+          'D-08 sitemap-fetch',
+          new URL(item.baseUrl).host,
+          item.url,
+          `status=${response.response.status}`
+        )
+      );
       continue;
     }
     hostInventory.sitemapDocuments.add(sitemapKey(item.url));
     const contentType = response.response.headers.get('content-type') || '';
     const xml = response.content;
-    if (!/(?:application|text)\/(?:xml|[a-z0-9.+-]+\+xml)/i.test(contentType) || !/<(?:[a-z0-9-]+:)?(?:urlset|sitemapindex)\b/i.test(xml)) {
-      violations.push(liveViolation('D-08 sitemap-format', new URL(item.baseUrl).host, item.url, contentType || 'missing XML content type'));
+    if (
+      !/(?:application|text)\/(?:xml|[a-z0-9.+-]+\+xml)/i.test(contentType) ||
+      !/<(?:[a-z0-9-]+:)?(?:urlset|sitemapindex)\b/i.test(xml)
+    ) {
+      violations.push(
+        liveViolation(
+          'D-08 sitemap-format',
+          new URL(item.baseUrl).host,
+          item.url,
+          contentType || 'missing XML content type'
+        )
+      );
       continue;
     }
     const isIndex = /<sitemapindex\b/i.test(xml);
@@ -748,22 +1041,50 @@ async function discoverInventory(options, baseUrls) {
       try {
         discovered = canonicalSitemapUrl(new URL(location).href);
       } catch {
-        violations.push(liveViolation('D-08 sitemap-inventory', new URL(item.baseUrl).host, item.url, `invalid location ${location}`));
+        violations.push(
+          liveViolation(
+            'D-08 sitemap-inventory',
+            new URL(item.baseUrl).host,
+            item.url,
+            `invalid location ${location}`
+          )
+        );
         continue;
       }
       if (!sameOrigin(discovered, item.baseUrl)) {
-        violations.push(liveViolation('D-08 sitemap-inventory', new URL(item.baseUrl).host, item.url, `foreign location ${discovered}`));
+        violations.push(
+          liveViolation(
+            'D-08 sitemap-inventory',
+            new URL(item.baseUrl).host,
+            item.url,
+            `foreign location ${discovered}`
+          )
+        );
         continue;
       }
       if (isIndex) {
         if (item.depth + 1 > options.maxSitemapDepth) {
-          violations.push(liveViolation('D-08 sitemap-depth', new URL(item.baseUrl).host, discovered, `max-depth=${options.maxSitemapDepth}`));
+          violations.push(
+            liveViolation(
+              'D-08 sitemap-depth',
+              new URL(item.baseUrl).host,
+              discovered,
+              `max-depth=${options.maxSitemapDepth}`
+            )
+          );
           continue;
         }
         const childKey = sitemapKey(discovered);
         if (!sitemapDocuments.has(childKey)) {
           if (sitemapDocuments.size + pages.size >= options.maxUrls) {
-            violations.push(liveViolation('D-08 sitemap-budget', new URL(item.baseUrl).host, discovered, `max-urls=${options.maxUrls}`));
+            violations.push(
+              liveViolation(
+                'D-08 sitemap-budget',
+                new URL(item.baseUrl).host,
+                discovered,
+                `max-urls=${options.maxUrls}`
+              )
+            );
             continue;
           }
           const child = { url: discovered, baseUrl: item.baseUrl, depth: item.depth + 1 };
@@ -772,7 +1093,14 @@ async function discoverInventory(options, baseUrls) {
         }
       } else if (!pages.has(discovered)) {
         if (sitemapDocuments.size + pages.size >= options.maxUrls) {
-          violations.push(liveViolation('D-08 sitemap-budget', new URL(item.baseUrl).host, discovered, `max-urls=${options.maxUrls}`));
+          violations.push(
+            liveViolation(
+              'D-08 sitemap-budget',
+              new URL(item.baseUrl).host,
+              discovered,
+              `max-urls=${options.maxUrls}`
+            )
+          );
           continue;
         }
         pages.add(discovered);
@@ -783,12 +1111,24 @@ async function discoverInventory(options, baseUrls) {
   for (const baseUrl of baseUrls) {
     const host = new URL(baseUrl).host;
     if (!inventoryByHost.get(host).pages.size) {
-      violations.push(liveViolation('D-08 sitemap-inventory', host, baseUrl, 'no page URLs discovered'));
+      violations.push(
+        liveViolation('D-08 sitemap-inventory', host, baseUrl, 'no page URLs discovered')
+      );
     }
   }
-  return { sitemapDocuments, pages, violations, inventory: [...inventoryByHost.values()]
-    .map((entry) => ({ host: entry.host, sitemapDocuments: entry.sitemapDocuments.size, pages: entry.pages.size, boundedInventory: entry.sitemapDocuments.size + entry.pages.size }))
-    .sort((left, right) => left.host.localeCompare(right.host)) };
+  return {
+    sitemapDocuments,
+    pages,
+    violations,
+    inventory: [...inventoryByHost.values()]
+      .map((entry) => ({
+        host: entry.host,
+        sitemapDocuments: entry.sitemapDocuments.size,
+        pages: entry.pages.size,
+        boundedInventory: entry.sitemapDocuments.size + entry.pages.size
+      }))
+      .sort((left, right) => left.host.localeCompare(right.host))
+  };
 }
 
 async function inspectLivePage(url, options, baseUrls) {
@@ -799,12 +1139,29 @@ async function inspectLivePage(url, options, baseUrls) {
     const digest = crypto.createHash('sha256').update(content).digest('hex');
     const violations = [];
     if (response.status !== 200 || response.url !== url || !sameOrigin(response.url, baseUrl)) {
-      violations.push(liveViolation('D-08 page-fetch', host, url, `status=${response.status} final=${response.url}`));
+      violations.push(
+        liveViolation(
+          'D-08 page-fetch',
+          host,
+          url,
+          `status=${response.status} final=${response.url}`
+        )
+      );
     }
     if (!/text\/html/i.test(response.headers.get('content-type') || '')) {
-      violations.push(liveViolation('D-08 page-content-type', host, url, response.headers.get('content-type') || 'missing'));
+      violations.push(
+        liveViolation(
+          'D-08 page-content-type',
+          host,
+          url,
+          response.headers.get('content-type') || 'missing'
+        )
+      );
     }
-    const identity = htmlIdentity(new URL(url).pathname.replace(/^\//, '') || 'index.html', 'preview');
+    const identity = htmlIdentity(
+      new URL(url).pathname.replace(/^\//, '') || 'index.html',
+      'preview'
+    );
     const hygiene = inspectHtmlArtifact(identity.file, content, 'preview').map((entry) => ({
       rule: entry.rule,
       host,
@@ -812,9 +1169,23 @@ async function inspectLivePage(url, options, baseUrls) {
       url,
       detail: `${entry.projection}: ${entry.detail}`
     }));
-    return { host, path: new URL(url).pathname, url, status: response.status, contentSha256: digest, violations: [...violations, ...hygiene] };
+    return {
+      host,
+      path: new URL(url).pathname,
+      url,
+      status: response.status,
+      contentSha256: digest,
+      violations: [...violations, ...hygiene]
+    };
   } catch (error) {
-    return { host, path: new URL(url).pathname, url, status: 0, contentSha256: null, violations: [liveViolation('D-08 page-fetch', host, url, error.name)] };
+    return {
+      host,
+      path: new URL(url).pathname,
+      url,
+      status: 0,
+      contentSha256: null,
+      violations: [liveViolation('D-08 page-fetch', host, url, error.name)]
+    };
   }
 }
 
@@ -835,9 +1206,17 @@ function writeLiveReport(reportPath, report) {
     `checkedPages=${report.totals.checkedPages}`,
     `boundedInventory=${report.totals.boundedInventory}`,
     `violations=${report.violations.length}`,
-    ...report.inventory.map((entry) => `inventory host=${entry.host} sitemapDocuments=${entry.sitemapDocuments} pages=${entry.pages} boundedInventory=${entry.boundedInventory}`),
-    ...report.pages.map((page) => `${page.host} ${page.path} status=${page.status} sha256=${page.contentSha256 || 'none'}`),
-    ...report.violations.map((violation) => `${violation.rule} ${violation.host}${violation.path} ${violation.detail}`)
+    ...report.inventory.map(
+      (entry) =>
+        `inventory host=${entry.host} sitemapDocuments=${entry.sitemapDocuments} pages=${entry.pages} boundedInventory=${entry.boundedInventory}`
+    ),
+    ...report.pages.map(
+      (page) =>
+        `${page.host} ${page.path} status=${page.status} sha256=${page.contentSha256 || 'none'}`
+    ),
+    ...report.violations.map(
+      (violation) => `${violation.rule} ${violation.host}${violation.path} ${violation.detail}`
+    )
   ];
   fs.writeFileSync(`${reportPath}.txt`, `${receipt.join('\n')}\n`);
 }
@@ -845,13 +1224,20 @@ function writeLiveReport(reportPath, report) {
 async function inspectLive(options) {
   const baseUrls = [options.baseUrlCn, options.baseUrlIo];
   const inventory = await discoverInventory(options, baseUrls);
-  const budgetExceeded = inventory.violations.some((violation) => violation.rule === 'D-08 sitemap-budget');
+  const budgetExceeded = inventory.violations.some(
+    (violation) => violation.rule === 'D-08 sitemap-budget'
+  );
   const pages = budgetExceeded
     ? []
-    : await runBounded([...inventory.pages].sort(), options.concurrency, (url) => inspectLivePage(url, options, baseUrls));
+    : await runBounded([...inventory.pages].sort(), options.concurrency, (url) =>
+        inspectLivePage(url, options, baseUrls)
+      );
   pages.sort((left, right) => left.url.localeCompare(right.url));
-  const violations = [...inventory.violations, ...pages.flatMap((page) => page.violations)].sort((left, right) =>
-    [left.url, left.rule, left.detail].join('\0').localeCompare([right.url, right.rule, right.detail].join('\0')),
+  const violations = [...inventory.violations, ...pages.flatMap((page) => page.violations)].sort(
+    (left, right) =>
+      [left.url, left.rule, left.detail]
+        .join('\0')
+        .localeCompare([right.url, right.rule, right.detail].join('\0'))
   );
   const report = {
     status: violations.length ? 'failed' : 'passed',
@@ -881,7 +1267,10 @@ async function main(argv = process.argv.slice(2)) {
   if (options.mode === 'live') {
     const report = await inspectLive(options);
     if (report.status === 'failed') {
-      for (const violation of report.violations) process.stderr.write(`${violation.rule} | ${violation.host}${violation.path} | ${violation.detail}\n`);
+      for (const violation of report.violations)
+        process.stderr.write(
+          `${violation.rule} | ${violation.host}${violation.path} | ${violation.detail}\n`
+        );
       process.exitCode = 1;
       return;
     }
@@ -890,9 +1279,10 @@ async function main(argv = process.argv.slice(2)) {
   }
   let result;
   try {
-    result = options.mode === 'html'
-      ? inspectHtmlRoot(options.root, options.variant)
-      : inspectRoot(options.root);
+    result =
+      options.mode === 'html'
+        ? inspectHtmlRoot(options.root, options.variant)
+        : inspectRoot(options.root);
   } catch (error) {
     process.stderr.write(`${error.message}\n`);
     process.exitCode = 1;
@@ -900,11 +1290,18 @@ async function main(argv = process.argv.slice(2)) {
   }
   const { files, findings } = result;
   if (findings.length) {
-    for (const entry of findings) process.stderr.write(`${options.mode === 'html' ? formatHtmlFinding(entry) : formatFinding(entry)}\n`);
+    for (const entry of findings)
+      process.stderr.write(
+        `${options.mode === 'html' ? formatHtmlFinding(entry) : formatFinding(entry)}\n`
+      );
     process.exitCode = 1;
     return;
   }
-  console.log(`Content hygiene passed: ${files.length} ${options.mode === 'html' ? 'HTML' : 'source'} file${files.length === 1 ? '' : 's'}`);
+  console.log(
+    `Content hygiene passed: ${files.length} ${options.mode === 'html' ? 'HTML' : 'source'} file${
+      files.length === 1 ? '' : 's'
+    }`
+  );
 }
 
 if (require.main === module) main();

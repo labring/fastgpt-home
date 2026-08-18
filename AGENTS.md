@@ -1,3 +1,12 @@
+## Published Content Hygiene
+
+- This contract covers Guide, technical center, FAQ, comparisons, home, pricing, and every future public page.
+- Reader-facing bodies contain durable reader content. Internal KB/GSC provenance, demand anchors, sign-off, schedule, case clearance, publish target, verification workflow, version-plan, update-log, and review-cycle data belong in one byte-zero hidden metadata block or a structured non-rendered registry.
+- Existing customer case names, outcome metrics, substantive context, and caveats remain reader-facing.
+- Reader-facing References and Sources use descriptive clickable citations with public HTTPS URLs.
+- Guide articles render the localized registry-derived `dateModified` line.
+- The rendering architecture excludes runtime body scrubbers; rendering components consume already-clean bodies directly, and hygiene enforcement occurs at authoring, completed-export, and bounded-live release gates.
+
 <!-- GSD:project-start source:PROJECT.md -->
 
 ## Project

@@ -35,6 +35,16 @@ Phase 5 establishes one reproducible, source-faithful contract for the fixed Wee
 
 </decisions>
 
+## 2026-08-18 Content Hygiene Supersession
+
+Quick tasks `260818-l3m` and `260818-m4x` are the active publication authority. Their records are `.planning/quick/260818-l3m-stage-1-clean-editorial-metadata-from-al/260818-l3m-SUMMARY.md` and `.planning/quick/260818-m4x-stage-2-add-registry-derived-localized-g/260818-m4x-SUMMARY.md`.
+
+- D-01 remains authoritative for the repository-owned source boundary and filenames. Its original-source-byte preservation clause is superseded by the surgically cleaned corpus and refreshed digest evidence in `260818-l3m`.
+- D-02 remains authoritative for newline normalization and one byte-zero hidden delivery comment. Its remaining-body byte-preservation clause is superseded only for removal of reader-visible editorial workflow and provenance blocks.
+- Substantive Guide prose, current customer case names and outcome metrics, metadata identity, assets, links, registry dates, and route/SEO contracts remain preserved.
+- `260818-m4x` adds the localized registry-derived visible date and mandatory completed-export/live HTML hygiene authority.
+- D-03 through D-08 retain their historical implementation authority alongside the global publication contract.
+
 <canonical_refs>
 ## Canonical References
 

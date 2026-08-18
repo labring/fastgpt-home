@@ -506,6 +506,64 @@ test('source CLI applies the full editorial vocabulary while preserving Chinese 
   );
 });
 
+test('source CLI normalizes entities and preserves policy keys with exact source locations', () => {
+  withFixture(
+    {
+      'content/competitors/entities.md': [
+        '# Guide',
+        '',
+        'Sources&colon; Internal KB',
+        'Demand&nbsp;basis: internal research',
+        'Sources: [Localhost](https://localhost./guide)',
+        ''
+      ].join('\n'),
+      'src/locales/en.json': [
+        '{',
+        '  "one": "Demand basis: internal",',
+        '  "two": "Demand basis: internal",',
+        '  "Sources": null,',
+        '  "Schedule": 1,',
+        '  "nested": { "Sources": ["Internal KB"] }',
+        '}',
+        ''
+      ].join('\n'),
+      'src/faq/policy.tsx': [
+        'const Sources = getValue();',
+        "export const computed = { ['Sources']: 'Internal KB' };",
+        'export const shorthand = { Sources };',
+        'export const nested = <div><Copy Sources={Sources} /></div>;',
+        "export const spread = <Copy {...{ Schedule: 'W4' }} />;",
+        'export const multiline = `',
+        'Demand basis: internal',
+        '`;',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /path=content\/competitors\/entities\.md .*line=3/);
+      assert.match(result.stderr, /Demand&nbsp;basis/);
+      assert.match(result.stderr, /localhost\./);
+      assert.match(result.stderr, /path=src\/locales\/en\.json \| source=en \| line=2/);
+      assert.match(result.stderr, /path=src\/locales\/en\.json \| source=en \| line=3/);
+      assert.match(result.stderr, /path=src\/faq\/policy\.tsx \| source=policy \| line=7/);
+      assert((result.stderr.match(/D-07 citation-policy/g) || []).length >= 5);
+      assert((result.stderr.match(/D-01 editorial-metadata/g) || []).length >= 5);
+    }
+  );
+  withFixture(
+    {
+      'content/competitors/clean.md':
+        '# Guide\n\nSources: [Wikipedia Foo](https://en.wikipedia.org/wiki/Foo_(bar))\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+});
+
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
   withFixture(
     {
@@ -967,6 +1025,38 @@ test('HTML CLI maps projected visible findings to raw source offsets', () => {
   });
 });
 
+test('HTML CLI normalizes entity and cross-node policy labels with raw offsets', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html>',
+        '<body>',
+        '<p>Sources&colon; Internal KB</p>',
+        '<span>Demand',
+        '</span><span>basis: internal research</span>',
+        '<script>',
+        '{"copy":"Demand basis: internal research"}',
+        '</script>',
+        '</body>',
+        '</html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 2);
+      assert.match(result.stderr, /visible .*line=3/);
+      assert.match(result.stderr, /visible .*line=4/);
+      assert.match(result.stderr, /payload .*line=7/);
+    }
+  );
+});
+
 test('HTML CLI applies expanded editorial labels to visible and serialized content', () => {
   withFixture(
     {
@@ -1025,6 +1115,7 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
   let dirtyCitation = false;
   let dirtyEditorial = false;
   let fragmentedProjection = false;
+  let normalizedProjection = false;
   const server = http.createServer((request, response) => {
     requests += 1;
     const baseUrl = `http://${request.headers.host}`;
@@ -1037,6 +1128,8 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     response.end(
       fragmentedProjection
         ? `<html><body>${'&amp;'.repeat(50_001)}</body></html>`
+        : normalizedProjection
+        ? '<html><body><p>Sources&colon; Internal KB</p><span>Demand\n</span><span>basis: internal research</span></body></html>'
         : dirtyEditorial
         ? '<html><body><p>计划：W4</p><p>实施计划：reader rollout</p></body></html>'
         : dirtyCitation
@@ -1111,6 +1204,12 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
     const editorial = await runAsync(args);
     assert.equal(editorial.status, 1);
     assert.match(editorial.stderr, /D-01 editorial-metadata/);
+
+    normalizedProjection = true;
+    const normalized = await runAsync(args);
+    assert.equal(normalized.status, 1);
+    assert.match(normalized.stderr, /D-07 citation-policy/);
+    assert.match(normalized.stderr, /D-01 editorial-metadata/);
 
     fragmentedProjection = true;
     const fragmented = await runAsync(args);

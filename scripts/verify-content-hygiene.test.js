@@ -439,6 +439,37 @@ test('source CLI fails closed for dynamic policy keys and traverses dynamic expr
   );
 });
 
+test('source CLI keeps static fragments around dynamic expressions and JSX policy attributes', () => {
+  const dirty = [
+    'const dynamic = getValue();',
+    'export const templateHead = `Sources: ${dynamic}`;',
+    'export const templateTail = `Intro ${dynamic} Sources: Internal KB`;',
+    "export const binary = dynamic + 'Sources: Internal KB';",
+    "export const subtraction = dynamic - 'Sources: Internal KB';",
+    "export const conditional = dynamic ? 'Clean' : 'Sources: Internal KB';",
+    'export const jsxTemplate = <p>{`Sources: ${dynamic}`}</p>;',
+    "export const jsxBinary = <p>{dynamic + 'Sources: Internal KB'}</p>;",
+    "export const jsxConditional = <p>{dynamic ? 'Clean' : 'Sources: Internal KB'}</p>;",
+    'export const attributes = <Copy Sources={dynamic} Schedule={dynamic}></Copy>;',
+    ''
+  ].join('\n');
+  const clean = [
+    'export const source = "Sources: " + \'<a href="https://example.com/docs">Official docs</a>\';',
+    'export const jsx = <p>Sources: <a href={`https://example.com/docs`}>Official docs</a></p>;',
+    ''
+  ].join('\n');
+  withFixture({ 'src/faq/dirty.tsx': dirty }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 9);
+    assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 1);
+  });
+  withFixture({ 'src/faq/clean.tsx': clean }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
   withFixture(
     {
@@ -874,6 +905,32 @@ test('HTML CLI fails closed for a missing or empty output root', () => {
   }
 });
 
+test('HTML CLI maps projected visible findings to raw source offsets', () => {
+  const fixture = [
+    '<html>',
+    '<body>',
+    '<!-- Sources: Internal KB --><p title="Schedule: weekly">Clean</p>',
+    '<p>Sou<!-- SSR -->rces: Internal KB</p>',
+    '<div data-note="Sources: Internal KB">Clean</div>',
+    '<p>Schedule: weekly</p>',
+    '</body>',
+    '</html>'
+  ].join('\n');
+  withFixture({ 'index.html': fixture }, (root) => {
+    const result = spawnSync(
+      process.execPath,
+      [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+      { cwd: ROOT, encoding: 'utf8' }
+    );
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1);
+    assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 1);
+    assert.match(result.stderr, /line=4/);
+    assert.match(result.stderr, /line=6/);
+    assert.doesNotMatch(result.stderr, /line=3|line=5/);
+  });
+});
+
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {
   let requests = 0;
   let dirtyCitation = false;
@@ -892,6 +949,7 @@ test('live CLI bounds sitemap inventory before page scheduling and writes determ
         : '<html><body><p>REFERENCE<!-- -->: <a href="https://example.com/docs">Official docs</a></p></body></html>'
     );
   });
+
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
   const { port } = server.address();
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-content-hygiene-live-'));

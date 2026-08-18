@@ -478,6 +478,7 @@ function labelledCitationEntries(value) {
     const end = matches[index + 1]?.index ?? text.length;
     return {
       token: match[0].trim(),
+      index: match.index,
       value: text.slice(match.index + match[0].length, end).trim()
     };
   });
@@ -554,16 +555,59 @@ function expressionText(node) {
   return undefined;
 }
 
+function staticExpressionFragments(node) {
+  const value = expressionText(node);
+  if (value !== undefined) return [value];
+  if (
+    ts.isParenthesizedExpression(node) ||
+    ts.isAsExpression(node) ||
+    ts.isSatisfiesExpression(node) ||
+    ts.isNonNullExpression(node)
+  ) {
+    return staticExpressionFragments(node.expression);
+  }
+  if (ts.isTemplateExpression(node)) {
+    return [
+      node.head.text,
+      ...node.templateSpans.flatMap((span) => [
+        ...staticExpressionFragments(span.expression),
+        span.literal.text
+      ])
+    ];
+  }
+  if (ts.isBinaryExpression(node)) {
+    return [...staticExpressionFragments(node.left), ...staticExpressionFragments(node.right)];
+  }
+  if (ts.isConditionalExpression(node)) {
+    return [
+      ...staticExpressionFragments(node.condition),
+      ...staticExpressionFragments(node.whenTrue),
+      ...staticExpressionFragments(node.whenFalse)
+    ];
+  }
+  return [];
+}
+
+function staticExpressionProjection(node) {
+  const fragments = staticExpressionFragments(node);
+  return fragments.length ? fragments.join('\n') : undefined;
+}
+
+function escapeHtmlAttribute(value) {
+  return value.replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;');
+}
+
 function jsxAttributeText(attribute, sourceFile) {
   if (!ts.isJsxAttribute(attribute)) return '';
-  if (!attribute.initializer) return ` ${attribute.name.getText(sourceFile)}`;
+  if (attribute.name.getText(sourceFile).toLowerCase() !== 'href') return '';
+  if (!attribute.initializer) return '';
   if (ts.isStringLiteral(attribute.initializer)) {
-    return ` ${attribute.name.getText(sourceFile)}="${attribute.initializer.text}"`;
+    return ` href="${escapeHtmlAttribute(attribute.initializer.text)}"`;
   }
   if (ts.isJsxExpression(attribute.initializer)) {
     const value =
       attribute.initializer.expression && expressionText(attribute.initializer.expression);
-    return value === undefined ? '' : ` ${attribute.name.getText(sourceFile)}="${value}"`;
+    return value === undefined ? '' : ` href="${escapeHtmlAttribute(value)}"`;
   }
   return '';
 }
@@ -577,7 +621,9 @@ function jsxOpeningText(element, sourceFile) {
 
 function staticJsxProjection(node, sourceFile) {
   if (ts.isJsxText(node)) return node.getText(sourceFile);
-  if (ts.isJsxExpression(node)) return node.expression ? expressionText(node.expression) || '' : '';
+  if (ts.isJsxExpression(node)) {
+    return node.expression ? staticExpressionProjection(node.expression) || '\n' : '';
+  }
   if (ts.isJsxFragment(node))
     return node.children.map((child) => staticJsxProjection(child, sourceFile)).join('');
   if (ts.isJsxElement(node)) {
@@ -587,17 +633,6 @@ function staticJsxProjection(node, sourceFile) {
   }
   if (ts.isJsxSelfClosingElement(node)) return jsxOpeningText(node, sourceFile);
   return '';
-}
-
-function isStaticExpressionCandidate(node) {
-  return (
-    ts.isBinaryExpression(node) ||
-    ts.isTemplateExpression(node) ||
-    ts.isParenthesizedExpression(node) ||
-    ts.isAsExpression(node) ||
-    ts.isSatisfiesExpression(node) ||
-    ts.isNonNullExpression(node)
-  );
 }
 
 function collectTypeScriptEntries(relativePath, source) {
@@ -625,6 +660,20 @@ function collectTypeScriptEntries(relativePath, source) {
     seen.add(identity);
     entries.push({ key, value: value || '', line: sourceLine(sourceFile, node) });
   };
+  const inspectJsxAttributes = (attributes) => {
+    for (const attribute of attributes.properties) {
+      if (!ts.isJsxAttribute(attribute)) continue;
+      const key = attribute.name.getText(sourceFile);
+      if (!isCitationKey(key) && !EDITORIAL_KEY.test(key)) continue;
+      const value =
+        attribute.initializer && ts.isJsxExpression(attribute.initializer)
+          ? expressionText(attribute.initializer.expression)
+          : attribute.initializer && ts.isStringLiteral(attribute.initializer)
+          ? attribute.initializer.text
+          : undefined;
+      add(attribute.initializer || attribute, value, key);
+    }
+  };
   const visit = (node) => {
     if (ts.isPropertyAssignment(node) || ts.isPropertyDeclaration(node)) {
       const key = propertyName(node.name, sourceFile);
@@ -647,19 +696,24 @@ function collectTypeScriptEntries(relativePath, source) {
         if (value !== undefined) return;
       }
     }
-    if (ts.isJsxElement(node) || ts.isJsxFragment(node)) {
+    if (ts.isJsxElement(node)) {
+      inspectJsxAttributes(node.openingElement.attributes);
       add(node, staticJsxProjection(node, sourceFile));
       return;
     }
-    if (isStaticExpressionCandidate(node)) {
-      const value = expressionText(node);
-      if (value !== undefined) {
-        add(node, value);
-        return;
-      }
+    if (ts.isJsxSelfClosingElement(node)) {
+      inspectJsxAttributes(node.attributes);
+      add(node, staticJsxProjection(node, sourceFile));
+      return;
     }
-    if (ts.isStringLiteral(node) || ts.isNoSubstitutionTemplateLiteral(node)) {
-      add(node, node.text);
+    if (ts.isJsxFragment(node)) {
+      add(node, staticJsxProjection(node, sourceFile));
+      return;
+    }
+    const value = staticExpressionProjection(node);
+    if (value !== undefined) {
+      add(node, value);
+      return;
     }
     ts.forEachChild(node, visit);
   };
@@ -818,12 +872,12 @@ function htmlIdentity(relativePath, variant) {
   return { file, route, surface, locale, slug: segments.at(-1) || 'home' };
 }
 
-function htmlFinding(rule, projection, identity, content, index, detail) {
+function htmlFinding(rule, projection, identity, content, index, detail, offsets) {
   return {
     rule,
     projection,
     ...identity,
-    line: htmlLine(content, index),
+    line: htmlLine(content, offsets?.[index] ?? index),
     detail
   };
 }
@@ -834,11 +888,14 @@ function formatHtmlFinding(entry) {
 
 function splitHtmlProjections(html) {
   const payloads = [];
-  const visible = html.replace(/<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi, (block) => {
-    payloads.push(block);
-    return '';
-  });
-  return { visible, payload: payloads.join('\n') };
+  const visible = html.replace(
+    /<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi,
+    (block, _tagName, offset) => {
+      payloads.push({ content: block, offset });
+      return block.replace(/[^\n]/g, ' ');
+    }
+  );
+  return { visible, payloads };
 }
 
 function htmlText(value) {
@@ -860,117 +917,193 @@ function decodeHtml(value) {
     .replaceAll('&gt;', '>');
 }
 
-function visibleCitationProjection(visible) {
-  const withoutComments = visible.replace(/<!--[\s\S]*?-->/g, '');
-  const links = withoutComments.replace(
-    /<a\b([^>]*)>([\s\S]*?)<\/a\s*>/gi,
-    (_, attributes, content) => {
-      const href = attributes.match(/\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i);
-      const label = htmlText(content);
-      const url = href?.[1] ?? href?.[2] ?? href?.[3];
-      return url ? `[${label}](${decodeHtml(url)})` : label;
+function appendDecodedHtml(projection, value, offset) {
+  const entityPattern = /&(?:#x[0-9a-f]+|#[0-9]+|amp|quot|#39|lt|gt);/gi;
+  let cursor = 0;
+  const append = (text, start) => {
+    for (let index = 0; index < text.length; index += 1) {
+      projection.text += text[index];
+      projection.offsets.push(start + index);
     }
-  );
-  return decodeHtml(
-    links.replace(/<(\/)?([a-z][\w:-]*)\b[^>]*>/gi, (_, closing, tagName) => {
-      const name = tagName.toLowerCase();
-      if (/^h[1-6]$/i.test(name)) return closing ? '\n' : '\n## ';
-      return BLOCK_TAGS.has(name) ? '\n' : '';
-    })
-  )
-    .replace(/[ \t]+\n/g, '\n')
-    .replace(/\n[ \t]+/g, '\n');
+  };
+  for (const match of value.matchAll(entityPattern)) {
+    append(value.slice(cursor, match.index), offset + cursor);
+    const decoded = decodeHtml(match[0]);
+    for (let index = 0; index < decoded.length; index += 1) {
+      projection.text += decoded[index];
+      projection.offsets.push(offset + match.index);
+    }
+    cursor = match.index + match[0].length;
+  }
+  append(value.slice(cursor), offset + cursor);
 }
 
-function visibleCitationIndex(visible, token, start) {
-  const linkLabel = token.match(/\[([^\]]+)\]/)?.[1];
-  const label = (linkLabel || token)
-    .replace(/^#+\s*/, '')
-    .replace(/[:：].*$/, '')
-    .trim();
-  const index = visible.toLowerCase().indexOf(label.toLowerCase(), start);
-  return index < 0 ? start : index;
+function appendSyntheticHtml(projection, value, offset) {
+  for (let index = 0; index < value.length; index += 1) {
+    projection.text += value[index];
+    projection.offsets.push(offset);
+  }
 }
 
-function visibleCitationBlocks(visible) {
-  const projection = visibleCitationProjection(visible);
+function htmlTagEnd(html, start) {
+  let quote;
+  for (let index = start + 1; index < html.length; index += 1) {
+    const character = html[index];
+    if (quote) {
+      if (character === quote) quote = undefined;
+    } else if (character === '"' || character === "'") {
+      quote = character;
+    } else if (character === '>') {
+      return index;
+    }
+  }
+  return html.length - 1;
+}
+
+function htmlHref(tag, tagOffset) {
+  const match = /\bhref\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+))/i.exec(tag);
+  if (!match) return undefined;
+  const value = match[1] ?? match[2] ?? match[3];
+  return {
+    value,
+    offset: tagOffset + match.index + match[0].lastIndexOf(value)
+  };
+}
+
+function projectVisibleHtml(visible) {
+  const projection = { text: '', offsets: [] };
+  const anchors = [];
+  let cursor = 0;
+  while (cursor < visible.length) {
+    const tagStart = visible.indexOf('<', cursor);
+    if (tagStart < 0) {
+      appendDecodedHtml(projection, visible.slice(cursor), cursor);
+      break;
+    }
+    appendDecodedHtml(projection, visible.slice(cursor, tagStart), cursor);
+    if (visible.startsWith('<!--', tagStart)) {
+      const commentEnd = visible.indexOf('-->', tagStart + 4);
+      cursor = commentEnd < 0 ? visible.length : commentEnd + 3;
+      continue;
+    }
+    const tagEnd = htmlTagEnd(visible, tagStart);
+    const tag = visible.slice(tagStart, tagEnd + 1);
+    const match = /^<\s*(\/)?\s*([a-z][\w:-]*)\b/i.exec(tag);
+    if (!match) {
+      appendDecodedHtml(projection, tag, tagStart);
+      cursor = tagEnd + 1;
+      continue;
+    }
+    const closing = Boolean(match[1]);
+    const name = match[2].toLowerCase();
+    if (name === 'a') {
+      if (closing) {
+        const anchor = anchors.pop();
+        if (anchor?.href) {
+          appendSyntheticHtml(projection, '](', tagStart);
+          appendDecodedHtml(projection, anchor.href.value, anchor.href.offset);
+          appendSyntheticHtml(projection, ')', tagStart);
+        }
+      } else {
+        const href = htmlHref(tag, tagStart);
+        anchors.push({ href });
+        if (href) appendSyntheticHtml(projection, '[', tagStart);
+      }
+    }
+    if (/^h[1-6]$/.test(name)) {
+      appendSyntheticHtml(projection, closing ? '\n' : '\n## ', tagStart);
+    } else if (BLOCK_TAGS.has(name)) {
+      appendSyntheticHtml(projection, '\n', tagStart);
+    }
+    cursor = tagEnd + 1;
+  }
+  return projection;
+}
+
+function visibleCitationProjection(visible) {
+  return projectVisibleHtml(visible).text;
+}
+
+function visibleCitationBlocks(projection) {
   const citations = [];
   let inSources = false;
-  let searchStart = 0;
-  const add = (value, token) => {
-    const index = visibleCitationIndex(visible, token, searchStart);
-    searchStart = Math.max(searchStart, index + token.length);
-    citations.push({ index, value });
-  };
-  for (const line of projection.split('\n')) {
+  let lineStart = 0;
+  for (const line of projection.text.split('\n')) {
     const heading = line.match(/^#{1,6}\s+/);
     if (SOURCE_SECTION.test(line)) {
       inSources = true;
+      lineStart += line.length + 1;
       continue;
     }
     if (heading) inSources = false;
-    if (inSources && line.trim()) add(line, line);
-    for (const entry of labelledCitationEntries(line)) add(entry.value, entry.token);
+    if (inSources && line.trim()) {
+      citations.push({ index: lineStart + line.search(/\S/), value: line });
+    }
+    for (const entry of labelledCitationEntries(line)) {
+      citations.push({ index: lineStart + entry.index, value: entry.value });
+    }
+    lineStart += line.length + 1;
   }
   return citations;
 }
 
 function inspectHtmlArtifact(relativePath, html, variant) {
   const identity = htmlIdentity(relativePath, variant);
-  const { visible, payload } = splitHtmlProjections(html);
+  const { visible, payloads } = splitHtmlProjections(html);
   const findings = [];
-  const visibleProjection = visibleCitationProjection(visible);
-  for (const line of visibleProjection.split('\n')) {
-    if (!hasEditorialLabel(line)) continue;
-    const token = line.match(/[A-Za-z]+|[\u4e00-\u9fff]{2,}/)?.[0] || line.trim();
+  const visibleProjection = projectVisibleHtml(visible);
+  let lineStart = 0;
+  for (const line of visibleProjection.text.split('\n')) {
+    const editorial = new RegExp(EDITORIAL_MATCHER.source, 'iu').exec(line);
+    const preamble = EDITORIAL_PREAMBLE.exec(line.trim());
+    if (!editorial && !preamble) {
+      lineStart += line.length + 1;
+      continue;
+    }
+    const index = lineStart + (editorial?.index ?? line.indexOf(preamble[0]));
+    const token = (editorial?.[0] || preamble?.[0] || line.trim()).trim();
     findings.push(
       htmlFinding(
         'D-01 editorial-metadata',
         'visible',
         identity,
-        visible,
-        visibleCitationIndex(visible, token, 0),
-        token
+        html,
+        index,
+        token,
+        visibleProjection.offsets
       )
     );
+    lineStart += line.length + 1;
   }
-  for (const match of visible.matchAll(new RegExp(EDITORIAL_PREAMBLE.source, 'gi'))) {
-    findings.push(
-      htmlFinding(
-        'D-01 editorial-metadata',
-        'visible',
-        identity,
-        visible,
-        match.index,
-        match[0].trim()
-      )
-    );
-  }
-  for (const citation of visibleCitationBlocks(visible)) {
+  for (const citation of visibleCitationBlocks(visibleProjection)) {
     if (!validPublicCitation(citation.value)) {
       findings.push(
         htmlFinding(
           'D-07 citation-policy',
           'visible',
           identity,
-          visible,
+          html,
           citation.index,
-          'Sources and References require public HTTPS anchors'
+          'Sources and References require public HTTPS anchors',
+          visibleProjection.offsets
         )
       );
     }
   }
-  for (const match of payload.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
-    findings.push(
-      htmlFinding(
-        'D-01 editorial-metadata',
-        'payload',
-        identity,
-        html,
-        html.indexOf(match[0]),
-        match[0]
-      )
-    );
+  for (const payload of payloads) {
+    const normalizedPayload = payload.content.replace(/(["'])(?=\s*:)/g, '');
+    for (const match of normalizedPayload.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+      findings.push(
+        htmlFinding(
+          'D-01 editorial-metadata',
+          'payload',
+          identity,
+          html,
+          payload.offset + match.index,
+          match[0]
+        )
+      );
+    }
   }
   return findings;
 }

@@ -26,6 +26,11 @@ export const localeDirections = localeConfigs.reduce((acc, locale) => {
   return acc;
 }, {} as Record<LocaleCode, LocaleDirection>);
 
+export const localeHtmlLangs = localeConfigs.reduce((acc, locale) => {
+  acc[locale.code] = locale.htmlLang;
+  return acc;
+}, {} as Record<LocaleCode, string>);
+
 export function normalizeLocale(locale: string | undefined | null): LocaleCode {
   if (!locale) return 'en';
 

@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
 import { htmlLangScript } from '@/lib/htmlLang';
 import { contactLinkAttributionScript } from '@/lib/contactLinkAttribution';
-import { localeDirections } from '@/lib/locales';
+import { localeDirections, localeHtmlLangs } from '@/lib/locales';
 import '@/styles/globals.css';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';
@@ -56,7 +56,7 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html
-      lang={defaultLocale}
+      lang={localeHtmlLangs[defaultLocale] || defaultLocale}
       dir={localeDirections[defaultLocale] || 'ltr'}
       className="dark"
       style={{ colorScheme: 'dark' }}

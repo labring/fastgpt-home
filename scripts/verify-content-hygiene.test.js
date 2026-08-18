@@ -1740,6 +1740,29 @@ test('source CLI preserves original columns through nested list stripping', () =
   });
 });
 
+test('source CLI recognizes tab-indented ATX headings inside list items', () => {
+  const dirty = ['# Guide', '', '- Parent', '  \t## Sources', '  \tInternal KB', ''].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/tab-heading.md': dirty }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 1, result.stderr);
+    assert.match(result.stderr, /tab-heading\.md.*line=5/);
+  });
+
+  const clean = [
+    '# Guide',
+    '',
+    '- Parent',
+    '  \t## Sources',
+    '  \t[Public documentation](https://example.com/docs)',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/tab-heading.md': clean }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 0, result.stderr);
+  });
+});
+
 test('source CLI scopes headings beneath empty list markers', () => {
   for (const [marker, indentation] of [
     ['-', '  '],

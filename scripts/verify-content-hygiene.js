@@ -647,17 +647,19 @@ function markdownCitationEntries(value) {
   }));
 }
 
-function atxHeading(line) {
-  const opening = /^( {0,3})(#{1,6})(?:[\t ]+|$)/.exec(line);
+function atxHeading(line, baseColumn = 0) {
+  const indentation = markdownIndentation(line, 0, baseColumn);
+  if (indentation.column - baseColumn > 3) return undefined;
+  const opening = /^(#{1,6})(?:[\t ]+|$)/.exec(line.slice(indentation.offset));
   if (!opening) return undefined;
-  const contentStart = opening[0].length;
+  const contentStart = indentation.offset + opening[0].length;
   let text = line.slice(contentStart);
   const closing = /[\t ]+#+[\t ]*$/.exec(text);
   if (closing) text = text.slice(0, closing.index);
   return {
     text: text.replace(/[\t ]+$/, ''),
     offset: contentStart,
-    level: opening[2].length
+    level: opening[1].length
   };
 }
 
@@ -1031,7 +1033,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
   };
   const startsBlock = (record) =>
     Boolean(
-      atxHeading(record.text) ||
+      atxHeading(record.text, record.baseColumn ?? 0) ||
         listMarker(record) ||
         quoteMarker(record) ||
         markdownHtmlBlockStart(record.text)
@@ -1097,7 +1099,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
       if (html.blankTerminated || !html.endPattern.test(value)) tracker.html = html;
       return;
     }
-    if (atxHeading(value)) {
+    if (atxHeading(value, child.baseColumn ?? 0)) {
       tracker.type = 'heading';
       return;
     }
@@ -1112,7 +1114,7 @@ function markdownLogicalBlocks(lines, lineStarts) {
         continue;
       }
 
-      const heading = atxHeading(record.text);
+      const heading = atxHeading(record.text, record.baseColumn ?? 0);
       if (heading) {
         appendBlock(
           [

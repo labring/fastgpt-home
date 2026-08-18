@@ -1548,6 +1548,108 @@ test('source CLI scopes citation headings to contiguous logical containers', () 
   });
 });
 
+test('source CLI resolves citation state through ordered container ancestors', () => {
+  const body = [
+    '# Guide',
+    '',
+    '## Sources',
+    '- ## Other',
+    '  Internal KB',
+    '- Internal KB',
+    '> > Internal KB',
+    '## Other',
+    '- ## Sources',
+    '  - Internal KB',
+    'Root copy after child Sources.',
+    '> ## Sources',
+    '> > ## Other',
+    '> > Internal KB',
+    '> [Public documentation](https://example.com/docs)',
+    '> > Internal KB',
+    'Root copy after quote Sources.',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/ancestors.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 4, result.stderr);
+    for (const line of [6, 7, 10, 16]) {
+      assert.match(result.stderr, new RegExp(`ancestors\\.md.*line=${line}`));
+    }
+    assert.doesNotMatch(result.stderr, /ancestors\.md.*line=5|line=11|line=14|line=15|line=17/);
+  });
+});
+
+test('source CLI preserves loose and nested list-item citation scope', () => {
+  const body = [
+    '# Guide',
+    '',
+    '- ## Sources',
+    '',
+    '  Internal KB',
+    '- Internal KB',
+    '- ## Sources',
+    '',
+    '  ## Other',
+    '',
+    '  Internal KB',
+    '- ## Sources',
+    '',
+    '  - Internal KB',
+    '> - ## Sources',
+    '>',
+    '>   Internal KB',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/loose-lists.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+    for (const line of [5, 14, 17]) {
+      assert.match(result.stderr, new RegExp(`loose-lists\\.md.*line=${line}`));
+    }
+    assert.doesNotMatch(result.stderr, /loose-lists\.md.*line=6|line=11/);
+  });
+});
+
+test('source CLI type-terminates raw HTML blocks inside block quotes', () => {
+  const body = [
+    '# Guide',
+    '',
+    '> <pre>',
+    '> Demand',
+    '>',
+    '> basis: internal',
+    '> </pre>',
+    '> <?Demand',
+    '>',
+    '> basis: internal?>',
+    '> <!DOCTYPE',
+    '> Demand',
+    '>',
+    '> basis: internal',
+    '> >',
+    '> <![CDATA[',
+    '> Sources',
+    '>',
+    '> : Internal KB',
+    '> ]]>',
+    '> <div>Demand',
+    '> basis: internal</div>',
+    '> <!-- Fact sources: internal -->',
+    ''
+  ].join('\n');
+  withFixture({ 'src/content/tech-center/tutorial/quoted-html.md': body }, (root) => {
+    const result = runFixture(root);
+    assert.equal(result.status, 1);
+    assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 5, result.stderr);
+    assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 2, result.stderr);
+    for (const line of [4, 8, 12, 17, 21, 23]) {
+      assert.match(result.stderr, new RegExp(`quoted-html\\.md.*line=${line}`));
+    }
+  });
+});
+
 test('source and HTML CLIs accept colon citation headings and empty ATX resets', () => {
   const markdown = ['# Guide', '', '## Sources:', 'Internal KB', '##', 'Internal KB', ''].join(
     '\n'

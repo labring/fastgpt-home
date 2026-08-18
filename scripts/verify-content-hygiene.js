@@ -934,7 +934,8 @@ function markdownSourceCommentsBlock(value) {
         offsets,
         html: false,
         sourceComment: false,
-        container: 'source-comments'
+        container: 'source-comments',
+        ancestors: []
       }
     : undefined;
 }
@@ -943,12 +944,21 @@ function markdownLogicalBlocks(lines, lineStarts) {
   const blocks = [];
   let listItem = 0;
   let quoteGroup = 0;
-  let currentQuoteGroup = 0;
-  let lastQuoteLine = -2;
-  const appendBlock = (parts, options = {}) => {
+  const rootContext = {
+    container: 'root',
+    ancestors: [],
+    quoteDepth: 0
+  };
+  const childContext = (parent, container, extra = {}) => ({
+    ...parent,
+    container,
+    ancestors: [...parent.ancestors, parent.container],
+    ...extra
+  });
+  const appendBlock = (records, context, options = {}) => {
     let text = '';
     const offsets = [];
-    for (const [value, offset] of parts) {
+    for (const { text: value, offset } of records) {
       if (text) {
         text += '\n';
         offsets.push(offset - 1);
@@ -961,154 +971,177 @@ function markdownLogicalBlocks(lines, lineStarts) {
       offsets,
       html: false,
       sourceComment: false,
-      container: 'root',
+      container: context.container,
+      ancestors: context.ancestors,
       ...options
     });
   };
-  const boundary = (line) =>
-    !line.trim() ||
-    Boolean(atxHeading(line)) ||
-    /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(line) ||
-    Boolean(markdownHtmlBlockStart(line));
-  const plainLine = (line) =>
-    Boolean(line.trim()) &&
-    !atxHeading(line) &&
-    !/^\s*(?:[-*+]\s+|\d+[.)]\s+|>)/.test(line) &&
-    !markdownHtmlBlockStart(line);
-
-  for (let index = 0; index < lines.length; ) {
-    const heading = atxHeading(lines[index]);
-    if (heading) {
-      appendBlock([[heading.text, lineStarts[index] + heading.offset]], {
-        headingLevel: heading.level
-      });
-      index += 1;
-      continue;
+  const listMarker = (line) => /^( *)(?:[-*+]|\d+[.)])([\t ]+)/.exec(line);
+  const quoteMarker = (line) => /^ {0,3}>[\t ]?/.exec(line);
+  const startsBlock = (line) =>
+    Boolean(
+      atxHeading(line) || listMarker(line) || quoteMarker(line) || markdownHtmlBlockStart(line)
+    );
+  const consumeHtmlBlock = (records, start) => {
+    const htmlStart = markdownHtmlBlockStart(records[start].text);
+    const content = [];
+    let index = start;
+    if (htmlStart.blankTerminated) {
+      do {
+        content.push(records[index]);
+        index += 1;
+      } while (index < records.length && records[index].text.trim());
+    } else {
+      while (index < records.length) {
+        const record = records[index];
+        content.push(record);
+        index += 1;
+        if (htmlStart.endPattern.test(record.text)) break;
+      }
     }
+    return { content, htmlStart, next: index };
+  };
 
-    const quote = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
-    if (quote) {
-      if (index !== lastQuoteLine + 1) currentQuoteGroup = ++quoteGroup;
-      const depth = (quote[0].match(/>/g) || []).length;
-      const container = `quote:${currentQuoteGroup}:${depth}`;
-      const value = lines[index].slice(quote[0].length);
-      const quotedHeading = atxHeading(value);
-      lastQuoteLine = index;
-      if (quotedHeading) {
+  const parseBlocks = (records, context) => {
+    for (let index = 0; index < records.length; ) {
+      const record = records[index];
+      if (!record.text.trim()) {
+        index += 1;
+        continue;
+      }
+
+      const heading = atxHeading(record.text);
+      if (heading) {
         appendBlock(
-          [[quotedHeading.text, lineStarts[index] + quote[0].length + quotedHeading.offset]],
-          { container, headingLevel: quotedHeading.level }
+          [
+            {
+              text: heading.text,
+              offset: record.offset + heading.offset
+            }
+          ],
+          context,
+          { headingLevel: heading.level }
         );
         index += 1;
         continue;
       }
 
-      const quotedList = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(value);
-      if (quotedList) {
-        const itemContainer = `${container}:list:${++listItem}`;
-        const firstValue = value.slice(quotedList[0].length);
-        const listHeading = atxHeading(firstValue);
-        if (listHeading) {
-          appendBlock(
-            [
-              [
-                listHeading.text,
-                lineStarts[index] + quote[0].length + quotedList[0].length + listHeading.offset
-              ]
-            ],
-            { container: itemContainer, headingLevel: listHeading.level }
-          );
-        } else {
-          appendBlock([[firstValue, lineStarts[index] + quote[0].length + quotedList[0].length]], {
-            container: itemContainer
-          });
+      const quote = quoteMarker(record.text);
+      if (quote) {
+        const group = ++quoteGroup;
+        const depth = context.quoteDepth + 1;
+        const quoteContext = childContext(context, `${context.container}:quote:${group}:${depth}`, {
+          quoteDepth: depth
+        });
+        const quoted = [];
+        let cursor = index;
+        while (cursor < records.length) {
+          const current = records[cursor];
+          const marker = quoteMarker(current.text);
+          if (marker) {
+            quoted.push({
+              text: current.text.slice(marker[0].length),
+              offset: current.offset + marker[0].length,
+              quoteContainerBoundary: true
+            });
+            cursor += 1;
+            continue;
+          }
+          if (
+            current.text.trim() &&
+            quoted.length &&
+            !current.quoteContainerBoundary &&
+            !startsBlock(current.text)
+          ) {
+            quoted.push(current);
+            cursor += 1;
+            continue;
+          }
+          break;
         }
-        index += 1;
+        parseBlocks(quoted, quoteContext);
+        index = cursor;
         continue;
       }
 
-      const parts = [];
-      while (index < lines.length) {
-        const marker = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
-        if (marker && (marker[0].match(/>/g) || []).length !== depth) break;
-        const lineValue = marker ? lines[index].slice(marker[0].length) : lines[index];
-        const offset = lineStarts[index] + (marker ? marker[0].length : 0);
-        if (
-          !lineValue.trim() ||
-          atxHeading(lineValue) ||
-          /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(lineValue) ||
-          markdownHtmlBlockStart(lineValue)
-        ) {
+      const list = listMarker(record.text);
+      if (list) {
+        const itemContext = childContext(context, `${context.container}:list:${++listItem}`);
+        const contentIndent = list[0].length;
+        const itemRecords = [
+          {
+            text: record.text.slice(contentIndent),
+            offset: record.offset + contentIndent
+          }
+        ];
+        let cursor = index + 1;
+        let canLazyContinue = true;
+        while (cursor < records.length) {
+          const current = records[cursor];
+          if (!current.text.trim()) {
+            let next = cursor + 1;
+            while (next < records.length && !records[next].text.trim()) next += 1;
+            if (next >= records.length) break;
+            const indentation = /^ */.exec(records[next].text)[0].length;
+            if (indentation < contentIndent) break;
+            while (cursor < next) {
+              itemRecords.push({ text: '', offset: records[cursor].offset });
+              cursor += 1;
+            }
+            canLazyContinue = false;
+            continue;
+          }
+          const indentation = /^ */.exec(current.text)[0].length;
+          if (indentation >= contentIndent) {
+            itemRecords.push({
+              text: current.text.slice(contentIndent),
+              offset: current.offset + contentIndent
+            });
+            cursor += 1;
+            canLazyContinue = true;
+            continue;
+          }
+          if (canLazyContinue && !startsBlock(current.text)) {
+            itemRecords.push(current);
+            cursor += 1;
+            continue;
+          }
           break;
         }
-        if (!marker && boundary(lines[index])) break;
-        parts.push([lineValue, offset]);
-        lastQuoteLine = index;
-        index += 1;
+        parseBlocks(itemRecords, itemContext);
+        index = cursor;
+        continue;
       }
-      if (parts.length) appendBlock(parts, { container });
-      else index += 1;
-      continue;
-    }
 
-    const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
-    if (list) {
-      const container = `list:${++listItem}`;
-      const firstValue = lines[index].slice(list[0].length);
-      const listHeading = atxHeading(firstValue);
-      const parts = [];
-      if (listHeading) {
-        appendBlock([[listHeading.text, lineStarts[index] + list[0].length + listHeading.offset]], {
-          container,
-          headingLevel: listHeading.level
+      const htmlStart = markdownHtmlBlockStart(record.text);
+      if (htmlStart) {
+        const htmlBlock = consumeHtmlBlock(records, index);
+        appendBlock(htmlBlock.content, context, {
+          html: true,
+          sourceComment: htmlBlock.htmlStart.sourceComment
         });
-      } else {
-        parts.push([firstValue, lineStarts[index] + list[0].length]);
+        index = htmlBlock.next;
+        continue;
       }
+
+      const paragraph = [record];
       index += 1;
-      while (index < lines.length && !boundary(lines[index])) {
-        const continuation = /^\s+/.exec(lines[index])?.[0].length ?? 0;
-        parts.push([lines[index].slice(continuation), lineStarts[index] + continuation]);
+      while (
+        index < records.length &&
+        records[index].text.trim() &&
+        !startsBlock(records[index].text)
+      ) {
+        paragraph.push(records[index]);
         index += 1;
       }
-      if (parts.length) appendBlock(parts, { container });
-      continue;
+      appendBlock(paragraph, context);
     }
+  };
 
-    const htmlStart = markdownHtmlBlockStart(lines[index]);
-    if (htmlStart) {
-      const parts = [];
-      if (htmlStart.blankTerminated) {
-        do {
-          parts.push([lines[index], lineStarts[index]]);
-          index += 1;
-        } while (index < lines.length && lines[index].trim());
-      } else {
-        while (index < lines.length) {
-          const line = lines[index];
-          parts.push([line, lineStarts[index]]);
-          index += 1;
-          if (htmlStart.endPattern.test(line)) break;
-        }
-      }
-      appendBlock(parts, {
-        html: true,
-        sourceComment: htmlStart.sourceComment
-      });
-      continue;
-    }
-
-    if (!plainLine(lines[index])) {
-      index += 1;
-      continue;
-    }
-    const parts = [];
-    while (index < lines.length && plainLine(lines[index])) {
-      parts.push([lines[index], lineStarts[index]]);
-      index += 1;
-    }
-    appendBlock(parts);
-  }
+  parseBlocks(
+    lines.map((text, index) => ({ text, offset: lineStarts[index] })),
+    rootContext
+  );
   return blocks;
 }
 
@@ -1672,15 +1705,14 @@ function inspectMarkdown(relativePath, source) {
   };
   const seenCitationRanges = new Set();
   const seenEditorialRanges = new Set();
-  const sourceSectionLevels = new Map();
-  const sourceSectionLevelFor = (container) => {
-    const local = sourceSectionLevels.get(container);
-    if (local === null) return undefined;
-    if (local !== undefined) return local;
-    const rootLevel = sourceSectionLevels.get('root');
-    return container === 'root' || container === 'source-comments' || rootLevel === null
-      ? undefined
-      : rootLevel;
+  const sourceSectionStates = new Map();
+  const sourceSectionStateFor = (block) => {
+    const chain = [...block.ancestors, block.container];
+    for (let index = chain.length - 1; index >= 0; index -= 1) {
+      const state = sourceSectionStates.get(chain[index]);
+      if (state) return state;
+    }
+    return { kind: 'reset' };
   };
   const blocks = markdownLogicalBlocks(lines, lineStarts);
   const sourceComments = markdownSourceCommentsBlock(body);
@@ -1700,15 +1732,20 @@ function inspectMarkdown(relativePath, source) {
       const citationHeading =
         headingLevel !== undefined && isCitationSectionHeading(headingText || '');
       if (headingLevel !== undefined) {
-        const activeLevel = sourceSectionLevelFor(block.container);
-        if (activeLevel !== undefined && headingLevel <= activeLevel) {
-          sourceSectionLevels.set(block.container, null);
+        const activeState = sourceSectionStateFor(block);
+        if (citationHeading) {
+          sourceSectionStates.set(block.container, { kind: 'sources', level: headingLevel });
+        } else if (!(headingText || '').trim()) {
+          if (activeState.kind !== 'sources' || headingLevel <= activeState.level) {
+            sourceSectionStates.set(block.container, { kind: 'reset' });
+          }
+        } else if (activeState.kind !== 'sources' || headingLevel <= activeState.level) {
+          sourceSectionStates.set(block.container, { kind: 'other', level: headingLevel });
         }
-        if (citationHeading) sourceSectionLevels.set(block.container, headingLevel);
       }
       if (
         headingLevel === undefined &&
-        sourceSectionLevelFor(block.container) !== undefined &&
+        sourceSectionStateFor(block).kind === 'sources' &&
         projection.text.trim()
       ) {
         const firstVisible = projection.text.search(/\S/);

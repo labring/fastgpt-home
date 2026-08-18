@@ -20,6 +20,7 @@ async function fixture(variant, hosts) {
     return response.end(`<h1>${escapedH1}</h1><link rel="canonical" href="${hosts[variant]}${route}"><link rel="alternate" hreflang="zh-CN" href="${hosts.cn}${route}"><link rel="alternate" hreflang="en" href="${hosts.io}${route}"><link rel="alternate" hreflang="x-default" href="${hosts.io}${route}"><meta name="robots" content="index,follow">`);
   });
   await new Promise((resolve) => server.listen(0, '127.0.0.1', resolve));
+  manifest.expectedHost = `http://127.0.0.1:${server.address().port}`;
   return { server, manifest, port: server.address().port };
 }
 
@@ -62,5 +63,9 @@ test('local 18-page fixture validates SEO, cache, manifest headers, sitemap, and
       assert.match(result.variants[variant].surfaces['/sitemap.xml'].bodyDigest, /^[a-f0-9]{64}$/);
       assert.equal(result.variants[variant].surfaces['/__release/manifest.json'].headers['cache-control'], 'no-store');
     }
+    cn.manifest.expectedHost = 'https://wrong.example';
+    const mismatch = await runLiveVerification({ baseUrlCn: hosts.cn, baseUrlIo: hosts.io, timeoutMs: 1000, providerEvidence: [cnReceipt, ioReceipt] });
+    assert.equal(mismatch.status, 'failed');
+    assert.match(mismatch.variants.cn.failures.join('\n'), /manifest:\[verify-guide-live\] manifest variant\/host mismatch/);
   } finally { fs.rmSync(root, { recursive: true, force: true }); await Promise.all([new Promise((resolve) => cn.server.close(resolve)), new Promise((resolve) => io.server.close(resolve))]); }
 });

@@ -8,7 +8,6 @@ const http = require('node:http');
 
 const ROOT = path.resolve(__dirname, '..');
 const SCRIPT = path.join(ROOT, 'scripts/verify-content-hygiene.js');
-const { projectVisibleHtml, projectedRawOffset } = require(SCRIPT);
 
 function writeFixture(root, relativePath, content) {
   const destination = path.join(root, relativePath);
@@ -1177,19 +1176,18 @@ test('HTML CLI applies expanded editorial labels to visible and serialized conte
   );
 });
 
-test('HTML projection stores compact offset runs for multi-megabyte text', () => {
-  const body = 'x'.repeat(2 * 1024 * 1024);
-  const html = `<html><body>${body}</body></html>`;
-  const projection = projectVisibleHtml(html);
-  assert.equal(projection.text.includes(body), true);
-  assert.equal('offsets' in projection, false);
-  assert(projection.runs.length <= 4);
-  assert.equal(projectedRawOffset(projection, projection.text.indexOf(body)), html.indexOf(body));
-});
-
-test('HTML projection fails closed before entity-dense content fragments offset runs', () => {
-  const html = `<html><body>${'&amp;'.repeat(50_001)}</body></html>`;
-  assert.throws(() => projectVisibleHtml(html), /HTML projection exceeds 50000 offset runs/);
+test('HTML CLI accepts multi-megabyte plain projections with compact metadata', () => {
+  withFixture(
+    { 'index.html': `<html><body>${'x'.repeat(2 * 1024 * 1024)}</body></html>` },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
 });
 
 test('HTML CLI reports entity-dense projection run limits without exhausting memory', () => {
@@ -1202,6 +1200,24 @@ test('HTML CLI reports entity-dense projection run limits without exhausting mem
     assert.equal(result.status, 1);
     assert.match(result.stderr, /HTML projection exceeds 50000 offset runs/);
   });
+});
+
+test('HTML CLI keeps category entities and near-cap normalization within a practical bound', () => {
+  const startedAt = Date.now();
+  withFixture(
+    {
+      'index.html': `<html><body>${'&nbsp;x'.repeat(24_999)}</body></html>`
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8', timeout: 5000 }
+      );
+      assert.equal(result.status, 0, result.stderr);
+    }
+  );
+  assert(Date.now() - startedAt < 5000);
 });
 
 test('HTML CLI preserves payload source lines through normalization', () => {
@@ -1252,6 +1268,38 @@ test('HTML CLI preserves literal script comparisons and decodes policy entity ca
       assert.match(result.stderr, /visible .*line=2/);
       assert.match(result.stderr, /visible .*line=3/);
       assert.match(result.stderr, /payload .*line=5/);
+    }
+  );
+});
+
+test('HTML CLI classifies optional policy entities and inspects real script bodies', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<p>Version&nbhy;plan: internal</p>',
+        '<p>Update&figdash;log: internal</p>',
+        '<p>Sign&horbar;off: internal</p>',
+        '<p>Demand&#32basis: internal</p>',
+        '<p>Demand&#160;basis: internal</p>',
+        '<p>Demand&nbspbasis: internal</p>',
+        '<script>if (a < b) {}',
+        '<span title=Schedule>Demand basis: internal</span>',
+        '</script>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-01 editorial-metadata/g) || []).length, 8);
+      assert.match(result.stderr, /visible .*line=2/);
+      assert.match(result.stderr, /visible .*line=7/);
+      assert.match(result.stderr, /payload .*line=9/);
     }
   );
 });

@@ -159,12 +159,11 @@ const EDITORIAL_PREAMBLE =
 const MAX_RESPONSE_BYTES = 5 * 1024 * 1024;
 // Bound offset metadata before entity-heavy HTML can grow heap usage disproportionately.
 const MAX_HTML_PROJECTION_RUNS = 50_000;
-const HTML_WHITESPACE_ENTITIES = new Set(
-  'tab newline nbsp nonbreakingspace ensp emsp emsp13 emsp14 numsp puncsp thinsp hairsp verythinspace mediumspace thickspace negativeverythinspace negativethinspace negativemediumspace negativethickspace zerowidthspace zwnj zwj lrm rlm nobreak'.split(
-    ' '
-  )
-);
-const HTML_DASH_ENTITIES = new Set('hyphen ndash mdash dash minus'.split(' '));
+const HTML_WHITESPACE_ENTITY =
+  /(?:sp$|space$|^tab$|^newline$|^nbsp$|^nobreak$|^zwnj$|^zwj$|^lrm$|^rlm$)/;
+const HTML_DASH_ENTITY = /(?:dash$|hyphen$|^minus$|^horbar$|^nbhy$)/;
+const HTML_LEGACY_SPACE_ENTITIES =
+  'nbsp|ensp|emsp|emsp13|emsp14|numsp|puncsp|thinsp|hairsp|verythinspace|mediumspace|thickspace';
 
 function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
@@ -1138,8 +1137,15 @@ function splitHtmlProjections(html) {
   const payloads = [];
   const visible = html.replace(
     /<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi,
-    (block, _tagName, offset) => {
-      payloads.push({ content: block, offset });
+    (block, tagName, offset) => {
+      if (tagName.toLowerCase() === 'script') {
+        const openingEnd = htmlTagEnd(block, 0);
+        const closingStart = block.toLowerCase().lastIndexOf('</script');
+        payloads.push({
+          content: block.slice(openingEnd + 1, closingStart),
+          offset: offset + openingEnd + 1
+        });
+      }
       return block.replace(/[^\n]/g, ' ');
     }
   );
@@ -1154,19 +1160,22 @@ function htmlText(value) {
 
 function decodeHtml(value) {
   return value
-    .replace(/&#x([0-9a-f]+);/gi, (_, codePoint) =>
+    .replace(/&#x([0-9a-f]+);?/gi, (_, codePoint) =>
       String.fromCodePoint(Number.parseInt(codePoint, 16))
     )
-    .replace(/&#([0-9]+);/g, (_, codePoint) => String.fromCodePoint(Number.parseInt(codePoint, 10)))
+    .replace(/&#([0-9]+);?/g, (_, codePoint) =>
+      String.fromCodePoint(Number.parseInt(codePoint, 10))
+    )
     .replaceAll('&amp;', '&')
     .replaceAll('&quot;', '"')
     .replaceAll('&#39;', "'")
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
-    .replace(/&([a-z][a-z0-9]*);/gi, (entity, name) => {
+    .replace(new RegExp(`&(?:${HTML_LEGACY_SPACE_ENTITIES});?`, 'gi'), ' ')
+    .replace(/&([a-z][a-z0-9]*);?/gi, (entity, name) => {
       const normalized = name.toLowerCase();
-      if (HTML_WHITESPACE_ENTITIES.has(normalized)) return ' ';
-      if (HTML_DASH_ENTITIES.has(normalized)) return '-';
+      if (HTML_WHITESPACE_ENTITY.test(normalized)) return ' ';
+      if (HTML_DASH_ENTITY.test(normalized)) return '-';
       return normalized === 'colon' ? ':' : entity;
     });
 }
@@ -1195,7 +1204,10 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
 }
 
 function appendDecodedHtml(projection, value, offset) {
-  const entityPattern = /&(?:#[0-9]+|#x[0-9a-f]+|[a-z][a-z0-9]*);/gi;
+  const entityPattern = new RegExp(
+    `&(?:#[0-9]+;?|#x[0-9a-f]+;?|(?:${HTML_LEGACY_SPACE_ENTITIES});?|[a-z][a-z0-9]*;)`,
+    'gi'
+  );
   let cursor = 0;
   for (const match of value.matchAll(entityPattern)) {
     appendProjectedHtml(projection, value.slice(cursor, match.index), offset + cursor, true);
@@ -1297,26 +1309,38 @@ function projectedRawOffset(projection, index) {
   return 0;
 }
 
-function projectionRange(target, source, start, end) {
-  for (const run of source.runs) {
-    const rangeStart = Math.max(start, run.projectedStart);
-    const rangeEnd = Math.min(end, run.projectedEnd);
-    if (rangeStart >= rangeEnd) continue;
-    appendProjectedHtml(
-      target,
-      source.text.slice(rangeStart, rangeEnd),
-      run.linear ? run.rawStart + rangeStart - run.projectedStart : run.rawStart,
-      run.linear
-    );
-  }
+function projectionRangeAppender(source) {
+  let runCursor = 0;
+  return (target, start, end) => {
+    while (source.runs[runCursor]?.projectedEnd <= start) runCursor += 1;
+    for (let index = runCursor; index < source.runs.length; index += 1) {
+      const run = source.runs[index];
+      if (run.projectedStart >= end) break;
+      const rangeStart = Math.max(start, run.projectedStart);
+      const rangeEnd = Math.min(end, run.projectedEnd);
+      if (rangeStart >= rangeEnd) continue;
+      appendProjectedHtml(
+        target,
+        source.text.slice(rangeStart, rangeEnd),
+        run.linear ? run.rawStart + rangeStart - run.projectedStart : run.rawStart,
+        run.linear
+      );
+      if (run.projectedEnd <= end) runCursor = index + 1;
+      else {
+        runCursor = index;
+        break;
+      }
+    }
+  };
 }
 
 function normalizePolicyProjection(source) {
   const projection = { chunks: [], length: 0, runs: [] };
   const separator = /[\s\u00a0\u200b-\u200f]+|[\u2010-\u2015\u2212]/g;
+  const appendRange = projectionRangeAppender(source);
   let cursor = 0;
   for (const match of source.text.matchAll(separator)) {
-    projectionRange(projection, source, cursor, match.index);
+    appendRange(projection, cursor, match.index);
     appendSyntheticHtml(
       projection,
       /[\u2010-\u2015\u2212]/.test(match[0]) ? '-' : ' ',
@@ -1324,7 +1348,7 @@ function normalizePolicyProjection(source) {
     );
     cursor = match.index + match[0].length;
   }
-  projectionRange(projection, source, cursor, source.text.length);
+  appendRange(projection, cursor, source.text.length);
   return { text: projection.chunks.join(''), runs: projection.runs };
 }
 
@@ -1341,41 +1365,19 @@ function policyTextProjection(value) {
 
 function stripPayloadKeyQuotes(source) {
   const projection = { chunks: [], length: 0, runs: [] };
+  const appendRange = projectionRangeAppender(source);
   let cursor = 0;
   for (const match of source.text.matchAll(/["'](?=\s*:)/g)) {
-    projectionRange(projection, source, cursor, match.index);
+    appendRange(projection, cursor, match.index);
     cursor = match.index + 1;
   }
-  projectionRange(projection, source, cursor, source.text.length);
+  appendRange(projection, cursor, source.text.length);
   return { text: projection.chunks.join(''), runs: projection.runs };
 }
 
 function projectPayloadHtml(content, offset) {
-  const projection = { chunks: [], length: 0, runs: [] };
-  let cursor = 0;
-  while (cursor < content.length) {
-    const tagStart = content.indexOf('<', cursor);
-    if (tagStart < 0) {
-      appendDecodedHtml(projection, content.slice(cursor), offset + cursor);
-      break;
-    }
-    appendDecodedHtml(projection, content.slice(cursor, tagStart), offset + cursor);
-    if (content.startsWith('<!--', tagStart)) {
-      const commentEnd = content.indexOf('-->', tagStart + 4);
-      cursor = commentEnd < 0 ? content.length : commentEnd + 3;
-      continue;
-    }
-    const tag = content.slice(tagStart, htmlTagEnd(content, tagStart) + 1);
-    if (!/^<\/?[a-z][\w:-]*(?:\s[^<>]*)?\/?>$/i.test(tag)) {
-      appendDecodedHtml(projection, '<', offset + tagStart);
-      cursor = tagStart + 1;
-      continue;
-    }
-    cursor = tagStart + tag.length;
-  }
-  return normalizePolicyProjection(
-    stripPayloadKeyQuotes({ text: projection.chunks.join(''), runs: projection.runs })
-  );
+  const projection = projectText(content, offset);
+  return normalizePolicyProjection(stripPayloadKeyQuotes(projection));
 }
 
 function visibleCitationProjection(visible) {
@@ -1473,6 +1475,25 @@ function inspectHtmlArtifact(relativePath, html, variant) {
           html,
           projectedRawOffset(payloadProjection, match.index),
           match[0]
+        )
+      );
+    }
+    const attributePattern = new RegExp(
+      `\\b(?:title|data-[\\w-]+)\\s*=\\s*["']?((?:${EDITORIAL_LABEL_NAME}))\\b`,
+      'iu'
+    );
+    for (const match of payloadProjection.text.matchAll(
+      new RegExp(attributePattern.source, 'giu')
+    )) {
+      const valueIndex = match.index + match[0].lastIndexOf(match[1]);
+      findings.push(
+        htmlFinding(
+          'D-01 editorial-metadata',
+          'payload',
+          identity,
+          html,
+          projectedRawOffset(payloadProjection, valueIndex),
+          match[1]
         )
       );
     }
@@ -1946,7 +1967,5 @@ module.exports = {
   inspectRoot,
   main,
   parseArgs,
-  projectVisibleHtml,
-  projectedRawOffset,
   publishableBody
 };

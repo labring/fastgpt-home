@@ -98,6 +98,35 @@ test('release coordinator composes Guide checks around each fresh variant export
   assert(variantLoop.indexOf('runVariantChecks') < secondCleanup);
 });
 
+test('release source checks run content hygiene first and block dirty published Markdown', () => {
+  assert.equal(
+    packageJson.scripts['verify:content-hygiene'],
+    'node scripts/verify-content-hygiene.js --mode source',
+  );
+  assert.equal(
+    packageJson.scripts['verify:content-hygiene-regression'],
+    'node --test scripts/verify-content-hygiene.test.js',
+  );
+  assert.match(packageJson.scripts.prebuild, /^node scripts\/verify-content-hygiene\.js --mode source && /);
+
+  const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  assert(source.indexOf('scripts/verify-content-hygiene.js') < source.indexOf('TypeScript source verification'));
+
+  const dirtyPath = path.join(ROOT, 'src/content/guides/temporary-content-hygiene-dirty.md');
+  try {
+    fs.writeFileSync(dirtyPath, '# Temporary fixture\n\nFact Source: internal KB\n');
+    const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
+      cwd: ROOT,
+      encoding: 'utf8'
+    });
+    assert.equal(result.status, 1, result.stdout + result.stderr);
+    assert.match(result.stderr, /content hygiene source verification/);
+    assert.match(result.stderr, /temporary-content-hygiene-dirty\.md/);
+  } finally {
+    fs.rmSync(dirtyPath, { force: true });
+  }
+});
+
 test('successful verified outputs can be retained before lifecycle cleanup', () => {
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
   assert.match(source, /--retain-success-artifacts/);

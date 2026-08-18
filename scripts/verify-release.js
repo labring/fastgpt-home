@@ -248,6 +248,7 @@ function retainSuccessArtifacts(variant, retainDir) {
 
 function runSourceChecks(failures, env) {
   const checks = [
+    ['content hygiene source verification', 'scripts/verify-content-hygiene.js', ['--mode', 'source']],
     ['route registry check', 'scripts/generate-faq-route-registry.js', ['--check']],
     ['metadata snapshot check', 'scripts/generate-faq-metadata.js', ['--check']],
     ['FAQ route source verification', 'scripts/verify-faq-routes.js', []],

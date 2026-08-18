@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "node scripts/generate-robots.js && node scripts/generate-llms.js",
+    "prebuild": "node scripts/verify-content-hygiene.js --mode source && node scripts/generate-robots.js && node scripts/generate-llms.js",
     "build": "next build && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
@@ -25,6 +25,8 @@
     "verify:release-regression": "node --test scripts/verify-release.test.js",
     "verify:guide-content": "node scripts/verify-guide-content.js",
     "verify:guide-content-regression": "node --test scripts/verify-guide-content.test.js",
+    "verify:content-hygiene": "node scripts/verify-content-hygiene.js --mode source",
+    "verify:content-hygiene-regression": "node --test scripts/verify-content-hygiene.test.js",
     "verify:guide-seo-graph": "node scripts/verify-guide-seo-graph.js && node --test scripts/verify-guide-seo-graph.test.js",
     "verify:guide-export": "node scripts/verify-guide-export.js",
     "verify:guide-export-regression": "node --test scripts/verify-guide-export.test.js",

@@ -1278,6 +1278,62 @@ test('source CLI projects CommonMark quote and list continuations with label off
   );
 });
 
+test('source CLI respects CommonMark lazy boundaries and reader-visible Markdown text', () => {
+  withFixture(
+    {
+      'src/content/tech-center/tutorial/commonmark.md': [
+        '# Guide',
+        '',
+        '> Sources',
+        ': Internal KB',
+        '',
+        '> Sources',
+        ': [Public documentation](https://example.com/docs)',
+        '',
+        '> > Sources',
+        '> >',
+        '> > : Internal KB',
+        '',
+        '> Sources',
+        '> ## Other',
+        '> : Internal KB',
+        '',
+        '- Sources',
+        ': Internal KB',
+        '',
+        '<p>Demand',
+        'basis: internal</p>',
+        '<p>Sources<br>',
+        ': Internal KB</p>',
+        '<p>Sources</p>',
+        '<p>: Internal KB</p>',
+        '**Demand**',
+        '__basis__: internal',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.equal((result.stderr.match(/D-07 citation-policy/g) || []).length, 3, result.stderr);
+      assert.equal(
+        (result.stderr.match(/D-01 editorial-metadata/g) || []).length,
+        2,
+        result.stderr
+      );
+      assert.match(result.stderr, /commonmark\.md.*line=3/);
+      assert.match(result.stderr, /commonmark\.md.*line=17/);
+      assert.match(result.stderr, /commonmark\.md.*line=22/);
+      assert.match(result.stderr, /commonmark\.md.*line=20/);
+      assert.match(result.stderr, /commonmark\.md.*line=26/);
+      assert.doesNotMatch(
+        result.stderr,
+        /commonmark\.md.*line=9|commonmark\.md.*line=13|commonmark\.md.*line=24/
+      );
+    }
+  );
+});
+
 test('HTML CLI projects br tags as inline whitespace without crossing block boundaries', () => {
   withFixture(
     {

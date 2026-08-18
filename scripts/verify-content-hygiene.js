@@ -626,33 +626,59 @@ function markdownLogicalBlocks(lines, lineStarts) {
   };
   const htmlBlock =
     /^\s*<\/?(?:address|article|aside|blockquote|div|figure|h[1-6]|li|ol|p|section|table|ul)\b/i;
+  const boundary = (line) =>
+    !line.trim() ||
+    /^#{1,6}\s+/.test(line) ||
+    /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(line) ||
+    htmlBlock.test(line);
   const plainLine = (line) =>
     Boolean(line.trim()) &&
     !/^#{1,6}\s+/.test(line) &&
     !/^\s*(?:[-*+]\s+|\d+[.)]\s+|>)/.test(line) &&
     !htmlBlock.test(line);
   for (let index = 0; index < lines.length; ) {
-    const quote = /^\s{0,3}>\s?/.exec(lines[index]);
+    const quote = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
     const list = /^(\s*)(?:[-*+]|\d+[.)])\s+/.exec(lines[index]);
     if (quote) {
       const parts = [];
       while (index < lines.length) {
-        const marker = /^\s{0,3}>\s?/.exec(lines[index]);
-        if (!marker) break;
-        parts.push([lines[index].slice(marker[0].length), lineStarts[index] + marker[0].length]);
+        const marker = /^\s{0,3}(?:>\s?)+/.exec(lines[index]);
+        const value = marker ? lines[index].slice(marker[0].length) : lines[index];
+        const offset = lineStarts[index] + (marker ? marker[0].length : 0);
+        if (
+          !value.trim() ||
+          /^#{1,6}\s+/.test(value) ||
+          /^\s*(?:[-*+]\s+|\d+[.)]\s+)/.test(value) ||
+          htmlBlock.test(value)
+        )
+          break;
+        if (!marker && boundary(lines[index])) break;
+        parts.push([value, offset]);
         index += 1;
       }
-      appendBlock(parts);
+      if (parts.length) appendBlock(parts);
+      else index += 1;
       continue;
     }
     if (list) {
       const parts = [[lines[index].slice(list[0].length), lineStarts[index] + list[0].length]];
       index += 1;
-      while (index < lines.length && /^\s{2,}\S/.test(lines[index])) {
-        const continuation = /^\s+/.exec(lines[index])[0].length;
+      while (index < lines.length && !boundary(lines[index])) {
+        const continuation = /^\s+/.exec(lines[index])?.[0].length ?? 0;
         parts.push([lines[index].slice(continuation), lineStarts[index] + continuation]);
         index += 1;
       }
+      appendBlock(parts);
+      continue;
+    }
+    if (/^\s*<p\b/i.test(lines[index])) {
+      const parts = [];
+      do {
+        parts.push([lines[index], lineStarts[index]]);
+        const complete = /<\/p\s*>/i.test(lines[index]);
+        index += 1;
+        if (complete || index >= lines.length) break;
+      } while (true);
       appendBlock(parts);
       continue;
     }
@@ -673,20 +699,37 @@ function markdownLogicalBlocks(lines, lineStarts) {
 function normalizedMarkdownBlock(block) {
   let text = '';
   const offsets = [];
+  const append = (value, offset) => {
+    for (const character of value) {
+      const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
+      const dash = /[\p{Dash_Punctuation}\u2212]/u.test(character);
+      if (!whitespace && !dash) {
+        text += character;
+        offsets.push(offset);
+      } else if (text.at(-1) !== (dash ? '-' : ' ')) {
+        text += dash ? '-' : ' ';
+        offsets.push(offset);
+      }
+    }
+  };
   for (let index = 0; index < block.text.length; index += 1) {
-    const character = block.text[index];
-    const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
-    const dash = /[\p{Dash_Punctuation}\u2212]/u.test(character);
-    if (!whitespace && !dash) {
-      text += character;
-      offsets.push(block.offsets[index]);
+    if (block.text[index] === '<') {
+      const tagEnd = block.text.indexOf('>', index + 1);
+      if (tagEnd >= 0) {
+        if (/^<br\b/i.test(block.text.slice(index, tagEnd + 1))) append(' ', block.offsets[index]);
+        index = tagEnd;
+        continue;
+      }
+    }
+    if ('*_`'.includes(block.text[index])) continue;
+    const reference = htmlReferenceAt(block.text, index);
+    if (reference) {
+      append(reference.value, block.offsets[index]);
+      index += reference.length - 1;
       continue;
     }
-    if (whitespace) {
-      while (/[\p{White_Space}\p{Cf}]/u.test(block.text[index + 1] || '')) index += 1;
-    }
-    text += dash ? '-' : ' ';
-    offsets.push(block.offsets[index]);
+    const character = block.text[index];
+    append(character, block.offsets[index]);
   }
   return { text, offsets };
 }
@@ -1143,9 +1186,6 @@ function inspectMarkdown(relativePath, source) {
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   let inSources = false;
 
-  const isInlineLine = (line) =>
-    Boolean(line.trim()) && !/^#{1,6}\s+/.test(line) && !/^\s*(?:[-*+]\s+|\d+\.\s+|>)/.test(line);
-
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     const lineNumber = bodyStartLine + index;
@@ -1179,9 +1219,14 @@ function inspectMarkdown(relativePath, source) {
     offset += lines[index].length + 1;
   }
   const lineAtOffset = (offset) => {
-    let index = 0;
-    while (index + 1 < lineStarts.length && lineStarts[index + 1] <= offset) index += 1;
-    return bodyStartLine + index;
+    let left = 0;
+    let right = lineStarts.length - 1;
+    while (left <= right) {
+      const middle = Math.floor((left + right) / 2);
+      if (lineStarts[middle] <= offset) left = middle + 1;
+      else right = middle - 1;
+    }
+    return bodyStartLine + right;
   };
   const seenCitationRanges = new Set();
   for (const block of markdownLogicalBlocks(lines, lineStarts)) {
@@ -1727,10 +1772,6 @@ function decodeSerializedEscapes(source) {
 function projectPayloadHtml(content, offset) {
   const projection = projectText(content, offset);
   return normalizePolicyProjection(decodeSerializedEscapes(stripPayloadKeyQuotes(projection)));
-}
-
-function visibleCitationProjection(visible) {
-  return projectVisibleHtml(visible).text;
 }
 
 function visibleCitationBlocks(projection) {

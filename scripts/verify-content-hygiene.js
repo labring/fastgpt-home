@@ -31,6 +31,8 @@ const ts = loadTypeScript();
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
 const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
+// Build-time registries are not reader-facing copy surfaces.
+const STRUCTURED_COPY_REGISTRIES = new Set(['src/faq/generated-en-metadata.json']);
 const ENGLISH_CITATION_LABEL = 'Source(?:s)?|Reference(?:s)?';
 const CHINESE_CITATION_LABEL = '资料来源|参考资料|来源';
 const CITATION_LABEL_NAME = `${ENGLISH_CITATION_LABEL}|${CHINESE_CITATION_LABEL}`;
@@ -286,7 +288,9 @@ function publishedMarkdownFiles(root) {
 
 function publishedStructuredCopyFiles(root) {
   return STRUCTURED_COPY_ROOTS.flatMap((relativeRoot) =>
-    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name))
+    walkFiles(root, relativeRoot, (name) => /\.(?:json|[cm]?[jt]sx?)$/.test(name)).filter(
+      (relativePath) => !STRUCTURED_COPY_REGISTRIES.has(relativePath.replaceAll(path.sep, '/'))
+    )
   ).sort((left, right) => left.localeCompare(right));
 }
 
@@ -472,12 +476,8 @@ function isDescriptiveCitationLabel(label, href) {
 }
 
 function normalizedCitationText(value) {
-  const projection = /<[a-z][^>]*>/i.test(value)
-    ? visibleCitationProjection(value)
-    : decodeHtml(value);
-  return projection
+  return policyTextProjection(value)
     .replaceAll('**', '')
-    .replace(/\s+/g, ' ')
     .trim()
     .replace(/^(?:>\s*)?(?:[-*+]\s+)?/, '');
 }
@@ -503,8 +503,7 @@ function isCitationLabelled(value) {
 }
 
 function isCitationKey(value) {
-  const key = value.trim();
-  return CITATION_KEY.test(key) && !/^[a-z]/.test(key);
+  return CITATION_KEY.test(value.trim());
 }
 
 function labelledCitationValues(value) {
@@ -525,8 +524,7 @@ function labelledCitationEntries(value) {
 
 function validPublicCitationValue(value) {
   if (typeof value !== 'string') return false;
-  const projection = /<a\b/i.test(value) ? visibleCitationProjection(value) : decodeHtml(value);
-  return validPublicCitation(projection);
+  return validPublicCitation(policyTextProjection(value));
 }
 
 function hasEditorialLabel(value) {
@@ -560,9 +558,21 @@ function collectJsonEntries(source) {
     }
     return { start, value: JSON.parse(source.slice(start, cursor)) };
   };
-  const parseValue = () => {
+  const parseValue = (arrayLeaf = false) => {
     skipWhitespace();
-    if (source[cursor] === '"') return parseString().value;
+    const start = cursor;
+    if (source[cursor] === '"') {
+      const string = parseString();
+      if (arrayLeaf) {
+        entries.push({
+          key: undefined,
+          value: string.value,
+          line: lineAt(start),
+          valueOffset: start
+        });
+      }
+      return string.value;
+    }
     if (source[cursor] === '{') {
       cursor += 1;
       skipWhitespace();
@@ -570,8 +580,17 @@ function collectJsonEntries(source) {
         const key = parseString();
         skipWhitespace();
         cursor += 1;
+        skipWhitespace();
+        const valueOffset = cursor;
         const value = parseValue();
-        entries.push({ key: key.value, value, line: lineAt(key.start) });
+        entries.push({
+          key: key.value,
+          value,
+          line: lineAt(key.start),
+          keyOffset: key.start,
+          valueOffset,
+          valueLine: lineAt(valueOffset)
+        });
         skipWhitespace();
         if (source[cursor] === ',') {
           cursor += 1;
@@ -585,7 +604,7 @@ function collectJsonEntries(source) {
       cursor += 1;
       skipWhitespace();
       while (source[cursor] !== ']') {
-        parseValue();
+        parseValue(true);
         skipWhitespace();
         if (source[cursor] === ',') {
           cursor += 1;
@@ -595,7 +614,6 @@ function collectJsonEntries(source) {
       cursor += 1;
       return [];
     }
-    const start = cursor;
     while (cursor < source.length && !/[\s,}\]]/.test(source[cursor])) cursor += 1;
     return JSON.parse(source.slice(start, cursor));
   };
@@ -761,6 +779,31 @@ function collectTypeScriptEntries(relativePath, source) {
     const identity = `${node.pos}:${node.end}:${key || ''}`;
     if (seen.has(identity)) return;
     seen.add(identity);
+    if (
+      !key &&
+      typeof value === 'string' &&
+      value.includes('\n') &&
+      !ts.isJsxElement(node) &&
+      !ts.isJsxFragment(node)
+    ) {
+      const nodeText = node.getText(sourceFile);
+      let cursor = 0;
+      for (const lineValue of value.split('\n')) {
+        if (!lineValue) continue;
+        const offset = nodeText.indexOf(lineValue, cursor);
+        cursor = Math.max(cursor, offset + lineValue.length);
+        entries.push({
+          key,
+          value: lineValue,
+          line:
+            offset < 0
+              ? sourceEntryLine(sourceFile, node, lineValue)
+              : sourceFile.getLineAndCharacterOfPosition(node.getStart(sourceFile) + offset).line +
+                1
+        });
+      }
+      return;
+    }
     entries.push({ key, value: value || '', line: sourceEntryLine(sourceFile, node, value) });
   };
   const inspectPolicyProperty = (property) => {
@@ -792,12 +835,27 @@ function collectTypeScriptEntries(relativePath, source) {
             ? attribute.initializer.text
             : undefined;
         add(attribute.initializer || attribute, value, key);
-      } else if (
-        ts.isJsxSpreadAttribute(attribute) &&
-        ts.isObjectLiteralExpression(attribute.expression)
-      ) {
-        for (const property of attribute.expression.properties) inspectPolicyProperty(property);
+      } else if (ts.isJsxSpreadAttribute(attribute)) {
+        inspectSpreadExpression(attribute.expression);
       }
+    }
+  };
+  const inspectSpreadExpression = (expression) => {
+    if (ts.isObjectLiteralExpression(expression)) {
+      for (const property of expression.properties) inspectPolicyProperty(property);
+    } else if (ts.isConditionalExpression(expression)) {
+      inspectSpreadExpression(expression.whenTrue);
+      inspectSpreadExpression(expression.whenFalse);
+    } else if (ts.isBinaryExpression(expression)) {
+      inspectSpreadExpression(expression.left);
+      inspectSpreadExpression(expression.right);
+    } else if (
+      ts.isParenthesizedExpression(expression) ||
+      ts.isAsExpression(expression) ||
+      ts.isSatisfiesExpression(expression) ||
+      ts.isNonNullExpression(expression)
+    ) {
+      inspectSpreadExpression(expression.expression);
     }
   };
   const inspectJsxTree = (node) => {
@@ -808,6 +866,8 @@ function collectTypeScriptEntries(relativePath, source) {
       inspectJsxAttributes(node.attributes);
     } else if (ts.isJsxFragment(node)) {
       for (const child of node.children) inspectJsxTree(child);
+    } else if (ts.isJsxExpression(node) && node.expression) {
+      ts.forEachChild(node.expression, inspectJsxTree);
     }
   };
   const visit = (node) => {
@@ -913,7 +973,7 @@ function inspectMarkdown(relativePath, source) {
 
 function inspectStructuredCopy(relativePath, source) {
   const findings = [];
-  for (const { error, key, value, line } of structuredEntries(relativePath, source)) {
+  for (const { error, key, value, line, valueLine } of structuredEntries(relativePath, source)) {
     if (error) {
       findings.push(
         finding(
@@ -930,13 +990,25 @@ function inspectStructuredCopy(relativePath, source) {
       const plainValue = normalizedCitationText(value);
       if (hasEditorialLabel(plainValue) || EDITORIAL_PREAMBLE.test(plainValue)) {
         findings.push(
-          finding('D-01 editorial-metadata', 'structured-copy', relativePath, line, value)
+          finding(
+            'D-01 editorial-metadata',
+            'structured-copy',
+            relativePath,
+            valueLine || line,
+            value
+          )
         );
       }
       for (const citation of labelledCitationValues(value)) {
         if (validPublicCitationValue(citation)) continue;
         findings.push(
-          finding('D-07 citation-policy', 'structured-copy', relativePath, line, citation)
+          finding(
+            'D-07 citation-policy',
+            'structured-copy',
+            relativePath,
+            valueLine || line,
+            citation
+          )
         );
       }
     }
@@ -1058,7 +1130,13 @@ function decodeHtml(value) {
     .replaceAll('&lt;', '<')
     .replaceAll('&gt;', '>')
     .replaceAll('&nbsp;', ' ')
-    .replaceAll('&colon;', ':');
+    .replaceAll('&colon;', ':')
+    .replaceAll('&Tab;', '\t')
+    .replaceAll('&NewLine;', '\n')
+    .replaceAll('&hyphen;', '-')
+    .replaceAll('&ndash;', '-')
+    .replaceAll('&mdash;', '-')
+    .replaceAll('&minus;', '-');
 }
 
 function appendProjectedHtml(projection, value, rawStart, linear) {
@@ -1085,7 +1163,8 @@ function appendProjectedHtml(projection, value, rawStart, linear) {
 }
 
 function appendDecodedHtml(projection, value, offset) {
-  const entityPattern = /&(?:#x[0-9a-f]+|#[0-9]+|amp|quot|#39|lt|gt|nbsp|colon);/gi;
+  const entityPattern =
+    /&(?:#x[0-9a-f]+|#[0-9]+|amp|quot|#39|lt|gt|nbsp|colon|Tab|NewLine|hyphen|ndash|mdash|minus);/gi;
   let cursor = 0;
   for (const match of value.matchAll(entityPattern)) {
     appendProjectedHtml(projection, value.slice(cursor, match.index), offset + cursor, true);
@@ -1187,6 +1266,76 @@ function projectedRawOffset(projection, index) {
   return 0;
 }
 
+function projectionRange(target, source, start, end) {
+  for (const run of source.runs) {
+    const rangeStart = Math.max(start, run.projectedStart);
+    const rangeEnd = Math.min(end, run.projectedEnd);
+    if (rangeStart >= rangeEnd) continue;
+    appendProjectedHtml(
+      target,
+      source.text.slice(rangeStart, rangeEnd),
+      run.linear ? run.rawStart + rangeStart - run.projectedStart : run.rawStart,
+      run.linear
+    );
+  }
+}
+
+function normalizePolicyProjection(source) {
+  const projection = { chunks: [], length: 0, runs: [] };
+  const separator = /[\s\u00a0]+|[\u2010-\u2015\u2212]/g;
+  let cursor = 0;
+  for (const match of source.text.matchAll(separator)) {
+    projectionRange(projection, source, cursor, match.index);
+    appendSyntheticHtml(
+      projection,
+      /[\u2010-\u2015\u2212]/.test(match[0]) ? '-' : ' ',
+      projectedRawOffset(source, match.index)
+    );
+    cursor = match.index + match[0].length;
+  }
+  projectionRange(projection, source, cursor, source.text.length);
+  return { text: projection.chunks.join(''), runs: projection.runs };
+}
+
+function projectText(value, offset = 0) {
+  const projection = { chunks: [], length: 0, runs: [] };
+  appendDecodedHtml(projection, value, offset);
+  return { text: projection.chunks.join(''), runs: projection.runs };
+}
+
+function policyTextProjection(value) {
+  const projection = /<[a-z][^>]*>/i.test(value) ? projectVisibleHtml(value) : projectText(value);
+  return normalizePolicyProjection(projection).text;
+}
+
+function stripPayloadKeyQuotes(source) {
+  const projection = { chunks: [], length: 0, runs: [] };
+  let cursor = 0;
+  for (const match of source.text.matchAll(/["'](?=\s*:)/g)) {
+    projectionRange(projection, source, cursor, match.index);
+    cursor = match.index + 1;
+  }
+  projectionRange(projection, source, cursor, source.text.length);
+  return { text: projection.chunks.join(''), runs: projection.runs };
+}
+
+function projectPayloadHtml(content, offset) {
+  const projection = { chunks: [], length: 0, runs: [] };
+  let cursor = 0;
+  while (cursor < content.length) {
+    const tagStart = content.indexOf('<', cursor);
+    if (tagStart < 0) {
+      appendDecodedHtml(projection, content.slice(cursor), offset + cursor);
+      break;
+    }
+    appendDecodedHtml(projection, content.slice(cursor, tagStart), offset + cursor);
+    cursor = htmlTagEnd(content, tagStart) + 1;
+  }
+  return normalizePolicyProjection(
+    stripPayloadKeyQuotes({ text: projection.chunks.join(''), runs: projection.runs })
+  );
+}
+
 function visibleCitationProjection(visible) {
   return projectVisibleHtml(visible).text;
 }
@@ -1219,7 +1368,8 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   const { visible, payloads } = splitHtmlProjections(html);
   const findings = [];
   const visibleProjection = projectVisibleHtml(visible);
-  for (const match of visibleProjection.text.matchAll(
+  const visiblePolicyProjection = normalizePolicyProjection(visibleProjection);
+  for (const match of visiblePolicyProjection.text.matchAll(
     new RegExp(EDITORIAL_MATCHER.source, 'giu')
   )) {
     findings.push(
@@ -1228,7 +1378,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
         'visible',
         identity,
         html,
-        projectedRawOffset(visibleProjection, match.index),
+        projectedRawOffset(visiblePolicyProjection, match.index),
         match[0].trim()
       )
     );
@@ -1269,15 +1419,17 @@ function inspectHtmlArtifact(relativePath, html, variant) {
     }
   }
   for (const payload of payloads) {
-    const normalizedPayload = payload.content.replace(/(["'])(?=\s*:)/g, '');
-    for (const match of normalizedPayload.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+    const payloadProjection = projectPayloadHtml(payload.content, payload.offset);
+    for (const match of payloadProjection.text.matchAll(
+      new RegExp(EDITORIAL_MATCHER.source, 'giu')
+    )) {
       findings.push(
         htmlFinding(
           'D-01 editorial-metadata',
           'payload',
           identity,
           html,
-          payload.offset + match.index,
+          projectedRawOffset(payloadProjection, match.index),
           match[0]
         )
       );

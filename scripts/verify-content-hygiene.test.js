@@ -564,6 +564,51 @@ test('source CLI normalizes entities and preserves policy keys with exact source
   );
 });
 
+test('source CLI normalizes policy whitespace, lowercase JSON keys, and JSX expression branches', () => {
+  withFixture(
+    {
+      'content/competitors/normalization.md': [
+        '# Guide',
+        '',
+        'Sign&NewLine;off: pending',
+        'Version&Tab;plan: internal',
+        'Demand&#160;basis: internal',
+        'Sources: [Local](https://localhost./guide)',
+        ''
+      ].join('\n'),
+      'src/locales/en.json': [
+        '{',
+        '  "sources": ["Sources: Internal KB"],',
+        '  "references": { "nested": true },',
+        '  "schedule": false',
+        '}',
+        ''
+      ].join('\n'),
+      'src/faq/branches.tsx': [
+        'const dynamic = getValue();',
+        'export const conditional = dynamic ? <Copy Sources={dynamic} /> : <Copy {...{ Schedule: "W4" }} />;',
+        'export const logical = dynamic && <Copy Sources={dynamic} />;',
+        'export const multiline = `Sources: Internal KB',
+        'Demand&#160;basis: internal`;',
+        ''
+      ].join('\n')
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /Sign&NewLine;off/);
+      assert.match(result.stderr, /Version&Tab;plan/);
+      assert.match(result.stderr, /Demand&#160;basis/);
+      assert.match(result.stderr, /path=src\/locales\/en\.json \| source=en \| line=2/);
+      assert.match(result.stderr, /path=src\/locales\/en\.json \| source=en \| line=3/);
+      assert.match(result.stderr, /path=src\/faq\/branches\.tsx \| source=branches \| line=4/);
+      assert.match(result.stderr, /path=src\/faq\/branches\.tsx \| source=branches \| line=5/);
+      assert((result.stderr.match(/D-07 citation-policy/g) || []).length >= 5);
+      assert((result.stderr.match(/D-01 editorial-metadata/g) || []).length >= 5);
+    }
+  );
+});
+
 test('source CLI rejects bare labelled URLs and accepts descriptive technical citations', () => {
   withFixture(
     {
@@ -1108,6 +1153,31 @@ test('HTML CLI reports entity-dense projection run limits without exhausting mem
     assert.equal(result.status, 1);
     assert.match(result.stderr, /HTML projection exceeds 50000 offset runs/);
   });
+});
+
+test('HTML CLI preserves payload source lines through normalization', () => {
+  withFixture(
+    {
+      'index.html': [
+        '<html><body>',
+        '<span>Sign',
+        '</span><span>&NewLine;off: pending</span>',
+        '<script>"a":1',
+        'Demand&#160;basis: internal</script>',
+        '</body></html>'
+      ].join('\n')
+    },
+    (root) => {
+      const result = spawnSync(
+        process.execPath,
+        [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'],
+        { cwd: ROOT, encoding: 'utf8' }
+      );
+      assert.equal(result.status, 1);
+      assert.match(result.stderr, /visible .*line=2/);
+      assert.match(result.stderr, /payload .*line=5/);
+    }
+  );
 });
 
 test('live CLI bounds sitemap inventory before page scheduling and writes deterministic evidence', async () => {

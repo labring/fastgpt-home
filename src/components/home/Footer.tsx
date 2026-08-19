@@ -54,7 +54,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           label: t.service.items.community,
           href: 'https://github.com/labring/FastGPT',
           external: true
-        }
+        },
       ]
     },
     {
@@ -73,7 +73,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
         },
         {
           label: t.links.items.cases,
-          href: 'https://fastgpt.cn/customers',
+          href: 'https://solutions.fastgpt.cn/',
           external: true
         },
         {

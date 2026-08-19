@@ -79,3 +79,8 @@ jobs:
             NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN=.fastgpt.cn
             NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE=${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}
             NEXT_PUBLIC_ATTRIBUTION_SOURCE=${{ secrets.NEXT_PUBLIC_ATTRIBUTION_SOURCE }}
+      - uses: actions-hub/kubectl@master
+        env:
+          KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
+        with:
+          args: set image deployment/fastgpt-home fastgpt-home=${{ env.IMAGE_NAME }}:${{ steps.datetime.outputs.datetime }}

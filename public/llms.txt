@@ -11,7 +11,6 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Cloud Service: https://cloud.fastgpt.io
 - Pricing: https://fastgpt.io/price
 - FAQ: https://fastgpt.io/faq
-- Customer Stories: https://fastgpt.cn/customers
 - Simplified Chinese FAQ: https://fastgpt.cn/faq
 - Simplified Chinese LLM Context: https://fastgpt.cn/llms.txt
 - Traditional Chinese LLM Context: https://fastgpt.io/zh-hant/llms.txt

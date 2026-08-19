@@ -13,8 +13,8 @@
       "href": "https://video.fastgpt.cn/videos"
     },
     {
-      "label": "Customer Stories",
-      "href": "https://fastgpt.cn/customers"
+      "label": "Case Studies",
+      "href": "https://solutions.fastgpt.cn/"
     }
   ],
   "Pricing": {
@@ -444,7 +444,7 @@
             "docs": "Official Docs",
             "faq": "FAQ",
             "learning": "Learning Center",
-            "cases": "Customer Stories",
+            "cases": "Case Studies",
             "tech": "Technical Center"
           }
         },

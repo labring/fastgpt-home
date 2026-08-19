@@ -1,5 +1,3 @@
-ARG NGINX_RUNTIME_IMAGE=fholzer/nginx-brotli:latest
-
 # Install dependencies only when needed
 FROM node:22-alpine AS builder
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
@@ -53,7 +51,7 @@ RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx
 RUN npm install
 RUN npm run build
 
-FROM ${NGINX_RUNTIME_IMAGE}
+FROM fholzer/nginx-brotli:latest
 
 LABEL org.opencontainers.image.source="https://github.com/labring/fastgpt-home"
 
@@ -62,12 +60,4 @@ COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY nginx-security-headers.conf /etc/nginx/security-headers.conf
 COPY --from=builder /app/.next/nginx-redirects.conf /etc/nginx/generated-redirects.conf
 COPY nginx-embeddable-security-headers.conf /etc/nginx/embeddable-security-headers.conf
-COPY nginx-customers-proxy-routes.conf /etc/nginx/customers-proxy-routes.conf
-COPY nginx-customers-proxy-location.conf.template /etc/nginx/customers-proxy-location.conf.template
-COPY docker-entrypoint-customers.sh /usr/local/bin/docker-entrypoint-customers.sh
-RUN chmod +x /usr/local/bin/docker-entrypoint-customers.sh \
-  && printf '# Customers proxy disabled at image build time.\n' > /etc/nginx/customers-proxy.conf \
-  && printf '# Generated only when the customers proxy is enabled.\n' > /etc/nginx/customers-proxy-location.conf \
-  && nginx -t
-
-ENTRYPOINT ["/usr/local/bin/docker-entrypoint-customers.sh"]
+RUN nginx -t

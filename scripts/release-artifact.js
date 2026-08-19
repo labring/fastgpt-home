@@ -41,6 +41,11 @@ function validateReleaseInputs(options) {
   const variant = options.variant;
   const config = assertVariant(variant, options.outDir);
   const outDir = resolveOutDir(options.outDir, variant);
+  const redirectMapPath = path.join(outDir, '__release', 'nginx-redirects.conf');
+  const redirectMapStat = fs.existsSync(redirectMapPath) ? fs.statSync(redirectMapPath) : undefined;
+  if (!redirectMapStat?.isFile() || redirectMapStat.size === 0) {
+    fail({ variant, artifactPath: redirectMapPath, surface: 'redirect-map' }, 'generated redirect map is required');
+  }
   if (!/^[a-f0-9]{7,64}$/i.test(options.sourceCommit || '')) {
     fail({ variant, artifactPath: outDir, surface: 'source-commit' }, 'source commit must be a hexadecimal revision');
   }

@@ -98,6 +98,19 @@ test('invalid release identity and drift include scoped diagnostics', () => {
   }
 });
 
+test('immutable package requires a generated redirect map', () => {
+  const { root, outDir } = createFixture('cn');
+  try {
+    fs.rmSync(path.join(outDir, '__release', 'nginx-redirects.conf'));
+    assert.throws(
+      () => prepareReleaseOutput(releaseOptions('cn', outDir)),
+      /variant=cn.*redirect-map.*required/i
+    );
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
+
 test('packager import is silent and argument parsing stays fail-closed', () => {
   assert.equal(typeof packageReleaseArtifact, 'function');
 });

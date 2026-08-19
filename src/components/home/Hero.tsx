@@ -41,15 +41,7 @@ const mobileBlobs = [
 
 export default function Hero({ stars: initialStars, locale, t, children }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
   const [isDesktop, setIsDesktop] = useState(false);
-  useEffect(() => {
-    const mq = window.matchMedia('(max-width: 767px)');
-    queueMicrotask(() => setIsMobile(mq.matches));
-    const handler = (e: MediaQueryListEvent) => setIsMobile(e.matches);
-    mq.addEventListener('change', handler);
-    return () => mq.removeEventListener('change', handler);
-  }, []);
   useEffect(() => {
     const mq = window.matchMedia('(min-width: 1024px)');
     queueMicrotask(() => setIsDesktop(mq.matches));
@@ -215,7 +207,10 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
             style={{ perspective: 1900 }}
           >
             <m.div
-              style={isMobile ? {} : { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' }}
+              // Avoid applying the desktop transform during the mobile
+              // hydration frame, where it can push the dashboard over the
+              // second CTA before the viewport query has resolved.
+              style={isDesktop ? { rotateX, scale, y: offsetY, transformStyle: 'preserve-3d' } : {}}
               className="hero-image-fade origin-bottom"
             >
               <Image

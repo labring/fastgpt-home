@@ -30,7 +30,8 @@ const links = {
   pricingZhHant: `${ioBaseUrl}/zh-hant/price`,
   pricingZh: `${cnBaseUrl}/price`,
   faqEn: `${ioBaseUrl}/faq`,
-  faqZh: `${cnBaseUrl}/faq`
+  faqZh: `${cnBaseUrl}/faq`,
+  customers: `${cnBaseUrl}/customers`
 };
 
 const englishContent = `# FastGPT
@@ -46,6 +47,7 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Cloud Service: ${links.cloud}
 - Pricing: ${links.pricingEn}
 - FAQ: ${links.faqEn}
+- Customer Stories: ${links.customers}
 - Simplified Chinese FAQ: ${links.faqZh}
 - Simplified Chinese LLM Context: ${chineseLlmUrl}
 - Traditional Chinese LLM Context: ${traditionalLlmUrl}
@@ -153,6 +155,7 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - 云服务：${links.chineseCloud}
 - 定价：${links.pricingZh}
 - FAQ：${links.faqZh}
+- 客户案例中心：${links.customers}
 - 繁体中文 LLM Context：${traditionalLlmUrl}
 - 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
@@ -220,6 +223,7 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 - 雲服務：${links.cloud}
 - 定價：${links.pricingZhHant}
 - FAQ：${links.faqZh}
+- 客戶案例中心：${links.customers}
 - 簡體中文 LLM Context：${chineseLlmUrl}
 - 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
@@ -290,6 +294,7 @@ This locale uses the English LLM context.
 - English LLM Context: ${englishLlmUrl}
 - Simplified Chinese LLM Context: ${chineseLlmUrl}
 - Traditional Chinese LLM Context: ${traditionalLlmUrl}
+- Customer Stories: ${links.customers}
 - Localized Page: ${ioBaseUrl}/${locale}
 `;
 }

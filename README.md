@@ -64,6 +64,8 @@ docker run -p 80:80 fastgpt-home
 ```
 
 The Docker image publishes the `cn` Site Variant. The `io` and `preview` variants publish through Cloudflare Pages.
+The production `/customers` reverse proxy is configured at container startup from a Kubernetes Secret;
+see [docs/customers-proxy-runbook.md](docs/customers-proxy-runbook.md).
 
 ## License
 

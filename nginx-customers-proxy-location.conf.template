@@ -1,0 +1,31 @@
+# Rendered at container startup. Never commit the rendered file.
+resolver @@CUSTOMERS_DNS_RESOLVER@@ ipv6=off valid=30s;
+proxy_pass https://@@CUSTOMERS_ORIGIN_HOST@@$request_uri;
+proxy_ssl_server_name on;
+proxy_ssl_name @@CUSTOMERS_ORIGIN_HOST@@;
+proxy_ssl_verify on;
+proxy_ssl_trusted_certificate /etc/ssl/certs/ca-certificates.crt;
+
+proxy_http_version 1.1;
+proxy_set_header Host @@CUSTOMERS_ORIGIN_HOST@@;
+proxy_set_header X-Forwarded-Host $host;
+proxy_set_header X-Forwarded-Proto https;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Customers-Proxy-Secret "@@CUSTOMERS_PROXY_SECRET@@";
+proxy_set_header Connection "";
+
+proxy_redirect off;
+proxy_intercept_errors off;
+proxy_connect_timeout 10s;
+proxy_send_timeout 60s;
+proxy_read_timeout 60s;
+
+# The Home gateway is the single security-header owner for the mounted response.
+proxy_hide_header Strict-Transport-Security;
+proxy_hide_header X-Frame-Options;
+proxy_hide_header X-Content-Type-Options;
+proxy_hide_header Referrer-Policy;
+proxy_hide_header Permissions-Policy;
+proxy_hide_header Cross-Origin-Opener-Policy;
+proxy_hide_header Content-Security-Policy;

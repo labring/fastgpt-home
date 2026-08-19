@@ -21,8 +21,12 @@ const isCn = variant === 'cn';
 const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
 const primaryLlmUrl = isCn ? `${cnUrl}/llms.txt` : `${ioUrl}/llms.txt`;
+const customersUrl = `${cnUrl}/customers`;
 
-const sitemap = variant === 'preview' ? '' : `\nSitemap: ${baseUrl}/sitemap.xml`;
+const sitemap =
+  variant === 'preview'
+    ? ''
+    : `\nSitemap: ${baseUrl}/sitemap.xml${isCn ? `\nSitemap: ${customersUrl}/sitemap.xml` : ''}`;
 const content = `# robots.txt for FastGPT - ${baseUrl}
 #
 # This site publishes canonical localized pages for its target audience.
@@ -36,6 +40,7 @@ const content = `# robots.txt for FastGPT - ${baseUrl}
 # - Documentation: ${docUrl}
 # - Pricing:       ${baseUrl}/price
 # - FAQ:           ${baseUrl}/faq
+# - Customer Stories: ${customersUrl}
 # - GitHub:        https://github.com/labring/FastGPT
 # - LLM Context:   ${primaryLlmUrl}
 # - LLM Index:     ${baseUrl}/llms.txt

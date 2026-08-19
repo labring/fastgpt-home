@@ -182,7 +182,7 @@ export default function ContactPage({
           <div className="relative mx-auto flex max-w-6xl flex-col items-center text-center">
             <h1
               data-hero-reveal
-              className="m-0 w-full max-w-6xl text-balance font-semibold leading-[0.98] tracking-[-0.055em] text-ink"
+              className="m-0 w-full max-w-6xl text-center text-balance whitespace-pre-line font-semibold leading-[1.06] tracking-[-0.055em] text-ink"
               style={{ fontSize: 'clamp(3rem, 6vw, 5.75rem)' }}
             >
               {copy.hero.title}

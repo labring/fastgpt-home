@@ -3,7 +3,6 @@ import ContactForm from '@/components/contact/ContactForm';
 import { getContactCopy } from '@/components/contact/contactCopy';
 import { normalizeLocale } from '@/lib/i18n';
 import { getContactLocale } from '@/lib/contact';
-import { isContactPublishedLocale } from '@/lib/publishedLocales';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
 
 export async function generateMetadata({
@@ -13,7 +12,7 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = normalizeLocale(lang);
-  const copy = getContactCopy(locale);
+  const copy = getContactCopy(getContactLocale(locale));
   return {
     title: `${copy.title} | FastGPT`,
     description: copy.subtitle,
@@ -54,9 +53,7 @@ export default async function LocalizedContactEmbedPage({
 }
 
 export function generateStaticParams() {
-  return getBuildLocaleCodes()
-    .filter(isContactPublishedLocale)
-    .map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }
 
 export const dynamicParams = false;

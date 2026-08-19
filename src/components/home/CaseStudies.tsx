@@ -86,6 +86,7 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
   const isDraggingRef = useRef(false);
   const dragStartClientX = useRef(0);
   const dragStartVal = useRef(0);
+  const [isMobile, setIsMobile] = useState(false);
   const caseAssets = getCasesAssets(locale);
   const imageByCaseKey: Record<string, string> = {
     cetc: caseAssets.cetc,
@@ -110,6 +111,14 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
     const id = setInterval(next, 3500);
     return () => clearInterval(id);
   }, [isPaused, next]);
+
+  useEffect(() => {
+    const mq = window.matchMedia('(max-width: 767px)');
+    const update = () => setIsMobile(mq.matches);
+    update();
+    mq.addEventListener('change', update);
+    return () => mq.removeEventListener('change', update);
+  }, []);
 
   const MAX_DRAG = 700;
 
@@ -148,7 +157,7 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
       <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto flex flex-col gap-8 md:gap-12">
         <SectionHeader badge={t.badge} title={t.title} subtitle={t.subtitle} />
 
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.15}>
           <div
             className="relative select-none"
             style={{ cursor: 'grab' }}
@@ -180,7 +189,6 @@ export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }
                 const isCenter = offset === 0;
                 const isAdjacent = Math.abs(offset) === 1;
                 const isVisible = isCenter || isAdjacent;
-                const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
                 const baseX = isMobile ? offset * 340 : offset * 660;
                 return (
                   <m.div

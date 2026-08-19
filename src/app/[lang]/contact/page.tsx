@@ -2,9 +2,10 @@ import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
 import { getAlternates } from '@/lib/seo';
+import { getContactLocale } from '@/lib/contact';
 import { getDictionary, normalizeLocale } from '@/lib/i18n';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
-import { contactPublishedLocaleCodes, isContactPublishedLocale } from '@/lib/publishedLocales';
+import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 
 export async function generateMetadata({
   params
@@ -13,11 +14,14 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang } = await params;
   const locale = normalizeLocale(lang);
-  const copy = getContactCopy(locale);
+  const contactLocale = getContactLocale(locale);
+  const copy = getContactCopy(contactLocale);
   return {
     title: `${copy.title} | FastGPT`,
     description: copy.subtitle,
-    alternates: getAlternates(locale, '/contact', contactPublishedLocaleCodes)
+    alternates: getAlternates(contactLocale, '/contact', contactPublishedLocaleCodes),
+    robots:
+      locale === contactLocale ? { index: true, follow: true } : { index: false, follow: true }
   };
 }
 
@@ -32,9 +36,7 @@ export default async function LocalizedContactPage({
 }
 
 export function generateStaticParams() {
-  return getBuildLocaleCodes()
-    .filter(isContactPublishedLocale)
-    .map((lang) => ({ lang }));
+  return getBuildLocaleCodes().map((lang) => ({ lang }));
 }
 
 export const dynamicParams = false;

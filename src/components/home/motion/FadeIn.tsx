@@ -52,13 +52,15 @@ export default function FadeIn({
 
   const MotionTag = m[as] as typeof m.div;
 
+  // Start slightly before the element reaches the viewport. A negative
+  // margin made fast scrolls reveal the section before its animation ran.
   return (
     <MotionTag
       className={className}
       style={style}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: '-80px' }}
+      viewport={{ once, margin: '0px 0px 48px 0px' }}
       variants={variants}
     >
       {children}

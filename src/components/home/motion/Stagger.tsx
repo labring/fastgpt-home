@@ -15,7 +15,7 @@ interface StaggerProps {
 export function StaggerContainer({
   children,
   className,
-  staggerDelay = 0.08,
+  staggerDelay = 0.06,
   initialDelay = 0,
   once = true
 }: StaggerProps) {
@@ -29,12 +29,14 @@ export function StaggerContainer({
     }
   };
 
+  // Prewarm the stagger before the grid reaches the viewport so its first
+  // item is visible when the user arrives at the section.
   return (
     <m.div
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once, margin: '-60px' }}
+      viewport={{ once, margin: '0px 0px 48px 0px' }}
       variants={variants}
     >
       {children}

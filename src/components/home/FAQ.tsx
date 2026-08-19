@@ -102,7 +102,7 @@ export default function FAQ({ t }: { t: FaqT }) {
           )}
         </FadeIn>
 
-        <FadeIn delay={0.5}>
+        <FadeIn delay={0.15}>
           <div className="flex flex-col" style={{ rowGap: 24 }}>
             <div className="bg-white" style={{ padding: '0 16px' }}>
               {t.items.map((item, i) => (

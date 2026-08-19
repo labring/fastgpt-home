@@ -83,19 +83,8 @@ jobs:
             NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN=.fastgpt.cn
             NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE=${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}
             NEXT_PUBLIC_ATTRIBUTION_SOURCE=${{ secrets.NEXT_PUBLIC_ATTRIBUTION_SOURCE }}
-      - name: Set up kubectl
-        uses: azure/setup-kubectl@v4
-        with:
-          version: v1.30.0
-
-      - name: Roll out the published GitHub Container Registry image
+      - uses: actions-hub/kubectl@master
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-          IMAGE: ${{ env.IMAGE_NAME }}:${{ steps.datetime.outputs.datetime }}
-        run: |
-          test -n "$KUBE_CONFIG" || { echo 'KUBE_CONFIG is required'; exit 1; }
-          kubeconfig="$RUNNER_TEMP/kubeconfig"
-          printf '%s' "$KUBE_CONFIG" > "$kubeconfig"
-          KUBECONFIG="$kubeconfig" kubectl config view --minify >/dev/null
-          KUBECONFIG="$kubeconfig" kubectl set image deployment/fastgpt-home fastgpt-home="$IMAGE"
-          KUBECONFIG="$kubeconfig" kubectl rollout status deployment/fastgpt-home --timeout=5m
+        with:
+          args: set image deployment/fastgpt-home fastgpt-home=${{ env.IMAGE_NAME }}:${{ steps.datetime.outputs.datetime }}

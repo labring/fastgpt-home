@@ -508,7 +508,7 @@ function main() {
   } else if (variant === 'cn') {
     const legacyContactHtml = resolveHtml('/zh/contact');
     assert.equal(getCanonical(legacyContactHtml, '/zh/contact'), `${baseUrls.cn}/contact`);
-    assert.equal(getRobots(legacyContactHtml), 'noindex, follow');
+    assert.equal(getRobots(legacyContactHtml), 'index, follow');
     const techArticleHtml = resolveHtml(techPath);
     assert.equal(getCanonical(techArticleHtml, techPath), `${baseUrls.cn}${techPath}`);
     assert(techArticleHtml.includes('href="/tutorial/fastgpt-self-host-config"'));

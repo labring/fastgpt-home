@@ -58,3 +58,4 @@ jobs:
           path: .release-artifacts
           retention-days: 3
           if-no-files-found: ignore
+          include-hidden-files: true

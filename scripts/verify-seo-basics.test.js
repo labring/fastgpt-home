@@ -28,8 +28,8 @@ test('homepage images declare stable loading and accessibility semantics', () =>
   const highlights = read('src/components/home/ProductHighlights.tsx');
   const enterprise = read('src/components/enterprise/NormalCardGrid.tsx');
 
-  assert.match(hero, /loading="eager"/);
-  assert.doesNotMatch(hero, /fetchPriority="high"/);
+  assert.match(hero, /loading="lazy"/);
+  assert.match(hero, /fetchPriority="low"/);
   assert.match(highlights, /style=\{\{ aspectRatio: `\$\{image\.width\} \/ \$\{image\.height\}` \}\}/);
   assert.match(highlights, /width=\{image\.width\}/);
   assert.match(highlights, /height=\{image\.height\}/);

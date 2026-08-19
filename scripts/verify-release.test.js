@@ -407,6 +407,7 @@ test('Linux release evidence stays build-only', () => {
   assert.match(workflow, /if: \$\{\{ failure\(\)/);
   assert.match(workflow, /actions\/upload-artifact@v4/);
   assert.match(workflow, /\.release-artifacts/);
+  assert.match(workflow, /include-hidden-files: true/);
 
   assert.match(dockerfile, /^FROM node:24/m);
   assert.match(dockerfile, /COPY package\.json package-lock\.json \.\//);

@@ -203,7 +203,7 @@ function verifySitemap(sources, entries) {
     'addEntry(getGuideCanonicalUrl(guideLocale), guideLastModified)',
     'hub: missing content-derived date'
   );
-  if (/const now\s*=\s*new Date\(\)/.test(sources.sitemap)) {
+  if (/new Date\(\s*\)/.test(sources.sitemap)) {
     fail('sitemap', 'lastmod: build clock must not mark every URL as changed');
   }
   requireSource(

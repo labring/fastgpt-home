@@ -83,7 +83,6 @@ function FeatureCard({
           loading="lazy"
           decoding="async"
           fetchPriority="low"
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="w-full h-full object-contain"
         />
       </div>

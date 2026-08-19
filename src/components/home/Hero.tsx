@@ -219,7 +219,6 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
                 width={3600}
                 height={1944}
                 loading="eager"
-                fetchPriority="high"
                 sizes="100vw"
                 className="block w-full h-auto"
                 draggable={false}

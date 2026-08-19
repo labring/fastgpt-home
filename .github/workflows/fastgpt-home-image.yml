@@ -7,7 +7,9 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  # Production must always deploy the upstream package, even when this workflow
+  # is inspected or dispatched from a fork.
+  IMAGE_NAME: ghcr.io/labring/fastgpt-home
 
 jobs:
   build-fastgpt-landingpage-images:
@@ -57,12 +59,14 @@ jobs:
         run: test -n "$NEXT_PUBLIC_CRM_API_URL"
 
       - name: Build and push Docker image to GitHub Container Registry
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           build-args: |
             NEXT_PUBLIC_BAIDU_TONGJI=${{ secrets.NEXT_PUBLIC_BAIDU_TONGJI }}
             NEXT_PUBLIC_BAIDU_KEY=${{ secrets.NEXT_PUBLIC_BAIDU_KEY }}
@@ -79,8 +83,19 @@ jobs:
             NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN=.fastgpt.cn
             NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE=${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}
             NEXT_PUBLIC_ATTRIBUTION_SOURCE=${{ secrets.NEXT_PUBLIC_ATTRIBUTION_SOURCE }}
-      - uses: actions-hub/kubectl@master
+      - name: Set up kubectl
+        uses: azure/setup-kubectl@v4
+        with:
+          version: v1.30.0
+
+      - name: Roll out the published GitHub Container Registry image
         env:
           KUBE_CONFIG: ${{ secrets.KUBE_CONFIG }}
-        with:
-          args: set image deployment/fastgpt-home fastgpt-home=${{ env.IMAGE_NAME }}:${{ steps.datetime.outputs.datetime }}
+          IMAGE: ${{ env.IMAGE_NAME }}:${{ steps.datetime.outputs.datetime }}
+        run: |
+          test -n "$KUBE_CONFIG" || { echo 'KUBE_CONFIG is required'; exit 1; }
+          kubeconfig="$RUNNER_TEMP/kubeconfig"
+          printf '%s' "$KUBE_CONFIG" > "$kubeconfig"
+          KUBECONFIG="$kubeconfig" kubectl config view --minify >/dev/null
+          KUBECONFIG="$kubeconfig" kubectl set image deployment/fastgpt-home fastgpt-home="$IMAGE"
+          KUBECONFIG="$kubeconfig" kubectl rollout status deployment/fastgpt-home --timeout=5m

@@ -41,14 +41,17 @@ ENV NEXT_PUBLIC_ATTRIBUTION_SOURCE=$NEXT_PUBLIC_ATTRIBUTION_SOURCE
 
 RUN test "$NEXT_PUBLIC_SITE_VARIANT" = "cn" || (echo "Docker publication supports only NEXT_PUBLIC_SITE_VARIANT=cn" >&2; exit 1)
 
-# copy packages and one project
+# Install dependencies in a reusable layer. Source changes should not invalidate
+# the dependency layer, and npm ci keeps the published build aligned with the lockfile.
+COPY package.json package-lock.json ./
+RUN npm ci --no-audit --no-fund
+
 COPY . ./
 
 # Replace URLs in files (fix sed -i syntax for Alpine Linux)
 RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "https://doc.fastgpt.io" | xargs -r sed -i "s#https://doc.fastgpt.io#https://doc.fastgpt.cn#g"
 RUN find . -type f -name "*.ts" -o -name "*.tsx" -o -name "*.js" -o -name "*.jsx" -o -name "*.json" | xargs grep -l "https://cloud.fastgpt.io" | xargs -r sed -i "s#https://cloud.fastgpt.io#https://cloud.fastgpt.cn#g"
 
-RUN npm install
 RUN npm run build
 
 FROM fholzer/nginx-brotli:latest

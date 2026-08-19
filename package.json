@@ -29,6 +29,7 @@
     "verify:content-hygiene-html": "node scripts/verify-content-hygiene.js --mode html --root out",
     "verify:content-hygiene-regression": "node --test scripts/verify-content-hygiene.test.js",
     "verify:guide-seo-graph": "node scripts/verify-guide-seo-graph.js && node --test scripts/verify-guide-seo-graph.test.js",
+    "verify:seo-basics": "node --test scripts/verify-seo-basics.test.js",
     "verify:guide-export": "node scripts/verify-guide-export.js",
     "verify:guide-export-regression": "node --test scripts/verify-guide-export.test.js",
     "release:artifact": "node scripts/release-artifact.js",

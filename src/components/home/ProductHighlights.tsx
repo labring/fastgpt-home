@@ -5,6 +5,7 @@ import SectionHeader from '@/components/home/SectionHeader';
 import { StaggerContainer, StaggerItem } from '@/components/home/motion/Stagger';
 import { assets } from '@/components/home/assets';
 
+type FeatureImage = { src: string; width: number; height: number };
 type Item = { key: string; title: string; desc: string };
 type ProductHighlightsT = {
   badge: string;
@@ -13,12 +14,12 @@ type ProductHighlightsT = {
   items: Item[];
 };
 
-const imageByKey: Record<string, string> = {
-  blocks: assets.features.blocks,
-  kb: assets.features.kb,
-  lifecycle: assets.features.lifecycle,
-  production: assets.features.production,
-  partner: assets.features.partner
+const imageByKey: Record<string, FeatureImage> = {
+  blocks: { src: assets.features.blocks, width: 1600, height: 859 },
+  kb: { src: assets.features.kb, width: 1600, height: 859 },
+  lifecycle: { src: assets.features.lifecycle, width: 1600, height: 1049 },
+  production: { src: assets.features.production, width: 1600, height: 1049 },
+  partner: { src: assets.features.partner, width: 1600, height: 1049 }
 };
 
 export default function ProductHighlights({ t }: { t: ProductHighlightsT }) {
@@ -59,7 +60,7 @@ function FeatureCard({
 }: {
   title: string;
   desc: string;
-  image: string;
+  image: FeatureImage;
   tall?: boolean;
 }) {
   return (
@@ -68,15 +69,21 @@ function FeatureCard({
       transition={{ duration: 0.3, ease: 'easeOut' }}
       className="rounded-[12px] md:rounded-[16px] bg-white overflow-hidden h-full flex flex-col p-[8px] md:p-[8px] gap-[12px] md:gap-[16px]"
     >
-      <div className="overflow-hidden bg-white rounded-[6px] md:rounded-[8px]">
+      <div
+        className="overflow-hidden bg-white rounded-[6px] md:rounded-[8px]"
+        style={{ aspectRatio: `${image.width} / ${image.height}` }}
+      >
         <m.img
           whileHover={{ scale: 1.03 }}
           transition={{ duration: 0.5, ease: 'easeOut' }}
-          src={image}
+          src={image.src}
           alt={title}
+          width={image.width}
+          height={image.height}
           loading="lazy"
           decoding="async"
           fetchPriority="low"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
           className="w-full h-full object-contain"
         />
       </div>

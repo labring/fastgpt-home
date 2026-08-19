@@ -200,9 +200,12 @@ function verifySitemap(sources, entries) {
   requireSource(
     sources,
     'sitemap',
-    'addEntry(getGuideCanonicalUrl(guideLocale), now)',
-    'hub: missing seenUrls entry'
+    'addEntry(getGuideCanonicalUrl(guideLocale), guideLastModified)',
+    'hub: missing content-derived date'
   );
+  if (/const now\s*=\s*new Date\(\)/.test(sources.sitemap)) {
+    fail('sitemap', 'lastmod: build clock must not mark every URL as changed');
+  }
   requireSource(
     sources,
     'sitemap',

@@ -73,7 +73,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
         },
         {
           label: t.links.items.cases,
-          href: 'https://solutions.fastgpt.cn/',
+          href: 'https://fastgpt.cn/customers',
           external: true
         },
         {

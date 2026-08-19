@@ -22,7 +22,8 @@ const docUrl = isCn ? 'https://doc.fastgpt.cn' : 'https://doc.fastgpt.io';
 const cloudUrl = isCn ? 'https://cloud.fastgpt.cn' : 'https://cloud.fastgpt.io';
 const primaryLlmUrl = isCn ? `${cnUrl}/llms.txt` : `${ioUrl}/llms.txt`;
 
-const sitemap = variant === 'preview' ? '' : `\nSitemap: ${baseUrl}/sitemap.xml`;
+const customerSitemap = isCn ? `\nSitemap: ${cnUrl}/customers/sitemap.xml` : '';
+const sitemap = variant === 'preview' ? '' : `\nSitemap: ${baseUrl}/sitemap.xml${customerSitemap}`;
 const content = `# robots.txt for FastGPT - ${baseUrl}
 #
 # This site publishes canonical localized pages for its target audience.

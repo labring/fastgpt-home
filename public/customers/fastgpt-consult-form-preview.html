@@ -1,0 +1,974 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>FastGPT 商务咨询</title>
+<style>
+  :root {
+    --bg: #f4f5f7;
+    --surface: #ffffff;
+    --ink: #0b0e14;
+    --ink-2: #343b48;
+    --muted: #6b7280;
+    --subtle: #9aa1ad;
+    --line: #e8eaef;
+    --line-strong: #d3d7df;
+    --accent: #2563eb;
+    --accent-strong: #1d4ed8;
+    --accent-2: #3b82f6;
+    --accent-soft: #eff6ff;
+    --accent-ring: rgba(37, 99, 235, 0.14);
+    --danger: #dc2626;
+    --danger-soft: #fef2f2;
+    --success: #059669;
+    --radius: 16px;
+    --radius-sm: 10px;
+    --shadow-card:
+      0 1px 2px rgba(16, 24, 40, 0.03),
+      0 4px 8px -4px rgba(16, 24, 40, 0.05),
+      0 24px 48px -24px rgba(16, 24, 40, 0.18);
+    --font:
+      -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI",
+      "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei",
+      "Helvetica Neue", Arial, sans-serif;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+
+  body {
+    min-height: 100vh;
+    font-family: var(--font);
+    color: var(--ink);
+    background: var(--bg);
+    background-image:
+      radial-gradient(46rem 32rem at 8% -8%, rgba(37, 99, 235, 0.08), transparent 62%),
+      radial-gradient(40rem 30rem at 100% 0%, rgba(59, 130, 246, 0.06), transparent 58%),
+      radial-gradient(44rem 36rem at 50% 118%, rgba(96, 165, 250, 0.05), transparent 65%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    justify-content: center;
+    padding: 56px 18px 72px;
+  }
+
+  .form-component {
+    width: 100%;
+    max-width: 620px;
+    animation: enter 0.5s cubic-bezier(0.22, 0.9, 0.3, 1) both;
+  }
+
+  .card {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    background-clip: padding-box, border-box;
+    background-origin: padding-box, border-box;
+    background-image:
+      linear-gradient(#ffffff, #ffffff),
+      linear-gradient(135deg, rgba(59, 130, 246, 0.30), rgba(37, 99, 235, 0.16));
+    box-shadow: var(--shadow-card);
+    overflow: hidden;
+  }
+
+  .form-body {
+    padding: 26px 28px 24px;
+  }
+
+  .form-header {
+    margin-bottom: 22px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .form-header h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.25;
+    text-align: center;
+  }
+
+  .form-header p {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.72;
+    color: var(--muted);
+    max-width: 560px;
+  }
+
+  .form-header a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .form-header a:hover {
+    text-decoration: underline;
+  }
+
+  .form-desc {
+    margin: 8px 0 0;
+    font-size: 13px;
+    line-height: 1.72;
+    color: var(--muted);
+    max-width: 560px;
+  }
+
+  .form-desc .more {
+    display: none;
+  }
+
+  .form-desc.expanded .more {
+    display: inline;
+  }
+
+  .expand-btn {
+    display: inline;
+    margin-left: 4px;
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  .expand-btn:hover {
+    text-decoration: underline;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  form.is-submitting {
+    pointer-events: none;
+    opacity: 0.82;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 18px;
+  }
+
+  .field {
+    min-width: 0;
+  }
+
+  .label {
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+    margin: 0 0 6px;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    color: var(--ink-2);
+  }
+
+  .label .req {
+    color: #ef4444;
+    font-weight: 700;
+  }
+
+  .label .opt {
+    margin-left: 2px;
+    font-size: 11.5px;
+    font-weight: 400;
+    color: var(--subtle);
+  }
+
+  .label .tag {
+    display: inline-flex;
+    align-items: center;
+    height: 18px;
+    margin-left: 2px;
+    padding: 0 7px;
+    font-size: 10.5px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.02em;
+    color: var(--accent);
+    background: var(--accent-soft);
+    border: 1px solid rgba(37, 99, 235, 0.18);
+    border-radius: 999px;
+  }
+
+  .field-desc {
+    margin: 0 0 9px;
+    font-size: 12px;
+    line-height: 1.6;
+    color: var(--muted);
+  }
+
+  input[type="text"],
+  input[type="tel"],
+  textarea {
+    width: 100%;
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--ink);
+    background: #ffffff;
+    border: 1px solid var(--line-strong);
+    border-radius: var(--radius-sm);
+    padding: 11px 13px;
+    outline: none;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 88px;
+    line-height: 1.62;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: #b2b8c2;
+  }
+
+  input[type="text"]:hover,
+  input[type="tel"]:hover,
+  textarea:hover {
+    border-color: #c4c9d4;
+  }
+
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  textarea:focus {
+    background: #ffffff;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 4px var(--accent-ring);
+  }
+
+  .field.is-invalid input,
+  .field.is-invalid textarea {
+    border-color: var(--danger);
+    background: var(--danger-soft);
+  }
+
+  .field.is-invalid input:focus,
+  .field.is-invalid textarea:focus {
+    box-shadow: 0 0 0 4px rgba(220, 38, 38, 0.1);
+  }
+
+  .error-text {
+    display: none;
+    margin: 6px 0 0;
+    font-size: 12px;
+    color: var(--danger);
+  }
+
+  .field.is-invalid .error-text {
+    display: block;
+  }
+
+  /* 选项卡式单选：整卡可点，左侧圆形单选框 */
+  .options {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .options--inline {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .options label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    padding: 12px 14px;
+    border: 1px solid var(--line-strong);
+    border-radius: 10px;
+    background: #ffffff;
+    cursor: pointer;
+    transition: border-color 0.16s ease, background 0.16s ease, box-shadow 0.16s ease;
+  }
+
+  .options label:hover {
+    border-color: #c2c8d4;
+  }
+
+  .options label::before {
+    content: "";
+    flex: none;
+    width: 12px;
+    height: 12px;
+    border: 1.5px solid #cbd5e1;
+    border-radius: 50%;
+    background: transparent;
+    transform: scale(1);
+    transition: border-color 0.16s ease, background-color 0.16s ease, transform 0.22s cubic-bezier(0.22, 0.9, 0.3, 1.3);
+  }
+
+  .options label:has(input:checked) {
+    border-color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .options label:has(input:checked)::before {
+    transform: scale(1.15);
+    animation: indicator-breathe 0.3s ease-out;
+  }
+
+  /* 单选：圆形 + 中心蓝点 */
+  .options label:has(input[type="radio"]:checked)::before {
+    border-color: var(--accent);
+    background: radial-gradient(circle at center, var(--accent) 0 40%, transparent 44%);
+  }
+
+  /* 多选：方形 + 白色对勾 */
+  .options label:has(input[type="checkbox"])::before {
+    border-radius: 3px;
+  }
+
+  .options label:has(input[type="checkbox"]:checked)::before {
+    border-color: var(--accent);
+    background: var(--accent) url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='white'%20stroke-width='3.5'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M20%206%209%2017l-5-5'/%3E%3C/svg%3E") center/8px 8px no-repeat;
+  }
+
+  .options label:has(input:focus-visible) {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .options input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+  }
+
+  .options span {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--ink);
+  }
+
+  .assist {
+    margin: 8px 0 0;
+    font-size: 12px;
+    color: var(--subtle);
+    line-height: 1.5;
+  }
+
+  .divider {
+    height: 1px;
+    background: var(--line);
+    margin: 2px 0;
+  }
+
+  .submit-btn {
+    position: relative;
+    width: min(100%, 280px);
+    align-self: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 48px;
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: 650;
+    letter-spacing: 0.01em;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+    border: none;
+    border-radius: 11px;
+    cursor: pointer;
+    box-shadow: 0 10px 22px -10px rgba(37, 99, 235, 0.65), inset 0 1px 0 rgba(255, 255, 255, 0.16);
+    overflow: hidden;
+    transition: transform 0.16s ease, box-shadow 0.16s ease, filter 0.16s ease;
+  }
+
+  .submit-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 30%, rgba(255, 255, 255, 0.22) 50%, transparent 70%);
+    transform: translateX(-120%);
+    transition: transform 0.6s ease;
+  }
+
+  .submit-btn:hover {
+    filter: brightness(1.04);
+    transform: translateY(-1px);
+  }
+
+  .submit-btn:hover::after {
+    transform: translateX(120%);
+  }
+
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+
+  .submit-btn:focus-visible {
+    outline: 3px solid var(--accent-ring);
+    outline-offset: 2px;
+  }
+
+  .submit-btn .arrow {
+    transition: transform 0.18s ease;
+  }
+
+  .submit-btn:hover .arrow {
+    transform: translateX(3px);
+  }
+
+  .privacy {
+    margin: 11px 2px 0;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--subtle);
+    text-align: center;
+  }
+
+  .submit-btn:disabled {
+    opacity: 0.72;
+    cursor: not-allowed;
+    transform: none;
+  }
+
+  .spinner {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: spin 0.6s linear infinite;
+    vertical-align: -2px;
+  }
+
+  @keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+
+  @keyframes indicator-breathe {
+    0% { transform: scale(0.6); }
+    70% { transform: scale(1.28); }
+    100% { transform: scale(1.15); }
+  }
+
+  .submit-error {
+    display: none;
+    margin: 10px 2px 0;
+    font-size: 12px;
+    line-height: 1.55;
+    color: var(--danger);
+    text-align: center;
+  }
+
+  .submit-error.show {
+    display: block;
+  }
+
+  .hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+  }
+
+  .success {
+    display: none;
+    padding: 52px 24px 44px;
+    text-align: center;
+    animation: enter 0.4s ease both;
+  }
+
+  .success.show {
+    display: block;
+  }
+
+  .success .check {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 12px 26px -10px rgba(5, 150, 105, 0.65);
+    animation: pop 0.5s cubic-bezier(0.2, 0.9, 0.3, 1.35) both;
+  }
+
+  .success h2 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+  }
+
+  .success p {
+    margin: 11px auto 0;
+    font-size: 13.5px;
+    line-height: 1.7;
+    color: var(--muted);
+    max-width: 400px;
+  }
+
+  .reset-link {
+    margin-top: 22px;
+    background: none;
+    border: none;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    cursor: pointer;
+  }
+
+  @keyframes enter {
+    from { opacity: 0; transform: translateY(14px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes pop {
+    0% { opacity: 0; transform: scale(0.5); }
+    100% { opacity: 1; transform: scale(1); }
+  }
+
+  @media (max-width: 520px) {
+    body { padding: 28px 14px 48px; }
+    .form-body { padding: 22px 18px 20px; }
+    .grid { grid-template-columns: 1fr; }
+    .segmented { max-width: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="form-component">
+    <div class="card">
+      <div class="form-body">
+        <header class="form-header">
+          <h1>FastGPT 商务咨询</h1>
+          <p class="form-desc expanded" id="form-desc">
+            <span class="summary">私有化部署、SaaS 版或渠道合作，提交后 1 个工作日内商务顾问联系您，最快 3 天交付 POC 验证。</span>
+            <span class="more">如果您的团队 / 企业有兴趣在企业私有化环境中完全拥有 FastGPT（<a href="https://fastgpt.cn" target="_blank" rel="noopener">fastgpt.cn</a>）的能力，请填写如下表单联系我们。FastGPT 历经了3年实战打磨，经过超过80万开发者验证，具备智能对话交互、高效知识库构建、多模态内容处理、私有化部署适配、权限精细管控等核心能力，同时集成了丰富的行业解决方案与扩展插件，满足企业各部门的智能应用诉求。卓越的响应速度与资源适配性，可帮助企业降低技术研发成本、跨部门协作成本与数据合规风险，同时 FastGPT 支持国产化软硬件适配，支持纯离线交付与定制化开发，是企业智能化转型的优选方案。</span>
+            <button type="button" class="expand-btn" id="expand-desc" aria-expanded="true">收起</button>
+          </p>
+        </header>
+
+        <form id="consult-form" novalidate>
+          <div class="grid">
+            <div class="field">
+              <label class="label" for="f-company"><span class="req" aria-hidden="true">*</span>公司名称</label>
+              <p class="field-desc">填写公司、团队或组织名称；个人探索可填写“个人开发者”。</p>
+              <input type="text" id="f-company" name="公司名称" placeholder="公司 / 团队 / 组织名称" autocomplete="organization" aria-required="true" autofocus />
+              <div class="error-text">请填写公司名称</div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="f-name"><span class="req" aria-hidden="true">*</span>姓名</label>
+              <p class="field-desc">填写方便我们称呼您的姓名或称呼。</p>
+              <input type="text" id="f-name" name="姓名" placeholder="怎么称呼您" autocomplete="name" aria-required="true" />
+              <div class="error-text">请填写姓名</div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="f-phone"><span class="req" aria-hidden="true">*</span>手机号</label>
+              <p class="field-desc">留下最方便的联系方式即可</p>
+              <input type="tel" id="f-phone" name="手机号" placeholder="1 开头的 11 位手机号" inputmode="numeric" autocomplete="tel" maxlength="11" aria-required="true" />
+              <div class="error-text">请填写 1 开头的 11 位手机号</div>
+            </div>
+
+            <div class="field">
+              <label class="label" for="f-title"><span class="req" aria-hidden="true">*</span>职位</label>
+              <p class="field-desc">便于我们使用更合适的沟通方式</p>
+              <input type="text" id="f-title" name="职位" placeholder="如：CTO / 产品负责人" autocomplete="organization-title" aria-required="true" />
+              <div class="error-text">请填写职位</div>
+            </div>
+
+            <div class="field field--full" id="field-intent">
+              <label class="label"><span class="req" aria-hidden="true">*</span>想咨询的内容<span class="tag">多选</span></label>
+              <p class="field-desc">可多选，帮助我们安排对应人员；不确定时选择「其他」并在补充说明中描述。</p>
+              <div class="options" role="group" aria-label="想咨询的内容" aria-required="true">
+                <label><input type="checkbox" name="想咨询的内容" value="私有化部署" /><span>私有化部署</span></label>
+                <label><input type="checkbox" name="想咨询的内容" value="SaaS 版" /><span>SaaS 版</span></label>
+                <label><input type="checkbox" name="想咨询的内容" value="渠道合作" /><span>渠道合作</span></label>
+                <label><input type="checkbox" name="想咨询的内容" value="其他" /><span>其他</span></label>
+              </div>
+              <div class="error-text">请至少选择一项</div>
+            </div>
+
+            <div class="field field--full" id="field-stage">
+              <label class="label"><span class="req" aria-hidden="true">*</span>项目进度</label>
+              <p class="field-desc">用于判断跟进优先级，不影响咨询提交。</p>
+              <div class="options" role="group" aria-label="项目进度" aria-required="true">
+                <label><input type="radio" name="项目进度" value="调研阶段/竞品对比" /><span>调研阶段 · 竞品对比</span></label>
+                <label><input type="radio" name="项目进度" value="立项阶段/测试使用" /><span>立项阶段 · 测试使用</span></label>
+                <label><input type="radio" name="项目进度" value="采购阶段/最终决策" /><span>采购阶段 · 最终决策</span></label>
+              </div>
+              <div class="error-text">请选择当前项目阶段</div>
+            </div>
+
+            <div class="field field--full" id="field-oss">
+              <label class="label"><span class="req" aria-hidden="true">*</span>是否使用过开源版</label>
+              <div class="options options--inline" role="group" aria-label="是否使用过开源版" aria-required="true">
+                <label><input type="radio" name="是否使用过开源版" value="是" /><span>是</span></label>
+                <label><input type="radio" name="是否使用过开源版" value="否" /><span>否</span></label>
+              </div>
+              <div class="error-text">请选择</div>
+            </div>
+
+            <div class="field field--full" id="field-budget">
+              <label class="label"><span class="req" aria-hidden="true">*</span>项目预算</label>
+              <p class="field-desc">预期在 FastGPT 投入的预算金额</p>
+              <div class="options" role="group" aria-label="项目预算" aria-required="true">
+                <label><input type="radio" name="项目预算" value="0-3 万元" /><span>0-3 万</span></label>
+                <label><input type="radio" name="项目预算" value="3-10 万元" /><span>3-10 万</span></label>
+                <label><input type="radio" name="项目预算" value="10-30 万元" /><span>10-30 万</span></label>
+                <label><input type="radio" name="项目预算" value="30-100 万元" /><span>30-100 万</span></label>
+                <label><input type="radio" name="项目预算" value="100 万元以上" /><span>100 万以上</span></label>
+              </div>
+              <div class="error-text">请选择项目预算</div>
+            </div>
+
+            <div class="field field--full">
+              <label class="label" for="f-note">补充说明<span class="opt">（选填）</span></label>
+              <p class="field-desc">可描述当前痛点、目标场景、部署偏好或希望解决的问题；没有额外信息可直接提交。</p>
+              <textarea id="f-note" name="补充说明" placeholder="可描述当前痛点、目标场景、部署偏好或希望解决的问题。"></textarea>
+            </div>
+          </div>
+
+          <input type="hidden" name="客户来源" id="f-source" />
+
+          <!-- 反垃圾蜜罐：真人不可见，机器人会自动填写 -->
+          <div class="hp-field" aria-hidden="true">
+            <label for="f-website">请勿填写此字段</label>
+            <input type="text" id="f-website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="divider"></div>
+
+          <button type="submit" class="submit-btn">
+            提交咨询
+            <span class="arrow" aria-hidden="true">→</span>
+          </button>
+          <p class="submit-error" id="submit-error" role="alert"></p>
+        </form>
+
+        <div class="success" id="success" role="status">
+          <div class="check" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          </div>
+          <h2>提交成功</h2>
+          <p>商务顾问将在 1 个工作日内与您联系。</p>
+          <button type="button" class="reset-link" id="reset-btn">再填写一份</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var form = document.getElementById("consult-form");
+      var success = document.getElementById("success");
+      var resetBtn = document.getElementById("reset-btn");
+      var sourceField = document.getElementById("f-source");
+      var params = new URLSearchParams(window.location.search);
+      sourceField.value = params.get("source") || "官网-cn";
+
+      function fieldValue(name, multi) {
+        if (multi) {
+          return Array.prototype.slice
+            .call(document.querySelectorAll('input[name="' + name + '"]:checked'))
+            .map(function (i) { return i.value; });
+        }
+        var checked = document.querySelector('input[name="' + name + '"]:checked');
+        return checked ? checked.value : "";
+      }
+
+      function setInvalid(box, invalid) {
+        box.classList.toggle("is-invalid", invalid);
+        var control = box.querySelector("input, textarea");
+        if (control) control.setAttribute("aria-invalid", invalid ? "true" : "false");
+      }
+
+      // 手机号实时校验：输入时即时反馈，失焦时兜底校验
+      (function () {
+        var phoneEl = document.getElementById("f-phone");
+        var phoneBox = phoneEl.closest(".field");
+        function phoneHasError(value, isLive) {
+          if (!value) return false;
+          if (/^1\d{10}$/.test(value)) return false;
+          if (isLive) {
+            return /\D/.test(value) || value.length >= 11;
+          }
+          return true;
+        }
+        phoneEl.addEventListener("input", function () {
+          setInvalid(phoneBox, phoneHasError(phoneEl.value.trim(), true));
+        });
+        phoneEl.addEventListener("blur", function () {
+          setInvalid(phoneBox, phoneHasError(phoneEl.value.trim(), false));
+        });
+      })();
+
+      document.querySelectorAll('input[type="radio"][data-optional]').forEach(function (radio) {
+        var group = radio.closest('[role="group"]');
+        var radios = Array.prototype.slice.call(group.querySelectorAll('input[type="radio"]'));
+        radio.addEventListener("click", function () {
+          var wasChecked = radio.dataset.checked === "true";
+          radios.forEach(function (r) { r.dataset.checked = "false"; });
+          if (wasChecked) {
+            radio.checked = false;
+          } else {
+            radio.checked = true;
+            radio.dataset.checked = "true";
+          }
+        });
+      });
+
+      function validate() {
+        var valid = true;
+        var firstInvalid = null;
+
+        var requiredText = [
+          ["姓名", "f-name"],
+          ["手机号", "f-phone"],
+          ["公司名称", "f-company"],
+          ["职位", "f-title"]
+        ];
+
+        requiredText.forEach(function (pair) {
+          var el = document.getElementById(pair[1]);
+          var box = el.closest(".field");
+          var ok = el.value.trim().length > 0;
+          setInvalid(box, !ok);
+          if (!ok) {
+            valid = false;
+            if (!firstInvalid) firstInvalid = el;
+          }
+        });
+
+        var phone = document.getElementById("f-phone");
+        var phoneBox = phone.closest(".field");
+        if (phone.value.trim() && !/^1\d{10}$/.test(phone.value.trim())) {
+          setInvalid(phoneBox, true);
+          valid = false;
+          if (!firstInvalid) firstInvalid = phone;
+        }
+
+        var groups = [
+          { box: document.getElementById("field-intent"), ok: fieldValue("想咨询的内容", true).length > 0 },
+          { box: document.getElementById("field-stage"), ok: !!fieldValue("项目进度", false) },
+          { box: document.getElementById("field-oss"), ok: !!fieldValue("是否使用过开源版", false) },
+          { box: document.getElementById("field-budget"), ok: !!fieldValue("项目预算", false) }
+        ];
+
+        groups.forEach(function (g) {
+          setInvalid(g.box, !g.ok);
+          if (!g.ok) {
+            valid = false;
+            if (!firstInvalid) firstInvalid = g.box;
+          }
+        });
+
+        return { valid: valid, firstInvalid: firstInvalid };
+      }
+
+      function buildPayload() {
+        return {
+          "公司名称": document.getElementById("f-company").value.trim(),
+          "姓名": document.getElementById("f-name").value.trim(),
+          "手机号": document.getElementById("f-phone").value.trim(),
+          "职位": document.getElementById("f-title").value.trim(),
+          "是否使用过开源版": fieldValue("是否使用过开源版", false),
+          "想咨询的内容": fieldValue("想咨询的内容", true),
+          "项目进度": fieldValue("项目进度", false),
+          "项目预算": fieldValue("项目预算", false),
+          "补充说明": document.getElementById("f-note").value.trim(),
+          "客户来源": sourceField.value,
+          "website": document.getElementById("f-website").value
+        };
+      }
+
+      // 草稿自动保存：输入/选择时防抖写入 localStorage，刷新后可恢复
+      var DRAFT_KEY = "fastgpt_consult_draft";
+      var draftTimer;
+
+      function collectDraft() {
+        return {
+          "公司名称": document.getElementById("f-company").value,
+          "姓名": document.getElementById("f-name").value,
+          "手机号": document.getElementById("f-phone").value,
+          "职位": document.getElementById("f-title").value,
+          "补充说明": document.getElementById("f-note").value,
+          "想咨询的内容": fieldValue("想咨询的内容", true),
+          "项目进度": fieldValue("项目进度", false),
+          "是否使用过开源版": fieldValue("是否使用过开源版", false),
+          "项目预算": fieldValue("项目预算", false)
+        };
+      }
+
+      function saveDraft() {
+        try {
+          localStorage.setItem(DRAFT_KEY, JSON.stringify(collectDraft()));
+        } catch (e) {}
+      }
+
+      function clearDraft() {
+        try {
+          localStorage.removeItem(DRAFT_KEY);
+        } catch (e) {}
+      }
+
+      function scheduleDraftSave() {
+        clearTimeout(draftTimer);
+        draftTimer = setTimeout(saveDraft, 400);
+      }
+
+      function setIfPresent(id, value) {
+        if (typeof value === "string") {
+          document.getElementById(id).value = value;
+        }
+      }
+
+      function setCheckedGroup(name, value, multi) {
+        if (value == null) return;
+        var values = multi ? value : [value];
+        document.querySelectorAll('input[name="' + name + '"]').forEach(function (input) {
+          input.checked = values.indexOf(input.value) !== -1;
+        });
+      }
+
+      function restoreDraft() {
+        var saved;
+        try {
+          saved = localStorage.getItem(DRAFT_KEY);
+        } catch (e) {}
+        if (!saved) return;
+        var draft;
+        try {
+          draft = JSON.parse(saved);
+        } catch (e) {
+          return;
+        }
+        setIfPresent("f-company", draft["公司名称"]);
+        setIfPresent("f-name", draft["姓名"]);
+        setIfPresent("f-phone", draft["手机号"]);
+        setIfPresent("f-title", draft["职位"]);
+        setIfPresent("f-note", draft["补充说明"]);
+        setCheckedGroup("想咨询的内容", draft["想咨询的内容"], true);
+        setCheckedGroup("项目进度", draft["项目进度"], false);
+        setCheckedGroup("是否使用过开源版", draft["是否使用过开源版"], false);
+        setCheckedGroup("项目预算", draft["项目预算"], false);
+      }
+
+      form.addEventListener("input", scheduleDraftSave);
+      form.addEventListener("change", scheduleDraftSave);
+      restoreDraft();
+
+      // 顶部说明：末尾内联展开/收起
+      var descP = document.getElementById("form-desc");
+      var expandBtn = document.getElementById("expand-desc");
+      expandBtn.addEventListener("click", function () {
+        var expanded = descP.classList.toggle("expanded");
+        expandBtn.textContent = expanded ? "收起" : "展开";
+        expandBtn.setAttribute("aria-expanded", expanded ? "true" : "false");
+      });
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var result = validate();
+        if (!result.valid) {
+          result.firstInvalid.scrollIntoView({ behavior: "smooth", block: "center" });
+          result.firstInvalid.focus({ preventScroll: true });
+          return;
+        }
+
+        var payload = buildPayload();
+        var btn = form.querySelector(".submit-btn");
+        var submitError = document.getElementById("submit-error");
+        var originalHtml = btn.innerHTML;
+        submitError.classList.remove("show");
+        submitError.textContent = "";
+        btn.disabled = true;
+        form.classList.add("is-submitting");
+        btn.innerHTML = '<span class="spinner"></span> 提交中...';
+
+        var controller = new AbortController();
+        var timeoutId = setTimeout(function () {
+          controller.abort();
+        }, 10000);
+
+        fetch("/api/cta/submit", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+          signal: controller.signal
+        })
+          .then(function (res) {
+            return res.json().catch(function () {
+              return {};
+            }).then(function (data) {
+              if (!res.ok || !data.success) {
+                throw new Error(data.error || "提交失败，请稍后重试");
+              }
+              return data;
+            });
+          })
+          .then(function (data) {
+            clearDraft();
+            form.style.display = "none";
+            success.classList.add("show");
+            success.scrollIntoView({ behavior: "smooth", block: "center" });
+          })
+          .catch(function (err) {
+            var message;
+            if (err && err.name === "AbortError") {
+              message = "提交超时，请稍后重试";
+            } else {
+              message = (err && err.message) ? err.message : "提交失败，请稍后重试";
+            }
+            submitError.textContent = message;
+            submitError.classList.add("show");
+          })
+          .finally(function () {
+            clearTimeout(timeoutId);
+            btn.disabled = false;
+            form.classList.remove("is-submitting");
+            btn.innerHTML = originalHtml;
+          });
+      });
+
+      resetBtn.addEventListener("click", function () {
+        form.reset();
+        clearDraft();
+        success.classList.remove("show");
+        form.style.display = "";
+        document.querySelectorAll(".field.is-invalid").forEach(function (el) {
+          el.classList.remove("is-invalid");
+          var c = el.querySelector("input, textarea");
+          if (c) c.removeAttribute("aria-invalid");
+        });
+        sourceField.value = params.get("source") || "官网-cn";
+        document.querySelectorAll('input[type="radio"][data-optional]').forEach(function (r) {
+          r.dataset.checked = "false";
+        });
+        form.querySelector("input").focus();
+      });
+    })();
+  </script>
+</body>
+</html>

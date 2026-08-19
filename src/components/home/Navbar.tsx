@@ -35,7 +35,7 @@ function getNavLinkRybbitAttrs(link: NavLink) {
     return rybbitClickAttrs(RYBBIT_EVENTS.learningCenterClick, 'home_nav_learning_center');
   }
 
-  if (link.href.includes('solutions.fastgpt.cn')) {
+  if (link.href.includes('fastgpt.cn/customers')) {
     return rybbitClickAttrs(RYBBIT_EVENTS.caseCenterClick, 'home_nav_case_center');
   }
 

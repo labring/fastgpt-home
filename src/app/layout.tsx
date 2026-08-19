@@ -7,6 +7,7 @@ import { defaultLocale } from '@/lib/i18n';
 import { htmlLangScript } from '@/lib/htmlLang';
 import { contactLinkAttributionScript } from '@/lib/contactLinkAttribution';
 import { localeDirections, localeHtmlLangs } from '@/lib/locales';
+import '@/customers/styles.css';
 import '@/styles/globals.css';
 import { Viewport } from 'next';
 import { Inter as FontSans } from 'next/font/google';

@@ -11,7 +11,10 @@ export default function robots(): MetadataRoute.Robots {
 
   return {
     rules: [{ userAgent: '*', allow: '/' }],
-    sitemap: `${currentSiteBaseUrl}/sitemap.xml`,
+    sitemap:
+      currentSiteBaseUrl === 'https://fastgpt.cn'
+        ? [`${currentSiteBaseUrl}/sitemap.xml`, `${currentSiteBaseUrl}/customers/sitemap.xml`]
+        : `${currentSiteBaseUrl}/sitemap.xml`,
     host: currentSiteBaseUrl
   };
 }

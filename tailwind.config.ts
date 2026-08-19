@@ -21,6 +21,26 @@ const config = {
     },
     extend: {
       colors: {
+        brand: {
+          50: '#f0f9ff',
+          100: '#e0f2fe',
+          200: '#bae6fd',
+          300: '#7dd3fc',
+          400: '#38bdf8',
+          500: '#0ea5e9',
+          600: '#0052d9',
+          700: '#0047b8',
+          800: '#075985',
+          900: '#091e42'
+        },
+        surface: {
+          50: '#ffffff',
+          100: '#f5f6f7',
+          200: '#eff0f1',
+          300: '#dee0e3',
+          600: '#646a73',
+          900: '#1f2329'
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -73,6 +93,9 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      fontFamily: {
+        display: ['var(--font-display)', 'Inter', 'sans-serif']
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -119,7 +142,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), heroui()],
+  plugins: [require("tailwindcss-animate"), require('@tailwindcss/typography'), heroui()],
 } satisfies Config
 
 export default config

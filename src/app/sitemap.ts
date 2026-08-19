@@ -66,6 +66,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   const compareLocale = currentSiteVariant === 'cn' ? 'zh' : 'en';
+  if (currentSiteVariant === 'cn') {
+    addEntry('https://fastgpt.cn/customers', now);
+  }
   addEntry(getCompareHubCanonicalUrl(compareLocale), now);
   for (const page of getComparisonPagesForLocale(compareLocale)) {
     if (page.status !== 'published') continue;

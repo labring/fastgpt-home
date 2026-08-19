@@ -22,7 +22,7 @@ export default function FadeIn({
   children,
   direction = 'up',
   delay = 0,
-  duration = 0.6,
+  duration = 0.7,
   distance = 30,
   once = true,
   className,

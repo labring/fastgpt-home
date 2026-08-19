@@ -102,7 +102,7 @@ export default function BrandWall({ t }: { t: BrandWallT }) {
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: '0px 0px 48px 0px' }}
-          transition={{ duration: 0.6, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
+          transition={{ duration: 0.8, delay: 0.15, ease: [0.21, 0.47, 0.32, 0.98] }}
           className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto py-6 md:py-10 lg:py-20"
         >
           <div className="grid grid-cols-4 sm:grid-cols-5 md:grid-cols-7 lg:grid-cols-8 gap-3 md:gap-3 lg:gap-3">

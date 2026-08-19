@@ -95,7 +95,34 @@ jobs:
         run: |
           test -n "$KUBE_CONFIG" || { echo 'KUBE_CONFIG is required'; exit 1; }
           kubeconfig="$RUNNER_TEMP/kubeconfig"
-          printf '%s' "$KUBE_CONFIG" > "$kubeconfig"
+          KUBE_RAW="$KUBE_CONFIG" KUBE_OUTPUT="$kubeconfig" node - <<'NODE'
+          const fs = require('node:fs');
+
+          const raw = String(process.env.KUBE_RAW || '');
+          if (!raw.trim()) throw new Error('KUBE_CONFIG is empty');
+
+          let value = raw.trim();
+          try {
+            const parsed = JSON.parse(value);
+            value = typeof parsed === 'string' ? parsed : JSON.stringify(parsed);
+          } catch {}
+
+          if (!value.includes('\n') && /\\n/.test(value)) {
+            value = value.replace(/\\r?\\n/g, '\n').replace(/\\"/g, '"');
+          }
+
+          const looksLikeConfig = (text) => /["']?apiVersion["']?\s*:/i.test(text);
+          if (!looksLikeConfig(value)) {
+            const compact = value.replace(/\s+/g, '');
+            if (/^[A-Za-z0-9+/]+={0,2}$/.test(compact) && compact.length > 32) {
+              const decoded = Buffer.from(compact, 'base64').toString('utf8');
+              if (looksLikeConfig(decoded)) value = decoded;
+            }
+          }
+
+          if (!looksLikeConfig(value)) throw new Error('KUBE_CONFIG format unsupported');
+          fs.writeFileSync(process.env.KUBE_OUTPUT, value.endsWith('\n') ? value : `${value}\n`, { mode: 0o600 });
+          NODE
           KUBECONFIG="$kubeconfig" kubectl config view --minify >/dev/null
           KUBECONFIG="$kubeconfig" kubectl set image deployment/fastgpt-home fastgpt-home="$IMAGE"
           KUBECONFIG="$kubeconfig" kubectl rollout status deployment/fastgpt-home --timeout=5m

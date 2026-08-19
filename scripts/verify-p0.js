@@ -153,9 +153,21 @@ function verifyNginxHeaders() {
     'Docker build does not enforce its CN-only publication boundary'
   );
   assert(dockerfile.includes('RUN nginx -t'), 'Docker image does not validate the Nginx config');
+  const releaseStageStart = dockerfile.indexOf('AS release-runtime');
+  const runtimeStageStart = dockerfile.indexOf('AS runtime');
+  const releaseStage = dockerfile.slice(releaseStageStart, runtimeStageStart);
+  const redirectMapCopy = releaseStage.indexOf(
+    'COPY release-out/__release/nginx-redirects.conf /etc/nginx/generated-redirects.conf'
+  );
+  const redirectMapGuard = releaseStage.indexOf('test -s /etc/nginx/generated-redirects.conf');
+  const nginxTest = releaseStage.indexOf('nginx -t');
   assert(
-    dockerfile.includes('map $uri $locale_redirect_target'),
-    'Release runtime must define the Nginx redirect map before config validation'
+    releaseStageStart >= 0 && runtimeStageStart > releaseStageStart,
+    'Dockerfile must keep release-runtime before the default runtime stage'
+  );
+  assert(
+    redirectMapCopy >= 0 && redirectMapGuard > redirectMapCopy && nginxTest > redirectMapGuard,
+    'Release runtime must copy and validate the generated Nginx redirect map'
   );
 
   const redirectMap = fs.readFileSync(path.join(rootDir, '.next', 'nginx-redirects.conf'), 'utf8');

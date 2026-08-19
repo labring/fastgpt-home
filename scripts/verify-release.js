@@ -242,7 +242,14 @@ function retainSuccessArtifacts(variant, retainDir) {
   const retainedPath = path.join(retainDir, variant);
   fs.rmSync(retainedPath, { recursive: true, force: true });
   fs.mkdirSync(retainedPath, { recursive: true });
-  fs.cpSync(OUT_DIR, path.join(retainedPath, 'out'), { recursive: true });
+  const retainedOut = path.join(retainedPath, 'out');
+  const redirectMap = path.join(NEXT_DIR, 'nginx-redirects.conf');
+  if (!fs.existsSync(redirectMap)) {
+    throw new Error(`Missing generated redirect map: ${redirectMap}`);
+  }
+  fs.cpSync(OUT_DIR, retainedOut, { recursive: true });
+  fs.mkdirSync(path.join(retainedOut, '__release'), { recursive: true });
+  fs.copyFileSync(redirectMap, path.join(retainedOut, '__release', 'nginx-redirects.conf'));
   return retainedPath;
 }
 

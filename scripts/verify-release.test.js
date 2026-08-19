@@ -259,6 +259,11 @@ test('successful verified outputs can be retained before lifecycle cleanup', () 
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
   assert.match(source, /--retain-success-artifacts/);
   assert.match(source, /retainSuccessArtifacts\(variant, options\.retainSuccessArtifacts\)/);
+  assert.match(source, /const redirectMap = path\.join\(NEXT_DIR, 'nginx-redirects\.conf'\)/);
+  assert.match(
+    source,
+    /copyFileSync\(redirectMap, path\.join\(retainedOut, '__release', 'nginx-redirects\.conf'\)\)/
+  );
   const variantLoop = source.slice(source.indexOf('for (const variant of variants)'));
   assert(
     variantLoop.indexOf('retainSuccessArtifacts') <
@@ -367,9 +372,20 @@ test('production delivery consumes retained archives and records immutable provi
     ).length,
     2
   );
+  const releaseStage = dockerfile.indexOf('AS release-runtime');
+  const runtimeStage = dockerfile.indexOf('AS runtime');
+  assert(releaseStage >= 0 && runtimeStage > releaseStage);
   assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));
-  assert(dockerfile.includes('map $uri $locale_redirect_target'));
-  assert.doesNotMatch(dockerfile.slice(dockerfile.indexOf('AS release-runtime')), /npm run build/);
+  assert.match(
+    dockerfile,
+    /COPY release-out\/__release\/nginx-redirects\.conf \/etc\/nginx\/generated-redirects\.conf/
+  );
+  assert.match(
+    dockerfile,
+    /COPY nginx-embeddable-security-headers\.conf \/etc\/nginx\/embeddable-security-headers\.conf/
+  );
+  assert.match(dockerfile, /test -s \/etc\/nginx\/generated-redirects\.conf/);
+  assert.doesNotMatch(dockerfile.slice(releaseStage, runtimeStage), /printf.*locale_redirect_target/);
   assert.match(nginx, /location = \/__release\/manifest\.json/);
   assert.match(nginx, /Cache-Control "no-store"/);
   assert.match(
@@ -381,6 +397,12 @@ test('production delivery consumes retained archives and records immutable provi
     2
   );
   assert.doesNotMatch(workflow, /echo \$\{\{ secrets\./);
+  const evidenceJob = workflow.indexOf('  evidence:');
+  const evidenceSetup = workflow.indexOf('actions/setup-node@v4', evidenceJob);
+  const evidenceInstall = workflow.indexOf('npm ci --ignore-scripts', evidenceJob);
+  const evidenceVerifier = workflow.indexOf('verify-guide-live.js', evidenceJob);
+  assert(evidenceJob >= 0 && evidenceSetup > evidenceJob);
+  assert(evidenceSetup < evidenceInstall && evidenceInstall < evidenceVerifier);
 });
 
 test('P1 successful evidence keeps the emitted KiB measurement', () => {

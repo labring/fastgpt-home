@@ -2,6 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
+const { spawnSync } = require('node:child_process');
 const test = require('node:test');
 const packageJson = require('../package.json');
 
@@ -26,6 +27,11 @@ function createFixture(variant) {
   fs.writeFileSync(path.join(outDir, 'sitemap.xml'), '<urlset/>');
   fs.mkdirSync(path.join(outDir, 'assets'), { recursive: true });
   fs.writeFileSync(path.join(outDir, 'assets', 'app.js'), 'release fixture');
+  fs.mkdirSync(path.join(outDir, '__release'), { recursive: true });
+  fs.writeFileSync(
+    path.join(outDir, '__release', 'nginx-redirects.conf'),
+    'map $uri $locale_redirect_target {\n  default "";\n}\n'
+  );
   return { root, outDir, expectation };
 }
 
@@ -56,6 +62,9 @@ test('manifest, archive, and digest fixtures are stable for io and cn', () => {
       const packaged = packageReleaseArtifact({ ...options, archiveDir: path.join(root, 'archives') });
       assert.match(path.basename(packaged.archivePath), new RegExp(`^guide-${variant}-[a-f0-9]{12}\\.tar\\.gz$`));
       assert.equal(fs.existsSync(`${packaged.archivePath}.sha256`), true);
+      const archiveEntries = spawnSync('tar', ['-tzf', packaged.archivePath], { encoding: 'utf8' });
+      assert.equal(archiveEntries.status, 0);
+      assert.match(archiveEntries.stdout, /release-out\/__release\/nginx-redirects\.conf/);
       assert.equal(verifyReleaseArtifact({ ...packaged, providerReceipt: {
         schemaVersion: 1,
         variant,

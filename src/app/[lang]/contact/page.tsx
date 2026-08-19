@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
-import { getAlternates } from '@/lib/seo';
+import { getAlternates, getRobotsPolicy } from '@/lib/seo';
 import { getContactLocale } from '@/lib/contact';
 import { getDictionary, normalizeLocale } from '@/lib/i18n';
 import {
@@ -24,10 +24,8 @@ export async function generateMetadata({
     description: copy.subtitle,
     robots:
       currentSiteVariant === 'preview'
-        ? { index: false, follow: false }
-        : locale === contactLocale
-        ? { index: true, follow: true }
-        : { index: false, follow: true },
+        ? getRobotsPolicy(false, false)
+        : getRobotsPolicy(locale === contactLocale),
     alternates: getAlternates(contactLocale, '/contact', contactPublishedLocaleCodes)
   };
 }

@@ -21,6 +21,9 @@ import Navbar from '@/components/home/Navbar';
 import { getCasesAssets, getSolutionsAssets } from '@/components/home/assets';
 import { getDefaultLocalePath } from '@/lib/clientNavigation';
 import { getContactLocale } from '@/lib/contact';
+import type enDictionary from '@/locales/en.json';
+
+type Dictionary = typeof enDictionary;
 
 const BRAND_LOGOS = [
   'image-143.png',
@@ -44,7 +47,7 @@ const SERVICE_ICONS = {
   custom: Network
 };
 
-export default function ContactPage({ locale, dict }: { locale: string; dict: any }) {
+export default function ContactPage({ locale, dict }: { locale: string; dict: Dictionary }) {
   const contactLocale = getContactLocale(locale);
   const formCopy = getContactCopy(contactLocale);
   const copy = getContactExperienceCopy(contactLocale);

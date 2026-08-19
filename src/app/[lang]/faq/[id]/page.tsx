@@ -10,7 +10,7 @@ import {
 } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
-import { getFaqAlternates, localeMap } from '@/lib/seo';
+import { getFaqAlternates, getRobotsPolicy, localeMap } from '@/lib/seo';
 import { normalizeFaqMetadata } from '@/lib/faqMetadata';
 import {
   currentSiteBaseUrl,
@@ -326,7 +326,7 @@ export async function generateMetadata({
     return {
       title: 'FAQ Not Found',
       description: 'The requested FAQ could not be found.',
-      robots: { index: false, follow: false }
+      robots: getRobotsPolicy(false, false)
     };
   }
 
@@ -341,10 +341,7 @@ export async function generateMetadata({
       contentId,
       getFaqTranslationLocales(routeKey || faqId, faqLangName)
     ),
-    robots:
-      !lang || faqLangName !== langName
-        ? { index: true, follow: true }
-        : { index: false, follow: true },
+    robots: getRobotsPolicy(!lang || faqLangName !== langName),
     openGraph: {
       title: metadata.title,
       description: metadata.description,

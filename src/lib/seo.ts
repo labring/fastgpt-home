@@ -6,6 +6,10 @@ import { getLocaleHreflang, getOwnedFaqUrl, getOwnedLocaleUrl } from '@/lib/site
 
 export { localeMap };
 
+export function getRobotsPolicy(index: boolean, follow = true): Metadata['robots'] {
+  return { index, follow };
+}
+
 export function getCompareCanonicalUrl(locale: CompareLocale, slug: string) {
   return getOwnedLocaleUrl(locale, `/compare/${slug}`);
 }

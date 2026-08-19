@@ -27,7 +27,7 @@ function useCountUp(end: number, decimals = 0, duration = 2000) {
           requestAnimationFrame(animate);
         }
       },
-      { rootMargin: '0px 0px 120px 0px', threshold: 0.1 }
+      { rootMargin: '0px 0px 48px 0px', threshold: 0.1 }
     );
     observer.observe(el);
     return () => observer.disconnect();
@@ -86,7 +86,7 @@ function StatItem({
       ref={ref}
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+      viewport={{ once: true, margin: '0px 0px 48px 0px' }}
       transition={{ duration: 0.7, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
       className="flex flex-1 flex-col items-center text-center"
       style={{ rowGap: 24 }}

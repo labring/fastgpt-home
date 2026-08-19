@@ -68,7 +68,7 @@ export default function CTA({ t, locale }: { t: CTAT; locale: string }) {
                 <m.h2
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+                  viewport={{ once: true, margin: '0px 0px 48px 0px' }}
                   transition={{ duration: 0.7, ease: [0.21, 0.47, 0.32, 0.98] }}
                   className="m-0 text-ink text-[22px] md:text-[36px] font-semibold leading-[30px] md:leading-[48px] tracking-[-0.44px] md:tracking-[-0.72px]"
                 >
@@ -79,7 +79,7 @@ export default function CTA({ t, locale }: { t: CTAT; locale: string }) {
                 <m.p
                   initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+                  viewport={{ once: true, margin: '0px 0px 48px 0px' }}
                   transition={{ duration: 0.6, delay: 0.08 }}
                   className="m-0 text-ink-sub text-[16px] md:text-[20px] font-normal leading-[26px] md:leading-[32px] tracking-[-0.16px] md:tracking-[-0.2px]"
                 >
@@ -90,7 +90,7 @@ export default function CTA({ t, locale }: { t: CTAT; locale: string }) {
               <m.div
                 initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '0px 0px 120px 0px' }}
+                viewport={{ once: true, margin: '0px 0px 48px 0px' }}
                 transition={{ duration: 0.6, delay: 0.15 }}
                 className="flex flex-col md:flex-row items-stretch md:items-center gap-3 md:gap-8 w-full"
               >

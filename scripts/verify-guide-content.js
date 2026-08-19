@@ -152,8 +152,13 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
     if (entry.group !== publicationGroups.get(entry.slug)) fail(entry.slug, 'invalid publication group');
     for (const locale of locales) {
       const snapshot = entry[locale];
-      if (!snapshot || snapshot.sourceName !== path.basename(snapshot.sourceName) || /[\\/]|\.\./.test(snapshot.sourceName)) {
-        fail(entry.slug, `${locale}: unsafe source filename`);
+      if (
+        !snapshot ||
+        snapshot.sourceName !== `${entry.slug}.${locale}.md` ||
+        snapshot.sourceName !== path.basename(snapshot.sourceName) ||
+        /[\\/]|\.\./.test(snapshot.sourceName)
+      ) {
+        fail(entry.slug, `${locale}: sourceName must be ${entry.slug}.${locale}.md`);
       }
       if (!Array.isArray(snapshot.schemaTokens) || snapshot.schemaTokens.some((token) => !schemaTypes.has(token))) {
         fail(entry.slug, `${locale}: invalid schema token`);

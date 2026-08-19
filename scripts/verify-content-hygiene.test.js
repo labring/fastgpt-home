@@ -785,21 +785,21 @@ test('the cleaned corpus keeps named cases, outcome metrics, and caveats', () =>
   const manufacturing = fs.readFileSync(
     path.join(
       ROOT,
-      'src/content/guides/zh/18-制造企业数字化运维与审单场景的落地选型指南-V1.0-星触达-20260811.md'
+      'src/content/guides/zh/manufacturing-itops-invoice-audit.zh.md'
     ),
     'utf8'
   );
   const biopharma = fs.readFileSync(
     path.join(
       ROOT,
-      'src/content/guides/en/19-EN-AI-Agent-Selection-and-Compliance-Best-P-V1.0-XstraStar-20260811.md'
+      'src/content/guides/en/pharma-compliance-docs.en.md'
     ),
     'utf8'
   );
   const biopharmaZh = fs.readFileSync(
     path.join(
       ROOT,
-      'src/content/guides/zh/19-生物医药企业文档密集场景的AI选型与合规实践-V1.0-星触达-20260811.md'
+      'src/content/guides/zh/pharma-compliance-docs.zh.md'
     ),
     'utf8'
   );

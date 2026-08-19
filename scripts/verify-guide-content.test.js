@@ -96,6 +96,15 @@ test('registry rejects duplicate slugs, incomplete pairs, and invalid schemas', 
   assertFailure(() => verifyGuideRegistry(invalidSchema), /server-sizing-guide: zh: invalid schema/);
 });
 
+test('registry enforces slug-locale source filenames', () => {
+  const entries = structuredClone(registry.entries);
+  findEntry(entries, 'server-sizing-guide').zh.sourceName = 'legacy-server-sizing.zh.md';
+  assertFailure(
+    () => verifyGuideRegistry(entries),
+    /server-sizing-guide: zh: sourceName must be server-sizing-guide\.zh\.md/
+  );
+});
+
 test('a required asset must be a contained public path with authored alt text', () => {
   const entries = structuredClone(registry.entries);
   findEntry(entries, 'server-sizing-guide').zh.assetPolicy = {

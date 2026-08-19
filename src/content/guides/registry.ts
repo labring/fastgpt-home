@@ -58,6 +58,10 @@ function isBasename(value: unknown): value is string {
   );
 }
 
+function isGuideSourceName(slug: string, locale: GuideLocale, value: unknown): value is string {
+  return isBasename(value) && value === `${slug}.${locale}.md`;
+}
+
 function isApprovedGuideDate(value: unknown): value is GuideIsoDate {
   if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== '2026-08-11') return false;
   const [year, month, day] = value.split('-').map(Number);
@@ -68,7 +72,9 @@ function isApprovedGuideDate(value: unknown): value is GuideIsoDate {
 function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): asserts value is GuideSourceSnapshot {
   if (!value || typeof value !== 'object') fail(`${slug}:${locale}: missing source snapshot`);
   const snapshot = value as Record<string, unknown>;
-  if (!isBasename(snapshot.sourceName)) fail(`${slug}:${locale}: sourceName must be a basename`);
+  if (!isGuideSourceName(slug, locale, snapshot.sourceName)) {
+    fail(`${slug}:${locale}: sourceName must be ${slug}.${locale}.md`);
+  }
   for (const field of [
     'sourceSha256',
     'bodySha256',

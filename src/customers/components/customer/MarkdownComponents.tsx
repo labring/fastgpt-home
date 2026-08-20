@@ -21,36 +21,39 @@ import { mathMarkdownRenderers } from './markdown/renderers/math';
 import { mediaMarkdownRenderers } from './markdown/renderers/media';
 import { tableMarkdownRenderers } from './markdown/renderers/table';
 
+// Dark-mode highlight blocks: keep a clearly visible tint over #202124 by
+// using 30%/20% opaque gradients, brighter -400 borders, -300 titles and
+// visible -300 icons (previously -500/15 tints were nearly invisible).
 const highlightStyles = {
   red: {
-    container: 'not-prose bg-gradient-to-r from-red-50 to-red-50/50 dark:from-red-500/15 dark:to-red-400/10 border border-red-200 dark:border-red-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-red-500/20 dark:text-red-400/25',
+    container: 'not-prose bg-gradient-to-r from-red-50 to-red-50/50 dark:from-red-500/30 dark:to-red-400/20 border border-red-200 dark:border-red-400/60 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-red-500/20 dark:text-red-300/40',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
-    title: 'font-bold text-red-700 dark:text-red-400 text-sm'
+    title: 'font-bold text-red-700 dark:text-red-300 text-sm'
   },
   orange: {
-    container: 'not-prose bg-gradient-to-r from-orange-50 to-orange-50/50 dark:from-orange-500/15 dark:to-orange-400/10 border border-orange-200 dark:border-orange-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-orange-500/20 dark:text-orange-400/25',
+    container: 'not-prose bg-gradient-to-r from-orange-50 to-orange-50/50 dark:from-orange-500/30 dark:to-orange-400/20 border border-orange-200 dark:border-orange-400/60 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-orange-500/20 dark:text-orange-300/40',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
-    title: 'font-bold text-orange-700 dark:text-orange-400 text-sm'
+    title: 'font-bold text-orange-700 dark:text-orange-300 text-sm'
   },
   blue: {
-    container: 'not-prose bg-gradient-to-r from-blue-50 to-blue-50/50 dark:from-brand-500/15 dark:to-brand-400/10 border border-blue-200 dark:border-brand-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-blue-500/20 dark:text-brand-400/25',
+    container: 'not-prose bg-gradient-to-r from-blue-50 to-blue-50/50 dark:from-brand-500/30 dark:to-brand-400/20 border border-blue-200 dark:border-brand-400/60 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-blue-500/20 dark:text-brand-300/40',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
-    title: 'font-bold text-blue-700 dark:text-brand-400 text-sm'
+    title: 'font-bold text-blue-700 dark:text-brand-300 text-sm'
   },
   green: {
-    container: 'not-prose bg-gradient-to-r from-emerald-50 to-emerald-50/50 dark:from-emerald-500/15 dark:to-emerald-400/10 border border-emerald-200 dark:border-emerald-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-emerald-500/20 dark:text-emerald-400/25',
+    container: 'not-prose bg-gradient-to-r from-emerald-50 to-emerald-50/50 dark:from-emerald-500/30 dark:to-emerald-400/20 border border-emerald-200 dark:border-emerald-400/60 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-emerald-500/20 dark:text-emerald-300/40',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
-    title: 'font-bold text-emerald-700 dark:text-emerald-400 text-sm'
+    title: 'font-bold text-emerald-700 dark:text-emerald-300 text-sm'
   },
   purple: {
-    container: 'not-prose bg-gradient-to-r from-purple-50 to-purple-50/50 dark:from-purple-500/15 dark:to-purple-400/10 border border-purple-200 dark:border-purple-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-purple-500/20 dark:text-purple-400/25',
+    container: 'not-prose bg-gradient-to-r from-purple-50 to-purple-50/50 dark:from-purple-500/30 dark:to-purple-400/20 border border-purple-200 dark:border-purple-400/60 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-purple-500/20 dark:text-purple-300/40',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
-    title: 'font-bold text-purple-700 dark:text-purple-400 text-sm'
+    title: 'font-bold text-purple-700 dark:text-purple-300 text-sm'
   }
 };
 
@@ -392,7 +395,7 @@ export const markdownComponents: Components & Record<string, unknown> = {
   mark: ({ children, ...props }) => (
     <mark
       {...getDomProps<React.HTMLAttributes<HTMLElement>>(props)}
-      className={joinClassNames('bg-yellow-100 dark:bg-[#45391e] px-1 rounded-[2px] text-inherit', (props as { className?: string }).className)}
+      className={joinClassNames('bg-yellow-100 dark:bg-yellow-400/30 px-1 rounded-[2px] text-inherit', (props as { className?: string }).className)}
     >
       {children}
     </mark>

@@ -1,10 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dbConnect from '@/customers/lib/db';
-import Customer from '@/customers/models/Customer';
-import Category from '@/customers/models/Category';
-import { getAutoCategoryColor, normalizeHexColor } from '@/customers/lib/category-color';
-import { ensureCategorySlugs } from '@/customers/lib/category-slug';
-import { getInteractedCustomerIdSets } from '@/customers/lib/public-interaction-state';
+import { getCustomerById } from '@/customers/lib/data';
 import { resolveCustomerObjectId } from '@/customers/lib/customer-id';
 
 export const dynamic = 'force-dynamic';
@@ -20,89 +15,15 @@ export async function GET(
       return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
-    await dbConnect();
-    await ensureCategorySlugs();
-    Category.init();
-
-    const customer = await Customer.findById(id)
-      .populate('categoryId', 'name slug color')
-      .lean({ virtuals: true }) as
-      | {
-          _id: { toString(): string };
-          categoryId?:
-            | {
-                _id?: { toString(): string };
-                name?: string;
-                slug?: string | null;
-                color?: string | null;
-                toString?: () => string;
-              }
-            | string
-            | null;
-          categoryName?: string;
-          title: string;
-          description: string;
-          imageUrl: string;
-          thumbnailUrl?: string;
-          freeUseUrl?: string;
-          likesCount: number;
-          usageCount: number;
-          formattedUsageCount?: string;
-          content: string;
-          createdAt?: Date;
-          updatedAt?: Date;
-          isPublished: boolean;
-        }
-      | null;
-
-    if (!customer || !customer.isPublished) {
+    // 复用 data.ts 的详情映射（与 SSR 渲染同源，含访客态 isLiked/hasViewed），
+    // 避免两套字段口径漂移；getCustomerDetail 内部已有 cache() 去重。
+    // 注意：响应含个性化字段，不得加 CDN 缓存，保持 no-store。
+    const detail = await getCustomerById(id);
+    if (!detail) {
       return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
-    const customerId = customer._id.toString();
-    const interactionState = await getInteractedCustomerIdSets([customerId]);
 
-    return NextResponse.json({
-      id: customerId,
-      categoryId:
-        typeof customer.categoryId === 'object' && customer.categoryId !== null
-          ? customer.categoryId._id?.toString() || customer.categoryId.toString?.() || ''
-          : customer.categoryId?.toString() || '',
-      categoryName:
-        (typeof customer.categoryId === 'object' && customer.categoryId !== null
-          ? customer.categoryId.name
-          : undefined) ||
-        customer.categoryName ||
-        '未知分类',
-      categorySlug:
-        typeof customer.categoryId === 'object' && customer.categoryId !== null
-          ? customer.categoryId.slug || ''
-          : '',
-      categoryColor: normalizeHexColor(
-        typeof customer.categoryId === 'object' && customer.categoryId !== null
-          ? customer.categoryId.color
-          : undefined,
-        getAutoCategoryColor(
-          (typeof customer.categoryId === 'object' && customer.categoryId !== null
-            ? customer.categoryId.name
-            : undefined) ||
-            customer.categoryName ||
-            ''
-        )
-      ),
-      title: customer.title,
-      description: customer.description,
-      imageUrl: customer.imageUrl,
-      thumbnailUrl: customer.thumbnailUrl || customer.imageUrl,
-      freeUseUrl: customer.freeUseUrl || '',
-      likes: customer.likesCount,
-      isLiked: interactionState.likedCustomerIds.has(customerId),
-      hasViewed: interactionState.viewedCustomerIds.has(customerId),
-      usage: customer.formattedUsageCount || customer.usageCount.toString(),
-      rawUsageCount: customer.usageCount,
-      content: customer.content,
-      createdAt: customer.createdAt,
-      updatedAt: customer.updatedAt || customer.createdAt
-    }, {
+    return NextResponse.json(detail, {
       headers: {
         'Cache-Control': 'no-store, max-age=0'
       }

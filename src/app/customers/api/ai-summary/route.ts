@@ -29,6 +29,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing customerId or type' }, { status: 400 });
     }
 
+    if (customerId.length > 64) {
+      return NextResponse.json({ error: 'Invalid customerId' }, { status: 400 });
+    }
+
     const content = await getCustomerContentById(customerId);
     if (content === null) {
       return NextResponse.json({ error: 'Customer not found' }, { status: 404 });

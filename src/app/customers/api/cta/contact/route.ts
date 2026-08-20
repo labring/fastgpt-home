@@ -135,6 +135,13 @@ export async function POST(request: NextRequest) {
   const cleanVisitorId =
     sanitizeText(visitorId, TEXT_LIMITS.visitorId) || `customers-${crypto.randomUUID()}`;
 
+  // 线索语言：优先取请求提交的 locale（白名单），否则默认中文站
+  const requestLocale =
+    typeof body.locale === 'string' &&
+    /^(zh|zh-hant|en|ja|ko|ar|vi|th|id|ms)$/i.test(body.locale)
+      ? body.locale.toLowerCase()
+      : 'zh';
+
   // 与主站 /contact 提交载荷保持一致（snake_case + 归因字段）
   const payload = {
     name,
@@ -146,7 +153,7 @@ export async function POST(request: NextRequest) {
     project_stage: projectStage,
     budget: budget || null,
     notes: notes || null,
-    locale: 'zh',
+    locale: requestLocale,
     utm_source: UTM_SOURCE,
     utm_medium: UTM_MEDIUM,
     utm_campaign: SOURCE_UTM_CAMPAIGNS[source],

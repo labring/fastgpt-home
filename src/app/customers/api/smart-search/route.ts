@@ -36,7 +36,9 @@ async function fetchAIMatch(query: string, systemPrompt: string) {
       { role: 'user', content: query }
     ],
     stream: false,
-    temperature: 0.0
+    temperature: 0.0,
+    // 非流式匹配请求 30s 超时，避免上游卡住时请求长期挂起
+    timeoutMs: 30_000
   });
 
   if (!response.ok) {
@@ -104,6 +106,13 @@ export async function POST(req: Request) {
     const rawScope = body.scope;
     if (!query) {
       return NextResponse.json({ matched_case: null, matched_customer: null });
+    }
+
+    if (query.length > 200) {
+      return NextResponse.json(
+        { error: '搜索词过长', matched_case: null, matched_customer: null },
+        { status: 400 }
+      );
     }
 
     const scope = normalizeScope(rawScope);

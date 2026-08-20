@@ -14,6 +14,8 @@ interface AIChatRequestOptions {
   messages: AIMessage[];
   stream: boolean;
   temperature: number;
+  /** 非流式请求的超时（ms）；流式请求不应设置。 */
+  timeoutMs?: number;
 }
 
 export function getEnvAIConfig(): AIConfig {
@@ -45,7 +47,8 @@ export async function requestAIChat({
   config,
   messages,
   stream,
-  temperature
+  temperature,
+  timeoutMs
 }: AIChatRequestOptions) {
   const normalizedConfig = ensureAIConfig(config);
 
@@ -60,7 +63,9 @@ export async function requestAIChat({
       messages,
       stream,
       temperature
-    })
+    }),
+    // 非流式请求设置超时，避免上游 AI 卡住时连接长期挂起。
+    ...(timeoutMs ? { signal: AbortSignal.timeout(timeoutMs) } : {})
   });
 }
 

@@ -368,7 +368,14 @@ export async function getPublishedCustomersPage(options: PublishedCustomersPageO
 
   if (options.category && options.category !== 'all') {
     const matchedCategory = await Category.findOne({ slug: options.category }).select('_id');
-    query.categoryId = matchedCategory?._id || null;
+    // 分类不存在时直接返回空结果，避免 { categoryId: null } 误匹配到“未分类客户”。
+    if (!matchedCategory) {
+      return {
+        customers: [],
+        pagination: { total: 0, page, limit, totalPages: 0 },
+      };
+    }
+    query.categoryId = matchedCategory._id;
   }
 
   if (search) {

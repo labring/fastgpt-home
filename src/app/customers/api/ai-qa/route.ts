@@ -30,6 +30,10 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: 'Missing customerId or question' }, { status: 400 });
     }
 
+    if (question.length > 500) {
+      return NextResponse.json({ error: '问题过长，请精简后重试' }, { status: 400 });
+    }
+
     const content = await getCustomerContentById(customerId);
     if (content === null) {
       return NextResponse.json({ error: 'Customer not found' }, { status: 404 });

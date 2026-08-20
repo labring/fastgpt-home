@@ -27,7 +27,18 @@ export async function isCategorySlugAvailable(slug: string, options: { excludeId
   return !existingCategory;
 }
 
+// 回填是历史数据的一次性迁移，却挂在所有公开读热路径上：
+// 进程内节流（5 分钟窗口只查一次），避免每次列表/详情/分类请求都空查一遍。
+let slugBackfillDone = false;
+let slugBackfillAt = 0;
+const SLUG_BACKFILL_INTERVAL_MS = 5 * 60 * 1000;
+
 export async function ensureCategorySlugs() {
+  const now = Date.now();
+  if (slugBackfillDone && now - slugBackfillAt < SLUG_BACKFILL_INTERVAL_MS) {
+    return;
+  }
+
   await withMongoRetry(async () => {
     const categories = await Category.find({
       $or: [
@@ -52,4 +63,7 @@ export async function ensureCategorySlugs() {
       fallbackIndex += 1;
     }
   });
+
+  slugBackfillDone = true;
+  slugBackfillAt = Date.now();
 }

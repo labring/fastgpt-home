@@ -58,24 +58,34 @@ export function buildCustomerQaPrompt(content: string) {
 ${content}`;
 }
 
+// 对话历史硬上限：防止公开 AI 接口被超长 history 放大 prompt token 成本。
+const MAX_HISTORY_MESSAGES = 12;
+const MAX_MESSAGE_LENGTH = 1000;
+
 export function normalizeConversationHistory(history: unknown): AIMessage[] {
   if (!Array.isArray(history)) {
     return [];
   }
 
-  return history.flatMap((item) => {
-    const message = item as RawConversationMessage;
-    if (typeof message.role !== 'string' || typeof message.content !== 'string') {
-      return [];
-    }
-
-    return [
-      {
-        role: message.role,
-        content: message.content
+  return history
+    .flatMap((item) => {
+      const message = item as RawConversationMessage;
+      if (
+        typeof message.role !== 'string' ||
+        typeof message.content !== 'string' ||
+        (message.role !== 'user' && message.role !== 'assistant')
+      ) {
+        return [];
       }
-    ];
-  });
+
+      return [
+        {
+          role: message.role,
+          content: message.content.slice(0, MAX_MESSAGE_LENGTH)
+        }
+      ];
+    })
+    .slice(-MAX_HISTORY_MESSAGES);
 }
 
 export function buildCustomerQaMessages({

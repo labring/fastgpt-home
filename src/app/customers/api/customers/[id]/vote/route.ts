@@ -117,25 +117,29 @@ export async function POST(
   } catch (error) {
     console.error('Error recording vote:', error);
     if (isDuplicateKeyError(error)) {
-      const { id } = await params;
-      const visitorKey = await getOrCreateVisitorKey();
-      const [interaction, currentCustomer] = await Promise.all([
-        CustomerInteraction.findOne({ customerId: id, visitorKey, type: 'vote' })
-          .select('votedType')
-          .lean<{ votedType?: 'helpful' | 'unhelpful' } | null>(),
-        Customer.findById(id)
-          .select('helpfulCount unhelpfulCount')
-          .lean<{ helpfulCount?: number; unhelpfulCount?: number } | null>()
-      ]);
+      // rawId 可能是 slug，先解析为 ObjectId 再查询，避免 CastError 导致降级分支失效。
+      const { id: rawId } = await params;
+      const resolvedId = await resolveCustomerObjectId(rawId);
+      if (resolvedId) {
+        const visitorKey = await getOrCreateVisitorKey();
+        const [interaction, currentCustomer] = await Promise.all([
+          CustomerInteraction.findOne({ customerId: resolvedId, visitorKey, type: 'vote' })
+            .select('votedType')
+            .lean<{ votedType?: 'helpful' | 'unhelpful' } | null>(),
+          Customer.findById(resolvedId)
+            .select('helpfulCount unhelpfulCount')
+            .lean<{ helpfulCount?: number; unhelpfulCount?: number } | null>()
+        ]);
 
-      if (currentCustomer) {
-        return NextResponse.json({
-          success: true,
-          counted: false,
-          votedType: interaction?.votedType || null,
-          helpfulCount: currentCustomer.helpfulCount || 0,
-          unhelpfulCount: currentCustomer.unhelpfulCount || 0
-        });
+        if (currentCustomer) {
+          return NextResponse.json({
+            success: true,
+            counted: false,
+            votedType: interaction?.votedType || null,
+            helpfulCount: currentCustomer.helpfulCount || 0,
+            unhelpfulCount: currentCustomer.unhelpfulCount || 0
+          });
+        }
       }
     }
 

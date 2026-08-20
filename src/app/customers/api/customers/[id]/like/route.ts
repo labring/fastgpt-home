@@ -87,7 +87,13 @@ export async function POST(
       return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
-    await incrementDailyInteraction('likesDelta', 1);
+    // 日统计失败不影响点赞主流程（与 view 路由一致）：并发首次 upsert 可能
+    // 触发 E11000，若冒泡会让点赞响应误报 500 或错误地走“重复点赞”降级分支。
+    try {
+      await incrementDailyInteraction('likesDelta', 1);
+    } catch (dailyStatsError) {
+      console.error('Failed to update daily like stats:', dailyStatsError);
+    }
 
     return NextResponse.json({
       success: true,

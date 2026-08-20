@@ -180,8 +180,10 @@ const CustomerSchema = new Schema(
   }
 );
 
-// 全文索引：支持搜索功能
-CustomerSchema.index({ title: 'text', description: 'text' });
+// 搜索实现使用不锚定的包含匹配（见 data.ts buildKeywordSearchQuery），
+// 这类正则无法走索引；$text 全文索引对中文内容依赖 ICU 分词，当前未启用，
+// 保留该索引只会增加写入开销，故移除。
+// 若未来启用 $text 搜索，需先确认 MongoDB 部署支持中文分词。 
 
 // 复合索引：常用的列表查询 (如：分类 + 排序)
 CustomerSchema.index({ categoryName: 1, isPublished: 1, deletedAt: 1, createdAt: -1 });
@@ -195,6 +197,12 @@ CustomerSchema.index({ isPublished: 1, deletedAt: 1, createdAt: -1 });
 
 // 分类过滤列表查询：分类 + 发布 + 未删除 + 时间排序（sortBy=time 时排序走索引）
 CustomerSchema.index({ categoryId: 1, isPublished: 1, deletedAt: 1, createdAt: -1 });
+
+// 人气/使用量排序（默认 sortBy=usage 与 sortBy=likes）：发布 + 未删除 + 计数倒序，
+// 让首页/分类列表的内存排序走索引，避免每次请求全量扫描排序。
+CustomerSchema.index({ isPublished: 1, deletedAt: 1, usageCount: -1, createdAt: -1 });
+CustomerSchema.index({ isPublished: 1, deletedAt: 1, likesCount: -1, createdAt: -1 });
+CustomerSchema.index({ categoryId: 1, isPublished: 1, deletedAt: 1, usageCount: -1, createdAt: -1 });
 
 // 虚拟属性：格式化 usageCount (例如：12000 -> 1.2w+)
 CustomerSchema.virtual('formattedUsageCount').get(function(this: ICustomer) {

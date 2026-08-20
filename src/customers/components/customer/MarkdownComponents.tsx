@@ -268,7 +268,7 @@ export const markdownComponents: Components & Record<string, unknown> = {
           </div>
           <div className={style.content}>
             {title && (
-              <div className={`not-prose font-bold mb-2 text-base md:text-lg ${style.title.split(' ').filter((c) => c.startsWith('text-') && !c.includes('text-sm')).join(' ')}`}>
+              <div className={`not-prose font-bold mb-2 text-base md:text-lg ${style.title.split(' ').filter((c) => (c.startsWith('text-') || c.startsWith('dark:text-')) && !c.includes('text-sm')).join(' ')}`}>
                 {title}
               </div>
             )}

@@ -116,6 +116,61 @@ function getAnchors(html) {
   }));
 }
 
+function getGuideSections(html) {
+  return [...html.matchAll(/<h[2-6]\b([^>]*)>([\s\S]*?)<\/h[2-6]>/gi)]
+    .map((match) => ({
+      id: getAttribute('<h ' + match[1] + '>', 'id'),
+      text: stripHtml(match[2])
+    }))
+    .filter((heading) => heading.id.startsWith('guide-section-'));
+}
+
+function verifyGuideSectionAnchors(html, context) {
+  const sections = getGuideSections(html);
+  if (!sections.length) return;
+
+  const sectionsById = new Map();
+  for (const section of sections) {
+    if (sectionsById.has(section.id)) {
+      fail({ ...context, surface: 'anchors' }, 'duplicate Guide section id ' + section.id);
+    }
+    sectionsById.set(section.id, section);
+  }
+
+  const fragmentAnchors = getAnchors(html).filter((anchor) => anchor.href.startsWith('#guide-section-'));
+  if (!fragmentAnchors.length) {
+    fail({ ...context, surface: 'anchors' }, 'Guide section headings require visible fragment links');
+  }
+
+  const referencedIds = new Set();
+  for (const anchor of fragmentAnchors) {
+    const targetId = anchor.href.slice(1);
+    const section = sectionsById.get(targetId);
+    if (!section) {
+      fail(
+        { ...context, surface: 'anchors' },
+        'fragment link ' + anchor.href + ' has no matching Guide heading'
+      );
+    }
+    if (section.text !== anchor.text) {
+      fail(
+        { ...context, surface: 'anchors' },
+        'fragment link ' + anchor.href + ' label must match heading text'
+      );
+    }
+    referencedIds.add(targetId);
+  }
+
+  for (const section of sections) {
+    if (!referencedIds.has(section.id)) {
+      fail(
+        { ...context, surface: 'anchors' },
+        'Guide heading ' + section.id + ' is missing from the visible TOC'
+      );
+    }
+  }
+}
+
 function getJsonLdNodes(html, context) {
   const nodes = [];
   const scripts = [...html.matchAll(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)];
@@ -412,6 +467,7 @@ function verifyArticle(html, page, expectation, filePath) {
   }
 
   const anchors = getAnchors(html);
+  verifyGuideSectionAnchors(html, context);
   const links = new Set(anchors.map((anchor) => absoluteUrl(expectation.host, anchor.href)));
   for (const target of [expectation.host + '/', expectation.host + '/guide']) {
     if (!links.has(target)) fail({ ...context, surface: 'breadcrumb' }, `missing breadcrumb target ${target}`);

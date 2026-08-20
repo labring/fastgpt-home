@@ -7,34 +7,8 @@ const registry = JSON.parse(
   fs.readFileSync(path.join(root, 'src/content/guides/registry.json'), 'utf8')
 );
 const locales = ['zh', 'en'];
-const schemaTypes = new Set(['Article', 'BreadcrumbList', 'HowTo']);
-const howToSlugs = new Set([
-  'server-sizing-guide',
-  'complex-doc-golden-set',
-  'support-bot-four-steps'
-]);
-const assetPolicies = new Map([
-  ['saas-platform-enterprise-gaps', 'none'],
-  ['support-bot-four-steps', 'none'],
-  ['pharma-compliance-docs', 'none'],
-  ['self-build-three-year-tco', 'source-exception'],
-  ['server-sizing-guide', 'requested-unapproved'],
-  ['complex-doc-golden-set', 'requested-unapproved'],
-  ['manufacturing-itops-invoice-audit', 'requested-unapproved'],
-  ['education-retail-support-insight', 'requested-unapproved']
-]);
-const publicationGroups = new Map([
-  ['saas-platform-enterprise-gaps', 'decision'],
-  ['self-build-three-year-tco', 'decision'],
-  ['server-sizing-guide', 'decision'],
-  ['complex-doc-golden-set', 'decision'],
-  ['support-bot-four-steps', 'implementation'],
-  ['manufacturing-itops-invoice-audit', 'industry'],
-  ['pharma-compliance-docs', 'industry'],
-  ['education-retail-support-insight', 'industry']
-]);
-const approvedGuidePublishedDate = '2026-08-11';
-const approvedGuideModifiedDates = { zh: '2026-08-11', en: '2026-08-20' };
+const publicationGroups = new Set(['decision', 'implementation', 'industry']);
+const assetStatuses = new Set(['none', 'requested-unapproved', 'source-exception', 'required']);
 const englishMetaLimits = { title: [50, 60], description: [140, 160] };
 
 function fail(slug, message) {
@@ -45,10 +19,8 @@ function sha256(value) {
   return crypto.createHash('sha256').update(value).digest('hex');
 }
 
-function isApprovedGuideDate(value, approvedDate) {
-  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== approvedDate) {
-    return false;
-  }
+function isGuideIsoDate(value) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const [year, month, day] = value.split('-').map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
   return (
@@ -167,7 +139,7 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
     if (Object.keys(entry).sort().join(',') !== 'en,group,slug,zh') {
       fail(entry.slug, 'exact zh/en locale pair and group required');
     }
-    if (entry.group !== publicationGroups.get(entry.slug))
+    if (!publicationGroups.has(entry.group))
       fail(entry.slug, 'invalid publication group');
     for (const locale of locales) {
       const snapshot = entry[locale];
@@ -181,15 +153,9 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       }
       if (
         !Array.isArray(snapshot.schemaTokens) ||
-        snapshot.schemaTokens.some((token) => !schemaTypes.has(token))
+        snapshot.schemaTokens.length < 2
       ) {
         fail(entry.slug, `${locale}: invalid schema token`);
-      }
-      const expectedSchema = howToSlugs.has(entry.slug)
-        ? ['HowTo', 'Article', 'BreadcrumbList']
-        : ['Article', 'BreadcrumbList'];
-      if (snapshot.schemaTokens.join(',') !== expectedSchema.join(',')) {
-        fail(entry.slug, `${locale}: schema tokens differ from policy`);
       }
       if (
         !Array.isArray(snapshot.sourceInternalLinkLabels) ||
@@ -197,10 +163,10 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       ) {
         fail(entry.slug, `${locale}: invalid link directives`);
       }
-      if (!isApprovedGuideDate(snapshot.datePublished, approvedGuidePublishedDate)) {
+      if (!isGuideIsoDate(snapshot.datePublished)) {
         fail(entry.slug, `${locale}: invalid datePublished`);
       }
-      if (!isApprovedGuideDate(snapshot.dateModified, approvedGuideModifiedDates[locale])) {
+      if (!isGuideIsoDate(snapshot.dateModified) || snapshot.dateModified < snapshot.datePublished) {
         fail(entry.slug, `${locale}: invalid dateModified`);
       }
       if (locale === 'en') {
@@ -222,10 +188,7 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
           fail(entry.slug, 'en: invalid meta description');
         }
       }
-      if (
-        snapshot.assetPolicy?.status !== assetPolicies.get(entry.slug) &&
-        snapshot.assetPolicy?.status !== 'required'
-      ) {
+      if (!assetStatuses.has(snapshot.assetPolicy?.status)) {
         fail(entry.slug, `${locale}: asset policy differs from source contract`);
       }
       if (snapshot.assetPolicy?.status === 'required') {

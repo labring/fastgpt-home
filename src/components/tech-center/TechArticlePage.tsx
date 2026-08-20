@@ -95,7 +95,11 @@ export default function TechArticlePage({
               </figure>
             )}
             <article className={styles.article}>
-              <MarkdownContent markdown={localizedMarkdown} title={article.title} />
+              <MarkdownContent
+                markdown={localizedMarkdown}
+                title={article.title}
+                headingIdPrefix="article-section"
+              />
               {article.source && (
                 <footer className={styles.sourceFooter} aria-label="本文来源">
                   <span className={styles.sourceLabel}>本文来源</span>

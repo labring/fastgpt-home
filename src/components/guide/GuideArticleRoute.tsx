@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 
-import { BreadcrumbJsonLd, JsonLdScript } from '@/components/JsonLd';
+import { ArticleJsonLd, BreadcrumbJsonLd, JsonLdScript } from '@/components/JsonLd';
 import GuideArticlePage, { getGuideArticleCopy } from '@/components/guide/GuideArticlePage';
 import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
@@ -8,7 +8,7 @@ import Navbar from '@/components/home/Navbar';
 import { getGuideEntry } from '@/content/guides/registry';
 import { readGuideDocument } from '@/lib/guideContent';
 import { getDictionary } from '@/lib/i18n';
-import { getGuideCanonicalUrl, getGuideOwnedPath, type GuidePublishedLocale } from '@/lib/guideSeo';
+import { getGuideCanonicalUrl, type GuidePublishedLocale } from '@/lib/guideSeo';
 import { getOwnedLocaleUrl } from '@/lib/siteRouting';
 
 const articleLanguage: Record<GuidePublishedLocale, string> = { en: 'en-US', zh: 'zh-CN' };
@@ -36,19 +36,18 @@ export async function GuideArticleRoute({
   return (
     <div className="home guide-article-page">
       <BreadcrumbJsonLd items={breadcrumbItems} />
-      <JsonLdScript
-        data={{
-          '@context': 'https://schema.org',
-          '@type': 'Article',
-          headline: document.source.h1,
-          description: document.source.metaDescription,
-          inLanguage: articleLanguage[locale],
-          mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
-          datePublished: document.source.datePublished,
-          dateModified: document.source.dateModified,
-          author: { '@type': 'Organization', name: 'FastGPT' },
-          publisher: { '@type': 'Organization', name: 'FastGPT' }
-        }}
+      <ArticleJsonLd
+        headline={document.source.h1}
+        description={document.source.metaDescription}
+        image={
+          document.source.assetPolicy.status === 'required'
+            ? getOwnedLocaleUrl(locale, document.source.assetPolicy.path)
+            : undefined
+        }
+        url={canonical}
+        inLanguage={articleLanguage[locale]}
+        datePublished={document.source.datePublished}
+        dateModified={document.source.dateModified}
       />
       {document.source.schemaTokens.includes('HowTo') && (
         <JsonLdScript

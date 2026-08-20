@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-import MarkdownContent from '@/components/tech-center/MarkdownContent';
+import MarkdownContent, { getMarkdownHeadings } from '@/components/tech-center/MarkdownContent';
 import type { GuideDocument } from '@/lib/guideContent';
 import { getGuideOwnedPath, type GuidePublishedLocale } from '@/lib/guideSeo';
+import { parseMarkdown } from '@/lib/markdownParser';
 import { getOwnedLocalePath } from '@/lib/siteRouting';
 import styles from '@/components/tech-center/TechArticlePage.module.css';
 
@@ -11,7 +12,9 @@ const guideArticleCopy = {
   en: {
     home: 'Home',
     guide: 'Guide',
+    breadcrumb: 'Breadcrumb',
     back: 'Back to guides',
+    onThisPage: 'On this page',
     configuredLinks: 'Related resources',
     updated: (date: string) =>
       `Last updated ${new Intl.DateTimeFormat('en-US', {
@@ -24,7 +27,9 @@ const guideArticleCopy = {
   zh: {
     home: '首页',
     guide: '指南',
+    breadcrumb: '面包屑',
     back: '返回指南',
+    onThisPage: '本页内容',
     configuredLinks: '相关资源',
     updated: (date: string) => `更新于 ${formatGuideDate(date, 'zh')}`
   }
@@ -55,11 +60,13 @@ export default function GuideArticlePage({
 }) {
   const labels = getGuideArticleCopy(locale);
   const { assetPolicy, configuredInternalLinks } = document.source;
+  const blocks = parseMarkdown(document.body, document.source.h1);
+  const headings = getMarkdownHeadings(blocks, 'guide-section');
 
   return (
-    <main className={styles.page}>
+    <main className={styles.page + ' ' + styles.guidePage}>
       <div className={styles.container}>
-        <nav className={styles.breadcrumbs} aria-label="Breadcrumb">
+        <nav className={styles.breadcrumbs} aria-label={labels.breadcrumb}>
           <Link href={getOwnedLocalePath(locale)}>{labels.home}</Link>
           <span aria-hidden="true">/</span>
           <Link href={getGuideOwnedPath(locale)}>{labels.guide}</Link>
@@ -73,8 +80,8 @@ export default function GuideArticlePage({
             {labels.updated(document.source.dateModified)}
           </time>
         </header>
-        <div className={styles.layout}>
-          <article className={styles.article}>
+        <div className={styles.layout + ' ' + styles.guideLayout}>
+          <article className={styles.article + ' ' + styles.guideArticle}>
             {assetPolicy.status === 'required' && (
               <figure className={styles.heroFigure}>
                 <Image
@@ -87,7 +94,12 @@ export default function GuideArticlePage({
                 <figcaption>{assetPolicy.alt}</figcaption>
               </figure>
             )}
-            <MarkdownContent markdown={document.body} title={document.source.h1} />
+            <MarkdownContent
+              blocks={blocks}
+              markdown={document.body}
+              title={document.source.h1}
+              headingIdPrefix="guide-section"
+            />
             {configuredInternalLinks.length > 0 && (
               <section className={styles.related} aria-labelledby="guide-configured-links-title">
                 <div className={styles.relatedHeader}>
@@ -95,9 +107,10 @@ export default function GuideArticlePage({
                 </div>
                 <div className={styles.relatedList}>
                   {configuredInternalLinks.map((link) => (
-                    <a className={styles.relatedLink} href={link.target} key={link.target}>
+                    <Link className={styles.relatedLink} href={link.target} key={link.target}>
                       {link.label}
-                    </a>
+                      <span aria-hidden="true">↗</span>
+                    </Link>
                   ))}
                 </div>
               </section>
@@ -106,6 +119,21 @@ export default function GuideArticlePage({
               <Link href={getGuideOwnedPath(locale)}>{labels.back}</Link>
             </p>
           </article>
+          {headings.length > 0 && (
+            <aside className={styles.guideToc} aria-label={labels.onThisPage}>
+              <p className={styles.guideTocTitle}>{labels.onThisPage}</p>
+              <ol>
+                {headings.map((heading) => (
+                  <li
+                    className={heading.level > 2 ? styles.guideTocNested : undefined}
+                    key={heading.id}
+                  >
+                    <a href={'#' + heading.id}>{heading.text}</a>
+                  </li>
+                ))}
+              </ol>
+            </aside>
+          )}
         </div>
       </div>
     </main>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import { getGuideSource } from '@/content/guides/registry';
+import { getAlternates } from '@/lib/seo';
 import {
   getBuildLocaleCodes,
   getDefaultLocaleForSiteVariant,
@@ -55,18 +56,11 @@ export function getGuideAlternates(
   locale: GuidePublishedLocale,
   slug?: string
 ): Metadata['alternates'] {
-  const path = getGuidePath(slug);
-  const englishUrl = getOwnedLocaleUrl('en', path);
-  const chineseUrl = getOwnedLocaleUrl('zh', path);
+  return getAlternates(locale, getGuidePath(slug), GUIDE_PUBLISHED_LOCALES);
+}
 
-  return {
-    canonical: getOwnedLocaleUrl(locale, path),
-    languages: {
-      en: englishUrl,
-      'zh-CN': chineseUrl,
-      'x-default': englishUrl
-    }
-  };
+export function getGuideOwnedPath(locale: GuidePublishedLocale, slug?: string): string {
+  return getOwnedLocalePath(locale, getGuidePath(slug));
 }
 
 export function getGuideArticleMetadata(
@@ -123,8 +117,4 @@ export function getGuideHubMetadata(
       description: copy.description
     }
   };
-}
-
-export function getGuideOwnedPath(locale: GuidePublishedLocale, slug?: string): string {
-  return getOwnedLocalePath(locale, getGuidePath(slug));
 }

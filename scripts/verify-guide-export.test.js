@@ -75,6 +75,9 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
   const host = variant === 'cn' ? 'https://fastgpt.cn' : 'https://fastgpt.io';
   const hub = HUB_COPY[locale];
   const routes = ['/guide', ...entries.map((entry) => `/guide/${entry.slug}`)];
+  const guideSection =
+    '<aside aria-label="On this page"><ol><li><a href="#guide-section-solution">What This Solution <em>Does</em></a></li></ol></aside>' +
+    '<h2 id="guide-section-solution">What This Solution <em>Does</em></h2>';
 
   const cards = entries
     .map(
@@ -158,7 +161,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
       `guide/${entry.slug}`,
       `<html><head><title>${escapeHtml(source.metaTitle)}</title><meta name="description" content="${escapeHtml(source.metaDescription)}"><link rel="canonical" href="${canonical}"><meta property="og:url" content="${canonical}">${alternates(entry.slug)}${jsonLd({
         '@graph': schema
-      })}</head><body><nav class="fixed top-0 left-0 right-0 z-50"></nav><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="GuideArticlePage_summary__fixture">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${asset}${related}<a href="/guide">${hub.back}</a><footer></footer></body></html>`,
+      })}</head><body><nav class="fixed top-0 left-0 right-0 z-50"></nav><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="GuideArticlePage_summary__fixture">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${guideSection}${asset}${related}<a href="/guide">${hub.back}</a><footer></footer></body></html>`,
       style
     );
   }
@@ -252,6 +255,26 @@ test('rejects duplicate shared homepage navigation', () => {
       filePath,
       surface: 'shell',
       reason: /expected exactly one shared homepage navbar/
+    });
+  } finally {
+    fs.rmSync(outDir, { recursive: true, force: true });
+  }
+});
+
+test('rejects broken Guide section fragment links', () => {
+  const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-guide-export-anchors-'));
+  try {
+    writeFixture(outDir, 'io');
+    const article = 'guide/' + registry.entries[0].slug;
+    const filePath = mutateRoute(outDir, article, (html) =>
+      html.replace('#guide-section-solution', '#guide-section-missing')
+    );
+    assertScopedFailure(() => verifyGuideExport({ outDir, variant: 'io' }), {
+      variant: 'io',
+      slug: registry.entries[0].slug,
+      filePath,
+      surface: 'anchors',
+      reason: /has no matching Guide heading/
     });
   } finally {
     fs.rmSync(outDir, { recursive: true, force: true });

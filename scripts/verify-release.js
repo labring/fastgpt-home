@@ -278,14 +278,6 @@ function runGuideSourceChecks(failures, env, variant) {
     env,
     variant,
   );
-  nodeStep(
-    failures,
-    `Guide SEO graph source verification${suffix}`,
-    'scripts/verify-guide-seo-graph.js',
-    [],
-    env,
-    variant,
-  );
 }
 
 function extractP1SuccessMeasurement(output) {

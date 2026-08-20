@@ -14,6 +14,7 @@ const hubCopy: Record<
     breadcrumbGuide: string;
     heading: string;
     description: string;
+    readGuide: string;
     groups: Record<GuidePublicationGroup, { heading: string; description: string }>;
   }
 > = {
@@ -22,6 +23,7 @@ const hubCopy: Record<
     breadcrumbGuide: 'Guides',
     heading: 'FastGPT Guides',
     description: 'Practical enterprise AI implementation and decision guides.',
+    readGuide: 'Read guide',
     groups: {
       decision: {
         heading: 'Decision guides',
@@ -43,6 +45,7 @@ const hubCopy: Record<
     breadcrumbGuide: '指南',
     heading: 'FastGPT 指南',
     description: '企业 AI 落地与选型实践指南。',
+    readGuide: '阅读指南',
     groups: {
       decision: {
         heading: '决策指南',
@@ -82,28 +85,42 @@ export default function GuideHubPage({ locale }: { locale: GuidePublishedLocale 
           <h1>{copy.heading}</h1>
           <p>{copy.description}</p>
         </header>
-        {HUB_GROUPS.map((group) => {
+        {HUB_GROUPS.map((group, groupIndex) => {
           const groupCopy = copy.groups[group];
           const cards = guideEntries.filter((entry) => entry.group === group);
 
           return (
             <section aria-labelledby={`guide-group-${group}`} className={styles.group} key={group}>
               <div className={styles.groupHeader}>
+                <span className={styles.groupIndex}>{String(groupIndex + 1).padStart(2, '0')}</span>
                 <h2 id={`guide-group-${group}`}>{groupCopy.heading}</h2>
                 <p>{groupCopy.description}</p>
               </div>
               <ul className={styles.cardGrid}>
-                {cards.map((entry) => {
+                {cards.map((entry, index) => {
                   const source = entry[locale];
 
                   return (
-                    <li key={entry.slug}>
+                    <li
+                      className={index === 0 ? styles.featuredCardItem : undefined}
+                      key={entry.slug}
+                    >
                       <Link
-                        className={styles.card}
+                        className={styles.card + (index === 0 ? ' ' + styles.featuredCard : '')}
                         href={getOwnedLocalePath(locale, getGuidePath(entry.slug))}
                       >
-                        <h3>{source.h1}</h3>
-                        <p>{source.metaDescription}</p>
+                        <div className={styles.cardTopline}>
+                          <span>{String(index + 1).padStart(2, '0')}</span>
+                          <span>{groupCopy.heading}</span>
+                        </div>
+                        <div>
+                          <h3>{source.h1}</h3>
+                          <p>{source.metaDescription}</p>
+                        </div>
+                        <span className={styles.cardAction}>
+                          {copy.readGuide}
+                          <span aria-hidden="true">↗</span>
+                        </span>
                       </Link>
                     </li>
                   );

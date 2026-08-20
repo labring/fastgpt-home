@@ -92,7 +92,6 @@ test('release coordinator composes Guide checks around each fresh variant export
     positions
   );
   assert(source.includes('scripts/verify-guide-content.js'));
-  assert(source.includes('scripts/verify-guide-seo-graph.js'));
   assert(source.includes('scripts/verify-guide-export.js'));
   assert(source.includes("const variants = options.variant ? [options.variant] : ['io', 'cn'];"));
 

@@ -112,7 +112,7 @@ export default function CategoryTabBar({
     const maxScrollLeft = container.scrollWidth - container.clientWidth;
     let targetScrollLeft =
       activeBtn.offsetLeft -
-      container.clientWidth / 2
+      container.clientWidth / 2 -
       activeBtn.offsetWidth / 2;
 
     targetScrollLeft = Math.max(0, Math.min(targetScrollLeft, maxScrollLeft));

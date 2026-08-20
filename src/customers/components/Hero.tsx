@@ -63,6 +63,8 @@ export default function Hero({ overviewStats }: { overviewStats: { value: string
 
       <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center mt-2 mb-2 ${isAnimationComplete ? '' : 'transform-gpu'}`}>
         <h1 className={`text-4xl md:text-6xl font-extrabold tracking-tight text-brand-900 dark:text-gray-100 my-6 leading-tight font-display max-w-full flex flex-col md:flex-row flex-nowrap justify-center items-center md:whitespace-nowrap ${isAnimationComplete ? '' : 'transform-gpu will-change-transform'}`}>
+          {/* SSR/无 JS 环境可读的完整标题（打字机动画仅作用于视觉层） */}
+          <span className="sr-only">{fullText}</span>
           <span>专注于构建</span>
           <span className={`relative inline-block mt-2 md:mt-0 ml-0 md:ml-4 text-4xl md:text-[80px] leading-tight ${isAnimationComplete ? '' : 'transform-gpu'}`}>
             <span className={`inline-block bg-gradient-to-r from-brand-600 via-brand-500 to-indigo-600 dark:from-brand-400 dark:via-brand-300 dark:to-indigo-400 bg-clip-text text-transparent whitespace-normal md:whitespace-nowrap break-all text-center ${

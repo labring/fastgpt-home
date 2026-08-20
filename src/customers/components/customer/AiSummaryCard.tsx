@@ -86,7 +86,9 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
     (key: string) => buildAiSummaryCacheKey(customerId, contentVersion, key),
     [customerId, contentVersion]
   );
-  const initialCache = readAiSummaryCache(customerId, contentVersion);
+  // 组件按 key={customerId:contentVersion} 重建，缓存只读一次即可；
+  // useState 惰性初始化避免每次渲染同步读 sessionStorage。
+  const [initialCache] = useState(() => readAiSummaryCache(customerId, contentVersion));
 
   const [isOpen, setIsOpen] = useState(false);
   const [activeTab, setActiveTab] = useState<'qa' | 'summary'>('qa');
@@ -122,15 +124,15 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
     };
   }, [customerId, contentVersion]);
 
-  // Save to cache
+  // Save to cache（仅在完整生成且无错误时落盘，避免中止后的残缺内容被当作完成态）
   useEffect(() => {
-    if (!isGenerating && hasGeneratedSummary) {
+    if (!isGenerating && hasGeneratedSummary && !hasSummaryError) {
       sessionStorage.setItem(getCacheKey('painPoints'), painPoints);
       sessionStorage.setItem(getCacheKey('capabilities'), capabilities);
       sessionStorage.setItem(getCacheKey('value'), value);
       sessionStorage.setItem(getCacheKey('hasGenerated'), 'true');
     }
-  }, [painPoints, capabilities, value, isGenerating, hasGeneratedSummary, getCacheKey]);
+  }, [painPoints, capabilities, value, isGenerating, hasGeneratedSummary, hasSummaryError, getCacheKey]);
 
   useEffect(() => {
     if (!isQaGenerating && chatHistory.length > 0) {
@@ -369,14 +371,35 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
       setIsGenerating(false);
+      // 用户主动停止后内容残缺：置错误态，让“重新生成提炼”可用，
+      // 并阻止把未完成内容当作完成态写入缓存。
+      setHasSummaryError(true);
+      toast.info('已停止生成，可重新生成提炼');
     }
   };
 
-  const handleCopy = (text: string, index: number) => {
-    navigator.clipboard.writeText(text).then(() => {
-      setCopiedIndex(index);
-      setTimeout(() => setCopiedIndex(null), 2000);
-    });
+  const handleCopy = async (text: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(text);
+    } catch {
+      // 非 HTTPS / 无剪贴板权限时的降级方案
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+      } catch {
+        toast.error('复制失败，请手动复制');
+        return;
+      } finally {
+        document.body.removeChild(textarea);
+      }
+    }
+    setCopiedIndex(index);
+    setTimeout(() => setCopiedIndex(null), 2000);
   };
 
   const handleClose = () => {
@@ -387,7 +410,9 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
     <>
       {/* 悬浮触发按钮：右侧居中、紧凑型侧边栏标签设计 */}
       <button
+        type="button"
         onClick={handleOpen}
+        aria-label="打开 AI 助手"
         className={`fixed right-0 top-1/2 -translate-y-1/2 z-40 group flex flex-col items-center gap-2 py-4 px-2 rounded-l-xl bg-white dark:bg-[#292d33] shadow-[-4px_0_20px_rgba(0,0,0,0.1)] dark:shadow-[-4px_0_18px_rgba(0,0,0,0.28)] border border-r-0 border-gray-200 dark:border-[#373c43] hover:pl-3 transition-all duration-300 ease-out transform-gpu ${isOpen ? 'translate-x-full opacity-0' : 'translate-x-0 opacity-100'}`}
       >
         <div className="relative">
@@ -421,17 +446,21 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
             <div className="flex items-center gap-1">
               {(isGenerating && activeTab === 'summary') && (
                 <button
+                  type="button"
                   onClick={handleStopSummary}
                   className="flex items-center gap-1.5 px-2 py-1.5 rounded-lg text-rose-500 hover:bg-rose-50 dark:hover:bg-rose-500/10 transition-colors mr-1"
                   title="停止生成"
+                  aria-label="停止生成"
                 >
                   <StopCircleIcon weight="fill" className="w-4 h-4 animate-pulse" />
                   <span className="text-[11px] font-medium">停止</span>
                 </button>
               )}
               <button
+                type="button"
                 onClick={handleClose}
                 className="p-1.5 rounded-lg text-gray-400 hover:text-gray-900 hover:bg-gray-100 dark:text-[#8f959e] dark:hover:text-[#f1f3f5] dark:hover:bg-[#30343b] transition-colors"
+                aria-label="关闭 AI 助手"
               >
                 <CaretDownIcon weight="bold" className="w-4 h-4" />
               </button>
@@ -439,8 +468,11 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
           </div>
 
           {/* Tabs */}
-          <div className="flex bg-gray-100/80 dark:bg-[#202124] p-1 rounded-lg w-full">
+          <div role="tablist" aria-label="AI 助手功能切换" className="flex bg-gray-100/80 dark:bg-[#202124] p-1 rounded-lg w-full">
             <button
+              type="button"
+              role="tab"
+              aria-selected={activeTab === 'qa'}
               onClick={() => setActiveTab('qa')}
               className={`flex-1 flex items-center justify-center gap-1.5 text-[12px] py-1.5 rounded-md transition-all ${activeTab === 'qa' ? 'bg-white dark:bg-[#30343b] text-gray-900 dark:text-[#f1f3f5] font-semibold shadow-sm' : 'text-gray-500 dark:text-[#aeb4bc] hover:text-gray-700'}`}
             >
@@ -448,6 +480,9 @@ export default function AiSummaryCard({ customerId, contentVersion }: AiSummaryC
               文档问答
             </button>
             <button
+              type="button"
+              role="tab"
+              aria-selected={activeTab === 'summary'}
               onClick={() => setActiveTab('summary')}
               className={`flex-1 flex items-center justify-center gap-1.5 text-[12px] py-1.5 rounded-md transition-all ${activeTab === 'summary' ? 'bg-white dark:bg-[#30343b] text-gray-900 dark:text-[#f1f3f5] font-semibold shadow-sm' : 'text-gray-500 dark:text-[#aeb4bc] hover:text-gray-700'}`}
             >

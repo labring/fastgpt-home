@@ -38,6 +38,8 @@ export default function MobileToc({
    */
   const [renderOverlay, setRenderOverlay] = useState(false);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
+  const lastFocusedRef = useRef<HTMLElement | null>(null);
 
   useEffect(() => {
     if (isOpen) {
@@ -64,11 +66,41 @@ export default function MobileToc({
     };
   }, [isOpen, renderOverlay]);
 
+  // 对话框语义：打开时记录并移入焦点，Escape 关闭，关闭后还原焦点。
+  useEffect(() => {
+    if (!isOpen) return;
+
+    lastFocusedRef.current = document.activeElement as HTMLElement | null;
+    // 等面板渲染进 DOM 后再聚焦关闭按钮
+    const frameId = window.requestAnimationFrame(() => {
+      closeButtonRef.current?.focus();
+    });
+
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        onClose();
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+
+    return () => {
+      window.cancelAnimationFrame(frameId);
+      window.removeEventListener('keydown', handleKeyDown);
+      lastFocusedRef.current?.focus?.();
+      lastFocusedRef.current = null;
+    };
+  }, [isOpen, onClose]);
+
   // 完全关闭后不渲染任何 DOM，从根源上避免固定遮罩层拦截页面触摸滚动
   if (!renderOverlay) return null;
 
   return (
-    <div className={`fixed inset-0 z-100 lg:hidden transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}>
+    <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="目录大纲"
+      className={`fixed inset-0 z-100 lg:hidden transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}
+    >
       {/* 背景遮罩 — backdrop-blur-sm 仅在打开时应用，关闭时移除 iOS 上的 GPU 合成层，避免拦截页面触摸滚动 */}
       <div
         className={`absolute inset-0 bg-gray-900/60 transition-opacity duration-500 cursor-pointer ${
@@ -84,8 +116,11 @@ export default function MobileToc({
           <div className="flex items-center justify-between px-6 py-6 border-b border-gray-100 dark:border-[#373c43]">
             <h3 className="text-xl font-bold text-gray-900 dark:text-[#f1f3f5] font-display">目录大纲</h3>
             <button
+              ref={closeButtonRef}
+              type="button"
               onClick={onClose}
               className="p-2 -mr-2 text-gray-400 hover:text-gray-600 dark:text-[#8f959e] dark:hover:text-[#dfe1e5] transition-colors"
+              aria-label="关闭目录"
             >
               <XIcon className="w-6 h-6" weight="bold" />
             </button>

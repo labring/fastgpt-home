@@ -92,11 +92,13 @@ export default function SearchBar({
             <span className="animate-pulse text-brand-500 text-[14px]">✨</span>
             <span>试试用自然语言描述需求，AI 智能匹配</span>
             <button
+              type="button"
               className="ml-0.5 text-gray-400 hover:text-gray-600 dark:text-[#8f959e] dark:hover:text-[#f1f3f5] transition-colors"
               onClick={(e) => {
                 e.stopPropagation();
                 dismissTooltip();
               }}
+              aria-label="关闭 AI 搜索提示"
             >
               <XCircleIcon weight="fill" className="w-3.5 h-3.5" />
             </button>
@@ -124,6 +126,7 @@ export default function SearchBar({
             onSmartSearch?.(searchQuery.trim());
           }
         }}
+        aria-label="搜索客户案例"
         className={`${compact ? 'py-2 pl-9 pr-11 text-[13px]' : 'py-2.5 pl-11 pr-14 text-sm sm:pr-24'} block w-full border border-[#dee0e3] dark:border-[#4b525c] rounded-xl bg-[#f7f8fa] dark:bg-[#292d33] placeholder:text-[#8f959e] dark:placeholder:text-[#8f959e] focus:outline-none focus:ring-4 focus:ring-brand-500/10 dark:focus:ring-[#8ab4f8]/15 focus:border-brand-500 dark:focus:border-[#8ab4f8]/60 focus:bg-white dark:focus:bg-[#202124] transition-all duration-300 shadow-md hover:shadow-lg text-[#2b2f36] dark:text-[#dfe1e5]`}
         placeholder={placeholder}
         disabled={isSearching}
@@ -132,9 +135,11 @@ export default function SearchBar({
       <div className={`absolute inset-y-0 right-0 flex items-center gap-2 ${compact ? 'pr-1.5' : 'pr-2'}`}>
         {searchQuery && !isSearching && (
           <button
+            type="button"
             onClick={() => onSearchChange?.("")}
             className="p-1.5 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-all"
             title="清除搜索"
+            aria-label="清除搜索"
           >
             <XCircleIcon weight="fill" className="h-[18px] w-[18px]" />
           </button>
@@ -148,10 +153,12 @@ export default function SearchBar({
           </div>
         ) : (
           <button
+            type="button"
             onClick={() => searchQuery.trim() && onSmartSearch?.(searchQuery.trim())}
             disabled={!searchQuery.trim()}
             className={`group/enter flex items-center justify-center rounded-lg transition-all duration-300 hover:bg-brand-50 active:scale-90 disabled:cursor-not-allowed disabled:opacity-30 dark:hover:bg-brand-900/30 cursor-pointer ${compact ? 'px-2 py-1.5' : 'px-2.5 py-1.5 sm:px-4'}`}
             title="点击搜索"
+            aria-label="搜索"
           >
             <ArrowRightIcon
               weight="bold"

@@ -2,7 +2,6 @@ import { pinyinIncludes } from '@/customers/lib/pinyin';
 import { parseCompactCount } from '@/customers/lib/counts';
 import { withBasePath } from '@/customers/lib/base-path';
 import type { PublicCustomerSortKey } from '@/customers/lib/customer-pagination';
-import type { CustomerCardData } from '@/customers/types/customer';
 
 export interface CategoryOption {
   id: string;
@@ -107,44 +106,6 @@ export function matchesCustomerSearch(
     pinyinIncludes(title, query) ||
     pinyinIncludes(description, query)
   );
-}
-
-export function filterPublicCustomers(
-  customers: CustomerCardData[],
-  currentCategory: string,
-  searchQuery: string,
-  sortBy: CustomerSortKey
-) {
-  return customers
-    .filter((customer) => {
-      const matchesCategory =
-        currentCategory === 'all' ||
-        customer.categorySlug === currentCategory ||
-        customer.categoryName === currentCategory;
-
-      return (
-        matchesCategory &&
-        matchesCustomerSearch(customer.title, customer.description, searchQuery)
-      );
-    })
-    .sort((left, right) => {
-      if (sortBy === 'likes') {
-        return right.likes - left.likes;
-      }
-
-      if (sortBy === 'usage') {
-        return parseCompactCount(right.usage) - parseCompactCount(left.usage);
-      }
-
-      if (sortBy === 'time') {
-        return (
-          new Date(right.createdAt).getTime() -
-          new Date(left.createdAt).getTime()
-        );
-      }
-
-      return 0;
-    });
 }
 
 export function filterAdminCustomers<

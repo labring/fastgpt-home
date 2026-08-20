@@ -128,10 +128,22 @@ const CustomerCard = React.memo(function CustomerCard({
     router.push(detailHref);
   };
 
+  const handleCardKeyDown = (e: React.KeyboardEvent) => {
+    // 整卡以 role="link" 暴露：Enter/Space 触发跳转，保证键盘可达。
+    if (e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      router.push(detailHref);
+    }
+  };
+
   return (
     <div
       onClick={handleCardClick}
-      className="customer-card flex flex-col h-full w-full group cursor-pointer animate-fade-in-up"
+      onKeyDown={handleCardKeyDown}
+      role="link"
+      tabIndex={0}
+      aria-label={`查看案例：${customer.title}`}
+      className="customer-card flex flex-col h-full w-full group cursor-pointer animate-fade-in-up focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60"
       style={{ animationDelay: `${animationDelay}s` }}
     >
       <div className="card-inner relative flex flex-col h-full w-full overflow-hidden rounded-2xl border border-surface-300 dark:border-[#373c43] bg-white dark:bg-[#292d33] shadow-[0_1px_2px_rgba(31,35,41,0.04)] dark:shadow-[0_4px_16px_rgba(0,0,0,0.20)] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:border-[#b8c0cc] dark:group-hover:border-[#5e6673] group-hover:shadow-[0_14px_32px_rgba(31,35,41,0.10)] dark:group-hover:shadow-[0_14px_30px_rgba(0,0,0,0.30)] transform-gpu">
@@ -164,7 +176,14 @@ const CustomerCard = React.memo(function CustomerCard({
         <div className="relative z-10 flex flex-1 flex-col bg-transparent p-3.5 sm:p-4 md:p-4">
           <div className="flex items-start justify-between gap-2 mb-1">
             <h3 className="text-[18px] sm:text-[20px] md:text-[22px] font-bold leading-tight text-[#1f2329] dark:text-[#f1f3f5] transition-colors group-hover:text-brand-600 dark:group-hover:text-[#8ab4f8] font-display line-clamp-1">
-              {customer.title}
+              {/* 标题链接：提供关键词锚文本、键盘可达与中键新标签打开 */}
+              <Link
+                href={detailHref}
+                onClick={(e) => e.stopPropagation()}
+                className="focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-500/60 rounded"
+              >
+                {customer.title}
+              </Link>
             </h3>
           </div>
           <div className="hidden items-center gap-1 sm:gap-1.5 mb-1 mt-0.5 sm:mt-1">

@@ -11,7 +11,7 @@ export default function EmptyState({ onOpenModal }: { onOpenModal: (context?: Ct
         没有找到合适的客户案例？
       </h3>
       <p className="text-base text-[#646a73] dark:text-[#dfe1e5] max-w-md mx-auto mb-8 px-4 leading-relaxed">
-        没找到合适案例？提交业务需求，专家将在 1 天内联系你，协助匹配可落地的 AI 客户案例。
+        试试更换关键词或切换分类；也可以提交业务需求，专家将在 1 天内联系你，协助匹配可落地的 AI 客户案例。
       </p>
       <button
         onClick={() => onOpenModal({

@@ -264,7 +264,7 @@ export function applyCustomerLikeState(
   return {
     ...data,
     customers: data.customers.map((customer) => {
-      if (customer.id !== id) {
+      if (String(customer.id) !== String(id)) {
         return customer;
       }
 

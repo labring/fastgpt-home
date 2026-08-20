@@ -18,6 +18,7 @@ export default function FormModal() {
   const [isIframeLoading, setIsIframeLoading] = useState(true);
   const [modalContext, setModalContext] = useState<CtaModalContext>(DEFAULT_CTA_MODAL_CONTEXT);
   const closeButtonRef = useRef<HTMLButtonElement>(null);
+  const dialogRef = useRef<HTMLDivElement>(null);
   const closeTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const openRafRef = useRef<ReturnType<typeof requestAnimationFrame> | null>(null);
   /**
@@ -105,17 +106,43 @@ export default function FormModal() {
     };
   }, [isFormModalOpen]);
 
-  // Escape 键关闭弹窗（无障碍最佳实践）
+  // 焦点管理（无障碍最佳实践）：Escape 关闭、Tab 循环在弹窗内、关闭后还原焦点
   useEffect(() => {
     if (!isFormModalOpen) return;
+
+    const dialogEl = dialogRef.current;
+    const lastFocused = document.activeElement as HTMLElement | null;
+
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.preventDefault();
         closeModal();
+        return;
+      }
+
+      if (e.key === 'Tab' && dialogEl) {
+        const focusables = dialogEl.querySelectorAll<HTMLElement>(
+          'a[href], button:not([disabled]), input:not([disabled]), textarea:not([disabled]), select:not([disabled]), [tabindex]:not([tabindex="-1"])'
+        );
+        if (focusables.length === 0) return;
+        const first = focusables[0];
+        const last = focusables[focusables.length - 1];
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
       }
     };
+
     window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+      // 关闭后还原焦点到打开弹窗前的元素
+      lastFocused?.focus?.();
+    };
   }, [isFormModalOpen, closeModal]);
 
   // 组件卸载时清理所有定时器，防止内存泄漏
@@ -128,6 +155,7 @@ export default function FormModal() {
 
   return (
     <div
+      ref={dialogRef}
       role="dialog"
       aria-modal={isFormModalOpen}
       aria-hidden={!isFormModalOpen}

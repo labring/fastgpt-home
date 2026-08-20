@@ -1,4 +1,5 @@
 import React from 'react';
+import DOMPurify from 'isomorphic-dompurify';
 import type { Components } from 'react-markdown';
 import type { MarkdownRendererProps } from '../types';
 import { extractTextFromReactNode, getStringProp, joinClassNames } from '../utils';
@@ -396,12 +397,17 @@ export const feishuMarkdownRenderers: Components & Record<string, unknown> = {
     }
 
     if (type === 'svg') {
+      // 飞书画板导出的 SVG 属不可信内容：用 DOMPurify 白名单净化，
+      // 仅保留 SVG 标签并剥离所有 on* 事件属性与脚本，防止存储型 XSS。
+      const sanitizedSvg = DOMPurify.sanitize(content, {
+        USE_PROFILES: { svg: true, svgFilters: true }
+      });
       return (
         <div className="not-prose my-8 overflow-x-auto rounded-2xl border border-slate-200 bg-white p-4 shadow-sm dark:border-[#373c43] dark:bg-[#202124]">
           <div
             className="[&>svg]:mx-auto [&>svg]:max-w-full [&>svg]:h-auto"
             dangerouslySetInnerHTML={{
-              __html: content.replace(/<script[\s\S]*?<\/script>/gi, '')
+              __html: sanitizedSvg
             }}
           />
         </div>

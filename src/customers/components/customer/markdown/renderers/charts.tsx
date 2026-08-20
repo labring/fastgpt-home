@@ -73,17 +73,25 @@ const loadMermaid = () => import('mermaid').then((m) => {
   return m.default;
 });
 
-export function parseEChartsOptions(optionsStr: string) {
-  try {
-    const getOptions = new Function(`
-      try {
-        const option = ${optionsStr};
-        return option;
-      } catch {
-        return null;
-      }
-    `);
+// 仅允许纯对象/数组/原始值字面量构成的 ECharts 配置。拒绝任何函数、
+// 调用、成员访问、运算符与危险关键字，避免把 markdown 正文当代码执行
+// （new Function 与 eval 等价，属于存储型 XSS 面）。
+const ECHARTS_UNSAFE_TOKEN_RE =
+  /[()=+*/%`;&|<>!?~]|-(?!\d)|\bfunction\b|=>|\b(new|typeof|instanceof|import|require|eval|window|document|globalThis|process|Math|Date|JSON|constructor|prototype)\b|\.[a-zA-Z_$]/i;
 
+export function parseEChartsOptions(optionsStr: string) {
+  const source = optionsStr.trim();
+  if (!source) return null;
+
+  // 先把字符串字面量脱敏，避免字符串内的括号/关键字被误判。
+  const masked = source.replace(/'(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*"/g, '"s"');
+  if (ECHARTS_UNSAFE_TOKEN_RE.test(masked)) {
+    return null;
+  }
+
+  try {
+    // 已通过静态白名单校验，此处仅求值纯对象字面量表达式。
+    const getOptions = new Function(`return (${source});`) as () => unknown;
     return getOptions();
   } catch {
     return null;

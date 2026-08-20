@@ -18,4 +18,19 @@ describe('markdown chart helpers', () => {
     });
     expect(parseEChartsOptions('const nope = true')).toBeNull();
   });
+
+  it('rejects executable payloads instead of evaluating them (XSS guard)', () => {
+    expect(parseEChartsOptions('(function(){ window.__xss = 1 })()')).toBeNull();
+    expect(parseEChartsOptions('{ formatter: (v) => v }')).toBeNull();
+    expect(parseEChartsOptions('{ data: [1].map(x => x) }')).toBeNull();
+    expect(parseEChartsOptions('{ title: { text: "ok" } }; fetch("/evil")')).toBeNull();
+    expect(parseEChartsOptions('{ a: Date.now() }')).toBeNull();
+  });
+
+  it('still accepts literal-only options with numbers and escaped strings', () => {
+    expect(parseEChartsOptions('{ data: [-1, 0, 1.5], name: "it\'s fine" }')).toMatchObject({
+      data: [-1, 0, 1.5],
+      name: "it's fine"
+    });
+  });
 });

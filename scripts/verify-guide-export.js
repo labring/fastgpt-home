@@ -331,6 +331,17 @@ function verifyMetadata(html, page, expectation, filePath) {
   assertEqual(context, getSingleTagContent(html, 'h1', context), page.source.h1, 'h1');
 }
 
+function verifySharedShell(html, page, expectation, filePath) {
+  const context = { variant: expectation.variant, slug: page.slug, filePath, surface: 'shell' };
+  const navbarClasses = ['fixed', 'top-0', 'left-0', 'right-0', 'z-50'];
+  const navbars = getTags(html, 'nav').filter((tag) => {
+    const classes = new Set(getAttribute(tag, 'class').split(/\s+/));
+    return navbarClasses.every((className) => classes.has(className));
+  });
+  if (navbars.length !== 1) fail(context, 'expected exactly one shared homepage navbar');
+  if (getTags(html, 'footer').length !== 1) fail(context, 'expected exactly one shared homepage footer');
+}
+
 function verifyHub(html, page, expectation, filePath) {
   const context = { variant: expectation.variant, slug: page.slug, filePath, surface: 'schema' };
   const nodes = getJsonLdNodes(html, context);
@@ -463,6 +474,7 @@ function verifyGuideExport({ outDir, variant, entries }) {
     const filePath = routeFiles.get(route);
     const html = fs.readFileSync(filePath, 'utf8');
     verifyMetadata(html, page, expectation, filePath);
+    verifySharedShell(html, page, expectation, filePath);
     if (page.hub) verifyHub(html, page, expectation, filePath);
     else verifyArticle(html, page, expectation, filePath);
   }

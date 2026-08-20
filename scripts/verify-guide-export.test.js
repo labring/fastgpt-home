@@ -111,7 +111,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
           ]
         }
       ]
-    })}</head><body><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a></nav><h1>${escapeHtml(hub.h1)}</h1>${cards}</body></html>`,
+    })}</head><body><nav class="fixed top-0 left-0 right-0 z-50"></nav><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a></nav><h1>${escapeHtml(hub.h1)}</h1>${cards}<footer></footer></body></html>`,
     style
   );
 
@@ -158,7 +158,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
       `guide/${entry.slug}`,
       `<html><head><title>${escapeHtml(source.metaTitle)}</title><meta name="description" content="${escapeHtml(source.metaDescription)}"><link rel="canonical" href="${canonical}"><meta property="og:url" content="${canonical}">${alternates(entry.slug)}${jsonLd({
         '@graph': schema
-      })}</head><body><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="GuideArticlePage_summary__fixture">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${asset}${related}<a href="/guide">${hub.back}</a></body></html>`,
+      })}</head><body><nav class="fixed top-0 left-0 right-0 z-50"></nav><nav aria-label="Breadcrumb"><a href="/">${hub.home}</a><a href="/guide">${hub.guide}</a></nav><h1>${escapeHtml(source.h1)}</h1><p class="GuideArticlePage_summary__fixture">${escapeHtml(source.metaDescription)}</p><time datetime="${source.dateModified}">${updatedAt(source, locale)}</time>${asset}${related}<a href="/guide">${hub.back}</a><footer></footer></body></html>`,
       style
     );
   }
@@ -234,6 +234,25 @@ test('CLI reports the selected variant and exact Guide counts', () => {
       { encoding: 'utf8' }
     );
     assert.match(output, /variant=cn Guide HTML verified: 9 pages, 9 sitemap URLs/);
+  } finally {
+    fs.rmSync(outDir, { recursive: true, force: true });
+  }
+});
+
+test('rejects duplicate shared homepage navigation', () => {
+  const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-guide-export-shell-'));
+  try {
+    writeFixture(outDir, 'cn');
+    const filePath = mutateRoute(outDir, 'guide', (html) =>
+      html.replace('</body>', '<nav class="fixed top-0 left-0 right-0 z-50"></nav></body>')
+    );
+    assertScopedFailure(() => verifyGuideExport({ outDir, variant: 'cn' }), {
+      variant: 'cn',
+      slug: 'hub',
+      filePath,
+      surface: 'shell',
+      reason: /expected exactly one shared homepage navbar/
+    });
   } finally {
     fs.rmSync(outDir, { recursive: true, force: true });
   }

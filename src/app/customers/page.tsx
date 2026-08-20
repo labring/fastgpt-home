@@ -13,8 +13,9 @@ import HomeChatbot from '@/customers/components/home/HomeChatbot';
 import { readCachedGitHubStars } from '@/customers/lib/github-stats';
 
 // The homepage depends on database-backed content and system settings.
-// Serving it dynamically avoids requiring MongoDB access during `next build`.
-export const dynamic = 'force-dynamic';
+// ISR（60s）避免构建时访问 MongoDB，同时让列表/目录/JSON-LD 不再是
+// 每次请求全量查库；客户端挂载后仍会按访客 cookie 刷新点赞等个性化态。
+export const revalidate = 60;
 
 export async function HomePageContent({
   categorySlug,

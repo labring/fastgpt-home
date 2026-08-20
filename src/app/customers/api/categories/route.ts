@@ -27,7 +27,9 @@ export async function GET() {
       color: normalizeHexColor(category.color, getAutoCategoryColor(category.name))
     })), {
       headers: {
-        'Cache-Control': 'no-store, max-age=0'
+        // 分类列表全局一致且低频变化：允许 CDN/浏览器短缓存，
+        // 写操作通过 revalidateCategoryRefs 失效。
+        'Cache-Control': 'public, s-maxage=60, stale-while-revalidate=300'
       }
     });
   } catch (error) {

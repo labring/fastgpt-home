@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { redirect } from 'next/navigation';
+import { notFound } from 'next/navigation';
 import { HomePageContent } from '@/app/customers/page';
 import { getCategories } from '@/customers/lib/data';
 import { absoluteUrl } from '@/customers/lib/site-url';
@@ -9,7 +9,7 @@ type CategoryPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 60;
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { slug } = await params;
@@ -67,7 +67,7 @@ export default async function CategoryPage({ params }: CategoryPageProps) {
   const category = categories.find((item) => item.slug === slug);
 
   if (!category) {
-    redirect('/customers');
+    notFound();
   }
 
   return (

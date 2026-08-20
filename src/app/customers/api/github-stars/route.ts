@@ -8,7 +8,8 @@ export async function GET() {
 
   return NextResponse.json(data, {
     headers: {
-      'Cache-Control': 'no-store, max-age=0'
+      // 与 github-stats 的 6 小时内存缓存语义对齐：CDN/浏览器也缓存 6 小时。
+      'Cache-Control': 'public, s-maxage=21600, stale-while-revalidate=86400'
     }
   });
 }

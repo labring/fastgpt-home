@@ -2,7 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { useState, useEffect, useCallback, useMemo, useRef, lazy, Suspense } from "react";
+import { useState, useEffect, useCallback, useMemo, useRef, lazy, Suspense, memo } from "react";
 import { ArrowRightIcon, CaretLeftIcon, CaretRightIcon } from "@phosphor-icons/react";
 import Navbar from "@/customers/components/Navbar";
 import CustomerCard, { Customer as CardCustomer } from "@/customers/components/CustomerCard";
@@ -37,7 +37,7 @@ import { openCtaModal, type CtaModalContext } from "@/customers/lib/cta";
 import { trackRybbitEvent } from '@/customers/lib/rybbit';
 import { publishCustomerInteractionPatch } from "@/customers/lib/customer-interaction-events";
 
-import useSWR, { useSWRConfig } from "swr";
+import useSWR, { SWRConfig, useSWRConfig } from "swr";
 
 import ReactMarkdown from "react-markdown";
 import {
@@ -67,7 +67,28 @@ const noStoreJsonFetcher = (url: string) =>
     return response.json();
   });
 
-export default function CustomerPageClient({ id, initialCustomer, initialRelatedCustomers = [] }: CustomerPageClientProps) {
+// 正文渲染抽成 memo 子组件：TOC 滚动产生的 activeId 是高频状态，
+// 若与整篇 Markdown 共享渲染作用域，滚动经过每个标题都会让全文
+// （表格/图表/图片）反复 reconciliation。memo 后正文仅在内容变化时重渲染。
+const MarkdownArticle = memo(function MarkdownArticle({ content }: { content: string }) {
+  return (
+    <div className={`${MARKDOWN_PROSE_CLASSES} transition-all duration-500 ease-in-out text-[15px] sm:text-base`}>
+      <ReactMarkdown
+        remarkPlugins={markdownRemarkPlugins}
+        rehypePlugins={markdownRehypePlugins}
+        components={markdownComponents}
+      >
+        {prepareMarkdownContent(content)}
+      </ReactMarkdown>
+    </div>
+  );
+});
+
+interface CustomerPageClientInnerProps extends CustomerPageClientProps {
+  swrKey: string | null;
+}
+
+function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers = [], swrKey }: CustomerPageClientInnerProps) {
   const [localLikes, setLocalLikes] = useState(initialCustomer?.likes ?? 0);
   const [isLiked, setIsLiked] = useState(initialCustomer?.isLiked ?? false);
   const [localUsage, setLocalUsage] = useState<string>(initialCustomer?.usage ?? "");
@@ -97,12 +118,13 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
   }, []);
 
   const { data: customer, error } = useSWR<CustomerDetail>(
-    id ? withBasePath(`/api/customers/${id}`) : null,
+    swrKey,
     noStoreJsonFetcher,
     {
-      fallbackData: initialCustomer || undefined,
-      revalidateOnFocus: true,
-      revalidateOnReconnect: true,
+      // 服务端 ISR 数据通过 SWRConfig fallback 注册进缓存，挂载不再重复请求。
+      // 点赞/浏览已走本地乐观更新 + 显式 mutate，回焦/重连无需再强制刷新。
+      revalidateOnFocus: false,
+      revalidateOnReconnect: false,
       dedupingInterval: 10000,
       onSuccess: (data) => {
         if (customerIdRef.current !== id) {
@@ -179,7 +201,7 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
   }, [relatedCustomers, customer]);
 
   const prevCustomer = useMemo(() => {
-    if (!customer || navigationCustomers.length === 0) return null;
+    if (!customer || navigationCustomers.length <= 1) return null;
     const currentIndex = navigationCustomers.findIndex((item) => String(item.id) === String(customer.id));
     const safeCurrentIndex = currentIndex >= 0 ? currentIndex : 0;
     const previousIndex = (safeCurrentIndex - 1 + navigationCustomers.length) % navigationCustomers.length;
@@ -189,7 +211,7 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
   }, [navigationCustomers, customer]);
 
   const nextCustomer = useMemo(() => {
-    if (!customer || navigationCustomers.length === 0) return null;
+    if (!customer || navigationCustomers.length <= 1) return null;
     const currentIndex = navigationCustomers.findIndex((item) => String(item.id) === String(customer.id));
     const safeCurrentIndex = currentIndex >= 0 ? currentIndex : 0;
     const nextIndex = (safeCurrentIndex + 1) % navigationCustomers.length;
@@ -222,21 +244,30 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
   }, [relatedCustomers, customer?.categorySlug]);
 
   const nextPage = useCallback(() => {
+    if (totalPages <= 1) return;
     setCurrentPage((prev) => (prev + 1) % totalPages);
   }, [totalPages]);
 
   const prevPage = useCallback(() => {
+    if (totalPages <= 1) return;
     setCurrentPage((prev) => (prev - 1 + totalPages) % totalPages);
   }, [totalPages]);
 
   const handleCategoryClick = useCallback((categoryId: string) => {
+    // 优先从相关案例（卡片自带分类）解析 slug，其次回退到当前案例自身。
+    const matchedRelated = relatedCustomers.find(
+      (item) => String(item.categoryId) === String(categoryId)
+    );
     const categorySlug =
-      customer?.categoryId === categoryId ? customer.categorySlug : undefined;
+      matchedRelated?.categorySlug ||
+      (customer && String(customer.categoryId) === String(categoryId)
+        ? customer.categorySlug
+        : undefined);
 
     if (categorySlug) {
-      router.push(`/categories/${categorySlug}`);
+      router.push(withBasePath(`/categories/${categorySlug}`));
     }
-  }, [router, customer]);
+  }, [router, customer, relatedCustomers]);
 
   const handleRelatedLikeToggle = useCallback((customerId: string | number, state?: { isLiked: boolean; likes: number }) => {
     if (!state) {
@@ -507,7 +538,14 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
           handleLikeToggle={handleLikeToggle}
           openModal={openModal}
           onCategoryClick={handleCategoryClick}
-          onBack={() => router.back()}
+          onBack={() => {
+            // 从外链直接进入时无站内历史，退回首页避免离开站点
+            if (window.history.length > 1) {
+              router.back();
+            } else {
+              router.push(buildHomeHref({ section: 'customers' }));
+            }
+          }}
         />
 
         <div className="w-full bg-white dark:bg-[#202124] pt-6 pb-0 relative">
@@ -550,15 +588,7 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
                   />
                 </Suspense>
 
-                <div className={`${MARKDOWN_PROSE_CLASSES} transition-all duration-500 ease-in-out text-[15px] sm:text-base`}>
-                  <ReactMarkdown
-                    remarkPlugins={markdownRemarkPlugins}
-                    rehypePlugins={markdownRehypePlugins}
-                    components={markdownComponents}
-                  >
-                    {prepareMarkdownContent(markdownContent)}
-                  </ReactMarkdown>
-                </div>
+                <MarkdownArticle content={markdownContent} />
 
                 <HelpfulFeedback customerId={id} />
               </article>
@@ -660,5 +690,19 @@ export default function CustomerPageClient({ id, initialCustomer, initialRelated
 	        />
       </main>
     </div>
+  );
+}
+
+// 外层包装：把服务端 ISR 数据以 SWR fallback 注册进缓存，
+// 内层组件挂载时直接命中缓存，避免 fallbackData + no-store 的重复请求。
+export default function CustomerPageClient(props: CustomerPageClientProps) {
+  const swrKey = props.id ? withBasePath(`/api/customers/${props.id}`) : null;
+  const fallback =
+    swrKey && props.initialCustomer ? { [swrKey]: props.initialCustomer } : {};
+
+  return (
+    <SWRConfig value={{ fallback }}>
+      <CustomerPageClientInner {...props} swrKey={swrKey} />
+    </SWRConfig>
   );
 }

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { redirect, permanentRedirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import {
   generateCustomerMetadata,
   renderCustomerPage,
@@ -26,7 +26,7 @@ export default async function SemanticCustomerPage({ params }: SemanticCustomerP
   const customer = await getCustomerByIdPublic(routeParams.id);
 
   if (!customer) {
-    redirect('/customers');
+    notFound();
   }
 
   if (isValidObjectId(routeParams.id) && customer.slug) {

@@ -5,7 +5,7 @@ import { absoluteUrl } from '@/customers/lib/site-url';
 import { getCustomerPublicHref } from '@/customers/lib/customer-url';
 import { buildCustomerJsonLd } from '@/customers/lib/customer-json-ld';
 import type { Metadata } from 'next';
-import { redirect, permanentRedirect } from 'next/navigation';
+import { notFound, permanentRedirect } from 'next/navigation';
 import { withBasePath } from '@/customers/lib/base-path';
 
 type CustomerPageProps = {
@@ -66,6 +66,8 @@ export async function generateCustomerMetadata(params: CustomerRouteParams): Pro
       images: [
         {
           url: imageUrl,
+          width: 1200,
+          height: 630,
           alt: customer.title
         }
       ]
@@ -118,7 +120,7 @@ export default async function CustomerPage({ params }: CustomerPageProps) {
   const customer = await getCustomerByIdPublic(id);
 
   if (!customer) {
-    redirect('/customers');
+    notFound();
   }
 
   permanentRedirect(withBasePath(getCustomerPublicHref(customer)));

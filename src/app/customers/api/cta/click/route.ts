@@ -40,7 +40,7 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ success: false, error: 'Invalid request body' }, { status: 400 });
     }
 
-    const { source, solutionId, solutionTitle, categoryName } = body as Record<string, unknown>;
+    const { source, customerId, customerTitle, categoryName } = body as Record<string, unknown>;
 
     if (!isValidCtaSource(source)) {
       return NextResponse.json(
@@ -53,8 +53,8 @@ export async function POST(request: NextRequest) {
       await CtaClick.create({
         source,
         dateKey: getDateKey(new Date()),
-        solutionId: sanitizeOptionalString(solutionId),
-        solutionTitle: sanitizeOptionalString(solutionTitle),
+        customerId: sanitizeOptionalString(customerId),
+        customerTitle: sanitizeOptionalString(customerTitle),
         categoryName: sanitizeOptionalString(categoryName)
       });
     });

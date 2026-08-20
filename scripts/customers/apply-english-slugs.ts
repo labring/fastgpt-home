@@ -12,9 +12,9 @@ import { loadEnvFile } from './lib/env';
 loadEnvFile();
 
 async function main() {
-  const [{ default: dbConnect }, { default: Solution }] = await Promise.all([
+  const [{ default: dbConnect }, { default: Customer }] = await Promise.all([
     import('@/customers/lib/db'),
-    import('@/customers/models/Solution')
+    import('@/customers/models/Customer')
   ]);
 
   await dbConnect();
@@ -44,13 +44,13 @@ async function main() {
   }
 
   const ids = entries.map(([id]) => id);
-  const solutions = await Solution.find({ _id: { $in: ids } })
+  const customers = await Customer.find({ _id: { $in: ids } })
     .select('_id title slug')
     .lean<Array<{ _id: { toString(): string }; title: string; slug?: string | null }>>();
-  const solutionMap = new Map(solutions.map((s) => [s._id.toString(), s]));
+  const customerMap = new Map(customers.map((s) => [s._id.toString(), s]));
 
   // 校验：新 slug 不得与其他文档（含未在映射中的文档）冲突
-  const otherSlugs = await Solution.find({
+  const otherSlugs = await Customer.find({
     _id: { $nin: ids },
     slug: { $in: [...seen] }
   })
@@ -63,8 +63,8 @@ async function main() {
 
   const plan = entries
     .map(([id, slug]) => {
-      const solution = solutionMap.get(id);
-      return { id, title: solution?.title || '?', oldSlug: solution?.slug || '', newSlug: slug };
+      const customer = customerMap.get(id);
+      return { id, title: customer?.title || '?', oldSlug: customer?.slug || '', newSlug: slug };
     })
     .filter((item) => item.oldSlug !== item.newSlug);
 
@@ -80,7 +80,7 @@ async function main() {
 
   let written = 0;
   for (const item of plan) {
-    await Solution.updateOne({ _id: item.id }, { $set: { slug: item.newSlug } });
+    await Customer.updateOne({ _id: item.id }, { $set: { slug: item.newSlug } });
     written += 1;
   }
 

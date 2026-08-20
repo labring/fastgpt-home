@@ -1,4 +1,4 @@
-import { redirect, notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import AdminLoginForm from '@/customers/components/admin/AdminLoginForm';
 import { getAdminSession, isAdminPortalEnabled } from '@/customers/lib/admin-auth';
 
@@ -13,12 +13,12 @@ export const metadata = {
 
 export default async function AdminLoginPage() {
   if (!isAdminPortalEnabled()) {
-    notFound();
+    redirect('/customers');
   }
 
   const session = await getAdminSession();
   if (session) {
-    redirect('/customers/admin/customers');
+    redirect('/customers/admin');
   }
 
   return <AdminLoginForm />;

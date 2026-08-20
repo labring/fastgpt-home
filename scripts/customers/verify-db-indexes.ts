@@ -47,9 +47,9 @@ async function main() {
 
   await mongoose.connect(uri, { serverSelectionTimeoutMS: 15000 });
   const db = mongoose.connection.db!;
-  const solutions = db.collection('solutions');
+  const customers = db.collection('customers');
 
-  const indexes = await solutions.indexes();
+  const indexes = await customers.indexes();
   const slugIndex = indexes.find((index) => index.name === 'slug_1');
   const errors: string[] = [];
 
@@ -74,7 +74,7 @@ async function main() {
     {
       name: '详情页(slug)',
       query: async () => {
-        const explain = await solutions
+        const explain = await customers
           .find({ slug: 'financial-terminal-ai-search', deletedAt: null })
           .limit(1)
           .explain('executionStats');
@@ -88,7 +88,7 @@ async function main() {
     {
       name: '全量列表(createdAt 排序)',
       query: async () => {
-        const explain = await solutions
+        const explain = await customers
           .find({ isPublished: true, deletedAt: null })
           .sort({ createdAt: -1 })
           .limit(15)
@@ -103,7 +103,7 @@ async function main() {
     {
       name: '分类列表(createdAt 排序)',
       query: async () => {
-        const explain = await solutions
+        const explain = await customers
           .find({ isPublished: true, deletedAt: null, categoryId: category?._id })
           .sort({ createdAt: -1 })
           .limit(15)
@@ -118,7 +118,7 @@ async function main() {
     {
       name: '首页列表(usage 排序，允许内存排序)',
       query: async () => {
-        const explain = await solutions
+        const explain = await customers
           .find({ isPublished: true, deletedAt: null })
           .sort({ usageCount: -1, createdAt: -1 })
           .limit(15)

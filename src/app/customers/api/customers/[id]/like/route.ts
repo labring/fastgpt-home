@@ -4,24 +4,25 @@ import { incrementDailyInteraction } from '@/customers/lib/interaction-daily-sta
 import { readJsonRecord } from '@/customers/lib/request-json';
 import {
   getOrCreateVisitorKey,
-  invalidSolutionIdResponse,
+  invalidCustomerIdResponse,
   isDuplicateKeyError,
   rateLimitPublicInteraction
 } from '@/customers/lib/public-interaction';
-import Solution from '@/customers/models/Solution';
-import SolutionInteraction from '@/customers/models/SolutionInteraction';
-import { resolveSolutionObjectId } from '@/customers/lib/solution-id';
+import Customer from '@/customers/models/Customer';
+import CustomerInteraction from '@/customers/models/CustomerInteraction';
+import { resolveCustomerObjectId } from '@/customers/lib/customer-id';
 
 export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> }
 ) {
+  const { id: rawId } = await params;
+
   try {
-    const { id: rawId } = await params;
-    const id = await resolveSolutionObjectId(rawId);
+    const id = await resolveCustomerObjectId(rawId);
 
     if (!id) {
-      return invalidSolutionIdResponse();
+      return invalidCustomerIdResponse();
     }
 
     await dbConnect();
@@ -29,7 +30,7 @@ export async function POST(
     const rateLimitResponse = rateLimitPublicInteraction({
       request,
       action: 'like',
-      solutionId: id,
+      customerId: id,
       limit: 20
     });
     if (rateLimitResponse) {
@@ -42,19 +43,19 @@ export async function POST(
       return NextResponse.json({ error: 'Invalid like action' }, { status: 400 });
     }
 
-    const currentSolution = await Solution.findOne({ _id: id, isPublished: true })
+    const currentCustomer = await Customer.findOne({ _id: id, isPublished: true })
       .select('likesCount categoryId')
       .populate('categoryId', 'slug');
-    if (!currentSolution) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+    if (!currentCustomer) {
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
     const visitorKey = await getOrCreateVisitorKey();
-    const interaction = await SolutionInteraction.findOneAndUpdate(
-      { solutionId: id, visitorKey, type: 'like' },
+    const interaction = await CustomerInteraction.findOneAndUpdate(
+      { customerId: id, visitorKey, type: 'like' },
       {
         $set: { liked: true },
-        $setOnInsert: { solutionId: id, visitorKey, type: 'like' }
+        $setOnInsert: { customerId: id, visitorKey, type: 'like' }
       },
       {
         upsert: true,
@@ -70,20 +71,20 @@ export async function POST(
       return NextResponse.json({
         success: true,
         counted: false,
-        likes: currentSolution.likesCount,
+        likes: currentCustomer.likesCount,
         isLiked: true
       });
     }
 
-    const solution = await Solution.findOneAndUpdate(
+    const customer = await Customer.findOneAndUpdate(
       { _id: id, isPublished: true },
       { $inc: { likesCount: 1 } },
       { returnDocument: 'after' }
     );
 
-    if (!solution) {
-      await SolutionInteraction.deleteOne({ solutionId: id, visitorKey, type: 'like' });
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+    if (!customer) {
+      await CustomerInteraction.deleteOne({ customerId: id, visitorKey, type: 'like' });
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
     await incrementDailyInteraction('likesDelta', 1);
@@ -91,21 +92,24 @@ export async function POST(
     return NextResponse.json({
       success: true,
       counted: true,
-      likes: solution.likesCount,
+      likes: customer.likesCount,
       isLiked: true
     });
   } catch (error) {
-    console.error('Error liking solution:', error);
+    console.error('Error liking customer:', error);
     if (isDuplicateKeyError(error)) {
-      const { id } = await params;
-      const currentSolution = await Solution.findById(id).select('likesCount');
-      if (currentSolution) {
-        return NextResponse.json({
-          success: true,
-          counted: false,
-          likes: currentSolution.likesCount,
-          isLiked: true
-        });
+      // rawId 可能是 slug，先解析为 ObjectId 再 findById，避免 CastError 导致降级分支失效。
+      const resolvedId = await resolveCustomerObjectId(rawId);
+      if (resolvedId) {
+        const currentCustomer = await Customer.findById(resolvedId).select('likesCount');
+        if (currentCustomer) {
+          return NextResponse.json({
+            success: true,
+            counted: false,
+            likes: currentCustomer.likesCount,
+            isLiked: true
+          });
+        }
       }
     }
 

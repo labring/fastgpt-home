@@ -1,10 +1,10 @@
-import { getAllPublishedSolutionDetails, getCategories } from '@/customers/lib/data';
+import { getAllPublishedCustomerDetails, getCategories } from '@/customers/lib/data';
 import { absoluteUrl } from '@/customers/lib/site-url';
 import {
   createPlainTextResponse,
   markdownToReadableText
-} from '@/customers/lib/solution-readable-content';
-import { getSolutionPublicHref } from '@/customers/lib/solution-url';
+} from '@/customers/lib/customer-readable-content';
+import { getCustomerPublicHref } from '@/customers/lib/customer-url';
 import { withLlmIndexCache } from '@/customers/lib/llm-index-cache';
 
 // 保持动态：依赖 DB，构建期预渲染会在无 DB 环境导致构建失败
@@ -12,15 +12,15 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const content = await withLlmIndexCache('llms-full.txt', 300000, async () => {
-    const [categories, solutions] = await Promise.all([
+    const [categories, customers] = await Promise.all([
       getCategories(),
-      getAllPublishedSolutionDetails()
+      getAllPublishedCustomerDetails()
     ]);
 
     const lines = [
       '# FastGPT 客户案例中心完整 AI 索引',
       '',
-      '本文件为 AI 助手和搜索系统提供 FastGPT 客户案例中心的完整文本摘要。所有条目均来自已发布解决方案。',
+      '本文件为 AI 助手和搜索系统提供 FastGPT 客户案例中心的完整文本摘要。所有条目均来自已发布客户案例。',
       '',
       `首页：${absoluteUrl('/')}`,
       `行业分类：${absoluteUrl('/categories')}`,
@@ -35,22 +35,22 @@ export async function GET() {
     ];
 
     for (const category of categories) {
-      const count = solutions.filter((solution) => solution.categorySlug === category.slug).length;
-      lines.push(`- ${category.name}：${absoluteUrl(`/categories/${category.slug}`)}（${count} 个解决方案）`);
+      const count = customers.filter((customer) => customer.categorySlug === category.slug).length;
+      lines.push(`- ${category.name}：${absoluteUrl(`/categories/${category.slug}`)}（${count} 个客户案例）`);
     }
 
-    lines.push('', '## 解决方案全文摘要', '');
+    lines.push('', '## 客户案例全文摘要', '');
 
-    for (const solution of solutions) {
-      lines.push(`### ${solution.title}`);
+    for (const customer of customers) {
+      lines.push(`### ${customer.title}`);
       lines.push('');
-      lines.push(`- 分类：${solution.categoryName}`);
-      lines.push(`- 详情页：${absoluteUrl(getSolutionPublicHref(solution))}`);
-      lines.push(`- 纯文本版本：${absoluteUrl(`/solution/${solution.slug || solution.id}/markdown`)}`);
-      lines.push(`- 更新时间：${solution.updatedAt}`);
-      lines.push(`- 简介：${solution.description}`);
+      lines.push(`- 分类：${customer.categoryName}`);
+      lines.push(`- 详情页：${absoluteUrl(getCustomerPublicHref(customer))}`);
+      lines.push(`- 纯文本版本：${absoluteUrl(`/customer/${customer.slug || customer.id}/markdown`)}`);
+      lines.push(`- 更新时间：${customer.updatedAt}`);
+      lines.push(`- 简介：${customer.description}`);
       lines.push('');
-      lines.push(markdownToReadableText(solution.content, { maxLength: 8000 }));
+      lines.push(markdownToReadableText(customer.content, { maxLength: 8000 }));
       lines.push('');
     }
 

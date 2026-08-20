@@ -112,13 +112,6 @@ function intersectsSelection(
   return selectionStart <= image.end && selectionEnd >= image.start;
 }
 
-function sanitizeImageAltText(alt: string) {
-  return alt
-    .replace(/\r?\n/g, ' ')
-    .replace(/\]/g, ')')
-    .trim();
-}
-
 export function findImageAtSelection(
   content: string,
   selectionStart: number,
@@ -146,10 +139,6 @@ export function findImageAtSelection(
   ) ?? null;
 }
 
-export function findImageByLineStart(content: string, lineStart: number) {
-  return getMarkdownImages(content).find((image) => image.lineStart === lineStart) ?? null;
-}
-
 function escapeAttr(value: string) {
   return value
     .replace(/&/g, '&amp;')
@@ -172,14 +161,14 @@ export function replaceImageWithWidth(
     const widthRegex = /\bwidth\s*=\s*["'][^"']*["']/i;
     if (widthRegex.test(segment)) {
       return (
-        content.slice(0, image.start)
-        segment.replace(widthRegex, `width="${width}"`)
+        content.slice(0, image.start) +
+        segment.replace(widthRegex, `width="${width}"`) +
         content.slice(image.end)
       );
     }
     return (
-      content.slice(0, image.start)
-      segment.replace(/<img\b/i, `<img width="${width}"`)
+      content.slice(0, image.start) +
+      segment.replace(/<img\b/i, `<img width="${width}"`) +
       content.slice(image.end)
     );
   }
@@ -189,17 +178,8 @@ export function replaceImageWithWidth(
   const escapedSrc = escapeAttr(image.src);
 
   return (
-    content.slice(0, image.start)
-    `<img src="${escapedSrc}" alt="${escapedAlt}" width="${width}" />`
+    content.slice(0, image.start) +
+    `<img src="${escapedSrc}" alt="${escapedAlt}" width="${width}" />` +
     content.slice(image.end)
   );
-}
-
-export function updateImageAlt(
-  content: string,
-  image: Pick<MarkdownImageMatch, 'altStart' | 'altEnd'>,
-  nextAlt: string
-) {
-  const normalizedAlt = sanitizeImageAltText(nextAlt);
-  return content.slice(0, image.altStart) + normalizedAlt + content.slice(image.altEnd);
 }

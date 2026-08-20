@@ -6,14 +6,14 @@ import type { EChartsOption } from 'echarts';
 import {
   type DashboardCategoryStat,
   type DashboardStatusStats,
-  type DashboardTopSolution,
+  type DashboardTopCustomer,
   type DashboardTrendPoint
 } from '@/customers/lib/dashboard-analytics';
 
 const ReactECharts = dynamic(() => import('echarts-for-react'), { ssr: false });
 
 interface DashboardChartsProps {
-  topSolutions: DashboardTopSolution[];
+  topCustomers: DashboardTopCustomer[];
   categoryStats: DashboardCategoryStat[];
   statusStats: DashboardStatusStats;
   trendStats: DashboardTrendPoint[];
@@ -104,13 +104,13 @@ function renderChart(
 }
 
 export default function DashboardCharts({
-  topSolutions,
+  topCustomers,
   categoryStats,
   statusStats,
   trendStats
 }: DashboardChartsProps) {
-  const sortedTopSolutions = [...topSolutions].sort((left, right) => right.usageCount - left.usageCount);
-  const rankedTopSolutions = [...sortedTopSolutions].reverse();
+  const sortedTopCustomers = [...topCustomers].sort((left, right) => right.usageCount - left.usageCount);
+  const rankedTopCustomers = [...sortedTopCustomers].reverse();
   const trendLabels = trendStats.map((point) => point.label);
   const totalTrendViews = trendStats.reduce((sum, point) => sum + point.views, 0);
   const totalTrendLikes = trendStats.reduce((sum, point) => sum + point.likesDelta, 0);
@@ -182,7 +182,7 @@ export default function DashboardCharts({
     },
     yAxis: {
       type: 'category',
-      data: rankedTopSolutions.map((solution) => solution.title),
+      data: rankedTopCustomers.map((customer) => customer.title),
       axisLabel: {
         width: 160,
         overflow: 'truncate',
@@ -196,7 +196,7 @@ export default function DashboardCharts({
       {
         name: '使用次数',
         type: 'bar',
-        data: rankedTopSolutions.map((solution) => solution.usageCount),
+        data: rankedTopCustomers.map((customer) => customer.usageCount),
         itemStyle: {
           color: topBarGradient,
           borderRadius: [0, 10, 10, 0],
@@ -437,7 +437,7 @@ export default function DashboardCharts({
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Top 5 柱状图 */}
         <div className={panelClassName}>
-          {renderChart(barOption, 350, topSolutions.length > 0)}
+          {renderChart(barOption, 350, topCustomers.length > 0)}
         </div>
 
         {/* 分类饼图 */}

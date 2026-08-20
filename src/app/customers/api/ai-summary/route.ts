@@ -7,9 +7,9 @@ import {
   requestAIChat
 } from '@/customers/lib/ai-chat';
 import {
-  getSolutionContentById,
-  getSolutionSummaryPrompt
-} from '@/customers/lib/solution-ai';
+  getCustomerContentById,
+  getCustomerSummaryPrompt
+} from '@/customers/lib/customer-ai';
 import { readJsonRecord } from '@/customers/lib/request-json';
 
 export async function POST(req: Request) {
@@ -22,19 +22,19 @@ export async function POST(req: Request) {
     }
 
     const body = await readJsonRecord(req);
-    const solutionId = typeof body.solutionId === 'string' ? body.solutionId.trim() : '';
+    const customerId = typeof body.customerId === 'string' ? body.customerId.trim() : '';
     const type = typeof body.type === 'string' ? body.type.trim() : '';
 
-    if (!solutionId || !type) {
-      return NextResponse.json({ error: 'Missing solutionId or type' }, { status: 400 });
+    if (!customerId || !type) {
+      return NextResponse.json({ error: 'Missing customerId or type' }, { status: 400 });
     }
 
-    const content = await getSolutionContentById(solutionId);
+    const content = await getCustomerContentById(customerId);
     if (content === null) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
-    const prompt = getSolutionSummaryPrompt(type);
+    const prompt = getCustomerSummaryPrompt(type);
     if (!prompt) {
       return NextResponse.json({ error: 'Invalid type' }, { status: 400 });
     }

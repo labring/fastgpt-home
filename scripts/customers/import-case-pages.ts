@@ -1,5 +1,5 @@
 /**
- * 案例页批量导入工具：解析交付稿 frontmatter → 映射到 Solution 新字段 → 落库。
+ * 案例页批量导入工具：解析交付稿 frontmatter → 映射到 Customer 新字段 → 落库。
  *
  * 用法：
  *   npm run customers:import-cases -- --file <md路径>             # dry-run
@@ -123,7 +123,7 @@ function readFrontmatterAndBody(filePath: string) {
     .replace(/<script\b[^>]*type=["']application\/ld\+json["'][^>]*>[\s\S]*?<\/script>/gi, '')
     .trim();
 
-  // 剔除正文开头的 `# H1`（页面上 H1 由 SolutionHero 渲染，正文从模块开始）
+  // 剔除正文开头的 `# H1`（页面上 H1 由 CustomerHero 渲染，正文从模块开始）
   body = body
     .replace(/\r\n/g, '\n')
     .replace(/^#\s+[^\n]+\n+/, '')
@@ -234,7 +234,7 @@ function countBodyText(body: string) {
   return cleaned.length;
 }
 
-async function matchSolutionCover(solutionId: string, coverHost?: string) {
+async function matchCustomerCover(customerId: string, coverHost?: string) {
   const host = coverHost || process.env.HOST;
   const apiKey = process.env.AGENT_API_KEY;
 
@@ -243,7 +243,7 @@ async function matchSolutionCover(solutionId: string, coverHost?: string) {
   }
 
   const response = await fetch(
-    `${host.replace(/\/+$/, '')}/api/v1/customers/${solutionId}/cover`,
+    `${host.replace(/\/+$/, '')}/api/v1/customers/${customerId}/cover`,
     {
       method: 'POST',
       headers: { apikey: apiKey }
@@ -527,10 +527,10 @@ async function main() {
     }
   }
 
-  const [{ default: dbConnect }, { default: Solution }, { default: Category }] =
+  const [{ default: dbConnect }, { default: Customer }, { default: Category }] =
     await Promise.all([
       import('@/customers/lib/db'),
-      import('@/customers/models/Solution'),
+      import('@/customers/models/Customer'),
       import('@/customers/models/Category')
     ]);
 
@@ -578,18 +578,18 @@ async function main() {
         continue;
       }
 
-      // 幂等：优先按 caseNo + contentType=case 查找，其次按 slug 查找
+      // 幂等：优先按 caseNo + isPublicCase=true 查找，其次按 slug 查找
       const existing =
         (caseNo > 0
-          ? await Solution.findOne({ caseNo, contentType: 'case', deletedAt: null })
+          ? await Customer.findOne({ caseNo, isPublicCase: true, deletedAt: null })
               .select('_id slug imageUrl thumbnailUrl')
               .lean()
           : null) ||
-        (await Solution.findOne({ slug, deletedAt: null })
+        (await Customer.findOne({ slug, deletedAt: null })
           .select('_id slug imageUrl thumbnailUrl')
           .lean());
 
-      const duplicate = await Solution.exists({
+      const duplicate = await Customer.exists({
         slug,
         deletedAt: null,
         ...(existing ? { _id: { $ne: existing._id } } : {})
@@ -713,7 +713,7 @@ async function main() {
         metaTitle,
         metaDescription,
         publishedAt,
-        contentType: 'case' as const,
+        isPublicCase: true,
         caseOrg,
         clearanceLevel,
         caseNo,
@@ -736,28 +736,28 @@ async function main() {
         payload.thumbnailUrl = '';
       }
 
-      let solutionId: string;
+      let customerId: string;
       if (existing) {
-        solutionId = String(existing._id);
-        await Solution.updateOne(
+        customerId = String(existing._id);
+        await Customer.updateOne(
           { _id: existing._id },
           { $set: { ...payload, deletedAt: null, deletedSource: null } }
         );
-        console.log(`  已更新 ${solutionId}`);
+        console.log(`  已更新 ${customerId}`);
       } else {
         const id = new mongoose.Types.ObjectId();
-        solutionId = id.toString();
-        await Solution.create({
+        customerId = id.toString();
+        await Customer.create({
           _id: id,
           storageFolder: id.toString(),
           ...payload
         });
-        console.log(`  已创建 ${solutionId}`);
+        console.log(`  已创建 ${customerId}`);
       }
 
       // 写完文章后自动匹配封面（AI 检索词 → Pexels 图源 → S3 → 写回 imageUrl）
       if (!noCover) {
-        const coverResult = await matchSolutionCover(solutionId, coverHost);
+        const coverResult = await matchCustomerCover(customerId, coverHost);
         if (coverResult.ok) {
           console.log(`  封面已匹配: ${coverResult.imageUrl}`);
           console.log(`  检索词: ${coverResult.query}（${coverResult.reason}）`);

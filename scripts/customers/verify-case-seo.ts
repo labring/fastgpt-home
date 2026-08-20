@@ -50,14 +50,14 @@ function parseArgs() {
   return { sample, host, canonicalHost: canonicalHost || host };
 }
 
-type SolutionRecord = {
+type CustomerRecord = {
   caseNo?: number;
   slug?: string;
   categoryId?: string;
   categorySlug?: string;
   categoryName?: string;
   title: string;
-  contentType?: string;
+  isPublicCase?: boolean;
   isPublished?: boolean;
   imageUrl?: string;
   publishedAt?: Date | null;
@@ -78,7 +78,7 @@ function extractAttribute(html: string, tagPattern: RegExp, attribute: string): 
 }
 
 async function verifyPage(
-  record: SolutionRecord,
+  record: CustomerRecord,
   host: string,
   canonicalHost: string
 ): Promise<{ ok: boolean; errors: string[]; detail: string }> {
@@ -193,7 +193,7 @@ async function main() {
 
   await mongoose.connect(process.env.MONGODB_URI, { serverSelectionTimeoutMS: 15000 });
   const db = mongoose.connection.db!;
-  const collection = db.collection('solutions');
+  const collection = db.collection('customers');
   const categorySlugById = new Map<string, string>();
   const categoryRows = (await db
     .collection('categories')
@@ -214,13 +214,13 @@ async function main() {
       categorySlug: 1,
       categoryName: 1,
       title: 1,
-      contentType: 1,
+      isPublicCase: 1,
       isPublished: 1,
       imageUrl: 1,
       publishedAt: 1,
       updatedAt: 1
     })
-    .toArray()) as unknown as SolutionRecord[];
+    .toArray()) as unknown as CustomerRecord[];
   for (const record of all) {
     if (!record.categorySlug && record.categoryId) {
       record.categorySlug = categorySlugById.get(String(record.categoryId)) || '';
@@ -236,7 +236,7 @@ async function main() {
   }
 
   const cases = all
-    .filter((record) => record.contentType === 'case')
+    .filter((record) => record.isPublicCase)
     .sort((a, b) => (a.caseNo || 0) - (b.caseNo || 0));
 
   for (const record of cases) {
@@ -267,7 +267,7 @@ async function main() {
 
   const publishedCases = cases.filter((record) => record.isPublished);
   const publishedOthers = all.filter(
-    (record) => record.contentType !== 'case' && record.isPublished
+    (record) => !record.isPublicCase && record.isPublished
   );
   const pageSamples = [...publishedCases, ...publishedOthers].slice(0, sample);
 

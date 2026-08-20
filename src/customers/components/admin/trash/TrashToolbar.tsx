@@ -29,7 +29,7 @@ export default function TrashToolbar({
 
         <div className="flex items-center gap-3">
           <Link
-            href="/customers/admin/customers"
+            href="/customers/admin"
             className="flex items-center justify-center rounded-lg border border-zinc-200 bg-white px-4 py-2 font-medium text-zinc-700 transition-colors hover:border-blue-300 hover:text-blue-600 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-200 dark:hover:border-blue-500/50 dark:hover:text-blue-400"
           >
             返回案例列表

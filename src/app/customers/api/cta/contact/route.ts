@@ -29,7 +29,7 @@ const TEXT_LIMITS = {
   company: 200,
   position: 100,
   notes: 1000,
-  solutionSlug: 200,
+  customerSlug: 200,
   visitorId: 200,
   referrer: 500
 } as const;
@@ -78,7 +78,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ success: false, error: 'bad_request', message: '请求格式错误。' }, { status: 400 });
   }
 
-  const { source, solutionSlug, referrer, visitorId } = body ?? {};
+  const { source, customerSlug, referrer, visitorId } = body ?? {};
 
   if (!isValidCtaSource(source)) {
     return NextResponse.json({ success: false, error: 'bad_request', message: '来源标识无效。' }, { status: 400 });
@@ -127,13 +127,13 @@ export async function POST(request: NextRequest) {
   }
 
   const notes = sanitizeText(body.notes, TEXT_LIMITS.notes);
-  const utmTerm = sanitizeText(solutionSlug, TEXT_LIMITS.solutionSlug) || '';
+  const utmTerm = sanitizeText(customerSlug, TEXT_LIMITS.customerSlug) || '';
   const referrerUrl =
     sanitizeText(referrer, TEXT_LIMITS.referrer) ||
     sanitizeText(request.headers.get('referer') || '', TEXT_LIMITS.referrer) ||
     '';
   const cleanVisitorId =
-    sanitizeText(visitorId, TEXT_LIMITS.visitorId) || `solutions-${crypto.randomUUID()}`;
+    sanitizeText(visitorId, TEXT_LIMITS.visitorId) || `customers-${crypto.randomUUID()}`;
 
   // 与主站 /contact 提交载荷保持一致（snake_case + 归因字段）
   const payload = {

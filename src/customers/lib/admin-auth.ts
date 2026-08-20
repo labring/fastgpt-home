@@ -1,5 +1,5 @@
 import crypto from 'crypto';
-import { cookies, headers } from 'next/headers';
+import { cookies } from 'next/headers';
 import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/customers/lib/db';
 import { rateLimit } from '@/customers/lib/rate-limit';
@@ -27,7 +27,7 @@ function getCookieOptions() {
     httpOnly: true,
     secure: process.env.NODE_ENV === 'production',
     sameSite: 'strict' as const,
-    path: '/customers',
+    path: '/',
     maxAge: SESSION_MAX_AGE_SECONDS
   };
 }
@@ -37,13 +37,6 @@ function getClientIp(request: NextRequest | Request) {
   return forwardedFor?.split(',')[0]?.trim() ||
     request.headers.get('x-real-ip') ||
     'unknown-ip';
-}
-
-async function getRequestOrigin() {
-  const headerStore = await headers();
-  const protocol = headerStore.get('x-forwarded-proto') || 'http';
-  const host = headerStore.get('x-forwarded-host') || headerStore.get('host');
-  return host ? `${protocol}://${host}` : '';
 }
 
 export function isAdminPortalEnabled() {
@@ -138,14 +131,6 @@ export function getAdminSecurityHeaders() {
   };
 }
 
-export async function assertAdminRouteAccess() {
-  if (!isAdminPortalEnabled()) {
-    return false;
-  }
-
-  return requireAdminSession();
-}
-
 export async function requireAdminApiAccess(request?: NextRequest | Request) {
   if (!isAdminPortalEnabled()) {
     return { ok: false as const, response: forbiddenJson() };
@@ -184,9 +169,4 @@ export function isAllowedAdminMutationOrigin(request: NextRequest | Request) {
   } catch {
     return false;
   }
-}
-
-export async function buildAdminRedirect(path: string) {
-  const origin = await getRequestOrigin();
-  return origin ? `${origin}${path}` : path;
 }

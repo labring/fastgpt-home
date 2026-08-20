@@ -4,8 +4,8 @@ import { readSystemSettings } from '@/customers/lib/system-settings';
 import {
   buildS3PublicUrl,
   getMissingS3Config,
-  normalizeSolutionFolderName
-} from '@/customers/lib/solution-storage';
+  normalizeCustomerFolderName
+} from '@/customers/lib/customer-storage';
 import { requireAdminApi } from '@/customers/lib/admin-api';
 import { readJsonRecord } from '@/customers/lib/request-json';
 
@@ -108,7 +108,7 @@ export async function POST(req: NextRequest) {
       remoteResponse.headers.get('content-type')?.split(';')[0]?.trim() ||
       'application/octet-stream';
     const extension = getFileExtension(contentType, parsedUrl.toString());
-    const safeFolder = normalizeSolutionFolderName(folder);
+    const safeFolder = normalizeCustomerFolderName(folder);
     const key = `uploads/${safeFolder}/${Date.now()}-${sanitizeFileStem(fileStem)}.${extension}`;
     const bodyBuffer = Buffer.from(await remoteResponse.arrayBuffer());
 

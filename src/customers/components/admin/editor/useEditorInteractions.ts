@@ -154,8 +154,8 @@ export function useEditorInteractions({
 
     if (action === 'link') {
       const newValue =
-        value.substring(0, start)
-        `[${selectedText}](url)`
+        value.substring(0, start) +
+        `[${selectedText}](url)` +
         value.substring(end);
 
       setFormData((prev) => ({ ...prev, content: newValue }));
@@ -275,8 +275,8 @@ export function useEditorInteractions({
         case 'k':
           event.preventDefault();
           const newValue =
-            value.substring(0, start)
-            `[${selectedText || '链接文本'}](url)`
+            value.substring(0, start) +
+            `[${selectedText || '链接文本'}](url)` +
             value.substring(end);
 
           setFormData((prev) => ({ ...prev, content: newValue }));

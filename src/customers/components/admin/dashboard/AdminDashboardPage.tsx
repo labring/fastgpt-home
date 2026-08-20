@@ -7,7 +7,7 @@ import {
   SquaresFourIcon
 } from '@phosphor-icons/react/ssr';
 import { getDashboardStats } from '@/app/customers/admin/actions/dashboard';
-import CreateSolutionButton from '@/customers/components/admin/CreateSolutionButton';
+import CreateCustomerButton from '@/customers/components/admin/CreateCustomerButton';
 import DashboardCharts from '@/customers/components/admin/DashboardCharts';
 
 const createActionClassName =
@@ -30,8 +30,8 @@ export default async function AdminDashboardPage() {
   const statsCards = [
     {
       title: '总解决方案',
-      value: data.totalSolutions,
-      desc: `已发布 ${data.publishedSolutions} / 草稿 ${data.draftSolutions}`,
+      value: data.totalCustomers,
+      desc: `已发布 ${data.publishedCustomers} / 草稿 ${data.draftCustomers}`,
       icon: ArticleIcon,
       color: 'text-blue-600 dark:text-blue-400',
       bg: 'bg-blue-50 dark:bg-blue-900/20'
@@ -73,7 +73,7 @@ export default async function AdminDashboardPage() {
         </div>
 
         <div className="flex gap-3">
-          <CreateSolutionButton
+          <CreateCustomerButton
             label="发布新方案"
             className={createActionClassName}
           />
@@ -110,11 +110,11 @@ export default async function AdminDashboardPage() {
       </div>
 
       <DashboardCharts
-        topSolutions={data.topSolutions}
+        topCustomers={data.topCustomers}
         categoryStats={data.categoryStats}
         statusStats={{
-          published: data.publishedSolutions,
-          draft: data.draftSolutions
+          published: data.publishedCustomers,
+          draft: data.draftCustomers
         }}
         trendStats={data.trendStats}
       />

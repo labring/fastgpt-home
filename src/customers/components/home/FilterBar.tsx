@@ -1,6 +1,6 @@
 import CategoryTabBar from "@/customers/components/CategoryTabBar";
 import SortDropdown from "@/customers/components/SortDropdown";
-import type { SolutionSortKey } from "@/customers/lib/solution-search";
+import type { CustomerSortKey } from "@/customers/lib/customer-search";
 
 interface Category {
   id: string;
@@ -14,8 +14,8 @@ interface FilterBarProps {
   currentCategory: string;
   onCategoryChange: (categoryId: string) => void;
   onCategoryPrefetch?: (categoryId: string) => void;
-  sortBy: SolutionSortKey;
-  onSortChange: (sortBy: SolutionSortKey) => void;
+  sortBy: CustomerSortKey;
+  onSortChange: (sortBy: CustomerSortKey) => void;
 }
 
 export default function FilterBar({

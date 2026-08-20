@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { rateLimit } from '@/customers/lib/rate-limit';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import { requireAdminSession } from '@/customers/lib/admin-auth';
 import { getEnvAIConfig, getRequestClientIp, requestAIChat } from '@/customers/lib/ai-chat';
 import { readJsonRecord } from '@/customers/lib/request-json';
@@ -59,7 +59,7 @@ function parseAIResponse(content: string) {
   }
 }
 
-type SolutionTitleRow = {
+type CustomerTitleRow = {
   _id?: unknown;
   title?: string;
   categoryId?: {
@@ -72,19 +72,19 @@ function normalizeScope(value: unknown) {
   return value === 'admin' ? 'admin' : 'public';
 }
 
-function serializeMatchedSolution(solution: SolutionTitleRow | null) {
-  if (!solution?._id || !solution.title) {
+function serializeMatchedCustomer(customer: CustomerTitleRow | null) {
+  if (!customer?._id || !customer.title) {
     return null;
   }
 
-  const id = String(solution._id);
+  const id = String(customer._id);
 
   return {
     id,
     _id: id,
-    title: solution.title,
-    categorySlug: solution.categoryId?.slug || '',
-    isPublished: solution.isPublished
+    title: customer.title,
+    categorySlug: customer.categoryId?.slug || '',
+    isPublished: customer.isPublished
   };
 }
 
@@ -103,30 +103,30 @@ export async function POST(req: Request) {
     const query = typeof body.query === 'string' ? body.query.trim() : '';
     const rawScope = body.scope;
     if (!query) {
-      return NextResponse.json({ matched_case: null, matched_solution: null });
+      return NextResponse.json({ matched_case: null, matched_customer: null });
     }
 
     const scope = normalizeScope(rawScope);
 
     if (scope === 'admin' && !(await requireAdminSession())) {
       return NextResponse.json(
-        { error: '请先登录后台', matched_case: null, matched_solution: null },
+        { error: '请先登录后台', matched_case: null, matched_customer: null },
         { status: 401 }
       );
     }
 
     // 1. 获取所有现有案例名称并组装 Prompt
     await dbConnect();
-    const solutionsQuery =
+    const customersQuery =
       scope === 'admin'
         ? {}
         : { isPublished: true };
-    const solutions = await Solution.find(solutionsQuery)
+    const customers = await Customer.find(customersQuery)
       .select('title categoryId isPublished')
       .populate('categoryId', 'slug')
-      .lean<SolutionTitleRow[]>();
-    const caseList = solutions
-      .map((solution) => solution.title?.trim())
+      .lean<CustomerTitleRow[]>();
+    const caseList = customers
+      .map((customer) => customer.title?.trim())
       .filter((title): title is string => Boolean(title));
 
     // 为了方便调试，可以在开发环境下打印一下获取到的案例数量
@@ -145,19 +145,19 @@ export async function POST(req: Request) {
     const matchedCase = typeof result.matched_case === 'string'
       ? result.matched_case.trim()
       : null;
-    const matchedSolution = matchedCase
-      ? solutions.find((solution) => solution.title?.trim() === matchedCase) || null
+    const matchedCustomer = matchedCase
+      ? customers.find((customer) => customer.title?.trim() === matchedCase) || null
       : null;
 
     return NextResponse.json({
       matched_case: matchedCase,
-      matched_solution: serializeMatchedSolution(matchedSolution)
+      matched_customer: serializeMatchedCustomer(matchedCustomer)
     });
 
   } catch (error) {
     console.error('Smart Search Error:', error);
     return NextResponse.json(
-      { error: 'Internal Server Error', matched_case: null, matched_solution: null },
+      { error: 'Internal Server Error', matched_case: null, matched_customer: null },
       { status: 500 }
     );
   }

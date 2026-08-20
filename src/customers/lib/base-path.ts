@@ -6,7 +6,9 @@ export function withBasePath(path: string) {
     !path.startsWith('/') ||
     path.startsWith('//') ||
     path === PUBLIC_BASE_PATH ||
-    path.startsWith(`${PUBLIC_BASE_PATH}/`)
+    path.startsWith(`${PUBLIC_BASE_PATH}/`) ||
+    path.startsWith(`${PUBLIC_BASE_PATH}?`) ||
+    path.startsWith(`${PUBLIC_BASE_PATH}#`)
   ) {
     return path;
   }

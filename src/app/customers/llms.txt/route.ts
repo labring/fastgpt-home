@@ -1,7 +1,7 @@
-import { getAllPublishedSolutions, getCategories } from '@/customers/lib/data';
+import { getAllPublishedCustomers, getCategories } from '@/customers/lib/data';
 import { absoluteUrl } from '@/customers/lib/site-url';
-import { createPlainTextResponse } from '@/customers/lib/solution-readable-content';
-import { getSolutionPublicHref } from '@/customers/lib/solution-url';
+import { createPlainTextResponse } from '@/customers/lib/customer-readable-content';
+import { getCustomerPublicHref } from '@/customers/lib/customer-url';
 import { withLlmIndexCache } from '@/customers/lib/llm-index-cache';
 import { formatCaseName } from '@/customers/lib/ai-readable-directory';
 
@@ -10,21 +10,21 @@ export const dynamic = 'force-dynamic';
 
 export async function GET() {
   const content = await withLlmIndexCache('llms.txt', 300000, async () => {
-    const [categories, solutions] = await Promise.all([
+    const [categories, customers] = await Promise.all([
       getCategories(),
-      getAllPublishedSolutions()
+      getAllPublishedCustomers()
     ]);
 
-    const solutionsByCategory = new Map<string, typeof solutions>();
+    const customersByCategory = new Map<string, typeof customers>();
 
     for (const category of categories) {
-      solutionsByCategory.set(category.slug, []);
+      customersByCategory.set(category.slug, []);
     }
 
-    for (const solution of solutions) {
-      const currentSolutions = solutionsByCategory.get(solution.categorySlug) || [];
-      currentSolutions.push(solution);
-      solutionsByCategory.set(solution.categorySlug, currentSolutions);
+    for (const customer of customers) {
+      const currentCustomers = customersByCategory.get(customer.categorySlug) || [];
+      currentCustomers.push(customer);
+      customersByCategory.set(customer.categorySlug, currentCustomers);
     }
 
     const lines = [
@@ -35,7 +35,7 @@ export async function GET() {
       '## 如何浏览',
       '',
       `- 首页：${absoluteUrl('/')}`,
-      `- 全部解决方案：${absoluteUrl('/#customers')}`,
+      `- 全部客户案例：${absoluteUrl('/#customers')}`,
       `- 行业分类：${absoluteUrl('/categories')}`,
       `- 完整 AI 内容索引：${absoluteUrl('/llms-full.txt')}`,
       `- Sitemap：${absoluteUrl('/sitemap.xml')}`,
@@ -49,23 +49,23 @@ export async function GET() {
     ];
 
     for (const category of categories) {
-      const categorySolutions = solutionsByCategory.get(category.slug) || [];
-      lines.push(`- ${category.name}：${absoluteUrl(`/categories/${category.slug}`)}（${categorySolutions.length} 个解决方案）`);
+      const categoryCustomers = customersByCategory.get(category.slug) || [];
+      lines.push(`- ${category.name}：${absoluteUrl(`/categories/${category.slug}`)}（${categoryCustomers.length} 个客户案例）`);
     }
 
-    lines.push('', '## 解决方案目录', '');
+    lines.push('', '## 客户案例目录', '');
 
     for (const category of categories) {
-      const categorySolutions = solutionsByCategory.get(category.slug) || [];
-      if (categorySolutions.length === 0) {
+      const categoryCustomers = customersByCategory.get(category.slug) || [];
+      if (categoryCustomers.length === 0) {
         continue;
       }
 
       lines.push(`### ${category.name}`, '');
-      for (const solution of categorySolutions) {
-        lines.push(`- ${formatCaseName(solution)}：${absoluteUrl(getSolutionPublicHref(solution))}`);
-        lines.push(`  - 简介：${solution.description}`);
-        lines.push(`  - 纯文本版本：${absoluteUrl(`/solution/${solution.id}/markdown`)}`);
+      for (const customer of categoryCustomers) {
+        lines.push(`- ${formatCaseName(customer)}：${absoluteUrl(getCustomerPublicHref(customer))}`);
+        lines.push(`  - 简介：${customer.description}`);
+        lines.push(`  - 纯文本版本：${absoluteUrl(`/customer/${customer.id}/markdown`)}`);
       }
       lines.push('');
     }

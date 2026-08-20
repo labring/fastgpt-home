@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { generateSolutionCover } from '@/customers/lib/solution-cover';
+import { generateCustomerCover } from '@/customers/lib/customer-cover';
 import { requireAdminApi } from '@/customers/lib/admin-api';
 import { readJsonRecord } from '@/customers/lib/request-json';
 
@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     const content = String(body.content || '').trim();
     const storageFolder = String(body.storageFolder || title || 'untitled').trim();
 
-    const result = await generateSolutionCover({
+    const result = await generateCustomerCover({
       title,
       description,
       storageFolder,

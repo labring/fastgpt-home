@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import Category from '@/customers/models/Category';
 import InteractionDailyStat from '@/customers/models/InteractionDailyStat';
 import { buildDashboardTrend } from '@/customers/lib/dashboard-analytics';
@@ -28,31 +28,31 @@ export async function GET(request: NextRequest) {
     const trendDays = Math.min(90, Math.max(1, parseInt(request.nextUrl.searchParams.get('trendDays') || '30')));
 
     const [
-      totalSolutions,
+      totalCustomers,
       totalCategories,
       publishedCount,
       draftCount,
       statsAggr,
       categoryStats,
-      topSolutions,
+      topCustomers,
       trendSnapshots,
     ] = await Promise.all([
-      Solution.countDocuments({ deletedAt: null }),
+      Customer.countDocuments({ deletedAt: null }),
       Category.countDocuments(),
-      Solution.countDocuments({ isPublished: true, deletedAt: null }),
-      Solution.countDocuments({ isPublished: false, deletedAt: null }),
-      Solution.aggregate([
+      Customer.countDocuments({ isPublished: true, deletedAt: null }),
+      Customer.countDocuments({ isPublished: false, deletedAt: null }),
+      Customer.aggregate([
         { $match: { deletedAt: null } },
         { $group: { _id: null, totalLikes: { $sum: '$likesCount' }, totalViews: { $sum: '$usageCount' } } },
       ]),
-      Solution.aggregate([
+      Customer.aggregate([
         { $match: { deletedAt: null } },
         { $group: { _id: '$categoryId', count: { $sum: 1 } } },
         { $lookup: { from: 'categories', localField: '_id', foreignField: '_id', as: 'category' } },
         { $unwind: '$category' },
         { $project: { name: '$category.name', count: 1 } },
       ]),
-      Solution.find({ deletedAt: null })
+      Customer.find({ deletedAt: null })
         .sort({ usageCount: -1 })
         .limit(5)
         .select('title usageCount likesCount')
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
     );
 
     return toAgentResponse(successResult(context, {
-        totalSolutions,
+        totalCustomers,
         totalCategories,
         publishedCount,
         draftCount,
@@ -82,7 +82,7 @@ export async function GET(request: NextRequest) {
           views: trendData.map((t) => ({ date: t.dateKey, count: t.views })),
           likes: trendData.map((t) => ({ date: t.dateKey, count: t.likesDelta })),
         },
-        topSolutions: (topSolutions as unknown as Array<Record<string, unknown>>).map((s) => ({
+        topCustomers: (topCustomers as unknown as Array<Record<string, unknown>>).map((s) => ({
           id: String(s._id || ''),
           title: s.title,
           views: s.usageCount,

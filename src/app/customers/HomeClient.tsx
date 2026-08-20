@@ -2,42 +2,42 @@
 
 import { useEffect, useRef } from 'react';
 import Navbar from "@/customers/components/Navbar";
-import { type Solution } from "@/customers/components/SolutionCard";
+import { type Customer } from "@/customers/components/CustomerCard";
 import Hero from "@/customers/components/Hero";
 import ClientLogos from "@/customers/components/home/ClientLogos";
 import BottomCta from "@/customers/components/BottomCta";
-import SolutionsSection from "@/customers/components/home/SolutionsSection";
+import CustomersSection from "@/customers/components/home/CustomersSection";
 import { openCtaModal, type CtaModalContext } from "@/customers/lib/cta";
-import type { SolutionsPagination } from "@/customers/lib/home-solutions-cache";
+import type { CustomersPagination } from "@/customers/lib/home-customers-cache";
 import { useHomeSmartSearch } from "@/customers/hooks/useHomeSmartSearch";
-import { useHomeSolutions } from "@/customers/hooks/useHomeSolutions";
+import { useHomeCustomers } from "@/customers/hooks/useHomeCustomers";
 import { useDebouncedValue } from '@/customers/hooks/useDebouncedValue';
 import { trackRybbitEvent } from '@/customers/lib/rybbit';
 
 interface HomeClientProps {
   initialCategories: { id: string; name: string; slug?: string; color?: string }[];
-  initialSolutions: Solution[];
-  initialPagination: SolutionsPagination;
+  initialCustomers: Customer[];
+  initialPagination: CustomersPagination;
   overviewStats: { value: string; label: string; link?: string; live?: boolean }[];
   initialCategorySlug?: string;
 }
 
 export default function HomeClient({
   initialCategories,
-  initialSolutions,
+  initialCustomers,
   initialPagination,
   overviewStats,
   initialCategorySlug
 }: HomeClientProps) {
-  const homeSolutions = useHomeSolutions({
+  const homeCustomers = useHomeCustomers({
     initialCategories,
-    initialSolutions,
+    initialCustomers,
     initialPagination,
     initialCategorySlug
   });
   const { isAiSearching, handleSmartSearch } = useHomeSmartSearch({
-    solutions: homeSolutions.solutions,
-    onMatched: homeSolutions.pinSolutionsHash
+    customers: homeCustomers.customers,
+    onMatched: homeCustomers.pinCustomersHash
   });
   const openModal = (context?: CtaModalContext) => {
     openCtaModal(context ?? {
@@ -48,9 +48,9 @@ export default function HomeClient({
   };
 
   // Rybbit 上报：关键词搜索
-  // 使用与 useHomeSolutions 内部相同 220ms 的防抖策略（此处取 250ms 确保在 API 请求触发之后），
-  // 避免 searchQuery 即时变化时携带旧 solutions.length 错误上报。
-  const debouncedQuery = useDebouncedValue(homeSolutions.searchQuery, 250);
+  // 使用与 useHomeCustomers 内部相同 220ms 的防抖策略（此处取 250ms 确保在 API 请求触发之后），
+  // 避免 searchQuery 即时变化时携带旧 customers.length 错误上报。
+  const debouncedQuery = useDebouncedValue(homeCustomers.searchQuery, 250);
   const searchTrackedRef = useRef<{ query: string; count: number }>({ query: '', count: 0 });
 
   useEffect(() => {
@@ -62,10 +62,10 @@ export default function HomeClient({
       return;
     }
 
-    // 等待 API 请求完成（防抖后 isSolutionsLoading 已变为 true，等待其恢复 false）
-    if (homeSolutions.isSolutionsLoading) return;
+    // 等待 API 请求完成（防抖后 isCustomersLoading 已变为 true，等待其恢复 false）
+    if (homeCustomers.isCustomersLoading) return;
 
-    const count = homeSolutions.solutions.length;
+    const count = homeCustomers.customers.length;
 
     // 去重：同一关键词 + 同一结果数不重复上报
     const prev = searchTrackedRef.current;
@@ -78,13 +78,13 @@ export default function HomeClient({
       result_count: count,
       search_type: 'keyword'
     });
-  }, [debouncedQuery, homeSolutions.solutions.length, homeSolutions.isSolutionsLoading]);
+  }, [debouncedQuery, homeCustomers.customers.length, homeCustomers.isCustomersLoading]);
 
   return (
     <>
       <Navbar
-        searchQuery={homeSolutions.searchQuery}
-        onSearchChange={homeSolutions.handleSearchChange}
+        searchQuery={homeCustomers.searchQuery}
+        onSearchChange={homeCustomers.handleSearchChange}
         onSmartSearch={handleSmartSearch}
         isSearching={isAiSearching}
       />
@@ -93,22 +93,22 @@ export default function HomeClient({
 
       <main className="pb-0 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-6 sm:mt-8 relative z-10">
-          <SolutionsSection
-            sectionRef={homeSolutions.solutionsSectionRef}
-            categories={homeSolutions.categories}
-            currentCategory={homeSolutions.currentCategory}
-            sortBy={homeSolutions.sortBy}
-            solutions={homeSolutions.solutions}
-            isLoading={homeSolutions.isLoading}
-            isShowingStaleSolutions={homeSolutions.isShowingStaleSolutions}
-            hasMoreSolutions={homeSolutions.hasMoreSolutions}
-            isLoadingMore={homeSolutions.isLoadingMore}
-            isSolutionsLoading={homeSolutions.isSolutionsLoading}
-            onCategoryChange={homeSolutions.handleCategoryClick}
-            onCategoryPrefetch={homeSolutions.handleCategoryPrefetch}
-            onSortChange={homeSolutions.handleSortChange}
-            onLikeToggle={homeSolutions.handleLikeToggle}
-            onLoadMore={homeSolutions.handleLoadMore}
+          <CustomersSection
+            sectionRef={homeCustomers.customersSectionRef}
+            categories={homeCustomers.categories}
+            currentCategory={homeCustomers.currentCategory}
+            sortBy={homeCustomers.sortBy}
+            customers={homeCustomers.customers}
+            isLoading={homeCustomers.isLoading}
+            isShowingStaleCustomers={homeCustomers.isShowingStaleCustomers}
+            hasMoreCustomers={homeCustomers.hasMoreCustomers}
+            isLoadingMore={homeCustomers.isLoadingMore}
+            isCustomersLoading={homeCustomers.isCustomersLoading}
+            onCategoryChange={homeCustomers.handleCategoryClick}
+            onCategoryPrefetch={homeCustomers.handleCategoryPrefetch}
+            onSortChange={homeCustomers.handleSortChange}
+            onLikeToggle={homeCustomers.handleLikeToggle}
+            onLoadMore={homeCustomers.handleLoadMore}
             onOpenModal={(ctx) => openModal(ctx)}
           />
 

@@ -27,7 +27,7 @@ export default function FormModal() {
    */
   const mountedSrcRef = useRef<string | null>(null);
 
-  /** 表单 iframe 地址：主站独立表单 + UTM 归因参数（utm_source=solutions 等） */
+  /** 表单 iframe 地址：主站独立表单 + UTM 归因参数（utm_source=customers 等） */
   const formUrl = buildContactFormUrl(modalContext);
 
   /**
@@ -160,9 +160,6 @@ export default function FormModal() {
       >
         {/* 弹窗头部（紧凑版式，给 iframe 让出高度） */}
         <header className="relative shrink-0 border-b border-[#eaecf0] bg-white px-5 py-3.5 pr-14 dark:border-[#373c43] dark:bg-[#292d33] sm:px-7 sm:py-4 sm:pr-16">
-          <span className="mb-1 block text-[11px] font-semibold uppercase text-brand-600 dark:text-brand-400">
-            企业服务
-          </span>
           <h2
             id="cta-form-dialog-title"
             className="m-0 text-lg font-semibold leading-7 text-[#101828] dark:text-[#f1f3f5] sm:text-xl"

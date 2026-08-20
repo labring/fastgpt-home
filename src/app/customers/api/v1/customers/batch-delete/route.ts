@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { moveSolutionsToTrash } from '@/customers/lib/solution-trash';
+import { moveCustomersToTrash } from '@/customers/lib/customer-trash';
 import {
   AGENT_ERROR_CODES,
   createAgentRequestContext,
@@ -43,12 +43,12 @@ export async function POST(request: NextRequest) {
         return errorResult(
           context,
           400,
-          AGENT_ERROR_CODES.solutionIdsRequired,
+          AGENT_ERROR_CODES.customerIdsRequired,
           '请提供要删除的解决方案 ID 列表'
         );
       }
 
-      const deleteResult = await moveSolutionsToTrash(ids.filter((id): id is string => typeof id === 'string'), 'agent');
+      const deleteResult = await moveCustomersToTrash(ids.filter((id): id is string => typeof id === 'string'), 'agent');
       if (!deleteResult.success) {
         const resolvedError = resolveAgentDomainError(
           deleteResult.error || '批量删除失败',
@@ -73,7 +73,7 @@ export async function POST(request: NextRequest) {
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error batch deleting solutions:', error);
+    console.error('Error batch deleting customers:', error);
     return toAgentResponse(errorResult(
       context,
       500,

@@ -2,11 +2,11 @@ import getCaretCoordinates from 'textarea-caret';
 import { buildMarkdownTocItems } from '@/customers/lib/toc';
 import type { EditorCategory, EditorFormData, EditorInitialData } from './types';
 import {
-  isUntitledSolutionName,
-  UNTITLED_SOLUTION_PREFIX
-} from '@/customers/lib/solution-storage';
+  isUntitledCustomerName,
+  UNTITLED_CUSTOMER_PREFIX
+} from '@/customers/lib/customer-storage';
 
-export const AUTO_SAVED_UNTITLED_TITLE = `${UNTITLED_SOLUTION_PREFIX}自动保存`;
+export const AUTO_SAVED_UNTITLED_TITLE = `${UNTITLED_CUSTOMER_PREFIX}自动保存`;
 const DEFAULT_AUTO_SAVED_DESCRIPTION = '自动保存的草稿方案，待补充说明。';
 const DEFAULT_AUTO_SAVED_CONTENT = '## 自动保存草稿\n\n待补充内容。';
 
@@ -29,7 +29,7 @@ export function getDefaultCategoryId<T extends { _id: string; name: string }>(
 }
 
 export function getDraftStorageKey(draftId: string) {
-  return `solution_draft_${draftId}`;
+  return `customer_draft_${draftId}`;
 }
 
 function extractDescriptionFromContent(content: string) {
@@ -49,7 +49,7 @@ function isGeneratedUntitledDraft(formData: EditorFormData) {
   const content = formData.content.trim();
 
   return (
-    isUntitledSolutionName(title) &&
+    isUntitledCustomerName(title) &&
     (!description || description === '待补充说明') &&
     (!content || content === '## 待补充内容') &&
     !formData.freeUseUrl.trim() &&
@@ -99,7 +99,7 @@ export function hasUnsavedEditorChanges(
     formData.metaTitle !== initialFormData.metaTitle ||
     formData.metaDescription !== initialFormData.metaDescription ||
     formData.publishedAt !== initialFormData.publishedAt ||
-    formData.contentType !== initialFormData.contentType ||
+    formData.isPublicCase !== initialFormData.isPublicCase ||
     formData.caseOrg !== initialFormData.caseOrg ||
     formData.clearanceLevel !== initialFormData.clearanceLevel ||
     formData.caseNo !== initialFormData.caseNo ||
@@ -142,12 +142,12 @@ export function getInitialEditorFormData(
     publishedAt: initialData?.publishedAt
       ? new Date(initialData.publishedAt).toISOString().slice(0, 16)
       : '',
-    contentType: initialData?.contentType || 'solution',
+    isPublicCase: Boolean(initialData?.isPublicCase),
     caseOrg: initialData?.caseOrg || '',
     clearanceLevel: initialData?.clearanceLevel || '',
     caseNo: initialData?.caseNo || 0,
     citedNumbers: initialData?.citedNumbers || '',
-    relatedSolutionIds: initialData?.relatedSolutionIds || [],
+    relatedCustomerIds: initialData?.relatedCustomerIds || [],
     categoryId: initialData?.categoryId || getDefaultCategoryId(categories),
     imageUrl: initialData?.imageUrl || '/fastgpt.svg',
     thumbnailUrl: initialData?.thumbnailUrl || initialData?.imageUrl || '/fastgpt.svg',

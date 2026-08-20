@@ -3,8 +3,8 @@ import type { SystemSettings } from '@/customers/lib/system-settings';
 import {
   buildS3PublicUrl,
   getMissingS3Config,
-  normalizeSolutionFolderName
-} from '@/customers/lib/solution-storage';
+  normalizeCustomerFolderName
+} from '@/customers/lib/customer-storage';
 import {
   shouldGenerateThumbnail,
   generateThumbnail,
@@ -281,7 +281,7 @@ export async function uploadRemoteImageToStorage({
     throw new Error(`S3 配置不完整，请先补充：${missingS3Config.join('、')}`);
   }
 
-  const safeFolder = normalizeSolutionFolderName(storageFolder || 'untitled');
+  const safeFolder = normalizeCustomerFolderName(storageFolder || 'untitled');
   const s3Client = new S3Client({
     region: settings.s3_region,
     endpoint: settings.s3_endpoint,

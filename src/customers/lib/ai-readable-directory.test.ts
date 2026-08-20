@@ -16,7 +16,7 @@ function makeEntry(overrides: Partial<AiDirectoryEntry> = {}): AiDirectoryEntry 
     categoryName: '医疗/健康/康养',
     title: '示例案例',
     description: '示例描述',
-    contentType: 'case',
+    isPublicCase: true,
     ...overrides
   };
 }
@@ -105,19 +105,19 @@ describe('formatCaseName', () => {
 describe('splitDirectoryEntries', () => {
   it('案例按 caseNo 升序，方案保持原顺序', () => {
     const entries: AiDirectoryEntry[] = [
-      makeEntry({ id: 'a', caseNo: 2, contentType: 'case' }),
-      makeEntry({ id: 'b', caseNo: 1, contentType: 'case' }),
-      makeEntry({ id: 'c', contentType: 'solution' }),
-      makeEntry({ id: 'd', contentType: 'solution' })
+      makeEntry({ id: 'a', caseNo: 2, isPublicCase: true }),
+      makeEntry({ id: 'b', caseNo: 1, isPublicCase: true }),
+      makeEntry({ id: 'c', isPublicCase: false }),
+      makeEntry({ id: 'd', isPublicCase: false })
     ];
-    const { cases, solutions } = splitDirectoryEntries(entries);
+    const { cases, customers } = splitDirectoryEntries(entries);
     expect(cases.map((entry) => entry.id)).toEqual(['b', 'a']);
-    expect(solutions.map((entry) => entry.id)).toEqual(['c', 'd']);
+    expect(customers.map((entry) => entry.id)).toEqual(['c', 'd']);
   });
 });
 
 describe('buildHomeDirectoryJsonLd', () => {
-  it('输出 @graph，包含案例与解决方案两个 ItemList，URL 使用绝对语义地址', () => {
+  it('输出 @graph，包含企业公开案例与客户案例两个 ItemList，URL 使用绝对语义地址', () => {
     const cases = [
       makeEntry({
         title: 'OA智能助手',
@@ -126,10 +126,10 @@ describe('buildHomeDirectoryJsonLd', () => {
         citedNumbers: '流程发起从 3-5 分钟缩短至 30 秒'
       })
     ];
-    const solutions = [makeEntry({ title: '知识库问答', contentType: 'solution' })];
+    const customers = [makeEntry({ title: '知识库问答', isPublicCase: false })];
     const jsonLd = buildHomeDirectoryJsonLd({
       cases,
-      solutions,
+      customers,
       absoluteUrlOf: (entry) => `https://fastgpt.cn/customers/${entry.categorySlug}/${entry.slug}`
     });
 
@@ -145,7 +145,7 @@ describe('buildHomeDirectoryJsonLd', () => {
     expect(
       buildHomeDirectoryJsonLd({
         cases: [],
-        solutions: [],
+        customers: [],
         absoluteUrlOf: (entry) => `/customers/${entry.categorySlug}/${entry.slug}`
       })
     ).toBeNull();

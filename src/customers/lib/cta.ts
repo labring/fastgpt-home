@@ -14,11 +14,11 @@ export type CtaModalContext = {
   source: CtaSource;
   title?: string;
   subtitle?: string;
-  solutionId?: string | number;
-  solutionTitle?: string;
+  customerId?: string | number;
+  customerTitle?: string;
   categoryName?: string;
   /** 方案语义 slug，用于 utm_term 归因（区分具体方案） */
-  solutionSlug?: string;
+  customerSlug?: string;
 };
 
 export const DEFAULT_CTA_MODAL_CONTEXT: CtaModalContext = {
@@ -41,8 +41,8 @@ export function buildContactFormUrl(context: CtaModalContext): string {
     utm_campaign: SOURCE_UTM_CAMPAIGNS[context.source] ?? 'poc-application',
     utm_content: context.source
   });
-  if (context.solutionSlug) {
-    params.set('utm_term', context.solutionSlug);
+  if (context.customerSlug) {
+    params.set('utm_term', context.customerSlug);
   }
   return `${CONTACT_FORM_BASE_URL}?${params.toString()}`;
 }
@@ -56,8 +56,8 @@ export function openCtaModal(context: CtaModalContext = DEFAULT_CTA_MODAL_CONTEX
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       source: context.source,
-      solutionId: context.solutionId != null ? String(context.solutionId) : undefined,
-      solutionTitle: context.solutionTitle,
+      customerId: context.customerId != null ? String(context.customerId) : undefined,
+      customerTitle: context.customerTitle,
       categoryName: context.categoryName
     })
   }).catch(() => { /* 静默失败，不影响用户体验 */ });
@@ -65,7 +65,7 @@ export function openCtaModal(context: CtaModalContext = DEFAULT_CTA_MODAL_CONTEX
   // 上报到 Rybbit 分析平台
   trackRybbitEvent('poc_click', {
     source: context.source,
-    solution_id: context.solutionId != null ? String(context.solutionId) : undefined,
-    solution_title: context.solutionTitle
+    customer_id: context.customerId != null ? String(context.customerId) : undefined,
+    customer_title: context.customerTitle
   });
 }

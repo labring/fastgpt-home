@@ -12,11 +12,11 @@ import {
   toAgentResponse
 } from '@/customers/lib/agent-api';
 import { runAgentIdempotentOperation } from '@/customers/lib/agent-idempotency';
-import { updateSolutionMetrics, type SolutionMetricField } from '@/customers/lib/solution-metrics';
+import { updateCustomerMetrics, type CustomerMetricField } from '@/customers/lib/customer-metrics';
 
 export const dynamic = 'force-dynamic';
 
-const EVENT_TO_METRIC: Record<string, SolutionMetricField> = {
+const EVENT_TO_METRIC: Record<string, CustomerMetricField> = {
   view: 'views',
   like: 'likes',
 };
@@ -79,7 +79,7 @@ export async function POST(
 
       const metric = EVENT_TO_METRIC[parsedPayload.data.type];
       const delta = 1;
-      const updateResult = await updateSolutionMetrics(id, { [metric]: delta }, {
+      const updateResult = await updateCustomerMetrics(id, { [metric]: delta }, {
         mode: 'increment',
         reason: [
           `event:${parsedPayload.data.type}`,
@@ -91,7 +91,7 @@ export async function POST(
         return errorResult(
           context,
           404,
-          AGENT_ERROR_CODES.solutionNotFound,
+          AGENT_ERROR_CODES.customerNotFound,
           '案例不存在'
         );
       }
@@ -106,7 +106,7 @@ export async function POST(
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error recording solution event:', error);
+    console.error('Error recording customer event:', error);
     return toAgentResponse(errorResult(
       context,
       500,

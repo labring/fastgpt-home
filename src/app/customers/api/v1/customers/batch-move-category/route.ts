@@ -1,11 +1,11 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import Category from '@/customers/models/Category';
 import { revalidateAdminRouteTree } from '@/customers/lib/admin-cache';
 import {
-  loadSolutionRevalidationRefs,
-  revalidateSolutionRefs
+  loadCustomerRevalidationRefs,
+  revalidateCustomerRefs
 } from '@/customers/lib/public-cache-invalidation';
 import {
   AGENT_ERROR_CODES,
@@ -54,7 +54,7 @@ export async function POST(request: NextRequest) {
         return errorResult(
           context,
           400,
-          AGENT_ERROR_CODES.solutionIdsRequired,
+          AGENT_ERROR_CODES.customerIdsRequired,
           '请提供要迁移的解决方案 ID 列表'
         );
       }
@@ -82,7 +82,7 @@ export async function POST(request: NextRequest) {
         return errorResult(
           context,
           400,
-          AGENT_ERROR_CODES.solutionIdsRequired,
+          AGENT_ERROR_CODES.customerIdsRequired,
           '请提供要迁移的解决方案 ID 列表'
         );
       }
@@ -97,14 +97,14 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      const previousRefs = await loadSolutionRevalidationRefs(ids);
-      const updateResult = await Solution.updateMany(
+      const previousRefs = await loadCustomerRevalidationRefs(ids);
+      const updateResult = await Customer.updateMany(
         { _id: { $in: ids } },
         { $set: { categoryId: targetCategoryId, categoryName: category.name } }
       );
       if (updateResult.modifiedCount > 0) {
         revalidateAdminRouteTree();
-        revalidateSolutionRefs(previousRefs.map((ref) => ({
+        revalidateCustomerRefs(previousRefs.map((ref) => ({
           id: ref.id,
           slug: ref.slug,
           categorySlug: category.slug,
@@ -120,7 +120,7 @@ export async function POST(request: NextRequest) {
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error batch moving solutions:', error);
+    console.error('Error batch moving customers:', error);
     return toAgentResponse(errorResult(
       context,
       500,

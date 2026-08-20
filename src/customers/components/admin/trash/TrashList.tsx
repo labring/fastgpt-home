@@ -2,13 +2,13 @@
 
 import ConfirmModal from '@/customers/components/admin/shared/ConfirmModal';
 import AdminEmptyState from '@/customers/components/admin/shared/AdminEmptyState';
-import type { AdminSolutionListData } from '@/customers/components/admin/solution-list/types';
-import TrashSolutionCard from '@/customers/components/admin/trash/TrashSolutionCard';
+import type { AdminCustomerListData } from '@/customers/components/admin/customer-list/types';
+import TrashCustomerCard from '@/customers/components/admin/trash/TrashCustomerCard';
 import TrashToolbar from '@/customers/components/admin/trash/TrashToolbar';
-import { useTrashSolutionList } from '@/customers/components/admin/trash/useTrashSolutionList';
+import { useTrashCustomerList } from '@/customers/components/admin/trash/useTrashCustomerList';
 
 interface TrashListProps {
-  initialData: AdminSolutionListData;
+  initialData: AdminCustomerListData;
 }
 
 export default function TrashList({ initialData }: TrashListProps) {
@@ -29,7 +29,7 @@ export default function TrashList({ initialData }: TrashListProps) {
     openClearConfirm,
     closeClearConfirm,
     handleClearTrash
-  } = useTrashSolutionList({ initialData });
+  } = useTrashCustomerList({ initialData });
 
   return (
     <div className="p-4 lg:p-8">
@@ -46,7 +46,7 @@ export default function TrashList({ initialData }: TrashListProps) {
       ) : (
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
           {filteredItems.map((item) => (
-            <TrashSolutionCard
+            <TrashCustomerCard
               key={item._id}
               item={item}
               onRestore={handleRestore}

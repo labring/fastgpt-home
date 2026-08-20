@@ -9,7 +9,7 @@ import {
   PencilSimpleIcon,
   FileDashedIcon
 } from '@phosphor-icons/react';
-import { SORT_OPTIONS, type SolutionSortKey, type SortOption } from '@/customers/lib/solution-search';
+import { SORT_OPTIONS, type CustomerSortKey, type SortOption } from '@/customers/lib/customer-search';
 
 const ICON_MAP: Record<SortOption['icon'], typeof HeartIcon> = {
   Heart: HeartIcon,
@@ -19,7 +19,7 @@ const ICON_MAP: Record<SortOption['icon'], typeof HeartIcon> = {
   FileDashed: FileDashedIcon
 };
 
-interface SortDropdownProps<TSortKey extends string = SolutionSortKey> {
+interface SortDropdownProps<TSortKey extends string = CustomerSortKey> {
   sortBy: TSortKey;
   onSortChange: (value: TSortKey) => void;
   options?: SortOption<TSortKey>[];
@@ -27,7 +27,7 @@ interface SortDropdownProps<TSortKey extends string = SolutionSortKey> {
   compactOnMobile?: boolean;
 }
 
-export default function SortDropdown<TSortKey extends string = SolutionSortKey>({
+export default function SortDropdown<TSortKey extends string = CustomerSortKey>({
   sortBy,
   onSortChange,
   options = SORT_OPTIONS as SortOption<TSortKey>[],

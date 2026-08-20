@@ -1,4 +1,4 @@
-import { DEFAULT_PUBLIC_SOLUTION_SORT_KEY } from "@/customers/lib/solution-pagination";
+import { DEFAULT_PUBLIC_CUSTOMER_SORT_KEY } from "@/customers/lib/customer-pagination";
 import { withBasePath } from "@/customers/lib/base-path";
 
 export interface BuildHomeHrefOptions {
@@ -27,7 +27,7 @@ export function buildHomeHref({
     params.set("search", normalizedSearch);
   }
 
-  if (normalizedSortBy && normalizedSortBy !== DEFAULT_PUBLIC_SOLUTION_SORT_KEY) {
+  if (normalizedSortBy && normalizedSortBy !== DEFAULT_PUBLIC_CUSTOMER_SORT_KEY) {
     params.set("sortBy", normalizedSortBy);
   }
 

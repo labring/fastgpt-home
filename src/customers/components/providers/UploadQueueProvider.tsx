@@ -10,7 +10,7 @@ import {
   useState
 } from 'react';
 import { toast } from 'sonner';
-import { saveSolution } from '@/app/customers/admin/actions/solutions';
+import { saveCustomer } from '@/app/customers/admin/actions/customers';
 import {
   buildUploadContentMarkdown,
   removeUploadPlaceholder,
@@ -237,7 +237,7 @@ export function UploadQueueProvider({ children }: { children: React.ReactNode })
 
     try {
       const draft = readDraftSnapshot(draftKey) || intent.snapshot;
-      const result = await saveSolution({
+      const result = await saveCustomer({
         ...draft,
         isPublished: intent.publishStatus,
         newlyUploadedUrls: readTrackedUploadedUrls(draftKey)

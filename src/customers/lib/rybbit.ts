@@ -6,7 +6,7 @@
  *
  * 使用方式：
  *   import { trackRybbitEvent } from '@/customers/lib/rybbit';
- *   trackRybbitEvent('poc_click', { source: 'home_hero', solution_id: 'xxx' });
+ *   trackRybbitEvent('poc_click', { source: 'home_hero', customer_id: 'xxx' });
  */
 
 declare global {

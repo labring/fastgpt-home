@@ -1,13 +1,13 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
 import Category from '@/customers/models/Category';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import { getAutoCategoryColor, normalizeHexColor } from '@/customers/lib/category-color';
 import { revalidateAdminRouteTree } from '@/customers/lib/admin-cache';
 import {
-  loadSolutionRevalidationRefsByCategoryId,
+  loadCustomerRevalidationRefsByCategoryId,
   revalidateCategoryRefs,
-  revalidateSolutionRefs
+  revalidateCustomerRefs
 } from '@/customers/lib/public-cache-invalidation';
 import {
   ensureCategorySlugs,
@@ -64,7 +64,7 @@ export async function GET(
       ));
     }
 
-    const solutionCount = await Solution.countDocuments({ categoryId: id, deletedAt: null });
+    const customerCount = await Customer.countDocuments({ categoryId: id, deletedAt: null });
 
     return toAgentResponse(successResult(context, {
         id: String(category._id),
@@ -73,7 +73,7 @@ export async function GET(
         color: normalizeHexColor(category.color, getAutoCategoryColor(category.name)),
         order: category.order,
         isActive: category.isActive,
-        solutionCount,
+        customerCount,
         createdAt: category.createdAt,
         updatedAt: category.updatedAt,
       }));
@@ -200,16 +200,16 @@ export async function PUT(
     const order = typeof body.order === 'number' ? body.order : oldCategory.order;
     const isActive = typeof body.isActive === 'boolean' ? body.isActive : oldCategory.isActive;
     const oldSlug = oldCategory.slug;
-    const solutionRefs = oldSlug && oldSlug !== slug
-      ? await loadSolutionRevalidationRefsByCategoryId(id)
+    const customerRefs = oldSlug && oldSlug !== slug
+      ? await loadCustomerRevalidationRefsByCategoryId(id)
       : [];
 
     await Category.findByIdAndUpdate(id, { name, slug, color, order, isActive });
 
-    // Sync categoryName in all related solutions if name changed
+    // Sync categoryName in all related customers if name changed
     let categoryNameSynced = false;
     if (oldCategory.name !== name) {
-      await Solution.updateMany(
+      await Customer.updateMany(
         { categoryId: id },
         { $set: { categoryName: name } }
       );
@@ -217,8 +217,8 @@ export async function PUT(
     }
     revalidateAdminRouteTree();
     revalidateCategoryRefs({ slug, previousSlug: oldSlug });
-    if (solutionRefs.length > 0) {
-      revalidateSolutionRefs(solutionRefs.map((ref) => ({
+    if (customerRefs.length > 0) {
+      revalidateCustomerRefs(customerRefs.map((ref) => ({
         id: ref.id,
         slug: ref.slug,
         categorySlug: slug,
@@ -276,13 +276,13 @@ export async function DELETE(
       ));
     }
 
-    const solutionCount = await Solution.countDocuments({ categoryId: id, deletedAt: null });
-    if (solutionCount > 0) {
+    const customerCount = await Customer.countDocuments({ categoryId: id, deletedAt: null });
+    if (customerCount > 0) {
       return toAgentResponse(errorResult(
         context,
         409,
         AGENT_ERROR_CODES.categoryNotEmpty,
-        `该分类下存在 ${solutionCount} 个解决方案，无法直接删除。请先转移或删除相关方案。`
+        `该分类下存在 ${customerCount} 个解决方案，无法直接删除。请先转移或删除相关方案。`
       ));
     }
 

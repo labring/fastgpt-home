@@ -1,6 +1,6 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import {
   AGENT_ERROR_CODES,
   createAgentRequestContext,
@@ -29,41 +29,41 @@ export async function GET(
       return toAgentResponse(errorResult(
         context,
         404,
-        AGENT_ERROR_CODES.solutionNotFound,
+        AGENT_ERROR_CODES.customerNotFound,
         '案例不存在'
       ));
     }
 
     await dbConnect();
-    const solution = await Solution.findById(id)
+    const customer = await Customer.findById(id)
       .select('title usageCount likesCount helpfulCount unhelpfulCount')
       .lean() as Record<string, unknown> | null;
 
-    if (!solution) {
+    if (!customer) {
       return toAgentResponse(errorResult(
         context,
         404,
-        AGENT_ERROR_CODES.solutionNotFound,
+        AGENT_ERROR_CODES.customerNotFound,
         '案例不存在'
       ));
     }
 
-    const helpfulCount = (solution.helpfulCount as number) || 0;
-    const unhelpfulCount = (solution.unhelpfulCount as number) || 0;
+    const helpfulCount = (customer.helpfulCount as number) || 0;
+    const unhelpfulCount = (customer.unhelpfulCount as number) || 0;
     const totalVotes = helpfulCount + unhelpfulCount;
     const helpfulRate = totalVotes > 0 ? helpfulCount / totalVotes : 0;
 
     return toAgentResponse(successResult(context, {
-        id: String(solution._id),
-        title: solution.title,
-        views: solution.usageCount,
-        likes: solution.likesCount,
+        id: String(customer._id),
+        title: customer.title,
+        views: customer.usageCount,
+        likes: customer.likesCount,
         helpfulCount,
         unhelpfulCount,
         helpfulRate: Math.round(helpfulRate * 100) / 100,
       }));
   } catch (error) {
-    console.error('Error getting solution stats:', error);
+    console.error('Error getting customer stats:', error);
     return toAgentResponse(errorResult(
       context,
       500,

@@ -1,12 +1,12 @@
 import { NextRequest } from 'next/server';
 import type { SortOrder } from 'mongoose';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import Category from '@/customers/models/Category';
 import {
-  createSkeletonSolutionForAgent,
-  saveSolutionForAgent
-} from '@/customers/lib/solution-admin-service';
+  createSkeletonCustomerForAgent,
+  saveCustomerForAgent
+} from '@/customers/lib/customer-admin-service';
 import { getAutoCategoryColor, normalizeHexColor } from '@/customers/lib/category-color';
 import { ensureCategorySlugs } from '@/customers/lib/category-slug';
 import {
@@ -34,7 +34,7 @@ const TITLE_MAX_LENGTH = 100;
 const DESCRIPTION_MAX_LENGTH = 500;
 const DEFAULT_IMAGE_URL = '/fastgpt.svg';
 
-type SolutionStatus = 'published' | 'draft' | 'deleted';
+type CustomerStatus = 'published' | 'draft' | 'deleted';
 
 type PopulatedCategory = {
   _id?: unknown;
@@ -43,7 +43,7 @@ type PopulatedCategory = {
   color?: string | null;
 };
 
-type SolutionListRow = {
+type CustomerListRow = {
   _id: unknown;
   categoryId: string | PopulatedCategory | null;
   categoryName?: string | null;
@@ -64,7 +64,7 @@ type SolutionListRow = {
   updatedAt: Date;
 };
 
-type CreateSolutionPayload = {
+type CreateCustomerPayload = {
   title: string;
   description: string;
   slug?: string;
@@ -85,12 +85,12 @@ function parsePositiveInteger(value: string | null, fallback: number, max?: numb
   return max ? Math.min(parsedValue, max) : parsedValue;
 }
 
-function parseStatus(value: string | null): SolutionStatus {
+function parseStatus(value: string | null): CustomerStatus {
   return value === 'draft' || value === 'deleted' ? value : 'published';
 }
 
-function parseCreateSolutionPayload(body: unknown):
-  | { success: true; data: CreateSolutionPayload }
+function parseCreateCustomerPayload(body: unknown):
+  | { success: true; data: CreateCustomerPayload }
   | { success: false; error: string } {
   if (!isRecord(body)) {
     return { success: false, error: '请求体必须是 JSON 对象' };
@@ -139,18 +139,18 @@ function parseCreateSolutionPayload(body: unknown):
   };
 }
 
-function isPopulatedCategory(value: SolutionListRow['categoryId']): value is PopulatedCategory {
+function isPopulatedCategory(value: CustomerListRow['categoryId']): value is PopulatedCategory {
   return typeof value === 'object' && value !== null;
 }
 
-function getCategoryDisplayInfo(solution: SolutionListRow) {
-  const populatedCategory = isPopulatedCategory(solution.categoryId) ? solution.categoryId : null;
-  const categoryName = populatedCategory?.name || solution.categoryName || '未知分类';
+function getCategoryDisplayInfo(customer: CustomerListRow) {
+  const populatedCategory = isPopulatedCategory(customer.categoryId) ? customer.categoryId : null;
+  const categoryName = populatedCategory?.name || customer.categoryName || '未知分类';
 
   return {
     categoryId: populatedCategory?._id
       ? String(populatedCategory._id)
-      : String(solution.categoryId || ''),
+      : String(customer.categoryId || ''),
     categoryName,
     categorySlug: populatedCategory?.slug || '',
     categoryColor: normalizeHexColor(
@@ -204,19 +204,19 @@ export async function GET(request: NextRequest) {
       ? { score: { $meta: 'textScore' } }
       : { createdAt: -1 };
 
-    const [solutions, total] = await Promise.all([
-      Solution.find(query, search ? { score: { $meta: 'textScore' } } : {})
+    const [customers, total] = await Promise.all([
+      Customer.find(query, search ? { score: { $meta: 'textScore' } } : {})
         .sort(sortOptions)
         .skip(skip)
         .limit(limit)
         .select('-content -mediaUrls')
         .populate('categoryId', 'name slug color')
-        .lean<SolutionListRow[]>({ virtuals: true }),
-      Solution.countDocuments(query),
+        .lean<CustomerListRow[]>({ virtuals: true }),
+      Customer.countDocuments(query),
     ]);
 
     return toAgentResponse(successResult(context, {
-      items: solutions.map((s) => ({
+      items: customers.map((s) => ({
         id: String(s._id || ''),
         ...getCategoryDisplayInfo(s),
         slug: s.slug || '',
@@ -243,7 +243,7 @@ export async function GET(request: NextRequest) {
       },
     }));
   } catch (error) {
-    console.error('Error fetching solutions:', error);
+    console.error('Error fetching customers:', error);
     return toAgentResponse(errorResult(
       context,
       500,
@@ -267,7 +267,7 @@ export async function POST(request: NextRequest) {
         return requestBody.result;
       }
 
-      const parsedPayload = parseCreateSolutionPayload(requestBody.data);
+      const parsedPayload = parseCreateCustomerPayload(requestBody.data);
       if (!parsedPayload.success) {
         return errorResult(
           context,
@@ -287,7 +287,7 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      const result = await createSkeletonSolutionForAgent();
+      const result = await createSkeletonCustomerForAgent();
       if (!result.success || !result.id) {
         const resolvedError = resolveAgentDomainError(
           result.error || '创建失败',
@@ -303,7 +303,7 @@ export async function POST(request: NextRequest) {
         );
       }
 
-      const saveResult = await saveSolutionForAgent({
+      const saveResult = await saveCustomerForAgent({
         id: result.id,
         title: payload.title,
         description: payload.description,
@@ -340,7 +340,7 @@ export async function POST(request: NextRequest) {
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error creating solution:', error);
+    console.error('Error creating customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,

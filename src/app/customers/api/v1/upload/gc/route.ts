@@ -10,7 +10,7 @@ import {
   toAgentResponse
 } from '@/customers/lib/agent-api';
 import { runAgentIdempotentOperation } from '@/customers/lib/agent-idempotency';
-import { deleteAssetUrls } from '@/customers/lib/solution-asset-gc';
+import { deleteAssetUrls } from '@/customers/lib/customer-asset-gc';
 
 export const dynamic = 'force-dynamic';
 

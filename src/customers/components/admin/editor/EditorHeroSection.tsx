@@ -13,14 +13,14 @@ import {
   UploadSimpleIcon
 } from '@phosphor-icons/react';
 import CategoryBadge from '@/customers/components/CategoryBadge';
-import SolutionHero from '@/customers/components/solution/SolutionHero';
+import CustomerHero from '@/customers/components/customer/CustomerHero';
 import { withBasePath } from '@/customers/lib/base-path';
 import type {
   EditorCategory,
   EditorFormData,
   EditorInitialData
 } from './types';
-import { buildAdminSolutionEditHref } from '@/customers/lib/admin-solution-routing';
+import { buildAdminCustomerEditHref } from '@/customers/lib/admin-customer-routing';
 
 interface EditorHeroSectionProps {
   isEditing: boolean;
@@ -29,8 +29,8 @@ interface EditorHeroSectionProps {
   validCategories: EditorCategory[];
   selectedCategory?: EditorCategory;
   initialData?: EditorInitialData;
-  prevSolution?: { id: string; title: string; categorySlug?: string } | null;
-  nextSolution?: { id: string; title: string; categorySlug?: string } | null;
+  prevCustomer?: { id: string; title: string; categorySlug?: string } | null;
+  nextCustomer?: { id: string; title: string; categorySlug?: string } | null;
   isCategoryDropdownOpen: boolean;
   setIsCategoryDropdownOpen: React.Dispatch<React.SetStateAction<boolean>>;
   fileInputRef: React.RefObject<HTMLInputElement | null>;
@@ -114,8 +114,8 @@ export default function EditorHeroSection({
   validCategories,
   selectedCategory,
   initialData,
-  prevSolution,
-  nextSolution,
+  prevCustomer,
+  nextCustomer,
   isCategoryDropdownOpen,
   setIsCategoryDropdownOpen,
   fileInputRef,
@@ -139,7 +139,7 @@ export default function EditorHeroSection({
     }
     setSlugCheck({ slug, status: 'checking' });
     try {
-      const response = await fetch(withBasePath('/api/admin/solution-slug-check'), {
+      const response = await fetch(withBasePath('/api/admin/customer-slug-check'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ slug, excludeId })
@@ -165,7 +165,7 @@ export default function EditorHeroSection({
     setIsSuggestingSlug(true);
 
     try {
-      const response = await fetch(withBasePath('/api/admin/solution-slug-suggest'), {
+      const response = await fetch(withBasePath('/api/admin/customer-slug-suggest'), {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
@@ -209,19 +209,18 @@ export default function EditorHeroSection({
       formData.metaTitle,
       formData.publishedAt,
       formData.metaDescription,
-      formData.contentType,
       formData.clearanceLevel,
       formData.caseOrg,
       formData.citedNumbers
-    ].filter((value) => typeof value === 'string' && value.trim()).length
+    ].filter((value) => typeof value === 'string' && value.trim()).length +
     (formData.caseNo > 0 ? 1 : 0);
   const advancedSummary =
-    advancedFilledCount > 0 ? `已填 ${advancedFilledCount}/9` : '待填写';
+    advancedFilledCount > 0 ? `已填 ${advancedFilledCount}/8` : '待填写';
 
   if (!isEditing) {
     return (
-      <SolutionHero
-        solution={{
+      <CustomerHero
+        customer={{
           id: initialData?._id || 'preview',
           title: formData.title || '标题预览',
           description: formData.description || '在这里实时预览您的描述文案...',
@@ -232,15 +231,15 @@ export default function EditorHeroSection({
           freeUseUrl: formData.freeUseUrl,
           createdAt: initialData?.createdAt || new Date().toISOString()
         }}
-        prevSolution={prevSolution}
-        nextSolution={nextSolution}
+        prevCustomer={prevCustomer}
+        nextCustomer={nextCustomer}
         getNavHref={(id) => {
-          const navSolution =
-            prevSolution && String(prevSolution.id) === String(id)
-              ? prevSolution
-              : nextSolution;
+          const navCustomer =
+            prevCustomer && String(prevCustomer.id) === String(id)
+              ? prevCustomer
+              : nextCustomer;
 
-          return buildAdminSolutionEditHref(navSolution || { id });
+          return buildAdminCustomerEditHref(navCustomer || { id });
         }}
         localLikes={initialData?.likesCount || 0}
         isLiked={false}
@@ -330,7 +329,7 @@ export default function EditorHeroSection({
 
             <div className="max-w-xl rounded-xl border border-gray-200/70 bg-white/75 p-3 shadow-sm shadow-black/[0.03] backdrop-blur-sm dark:border-gray-700/70 dark:bg-gray-900/55">
               <label
-                htmlFor="solution-free-use-url"
+                htmlFor="customer-free-use-url"
                 className="flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.08em] text-gray-500 dark:text-gray-400"
               >
                 <LinkSimpleIcon size={15} weight="bold" />
@@ -340,7 +339,7 @@ export default function EditorHeroSection({
                 </span>
               </label>
               <input
-                id="solution-free-use-url"
+                id="customer-free-use-url"
                 type="url"
                 inputMode="url"
                 value={formData.freeUseUrl}
@@ -387,14 +386,14 @@ export default function EditorHeroSection({
 
               <div>
                 <label
-                  htmlFor="solution-slug"
+                  htmlFor="customer-slug"
                   className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                 >
                   案例 Slug（唯一）
                 </label>
                 <div className="mt-1 flex overflow-hidden rounded-lg border border-gray-200 bg-white transition focus-within:border-blue-400 focus-within:ring-2 focus-within:ring-blue-100 dark:border-gray-700 dark:bg-gray-900 dark:focus-within:border-blue-500 dark:focus-within:ring-blue-900/30">
                   <input
-                    id="solution-slug"
+                    id="customer-slug"
                     type="text"
                     value={formData.slug}
                     onChange={(event) =>
@@ -442,13 +441,13 @@ export default function EditorHeroSection({
               <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div>
                   <label
-                    htmlFor="solution-meta-title"
+                    htmlFor="customer-meta-title"
                     className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                   >
                     Meta 标题（搜索引擎）
                   </label>
                   <input
-                    id="solution-meta-title"
+                    id="customer-meta-title"
                     type="text"
                     value={formData.metaTitle}
                     onChange={(event) =>
@@ -460,13 +459,13 @@ export default function EditorHeroSection({
                 </div>
                 <div>
                   <label
-                    htmlFor="solution-published-at"
+                    htmlFor="customer-published-at"
                     className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                   >
                     发布时间
                   </label>
                   <input
-                    id="solution-published-at"
+                    id="customer-published-at"
                     type="datetime-local"
                     value={formData.publishedAt}
                     onChange={(event) =>
@@ -479,13 +478,13 @@ export default function EditorHeroSection({
 
               <div>
                 <label
-                  htmlFor="solution-meta-description"
+                  htmlFor="customer-meta-description"
                   className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                 >
                   Meta 描述（搜索结果摘要）
                 </label>
                 <textarea
-                  id="solution-meta-description"
+                  id="customer-meta-description"
                   rows={2}
                   value={formData.metaDescription}
                   onChange={(event) =>
@@ -497,20 +496,25 @@ export default function EditorHeroSection({
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                <CustomSelectField
-                  label="内容类型"
-                  value={formData.contentType}
-                  options={[
-                    { value: 'solution', label: '普通方案' },
-                    { value: 'case', label: '客户案例' }
-                  ]}
-                  onChange={(value) =>
-                    setFormData((prev) => ({
-                      ...prev,
-                      contentType: value as 'solution' | 'case'
-                    }))
-                  }
-                />
+                <div>
+                  <span className="block text-xs font-medium text-gray-500 dark:text-gray-400">
+                    企业公开案例
+                  </span>
+                  <label className="mt-1 flex h-[34px] cursor-pointer items-center gap-2 rounded-md border border-gray-200 bg-white px-2.5 text-sm text-gray-900 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-100">
+                    <input
+                      type="checkbox"
+                      checked={formData.isPublicCase}
+                      onChange={(event) =>
+                        setFormData((prev) => ({
+                          ...prev,
+                          isPublicCase: event.target.checked
+                        }))
+                      }
+                      className="h-4 w-4 rounded border-gray-300 text-blue-600 focus:ring-blue-500"
+                    />
+                    <span>{formData.isPublicCase ? '客户案例' : '普通方案'}</span>
+                  </label>
+                </div>
                 <CustomSelectField
                   label="公开层级"
                   value={formData.clearanceLevel}
@@ -532,13 +536,13 @@ export default function EditorHeroSection({
               <div className="grid grid-cols-2 gap-3">
                 <div>
                   <label
-                    htmlFor="solution-case-org"
+                    htmlFor="customer-case-org"
                     className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                   >
                     客户名（内部登记）
                   </label>
                   <input
-                    id="solution-case-org"
+                    id="customer-case-org"
                     type="text"
                     value={formData.caseOrg}
                     onChange={(event) =>
@@ -550,13 +554,13 @@ export default function EditorHeroSection({
                 </div>
                 <div>
                   <label
-                    htmlFor="solution-case-no"
+                    htmlFor="customer-case-no"
                     className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                   >
                     案例序号（对账）
                   </label>
                   <input
-                    id="solution-case-no"
+                    id="customer-case-no"
                     type="number"
                     min={0}
                     value={formData.caseNo || ''}
@@ -573,13 +577,13 @@ export default function EditorHeroSection({
 
               <div>
                 <label
-                  htmlFor="solution-cited-numbers"
+                  htmlFor="customer-cited-numbers"
                   className="block text-xs font-medium text-gray-500 dark:text-gray-400"
                 >
                   引用数字登记（内部对账）
                 </label>
                 <textarea
-                  id="solution-cited-numbers"
+                  id="customer-cited-numbers"
                   rows={1}
                   value={formData.citedNumbers}
                   onChange={(event) =>

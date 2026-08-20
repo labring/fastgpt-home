@@ -1,26 +1,9 @@
+/* The shared Tailwind config maps `ink-sub` to `var(--home-secondary)`, but
+   `--home-secondary` is only defined inside `.home`. Define it here so
+   `text-ink-sub` resolves to the Feishu muted gray instead of an undefined
+   variable outside the home shell. */
 .customers-scope {
-  --color-brand-50: #f0f9ff;
-  --color-brand-100: #e0f2fe;
-  --color-brand-500: #0ea5e9;
-  --color-brand-600: #0052d9;
-  --color-brand-700: #0047b8;
-  --color-brand-900: #091e42;
-
-  --color-surface-100: #f5f6f7;
-  --color-surface-200: #eff0f1;
-  --color-surface-300: #dee0e3;
-
-  --color-ink-sub: #646a73;
-
-  --font-sans: var(--font-geist-sans), "Inter", "SF Pro Text", "SF Pro Icons", "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
-  --font-display: var(--font-geist-sans), "Inter", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "PingFang SC", sans-serif;
-
-  --shadow-elevation-1: 0 1px 2px rgba(31, 35, 41, 0.06), 0 0 0 1px rgba(31, 35, 41, 0.03);
-  --shadow-elevation-2: 0 6px 16px -8px rgba(31, 35, 41, 0.14), 0 2px 6px rgba(31, 35, 41, 0.04);
-  --shadow-elevation-3: 0 12px 28px -12px rgba(31, 35, 41, 0.18), 0 4px 10px rgba(31, 35, 41, 0.05);
-
-  --background-image-grid-pattern: linear-gradient(to right, #eff0f1 1px, transparent 1px), linear-gradient(to bottom, #eff0f1 1px, transparent 1px);
-  --background-image-grid-pattern-dark: linear-gradient(to right, #374151 1px, transparent 1px), linear-gradient(to bottom, #374151 1px, transparent 1px);
+  --home-secondary: #646a73;
 }
 
 @keyframes typing {
@@ -103,43 +86,43 @@
 
 /* 飞书风格浅色模式基础覆写：页面浅灰、内容纸面白、边框轻量 */
 
-.customers-scope:not(.dark) .bg-white,.customers-scope:not(.dark) [class~="bg-white"] {
+html:not(.dark) .customers-scope .bg-white,html:not(.dark) .customers-scope [class~="bg-white"] {
       background-color: var(--feishu-light-paper);
   }
 
-.customers-scope:not(.dark) .bg-gray-50,.customers-scope:not(.dark) .bg-slate-50,.customers-scope:not(.dark) .bg-zinc-50,.customers-scope:not(.dark) [class~="bg-gray-50"],.customers-scope:not(.dark) [class~="bg-slate-50"],.customers-scope:not(.dark) [class~="bg-zinc-50"],.customers-scope:not(.dark) [class~="bg-gray-50/50"],.customers-scope:not(.dark) [class~="bg-slate-50/50"],.customers-scope:not(.dark) [class~="bg-zinc-50/50"] {
+html:not(.dark) .customers-scope .bg-gray-50,html:not(.dark) .customers-scope .bg-slate-50,html:not(.dark) .customers-scope .bg-zinc-50,html:not(.dark) .customers-scope [class~="bg-gray-50"],html:not(.dark) .customers-scope [class~="bg-slate-50"],html:not(.dark) .customers-scope [class~="bg-zinc-50"],html:not(.dark) .customers-scope [class~="bg-gray-50/50"],html:not(.dark) .customers-scope [class~="bg-slate-50/50"],html:not(.dark) .customers-scope [class~="bg-zinc-50/50"] {
       background-color: var(--feishu-light-surface);
   }
 
-.customers-scope:not(.dark) .bg-gray-100,.customers-scope:not(.dark) .bg-slate-100,.customers-scope:not(.dark) .bg-zinc-100,.customers-scope:not(.dark) [class~="bg-gray-100"],.customers-scope:not(.dark) [class~="bg-slate-100"],.customers-scope:not(.dark) [class~="bg-zinc-100"],.customers-scope:not(.dark) [class~="bg-gray-100/50"],.customers-scope:not(.dark) [class~="bg-slate-100/50"],.customers-scope:not(.dark) [class~="bg-zinc-100/50"] {
+html:not(.dark) .customers-scope .bg-gray-100,html:not(.dark) .customers-scope .bg-slate-100,html:not(.dark) .customers-scope .bg-zinc-100,html:not(.dark) .customers-scope [class~="bg-gray-100"],html:not(.dark) .customers-scope [class~="bg-slate-100"],html:not(.dark) .customers-scope [class~="bg-zinc-100"],html:not(.dark) .customers-scope [class~="bg-gray-100/50"],html:not(.dark) .customers-scope [class~="bg-slate-100/50"],html:not(.dark) .customers-scope [class~="bg-zinc-100/50"] {
       background-color: var(--feishu-light-surface-2);
   }
 
-.customers-scope:not(.dark) .text-gray-900,.customers-scope:not(.dark) .text-slate-950,.customers-scope:not(.dark) .text-zinc-900,.customers-scope:not(.dark) [class~="text-gray-900"],.customers-scope:not(.dark) [class~="text-slate-950"],.customers-scope:not(.dark) [class~="text-zinc-900"] {
+html:not(.dark) .customers-scope .text-gray-900,html:not(.dark) .customers-scope .text-slate-950,html:not(.dark) .customers-scope .text-zinc-900,html:not(.dark) .customers-scope [class~="text-gray-900"],html:not(.dark) .customers-scope [class~="text-slate-950"],html:not(.dark) .customers-scope [class~="text-zinc-900"] {
       color: var(--feishu-light-title);
   }
 
-.customers-scope:not(.dark) .text-gray-800,.customers-scope:not(.dark) .text-slate-900,.customers-scope:not(.dark) .text-zinc-800,.customers-scope:not(.dark) [class~="text-gray-800"],.customers-scope:not(.dark) [class~="text-slate-900"],.customers-scope:not(.dark) [class~="text-zinc-800"] {
+html:not(.dark) .customers-scope .text-gray-800,html:not(.dark) .customers-scope .text-slate-900,html:not(.dark) .customers-scope .text-zinc-800,html:not(.dark) .customers-scope [class~="text-gray-800"],html:not(.dark) .customers-scope [class~="text-slate-900"],html:not(.dark) .customers-scope [class~="text-zinc-800"] {
       color: var(--feishu-light-text);
   }
 
-.customers-scope:not(.dark) .text-gray-700,.customers-scope:not(.dark) .text-slate-700,.customers-scope:not(.dark) .text-zinc-700,.customers-scope:not(.dark) .text-gray-600,.customers-scope:not(.dark) .text-slate-600,.customers-scope:not(.dark) .text-zinc-600,.customers-scope:not(.dark) [class~="text-gray-700"],.customers-scope:not(.dark) [class~="text-slate-700"],.customers-scope:not(.dark) [class~="text-zinc-700"],.customers-scope:not(.dark) [class~="text-gray-600"],.customers-scope:not(.dark) [class~="text-slate-600"],.customers-scope:not(.dark) [class~="text-zinc-600"] {
+html:not(.dark) .customers-scope .text-gray-700,html:not(.dark) .customers-scope .text-slate-700,html:not(.dark) .customers-scope .text-zinc-700,html:not(.dark) .customers-scope .text-gray-600,html:not(.dark) .customers-scope .text-slate-600,html:not(.dark) .customers-scope .text-zinc-600,html:not(.dark) .customers-scope [class~="text-gray-700"],html:not(.dark) .customers-scope [class~="text-slate-700"],html:not(.dark) .customers-scope [class~="text-zinc-700"],html:not(.dark) .customers-scope [class~="text-gray-600"],html:not(.dark) .customers-scope [class~="text-slate-600"],html:not(.dark) .customers-scope [class~="text-zinc-600"] {
       color: var(--feishu-light-muted);
   }
 
-.customers-scope:not(.dark) .text-gray-500,.customers-scope:not(.dark) .text-slate-500,.customers-scope:not(.dark) .text-zinc-500,.customers-scope:not(.dark) .text-gray-400,.customers-scope:not(.dark) .text-slate-400,.customers-scope:not(.dark) .text-zinc-400,.customers-scope:not(.dark) [class~="text-gray-500"],.customers-scope:not(.dark) [class~="text-slate-500"],.customers-scope:not(.dark) [class~="text-zinc-500"],.customers-scope:not(.dark) [class~="text-gray-400"],.customers-scope:not(.dark) [class~="text-slate-400"],.customers-scope:not(.dark) [class~="text-zinc-400"] {
+html:not(.dark) .customers-scope .text-gray-500,html:not(.dark) .customers-scope .text-slate-500,html:not(.dark) .customers-scope .text-zinc-500,html:not(.dark) .customers-scope .text-gray-400,html:not(.dark) .customers-scope .text-slate-400,html:not(.dark) .customers-scope .text-zinc-400,html:not(.dark) .customers-scope [class~="text-gray-500"],html:not(.dark) .customers-scope [class~="text-slate-500"],html:not(.dark) .customers-scope [class~="text-zinc-500"],html:not(.dark) .customers-scope [class~="text-gray-400"],html:not(.dark) .customers-scope [class~="text-slate-400"],html:not(.dark) .customers-scope [class~="text-zinc-400"] {
       color: var(--feishu-light-subtle);
   }
 
-.customers-scope:not(.dark) .border-gray-100,.customers-scope:not(.dark) .border-slate-100,.customers-scope:not(.dark) .border-zinc-100,.customers-scope:not(.dark) [class~="border-gray-100"],.customers-scope:not(.dark) [class~="border-slate-100"],.customers-scope:not(.dark) [class~="border-zinc-100"],.customers-scope:not(.dark) [class~="border-gray-100/50"],.customers-scope:not(.dark) [class~="border-slate-100/50"],.customers-scope:not(.dark) [class~="border-zinc-100/50"] {
+html:not(.dark) .customers-scope .border-gray-100,html:not(.dark) .customers-scope .border-slate-100,html:not(.dark) .customers-scope .border-zinc-100,html:not(.dark) .customers-scope [class~="border-gray-100"],html:not(.dark) .customers-scope [class~="border-slate-100"],html:not(.dark) .customers-scope [class~="border-zinc-100"],html:not(.dark) .customers-scope [class~="border-gray-100/50"],html:not(.dark) .customers-scope [class~="border-slate-100/50"],html:not(.dark) .customers-scope [class~="border-zinc-100/50"] {
       border-color: var(--feishu-light-border-soft);
   }
 
-.customers-scope:not(.dark) .border-gray-200,.customers-scope:not(.dark) .border-slate-200,.customers-scope:not(.dark) .border-zinc-200,.customers-scope:not(.dark) .border-gray-300,.customers-scope:not(.dark) .border-slate-300,.customers-scope:not(.dark) .border-zinc-300,.customers-scope:not(.dark) [class~="border-gray-200"],.customers-scope:not(.dark) [class~="border-slate-200"],.customers-scope:not(.dark) [class~="border-zinc-200"],.customers-scope:not(.dark) [class~="border-gray-300"],.customers-scope:not(.dark) [class~="border-slate-300"],.customers-scope:not(.dark) [class~="border-zinc-300"],.customers-scope:not(.dark) [class~="border-gray-200/50"],.customers-scope:not(.dark) [class~="border-gray-200/60"],.customers-scope:not(.dark) [class~="border-gray-200/70"] {
+html:not(.dark) .customers-scope .border-gray-200,html:not(.dark) .customers-scope .border-slate-200,html:not(.dark) .customers-scope .border-zinc-200,html:not(.dark) .customers-scope .border-gray-300,html:not(.dark) .customers-scope .border-slate-300,html:not(.dark) .customers-scope .border-zinc-300,html:not(.dark) .customers-scope [class~="border-gray-200"],html:not(.dark) .customers-scope [class~="border-slate-200"],html:not(.dark) .customers-scope [class~="border-zinc-200"],html:not(.dark) .customers-scope [class~="border-gray-300"],html:not(.dark) .customers-scope [class~="border-slate-300"],html:not(.dark) .customers-scope [class~="border-zinc-300"],html:not(.dark) .customers-scope [class~="border-gray-200/50"],html:not(.dark) .customers-scope [class~="border-gray-200/60"],html:not(.dark) .customers-scope [class~="border-gray-200/70"] {
       border-color: var(--feishu-light-border);
   }
 
-.customers-scope:not(.dark) [class~="placeholder:text-gray-400"]::placeholder,.customers-scope:not(.dark) [class~="placeholder:text-zinc-400"]::placeholder,.customers-scope:not(.dark) [class~="placeholder:text-slate-400"]::placeholder {
+html:not(.dark) .customers-scope [class~="placeholder:text-gray-400"]::placeholder,html:not(.dark) .customers-scope [class~="placeholder:text-zinc-400"]::placeholder,html:not(.dark) .customers-scope [class~="placeholder:text-slate-400"]::placeholder {
       color: var(--feishu-light-subtle);
   }
 
@@ -276,11 +259,6 @@
 
 .customers-scope .marquee-shell:hover .marquee-track,.customers-scope .marquee-shell:focus-within .marquee-track {
       animation-play-state: paused;
-  }
-
-@keyframes marquee-scroll {
-      from { transform: translateX(0); }
-      to { transform: translateX(calc(-50% - 2rem)); }
   }
 
 .customers-scope .typewriter-text {

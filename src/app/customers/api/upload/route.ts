@@ -4,8 +4,8 @@ import { readSystemSettings } from '@/customers/lib/system-settings';
 import {
   buildS3PublicUrl,
   getMissingS3Config,
-  normalizeSolutionFolderName
-} from '@/customers/lib/solution-storage';
+  normalizeCustomerFolderName
+} from '@/customers/lib/customer-storage';
 import { resolveUploadContentType } from '@/customers/lib/upload-content-type';
 import {
   shouldGenerateThumbnail,
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
       forcePathStyle: true,
     });
 
-    const safeFolder = normalizeSolutionFolderName(folder);
+    const safeFolder = normalizeCustomerFolderName(folder);
 
     const buffer = Buffer.from(await file.arrayBuffer());
     const ext = file.name.split('.').pop() || 'png';

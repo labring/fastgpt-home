@@ -4,13 +4,13 @@ import { getDateKey } from '@/customers/lib/dashboard-analytics';
 import { incrementDailyInteraction } from '@/customers/lib/interaction-daily-stats';
 import {
   getOrCreateVisitorKey,
-  invalidSolutionIdResponse,
+  invalidCustomerIdResponse,
   isDuplicateKeyError,
   rateLimitPublicInteraction
 } from '@/customers/lib/public-interaction';
-import Solution from '@/customers/models/Solution';
-import SolutionInteraction from '@/customers/models/SolutionInteraction';
-import { resolveSolutionObjectId } from '@/customers/lib/solution-id';
+import Customer from '@/customers/models/Customer';
+import CustomerInteraction from '@/customers/models/CustomerInteraction';
+import { resolveCustomerObjectId } from '@/customers/lib/customer-id';
 
 export async function POST(
   request: NextRequest,
@@ -18,10 +18,10 @@ export async function POST(
 ) {
   try {
     const { id: rawId } = await params;
-    const id = await resolveSolutionObjectId(rawId);
+    const id = await resolveCustomerObjectId(rawId);
 
     if (!id) {
-      return invalidSolutionIdResponse();
+      return invalidCustomerIdResponse();
     }
 
     await dbConnect();
@@ -29,37 +29,37 @@ export async function POST(
     const rateLimitResponse = rateLimitPublicInteraction({
       request,
       action: 'view',
-      solutionId: id,
+      customerId: id,
       limit: 30
     });
     if (rateLimitResponse) {
       return rateLimitResponse;
     }
 
-    const existingSolution = await Solution.findOne({ _id: id, isPublished: true })
+    const existingCustomer = await Customer.findOne({ _id: id, isPublished: true })
       .select('usageCount categoryId')
       .populate('categoryId', 'slug');
-    if (!existingSolution) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+    if (!existingCustomer) {
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
-    const solution = await Solution.findOneAndUpdate(
+    const customer = await Customer.findOneAndUpdate(
       { _id: id, isPublished: true },
       { $inc: { usageCount: 1 } },
       { returnDocument: 'after' }
     );
 
-    if (!solution) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+    if (!customer) {
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
     const visitorKey = await getOrCreateVisitorKey();
     try {
-      await SolutionInteraction.findOneAndUpdate(
-        { solutionId: id, visitorKey, type: 'view' },
+      await CustomerInteraction.findOneAndUpdate(
+        { customerId: id, visitorKey, type: 'view' },
         {
           $set: { lastViewDateKey: getDateKey() },
-          $setOnInsert: { solutionId: id, visitorKey, type: 'view' }
+          $setOnInsert: { customerId: id, visitorKey, type: 'view' }
         },
         { upsert: true, setDefaultsOnInsert: true }
       );
@@ -78,12 +78,12 @@ export async function POST(
     return NextResponse.json({
       success: true,
       counted: true,
-      usage: solution.formattedUsageCount || solution.usageCount.toString(),
-      rawUsageCount: solution.usageCount,
+      usage: customer.formattedUsageCount || customer.usageCount.toString(),
+      rawUsageCount: customer.usageCount,
       hasViewed: true
     });
   } catch (error) {
-    console.error('Error viewing solution:', error);
+    console.error('Error viewing customer:', error);
     return NextResponse.json({ error: 'Failed to update view' }, { status: 500 });
   }
 }

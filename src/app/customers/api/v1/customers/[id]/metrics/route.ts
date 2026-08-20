@@ -14,10 +14,10 @@ import {
 import { runAgentIdempotentOperation } from '@/customers/lib/agent-idempotency';
 import {
   isIntegerMetricValue,
-  SOLUTION_METRIC_FIELDS,
-  updateSolutionMetrics,
-  type SolutionMetricField
-} from '@/customers/lib/solution-metrics';
+  CUSTOMER_METRIC_FIELDS,
+  updateCustomerMetrics,
+  type CustomerMetricField
+} from '@/customers/lib/customer-metrics';
 
 export const dynamic = 'force-dynamic';
 
@@ -25,7 +25,7 @@ const MAX_ABSOLUTE_DELTA = 1000;
 
 type MetricsPayload = {
   mode: 'increment' | 'set';
-  values: Partial<Record<SolutionMetricField, number>>;
+  values: Partial<Record<CustomerMetricField, number>>;
   reason?: string;
 };
 
@@ -37,7 +37,7 @@ function parseMetricValues(value: unknown, mode: MetricsPayload['mode']):
   }
 
   const values: MetricsPayload['values'] = {};
-  const invalidFields = Object.keys(value).filter((field) => !SOLUTION_METRIC_FIELDS.includes(field as SolutionMetricField));
+  const invalidFields = Object.keys(value).filter((field) => !CUSTOMER_METRIC_FIELDS.includes(field as CustomerMetricField));
   if (invalidFields.length > 0) {
     return {
       success: false,
@@ -46,7 +46,7 @@ function parseMetricValues(value: unknown, mode: MetricsPayload['mode']):
     };
   }
 
-  for (const field of SOLUTION_METRIC_FIELDS) {
+  for (const field of CUSTOMER_METRIC_FIELDS) {
     const metricValue = value[field];
     if (metricValue === undefined) {
       continue;
@@ -161,7 +161,7 @@ export async function PATCH(
         );
       }
 
-      const updateResult = await updateSolutionMetrics(id, parsedPayload.data.values, {
+      const updateResult = await updateCustomerMetrics(id, parsedPayload.data.values, {
         mode: parsedPayload.data.mode,
         reason: parsedPayload.data.reason,
       });
@@ -170,7 +170,7 @@ export async function PATCH(
         return errorResult(
           context,
           404,
-          AGENT_ERROR_CODES.solutionNotFound,
+          AGENT_ERROR_CODES.customerNotFound,
           '案例不存在'
         );
       }
@@ -182,7 +182,7 @@ export async function PATCH(
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error updating solution metrics:', error);
+    console.error('Error updating customer metrics:', error);
     return toAgentResponse(errorResult(
       context,
       500,

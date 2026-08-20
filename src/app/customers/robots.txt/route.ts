@@ -1,7 +1,5 @@
 import { absoluteUrl } from '@/customers/lib/site-url';
 
-export const dynamic = 'force-dynamic';
-
 const AI_CRAWLERS = [
   'GPTBot',
   'OAI-SearchBot',

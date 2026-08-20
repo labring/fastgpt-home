@@ -1,6 +1,6 @@
-import { getCategories, getPublishedSolutionsPage, getAllPublishedSolutions } from '@/customers/lib/data';
+import { getCategories, getPublishedCustomersPage, getAllPublishedCustomerDirectoryEntries } from '@/customers/lib/data';
 import { readSystemSettings } from '@/customers/lib/system-settings';
-import { getSolutionPublicHref } from '@/customers/lib/solution-url';
+import { getCustomerPublicHref } from '@/customers/lib/customer-url';
 import { withBasePath } from '@/customers/lib/base-path';
 import { absoluteUrl } from '@/customers/lib/site-url';
 import {
@@ -24,29 +24,29 @@ export async function HomePageContent({
   renderHomeDirectoryJsonLd?: boolean;
 } = {}) {
   // 服务端只注入首屏列表，后续案例由客户端按需分页加载。
-  const [initialCategories, initialSolutionsPage, allPublished, settings] = await Promise.all([
+  const [initialCategories, initialCustomersPage, allPublished, settings] = await Promise.all([
     getCategories(),
-    getPublishedSolutionsPage({ category: categorySlug }),
-    getAllPublishedSolutions(),
+    getPublishedCustomersPage({ category: categorySlug }),
+    getAllPublishedCustomerDirectoryEntries(),
     readSystemSettings(),
   ]);
   const githubStars = readCachedGitHubStars();
-  const initialSolutions = initialSolutionsPage.solutions;
-  const { cases: allCases, solutions: allSolutions } = splitDirectoryEntries(allPublished);
-  const solutionsByCategory = new Map<string, typeof allSolutions>();
-  for (const solution of allSolutions) {
-    const list = solutionsByCategory.get(solution.categorySlug) || [];
-    list.push(solution);
-    solutionsByCategory.set(solution.categorySlug, list);
+  const initialCustomers = initialCustomersPage.customers;
+  const { cases: allCases, customers: allCustomers } = splitDirectoryEntries(allPublished);
+  const customersByCategory = new Map<string, typeof allCustomers>();
+  for (const customer of allCustomers) {
+    const list = customersByCategory.get(customer.categorySlug) || [];
+    list.push(customer);
+    customersByCategory.set(customer.categorySlug, list);
   }
   const knownCategorySlugs = new Set(initialCategories.map((category) => category.slug));
-  const orphanSolutions = allSolutions.filter(
-    (solution) => !knownCategorySlugs.has(solution.categorySlug)
+  const orphanCustomers = allCustomers.filter(
+    (customer) => !knownCategorySlugs.has(customer.categorySlug)
   );
   const homeDirectoryJsonLd = buildHomeDirectoryJsonLd({
     cases: allCases,
-    solutions: allSolutions,
-    absoluteUrlOf: (entry) => absoluteUrl(getSolutionPublicHref(entry))
+    customers: allCustomers,
+    absoluteUrlOf: (entry) => absoluteUrl(getCustomerPublicHref(entry))
   });
   const overviewStats = [
     { value: "100+", label: "行业定制模板" },
@@ -78,11 +78,11 @@ export async function HomePageContent({
             <ul>
               {allCases.map((item) => (
                 <li key={item.id}>
-                  <a href={withBasePath(getSolutionPublicHref(item))}>{formatCaseName(item)}</a>
+                  <a href={withBasePath(getCustomerPublicHref(item))}>{formatCaseName(item)}</a>
                   <p>
                     分类：{item.categoryName}。简介：{item.description}
                   </p>
-                  <a href={withBasePath(`/solution/${item.slug || item.id}/markdown`)}>
+                  <a href={withBasePath(`/customer/${item.slug || item.id}/markdown`)}>
                     纯文本版本
                   </a>
                 </li>
@@ -90,21 +90,21 @@ export async function HomePageContent({
             </ul>
           </>
         )}
-        <h3>解决方案目录</h3>
+        <h3>客户案例目录</h3>
         {initialCategories.map((category) => {
-          const categorySolutions = solutionsByCategory.get(category.slug) || [];
-          if (categorySolutions.length === 0) {
+          const categoryCustomers = customersByCategory.get(category.slug) || [];
+          if (categoryCustomers.length === 0) {
             return null;
           }
           return (
             <section key={category.id} aria-label={category.name}>
               <h4>{category.name}</h4>
               <ul>
-                {categorySolutions.map((solution) => (
-                  <li key={solution.id}>
-                    <a href={withBasePath(getSolutionPublicHref(solution))}>{solution.title}</a>
-                    <p>简介：{solution.description}</p>
-                    <a href={withBasePath(`/solution/${solution.slug || solution.id}/markdown`)}>
+                {categoryCustomers.map((customer) => (
+                  <li key={customer.id}>
+                    <a href={withBasePath(getCustomerPublicHref(customer))}>{customer.title}</a>
+                    <p>简介：{customer.description}</p>
+                    <a href={withBasePath(`/customer/${customer.slug || customer.id}/markdown`)}>
                       纯文本版本
                     </a>
                   </li>
@@ -113,15 +113,15 @@ export async function HomePageContent({
             </section>
           );
         })}
-        {orphanSolutions.length > 0 && (
+        {orphanCustomers.length > 0 && (
           <section aria-label="其他方案">
             <h4>其他方案</h4>
             <ul>
-              {orphanSolutions.map((solution) => (
-                <li key={solution.id}>
-                  <a href={withBasePath(getSolutionPublicHref(solution))}>{solution.title}</a>
-                  <p>简介：{solution.description}</p>
-                  <a href={withBasePath(`/solution/${solution.slug || solution.id}/markdown`)}>
+              {orphanCustomers.map((customer) => (
+                <li key={customer.id}>
+                  <a href={withBasePath(getCustomerPublicHref(customer))}>{customer.title}</a>
+                  <p>简介：{customer.description}</p>
+                  <a href={withBasePath(`/customer/${customer.slug || customer.id}/markdown`)}>
                     纯文本版本
                   </a>
                 </li>
@@ -144,8 +144,8 @@ export async function HomePageContent({
       )}
       <HomeClient
         initialCategories={initialCategories}
-        initialSolutions={initialSolutions}
-        initialPagination={initialSolutionsPage.pagination}
+        initialCustomers={initialCustomers}
+        initialPagination={initialCustomersPage.pagination}
         overviewStats={overviewStats}
         initialCategorySlug={categorySlug}
       />

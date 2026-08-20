@@ -19,7 +19,7 @@ describe('Next RSC performance measure guard', () => {
 
     expect(
       isNextRscNegativeTimestampMeasureError(
-        '\u200bSemanticSolutionPage',
+        '\u200bSemanticCustomerPage',
         options,
         new TypeError("Failed to execute 'measure' on 'Performance': cannot have a negative time stamp.")
       )
@@ -76,14 +76,14 @@ describe('Next RSC performance measure guard', () => {
 
     expect(installNextRscPerformanceMeasureGuard(targetPerformance)).toBe(true);
 
-    targetPerformance.measure('\u200bSemanticSolutionPage', {
+    targetPerformance.measure('\u200bSemanticCustomerPage', {
       start: 12,
       end: -Infinity,
       detail: { devtools: { trackGroup: 'Server Components ⚛' } }
     });
 
     expect(measure).toHaveBeenCalledTimes(2);
-    expect(measure).toHaveBeenLastCalledWith('\u200bSemanticSolutionPage', {
+    expect(measure).toHaveBeenLastCalledWith('\u200bSemanticCustomerPage', {
       start: 12,
       end: 12,
       detail: { devtools: { trackGroup: 'Server Components ⚛' } }

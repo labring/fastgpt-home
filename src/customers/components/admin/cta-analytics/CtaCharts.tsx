@@ -19,9 +19,9 @@ const SOURCE_PALETTE: Record<string, string> = {
   home_hero: '#2563eb',
   home_bottom: '#0f766e',
   navbar_poc: '#f59e0b',
-  solution_hero: '#7c3aed',
-  solution_sidebar: '#e11d48',
-  solution_bottom: '#0891b2',
+  customer_hero: '#7c3aed',
+  customer_sidebar: '#e11d48',
+  customer_bottom: '#0891b2',
   empty_state: '#ea580c',
   footer_private_deploy: '#059669'
 };
@@ -71,7 +71,7 @@ interface CtaChartsProps {
 }
 
 export default function CtaCharts({ data, days }: CtaChartsProps) {
-  const { allTimeTotals, dailyTrends, overallTrend, solutionRanking } = data;
+  const { allTimeTotals, dailyTrends, overallTrend, customerRanking } = data;
 
   const hasAnyData = Object.values(allTimeTotals).some((v) => v > 0);
   const totalClicks = Object.values(allTimeTotals).reduce((sum, v) => sum + v, 0);
@@ -327,7 +327,7 @@ export default function CtaCharts({ data, days }: CtaChartsProps) {
       </div>
 
       {/* 方案级 POC 意向排名 */}
-      {solutionRanking.length > 0 && (
+      {customerRanking.length > 0 && (
         <div className={panelClassName}>
           <h3 className="text-lg font-bold text-zinc-900 dark:text-zinc-100 mb-1">高意向方案 Top 10</h3>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-5">按方案页面按钮（&quot;验证该方案&quot;&quot;咨询 POC 路径&quot;&quot;申请免费 POC&quot;）历史累计点击次数排名，反映哪些方案最能吸引用户咨询 POC 验证。</p>
@@ -344,9 +344,9 @@ export default function CtaCharts({ data, days }: CtaChartsProps) {
                 </tr>
               </thead>
               <tbody>
-                {solutionRanking.map((item, index) => (
+                {customerRanking.map((item, index) => (
                   <tr
-                    key={item.solutionId}
+                    key={item.customerId}
                     className="border-b border-zinc-100 dark:border-zinc-800 last:border-0 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 transition-colors"
                   >
                     <td className="py-3 pr-4">
@@ -359,7 +359,7 @@ export default function CtaCharts({ data, days }: CtaChartsProps) {
                       </span>
                     </td>
                     <td className="py-3 pr-4 font-medium text-zinc-800 dark:text-zinc-200 max-w-[200px] truncate">
-                      {item.solutionTitle}
+                      {item.customerTitle}
                     </td>
                     <td className="py-3 pr-4 text-right text-zinc-500 dark:text-zinc-400 tabular-nums whitespace-nowrap">
                       {item.heroCount > 0 ? formatNumber(item.heroCount) : '—'}

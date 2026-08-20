@@ -1,12 +1,12 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import { getAutoCategoryColor, normalizeHexColor } from '@/customers/lib/category-color';
 import {
-  saveSolutionForAgent,
-  type SaveSolutionInput
-} from '@/customers/lib/solution-admin-service';
-import { moveSolutionToTrash } from '@/customers/lib/solution-trash';
+  saveCustomerForAgent,
+  type SaveCustomerInput
+} from '@/customers/lib/customer-admin-service';
+import { moveCustomerToTrash } from '@/customers/lib/customer-trash';
 import { ensureCategorySlugs } from '@/customers/lib/category-slug';
 import {
   AGENT_ERROR_CODES,
@@ -35,7 +35,7 @@ type PopulatedCategory = {
   color?: string | null;
 };
 
-type SolutionDetailRow = {
+type CustomerDetailRow = {
   _id: unknown;
   categoryId: string | PopulatedCategory | null;
   categoryName?: string | null;
@@ -59,7 +59,7 @@ type SolutionDetailRow = {
   updatedAt: Date;
 };
 
-type PutSolutionPayload = {
+type PutCustomerPayload = {
   title: string;
   description: string;
   slug?: string;
@@ -72,7 +72,7 @@ type PutSolutionPayload = {
   newlyUploadedUrls: string[];
 };
 
-type PatchSolutionPayload = {
+type PatchCustomerPayload = {
   title?: string;
   description?: string;
   slug?: string;
@@ -109,8 +109,8 @@ function validateDescription(description: string | undefined) {
   }
 }
 
-function parsePutSolutionPayload(body: unknown):
-  | { success: true; data: PutSolutionPayload }
+function parsePutCustomerPayload(body: unknown):
+  | { success: true; data: PutCustomerPayload }
   | { success: false; error: string } {
   if (!isRecord(body)) {
     return { success: false, error: '请求体必须是 JSON 对象' };
@@ -158,8 +158,8 @@ function parsePutSolutionPayload(body: unknown):
   };
 }
 
-function parsePatchSolutionPayload(body: unknown):
-  | { success: true; data: PatchSolutionPayload }
+function parsePatchCustomerPayload(body: unknown):
+  | { success: true; data: PatchCustomerPayload }
   | { success: false; error: string } {
   if (!isRecord(body)) {
     return { success: false, error: '请求体必须是 JSON 对象' };
@@ -194,18 +194,18 @@ function parsePatchSolutionPayload(body: unknown):
   };
 }
 
-function isPopulatedCategory(value: SolutionDetailRow['categoryId']): value is PopulatedCategory {
+function isPopulatedCategory(value: CustomerDetailRow['categoryId']): value is PopulatedCategory {
   return typeof value === 'object' && value !== null;
 }
 
-function getCategoryDisplayInfo(solution: SolutionDetailRow) {
-  const populatedCategory = isPopulatedCategory(solution.categoryId) ? solution.categoryId : null;
-  const categoryName = populatedCategory?.name || solution.categoryName || '未知分类';
+function getCategoryDisplayInfo(customer: CustomerDetailRow) {
+  const populatedCategory = isPopulatedCategory(customer.categoryId) ? customer.categoryId : null;
+  const categoryName = populatedCategory?.name || customer.categoryName || '未知分类';
 
   return {
     categoryId: populatedCategory?._id
       ? String(populatedCategory._id)
-      : String(solution.categoryId || ''),
+      : String(customer.categoryId || ''),
     categoryName,
     categorySlug: populatedCategory?.slug || '',
     categoryColor: normalizeHexColor(
@@ -215,34 +215,34 @@ function getCategoryDisplayInfo(solution: SolutionDetailRow) {
   };
 }
 
-function mapSolutionDetail(solution: SolutionDetailRow) {
+function mapCustomerDetail(customer: CustomerDetailRow) {
   return {
-    id: String(solution._id || ''),
-    ...getCategoryDisplayInfo(solution),
-    slug: solution.slug || '',
-    title: solution.title,
-    description: solution.description,
-    imageUrl: solution.imageUrl,
-    thumbnailUrl: solution.thumbnailUrl || solution.imageUrl,
-    freeUseUrl: solution.freeUseUrl || '',
-    likesCount: solution.likesCount,
-    usageCount: solution.usageCount,
-    helpfulCount: solution.helpfulCount || 0,
-    unhelpfulCount: solution.unhelpfulCount || 0,
-    content: solution.content,
-    mediaUrls: solution.mediaUrls || [],
-    storageFolder: solution.storageFolder,
-    isPublished: solution.isPublished,
-    deletedAt: solution.deletedAt || null,
-    deletedSource: solution.deletedSource || null,
-    createdAt: solution.createdAt,
-    updatedAt: solution.updatedAt,
+    id: String(customer._id || ''),
+    ...getCategoryDisplayInfo(customer),
+    slug: customer.slug || '',
+    title: customer.title,
+    description: customer.description,
+    imageUrl: customer.imageUrl,
+    thumbnailUrl: customer.thumbnailUrl || customer.imageUrl,
+    freeUseUrl: customer.freeUseUrl || '',
+    likesCount: customer.likesCount,
+    usageCount: customer.usageCount,
+    helpfulCount: customer.helpfulCount || 0,
+    unhelpfulCount: customer.unhelpfulCount || 0,
+    content: customer.content,
+    mediaUrls: customer.mediaUrls || [],
+    storageFolder: customer.storageFolder,
+    isPublished: customer.isPublished,
+    deletedAt: customer.deletedAt || null,
+    deletedSource: customer.deletedSource || null,
+    createdAt: customer.createdAt,
+    updatedAt: customer.updatedAt,
   };
 }
 
 function buildPatchSaveInput(
   id: string,
-  existingSolution: {
+  existingCustomer: {
     title: string;
     description: string;
     slug?: string | null;
@@ -253,19 +253,19 @@ function buildPatchSaveInput(
     freeUseUrl?: string | null;
     isPublished: boolean;
   },
-  payload: PatchSolutionPayload
-): SaveSolutionInput {
+  payload: PatchCustomerPayload
+): SaveCustomerInput {
   return {
     id,
-    title: payload.title ?? existingSolution.title,
-    description: payload.description ?? existingSolution.description,
-    slug: payload.slug ?? existingSolution.slug ?? undefined,
-    categoryId: payload.categoryId ?? String(existingSolution.categoryId),
-    content: payload.content ?? existingSolution.content,
-    imageUrl: payload.imageUrl ?? existingSolution.imageUrl,
-    thumbnailUrl: payload.thumbnailUrl ?? existingSolution.thumbnailUrl ?? existingSolution.imageUrl,
-    freeUseUrl: payload.freeUseUrl ?? existingSolution.freeUseUrl ?? '',
-    isPublished: payload.isPublished ?? existingSolution.isPublished,
+    title: payload.title ?? existingCustomer.title,
+    description: payload.description ?? existingCustomer.description,
+    slug: payload.slug ?? existingCustomer.slug ?? undefined,
+    categoryId: payload.categoryId ?? String(existingCustomer.categoryId),
+    content: payload.content ?? existingCustomer.content,
+    imageUrl: payload.imageUrl ?? existingCustomer.imageUrl,
+    thumbnailUrl: payload.thumbnailUrl ?? existingCustomer.thumbnailUrl ?? existingCustomer.imageUrl,
+    freeUseUrl: payload.freeUseUrl ?? existingCustomer.freeUseUrl ?? '',
+    isPublished: payload.isPublished ?? existingCustomer.isPublished,
     newlyUploadedUrls: payload.newlyUploadedUrls,
   };
 }
@@ -288,28 +288,28 @@ export async function GET(
       return toAgentResponse(errorResult(
         context,
         404,
-        AGENT_ERROR_CODES.solutionNotFound,
+        AGENT_ERROR_CODES.customerNotFound,
         '案例不存在'
       ));
     }
 
     // 绕过 pre-find 中间件以获取任意状态的文档
-    const solution = await Solution.findOne({ _id: id, deletedAt: { $exists: true } })
+    const customer = await Customer.findOne({ _id: id, deletedAt: { $exists: true } })
       .populate('categoryId', 'name slug color')
-      .lean<SolutionDetailRow | null>({ virtuals: true });
+      .lean<CustomerDetailRow | null>({ virtuals: true });
 
-    if (!solution) {
+    if (!customer) {
       return toAgentResponse(errorResult(
         context,
         404,
-        AGENT_ERROR_CODES.solutionNotFound,
+        AGENT_ERROR_CODES.customerNotFound,
         '案例不存在'
       ));
     }
 
-    return toAgentResponse(successResult(context, mapSolutionDetail(solution)));
+    return toAgentResponse(successResult(context, mapCustomerDetail(customer)));
   } catch (error) {
-    console.error('Error getting solution:', error);
+    console.error('Error getting customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,
@@ -336,7 +336,7 @@ export async function PUT(
       return toAgentResponse(errorResult(
         context,
         404,
-        AGENT_ERROR_CODES.solutionNotFound,
+        AGENT_ERROR_CODES.customerNotFound,
         '案例不存在'
       ));
     }
@@ -346,7 +346,7 @@ export async function PUT(
       return toAgentResponse(requestBody.result);
     }
 
-    const parsedPayload = parsePutSolutionPayload(requestBody.data);
+    const parsedPayload = parsePutCustomerPayload(requestBody.data);
     if (!parsedPayload.success) {
       return toAgentResponse(errorResult(
         context,
@@ -358,7 +358,7 @@ export async function PUT(
 
     const payload = parsedPayload.data;
 
-    const result = await saveSolutionForAgent({
+    const result = await saveCustomerForAgent({
       id,
       title: payload.title,
       description: payload.description,
@@ -389,7 +389,7 @@ export async function PUT(
 
     return toAgentResponse(successResult(context, { id }));
   } catch (error) {
-    console.error('Error updating solution:', error);
+    console.error('Error updating customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,
@@ -417,7 +417,7 @@ export async function PATCH(
         return errorResult(
           context,
           404,
-          AGENT_ERROR_CODES.solutionNotFound,
+          AGENT_ERROR_CODES.customerNotFound,
           '案例不存在'
         );
       }
@@ -427,7 +427,7 @@ export async function PATCH(
         return requestBody.result;
       }
 
-      const parsedPayload = parsePatchSolutionPayload(requestBody.data);
+      const parsedPayload = parsePatchCustomerPayload(requestBody.data);
       if (!parsedPayload.success) {
         return errorResult(
           context,
@@ -439,17 +439,17 @@ export async function PATCH(
 
       const payload = parsedPayload.data;
 
-      const existingSolution = await Solution.findOne({ _id: id, deletedAt: { $exists: true } });
-      if (!existingSolution) {
+      const existingCustomer = await Customer.findOne({ _id: id, deletedAt: { $exists: true } });
+      if (!existingCustomer) {
         return errorResult(
           context,
           404,
-          AGENT_ERROR_CODES.solutionNotFound,
+          AGENT_ERROR_CODES.customerNotFound,
           '案例不存在'
         );
       }
 
-      const saveResult = await saveSolutionForAgent(buildPatchSaveInput(id, existingSolution, payload));
+      const saveResult = await saveCustomerForAgent(buildPatchSaveInput(id, existingCustomer, payload));
 
       if (!saveResult.success) {
         const resolvedError = resolveAgentDomainError(
@@ -471,7 +471,7 @@ export async function PATCH(
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error patching solution:', error);
+    console.error('Error patching customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,
@@ -498,12 +498,12 @@ export async function DELETE(
       return toAgentResponse(errorResult(
         context,
         404,
-        AGENT_ERROR_CODES.solutionNotFound,
+        AGENT_ERROR_CODES.customerNotFound,
         '案例不存在'
       ));
     }
 
-    const result = await moveSolutionToTrash(id, 'agent');
+    const result = await moveCustomerToTrash(id, 'agent');
     if (!result.success) {
       const resolvedError = resolveAgentDomainError(
         result.error || '删除失败',
@@ -521,7 +521,7 @@ export async function DELETE(
 
     return toAgentResponse(successResult(context, { id, deleted: true, mode: 'trash' as const }));
   } catch (error) {
-    console.error('Error deleting solution:', error);
+    console.error('Error deleting customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,

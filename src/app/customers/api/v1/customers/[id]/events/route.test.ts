@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { parseEventPayload } from './route';
 
-describe('agent solution event payload', () => {
+describe('agent customer event payload', () => {
   it('accepts additive public interaction events', () => {
     expect(parseEventPayload({ type: 'view' })).toMatchObject({
       success: true,

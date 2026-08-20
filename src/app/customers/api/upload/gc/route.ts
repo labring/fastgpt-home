@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { requireAdminApi } from '@/customers/lib/admin-api';
-import { deleteAssetUrls } from '@/customers/lib/solution-asset-gc';
+import { deleteAssetUrls } from '@/customers/lib/customer-asset-gc';
 import { readJsonRecord } from '@/customers/lib/request-json';
 
 function getErrorMessage(error: unknown) {

@@ -6,7 +6,7 @@
 
 This project repairs the English FAQ SEO surface in the existing FastGPT website. It imports the approved metadata for 1,195 currently reachable FAQ pages and incrementally repairs unsafe or missing routes within the roughly 1,400 English FAQ records already present in the repository.
 
-The work preserves healthy indexed URLs, produces stable canonical paths for repaired entries, and leaves the static export ready for release.
+The work preserves healthy indexed URLs, produces stable canonical paths for repaired entries, and leaves the production build ready for release.
 
 **Core Value:** Every in-scope English FAQ has a stable, reachable canonical URL and renders its approved metadata without disrupting healthy indexed URLs.
 
@@ -15,7 +15,7 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 - **URL stability**: Preserve healthy current URLs — they may already hold search equity and external links
 - **Migration scope**: Change only missing or unsafe in-scope routes — the approved strategy is incremental repair
 - **Source of truth**: Use `FastGPT-存量FAQ补Meta-第2批1195条-V1.0-星触达-20260811.xlsx` for the 1,195 metadata records
-- **Rendering**: Keep all route data available at build time — production uses Next.js static export
+- **Rendering**: Keep all route data available at build time — FAQ routes use Next.js static generation
 - **SEO integrity**: Canonical, hreflang, sitemap, internal links, and redirects must resolve to the same final slug mapping
 - **Content fidelity**: Preserve the existing FAQ questions and answers verbatim
 - **Dependencies**: Reuse the current Node.js and repository tooling; add no package for spreadsheet conversion or slug mapping
@@ -46,7 +46,7 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 
 ## Frameworks
 
-- Next.js 16.2.6 - App Router, static export, route metadata, `next/script`, `next/font/google`, and localized pages under `src/app/`.
+- Next.js 16.2.6 - App Router, standalone server, route metadata, `next/script`, `next/font/google`, and localized pages under `src/app/`.
 - React 19.2.6 and React DOM 19.2.6 - UI and client components.
 - TypeScript 5.9.3 - strict, no-emit type checking with the `@/*` alias configured in `tsconfig.json`.
 - HeroUI React 2.8.9 and HeroUI theme 2.4.26 - component/theme primitives; both are transpiled by `next.config.js`.
@@ -60,7 +60,7 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 - Repository verification is implemented as Node scripts: `scripts/verify-p0.js`, `scripts/verify-p1.js`, `scripts/verify-p2.js`, and `scripts/verify-i18n-seo.js`.
 - Next.js Turbopack dev server via `npm run dev` (`next dev --turbopack`).
 - Production build runs static generation plus post-build cleanup in `package.json`: `next build`, `scripts/clean-faq-rsc.js`, and `scripts/fix-html-lang.js`.
-- `next.config.js` sets `output: 'export'` when `NODE_ENV=production`, disables optimized image serving (`images.unoptimized: true`), enables compression, and removes the X-Powered-By header.
+- `next.config.js` sets `output: 'standalone'`, disables optimized image serving (`images.unoptimized: true`), enables compression, and removes the X-Powered-By header.
 - PostCSS 8.5.6 with Tailwind and Autoprefixer 10.4.24 is configured in `postcss.config.js`.
 - ESLint 9.39.4 with `eslint-config-next` 16.2.6 is configured in `eslint.config.mjs`; Prettier 2.8.8 is configured in `.prettierrc.js`.
 - Husky 9.1.7 runs the package `prepare` hook.
@@ -68,33 +68,33 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 
 ## Key Dependencies
 
-- `next` 16.2.6 - application framework and static exporter.
+- `next` 16.2.6 - application framework and standalone server runtime.
 - `react` / `react-dom` 19.2.6 - rendering runtime.
 - `typescript` 5.9.3 - compile-time safety under strict mode.
 - `@heroui/react` 2.8.9 and `@heroui/theme` 2.4.26 - shared UI system.
 - `server-only` 0.0.1 marks server-only GitHub Stars code in `src/lib/githubStars.ts`.
 - Node built-ins (`fs/promises`, `path`) provide the optional server-side GitHub Stars cache at `.cache/github-stars.json`.
 - `sharp` 0.33.5 is used for image dimensions/size checks during verification.
-- Nginx Brotli image `fholzer/nginx-brotli:latest` serves exported assets in the second stage of `Dockerfile`.
+- The production `Dockerfile` runner stage uses `node:22-alpine` to run the standalone server (`node server.js` from `.next/standalone`).
 
 ## Configuration
 
 - Public build-time configuration is supplied through `NEXT_PUBLIC_*` variables. Names consumed by source include `NEXT_PUBLIC_HOME_URL`, `NEXT_PUBLIC_LANGUAGE_REGION`, `NEXT_PUBLIC_CN_HOME_URL`, `NEXT_PUBLIC_IO_HOME_URL`, `NEXT_PUBLIC_USER_URL`, `NEXT_PUBLIC_CUSTOM_PLAN_URL`, `NEXT_PUBLIC_FILING_ADDRESS`, `NEXT_PUBLIC_POLICE_FILING`, `NEXT_PUBLIC_CRM_API_URL`, `NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN`, `NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE`, `NEXT_PUBLIC_BAIDU_TONGJI`, `NEXT_PUBLIC_BAIDU_KEY`, `NEXT_PUBLIC_CLARITY_TONGJI`, `NEXT_PUBLIC_RYBBIT_TONGJI`, `NEXT_PUBLIC_RYBBIT_TONGJI_SITEID`, `NEXT_PUBLIC_GOOGLE_ID`, and `NEXT_PUBLIC_GOOGLE_VERIFICATION_ID`.
 - `.env.template` exists as an environment configuration template; secret values are intentionally excluded from this map.
 - `src/lib/siteRouting.ts` defaults to `https://fastgpt.io` for the international variant and `https://fastgpt.cn` for the China variant.
-- `next.config.js` controls static-export mode, allowed development origins, package transpilation, compression, and cache headers.
+- `next.config.js` controls standalone server mode, allowed development origins, package transpilation, compression, and cache headers.
 - `tsconfig.json` enables strict TypeScript, bundler module resolution, JSON imports, JSX transform, incremental checking, and `@/*` mapped to `src/*`.
 - `tailwind.config.ts` loads `src/**/*.{ts,tsx}` and HeroUI theme files and defines CSS-variable-backed home theme tokens.
 - `postcss.config.js` loads Tailwind CSS and Autoprefixer.
-- `Dockerfile` passes public configuration as build arguments, runs `npm install` and `npm run build`, then copies `out/` into Nginx.
+- `Dockerfile` passes public configuration as build arguments, runs `npm install` and `npm run build`, then copies `.next/standalone` + `.next/static` + `public` and runs `node server.js`.
 - `public/_headers`, `public/_redirects`, `nginx.conf`, and `nginx-security-headers.conf` provide deployment-specific headers, redirects, cache policy, and CSP.
 
 ## Platform Requirements
 
 - Node.js 18 or newer and npm are sufficient for local scripts; `npm run dev` starts the Turbopack development server.
 - A browser is required for client-side analytics, attribution, and localStorage/cookie behavior.
-- A static hosting target capable of serving the Next.js `out/` export is required.
-- The primary container target is Nginx Brotli on Kubernetes, built from `Dockerfile` and updated by `.github/workflows/fastgpt-home-image.yml`.
+- A Node.js runtime is required in production: the customers center is database-backed and runs as a single standalone Next.js server.
+- The primary container target is a Node.js standalone server on Kubernetes, built from `Dockerfile` and updated by `.github/workflows/fastgpt-home-image.yml`.
 - Cloudflare Pages serves preview exports through `.github/workflows/preview-deploy.yml`; production static headers/redirects are also compatible with Cloudflare Pages files under `public/`.
 
 <!-- GSD:stack-end -->
@@ -163,7 +163,7 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 
 ## Comments
 
-- Explain constraints, lifecycle timing, business policy, and side effects that types cannot express. Strong examples are the static-export rationale in `next.config.js`, file-limit rationale in `scripts/clean-faq-rsc.js`, and hydration timing in `src/lib/htmlLang.ts`.
+- Explain constraints, lifecycle timing, business policy, and side effects that types cannot express. Strong examples are the standalone-server/cache rationale in `next.config.js`, file-limit rationale in `scripts/clean-faq-rsc.js`, and hydration timing in `src/lib/htmlLang.ts`.
 - Place a short file header on build scripts with broad filesystem effects, following `scripts/generate-robots.js`, `scripts/generate-llms.js`, `scripts/fix-html-lang.js`, and `scripts/clean-faq-rsc.js`.
 - Explain intentionally swallowed errors with a compact reason, following the best-effort cache comments in `src/lib/githubStars.ts` and `src/lib/githubStarsClient.ts`.
 - Write new code comments in English as required by `AGENTS.md`; existing Chinese domain commentary remains concentrated in `src/lib/leadAttribution.ts`, `src/components/home/assets.ts`, and `scripts/convert-images.js`.
@@ -228,7 +228,7 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 - Root and localized aliases intentionally share implementations. For example, `src/app/price/page.tsx` re-exports `src/app/[lang]/price/page.tsx`, while both home entry points render `HomeLanding`.
 - Locale and site variant are first-class routing inputs. `src/lib/siteRouting.ts` assigns `zh` to `cn`, all other supported locales to `io`, and derives canonical URLs across domains.
 - Content is compiled from JSON, TypeScript records, and Markdown. Server-only loaders read files during build/request generation; client components own filtering, animation, and browser URL state.
-- Production uses `output: 'export'` when `NODE_ENV` is production. `Dockerfile` builds `out/` and serves it from Nginx; `public/_redirects` and `public/_headers` support Cloudflare Pages.
+- Production uses `output: 'standalone'`. `Dockerfile` builds `.next/standalone` and runs `node server.js`; `public/_redirects` and `public/_headers` remain for Cloudflare Pages previews.
 
 ## Layers
 
@@ -236,7 +236,7 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 - Location: `src/app/`
 - Contains: Root/layout files, localized dynamic segments, alias pages, `robots.ts`, and `sitemap.ts`.
 - Depends on: `src/lib/i18n.ts`, `src/lib/siteRouting.ts`, content APIs, and presentation modules.
-- Used by: Next.js App Router and static export build.
+- Used by: Next.js App Router and standalone server build.
 - Purpose: Provide shared navigation, theme, motion, footer, page-level visual wrappers, and home sections.
 - Location: `src/components/home/`, `src/components/header/`, `src/components/ui/`
 - Contains: `HomeLanding`, `Navbar`, `Footer`, CTA links, motion primitives, and button primitives.
@@ -303,11 +303,11 @@ The work preserves healthy indexed URLs, produces stable canonical paths for rep
 - Responsibilities: Validate/resolve content, emit metadata/schema, call `notFound()` for unsupported routes, and render domain detail components.
 - Location: `package.json`, `next.config.js`, `Dockerfile`
 - Triggers: `npm run build` or container build.
-- Responsibilities: Generate robots/LLM files, statically export pages, clean post-build artifacts, and serve `out/` through Nginx.
+- Responsibilities: Generate robots/LLM files, build the standalone server, clean post-build artifacts, and run `node server.js`.
 
 ## Architectural Constraints
 
-- **Rendering:** Production is a static export (`output: 'export'` in `next.config.js` when `NODE_ENV=production`); route data must be available to `generateStaticParams` or build-time execution.
+- **Rendering:** Production ships as a standalone Node.js server (`output: 'standalone'` in `next.config.js`). Home/FAQ pages still use static generation, while customers routes are database-backed and render on demand (ISR or `force-dynamic`).
 - **Runtime boundary:** `src/lib/tech-center-content.ts` and `src/lib/githubStars.ts` are server-only; browser-only behavior belongs in files marked `'use client'`.
 - **Locale ownership:** `zh` is owned by `fastgpt.cn`; `en`, `zh-hant`, `ja`, `ar`, `vi`, `th`, `id`, and `ms` are owned by `fastgpt.io` according to `src/lib/siteRouting.ts`.
 - **Route aliases:** Root default-locale routes re-export localized implementations, so changes to `src/app/[lang]/**` can affect both prefixed and unprefixed URLs.

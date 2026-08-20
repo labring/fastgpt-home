@@ -1,23 +1,13 @@
-import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import { redirect, notFound } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import Sidebar from '@/customers/components/admin/Sidebar';
 import { getAdminSession, isAdminPortalEnabled } from '@/customers/lib/admin-auth';
 
-export const metadata: Metadata = {
-  title: '后台管理 | FastGPT Customer Stories',
-  description: 'FastGPT Customer Stories 官方后台管理系统',
-  robots: {
-    index: false,
-    follow: false
-  },
-};
-
 export const dynamic = 'force-dynamic';
 
-export default async function AdminLayout({ children }: { children: ReactNode }) {
+export default async function ProtectedAdminLayout({ children }: { children: ReactNode }) {
   if (!isAdminPortalEnabled()) {
-    notFound();
+    redirect('/customers');
   }
 
   const session = await getAdminSession();
@@ -32,9 +22,7 @@ export default async function AdminLayout({ children }: { children: ReactNode })
 
       {/* 主内容区 */}
       <main className="flex-1 min-w-0 flex flex-col overflow-y-auto">
-        <div className="w-full flex-1 flex flex-col">
-          {children}
-        </div>
+        <div className="w-full flex-1 flex flex-col">{children}</div>
       </main>
     </div>
   );

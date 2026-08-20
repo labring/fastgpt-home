@@ -7,9 +7,9 @@ import {
   requestAIChat
 } from '@/customers/lib/ai-chat';
 import {
-  buildSolutionQaMessages,
-  getSolutionContentById
-} from '@/customers/lib/solution-ai';
+  buildCustomerQaMessages,
+  getCustomerContentById
+} from '@/customers/lib/customer-ai';
 import { readJsonRecord } from '@/customers/lib/request-json';
 
 export async function POST(req: Request) {
@@ -22,21 +22,21 @@ export async function POST(req: Request) {
     }
 
     const body = await readJsonRecord(req);
-    const solutionId = typeof body.solutionId === 'string' ? body.solutionId.trim() : '';
+    const customerId = typeof body.customerId === 'string' ? body.customerId.trim() : '';
     const question = typeof body.question === 'string' ? body.question.trim() : '';
     const history = body.history;
 
-    if (!solutionId || !question) {
-      return NextResponse.json({ error: 'Missing solutionId or question' }, { status: 400 });
+    if (!customerId || !question) {
+      return NextResponse.json({ error: 'Missing customerId or question' }, { status: 400 });
     }
 
-    const content = await getSolutionContentById(solutionId);
+    const content = await getCustomerContentById(customerId);
     if (content === null) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
     const aiConfig = getEnvAIConfig();
-    const messages = buildSolutionQaMessages({
+    const messages = buildCustomerQaMessages({
       content,
       question,
       history

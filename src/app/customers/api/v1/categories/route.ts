@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
 import Category from '@/customers/models/Category';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import { getAutoCategoryColor, getRandomCategoryColor, normalizeHexColor } from '@/customers/lib/category-color';
 import { revalidateAdminRouteTree } from '@/customers/lib/admin-cache';
 import { revalidateCategoryRefs } from '@/customers/lib/public-cache-invalidation';
@@ -56,8 +56,8 @@ export async function GET(request: NextRequest) {
       updatedAt?: Date;
     }>;
 
-    // Get solution counts per category
-    const counts = await Solution.aggregate([
+    // Get customer counts per category
+    const counts = await Customer.aggregate([
       { $match: { deletedAt: null } },
       { $group: { _id: '$categoryId', count: { $sum: 1 } } },
     ]);
@@ -72,7 +72,7 @@ export async function GET(request: NextRequest) {
         color: normalizeHexColor(cat.color, getAutoCategoryColor(cat.name)),
         order: cat.order,
         isActive: cat.isActive,
-        solutionCount: countMap.get(cat._id.toString()) || 0,
+        customerCount: countMap.get(cat._id.toString()) || 0,
         createdAt: cat.createdAt,
         updatedAt: cat.updatedAt,
       }))));

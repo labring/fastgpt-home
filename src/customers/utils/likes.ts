@@ -9,11 +9,11 @@ export interface ViewedState {
   timestamp: number;
 }
 
-export const LIKED_SOLUTIONS_STATE_KEY = 'liked_solutions_state:v2';
-export const VIEWED_SOLUTIONS_STATE_KEY = 'viewed_solutions_state:v2';
+export const LIKED_CUSTOMERS_STATE_KEY = 'liked_customers_state:v2';
+export const VIEWED_CUSTOMERS_STATE_KEY = 'viewed_customers_state:v2';
 
-const LEGACY_LIKED_SOLUTIONS_STATE_KEY = 'liked_solutions_state';
-const LEGACY_VIEWED_SOLUTIONS_STATE_KEY = 'viewed_solutions_state';
+const LEGACY_LIKED_CUSTOMERS_STATE_KEY = 'liked_customers_state';
+const LEGACY_VIEWED_CUSTOMERS_STATE_KEY = 'viewed_customers_state';
 const INTERACTION_TIME_ZONE = 'Asia/Shanghai';
 
 function readJsonRecord<T>(key: string): Record<string, T> {
@@ -53,11 +53,11 @@ function getDateKeyFromTimestamp(timestamp: unknown) {
     : getDateKey();
 }
 
-const getLikedSolutionsState = (): Record<string, LikedState> => {
+const getLikedCustomersState = (): Record<string, LikedState> => {
   if (typeof window === 'undefined') return {};
 
   try {
-    const currentStates = readJsonRecord<LikedState>(LIKED_SOLUTIONS_STATE_KEY);
+    const currentStates = readJsonRecord<LikedState>(LIKED_CUSTOMERS_STATE_KEY);
     if (Object.keys(currentStates).length > 0) {
       return currentStates;
     }
@@ -65,7 +65,7 @@ const getLikedSolutionsState = (): Record<string, LikedState> => {
     const legacyStates = readJsonRecord<{
       isLiked?: unknown;
       timestamp?: unknown;
-    }>(LEGACY_LIKED_SOLUTIONS_STATE_KEY);
+    }>(LEGACY_LIKED_CUSTOMERS_STATE_KEY);
     const migratedStates = Object.fromEntries(
       Object.entries(legacyStates)
         .filter(([, state]) => typeof state?.isLiked === 'boolean')
@@ -82,7 +82,7 @@ const getLikedSolutionsState = (): Record<string, LikedState> => {
     );
 
     if (Object.keys(migratedStates).length > 0) {
-      writeJsonRecord(LIKED_SOLUTIONS_STATE_KEY, migratedStates);
+      writeJsonRecord(LIKED_CUSTOMERS_STATE_KEY, migratedStates);
     }
 
     return migratedStates;
@@ -91,30 +91,30 @@ const getLikedSolutionsState = (): Record<string, LikedState> => {
   }
 };
 
-export const saveLikedSolutionState = (id: string | number, isLiked: boolean) => {
+export const saveLikedCustomerState = (id: string | number, isLiked: boolean) => {
   if (typeof window === 'undefined') return;
   try {
-    const states = getLikedSolutionsState();
+    const states = getLikedCustomersState();
     states[String(id)] = {
       isLiked,
       timestamp: Date.now()
     };
-    writeJsonRecord(LIKED_SOLUTIONS_STATE_KEY, states);
+    writeJsonRecord(LIKED_CUSTOMERS_STATE_KEY, states);
   } catch (e) {
-    console.error('Failed to save liked solution state', e);
+    console.error('Failed to save liked customer state', e);
   }
 };
 
-export const getLikedSolutionState = (id: string | number) => {
-  const states = getLikedSolutionsState();
+export const getLikedCustomerState = (id: string | number) => {
+  const states = getLikedCustomersState();
   return states[String(id)];
 };
 
-const getViewedSolutionsState = (): Record<string, ViewedState> => {
+const getViewedCustomersState = (): Record<string, ViewedState> => {
   if (typeof window === 'undefined') return {};
 
   try {
-    const currentStates = readJsonRecord<ViewedState>(VIEWED_SOLUTIONS_STATE_KEY);
+    const currentStates = readJsonRecord<ViewedState>(VIEWED_CUSTOMERS_STATE_KEY);
     if (Object.keys(currentStates).length > 0) {
       return currentStates;
     }
@@ -122,7 +122,7 @@ const getViewedSolutionsState = (): Record<string, ViewedState> => {
     const legacyStates = readJsonRecord<{
       hasViewed?: unknown;
       timestamp?: unknown;
-    }>(LEGACY_VIEWED_SOLUTIONS_STATE_KEY);
+    }>(LEGACY_VIEWED_CUSTOMERS_STATE_KEY);
     const migratedStates = Object.fromEntries(
       Object.entries(legacyStates)
         .filter(([, state]) => state?.hasViewed === true)
@@ -144,7 +144,7 @@ const getViewedSolutionsState = (): Record<string, ViewedState> => {
     );
 
     if (Object.keys(migratedStates).length > 0) {
-      writeJsonRecord(VIEWED_SOLUTIONS_STATE_KEY, migratedStates);
+      writeJsonRecord(VIEWED_CUSTOMERS_STATE_KEY, migratedStates);
     }
 
     return migratedStates;
@@ -153,10 +153,10 @@ const getViewedSolutionsState = (): Record<string, ViewedState> => {
   }
 };
 
-export const saveViewedSolutionState = (id: string | number, hasViewed: boolean) => {
+export const saveViewedCustomerState = (id: string | number, hasViewed: boolean) => {
   if (typeof window === 'undefined') return;
   try {
-    const states = getViewedSolutionsState();
+    const states = getViewedCustomersState();
     const lastViewedDateKey = getDateKey();
 
     states[String(id)] = {
@@ -164,14 +164,14 @@ export const saveViewedSolutionState = (id: string | number, hasViewed: boolean)
       lastViewedDateKey,
       timestamp: Date.now()
     };
-    writeJsonRecord(VIEWED_SOLUTIONS_STATE_KEY, states);
+    writeJsonRecord(VIEWED_CUSTOMERS_STATE_KEY, states);
   } catch (e) {
-    console.error('Failed to save viewed solution state', e);
+    console.error('Failed to save viewed customer state', e);
   }
 };
 
-export const getViewedSolutionState = (id: string | number) => {
-  const states = getViewedSolutionsState();
+export const getViewedCustomerState = (id: string | number) => {
+  const states = getViewedCustomersState();
   const state = states[String(id)];
 
   if (!state) {

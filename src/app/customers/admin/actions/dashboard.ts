@@ -4,9 +4,9 @@ import dbConnect from '@/customers/lib/db';
 import {
   buildDashboardTrend,
   type DashboardCategoryStat,
-  type DashboardTopSolution
+  type DashboardTopCustomer
 } from '@/customers/lib/dashboard-analytics';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import Category from '@/customers/models/Category';
 import InteractionDailyStat from '@/customers/models/InteractionDailyStat';
 import { requireAdminSession } from '@/customers/lib/admin-auth';
@@ -20,19 +20,19 @@ export async function getDashboardStats() {
 
   try {
     const [
-      totalSolutions,
+      totalCustomers,
       totalCategories,
-      publishedSolutions,
-      draftSolutions,
+      publishedCustomers,
+      draftCustomers,
       statsAggr,
       categoryStats,
       trendSnapshots
     ] = await Promise.all([
-      Solution.countDocuments({ deletedAt: null }),
+      Customer.countDocuments({ deletedAt: null }),
       Category.countDocuments(),
-      Solution.countDocuments({ isPublished: true, deletedAt: null }),
-      Solution.countDocuments({ isPublished: false, deletedAt: null }),
-      Solution.aggregate([
+      Customer.countDocuments({ isPublished: true, deletedAt: null }),
+      Customer.countDocuments({ isPublished: false, deletedAt: null }),
+      Customer.aggregate([
         { $match: { deletedAt: null } },
         {
           $group: {
@@ -42,7 +42,7 @@ export async function getDashboardStats() {
           }
         }
       ]),
-      Solution.aggregate([
+      Customer.aggregate([
         { $match: { deletedAt: null } },
         { $group: { _id: '$categoryId', count: { $sum: 1 } } },
         {
@@ -71,11 +71,11 @@ export async function getDashboardStats() {
     const stats = statsAggr[0] || { totalLikes: 0, totalUsage: 0 };
 
     // 获取访问量 Top 5 解决方案
-    const topSolutions = await Solution.find({ deletedAt: null })
+    const topCustomers = await Customer.find({ deletedAt: null })
       .sort({ usageCount: -1 })
       .limit(5)
       .select('title usageCount likesCount isPublished')
-      .lean<DashboardTopSolution[]>();
+      .lean<DashboardTopCustomer[]>();
 
     const trendStats = buildDashboardTrend(
       trendSnapshots as Array<{ dateKey: string; views?: number; likesDelta?: number }>
@@ -84,13 +84,13 @@ export async function getDashboardStats() {
     return {
       success: true,
       data: {
-        totalSolutions,
+        totalCustomers,
         totalCategories,
-        publishedSolutions,
-        draftSolutions,
+        publishedCustomers,
+        draftCustomers,
         totalLikes: stats.totalLikes,
         totalUsage: stats.totalUsage,
-        topSolutions: JSON.parse(JSON.stringify(topSolutions)), // 避免 ObjectId 序列化问题
+        topCustomers: JSON.parse(JSON.stringify(topCustomers)), // 避免 ObjectId 序列化问题
         categoryStats: JSON.parse(JSON.stringify(categoryStats as DashboardCategoryStat[])),
         trendStats
       }

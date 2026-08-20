@@ -15,15 +15,15 @@ import {
 import { useDeferredValue, useMemo } from 'react';
 import ReactMarkdown from 'react-markdown';
 import type { Components } from 'react-markdown';
-import DesktopToc from '@/customers/components/solution/DesktopToc';
+import DesktopToc from '@/customers/components/customer/DesktopToc';
 import {
   MARKDOWN_PROSE_CLASSES,
   markdownRehypePlugins,
   markdownRemarkPlugins,
   prepareMarkdownContent
-} from '@/customers/components/solution/markdownConfig';
-import TocToggleButton from '@/customers/components/solution/TocToggleButton';
-import { markdownComponents as MarkdownComponents } from '@/customers/components/solution/MarkdownComponents';
+} from '@/customers/components/customer/markdownConfig';
+import TocToggleButton from '@/customers/components/customer/TocToggleButton';
+import { markdownComponents as MarkdownComponents } from '@/customers/components/customer/MarkdownComponents';
 import ImageResizeHandle from './ImageResizeHandle';
 import { getMarkdownImages, replaceImageWithWidth } from './imageMarkdown';
 import { focusTextareaSelection } from './utils';

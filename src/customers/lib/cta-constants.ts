@@ -2,9 +2,9 @@ export const CTA_SOURCES = [
   'home_hero',
   'home_bottom',
   'navbar_poc',
-  'solution_hero',
-  'solution_sidebar',
-  'solution_bottom',
+  'customer_hero',
+  'customer_sidebar',
+  'customer_bottom',
   'empty_state',
   'footer_private_deploy'
 ] as const;
@@ -15,9 +15,9 @@ export const SOURCE_LABELS: Record<string, string> = {
   home_hero: '首页 Hero',
   home_bottom: '首页底部',
   navbar_poc: '导航栏',
-  solution_hero: '方案 Hero',
-  solution_sidebar: '方案侧边栏',
-  solution_bottom: '方案底部',
+  customer_hero: '方案 Hero',
+  customer_sidebar: '方案侧边栏',
+  customer_bottom: '方案底部',
   empty_state: '空状态引导',
   footer_private_deploy: '页脚私有化'
 };
@@ -27,9 +27,9 @@ export const SOURCE_BUTTON_LABELS: Record<string, string> = {
   home_hero: '免费评估场景',
   home_bottom: '申请免费 POC',
   navbar_poc: '申请 POC',
-  solution_hero: '验证该方案',
-  solution_sidebar: '咨询 POC 路径',
-  solution_bottom: '申请免费 POC',
+  customer_hero: '验证该方案',
+  customer_sidebar: '咨询 POC 路径',
+  customer_bottom: '申请免费 POC',
   empty_state: '提交需求',
   footer_private_deploy: '私有化与 POC 交付'
 };
@@ -52,9 +52,9 @@ export const SOURCE_UTM_CAMPAIGNS: Record<CtaSource, string> = {
   home_hero: 'poc-application',
   home_bottom: 'poc-application',
   navbar_poc: 'poc-application',
-  solution_hero: 'poc-application',
-  solution_sidebar: 'poc-application',
-  solution_bottom: 'poc-application',
+  customer_hero: 'poc-application',
+  customer_sidebar: 'poc-application',
+  customer_bottom: 'poc-application',
   empty_state: 'requirement-match',
   footer_private_deploy: 'private-deploy'
 };

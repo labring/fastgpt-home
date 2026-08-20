@@ -11,8 +11,8 @@ const VISITOR_COOKIE_VALUE_PATTERN = /^[a-zA-Z0-9_-]{24,96}$/;
 
 export { isValidObjectId };
 
-export function invalidSolutionIdResponse() {
-  return NextResponse.json({ error: 'Invalid solution id' }, { status: 400 });
+export function invalidCustomerIdResponse() {
+  return NextResponse.json({ error: 'Invalid customer id' }, { status: 400 });
 }
 
 export function isValidVisitorKey(value: unknown) {
@@ -49,18 +49,18 @@ export function getPublicInteractionClientIp(request: NextRequest | Request) {
 export function rateLimitPublicInteraction({
   request,
   action,
-  solutionId,
+  customerId,
   limit = 30,
   windowMs = 60 * 1000
 }: {
   request: NextRequest | Request;
   action: string;
-  solutionId: string;
+  customerId: string;
   limit?: number;
   windowMs?: number;
 }) {
   const ip = getPublicInteractionClientIp(request);
-  const result = rateLimit(`public-interaction:${action}:${solutionId}:${ip}`, limit, windowMs);
+  const result = rateLimit(`public-interaction:${action}:${customerId}:${ip}`, limit, windowMs);
 
   if (!result.success) {
     return NextResponse.json(

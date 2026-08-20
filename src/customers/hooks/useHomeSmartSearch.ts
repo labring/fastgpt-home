@@ -1,21 +1,22 @@
 import { useCallback, useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { getSolutionPublicHref } from '@/customers/lib/solution-url';
+import { getCustomerPublicHref } from '@/customers/lib/customer-url';
 import { toast } from 'sonner';
-import type { Solution } from '@/customers/components/SolutionCard';
+import type { Customer } from '@/customers/components/CustomerCard';
 import {
-  fetchFirstMatchedSolution,
+  fetchFirstMatchedCustomer,
   requestSmartSearchMatch,
   SMART_SEARCH_EMPTY_DESCRIPTION
-} from '@/customers/lib/solution-search';
+} from '@/customers/lib/customer-search';
 import { trackRybbitEvent } from '@/customers/lib/rybbit';
+import { withBasePath } from '@/customers/lib/base-path';
 
 interface UseHomeSmartSearchInput {
-  solutions: Solution[];
+  customers: Customer[];
   onMatched: () => void;
 }
 
-export function useHomeSmartSearch({ solutions, onMatched }: UseHomeSmartSearchInput) {
+export function useHomeSmartSearch({ customers, onMatched }: UseHomeSmartSearchInput) {
   const router = useRouter();
   const [isAiSearching, setIsAiSearching] = useState(false);
 
@@ -32,21 +33,21 @@ export function useHomeSmartSearch({ solutions, onMatched }: UseHomeSmartSearchI
           search_type: 'ai'
         });
 
-        let matchedSolution: Solution | null =
-          solutions.find((solution) => solution.title === data.matched_case) || null;
+        let matchedCustomer: Customer | null =
+          customers.find((customer) => customer.title === data.matched_case) || null;
 
-        if (!matchedSolution) {
+        if (!matchedCustomer) {
           try {
-            matchedSolution = await fetchFirstMatchedSolution<Solution>(data.matched_case);
+            matchedCustomer = await fetchFirstMatchedCustomer<Customer>(data.matched_case);
           } catch (error) {
-            console.error('Failed to fetch matched solution detail', error);
+            console.error('Failed to fetch matched customer detail', error);
           }
         }
 
-        if (matchedSolution) {
+        if (matchedCustomer) {
           onMatched();
-          router.push(getSolutionPublicHref(matchedSolution));
-          toast.success(`为您找到匹配案例：${matchedSolution.title}`);
+          router.push(withBasePath(getCustomerPublicHref(matchedCustomer)));
+          toast.success(`为您找到匹配案例：${matchedCustomer.title}`);
         } else {
           toast.info('抱歉，未能匹配到相关智能应用，请换个说法试试~', {
             description: SMART_SEARCH_EMPTY_DESCRIPTION
@@ -70,7 +71,7 @@ export function useHomeSmartSearch({ solutions, onMatched }: UseHomeSmartSearchI
     } finally {
       setIsAiSearching(false);
     }
-  }, [onMatched, router, solutions]);
+  }, [onMatched, router, customers]);
 
   return {
     isAiSearching,

@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { permanentlyDeleteSolutionFromTrash } from '@/customers/lib/solution-trash';
+import { permanentlyDeleteCustomerFromTrash } from '@/customers/lib/customer-trash';
 import {
   AGENT_ERROR_CODES,
   createAgentRequestContext,
@@ -26,7 +26,7 @@ export async function POST(
   try {
     const result = await runAgentIdempotentOperation(request, context, async () => {
       const { id } = await params;
-      const purgeResult = await permanentlyDeleteSolutionFromTrash(id);
+      const purgeResult = await permanentlyDeleteCustomerFromTrash(id);
 
       if (!purgeResult.success) {
         const resolvedError = resolveAgentDomainError(
@@ -52,7 +52,7 @@ export async function POST(
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error purging solution:', error);
+    console.error('Error purging customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,

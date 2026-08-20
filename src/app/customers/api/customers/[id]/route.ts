@@ -1,11 +1,11 @@
 import { NextRequest, NextResponse } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import Category from '@/customers/models/Category';
 import { getAutoCategoryColor, normalizeHexColor } from '@/customers/lib/category-color';
 import { ensureCategorySlugs } from '@/customers/lib/category-slug';
-import { getInteractedSolutionIdSets } from '@/customers/lib/public-interaction-state';
-import { resolveSolutionObjectId } from '@/customers/lib/solution-id';
+import { getInteractedCustomerIdSets } from '@/customers/lib/public-interaction-state';
+import { resolveCustomerObjectId } from '@/customers/lib/customer-id';
 
 export const dynamic = 'force-dynamic';
 
@@ -15,16 +15,16 @@ export async function GET(
 ) {
   try {
     const { id: rawId } = await params;
-    const id = await resolveSolutionObjectId(rawId);
+    const id = await resolveCustomerObjectId(rawId);
     if (!id) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
 
     await dbConnect();
     await ensureCategorySlugs();
     Category.init();
 
-    const solution = await Solution.findById(id)
+    const customer = await Customer.findById(id)
       .populate('categoryId', 'name slug color')
       .lean({ virtuals: true }) as
       | {
@@ -55,62 +55,62 @@ export async function GET(
         }
       | null;
 
-    if (!solution || !solution.isPublished) {
-      return NextResponse.json({ error: 'Solution not found' }, { status: 404 });
+    if (!customer || !customer.isPublished) {
+      return NextResponse.json({ error: 'Customer not found' }, { status: 404 });
     }
-    const solutionId = solution._id.toString();
-    const interactionState = await getInteractedSolutionIdSets([solutionId]);
+    const customerId = customer._id.toString();
+    const interactionState = await getInteractedCustomerIdSets([customerId]);
 
     return NextResponse.json({
-      id: solutionId,
+      id: customerId,
       categoryId:
-        typeof solution.categoryId === 'object' && solution.categoryId !== null
-          ? solution.categoryId._id?.toString() || solution.categoryId.toString?.() || ''
-          : solution.categoryId?.toString() || '',
+        typeof customer.categoryId === 'object' && customer.categoryId !== null
+          ? customer.categoryId._id?.toString() || customer.categoryId.toString?.() || ''
+          : customer.categoryId?.toString() || '',
       categoryName:
-        (typeof solution.categoryId === 'object' && solution.categoryId !== null
-          ? solution.categoryId.name
+        (typeof customer.categoryId === 'object' && customer.categoryId !== null
+          ? customer.categoryId.name
           : undefined) ||
-        solution.categoryName ||
+        customer.categoryName ||
         '未知分类',
       categorySlug:
-        typeof solution.categoryId === 'object' && solution.categoryId !== null
-          ? solution.categoryId.slug || ''
+        typeof customer.categoryId === 'object' && customer.categoryId !== null
+          ? customer.categoryId.slug || ''
           : '',
       categoryColor: normalizeHexColor(
-        typeof solution.categoryId === 'object' && solution.categoryId !== null
-          ? solution.categoryId.color
+        typeof customer.categoryId === 'object' && customer.categoryId !== null
+          ? customer.categoryId.color
           : undefined,
         getAutoCategoryColor(
-          (typeof solution.categoryId === 'object' && solution.categoryId !== null
-            ? solution.categoryId.name
+          (typeof customer.categoryId === 'object' && customer.categoryId !== null
+            ? customer.categoryId.name
             : undefined) ||
-            solution.categoryName ||
+            customer.categoryName ||
             ''
         )
       ),
-      title: solution.title,
-      description: solution.description,
-      imageUrl: solution.imageUrl,
-      thumbnailUrl: solution.thumbnailUrl || solution.imageUrl,
-      freeUseUrl: solution.freeUseUrl || '',
-      likes: solution.likesCount,
-      isLiked: interactionState.likedSolutionIds.has(solutionId),
-      hasViewed: interactionState.viewedSolutionIds.has(solutionId),
-      usage: solution.formattedUsageCount || solution.usageCount.toString(),
-      rawUsageCount: solution.usageCount,
-      content: solution.content,
-      createdAt: solution.createdAt,
-      updatedAt: solution.updatedAt || solution.createdAt
+      title: customer.title,
+      description: customer.description,
+      imageUrl: customer.imageUrl,
+      thumbnailUrl: customer.thumbnailUrl || customer.imageUrl,
+      freeUseUrl: customer.freeUseUrl || '',
+      likes: customer.likesCount,
+      isLiked: interactionState.likedCustomerIds.has(customerId),
+      hasViewed: interactionState.viewedCustomerIds.has(customerId),
+      usage: customer.formattedUsageCount || customer.usageCount.toString(),
+      rawUsageCount: customer.usageCount,
+      content: customer.content,
+      createdAt: customer.createdAt,
+      updatedAt: customer.updatedAt || customer.createdAt
     }, {
       headers: {
         'Cache-Control': 'no-store, max-age=0'
       }
     });
   } catch (error) {
-    console.error('Error fetching solution:', error);
+    console.error('Error fetching customer:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch solution' },
+      { error: 'Failed to fetch customer' },
       { status: 500 }
     );
   }

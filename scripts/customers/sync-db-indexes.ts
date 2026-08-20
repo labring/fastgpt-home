@@ -23,17 +23,17 @@ async function main() {
 
   await mongoose.connect(uri, { serverSelectionTimeoutMS: 15000 });
 
-  const [{ default: Solution }, { default: Category }, { default: SolutionInteraction }] =
+  const [{ default: Customer }, { default: Category }, { default: CustomerInteraction }] =
     await Promise.all([
-      import('@/customers/models/Solution'),
+      import('@/customers/models/Customer'),
       import('@/customers/models/Category'),
-      import('@/customers/models/SolutionInteraction'),
+      import('@/customers/models/CustomerInteraction'),
     ]);
 
   const models: Array<[string, { createIndexes: () => Promise<unknown> }]> = [
-    ['Solution', Solution],
+    ['Customer', Customer],
     ['Category', Category],
-    ['SolutionInteraction', SolutionInteraction],
+    ['CustomerInteraction', CustomerInteraction],
   ];
   const failures: string[] = [];
 
@@ -55,11 +55,12 @@ async function main() {
     process.exit(1);
   }
 
-  console.log('索引同步完成（Solution / Category / SolutionInteraction）');
+  console.log('索引同步完成（Customer / Category / CustomerInteraction）');
 
-  const solutionIndexes = await mongoose.connection.db!.collection('solutions').indexes();
-  console.log('solutions 集合当前索引：');
-  for (const index of solutionIndexes) {
+  const customerCollection = 'customers';
+  const customerIndexes = await mongoose.connection.db!.collection(customerCollection).indexes();
+  console.log('customers 集合当前索引：');
+  for (const index of customerIndexes) {
     console.log(`  ${index.name}: ${JSON.stringify(index.key)}`);
   }
 

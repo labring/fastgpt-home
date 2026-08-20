@@ -12,6 +12,7 @@ node_modules/
 
 # Next.js build output
 .next
+.next-admin
 out
 /next-env.d.ts
 

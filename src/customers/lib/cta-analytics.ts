@@ -9,16 +9,16 @@ export interface CtaDailyPoint {
   count: number;
 }
 
-export interface SolutionPocRank {
-  solutionId: string;
-  solutionTitle: string;
+export interface CustomerPocRank {
+  customerId: string;
+  customerTitle: string;
   /** 总点击数 */
   count: number;
-  /** "验证该方案" (solution_hero) */
+  /** "验证该方案" (customer_hero) */
   heroCount: number;
-  /** "咨询 POC 路径" (solution_sidebar) */
+  /** "咨询 POC 路径" (customer_sidebar) */
   sidebarCount: number;
-  /** "申请免费 POC" (solution_bottom) */
+  /** "申请免费 POC" (customer_bottom) */
   bottomCount: number;
 }
 
@@ -29,8 +29,8 @@ export interface CtaStatsData {
   dailyTrends: Record<string, CtaDailyPoint[]>;
   /** 近 N 天所有 source 汇总每日趋势 */
   overallTrend: CtaDailyPoint[];
-  /** 方案级 POC 意向排名（按点击量降序，仅统计有 solutionId 的记录） */
-  solutionRanking: SolutionPocRank[];
+  /** 方案级 POC 意向排名（按点击量降序，仅统计有 customerId 的记录） */
+  customerRanking: CustomerPocRank[];
   /** 数据查询时间戳（ISO string），用于前端展示数据新鲜度 */
   fetchedAt: string;
 }
@@ -45,7 +45,7 @@ export async function getCtaClickStats(days = 30): Promise<CtaStatsData> {
   const safeDays = Math.min(90, Math.max(1, days));
   const fetchedAt = new Date().toISOString();
 
-  const [aggregates, allTimeAggregates, solutionAggregates] = await Promise.all([
+  const [aggregates, allTimeAggregates, customerAggregates] = await Promise.all([
     // 按 source + dateKey 分组计数（近 N 天用）
     CtaClick.aggregate([
       {
@@ -67,32 +67,32 @@ export async function getCtaClickStats(days = 30): Promise<CtaStatsData> {
       }
     ]) as Promise<Array<{ _id: string; count: number }>>,
 
-    // 方案级 POC 意向排名（按 solutionId + source 分组，再按 solutionId 汇总，统计三种按钮各自点击）
+    // 方案级 POC 意向排名（按 customerId + source 分组，再按 customerId 汇总，统计三种按钮各自点击）
     CtaClick.aggregate([
       {
         $match: {
-          solutionId: { $exists: true, $type: 'string', $ne: '' },
-          source: { $in: ['solution_hero', 'solution_sidebar', 'solution_bottom'] }
+          customerId: { $exists: true, $type: 'string', $ne: '' },
+          source: { $in: ['customer_hero', 'customer_sidebar', 'customer_bottom'] }
         }
       },
       {
         $group: {
-          _id: { solutionId: '$solutionId', source: '$source' },
-          solutionTitle: { $last: '$solutionTitle' },
+          _id: { customerId: '$customerId', source: '$source' },
+          customerTitle: { $last: '$customerTitle' },
           count: { $sum: 1 }
         }
       },
       {
         $group: {
-          _id: '$_id.solutionId',
-          solutionTitle: { $last: '$solutionTitle' },
+          _id: '$_id.customerId',
+          customerTitle: { $last: '$customerTitle' },
           sources: { $push: { source: '$_id.source', count: '$count' } },
           totalCount: { $sum: '$count' }
         }
       },
       { $sort: { totalCount: -1 } },
       { $limit: 10 }
-    ]) as Promise<Array<{ _id: string; solutionTitle: string | null; totalCount: number; sources: Array<{ source: string; count: number }> }>>
+    ]) as Promise<Array<{ _id: string; customerTitle: string | null; totalCount: number; sources: Array<{ source: string; count: number }> }>>
   ]);
 
   // 构建 source -> dateKey -> count 查找表
@@ -142,20 +142,20 @@ export async function getCtaClickStats(days = 30): Promise<CtaStatsData> {
   }));
 
   // 方案级排名（含三种按钮分项统计）
-  const solutionRanking: SolutionPocRank[] = solutionAggregates.map((item) => {
+  const customerRanking: CustomerPocRank[] = customerAggregates.map((item) => {
     const srcMap: Record<string, number> = {};
     for (const s of item.sources) {
       srcMap[s.source] = s.count;
     }
     return {
-      solutionId: item._id,
-      solutionTitle: item.solutionTitle || '未知方案',
+      customerId: item._id,
+      customerTitle: item.customerTitle || '未知方案',
       count: item.totalCount,
-      heroCount: srcMap['solution_hero'] || 0,
-      sidebarCount: srcMap['solution_sidebar'] || 0,
-      bottomCount: srcMap['solution_bottom'] || 0
+      heroCount: srcMap['customer_hero'] || 0,
+      sidebarCount: srcMap['customer_sidebar'] || 0,
+      bottomCount: srcMap['customer_bottom'] || 0
     };
   });
 
-  return { allTimeTotals, dailyTrends, overallTrend, solutionRanking, fetchedAt };
+  return { allTimeTotals, dailyTrends, overallTrend, customerRanking, fetchedAt };
 }

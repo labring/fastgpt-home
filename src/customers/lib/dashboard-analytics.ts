@@ -3,7 +3,7 @@ export const DASHBOARD_TIME_ZONE = 'Asia/Shanghai';
 
 const DAY_IN_MS = 24 * 60 * 60 * 1000;
 
-export interface DashboardTopSolution {
+export interface DashboardTopCustomer {
   _id?: string;
   title: string;
   usageCount: number;

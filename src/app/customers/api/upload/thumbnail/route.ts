@@ -5,7 +5,7 @@ import {
   buildS3PublicUrl,
   extractS3KeyFromPublicUrl,
   getMissingS3Config
-} from '@/customers/lib/solution-storage';
+} from '@/customers/lib/customer-storage';
 import {
   shouldGenerateThumbnail,
   generateThumbnail,

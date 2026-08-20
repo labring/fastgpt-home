@@ -1,5 +1,5 @@
 import { NextRequest } from 'next/server';
-import { restoreSolutionFromTrash } from '@/customers/lib/solution-trash';
+import { restoreCustomerFromTrash } from '@/customers/lib/customer-trash';
 import {
   AGENT_ERROR_CODES,
   createAgentRequestContext,
@@ -24,7 +24,7 @@ export async function POST(
 
   try {
     const { id } = await params;
-    const result = await restoreSolutionFromTrash(id);
+    const result = await restoreCustomerFromTrash(id);
 
     if (!result.success) {
       const resolvedError = resolveAgentDomainError(
@@ -43,7 +43,7 @@ export async function POST(
 
     return toAgentResponse(successResult(context, { id, restored: true }));
   } catch (error) {
-    console.error('Error restoring solution:', error);
+    console.error('Error restoring customer:', error);
     return toAgentResponse(errorResult(
       context,
       500,

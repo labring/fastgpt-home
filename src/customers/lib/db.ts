@@ -68,10 +68,10 @@ function attachConnectionListeners(mongooseInstance: typeof mongoose) {
 }
 
 function scheduleInteractionIndexCleanup() {
-  void import("@/customers/lib/solution-interaction-indexes")
-    .then(({ dropLegacySolutionInteractionTtlIndex }) => dropLegacySolutionInteractionTtlIndex())
+  void import("@/customers/lib/customer-interaction-indexes")
+    .then(({ dropLegacyCustomerInteractionTtlIndex }) => dropLegacyCustomerInteractionTtlIndex())
     .catch((error) => {
-      console.warn("Failed to schedule SolutionInteraction index cleanup:", error);
+      console.warn("Failed to schedule CustomerInteraction index cleanup:", error);
     });
 }
 

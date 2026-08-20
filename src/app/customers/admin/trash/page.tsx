@@ -1,11 +1,11 @@
 import TrashList from '@/customers/components/admin/trash/TrashList';
-import { getTrashedSolutions } from '@/app/customers/admin/actions/solutions';
-import type { AdminSolutionListData } from '@/customers/components/admin/solution-list/types';
+import { getTrashedCustomers } from '@/app/customers/admin/actions/customers';
+import type { AdminCustomerListData } from '@/customers/components/admin/customer-list/types';
 
 export const dynamic = 'force-dynamic';
 
 export default async function AdminTrashPage() {
-  const result = await getTrashedSolutions();
+  const result = await getTrashedCustomers();
 
   if (!result.success || !result.data) {
     const errorMessage = result.success ? '暂无数据' : result.error;
@@ -16,5 +16,5 @@ export default async function AdminTrashPage() {
     );
   }
 
-  return <TrashList initialData={result.data as AdminSolutionListData} />;
+  return <TrashList initialData={result.data as AdminCustomerListData} />;
 }

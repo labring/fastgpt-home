@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { getPublishedSolutionsPage } from '@/customers/lib/data';
+import { getPublishedCustomersPage } from '@/customers/lib/data';
 import {
-  DEFAULT_PUBLIC_SOLUTION_SORT_KEY,
-  PUBLIC_SOLUTIONS_MAX_PAGE_SIZE,
-  isPublicSolutionSortKey
-} from '@/customers/lib/solution-pagination';
+  DEFAULT_PUBLIC_CUSTOMER_SORT_KEY,
+  PUBLIC_CUSTOMERS_MAX_PAGE_SIZE,
+  isPublicCustomerSortKey
+} from '@/customers/lib/customer-pagination';
 
 export const dynamic = 'force-dynamic';
 
@@ -12,13 +12,13 @@ export async function GET(request: NextRequest) {
   try {
     const searchParams = request.nextUrl.searchParams;
     const sortByParam = searchParams.get('sortBy');
-    const data = await getPublishedSolutionsPage({
+    const data = await getPublishedCustomersPage({
       category: searchParams.get('category') || undefined,
       search: searchParams.get('search') || undefined,
       page: Number.parseInt(searchParams.get('page') || '1', 10),
       limit: Number.parseInt(searchParams.get('limit') || '10', 10),
-      sortBy: isPublicSolutionSortKey(sortByParam) ? sortByParam : DEFAULT_PUBLIC_SOLUTION_SORT_KEY,
-      maxLimit: PUBLIC_SOLUTIONS_MAX_PAGE_SIZE
+      sortBy: isPublicCustomerSortKey(sortByParam) ? sortByParam : DEFAULT_PUBLIC_CUSTOMER_SORT_KEY,
+      maxLimit: PUBLIC_CUSTOMERS_MAX_PAGE_SIZE
     });
 
     return NextResponse.json(data, {
@@ -27,9 +27,9 @@ export async function GET(request: NextRequest) {
       }
     });
   } catch (error) {
-    console.error('Error fetching solutions:', error);
+    console.error('Error fetching customers:', error);
     return NextResponse.json(
-      { error: 'Failed to fetch solutions' },
+      { error: 'Failed to fetch customers' },
       { status: 500 }
     );
   }

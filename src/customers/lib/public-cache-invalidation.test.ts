@@ -1,13 +1,13 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { revalidatePath } from 'next/cache';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import {
-  loadSolutionRevalidationRefsByCategoryId,
-  loadSolutionRevalidationRefs,
+  loadCustomerRevalidationRefsByCategoryId,
+  loadCustomerRevalidationRefs,
   revalidateCategoryRefs,
   revalidatePublicIndexes,
-  revalidateSolutionRefs,
+  revalidateCustomerRefs,
 } from './public-cache-invalidation';
 
 vi.mock('next/cache', () => ({
@@ -18,7 +18,7 @@ vi.mock('@/customers/lib/db', () => ({
   default: vi.fn(),
 }));
 
-vi.mock('@/customers/models/Solution', () => ({
+vi.mock('@/customers/models/Customer', () => ({
   default: {
     find: vi.fn(),
   },
@@ -45,9 +45,9 @@ describe('public cache invalidation', () => {
     ]);
   });
 
-  it('revalidates solution detail, semantic, markdown and category pages', () => {
-    revalidateSolutionRefs({
-      id: 'solution-a',
+  it('revalidates customer detail, semantic, markdown and category pages', () => {
+    revalidateCustomerRefs({
+      id: 'customer-a',
       slug: 'semantic-slug',
       categorySlug: 'current-category',
       previousCategorySlug: 'old-category',
@@ -59,8 +59,8 @@ describe('public cache invalidation', () => {
       '/customers/sitemap.xml',
       '/customers/llms.txt',
       '/customers/llms-full.txt',
-      '/customers/solution/solution-a',
-      '/customers/solution/solution-a/markdown',
+      '/customers/customer/customer-a',
+      '/customers/customer/customer-a/markdown',
       '/customers/current-category/semantic-slug',
       '/customers/categories/current-category',
       '/customers/old-category/semantic-slug',
@@ -69,23 +69,23 @@ describe('public cache invalidation', () => {
   });
 
   it('falls back to ObjectId path when slug is missing', () => {
-    revalidateSolutionRefs({
-      id: 'solution-a',
+    revalidateCustomerRefs({
+      id: 'customer-a',
       categorySlug: 'current-category',
     });
 
-    expect(revalidatedPaths()).toContain('/customers/current-category/solution-a');
+    expect(revalidatedPaths()).toContain('/customers/current-category/customer-a');
   });
 
   it('deduplicates current and previous category slug paths', () => {
-    revalidateSolutionRefs({
-      id: 'solution-a',
+    revalidateCustomerRefs({
+      id: 'customer-a',
       categorySlug: 'same-category',
       previousCategorySlug: 'same-category',
     });
 
     expect(revalidatedPaths().filter((path) => path === '/customers/categories/same-category')).toHaveLength(1);
-    expect(revalidatedPaths().filter((path) => path === '/customers/same-category/solution-a')).toHaveLength(1);
+    expect(revalidatedPaths().filter((path) => path === '/customers/same-category/customer-a')).toHaveLength(1);
   });
 
   it('revalidates category refs including old slugs', () => {
@@ -105,16 +105,16 @@ describe('public cache invalidation', () => {
     ]);
   });
 
-  it('loads solution refs with populated category slug', async () => {
+  it('loads customer refs with populated category slug', async () => {
     const lean = vi.fn().mockResolvedValue([
       { _id: '64b000000000000000000001', slug: 'financial-report', categoryId: { slug: 'finance' } },
       { _id: '64b000000000000000000002', categoryId: null },
     ]);
     const populate = vi.fn(() => ({ lean }));
     const select = vi.fn(() => ({ populate }));
-    vi.mocked(Solution.find).mockReturnValue({ select } as never);
+    vi.mocked(Customer.find).mockReturnValue({ select } as never);
 
-    await expect(loadSolutionRevalidationRefs([
+    await expect(loadCustomerRevalidationRefs([
       '64b000000000000000000001',
       'bad-id',
       '64b000000000000000000002',
@@ -124,7 +124,7 @@ describe('public cache invalidation', () => {
     ]);
 
     expect(dbConnect).toHaveBeenCalledTimes(1);
-    expect(Solution.find).toHaveBeenCalledWith({
+    expect(Customer.find).toHaveBeenCalledWith({
       _id: {
         $in: ['64b000000000000000000001', '64b000000000000000000002'],
       },
@@ -134,20 +134,20 @@ describe('public cache invalidation', () => {
     expect(populate).toHaveBeenCalledWith('categoryId', 'slug');
   });
 
-  it('loads solution refs by category id for slug rename invalidation', async () => {
+  it('loads customer refs by category id for slug rename invalidation', async () => {
     const lean = vi.fn().mockResolvedValue([
       { _id: '64b000000000000000000001', slug: 'semantic-slug', categoryId: { slug: 'new-category' } },
     ]);
     const populate = vi.fn(() => ({ lean }));
     const select = vi.fn(() => ({ populate }));
-    vi.mocked(Solution.find).mockReturnValue({ select } as never);
+    vi.mocked(Customer.find).mockReturnValue({ select } as never);
 
-    await expect(loadSolutionRevalidationRefsByCategoryId('64a000000000000000000001')).resolves.toEqual([
+    await expect(loadCustomerRevalidationRefsByCategoryId('64a000000000000000000001')).resolves.toEqual([
       { id: '64b000000000000000000001', categorySlug: 'new-category', slug: 'semantic-slug' },
     ]);
 
     expect(dbConnect).toHaveBeenCalledTimes(1);
-    expect(Solution.find).toHaveBeenCalledWith({
+    expect(Customer.find).toHaveBeenCalledWith({
       categoryId: '64a000000000000000000001',
       deletedAt: null,
     });

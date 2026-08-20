@@ -2,7 +2,7 @@
  * 首页「AI 可读目录」的纯函数构建器。
  *
  * 职责：
- * - 把全量已发布内容拆分为「客户案例」与「解决方案」两层；
+ * - 把全量已发布内容拆分为「企业公开案例」与「客户案例」两层；
  * - 生成面向 AI 抓取与 GEO 的语义化案例锚文本（标题 + 客户名 + 核心指标）；
  * - 对 B/C 级与脱敏案例做公开口径清洗（内部备注绝不进入页面 HTML）；
  * - 构建首页 ItemList 结构化数据。
@@ -17,7 +17,7 @@ export type AiDirectoryEntry = {
   categoryName: string;
   title: string;
   description: string;
-  contentType: 'solution' | 'case';
+  isPublicCase: boolean;
   caseOrg?: string;
   clearanceLevel?: 'A' | 'B' | 'C' | '';
   caseNo?: number;
@@ -64,25 +64,25 @@ export function formatCaseName(entry: AiDirectoryEntry): string {
 }
 
 /**
- * 把全量已发布内容拆分为「客户案例」（按 caseNo 升序，语义稳定）与「解决方案」。
+ * 把全量已发布内容拆分为「企业公开案例」（按 caseNo 升序，语义稳定）与「客户案例」。
  */
 export function splitDirectoryEntries(entries: AiDirectoryEntry[]) {
   const cases = entries
-    .filter((entry) => entry.contentType === 'case')
+    .filter((entry) => entry.isPublicCase)
     .sort((a, b) => (a.caseNo || 0) - (b.caseNo || 0));
-  const solutions = entries.filter((entry) => entry.contentType !== 'case');
-  return { cases, solutions };
+  const customers = entries.filter((entry) => !entry.isPublicCase);
+  return { cases, customers };
 }
 
 /**
  * 构建首页 ItemList 结构化数据：
- * - 客户案例 ItemList（锚文本 = formatCaseName，强化「案例 ↔ 客户 ↔ 指标」实体关联）；
- * - 解决方案 ItemList。
+ * - 企业公开案例 ItemList（锚文本 = formatCaseName，强化「案例 ↔ 客户 ↔ 指标」实体关联）；
+ * - 客户案例 ItemList。
  * 全部使用语义 slug 绝对 URL。无任何条目时返回 null，调用方不输出 script。
  */
 export function buildHomeDirectoryJsonLd(options: {
   cases: AiDirectoryEntry[];
-  solutions: AiDirectoryEntry[];
+  customers: AiDirectoryEntry[];
   absoluteUrlOf: (entry: AiDirectoryEntry) => string;
 }) {
   const caseItems = options.cases.map((entry, index) => ({
@@ -91,7 +91,7 @@ export function buildHomeDirectoryJsonLd(options: {
     name: formatCaseName(entry),
     url: options.absoluteUrlOf(entry),
   }));
-  const solutionItems = options.solutions.map((entry, index) => ({
+  const customerItems = options.customers.map((entry, index) => ({
     '@type': 'ListItem',
     position: index + 1,
     name: entry.title,
@@ -102,15 +102,15 @@ export function buildHomeDirectoryJsonLd(options: {
   if (caseItems.length > 0) {
     graph.push({
       '@type': 'ItemList',
-      name: 'FastGPT 客户案例',
+      name: 'FastGPT 企业公开案例',
       itemListElement: caseItems,
     });
   }
-  if (solutionItems.length > 0) {
+  if (customerItems.length > 0) {
     graph.push({
       '@type': 'ItemList',
-      name: 'FastGPT 解决方案',
-      itemListElement: solutionItems,
+      name: 'FastGPT 客户案例',
+      itemListElement: customerItems,
     });
   }
 

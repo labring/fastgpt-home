@@ -4,7 +4,7 @@ import { useCallback, useRef, useState } from 'react';
 import { toast } from 'sonner';
 import { createParser } from 'eventsource-parser';
 import type { Dispatch, RefObject, SetStateAction } from 'react';
-import { getAiSystemPrompt, saveAiSystemPrompt } from '@/app/customers/admin/actions/solutions';
+import { getAiSystemPrompt, saveAiSystemPrompt } from '@/app/customers/admin/actions/customers';
 import { withBasePath } from '@/customers/lib/base-path';
 import type { EditorFormData } from './types';
 

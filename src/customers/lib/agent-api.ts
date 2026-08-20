@@ -12,9 +12,9 @@ export const AGENT_ERROR_CODES = {
   badRequest: 'BAD_REQUEST',
   validationError: 'VALIDATION_ERROR',
   internalError: 'INTERNAL_ERROR',
-  solutionNotFound: 'SOLUTION_NOT_FOUND',
-  solutionAlreadyInTrash: 'SOLUTION_ALREADY_IN_TRASH',
-  solutionNotInTrash: 'SOLUTION_NOT_IN_TRASH',
+  customerNotFound: 'CUSTOMER_NOT_FOUND',
+  customerAlreadyInTrash: 'CUSTOMER_ALREADY_IN_TRASH',
+  customerNotInTrash: 'CUSTOMER_NOT_IN_TRASH',
   categoryNotFound: 'CATEGORY_NOT_FOUND',
   targetCategoryNotFound: 'TARGET_CATEGORY_NOT_FOUND',
   categoryNameRequired: 'CATEGORY_NAME_REQUIRED',
@@ -22,7 +22,7 @@ export const AGENT_ERROR_CODES = {
   categoryNameConflict: 'CATEGORY_NAME_CONFLICT',
   categoryNotEmpty: 'CATEGORY_NOT_EMPTY',
   targetCategoryRequired: 'TARGET_CATEGORY_REQUIRED',
-  solutionIdsRequired: 'SOLUTION_IDS_REQUIRED',
+  customerIdsRequired: 'CUSTOMER_IDS_REQUIRED',
   categoryIdsRequired: 'CATEGORY_IDS_REQUIRED',
   invalidSortPayload: 'INVALID_SORT_PAYLOAD',
   invalidMetricPayload: 'INVALID_METRIC_PAYLOAD',
@@ -229,22 +229,22 @@ export function resolveAgentDomainError(message: string, fallback?: Partial<Agen
     }],
     ['案例不存在', {
       status: 404,
-      code: AGENT_ERROR_CODES.solutionNotFound,
+      code: AGENT_ERROR_CODES.customerNotFound,
       message: normalizedMessage
     }],
     ['案例不存在或已在回收站中', {
       status: 409,
-      code: AGENT_ERROR_CODES.solutionAlreadyInTrash,
+      code: AGENT_ERROR_CODES.customerAlreadyInTrash,
       message: normalizedMessage
     }],
     ['案例不存在或未在回收站中', {
       status: 409,
-      code: AGENT_ERROR_CODES.solutionNotInTrash,
+      code: AGENT_ERROR_CODES.customerNotInTrash,
       message: normalizedMessage
     }],
     ['案例已变化，请刷新回收站后重试', {
       status: 409,
-      code: AGENT_ERROR_CODES.solutionNotInTrash,
+      code: AGENT_ERROR_CODES.customerNotInTrash,
       message: normalizedMessage
     }],
     ['分类名称不能为空', {
@@ -274,17 +274,17 @@ export function resolveAgentDomainError(message: string, fallback?: Partial<Agen
     }],
     ['请提供要删除的解决方案 ID 列表', {
       status: 400,
-      code: AGENT_ERROR_CODES.solutionIdsRequired,
+      code: AGENT_ERROR_CODES.customerIdsRequired,
       message: normalizedMessage
     }],
     ['请提供要删除的案例 ID 列表', {
       status: 400,
-      code: AGENT_ERROR_CODES.solutionIdsRequired,
+      code: AGENT_ERROR_CODES.customerIdsRequired,
       message: normalizedMessage
     }],
     ['请提供要迁移的解决方案 ID 列表', {
       status: 400,
-      code: AGENT_ERROR_CODES.solutionIdsRequired,
+      code: AGENT_ERROR_CODES.customerIdsRequired,
       message: normalizedMessage
     }],
     ['请提供分类 ID 列表', {

@@ -24,7 +24,7 @@ static assets all remain on the `fastgpt.cn` origin. No cross-domain reverse pro
 - `src/customers`: customer-only components, models, hooks, data access, AI, and storage code.
 - `public/customers`: customer-only static assets.
 - `.next/standalone`: one production Next.js server for Home and customer routes.
-- `/customers/admin`: optional admin surface, disabled unless `CUSTOMERS_ADMIN_ENABLED=true`.
+- `/admin`: optional admin surface, disabled unless `CUSTOMERS_ADMIN_ENABLED=true`. The admin runs as a separate instance on port `3001`; the public instance on `3000` sets the flag to `false` so `/admin` returns 404.
 
 ## Deployment Contract
 

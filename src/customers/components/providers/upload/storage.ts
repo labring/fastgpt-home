@@ -1,11 +1,11 @@
 import type { AutoSaveFailure, SaveIntent, UploadQueueItem } from '../uploadQueueTypes';
 
-const DB_NAME = 'fastgpt-solution-upload-queue';
+const DB_NAME = 'fastgpt-customer-upload-queue';
 const DB_VERSION = 1;
 const STORE_NAME = 'uploads';
-const SAVE_INTENTS_KEY = 'solution_pending_save_intents_v1';
-const UPLOADED_URLS_PREFIX = 'solution_uploaded_urls_';
-const AUTO_SAVE_FAILURE_PREFIX = 'solution_auto_save_failure_';
+const SAVE_INTENTS_KEY = 'customer_pending_save_intents_v1';
+const UPLOADED_URLS_PREFIX = 'customer_uploaded_urls_';
+const AUTO_SAVE_FAILURE_PREFIX = 'customer_auto_save_failure_';
 
 let dbPromise: Promise<IDBDatabase> | null = null;
 

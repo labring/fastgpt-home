@@ -32,7 +32,7 @@ export default function AdminLoginForm() {
       const data = await res.json();
       if (data.success) {
         toast.success('登录成功');
-        router.push('/customers/admin/customers');
+        router.push('/customers/admin');
         router.refresh();
       } else {
         toast.error(data.error || '密码错误');

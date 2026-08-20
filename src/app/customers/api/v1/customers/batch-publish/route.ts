@@ -1,10 +1,10 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import { revalidateAdminRouteTree } from '@/customers/lib/admin-cache';
 import {
-  loadSolutionRevalidationRefs,
-  revalidateSolutionRefs
+  loadCustomerRevalidationRefs,
+  revalidateCustomerRefs
 } from '@/customers/lib/public-cache-invalidation';
 import {
   AGENT_ERROR_CODES,
@@ -52,7 +52,7 @@ export async function POST(request: NextRequest) {
 
       const ids = parseIds(requestBody.data.ids);
       if (ids.length === 0) {
-        return errorResult(context, 400, AGENT_ERROR_CODES.solutionIdsRequired, '请提供要发布或下架的案例 ID 列表');
+        return errorResult(context, 400, AGENT_ERROR_CODES.customerIdsRequired, '请提供要发布或下架的案例 ID 列表');
       }
 
       if (ids.length > MAX_BATCH_SIZE) {
@@ -72,27 +72,27 @@ export async function POST(request: NextRequest) {
       const validIds = ids.filter(isValidObjectId);
       const validIdSet = new Set(validIds);
 
-      const matchedSolutions = validIds.length > 0
-        ? await Solution.find({
+      const matchedCustomers = validIds.length > 0
+        ? await Customer.find({
           _id: { $in: validIds },
           deletedAt: null,
         }).select('_id').lean<Array<{ _id: unknown }>>()
         : [];
 
-      const matchedIds = matchedSolutions.map((item) => String(item._id));
+      const matchedIds = matchedCustomers.map((item) => String(item._id));
       const matchedIdSet = new Set(matchedIds);
       const failedIds = ids.filter((id) => !validIdSet.has(id) || !matchedIdSet.has(id));
 
       let modifiedCount = 0;
       if (matchedIds.length > 0) {
-        const refs = await loadSolutionRevalidationRefs(matchedIds);
-        const updateResult = await Solution.updateMany(
+        const refs = await loadCustomerRevalidationRefs(matchedIds);
+        const updateResult = await Customer.updateMany(
           { _id: { $in: matchedIds }, deletedAt: null },
           { $set: { isPublished: requestBody.data.isPublished } }
         );
         modifiedCount = updateResult.modifiedCount;
         revalidateAdminRouteTree();
-        revalidateSolutionRefs(refs);
+        revalidateCustomerRefs(refs);
       }
 
       return successResult(context, {
@@ -105,7 +105,7 @@ export async function POST(request: NextRequest) {
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error batch publishing solutions:', error);
+    console.error('Error batch publishing customers:', error);
     return toAgentResponse(errorResult(
       context,
       500,

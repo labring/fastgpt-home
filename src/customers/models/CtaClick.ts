@@ -4,8 +4,8 @@ import { CTA_SOURCES, type CtaSource } from '@/customers/lib/cta-constants';
 export interface ICtaClick extends Document {
   source: CtaSource;
   dateKey: string;
-  solutionId?: string;
-  solutionTitle?: string;
+  customerId?: string;
+  customerTitle?: string;
   categoryName?: string;
   createdAt: Date;
   updatedAt: Date;
@@ -25,11 +25,11 @@ const CtaClickSchema = new Schema(
       index: true,
       trim: true
     },
-    solutionId: {
+    customerId: {
       type: String,
       trim: true
     },
-    solutionTitle: {
+    customerTitle: {
       type: String,
       trim: true
     },

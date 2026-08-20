@@ -2,12 +2,12 @@
 
 import dbConnect from '@/customers/lib/db';
 import Category from '@/customers/models/Category';
-import Solution from '@/customers/models/Solution';
+import Customer from '@/customers/models/Customer';
 import { revalidateAdminRouteTree } from '@/customers/lib/admin-cache';
 import {
-  loadSolutionRevalidationRefsByCategoryId,
+  loadCustomerRevalidationRefsByCategoryId,
   revalidateCategoryRefs,
-  revalidateSolutionRefs,
+  revalidateCustomerRefs,
   type CategoryRevalidationRef
 } from '@/customers/lib/public-cache-invalidation';
 import {
@@ -93,8 +93,8 @@ export async function toggleCategoryStatus(id: string, isActive: boolean) {
 
     // 如果是禁用操作，检查受影响的解决方案数量（仅做记录或预警用）
     if (!isActive) {
-      const affected = await Solution.countDocuments({ categoryId: id, deletedAt: null });
-      console.log(`Disabled category ${id}, affected solutions: ${affected}`);
+      const affected = await Customer.countDocuments({ categoryId: id, deletedAt: null });
+      console.log(`Disabled category ${id}, affected customers: ${affected}`);
     }
 
     revalidateCategoryViews({ slug: category.slug });
@@ -151,8 +151,8 @@ export async function saveCategory(data: { id?: string; name: string; slug: stri
       );
       const oldCat = await Category.findById(data.id);
       const oldSlug = oldCat?.slug;
-      const solutionRefs = oldSlug && oldSlug !== slug
-        ? await loadSolutionRevalidationRefsByCategoryId(data.id)
+      const customerRefs = oldSlug && oldSlug !== slug
+        ? await loadCustomerRevalidationRefsByCategoryId(data.id)
         : [];
       await Category.findByIdAndUpdate(data.id, {
         name: formattedName,
@@ -163,14 +163,14 @@ export async function saveCategory(data: { id?: string; name: string; slug: stri
 
       // 如果 name 改变，同步更新所有关联的解决方案
       if (oldCat && oldCat.name !== formattedName) {
-        await Solution.updateMany(
+        await Customer.updateMany(
           { categoryId: data.id },
           { $set: { categoryName: formattedName } }
         );
       }
       revalidateCategoryViews({ slug, previousSlug: oldSlug });
-      if (solutionRefs.length > 0) {
-        revalidateSolutionRefs(solutionRefs.map((ref) => ({
+      if (customerRefs.length > 0) {
+        revalidateCustomerRefs(customerRefs.map((ref) => ({
           id: ref.id,
           categorySlug: slug,
           previousCategorySlug: oldSlug
@@ -216,8 +216,8 @@ export async function deleteCategory(id: string) {
       return { success: false, error: '分类不存在' };
     }
 
-    const hasSolutions = await Solution.exists({ categoryId: id, deletedAt: null });
-    if (hasSolutions) {
+    const hasCustomers = await Customer.exists({ categoryId: id, deletedAt: null });
+    if (hasCustomers) {
       return { success: false, error: '该分类下存在解决方案，无法直接删除。请先转移或删除相关方案。' };
     }
 

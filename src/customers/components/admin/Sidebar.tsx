@@ -23,7 +23,7 @@ import { useTheme } from '@/customers/components/theme-provider';
 import { getPublicMainUrlSetting } from '@/app/customers/admin/actions/settings';
 
 const navItems = [
-  { name: '客户案例管理', href: '/customers/admin/customers', icon: ArticleIcon },
+  { name: '客户案例管理', href: '/customers/admin', icon: ArticleIcon },
   { name: '回收站', href: '/customers/admin/trash', icon: TrashIcon },
   { name: '数据看板', href: '/customers/admin/dashboard', icon: SquaresFourIcon },
   { name: 'POC 点击分析', href: '/customers/admin/cta-analytics', icon: ChartBarIcon },
@@ -175,7 +175,7 @@ export default function Sidebar() {
         </div>
 
         <div className="flex items-center justify-center h-12 w-full shrink-0">
-          <Link href="/customers/admin/customers" className="relative w-7 h-7 transition-transform hover:scale-110 opacity-60 hover:opacity-100">
+          <Link href="/customers/admin" className="relative w-7 h-7 transition-transform hover:scale-110 opacity-60 hover:opacity-100">
             <Image src={withBasePath('/fastgpt.svg')} alt="Admin" fill sizes="28px" loading="eager" className="object-contain" />
           </Link>
         </div>

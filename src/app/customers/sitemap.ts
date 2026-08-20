@@ -1,15 +1,15 @@
 import type { MetadataRoute } from 'next';
-import { getAllPublishedSolutions, getCategories } from '@/customers/lib/data';
+import { getAllPublishedCustomers, getCategories } from '@/customers/lib/data';
 import { absoluteUrl } from '@/customers/lib/site-url';
-import { getSolutionPublicHref } from '@/customers/lib/solution-url';
+import { getCustomerPublicHref } from '@/customers/lib/customer-url';
 
-// 保持动态：sitemap 依赖 DB，构建期预渲染会在无 DB 环境导致构建失败
+// sitemap 依赖 DB，必须保持按需渲染：构建期预渲染会在无 DB 环境导致构建失败。
 export const dynamic = 'force-dynamic';
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const [categories, solutions] = await Promise.all([
+  const [categories, customers] = await Promise.all([
     getCategories(),
-    getAllPublishedSolutions()
+    getAllPublishedCustomers()
   ]);
 
   const now = new Date();
@@ -30,12 +30,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7
   }));
 
-  const solutionRoutes: MetadataRoute.Sitemap = solutions.map((solution) => ({
-    url: absoluteUrl(getSolutionPublicHref(solution)),
-    lastModified: new Date(solution.updatedAt || solution.createdAt),
+  const customerRoutes: MetadataRoute.Sitemap = customers.map((customer) => ({
+    url: absoluteUrl(getCustomerPublicHref(customer)),
+    lastModified: new Date(customer.updatedAt || customer.createdAt),
     changeFrequency: 'weekly',
     priority: 0.9
   }));
 
-  return [...staticRoutes, ...categoryRoutes, ...solutionRoutes];
+  return [...staticRoutes, ...categoryRoutes, ...customerRoutes];
 }

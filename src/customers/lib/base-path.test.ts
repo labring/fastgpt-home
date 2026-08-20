@@ -12,6 +12,8 @@ describe('public base path', () => {
     ['/?search=ai#customers', '/customers?search=ai#customers'],
     ['/fastgpt.svg', '/customers/fastgpt.svg'],
     ['/customers/api/customers', '/customers/api/customers'],
+    ['/customers?category=finance#customers', '/customers?category=finance#customers'],
+    ['/customers#customers', '/customers#customers'],
     ['https://cdn.example.com/cover.png', 'https://cdn.example.com/cover.png'],
   ])('prefixes %s', (path, expected) => {
     expect(withBasePath(path)).toBe(expected);

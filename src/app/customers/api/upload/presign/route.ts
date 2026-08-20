@@ -5,8 +5,8 @@ import { readSystemSettings } from '@/customers/lib/system-settings';
 import {
   buildS3PublicUrl,
   getMissingS3Config,
-  normalizeSolutionFolderName
-} from '@/customers/lib/solution-storage';
+  normalizeCustomerFolderName
+} from '@/customers/lib/customer-storage';
 import { resolveUploadContentType } from '@/customers/lib/upload-content-type';
 import { requireAdminApi } from '@/customers/lib/admin-api';
 import { readJsonRecord } from '@/customers/lib/request-json';
@@ -48,7 +48,7 @@ export async function POST(req: NextRequest) {
       forcePathStyle: true,
     });
 
-    const safeFolder = normalizeSolutionFolderName(folder);
+    const safeFolder = normalizeCustomerFolderName(folder);
     const ext = filename.split('.').pop() || 'bin';
     const key = `uploads/${safeFolder}/md-${Date.now()}-${Math.random().toString(36).substring(7)}.${ext}`;
 

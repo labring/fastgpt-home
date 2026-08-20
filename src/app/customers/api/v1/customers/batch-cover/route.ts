@@ -1,8 +1,8 @@
 import { NextRequest } from 'next/server';
 import dbConnect from '@/customers/lib/db';
-import Solution from '@/customers/models/Solution';
-import { generateSolutionCover } from '@/customers/lib/solution-cover';
-import { saveSolutionForAgent } from '@/customers/lib/solution-admin-service';
+import Customer from '@/customers/models/Customer';
+import { generateCustomerCover } from '@/customers/lib/customer-cover';
+import { saveCustomerForAgent } from '@/customers/lib/customer-admin-service';
 import {
   AGENT_ERROR_CODES,
   createAgentRequestContext,
@@ -21,7 +21,7 @@ export const dynamic = 'force-dynamic';
 
 const MAX_BATCH_SIZE = 20;
 
-type BatchCoverSolution = {
+type BatchCoverCustomer = {
   _id: unknown;
   title?: string | null;
   description?: string | null;
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
 
       const ids = parseIds(requestBody.data.ids);
       if (ids.length === 0) {
-        return errorResult(context, 400, AGENT_ERROR_CODES.solutionIdsRequired, '请提供要生成封面的案例 ID 列表');
+        return errorResult(context, 400, AGENT_ERROR_CODES.customerIdsRequired, '请提供要生成封面的案例 ID 列表');
       }
 
       if (ids.length > MAX_BATCH_SIZE) {
@@ -75,11 +75,11 @@ export async function POST(request: NextRequest) {
       }
 
       const validIds = ids.filter(isValidObjectId);
-      const solutions = validIds.length > 0
-        ? await Solution.find({ _id: { $in: validIds }, deletedAt: null })
-          .lean<BatchCoverSolution[]>()
+      const customers = validIds.length > 0
+        ? await Customer.find({ _id: { $in: validIds }, deletedAt: null })
+          .lean<BatchCoverCustomer[]>()
         : [];
-      const solutionMap = new Map(solutions.map((solution) => [String(solution._id), solution]));
+      const customerMap = new Map(customers.map((customer) => [String(customer._id), customer]));
       const items = [];
 
       for (const id of ids) {
@@ -88,30 +88,30 @@ export async function POST(request: NextRequest) {
           continue;
         }
 
-        const solution = solutionMap.get(id);
-        if (!solution) {
+        const customer = customerMap.get(id);
+        if (!customer) {
           items.push({ id, success: false, error: '案例不存在或已在回收站中' });
           continue;
         }
 
         try {
-          const storageFolder = String(solution.storageFolder || id).trim();
-          const coverResult = await generateSolutionCover({
-            title: solution.title || '',
-            description: solution.description || '',
-            content: solution.content || '',
+          const storageFolder = String(customer.storageFolder || id).trim();
+          const coverResult = await generateCustomerCover({
+            title: customer.title || '',
+            description: customer.description || '',
+            content: customer.content || '',
             storageFolder,
           });
 
-          const saveResult = await saveSolutionForAgent({
+          const saveResult = await saveCustomerForAgent({
             id,
-            title: String(solution.title || ''),
-            description: String(solution.description || ''),
-            categoryId: String(solution.categoryId || ''),
-            content: String(solution.content || ''),
+            title: String(customer.title || ''),
+            description: String(customer.description || ''),
+            categoryId: String(customer.categoryId || ''),
+            content: String(customer.content || ''),
             imageUrl: coverResult.imageUrl,
             thumbnailUrl: coverResult.thumbnailUrl,
-            isPublished: solution.isPublished === true,
+            isPublished: customer.isPublished === true,
           });
 
           if (!saveResult.success) {
@@ -152,7 +152,7 @@ export async function POST(request: NextRequest) {
 
     return toAgentResponse(result);
   } catch (error) {
-    console.error('Error batch generating solution covers:', error);
+    console.error('Error batch generating customer covers:', error);
     return toAgentResponse(errorResult(
       context,
       500,

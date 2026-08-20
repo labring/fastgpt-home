@@ -7,7 +7,9 @@ on:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-  IMAGE_NAME: ghcr.io/${{ github.repository }}
+  # Production must always deploy the upstream package, even when this workflow
+  # is inspected or dispatched from a fork.
+  IMAGE_NAME: ghcr.io/labring/fastgpt-home
 
 jobs:
   build-fastgpt-landingpage-images:
@@ -57,12 +59,14 @@ jobs:
         run: test -n "$NEXT_PUBLIC_CRM_API_URL"
 
       - name: Build and push Docker image to GitHub Container Registry
-        uses: docker/build-push-action@v5
+        uses: docker/build-push-action@v6
         with:
           file: Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
           build-args: |
             NEXT_PUBLIC_BAIDU_TONGJI=${{ secrets.NEXT_PUBLIC_BAIDU_TONGJI }}
             NEXT_PUBLIC_BAIDU_KEY=${{ secrets.NEXT_PUBLIC_BAIDU_KEY }}

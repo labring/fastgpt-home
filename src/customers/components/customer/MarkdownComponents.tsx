@@ -35,10 +35,10 @@ const highlightStyles = {
     title: 'font-bold text-orange-700 dark:text-orange-400 text-sm'
   },
   blue: {
-    container: 'not-prose bg-gradient-to-r from-blue-50 to-blue-50/50 dark:from-blue-500/15 dark:to-blue-400/10 border border-blue-200 dark:border-blue-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-blue-500/20 dark:text-blue-400/25',
+    container: 'not-prose bg-gradient-to-r from-blue-50 to-blue-50/50 dark:from-brand-500/15 dark:to-brand-400/10 border border-blue-200 dark:border-brand-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-blue-500/20 dark:text-brand-400/25',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
-    title: 'font-bold text-blue-700 dark:text-blue-400 text-sm'
+    title: 'font-bold text-blue-700 dark:text-brand-400 text-sm'
   },
   green: {
     container: 'not-prose bg-gradient-to-r from-emerald-50 to-emerald-50/50 dark:from-emerald-500/15 dark:to-emerald-400/10 border border-emerald-200 dark:border-emerald-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',

@@ -4,7 +4,7 @@ import { useCallback, type MouseEvent, type RefObject, useEffect, useMemo, useSt
 import {
   buildMarkdownTocItems,
   extractRenderedTocItems,
-  TOC_HEADING_SELECTOR,
+  getActiveRenderedTocId,
   TOC_SCROLL_OFFSET_TOP,
   type TocItem
 } from '@/customers/lib/toc';
@@ -48,89 +48,57 @@ export function useSyncedToc({
     return () => window.cancelAnimationFrame(frameId);
   }, [containerRef, enabled, markdownContent]);
 
-  // 用 IntersectionObserver 替代 scroll + getBoundingClientRect 每帧轮询：
-  // 检测带为视口顶部（140px）到 15% 视高区域，仅当标题进出检测带时才回调，
-  // 消除长文滚动时对全部标题强制 layout 的 thrash。
+  // 滚动同步高亮：scroll 监听（可靠、任何滚动都更新）+ rAF 节流 + MutationObserver
+  // 处理客户端正文（ReactMarkdown）异步渲染完成后的重算。
+  // 不用 IntersectionObserver：其观察目标在正文渲染前可能为空，时序脆弱导致高亮完全不更新。
   useEffect(() => {
     if (!enabled) {
       return;
     }
 
-    const container = containerRef.current;
-    if (!container) {
-      return;
-    }
+    let ticking = false;
 
-    const headings = Array.from(
-      container.querySelectorAll<HTMLElement>(TOC_HEADING_SELECTOR)
-    );
-    if (headings.length === 0) {
-      return;
-    }
-
-    // 当前在检测带内的标题集合 + 已滚过视口顶部的标题集合。
-    // 集合随滚动双向增减，保证向上滚动时高亮能回移到前面的标题。
-    const inBandIds = new Set<string>();
-    const passedTopIds = new Set<string>();
-
-    // 编辑器等场景正文在指定容器内滚动（scrollContainerSelector），
-    // 此时 IO 的 root 应指向该滚动容器而非视口。
-    const root = scrollContainerSelector
-      ? (document.querySelector(scrollContainerSelector) as Element | null) || undefined
-      : undefined;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (isClickScrollingRef.current) {
-          return;
-        }
-
-        for (const entry of entries) {
-          const id = (entry.target as HTMLElement).id;
-          if (entry.isIntersecting) {
-            // 进入检测带 = 当前阅读位置候选
-            inBandIds.add(id);
-            passedTopIds.delete(id);
-          } else {
-            inBandIds.delete(id);
-            if (entry.boundingClientRect.top < 0) {
-              // 已滚过视口顶部：在阅读位置上方
-              passedTopIds.add(id);
-            } else {
-              // 在检测带下方（未到达）：滚回后不再作为候选
-              passedTopIds.delete(id);
-            }
-          }
-        }
-
-        // 优先取检测带内 DOM 顺序最后一个标题；检测带为空（快速滚动中）
-        // 时回退到已滚过顶部的最后一个，避免高亮跳到空。
-        let nextActiveId = '';
-        for (const heading of headings) {
-          if (inBandIds.has(heading.id)) {
-            nextActiveId = heading.id;
-          }
-        }
-        if (!nextActiveId) {
-          for (const heading of headings) {
-            if (passedTopIds.has(heading.id)) {
-              nextActiveId = heading.id;
-            }
-          }
-        }
-
-        setTrackedActiveId((prev) => (prev !== nextActiveId ? nextActiveId : prev));
-      },
-      {
-        root,
-        rootMargin: `-${TOC_SCROLL_OFFSET_TOP}px 0px -85% 0px`,
-        threshold: 0
+    const computeActiveId = () => {
+      if (isClickScrollingRef.current) {
+        return;
       }
-    );
+      const container = containerRef.current;
+      const nextActiveId = container ? getActiveRenderedTocId(container) : '';
+      setTrackedActiveId((prev) => (prev !== nextActiveId ? nextActiveId : prev));
+    };
 
-    headings.forEach((heading) => observer.observe(heading));
+    const handleScroll = () => {
+      if (ticking) {
+        return;
+      }
+      ticking = true;
+      window.requestAnimationFrame(() => {
+        ticking = false;
+        computeActiveId();
+      });
+    };
 
-    return () => observer.disconnect();
+    const scrollElement = scrollContainerSelector
+      ? document.querySelector(scrollContainerSelector) || window
+      : window;
+    scrollElement.addEventListener('scroll', handleScroll, { passive: true });
+
+    // 正文由客户端组件异步渲染：监听容器 DOM 变化，标题插入后立即重算高亮。
+    const container = containerRef.current;
+    let mutationObserver: MutationObserver | null = null;
+    if (container && typeof MutationObserver !== 'undefined') {
+      mutationObserver = new MutationObserver(handleScroll);
+      mutationObserver.observe(container, { childList: true, subtree: true });
+    }
+
+    // 初始计算：rAF 确保 DOM 就绪。
+    const initialFrame = window.requestAnimationFrame(computeActiveId);
+
+    return () => {
+      scrollElement.removeEventListener('scroll', handleScroll);
+      mutationObserver?.disconnect();
+      window.cancelAnimationFrame(initialFrame);
+    };
   }, [containerRef, enabled, renderedTocItems, scrollContainerSelector]);
 
   const handleTocItemClick = useCallback(

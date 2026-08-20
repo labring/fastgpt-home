@@ -37,7 +37,7 @@ import { openCtaModal, type CtaModalContext } from "@/customers/lib/cta";
 import { trackRybbitEvent } from '@/customers/lib/rybbit';
 import { publishCustomerInteractionPatch } from "@/customers/lib/customer-interaction-events";
 
-import useSWR, { SWRConfig, useSWRConfig } from "swr";
+import useSWR, { useSWRConfig } from "swr";
 
 import ReactMarkdown from "react-markdown";
 import {
@@ -89,18 +89,14 @@ interface CustomerPageClientInnerProps extends CustomerPageClientProps {
 }
 
 function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers = [], swrKey }: CustomerPageClientInnerProps) {
-  // 访客态从 localStorage 惰性初始化（SSR 下 window 未定义自动回退到 initialCustomer）。
-  // SWR fallback 命中缓存后挂载不再发请求、onSuccess 不触发，若只依赖服务端
-  // initialCustomer（cookie-free 的 getCustomerByIdPublic，isLiked 恒 false），
-  // 回访用户点赞/浏览状态会丢失。localStorage 是本机真实交互记录，优先使用。
+  // 访客态（isLiked/hasViewed）只能以 SSR 一致的 initialCustomer 初始化，
+  // 否则 hydration 首帧不一致（SSR 无 localStorage）。本地点赞/浏览记录
+  // 在 hydrate 后由下方 useEffect 恢复（SWR fallback 命中后 onSuccess 不触发，
+  // 服务端 initialCustomer 又是 cookie-free 版本，isLiked 恒 false，必须靠 localStorage）。
   const [localLikes, setLocalLikes] = useState(initialCustomer?.likes ?? 0);
-  const [isLiked, setIsLiked] = useState(
-    () => getLikedCustomerState(id)?.isLiked ?? Boolean(initialCustomer?.isLiked)
-  );
+  const [isLiked, setIsLiked] = useState(Boolean(initialCustomer?.isLiked));
   const [localUsage, setLocalUsage] = useState<string>(initialCustomer?.usage ?? "");
-  const [hasViewed, setHasViewed] = useState(
-    () => getViewedCustomerState(id)?.hasViewed ?? Boolean(initialCustomer?.hasViewed)
-  );
+  const [hasViewed, setHasViewed] = useState(Boolean(initialCustomer?.hasViewed));
   const [isLikePending, setIsLikePending] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -110,9 +106,7 @@ function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers 
   const articleRef = useRef<HTMLElement | null>(null);
   const scrollTickingRef = useRef(false);
   const countedViewForIdRef = useRef<string | null>(null);
-  const likedStickyRef = useRef(
-    getLikedCustomerState(id)?.isLiked ?? Boolean(initialCustomer?.isLiked)
-  );
+  const likedStickyRef = useRef(Boolean(initialCustomer?.isLiked));
   const likesFloorRef = useRef<number | null>(null);
   const usageFloorRef = useRef<number | null>(null);
   const customerIdRef = useRef(id);
@@ -131,8 +125,11 @@ function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers 
     swrKey,
     noStoreJsonFetcher,
     {
-      // 服务端 ISR 数据通过 SWRConfig fallback 注册进缓存，挂载不再重复请求。
-      // 点赞/浏览已走本地乐观更新 + 显式 mutate，回焦/重连无需再强制刷新。
+      // 用 fallbackData（仅首帧初值）而非 SWRConfig fallback：挂载时仍需请求一次，
+      // 获取基于 cookie 的访客态 isLiked/hasViewed（fallback 命中缓存会跳过请求，
+      // onSuccess 不触发，回访用户点赞/浏览状态将丢失）。
+      // 回焦/重连保持不刷新，避免多余请求。
+      fallbackData: initialCustomer || undefined,
       revalidateOnFocus: false,
       revalidateOnReconnect: false,
       dedupingInterval: 10000,
@@ -179,6 +176,23 @@ function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers 
   );
 
   const markdownContent = useMemo(() => customer?.content || '', [customer]);
+
+  // hydrate 后从 localStorage 恢复访客态（客户端专用，避免 SSR hydration mismatch）。
+  // key 是 Mongo ID（handleLikeToggle 用 customer.id 写入），路由 id 可能是 slug，
+  // 因此用 initialCustomer.id 查询。
+  useEffect(() => {
+    const customerId = initialCustomer?.id;
+    if (!customerId) return;
+    const localLiked = getLikedCustomerState(customerId)?.isLiked;
+    const localViewed = getViewedCustomerState(customerId)?.hasViewed;
+    if (localLiked !== undefined) {
+      setIsLiked(localLiked);
+      likedStickyRef.current = localLiked;
+    }
+    if (localViewed !== undefined) {
+      setHasViewed(localViewed);
+    }
+  }, [initialCustomer?.id]);
 
   useEffect(() => {
     if (customer?.isLiked) {
@@ -703,16 +717,11 @@ function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers 
   );
 }
 
-// 外层包装：把服务端 ISR 数据以 SWR fallback 注册进缓存，
-// 内层组件挂载时直接命中缓存，避免 fallbackData + no-store 的重复请求。
+// 默认导出：计算 SWR key 并传给内层组件。
+// 不使用 SWRConfig fallback——fallback 命中会跳过挂载请求，导致基于 cookie 的
+// 访客态（isLiked/hasViewed）无法获取（详见内层 useSWR 注释）。
 export default function CustomerPageClient(props: CustomerPageClientProps) {
   const swrKey = props.id ? withBasePath(`/api/customers/${props.id}`) : null;
-  const fallback =
-    swrKey && props.initialCustomer ? { [swrKey]: props.initialCustomer } : {};
 
-  return (
-    <SWRConfig value={{ fallback }}>
-      <CustomerPageClientInner {...props} swrKey={swrKey} />
-    </SWRConfig>
-  );
+  return <CustomerPageClientInner {...props} swrKey={swrKey} />;
 }

@@ -6,9 +6,13 @@ const root = process.cwd();
 const registry = JSON.parse(
   fs.readFileSync(path.join(root, 'src/content/guides/registry.json'), 'utf8')
 );
-const locales = ['zh', 'en'];
-const publicationGroups = new Set(['decision', 'implementation', 'industry']);
-const assetStatuses = new Set(['none', 'requested-unapproved', 'source-exception', 'required']);
+const policy = JSON.parse(
+  fs.readFileSync(path.join(root, 'src/content/guides/policy.json'), 'utf8')
+);
+const locales = policy.locales;
+const publicationGroups = new Set(policy.publicationGroups);
+const assetStatuses = new Set(policy.assetStatuses);
+const schemaTypes = new Set(policy.schemaTypes);
 const englishMetaLimits = { title: [50, 60], description: [140, 160] };
 
 function fail(slug, message) {
@@ -139,8 +143,7 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
     if (Object.keys(entry).sort().join(',') !== 'en,group,slug,zh') {
       fail(entry.slug, 'exact zh/en locale pair and group required');
     }
-    if (!publicationGroups.has(entry.group))
-      fail(entry.slug, 'invalid publication group');
+    if (!publicationGroups.has(entry.group)) fail(entry.slug, 'invalid publication group');
     for (const locale of locales) {
       const snapshot = entry[locale];
       if (
@@ -153,7 +156,8 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       }
       if (
         !Array.isArray(snapshot.schemaTokens) ||
-        snapshot.schemaTokens.length < 2
+        snapshot.schemaTokens.length < 2 ||
+        snapshot.schemaTokens.some((token) => !schemaTypes.has(token))
       ) {
         fail(entry.slug, `${locale}: invalid schema token`);
       }
@@ -166,7 +170,10 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       if (!isGuideIsoDate(snapshot.datePublished)) {
         fail(entry.slug, `${locale}: invalid datePublished`);
       }
-      if (!isGuideIsoDate(snapshot.dateModified) || snapshot.dateModified < snapshot.datePublished) {
+      if (
+        !isGuideIsoDate(snapshot.dateModified) ||
+        snapshot.dateModified < snapshot.datePublished
+      ) {
         fail(entry.slug, `${locale}: invalid dateModified`);
       }
       if (locale === 'en') {
@@ -220,7 +227,9 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       }
     }
   }
-  if (slugs.size !== 8) throw new Error('registry: expected eight entries');
+  if (slugs.size !== policy.entryCount) {
+    throw new Error(`registry: expected ${policy.entryCount} entries`);
+  }
   return entries;
 }
 

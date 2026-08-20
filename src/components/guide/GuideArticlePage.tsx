@@ -1,12 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import guideStyles from '@/components/guide/GuideArticlePage.module.css';
 import MarkdownContent, { getMarkdownHeadings } from '@/components/tech-center/MarkdownContent';
+import techStyles from '@/components/tech-center/TechArticlePage.module.css';
 import type { GuideDocument } from '@/lib/guideContent';
 import { getGuideOwnedPath, type GuidePublishedLocale } from '@/lib/guideSeo';
 import { parseMarkdown } from '@/lib/markdownParser';
 import { getOwnedLocalePath } from '@/lib/siteRouting';
-import styles from '@/components/tech-center/TechArticlePage.module.css';
 
 const guideArticleCopy = {
   en: {
@@ -64,26 +65,34 @@ export default function GuideArticlePage({
   const headings = getMarkdownHeadings(blocks, 'guide-section');
 
   return (
-    <main className={styles.page + ' ' + styles.guidePage}>
-      <div className={styles.container}>
-        <nav className={styles.breadcrumbs} aria-label={labels.breadcrumb}>
+    <main className={`${techStyles.page} ${guideStyles.page}`}>
+      <div className={`${techStyles.container} ${guideStyles.container}`}>
+        <nav
+          className={`${techStyles.breadcrumbs} ${guideStyles.breadcrumbs}`}
+          aria-label={labels.breadcrumb}
+        >
           <Link href={getOwnedLocalePath(locale)}>{labels.home}</Link>
           <span aria-hidden="true">/</span>
           <Link href={getGuideOwnedPath(locale)}>{labels.guide}</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{document.source.h1}</span>
         </nav>
-        <header className={styles.header}>
+        <header className={`${techStyles.header} ${guideStyles.header}`}>
           <h1>{document.source.h1}</h1>
-          <p className={styles.summary}>{document.source.metaDescription}</p>
-          <time className={styles.updated} dateTime={document.source.dateModified}>
+          <p className={`${techStyles.summary} ${guideStyles.summary}`}>
+            {document.source.metaDescription}
+          </p>
+          <time
+            className={`${techStyles.updated} ${guideStyles.updated}`}
+            dateTime={document.source.dateModified}
+          >
             {labels.updated(document.source.dateModified)}
           </time>
         </header>
-        <div className={styles.layout + ' ' + styles.guideLayout}>
-          <article className={styles.article + ' ' + styles.guideArticle}>
+        <div className={`${techStyles.layout} ${guideStyles.layout}`}>
+          <article className={`${techStyles.article} ${guideStyles.article}`}>
             {assetPolicy.status === 'required' && (
-              <figure className={styles.heroFigure}>
+              <figure className={techStyles.heroFigure}>
                 <Image
                   src={assetPolicy.path}
                   alt={assetPolicy.alt}
@@ -101,13 +110,16 @@ export default function GuideArticlePage({
               headingIdPrefix="guide-section"
             />
             {configuredInternalLinks.length > 0 && (
-              <section className={styles.related} aria-labelledby="guide-configured-links-title">
-                <div className={styles.relatedHeader}>
+              <section
+                className={techStyles.related}
+                aria-labelledby="guide-configured-links-title"
+              >
+                <div className={techStyles.relatedHeader}>
                   <h2 id="guide-configured-links-title">{labels.configuredLinks}</h2>
                 </div>
-                <div className={styles.relatedList}>
+                <div className={techStyles.relatedList}>
                   {configuredInternalLinks.map((link) => (
-                    <Link className={styles.relatedLink} href={link.target} key={link.target}>
+                    <Link className={techStyles.relatedLink} href={link.target} key={link.target}>
                       {link.label}
                       <span aria-hidden="true">↗</span>
                     </Link>
@@ -115,17 +127,17 @@ export default function GuideArticlePage({
                 </div>
               </section>
             )}
-            <p className={styles.returnLink}>
+            <p className={techStyles.returnLink}>
               <Link href={getGuideOwnedPath(locale)}>{labels.back}</Link>
             </p>
           </article>
           {headings.length > 0 && (
-            <aside className={styles.guideToc} aria-label={labels.onThisPage}>
-              <p className={styles.guideTocTitle}>{labels.onThisPage}</p>
+            <aside className={guideStyles.toc} aria-label={labels.onThisPage}>
+              <p className={guideStyles.tocTitle}>{labels.onThisPage}</p>
               <ol>
                 {headings.map((heading) => (
                   <li
-                    className={heading.level > 2 ? styles.guideTocNested : undefined}
+                    className={heading.level > 2 ? guideStyles.tocNested : undefined}
                     key={heading.id}
                   >
                     <a href={'#' + heading.id}>{heading.text}</a>

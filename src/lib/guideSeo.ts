@@ -30,12 +30,14 @@ function getGuideSnapshot(locale: GuidePublishedLocale, slug: string) {
   return snapshot;
 }
 
+/** Resolve an arbitrary locale code to a locale with published Guide content. */
 export function resolveGuideLocale(locale: string): GuidePublishedLocale | undefined {
   return GUIDE_PUBLISHED_LOCALES.includes(locale as GuidePublishedLocale)
     ? (locale as GuidePublishedLocale)
     : undefined;
 }
 
+/** Return the published Guide locales owned by the current static-export variant. */
 export function getGuideBuildLocales(): GuidePublishedLocale[] {
   const locales = getBuildLocaleCodes()
     .map(resolveGuideLocale)
@@ -44,14 +46,17 @@ export function getGuideBuildLocales(): GuidePublishedLocale[] {
   return locales.length ? Array.from(new Set(locales)) : defaultLocale ? [defaultLocale] : ['en'];
 }
 
+/** Build the stable Guide hub or article path without applying a locale prefix. */
 export function getGuidePath(slug?: string): string {
   return slug ? `/guide/${slug}` : '/guide';
 }
 
+/** Build the canonical Guide URL on the domain that owns the published locale. */
 export function getGuideCanonicalUrl(locale: GuidePublishedLocale, slug?: string): string {
   return getOwnedLocaleUrl(locale, getGuidePath(slug));
 }
 
+/** Build canonical and hreflang alternates for a Guide hub or article. */
 export function getGuideAlternates(
   locale: GuidePublishedLocale,
   slug?: string
@@ -59,6 +64,7 @@ export function getGuideAlternates(
   return getAlternates(locale, getGuidePath(slug), GUIDE_PUBLISHED_LOCALES);
 }
 
+/** Build a Guide path with the locale prefix required by its owning site variant. */
 export function getGuideOwnedPath(locale: GuidePublishedLocale, slug?: string): string {
   return getOwnedLocalePath(locale, getGuidePath(slug));
 }

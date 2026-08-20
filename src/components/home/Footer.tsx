@@ -6,6 +6,7 @@ import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 import { isContactHref } from '@/lib/consultation';
 import { getDefaultLocalePath } from '@/lib/clientNavigation';
+import { getGuideOwnedPath } from '@/lib/guideSeo';
 import { normalizeLocale } from '@/lib/locales';
 import { getContactPublishedLocale } from '@/lib/publishedLocales';
 
@@ -21,7 +22,14 @@ type FooterT = {
     };
     links: {
       title: string;
-      items: { docs: string; faq: string; learning: string; cases: string; tech: string };
+      items: {
+        docs: string;
+        guide: string;
+        faq: string;
+        learning: string;
+        cases: string;
+        tech: string;
+      };
     };
     partner: { title: string };
     more: { title: string; email: string; lanqiao: string; book: string };
@@ -33,6 +41,7 @@ type FooterT = {
 function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
   const normalizedLocale = normalizeLocale(locale);
   const faqLocale = normalizedLocale === 'zh' ? 'zh' : 'en';
+  const guideLocale = normalizedLocale === 'zh' ? 'zh' : 'en';
 
   return [
     {
@@ -54,7 +63,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           label: t.service.items.community,
           href: 'https://github.com/labring/FastGPT',
           external: true
-        },
+        }
       ]
     },
     {
@@ -65,6 +74,11 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           label: t.links.items.docs,
           href: 'https://doc.fastgpt.io/docs/introduction',
           external: true
+        },
+        {
+          label: t.links.items.guide,
+          href: getGuideOwnedPath(guideLocale),
+          external: false
         },
         {
           label: t.links.items.learning,

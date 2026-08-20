@@ -33,23 +33,63 @@ const GENERATED_PUBLIC_PATHS = [
 ];
 
 function parseArgs(argv) {
-  const options = { sourceOnly: false, keepArtifacts: false, retainSuccessArtifacts: undefined, variant: undefined };
+  const options = {
+    sourceOnly: false,
+    keepArtifacts: false,
+    retainSuccessArtifacts: undefined,
+    variant: undefined,
+    live: false,
+    liveBaseUrlCn: 'https://fastgpt.cn',
+    liveBaseUrlIo: 'https://fastgpt.io',
+    liveProviderEvidence: [],
+    liveTimeoutMs: 10_000
+  };
+  const liveValueOptions = {
+    '--live-base-url-cn': 'liveBaseUrlCn',
+    '--live-base-url-io': 'liveBaseUrlIo',
+    '--live-manifest': 'liveManifest',
+    '--live-report': 'liveReport',
+    '--live-timeout-ms': 'liveTimeoutMs',
+    '--live-provider-evidence': 'liveProviderEvidence'
+  };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
     if (token === '--source-only') options.sourceOnly = true;
     else if (token === '--keep-artifacts') options.keepArtifacts = true;
+    else if (token === '--live') options.live = true;
     else if (token === '--retain-success-artifacts') {
       const retainDir = argv[++index];
-      if (!retainDir || retainDir.startsWith('--')) throw new Error('--retain-success-artifacts requires a directory');
+      if (!retainDir || retainDir.startsWith('--'))
+        throw new Error('--retain-success-artifacts requires a directory');
       options.retainSuccessArtifacts = path.resolve(ROOT, retainDir);
-    }
-    else if (token === '--variant') {
+    } else if (token === '--variant') {
       const variant = argv[++index];
       if (!['io', 'cn'].includes(variant)) throw new Error('--variant requires io or cn');
       options.variant = variant;
+    } else if (liveValueOptions[token]) {
+      const value = argv[++index];
+      if (!value || value.startsWith('--')) throw new Error(`${token} requires a value`);
+      options.live = true;
+      const key = liveValueOptions[token];
+      if (key === 'liveProviderEvidence')
+        options.liveProviderEvidence.push(path.resolve(ROOT, value));
+      else if (key === 'liveTimeoutMs') options.liveTimeoutMs = Number(value);
+      else if (key === 'liveManifest') options.liveManifest = path.resolve(ROOT, value);
+      else if (key === 'liveReport') options.liveReport = path.resolve(ROOT, value);
+      else options[key] = value;
     } else {
       throw new Error(`Unknown argument: ${token}`);
     }
+  }
+  if (options.live) {
+    if (!options.liveManifest) throw new Error('--live requires --live-manifest');
+    if (options.liveProviderEvidence.length !== 2) {
+      throw new Error('--live requires two --live-provider-evidence files');
+    }
+    if (!Number.isFinite(options.liveTimeoutMs) || options.liveTimeoutMs < 1) {
+      throw new Error('--live-timeout-ms must be positive');
+    }
+    options.liveReport ||= path.join(RETAIN_DIR, 'guide-live-report.json');
   }
   return options;
 }
@@ -82,8 +122,8 @@ function runStep(failures, label, command, args, env, variant, formatSuccess) {
         command,
         args,
         result.error ? `${output}\n${result.error.message}` : output,
-        variant,
-      ),
+        variant
+      )
     );
     console.error(`[verify-release] ${label} failed`);
     return false;
@@ -112,7 +152,7 @@ function snapshotGeneratedPublicFiles() {
     GENERATED_PUBLIC_PATHS.map((relativePath) => {
       const filePath = path.join(ROOT, relativePath);
       return [relativePath, fs.existsSync(filePath) ? fs.readFileSync(filePath) : null];
-    }),
+    })
   );
 }
 
@@ -130,7 +170,7 @@ function restoreGeneratedPublicFiles(snapshot) {
 
 function findCaseFoldCollisionPair() {
   const registry = JSON.parse(
-    fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8'),
+    fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8')
   );
   const byFoldedSlug = new Map();
   for (const record of registry.records) {
@@ -155,7 +195,7 @@ function assertCaseSensitiveFilesystem() {
     if (!caseSensitive) {
       const [first, second] = findCaseFoldCollisionPair();
       throw new Error(
-        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`,
+        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`
       );
     }
   } finally {
@@ -200,30 +240,33 @@ function verifyExportCardinality(variant) {
     walkFiles(path.join(OUT_DIR, 'faq'))
       .filter((filePath) => filePath.endsWith('.html'))
       .map(faqRouteKey)
-      .filter(Boolean),
+      .filter(Boolean)
   );
   if (routeKeys.size !== expected) {
     throw new Error(
-      `variant=${variant} FAQ HTML route cardinality mismatch: expected ${expected}, found ${routeKeys.size}`,
+      `variant=${variant} FAQ HTML route cardinality mismatch: expected ${expected}, found ${routeKeys.size}`
     );
   }
 
   const sitemapPath = path.join(OUT_DIR, 'sitemap.xml');
   if (!fs.existsSync(sitemapPath)) throw new Error(`variant=${variant} is missing out/sitemap.xml`);
-  const sitemapUrls = [...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(
-    (match) => match[1],
-  );
+  const sitemapUrls = [
+    ...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)
+  ].map((match) => match[1]);
   const faqUrls = sitemapUrls.filter((url) => {
     try {
       const parsed = new URL(url);
-      return parsed.pathname.startsWith('/faq/') && parsed.pathname.split('/').filter(Boolean).length === 2;
+      return (
+        parsed.pathname.startsWith('/faq/') &&
+        parsed.pathname.split('/').filter(Boolean).length === 2
+      );
     } catch {
       return false;
     }
   });
   if (faqUrls.length !== expected || new Set(faqUrls).size !== expected) {
     throw new Error(
-      `variant=${variant} FAQ sitemap cardinality mismatch: expected ${expected}, found ${faqUrls.length}`,
+      `variant=${variant} FAQ sitemap cardinality mismatch: expected ${expected}, found ${faqUrls.length}`
     );
   }
 }
@@ -233,8 +276,10 @@ function retainFailureArtifacts(variant) {
   fs.rmSync(retainedPath, { recursive: true, force: true });
   fs.mkdirSync(RETAIN_DIR, { recursive: true });
   fs.mkdirSync(retainedPath, { recursive: true });
-  if (fs.existsSync(NEXT_DIR)) fs.cpSync(NEXT_DIR, path.join(retainedPath, '.next'), { recursive: true });
-  if (fs.existsSync(OUT_DIR)) fs.cpSync(OUT_DIR, path.join(retainedPath, 'out'), { recursive: true });
+  if (fs.existsSync(NEXT_DIR))
+    fs.cpSync(NEXT_DIR, path.join(retainedPath, '.next'), { recursive: true });
+  if (fs.existsSync(OUT_DIR))
+    fs.cpSync(OUT_DIR, path.join(retainedPath, 'out'), { recursive: true });
   return retainedPath;
 }
 
@@ -256,7 +301,11 @@ function retainSuccessArtifacts(variant, retainDir) {
 function runSourceChecks(failures, env) {
   const checks = [
     ['SEO basics regression', 'scripts/verify-seo-basics.test.js', []],
-    ['content hygiene source verification', 'scripts/verify-content-hygiene.js', ['--mode', 'source']],
+    [
+      'content hygiene source verification',
+      'scripts/verify-content-hygiene.js',
+      ['--mode', 'source']
+    ],
     ['route registry check', 'scripts/generate-faq-route-registry.js', ['--check']],
     ['metadata snapshot check', 'scripts/generate-faq-metadata.js', ['--check']],
     ['FAQ route source verification', 'scripts/verify-faq-routes.js', []],
@@ -265,7 +314,13 @@ function runSourceChecks(failures, env) {
     ['FAQ redirect source verification', 'scripts/verify-faq-redirects.js', ['--source']]
   ];
   for (const [label, script, args] of checks) nodeStep(failures, label, script, args, env);
-  runStep(failures, 'TypeScript source verification', 'npx', ['--no-install', 'tsc', '--noEmit', '--incremental', 'false'], env);
+  runStep(
+    failures,
+    'TypeScript source verification',
+    'npx',
+    ['--no-install', 'tsc', '--noEmit', '--incremental', 'false'],
+    env
+  );
 }
 
 function runGuideSourceChecks(failures, env, variant) {
@@ -276,12 +331,33 @@ function runGuideSourceChecks(failures, env, variant) {
     'scripts/verify-guide-content.js',
     [],
     env,
-    variant,
+    variant
   );
 }
 
+function runLiveChecks(failures, options, env) {
+  const args = [
+    '--base-url-cn',
+    options.liveBaseUrlCn,
+    '--base-url-io',
+    options.liveBaseUrlIo,
+    '--manifest',
+    options.liveManifest,
+    '--report',
+    options.liveReport,
+    '--timeout-ms',
+    String(options.liveTimeoutMs)
+  ];
+  for (const filePath of options.liveProviderEvidence) {
+    args.push('--provider-evidence', filePath);
+  }
+  nodeStep(failures, 'Guide live release verification', 'scripts/verify-guide-live.js', args, env);
+}
+
 function extractP1SuccessMeasurement(output) {
-  return output.match(/P1 verification passed for .*:\s*([0-9.]+ KiB initial JavaScript gzip)/)?.[1];
+  return output.match(
+    /P1 verification passed for .*:\s*([0-9.]+ KiB initial JavaScript gzip)/
+  )?.[1];
 }
 
 function runVariantChecks(failures, variant, env) {
@@ -294,7 +370,7 @@ function runVariantChecks(failures, variant, env) {
     'scripts/verify-content-hygiene.js',
     ['--mode', 'html', '--root', 'out', '--variant', variant],
     env,
-    variant,
+    variant
   );
 
   const checks = [
@@ -302,7 +378,10 @@ function runVariantChecks(failures, variant, env) {
     ['P1 HTML verification', ['verify:p1'], extractP1SuccessMeasurement],
     ['P2 HTML verification', ['verify:p2']],
     ['i18n SEO HTML verification', ['verify:i18n-seo']],
-    ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html', '--variant', variant]],
+    [
+      'FAQ metadata HTML verification',
+      ['verify:faq-metadata', '--', '--html', '--variant', variant]
+    ],
     [
       'FAQ SEO graph HTML verification',
       ['verify:faq-seo-graph', '--', '--html', '--out-dir', 'out', '--variant', variant]
@@ -332,7 +411,7 @@ function runVariantChecks(failures, variant, env) {
     'scripts/verify-guide-export.js',
     ['--out-dir', 'out', '--variant', variant],
     env,
-    variant,
+    variant
   );
   return true;
 }
@@ -340,7 +419,7 @@ function runVariantChecks(failures, variant, env) {
 function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) {
   for (const failure of failures.slice(startIndex)) {
     const budgetMatch = failure.output.match(
-      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/,
+      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/
     );
     if (!failure.label.startsWith('P1 HTML verification') || !budgetMatch) continue;
     const currentKib = Number.parseFloat(budgetMatch[1]);
@@ -349,8 +428,12 @@ function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) 
       ...failure,
       label: 'P1 historical baseline comparison',
       output:
-        `current=${currentKib.toFixed(1)} KiB gzip; c77cf48 APFS baseline=${P1_BASELINE_KIB.toFixed(1)} KiB gzip; ` +
-        `delta=${deltaKib >= 0 ? '+' : ''}${deltaKib.toFixed(1)} KiB; budget=${P1_BUDGET_KIB} KiB; ` +
+        `current=${currentKib.toFixed(1)} KiB gzip; c77cf48 APFS baseline=${P1_BASELINE_KIB.toFixed(
+          1
+        )} KiB gzip; ` +
+        `delta=${deltaKib >= 0 ? '+' : ''}${deltaKib.toFixed(
+          1
+        )} KiB; budget=${P1_BUDGET_KIB} KiB; ` +
         `command=${failure.command}; variant=${failure.variant}`
     });
   }
@@ -367,7 +450,9 @@ function reportFailures(failures, advisories, retainedPaths) {
   if (advisories.length) {
     console.warn(`\n[verify-release] known advisory checks (${advisories.length})`);
     for (const advisory of advisories) {
-      console.warn(`\n- ${advisory.label}${advisory.variant ? ` [variant=${advisory.variant}]` : ''}`);
+      console.warn(
+        `\n- ${advisory.label}${advisory.variant ? ` [variant=${advisory.variant}]` : ''}`
+      );
       console.warn(`  command: ${advisory.command}`);
       console.warn(`  evidence: ${advisory.output}`);
     }
@@ -376,7 +461,9 @@ function reportFailures(failures, advisories, retainedPaths) {
     if (retainedPaths.length) {
       console.error(`\n[verify-release] retained failure artifacts: ${retainedPaths.join(', ')}`);
     } else {
-      console.error('[verify-release] rerun with --keep-artifacts to retain failing .next/out evidence');
+      console.error(
+        '[verify-release] rerun with --keep-artifacts to retain failing .next/out evidence'
+      );
     }
   }
 }
@@ -401,9 +488,12 @@ function main() {
     runSourceChecks(failures, sourceEnv);
     runGuideSourceChecks(failures, sourceEnv);
     if (failures.length || options.sourceOnly) {
+      if (!failures.length && options.live) runLiveChecks(failures, options, sourceEnv);
       reportFailures(failures, advisories, retainedPaths);
       if (!failures.length) {
-        console.log('[verify-release] source-only checks passed; full mode requires a case-sensitive filesystem');
+        console.log(
+          '[verify-release] source-only checks passed; full mode requires a case-sensitive filesystem'
+        );
       }
       process.exitCode = failures.length ? 1 : 0;
       return;
@@ -447,17 +537,30 @@ function main() {
       }
       if (!variantFailed && options.retainSuccessArtifacts) {
         try {
-          console.log(`[verify-release] retained verified ${variant} output: ${retainSuccessArtifacts(variant, options.retainSuccessArtifacts)}`);
+          console.log(
+            `[verify-release] retained verified ${variant} output: ${retainSuccessArtifacts(
+              variant,
+              options.retainSuccessArtifacts
+            )}`
+          );
         } catch (error) {
-          failures.push({ label: `success artifact retention (${variant})`, variant, command: 'in-process verified output copy', output: error.message });
+          failures.push({
+            label: `success artifact retention (${variant})`,
+            variant,
+            command: 'in-process verified output copy',
+            output: error.message
+          });
         }
       }
       clearBuildArtifacts();
     }
+    if (!failures.length && options.live) runLiveChecks(failures, options, sourceEnv);
 
     reportFailures(failures, advisories, retainedPaths);
     if (!failures.length) {
-      console.log('[verify-release] release gate passed for source, redirects, io, cn, HTML, and sitemap evidence');
+      console.log(
+        '[verify-release] release gate passed for source, redirects, io, cn, HTML, and sitemap evidence'
+      );
     }
     process.exitCode = failures.length ? 1 : 0;
   } finally {
@@ -477,4 +580,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { appendP1HistoricalBaselineAdvisories, extractP1SuccessMeasurement };
+module.exports = { parseArgs, appendP1HistoricalBaselineAdvisories, extractP1SuccessMeasurement };

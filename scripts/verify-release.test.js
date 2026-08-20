@@ -8,6 +8,7 @@ const packageJson = require('../package.json');
 const packageLock = require('../package-lock.json');
 
 const {
+  parseArgs: parseReleaseArgs,
   appendP1HistoricalBaselineAdvisories,
   extractP1SuccessMeasurement
 } = require('./verify-release');
@@ -73,6 +74,33 @@ function isCaseSensitiveFilesystem() {
 function failure(label, output, variant = 'io') {
   return { label, variant, command: 'npm run verify:p1', output };
 }
+
+test('release coordinator wires optional live evidence into the manual verification workflow', () => {
+  const options = parseReleaseArgs([
+    '--source-only',
+    '--live',
+    '--live-manifest',
+    'release-evidence/manifest.json',
+    '--live-provider-evidence',
+    'release-evidence/cn-provider-receipt.json',
+    '--live-provider-evidence',
+    'release-evidence/io-provider-receipt.json'
+  ]);
+  assert.equal(options.live, true);
+  assert.equal(options.liveProviderEvidence.length, 2);
+  assert.equal(options.liveReport, path.join(ROOT, '.release-artifacts/guide-live-report.json'));
+  assert.throws(() => parseReleaseArgs(['--live']), /--live-manifest/);
+
+  const release = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  const workflow = fs.readFileSync(
+    path.join(ROOT, '.github/workflows/guide-release-verification.yml'),
+    'utf8'
+  );
+  assert(release.includes('scripts/verify-guide-live.js'));
+  assert(workflow.includes('actions/download-artifact@v4'));
+  assert(workflow.includes('live_evidence_run_id'));
+  assert(workflow.includes('--live-manifest release-evidence/manifest.json'));
+});
 
 test('release coordinator composes Guide checks around each fresh variant export', () => {
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
@@ -244,7 +272,10 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
 test('successful verified outputs can be retained before lifecycle cleanup', () => {
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
   assert.match(source, /--retain-success-artifacts/);
-  assert.match(source, /retainSuccessArtifacts\(variant, options\.retainSuccessArtifacts\)/);
+  assert.match(
+    source,
+    /retainSuccessArtifacts\(\s*variant,\s*options\.retainSuccessArtifacts\s*\)/
+  );
   assert.match(source, /const redirectMap = path\.join\(NEXT_DIR, 'nginx-redirects\.conf'\)/);
   assert.match(
     source,

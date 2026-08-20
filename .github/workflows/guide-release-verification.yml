@@ -2,6 +2,26 @@ name: Guide Release Verification
 
 on:
   workflow_dispatch:
+    inputs:
+      live_evidence_run_id:
+        description: 'Workflow run ID containing the release evidence artifact; leave empty to skip live verification'
+        required: false
+        type: string
+      live_evidence_artifact:
+        description: 'Artifact containing manifest.json and both provider receipt files'
+        required: false
+        default: 'guide-production-evidence'
+        type: string
+      live_base_url_cn:
+        description: 'CN production base URL'
+        required: false
+        default: 'https://fastgpt.cn'
+        type: string
+      live_base_url_io:
+        description: 'IO production base URL'
+        required: false
+        default: 'https://fastgpt.io'
+        type: string
   pull_request:
     paths:
       - '.github/workflows/guide-release-verification.yml'
@@ -26,6 +46,7 @@ concurrency:
 
 permissions:
   contents: read
+  actions: read
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
@@ -56,5 +77,47 @@ jobs:
           name: guide-release-failure-artifacts
           path: .release-artifacts
           retention-days: 3
+          if-no-files-found: ignore
+          include-hidden-files: true
+
+  verify-live:
+    name: Verify deployed Guide release
+    if: ${{ github.event_name == 'workflow_dispatch' && inputs.live_evidence_run_id != '' }}
+    needs: verify
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Download release evidence
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.live_evidence_artifact }}
+          path: release-evidence
+          github-token: ${{ github.token }}
+          run-id: ${{ inputs.live_evidence_run_id }}
+
+      - name: Verify live Guide release evidence
+        run: |
+          npm ci
+          npm run verify:release -- --source-only --keep-artifacts --live \
+            --live-base-url-cn "${{ inputs.live_base_url_cn }}" \
+            --live-base-url-io "${{ inputs.live_base_url_io }}" \
+            --live-manifest release-evidence/manifest.json \
+            --live-provider-evidence release-evidence/cn-provider-receipt.json \
+            --live-provider-evidence release-evidence/io-provider-receipt.json
+
+      - name: Upload live verification report
+        if: ${{ always() && hashFiles('.release-artifacts/guide-live-report*') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: guide-live-verification-${{ inputs.live_evidence_run_id }}
+          path: .release-artifacts/guide-live-report*
+          retention-days: 14
           if-no-files-found: ignore
           include-hidden-files: true

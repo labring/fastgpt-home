@@ -1,15 +1,32 @@
+import policy from './policy.json';
 import registry from './registry.json';
 
-export const GUIDE_LOCALES = ['zh', 'en'] as const;
+export const GUIDE_LOCALES = policy.locales as unknown as readonly ['zh', 'en'];
 export type GuideLocale = (typeof GUIDE_LOCALES)[number];
-export const GUIDE_PUBLICATION_GROUPS = ['decision', 'implementation', 'industry'] as const;
+export const GUIDE_PUBLICATION_GROUPS = policy.publicationGroups as unknown as readonly [
+  'decision',
+  'implementation',
+  'industry'
+];
 export type GuidePublicationGroup = (typeof GUIDE_PUBLICATION_GROUPS)[number];
 export type GuideIsoDate = `${number}-${number}-${number}`;
-export const GUIDE_SCHEMA_TYPES = ['Article', 'BreadcrumbList', 'HowTo'] as const;
+export const GUIDE_ASSET_STATUSES = policy.assetStatuses as unknown as readonly [
+  'none',
+  'requested-unapproved',
+  'source-exception',
+  'required'
+];
+export type GuideAssetStatus = (typeof GUIDE_ASSET_STATUSES)[number];
+export const GUIDE_SCHEMA_TYPES = policy.schemaTypes as unknown as readonly [
+  'Article',
+  'BreadcrumbList',
+  'HowTo'
+];
 export type GuideSchemaType = (typeof GUIDE_SCHEMA_TYPES)[number];
+export const GUIDE_ENTRY_COUNT = policy.entryCount;
 
 export type GuideAssetPolicy =
-  | { status: 'none' | 'requested-unapproved' | 'source-exception' }
+  | { status: Exclude<GuideAssetStatus, 'required'> }
   | { status: 'required'; path: string; alt: string; width: number; height: number };
 
 export interface GuideInternalLinkMapping {
@@ -66,10 +83,16 @@ function isGuideIsoDate(value: unknown): value is GuideIsoDate {
   if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const [year, month, day] = value.split('-').map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
-  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+  return (
+    date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day
+  );
 }
 
-function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): asserts value is GuideSourceSnapshot {
+function validateSnapshot(
+  slug: string,
+  locale: GuideLocale,
+  value: unknown
+): asserts value is GuideSourceSnapshot {
   if (!value || typeof value !== 'object') fail(`${slug}:${locale}: missing source snapshot`);
   const snapshot = value as Record<string, unknown>;
   if (!isGuideSourceName(slug, locale, snapshot.sourceName)) {
@@ -101,11 +124,14 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
   ) {
     fail(`${slug}:${locale}: invalid schema tokens`);
   }
-  if (!Array.isArray(snapshot.sourceInternalLinkLabels) || !Array.isArray(snapshot.configuredInternalLinks)) {
+  if (
+    !Array.isArray(snapshot.sourceInternalLinkLabels) ||
+    !Array.isArray(snapshot.configuredInternalLinks)
+  ) {
     fail(`${slug}:${locale}: invalid link directives`);
   }
   const policy = snapshot.assetPolicy as Record<string, unknown> | undefined;
-  if (!policy || !['none', 'requested-unapproved', 'source-exception', 'required'].includes(String(policy.status))) {
+  if (!policy || !GUIDE_ASSET_STATUSES.includes(policy.status as GuideAssetStatus)) {
     fail(`${slug}:${locale}: invalid asset policy`);
   }
   if (policy.status === 'required') {
@@ -122,7 +148,9 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
       policy.width <= 0 ||
       policy.height <= 0
     ) {
-      fail(`${slug}:${locale}: required asset needs a contained public path, alt, and positive dimensions`);
+      fail(
+        `${slug}:${locale}: required asset needs a contained public path, alt, and positive dimensions`
+      );
     }
   }
   for (const mapping of snapshot.configuredInternalLinks as unknown[]) {
@@ -139,11 +167,17 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
 }
 
 function validateRegistry(value: unknown): asserts value is { entries: GuideEntry[] } {
-  if (!value || typeof value !== 'object' || !Array.isArray((value as { entries?: unknown }).entries)) {
+  if (
+    !value ||
+    typeof value !== 'object' ||
+    !Array.isArray((value as { entries?: unknown }).entries)
+  ) {
     fail('missing entries');
   }
   const entries = (value as { entries: unknown[] }).entries;
-  if (entries.length !== 8) fail(`expected eight entries, received ${entries.length}`);
+  if (entries.length !== GUIDE_ENTRY_COUNT) {
+    fail(`expected ${GUIDE_ENTRY_COUNT} entries, received ${entries.length}`);
+  }
   const slugs = new Set<string>();
   for (const entry of entries) {
     if (!entry || typeof entry !== 'object') fail('invalid entry');
@@ -154,7 +188,8 @@ function validateRegistry(value: unknown): asserts value is { entries: GuideEntr
     if (slugs.has(record.slug)) fail(`${record.slug}: duplicate slug`);
     slugs.add(record.slug);
     const keys = Object.keys(record).sort().join(',');
-    if (keys !== 'en,group,slug,zh') fail(`${record.slug}: exact zh/en locale pair and group required`);
+    if (keys !== 'en,group,slug,zh')
+      fail(`${record.slug}: exact zh/en locale pair and group required`);
     if (!GUIDE_PUBLICATION_GROUPS.includes(record.group as GuidePublicationGroup)) {
       fail(`${record.slug}: invalid publication group`);
     }

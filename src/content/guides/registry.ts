@@ -62,8 +62,8 @@ function isGuideSourceName(slug: string, locale: GuideLocale, value: unknown): v
   return isBasename(value) && value === `${slug}.${locale}.md`;
 }
 
-function isApprovedGuideDate(value: unknown): value is GuideIsoDate {
-  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== '2026-08-11') return false;
+function isGuideIsoDate(value: unknown): value is GuideIsoDate {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value)) return false;
   const [year, month, day] = value.split('-').map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
   return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
@@ -89,8 +89,10 @@ function validateSnapshot(slug: string, locale: GuideLocale, value: unknown): as
   ]) {
     if (typeof snapshot[field] !== 'string') fail(`${slug}:${locale}: invalid ${field}`);
   }
-  for (const field of ['datePublished', 'dateModified']) {
-    if (!isApprovedGuideDate(snapshot[field])) fail(`${slug}:${locale}: invalid ${field}`);
+  if (!isGuideIsoDate(snapshot.datePublished)) fail(`${slug}:${locale}: invalid datePublished`);
+  if (!isGuideIsoDate(snapshot.dateModified)) fail(`${slug}:${locale}: invalid dateModified`);
+  if (snapshot.dateModified < snapshot.datePublished) {
+    fail(`${slug}:${locale}: dateModified precedes datePublished`);
   }
   if (
     !Array.isArray(snapshot.schemaTokens) ||

@@ -31,6 +31,7 @@ test('sitemap projects one owned hub and eight dated articles per variant', () =
     ['zh', 'fastgpt.cn'],
     ['en', 'fastgpt.io']
   ]) {
+    const expectedLastModified = locale === 'zh' ? '2026-08-11' : '2026-08-20';
     const entries = projectGuideSitemap(locale, cloneEntries());
     assert.equal(entries.length, 9, `${locale}: sitemap count`);
     assert.equal(
@@ -41,7 +42,7 @@ test('sitemap projects one owned hub and eight dated articles per variant', () =
     assert.equal(entries[0].url, `https://${host}/guide`, `${locale}: hub URL`);
     for (const entry of entries.slice(1)) {
       assert.match(entry.url, new RegExp(`^https://${host}/guide/[a-z0-9-]+$`));
-      assert.equal(entry.lastModified, '2026-08-11');
+      assert.equal(entry.lastModified, expectedLastModified);
     }
   }
 });

@@ -30,4 +30,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4823 \
 ### 修复问题
 修复标签过滤时子文件夹未成功过滤的问题，暂时移除md阅读优化以避免链接分割错误，修复离开团队时未刷新成员列表的问题，修复PPTX编码错误导致解析失败的问题，修复删除知识库单条数据时全文索引未跟随删除的问题，修复Mongo Dataset text索引在查询数据时未生效的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4823)

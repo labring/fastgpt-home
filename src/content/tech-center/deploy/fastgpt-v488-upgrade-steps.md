@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv488 \
 ```
 该请求会初始化知识库的继承权限。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/488)

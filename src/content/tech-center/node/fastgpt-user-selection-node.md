@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 节点使用场景与作用
 该节点的基础用法为向用户提出需要做出抉择的问题，并根据用户的反馈设计差异化的工作流流程。常见使用场景包括业务流程确认、选项类交互需求等，例如在对话流程中需要用户确认是否提交当前信息、选择后续的服务类型等。当用户完成选择后，节点会自动匹配对应的分支执行后续逻辑，实现基于用户交互的个性化工作流执行，帮助开发者构建需要用户参与决策的对话应用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/user-selection)

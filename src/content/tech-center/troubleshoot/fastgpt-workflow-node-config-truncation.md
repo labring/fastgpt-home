@@ -27,4 +27,4 @@ source_type: GitHub issue
 ### 验证方式
 重新进入工作流配置页面，检查节点的配置项是否正常显示，自定义节点的介绍文本是否完整展示，保存配置后再次打开页面，确认文本未再次出现截断。
 
-> 来源：https://github.com/labring/FastGPT/issues/6167
+> 来源：[FastGPT GitHub Issue #6167](https://github.com/labring/FastGPT/issues/6167)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 首先修正`FE_DOMAIN`的配置（若存在拼写错误或格式问题），确保配置值准确无误，随后重启相关服务使新配置生效。验证时，重新上传包含扫描图片的PDF附件，进入对话日志查看图片URL，确认URL已正确拼接`FE_DOMAIN`的域名前缀，图片可正常加载显示。
 
-> 来源：https://github.com/labring/FastGPT/issues/6249
+> 来源：[FastGPT GitHub Issue #6249](https://github.com/labring/FastGPT/issues/6249)

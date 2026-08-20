@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4121 \
 ## 升级注意事项
 需要注意的边界与易错点：首先，升级脚本仅面向商业版用户，非商业版用户无需执行该步骤；其次，需严格按照要求更新指定镜像，避免误更新无需升级的组件；另外，本次更新后工作流将主动指定响应值进入历史记录，不再依赖key判断，同时规避了变量替换导致的死循环或深度递归风险；此前存在的工具密钥boolean值无法通过表单校验、对话页切换时数据异常等问题已完成修复。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-12/4121)

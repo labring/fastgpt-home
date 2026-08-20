@@ -23,4 +23,4 @@ source_type: 官方文档
 #### 问题修复
 修复简易应用模板未正常转化的问题；修复工具调用中包含两个以上连续用户选择时，第二个用户选择异常的问题；修复门户中团队应用类型错误的问题；修复应用作为MCP导出被其他应用使用时，全局变量无需填写的逻辑问题；修复插件中子工具头像丢失、模型头像丢失的问题；修复Worker中错误引用mongoose依赖，导致工具运行超过10s时报错的问题；优化开发环境热更新时，不会重复上传静态文件。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4142
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4142)

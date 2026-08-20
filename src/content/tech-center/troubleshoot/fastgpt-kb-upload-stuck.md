@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查结果修复对应问题：例如修正存储服务的配置参数、修复向量数据库连接信息、调整容器网络策略恢复连通性等。若docker-compose配置中的向量数据库部分未完成，需补充完整相关环境变量与持久化配置。修复完成后，重新上传文件至知识库，验证上传进度可正常完成，且上传的文件可在知识库中正常使用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6319
+> 来源：[FastGPT GitHub Issue #6319](https://github.com/labring/FastGPT/issues/6319)

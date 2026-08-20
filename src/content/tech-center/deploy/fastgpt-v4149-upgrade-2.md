@@ -23,4 +23,4 @@ source_type: 官方文档
 优化内容包括API知识库同步时增加更多fallback获取文件名方式、HTTP工具新增SSRF防御、兼容更多MCP JsonSchema字段、优化工作流运行池逻辑，以及使用Tarjan SCC算法替代DSC处理工作流edges分组，解决复杂循环无法运行的问题，系统工具集不再显示版本选项。
 修复的问题包括工作流嵌套插件时未保留运行详情、更新MCP toolset后无法正常调用、API知识库文件列表搜索框丢失、工作流变量含`$.`时替换异常、引用agent工具时获取版本异常、模型切换参数未移除导致调用失败、分享链接关闭后历史记录无法展示、工作流预览弹窗重新打开丢失表单内容、订阅套餐自定义字段未生效、login接口存在异步session问题、判断器arrayAny类型无判断条件可选、视频音频自定义文件类型流程开始无文件链接变量、用户输入框消息未转义为Markdown格式、AgentV2部分上下文拼接错误、login接口安全风险，以及工作流工具未连接结束节点时嵌套调用导致父工作流无法停止等问题。此外还修复了商业版开发时monorepo指向不同react导致需重装包的代码优化问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4149
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4149)

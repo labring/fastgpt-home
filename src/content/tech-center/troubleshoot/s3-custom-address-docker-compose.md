@@ -45,4 +45,4 @@ source_type: GitHub issue
 3.  查看生成的docker-compose.yml文件，确认minio服务的`ports`配置项与输入的端口一致，验证配置生成正确。
 4.  启动服务后，确认S3存储可正常访问。
 
-> 来源：https://github.com/labring/FastGPT/issues/6743
+> 来源：[FastGPT GitHub Issue #6743](https://github.com/labring/FastGPT/issues/6743)

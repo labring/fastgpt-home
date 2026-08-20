@@ -27,4 +27,4 @@ source_type: GitHub issue
 2. 切换至其他页面，确认页面语言仍为中文，未被强制改为英文。
 3. 手动修改`NEXT_LOCALE`为其他合法语言值，验证页面可正确适配对应语言设置。
 
-> 来源：https://github.com/labring/FastGPT/issues/7007
+> 来源：[FastGPT GitHub Issue #7007](https://github.com/labring/FastGPT/issues/7007)

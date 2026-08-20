@@ -25,4 +25,4 @@ AI智能体的“技能”是可持久保存、可复用的模块化专业流程
 
 需注意两个核心要点：一是编辑区域修改的代码仅在调试区即时生效，不会直接影响生产环境；二是长期闲置的技能会被系统自动归档休眠，休眠期间不会产生运行计费，再次调用或编辑时会自动拉起沙箱复原。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro)

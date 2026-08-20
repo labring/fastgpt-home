@@ -45,4 +45,4 @@ V4.8.16为FastGPT的配置变更版本，本次更新包含多项新增功能、
 ## 升级注意事项
 升级过程中需注意以下细节：配置文件必须使用新版格式，不可沿用旧版配置说明；若设置了NEXT_PUBLIC_BASE_URL，需确认图片文件读取URL是否正确，本次更新已修复该场景的异常问题；工作流相关操作需注意变量初始化与数据类型兼容问题，避免因渲染顺序或类型不一致导致执行失败；插件调试时需确认日志是否正确保存输入参数，若出现异常可对照本次修复内容排查。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4816)

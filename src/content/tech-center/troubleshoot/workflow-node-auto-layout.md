@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前FastGPT官方未内置工作流节点自动整理美化功能，若需实现该能力，需根据实际业务需求开发自定义功能，或等待官方后续版本更新相关功能。验证方式：若官方更新该功能后，升级到对应版本，即可在画布工具栏或右键菜单中找到整理节点功能，点击后系统将自动规整画布内所有节点的布局。
 
-> 来源：https://github.com/labring/FastGPT/issues/6585
+> 来源：[FastGPT GitHub Issue #6585](https://github.com/labring/FastGPT/issues/6585)

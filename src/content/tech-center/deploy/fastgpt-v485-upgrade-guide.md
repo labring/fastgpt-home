@@ -36,4 +36,4 @@ source_type: 官方文档
 ## 初始化操作说明
 普通版的初始化会将插件数据表合并到应用中，且不会删除插件表；商业版的初始化会重置知识库权限系统。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/485)

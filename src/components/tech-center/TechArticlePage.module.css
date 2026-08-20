@@ -97,6 +97,13 @@
   line-height: 1.8;
 }
 
+.updated {
+  display: block;
+  margin-top: 10px;
+  color: var(--article-muted);
+  font-size: 14px;
+}
+
 .layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 280px;
@@ -437,6 +444,7 @@
 }
 
 .article :global(.tech-article-content) pre {
+  max-width: 100%;
   margin: 22px 0;
   padding: 18px;
   overflow-x: auto;
@@ -470,6 +478,38 @@
 .article :global(.tech-article-content) ol {
   padding-left: 26px;
   margin: 0 0 20px;
+  list-style-position: outside;
+}
+
+.article :global(.tech-article-content) ul {
+  list-style-type: disc;
+}
+
+.article :global(.tech-article-content) ol {
+  list-style-type: decimal;
+}
+
+.article :global(.tech-article-content) ul ul {
+  list-style-type: circle;
+}
+
+.article :global(.tech-article-content) ul ul ul {
+  list-style-type: square;
+}
+
+.article :global(.tech-article-content) ol ol {
+  list-style-type: lower-alpha;
+}
+
+.article :global(.tech-article-content) ol ol ol {
+  list-style-type: lower-roman;
+}
+
+.article :global(.tech-article-content) li > ul,
+.article :global(.tech-article-content) li > ol {
+  margin-top: 6px;
+  margin-bottom: 6px;
+  padding-left: 24px;
 }
 
 .article :global(.tech-article-content) li {
@@ -604,5 +644,15 @@
 
   .article :global(.tech-article-content) {
     font-size: 15px;
+  }
+
+  .article :global(.tech-article-content) ul,
+  .article :global(.tech-article-content) ol {
+    padding-left: 22px;
+  }
+
+  .article :global(.tech-article-content) li > ul,
+  .article :global(.tech-article-content) li > ol {
+    padding-left: 20px;
   }
 }

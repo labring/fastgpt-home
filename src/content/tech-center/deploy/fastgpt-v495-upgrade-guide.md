@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 优化与问题修复
 本次更新优化了繁体中文翻译内容，并完成了Arm镜像的打包适配。同时修复了多个问题：包括password检测规则错误、分享链接无法隐藏知识库检索结果、IOS低版本正则兼容异常、问答提取队列错误后计数器未清零导致队列失效、Debug模式下交互节点下一步可能触发死循环的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/495)

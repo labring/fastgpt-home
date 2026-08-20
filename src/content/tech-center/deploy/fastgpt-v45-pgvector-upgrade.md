@@ -58,4 +58,4 @@ FastGPT V4.5版本包含两项核心更新：一是将PgVector插件升级至0.5
 ## 升级验证
 升级完成后可重新连接数据库终端，执行`\dx`命令查看vector插件版本，确认版本为0.5.0；执行`\d modeldata`命令，若返回结果中包含`vector_index hnsw (vector vector_ip_ops) WITH (m= 16 , ef_construction= 64 )`且无`INVALID`字样，则代表升级与索引构建完成。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45)

@@ -22,4 +22,4 @@ source_type: 官方文档
 
 本次V4.9.3版本升级无需额外修改环境变量或配置文件，仅需替换镜像版本即可生效。如果你的当前版本早于V4.9.3，需按照官方文档的历史版本升级列表，依次完成每个中间版本的升级操作，确保升级流程的正确性。升级完成后，即可正常使用本次版本新增的功能与修复后的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/493
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/493)

@@ -30,4 +30,4 @@ curl --location --request POST https://{{host}}/api/admin/clearInvalidData \
 ### 优化与修复内容
 优化支持IP模式导出知识库；修改CSV导入模板逻辑，取消header校验，自动获取前两列数据；修复工具调用模块连线数据类型校验错误、自定义索引输入解构失败、rerank模型数据格式异常、问题补全历史记录BUG以及分享页面特殊场景加载缓慢问题（原因为SSR场景下数据库未触发连接）。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/471)

@@ -41,4 +41,4 @@ const agentFunction = {
 ```
 4.  节点执行后将返回abc、vvv、aaa中的一个枚举值，可基于该返回值配置后续不同的工作流分支，实现分类后的差异化操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/question_classify)

@@ -39,4 +39,4 @@ source_type: 官方文档
 ## 安全机制与使用注意
 该功能通过iframe的`sandbox`属性和`referrerPolicy`防范安全风险，`sandbox`可细粒度限制外部HTML的行为，例如禁用脚本执行、限制表单提交等，确保渲染内容不会对系统造成威胁。使用时需注意：若你的HTML内容需要动态JavaScript交互，或需要完全自适应内容高度的展示效果，该功能无法满足需求，不建议使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/chat/htmlRendering
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/chat/htmlRendering)

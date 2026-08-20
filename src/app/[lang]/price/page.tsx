@@ -1,7 +1,7 @@
 import PPlan from '@/components/price/PPlan';
 import PTitle from '@/components/price/PTitle';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
-import { getAlternates, localeMap } from '@/lib/seo';
+import { getAlternates, getRobotsPolicy, localeMap } from '@/lib/seo';
 import { getBuildLocaleCodes } from '@/lib/siteRouting';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
@@ -58,10 +58,7 @@ export async function generateMetadata({
       title,
       description
     },
-    robots:
-      lang && langName === defaultLocale
-        ? { index: false, follow: true }
-        : { index: true, follow: true }
+    robots: getRobotsPolicy(!(lang && langName === defaultLocale))
   };
 }
 

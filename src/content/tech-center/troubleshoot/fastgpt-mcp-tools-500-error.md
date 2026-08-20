@@ -23,4 +23,4 @@ FastGPT私有部署版v4.14.7中调用`/api/core/app/mcpTools/getTools`接口时
 ## 解决与验证
 可先尝试回退FastGPT版本至v4.14.6，验证接口调用是否恢复正常，以此定位是否为v4.14.7版本的变更导致的问题。若确认是校验规则变更引发的错误，需调整请求参数以符合新的校验逻辑（需按实际环境确认）。验证方式为重新调用`/api/core/app/mcpTools/getTools`接口，确认返回状态码正常，且日志中不再出现相关报错信息。
 
-> 来源：https://github.com/labring/FastGPT/issues/6451
+> 来源：[FastGPT GitHub Issue #6451](https://github.com/labring/FastGPT/issues/6451)

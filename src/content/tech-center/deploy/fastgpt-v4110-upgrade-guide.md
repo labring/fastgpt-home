@@ -28,4 +28,4 @@ FastGPT V4.11.0 版本包含环境变量变更、镜像更新要求及多项基�
 优化内容包括：修复递归逻辑导致的内存堆积问题，高并发知识库预处理场景可降低内存消耗；支持知识库训练时重试全部集合异常数据；完善工作流valueTypeFormat配置，避免数据类型不一致问题；修复知识库列表搜索时正则未替换特殊词的异常。
 此外修复了问题分类与内容提取节点默认模型无法通过前端校验的问题，该问题曾导致工作流无法运行、保存及发布。工具层面新增Markdown文本转换为Docx和Xlsx文件的功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4110)

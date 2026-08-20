@@ -23,4 +23,4 @@ FastGPT工具内置的Skills导入功能预设了简易模式、workflow两种�
 ## 解决与验证
 解决方式主要分为两种方向：一是等待FastGPT官方进行功能更新，新增除简易模式、workflow之外的Skills导入方式；二是按实际环境自行适配相关的Skills导入逻辑，以满足自身的业务需求。验证方式为：若官方完成功能更新，重新进入Skills导入页面，查看是否新增了预设的导入方式选项，确认新的导入方式可正常使用并满足自身的技能导入需求；若自行适配，则需根据实际的开发文档与环境配置完成调试，验证导入功能是否正常运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/6320
+> 来源：[FastGPT GitHub Issue #6320](https://github.com/labring/FastGPT/issues/6320)

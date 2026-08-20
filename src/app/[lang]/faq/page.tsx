@@ -1,6 +1,6 @@
 import { faqContentLocaleCodes, getFaqData, resolveFaqLocale } from '@/faq';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
-import { getFaqAlternates, localeMap } from '@/lib/seo';
+import { getFaqAlternates, getRobotsPolicy, localeMap } from '@/lib/seo';
 import {
   currentSiteBaseUrl,
   getBuildLocaleCodes,
@@ -137,10 +137,7 @@ export async function generateMetadata({ params }: { params: Promise<{ lang?: st
       dict.FAQ?.description || 'Find answers to frequently asked questions about FastGPT.',
     keywords: ['FastGPT', 'FAQ', 'AI Agent', 'Knowledge Base', 'Customer Support', 'AI Platform'],
     alternates: getFaqAlternates(faqLangName, undefined, faqContentLocaleCodes),
-    robots:
-      !lang || faqLangName !== langName
-        ? { index: true, follow: true }
-        : { index: false, follow: true },
+    robots: getRobotsPolicy(!lang || faqLangName !== langName),
     openGraph: {
       title: `${dict.FAQ?.title || 'FAQ'} - FastGPT`,
       description:

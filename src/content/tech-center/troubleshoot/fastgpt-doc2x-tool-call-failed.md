@@ -28,4 +28,4 @@ source_type: GitHub issue
 2. 调整输入参数至符合新版工具的校验要求，发起工具调用测试。
 3. 若调用成功，则完成验证；若仍失败，需结合提取到的具体报错文本，进一步排查对应问题，具体处理方式需按实际环境确认。
 
-> 来源：https://github.com/labring/FastGPT/issues/6254
+> 来源：[FastGPT GitHub Issue #6254](https://github.com/labring/FastGPT/issues/6254)

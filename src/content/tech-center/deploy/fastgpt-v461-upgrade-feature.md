@@ -23,4 +23,4 @@ source_type: 官方文档
 ## 使用注意事项
 部分历史版本升级至V4.6.1时，若涉及环境变量变更，需同步更新对应配置项，否则可能出现服务启动异常的情况。若升级后出现功能异常，需检查对应服务的适配性与原有配置是否正确。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/461)

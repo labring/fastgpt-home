@@ -17,4 +17,4 @@ FastGPT V4.14.28属于4.14.x系列的维护更新版本，核心变更为修复a
 ## 升级注意事项
 在升级前需确认当前运行的FastGPT版本为4.14.x系列，非4.14.x系列版本请勿直接升级至V4.14.28。若升级后出现admin服务相关异常，需优先检查运行环境的Node.js版本是否匹配镜像要求。此外，若此前已完成4.14.x系列其他版本的环境变量变更操作，本次升级无需额外调整环境变量配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41428)

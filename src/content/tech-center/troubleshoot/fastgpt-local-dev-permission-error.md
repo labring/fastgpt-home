@@ -42,4 +42,4 @@ volumes:
 2.  再次使用IDE打开项目仓库目录或运行文件扫描工具，确认不再出现`permission denied`报错
 3.  检查各服务运行状态与数据持久化情况，需按实际环境确认服务是否正常可用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6702
+> 来源：[FastGPT GitHub Issue #6702](https://github.com/labring/FastGPT/issues/6702)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 首先，根据核对后的原有配置参数，重新填写数据库节点的激活配置项，确保所有参数的数据类型匹配JS脚本的校验规则。其次，重新运行出现报错的JS脚本，验证数据类型相关报错是否消失。最后，启动流程测试所有数据库节点的功能是否恢复正常。若仍存在报错，需结合实际部署环境进一步排查配置细节。
 
-> 来源：https://github.com/labring/FastGPT/issues/6174
+> 来源：[FastGPT GitHub Issue #6174](https://github.com/labring/FastGPT/issues/6174)

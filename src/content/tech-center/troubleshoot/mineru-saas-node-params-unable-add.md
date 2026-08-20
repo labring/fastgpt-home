@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前暂未在该issue中提供明确的官方修复方案。若通过排查步骤解决了参数无法添加的问题，验证方式为：重新进入MinerU Saas解析节点的配置界面，确认可正常添加、编辑输入参数并保存工作流即可。若仍未解决，可参考官方issue反馈渠道提交详细的环境信息与日志内容。
 
-> 来源：https://github.com/labring/FastGPT/issues/7271
+> 来源：[FastGPT GitHub Issue #7271](https://github.com/labring/FastGPT/issues/7271)

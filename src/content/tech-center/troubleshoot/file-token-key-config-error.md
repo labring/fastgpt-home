@@ -32,4 +32,4 @@ source_type: GitHub issue
 ### 验证效果
 启动服务时无环境变量报错，可正常登录9000、9001端口，且附件上传功能可正常完成。
 
-> 来源：https://github.com/labring/FastGPT/issues/6786
+> 来源：[FastGPT GitHub Issue #6786](https://github.com/labring/FastGPT/issues/6786)

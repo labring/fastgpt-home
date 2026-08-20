@@ -30,4 +30,4 @@ source_type: GitHub issue
 ### 版本适配解决
 针对4.14.9.4版本，可先确认已调整SANDBOX_MAX_MEMORY_MB至2048及以上、SANDBOX_MAX_TIMEOUT至600000及以上，同时检查WORKFLOW_MAX_LOOP_TIMES的配置是否合理。若问题仍存在，需进一步排查sandbox引擎的运行日志以定位具体异常（需按实际环境确认）。
 
-> 来源：https://github.com/labring/FastGPT/issues/6646
+> 来源：[FastGPT GitHub Issue #6646](https://github.com/labring/FastGPT/issues/6646)

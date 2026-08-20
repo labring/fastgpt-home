@@ -33,4 +33,4 @@ FastGPT 默认使用 OpenAI 官方的 embedding 向量模型，若需进行私�
 ## 使用边界与注意事项
 创建知识库并选择 M3E 模型后，无法再修改该知识库的向量模型。应用仅能绑定使用同一向量模型的知识库，不可跨模型绑定。不同向量模型的相似度计算逻辑存在差异，需自行测试调整相似度阈值，以适配实际业务需求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/m3e
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/m3e)

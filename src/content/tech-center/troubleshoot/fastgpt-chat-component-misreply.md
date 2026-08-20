@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前可通过适配组件使用逻辑满足需求：若需实现无需用户问题的定制功能，可参考组件的自定义调用方式（需按实际环境确认配置参数），或等待对应组件支持无用户问题输入的模式。验证方式为：配置组件时不填写用户问题输入项（若组件支持），发起调用后确认模型未直接输出预设的用户问题内容，且按定制逻辑生成预期结果。
 
-> 来源：https://github.com/labring/FastGPT/issues/6401
+> 来源：[FastGPT GitHub Issue #6401](https://github.com/labring/FastGPT/issues/6401)

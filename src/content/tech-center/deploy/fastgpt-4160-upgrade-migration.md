@@ -44,4 +44,4 @@ V4.16.0-beta1对Agent Sandbox模块进行了重大调整：移除E2B Sandbox Pro
 ## 迁移逻辑说明
 本版本将Agent Sandbox从“每个对话一个实例”调整为“同一App、同一用户共享一个实例”。迁移过程会先完成旧Workspace归一化与清理，待处理量归零后才会执行归档与迁移，脚本可安全重试，已完成的操作不会重复执行；新Sandbox会在安装完成后暂停，首次使用时按正常流程启动。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/41601)

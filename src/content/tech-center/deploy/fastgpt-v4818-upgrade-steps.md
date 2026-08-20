@@ -40,4 +40,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4818 \
 - 修复HTML文件上传时，base64格式图片无法自动转换为图片链接的问题
 - 修复插件计费错误的问题
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4818)

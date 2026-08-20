@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据实际系统的Libc类型，手动安装对应ARM64架构的原生依赖包，例如针对musl Libc的系统安装`@llamaindex/liteparse-linux-arm64-musl`；随后重新执行`pnpm install`安装依赖，再执行`pnpm dev`或`pnpm build`启动或编译应用，确认报错信息消失，应用可正常启动或完成编译。若为Docker部署方式，需确认镜像构建过程适配了ARM64架构。具体调整细节需按实际环境确认。
 
-> 来源：https://github.com/labring/FastGPT/issues/7186
+> 来源：[FastGPT GitHub Issue #7186](https://github.com/labring/FastGPT/issues/7186)

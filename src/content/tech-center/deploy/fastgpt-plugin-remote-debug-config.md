@@ -47,4 +47,4 @@ services:
 ### Plugin Server 配置
 需在fastgpt-plugin服务中新增Gateway相关环境变量，配置其调用Gateway内部HTTP API的内网地址。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)

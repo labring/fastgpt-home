@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现问题由文档编码不兼容导致，可将语雀表格文档转换为UTF-8编码后重新导入知识库。验证方式为：重新导入转换后的文档，确认分块预览可正常显示文档内容；创建关联该知识库的聊天Agent，咨询文档内的相关信息，确认可获取正确答案。若问题由部署环境的编码配置异常导致，需按实际环境调整相关配置。
 
-> 来源：https://github.com/labring/FastGPT/issues/6461
+> 来源：[FastGPT GitHub Issue #6461](https://github.com/labring/FastGPT/issues/6461)

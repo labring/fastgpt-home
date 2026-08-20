@@ -96,7 +96,8 @@ function verifyNginxHeaders() {
 
   const includeCount = (nginxConfig.match(/include \/etc\/nginx\/security-headers\.conf;/g) || [])
     .length;
-  assert.equal(includeCount, 11, 'Security headers must cover the server and all cache locations');
+  // Keep the release manifest endpoint covered alongside the server and cache locations.
+  assert.equal(includeCount, 12, 'Security headers must cover the server, release manifest, and cache locations');
   assert(headerConfig.includes('add_header X-Frame-Options "DENY"'), 'Default pages must deny framing');
   assert(
     !embeddableHeaderConfig.includes('X-Frame-Options'),
@@ -152,6 +153,22 @@ function verifyNginxHeaders() {
     'Docker build does not enforce its CN-only publication boundary'
   );
   assert(dockerfile.includes('RUN nginx -t'), 'Docker image does not validate the Nginx config');
+  const releaseStageStart = dockerfile.indexOf('AS release-runtime');
+  const runtimeStageStart = dockerfile.indexOf('AS runtime');
+  const releaseStage = dockerfile.slice(releaseStageStart, runtimeStageStart);
+  const redirectMapCopy = releaseStage.indexOf(
+    'COPY release-out/__release/nginx-redirects.conf /etc/nginx/generated-redirects.conf'
+  );
+  const redirectMapGuard = releaseStage.indexOf('test -s /etc/nginx/generated-redirects.conf');
+  const nginxTest = releaseStage.indexOf('nginx -t');
+  assert(
+    releaseStageStart >= 0 && runtimeStageStart > releaseStageStart,
+    'Dockerfile must keep release-runtime before the default runtime stage'
+  );
+  assert(
+    redirectMapCopy >= 0 && redirectMapGuard > redirectMapCopy && nginxTest > redirectMapGuard,
+    'Release runtime must copy and validate the generated Nginx redirect map'
+  );
 
   const redirectMap = fs.readFileSync(path.join(rootDir, '.next', 'nginx-redirects.conf'), 'utf8');
   if (variant === 'cn') {

@@ -31,4 +31,4 @@ source_type: GitHub issue
 ### 验证方法
 重新创建符合规范的MCP工具，进行调用测试，确认不再触发报错，AI可正确识别并调用目标工具。
 
-> 来源：https://github.com/labring/FastGPT/issues/6791
+> 来源：[FastGPT GitHub Issue #6791](https://github.com/labring/FastGPT/issues/6791)

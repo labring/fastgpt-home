@@ -20,4 +20,4 @@ FastGPT的知识库检索并非简单的单路径匹配，而是组合了多环�
 3. 调整检索策略：根据场景选择语义检索、全文检索或混合检索，开启Rerank优化排序效果，可根据需求调整topk召回数量平衡速度与精度。
 4. 图片检索适配：若需使用图片检索，需确认已配置视觉模型或支持图片的向量模型，并确保入库时生成了有效的图片索引，否则图搜图效果会受影响。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/dataset_engine)

@@ -25,4 +25,4 @@ FastGPT的语音输入功能支持用户在前台对话界面进行语音录入�
 ### 使用建议
 面向移动端或现场场景的应用，开启语音输入可有效提升用户输入效率；对识别准确性要求较高的场景，建议关闭自动发送，让用户先检查并确认识别的文字内容；需要进行连续语音交互的场景，可以同时开启自动发送和自动语音回复，实现流畅的语音对话体验。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/general/voiceInput
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/voiceInput)

@@ -31,4 +31,4 @@ source_type: GitHub issue
 3.  重启服务后，再次触发相关请求，查看日志中是否仍出现`Cannot read properties of undefined (reading 'map')`报错。
 4.  验证`/api/v1/chat/completions`接口可正常完成请求，无异常中断情况。
 
-> 来源：https://github.com/labring/FastGPT/issues/6277
+> 来源：[FastGPT GitHub Issue #6277](https://github.com/labring/FastGPT/issues/6277)

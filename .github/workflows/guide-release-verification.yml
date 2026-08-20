@@ -1,0 +1,78 @@
+name: Guide Release Verification
+
+on:
+  workflow_dispatch: {}
+  pull_request:
+    paths:
+      - '.github/workflows/guide-release-verification.yml'
+      - 'src/**'
+      - 'content/**'
+      - 'content/competitors/**'
+      - 'public/**'
+      - 'scripts/**'
+      - 'scripts/verify-content-hygiene.js'
+      - 'scripts/fix-html-lang.js'
+      - 'Dockerfile.verify'
+      - 'Dockerfile'
+      - '.dockerignore'
+      - 'next.config.js'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'nginx.conf'
+      - 'nginx-security-headers.conf'
+      - 'nginx-embeddable-security-headers.conf'
+
+concurrency:
+  group: guide-release-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - name: Verify dual-variant release evidence
+        run: |
+          npm ci
+          npm run verify:release -- --keep-artifacts
+
+      - name: Upload failure artifacts
+        if: ${{ failure() && hashFiles('.release-artifacts/**') != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: guide-release-failure-artifacts
+          path: .release-artifacts
+          retention-days: 3
+          if-no-files-found: ignore
+          include-hidden-files: true
+
+  verify-runtime:
+    name: Verify Docker runtime
+    runs-on: ubuntu-24.04
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build runtime image and validate Nginx
+        run: |
+          docker build --target runtime \
+            --build-arg NEXT_PUBLIC_SITE_VARIANT=cn \
+            --build-arg NEXT_PUBLIC_HOME_URL=https://fastgpt.cn \
+            --build-arg NEXT_PUBLIC_CN_HOME_URL=https://fastgpt.cn \
+            --build-arg NEXT_PUBLIC_IO_HOME_URL=https://fastgpt.io \
+            --tag fastgpt-home-runtime:${{ github.sha }} .

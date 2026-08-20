@@ -25,4 +25,4 @@ source_type: 官方文档
 
 使用时需注意：自动触发工作流仅适用于用户加载对话场景，无法支持主动触发后的自动执行；若未正确匹配镜像标签，可能导致服务启动异常；升级前的备份操作不可省略，否则可能出现不可逆的数据损失。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814)

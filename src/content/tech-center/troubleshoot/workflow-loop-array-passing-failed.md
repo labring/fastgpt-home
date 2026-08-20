@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 调整循环体的输入绑定配置，将其指向代码模块生成的数组字段（而非完整响应数据），确保循环体可以正确识别并遍历数组元素。修改配置后重新运行工作流，验证循环体是否可以正常将每个数组元素传递到后续节点，确认工作流执行成功。若问题仍未解决，需按实际环境进一步排查。
 
-> 来源：https://github.com/labring/FastGPT/issues/6482
+> 来源：[FastGPT GitHub Issue #6482](https://github.com/labring/FastGPT/issues/6482)

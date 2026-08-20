@@ -36,4 +36,4 @@ FastGPT V4.5版本升级了PgVector插件至0.5.0版本，引入HNSW索引以提
 ### 升级易错点与注意事项
 本次升级存在多个需注意的细节：一是Sealos部署与Docker Compose部署的SQL命令存在差异，例如后者需额外执行`ALTER DATABASE postgres REFRESH COLLATION VERSION;`；二是构建索引的内存配置需根据数据库规格调整，示例的`2400MB`仅适用于4c16g的服务器，建议设置为1/4的数据库内存；三是索引构建过程中不可强制中断，否则需重新执行创建索引的命令；四是验证索引时需确认结果无`INVALID`后缀，否则代表索引构建失败。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/45)

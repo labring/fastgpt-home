@@ -25,4 +25,4 @@ source_type: GitHub issue
 2.  响应侧需增加数据格式嗅探逻辑：当检测到返回的`embedding`为Base64编码时，先将其解码为`number[]`浮点数向量，再进入后续的`normalization`、`truncate`、`vector store`逻辑。
 验证方式：重新配置Embedding模型的“额外Body参数”为`{"encoding_format": "base64"}`，执行向量化操作，确认后端无`TypeError`报错，向量生成与存储流程正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6769
+> 来源：[FastGPT GitHub Issue #6769](https://github.com/labring/FastGPT/issues/6769)

@@ -23,4 +23,4 @@ FastGPT 4.14.4私有部署版本中，通过docker compose配置ollama相关容�
 ## 解决与验证
 根据排查到的具体问题进行修复：若为镜像拉取失败，可配置镜像加速源或手动拉取目标镜像；若为端口冲突，修改docker compose中的端口映射并同步更新FastGPT的重排序服务配置；若为服务启动参数异常，调整容器的内存、启动命令等参数。修复完成后，在FastGPT的模型管理页面测试重排序服务，确认服务可正常调用且无报错日志。
 
-> 来源：https://github.com/labring/FastGPT/issues/6302
+> 来源：[FastGPT GitHub Issue #6302](https://github.com/labring/FastGPT/issues/6302)

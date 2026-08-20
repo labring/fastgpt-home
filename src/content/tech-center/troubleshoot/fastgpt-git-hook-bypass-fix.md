@@ -41,4 +41,4 @@ source_type: GitHub issue
 2.  尝试执行带`--no-verify`参数的`git commit`或`git push`命令
 3.  确认命令被拦截，无法绕过Git钩子完成提交或推送操作
 
-> 来源：https://github.com/labring/FastGPT/issues/6589
+> 来源：[FastGPT GitHub Issue #6589](https://github.com/labring/FastGPT/issues/6589)

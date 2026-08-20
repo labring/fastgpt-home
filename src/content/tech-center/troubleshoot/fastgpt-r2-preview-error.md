@@ -26,4 +26,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查结果选择对应解决方法：若为配置参数不匹配，修正为与Cloudflare R2控制台一致的参数；若为访问权限或凭证问题，调整FastGPT的R2访问权限范围或更新有效凭证；若为服务端逻辑错误，需按日志提示修复对应代码。验证时，重新上传测试文件，点击数据预览按钮，确认不再返回500错误，文件预览可正常加载。
 
-> 来源：https://github.com/labring/FastGPT/issues/6284
+> 来源：[FastGPT GitHub Issue #6284](https://github.com/labring/FastGPT/issues/6284)

@@ -26,4 +26,4 @@ source_type: GitHub issue
 2.  修复完成后，重启FastGPT服务，验证核心功能是否恢复正常。
 3.  若问题仍未解决，需补充完整的报错日志、操作步骤等细节，以便进一步定位问题。
 
-> 来源：https://github.com/labring/FastGPT/issues/6706
+> 来源：[FastGPT GitHub Issue #6706](https://github.com/labring/FastGPT/issues/6706)

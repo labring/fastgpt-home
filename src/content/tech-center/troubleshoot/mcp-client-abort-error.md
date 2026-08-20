@@ -30,4 +30,4 @@ source_type: GitHub issue
 3. 若超时配置过短，调整MCP客户端的超时参数至合理范围（需按实际环境确认具体值）；
 4. 验证：重启FastGPT服务，观察后台日志是否不再出现该MCP连接报错，同时确认相关依赖MCP服务的业务功能可正常运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/7307
+> 来源：[FastGPT GitHub Issue #7307](https://github.com/labring/FastGPT/issues/7307)

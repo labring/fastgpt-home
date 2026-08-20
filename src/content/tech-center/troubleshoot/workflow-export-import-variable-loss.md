@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前官方暂未发布针对该问题的正式修复版本。临时规避方案为：在导入配置后，重新进入AI对话节点的配置页面，手动重新配置AI模型的全局变量引用。验证方式为：重新配置完成后，再次执行导出导入流程，确认AI模型的变量引用配置未再次丢失。
 
-> 来源：https://github.com/labring/FastGPT/issues/6351
+> 来源：[FastGPT GitHub Issue #6351](https://github.com/labring/FastGPT/issues/6351)

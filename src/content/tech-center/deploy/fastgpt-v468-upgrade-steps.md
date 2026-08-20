@@ -56,4 +56,4 @@ curl --location --request POST https://{{host}}/api/init/v468 \
 --header "Content-Type: application/json"
 ```
 该请求会初始化计费系统，内部使用场景可免费扩容存储容量。
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/468)

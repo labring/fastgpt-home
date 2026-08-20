@@ -28,4 +28,4 @@ FastGPT默认内置的存储配置仅支持标注的minio、aws-s3、cos、oss�
 5. 无需在`STORAGE_EXTERNAL_ENDPOINT`中填写桶名，系统将自动拼接桶名与存储服务地址，符合OBS的域名格式要求，需按实际环境确认拼接逻辑是否适配。
 6. 重启FastGPT服务，验证文件上传、存储访问等功能是否正常，若出现异常需按实际环境调整配置参数。
 
-> 来源：https://github.com/labring/FastGPT/issues/6270
+> 来源：[FastGPT GitHub Issue #6270](https://github.com/labring/FastGPT/issues/6270)

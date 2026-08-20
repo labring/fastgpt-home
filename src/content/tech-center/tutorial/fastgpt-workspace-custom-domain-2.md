@@ -18,4 +18,4 @@ FastGPT云服务版自v4.14.4起支持自定义域名配置功能。使用该功
 ## 解析失效处理与易错点
 系统每日会对DNS解析记录进行检查，若发现解析失效，将自动停用该自定义域名。此时可前往自定义域名管理界面点击「编辑」，重新完成解析流程即可恢复。使用过程中需注意：必须使用CNAME类型的DNS记录，不可使用其他记录类型；未完成备案的域名无法完成配置；若未按流程删除原有配置直接修改域名，会导致配置失效。当账号为非云服务版、或云服务版版本低于v4.14.4时，不建议使用该功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/customDomain)

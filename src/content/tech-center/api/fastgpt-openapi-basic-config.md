@@ -18,4 +18,4 @@ source_type: 官方文档
 2.  配置请求头：添加 `Authorization: Bearer {{apikey}}`，其中 `{{apikey}}` 需替换为实际获取的 API Key。
 所有 FastGPT OpenAPI 接口均通过该请求头完成鉴权，完成配置后即可按照文档中的接口说明发起调用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/intro)

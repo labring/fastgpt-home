@@ -21,4 +21,4 @@ source_type: 官方文档
 3. 若为私有化部署场景，可在后台配置模型参数时预留上下文空间，例如将128000的模型配置为120000，剩余空间可分配给输出内容。
 知识库页面出现闪烁问题，需检查并补齐索引模型的配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/faq
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/faq)

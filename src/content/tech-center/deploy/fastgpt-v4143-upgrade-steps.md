@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4143 \
 ## 升级注意事项
 本次升级需注意两个核心边界与易错点：一是知识库文件迁移仅覆盖原生存储在GridFS中的文件，文档解析生成的图片不在迁移范围内；二是若S3服务与主服务使用相同Origin域名，可能出现文件请求URL被错误替换导致404报错，本次更新已修复该问题，但仍需提前确认域名配置。此外，升级后工作流调试预览窗口不会再因重新渲染丢失输入内容，插件工具的缓存刷新逻辑也已恢复正常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4143
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4143)

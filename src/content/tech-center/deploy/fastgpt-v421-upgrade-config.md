@@ -31,4 +31,4 @@ VectorModels: [
 ## 改动目的
 本次配置调整的核心目的是简化模型选择逻辑，官方认为无需留给用户额外的选择余地，统一使用最合适的模型完成相关任务，降低用户的配置复杂度。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/421)

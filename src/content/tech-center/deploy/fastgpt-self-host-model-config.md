@@ -31,4 +31,4 @@ curl --location --request POST {{host}}/api/channels/import/oneapi \
 ```
 执行成功会返回`success: true`，脚本仅做简单数据映射，建议迁移后手动检查。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/intro)

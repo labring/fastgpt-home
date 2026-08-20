@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 快速配置示例
 以条件循环实现AI文案润色达标为例，步骤如下：1. 将循环类型设置为条件循环；2. 配置循环体内流程：先通过【AI对话】节点优化文案，再通过【AI对话】节点评估文案分数，最后通过【判断器】判断分数是否达标；3. 达标时连线【指定回复】节点后接【循环终止】节点，未达标则直接进入下一轮；4. 在循环节点输出栏添加自定义输出final_text，绑定循环体内【AI对话（文案优化）】节点的回复内容。循环退出后，下游节点可通过final_text获取最终达标文案。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)

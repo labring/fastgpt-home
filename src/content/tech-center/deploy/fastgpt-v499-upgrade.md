@@ -24,4 +24,4 @@ source_type: 官方文档
 ### 修复问题
 修复无法正常获取应用历史保存/发布记录的问题；修复成员创建MCP工具时的权限异常问题；修复来源引用展示时ID传递错误，导致无权操作对应文件的问题；修复回答标注环节的前端数据报错问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/499
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/499)

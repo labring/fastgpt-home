@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前暂未找到官方发布的针对性修复方案，可尝试以下方向验证：一是等待官方发布适配ARM架构的新版sandbox镜像；二是回退至V4.14.7及更早版本，确认ARM环境下sandbox是否可正常启动。验证方式为：启动docker compose服务后，查看code-sandbox容器的运行状态，确认不再持续重启，且无`exited with code 139`相关报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6625
+> 来源：[FastGPT GitHub Issue #6625](https://github.com/labring/FastGPT/issues/6625)

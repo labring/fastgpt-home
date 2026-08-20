@@ -31,4 +31,4 @@ curl --location --request POST https://{{host}}/api/admin/init/4811 \
 ## 升级注意事项
 执行升级时需注意以下边界与易错点：OpenAI o1系列模型不支持stream模式，配置时需覆盖对应参数；循环运行节点仅支持最多50长度的数组串行执行，超出长度将无法正常运行；工作流嵌套子应用时，简易模式调用将强制使用非流模式，无需额外设置；初始化请求需确保rootkey与host参数正确，否则将无法完成团队成员组初始化；已配置自定义提示词的AI对话节点，知识库引用将保持user模式，其余节点自动转为system模式。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4811)

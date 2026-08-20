@@ -15,4 +15,4 @@ source_type: 官方文档
 1. 更新fastgpt-app（FastGPT主服务）的镜像tag为`v4.14.13`，按照原有部署流程完成服务重启即可。
 
 该升级仅适用于已部署4.14.x系列版本的FastGPT实例，请勿直接从非4.14.x版本执行此升级操作。在升级前，需确认当前部署的镜像拉取权限正常，避免出现镜像无法拉取的问题。对于自定义集成了completions接口的业务代码，需注意该接口现在支持chatId为null的传参，需提前适配相关逻辑，避免出现接口调用异常。另外，该版本未提及环境变量变更，无需额外调整原有配置项。
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41413
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41413)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 当前暂无该issue对应的通用固定解决方案，需根据排查步骤定位的具体问题进行针对性处理。例如若为网络连通性问题，则调整服务器网络策略或修复依赖服务；若为配置项异常，则修正对应配置内容。验证方式为启动FastGPT容器后，确认容器无持续重启问题，且Docker日志中无`[plugin_error]: fetch failed`相关报错。
 
-> 来源：https://github.com/labring/FastGPT/issues/6645
+> 来源：[FastGPT GitHub Issue #6645](https://github.com/labring/FastGPT/issues/6645)

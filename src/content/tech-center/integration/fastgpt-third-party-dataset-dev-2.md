@@ -18,4 +18,4 @@ FastGPT内置了飞书、语雀等常用文档库，但不同用户可能需要�
 2.  **创建Hook文件**：在`FastGPT\packages\service\core\dataset\apiDataset\`下新建专属文件夹及`api.ts`文件，实现`listFiles`、`getFileContent`、`getFileDetail`、`getFilePreviewUrl`、`getFileId`5个核心函数。
 3.  **完成系统适配**：依次修改类型定义文件、工具类文件、调用入口文件，添加多语言翻译、知识库图标，并在知识库列表页和配置表单中添加对应的入口与配置项。若文档库不支持根目录选择，无需添加`renderBaseUrlSelector()`和`renderDirectoryModal()`组件，避免出现配置错误。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)

@@ -19,4 +19,4 @@ MCP协议（Model Context Protocol）由Anthropic在2024年11月初发布，用�
 ## 私有化部署注意事项
 私有化部署FastGPT时，需先完成两项配置修改：首先在docker-compose.yml文件中添加fastgpt-mcp-server服务，配置容器名称、镜像地址、端口映射（3005:3000）、网络、重启策略及FASTGPT_ENDPOINT环境变量（值为http://fastgpt:3000）；其次在FastGPT容器中配置SSE_MCP_SERVER_PROXY_ENDPOINT环境变量，值为客户端可访问的MCP Server地址，末尾不得携带/，例如https://mcp.fastgpt.cn。完成配置后执行docker-compose down和docker-compose up -d重启服务，重启后即可在工作台看到MCP Server服务选项。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)

@@ -27,4 +27,4 @@ source_type: GitHub issue
 4. 点击图片或双击知识库片段，验证图片可以正常加载显示。
 5. 确认所有分段内的图片均正常显示，问题得到解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6245
+> 来源：[FastGPT GitHub Issue #6245](https://github.com/labring/FastGPT/issues/6245)

@@ -152,12 +152,3 @@ Put the following metrics into the "not publicly listed / POC required / contrac
 | Low-cost validation should happen first, followed by migration to a private environment | FastGPT has a complete Cloud-to-private path |
 
 Security, reliability, and accuracy should be confirmed through unified POC and contract acceptance. Controls that are not covered should enter the supplemental test checklist.
-
----
-
-> **Sources**: MaxKB and FastGPT official websites, official documentation, official repositories, official pricing pages, and public release records
-> **Verification date**: 2026-07-20
-> **Versions and plans**: MaxKB community self-hosting / Professional / Enterprise; FastGPT Cloud / community self-hosting / managed and self-hosted commercial editions
-> **Update record**: V1.2 (2026-08-08) rewrote visible copy while preserving facts on procurement, governance, support responsibility, and POC. Authorization price, maintenance, version numbers, and support tiers use a 90-day review cycle
-
-> **Update record addendum**: On 2026-08-08, page framing and body copy were unified around applicable scenarios, production differences, contract responsibility, and same-condition POC. Evidence remains stored in delivery metadata and the manifest.

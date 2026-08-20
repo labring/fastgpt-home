@@ -16,4 +16,4 @@ source_type: 官方文档
 ## 前端错误排查流程
 当前端页面出现报错崩溃时，通常会弹出提示要求检查控制台日志。此时可打开浏览器的开发者工具，切换至`console`标签页查看日志内容，点击对应日志条目中的超链接，可直接定位到触发错误的具体文件。将这些完整的错误信息与场景描述提供后，可大幅提升排查效率。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/methods
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/methods)

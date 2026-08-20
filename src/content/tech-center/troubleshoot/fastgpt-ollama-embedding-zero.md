@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查后确认问题源于FastGPT对Ollama API响应的解析异常，可尝试升级FastGPT到最新版本以修复该问题。验证方式为：重新配置Ollama向量化模型，发起向量化测试请求，确认返回的向量结果不再为全0，且与Ollama实际返回的结果一致。
 
-> 来源：https://github.com/labring/FastGPT/issues/6559
+> 来源：[FastGPT GitHub Issue #6559](https://github.com/labring/FastGPT/issues/6559)

@@ -23,4 +23,4 @@ source_type: 官方文档
 #### 修复内容
 修复全文检索多知识库时排序得分不正确的问题；修复流响应捕获`finish_reason`可能不正确的问题；修复工具调用模式下未保存思考输出的问题；修复知识库`indexSize`参数未生效的问题；修复工作流嵌套2层后，获取预览引用、上下文不正确的问题；修复xlsx转Markdown时前置多出空格的问题；修复读取Markdown文件时，Base64图片未正确转换保存的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4910)

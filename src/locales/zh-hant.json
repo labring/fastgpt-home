@@ -435,6 +435,7 @@
           "title": "連結",
           "items": {
             "docs": "官方文檔",
+            "guide": "指南",
             "faq": "常見問題",
             "learning": "學習中心",
             "cases": "案例中心",

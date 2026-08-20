@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 安全限制与可用资源
 沙盒提供多层安全防护：模块拦截方面，JavaScript和Python仅允许使用官方白名单模块；网络隔离方面，自动拦截内网IP请求（支持拦截127.0.0.0/8、10.0.0.0/8、172.16.0.0/12、192.168.0.0/16等网段）；文件隔离方面，无法读写容器文件系统；超时保护默认60秒，防止死循环；进程隔离方面，每次代码执行都在独立的沙盒进程中运行。内置可使用httpRequest发起外部HTTP请求，支持自定义请求方法、请求头、请求体与超时设置，单次请求超时最大60秒，响应体最大2MB，仅允许http/https协议，每次执行最多允许30个请求。JavaScript可使用lodash、moment、dayjs等白名单npm模块，禁止使用fs、child_process、net等模块；Python可导入math、json、numpy等白名单标准库与第三方库，禁止使用os、sys、subprocess、socket、urllib、http、requests等涉及系统调用、网络访问、文件系统的模块。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/sandbox-v2)

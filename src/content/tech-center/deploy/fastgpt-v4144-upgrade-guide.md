@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4144 \
 ## 升级注意事项
 本次升级的迁移任务为异步执行，无需等待接口返回结果，需关注服务日志确认完成状态。删除应用或知识库时，必须手动输入对应名称完成校验。若使用S3存储，需确保配置了正确的pathStyle和region参数。分享链接自定义鉴权返回的uid长度需小于200，避免影响文件上传功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144)

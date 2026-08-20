@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 正确配置fastgpt-minio容器的STORAGE_EXTERNAL_ENDPOINT为外部可访问的minio访问地址，重启容器后，重新上传知识库文件。验证生成的访问URL不再包含内部域名fastgpt-minio.localhost:9000，且文件上传成功。若问题仍未解决，需按实际环境检查FastGPT应用服务的存储配置是否同步了该端点信息。
 
-> 来源：https://github.com/labring/FastGPT/issues/6750
+> 来源：[FastGPT GitHub Issue #6750](https://github.com/labring/FastGPT/issues/6750)

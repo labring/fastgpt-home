@@ -37,4 +37,4 @@ source_type: 官方文档
 ### 升级注意事项
 本次工作流迁移接口仅用于本次升级，不对外提供OpenAPI。迁移时会按`apps.version != v2 且 type 非 folder、httpPlugin、toolFolder`扫描应用，转换节点字段（如moduleId转为nodeId、flowType转为flowNodeType），未知节点类型会兜底为emptyNode，非法valueType转为any。写库前会通过`PublishAppBodySchema`校验节点、边和聊天配置，校验失败的内容不会写入。此外部分历史工作流可能存在将TypeScript枚举表达式直接写入数据库的问题，需按上述迁移逻辑完成清洗。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41507)

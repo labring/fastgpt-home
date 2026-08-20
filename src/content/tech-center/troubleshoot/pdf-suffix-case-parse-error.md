@@ -22,4 +22,4 @@ FastGPT的文件解析逻辑对文件后缀名的大小写有严格校验规则�
 ## 解决与验证
 解决方法：将目标文件的后缀名修改为小写的`.pdf`后重新上传至FastGPT流程。验证步骤：上传修改后缀后的文件，确认流程可以正常读取并解析文件内容，即可验证该问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6996
+> 来源：[FastGPT GitHub Issue #6996](https://github.com/labring/FastGPT/issues/6996)

@@ -22,4 +22,4 @@ source_type: 官方文档
 4. 在循环节点的输出栏添加自定义输出final_text，绑定循环体内第一个【AI对话】节点的回复内容；
 5. 私有化部署时可通过环境变量WORKFLOW_MAX_LOOP_TIMES调整最大循环次数，默认值为100，防止死循环。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop_run)

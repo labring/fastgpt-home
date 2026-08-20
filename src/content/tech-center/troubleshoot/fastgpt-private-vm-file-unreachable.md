@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查为挂载配置问题，需将FastGPT的用户上传文件目录挂载至虚拟机运行环境；若为权限问题，需调整目录权限以匹配虚拟机运行用户的访问权限。验证时，重新上传测试文件后，在虚拟机中执行文件读取命令，确认文件可正常访问和读取，符合预期的文件交互体验。
 
-> 来源：https://github.com/labring/FastGPT/issues/6696
+> 来源：[FastGPT GitHub Issue #6696](https://github.com/labring/FastGPT/issues/6696)

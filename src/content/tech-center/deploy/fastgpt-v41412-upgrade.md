@@ -23,4 +23,4 @@ source_type: 官方文档
 新增内容为：响应值允许自定义HttpStatus状态码；Agent调度器支持PI Agent模式（beta功能）。
 优化内容为：优化skill接口的错误处理逻辑，提升接口调用的稳定性与报错提示清晰度。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41412
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41412)

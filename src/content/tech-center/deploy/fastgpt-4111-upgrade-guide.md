@@ -22,4 +22,4 @@ source_type: 官方文档
 2. 保留mcp_server、Sandbox、AIProxy的现有镜像版本，无需拉取更新。
 3. 停止原有FastGPT、商业版、fastgpt-plugin容器，使用新镜像重新创建并启动容器，完成升级。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111)

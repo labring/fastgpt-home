@@ -27,4 +27,4 @@ curl --location --request POST https://{{host}}/api/admin/init/484 \
 ## 升级注意事项
 非商业版用户无需执行初始化请求步骤，仅需完成镜像标签修改即可。执行初始化请求前，请确认已正确获取rootkey并保护好该密钥，避免泄露。发起请求时需确保终端网络可以正常访问配置的`{{host}}`域名，否则请求会失败。若部署过程中出现版本不一致的报错，需检查所有相关镜像的tag是否均已同步修改为`v4.8.4`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484)

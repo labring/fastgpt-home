@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查得到的具体异常原因进行针对性修复。例如若为部署配置错误则修正对应配置项，若为依赖服务异常则重启对应服务。修复完成后，重新启动FastGPT服务，验证原本异常的功能是否恢复正常。若仍存在异常，需补充完整的异常日志与截图信息，以便进一步排查问题。
 
-> 来源：https://github.com/labring/FastGPT/issues/7236
+> 来源：[FastGPT GitHub Issue #7236](https://github.com/labring/FastGPT/issues/7236)

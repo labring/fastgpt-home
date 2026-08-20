@@ -21,4 +21,4 @@ MiniMax是提供高性能大语言模型API服务的厂商，其API兼容OpenAI�
 
 完成上述配置后，该MiniMax模型渠道即可正式投入使用，可在FastGPT的各类应用流程中调用该模型完成相关任务。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax)

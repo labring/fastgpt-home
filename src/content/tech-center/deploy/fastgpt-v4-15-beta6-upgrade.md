@@ -34,4 +34,4 @@ source_type: 官方文档
 ## 升级风险提示
 本次升级中，LLM请求追踪记录（`llm_request_records`）新增`teamId`字段，实现团队隔离能力。需注意该接口仅用于本次升级迁移，不作为对外OpenAPI接口使用，且不会回填历史App Chat的sourceType字段。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41506)

@@ -22,4 +22,4 @@ QAModel : { model : gpt-3.5-turbo-16k , name : GPT35-16k , maxToken : 16000 , pr
 2.  若您此前配置的是数组格式的`QAModel`，则将其重构为上述示例的对象格式，确保每个字段的名称和参数值与您的实际部署需求匹配；
 3.  保存修改后的配置文件，完成本次升级的配置调整。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42)

@@ -20,4 +20,4 @@ FastGPT工作流中的AI对话节点是核心功能模块，支持重复添加�
 ### 使用边界与注意事项
 该节点存在明确的使用边界，仅支持基于已配置的AI模型生成对话内容，无法直接集成知识库搜索、外部接口调用等其他功能，如需结合多类能力需搭配对应专用工作流节点使用。若未通过`config.json`完成可选模型的配置，节点将无法正常加载可用的模型选项，导致无法完成对话逻辑配置。当需要处理纯文本格式转换、内容提取等非对话类任务时，不应使用该节点，建议选择文本拼接、文本内容提取等专用节点完成对应操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/ai_chat
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/ai_chat)

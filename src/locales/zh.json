@@ -442,6 +442,7 @@
           "title": "链接",
           "items": {
             "docs": "官网文档",
+            "guide": "指南",
             "faq": "常见问题",
             "learning": "学习中心",
             "cases": "案例中心",

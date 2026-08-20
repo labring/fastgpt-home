@@ -17,4 +17,4 @@ FastGPT云服务分为两个独立版本，账号体系互不互通，用户需�
 ## 登录问题排查步骤
 这是可照做的操作步骤，具体如下：1. 确认当前使用的FastGPT云服务版本，核对访问地址是否与登录方式匹配，中国大陆版需使用https://fastgpt.cn及对应微信、手机号登录方式，国际版需使用https://fastgpt.io及对应邮箱、Google、GitHub登录方式；2. 若已使用对应地址仍无法登录，尝试切换到另一个版本的平台重新尝试登录；3. 若以上两步均未解决问题，可记录当前的登录提示信息（若有），前往飞书社群联系管理员协助排查。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/cloud/faq)

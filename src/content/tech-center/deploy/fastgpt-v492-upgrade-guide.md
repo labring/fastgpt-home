@@ -21,4 +21,4 @@ FastGPT V4.9.2版本包含环境变量与配置参数变更，且该版本存在
 本次版本新增知识库分块优化功能，支持单独配置分块大小与索引大小，可通过自定义分隔符实现分块；知识库导入数据API新增`chunkSettingMode`、`chunkSplitMode`、`indexSize`等可选参数。外部变量改名为“自定义变量”，支持测试时调试，且在分享链接中自动隐藏。团队成员管理模块完成重构，抽离主流IM SSO接入能力并支持自定义SSO，同时完善外部系统成员同步功能；新增OceanBase向量数据库支持，仅需配置`OCEANBASE_URL`环境变量即可启用。
 优化内容包括导出对话日志时显示成员名、修复无SSL证书时的复制提示逻辑、升级Next.js版本至14.2.25、优化工作流节点数组类型适配逻辑等；修复了飞书、语雀知识库无法同步，渠道测试自定义请求地址异常，语音识别模型测试异常等问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/492
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/492)

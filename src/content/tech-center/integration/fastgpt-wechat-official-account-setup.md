@@ -22,4 +22,4 @@ FastGPT商业版4.8.10及以上版本支持直接接入微信公众号，无需�
 ## 常见使用说明
 若需要重置聊天记录，可向机器人发送大小写敏感的「Reset」消息，即可新开一条聊天记录。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/official_account)

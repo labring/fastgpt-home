@@ -25,4 +25,4 @@ source_type: GitHub issue
 2. 重新上传同一Excel文件，查看分块结果是否每行内容被单独作为一个分块。
 3. 确认分块结果符合预期后，保存知识库的配置修改，完成问题修复。
 
-> 来源：https://github.com/labring/FastGPT/issues/6583
+> 来源：[FastGPT GitHub Issue #6583](https://github.com/labring/FastGPT/issues/6583)

@@ -17,4 +17,4 @@ FastGPT社区版是FastGPT推出的免费版本，专为个人开发者或小型
 ## 使用边界与注意事项
 使用FastGPT社区版时，需严格遵守FastGPT开源协议的相关条款，不得超出协议允许的范围使用该版本。该版本的适用范围仅限个人开发者或小型交付团队，若团队规模较大或需进行商业级交付，则需参考FastGPT商业版的相关说明进行选型。同时，社区版未提供专属的商业技术支持服务，若需获取专属支持，可查阅FastGPT商业版的配套说明文档。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/opensource/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/intro)

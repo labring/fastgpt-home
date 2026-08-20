@@ -24,4 +24,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对不同排查结果采取对应措施：若为前端重复请求，调整前端轮询间隔或缓存逻辑，避免重复发起相同接口请求；若为Docker资源不足，调整容器的CPU、内存分配参数后重新部署；若为日志截断，检查容器日志的输出配置并调整大小限制；若为`versionKey`参数问题，确认版本Key的生成规则，确保每次请求使用唯一的版本Key。验证方式：重启容器后，观察日志中不再出现重复的`GET /api/core/ai/model/getMyModels`请求，且所有接口请求的日志内容完整，无截断情况。
 
-> 来源：https://github.com/labring/FastGPT/issues/6438
+> 来源：[FastGPT GitHub Issue #6438](https://github.com/labring/FastGPT/issues/6438)

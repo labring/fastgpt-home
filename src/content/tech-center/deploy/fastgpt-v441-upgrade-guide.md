@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv441 \
 **升级相关补充说明**
 本页面同时收录了FastGPT多个历史版本的升级指引，包括V4.4、V4.4.2等版本的升级操作，用户可根据自身当前部署的版本选择对应的升级步骤。需要注意的是，所有升级操作均需确保FastGPT服务处于正常运行状态，且rootkey配置与环境变量中的取值完全一致，否则可能无法完成初始化操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441)

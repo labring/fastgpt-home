@@ -1,6 +1,5 @@
 import DeferredSiteIntegrations from '@/app/DeferredSiteIntegrations';
 import MotionProvider from '@/components/home/motion/MotionProvider';
-import ConsultationProvider from '@/components/contact/ConsultationProvider';
 import { siteConfig } from '@/config/site';
 import { cn } from '@/lib/utils';
 import { defaultLocale } from '@/lib/i18n';
@@ -75,9 +74,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           fontDisplay.variable
         )}
       >
-        <MotionProvider>
-          <ConsultationProvider defaultLocale={defaultLocale}>{children}</ConsultationProvider>
-        </MotionProvider>
+        <MotionProvider>{children}</MotionProvider>
         <DeferredSiteIntegrations />
       </body>
     </html>

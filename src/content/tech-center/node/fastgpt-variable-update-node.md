@@ -21,4 +21,4 @@ FastGPT工作流中的变量更新节点是一款基础配置节点，具备四�
 ## 核心使用场景
 变量更新节点的使用场景覆盖两类常见需求：其一，当需要为「自定义变量」类型的全局变量设置初始值，且无需用户手动输入时，可通过该节点直接完成赋值，简化用户交互流程；其二，当工作流需要根据中间环节的计算结果调整后续逻辑时，可通过该节点更新前序节点的输出值，让后续节点使用最新的计算结果，实现动态的工作流分支与逻辑调整。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/variable_update
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/variable_update)

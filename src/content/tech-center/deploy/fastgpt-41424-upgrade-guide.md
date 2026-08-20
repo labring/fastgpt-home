@@ -24,4 +24,4 @@ source_type: 官方文档
 ### 版本使用注意事项
 需注意，官方已弃用V4.14.25版本，请勿使用该版本进行FastGPT的部署或升级操作，建议优先选择本次介绍的V4.14.24版本。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41424
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41424)

@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv462 \
 ## 升级注意事项
 执行初始化请求前，需确认已正确配置环境变量rootkey，否则请求会返回认证失败的报错信息。需注意，全文索引功能必须搭配Rerank模型使用，未配置对应模型的情况下无法正常启用该功能。插件来源配置项暂未正式生效，无需提前进行额外配置。若当前部署的FastGPT版本高于V4.6.2，则无需执行该升级脚本，避免出现不必要的配置冲突。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/462
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/462)

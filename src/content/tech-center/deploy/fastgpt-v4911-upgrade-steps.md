@@ -27,4 +27,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4911 \
 #### 修复内容
 修复了工作流中管理员声明的全局系统工具无法进行版本管理的问题；修复工具调用节点前存在交互节点时的上下文异常问题；修复备份导入时小于1000字无法分块的问题；修复自定义PDF解析无法保存base64图片的问题；修复非流请求未进行CITE标记替换的问题；修复Python沙盒存在的隐藏风险；修复curl导入插件缺失确认按键的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4911
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4911)

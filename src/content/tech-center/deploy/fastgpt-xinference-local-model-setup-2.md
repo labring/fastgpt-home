@@ -16,4 +16,4 @@ Xinference是一款开源模型推理平台，支持LLM、Embedding和ReRank模�
 ## 部署本地大模型
 以Qwen-14B模型为例，可通过两种方式启动。WebUI方式：访问`http://127.0.0.1:9997`打开本地Web界面，切换到“Launch Model”标签，搜索`qwen-chat`后设置启动参数，点击模型卡片左下角的小火箭按钮即可部署。首次启动会从HuggingFace下载模型参数，缓存至本地后无需重复下载，也支持从modelscope下载模型。默认Model UID为`qwen-chat`，后续可通过该ID访问模型。也可使用Xinference的命令行工具启动模型，默认Model UID同样为`qwen-chat`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/xinference)

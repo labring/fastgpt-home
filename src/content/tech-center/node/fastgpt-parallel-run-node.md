@@ -30,4 +30,4 @@ source_type: 官方文档
 4.  配置执行逻辑的结束节点，将输出变量设置为AI对话的回复内容。
 下游可直接引用「成功结果」获取翻译后的字符串数组，引用「完整结果」可查看每项任务的执行状态，通过「完成状态」可快速判断是否需要触发兜底逻辑。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/parallel_run)

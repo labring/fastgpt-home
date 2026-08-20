@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4144 \
 ## 升级注意事项
 本次升级存在几个关键易错点：删除应用和知识库时，必须输入对应名称进行校验，否则无法完成操作；分享链接的自定义鉴权返回uid参数长度需小于200，过长会影响文件上传功能；旧版Gridfs存储代码已完全移除，不再支持相关存储方式；升级脚本执行后无需手动干预其他操作，只需等待日志输出完成提示即可。此外，若使用S3存储，需确保已正确配置pathStyle与region参数。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4144)

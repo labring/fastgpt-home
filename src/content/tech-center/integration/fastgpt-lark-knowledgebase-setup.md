@@ -22,4 +22,4 @@ source_type: 官方文档
 ## 易错点与使用限制
 配置过程中需注意，权限配置错误会导致无法正常获取文档内容；提取Folder Token时，若误包含路径中的问号，会导致参数无效无法创建知识库。当需要对接飞书个人空间或飞书知识库内的文档时，无法使用该功能；若仅需导入非云文档类型的内容，也不适用此配置方式。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/lark_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/lark_dataset)

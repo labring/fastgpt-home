@@ -28,4 +28,4 @@ source_type: GitHub issue
    - 将`http://localhost:3000/api/core/chat/history/clearHistories`修改为`http://localhost:3000/api/core/chat/clearHistories`
 3. 修改完成后，重新调用修改后的API路径，验证返回状态码为200即可。
 
-> 来源：https://github.com/labring/FastGPT/issues/6341
+> 来源：[FastGPT GitHub Issue #6341](https://github.com/labring/FastGPT/issues/6341)

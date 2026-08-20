@@ -32,4 +32,4 @@ curl --location --request POST https://{{host}}/api/admin/resetMilvus \
 ## 升级注意事项
 升级完成后，建议验证各项功能是否正常运行，尤其是配置了FE_DOMAIN环境变量的场景，可通过上传docx文件检查图片链接是否正确补全。若之前遇到过本次更新修复的各类问题，升级后相关异常将得到解决。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4812)

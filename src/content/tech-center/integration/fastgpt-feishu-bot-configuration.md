@@ -24,4 +24,4 @@ source_type: 官方文档
 1.  **发送消息无响应**：先检查飞书机器人回调地址、权限配置是否正确；查看FastGPT对话日志，若存在提问记录但无回应，说明未正确开通机器人回复权限；若无提问记录，可能是应用运行报错，可先测试最简机器人交互（暂不支持全局变量、文件、图片内容）。
 2.  **重置聊天记录**：向机器人发送`Reset`（注意大小写），即可新开聊天记录。飞书机器人的聊天记录chatId来源包括私聊聊天框、飞书话题群单个话题、群组聊天的群id+个人id组合。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)

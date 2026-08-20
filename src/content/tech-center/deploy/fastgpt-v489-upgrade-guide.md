@@ -26,4 +26,4 @@ curl --location --request POST https://{{host}}/api/admin/init/489 \
 ## 升级注意事项
 本次升级存在几个需要关注的边界与易错点：一是文件上传配置逻辑已变更，需通过系统配置管控图片上传权限，不再依赖视觉模型；二是函数调用（FC）模式已弃用，当前基本改用ToolChoice模式，使用FC模式时需注意GPT模型必须传入content参数；三是知识库rebuilding时页面会自动刷新至第一页，属于正常行为；四是分享链接的新对话反馈功能已修复，可正常使用。此外，升级前务必完成数据库备份，防止意外情况导致数据损坏。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/489)

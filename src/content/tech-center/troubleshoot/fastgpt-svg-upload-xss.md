@@ -27,4 +27,4 @@ source_type: GitHub issue
 4. 验证普通SVG文件可正常上传并展示，无功能异常。
 需注意，具体的清洗规则需按实际业务场景确认。
 
-> 来源：https://github.com/labring/FastGPT/issues/6247
+> 来源：[FastGPT GitHub Issue #6247](https://github.com/labring/FastGPT/issues/6247)

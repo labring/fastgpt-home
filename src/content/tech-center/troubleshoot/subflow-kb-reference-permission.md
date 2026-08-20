@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查后确认是权限上下文传递异常，需调整主流程调用子流程的权限配置，确保相关权限信息正确传递至子流程（具体参数需按实际环境确认）。验证方式为：重新通过主流程进入子流程发起涉及知识库的提问，检查知识库引用提示是否恢复正常；同时再次单独运行子流程，确认知识库引用功能未受影响，确保问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6434
+> 来源：[FastGPT GitHub Issue #6434](https://github.com/labring/FastGPT/issues/6434)

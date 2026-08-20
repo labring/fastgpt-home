@@ -1,11 +1,16 @@
 const assert = require('node:assert/strict');
 const { spawnSync } = require('node:child_process');
 const fs = require('node:fs');
+const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
+const packageJson = require('../package.json');
+const packageLock = require('../package-lock.json');
 
 const {
-  appendP1HistoricalBaselineAdvisories
+  parseArgs: parseReleaseArgs,
+  appendP1HistoricalBaselineAdvisories,
+  extractP1SuccessMeasurement
 } = require('./verify-release');
 const { buildOwnerExpectationSet, parseArgs } = require('./verify-faq-metadata');
 const { normalizeFaqMetadataPolicy } = require('./generate-faq-metadata');
@@ -27,7 +32,10 @@ function writeFaqFixture(record) {
     title: record.Title,
     description: record.Description
   });
-  const jsonLd = JSON.stringify({ '@type': 'Question', name: record.Question }).replaceAll('<', '\\u003c');
+  const jsonLd = JSON.stringify({ '@type': 'Question', name: record.Question }).replaceAll(
+    '<',
+    '\\u003c'
+  );
   const html = [
     '<!doctype html>',
     `<title>${escapeHtml(metadata.title)}</title>`,
@@ -66,6 +74,250 @@ function isCaseSensitiveFilesystem() {
 function failure(label, output, variant = 'io') {
   return { label, variant, command: 'npm run verify:p1', output };
 }
+
+test('release coordinator composes Guide checks around each fresh variant export', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  const faqSteps = [
+    'scripts/generate-faq-route-registry.js',
+    'scripts/generate-faq-metadata.js',
+    'scripts/verify-faq-routes.js',
+    'scripts/verify-faq-metadata.js',
+    'scripts/verify-faq-seo-graph.js',
+    'scripts/verify-faq-redirects.js'
+  ];
+  const positions = faqSteps.map((step) => source.indexOf(step));
+
+  assert(positions.every((position) => position >= 0));
+  assert.deepEqual(
+    [...positions].sort((left, right) => left - right),
+    positions
+  );
+  assert(source.includes('scripts/verify-guide-content.js'));
+  assert(source.includes('scripts/verify-guide-export.js'));
+  assert(source.includes("const variants = options.variant ? [options.variant] : ['io', 'cn'];"));
+
+  const variantLoop = source.slice(source.indexOf('for (const variant of variants)'));
+  const firstCleanup = variantLoop.indexOf('clearBuildArtifacts()');
+  const secondCleanup = variantLoop.indexOf('clearBuildArtifacts()', firstCleanup + 1);
+
+  assert(firstCleanup < variantLoop.indexOf('runGuideSourceChecks'));
+  assert(variantLoop.indexOf('runGuideSourceChecks') < variantLoop.indexOf('runVariantChecks'));
+  assert(variantLoop.indexOf('runVariantChecks') < secondCleanup);
+});
+
+test('release source checks run content hygiene first and block dirty published Markdown', () => {
+  assert.equal(
+    packageJson.scripts['verify:content-hygiene'],
+    'node scripts/verify-content-hygiene.js --mode source'
+  );
+  assert.equal(
+    packageJson.scripts['verify:content-hygiene-regression'],
+    'node --test scripts/verify-content-hygiene.test.js'
+  );
+  assert.match(
+    packageJson.scripts.prebuild,
+    /^node scripts\/verify-content-hygiene\.js --mode source && /
+  );
+
+  const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  assert(
+    source.indexOf('scripts/verify-content-hygiene.js') <
+      source.indexOf('TypeScript source verification')
+  );
+
+  const temporaryRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-release-hygiene-'));
+  const fixtureRoot = path.join(temporaryRoot, 'repo');
+  try {
+    fs.cpSync(ROOT, fixtureRoot, {
+      recursive: true,
+      filter: (source) =>
+        !['.git', '.next', 'node_modules', 'out', '.release-artifacts'].includes(
+          path.basename(source)
+        )
+    });
+    const dirtyPath = path.join(
+      fixtureRoot,
+      'src/content/guides/temporary-content-hygiene-dirty.md'
+    );
+    fs.writeFileSync(dirtyPath, '# Temporary fixture\n\nFact Source: internal KB\n');
+    const buildInfoPath = path.join(fixtureRoot, 'tsconfig.tsbuildinfo');
+    const buildInfoBefore = fs.readFileSync(buildInfoPath);
+    const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
+      cwd: fixtureRoot,
+      encoding: 'utf8',
+      env: {
+        ...process.env,
+        PATH: `${path.join(ROOT, 'node_modules/.bin')}${path.delimiter}${process.env.PATH}`
+      }
+    });
+    assert.equal(result.status, 1, result.stdout + result.stderr);
+    assert.match(result.stderr, /content hygiene source verification/);
+    assert.match(result.stderr, /temporary-content-hygiene-dirty\.md/);
+    assert.deepEqual(fs.readFileSync(buildInfoPath), buildInfoBefore);
+  } finally {
+    fs.rmSync(temporaryRoot, { recursive: true, force: true });
+  }
+});
+
+test('contact animations load GSAP only after the client mounts', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'src/components/contact/ContactPage.tsx'), 'utf8');
+
+  assert.doesNotMatch(
+    source,
+    /^import .* from ['"](?:@gsap\/react|gsap(?:\/ScrollTrigger)?)['"];$/m
+  );
+  assert.match(source, /import\('gsap'\)/);
+  assert.match(source, /import\('gsap\/ScrollTrigger'\)/);
+  assert(source.indexOf('gsapRuntime.registerPlugin') > source.indexOf('useEffect('));
+  assert.match(source, /context\?\.revert\(\)/);
+});
+
+test('root layout keeps the retired consultation modal out of initial JavaScript', () => {
+  const layout = fs.readFileSync(path.join(ROOT, 'src/app/layout.tsx'), 'utf8');
+
+  assert.doesNotMatch(layout, /ConsultationProvider/);
+  assert.equal(
+    fs.existsSync(path.join(ROOT, 'src/components/contact/ConsultationProvider.tsx')),
+    false
+  );
+});
+
+test('retired consultation modal dependencies and APIs stay removed', () => {
+  const consultation = fs.readFileSync(path.join(ROOT, 'src/lib/consultation.ts'), 'utf8');
+  const contactForm = fs.readFileSync(
+    path.join(ROOT, 'src/components/contact/ContactForm.tsx'),
+    'utf8'
+  );
+
+  assert.equal(packageJson.dependencies?.['@gsap/react'], undefined);
+  assert.equal(packageJson.devDependencies?.['@gsap/react'], undefined);
+  assert.equal(packageLock.packages?.['node_modules/@gsap/react'], undefined);
+  assert.equal(fs.existsSync(path.join(ROOT, 'src/components/contact/dialogCopy.ts')), false);
+  assert.doesNotMatch(consultation, /\bgetLocaleFromPathname\b/);
+  assert.doesNotMatch(contactForm, /\bonDone\b/);
+});
+
+test('source-only release leaves the existing build info bytes unchanged', () => {
+  const buildInfoPath = path.join(ROOT, 'tsconfig.tsbuildinfo');
+  const before = fs.readFileSync(buildInfoPath);
+  const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
+    cwd: ROOT,
+    encoding: 'utf8'
+  });
+  assert.equal(result.status, 0, result.stdout + result.stderr);
+  assert.deepEqual(fs.readFileSync(buildInfoPath), before);
+});
+
+test('release build and workflow wiring preserve source hygiene while enforcing completed HTML exports', () => {
+  const release = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  const verificationWorkflow = fs.readFileSync(
+    path.join(ROOT, '.github/workflows/guide-release-verification.yml'),
+    'utf8'
+  );
+
+  assert.equal(
+    packageJson.scripts.prebuild.split(' && ')[0],
+    'node scripts/verify-content-hygiene.js --mode source'
+  );
+  assert.equal(
+    packageJson.scripts['verify:content-hygiene-html'],
+    'node scripts/verify-content-hygiene.js --mode html --root out'
+  );
+  assert.match(
+    packageJson.scripts.build,
+    /fix-html-lang\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/
+  );
+  assert(
+    release.indexOf("['build']") <
+      release.indexOf("['--mode', 'html', '--root', 'out', '--variant', variant]")
+  );
+  assert.match(release, /Complete HTML hygiene \(\$\{variant\}\)/);
+  assert.match(release, /--incremental', 'false/);
+  for (const pattern of [
+    'src/**',
+    'content/competitors/**',
+    'scripts/verify-content-hygiene.js',
+    'scripts/fix-html-lang.js'
+  ])
+    assert(verificationWorkflow.includes(pattern), pattern);
+});
+
+test('successful verified outputs can be retained before lifecycle cleanup', () => {
+  const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
+  assert.match(source, /--retain-success-artifacts/);
+  assert.match(
+    source,
+    /retainSuccessArtifacts\(\s*variant,\s*options\.retainSuccessArtifacts\s*\)/
+  );
+  assert.match(source, /const redirectMap = path\.join\(NEXT_DIR, 'nginx-redirects\.conf'\)/);
+  assert.match(
+    source,
+    /copyFileSync\(redirectMap, path\.join\(retainedOut, '__release', 'nginx-redirects\.conf'\)\)/
+  );
+  const variantLoop = source.slice(source.indexOf('for (const variant of variants)'));
+  assert(
+    variantLoop.indexOf('retainSuccessArtifacts') <
+      variantLoop.indexOf('clearBuildArtifacts()', variantLoop.indexOf('runVariantChecks'))
+  );
+});
+
+test('P1 successful evidence keeps the emitted KiB measurement', () => {
+  const output =
+    'P1 verification passed for https://fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
+  assert.equal(extractP1SuccessMeasurement(output), '259.8 KiB initial JavaScript gzip');
+  assert.equal(extractP1SuccessMeasurement('P1 verification passed'), undefined);
+});
+
+test('Linux release evidence stays build-only', () => {
+  const workflowPath = path.join(ROOT, '.github/workflows/guide-release-verification.yml');
+  const dockerfilePath = path.join(ROOT, 'Dockerfile.verify');
+  const workflow = fs.existsSync(workflowPath) ? fs.readFileSync(workflowPath, 'utf8') : '';
+  const dockerfile = fs.existsSync(dockerfilePath) ? fs.readFileSync(dockerfilePath, 'utf8') : '';
+
+  assert.match(workflow, /runs-on: ubuntu-24\.04/);
+  assert.match(workflow, /permissions:\s*\n\s*contents: read/);
+  assert.match(workflow, /actions\/checkout@v4/);
+  assert.match(workflow, /actions\/setup-node@v4/);
+  assert.match(workflow, /node-version: 24/);
+  assert.match(workflow, /cache: npm/);
+  assert.match(workflow, /npm ci/);
+  assert.match(workflow, /npm run verify:release -- --keep-artifacts/);
+  assert.match(workflow, /if: \$\{\{ failure\(\)/);
+  assert.match(workflow, /actions\/upload-artifact@v4/);
+  assert.match(workflow, /\.release-artifacts/);
+  assert.match(workflow, /include-hidden-files: true/);
+  assert.match(workflow, /docker build --target runtime/);
+  assert.match(workflow, /NEXT_PUBLIC_SITE_VARIANT=cn/);
+  for (const pathTrigger of [
+    'Dockerfile',
+    '.dockerignore',
+    'nginx.conf',
+    'nginx-security-headers.conf',
+    'nginx-embeddable-security-headers.conf'
+  ]) {
+    assert(workflow.includes(`- '${pathTrigger}'`), pathTrigger);
+  }
+
+  assert.match(dockerfile, /^FROM node:24/m);
+  assert.match(dockerfile, /COPY package\.json package-lock\.json \.\//);
+  assert.match(dockerfile, /RUN npm ci/);
+  assert.match(dockerfile, /COPY \. \./);
+  assert.match(dockerfile, /RUN npm run verify:release/);
+  assert.match(
+    dockerfile,
+    /docker build --file Dockerfile\.verify --tag fastgpt-guide-release-verify \./
+  );
+
+  const executable = [
+    ...workflow.split('\n').filter((line) => /^\s*run:|^\s*- run:/.test(line)),
+    ...dockerfile.split('\n').filter((line) => /^(RUN|CMD|ENTRYPOINT)\b/.test(line))
+  ].join('\n');
+  assert.doesNotMatch(
+    executable,
+    /\b(deploy|curl|rollback|kubectl|docker push|cache purge|revision)\b/i
+  );
+  assert.equal(fs.existsSync(path.join(ROOT, 'scripts/verify-guide-live.js')), false);
+});
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {
   const failures = [
@@ -107,16 +359,27 @@ test('owner expectation sets use published owner route keys and source data', ()
   assert.equal(io.length, 1195);
   assert.equal(cn.length, 1490);
   assert(io.every((record) => record.variant === 'io' && record.routeKey === record.canonicalSlug));
-  assert(cn.every((record) => record.variant === 'cn' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.routeKey)));
+  assert(
+    cn.every(
+      (record) => record.variant === 'cn' && /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(record.routeKey)
+    )
+  );
 
   const registry = JSON.parse(
-    fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8'),
+    fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8')
   );
   const registryIds = new Set(registry.records.map((record) => record.contentId));
   const chineseOnly = cn.find((record) => !registryIds.has(record.contentId));
-  assert(chineseOnly, 'Expected a Chinese-only published FAQ record absent from the English route registry');
+  assert(
+    chineseOnly,
+    'Expected a Chinese-only published FAQ record absent from the English route registry'
+  );
   for (const field of ['Title', 'Description', 'Keywords', 'Question', 'Answers']) {
-    assert.equal(typeof chineseOnly[field], 'string', `Chinese-only ${field} must come from authored data`);
+    assert.equal(
+      typeof chineseOnly[field],
+      'string',
+      `Chinese-only ${field} must come from authored data`
+    );
     assert(chineseOnly[field].length > 0, `Chinese-only ${field} must be populated`);
   }
 });
@@ -128,7 +391,8 @@ const caseInsensitiveFixtureSkip =
 test(
   'metadata HTML CLI reuses one loaded source context across every io fixture',
   {
-    skip: caseInsensitiveFixtureSkip &&
+    skip:
+      caseInsensitiveFixtureSkip &&
       'io route keys require a case-sensitive filesystem; CI runs this regression on a compatible host'
   },
   () => {
@@ -160,17 +424,24 @@ test(
           '};',
           "process.on('exit', () => {",
           '  if (artifactReads !== 1) {',
-          "    process.stderr.write(`[faq-metadata] expected one approved-artifact read, received ${artifactReads}\\n`);",
+          '    process.stderr.write(`[faq-metadata] expected one approved-artifact read, received ${artifactReads}\\n`);',
           '    process.exitCode = 1;',
           '  }',
           '});'
-        ].join('\n'),
+        ].join('\n')
       );
 
       const result = spawnSync(
         process.execPath,
-        ['--require', readCounterPath, 'scripts/verify-faq-metadata.js', '--html', '--variant', 'io'],
-        { cwd: ROOT, encoding: 'utf8' },
+        [
+          '--require',
+          readCounterPath,
+          'scripts/verify-faq-metadata.js',
+          '--html',
+          '--variant',
+          'io'
+        ],
+        { cwd: ROOT, encoding: 'utf8' }
       );
       assert.equal(result.status, 0, result.stderr);
       assert.match(result.stdout, /io, 1195 FAQ pages/);
@@ -179,13 +450,19 @@ test(
       if (preservedOut) fs.renameSync(preservedOutDir, OUT_DIR);
       fs.rmSync(temporaryDir, { recursive: true, force: true });
     }
-  },
+  }
 );
 
 test('metadata CLI arguments are explicit and HTML-scoped', () => {
-  assert.deepEqual(parseArgs([], { NEXT_PUBLIC_SITE_VARIANT: 'cn' }), { html: false, variant: undefined });
+  assert.deepEqual(parseArgs([], { NEXT_PUBLIC_SITE_VARIANT: 'cn' }), {
+    html: false,
+    variant: undefined
+  });
   assert.deepEqual(parseArgs(['--html', '--variant', 'io']), { html: true, variant: 'io' });
-  assert.deepEqual(parseArgs(['--html'], { NEXT_PUBLIC_SITE_VARIANT: 'cn' }), { html: true, variant: 'cn' });
+  assert.deepEqual(parseArgs(['--html'], { NEXT_PUBLIC_SITE_VARIANT: 'cn' }), {
+    html: true,
+    variant: 'cn'
+  });
   for (const argv of [
     ['--variant', 'io'],
     ['--html', '--variant'],
@@ -197,10 +474,14 @@ test('metadata CLI arguments are explicit and HTML-scoped', () => {
 });
 
 test('requiring the metadata verifier is silent and side-effect free', () => {
-  const result = spawnSync(process.execPath, ['-e', "require('./scripts/verify-faq-metadata.js')"], {
-    cwd: ROOT,
-    encoding: 'utf8'
-  });
+  const result = spawnSync(
+    process.execPath,
+    ['-e', "require('./scripts/verify-faq-metadata.js')"],
+    {
+      cwd: ROOT,
+      encoding: 'utf8'
+    }
+  );
   assert.equal(result.status, 0);
   assert.equal(result.stdout, '');
   assert.equal(result.stderr, '');

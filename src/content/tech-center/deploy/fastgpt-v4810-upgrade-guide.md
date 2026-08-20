@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4810 \
 ## 升级注意事项
 执行初始化操作前需确认所有配置的环境变量均正确无误，否则可能导致初始化失败。若此前存在Milvus部署场景下无法导出知识库、Prompt模式stream=false时携带异常`0:`开头标记、对话日志仅管理员无法查看详情等问题，升级至本版本可完成修复。需注意，原工作流“应用调用”节点已弃用，需迁移至与插件使用方式一致的独立节点；用户选择节点暂不支持Debug调试模式。此外，Sandbox镜像无需跟随主镜像同步更新，可保留原有版本运行。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4810)

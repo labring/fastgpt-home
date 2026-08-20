@@ -18,4 +18,4 @@ source_type: 官方文档
 
 该节点存在明确的使用边界：仅适用于多知识库搜索结果合并的场景，若仅使用单个知识库搜索，无需添加该节点；配置最大tokens过滤时，需结合下游节点的上下文窗口限制调整参数值，避免过度过滤有效结果；同时，RRF重排序为节点内置逻辑，无需手动配置排序规则。此外，通过该节点合并结果后，可避免为每个知识库搜索分支单独配置AI对话节点，简化工作流结构。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/knowledge_base_search_merge
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/knowledge_base_search_merge)

@@ -148,12 +148,3 @@ Version stability, upgrade rollback, data recovery, concurrency, security, and s
 | Business stakeholders require response coverage and recovery responsibility that can be written into a contract | Convert self-build on-call into person-days, and put platform support tiers plus responsibility matrix into the comparison |
 
 The self-build versus platform conclusion should be based on cost, person-days, delivery time, and risk reserve under the same three-year requirements checklist.
-
----
-
-> **Sources**: Public product materials verified for the project and general engineering practice; the cost checklist comes from section 7.1.5 of the client product knowledge base, and the POC measurement table comes from section 7.3.3
-> **Verification date**: 2026-07-20
-> **Versions and plans**: References to FastGPT use the current public version boundaries for community self-hosting, Cloud, and commercial editions
-> **Update record**: V1.2 (2026-08-08) rewrote visible copy while preserving facts on cost, support responsibility, and POC. Pricing and version boundaries use a 90-day review cycle
-
-> **Update record addendum**: On 2026-08-08, page framing and body copy were unified around applicable scenarios, long-term cost, contract responsibility, and same-condition POC. Evidence remains stored in delivery metadata and the manifest.

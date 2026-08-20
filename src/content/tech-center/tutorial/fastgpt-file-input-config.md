@@ -19,4 +19,4 @@ FastGPT从4.8.9版本起，支持在简易模式和工作流中配置用户上�
 
 自4.8.13版本起，文件上传功能有多项更新：简易模式强制解析文件、不再解析历史记录中的文件；工具调用与AI对话支持直接选择文档引用，无需挂载文档解析节点，自动解析历史文件；插件单独运行不再支持全局文件，插件输入可配置文件类型；工作流调用插件或子工作流时，不再自动传递上传的文件，需手动指定变量或链接。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/fileInput)

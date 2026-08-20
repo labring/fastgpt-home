@@ -25,4 +25,4 @@ source_type: 官方文档
 ## 升级注意事项
 1. MCP更新后无需手动删除原有组件，系统会自动完成更新，避免重复操作；2. 全局变量修改变量名后，节点引用不会丢失，但建议提前备份配置文件；3. 仅需更新指定的三个镜像，其余组件无需改动，避免出现兼容性问题；4. GLM 4.5系列模型需按照新的配置方式进行部署，可参考更新后的官方文档；5. 如果使用Excel导入数据，需提前处理带换行符号的内容，避免分块异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4111)

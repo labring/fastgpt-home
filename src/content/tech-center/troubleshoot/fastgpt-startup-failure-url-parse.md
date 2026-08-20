@@ -26,4 +26,4 @@ FastGPT私有部署启动时，控制台输出以下日志：首先成功连接P
 2.  修复URL解析错误：修正FastGPT中`/api/models/get-providers`接口的配置，确保URL格式正确、服务可正常访问；
 3.  重启FastGPT服务，查看日志是否不再出现慢查询告警与URL解析报错，确认系统初始化成功。若问题未解决，需按实际环境确认网络连通性等相关配置。
 
-> 来源：https://github.com/labring/FastGPT/issues/6489
+> 来源：[FastGPT GitHub Issue #6489](https://github.com/labring/FastGPT/issues/6489)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对事务操作总大小超限的问题，可将原Excel文件拆分为多个更小的文件后分别上传，避免单次事务处理的数据总大小超过16793600字节。针对`process.getBuiltinModule`相关的警告，需升级Node.js版本至符合项目依赖要求的版本（需按实际环境确认）。验证方式为：上传拆分后的小文件，确认训练过程无异常，后台日志不再出现对应错误和警告。
 
-> 来源：https://github.com/labring/FastGPT/issues/6924
+> 来源：[FastGPT GitHub Issue #6924](https://github.com/labring/FastGPT/issues/6924)

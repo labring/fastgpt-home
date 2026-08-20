@@ -18,4 +18,4 @@ source_type: 官方文档
 ## 常见问题与边界说明
 若在微信中找不到对应机器人入口，需确认当前使用的是iOS系统，且微信已升级至最新版本，不符合该条件则无法正常显示机器人。当需要清空当前会话的历史聊天记录时，在微信的输入框中输入「Reset」或「/reset」，即可触发重置操作，清除已保存的对话上下文。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/wechat
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wechat)

@@ -18,4 +18,4 @@ FastGPT V4.6.5版本存在核心配置变更，本次变更源于OpenAI弃用fun
 ### 版本功能更新与优化
 本版本新增了四个功能模块：问题优化模块、文本编辑模块、判断器模块、自定义反馈模块；【内容提取】模块新增支持选择模型以及字段枚举功能。同时对多项体验和稳定性进行了优化与修复：优化docx文件读取逻辑，兼容表格内容并转换为markdown格式；优化高级编排的连接线交互体验；修复了因html2md导致的CPU密集计算阻断线程的问题；修复了高级编排提示词提取描述的相关异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/465)

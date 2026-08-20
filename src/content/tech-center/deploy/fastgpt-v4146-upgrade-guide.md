@@ -17,4 +17,4 @@ FastGPT V4.14.6版本包含多项新增功能、优化项与修复内容。新�
 1.  **更新镜像**：将FastGPT镜像tag更新为`v4.14.6.1`，商业版镜像tag更新为`v4.14.6`，fastgpt-plugin镜像tag更新为`v0.5.2`；sandbox、AIProxy、mongo无需更新。
 2.  **更新系统插件**：前往插件市场更新以下系统工具，若已完成V4.14.6版本升级可跳过此步骤：base64Decode（base64解码转化）、dallle3（dall-e 3图片生成）、docDiff（文档差异对比）、drawing（BI图表）、gptImage（gpt图片生成）、markdownTransform（markdown转换文件）、mineru（Mineru）、pdf解析、minimax（minimax对话）、openrouterMultiModal（openrouter多模态）、stability（stability图片生成）。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4146)

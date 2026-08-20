@@ -59,4 +59,4 @@ curl --location --request POST 'https://ai.xx.com/api/v1/chat/completions' \
 3.  工作流文件上传适配：调用工作流API时，直接传入正确的type值（如官方规范的text、image_url、file_url等），不再依赖接口自动推测；
 4.  验证：重新调用相关API，确认对话记录能正确解析内容，工作流文件上传的类型判断准确无误。
 
-> 来源：https://github.com/labring/FastGPT/issues/6437
+> 来源：[FastGPT GitHub Issue #6437](https://github.com/labring/FastGPT/issues/6437)

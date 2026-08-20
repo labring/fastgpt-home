@@ -26,4 +26,4 @@ source_type: GitHub issue
 3.  重新启动FastGPT与相关代理服务，调用原多文档汇总应用，验证504错误是否消失。
 4.  若调整配置后问题仍未解决，可回退至4.14.7版本临时恢复业务运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/6563
+> 来源：[FastGPT GitHub Issue #6563](https://github.com/labring/FastGPT/issues/6563)

@@ -76,4 +76,4 @@ curl -H X-Forwarded-For: 6.6.6.6 -H X-Real-IP: 6.6.6.6 https://fastgpt.example.c
 ## 问题反馈要求
 若上述步骤均无法解决问题，可先在GitHub Issues或相关社群搜索类似问题。联系技术支持时，需提供当前使用的完整版本号、问题的详细描述与复现步骤、相关的系统错误日志或截图。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/attention
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/attention)

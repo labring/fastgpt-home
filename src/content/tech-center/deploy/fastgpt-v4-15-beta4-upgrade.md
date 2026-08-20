@@ -18,4 +18,4 @@ FastGPT V4.15.0-beta4版本包含插件服务重大更新与环境变量调整�
 ## 变更细节与易错提示
 本次版本新增了插件系统架构重写、chatbox UI重写、应用/知识库虚拟列表渲染、独立openapi文档、导出工作流模板与HTML输出自动切换预览等功能。优化内容包括系统工具迁移至local-pool以支持进程池、队列、超时重试与运行指标收集，插件级runtime config支持，插件运行入口可从对象存储拉取并缓存，输入引导配置校验，工作流数组引用类型增强校验，知识库删除后的优雅提示，PDF解析替换为liteparse（速度提升3倍），工作流nodeResponse扁平化存储优化，xlsx解析自动去除空行空列并补充合并单元格。修复了多模态文件链接获取异常、training接口潜在越权风险、HTTP tool parse的SSRF风险、交互节点后MCP工具展开异常等问题。需注意的易错点包括：环境变量的一致性必须严格保证，数据库名不能与原有服务重名，镜像tag需与版本要求完全匹配，避免混用不同版本的服务镜像。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41504
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41504)

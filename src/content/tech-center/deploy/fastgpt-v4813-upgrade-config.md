@@ -17,4 +17,4 @@ V4.8.13版本存在环境变量变更，本次更新包含多项新增功能、�
 3. 添加环境变量：为fastgpt和fastgpt-pro镜像添加`FE_DOMAIN=http://xx.com`，其中`xx.com`替换为实际的FastGPT前端访问地址，注意地址末尾不要添加`/`，该环境变量可自动补齐相对文件地址的前缀。
 4. 调整文件上传编排：当前版本仍兼容旧版文件上传编排，但未来两个版本将移除兼容代码，需尽快完成调整。尤其需要注意嵌套应用的文件传递，未来将不再自动传递，必须手动指定传递的文件，具体调整细节可参考官方文件上传变更文档。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4813)

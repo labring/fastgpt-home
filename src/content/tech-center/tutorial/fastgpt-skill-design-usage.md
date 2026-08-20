@@ -20,4 +20,4 @@ AI智能体的“技能”是可持久保存、可复用的模块化专业流程
 ## FastGPT技能的核心设计特性
 FastGPT的技能设计承袭业界主流标准，支持为智能体创建专属的独立代码空间，核心特性覆盖安全、效率、隔离与成本控制四个维度：独立的安全运行沙箱保障技能执行的安全性；即改即生效的调试环境简化开发流程；生产与调试环境的隔离避免了调试改动对线上业务的影响；自动休眠与无感唤醒机制则降低了闲置资源的使用成本。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/intro)

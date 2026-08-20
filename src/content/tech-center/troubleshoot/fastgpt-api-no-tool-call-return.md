@@ -51,4 +51,4 @@ source_type: GitHub issue
 3.  若为`tool_choice`配置错误，调整参数为`auto`或指定目标工具名称。
 修复完成后，重新发起相同的API请求，验证返回结果是否包含`tool_calls`字段，且正确触发预期的函数调用，与期望的返回格式一致。
 
-> 来源：https://github.com/labring/FastGPT/issues/6182
+> 来源：[FastGPT GitHub Issue #6182](https://github.com/labring/FastGPT/issues/6182)

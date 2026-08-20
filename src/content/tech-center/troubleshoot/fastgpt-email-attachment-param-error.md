@@ -25,4 +25,4 @@ source_type: GitHub issue
 2.  核对参数引用的配置逻辑，确认是否适配该版本的附件字段规则，相关操作需按实际环境确认。
 通过测试会话发送附件，可验证参数是否能正常识别与引用。
 
-> 来源：https://github.com/labring/FastGPT/issues/6954
+> 来源：[FastGPT GitHub Issue #6954](https://github.com/labring/FastGPT/issues/6954)

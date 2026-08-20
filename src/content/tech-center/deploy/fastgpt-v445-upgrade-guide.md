@@ -24,4 +24,4 @@ curl --location --request POST https://{{host}}/api/admin/initv445 \
 FastGPT V4.4.5版本带来多项更新：新增可通过模型生成3个预测问题的下一步指引选项；商业版新增分享链接限制及hook身份校验功能，可对接现有用户系统；同时新增带别名、额度限制和过期时间的Api Key功能，且该Api Key自带appId，无需额外连接；此外优化了全局变量与开场白，将二者合并为同一模块。
 需注意以下要点：该初始化操作仅适用于从旧版本升级至V4.4.5的场景，请勿在其他版本的FastGPT中执行；必须正确配置并携带rootkey请求头，否则初始化请求会失败；商业版新增功能仅限商业版用户使用，开源版本不包含相关功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/445
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/445)

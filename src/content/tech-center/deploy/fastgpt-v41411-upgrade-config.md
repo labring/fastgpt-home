@@ -25,4 +25,4 @@ FastGPT V4.14.11调整了版本命名规则，后续将维护两个稳定版本�
 ⚙️ 优化内容：对大量接口增加zod参数校验、优化模型渠道管理代码、知识库创建接口增加默认vlm模型。
 🐛 修复内容：修复对话Agent模式模型刷新后被重置、部分接口未正确进行权限校验、API推送知识库数据计费异常、知识库上传Markdown文档时因前部英文多误判ASCII导致中文乱码、Python代码执行时空入参被忽略、工作流全局变量多选框删除enum时未清理默认值、添加子工作流时全局变量默认值未显示、代码运行节点AI生成代码后输出值id替换异常、父级节点对齐导致子节点偏移、评估列表权限过滤未覆盖继承权限、MCP与Http工具raw schema保存失败等问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41411)

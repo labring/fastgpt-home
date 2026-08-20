@@ -33,4 +33,4 @@ source_type: GitHub issue
 ```
 补充配置后重新加载图表，验证是否出现dataView、magicType与restore对应的功能按钮，点击各功能确认可正常使用。若配置无误但功能仍不可用，需按实际环境联系相关人员确认平台功能支持情况。
 
-> 来源：https://github.com/labring/FastGPT/issues/6269
+> 来源：[FastGPT GitHub Issue #6269](https://github.com/labring/FastGPT/issues/6269)

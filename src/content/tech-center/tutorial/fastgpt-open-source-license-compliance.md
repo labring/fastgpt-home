@@ -17,4 +17,4 @@ FastGPT 项目基于 Apache License 2.0 许可开源，整体的权利与限制�
 ### 合规咨询与申请流程
 如果您的商用场景属于需获取许可的范畴，可按照以下步骤操作：1. 确认自身场景类型，明确属于多租户 SaaS 服务或涉及修改移除版权标识；2. 发送电子邮件至 dennis@sealos.io 咨询许可相关事宜。作为项目贡献者，需同意将贡献的代码用于生产者调整开源协议（更严格或更宽松形式），以及用于商业目的如 FastGPT 的云服务。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/license)

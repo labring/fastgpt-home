@@ -25,4 +25,4 @@ FastGPT的工具调用节点在解析MCP工具的嵌套对象入参schema时，�
 1. 补充提示词后，再次向模型提问工具入参schema，确认返回结果包含完整的嵌套字段信息。
 2. 发起工具调用测试，确认生成的入参结构与工具要求的嵌套格式一致，调用过程无报错且结果符合预期。
 
-> 来源：https://github.com/labring/FastGPT/issues/6488
+> 来源：[FastGPT GitHub Issue #6488](https://github.com/labring/FastGPT/issues/6488)

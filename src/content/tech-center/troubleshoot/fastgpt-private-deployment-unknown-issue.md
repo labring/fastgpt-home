@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查步骤确认的具体异常原因，进行针对性的修复操作。修复完成后，启动FastGPT服务并执行对应功能测试，验证异常是否已消除。若问题仍未解决，可补充更多详细信息至原issue中以便进一步排查。
 
-> 来源：https://github.com/labring/FastGPT/issues/6766
+> 来源：[FastGPT GitHub Issue #6766](https://github.com/labring/FastGPT/issues/6766)

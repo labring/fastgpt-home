@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现为API请求超时问题，需调整对应超时配置参数（具体参数需按实际环境确认）；若为服务资源占用过高，需优化部署的资源分配。验证方式为多次重复调用目标API，确认模型输出可完整完成，无中途中断情况。
 
-> 来源：https://github.com/labring/FastGPT/issues/6538
+> 来源：[FastGPT GitHub Issue #6538](https://github.com/labring/FastGPT/issues/6538)

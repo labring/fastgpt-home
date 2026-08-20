@@ -34,4 +34,4 @@ source_type: GitHub issue
 3.  若仍存在报错，需逐一检查消息列表中所有助手工具调用消息的格式，确保均符合启用thinking后的要求。
 4.  确认所有必要参数无误后，即可正常使用FastGPT的思考功能。
 
-> 来源：https://github.com/labring/FastGPT/issues/6357
+> 来源：[FastGPT GitHub Issue #6357](https://github.com/labring/FastGPT/issues/6357)

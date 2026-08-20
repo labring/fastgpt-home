@@ -20,4 +20,4 @@ FastGPT Agent V2的虚拟机是为每个对话会话分配的物理隔离轻量L
 ## 边界与易错注意事项
 虚拟机的状态去重机制依托虚拟机内部的`~/.fastgpt/agent-skill-entrypoints/state.json`文件运行：针对自定义应用启动脚本，系统会计算其SHA256哈希值与记录比对，未修改则跳过执行；针对技能入口脚本，则基于技能版本ID比对去重，避免重复执行导致启动延迟，去重状态随虚拟机实例生命周期管理，重建实例时会重新执行初始化脚本。当前版本虚拟机为会话级隔离，未来将调整为用户级隔离以减少资源消耗。启动脚本执行受系统规则约束，包含字符长度限制与超时终止保护，需注意脚本执行超时会被强制终止。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)

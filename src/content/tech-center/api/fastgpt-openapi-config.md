@@ -22,4 +22,4 @@ source_type: 官方文档
 ## 使用边界与注意事项
 并非所有接口都支持通过API密钥访问，仅System OpenAPI的开放接口可通过密钥调用。使用过程中需注意，不要直接请求BaseURL，需基于BaseURL拼接具体接口路径发起请求。同时，API密钥的权限范围与当前账号在团队内的权限一致，超出权限的资源无法通过该密钥操作。如果需要查看旧版未改造的接口，需确认对应文档是否仍在维护，否则以自动生成的最新文档为准。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/intro)

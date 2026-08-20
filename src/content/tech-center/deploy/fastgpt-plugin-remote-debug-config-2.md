@@ -34,4 +34,4 @@ services:
 ```
 端口说明：3010端口为Gateway HTTP API，包含健康检查、内部接口和监控指标，无需公网暴露，仅需Plugin Server在内网访问即可；3011端口为Gateway WebSocket服务，默认路径为`/connection-gateway/v1`，需通过反向代理暴露为公网wss地址，供本地CLI连接。随后在fastgpt-plugin服务中增加Gateway相关环境变量，配置其调用Gateway内部HTTP API的内网地址。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/remote-debug-suite)

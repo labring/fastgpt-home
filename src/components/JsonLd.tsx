@@ -184,7 +184,7 @@ export function BreadcrumbJsonLd({ items }: { items: BreadcrumbItem[] }) {
 export interface ArticleJsonLdProps {
   headline: string;
   description: string;
-  image: string;
+  image?: string;
   url: string;
   inLanguage: string;
   datePublished?: string;
@@ -207,7 +207,7 @@ export function ArticleJsonLd({
         '@type': 'Article',
         headline,
         description,
-        image: [image],
+        ...(image ? { image: [image] } : {}),
         inLanguage,
         author: { '@type': 'Organization', name: 'FastGPT' },
         publisher: { '@type': 'Organization', name: 'FastGPT' },

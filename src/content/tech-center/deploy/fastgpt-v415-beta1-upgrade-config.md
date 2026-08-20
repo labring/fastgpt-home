@@ -17,4 +17,4 @@ source_type: 官方文档
 **功能优化与使用边界**
 本版本新增循环节点功能并弃用旧的批量执行功能，全局变量输入框支持输入object类型数据，工具调用开启虚拟机功能时，用户对话框上传的文件会直接注入到虚拟机中，同时新增第三方知识库钉钉接入（beta版，存在富文本获取异常问题）。优化内容包括父子节点选中互斥功能，解决了同时选中父子节点时移动节点出现抖动的问题；将文件注入的messages位置从system调整至user，提升缓存命中率；优化非管理员/访客触发余额不足时的提示内容，无创建权限时隐藏模板功能，加强第三方知识库请求的SSRF防护，优化codex-sandbox的AST检查以防止绕过安全检测，调整站点同步限流的错误提示避免重复弹出，加强IP检测防止伪造绕过，同时支持配置图片处理线程是否转换为base64发送给模型。修复了Agent v2模式下模型响应报错导致step重复执行、知识库源文件预览和下载时文本类型响应缺少charset的问题。代码层面重新调整了项目结构，升级Next.js至最新版并切换至Turbopack构建以提升构建速度，将容器默认Node.js版本升级至24，统一了Agent tool的声明和运行逻辑，将文件上传内容从system prompt移至user message以提升cache命中率，服务端env加载全部使用@t3-oss/env-core以增加类型检查，同时升级了项目工程化工具链版本。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41501)

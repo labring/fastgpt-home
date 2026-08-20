@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 快速部署流程
 可通过交互式脚本快速完成部署，在Linux/MacOS/Windows WSL环境下执行命令：`bash <(curl -fsSL https://doc.fastgpt.cn/deploy/install.sh)`。脚本会自动完成以下操作：下载docker-compose.yml配置文件，引导选择S3与MCP的外部访问地址并写入配置，随机生成root登录密码、服务间Token、应用密钥和组件密码并写入配置，自动检测宿主机Docker socket路径并替换挂载路径。执行完成后终端会输出本次生成的root登录密码，需妥善保存，后续升级建议基于该文件调整配置，请勿丢失生成的密码与密钥。如需固定使用特定版本的docker-compose.yml，可手动下载对应数据库的配置文件与install.sh，再通过install.sh的本地compose模式生成最终配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host)

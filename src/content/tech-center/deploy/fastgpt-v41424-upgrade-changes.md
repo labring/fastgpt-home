@@ -20,4 +20,4 @@ source_type: 官方文档
 3. 完成镜像拉取后，重启对应服务即可生效。
 需要注意的是，本次升级仅需更新镜像标签，无需执行额外的脚本或配置调整。若你未遇到API工作流中断或无S3外部URL的上传需求，可暂缓本次升级。同时，V4.14.25版本已被官方弃用，请勿选择该版本进行部署或升级。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41424
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41424)

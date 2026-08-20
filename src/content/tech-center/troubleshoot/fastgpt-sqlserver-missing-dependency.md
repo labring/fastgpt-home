@@ -41,4 +41,4 @@ console.log(r.resolve('mssql'));
 3. 若输出类似`<plugin-runtime-dir>/plugin/dbops/0.0.1/<redacted>/node_modules/mssql/index.js`的结果，说明依赖安装成功。
 4. 重新执行Microsoft SQL Server系统工具的SQL查询，确认报错消失，工具可正常执行。
 
-> 来源：https://github.com/labring/FastGPT/issues/7228
+> 来源：[FastGPT GitHub Issue #7228](https://github.com/labring/FastGPT/issues/7228)

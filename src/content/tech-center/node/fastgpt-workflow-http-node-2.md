@@ -18,4 +18,4 @@ HTTP请求节点是FastGPT工作流中的核中核模块，可向指定地址发
 
 该节点适用于对接公开API或业务服务以扩展工作流功能，但存在使用边界：测试模式下无法使用chatId和responseChatItemId变量；Body中的变量引用格式错误会直接导致请求失败；JSONPath语法需严格遵循规范，否则无法正确提取返回值。若需要执行自定义代码逻辑，建议使用代码运行节点而非HTTP请求节点。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/http)

@@ -20,4 +20,4 @@ FastGPT V4.15.0版本引入了更严格的环境变量检查，升级前需确�
 ### 可选配置项说明
 本次更新提供了多个带默认值的可选环境变量，可根据业务需求调整：包括文件解析并发数`PARSE_FILE_WORKERS`（默认10）、HTML转Markdown并发数`HTML_TO_MARKDOWN_WORKERS`（默认10）、工作流循环节点最大长度`WORKFLOW_MAX_LOOP_TIMES`（默认100）等。开源版用户需注意，原`config.json`配置文件已移除，需改用环境变量替代，可配置自定义PDF解析服务、向量检索参数等相关变量。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41500)

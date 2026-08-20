@@ -26,4 +26,4 @@ source_type: GitHub issue
 2. 推进修复：等待官方发布对应版本的更新以修复该问题，或基于MCP官方元数据规范自行修改FastGPT的解析逻辑；
 3. 验证修复效果：在更新后确认传给第三方模型的工具名称、描述与MCP注册时一致，且枚举类型被正确识别，未被转换为string类型。
 
-> 来源：https://github.com/labring/FastGPT/issues/6542
+> 来源：[FastGPT GitHub Issue #6542](https://github.com/labring/FastGPT/issues/6542)

@@ -64,4 +64,4 @@ services:
 - 模型ID：填写对应模型名，如`bge-reranker-base`
 - 请求地址：`{{host}}/v1/rerank`，其中`{{host}}`替换为部署服务的域名或IP:Port
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/bge-rerank)

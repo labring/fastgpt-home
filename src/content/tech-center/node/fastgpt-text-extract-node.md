@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 输出与注意事项
 该模块的输出包含两类：一是完整提取结果的JSON字符串，包含所有字段的提取内容；二是每个目标字段单独的字符串类型提取结果，所有提取结果均为字符串类型。需注意，key不能重复，强制提取的字段即使未找到对应内容，也会返回空字符串。该模块仅支持文本类输入的结构化提取，不支持非文本类内容的处理，且提取要求描述的清晰度会直接影响提取结果的准确性。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/content_extract)

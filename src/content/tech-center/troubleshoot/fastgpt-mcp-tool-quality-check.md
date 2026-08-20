@@ -26,4 +26,4 @@ FastGPT官方文档中未针对第三方MCP工具集成提供统一的质量校�
 2.  将校验通过的MCP工具按照FastGPT的官方集成流程完成配置，配置完成后可通过测试会话验证工具是否能正常调用并返回结果。
 3.  如需展示工具的校验结果，可将生成的校验徽章嵌入到工具的介绍页面或相关文档中，方便其他用户快速了解工具的质量情况。
 
-> 来源：https://github.com/labring/FastGPT/issues/6687
+> 来源：[FastGPT GitHub Issue #6687](https://github.com/labring/FastGPT/issues/6687)

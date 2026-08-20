@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 适用场景与使用边界
 该节点仅适用于需要观测对话数据的埋点场景，例如统计特定对话环节的触发次数、标记用户反馈类型等。由于该节点无外部输入能力，无法根据对话上下文动态调整反馈内容；同时调试模式下不会生成日志记录，仅用于快速验证节点配置。如果工作流需要引入外部输入、执行带参数的逻辑，或需要实时生成日志记录，该节点并不适用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/custom_feedback)

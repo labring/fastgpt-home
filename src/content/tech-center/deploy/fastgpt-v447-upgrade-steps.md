@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv447 \
 ## 注意事项与边界说明
 该初始化操作仅适用于FastGPT V4.4.7版本的升级流程，不可用于其他版本的升级操作。请勿在初始化请求执行过程中断开请求或重启服务，否则可能导致数据库索引异常或数据格式转换不完整。若请求执行失败，需检查rootkey变量是否正确、`{{host}}`是否匹配实际部署域名，以及网络是否可正常访问该API端点。该版本的优化仅对完成初始化后的实例生效，未执行初始化的旧版本数据无法直接适配新的数据库操作逻辑。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/447
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/447)

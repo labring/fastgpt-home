@@ -31,4 +31,4 @@ QAModel: {
 ## 配置改动目的
 本次格式调整的核心目的是统一任务调用的模型选择逻辑，不再保留多模型并行选择的配置项，确保系统使用预设的最优模型完成问答任务。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/42)

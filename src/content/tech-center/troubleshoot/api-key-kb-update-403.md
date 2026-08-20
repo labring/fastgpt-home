@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若为API Key权限不足，需为该API Key添加知识库更新的对应权限；若为接口校验逻辑异常，需按实际环境确认并调整校验规则；若为调用参数错误，需修正更新接口的调用参数。验证方式为：使用调整后的API Key重新调用知识库更新接口，确认返回结果不再包含403错误，且知识库更新操作成功完成。
 
-> 来源：https://github.com/labring/FastGPT/issues/7006
+> 来源：[FastGPT GitHub Issue #7006](https://github.com/labring/FastGPT/issues/7006)

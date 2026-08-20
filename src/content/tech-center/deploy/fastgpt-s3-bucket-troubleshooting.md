@@ -18,4 +18,4 @@ FastGPT私有部署过程中，若日志出现ERR等级的"Failed to ensure exte
 针对存储桶连接失败问题，需在FastGPT的环境变量配置中添加`STORAGE_S3_FORCE_PATH_STYLE=true`，开启路径样式访问模式，确保客户端可以正确识别并连接目标存储服务。
 针对上传文件报错问题，需在Nginx的反向代理配置块中添加`proxy_set_header Host $http_host;`，注意不要使用`$host`内置变量，因为该变量会自动移除请求中的端口信息，导致签名校验不匹配。完成配置后重启Nginx服务即可使修改生效。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/s3-issues
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/s3-issues)

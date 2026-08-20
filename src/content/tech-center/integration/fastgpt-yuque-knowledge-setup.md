@@ -18,4 +18,4 @@ source_type: 官方文档
 ### 使用边界与易错提示
 该功能仅面向FastGPT商业版用户，非商业版用户无法使用该功能，且需确保FastGPT版本不低于v4.8.16。若未正确为token配置权限，可能导致无法正常读取语雀文档；使用非合规版本或非商业版账号尝试配置时，会出现功能入口缺失或创建失败的问题。此外，自动同步为每日不定时扫描，若需紧急更新文档，可通过手动同步触发即时更新。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset)

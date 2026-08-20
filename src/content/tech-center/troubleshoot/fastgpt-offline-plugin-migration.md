@@ -23,4 +23,4 @@ FastGPT的插件市场依赖外网网络访问以加载资源与安装包，离�
 首先完成插件迁移操作：在外网环境中找到已安装的目标插件文件（需按实际环境确认存储路径），将其打包后复制至内网离线环境中FastGPT对应的插件目录；在内网FastGPT的配置文件中添加对应插件的加载配置（需按实际环境确认配置项），重启FastGPT服务使配置生效。
 验证环节：重启服务后进入FastGPT插件管理界面，确认已迁移的插件正常显示且可正常启用，即完成插件迁移验证。
 
-> 来源：https://github.com/labring/FastGPT/issues/6391
+> 来源：[FastGPT GitHub Issue #6391](https://github.com/labring/FastGPT/issues/6391)

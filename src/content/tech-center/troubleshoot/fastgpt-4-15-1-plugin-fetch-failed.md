@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若需快速恢复服务运行，可尝试切换至4.15.0-beta3版本，使用其docker-compose.cn.yml配置启动服务，验证是否可正常完成系统初始化与运行；若必须使用4.15.1版本，需按实际环境排查依赖配置、网络连通性、插件加载逻辑等问题，确认无`fetch failed`类插件报错后，即可验证运行正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/7253
+> 来源：[FastGPT GitHub Issue #7253](https://github.com/labring/FastGPT/issues/7253)

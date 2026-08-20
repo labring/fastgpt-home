@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 升级注意事项
 升级前需备份当前的配置文件与业务数据，避免因配置修改失误或版本不兼容导致数据丢失。需确认当前部署环境的依赖版本与新版本匹配，若存在自定义的镜像拉取策略，需同步调整以适配v4.8.3版本的镜像。若未使用Milvus数据库作为存储方案，请勿直接替换为docker-compose-milvus.yml的配置，防止存储路径、连接参数等配置出现冲突，导致服务无法正常连接存储组件。同时，升级过程中需确保所有相关镜像均拉取到v4.8.3版本，避免部分组件使用旧版本导致功能异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483)

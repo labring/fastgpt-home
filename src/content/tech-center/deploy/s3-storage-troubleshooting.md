@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 文件上传报错的配置修复
 上传对话文件或知识库文件时，若出现`SignatureDoesNotMatched`签名不一致的报错，大部分场景由Nginx反向代理的配置错误导致。Nginx在转发请求时未透传必要的请求头（如Headers、Host），会引发签名校验失败。具体修复步骤为：在Nginx的转发配置中添加`proxy_set_header Host $http_host`，请勿使用`$host`内置变量，因为`$host`会自动移除请求中的端口信息，导致签名校验无法通过。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/s3-issues
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/s3-issues)

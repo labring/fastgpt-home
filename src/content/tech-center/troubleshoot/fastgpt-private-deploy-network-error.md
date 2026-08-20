@@ -25,4 +25,4 @@ source_type: GitHub issue
 ## 解决与验证
 若为防火墙或安全组拦截问题，需开放对应端口至允许访问；若为配置参数错误，修正参数后重启FastGPT服务；验证方式为访问配置的网络地址，确认可正常建立连接。
 
-> 来源：https://github.com/labring/FastGPT/issues/6700
+> 来源：[FastGPT GitHub Issue #6700](https://github.com/labring/FastGPT/issues/6700)

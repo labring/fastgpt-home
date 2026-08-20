@@ -35,4 +35,4 @@ curl --location --request POST https://{{host}}/api/admin/initv47 \
 ## 升级注意事项
 升级过程中需注意以下细节：PG HNSW索引更新后搜索速度大幅提升，但可能出现精度损失，若遇到该情况需参考PgVector官方文档调整索引；使用functionCall模式时，需在LLM模型配置中将`functionCall`设为`true`，`toolChoice`设为`false`，若`toolChoice`为`true`则会进入tool模式；旧版配置文件格式不再适用，需切换至官方最新的模型配置方案；cohere的重排模型对中文表现不如本地的bge模型，可根据业务需求选择适配的重排方案。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/47)

@@ -18,4 +18,4 @@ FastGPT V4.14.8版本包含多项核心更新，首先是环境变量配置的�
 ## 易错点与使用边界
 升级过程中需严格按照指引更新指定镜像，避免随意更新无需升级的组件。`SANDBOX_TOKEN`为可选配置，但一旦配置则必须在所有关联服务中同步添加该变量。本次修复的问题仅针对升级到V4.14.8版本后的场景，若未遇到对应报错或场景，无需强制升级。此外，本地开发环境需使用rspacak替代原有的开发工具，以获得性能提升。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4148)

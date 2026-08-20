@@ -24,4 +24,4 @@ FastGPT的企业微信智能机器人接入功能有明确的版本适配要求�
 ## 使用与问题排查
 完成配置后，可在企业微信通讯录中找到创建的智能机器人，直接发送消息即可调用FastGPT应用。如果出现发送消息后无响应的情况，可按以下步骤排查：首先检查可信域名配置是否正确；其次核对`Token`和`Encoding-AESKey`是否填写无误；最后查看FastGPT的对话日志，若没有对应的提问记录，大概率是应用运行报错，可先尝试使用最简机器人进行测试。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/wecom)

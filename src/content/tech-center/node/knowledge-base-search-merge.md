@@ -21,4 +21,4 @@ source_type: 官方文档
 ### 典型使用场景
 该节点适用于需要同时检索多个知识库集合，并将所有检索结果整合后统一交由AI处理的工作流。例如，在搭配问题分类节点使用时，可先通过分类节点识别用户问题的所属类型，再针对不同类型的问题调用对应知识库进行检索，此时无需为每个知识库检索分支单独配置AI对话节点，仅需通过该合并节点整合所有检索结果，再输入至单一AI对话节点即可完成统一回答，有效简化工作流结构。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/knowledge_base_search_merge
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/knowledge_base_search_merge)

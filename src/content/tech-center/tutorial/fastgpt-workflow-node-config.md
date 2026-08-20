@@ -22,4 +22,4 @@ FastGPT工作流从【流程开始】节点启动，无固定出口，当所有�
 
 若需合并多个输出结果，可使用文本加工节点合并字符串，或通过知识库搜索节点合并搜索结果；其他类型结果可传入HTTP节点，由业务服务完成合并。工作流适合需要多步骤串联的复杂AI应用，若仅需基础的AI对话或知识库搜索，无需使用工作流编排，避免增加不必要的配置成本。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)

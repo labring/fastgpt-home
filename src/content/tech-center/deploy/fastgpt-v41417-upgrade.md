@@ -23,4 +23,4 @@ source_type: 官方文档
 ## 升级后注意事项
 升级完成后，若遇到文件上传或解析相关的异常，需优先检查是否正确配置了S3 External Endpoint参数，该参数是商业版文件解析功能正常运行的必要配置项。若遇到API知识库相关的接口报错，可检查传入的parentId参数类型是否符合接口要求，该类问题已在本次版本中完成修复。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41417
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41417)

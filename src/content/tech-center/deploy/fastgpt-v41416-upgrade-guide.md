@@ -17,4 +17,4 @@ FastGPT V4.14.16版本包含多项功能优化与问题修复：优化了embeddi
 ## 临时权限说明
 本次版本针对评估列表权限进行了临时修复，未开放跨用户查看评估的功能，仅支持当前创建者查看自身创建的评估内容，后续版本会推出完整的权限优化方案。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41416
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41416)

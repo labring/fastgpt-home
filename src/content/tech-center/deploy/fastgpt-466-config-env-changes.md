@@ -19,4 +19,4 @@ source_type: 官方文档
 2. 在部署环境中配置环境变量`PRO_URL`，填入插件服务地址，确保地址不以`/API`结尾；
 3. 无需修改本地`config.json`文件，直接访问新版商业版镜像的外网地址，完成所有系统参数与模型的配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/466
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/466)

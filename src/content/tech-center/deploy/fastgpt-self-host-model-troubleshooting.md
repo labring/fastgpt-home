@@ -61,4 +61,4 @@ curl --location --request POST https://oneapi.xxx/v1/chat/completions \
 ```
 2. 检查响应参数：若能正常调用工具，会返回包含`tool_calls`的参数内容，示例响应片段包含`id`、`choices`等字段。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/model-errors)

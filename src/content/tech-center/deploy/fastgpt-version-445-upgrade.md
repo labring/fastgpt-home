@@ -23,4 +23,4 @@ curl --location --request POST https://{{host}}/api/admin/initv445 \\
 ### 升级注意事项
 该版本属于需要执行升级脚本类的更新，需严格按照上述步骤完成初始化操作，不可跳过。若未执行该初始化请求，可能出现模块配置异常、功能无法正常启用等问题。同时需确保部署环境的网络可以正常访问该API接口，避免请求失败。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/445
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/445)

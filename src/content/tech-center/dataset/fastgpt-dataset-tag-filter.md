@@ -32,4 +32,4 @@ source_type: 官方文档
 2.  当同时配置`$and`和`$or`两种过滤条件时，仅`$and`规则生效；
 3.  `createTime`字段的`$gte`和`$lte`需使用`YYYY-MM-DD HH:mm`格式，分别用于筛选创建时间大于、小于指定时间的集合，二者可组合使用以限定时间范围。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags)

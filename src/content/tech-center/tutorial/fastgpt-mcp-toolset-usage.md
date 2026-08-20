@@ -20,4 +20,4 @@ FastGPT v4.9.6版本及以上新增MCP工具集应用类型，支持传入MCP的
 ## MCP工具的测试与调用
 创建完成后可进入MCP工具集内部，对单个工具进行调试。例如使用`maps_weather`天气查询工具，点击「运行」即可获取指定地区的天气信息。在模型调用环节，支持两种使用方式：一是调用单个工具，选中`maps_weather`和`maps_text_search`等工具后，向AI提问即可触发对应工具获取信息并完成回答；二是调用整个工具集，添加工具集类型的节点并连接工具调用节点，AI将自动选取所需工具执行任务，完成信息获取与回答。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/tools/mcp_tools)

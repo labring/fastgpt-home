@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 当前可通过临时回退版本的方式解决该问题：修改`docker-compose.yml`中的`fastgpt-app`镜像配置，将镜像标签改为`registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt:v4.14.10`，重启FastGPT服务后，重新上传MD文档即可正常预览，且文件后缀不会发生异常变化。若需使用更高版本的FastGPT，需等待官方修复该问题，具体进度可关注项目仓库的更新动态。
 
-> 来源：https://github.com/labring/FastGPT/issues/6876
+> 来源：[FastGPT GitHub Issue #6876](https://github.com/labring/FastGPT/issues/6876)

@@ -27,4 +27,4 @@ FastGPT私有部署V4.15.0-2版本中，创建Skill并使用运行预览功能�
 2.  切换至Agent界面使用该Skill生成文件，即可通过预览界面正常查看生成的文件。
 具体的永久修复可关注官方版本更新动态。
 
-> 来源：https://github.com/labring/FastGPT/issues/7001
+> 来源：[FastGPT GitHub Issue #7001](https://github.com/labring/FastGPT/issues/7001)

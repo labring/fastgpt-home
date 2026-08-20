@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 使用边界与注意事项
 该节点的使用存在明确边界：仅支持处理字符串和数字类型的输入，若传入数组、对象等非字符串数字类型的参数，会导致节点执行异常，无法生成预期的加工文本。其适用场景包括为任意模块输入自定义格式的文本，或是处理AI模块的系统提示词，完成格式统一的配置。如果需要处理结构化的复杂数据，或是进行多输入的复杂文本组合，该节点无法满足需求，需结合其他工作流节点完成对应操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/text_editor
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/text_editor)

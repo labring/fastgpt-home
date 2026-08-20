@@ -34,4 +34,4 @@ export default models;
 ## 模型预设维护注意事项
 新增或修改模型前，需以官方模型文档、官方模型列表API或官方价格/模型页为依据，勿仅依赖第三方搜索结果或聚合站内容。需遵守以下规则：支持llm、embedding、rerank、tts、stt五类模型，按模型真实能力选择对应类型并补齐该类型schema要求的字段；仅当官方明确废弃、下线或不再推荐时，才可移除模型；开放目录类供应商需保留本地占位或用户自定义的模型；保持文件内原有排序风格，通常将更新或能力更强的模型放在前面。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/plugin/model-presets
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/model-presets)

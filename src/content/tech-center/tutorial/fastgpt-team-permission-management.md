@@ -19,4 +19,4 @@ FastGPT权限系统融合基于属性和基于角色的权限管理范式，支�
 ### 特殊权限与开发者说明
 特殊权限包含三类：管理员负责管理资源协作关系，但无法修改或移除自身权限、其他管理员权限，也不能将管理员权限赋予其他协作者；每个资源有唯一Owner，拥有最高权限，转移所有权后原Owner将失去该资源权限；Root为系统唯一超级管理员，对所有团队的所有资源拥有完全访问和管理权限。面向开发者的权限设计参考Linux权限，采用二进制存储权限位，权限位为1表示拥有权限，0表示无权限，Owner权限标记为全1。权限信息存储在MongoDB的`resource_permissions`集合中，主要字段包括`teamId`（团队标识）、`tmbId/groupId/orgId`（权限主体三选一）、`resourceType`（资源类型，可选team/app/dataset）、`permission`（权限值数字）、`resourceId`（资源ID，团队资源为null），其Schema定义在`packages/service/support/permission/schema.ts`文件中。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/workspace/team/team_roles_permissions)

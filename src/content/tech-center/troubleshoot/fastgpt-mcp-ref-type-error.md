@@ -27,4 +27,4 @@ source_type: GitHub issue
 3. 查看解析后的工具`inputSchema`，确认带`$ref`的字段类型正确为Object；
 4. 使用object类型入参调用工具，确认入参未被转为`array[object]`，MCP服务端可正常接收参数。
 
-> 来源：https://github.com/labring/FastGPT/issues/6395
+> 来源：[FastGPT GitHub Issue #6395](https://github.com/labring/FastGPT/issues/6395)

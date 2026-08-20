@@ -19,4 +19,4 @@ Ollama是简化大语言模型部署的开源工具，支持两种安装方式�
 ## 常见问题排查
 若FastGPT无法访问Ollama，需优先排查两点：一是两者是否处于同一Docker网络；二是主机安装的Ollama是否已配置监听0.0.0.0，避免仅监听localhost导致无法被容器访问。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/ollama)

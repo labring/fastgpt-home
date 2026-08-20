@@ -20,4 +20,4 @@ FastGPT V4.14.22是4.14.x版本分支的迭代更新，本次更新聚焦修复�
 ### 注意事项与边界说明
 本次升级仅适用于FastGPT 4.14.x系列的现有部署，请勿跨大版本直接升级。升级过程中需确保fastgpt-app与fastgpt-pro的镜像tag保持一致，避免出现版本不匹配引发的功能异常。若升级后仍存在工作流相关异常，可先核对两个服务的镜像tag是否均正确更新为`v4.14.22`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41422
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41422)

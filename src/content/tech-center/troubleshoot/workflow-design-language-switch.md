@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若为浏览器语言冲突导致，可调整浏览器语言设置或强制指定FastGPT页面使用中文；若为语言配置未持久化，重新保存语言设置后即可恢复正常。验证方式为：重新进入Workflow设计页面，确认页面语言保持为设置的中文，且长期使用后不再出现异常切换。
 
-> 来源：https://github.com/labring/FastGPT/issues/6603
+> 来源：[FastGPT GitHub Issue #6603](https://github.com/labring/FastGPT/issues/6603)

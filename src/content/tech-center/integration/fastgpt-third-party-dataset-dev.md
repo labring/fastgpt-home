@@ -19,4 +19,4 @@ FastGPT内置了部分官方知识库，若需接入其他第三方文档库，�
 2.  **创建Hook接口文件**：在`FastGPT\packages\service\core\dataset\apiDataset\`下新建专属文件夹与`api.ts`文件，实现5个必填函数：`listFiles`（获取文件列表）、`getFileContent`（获取文件内容/链接）、`getFileDetail`（获取文件详情信息）、`getFilePreviewUrl`（获取原文预览地址）、`getFileId`（获取原文件真实ID）。
 3.  **完成全链路配置**：依次在`type.d.ts`导入自定义知识库类型，在`utils.ts`添加数据获取逻辑，在`index.ts`注册调用方法；在多语言文件中添加对应翻译，在图标目录添加Outline与Color两种格式的图标，在`constants.ts`的`DatasetTypeEnum`和`ApiDatasetTypeMap`中注册知识库类型；最后在知识库列表页与创建表单页添加对应的配置项。若支持根目录选择，需在`ApiDatasetForm.tsx`中引入`renderBaseUrlSelector()`和`renderDirectoryModal()`组件。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/third_dataset)

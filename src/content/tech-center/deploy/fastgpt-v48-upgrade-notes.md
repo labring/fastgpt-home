@@ -18,4 +18,4 @@ V4.8上线了FastGPT Workflow V2，由于工作流差异较大，需依次重建
 商业版用户若配置了邮件验证码，需调整邮箱服务SMTP地址的配置方式：此前仅支持配置别名，现在可直接配置自定义SMTP地址，示例别名与实际地址对应关系为：qq对应smtp.qq.com，gmail对应smtp.gmail.com。具体操作路径为：管理端 - 项目配置 - 登录配置 - 邮箱登录配置 - 修改邮箱服务SMTP地址。
 V4.8系列的多个子版本存在升级要求：部分版本如V4.8.2、V4.8.13存在环境变量变更，V4.8.1、V4.8.4等版本需执行专属升级脚本完成升级，升级前请做好数据备份。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/48)

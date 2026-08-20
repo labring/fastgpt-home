@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 配置注意事项
 使用微信发布渠道时，需根据实际在线渠道峰值调整`WECHAT_CHANNEL_CONCURRENCY`的取值，默认值1000仅为通用参考值，若出现微信消息处理延迟或阻塞，可适当调高该参数。针对deepseek模型的工具调用场景，升级至该版本后无需额外配置即可自动兼容相关模式，若此前存在接口400报错，升级后可自动解决。内网地址检测功能会自动识别部署环境的内网地址，无需手动配置，若出现检测异常可检查部署网络环境。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41414
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41414)

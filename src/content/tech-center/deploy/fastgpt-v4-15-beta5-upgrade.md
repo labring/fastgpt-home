@@ -53,4 +53,4 @@ source_type: 官方文档
 # 新增优化与修复内容
 本次更新新增多项功能：HTTP节点支持配置忽略TLS证书校验，支持目录深度环境变量，对话框新增快速滚动到底部按键，支持通过模型生成对话标题，优化了Agent上下文压缩逻辑与长名称展示效果。修复了S3私有对象未绑定鉴权资源导致的跨资源文件访问风险，移除了内置LLM请求中的`temperature`和`max_tokens`参数以兼容更多模型。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-15/41505)

@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查后确认parentid参数格式合法且已正确传递，可联系相关开发人员确认接口后端对该参数的解析逻辑是否存在问题。验证方式为重新发起携带正确parentid参数的上传请求，查看上传后的文件是否被放置在指定的父目录下，而非根目录。
 
-> 来源：https://github.com/labring/FastGPT/issues/6364
+> 来源：[FastGPT GitHub Issue #6364](https://github.com/labring/FastGPT/issues/6364)

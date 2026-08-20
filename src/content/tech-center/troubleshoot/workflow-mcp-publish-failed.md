@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若经排查发现当前版本未支持该发布功能，可按照FastGPT的升级指引将系统升级至包含该功能的最新版本；若为操作入口或流程问题，需按照官方标准流程重新执行发布操作；若为配置项未启用，需参照官方文档完成对应配置。完成上述操作后，重新尝试将目标工作流、对话流或工具内的工作流发布为MCP，待发布成功后，验证其可与其他大模型应用正常完成交互对接，确认问题解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6613
+> 来源：[FastGPT GitHub Issue #6613](https://github.com/labring/FastGPT/issues/6613)

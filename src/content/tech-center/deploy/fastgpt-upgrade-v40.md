@@ -34,4 +34,4 @@ FastGPT从旧版本升级至V4.0时，因新版MongoDB表结构变更幅度较�
 ## 操作注意事项
 本次升级仅适用于从旧版本升级至V4.0的场景，请勿在其他版本升级中直接套用本流程。操作前建议完整备份MongoDB数据库，避免因误操作导致数据丢失。执行MongoDB字段初始化命令时，请勿中断操作，否则可能导致部分数据未完成更新。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40)

@@ -27,4 +27,4 @@ MiniMax 是一家通用人工智能科技公司，其提供的大语言模型 AP
 ## 注意事项
 使用该接入方式时，需严格按照上述步骤配置参数，若测试未通过需核对代理地址、API Key 与所选模型的匹配性。仅支持语料中提及的内置模型或手动添加的兼容模型，避免因参数配置错误导致连接失败。如需使用非内置模型，需遵循 FastGPT 的手动添加流程进行配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/model/minimax)

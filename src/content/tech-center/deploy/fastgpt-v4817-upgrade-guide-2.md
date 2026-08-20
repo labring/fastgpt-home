@@ -27,4 +27,4 @@ source_type: 官方文档
 - **体验优化**：Markdown内容超出20万字符时不再使用Markdown组件，避免页面崩溃；知识库搜索滑动条支持输入模式，可更精准控制搜索参数；优化可用模型展示UI；Mongo查询语句新增`virtual`字段支持。
 - **问题修复**：修复文件返回接口缺少`Content-Length`头导致非同源文件上传时阿里vision模型无法识别图片的问题；去除判断器两端字符串的隐藏换行符，修复判断器失效问题；修复变量更新节点手动输入非字符串类型数据无法自动转换的问题；修复豆包模型无法工具调用的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4817)

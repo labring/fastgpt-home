@@ -36,4 +36,4 @@ source_type: 官方文档
 2.  若同时配置`$and`和`$or`条件，仅`$and`条件会生效，`$or`条件将不被识别；
 3.  时间过滤参数`$gte`和`$lte`需严格遵循`YYYY-MM-DD HH:mm`格式，可单独使用或组合使用。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/collection_tags)

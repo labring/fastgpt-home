@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 使用边界与注意事项
 FastGPT OpenAPI接口通过API Key鉴权，可用于调用应用对话接口、上传知识库数据、搜索测试等操作，但出于兼容性和安全考虑，并非所有接口都支持通过API Key访问。API密钥相当于当前账号在当前团队下的访问凭证，仅可操作该团队下有权限的资源。此外，Dev API包含的部分接口可能不支持通过API Key调用，仅System OpenAPI下的接口均可通过系统ApiKey访问。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi)

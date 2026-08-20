@@ -25,4 +25,4 @@ source_type: GitHub issue
 2. 若为密钥或配置问题，根据官方文档调整对应参数后，重新执行操作验证异常是否解决。
 3. 若完成上述步骤后仍无法解决问题，可在补充完整信息后提交规范的issue，等待项目维护者协助排查。
 
-> 来源：https://github.com/labring/FastGPT/issues/7090
+> 来源：[FastGPT GitHub Issue #7090](https://github.com/labring/FastGPT/issues/7090)

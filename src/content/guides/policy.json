@@ -1,0 +1,7 @@
+{
+  "locales": ["zh", "en"],
+  "publicationGroups": ["decision", "implementation", "industry"],
+  "assetStatuses": ["none", "requested-unapproved", "source-exception", "required"],
+  "schemaTypes": ["Article", "BreadcrumbList", "HowTo"],
+  "entryCount": 8
+}

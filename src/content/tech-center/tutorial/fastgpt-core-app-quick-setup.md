@@ -37,4 +37,4 @@ source_type: 官方文档
 
 知识库+对话Agent类应用需先导入民法典、公司制度等指定文档作为知识库，配置对话模型与向量模型，确保AI回答优先引用检索到的资料内容。工作流应用可编排内容审核与自动改写流程，Agent V2则需绑定Excel/CSV示例文件实现智能数据分析。所有配置项均可根据业务场景替换调整，适配实际落地需求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/getting-started/quick-start)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 目前没有官方提供的直接调整该功能限制的方案，若需要了解该设计的具体意图，需按照实际环境查阅官方的更新日志或联系官方技术支持团队获取相关说明。验证该现象时，可严格按照上述排查步骤逐一测试各应用类型的功能支持情况，确认是否符合当前版本的限制表现。
 
-> 来源：https://github.com/labring/FastGPT/issues/7044
+> 来源：[FastGPT GitHub Issue #7044](https://github.com/labring/FastGPT/issues/7044)

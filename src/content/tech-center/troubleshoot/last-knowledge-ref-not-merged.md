@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 根据排查出的具体问题进行针对性调整：若为配置遗漏则补全对应知识库引用设置；若为系统逻辑边界问题则需按官方指引修正相关逻辑（具体修正方式需按实际环境确认）。验证方式为重新发起包含知识库引用的对话，确认最后一个知识库引用已被正确合并到最终返回结果中。
 
-> 来源：https://github.com/labring/FastGPT/issues/6260
+> 来源：[FastGPT GitHub Issue #6260](https://github.com/labring/FastGPT/issues/6260)

@@ -21,4 +21,4 @@ FastGPT V4.8.21版本包含多项新增功能、体验优化与问题修复。�
 ## 升级注意事项
 本次版本升级未涉及额外环境变量或配置文件变更，若已完成基础部署，仅需按上述步骤更新镜像即可。若从早于V4.8.21的版本升级，需确保已完成过往版本的必要升级流程，避免出现兼容性异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821)

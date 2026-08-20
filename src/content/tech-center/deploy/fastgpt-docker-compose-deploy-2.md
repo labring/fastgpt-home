@@ -18,4 +18,4 @@ source_type: 官方文档
 ### 部署注意事项
 部署时需注意：将源代码与数据绑定到Linux容器时，应存储在Linux文件系统而非Windows文件系统；若使用Zilliz Cloud向量库，无需占用本地硬件资源，无需关注本地配置。不同向量库的硬件配置需匹配业务规模：100万组向量的最低配置为2c4g，500万组向量推荐8c32g、200GB存储。若遇到模型相关问题，需先通过OneAPI测试校验。升级部署时需基于已生成的`docker-compose.yml`文件调整，避免丢失已生成的密码与密钥。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker)

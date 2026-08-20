@@ -42,4 +42,4 @@ V4.10.0版本新增了独立系统工具服务，支持系统工具的独立开�
 3.  更新`fastgpt`与`fastgpt-pro`（商业版）容器的环境变量：将`PLUGIN_BASE_URL`设为`fastgpt-plugin`服务的内网地址，`PLUGIN_TOKEN`设为刚配置的`AUTH_TOKEN`值。
 4.  将`fastgpt`和`fastgpt-pro`的镜像tag更新为`v4.10.0-fix`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4100)

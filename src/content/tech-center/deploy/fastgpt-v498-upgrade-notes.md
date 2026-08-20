@@ -18,4 +18,4 @@ source_type: 官方文档
 优化内容包括：优化Chat log列表展示逻辑，避免大数据场景下出现内存超限问题；预加载token计算worker，防止主任务并发创建时出现线程阻塞；优化工作流节点版本控制的交互体验；优化网络获取与html2md转换功能，新增支持视频和音频标签的转换。
 本次修复的问题包括：应用列表、知识库列表的删除行权限展示异常问题；开启知识库搜索参数后，重排选项自动被打开的异常；修复LLM json_schema模式下的API请求格式错误；解决重新训练时图片过期索引未清除导致图片丢失的问题；修复重新训练的权限问题；修正文档链接地址；修复Claude工具调用因index为空导致调用失败的问题；修复嵌套工作流中包含交互节点时工具调用流程异常的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/498)

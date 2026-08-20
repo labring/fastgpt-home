@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 完成上述所有排查步骤后，重新执行FastGPT的部署流程，检查部署日志中无SeekDB相关的配置错误或加载失败提示。验证SeekDB相关功能是否可正常被系统识别并调用，同时确认更新后的部署文档已正确展示SeekDB的部署说明内容，即可确认该配置问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6193
+> 来源：[FastGPT GitHub Issue #6193](https://github.com/labring/FastGPT/issues/6193)

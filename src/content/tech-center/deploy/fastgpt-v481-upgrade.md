@@ -30,4 +30,4 @@ FastGPT V4.8.1版本升级需通过官方提供的初始化与脏数据清理脚
 ## 版本更新细节
 V4.8.1版本对Chat API接口进行了优化，新增了`event: updateVariables`事件，用于实现变量更新功能，使用该接口时需适配该新增事件的处理逻辑。如需查看完整升级说明，可点击官方链接跳转，也可在GitHub平台编辑该文档内容。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/481
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/481)

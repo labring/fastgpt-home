@@ -27,4 +27,4 @@ source_type: GitHub issue
 ### 验证方式
 配置完成后执行`docker compose up -d`，观察fastgpt容器状态，若容器无重启且正常运行，访问站点返回正常内容，且日志显示`System initialized successfully`则验证成功。
 
-> 来源：https://github.com/labring/FastGPT/issues/6770
+> 来源：[FastGPT GitHub Issue #6770](https://github.com/labring/FastGPT/issues/6770)

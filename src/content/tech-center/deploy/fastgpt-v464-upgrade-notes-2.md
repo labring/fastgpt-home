@@ -23,4 +23,4 @@ V4.6.4版本对核心功能进行了多项调整：重写分享链接身份逻�
 ## 注意事项
 该初始化步骤仅适用于从旧版本升级至V4.6.4的场景，未执行该步骤可能导致数据库字段缺失，引发功能异常。执行请求时需确保环境变量中的`rootkey`正确，且`host`配置与部署的访问域名一致，否则会触发鉴权失败或请求无法到达的问题。部分功能（如分享链接SSO方案）仅商业版支持，开源版本无法使用该功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/464)

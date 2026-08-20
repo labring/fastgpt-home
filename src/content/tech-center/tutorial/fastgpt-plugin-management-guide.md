@@ -17,4 +17,4 @@ source_type: 官方文档
 ## 插件使用边界与注意事项
 FastGPT Marketplace仅作为SaaS分发渠道，不提供私有化部署版本。社区插件需提交至fastgpt-community-plugins仓库，经基础审核后才可进入Marketplace。当前云服务版本暂不支持用户直接上传自定义插件，第三方自定义插件仅可通过自部署或商业版的管理员上传方式使用。此外，新版系统工具不再依赖旧的modules/tool/packages内置源码目录，需通过.pkg文件交付插件。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/plugin/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/plugin/intro)

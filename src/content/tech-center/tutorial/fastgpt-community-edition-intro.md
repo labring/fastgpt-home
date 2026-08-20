@@ -21,4 +21,4 @@ FastGPT社区版是FastGPT系列产品的免费版本，其定位为面向个人
 ## 合规使用说明
 在使用FastGPT社区版的过程中，需全程遵循FastGPT开源许可证的要求，不得未经授权修改源码后闭源分发，不得将社区版用于未经许可的商业盈利项目。同时，所有基于社区版开发的衍生作品，也需遵循相同的开源协议条款，确保开源生态的健康发展。如需获取更详细的协议内容，可通过官方文档页面的开源协议链接进行查阅。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/version/opensource/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/version/opensource/intro)

@@ -19,4 +19,4 @@ FastGPT官方版本升级文档按序列整理了多个版本的升级指引，�
 2. 执行升级操作：若当前版本为V4.4.5，登录部署环境，执行官方提供的V4.4.5升级脚本，脚本将自动完成版本更新的相关操作。
 3. 验证升级效果：升级完成后，启动系统服务，检查高级编排模块是否新增应用调用选项，测试免登录场景下的下一步指引功能是否正常，确认必要连接校验功能可正常生效。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446)

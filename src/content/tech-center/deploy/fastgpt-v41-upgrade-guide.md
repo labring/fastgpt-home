@@ -25,4 +25,4 @@ PG_URL=postgresql://username:password@pg:5432/postgres
 ### 注意事项
 该升级流程仅适用于从旧版本升级到V4.1的场景，首次部署V4.1无需执行该初始化操作。配置过程中需确保数据库名称与旧版一致，否则会出现数据库连接错误；若未正确携带rootkey参数，初始化请求会返回权限错误。若执行初始化后仍存在异常，需检查环境变量配置是否正确，以及数据库服务是否正常运行。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/41
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/41)

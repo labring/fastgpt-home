@@ -25,4 +25,4 @@ source_type: 官方文档
 # 用途与附加节点
 工具调用节点默认会将工具运行结果返回给LLM，由LLM对结果进行总结输出。若将该节点接入工具流程的末尾，则不会触发AI对结果的总结。使用工具调用节点时，会自动关联两个附加节点：「工具调用终止」可强制结束本次工具调用，不再执行后续工具或AI回答；「自定义工具变量」可扩展工具的变量输入，为未被视作工具参数的节点添加参数描述，让工具调用对应节点并触发后续工作流。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/tool)

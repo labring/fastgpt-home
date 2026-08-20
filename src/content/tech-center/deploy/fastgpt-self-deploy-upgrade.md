@@ -25,4 +25,4 @@ docker-compose up -d
 ## 常见问题说明
 执行升级脚本的原因是当数据表出现大幅度变更、无法通过设置默认值完成更新或复杂度较高时，需通过升级脚本更新数据表字段。升级过程中严格按照步骤操作不会导致旧数据丢失，但数据量较大时初始化过程可能导致服务暂时不可用。`{{host}}`为变量，代表服务器的域名或IP；获取ROOT_KEY可从`docker-compose.yml`的`environment`字段中查找对应值，Sealos部署则可从左侧环境变量模块获取。跨版本升级前必须先进行数据备份，建议逐一版本升级而非直接跳级，例如从4.4.7升级到4.6时，需依次修改镜像到4.5、4.5.1、4.5.2、4.6并分别执行对应升级脚本。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-intruction)

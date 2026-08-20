@@ -20,4 +20,4 @@ FastGPT V4.14.18是4.14.x系列的官方更新版本，本次更新包含新增�
 ## 升级验证建议
 升级完成后，可登录FastGPT后台管理界面，检查管理员后台是否新增了个人微信发布渠道的关闭配置，同时测试工作流工具、用户表单节点的文件上传功能，以及多对话切换时的流式响应是否正常，确认升级是否成功。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41418
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41418)

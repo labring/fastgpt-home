@@ -22,4 +22,4 @@ curl --location --request POST https://{{host}}/api/admin/initv462 \
 ## 初始化说明
 本次初始化操作的核心作用是初始化V4.6.2版本新增的全文索引功能，执行该请求前，请确认已正确配置环境变量中的rootkey，且已完成FastGPT服务的基础更新部署。执行该请求后，系统将自动完成全文索引的初始化，无需额外手动调整其他配置项。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/462
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/462)

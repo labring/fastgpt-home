@@ -18,4 +18,4 @@ FastGPT v4.8.16版本起，商业版用户可使用语雀文件库功能导入�
 2. 创建知识库：进入FastGPT的知识库管理页面，点击新建知识库，选择"语雀文件库"类型，将获取到的token与uid填入对应参数框，确认参数无误后点击"创建"按钮完成知识库创建。
 3. 导入与同步：创建完成后，进入该知识库详情页，点击"添加文件"按钮，跟随页面引导完成语雀文档库的导入操作。该知识库支持自动定时同步功能，每日会不定时扫描文档更新内容并同步至FastGPT平台，用户也可随时点击手动同步按钮，手动触发文档内容更新同步。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/dataset/third-party/yuque_dataset)

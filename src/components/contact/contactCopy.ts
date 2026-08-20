@@ -47,7 +47,6 @@ type ContactCopy = {
   submitting: string;
   successTitle: string;
   successBody: string;
-  closeAfterSuccess: string;
   returnHome: string;
   submitAnother: string;
   configErrorTitle: string;
@@ -92,7 +91,6 @@ const zh: ContactCopy = {
   submitting: '正在提交',
   successTitle: '咨询已提交',
   successBody: '我们已收到您的信息，商务团队会尽快与您联系。',
-  closeAfterSuccess: '完成',
   returnHome: '返回首页',
   submitAnother: '再提交一份',
   configErrorTitle: '商务咨询暂不可用',
@@ -152,7 +150,6 @@ const en: ContactCopy = {
   submitting: 'Sending',
   successTitle: 'Inquiry sent',
   successBody: 'We have received your information. Our sales team will contact you shortly.',
-  closeAfterSuccess: 'Done',
   returnHome: 'Back home',
   submitAnother: 'Send another inquiry',
   configErrorTitle: 'Sales inquiries are unavailable',
@@ -215,7 +212,6 @@ const zhHant: ContactCopy = {
   submitting: '正在提交',
   successTitle: '諮詢已提交',
   successBody: '我們已收到您的資訊，商務團隊會盡快與您聯絡。',
-  closeAfterSuccess: '完成',
   returnHome: '返回首頁',
   submitAnother: '再提交一份',
   configErrorTitle: '商務諮詢暫不可用',

@@ -1,10 +1,13 @@
 import type { Metadata } from 'next';
 import ContactPage from '@/components/contact/ContactPage';
 import { getContactCopy } from '@/components/contact/contactCopy';
-import { getAlternates } from '@/lib/seo';
+import { getAlternates, getRobotsPolicy } from '@/lib/seo';
 import { getContactLocale } from '@/lib/contact';
 import { getDictionary, normalizeLocale } from '@/lib/i18n';
-import { getBuildLocaleCodes } from '@/lib/siteRouting';
+import {
+  getBuildLocaleCodes,
+  currentSiteVariant
+} from '@/lib/siteRouting';
 import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 
 export async function generateMetadata({
@@ -19,9 +22,11 @@ export async function generateMetadata({
   return {
     title: `${copy.title} | FastGPT`,
     description: copy.subtitle,
-    alternates: getAlternates(contactLocale, '/contact', contactPublishedLocaleCodes),
     robots:
-      locale === contactLocale ? { index: true, follow: true } : { index: false, follow: true }
+      currentSiteVariant === 'preview'
+        ? getRobotsPolicy(false, false)
+        : getRobotsPolicy(locale === contactLocale),
+    alternates: getAlternates(contactLocale, '/contact', contactPublishedLocaleCodes)
   };
 }
 

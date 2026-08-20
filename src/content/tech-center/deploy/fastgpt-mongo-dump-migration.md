@@ -19,4 +19,4 @@ source_type: 官方文档
 ### 注意事项
 跨环境scp传输可能出现数据丢失，需校验压缩包完整性后再进行后续操作；若未自动同步容器内的备份目录，需使用docker cp命令手动完成文件拷贝；导出数据时需确认数据库名称为fastgpt，并正确配置MongoDB的用户名和密码。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/migration/docker_mongo)

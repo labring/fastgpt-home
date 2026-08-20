@@ -33,12 +33,23 @@ const GENERATED_PUBLIC_PATHS = [
 ];
 
 function parseArgs(argv) {
-  const options = { sourceOnly: false, keepArtifacts: false, variant: undefined };
+  const options = {
+    sourceOnly: false,
+    keepArtifacts: false,
+    retainSuccessArtifacts: undefined,
+    variant: undefined
+  };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
     if (token === '--source-only') options.sourceOnly = true;
     else if (token === '--keep-artifacts') options.keepArtifacts = true;
-    else if (token === '--variant') {
+    else if (token === '--live') options.live = true;
+    else if (token === '--retain-success-artifacts') {
+      const retainDir = argv[++index];
+      if (!retainDir || retainDir.startsWith('--'))
+        throw new Error('--retain-success-artifacts requires a directory');
+      options.retainSuccessArtifacts = path.resolve(ROOT, retainDir);
+    } else if (token === '--variant') {
       const variant = argv[++index];
       if (!['io', 'cn'].includes(variant)) throw new Error('--variant requires io or cn');
       options.variant = variant;
@@ -62,7 +73,7 @@ function createFailure(label, command, args, output, variant) {
   };
 }
 
-function runStep(failures, label, command, args, env, variant) {
+function runStep(failures, label, command, args, env, variant, formatSuccess) {
   const result = spawnSync(command, args, {
     cwd: ROOT,
     env,
@@ -77,13 +88,14 @@ function runStep(failures, label, command, args, env, variant) {
         command,
         args,
         result.error ? `${output}\n${result.error.message}` : output,
-        variant,
-      ),
+        variant
+      )
     );
     console.error(`[verify-release] ${label} failed`);
     return false;
   }
-  console.log(`[verify-release] ${label} passed`);
+  const successEvidence = formatSuccess ? formatSuccess(output) : undefined;
+  console.log(`[verify-release] ${label} passed${successEvidence ? `: ${successEvidence}` : ''}`);
   return true;
 }
 
@@ -91,9 +103,9 @@ function nodeStep(failures, label, script, args, env, variant) {
   return runStep(failures, label, process.execPath, [script, ...args], env, variant);
 }
 
-function npmStep(failures, label, args, env, variant) {
+function npmStep(failures, label, args, env, variant, formatSuccess) {
   const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-  return runStep(failures, label, npm, ['run', ...args], env, variant);
+  return runStep(failures, label, npm, ['run', ...args], env, variant, formatSuccess);
 }
 
 function clearBuildArtifacts() {
@@ -106,7 +118,7 @@ function snapshotGeneratedPublicFiles() {
     GENERATED_PUBLIC_PATHS.map((relativePath) => {
       const filePath = path.join(ROOT, relativePath);
       return [relativePath, fs.existsSync(filePath) ? fs.readFileSync(filePath) : null];
-    }),
+    })
   );
 }
 
@@ -124,7 +136,7 @@ function restoreGeneratedPublicFiles(snapshot) {
 
 function findCaseFoldCollisionPair() {
   const registry = JSON.parse(
-    fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8'),
+    fs.readFileSync(path.join(ROOT, 'src/faq/generated-en-route-registry.json'), 'utf8')
   );
   const byFoldedSlug = new Map();
   for (const record of registry.records) {
@@ -149,7 +161,7 @@ function assertCaseSensitiveFilesystem() {
     if (!caseSensitive) {
       const [first, second] = findCaseFoldCollisionPair();
       throw new Error(
-        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run full release on Linux/Docker or a case-sensitive APFS workspace (source-only remains available)`,
+        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`
       );
     }
   } finally {
@@ -194,30 +206,33 @@ function verifyExportCardinality(variant) {
     walkFiles(path.join(OUT_DIR, 'faq'))
       .filter((filePath) => filePath.endsWith('.html'))
       .map(faqRouteKey)
-      .filter(Boolean),
+      .filter(Boolean)
   );
   if (routeKeys.size !== expected) {
     throw new Error(
-      `variant=${variant} FAQ HTML route cardinality mismatch: expected ${expected}, found ${routeKeys.size}`,
+      `variant=${variant} FAQ HTML route cardinality mismatch: expected ${expected}, found ${routeKeys.size}`
     );
   }
 
   const sitemapPath = path.join(OUT_DIR, 'sitemap.xml');
   if (!fs.existsSync(sitemapPath)) throw new Error(`variant=${variant} is missing out/sitemap.xml`);
-  const sitemapUrls = [...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)].map(
-    (match) => match[1],
-  );
+  const sitemapUrls = [
+    ...fs.readFileSync(sitemapPath, 'utf8').matchAll(/<loc>([^<]+)<\/loc>/g)
+  ].map((match) => match[1]);
   const faqUrls = sitemapUrls.filter((url) => {
     try {
       const parsed = new URL(url);
-      return parsed.pathname.startsWith('/faq/') && parsed.pathname.split('/').filter(Boolean).length === 2;
+      return (
+        parsed.pathname.startsWith('/faq/') &&
+        parsed.pathname.split('/').filter(Boolean).length === 2
+      );
     } catch {
       return false;
     }
   });
   if (faqUrls.length !== expected || new Set(faqUrls).size !== expected) {
     throw new Error(
-      `variant=${variant} FAQ sitemap cardinality mismatch: expected ${expected}, found ${faqUrls.length}`,
+      `variant=${variant} FAQ sitemap cardinality mismatch: expected ${expected}, found ${faqUrls.length}`
     );
   }
 }
@@ -227,13 +242,36 @@ function retainFailureArtifacts(variant) {
   fs.rmSync(retainedPath, { recursive: true, force: true });
   fs.mkdirSync(RETAIN_DIR, { recursive: true });
   fs.mkdirSync(retainedPath, { recursive: true });
-  if (fs.existsSync(NEXT_DIR)) fs.cpSync(NEXT_DIR, path.join(retainedPath, '.next'), { recursive: true });
-  if (fs.existsSync(OUT_DIR)) fs.cpSync(OUT_DIR, path.join(retainedPath, 'out'), { recursive: true });
+  if (fs.existsSync(NEXT_DIR))
+    fs.cpSync(NEXT_DIR, path.join(retainedPath, '.next'), { recursive: true });
+  if (fs.existsSync(OUT_DIR))
+    fs.cpSync(OUT_DIR, path.join(retainedPath, 'out'), { recursive: true });
+  return retainedPath;
+}
+
+function retainSuccessArtifacts(variant, retainDir) {
+  const retainedPath = path.join(retainDir, variant);
+  fs.rmSync(retainedPath, { recursive: true, force: true });
+  fs.mkdirSync(retainedPath, { recursive: true });
+  const retainedOut = path.join(retainedPath, 'out');
+  const redirectMap = path.join(NEXT_DIR, 'nginx-redirects.conf');
+  if (!fs.existsSync(redirectMap)) {
+    throw new Error(`Missing generated redirect map: ${redirectMap}`);
+  }
+  fs.cpSync(OUT_DIR, retainedOut, { recursive: true });
+  fs.mkdirSync(path.join(retainedOut, '__release'), { recursive: true });
+  fs.copyFileSync(redirectMap, path.join(retainedOut, '__release', 'nginx-redirects.conf'));
   return retainedPath;
 }
 
 function runSourceChecks(failures, env) {
   const checks = [
+    ['SEO basics regression', 'scripts/verify-seo-basics.test.js', []],
+    [
+      'content hygiene source verification',
+      'scripts/verify-content-hygiene.js',
+      ['--mode', 'source']
+    ],
     ['route registry check', 'scripts/generate-faq-route-registry.js', ['--check']],
     ['metadata snapshot check', 'scripts/generate-faq-metadata.js', ['--check']],
     ['FAQ route source verification', 'scripts/verify-faq-routes.js', []],
@@ -242,26 +280,64 @@ function runSourceChecks(failures, env) {
     ['FAQ redirect source verification', 'scripts/verify-faq-redirects.js', ['--source']]
   ];
   for (const [label, script, args] of checks) nodeStep(failures, label, script, args, env);
-  runStep(failures, 'TypeScript source verification', 'npx', ['--no-install', 'tsc', '--noEmit'], env);
+  runStep(
+    failures,
+    'TypeScript source verification',
+    'npx',
+    ['--no-install', 'tsc', '--noEmit', '--incremental', 'false'],
+    env
+  );
+}
+
+function runGuideSourceChecks(failures, env, variant) {
+  const suffix = variant ? ` (${variant})` : '';
+  nodeStep(
+    failures,
+    `Guide content source verification${suffix}`,
+    'scripts/verify-guide-content.js',
+    [],
+    env,
+    variant
+  );
+}
+
+function extractP1SuccessMeasurement(output) {
+  return output.match(
+    /P1 verification passed for .*:\s*([0-9.]+ KiB initial JavaScript gzip)/
+  )?.[1];
 }
 
 function runVariantChecks(failures, variant, env) {
   const buildPassed = npmStep(failures, `build ${variant}`, ['build'], env, variant);
   if (!buildPassed) return false;
 
+  nodeStep(
+    failures,
+    `Complete HTML hygiene (${variant})`,
+    'scripts/verify-content-hygiene.js',
+    ['--mode', 'html', '--root', 'out', '--variant', variant],
+    env,
+    variant
+  );
+
   const checks = [
     ['P0 HTML verification', ['verify:p0']],
-    ['P1 HTML verification', ['verify:p1']],
+    ['P1 HTML verification', ['verify:p1'], extractP1SuccessMeasurement],
     ['P2 HTML verification', ['verify:p2']],
     ['i18n SEO HTML verification', ['verify:i18n-seo']],
-    ['FAQ metadata HTML verification', ['verify:faq-metadata', '--', '--html', '--variant', variant]],
+    [
+      'FAQ metadata HTML verification',
+      ['verify:faq-metadata', '--', '--html', '--variant', variant]
+    ],
     [
       'FAQ SEO graph HTML verification',
       ['verify:faq-seo-graph', '--', '--html', '--out-dir', 'out', '--variant', variant]
     ],
     ['FAQ redirect artifact verification', ['verify:faq-redirects']]
   ];
-  for (const [label, args] of checks) npmStep(failures, `${label} (${variant})`, args, env, variant);
+  for (const [label, args, formatSuccess] of checks) {
+    npmStep(failures, `${label} (${variant})`, args, env, variant, formatSuccess);
+  }
 
   try {
     verifyExportCardinality(variant);
@@ -275,13 +351,22 @@ function runVariantChecks(failures, variant, env) {
     });
     console.error(`[verify-release] export cardinality (${variant}) failed`);
   }
+
+  nodeStep(
+    failures,
+    `Guide export artifact verification (${variant})`,
+    'scripts/verify-guide-export.js',
+    ['--out-dir', 'out', '--variant', variant],
+    env,
+    variant
+  );
   return true;
 }
 
 function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) {
   for (const failure of failures.slice(startIndex)) {
     const budgetMatch = failure.output.match(
-      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/,
+      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/
     );
     if (!failure.label.startsWith('P1 HTML verification') || !budgetMatch) continue;
     const currentKib = Number.parseFloat(budgetMatch[1]);
@@ -290,8 +375,12 @@ function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) 
       ...failure,
       label: 'P1 historical baseline comparison',
       output:
-        `current=${currentKib.toFixed(1)} KiB gzip; c77cf48 APFS baseline=${P1_BASELINE_KIB.toFixed(1)} KiB gzip; ` +
-        `delta=${deltaKib >= 0 ? '+' : ''}${deltaKib.toFixed(1)} KiB; budget=${P1_BUDGET_KIB} KiB; ` +
+        `current=${currentKib.toFixed(1)} KiB gzip; c77cf48 APFS baseline=${P1_BASELINE_KIB.toFixed(
+          1
+        )} KiB gzip; ` +
+        `delta=${deltaKib >= 0 ? '+' : ''}${deltaKib.toFixed(
+          1
+        )} KiB; budget=${P1_BUDGET_KIB} KiB; ` +
         `command=${failure.command}; variant=${failure.variant}`
     });
   }
@@ -308,7 +397,9 @@ function reportFailures(failures, advisories, retainedPaths) {
   if (advisories.length) {
     console.warn(`\n[verify-release] known advisory checks (${advisories.length})`);
     for (const advisory of advisories) {
-      console.warn(`\n- ${advisory.label}${advisory.variant ? ` [variant=${advisory.variant}]` : ''}`);
+      console.warn(
+        `\n- ${advisory.label}${advisory.variant ? ` [variant=${advisory.variant}]` : ''}`
+      );
       console.warn(`  command: ${advisory.command}`);
       console.warn(`  evidence: ${advisory.output}`);
     }
@@ -317,7 +408,9 @@ function reportFailures(failures, advisories, retainedPaths) {
     if (retainedPaths.length) {
       console.error(`\n[verify-release] retained failure artifacts: ${retainedPaths.join(', ')}`);
     } else {
-      console.error('[verify-release] rerun with --keep-artifacts to retain failing .next/out evidence');
+      console.error(
+        '[verify-release] rerun with --keep-artifacts to retain failing .next/out evidence'
+      );
     }
   }
 }
@@ -340,10 +433,13 @@ function main() {
 
   try {
     runSourceChecks(failures, sourceEnv);
+    runGuideSourceChecks(failures, sourceEnv);
     if (failures.length || options.sourceOnly) {
       reportFailures(failures, advisories, retainedPaths);
       if (!failures.length) {
-        console.log('[verify-release] source-only checks passed; full mode requires a case-sensitive filesystem');
+        console.log(
+          '[verify-release] source-only checks passed; full mode requires a case-sensitive filesystem'
+        );
       }
       process.exitCode = failures.length ? 1 : 0;
       return;
@@ -369,6 +465,7 @@ function main() {
       clearBuildArtifacts();
       const env = variantEnvironment(variant);
       const beforeFailures = failures.length;
+      runGuideSourceChecks(failures, env, variant);
       runVariantChecks(failures, variant, env);
       appendP1HistoricalBaselineAdvisories(failures, beforeFailures, advisories);
       const variantFailed = failures.length > beforeFailures;
@@ -384,12 +481,31 @@ function main() {
           });
         }
       }
+      if (!variantFailed && options.retainSuccessArtifacts) {
+        try {
+          console.log(
+            `[verify-release] retained verified ${variant} output: ${retainSuccessArtifacts(
+              variant,
+              options.retainSuccessArtifacts
+            )}`
+          );
+        } catch (error) {
+          failures.push({
+            label: `success artifact retention (${variant})`,
+            variant,
+            command: 'in-process verified output copy',
+            output: error.message
+          });
+        }
+      }
       clearBuildArtifacts();
     }
 
     reportFailures(failures, advisories, retainedPaths);
     if (!failures.length) {
-      console.log('[verify-release] release gate passed for source, redirects, io, cn, HTML, and sitemap evidence');
+      console.log(
+        '[verify-release] release gate passed for source, redirects, io, cn, HTML, and sitemap evidence'
+      );
     }
     process.exitCode = failures.length ? 1 : 0;
   } finally {
@@ -409,4 +525,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { appendP1HistoricalBaselineAdvisories };
+module.exports = { parseArgs, appendP1HistoricalBaselineAdvisories, extractP1SuccessMeasurement };

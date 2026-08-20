@@ -32,4 +32,4 @@ FastGPT未内置跨数据库向量数据迁移的专用工具，不同数据库�
 3. 确认所有历史数据已完成迁移后，停止向原数据库写入向量数据
 4. 验证全量向量数据的检索功能正常，完成迁移
 
-> 来源：https://github.com/labring/FastGPT/issues/6196
+> 来源：[FastGPT GitHub Issue #6196](https://github.com/labring/FastGPT/issues/6196)

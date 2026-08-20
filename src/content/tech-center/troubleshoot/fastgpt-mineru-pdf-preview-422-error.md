@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 修正mineru服务的配置，确保服务正常运行且网络可达；检查并修正FastGPT知识库中的mineru配置项，确保参数填写正确。完成后重新上传PDF文件，验证预览和上传阶段不再出现422报错，确认PDF增强功能正常工作。若问题仍存在，需按实际环境进一步排查参数或服务状态。
 
-> 来源：https://github.com/labring/FastGPT/issues/6160
+> 来源：[FastGPT GitHub Issue #6160](https://github.com/labring/FastGPT/issues/6160)

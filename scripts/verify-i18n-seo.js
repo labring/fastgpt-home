@@ -12,6 +12,7 @@ const {
   resolveSiteVariant
 } = require('./lib/site-variant');
 const { locales } = require('../src/config/site-routing.json');
+const guideRegistry = require('../src/content/guides/registry.json').entries;
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
@@ -249,7 +250,14 @@ function verifySitemap() {
 
   assert(fs.existsSync(sitemapPath), 'Missing exported sitemap.xml');
   const sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const urls = [...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  const entries = [...sitemap.matchAll(/<url>([\s\S]*?)<\/url>/gi)].map((match) => {
+    const block = match[1];
+    return {
+      url: block.match(/<loc>([^<]+)<\/loc>/i)?.[1],
+      lastModified: block.match(/<lastmod>([^<]+)<\/lastmod>/i)?.[1]
+    };
+  });
+  const urls = entries.map((entry) => entry.url).filter(Boolean);
   assert(urls.length > 1000, `Sitemap contains too few URLs: ${urls.length}`);
   assert.equal(new Set(urls).size, urls.length, 'Sitemap contains duplicate URLs');
   assert(
@@ -273,6 +281,40 @@ function verifySitemap() {
     variant === 'cn',
     'Sitemap has an unexpected technical center URL'
   );
+
+  const stableRoutes = siteLocaleCodes.map((locale) => {
+    const prefix = locale === defaultLocale ? '' : `/${locale}`;
+    return {
+      prefix,
+      paths: [prefix || '/', `${prefix}/price`, `${prefix}/contact`, `${prefix}/faq`]
+    };
+  }).flat();
+  for (const entry of entries) {
+    if (!entry.url || !entry.lastModified) continue;
+    const pathname = new URL(entry.url).pathname;
+    assert(
+      !stableRoutes.some(({ prefix, paths }) =>
+        paths.includes(pathname) || pathname.startsWith(`${prefix}/faq/`)
+      ),
+      `Stable URL has an unverifiable lastmod: ${entry.url}`
+    );
+  }
+
+  const guideLocale = variant === 'cn' ? 'zh' : 'en';
+  const guideDates = guideRegistry.map((entry) => entry[guideLocale].dateModified);
+  const guideLastModified = new Date(`${guideDates.sort().at(-1)}T00:00:00Z`).toISOString();
+  const expectedGuideDates = new Map([
+    [`${baseUrl}/guide`, guideLastModified],
+    ...guideRegistry.map((entry) => [
+      `${baseUrl}/guide/${entry.slug}`,
+      new Date(`${entry[guideLocale].dateModified}T00:00:00Z`).toISOString()
+    ])
+  ]);
+  for (const [url, expectedLastModified] of expectedGuideDates) {
+    const entry = entries.find((candidate) => candidate.url === url);
+    assert(entry, `Sitemap is missing Guide URL ${url}`);
+    assert.equal(entry.lastModified, expectedLastModified, `Unexpected lastmod for ${url}`);
+  }
 }
 
 function verifyPublishedRoutes() {
@@ -466,7 +508,7 @@ function main() {
   } else if (variant === 'cn') {
     const legacyContactHtml = resolveHtml('/zh/contact');
     assert.equal(getCanonical(legacyContactHtml, '/zh/contact'), `${baseUrls.cn}/contact`);
-    assert.equal(getRobots(legacyContactHtml), 'noindex, follow');
+    assert.equal(getRobots(legacyContactHtml), 'index, follow');
     const techArticleHtml = resolveHtml(techPath);
     assert.equal(getCanonical(techArticleHtml, techPath), `${baseUrls.cn}${techPath}`);
     assert(techArticleHtml.includes('href="/tutorial/fastgpt-self-host-config"'));

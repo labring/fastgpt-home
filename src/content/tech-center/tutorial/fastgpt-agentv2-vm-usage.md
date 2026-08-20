@@ -20,4 +20,4 @@ FastGPT Agent V2的虚拟机是为每个对话会话动态分配的物理隔离�
 # 运行机制与限制
 启动脚本执行遵循固定顺序：先执行自定义的应用启动脚本，再执行关联技能包的入口脚本。系统通过状态文件`~/.fastgpt/agent-skill-entrypoints/state.json`实现状态去重：自定义应用启动脚本通过SHA256哈希比对内容，未修改则跳过执行以加快启动速度；技能入口脚本基于技能版本ID去重，仅在沙箱首次冷启动时执行一次。当虚拟机重建或闲置回收时，所有脚本将在下次冷启动时重新执行。脚本执行受超时保护约束，且存在字符长度限制。对话调试过程中，虚拟机的创建与启动状态会在气泡上方流式展示，方便感知沙箱所处阶段与启动耗时。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/agentv2/vm)

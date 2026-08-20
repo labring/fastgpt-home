@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 暂未明确通用的一键解决方法，可尝试以下排查调整方向：1. 检查FastGPT应用的模型配置中是否存在未被前端展示的thinking模式控制参数；2. 结合模型调用日志，确认实际生效的配置项。所有调整需结合实际环境验证效果。
 
-> 来源：https://github.com/labring/FastGPT/issues/6606
+> 来源：[FastGPT GitHub Issue #6606](https://github.com/labring/FastGPT/issues/6606)

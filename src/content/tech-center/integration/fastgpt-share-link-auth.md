@@ -25,4 +25,4 @@ source_type: 官方文档
 ### 参数与注意事项
 可配置的商业版参数包括：名称（仅展示用）、过期时间（链接失效时间）、QPM（每个用户每分钟最大访问次数）、积分上限（链接最大计费数据）、实时运行状态展示、引用片段/全文查看、来源原文下载/打开。身份验证失败时会返回对应`message`提示，如`身份错误`、`存在违规词`等。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/link
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/link)

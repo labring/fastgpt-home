@@ -17,4 +17,4 @@ source_type: 官方文档
 ### 升级操作步骤
 可按照以下步骤完成版本升级：1. 拉取FastGPT官方镜像，指定镜像tag为`v4.9.13`；2. 若部署了商业版，同步拉取商业版镜像并指定tag为`v4.9.13`；3. 无需对`mcp_server`、`Sandbox`、`AIProxy`组件进行更新；4. 重启部署的FastGPT服务，即可完成本次版本升级。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4913)

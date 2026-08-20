@@ -23,4 +23,4 @@ source_type: 官方文档
 2. 查看面板中的日志信息，记录所有报错内容。
 3. 点击日志中的超链接，可定位到触发错误的具体文件，将完整的错误信息提供后可辅助快速排查问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/methods
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/methods)

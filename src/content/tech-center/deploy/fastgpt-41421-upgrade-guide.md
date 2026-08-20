@@ -23,4 +23,4 @@ source_type: 官方文档
 3.  若此前曾出现过OSS初始化异常的报错，升级后该问题可得到修复，无需额外排查存储配置；
 4.  请确保更新镜像时使用正确的tag版本，避免混用不同版本的镜像导致服务异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41421
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41421)

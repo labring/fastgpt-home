@@ -26,4 +26,4 @@ source_type: GitHub issue
 3.  若因FastGPT配置拦截了外部资源，按实际环境修改对应配置项以放行目标资源。
 4.  验证方法：在FastGPT中重新上传或引用目标图片，确认图片可以正常加载并显示。
 
-> 来源：https://github.com/labring/FastGPT/issues/6312
+> 来源：[FastGPT GitHub Issue #6312](https://github.com/labring/FastGPT/issues/6312)

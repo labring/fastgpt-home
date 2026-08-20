@@ -28,4 +28,4 @@ source_type: GitHub issue
 3. 进入前端对话窗口尝试上传文件，确认上传流程正常。
 4. 通过浏览器开发者工具查看网络请求地址，确认请求地址为STORAGE_EXTERNAL_ENDPOINT配置的外部可访问地址，且可正常访问。
 
-> 来源：https://github.com/labring/FastGPT/issues/6229
+> 来源：[FastGPT GitHub Issue #6229](https://github.com/labring/FastGPT/issues/6229)

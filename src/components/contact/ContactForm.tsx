@@ -26,7 +26,6 @@ import { isPreviewSite } from '@/lib/siteRouting';
 type ContactFormProps = {
   locale: string;
   variant?: 'modal' | 'page';
-  onDone?: () => void;
 };
 
 const CRM_API_URL = process.env.NEXT_PUBLIC_CRM_API_URL?.trim().replace(/\/$/, '') || '';
@@ -303,7 +302,7 @@ function SelectField({
   );
 }
 
-export default function ContactForm({ locale, variant = 'page', onDone }: ContactFormProps) {
+export default function ContactForm({ locale, variant = 'page' }: ContactFormProps) {
   const copy = getContactCopy(locale);
   const formRef = useRef<HTMLFormElement>(null);
   const [values, setValues] = useState<ContactFormValues>(INITIAL_CONTACT_FORM);
@@ -528,15 +527,6 @@ export default function ContactForm({ locale, variant = 'page', onDone }: Contac
           >
             {copy.submitAnother}
           </button>
-          {onDone && (
-            <button
-              type="button"
-              onClick={onDone}
-              className="h-10 rounded-md bg-[#155eef] px-5 text-[13px] font-medium text-white transition-colors hover:bg-[#004eeb] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#155eef] focus-visible:ring-offset-2"
-            >
-              {copy.closeAfterSuccess}
-            </button>
-          )}
         </div>
       </div>
     );

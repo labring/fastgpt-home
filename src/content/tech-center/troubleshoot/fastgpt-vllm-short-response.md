@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若为流式解析不兼容问题，可调整FastGPT中对应模型的响应解析规则（需按实际环境操作）；若为Agent模板参数不匹配，需重新核对Agent的上下文窗口、工具调用等配置，确保与模型能力对齐。验证方式为：在FastGPT中发起与issue中一致的对话流程，确认模型返回完整的回复内容，且与直接调用API的结果一致。
 
-> 来源：https://github.com/labring/FastGPT/issues/6480
+> 来源：[FastGPT GitHub Issue #6480](https://github.com/labring/FastGPT/issues/6480)

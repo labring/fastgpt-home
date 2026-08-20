@@ -24,4 +24,4 @@ FastGPT商业版4.8.10及以上版本支持直接接入飞书机器人，无需�
 - 重置聊天记录：向机器人发送大小写敏感的`Reset`指令，即可新开聊天记录。
 此外需注意，配置事件时应选择新版本权限，避免启用历史版本权限导致功能异常。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/feishu)

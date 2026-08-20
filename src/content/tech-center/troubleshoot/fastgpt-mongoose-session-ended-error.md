@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 解决该问题需调整会话的使用时机，确保在调用`$session()`进行数据库操作时，会话仍处于活跃状态，未被提前终止。具体可针对报错定位的代码位置，修改定时器或异步任务中的会话获取逻辑，避免复用已结束的会话。验证时，重启FastGPT服务，观察日志是否不再出现该Mongoose会话错误，同时验证相关业务功能（如登录、队列任务处理）是否正常运行，确认无未处理的Promise拒绝错误。
 
-> 来源：https://github.com/labring/FastGPT/issues/6476
+> 来源：[FastGPT GitHub Issue #6476](https://github.com/labring/FastGPT/issues/6476)

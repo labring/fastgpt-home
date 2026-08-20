@@ -29,4 +29,4 @@ source_type: GitHub issue
 3. 重新启动Mongo容器，登录Mongo Shell执行`rs.conf()`命令，确认副本集配置中的连接地址已完成更新；
 4. 依次启动plugin、fastgpt-app等其他FastGPT服务，检查各服务的启动日志，确认无Mongo连接报错，所有服务正常运行。
 
-> 来源：https://github.com/labring/FastGPT/issues/6845
+> 来源：[FastGPT GitHub Issue #6845](https://github.com/labring/FastGPT/issues/6845)

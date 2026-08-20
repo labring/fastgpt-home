@@ -32,4 +32,4 @@ source_type: 官方文档
 2.  快捷问题建议覆盖高频使用场景，单次配置数量不宜过多，防止用户因选项过多难以选择；
 3.  若应用要求用户按照固定格式输入内容，可在开场白中给出明确的输入示例，帮助用户快速掌握交互规则。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/general/welcomeText
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/general/welcomeText)

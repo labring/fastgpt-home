@@ -28,4 +28,4 @@ source_type: GitHub issue
 4.  重新发起插件安装请求，验证是否不再返回Internal Server Error。
 5.  若插件成功加载并正常运行，则确认问题已解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/6449
+> 来源：[FastGPT GitHub Issue #6449](https://github.com/labring/FastGPT/issues/6449)

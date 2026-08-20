@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 若排查发现是向量查询参数或环境配置变更导致的耗时增加，可调整相关参数至与旧版本一致的配置（具体参数需按实际环境确认）；若为版本新增逻辑导致的耗时增加，可临时关闭非必要的检索后处理功能（需按实际环境确认）。验证方式为在相同测试条件下重新发起提问，确认知识库检索耗时是否恢复至旧版本水平。
 
-> 来源：https://github.com/labring/FastGPT/issues/6475
+> 来源：[FastGPT GitHub Issue #6475](https://github.com/labring/FastGPT/issues/6475)

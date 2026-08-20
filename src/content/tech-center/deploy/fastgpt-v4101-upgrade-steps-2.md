@@ -28,4 +28,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4101 \
 - **问题修复**：修复搜索类型系统工具无法正常显示的问题；解决部分系统工具向下兼容的问题；修复AI节点手动选择历史记录时system记录重复的问题；修复知识库tag无法滚动到底的问题；修复API知识库通过API导入文件时自定义API解析参数未生效的问题。
 - **工具更新**：新增Flux官方绘图工具、JinaAI工具集、阿里百炼Flux和通义万相绘图工具；纠正硅基流动画图工具的输出值类型。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101)

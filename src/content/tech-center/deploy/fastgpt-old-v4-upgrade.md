@@ -26,4 +26,4 @@ db.outlinks.find({ "shareId": { $exists: false } }).forEach(function (item) { db
 ### API初始化操作
 部署新版项目后，需发起3个HTTP请求，请求需携带`headers.rootkey`，该值为环境变量中配置的rootkey。三个请求地址分别为：`https://xxxxx/api/admin/initv4`、`https://xxxxx/api/admin/initChat`、`https://xxxxx/api/admin/initOutlink`。若执行过程中因内存不足导致请求失败，可重复执行对应请求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/40)

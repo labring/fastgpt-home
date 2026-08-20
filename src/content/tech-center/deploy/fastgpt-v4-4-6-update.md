@@ -17,4 +17,4 @@ FastGPT的版本升级存在差异化要求，部分版本升级需执行专属�
 ### 升级操作参考
 当需要升级到V4.4.6或从V4.4.6升级到后续版本时，需先查阅对应版本的升级说明：若版本标注包含升级脚本，需在部署环境中执行对应脚本完成前置操作；若版本标注存在环境变量变更，需提前调整环境变量配置后再执行版本更新操作。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/446)

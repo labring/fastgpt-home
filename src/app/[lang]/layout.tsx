@@ -1,7 +1,7 @@
 import HomeLayoutSwitcher from '@/components/home/HomeLayoutSwitcher';
 import JsonLd from '@/components/JsonLd';
 import { defaultLocale, getDictionary, getConfigForLocale } from '@/lib/i18n';
-import { getAlternates, localeMap } from '@/lib/seo';
+import { getAlternates, getRobotsPolicy, localeMap } from '@/lib/seo';
 import { currentSiteBaseUrl, getBuildLocaleCodes } from '@/lib/siteRouting';
 import { Metadata } from 'next';
 
@@ -50,10 +50,7 @@ export async function generateMetadata({
       alternateLocale: alternateLocales
     },
     twitter: config.twitter,
-    robots:
-      lang && langName === defaultLocale
-        ? { index: false, follow: true }
-        : { index: true, follow: true },
+    robots: getRobotsPolicy(!(lang && langName === defaultLocale)),
     alternates: getAlternates(langName)
   };
 }

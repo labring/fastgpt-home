@@ -31,4 +31,4 @@ V4.8.15是FastGPT带升级脚本的版本，本次更新包含多项新增功能
 ## 升级注意事项
 本次更新后，外部文件库将逐步被API知识库替代，建议尽快完成相关资源迁移。此外，全局变量默认值将在API调用中生效，自定义变量也支持配置默认值，可根据业务需求调整相关配置。工作流相关修复包括移除本地存储、新增异常离开自动保存，以及修复$开头字符串无法替换的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4815)

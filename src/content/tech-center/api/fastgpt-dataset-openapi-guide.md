@@ -39,4 +39,4 @@ curl --location --request POST http://localhost:3000/api/core/dataset/list?paren
 ## 易错点与边界说明
 使用过程中需注意以下要点：其一，创建知识库时name字段为必填项，未填写将触发参数错误；其二，知识库集合创建时，datasetId与trainingType为必填参数，trainingType仅支持`chunk`（按文本长度分割）与`qa`（问答对提取）两种模式；其三，`autoIndexes`与`imageIndex`仅商业版支持，非商业环境下调用不会生效；其四，删除、获取知识库详情接口需传入正确的知识库ID，否则无法返回有效数据；其五，所有接口的认证凭证需正确携带，否则将返回认证失败响应。此外，删除知识库成功后将返回`{"code": 200, "data": null}`的响应，获取知识库详情的接口需通过GET请求携带id参数。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/dataset
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/dataset)

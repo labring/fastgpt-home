@@ -22,4 +22,4 @@ source_type: GitHub issue
 ## 解决与验证
 由于日志提示该崩溃为Bun自身的bug，可尝试更换适配当前系统环境的Bun版本，或等待Bun官方发布修复该段错误的更新版本。验证方式：重启`fastgpt-code-sandbox`容器，再次查看日志，确认不再出现Bun段错误崩溃，且服务能正常启动在`http://localhost:3000`。
 
-> 来源：https://github.com/labring/FastGPT/issues/6893
+> 来源：[FastGPT GitHub Issue #6893](https://github.com/labring/FastGPT/issues/6893)

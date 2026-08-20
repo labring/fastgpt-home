@@ -23,4 +23,4 @@ source_type: 官方文档
 4.  配置循环体结束节点：选择输出变量为AI回复内容，完成整体配置。
 运行流程将依次执行代码生成数组、批量遍历处理每个文本元素、收集翻译结果并输出最终数组。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/loop)

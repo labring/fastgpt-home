@@ -23,4 +23,4 @@ FastGPT的`getTools`调用链路在执行时，会先尝试StreamableHTTP连接�
 ## 解决与验证
 解决方面，需按实际环境确认可行方案：一是调整目标MCP endpoint，使其支持SSE GET请求；二是修改FastGPT的`getTools`调用逻辑，禁用SSE回退机制（具体配置需按实际环境确认）。验证时，重新调用`getTools`接口，查看后端日志是否不再出现SSE相关报错，且接口返回200状态码并正确获取工具列表，同时确认`runTool`调用仍可正常执行。
 
-> 来源：https://github.com/labring/FastGPT/issues/7047
+> 来源：[FastGPT GitHub Issue #7047](https://github.com/labring/FastGPT/issues/7047)

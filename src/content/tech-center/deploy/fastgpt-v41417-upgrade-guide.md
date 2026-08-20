@@ -16,4 +16,4 @@ source_type: 官方文档
 2.  更新fastgpt-pro（FastGPT商业版）的镜像tag为`v4.14.17`。
 ## 注意事项与使用边界
 该版本的升级仅需更新对应镜像tag，无需执行额外的升级脚本。商业版用户需要特别注意S3 External Endpoint的配置，若未配置该参数，会触发文件解析失败的问题，无法正常处理对话中的文件上传请求。此外，该版本修复的问题仅覆盖API知识库类型校验、门户上传文件异常以及商业版文件解析依赖三个场景，若遇到其他类型的运行异常，需参考官方文档的通用排查流程进行处理。
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41417
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/41417)

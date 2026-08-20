@@ -25,4 +25,4 @@ curl --location --request GET "https://cloud.fastgpt.cn/api/proApi/core/app/logs
 ### 注意事项与边界
 使用该类接口时需注意：若传入无效的`appId`或API Key，将返回非200状态码的响应；`source`参数仅支持预设的来源值，传入未定义的来源可能导致统计数据异常；该接口仅能查询已授权的应用数据，无法获取未绑定的应用统计信息。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi/app
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi/app)

@@ -23,4 +23,4 @@ source_type: GitHub issue
 ## 解决与验证
 针对排查出的具体问题进行针对性修复：若为检索阈值过高，调整至合理范围后验证效果；若为向量生成异常，重新触发知识库嵌入向量生成任务；若为向量数据库同步异常，执行数据同步操作。验证方式为再次执行语义检索，确认检索结果分数不为0且存在匹配的检索内容。
 
-> 来源：https://github.com/labring/FastGPT/issues/6680
+> 来源：[FastGPT GitHub Issue #6680](https://github.com/labring/FastGPT/issues/6680)

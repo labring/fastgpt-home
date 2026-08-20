@@ -25,4 +25,4 @@ FastGPT V4.14.5版本新增对原生OSS和COS存储的支持，因此调整了�
 ## 新增优化与注意事项
 该版本新增了工作流画布演示模式、嵌套应用快速跳转按钮，支持工作流导出时选择是否过滤敏感信息，对话记录改为软删除并新增日志管理删除功能，门户页支持配置单个应用的运行可见度。优化内容包括调整Redis全量key获取逻辑避免阻塞、优化Mongo/Redis/MQ的重连逻辑、增大文件解析接口请求限制到10MB等。修复的重要问题包括工作流并行合并后重复运行、MCP工具自定义鉴权头报错、对话日志列表头像为空抛错等。此外还调整了部分字段名：`showNodeStatus`改为`showRunningStatus`、`responseDetail`改为`showCite`、`showRawSource`改为`canDownloadSource`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4145)

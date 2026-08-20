@@ -27,4 +27,4 @@ source_type: GitHub issue
 3. 需按实际部署环境确认是否可通过修改前端渲染代码块的样式规则解决问题。
 验证方式：复现原问题场景，调整后观察代码块与用户输入内容不再混淆，页面格式恢复正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6177
+> 来源：[FastGPT GitHub Issue #6177](https://github.com/labring/FastGPT/issues/6177)

@@ -25,4 +25,4 @@ curl --location --request POST https://{{host}}/api/admin/initv441 \
 ## 升级注意事项与边界
 执行该升级操作前，需确认当前运行的FastGPT版本低于V4.4.1，若已升级至更高版本，执行该操作可能会引发数据异常。若请求返回`401 Unauthorized`报错，需检查rootkey值是否正确，或确认环境变量是否已正确配置。若请求超时，需检查网络连接是否正常，以及服务端口是否对外开放。该升级脚本仅适用于自部署场景，且仅针对V4.4.1版本的初始化需求，其他版本的升级需参考对应版本的操作文档。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/441)

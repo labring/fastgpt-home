@@ -25,4 +25,4 @@ source_type: 官方文档
 ## 升级注意事项
 本次升级为带初始化脚本的版本更新，需确保所有镜像的tag统一修改为`v4.8.4`，避免出现版本不一致导致的功能异常。商业版用户务必完成初始化请求，否则部分商业专属功能可能无法正常启用。若升级过程中出现报错，可参考官方文档的排查指南进行问题定位。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/484)

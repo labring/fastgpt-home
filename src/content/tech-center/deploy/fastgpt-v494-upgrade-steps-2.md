@@ -27,4 +27,4 @@ FastGPT V4.9.4版本包含环境变量变更，需执行专属升级脚本（仅
 ### 升级注意事项
 本次升级需严格按照步骤执行，未配置Redis环境变量可能导致服务异常；升级脚本仅针对商业版用户，非商业版用户无需执行该脚本；更新镜像tag时需确保使用正确的v4.9.4版本，避免使用错误的镜像版本导致兼容性问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/494)

@@ -20,4 +20,4 @@ source_type: 官方文档
 ## 使用边界与易错点
 该节点仅针对连续对话中的指代类问题进行优化，无法处理语义改写、格式调整等其他类型的问题优化需求。同时需要注意，模型对于补全的概念可能理解不清晰，在长上下文场景下，可能出现补全不准确的情况。此外，请勿在单轮对话场景中使用该节点，单轮问题本身无需上下文指代补全，使用该节点会增加不必要的AI调用开销，且无法带来实际效果提升。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/coreferenceResolution)

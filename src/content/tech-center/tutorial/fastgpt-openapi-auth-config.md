@@ -24,4 +24,4 @@ headers: {
 ```
 需要严格按照该格式配置，确保鉴权字段正确无误，即可发起对应接口的调用请求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/openapi
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/openapi)

@@ -34,4 +34,4 @@ fastgpt-mcp-server:
 2. 修改FastGPT容器的环境变量，添加`SSE_MCP_SERVER_PROXY_ENDPOINT`，值为客户端可访问的`fastgpt-mcp-server`地址，末尾请勿携带`/`，例如`https://mcp.fastgpt.cn`。
 3. 执行`docker-compose down`和`docker-compose up -d`重启容器，重启完成后即可在FastGPT工作台看到MCP Server的管理选项。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/publish/mcp_server)

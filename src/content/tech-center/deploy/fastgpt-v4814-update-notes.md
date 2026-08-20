@@ -20,4 +20,4 @@ source_type: 官方文档
 ### 优化与修复
 优化工作流UI细节、应用编辑记录采用diff存储避免浏览器溢出；新增register入口，无需等待首次访问即可执行；工作流检查增加更多缺失值检查；新增知识库训练最大重试次数限制；修复图片路径与示意图任务问题、Milvus description问题；修复四级标题丢失问题并新增五级标题支持；修复MongoDB知识库集合唯一索引异常；修复反选知识库引用后报错问题；修复简易模式转工作流未使用最新编辑记录的问题；修复表单输入说明文字不显示问题；修复API无法使用base64图片的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4814)

@@ -20,4 +20,4 @@ FastGPT 自部署服务的环境变量分为共享变量与各服务专属变量
 3. 按需配置商业版服务：若使用 `pro/admin`，需配置 `PRO_URL` 和对应的 `PRO_TOKEN`，且需与商业版服务配置保持一致；
 4. 注意边界场景：未配置 AI Proxy 时，会使用默认的 `OPENAI_BASE_URL` 地址，需搭配 `CHAT_API_KEY` 使用；Agent Sandbox 需指定提供方并填写对应必填变量，否则不会启用沙箱功能。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/env
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)

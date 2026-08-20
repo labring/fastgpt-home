@@ -29,4 +29,4 @@ source_type: GitHub issue
 3. 点击确定按钮后，检查输入的数值是否正常保留，未被自动还原。
 4. 拖动滚动条确认可正常调整数值范围，验证异常问题是否已完全解决。
 
-> 来源：https://github.com/labring/FastGPT/issues/7198
+> 来源：[FastGPT GitHub Issue #7198](https://github.com/labring/FastGPT/issues/7198)

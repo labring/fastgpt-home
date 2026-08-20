@@ -20,4 +20,4 @@ source_type: 官方文档
 3. 点击【流程开始】节点的右侧后置连接点，再点击【AI对话】节点的左侧前置连接点，完成节点连线。
 4. 保存工作流并测试，输入问题即可触发完整流程，获取AI回复。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/intro)

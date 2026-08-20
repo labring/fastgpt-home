@@ -29,4 +29,4 @@ curl --location --request POST https://{{host}}/api/admin/initv4141 \
 ### 修复问题
 本次版本修复了多个已知问题，包括：Debug模式下交互节点无法正常使用、富文本编辑器Tab空格未对齐、嵌套运行Agent时跳过节点队列未初始化导致运行失败、判断器右侧为number引用时触发报错、工作流工具入参为文件选择时未弹出选择框、HTTP插件无法处理http协议接口请求、文本类型全局变量默认值编辑框UI异常、代码节点行数超100行时显示重叠、删除应用未同步删除目录内内容、浏览器未传递实时日期至服务器。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-14/4141)

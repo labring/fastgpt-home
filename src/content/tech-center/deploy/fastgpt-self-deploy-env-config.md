@@ -36,4 +36,4 @@ FastGPT自部署的核心服务包括主应用（projects/app）、商业版后�
 ## 其他配置注意事项
 `PRO_TOKEN`与`PRO_URL`为商业版专用配置，非商业版无需设置；Agent沙箱需根据选定的提供方配置对应服务地址与密钥，未配置则不启用。`PLUGIN_BASE_URL`与`PLUGIN_TOKEN`用于配置插件服务的地址与认证令牌，默认指向本地3004端口的插件服务。部分App侧专属开关会在单独的配置项中说明，`packages/service/env.ts`包含少量此类变量。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/env
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/env)

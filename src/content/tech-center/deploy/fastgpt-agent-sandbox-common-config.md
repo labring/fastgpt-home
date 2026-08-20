@@ -22,4 +22,4 @@ FastGPT Agent Sandbox通用配置适用于opensandbox和sealosdevbox两类Provid
 - 生命周期变量：AGENT_SANDBOX_SUSPEND_MINUTES默认60分钟（未活跃自动暂停），AGENT_SANDBOX_ARCHIVE_INACTIVE_DAYS默认7天（暂停后未活跃自动归档）。
 此外可配置沙盒内依赖源：AGENT_SANDBOX_NPM_REGISTRY可替换npm/yarn等包管理器的源，AGENT_SANDBOX_PYPI_INDEX_URL可替换PyPI源。若遇到提示`AGENT_SANDBOX_PROXY_URL 或 AGENT_SANDBOX_PREVIEW_PROXY_URL is required`，需检查FastGPT环境变量是否正确配置。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common)

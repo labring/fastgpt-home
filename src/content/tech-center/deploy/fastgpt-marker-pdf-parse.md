@@ -46,4 +46,4 @@ docker run --gpus all -itd -p 7231:7232 --name model_pdf_v2 -e PROCESSES_PER_GPU
 ## 使用须知
 Marker采用GPL-3.0 license协议，需在遵守协议的前提下使用。对于FastGPT v4.9.0之前的版本，需通过环境变量配置旧版解析服务，使用`marker_images:v0.1`镜像，映射端口为7231:7231，并设置`CUSTOM_READ_FILE_URL`、`CUSTOM_READ_FILE_EXTENSION`等环境变量。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/custom-models/marker)

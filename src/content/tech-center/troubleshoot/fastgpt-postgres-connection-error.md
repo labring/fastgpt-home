@@ -27,4 +27,4 @@ FastGPT启动过程中，MongoDB、S3存储及队列服务均正常初始化完�
 ## 解决与验证
 根据排查结果针对性处理：若PostgreSQL服务未启动，启动数据库并确认监听正常；若配置参数错误，修正配置文件中的连接信息；若存在网络拦截，调整安全组或防火墙规则放行对应端口。验证方式为：重启FastGPT服务后，查看启动日志是否出现`Postgres pool connected`成功日志，且系统初始化流程无异常中断。
 
-> 来源：https://github.com/labring/FastGPT/issues/6500
+> 来源：[FastGPT GitHub Issue #6500](https://github.com/labring/FastGPT/issues/6500)

@@ -19,4 +19,4 @@ source_type: 官方文档
 ## 功能边界说明
 该模块仅负责输出预设或变量化的回复内容，不具备其他内容处理能力，仅适用于需要固定或动态返回指定内容的特殊场景，比如用户触发特定流程节点后的固定提示、流程中断时的友好提示等。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/reply)

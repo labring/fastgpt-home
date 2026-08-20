@@ -23,4 +23,4 @@ source_type: 官方文档
 #### 修复项
 修复简易模式切换至非视觉模型时强制关闭图片识别的问题；修复o1、o3模型测试时字段映射未生效导致的报错；修复公众号对话的空指针异常；修复多个音频/视频文件展示异常的问题；修复分享链接鉴权报错后无限循环的问题。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4821)

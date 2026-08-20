@@ -34,4 +34,4 @@ curl --location --request POST https://{{host}}/api/admin/initv46-fix \
 ### 功能与优化说明
 V4.6版本新增多项核心功能：团队空间管理、多路向量（多向量映射一组数据）、TTS语音功能、支持知识库配置文本预处理模型；线上环境新增ReRank向量召回机制，可提升召回精度。同时优化了知识库导出功能，支持直接触发流下载，无需等待转换完成。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/46)

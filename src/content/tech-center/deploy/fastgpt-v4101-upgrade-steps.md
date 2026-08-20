@@ -41,4 +41,4 @@ source_type: 官方文档
 - 新增阿里百炼Flux和通义万相绘图工具
 - 纠正硅基流动画图工具的输出值类型
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/4101)

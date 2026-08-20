@@ -19,4 +19,4 @@ source_type: 官方文档
 如果需要恢复到以前的版本，点击编辑器右上角的"版本历史"（时钟）图标，即可查看已发布的所有历史快照。将鼠标悬停在要恢复的历史版本上，点击"切换"（返回箭头）图标，即可一键将工作区文件以及当前线上运行的版本同时切换回该历史版本。
 > 💡 注意：回滚的版本不会携带被`.gitignore`忽略的文件，如依赖包`node_modules`、虚拟环境`.venv`等已忽略的本地文件不会被恢复。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/skill/version
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/skill/version)

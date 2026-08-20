@@ -31,4 +31,4 @@ source_type: GitHub issue
 2.  针对`ReferenceError: name is not defined`报错：目前暂无临时修复方案，需等待官方代码更新修复该变量未定义的问题，同时可提前确认OSS私有存储桶是否已创建；
 3.  验证方法：重新发起对话请求，确认不再触发报错，且能正常生成OSS签名URL，上传日志与对话流程恢复正常。
 
-> 来源：https://github.com/labring/FastGPT/issues/6552
+> 来源：[FastGPT GitHub Issue #6552](https://github.com/labring/FastGPT/issues/6552)

@@ -18,4 +18,4 @@ source_type: 官方文档
 ### 节点作用
 该节点的主要作用是为任意工作流模块输入自定义格式的文本，也可以用于处理AI模块的系统提示词，无需额外依赖其他模块，仅通过简单配置即可完成文本格式的自定义加工，帮助用户为后续的AI对话环节预设统一的上下文格式，适配不同的业务场景需求。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/text_editor
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/guide/build/workflow/nodes/text_editor)

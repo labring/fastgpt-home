@@ -17,4 +17,4 @@ FastGPT V4.8.3版本包含多项实用的功能新增与问题修复。在功能
 ## 升级适配提示
 本次V4.8.3版本升级未涉及强制的环境变量变更操作，相较于部分过往版本，升级流程更为简洁。仅需完成镜像标签的调整即可完成基础版本升级，如需使用新增的Milvus数据库功能，则需额外参考对应配置文件完成相关适配。对于需要使用新增的ifelse判断器正则匹配、代码调试日志等功能的用户，在完成版本升级后即可直接启用对应功能，无需额外的配置步骤。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/upgrading/outdated/483)

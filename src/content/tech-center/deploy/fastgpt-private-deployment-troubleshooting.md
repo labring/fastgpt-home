@@ -22,4 +22,4 @@ FastGPT私有部署的常见问题可通过日志、报错信息定位。前端�
 ## 其他典型问题处理
 知识库索引无进度或速度缓慢的问题可通过日志判断：可对话但无索引进度，代表未配置`vectorModels`；不能对话且无索引进度，代表API调用失败（如未连接OneAPI）；索引缓慢可能因API key限制（如OpenAI免费号单日上限200次）、网络异常（`Connection error`）。开启内容补全后响应变慢，因需经过3~5轮AI查询，数据库性能不足会加剧该问题。页面可正常回复但API报错时，需使用`stream=true`模式测试，部分国产模型的非Stream兼容表现不佳。此外，可纯本地运行FastGPT，但需提前准备向量模型和LLM模型。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/faq
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/troubleshooting/faq)

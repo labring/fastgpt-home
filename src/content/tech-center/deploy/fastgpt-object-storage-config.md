@@ -28,4 +28,4 @@ FastGPT 支持 MinIO、AWS S3、Alibaba Cloud OSS、Tencent Cloud COS 和 Cloudf
     ```
     注意：`STORAGE_EXTERNAL_ENDPOINT`需填写服务器和客户端均可访问的宿主机 IP 或域名，请勿使用`127.0.0.1`或`localhost`等本地回环地址。若使用 Sealos 的对象存储服务，需将`STORAGE_VENDOR`设置为`minio`。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/object-storage)

@@ -27,4 +27,4 @@ SigNoz是一款开源的应用性能监控（APM）和可观测性平台，为Fa
 ## 注意事项
 SigNoz监控服务会占用较多磁盘空间，请勿将FastGPT的debug日志纳入收集范围，建议将日志存储时长调整为7天。若出现Signoz数据不再增加且内存持续占用的情况，通常是磁盘已满，需及时扩大存储容量。
 
-> 来源：https://doc.fastgpt.cn/zh-CN/self-host/config/signoz
+> 来源：[FastGPT 官方文档](https://doc.fastgpt.cn/zh-CN/self-host/config/signoz)

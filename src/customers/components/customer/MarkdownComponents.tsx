@@ -23,32 +23,32 @@ import { tableMarkdownRenderers } from './markdown/renderers/table';
 
 const highlightStyles = {
   red: {
-    container: 'not-prose bg-gradient-to-r from-red-50 to-red-50/50 dark:from-red-950/20 dark:to-red-900/10 border border-red-200 dark:border-red-900/50 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-red-500/20 dark:text-red-500/5',
+    container: 'not-prose bg-gradient-to-r from-red-50 to-red-50/50 dark:from-red-500/15 dark:to-red-400/10 border border-red-200 dark:border-red-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-red-500/20 dark:text-red-400/25',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
     title: 'font-bold text-red-700 dark:text-red-400 text-sm'
   },
   orange: {
-    container: 'not-prose bg-gradient-to-r from-orange-50 to-orange-50/50 dark:from-orange-950/20 dark:to-orange-900/10 border border-orange-200 dark:border-orange-900/50 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-orange-500/20 dark:text-orange-500/5',
+    container: 'not-prose bg-gradient-to-r from-orange-50 to-orange-50/50 dark:from-orange-500/15 dark:to-orange-400/10 border border-orange-200 dark:border-orange-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-orange-500/20 dark:text-orange-400/25',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
     title: 'font-bold text-orange-700 dark:text-orange-400 text-sm'
   },
   blue: {
-    container: 'not-prose bg-gradient-to-r from-blue-50 to-blue-50/50 dark:from-blue-950/20 dark:to-blue-900/10 border border-blue-200 dark:border-blue-900/50 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-blue-500/20 dark:text-blue-500/5',
+    container: 'not-prose bg-gradient-to-r from-blue-50 to-blue-50/50 dark:from-blue-500/15 dark:to-blue-400/10 border border-blue-200 dark:border-blue-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-blue-500/20 dark:text-blue-400/25',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
     title: 'font-bold text-blue-700 dark:text-blue-400 text-sm'
   },
   green: {
-    container: 'not-prose bg-gradient-to-r from-emerald-50 to-emerald-50/50 dark:from-emerald-950/20 dark:to-emerald-900/10 border border-emerald-200 dark:border-emerald-900/50 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-emerald-500/20 dark:text-emerald-500/5',
+    container: 'not-prose bg-gradient-to-r from-emerald-50 to-emerald-50/50 dark:from-emerald-500/15 dark:to-emerald-400/10 border border-emerald-200 dark:border-emerald-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-emerald-500/20 dark:text-emerald-400/25',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
     title: 'font-bold text-emerald-700 dark:text-emerald-400 text-sm'
   },
   purple: {
-    container: 'not-prose bg-gradient-to-r from-purple-50 to-purple-50/50 dark:from-purple-950/20 dark:to-purple-900/10 border border-purple-200 dark:border-purple-900/50 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
-    icon: 'w-24 h-24 text-purple-500/20 dark:text-purple-500/5',
+    container: 'not-prose bg-gradient-to-r from-purple-50 to-purple-50/50 dark:from-purple-500/15 dark:to-purple-400/10 border border-purple-200 dark:border-purple-500/40 p-4 my-4 rounded-2xl relative overflow-hidden shadow-sm dark:shadow-none',
+    icon: 'w-24 h-24 text-purple-500/20 dark:text-purple-400/25',
     content: 'relative z-10 m-0 text-[15px] sm:text-base text-slate-900 dark:text-slate-100 leading-[1.8] [&>p]:m-0 [&>p]:mb-2 [&>p:last-child]:mb-0',
     title: 'font-bold text-purple-700 dark:text-purple-400 text-sm'
   }

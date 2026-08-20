@@ -56,7 +56,10 @@ function parseAIResponse(content: string) {
     const jsonStr = content.replace(/```json\n?/, '').replace(/```/, '').trim();
     return JSON.parse(jsonStr);
   } catch {
-    console.error('AI 解析失败:', content);
+    // 只记录类型/长度与截断前缀，避免大模型原始输出整段进日志（噪音 + 信息泄露）
+    console.error(
+      `AI 解析失败: content(${content.length} chars) -> ${content.slice(0, 200)}`
+    );
     return { matched_case: null };
   }
 }

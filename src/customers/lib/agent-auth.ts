@@ -1,5 +1,6 @@
 import { NextRequest } from 'next/server';
 import { readSystemSettings } from '@/customers/lib/system-settings';
+import { timingSafeEqual } from '@/customers/lib/secret-compare';
 
 export interface AuthResult {
   authenticated: boolean;
@@ -25,7 +26,7 @@ export async function authenticateAgent(request: NextRequest): Promise<AuthResul
   // Agent v1 接口统一使用 apikey 请求头鉴权。
   const requestApiKey = request.headers.get('apikey');
   const validKey = await getAgentApiKey();
-  if (validKey && requestApiKey === validKey) {
+  if (validKey && requestApiKey && timingSafeEqual(requestApiKey, validKey)) {
     return { authenticated: true, method: 'api_key' };
   }
 

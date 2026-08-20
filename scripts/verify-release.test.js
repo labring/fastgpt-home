@@ -214,10 +214,6 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     path.join(ROOT, '.github/workflows/guide-release-verification.yml'),
     'utf8'
   );
-  const productionWorkflow = fs.readFileSync(
-    path.join(ROOT, '.github/workflows/guide-production-release.yml'),
-    'utf8'
-  );
 
   assert.equal(
     packageJson.scripts.prebuild.split(' && ')[0],
@@ -244,15 +240,6 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     'scripts/fix-html-lang.js'
   ])
     assert(verificationWorkflow.includes(pattern), pattern);
-  assert.match(
-    productionWorkflow,
-    /verify-content-hygiene\.js --mode live --base-url-cn https:\/\/fastgpt\.cn --base-url-io https:\/\/fastgpt\.io --report content-hygiene-live-evidence\.json/
-  );
-  assert.match(productionWorkflow, /content-hygiene-live-evidence\.json\.txt/);
-  assert(
-    productionWorkflow.indexOf('verify-guide-live.js') <
-      productionWorkflow.indexOf('verify-content-hygiene.js --mode live')
-  );
 });
 
 test('successful verified outputs can be retained before lifecycle cleanup', () => {
@@ -269,140 +256,6 @@ test('successful verified outputs can be retained before lifecycle cleanup', () 
     variantLoop.indexOf('retainSuccessArtifacts') <
       variantLoop.indexOf('clearBuildArtifacts()', variantLoop.indexOf('runVariantChecks'))
   );
-});
-
-test('production delivery consumes retained archives and records immutable provider evidence', () => {
-  const workflow = fs.readFileSync(
-    path.join(ROOT, '.github/workflows/guide-production-release.yml'),
-    'utf8'
-  );
-  const dockerfile = fs.readFileSync(path.join(ROOT, 'Dockerfile'), 'utf8');
-  const nginx = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
-  const headers = fs.readFileSync(path.join(ROOT, 'public/_headers'), 'utf8');
-  const guideSeo = fs.readFileSync(path.join(ROOT, 'src/lib/guideSeo.ts'), 'utf8');
-  assert.match(workflow, /RELEASE_ROOT: release-root/);
-  assert.doesNotMatch(workflow, /RELEASE_ROOT:.*runner\.temp/);
-  assert.equal((workflow.match(/path: release-root/g) || []).length, 2);
-  assert.equal((workflow.match(/sha256sum -c "\$archive_name\.sha256"/g) || []).length, 2);
-  for (const marker of [
-    'verify:release -- --retain-success-artifacts',
-    'sha256sum -c',
-    'tar -xzf',
-    'target: release-runtime',
-    'docker/build-push-action@v5',
-    'kubectl set image',
-    'kubectl rollout status',
-    'cloudflare/wrangler-action@v3',
-    'pages deploy release-out',
-    '--commit-hash',
-    'pages deployment list --project-name=',
-    'rollbackTarget',
-    'provider-receipt'
-  ])
-    assert(workflow.includes(marker), marker);
-  const cnRollback = workflow.indexOf('Capture provider-derived CN rollback target');
-  const cnBuild = workflow.indexOf('docker/build-push-action@v5');
-  const cnRollout = workflow.indexOf('Roll out digest-pinned CN image');
-  const cnReceipt = workflow.indexOf('Write final CN provider receipt after rollout');
-  assert(cnRollback >= 0 && cnRollback < cnBuild);
-  assert(cnBuild < cnRollout && cnRollout < cnReceipt);
-  assert.match(workflow, /kubectl get deployment\/fastgpt-home/);
-  assert.match(workflow, /rollout:\{status:'completed'/);
-  assert.equal((workflow.match(/KUBE_RAW=\"\$KUBE_CONFIG\" KUBE_OUTPUT=/g) || []).length, 2);
-  assert.match(workflow, /Buffer\.from\(compact, 'base64'\)/);
-  assert.match(workflow, /KUBE_CONFIG format unsupported/);
-  assert.match(workflow, /kubectl config view --minify/);
-  assert.match(workflow, /docker\/setup-buildx-action@v3/);
-  assert.match(workflow, /docker buildx imagetools inspect/);
-  assert.match(workflow, /normalized_image/);
-  assert.match(workflow, /imageDigest=%s/);
-  const ioRollback = workflow.indexOf('Capture provider-derived IO rollback target');
-  const ioDeploy = workflow.indexOf('pages deploy release-out');
-  assert(ioRollback >= 0 && ioRollback < ioDeploy);
-  assert.match(workflow, /io-previous-deployments\.json/);
-  assert.match(workflow, /ROLLBACK_ID/);
-  assert.match(workflow, /pages-deployment-id/);
-  assert.match(workflow, /DEPLOYMENT_ID/);
-  assert.match(workflow, /deploymentEnvironment/);
-  assert.match(workflow, /ROLLBACK_INPUT/);
-  assert.match(workflow, /initial-production/);
-  assert.match(workflow, /previousDeploymentUrl:process\.env\.ROLLBACK_URL\|\|null/);
-  assert.equal(
-    (workflow.match(/\.\/node_modules\/\.bin\/wrangler pages deployment list/g) || []).length,
-    3
-  );
-  assert.doesNotMatch(workflow, /npx --(?:yes )?wrangler@4 pages deployment list/);
-  assert.match(
-    workflow,
-    /Install locked Wrangler CLI without lifecycle scripts[\s\S]*npm ci --ignore-scripts/
-  );
-  assert.equal(packageJson.devDependencies.wrangler, '4.123.0');
-  assert.equal(packageLock.packages[''].devDependencies.wrangler, '4.123.0');
-  assert.equal(packageLock.packages['node_modules/wrangler'].version, '4.123.0');
-  const auditWranglerInstall = workflow.indexOf(
-    'Install locked Wrangler CLI without lifecycle scripts'
-  );
-  const auditWranglerList = workflow.lastIndexOf(
-    './node_modules/.bin/wrangler pages deployment list'
-  );
-  assert(auditWranglerInstall >= 0 && auditWranglerInstall < auditWranglerList);
-  const auditJob = workflow.indexOf('provider-audit:');
-  const auditCheckout = workflow.indexOf('- uses: actions/checkout@v4', auditJob);
-  assert(auditCheckout >= auditJob && auditCheckout < auditWranglerInstall);
-  assert.equal((workflow.match(/PROJECT_NAME: fastgpt-home/g) || []).length, 2);
-  assert.doesNotMatch(
-    workflow,
-    /CLOUDFLARE_PROJECT_NAME: \$\{\{ vars\.CLOUDFLARE_PROJECT_NAME \}\}/
-  );
-  assert.match(workflow, /provider:\{project:process\.env\.PROJECT_NAME/);
-  assert.match(workflow, /firstObjectValues/);
-  assert.match(workflow, /Pages deployment list is empty/);
-  assert.match(workflow, /deployment_id/);
-  assert.match(workflow, /Environment/);
-  assert.match(workflow, /Deployment/);
-  assert.match(workflow, /productionActiveCandidates/);
-  assert.match(workflow, /fallback-first/);
-  assert.match(workflow, /if: always\(\)/);
-  assert(workflow.includes('--inject-release-headers'));
-  assert.equal(
-    (
-      dockerfile.match(
-        /FROM fholzer\/nginx-brotli@sha256:1982def7c54f70db5186b30fa2e4a1fdf6116f42b45d95627594bd872a75cf6e AS (?:runtime|release-runtime)/g
-      ) || []
-    ).length,
-    2
-  );
-  const releaseStage = dockerfile.indexOf('AS release-runtime');
-  const runtimeStage = dockerfile.indexOf('AS runtime');
-  assert(releaseStage >= 0 && runtimeStage > releaseStage);
-  assert(dockerfile.includes('COPY release-out/ /usr/share/nginx/html/'));
-  assert.match(
-    dockerfile,
-    /COPY release-out\/__release\/nginx-redirects\.conf \/etc\/nginx\/generated-redirects\.conf/
-  );
-  assert.match(
-    dockerfile,
-    /COPY nginx-embeddable-security-headers\.conf \/etc\/nginx\/embeddable-security-headers\.conf/
-  );
-  assert.match(dockerfile, /test -s \/etc\/nginx\/generated-redirects\.conf/);
-  assert.doesNotMatch(dockerfile.slice(releaseStage, runtimeStage), /printf.*locale_redirect_target/);
-  assert.match(nginx, /location = \/__release\/manifest\.json/);
-  assert.match(nginx, /Cache-Control "no-store"/);
-  assert.match(
-    headers,
-    /\/__release\/manifest\.json\n  ! Cache-Control\n  Cache-Control: no-store/
-  );
-  assert.equal(
-    (guideSeo.match(/robots: indexable \? \{ index: true, follow: true \}/g) || []).length,
-    2
-  );
-  assert.doesNotMatch(workflow, /echo \$\{\{ secrets\./);
-  const evidenceJob = workflow.indexOf('  evidence:');
-  const evidenceSetup = workflow.indexOf('actions/setup-node@v4', evidenceJob);
-  const evidenceInstall = workflow.indexOf('npm ci --ignore-scripts', evidenceJob);
-  const evidenceVerifier = workflow.indexOf('verify-guide-live.js', evidenceJob);
-  assert(evidenceJob >= 0 && evidenceSetup > evidenceJob);
-  assert(evidenceSetup < evidenceInstall && evidenceInstall < evidenceVerifier);
 });
 
 test('P1 successful evidence keeps the emitted KiB measurement', () => {

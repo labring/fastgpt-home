@@ -5,7 +5,7 @@ import { openCtaModal } from "@/customers/lib/cta";
 import GitHubStarsStat from "@/customers/components/GitHubStarsStat";
 
 export default function Hero({ overviewStats }: { overviewStats: { value: string; label: string; link?: string; live?: boolean }[] }) {
-  const fullText = "企业级 AI 客户案例";
+  const fullText = "企业级 AI 解决方案";
   const [typedText, setTypedText] = useState("");
   const [showCursor, setShowCursor] = useState(true);
   const [isTyping, setIsTyping] = useState(true);
@@ -95,7 +95,7 @@ export default function Hero({ overviewStats }: { overviewStats: { value: string
 
         <p className="text-xs sm:text-sm md:text-base text-gray-600 dark:text-gray-400 max-w-3xl leading-relaxed mb-8 font-normal px-2">
           依托 <span className="font-semibold text-brand-600 dark:text-brand-400">FastGPT</span> 工作流引擎与知识库检索能力，我们将高频业务场景沉淀为
-          <span className="font-semibold text-gray-900 dark:text-gray-200">标准化、可验证、可交付</span> 的 AI 客户案例，帮助企业从场景评估、POC 验证到
+          <span className="font-semibold text-gray-900 dark:text-gray-200">标准化、可验证、可交付</span> 的 AI 解决方案，帮助企业从场景评估、POC 验证到
           <span className="font-semibold text-brand-600 dark:text-brand-400">生产环境上线高效落地</span>。
         </p>
 

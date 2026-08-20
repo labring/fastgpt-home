@@ -71,6 +71,10 @@ COPY --from=builder /app/.next/standalone ./
 COPY --from=builder /app/.next/static ./.next/static
 COPY --from=builder /app/public ./public
 
+# 纵深防御：standalone 产物会原样复制根目录 .env（含生产密钥），
+# .dockerignore 是唯一防线；镜像层内显式删除，防止密钥进入镜像可被解层提取。
+RUN rm -f .env .env.local .env.production .env.*.local
+
 RUN addgroup -S nodeapp && adduser -S nodeapp -G nodeapp \
     && mkdir -p /app/.next/cache \
     && chown -R nodeapp:nodeapp /app

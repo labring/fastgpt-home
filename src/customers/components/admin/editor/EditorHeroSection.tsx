@@ -77,7 +77,7 @@ function CustomSelectField({
 
         {isOpen && (
           <>
-            <div className="fixed inset-0 z-40" onClick={() => setIsOpen(false)} />
+            <div className="fixed inset-0 z-40 cursor-pointer" onClick={() => setIsOpen(false)} />
             <div className="absolute z-50 mt-1 w-full rounded-lg border border-gray-200 bg-white py-1 shadow-xl dark:border-gray-700 dark:bg-gray-800">
               {options.map((option) => (
                 <button
@@ -270,7 +270,7 @@ export default function EditorHeroSection({
               {isCategoryDropdownOpen && (
                 <>
                   <div
-                    className="fixed inset-0 z-40"
+                    className="fixed inset-0 z-40 cursor-pointer"
                     onClick={() => setIsCategoryDropdownOpen(false)}
                   />
                   <div className="absolute z-50 mt-2 left-0 w-48 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl shadow-xl overflow-y-auto max-h-72 py-1 scrollbar-thin scrollbar-thumb-gray-200 dark:scrollbar-thumb-gray-700">

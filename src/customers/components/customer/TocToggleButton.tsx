@@ -12,7 +12,7 @@ export default function TocToggleButton({
   return (
     <button
       onClick={onClick}
-      className={`fixed top-28 right-6 z-50 flex items-center justify-center w-11 h-11 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-brand-600 dark:text-brand-400 rounded-full shadow-lg transition-all duration-500 hover:scale-110 active:scale-90 hover:shadow-xl group transform-gpu ${
+      className={`fixed top-28 right-6 z-50 flex items-center justify-center w-11 h-11 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 text-brand-600 dark:text-brand-400 rounded-full shadow-lg transition-all duration-500 hover:scale-110 active:scale-90 hover:shadow-xl group transform-gpu cursor-pointer ${
         isVisible ? 'opacity-100 scale-100' : 'opacity-0 scale-75 pointer-events-none translate-x-12'
       } ${className}`}
       title="查看目录大纲"

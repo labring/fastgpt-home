@@ -371,3 +371,11 @@ html:not(.dark) .customers-scope [class~="placeholder:text-gray-400"]::placehold
 .customers-scope .group:hover .public-case-ribbon::before {
   animation: public-case-shine-hover 8s ease-in-out forwards;
 }
+
+/* Tailwind v3 buttons keep `cursor: default` unless told otherwise, so every
+   enabled button inside the customers app gets a pointer cursor. Disabled
+   buttons and states that intentionally opt out with `cursor-default`
+   (e.g. a like button once already liked) keep their default cursor. */
+.customers-scope button:not(:disabled):not(.cursor-default) {
+  cursor: pointer;
+}

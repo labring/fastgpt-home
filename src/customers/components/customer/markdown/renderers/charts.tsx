@@ -202,7 +202,7 @@ export const MermaidChart = ({ chart }: { chart: string }) => {
 
       {isFullscreen && (
         <div
-          className="fixed inset-0 z-[9999] bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm flex flex-col"
+          className="fixed inset-0 z-[9999] bg-white/95 dark:bg-gray-950/95 backdrop-blur-sm flex flex-col cursor-pointer"
           onClick={() => setIsFullscreen(false)}
         >
           <div className="shrink-0 flex items-center justify-between px-4 py-3 border-b border-slate-200 dark:border-slate-800 bg-white/80 dark:bg-gray-950/80 backdrop-blur">

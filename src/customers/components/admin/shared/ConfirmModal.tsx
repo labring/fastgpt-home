@@ -106,7 +106,7 @@ export default function ConfirmModal({
 
       {/* Overlay */}
       <div
-        className="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm"
+        className="absolute inset-0 bg-zinc-950/40 backdrop-blur-sm cursor-pointer"
         style={{ animation: 'overlay-enter 0.12s ease-out' }}
         onClick={onClose}
       />

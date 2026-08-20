@@ -71,7 +71,7 @@ export default function MobileToc({
     <div className={`fixed inset-0 z-100 lg:hidden transition-all duration-500 ${isOpen ? 'visible' : 'invisible'}`}>
       {/* 背景遮罩 — backdrop-blur-sm 仅在打开时应用，关闭时移除 iOS 上的 GPU 合成层，避免拦截页面触摸滚动 */}
       <div
-        className={`absolute inset-0 bg-gray-900/60 transition-opacity duration-500 ${
+        className={`absolute inset-0 bg-gray-900/60 transition-opacity duration-500 cursor-pointer ${
           isOpen ? 'backdrop-blur-sm opacity-100' : 'opacity-0'
         }`}
         onClick={onClose}

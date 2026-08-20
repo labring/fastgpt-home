@@ -142,7 +142,7 @@ export default function FormModal() {
     >
       {/* 背景遮罩 — 与主站弹窗一致：深色 + 轻微模糊；关闭时移除合成层，避免拦截页面触摸滚动 */}
       <div
-        className={`absolute inset-0 bg-[#101828]/55 transition-colors duration-300 ${
+        className={`absolute inset-0 bg-[#101828]/55 transition-colors duration-300 cursor-pointer ${
           isFormModalOpen ? 'backdrop-blur-[2px]' : ''
         }`}
         onMouseDown={(e) => {

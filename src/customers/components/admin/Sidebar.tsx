@@ -76,7 +76,7 @@ export default function Sidebar() {
       {/* 移动端遮罩 */}
       {isMobileOpen && (
         <div
-          className="fixed inset-0 bg-black/50 z-40 lg:hidden"
+          className="fixed inset-0 bg-black/50 z-40 lg:hidden cursor-pointer"
           onClick={() => setIsMobileOpen(false)}
         />
       )}

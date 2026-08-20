@@ -298,7 +298,7 @@ test('Guide export surface mutations reject localized hub and article drift with
           slug: 'hub',
           route: 'guide',
           surface: 'title',
-          reason: /received/, 
+          reason: /received/,
           mutate: (html) => html.replace(`<title>${HUB_COPY[locale].title}</title>`, '<title>Wrong title</title>')
         },
         {

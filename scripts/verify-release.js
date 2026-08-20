@@ -37,20 +37,7 @@ function parseArgs(argv) {
     sourceOnly: false,
     keepArtifacts: false,
     retainSuccessArtifacts: undefined,
-    variant: undefined,
-    live: false,
-    liveBaseUrlCn: 'https://fastgpt.cn',
-    liveBaseUrlIo: 'https://fastgpt.io',
-    liveProviderEvidence: [],
-    liveTimeoutMs: 10_000
-  };
-  const liveValueOptions = {
-    '--live-base-url-cn': 'liveBaseUrlCn',
-    '--live-base-url-io': 'liveBaseUrlIo',
-    '--live-manifest': 'liveManifest',
-    '--live-report': 'liveReport',
-    '--live-timeout-ms': 'liveTimeoutMs',
-    '--live-provider-evidence': 'liveProviderEvidence'
+    variant: undefined
   };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
@@ -66,30 +53,9 @@ function parseArgs(argv) {
       const variant = argv[++index];
       if (!['io', 'cn'].includes(variant)) throw new Error('--variant requires io or cn');
       options.variant = variant;
-    } else if (liveValueOptions[token]) {
-      const value = argv[++index];
-      if (!value || value.startsWith('--')) throw new Error(`${token} requires a value`);
-      options.live = true;
-      const key = liveValueOptions[token];
-      if (key === 'liveProviderEvidence')
-        options.liveProviderEvidence.push(path.resolve(ROOT, value));
-      else if (key === 'liveTimeoutMs') options.liveTimeoutMs = Number(value);
-      else if (key === 'liveManifest') options.liveManifest = path.resolve(ROOT, value);
-      else if (key === 'liveReport') options.liveReport = path.resolve(ROOT, value);
-      else options[key] = value;
     } else {
       throw new Error(`Unknown argument: ${token}`);
     }
-  }
-  if (options.live) {
-    if (!options.liveManifest) throw new Error('--live requires --live-manifest');
-    if (options.liveProviderEvidence.length !== 2) {
-      throw new Error('--live requires two --live-provider-evidence files');
-    }
-    if (!Number.isFinite(options.liveTimeoutMs) || options.liveTimeoutMs < 1) {
-      throw new Error('--live-timeout-ms must be positive');
-    }
-    options.liveReport ||= path.join(RETAIN_DIR, 'guide-live-report.json');
   }
   return options;
 }
@@ -335,25 +301,6 @@ function runGuideSourceChecks(failures, env, variant) {
   );
 }
 
-function runLiveChecks(failures, options, env) {
-  const args = [
-    '--base-url-cn',
-    options.liveBaseUrlCn,
-    '--base-url-io',
-    options.liveBaseUrlIo,
-    '--manifest',
-    options.liveManifest,
-    '--report',
-    options.liveReport,
-    '--timeout-ms',
-    String(options.liveTimeoutMs)
-  ];
-  for (const filePath of options.liveProviderEvidence) {
-    args.push('--provider-evidence', filePath);
-  }
-  nodeStep(failures, 'Guide live release verification', 'scripts/verify-guide-live.js', args, env);
-}
-
 function extractP1SuccessMeasurement(output) {
   return output.match(
     /P1 verification passed for .*:\s*([0-9.]+ KiB initial JavaScript gzip)/
@@ -488,7 +435,6 @@ function main() {
     runSourceChecks(failures, sourceEnv);
     runGuideSourceChecks(failures, sourceEnv);
     if (failures.length || options.sourceOnly) {
-      if (!failures.length && options.live) runLiveChecks(failures, options, sourceEnv);
       reportFailures(failures, advisories, retainedPaths);
       if (!failures.length) {
         console.log(
@@ -554,7 +500,6 @@ function main() {
       }
       clearBuildArtifacts();
     }
-    if (!failures.length && options.live) runLiveChecks(failures, options, sourceEnv);
 
     reportFailures(failures, advisories, retainedPaths);
     if (!failures.length) {

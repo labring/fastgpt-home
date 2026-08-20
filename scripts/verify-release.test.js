@@ -75,33 +75,6 @@ function failure(label, output, variant = 'io') {
   return { label, variant, command: 'npm run verify:p1', output };
 }
 
-test('release coordinator wires optional live evidence into the manual verification workflow', () => {
-  const options = parseReleaseArgs([
-    '--source-only',
-    '--live',
-    '--live-manifest',
-    'release-evidence/manifest.json',
-    '--live-provider-evidence',
-    'release-evidence/cn-provider-receipt.json',
-    '--live-provider-evidence',
-    'release-evidence/io-provider-receipt.json'
-  ]);
-  assert.equal(options.live, true);
-  assert.equal(options.liveProviderEvidence.length, 2);
-  assert.equal(options.liveReport, path.join(ROOT, '.release-artifacts/guide-live-report.json'));
-  assert.throws(() => parseReleaseArgs(['--live']), /--live-manifest/);
-
-  const release = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
-  const workflow = fs.readFileSync(
-    path.join(ROOT, '.github/workflows/guide-release-verification.yml'),
-    'utf8'
-  );
-  assert(release.includes('scripts/verify-guide-live.js'));
-  assert(workflow.includes('actions/download-artifact@v4'));
-  assert(workflow.includes('live_evidence_run_id'));
-  assert(workflow.includes('--live-manifest release-evidence/manifest.json'));
-});
-
 test('release coordinator composes Guide checks around each fresh variant export', () => {
   const source = fs.readFileSync(path.join(ROOT, 'scripts/verify-release.js'), 'utf8');
   const faqSteps = [
@@ -313,6 +286,17 @@ test('Linux release evidence stays build-only', () => {
   assert.match(workflow, /actions\/upload-artifact@v4/);
   assert.match(workflow, /\.release-artifacts/);
   assert.match(workflow, /include-hidden-files: true/);
+  assert.match(workflow, /docker build --target runtime/);
+  assert.match(workflow, /NEXT_PUBLIC_SITE_VARIANT=cn/);
+  for (const pathTrigger of [
+    'Dockerfile',
+    '.dockerignore',
+    'nginx.conf',
+    'nginx-security-headers.conf',
+    'nginx-embeddable-security-headers.conf'
+  ]) {
+    assert(workflow.includes(`- '${pathTrigger}'`), pathTrigger);
+  }
 
   assert.match(dockerfile, /^FROM node:24/m);
   assert.match(dockerfile, /COPY package\.json package-lock\.json \.\//);
@@ -332,6 +316,7 @@ test('Linux release evidence stays build-only', () => {
     executable,
     /\b(deploy|curl|rollback|kubectl|docker push|cache purge|revision)\b/i
   );
+  assert.equal(fs.existsSync(path.join(ROOT, 'scripts/verify-guide-live.js')), false);
 });
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {

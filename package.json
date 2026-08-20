@@ -32,8 +32,6 @@
     "verify:seo-basics": "node --test scripts/verify-seo-basics.test.js",
     "verify:guide-export": "node scripts/verify-guide-export.js",
     "verify:guide-export-regression": "node --test scripts/verify-guide-export.test.js",
-    "verify:guide-live": "node scripts/verify-guide-live.js",
-    "verify:guide-live-regression": "node --test scripts/verify-guide-live.test.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
     "verify:contact": "node scripts/verify-contact-page.js"
   },

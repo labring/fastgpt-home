@@ -12,8 +12,9 @@ type CustomerPageProps = {
   params: Promise<{ id: string }>;
 };
 
-// 旧 id 直达路由仅做一次永久重定向，按 ISR 缓存以省去每次请求的 DB 查询。
-export const revalidate = 300;
+// 动态路由段无 generateStaticParams 时 revalidate 不生效（实测动态渲染），
+// 显式声明动态，避免误导性注释；如需缓存需生成静态参数或引入运行时缓存层。
+export const dynamic = 'force-dynamic';
 
 export type CustomerRouteParams = {
   id: string;

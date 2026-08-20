@@ -89,10 +89,18 @@ interface CustomerPageClientInnerProps extends CustomerPageClientProps {
 }
 
 function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers = [], swrKey }: CustomerPageClientInnerProps) {
+  // 访客态从 localStorage 惰性初始化（SSR 下 window 未定义自动回退到 initialCustomer）。
+  // SWR fallback 命中缓存后挂载不再发请求、onSuccess 不触发，若只依赖服务端
+  // initialCustomer（cookie-free 的 getCustomerByIdPublic，isLiked 恒 false），
+  // 回访用户点赞/浏览状态会丢失。localStorage 是本机真实交互记录，优先使用。
   const [localLikes, setLocalLikes] = useState(initialCustomer?.likes ?? 0);
-  const [isLiked, setIsLiked] = useState(initialCustomer?.isLiked ?? false);
+  const [isLiked, setIsLiked] = useState(
+    () => getLikedCustomerState(id)?.isLiked ?? Boolean(initialCustomer?.isLiked)
+  );
   const [localUsage, setLocalUsage] = useState<string>(initialCustomer?.usage ?? "");
-  const [hasViewed, setHasViewed] = useState(Boolean(initialCustomer?.hasViewed));
+  const [hasViewed, setHasViewed] = useState(
+    () => getViewedCustomerState(id)?.hasViewed ?? Boolean(initialCustomer?.hasViewed)
+  );
   const [isLikePending, setIsLikePending] = useState(false);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -102,7 +110,9 @@ function CustomerPageClientInner({ id, initialCustomer, initialRelatedCustomers 
   const articleRef = useRef<HTMLElement | null>(null);
   const scrollTickingRef = useRef(false);
   const countedViewForIdRef = useRef<string | null>(null);
-  const likedStickyRef = useRef(Boolean(initialCustomer?.isLiked));
+  const likedStickyRef = useRef(
+    getLikedCustomerState(id)?.isLiked ?? Boolean(initialCustomer?.isLiked)
+  );
   const likesFloorRef = useRef<number | null>(null);
   const usageFloorRef = useRef<number | null>(null);
   const customerIdRef = useRef(id);

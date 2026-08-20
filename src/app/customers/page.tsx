@@ -12,10 +12,11 @@ import HomeClient from './HomeClient';
 import HomeChatbot from '@/customers/components/home/HomeChatbot';
 import { readCachedGitHubStars } from '@/customers/lib/github-stats';
 
-// The homepage depends on database-backed content and system settings.
-// ISR（60s）避免构建时访问 MongoDB，同时让列表/目录/JSON-LD 不再是
-// 每次请求全量查库；客户端挂载后仍会按访客 cookie 刷新点赞等个性化态。
-export const revalidate = 60;
+// 首页列表渲染会读取访客 cookie（getPublishedCustomersPage → isLiked/hasViewed），
+// cookies() 使页面必须动态渲染，revalidate/ISR 在此路由上不生效。
+// 列表数据量当前规模下每次查询可接受；如需真缓存，需先拆分访客态
+// （列表 isLiked 由客户端 localStorage 覆盖）再启用 ISR。
+export const dynamic = 'force-dynamic';
 
 export async function HomePageContent({
   categorySlug,

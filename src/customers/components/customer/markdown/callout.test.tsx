@@ -26,8 +26,8 @@ describe('高亮块（callout）标题渲染', () => {
       '> [!blue] 覆盖<mark>70%</mark>用户检索需求，客服咨询量下降<mark>60%</mark>。\n> 第二行补充正文。'
     );
 
-    expect(html).toMatch(/<mark[^>]*class="[^"]*bg-yellow-100[^"]*"/);
-    expect(html).toMatch(/<mark[^>]*class="[^"]*text-inherit[^"]*"/);
+    expect(html).toMatch(/<mark[^>]*class="[^"]*bg-yellow-200[^"]*"/);
+    expect(html).toMatch(/<mark[^>]*class="[^"]*text-yellow-900[^"]*"/);
     expect(html).toMatch(/<mark[^>]*class="(?!.*text-slate-900)[^"]*"/);
     expect(html).toContain('>70%<');
     expect(html).toContain('>60%<');
@@ -60,7 +60,7 @@ describe('高亮块（callout）标题渲染', () => {
   it('黄色高亮与加粗可以叠加使用（mark 内嵌 strong）', () => {
     const html = renderMarkdown('覆盖<mark>**70%**</mark>用户检索需求');
 
-    expect(html).toMatch(/<mark[^>]*bg-yellow-100[^>]*><strong class="font-bold">70%<\/strong><\/mark>/);
+    expect(html).toMatch(/<mark[^>]*bg-yellow-200[^>]*><strong class="font-bold">70%<\/strong><\/mark>/);
   });
 
   it('加粗包裹黄色高亮（strong 内嵌 mark）不会被 markdown 解析，星号保持字面量', () => {

@@ -68,7 +68,10 @@ export function useSyncedToc({
       return;
     }
 
-    const passedIds = new Set<string>();
+    // 当前在检测带内的标题集合 + 已滚过视口顶部的标题集合。
+    // 集合随滚动双向增减，保证向上滚动时高亮能回移到前面的标题。
+    const inBandIds = new Set<string>();
+    const passedTopIds = new Set<string>();
 
     // 编辑器等场景正文在指定容器内滚动（scrollContainerSelector），
     // 此时 IO 的 root 应指向该滚动容器而非视口。
@@ -84,17 +87,35 @@ export function useSyncedToc({
 
         for (const entry of entries) {
           const id = (entry.target as HTMLElement).id;
-          // 已滚过顶部或进入检测带 = 已到达阅读位置；检测带下方（未到达）不算。
-          if (entry.boundingClientRect.top < 0 || entry.isIntersecting) {
-            passedIds.add(id);
+          if (entry.isIntersecting) {
+            // 进入检测带 = 当前阅读位置候选
+            inBandIds.add(id);
+            passedTopIds.delete(id);
+          } else {
+            inBandIds.delete(id);
+            if (entry.boundingClientRect.top < 0) {
+              // 已滚过视口顶部：在阅读位置上方
+              passedTopIds.add(id);
+            } else {
+              // 在检测带下方（未到达）：滚回后不再作为候选
+              passedTopIds.delete(id);
+            }
           }
         }
 
-        // 当前阅读位置 = 已到达标题中 DOM 顺序最后一个。
+        // 优先取检测带内 DOM 顺序最后一个标题；检测带为空（快速滚动中）
+        // 时回退到已滚过顶部的最后一个，避免高亮跳到空。
         let nextActiveId = '';
         for (const heading of headings) {
-          if (passedIds.has(heading.id)) {
+          if (inBandIds.has(heading.id)) {
             nextActiveId = heading.id;
+          }
+        }
+        if (!nextActiveId) {
+          for (const heading of headings) {
+            if (passedTopIds.has(heading.id)) {
+              nextActiveId = heading.id;
+            }
           }
         }
 

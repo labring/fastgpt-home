@@ -9,7 +9,8 @@ type CategoryPageProps = {
   params: Promise<{ slug: string }>;
 };
 
-export const revalidate = 60;
+// 分类列表同样经 getPublishedCustomersPage 读取访客 cookie，只能动态渲染。
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: CategoryPageProps): Promise<Metadata> {
   const { slug } = await params;

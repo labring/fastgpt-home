@@ -14,8 +14,9 @@ type SemanticCustomerPageProps = {
   params: Promise<CustomerRouteParams>;
 };
 
-// Content is cached for five minutes. Visitor state remains in no-store client requests.
-export const revalidate = 300;
+// 动态路由段无 generateStaticParams 时 revalidate 不生效（实测动态渲染），
+// 显式声明动态；访客态（isLiked/hasViewed）由客户端 no-store 请求获取。
+export const dynamic = 'force-dynamic';
 
 export async function generateMetadata({ params }: SemanticCustomerPageProps): Promise<Metadata> {
   return generateCustomerMetadata(await params);

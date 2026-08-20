@@ -8,7 +8,11 @@ const registry = JSON.parse(
 );
 const locales = ['zh', 'en'];
 const schemaTypes = new Set(['Article', 'BreadcrumbList', 'HowTo']);
-const howToSlugs = new Set(['server-sizing-guide', 'complex-doc-golden-set', 'support-bot-four-steps']);
+const howToSlugs = new Set([
+  'server-sizing-guide',
+  'complex-doc-golden-set',
+  'support-bot-four-steps'
+]);
 const assetPolicies = new Map([
   ['saas-platform-enterprise-gaps', 'none'],
   ['support-bot-four-steps', 'none'],
@@ -29,7 +33,9 @@ const publicationGroups = new Map([
   ['pharma-compliance-docs', 'industry'],
   ['education-retail-support-insight', 'industry']
 ]);
-const approvedGuideDate = '2026-08-11';
+const approvedGuidePublishedDate = '2026-08-11';
+const approvedGuideModifiedDates = { zh: '2026-08-11', en: '2026-08-20' };
+const englishMetaLimits = { title: [50, 60], description: [140, 160] };
 
 function fail(slug, message) {
   throw new Error(`${slug}: ${message}`);
@@ -39,19 +45,23 @@ function sha256(value) {
   return crypto.createHash('sha256').update(value).digest('hex');
 }
 
-function isApprovedGuideDate(value) {
-  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== approvedGuideDate) {
+function isApprovedGuideDate(value, approvedDate) {
+  if (typeof value !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(value) || value !== approvedDate) {
     return false;
   }
   const [year, month, day] = value.split('-').map(Number);
   const date = new Date(Date.UTC(year, month - 1, day));
-  return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
+  return (
+    date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day
+  );
 }
 
 function parseArgs(argv = process.argv.slice(2)) {
   if (!argv.length) return {};
   if (argv.length !== 2 || !['--slug', '--locale'].includes(argv[0]) || !argv[1]) {
-    throw new Error('Usage: node scripts/verify-guide-content.js [--slug <slug> | --locale <zh|en>]');
+    throw new Error(
+      'Usage: node scripts/verify-guide-content.js [--slug <slug> | --locale <zh|en>]'
+    );
   }
   if (argv[0] === '--locale' && !locales.includes(argv[1])) fail(argv[1], 'invalid locale');
   return argv[0] === '--slug' ? { slug: argv[1] } : { locale: argv[1] };
@@ -60,7 +70,8 @@ function parseArgs(argv = process.argv.slice(2)) {
 function parseDeliverySource(source, expected) {
   const normalized = source.replace(/\r\n?/g, '\n');
   const match = normalized.match(/^(<!--[\s\S]*?-->)([\s\S]*)$/);
-  if (!match || !match[2].startsWith('\n\n#')) fail(expected.slug, 'invalid leading delivery comment');
+  if (!match || !match[2].startsWith('\n\n#'))
+    fail(expected.slug, 'invalid leading delivery comment');
   const metadata = {};
   for (const line of match[1].slice(4, -3).split('\n')) {
     const separator = line.indexOf(':');
@@ -78,7 +89,7 @@ function parseDeliverySource(source, expected) {
     sourceImageDirective: metadata['配图需求'],
     sourceInternalLinkLabels: metadata['内链']?.split(' / '),
     h1: body.match(/^\n\n# (.+)$/m)?.[1],
-    sourceSha256: sha256(source),
+    sourceSha256: sha256(normalized),
     bodySha256: sha256(body)
   };
   for (const key of [
@@ -105,7 +116,10 @@ function parseDeliverySource(source, expected) {
       fail(expected.slug, field);
     }
   }
-  if (actual.sourceInternalLinkLabels?.join('\u0000') !== expected.sourceInternalLinkLabels.join('\u0000')) {
+  if (
+    actual.sourceInternalLinkLabels?.join('\u0000') !==
+    expected.sourceInternalLinkLabels.join('\u0000')
+  ) {
     fail(expected.slug, 'source internal-link labels differ from registry');
   }
   return { body, metadata: actual };
@@ -124,7 +138,9 @@ function isKnownOwnedTarget(target, entries = registry.entries, rootDir = root) 
   if (guideIndex >= 0 && segments.length === guideIndex + 2) {
     return entries.some((entry) => entry.slug === segments[guideIndex + 1]);
   }
-  const localPath = `/${segments.filter((segment) => !locales.includes(segment)).join('/')}`.replace(/\/$/, '');
+  const localPath = `/${segments
+    .filter((segment) => !locales.includes(segment))
+    .join('/')}`.replace(/\/$/, '');
   if (['', '/', '/faq', '/price', '/compare'].includes(localPath || '/')) return true;
   if (segments.includes('compare')) {
     const slug = segments.at(-1);
@@ -132,7 +148,9 @@ function isKnownOwnedTarget(target, entries = registry.entries, rootDir = root) 
   }
   const entryPath = path.join(rootDir, 'src/components/tech-center/entries.json');
   if (fs.existsSync(entryPath)) {
-    const knownTechnicalPaths = JSON.parse(fs.readFileSync(entryPath, 'utf8')).map((entry) => entry.slug);
+    const knownTechnicalPaths = JSON.parse(fs.readFileSync(entryPath, 'utf8')).map(
+      (entry) => entry.slug
+    );
     if (knownTechnicalPaths.includes(url.pathname)) return true;
   }
   return fs.existsSync(path.join(rootDir, 'src/app', ...segments, 'page.tsx'));
@@ -149,7 +167,8 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
     if (Object.keys(entry).sort().join(',') !== 'en,group,slug,zh') {
       fail(entry.slug, 'exact zh/en locale pair and group required');
     }
-    if (entry.group !== publicationGroups.get(entry.slug)) fail(entry.slug, 'invalid publication group');
+    if (entry.group !== publicationGroups.get(entry.slug))
+      fail(entry.slug, 'invalid publication group');
     for (const locale of locales) {
       const snapshot = entry[locale];
       if (
@@ -160,7 +179,10 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       ) {
         fail(entry.slug, `${locale}: sourceName must be ${entry.slug}.${locale}.md`);
       }
-      if (!Array.isArray(snapshot.schemaTokens) || snapshot.schemaTokens.some((token) => !schemaTypes.has(token))) {
+      if (
+        !Array.isArray(snapshot.schemaTokens) ||
+        snapshot.schemaTokens.some((token) => !schemaTypes.has(token))
+      ) {
         fail(entry.slug, `${locale}: invalid schema token`);
       }
       const expectedSchema = howToSlugs.has(entry.slug)
@@ -169,11 +191,36 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
       if (snapshot.schemaTokens.join(',') !== expectedSchema.join(',')) {
         fail(entry.slug, `${locale}: schema tokens differ from policy`);
       }
-      if (!Array.isArray(snapshot.sourceInternalLinkLabels) || !Array.isArray(snapshot.configuredInternalLinks)) {
+      if (
+        !Array.isArray(snapshot.sourceInternalLinkLabels) ||
+        !Array.isArray(snapshot.configuredInternalLinks)
+      ) {
         fail(entry.slug, `${locale}: invalid link directives`);
       }
-      for (const field of ['datePublished', 'dateModified']) {
-        if (!isApprovedGuideDate(snapshot[field])) fail(entry.slug, `${locale}: invalid ${field}`);
+      if (!isApprovedGuideDate(snapshot.datePublished, approvedGuidePublishedDate)) {
+        fail(entry.slug, `${locale}: invalid datePublished`);
+      }
+      if (!isApprovedGuideDate(snapshot.dateModified, approvedGuideModifiedDates[locale])) {
+        fail(entry.slug, `${locale}: invalid dateModified`);
+      }
+      if (locale === 'en') {
+        const [titleMin, titleMax] = englishMetaLimits.title;
+        if (
+          typeof snapshot.metaTitle !== 'string' ||
+          snapshot.metaTitle.length < titleMin ||
+          snapshot.metaTitle.length > titleMax
+        ) {
+          fail(entry.slug, 'en: invalid meta title');
+        }
+        const [descriptionMin, descriptionMax] = englishMetaLimits.description;
+        if (
+          typeof snapshot.metaDescription !== 'string' ||
+          snapshot.metaDescription.length < descriptionMin ||
+          snapshot.metaDescription.length > descriptionMax ||
+          !/[.!?]$/.test(snapshot.metaDescription)
+        ) {
+          fail(entry.slug, 'en: invalid meta description');
+        }
       }
       if (
         snapshot.assetPolicy?.status !== assetPolicies.get(entry.slug) &&
@@ -194,7 +241,10 @@ function verifyGuideRegistry(entries = registry.entries, options = {}) {
           asset.height <= 0 ||
           !fs.existsSync(path.join(rootDir, 'public', asset.path))
         ) {
-          fail(entry.slug, `${locale}: required asset is missing, invalid, or lacks positive dimensions`);
+          fail(
+            entry.slug,
+            `${locale}: required asset is missing, invalid, or lacks positive dimensions`
+          );
         }
       }
       for (const mapping of snapshot.configuredInternalLinks) {
@@ -221,7 +271,8 @@ function verifyGuideContent(options = {}, context = {}) {
       const snapshot = entry[locale];
       const sourcePath = path.resolve(rootDir, 'src/content/guides', locale, snapshot.sourceName);
       const localeRoot = path.resolve(rootDir, 'src/content/guides', locale);
-      if (!sourcePath.startsWith(`${localeRoot}${path.sep}`)) fail(entry.slug, `${locale}: source escapes locale root`);
+      if (!sourcePath.startsWith(`${localeRoot}${path.sep}`))
+        fail(entry.slug, `${locale}: source escapes locale root`);
       if (!fs.existsSync(sourcePath)) fail(entry.slug, `${locale}: source file is not imported`);
       parseDeliverySource(fs.readFileSync(sourcePath, 'utf8'), { ...snapshot, slug: entry.slug });
     }
@@ -234,7 +285,9 @@ function main() {
   const selected = verifyGuideContent(options);
   const documents = selected.length * (options.locale ? 1 : locales.length);
   console.log(
-    `Guide content verified: ${selected.length} slug${selected.length === 1 ? '' : 's'}, ${documents} document${documents === 1 ? '' : 's'}`
+    `Guide content verified: ${selected.length} slug${
+      selected.length === 1 ? '' : 's'
+    }, ${documents} document${documents === 1 ? '' : 's'}`
   );
 }
 

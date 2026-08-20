@@ -5,7 +5,7 @@ locale: en
 canonical: https://fastgpt.io/guide/server-sizing-guide
 hreflang: en | zh-CN → https://fastgpt.cn/guide/server-sizing-guide | en → https://fastgpt.io/guide/server-sizing-guide | x-default → https://fastgpt.io/guide/server-sizing-guide
 Meta title: Server Sizing for 100-Person Enterprise RAG Knowledge Bases
-Meta description: A structured decision framework for IT leaders to size servers for 100-person enterprise RAG knowledge bases, with clear deployment boundaries and POC
+Meta description: A server-sizing framework for 100-person enterprise RAG knowledge bases, covering concurrency, document volume, inference choices, and POC validation.
 Demand anchor (fastgpt.io GSC, 近 90 天): what is an enterprise knowledge base?（展现 4 · 点击 0 · 均排 3）
 Primary keyword: enterprise RAG knowledge base server sizing
 keywords: 资源规格估算, 并发 / 向量规模 / 本地推理

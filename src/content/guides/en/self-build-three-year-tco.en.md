@@ -5,7 +5,7 @@ locale: en
 canonical: https://fastgpt.io/guide/self-build-three-year-tco
 hreflang: en | zh-CN → https://fastgpt.cn/guide/self-build-three-year-tco | en → https://fastgpt.io/guide/self-build-three-year-tco | x-default → https://fastgpt.io/guide/self-build-three-year-tco
 Meta title: 3-Year Total Cost of Ownership for Self-Hosted Enterprise AI
-Meta description: A structured framework for evaluating self-hosted versus purchased enterprise AI knowledge bases, covering core costs, hidden operational expenses, and
+Meta description: A three-year TCO framework for comparing self-hosted and purchased enterprise AI knowledge bases across infrastructure, operations, security, and support.
 Demand anchor (fastgpt.io GSC, 近 90 天): what is an enterprise knowledge base?（展现 4 · 点击 0 · 均排 3）
 Primary keyword: self-hosted enterprise AI knowledge base total cost of ownership
 keywords: 自建成本核算, 平台工程 / 运维 / 模型消耗

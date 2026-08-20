@@ -5,7 +5,7 @@ locale: en
 canonical: https://fastgpt.io/guide/support-bot-four-steps
 hreflang: en | zh-CN → https://fastgpt.cn/guide/support-bot-four-steps | en → https://fastgpt.io/guide/support-bot-four-steps | x-default → https://fastgpt.io/guide/support-bot-four-steps
 Meta title: Enterprise Generative AI Customer Support Deployment Guide
-Meta description: A structured four-step deployment workflow for enterprise AI customer support, including best practices for setup, rule configuration, and continuous
+Meta description: A four-step workflow for deploying enterprise AI customer support, covering knowledge onboarding, cited answers, channel integration, handover, and improvement.
 Demand anchor (fastgpt.io GSC, 近 90 天): what's the right team structure for taking an ai pilot into enterprise deployment?（展现 1 · 点击 0 · 均排 1）
 Primary keyword: enterprise AI customer support deployment
 keywords: 智能客服落地, 知识库 / 渠道 / 转人工

@@ -4,8 +4,8 @@ slug: pharma-compliance-docs
 locale: en
 canonical: https://fastgpt.io/guide/pharma-compliance-docs
 hreflang: en | zh-CN → https://fastgpt.cn/guide/pharma-compliance-docs | en → https://fastgpt.io/guide/pharma-compliance-docs | x-default → https://fastgpt.io/guide/pharma-compliance-docs
-Meta title: AI Agent Selection & Compliance for Biopharma Document-Inten
-Meta description: A structured decision framework for selecting AI agents for biopharma document-heavy workflows, covering use cases, compliance rules, deployment best
+Meta title: Biopharma AI Agent Selection and Compliance Checklist
+Meta description: A decision framework for selecting AI agents for document-intensive biopharma workflows, with compliance controls, deployment guidance, citations, and review.
 Demand anchor (fastgpt.io GSC, 近 90 天): best practices preventing unauthorized ai agent access（展现 1 · 点击 0 · 均排 10）
 Primary keyword: biopharma document-intensive AI agent compliance and selection
 keywords: 合规与质量文档, 知识库 / 引用溯源 / 人工复核

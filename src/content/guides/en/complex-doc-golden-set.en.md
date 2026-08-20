@@ -5,7 +5,7 @@ locale: en
 canonical: https://fastgpt.io/guide/complex-doc-golden-set
 hreflang: en | zh-CN → https://fastgpt.cn/guide/complex-doc-golden-set | en → https://fastgpt.io/guide/complex-doc-golden-set | x-default → https://fastgpt.io/guide/complex-doc-golden-set
 Meta title: Enterprise Document Parsing Tool Selection Validation Guide
-Meta description: A structured framework for validating enterprise AI document parsing tools with custom golden datasets, covering local vs enhanced parsing, scoring, and
+Meta description: Validate enterprise document parsing tools with a custom golden dataset, scoring framework, and practical comparison of local and enhanced parsing options.
 Demand anchor (fastgpt.io GSC, 近 90 天): ai document comparison tool（展现 1 · 点击 0 · 均排 75）
 Primary keyword: enterprise document parsing tool selection validation
 keywords: 复杂文档解析, 本地解析 / 增强解析 / 多索引

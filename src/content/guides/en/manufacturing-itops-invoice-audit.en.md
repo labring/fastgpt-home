@@ -4,7 +4,7 @@ slug: manufacturing-itops-invoice-audit
 locale: en
 canonical: https://fastgpt.io/guide/manufacturing-itops-invoice-audit
 hreflang: en | zh-CN → https://fastgpt.cn/guide/manufacturing-itops-invoice-audit | en → https://fastgpt.io/guide/manufacturing-itops-invoice-audit | x-default → https://fastgpt.io/guide/manufacturing-itops-invoice-audit
-Meta title: Manufacturing Enterprise IT and Finance RAG Rule Engine Depl
+Meta title: RAG Rule Engine Guide for Manufacturing IT and Finance
 Meta description: A lightweight RAG + rule engine solution for manufacturing IT and finance workflows, reducing repetitive manual workloads and boosting efficiency.
 Demand anchor (fastgpt.io GSC, 近 90 天): GSC 近 90 天无对应词 —— 本篇打的是决策意图层（08-05 实证：英文侧 1,047 个非品牌词里决策意图词仅 42 个）
 Primary keyword: RAG + rule engine for manufacturing IT operations and financial review

@@ -48,7 +48,10 @@ export function normalizeGuideSource(source: string) {
   return source.replace(/\r\n?/g, '\n');
 }
 
-export function parseGuideDeliverySource(source: string, expected: GuideSourceSnapshot): GuideDocument {
+export function parseGuideDeliverySource(
+  source: string,
+  expected: GuideSourceSnapshot
+): GuideDocument {
   const slug = expected.canonical.split('/').pop() || expected.sourceName;
   const normalized = normalizeGuideSource(source);
   const match = normalized.match(/^(<!--[\s\S]*?-->)([\s\S]*)$/);
@@ -84,13 +87,16 @@ export function parseGuideDeliverySource(source: string, expected: GuideSourceSn
     ['schema', metadata.sourceSchema, expected.sourceSchema],
     ['image directive', metadata.sourceImageDirective, expected.sourceImageDirective],
     ['H1', h1, expected.h1],
-    ['source hash', sha256(source), expected.sourceSha256],
+    ['source hash', sha256(normalized), expected.sourceSha256],
     ['body hash', sha256(body), expected.bodySha256]
   ];
   for (const [label, actual, required] of matches) {
     if (actual !== required) guideError(slug, `${label} differs from registry`);
   }
-  if (metadata.sourceInternalLinkLabels.join('\u0000') !== expected.sourceInternalLinkLabels.join('\u0000')) {
+  if (
+    metadata.sourceInternalLinkLabels.join('\u0000') !==
+    expected.sourceInternalLinkLabels.join('\u0000')
+  ) {
     guideError(slug, 'internal-link labels differ from registry');
   }
   return { body, metadata, source: expected };
@@ -107,7 +113,8 @@ function resolveGuidePath(slug: string, locale: GuideLocale, sourceName: string)
   }
   const localeRoot = path.resolve(GUIDE_ROOT, locale);
   const sourcePath = path.resolve(localeRoot, sourceName);
-  if (!sourcePath.startsWith(`${localeRoot}${path.sep}`)) guideError(slug, 'source escapes locale root');
+  if (!sourcePath.startsWith(`${localeRoot}${path.sep}`))
+    guideError(slug, 'source escapes locale root');
   return sourcePath;
 }
 

@@ -66,10 +66,14 @@ test('approved Guide corpus reports the complete 8x2 contract', () => {
 });
 
 test('verifier imports are silent and side-effect free', () => {
-  const result = spawnSync(process.execPath, ['-e', "require('./scripts/verify-guide-content.js')"], {
-    cwd: ROOT,
-    encoding: 'utf8'
-  });
+  const result = spawnSync(
+    process.execPath,
+    ['-e', "require('./scripts/verify-guide-content.js')"],
+    {
+      cwd: ROOT,
+      encoding: 'utf8'
+    }
+  );
 
   assert.equal(result.status, 0);
   assert.equal(result.stdout, '');
@@ -89,11 +93,17 @@ test('registry rejects duplicate slugs, incomplete pairs, and invalid schemas', 
 
   const incompletePair = structuredClone(registry.entries);
   delete findEntry(incompletePair, 'server-sizing-guide').en;
-  assertFailure(() => verifyGuideRegistry(incompletePair), /server-sizing-guide: exact zh\/en locale pair/);
+  assertFailure(
+    () => verifyGuideRegistry(incompletePair),
+    /server-sizing-guide: exact zh\/en locale pair/
+  );
 
   const invalidSchema = structuredClone(registry.entries);
   findEntry(invalidSchema, 'server-sizing-guide').zh.schemaTokens = ['FAQPage'];
-  assertFailure(() => verifyGuideRegistry(invalidSchema), /server-sizing-guide: zh: invalid schema/);
+  assertFailure(
+    () => verifyGuideRegistry(invalidSchema),
+    /server-sizing-guide: zh: invalid schema/
+  );
 });
 
 test('registry enforces slug-locale source filenames', () => {
@@ -120,7 +130,7 @@ test('registry requires approved publication groups and release dates', () => {
   const entry = findEntry(registry.entries, 'saas-platform-enterprise-gaps');
   assert.equal(entry.group, 'decision');
   assert.equal(entry.zh.datePublished, '2026-08-11');
-  assert.equal(entry.en.dateModified, '2026-08-11');
+  assert.equal(entry.en.dateModified, '2026-08-20');
 
   const invalidGroup = structuredClone(registry.entries);
   findEntry(invalidGroup, 'saas-platform-enterprise-gaps').group = 'unknown';
@@ -129,6 +139,23 @@ test('registry requires approved publication groups and release dates', () => {
   const invalidDate = structuredClone(registry.entries);
   findEntry(invalidDate, 'saas-platform-enterprise-gaps').zh.datePublished = '2026-02-30';
   assertFailure(() => verifyGuideRegistry(invalidDate), /invalid datePublished/);
+});
+
+test('English Guide metadata stays within complete search-snippet boundaries', () => {
+  const shortTitle = structuredClone(registry.entries);
+  findEntry(shortTitle, 'server-sizing-guide').en.metaTitle = 'Short title';
+  assertFailure(
+    () => verifyGuideRegistry(shortTitle),
+    /server-sizing-guide: en: invalid meta title/
+  );
+
+  const unfinishedDescription = structuredClone(registry.entries);
+  findEntry(unfinishedDescription, 'server-sizing-guide').en.metaDescription =
+    'A'.repeat(149) + ' and';
+  assertFailure(
+    () => verifyGuideRegistry(unfinishedDescription),
+    /server-sizing-guide: en: invalid meta description/
+  );
 });
 
 test('required assets need positive responsive dimensions', () => {
@@ -145,7 +172,13 @@ test('required assets need positive responsive dimensions', () => {
 });
 
 test('configured links fail with the source label for every invalid target category', () => {
-  for (const target of ['', '#guide', 'https://example.com/guide/x', 'not a URL', 'https://fastgpt.io/guide/unknown']) {
+  for (const target of [
+    '',
+    '#guide',
+    'https://example.com/guide/x',
+    'not a URL',
+    'https://fastgpt.io/guide/unknown'
+  ]) {
     const entries = structuredClone(registry.entries);
     const snapshot = findEntry(entries, 'server-sizing-guide').zh;
     const label = snapshot.sourceInternalLinkLabels[0];
@@ -161,7 +194,8 @@ test('configured links fail with the source label for every invalid target categ
 test('isolated source fixtures expose localized metadata and body suffix drift', () => {
   withGuideRoot(
     'saas-platform-enterprise-gaps',
-    (locale, source) => (locale === 'en' ? source.replace('Meta title:', 'Meta title: changed ') : source),
+    (locale, source) =>
+      locale === 'en' ? source.replace('Meta title:', 'Meta title: changed ') : source,
     ({ entries, rootDir }) => {
       assertFailure(
         () => verifyGuideContent({ slug: 'saas-platform-enterprise-gaps' }, { entries, rootDir }),
@@ -201,8 +235,27 @@ test('delivery parser rejects each malformed leading-comment boundary', () => {
       /saas-platform-enterprise-gaps: .*delivery comment/
     );
   }
+  const normalizedSource = fs
+    .readFileSync(path.join(ROOT, 'src/content/guides/en', entry.en.sourceName), 'utf8')
+    .replace(/\r\n?/g, '\n');
   assert.equal(
-    crypto.createHash('sha256').update(fs.readFileSync(path.join(ROOT, 'src/content/guides/en', entry.en.sourceName))).digest('hex'),
+    crypto.createHash('sha256').update(normalizedSource).digest('hex'),
     entry.en.sourceSha256
+  );
+});
+
+test('LF and CRLF delivery sources share one normalized source hash', () => {
+  const entry = findEntry(registry.entries, 'server-sizing-guide');
+  const source = fs.readFileSync(
+    path.join(ROOT, 'src/content/guides/en', entry.en.sourceName),
+    'utf8'
+  );
+  const lfSource = source.replace(/\r\n?/g, '\n');
+  const sourceSha256 = crypto.createHash('sha256').update(lfSource).digest('hex');
+  const expected = { ...entry.en, slug: entry.slug, sourceSha256 };
+
+  assert.deepEqual(
+    parseDeliverySource(lfSource, expected),
+    parseDeliverySource(lfSource.replace(/\n/g, '\r\n'), expected)
   );
 });

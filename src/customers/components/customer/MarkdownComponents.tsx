@@ -393,9 +393,11 @@ export const markdownComponents: Components & Record<string, unknown> = {
     </kbd>
   ),
   mark: ({ children, ...props }) => (
+    // 荧光笔风格：亮色 yellow-200 底 + 深黄字；暗色 60% 亮黄底 + 深棕字，
+    // 两种模式都是高对比，避免此前淡黄/半透明黄在两种背景下都看不清。
     <mark
       {...getDomProps<React.HTMLAttributes<HTMLElement>>(props)}
-      className={joinClassNames('bg-yellow-100 dark:bg-yellow-400/30 px-1 rounded-[2px] text-inherit', (props as { className?: string }).className)}
+      className={joinClassNames('bg-yellow-200 text-yellow-900 dark:bg-yellow-400/60 dark:text-yellow-950 px-1 rounded-[2px]', (props as { className?: string }).className)}
     >
       {children}
     </mark>

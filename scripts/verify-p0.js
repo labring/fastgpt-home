@@ -1,6 +1,7 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const vm = require('node:vm');
 const sharp = require('sharp');
 const { getPublishedFaqIds } = require('./lib/redirects');
 const { getCanonicalBaseUrl, resolveSiteVariant } = require('./lib/site-variant');
@@ -146,6 +147,16 @@ function verifyNginxHeaders() {
     nginxConfig.includes('return 301 $locale_redirect_target$is_args$args;'),
     'Nginx must preserve query parameters on canonical redirects'
   );
+  assert(
+    nginxConfig.includes('$locale_fallback_path'),
+    'Nginx must internally fall back locale-prefixed routes'
+  );
+  assert(
+    nginxConfig.includes(
+      'try_files $uri $uri.html $locale_fallback_path $locale_fallback_path.html $locale_fallback_path/ $uri/ =404;'
+    ),
+    'Nginx locale fallback must run before a locale asset directory can redirect'
+  );
   assert(nginxConfig.includes('map_hash_bucket_size 256;'), 'Nginx map hash bucket is too small');
   assert(nginxConfig.includes('map_hash_max_size 16384;'), 'Nginx map hash table is too small');
   assert(
@@ -172,15 +183,13 @@ function verifyNginxHeaders() {
 
   const redirectMap = fs.readFileSync(path.join(rootDir, '.next', 'nginx-redirects.conf'), 'utf8');
   if (variant === 'cn') {
-    assert(redirectMap.includes('"/zh" "https://fastgpt.cn/";'));
-    assert(redirectMap.includes(`"/en/faq/${faqId}" "https://fastgpt.io/faq/${faqId}";`));
-    assert(!redirectMap.includes('"/ja/faq"'), 'Nginx redirects an unpublished locale page');
+    assert(!redirectMap.includes('"https://'), 'CN build contains cross-domain locale redirects');
   } else {
     assert(!redirectMap.includes('"https://'), `${variant} build contains Nginx redirects`);
   }
 }
 
-function verifyCloudflareRedirects() {
+async function verifyCloudflareRedirects() {
   assert(!fs.existsSync(path.join(outDir, '_redirects')), 'Legacy Cloudflare redirects were exported');
   if (variant === 'cn') return;
 
@@ -189,15 +198,39 @@ function verifyCloudflareRedirects() {
     assert(worker.includes('new Map([])'), 'Preview worker contains redirect rules');
     assert(worker.includes("X-Robots-Tag', 'noindex, nofollow"));
   } else {
-    assert(worker.includes(`/zh/faq/${faqId}`));
-    assert(worker.includes(`https://fastgpt.cn/faq/${faqId}`));
+    assert(!worker.includes(`https://fastgpt.cn/faq/${faqId}`));
+    assert(worker.includes("fallbackUrl.pathname = match[1] || '/';"));
   }
+
+  const context = { Headers, Map, Request, Response, URL };
+  vm.runInNewContext(worker.replace('export default', 'globalThis.worker ='), context);
+  const requests = [];
+  const response = await context.worker.fetch(
+    new Request(`${baseUrl}/zh/price?source=locale-fallback-test`),
+    {
+      ASSETS: {
+        async fetch(request) {
+          const url = new URL(request.url);
+          requests.push(`${url.pathname}${url.search}`);
+          return url.pathname === '/price'
+            ? new Response('default language', { status: 200 })
+            : new Response('missing', { status: 404 });
+        }
+      }
+    }
+  );
+  assert.equal(response.status, 200, 'Worker did not serve the default-language route');
+  assert.equal(await response.text(), 'default language');
+  assert.deepEqual(requests, [
+    '/zh/price?source=locale-fallback-test',
+    '/price?source=locale-fallback-test'
+  ]);
 }
 
 async function main() {
   await verifyImage();
   verifyNginxHeaders();
-  verifyCloudflareRedirects();
+  await verifyCloudflareRedirects();
 
   verifyFaqPage('/faq');
   verifyFaqPage(`/faq/${faqId}`);

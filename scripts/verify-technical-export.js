@@ -123,23 +123,12 @@ function verifySitemap(outDir, variant, canonicalUrls, reviewPaths, baseUrls) {
   }
 }
 
-function verifyNginxRedirects(nextDir, variant, identities, baseUrls) {
+function verifyNginxRedirects(nextDir, variant) {
   const redirects = readNginxRedirects(nextDir);
-  if (variant === 'preview' || variant === 'io') {
-    assert.equal(redirects.size, 0, `${variant} export contains Nginx redirects`);
-    return;
-  }
-
-  for (const identity of identities) {
-    assert.equal(
-      redirects.get(identity.sourcePath),
-      `${baseUrls.cn}${identity.canonicalPath}`,
-      `CN redirect does not resolve ${identity.sourcePath}`
-    );
-  }
+  assert.equal(redirects.size, 0, `${variant} export contains locale redirects`);
 }
 
-function verifyWorkerRedirects(outDir, variant, identities, baseUrls) {
+function verifyWorkerRedirects(outDir, variant, identities) {
   if (variant === 'cn') return;
 
   const { redirects, source } = readWorkerRedirects(outDir);
@@ -148,20 +137,9 @@ function verifyWorkerRedirects(outDir, variant, identities, baseUrls) {
     return;
   }
 
-  assert(
-    source.includes('redirectUrl.search = url.search'),
-    'Worker does not preserve query strings'
-  );
-  assert(
-    source.includes('Response.redirect(redirectUrl, 301)'),
-    'Worker does not emit 301 redirects'
-  );
+  assert(source.includes("fallbackUrl.pathname = match[1] || '/'"));
   for (const identity of identities) {
-    assert.equal(
-      redirects.get(identity.sourcePath),
-      `${baseUrls.cn}${identity.canonicalPath}`,
-      `IO redirect does not resolve ${identity.sourcePath}`
-    );
+    assert(!redirects.has(identity.sourcePath), `IO Worker redirects ${identity.sourcePath}`);
   }
 }
 
@@ -229,8 +207,8 @@ function verifyTechnicalExport({
   }
 
   verifySitemap(outDir, variant, canonicalUrls, reviewPaths, baseUrls);
-  verifyNginxRedirects(nextDir, variant, identities, baseUrls);
-  verifyWorkerRedirects(outDir, variant, identities, baseUrls);
+  verifyNginxRedirects(nextDir, variant);
+  verifyWorkerRedirects(outDir, variant, identities);
 
   return { count: identities.length, variant };
 }

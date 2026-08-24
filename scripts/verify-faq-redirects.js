@@ -127,7 +127,7 @@ function verifyArtifacts(projection) {
   const variant = resolveSiteVariant();
   assert(['io', 'cn'].includes(variant), `Redirect artifact mode requires io or cn, received ${variant}`);
   const redirects = variant === 'io' ? parseWorkerRedirects() : parseNginxRedirects();
-  const prefixes = variant === 'io' ? ['/faq', '/en/faq'] : ['/en/faq'];
+  const prefixes = variant === 'io' ? ['/faq'] : [];
 
   for (const entry of projection.eligible) {
     for (const prefix of prefixes) {
@@ -142,7 +142,7 @@ function verifyArtifacts(projection) {
   }
 
   for (const sourceSlug of projection.deniedSources) {
-    for (const prefix of ['/faq', '/en/faq']) {
+    for (const prefix of prefixes) {
       for (const sourcePath of encodedPathVariants(prefix, sourceSlug)) {
         assert(!redirects.has(sourcePath), `Denied source was emitted: ${sourcePath}`);
       }

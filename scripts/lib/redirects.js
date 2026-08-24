@@ -1,7 +1,5 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { getLocaleOwner, getProductionBaseUrls, localeCodes } = require('./site-variant');
-
 const EN_ROUTE_REGISTRY = path.join('src', 'faq', 'generated-en-route-registry.json');
 
 function readObjectKeys(rootDir, relativePath, variableName) {
@@ -213,79 +211,13 @@ function addFaqAliasRedirect(redirects, prefix, entry) {
   }
 }
 
-function buildRedirects(rootDir, env = process.env) {
-  const { cn: cnUrl, io: ioUrl } = getProductionBaseUrls(env);
-  const { chinese: chineseFaqIds, english: englishFaqIds } = getPublishedFaqIds(rootDir);
+function buildRedirects(rootDir) {
   const faqProjection = getFaqRedirectProjection(rootDir);
-  const compareSlugs = fs
-    .readdirSync(path.join(rootDir, 'content', 'competitors', 'en'))
-    .filter((file) => file.endsWith('.md'))
-    .map((file) => file.replace(/\.md$/, ''));
-  const techIdentities = getTechIdentities(rootDir);
   const ioRedirects = new Map();
   const cnRedirects = new Map();
 
-  for (const pagePath of ['', '/price']) {
-    addRedirect(ioRedirects, `/zh${pagePath}`, `${cnUrl}${pagePath || '/'}`);
-    addRedirect(cnRedirects, `/zh${pagePath}`, `${cnUrl}${pagePath || '/'}`);
-
-    for (const locale of localeCodes.filter((locale) => locale !== 'zh')) {
-      const source = `/${locale}${pagePath}`;
-      const targetPath = locale === 'en' ? pagePath || '/' : `/${locale}${pagePath}`;
-      addRedirect(cnRedirects, source, `${ioUrl}${targetPath}`);
-      if (locale === 'en') addRedirect(ioRedirects, source, `${ioUrl}${targetPath}`);
-    }
-  }
-
-  addRedirect(ioRedirects, '/zh/contact', `${cnUrl}/contact`);
-  addRedirect(ioRedirects, '/en/contact', `${ioUrl}/contact`);
-  addRedirect(cnRedirects, '/zh/contact', `${cnUrl}/contact`);
-  addRedirect(cnRedirects, '/en/contact', `${ioUrl}/contact`);
-  addRedirect(cnRedirects, '/zh-hant/contact', `${ioUrl}/zh-hant/contact`);
-
-  addRedirect(ioRedirects, '/zh/enterprise', `${cnUrl}/`);
-  addRedirect(cnRedirects, '/zh/enterprise', `${cnUrl}/`);
-
-  for (const [sourcePrefix, targetUrl, ids, redirects] of [
-    ['/zh/faq', cnUrl, chineseFaqIds, ioRedirects],
-    ['/en/faq', ioUrl, englishFaqIds, ioRedirects],
-    ['/zh/faq', cnUrl, chineseFaqIds, cnRedirects],
-    ['/en/faq', ioUrl, englishFaqIds, cnRedirects]
-  ]) {
-    addRedirect(redirects, sourcePrefix, `${targetUrl}/faq`);
-    for (const id of ids) {
-      const encodedId = encodeURIComponent(id);
-      const target = `${targetUrl}/faq/${encodedId}`;
-      addRedirect(redirects, `${sourcePrefix}/${encodedId}`, target);
-      if (encodedId !== id) addRedirect(redirects, `${sourcePrefix}/${id}`, target);
-    }
-  }
-
   for (const entry of faqProjection.eligible) {
     addFaqAliasRedirect(ioRedirects, '/faq', entry);
-    addFaqAliasRedirect(ioRedirects, '/en/faq', entry);
-    addFaqAliasRedirect(cnRedirects, '/en/faq', entry);
-  }
-
-  for (const [sourcePrefix, targetUrl, redirects] of [
-    ['/zh/compare', cnUrl, ioRedirects],
-    ['/en/compare', ioUrl, ioRedirects],
-    ['/zh/compare', cnUrl, cnRedirects],
-    ['/en/compare', ioUrl, cnRedirects]
-  ]) {
-    addRedirect(redirects, sourcePrefix, `${targetUrl}/compare`);
-    for (const slug of compareSlugs) {
-      addRedirect(redirects, `${sourcePrefix}/${slug}`, `${targetUrl}/compare/${slug}`);
-    }
-  }
-
-  addRedirect(ioRedirects, '/zh/tech-center', `${cnUrl}/tech-center`);
-  addRedirect(cnRedirects, '/zh/tech-center', `${cnUrl}/tech-center`);
-  for (const identity of techIdentities) {
-    if (getLocaleOwner(identity.locale) !== 'cn') continue;
-    const targetUrl = `${cnUrl}${identity.canonicalPath}`;
-    addRedirect(ioRedirects, identity.sourcePath, targetUrl);
-    addRedirect(cnRedirects, identity.sourcePath, targetUrl);
   }
 
   return { cnRedirects, ioRedirects };
@@ -305,7 +237,15 @@ export default {
       return Response.redirect(redirectUrl, 301);
     }
 
-    const response = await env.ASSETS.fetch(request);
+    let response = await env.ASSETS.fetch(request);
+    if (response.status === 404) {
+      const match = url.pathname.match(/^\\/[a-z]{2}(?:-[a-z]{2,8})?(?=\\/|$)(.*)$/i);
+      if (match) {
+        const fallbackUrl = new URL(url);
+        fallbackUrl.pathname = match[1] || '/';
+        response = await env.ASSETS.fetch(new Request(fallbackUrl, request));
+      }
+    }
     ${
       noindex
         ? `const headers = new Headers(response.headers);

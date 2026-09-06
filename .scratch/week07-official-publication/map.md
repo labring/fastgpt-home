@@ -19,6 +19,12 @@ Status: open
 
 ## Decisions so far
 
+- [Guide 与迁移内容的公开技术依据](issues/01-guide-facts.md)：7 篇 Guide 完成中英双语改写，3 篇迁移稿按资产盘点、MaxKB 操作映射、并行切换分别定稿；17 份成稿通过研究复核。
+- [中文站与英文站的现有发布路径](issues/03-publication-path.md)：复用 upstream main 的 CN 镜像/Kubernetes 与 IO Cloudflare Pages Git 集成。
+- [发布顺序与逐页对应表](publication-inventory.csv)：972 个规范地址，中文站 759 个、英文站 213 个，所有既定候选保留。
+
+- [排障素材的真实解决路径与历史边界](issues/02-issue-facts.md)：99 篇逐页核对原始 issue 与全部评论；依证据区分维护者建议、已文档化能力、社区方案与历史需求，恢复 17 篇被关单文案掩盖的主题。
+
 ## Not yet specified
 
 生产构建或真实页面验证暴露的运行环境问题，随证据细化。

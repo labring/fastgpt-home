@@ -63,6 +63,24 @@ test('normalizes bare source citations into descriptive Markdown links', () => {
   assert.match(page.normalizedDocument, /> 来源：\[FastGPT 官方文档\]\(https:\/\/doc\.fastgpt\.cn/);
 });
 
+test('redacts FastGPT API credentials during import', () => {
+  const tempSource = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-credential-'));
+  try {
+    fs.cpSync(fixture, tempSource, { recursive: true });
+    const sourceFile = path.join(tempSource, 'reference/fastgpt-opensandbox-env-config.md');
+    const credential = `fastgpt-${'A'.repeat(48)}`;
+    fs.appendFileSync(sourceFile, `\nAuthorization: Bearer ${credential}\n`);
+    const plan = buildImportPlan({ repoRoot: root, sourcePath: tempSource });
+    const page = plan.pages.find(
+      (candidate) => candidate.source.file === 'reference/fastgpt-opensandbox-env-config.md'
+    );
+    assert(page.normalizedDocument.includes('Authorization: Bearer YOUR_API_KEY'));
+    assert(!page.normalizedDocument.includes(credential));
+  } finally {
+    fs.rmSync(tempSource, { recursive: true, force: true });
+  }
+});
+
 test('normalizes structural escaped line endings', () => {
   const tempSource = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-delivery-'));
   fs.cpSync(fixture, tempSource, { recursive: true });
@@ -308,6 +326,7 @@ test('source verification covers every indexed page and catches content drift wi
       [bodyPath, () => null, /Missing technical body/],
       [bodyPath, (bytes) => bytes.replace('slug: /zh/', 'slug: /en/'), /metadata drift/],
       [bodyPath, (bytes) => bytes + '\nsk-' + 'unexpectedCredential123456789', /secret-shaped/],
+      [bodyPath, (bytes) => bytes + '\nfastgpt-' + 'A'.repeat(48), /secret-shaped/],
       [
         registryPath,
         (bytes) => JSON.stringify([...JSON.parse(bytes), JSON.parse(bytes)[0]]),

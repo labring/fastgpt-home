@@ -19,6 +19,8 @@ test('G2 release evidence isolates the SOE identity and publishes exactly two ow
   const result = verifyGuideG2Release({ rootDir: ROOT });
   assert.deepEqual(result.g2Slugs, ['soe-policy-qa-deployment']);
   assert.deepEqual(result.g1Slugs, ['migrate-saas-to-selfhost', 'embed-ai-into-product']);
+  assert.equal(result.registryEntryCount, 16);
+  assert.equal(result.publishedEntryCount, 16);
   assert.equal(result.g2IdentityCount, 1);
   assert.equal(result.sourceDocumentCount, 2);
   assert.deepEqual(result.ownerPages, { cn: 1, io: 1 });

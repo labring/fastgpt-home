@@ -13,7 +13,7 @@ const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.js
 const FRONT_MATTER_KEYS = ['title', 'slug', 'page_type', 'source', 'source_type'];
 const SOURCE_TYPES = new Map(Object.entries(TECHNICAL_CONTENT_POLICY.sourceTypes));
 const CATEGORY_LABELS = TECHNICAL_CONTENT_POLICY.categories;
-const SECRET_PATTERN = /\bsk-[A-Za-z0-9][A-Za-z0-9_-]{15,}\b/g;
+const SECRET_PATTERN = /\b(?:sk-[A-Za-z0-9][A-Za-z0-9_-]{15,}|fastgpt-[A-Za-z0-9]{32,})\b/g;
 
 function stableJson(value) {
   return `${JSON.stringify(value, null, 2)}\n`;

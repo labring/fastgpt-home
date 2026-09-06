@@ -378,6 +378,538 @@
       "datePublished": "2026-08-27",
       "dateModified": "2026-08-27"
     }
-  }
+  },
+    {
+      "slug": "private-deployment-readiness",
+      "group": "decision",
+      "zh": {
+        "sourceName": "private-deployment-readiness.zh.md",
+        "sourceSha256": "7560f27c7c2e18cd9cbc30797b1da44787ac3a66cfe922afd8e783861a32d7fd",
+        "bodySha256": "606bf98c18e735ad0b9bcd7c90abd5f7d4e2ac9f80f88fbeb3552f70de87222a",
+        "h1": "FastGPT 私有化部署就绪度：上线前确认六项条件",
+        "metaTitle": "FastGPT 私有化部署就绪度：六项上线条件与验收清单",
+        "metaDescription": "梳理 FastGPT 私有化部署的版本、数据边界、持久化、模型链路、容量与运维责任，以真实业务请求和备份恢复完成上线验收。",
+        "keywords": "FastGPT,private,deployment,readiness",
+        "canonical": "https://fastgpt.cn/guide/private-deployment-readiness",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/private-deployment-readiness | en → https://fastgpt.io/guide/private-deployment-readiness | x-default → https://fastgpt.io/guide/private-deployment-readiness",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "百人规模企业知识库服务器选型：四大核心维度定规格",
+          "FastGPT 模型网关架构：渠道路由、凭据与故障验收"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "百人规模企业知识库服务器选型：四大核心维度定规格",
+            "target": "https://fastgpt.cn/guide/server-sizing-guide"
+          },
+          {
+            "label": "FastGPT 模型网关架构：渠道路由、凭据与故障验收",
+            "target": "https://fastgpt.cn/guide/model-gateway-architecture"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "private-deployment-readiness.en.md",
+        "sourceSha256": "f25996fb87fd617581e3615cf32f82f8057209eaf356ecba02374dd8e060415b",
+        "bodySha256": "d8b7bb8006284c92eeafcbb2fc9fa17afc823ea554a9b07f291a67755ff2bb2f",
+        "h1": "FastGPT Private Deployment Readiness: Six Checks Before Launch",
+        "metaTitle": "FastGPT Private Deployment Readiness and Launch Checks",
+        "metaDescription": "Prepare a FastGPT private deployment with checks for versions, data boundaries, persistence, model requests, capacity, recovery, and operational ownership.",
+        "keywords": "FastGPT,private,deployment,readiness",
+        "canonical": "https://fastgpt.io/guide/private-deployment-readiness",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/private-deployment-readiness | en → https://fastgpt.io/guide/private-deployment-readiness | x-default → https://fastgpt.io/guide/private-deployment-readiness",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "Server Sizing for 100-Person Enterprise RAG Knowledge Bases: 4 Core Decision Dimensions",
+          "FastGPT Model Gateway Architecture and Routing Guide"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "Server Sizing for 100-Person Enterprise RAG Knowledge Bases: 4 Core Decision Dimensions",
+            "target": "https://fastgpt.io/guide/server-sizing-guide"
+          },
+          {
+            "label": "FastGPT Model Gateway Architecture and Routing Guide",
+            "target": "https://fastgpt.io/guide/model-gateway-architecture"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "model-gateway-architecture",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "model-gateway-architecture.zh.md",
+        "sourceSha256": "43390bc711df1ddc8f42c4cf732c662a8a3edf1ebc05afb3fa4f121e7e972b7e",
+        "bodySha256": "5e9b663e422a8ad3faea1123251c451d0d56a1faaa6f019b0f0f6ba8678dccbc",
+        "h1": "FastGPT 模型网关架构：路由、凭据与故障处理",
+        "metaTitle": "FastGPT 模型网关架构：渠道路由、凭据与故障验收",
+        "metaDescription": "说明 FastGPT 模型网关与自定义端点的请求路径，梳理渠道配置、OneAPI 导入、凭据管理和失败场景，形成可交接的接入验收清单。",
+        "keywords": "FastGPT,model,gateway,architecture",
+        "canonical": "https://fastgpt.cn/guide/model-gateway-architecture",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/model-gateway-architecture | en → https://fastgpt.io/guide/model-gateway-architecture | x-default → https://fastgpt.io/guide/model-gateway-architecture",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT 私有化部署就绪度：六项上线条件与验收清单",
+          "FastGPT 本地模型 TCO：接入验收、容量与任务成本"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT 私有化部署就绪度：六项上线条件与验收清单",
+            "target": "https://fastgpt.cn/guide/private-deployment-readiness"
+          },
+          {
+            "label": "FastGPT 本地模型 TCO：接入验收、容量与任务成本",
+            "target": "https://fastgpt.cn/guide/local-model-tco"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "model-gateway-architecture.en.md",
+        "sourceSha256": "bf09710c5cb4c35092b6471e23f4e2d14384e5cb60d39ecfc71bceb70345a621",
+        "bodySha256": "9c6fe17225bab1a79165e52739b975e8abdf14d7e8b3263ed6dd442ef0423be6",
+        "h1": "FastGPT Model Gateway Architecture: Routing and Operations",
+        "metaTitle": "FastGPT Model Gateway Architecture and Routing Guide",
+        "metaDescription": "Plan FastGPT model routing, direct endpoints, channel credentials, OneAPI imports, and failure tests with an operational checklist for model integration.",
+        "keywords": "FastGPT,model,gateway,architecture",
+        "canonical": "https://fastgpt.io/guide/model-gateway-architecture",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/model-gateway-architecture | en → https://fastgpt.io/guide/model-gateway-architecture | x-default → https://fastgpt.io/guide/model-gateway-architecture",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT Private Deployment Readiness and Launch Checks",
+          "FastGPT Local Model TCO, Capacity and Integration Guide"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT Private Deployment Readiness and Launch Checks",
+            "target": "https://fastgpt.io/guide/private-deployment-readiness"
+          },
+          {
+            "label": "FastGPT Local Model TCO, Capacity and Integration Guide",
+            "target": "https://fastgpt.io/guide/local-model-tco"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "embedding-model-migration",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "embedding-model-migration.zh.md",
+        "sourceSha256": "973f720c07fc302fd38fde764876319d2c6ff618d725b35912bd81f294c5496c",
+        "bodySha256": "3f2a17aa278790183ef9cb1916561f0a25d7370360328a7a1c27c8d2a41dc09d",
+        "h1": "FastGPT 更换向量模型：重建、对照与回滚",
+        "metaTitle": "FastGPT 更换向量模型：知识库重建、对照与回滚",
+        "metaDescription": "按原文、分段与模型配置准备迁移，在目标知识库重建向量，使用固定问题集比较召回、引用、延迟与成本，并保留应用绑定回滚路径。",
+        "keywords": "FastGPT,embedding,model,migration",
+        "canonical": "https://fastgpt.cn/guide/embedding-model-migration",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/embedding-model-migration | en → https://fastgpt.io/guide/embedding-model-migration | x-default → https://fastgpt.io/guide/embedding-model-migration",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT 重排模型选型：相关性、时延与单位成本",
+          "FastGPT 知识库生命周期：内容归属、更新与恢复"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT 重排模型选型：相关性、时延与单位成本",
+            "target": "https://fastgpt.cn/guide/rerank-model-selection"
+          },
+          {
+            "label": "FastGPT 知识库生命周期：内容归属、更新与恢复",
+            "target": "https://fastgpt.cn/guide/kb-lifecycle-ownership"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "embedding-model-migration.en.md",
+        "sourceSha256": "6b276a09a8ba706e7063f854294cc344a941b30559ada05b8fc6e3b41b2f1f62",
+        "bodySha256": "a4a8f9fa89def9563f97af696e034b573213e78d92283a865ad597836f0d34ba",
+        "h1": "Changing FastGPT Embedding Models: Rebuild and Validate",
+        "metaTitle": "FastGPT Embedding Model Migration and Rollback Guide",
+        "metaDescription": "Migrate FastGPT embedding models with a new knowledge base, rebuilt vectors, fixed retrieval tests, application cutover, and a practical rollback plan.",
+        "keywords": "FastGPT,embedding,model,migration",
+        "canonical": "https://fastgpt.io/guide/embedding-model-migration",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/embedding-model-migration | en → https://fastgpt.io/guide/embedding-model-migration | x-default → https://fastgpt.io/guide/embedding-model-migration",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT Rerank Model Selection, Latency and Cost Guide",
+          "FastGPT Knowledge Base Lifecycle and Ownership Guide"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT Rerank Model Selection, Latency and Cost Guide",
+            "target": "https://fastgpt.io/guide/rerank-model-selection"
+          },
+          {
+            "label": "FastGPT Knowledge Base Lifecycle and Ownership Guide",
+            "target": "https://fastgpt.io/guide/kb-lifecycle-ownership"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "kb-lifecycle-ownership",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "kb-lifecycle-ownership.zh.md",
+        "sourceSha256": "0257d37f4dd9a9ceb89a939506a95e860e531b147c8db25d812e4c409b5eedbb",
+        "bodySha256": "971155dd755bda0eed457964a5024cf5df72400d56cbf607c9ec01ba7e0807d9",
+        "h1": "FastGPT 知识库生命周期：责任归属与持续维护",
+        "metaTitle": "FastGPT 知识库生命周期：内容归属、更新与恢复",
+        "metaDescription": "为 FastGPT 知识库分配业务、维护、应用与运维责任，建立来源台账，按内容风险安排更新、复核、停用和恢复，并验收权限与引用。",
+        "keywords": "FastGPT,kb,lifecycle,ownership",
+        "canonical": "https://fastgpt.cn/guide/kb-lifecycle-ownership",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/kb-lifecycle-ownership | en → https://fastgpt.io/guide/kb-lifecycle-ownership | x-default → https://fastgpt.io/guide/kb-lifecycle-ownership",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT 文档解析验收：原文、分段、检索与引用",
+          "FastGPT 更换向量模型：知识库重建、对照与回滚"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT 文档解析验收：原文、分段、检索与引用",
+            "target": "https://fastgpt.cn/guide/document-parsing-acceptance"
+          },
+          {
+            "label": "FastGPT 更换向量模型：知识库重建、对照与回滚",
+            "target": "https://fastgpt.cn/guide/embedding-model-migration"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "kb-lifecycle-ownership.en.md",
+        "sourceSha256": "264903f89b34a79234863567eb280a8aeb547adba0fc0586e31e346d7a50094b",
+        "bodySha256": "4448b8cf1387b775e8a47e762a0b27d8ab12c3f28f697075908a41cb91698fa8",
+        "h1": "FastGPT Knowledge Base Lifecycle and Ownership",
+        "metaTitle": "FastGPT Knowledge Base Lifecycle and Ownership Guide",
+        "metaDescription": "Assign FastGPT knowledge-base owners, maintain document provenance, validate updates and permissions, and plan review, retirement, and recovery workflows.",
+        "keywords": "FastGPT,kb,lifecycle,ownership",
+        "canonical": "https://fastgpt.io/guide/kb-lifecycle-ownership",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/kb-lifecycle-ownership | en → https://fastgpt.io/guide/kb-lifecycle-ownership | x-default → https://fastgpt.io/guide/kb-lifecycle-ownership",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT Document Parsing Acceptance Testing Checklist",
+          "FastGPT Embedding Model Migration and Rollback Guide"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT Document Parsing Acceptance Testing Checklist",
+            "target": "https://fastgpt.io/guide/document-parsing-acceptance"
+          },
+          {
+            "label": "FastGPT Embedding Model Migration and Rollback Guide",
+            "target": "https://fastgpt.io/guide/embedding-model-migration"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "document-parsing-acceptance",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "document-parsing-acceptance.zh.md",
+        "sourceSha256": "762d72de3b9ec7e8f58bab0ab5f6f267347ddafd9f3f7c96d5e658e599b997ef",
+        "bodySha256": "01e4ef846178f8a5c04c5069a2dff09878a36c96e1d8cbc81882e4bcd23082c8",
+        "h1": "FastGPT 文档解析验收：从原文件到可引用答案",
+        "metaTitle": "FastGPT 文档解析验收：原文、分段、检索与引用",
+        "metaDescription": "按 PDF、扫描件、表格和网页准备样本，逐层检查原文提取、分段索引、检索证据与答案引用，并记录异常文件和批量导入的处理结果。",
+        "keywords": "FastGPT,document,parsing,acceptance",
+        "canonical": "https://fastgpt.cn/guide/document-parsing-acceptance",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/document-parsing-acceptance | en → https://fastgpt.io/guide/document-parsing-acceptance | x-default → https://fastgpt.io/guide/document-parsing-acceptance",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "用黄金集验证企业复杂文档解析的选型效果",
+          "FastGPT 知识库生命周期：内容归属、更新与恢复"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "用黄金集验证企业复杂文档解析的选型效果",
+            "target": "https://fastgpt.cn/guide/complex-doc-golden-set"
+          },
+          {
+            "label": "FastGPT 知识库生命周期：内容归属、更新与恢复",
+            "target": "https://fastgpt.cn/guide/kb-lifecycle-ownership"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "document-parsing-acceptance.en.md",
+        "sourceSha256": "d2cd3ba3819d7888f7142a0efa5063c1fd5cd2c133a4fe76bcec42b3a442ab33",
+        "bodySha256": "6de621b443b1fecfa03add931ec2989a967f9c4eab18b1b578f761cc2ee3d1fd",
+        "h1": "FastGPT Document Parsing Acceptance: Files to Cited Answers",
+        "metaTitle": "FastGPT Document Parsing Acceptance Testing Checklist",
+        "metaDescription": "Validate FastGPT document parsing with representative files, critical fields, chunk checks, retrieval evidence, citations, and abnormal-input recovery.",
+        "keywords": "FastGPT,document,parsing,acceptance",
+        "canonical": "https://fastgpt.io/guide/document-parsing-acceptance",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/document-parsing-acceptance | en → https://fastgpt.io/guide/document-parsing-acceptance | x-default → https://fastgpt.io/guide/document-parsing-acceptance",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "Enterprise Document Parsing Tool Selection Validation Guide",
+          "FastGPT Knowledge Base Lifecycle and Ownership Guide"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "Enterprise Document Parsing Tool Selection Validation Guide",
+            "target": "https://fastgpt.io/guide/complex-doc-golden-set"
+          },
+          {
+            "label": "FastGPT Knowledge Base Lifecycle and Ownership Guide",
+            "target": "https://fastgpt.io/guide/kb-lifecycle-ownership"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "rerank-model-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "rerank-model-selection.zh.md",
+        "sourceSha256": "734632282ac806d25f094519dfbfd429d944dd5bbf6eab8bb06d342eb17c2a56",
+        "bodySha256": "b715edddd088aa6b2c529b8e00398e7dd7a72b386d788a45dbaeb493fa38fe24",
+        "h1": "FastGPT 重排模型选型：相关性、延迟与成本",
+        "metaTitle": "FastGPT 重排模型选型：相关性、时延与单位成本",
+        "metaDescription": "使用固定候选和标注问题集比较重排模型，核对相关性过滤、RRF 融合、端到端延迟与失败回退，按合格回答衡量重排收益和成本。",
+        "keywords": "FastGPT,rerank,model,selection",
+        "canonical": "https://fastgpt.cn/guide/rerank-model-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/rerank-model-selection | en → https://fastgpt.io/guide/rerank-model-selection | x-default → https://fastgpt.io/guide/rerank-model-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT 更换向量模型：知识库重建、对照与回滚",
+          "FastGPT 本地模型 TCO：接入验收、容量与任务成本"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT 更换向量模型：知识库重建、对照与回滚",
+            "target": "https://fastgpt.cn/guide/embedding-model-migration"
+          },
+          {
+            "label": "FastGPT 本地模型 TCO：接入验收、容量与任务成本",
+            "target": "https://fastgpt.cn/guide/local-model-tco"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "rerank-model-selection.en.md",
+        "sourceSha256": "bdde519eeccff252bbc5c56f041a9326c8fef3dcd4048306baa8e6a0ca834756",
+        "bodySha256": "62ecb4ce6a7d51aad11a5a9d150788d84c9afd113dff17bf9cbbba70334c86de",
+        "h1": "Choosing FastGPT Rerank Models: Relevance, Latency, and Cost",
+        "metaTitle": "FastGPT Rerank Model Selection, Latency and Cost Guide",
+        "metaDescription": "Compare FastGPT rerank models using fixed candidates, labeled questions, relevance thresholds, latency, fallback behavior, and cost per accepted answer.",
+        "keywords": "FastGPT,rerank,model,selection",
+        "canonical": "https://fastgpt.io/guide/rerank-model-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/rerank-model-selection | en → https://fastgpt.io/guide/rerank-model-selection | x-default → https://fastgpt.io/guide/rerank-model-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT Embedding Model Migration and Rollback Guide",
+          "FastGPT Local Model TCO, Capacity and Integration Guide"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT Embedding Model Migration and Rollback Guide",
+            "target": "https://fastgpt.io/guide/embedding-model-migration"
+          },
+          {
+            "label": "FastGPT Local Model TCO, Capacity and Integration Guide",
+            "target": "https://fastgpt.io/guide/local-model-tco"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "local-model-tco",
+      "group": "decision",
+      "zh": {
+        "sourceName": "local-model-tco.zh.md",
+        "sourceSha256": "f4e5bb61ca06f027b27a4eeea57609962ac950bd9c7f08f90873cd0a8ae49ae4",
+        "bodySha256": "cc50f7c63f8341183f172eb1ff85374d52358ad4736667f49e4cebb906fc0f39",
+        "h1": "FastGPT 本地模型 TCO：接入、容量与单位任务成本",
+        "metaTitle": "FastGPT 本地模型 TCO：接入验收、容量与任务成本",
+        "metaDescription": "按计算、能源、知识处理、运维、验收与峰值冗余核算本地模型成本，验证 Ollama 接入与上下文配置，用实测质量和任务量比较方案。",
+        "keywords": "FastGPT,local,model,tco",
+        "canonical": "https://fastgpt.cn/guide/local-model-tco",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/local-model-tco | en → https://fastgpt.io/guide/local-model-tco | x-default → https://fastgpt.io/guide/local-model-tco",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT 模型网关架构：渠道路由、凭据与故障验收",
+          "自建AI知识库三年总成本：四层拆解与同口径比价方法"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT 模型网关架构：渠道路由、凭据与故障验收",
+            "target": "https://fastgpt.cn/guide/model-gateway-architecture"
+          },
+          {
+            "label": "自建AI知识库三年总成本：四层拆解与同口径比价方法",
+            "target": "https://fastgpt.cn/guide/self-build-three-year-tco"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      },
+      "en": {
+        "sourceName": "local-model-tco.en.md",
+        "sourceSha256": "3029af5e8425adb19632f66d47a15d91d08c281891aa90c357dbad1c03b7fa11",
+        "bodySha256": "e04778e6413b1154ef930a74907537ea1cfa42e86bb653e233d042fe5f020312",
+        "h1": "FastGPT Local Model TCO: Integration, Capacity, and Task Cost",
+        "metaTitle": "FastGPT Local Model TCO, Capacity and Integration Guide",
+        "metaDescription": "Estimate FastGPT local model costs across hardware, power, knowledge processing, operations, and quality, using measured capacity and accepted task volume.",
+        "keywords": "FastGPT,local,model,tco",
+        "canonical": "https://fastgpt.io/guide/local-model-tco",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/local-model-tco | en → https://fastgpt.io/guide/local-model-tco | x-default → https://fastgpt.io/guide/local-model-tco",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "FastGPT Model Gateway Architecture and Routing Guide",
+          "3-Year Total Cost of Ownership for Self-Hosted Enterprise AI Knowledge Bases"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "FastGPT Model Gateway Architecture and Routing Guide",
+            "target": "https://fastgpt.io/guide/model-gateway-architecture"
+          },
+          {
+            "label": "3-Year Total Cost of Ownership for Self-Hosted Enterprise AI Knowledge Bases",
+            "target": "https://fastgpt.io/guide/self-build-three-year-tco"
+          }
+        ],
+        "datePublished": "2026-09-06",
+        "dateModified": "2026-09-06"
+      }
+    }
   ]
 }

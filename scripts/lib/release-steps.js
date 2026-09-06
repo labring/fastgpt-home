@@ -8,6 +8,12 @@ function getSourceNodeSteps() {
     ],
     ['seo-basics.regression', 'SEO basics regression', 'scripts/verify-seo-basics.test.js', []],
     [
+      'technical-description.regression',
+      'Technical description regression',
+      'scripts/verify-technical-description.test.js',
+      []
+    ],
+    [
       'content-hygiene.source',
       'content hygiene source verification',
       'scripts/verify-content-hygiene.js',

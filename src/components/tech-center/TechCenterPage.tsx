@@ -2,10 +2,11 @@
 
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import type { ComponentProps } from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
-import { getTechnicalReviewPath } from '@/lib/technicalRouting';
+import { getTechCenterPagePath, getTechnicalReviewPath } from '@/lib/technicalRouting';
 import { isPreviewSite } from '@/lib/siteRouting';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
@@ -264,9 +265,11 @@ export default function TechCenterPage({
   navCta,
   footer,
   initialEntries,
+  initialPage = 1,
   featuredEntry,
   categoryMeta,
   totalEntries,
+  languageSwitchPaths,
   searchIndexPath = '/tech-center/search-index.json'
 }: {
   locale: string;
@@ -274,11 +277,14 @@ export default function TechCenterPage({
   navCta: NavCta;
   footer: HomeFooter;
   initialEntries: TechSearchEntry[];
+  initialPage?: number;
   featuredEntry?: TechEntry;
   categoryMeta: CategoryMeta[];
   totalEntries: number;
+  languageSwitchPaths: ComponentProps<typeof Navbar>['languageSwitchPaths'];
   searchIndexPath?: string;
 }) {
+  const router = useRouter();
   const copy = locale === 'zh' ? TECH_CENTER_COPY.zh : TECH_CENTER_COPY.en;
   const sourceOptions: { value: SourceFilter; label: string }[] = [
     { value: 'all', label: copy.sourceAll },
@@ -293,9 +299,9 @@ export default function TechCenterPage({
   const [category, setCategory] = useState<TechCategoryKey>('all');
   const [source, setSource] = useState<SourceFilter>('all');
   const [sort, setSort] = useState<SortMode>('default');
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(initialPage);
   const [urlStateReady, setUrlStateReady] = useState(false);
-  const [entries, setEntries] = useState<TechSearchEntry[]>(initialEntries);
+  const [entries, setEntries] = useState<TechSearchEntry[] | null>(null);
 
   const categoryItems = [
     { key: 'all' as const, label: copy.categoryAll, icon: '◫', count: totalEntries },
@@ -326,7 +332,7 @@ export default function TechCenterPage({
 
   const filteredEntries = useMemo(() => {
     const normalizedQuery = query.trim().toLocaleLowerCase(copy.localeName);
-    const result = entries.filter((entry) => {
+    const result = (entries || initialEntries).filter((entry) => {
       const categoryMatch = category === 'all' || entry.category === category;
       const sourceMatch = source === 'all' || entry.sourceType === source;
       const categoryLabel = getCategoryLabel(entry.category, categoryMeta, copy.categoryTask);
@@ -355,24 +361,61 @@ export default function TechCenterPage({
         );
     }
     return result;
-  }, [category, categoryMeta, copy, entries, query, sort, source]);
+  }, [category, categoryMeta, copy, entries, initialEntries, query, sort, source]);
 
-  const totalPages = Math.max(1, Math.ceil(filteredEntries.length / PAGE_SIZE));
-  const currentPage = Math.min(page, totalPages);
-  const pageEntries = filteredEntries.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const hasFilters = Boolean(
+    query.trim() || category !== 'all' || source !== 'all' || sort !== 'default'
+  );
+  const clientPagination = hasFilters && entries !== null;
+  const resultCount = clientPagination ? filteredEntries.length : totalEntries;
+  const totalPages = Math.max(1, Math.ceil(resultCount / PAGE_SIZE));
+  const currentPage = entries ? Math.min(page, totalPages) : initialPage;
+  const pageEntries = entries
+    ? filteredEntries.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+    : initialEntries;
   const pageNumbers = visiblePageNumbers(currentPage, totalPages);
   const resultsTitle = query
     ? copy.resultsTitle
     : getCategoryLabel(category, categoryMeta, copy.categoryTask);
-  const resultsCount = copy.resultsCount(filteredEntries.length, query);
+  const resultsCount = copy.resultsCount(resultCount, query);
   const homeHref = getDefaultLocalePath(locale);
   const hubHref = getTechnicalReviewPath(locale, '/tech-center');
+  const getPageHref = (pageNumber: number) => {
+    if (!clientPagination) return getTechnicalReviewPath(locale, getTechCenterPagePath(pageNumber));
+    const params = new URLSearchParams({
+      category,
+      q: query.trim(),
+      sourceType: source,
+      sort,
+      page: String(pageNumber)
+    });
+    return `${hubHref}?${params}`;
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const urlCategory = params.get('category') as TechCategoryKey | null;
     const urlSource = params.get('sourceType') as SourceFilter | null;
     const urlSort = params.get('sort') as SortMode | null;
+    const pageValue = Number(params.get('page'));
+    const urlPage = Number.isSafeInteger(pageValue) && pageValue > 0 ? pageValue : initialPage;
+    const filteredUrl = Boolean(
+      params.get('q')?.trim() ||
+        (urlCategory &&
+          urlCategory !== 'all' &&
+          categoryMeta.some((item) => item.key === urlCategory)) ||
+        (urlSource && urlSource !== 'all' && SEARCH_SOURCE_TYPES.has(urlSource)) ||
+        urlSort === 'title' ||
+        urlSort === 'minutes'
+    );
+    if (!filteredUrl && params.has('page') && urlPage > 1) {
+      params.delete('page');
+      const path = getTechnicalReviewPath(locale, getTechCenterPagePath(urlPage));
+      router.replace(`${path}${params.size ? `?${params}` : ''}${window.location.hash}`, {
+        scroll: false
+      });
+      return;
+    }
 
     queueMicrotask(() => {
       if (
@@ -388,10 +431,11 @@ export default function TechCenterPage({
         setSort(urlSort);
       }
       setQuery(params.get('q') || '');
-      setPage(Math.max(1, Number(params.get('page')) || 1));
+      setPage(filteredUrl ? urlPage : initialPage);
       setUrlStateReady(true);
+      if (params.has('q')) searchInputRef.current?.focus();
     });
-  }, [categoryMeta]);
+  }, [categoryMeta, initialPage, locale, router]);
 
   useEffect(() => {
     if (!urlStateReady) return;
@@ -402,7 +446,7 @@ export default function TechCenterPage({
       q: query.trim(),
       sourceType: source,
       sort,
-      page: String(currentPage)
+      page: hasFilters ? String(entries ? currentPage : page) : '1'
     };
 
     Object.entries(values).forEach(([key, value]) => {
@@ -412,8 +456,28 @@ export default function TechCenterPage({
         url.searchParams.set(key, value);
       }
     });
-    window.history.replaceState(null, '', url);
-  }, [category, currentPage, query, sort, source, urlStateReady]);
+    url.pathname = hasFilters
+      ? hubHref
+      : getTechnicalReviewPath(locale, getTechCenterPagePath(currentPage));
+    if (url.pathname !== window.location.pathname) {
+      router.replace(`${url.pathname}${url.search}${url.hash}`, { scroll: false });
+    } else {
+      window.history.replaceState(null, '', url);
+    }
+  }, [
+    category,
+    currentPage,
+    entries,
+    hasFilters,
+    hubHref,
+    locale,
+    page,
+    query,
+    router,
+    sort,
+    source,
+    urlStateReady
+  ]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -462,6 +526,7 @@ export default function TechCenterPage({
         locale={locale}
         publishedLocales={techPublishedLocaleCodes}
         reviewLocalePaths={isPreviewSite}
+        languageSwitchPaths={languageSwitchPaths}
       />
       <main id="main-content" className={`${styles.page} ${styles.main}`}>
         <a className={styles.skipLink} href="#main-content">
@@ -470,9 +535,17 @@ export default function TechCenterPage({
         <nav className={`${styles.container} ${styles.breadcrumbs}`} aria-label={copy.breadcrumbs}>
           <a href={homeHref}>FastGPT</a>
           <span aria-hidden="true">/</span>
-          <a href={hubHref} aria-current="page">
+          <a href={hubHref} aria-current={initialPage === 1 ? 'page' : undefined}>
             {copy.hubName}
           </a>
+          {initialPage > 1 && (
+            <>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">
+                {locale === 'zh' ? `第 ${initialPage} 页` : `Page ${initialPage}`}
+              </span>
+            </>
+          )}
         </nav>
         <section className={`${styles.container} ${styles.intro}`} aria-labelledby="page-title">
           <div className={styles.eyebrow}>{copy.eyebrow}</div>
@@ -737,15 +810,22 @@ export default function TechCenterPage({
 
                 {totalPages > 1 && (
                   <nav className={styles.pagination} aria-label={copy.pagination}>
-                    <button
+                    <a
                       className={styles.pageButton}
-                      type="button"
-                      disabled={currentPage === 1}
+                      href={currentPage > 1 ? getPageHref(currentPage - 1) : undefined}
+                      aria-disabled={currentPage === 1 || undefined}
                       aria-label={copy.previousPage}
-                      onClick={() => changePage(currentPage - 1)}
+                      onClick={
+                        clientPagination && currentPage > 1
+                          ? (event) => {
+                              event.preventDefault();
+                              changePage(currentPage - 1);
+                            }
+                          : undefined
+                      }
                     >
                       <ChevronLeft size={17} strokeWidth={1.8} aria-hidden="true" />
-                    </button>
+                    </a>
                     {pageNumbers.map((pageNumber, index) => {
                       const previousPage = pageNumbers[index - 1];
                       const hasGap = previousPage && pageNumber - previousPage > 1;
@@ -756,26 +836,40 @@ export default function TechCenterPage({
                               …
                             </span>
                           )}
-                          <button
+                          <a
                             className={styles.pageButton}
-                            type="button"
+                            href={getPageHref(pageNumber)}
                             aria-current={pageNumber === currentPage ? 'page' : undefined}
-                            onClick={() => changePage(pageNumber)}
+                            onClick={
+                              clientPagination
+                                ? (event) => {
+                                    event.preventDefault();
+                                    changePage(pageNumber);
+                                  }
+                                : undefined
+                            }
                           >
                             {pageNumber}
-                          </button>
+                          </a>
                         </Fragment>
                       );
                     })}
-                    <button
+                    <a
                       className={styles.pageButton}
-                      type="button"
-                      disabled={currentPage === totalPages}
+                      href={currentPage < totalPages ? getPageHref(currentPage + 1) : undefined}
+                      aria-disabled={currentPage === totalPages || undefined}
                       aria-label={copy.nextPage}
-                      onClick={() => changePage(currentPage + 1)}
+                      onClick={
+                        clientPagination && currentPage < totalPages
+                          ? (event) => {
+                              event.preventDefault();
+                              changePage(currentPage + 1);
+                            }
+                          : undefined
+                      }
                     >
                       <ChevronRight size={17} strokeWidth={1.8} aria-hidden="true" />
-                    </button>
+                    </a>
                   </nav>
                 )}
               </>

@@ -51,6 +51,7 @@ export default function Navbar({
   variant = 'default',
   publishedLocales,
   reviewLocalePaths = false,
+  languageSwitchPaths,
   consultHref,
   consultationTrigger = true,
   onConsultClick
@@ -61,6 +62,7 @@ export default function Navbar({
   variant?: NavbarVariant;
   publishedLocales?: readonly LocaleCode[];
   reviewLocalePaths?: boolean;
+  languageSwitchPaths?: Partial<Record<LocaleCode, string>>;
   consultHref?: string;
   consultationTrigger?: boolean;
   onConsultClick?: () => void;
@@ -87,12 +89,15 @@ export default function Navbar({
   })();
   const availableLocaleCodes = getPublishedLocaleCodes();
   const pageLocaleCodes: readonly LocaleCode[] = publishedLocales ?? availableLocaleCodes;
-  const languageKeys = pageLocaleCodes.filter((key) => availableLocaleCodes.includes(key));
+  const languageKeys = pageLocaleCodes.filter(
+    (key) => languageSwitchPaths?.[key] || availableLocaleCodes.includes(key)
+  );
   const hasLanguageSwitcher = languageKeys.length > 1;
   const getLocalizedPath = (value: string) =>
-    reviewLocalePaths
+    languageSwitchPaths?.[value as LocaleCode] ||
+    (reviewLocalePaths
       ? getReviewLocalePath(value, routeWithoutLang)
-      : getDefaultLocalePath(value, routeWithoutLang);
+      : getDefaultLocalePath(value, routeWithoutLang));
 
   const handleSwitchLanguage = (value: string) => {
     if (value === lang) return;
@@ -229,6 +234,7 @@ export default function Navbar({
                   locale={lang}
                   publishedLocales={publishedLocales}
                   reviewLocalePaths={reviewLocalePaths}
+                  languageSwitchPaths={languageSwitchPaths}
                 />
               </div>
             )}

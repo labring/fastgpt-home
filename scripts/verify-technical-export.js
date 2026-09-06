@@ -271,6 +271,10 @@ if (require.main === module) {
 }
 
 module.exports = {
+  getCanonical,
+  getHreflang,
+  getRobots,
+  readSitemap,
   getStaticRouteCandidates,
   main,
   verifyTechnicalExport

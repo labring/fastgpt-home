@@ -6,7 +6,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const zlib = require('node:zlib');
-const { resolveSiteVariant } = require('./lib/site-variant');
+const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
+const { getCanonical, getHreflang, getRobots, readSitemap } = require('./verify-technical-export');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
@@ -162,6 +163,151 @@ function verifyTechnicalCenter({
   };
 }
 
+function verifyTechnicalCenterPagination({
+  outDir = OUT_DIR,
+  variant = resolveSiteVariant(),
+  registryPath = path.join(ROOT, 'src/components/tech-center/entries.json')
+} = {}) {
+  const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
+  const baseUrls = getProductionBaseUrls();
+  const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
+  const sitemap = readSitemap(outDir);
+  const expectedSitemap = [];
+  const checkedScripts = new Set();
+  let pages = 0;
+
+  for (const locale of locales) {
+    const entries = registry.filter((entry) => entry.slug.startsWith(`/${locale}/`));
+    const pageCount = Math.ceil(entries.length / BUDGET.maxInitialEntries);
+    const baseUrl = baseUrls[locale === 'zh' ? 'cn' : 'io'];
+    const hub = variant === 'preview' ? `/${locale}/tech-center` : '/tech-center';
+    const pagePath = (page) => (page === 1 ? hub : `${hub}/page/${page}`);
+
+    for (let page = 1; page <= pageCount; page += 1) {
+      const route = pagePath(page);
+      const html = fs.readFileSync(resolveHtml(outDir, route), 'utf8');
+      const canonical = `${baseUrl}/tech-center${page === 1 ? '' : `/page/${page}`}`;
+      const expectedEntries = entries.slice(
+        (page - 1) * BUDGET.maxInitialEntries,
+        page * BUDGET.maxInitialEntries
+      );
+      assert.deepEqual(
+        getServerListingLinks(html, outDir),
+        expectedEntries.map((entry) =>
+          variant === 'preview' ? entry.slug : entry.slug.replace(/^\/(zh|en)/, '')
+        ),
+        `${route} has an incorrect server listing`
+      );
+      assert.equal(getCanonical(html, route), canonical, `${route} canonical mismatch`);
+      assert.equal(
+        getRobots(html, route),
+        variant === 'preview' ? 'noindex, nofollow' : 'index, follow',
+        `${route} robots mismatch`
+      );
+      const alternateLocales = page === 1 ? ['zh', 'en'] : [locale];
+      assert.equal(
+        (html.match(/<link\b[^>]*\shreflang="/gi) || []).length,
+        alternateLocales.length,
+        `${route} hreflang count mismatch`
+      );
+      for (const alternateLocale of alternateLocales) {
+        const alternateUrl =
+          page === 1
+            ? `${baseUrls[alternateLocale === 'zh' ? 'cn' : 'io']}/tech-center`
+            : canonical;
+        assert.equal(
+          getHreflang(html, route, alternateLocale === 'zh' ? 'zh-CN' : 'en'),
+          alternateUrl
+        );
+      }
+      if (page > 1) {
+        assert(
+          html
+            .match(/<title>(.*?)<\/title>/s)?.[1]
+            .includes(locale === 'zh' ? `第 ${page} 页` : `Page ${page}`),
+          `${route} title omits its page number`
+        );
+      }
+      const schemas = [
+        ...html.matchAll(/<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)
+      ].flatMap((match) => {
+        const value = JSON.parse(match[1]);
+        return value['@graph'] || [value];
+      });
+      assert.equal(
+        schemas.find((value) => value['@type'] === 'CollectionPage')?.url,
+        canonical,
+        `${route} CollectionPage URL mismatch`
+      );
+      const breadcrumb = schemas.find((value) => value['@type'] === 'BreadcrumbList');
+      assert.equal(
+        breadcrumb?.itemListElement.at(-1)?.item,
+        canonical,
+        `${route} breadcrumb mismatch`
+      );
+      const links = new Set(
+        [...html.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1])
+      );
+      for (const target of [1, page - 1, page + 1].filter(
+        (value) => value >= 1 && value <= pageCount
+      )) {
+        assert(
+          links.has(pagePath(target)),
+          `${route} has no crawlable link to ${pagePath(target)}`
+        );
+      }
+      const scriptKey = [...getInitialJavaScriptSources(html)].sort().join(',');
+      if (!checkedScripts.has(scriptKey)) {
+        const gzipBytes = getInitialJavaScriptGzipBytes(html, outDir);
+        assert(
+          gzipBytes <= BUDGET.baselineGzipBytes + BUDGET.maxIncreaseBytes,
+          `${route} exceeds the initial JavaScript budget`
+        );
+        verifyRegistryIsOutsideInitialJavaScript(
+          html,
+          outDir,
+          registryPath,
+          BUDGET.maxInitialEntries
+        );
+        checkedScripts.add(scriptKey);
+      }
+      if (variant !== 'preview') expectedSitemap.push(canonical);
+      pages += 1;
+    }
+
+    for (const page of ['0', '1', '-1', '01', '1.5', 'invalid', String(pageCount + 1)]) {
+      assert(
+        getStaticRouteCandidates(outDir, `${hub}/page/${page}`).every(
+          (file) => !fs.existsSync(file)
+        ),
+        `${hub}/page/${page} must return 404`
+      );
+    }
+  }
+
+  if (variant === 'preview') {
+    assert.equal(sitemap, null, 'Preview contains a production sitemap');
+    assert(
+      !fs.existsSync(path.join(outDir, 'tech-center/page')),
+      'Preview contains owner pagination routes'
+    );
+  } else {
+    assert(sitemap, 'Missing production sitemap');
+    assert.deepEqual(
+      sitemap.filter((url) => /\/tech-center(?:\/page\/\d+)?$/.test(url)).sort(),
+      expectedSitemap.sort(),
+      'Technical Center sitemap coverage mismatch'
+    );
+    for (const locale of ['zh', 'en']) {
+      assert(
+        !fs.existsSync(path.join(outDir, locale, 'tech-center')),
+        `Production contains /${locale}/tech-center aliases`
+      );
+    }
+  }
+  return { pages, variant };
+}
+
 function parseArgs(argv) {
   const options = {};
   for (let index = 0; index < argv.length; index += 1) {
@@ -194,11 +340,13 @@ function main(argv = process.argv.slice(2)) {
     locale === 'zh' ? 'tech-center/search-index.json' : 'tech-center/search-index.en.json'
   );
   const result = verifyTechnicalCenter({ ...options, route, locale, searchIndexPath });
+  const pagination = verifyTechnicalCenterPagination(options);
   console.log(
     [
       `[verify-technical-center] passed: ${result.route}, `,
       `${result.initialEntries} server entries, `,
       `${result.searchEntries} search entries, `,
+      `${pagination.pages} static listing pages, `,
       `${(result.gzipBytes / 1024).toFixed(1)} KiB initial JavaScript gzip`
     ].join('')
   );
@@ -220,6 +368,7 @@ module.exports = {
   getServerListingLinks,
   main,
   verifyTechnicalCenter,
+  verifyTechnicalCenterPagination,
   verifyRegistryIsOutsideInitialJavaScript,
   verifySearchProjection
 };

@@ -2,7 +2,7 @@ import type { JsonLdCopy } from '@/components/JsonLd';
 import { JsonLdScript } from '@/components/JsonLd';
 import { getTechCategoryLabelForLocale } from '@/components/tech-center/data';
 import { getOwnedLocaleUrl } from '@/lib/siteRouting';
-import { getTechnicalCanonicalUrl } from '@/lib/technicalRouting';
+import { getTechCenterPagePath, getTechnicalCanonicalUrl } from '@/lib/technicalRouting';
 import type { TechArticle } from '@/lib/tech-center-content';
 
 function breadcrumbItems(items: { name: string; url: string }[]) {
@@ -18,14 +18,17 @@ export function TechCenterHubJsonLd({
   schema,
   title,
   description,
-  locale = 'zh'
+  locale = 'zh',
+  page = 1
 }: {
   schema: JsonLdCopy;
   title: string;
   description: string;
   locale?: string;
+  page?: number;
 }) {
   const hubUrl = getOwnedLocaleUrl(locale, '/tech-center');
+  const pageUrl = getOwnedLocaleUrl(locale, getTechCenterPagePath(page));
   const siteUrl = new URL(hubUrl).origin;
   const homeUrl = getOwnedLocaleUrl(locale);
 
@@ -36,8 +39,8 @@ export function TechCenterHubJsonLd({
         '@graph': [
           {
             '@type': 'CollectionPage',
-            '@id': `${hubUrl}#webpage`,
-            url: hubUrl,
+            '@id': `${pageUrl}#webpage`,
+            url: pageUrl,
             name: title,
             description,
             inLanguage: locale === 'zh' ? 'zh-CN' : locale,
@@ -52,7 +55,10 @@ export function TechCenterHubJsonLd({
             '@type': 'BreadcrumbList',
             itemListElement: breadcrumbItems([
               { name: schema.breadcrumbHome, url: homeUrl },
-              { name: locale === 'zh' ? '技术中心' : 'Technical Center', url: hubUrl }
+              { name: locale === 'zh' ? '技术中心' : 'Technical Center', url: hubUrl },
+              ...(page > 1
+                ? [{ name: locale === 'zh' ? `第 ${page} 页` : `Page ${page}`, url: pageUrl }]
+                : [])
             ])
           }
         ]

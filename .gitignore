@@ -26,3 +26,4 @@ tsconfig.tsbuildinfo
 # Local planning artifacts
 .planning/
 .codex/
+.scratch/

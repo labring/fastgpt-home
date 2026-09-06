@@ -208,6 +208,7 @@ function getTechRoutesToRemove(identities, variant) {
 
   if (variant === 'preview') {
     routes.add('/tech-center');
+    routes.add('/tech-center/page');
     return routes;
   }
 

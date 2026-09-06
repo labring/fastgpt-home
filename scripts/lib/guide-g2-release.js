@@ -152,11 +152,6 @@ function verifySource(rootDir, entry, locale) {
 }
 
 function verifyManifest(rootDir, manifest, registry) {
-  // Historical release counts cover their own identities as the current catalog grows.
-  const releaseSlugs = [...BASELINE_SLUGS, G2_GUIDE_SLUG];
-  const releaseEntryCount = registry.entries.filter((entry) =>
-    releaseSlugs.includes(entry.slug)
-  ).length;
   if (
     manifest.schemaVersion !== 1 ||
     manifest.issue !== 256 ||
@@ -190,8 +185,8 @@ function verifyManifest(rootDir, manifest, registry) {
     fail('G2 source-set digest differs');
   }
   if (
-    manifest.result?.registryEntryCount !== releaseEntryCount ||
-    manifest.result?.publishedEntryCount !== releaseEntryCount ||
+    manifest.result?.registryEntryCount !== registry.entries.length ||
+    manifest.result?.publishedEntryCount !== registry.entries.length ||
     manifest.result?.g2IdentityCount !== 1 ||
     manifest.result?.sourceDocumentCount !== 2
   ) {
@@ -203,9 +198,9 @@ function verifyManifest(rootDir, manifest, registry) {
     status: manifest.status,
     g2Slugs: [G2_GUIDE_SLUG],
     g1Slugs: [...G1_GUIDE_SLUGS],
-    registryEntryCount: releaseEntryCount,
+    registryEntryCount: registry.entries.length,
     baselinePublishedEntryCount: BASELINE_SLUGS.length,
-    publishedEntryCount: releaseEntryCount,
+    publishedEntryCount: registry.entries.length,
     g2IdentityCount: 1,
     ownerPages: { cn: 1, io: 1 },
     sourceDocumentCount: 2,

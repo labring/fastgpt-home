@@ -19,8 +19,7 @@ const EN_CATEGORY_LABELS = {
   model: 'Model guides',
   glossary: 'Glossary',
   troubleshoot: 'Troubleshooting',
-  tutorial: 'Tutorials',
-  compare: 'Comparisons and migration'
+  tutorial: 'Tutorials'
 } as const;
 
 const EN_SOURCE_LABELS: Record<TechSource, string> = {

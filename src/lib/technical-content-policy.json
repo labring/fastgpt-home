@@ -9,8 +9,7 @@
     "model": "模型指南",
     "glossary": "术语表",
     "troubleshoot": "故障排查",
-    "tutorial": "教程",
-    "compare": "对比与迁移"
+    "tutorial": "教程"
   },
   "sourceTypes": {
     "官方文档": "官方文档",

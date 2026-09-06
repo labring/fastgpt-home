@@ -3,5 +3,5 @@
   "publicationGroups": ["decision", "implementation", "industry"],
   "assetStatuses": ["none", "requested-unapproved", "source-exception", "required"],
   "schemaTypes": ["Article", "BreadcrumbList", "HowTo"],
-  "entryCount": 23
+  "entryCount": 16
 }

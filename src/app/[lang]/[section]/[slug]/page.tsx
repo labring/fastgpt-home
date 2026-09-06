@@ -110,10 +110,7 @@ export async function generateMetadata({
 }
 
 export function generateStaticParams() {
-  // The dedicated comparison route also serves technical migration articles.
-  return getTechArticleReviewParams(currentSiteVariant).filter(
-    ({ section }) => section !== 'compare'
-  );
+  return getTechArticleReviewParams(currentSiteVariant);
 }
 
 export const dynamicParams = false;

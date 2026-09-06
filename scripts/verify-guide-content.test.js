@@ -64,14 +64,14 @@ function withGuideRoot(slug, mutate, verify) {
   }
 }
 
-test('approved Guide corpus reports the complete 23x2 contract', () => {
+test('approved Guide corpus reports the complete 16x2 contract', () => {
   const result = spawnSync(process.execPath, ['scripts/verify-guide-content.js'], {
     cwd: ROOT,
     encoding: 'utf8'
   });
 
   assert.equal(result.status, 0, result.stderr);
-  assert.equal(result.stdout, 'Guide content verified: 23 slugs, 46 documents\n');
+  assert.equal(result.stdout, 'Guide content verified: 16 slugs, 32 documents\n');
   assert.equal(result.stderr, '');
 });
 

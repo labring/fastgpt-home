@@ -249,11 +249,6 @@ function verifySource(rootDir, entries, entry, locale) {
 }
 
 function verifyManifest(rootDir, manifest, registry) {
-  // Historical release counts cover their own identities as the current catalog grows.
-  const releaseSlugs = [...BASELINE_SLUGS, ...G1_GUIDE_SLUGS, ...G2_GUIDE_SLUGS];
-  const releaseEntryCount = registry.entries.filter((entry) =>
-    releaseSlugs.includes(entry.slug)
-  ).length;
   if (manifest.schemaVersion !== 1 || manifest.issue !== 255 || manifest.batch !== 'week06') {
     fail('G1 manifest header differs');
   }
@@ -267,11 +262,11 @@ function verifyManifest(rootDir, manifest, registry) {
   ) {
     fail('G1 manifest write policy differs');
   }
-  if (releaseEntryCount !== manifest.result?.registryEntryCount) {
+  if (registry.entries.length !== manifest.result?.registryEntryCount) {
     fail('Guide registry count differs from G1 release result');
   }
   if (
-    releaseEntryCount !==
+    registry.entries.length !==
     manifest.baseline?.registryEntryCount + G1_GUIDE_SLUGS.length + G2_GUIDE_SLUGS.length
   ) {
     fail('Guide registry delta does not isolate the two G1 identities and one G2 identity');
@@ -297,7 +292,7 @@ function verifyManifest(rootDir, manifest, registry) {
     fail('G1 source-set digest differs');
   }
   if (manifest.result.g1IdentityCount !== G1_GUIDE_SLUGS.length) fail('G1 identity count differs');
-  if (manifest.result.publishedEntryCount !== releaseEntryCount - G2_GUIDE_SLUGS.length) {
+  if (manifest.result.publishedEntryCount !== registry.entries.length - G2_GUIDE_SLUGS.length) {
     fail('G1 published projection count differs');
   }
   if (manifest.result.sourceDocumentCount !== G1_GUIDE_SLUGS.length * GUIDE_LOCALES.length) {
@@ -312,9 +307,9 @@ function verifyManifest(rootDir, manifest, registry) {
     status: manifest.status,
     g1Slugs: [...G1_GUIDE_SLUGS],
     g2ExcludedSlugs: [...G2_GUIDE_SLUGS],
-    registryEntryCount: releaseEntryCount,
+    registryEntryCount: registry.entries.length,
     baselinePublishedEntryCount: BASELINE_SLUGS.length,
-    publishedEntryCount: releaseEntryCount - G2_GUIDE_SLUGS.length,
+    publishedEntryCount: registry.entries.length - G2_GUIDE_SLUGS.length,
     g1IdentityCount: G1_GUIDE_SLUGS.length,
     ownerPages: { cn: 2, io: 2 },
     sourceDocumentCount: G1_GUIDE_SLUGS.length * GUIDE_LOCALES.length,

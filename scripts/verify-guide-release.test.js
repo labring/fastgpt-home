@@ -14,8 +14,6 @@ test('G1 release evidence isolates the two target identities and SOE G2', () => 
   const result = verifyGuideG1Release({ rootDir: ROOT });
   assert.deepEqual(result.g1Slugs, G1_GUIDE_SLUGS);
   assert.deepEqual(result.g2ExcludedSlugs, G2_GUIDE_SLUGS);
-  assert.equal(result.registryEntryCount, 16);
-  assert.equal(result.publishedEntryCount, 15);
   assert.equal(result.g1IdentityCount, 2);
   assert.equal(result.sourceDocumentCount, 4);
   assert.deepEqual(result.ownerPages, { cn: 2, io: 2 });

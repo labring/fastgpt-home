@@ -206,7 +206,7 @@ function verifyTechnicalCenterPagination({
       );
       const alternateLocales = page === 1 ? ['zh', 'en'] : [locale];
       assert.equal(
-        (html.match(/hreflang="/g) || []).length,
+        (html.match(/<link\b[^>]*\shreflang="/gi) || []).length,
         alternateLocales.length,
         `${route} hreflang count mismatch`
       );

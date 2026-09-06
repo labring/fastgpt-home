@@ -207,7 +207,7 @@ test('pagination export covers each locale and rejects missing pages, repeated e
           const alternates = (page === 1 ? ['zh', 'en'] : [locale])
             .map(
               (lang) =>
-                `<link rel="alternate" hreflang="${lang === 'zh' ? 'zh-CN' : 'en'}" href="${baseUrl(
+                `<link rel="alternate" ${page === 1 ? 'hreflang' : 'hrefLang'}="${lang === 'zh' ? 'zh-CN' : 'en'}" href="${baseUrl(
                   lang
                 )}/tech-center${suffix}"/>`
             )
@@ -262,7 +262,7 @@ test('pagination export covers each locale and rejects missing pages, repeated e
           ),
           /canonical mismatch/
         ],
-        [html.replace(/hreflang="(?:zh-CN|en)"/, 'hreflang="fr"'), /Missing .* hreflang/],
+        [html.replace(/hreflang="(?:zh-CN|en)"/i, 'hreflang="fr"'), /Missing .* hreflang/],
         [html.replace(/\/api\/entry-12/g, '/api/entry-0'), /incorrect server listing/],
         [html.replace(`<a href="${hub}">1</a>`, '<button>1</button>'), /no crawlable link/]
       ];

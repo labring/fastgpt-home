@@ -4,7 +4,10 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 const budget = require('./fixtures/technical-center-budget.json');
-const { verifyTechnicalCenter } = require('./verify-technical-center');
+const {
+  verifyTechnicalCenter,
+  verifyTechnicalCenterPagination
+} = require('./verify-technical-center');
 
 const root = path.resolve(__dirname, '..');
 
@@ -138,7 +141,10 @@ test('the route passes only a bounded projection and the client owns no registry
     'utf8'
   );
 
-  assert.match(routeSource, /localeEntries\.slice\(0, PAGE_SIZE\)\.map\(toTechSearchEntry\)/);
+  assert.match(
+    routeSource,
+    /localeEntries\s*\.slice\(\(page - 1\) \* PAGE_SIZE, page \* PAGE_SIZE\)\s*\.map\(toTechSearchEntry\)/
+  );
   assert.doesNotMatch(routeSource, /TECH_ENTRIES|CATEGORY_META/);
   assert.doesNotMatch(clientSource, /entries\.json|TECH_ENTRIES/);
   assert.match(clientSource, /TECH_CENTER_COPY/);
@@ -169,5 +175,109 @@ test('every published Technical section has an owner-route entry point', () => {
       true,
       `Missing owner route for Technical section: ${section}`
     );
+  }
+});
+
+test('pagination export covers each locale and rejects missing pages, repeated entries and SEO drift', () => {
+  for (const variant of ['cn', 'io', 'preview']) {
+    const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-pagination-'));
+    const registry = ['zh', 'en'].flatMap((locale) =>
+      Array.from({ length: locale === 'zh' ? 25 : 13 }, (_, index) => ({
+        slug: `/${locale}/api/entry-${index}`
+      }))
+    );
+    const registryPath = path.join(outDir, 'entries.json');
+    fs.writeFileSync(registryPath, JSON.stringify(registry));
+    fs.mkdirSync(path.join(outDir, '_next/static'), { recursive: true });
+    fs.writeFileSync(path.join(outDir, '_next/static/app.js'), 'console.log("pagination");');
+    const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
+    const sitemap = [];
+    const baseUrl = (locale) => `https://fastgpt.${locale === 'zh' ? 'cn' : 'io'}`;
+    const htmlFiles = [];
+    try {
+      for (const locale of locales) {
+        const entries = registry.filter((entry) => entry.slug.startsWith(`/${locale}/`));
+        const pageCount = Math.ceil(entries.length / 12);
+        const hub = variant === 'preview' ? `/${locale}/tech-center` : '/tech-center';
+        for (let page = 1; page <= pageCount; page += 1) {
+          const suffix = page === 1 ? '' : `/page/${page}`;
+          const canonical = `${baseUrl(locale)}/tech-center${suffix}`;
+          const file = path.join(outDir, `${hub}${suffix}.html`);
+          fs.mkdirSync(path.dirname(file), { recursive: true });
+          const alternates = (page === 1 ? ['zh', 'en'] : [locale])
+            .map(
+              (lang) =>
+                `<link rel="alternate" hreflang="${lang === 'zh' ? 'zh-CN' : 'en'}" href="${baseUrl(
+                  lang
+                )}/tech-center${suffix}"/>`
+            )
+            .join('');
+          const cards = entries
+            .slice((page - 1) * 12, page * 12)
+            .map((entry) => {
+              const route =
+                variant === 'preview' ? entry.slug : entry.slug.replace(/^\/(zh|en)/, '');
+              const articlePath = path.join(outDir, `${route}.html`);
+              fs.mkdirSync(path.dirname(articlePath), { recursive: true });
+              fs.writeFileSync(articlePath, '<main>Article</main>');
+              return `<article><a href="${route}">Article</a></article>`;
+            })
+            .join('');
+          const links = Array.from(
+            { length: pageCount },
+            (_, index) => `<a href="${hub}${index ? `/page/${index + 1}` : ''}">${index + 1}</a>`
+          ).join('');
+          const html = `<title>${
+            locale === 'zh' ? `第 ${page} 页` : `Page ${page}`
+          }</title><link rel="canonical" href="${canonical}"/><meta name="robots" content="${
+            variant === 'preview' ? 'noindex, nofollow' : 'index, follow'
+          }"/>${alternates}<main>${cards}<nav>${links}</nav></main><script type="application/ld+json">${JSON.stringify(
+            {
+              '@graph': [
+                { '@type': 'CollectionPage', url: canonical },
+                { '@type': 'BreadcrumbList', itemListElement: [{ item: canonical }] }
+              ]
+            }
+          )}</script><script src="/_next/static/app.js"></script>`;
+          fs.writeFileSync(file, html);
+          htmlFiles.push(file);
+          sitemap.push(canonical);
+        }
+      }
+      if (variant !== 'preview')
+        fs.writeFileSync(
+          path.join(outDir, 'sitemap.xml'),
+          `<urlset>${sitemap.map((url) => `<url><loc>${url}</loc></url>`).join('')}</urlset>`
+        );
+      const verify = () => verifyTechnicalCenterPagination({ outDir, variant, registryPath });
+      assert.equal(verify().pages, variant === 'preview' ? 5 : variant === 'cn' ? 3 : 2);
+      const file = htmlFiles[1];
+      const html = fs.readFileSync(file, 'utf8');
+      const hub = variant === 'preview' ? '/zh/tech-center' : '/tech-center';
+      const cases = [
+        [
+          html.replace(
+            /rel="canonical" href="[^"]+"/,
+            'rel="canonical" href="https://fastgpt.cn/tech-center"'
+          ),
+          /canonical mismatch/
+        ],
+        [html.replace(/hreflang="(?:zh-CN|en)"/, 'hreflang="fr"'), /Missing .* hreflang/],
+        [html.replace(/\/api\/entry-12/g, '/api/entry-0'), /incorrect server listing/],
+        [html.replace(`<a href="${hub}">1</a>`, '<button>1</button>'), /no crawlable link/]
+      ];
+      for (const [invalid, message] of cases) {
+        fs.writeFileSync(file, invalid);
+        assert.throws(verify, message);
+      }
+      fs.rmSync(file);
+      assert.throws(verify, /Missing static Technical Center HTML/);
+      fs.writeFileSync(file, html);
+      const invalidPath = path.join(outDir, `${hub}/page/1.html`);
+      fs.writeFileSync(invalidPath, html);
+      assert.throws(verify, /must return 404/);
+    } finally {
+      fs.rmSync(outDir, { recursive: true, force: true });
+    }
   }
 });

@@ -86,6 +86,7 @@ function stripMarkdown(text: string) {
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
     .replace(/`([^`]+)`/g, '$1')
     .replace(/[*_~]/g, '')
+    .replace(/([:：;；])\s*\d+[.)、．]\s+(?=\S)/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -94,14 +95,12 @@ function truncateDescription(text: string) {
   if (text.length <= DESCRIPTION_LIMIT) return text;
 
   const slice = text.slice(0, DESCRIPTION_LIMIT);
-  const sentenceEnd = Math.max(
-    slice.lastIndexOf('。'),
-    slice.lastIndexOf('！'),
-    slice.lastIndexOf('？'),
-    slice.lastIndexOf('. '),
-    slice.lastIndexOf('! '),
-    slice.lastIndexOf('? ')
-  );
+  let sentenceEnd = -1;
+  // Inspect the full text so a cut inside a version or decimal is never a sentence end.
+  for (const match of text.matchAll(/[。！？]|[.!?](?=\s|$)/g)) {
+    if (match.index >= DESCRIPTION_LIMIT) break;
+    sentenceEnd = match.index;
+  }
 
   if (sentenceEnd >= 48) return slice.slice(0, sentenceEnd + 1).trim();
   return `${slice.slice(0, DESCRIPTION_LIMIT - 1).trim()}…`;
@@ -119,15 +118,17 @@ export function getTechArticleDescription(
 
   const lines = markdown.replace(/\r\n?/g, '\n').split('\n');
   const prose: string[] = [];
-  let inCode = false;
+  let codeFence = '';
 
   for (const rawLine of lines) {
     const line = rawLine.trim();
-    if (line.startsWith('```')) {
-      inCode = !inCode;
+    const fence = line.match(/^(`{3,}|~{3,})/);
+    if (fence) {
+      if (!codeFence) codeFence = fence[1];
+      else if (fence[1][0] === codeFence[0] && fence[1].length >= codeFence.length) codeFence = '';
       continue;
     }
-    if (inCode || !line || /^>\s*(来源|source)[:：]/i.test(line)) continue;
+    if (codeFence || !line || /^>\s*(来源|source)[:：]/i.test(line)) continue;
 
     const heading = line.match(/^#{1,6}\s+(.+?)\s*#*$/);
     if (heading) {
@@ -139,7 +140,14 @@ export function getTechArticleDescription(
     }
 
     if (/^>\s?/.test(line) || /^\|/.test(line) || /^[-*_]{3,}$/.test(line)) continue;
-    prose.push(stripMarkdown(line.replace(/^[-*]\s+/, '')));
+    prose.push(
+      stripMarkdown(
+        line.replace(
+          /^(?:[-*+]\s+|\d+[.)、．](?!\d)\s*|[（(][\d一二三四五六七八九十百]+[）)]\s*|[一二三四五六七八九十百]+[、.]\s*)/,
+          ''
+        )
+      )
+    );
   }
 
   const derived = truncateDescription(prose.filter(Boolean).join(' '));

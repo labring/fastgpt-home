@@ -41,12 +41,14 @@ export const LangSwitcher = ({
   iconOnly = false,
   locale,
   publishedLocales,
-  reviewLocalePaths = false
+  reviewLocalePaths = false,
+  languageSwitchPaths
 }: {
   iconOnly?: boolean;
   locale?: string;
   publishedLocales?: readonly LocaleCode[];
   reviewLocalePaths?: boolean;
+  languageSwitchPaths?: Partial<Record<LocaleCode, string>>;
 }) => {
   const params = useParams<{ lang: string }>();
   const lang = params.lang;
@@ -64,11 +66,14 @@ export const LangSwitcher = ({
   })();
   const availableLocaleCodes = getPublishedLocaleCodes();
   const pageLocaleCodes: readonly LocaleCode[] = publishedLocales ?? availableLocaleCodes;
-  const languageKeys = pageLocaleCodes.filter((key) => availableLocaleCodes.includes(key));
+  const languageKeys = pageLocaleCodes.filter(
+    (key) => languageSwitchPaths?.[key] || availableLocaleCodes.includes(key)
+  );
   const getLocalizedPath = (value: string) =>
-    reviewLocalePaths
+    languageSwitchPaths?.[value as LocaleCode] ||
+    (reviewLocalePaths
       ? getReviewLocalePath(value, routeWithoutLang)
-      : getDefaultLocalePath(value, routeWithoutLang);
+      : getDefaultLocalePath(value, routeWithoutLang));
 
   const handleSwitchLanguage = (value: string) => {
     if (value === langName) return;

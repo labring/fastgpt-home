@@ -1,6 +1,6 @@
 import entries from './entries.json';
 import policy from '@/lib/technical-content-policy.json';
-import { CATEGORY_DEFINITIONS } from './constants';
+import { CATEGORY_DEFINITIONS, PAGE_SIZE } from './constants';
 import {
   getTechnicalPageIdentity,
   type CategoryMeta,
@@ -52,6 +52,13 @@ export const TECH_ENTRIES = entries as TechEntry[];
 
 export function getTechEntriesForLocale(locale: string) {
   return TECH_ENTRIES.filter((entry) => getTechnicalPageIdentity(entry).locale === locale);
+}
+
+export function getTechCenterPaginationParams(locale: string) {
+  const pages = Math.ceil(getTechEntriesForLocale(locale).length / PAGE_SIZE);
+  return Array.from({ length: Math.max(0, pages - 1) }, (_, index) => ({
+    page: String(index + 2)
+  }));
 }
 
 export { getTechEntryPath, getTechnicalPageIdentity } from './types';

@@ -15,6 +15,10 @@ import {
 export type { TechnicalPageIdentity } from '@/components/tech-center/types';
 export { getTechnicalPageIdentity } from '@/components/tech-center/types';
 
+export function getTechCenterPagePath(page = 1) {
+  return page === 1 ? '/tech-center' : `/tech-center/page/${page}`;
+}
+
 /** Return the production URL owned by the page's locale. */
 export function getTechnicalCanonicalUrl(entry: Pick<TechEntry, 'slug'>) {
   const identity = getTechnicalPageIdentity(entry);

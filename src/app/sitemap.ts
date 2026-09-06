@@ -7,9 +7,12 @@ import {
   getOwnedLocaleUrl,
   getPublishedLocaleCodes
 } from '@/lib/siteRouting';
-import { getTechEntriesForLocale } from '@/components/tech-center/data';
+import {
+  getTechCenterPaginationParams,
+  getTechEntriesForLocale
+} from '@/components/tech-center/data';
 import { getTechArticleLastModified, getTechCenterLastModified } from '@/lib/tech-center-content';
-import { getTechnicalSitemapUrl } from '@/lib/technicalRouting';
+import { getTechCenterPagePath, getTechnicalSitemapUrl } from '@/lib/technicalRouting';
 import { getCompareCanonicalUrl, getCompareHubCanonicalUrl } from '@/lib/seo';
 import { getComparisonPagesForLocale } from '@/content/competitor';
 import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
@@ -68,7 +71,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     if (currentSiteVariant === 'preview' || getLocaleOwner(locale) !== currentSiteVariant) continue;
     const localeEntries = getTechEntriesForLocale(locale);
     if (!localeEntries.length) continue;
-    addEntry(getOwnedLocaleUrl(locale, '/tech-center'), getTechCenterLastModified(locale));
+    const lastModified = getTechCenterLastModified(locale);
+    addEntry(getOwnedLocaleUrl(locale, '/tech-center'), lastModified);
+    for (const { page } of getTechCenterPaginationParams(locale)) {
+      addEntry(getOwnedLocaleUrl(locale, getTechCenterPagePath(Number(page))), lastModified);
+    }
     for (const article of localeEntries) {
       const url = getTechnicalSitemapUrl(article, currentSiteVariant);
       if (url) addEntry(url, getTechArticleLastModified(article));

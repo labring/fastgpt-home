@@ -1,18 +1,14 @@
 /**
- * Post-build script: remove RSC payload files from FAQ detail pages
- * to stay under Cloudflare Pages' 20,000 file limit.
- *
- * Keeps .html files intact for SEO (search engines crawl HTML, not RSC payloads).
- * Only affects client-side navigation prefetch — users will get a full page load
- * instead of RSC streaming when navigating to FAQ detail pages.
+ * Remove replaceable RSC route payloads to stay within Cloudflare Pages' file limit.
+ * HTML routes remain intact; client-side navigation falls back to a full page load.
  */
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs');
+const path = require('node:path');
 
 const outDir = path.join(__dirname, '..', 'out');
+const CLOUDFLARE_PAGES_FILE_LIMIT = 20_000;
 
 let removed = 0;
-let kept = 0;
 
 function cleanDir(dir) {
   if (!fs.existsSync(dir)) return;
@@ -21,55 +17,27 @@ function cleanDir(dir) {
   for (const entry of entries) {
     const fullPath = path.join(dir, entry.name);
     if (entry.isDirectory()) {
-      // FAQ detail pages have __next.*.txt files in subdirectories
-      if (entry.name.startsWith('__next')) continue;
-      // Check if this is a FAQ detail directory (contains __next.*.txt files)
-      const subEntries = fs.readdirSync(fullPath);
-      const hasRscFiles = subEntries.some((f) => f.startsWith('__next.') && f.endsWith('.txt'));
-      if (hasRscFiles) {
-        // Remove RSC txt files, keep the directory if it has other content
-        for (const sub of subEntries) {
-          if (sub.startsWith('__next.') && sub.endsWith('.txt')) {
-            fs.unlinkSync(path.join(fullPath, sub));
-            removed++;
-          }
-        }
-        // Remove empty directory
-        const remaining = fs.readdirSync(fullPath);
-        if (remaining.length === 0) {
-          fs.rmdirSync(fullPath);
-        }
-      } else {
-        cleanDir(fullPath);
-      }
-    } else {
-      const shouldRemoveFaqPayload =
-        entry.name.endsWith('.txt') &&
-        !entry.name.startsWith('__next.') &&
-        fs.existsSync(path.join(dir, entry.name.replace(/\.txt$/, '.html')));
-
-      if (shouldRemoveFaqPayload) {
-        fs.unlinkSync(fullPath);
-        removed++;
-      } else {
-        kept++;
-      }
+      cleanDir(fullPath);
+      if (fs.readdirSync(fullPath).length === 0) fs.rmdirSync(fullPath);
+      continue;
     }
+
+    const isSegmentPayload =
+      entry.name.startsWith('__next.') &&
+      entry.name.endsWith('.txt') &&
+      (fs.existsSync(`${dir}.html`) || fs.existsSync(path.join(dir, 'index.html')));
+    const isRoutePayload =
+      entry.name.endsWith('.txt') &&
+      fs.existsSync(fullPath.replace(/\.txt$/, '.html'));
+
+    if (!isSegmentPayload && !isRoutePayload) continue;
+    fs.unlinkSync(fullPath);
+    removed++;
   }
 }
 
-const locales = ['', 'en', 'zh-hant', 'zh', 'ja', 'ar', 'vi', 'th', 'id', 'ms'];
-for (const locale of locales) {
-  const faqDir = path.join(outDir, locale, 'faq');
-  if (fs.existsSync(faqDir)) {
-    console.log(`Cleaning RSC files in ${path.relative(outDir, faqDir)} ...`);
-    cleanDir(faqDir);
-  }
-}
+cleanDir(outDir);
 
-console.log(`Done. Removed ${removed} RSC payload files, kept ${kept} files.`);
-
-// Count total files in out/
 let total = 0;
 function countFiles(dir) {
   const entries = fs.readdirSync(dir, { withFileTypes: true });
@@ -82,4 +50,10 @@ function countFiles(dir) {
   }
 }
 countFiles(outDir);
-console.log(`Total files in out/: ${total}`);
+console.log(`[clean-faq-rsc] removed=${removed}; files=${total}`);
+
+if (total > CLOUDFLARE_PAGES_FILE_LIMIT) {
+  throw new Error(
+    `Cloudflare Pages supports at most ${CLOUDFLARE_PAGES_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`
+  );
+}

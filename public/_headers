@@ -18,10 +18,6 @@
 /logo.svg
   Cache-Control: public, max-age=86400
 
-/__release/manifest.json
-  ! Cache-Control
-  Cache-Control: no-store
-
 # HTML pages — 1 hour cache with stale-while-revalidate
 /*
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400

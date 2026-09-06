@@ -1,50 +1,13 @@
-# Week05 release-readiness evidence
+# Website verification
 
-`npm run verify:release -- --keep-artifacts` writes the auditable record to
-`.release-artifacts/release-verification.json`. The record includes source provenance,
-static-export inventories, checksums, timestamps, evidence-tier states, and the bounded
-rollback inventory.
+`npm run verify:release -- --keep-artifacts` runs source checks and complete CN, IO, and
+Preview builds. It writes command outcomes, build durations, failures, and static-export
+inventories to `.release-artifacts/release-verification.json`. `--source-only` runs the
+source checks on development machines; full export requires a case-sensitive filesystem.
 
-Solutions preview HTTP evidence is a cross-project input. The owner repository can run the
-stdlib HTTP runner against an approved target with a contract containing `requests` named
-`root`, `routes`, `robots`, `sitemap`, `canonical`, `internal-links`, and `projections`:
-
-- `root` uses `/`; `robots` uses `/robots.txt`; `sitemap` uses `/sitemap.xml`.
-- Every required request has a body assertion, and `canonical` has an exact canonical URL assertion.
-- Required request paths are distinct except for an optional canonical probe.
-- `projections` declares `X-Robots-Tag: noindex, nofollow` and `Content-Type: text/plain`.
-- Each response records its expected HTTP status and one unique body artifact.
-
-```bash
-npm run verify:solutions-preview -- \
-  --target https://approved-preview.example \
-  --approved-target https://approved-preview.example \
-  --contract path/to/solutions-preview-contract.json \
-  --output path/to/solutions-preview-http.json
-```
-
-The contract includes the owner repository, a 7-64 character commit SHA, and
-`approvedTarget: true`. The separate `--approved-target` value is the trusted target input
-for the release gate. The runner identifies itself with its producer/version marker,
-persists response bodies under the output sibling directory, and records response headers,
-byte counts, per-response artifacts, and SHA-256 values. Attach the resulting JSON and its
-`<output-basename>-responses` directory to the coordinator with:
-
-```bash
-npm run verify:release -- --keep-artifacts \
-  --solutions-approved-target https://approved-preview.example \
-  --solutions-evidence path/to/solutions-preview-http.json
-```
-
-The coordinator records `not-provided` and a release blocker when this input is absent. It
-keeps `source-verified`, `export-verified`, `preview-http`, `release-eligible`,
-`production-observed`, and `search-observed` as separate evidence tiers. The persistent
-record embeds the [issue #247](https://github.com/labring/fastgpt-home/issues/247) URL and
-lives at `.release-artifacts/release-verification.json`.
-
-Pull-request CI adds `--allow-missing-solutions-evidence` so source and export verification
-can complete with a release-ineligible record. Manual release runs remain strict and require
-approved Solutions evidence.
+The verification workflow runs the same command on Linux. Production publishing uses the
+existing image workflow and Kubernetes rollout. External Solutions and documentation HTTP
+checks run separately against explicitly supplied targets.
 
 ## Documentation host owner-routing evidence
 
@@ -59,169 +22,31 @@ Pass `--rollback-input <json>` to provide the tested host-scoped rollback unit w
 a separate release artifact. The contract fixture records the previous revision and restore paths;
 the runner never assumes an external docs production target.
 
-## Week06 English Technical Page tracer evidence
+## Technical content
 
-`npm run verify:week06-english-tracer` validates the accepted `week06-0006` English Technical Page
-tracer against the closed authority. The fixture covers source and decision provenance, the IO
-owner-relative route with HTTP-equivalent 200 and a self-canonical, CN owner isolation, the
-locale-prefixed Preview review route with the IO production canonical and `noindex, nofollow`,
-English hub/category/featured/search identities, deferred locale search data with the bounded
-initial-listing fallback, sitemap membership, and content hygiene.
-
-Run the focused regression suite with:
+Technical pages are authored in `src/content/tech-center/`. The article registry is
+`src/components/tech-center/entries.json`; the Chinese and English search indexes are
+`public/tech-center/search-index.json` and `search-index.en.json`.
 
 ```bash
-npm run verify:week06-english-tracer-regression
+npm run verify:technical-content
+npm run verify:technical-content-regression
+npm run verify:technical-export-regression
+npm run build
 ```
 
-Week06 Wave 0 remains a dry run with publication count and public-page delta at zero. The
-production Technical Page registry remains at 1,372 entries and the tracer verifier records a
-registry delta of zero. The evidence fixture and verifier are tracked with [issue #261](https://github.com/labring/fastgpt-home/issues/261).
+Source verification checks every indexed body, normalized unique route, public source URL,
+and locale search projection. The completed export checks owner routes, canonical URLs,
+hreflang, robots, sitemap coverage, redirects, and the Technical Center JavaScript budget.
+Git records content revisions and batch history.
 
-## Week06 model and glossary tracer evidence
+An explicit JSON or XLSX delivery can be imported with
+`npm run import:technical-content -- --write --source <delivery-directory>`.
+Use `--check` in place of `--write` to compare the delivery with committed content.
 
-`npm run verify:week06-model-glossary-tracers` validates one Simplified Chinese glossary tracer,
-one Simplified Chinese model tracer, and one English model tracer against the closed Week06
-authority. The dry-run fixtures prove localized category labels, CN/IO owner-relative routes,
-locale-prefixed Preview review routes, canonical/robots/structured-data signals, locale-scoped
-hub counts, search and fallback listings, sitemap ownership, content hygiene, and zero owner leaks.
-
-Run the mutation regression suite with:
-
-```bash
-npm run verify:week06-model-glossary-tracers-regression
-```
-
-The verifier retains the issue #261 English tracer baseline and keeps the 1,372-entry production
-registry byte-stable while Week06 Wave 0 remains a zero-publication dry run. This evidence is
-tracked with [issue #264](https://github.com/labring/fastgpt-home/issues/264).
-
-## Week06 bilingual Technical Wave 0 readiness
-
-`npm run verify:week06-wave0-readiness` closes the issue #265 dry-run record by composing the
-closed Week06 authority with the real issue #261 and #264 tracer verifiers. It freezes the
-authority release digest, requires zero unresolved identity, duplicate, evidence, credential,
-privacy, operation-risk, comparison-routing, and hygiene findings, and verifies CN, IO, and
-Preview owner routing, canonical, robots, sitemap, structured data, isolation, localized hubs,
-search projections, and bounded fallbacks.
-
-The contract records the 1,372-page pre-Wave 1 registry, the approved initial-JavaScript baseline,
-both locale search projection sizes, and the deterministic completed-tracer export file count,
-bytes, digest, and reference build duration. The duration points to a frozen five-sample measurement
-with its command, environment, measurement ID, median, and export digest. Registry, search, sitemap,
-static-export, internal-link, and release-record deltas stay at zero through byte-stable repository
-artifacts and reproducible completed-tracer sitemap and HTML outputs. Its release and rollback
-manifests share one baseline digest and the staged write regression proves that a partial write
-restores the real bytes for every mapped artifact.
-
-Run the mutation coverage with:
-
-```bash
-npm run verify:week06-wave0-readiness-regression
-```
-
-The top-level release coordinator runs both commands and records `source-verified`,
-`export-verified`, `governance-complete`, and publication count zero. Wave 0 keeps publication
-count at zero and preserves the production registry byte-for-byte.
-
-## Week06 Wave 1 observation and next official-source slice
-
-`npm run verify:week06-wave1-observation` validates the retained #266 bilingual Wave 1 baseline,
-its release and rollback artifact digests, the 50-URL production observation, the per-owner search
-record, the Wave 0 capacity boundary, and the deterministic follow-on candidate slice. The current
-record is truthfully `blocked`: all 50 live owner probes returned HTTP 404, both owner sitemaps
-omitted the Wave 1 identities, and no approved 14-day Search Console export or complete capacity
-measurement was available.
-
-The candidate-only follow-on record selects at most 200 remaining accepted low-risk official
-documentation identities in authority order. It preserves the 25/25 Wave 1 identity history and
-keeps glossary, GitHub troubleshooting, and comparison cohorts behind gates. The pending ticket
-uses `{ issue: 267, nativeEdge: "blocks" }`; issue creation waits for complete observation windows.
-
-Run the mutation coverage with:
-
-```bash
-npm run verify:week06-wave1-observation-regression
-```
-
-## Week06 bilingual Technical Wave 1
-
-Issue #266 publishes one approved 50-identity unit from the closed Week06 authority: 25 Chinese
-pages owned by CN and 25 English pages owned by IO. The contract is
-`scripts/fixtures/technical-authority/week06-wave1-contract.json`; the selection and generated
-content, projection, release, and rollback records use the `week06-wave1-*` prefix. The retained
-Week05 Wave 1/Wave 2 and Week06 Wave 0 artifacts remain historical evidence for their original
-page counts.
-
-Run the source, mutation, staged-export, and byte-exact rollback gates with:
-
-```bash
-npm run verify:week06-wave1
-npm run verify:week06-wave1-regression
-npm run verify:week06-wave1-fixtures
-npm run verify:week06-wave1-rollback
-```
-
-The source gate requires exactly 25 `zh` and 25 `en` accepted identities, approved official,
-error-code, model, and glossary cohorts, public HTTPS sources, stable source digests, clean reader
-bodies, and one identity set across registry, locale search, sitemap, static export, release, and
-rollback surfaces. The staged export gate checks CN, IO, and Preview owner routes, self-canonical
-and hreflang metadata, robots, sitemap isolation, structured data, localized hubs, search and
-fallback links. The rollback gate injects a partial write across the three production projection
-files, 50 reader documents, and five release artifacts, then compares every restored byte and
-SHA-256 digest with the 1,372-page pre-Wave1 state. Static fixtures record export verification;
-live HTTP production observation remains false until the deployed owner URLs are checked with:
-
-```bash
-npm run verify:week06-wave1-live
-```
-
-The live gate requires HTTP 200, self-canonical, language, structured content, and exact owner
-sitemap membership for all 50 URLs. It also checks every opposite-owner URL and permits only an
-absent response, a redirect to the owner canonical, or a noindex copy with the owner canonical.
-The release coordinator keeps Wave 1 release readiness blocked until this independent live
-evidence passes.
-
-To regenerate the source package after an approved selection change, set
-`WEEK06_TECHNICAL_SOURCE_ROOT` to the Week06 batch directory and run
-`npm run generate:week06-wave1`, then rerun all four gates. Write mode reads all 50 approved
-source files and verifies each full-file and body SHA-256 before projection. Rollback removes the
-50 localized reader files and `week06-wave1-*` generated records while restoring the recorded
-1,372-page registry and both locale search projections as one atomic unit.
-
-## Week06 comparison candidate gate
-
-`npm run verify:week06-compare-disposition` validates the three Week06 comparison candidates
-against the existing Dify, RAGFlow, MaxKB, and self-build identities. It records one merge into
-the existing bilingual MaxKB comparison and two denials, while keeping generic Technical Page,
-search, sitemap, and static-export deltas at zero. Official evidence is HTTPS-only and the
-release/rollback manifests retain the exact merged identities.
-
-Run the focused regression suite with:
-
-```bash
-npm run verify:week06-compare-disposition-regression
-```
-
-## Week05 Wave 2 observation gate
-
-`npm run verify:technical-wave-observation` validates the retained production, search,
-capacity, rollback, and next-slice evidence for issue #263. The authority record freezes the
-1,372-page candidate baseline and the exact 200-identity rollback surface. It currently exits
-nonzero because the full-wave production probe observed 200 HTTP 404 responses, zero sitemap
-memberships, an incomplete 72-hour window, absent 14-day search evidence, and incomplete
-capacity measurements.
-
-The next 200 accepted official-source candidates remain recorded as a candidate-only slice.
-Issue creation stays gated until the observation verifier passes; the retained slice contract
-requires the new issue to carry `ready-for-agent` and the native block edge
-`{ issue: 263, nativeEdge: "blocks" }`.
-
-Run the mutation coverage with:
-
-```bash
-npm run verify:technical-wave-observation-regression
-```
+Production uses the existing image workflow on upstream `main`. It builds from the triggering
+commit, deploys the returned image digest, waits for Kubernetes rollout, and restores the
+previous image when rollout fails. PR workflows verify CN, IO, Preview, and the Docker runtime.
 
 ## Customer migration release evidence
 

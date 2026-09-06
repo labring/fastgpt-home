@@ -1,10 +1,20 @@
 const fs = require('node:fs');
 const path = require('node:path');
-const { URL_ALIAS_CONTRACT } = require('./url-alias-authority');
-const { writeUrlAliasArtifactBundle } = require('./url-alias-artifacts');
 const { directoryInventory } = require('./release-readiness');
 const { EXPECTED_FAQ_COUNTS } = require('./release-record');
-const { GENERATED_PUBLIC_PATHS } = require('./release-cross-project');
+const GENERATED_PUBLIC_PATHS = [
+  'public/llms.txt',
+  'public/robots.txt',
+  'public/ar/llms.txt',
+  'public/en/llms.txt',
+  'public/id/llms.txt',
+  'public/ja/llms.txt',
+  'public/ms/llms.txt',
+  'public/th/llms.txt',
+  'public/vi/llms.txt',
+  'public/zh-hant/llms.txt',
+  'public/zh/llms.txt'
+];
 
 const ROOT = path.resolve(__dirname, '../..');
 const NEXT_DIR = path.join(ROOT, '.next');
@@ -72,11 +82,18 @@ function assertCaseSensitiveFilesystem() {
   }
 }
 
-function variantEnvironment(variant) {
+function variantEnvironment(variant, baseEnv = process.env) {
   const baseUrl = variant === 'cn' ? 'https://fastgpt.cn' : 'https://fastgpt.io';
+  const prefix = `${variant.toUpperCase()}_`;
+  const overrides = Object.fromEntries(
+    Object.entries(baseEnv)
+      .filter(([key]) => key.startsWith(`${prefix}NEXT_PUBLIC_`))
+      .map(([key, value]) => [key.slice(prefix.length), value])
+  );
   return {
-    ...process.env,
-    CI: process.env.CI || '1',
+    ...baseEnv,
+    ...overrides,
+    CI: baseEnv.CI || '1',
     NODE_ENV: 'production',
     NEXT_PUBLIC_SITE_VARIANT: variant,
     NEXT_PUBLIC_HOME_URL: baseUrl,
@@ -190,25 +207,6 @@ function retainFailureArtifacts(variant) {
   return retainedPath;
 }
 
-function retainSuccessArtifacts(variant, retainDir) {
-  const retainedPath = path.join(retainDir, variant);
-  fs.rmSync(retainedPath, { recursive: true, force: true });
-  fs.mkdirSync(retainedPath, { recursive: true });
-  const retainedOut = path.join(retainedPath, 'out');
-  const redirectMap = path.join(NEXT_DIR, 'nginx-redirects.conf');
-  if (!fs.existsSync(redirectMap)) {
-    throw new Error(`Missing generated redirect map: ${redirectMap}`);
-  }
-  fs.cpSync(OUT_DIR, retainedOut, { recursive: true });
-  fs.mkdirSync(path.join(retainedOut, '__release'), { recursive: true });
-  fs.copyFileSync(redirectMap, path.join(retainedOut, '__release', 'nginx-redirects.conf'));
-  const aliasBundle = writeUrlAliasArtifactBundle(ROOT, retainedPath, variant);
-  if (aliasBundle.releaseManifest.authority.sourceCount !== URL_ALIAS_CONTRACT.sources) {
-    throw new Error(`URL Alias artifact source count drift for ${variant}`);
-  }
-  return retainedPath;
-}
-
 module.exports = {
   assertCaseSensitiveFilesystem,
   clearBuildArtifacts,
@@ -217,7 +215,6 @@ module.exports = {
   recordVariantRollbackInventory,
   restoreGeneratedPublicFiles,
   retainFailureArtifacts,
-  retainSuccessArtifacts,
   snapshotGeneratedPublicFiles,
   variantEnvironment,
   verifyExportCardinality

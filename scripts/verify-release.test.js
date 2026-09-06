@@ -17,14 +17,13 @@ const {
   getSourceNpmSteps,
   getVariantExecutionOrder,
   getVariantSteps,
-  isReleaseGateBlocked,
   parseArgs: parseReleaseArgs
 } = require('./verify-release');
-const { recordStep } = require('./lib/release-record');
-const { retainSuccessArtifacts } = require('./lib/release-artifacts');
-const { normalizeSolutionsEvidence } = require('./lib/release-readiness');
+const { recordStep, recordVariantOutcome } = require('./lib/release-record');
+const { variantEnvironment } = require('./lib/release-artifacts');
 const { buildOwnerExpectationSet, parseArgs } = require('./verify-faq-metadata');
 const { normalizeFaqMetadataPolicy } = require('./generate-faq-metadata');
+const { verifyNginxHeaderCoverage } = require('./verify-p0');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
@@ -87,6 +86,97 @@ function failure(label, output, variant = 'io') {
   return { id, label, variant, command: 'npm run verify:p1', output };
 }
 
+test('Nginx security headers follow the active server and cache locations', () => {
+  const config = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
+  verifyNginxHeaderCoverage(config);
+  for (const match of config.matchAll(/include \/etc\/nginx\/(?:embeddable-)?security-headers\.conf;/g)) {
+    const missingInclude = config.slice(0, match.index) + config.slice(match.index + match[0].length);
+    assert.throws(() => verifyNginxHeaderCoverage(missingInclude), /Security headers missing/);
+  }
+  verifyNginxHeaderCoverage(config.replace(/  location \/images\/ \{[\s\S]*?\n  \}/, ''));
+  assert.throws(
+    () => verifyNginxHeaderCoverage(config + '\nlocation /new/ {\nadd_header Cache-Control "public";\n}\n'),
+    /Security headers missing from location \/new\//
+  );
+});
+
+test('production deploys the built digest and restores the previous image on rollout failure', () => {
+  const workflow = require('js-yaml').load(
+    fs.readFileSync(path.join(ROOT, '.github/workflows/fastgpt-home-image.yml'), 'utf8')
+  );
+  const job = workflow.jobs['build-fastgpt-landingpage-images'];
+  assert.equal(
+    job.if,
+    "github.repository == 'labring/fastgpt-home' && github.ref == 'refs/heads/main'"
+  );
+  assert.deepEqual(workflow.on.push.branches, ['main']);
+  assert.equal(workflow.concurrency['cancel-in-progress'], false);
+  const step = job.steps.find((step) => step.name === 'Deploy image and verify rollout');
+  assert.equal(step.env.IMAGE_DIGEST, '${{ steps.build.outputs.digest }}');
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'release-rollout-'));
+  const trace = path.join(temporary, 'commands.jsonl');
+  const digest = `sha256:${'a'.repeat(64)}`;
+  try {
+    fs.writeFileSync(
+      path.join(temporary, 'kubectl'),
+      `#!${process.execPath}
+const fs = require('node:fs');
+const args = process.argv.slice(2);
+const previous = fs.existsSync(process.env.TRACE) ? fs.readFileSync(process.env.TRACE, 'utf8') : '';
+fs.appendFileSync(process.env.TRACE, JSON.stringify(args) + '\\n');
+if (args[0] === 'get') console.log('ghcr.io/labring/fastgpt-home@sha256:' + 'b'.repeat(64));
+if (args[0] === 'rollout' && (process.env.FAIL_ROLLOUT === 'all' ||
+    (process.env.FAIL_ROLLOUT === 'first' && !previous.includes('rollout')))) process.exit(1);
+`,
+      { mode: 0o755 }
+    );
+    for (const scenario of ['success', 'first', 'all', 'invalid-digest']) {
+      fs.rmSync(trace, { force: true });
+      const result = spawnSync('bash', ['-eu', '-o', 'pipefail', '-c', step.run], {
+        encoding: 'utf8',
+        env: {
+          ...process.env,
+          PATH: `${temporary}:${process.env.PATH}`,
+          TRACE: trace,
+          KUBE_CONFIG: Buffer.from('test configuration').toString('base64'),
+          IMAGE_NAME: workflow.env.IMAGE_NAME,
+          IMAGE_DIGEST: scenario === 'invalid-digest' ? 'latest' : digest,
+          FAIL_ROLLOUT: scenario
+        }
+      });
+      assert.equal(
+        result.status,
+        scenario === 'success' ? 0 : 1,
+        scenario +
+          ': ' +
+          result.stderr +
+          (fs.existsSync(trace) ? fs.readFileSync(trace, 'utf8') : '')
+      );
+      const commands = fs.existsSync(trace)
+        ? fs
+            .readFileSync(trace, 'utf8')
+            .trim()
+            .split('\n')
+            .map((line) => JSON.parse(line))
+        : [];
+      const changes = commands.filter(([command]) => command === 'set');
+      assert.equal(
+        changes.length,
+        scenario === 'invalid-digest' ? 0 : scenario === 'success' ? 1 : 2
+      );
+      if (changes.length)
+        assert.equal(changes[0][3], `fastgpt-home=${workflow.env.IMAGE_NAME}@${digest}`);
+      if (changes.length === 2)
+        assert.equal(
+          changes[1][3],
+          `fastgpt-home=${workflow.env.IMAGE_NAME}@sha256:${'b'.repeat(64)}`
+        );
+    }
+  } finally {
+    fs.rmSync(temporary, { recursive: true, force: true });
+  }
+});
+
 test('release plans compose FAQ, Guide, and variant checks with stable step IDs', () => {
   const sourceIds = getSourceNodeSteps().map(([stepId]) => stepId);
   assert.deepEqual(
@@ -102,58 +192,24 @@ test('release plans compose FAQ, Guide, and variant checks with stable step IDs'
     ]
   );
 
-  const record = createReleaseRecord({ sourceOnly: true });
-  assert.deepEqual(
-    record.evidence.guidePairs.expected.map((pair) => pair.slug),
-    [
-      'poc-30-day-design',
-      'database-qa-integration-guide',
-      'scheduled-report-automation',
-      'migrate-saas-to-selfhost',
-      'embed-ai-into-product',
-      'soe-policy-qa-deployment',
-      'finance-research-retrieval',
-      'finance-daily-report-automation'
-    ]
-  );
   const variantOrder = getVariantExecutionOrder('cn');
   assert.equal(variantOrder[0], 'variant.build');
-  assert(variantOrder.indexOf('content-hygiene.html') < variantOrder.indexOf('guide.export'));
+  assert(variantOrder.indexOf('variant.build') < variantOrder.indexOf('guide.export'));
 });
 
-test('release coordinator gates technical content and every site variant', () => {
+test('release coordinator checks technical content and every site variant', () => {
   const sourceCommands = getSourceNpmSteps().flatMap(([, , args]) => args);
   for (const command of [
     'verify:technical-content',
     'verify:technical-content-regression',
     'verify:technical-center-regression',
-    'verify:technical-export-regression',
-    'verify:release-readiness',
-    'verify:week06-wave0-readiness-regression',
-    'verify:week06-wave1-regression'
-  ]) {
+    'verify:technical-export-regression'
+  ])
     assert(sourceCommands.includes(command), command);
-  }
-  const readinessStep = getSourceNodeSteps().find(
-    ([stepId]) => stepId === 'week06-wave0-readiness.source'
-  );
-  assert.equal(readinessStep[2], 'scripts/verify-week06-wave0-readiness.js');
-  const wave1Step = getSourceNodeSteps().find(([stepId]) => stepId === 'week06-wave1.source');
-  assert.equal(wave1Step[2], 'scripts/verify-week06-wave1.js');
   for (const variant of ['cn', 'io', 'preview']) {
     const variantIds = getVariantExecutionOrder(variant);
-    assert(variantIds.includes('technical-center.export'));
-    assert(variantIds.includes('technical-export.export'));
-    assert(variantIds.includes('technical-wave.export'));
-    assert(variantIds.includes('week06-wave1.export'));
+    assert.equal(variantIds.filter((id) => id === 'variant.build').length, 1);
   }
-  assert.equal(getVariantExecutionOrder('io').includes('week06-wave1.live'), false);
-  assert.equal(getVariantExecutionOrder('cn').includes('week06-wave1.live'), false);
-  assert.equal(getVariantExecutionOrder('preview').includes('week06-wave1.live'), false);
-  assert.equal(
-    packageJson.scripts['verify:week06-wave1-live'],
-    'node scripts/verify-week06-wave1.js --live'
-  );
 });
 
 test('release coordinator records and gates the case-only alias slice independently', () => {
@@ -189,256 +245,59 @@ test('release coordinator accepts the preview Site Variant', () => {
   assert.deepEqual(parseReleaseArgs(['--variant', 'preview']), {
     sourceOnly: false,
     keepArtifacts: false,
-    retainSuccessArtifacts: undefined,
+
     variant: 'preview'
   });
 });
 
-test('release coordinator accepts a separately supplied Solutions preview evidence file', () => {
-  assert.deepEqual(parseReleaseArgs(['--solutions-evidence', 'evidence.json']), {
-    sourceOnly: false,
-    keepArtifacts: false,
-    retainSuccessArtifacts: undefined,
-    variant: undefined,
-    solutionsEvidence: 'evidence.json'
-  });
-  assert.throws(
-    () => parseReleaseArgs(['--solutions-preview-evidence']),
-    /requires a JSON file path/
-  );
-
-  const evidence = normalizeSolutionsEvidence(
-    {
-      producer: 'fastgpt-solutions-preview-http-runner',
-      runnerVersion: 1,
-      status: 'passed',
-      repository: { url: 'https://github.com/example/solutions' },
-      revision: 'abcdef1234567',
-      target: 'https://preview.example.com',
-      approvedTarget: true,
-      capturedAt: '2026-08-24T00:00:00.000Z',
-      checks: {
-        root: 'passed',
-        routes: 'passed',
-        robots: 'passed',
-        sitemap: 'passed',
-        canonical: 'passed',
-        'internal-links': 'passed',
-        projections: 'passed'
-      },
-      artifacts: [
-        'root',
-        'routes',
-        'robots',
-        'sitemap',
-        'canonical',
-        'internal-links',
-        'projections'
-      ].map((name) => ({
-        path: `responses/${name}.body`,
-        bytes: 1,
-        sha256: 'a'.repeat(64),
-        capturedAt: '2026-08-24T00:00:00.000Z'
-      })),
-      responses: [
-        'root',
-        'routes',
-        'robots',
-        'sitemap',
-        'canonical',
-        'internal-links',
-        'projections'
-      ].map((name) => ({
-        name,
-        requestPath:
-          name === 'root'
-            ? '/'
-            : name === 'robots'
-            ? '/robots.txt'
-            : name === 'sitemap'
-            ? '/sitemap.xml'
-            : `/${name}`,
-        artifactPath: `responses/${name}.body`,
-        status: 200,
-        expectedStatus: 200,
-        bytes: 1,
-        sha256: 'a'.repeat(64)
-      }))
-    },
-    { approvedTarget: 'https://preview.example.com' }
-  );
-  assert.equal(evidence.source, 'cross-project');
-  assert.equal(evidence.evidenceTier, 'preview-http');
-  assert.equal(evidence.claim, true);
-  assert.deepEqual(
-    parseReleaseArgs([
-      '--solutions-http-target',
-      'https://preview.example.com',
-      '--solutions-approved-target',
-      'https://preview.example.com',
-      '--solutions-http-contract',
-      'contract.json'
-    ]),
-    {
-      sourceOnly: false,
-      keepArtifacts: false,
-      retainSuccessArtifacts: undefined,
-      variant: undefined,
-      solutionsHttpTarget: 'https://preview.example.com',
-      solutionsApprovedTarget: 'https://preview.example.com',
-      solutionsHttpContract: 'contract.json'
-    }
-  );
-  assert.throws(
-    () => parseReleaseArgs(['--solutions-http-target', 'https://preview.example.com']),
-    /requires --solutions-http-contract/
-  );
-});
-
-test('pull-request verification permits only absent Solutions evidence', () => {
-  const missingEvidence = normalizeSolutionsEvidence();
-  const invalidEvidence = { ...missingEvidence, status: 'invalid' };
-  const options = parseReleaseArgs(['--allow-missing-solutions-evidence']);
-
-  assert.equal(options.allowMissingSolutionsEvidence, true);
-  assert.equal(isReleaseGateBlocked([], missingEvidence), true);
-  assert.equal(isReleaseGateBlocked([], missingEvidence, options), false);
-  assert.equal(isReleaseGateBlocked([], invalidEvidence, options), true);
-  assert.equal(
-    isReleaseGateBlocked([failure('failed check', 'failed')], missingEvidence, options),
-    true
-  );
-});
-
-test('release record keeps evidence tiers and rollback inventory separate', () => {
+test('release records retain command results, duration, and rollback inventory', () => {
   const record = createReleaseRecord({ sourceOnly: true });
-  assert.equal(record.recordKind, 'week05-release-readiness');
-  assert(record.crossProjectInputs.solutionsPreviewHttp);
   assert(Array.isArray(record.rollback.inventory));
   recordStep(
     record,
-    'technical-authority.source',
-    'A freely editable display label',
-    'node scripts/verify-technical-authority.js',
+    'technical-content.source',
+    'Technical content',
+    'node scripts/verify-technical-content.js',
     undefined,
     'passed',
-    'TECHNICAL_AUTHORITY_RESULT={"governanceStatus":"governance-complete","publicationCount":0}'
+    'Technical content verified: 4007 pages',
+    undefined,
+    123
   );
-  assert.equal(record.commands.at(-1).id, 'technical-authority.source');
-  assert.equal(record.evidence.technicalAuthority.source, true);
-  assert.equal(record.evidence.technicalAuthority.observed.publicationCount, 0);
+  assert.equal(record.commands.at(-1).status, 'passed');
+  assert.equal(record.commands.at(-1).durationMs, 123);
+  assert.equal(record.commands.at(-1).output, 'Technical content verified: 4007 pages');
+  finalizeReleaseRecord(record, [], { sourceOnly: true });
+  assert.equal(record.status, 'source-verified');
   recordStep(
     record,
-    'technical-wave2.source',
-    'Wave 2 source evidence',
-    'node scripts/verify-technical-wave2.js',
-    undefined,
+    'variant.build',
+    'Build CN',
+    'npm run build',
+    'cn',
     'passed',
-    'WAVE2_RESULT={"baselineWave":"wave-1","baselinePageCount":1172,"baselineRegistrySha256":"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa","baselineSearchSha256":"bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"}'
+    'Built',
+    undefined,
+    456
   );
-  assert.equal(record.evidence.technicalWave2.baseline.pageCount, 1172);
-  assert.match(record.evidence.technicalWave2.baseline.registrySha256, /^[a-f0-9]{64}$/);
-  recordStep(
+  recordVariantOutcome(record, 'cn', [], 1);
+  assert.equal(record.variants[0].buildDurationMs, 456);
+  finalizeReleaseRecord(record, [], {});
+  assert.equal(record.status, 'export-verified');
+  finalizeReleaseRecord(
     record,
-    'week06-wave0-readiness.source',
-    'Week06 Wave 0 readiness evidence',
-    'node scripts/verify-week06-wave0-readiness.js',
-    undefined,
-    'passed',
-    'WEEK06_WAVE0_READINESS_RESULT={"issue":265,"wave":"wave-0","sourceVerified":true,"fixtureVerified":true,"exportVerified":false,"governanceStatus":"governance-complete","publicationCount":0,"publicPageDelta":0,"tracerCount":4,"variants":{"cn":"verified","io":"verified","preview":"verified"},"ownerLeaks":0,"capacityBaseline":"recorded","rollback":"rollback-on-error"}'
+    [{ id: 'url-alias.artifacts', variant: 'cn', output: 'Corrupt map' }],
+    {}
   );
-  assert.equal(record.evidence.week06Wave0Readiness.source, true);
-  assert.equal(record.evidence.week06Wave0Readiness.observed.publicationCount, 0);
-  assert.equal(record.evidence.week06Wave0Readiness.observed.fixtureVerified, true);
-  assert.equal(record.evidence.week06Wave0Readiness.observed.exportVerified, false);
-  recordStep(
-    record,
-    'week06-wave1.source',
-    'Week06 Wave 1 source evidence',
-    'node scripts/verify-week06-wave1.js',
-    undefined,
-    'passed',
-    'WEEK06_WAVE1_RESULT={"issue":266,"wave":"wave-1","selectedCount":50,"publicationCount":50,"localeCounts":{"zh":25,"en":25},"baselinePageCount":1372,"resultingPageCount":1422,"repositoryConsistent":true,"sourceVerified":false,"sourceDigestVerifiedCount":0,"fixtureVerified":true,"exportVerified":false,"releaseEligible":false,"productionObserved":false,"rollback":"ready"}'
-  );
-  assert.equal(record.evidence.week06Wave1.source, true);
-  assert.deepEqual(record.evidence.week06Wave1.observed.localeCounts, { zh: 25, en: 25 });
-  recordStep(
-    record,
-    'week06-wave1.regression',
-    'Week06 Wave 1 regression evidence',
-    'npm run verify:week06-wave1-regression',
-    undefined,
-    'passed',
-    'tests passed'
-  );
-  recordStep(
-    record,
-    'week06-wave1.rollback',
-    'Week06 Wave 1 rollback evidence',
-    'node scripts/verify-week06-wave1.js --rollback-on-error',
-    undefined,
-    'passed',
-    'WEEK06_WAVE1_RESULT={"restored":true,"surfaceCount":58,"byteDrift":0,"digestDrift":0}'
-  );
-  for (const variant of ['cn', 'io', 'preview']) {
-    recordStep(
-      record,
-      'week06-wave1.export',
-      `Week06 Wave 1 ${variant} export evidence`,
-      `node scripts/verify-week06-wave1.js --export --variant ${variant} --out-dir out`,
-      variant,
-      'passed',
-      `WEEK06_WAVE1_RESULT=${JSON.stringify({
-        issue: 266,
-        wave: 'wave-1',
-        selectedCount: 50,
-        publicationCount: 50,
-        localeCounts: { zh: 25, en: 25 },
-        baselinePageCount: 1372,
-        resultingPageCount: 1422,
-        repositoryConsistent: true,
-        sourceVerified: false,
-        sourceDigestVerifiedCount: 0,
-        exportVerified: true,
-        releaseEligible: true,
-        productionObserved: 0,
-        rollback: 'ready',
-        ownerPages: variant === 'preview' ? 50 : 25,
-        ownerLeaks: 0,
-        localeDrift: 0,
-        sitemapDrift: 0,
-        searchDrift: 0,
-        brokenInternalLinks: 0
-      })}`
-    );
-  }
-  finalizeReleaseRecord(record, [], { sourceOnly: false });
-  assert.equal(record.evidence.week06Wave1.releaseReady, true);
-  assert.equal(record.evidence.week06Wave1.observed.productionObserved, false);
-  assert.equal(
-    packageJson.scripts['verify:release-readiness'],
-    'node --test scripts/lib/release-readiness.test.js'
-  );
-  assert.equal(
-    packageJson.scripts['verify:solutions-preview'],
-    'node scripts/verify-solutions-preview-http.js'
-  );
-  assert.equal(
-    packageJson.scripts['verify:solutions-preview-regression'],
-    'node --test scripts/lib/solutions-preview-http.test.js'
-  );
-  assert.equal(
-    packageJson.scripts['verify:week06-wave0-readiness'],
-    'node scripts/verify-week06-wave0-readiness.js'
-  );
-  assert.equal(packageJson.scripts['verify:week06-wave1'], 'node scripts/verify-week06-wave1.js');
+  assert.equal(record.status, 'failed');
+  assert.equal(record.variants[0].outcome, 'failed');
 });
 
 test('preview release gates skip production-only FAQ artifacts and sitemap cardinality', () => {
   const previewIds = getVariantSteps('preview').map((step) => step.id);
   const cnIds = getVariantSteps('cn').map((step) => step.id);
 
-  assert(previewIds.includes('technical-wave.export'));
+  assert(previewIds.includes('i18n-seo.export'));
   assert.equal(previewIds.includes('faq-metadata.html'), false);
   assert.equal(previewIds.includes('faq-seo-graph.html'), false);
   assert.equal(previewIds.includes('url-alias.blackbox'), false);
@@ -581,8 +440,6 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     packageJson.scripts.build,
     /fix-html-lang\.js && node --test scripts\/verify-content-sidebar-cta\.test\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/
   );
-  const variantOrder = getVariantExecutionOrder('cn');
-  assert(variantOrder.indexOf('variant.build') < variantOrder.indexOf('content-hygiene.html'));
   assert(getSourceExecutionOrder().includes('typescript.source'));
   for (const pattern of [
     'src/**',
@@ -593,16 +450,6 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     assert(verificationWorkflow.includes(pattern), pattern);
 });
 
-test('successful verified outputs can be retained before lifecycle cleanup', () => {
-  assert.equal(typeof retainSuccessArtifacts, 'function');
-  assert.deepEqual(parseReleaseArgs(['--retain-success-artifacts', 'tmp/release-output']), {
-    sourceOnly: false,
-    keepArtifacts: false,
-    retainSuccessArtifacts: path.join(ROOT, 'tmp/release-output'),
-    variant: undefined
-  });
-});
-
 test('P1 successful evidence keeps the emitted KiB measurement', () => {
   const output =
     'P1 verification passed for https://fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
@@ -610,57 +457,29 @@ test('P1 successful evidence keeps the emitted KiB measurement', () => {
   assert.equal(extractP1SuccessMeasurement('P1 verification passed'), undefined);
 });
 
-test('Linux release evidence stays build-only', () => {
-  const workflowPath = path.join(ROOT, '.github/workflows/guide-release-verification.yml');
-  const dockerfilePath = path.join(ROOT, 'Dockerfile.verify');
-  const workflow = fs.existsSync(workflowPath) ? fs.readFileSync(workflowPath, 'utf8') : '';
-  const dockerfile = fs.existsSync(dockerfilePath) ? fs.readFileSync(dockerfilePath, 'utf8') : '';
-
-  assert.match(workflow, /runs-on: ubuntu-24\.04/);
-  assert.match(workflow, /permissions:\s*\n\s*contents: read/);
-  assert.match(workflow, /actions\/checkout@v4/);
-  assert.match(workflow, /actions\/setup-node@v4/);
-  assert.match(workflow, /node-version: 24/);
-  assert.match(workflow, /cache: npm/);
-  assert.match(workflow, /npm ci/);
-  assert.match(workflow, /npm run verify:release -- --keep-artifacts/);
-  assert.match(workflow, /allow-missing-solutions-evidence/);
-  assert.match(workflow, /if: \$\{\{ always\(\)/);
-  assert.match(workflow, /actions\/upload-artifact@v4/);
-  assert.match(workflow, /\.release-artifacts/);
-  assert.match(workflow, /include-hidden-files: true/);
-  assert.match(workflow, /technical-content-release-evidence/);
-  assert.match(workflow, /docker build --target runtime/);
-  assert.match(workflow, /NEXT_PUBLIC_SITE_VARIANT=cn/);
-  for (const pathTrigger of [
-    'Dockerfile',
-    '.dockerignore',
-    'nginx.conf',
-    'nginx-security-headers.conf',
-    'nginx-embeddable-security-headers.conf'
-  ]) {
-    assert(workflow.includes(`- '${pathTrigger}'`), pathTrigger);
+test('release variants inherit shared configuration and isolate site overrides', () => {
+  const baseEnv = {
+    NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.com',
+    CN_NEXT_PUBLIC_USER_URL: 'https://cloud.fastgpt.cn',
+    CN_NEXT_PUBLIC_FILING_ADDRESS: 'CN filing',
+    IO_NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: '.fastgpt.io',
+    CN_NEXT_PUBLIC_HOME_URL: 'https://untrusted.example.com'
+  };
+  for (const variant of ['cn', 'io', 'preview']) {
+    const env = variantEnvironment(variant, baseEnv);
+    assert.equal(env.NEXT_PUBLIC_CRM_API_URL, baseEnv.NEXT_PUBLIC_CRM_API_URL);
+    assert.equal(env.NEXT_PUBLIC_SITE_VARIANT, variant);
+    assert.equal(env.NEXT_PUBLIC_HOME_URL, `https://fastgpt.${variant === 'cn' ? 'cn' : 'io'}`);
+    assert.equal(env.NEXT_PUBLIC_FILING_ADDRESS, variant === 'cn' ? 'CN filing' : undefined);
+    assert.equal(
+      env.NEXT_PUBLIC_USER_URL,
+      variant === 'cn' ? 'https://cloud.fastgpt.cn' : undefined
+    );
+    assert.equal(
+      env.NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN,
+      variant === 'io' ? '.fastgpt.io' : undefined
+    );
   }
-
-  assert.match(dockerfile, /^FROM node:24/m);
-  assert.match(dockerfile, /COPY package\.json package-lock\.json \.\//);
-  assert.match(dockerfile, /RUN npm ci/);
-  assert.match(dockerfile, /COPY \. \./);
-  assert.match(dockerfile, /RUN npm run verify:release/);
-  assert.match(
-    dockerfile,
-    /docker build --file Dockerfile\.verify --tag fastgpt-guide-release-verify \./
-  );
-
-  const executable = [
-    ...workflow.split('\n').filter((line) => /^\s*run:|^\s*- run:/.test(line)),
-    ...dockerfile.split('\n').filter((line) => /^(RUN|CMD|ENTRYPOINT)\b/.test(line))
-  ].join('\n');
-  assert.doesNotMatch(
-    executable,
-    /\b(deploy|curl|rollback|kubectl|docker push|cache purge|revision)\b/i
-  );
-  assert.equal(fs.existsSync(path.join(ROOT, 'scripts/verify-guide-live.js')), false);
 });
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {

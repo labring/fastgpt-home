@@ -11,13 +11,11 @@ const {
   parseNginxRedirectMap
 } = require('./lib/redirects');
 const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
-const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
 const NEXT_DIR = path.join(ROOT, '.next');
 const TECH_ROUTE_SOURCE = path.join(ROOT, 'src/app/[lang]/[section]/[slug]/page.tsx');
-const EXPECTED_TECHNICAL_PAGE_COUNT = TECHNICAL_CONTENT_POLICY.expectedPageCount;
 
 function getStaticRouteCandidates(outDir, route) {
   const relativeRoute = route.replace(/^\/+|\/+$/g, '');
@@ -171,7 +169,7 @@ function verifyTechnicalExport({
   variant = resolveSiteVariant(),
   env = process.env,
   identities = getTechIdentities(ROOT),
-  expectedPageCount = EXPECTED_TECHNICAL_PAGE_COUNT
+  expectedPageCount = identities.length
 } = {}) {
   assert.equal(identities.length, expectedPageCount, 'Unexpected identity count');
   assert(

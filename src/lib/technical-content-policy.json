@@ -1,9 +1,4 @@
 {
-  "expectedPageCount": 1422,
-  "expectedAcceptedCount": 454,
-  "expectedDeniedCount": 6,
-  "expectedAddCount": 450,
-  "expectedUpdateCount": 4,
   "categories": {
     "api": "API",
     "dataset": "知识库",

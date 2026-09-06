@@ -4,23 +4,20 @@ const os = require('node:os');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const test = require('node:test');
-const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
 
 const {
   assertDeniedIdentitiesAbsent,
   buildImportPlan,
   buildSearchProjection,
   foldIdentity,
-  validateImportPlanPolicy,
   validateIdentitySet,
   verifyImportPlanNoDrift,
-  verifyCommittedAuthority,
+  verifyTechnicalContent,
   writeImportPlan
 } = require('./import-technical-content');
 
 const root = path.resolve(__dirname, '..');
 const fixture = path.join(root, 'scripts/fixtures/technical-page-delivery');
-const EXPECTED_TECHNICAL_PAGE_COUNT = TECHNICAL_CONTENT_POLICY.expectedPageCount;
 
 test('representative delivery normalizes the canonical path and body', () => {
   const plan = buildImportPlan({ repoRoot: root, sourcePath: fixture });
@@ -34,7 +31,7 @@ test('representative delivery normalizes the canonical path and body', () => {
   assert.equal(plan.pages.length, 3);
   assert.deepEqual(
     plan.pages.map((page) => page.operation),
-    ['add', 'add', 'add']
+    ['update', 'update', 'update']
   );
   assert.equal(openSandbox.identity.canonicalPath, '/reference/fastgpt-opensandbox-env-config');
   assert.equal(
@@ -45,38 +42,7 @@ test('representative delivery normalizes the canonical path and body', () => {
   );
   assert.match(secretPage.normalizedDocument, /YOUR_API_KEY/);
   assert.doesNotMatch(secretPage.normalizedDocument, /sk-aaabbb/);
-  assert.equal(plan.ledger.denials.length, 1);
-  assert.ok(
-    plan.ledger.corrections.some(
-      (correction) =>
-        correction.field === 'canonicalPath' &&
-        correction.to === '/reference/fastgpt-opensandbox-env-config'
-    )
-  );
-  assert.ok(
-    plan.ledger.corrections.some(
-      (correction) => correction.field === 'body' && correction.to === 'YOUR_API_KEY'
-    )
-  );
-  assert.ok(
-    plan.ledger.corrections.some(
-      (correction) => correction.field === 'pageType' && correction.to === '技术速查'
-    )
-  );
-});
-
-test('previously imported add remains net-new when a later delivery changes its body', () => {
-  const tempSource = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-delivery-'));
-  fs.cpSync(fixture, tempSource, { recursive: true });
-  const sourceFile = path.join(tempSource, 'reference/fastgpt-chatglm2-m3e-api-test.md');
-  fs.appendFileSync(sourceFile, '\n追加的交付说明。\n');
-
-  const plan = buildImportPlan({ repoRoot: root, sourcePath: tempSource });
-  const changedPage = plan.pages.find(
-    (page) => page.identity.canonicalPath === '/reference/fastgpt-chatglm2-m3e-api-test'
-  );
-
-  assert.equal(changedPage.operation, 'add');
+  assert.equal(plan.denials.length, 1);
 });
 
 test('normalizes bare source citations into descriptive Markdown links', () => {
@@ -95,7 +61,6 @@ test('normalizes bare source citations into descriptive Markdown links', () => {
   );
 
   assert.match(page.normalizedDocument, /> 来源：\[FastGPT 官方文档\]\(https:\/\/doc\.fastgpt\.cn/);
-  assert.ok(page.corrections.some((correction) => correction.field === 'citations'));
 });
 
 test('normalizes structural escaped line endings', () => {
@@ -114,7 +79,6 @@ test('normalizes structural escaped line endings', () => {
   );
 
   assert.match(page.normalizedDocument, /## 环境变量配置\n\n## 具体配置/);
-  assert.ok(page.corrections.some((correction) => correction.field === 'lineEndings'));
 });
 
 test('identity folding rejects full-identity collisions and permits repeated final slugs', () => {
@@ -238,22 +202,9 @@ test('delivery trust boundaries validate public sources, citation counts, and lo
   assert.throws(() => buildImportPlan({ repoRoot: root, sourcePath: tempRoot }), /lowercase/i);
 });
 
-test('write policy fixes the accepted operation distribution', () => {
-  assert.throws(
-    () =>
-      validateImportPlanPolicy({
-        pages: Array.from({ length: 454 }, () => ({ operation: 'add' })),
-        ledger: { denials: Array.from({ length: 6 }) }
-      }),
-    /operation drift/i
-  );
-});
-
 test('check mode leaves committed projections byte-for-byte unchanged', () => {
   const outputs = [
     'src/components/tech-center/entries.json',
-    'src/content/tech-center/authority/import-manifest.json',
-    'src/content/tech-center/authority/decision-ledger.json',
     'public/tech-center/search-index.json',
     'public/tech-center/search-index.en.json',
     'src/content/tech-center/deploy/fastgpt-opensandbox-env-config.md',
@@ -324,20 +275,65 @@ test('public search projection contains only discovery fields and matches the re
   );
 });
 
-test('committed technical authority covers the complete accepted identity projection', () => {
-  const manifest = verifyCommittedAuthority(root);
-  const entries = JSON.parse(
-    fs.readFileSync(path.join(root, 'src/components/tech-center/entries.json'), 'utf8')
+test('source verification covers every indexed page and catches content drift without batch ledgers', () => {
+  assert.equal(
+    verifyTechnicalContent(root).length,
+    require('../src/components/tech-center/entries.json').length
   );
-  const searchProjection = [
-    ...JSON.parse(fs.readFileSync(path.join(root, 'public/tech-center/search-index.json'), 'utf8')),
-    ...JSON.parse(
-      fs.readFileSync(path.join(root, 'public/tech-center/search-index.en.json'), 'utf8')
-    )
-  ];
-
-  assert.equal(manifest.pages.length, TECHNICAL_CONTENT_POLICY.expectedAcceptedCount);
-  assert.equal(manifest.source.deniedCount, TECHNICAL_CONTENT_POLICY.expectedDeniedCount);
-  assert.equal(entries.length, EXPECTED_TECHNICAL_PAGE_COUNT);
-  assert.equal(searchProjection.length, EXPECTED_TECHNICAL_PAGE_COUNT);
+  const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-verification-'));
+  try {
+    const plan = buildImportPlan({ repoRoot: repo, sourcePath: fixture });
+    writeImportPlan(plan, repo);
+    assert.equal(verifyTechnicalContent(repo).length, 3);
+    const bodyPath = path.join(repo, plan.pages[0].normalizedBodyPath);
+    const registryPath = path.join(repo, 'src/components/tech-center/entries.json');
+    const searchPath = path.join(repo, 'public/tech-center/search-index.json');
+    const renameSync = fs.renameSync;
+    const originalRegistry = fs.readFileSync(registryPath);
+    const changed = buildImportPlan({ repoRoot: repo, sourcePath: fixture });
+    changed.pages[0].projection.title = 'Changed title';
+    let writes = 0;
+    fs.renameSync = (...args) => {
+      if (++writes === 3) throw new Error('Injected write failure');
+      return renameSync(...args);
+    };
+    try {
+      assert.throws(() => writeImportPlan(changed, repo), /Injected write failure/);
+    } finally {
+      fs.renameSync = renameSync;
+    }
+    assert.deepEqual(fs.readFileSync(registryPath), originalRegistry);
+    assert.equal(verifyTechnicalContent(repo).length, 3);
+    for (const [filePath, change, message] of [
+      [bodyPath, () => null, /Missing technical body/],
+      [bodyPath, (bytes) => bytes.replace('slug: /zh/', 'slug: /en/'), /metadata drift/],
+      [bodyPath, (bytes) => bytes + '\nsk-' + 'unexpectedCredential123456789', /secret-shaped/],
+      [
+        registryPath,
+        (bytes) => JSON.stringify([...JSON.parse(bytes), JSON.parse(bytes)[0]]),
+        /identity collision/
+      ],
+      [searchPath, () => '[]\n', /search projection/]
+    ]) {
+      const original = fs.readFileSync(filePath, 'utf8');
+      const changed = change(original);
+      if (changed === null) fs.unlinkSync(filePath);
+      else fs.writeFileSync(filePath, changed);
+      try {
+        assert.throws(() => verifyTechnicalContent(repo), message);
+      } finally {
+        fs.writeFileSync(filePath, original);
+      }
+    }
+    const registryBytes = fs.readFileSync(registryPath, 'utf8');
+    const searchBytes = fs.readFileSync(searchPath, 'utf8');
+    fs.writeFileSync(registryPath, JSON.stringify(JSON.parse(registryBytes).slice(1)));
+    fs.writeFileSync(searchPath, JSON.stringify(JSON.parse(searchBytes).slice(1), null, 2) + '\n');
+    assert.throws(() => verifyTechnicalContent(repo), /Unindexed technical body/);
+    fs.writeFileSync(registryPath, registryBytes);
+    fs.writeFileSync(searchPath, searchBytes);
+    assert.equal(verifyTechnicalContent(repo).length, 3);
+  } finally {
+    fs.rmSync(repo, { recursive: true, force: true });
+  }
 });

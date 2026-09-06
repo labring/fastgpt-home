@@ -13,7 +13,8 @@ export const CATEGORY_DEFINITIONS: ReadonlyArray<{
   { key: 'api', icon: '{ }' },
   { key: 'reference', icon: '⌁' },
   { key: 'model', icon: '◌' },
-  { key: 'glossary', icon: '▤' }
+  { key: 'glossary', icon: '▤' },
+  { key: 'compare', icon: '⇄' }
 ];
 
 export const SOURCE_DEFINITIONS: ReadonlyArray<{

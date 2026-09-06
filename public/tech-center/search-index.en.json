@@ -5148,5 +5148,2065 @@
     "publicPath": "/tutorial/fastgpt-workflow-file-input",
     "sourceType": "官方文档",
     "minutes": 5
+  },
+  {
+    "identity": "en|/api/fastgpt-update-chat-session-pin-status",
+    "title": "Update FastGPT Chat Session Pin Status",
+    "description": "Update FastGPT Chat Session Pin Status Endpoint Details This section covers the FastGPT API endpoint for updating the pinned status of a chat session. The…",
+    "category": "api",
+    "locale": "en",
+    "publicPath": "/api/fastgpt-update-chat-session-pin-status",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/auto-trigger-conversation-workflows",
+    "title": "Set Up Auto-Trigger Conversation Workflows for Proactive Guidance",
+    "description": "Set Up Auto-Trigger Conversation Workflows for Proactive Guidance This article records configuration and changes from a historical FastGPT release. Use it…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/auto-trigger-conversation-workflows",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/delete-legacy-milvus-modeldata",
+    "title": "Delete Legacy Milvus modeldata Tables Post Migration",
+    "description": "Delete Legacy Milvus modeldata Tables Post Migration Post-Migration Legacy Table Retention After completing a successful Milvus BM25 dataset migration for…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/delete-legacy-milvus-modeldata",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4-15-00-upgrade-impacts",
+    "title": "Critical Impacts of FastGPT 4.15.00 Upgrade",
+    "description": "Critical Impacts of FastGPT 4.15.00 Upgrade API Key Behavior Updates FastGPT 4.15.00 modifies API key handling by eliminating separate app key authenticat…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4-15-00-upgrade-impacts",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4-15-5-bug-fixes",
+    "title": "Resolved Bugs in FastGPT 4.15.5 Release",
+    "description": "Resolved Bugs in FastGPT 4.15.5 Release FastGPT 4.15.5 Fix Overview This document covers the documented bug fixes included in the FastGPT 4.15.5 self-host…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4-15-5-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4-15-7-bug-fixes",
+    "title": "FastGPT 4.15.7 List of Resolved Bug Fixes",
+    "description": "FastGPT 4.15.7 List of Resolved Bug Fixes Summary of FastGPT 4.15.7 Bug Fixes This document outlines the targeted bug fixes released in FastGPT 4.15.7 for…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4-15-7-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4-16-0-code-improvements",
+    "title": "Detailed Code Improvements for FastGPT 4.16.0",
+    "description": "Detailed Code Improvements for FastGPT 4.16.0 Core Architecture Refactors This release includes significant refactoring of core platform code to improve m…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4-16-0-code-improvements",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4-16-0-improvements",
+    "title": "FastGPT 4.16.0 Operational and UI Improvements",
+    "description": "FastGPT 4.16.0 Operational and UI Improvements FastGPT 4.16.0 Operational and UI Improvements Agent Sandbox Enhancements This release refactors the Agent…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4-16-0-improvements",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4-16-0-new-features",
+    "title": "Official FastGPT 4.16.0 New Feature Details",
+    "description": "Official FastGPT 4.16.0 New Feature Details This page documents all new features and configuration details for FastGPT version 4.16.0, targeted at self-ho…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4-16-0-new-features",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4101-commercial-migration-script",
+    "title": "Run the FastGPT 4101 Commercial Migration Script",
+    "description": "Run the FastGPT 4101 Commercial Migration Script This article records configuration and changes from a historical FastGPT release. Use it to understand th…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4101-commercial-migration-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4110-new-features",
+    "title": "Key New Features of FastGPT 4.11.0",
+    "description": "Key New Features of FastGPT 4.11.0 This article records configuration and changes from a historical FastGPT release. Use it to understand that release, an…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4110-new-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4124-migration-script",
+    "title": "Run FastGPT 4.12.4 Commercial Migration Script",
+    "description": "Run FastGPT 4.12.4 Commercial Migration Script Prerequisites for 4.12.4 Migration Script This administrative migration script is exclusively required for…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4124-migration-script",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-414-system-plugin-install-guide",
+    "title": "Manually Install FastGPT 4.14+ System Plugins",
+    "description": "Manually Install FastGPT 4.14+ System Plugins Plugin Installation Changes for FastGPT 4.14.0+ Starting with version 4.14.0, the fastgpt-plugin container i…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-414-system-plugin-install-guide",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4154-bug-fixes",
+    "title": "FastGPT 4.15.4 Official Bug Fix Documentation",
+    "description": "FastGPT 4.15.4 Official Bug Fix Documentation 4.15.4 Bug Fix Overview This document outlines all resolved functional and stability issues included in the…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4154-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4154-mongodb-index-sync",
+    "title": "Configure MongoDB Index Sync for FastGPT 4.15.4",
+    "description": "Configure MongoDB Index Sync for FastGPT 4.15.4 Deprecated and New Configuration Variables Starting with FastGPT 4.15.4, the SYNCINDEX environment variabl…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4154-mongodb-index-sync",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4155-storage-pdf-updates",
+    "title": "FastGPT 4.15.5 New Storage and Parsing Features",
+    "description": "FastGPT 4.15.5 New Storage and Parsing Features Core New Features in FastGPT 4.15.5 This update delivers two targeted enhancements for self-hosted FastGPT…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4155-storage-pdf-updates",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4155-upgrade-improvements",
+    "title": "Detailed Technical Improvements for FastGPT 4.15.5 Upgrade",
+    "description": "Detailed Technical Improvements for FastGPT 4.15.5 Upgrade Detailed Technical Improvements for FastGPT 4.15.5 Upgrade Dependency Centralization & Lockfile…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4155-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-416-code-improvements",
+    "title": "FastGPT 4.16 Code Improvement Details",
+    "description": "FastGPT 4.16 Code Improvement Details This document outlines the targeted technical code improvements released in FastGPT 4.16, designed to enhance securi…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-416-code-improvements",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-416-sandbox-runtime-improvements",
+    "title": "FastGPT 4.16 Sandbox and Runtime Enhancements",
+    "description": "FastGPT 4.16 Sandbox and Runtime Enhancements Agent Sandbox Lifecycle Overhaul This release refactors the Agent Sandbox lifecycle and migration flow with…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-416-sandbox-runtime-improvements",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4160-agent-sandbox-migration",
+    "title": "Migrate FastGPT Agent Sandbox Data for 4.16.0",
+    "description": "Migrate FastGPT Agent Sandbox Data for 4.16.0 Sandbox Migration Overview This FastGPT 4.16.0 release updates the Agent Sandbox architecture: previously us…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4160-agent-sandbox-migration",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4160-agent-sandbox-proxy-config",
+    "title": "Configure Agent Sandbox Proxy for FastGPT 4.16.0",
+    "description": "Configure Agent Sandbox Proxy for FastGPT 4.16.0 Agent Sandbox Proxy Requirements for FastGPT 4.16.0 FastGPT version 4.16.0 mandates a proxy configuration…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4160-agent-sandbox-proxy-config",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4160-bug-fixes",
+    "title": "FastGPT 4.16.0 Bug Fix Documentation",
+    "description": "FastGPT 4.16.0 Bug Fix Documentation This document outlines all resolved bugs included in the FastGPT 4.16.0 self-hosted upgrade, targeted at engineers an…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4160-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4160-environment-variable-updates",
+    "title": "Update FastGPT 4.16.0 Environment Variables",
+    "description": "Update FastGPT 4.16.0 Environment Variables This document covers environment variable updates required for self-hosted FastGPT 4.16.0, specifically change…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4160-environment-variable-updates",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4160-http-tool-migration",
+    "title": "Migrate Manual HTTP Tool Data for FastGPT 4.16.0",
+    "description": "Migrate Manual HTTP Tool Data for FastGPT 4.16.0 Migration Overview This FastGPT 4.16.0 update modifies manually configured HTTP tool array parameters to…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4160-http-tool-migration",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-41601-bug-fixes",
+    "title": "FastGPT 4.16.01 Official Bug Fixes",
+    "description": "FastGPT 4.16.01 Official Bug Fixes This document outlines all resolved bugs in the FastGPT 4.16.01 self-hosted release, covering sandbox infrastructure, f…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-41601-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 9
+  },
+  {
+    "identity": "en|/deploy/fastgpt-41602-bug-fixes",
+    "title": "Bug Fixes for FastGPT 4.16.02 Self-Hosted",
+    "description": "Bug Fixes for FastGPT 4.16.02 Self-Hosted This document details all bug fixes included in the FastGPT 4.16.02 self-hosted upgrade, addressing functional a…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-41602-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-41602-enhancements",
+    "title": "Detailed Technical Improvements for FastGPT 4.16.02",
+    "description": "Detailed Technical Improvements for FastGPT 4.16.02 Publish Channels Page Redesign The Publish Channels page has been fully redesigned to improve usabilit…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-41602-enhancements",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4161-bug-fixes",
+    "title": "List of FastGPT 4.16.1 Bug Fixes",
+    "description": "List of FastGPT 4.16.1 Bug Fixes Overview This document details the bug fixes included in FastGPT 4.16.1 for self-hosted FastGPT deployments. Each resolut…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4161-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4162-bug-fixes",
+    "title": "FastGPT 4.16.2 List of Resolved Bug Fixes",
+    "description": "FastGPT 4.16.2 List of Resolved Bug Fixes FastGPT 4.16.2 Bug Fix Overview This document details all resolved bugs and stability improvements included in t…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4162-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4162-permission-cleanup",
+    "title": "Execute FastGPT 4.16.2 Permission Cleanup Tasks",
+    "description": "Execute FastGPT 4.16.2 Permission Cleanup Tasks Overview This document details the required permission cleanup and migration workflow for FastGPT 4.16.2,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4162-permission-cleanup",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4162-remove-worker-concurrency-settings",
+    "title": "Remove Legacy Worker Concurrency Settings for FastGPT 4.16.2",
+    "description": "Remove Legacy Worker Concurrency Settings for FastGPT 4.16.2 Overview of Deprecated Worker Variables FastGPT version 4.16.2 removes four fixed worker conc…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4162-remove-worker-concurrency-settings",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-46-config-revision",
+    "title": "Update FastGPT 4.6 and Revise Configuration Files",
+    "description": "Update FastGPT 4.6 and Revise Configuration Files This article records configuration and changes from a historical FastGPT release. Use it to understand t…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-46-config-revision",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4810-admin-initialization",
+    "title": "Run FastGPT 4810 Administrative Initialization Tasks",
+    "description": "Run FastGPT 4810 Administrative Initialization Tasks This article records configuration and changes from a historical FastGPT release. Use it to understan…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4810-admin-initialization",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4811-commercial-initialization",
+    "title": "Perform FastGPT 4811 Commercial Edition Initialization",
+    "description": "Perform FastGPT 4811 Commercial Edition Initialization This article records configuration and changes from a historical FastGPT release. Use it to underst…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4811-commercial-initialization",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4813-release-updates",
+    "title": "FastGPT 4.8.13 Release Feature and Fix Updates",
+    "description": "FastGPT 4.8.13 Release Feature and Fix Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4813-release-updates",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4817-release-notes",
+    "title": "FastGPT 4817 Full Official Release Notes",
+    "description": "FastGPT 4817 Full Official Release Notes This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4817-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4819-release-notes",
+    "title": "FastGPT Version 4819 Release Updates",
+    "description": "FastGPT Version 4819 Release Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4819-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4820-migration-script",
+    "title": "Run the FastGPT 4820 Configuration Migration Script",
+    "description": "Run the FastGPT 4820 Configuration Migration Script This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4820-migration-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4822-bug-fixes",
+    "title": "Resolved Bugs for FastGPT 4822 Upgrade",
+    "description": "Resolved Bugs for FastGPT 4822 Upgrade This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4822-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4822-contact-migration",
+    "title": "Run FastGPT 4822 Contact Data Migration",
+    "description": "Run FastGPT 4822 Contact Data Migration This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4822-contact-migration",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4822-upgrade-features",
+    "title": "FastGPT 4822 Upgrade New Technical Features",
+    "description": "FastGPT 4822 Upgrade New Technical Features This article records configuration and changes from a historical FastGPT release. Use it to understand that re…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4822-upgrade-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4823-bug-fixes",
+    "title": "FastGPT 4823 Bug Fix Details",
+    "description": "FastGPT 4823 Bug Fix Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release, and cons…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4823-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4823-migration-script",
+    "title": "Run FastGPT 4.8.23 Migration Script for Dataset Cleanup",
+    "description": "Run FastGPT 4.8.23 Migration Script for Dataset Cleanup This article records configuration and changes from a historical FastGPT release. Use it to unders…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4823-migration-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4823-upgrade-improvements",
+    "title": "Resolved Issues and Improvements for FastGPT 4823 Upgrade",
+    "description": "Resolved Issues and Improvements for FastGPT 4823 Upgrade This article records configuration and changes from a historical FastGPT release. Use it to unde…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4823-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-485-upgrade-initialization",
+    "title": "Run FastGPT 4.8.5 Upgrade Initialization Commands",
+    "description": "Run FastGPT 4.8.5 Upgrade Initialization Commands This article records configuration and changes from a historical FastGPT release. Use it to understand t…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-485-upgrade-initialization",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-486-app-permission-init",
+    "title": "Execute FastGPT 4.8.6 Application Permission Initialization",
+    "description": "Execute FastGPT 4.8.6 Application Permission Initialization This article records configuration and changes from a historical FastGPT release. Use it to un…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-486-app-permission-init",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-488-dataset-initialization",
+    "title": "Execute FastGPT 4.8.8 Dataset Permission Initialization",
+    "description": "Execute FastGPT 4.8.8 Dataset Permission Initialization This article records configuration and changes from a historical FastGPT release. Use it to unders…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-488-dataset-initialization",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-490-new-features",
+    "title": "FastGPT 490 Upgrade New Feature Details",
+    "description": "FastGPT 490 Upgrade New Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-490-new-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-490-upgrade-improvements",
+    "title": "Key Technical Improvements for FastGPT 490 Upgrade",
+    "description": "Key Technical Improvements for FastGPT 490 Upgrade This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-490-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-490-upgrade-script",
+    "title": "Run the FastGPT 4.90 Upgrade Script",
+    "description": "Run the FastGPT 4.90 Upgrade Script This article records configuration and changes from a historical FastGPT release. Use it to understand that release, a…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-490-upgrade-script",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-491-bug-fixes",
+    "title": "FastGPT 491 Version Bug Fix Details",
+    "description": "FastGPT 491 Version Bug Fix Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release, a…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-491-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/deploy/fastgpt-491-new-features",
+    "title": "Configure and Adopt FastGPT 491 New Features",
+    "description": "Configure and Adopt FastGPT 491 New Features This article records configuration and changes from a historical FastGPT release. Use it to understand that r…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-491-new-features",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-491-upgrade-improvements",
+    "title": "Key Improvements in FastGPT 491 Self-Host Upgrade",
+    "description": "Key Improvements in FastGPT 491 Self-Host Upgrade This article records configuration and changes from a historical FastGPT release. Use it to understand t…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-491-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-491-upgrade-script",
+    "title": "Execute the FastGPT 4.9.1 Upgrade Script",
+    "description": "Execute the FastGPT 4.9.1 Upgrade Script This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-491-upgrade-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4910-bug-fixes",
+    "title": "FastGPT 4910 Targeted Bug Fix Details",
+    "description": "FastGPT 4910 Targeted Bug Fix Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4910-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4910-new-features",
+    "title": "FastGPT 4910 Version New Feature Enhancements",
+    "description": "FastGPT 4910 Version New Feature Enhancements This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4910-new-features",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4910-upgrade-improvements",
+    "title": "FastGPT 4910 Version Feature Improvement Breakdown",
+    "description": "FastGPT 4910 Version Feature Improvement Breakdown This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4910-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4911-bug-fixes",
+    "title": "FastGPT 4911 Bug Fix Resolution Details",
+    "description": "FastGPT 4911 Bug Fix Resolution Details This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4911-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4911-new-features",
+    "title": "FastGPT 4911 Version New Feature Updates",
+    "description": "FastGPT 4911 Version New Feature Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4911-new-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4912-bug-fixes",
+    "title": "FastGPT 4912 Update Bug Fix Resolutions",
+    "description": "FastGPT 4912 Update Bug Fix Resolutions This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4912-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4912-new-features",
+    "title": "FastGPT 4912 Technical Upgrade Feature Details",
+    "description": "FastGPT 4912 Technical Upgrade Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4912-new-features",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-4912-upgrade-improvements",
+    "title": "FastGPT 4912 Upgrade Functional Improvements",
+    "description": "FastGPT 4912 Upgrade Functional Improvements This article records configuration and changes from a historical FastGPT release. Use it to understand that r…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-4912-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-492-bug-fixes",
+    "title": "Resolved FastGPT 492 Update Bug Fixes",
+    "description": "Resolved FastGPT 492 Update Bug Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-492-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-492-upgrade-features",
+    "title": "FastGPT 492 Self-Hosted New Feature Details",
+    "description": "FastGPT 492 Self-Hosted New Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that re…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-492-upgrade-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-494-new-features",
+    "title": "FastGPT 494 New Feature Details",
+    "description": "FastGPT 494 New Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release, and c…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-494-new-features",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-494-upgrade-script",
+    "title": "Run the FastGPT 4.9.4 Upgrade Script",
+    "description": "Run the FastGPT 4.9.4 Upgrade Script This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-494-upgrade-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-496-update-features",
+    "title": "FastGPT 496 Update New Feature Details",
+    "description": "FastGPT 496 Update New Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-496-update-features",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-497-new-features",
+    "title": "FastGPT 497 Official New Feature Details",
+    "description": "FastGPT 497 Official New Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-497-new-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-498-upgrade-bug-fixes",
+    "title": "Resolved FastGPT 498 Upgrade Bug Fixes",
+    "description": "Resolved FastGPT 498 Upgrade Bug Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-498-upgrade-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-add-o1-model-configuration",
+    "title": "Add OpenAI o1 Models to FastGPT Configuration",
+    "description": "Add OpenAI o1 Models to FastGPT Configuration This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-add-o1-model-configuration",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-agent-loop-refactor",
+    "title": "Unified Agent and Tool Call Execution for FastGPT",
+    "description": "Unified Agent and Tool Call Execution for FastGPT Core Execution Unification Prior to this 4.15.2 update, FastGPT’s Workflow Agent and ToolCall features u…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-agent-loop-refactor",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-agent-sandbox-env-config",
+    "title": "Configure Agent Sandbox Environment Variables for FastGPT 4.16.1 Upgrade",
+    "description": "Configure Agent Sandbox Environment Variables for FastGPT 4.16.1 Upgrade This page details environment variable configuration for the Agent Sandbox featur…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-agent-sandbox-env-config",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-app-pro-sandbox-env-updates",
+    "title": "Update FastGPT App and Pro Sandbox Environment Variables",
+    "description": "Update FastGPT App and Pro Sandbox Environment Variables This document covers environment variable updates for fastgpt-app and fastgpt-pro when upgrading…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-app-pro-sandbox-env-updates",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-code-improvements-4162",
+    "title": "Key Code Improvements for FastGPT 4.16.2",
+    "description": "Key Code Improvements for FastGPT 4.16.2 Legacy Workflow Tool Parameter Compatibility Standardized compatibility handling for legacy tool parameters in Wo…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-code-improvements-4162",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-commercial-edition-config-changes",
+    "title": "FastGPT Commercial Edition 4.6.6 Configuration Changes",
+    "description": "FastGPT Commercial Edition 4.6.6 Configuration Changes This article records configuration and changes from a historical FastGPT release. Use it to underst…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-commercial-edition-config-changes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-commercial-edition-email-smtp-update",
+    "title": "Update FastGPT Commercial Edition Email SMTP Settings",
+    "description": "Update FastGPT Commercial Edition Email SMTP Settings This article records configuration and changes from a historical FastGPT release. Use it to understa…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-commercial-edition-email-smtp-update",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-commercial-edition-init-steps",
+    "title": "Run FastGPT Commercial Edition Initialization Steps",
+    "description": "Run FastGPT Commercial Edition Initialization Steps This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-commercial-edition-init-steps",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-commercial-edition-initialization",
+    "title": "Complete Required FastGPT Commercial Edition Initialization",
+    "description": "Complete Required FastGPT Commercial Edition Initialization This article records configuration and changes from a historical FastGPT release. Use it to un…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-commercial-edition-initialization",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-commercial-upgrade-init",
+    "title": "Initialize FastGPT Commercial Edition Upgrade Data",
+    "description": "Initialize FastGPT Commercial Edition Upgrade Data This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-commercial-upgrade-init",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-config-tool-choice-updates",
+    "title": "Update FastGPT Configuration for Tool Choice Changes",
+    "description": "Update FastGPT Configuration for Tool Choice Changes This article records configuration and changes from a historical FastGPT release. Use it to understan…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-config-tool-choice-updates",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-cross-version-upgrade",
+    "title": "Properly Upgrade FastGPT Across Multiple Versions",
+    "description": "Properly Upgrade FastGPT Across Multiple Versions Pre-Upgrade Mandatory Step The first required action for any FastGPT cross-version upgrade is to back up…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-cross-version-upgrade",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-custom-model-configuration",
+    "title": "Add and Configure Custom FastGPT Models",
+    "description": "Add and Configure Custom FastGPT Models Add and Configure Custom FastGPT Models Overview If FastGPT's built-in models do not meet your deployment requirem…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-custom-model-configuration",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-dataset-initialization-api",
+    "title": "Initialize FastGPT dataset.files collection via API",
+    "description": "Initialize FastGPT dataset.files collection via API This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-dataset-initialization-api",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-db-field-initialization",
+    "title": "Initialize Missing Fields in FastGPT Database Collections",
+    "description": "Initialize Missing Fields in FastGPT Database Collections This article records configuration and changes from a historical FastGPT release. Use it to unde…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-db-field-initialization",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-deprecation-compatibility-updates",
+    "title": "FastGPT Deprecated Features and Compatibility Updates",
+    "description": "FastGPT Deprecated Features and Compatibility Updates This article records configuration and changes from a historical FastGPT release. Use it to understa…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-deprecation-compatibility-updates",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-docker-mongo-manual-update",
+    "title": "Manually Update MongoDB for FastGPT Docker Deployments",
+    "description": "Manually Update MongoDB for FastGPT Docker Deployments This article records configuration and changes from a historical FastGPT release. Use it to underst…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-docker-mongo-manual-update",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/deploy/fastgpt-docker-sandbox-setup",
+    "title": "Add Sandbox Container to Docker FastGPT Deployment",
+    "description": "Add Sandbox Container to Docker FastGPT Deployment This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-docker-sandbox-setup",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-docker-upgrade-4100",
+    "title": "Upgrade FastGPT Docker Deployment to Version 4.10.0-fix",
+    "description": "Upgrade FastGPT Docker Deployment to Version 4.10.0-fix This article records configuration and changes from a historical FastGPT release. Use it to unders…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-docker-upgrade-4100",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-html-rendering-preview-modes",
+    "title": "Use HTML Rendering Preview Modes in FastGPT",
+    "description": "Use HTML Rendering Preview Modes in FastGPT This article records configuration and changes from a historical FastGPT release. Use it to understand that re…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-html-rendering-preview-modes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-image-update-v4-16-0-beta1",
+    "title": "Update FastGPT Service Images for v4.16.0-beta1 Upgrade",
+    "description": "Update FastGPT Service Images for v4.16.0-beta1 Upgrade Image Update Overview This document outlines the mandatory container image updates for a self-host…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-image-update-v4-16-0-beta1",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-legacy-file-upload-migration",
+    "title": "Migrate Legacy FastGPT File Upload Workflows",
+    "description": "Migrate Legacy FastGPT File Upload Workflows This article records configuration and changes from a historical FastGPT release. Use it to understand that r…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-legacy-file-upload-migration",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-legacy-model-config-cleanup",
+    "title": "Clean Up Legacy FastGPT System Model Configs",
+    "description": "Clean Up Legacy FastGPT System Model Configs Overview of System Model Schema Changes This FastGPT 4.16 release enforces strict validation schemas for init…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-legacy-model-config-cleanup",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-llm-trace-team-isolation",
+    "title": "Prevent Unauthorized LLM Request Trace Access",
+    "description": "Prevent Unauthorized LLM Request Trace Access Core Access Control Update The llmrequestrecords database table now includes a required teamId field to enfo…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-llm-trace-team-isolation",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-mcp-proxy-configuration-update",
+    "title": "Update FastGPT MCP Proxy Server Configuration",
+    "description": "Update FastGPT MCP Proxy Server Configuration This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-mcp-proxy-configuration-update",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-mcp-server-deployment",
+    "title": "Deploy FastGPT MCP Server for Self-Hosted Upgrades",
+    "description": "Deploy FastGPT MCP Server for Self-Hosted Upgrades This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-mcp-server-deployment",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-milvus-bm25-search",
+    "title": "Configure FastGPT Full-Text Search for Milvus BM25",
+    "description": "Configure FastGPT Full-Text Search for Milvus BM25 Full-Text Search Behavior with Milvus Vector Stores FastGPT’s default full-text search functionality re…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-milvus-bm25-search",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-milvus-bm25-troubleshooting",
+    "title": "Troubleshoot FastGPT Milvus BM25 Integration Issues",
+    "description": "Troubleshoot FastGPT Milvus BM25 Integration Issues This technical document covers troubleshooting for common issues with FastGPT’s Milvus BM25 full-text…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-milvus-bm25-troubleshooting",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-milvus-precision-loss-rebuild",
+    "title": "Resolve FastGPT Milvus Data Precision Loss",
+    "description": "Resolve FastGPT Milvus Data Precision Loss This article records configuration and changes from a historical FastGPT release. Use it to understand that rel…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-milvus-precision-loss-rebuild",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-model-config-updates",
+    "title": "Update FastGPT LLM and Vector Model Configurations",
+    "description": "Update FastGPT LLM and Vector Model Configurations This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-model-config-updates",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-mongo-replica-set-fix",
+    "title": "Resolve Failed FastGPT Mongo Replica Set Auto-Initialization",
+    "description": "Resolve Failed FastGPT Mongo Replica Set Auto-Initialization Auto-Initialization Failure Causes Official FastGPT Docker Compose deployments include fully…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-mongo-replica-set-fix",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-mongodb-bill-ttl-fix",
+    "title": "Fix Incorrect TTL for MongoDB Bill Collection",
+    "description": "Fix Incorrect TTL for MongoDB Bill Collection This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-mongodb-bill-ttl-fix",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-mongodb-collection-rename",
+    "title": "Rename MongoDB Collections for FastGPT V4 Upgrade",
+    "description": "Rename MongoDB Collections for FastGPT V4 Upgrade This article records configuration and changes from a historical FastGPT release. Use it to understand t…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-mongodb-collection-rename",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-non-native-model-classification-fix",
+    "title": "Fix Non-Native Model Question Classification Issues",
+    "description": "Fix Non-Native Model Question Classification Issues Identifying Error Signals When deploying external models through FastGPT, users may experience failure…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-non-native-model-classification-fix",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-opensandbox-runtime-config",
+    "title": "Configure FastGPT OpenSandbox Runtime Environment Settings",
+    "description": "Configure FastGPT OpenSandbox Runtime Environment Settings Runtime Image Selection and CPU Architectures The AGENTSANDBOXOPENSANDBOXIMAGE environment vari…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-opensandbox-runtime-config",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-post-upgrade-init-api-requests",
+    "title": "Run FastGPT Post-Upgrade Initialization API Requests",
+    "description": "Run FastGPT Post-Upgrade Initialization API Requests This article records configuration and changes from a historical FastGPT release. Use it to understan…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-post-upgrade-init-api-requests",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-post-upgrade-initialization",
+    "title": "Run Initialization for FastGPT After Image Upgrade",
+    "description": "Run Initialization for FastGPT After Image Upgrade This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-post-upgrade-initialization",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-pro-sso-sync-migration",
+    "title": "Migrate FastGPT Pro SSO and Sync Configurations",
+    "description": "Migrate FastGPT Pro SSO and Sync Configurations This article records configuration and changes from a historical FastGPT release. Use it to understand tha…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-pro-sso-sync-migration",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-redis-upgrade-configuration",
+    "title": "Configure Redis for FastGPT Self-Hosted Upgrades",
+    "description": "Configure Redis for FastGPT Self-Hosted Upgrades This article records configuration and changes from a historical FastGPT release. Use it to understand th…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-redis-upgrade-configuration",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-replace-oneapi-aiproxy",
+    "title": "Replace OneAPI with AI Proxy for FastGPT",
+    "description": "Replace OneAPI with AI Proxy for FastGPT This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-replace-oneapi-aiproxy",
+    "sourceType": "官方文档",
+    "minutes": 9
+  },
+  {
+    "identity": "en|/deploy/fastgpt-rerank-model-upgrade-config",
+    "title": "Configure and Upgrade FastGPT ReRank Models",
+    "description": "Configure and Upgrade FastGPT ReRank Models This article records configuration and changes from a historical FastGPT release. Use it to understand that re…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-rerank-model-upgrade-config",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-sealos-config-env-adjustment",
+    "title": "Modify FastGPT Env Vars and Configs on Sealos",
+    "description": "Modify FastGPT Env Vars and Configs on Sealos Sealos FastGPT Deployment Structure FastGPT deployed on Sealos operates with one dedicated application servi…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-sealos-config-env-adjustment",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-sealos-image-update",
+    "title": "Update FastGPT Application Images on Sealos",
+    "description": "Update FastGPT Application Images on Sealos Updating FastGPT on Sealos This document covers the official self-hosted FastGPT image update procedure for de…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-sealos-image-update",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-self-hosted-upgrade-improvements",
+    "title": "Technical Improvements for FastGPT Self-Hosted Upgrades",
+    "description": "Technical Improvements for FastGPT Self-Hosted Upgrades This article records configuration and changes from a historical FastGPT release. Use it to unders…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-self-hosted-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-stale-data-cleanup",
+    "title": "Clear Stale Invalid Data for FastGPT Self-Hosted Instances",
+    "description": "Clear Stale Invalid Data for FastGPT Self-Hosted Instances This article records configuration and changes from a historical FastGPT release. Use it to und…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-stale-data-cleanup",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-stale-data-cleanup-2",
+    "title": "Manually Run FastGPT Stale Data Cleanup",
+    "description": "Manually Run FastGPT Stale Data Cleanup This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-stale-data-cleanup-2",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-496-feature-improvements",
+    "title": "FastGPT Self-Hosted Upgrade 496 Feature Improvements",
+    "description": "FastGPT Self-Hosted Upgrade 496 Feature Improvements This article records configuration and changes from a historical FastGPT release. Use it to understan…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-496-feature-improvements",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-environment-variables",
+    "title": "Adjust FastGPT Environment Variables for 4.15.04 Upgrade",
+    "description": "Adjust FastGPT Environment Variables for 4.15.04 Upgrade Overview Self-hosted FastGPT deployments upgrading to version 4.15.04 require three mandatory env…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-environment-variables",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-new-features",
+    "title": "FastGPT 498 Upgrade New Feature Breakdown",
+    "description": "FastGPT 498 Upgrade New Feature Breakdown This article records configuration and changes from a historical FastGPT release. Use it to understand that rele…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-new-features",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-new-features-2",
+    "title": "New Features for FastGPT Self-Host Upgrades",
+    "description": "New Features for FastGPT Self-Host Upgrades This article records configuration and changes from a historical FastGPT release. Use it to understand that re…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-new-features-2",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-performance-improvements",
+    "title": "Key FastGPT Self-Hosted Upgrade Performance Improvements",
+    "description": "Key FastGPT Self-Hosted Upgrade Performance Improvements This article records configuration and changes from a historical FastGPT release. Use it to under…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-performance-improvements",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-script-guide",
+    "title": "Understand FastGPT Upgrade Script Core Requirements",
+    "description": "Understand FastGPT Upgrade Script Core Requirements Purpose of FastGPT Upgrade Scripts Upgrade scripts are a required component for updating self-hosted F…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-script-guide",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-upgrade-sealos",
+    "title": "Properly Upgrade FastGPT on Sealos",
+    "description": "Properly Upgrade FastGPT on Sealos Pre-Upgrade Preparation Before initiating any FastGPT upgrade on Sealos, first review the official upgrade documentatio…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-upgrade-sealos",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-4-5-new-features",
+    "title": "FastGPT V4.4.5 New Feature Update Details",
+    "description": "FastGPT V4.4.5 New Feature Update Details This article records configuration and changes from a historical FastGPT release. Use it to understand that rele…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-4-5-new-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-5-upgrade-features",
+    "title": "FastGPT V4.5 New Features and Improvements",
+    "description": "FastGPT V4.5 New Features and Improvements This article records configuration and changes from a historical FastGPT release. Use it to understand that rel…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-5-upgrade-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-6-6-release-notes",
+    "title": "FastGPT V4.6.6 Release Feature Fixes and Additions",
+    "description": "FastGPT V4.6.6 Release Feature Fixes and Additions This article records configuration and changes from a historical FastGPT release. Use it to understand…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-6-6-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-6-9-release-notes",
+    "title": "FastGPT v4.6.9 Feature and Fix Details",
+    "description": "FastGPT v4.6.9 Feature and Fix Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-6-9-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-10-release-details",
+    "title": "FastGPT v4.8.10 Release Feature and Fix Details",
+    "description": "FastGPT v4.8.10 Release Feature and Fix Details This article records configuration and changes from a historical FastGPT release. Use it to understand tha…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-10-release-details",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-11-release-notes-2",
+    "title": "Official FastGPT v4.8.11 Release Notes",
+    "description": "Official FastGPT v4.8.11 Release Notes This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-11-release-notes-2",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-16-release-notes",
+    "title": "FastGPT v4.8.16 Feature and Fix Updates",
+    "description": "FastGPT v4.8.16 Feature and Fix Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-16-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-3-release-notes",
+    "title": "FastGPT V4.8.3 Release Updates and Fixes",
+    "description": "FastGPT V4.8.3 Release Updates and Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-3-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-5-release-notes",
+    "title": "FastGPT v4.8.5 Release Feature and Fix Details",
+    "description": "FastGPT v4.8.5 Release Feature and Fix Details This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-5-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-8-release-notes",
+    "title": "FastGPT v4.8.8 Release Feature and Fix Summary",
+    "description": "FastGPT v4.8.8 Release Feature and Fix Summary This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-8-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4-8-9-release-notes",
+    "title": "FastGPT V4.8.9 Release Feature and Fix Summary",
+    "description": "FastGPT V4.8.9 Release Feature and Fix Summary This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4-8-9-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v41-db-env-update",
+    "title": "Update FastGPT Database Connection Variables for V4.1",
+    "description": "Update FastGPT Database Connection Variables for V4.1 This article records configuration and changes from a historical FastGPT release. Use it to understa…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v41-db-env-update",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4110-upgrade-improvements",
+    "title": "Resolved Issues and New Features in FastGPT v4110",
+    "description": "Resolved Issues and New Features in FastGPT v4110 This article records configuration and changes from a historical FastGPT release. Use it to understand t…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4110-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4111-upgrade-features",
+    "title": "FastGPT v4.11.1 New Feature Details",
+    "description": "FastGPT v4.11.1 New Feature Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release, a…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4111-upgrade-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4162-new-features",
+    "title": "FastGPT v4.16.2 Official New Feature Details",
+    "description": "FastGPT v4.16.2 Official New Feature Details User Experience and Core Administration Updates This release includes three key user-facing and administrativ…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4162-new-features",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4162-technical-improvements",
+    "title": "Details of FastGPT v4.16.2 Technical Improvements",
+    "description": "Details of FastGPT v4.16.2 Technical Improvements Details of FastGPT v4.16.2 Technical Improvements UI & Administrative Enhancements This release includes…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4162-technical-improvements",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v42-qamodel-config-update",
+    "title": "Update FastGPT V4.2 QAModel Configuration Format",
+    "description": "Update FastGPT V4.2 QAModel Configuration Format This article records configuration and changes from a historical FastGPT release. Use it to understand th…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v42-qamodel-config-update",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v421-vector-models-update",
+    "title": "Update VectorModels Config for FastGPT v4.2.1",
+    "description": "Update VectorModels Config for FastGPT v4.2.1 This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v421-vector-models-update",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v43-init-api",
+    "title": "Run the Required FastGPT v43 Initialization API",
+    "description": "Run the Required FastGPT v43 Initialization API This article records configuration and changes from a historical FastGPT release. Use it to understand tha…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v43-init-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v44-initialization-api",
+    "title": "Run the FastGPT v44 Initialization API",
+    "description": "Run the FastGPT v44 Initialization API This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v44-initialization-api",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v445-init-api",
+    "title": "Run FastGPT v445 Variable Node Initialization",
+    "description": "Run FastGPT v445 Variable Node Initialization This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v445-init-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v447-initialization-api",
+    "title": "Run FastGPT v447 Initialization API",
+    "description": "Run FastGPT v447 Initialization API This article records configuration and changes from a historical FastGPT release. Use it to understand that release, a…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v447-initialization-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v45-pgvector-index-upgrade",
+    "title": "FastGPT V4.5 PgVector Index Upgrade Guide",
+    "description": "FastGPT V4.5 PgVector Index Upgrade Guide This article records configuration and changes from a historical FastGPT release. Use it to understand that rele…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v45-pgvector-index-upgrade",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v451-initialization-api",
+    "title": "Run FastGPT v451 Initialization API",
+    "description": "Run FastGPT v451 Initialization API This article records configuration and changes from a historical FastGPT release. Use it to understand that release, a…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v451-initialization-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v46-dataset-fix",
+    "title": "Fix V4.6 Dataset Import Display Failure",
+    "description": "Fix V4.6 Dataset Import Display Failure This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v46-dataset-fix",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v46-initialization-apis",
+    "title": "Run Required FastGPT v46 Initialization APIs",
+    "description": "Run Required FastGPT v46 Initialization APIs This article records configuration and changes from a historical FastGPT release. Use it to understand that r…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v46-initialization-apis",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v46-new-features",
+    "title": "Detailed Breakdown of FastGPT V4.6 New Features",
+    "description": "Detailed Breakdown of FastGPT V4.6 New Features This article records configuration and changes from a historical FastGPT release. Use it to understand tha…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v46-new-features",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v462-feature-updates",
+    "title": "Detailed FastGPT V4.6.2 Feature Update Overview",
+    "description": "Detailed FastGPT V4.6.2 Feature Update Overview This article records configuration and changes from a historical FastGPT release. Use it to understand tha…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v462-feature-updates",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v462-initialization-api",
+    "title": "Execute FastGPT v462 Initialization API for Self-Hosted Deployments",
+    "description": "Execute FastGPT v462 Initialization API for Self-Hosted Deployments This article records configuration and changes from a historical FastGPT release. Use…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v462-initialization-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v463-feature-updates",
+    "title": "FastGPT v4.6.3 Feature Updates and Fixes",
+    "description": "FastGPT v4.6.3 Feature Updates and Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that relea…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v463-feature-updates",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v463-init-api",
+    "title": "Run the FastGPT v463 Initialization API",
+    "description": "Run the FastGPT v463 Initialization API This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v463-init-api",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v464-feature-fix-updates",
+    "title": "FastGPT V4.6.4 Feature and Fix Updates",
+    "description": "FastGPT V4.6.4 Feature and Fix Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v464-feature-fix-updates",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v464-init-api",
+    "title": "Execute FastGPT v464 Administrative Initialization API",
+    "description": "Execute FastGPT v464 Administrative Initialization API This article records configuration and changes from a historical FastGPT release. Use it to underst…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v464-init-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v465-feature-updates",
+    "title": "FastGPT V4.6.5 New Features and Fixes",
+    "description": "FastGPT V4.6.5 New Features and Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v465-feature-updates",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v467-initialization-api",
+    "title": "Run the FastGPT v467 Initialization API",
+    "description": "Run the FastGPT v467 Initialization API This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v467-initialization-api",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v467-release-notes",
+    "title": "FastGPT v4.6.7 Release Feature and Fix Notes",
+    "description": "FastGPT v4.6.7 Release Feature and Fix Notes This article records configuration and changes from a historical FastGPT release. Use it to understand that r…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v467-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v468-release-feature-updates",
+    "title": "Key FastGPT V4.6.8 Release Feature Updates",
+    "description": "Key FastGPT V4.6.8 Release Feature Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that rel…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v468-release-feature-updates",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v469-initialization-script",
+    "title": "Perform FastGPT v469 Initialization Operations for Self-Hosted Deployments",
+    "description": "Perform FastGPT v469 Initialization Operations for Self-Hosted Deployments This article records configuration and changes from a historical FastGPT releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v469-initialization-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v47-release-updates",
+    "title": "FastGPT V4.7 Technical Release Updates",
+    "description": "FastGPT V4.7 Technical Release Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v47-release-updates",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v471-release-notes",
+    "title": "FastGPT V4.7.1 Official Release Change Reference",
+    "description": "FastGPT V4.7.1 Official Release Change Reference This article records configuration and changes from a historical FastGPT release. Use it to understand th…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v471-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v48-release-notes",
+    "title": "FastGPT V4.8 Feature Updates and Fixes",
+    "description": "FastGPT V4.8 Feature Updates and Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v48-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v481-initialization-script",
+    "title": "Run the FastGPT v4.8.1 Initialization Script",
+    "description": "Run the FastGPT v4.8.1 Initialization Script This article records configuration and changes from a historical FastGPT release. Use it to understand that r…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v481-initialization-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4812-release-notes",
+    "title": "FastGPT v4812 Feature Updates and Fixes",
+    "description": "FastGPT v4812 Feature Updates and Fixes This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4812-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4814-release-notes",
+    "title": "FastGPT v4814 Full Release Notes",
+    "description": "FastGPT v4814 Full Release Notes This article records configuration and changes from a historical FastGPT release. Use it to understand that release, and…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4814-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4815-migration-scripts",
+    "title": "Run Required FastGPT v4815 Post-Upgrade Migration Scripts",
+    "description": "Run Required FastGPT v4815 Post-Upgrade Migration Scripts This article records configuration and changes from a historical FastGPT release. Use it to unde…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4815-migration-scripts",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4815-release-notes",
+    "title": "FastGPT v4.8.15 Feature and Fix Release Notes",
+    "description": "FastGPT v4.8.15 Feature and Fix Release Notes This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4815-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4817-openai-account-migration",
+    "title": "Migrate User-Bound OpenAI Accounts for FastGPT v4817",
+    "description": "Migrate User-Bound OpenAI Accounts for FastGPT v4817 This article records configuration and changes from a historical FastGPT release. Use it to understan…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4817-openai-account-migration",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4818-fulltext-migration-script",
+    "title": "Run FastGPT v4.8.18 Full-Text Migration Script",
+    "description": "Run FastGPT v4.8.18 Full-Text Migration Script This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4818-fulltext-migration-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4818-release-notes",
+    "title": "FastGPT v4818 Upgrade Feature and Fix Summary",
+    "description": "FastGPT v4818 Upgrade Feature and Fix Summary This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4818-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4819-avatar-migration",
+    "title": "Migrate User Avatars for FastGPT v4819 Upgrade",
+    "description": "Migrate User Avatars for FastGPT v4819 Upgrade This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4819-avatar-migration",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4820-release-notes",
+    "title": "FastGPT v4820 Feature and Fix Updates",
+    "description": "FastGPT v4820 Feature and Fix Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4820-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4821-release-notes",
+    "title": "FastGPT Version 4821 Full Release Notes",
+    "description": "FastGPT Version 4821 Full Release Notes This article records configuration and changes from a historical FastGPT release. Use it to understand that releas…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4821-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v484-release-notes",
+    "title": "FastGPT v4.8.4 Release Feature and Fix Updates",
+    "description": "FastGPT v4.8.4 Release Feature and Fix Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v484-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v486-release-notes",
+    "title": "FastGPT v4.8.6 Feature and Fix Updates",
+    "description": "FastGPT v4.8.6 Feature and Fix Updates This article records configuration and changes from a historical FastGPT release. Use it to understand that release…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v486-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v487-release-notes",
+    "title": "FastGPT V4.8.7 Release Change Details",
+    "description": "FastGPT V4.8.7 Release Change Details This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v487-release-notes",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v4911-upgrade-script",
+    "title": "Run the Official FastGPT v4911 Upgrade Script",
+    "description": "Run the Official FastGPT v4911 Upgrade Script This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v4911-upgrade-script",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v492-upgrade-improvements",
+    "title": "Key FastGPT v492 Version Upgrade Improvements",
+    "description": "Key FastGPT v492 Version Upgrade Improvements This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v492-upgrade-improvements",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-v497-bug-fixes",
+    "title": "FastGPT v497 Detailed Bug Fix Summary",
+    "description": "FastGPT v497 Detailed Bug Fix Summary This article records configuration and changes from a historical FastGPT release. Use it to understand that release,…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-v497-bug-fixes",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/fastgpt-workflow-v2-upgrade",
+    "title": "Understand FastGPT Workflow V2 Upgrade Changes",
+    "description": "Understand FastGPT Workflow V2 Upgrade Changes This article records configuration and changes from a historical FastGPT release. Use it to understand that…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/fastgpt-workflow-v2-upgrade",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/deploy/milvus-upgrade-fastgpt",
+    "title": "Upgrade Milvus to 2.5.16+ for FastGPT",
+    "description": "Upgrade Milvus to 2.5.16+ for FastGPT Upgrade Milvus to 2.5.16+ Overview This documented upgrade procedure preserves all existing Milvus data volumes and…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/milvus-upgrade-fastgpt",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/deploy/pgvector-upgrade-docker-compose-fastgpt",
+    "title": "Upgrade Pgvector for Docker Compose FastGPT Deployments",
+    "description": "Upgrade Pgvector for Docker Compose FastGPT Deployments This article records configuration and changes from a historical FastGPT release. Use it to unders…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/pgvector-upgrade-docker-compose-fastgpt",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/pgvector-upgrade-sealos-fastgpt",
+    "title": "Upgrade Pgvector for Sealos FastGPT Deployments",
+    "description": "Upgrade Pgvector for Sealos FastGPT Deployments This article records configuration and changes from a historical FastGPT release. Use it to understand tha…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/pgvector-upgrade-sealos-fastgpt",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/deploy/share-link-chat-reporting-endpoint-update",
+    "title": "Adjust Share Link Chat Reporting Endpoint for Billing Changes",
+    "description": "Adjust Share Link Chat Reporting Endpoint for Billing Changes This article records configuration and changes from a historical FastGPT release. Use it to…",
+    "category": "deploy",
+    "locale": "en",
+    "publicPath": "/deploy/share-link-chat-reporting-endpoint-update",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/integration/feishu-bot-callback-permissions",
+    "title": "Configure Feishu Bot Callback Events and Permissions",
+    "description": "Configure Feishu Bot Callback Events and Permissions Configure Feishu Bot Callback Events and Permissions Event Setup Procedure Complete the following ste…",
+    "category": "integration",
+    "locale": "en",
+    "publicPath": "/integration/feishu-bot-callback-permissions",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/model/fastgpt-add-existing-provider-models",
+    "title": "Add Valid Models to FastGPT Provider Presets",
+    "description": "Add Valid Models to FastGPT Provider Presets Mandatory Pre-Addition Verification Before creating or updating a model preset, you must validate the model u…",
+    "category": "model",
+    "locale": "en",
+    "publicPath": "/model/fastgpt-add-existing-provider-models",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/model/fastgpt-team-plugin-installation-scope",
+    "title": "Clarify FastGPT Team Plugin Installation Scope",
+    "description": "Clarify FastGPT Team Plugin Installation Scope Core Installation Role Separation FastGPT enforces a clear split between system-wide and team-specific plug…",
+    "category": "model",
+    "locale": "en",
+    "publicPath": "/model/fastgpt-team-plugin-installation-scope",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/node/fastgpt-ai-model-config",
+    "title": "Configure AI Models for FastGPT Chat Nodes",
+    "description": "Configure AI Models for FastGPT Chat Nodes AI Model Configuration Overview This document outlines the formal process to set up and adjust AI models for Fa…",
+    "category": "node",
+    "locale": "en",
+    "publicPath": "/node/fastgpt-ai-model-config",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/node/fastgpt-sandbox-security-restrictions",
+    "title": "Understand the FastGPT Sandbox Security Restrictions",
+    "description": "Understand the FastGPT Sandbox Security Restrictions Sandbox Security Protection Overview The FastGPT sandbox v2 node implements multiple layered security…",
+    "category": "node",
+    "locale": "en",
+    "publicPath": "/node/fastgpt-sandbox-security-restrictions",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/node/loop-node-execution-limits",
+    "title": "Adjust FastGPT Loop Node Execution Limits",
+    "description": "Adjust FastGPT Loop Node Execution Limits Overview Self-hosted FastGPT operators and developers can adjust execution constraints for Loop and Parallel Run…",
+    "category": "node",
+    "locale": "en",
+    "publicPath": "/node/loop-node-execution-limits",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-agent-vm-lifecycle-scripts",
+    "title": "Configure and Manage FastGPT Agent VM Lifecycle Scripts",
+    "description": "Configure and Manage FastGPT Agent VM Lifecycle Scripts Startup Script Editor Access Under the Computer Configuration section of the Agent Configuration P…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-agent-vm-lifecycle-scripts",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-agent-vm-overview",
+    "title": "Describe FastGPT Agent Virtual Machine Features",
+    "description": "Describe FastGPT Agent Virtual Machine Features What is FastGPT Agent Virtual Machine The FastGPT Agent Virtual Machine (VM) is an isolated, per-session s…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-agent-vm-overview",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-answer-generation-optimization",
+    "title": "Improve FastGPT Answer Generation and Quality",
+    "description": "Improve FastGPT Answer Generation and Quality Core Answer Generation Challenges FastGPT’s answer generator produces natural language responses using retri…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-answer-generation-optimization",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-app-type-selection",
+    "title": "Select the Right FastGPT Application Types",
+    "description": "Select the Right FastGPT Application Types Core Application Type Overview After completing the four FastGPT quick start cases, users can categorize applic…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-app-type-selection",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-community-edition-overview",
+    "title": "FastGPT Community Edition Core Technical Overview",
+    "description": "FastGPT Community Edition Core Technical Overview Core Purpose and Included Capabilities FastGPT Community Edition is the free, base version of the FastGP…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-community-edition-overview",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-data-chunking-optimization",
+    "title": "Optimize Data Chunking for FastGPT RAG Workflows",
+    "description": "Optimize Data Chunking for FastGPT RAG Workflows Core Purpose of Data Chunking Proper chunking strategies enable FastGPT to efficiently locate target info…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-data-chunking-optimization",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-dataset-retrieval-optimization",
+    "title": "Optimize Retrieval Performance for FastGPT Datasets",
+    "description": "Optimize Retrieval Performance for FastGPT Datasets The retrieval component directly determines the relevance and accuracy of answers generated via FastGP…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-dataset-retrieval-optimization",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-documentation-toc-reference",
+    "title": "FastGPT Official Documentation Table of Contents Reference",
+    "description": "FastGPT Official Documentation Table of Contents Reference FastGPT Documentation TOC Reference Overview This page provides a structured, curated reference…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-documentation-toc-reference",
+    "sourceType": "官方文档",
+    "minutes": 10
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-open-source-license-compliance-2",
+    "title": "FastGPT Open Source License Compliance Guidelines",
+    "description": "FastGPT Open Source License Compliance Guidelines FastGPT Open Source License Overview The FastGPT project is distributed under the terms of the Apache Li…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-open-source-license-compliance-2",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-rag-dataset-technical-advantages",
+    "title": "FastGPT RAG Dataset Core Technical Advantages",
+    "description": "FastGPT RAG Dataset Core Technical Advantages FastGPT RAG Dataset Core Technical Advantages Information Completeness and Grounded Output FastGPT’s RAG fra…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-rag-dataset-technical-advantages",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-resource-permission-reference-2",
+    "title": "FastGPT Resource Permission Reference",
+    "description": "FastGPT Resource Permission Reference FastGPT Resource Permission Reference FastGPT organizes access controls around discrete resource types, including ap…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-resource-permission-reference-2",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-skill-deduplication-mechanism-2",
+    "title": "Prevent Repeated Execution of Skill Scripts",
+    "description": "Prevent Repeated Execution of Skill Scripts Smart Deduplication Mechanism Overview Repeated execution of environment initialization scripts across consecu…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-skill-deduplication-mechanism-2",
+    "sourceType": "官方文档",
+    "minutes": 6
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-version-snapshot-publishing",
+    "title": "Save and Publish FastGPT Version Snapshots",
+    "description": "Save and Publish FastGPT Version Snapshots Introduction to FastGPT Version Snapshots FastGPT enables users to preserve verified application states as offi…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-version-snapshot-publishing",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-vm-startup-scripts",
+    "title": "Configure Startup Scripts for FastGPT VM Sandboxes",
+    "description": "Configure Startup Scripts for FastGPT VM Sandboxes What Are FastGPT VM Startup Scripts When the Computer configuration option is enabled for a FastGPT Age…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-vm-startup-scripts",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/tutorial/fastgpt-vm-status-deduplication",
+    "title": "Eliminate Repeated Command Execution Latency",
+    "description": "Eliminate Repeated Command Execution Latency Virtual Machine Status Deduplication Overview This system mitigates latency caused by repeated execution of s…",
+    "category": "tutorial",
+    "locale": "en",
+    "publicPath": "/tutorial/fastgpt-vm-status-deduplication",
+    "sourceType": "官方文档",
+    "minutes": 6
   }
 ]

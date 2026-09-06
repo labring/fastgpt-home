@@ -9,7 +9,8 @@ export type TechCategoryKey =
   | 'api'
   | 'reference'
   | 'model'
-  | 'glossary';
+  | 'glossary'
+  | 'compare';
 
 export type TechCategory = Exclude<TechCategoryKey, 'all'>;
 export type TechSource = '官方文档' | 'GitHub issue' | '深度场景内容';

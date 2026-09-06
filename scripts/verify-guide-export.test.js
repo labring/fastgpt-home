@@ -6,7 +6,8 @@ const path = require('node:path');
 const test = require('node:test');
 
 const registry = require('../src/content/guides/registry.json');
-const projectedRegistry = registry.entries;
+const { entryCount } = require('../src/content/guides/policy.json');
+const expectedPageCount = entryCount + 1;
 const {
   assertNoCaseFoldCollisions,
   parseArgs,
@@ -75,7 +76,7 @@ function updatedAt(source, locale) {
   return `Last updated ${label}`;
 }
 
-function writeFixture(outDir, variant, { entries = projectedRegistry, style = 'flat' } = {}) {
+function writeFixture(outDir, variant, { entries = registry.entries, style = 'flat' } = {}) {
   const locale = variant === 'cn' ? 'zh' : 'en';
   const host = variant === 'cn' ? 'https://fastgpt.cn' : 'https://fastgpt.io';
   const hub = HUB_COPY[locale];
@@ -227,20 +228,6 @@ function assertScopedFailure(run, { variant, slug, filePath, surface, reason }) 
   });
 }
 
-test('tracer accepts exact io Guide inventory', () => {
-  const outDir = fs.mkdtempSync(path.join(os.tmpdir(), 'verify-guide-export-'));
-  try {
-    writeFixture(outDir, 'io');
-    assert.deepEqual(verifyGuideExport({ outDir, variant: 'io' }), {
-      variant: 'io',
-      pages: 24,
-      sitemapUrls: 24
-    });
-  } finally {
-    fs.rmSync(outDir, { recursive: true, force: true });
-  }
-});
-
 test('happy artifact matrix accepts exact io and cn Guide inventories', () => {
   for (const variant of ['io', 'cn']) {
     const outDir = fs.mkdtempSync(path.join(os.tmpdir(), `verify-guide-export-${variant}-`));
@@ -248,13 +235,13 @@ test('happy artifact matrix accepts exact io and cn Guide inventories', () => {
       writeFixture(outDir, variant);
       assert.deepEqual(verifyGuideExport({ outDir, variant }), {
         variant,
-        pages: 24,
-        sitemapUrls: 24
+        pages: expectedPageCount,
+        sitemapUrls: expectedPageCount
       });
       assert.equal(fs.existsSync(path.join(outDir, 'guide.html')), true);
       assert.equal(
         fs.readdirSync(path.join(outDir, 'guide')).filter((name) => name.endsWith('.html')).length,
-        23
+        entryCount
       );
     } finally {
       fs.rmSync(outDir, { recursive: true, force: true });
@@ -290,7 +277,12 @@ test('CLI reports the selected variant and exact Guide counts', () => {
       [path.join(__dirname, 'verify-guide-export.js'), '--out-dir', outDir, '--variant', 'cn'],
       { encoding: 'utf8' }
     );
-    assert.match(output, /variant=cn Guide HTML verified: 24 pages, 24 sitemap URLs/);
+    assert.match(
+      output,
+      new RegExp(
+        `variant=cn Guide HTML verified: ${expectedPageCount} pages, ${expectedPageCount} sitemap URLs`
+      )
+    );
     assert.match(output, /tracer=poc-30-day-design/);
   } finally {
     fs.rmSync(outDir, { recursive: true, force: true });
@@ -633,8 +625,8 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
       writeFixture(outDir, variant, { style: 'nested' });
       assert.deepEqual(verifyGuideExport({ outDir, variant }), {
         variant,
-        pages: 24,
-        sitemapUrls: 24
+        pages: expectedPageCount,
+        sitemapUrls: expectedPageCount
       });
       fs.rmSync(outDir, { recursive: true, force: true });
       fs.mkdirSync(outDir);
@@ -680,8 +672,8 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
       writeRoute(outDir, 'zh/guide', '<html><body>adapter</body></html>');
       assert.deepEqual(verifyGuideExport({ outDir, variant }), {
         variant,
-        pages: 24,
-        sitemapUrls: 24
+        pages: expectedPageCount,
+        sitemapUrls: expectedPageCount
       });
 
       const sitemapCases = [
@@ -758,7 +750,9 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
       assert.equal(success.status, 0);
       assert.match(
         success.stdout,
-        new RegExp(`variant=${variant} Guide HTML verified: 24 pages, 24 sitemap URLs`)
+        new RegExp(
+          `variant=${variant} Guide HTML verified: ${expectedPageCount} pages, ${expectedPageCount} sitemap URLs`
+        )
       );
       fs.rmSync(path.join(outDir, 'guide', `${registry.entries[0].slug}.html`));
       const failed = spawnSync(

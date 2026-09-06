@@ -2,6 +2,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const {
+  BASELINE_SLUGS: G1_BASELINE_SLUGS,
   G1_GUIDE_SLUGS,
   G2_GUIDE_SLUGS,
   GUIDE_LOCALES,
@@ -29,23 +30,7 @@ const REQUIRED_COMPLIANCE_TERMS = Object.freeze({
   zh: [/合规/, /数据流转|出站策略/, /审查/, /私有化/],
   en: [/compliance/i, /data egress/i, /review/i, /On-Premises|private deployment/i]
 });
-const BASELINE_SLUGS = Object.freeze([
-  'saas-platform-enterprise-gaps',
-  'self-build-three-year-tco',
-  'server-sizing-guide',
-  'complex-doc-golden-set',
-  'poc-30-day-design',
-  'database-qa-integration-guide',
-  'scheduled-report-automation',
-  'support-bot-four-steps',
-  'manufacturing-itops-invoice-audit',
-  'pharma-compliance-docs',
-  'education-retail-support-insight',
-  'finance-research-retrieval',
-  'finance-daily-report-automation',
-  'migrate-saas-to-selfhost',
-  'embed-ai-into-product'
-]);
+const BASELINE_SLUGS = Object.freeze([...G1_BASELINE_SLUGS, ...G1_GUIDE_SLUGS]);
 
 function fail(message) {
   throw new Error(`[verify-guide-g2-release] ${message}`);

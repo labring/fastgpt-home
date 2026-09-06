@@ -5,6 +5,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
+const { entryCount } = require('../src/content/guides/policy.json');
 
 const ROOT = path.resolve(__dirname, '..');
 const registry = JSON.parse(
@@ -64,14 +65,17 @@ function withGuideRoot(slug, mutate, verify) {
   }
 }
 
-test('approved Guide corpus reports the complete 23x2 contract', () => {
+test('approved Guide corpus reports every bilingual entry in the publication policy', () => {
   const result = spawnSync(process.execPath, ['scripts/verify-guide-content.js'], {
     cwd: ROOT,
     encoding: 'utf8'
   });
 
   assert.equal(result.status, 0, result.stderr);
-  assert.equal(result.stdout, 'Guide content verified: 23 slugs, 46 documents\n');
+  assert.equal(
+    result.stdout,
+    `Guide content verified: ${entryCount} slugs, ${entryCount * 2} documents\n`
+  );
   assert.equal(result.stderr, '');
 });
 
@@ -176,7 +180,10 @@ test('CLI parser retains focused slug and locale modes', () => {
   assertFailure(() => parseArgs(['--locale', 'fr']), /invalid locale/);
 });
 
-test('registry rejects duplicate slugs, incomplete pairs, and invalid schemas', () => {
+test('registry rejects missing or duplicate slugs, incomplete pairs, and invalid schemas', () => {
+  const missingEntry = registry.entries.slice(1);
+  assertFailure(() => verifyGuideRegistry(missingEntry), /registry: expected \d+ entries/);
+
   const duplicate = structuredClone(registry.entries);
   duplicate.push(structuredClone(findEntry(duplicate, 'saas-platform-enterprise-gaps')));
   assertFailure(() => verifyGuideRegistry(duplicate), /saas-platform-enterprise-gaps: duplicate/);

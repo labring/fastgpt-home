@@ -44,7 +44,8 @@ export default function SolutionHero({
   const consultationLink = getConsultationLinkProps({
     source: 'customers_hero',
     solutionId: solution.id,
-    solutionTitle: solution.title
+    solutionTitle: solution.title,
+    solutionSlug: solution.slug
   });
 
   return (

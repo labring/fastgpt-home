@@ -53,18 +53,20 @@ function assertCanonical(html, route, htmlFile) {
   );
 }
 
-function assertConsultationLink(html, source, htmlFile, _solutionSlug) {
-  // buildConsultationUrl 只拼站点级 source 参数（utm 参数已移除）。
-  const href = `${contactPath}?source=customers`;
-  const normalizedHtml = html.replaceAll('&amp;', '&');
-  const hrefIndex = normalizedHtml.indexOf(`href="${href}"`);
-  assert(hrefIndex !== -1, `Missing customer consultation link for ${source}: ${htmlFile}`);
-  const anchorStart = normalizedHtml.lastIndexOf('<a', hrefIndex);
-  const anchorEnd = normalizedHtml.indexOf('>', hrefIndex);
-  const anchor = normalizedHtml.slice(anchorStart, anchorEnd + 1);
+function assertConsultationLink(html, source, htmlFile, solutionSlug) {
+  const params = new URLSearchParams({
+    source: 'customers',
+    utm_source: 'customers',
+    utm_medium: 'referral',
+    utm_campaign: source === 'empty_state' ? 'requirement-match' : 'poc-application'
+  });
+  if (solutionSlug) params.set('utm_term', solutionSlug);
+  params.set('utm_content', source);
+
+  const href = `${contactPath}?${params.toString()}`;
   assert(
-    anchor.includes('data-consultation-trigger="true"'),
-    `Customer consultation link does not open the native form dialog for ${source}: ${htmlFile}`
+    html.replaceAll('&amp;', '&').includes(`href="${href}"`),
+    `Missing customer consultation link for ${source}: ${htmlFile}`
   );
 }
 

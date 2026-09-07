@@ -50,7 +50,8 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
           build-args: |
-            NEXT_PUBLIC_BAIDU_TONGJI=${{ secrets.NEXT_PUBLIC_BAIDU_TONGJI }}
+            NEXT_PUBLIC_BAIDU_TONGJI=49747f8b12850fd2f7824a9b7f3a4467
+            NEXT_PUBLIC_CLARITY_TONGJI=ybhfsnxoxi
             NEXT_PUBLIC_BAIDU_KEY=${{ secrets.NEXT_PUBLIC_BAIDU_KEY }}
             NEXT_PUBLIC_HOME_URL=${{ secrets.NEXT_PUBLIC_HOME_URL }}
             NEXT_PUBLIC_SITE_VARIANT=cn

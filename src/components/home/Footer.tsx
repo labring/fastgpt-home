@@ -42,6 +42,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
   const normalizedLocale = normalizeLocale(locale);
   const faqLocale = normalizedLocale === 'zh' ? 'zh' : 'en';
   const guideLocale = normalizedLocale === 'zh' ? 'zh' : 'en';
+  const techLocale = normalizedLocale === 'zh' ? 'zh' : 'en';
 
   return [
     {
@@ -95,15 +96,11 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
           href: getDefaultLocalePath(faqLocale, '/faq'),
           external: false
         },
-        ...(normalizedLocale === 'zh'
-          ? [
-              {
-                label: t.links.items.tech,
-                href: getDefaultLocalePath(normalizedLocale, '/tech-center'),
-                external: false
-              }
-            ]
-          : [])
+        {
+          label: t.links.items.tech,
+          href: getDefaultLocalePath(techLocale, '/tech-center'),
+          external: false
+        }
       ]
     },
     {

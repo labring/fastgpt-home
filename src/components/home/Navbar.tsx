@@ -1,22 +1,18 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 import { defaultLocale } from '@/lib/i18n';
 import { getNavHref } from '@/lib/utils';
-import {
-  getDefaultLocalePath,
-  navigateTo,
-  rememberPreferredLanguage
-} from '@/lib/clientNavigation';
+import { getLanguageTargets, prepareLanguageLink } from '@/lib/languageNavigation';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';
+import LanguageRecommendation from '@/components/header/LanguageRecommendation';
 import Image from 'next/image';
-import { localeConfigs, type LocaleCode } from '@/lib/locales';
+import { localeConfigs, normalizeLocale, type LocaleCode } from '@/lib/locales';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
-import { getPublishedLocaleCodes } from '@/lib/siteRouting';
-import { getReviewLocalePath } from '@/lib/siteRouting';
+import { getLocaleHreflang } from '@/lib/siteRouting';
 import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 
 interface NavLink {
@@ -72,38 +68,33 @@ export default function Navbar({
   const [hideNavbar, setHideNavbar] = useState(false);
   const [langSheetOpen, setLangSheetOpen] = useState(false);
   const params = useParams<{ lang: string }>();
-  const lang = params?.lang || locale || defaultLocale;
+  const lang = normalizeLocale(locale || params?.lang || defaultLocale);
+  const [recommendationHeight, setRecommendationHeight] = useState(0);
+  const languageDialog = useRef<HTMLDialogElement>(null);
   const defaultContactUrl = useContactUrl(lang);
   const contactUrl = consultHref || defaultContactUrl;
   const desktopStartUrl = useStartUrl();
   const mobileStartUrl = useStartUrl();
   const pathname = usePathname();
   const resolvedLinks = links.filter((link) => link.href !== '/tech-center');
-  const routeWithoutLang = (() => {
-    if (!params?.lang) return pathname;
-    const currentLangPrefix = `/${params.lang}`;
-    if (pathname.startsWith(currentLangPrefix)) {
-      return pathname.slice(currentLangPrefix.length) || '/';
-    }
-    return pathname;
-  })();
-  const availableLocaleCodes = getPublishedLocaleCodes();
-  const pageLocaleCodes: readonly LocaleCode[] = publishedLocales ?? availableLocaleCodes;
-  const languageKeys = pageLocaleCodes.filter(
-    (key) => languageSwitchPaths?.[key] || availableLocaleCodes.includes(key)
+  const languageTargets = useMemo(
+    () =>
+      getLanguageTargets({
+        pathname,
+        routeLocale: params?.lang,
+        publishedLocales,
+        reviewLocalePaths,
+        languageSwitchPaths
+      }),
+    [pathname, params?.lang, publishedLocales, reviewLocalePaths, languageSwitchPaths]
   );
-  const hasLanguageSwitcher = languageKeys.length > 1;
-  const getLocalizedPath = (value: string) =>
-    languageSwitchPaths?.[value as LocaleCode] ||
-    (reviewLocalePaths
-      ? getReviewLocalePath(value, routeWithoutLang)
-      : getDefaultLocalePath(value, routeWithoutLang));
+  const hasLanguageSwitcher = languageTargets.length > 1;
 
-  const handleSwitchLanguage = (value: string) => {
-    if (value === lang) return;
-    rememberPreferredLanguage(value);
-    navigateTo(getLocalizedPath(value));
-  };
+  useEffect(() => {
+    const dialog = languageDialog.current;
+    if (langSheetOpen && dialog && !dialog.open) dialog.showModal();
+    if (!langSheetOpen && dialog?.open) dialog.close();
+  }, [langSheetOpen]);
 
   const langConfig = localeConfigs.reduce((acc, locale) => {
     acc[locale.code] = { flag: locale.flag, label: locale.name };
@@ -183,7 +174,14 @@ export default function Navbar({
 
   return (
     <>
+      <LanguageRecommendation
+        currentLocale={lang}
+        targets={languageTargets}
+        onHeightChange={setRecommendationHeight}
+      />
+      <div aria-hidden="true" style={{ height: recommendationHeight }} />
       <nav
+        style={{ top: recommendationHeight }}
         className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 ${
           hideNavbar ? '-translate-y-full' : 'translate-y-0'
         } ${variant === 'comparison' ? 'comparison-navbar' : ''}`}
@@ -229,13 +227,7 @@ export default function Navbar({
           <div className="hidden md:flex items-center gap-4">
             {hasLanguageSwitcher && (
               <div className="home-lang">
-                <LangSwitcher
-                  iconOnly
-                  locale={lang}
-                  publishedLocales={publishedLocales}
-                  reviewLocalePaths={reviewLocalePaths}
-                  languageSwitchPaths={languageSwitchPaths}
-                />
+                <LangSwitcher iconOnly locale={lang} targets={languageTargets} />
               </div>
             )}
             <a
@@ -317,6 +309,7 @@ export default function Navbar({
           className={`md:hidden fixed inset-0 z-40 bg-white ${
             variant === 'comparison' ? 'comparison-mobile-menu' : ''
           }`}
+          style={{ top: recommendationHeight }}
           onClick={() => setMobileOpen(false)}
         >
           <div
@@ -399,50 +392,54 @@ export default function Navbar({
         </div>
       )}
 
-      {/* Mobile language bottom sheet */}
-      {hasLanguageSwitcher && langSheetOpen && (
-        <div className="md:hidden fixed inset-0 z-[70]" onClick={() => setLangSheetOpen(false)}>
-          <div className="absolute inset-0 bg-black/30" />
-          <div
-            className={`absolute bottom-0 left-0 right-0 bg-white rounded-t-2xl p-6 ${
-              variant === 'comparison' ? 'comparison-language-sheet' : ''
-            }`}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="w-10 h-1 bg-gray-200 rounded-full mx-auto mb-6" />
-            <div className="flex flex-col gap-1">
-              {languageKeys.map((key) => (
-                <button
-                  key={key}
-                  className="flex items-center justify-between py-3 px-4 rounded-lg text-[16px] text-ink-sub hover:bg-gray-50 transition-colors"
-                  onClick={() => {
-                    handleSwitchLanguage(key);
+      {/* Native dialog provides focus containment, Escape, and focus restoration. */}
+      {hasLanguageSwitcher && (
+        <dialog
+          ref={languageDialog}
+          aria-label="Switch language"
+          onCancel={() => setLangSheetOpen(false)}
+          onClose={() => setLangSheetOpen(false)}
+          onClick={(event) => {
+            if (event.target === event.currentTarget) setLangSheetOpen(false);
+          }}
+          className="fixed inset-x-0 bottom-0 top-auto m-0 max-h-[85dvh] w-full max-w-none overflow-y-auto rounded-t-2xl border-0 bg-white p-0 text-ink backdrop:bg-black/30"
+        >
+          <div className={`p-6 ${variant === 'comparison' ? 'comparison-language-sheet' : ''}`}>
+            <button
+              type="button"
+              aria-label="Close language menu"
+              className="mb-2 ml-auto block h-11 w-11 rounded-lg text-xl hover:bg-slate-100"
+              onClick={() => setLangSheetOpen(false)}
+            >
+              <span aria-hidden="true">×</span>
+            </button>
+            <nav aria-label="Available languages" className="flex flex-col gap-1">
+              {languageTargets.map((target) => (
+                <a
+                  key={target.locale}
+                  href={target.href}
+                  hrefLang={getLocaleHreflang(target.locale)}
+                  lang={getLocaleHreflang(target.locale)}
+                  data-language-switch={target.locale}
+                  aria-current={target.locale === lang ? 'page' : undefined}
+                  className="flex min-h-11 items-center justify-between rounded-lg px-4 py-3 text-[16px] text-ink-sub hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+                  onClick={(event) => {
+                    prepareLanguageLink(event.currentTarget, target);
                     setLangSheetOpen(false);
+                    setMobileOpen(false);
                   }}
+                  onAuxClick={(event) => prepareLanguageLink(event.currentTarget, target)}
+                  onContextMenu={(event) => prepareLanguageLink(event.currentTarget, target)}
                 >
-                  <span className="flex items-center gap-3">
-                    <span className="text-xl">{langConfig[key]?.flag}</span>
-                    <span>{langConfig[key]?.label}</span>
+                  <span>
+                    {langConfig[target.locale]?.flag} {langConfig[target.locale]?.label}
                   </span>
-                  {key === lang && (
-                    <svg
-                      width="18"
-                      height="18"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="2.5"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <polyline points="20 6 9 17 4 12" />
-                    </svg>
-                  )}
-                </button>
+                  {target.locale === lang && <span aria-hidden="true">✓</span>}
+                </a>
               ))}
-            </div>
+            </nav>
           </div>
-        </div>
+        </dialog>
       )}
     </>
   );

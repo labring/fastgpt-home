@@ -1804,46 +1804,6 @@ body:has(.comparison-page-shell) {
   color: var(--comparison-text);
 }
 
-/* LangSwitcher inside v2 navbar: normalize for light theme */
-.home-lang button {
-  background: transparent !important;
-  border: none !important;
-  height: auto !important;
-  font-weight: 400 !important;
-  letter-spacing: normal !important;
-  transition: color 0.2s ease;
-}
-.home-lang button:hover {
-  color: var(--home-dark) !important;
-  background: transparent !important;
-}
-.home-lang .focus\:ring-ring:focus,
-.home-lang button:focus,
-.home-lang button:focus-visible {
-  outline: none !important;
-  box-shadow: none !important;
-}
-
-/* LangSwitcher dropdown (listbox) inside the home navbar — white-based panel.
-   The shared LangSwitcher component uses HeroUI's `bg-popover` which is dark
-   under the legacy theme; override for the home scope. */
-.home-lang [role='listbox'] {
-  background-color: #ffffff !important;
-  color: var(--home-dark) !important;
-  border: 1px solid var(--home-hairline) !important;
-  box-shadow: 0 8px 24px -8px rgba(15, 23, 42, 0.12), 0 2px 6px -2px rgba(15, 23, 42, 0.08) !important;
-}
-.home-lang [role='listbox'] [role='option'] {
-  color: var(--home-secondary) !important;
-  background: transparent !important;
-}
-.home-lang [role='listbox'] [role='option']:hover,
-.home-lang [role='listbox'] [role='option']:focus,
-.home-lang [role='listbox'] [role='option'][aria-selected='true'] {
-  background-color: var(--home-light-bg) !important;
-  color: var(--home-dark) !important;
-}
-
 /* Aurora gradient hue-shift animation */
 @keyframes aurora-hue {
   0% {

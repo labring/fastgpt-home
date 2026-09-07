@@ -7,7 +7,7 @@ import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
-import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
+import type { TechPublishedLocale } from '@/lib/publishedLocales';
 import type { TechArticle } from '@/lib/tech-center-content';
 import { getTechnicalReviewPath } from '@/lib/technicalRouting';
 import { isPreviewSite } from '@/lib/siteRouting';
@@ -86,7 +86,7 @@ export default function TechArticlePage({
         links={links}
         t={navCta}
         locale={locale}
-        publishedLocales={techPublishedLocaleCodes}
+        publishedLocales={[locale as TechPublishedLocale]}
         reviewLocalePaths={isPreviewSite}
       />
       <main className={styles.page}>

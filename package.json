@@ -17,6 +17,7 @@
     "verify:p2": "node scripts/verify-p2.js",
     "verify:site-analytics": "node --test scripts/verify-site-analytics.test.js",
     "verify:i18n-seo": "node scripts/verify-i18n-seo.js",
+    "verify:language-navigation": "node --test scripts/verify-language-navigation.test.js",
     "verify:deep-content": "node scripts/verify-deep-content.js",
     "verify:faq-routes": "node scripts/verify-faq-routes.js",
     "verify:faq-redirects": "node scripts/verify-faq-redirects.js",

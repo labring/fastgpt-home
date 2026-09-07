@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
+import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
@@ -172,7 +173,12 @@ export default function ContactPage({ locale, dict }: { locale: string; dict: Di
     <div ref={rootRef} className="home min-h-screen bg-white font-sans text-ink">
       <HomeThemeFix />
 
-      <Navbar links={dict.links} t={dict.Home.navCta} locale={contactLocale} />
+      <Navbar
+        links={dict.links}
+        t={dict.Home.navCta}
+        locale={contactLocale}
+        publishedLocales={contactPublishedLocaleCodes}
+      />
 
       <main className="overflow-x-hidden w-full max-w-full">
         <section className="relative overflow-hidden bg-white px-5 pb-32 pt-36 text-ink sm:px-8 md:pb-48 md:pt-44">

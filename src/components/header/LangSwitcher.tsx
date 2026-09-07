@@ -1,166 +1,94 @@
 'use client';
-import { defaultLocale } from '@/lib/i18n';
-import { useParams, usePathname } from 'next/navigation';
-import { useEffect, useRef, useState } from 'react';
-import { ChevronDown } from 'lucide-react';
-import {
-  getDefaultLocalePath,
-  navigateTo,
-  rememberPreferredLanguage
-} from '@/lib/clientNavigation';
+
+import { useEffect, useRef } from 'react';
+import { Check, ChevronDown, Languages } from 'lucide-react';
 import { localeConfigs, type LocaleCode } from '@/lib/locales';
-import { getPublishedLocaleCodes } from '@/lib/siteRouting';
-import { getReviewLocalePath } from '@/lib/siteRouting';
-
-const langConfig = localeConfigs.reduce((acc, locale) => {
-  acc[locale.code] = { flag: locale.flag, label: locale.name };
-  return acc;
-}, {} as Record<string, { flag: string; label: string }>);
-
-function TranslateIcon({ size = 20 }: { size?: number }) {
-  return (
-    <svg
-      width={size}
-      height={size}
-      viewBox="0 0 24 24"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M5 8L11 14M4 14L10 8L12 5M2 5H14M7 2H8M22 22L17 12L12 22M14 18H20"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
+import { getLocaleHreflang } from '@/lib/siteRouting';
+import { prepareLanguageLink, type LanguageTarget } from '@/lib/languageNavigation';
 
 export const LangSwitcher = ({
   iconOnly = false,
   locale,
-  publishedLocales,
-  reviewLocalePaths = false,
-  languageSwitchPaths
+  targets
 }: {
   iconOnly?: boolean;
-  locale?: string;
-  publishedLocales?: readonly LocaleCode[];
-  reviewLocalePaths?: boolean;
-  languageSwitchPaths?: Partial<Record<LocaleCode, string>>;
+  locale: LocaleCode;
+  targets: LanguageTarget[];
 }) => {
-  const params = useParams<{ lang: string }>();
-  const lang = params.lang;
-  const pathname = usePathname();
-  const langName = lang || locale || defaultLocale;
-  const [open, setOpen] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
-  const routeWithoutLang = (() => {
-    if (!lang) return pathname;
-    const currentLangPrefix = `/${lang}`;
-    if (pathname.startsWith(currentLangPrefix)) {
-      return pathname.slice(currentLangPrefix.length) || '/';
-    }
-    return pathname;
-  })();
-  const availableLocaleCodes = getPublishedLocaleCodes();
-  const pageLocaleCodes: readonly LocaleCode[] = publishedLocales ?? availableLocaleCodes;
-  const languageKeys = pageLocaleCodes.filter(
-    (key) => languageSwitchPaths?.[key] || availableLocaleCodes.includes(key)
-  );
-  const getLocalizedPath = (value: string) =>
-    languageSwitchPaths?.[value as LocaleCode] ||
-    (reviewLocalePaths
-      ? getReviewLocalePath(value, routeWithoutLang)
-      : getDefaultLocalePath(value, routeWithoutLang));
-
-  const handleSwitchLanguage = (value: string) => {
-    if (value === langName) return;
-    rememberPreferredLanguage(value);
-    navigateTo(getLocalizedPath(value));
-  };
+  const ref = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
-    const handler = (e: MouseEvent) => {
-      if (ref.current && !ref.current.contains(e.target as Node)) {
-        setOpen(false);
-      }
+    const closeOutside = (event: MouseEvent) => {
+      if (ref.current && !ref.current.contains(event.target as Node)) ref.current.open = false;
     };
-    document.addEventListener('mousedown', handler);
-    return () => document.removeEventListener('mousedown', handler);
+    document.addEventListener('mousedown', closeOutside);
+    return () => document.removeEventListener('mousedown', closeOutside);
   }, []);
 
-  if (languageKeys.length < 2) return null;
-
-  const current = langConfig[langName];
+  if (targets.length < 2) return null;
+  const current = localeConfigs.find((config) => config.code === locale);
 
   return (
-    <div ref={ref} className="relative">
-      <button
-        onClick={() => setOpen(!open)}
-        className={`flex items-center gap-1.5 rounded-md border-none cursor-pointer ${
-          iconOnly
-            ? 'p-1.5 hover:bg-black/5 transition-colors text-ink-sub hover:text-ink'
-            : 'h-10 px-3 py-2 text-sm bg-white/20 hover:bg-white/10'
-        }`}
+    <details
+      ref={ref}
+      className="relative"
+      onKeyDown={(event) => {
+        if (event.key === 'Escape' && ref.current?.open) {
+          ref.current.open = false;
+          ref.current.querySelector('summary')?.focus();
+        }
+      }}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget)) event.currentTarget.open = false;
+      }}
+    >
+      <summary
         aria-label="Switch language"
-        aria-expanded={open}
-        aria-haspopup="listbox"
+        className={`flex cursor-pointer list-none items-center gap-1.5 rounded-md text-ink-sub hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 [&::-webkit-details-marker]:hidden ${
+          iconOnly ? 'p-1.5' : 'h-10 px-3 py-2 text-sm'
+        }`}
       >
         {iconOnly ? (
-          <TranslateIcon size={18} />
+          <Languages size={18} aria-hidden="true" />
         ) : (
           <>
-            <span className="flex items-center gap-1.5">
-              <span className="text-base leading-none">{current?.flag}</span>
-              <span className="text-sm">{current?.label}</span>
+            <span>
+              {current?.flag} {current?.name}
             </span>
-            <ChevronDown className="h-4 w-4 opacity-50" />
+            <ChevronDown className="h-4 w-4 opacity-50" aria-hidden="true" />
           </>
         )}
-      </button>
-      {open && (
-        <div
-          role="listbox"
-          className="absolute right-0 top-full mt-1 z-50 min-w-[8rem] overflow-hidden rounded-md border bg-popover text-popover-foreground shadow-md animate-in fade-in-0 zoom-in-95"
-        >
-          <div className="p-1">
-            {languageKeys.map((key: string) => (
-              <div
-                role="option"
-                aria-selected={key === langName}
-                key={key}
-                className="relative flex w-full cursor-pointer select-none items-center rounded-sm py-1.5 px-3 text-sm outline-none hover:bg-accent hover:text-accent-foreground"
-                onClick={() => {
-                  handleSwitchLanguage(key);
-                  setOpen(false);
-                }}
-              >
-                <span className="flex items-center gap-2">
-                  <span className="text-base leading-none">{langConfig[key]?.flag}</span>
-                  <span>{langConfig[key]?.label}</span>
-                </span>
-                {key === langName && (
-                  <svg
-                    className="ml-auto"
-                    width="14"
-                    height="14"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  >
-                    <polyline points="20 6 9 17 4 12" />
-                  </svg>
-                )}
-              </div>
-            ))}
-          </div>
-        </div>
-      )}
-    </div>
+      </summary>
+      <nav
+        aria-label="Available languages"
+        data-language-menu
+        className="absolute right-0 top-full z-50 mt-1 min-w-[11rem] rounded-md border border-hairline-soft bg-white p-1 text-ink shadow-md"
+      >
+        {targets.map((target) => {
+          const config = localeConfigs.find((candidate) => candidate.code === target.locale)!;
+          return (
+            <a
+              key={target.locale}
+              href={target.href}
+              hrefLang={getLocaleHreflang(target.locale)}
+              lang={config.htmlLang}
+              data-language-switch={target.locale}
+              aria-current={target.locale === locale ? 'page' : undefined}
+              className="flex min-h-11 items-center gap-2 rounded-sm px-3 py-2 text-sm hover:bg-slate-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-blue-600"
+              onClick={(event) => {
+                prepareLanguageLink(event.currentTarget, target);
+                if (ref.current) ref.current.open = false;
+              }}
+              onAuxClick={(event) => prepareLanguageLink(event.currentTarget, target)}
+              onContextMenu={(event) => prepareLanguageLink(event.currentTarget, target)}
+            >
+              <span aria-hidden="true">{config.flag}</span>
+              <span>{config.name}</span>
+              {target.locale === locale && <Check className="ml-auto h-4 w-4" aria-hidden="true" />}
+            </a>
+          );
+        })}
+      </nav>
+    </details>
   );
 };

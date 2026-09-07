@@ -317,7 +317,7 @@ function verifyInitialJavaScript(rootHtml) {
     const href = getAttribute(tag, 'href') || '';
     return getAttribute(tag, 'rel') === 'preload' && /^https?:\/\//.test(href);
   });
-  assert.equal(externalScriptPreloads.length, 0, 'Analytics scripts must load after page idle');
+  assert.equal(externalScriptPreloads.length, 0, 'Analytics scripts must load after hydration');
   const externalScripts = getTags(rootHtml, 'script').filter((tag) =>
     /^https?:\/\//.test(getAttribute(tag, 'src') || '')
   );

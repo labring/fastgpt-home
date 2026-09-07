@@ -76,6 +76,6 @@ export const assets = {
   qr: {
     wechat: `${CDN}/0768b69c8927.avif`,
     feishu: `${CDN}/bbac2150ad97.avif`,
-    group: `${CDN}/03578929bf2a.avif`
+    group: `${LOCAL}/wechat-community-20260907.png`
   }
 };

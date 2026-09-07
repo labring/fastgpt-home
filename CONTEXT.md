@@ -44,6 +44,10 @@ _Avoid_: Supported languages, available languages
 A temporary website used to review every supported locale before release. Search indexing is outside its purpose.
 _Avoid_: Other domain, preview domain
 
+**China Site Analytics**:
+Traffic and visitor-behavior measurements for the China Site, with a reporting scope separate from the International Site and Preview Hosts.
+_Avoid_: Global site analytics, shared cross-site analytics
+
 **FAQ Social Preview**:
 The branded title, description, and image shown when an FAQ list or detail URL is shared.
 _Avoid_: Thumbnail, banner

@@ -65,9 +65,17 @@ jobs:
           
           def expected_lines(path):
               body=path.read_text().split('---',2)[2]
+              in_code = False
               for line in body.splitlines():
                   line=line.strip()
-                  if not line or line.startswith(('# ','```')): continue
+                  if line.startswith('```'):
+                      in_code = not in_code
+                      continue
+                  if not line: continue
+                  if in_code:
+                      if len(normalize(line))>=4: yield normalize(line)
+                      continue
+                  if line.startswith('# '): continue
                   line=re.sub(r'^(?:#{1,6}\s+|>\s*|[-*+]\s+|\d+[.)]\s+)','',line)
                   line=inline_text(line)
                   if len(normalize(line))>=4: yield normalize(line)

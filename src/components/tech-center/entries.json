@@ -49644,5 +49644,305 @@
     "sourceType": "官方文档",
     "summary": "RAGFlow、MaxKB 迁移到 FastGPT：并行验证与切换验收 目标环境完成知识重建和流程配置后，需要通过并行验证决定何时切换业务入口。固定源内容、模型和问题集，分别记录源系统与 FastGPT 的结果，可以把解析、检索、流程和权限差异转化为可处理的问题。 先保存源系统基线 保留原文件、人工修订、模…",
     "minutes": 5
+  },
+  {
+    "title": "FastGPT API调用返回异常的排查与解决方法",
+    "slug": "/zh/troubleshoot/fastgpt-api-error-troubleshooting",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/410",
+    "sourceType": "GitHub issue",
+    "summary": "FastGPT API调用返回异常的排查与解决方法 现象 使用Python代码调用FastGPT公有云API时返回异常内容。用户的请求代码中，请求地址为https://fastgpt.run/api/v1/chat/completions，使用的API密钥为YOURAPIKEY，请求体包含chatId、st…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT不同运行环境下npm run build编译结果不一致问题",
+    "slug": "/zh/troubleshoot/fastgpt-build-discrepancy-server",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1287",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT不同运行环境下npm run build编译结果不一致问题 现象 用户在Windows11环境，使用截至20240424的最新开源版FastGPT项目，执行npm run build命令可正常完成编译打包，但在CentOS Linux release 8.1.1911服务器环境执行相同命令…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT调用chat/completions接口异常的问题",
+    "slug": "/zh/troubleshoot/fastgpt-chat-completions-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/396",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT调用chat/completions接口异常的问题 现象 用户通过curl命令发起POST请求调用FastGPT的/api/chat/completions接口，请求地址为http://192.168.56.107:6019/api/chat/completions，携带Authoriza…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT中DeepSeek-V3使用联网搜索工具报400错误的问题",
+    "slug": "/zh/troubleshoot/fastgpt-deepseek-v3-function-call-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/4023",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT中DeepSeek-V3使用联网搜索工具报400错误的问题 现象 用户在FastGPT 4.8.23私有部署版本中搭建简易应用，配置DeepSeek-V3模型并选择联网搜索工具（DuckDuckgo或wiki）后发起对话，收到报错：400 Function call is not supp…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT中DeepSeek-V3使用联网搜索工具报400错误的问题",
+    "slug": "/zh/troubleshoot/fastgpt-deepseek-v3-function-call-error-2",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/4031",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT中DeepSeek-V3使用联网搜索工具报400错误的问题 现象 在FastGPT 4.8.23私有部署版本中，用户新建简易应用并配置DeepSeek-V3模型，选择联网搜索工具（DuckDuckgo或wiki）发起对话后，收到报错信息：400 Function call is not s…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT Docker镜像构建时tiktoken encoders删除报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-docker-build-tiktoken-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/3248",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT Docker镜像构建时tiktoken encoders删除报错问题 现象 用户执行docker build --build-arg proxy=1 -f projects/app/Dockerfile -t fastgpr:1.0.1 .命令构建FastGPT镜像时，出现报错#0 0.…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT 4.12.1版本docker部署后界面打不开的问题",
+    "slug": "/zh/troubleshoot/fastgpt-docker-deploy-ui-unavailable",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/5517",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT 4.12.1版本docker部署后界面打不开的问题 现象 本地部署FastGPT 4.12.1版本，使用docker-compose安装完成后，FastGPT前端界面无法正常打开，MongoDB容器日志显示异常报错信息。 可能原因 1. Redis容器的启动命令配置不完整，原配置为截断的…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT Docker部署Mongo容器权限报错退出问题",
+    "slug": "/zh/troubleshoot/fastgpt-docker-mongo-permission-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/834",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT Docker部署Mongo容器权限报错退出问题 现象 使用 docker-compose 部署 FastGPT 并执行 docker-compose up -d 启动容器后，Mongo 容器会立即退出。通过 docker logs mongo 查看容器日志，会出现权限相关报错，典型日志片…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT私有部署Docker部署时主程序重启的权限报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-docker-permission-restart-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/5999",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署Docker部署时主程序重启的权限报错问题 现象 使用Docker部署FastGPT私有部署版本4.14.2时，主程序持续重启。启动日志显示MongoDB连接正常，但初始化系统时抛出权限错误，完整报错信息为Error: EACCES: permission denied, open…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT修改docker-compose端口后的启动异常",
+    "slug": "/zh/troubleshoot/fastgpt-docker-port-fix",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1357",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT修改docker-compose端口后的启动异常 现象 用户在Windows 11宿主机上，因3307、3002端口被占用，计划修改FastGPT部署的docker-compose.yml配置，调整mysql、fastgpt服务端口。启动容器后服务无法正常运行，且提供的docker-com…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT私有部署4.8.3版本知识库大文件上传失败问题",
+    "slug": "/zh/troubleshoot/fastgpt-large-file-upload-troubleshooting",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1782",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署4.8.3版本知识库大文件上传失败问题 现象 FastGPT私有部署4.8.3版本中，上传9M左右的较大知识库文件时无法成功，小尺寸文件可正常上传，部署日志存在相关错误打印但未提供具体报错内容。 可能原因 因未获取到完整的报错信息，目前无法直接定位具体根因，需结合实际部署环境的相关…",
+    "minutes": 1
+  },
+  {
+    "title": "解决FastGPT私有部署4.0版本本地启动热更新与打包路径问题",
+    "slug": "/zh/troubleshoot/fastgpt-local-start-heat-update-path-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1593",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署4.0版本本地启动热更新与打包路径问题 现象 用户使用Docker启动MongoDB、PG等FastGPT依赖服务，注释Docker Compose文件中的FastGPT服务后，通过pnpm dev本地启动项目。此时出现两个问题：一是Next.js持续触发热更新，二是打包时提示找不…",
+    "minutes": 3
+  },
+  {
+    "title": "解决本地修改FastGPT master分支构建镜像时的文件缺失报错",
+    "slug": "/zh/troubleshoot/fastgpt-master-build-copy-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1707",
+    "sourceType": "GitHub issue",
+    "summary": "解决本地修改FastGPT master分支构建镜像时的文件缺失报错 现象 用户在本地修改master分支后，执行docker build -t . --build-arg name=app --build-arg proxy=taobao命令构建镜像时，触发如下报错： 可能原因 该报错由Docker镜像构…",
+    "minutes": 4
+  },
+  {
+    "title": "解决FastGPT私有部署MongoDB权限导致的创建应用失败问题",
+    "slug": "/zh/troubleshoot/fastgpt-mongo-permission-fix",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1967",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署MongoDB权限导致的创建应用失败问题 现象 用户在FastGPT V4.8.5私有部署环境中出现两个问题：一是无法创建应用，调用/api/core/app/create接口时报错1: Operation not permitted；二是上传文件后无法进行下一步操作。查看容器日志…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT私有部署中PostgreSQL容器反复重启的问题",
+    "slug": "/zh/troubleshoot/fastgpt-pg-container-restart-troubleshooting",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/784",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署中PostgreSQL容器反复重启的问题 现象 使用docker-compose部署FastGPT私有版本时，PostgreSQL容器反复重启。通过docker logs查看容器日志，出现报错popen failure: Cannot allocate memory和initdb:…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT创建知识库时getaddrinfo ENOTFOUND pg报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-pg-hostname-resolve-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/129",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT创建知识库时getaddrinfo ENOTFOUND pg报错问题 现象 用户使用Docker Compose部署FastGPT时，对话和创建应用流程可正常运行，但执行创建知识库操作时，系统返回报错信息getaddrinfo ENOTFOUND pg。 可能原因 该报错为域名解析失败错误…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT pnpm dev启动时useMemo读取null属性报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-pnpm-dev-usememo-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/440",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT pnpm dev启动时useMemo读取null属性报错问题 现象 用户执行pnpm dev启动项目时，出现TypeError: Cannot read properties of null (reading 'useMemo')报错。报错堆栈显示，错误触发于next-i18next的a…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT私有部署pnpm安装时的脚本缺失报错",
+    "slug": "/zh/troubleshoot/fastgpt-pnpm-install-script-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1499",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署pnpm安装时的脚本缺失报错 现象 在FastGPT私有部署版本4.8（20240515更新的主线版本）中，执行根目录下的pnpm i命令安装依赖时，大部分依赖包下载完成后，在执行postinstall脚本环节出现报错。具体报错信息为： ERRPNPMNOSCRIPT Missin…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT私有部署pnpm安装脚本缺失报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-pnpm-install-script-error-2",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1572",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署pnpm安装脚本缺失报错问题 现象 在FastGPT私有部署场景下，执行pnpm i安装依赖时，postinstall脚本阶段触发报错。具体错误信息为： 本次问题涉及的环境为：Ubuntu22.04 64位系统，Node.js18.16.1，pnpm9.1.1，使用的是2024年5…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT私有部署中PostgreSQL数据目录权限报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-postgres-permission-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/389",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署中PostgreSQL数据目录权限报错问题 现象 部署FastGPT私有部署版本时，PostgreSQL容器启动失败，启动日志反复出现报错：2023-10-11 05:26:40.022 UTC [83] FATAL: data directory \"/var/lib/postgr…",
+    "minutes": 3
+  },
+  {
+    "title": "FastGPT私有部署后页面空白且接口正常的排错方法",
+    "slug": "/zh/troubleshoot/fastgpt-private-blank-page-troubleshooting",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/3878",
+    "sourceType": "GitHub issue",
+    "summary": "FastGPT私有部署后页面空白且接口正常的排错方法 现象 用户使用docker-compose部署的FastGPT v4.8.9私有版本，运行四个月后出现登录页面转圈的情况。执行docker-compose down重启服务后，登录页面加载完成后应用相关内容全部空白，但后端接口可正常访问，Mongo数据库…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT 4.7版本高级编排模块模型下拉框为空问题",
+    "slug": "/zh/troubleshoot/fastgpt-private-deploy-47-model-dropdown-issue",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1108",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT 4.7版本高级编排模块模型下拉框为空问题 现象 用户在FastGPT私有部署4.7版本中，升级自4.6.9版本后，高级编排功能内的问题分类模块与文本内容提取模块的AI模型选择下拉框为空，无法选择模型。AI对话模块可正常选择模型。 可能原因 该问题仅在从4.6.9版本升级至4.7版本的私有…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT私有部署4.8.3版本大文件上传卡住问题",
+    "slug": "/zh/troubleshoot/fastgpt-private-deploy-upload-stuck",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1863",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署4.8.3版本大文件上传卡住问题 现象 FastGPT私有部署4.8.3版本中，用户上传4.5MB的知识库文件时，上传任务会持续卡在创建中状态，无进度更新。等待数分钟后，页面会自动切换为等待上传状态，此时再次点击上传按钮，返回页面后会发现该文件已被多次索引入库，存在重复入库的异常情…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT私有部署中MySQL启动失败引发的OneAPI重启问题",
+    "slug": "/zh/troubleshoot/fastgpt-private-mysql-permission-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/2808",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署中MySQL启动失败引发的OneAPI重启问题 现象 部署环境为Windows 10通过WSL2与Docker Desktop搭建的FastGPT私有部署环境，MySQL服务无法正常启动，伴随OneAPI持续重启。启动日志中出现明确错误信息：mysqld: Cannot chang…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT私有部署场景下MySQL启动失败的问题",
+    "slug": "/zh/troubleshoot/fastgpt-private-mysql-start-fail",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/2425",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT私有部署场景下MySQL启动失败的问题 现象 用户使用FastGPT v4.8.9私有部署版本，通过官方docker-compose文件构建服务时，MySQL和oneapi容器均无法正常启动。MySQL启动日志包含'--skip-host-cache' is deprecated、'def…",
+    "minutes": 3
+  },
+  {
+    "title": "解决FastGPT 4.7版本高级编排模块模型下拉框为空问题",
+    "slug": "/zh/troubleshoot/fastgpt-v47-advanced-module-model-dropdown-empty",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1109",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT 4.7版本高级编排模块模型下拉框为空问题 现象 从4.6.9版本升级至FastGPT 4.7私有部署版本后，高级编排功能中的问题分类模块、文本内容提取模块无法选择AI模型，对应的下拉框为空。用户提供的截图显示，这两个模块的模型选择下拉框无任何可选模型列表，而AI对话模块可正常加载并显示可…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT工作流对话日志未配置商业版链接报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-workflow-dialog-log-config-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/5481",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT工作流对话日志未配置商业版链接报错问题 现象 FastGPT V4.11.1私有部署版本中，点击任意工作流的对话日志时，页面会弹出报错提示：未配置商业版链接: support,user,team,member,list。用户上传的三张截图均展示了该报错界面，包含报错文本与页面布局信息。 可…",
+    "minutes": 2
+  },
+  {
+    "title": "解决FastGPT点击工作流对话日志的未配置商业版链接报错问题",
+    "slug": "/zh/troubleshoot/fastgpt-workflow-log-link-config-error",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/5483",
+    "sourceType": "GitHub issue",
+    "summary": "解决FastGPT点击工作流对话日志的未配置商业版链接报错问题 现象 用户在私有部署V4.11.1版本的FastGPT中，点击工作流对话日志时，页面弹出报错提示：未配置商业版链接: support,user,team,member,list。用户怀疑该问题是升级到V4.10.0版本时遗漏相关配置导致的。 可…",
+    "minutes": 2
+  },
+  {
+    "title": "解决WSL环境下FastGPT私有部署容器启动异常问题",
+    "slug": "/zh/troubleshoot/wsl-fastgpt-deployment-troubleshooting",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/1346",
+    "sourceType": "GitHub issue",
+    "summary": "解决WSL环境下FastGPT私有部署容器启动异常问题 现象 用户在WSL v2环境以管理员身份运行终端，使用root用户执行docker-compose部署FastGPT 3.3私有版本，已按照官方文档操作步骤配置。部署前已将所有相关文件夹权限全开，Windows端User权限也已全开，且在docker-…",
+    "minutes": 2
+  },
+  {
+    "title": "解决WSL2 Ubuntu环境下FastGPT依赖服务启动失败问题",
+    "slug": "/zh/troubleshoot/wsl2-ubuntu-fastgpt-dependency-fail",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT/issues/2547",
+    "sourceType": "GitHub issue",
+    "summary": "解决WSL2 Ubuntu环境下FastGPT依赖服务启动失败问题 现象 用户在Win11系统中通过WSL2安装Ubuntu环境，部署私有部署版v4.8.9的FastGPT时，Docker内的MySQL、PostgreSQL、OneAPI服务无法正常启动，用户上传了各服务的启动报错截图，服务无法完成初始化并…",
+    "minutes": 2
   }
 ]

@@ -54,7 +54,8 @@ export default function Navbar({
   languageSwitchPaths,
   consultHref,
   consultationTrigger = true,
-  onConsultClick
+  onConsultClick,
+  consultRybbitSource = 'home_nav_consult'
 }: {
   links?: NavLink[];
   t: NavCta;
@@ -66,6 +67,7 @@ export default function Navbar({
   consultHref?: string;
   consultationTrigger?: boolean;
   onConsultClick?: () => void;
+  consultRybbitSource?: string;
 }) {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [showMobileCta, setShowMobileCta] = useState(true);
@@ -242,7 +244,7 @@ export default function Navbar({
               href={contactUrl}
               data-consultation-trigger={consultationTrigger || undefined}
               onClick={onConsultClick}
-              {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_nav_consult')}
+              {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, consultRybbitSource)}
               aria-label={t.consult}
               className="px-4 py-1.5 rounded-full text-[12px] font-medium text-white bg-btn-dark hover:opacity-90 transition-opacity"
             >
@@ -375,7 +377,9 @@ export default function Navbar({
                 data-consultation-trigger={consultationTrigger || undefined}
                 {...rybbitClickAttrs(
                   RYBBIT_EVENTS.businessConsultClick,
-                  'home_nav_mobile_menu_consult'
+                  consultRybbitSource === 'home_nav_consult'
+                    ? 'home_nav_mobile_menu_consult'
+                    : consultRybbitSource
                 )}
                 className="h-10 inline-flex items-center justify-center rounded-full text-[13px] font-medium text-white bg-btn-dark"
                 onClick={() => {

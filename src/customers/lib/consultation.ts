@@ -1,44 +1,45 @@
 import { getContactUrl } from '@/lib/contact';
-import { trackRybbitEvent } from '@customers/lib/rybbit';
+import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
 
-// 咨询链接的站点级归因来源；CRM 的 /contacts/submit 只接收该 source 字段。
-// 通过构建时环境变量 NEXT_PUBLIC_CUSTOMERS_SOURCE 配置，未配置时回退为 customers。
-const CUSTOMERS_SOURCE = process.env.NEXT_PUBLIC_CUSTOMERS_SOURCE?.trim() || 'customers';
+const UTM_SOURCE = 'customers';
+const UTM_MEDIUM = 'referral';
+const SOURCE_UTM_CAMPAIGNS = {
+  home_hero: 'poc-application',
+  home_bottom: 'poc-application',
+  navbar_poc: 'poc-application',
+  customers_hero: 'poc-application',
+  customers_sidebar: 'poc-application',
+  customers_bottom: 'poc-application',
+  empty_state: 'requirement-match'
+} as const;
 
-// 咨询入口来源（按钮级），仅用于 Rybbit 埋点（poc_click 事件）。
-type ConsultationSource =
-  | 'home_hero'
-  | 'home_bottom'
-  | 'navbar_poc'
-  | 'customers_hero'
-  | 'customers_sidebar'
-  | 'customers_bottom'
-  | 'empty_state';
+type ConsultationSource = keyof typeof SOURCE_UTM_CAMPAIGNS;
 
 export type ConsultationContext = {
   source: ConsultationSource;
   solutionId?: string | number;
   solutionTitle?: string;
+  solutionSlug?: string;
 };
 
-export function buildConsultationUrl(): string {
-  // 弹窗不跳转，按钮级 utm 参数无法进入 window.location 落库，URL 只保留站点级 source。
-  const params = new URLSearchParams({ source: CUSTOMERS_SOURCE });
-  return getContactUrl('zh', `?${params.toString()}`);
-}
-
-export function trackConsultationClick(context: ConsultationContext): void {
-  trackRybbitEvent('poc_click', {
-    source: context.source,
-    solution_id: context.solutionId != null ? String(context.solutionId) : undefined,
-    solution_title: context.solutionTitle
+export function buildConsultationUrl(context: ConsultationContext): string {
+  const params = new URLSearchParams({
+    source: UTM_SOURCE,
+    utm_source: UTM_SOURCE,
+    utm_medium: UTM_MEDIUM,
+    utm_campaign: SOURCE_UTM_CAMPAIGNS[context.source],
+    utm_content: context.source
   });
+  if (context.solutionSlug) params.set('utm_term', context.solutionSlug);
+  return getContactUrl('zh', `?${params.toString()}`);
 }
 
 export function getConsultationLinkProps(context: ConsultationContext) {
   return {
-    href: buildConsultationUrl(),
-    'data-consultation-trigger': 'true',
-    onClick: () => trackConsultationClick(context)
+    href: buildConsultationUrl(context),
+    ...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, context.source, {
+      solution_id: context.solutionId != null ? String(context.solutionId) : undefined,
+      solution_title: context.solutionTitle
+    })
   };
 }

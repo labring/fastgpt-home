@@ -22,6 +22,14 @@ import {
   getContactOptionLabel
 } from '@/components/contact/contactCopy';
 import { isPreviewSite } from '@/lib/siteRouting';
+import { trackRybbitEvent } from '@customers/lib/rybbit';
+import {
+  clearRybbitConsultCapture,
+  getCurrentCanonicalPageUrl,
+  getRybbitConsultPageUrl,
+  getRybbitConsultSource
+} from '@/lib/rybbitConversion';
+import { RYBBIT_EVENTS } from '@/lib/rybbitEvents';
 
 type ContactFormProps = {
   locale: string;
@@ -443,6 +451,7 @@ export default function ContactForm({
 
     setStatus('submitting');
     try {
+      const resolvedSubmissionSource = submissionSource?.slice(0, 128) || getSubmissionSource();
       trackVisit();
       // Attribution is best-effort telemetry and must not block the contact
       // form when its tracking endpoint is unavailable.
@@ -461,7 +470,7 @@ export default function ContactForm({
           budget: values.budget || null,
           notes: values.notes.trim() || null,
           visitor_id: currentVisitorId,
-          source: submissionSource?.slice(0, 128) || getSubmissionSource()
+          source: resolvedSubmissionSource
         })
       });
 
@@ -479,6 +488,22 @@ export default function ContactForm({
         throw new Error(
           response.status === 429 ? copy.rateLimitError : detail || copy.genericError
         );
+      }
+
+      try {
+        const result = (await response.json()) as { submission_id?: unknown };
+        if (typeof result.submission_id === 'string') {
+          trackRybbitEvent(RYBBIT_EVENTS.businessConsultSubmitSuccess, {
+            submission_id: result.submission_id,
+            crm_visitor_id: currentVisitorId,
+            source: getRybbitConsultSource() || resolvedSubmissionSource,
+            page_url: getCurrentCanonicalPageUrl(),
+            entry_page_url: getRybbitConsultPageUrl() || getCurrentCanonicalPageUrl()
+          });
+          clearRybbitConsultCapture();
+        }
+      } catch {
+        // Analytics failures must not turn a saved CRM lead into an error.
       }
 
       clearContactFormDraft();

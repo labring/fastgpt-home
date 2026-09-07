@@ -1,20 +1,27 @@
 'use client';
 
 import Script from 'next/script';
+import { useEffect } from 'react';
+import { installRybbitConsultSourceCapture } from '@/lib/rybbitConversion';
+import { identifyRybbitVisitor } from '@/lib/rybbitIdentity';
 
 const RybbitAnalytics = () => {
     const key = process.env.NEXT_PUBLIC_RYBBIT_TONGJI;
     const siteId = process.env.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID;
+
+    useEffect(() => installRybbitConsultSourceCapture(), []);
 
     if (!key) return null;
 
     return (
         <Script
             id="rybbit-tongji"
-            strategy="lazyOnload"
+            strategy="afterInteractive"
             defer
             data-site-id={`${siteId}`}
             src={`${key}`}
+            onLoad={identifyRybbitVisitor}
+            onReady={identifyRybbitVisitor}
         />
     );
 };

@@ -404,7 +404,7 @@ export default function ContactPage({ locale, dict }: { locale: string; dict: Di
                     width={150}
                     height={60}
                     loading="lazy"
-                    className="max-h-11 w-auto object-contain grayscale"
+                    className="max-h-11 w-auto object-contain"
                     draggable={false}
                   />
                 </div>

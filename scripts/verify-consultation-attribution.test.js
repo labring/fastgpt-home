@@ -129,6 +129,60 @@ test('all consultation CTAs keep business context outside acquisition UTM', () =
   }
 });
 
+test('consultation analytics context is immutable per form and does not use localStorage', () => {
+  const env = browser();
+  const conversion = env.load('src/lib/rybbitConversion.ts');
+  const formSource = fs.readFileSync(path.join(root, 'src/components/contact/ContactForm.tsx'), 'utf8');
+  assert.equal(typeof conversion.createRybbitConsultCapture, 'function');
+  assert.equal(typeof conversion.resolveRybbitConsultEventContext, 'function');
+  assert.match(formSource, /resolveRybbitConsultEventContext\(\s*rybbitConsultCapture,/);
+  assert.doesNotMatch(formSource, /getRybbitConsultSource|clearRybbitConsultCapture/);
+
+  env.window.location = new URL('https://fastgpt.cn/?utm_source=google');
+  const homeCapture = conversion.createRybbitConsultCapture('home_hero_consult');
+  env.window.location = new URL('https://fastgpt.cn/price');
+  const priceCapture = conversion.createRybbitConsultCapture('price_cloud_custom');
+
+  assert.deepEqual(JSON.parse(JSON.stringify(homeCapture)), {
+    source: '首页-Banner商务咨询',
+    entryPageUrl: '首页-Banner商务咨询｜https://fastgpt.cn/'
+  });
+  assert.deepEqual(JSON.parse(JSON.stringify(priceCapture)), {
+    source: '价格页-云服务定制版商务咨询',
+    entryPageUrl: '价格页-云服务定制版商务咨询｜https://fastgpt.cn/price'
+  });
+  assert.deepEqual(
+    JSON.parse(
+      JSON.stringify(
+        conversion.resolveRybbitConsultEventContext(homeCapture, 'customers', 'https://fastgpt.cn/')
+      )
+    ),
+    {
+      source: '首页-Banner商务咨询',
+      page_url: 'https://fastgpt.cn/',
+      entry_page_url: '首页-Banner商务咨询｜https://fastgpt.cn/'
+    }
+  );
+  assert.deepEqual(
+    JSON.parse(
+      JSON.stringify(
+        conversion.resolveRybbitConsultEventContext(
+          undefined,
+          'customers',
+          'https://fastgpt.cn/contact'
+        )
+      )
+    ),
+    {
+      source: 'customers',
+      page_url: 'https://fastgpt.cn/contact',
+      entry_page_url: 'https://fastgpt.cn/contact'
+    }
+  );
+  assert.equal(env.window.localStorage.getItem('fastgpt_rybbit_consult_source'), null);
+  assert.equal(env.window.localStorage.getItem('fastgpt_rybbit_consult_page_url'), null);
+});
+
 for (const cookieEnabled of [false, true]) {
   test(`paid entry survives client navigation and submission (cookies: ${cookieEnabled})`, () => {
     const { load, window } = browser(cookieEnabled);
@@ -234,6 +288,9 @@ test('consultation dialog intercepts normal CTA clicks but preserves modified-li
       return { useParams: () => ({}), usePathname: () => '/customers' };
     if (name === '@/lib/locales') return { normalizeLocale: (value) => value };
     if (name === '@/lib/siteRouting') return { getDefaultLocaleForSiteVariant: () => 'zh' };
+    if (name === '@/lib/rybbitConversion') {
+      return { createRybbitConsultCapture: (source) => ({ source, entryPageUrl: source }) };
+    }
     throw new Error(`Unexpected dependency: ${name}`);
   };
   vm.runInContext(`(function(require,module,exports){${output}\n})`, env.context, {
@@ -244,6 +301,7 @@ test('consultation dialog intercepts normal CTA clicks but preserves modified-li
   const click = listeners.find(({ name, capture }) => name === 'click' && capture);
   assert(click, 'ConsultationDialog must install a capture-phase click handler');
   const trigger = new env.Element('/contact?source=customers');
+  trigger.dataset = { rybbitPropSource: 'customers_hero' };
   trigger.closest = (selector) =>
     selector === 'a[data-consultation-trigger="true"]' ? trigger : null;
 
@@ -261,7 +319,11 @@ test('consultation dialog intercepts normal CTA clicks but preserves modified-li
     }
   });
   assert.equal(prevented, true, 'Normal CTA clicks must stay on the current page');
-  assert.deepEqual(stateUpdates, ['customers', true], 'Normal CTA clicks must open the dialog');
+  assert.deepEqual(
+    stateUpdates,
+    [{ source: 'customers_hero', entryPageUrl: 'customers_hero' }, 'customers', true],
+    'Normal CTA clicks must open the dialog with an immutable source snapshot'
+  );
 
   stateUpdates.length = 0;
   prevented = false;

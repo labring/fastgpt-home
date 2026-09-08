@@ -24,10 +24,8 @@ import {
 import { isPreviewSite } from '@/lib/siteRouting';
 import { trackRybbitEvent } from '@customers/lib/rybbit';
 import {
-  clearRybbitConsultCapture,
-  getCurrentCanonicalPageUrl,
-  getRybbitConsultPageUrl,
-  getRybbitConsultSource
+  resolveRybbitConsultEventContext,
+  type RybbitConsultCapture
 } from '@/lib/rybbitConversion';
 import { RYBBIT_EVENTS } from '@/lib/rybbitEvents';
 
@@ -35,6 +33,7 @@ type ContactFormProps = {
   locale: string;
   variant?: 'modal' | 'page';
   submissionSource?: string;
+  rybbitConsultCapture?: RybbitConsultCapture;
   onSuccess?: () => void;
   onClose?: () => void;
 };
@@ -318,6 +317,7 @@ export default function ContactForm({
   locale,
   variant = 'page',
   submissionSource,
+  rybbitConsultCapture,
   onSuccess,
   onClose
 }: ContactFormProps) {
@@ -493,14 +493,15 @@ export default function ContactForm({
       try {
         const result = (await response.json()) as { submission_id?: unknown };
         if (typeof result.submission_id === 'string') {
+          const rybbitContext = resolveRybbitConsultEventContext(
+            rybbitConsultCapture,
+            resolvedSubmissionSource
+          );
           trackRybbitEvent(RYBBIT_EVENTS.businessConsultSubmitSuccess, {
             submission_id: result.submission_id,
             crm_visitor_id: currentVisitorId,
-            source: getRybbitConsultSource() || resolvedSubmissionSource,
-            page_url: getCurrentCanonicalPageUrl(),
-            entry_page_url: getRybbitConsultPageUrl() || getCurrentCanonicalPageUrl()
+            ...rybbitContext
           });
-          clearRybbitConsultCapture();
         }
       } catch {
         // Analytics failures must not turn a saved CRM lead into an error.

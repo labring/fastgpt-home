@@ -21,11 +21,10 @@ const { outputText } = ts.transpileModule(read('src/app/SiteAnalytics.tsx'), {
   compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX }
 });
 
-test('SiteAnalytics initializes Rybbit consultation capture and CRM identity', () => {
+test('SiteAnalytics initializes CRM identity without global consultation storage', () => {
   const source = read('src/app/SiteAnalytics.tsx');
 
-  assert.match(source, /installRybbitConsultSourceCapture/);
-  assert.match(source, /useEffect\(\(\)\s*=>\s*installRybbitConsultSourceCapture\(\),\s*\[\]\)/);
+  assert.doesNotMatch(source, /installRybbitConsultSourceCapture/);
   assert.match(source, /onLoad=\{identifyRybbitVisitor\}/);
   assert.match(source, /onReady=\{identifyRybbitVisitor\}/);
 });
@@ -40,7 +39,6 @@ function renderScripts(variant, env) {
       if (name === '@/lib/siteRouting') return { currentSiteVariant: variant };
       if (name === 'next/script') return { default: Script };
       if (name === 'react') return { ...require('react'), useEffect: () => {} };
-      if (name === '@/lib/rybbitConversion') return { installRybbitConsultSourceCapture: () => () => {} };
       if (name === '@/lib/rybbitIdentity') return { identifyRybbitVisitor: () => {} };
       return require(name);
     }

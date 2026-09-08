@@ -1,15 +1,11 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect } from 'react';
-import { installRybbitConsultSourceCapture } from '@/lib/rybbitConversion';
 import { identifyRybbitVisitor } from '@/lib/rybbitIdentity';
 
 const RybbitAnalytics = () => {
     const key = process.env.NEXT_PUBLIC_RYBBIT_TONGJI;
     const siteId = process.env.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID;
-
-    useEffect(() => installRybbitConsultSourceCapture(), []);
 
     if (!key) return null;
 

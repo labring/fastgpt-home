@@ -1,9 +1,7 @@
 'use client';
 
 import Script from 'next/script';
-import { useEffect } from 'react';
 import { currentSiteVariant } from '@/lib/siteRouting';
-import { installRybbitConsultSourceCapture } from '@/lib/rybbitConversion';
 import { identifyRybbitVisitor } from '@/lib/rybbitIdentity';
 
 export default function SiteAnalytics() {
@@ -13,8 +11,6 @@ export default function SiteAnalytics() {
   const rybbitUrl = process.env.NEXT_PUBLIC_RYBBIT_TONGJI;
   const rybbitSiteId = process.env.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID;
   const googleId = process.env.NEXT_PUBLIC_GOOGLE_ID;
-
-  useEffect(() => installRybbitConsultSourceCapture(), []);
 
   return (
     <>

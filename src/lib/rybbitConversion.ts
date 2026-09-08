@@ -1,6 +1,3 @@
-const CONSULT_SOURCE_KEY = 'fastgpt_rybbit_consult_source';
-const CONSULT_PAGE_URL_KEY = 'fastgpt_rybbit_consult_page_url';
-
 const CONSULT_SOURCE_LABELS: Record<string, string> = {
   home_nav_consult: '首页-顶部商务咨询',
   home_nav_mobile_menu_consult: '首页-移动端菜单商务咨询',
@@ -25,6 +22,11 @@ function getRybbitConsultSourceLabel(source: string): string {
   return CONSULT_SOURCE_LABELS[source] || '其他页面-商务咨询';
 }
 
+export type RybbitConsultCapture = {
+  source: string;
+  entryPageUrl: string;
+};
+
 export function getCurrentCanonicalPageUrl(): string {
   if (typeof window === 'undefined') return '';
   try {
@@ -35,48 +37,22 @@ export function getCurrentCanonicalPageUrl(): string {
   }
 }
 
-export function installRybbitConsultSourceCapture(): () => void {
-  if (typeof document === 'undefined') return () => undefined;
-  const capture = (event: MouseEvent) => {
-    const target = event.target instanceof Element ? event.target : null;
-    const trigger = target?.closest<HTMLElement>(
-      '[data-rybbit-event="business_consult_click"]'
-    );
-    const sourceId = trigger?.dataset.rybbitPropSource?.trim();
-    if (!sourceId) return;
-    try {
-      const source = getRybbitConsultSourceLabel(sourceId);
-      window.localStorage.setItem(CONSULT_SOURCE_KEY, source);
-      window.localStorage.setItem(CONSULT_PAGE_URL_KEY, `${source}｜${getCurrentCanonicalPageUrl()}`);
-    } catch {
-      // Analytics capture is best effort when browser storage is blocked.
-    }
+export function createRybbitConsultCapture(sourceId: string): RybbitConsultCapture {
+  const source = getRybbitConsultSourceLabel(sourceId);
+  return {
+    source,
+    entryPageUrl: `${source}｜${getCurrentCanonicalPageUrl()}`
   };
-  document.addEventListener('click', capture, true);
-  return () => document.removeEventListener('click', capture, true);
 }
 
-export function getRybbitConsultSource(): string {
-  try {
-    return window.localStorage.getItem(CONSULT_SOURCE_KEY)?.trim() || '';
-  } catch {
-    return '';
-  }
-}
-
-export function getRybbitConsultPageUrl(): string {
-  try {
-    return window.localStorage.getItem(CONSULT_PAGE_URL_KEY)?.trim() || '';
-  } catch {
-    return '';
-  }
-}
-
-export function clearRybbitConsultCapture(): void {
-  try {
-    window.localStorage.removeItem(CONSULT_SOURCE_KEY);
-    window.localStorage.removeItem(CONSULT_PAGE_URL_KEY);
-  } catch {
-    // Storage cleanup must not interrupt a successful form submission.
-  }
+export function resolveRybbitConsultEventContext(
+  capture: RybbitConsultCapture | undefined,
+  fallbackSource: string,
+  pageUrl = getCurrentCanonicalPageUrl()
+) {
+  return {
+    source: capture?.source || fallbackSource,
+    page_url: pageUrl,
+    entry_page_url: capture?.entryPageUrl || pageUrl
+  };
 }

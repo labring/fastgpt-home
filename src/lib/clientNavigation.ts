@@ -1,3 +1,5 @@
+import { normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
+
 export const buildDefaultLocale =
   process.env.NEXT_PUBLIC_SITE_VARIANT === 'cn' ||
   (process.env.NEXT_PUBLIC_SITE_VARIANT === undefined &&
@@ -42,4 +44,34 @@ export function rememberPreferredLanguage(value: string) {
   } catch {
     // Cookie persistence is best effort, independently of localStorage.
   }
+}
+
+/** Keep navigation URL resolution independent of CSS class-merging dependencies. */
+export function getNavHref(href: string, lang: string): string {
+  if (!href) return '/';
+  href = href.trim();
+
+  if (/^(https?:)?\/\//.test(href)) {
+    return href;
+  }
+
+  if (href.startsWith('#')) {
+    return `${getDefaultLocalePath(lang)}${href}`;
+  }
+
+  if (!href.startsWith('/')) {
+    return href;
+  }
+
+  const normalizedLang = normalizeLocale(lang);
+  const explicitLocale = supportedLocaleCodes.find(
+    (locale) => href === `/${locale}` || href.startsWith(`/${locale}/`)
+  );
+
+  if (explicitLocale && explicitLocale !== normalizedLang) {
+    return href;
+  }
+
+  const routePath = explicitLocale ? href.slice(`/${explicitLocale}`.length) || '/' : href;
+  return getDefaultLocalePath(lang, routePath);
 }

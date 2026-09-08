@@ -63,6 +63,23 @@ function runtime(variant = 'io') {
 const navigation = (r) => r.load('src/lib/languageNavigation.ts');
 const target = (locale, href) => ({ locale, href });
 
+test('navigation hrefs retain locale paths, fragments, and external destinations', () => {
+  for (const variant of ['cn', 'io', 'preview']) {
+    const { getNavHref } = runtime(variant).load('src/lib/clientNavigation.ts');
+    const chineseRoot = variant === 'cn' ? '' : '/zh';
+    const englishRoot = variant === 'cn' ? '/en' : '';
+    assert.equal(getNavHref('/price', 'zh'), `${chineseRoot}/price`);
+    assert.equal(getNavHref('/zh/price', 'zh'), `${chineseRoot}/price`);
+    assert.equal(getNavHref('/price', 'en'), `${englishRoot}/price`);
+    assert.equal(getNavHref('#faq', 'zh'), `${chineseRoot || '/'}#faq`);
+    assert.equal(getNavHref('/en/guide', 'zh'), '/en/guide');
+    assert.equal(getNavHref(' https://doc.fastgpt.io/ ', 'zh'), 'https://doc.fastgpt.io/');
+    assert.equal(getNavHref('//example.com/docs', 'zh'), '//example.com/docs');
+    assert.equal(getNavHref('mailto:contact@example.com', 'zh'), 'mailto:contact@example.com');
+    assert.equal(getNavHref('', 'zh'), '/');
+  }
+});
+
 test('browser matching, explicit preferences, missing translations, and session dismissal', () => {
   const r = runtime();
   const n = navigation(r);

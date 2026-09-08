@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from 'react';
 import Link from 'next/link';
 import { useParams, usePathname } from 'next/navigation';
 import { defaultLocale } from '@/lib/i18n';
-import { getNavHref } from '@/lib/utils';
+import { getNavHref } from '@/lib/clientNavigation';
 import { getLanguageTargets, prepareLanguageLink } from '@/lib/languageNavigation';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { LangSwitcher } from '@/components/header/LangSwitcher';

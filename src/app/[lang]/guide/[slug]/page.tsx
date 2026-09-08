@@ -1,12 +1,9 @@
 import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
-import {
-  GuidePathRoute,
-  getGuidePathParams,
-  getGuidePathMetadata
-} from '@/components/guide/GuidePathRoute';
-import { resolveGuideLocale } from '@/lib/guideSeo';
+import { GuideArticleRoute } from '@/components/guide/GuideArticleRoute';
+import { guideSlugs } from '@/content/guides/registry';
+import { getGuideArticleMetadata, getGuideBuildLocales, resolveGuideLocale } from '@/lib/guideSeo';
 
 export default async function LocalizedGuideArticlePage({
   params
@@ -15,13 +12,13 @@ export default async function LocalizedGuideArticlePage({
 }) {
   const { lang, slug } = await params;
   const locale = resolveGuideLocale(lang);
-  if (!locale) notFound();
+  if (!locale || !guideSlugs.includes(slug)) notFound();
 
-  return <GuidePathRoute locale={locale} slug={slug} />;
+  return <GuideArticleRoute locale={locale} slug={slug} />;
 }
 
 export function generateStaticParams() {
-  return getGuidePathParams(true);
+  return getGuideBuildLocales().flatMap((lang) => guideSlugs.map((slug) => ({ lang, slug })));
 }
 
 export const dynamicParams = false;
@@ -33,9 +30,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, slug } = await params;
   const locale = resolveGuideLocale(lang);
-  if (!locale) {
+  if (!locale || !guideSlugs.includes(slug)) {
     return { title: 'Guide article not found', robots: { index: false, follow: false } };
   }
 
-  return getGuidePathMetadata(locale, slug, false);
+  return getGuideArticleMetadata(locale, slug, { indexable: false });
 }

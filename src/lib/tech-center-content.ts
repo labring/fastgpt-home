@@ -1,7 +1,6 @@
 import 'server-only';
 
 import fs from 'node:fs';
-import stageReturns from '@/content/tech-center/stage-returns.json';
 import path from 'node:path';
 import {
   TECH_ENTRIES,
@@ -28,8 +27,6 @@ export type TechArticle = TechEntry & {
   metaTitle: string;
   pageType: string;
   markdown: string;
-  stageReturn?: { path: string; title: string };
-  publishedLocales: TechPublishedLocale[];
   seoDescription: string;
 };
 
@@ -171,8 +168,6 @@ function readTechArticle(entry: TechEntry): TechArticle {
 
   return {
     ...entry,
-    publishedLocales: getTechArticlePublishedLocales(entry),
-    stageReturn: getStageReturn(entry),
     contentType: metadata.schema_type === 'Article' ? 'Article' : 'TechArticle',
     dateModified: metadata.date_modified,
     datePublished: metadata.date_published,
@@ -203,26 +198,8 @@ function readTechArticle(entry: TechEntry): TechArticle {
   };
 }
 
-const entriesBySlug = new Map(TECH_ENTRIES.map((entry) => [entry.slug, entry]));
-const returnPaths: Record<string, string> = stageReturns;
-
-function getStageReturn(entry: TechEntry) {
-  const target = returnPaths[entry.slug];
-  if (!target) return undefined;
-  const stage = entriesBySlug.get(target);
-  if (!stage) throw new Error(`Unresolved article stage: ${entry.slug} -> ${target}`);
-  return { path: getTechnicalPageIdentity(stage).canonicalPath, title: stage.title };
-}
-
-export function getTechArticlePublishedLocales(entry: TechEntry) {
-  const { canonicalPath } = getTechnicalPageIdentity(entry);
-  return techPublishedLocaleCodes.filter((locale) =>
-    entriesBySlug.has(`/${locale}${canonicalPath}`)
-  );
-}
-
 export function getTechArticle(section: string, slug: string, locale: TechPublishedLocale = 'zh') {
-  const entry = entriesBySlug.get(`/${locale}/${section}/${slug}`);
+  const entry = TECH_ENTRIES.find((item) => item.slug === `/${locale}/${section}/${slug}`);
   return entry ? readTechArticle(entry) : null;
 }
 

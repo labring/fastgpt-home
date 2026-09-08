@@ -107,7 +107,6 @@ export default function GuideArticlePage({
               </figure>
             )}
             <MarkdownContent
-              locale={locale}
               blocks={blocks}
               markdown={document.body}
               title={document.source.h1}

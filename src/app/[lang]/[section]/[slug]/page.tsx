@@ -10,7 +10,7 @@ import {
 } from '@/lib/tech-center-content';
 import { normalizeLocale } from '@/lib/locales';
 import { techPublishedLocaleCodes, type TechPublishedLocale } from '@/lib/publishedLocales';
-import { currentSiteVariant, getLocaleHreflang, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import { currentSiteVariant, getLocaleHreflang } from '@/lib/siteRouting';
 import { getTechnicalCanonicalUrl } from '@/lib/technicalRouting';
 
 type TechArticleRouteParams = {
@@ -89,18 +89,7 @@ export async function generateMetadata({
       currentSiteVariant === 'preview'
         ? { index: false, follow: false }
         : { index: true, follow: true },
-    alternates: {
-      canonical,
-      languages: Object.fromEntries([
-        ...article.publishedLocales.map((publishedLocale) => [
-          getLocaleHreflang(publishedLocale),
-          getOwnedLocaleUrl(publishedLocale, `/${section}/${slug}`)
-        ]),
-        ...(article.publishedLocales.includes('en')
-          ? [['x-default', getOwnedLocaleUrl('en', `/${section}/${slug}`)]]
-          : [])
-      ])
-    },
+    alternates: { canonical, languages: { [getLocaleHreflang(locale)]: canonical } },
     openGraph: {
       title,
       description: article.seoDescription,
@@ -123,7 +112,7 @@ export async function generateMetadata({
 export function generateStaticParams() {
   // The dedicated comparison route also serves technical migration articles.
   return getTechArticleReviewParams(currentSiteVariant).filter(
-    ({ section }) => section !== 'compare' && section !== 'guide'
+    ({ section }) => section !== 'compare'
   );
 }
 

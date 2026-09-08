@@ -25,6 +25,7 @@ export function buildConsultationUrl(_context: ConsultationContext): string {
 export function getConsultationLinkProps(context: ConsultationContext) {
   return {
     href: buildConsultationUrl(context),
+    'data-consultation-trigger': 'true',
     ...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, context.source, {
       solution_id: context.solutionId != null ? String(context.solutionId) : undefined,
       solution_title: context.solutionTitle,

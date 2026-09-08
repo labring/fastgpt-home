@@ -70,7 +70,7 @@ function browser(cookieEnabled = false) {
   const cache = new Map();
   function load(file) {
     const absolute = path.resolve(root, file);
-    const resolved = ['', '.ts', '.mjs', '.json']
+    const resolved = ['', '.ts', '.tsx', '.mjs', '.json']
       .map((ext) => absolute + ext)
       .find((candidate) => fs.existsSync(candidate));
     assert(resolved, `Cannot resolve ${file}`);
@@ -82,7 +82,8 @@ function browser(cookieEnabled = false) {
       compilerOptions: {
         module: ts.ModuleKind.CommonJS,
         target: ts.ScriptTarget.ES2020,
-        esModuleInterop: true
+        esModuleInterop: true,
+        jsx: ts.JsxEmit.ReactJSX
       },
       fileName: resolved.replace(/\.mjs$/, '.ts')
     }).outputText;
@@ -121,6 +122,7 @@ test('all consultation CTAs keep business context outside acquisition UTM', () =
       solutionSlug: 'example-case'
     });
     assert.equal(props.href, '/contact?source=customers');
+    assert.equal(props['data-consultation-trigger'], 'true');
     assert.equal(props['data-rybbit-prop-source'], source);
     assert.equal(props['data-rybbit-prop-solution_id'], '42');
     assert.equal(props['data-rybbit-prop-solution_slug'], 'example-case');
@@ -194,4 +196,87 @@ test('native contact navigation preserves bounded CTA source and incoming acquis
     new URL(anchor.href, env.window.location.origin).searchParams.get('source').length,
     128
   );
+});
+
+test('consultation dialog intercepts normal CTA clicks but preserves modified-link behavior', () => {
+  const env = browser();
+  const listeners = [];
+  const stateUpdates = [];
+  const originalAddEventListener = env.document.addEventListener;
+  env.document.addEventListener = (name, listener, capture) => {
+    originalAddEventListener(name, listener, capture);
+    listeners.push({ name, listener, capture });
+  };
+  const source = fs.readFileSync(
+    path.join(root, 'src/components/consultation/ConsultationDialog.tsx'),
+    'utf8'
+  );
+  const output = ts.transpileModule(source, {
+    compilerOptions: {
+      module: ts.ModuleKind.CommonJS,
+      target: ts.ScriptTarget.ES2020,
+      jsx: ts.JsxEmit.ReactJSX,
+      esModuleInterop: true
+    }
+  }).outputText;
+  const module = { exports: {} };
+  const react = {
+    lazy: (loader) => loader,
+    Suspense: 'Suspense',
+    useEffect: (callback) => callback(),
+    useRef: (value) => ({ current: value }),
+    useState: (value) => [value, (next) => stateUpdates.push(next)]
+  };
+  const localRequire = (name) => {
+    if (name === 'react') return react;
+    if (name === 'react/jsx-runtime') return { jsx: () => null };
+    if (name === 'next/navigation')
+      return { useParams: () => ({}), usePathname: () => '/customers' };
+    if (name === '@/lib/locales') return { normalizeLocale: (value) => value };
+    if (name === '@/lib/siteRouting') return { getDefaultLocaleForSiteVariant: () => 'zh' };
+    throw new Error(`Unexpected dependency: ${name}`);
+  };
+  vm.runInContext(`(function(require,module,exports){${output}\n})`, env.context, {
+    filename: 'ConsultationDialog.tsx'
+  })(localRequire, module, module.exports);
+  module.exports.default();
+
+  const click = listeners.find(({ name, capture }) => name === 'click' && capture);
+  assert(click, 'ConsultationDialog must install a capture-phase click handler');
+  const trigger = new env.Element('/contact?source=customers');
+  trigger.closest = (selector) =>
+    selector === 'a[data-consultation-trigger="true"]' ? trigger : null;
+
+  let prevented = false;
+  click.listener({
+    target: trigger,
+    button: 0,
+    defaultPrevented: false,
+    metaKey: false,
+    ctrlKey: false,
+    shiftKey: false,
+    altKey: false,
+    preventDefault: () => {
+      prevented = true;
+    }
+  });
+  assert.equal(prevented, true, 'Normal CTA clicks must stay on the current page');
+  assert.deepEqual(stateUpdates, ['customers', true], 'Normal CTA clicks must open the dialog');
+
+  stateUpdates.length = 0;
+  prevented = false;
+  click.listener({
+    target: trigger,
+    button: 0,
+    defaultPrevented: false,
+    metaKey: false,
+    ctrlKey: true,
+    shiftKey: false,
+    altKey: false,
+    preventDefault: () => {
+      prevented = true;
+    }
+  });
+  assert.equal(prevented, false, 'Modified CTA clicks must retain link navigation');
+  assert.deepEqual(stateUpdates, [], 'Modified CTA clicks must not open the dialog');
 });

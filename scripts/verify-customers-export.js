@@ -62,6 +62,10 @@ function assertConsultationLink(html, source, htmlFile, solutionSlug) {
   );
   assert(anchor, `Missing customer consultation CTA for ${source}: ${htmlFile}`);
   assert(
+    anchor.includes('data-consultation-trigger="true"'),
+    `Customer consultation CTA must open the native dialog: ${htmlFile}`
+  );
+  assert(
     anchor.includes(`href="${contactPath}?source=customers"`),
     `Customer consultation must not synthesize acquisition UTM: ${htmlFile}`
   );

@@ -281,6 +281,9 @@ function isInternalReferrer(referrer: string): boolean {
   }
 }
 
+// A document referrer describes its entry, not later client-side navigations.
+let trackedDocument: Document | null = null;
+
 function loadStoredAttribution(): StoredAttribution | null {
   const result = loadAttributionSnapshot(getStorageOptions());
   return result.value;
@@ -290,6 +293,7 @@ function loadStoredAttribution(): StoredAttribution | null {
 export function clearAttribution(): void {
   clearStoredAttribution(getStorageOptions());
   resetGeneratedVisitorId();
+  trackedDocument = null;
 }
 
 /** Return the current bounded storage channel and internal reason code. */
@@ -306,7 +310,7 @@ export function trackVisit(): void {
   try {
     const visitor_id = getVisitorId();
     const now = new Date().toISOString();
-    let referrer = document.referrer || '';
+    let referrer = trackedDocument === document ? '' : document.referrer || '';
     // 站内跳转：referrer 与当前同 origin → 当作无来源，避免把站内点击记成 Referral
     try {
       if (referrer && isInternalReferrer(referrer)) {
@@ -333,7 +337,8 @@ export function trackVisit(): void {
     if (current.channel_l1 !== 'direct') last = current;
 
     const next: StoredAttribution = { visitor_id, first, last };
-    saveAttributionSnapshot(next, getStorageOptions());
+    const saved = saveAttributionSnapshot(next, getStorageOptions());
+    if (saved.value) trackedDocument = document;
   } catch {
     /* 归因失败绝不影响页面 */
   }

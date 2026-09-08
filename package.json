@@ -71,6 +71,7 @@
     "verify:guide-export": "node scripts/verify-guide-export.js",
     "verify:guide-export-regression": "node --test scripts/verify-guide-export.test.js",
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
+    "verify:consultation-attribution": "node --test scripts/verify-consultation-attribution.test.js",
     "verify:contact": "node scripts/verify-contact-page.js",
     "verify:customers-data": "node scripts/verify-customers-data.js",
     "verify:customers-search": "node scripts/verify-customers-search.js",

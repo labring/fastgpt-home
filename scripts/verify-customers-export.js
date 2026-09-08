@@ -54,20 +54,23 @@ function assertCanonical(html, route, htmlFile) {
 }
 
 function assertConsultationLink(html, source, htmlFile, solutionSlug) {
-  const params = new URLSearchParams({
-    source: 'customers',
-    utm_source: 'customers',
-    utm_medium: 'referral',
-    utm_campaign: source === 'empty_state' ? 'requirement-match' : 'poc-application'
-  });
-  if (solutionSlug) params.set('utm_term', solutionSlug);
-  params.set('utm_content', source);
-
-  const href = `${contactPath}?${params.toString()}`;
-  assert(
-    html.replaceAll('&amp;', '&').includes(`href="${href}"`),
-    `Missing customer consultation link for ${source}: ${htmlFile}`
+  const anchors = html.match(/<a\b[^>]*>/g) || [];
+  const anchor = anchors.find(
+    (tag) =>
+      tag.includes('data-rybbit-event="business_consult_click"') &&
+      tag.includes(`data-rybbit-prop-source="${source}"`)
   );
+  assert(anchor, `Missing customer consultation CTA for ${source}: ${htmlFile}`);
+  assert(
+    anchor.includes(`href="${contactPath}?source=customers"`),
+    `Customer consultation must not synthesize acquisition UTM: ${htmlFile}`
+  );
+  if (solutionSlug) {
+    assert(
+      anchor.includes(`data-rybbit-prop-solution_slug="${solutionSlug}"`),
+      `Missing consultation case event context: ${htmlFile}`
+    );
+  }
 }
 
 const solutionFiles = walkFiles(solutionsDir, '.json');

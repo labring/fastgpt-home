@@ -42,7 +42,10 @@ export const contactLinkAttributionScript = `
     var incoming = new URLSearchParams(window.location.search);
     var forwarded = new URLSearchParams();
     keys.forEach(function(key) {
-      var value = incoming.get(key);
+      // The destination source describes this consultation, not acquisition.
+      var value = key === 'source'
+        ? (target.searchParams.get(key) || incoming.get(key))
+        : incoming.get(key);
       var maxLength = valueCaps[key];
       if (value && maxLength) {
         value = value.trim().slice(0, maxLength);

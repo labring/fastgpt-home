@@ -9,6 +9,9 @@ const ROOT = path.resolve(__dirname, '..');
 const REGISTRY = JSON.parse(
   fs.readFileSync(path.join(ROOT, 'src/content/guides/registry.json'), 'utf8')
 );
+const TECHNICAL_GUIDE_ROUTES = new Set(require('./lib/redirects').getTechIdentities(ROOT)
+  .filter((identity) => identity.canonicalPath.startsWith('/guide/'))
+  .map((identity) => identity.sourcePath));
 const REQUIRED_SLUGS = [
   'poc-30-day-design',
   'database-qa-integration-guide',
@@ -60,7 +63,8 @@ function collectGuideRoutes(outDir, localePrefix) {
     if (!filePath.endsWith('.html')) continue;
     const relative = path.relative(guideRoot, filePath).split(path.sep).join('/');
     const slug = relative.replace(/\/index\.html$|\.html$/, '');
-    if (slug && slug !== 'index') routes.add(`${prefix}/guide/${slug}`);
+    const route = `${prefix}/guide/${slug}`;
+    if (slug && slug !== 'index' && !TECHNICAL_GUIDE_ROUTES.has(route)) routes.add(route);
   }
   return routes;
 }

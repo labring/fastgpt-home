@@ -12,7 +12,7 @@ import vi from '@/locales/vi.json';
 import zhHant from '@/locales/zh-hant.json';
 import zh from '@/locales/zh.json';
 import { defaultLocale } from '@/lib/i18n';
-import { localeNames, supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
+import { localeNames, type LocaleCode } from '@/lib/locales';
 import { getOwnedLocaleUrl, getPublishedLocaleCodes, isPreviewSite } from '@/lib/siteRouting';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import {
@@ -22,13 +22,17 @@ import {
   techPublishedLocaleCodes
 } from '@/lib/publishedLocales';
 import CloudEntryLink from '@/components/home/CloudEntryLink';
-import { getTechEntriesForLocale } from '@/components/tech-center/data';
+import { guideSlugs } from '@/content/guides/registry';
+import { TECH_ENTRIES, getTechEntriesForLocale } from '@/components/tech-center/data';
 import { getTechnicalReviewPath } from '@/lib/technicalRouting';
+import type { RecoveryData } from '@/components/home/NotFoundRecovery';
+import NotFoundRecovery from '@/components/home/NotFoundRecoveryLoader';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
 const languages = getPublishedLocaleCodes();
 const fallbackLocale = languages.includes(defaultLocale) ? defaultLocale : languages[0];
 const recoveryGroups = [
+  { sections: ['guide'], label: 'Guide', path: '/guide', locales: techPublishedLocaleCodes },
   { sections: ['faq'], label: 'FAQ', path: '/faq', locales: faqPublishedLocaleCodes },
   {
     sections: ['contact'],
@@ -45,6 +49,7 @@ const recoveryGroups = [
   {
     sections: [
       'tech-center',
+      'reference',
       'api',
       'dataset',
       'deploy',
@@ -67,7 +72,7 @@ const recoveryPayload = recoveryGroups.map((group) => {
     sections: group.sections,
     links: locales.map((locale) => ({
       href: isPreviewSite
-        ? group.label === 'Tech Center'
+        ? group.label === 'Tech Center' || group.label === 'Guide'
           ? getTechnicalReviewPath(locale, group.path)
           : getDefaultLocalePath(locale, group.path)
         : getOwnedLocaleUrl(locale, group.path),
@@ -75,29 +80,26 @@ const recoveryPayload = recoveryGroups.map((group) => {
     }))
   };
 });
-const recoveryScript = `
-  (() => {
-    const segments = location.pathname.split('/').filter(Boolean);
-    if (${JSON.stringify(supportedLocaleCodes)}.includes(segments[0])) segments.shift();
-    const section = segments[0];
-    if (!section) return;
-    const group = ${JSON.stringify(recoveryPayload)}.find(({ sections }) =>
-      sections.includes(section)
-    );
-    if (!group) return;
-    document.querySelectorAll('[data-not-found-recovery]').forEach((container) => {
-      group.links.forEach(({ href, label }) => {
-        const link = document.createElement('a');
-        link.href = href;
-        link.textContent = label;
-        link.className =
-          'inline-flex h-12 w-full items-center justify-center gap-2 rounded-full border border-[#d4d4d4] bg-white px-6 text-[15px] font-medium text-[#020617] transition-colors hover:bg-[#f7f8fa] sm:w-auto';
-        container.append(link);
-      });
-      container.style.display = 'contents';
+// Resolve known shared article paths to their actual published variants on the static 404 page.
+const articleRecovery: Record<string, { href: string; label: string }[]> = {};
+for (const locale of techPublishedLocaleCodes) {
+  const paths = [
+    ...guideSlugs.map((slug) => `/guide/${slug}`),
+    ...TECH_ENTRIES.filter(
+      (entry) =>
+        entry.slug.startsWith(`/${locale}/guide/`) || entry.slug.startsWith(`/${locale}/reference/`)
+    ).map((entry) => entry.slug.replace(/^\/(zh|en)/, ''))
+  ];
+  for (const articlePath of paths) {
+    (articleRecovery[articlePath] ??= []).push({
+      href: isPreviewSite
+        ? getTechnicalReviewPath(locale, articlePath)
+        : getOwnedLocaleUrl(locale, articlePath),
+      label: localeNames[locale]
     });
-  })();
-`;
+  }
+}
+const recoveryData: RecoveryData = { groups: recoveryPayload, articles: articleRecovery };
 const localeVisibilityCss = `
   html${languages
     .filter((lang) => lang !== fallbackLocale)
@@ -210,7 +212,7 @@ function NotFoundContent({ lang }: { lang: LocaleCode }) {
                 <Home className="h-4 w-4" />
                 {t.home}
               </Link>
-              <span data-not-found-recovery style={{ display: 'none' }} />
+              <NotFoundRecovery data={recoveryData} />
             </div>
 
             <Link
@@ -241,7 +243,11 @@ export default function NotFoundPage() {
       {languages.map((lang) => (
         <NotFoundContent key={lang} lang={lang} />
       ))}
-      <script dangerouslySetInnerHTML={{ __html: recoveryScript }} />
+      <script
+        id="not-found-recovery-data"
+        type="application/json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(recoveryData).replace(/</g, '\\u003c') }}
+      />
     </div>
   );
 }

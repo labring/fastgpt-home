@@ -1,18 +1,21 @@
 import type { Metadata } from 'next';
 
-import { GuideArticleRoute } from '@/components/guide/GuideArticleRoute';
-import { guideSlugs } from '@/content/guides/registry';
-import { resolveGuideLocale, getGuideArticleMetadata } from '@/lib/guideSeo';
+import {
+  GuidePathRoute,
+  getGuidePathParams,
+  getGuidePathMetadata
+} from '@/components/guide/GuidePathRoute';
+import { resolveGuideLocale } from '@/lib/guideSeo';
 import { defaultLocale } from '@/lib/i18n';
 
 const locale = resolveGuideLocale(defaultLocale) || 'en';
 export default async function GuideArticlePage({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
-  return <GuideArticleRoute locale={locale} slug={slug} />;
+  return <GuidePathRoute locale={locale} slug={slug} />;
 }
 
 export function generateStaticParams() {
-  return guideSlugs.map((slug) => ({ slug }));
+  return getGuidePathParams(false);
 }
 
 export const dynamicParams = false;
@@ -23,5 +26,5 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  return getGuideArticleMetadata(locale, slug, { indexable: true });
+  return getGuidePathMetadata(locale, slug, true);
 }

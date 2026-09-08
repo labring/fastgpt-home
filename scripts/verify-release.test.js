@@ -484,7 +484,7 @@ test('release variants inherit shared configuration and isolate site overrides',
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {
   const failures = [
-    failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 260 KiB')
+    failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 261 KiB')
   ];
   const original = structuredClone(failures);
   const advisories = [];
@@ -496,7 +496,7 @@ test('P1 budget failures remain aggregate failures and add a separate baseline a
   assert.match(advisories[0].output, /c77cf48/);
   assert.match(advisories[0].output, /266\.9 KiB/);
   assert.match(advisories[0].output, /\+0\.1 KiB/);
-  assert.match(advisories[0].output, /260 KiB/);
+  assert.match(advisories[0].output, /261 KiB/);
   assert.equal(advisories[0].command, original[0].command);
   assert.equal(advisories[0].variant, 'io');
 });

@@ -25,7 +25,8 @@ import CloudEntryLink from '@/components/home/CloudEntryLink';
 import { guideSlugs } from '@/content/guides/registry';
 import { TECH_ENTRIES, getTechEntriesForLocale } from '@/components/tech-center/data';
 import { getTechnicalReviewPath } from '@/lib/technicalRouting';
-import NotFoundRecovery, { type RecoveryData } from '@/components/home/NotFoundRecovery';
+import type { RecoveryData } from '@/components/home/NotFoundRecovery';
+import NotFoundRecovery from '@/components/home/NotFoundRecoveryLoader';
 
 const dictionaries = { en, 'zh-hant': zhHant, zh, ja, ar, vi, th, id, ms };
 const languages = getPublishedLocaleCodes();

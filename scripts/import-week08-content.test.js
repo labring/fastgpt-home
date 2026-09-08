@@ -4,7 +4,7 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 const { buildImport, normalizePath } = require('./import-week08-content');
-const { verifySource, verifyReturn } = require('./verify-week08-content');
+const { verifySource, verifyPage, verifyReturn } = require('./verify-week08-content');
 const publication = require('../src/content/week08/publication.json');
 const returns = require('../src/content/tech-center/stage-returns.json');
 const corrections = require('../src/content/week08/publication-corrections.json');
@@ -34,6 +34,47 @@ function fixture() {
 }
 test('Week08 source contract preserves 38 identities and 797 existing article bodies', () => {
   assert.equal(verifySource().returns, 797);
+});
+test('page verification accepts React HTML attributes and checks schema canonical identity', () => {
+  const route = '/guide/api-integration-acceptance';
+  const page = publication.pages.find((entry) => entry.locale === 'zh' && entry.route === route);
+  const canonical = `https://fastgpt.cn${route}`;
+  const schema = {
+    '@type': 'Article',
+    mainEntityOfPage: { '@type': 'WebPage', '@id': canonical },
+    datePublished: publication.date,
+    dateModified: publication.date
+  };
+  const render = (article) => `
+    <link rel="canonical" href="${canonical}"/>
+    <link rel="alternate" hrefLang="zh-CN" href="${canonical}"/>
+    <link rel="alternate" hrefLang="en" href="https://fastgpt.io${route}"/>
+    <link rel="alternate" hrefLang="x-default" href="https://fastgpt.io${route}"/>
+    <meta name="description" content="Enterprise API integration acceptance and regression guidance."/>
+    <meta property="og:url" content="${canonical}"/>
+    <meta name="robots" content="index, follow"/>
+    <script type="application/ld+json">${JSON.stringify(article)}</script>
+    <script type="application/ld+json">{"@type":"BreadcrumbList"}</script>
+    <h1>API integration acceptance</h1><time dateTime="${publication.date}"></time>
+    <a href="/guide/version-upgrade-decision">Upgrade</a>
+    <a href="/guide/backup-restore-drill">Restore</a>
+    <a href="/guide/observability-baseline">Observe</a><a href="/price">Pricing</a>`;
+  for (const html of [render(schema), render(schema).replaceAll('hrefLang', 'hreflang')]) {
+    assert.doesNotThrow(() => verifyPage(html, page, 'cn'));
+  }
+  assert.throws(
+    () =>
+      verifyPage(
+        render({ ...schema, mainEntityOfPage: { '@id': 'https://example.com' } }),
+        page,
+        'cn'
+      ),
+    /article schema and dates/
+  );
+  assert.throws(
+    () => verifyPage(render({ ...schema, url: 'https://example.com' }), page, 'cn'),
+    /article schema and dates/
+  );
 });
 test('rejects invalid public paths and wrong-locale inputs', () => {
   assert.equal(normalizePath('/zh/guide/topic', 'zh'), '/guide/topic');

@@ -157,7 +157,7 @@ function visibleHtml(html) {
 function attrs(tag) {
   return Object.fromEntries(
     [...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map((match) => [
-      match[1],
+      match[1].toLowerCase(),
       match[2].replace(/&amp;/g, '&')
     ])
   );
@@ -224,7 +224,8 @@ function verifyPage(html, page, variant) {
   const article = schemas.find((node) => ['Article', 'TechArticle'].includes(node['@type']));
   assert(
     article &&
-      article.url === canonical &&
+      article.mainEntityOfPage?.['@id'] === canonical &&
+      (article.url === undefined || article.url === canonical) &&
       article.datePublished === publication.date &&
       article.dateModified === publication.date,
     `${canonical}: article schema and dates`

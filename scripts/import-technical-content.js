@@ -937,7 +937,9 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
     const identity = parseIdentityFromSlug(entry.slug, 'technical registry');
     if (
       entry.slug !== `/${identity.locale}${identity.canonicalPath}` ||
-      entry.category !== identity.canonicalPath.split('/')[1] ||
+      (identity.canonicalPath.split('/')[1] === 'guide'
+        ? entry.category !== 'troubleshoot'
+        : entry.category !== identity.canonicalPath.split('/')[1]) ||
       !Object.hasOwn(CATEGORY_LABELS, entry.category)
     ) {
       throw new Error(`Technical content route/category drift for ${entry.slug}`);

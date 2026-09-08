@@ -542,3 +542,8 @@
     padding-left: 20px;
   }
 }
+
+.article :global(.tech-article-table):focus-visible {
+  outline: 2px solid var(--article-blue);
+  outline-offset: 4px;
+}

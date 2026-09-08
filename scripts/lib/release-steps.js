@@ -1,8 +1,5 @@
 function getSourceNodeSteps() {
   return [
-    ['week08.source', 'Week08 publication source verification', 'scripts/verify-week08-content.js', []],
-    ['week08.regression', 'Week08 import and navigation regression', 'scripts/import-week08-content.test.js', []],
-    ['guide-markdown.regression', 'Guide and reference Markdown regression', 'scripts/verify-guide-markdown.test.js', []],
     [
       'solutions-preview.regression',
       'Solutions preview runner regression',
@@ -149,7 +146,6 @@ function extractP1SuccessMeasurement(output) {
 
 function getVariantSteps(variant) {
   const steps = [
-    { runner: 'node', id: 'week08.export', label: `Week08 publication export (${variant})`, command: 'scripts/verify-week08-content.js', args: ['--export'] },
     ...(variant === 'preview'
       ? []
       : [

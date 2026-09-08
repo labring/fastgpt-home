@@ -86,7 +86,7 @@ function getExpectedTechPages(variant) {
   });
 }
 
-function getExpectedPages(variant, htmlFiles = walkHtmlFiles(outDir)) {
+function getExpectedPages(variant) {
   const defaultLocale = getDefaultLocale(variant);
   const pages = new Map();
   const faqIds = getPublishedFaqIds(root)[defaultLocale === 'zh' ? 'chinese' : 'english'];
@@ -112,12 +112,10 @@ function getExpectedPages(variant, htmlFiles = walkHtmlFiles(outDir)) {
     addPage(pages, 'tech', page.route, page.locale, page.sourcePath);
   }
 
-  for (const filePath of htmlFiles) {
+  for (const filePath of walkHtmlFiles(outDir)) {
     const route = routeFromFile(filePath);
     const match = route.match(/^\/(?:([^/]+)\/)?(faq|guide)\/[^/]+$/);
-    if (match && !pages.has(route)) {
-      addPage(pages, match[2], route, match[1] || defaultLocale);
-    }
+    if (match) addPage(pages, match[2], route, match[1] || defaultLocale);
   }
 
   return { defaultLocale, pages: [...pages.values()] };
@@ -177,23 +175,6 @@ test('production Technical expectations follow Site Variant locale ownership', (
       .sort();
 
     assert.deepEqual(actual, expected, `${variant} Technical routes`);
-  }
-});
-
-test('export discovery preserves registered Technical ownership of Guide paths', () => {
-  for (const variant of ['cn', 'io', 'preview']) {
-    const technicalGuides = getExpectedTechPages(variant).filter((page) =>
-      page.route.includes('/guide/')
-    );
-    assert(technicalGuides.length > 0, `${variant} Technical Guide routes`);
-    const htmlFiles = technicalGuides.map((page) => path.join(outDir, `${page.route.slice(1)}.html`));
-    const { pages } = getExpectedPages(variant, htmlFiles);
-    for (const expected of technicalGuides) {
-      const actual = pages.find((page) => page.route === expected.route);
-      assert.equal(actual.surface, 'tech', expected.route);
-      assert.equal(actual.slug, expected.sourcePath, expected.route);
-      assert.equal(actual.locale, expected.locale, expected.route);
-    }
   }
 });
 

@@ -4,9 +4,6 @@ import { useReducedMotion, type Variants } from 'framer-motion';
 import * as m from 'framer-motion/m';
 import type { ReactNode } from 'react';
 
-// Static references let the bundler omit unused motion tags.
-const motionTags = { div: m.div, section: m.section, span: m.span, li: m.li };
-
 type Direction = 'up' | 'down' | 'left' | 'right' | 'none';
 
 interface FadeInProps {
@@ -53,7 +50,7 @@ export default function FadeIn({
     }
   };
 
-  const MotionTag = motionTags[as] as typeof m.div;
+  const MotionTag = m[as] as typeof m.div;
 
   // Start slightly before the element reaches the viewport. A negative
   // margin made fast scrolls reveal the section before its animation ran.

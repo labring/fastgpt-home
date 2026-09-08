@@ -69,8 +69,7 @@ function parseTableRow(line: string) {
     .trim()
     .replace(/^\|/, '')
     .replace(/\|$/, '')
-    .split(/(?<!\\)\|/)
-    .map((cell) => cell.replace(/\\\|/g, '|'))
+    .split('|')
     .map((cell) => cell.trim());
 }
 

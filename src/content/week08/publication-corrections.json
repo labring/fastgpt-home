@@ -1,0 +1,338 @@
+[
+  {
+    "slug": "deployment-form-selection",
+    "locale": "en",
+    "reason": "Scope offline settings and version requirements to the affected components.",
+    "sources": [
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162",
+      "https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/src/web/common/system/useSystemStore.ts"
+    ],
+    "replacements": [
+      {
+        "before": "disable external network requests via configuration `show_git:false`",
+        "after": "disable the GitHub display and star-count request with `show_git:false`; offline operation also requires internal model, plugin, parsing and dependency resources plus outbound-traffic verification"
+      },
+      {
+        "before": "disable external requests via configuration `show_git:false` to run offline",
+        "after": "disable the GitHub display and star-count request with `show_git:false`; offline operation also requires internal model, plugin, parsing and dependency resources plus outbound-traffic verification"
+      },
+      {
+        "before": "(which requires Milvus v2.5.16+)",
+        "after": "(which requires Milvus v2.5.16+ when using Milvus)"
+      },
+      {
+        "before": "(e.g., Milvus v2.5.16+ for v4.16.2)",
+        "after": "(e.g., Milvus v2.5.16+ for v4.16.2 deployments that use Milvus)"
+      },
+      {
+        "before": "v4.16.2 requires Milvus v2.5.16+",
+        "after": "v4.16.2 requires Milvus v2.5.16+ when using Milvus"
+      },
+      {
+        "before": "v4.16.2 requires running an ACL migration script",
+        "after": "v4.16.2 commercial-edition deployments require running an ACL migration script"
+      },
+      {
+        "before": "you must manually run upgrade scripts and handle permission migration operations",
+        "after": "you must manually run the upgrade scripts applicable to your edition and configured services"
+      }
+    ]
+  },
+  {
+    "slug": "deployment-form-selection",
+    "locale": "zh",
+    "reason": "Scope offline settings and version requirements to the affected components.",
+    "sources": [
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162",
+      "https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/src/web/common/system/useSystemStore.ts"
+    ],
+    "replacements": [
+      {
+        "before": "通过配置`show_git:false`关闭外网请求，支持离线运行",
+        "after": "通过配置`show_git:false`关闭 GitHub 展示及星标请求；离线运行还需为模型、插件、文件解析及依赖下载分别准备内网资源并验证出站流量"
+      },
+      {
+        "before": "可通过配置关闭外网请求",
+        "after": "需逐项配置内网资源并验证外网依赖"
+      },
+      {
+        "before": "（要求Milvus v2.5.16+）",
+        "after": "（使用 Milvus 时要求 v2.5.16+）"
+      },
+      {
+        "before": "如v4.16.2需Milvus v2.5.16+",
+        "after": "如使用 Milvus，v4.16.2 需 Milvus v2.5.16+"
+      },
+      {
+        "before": "v4.16.2要求Milvus v2.5.16+",
+        "after": "v4.16.2 在使用 Milvus 时要求 v2.5.16+"
+      },
+      {
+        "before": "如v4.16.2需执行ACL迁移脚本",
+        "after": "如 v4.16.2 商业版需执行 ACL 迁移脚本"
+      },
+      {
+        "before": "需手动执行升级脚本及权限迁移操作",
+        "after": "需手动执行适用于所用版本、版本形态和服务的升级脚本"
+      }
+    ]
+  },
+  {
+    "slug": "version-upgrade-decision",
+    "locale": "en",
+    "reason": "Correct migration lifecycle, remove unsupported cadence limits, and distinguish Agent Sandbox from the code sandbox.",
+    "sources": [
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction"
+    ],
+    "replacements": [
+      {
+        "before": "Single upgrade interval may not exceed 2 official release cycles",
+        "after": "Review every release note and migration between the current and target versions; rehearse sequential upgrades first"
+      },
+      {
+        "before": "if a target version has critical security fixes but exceeds the 2-version interval limit, upgrade to an intermediate stable version first, then proceed to the target version",
+        "after": "if a target version has critical security fixes and includes several migrations, rehearse each intervening migration and use intermediate stable versions where the release instructions require them"
+      },
+      {
+        "before": "For permission migrations, use the dry-run parameter and wait until cleanup.danglingPermissionCount, migration.updatedResourceCount, and migration.errors all return 0 before running the official migration.",
+        "after": "For commercial-edition permission migrations, run dry-run, review migration.errors and resolve abnormal resources before running the migration; afterward, run dry-run again and confirm cleanup.danglingPermissionCount and migration.updatedResourceCount are 0 and migration.errors is empty."
+      },
+      {
+        "before": "Run the target version’s dry-run interface, confirm cleanup and migration statistics show danglingPermissionCount, updatedResourceCount, and errors all equal 0.",
+        "after": "After the applicable commercial-edition ACL migration, run dry-run again and confirm cleanup.danglingPermissionCount and migration.updatedResourceCount are 0 and migration.errors is empty."
+      },
+      {
+        "before": "If Agent Sandbox fails to start, roll back to a compatible image like v4.14.15’s fastgpt-code-sandbox.",
+        "after": "If Agent Sandbox fails to start, restore the matched main-service, Agent Sandbox Proxy and runtime images together with compatible data and configuration, following the target release notes."
+      },
+      {
+        "before": "The v4.16.2 upgrade guide explicitly requires Milvus to be upgraded to 2.5.16 or higher",
+        "after": "For deployments using Milvus, the v4.16.2 upgrade guide requires Milvus 2.5.16 or higher"
+      },
+      {
+        "before": "such as Milvus 2.5.16 or higher,",
+        "after": "such as Milvus 2.5.16 or higher when using Milvus,"
+      },
+      {
+        "before": "When dependent third-party components cannot be upgraded as required, such as Milvus unable to reach version 2.5.16 or higher. You cannot perform the v4.16.2 upgrade,",
+        "after": "When a deployment using Milvus cannot upgrade it to version 2.5.16 or higher, the v4.16.2 upgrade must wait,"
+      },
+      {
+        "before": "If issues occur, roll back to your backed-up images and configurations first, then troubleshoot the root cause.",
+        "after": "If issues occur, follow the rehearsed rollback procedure and restore a compatible set of application images, migrated data and configuration before resuming traffic."
+      }
+    ]
+  },
+  {
+    "slug": "version-upgrade-decision",
+    "locale": "zh",
+    "reason": "Correct migration lifecycle, remove unsupported cadence limits, and distinguish Agent Sandbox from the code sandbox.",
+    "sources": [
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/upgrade-instruction"
+    ],
+    "replacements": [
+      {
+        "before": "单次升级间隔不超过2个正式版本周期",
+        "after": "按当前至目标版本逐项核对升级说明与迁移脚本，优先逐版本演练"
+      },
+      {
+        "before": "若目标版本存在安全修复但单次升级间隔超出限制，需先升级至中间的稳定版本，再逐步推进至目标版本",
+        "after": "若目标版本包含安全修复和多项迁移，需演练其间的每项迁移，并按版本说明的要求使用中间稳定版本"
+      },
+      {
+        "before": "例如，执行权限迁移接口时，先通过dry-run参数发起请求，待返回结果中cleanup.danglingPermissionCount、migration.updatedResourceCount、migration.errors均为0后，再执行正式迁移",
+        "after": "例如，执行商业版权限迁移接口时，先通过 dry-run 参数发起请求，确认 migration.errors 为空或已处理异常资源后执行正式迁移；完成后再次 dry-run，确认 cleanup.danglingPermissionCount、migration.updatedResourceCount 为 0 且 migration.errors 为空"
+      },
+      {
+        "before": "执行目标版本对应的dry-run接口，确认cleanup、migration相关统计数据中，danglingPermissionCount、updatedResourceCount、errors均为0。",
+        "after": "完成适用的商业版 ACL 迁移后，再次执行 dry-run，确认 cleanup.danglingPermissionCount、migration.updatedResourceCount 为 0，migration.errors 为空。"
+      },
+      {
+        "before": "若出现Agent Sandbox启动失败的情况，可回退至兼容的镜像版本，如v4.14.15的fastgpt-code-sandbox镜像",
+        "after": "若出现 Agent Sandbox 启动失败，应按目标版本说明成组恢复匹配的主服务、Agent Sandbox Proxy 与运行时镜像，并同步恢复适配的数据和配置"
+      },
+      {
+        "before": "v4.16.2升级指南明确要求Milvus升级到2.5.16或更高",
+        "after": "使用 Milvus 的部署升级到 v4.16.2 时，需将 Milvus 升级到 2.5.16 或更高"
+      },
+      {
+        "before": "如Milvus需升级至2.5.16或更高版本",
+        "after": "如使用 Milvus，需升级至 2.5.16 或更高版本"
+      },
+      {
+        "before": "当依赖的第三方组件无法按要求升级时，如Milvus无法升级至2.5.16或更高版本，则无法执行v4.16.2的升级",
+        "after": "当使用 Milvus 的部署无法将其升级至 2.5.16 或更高版本时，需暂缓执行 v4.16.2 升级"
+      },
+      {
+        "before": "若出现异常，需优先回退至备份的镜像与配置，再排查具体问题。",
+        "after": "若出现异常，按已演练的回退流程恢复相互兼容的应用镜像、迁移数据和配置，验证后恢复流量。"
+      }
+    ]
+  },
+  {
+    "slug": "backup-restore-drill",
+    "locale": "en",
+    "reason": "Isolate drill targets and scope the proxy health endpoint; keep restoration separate from version migration.",
+    "sources": [
+      "https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160",
+      "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162"
+    ],
+    "replacements": [
+      {
+        "before": "Configure database connection parameters including MONGODB_URI and PG_URL to match the production environment exactly.",
+        "after": "Configure MONGODB_URI and PG_URL for isolated recovery databases, verify the target hosts and volumes, and retain compatible database versions and options."
+      },
+      {
+        "before": "Environment variables including database connection parameters, API keys, and ROOT_KEY match the production environment exactly",
+        "after": "Database connections, API keys and ROOT_KEY target the isolated drill environment; permission scopes match the intended recovery policy"
+      },
+      {
+        "before": "Recovery environment mirror versions, environment variables, and dependent service (Mongo, PG, Redis) configurations match the production environment exactly",
+        "after": "Recovery images and database versions match the backup; endpoints, credentials and volumes belong to the isolated drill environment"
+      },
+      {
+        "before": "Check that all service mirror versions, environment variables, and configuration files exactly match the production environment.",
+        "after": "Check that service images and database versions match the backup and that endpoints, credentials and volumes belong to the isolated drill environment."
+      },
+      {
+        "before": "Check the health check endpoint at https://{{host}}/health to verify service status",
+        "after": "Check https://{{proxy-host}}/health on the Agent Sandbox Proxy to confirm proxy reachability, then verify the main application, databases and business functions separately"
+      },
+      {
+        "before": "Clear the persistent data directory of MongoDB in the recovery environment to avoid interference from existing data.",
+        "after": "Create an empty MongoDB data volume in the isolated recovery environment and verify its host and mount path before importing the backup."
+      },
+      {
+        "before": "If Agent Sandbox is enabled, run the official migration command’s dry-run mode first:",
+        "after": "Run this migration only when the restore crosses an applicable Agent Sandbox migration version and the backup contains legacy Sandbox data. For a same-version restore, validate existing data first. Review pending records with the dry-run request:"
+      },
+      {
+        "before": "Confirm normalization.pendingCount is 0 before running the full migration command. Use the skipError parameter to skip deleted resources if you encounter \"source missing\" errors.",
+        "after": "After confirming backups and scope, follow the release notes to run dryRun:false. The formal request normalizes data first and proceeds once pendingCount reaches zero. Verify normalization.pendingCount=0, normalizationBlocked=false and failedCount=0 in the formal result. Use skipError:true only after confirming that every failure is a missing or deleted source App/Skill. Skipped records remain unmigrated; review skipped and skippedCount separately."
+      },
+      {
+        "before": "If you ran version upgrades or data migrations, run the official migration commands and confirm normalization.pendingCount and failedCount are both 0. The command must return success with no abnormal data records.",
+        "after": "If a version upgrade requires Sandbox migration, inspect its formal result for normalization.pendingCount=0, normalizationBlocked=false and failedCount=0. Review skipped and skippedCount separately; a later dry-run alone does not establish completed migration."
+      },
+      {
+        "before": "Ensure versions exactly match the production environment.",
+        "after": "Ensure versions match the backup being restored."
+      },
+      {
+        "before": "If you use commercial permission management features, run permission cleanup and migration commands with a dry-run check first, then execute the full migration to ensure resource permission integrity.",
+        "after": "If the restore also upgrades a commercial deployment across an ACL migration version, follow that release’s permission cleanup and migration instructions, including dry-run and post-migration checks."
+      },
+      {
+        "before": "If you use FastGPT v4.16.2 or later without upgrading Milvus to 2.5.16 or higher",
+        "after": "If your FastGPT v4.16.2 or later deployment uses Milvus below 2.5.16"
+      }
+    ]
+  },
+  {
+    "slug": "backup-restore-drill",
+    "locale": "zh",
+    "reason": "Isolate drill targets and scope the proxy health endpoint; keep restoration separate from version migration.",
+    "sources": [
+      "https://doc.fastgpt.cn/zh-CN/self-host/config/sandbox/common",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4160",
+      "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+      "https://doc.fastgpt.cn/zh-CN/self-host/upgrading/4-16/4162"
+    ],
+    "replacements": [
+      {
+        "before": "配置数据库连接参数，确保MONGODB_URI、PG_URL等与生产环境一致",
+        "after": "将 MONGODB_URI、PG_URL 配置为隔离恢复环境的数据库地址，核对目标主机与数据卷，并保持数据库版本和参数兼容"
+      },
+      {
+        "before": "环境变量中的数据库连接参数、API密钥、ROOT_KEY等与生产环境一致",
+        "after": "数据库连接、API 密钥和 ROOT_KEY 指向隔离演练环境，权限范围符合预定恢复策略"
+      },
+      {
+        "before": "恢复环境的镜像版本、环境变量、依赖服务（Mongo、PG、Redis）配置与生产环境完全匹配",
+        "after": "恢复镜像与数据库版本匹配备份，地址、凭证和数据卷属于隔离演练环境"
+      },
+      {
+        "before": "通过访问健康检查接口https://{{host}}/health验证各服务的运行状态",
+        "after": "访问 Agent Sandbox Proxy 的 https://{{proxy-host}}/health 确认代理可达，并分别检查主服务、数据库和业务功能"
+      },
+      {
+        "before": "首先清空恢复环境中MongoDB的持久化数据目录，避免原有数据干扰恢复结果",
+        "after": "首先在隔离恢复环境中创建空的 MongoDB 数据卷，并核对目标主机和挂载路径"
+      },
+      {
+        "before": "检查所有服务的镜像版本、环境变量、配置文件与生产环境完全匹配",
+        "after": "检查服务镜像和数据库版本与备份匹配，确认地址、凭证和数据卷属于隔离演练环境"
+      },
+      {
+        "before": "若系统启用了Agent Sandbox，需执行官方提供的迁移命令，先进行dry-run验证，例如curl -X POST 'https://你的域名/api/admin/4160/initUserSandbox' -H 'Content-Type: application/json' -H 'rootkey: 你的ROOT_KEY' -d '{\"dryRun\":true}'，查看normalization.pendingCount是否为0，确认无待处理数据后再执行正式迁移命令。若迁移过程中出现source缺失的错误，可通过skipError参数跳过已删除的资源，避免迁移流程阻断。",
+        "after": "仅在恢复过程同时跨越适用的 Agent Sandbox 数据迁移版本、且备份包含旧 Sandbox 数据时，按对应升级说明执行迁移。同版本恢复应先验证现有数据。先通过 dryRun:true 审阅待清理记录，确认备份和影响范围后按说明执行 dryRun:false；正式请求会先完成归一化，再在 pendingCount 归零后继续迁移。正式结果需同时满足 normalization.pendingCount=0、normalizationBlocked=false、failedCount=0。仅在全部失败均为源 App/Skill 缺失或已删除、且已逐项核实后使用 skipError:true；被跳过的记录会保留且尚未迁移，应单独审阅 skipped 和 skippedCount。"
+      },
+      {
+        "before": "若涉及版本升级或数据迁移，执行官方提供的迁移命令，查看返回结果中的normalization.pendingCount为0、failedCount为0，标准为迁移命令返回成功，无异常数据记录。",
+        "after": "若版本升级要求迁移 Sandbox，检查正式请求结果满足 normalization.pendingCount=0、normalizationBlocked=false、failedCount=0，并单独审阅 skipped 和 skippedCount；后续 dry-run 本身无法证明正式迁移已完成。"
+      },
+      {
+        "before": "确保镜像版本与生产环境完全一致",
+        "after": "确保镜像版本与待恢复备份兼容"
+      },
+      {
+        "before": "若系统启用了商业版的权限管理功能，需执行权限清理与迁移命令，先进行dry-run验证，再执行正式迁移，确保资源权限的完整性与正确性。",
+        "after": "若恢复过程同时跨越商业版 ACL 迁移版本，按该版本说明执行权限清理、迁移及前后 dry-run 校验。"
+      }
+    ]
+  },
+  {
+    "slug": "api-integration-acceptance",
+    "locale": "en",
+    "reason": "Keep certificate verification enabled and test rejection of untrusted certificates.",
+    "sources": [
+      "https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/packages/service/core/workflow/dispatch/tools/http468.ts"
+    ],
+    "replacements": [
+      {
+        "before": "Support configuring TLS certificate check ignore, and return full error objects",
+        "after": "Keep TLS certificate verification enabled with a trusted CA, and return full error objects when needed"
+      },
+      {
+        "before": "For HTTP nodes, enable TLS certificate check ignore if the target service uses self-signed certificates.",
+        "after": "For self-signed services, configure a trusted CA and keep TLS verification enabled. Limit any temporary bypass to isolated diagnostics, restore verification afterward, and confirm untrusted certificates are rejected."
+      },
+      {
+        "before": "Configure the HTTP node to ignore TLS certificate checks, call an interface using a self-signed certificate, confirm the request succeeds.",
+        "after": "Keep TLS verification enabled, confirm a service signed by the configured trusted CA succeeds, and confirm an untrusted certificate is rejected."
+      }
+    ]
+  },
+  {
+    "slug": "api-integration-acceptance",
+    "locale": "zh",
+    "reason": "Keep certificate verification enabled and test rejection of untrusted certificates.",
+    "sources": [
+      "https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/packages/service/core/workflow/dispatch/tools/http468.ts"
+    ],
+    "replacements": [
+      {
+        "before": "支持配置忽略TLS证书校验，可返回完整错误对象",
+        "after": "保持 TLS 证书校验并配置受信任的 CA，按需返回完整错误对象"
+      },
+      {
+        "before": "若对接服务使用自签名证书，则需配置忽略TLS证书校验",
+        "after": "若对接服务使用自签名证书，应配置受信任的 CA 并保持 TLS 校验"
+      },
+      {
+        "before": "若调用的服务使用自签名证书，需开启忽略TLS证书校验选项",
+        "after": "若调用的服务使用自签名证书，应配置受信任的 CA 并保持 TLS 校验；临时关闭校验须限于隔离诊断环境，完成后恢复，并验证不受信任证书被拒绝"
+      },
+      {
+        "before": "配置HTTP节点忽略TLS证书校验，调用使用自签名证书的接口，检查请求是否成功",
+        "after": "保持 TLS 校验，确认配置的受信任 CA 签发的证书请求成功，并确认不受信任证书被拒绝"
+      }
+    ]
+  }
+]

@@ -10,6 +10,9 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const REGISTRY_PATH = path.join(ROOT, 'src/content/guides/registry.json');
 const POLICY_PATH = path.join(ROOT, 'src/content/guides/policy.json');
+const TECHNICAL_GUIDE_PATHS = new Set(require('./lib/redirects').getTechIdentities(ROOT)
+  .filter((identity) => identity.canonicalPath.startsWith('/guide/'))
+  .map((identity) => identity.canonicalPath));
 const GUIDE_ENTRY_COUNT = JSON.parse(fs.readFileSync(POLICY_PATH, 'utf8')).entryCount;
 const GUIDE_TRACER_SLUG = 'poc-30-day-design';
 const GUIDE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -324,6 +327,7 @@ function collectGuideRoutes(outDir, expectation) {
   for (const filePath of files) {
     const route = guideRouteFromFile(outDir, filePath);
     if (!route) fail(hubContext, `invalid Guide HTML output path ${filePath}`);
+    if (TECHNICAL_GUIDE_PATHS.has(route) && !expectation.routes.has(route)) continue;
     if (routes.has(route)) fail(hubContext, `duplicate Guide HTML route ${route}`);
     routes.set(route, filePath);
   }
@@ -515,7 +519,8 @@ function verifySitemap(outDir, expectation) {
   for (const url of urls) {
     try {
       const parsed = new URL(url);
-      if (parsed.pathname === '/guide' || parsed.pathname.startsWith('/guide/')) actual.push(url);
+      if ((parsed.pathname === '/guide' || parsed.pathname.startsWith('/guide/')) &&
+          (!TECHNICAL_GUIDE_PATHS.has(parsed.pathname) || expectation.routes.has(parsed.pathname))) actual.push(url);
     } catch {
       fail(context, `invalid sitemap URL ${url}`);
     }

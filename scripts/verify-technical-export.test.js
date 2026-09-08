@@ -44,8 +44,9 @@ test('technical identities are unique and retain their owner-relative paths', ()
   const identities = getTechIdentities(root);
   assert.equal(identities.length, EXPECTED_TECHNICAL_PAGE_COUNT);
   assert.equal(new Set(identities.map((identity) => identity.key)).size, identities.length);
-  assert.equal(identities[0].sourcePath, '/zh/tutorial/private-deployment-topology');
-  assert.equal(identities[0].canonicalPath, '/tutorial/private-deployment-topology');
+  const tracer = identities.find((identity) => identity.key === 'zh|/tutorial/private-deployment-topology');
+  assert.equal(tracer.sourcePath, '/zh/tutorial/private-deployment-topology');
+  assert.equal(tracer.canonicalPath, '/tutorial/private-deployment-topology');
 });
 
 test('same-slug technical identities keep only the active production owner route', () => {

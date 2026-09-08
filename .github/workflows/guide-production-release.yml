@@ -359,8 +359,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Install locked Wrangler CLI without lifecycle scripts
-        run: npm ci --ignore-scripts
       - name: Guard IO audit credentials
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -374,77 +372,62 @@ jobs:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
-          set +e
-          ./node_modules/.bin/wrangler pages deployment list --project-name="$PROJECT_NAME" --json > "$RUNNER_TEMP/io-deployments.json"
-          wrangler_status=$?
-          set -e
-          WRANGLER_STATUS="$wrangler_status" node - <<'NODE'
-          const fs = require('node:fs');
-          const outputPath = 'provider-audit-io.json';
-          const sourcePath = process.env.RUNNER_TEMP + '/io-deployments.json';
-          const redact = (value, key = '') => {
-            if (/token|secret|password|authorization|credential|private.?key/i.test(key)) return '<redacted>';
-            if (Array.isArray(value)) return value.slice(0, 5).map((item) => redact(item));
-            if (value && typeof value === 'object') return Object.fromEntries(Object.entries(value).slice(0, 30).map(([k, v]) => [k, redact(v, k)]));
-            if (typeof value === 'string' && value.length > 512) return `${value.slice(0, 512)}<truncated>`;
-            return value;
-          };
+          node --input-type=module - <<'NODE'
+          import fs from 'node:fs';
+          const endpoint = `https://api.cloudflare.com/client/v4/accounts/${process.env.CLOUDFLARE_ACCOUNT_ID}/pages/projects/${process.env.PROJECT_NAME}`;
+          const response = await fetch(endpoint, {
+            headers: { Authorization: `Bearer ${process.env.CLOUDFLARE_API_TOKEN}` },
+            signal: AbortSignal.timeout(30000),
+          });
+          if (!response.ok) throw new Error(`Cloudflare project lookup failed: HTTP ${response.status}`);
+          const payload = await response.json();
+          if (!payload.success || !payload.result) throw new Error('Cloudflare project lookup returned no project');
+          const project = payload.result;
+          const deployment = project.canonical_deployment;
+          const source = project.source?.config;
+          const domains = project.domains || [];
+          const ready = Boolean(deployment?.id && deployment?.url &&
+            deployment.environment === 'production' && deployment.latest_stage?.name === 'deploy' &&
+            deployment.latest_stage?.status === 'success' && domains.includes('fastgpt.io'));
           const report = {
             schemaVersion: 1,
             capturedAt: new Date().toISOString(),
             provider: 'cloudflare-pages',
-            project: process.env.PROJECT_NAME,
+            project: project.name,
             readOnly: true,
-            status: 'blocked',
-            diagnostics: { wranglerExitCode: Number(process.env.WRANGLER_STATUS || 1) },
+            status: ready ? 'ready' : 'blocked',
+            domains,
+            productionBranch: project.production_branch,
+            source: {
+              type: project.source?.type,
+              owner: source?.owner,
+              repository: source?.repo_name,
+              productionBranch: source?.production_branch,
+              deploymentsEnabled: source?.deployments_enabled,
+              productionDeploymentsEnabled: source?.production_deployments_enabled,
+            },
+            build: {
+              commandConfigured: Boolean(project.build_config?.build_command),
+              destination: project.build_config?.destination_dir,
+              root: project.build_config?.root_dir,
+            },
+            productionVariableNames: Object.keys(project.deployment_configs?.production?.env_vars || {}),
+            rollbackTarget: deployment?.id,
+            deploymentId: deployment?.id,
+            deploymentUrl: deployment?.url,
+            deploymentEnvironment: deployment?.environment,
+            deploymentCreatedAt: deployment?.created_on,
+            deploymentStage: {
+              name: deployment?.latest_stage?.name,
+              status: deployment?.latest_stage?.status,
+              endedAt: deployment?.latest_stage?.ended_on,
+            },
+            deploymentBranch: deployment?.deployment_trigger?.metadata?.branch,
+            deploymentCommit: deployment?.deployment_trigger?.metadata?.commit_hash,
           };
-          let raw;
-          let rawText = '';
-          try {
-            rawText = fs.readFileSync(sourcePath, 'utf8');
-            raw = JSON.parse(rawText);
-          } catch (error) {
-            report.blockedReason = 'wrangler output was not valid JSON';
-            report.diagnostics.parseError = error.name;
-            report.diagnostics.outputBytes = Buffer.byteLength(rawText);
-            fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);
-            console.error(`[provider-audit] ${JSON.stringify(report.diagnostics)}`);
-            process.exitCode = 1;
-          }
-          if (!raw) {
-            report.blockedReason ||= 'Wrangler returned an empty JSON value';
-            fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);
-            console.error(`[provider-audit] ${JSON.stringify(report.diagnostics)}`);
-            process.exitCode = 1;
-          }
-          if (raw) {
-            const rows = Array.isArray(raw) ? raw : Array.isArray(raw.result) ? raw.result : [];
-            const isProductionActive = (row) => String(row?.Environment || row?.environment || '').toLowerCase() === 'production' && String(row?.Status || row?.status || '').toLowerCase() === 'active';
-            const candidates = rows.filter(isProductionActive);
-            const first = (candidates[0] || rows[0]) && typeof (candidates[0] || rows[0]) === 'object' ? (candidates[0] || rows[0]) : null;
-            report.diagnostics.rawType = Array.isArray(raw) ? 'array' : typeof raw;
-            report.diagnostics.topLevelKeys = raw && typeof raw === 'object' && !Array.isArray(raw) ? Object.keys(raw).slice(0, 30) : [];
-            report.diagnostics.rowsLength = rows.length;
-            report.diagnostics.productionActiveCandidates = candidates.length;
-            report.diagnostics.selectionMode = candidates.length ? 'production-active' : 'fallback-first';
-            report.diagnostics.firstObjectKeys = first ? Object.keys(first).slice(0, 30) : [];
-            report.diagnostics.firstObjectValues = first ? redact(first) : null;
-            const deploymentId = first?.id || first?.Id || first?.deployment_id || first?.short_id || null;
-            const deploymentUrl = first?.url || first?.Url || first?.Deployment || first?.deployment_url || first?.metadata?.url || (Array.isArray(first?.aliases) ? first.aliases.find((value) => /^https?:\/\//.test(value)) : null) || null;
-            if (!deploymentId || !deploymentUrl || !candidates.length) {
-              report.blockedReason = !rows.length ? 'Pages deployment list is empty' : !candidates.length ? 'Pages deployment list has no active production row' : 'current production Pages deployment is missing id or url';
-              report.diagnostics.derivedId = deploymentId;
-              report.diagnostics.derivedUrl = deploymentUrl;
-              process.exitCode = 1;
-            } else {
-              report.status = 'ready';
-              report.rollbackTarget = deploymentId;
-              report.deploymentId = deploymentId;
-              report.deploymentUrl = deploymentUrl;
-            }
-            fs.writeFileSync(outputPath, `${JSON.stringify(report, null, 2)}\n`);
-            if (report.status === 'blocked') console.error(`[provider-audit] ${JSON.stringify(report.diagnostics)}`);
-          }
+          fs.writeFileSync('provider-audit-io.json', JSON.stringify(report, null, 2) + '\n');
+          console.log(`[provider-audit] project=${report.project} status=${report.status} environment=${report.deploymentEnvironment}`);
+          if (!ready) throw new Error('Current production deployment or domain requires review');
           NODE
       - uses: actions/upload-artifact@v4
         if: always()

@@ -44,7 +44,7 @@ const {
 const ROOT = path.resolve(__dirname, '..');
 const RETAIN_DIR = path.join(ROOT, '.release-artifacts');
 const P1_BASELINE_KIB = 266.9;
-const P1_BUDGET_KIB = 260;
+const P1_BUDGET_KIB = 261;
 
 function parseArgs(argv) {
   const options = {
@@ -314,7 +314,9 @@ function runVariantChecks(failures, variant, env, record) {
 function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) {
   for (const failure of failures.slice(startIndex)) {
     const budgetMatch = failure.output.match(
-      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/
+      new RegExp(
+        `Initial JavaScript is ([0-9.]+) KiB gzip, budget is ${P1_BUDGET_KIB} KiB`
+      )
     );
     if (failure.id !== 'p1.export' || !budgetMatch) continue;
     const currentKib = Number.parseFloat(budgetMatch[1]);

@@ -74,8 +74,13 @@ async function verifyContactQueryFlow() {
   );
   assert.match(
     formSource,
-    /source:\s*submissionSource\?\.slice\(0, 128\) \|\| getSubmissionSource\(\)/,
-    'Contact submission must send the dialog source or current explicit source'
+    /const resolvedSubmissionSource\s*=\s*submissionSource\?\.slice\(0, 128\) \|\| getSubmissionSource\(\)/,
+    'Contact submission must resolve the dialog source or current explicit source'
+  );
+  assert.match(
+    formSource,
+    /source:\s*resolvedSubmissionSource/,
+    'Contact submission must send the resolved source'
   );
   assert.match(
     attributionSource,

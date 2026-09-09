@@ -212,6 +212,22 @@ test('release coordinator checks technical content and every site variant', () =
   }
 });
 
+test('release coordinator runs consultation regression before an export exists', () => {
+  assert.match(
+    packageJson.scripts['verify:contact'],
+    /verify-consultation-attribution\.test\.js/,
+    'verify:contact must run the consultation attribution regression'
+  );
+  assert(
+    getSourceNpmSteps().some(([, , args]) => args.includes('verify:consultation-attribution')),
+    'source verification must run the export-independent consultation regression'
+  );
+  assert(
+    !getSourceNpmSteps().some(([, , args]) => args.includes('verify:contact')),
+    'contact HTML verification requires a completed export'
+  );
+});
+
 test('release coordinator records and gates the case-only alias slice independently', () => {
   const sourceStep = getSourceNodeSteps().find(([stepId]) => stepId === 'case-only.source');
   const regressionStep = getSourceNpmSteps().find(([stepId]) => stepId === 'case-only.regression');
@@ -484,7 +500,7 @@ test('release variants inherit shared configuration and isolate site overrides',
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {
   const failures = [
-    failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 260 KiB')
+    failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 261 KiB')
   ];
   const original = structuredClone(failures);
   const advisories = [];
@@ -496,7 +512,7 @@ test('P1 budget failures remain aggregate failures and add a separate baseline a
   assert.match(advisories[0].output, /c77cf48/);
   assert.match(advisories[0].output, /266\.9 KiB/);
   assert.match(advisories[0].output, /\+0\.1 KiB/);
-  assert.match(advisories[0].output, /260 KiB/);
+  assert.match(advisories[0].output, /261 KiB/);
   assert.equal(advisories[0].command, original[0].command);
   assert.equal(advisories[0].variant, 'io');
 });

@@ -274,7 +274,7 @@ test('isolated current metadata and language fixtures govern technical HTML in e
   const identity = { locale: 'zh', canonicalPath: '/api/example', sourcePath: '/zh/api/example' };
   const canonical = baseUrls.cn + identity.canonicalPath;
   const document = {
-    metadata: { date_published: '2026-01-01', date_modified: '2026-02-02' },
+    metadata: { schema_type: 'TechArticle', date_published: '2026-01-01', date_modified: '2026-02-02' },
     body: ''
   };
   const render = (modified, bilingual) => `<link rel="canonical" href="${canonical}">
@@ -306,6 +306,9 @@ test('isolated current metadata and language fixtures govern technical HTML in e
       );
     const options = { identity, identities: [identity], document, variant, baseUrls };
     verifyTechnicalPage(html('2026-02-02', false), options);
+    assert.throws(() => verifyTechnicalPage(
+      html('2026-02-02', false) + '<a href="#article-section-missing">Missing section</a>', options
+    ), /unresolved heading/);
     assert.throws(() => verifyTechnicalPage(html('2026-01-01', false), options), /dateModified/);
     const bilingual = {
       ...options,
@@ -340,14 +343,21 @@ test('isolated current metadata and language fixtures govern technical HTML in e
         fs.mkdirSync(path.dirname(file), { recursive: true });
         fs.writeFileSync(file, '<h1>Hub</h1>');
       }
+      if (variant === 'preview') {
+        fs.writeFileSync(path.join(root, 'price.html'), '<h1>Pricing</h1>');
+        verifyBodyLinks('<a href="/en/price">Pricing</a>', '[Pricing](/en/price)', variant, root);
+      }
       const body = '[Guide](/zh/guide)\n[FAQ](/zh/faq)\n`[Example](/zh/missing)`';
       const links = `<a href="${guide}">Guide</a><a href="${faq}">FAQ</a>`;
+      const pageOptions = { ...options, document: { ...document, body }, outDir: root };
+      verifyTechnicalPage(html('2026-02-02', false) + links, pageOptions);
       verifyBodyLinks(links, body, variant, root);
       assert.throws(
         () => verifyBodyLinks(`<script>${links}</script>`, body, variant, root),
         /visible link/
       );
       fs.unlinkSync(path.join(root, faq + '.html'));
+      assert.throws(() => verifyTechnicalPage(html('2026-02-02', false) + links, pageOptions), /Unresolved internal link/);
       assert.throws(() => verifyBodyLinks(links, body, variant, root), /Unresolved internal link/);
       fs.mkdirSync(path.join(root, faq));
       assert.throws(() => verifyBodyLinks(links, body, variant, root), /Unresolved internal link/);

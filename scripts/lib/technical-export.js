@@ -47,6 +47,8 @@ function verifyBodyLinks(html, body, variant, outDir) {
       const route = expected.split(/[?#]/)[0];
       assert(
         resolveStaticHtml(outDir, route) ||
+          // writeCloudflareWorker retries locale-prefixed Preview paths at the root.
+          (variant === 'preview' && resolveStaticHtml(outDir, route.replace(/^\/(zh|en)(?=\/)/, ''))) ||
           (fs.existsSync(path.join(outDir, route)) &&
             fs.statSync(path.join(outDir, route)).isFile()),
         `Unresolved internal link ${expected}`

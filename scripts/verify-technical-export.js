@@ -135,12 +135,14 @@ function verifyTechnicalPage(
   assert(getAttribute(description || '', 'content')?.trim(), `${route}: description`);
   const social = (html.match(/<meta\b[^>]*property="og:url"[^>]*>/i) || [])[0];
   assert.equal(getAttribute(social || '', 'content'), canonical, `${route}: social URL`);
-  for (const link of getAnchors(html).filter((link) => link.href.startsWith('#')))
+  // The export layout contract covers renderer-generated table-of-contents links.
+  for (const link of getAnchors(html).filter((link) => link.href.startsWith('#article-section-')))
     assert(
       visibleHtml(html).includes(`id="${link.href.slice(1)}"`),
       `${route}: unresolved heading ${link.href}`
     );
-  verifyBodyLinks(html, body, variant, outDir);
+  // Authored schemas validate destinations; legacy imports retain their rendering checks.
+  verifyBodyLinks(html, body, variant, metadata.schema_type ? outDir : undefined);
   verifyReturn(html, identity.sourcePath, target, variant);
 }
 

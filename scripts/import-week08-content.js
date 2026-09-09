@@ -8,6 +8,7 @@ const { buildSearchProjection, validateIdentitySet } = require('./import-technic
 const { applyRollbackProjection } = require('./lib/technical-projection');
 const snapshot = require('../src/content/week08/reference-snapshot.json');
 const corrections = require('../src/content/week08/publication-corrections.json');
+const { baseCommit, preserved } = require('../src/content/week08/publication.json');
 const ROOT = path.resolve(__dirname, '..');
 const DATE = '2026-09-08';
 const STAGES = {
@@ -183,7 +184,8 @@ function prepareBody(body, locale, slug) {
     }
     if (slug === 'error-codes-reference') {
       body = body
-        .replace(/123/g, '124')
+        .replace(/123 个错误码/g, '124 个错误码')
+        .replace(/123 error codes/g, '124 error codes')
         .replace(/14 个模块/g, '15 个模块')
         .replace(/14 modules/g, '15 modules');
       const heading =
@@ -207,8 +209,10 @@ function prepareBody(body, locale, slug) {
         .replace(/stable across versions/g, 'check compatibility when upgrading')
         .replace(/跨版本稳定/g, '升级时需核对兼容性');
       body = body
-        .replace(/32/g, '34')
-        .replace(/29/g, '33')
+        .replace(/32 个工作流节点/g, '34 个工作流节点')
+        .replace(/32 workflow nodes/g, '34 workflow nodes')
+        .replace(/最多的节点有 29 个参数/g, '最多的节点有 33 个参数')
+        .replace(/most inputs declares 29/g, 'most inputs declares 33')
         .replace(/remaining 24/g, 'remaining 25')
         .replace(/其余 24/g, '其余 25')
         .replace(/Only 8 of/g, 'Only 9 of')
@@ -336,11 +340,26 @@ function technicalDocument(page) {
   assert(title, `${slug}: missing H1`);
   const category = route.startsWith('/reference/') ? 'reference' : 'troubleshoot';
   const categoryLabel = category === 'reference' ? '技术速查' : '故障排查';
+  let description = metadata.meta_description?.replace(/\s*Verified[^.]+\./g, '');
+  if (locale === 'en' && route === `/reference/${slug}`) {
+    const corrections = {
+      'error-codes-reference': [
+        'A grouped reference of the 123 error codes defined in the FastGPT open-source repository, with the numeric code, statusText and message key.',
+        'A grouped reference of the 124 error codes defined in the FastGPT open-source repository, with the numeric code, statusText and message key.'
+      ],
+      'workflow-nodes-reference': [
+        'A grouped reference of the 32 workflow nodes defined in the FastGPT open-source repository, with node type, tool support and parameter counts.',
+        'A grouped reference of the 34 workflow nodes defined in the FastGPT open-source repository, with node type, tool support and parameter counts.'
+      ]
+    };
+    const correction = corrections[slug];
+    if (correction) {
+      assert.equal(description, correction[0], `${locale}/${slug}: description source changed`);
+      description = correction[1];
+    }
+  }
   const summary =
-    metadata.meta_description
-      ?.replace(/\s*Verified[^.]+\./g, '')
-      .replace(/123/g, '124')
-      .replace(/32/g, '34') ||
+    description ||
     (locale === 'zh'
       ? `查阅${title.replace(
           /^FastGPT\s*/,
@@ -437,7 +456,6 @@ function buildImport(sourceRoot, repoRoot = ROOT) {
   const entries = readJson(path.join(repoRoot, 'src/components/tech-center/entries.json'));
   const entriesBySlug = new Map(entries.map((entry) => [entry.slug, entry]));
   const returns = {};
-  const preserved = {};
   for (const page of pages.filter((page) => STAGES[page.locale][page.slug])) {
     const links = [...page.body.matchAll(/^\| \[[^\]]+\]\((\/[^)]+)\) \|/gm)].map(
       (match) => match[1]
@@ -447,10 +465,6 @@ function buildImport(sourceRoot, repoRoot = ROOT) {
       assert(entriesBySlug.has(source), `Unresolved return source: ${source}`);
       assert(!returns[source], `Duplicate return source: ${source}`);
       returns[source] = `/${page.locale}${page.route}`;
-      let file = `src/content/tech-center${source}.md`;
-      if (!fs.existsSync(path.join(repoRoot, file)) && page.locale === 'zh')
-        file = file.replace('/tech-center/zh/', '/tech-center/');
-      preserved[source] = { file, sha256: hash(fs.readFileSync(path.join(repoRoot, file))) };
     }
   }
   assert.equal(Object.keys(returns).length, 797);
@@ -504,6 +518,7 @@ function buildImport(sourceRoot, repoRoot = ROOT) {
   files.set(
     'src/content/week08/publication.json',
     json({
+      baseCommit,
       date: DATE,
       pages: pages.map(({ locale, route, family, source, sourceHash }) => ({
         locale,
@@ -552,4 +567,11 @@ if (require.main === module) {
     process.exitCode = 1;
   }
 }
-module.exports = { buildImport, normalizePath, parseSource, prepareBody, STAGES };
+module.exports = {
+  buildImport,
+  normalizePath,
+  parseSource,
+  prepareBody,
+  technicalDocument,
+  STAGES
+};

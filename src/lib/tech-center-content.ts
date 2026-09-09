@@ -221,8 +221,12 @@ export function getTechArticlePublishedLocales(entry: TechEntry) {
   );
 }
 
+export function getTechEntry(section: string, slug: string, locale: TechPublishedLocale = 'zh') {
+  return entriesBySlug.get(`/${locale}/${section}/${slug}`);
+}
+
 export function getTechArticle(section: string, slug: string, locale: TechPublishedLocale = 'zh') {
-  const entry = entriesBySlug.get(`/${locale}/${section}/${slug}`);
+  const entry = getTechEntry(section, slug, locale);
   return entry ? readTechArticle(entry) : null;
 }
 

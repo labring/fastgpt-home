@@ -46,7 +46,7 @@ vm.runInNewContext(
   }).outputText,
   context
 );
-const { getTechArticleDescription, getTechArticle } = context.exports;
+const { getTechArticleDescription, getTechArticle, getTechEntry } = context.exports;
 
 test('descriptions remove Chinese and English list markers and skip code and quotations', () => {
   for (const marker of ['1. ', '2) ', '3、', '4．', '五、', '（六）', '(7)', '8.']) {
@@ -87,6 +87,11 @@ test('sentence boundaries preserve versions and decimals in both languages', () 
     assert.equal(description.length, 155);
     assert.ok(description.endsWith('…'));
   }
+});
+
+test('owner lookup returns the registry entry without loading its document', () => {
+  assert.equal(getTechEntry('troubleshoot', 'description-example'), entry);
+  assert.equal(getTechEntry('troubleshoot', 'missing'), undefined);
 });
 
 test('published summaries and explicit descriptions retain precedence', () => {

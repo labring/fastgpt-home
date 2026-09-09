@@ -11,14 +11,14 @@ import { getGuideArticleMetadata, getGuideBuildLocales } from '@/lib/guideSeo';
 import {
   getTechArticleOwnerParams,
   getTechArticleReviewParams,
-  getTechArticle
+  getTechEntry
 } from '@/lib/tech-center-content';
 import type { GuidePublishedLocale } from '@/lib/guideSeo';
 
 /** Resolve shared /guide/ URLs through their authoritative content registry. */
 function resolveOwner(locale: GuidePublishedLocale, slug: string) {
   const guide = getGuideEntry(slug);
-  const technical = getTechArticle('guide', slug, locale);
+  const technical = getTechEntry('guide', slug, locale);
   if (guide && technical) throw new Error(`Duplicate guide route owner: ${locale}/${slug}`);
   return guide ? 'guide' : technical ? 'technical' : null;
 }

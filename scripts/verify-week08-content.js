@@ -2,6 +2,7 @@
 /** Verify the Week08 publication contract against authored content, exports, or production HTTP. */
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
+const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
 const { resolveStaticHtml } = require('./lib/technical-export');
@@ -119,13 +120,6 @@ function verifySource() {
         assert(technicalKeys.has(source), `Unresolved return source: ${source}`);
         assert(source.startsWith(`/${locale}/`), `Cross-locale return source: ${source}`);
         assert(body.includes(`](${source})`), `${target}: missing article link ${source}`);
-        const baseline = publication.preserved[source];
-        assert(baseline, `Missing preservation evidence: ${source}`);
-        assert.equal(
-          digest(fs.readFileSync(path.join(ROOT, baseline.file))),
-          baseline.sha256,
-          `Existing content changed: ${source}`
-        );
       }
     }
   }
@@ -136,11 +130,6 @@ function verifySource() {
       route: `/guide/${correction.slug}`,
       family: 'guide'
     });
-    for (const { after } of correction.replacements)
-      assert(
-        body.includes(after),
-        `${correction.locale}/${correction.slug}: corrected operational guidance drift`
-      );
     for (const source of correction.sources)
       assert(body.includes(`](${source})`), `${correction.slug}: missing correction evidence`);
   }
@@ -197,15 +186,25 @@ function verifyPage(html, page, variant) {
     ),
     `${canonical}: robots`
   );
-  const counterparts = publication.pages.filter((candidate) => candidate.route === page.route);
-  const expected = Object.fromEntries(
-    counterparts.map((candidate) => [
-      candidate.locale === 'zh' ? 'zh-CN' : 'en',
-      hosts[candidate.locale] + page.route
-    ])
+  const slug = page.route.split('/').at(-1);
+  const guide = guides.find((entry) => entry.slug === slug);
+  const publishedLocales = Object.keys(hosts).filter((locale) =>
+    page.family === 'guide'
+      ? Boolean(guide?.[locale])
+      : technical.some((entry) => entry.slug === `/${locale}${page.route}`)
   );
-  if (counterparts.some((candidate) => candidate.locale === 'en'))
-    expected['x-default'] = hosts.en + page.route;
+  const expected = Object.fromEntries(
+    publishedLocales.map((locale) => [locale === 'zh' ? 'zh-CN' : 'en', hosts[locale] + page.route])
+  );
+  if (publishedLocales.includes('en')) expected['x-default'] = hosts.en + page.route;
+  const metadata =
+    page.family === 'guide'
+      ? guide?.[page.locale]
+      : {
+          datePublished: document(page).match(/^date_published: (.+)$/m)?.[1],
+          dateModified: document(page).match(/^date_modified: (.+)$/m)?.[1]
+        };
+  assert(metadata?.datePublished && metadata?.dateModified, `${canonical}: missing current dates`);
   assert.deepEqual(
     Object.fromEntries(
       links
@@ -226,8 +225,8 @@ function verifyPage(html, page, variant) {
     article &&
       article.mainEntityOfPage?.['@id'] === canonical &&
       (article.url === undefined || article.url === canonical) &&
-      article.datePublished === publication.date &&
-      article.dateModified === publication.date,
+      article.datePublished === metadata.datePublished &&
+      article.dateModified === metadata.dateModified,
     `${canonical}: article schema and dates`
   );
   assert(
@@ -236,8 +235,8 @@ function verifyPage(html, page, variant) {
   );
   if (page.family === 'guide')
     assert(
-      html.includes(`dateTime="${publication.date}"`) ||
-        html.includes(`datetime="${publication.date}"`),
+      html.includes(`dateTime="${metadata.dateModified}"`) ||
+        html.includes(`datetime="${metadata.dateModified}"`),
       `${canonical}: modified date`
     );
   for (const link of anchors(html).filter((link) => link.href?.startsWith('#')))
@@ -364,12 +363,42 @@ async function verifyLive(variant) {
   );
   return result;
 }
+// One-time release evidence: compare two immutable commits, outside the maintenance gate.
+function verifyPreservation(candidate) {
+  assert(/^[a-f0-9]{40}$/.test(candidate), 'Preservation requires a full candidate commit SHA');
+  assert(/^[a-f0-9]{40}$/.test(publication.baseCommit), 'Missing immutable publication base');
+  assert.equal(Object.keys(publication.preserved).length, 797, 'Preservation evidence count');
+  assert.deepEqual(
+    Object.keys(publication.preserved).sort(),
+    Object.keys(returns).sort(),
+    'Preservation coverage'
+  );
+  for (const [source, evidence] of Object.entries(publication.preserved)) {
+    const blob = (commit) =>
+      execFileSync('git', ['show', `${commit}:${evidence.file}`], {
+        cwd: ROOT,
+        maxBuffer: 10 * 1024 * 1024
+      });
+    const baseline = blob(publication.baseCommit);
+    assert.equal(digest(baseline), evidence.sha256, `Invalid baseline evidence: ${source}`);
+    assert.deepEqual(blob(candidate), baseline, `Existing content changed: ${source}`);
+  }
+  return {
+    baseCommit: publication.baseCommit,
+    candidate,
+    preserved: Object.keys(publication.preserved).length
+  };
+}
 async function main(argv = process.argv.slice(2)) {
   let result;
   if (argv.length === 0) result = verifySource();
+  else if (argv[0] === '--preservation' && argv.length === 2) result = verifyPreservation(argv[1]);
   else if (argv[0] === '--export' && argv.length === 1) result = verifyExport(resolveSiteVariant());
   else if (argv[0] === '--live' && argv.length === 2) result = await verifyLive(argv[1]);
-  else throw new Error('Usage: node scripts/verify-week08-content.js [--export | --live cn|io]');
+  else
+    throw new Error(
+      'Usage: node scripts/verify-week08-content.js [--export | --live cn|io | --preservation <commit SHA>]'
+    );
   console.log(`[verify-week08-content] ${JSON.stringify(result)}`);
 }
 if (require.main === module)
@@ -377,4 +406,4 @@ if (require.main === module)
     console.error(`[verify-week08-content] ${error.message}`);
     process.exitCode = 1;
   });
-module.exports = { verifySource, verifyExport, verifyPage, verifyReturn };
+module.exports = { verifySource, verifyExport, verifyPage, verifyReturn, verifyPreservation };

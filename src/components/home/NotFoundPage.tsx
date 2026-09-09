@@ -243,11 +243,6 @@ export default function NotFoundPage() {
       {languages.map((lang) => (
         <NotFoundContent key={lang} lang={lang} />
       ))}
-      <script
-        id="not-found-recovery-data"
-        type="application/json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(recoveryData).replace(/</g, '\\u003c') }}
-      />
     </div>
   );
 }

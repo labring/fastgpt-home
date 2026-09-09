@@ -1,6 +1,5 @@
 'use client';
 
-import { useSyncExternalStore } from 'react';
 import { usePathname } from 'next/navigation';
 import { supportedLocaleCodes } from '@/lib/locales';
 
@@ -9,13 +8,10 @@ export type RecoveryData = {
   groups: { sections: readonly string[]; links: RecoveryLink[] }[];
   articles: Record<string, RecoveryLink[]>;
 };
-const subscribe = () => () => {};
-const getServerPathname = () => null;
 
 export default function NotFoundRecovery({ data }: { data: RecoveryData }) {
   // The static 404 is shared by all paths; resolve recovery after hydration.
-  const routePathname = usePathname();
-  const pathname = useSyncExternalStore(subscribe, () => routePathname, getServerPathname);
+  const pathname = usePathname();
   if (!pathname) return null;
   const segments = pathname.split('/').filter(Boolean);
   if (supportedLocaleCodes.some((locale) => locale === segments[0])) segments.shift();

@@ -346,58 +346,6 @@ function verifyNotFoundFallback() {
     .map((locale) => `:not(:lang(${locale}))`)
     .join('')} .not-found-locale-${defaultLocale},`;
   assert(html.includes(selector), `404 page is missing the ${defaultLocale} fallback selector`);
-
-  const payload = html.match(
-    /<script id="not-found-recovery-data" type="application\/json">([\s\S]*?)<\/script>/
-  )?.[1];
-  assert(payload, '404 page is missing its recovery data');
-  const recovery = JSON.parse(payload);
-
-  function getRecoveryLinks(pathname) {
-    const segments = pathname.split('/').filter(Boolean);
-    if (Object.keys(locales).includes(segments[0])) segments.shift();
-    const links =
-      recovery.articles['/' + segments.join('/')] ||
-      recovery.groups.find((group) => group.sections.includes(segments[0]))?.links ||
-      [];
-    return { hrefs: links.map((link) => link.href) };
-  }
-
-  const contactHrefs =
-    variant === 'preview'
-      ? ['/contact', '/zh/contact', '/zh-hant/contact']
-      : [`${baseUrls.io}/contact`, `${baseUrls.cn}/contact`, `${baseUrls.io}/zh-hant/contact`];
-  const contactRecovery = getRecoveryLinks('/ja/contact/missing');
-  assert.deepEqual(contactRecovery.hrefs, contactHrefs);
-
-  const techRecovery = getRecoveryLinks('/ja/tutorial/missing');
-  assert.deepEqual(
-    techRecovery.hrefs,
-    variant === 'preview'
-      ? ['/zh/tech-center', '/en/tech-center']
-      : [`${baseUrls.cn}/tech-center`, `${baseUrls.io}/tech-center`]
-  );
-  assert.deepEqual(
-    getRecoveryLinks('/en/guide/missing').hrefs,
-    variant === 'preview'
-      ? ['/zh/guide', '/en/guide']
-      : [`${baseUrls.cn}/guide`, `${baseUrls.io}/guide`]
-  );
-  assert.deepEqual(getRecoveryLinks('/en/guide/image-architecture-issues').hrefs, [
-    variant === 'preview'
-      ? '/zh/guide/image-architecture-issues'
-      : `${baseUrls.cn}/guide/image-architecture-issues`
-  ]);
-  assert.deepEqual(
-    getRecoveryLinks('/ja/reference/env-variables-reference').hrefs,
-    variant === 'preview'
-      ? ['/zh/reference/env-variables-reference', '/en/reference/env-variables-reference']
-      : [
-          `${baseUrls.cn}/reference/env-variables-reference`,
-          `${baseUrls.io}/reference/env-variables-reference`
-        ]
-  );
-  assert.deepEqual(getRecoveryLinks('/ja/missing').hrefs, []);
 }
 
 function verifyContactExperience() {

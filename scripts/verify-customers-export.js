@@ -13,6 +13,11 @@ const cnBaseUrl = (process.env.NEXT_PUBLIC_CN_HOME_URL || 'https://fastgpt.cn').
 const customersBaseUrl = `${cnBaseUrl}/customers`;
 const siteVariant = resolveSiteVariant();
 const contactPath = getDefaultLocale(siteVariant) === 'zh' ? '/contact' : '/zh/contact';
+const customersSource = (process.env.NEXT_PUBLIC_CUSTOMERS_SOURCE?.trim() || 'customers').slice(
+  0,
+  128
+);
+const contactHref = `${contactPath}?${new URLSearchParams({ source: customersSource })}`;
 const EXPECTED_SOLUTION_COUNT = 89;
 const EXPECTED_CATEGORY_COUNT = 17;
 const EXPECTED_ROUTE_COUNT = 107;
@@ -66,8 +71,8 @@ function assertConsultationLink(html, source, htmlFile, solutionSlug) {
     `Customer consultation CTA must open the native dialog: ${htmlFile}`
   );
   assert(
-    anchor.includes(`href="${contactPath}?source=customers"`),
-    `Customer consultation must not synthesize acquisition UTM: ${htmlFile}`
+    anchor.includes(`href="${contactHref}"`),
+    `Customer consultation must preserve the configured CRM source and acquisition boundary: ${htmlFile}`
   );
   if (solutionSlug) {
     assert(

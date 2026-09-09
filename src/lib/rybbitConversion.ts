@@ -44,15 +44,3 @@ export function createRybbitConsultCapture(sourceId: string): RybbitConsultCaptu
     entryPageUrl: `${source}｜${getCurrentCanonicalPageUrl()}`
   };
 }
-
-export function resolveRybbitConsultEventContext(
-  capture: RybbitConsultCapture | undefined,
-  fallbackSource: string,
-  pageUrl = getCurrentCanonicalPageUrl()
-) {
-  return {
-    source: capture?.source || fallbackSource,
-    page_url: pageUrl,
-    entry_page_url: capture?.entryPageUrl || pageUrl
-  };
-}

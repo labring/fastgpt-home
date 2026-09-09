@@ -212,15 +212,19 @@ test('release coordinator checks technical content and every site variant', () =
   }
 });
 
-test('release coordinator runs the consultation attribution regression', () => {
+test('release coordinator runs consultation regression before an export exists', () => {
   assert.match(
     packageJson.scripts['verify:contact'],
     /verify-consultation-attribution\.test\.js/,
     'verify:contact must run the consultation attribution regression'
   );
   assert(
-    getSourceNpmSteps().some(([, , args]) => args.includes('verify:contact')),
-    'release verification must run verify:contact'
+    getSourceNpmSteps().some(([, , args]) => args.includes('verify:consultation-attribution')),
+    'source verification must run the export-independent consultation regression'
+  );
+  assert(
+    !getSourceNpmSteps().some(([, , args]) => args.includes('verify:contact')),
+    'contact HTML verification requires a completed export'
   );
 });
 

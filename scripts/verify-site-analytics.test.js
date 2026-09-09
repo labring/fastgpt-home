@@ -21,15 +21,7 @@ const { outputText } = ts.transpileModule(read('src/app/SiteAnalytics.tsx'), {
   compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX }
 });
 
-test('SiteAnalytics initializes CRM identity without global consultation storage', () => {
-  const source = read('src/app/SiteAnalytics.tsx');
-
-  assert.doesNotMatch(source, /installRybbitConsultSourceCapture/);
-  assert.match(source, /onLoad=\{identifyRybbitVisitor\}/);
-  assert.match(source, /onReady=\{identifyRybbitVisitor\}/);
-});
-
-function renderScripts(variant, env) {
+function renderScripts(variant, env, identifyRybbitVisitor = () => {}) {
   const Script = () => null;
   const scripts = [];
   const context = {
@@ -38,8 +30,7 @@ function renderScripts(variant, env) {
     require: (name) => {
       if (name === '@/lib/siteRouting') return { currentSiteVariant: variant };
       if (name === 'next/script') return { default: Script };
-      if (name === 'react') return { ...require('react'), useEffect: () => {} };
-      if (name === '@/lib/rybbitIdentity') return { identifyRybbitVisitor: () => {} };
+      if (name === '@/lib/rybbitIdentity') return { identifyRybbitVisitor };
       return require(name);
     }
   };
@@ -53,6 +44,62 @@ function renderScripts(variant, env) {
   visit(context.exports.default());
   return scripts;
 }
+
+test('Rybbit readiness identifies once and bounds delayed SDK retries', () => {
+  const identityCode = ts.transpileModule(read('src/lib/rybbitIdentity.ts'), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS }
+  }).outputText;
+  for (const readiness of ['ready', 'delayed', 'unavailable']) {
+    const calls = [];
+    const timers = [];
+    let visitorReads = 0;
+    const sdk = { identify: (...args) => calls.push(args) };
+    const context = {
+      exports: {},
+      window: { rybbit: readiness === 'ready' ? sdk : undefined },
+      require: (name) => {
+        assert.equal(name, '@/lib/visitorId');
+        return {
+          getVisitorId: () => {
+            visitorReads++;
+            return 'visitor-test';
+          }
+        };
+      },
+      setTimeout: (callback, delay) => {
+        timers.push({ callback, delay });
+        return timers.length;
+      }
+    };
+    vm.runInNewContext(identityCode, context);
+    const script = renderScripts(
+      'cn',
+      { NEXT_PUBLIC_RYBBIT_TONGJI: 'https://track.example.test/script.js' },
+      context.exports.identifyRybbitVisitor
+    ).find((script) => script.id === 'rybbit-tongji');
+    assert.equal(script.strategy, 'lazyOnload');
+    script.onLoad?.();
+    script.onReady();
+    assert.equal(visitorReads, 1, 'A script load should request CRM identity once');
+    let retries = 0;
+    while (timers.length) {
+      const { callback, delay } = timers.shift();
+      assert.equal(delay, 200);
+      assert(++retries <= 50, 'SDK absence must have a bounded retry budget');
+      if (readiness === 'delayed' && retries === 2) context.window.rybbit = sdk;
+      callback();
+    }
+    script.onReady(); // A subsequent component mount must preserve identify idempotency.
+    assert.equal(calls.length, readiness === 'unavailable' ? 0 : 1);
+    assert.equal(timers.length, 0);
+    if (readiness === 'unavailable') assert.equal(retries, 50);
+    else
+      assert.deepEqual(JSON.parse(JSON.stringify(calls[0])), [
+        'visitor-test',
+        { identity_source: 'lead_crm', identity_version: 'v1' }
+      ]);
+  }
+});
 
 test('Site analytics preserve vendor queues, scope, loading, and deployment wiring', async () => {
   for (const [scriptId, variable, id, prefix] of providers) {

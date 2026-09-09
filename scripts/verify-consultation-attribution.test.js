@@ -7,16 +7,20 @@ const ts = require('typescript');
 
 const root = path.resolve(__dirname, '..');
 
-function browser(cookieEnabled = false) {
+function browser(cookieEnabled = false, env = {}) {
   const storage = new Map();
   const cookies = new Map();
   const listeners = {};
+  const listenerOptions = {};
+  const mocks = {};
   const document = {
     referrer: 'https://www.google.com/',
     documentElement: { lang: 'zh' },
-    addEventListener: (name, listener) => {
+    addEventListener: (name, listener, options) => {
       listeners[name] = listener;
-    }
+      listenerOptions[name] = options;
+    },
+    removeEventListener: (name) => delete listeners[name]
   };
   Object.defineProperty(document, 'cookie', {
     get: () => [...cookies].map(([key, value]) => `${key}=${value}`).join('; '),
@@ -59,7 +63,7 @@ function browser(cookieEnabled = false) {
     URLSearchParams,
     TextEncoder,
     TextDecoder,
-    process: { env: { NEXT_PUBLIC_SITE_VARIANT: 'cn' } },
+    process: { env: { NEXT_PUBLIC_SITE_VARIANT: 'cn', ...env } },
     console,
     setTimeout,
     clearTimeout,
@@ -88,8 +92,10 @@ function browser(cookieEnabled = false) {
       fileName: resolved.replace(/\.mjs$/, '.ts')
     }).outputText;
     const localRequire = (name) => {
+      if (Object.hasOwn(mocks, name)) return mocks[name];
       if (name === 'server-only') return {};
       if (name.startsWith('@/')) return load(`src/${name.slice(2)}`);
+      if (name.startsWith('@customers/')) return load(`src/customers/${name.slice(11)}`);
       if (name.startsWith('.')) return load(path.resolve(path.dirname(resolved), name));
       return require(name);
     };
@@ -98,7 +104,83 @@ function browser(cookieEnabled = false) {
     })(localRequire, module, module.exports);
     return module.exports;
   }
-  return { window, document, load, context, listeners, Element };
+  return { window, document, load, context, listeners, listenerOptions, mocks, Element };
+}
+
+function openDialog(env, props) {
+  const updates = [];
+  env.mocks.react = {
+    lazy: (loader) => loader,
+    Suspense: 'Suspense',
+    useEffect: (callback) => callback(),
+    useRef: (value) => ({ current: value }),
+    useState: (value) => [value, (next) => updates.push(next)]
+  };
+  env.mocks['next/navigation'] = {
+    useParams: () => ({}),
+    usePathname: () => '/customers'
+  };
+  env.load('src/components/consultation/ConsultationDialog.tsx').default();
+  const trigger = new env.Element(props.href);
+  trigger.dataset = { rybbitPropSource: props['data-rybbit-prop-source'] };
+  trigger.closest = (selector) =>
+    selector === 'a[data-consultation-trigger="true"]' &&
+    props['data-consultation-trigger'] === 'true'
+      ? trigger
+      : null;
+  function click(modifiers = {}) {
+    let prevented = false;
+    updates.length = 0;
+    env.listeners.click({
+      target: trigger,
+      button: 0,
+      defaultPrevented: false,
+      ...modifiers,
+      preventDefault: () => {
+        prevented = true;
+      }
+    });
+    return { prevented, updates: [...updates] };
+  }
+  return click;
+}
+
+function renderForm(env, props = {}) {
+  const state = [];
+  let cursor = 0;
+  const formRef = { current: { reportValidity: () => true } };
+  env.mocks.react = {
+    useEffect: () => {},
+    useRef: () => formRef,
+    useState: (initial) => {
+      const index = cursor++;
+      if (!(index in state)) state[index] = initial;
+      return [
+        state[index],
+        (value) => {
+          state[index] = typeof value === 'function' ? value(state[index]) : value;
+        }
+      ];
+    }
+  };
+  const Form = env.load('src/components/contact/ContactForm.tsx').default;
+  const render = () => {
+    cursor = 0;
+    return Form({ locale: 'zh', ...props });
+  };
+  function fields(node) {
+    if (!node || typeof node !== 'object') return [];
+    return [node, ...[node.props?.children].flat(Infinity).flatMap(fields)];
+  }
+  for (const { type, props: field } of fields(render())) {
+    if (type === 'input' && field.type === 'text') {
+      field.onChange({
+        target: { value: field.name === 'phone' ? 'test@example.test' : 'Example' }
+      });
+    } else if (type === 'input' && field.type === 'radio') field.onChange();
+    else if (field?.options) field.onChange(field.name, field.options[0]);
+  }
+  return { render, submit: () => render().props.onSubmit({ preventDefault() {} }) };
 }
 
 const sources = [
@@ -111,76 +193,165 @@ const sources = [
   'empty_state'
 ];
 
-test('all consultation CTAs keep business context outside acquisition UTM', () => {
-  const { load } = browser();
-  const { getConsultationLinkProps } = load('src/customers/lib/consultation.ts');
-  for (const source of sources) {
-    const props = getConsultationLinkProps({
-      source,
-      solutionId: 42,
-      solutionTitle: 'Example',
-      solutionSlug: 'example-case'
+const sourceConfigurations = [
+  undefined,
+  '',
+  '   ',
+  'partner-cases',
+  ' 合作 & partners+ ',
+  'x'.repeat(160)
+];
+
+for (const configuredSource of sourceConfigurations) {
+  test(`configured consultation source stays consistent: ${JSON.stringify(
+    configuredSource
+  )}`, async () => {
+    const env = browser(false, {
+      NEXT_PUBLIC_CUSTOMERS_SOURCE: configuredSource,
+      NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test'
     });
-    assert.equal(props.href, '/contact?source=customers');
-    assert.equal(props['data-consultation-trigger'], 'true');
-    assert.equal(props['data-rybbit-prop-source'], source);
-    assert.equal(props['data-rybbit-prop-solution_id'], '42');
-    assert.equal(props['data-rybbit-prop-solution_slug'], 'example-case');
+    const expected = (configuredSource?.trim() || 'customers').slice(0, 128);
+    const { getConsultationLinkProps } = env.load('src/customers/lib/consultation.ts');
+    for (const source of sources) {
+      const props = getConsultationLinkProps({
+        source,
+        solutionId: 42,
+        solutionTitle: 'Example',
+        solutionSlug: 'example-case'
+      });
+      const url = new URL(props.href, env.window.location.origin);
+      assert.equal(url.pathname, '/contact');
+      assert.deepEqual([...url.searchParams], [['source', expected]]);
+      assert.equal(props['data-consultation-trigger'], 'true');
+      assert.equal(props['data-rybbit-prop-source'], source);
+      assert.equal(props['data-rybbit-prop-solution_id'], '42');
+      assert.equal(props['data-rybbit-prop-solution_slug'], 'example-case');
+    }
+    const props = getConsultationLinkProps({ source: 'customers_hero' });
+    const {
+      prevented,
+      updates: [capture, submissionSource, opened]
+    } = openDialog(env, props)();
+    assert.equal(prevented, true);
+    assert.equal(opened, true);
+    const requests = [];
+    env.mocks['@/lib/fetchWithTimeout'] = {
+      fetchWithTimeout: async (url, options) => {
+        if (url.endsWith('/contacts/submit')) requests.push(JSON.parse(options.body));
+        return { ok: true, json: async () => ({ submission_id: 'test-id' }) };
+      }
+    };
+    await renderForm(env, { submissionSource, rybbitConsultCapture: capture }).submit();
+    assert.equal(requests.length, 1);
+    assert.equal(requests[0].source, expected);
+    env.window.location = new URL(props.href, env.window.location.origin);
+    assert.equal(env.load('src/lib/leadAttribution.ts').getSubmissionSource(), expected);
+  });
+}
+
+test('independent forms keep their clicked context across overlapping submissions', async () => {
+  const forms = [];
+  const captures = [
+    [
+      'home_hero_consult',
+      'https://fastgpt.cn/?utm_source=google#top',
+      '首页-Banner商务咨询',
+      'https://fastgpt.cn/'
+    ],
+    [
+      'price_cloud_custom',
+      'https://fastgpt.cn/price?private=value#plans',
+      '价格页-云服务定制版商务咨询',
+      'https://fastgpt.cn/price'
+    ]
+  ];
+  let sharedStorage;
+  for (const [source, url, label, page] of captures) {
+    const env = browser(false, { NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test' });
+    if (sharedStorage) env.window.localStorage = sharedStorage;
+    else sharedStorage = env.window.localStorage;
+    env.window.location = new URL(url);
+    const capture = env.load('src/lib/rybbitConversion.ts').createRybbitConsultCapture(source);
+    let finish;
+    const events = [];
+    let successes = 0;
+    env.window.rybbit = {
+      event: (name, props) => events.push({ name, ...JSON.parse(JSON.stringify(props)) })
+    };
+    env.mocks['@/lib/fetchWithTimeout'] = {
+      fetchWithTimeout: (url) =>
+        url.endsWith('/contacts/submit')
+          ? new Promise((resolve) => {
+              finish = resolve;
+            })
+          : Promise.resolve({ ok: true })
+    };
+    const form = renderForm(env, {
+      submissionSource: 'business',
+      rybbitConsultCapture: capture,
+      onSuccess: () => {
+        successes++;
+      }
+    });
+    const pending = form.submit();
+    forms.push(async () => {
+      finish({ ok: true, json: async () => ({ submission_id: source }) });
+      await pending;
+      assert.equal(successes, 1);
+      assert.equal(form.render().props.role, 'status');
+      assert.equal(events.length, 1);
+      assert.equal(events[0].name, 'business_consult_submit_success');
+      assert.equal(events[0].submission_id, source);
+      assert.equal(events[0].crm_visitor_id, env.load('src/lib/leadAttribution.ts').getVisitorId());
+      assert.equal(events[0].source, label);
+      assert.equal(events[0].page_url, page);
+      assert.equal(events[0].entry_page_url, `${label}｜${page}`);
+    });
   }
+  await forms[1]();
+  await forms[0]();
+  assert.equal(sharedStorage.getItem('fastgpt_rybbit_consult_source'), null);
+  assert.equal(sharedStorage.getItem('fastgpt_rybbit_consult_page_url'), null);
 });
 
-test('consultation analytics context is immutable per form and does not use localStorage', () => {
-  const env = browser();
-  const conversion = env.load('src/lib/rybbitConversion.ts');
-  const formSource = fs.readFileSync(path.join(root, 'src/components/contact/ContactForm.tsx'), 'utf8');
-  assert.equal(typeof conversion.createRybbitConsultCapture, 'function');
-  assert.equal(typeof conversion.resolveRybbitConsultEventContext, 'function');
-  assert.match(formSource, /resolveRybbitConsultEventContext\(\s*rybbitConsultCapture,/);
-  assert.doesNotMatch(formSource, /getRybbitConsultSource|clearRybbitConsultCapture/);
-
-  env.window.location = new URL('https://fastgpt.cn/?utm_source=google');
-  const homeCapture = conversion.createRybbitConsultCapture('home_hero_consult');
-  env.window.location = new URL('https://fastgpt.cn/price');
-  const priceCapture = conversion.createRybbitConsultCapture('price_cloud_custom');
-
-  assert.deepEqual(JSON.parse(JSON.stringify(homeCapture)), {
-    source: '首页-Banner商务咨询',
-    entryPageUrl: '首页-Banner商务咨询｜https://fastgpt.cn/'
-  });
-  assert.deepEqual(JSON.parse(JSON.stringify(priceCapture)), {
-    source: '价格页-云服务定制版商务咨询',
-    entryPageUrl: '价格页-云服务定制版商务咨询｜https://fastgpt.cn/price'
-  });
-  assert.deepEqual(
-    JSON.parse(
-      JSON.stringify(
-        conversion.resolveRybbitConsultEventContext(homeCapture, 'customers', 'https://fastgpt.cn/')
-      )
-    ),
-    {
-      source: '首页-Banner商务咨询',
-      page_url: 'https://fastgpt.cn/',
-      entry_page_url: '首页-Banner商务咨询｜https://fastgpt.cn/'
+test('direct forms retain fallbacks and CRM success when analytics fail', async () => {
+  for (const scenario of ['missing', 'empty', 'sdk-error', 'json-error', 'no-id']) {
+    const env = browser(false, { NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test' });
+    env.window.location = new URL('https://fastgpt.cn/contact?source=direct-business#form');
+    env.window.localStorage.setItem('fastgpt_rybbit_consult_source', 'stale-source');
+    const events = [];
+    env.window.rybbit = {
+      event: (_name, props) => {
+        if (scenario === 'sdk-error') throw new Error('SDK failed');
+        events.push(JSON.parse(JSON.stringify(props)));
+      }
+    };
+    env.mocks['@/lib/fetchWithTimeout'] = {
+      fetchWithTimeout: async () => ({
+        ok: true,
+        json: async () => {
+          if (scenario === 'json-error') throw new Error('Invalid analytics response');
+          return scenario === 'no-id' ? {} : { submission_id: 'test-id' };
+        }
+      })
+    };
+    let successes = 0;
+    const form = renderForm(env, {
+      rybbitConsultCapture: scenario === 'empty' ? { source: '', entryPageUrl: '' } : undefined,
+      onSuccess: () => {
+        successes++;
+      }
+    });
+    await form.submit();
+    assert.equal(successes, 1, scenario);
+    assert.equal(form.render().props.role, 'status', scenario);
+    assert.equal(events.length, ['missing', 'empty'].includes(scenario) ? 1 : 0, scenario);
+    if (events.length) {
+      assert.equal(events[0].source, 'direct-business');
+      assert.equal(events[0].page_url, 'https://fastgpt.cn/contact');
+      assert.equal(events[0].entry_page_url, 'https://fastgpt.cn/contact');
     }
-  );
-  assert.deepEqual(
-    JSON.parse(
-      JSON.stringify(
-        conversion.resolveRybbitConsultEventContext(
-          undefined,
-          'customers',
-          'https://fastgpt.cn/contact'
-        )
-      )
-    ),
-    {
-      source: 'customers',
-      page_url: 'https://fastgpt.cn/contact',
-      entry_page_url: 'https://fastgpt.cn/contact'
-    }
-  );
-  assert.equal(env.window.localStorage.getItem('fastgpt_rybbit_consult_source'), null);
-  assert.equal(env.window.localStorage.getItem('fastgpt_rybbit_consult_page_url'), null);
+  }
 });
 
 for (const cookieEnabled of [false, true]) {
@@ -252,93 +423,27 @@ test('native contact navigation preserves bounded CTA source and incoming acquis
   );
 });
 
-test('consultation dialog intercepts normal CTA clicks but preserves modified-link behavior', () => {
+test('consultation dialog intercepts normal clicks and preserves native link gestures', () => {
   const env = browser();
-  const listeners = [];
-  const stateUpdates = [];
-  const originalAddEventListener = env.document.addEventListener;
-  env.document.addEventListener = (name, listener, capture) => {
-    originalAddEventListener(name, listener, capture);
-    listeners.push({ name, listener, capture });
-  };
-  const source = fs.readFileSync(
-    path.join(root, 'src/components/consultation/ConsultationDialog.tsx'),
-    'utf8'
-  );
-  const output = ts.transpileModule(source, {
-    compilerOptions: {
-      module: ts.ModuleKind.CommonJS,
-      target: ts.ScriptTarget.ES2020,
-      jsx: ts.JsxEmit.ReactJSX,
-      esModuleInterop: true
-    }
-  }).outputText;
-  const module = { exports: {} };
-  const react = {
-    lazy: (loader) => loader,
-    Suspense: 'Suspense',
-    useEffect: (callback) => callback(),
-    useRef: (value) => ({ current: value }),
-    useState: (value) => [value, (next) => stateUpdates.push(next)]
-  };
-  const localRequire = (name) => {
-    if (name === 'react') return react;
-    if (name === 'react/jsx-runtime') return { jsx: () => null };
-    if (name === 'next/navigation')
-      return { useParams: () => ({}), usePathname: () => '/customers' };
-    if (name === '@/lib/locales') return { normalizeLocale: (value) => value };
-    if (name === '@/lib/siteRouting') return { getDefaultLocaleForSiteVariant: () => 'zh' };
-    if (name === '@/lib/rybbitConversion') {
-      return { createRybbitConsultCapture: (source) => ({ source, entryPageUrl: source }) };
-    }
-    throw new Error(`Unexpected dependency: ${name}`);
-  };
-  vm.runInContext(`(function(require,module,exports){${output}\n})`, env.context, {
-    filename: 'ConsultationDialog.tsx'
-  })(localRequire, module, module.exports);
-  module.exports.default();
-
-  const click = listeners.find(({ name, capture }) => name === 'click' && capture);
-  assert(click, 'ConsultationDialog must install a capture-phase click handler');
-  const trigger = new env.Element('/contact?source=customers');
-  trigger.dataset = { rybbitPropSource: 'customers_hero' };
-  trigger.closest = (selector) =>
-    selector === 'a[data-consultation-trigger="true"]' ? trigger : null;
-
-  let prevented = false;
-  click.listener({
-    target: trigger,
-    button: 0,
-    defaultPrevented: false,
-    metaKey: false,
-    ctrlKey: false,
-    shiftKey: false,
-    altKey: false,
-    preventDefault: () => {
-      prevented = true;
-    }
-  });
-  assert.equal(prevented, true, 'Normal CTA clicks must stay on the current page');
-  assert.deepEqual(
-    stateUpdates,
-    [{ source: 'customers_hero', entryPageUrl: 'customers_hero' }, 'customers', true],
-    'Normal CTA clicks must open the dialog with an immutable source snapshot'
-  );
-
-  stateUpdates.length = 0;
-  prevented = false;
-  click.listener({
-    target: trigger,
-    button: 0,
-    defaultPrevented: false,
-    metaKey: false,
-    ctrlKey: true,
-    shiftKey: false,
-    altKey: false,
-    preventDefault: () => {
-      prevented = true;
-    }
-  });
-  assert.equal(prevented, false, 'Modified CTA clicks must retain link navigation');
-  assert.deepEqual(stateUpdates, [], 'Modified CTA clicks must not open the dialog');
+  const props = env
+    .load('src/customers/lib/consultation.ts')
+    .getConsultationLinkProps({ source: 'customers_hero' });
+  const click = openDialog(env, props);
+  assert.equal(env.listenerOptions.click, true);
+  const { prevented, updates } = click();
+  assert.equal(prevented, true);
+  assert.equal(updates[0].source, '案例详情-顶部商务咨询');
+  assert.equal(updates[0].entryPageUrl, '案例详情-顶部商务咨询｜https://fastgpt.cn/customers');
+  assert.equal(updates[1], 'customers');
+  assert.equal(updates[2], true);
+  for (const modifier of [
+    { ctrlKey: true },
+    { metaKey: true },
+    { shiftKey: true },
+    { altKey: true },
+    { button: 1 },
+    { defaultPrevented: true }
+  ]) {
+    assert.deepEqual(click(modifier), { prevented: false, updates: [] });
+  }
 });

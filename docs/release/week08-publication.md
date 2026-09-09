@@ -9,7 +9,7 @@ Execution authorization: the repository owner requested implementation of issue 
 
 The import adds 38 localized pages (19 Chinese and 19 English): 20 Guide pages and 18 Technical Center pages. Public addresses retain 32 `/guide/` identities and six `/reference/` identities. Shared Guide paths resolve through one content owner. Actual published locales determine language navigation and metadata.
 
-Ten stage lists define 797 unique return relationships (447 Chinese and 350 English). At this delivery, existing article files remain byte-identical; the server loader supplies one designated return entry. `src/content/week08/publication.json` records the original delivery hashes and preservation hashes. Source, static-export and bounded-live checks share `scripts/verify-week08-content.js`.
+Ten stage lists define 797 unique return relationships (447 Chinese and 350 English). At this delivery, existing article files remain byte-identical; the server loader supplies one designated return entry. `src/content/week08/publication.json` records the original delivery hashes and preservation hashes. The explicit batch acceptance and bounded-live commands use `scripts/verify-week08-content.js`; its HTML checks reuse the Guide and Technical export checks.
 
 ## Source corrections
 
@@ -19,7 +19,7 @@ Reference tables use public FastGPT development snapshot `5957d06807ff7f984c70c6
 
 ## Maintenance and batch evidence
 
-The publication manifest records the original delivery. Current Guide registry snapshots and Technical article metadata determine modification dates; current registry identities determine published languages. The ongoing gate checks navigation, ownership, citations and exported metadata while allowing editorial revisions to existing bodies and operational wording. The operational corrections above remain in the articles.
+The publication manifest records the original delivery. Current Guide registry snapshots and Technical article metadata determine modification dates; current registry identities determine published languages. Daily releases run the existing Technical source check for unique owners, same-language stage links, overview links and complete reverse mappings. Existing Guide and Technical export checks validate the current language set, schema dates, visible body links against exported routes, and exactly one correctly targeted stage return. Guide Preview checks cover every current registry entry. Date, translation and navigation regressions use isolated fixtures. The operational corrections above remain in the articles.
 
 Preservation is a one-time comparison between the manifest's full base commit and a full candidate commit, with every recorded hash checked against the base Git blob. The importer retains that evidence instead of recalculating it from working-tree bytes. Run the preservation command for the publication candidate; routine content releases use the source/export gates. A later body revision can legitimately differ from this delivery's preservation evidence.
 
@@ -27,20 +27,28 @@ The 404 regression renders the actual page, loader and recovery component using 
 
 ## Verification
 
-Run from the repository root:
+Run daily verification from the repository root:
+
+```sh
+npm run verify:release
+```
+
+Week08 import reproduction, initial counts, preservation and production HTTP acceptance remain explicit batch commands. They are absent from the daily release dependency chain:
 
 ```sh
 node scripts/import-week08-content.js /path/to/Week08 --check
-node --test scripts/import-week08-content.test.js scripts/verify-guide-markdown.test.js scripts/verify-not-found-recovery.test.js
+node --test scripts/import-week08-content.test.js
+node scripts/verify-week08-content.js
+# Run against the matching completed export.
+node scripts/verify-week08-content.js --export
 node scripts/verify-week08-content.js --preservation "$(git rev-parse HEAD)"
-npm run verify:release
 node scripts/verify-week08-content.js --live cn
 node scripts/verify-week08-content.js --live io
 ```
 
 The full release gate requires a case-sensitive filesystem. It verifies source, lint, TypeScript, and all three static exports with existing FAQ, Guide, technical-content, customer, routing, hygiene and SEO checks. The existing CI workflow records the exact revision and uploads `.release-artifacts/release-verification.json` with export evidence.
 
-The PR #299 review revision passes the complete local source gate, including lint and TypeScript. Regression checks cover date updates, an added translation, revised operational wording, unrelated numeric input, absent recovery rendering, and import application followed by reimport. Applying the real Week08 delivery to a temporary repository and reimporting produces 45 byte-identical files. All 797 original bodies match the PR preservation baseline. Full export results are recorded for the new PR head by CI.
+The preceding PR #299 review revision passed the complete local source gate, including lint and TypeScript. Regression checks cover date updates, an added translation, revised operational wording, unrelated numeric input, absent recovery rendering, and import application followed by reimport. Applying the real Week08 delivery to a temporary repository and reimporting produces 45 byte-identical files. All 797 original bodies match the PR preservation baseline. Full export results are recorded for the new PR head by CI.
 
 The following results describe earlier candidates. Local source checks passed. The complete script test invocation passed 201 of 202 checks; the remaining sidebar check requires a completed `out/` export and runs in every production build. The case-sensitive local build compiled and typechecked, then exhausted available host disk space during static generation. CI is the full-export authority for this revision; this local attempt is recorded as an environment failure, not a passing export.
 

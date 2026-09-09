@@ -1,11 +1,15 @@
 #!/usr/bin/env node
-/** Verify the Week08 publication contract against authored content, exports, or production HTTP. */
+/** One-time Week08 acceptance and historical evidence; run explicitly outside daily releases. */
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
 const { execFileSync } = require('node:child_process');
 const fs = require('node:fs');
 const path = require('node:path');
-const { resolveStaticHtml } = require('./lib/technical-export');
+const { resolveStaticHtml, routeFor, verifyReturn, verifyBodyLinks } = require('./lib/technical-export');
+const { getAnchors: anchors, buildGuideExpectation, verifyMetadata, verifyArticle, getJsonLdNodes, getJsonLdNode, verifyArticleDates, verifyUpdatedTime } = require('./verify-guide-export');
+const { verifyTechnicalPage } = require('./verify-technical-export');
+const { getContentPath, parseFrontMatter, verifyTechnicalContent } = require('./import-technical-content');
+const { getTechIdentities } = require('./lib/redirects');
 const { resolveSiteVariant } = require('./lib/site-variant');
 const publication = require('../src/content/week08/publication.json');
 const reference = require('../src/content/week08/reference-snapshot.json');
@@ -27,6 +31,7 @@ function document(page) {
   );
 }
 function verifySource() {
+  verifyTechnicalContent();
   assert.equal(publication.pages.length, 38, 'Week08 page cardinality');
   assert.equal(new Set(publication.pages.map(key)).size, 38, 'Duplicate Week08 identity');
   assert.equal(publication.pages.filter((page) => page.family === 'guide').length, 20);
@@ -62,13 +67,6 @@ function verifySource() {
         !/核验日|Verified 2026|no list in this round|本轮未建清单/.test(body),
         `Internal publication text: ${key(page)}`
       );
-      for (const link of body.matchAll(/\]\((\/[^)]+)\)/g)) {
-        const target = link[1].split('#')[0];
-        assert(
-          owners.has(target) || /^\/(zh|en)\/(tech-center|contact|start|price)$/.test(target),
-          `${key(page)}: unresolved internal link ${target}`
-        );
-      }
       if (page.route.startsWith('/reference/')) {
         assert(
           body.includes(`https://github.com/labring/FastGPT/`),
@@ -76,7 +74,7 @@ function verifySource() {
         );
         assert(body.includes(reference.commit), `Unversioned citation: ${key(page)}`);
         if (page.route.includes('env-variables'))
-          assert.equal([...body.matchAll(/^\| `[A-Z][A-Z0-9_]+` \|/gm)].length, 137);
+          assert.equal([...body.matchAll(/^\|\s*`[A-Z][A-Z0-9_]+`\s*\|/gm)].length, 137);
         if (page.route.includes('error-codes')) {
           const moduleBodies = [
             ...body.matchAll(/^## (\w+) (?:module|模块)[^\n]*\n([\s\S]*?)(?=^## |$(?![\s\S]))/gm)
@@ -84,7 +82,7 @@ function verifySource() {
           assert.equal(moduleBodies.length, 15, 'Error module count');
           assert.equal(
             moduleBodies.reduce(
-              (count, match) => count + [...match[2].matchAll(/^\| `?\d+`? \|/gm)].length,
+              (count, match) => count + [...match[2].matchAll(/^\|\s*`?\d+`?\s*\|/gm)].length,
               0
             ),
             124,
@@ -94,6 +92,7 @@ function verifySource() {
         if (page.route.includes('workflow-nodes')) {
           const rows = body
             .split('\n')
+            .map((line) => line.split('|').map((cell) => cell.trim()).join(' | ').trim())
             .filter((line) => /^\| `\w+` \|/.test(line) && line.split('|').length === 8);
           assert.equal(rows.length, 34, 'Node table row count');
           for (const node of reference.nodes) {
@@ -108,19 +107,8 @@ function verifySource() {
     }
     for (const [stage, expected] of Object.entries(publication.stages[locale])) {
       const target = `/${locale}/guide/${stage}`;
-      assert(technicalKeys.has(target), `Unresolved stage target: ${target}`);
       const sources = Object.keys(returns).filter((source) => returns[source] === target);
       assert.equal(sources.length, expected, `${target}: return count`);
-      const body = document({ locale, route: `/guide/${stage}`, family: 'technical' });
-      assert(
-        body.includes(`](/${locale}/guide/deployment-issue-landscape)`),
-        `${target}: missing landscape link`
-      );
-      for (const source of sources) {
-        assert(technicalKeys.has(source), `Unresolved return source: ${source}`);
-        assert(source.startsWith(`/${locale}/`), `Cross-locale return source: ${source}`);
-        assert(body.includes(`](${source})`), `${target}: missing article link ${source}`);
-      }
     }
   }
   assert.equal(Object.keys(returns).length, 797);
@@ -140,126 +128,26 @@ function verifySource() {
     reference: { variables: 137, codes: 124, modules: 15, nodes: 34 }
   };
 }
-function visibleHtml(html) {
-  return html.replace(/<script\b[\s\S]*?<\/script>/gi, '');
-}
-function attrs(tag) {
-  return Object.fromEntries(
-    [...tag.matchAll(/([\w-]+)="([^"]*)"/g)].map((match) => [
-      match[1].toLowerCase(),
-      match[2].replace(/&amp;/g, '&')
-    ])
-  );
-}
-function anchors(html) {
-  return [...visibleHtml(html).matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/g)].map((match) => ({
-    ...attrs(match[1]),
-    text: match[2].replace(/<[^>]+>/g, '')
-  }));
-}
-function routeFor(locale, route, variant) {
-  return variant === 'preview' ? `/${locale}${route}` : route;
-}
 function verifyPage(html, page, variant) {
-  const canonical = hosts[page.locale] + page.route;
-  const links = [...html.matchAll(/<link\b[^>]*>/g)].map((match) => attrs(match[0]));
-  assert.deepEqual(
-    links.filter((link) => link.rel === 'canonical').map((link) => link.href),
-    [canonical],
-    `${canonical}: canonical`
-  );
-  assert.equal((visibleHtml(html).match(/<h1\b/g) || []).length, 1, `${canonical}: H1 count`);
-  const meta = [...html.matchAll(/<meta\b[^>]*>/g)].map((match) => attrs(match[0]));
-  assert(
-    meta.some((tag) => tag.name === 'description' && tag.content.length >= 30),
-    `${canonical}: description`
-  );
-  assert(
-    meta.some((tag) => tag.property === 'og:url' && tag.content === canonical),
-    `${canonical}: social URL`
-  );
-  assert(
-    meta.some(
-      (tag) =>
-        tag.name === 'robots' &&
-        tag.content === (variant === 'preview' ? 'noindex, nofollow' : 'index, follow')
-    ),
-    `${canonical}: robots`
-  );
-  const slug = page.route.split('/').at(-1);
-  const guide = guides.find((entry) => entry.slug === slug);
-  const publishedLocales = Object.keys(hosts).filter((locale) =>
-    page.family === 'guide'
-      ? Boolean(guide?.[locale])
-      : technical.some((entry) => entry.slug === `/${locale}${page.route}`)
-  );
-  const expected = Object.fromEntries(
-    publishedLocales.map((locale) => [locale === 'zh' ? 'zh-CN' : 'en', hosts[locale] + page.route])
-  );
-  if (publishedLocales.includes('en')) expected['x-default'] = hosts.en + page.route;
-  const metadata =
-    page.family === 'guide'
-      ? guide?.[page.locale]
-      : {
-          datePublished: document(page).match(/^date_published: (.+)$/m)?.[1],
-          dateModified: document(page).match(/^date_modified: (.+)$/m)?.[1]
-        };
-  assert(metadata?.datePublished && metadata?.dateModified, `${canonical}: missing current dates`);
-  assert.deepEqual(
-    Object.fromEntries(
-      links
-        .filter((link) => link.rel === 'alternate' && link.hreflang)
-        .map((link) => [link.hreflang, link.href])
-    ),
-    expected,
-    `${canonical}: published alternates`
-  );
-  const schemas = [
-    ...html.matchAll(/<script\b[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g)
-  ].flatMap((match) => {
-    const node = JSON.parse(match[1]);
-    return node['@graph'] || [node];
-  });
-  const article = schemas.find((node) => ['Article', 'TechArticle'].includes(node['@type']));
-  assert(
-    article &&
-      article.mainEntityOfPage?.['@id'] === canonical &&
-      (article.url === undefined || article.url === canonical) &&
-      article.datePublished === metadata.datePublished &&
-      article.dateModified === metadata.dateModified,
-    `${canonical}: article schema and dates`
-  );
-  assert(
-    schemas.some((node) => node['@type'] === 'BreadcrumbList'),
-    `${canonical}: breadcrumbs`
-  );
-  if (page.family === 'guide')
-    assert(
-      html.includes(`dateTime="${metadata.dateModified}"`) ||
-        html.includes(`datetime="${metadata.dateModified}"`),
-      `${canonical}: modified date`
-    );
-  for (const link of anchors(html).filter((link) => link.href?.startsWith('#')))
-    assert(
-      html.includes(`id="${link.href.slice(1)}"`),
-      `${canonical}: unresolved heading ${link.href}`
-    );
-  const body = document(page).replace(/^(?:<!--[\s\S]*?-->|---[\s\S]*?\n---)/, '');
-  for (const match of body.matchAll(/\]\(\/(zh|en)(\/[^)]+)\)/g)) {
-    if (/^\/(contact|start)$/.test(match[2])) continue;
-    const expected = routeFor(match[1], match[2], variant);
-    assert(
-      anchors(html).some((link) => link.href === expected),
-      `${canonical}: missing visible link ${expected}`
-    );
+  if (page.family === 'guide') {
+    const expectation = { ...buildGuideExpectation(page.locale === 'zh' ? 'cn' : 'io'), variant };
+    const article = expectation.routes.get(page.route);
+    verifyMetadata(html, article, expectation, key(page));
+    if (variant === 'preview') {
+      const context = { variant, slug: page.route };
+      verifyArticleDates(getJsonLdNode(getJsonLdNodes(html, context), 'Article', context, 'schema'),
+        article.source, hosts[page.locale] + page.route, context);
+      verifyUpdatedTime(html, article, expectation, context);
+    } else verifyArticle(html, article, expectation, key(page));
+    verifyBodyLinks(html, document(page), variant);
+  } else {
+    const identities = getTechIdentities(ROOT);
+    const identity = identities.find((entry) => entry.sourcePath === key(page));
+    const file = path.join(ROOT, getContentPath(ROOT, identity));
+    verifyTechnicalPage(html, { identity, identities, variant,
+      document: parseFrontMatter(fs.readFileSync(file, 'utf8'), file, false),
+      baseUrls: { cn: hosts.zh, io: hosts.en }, target: returns[key(page)] });
   }
-}
-function verifyReturn(html, source, target, variant) {
-  const [locale, ...segments] = target.slice(1).split('/');
-  const expected = routeFor(locale, '/' + segments.join('/'), variant);
-  const tags = [...visibleHtml(html).matchAll(/<a\b[^>]*data-stage-return[^>]*>/g)];
-  assert.equal(tags.length, 1, `${source}: expected one designated stage return`);
-  assert.equal(attrs(tags[0][0]).href, expected, `${source}: stage return destination`);
 }
 function verifyExport(variant, outDir = path.join(ROOT, 'out')) {
   const load = (route) => {
@@ -406,4 +294,4 @@ if (require.main === module)
     console.error(`[verify-week08-content] ${error.message}`);
     process.exitCode = 1;
   });
-module.exports = { verifySource, verifyExport, verifyPage, verifyReturn, verifyPreservation };
+module.exports = { verifySource, verifyExport, verifyPreservation };

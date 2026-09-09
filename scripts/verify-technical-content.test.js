@@ -356,3 +356,46 @@ test('source verification covers every indexed page and catches content drift wi
     fs.rmSync(repo, { recursive: true, force: true });
   }
 });
+
+test('stage navigation allows maintained bodies and growing lists while rejecting broken relations', () => {
+  const { verifyStageNavigation } = require('./import-technical-content');
+  const stage = '/zh/guide/example-issues';
+  const source = '/zh/api/example';
+  const overview = '/zh/guide/deployment-issue-landscape';
+  const entries = [stage, source, overview].map((slug) => ({ slug }));
+  const body = `[Overview](${overview})\n| [Article](${source}) |\n[Guides](/zh/guide)\n[FAQ](/zh/faq)\n[FAQ answer](/zh/faq/example)\n[Comparison](/zh/compare/example)`;
+  const bodies = new Map([[stage, body]]);
+  const returns = { [source]: stage };
+  const verify = (e = entries, b = bodies, r = returns, g = []) =>
+    verifyStageNavigation(e, b, r, g);
+  verify();
+  verify(entries, new Map([[stage, body + '\nRevised operational wording.']]));
+  const later = '/zh/api/later';
+  verify([...entries, { slug: later }], new Map([[stage, body + `\n| [Later](${later}) |`]]), {
+    ...returns,
+    [later]: stage
+  });
+  assert.throws(() => verify(entries.slice(1)), /Unresolved stage target/);
+  assert.throws(
+    () => verify(entries.filter((entry) => entry.slug !== source)),
+    /Unresolved return source/
+  );
+  assert.throws(() => verify([...entries, entries[1]]), /Duplicate content owner/);
+  assert.throws(
+    () => verify(entries, bodies, returns, [{ slug: 'example-issues', zh: {} }]),
+    /Duplicate content owner/
+  );
+  assert.throws(
+    () => verify(entries, new Map([[stage, body.replace(`[Article](${source})`, '')]])),
+    /missing article link/
+  );
+  assert.throws(
+    () => verify(entries, new Map([[stage, body.replace(`[Overview](${overview})`, '')]])),
+    /missing landscape/
+  );
+  assert.throws(() => verify(entries, bodies, {}), /missing reverse mapping/);
+  assert.throws(
+    () => verify([...entries, { slug: '/en/api/example' }], bodies, { '/en/api/example': stage }),
+    /Cross-locale/
+  );
+});

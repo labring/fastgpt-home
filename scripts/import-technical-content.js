@@ -918,6 +918,51 @@ function validateProjection(projection, label) {
   }
 }
 
+/** Validate current stage navigation independently of delivery counts and wording. */
+function verifyStageNavigation(entries, bodies, returns, guides = []) {
+  const { bodyLinks } = require('./lib/technical-export');
+  const owners = new Set(
+    guides.flatMap((entry) =>
+      ['zh', 'en']
+        .filter((locale) => entry[locale])
+        .map((locale) => `/${locale}/guide/${entry.slug}`)
+    )
+  );
+  for (const entry of entries) {
+    if (owners.has(entry.slug)) throw new Error(`Duplicate content owner: ${entry.slug}`);
+    owners.add(entry.slug);
+  }
+  const technical = new Set(entries.map((entry) => entry.slug));
+  const stages = new Map(
+    entries
+      .filter(
+        (entry) =>
+          /^\/(zh|en)\/guide\//.test(entry.slug) &&
+          !entry.slug.endsWith('/deployment-issue-landscape')
+      )
+      .map((entry) => [entry.slug, new Set(bodyLinks(bodies.get(entry.slug)))])
+  );
+  for (const [source, target] of Object.entries(returns)) {
+    if (!technical.has(source)) throw new Error(`Unresolved return source: ${source}`);
+    if (!stages.has(target)) throw new Error(`Unresolved stage target: ${target}`);
+    if (source.split('/')[1] !== target.split('/')[1])
+      throw new Error(`Cross-locale return source: ${source}`);
+    if (!stages.get(target).has(source))
+      throw new Error(`${target}: missing article link ${source}`);
+  }
+  for (const [stage, links] of stages) {
+    const locale = stage.split('/')[1];
+    const landscape = `/${locale}/guide/deployment-issue-landscape`;
+    if (!technical.has(landscape) || !links.has(landscape))
+      throw new Error(`${stage}: missing landscape link`);
+    for (const link of links) {
+      // Article lists own reverse mappings; links to sibling lists and hubs are navigation.
+      if (!technical.has(link) || stages.has(link) || link === landscape) continue;
+      if (returns[link] !== stage) throw new Error(`${link}: missing reverse mapping to ${stage}`);
+    }
+  }
+}
+
 function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   const entries = readExistingEntries(repoRoot);
   if (!Array.isArray(entries) || entries.length === 0)
@@ -933,6 +978,7 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
     );
   }
   const indexedFiles = new Set();
+  const bodies = new Map();
   for (const entry of entries) {
     const identity = parseIdentityFromSlug(entry.slug, 'technical registry');
     if (
@@ -951,6 +997,7 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
     if (metadata.slug !== entry.slug || (metadata.title && metadata.title !== entry.title))
       throw new Error(`Technical content metadata drift for ${entry.slug}`);
     if (!body) throw new Error(`Empty technical body for ${entry.slug}`);
+    bodies.set(entry.slug, body);
     if (metadata.source) normalizePublicHttpsUrl(metadata.source, `${entry.slug} source`);
     extractCitationUrls(body, entry.slug);
     SECRET_PATTERN.lastIndex = 0;
@@ -962,6 +1009,11 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   for (const filePath of listMarkdownFiles(path.join(repoRoot, 'src/content/tech-center'))) {
     if (!indexedFiles.has(filePath)) throw new Error(`Unindexed technical body: ${filePath}`);
   }
+  const readRegistry = (file, fallback) => fs.existsSync(path.join(repoRoot, file))
+    ? JSON.parse(fs.readFileSync(path.join(repoRoot, file), 'utf8')) : fallback;
+  verifyStageNavigation(entries, bodies,
+    readRegistry('src/content/tech-center/stage-returns.json', {}),
+    readRegistry('src/content/guides/registry.json', { entries: [] }).entries);
   console.log(`Technical content verified: ${entries.length} pages`);
   return entries;
 }
@@ -1026,6 +1078,9 @@ if (require.main === module) {
 }
 
 module.exports = {
+  getContentPath,
+  parseFrontMatter,
+  verifyStageNavigation,
   buildImportPlan,
   buildNormalizedTechnicalPage,
   buildSearchProjection,

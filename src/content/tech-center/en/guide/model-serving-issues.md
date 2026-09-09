@@ -2,6 +2,7 @@
 title: FastGPT Model serving and inference Issue List
 slug: /en/guide/model-serving-issues
 page_type: Issue list
+stage_members_heading: Published documents (41)
 source: https://github.com/labring/FastGPT
 source_type: 官方文档
 meta_title: FastGPT Model serving and inference Issue List | FastGPT Technical Center

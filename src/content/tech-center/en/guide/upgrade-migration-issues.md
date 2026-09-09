@@ -2,6 +2,7 @@
 title: FastGPT Upgrades and migrations Issue List
 slug: /en/guide/upgrade-migration-issues
 page_type: Issue list
+stage_members_heading: Published documents (114)
 source: https://github.com/labring/FastGPT
 source_type: 官方文档
 meta_title: FastGPT Upgrades and migrations Issue List | FastGPT Technical Center

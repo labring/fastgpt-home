@@ -40,6 +40,14 @@ and locale search projection. The completed export checks owner routes, canonica
 hreflang, robots, sitemap coverage, redirects, and the Technical Center JavaScript budget.
 Git records content revisions and batch history.
 
+Stage pages declare `page_type: Issue list` (English) or `page_type: 问题清单聚合页`
+(Chinese) in front matter. `stage_members_heading` selects one exact level-two heading
+whose section contains one pipe table. Each data row's first cell links to one member;
+`src/content/tech-center/stage-returns.json` supplies its designated return. Keep the
+selector aligned when editing that heading. Other sections and table columns can contain
+ordinary references. Source checks enforce membership, same-language targets and unique
+owners; completed-export checks verify visible links and destination reachability.
+
 An explicit JSON or XLSX delivery can be imported with
 `npm run import:technical-content -- --write --source <delivery-directory>`.
 Use `--check` in place of `--write` to compare the delivery with committed content.
@@ -60,3 +68,27 @@ metadata in the JSON output and response bodies in `<output-basename>-responses/
 Use `scripts/fixtures/customer-migration-release-contract.json` as the reproducible contract
 shape. Replace its environment targets and observation values with the release-approved inputs,
 then retain the JSON output and response directories as the production evidence bundle.
+
+## Delivery evidence lifecycle
+
+Retire a one-time importer and its batch ledgers after retaining the raw inputs, immutable
+base and candidate revisions, executable checkout, reproduction commands and successful
+initial acceptance. Verify restoration from the archive before removing the files. Keep
+execution logs and source hashes with that evidence; maintain current articles, registries,
+route rules and source/export checks in this repository. Run historical tools from their
+original checkout so relative imports and repository-root paths keep their meaning.
+
+For PR #299, the archive is `fastgpt-data/Week08/pr299-retirement-evidence/` in the owner's
+content-data workspace. It includes all 38 original inputs, a self-contained Git bundle,
+seven retired files, reproduction instructions, checksums, preservation results and the
+review experiment. Its source revision is
+[`405b02ff210b90cac0b5e4a19660c5fdb044f800`](https://github.com/yangchuansheng/fastgpt-home/tree/405b02ff210b90cac0b5e4a19660c5fdb044f800).
+Retrieve that archive for initial or post-publication acceptance; daily verification uses
+`npm run verify:release`. Preserve the archive through production acceptance and any later
+audit retention period. Existing Week06 release gates have a separate retirement scope.
+
+PR #299 requires explicit owner approval before merge or production publication, with
+automatic merge disabled. After approval, use the existing image workflow and record the
+candidate image digest plus the previous known-good digest. Run the archived bounded-live
+checks from the acceptance checkout after deployment and retain their results there. Roll
+back by restoring the previous image digest and verifying the rollout and affected routes.

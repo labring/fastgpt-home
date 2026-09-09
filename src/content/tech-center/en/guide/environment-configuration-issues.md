@@ -2,6 +2,7 @@
 title: FastGPT Environment and configuration Issue List
 slug: /en/guide/environment-configuration-issues
 page_type: Issue list
+stage_members_heading: Published documents (125)
 source: https://github.com/labring/FastGPT
 source_type: 官方文档
 meta_title: FastGPT Environment and configuration Issue List | FastGPT Technical Center

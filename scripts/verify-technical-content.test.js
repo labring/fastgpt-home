@@ -357,24 +357,61 @@ test('source verification covers every indexed page and catches content drift wi
   }
 });
 
-test('stage navigation allows maintained bodies and growing lists while rejecting broken relations', () => {
+test('stage membership follows explicit roles and the selected table', () => {
   const { verifyStageNavigation } = require('./import-technical-content');
   const stage = '/zh/guide/example-issues';
   const source = '/zh/api/example';
+  const reference = '/zh/reference/environment';
+  const ordinaryGuide = '/zh/guide/ordinary-guide';
   const overview = '/zh/guide/deployment-issue-landscape';
-  const entries = [stage, source, overview].map((slug) => ({ slug }));
-  const body = `[Overview](${overview})\n| [Article](${source}) |\n[Guides](/zh/guide)\n[FAQ](/zh/faq)\n[FAQ answer](/zh/faq/example)\n[Comparison](/zh/compare/example)`;
-  const bodies = new Map([[stage, body]]);
+  const entries = [stage, source, overview, reference, ordinaryGuide].map((slug) => ({ slug }));
+  const metadata = { page_type: '问题清单聚合页', stage_members_heading: 'Members' };
+  const body = `[Overview](${overview})
+## Members
+| Article | Area |
+| --- | --- |
+| [Article](${source}) | API |
+
+## Related references
+[Reference](${reference})
+| Reference | Area |
+| --- | --- |
+| [Guide](${ordinaryGuide}) | Guide |
+`;
+  const document = (text = body, meta = metadata) =>
+    new Map([
+      [stage, { metadata: meta, body: text }],
+      [ordinaryGuide, { metadata: { page_type: 'Tutorial' }, body: '# Ordinary guide' }]
+    ]);
   const returns = { [source]: stage };
-  const verify = (e = entries, b = bodies, r = returns, g = []) =>
-    verifyStageNavigation(e, b, r, g);
+  const verify = (e = entries, d = document(), r = returns, g = []) =>
+    verifyStageNavigation(e, d, r, g);
   verify();
-  verify(entries, new Map([[stage, body + '\nRevised operational wording.']]));
+  verify(entries, document(body + '\nRevised operational wording.'));
+  verify(entries, document(body, { ...metadata, page_type: 'Issue list' }));
+  // A source-shaped link in another cell is an editorial reference.
+  verify(entries, document(body.replace('| API |', `| [Reference](${reference}) |`)));
   const later = '/zh/api/later';
-  verify([...entries, { slug: later }], new Map([[stage, body + `\n| [Later](${later}) |`]]), {
-    ...returns,
-    [later]: stage
-  });
+  verify(
+    [...entries, { slug: later }],
+    document(
+      body.replace(
+        '\n\n## Related references',
+        `\n| [Later](${later}) | API |\n\n## Related references`
+      )
+    ),
+    { ...returns, [later]: stage }
+  );
+  // Stage identity is independent of its URL section.
+  const moved = '/zh/troubleshoot/example-stage';
+  const movedDocuments = document();
+  movedDocuments.set(moved, movedDocuments.get(stage));
+  movedDocuments.delete(stage);
+  verify(
+    entries.map((entry) => (entry.slug === stage ? { slug: moved } : entry)),
+    movedDocuments,
+    { [source]: moved }
+  );
   assert.throws(() => verify(entries.slice(1)), /Unresolved stage target/);
   assert.throws(
     () => verify(entries.filter((entry) => entry.slug !== source)),
@@ -382,20 +419,89 @@ test('stage navigation allows maintained bodies and growing lists while rejectin
   );
   assert.throws(() => verify([...entries, entries[1]]), /Duplicate content owner/);
   assert.throws(
-    () => verify(entries, bodies, returns, [{ slug: 'example-issues', zh: {} }]),
+    () => verify(entries, document(), returns, [{ slug: 'example-issues', zh: {} }]),
     /Duplicate content owner/
   );
   assert.throws(
-    () => verify(entries, new Map([[stage, body.replace(`[Article](${source})`, '')]])),
-    /missing article link/
+    () => verify(entries, document(), { [source]: ordinaryGuide }),
+    /Unresolved stage target/
   );
+  assert.throws(() => verify(entries, document(), {}), /missing reverse mapping/);
   assert.throws(
-    () => verify(entries, new Map([[stage, body.replace(`[Overview](${overview})`, '')]])),
+    () => verify(entries, document(body.replace(`[Overview](${overview})`, ''))),
     /missing landscape/
   );
-  assert.throws(() => verify(entries, bodies, {}), /missing reverse mapping/);
   assert.throws(
-    () => verify([...entries, { slug: '/en/api/example' }], bodies, { '/en/api/example': stage }),
+    () => verify(entries, document(body, { page_type: 'Issue list' })),
+    /missing stage_members_heading/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace('## Members', '## Renamed'))),
+    /expected one member section/
+  );
+  assert.throws(
+    () => verify(entries, document(body + '\n## Members\n')),
+    /expected one member section/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace('| --- | --- |', '| invalid | --- |'))),
+    /invalid member table/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace(`[Article](${source})`, 'Article'))),
+    /one article per member row/
+  );
+  assert.throws(
+    () =>
+      verify(
+        entries,
+        document(
+          body.replace(
+            '\n\n## Related references',
+            `\n| [Duplicate](${source}) | API |\n\n## Related references`
+          )
+        )
+      ),
+    /duplicate stage member/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace(source, '/zh/api/missing')), {}),
+    /Unresolved stage member/
+  );
+  // An ordinary paragraph link cannot substitute for membership in the selected table.
+  assert.throws(
+    () => verify(entries, document(body.replace(source, reference) + `\n[Article](${source})`)),
+    /missing article link/
+  );
+  const foreign = '/en/api/example';
+  assert.throws(
+    () => verify([...entries, { slug: foreign }], document(), { [foreign]: stage }),
     /Cross-locale/
+  );
+  assert.throws(
+    () => verify([...entries, { slug: foreign }], document(body.replace(source, foreign)), {}),
+    /Cross-locale/
+  );
+  assert.throws(
+    () =>
+      verify(
+        entries,
+        document(
+          body
+            .replace('## Members', '## Members\n```md')
+            .replace('## Related references', '```\n## Related references')
+        )
+      ),
+    /expected one member table/
+  );
+  const secondTable =
+    '\n| Reference | Area |\n| --- | --- |\n| [Ref](' + reference + ') | Reference |\n';
+  assert.throws(
+    () =>
+      verify(
+        entries,
+        document(body.replace('## Related references', secondTable + '\n## Related references'))
+      ),
+    /expected one member table/
   );
 });

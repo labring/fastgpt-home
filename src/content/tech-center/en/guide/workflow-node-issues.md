@@ -2,6 +2,7 @@
 title: FastGPT Workflow and nodes Issue List
 slug: /en/guide/workflow-node-issues
 page_type: Issue list
+stage_members_heading: Published documents (37)
 source: https://github.com/labring/FastGPT
 source_type: 官方文档
 meta_title: FastGPT Workflow and nodes Issue List | FastGPT Technical Center

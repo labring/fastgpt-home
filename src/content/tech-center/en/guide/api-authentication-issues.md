@@ -2,6 +2,7 @@
 title: FastGPT API and authentication Issue List
 slug: /en/guide/api-authentication-issues
 page_type: Issue list
+stage_members_heading: Published documents (33)
 source: https://github.com/labring/FastGPT
 source_type: 官方文档
 meta_title: FastGPT API and authentication Issue List | FastGPT Technical Center

@@ -2,6 +2,7 @@
 title: FastGPT 版本升级 问题清单
 slug: /zh/guide/version-upgrade-issues
 page_type: 问题清单聚合页
+stage_members_heading: 已发布的文档清单（100 篇）
 source: https://github.com/labring/FastGPT
 source_type: 官方文档
 meta_title: FastGPT 版本升级 问题清单｜FastGPT 技术中心

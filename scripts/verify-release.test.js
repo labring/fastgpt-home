@@ -649,3 +649,14 @@ test('requiring the metadata verifier is silent and side-effect free', () => {
   assert.equal(result.stdout, '');
   assert.equal(result.stderr, '');
 });
+
+test('daily releases retain current content protection and keep Week08 acceptance explicit', () => {
+  const { getSourceNodeSteps, getVariantSteps } = require('./lib/release-steps');
+  const steps = getSourceNodeSteps();
+  assert(steps.some(([id]) => id === 'not-found.regression'));
+  assert(steps.some(([id]) => id === 'guide-markdown.regression'));
+  assert(steps.some(([id]) => id === 'guide-export.regression'));
+  assert(!steps.some(([id]) => id.startsWith('week08.')));
+  for (const variant of ['cn', 'io', 'preview'])
+    assert(!getVariantSteps(variant).some(({ id }) => id.startsWith('week08.')));
+});

@@ -91,6 +91,7 @@ function getSourceNodeSteps() {
 
 function getSourceNpmSteps() {
   return [
+    ['contact.regression', 'contact and consultation attribution regression', ['verify:contact']],
     ['technical-content.source', 'technical content verification', ['verify:technical-content']],
     [
       'technical-content.regression',

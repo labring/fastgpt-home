@@ -212,6 +212,18 @@ test('release coordinator checks technical content and every site variant', () =
   }
 });
 
+test('release coordinator runs the consultation attribution regression', () => {
+  assert.match(
+    packageJson.scripts['verify:contact'],
+    /verify-consultation-attribution\.test\.js/,
+    'verify:contact must run the consultation attribution regression'
+  );
+  assert(
+    getSourceNpmSteps().some(([, , args]) => args.includes('verify:contact')),
+    'release verification must run verify:contact'
+  );
+});
+
 test('release coordinator records and gates the case-only alias slice independently', () => {
   const sourceStep = getSourceNodeSteps().find(([stepId]) => stepId === 'case-only.source');
   const regressionStep = getSourceNpmSteps().find(([stepId]) => stepId === 'case-only.regression');

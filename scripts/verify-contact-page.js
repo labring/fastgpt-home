@@ -74,8 +74,8 @@ async function verifyContactQueryFlow() {
   );
   assert.match(
     formSource,
-    /const resolvedSubmissionSource\s*=\s*submissionSource\?\.slice\(0, 128\) \|\| getSubmissionSource\(\)/,
-    'Contact submission must resolve the dialog source or current explicit source'
+    /const resolvedSubmissionSource\s*=\s*getSubmissionSource\(submissionSource\)/,
+    'Contact submission must prefer the landing source over its surface default'
   );
   assert.match(
     formSource,
@@ -234,6 +234,13 @@ function verifyAllBuiltContactLinks() {
       assert(
         resolveHtmlPath(contactPath),
         `${path.relative(root, file)} points to missing Contact HTML at ${contactPath}`
+      );
+    }
+    for (const [anchor] of content.matchAll(/<a\b[^>]*>/g)) {
+      if (!anchor.includes('data-rybbit-event="business_consult_click"')) continue;
+      assert(
+        anchor.includes('data-consultation-trigger="true"'),
+        `${path.relative(root, file)} contains a business consultation CTA without a dialog trigger`
       );
     }
   }

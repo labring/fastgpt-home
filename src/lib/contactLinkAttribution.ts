@@ -42,9 +42,9 @@ export const contactLinkAttributionScript = `
     var incoming = new URLSearchParams(window.location.search);
     var forwarded = new URLSearchParams();
     keys.forEach(function(key) {
-      // The destination source describes this consultation, not acquisition.
+      // Preserve an explicit landing source, with the CTA source as the default.
       var value = key === 'source'
-        ? (target.searchParams.get(key) || incoming.get(key))
+        ? ((incoming.get(key) || '').trim() || target.searchParams.get(key))
         : incoming.get(key);
       var maxLength = valueCaps[key];
       if (value && maxLength) {

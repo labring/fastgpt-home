@@ -249,6 +249,58 @@ for (const configuredSource of sourceConfigurations) {
   });
 }
 
+test('landing sources survive dialog submission without replacing conversion context', async () => {
+  for (const surfaceSource of [undefined, 'home-cn', 'customers']) {
+    const env = browser(false, {
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: 'home-cn',
+      NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test'
+    });
+    const sdk = env.load('src/lib/leadAttribution.ts');
+    for (const [query, expected] of [
+      ['', surfaceSource || 'home-cn'],
+      ['?source=', surfaceSource || 'home-cn'],
+      ['?source=%20%20', surfaceSource || 'home-cn'],
+      ['?utm_source=google', surfaceSource || 'home-cn'],
+      ['?source=%20partner%20', 'partner'],
+      [`?source=${'x'.repeat(200)}`, 'x'.repeat(128)]
+    ]) {
+      env.window.location = new URL(`https://fastgpt.cn/customers${query}`);
+      assert.equal(sdk.getSubmissionSource(surfaceSource), expected);
+    }
+    env.window.location = new URL('https://fastgpt.cn/customers');
+    assert.equal(sdk.getSubmissionSource(' customers '), 'customers');
+    assert.equal(sdk.getSubmissionSource(' '), 'home-cn');
+    assert.equal(sdk.getSubmissionSource('x'.repeat(200)), 'x'.repeat(128));
+    delete env.context.window;
+    assert.equal(sdk.getSubmissionSource(surfaceSource), surfaceSource || 'home-cn');
+    env.context.window = env.window;
+    env.window.location = new URL('https://fastgpt.cn/customers?source=partner');
+
+    const requests = [];
+    const events = [];
+    env.mocks['@/lib/fetchWithTimeout'] = {
+      fetchWithTimeout: async (url, options) => {
+        if (url.endsWith('/contacts/submit')) requests.push(JSON.parse(options.body));
+        return { ok: true, json: async () => ({ submission_id: 'partner-test' }) };
+      }
+    };
+    env.window.rybbit = { event: (name, props) => events.push({ name, ...props }) };
+    const capture = env
+      .load('src/lib/rybbitConversion.ts')
+      .createRybbitConsultCapture('content_article_body_consult');
+    await renderForm(env, {
+      submissionSource: surfaceSource,
+      rybbitConsultCapture: capture
+    }).submit();
+    assert.equal(requests.length, 1);
+    assert.equal(requests[0].source, 'partner');
+    assert.equal(events.length, 1);
+    assert.equal(events[0].name, 'business_consult_submit_success');
+    assert.equal(events[0].source, '内容正文-商务咨询');
+    assert.equal(events[0].crm_visitor_id, requests[0].visitor_id);
+  }
+});
+
 test('independent forms keep their clicked context across overlapping submissions', async () => {
   const forms = [];
   const captures = [
@@ -401,7 +453,7 @@ test('a fresh document still classifies external referrers', () => {
   assert.equal(sdk.getAttributionPayload().last_touch_channel, 'organic_search · Google');
 });
 
-test('native contact navigation preserves bounded CTA source and incoming acquisition', () => {
+test('native contact navigation prefers landing source and retains bounded CTA defaults', () => {
   const env = browser();
   const script = env.load('src/lib/contactLinkAttribution.ts').contactLinkAttributionScript;
   vm.runInContext(script, env.context);
@@ -410,11 +462,12 @@ test('native contact navigation preserves bounded CTA source and incoming acquis
     const anchor = new env.Element('/contact?source=customers&utm_source=stale#form');
     for (const event of ['pointerdown', 'click']) env.listeners[event]({ target: anchor });
     const url = new URL(anchor.href, env.window.location.origin);
-    assert.equal(url.searchParams.get('source'), 'customers');
+    assert.equal(url.searchParams.get('source'), query ? 'partner' : 'customers');
     assert.equal(url.searchParams.get('utm_source'), query ? 'google' : null);
     assert.equal(url.searchParams.has('email'), false);
     assert.equal(url.hash, '#form');
   }
+  env.window.location = new URL('https://fastgpt.cn/customers');
   const anchor = new env.Element(`/contact?source=${'x'.repeat(200)}`);
   env.listeners.click({ target: anchor });
   assert.equal(

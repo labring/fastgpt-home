@@ -448,7 +448,7 @@ export default function ContactForm({
 
     setStatus('submitting');
     try {
-      const resolvedSubmissionSource = submissionSource?.slice(0, 128) || getSubmissionSource();
+      const resolvedSubmissionSource = getSubmissionSource(submissionSource);
       trackVisit();
       // Attribution is best-effort telemetry and must not block the contact
       // form when its tracking endpoint is unavailable.

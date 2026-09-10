@@ -25,7 +25,7 @@ test('SiteAnalytics initializes CRM identity without global consultation storage
   const source = read('src/app/SiteAnalytics.tsx');
 
   assert.doesNotMatch(source, /installRybbitConsultSourceCapture/);
-  assert.match(source, /onLoad=\{identifyRybbitVisitor\}/);
+  assert.doesNotMatch(source, /onLoad=\{identifyRybbitVisitor\}/);
   assert.match(source, /onReady=\{identifyRybbitVisitor\}/);
 });
 

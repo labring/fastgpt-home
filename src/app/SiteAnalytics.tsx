@@ -53,7 +53,6 @@ export default function SiteAnalytics() {
           defer
           data-site-id={`${rybbitSiteId}`}
           src={rybbitUrl}
-          onLoad={identifyRybbitVisitor}
           onReady={identifyRybbitVisitor}
         />
       )}

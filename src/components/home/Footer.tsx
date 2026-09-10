@@ -288,7 +288,7 @@ export default function Footer({ t, locale }: { t: FooterT; locale?: string }) {
                             {...(item.external
                               ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
                               : {})}
-                            {...(isContactHref(item.href) || item.href.includes('feishu.cn')
+                            {...(isContactHref(item.href)
                               ? rybbitClickAttrs(
                                   RYBBIT_EVENTS.businessConsultClick,
                                   'footer_private_deploy'

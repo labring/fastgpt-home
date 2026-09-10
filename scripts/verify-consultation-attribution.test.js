@@ -250,7 +250,12 @@ for (const configuredSource of sourceConfigurations) {
 }
 
 test('landing sources survive dialog submission without replacing conversion context', async () => {
-  for (const surfaceSource of [undefined, 'home-cn', 'customers']) {
+  for (const [surfaceSource, entrySource, entryLabel] of [
+    [undefined, 'content_article_body_consult', '内容正文-商务咨询'],
+    ['home-cn', 'tech_article_sidebar_consult', '技术文章-侧栏商务咨询'],
+    ['customers', 'guide_article_sidebar_consult', '指南文章-侧栏商务咨询'],
+    ['home-io', 'faq_detail_sidebar_consult', 'FAQ详情-侧栏商务咨询']
+  ]) {
     const env = browser(false, {
       NEXT_PUBLIC_ATTRIBUTION_SOURCE: 'home-cn',
       NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test'
@@ -285,9 +290,7 @@ test('landing sources survive dialog submission without replacing conversion con
       }
     };
     env.window.rybbit = { event: (name, props) => events.push({ name, ...props }) };
-    const capture = env
-      .load('src/lib/rybbitConversion.ts')
-      .createRybbitConsultCapture('content_article_body_consult');
+    const capture = env.load('src/lib/rybbitConversion.ts').createRybbitConsultCapture(entrySource);
     await renderForm(env, {
       submissionSource: surfaceSource,
       rybbitConsultCapture: capture
@@ -296,7 +299,7 @@ test('landing sources survive dialog submission without replacing conversion con
     assert.equal(requests[0].source, 'partner');
     assert.equal(events.length, 1);
     assert.equal(events[0].name, 'business_consult_submit_success');
-    assert.equal(events[0].source, '内容正文-商务咨询');
+    assert.equal(events[0].source, entryLabel);
     assert.equal(events[0].crm_visitor_id, requests[0].visitor_id);
   }
 });
@@ -457,23 +460,99 @@ test('native contact navigation prefers landing source and retains bounded CTA d
   const env = browser();
   const script = env.load('src/lib/contactLinkAttribution.ts').contactLinkAttributionScript;
   vm.runInContext(script, env.context);
-  for (const query of ['', '?source=partner&utm_source=google&utm_medium=cpc&email=private']) {
+  assert.equal(env.listenerOptions.pointerdown, true);
+  assert.equal(env.listenerOptions.click, true);
+  const anchor = new env.Element('/contact?source=customers&utm_source=stale#form');
+  for (const [query, expectedSource, expectedUtm] of [
+    ['', 'customers', null],
+    ['?source=partner&utm_source=google&utm_medium=cpc&email=private', 'partner', 'google'],
+    ['', 'customers', null],
+    ['?source=second-partner', 'second-partner', null],
+    ['?source=', 'customers', null],
+    ['?source=partner', 'partner', null],
+    ['?source=%20%20', 'customers', null]
+  ]) {
     env.window.location = new URL(`https://fastgpt.cn/customers${query}`);
-    const anchor = new env.Element('/contact?source=customers&utm_source=stale#form');
-    for (const event of ['pointerdown', 'click']) env.listeners[event]({ target: anchor });
-    const url = new URL(anchor.href, env.window.location.origin);
-    assert.equal(url.searchParams.get('source'), query ? 'partner' : 'customers');
-    assert.equal(url.searchParams.get('utm_source'), query ? 'google' : null);
-    assert.equal(url.searchParams.has('email'), false);
-    assert.equal(url.hash, '#form');
+    for (const event of ['pointerdown', 'click']) {
+      env.listeners[event]({ target: anchor });
+      const url = new URL(anchor.href, env.window.location.origin);
+      assert.equal(url.searchParams.get('source'), expectedSource);
+      assert.equal(url.searchParams.get('utm_source'), expectedUtm);
+      assert.equal(url.searchParams.has('email'), false);
+      assert.equal(url.hash, '#form');
+      assert.equal(
+        url.searchParams.get('source'),
+        env.load('src/lib/leadAttribution.ts').getSubmissionSource('customers')
+      );
+    }
   }
   env.window.location = new URL('https://fastgpt.cn/customers');
-  const anchor = new env.Element(`/contact?source=${'x'.repeat(200)}`);
+  anchor.setAttribute('href', `/contact?source=${'x'.repeat(200)}`);
   env.listeners.click({ target: anchor });
   assert.equal(
     new URL(anchor.href, env.window.location.origin).searchParams.get('source').length,
     128
   );
+});
+
+test('reused contact links retain empty defaults and accept component href updates', () => {
+  for (const initialHref of [
+    '/contact#form',
+    '/contact?source=#form',
+    '/contact?source=%20#form'
+  ]) {
+    const env = browser();
+    vm.runInContext(
+      env.load('src/lib/contactLinkAttribution.ts').contactLinkAttributionScript,
+      env.context
+    );
+    const anchor = new env.Element(initialHref);
+    for (const [query, expected] of [
+      ['?source=partner', 'partner'],
+      ['', null],
+      ['?source=another-partner', 'another-partner'],
+      ['?source=%20', null]
+    ]) {
+      env.window.location = new URL(`https://fastgpt.cn/customers${query}`);
+      env.listeners.click({ target: anchor });
+      const url = new URL(anchor.href, env.window.location.origin);
+      assert.equal(url.searchParams.get('source'), expected);
+      assert.equal(url.hash, '#form');
+    }
+    for (const [href, expected] of [
+      ['/contact?source=campaign#updated', 'campaign'],
+      ['/contact#updated', null]
+    ]) {
+      anchor.setAttribute('href', href);
+      env.listeners.pointerdown({ target: anchor });
+      env.listeners.click({ target: anchor });
+      const url = new URL(anchor.href, env.window.location.origin);
+      assert.equal(url.searchParams.get('source'), expected);
+      assert.equal(url.hash, '#updated');
+    }
+  }
+});
+
+test('contact URL helpers forward only bounded attribution to localized destinations', () => {
+  const env = browser();
+  const { getContactUrl } = env.load('src/lib/contact.ts');
+  const query = `?source=${'x'.repeat(200)}&utm_source=google&click_id=abc123&email=private`;
+  for (const [locale, expectedPath] of [
+    ['zh', '/contact'],
+    ['zh-hant', '/zh-hant/contact'],
+    ['ja', '/en/contact']
+  ]) {
+    const url = new URL(getContactUrl(locale, query), env.window.location.origin);
+    assert.equal(url.pathname, expectedPath);
+    assert.deepEqual(
+      [...url.searchParams],
+      [
+        ['source', 'x'.repeat(128)],
+        ['utm_source', 'google'],
+        ['click_id', 'abc123']
+      ]
+    );
+  }
 });
 
 test('consultation dialog intercepts normal clicks and preserves native link gestures', () => {

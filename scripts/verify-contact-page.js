@@ -51,43 +51,6 @@ async function verifyContactQueryFlow() {
   const { appendForwardedAttributionQuery, getForwardedAttributionQuery } = await import(
     pathToFileURL(path.join(root, 'src/lib/attribution/query.mjs')).href
   );
-  const contactSource = fs.readFileSync(path.join(root, 'src/lib/contact.ts'), 'utf8');
-  const formSource = fs.readFileSync(
-    path.join(root, 'src/components/contact/ContactForm.tsx'),
-    'utf8'
-  );
-  const attributionSource = fs.readFileSync(path.join(root, 'src/lib/leadAttribution.ts'), 'utf8');
-  const contactLinkScriptSource = fs.readFileSync(
-    path.join(root, 'src/lib/contactLinkAttribution.ts'),
-    'utf8'
-  );
-
-  assert.match(
-    contactSource,
-    /appendForwardedAttributionQuery\(path, search\)/,
-    'Contact URL helper must use the shared query-forwarding helper'
-  );
-  assert.match(
-    contactLinkScriptSource,
-    /document\.addEventListener\('pointerdown'/,
-    'Contact links must preserve attribution before React hydration'
-  );
-  assert.match(
-    formSource,
-    /const resolvedSubmissionSource\s*=\s*getSubmissionSource\(submissionSource\)/,
-    'Contact submission must prefer the landing source over its surface default'
-  );
-  assert.match(
-    formSource,
-    /source:\s*resolvedSubmissionSource/,
-    'Contact submission must send the resolved source'
-  );
-  assert.match(
-    attributionSource,
-    /new URLSearchParams\(window\.location\.search\)\.get\('source'\)/,
-    'Submission source must come from the current landing URL'
-  );
-
   const landingQuery =
     'source=partner&utm_source=google&utm_campaign=launch&click_id=abc123&email=drop-me';
   assert.equal(

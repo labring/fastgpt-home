@@ -18,7 +18,7 @@ const defaultLocale = getDefaultLocale(variant);
 const domain = variant === 'cn' ? 'cn' : 'io';
 const maxHeroBytes = 300 * 1024;
 const maxSolutionBytes = 250 * 1024;
-// Keep a 1 KiB tolerance for deterministic-but-version-sensitive gzip output.
+// Compare this budget with same-environment measurements of the base and release revisions.
 const maxInitialJavaScriptGzipBytes = 261 * 1024;
 const englishTitle = 'FastGPT - Enterprise AI Agent Builder & Open Source RAG';
 const chineseDescription =

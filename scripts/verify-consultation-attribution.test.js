@@ -44,15 +44,18 @@ function browser(cookieEnabled = false, env = {}) {
   class Element {
     constructor(href) {
       this.href = href;
+      this.attributes = new Map([['href', href]]);
     }
     closest() {
       return this;
     }
-    getAttribute() {
-      return this.href;
+    getAttribute(name) {
+      return this.attributes.get(name) ?? null;
     }
-    setAttribute(_name, value) {
-      this.href = value;
+    setAttribute(name, value) {
+      const normalized = String(value);
+      this.attributes.set(name, normalized);
+      if (name === 'href') this.href = normalized;
     }
   }
   const context = vm.createContext({
@@ -183,6 +186,100 @@ function renderForm(env, props = {}) {
   return { render, submit: () => render().props.onSubmit({ preventDefault() {} }) };
 }
 
+function flushBackgroundWork() {
+  return new Promise((resolve) => setImmediate(resolve));
+}
+
+function findElement(node, type) {
+  if (!node || typeof node !== 'object') return undefined;
+  if (node.type === type) return node;
+  for (const child of [node.props?.children].flat(Infinity)) {
+    const match = findElement(child, type);
+    if (match) return match;
+  }
+}
+
+test('consultation snapshot props flow from dialog through content to ContactForm', () => {
+  const capture = {
+    source: '案例详情-顶部商务咨询',
+    entryPageUrl: '案例详情-顶部商务咨询｜https://fastgpt.cn/customers'
+  };
+  const dialogEnv = browser();
+  const dialogState = [];
+  let dialogCursor = 0;
+  const ContentStub = () => null;
+  dialogEnv.mocks.react = {
+    lazy: () => ContentStub,
+    Suspense: 'Suspense',
+    useEffect: (callback) => callback(),
+    useRef: (value) => ({ current: value }),
+    useState: (initial) => {
+      const index = dialogCursor++;
+      if (!(index in dialogState)) dialogState[index] = initial;
+      return [dialogState[index], (next) => {
+        dialogState[index] = typeof next === 'function' ? next(dialogState[index]) : next;
+      }];
+    }
+  };
+  dialogEnv.mocks['next/navigation'] = {
+    useParams: () => ({}),
+    usePathname: () => '/customers'
+  };
+  const Dialog = dialogEnv.load('src/components/consultation/ConsultationDialog.tsx').default;
+  Dialog();
+  const trigger = new dialogEnv.Element('/contact?source=customers');
+  trigger.dataset = { rybbitPropSource: 'customers_hero' };
+  trigger.closest = () => trigger;
+  dialogEnv.listeners.click({
+    target: trigger,
+    button: 0,
+    preventDefault() {},
+    defaultPrevented: false
+  });
+  dialogCursor = 0;
+  const contentElement = findElement(Dialog(), ContentStub);
+  assert.equal(contentElement?.props.rybbitConsultCapture?.source, capture.source);
+  assert.equal(contentElement?.props.rybbitConsultCapture?.entryPageUrl, capture.entryPageUrl);
+
+  const contentEnv = browser();
+  const ContactFormStub = () => null;
+  const copy = { badge: '', title: '', description: '', benefits: [], footer: '' };
+  let contentStateCursor = 0;
+  contentEnv.mocks.react = {
+    useEffect: () => {},
+    useState: () => [contentStateCursor++ === 0 ? false : copy, () => {}]
+  };
+  contentEnv.mocks['@/components/contact/ContactForm'] = ContactFormStub;
+  contentEnv.mocks['@/components/contact/contactCopy'] = { getContactCopy: () => ({ close: '' }) };
+  contentEnv.mocks['@/lib/locales'] = {
+    localeDirections: { zh: 'ltr' },
+    normalizeLocale: (locale) => locale
+  };
+  contentEnv.mocks['@/components/ui/dialog'] = {
+    Dialog: 'Dialog',
+    DialogContent: 'DialogContent',
+    DialogDescription: 'DialogDescription',
+    DialogHeader: 'DialogHeader',
+    DialogTitle: 'DialogTitle'
+  };
+  contentEnv.mocks['lucide-react'] = {
+    Clock3: 'Clock3', Network: 'Network', ShieldCheck: 'ShieldCheck', Sparkles: 'Sparkles'
+  };
+  const Content = contentEnv.load('src/components/consultation/ConsultationDialogContent.tsx').default;
+  const formElement = findElement(
+    Content({
+      locale: 'zh',
+      submissionSource: 'customers',
+      rybbitConsultCapture: capture,
+      triggerRef: { current: null },
+      onClose() {}
+    }),
+    ContactFormStub
+  );
+  assert.equal(formElement?.props.rybbitConsultCapture?.source, capture.source);
+  assert.equal(formElement?.props.rybbitConsultCapture?.entryPageUrl, capture.entryPageUrl);
+});
+
 const sources = [
   'home_hero',
   'home_bottom',
@@ -295,6 +392,7 @@ test('landing sources survive dialog submission without replacing conversion con
       submissionSource: surfaceSource,
       rybbitConsultCapture: capture
     }).submit();
+    await flushBackgroundWork();
     assert.equal(requests.length, 1);
     assert.equal(requests[0].source, 'partner');
     assert.equal(events.length, 1);
@@ -352,6 +450,7 @@ test('independent forms keep their clicked context across overlapping submission
     forms.push(async () => {
       finish({ ok: true, json: async () => ({ submission_id: source }) });
       await pending;
+      await flushBackgroundWork();
       assert.equal(successes, 1);
       assert.equal(form.render().props.role, 'status');
       assert.equal(events.length, 1);
@@ -398,6 +497,7 @@ test('direct forms retain fallbacks and CRM success when analytics fail', async 
       }
     });
     await form.submit();
+    await flushBackgroundWork();
     assert.equal(successes, 1, scenario);
     assert.equal(form.render().props.role, 'status', scenario);
     assert.equal(events.length, ['missing', 'empty'].includes(scenario) ? 1 : 0, scenario);
@@ -407,6 +507,51 @@ test('direct forms retain fallbacks and CRM success when analytics fail', async 
       assert.equal(events[0].entry_page_url, 'https://fastgpt.cn/contact');
     }
   }
+});
+
+test('CRM success does not wait for a pending analytics response body', async () => {
+  const env = browser(false, { NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test' });
+  env.mocks['@/lib/fetchWithTimeout'] = {
+    fetchWithTimeout: async () => ({
+      ok: true,
+      json: () => new Promise(() => {})
+    })
+  };
+  let successes = 0;
+  const form = renderForm(env, {
+    onSuccess: () => {
+      successes++;
+    }
+  });
+
+  const result = await Promise.race([
+    form.submit().then(() => 'submitted'),
+    new Promise((resolve) => setTimeout(() => resolve('timed-out'), 50))
+  ]);
+
+  assert.equal(result, 'submitted');
+  assert.equal(successes, 1);
+  assert.equal(form.render().props.role, 'status');
+});
+
+test('CRM error does not wait for a pending response body before allowing retry', async () => {
+  const env = browser(false, { NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.test' });
+  env.mocks['@/lib/fetchWithTimeout'] = {
+    fetchWithTimeout: async () => ({
+      ok: false,
+      status: 500,
+      json: () => new Promise(() => {})
+    })
+  };
+  const form = renderForm(env);
+
+  const result = await Promise.race([
+    form.submit().then(() => 'settled'),
+    new Promise((resolve) => setTimeout(() => resolve('timed-out'), 50))
+  ]);
+
+  assert.equal(result, 'settled');
+  assert.equal(form.render().type, 'form');
 });
 
 for (const cookieEnabled of [false, true]) {

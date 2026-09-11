@@ -39,12 +39,21 @@ export const contactLinkAttributionScript = `
       return;
     }
 
+    // Keep the source authored in the link separate from source values this
+    // handler has forwarded. Re-read it when React replaces the href in place.
+    var configuredSource = anchor.getAttribute('data-contact-configured-source');
+    var lastGeneratedHref = anchor.getAttribute('data-contact-generated-href');
+    if (configuredSource === null || rawHref !== lastGeneratedHref) {
+      configuredSource = target.searchParams.get('source') || '';
+      anchor.setAttribute('data-contact-configured-source', configuredSource);
+    }
+
     var incoming = new URLSearchParams(window.location.search);
     var forwarded = new URLSearchParams();
     keys.forEach(function(key) {
       // The destination source describes this consultation, not acquisition.
       var value = key === 'source'
-        ? (target.searchParams.get(key) || incoming.get(key))
+        ? (configuredSource || incoming.get(key))
         : incoming.get(key);
       var maxLength = valueCaps[key];
       if (value && maxLength) {
@@ -54,7 +63,9 @@ export const contactLinkAttributionScript = `
     });
 
     target.search = forwarded.toString() ? '?' + forwarded.toString() : '';
-    anchor.setAttribute('href', target.pathname + target.search + target.hash);
+    var generatedHref = target.pathname + target.search + target.hash;
+    anchor.setAttribute('href', generatedHref);
+    anchor.setAttribute('data-contact-generated-href', generatedHref);
   }
 
   document.addEventListener('pointerdown', updateContactHref, true);

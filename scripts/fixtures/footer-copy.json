@@ -1,0 +1,1010 @@
+{
+  "ar.json": {
+    "copy": {
+      "tagline": "محرك إنتاجية AI للمؤسسات",
+      "columns": {
+        "service": {
+          "title": "الخدمة",
+          "items": {
+            "cloud": "السحابة",
+            "private": "استضافة ذاتية",
+            "community": "المجتمع"
+          }
+        },
+        "links": {
+          "title": "روابط",
+          "items": {
+            "docs": "الوثائق الرسمية",
+            "guide": "الأدلة",
+            "faq": "الأسئلة الشائعة",
+            "learning": "مركز التعلم",
+            "cases": "دراسات الحالة",
+            "tech": "المركز التقني"
+          }
+        },
+        "partner": {
+          "title": "الشركاء"
+        },
+        "more": {
+          "title": "المزيد",
+          "email": "البريد: business@fastgpt.io",
+          "phone": "الهاتف: 4006992336",
+          "lanqiao": "دورة Lanqiao × FastGPT",
+          "book": "كتاب FastGPT الرسمي"
+        }
+      },
+      "qr": {
+        "wechat": "WeChat الرسمي",
+        "feishu": "مجتمع Feishu",
+        "group": "مجموعة WeChat"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "محرك إنتاجية AI للمؤسسات",
+      "الخدمة",
+      "السحابة",
+      "استضافة ذاتية",
+      "المجتمع",
+      "روابط",
+      "الوثائق الرسمية",
+      "الأدلة",
+      "مركز التعلم",
+      "دراسات الحالة",
+      "الأسئلة الشائعة",
+      "المركز التقني",
+      "الشركاء",
+      "Sealos",
+      "AI Proxy",
+      "المزيد",
+      "البريد: business@fastgpt.io",
+      "الهاتف: 4006992336",
+      "دورة Lanqiao × FastGPT",
+      "كتاب FastGPT الرسمي",
+      "WeChat الرسمي",
+      "مجتمع Feishu",
+      "مجموعة WeChat",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"WeChat الرسمي\"",
+      "alt=\"مجتمع Feishu\"",
+      "alt=\"مجموعة WeChat\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "en.json": {
+    "copy": {
+      "tagline": "Enterprise AI Productivity Engine",
+      "columns": {
+        "service": {
+          "title": "Service",
+          "items": {
+            "cloud": "Cloud",
+            "private": "Self-Hosted",
+            "community": "Community"
+          }
+        },
+        "links": {
+          "title": "Links",
+          "items": {
+            "docs": "Official Docs",
+            "guide": "Guides",
+            "faq": "FAQ",
+            "learning": "Learning Center",
+            "cases": "Case Studies",
+            "tech": "Technical Center"
+          }
+        },
+        "partner": {
+          "title": "Partners"
+        },
+        "more": {
+          "title": "More",
+          "email": "Email: business@fastgpt.io",
+          "phone": "Phone: 4006992336",
+          "lanqiao": "Lanqiao × FastGPT Course",
+          "book": "FastGPT Official Book (Paperback)"
+        }
+      },
+      "qr": {
+        "wechat": "Official WeChat",
+        "feishu": "Feishu Community",
+        "group": "WeChat Group"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "Enterprise AI Productivity Engine",
+      "Service",
+      "Cloud",
+      "Self-Hosted",
+      "Community",
+      "Links",
+      "Official Docs",
+      "Guides",
+      "Learning Center",
+      "Case Studies",
+      "FAQ",
+      "Technical Center",
+      "Partners",
+      "Sealos",
+      "AI Proxy",
+      "More",
+      "Email: business@fastgpt.io",
+      "Phone: 4006992336",
+      "Lanqiao × FastGPT Course",
+      "FastGPT Official Book (Paperback)",
+      "Official WeChat",
+      "Feishu Community",
+      "WeChat Group",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"Official WeChat\"",
+      "alt=\"Feishu Community\"",
+      "alt=\"WeChat Group\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "id.json": {
+    "copy": {
+      "tagline": "Mesin Produktivitas AI untuk Perusahaan",
+      "columns": {
+        "service": {
+          "title": "Layanan",
+          "items": {
+            "cloud": "Cloud",
+            "private": "Deploy Mandiri",
+            "community": "Komunitas"
+          }
+        },
+        "links": {
+          "title": "Tautan",
+          "items": {
+            "docs": "Dokumentasi Resmi",
+            "guide": "Panduan",
+            "faq": "FAQ",
+            "learning": "Pusat Pembelajaran",
+            "cases": "Pusat Studi Kasus",
+            "tech": "Pusat Teknis"
+          }
+        },
+        "partner": {
+          "title": "Partner"
+        },
+        "more": {
+          "title": "Lainnya",
+          "email": "Email: business@fastgpt.io",
+          "phone": "Telepon: 4006992336",
+          "lanqiao": "Kursus Lanqiao × FastGPT",
+          "book": "Buku Resmi FastGPT"
+        }
+      },
+      "qr": {
+        "wechat": "Official WeChat",
+        "feishu": "Feishu Community",
+        "group": "WeChat Group"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "Mesin Produktivitas AI untuk Perusahaan",
+      "Layanan",
+      "Cloud",
+      "Deploy Mandiri",
+      "Komunitas",
+      "Tautan",
+      "Dokumentasi Resmi",
+      "Panduan",
+      "Pusat Pembelajaran",
+      "Pusat Studi Kasus",
+      "FAQ",
+      "Pusat Teknis",
+      "Partner",
+      "Sealos",
+      "AI Proxy",
+      "Lainnya",
+      "Email: business@fastgpt.io",
+      "Telepon: 4006992336",
+      "Kursus Lanqiao × FastGPT",
+      "Buku Resmi FastGPT",
+      "Official WeChat",
+      "Feishu Community",
+      "WeChat Group",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"Official WeChat\"",
+      "alt=\"Feishu Community\"",
+      "alt=\"WeChat Group\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "ja.json": {
+    "copy": {
+      "tagline": "エンタープライズAI生産性エンジン",
+      "columns": {
+        "service": {
+          "title": "サービス",
+          "items": {
+            "cloud": "クラウド",
+            "private": "オンプレ",
+            "community": "コミュニティ版"
+          }
+        },
+        "links": {
+          "title": "リンク",
+          "items": {
+            "docs": "公式ドキュメント",
+            "guide": "ガイド",
+            "faq": "よくある質問",
+            "learning": "ラーニングセンター",
+            "cases": "導入事例",
+            "tech": "テクニカルセンター"
+          }
+        },
+        "partner": {
+          "title": "パートナー"
+        },
+        "more": {
+          "title": "詳細",
+          "email": "メール: business@fastgpt.io",
+          "phone": "電話：4006992336",
+          "lanqiao": "蓝桥云课 × FastGPTコース",
+          "book": "FastGPT公式書籍（紙書）"
+        }
+      },
+      "qr": {
+        "wechat": "公式WeChat",
+        "feishu": "Feishuコミュニティ",
+        "group": "WeChatグループ"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "エンタープライズAI生産性エンジン",
+      "サービス",
+      "クラウド",
+      "オンプレ",
+      "コミュニティ版",
+      "リンク",
+      "公式ドキュメント",
+      "ガイド",
+      "ラーニングセンター",
+      "導入事例",
+      "よくある質問",
+      "テクニカルセンター",
+      "パートナー",
+      "Sealos",
+      "AI Proxy",
+      "詳細",
+      "メール: business@fastgpt.io",
+      "電話：4006992336",
+      "蓝桥云课 × FastGPTコース",
+      "FastGPT公式書籍（紙書）",
+      "公式WeChat",
+      "Feishuコミュニティ",
+      "WeChatグループ",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"公式WeChat\"",
+      "alt=\"Feishuコミュニティ\"",
+      "alt=\"WeChatグループ\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "ms.json": {
+    "copy": {
+      "tagline": "Enjin Produktiviti AI untuk Perusahaan",
+      "columns": {
+        "service": {
+          "title": "Perkhidmatan",
+          "items": {
+            "cloud": "Cloud",
+            "private": "Hos Sendiri",
+            "community": "Komuniti"
+          }
+        },
+        "links": {
+          "title": "Pautan",
+          "items": {
+            "docs": "Dokumentasi Rasmi",
+            "guide": "Panduan",
+            "faq": "FAQ",
+            "learning": "Pusat Pembelajaran",
+            "cases": "Pusat Kajian Kes",
+            "tech": "Pusat Teknikal"
+          }
+        },
+        "partner": {
+          "title": "Rakan Kongsi"
+        },
+        "more": {
+          "title": "Lagi",
+          "email": "E-mel: business@fastgpt.io",
+          "phone": "Telefon: 4006992336",
+          "lanqiao": "Kursus Lanqiao × FastGPT",
+          "book": "Buku Rasmi FastGPT"
+        }
+      },
+      "qr": {
+        "wechat": "Official WeChat",
+        "feishu": "Feishu Community",
+        "group": "WeChat Group"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "Enjin Produktiviti AI untuk Perusahaan",
+      "Perkhidmatan",
+      "Cloud",
+      "Hos Sendiri",
+      "Komuniti",
+      "Pautan",
+      "Dokumentasi Rasmi",
+      "Panduan",
+      "Pusat Pembelajaran",
+      "Pusat Kajian Kes",
+      "FAQ",
+      "Pusat Teknikal",
+      "Rakan Kongsi",
+      "Sealos",
+      "AI Proxy",
+      "Lagi",
+      "E-mel: business@fastgpt.io",
+      "Telefon: 4006992336",
+      "Kursus Lanqiao × FastGPT",
+      "Buku Rasmi FastGPT",
+      "Official WeChat",
+      "Feishu Community",
+      "WeChat Group",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"Official WeChat\"",
+      "alt=\"Feishu Community\"",
+      "alt=\"WeChat Group\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "th.json": {
+    "copy": {
+      "tagline": "เครื่องยนต์เพิ่มผลิตภาพ AI สำหรับองค์กร",
+      "columns": {
+        "service": {
+          "title": "บริการ",
+          "items": {
+            "cloud": "คลาวด์",
+            "private": "ติดตั้งเอง",
+            "community": "ชุมชน"
+          }
+        },
+        "links": {
+          "title": "ลิงก์",
+          "items": {
+            "docs": "เอกสารทางการ",
+            "guide": "คู่มือ",
+            "faq": "คำถามที่พบบ่อย",
+            "learning": "ศูนย์การเรียนรู้",
+            "cases": "ศูนย์กรณีศึกษา",
+            "tech": "ศูนย์เทคนิค"
+          }
+        },
+        "partner": {
+          "title": "พาร์ตเนอร์"
+        },
+        "more": {
+          "title": "เพิ่มเติม",
+          "email": "อีเมล: business@fastgpt.io",
+          "phone": "โทรศัพท์: 4006992336",
+          "lanqiao": "คอร์ส Lanqiao × FastGPT",
+          "book": "หนังสือทางการ FastGPT"
+        }
+      },
+      "qr": {
+        "wechat": "WeChat ทางการ",
+        "feishu": "ชุมชน Feishu",
+        "group": "กลุ่ม WeChat"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "เครื่องยนต์เพิ่มผลิตภาพ AI สำหรับองค์กร",
+      "บริการ",
+      "คลาวด์",
+      "ติดตั้งเอง",
+      "ชุมชน",
+      "ลิงก์",
+      "เอกสารทางการ",
+      "คู่มือ",
+      "ศูนย์การเรียนรู้",
+      "ศูนย์กรณีศึกษา",
+      "คำถามที่พบบ่อย",
+      "ศูนย์เทคนิค",
+      "พาร์ตเนอร์",
+      "Sealos",
+      "AI Proxy",
+      "เพิ่มเติม",
+      "อีเมล: business@fastgpt.io",
+      "โทรศัพท์: 4006992336",
+      "คอร์ส Lanqiao × FastGPT",
+      "หนังสือทางการ FastGPT",
+      "WeChat ทางการ",
+      "ชุมชน Feishu",
+      "กลุ่ม WeChat",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"WeChat ทางการ\"",
+      "alt=\"ชุมชน Feishu\"",
+      "alt=\"กลุ่ม WeChat\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "vi.json": {
+    "copy": {
+      "tagline": "Động cơ năng suất AI cho doanh nghiệp",
+      "columns": {
+        "service": {
+          "title": "Dịch vụ",
+          "items": {
+            "cloud": "Cloud",
+            "private": "Tự triển khai",
+            "community": "Cộng đồng"
+          }
+        },
+        "links": {
+          "title": "Liên kết",
+          "items": {
+            "docs": "Tài liệu chính thức",
+            "guide": "Hướng dẫn",
+            "faq": "FAQ",
+            "learning": "Trung tâm học tập",
+            "cases": "Trung tâm case study",
+            "tech": "Trung tâm kỹ thuật"
+          }
+        },
+        "partner": {
+          "title": "Đối tác"
+        },
+        "more": {
+          "title": "Thêm",
+          "email": "Email: business@fastgpt.io",
+          "phone": "Điện thoại: 4006992336",
+          "lanqiao": "Khóa học Lanqiao × FastGPT",
+          "book": "Sách chính thức FastGPT"
+        }
+      },
+      "qr": {
+        "wechat": "WeChat chính thức",
+        "feishu": "Cộng đồng Feishu",
+        "group": "Nhóm WeChat"
+      },
+      "copyright": "© {year} labring. All rights reserved."
+    },
+    "text": [
+      "FastGPT",
+      "Động cơ năng suất AI cho doanh nghiệp",
+      "Dịch vụ",
+      "Cloud",
+      "Tự triển khai",
+      "Cộng đồng",
+      "Liên kết",
+      "Tài liệu chính thức",
+      "Hướng dẫn",
+      "Trung tâm học tập",
+      "Trung tâm case study",
+      "FAQ",
+      "Trung tâm kỹ thuật",
+      "Đối tác",
+      "Sealos",
+      "AI Proxy",
+      "Thêm",
+      "Email: business@fastgpt.io",
+      "Điện thoại: 4006992336",
+      "Khóa học Lanqiao × FastGPT",
+      "Sách chính thức FastGPT",
+      "WeChat chính thức",
+      "Cộng đồng Feishu",
+      "Nhóm WeChat",
+      "© 2026 labring. All rights reserved.",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"WeChat chính thức\"",
+      "alt=\"Cộng đồng Feishu\"",
+      "alt=\"Nhóm WeChat\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/en/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "zh-hant.json": {
+    "copy": {
+      "tagline": "企業級AI生產力引擎",
+      "columns": {
+        "service": {
+          "title": "服務",
+          "items": {
+            "cloud": "雲服務",
+            "private": "私有化",
+            "community": "社區版"
+          }
+        },
+        "links": {
+          "title": "連結",
+          "items": {
+            "docs": "官方文檔",
+            "guide": "指南",
+            "faq": "常見問題",
+            "learning": "學習中心",
+            "cases": "案例中心",
+            "tech": "技術中心"
+          }
+        },
+        "partner": {
+          "title": "生態夥伴"
+        },
+        "more": {
+          "title": "更多信息",
+          "email": "郵箱：business@fastgpt.io",
+          "phone": "電話：4006992336",
+          "lanqiao": "藍橋雲課 x FastGPT教程",
+          "book": "FastGPT官方教材（紙質書）"
+        }
+      },
+      "qr": {
+        "wechat": "官方公眾號（微信）",
+        "feishu": "官方社群（飛書）",
+        "group": "官方社群（微信）"
+      },
+      "copyright": "© {year} 广州环际云计算有限公司 版权所有"
+    },
+    "text": [
+      "FastGPT",
+      "企業級AI生產力引擎",
+      "服務",
+      "雲服務",
+      "私有化",
+      "社區版",
+      "連結",
+      "官方文檔",
+      "指南",
+      "學習中心",
+      "案例中心",
+      "常見問題",
+      "技術中心",
+      "生態夥伴",
+      "Sealos",
+      "AI Proxy",
+      "更多信息",
+      "郵箱：business@fastgpt.io",
+      "電話：4006992336",
+      "藍橋雲課 x FastGPT教程",
+      "FastGPT官方教材（紙質書）",
+      "官方公眾號（微信）",
+      "官方社群（飛書）",
+      "官方社群（微信）",
+      "© 2026 广州环际云计算有限公司 版权所有",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"官方公眾號（微信）\"",
+      "alt=\"官方社群（飛書）\"",
+      "alt=\"官方社群（微信）\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/zh-hant/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "https://fastgpt.cn/customers",
+      "/en/faq",
+      "/en/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  },
+  "zh.json": {
+    "copy": {
+      "tagline": "企业级AI生产力引擎",
+      "columns": {
+        "service": {
+          "title": "服务",
+          "items": {
+            "cloud": "云服务",
+            "private": "私有化",
+            "community": "社区版"
+          }
+        },
+        "links": {
+          "title": "链接",
+          "items": {
+            "docs": "官网文档",
+            "guide": "指南",
+            "faq": "常见问题",
+            "learning": "学习中心",
+            "cases": "案例中心",
+            "tech": "技术中心"
+          }
+        },
+        "partner": {
+          "title": "生态伙伴"
+        },
+        "more": {
+          "title": "更多信息",
+          "email": "邮箱：business@fastgpt.io",
+          "phone": "电话：4006992336",
+          "lanqiao": "蓝桥云课 x FastGPT教程",
+          "book": "FastGPT官方教材（纸质书）"
+        }
+      },
+      "qr": {
+        "wechat": "官方公众号（微信）",
+        "feishu": "官方社群（飞书）",
+        "group": "官方社群（微信）"
+      },
+      "copyright": "© {year} 广州环际云计算有限公司 版权所有"
+    },
+    "text": [
+      "FastGPT",
+      "企业级AI生产力引擎",
+      "服务",
+      "云服务",
+      "私有化",
+      "社区版",
+      "链接",
+      "官网文档",
+      "指南",
+      "学习中心",
+      "案例中心",
+      "常见问题",
+      "技术中心",
+      "生态伙伴",
+      "Sealos",
+      "AI Proxy",
+      "更多信息",
+      "邮箱：business@fastgpt.io",
+      "电话：4006992336",
+      "蓝桥云课 x FastGPT教程",
+      "FastGPT官方教材（纸质书）",
+      "官方公众号（微信）",
+      "官方社群（飞书）",
+      "官方社群（微信）",
+      "© 2026 广州环际云计算有限公司 版权所有",
+      "Police filing baseline",
+      "Registration baseline"
+    ],
+    "accessible": [
+      "aria-label=\"FastGPT\"",
+      "alt=\"官方公众号（微信）\"",
+      "alt=\"官方社群（飞书）\"",
+      "alt=\"官方社群（微信）\"",
+      "aria-label=\"抖音\"",
+      "alt=\"\"",
+      "aria-label=\"小红书\"",
+      "alt=\"\"",
+      "aria-label=\"B 站\"",
+      "alt=\"\"",
+      "aria-label=\"知乎\"",
+      "alt=\"\"",
+      "aria-label=\"GitHub\"",
+      "alt=\"\""
+    ],
+    "links": [
+      "https://cloud.fastgpt.io",
+      "/contact",
+      "https://github.com/labring/FastGPT",
+      "https://doc.fastgpt.io/docs/introduction",
+      "/guide",
+      "https://video.fastgpt.cn/videos",
+      "/customers",
+      "/faq",
+      "/tech-center",
+      "https://sealos.run/?s=%E9%A6%96%E9%A1%B5",
+      "https://sealos.run/products/aiproxy",
+      "mailto:business@fastgpt.io",
+      "tel:4006992336",
+      "https://www.lanqiao.cn/courses/6666",
+      "https://item.m.jd.com/product/10204687656446.html",
+      "https://github.com/labring/FastGPT",
+      "https://beian.mps.gov.cn/",
+      "https://beian.miit.gov.cn/",
+      "https://www.douyin.com/user/MS4wLjABAAAAO6DBKtrrM1zFyOZPcvKX06PmbJlLu7GyReqRY2toeRd3-_Q7Ih6s_jAgtEou_la7?previous_page=app_code_link",
+      "https://xhslink.com/m/4b1i3KO5KxC",
+      "https://b23.tv/bfSWLDX",
+      "https://www.zhihu.com/people/341ddd5c4e4a320bdf06ed50121d66df",
+      "https://github.com/labring/FastGPT"
+    ]
+  }
+}

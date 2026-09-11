@@ -2,7 +2,30 @@ import 'server-only';
 
 import type { Metadata } from 'next';
 import { faqContentLocaleCodes, getFaqRouteKey, resolveFaqLocale } from '@/faq';
-import { getLocaleHreflang, getOwnedFaqUrl } from '@/lib/siteRouting';
+import { getLocaleHreflang, getOwnedFaqUrl, isPreviewSite } from '@/lib/siteRouting';
+import { getDefaultLocalePath } from '@/lib/clientNavigation';
+import type { LanguageSwitchPaths } from '@/lib/languageNavigation';
+
+/** Project the same FAQ identity authority into interactive navigation URLs. */
+export function getFaqLanguageSwitchPaths(
+  contentId: string,
+  availableLocales: readonly string[]
+): LanguageSwitchPaths {
+  return Object.fromEntries(
+    availableLocales.flatMap((locale) => {
+      const routeKey = getFaqRouteKey(contentId, locale);
+      if (!routeKey) return [];
+      return [
+        [
+          locale,
+          isPreviewSite
+            ? getDefaultLocalePath(locale, `/faq/${encodeURIComponent(routeKey)}`)
+            : getOwnedFaqUrl(locale, routeKey)
+        ]
+      ];
+    })
+  );
+}
 
 /** Generate FAQ canonical and hreflang metadata from the FAQ identity authority. */
 export function getFaqAlternates(
@@ -36,8 +59,8 @@ export function getFaqAlternates(
   const englishRouteKey = contentId
     ? getFaqRouteKey(contentId, 'en')
     : publishedLocales.includes('en')
-      ? undefined
-      : null;
+    ? undefined
+    : null;
   if (contentId ? englishRouteKey : publishedLocales.includes('en')) {
     languages['x-default'] = getOwnedFaqUrl('en', englishRouteKey || undefined);
   }

@@ -111,11 +111,11 @@ export default async function TechCenterRoute({ params }: { params: RouteParams 
         categoryMeta={categoryMeta}
         totalEntries={localeEntries.length}
         languageSwitchPaths={Object.fromEntries(
-          techPublishedLocaleCodes.map((lang) => [
+          (page === 1 ? techPublishedLocaleCodes : [locale]).map((lang) => [
             lang,
             currentSiteVariant === 'preview'
-              ? getReviewLocalePath(lang, '/tech-center')
-              : getOwnedLocaleUrl(lang, '/tech-center')
+              ? getReviewLocalePath(lang, getTechCenterPagePath(page))
+              : getOwnedLocaleUrl(lang, getTechCenterPagePath(page))
           ])
         )}
         searchIndexPath={

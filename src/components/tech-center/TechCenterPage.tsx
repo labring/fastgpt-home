@@ -524,7 +524,9 @@ export default function TechCenterPage({
         links={links}
         t={navCta}
         locale={locale}
-        publishedLocales={techPublishedLocaleCodes}
+        publishedLocales={techPublishedLocaleCodes.filter(
+          (language) => languageSwitchPaths?.[language]
+        )}
         reviewLocalePaths={isPreviewSite}
         languageSwitchPaths={languageSwitchPaths}
       />

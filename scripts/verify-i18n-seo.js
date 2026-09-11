@@ -168,6 +168,49 @@ function verifyPage(route, locale, pathSuffix, languages) {
   );
 }
 
+// Compare server-rendered navigation with each page's published translation set.
+function verifyLanguageLinks() {
+  const routes = ['/', '/price', '/faq', `/faq/${faqId}`, '/contact', '/compare', '/compare/dify-vs-fastgpt'];
+  const guideSlug = guideRegistry[0].slug;
+  const contentLocales = variant === 'preview' ? ['zh', 'en'] : [defaultLocale];
+  for (const locale of contentLocales) {
+    const prefix = variant === 'preview' ? `/${locale}` : '';
+    routes.push(`${prefix}/guide`, `${prefix}/guide/${guideSlug}`, `${prefix}/tech-center`);
+    if (resolveHtmlPath(`${prefix}/tech-center/page/2`)) routes.push(`${prefix}/tech-center/page/2`);
+    const article = getTechIdentities(rootDir).find((entry) => entry.locale === locale);
+    if (article) routes.push(`${prefix}${article.canonicalPath}`);
+  }
+  if (variant !== 'cn') routes.push('/ja', '/zh-hant/contact');
+
+  for (const route of routes) {
+    const html = resolveHtml(route);
+    const alternates = getAlternates(html);
+    delete alternates['x-default'];
+    const anchors = getTags(html, 'a').filter((tag) => getAttribute(tag, 'data-language-switch'));
+    const actual = {};
+    for (const anchor of anchors) {
+      const language = getAttribute(anchor, 'hreflang');
+      const href = getAttribute(anchor, 'href');
+      assert(!href.includes('__fg_lang'), `${route}: static choice marker`);
+      let canonical = href;
+      if (variant === 'preview') {
+        assert(href.startsWith('/') && !href.startsWith('//'), `${route}: preview left its origin`);
+        const targetPath = new URL(href, 'https://preview.invalid').pathname;
+        assert(resolveHtmlPath(targetPath), `${route}: missing preview translation ${href}`);
+        const segments = targetPath.split('/');
+        if (Object.hasOwn(locales, segments[1])) segments.splice(1, 1);
+        const code = getAttribute(anchor, 'data-language-switch');
+        const prefix = code === 'en' || code === 'zh' ? '' : `/${code}`;
+        const pagePath = segments.join('/');
+        canonical = `${baseUrls[locales[code].owner]}${prefix}${pagePath === '/' ? (prefix ? '' : '/') : pagePath}`;
+      }
+      assert.equal(normalizeUrl(canonical), normalizeUrl(alternates[language]), `${route}: ${language} navigation differs from hreflang`);
+      actual[language] = canonical;
+    }
+    assert.deepEqual(Object.keys(actual).sort(), Object.keys(alternates).length > 1 ? Object.keys(alternates).sort() : [], `${route}: incomplete language navigation`);
+  }
+}
+
 function verifyRobotsFile() {
   const robots = fs.readFileSync(path.join(outDir, 'robots.txt'), 'utf8');
   assert(/User-Agent:\s*\*/i.test(robots), 'robots.txt must define a wildcard crawler rule');
@@ -352,7 +395,7 @@ function verifyContactExperience() {
   const defaultContactHtml = resolveHtml('/contact');
   assert.equal(
     defaultContactHtml.includes('aria-label="Switch language"'),
-    variant !== 'cn',
+    true,
     'Default Contact page has an unexpected language switcher state'
   );
 
@@ -421,6 +464,7 @@ function main() {
   verifyPublishedRoutes();
   verifyNotFoundFallback();
   verifyContactExperience();
+  verifyLanguageLinks();
 
   const rootLocale = defaultLocale === 'zh' ? 'zh-CN' : 'en';
   verifyPage('/', rootLocale, '', pageLanguages);

@@ -9,7 +9,9 @@ const root = path.resolve(__dirname, '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const footer = read('src/components/home/Footer.tsx');
 const columns = footer.slice(footer.indexOf('type ColumnLink'), footer.indexOf('function buildQrs'));
-const navigation = read('src/lib/clientNavigation.ts').replaceAll('export ', '');
+const navigation = read('src/lib/clientNavigation.ts')
+  .replace(/^import .*;\n/m, '')
+  .replaceAll('export ', '');
 const locales = read('src/lib/locales.ts')
   .replace(/^import .*;\n/m, '')
   .replaceAll('export ', '');

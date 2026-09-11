@@ -10,7 +10,7 @@ import {
 } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
-import { getFaqAlternates } from '@/lib/faqSeo';
+import { getFaqAlternates, getFaqLanguageSwitchPaths } from '@/lib/faqSeo';
 import { getRobotsPolicy, localeMap } from '@/lib/seo';
 import { normalizeFaqMetadata } from '@/lib/faqMetadata';
 import {
@@ -82,6 +82,10 @@ export default async function FAQDetailPage({
         t={dict.Home.navCta}
         locale={langName}
         publishedLocales={getFaqTranslationLocales(routeKey, faqLangName)}
+        languageSwitchPaths={getFaqLanguageSwitchPaths(
+          contentId,
+          getFaqTranslationLocales(routeKey, faqLangName)
+        )}
       />
 
       <main className="relative px-[16px] pb-[80px] md:px-[32px]">

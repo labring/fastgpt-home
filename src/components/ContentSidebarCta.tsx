@@ -76,6 +76,7 @@ export default function ContentSidebarCta({
         <div className="grid gap-3">
           <a
             href={contactUrl}
+            data-consultation-trigger="true"
             {...rybbitClickAttrs(
               RYBBIT_EVENTS.businessConsultClick,
               consultSource,

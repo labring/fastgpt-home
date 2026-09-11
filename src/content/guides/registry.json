@@ -1,59 +1,752 @@
 {
   "entries": [
     {
-      "slug": "saas-platform-enterprise-gaps", "group": "decision",
-      "zh": { "sourceName": "saas-platform-enterprise-gaps.zh.md", "sourceSha256": "b212d43dfb5bd24e1272835dae31fc0c788027f31b275f3c5824e0d9bf0ac976", "bodySha256": "e27465319f29b42999e0935d8c428837949a3758c08ff75139552c50e219f9fd", "h1": "SaaS智能体平台企业落地的四项书面核实选型清单", "metaTitle": "SaaS智能体平台企业落地选型：四项书面核实与落地验证指南", "metaDescription": "讲解企业采购SaaS智能体平台的落地选型方法，通过四项书面核实与落地步骤规避安全、定制、迁移三类落地风险，附相关规避框架与评估要点，可帮助企业填补选型信息差", "keywords": "SaaS 平台替代, 私有化 / 数据出域 / 迁移", "canonical": "https://fastgpt.cn/guide/saas-platform-enterprise-gaps", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/saas-platform-enterprise-gaps | en → https://fastgpt.io/guide/saas-platform-enterprise-gaps | x-default → https://fastgpt.io/guide/saas-platform-enterprise-gaps", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList（对比表不使用 FAQPage）", "sourceImageDirective": "无", "sourceInternalLinkLabels": ["私有化页", "迁移指南", "竞品对比页"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "saas-platform-enterprise-gaps.en.md", "sourceSha256": "f167982dd60d34bb20c1c712f75a997ec5625f73e4a0e277209928218e528642", "bodySha256": "27b84a5fcfd0de6ad55f6195557d8039615be1f9f875badf6ef4c2b2b82bb204", "h1": "Enterprise SaaS AI Agent Platform Selection Checklist", "metaTitle": "Enterprise SaaS AI Agent Platform Selection Checklist", "metaDescription": "A structured guide for CTOs and IT leaders evaluating SaaS AI agent platforms across compliance, customization, migration, deployment, and exit risks.", "keywords": "SaaS 平台替代, 私有化 / 数据出域 / 迁移", "canonical": "https://fastgpt.io/guide/saas-platform-enterprise-gaps", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/saas-platform-enterprise-gaps | en → https://fastgpt.io/guide/saas-platform-enterprise-gaps | x-default → https://fastgpt.io/guide/saas-platform-enterprise-gaps", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList（对比表不使用 FAQPage）", "sourceImageDirective": "无", "sourceInternalLinkLabels": ["私有化页", "迁移指南", "竞品对比页"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "saas-platform-enterprise-gaps",
+      "group": "decision",
+      "zh": {
+        "sourceName": "saas-platform-enterprise-gaps.zh.md",
+        "sourceSha256": "b212d43dfb5bd24e1272835dae31fc0c788027f31b275f3c5824e0d9bf0ac976",
+        "bodySha256": "e27465319f29b42999e0935d8c428837949a3758c08ff75139552c50e219f9fd",
+        "h1": "SaaS智能体平台企业落地的四项书面核实选型清单",
+        "metaTitle": "SaaS智能体平台企业落地选型：四项书面核实与落地验证指南",
+        "metaDescription": "讲解企业采购SaaS智能体平台的落地选型方法，通过四项书面核实与落地步骤规避安全、定制、迁移三类落地风险，附相关规避框架与评估要点，可帮助企业填补选型信息差",
+        "keywords": "SaaS 平台替代, 私有化 / 数据出域 / 迁移",
+        "canonical": "https://fastgpt.cn/guide/saas-platform-enterprise-gaps",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/saas-platform-enterprise-gaps | en → https://fastgpt.io/guide/saas-platform-enterprise-gaps | x-default → https://fastgpt.io/guide/saas-platform-enterprise-gaps",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList（对比表不使用 FAQPage）",
+        "sourceImageDirective": "无",
+        "sourceInternalLinkLabels": [
+          "私有化页",
+          "迁移指南",
+          "竞品对比页"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "saas-platform-enterprise-gaps.en.md",
+        "sourceSha256": "f167982dd60d34bb20c1c712f75a997ec5625f73e4a0e277209928218e528642",
+        "bodySha256": "27b84a5fcfd0de6ad55f6195557d8039615be1f9f875badf6ef4c2b2b82bb204",
+        "h1": "Enterprise SaaS AI Agent Platform Selection Checklist",
+        "metaTitle": "Enterprise SaaS AI Agent Platform Selection Checklist",
+        "metaDescription": "A structured guide for CTOs and IT leaders evaluating SaaS AI agent platforms across compliance, customization, migration, deployment, and exit risks.",
+        "keywords": "SaaS 平台替代, 私有化 / 数据出域 / 迁移",
+        "canonical": "https://fastgpt.io/guide/saas-platform-enterprise-gaps",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/saas-platform-enterprise-gaps | en → https://fastgpt.io/guide/saas-platform-enterprise-gaps | x-default → https://fastgpt.io/guide/saas-platform-enterprise-gaps",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList（对比表不使用 FAQPage）",
+        "sourceImageDirective": "无",
+        "sourceInternalLinkLabels": [
+          "私有化页",
+          "迁移指南",
+          "竞品对比页"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "self-build-three-year-tco", "group": "decision",
-      "zh": { "sourceName": "self-build-three-year-tco.zh.md", "sourceSha256": "e00cb57332acb7333c140a69708f8ae267704a0a2ccc0dbf64297ac43e9e26de", "bodySha256": "2b27f36b1878da91198ac2d662b57e69b8cdbd999273aac9055a1390cba5535c", "h1": "自建AI知识库三年总成本：四层拆解与同口径比价方法", "metaTitle": "自建AI知识库三年总成本拆解与同口径选型指南", "metaDescription": "详解企业自建AI知识库的四层核心成本与六项易漏隐性成本，提供统一口径对比自研与采购方案的方法与选型验证步骤，助力精准控制全周期预算，避免隐性成本吞噬整体预算", "keywords": "自建成本核算, 平台工程 / 运维 / 模型消耗", "canonical": "https://fastgpt.cn/guide/self-build-three-year-tco", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/self-build-three-year-tco | en → https://fastgpt.io/guide/self-build-three-year-tco | x-default → https://fastgpt.io/guide/self-build-three-year-tco", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "", "sourceInternalLinkLabels": ["定价页", "ROI 说明", "POC 指南"], "assetPolicy": { "status": "source-exception" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "self-build-three-year-tco.en.md", "sourceSha256": "4a68286b2d356ee2741dfc9305b0a920fb62676a7e95abc5d7a3f0080b3afcca", "bodySha256": "0fa953b212dd9a7afb981e59aec5f510d862cc51a9a8e4337dba83673f8a4d70", "h1": "3-Year Total Cost of Ownership for Self-Hosted Enterprise AI Knowledge Bases", "metaTitle": "3-Year Total Cost of Ownership for Self-Hosted Enterprise AI", "metaDescription": "A three-year TCO framework for comparing self-hosted and purchased enterprise AI knowledge bases across infrastructure, operations, security, and support.", "keywords": "自建成本核算, 平台工程 / 运维 / 模型消耗", "canonical": "https://fastgpt.io/guide/self-build-three-year-tco", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/self-build-three-year-tco | en → https://fastgpt.io/guide/self-build-three-year-tco | x-default → https://fastgpt.io/guide/self-build-three-year-tco", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "签发: 口径确认（**不阻塞发布**）—— 内容依据客户 KB 撰写，发布前请客户核对：①版本与能力边界 ②商业口径 ③点名与措辞。**如有不符，客户可直接不上该页或指出后我方改**，不需要走签署流程。", "sourceInternalLinkLabels": ["定价页", "ROI 说明", "POC 指南"], "assetPolicy": { "status": "source-exception" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "self-build-three-year-tco",
+      "group": "decision",
+      "zh": {
+        "sourceName": "self-build-three-year-tco.zh.md",
+        "sourceSha256": "e00cb57332acb7333c140a69708f8ae267704a0a2ccc0dbf64297ac43e9e26de",
+        "bodySha256": "2b27f36b1878da91198ac2d662b57e69b8cdbd999273aac9055a1390cba5535c",
+        "h1": "自建AI知识库三年总成本：四层拆解与同口径比价方法",
+        "metaTitle": "自建AI知识库三年总成本拆解与同口径选型指南",
+        "metaDescription": "详解企业自建AI知识库的四层核心成本与六项易漏隐性成本，提供统一口径对比自研与采购方案的方法与选型验证步骤，助力精准控制全周期预算，避免隐性成本吞噬整体预算",
+        "keywords": "自建成本核算, 平台工程 / 运维 / 模型消耗",
+        "canonical": "https://fastgpt.cn/guide/self-build-three-year-tco",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/self-build-three-year-tco | en → https://fastgpt.io/guide/self-build-three-year-tco | x-default → https://fastgpt.io/guide/self-build-three-year-tco",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "",
+        "sourceInternalLinkLabels": [
+          "定价页",
+          "ROI 说明",
+          "POC 指南"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "self-build-three-year-tco.en.md",
+        "sourceSha256": "4a68286b2d356ee2741dfc9305b0a920fb62676a7e95abc5d7a3f0080b3afcca",
+        "bodySha256": "0fa953b212dd9a7afb981e59aec5f510d862cc51a9a8e4337dba83673f8a4d70",
+        "h1": "3-Year Total Cost of Ownership for Self-Hosted Enterprise AI Knowledge Bases",
+        "metaTitle": "3-Year Total Cost of Ownership for Self-Hosted Enterprise AI",
+        "metaDescription": "A three-year TCO framework for comparing self-hosted and purchased enterprise AI knowledge bases across infrastructure, operations, security, and support.",
+        "keywords": "自建成本核算, 平台工程 / 运维 / 模型消耗",
+        "canonical": "https://fastgpt.io/guide/self-build-three-year-tco",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/self-build-three-year-tco | en → https://fastgpt.io/guide/self-build-three-year-tco | x-default → https://fastgpt.io/guide/self-build-three-year-tco",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "签发: 口径确认（**不阻塞发布**）—— 内容依据客户 KB 撰写，发布前请客户核对：①版本与能力边界 ②商业口径 ③点名与措辞。**如有不符，客户可直接不上该页或指出后我方改**，不需要走签署流程。",
+        "sourceInternalLinkLabels": [
+          "定价页",
+          "ROI 说明",
+          "POC 指南"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "server-sizing-guide", "group": "decision",
-      "zh": { "sourceName": "server-sizing-guide.zh.md", "sourceSha256": "9269f3bf39e973de69e0cd2a36a9fe97e3b846c7e4863446774e01572d07bd7f", "bodySha256": "2a1570683c566b7f66561033462043106c315480a5653da07ec6a9fb5dff2b01", "h1": "百人规模企业知识库服务器选型：四大核心维度定规格", "metaTitle": "百人规模企业知识库服务器选型指南", "metaDescription": "针对百人规模企业知识库服务器选型，无需依赖通用固定配置表，讲解四大核心维度、轻量部署上限、验证方法、部署边界与扩容条件，助力精准匹配资源规格并明确合规要点。", "keywords": "资源规格估算, 并发 / 向量规模 / 本地推理", "canonical": "https://fastgpt.cn/guide/server-sizing-guide", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/server-sizing-guide | en → https://fastgpt.io/guide/server-sizing-guide | x-default → https://fastgpt.io/guide/server-sizing-guide", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "一张展示四大核心选型维度的思维导图，或服务器选型流程的示意图，标注核心参数与验证步骤", "sourceInternalLinkLabels": ["部署文档", "私有化页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "server-sizing-guide.en.md", "sourceSha256": "62d80990fe5350bf43e2845d4f25313f496825787f14f009ba54fa0630125b90", "bodySha256": "0b4ff8c949d9c39c9598f2271e585ea6bc16a4def49b1bc46c20ba725a30d228", "h1": "Server Sizing for 100-Person Enterprise RAG Knowledge Bases: 4 Core Decision Dimensions", "metaTitle": "Server Sizing for 100-Person Enterprise RAG Knowledge Bases", "metaDescription": "A server-sizing framework for 100-person enterprise RAG knowledge bases, covering concurrency, document volume, inference choices, and POC validation.", "keywords": "资源规格估算, 并发 / 向量规模 / 本地推理", "canonical": "https://fastgpt.io/guide/server-sizing-guide", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/server-sizing-guide | en → https://fastgpt.io/guide/server-sizing-guide | x-default → https://fastgpt.io/guide/server-sizing-guide", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "一张展示四大核心选型维度的思维导图，或服务器选型流程的示意图，标注核心参数与验证步骤", "sourceInternalLinkLabels": ["部署文档", "私有化页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "server-sizing-guide",
+      "group": "decision",
+      "zh": {
+        "sourceName": "server-sizing-guide.zh.md",
+        "sourceSha256": "9269f3bf39e973de69e0cd2a36a9fe97e3b846c7e4863446774e01572d07bd7f",
+        "bodySha256": "2a1570683c566b7f66561033462043106c315480a5653da07ec6a9fb5dff2b01",
+        "h1": "百人规模企业知识库服务器选型：四大核心维度定规格",
+        "metaTitle": "百人规模企业知识库服务器选型指南",
+        "metaDescription": "针对百人规模企业知识库服务器选型，无需依赖通用固定配置表，讲解四大核心维度、轻量部署上限、验证方法、部署边界与扩容条件，助力精准匹配资源规格并明确合规要点。",
+        "keywords": "资源规格估算, 并发 / 向量规模 / 本地推理",
+        "canonical": "https://fastgpt.cn/guide/server-sizing-guide",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/server-sizing-guide | en → https://fastgpt.io/guide/server-sizing-guide | x-default → https://fastgpt.io/guide/server-sizing-guide",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "一张展示四大核心选型维度的思维导图，或服务器选型流程的示意图，标注核心参数与验证步骤",
+        "sourceInternalLinkLabels": [
+          "部署文档",
+          "私有化页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "server-sizing-guide.en.md",
+        "sourceSha256": "62d80990fe5350bf43e2845d4f25313f496825787f14f009ba54fa0630125b90",
+        "bodySha256": "0b4ff8c949d9c39c9598f2271e585ea6bc16a4def49b1bc46c20ba725a30d228",
+        "h1": "Server Sizing for 100-Person Enterprise RAG Knowledge Bases: 4 Core Decision Dimensions",
+        "metaTitle": "Server Sizing for 100-Person Enterprise RAG Knowledge Bases",
+        "metaDescription": "A server-sizing framework for 100-person enterprise RAG knowledge bases, covering concurrency, document volume, inference choices, and POC validation.",
+        "keywords": "资源规格估算, 并发 / 向量规模 / 本地推理",
+        "canonical": "https://fastgpt.io/guide/server-sizing-guide",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/server-sizing-guide | en → https://fastgpt.io/guide/server-sizing-guide | x-default → https://fastgpt.io/guide/server-sizing-guide",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "一张展示四大核心选型维度的思维导图，或服务器选型流程的示意图，标注核心参数与验证步骤",
+        "sourceInternalLinkLabels": [
+          "部署文档",
+          "私有化页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "complex-doc-golden-set", "group": "decision",
-      "zh": { "sourceName": "complex-doc-golden-set.zh.md", "sourceSha256": "55d3680e1e7a0bf735e91f0c6259899c015b9980039002545d471288292abf86", "bodySha256": "d424ace7468fe5e19795a80c79d1512dffa8931302da0100209505e43835333f", "h1": "用黄金集验证企业复杂文档解析的选型效果", "metaTitle": "用黄金集验证企业复杂文档解析的选型效果", "metaDescription": "为企业技术与采购决策者提供文档解析工具选型方法，涵盖黄金集搭建、边界取舍与质量验证等核心步骤，助力避开厂商演示的选型误区，掌握真实业务场景验证的实用方法。", "keywords": "复杂文档解析, 本地解析 / 增强解析 / 多索引", "canonical": "https://fastgpt.cn/guide/complex-doc-golden-set", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/complex-doc-golden-set | en → https://fastgpt.io/guide/complex-doc-golden-set | x-default → https://fastgpt.io/guide/complex-doc-golden-set", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "一张包含黄金集文档示例、解析评分表、选型验证流程的组合示意图，清晰展示从文档筛选到质量验证的完整链路", "sourceInternalLinkLabels": ["文档解析文档", "知识库配置", "竞品对比页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "complex-doc-golden-set.en.md", "sourceSha256": "e514487552c4d99e33d47348f4a48457206c1999c183302db5c1f9e42e4fce5d", "bodySha256": "067be83180b24d9c96ab8086f2ac1bd9189673757e9d6466372261bf1fc40804", "h1": "Enterprise Document Parsing Tool Selection Validation Guide", "metaTitle": "Enterprise Document Parsing Tool Selection Validation Guide", "metaDescription": "Validate enterprise document parsing tools with a custom golden dataset, scoring framework, and practical comparison of local and enhanced parsing options.", "keywords": "复杂文档解析, 本地解析 / 增强解析 / 多索引", "canonical": "https://fastgpt.io/guide/complex-doc-golden-set", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/complex-doc-golden-set | en → https://fastgpt.io/guide/complex-doc-golden-set | x-default → https://fastgpt.io/guide/complex-doc-golden-set", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "一张包含黄金集文档示例、解析评分表、选型验证流程的组合示意图，清晰展示从文档筛选到质量验证的完整链路", "sourceInternalLinkLabels": ["文档解析文档", "知识库配置", "竞品对比页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "complex-doc-golden-set",
+      "group": "decision",
+      "zh": {
+        "sourceName": "complex-doc-golden-set.zh.md",
+        "sourceSha256": "55d3680e1e7a0bf735e91f0c6259899c015b9980039002545d471288292abf86",
+        "bodySha256": "d424ace7468fe5e19795a80c79d1512dffa8931302da0100209505e43835333f",
+        "h1": "用黄金集验证企业复杂文档解析的选型效果",
+        "metaTitle": "用黄金集验证企业复杂文档解析的选型效果",
+        "metaDescription": "为企业技术与采购决策者提供文档解析工具选型方法，涵盖黄金集搭建、边界取舍与质量验证等核心步骤，助力避开厂商演示的选型误区，掌握真实业务场景验证的实用方法。",
+        "keywords": "复杂文档解析, 本地解析 / 增强解析 / 多索引",
+        "canonical": "https://fastgpt.cn/guide/complex-doc-golden-set",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/complex-doc-golden-set | en → https://fastgpt.io/guide/complex-doc-golden-set | x-default → https://fastgpt.io/guide/complex-doc-golden-set",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "一张包含黄金集文档示例、解析评分表、选型验证流程的组合示意图，清晰展示从文档筛选到质量验证的完整链路",
+        "sourceInternalLinkLabels": [
+          "文档解析文档",
+          "知识库配置",
+          "竞品对比页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "complex-doc-golden-set.en.md",
+        "sourceSha256": "e514487552c4d99e33d47348f4a48457206c1999c183302db5c1f9e42e4fce5d",
+        "bodySha256": "067be83180b24d9c96ab8086f2ac1bd9189673757e9d6466372261bf1fc40804",
+        "h1": "Enterprise Document Parsing Tool Selection Validation Guide",
+        "metaTitle": "Enterprise Document Parsing Tool Selection Validation Guide",
+        "metaDescription": "Validate enterprise document parsing tools with a custom golden dataset, scoring framework, and practical comparison of local and enhanced parsing options.",
+        "keywords": "复杂文档解析, 本地解析 / 增强解析 / 多索引",
+        "canonical": "https://fastgpt.io/guide/complex-doc-golden-set",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/complex-doc-golden-set | en → https://fastgpt.io/guide/complex-doc-golden-set | x-default → https://fastgpt.io/guide/complex-doc-golden-set",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "一张包含黄金集文档示例、解析评分表、选型验证流程的组合示意图，清晰展示从文档筛选到质量验证的完整链路",
+        "sourceInternalLinkLabels": [
+          "文档解析文档",
+          "知识库配置",
+          "竞品对比页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "poc-30-day-design", "group": "decision",
-      "zh": { "sourceName": "poc-30-day-design.zh.md", "sourceSha256": "9d7221caf5f93f87efd26bd37219ba79298100c3b8f3b28250cc9bc56ed5e7ba", "bodySha256": "f6ad04eadb85814a643e075980f66e6badc983bf97391f405c52b0a64d305c4e", "h1": "30天POC高效落地：启动前必须敲定的四大核心事项", "metaTitle": "30天POC高效落地：启动前必须敲定的四大核心事项 | 技术", "metaDescription": "企业启动AI工具POC前的核心准备事项，涵盖场景锚定、数据准备、责任分工、验收标准等，助企业规避常见误区，提供可落地的验证依据，助力完成有效POC验证，支撑采购决策。", "keywords": "POC 设计, 验收标准 / 真实数据 / 周期", "canonical": "https://fastgpt.cn/guide/poc-30-day-design", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/poc-30-day-design | en → https://fastgpt.io/guide/poc-30-day-design | x-default → https://fastgpt.io/guide/poc-30-day-design", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "可参考以下四阶段周期流程图：前置条件确认 → 部署与配置 → 测试调优验证 → 生产迁移准备 → POC成果输出", "sourceInternalLinkLabels": ["POC 指南", "实施周期页", "支持档位"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [{ "label": "POC 指南", "target": "https://fastgpt.cn/guide" }, { "label": "实施周期页", "target": "https://fastgpt.cn/guide/support-bot-four-steps" }, { "label": "支持档位", "target": "https://fastgpt.cn/price" }], "datePublished": "2026-08-24", "dateModified": "2026-08-24" },
-      "en": { "sourceName": "poc-30-day-design.en.md", "sourceSha256": "be88abd365a5a0087d47abfd01d7bd98b3d57bfba62f4d0deff04d14b25a7730", "bodySha256": "9697f33199cddcc7e1037cebd6fee8eba0c52459cd1a39f9e7a48985084fb883", "h1": "30-Day Enterprise AI Platform POC Playbook: Four Pre-Launch Decisions", "metaTitle": "30-Day Enterprise AI Platform POC Playbook: Critical Actions", "metaDescription": "A practical 30-day enterprise AI platform POC guide covering scenario selection, compliant test data, ownership, acceptance metrics, and independent validation.", "keywords": "POC 设计, 验收标准 / 真实数据 / 周期", "canonical": "https://fastgpt.io/guide/poc-30-day-design", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/poc-30-day-design | en → https://fastgpt.io/guide/poc-30-day-design | x-default → https://fastgpt.io/guide/poc-30-day-design", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "Four-stage cycle diagram: precondition confirmation → deployment and configuration → testing and validation → production migration preparation → POC outcome delivery", "sourceInternalLinkLabels": ["POC guide", "Implementation guide", "Pricing plans"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [{ "label": "POC guide", "target": "https://fastgpt.io/guide" }, { "label": "Implementation guide", "target": "https://fastgpt.io/guide/support-bot-four-steps" }, { "label": "Pricing plans", "target": "https://fastgpt.io/price" }], "datePublished": "2026-08-24", "dateModified": "2026-08-24" }
+      "slug": "poc-30-day-design",
+      "group": "decision",
+      "zh": {
+        "sourceName": "poc-30-day-design.zh.md",
+        "sourceSha256": "9d7221caf5f93f87efd26bd37219ba79298100c3b8f3b28250cc9bc56ed5e7ba",
+        "bodySha256": "f6ad04eadb85814a643e075980f66e6badc983bf97391f405c52b0a64d305c4e",
+        "h1": "30天POC高效落地：启动前必须敲定的四大核心事项",
+        "metaTitle": "30天POC高效落地：启动前必须敲定的四大核心事项 | 技术",
+        "metaDescription": "企业启动AI工具POC前的核心准备事项，涵盖场景锚定、数据准备、责任分工、验收标准等，助企业规避常见误区，提供可落地的验证依据，助力完成有效POC验证，支撑采购决策。",
+        "keywords": "POC 设计, 验收标准 / 真实数据 / 周期",
+        "canonical": "https://fastgpt.cn/guide/poc-30-day-design",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/poc-30-day-design | en → https://fastgpt.io/guide/poc-30-day-design | x-default → https://fastgpt.io/guide/poc-30-day-design",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "可参考以下四阶段周期流程图：前置条件确认 → 部署与配置 → 测试调优验证 → 生产迁移准备 → POC成果输出",
+        "sourceInternalLinkLabels": [
+          "POC 指南",
+          "实施周期页",
+          "支持档位"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "POC 指南",
+            "target": "https://fastgpt.cn/guide"
+          },
+          {
+            "label": "实施周期页",
+            "target": "https://fastgpt.cn/guide/support-bot-four-steps"
+          },
+          {
+            "label": "支持档位",
+            "target": "https://fastgpt.cn/price"
+          }
+        ],
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24"
+      },
+      "en": {
+        "sourceName": "poc-30-day-design.en.md",
+        "sourceSha256": "be88abd365a5a0087d47abfd01d7bd98b3d57bfba62f4d0deff04d14b25a7730",
+        "bodySha256": "9697f33199cddcc7e1037cebd6fee8eba0c52459cd1a39f9e7a48985084fb883",
+        "h1": "30-Day Enterprise AI Platform POC Playbook: Four Pre-Launch Decisions",
+        "metaTitle": "30-Day Enterprise AI Platform POC Playbook: Critical Actions",
+        "metaDescription": "A practical 30-day enterprise AI platform POC guide covering scenario selection, compliant test data, ownership, acceptance metrics, and independent validation.",
+        "keywords": "POC 设计, 验收标准 / 真实数据 / 周期",
+        "canonical": "https://fastgpt.io/guide/poc-30-day-design",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/poc-30-day-design | en → https://fastgpt.io/guide/poc-30-day-design | x-default → https://fastgpt.io/guide/poc-30-day-design",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "Four-stage cycle diagram: precondition confirmation → deployment and configuration → testing and validation → production migration preparation → POC outcome delivery",
+        "sourceInternalLinkLabels": [
+          "POC guide",
+          "Implementation guide",
+          "Pricing plans"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "POC guide",
+            "target": "https://fastgpt.io/guide"
+          },
+          {
+            "label": "Implementation guide",
+            "target": "https://fastgpt.io/guide/support-bot-four-steps"
+          },
+          {
+            "label": "Pricing plans",
+            "target": "https://fastgpt.io/price"
+          }
+        ],
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24"
+      }
     },
     {
-      "slug": "database-qa-integration-guide", "group": "implementation",
-      "zh": { "sourceName": "database-qa-integration-guide.zh.md", "sourceSha256": "7507e97837fe3d780373877840be4ab37f70fda62880ac8ff7c66a1e334b1853", "bodySha256": "6807935eef1b6f0131682e02f1230b9665a6a03fa67d5d3caf5990583ce80c33", "h1": "企业 AI 查询自有数据库：分工边界与安全落地指南", "metaTitle": "企业 AI 查询自有数据库：分工边界与安全落地指南", "metaDescription": "面向企业 IT、数据与安全团队，讲清 AI 查询自有数据库的职责边界、只读权限、密钥隔离、查询范围和验收步骤，帮助团队在可控数据流中落地自然语言取数。", "keywords": "数据库问答, 只读权限 / 集成网关 / 人工审核", "canonical": "https://fastgpt.cn/guide/database-qa-integration-guide", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/database-qa-integration-guide | en → https://fastgpt.io/guide/database-qa-integration-guide | x-default → https://fastgpt.io/guide/database-qa-integration-guide", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "无；使用可访问的表格与顺序步骤表达数据流和安全边界。", "sourceInternalLinkLabels": ["POC 验证指南", "实施指南", "服务档位"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [{ "label": "POC 验证指南", "target": "https://fastgpt.cn/guide/poc-30-day-design" }, { "label": "实施指南", "target": "https://fastgpt.cn/guide/support-bot-four-steps" }, { "label": "服务档位", "target": "https://fastgpt.cn/price" }], "datePublished": "2026-08-24", "dateModified": "2026-08-24" },
-      "en": { "sourceName": "database-qa-integration-guide.en.md", "sourceSha256": "d362d2aacb2716ba8b875b179f4dd23e86cc60fdd0f495f3a573dc28a4c76c6a", "bodySha256": "2fe1c6ab54c745dcc2d62898fbbe50ab2edb690bd1eaeb071cd71e3a361648f7", "h1": "Secure Enterprise AI Database Query: Roles, Guardrails, and Validation", "metaTitle": "Secure Enterprise AI Database Query: Roles and Guardrails", "metaDescription": "A practical guide for enterprise teams to separate AI orchestration from database access, enforce query scope, protect credentials, and validate every request.", "keywords": "secure database AI query, read-only access / gateway / permissions", "canonical": "https://fastgpt.io/guide/database-qa-integration-guide", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/database-qa-integration-guide | en → https://fastgpt.io/guide/database-qa-integration-guide | x-default → https://fastgpt.io/guide/database-qa-integration-guide", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "None; accessible tables and ordered steps express the data flow and security boundaries.", "sourceInternalLinkLabels": ["POC validation guide", "Implementation guide", "Plans"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [{ "label": "POC validation guide", "target": "https://fastgpt.io/guide/poc-30-day-design" }, { "label": "Implementation guide", "target": "https://fastgpt.io/guide/support-bot-four-steps" }, { "label": "Plans", "target": "https://fastgpt.io/price" }], "datePublished": "2026-08-24", "dateModified": "2026-08-24" }
+      "slug": "database-qa-integration-guide",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "database-qa-integration-guide.zh.md",
+        "sourceSha256": "7507e97837fe3d780373877840be4ab37f70fda62880ac8ff7c66a1e334b1853",
+        "bodySha256": "6807935eef1b6f0131682e02f1230b9665a6a03fa67d5d3caf5990583ce80c33",
+        "h1": "企业 AI 查询自有数据库：分工边界与安全落地指南",
+        "metaTitle": "企业 AI 查询自有数据库：分工边界与安全落地指南",
+        "metaDescription": "面向企业 IT、数据与安全团队，讲清 AI 查询自有数据库的职责边界、只读权限、密钥隔离、查询范围和验收步骤，帮助团队在可控数据流中落地自然语言取数。",
+        "keywords": "数据库问答, 只读权限 / 集成网关 / 人工审核",
+        "canonical": "https://fastgpt.cn/guide/database-qa-integration-guide",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/database-qa-integration-guide | en → https://fastgpt.io/guide/database-qa-integration-guide | x-default → https://fastgpt.io/guide/database-qa-integration-guide",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "无；使用可访问的表格与顺序步骤表达数据流和安全边界。",
+        "sourceInternalLinkLabels": [
+          "POC 验证指南",
+          "实施指南",
+          "服务档位"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "POC 验证指南",
+            "target": "https://fastgpt.cn/guide/poc-30-day-design"
+          },
+          {
+            "label": "实施指南",
+            "target": "https://fastgpt.cn/guide/support-bot-four-steps"
+          },
+          {
+            "label": "服务档位",
+            "target": "https://fastgpt.cn/price"
+          }
+        ],
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24"
+      },
+      "en": {
+        "sourceName": "database-qa-integration-guide.en.md",
+        "sourceSha256": "d362d2aacb2716ba8b875b179f4dd23e86cc60fdd0f495f3a573dc28a4c76c6a",
+        "bodySha256": "2fe1c6ab54c745dcc2d62898fbbe50ab2edb690bd1eaeb071cd71e3a361648f7",
+        "h1": "Secure Enterprise AI Database Query: Roles, Guardrails, and Validation",
+        "metaTitle": "Secure Enterprise AI Database Query: Roles and Guardrails",
+        "metaDescription": "A practical guide for enterprise teams to separate AI orchestration from database access, enforce query scope, protect credentials, and validate every request.",
+        "keywords": "secure database AI query, read-only access / gateway / permissions",
+        "canonical": "https://fastgpt.io/guide/database-qa-integration-guide",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/database-qa-integration-guide | en → https://fastgpt.io/guide/database-qa-integration-guide | x-default → https://fastgpt.io/guide/database-qa-integration-guide",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "None; accessible tables and ordered steps express the data flow and security boundaries.",
+        "sourceInternalLinkLabels": [
+          "POC validation guide",
+          "Implementation guide",
+          "Plans"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "POC validation guide",
+            "target": "https://fastgpt.io/guide/poc-30-day-design"
+          },
+          {
+            "label": "Implementation guide",
+            "target": "https://fastgpt.io/guide/support-bot-four-steps"
+          },
+          {
+            "label": "Plans",
+            "target": "https://fastgpt.io/price"
+          }
+        ],
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24"
+      }
     },
     {
-      "slug": "scheduled-report-automation", "group": "implementation",
-      "zh": { "sourceName": "scheduled-report-automation.zh.md", "sourceSha256": "8e064393a45109ba599a4a1e099a16a8fc450140cecb69442fbc29ec92b66e49", "bodySha256": "1c1eaba701aba1d7b48cbe9c0b897d42f4817324526b5bbdd418fc4a575b639a", "h1": "企业定时任务与报告自动化：配置、兜底与人工审核指南", "metaTitle": "企业定时任务与报告自动化：配置、兜底与人工审核指南", "metaDescription": "面向企业运营与 IT 团队，系统讲解定时任务和报告自动化的适用条件、时区配置、失败告警、重试兜底与人工审核，帮助团队稳定交付可复核的报告。", "keywords": "报告自动化, 定时任务 / 失败兜底 / 人工审核", "canonical": "https://fastgpt.cn/guide/scheduled-report-automation", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/scheduled-report-automation | en → https://fastgpt.io/guide/scheduled-report-automation | x-default → https://fastgpt.io/guide/scheduled-report-automation", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "无；使用可访问的表格与顺序步骤表达调度、兜底和审核流程。", "sourceInternalLinkLabels": ["POC 验证指南", "实施指南", "服务档位"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [{ "label": "POC 验证指南", "target": "https://fastgpt.cn/guide/poc-30-day-design" }, { "label": "实施指南", "target": "https://fastgpt.cn/guide/support-bot-four-steps" }, { "label": "服务档位", "target": "https://fastgpt.cn/price" }], "datePublished": "2026-08-24", "dateModified": "2026-08-24" },
-      "en": { "sourceName": "scheduled-report-automation.en.md", "sourceSha256": "380b558e4ffcbadae66a6a384898d649ec924c2651c4892c2532cd0add1e5068", "bodySha256": "53a6502bd68354c5a6a04fce348411e62ff4ff06ac2529ba27fe0580863b26e4", "h1": "Enterprise Scheduled Reports: Configuration, Fallbacks, and Human Review", "metaTitle": "Enterprise Scheduled Reports: Fallbacks and Human Review", "metaDescription": "A practical guide to scheduled enterprise reports, covering task fit, time zones, alerts, retries, fallback ownership, and human review for reliable delivery.", "keywords": "report automation, scheduled tasks / failure recovery / human review", "canonical": "https://fastgpt.io/guide/scheduled-report-automation", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/scheduled-report-automation | en → https://fastgpt.io/guide/scheduled-report-automation | x-default → https://fastgpt.io/guide/scheduled-report-automation", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "None; accessible tables and ordered steps express scheduling, recovery, and review flows.", "sourceInternalLinkLabels": ["POC validation guide", "Implementation guide", "Plans"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [{ "label": "POC validation guide", "target": "https://fastgpt.io/guide/poc-30-day-design" }, { "label": "Implementation guide", "target": "https://fastgpt.io/guide/support-bot-four-steps" }, { "label": "Plans", "target": "https://fastgpt.io/price" }], "datePublished": "2026-08-24", "dateModified": "2026-08-24" }
+      "slug": "scheduled-report-automation",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "scheduled-report-automation.zh.md",
+        "sourceSha256": "8e064393a45109ba599a4a1e099a16a8fc450140cecb69442fbc29ec92b66e49",
+        "bodySha256": "1c1eaba701aba1d7b48cbe9c0b897d42f4817324526b5bbdd418fc4a575b639a",
+        "h1": "企业定时任务与报告自动化：配置、兜底与人工审核指南",
+        "metaTitle": "企业定时任务与报告自动化：配置、兜底与人工审核指南",
+        "metaDescription": "面向企业运营与 IT 团队，系统讲解定时任务和报告自动化的适用条件、时区配置、失败告警、重试兜底与人工审核，帮助团队稳定交付可复核的报告。",
+        "keywords": "报告自动化, 定时任务 / 失败兜底 / 人工审核",
+        "canonical": "https://fastgpt.cn/guide/scheduled-report-automation",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/scheduled-report-automation | en → https://fastgpt.io/guide/scheduled-report-automation | x-default → https://fastgpt.io/guide/scheduled-report-automation",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "无；使用可访问的表格与顺序步骤表达调度、兜底和审核流程。",
+        "sourceInternalLinkLabels": [
+          "POC 验证指南",
+          "实施指南",
+          "服务档位"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "POC 验证指南",
+            "target": "https://fastgpt.cn/guide/poc-30-day-design"
+          },
+          {
+            "label": "实施指南",
+            "target": "https://fastgpt.cn/guide/support-bot-four-steps"
+          },
+          {
+            "label": "服务档位",
+            "target": "https://fastgpt.cn/price"
+          }
+        ],
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24"
+      },
+      "en": {
+        "sourceName": "scheduled-report-automation.en.md",
+        "sourceSha256": "380b558e4ffcbadae66a6a384898d649ec924c2651c4892c2532cd0add1e5068",
+        "bodySha256": "53a6502bd68354c5a6a04fce348411e62ff4ff06ac2529ba27fe0580863b26e4",
+        "h1": "Enterprise Scheduled Reports: Configuration, Fallbacks, and Human Review",
+        "metaTitle": "Enterprise Scheduled Reports: Fallbacks and Human Review",
+        "metaDescription": "A practical guide to scheduled enterprise reports, covering task fit, time zones, alerts, retries, fallback ownership, and human review for reliable delivery.",
+        "keywords": "report automation, scheduled tasks / failure recovery / human review",
+        "canonical": "https://fastgpt.io/guide/scheduled-report-automation",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/scheduled-report-automation | en → https://fastgpt.io/guide/scheduled-report-automation | x-default → https://fastgpt.io/guide/scheduled-report-automation",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "None; accessible tables and ordered steps express scheduling, recovery, and review flows.",
+        "sourceInternalLinkLabels": [
+          "POC validation guide",
+          "Implementation guide",
+          "Plans"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "POC validation guide",
+            "target": "https://fastgpt.io/guide/poc-30-day-design"
+          },
+          {
+            "label": "Implementation guide",
+            "target": "https://fastgpt.io/guide/support-bot-four-steps"
+          },
+          {
+            "label": "Plans",
+            "target": "https://fastgpt.io/price"
+          }
+        ],
+        "datePublished": "2026-08-24",
+        "dateModified": "2026-08-24"
+      }
     },
     {
-      "slug": "support-bot-four-steps", "group": "implementation",
-      "zh": { "sourceName": "support-bot-four-steps.zh.md", "sourceSha256": "2cdcebe1e42cbf913c5148ac0f718c2680870193445aedf0660554b058c7ce9f", "bodySha256": "5e9bab245ad845a66148d9d3e95fc0e1bec9c84b8ca79d6a5875415ed17cc75f", "h1": "智能客服落地全指南：从流程拆解到效果优化", "metaTitle": "智能客服落地全指南：流程拆解、边界限制与效果优化", "metaDescription": "介绍智能客服落地四步标准流程、边界、验证方法及常见误区，含高重复咨询场景落地要点，帮助企业搭建高效系统，释放客服人力，优化服务体验，适配企业规模化服务需求。", "keywords": "智能客服落地, 知识库 / 渠道 / 转人工", "canonical": "https://fastgpt.cn/guide/support-bot-four-steps", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/support-bot-four-steps | en → https://fastgpt.io/guide/support-bot-four-steps | x-default → https://fastgpt.io/guide/support-bot-four-steps", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "无", "sourceInternalLinkLabels": ["客服场景页", "渠道接入", "案例页"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "support-bot-four-steps.en.md", "sourceSha256": "c58db377a107f2b10de3f2321a74fe40909b20012f20177b2751d771e3f67ca0", "bodySha256": "98355a29b185721c6576af41f923801b25328bc23c7f7896695d3b6cc4d495d4", "h1": "Enterprise Generative AI-Powered Customer Support Deployment Playbook", "metaTitle": "Enterprise Generative AI Customer Support Deployment Guide", "metaDescription": "A four-step workflow for deploying enterprise AI customer support, covering knowledge onboarding, cited answers, channel integration, handover, and improvement.", "keywords": "智能客服落地, 知识库 / 渠道 / 转人工", "canonical": "https://fastgpt.io/guide/support-bot-four-steps", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/support-bot-four-steps | en → https://fastgpt.io/guide/support-bot-four-steps | x-default → https://fastgpt.io/guide/support-bot-four-steps", "schemaTokens": ["HowTo", "Article", "BreadcrumbList"], "sourceSchema": "HowTo + Article + BreadcrumbList", "sourceImageDirective": "无", "sourceInternalLinkLabels": ["客服场景页", "渠道接入", "案例页"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "support-bot-four-steps",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "support-bot-four-steps.zh.md",
+        "sourceSha256": "2cdcebe1e42cbf913c5148ac0f718c2680870193445aedf0660554b058c7ce9f",
+        "bodySha256": "5e9bab245ad845a66148d9d3e95fc0e1bec9c84b8ca79d6a5875415ed17cc75f",
+        "h1": "智能客服落地全指南：从流程拆解到效果优化",
+        "metaTitle": "智能客服落地全指南：流程拆解、边界限制与效果优化",
+        "metaDescription": "介绍智能客服落地四步标准流程、边界、验证方法及常见误区，含高重复咨询场景落地要点，帮助企业搭建高效系统，释放客服人力，优化服务体验，适配企业规模化服务需求。",
+        "keywords": "智能客服落地, 知识库 / 渠道 / 转人工",
+        "canonical": "https://fastgpt.cn/guide/support-bot-four-steps",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/support-bot-four-steps | en → https://fastgpt.io/guide/support-bot-four-steps | x-default → https://fastgpt.io/guide/support-bot-four-steps",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "无",
+        "sourceInternalLinkLabels": [
+          "客服场景页",
+          "渠道接入",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "support-bot-four-steps.en.md",
+        "sourceSha256": "c58db377a107f2b10de3f2321a74fe40909b20012f20177b2751d771e3f67ca0",
+        "bodySha256": "98355a29b185721c6576af41f923801b25328bc23c7f7896695d3b6cc4d495d4",
+        "h1": "Enterprise Generative AI-Powered Customer Support Deployment Playbook",
+        "metaTitle": "Enterprise Generative AI Customer Support Deployment Guide",
+        "metaDescription": "A four-step workflow for deploying enterprise AI customer support, covering knowledge onboarding, cited answers, channel integration, handover, and improvement.",
+        "keywords": "智能客服落地, 知识库 / 渠道 / 转人工",
+        "canonical": "https://fastgpt.io/guide/support-bot-four-steps",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/support-bot-four-steps | en → https://fastgpt.io/guide/support-bot-four-steps | x-default → https://fastgpt.io/guide/support-bot-four-steps",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "无",
+        "sourceInternalLinkLabels": [
+          "客服场景页",
+          "渠道接入",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "manufacturing-itops-invoice-audit", "group": "industry",
-      "zh": { "sourceName": "manufacturing-itops-invoice-audit.zh.md", "sourceSha256": "2fc68456424cf77c4632dc3224d916bd41e1ecdb668c6442454a2d35d977364a", "bodySha256": "66f1933b378dcf90a346fef031bd649a6b825f9080588651a63e24f48a9980b7", "h1": "制造企业数字化：运维与审单场景的落地选型指南", "metaTitle": "制造企业运维与审单场景数字化选型指南", "metaDescription": "面向制造企业IT与采购决策者，拆解运维与财务审单场景的RAG+规则引擎落地方案，提供验证方法与边界参考，复用现有接口实现轻量化落地释放一线人力，提升运维与审核效率", "keywords": "IT 运维与单据审核, 知识库 / 工作流 / 系统集成", "canonical": "https://fastgpt.cn/guide/manufacturing-itops-invoice-audit", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/manufacturing-itops-invoice-audit | en → https://fastgpt.io/guide/manufacturing-itops-invoice-audit | x-default → https://fastgpt.io/guide/manufacturing-itops-invoice-audit", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "一张包含IT运维问答对话界面、财务单据审核流程示意图、元器件料号解析界面的组合示意图，标注核心功能模块", "sourceInternalLinkLabels": ["制造方案页", "集成文档", "案例页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "manufacturing-itops-invoice-audit.en.md", "sourceSha256": "cb3dff84153fd0975722ca47042dffbd8dc1cc02a60915a2a399531d33a75131", "bodySha256": "5501cbe44c542985f01424e6880b6ba418a3e872d3103090c392a474702650ed", "h1": "Manufacturing Enterprise Digitalization Decision Guide: RAG + Rule Engine for IT Operations and Financial Auditing", "metaTitle": "RAG Rule Engine Guide for Manufacturing IT and Finance", "metaDescription": "A lightweight RAG + rule engine solution for manufacturing IT and finance workflows, reducing repetitive manual workloads and boosting efficiency.", "keywords": "IT 运维与单据审核, 知识库 / 工作流 / 系统集成", "canonical": "https://fastgpt.io/guide/manufacturing-itops-invoice-audit", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/manufacturing-itops-invoice-audit | en → https://fastgpt.io/guide/manufacturing-itops-invoice-audit | x-default → https://fastgpt.io/guide/manufacturing-itops-invoice-audit", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "一张包含IT运维问答对话界面、财务单据审核流程示意图、元器件料号解析界面的组合示意图，标注核心功能模块", "sourceInternalLinkLabels": ["制造方案页", "集成文档", "案例页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "manufacturing-itops-invoice-audit",
+      "group": "industry",
+      "zh": {
+        "sourceName": "manufacturing-itops-invoice-audit.zh.md",
+        "sourceSha256": "2fc68456424cf77c4632dc3224d916bd41e1ecdb668c6442454a2d35d977364a",
+        "bodySha256": "66f1933b378dcf90a346fef031bd649a6b825f9080588651a63e24f48a9980b7",
+        "h1": "制造企业数字化：运维与审单场景的落地选型指南",
+        "metaTitle": "制造企业运维与审单场景数字化选型指南",
+        "metaDescription": "面向制造企业IT与采购决策者，拆解运维与财务审单场景的RAG+规则引擎落地方案，提供验证方法与边界参考，复用现有接口实现轻量化落地释放一线人力，提升运维与审核效率",
+        "keywords": "IT 运维与单据审核, 知识库 / 工作流 / 系统集成",
+        "canonical": "https://fastgpt.cn/guide/manufacturing-itops-invoice-audit",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/manufacturing-itops-invoice-audit | en → https://fastgpt.io/guide/manufacturing-itops-invoice-audit | x-default → https://fastgpt.io/guide/manufacturing-itops-invoice-audit",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "一张包含IT运维问答对话界面、财务单据审核流程示意图、元器件料号解析界面的组合示意图，标注核心功能模块",
+        "sourceInternalLinkLabels": [
+          "制造方案页",
+          "集成文档",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "manufacturing-itops-invoice-audit.en.md",
+        "sourceSha256": "cb3dff84153fd0975722ca47042dffbd8dc1cc02a60915a2a399531d33a75131",
+        "bodySha256": "5501cbe44c542985f01424e6880b6ba418a3e872d3103090c392a474702650ed",
+        "h1": "Manufacturing Enterprise Digitalization Decision Guide: RAG + Rule Engine for IT Operations and Financial Auditing",
+        "metaTitle": "RAG Rule Engine Guide for Manufacturing IT and Finance",
+        "metaDescription": "A lightweight RAG + rule engine solution for manufacturing IT and finance workflows, reducing repetitive manual workloads and boosting efficiency.",
+        "keywords": "IT 运维与单据审核, 知识库 / 工作流 / 系统集成",
+        "canonical": "https://fastgpt.io/guide/manufacturing-itops-invoice-audit",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/manufacturing-itops-invoice-audit | en → https://fastgpt.io/guide/manufacturing-itops-invoice-audit | x-default → https://fastgpt.io/guide/manufacturing-itops-invoice-audit",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "一张包含IT运维问答对话界面、财务单据审核流程示意图、元器件料号解析界面的组合示意图，标注核心功能模块",
+        "sourceInternalLinkLabels": [
+          "制造方案页",
+          "集成文档",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "pharma-compliance-docs", "group": "industry",
-      "zh": { "sourceName": "pharma-compliance-docs.zh.md", "sourceSha256": "b4b6a8a7ad9892bf1b7205a032f6777a8a9b974a60416c3a93774da3841a2d7f", "bodySha256": "fc8fdd964dd0a880ed71ed4f03471192ff4fcd6460ccaa81ae2c6b7840659a74", "h1": "生物医药企业文档密集场景的AI选型与合规实践", "metaTitle": "生物医药企业文档密集场景AI选型与合规实践指南", "metaDescription": "本指南针对生物医药企业合规、质量文档等场景，提供低代码RAG智能体选型、落地步骤及合规约束相关内容，含各场景落地动作、责任分工与验收标准，助其解决文档管理痛点。", "keywords": "合规与质量文档, 知识库 / 引用溯源 / 人工复核", "canonical": "https://fastgpt.cn/guide/pharma-compliance-docs", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/pharma-compliance-docs | en → https://fastgpt.io/guide/pharma-compliance-docs | x-default → https://fastgpt.io/guide/pharma-compliance-docs", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "无", "sourceInternalLinkLabels": ["医药方案页", "私有化页", "案例页"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "pharma-compliance-docs.en.md", "sourceSha256": "e8f2d7119cd52ef8a3b25e5b373d01f417714397ae91244e71e4de9854004539", "bodySha256": "e6b0ddabf463dabae8303285ec73721f22c4bcd8be393f55f9e3b34f2ce81300", "h1": "AI Agent Selection and Compliance Best Practices for Document-Intensive Biopharma Workflows", "metaTitle": "Biopharma AI Agent Selection and Compliance Checklist", "metaDescription": "A decision framework for selecting AI agents for document-intensive biopharma workflows, with compliance controls, deployment guidance, citations, and review.", "keywords": "合规与质量文档, 知识库 / 引用溯源 / 人工复核", "canonical": "https://fastgpt.io/guide/pharma-compliance-docs", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/pharma-compliance-docs | en → https://fastgpt.io/guide/pharma-compliance-docs | x-default → https://fastgpt.io/guide/pharma-compliance-docs", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "无", "sourceInternalLinkLabels": ["医药方案页", "私有化页", "案例页"], "assetPolicy": { "status": "none" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "pharma-compliance-docs",
+      "group": "industry",
+      "zh": {
+        "sourceName": "pharma-compliance-docs.zh.md",
+        "sourceSha256": "b4b6a8a7ad9892bf1b7205a032f6777a8a9b974a60416c3a93774da3841a2d7f",
+        "bodySha256": "fc8fdd964dd0a880ed71ed4f03471192ff4fcd6460ccaa81ae2c6b7840659a74",
+        "h1": "生物医药企业文档密集场景的AI选型与合规实践",
+        "metaTitle": "生物医药企业文档密集场景AI选型与合规实践指南",
+        "metaDescription": "本指南针对生物医药企业合规、质量文档等场景，提供低代码RAG智能体选型、落地步骤及合规约束相关内容，含各场景落地动作、责任分工与验收标准，助其解决文档管理痛点。",
+        "keywords": "合规与质量文档, 知识库 / 引用溯源 / 人工复核",
+        "canonical": "https://fastgpt.cn/guide/pharma-compliance-docs",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/pharma-compliance-docs | en → https://fastgpt.io/guide/pharma-compliance-docs | x-default → https://fastgpt.io/guide/pharma-compliance-docs",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "无",
+        "sourceInternalLinkLabels": [
+          "医药方案页",
+          "私有化页",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "pharma-compliance-docs.en.md",
+        "sourceSha256": "e8f2d7119cd52ef8a3b25e5b373d01f417714397ae91244e71e4de9854004539",
+        "bodySha256": "e6b0ddabf463dabae8303285ec73721f22c4bcd8be393f55f9e3b34f2ce81300",
+        "h1": "AI Agent Selection and Compliance Best Practices for Document-Intensive Biopharma Workflows",
+        "metaTitle": "Biopharma AI Agent Selection and Compliance Checklist",
+        "metaDescription": "A decision framework for selecting AI agents for document-intensive biopharma workflows, with compliance controls, deployment guidance, citations, and review.",
+        "keywords": "合规与质量文档, 知识库 / 引用溯源 / 人工复核",
+        "canonical": "https://fastgpt.io/guide/pharma-compliance-docs",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/pharma-compliance-docs | en → https://fastgpt.io/guide/pharma-compliance-docs | x-default → https://fastgpt.io/guide/pharma-compliance-docs",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "无",
+        "sourceInternalLinkLabels": [
+          "医药方案页",
+          "私有化页",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "none"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
-      "slug": "education-retail-support-insight", "group": "industry",
-      "zh": { "sourceName": "education-retail-support-insight.zh.md", "sourceSha256": "c6f97ef10a6872702ad3fbe40abf1a6a4200dc222782bbf19b2354fecfa9009e", "bodySha256": "c29e40b3a904ba3057866e49c929ad21c144f2afe777672aa6693cb4780041fe", "h1": "教育与零售高并发咨询：先分流承接，再挖掘业务洞察", "metaTitle": "教育与零售高并发咨询落地选型指南", "metaDescription": "针对教育、零售行业高并发咨询场景，提供智能分流、业务洞察的落地方法、验证标准与典型参考案例，帮助解决响应慢、数据分散、上线风险等业务难题，涵盖多场景落地细节", "keywords": "咨询分流与学习洞察, 知识库 / 数据分析 / 渠道", "canonical": "https://fastgpt.cn/guide/education-retail-support-insight", "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/education-retail-support-insight | en → https://fastgpt.io/guide/education-retail-support-insight | x-default → https://fastgpt.io/guide/education-retail-support-insight", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "一张包含教育智能客服界面、零售派单中台界面的组合示意图，清晰展示分流与洞察的业务流程", "sourceInternalLinkLabels": ["教育方案页", "零售方案页", "案例页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-11" },
-      "en": { "sourceName": "education-retail-support-insight.en.md", "sourceSha256": "b5e437ea4d0fcad78a3edfedd60db3fbc097160069ce21e30d2d1e203e4e1323", "bodySha256": "0b22436593caeea940a3702957ed829663317456e2be73c11b05d2162a2a726e", "h1": "Enterprise AI Platform Decision Guide: High-Concurrency Customer Support & Business Insights for Education and Retail", "metaTitle": "AI Support Platform Guide for Education and Retail", "metaDescription": "A guide to enterprise AI platforms for high-volume education and retail inquiries, intelligent routing, operational insights, and phased validation.", "keywords": "咨询分流与学习洞察, 知识库 / 数据分析 / 渠道", "canonical": "https://fastgpt.io/guide/education-retail-support-insight", "hreflang": "en | zh-CN → https://fastgpt.cn/guide/education-retail-support-insight | en → https://fastgpt.io/guide/education-retail-support-insight | x-default → https://fastgpt.io/guide/education-retail-support-insight", "schemaTokens": ["Article", "BreadcrumbList"], "sourceSchema": "Article + BreadcrumbList", "sourceImageDirective": "一张包含教育智能客服界面、零售派单中台界面的组合示意图，清晰展示分流与洞察的业务流程", "sourceInternalLinkLabels": ["教育方案页", "零售方案页", "案例页"], "assetPolicy": { "status": "requested-unapproved" }, "configuredInternalLinks": [], "datePublished": "2026-08-11", "dateModified": "2026-08-20" }
+      "slug": "education-retail-support-insight",
+      "group": "industry",
+      "zh": {
+        "sourceName": "education-retail-support-insight.zh.md",
+        "sourceSha256": "c6f97ef10a6872702ad3fbe40abf1a6a4200dc222782bbf19b2354fecfa9009e",
+        "bodySha256": "c29e40b3a904ba3057866e49c929ad21c144f2afe777672aa6693cb4780041fe",
+        "h1": "教育与零售高并发咨询：先分流承接，再挖掘业务洞察",
+        "metaTitle": "教育与零售高并发咨询落地选型指南",
+        "metaDescription": "针对教育、零售行业高并发咨询场景，提供智能分流、业务洞察的落地方法、验证标准与典型参考案例，帮助解决响应慢、数据分散、上线风险等业务难题，涵盖多场景落地细节",
+        "keywords": "咨询分流与学习洞察, 知识库 / 数据分析 / 渠道",
+        "canonical": "https://fastgpt.cn/guide/education-retail-support-insight",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/education-retail-support-insight | en → https://fastgpt.io/guide/education-retail-support-insight | x-default → https://fastgpt.io/guide/education-retail-support-insight",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "一张包含教育智能客服界面、零售派单中台界面的组合示意图，清晰展示分流与洞察的业务流程",
+        "sourceInternalLinkLabels": [
+          "教育方案页",
+          "零售方案页",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-11"
+      },
+      "en": {
+        "sourceName": "education-retail-support-insight.en.md",
+        "sourceSha256": "b5e437ea4d0fcad78a3edfedd60db3fbc097160069ce21e30d2d1e203e4e1323",
+        "bodySha256": "0b22436593caeea940a3702957ed829663317456e2be73c11b05d2162a2a726e",
+        "h1": "Enterprise AI Platform Decision Guide: High-Concurrency Customer Support & Business Insights for Education and Retail",
+        "metaTitle": "AI Support Platform Guide for Education and Retail",
+        "metaDescription": "A guide to enterprise AI platforms for high-volume education and retail inquiries, intelligent routing, operational insights, and phased validation.",
+        "keywords": "咨询分流与学习洞察, 知识库 / 数据分析 / 渠道",
+        "canonical": "https://fastgpt.io/guide/education-retail-support-insight",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/education-retail-support-insight | en → https://fastgpt.io/guide/education-retail-support-insight | x-default → https://fastgpt.io/guide/education-retail-support-insight",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "一张包含教育智能客服界面、零售派单中台界面的组合示意图，清晰展示分流与洞察的业务流程",
+        "sourceInternalLinkLabels": [
+          "教育方案页",
+          "零售方案页",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "requested-unapproved"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-11",
+        "dateModified": "2026-08-20"
+      }
     },
     {
       "slug": "finance-research-retrieval",
@@ -68,10 +761,17 @@
         "keywords": "研报与资料检索, RAG / 批量解析 / 结构化输出",
         "canonical": "https://fastgpt.cn/guide/finance-research-retrieval",
         "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/finance-research-retrieval | en → https://fastgpt.io/guide/finance-research-retrieval | x-default → https://fastgpt.io/guide/finance-research-retrieval",
-        "schemaTokens": ["Article", "BreadcrumbList"],
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
         "sourceSchema": "Article + BreadcrumbList",
         "sourceImageDirective": "两张已完成授权的研报检索与分析师审核流程图，每张图片均有清晰的替代文本记录。",
-        "sourceInternalLinkLabels": ["POC 验证指南", "数据库查询指南", "服务档位"],
+        "sourceInternalLinkLabels": [
+          "POC 验证指南",
+          "数据库查询指南",
+          "服务档位"
+        ],
         "assetPolicy": {
           "status": "required",
           "path": "/images/tech-center/deep-content/finance-research-workflow.svg",
@@ -80,9 +780,18 @@
           "height": 630
         },
         "configuredInternalLinks": [
-          {"label": "POC 验证指南", "target": "https://fastgpt.cn/guide/poc-30-day-design"},
-          {"label": "数据库查询指南", "target": "https://fastgpt.cn/guide/database-qa-integration-guide"},
-          {"label": "服务档位", "target": "https://fastgpt.cn/price"}
+          {
+            "label": "POC 验证指南",
+            "target": "https://fastgpt.cn/guide/poc-30-day-design"
+          },
+          {
+            "label": "数据库查询指南",
+            "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+          },
+          {
+            "label": "服务档位",
+            "target": "https://fastgpt.cn/price"
+          }
         ],
         "datePublished": "2026-08-24",
         "dateModified": "2026-08-24"
@@ -97,10 +806,17 @@
         "keywords": "financial research retrieval, RAG / structured analysis / human review",
         "canonical": "https://fastgpt.io/guide/finance-research-retrieval",
         "hreflang": "en | zh-CN → https://fastgpt.cn/guide/finance-research-retrieval | en → https://fastgpt.io/guide/finance-research-retrieval | x-default → https://fastgpt.io/guide/finance-research-retrieval",
-        "schemaTokens": ["Article", "BreadcrumbList"],
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
         "sourceSchema": "Article + BreadcrumbList",
         "sourceImageDirective": "Two authorized workflow visuals for report retrieval and analyst review; each image has a descriptive alternative text record.",
-        "sourceInternalLinkLabels": ["POC validation guide", "Database query guide", "Plans"],
+        "sourceInternalLinkLabels": [
+          "POC validation guide",
+          "Database query guide",
+          "Plans"
+        ],
         "assetPolicy": {
           "status": "required",
           "path": "/images/tech-center/deep-content/finance-research-workflow.svg",
@@ -109,9 +825,18 @@
           "height": 630
         },
         "configuredInternalLinks": [
-          {"label": "POC validation guide", "target": "https://fastgpt.io/guide/poc-30-day-design"},
-          {"label": "Database query guide", "target": "https://fastgpt.io/guide/database-qa-integration-guide"},
-          {"label": "Plans", "target": "https://fastgpt.io/price"}
+          {
+            "label": "POC validation guide",
+            "target": "https://fastgpt.io/guide/poc-30-day-design"
+          },
+          {
+            "label": "Database query guide",
+            "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+          },
+          {
+            "label": "Plans",
+            "target": "https://fastgpt.io/price"
+          }
         ],
         "datePublished": "2026-08-24",
         "dateModified": "2026-08-24"
@@ -130,10 +855,17 @@
         "keywords": "日报与财报自动化, 定时任务 / 数据处理 / 模板生成",
         "canonical": "https://fastgpt.cn/guide/finance-daily-report-automation",
         "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/finance-daily-report-automation | en → https://fastgpt.io/guide/finance-daily-report-automation | x-default → https://fastgpt.io/guide/finance-daily-report-automation",
-        "schemaTokens": ["Article", "BreadcrumbList"],
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
         "sourceSchema": "Article + BreadcrumbList",
         "sourceImageDirective": "两张已完成授权的每日数据播报与人工审核流程图，每张图片均有清晰的替代文本记录。",
-        "sourceInternalLinkLabels": ["研报检索指南", "POC 验证指南", "服务档位"],
+        "sourceInternalLinkLabels": [
+          "研报检索指南",
+          "POC 验证指南",
+          "服务档位"
+        ],
         "assetPolicy": {
           "status": "required",
           "path": "/images/tech-center/deep-content/finance-daily-report-workflow.svg",
@@ -142,9 +874,18 @@
           "height": 630
         },
         "configuredInternalLinks": [
-          {"label": "研报检索指南", "target": "https://fastgpt.cn/guide/finance-research-retrieval"},
-          {"label": "POC 验证指南", "target": "https://fastgpt.cn/guide/poc-30-day-design"},
-          {"label": "服务档位", "target": "https://fastgpt.cn/price"}
+          {
+            "label": "研报检索指南",
+            "target": "https://fastgpt.cn/guide/finance-research-retrieval"
+          },
+          {
+            "label": "POC 验证指南",
+            "target": "https://fastgpt.cn/guide/poc-30-day-design"
+          },
+          {
+            "label": "服务档位",
+            "target": "https://fastgpt.cn/price"
+          }
         ],
         "datePublished": "2026-08-24",
         "dateModified": "2026-08-24"
@@ -159,10 +900,17 @@
         "keywords": "financial report automation, scheduled workflow / data processing / human review",
         "canonical": "https://fastgpt.io/guide/finance-daily-report-automation",
         "hreflang": "en | zh-CN → https://fastgpt.cn/guide/finance-daily-report-automation | en → https://fastgpt.io/guide/finance-daily-report-automation | x-default → https://fastgpt.io/guide/finance-daily-report-automation",
-        "schemaTokens": ["Article", "BreadcrumbList"],
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
         "sourceSchema": "Article + BreadcrumbList",
         "sourceImageDirective": "Two authorized workflow visuals for daily report automation and review; each image has a descriptive alternative text record.",
-        "sourceInternalLinkLabels": ["Research retrieval guide", "POC validation guide", "Plans"],
+        "sourceInternalLinkLabels": [
+          "Research retrieval guide",
+          "POC validation guide",
+          "Plans"
+        ],
         "assetPolicy": {
           "status": "required",
           "path": "/images/tech-center/deep-content/finance-daily-report-workflow.svg",
@@ -171,214 +919,259 @@
           "height": 630
         },
         "configuredInternalLinks": [
-          {"label": "Research retrieval guide", "target": "https://fastgpt.io/guide/finance-research-retrieval"},
-          {"label": "POC validation guide", "target": "https://fastgpt.io/guide/poc-30-day-design"},
-          {"label": "Plans", "target": "https://fastgpt.io/price"}
+          {
+            "label": "Research retrieval guide",
+            "target": "https://fastgpt.io/guide/finance-research-retrieval"
+          },
+          {
+            "label": "POC validation guide",
+            "target": "https://fastgpt.io/guide/poc-30-day-design"
+          },
+          {
+            "label": "Plans",
+            "target": "https://fastgpt.io/price"
+          }
         ],
         "datePublished": "2026-08-24",
         "dateModified": "2026-08-24"
       }
     },
-  {
-    "slug": "migrate-saas-to-selfhost",
-    "group": "implementation",
-    "zh": {
-      "sourceName": "migrate-saas-to-selfhost.zh.md",
-      "sourceSha256": "8d5c289f2fe8eea3a6db0c286514f30ecad6b6cb37c9b5f1389fd08c019a0006",
-      "bodySha256": "a6477c856e690eb9d27770a000bd4387dbabb7804ebd1ef9f459eb49e717184e",
-      "h1": "从SaaS智能体平台迁移至自建：分四块拆解与单场景试点策略",
-      "metaTitle": "从SaaS智能体平台迁移至自建的落地指南",
-      "metaDescription": "拆解SaaS智能体平台迁移至自建的四大核心工作量，介绍单场景试点适配性验证方法，助力企业科学规划并推进迁移相关工作，规避迁移风险，覆盖迁移全流程核心环节。",
-      "keywords": "平台迁移, 知识资产 / 工作流重建 / 效果回归",
-      "canonical": "https://fastgpt.cn/guide/migrate-saas-to-selfhost",
-      "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/migrate-saas-to-selfhost | en → https://fastgpt.io/guide/migrate-saas-to-selfhost | x-default → https://fastgpt.io/guide/migrate-saas-to-selfhost",
-      "schemaTokens": [
-        "HowTo",
-        "Article",
-        "BreadcrumbList"
-      ],
-      "sourceSchema": "HowTo + Article + BreadcrumbList",
-      "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
-      "sourceInternalLinkLabels": [
-        "迁移指南",
-        "API 文档",
-        "私有化页"
-      ],
-      "assetPolicy": {
-        "status": "source-exception"
+    {
+      "slug": "migrate-saas-to-selfhost",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "migrate-saas-to-selfhost.zh.md",
+        "sourceSha256": "8d5c289f2fe8eea3a6db0c286514f30ecad6b6cb37c9b5f1389fd08c019a0006",
+        "bodySha256": "a6477c856e690eb9d27770a000bd4387dbabb7804ebd1ef9f459eb49e717184e",
+        "h1": "从SaaS智能体平台迁移至自建：分四块拆解与单场景试点策略",
+        "metaTitle": "从SaaS智能体平台迁移至自建的落地指南",
+        "metaDescription": "拆解SaaS智能体平台迁移至自建的四大核心工作量，介绍单场景试点适配性验证方法，助力企业科学规划并推进迁移相关工作，规避迁移风险，覆盖迁移全流程核心环节。",
+        "keywords": "平台迁移, 知识资产 / 工作流重建 / 效果回归",
+        "canonical": "https://fastgpt.cn/guide/migrate-saas-to-selfhost",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/migrate-saas-to-selfhost | en → https://fastgpt.io/guide/migrate-saas-to-selfhost | x-default → https://fastgpt.io/guide/migrate-saas-to-selfhost",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "迁移指南",
+          "API 文档",
+          "私有化页"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "迁移指南",
+            "target": "https://fastgpt.cn/guide/migrate-saas-to-selfhost"
+          },
+          {
+            "label": "API 文档",
+            "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+          },
+          {
+            "label": "私有化页",
+            "target": "https://fastgpt.cn/guide/self-build-three-year-tco"
+          }
+        ],
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27"
       },
-      "configuredInternalLinks": [
-        { "label": "迁移指南", "target": "https://fastgpt.cn/guide/migrate-saas-to-selfhost" },
-        { "label": "API 文档", "target": "https://fastgpt.cn/guide/database-qa-integration-guide" },
-        { "label": "私有化页", "target": "https://fastgpt.cn/guide/self-build-three-year-tco" }
-      ],
-      "datePublished": "2026-08-27",
-      "dateModified": "2026-08-27"
+      "en": {
+        "sourceName": "migrate-saas-to-selfhost.en.md",
+        "sourceSha256": "d92ea74099c0bb6e9570993f6924365aef7d794be64b8cba7ecc4a09330b4737",
+        "bodySha256": "663d5a2a8c96a237b100c001ec895b1356354bbcf4dde9f509df9feaa9a8a0e7",
+        "h1": "Migrating Enterprise AI Agent Platforms from SaaS to Self-Hosted Deployment",
+        "metaTitle": "SaaS-to-Self-Hosted Enterprise AI Agent Migration Guide",
+        "metaDescription": "Plan enterprise SaaS-to-self-hosted AI agent migration across knowledge assets, workflows, integrations, security, validation, and phased rollout.",
+        "keywords": "平台迁移, 知识资产 / 工作流重建 / 效果回归",
+        "canonical": "https://fastgpt.io/guide/migrate-saas-to-selfhost",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/migrate-saas-to-selfhost | en → https://fastgpt.io/guide/migrate-saas-to-selfhost | x-default → https://fastgpt.io/guide/migrate-saas-to-selfhost",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "Migration guide",
+          "API documentation",
+          "Self-hosted deployment"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "Migration guide",
+            "target": "https://fastgpt.io/guide/migrate-saas-to-selfhost"
+          },
+          {
+            "label": "API documentation",
+            "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+          },
+          {
+            "label": "Self-hosted deployment",
+            "target": "https://fastgpt.io/guide/self-build-three-year-tco"
+          }
+        ],
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27"
+      }
     },
-    "en": {
-      "sourceName": "migrate-saas-to-selfhost.en.md",
-      "sourceSha256": "d92ea74099c0bb6e9570993f6924365aef7d794be64b8cba7ecc4a09330b4737",
-      "bodySha256": "663d5a2a8c96a237b100c001ec895b1356354bbcf4dde9f509df9feaa9a8a0e7",
-      "h1": "Migrating Enterprise AI Agent Platforms from SaaS to Self-Hosted Deployment",
-      "metaTitle": "SaaS-to-Self-Hosted Enterprise AI Agent Migration Guide",
-      "metaDescription": "Plan enterprise SaaS-to-self-hosted AI agent migration across knowledge assets, workflows, integrations, security, validation, and phased rollout.",
-      "keywords": "平台迁移, 知识资产 / 工作流重建 / 效果回归",
-      "canonical": "https://fastgpt.io/guide/migrate-saas-to-selfhost",
-      "hreflang": "en | zh-CN → https://fastgpt.cn/guide/migrate-saas-to-selfhost | en → https://fastgpt.io/guide/migrate-saas-to-selfhost | x-default → https://fastgpt.io/guide/migrate-saas-to-selfhost",
-      "schemaTokens": [
-        "HowTo",
-        "Article",
-        "BreadcrumbList"
-      ],
-      "sourceSchema": "HowTo + Article + BreadcrumbList",
-      "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
-      "sourceInternalLinkLabels": [
-        "Migration guide",
-        "API documentation",
-        "Self-hosted deployment"
-      ],
-      "assetPolicy": {
-        "status": "source-exception"
+    {
+      "slug": "embed-ai-into-product",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "embed-ai-into-product.zh.md",
+        "sourceSha256": "0ac8a86ab588e7011346be6b6c648a8940687e3bbea541f09e817319c519012b",
+        "bodySha256": "5a00fd9ad2075c5091430166941d9ca327c15dc90065dd0ca4016a7030859de2",
+        "h1": "将AI能力嵌入自有产品：接入方式与落地核心关注点",
+        "metaTitle": "将AI能力嵌入自有产品：接入方式与落地指南",
+        "metaDescription": "针对企业AI嵌入相关需求，详解主流AI嵌入方式、核心落地维度、落地验证方法、边界限制与常见误区，助力平稳完成AI集成落地，提升产品用户体验与业务价值。",
+        "keywords": "嵌入自有产品, API / OpenAI SDK 兼容 / MCP",
+        "canonical": "https://fastgpt.cn/guide/embed-ai-into-product",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/embed-ai-into-product | en → https://fastgpt.io/guide/embed-ai-into-product | x-default → https://fastgpt.io/guide/embed-ai-into-product",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "API 文档",
+          "快速开始",
+          "集成文档"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "API 文档",
+            "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+          },
+          {
+            "label": "快速开始",
+            "target": "https://fastgpt.cn/guide/poc-30-day-design"
+          },
+          {
+            "label": "集成文档",
+            "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+          }
+        ],
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27"
       },
-      "configuredInternalLinks": [
-        { "label": "Migration guide", "target": "https://fastgpt.io/guide/migrate-saas-to-selfhost" },
-        { "label": "API documentation", "target": "https://fastgpt.io/guide/database-qa-integration-guide" },
-        { "label": "Self-hosted deployment", "target": "https://fastgpt.io/guide/self-build-three-year-tco" }
-      ],
-      "datePublished": "2026-08-27",
-      "dateModified": "2026-08-27"
-    }
-  },
-  {
-    "slug": "embed-ai-into-product",
-    "group": "implementation",
-    "zh": {
-      "sourceName": "embed-ai-into-product.zh.md",
-      "sourceSha256": "0ac8a86ab588e7011346be6b6c648a8940687e3bbea541f09e817319c519012b",
-      "bodySha256": "5a00fd9ad2075c5091430166941d9ca327c15dc90065dd0ca4016a7030859de2",
-      "h1": "将AI能力嵌入自有产品：接入方式与落地核心关注点",
-      "metaTitle": "将AI能力嵌入自有产品：接入方式与落地指南",
-      "metaDescription": "针对企业AI嵌入相关需求，详解主流AI嵌入方式、核心落地维度、落地验证方法、边界限制与常见误区，助力平稳完成AI集成落地，提升产品用户体验与业务价值。",
-      "keywords": "嵌入自有产品, API / OpenAI SDK 兼容 / MCP",
-      "canonical": "https://fastgpt.cn/guide/embed-ai-into-product",
-      "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/embed-ai-into-product | en → https://fastgpt.io/guide/embed-ai-into-product | x-default → https://fastgpt.io/guide/embed-ai-into-product",
-      "schemaTokens": [
-        "HowTo",
-        "Article",
-        "BreadcrumbList"
-      ],
-      "sourceSchema": "HowTo + Article + BreadcrumbList",
-      "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
-      "sourceInternalLinkLabels": [
-        "API 文档",
-        "快速开始",
-        "集成文档"
-      ],
-      "assetPolicy": {
-        "status": "source-exception"
-      },
-      "configuredInternalLinks": [
-        { "label": "API 文档", "target": "https://fastgpt.cn/guide/database-qa-integration-guide" },
-        { "label": "快速开始", "target": "https://fastgpt.cn/guide/poc-30-day-design" },
-        { "label": "集成文档", "target": "https://fastgpt.cn/guide/database-qa-integration-guide" }
-      ],
-      "datePublished": "2026-08-27",
-      "dateModified": "2026-08-27"
+      "en": {
+        "sourceName": "embed-ai-into-product.en.md",
+        "sourceSha256": "c6e25c848e61c446580ea44a30754c46e6af13c2ea88df8affd3550de4656edb",
+        "bodySha256": "8fca88b4248edf722cd3f5684d65eed71ef2790b12a194f00d9d2fe5a5341bd3",
+        "h1": "Enterprise AI Integration into Native Products: Deployment Best Practices and Decision Framework",
+        "metaTitle": "Enterprise AI Embedding Integration Guide for Teams",
+        "metaDescription": "Embed AI into native products with guidance on APIs, SDKs, authentication, sessions, errors, quotas, validation, monitoring, and rollout planning.",
+        "keywords": "嵌入自有产品, API / OpenAI SDK 兼容 / MCP",
+        "canonical": "https://fastgpt.io/guide/embed-ai-into-product",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/embed-ai-into-product | en → https://fastgpt.io/guide/embed-ai-into-product | x-default → https://fastgpt.io/guide/embed-ai-into-product",
+        "schemaTokens": [
+          "HowTo",
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "HowTo + Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "API documentation",
+          "Getting started",
+          "Integration documentation"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [
+          {
+            "label": "API documentation",
+            "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+          },
+          {
+            "label": "Getting started",
+            "target": "https://fastgpt.io/guide/poc-30-day-design"
+          },
+          {
+            "label": "Integration documentation",
+            "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+          }
+        ],
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27"
+      }
     },
-    "en": {
-      "sourceName": "embed-ai-into-product.en.md",
-      "sourceSha256": "c6e25c848e61c446580ea44a30754c46e6af13c2ea88df8affd3550de4656edb",
-      "bodySha256": "8fca88b4248edf722cd3f5684d65eed71ef2790b12a194f00d9d2fe5a5341bd3",
-      "h1": "Enterprise AI Integration into Native Products: Deployment Best Practices and Decision Framework",
-      "metaTitle": "Enterprise AI Embedding Integration Guide for Teams",
-      "metaDescription": "Embed AI into native products with guidance on APIs, SDKs, authentication, sessions, errors, quotas, validation, monitoring, and rollout planning.",
-      "keywords": "嵌入自有产品, API / OpenAI SDK 兼容 / MCP",
-      "canonical": "https://fastgpt.io/guide/embed-ai-into-product",
-      "hreflang": "en | zh-CN → https://fastgpt.cn/guide/embed-ai-into-product | en → https://fastgpt.io/guide/embed-ai-into-product | x-default → https://fastgpt.io/guide/embed-ai-into-product",
-      "schemaTokens": [
-        "HowTo",
-        "Article",
-        "BreadcrumbList"
-      ],
-      "sourceSchema": "HowTo + Article + BreadcrumbList",
-      "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
-      "sourceInternalLinkLabels": [
-        "API documentation",
-        "Getting started",
-        "Integration documentation"
-      ],
-      "assetPolicy": {
-        "status": "source-exception"
+    {
+      "slug": "soe-policy-qa-deployment",
+      "group": "industry",
+      "zh": {
+        "sourceName": "soe-policy-qa-deployment.zh.md",
+        "sourceSha256": "75a848021bd2e6dfdaf6d446d57753adc04ebb95ff655e59a2f90ce882eb8040",
+        "bodySha256": "70951a59a664aedbe01c71756481569c462348230d70e1412d9f5ae8bac7cfaa",
+        "h1": "国央企大模型制度问答落地部署、审查与排期规划指南",
+        "metaTitle": "国央企大模型制度问答落地部署、审查与排期规划指南",
+        "metaDescription": "围绕国央企制度问答场景，梳理部署架构、合规审查、权限隔离、知识更新与项目排期方法，帮助团队建立可验证、可审计、可持续运营的落地计划。",
+        "keywords": "制度问答与员工服务, 知识库 / 权限隔离 / 渠道接入",
+        "canonical": "https://fastgpt.cn/guide/soe-policy-qa-deployment",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/soe-policy-qa-deployment | en → https://fastgpt.io/guide/soe-policy-qa-deployment | x-default → https://fastgpt.io/guide/soe-policy-qa-deployment",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "政务国企方案页",
+          "私有化页",
+          "案例页"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27"
       },
-      "configuredInternalLinks": [
-        { "label": "API documentation", "target": "https://fastgpt.io/guide/database-qa-integration-guide" },
-        { "label": "Getting started", "target": "https://fastgpt.io/guide/poc-30-day-design" },
-        { "label": "Integration documentation", "target": "https://fastgpt.io/guide/database-qa-integration-guide" }
-      ],
-      "datePublished": "2026-08-27",
-      "dateModified": "2026-08-27"
-    }
-  },
-  {
-    "slug": "soe-policy-qa-deployment",
-    "group": "industry",
-    "zh": {
-      "sourceName": "soe-policy-qa-deployment.zh.md",
-      "sourceSha256": "75a848021bd2e6dfdaf6d446d57753adc04ebb95ff655e59a2f90ce882eb8040",
-      "bodySha256": "70951a59a664aedbe01c71756481569c462348230d70e1412d9f5ae8bac7cfaa",
-      "h1": "国央企大模型制度问答落地部署、审查与排期规划指南",
-      "metaTitle": "国央企大模型制度问答落地部署、审查与排期规划指南",
-      "metaDescription": "围绕国央企制度问答场景，梳理部署架构、合规审查、权限隔离、知识更新与项目排期方法，帮助团队建立可验证、可审计、可持续运营的落地计划。",
-      "keywords": "制度问答与员工服务, 知识库 / 权限隔离 / 渠道接入",
-      "canonical": "https://fastgpt.cn/guide/soe-policy-qa-deployment",
-      "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/soe-policy-qa-deployment | en → https://fastgpt.io/guide/soe-policy-qa-deployment | x-default → https://fastgpt.io/guide/soe-policy-qa-deployment",
-      "schemaTokens": [
-        "Article",
-        "BreadcrumbList"
-      ],
-      "sourceSchema": "Article + BreadcrumbList",
-      "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
-      "sourceInternalLinkLabels": [
-        "政务国企方案页",
-        "私有化页",
-        "案例页"
-      ],
-      "assetPolicy": {
-        "status": "source-exception"
-      },
-      "configuredInternalLinks": [],
-      "datePublished": "2026-08-27",
-      "dateModified": "2026-08-27"
+      "en": {
+        "sourceName": "soe-policy-qa-deployment.en.md",
+        "sourceSha256": "545a49d96b5d272d9a337d36711aed05f1d81816a5ad5e00b2f77b5f28672aa6",
+        "bodySha256": "a0fb46d6b6672c1026ffed24c8710fb129d4030f8ea68dec95e05fcff62662f1",
+        "h1": "State-Owned Enterprise Large Model Policy Q&A Implementation: Deployment, Compliance Review, and Scheduling Guide",
+        "metaTitle": "State-Owned Enterprise AI Policy Q&A Deployment Guide",
+        "metaDescription": "Plan compliant state-owned enterprise AI policy Q&A deployment with architecture, reviews, permissions, updates, validation, scheduling, and controls.",
+        "keywords": "制度问答与员工服务, 知识库 / 权限隔离 / 渠道接入",
+        "canonical": "https://fastgpt.io/guide/soe-policy-qa-deployment",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/soe-policy-qa-deployment | en → https://fastgpt.io/guide/soe-policy-qa-deployment | x-default → https://fastgpt.io/guide/soe-policy-qa-deployment",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          "Government and enterprise solutions",
+          "Self-hosted deployment",
+          "Customer cases"
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-08-27",
+        "dateModified": "2026-08-27"
+      }
     },
-    "en": {
-      "sourceName": "soe-policy-qa-deployment.en.md",
-      "sourceSha256": "545a49d96b5d272d9a337d36711aed05f1d81816a5ad5e00b2f77b5f28672aa6",
-      "bodySha256": "a0fb46d6b6672c1026ffed24c8710fb129d4030f8ea68dec95e05fcff62662f1",
-      "h1": "State-Owned Enterprise Large Model Policy Q&A Implementation: Deployment, Compliance Review, and Scheduling Guide",
-      "metaTitle": "State-Owned Enterprise AI Policy Q&A Deployment Guide",
-      "metaDescription": "Plan compliant state-owned enterprise AI policy Q&A deployment with architecture, reviews, permissions, updates, validation, scheduling, and controls.",
-      "keywords": "制度问答与员工服务, 知识库 / 权限隔离 / 渠道接入",
-      "canonical": "https://fastgpt.io/guide/soe-policy-qa-deployment",
-      "hreflang": "en | zh-CN → https://fastgpt.cn/guide/soe-policy-qa-deployment | en → https://fastgpt.io/guide/soe-policy-qa-deployment | x-default → https://fastgpt.io/guide/soe-policy-qa-deployment",
-      "schemaTokens": [
-        "Article",
-        "BreadcrumbList"
-      ],
-      "sourceSchema": "Article + BreadcrumbList",
-      "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
-      "sourceInternalLinkLabels": [
-        "Government and enterprise solutions",
-        "Self-hosted deployment",
-        "Customer cases"
-      ],
-      "assetPolicy": {
-        "status": "source-exception"
-      },
-      "configuredInternalLinks": [],
-      "datePublished": "2026-08-27",
-      "dateModified": "2026-08-27"
-    }
-  },
     {
       "slug": "private-deployment-readiness",
       "group": "decision",
@@ -909,6 +1702,566 @@
         ],
         "datePublished": "2026-09-06",
         "dateModified": "2026-09-06"
+      }
+    },
+    {
+      "slug": "api-integration-acceptance",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "api-integration-acceptance.zh.md",
+        "sourceSha256": "e1de8de1d070d2545c6021d84e7aaab5f75799df1686d728810730334f778a2b",
+        "bodySha256": "244d9552e212026f5f594f24ff3ff8efb61dbaa188ed51e5017505f7547ade37",
+        "h1": "企业接口集成验收口径：鉴权、限流、错误处理与回归项对齐指南",
+        "metaTitle": "企业接口集成验收口径：鉴权、限流、错误处理与回归项对齐指南",
+        "metaDescription": "面向企业技术与运维负责人的接口集成验收指南，明确鉴权、限流、错误处理与回归项的验收标准，帮助双方对齐验收口径，避免上线后权责归属纠纷。",
+        "keywords": "api integration acceptance",
+        "canonical": "https://fastgpt.cn/guide/api-integration-acceptance",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/api-integration-acceptance | en → https://fastgpt.io/guide/api-integration-acceptance | x-default → https://fastgpt.io/guide/api-integration-acceptance",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "api-integration-acceptance.en.md",
+        "sourceSha256": "db0442a4fdceed40986c475d42bfcf89244a7499569ce328385e1b83aa28557d",
+        "bodySha256": "7d328fbd145c2829a2dbd73fbdd312e9d5c247e0b695f66e2fc06b8ace39c0ff",
+        "h1": "API Integration Acceptance Criteria: Auth, Rate Limits, and Error Handling",
+        "metaTitle": "FastGPT API Integration Acceptance and Error Handling",
+        "metaDescription": "Validate FastGPT API authentication, rate limits, error handling and regression coverage with an acceptance checklist for integration and operations teams.",
+        "keywords": "api integration acceptance",
+        "canonical": "https://fastgpt.io/guide/api-integration-acceptance",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/api-integration-acceptance | en → https://fastgpt.io/guide/api-integration-acceptance | x-default → https://fastgpt.io/guide/api-integration-acceptance",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "backup-restore-drill",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "backup-restore-drill.zh.md",
+        "sourceSha256": "2e2d1d4ce26be9086c82452bec4f5c30f899d088f341b6d1b76af219fd454867",
+        "bodySha256": "970f7509fbe823b7db9ec8aca5ee3c7ee0215e75257b57cb12f1c419fceb073b",
+        "h1": "备份不等于可恢复：FastGPT私有部署恢复演练验证指南",
+        "metaTitle": "备份不等于可恢复：FastGPT私有部署恢复演练验证指南",
+        "metaDescription": "本文面向企业技术与运维负责人，讲解FastGPT私有部署下备份恢复演练的验证范围、判据、验收标准与边界条件，助力确保备份可落地恢复。",
+        "keywords": "backup restore drill",
+        "canonical": "https://fastgpt.cn/guide/backup-restore-drill",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/backup-restore-drill | en → https://fastgpt.io/guide/backup-restore-drill | x-default → https://fastgpt.io/guide/backup-restore-drill",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "backup-restore-drill.en.md",
+        "sourceSha256": "7d943015f84f16e855469e7889e6a3f82fd6c55621e17b01c218681167c387ad",
+        "bodySha256": "dccd52df4c2f03d8007bdc38bb8edc22150b81137fb1125c1e7baa6d2eb597bd",
+        "h1": "Backups Are Not Recovery: How Far a Restore Drill Must Go",
+        "metaTitle": "FastGPT Backup and Restore Drill Acceptance Checklist",
+        "metaDescription": "Plan a FastGPT restore drill that validates backup integrity, dependencies, business data, permissions and recovery objectives before an outage occurs.",
+        "keywords": "backup restore drill",
+        "canonical": "https://fastgpt.io/guide/backup-restore-drill",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/backup-restore-drill | en → https://fastgpt.io/guide/backup-restore-drill | x-default → https://fastgpt.io/guide/backup-restore-drill",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "observability-baseline",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "observability-baseline.zh.md",
+        "sourceSha256": "abfd7d027951a37fab5db48c1592dab8a5d778fbc351ed42374abd64a0829042",
+        "bodySha256": "011cdb95008e8808b3e7208b08223b333f89a4ac99ecdfbc23bbc8e4e5ea378f",
+        "h1": "上线前要先定的可观测基线：日志、指标与告警阈值的责任划分",
+        "metaTitle": "上线前要先定的可观测基线：日志、指标与告警阈值的责任划分",
+        "metaDescription": "针对企业技术与运维负责人，讲解可观测基线的建立逻辑，明确日志、指标与告警阈值的责任划分，解决上线后定位慢、责任不清的问题，适配FastGPT相关场景的可观测需求。",
+        "keywords": "observability baseline",
+        "canonical": "https://fastgpt.cn/guide/observability-baseline",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/observability-baseline | en → https://fastgpt.io/guide/observability-baseline | x-default → https://fastgpt.io/guide/observability-baseline",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "observability-baseline.en.md",
+        "sourceSha256": "d989e41b6ad9d6d023eed60402e89d772f02846c0d7c14bdc6862afdbea8d0e5",
+        "bodySha256": "6f2279fb0ae45dc0115e5a6934bc95a903acfb96cd5cf7c32e2557363fd1e2ad",
+        "h1": "Observability Baseline Before Go-Live: Logs, Metrics and Alert Ownership",
+        "metaTitle": "FastGPT Observability: Logs, Metrics and Alert Ownership",
+        "metaDescription": "Set a FastGPT observability baseline for logs, metrics and alerts, with clear ownership, deployment checks, response thresholds and acceptance criteria.",
+        "keywords": "observability baseline",
+        "canonical": "https://fastgpt.io/guide/observability-baseline",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/observability-baseline | en → https://fastgpt.io/guide/observability-baseline | x-default → https://fastgpt.io/guide/observability-baseline",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "version-upgrade-decision",
+      "group": "implementation",
+      "zh": {
+        "sourceName": "version-upgrade-decision.zh.md",
+        "sourceSha256": "dcce0920b3782b503e5532e2ddb5d0439f67baafa4a2a2e2d543ce693cfef1fe",
+        "bodySha256": "9f7f210e936235af489a779627f71350d70547d37271b30f46e1b12127c54778",
+        "h1": "版本节奏管控指南：升级窗口、跳版风险与回退准备",
+        "metaTitle": "版本节奏管控指南：升级窗口、跳版风险与回退准备",
+        "metaDescription": "面向企业技术与运维负责人的版本节奏决策指南，明确升级判据、执行步骤与验收标准，降低跳版风险与回退成本，适配私有部署场景的版本管理需求。",
+        "keywords": "version upgrade decision",
+        "canonical": "https://fastgpt.cn/guide/version-upgrade-decision",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/version-upgrade-decision | en → https://fastgpt.io/guide/version-upgrade-decision | x-default → https://fastgpt.io/guide/version-upgrade-decision",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "version-upgrade-decision.en.md",
+        "sourceSha256": "8f14682656d0bffd459f0cc42cc1d17b8619a59538a8bac51fc704cb507ae40d",
+        "bodySha256": "be1a6cef0fd71090e93faa24b3b459805acc7f0d1d9c46895eed664838202661",
+        "h1": "Decision Guide for Upgrade Cadence: Version-Skip Risks and Rollback Readiness",
+        "metaTitle": "FastGPT Upgrade Cadence and Rollback Readiness Guide",
+        "metaDescription": "Plan FastGPT upgrade windows, version transitions, dependency checks and rollback readiness with practical acceptance criteria for private deployments.",
+        "keywords": "version upgrade decision",
+        "canonical": "https://fastgpt.io/guide/version-upgrade-decision",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/version-upgrade-decision | en → https://fastgpt.io/guide/version-upgrade-decision | x-default → https://fastgpt.io/guide/version-upgrade-decision",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "deployment-form-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "deployment-form-selection.zh.md",
+        "sourceSha256": "8a5d08ef2c53244177580f8d1116d90603c7825f3b5e9a059c4e120d8a0394d1",
+        "bodySha256": "67ae6ea739657dab04574c080ac8846661fd0985e409fdc997bf71e74a15aba4",
+        "h1": "云服务、社区自托管与商业版私有部署：部署形态决策矩阵",
+        "metaTitle": "FastGPT部署形态选择决策指南",
+        "metaDescription": "针对企业技术负责人与采购方，提供三种FastGPT部署形态的判据矩阵，明确各场景选型依据与切换成本。",
+        "keywords": "FastGPT部署,云服务,自托管,私有部署",
+        "canonical": "https://fastgpt.cn/guide/deployment-form-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/deployment-form-selection | en → https://fastgpt.io/guide/deployment-form-selection | x-default → https://fastgpt.io/guide/deployment-form-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "deployment-form-selection.en.md",
+        "sourceSha256": "70dcaf7e6eab0971cc5cb9d9ff32b89cfb5c74f8d96169cfb1c3773f3ef75e84",
+        "bodySha256": "37ea3285d310979295560219d08669e2e2fc8e6094d8bc8f6c7612d75c8eaa2b",
+        "h1": "Cloud, Community Self-Hosting or Commercial Private Deployment: Six Criteria",
+        "metaTitle": "FastGPT Deployment: Cloud, Self-Hosting or Private Setup",
+        "metaDescription": "Compare FastGPT cloud, community self-hosting and commercial private deployment across operations, data boundaries, upgrades and migration costs.",
+        "keywords": "deployment form selection",
+        "canonical": "https://fastgpt.io/guide/deployment-form-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/deployment-form-selection | en → https://fastgpt.io/guide/deployment-form-selection | x-default → https://fastgpt.io/guide/deployment-form-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "doc-parser-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "doc-parser-selection.zh.md",
+        "sourceSha256": "6abf549dc56c602e25aba27c4486691f66dbc8cfe89b7a878e0735f940c891d4",
+        "bodySha256": "29ccdb03ae9c72496a9c653d8a09c112e156c08d361ed190cd8f2f5a47588905",
+        "h1": "企业文档解析方案选型：内置、增强与外部服务判据指南",
+        "metaTitle": "文档解析方案选型决策矩阵参考",
+        "metaDescription": "为企业技术负责人与采购方提供文档解析方案选型的决策矩阵，涵盖三类方案的判据与切换成本，辅助明确选型条件。",
+        "keywords": "文档解析,方案选型,决策矩阵,增强解析,外部服务",
+        "canonical": "https://fastgpt.cn/guide/doc-parser-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/doc-parser-selection | en → https://fastgpt.io/guide/doc-parser-selection | x-default → https://fastgpt.io/guide/doc-parser-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "doc-parser-selection.en.md",
+        "sourceSha256": "291055fd0cd34387a4ae97950d6825652d2e175f66f2116361eb9940a313fa41",
+        "bodySha256": "6c5949bc59ca60996396909b060be1c05117429851a50a1397e89157674200b3",
+        "h1": "Choosing a Document Parser: Built-in, Enhanced and External Services",
+        "metaTitle": "FastGPT Document Parser Selection and Evaluation Guide",
+        "metaDescription": "Compare built-in, enhanced and external document parsing for FastGPT using file formats, image extraction, operating costs and migration criteria.",
+        "keywords": "doc parser selection",
+        "canonical": "https://fastgpt.io/guide/doc-parser-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/doc-parser-selection | en → https://fastgpt.io/guide/doc-parser-selection | x-default → https://fastgpt.io/guide/doc-parser-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "kb-index-strategy-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "kb-index-strategy-selection.zh.md",
+        "sourceSha256": "a0696108ef46c7e9de08566f98ca197c2ba2a48d002bfa53c5a04701721db88c",
+        "bodySha256": "d88062bb7d4031984889102d704355a396d44bb00e3ed34741027b9dbb1dfda7",
+        "h1": "知识库索引策略决策矩阵：分段、增强索引与多路召回选型指南",
+        "metaTitle": "知识库索引策略选型决策矩阵",
+        "metaDescription": "为企业技术负责人与采购方提供知识库索引策略的判据矩阵，明确各方案适配条件与切换成本",
+        "keywords": "知识库索引, 分段索引, 增强索引, 多路召回",
+        "canonical": "https://fastgpt.cn/guide/kb-index-strategy-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/kb-index-strategy-selection | en → https://fastgpt.io/guide/kb-index-strategy-selection | x-default → https://fastgpt.io/guide/kb-index-strategy-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "kb-index-strategy-selection.en.md",
+        "sourceSha256": "1bf0d53fa6683a50931f35e8a4bb64c846ce1786d79b1c416bbce8f217a4ae7c",
+        "bodySha256": "61cc7fa9287cf95ff0695c561f23383e1c6181b6b122efbb25363afaa678b1d9",
+        "h1": "Knowledge Base Indexing Strategy: Chunking, Enhanced Index and Multi-path Recall",
+        "metaTitle": "FastGPT Knowledge Base Indexing and Retrieval Strategy",
+        "metaDescription": "Evaluate FastGPT chunking, enhanced indexes and multi-path retrieval using document structure, retrieval quality, operating costs and migration effort.",
+        "keywords": "kb index strategy selection",
+        "canonical": "https://fastgpt.io/guide/kb-index-strategy-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/kb-index-strategy-selection | en → https://fastgpt.io/guide/kb-index-strategy-selection | x-default → https://fastgpt.io/guide/kb-index-strategy-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "permission-model-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "permission-model-selection.zh.md",
+        "sourceSha256": "9b35bc9f20b36b6c89e322f58a2832157f53367d536d5b8ba54aaef7f5169375",
+        "bodySha256": "8486fcb6b914d8d496a367fcd8b2f8baf33449b681242c7794df0571674fa029",
+        "h1": "团队、成员与API Key：FastGPT权限边界划分决策矩阵",
+        "metaTitle": "FastGPT权限边界划分决策矩阵",
+        "metaDescription": "面向企业技术负责人与采购方，通过判据矩阵明确FastGPT团队、成员与API Key的权限边界划分方案，提供决策依据与切换代价参考",
+        "keywords": "FastGPT,权限模型,API Key,团队权限,成员权限",
+        "canonical": "https://fastgpt.cn/guide/permission-model-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/permission-model-selection | en → https://fastgpt.io/guide/permission-model-selection | x-default → https://fastgpt.io/guide/permission-model-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "permission-model-selection.en.md",
+        "sourceSha256": "2b5b6b6d43eccdf865f793613b0058b08724f3351bb5140a5ee6865a5bc68a9a",
+        "bodySha256": "76b22e61bc3acf813bcf9be5acaa7f8a43194ebe519444483c5c27cbf9595211",
+        "h1": "Teams, Members and API Keys: Where to Draw Permission Boundaries",
+        "metaTitle": "FastGPT Permissions: Teams, Members and API Key Scope",
+        "metaDescription": "Define FastGPT permission boundaries for teams, members and API keys, with criteria for access control, administration, audits and migration planning.",
+        "keywords": "permission model selection",
+        "canonical": "https://fastgpt.io/guide/permission-model-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/permission-model-selection | en → https://fastgpt.io/guide/permission-model-selection | x-default → https://fastgpt.io/guide/permission-model-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "vector-store-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "vector-store-selection.zh.md",
+        "sourceSha256": "2deadfb309add55e31fcc3890ac87d501c956368f11157013a4d549aaa7e39b5",
+        "bodySha256": "aef864665be79b4c136e71d6ec4190b68e8d59fa73b081d11860b236cc44d5db",
+        "h1": "向量库选型：判据、迁移代价与合理切换场景",
+        "metaTitle": "向量库选型决策参考：判据与迁移代价",
+        "metaDescription": "面向企业技术负责人与采购方的向量库选型指南，涵盖核心判据、切换迁移代价，以及无需决策或暂缓选型的场景，提供客观选型依据。",
+        "keywords": "向量库选型, 向量数据库, 迁移代价, 选型判据",
+        "canonical": "https://fastgpt.cn/guide/vector-store-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/vector-store-selection | en → https://fastgpt.io/guide/vector-store-selection | x-default → https://fastgpt.io/guide/vector-store-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "vector-store-selection.en.md",
+        "sourceSha256": "652cb43b6660e0d7ffb13b767f6b0173c62c35a3d75b7afd38b4f9cf426f6f67",
+        "bodySha256": "e81e0e8dfa9a2e7369b9cb2786b060fd6752a7be79dd99ff6081e8640954ec29",
+        "h1": "Choosing a Vector Store: Criteria, Migration Cost and When Not to Switch",
+        "metaTitle": "FastGPT Vector Store Selection and Migration Planning",
+        "metaDescription": "Compare FastGPT vector stores using deployment constraints, retrieval features, operational capacity and migration costs before changing production.",
+        "keywords": "vector store selection",
+        "canonical": "https://fastgpt.io/guide/vector-store-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/vector-store-selection | en → https://fastgpt.io/guide/vector-store-selection | x-default → https://fastgpt.io/guide/vector-store-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      }
+    },
+    {
+      "slug": "workflow-vs-agent-selection",
+      "group": "decision",
+      "zh": {
+        "sourceName": "workflow-vs-agent-selection.zh.md",
+        "sourceSha256": "2bec4e0c81e503b3a15121ba5333d2d7fe758e1f89005c32bfd1e6f2a1d509fe",
+        "bodySha256": "e501ae596e58b174ee0df8f0e343ecac15216813bc58e0e3608a2beaea20a37e",
+        "h1": "工作流编排与Agent编排：适用边界与切换成本决策指南",
+        "metaTitle": "工作流与Agent编排适用边界与切换成本参考",
+        "metaDescription": "本页为企业技术负责人与采购方提供两类编排方案的决策参考，通过判据矩阵明确适用边界，对比核心差异并评估切换代价，不提供单一推荐答案。",
+        "keywords": "工作流编排,Agent编排,决策判据,切换成本",
+        "canonical": "https://fastgpt.cn/guide/workflow-vs-agent-selection",
+        "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/workflow-vs-agent-selection | en → https://fastgpt.io/guide/workflow-vs-agent-selection | x-default → https://fastgpt.io/guide/workflow-vs-agent-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
+      },
+      "en": {
+        "sourceName": "workflow-vs-agent-selection.en.md",
+        "sourceSha256": "e1ac1a1819038fec2312fc87ce5aff8f3791156e6dcaf30d796c5990e96514d8",
+        "bodySha256": "f9a525b178f3199ef2f87b764c54dbb6fc1494ebd8fb287ad6feb585ed1dcc9b",
+        "h1": "Workflow Orchestration or Agent Orchestration: Boundaries and Switching Cost",
+        "metaTitle": "FastGPT Workflow and Agent Orchestration Decision Guide",
+        "metaDescription": "Compare FastGPT workflows and Agent orchestration using predictability, tool selection, debugging, governance and the cost of changing your approach.",
+        "keywords": "workflow vs agent selection",
+        "canonical": "https://fastgpt.io/guide/workflow-vs-agent-selection",
+        "hreflang": "en | zh-CN → https://fastgpt.cn/guide/workflow-vs-agent-selection | en → https://fastgpt.io/guide/workflow-vs-agent-selection | x-default → https://fastgpt.io/guide/workflow-vs-agent-selection",
+        "schemaTokens": [
+          "Article",
+          "BreadcrumbList"
+        ],
+        "sourceSchema": "Article + BreadcrumbList",
+        "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+        "sourceInternalLinkLabels": [
+          ""
+        ],
+        "assetPolicy": {
+          "status": "source-exception"
+        },
+        "configuredInternalLinks": [],
+        "datePublished": "2026-09-08",
+        "dateModified": "2026-09-08"
       }
     }
   ]

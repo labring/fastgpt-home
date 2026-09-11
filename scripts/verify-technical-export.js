@@ -4,6 +4,10 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
+const { getContentPath, parseFrontMatter } = require('./import-technical-content');
+const { getAlternates, getAnchors, getJsonLdNodes, getJsonLdNode, expectedAlternates,
+  verifyArticleDates } = require('./verify-guide-export');
+const { verifyBodyLinks, verifyReturn, visibleHtml } = require('./lib/technical-export');
 const {
   buildRedirects,
   getTechIdentities,
@@ -39,9 +43,9 @@ function getAttribute(tag, attribute) {
 }
 
 function getCanonical(html, route) {
-  const tag = (html.match(/<link\b[^>]*rel="canonical"[^>]*>/i) || [])[0];
-  assert(tag, `Missing canonical metadata for ${route}`);
-  return getAttribute(tag, 'href');
+  const tags = html.match(/<link\b[^>]*rel="canonical"[^>]*>/gi) || [];
+  assert.equal(tags.length, 1, `${route}: expected one canonical`);
+  return getAttribute(tags[0], 'href');
 }
 
 function getRobots(html, route) {
@@ -88,19 +92,58 @@ function verifyRedirectProjection(actual, expected, label) {
   }
 }
 
-function verifyArticleMetadata(outDir, route, canonical, robots, language) {
-  const html = readHtml(outDir, route);
+function verifyTechnicalPage(
+  html,
+  { identity, identities, document, variant, baseUrls, target, outDir }
+) {
+  const route = variant === 'preview' ? identity.sourcePath : identity.canonicalPath;
+  const canonical = `${baseUrls[identity.locale === 'zh' ? 'cn' : 'io']}${identity.canonicalPath}`;
   assert.equal(getCanonical(html, route), canonical, `${route} has an unexpected canonical`);
-  assert.equal(getRobots(html, route), robots, `${route} has an unexpected robots policy`);
   assert.equal(
-    getHreflang(html, route, language),
-    canonical,
-    `${route} has an unexpected hreflang owner URL`
+    getRobots(html, route),
+    variant === 'preview' ? 'noindex, nofollow' : 'index, follow',
+    `${route} has an unexpected robots policy`
   );
-  assert(
-    html.includes(`"url":"${canonical}"`),
-    `${route} JSON-LD does not resolve to its canonical URL`
+  const context = { variant, slug: identity.sourcePath, surface: 'metadata' };
+  const locales = identities
+    .filter((entry) => entry.canonicalPath === identity.canonicalPath)
+    .map((entry) => entry.locale);
+  assert.deepEqual(
+    getAlternates(html, context),
+    expectedAlternates(identity.canonicalPath, locales, {
+      cn: { host: baseUrls.cn },
+      io: { host: baseUrls.io }
+    }),
+    `${route}: published alternates`
   );
+  const { metadata, body } = document;
+  const nodes = getJsonLdNodes(html, context);
+  const article = getJsonLdNode(
+    nodes,
+    metadata.schema_type === 'Article' ? 'Article' : 'TechArticle',
+    context,
+    'schema'
+  );
+  verifyArticleDates(
+    article,
+    { datePublished: metadata.date_published, dateModified: metadata.date_modified },
+    canonical
+  );
+  getJsonLdNode(nodes, 'BreadcrumbList', context, 'schema');
+  assert.equal((visibleHtml(html).match(/<h1\b/g) || []).length, 1, `${route}: H1 count`);
+  const description = (html.match(/<meta\b[^>]*name="description"[^>]*>/i) || [])[0];
+  assert(getAttribute(description || '', 'content')?.trim(), `${route}: description`);
+  const social = (html.match(/<meta\b[^>]*property="og:url"[^>]*>/i) || [])[0];
+  assert.equal(getAttribute(social || '', 'content'), canonical, `${route}: social URL`);
+  // The export layout contract covers renderer-generated table-of-contents links.
+  for (const link of getAnchors(html).filter((link) => link.href.startsWith('#article-section-')))
+    assert(
+      visibleHtml(html).includes(`id="${link.href.slice(1)}"`),
+      `${route}: unresolved heading ${link.href}`
+    );
+  // Authored schemas validate destinations; legacy imports retain their rendering checks.
+  verifyBodyLinks(html, body, variant, metadata.schema_type ? outDir : undefined);
+  verifyReturn(html, identity.sourcePath, target, variant);
 }
 
 function verifySitemap(outDir, variant, identities, baseUrls) {
@@ -169,6 +212,7 @@ function verifyTechnicalExport({
   variant = resolveSiteVariant(),
   env = process.env,
   identities = getTechIdentities(ROOT),
+  rootDir = ROOT,
   expectedPageCount = identities.length
 } = {}) {
   assert.equal(identities.length, expectedPageCount, 'Unexpected identity count');
@@ -179,20 +223,21 @@ function verifyTechnicalExport({
 
   const baseUrls = getProductionBaseUrls(env);
   const redirectProjection = buildRedirects(ROOT, env);
-  const robots = variant === 'preview' ? 'noindex, nofollow' : 'index, follow';
+  const returns = JSON.parse(fs.readFileSync(path.join(rootDir, 'src/content/tech-center/stage-returns.json'), 'utf8'));
+  const verifyPage = (identity) => {
+    const route = variant === 'preview' ? identity.sourcePath : identity.canonicalPath;
+    const file = path.join(rootDir, getContentPath(rootDir, identity));
+    verifyTechnicalPage(readHtml(outDir, route), { identity, identities, variant, baseUrls,
+      document: parseFrontMatter(fs.readFileSync(file, 'utf8'), file, false),
+      target: returns[identity.sourcePath], outDir });
+  };
 
   if (variant === 'cn' || variant === 'io') {
     const routesToRemove = getTechRoutesToRemove(identities, variant);
     for (const identity of identities) {
       const owner = identity.locale === 'zh' ? 'cn' : 'io';
       if (owner === variant) {
-        verifyArticleMetadata(
-          outDir,
-          identity.canonicalPath,
-          `${baseUrls[owner]}${identity.canonicalPath}`,
-          robots,
-          identity.locale === 'zh' ? 'zh-CN' : 'en'
-        );
+        verifyPage(identity);
       } else if (routesToRemove.has(identity.canonicalPath)) {
         assert(
           !resolveHtmlPath(outDir, identity.canonicalPath),
@@ -207,13 +252,7 @@ function verifyTechnicalExport({
     assert(!resolveHtmlPath(outDir, '/reference/technical-page-not-published'));
   } else if (variant === 'preview') {
     for (const identity of identities) {
-      verifyArticleMetadata(
-        outDir,
-        identity.sourcePath,
-        `${identity.locale === 'zh' ? baseUrls.cn : baseUrls.io}${identity.canonicalPath}`,
-        robots,
-        identity.locale === 'zh' ? 'zh-CN' : 'en'
-      );
+      verifyPage(identity);
       assert(
         !resolveHtmlPath(outDir, identity.canonicalPath),
         `Preview export contains ${identity.canonicalPath}`
@@ -271,6 +310,7 @@ if (require.main === module) {
 }
 
 module.exports = {
+  verifyTechnicalPage,
   getCanonical,
   getHreflang,
   getRobots,

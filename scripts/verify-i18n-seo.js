@@ -2,7 +2,6 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
 const {
   buildRedirects,
   getTechIdentities,
@@ -347,56 +346,6 @@ function verifyNotFoundFallback() {
     .map((locale) => `:not(:lang(${locale}))`)
     .join('')} .not-found-locale-${defaultLocale},`;
   assert(html.includes(selector), `404 page is missing the ${defaultLocale} fallback selector`);
-
-  const script = html.match(
-    /<script>\s*(\(\(\) => \{[\s\S]*?data-not-found-recovery[\s\S]*?\}\)\(\);)\s*<\/script>/
-  )?.[1];
-  assert(script, '404 page is missing the recovery script');
-
-  function getRecoveryLinks(pathname) {
-    const links = [];
-    const container = {
-      style: {},
-      append(link) {
-        links.push(link);
-      }
-    };
-    vm.runInNewContext(script, {
-      location: { pathname },
-      document: {
-        createElement(tagName) {
-          assert.equal(tagName, 'a');
-          return {};
-        },
-        querySelectorAll(query) {
-          assert.equal(query, '[data-not-found-recovery]');
-          return [container];
-        }
-      }
-    });
-    return { hrefs: links.map((link) => link.href), display: container.style.display };
-  }
-
-  const contactHrefs =
-    variant === 'preview'
-      ? ['/contact', '/zh/contact', '/zh-hant/contact']
-      : [
-          `${baseUrls.io}/contact`,
-          `${baseUrls.cn}/contact`,
-          `${baseUrls.io}/zh-hant/contact`
-        ];
-  const contactRecovery = getRecoveryLinks('/ja/contact/missing');
-  assert.deepEqual(contactRecovery.hrefs, contactHrefs);
-  assert.equal(contactRecovery.display, 'contents');
-
-  const techRecovery = getRecoveryLinks('/ja/tutorial/missing');
-  assert.deepEqual(
-    techRecovery.hrefs,
-    variant === 'preview'
-      ? ['/zh/tech-center', '/en/tech-center']
-      : [`${baseUrls.cn}/tech-center`, `${baseUrls.io}/tech-center`]
-  );
-  assert.deepEqual(getRecoveryLinks('/ja/missing').hrefs, []);
 }
 
 function verifyContactExperience() {

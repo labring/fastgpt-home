@@ -13,6 +13,7 @@ export const contactLinkAttributionScript = `
 (function() {
   var keys = ${attributionKeysJson};
   var valueCaps = ${attributionValueCapsJson};
+  var linkDefaults = new WeakMap();
 
   function updateContactHref(event) {
     if (event.defaultPrevented || !(event.target instanceof Element)) return;
@@ -39,21 +40,19 @@ export const contactLinkAttributionScript = `
       return;
     }
 
-    // Keep the source authored in the link separate from source values this
-    // handler has forwarded. Re-read it when React replaces the href in place.
-    var configuredSource = anchor.getAttribute('data-contact-configured-source');
-    var lastGeneratedHref = anchor.getAttribute('data-contact-generated-href');
-    if (configuredSource === null || rawHref !== lastGeneratedHref) {
-      configuredSource = target.searchParams.get('source') || '';
-      anchor.setAttribute('data-contact-configured-source', configuredSource);
+    var linkDefault = linkDefaults.get(anchor);
+    // Component href updates establish a new default; our own writes retain it.
+    if (!linkDefault || linkDefault.href !== rawHref) {
+      linkDefault = { source: target.searchParams.get('source'), href: rawHref };
+      linkDefaults.set(anchor, linkDefault);
     }
 
     var incoming = new URLSearchParams(window.location.search);
     var forwarded = new URLSearchParams();
     keys.forEach(function(key) {
-      // The destination source describes this consultation, not acquisition.
+      // Preserve an explicit landing source, with the CTA source as the default.
       var value = key === 'source'
-        ? (configuredSource || incoming.get(key))
+        ? ((incoming.get(key) || '').trim() || linkDefault.source)
         : incoming.get(key);
       var maxLength = valueCaps[key];
       if (value && maxLength) {
@@ -63,9 +62,8 @@ export const contactLinkAttributionScript = `
     });
 
     target.search = forwarded.toString() ? '?' + forwarded.toString() : '';
-    var generatedHref = target.pathname + target.search + target.hash;
-    anchor.setAttribute('href', generatedHref);
-    anchor.setAttribute('data-contact-generated-href', generatedHref);
+    linkDefault.href = target.pathname + target.search + target.hash;
+    anchor.setAttribute('href', linkDefault.href);
   }
 
   document.addEventListener('pointerdown', updateContactHref, true);

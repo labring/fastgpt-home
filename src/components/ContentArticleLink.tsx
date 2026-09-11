@@ -20,6 +20,7 @@ export default function ContentArticleLink({
   ) : (
     <a
       href={contactUrl}
+      data-consultation-trigger="true"
       {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'content_article_body_consult')}
     >
       {children}

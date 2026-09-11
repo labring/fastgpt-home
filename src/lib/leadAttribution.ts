@@ -394,11 +394,13 @@ export function getAttributionPayload(): AttributionPayload {
   };
 }
 
-/** Return the explicit source for the current business submission only. */
-export function getSubmissionSource(): string {
-  if (typeof window === 'undefined') return DEFAULT_ATTRIBUTION_SOURCE;
-  const source = new URLSearchParams(window.location.search).get('source')?.trim();
-  return source?.slice(0, 128) || DEFAULT_ATTRIBUTION_SOURCE;
+/** Prefer the current landing source, then the submission surface's default. */
+export function getSubmissionSource(fallbackSource = DEFAULT_ATTRIBUTION_SOURCE): string {
+  const source =
+    typeof window === 'undefined'
+      ? ''
+      : new URLSearchParams(window.location.search).get('source')?.trim();
+  return (source || fallbackSource.trim() || DEFAULT_ATTRIBUTION_SOURCE).slice(0, 128);
 }
 
 /** Submit anonymous attribution to CRM after the local browser snapshot changes. */

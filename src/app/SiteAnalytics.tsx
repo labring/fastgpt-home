@@ -2,6 +2,7 @@
 
 import Script from 'next/script';
 import { currentSiteVariant } from '@/lib/siteRouting';
+import { identifyRybbitVisitor } from '@/lib/rybbitIdentity';
 
 export default function SiteAnalytics() {
   const isChinaSite = currentSiteVariant === 'cn';
@@ -52,6 +53,7 @@ export default function SiteAnalytics() {
           defer
           data-site-id={`${rybbitSiteId}`}
           src={rybbitUrl}
+          onReady={identifyRybbitVisitor}
         />
       )}
       {googleId && (

@@ -22,11 +22,15 @@ import {
   getContactOptionLabel
 } from '@/components/contact/contactCopy';
 import { isPreviewSite } from '@/lib/siteRouting';
+import { trackRybbitEvent } from '@/lib/rybbit';
+import { getCurrentCanonicalPageUrl, type RybbitConsultCapture } from '@/lib/rybbitConversion';
+import { RYBBIT_EVENTS } from '@/lib/rybbitEvents';
 
 type ContactFormProps = {
   locale: string;
   variant?: 'modal' | 'page';
   submissionSource?: string;
+  rybbitConsultCapture?: RybbitConsultCapture;
   onSuccess?: () => void;
   onClose?: () => void;
 };
@@ -310,6 +314,7 @@ export default function ContactForm({
   locale,
   variant = 'page',
   submissionSource,
+  rybbitConsultCapture,
   onSuccess,
   onClose
 }: ContactFormProps) {
@@ -443,6 +448,7 @@ export default function ContactForm({
 
     setStatus('submitting');
     try {
+      const resolvedSubmissionSource = getSubmissionSource(submissionSource);
       trackVisit();
       // Attribution is best-effort telemetry and must not block the contact
       // form when its tracking endpoint is unavailable.
@@ -461,29 +467,44 @@ export default function ContactForm({
           budget: values.budget || null,
           notes: values.notes.trim() || null,
           visitor_id: currentVisitorId,
-          source: submissionSource?.slice(0, 128) || getSubmissionSource()
+          source: resolvedSubmissionSource
         })
       });
 
       if (!response.ok) {
-        let detail = '';
-        try {
-          const data = (await response.json()) as { detail?: unknown; message?: unknown };
-          detail =
-            (typeof data.detail === 'string' && data.detail) ||
-            (typeof data.message === 'string' && data.message) ||
-            '';
-        } catch {
-          // Fall back to a localized message when the CRM does not return JSON.
-        }
-        throw new Error(
-          response.status === 429 ? copy.rateLimitError : detail || copy.genericError
-        );
+        // fetchWithTimeout ends when response headers arrive. Do not wait for an
+        // error body that might never finish streaming before restoring retry.
+        throw new Error(response.status === 429 ? copy.rateLimitError : copy.genericError);
       }
+
+      const pageUrl = getCurrentCanonicalPageUrl();
+      const rybbitContext = {
+        crmVisitorId: currentVisitorId,
+        source: rybbitConsultCapture?.source || resolvedSubmissionSource,
+        pageUrl,
+        entryPageUrl: rybbitConsultCapture?.entryPageUrl || pageUrl
+      };
 
       clearContactFormDraft();
       setStatus('success');
       onSuccess?.();
+
+      void Promise.resolve()
+        .then(() => response.json() as Promise<{ submission_id?: unknown }>)
+        .then((result) => {
+          if (typeof result.submission_id === 'string') {
+            trackRybbitEvent(RYBBIT_EVENTS.businessConsultSubmitSuccess, {
+              submission_id: result.submission_id,
+              crm_visitor_id: rybbitContext.crmVisitorId,
+              source: rybbitContext.source,
+              page_url: rybbitContext.pageUrl,
+              entry_page_url: rybbitContext.entryPageUrl
+            });
+          }
+        })
+        .catch(() => {
+          // Analytics failures must not turn a saved CRM lead into an error.
+        });
     } catch (submitError) {
       const isNetworkError =
         submitError instanceof TypeError ||

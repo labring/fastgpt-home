@@ -4,6 +4,7 @@ import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
 import { normalizeLocale } from '@/lib/locales';
 import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
+import { createRybbitConsultCapture, type RybbitConsultCapture } from '@/lib/rybbitConversion';
 
 const CONSULTATION_TRIGGER_SELECTOR = 'a[data-consultation-trigger="true"]';
 
@@ -22,6 +23,7 @@ export default function ConsultationDialog() {
 
   const [open, setOpen] = useState(false);
   const [submissionSource, setSubmissionSource] = useState<string>();
+  const [rybbitConsultCapture, setRybbitConsultCapture] = useState<RybbitConsultCapture>();
   const triggerRef = useRef<HTMLAnchorElement | null>(null);
 
   useEffect(() => {
@@ -41,6 +43,8 @@ export default function ConsultationDialog() {
       if (!trigger) return;
       event.preventDefault();
       triggerRef.current = trigger;
+      const sourceId = trigger.dataset.rybbitPropSource?.trim();
+      setRybbitConsultCapture(sourceId ? createRybbitConsultCapture(sourceId) : undefined);
       setSubmissionSource(pathname?.startsWith('/customers') ? CUSTOMERS_SOURCE : HOME_SOURCE);
       setOpen(true);
     };
@@ -60,6 +64,7 @@ export default function ConsultationDialog() {
       <ConsultationDialogContent
         locale={locale}
         submissionSource={submissionSource}
+        rybbitConsultCapture={rybbitConsultCapture}
         triggerRef={triggerRef}
         onClose={() => setOpen(false)}
       />

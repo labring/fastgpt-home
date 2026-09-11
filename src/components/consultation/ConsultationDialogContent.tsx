@@ -5,6 +5,7 @@ import { Clock3, Network, ShieldCheck, Sparkles } from 'lucide-react';
 import ContactForm from '@/components/contact/ContactForm';
 import { getContactCopy } from '@/components/contact/contactCopy';
 import { localeDirections, normalizeLocale } from '@/lib/locales';
+import type { RybbitConsultCapture } from '@/lib/rybbitConversion';
 import {
   Dialog,
   DialogContent,
@@ -26,6 +27,7 @@ export type ConsultationDialogCopy = {
 type ConsultationDialogContentProps = {
   locale: string;
   submissionSource?: string;
+  rybbitConsultCapture?: RybbitConsultCapture;
   triggerRef: React.RefObject<HTMLAnchorElement | null>;
   onClose: () => void;
 };
@@ -33,6 +35,7 @@ type ConsultationDialogContentProps = {
 export default function ConsultationDialogContent({
   locale,
   submissionSource,
+  rybbitConsultCapture,
   triggerRef,
   onClose
 }: ConsultationDialogContentProps) {
@@ -140,6 +143,7 @@ export default function ConsultationDialogContent({
               locale={locale}
               variant="modal"
               submissionSource={submissionSource}
+              rybbitConsultCapture={rybbitConsultCapture}
               onSuccess={() => setSubmitted(true)}
               onClose={onClose}
             />

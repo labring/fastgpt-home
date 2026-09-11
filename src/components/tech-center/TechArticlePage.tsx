@@ -7,7 +7,8 @@ import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
-import type { TechPublishedLocale } from '@/lib/publishedLocales';
+import { parseMarkdown, getMarkdownHeadings } from '@/lib/markdownParser';
+import guideStyles from '@/components/guide/GuideArticlePage.module.css';
 import type { TechArticle } from '@/lib/tech-center-content';
 import { getTechnicalReviewPath } from '@/lib/technicalRouting';
 import { isPreviewSite } from '@/lib/siteRouting';
@@ -74,10 +75,8 @@ export default function TechArticlePage({
   const sourceLabel = getTechSourceLabelForLocale(article.sourceType, locale);
   const pageTypeLabel =
     article.pageType === article.categoryLabel ? categoryLabel : article.pageType;
-  const localizedMarkdown = article.markdown.replace(
-    /\]\(\/(?:zh|en)(\/[^)]+)\)/g,
-    (_match, href: string) => `](${getTechnicalReviewPath(locale, href)})`
-  );
+  const blocks = parseMarkdown(article.markdown, article.title);
+  const headings = getMarkdownHeadings(blocks, 'article-section');
 
   return (
     <div className="home tech-center-article-page">
@@ -86,7 +85,7 @@ export default function TechArticlePage({
         links={links}
         t={navCta}
         locale={locale}
-        publishedLocales={[locale as TechPublishedLocale]}
+        publishedLocales={article.publishedLocales}
         reviewLocalePaths={isPreviewSite}
       />
       <main className={styles.page}>
@@ -125,10 +124,25 @@ export default function TechArticlePage({
             )}
             <article className={styles.article}>
               <MarkdownContent
-                markdown={localizedMarkdown}
+                markdown={article.markdown}
+                blocks={blocks}
+                locale={locale}
                 title={article.title}
                 headingIdPrefix="article-section"
               />
+              {article.stageReturn && (
+                <nav aria-label={locale === 'zh' ? '返回问题清单' : 'Return to issue list'}>
+                  <p className={styles.returnLink}>
+                    <Link
+                      data-stage-return
+                      href={getTechnicalReviewPath(locale, article.stageReturn.path)}
+                    >
+                      {locale === 'zh' ? '返回问题清单：' : 'Back to issue list: '}
+                      {article.stageReturn.title}
+                    </Link>
+                  </p>
+                </nav>
+              )}
               {article.source && (
                 <footer className={styles.sourceFooter} aria-label={copy.sourceAria}>
                   <span className={styles.sourceLabel}>{copy.sourceLabel}</span>
@@ -183,6 +197,23 @@ export default function TechArticlePage({
                 category={article.category}
                 slug={article.slug}
               />
+              {headings.length > 0 && (
+                <nav
+                  className={guideStyles.toc}
+                  aria-label={locale === 'zh' ? '本页内容' : 'On this page'}
+                >
+                  <p className={guideStyles.tocTitle}>
+                    {locale === 'zh' ? '本页内容' : 'On this page'}
+                  </p>
+                  <ol>
+                    {headings.map((heading) => (
+                      <li key={heading.id}>
+                        <a href={'#' + heading.id}>{heading.text}</a>
+                      </li>
+                    ))}
+                  </ol>
+                </nav>
+              )}
             </aside>
           </div>
         </div>

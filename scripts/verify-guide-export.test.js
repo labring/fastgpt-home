@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
+const { bodyLinks } = require('./lib/technical-export');
 
 const registry = require('../src/content/guides/registry.json');
 const { entryCount } = require('../src/content/guides/policy.json');
@@ -91,7 +92,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
   writeRoute(
     outDir,
     'guide',
-    `<html><head><title>${escapeHtml(
+    `<html><head><meta name="robots" content="index, follow"><title>${escapeHtml(
       hub.title
     )}</title><meta name="description" content="${escapeHtml(
       hub.description
@@ -136,6 +137,14 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
       source.assetPolicy.status === 'required'
         ? `<img src="${source.assetPolicy.path}" alt="${escapeHtml(source.assetPolicy.alt)}">`
         : '';
+    const body = fs.readFileSync(path.join(__dirname, '../src/content/guides', locale, source.sourceName), 'utf8');
+    const bodyTargets = bodyLinks(body).filter((link) => !/^\/(?:zh\/|en\/)?(contact|start)$/.test(link))
+      .map((link) => link.replace(/^\/(zh|en)(\/.*)$/, '$2'));
+    for (const target of bodyTargets) {
+      const route = target.split(/[?#]/)[0];
+      if (!routes.includes(route)) writeRoute(outDir, route.slice(1), '<h1>Linked page</h1>', style);
+    }
+    const visibleLinks = bodyTargets.map((target) => `<a href="${escapeHtml(target)}">Related article</a>`).join('');
     const related = source.configuredInternalLinks
       .map(
         (link) =>
@@ -145,6 +154,8 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
     const schema = [
       {
         '@type': 'Article',
+        datePublished: source.datePublished,
+        dateModified: source.dateModified,
         headline: source.h1,
         description: source.metaDescription,
         inLanguage: locale === 'zh' ? 'zh-CN' : 'en-US',
@@ -173,7 +184,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
     writeRoute(
       outDir,
       `guide/${entry.slug}`,
-      `<html><head><title>${escapeHtml(
+      `<html><head><meta name="robots" content="index, follow"><title>${escapeHtml(
         source.metaTitle
       )}</title><meta name="description" content="${escapeHtml(
         source.metaDescription
@@ -190,7 +201,7 @@ function writeFixture(outDir, variant, { entries = registry.entries, style = 'fl
       )}</p><time datetime="${source.dateModified}">${updatedAt(
         source,
         locale
-      )}</time>${guideSection}${asset}${related}<a href="/guide">${
+      )}</time>${guideSection}${asset}${related}${visibleLinks}<a href="/guide">${
         hub.back
       }</a><footer></footer></body></html>`,
       style
@@ -791,5 +802,31 @@ test('Guide export inventory and CLI regressions reject route, sitemap, and argu
   assert.deepEqual(
     fs.readFileSync(path.join(__dirname, '../src/content/guides/registry.json')),
     sourceBefore
+  );
+});
+
+test('isolated Guide metadata accepts later dates and requires matching schema and visible time', () => {
+  const { verifyArticleDates, verifyUpdatedTime } = require('./verify-guide-export');
+  const canonical = 'https://fastgpt.io/guide/example';
+  const source = {
+    metaDescription: 'Example summary',
+    datePublished: '2026-01-01',
+    dateModified: '2026-02-02'
+  };
+  const article = { mainEntityOfPage: { '@id': canonical }, ...source };
+  const render = (modified) =>
+    `<p>Example summary</p><time dateTime="${modified}">${updatedAt(
+      { ...source, dateModified: modified },
+      'en'
+    )}</time>`;
+  verifyArticleDates(article, source, canonical);
+  verifyUpdatedTime(render(source.dateModified), { source }, { locale: 'en' }, {});
+  const revised = { ...source, dateModified: '2026-03-03' };
+  verifyArticleDates({ ...article, dateModified: revised.dateModified }, revised, canonical);
+  verifyUpdatedTime(render(revised.dateModified), { source: revised }, { locale: 'en' }, {});
+  assert.throws(() => verifyArticleDates(article, revised, canonical), /dateModified/);
+  assert.throws(
+    () => verifyUpdatedTime(render(source.dateModified), { source: revised }, { locale: 'en' }, {}),
+    /updated/
   );
 });

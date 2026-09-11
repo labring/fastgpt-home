@@ -32,11 +32,42 @@ const bilingualSamePathIdentities = [
 ];
 
 function writeArticle(outDir, route, canonical, language, robots) {
+  const contentPath = '/api/shared-guide';
   const filePath = path.join(outDir, `${route.replace(/^\//, '')}.html`);
   fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  for (const lang of ['zh', 'en']) {
+    const source = path.join(outDir, `src/content/tech-center/${lang}${contentPath}.md`);
+    fs.mkdirSync(path.dirname(source), { recursive: true });
+    fs.writeFileSync(
+      source,
+      `---\nslug: /${lang}${contentPath}\ndate_published: 2026-01-01\ndate_modified: 2026-01-02\n---\n# Example article\n`
+    );
+  }
+  fs.writeFileSync(path.join(outDir, 'src/content/tech-center/stage-returns.json'), '{}');
+  const alternates = [
+    ['zh-CN', baseUrls.cn],
+    ['en', baseUrls.io],
+    ['x-default', baseUrls.io]
+  ]
+    .map(([lang, host]) => `<link rel="alternate" hreflang="${lang}" href="${host}${contentPath}">`)
+    .join('');
   fs.writeFileSync(
     filePath,
-    `<link rel="canonical" href="${canonical}"><link rel="alternate" hreflang="${language}" href="${canonical}"><meta name="robots" content="${robots}"><script>{"url":"${canonical}"}</script>`
+    `<link rel="canonical" href="${canonical}">${alternates}
+    <meta name="robots" content="${robots}"><meta name="description" content="Example article">
+    <meta property="og:url" content="${canonical}"><h1>Example article</h1>
+    <script type="application/ld+json">${JSON.stringify({
+      '@graph': [
+        {
+          '@type': 'TechArticle',
+          mainEntityOfPage: { '@id': canonical },
+          url: canonical,
+          datePublished: '2026-01-01',
+          dateModified: '2026-01-02'
+        },
+        { '@type': 'BreadcrumbList' }
+      ]
+    })}</script>`
   );
 }
 
@@ -44,8 +75,9 @@ test('technical identities are unique and retain their owner-relative paths', ()
   const identities = getTechIdentities(root);
   assert.equal(identities.length, EXPECTED_TECHNICAL_PAGE_COUNT);
   assert.equal(new Set(identities.map((identity) => identity.key)).size, identities.length);
-  assert.equal(identities[0].sourcePath, '/zh/tutorial/private-deployment-topology');
-  assert.equal(identities[0].canonicalPath, '/tutorial/private-deployment-topology');
+  const tracer = identities.find((identity) => identity.key === 'zh|/tutorial/private-deployment-topology');
+  assert.equal(tracer.sourcePath, '/zh/tutorial/private-deployment-topology');
+  assert.equal(tracer.canonicalPath, '/tutorial/private-deployment-topology');
 });
 
 test('same-slug technical identities keep only the active production owner route', () => {
@@ -141,6 +173,7 @@ test('technical export verifier accepts the same canonical path in every site va
       assert.deepEqual(
         verifyTechnicalExport({
           outDir,
+          rootDir: outDir,
           nextDir,
           variant,
           env,
@@ -152,6 +185,7 @@ test('technical export verifier accepts the same canonical path in every site va
       const verify = () =>
         verifyTechnicalExport({
           outDir,
+          rootDir: outDir,
           nextDir,
           variant,
           env,
@@ -182,53 +216,6 @@ test('technical export verifier accepts the same canonical path in every site va
       }
       assert.doesNotThrow(verify);
     }
-  } finally {
-    fs.rmSync(tempRoot, { recursive: true, force: true });
-  }
-});
-
-test('technical export verifier accepts a complete China projection', () => {
-  const tempRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-export-'));
-  const outDir = path.join(tempRoot, 'out');
-  const nextDir = path.join(tempRoot, '.next');
-  fs.mkdirSync(outDir, { recursive: true });
-
-  try {
-    const identities = getTechIdentities(root);
-    const sitemap = [];
-    for (const identity of identities.filter((entry) => entry.locale === 'zh')) {
-      const canonical = `${baseUrls.cn}${identity.canonicalPath}`;
-      const routePath = path.join(outDir, `${identity.canonicalPath.slice(1)}.html`);
-      fs.mkdirSync(path.dirname(routePath), { recursive: true });
-      fs.writeFileSync(
-        routePath,
-        `<link rel="canonical" href="${canonical}"><link rel="alternate" hreflang="zh-CN" href="${canonical}"><meta name="robots" content="index, follow"><script>{"url":"${canonical}"}</script>`
-      );
-      sitemap.push(`<url><loc>${canonical}</loc></url>`);
-    }
-
-    fs.writeFileSync(path.join(outDir, 'sitemap.xml'), `<urlset>${sitemap.join('')}</urlset>`);
-    writeCloudflareWorker(outDir, new Map(), false);
-    writeNginxRedirectMap(
-      nextDir,
-      buildRedirects(root, {
-        NEXT_PUBLIC_CN_HOME_URL: baseUrls.cn,
-        NEXT_PUBLIC_IO_HOME_URL: baseUrls.io
-      }).cnRedirects
-    );
-
-    assert.deepEqual(
-      verifyTechnicalExport({
-        outDir,
-        nextDir,
-        variant: 'cn',
-        env: {
-          NEXT_PUBLIC_CN_HOME_URL: baseUrls.cn,
-          NEXT_PUBLIC_IO_HOME_URL: baseUrls.io
-        }
-      }),
-      { count: EXPECTED_TECHNICAL_PAGE_COUNT, variant: 'cn' }
-    );
   } finally {
     fs.rmSync(tempRoot, { recursive: true, force: true });
   }
@@ -278,5 +265,104 @@ test('redirect fixtures preserve query strings for Worker and Nginx targets', as
     );
   } finally {
     fs.rmSync(tempRoot, { recursive: true, force: true });
+  }
+});
+
+test('isolated current metadata and language fixtures govern technical HTML in every variant', () => {
+  const { verifyTechnicalPage } = require('./verify-technical-export');
+  const { verifyReturn, verifyBodyLinks } = require('./lib/technical-export');
+  const identity = { locale: 'zh', canonicalPath: '/api/example', sourcePath: '/zh/api/example' };
+  const canonical = baseUrls.cn + identity.canonicalPath;
+  const document = {
+    metadata: { schema_type: 'TechArticle', date_published: '2026-01-01', date_modified: '2026-02-02' },
+    body: ''
+  };
+  const render = (modified, bilingual) => `<link rel="canonical" href="${canonical}">
+    <link rel="alternate" hrefLang="zh-CN" href="${canonical}">
+    ${
+      bilingual
+        ? `<link rel="alternate" hrefLang="en" href="${baseUrls.io}/api/example">
+      <link rel="alternate" hrefLang="x-default" href="${baseUrls.io}/api/example">`
+        : ''
+    }
+    <meta name="robots" content="ROBOTS"><meta name="description" content="An example article">
+    <meta property="og:url" content="${canonical}"><h1>Example</h1>
+    <script type="application/ld+json">${JSON.stringify({
+      '@graph': [
+        {
+          '@type': 'TechArticle',
+          mainEntityOfPage: { '@id': canonical },
+          datePublished: document.metadata.date_published,
+          dateModified: modified
+        },
+        { '@type': 'BreadcrumbList' }
+      ]
+    })}</script>`;
+  for (const variant of ['cn', 'io', 'preview']) {
+    const html = (date, bilingual) =>
+      render(date, bilingual).replace(
+        'ROBOTS',
+        variant === 'preview' ? 'noindex, nofollow' : 'index, follow'
+      );
+    const options = { identity, identities: [identity], document, variant, baseUrls };
+    verifyTechnicalPage(html('2026-02-02', false), options);
+    assert.throws(() => verifyTechnicalPage(
+      html('2026-02-02', false) + '<a href="#article-section-missing">Missing section</a>', options
+    ), /unresolved heading/);
+    assert.throws(() => verifyTechnicalPage(html('2026-01-01', false), options), /dateModified/);
+    const bilingual = {
+      ...options,
+      identities: [identity, { ...identity, locale: 'en', sourcePath: '/en/api/example' }]
+    };
+    verifyTechnicalPage(html('2026-02-02', true), bilingual);
+    assert.throws(
+      () => verifyTechnicalPage(html('2026-02-02', false), bilingual),
+      /published alternates/
+    );
+    assert.throws(
+      () => verifyTechnicalPage(html('2026-02-02', true), options),
+      /published alternates/
+    );
+    const target = '/zh/guide/example-issues';
+    const href = variant === 'preview' ? target : '/guide/example-issues';
+    const link = `<a data-stage-return="true" href="${href}">Return</a>`;
+    verifyReturn(link, identity.sourcePath, target, variant);
+    for (const broken of [
+      '',
+      link + link,
+      link.replace('example-issues', 'wrong-issues'),
+      `<script>${link}</script>`
+    ])
+      assert.throws(() => verifyReturn(broken, identity.sourcePath, target, variant));
+    const root = fs.mkdtempSync(path.join(os.tmpdir(), 'article-links-'));
+    try {
+      const guide = variant === 'preview' ? '/zh/guide' : '/guide';
+      const faq = variant === 'preview' ? '/zh/faq' : '/faq';
+      for (const route of [guide, faq]) {
+        const file = path.join(root, route + '.html');
+        fs.mkdirSync(path.dirname(file), { recursive: true });
+        fs.writeFileSync(file, '<h1>Hub</h1>');
+      }
+      if (variant === 'preview') {
+        fs.writeFileSync(path.join(root, 'price.html'), '<h1>Pricing</h1>');
+        verifyBodyLinks('<a href="/en/price">Pricing</a>', '[Pricing](/en/price)', variant, root);
+      }
+      const body = '[Guide](/zh/guide)\n[FAQ](/zh/faq)\n`[Example](/zh/missing)`';
+      const links = `<a href="${guide}">Guide</a><a href="${faq}">FAQ</a>`;
+      const pageOptions = { ...options, document: { ...document, body }, outDir: root };
+      verifyTechnicalPage(html('2026-02-02', false) + links, pageOptions);
+      verifyBodyLinks(links, body, variant, root);
+      assert.throws(
+        () => verifyBodyLinks(`<script>${links}</script>`, body, variant, root),
+        /visible link/
+      );
+      fs.unlinkSync(path.join(root, faq + '.html'));
+      assert.throws(() => verifyTechnicalPage(html('2026-02-02', false) + links, pageOptions), /Unresolved internal link/);
+      assert.throws(() => verifyBodyLinks(links, body, variant, root), /Unresolved internal link/);
+      fs.mkdirSync(path.join(root, faq));
+      assert.throws(() => verifyBodyLinks(links, body, variant, root), /Unresolved internal link/);
+    } finally {
+      fs.rmSync(root, { recursive: true, force: true });
+    }
   }
 });

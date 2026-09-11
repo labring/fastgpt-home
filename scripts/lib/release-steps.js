@@ -1,5 +1,8 @@
 function getSourceNodeSteps() {
   return [
+    ['not-found.regression', '404 page recovery component regression', 'scripts/verify-not-found-recovery.test.js', []],
+    ['guide-export.regression', 'Guide export regression', 'scripts/verify-guide-export.test.js', []],
+    ['guide-markdown.regression', 'Guide and reference Markdown regression', 'scripts/verify-guide-markdown.test.js', []],
     [
       'solutions-preview.regression',
       'Solutions preview runner regression',
@@ -91,6 +94,11 @@ function getSourceNodeSteps() {
 
 function getSourceNpmSteps() {
   return [
+    [
+      'contact.regression',
+      'consultation attribution regression',
+      ['verify:consultation-attribution']
+    ],
     ['technical-content.source', 'technical content verification', ['verify:technical-content']],
     [
       'technical-content.regression',

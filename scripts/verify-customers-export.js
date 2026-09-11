@@ -13,6 +13,11 @@ const cnBaseUrl = (process.env.NEXT_PUBLIC_CN_HOME_URL || 'https://fastgpt.cn').
 const customersBaseUrl = `${cnBaseUrl}/customers`;
 const siteVariant = resolveSiteVariant();
 const contactPath = getDefaultLocale(siteVariant) === 'zh' ? '/contact' : '/zh/contact';
+const customersSource = (process.env.NEXT_PUBLIC_CUSTOMERS_SOURCE?.trim() || 'customers').slice(
+  0,
+  128
+);
+const contactHref = `${contactPath}?${new URLSearchParams({ source: customersSource })}`;
 const EXPECTED_SOLUTION_COUNT = 89;
 const EXPECTED_CATEGORY_COUNT = 17;
 const EXPECTED_ROUTE_COUNT = 107;
@@ -53,19 +58,28 @@ function assertCanonical(html, route, htmlFile) {
   );
 }
 
-function assertConsultationLink(html, source, htmlFile, _solutionSlug) {
-  // buildConsultationUrl 只拼站点级 source 参数（utm 参数已移除）。
-  const href = `${contactPath}?source=customers`;
-  const normalizedHtml = html.replaceAll('&amp;', '&');
-  const hrefIndex = normalizedHtml.indexOf(`href="${href}"`);
-  assert(hrefIndex !== -1, `Missing customer consultation link for ${source}: ${htmlFile}`);
-  const anchorStart = normalizedHtml.lastIndexOf('<a', hrefIndex);
-  const anchorEnd = normalizedHtml.indexOf('>', hrefIndex);
-  const anchor = normalizedHtml.slice(anchorStart, anchorEnd + 1);
+function assertConsultationLink(html, source, htmlFile, solutionSlug) {
+  const anchors = html.match(/<a\b[^>]*>/g) || [];
+  const anchor = anchors.find(
+    (tag) =>
+      tag.includes('data-rybbit-event="business_consult_click"') &&
+      tag.includes(`data-rybbit-prop-source="${source}"`)
+  );
+  assert(anchor, `Missing customer consultation CTA for ${source}: ${htmlFile}`);
   assert(
     anchor.includes('data-consultation-trigger="true"'),
-    `Customer consultation link does not open the native form dialog for ${source}: ${htmlFile}`
+    `Customer consultation CTA must open the native dialog: ${htmlFile}`
   );
+  assert(
+    anchor.includes(`href="${contactHref}"`),
+    `Customer consultation must preserve the configured CRM source and acquisition boundary: ${htmlFile}`
+  );
+  if (solutionSlug) {
+    assert(
+      anchor.includes(`data-rybbit-prop-solution_slug="${solutionSlug}"`),
+      `Missing consultation case event context: ${htmlFile}`
+    );
+  }
 }
 
 const solutionFiles = walkFiles(solutionsDir, '.json');

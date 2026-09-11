@@ -18,7 +18,7 @@ export default function CustomersNavbar({ links, t }: CustomersNavbarProps) {
       locale="zh"
       publishedLocales={['zh']}
       consultHref={consultationLink.href}
-      onConsultClick={consultationLink.onClick}
+      consultRybbitSource="navbar_poc"
     />
   );
 }

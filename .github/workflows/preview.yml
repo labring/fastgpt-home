@@ -41,6 +41,9 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
+      - name: Verify footer
+        run: node --test scripts/verify-footer-copy.test.js scripts/verify-footer-tech-link.test.js
+
       - name: Build and verify CRM-disabled preview
         env:
           NEXT_PUBLIC_HOME_URL: https://fastgpt.io

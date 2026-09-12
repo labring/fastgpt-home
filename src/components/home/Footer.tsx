@@ -12,7 +12,7 @@ import { getContactPublishedLocale } from '@/lib/publishedLocales';
 import styles from './Footer.module.css';
 
 type ColumnLink = { label: string; href: string; external?: boolean; cloudEntrySource?: string };
-type Column = { title: string; items: (ColumnLink | { label: string })[] };
+type Column = { title: string; items: ColumnLink[] };
 
 type FooterT = {
   tagline: string;
@@ -181,46 +181,39 @@ export default function Footer({ t, locale }: { t: FooterT; locale?: string }) {
                 <h2 className={styles.heading}>{col.title}</h2>
                 <div className={styles.linkList}>
                   {col.items.map((item) => {
-                    if ('href' in item) {
-                      if (item.cloudEntrySource) {
-                        return (
-                          <CloudEntryLink
-                            key={item.label}
-                            source={item.cloudEntrySource}
-                            targetUrl={item.href}
-                            {...(item.external
-                              ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
-                              : {})}
-                            className={styles.link}
-                          >
-                            {item.label}
-                          </CloudEntryLink>
-                        );
-                      }
+                    if (item.cloudEntrySource) {
                       return (
-                        <a
+                        <CloudEntryLink
                           key={item.label}
-                          href={item.href}
-                          data-consultation-trigger={isContactHref(item.href) ? 'true' : undefined}
+                          source={item.cloudEntrySource}
+                          targetUrl={item.href}
                           {...(item.external
                             ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
-                            : {})}
-                          {...(isContactHref(item.href)
-                            ? rybbitClickAttrs(
-                                RYBBIT_EVENTS.businessConsultClick,
-                                'footer_private_deploy'
-                              )
                             : {})}
                           className={styles.link}
                         >
                           {item.label}
-                        </a>
+                        </CloudEntryLink>
                       );
                     }
                     return (
-                      <span key={item.label} className={styles.link}>
+                      <a
+                        key={item.label}
+                        href={item.href}
+                        data-consultation-trigger={isContactHref(item.href) ? 'true' : undefined}
+                        {...(item.external
+                          ? { target: '_blank', rel: 'noopener noreferrer nofollow' }
+                          : {})}
+                        {...(isContactHref(item.href)
+                          ? rybbitClickAttrs(
+                              RYBBIT_EVENTS.businessConsultClick,
+                              'footer_private_deploy'
+                            )
+                          : {})}
+                        className={styles.link}
+                      >
                         {item.label}
-                      </span>
+                      </a>
                     );
                   })}
                 </div>

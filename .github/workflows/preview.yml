@@ -18,6 +18,10 @@ env:
 jobs:
   build:
     runs-on: ubuntu-24.04
+    env:
+      # Public filing text is available to fork PRs without repository secrets.
+      NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
+      NEXT_PUBLIC_FILING_ADDRESS: '粤ICP备2023048773号'
 
     steps:
       - name: Checkout PR code
@@ -78,6 +82,25 @@ jobs:
           pnpm run verify:i18n-seo
           rm -rf out
           mv .preview-build-crm-disabled out
+
+      - name: Verify preview filing links
+        run: |
+          node <<'NODE'
+          const assert = require('node:assert/strict');
+          const fs = require('node:fs');
+          const html = fs.readFileSync('out/zh.html', 'utf8');
+          const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
+          assert(footer, 'Chinese preview must render its footer');
+          for (const [key, href] of [
+            ['NEXT_PUBLIC_POLICE_FILING', 'https://beian.mps.gov.cn/'],
+            ['NEXT_PUBLIC_FILING_ADDRESS', 'https://beian.miit.gov.cn/']
+          ]) {
+            const value = process.env[key];
+            assert(value, `${key} must be configured`);
+            assert(footer.includes(`href="${href}"`) && footer.includes(value), `${key} must render with its link`);
+          }
+          console.log('Preview filing links verified');
+          NODE
 
       # Save PR number so the deploy workflow knows which PR to comment on.
       - name: Save PR metadata

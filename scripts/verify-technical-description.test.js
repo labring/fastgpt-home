@@ -16,6 +16,7 @@ const context = {
   exports: {},
   process,
   require(name) {
+    if (name === 'react') return require(name);
     if (name === 'node:fs') {
       return {
         existsSync: () => true,

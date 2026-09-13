@@ -55,6 +55,17 @@ jobs:
       - name: Verify footer
         run: node --test scripts/verify-footer-copy.test.js scripts/verify-footer-tech-link.test.js
 
+      - name: Prepare disabled compilation cache
+        id: cache-disabled
+        run: node scripts/prepare-build.js
+
+      - name: Restore disabled compilation cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-disabled.outputs.key }}
+          restore-keys: ${{ steps.cache-disabled.outputs.restore-prefix }}
+
       - name: Build and verify CRM-disabled preview
         run: |
           rm -rf out
@@ -62,6 +73,27 @@ jobs:
           npm run verify:contact
           npm run verify:i18n-seo
           mv out .preview-build-crm-disabled
+
+      - name: Save disabled compilation cache
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-disabled.outputs.key }}
+
+      - name: Prepare configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        id: cache-configured
+        env:
+          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
+        run: node scripts/prepare-build.js
+
+      - name: Restore configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-configured.outputs.key }}
+          restore-keys: ${{ steps.cache-configured.outputs.restore-prefix }}
 
       - name: Build and verify configured CRM preview
         if: steps.coverage.outputs.configured == 'true'
@@ -74,6 +106,13 @@ jobs:
           npm run verify:contact
           npm run verify:i18n-seo
           rm -rf out
+
+      - name: Save configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-configured.outputs.key }}
 
       - name: Select CRM-disabled deployment artifact
         run: mv .preview-build-crm-disabled out

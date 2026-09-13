@@ -542,8 +542,7 @@ export default function VideosPage({
               <a
                 className={styles.primaryCta}
                 href={contactUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                data-consultation-trigger="true"
                 {...rybbitClickAttrs(
                   RYBBIT_EVENTS.businessConsultClick,
                   'learning_center_hero_consult'
@@ -804,8 +803,7 @@ export default function VideosPage({
               <a
                 className={styles.primaryCta}
                 href={contactUrl}
-                target="_blank"
-                rel="noopener noreferrer"
+                data-consultation-trigger="true"
                 {...rybbitClickAttrs(
                   RYBBIT_EVENTS.businessConsultClick,
                   'learning_center_cta_consult'

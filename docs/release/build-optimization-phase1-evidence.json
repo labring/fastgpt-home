@@ -69,5 +69,79 @@
         "stderr": "D-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=2 | Sources and References require public HTTPS anchors\nD-01 editorial-metadata | payload | locale=en | route=/a | surface=page | slug=a | file=a.html | line=3 | fact sources:\nD-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=4 | Sources and References require public HTTPS anchors\nD-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=4 | Sources and References require public HTTPS anchors\nD-01 editorial-metadata | visible | locale=en | route=/z | surface=page | slug=z | file=z.html | line=2 | internal KB:\nD-01 editorial-metadata | visible | locale=en | route=/z | surface=page | slug=z | file=z.html | line=4 | Review cycle:\nD-01 editorial-metadata | payload | locale=en | route=/z | surface=page | slug=z | file=z.html | line=5 | Sign-off:\n"
       }
     ]
+  },
+  "workerAblation": {
+    "measuredAt": "2026-09-13T15:55:43.170Z",
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "htmlFiles": 8546,
+    "baselineRevision": "18bc7904ac3dcae0d6f1150ee645719a1e2896e0",
+    "optimizedRevision": "51f1bd502f465db4585891e53ef70f9233bb5445",
+    "baselineExportArchiveSha256": "43578c56aed4f7f64eeb8432ed35b0a8bf706e0f129127f84a7b21f775031318",
+    "checkerDigests": {
+      "old": "4ca6dafe9d350c118360664b2359fa1b6df0d2ff984f5eaa3eaa8a0dbb52e5fc",
+      "new": "43b5def17aaae3a717b9b2981a679c0ffc6459b8b695ab5aad2c55c8a575ddd0"
+    },
+    "variants": [
+      {
+        "label": "old-serial",
+        "seconds": [
+          219.839377209,
+          219.49089120799997,
+          220.661549
+        ],
+        "medianSeconds": 219.839377209,
+        "maximumRssBytes": [
+          498581504,
+          498466816,
+          523010048
+        ]
+      },
+      {
+        "label": "new-serial",
+        "seconds": [
+          160.79619633299998,
+          161.2691385,
+          161.12002695799993
+        ],
+        "medianSeconds": 161.12002695799993,
+        "maximumRssBytes": [
+          404422656,
+          403685376,
+          403210240
+        ]
+      },
+      {
+        "label": "new-two-workers",
+        "seconds": [
+          85.40502395899995,
+          85.97632145799999,
+          85.26458070899989
+        ],
+        "medianSeconds": 85.40502395899995,
+        "maximumRssBytes": [
+          463519744,
+          462536704,
+          454590464
+        ]
+      }
+    ],
+    "serialImprovementPercent": 26.71011490137908,
+    "twoWorkerImprovementPercent": 61.15117089428165,
+    "decision": "Retain two persistent workers; optimized serial inspection does not meet the 50-percent reduction target.",
+    "diagnosticEquivalence": {
+      "cases": [
+        "clean",
+        "violations",
+        "fatal-error"
+      ],
+      "oldSerialNewSerialAndTwoWorkersEqual": true
+    },
+    "qualifications": [
+      "Three repetitions per configuration over one unchanged complete export; profiling disabled.",
+      "An initial fixture setup failed before inspection because its TypeScript dependency was absent. Dependencies were linked before all nine timed observations.",
+      "These measurements are separate from the historical 195.494/72.795-second comparison."
+    ]
   }
 }

@@ -19,6 +19,8 @@ publication_batch: Week08
 
 This table describes FastGPT development snapshot 5957d06 (2026-09-07). Development definitions can precede a stable release; check the version you deploy.
 
+Preview timing verification sample.
+
 ## How to use this table
 
 This page lists the 137 environment variables available in the FastGPT community edition, grouped by purpose, with the default from the configuration template and whether the line is enabled by default. Environment variables are the most common source of deployment and upgrade problems; this table exists so the values can be checked without cloning the repository.
@@ -264,6 +266,3 @@ The tables above can be checked against the open-source repository. If a specifi
 ## References
 
 - [FastGPT env variables reference — 5957d06](https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/.env.template)
-
-
-Preview timing verification sample.

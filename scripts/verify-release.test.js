@@ -86,6 +86,36 @@ function failure(label, output, variant = 'io') {
   return { id, label, variant, command: 'npm run verify:p1', output };
 }
 
+// Exercise the real CLI and the relevant child boundary; other source gates run once in release.
+function runSourceBoundary(root, executableArgument) {
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'release-source-boundary-'));
+  const preload = path.join(temporary, 'preload.cjs');
+  const trace = path.join(temporary, 'trace.jsonl');
+  fs.writeFileSync(preload, `
+const fs = require('node:fs');
+const child = require('node:child_process');
+const spawn = child.spawnSync;
+child.spawnSync = (command, args, options) => {
+  if (args.includes(${JSON.stringify(executableArgument)})) {
+    fs.appendFileSync(${JSON.stringify(trace)}, JSON.stringify({ command, args }) + '\\n');
+    return spawn(command, args, options);
+  }
+  return { status: 0, stdout: '', stderr: '' };
+};
+`);
+  try {
+    const result = spawnSync(process.execPath, ['--require', preload, 'scripts/verify-release.js', '--source-only'], {
+      cwd: root, encoding: 'utf8',
+      env: { ...process.env, PATH: `${path.join(ROOT, 'node_modules/.bin')}${path.delimiter}${process.env.PATH}` }
+    });
+    assert(fs.existsSync(trace), `Required source boundary did not execute: ${executableArgument}`);
+    assert.equal(fs.readFileSync(trace, 'utf8').trim().split('\n').length, 1);
+    return result;
+  } finally {
+    fs.rmSync(temporary, { recursive: true, force: true });
+  }
+}
+
 test('Nginx security headers follow the active server and cache locations', () => {
   const config = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
   verifyNginxHeaderCoverage(config);
@@ -358,14 +388,7 @@ test('release source checks run content hygiene first and block dirty published 
     // 显式创建 fixture，避免依赖仓库实际产物（该文件已加入 gitignore，干净 CI 中不存在）。
     fs.writeFileSync(buildInfoPath, 'build-info-fixture-bytes');
     const buildInfoBefore = fs.readFileSync(buildInfoPath);
-    const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
-      cwd: fixtureRoot,
-      encoding: 'utf8',
-      env: {
-        ...process.env,
-        PATH: `${path.join(ROOT, 'node_modules/.bin')}${path.delimiter}${process.env.PATH}`
-      }
-    });
+    const result = runSourceBoundary(fixtureRoot, 'scripts/verify-content-hygiene.js');
     assert.equal(result.status, 1, result.stdout + result.stderr);
     assert.match(result.stderr, /content hygiene source verification/);
     assert.match(result.stderr, /temporary-content-hygiene-dirty\.md/);
@@ -427,10 +450,7 @@ test('source-only release leaves the existing build info bytes unchanged', () =>
   try {
     const before = fs.readFileSync(buildInfoPath);
     const releaseRecordBefore = readReleaseRecord();
-    const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
-      cwd: ROOT,
-      encoding: 'utf8'
-    });
+    const result = runSourceBoundary(ROOT, 'tsc');
     assert.equal(result.status, 0, result.stdout + result.stderr);
     assert.deepEqual(fs.readFileSync(buildInfoPath), before);
     assert.deepEqual(readReleaseRecord(), releaseRecordBefore);

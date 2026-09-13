@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import TechArticleRoute, {
   generateMetadata as generateTechArticleMetadata
 } from '@/app/[lang]/[section]/[slug]/page';
-import { getTechArticle, getTechArticleOwnerParams } from '@/lib/tech-center-content';
+import { getTechEntry, getTechArticleOwnerParams } from '@/lib/tech-center-content';
 import { currentSiteVariant, getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
 type RootTechArticleParams = { slug: string };
@@ -12,7 +12,7 @@ function getLocalizedParams(params: Promise<RootTechArticleParams>, section: str
     const defaultLocale = getDefaultLocaleForSiteVariant(currentSiteVariant);
     const preferredLocale = defaultLocale === 'zh' ? 'zh' : 'en';
     return {
-      lang: getTechArticle(section, slug, preferredLocale)
+      lang: getTechEntry(section, slug, preferredLocale)
         ? preferredLocale
         : preferredLocale === 'en'
           ? 'zh'

@@ -110,6 +110,31 @@ export function getFaqData(lang: string): FaqData {
   return faqZhWithLegacyCategories;
 }
 
+const faqCategories = new Map(
+  faqContentLocaleCodes.map((locale) => {
+    const categories = new Map<string, [string, FaqItem][]>();
+    for (const entry of Object.entries(getFaqData(locale))) {
+      const category = entry[1].Category;
+      const group = categories.get(category) || [];
+      group.push(entry);
+      categories.set(category, group);
+    }
+    return [locale, categories] as const;
+  })
+);
+
+export function getRelatedFaqs(routeKey: string, lang: string): [string, FaqItem][] {
+  const locale = resolveFaqLocale(lang);
+  const item = getFaqData(locale)[routeKey];
+  if (!item) return [];
+  const related: [string, FaqItem][] = [];
+  for (const entry of faqCategories.get(locale)?.get(item.Category) || []) {
+    if (entry[0] !== routeKey) related.push(entry);
+    if (related.length === 4) break;
+  }
+  return related;
+}
+
 /** Return an FAQ entry only when it is published in the requested locale. */
 export function getFaqItem(id: string, lang: string): FaqItem | undefined {
   const locale = resolveFaqLocale(lang);

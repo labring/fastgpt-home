@@ -110,3 +110,12 @@ function normalizePath(path: string) {
   const withLeadingSlash = path.startsWith('/') ? path : `/${path}`;
   return withLeadingSlash.replace(/\/$/, '');
 }
+
+/** Apply the CN document/cloud host policy before publication, including serialized copy. */
+export function getPublicationUrls(value: string) {
+  return currentSiteVariant === 'cn'
+    ? value
+        .replaceAll('https://doc.fastgpt.io', 'https://doc.fastgpt.cn')
+        .replaceAll('https://cloud.fastgpt.io', 'https://cloud.fastgpt.cn')
+    : value;
+}

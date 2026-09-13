@@ -8,7 +8,13 @@ const test = require('node:test');
 const root = path.resolve(__dirname, '..');
 const read = (file) => fs.readFileSync(path.join(root, file), 'utf8');
 const footer = read('src/components/home/Footer.tsx');
-const columns = footer.slice(footer.indexOf('type ColumnLink'), footer.indexOf('function buildQrs'));
+const columns = footer.slice(
+  footer.indexOf('type ColumnLink'),
+  footer.indexOf('function buildQrs')
+);
+const publication = read('src/lib/siteRouting.ts')
+  .slice(read('src/lib/siteRouting.ts').indexOf('export function getPublicationUrls'))
+  .replaceAll('export ', '');
 const navigation = read('src/lib/clientNavigation.ts')
   .replace(/^import .*;\n/m, '')
   .replaceAll('export ', '');
@@ -22,12 +28,16 @@ test('footer links every locale to a published technical center on both sites', 
     const context = {
       process: { env: { NEXT_PUBLIC_SITE_VARIANT: variant } },
       siteRoutingManifest: manifest,
+      currentSiteVariant: variant,
       siteConfig: { userUrl: 'https://cloud.fastgpt.io' },
       getContactPublishedLocale: () => 'en',
       getGuideReviewPath: () => '/guide'
     };
     vm.createContext(context);
-    vm.runInContext(stripTypeScriptTypes(`${locales}\n${navigation}\n${columns}`), context);
+    vm.runInContext(
+      stripTypeScriptTypes(`${locales}\n${navigation}\n${publication}\n${columns}`),
+      context
+    );
     for (const locale of Object.keys(manifest.locales)) {
       const dictionary = JSON.parse(read(`src/locales/${locale}.json`));
       const copy = dictionary.Home.footer.columns;

@@ -76,7 +76,7 @@ function assertCaseSensitiveFilesystem() {
     if (!caseSensitive) {
       const [first, second] = findCaseFoldCollisionPair();
       throw new Error(
-        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`
+        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --build-arg BUILD_SOURCE_REVISION=$(git rev-parse HEAD) --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`
       );
     }
   } finally {

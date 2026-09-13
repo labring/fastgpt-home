@@ -14,7 +14,7 @@ function siteArtifactIdentity(root = process.cwd()) {
       .sort(([a], [b]) => a.localeCompare(b))
   );
   const siteVariant = resolveSiteVariant(publicSettings);
-  let sourceRevision = 'unversioned';
+  let sourceRevision = process.env.BUILD_SOURCE_REVISION || 'unversioned';
   try {
     sourceRevision = execFileSync('git', ['rev-parse', 'HEAD'], {
       cwd: root,
@@ -32,7 +32,8 @@ function siteArtifactIdentity(root = process.cwd()) {
     architecture: process.arch,
     siteVariant,
     crmMode: publicSettings.NEXT_PUBLIC_CRM_API_URL?.trim() ? 'configured' : 'disabled',
-    publicSettings
+    publicSettings,
+    cnDomainPolicy: siteVariant === 'cn' ? 'doc-and-cloud-cn-v1' : 'unchanged'
   };
   const cachePrefix = `next-${digest(JSON.stringify({ ...identity, sourceRevision: undefined }))}-`;
   return { ...identity, cachePrefix, cacheKey: `${cachePrefix}${sourceRevision}` };

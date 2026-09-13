@@ -1,4 +1,5 @@
 name: Preview Home Page — Build
+run-name: Preview ${{ github.event.pull_request.number || github.ref }} / ${{ github.sha }}
 
 on:
   workflow_dispatch:
@@ -28,6 +29,7 @@ jobs:
       NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
       NEXT_PUBLIC_CRM_API_URL: ''
+      NEXT_PUBLIC_LANGUAGE_REGION: en-US
       NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
 
     steps:
@@ -49,11 +51,19 @@ jobs:
         id: coverage
         run: node scripts/select-preview-builds.js | tee preview-selection.json
 
-      - name: Verify CRM states and build selection
-        run: node --test scripts/verify-consultation-attribution.test.js scripts/select-preview-builds.test.js
+      - name: Verify shared source once
+        run: npm run verify:release -- --source-only --write-source-record .release-artifacts/source-verification.json
 
-      - name: Verify footer
-        run: node --test scripts/verify-footer-copy.test.js scripts/verify-footer-tech-link.test.js
+      - name: Retain shared source and revision evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-source
+          path: |
+            .release-artifacts/source-verification.json
+            preview-selection.json
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
 
       - name: Prepare disabled compilation cache
         id: cache-disabled
@@ -66,13 +76,8 @@ jobs:
           key: ${{ steps.cache-disabled.outputs.key }}
           restore-keys: ${{ steps.cache-disabled.outputs.restore-prefix }}
 
-      - name: Build and verify CRM-disabled preview
-        run: |
-          rm -rf out
-          npm run build
-          npm run verify:contact
-          npm run verify:i18n-seo
-          mv out .preview-build-crm-disabled
+      - name: Produce verified CRM-disabled preview
+        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json --keep-artifacts
 
       - name: Save disabled compilation cache
         uses: actions/cache/save@v4
@@ -95,17 +100,11 @@ jobs:
           key: ${{ steps.cache-configured.outputs.key }}
           restore-keys: ${{ steps.cache-configured.outputs.restore-prefix }}
 
-      - name: Build and verify configured CRM preview
+      - name: Produce verified configured CRM preview
         if: steps.coverage.outputs.configured == 'true'
         env:
-          # Automated form submissions are intercepted by the real-form regression harness.
           NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-        run: |
-          rm -rf out
-          npm run build
-          npm run verify:contact
-          npm run verify:i18n-seo
-          rm -rf out
+        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json --keep-artifacts
 
       - name: Save configured compilation cache
         if: steps.coverage.outputs.configured == 'true'
@@ -114,15 +113,12 @@ jobs:
           path: .next/cache
           key: ${{ steps.cache-configured.outputs.key }}
 
-      - name: Select CRM-disabled deployment artifact
-        run: mv .preview-build-crm-disabled out
-
       - name: Verify preview filing links
         run: |
           node <<'NODE'
           const assert = require('node:assert/strict');
           const fs = require('node:fs');
-          const html = fs.readFileSync('out/zh.html', 'utf8');
+          const html = fs.readFileSync('.release-artifacts/site/preview-disabled/payload/out/zh.html', 'utf8');
           const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
           assert(footer, 'Chinese preview must render its footer');
           for (const [key, href] of [
@@ -136,13 +132,21 @@ jobs:
           console.log('Preview filing links verified');
           NODE
 
-      # Save PR number so the deploy workflow knows which PR to comment on.
-      - name: Save PR metadata
-        run: echo "${{ github.event.pull_request.number }}" > ./out/pr-number.txt
-
-      - name: Upload build artifact
+      - name: Upload verified disabled preview
         uses: actions/upload-artifact@v4
         with:
-          name: preview-build
-          path: ./out
-          retention-days: 1
+          name: verified-preview
+          path: .release-artifacts/site/preview-disabled
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: Retain configured verification evidence
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: configured-preview-evidence
+          path: .release-artifacts/site/preview-configured
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error

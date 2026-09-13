@@ -353,6 +353,7 @@ test('release source checks run content hygiene first and block dirty published 
       'src/content/guides/temporary-content-hygiene-dirty.md'
     );
     fs.writeFileSync(dirtyPath, '# Temporary fixture\n\nFact Source: internal KB\n');
+    fs.symlinkSync(path.join(ROOT, 'node_modules'), path.join(fixtureRoot, 'node_modules'), 'dir');
     const buildInfoPath = path.join(fixtureRoot, 'tsconfig.tsbuildinfo');
     // 显式创建 fixture，避免依赖仓库实际产物（该文件已加入 gitignore，干净 CI 中不存在）。
     fs.writeFileSync(buildInfoPath, 'build-info-fixture-bytes');
@@ -457,13 +458,11 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     /fix-html-lang\.js && node --test scripts\/verify-content-sidebar-cta\.test\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/
   );
   assert(getSourceExecutionOrder().includes('typescript.source'));
-  for (const pattern of [
-    'src/**',
-    'content/competitors/**',
-    'scripts/verify-content-hygiene.js',
-    'scripts/fix-html-lang.js'
-  ])
-    assert(verificationWorkflow.includes(pattern), pattern);
+  const workflow = require('js-yaml').load(verificationWorkflow);
+  assert(Object.hasOwn(workflow.on, 'pull_request'));
+  assert.equal(workflow.on.workflow_run, undefined);
+  assert(workflow.on.workflow_dispatch !== undefined || Object.hasOwn(workflow.on, 'workflow_dispatch'));
+
 });
 
 test('P1 successful evidence keeps the emitted KiB measurement', () => {

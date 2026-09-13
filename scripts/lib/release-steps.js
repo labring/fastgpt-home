@@ -1,8 +1,43 @@
 function getSourceNodeSteps() {
   return [
-    ['not-found.regression', '404 page recovery component regression', 'scripts/verify-not-found-recovery.test.js', []],
-    ['guide-export.regression', 'Guide export regression', 'scripts/verify-guide-export.test.js', []],
-    ['guide-markdown.regression', 'Guide and reference Markdown regression', 'scripts/verify-guide-markdown.test.js', []],
+    ['footer-copy.regression', 'Footer copy regression', 'scripts/verify-footer-copy.test.js', []],
+    [
+      'footer-links.regression',
+      'Footer links regression',
+      'scripts/verify-footer-tech-link.test.js',
+      []
+    ],
+    ['customers-data.source', 'Customer data verification', 'scripts/verify-customers-data.js', []],
+    [
+      'customers-search.source',
+      'Customer search verification',
+      'scripts/verify-customers-search.js',
+      []
+    ],
+    [
+      'customer-migration.source',
+      'Customer migration verification',
+      'scripts/verify-customer-migration.js',
+      []
+    ],
+    [
+      'not-found.regression',
+      '404 page recovery component regression',
+      'scripts/verify-not-found-recovery.test.js',
+      []
+    ],
+    [
+      'guide-export.regression',
+      'Guide export regression',
+      'scripts/verify-guide-export.test.js',
+      []
+    ],
+    [
+      'guide-markdown.regression',
+      'Guide and reference Markdown regression',
+      'scripts/verify-guide-markdown.test.js',
+      []
+    ],
     [
       'solutions-preview.regression',
       'Solutions preview runner regression',
@@ -94,7 +129,17 @@ function getSourceNodeSteps() {
 
 function getSourceNpmSteps() {
   return [
-    ['preview-selection.regression', 'Preview build selection regression', ['verify:preview-selection']],
+    [
+      'content-hygiene.regression',
+      'Content hygiene regression',
+      ['verify:content-hygiene-regression']
+    ],
+    ['site-artifact.regression', 'Verified site artifact regression', ['verify:site-artifact']],
+    [
+      'preview-selection.regression',
+      'Preview build selection regression',
+      ['verify:preview-selection']
+    ],
     ['content-reuse.regression', 'Content reuse regression', ['verify:content-reuse']],
     ['build-cache.regression', 'Compilation cache regression', ['verify:build-cache']],
     [
@@ -157,6 +202,13 @@ function extractP1SuccessMeasurement(output) {
 
 function getVariantSteps(variant) {
   const steps = [
+    {
+      runner: 'node',
+      id: 'contact.export',
+      label: `Contact export (${variant})`,
+      command: 'scripts/verify-contact-page.js',
+      args: []
+    },
     ...(variant === 'preview'
       ? []
       : [
@@ -232,7 +284,28 @@ function getVariantSteps(variant) {
   return steps;
 }
 
+function getSourceExecutionOrder() {
+  return [
+    ...getSourceNodeSteps().map(([stepId]) => stepId),
+    ...getSourceNpmSteps().map(([stepId]) => stepId),
+    'lint.source',
+    'typescript.source',
+    'guide-content.source'
+  ];
+}
+
+function getVariantExecutionOrder(variant) {
+  return [
+    'variant.build',
+    ...getVariantSteps(variant).map((step) => step.id),
+    'faq.export-cardinality',
+    'guide.export'
+  ];
+}
+
 module.exports = {
+  getSourceExecutionOrder,
+  getVariantExecutionOrder,
   extractP1SuccessMeasurement,
   getSourceNodeSteps,
   getSourceNpmSteps,

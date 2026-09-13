@@ -3,118 +3,141 @@ name: Guide Release Verification
 on:
   workflow_dispatch:
   pull_request:
-    paths:
-      - '.github/workflows/guide-release-verification.yml'
-      - '.github/workflows/fastgpt-home-image.yml'
-      - 'src/**'
-      - 'content/**'
-      - 'content/competitors/**'
-      - 'public/**'
-      - 'scripts/**'
-      - 'docs/release/**'
-      - 'scripts/verify-content-hygiene.js'
-      - 'scripts/fix-html-lang.js'
-      - 'Dockerfile.verify'
-      - 'Dockerfile'
-      - '.dockerignore'
-      - 'next.config.js'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'postcss.config.js'
-      - 'tailwind.config.ts'
-      - 'tsconfig.json'
-      - 'nginx.conf'
-      - 'nginx-security-headers.conf'
-      - 'nginx-embeddable-security-headers.conf'
 
 concurrency:
-  group: guide-release-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: guide-release-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: read
+  actions: read
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
+  source:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    outputs:
+      revision: ${{ steps.inputs.outputs.revision }}
+      matrix: ${{ steps.inputs.outputs.matrix }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - name: Locate shared source verification for this PR
+        if: github.event_name == 'pull_request'
+        id: shared
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { waitForPreviewSource } = require('./scripts/lib/preview-run-inputs.js');
+            core.setOutput('run-id', await waitForPreviewSource(github, context));
+      - uses: actions/download-artifact@v4
+        if: github.event_name == 'pull_request'
+        with:
+          name: verified-source
+          path: source
+          run-id: ${{ steps.shared.outputs.run-id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Resolve verified or manual inputs
+        id: inputs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+            const assert = require('node:assert/strict');
+            const revision = require('node:child_process').execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+            const matrix = [{variant:'cn',crm:'configured'}, {variant:'io',crm:'configured'}];
+            if (context.eventName === 'pull_request') {
+              const selection = JSON.parse(fs.readFileSync('source/preview-selection.json'));
+              const source = JSON.parse(fs.readFileSync('source/.release-artifacts/source-verification.json'));
+              assert.equal(selection.revision, revision, 'Shared source merge result differs');
+              assert.equal(source.sourceRevision, revision);
+              assert.equal(selection.baseRevision, context.payload.pull_request.base.sha);
+              assert.equal(selection.headRevision, context.payload.pull_request.head.sha);
+            } else {
+              matrix.push({variant:'preview',crm:'disabled'}, {variant:'preview',crm:'configured'});
+            }
+            core.setOutput('revision', revision);
+            core.setOutput('matrix', JSON.stringify(matrix));
+      - uses: actions/setup-node@v4
+        if: github.event_name == 'workflow_dispatch'
+        with:
+          node-version: 24
+      - name: Verify manual source once
+        if: github.event_name == 'workflow_dispatch'
+        run: |
+          npm ci
+          npm run verify:release -- --source-only --write-source-record source/.release-artifacts/source-verification.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guide-shared-source
+          path: source/.release-artifacts/source-verification.json
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
+
   verify:
+    needs: source
     runs-on: ubuntu-24.04
     strategy:
       fail-fast: false
       matrix:
-        variant: [cn, io, preview]
+        include: ${{ fromJSON(needs.source.outputs.matrix) }}
     env:
       NEXT_PUBLIC_SITE_VARIANT: ${{ matrix.variant }}
       NEXT_PUBLIC_HOME_URL: ${{ matrix.variant == 'cn' && 'https://fastgpt.cn' || 'https://fastgpt.io' }}
       NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
       NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_LANGUAGE_REGION: ${{ matrix.variant == 'cn' && 'zh-CN' || 'en-US' }}
-
+      NEXT_PUBLIC_USER_URL: ${{ matrix.variant == 'cn' && 'https://cloud.fastgpt.cn' || 'https://cloud.fastgpt.io' }}
+      NEXT_PUBLIC_CRM_API_URL: ${{ matrix.crm == 'configured' && 'https://crm-preview.invalid' || '' }}
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-
+          ref: ${{ needs.source.outputs.revision }}
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-
-      - name: Install locked dependencies
-        run: npm ci
-
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: guide-shared-source
+          path: shared-source
       - name: Identify compilation cache
         id: compilation
         run: node scripts/prepare-build.js
-
-      - name: Restore compatible compilation cache
-        uses: actions/cache/restore@v4
+      - uses: actions/cache/restore@v4
         with:
           path: .next/cache
           key: ${{ steps.compilation.outputs.key }}
           restore-keys: ${{ steps.compilation.outputs.restore-prefix }}
-
-      - name: Verify isolated Site Variant
-        run: npm run verify:release -- --variant ${{ matrix.variant }} --keep-artifacts
-
-      - name: Save compatible compilation cache
-        uses: actions/cache/save@v4
+      - name: Install the existing Nginx black-box dependency
+        if: matrix.variant == 'cn'
+        run: sudo apt-get update && sudo apt-get install -y nginx
+      - name: Produce isolated verified Site Artifact
+        run: npm run verify:release -- --variant ${{ matrix.variant }} --reuse-source shared-source/source-verification.json --keep-artifacts
+      - uses: actions/cache/save@v4
         with:
           path: .next/cache
           key: ${{ steps.compilation.outputs.key }}
-
-      - name: Upload release verification record and artifacts
+      - name: Package and verify the accepted CN runtime
+        if: matrix.variant == 'cn'
+        run: |
+          node -e "require('node:fs').writeFileSync('expected-site.json', JSON.stringify(require('./scripts/lib/site-artifact-identity').siteArtifactIdentity()))"
+          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/cn-configured --identity expected-site.json
+          docker build --file Dockerfile --tag fastgpt-home-verified:${{ github.run_id }} .release-artifacts/site/cn-configured
+          node scripts/verify-url-alias-blackbox.js --variant cn --image fastgpt-home-verified:${{ github.run_id }} --out-dir .release-artifacts/site/cn-configured/payload/out
+      - name: Retain verification evidence and complete deliverable
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: technical-content-release-evidence-${{ matrix.variant }}
+          name: technical-content-release-evidence-${{ matrix.variant }}-${{ matrix.crm }}
           path: .release-artifacts
           retention-days: 90
           if-no-files-found: ignore
           include-hidden-files: true
-
-      - name: Summarize website verification
-        if: always()
-        run: |
-          {
-            echo '## Website verification'
-            echo '- Record: `.release-artifacts/release-verification.json`'
-            echo '- Uploaded artifact: `technical-content-release-evidence-${{ matrix.variant }}` (90-day retention)'
-          } >> "$GITHUB_STEP_SUMMARY"
-
-  verify-runtime:
-    name: Verify Docker runtime
-    runs-on: ubuntu-24.04
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Build runtime image and validate Nginx
-        run: |
-          docker build --target runtime \
-            --build-arg NEXT_PUBLIC_SITE_VARIANT=cn \
-            --build-arg NEXT_PUBLIC_HOME_URL=https://fastgpt.cn \
-            --build-arg NEXT_PUBLIC_CN_HOME_URL=https://fastgpt.cn \
-            --build-arg NEXT_PUBLIC_IO_HOME_URL=https://fastgpt.io \
-            --tag fastgpt-home-runtime:${{ github.sha }} .

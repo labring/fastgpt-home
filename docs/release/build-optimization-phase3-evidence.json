@@ -1,0 +1,46 @@
+{
+  "verifiedRevision": "3b9a67a9",
+  "node": "v24.13.0",
+  "filesystem": "case-sensitive APFS",
+  "status": "export-verified",
+  "startedAt": "2026-09-13T06:24:14.433Z",
+  "finishedAt": "2026-09-13T06:37:25.853Z",
+  "variants": [
+    {
+      "variant": "cn",
+      "outcome": "export-verified",
+      "buildDurationMs": 228985
+    },
+    {
+      "variant": "io",
+      "outcome": "export-verified",
+      "buildDurationMs": 78677
+    },
+    {
+      "variant": "preview",
+      "outcome": "export-verified",
+      "buildDurationMs": 291035
+    }
+  ],
+  "failures": [],
+  "artifacts": [
+    {
+      "variant": "cn",
+      "bytes": 1226247906,
+      "sha256": "988c20affec8c2e1031a8e45ed66229f1d791d7f4e35de8d12bddd20ae1de6ac",
+      "files": 8113
+    },
+    {
+      "variant": "io",
+      "bytes": 568294792,
+      "sha256": "34450c5bd4029eddc93ea02cd1128232810e2da0d81f7ffa60f3dd4e3b588e78",
+      "files": 2712
+    },
+    {
+      "variant": "preview",
+      "bytes": 2714639377,
+      "sha256": "37347579313a26774f4462e9ec0196cfd43bf25d0273d72f52aeb536f471c791",
+      "files": 8888
+    }
+  ]
+}

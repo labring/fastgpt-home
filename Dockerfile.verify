@@ -1,5 +1,9 @@
-# Run with: docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify .
+# Run with: docker build --build-arg BUILD_SOURCE_REVISION=$(git rev-parse HEAD) --file Dockerfile.verify --tag fastgpt-guide-release-verify .
 FROM node:24
+ARG BUILD_SOURCE_REVISION
+ENV BUILD_SOURCE_REVISION=$BUILD_SOURCE_REVISION
+RUN node -e "if (!/^[a-f0-9]{40}$/.test(process.env.BUILD_SOURCE_REVISION)) process.exit(1)"
+RUN apt-get update && apt-get install -y --no-install-recommends nginx && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 

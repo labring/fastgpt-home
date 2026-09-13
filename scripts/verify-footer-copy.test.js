@@ -112,7 +112,13 @@ for (const variant of ['cn', 'io']) {
           assert.deepEqual(
             links.map((link) => link.href),
             [
-              ...baseline.links.map((href) => routes[href] || href),
+              ...baseline.links.map(
+                (href) =>
+                  routes[href] ||
+                  (variant === 'cn'
+                    ? href.replace('https://doc.fastgpt.io', 'https://doc.fastgpt.cn')
+                    : href)
+              ),
               ...filingLinks,
               ...baseline.socials.map((social) => social.href)
             ],

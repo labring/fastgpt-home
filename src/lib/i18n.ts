@@ -10,7 +10,11 @@ import {
   siteConfigZh
 } from '@/config/site';
 import { localeNames, normalizeLocale, supportedLocaleCodes } from '@/lib/locales';
-import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
+import {
+  currentSiteVariant,
+  getDefaultLocaleForSiteVariant,
+  getPublicationUrls
+} from '@/lib/siteRouting';
 
 export { localeNames, normalizeLocale, supportedLocaleCodes };
 
@@ -62,5 +66,8 @@ export const getDictionary = async (locale: string) => {
     locale = 'en';
   }
 
-  return dictionaries[locale]();
+  const dictionary = await dictionaries[locale]();
+  return currentSiteVariant === 'cn'
+    ? JSON.parse(getPublicationUrls(JSON.stringify(dictionary)))
+    : dictionary;
 };

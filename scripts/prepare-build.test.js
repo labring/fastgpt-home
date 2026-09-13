@@ -5,6 +5,55 @@ const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
 
+test('publication inputs are pure data and preserve the trusted execution environment', () => {
+  const { getPublicationInputs } = require('./lib/site-artifact-identity');
+  const digestEnv = () =>
+    require('node:crypto')
+      .createHash('sha256')
+      .update(JSON.stringify({ ...process.env }))
+      .digest('hex');
+  const before = digestEnv();
+  const beforeMarker = process.env.ENV_BOUNDARY_MARKER;
+  const input = {
+    sourceRevision: 'a'.repeat(40),
+    lockfileDigest: 'b'.repeat(64),
+    publicSettings: {
+      NEXT_PUBLIC_SITE_VARIANT: 'preview',
+      NEXT_PUBLIC_CRM_API_URL: '',
+      NEXT_PUBLIC_HOME_URL: 'https://fastgpt.io',
+      NODE_OPTIONS: '--require candidate.cjs',
+      LD_PRELOAD: 'candidate.so',
+      ENV_BOUNDARY_MARKER: 'candidate'
+    }
+  };
+  assert.deepEqual(getPublicationInputs(input), {
+    sourceRevision: input.sourceRevision,
+    lockfileDigest: input.lockfileDigest,
+    siteVariant: 'preview',
+    crmMode: 'disabled',
+    publicSettings: {
+      NEXT_PUBLIC_CRM_API_URL: '',
+      NEXT_PUBLIC_HOME_URL: 'https://fastgpt.io',
+      NEXT_PUBLIC_SITE_VARIANT: 'preview'
+    },
+    cnDomainPolicy: 'unchanged'
+  });
+  assert.equal(
+    digestEnv(),
+    before,
+    'Publication input calculation changed the execution environment'
+  );
+  const child = spawnSync(
+    process.execPath,
+    ['-e', 'process.stdout.write(process.env.ENV_BOUNDARY_MARKER || "clean")'],
+    {
+      encoding: 'utf8'
+    }
+  );
+  assert.equal(child.status, 0, child.stderr);
+  assert.equal(child.stdout, beforeMarker || 'clean');
+});
+
 test('build preparation preserves compatible compilation data and removes stale rendered output', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'site-build-cache-'));
   const write = (file, content = 'fixture') => {

@@ -22,7 +22,7 @@ try {
       'diff',
       '--name-status',
       '-z',
-      '--find-renames',
+      '--no-renames',
       `${pr.base.sha}...${pr.head.sha}`,
       '--'
     ).split('\0');
@@ -30,13 +30,10 @@ try {
     const paths = [];
     while (fields.length) {
       const status = fields.shift();
-      if (!/^(?:[AMD]|R\d+|C\d+)$/.test(status)) throw new Error('Unknown change status');
-      const count = /^[RC]/.test(status) ? 2 : 1;
-      for (let index = 0; index < count; index++) {
-        const file = fields.shift();
-        if (!file) throw new Error('Missing change path');
-        paths.push(file);
-      }
+      if (!/^[AMD]$/.test(status)) throw new Error('Unknown change status');
+      const file = fields.shift();
+      if (!file) throw new Error('Missing change path');
+      paths.push(file);
     }
     const contentOnly =
       paths.length > 0 &&

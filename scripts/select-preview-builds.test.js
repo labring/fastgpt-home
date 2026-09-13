@@ -63,6 +63,40 @@ test('Preview selection uses the entire PR, both rename endpoints, and a conserv
       ],
       ['code-bearing FAQ', () => write('src/faq/en.ts'), 2],
       ['unknown collection', () => write('notes/new.md'), 2],
+      ['body modification', () => write('src/content/guides/en/old.md', 'Changed body'), 1],
+      ['Guide registry', () => write('src/content/guides/registry.json', '[]'), 1],
+      ['technical registry', () => write('src/components/tech-center/entries.json', '[]'), 1],
+      ['competitor article', () => write('content/competitors/new.md'), 1],
+      [
+        'space and tab filename rename',
+        () => git('mv', 'src/content/guides/en/old.md', 'src/content/guides/en/space é\ttab.md'),
+        1
+      ],
+      [
+        'newline filename fallback',
+        () =>
+          git('mv', 'src/content/guides/en/old.md', 'src/content/guides/en/space é\ttab\nline.md'),
+        2
+      ],
+      [
+        'file type change',
+        () => {
+          fs.unlinkSync(path.join(root, 'src/content/guides/en/old.md'));
+          fs.symlinkSync(
+            '../../../scripts/old.js',
+            path.join(root, 'src/content/guides/en/old.md')
+          );
+        },
+        2
+      ],
+      [
+        'mixed files in one commit',
+        () => {
+          write('src/content/guides/en/new.md');
+          write('scripts/new.js');
+        },
+        2
+      ],
       [
         'component and content across commits',
         () => {
@@ -83,6 +117,15 @@ test('Preview selection uses the entire PR, both rename endpoints, and a conserv
       assert.equal(result.baseRevision, base);
       assert.equal(result.headRevision, head);
       assert.equal(result.deployCrmMode, 'disabled');
+      assert.equal(
+        result.reason,
+        label === 'file type change'
+          ? 'unknown-inputs'
+          : expected === 1
+          ? 'published-content-only'
+          : 'mixed-or-code-changes',
+        label
+      );
     }
     assert.equal(select('workflow_dispatch').buildCount, 2);
     assert.equal(select('pull_request', {}).buildCount, 2);

@@ -9,11 +9,16 @@ import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 import { RYBBIT_EVENTS, rybbitClickAttrs } from '@/lib/rybbitEvents';
+import { getLanguageTargets } from '@/lib/languageNavigation';
 import styles from './LearningCenterPage.module.css';
 
 type HomeFooter = ComponentProps<typeof Footer>['t'];
 type NavLink = { label: string; href: string };
 type NavCta = { trial: string; consult: string };
+
+const homeLanguageSwitchPaths = Object.fromEntries(
+  getLanguageTargets({ pathname: '/' }).map(({ locale, href }) => [locale, href])
+);
 
 interface Video {
   _id?: string;
@@ -524,7 +529,14 @@ export default function VideosPage({
   return (
     <div className={styles.page}>
       <HomeThemeFix />
-      <Navbar links={navLinks} t={navCta} locale={locale} publishedLocales={['zh']} />
+      <div className="home">
+        <Navbar
+          links={navLinks}
+          t={navCta}
+          locale={locale}
+          languageSwitchPaths={homeLanguageSwitchPaths}
+        />
+      </div>
       <main className={styles.main}>
         {/* Hero */}
         <section className={styles.hero}>

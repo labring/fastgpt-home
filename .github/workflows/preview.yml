@@ -63,6 +63,7 @@ jobs:
             preview-selection.json
           include-hidden-files: true
           retention-days: 90
+          overwrite: true
           if-no-files-found: error
 
       - name: Prepare disabled compilation cache
@@ -153,6 +154,7 @@ jobs:
           path: .release-artifacts/site/preview-disabled
           include-hidden-files: true
           retention-days: 90
+          overwrite: true
           if-no-files-found: error
 
       - name: Retain configured verification evidence
@@ -163,4 +165,20 @@ jobs:
           path: .release-artifacts/site/preview-configured
           include-hidden-files: true
           retention-days: 90
+          overwrite: true
+          if-no-files-found: error
+
+      # Temporary adapter for measuring the current default-branch deployment transport.
+      - name: Prepare existing deployment transport for benchmark
+        run: |
+          cp -a .release-artifacts/site/preview-disabled/payload/out .benchmark-preview
+          printf '%s' '${{ github.event.pull_request.number }}' > .benchmark-preview/pr-number.txt
+      - name: Upload existing deployment transport for benchmark
+        uses: actions/upload-artifact@v4
+        with:
+          name: preview-build
+          path: .benchmark-preview
+          include-hidden-files: true
+          retention-days: 90
+          overwrite: true
           if-no-files-found: error

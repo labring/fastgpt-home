@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "issue": 256,
+  "batch": "week06",
+  "wave": "g2",
+  "group": "G2",
+  "status": "source-verified",
+  "baseline": {
+    "registryEntryCount": 15,
+    "publishedEntryCount": 15,
+    "slugs": [
+      "saas-platform-enterprise-gaps",
+      "self-build-three-year-tco",
+      "server-sizing-guide",
+      "complex-doc-golden-set",
+      "poc-30-day-design",
+      "database-qa-integration-guide",
+      "scheduled-report-automation",
+      "support-bot-four-steps",
+      "manufacturing-itops-invoice-audit",
+      "pharma-compliance-docs",
+      "education-retail-support-insight",
+      "finance-research-retrieval",
+      "finance-daily-report-automation",
+      "migrate-saas-to-selfhost",
+      "embed-ai-into-product"
+    ],
+    "identitySetSha256": "e90fe79601a663eb234d32cd082c319757ef1b4fd7811e6e43035db13fabcc3d"
+  },
+  "publicSurfaces": [
+    "registry",
+    "owner-pages",
+    "guide-hub",
+    "sitemap",
+    "structured-data",
+    "internal-links",
+    "release-record",
+    "rollback"
+  ],
+  "writeStrategy": "atomic-with-rollback",
+  "postWriteVerification": "required",
+  "identitySet": [
+    {
+      "slug": "soe-policy-qa-deployment",
+      "group": "industry",
+      "locales": ["zh", "en"],
+      "ownerPages": {
+        "cn": "https://fastgpt.cn/guide/soe-policy-qa-deployment",
+        "io": "https://fastgpt.io/guide/soe-policy-qa-deployment"
+      },
+      "localesData": {
+        "zh": {
+          "sourceName": "soe-policy-qa-deployment.zh.md",
+          "sourceSha256": "75a848021bd2e6dfdaf6d446d57753adc04ebb95ff655e59a2f90ce882eb8040",
+          "bodySha256": "70951a59a664aedbe01c71756481569c462348230d70e1412d9f5ae8bac7cfaa",
+          "canonical": "https://fastgpt.cn/guide/soe-policy-qa-deployment",
+          "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/soe-policy-qa-deployment | en → https://fastgpt.io/guide/soe-policy-qa-deployment | x-default → https://fastgpt.io/guide/soe-policy-qa-deployment",
+          "dateModified": "2026-08-27",
+          "schemaTokens": ["Article", "BreadcrumbList"],
+          "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+          "assetStatus": "source-exception",
+          "configuredInternalLinks": []
+        },
+        "en": {
+          "sourceName": "soe-policy-qa-deployment.en.md",
+          "sourceSha256": "545a49d96b5d272d9a337d36711aed05f1d81816a5ad5e00b2f77b5f28672aa6",
+          "bodySha256": "a0fb46d6b6672c1026ffed24c8710fb129d4030f8ea68dec95e05fcff62662f1",
+          "canonical": "https://fastgpt.io/guide/soe-policy-qa-deployment",
+          "hreflang": "en | zh-CN → https://fastgpt.cn/guide/soe-policy-qa-deployment | en → https://fastgpt.io/guide/soe-policy-qa-deployment | x-default → https://fastgpt.io/guide/soe-policy-qa-deployment",
+          "dateModified": "2026-08-27",
+          "schemaTokens": ["Article", "BreadcrumbList"],
+          "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+          "assetStatus": "source-exception",
+          "configuredInternalLinks": []
+        }
+      }
+    }
+  ],
+  "sourceSetSha256": "2977774a7c793b0e4c18c9b1936d4a3d5f78bf54c69dd77333c96726df8b1e65",
+  "result": {
+    "registryEntryCount": 16,
+    "publishedEntryCount": 16,
+    "g2IdentityCount": 1,
+    "ownerPages": { "cn": 1, "io": 1 },
+    "sourceDocumentCount": 2
+  }
+}

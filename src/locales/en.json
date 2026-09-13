@@ -14,7 +14,7 @@
     },
     {
       "label": "Case Studies",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "https://fastgpt.cn/customers"
     }
   ],
   "Pricing": {
@@ -427,6 +427,30 @@
       "trial": "Get Started",
       "consult": "Contact Sales"
     },
+    "consultationDialog": {
+      "badge": "FastGPT Enterprise Services",
+      "title": "Contact FastGPT Sales",
+      "description": "Tell us about your business processes, data, and goals. Our team will reach out within 1 day and combine knowledge base, workflow, and agent capabilities into an actionable, ready-to-deploy plan.",
+      "benefits": [
+        {
+          "title": "From knowledge base to AI applications",
+          "description": "Build trustworthy business Q&A with enterprise knowledge bases and RAG."
+        },
+        {
+          "title": "Orchestrate processes with workflows",
+          "description": "Visually connect models, knowledge bases, and business systems."
+        },
+        {
+          "title": "Build operational AI agents",
+          "description": "Configure agents around real business scenarios for continuous execution."
+        },
+        {
+          "title": "Enterprise deployment & governance",
+          "description": "SaaS and private deployment with permissions and data isolation."
+        }
+      ],
+      "footer": "Trusted across 17 key industries including finance, manufacturing, education, and healthcare"
+    },
     "footer": {
       "tagline": "Enterprise AI Productivity Engine",
       "columns": {
@@ -454,7 +478,8 @@
         },
         "more": {
           "title": "More",
-          "email": "Email: Dennis@sealos.io",
+          "email": "Email: business@fastgpt.io",
+          "phone": "Phone: 4006992336",
           "lanqiao": "Lanqiao × FastGPT Course",
           "book": "FastGPT Official Book (Paperback)"
         }

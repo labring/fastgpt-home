@@ -2,18 +2,26 @@ import { MetadataRoute } from 'next';
 import { faqContentLocaleCodes, getFaqIds } from '@/faq';
 import {
   currentSiteVariant,
+  getLocaleOwner,
   getOwnedFaqUrl,
   getOwnedLocaleUrl,
   getPublishedLocaleCodes
 } from '@/lib/siteRouting';
-import { TECH_ENTRIES } from '@/components/tech-center/data';
+import {
+  getTechCenterPaginationParams,
+  getTechEntriesForLocale
+} from '@/components/tech-center/data';
 import { getTechArticleLastModified, getTechCenterLastModified } from '@/lib/tech-center-content';
-import { getTechnicalSitemapUrl } from '@/lib/technicalRouting';
+import { getTechCenterPagePath, getTechnicalSitemapUrl } from '@/lib/technicalRouting';
 import { getCompareCanonicalUrl, getCompareHubCanonicalUrl } from '@/lib/seo';
 import { getComparisonPagesForLocale } from '@/content/competitor';
 import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
+import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
 import { guideEntries } from '@/content/guides/registry';
 import { getGuideCanonicalUrl } from '@/lib/guideSeo';
+import { getAllPublishedSolutionDetails, getCategories } from '@customers/lib/data';
+import { getSolutionPublicHref } from '@customers/lib/solution-url';
+import { absoluteUrl } from '@customers/lib/site-url';
 
 export const dynamic = 'force-static';
 
@@ -63,10 +71,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  // Simplified Chinese technical content is owned and indexed by fastgpt.cn.
-  if (currentSiteVariant === 'cn') {
-    addEntry(getOwnedLocaleUrl('zh', '/tech-center'), getTechCenterLastModified());
-    for (const article of TECH_ENTRIES) {
+  for (const locale of techPublishedLocaleCodes) {
+    if (currentSiteVariant === 'preview' || getLocaleOwner(locale) !== currentSiteVariant) continue;
+    const localeEntries = getTechEntriesForLocale(locale);
+    if (!localeEntries.length) continue;
+    const lastModified = getTechCenterLastModified(locale);
+    addEntry(getOwnedLocaleUrl(locale, '/tech-center'), lastModified);
+    for (const { page } of getTechCenterPaginationParams(locale)) {
+      addEntry(getOwnedLocaleUrl(locale, getTechCenterPagePath(Number(page))), lastModified);
+    }
+    for (const article of localeEntries) {
       const url = getTechnicalSitemapUrl(article, currentSiteVariant);
       if (url) addEntry(url, getTechArticleLastModified(article));
     }
@@ -94,6 +108,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       getGuideCanonicalUrl(guideLocale, entry.slug),
       new Date(entry[guideLocale].dateModified)
     );
+  }
+
+  // 客户案例中心：仅中文，归 fastgpt.cn；URL 由 JSON 数据源驱动。
+  if (currentSiteVariant === 'cn') {
+    addEntry(absoluteUrl('/'));
+    for (const solution of getAllPublishedSolutionDetails()) {
+      addEntry(
+        absoluteUrl(getSolutionPublicHref(solution)),
+        new Date(solution.updatedAt || solution.createdAt)
+      );
+    }
+    for (const category of getCategories()) {
+      addEntry(absoluteUrl(`/categories/${category.slug}`));
+    }
   }
 
   return entries;

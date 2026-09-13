@@ -1,0 +1,121 @@
+[
+  {
+    "id": "business",
+    "name": "企业通用",
+    "slug": "business",
+    "color": "#934D84",
+    "order": 0
+  },
+  {
+    "id": "legal-affairs-compliance",
+    "name": "法律/法务/合规",
+    "slug": "legal-affairs-compliance",
+    "color": "#4F46E5",
+    "order": 1
+  },
+  {
+    "id": "medical-health-wellness",
+    "name": "医疗/健康/康养",
+    "slug": "medical-health-wellness",
+    "color": "#16B201",
+    "order": 2
+  },
+  {
+    "id": "finance-insurance-wealth-management",
+    "name": "金融/保险/理财",
+    "slug": "finance-insurance-wealth-management",
+    "color": "#C1B41F",
+    "order": 3
+  },
+  {
+    "id": "e-commerce-retail-trade",
+    "name": "电商/零售/商贸",
+    "slug": "e-commerce-retail-trade",
+    "color": "#7D1C1C",
+    "order": 4
+  },
+  {
+    "id": "education-training-research-study",
+    "name": "教育/培训/研学",
+    "slug": "education-training-research-study",
+    "color": "#072327",
+    "order": 5
+  },
+  {
+    "id": "wen-tourism-leisure-entertainment",
+    "name": "文旅/休闲/娱乐",
+    "slug": "wen-tourism-leisure-entertainment",
+    "color": "#DB2777",
+    "order": 6
+  },
+  {
+    "id": "manufacturing-production-processing",
+    "name": "制造/生产/加工",
+    "slug": "manufacturing-production-processing",
+    "color": "#72860E",
+    "order": 7
+  },
+  {
+    "id": "internet-it-technology",
+    "name": "互联网/IT/科技",
+    "slug": "internet-it-technology",
+    "color": "#946B8B",
+    "order": 8
+  },
+  {
+    "id": "energy-minerals-chemicals",
+    "name": "能源/矿产/化工",
+    "slug": "energy-minerals-chemicals",
+    "color": "#DC2626",
+    "order": 9
+  },
+  {
+    "id": "life-household-services",
+    "name": "生活/家政/服务",
+    "slug": "life-household-services",
+    "color": "#EA580C",
+    "order": 10
+  },
+  {
+    "id": "transportation-logistics",
+    "name": "交通/运输/物流",
+    "slug": "transportation-logistics",
+    "color": "#CA8A04",
+    "order": 11
+  },
+  {
+    "id": "media-film-cultural-creativity",
+    "name": "传媒/影视/文创",
+    "slug": "media-film-cultural-creativity",
+    "color": "#059669",
+    "order": 12
+  },
+  {
+    "id": "accommodation-catering-hotels",
+    "name": "住宿/餐饮/酒店",
+    "slug": "accommodation-catering-hotels",
+    "color": "#652424",
+    "order": 13
+  },
+  {
+    "id": "construction-engineering-renovation",
+    "name": "建筑/工程/装修",
+    "slug": "construction-engineering-renovation",
+    "color": "#1F6B2C",
+    "order": 14
+  },
+  {
+    "id": "agriculture-forestry-livestock-fishing",
+    "name": "农林/畜牧/渔业",
+    "slug": "agriculture-forestry-livestock-fishing",
+    "color": "#0891B2",
+    "order": 15
+  },
+  {
+    "id": "government-public-services",
+    "name": "政务/公共/事业",
+    "slug": "government-public-services",
+    "color": "#059669",
+    "order": 16
+  }
+]

@@ -14,7 +14,7 @@
     },
     {
       "label": "Pusat Studi Kasus",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "https://fastgpt.cn/customers"
     }
   ],
   "Pricing": {
@@ -353,24 +353,6 @@
               "label": "Kualitas layanan terstandar"
             }
           ]
-        },
-        {
-          "key": "lcfc",
-          "title": "Tinggalkan Excel 10k baris; query natural language kapan saja",
-          "metrics": [
-            {
-              "value": "240+ min",
-              "label": "Kenaikan produktivitas data"
-            },
-            {
-              "value": "90%",
-              "label": "Pengurangan lag sistem"
-            },
-            {
-              "value": "3%",
-              "label": "Error rate turun menjadi"
-            }
-          ]
         }
       ]
     },
@@ -438,6 +420,30 @@
       "trial": "Mulai",
       "consult": "Hubungi Sales"
     },
+    "consultationDialog": {
+      "badge": "Layanan Enterprise FastGPT",
+      "title": "Hubungi Sales FastGPT",
+      "description": "Ceritakan proses bisnis, kondisi data, dan tujuan Anda. Tim kami akan menghubungi dalam 1 hari dan memadukan knowledge base, workflow, serta kemampuan agent menjadi rencana yang siap diterapkan.",
+      "benefits": [
+        {
+          "title": "Dari knowledge base ke aplikasi AI",
+          "description": "Bangun Q&A bisnis tepercaya dengan knowledge base enterprise dan RAG."
+        },
+        {
+          "title": "Otomatiskan proses dengan workflow",
+          "description": "Hubungkan model, knowledge base, dan sistem bisnis secara visual."
+        },
+        {
+          "title": "Bangun agent yang operasional",
+          "description": "Konfigurasi agent untuk skenario bisnis nyata yang berjalan berkelanjutan."
+        },
+        {
+          "title": "Deployment & tata kelola enterprise",
+          "description": "Dukungan SaaS dan privat dengan izin akses dan isolasi data."
+        }
+      ],
+      "footer": "Dipercaya di 17 industri utama termasuk keuangan, manufaktur, pendidikan, dan kesehatan"
+    },
     "footer": {
       "tagline": "Mesin Produktivitas AI untuk Perusahaan",
       "columns": {
@@ -465,7 +471,8 @@
         },
         "more": {
           "title": "Lainnya",
-          "email": "Email: Dennis@sealos.io",
+          "email": "Email: business@fastgpt.io",
+          "phone": "Telepon: 4006992336",
           "lanqiao": "Kursus Lanqiao × FastGPT",
           "book": "Buku Resmi FastGPT"
         }

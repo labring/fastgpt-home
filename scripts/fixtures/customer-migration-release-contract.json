@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "kind": "customer-migration-release",
+  "authority": "customer-migration",
+  "authorityDigest": "7391b3b44d263cb1da1050b35477ad2776e4c6361c60ee7ce24ca1ad2d153c16",
+  "repository": {
+    "url": "https://github.com/labring/fastgpt-home"
+  },
+  "revision": "2209656",
+  "environments": {
+    "preview": {
+      "legacyTarget": "https://solutions.fastgpt.cn",
+      "terminalTarget": "https://fastgpt.cn",
+      "approvedLegacyTarget": "https://solutions.fastgpt.cn",
+      "approvedTerminalTarget": "https://fastgpt.cn"
+    },
+    "production": {
+      "legacyTarget": "https://solutions.fastgpt.cn",
+      "terminalTarget": "https://fastgpt.cn",
+      "approvedLegacyTarget": "https://solutions.fastgpt.cn",
+      "approvedTerminalTarget": "https://fastgpt.cn"
+    }
+  },
+  "rollback": {
+    "status": "ready",
+    "tested": true,
+    "previousIngressRevision": "1665072",
+    "migrationDigest": "7391b3b44d263cb1da1050b35477ad2776e4c6361c60ee7ce24ca1ad2d153c16",
+    "releaseUnits": {
+      "redirects": "ready",
+      "legacyManifest": "ready"
+    },
+    "restorePaths": [
+      "src/config/customer-migration-authority.json",
+      "src/config/customer-migration-projection.json"
+    ]
+  },
+  "observation": {
+    "status": "passed",
+    "startedAt": "2026-08-25T00:00:00.000Z",
+    "endedAt": "2026-08-28T00:00:00.000Z",
+    "metrics": {
+      "notFound": 0,
+      "serverErrors": 0,
+      "redirects": 230,
+      "preservedAssets": 1,
+      "canonicalMismatches": 0
+    },
+    "crawlFiles": {
+      "robots": "passed",
+      "sitemap": "passed",
+      "llms": "passed"
+    }
+  }
+}

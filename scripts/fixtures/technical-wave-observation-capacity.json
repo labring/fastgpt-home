@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "kind": "technical-wave-observation-capacity",
+  "status": "incomplete",
+  "policySource": "https://github.com/labring/fastgpt-home/issues/252",
+  "sourceArtifacts": [
+    {
+      "path": "scripts/fixtures/technical-center-budget.json",
+      "sha256": "849609a22d571b141fd1893519ca2228e0a9402774ca5946743a016bfc501f54"
+    }
+  ],
+  "limits": {
+    "maxWavePages": 200,
+    "maxWaveArtifactBytes": null,
+    "maxSearchProjectionBytes": null,
+    "maxInitialJavaScriptGzipBytes": 1773974,
+    "maxStaticFileCount": null,
+    "maxBuildDurationSeconds": null
+  }
+}

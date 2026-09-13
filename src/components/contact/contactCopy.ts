@@ -57,6 +57,10 @@ type ContactCopy = {
   rateLimitError: string;
   phoneError: string;
   requiredError: string;
+  validation: {
+    requiredText: string;
+    requiredChoice: string;
+  };
 };
 
 const zh: ContactCopy = {
@@ -100,7 +104,11 @@ const zh: ContactCopy = {
   genericError: '提交失败，请稍后重试。',
   rateLimitError: '提交过于频繁，请稍后再试。',
   phoneError: '请输入有效的手机号或邮箱。',
-  requiredError: '请完整填写必填项。'
+  requiredError: '请完整填写必填项。',
+  validation: {
+    requiredText: '请输入{field}',
+    requiredChoice: '请选择{field}'
+  }
 };
 
 const en: ContactCopy = {
@@ -161,7 +169,11 @@ const en: ContactCopy = {
   genericError: 'Your inquiry could not be sent. Please try again later.',
   rateLimitError: 'Too many submissions. Please try again later.',
   phoneError: 'Enter a valid phone number or email.',
-  requiredError: 'Complete all required fields.'
+  requiredError: 'Complete all required fields.',
+  validation: {
+    requiredText: 'Enter {field}',
+    requiredChoice: 'Select {field}'
+  }
 };
 
 const zhHant: ContactCopy = {
@@ -221,13 +233,401 @@ const zhHant: ContactCopy = {
   genericError: '提交失敗，請稍後重試。',
   rateLimitError: '提交過於頻繁，請稍後再試。',
   phoneError: '請輸入有效的手機號碼或電子郵件。',
-  requiredError: '請完整填寫必填項目。'
+  requiredError: '請完整填寫必填項目。',
+  validation: {
+    requiredText: '請輸入{field}',
+    requiredChoice: '請選擇{field}'
+  }
+};
+
+const ja: ContactCopy = {
+  title: 'FastGPT ビジネス相談',
+  subtitle: 'プロジェクトの概要とご連絡先をご記入ください。FastGPT ビジネスチームが速やかにご連絡いたします。',
+  eyebrow: 'エンタープライズサービス',
+  close: '閉じる',
+  back: '戻る',
+  required: '必須',
+  optional: '任意',
+  fields: {
+    name: 'お名前',
+    phone: 'ご連絡先',
+    company: '会社名',
+    position: '役職',
+    usedOpenSource: 'オープンソース版の利用経験の有無',
+    consultationTopic: 'お問い合わせ内容',
+    projectStage: 'プロジェクトの進行状況',
+    budget: 'プロジェクト予算',
+    notes: '補足事項'
+  },
+  placeholders: {
+    name: 'お名前を入力してください',
+    phone: '電話番号またはメールアドレスを入力してください',
+    company: '会社名を入力してください',
+    position: '役職を入力してください',
+    notes: '利用シーン、導入規模、その他のご要望をご記入いただけます'
+  },
+  selectPlaceholder: '選択してください',
+  options: {
+    是: 'はい',
+    否: 'いいえ',
+    私有化部署: 'オンプレミス導入',
+    'SaaS 版': 'SaaS版',
+    渠道合作: 'チャネル提携',
+    其他: 'その他',
+    '调研阶段/竞品对比': '調査段階／競合比較',
+    '立项阶段/测试使用': '企画段階／テスト利用',
+    '采购阶段/最终决策': '調達段階／最終決定',
+    '0-3 万元': 'CNY 0-30,000',
+    '3-10 万元': 'CNY 30,000-100,000',
+    '10-30 万元': 'CNY 100,000-300,000',
+    '30-100 万元': 'CNY 300,000-1,000,000',
+    '100 万元以上': 'CNY 1,000,000 以上'
+  },
+  submit: '相談を送信',
+  submitting: '送信中',
+  successTitle: '相談を送信しました',
+  successBody: 'お問い合わせを受け付けました。ビジネスチームが速やかにご連絡いたします。',
+  returnHome: 'ホームに戻る',
+  submitAnother: 'もう一件送信する',
+  configErrorTitle: 'ビジネス相談は現在利用できません',
+  configErrorBody: 'CRM サービスが設定されていません。サイト管理者にお問い合わせください。',
+  previewNotice: '現在はプレビュー環境のため、フォームから実際のリードは送信されません。',
+  visitorError: 'CRM の訪問者 ID を取得できませんでした。ブラウザのローカルストレージを許可してから再試行してください。',
+  genericError: '送信に失敗しました。しばらくしてから再試行してください。',
+  rateLimitError: '送信が頻繁すぎます。しばらくしてからもう一度お試しください。',
+  phoneError: '有効な電話番号またはメールアドレスを入力してください。',
+  requiredError: '必須項目をすべて入力してください。',
+  validation: {
+    requiredText: '{field}を入力してください',
+    requiredChoice: '{field}を選択してください'
+  }
+};
+
+const ar: ContactCopy = {
+  title: 'استشارات أعمال FastGPT',
+  subtitle: 'يرجى ترك تفاصيل مشروعك ووسيلة الاتصال، وسيتواصل معك فريق FastGPT التجاري في أقرب وقت ممكن.',
+  eyebrow: 'خدمات المؤسسات',
+  close: 'إغلاق',
+  back: 'رجوع',
+  required: 'مطلوب',
+  optional: 'اختياري',
+  fields: {
+    name: 'الاسم',
+    phone: 'وسيلة الاتصال',
+    company: 'اسم الشركة',
+    position: 'المسمى الوظيفي',
+    usedOpenSource: 'هل استخدمت الإصدار مفتوح المصدر؟',
+    consultationTopic: 'موضوع الاستشارة',
+    projectStage: 'مرحلة المشروع',
+    budget: 'ميزانية المشروع',
+    notes: 'ملاحظات إضافية'
+  },
+  placeholders: {
+    name: 'أدخل اسمك',
+    phone: 'أدخل رقم الهاتف أو البريد الإلكتروني',
+    company: 'أدخل اسم الشركة',
+    position: 'أدخل المسمى الوظيفي',
+    notes: 'يمكنك إضافة سيناريو الاستخدام أو حجم النشر أو أي متطلبات أخرى'
+  },
+  selectPlaceholder: 'يرجى الاختيار',
+  options: {
+    是: 'نعم',
+    否: 'لا',
+    私有化部署: 'نشر خاص',
+    'SaaS 版': 'إصدار SaaS',
+    渠道合作: 'شراكة قنوات',
+    其他: 'أخرى',
+    '调研阶段/竞品对比': 'مرحلة البحث / مقارنة المنتجات',
+    '立项阶段/测试使用': 'مرحلة التخطيط / الاختبار',
+    '采购阶段/最终决策': 'مرحلة الشراء / القرار النهائي',
+    '0-3 万元': 'CNY 0-30,000',
+    '3-10 万元': 'CNY 30,000-100,000',
+    '10-30 万元': 'CNY 100,000-300,000',
+    '30-100 万元': 'CNY 300,000-1,000,000',
+    '100 万元以上': 'أكثر من CNY 1,000,000'
+  },
+  submit: 'إرسال الاستشارة',
+  submitting: 'جارٍ الإرسال',
+  successTitle: 'تم إرسال الاستشارة',
+  successBody: 'لقد استلمنا معلوماتك، وسيتواصل معك فريق الأعمال في أقرب وقت.',
+  returnHome: 'العودة إلى الصفحة الرئيسية',
+  submitAnother: 'إرسال استشارة أخرى',
+  configErrorTitle: 'الاستشارة التجارية غير متاحة حالياً',
+  configErrorBody: 'خدمة CRM غير مهيأة بعد، يرجى التواصل مع مسؤول الموقع.',
+  previewNotice: 'أنت الآن في بيئة معاينة، ولن يتم إرسال بيانات حقيقية من النموذج.',
+  visitorError: 'تعذّر الحصول على معرّف زائر CRM، يرجى السماح للمتصفح باستخدام التخزين المحلي ثم إعادة المحاولة.',
+  genericError: 'فشل الإرسال، يرجى المحاولة لاحقاً.',
+  rateLimitError: 'إرسال متكرر جداً، يرجى المحاولة لاحقاً.',
+  phoneError: 'يرجى إدخال رقم هاتف أو بريد إلكتروني صالح.',
+  requiredError: 'يرجى ملء جميع الحقول المطلوبة.',
+  validation: {
+    requiredText: 'يرجى إدخال {field}',
+    requiredChoice: 'يرجى اختيار {field}'
+  }
+};
+
+const vi: ContactCopy = {
+  title: 'Tư vấn doanh nghiệp FastGPT',
+  subtitle: 'Vui lòng để lại thông tin dự án và thông tin liên hệ, đội ngũ kinh doanh FastGPT sẽ liên hệ với bạn trong thời gian sớm nhất.',
+  eyebrow: 'Dịch vụ doanh nghiệp',
+  close: 'Đóng',
+  back: 'Quay lại',
+  required: 'Bắt buộc',
+  optional: 'Tùy chọn',
+  fields: {
+    name: 'Họ và tên',
+    phone: 'Thông tin liên hệ',
+    company: 'Tên công ty',
+    position: 'Chức vụ',
+    usedOpenSource: 'Đã sử dụng bản mã nguồn mở chưa',
+    consultationTopic: 'Nội dung cần tư vấn',
+    projectStage: 'Giai đoạn dự án',
+    budget: 'Ngân sách dự án',
+    notes: 'Ghi chú bổ sung'
+  },
+  placeholders: {
+    name: 'Vui lòng nhập họ và tên',
+    phone: 'Vui lòng nhập số điện thoại hoặc email',
+    company: 'Vui lòng nhập tên công ty',
+    position: 'Vui lòng nhập chức vụ',
+    notes: 'Có thể bổ sung bối cảnh sử dụng, quy mô triển khai hoặc các nhu cầu khác'
+  },
+  selectPlaceholder: 'Vui lòng chọn',
+  options: {
+    是: 'Có',
+    否: 'Không',
+    私有化部署: 'Triển khai riêng',
+    'SaaS 版': 'Bản SaaS',
+    渠道合作: 'Hợp tác kênh phân phối',
+    其他: 'Khác',
+    '调研阶段/竞品对比': 'Giai đoạn khảo sát / so sánh đối thủ',
+    '立项阶段/测试使用': 'Giai đoạn lập dự án / dùng thử',
+    '采购阶段/最终决策': 'Giai đoạn mua sắm / quyết định cuối cùng',
+    '0-3 万元': 'CNY 0-30,000',
+    '3-10 万元': 'CNY 30,000-100,000',
+    '10-30 万元': 'CNY 100,000-300,000',
+    '30-100 万元': 'CNY 300,000-1,000,000',
+    '100 万元以上': 'Trên CNY 1,000,000'
+  },
+  submit: 'Gửi yêu cầu tư vấn',
+  submitting: 'Đang gửi',
+  successTitle: 'Đã gửi yêu cầu tư vấn',
+  successBody: 'Chúng tôi đã nhận được thông tin của bạn, đội ngũ kinh doanh sẽ sớm liên hệ với bạn.',
+  returnHome: 'Về trang chủ',
+  submitAnother: 'Gửi thêm một yêu cầu khác',
+  configErrorTitle: 'Tư vấn doanh nghiệp tạm thời không khả dụng',
+  configErrorBody: 'Dịch vụ CRM chưa được cấu hình, vui lòng liên hệ quản trị viên trang web.',
+  previewNotice: 'Đây là môi trường xem trước, biểu mẫu sẽ không gửi dữ liệu khách hàng thực.',
+  visitorError: 'Không thể lấy mã định danh khách truy cập CRM, vui lòng cho phép trình duyệt sử dụng bộ nhớ cục bộ rồi thử lại.',
+  genericError: 'Gửi thất bại, vui lòng thử lại sau.',
+  rateLimitError: 'Gửi quá thường xuyên, vui lòng thử lại sau.',
+  phoneError: 'Vui lòng nhập số điện thoại hoặc email hợp lệ.',
+  requiredError: 'Vui lòng điền đầy đủ các trường bắt buộc.',
+  validation: {
+    requiredText: 'Vui lòng nhập {field}',
+    requiredChoice: 'Vui lòng chọn {field}'
+  }
+};
+
+const th: ContactCopy = {
+  title: 'FastGPT การปรึกษาธุรกิจ',
+  subtitle: 'กรุณากรอกข้อมูลโครงการและช่องทางการติดต่อ ทีมธุรกิจของ FastGPT จะติดต่อคุณโดยเร็วที่สุด',
+  eyebrow: 'บริการสำหรับองค์กร',
+  close: 'ปิด',
+  back: 'ย้อนกลับ',
+  required: 'จำเป็น',
+  optional: 'ไม่บังคับ',
+  fields: {
+    name: 'ชื่อ',
+    phone: 'ช่องทางการติดต่อ',
+    company: 'ชื่อบริษัท',
+    position: 'ตำแหน่งงาน',
+    usedOpenSource: 'เคยใช้เวอร์ชันโอเพนซอร์สหรือไม่',
+    consultationTopic: 'หัวข้อที่ต้องการปรึกษา',
+    projectStage: 'ความคืบหน้าของโครงการ',
+    budget: 'งบประมาณโครงการ',
+    notes: 'หมายเหตุเพิ่มเติม'
+  },
+  placeholders: {
+    name: 'กรุณากรอกชื่อ',
+    phone: 'กรุณากรอกเบอร์โทรศัพท์หรืออีเมล',
+    company: 'กรุณากรอกชื่อบริษัท',
+    position: 'กรุณากรอกตำแหน่งงาน',
+    notes: 'สามารถเพิ่มเติมกรณีการใช้งาน ขนาดการติดตั้ง หรือความต้องการอื่นๆ'
+  },
+  selectPlaceholder: 'กรุณาเลือก',
+  options: {
+    是: 'ใช่',
+    否: 'ไม่ใช่',
+    私有化部署: 'การติดตั้งแบบส่วนตัว',
+    'SaaS 版': 'รุ่น SaaS',
+    渠道合作: 'ความร่วมมือผ่านช่องทาง',
+    其他: 'อื่นๆ',
+    '调研阶段/竞品对比': 'ขั้นตอนการวิจัย / เปรียบเทียบคู่แข่ง',
+    '立项阶段/测试使用': 'ขั้นตอนการวางแผน / ทดลองใช้งาน',
+    '采购阶段/最终决策': 'ขั้นตอนการจัดซื้อ / ตัดสินใจขั้นสุดท้าย',
+    '0-3 万元': 'CNY 0-30,000',
+    '3-10 万元': 'CNY 30,000-100,000',
+    '10-30 万元': 'CNY 100,000-300,000',
+    '30-100 万元': 'CNY 300,000-1,000,000',
+    '100 万元以上': 'มากกว่า CNY 1,000,000'
+  },
+  submit: 'ส่งคำปรึกษา',
+  submitting: 'กำลังส่ง',
+  successTitle: 'ส่งคำปรึกษาแล้ว',
+  successBody: 'เราได้รับข้อมูลของคุณแล้ว ทีมธุรกิจจะติดต่อคุณโดยเร็วที่สุด',
+  returnHome: 'กลับหน้าหลัก',
+  submitAnother: 'ส่งอีกครั้ง',
+  configErrorTitle: 'บริการปรึกษาธุรกิจไม่พร้อมใช้งานชั่วคราว',
+  configErrorBody: 'ยังไม่ได้กำหนดค่าบริการ CRM โปรดติดต่อผู้ดูแลเว็บไซต์',
+  previewNotice: 'ขณะนี้อยู่ในสภาพแวดล้อมตัวอย่าง ฟอร์มจะไม่ส่งข้อมูลลูกค้าจริง',
+  visitorError: 'ไม่สามารถระบุตัวตนผู้เยี่ยมชม CRM ได้ โปรดอนุญาตให้เบราว์เซอร์ใช้ที่เก็บข้อมูลในเครื่องแล้วลองอีกครั้ง',
+  genericError: 'ส่งไม่สำเร็จ โปรดลองอีกครั้งในภายหลัง',
+  rateLimitError: 'ส่งบ่อยเกินไป โปรดลองอีกครั้งในภายหลัง',
+  phoneError: 'กรุณากรอกเบอร์โทรศัพท์หรืออีเมลที่ถูกต้อง',
+  requiredError: 'กรุณากรอกข้อมูลในช่องที่จำเป็นให้ครบถ้วน',
+  validation: {
+    requiredText: 'กรุณากรอก{field}',
+    requiredChoice: 'กรุณาเลือก{field}'
+  }
+};
+
+const id: ContactCopy = {
+  title: 'Konsultasi Bisnis FastGPT',
+  subtitle: 'Silakan tinggalkan detail proyek dan informasi kontak Anda, tim bisnis FastGPT akan segera menghubungi Anda.',
+  eyebrow: 'Layanan Perusahaan',
+  close: 'Tutup',
+  back: 'Kembali',
+  required: 'Wajib diisi',
+  optional: 'Opsional',
+  fields: {
+    name: 'Nama',
+    phone: 'Kontak',
+    company: 'Nama Perusahaan',
+    position: 'Jabatan',
+    usedOpenSource: 'Pernah menggunakan versi open source?',
+    consultationTopic: 'Topik yang ingin dikonsultasikan',
+    projectStage: 'Tahap Proyek',
+    budget: 'Anggaran Proyek',
+    notes: 'Catatan Tambahan'
+  },
+  placeholders: {
+    name: 'Masukkan nama',
+    phone: 'Masukkan nomor ponsel atau email',
+    company: 'Masukkan nama perusahaan',
+    position: 'Masukkan jabatan',
+    notes: 'Tambahkan skenario penggunaan, skala deployment, atau kebutuhan lainnya'
+  },
+  selectPlaceholder: 'Pilih',
+  options: {
+    是: 'Ya',
+    否: 'Tidak',
+    私有化部署: 'Deployment privat',
+    'SaaS 版': 'Edisi SaaS',
+    渠道合作: 'Kemitraan channel',
+    其他: 'Lainnya',
+    '调研阶段/竞品对比': 'Tahap riset / perbandingan kompetitor',
+    '立项阶段/测试使用': 'Tahap perencanaan / pengujian',
+    '采购阶段/最终决策': 'Tahap pengadaan / keputusan akhir',
+    '0-3 万元': 'CNY 0-30,000',
+    '3-10 万元': 'CNY 30,000-100,000',
+    '10-30 万元': 'CNY 100,000-300,000',
+    '30-100 万元': 'CNY 300,000-1,000,000',
+    '100 万元以上': 'Di atas CNY 1,000,000'
+  },
+  submit: 'Kirim Konsultasi',
+  submitting: 'Sedang mengirim',
+  successTitle: 'Konsultasi Terkirim',
+  successBody: 'Kami telah menerima informasi Anda, tim bisnis akan segera menghubungi Anda.',
+  returnHome: 'Kembali ke Beranda',
+  submitAnother: 'Kirim Lagi',
+  configErrorTitle: 'Konsultasi Bisnis Tidak Tersedia',
+  configErrorBody: 'Layanan CRM belum dikonfigurasi, silakan hubungi administrator situs.',
+  previewNotice: 'Ini adalah lingkungan pratinjau, formulir tidak akan mengirimkan prospek nyata.',
+  visitorError: 'Tidak dapat memperoleh ID pengunjung CRM, silakan izinkan browser menggunakan penyimpanan lokal lalu coba lagi.',
+  genericError: 'Pengiriman gagal, silakan coba lagi nanti.',
+  rateLimitError: 'Terlalu sering mengirim, silakan coba lagi nanti.',
+  phoneError: 'Masukkan nomor ponsel atau email yang valid.',
+  requiredError: 'Silakan lengkapi semua kolom wajib diisi.',
+  validation: {
+    requiredText: 'Masukkan {field}',
+    requiredChoice: 'Pilih {field}'
+  }
+};
+
+const ms: ContactCopy = {
+  title: 'Perundingan Perniagaan FastGPT',
+  subtitle: 'Sila berikan butiran projek dan maklumat hubungan anda, pasukan perniagaan FastGPT akan menghubungi anda secepat mungkin.',
+  eyebrow: 'Perkhidmatan Perusahaan',
+  close: 'Tutup',
+  back: 'Kembali',
+  required: 'Wajib diisi',
+  optional: 'Opsional',
+  fields: {
+    name: 'Nama',
+    phone: 'Maklumat Hubungan',
+    company: 'Nama Syarikat',
+    position: 'Jawatan',
+    usedOpenSource: 'Pernah menggunakan versi sumber terbuka?',
+    consultationTopic: 'Topik Perundingan',
+    projectStage: 'Peringkat Projek',
+    budget: 'Belanjawan Projek',
+    notes: 'Nota Tambahan'
+  },
+  placeholders: {
+    name: 'Sila masukkan nama',
+    phone: 'Sila masukkan nombor telefon atau e-mel',
+    company: 'Sila masukkan nama syarikat',
+    position: 'Sila masukkan jawatan',
+    notes: 'Boleh tambah senario penggunaan, skala penggunaan atau keperluan lain'
+  },
+  selectPlaceholder: 'Sila pilih',
+  options: {
+    是: 'Ya',
+    否: 'Tidak',
+    私有化部署: 'Penerapan Persendirian',
+    'SaaS 版': 'Edisi SaaS',
+    渠道合作: 'Perkongsian Saluran',
+    其他: 'Lain-lain',
+    '调研阶段/竞品对比': 'Penyelidikan / perbandingan produk',
+    '立项阶段/测试使用': 'Perancangan / ujian',
+    '采购阶段/最终决策': 'Perolehan / keputusan akhir',
+    '0-3 万元': 'CNY 0-30,000',
+    '3-10 万元': 'CNY 30,000-100,000',
+    '10-30 万元': 'CNY 100,000-300,000',
+    '30-100 万元': 'CNY 300,000-1,000,000',
+    '100 万元以上': 'Melebihi CNY 1,000,000'
+  },
+  submit: 'Hantar Pertanyaan',
+  submitting: 'Sedang Menghantar',
+  successTitle: 'Pertanyaan Telah Dihantar',
+  successBody: 'Kami telah menerima maklumat anda, pasukan perniagaan akan menghubungi anda secepat mungkin.',
+  returnHome: 'Kembali ke Laman Utama',
+  submitAnother: 'Hantar Satu Lagi',
+  configErrorTitle: 'Perundingan Perniagaan Tidak Tersedia Buat Masa Ini',
+  configErrorBody: 'Perkhidmatan CRM belum dikonfigurasikan, sila hubungi pentadbir laman web.',
+  previewNotice: 'Ini ialah persekitaran pratonton, borang tidak akan menghantar lead sebenar.',
+  visitorError: 'Tidak dapat mendapatkan ID pelawat CRM, sila benarkan pelayar menggunakan storan setempat dan cuba lagi.',
+  genericError: 'Penghantaran gagal, sila cuba lagi kemudian.',
+  rateLimitError: 'Terlalu kerap menghantar, sila cuba lagi kemudian.',
+  phoneError: 'Sila masukkan nombor telefon atau e-mel yang sah.',
+  requiredError: 'Sila lengkapkan semua medan wajib.',
+  validation: {
+    requiredText: 'Sila masukkan {field}',
+    requiredChoice: 'Sila pilih {field}'
+  }
 };
 
 const contactCopy: Partial<Record<LocaleCode, ContactCopy>> = {
   zh,
   'zh-hant': zhHant,
-  en
+  en,
+  ja,
+  ar,
+  vi,
+  th,
+  id,
+  ms
 };
 
 export function getContactCopy(locale: string): ContactCopy {

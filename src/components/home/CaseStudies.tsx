@@ -75,7 +75,7 @@ function MetricIconSvg({ kind, size }: { kind: MetricIcon; size?: number }) {
   );
 }
 
-type CaseStudy = { key: string; title: string; image: string; metrics: CaseMetric[] };
+type CaseStudy = { key: string; title: string; image?: string; metrics: CaseMetric[] };
 
 export default function CaseStudies({ t, locale }: { t: CasesT; locale: string }) {
   const [index, setIndex] = useState(0);
@@ -268,15 +268,19 @@ function CaseCard({
       }}
     >
       <div className="relative overflow-hidden rounded-none md:rounded-2xl aspect-[3/1] md:h-[200px]">
-        <Image
-          src={data.image}
-          alt=""
-          fill
-          sizes="(min-width: 768px) 650px, 82vw"
-          className="block select-none object-contain md:object-cover"
-          loading="lazy"
-          draggable={false}
-        />
+        {data.image ? (
+          <Image
+            src={data.image}
+            alt=""
+            fill
+            sizes="(min-width: 768px) 650px, 82vw"
+            className="block select-none object-contain md:object-cover"
+            loading="lazy"
+            draggable={false}
+          />
+        ) : (
+          <div className="absolute inset-0 bg-slate-100" />
+        )}
       </div>
 
       <div className="bg-white flex flex-col rounded-xl md:rounded-2xl p-3 md:p-4 gap-4 md:gap-6 md:justify-between">
@@ -334,6 +338,7 @@ function CaseCard({
 
         <a
           href={contactUrl}
+          data-consultation-trigger="true"
           {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_case_study_consult', {
             case: data.key
           })}

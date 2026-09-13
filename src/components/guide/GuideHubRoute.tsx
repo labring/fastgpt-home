@@ -3,10 +3,15 @@ import GuideHubPage, { getGuideHubCopy } from '@/components/guide/GuideHubPage';
 import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
-import { guideEntries } from '@/content/guides/registry';
+import { guideBuildEntries } from '@/content/guides/registry';
 import { getDictionary } from '@/lib/i18n';
-import { getGuideCanonicalUrl, getGuidePath, type GuidePublishedLocale } from '@/lib/guideSeo';
-import { getOwnedLocalePath, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import {
+  GUIDE_PUBLISHED_LOCALES,
+  getGuideCanonicalUrl,
+  getGuidePath,
+  type GuidePublishedLocale
+} from '@/lib/guideSeo';
+import { getOwnedLocaleUrl, isPreviewSite } from '@/lib/siteRouting';
 
 const hubLanguage: Record<GuidePublishedLocale, string> = { en: 'en-US', zh: 'zh-CN' };
 
@@ -18,7 +23,7 @@ export async function GuideHubRoute({ locale }: { locale: GuidePublishedLocale }
     { name: copy.breadcrumbHome, url: getOwnedLocaleUrl(locale) },
     { name: copy.breadcrumbGuide, url: canonical }
   ];
-  const itemList = guideEntries.map((entry, index) => ({
+  const itemList = guideBuildEntries.map((entry, index) => ({
     '@type': 'ListItem',
     position: index + 1,
     name: entry[locale].h1,
@@ -55,7 +60,13 @@ export async function GuideHubRoute({ locale }: { locale: GuidePublishedLocale }
         }}
       />
       <HomeThemeFix />
-      <Navbar links={dict.links} t={dict.Home.navCta} locale={locale} />
+      <Navbar
+        links={dict.links}
+        t={dict.Home.navCta}
+        locale={locale}
+        publishedLocales={GUIDE_PUBLISHED_LOCALES}
+        reviewLocalePaths={isPreviewSite}
+      />
       <GuideHubPage locale={locale} />
       <Footer t={dict.Home.footer} locale={locale} />
     </div>

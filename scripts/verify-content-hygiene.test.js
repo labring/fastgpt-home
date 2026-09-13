@@ -826,7 +826,7 @@ test('HTML CLI recursively scans visible content separately from serialized payl
   withFixture(
     {
       'index.html':
-        '<html><body><h1>Home</h1><section><h2>Sources</h2><a href="https://example.com/research">Public source</a></section></body></html>',
+        '<html><body><article><h1>Home</h1><h2>Sources</h2><a href="https://example.com/research">Public source</a><nav aria-label="Back"><a href="/guide">Back</a></nav></article><footer>Site footer</footer></body></html>',
       'guide/nested/index.html':
         '<html><body><script type="application/json">{"citation":"https://example.com/payload"}</script><p>Clean page</p></body></html>'
     },

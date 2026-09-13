@@ -192,6 +192,37 @@ function getTechIdentities(rootDir) {
   return identities;
 }
 
+function getTechRoutesToRemove(identities, variant) {
+  const routes = new Set();
+  const canonicalOwners = new Map();
+
+  for (const identity of identities) {
+    const owners = canonicalOwners.get(identity.canonicalPath) || new Set();
+    if (identity.locale === 'zh') owners.add('cn');
+    if (identity.locale === 'en') owners.add('io');
+    canonicalOwners.set(identity.canonicalPath, owners);
+
+    if (variant === 'preview') routes.add(identity.canonicalPath);
+    else routes.add(identity.sourcePath);
+  }
+
+  if (variant === 'preview') {
+    routes.add('/tech-center');
+    routes.add('/tech-center/page');
+    return routes;
+  }
+
+  routes.add('/zh/tech-center');
+  routes.add('/en/tech-center');
+  if (![...canonicalOwners.values()].some((owners) => owners.has(variant))) {
+    routes.add('/tech-center');
+  }
+  for (const [canonicalPath, owners] of canonicalOwners) {
+    if (!owners.has(variant)) routes.add(canonicalPath);
+  }
+  return routes;
+}
+
 function addRedirect(redirects, source, target) {
   const setRedirect = (sourcePath) => {
     const currentTarget = redirects.get(sourcePath);
@@ -353,6 +384,7 @@ module.exports = {
   getPublishedFaqIds,
   getTechIdentities,
   getTechPaths,
+  getTechRoutesToRemove,
   parseNginxRedirectMap,
   writeCloudflareWorker,
   writeNginxRedirectMap

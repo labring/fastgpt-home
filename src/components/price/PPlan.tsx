@@ -221,6 +221,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                 ) : (
                   <Link
                     href={contactUrl}
+                    data-consultation-trigger="true"
                     className="mt-auto pt-4"
                     {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'price_cloud_custom')}
                   >
@@ -305,6 +306,7 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
 
                 <Link
                   href={contactLink ? contactUrl : buttonConfig.href}
+                  data-consultation-trigger={contactLink ? 'true' : undefined}
                   {...(contactLink
                     ? {}
                     : { target: '_blank', rel: 'noopener noreferrer nofollow' })}

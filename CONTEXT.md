@@ -44,6 +44,10 @@ _Avoid_: Supported languages, available languages
 A temporary website used to review every supported locale before release. Search indexing is outside its purpose.
 _Avoid_: Other domain, preview domain
 
+**China Site Analytics**:
+Traffic and visitor-behavior measurements for the China Site, with a reporting scope separate from the International Site and Preview Hosts.
+_Avoid_: Global site analytics, shared cross-site analytics
+
 **FAQ Social Preview**:
 The branded title, description, and image shown when an FAQ list or detail URL is shared.
 _Avoid_: Thumbnail, banner
@@ -51,6 +55,24 @@ _Avoid_: Thumbnail, banner
 **P0 Remediation**:
 A release-blocking website correction that restores a required security, discoverability, or social-preview outcome identified by the current audit.
 _Avoid_: General cleanup, redesign
+
+## Conversion
+
+**内容咨询入口**:
+技术中心、指南文章与 FAQ 详情页中引导读者提交商务咨询、业务需求或 POC 评估的转化入口。
+_Avoid_: 留资 CTA, 咨询按钮
+
+**案例咨询入口**:
+案例中心中引导访客提交商务咨询、业务需求或 POC 评估的转化入口；导航、首页、空状态与案例详情中的同类入口属于同一概念。
+_Avoid_: CTA, 表单弹窗, POC 按钮
+
+**商务咨询页**:
+承载商务咨询与 POC 评估需求提交的独立页面，可通过咨询链接直接访问。
+_Avoid_: 咨询弹窗, 内嵌表单
+
+**商务咨询弹窗**:
+访客通过站内商务咨询入口打开的需求提交窗口，在当前页面承载商务咨询、业务需求或 POC 评估。
+_Avoid_: 商务咨询页, 社群二维码
 
 ## Content
 

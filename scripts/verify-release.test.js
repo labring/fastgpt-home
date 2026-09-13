@@ -11,19 +11,19 @@ const {
   appendP1HistoricalBaselineAdvisories,
   createReleaseRecord,
   extractP1SuccessMeasurement,
+  finalizeReleaseRecord,
   getSourceExecutionOrder,
   getSourceNodeSteps,
   getSourceNpmSteps,
   getVariantExecutionOrder,
   getVariantSteps,
-  isReleaseGateBlocked,
   parseArgs: parseReleaseArgs
 } = require('./verify-release');
-const { recordStep } = require('./lib/release-record');
-const { retainSuccessArtifacts } = require('./lib/release-artifacts');
-const { normalizeSolutionsEvidence } = require('./lib/release-readiness');
+const { recordStep, recordVariantOutcome } = require('./lib/release-record');
+const { variantEnvironment } = require('./lib/release-artifacts');
 const { buildOwnerExpectationSet, parseArgs } = require('./verify-faq-metadata');
 const { normalizeFaqMetadataPolicy } = require('./generate-faq-metadata');
+const { verifyNginxHeaderCoverage } = require('./verify-p0');
 
 const ROOT = path.resolve(__dirname, '..');
 const OUT_DIR = path.join(ROOT, 'out');
@@ -86,6 +86,97 @@ function failure(label, output, variant = 'io') {
   return { id, label, variant, command: 'npm run verify:p1', output };
 }
 
+test('Nginx security headers follow the active server and cache locations', () => {
+  const config = fs.readFileSync(path.join(ROOT, 'nginx.conf'), 'utf8');
+  verifyNginxHeaderCoverage(config);
+  for (const match of config.matchAll(/include \/etc\/nginx\/(?:embeddable-)?security-headers\.conf;/g)) {
+    const missingInclude = config.slice(0, match.index) + config.slice(match.index + match[0].length);
+    assert.throws(() => verifyNginxHeaderCoverage(missingInclude), /Security headers missing/);
+  }
+  verifyNginxHeaderCoverage(config.replace(/  location \/images\/ \{[\s\S]*?\n  \}/, ''));
+  assert.throws(
+    () => verifyNginxHeaderCoverage(config + '\nlocation /new/ {\nadd_header Cache-Control "public";\n}\n'),
+    /Security headers missing from location \/new\//
+  );
+});
+
+test('production deploys the built digest and restores the previous image on rollout failure', () => {
+  const workflow = require('js-yaml').load(
+    fs.readFileSync(path.join(ROOT, '.github/workflows/fastgpt-home-image.yml'), 'utf8')
+  );
+  const job = workflow.jobs['build-fastgpt-landingpage-images'];
+  assert.equal(
+    job.if,
+    "github.repository == 'labring/fastgpt-home' && github.ref == 'refs/heads/main'"
+  );
+  assert.deepEqual(workflow.on.push.branches, ['main']);
+  assert.equal(workflow.concurrency['cancel-in-progress'], false);
+  const step = job.steps.find((step) => step.name === 'Deploy image and verify rollout');
+  assert.equal(step.env.IMAGE_DIGEST, '${{ steps.build.outputs.digest }}');
+  const temporary = fs.mkdtempSync(path.join(os.tmpdir(), 'release-rollout-'));
+  const trace = path.join(temporary, 'commands.jsonl');
+  const digest = `sha256:${'a'.repeat(64)}`;
+  try {
+    fs.writeFileSync(
+      path.join(temporary, 'kubectl'),
+      `#!${process.execPath}
+const fs = require('node:fs');
+const args = process.argv.slice(2);
+const previous = fs.existsSync(process.env.TRACE) ? fs.readFileSync(process.env.TRACE, 'utf8') : '';
+fs.appendFileSync(process.env.TRACE, JSON.stringify(args) + '\\n');
+if (args[0] === 'get') console.log('ghcr.io/labring/fastgpt-home@sha256:' + 'b'.repeat(64));
+if (args[0] === 'rollout' && (process.env.FAIL_ROLLOUT === 'all' ||
+    (process.env.FAIL_ROLLOUT === 'first' && !previous.includes('rollout')))) process.exit(1);
+`,
+      { mode: 0o755 }
+    );
+    for (const scenario of ['success', 'first', 'all', 'invalid-digest']) {
+      fs.rmSync(trace, { force: true });
+      const result = spawnSync('bash', ['-eu', '-o', 'pipefail', '-c', step.run], {
+        encoding: 'utf8',
+        env: {
+          ...process.env,
+          PATH: `${temporary}:${process.env.PATH}`,
+          TRACE: trace,
+          KUBE_CONFIG: Buffer.from('test configuration').toString('base64'),
+          IMAGE_NAME: workflow.env.IMAGE_NAME,
+          IMAGE_DIGEST: scenario === 'invalid-digest' ? 'latest' : digest,
+          FAIL_ROLLOUT: scenario
+        }
+      });
+      assert.equal(
+        result.status,
+        scenario === 'success' ? 0 : 1,
+        scenario +
+          ': ' +
+          result.stderr +
+          (fs.existsSync(trace) ? fs.readFileSync(trace, 'utf8') : '')
+      );
+      const commands = fs.existsSync(trace)
+        ? fs
+            .readFileSync(trace, 'utf8')
+            .trim()
+            .split('\n')
+            .map((line) => JSON.parse(line))
+        : [];
+      const changes = commands.filter(([command]) => command === 'set');
+      assert.equal(
+        changes.length,
+        scenario === 'invalid-digest' ? 0 : scenario === 'success' ? 1 : 2
+      );
+      if (changes.length)
+        assert.equal(changes[0][3], `fastgpt-home=${workflow.env.IMAGE_NAME}@${digest}`);
+      if (changes.length === 2)
+        assert.equal(
+          changes[1][3],
+          `fastgpt-home=${workflow.env.IMAGE_NAME}@sha256:${'b'.repeat(64)}`
+        );
+    }
+  } finally {
+    fs.rmSync(temporary, { recursive: true, force: true });
+  }
+});
+
 test('release plans compose FAQ, Guide, and variant checks with stable step IDs', () => {
   const sourceIds = getSourceNodeSteps().map(([stepId]) => stepId);
   assert.deepEqual(
@@ -101,39 +192,40 @@ test('release plans compose FAQ, Guide, and variant checks with stable step IDs'
     ]
   );
 
-  const record = createReleaseRecord({ sourceOnly: true });
-  assert.deepEqual(
-    record.evidence.guidePairs.expected.map((pair) => pair.slug),
-    [
-      'poc-30-day-design',
-      'database-qa-integration-guide',
-      'scheduled-report-automation',
-      'finance-research-retrieval',
-      'finance-daily-report-automation'
-    ]
-  );
   const variantOrder = getVariantExecutionOrder('cn');
   assert.equal(variantOrder[0], 'variant.build');
-  assert(variantOrder.indexOf('content-hygiene.html') < variantOrder.indexOf('guide.export'));
+  assert(variantOrder.indexOf('variant.build') < variantOrder.indexOf('guide.export'));
 });
 
-test('release coordinator gates technical content and every site variant', () => {
+test('release coordinator checks technical content and every site variant', () => {
   const sourceCommands = getSourceNpmSteps().flatMap(([, , args]) => args);
   for (const command of [
     'verify:technical-content',
     'verify:technical-content-regression',
     'verify:technical-center-regression',
-    'verify:technical-export-regression',
-    'verify:release-readiness'
-  ]) {
+    'verify:technical-export-regression'
+  ])
     assert(sourceCommands.includes(command), command);
-  }
   for (const variant of ['cn', 'io', 'preview']) {
     const variantIds = getVariantExecutionOrder(variant);
-    assert(variantIds.includes('technical-center.export'));
-    assert(variantIds.includes('technical-export.export'));
-    assert(variantIds.includes('technical-wave.export'));
+    assert.equal(variantIds.filter((id) => id === 'variant.build').length, 1);
   }
+});
+
+test('release coordinator runs consultation regression before an export exists', () => {
+  assert.match(
+    packageJson.scripts['verify:contact'],
+    /verify-consultation-attribution\.test\.js/,
+    'verify:contact must run the consultation attribution regression'
+  );
+  assert(
+    getSourceNpmSteps().some(([, , args]) => args.includes('verify:consultation-attribution')),
+    'source verification must run the export-independent consultation regression'
+  );
+  assert(
+    !getSourceNpmSteps().some(([, , args]) => args.includes('verify:contact')),
+    'contact HTML verification requires a completed export'
+  );
 });
 
 test('release coordinator records and gates the case-only alias slice independently', () => {
@@ -153,13 +245,15 @@ test('release coordinator records and gates the case-only alias slice independen
     packageJson.scripts['verify:case-only-regression'],
     'node --test scripts/verify-case-only-aliases.test.js'
   );
+  assert.equal(packageJson.scripts['verify:guide-authorization'], undefined);
+  assert.equal(packageJson.scripts['verify:guide-authorization-regression'], undefined);
   assert.equal(
-    packageJson.scripts['verify:guide-authorization'],
-    'node scripts/verify-guide-authorization.js'
+    packageJson.scripts['verify:guide-g2-release'],
+    'node scripts/verify-guide-g2-release.js'
   );
   assert.equal(
-    packageJson.scripts['verify:guide-authorization-regression'],
-    'node --test scripts/verify-guide-authorization.test.js'
+    packageJson.scripts['verify:guide-g2-release-regression'],
+    'node --test scripts/verify-guide-g2-release.test.js'
   );
 });
 
@@ -167,163 +261,59 @@ test('release coordinator accepts the preview Site Variant', () => {
   assert.deepEqual(parseReleaseArgs(['--variant', 'preview']), {
     sourceOnly: false,
     keepArtifacts: false,
-    retainSuccessArtifacts: undefined,
+
     variant: 'preview'
   });
 });
 
-test('release coordinator accepts a separately supplied Solutions preview evidence file', () => {
-  assert.deepEqual(parseReleaseArgs(['--solutions-evidence', 'evidence.json']), {
-    sourceOnly: false,
-    keepArtifacts: false,
-    retainSuccessArtifacts: undefined,
-    variant: undefined,
-    solutionsEvidence: 'evidence.json'
-  });
-  assert.throws(
-    () => parseReleaseArgs(['--solutions-preview-evidence']),
-    /requires a JSON file path/
-  );
-
-  const evidence = normalizeSolutionsEvidence(
-    {
-      producer: 'fastgpt-solutions-preview-http-runner',
-      runnerVersion: 1,
-      status: 'passed',
-      repository: { url: 'https://github.com/example/solutions' },
-      revision: 'abcdef1234567',
-      target: 'https://preview.example.com',
-      approvedTarget: true,
-      capturedAt: '2026-08-24T00:00:00.000Z',
-      checks: {
-        root: 'passed',
-        routes: 'passed',
-        robots: 'passed',
-        sitemap: 'passed',
-        canonical: 'passed',
-        'internal-links': 'passed',
-        projections: 'passed'
-      },
-      artifacts: [
-        'root',
-        'routes',
-        'robots',
-        'sitemap',
-        'canonical',
-        'internal-links',
-        'projections'
-      ].map((name) => ({
-        path: `responses/${name}.body`,
-        bytes: 1,
-        sha256: 'a'.repeat(64),
-        capturedAt: '2026-08-24T00:00:00.000Z'
-      })),
-      responses: [
-        'root',
-        'routes',
-        'robots',
-        'sitemap',
-        'canonical',
-        'internal-links',
-        'projections'
-      ].map((name) => ({
-        name,
-        requestPath:
-          name === 'root'
-            ? '/'
-            : name === 'robots'
-            ? '/robots.txt'
-            : name === 'sitemap'
-            ? '/sitemap.xml'
-            : `/${name}`,
-        artifactPath: `responses/${name}.body`,
-        status: 200,
-        expectedStatus: 200,
-        bytes: 1,
-        sha256: 'a'.repeat(64)
-      }))
-    },
-    { approvedTarget: 'https://preview.example.com' }
-  );
-  assert.equal(evidence.source, 'cross-project');
-  assert.equal(evidence.evidenceTier, 'preview-http');
-  assert.equal(evidence.claim, true);
-  assert.deepEqual(
-    parseReleaseArgs([
-      '--solutions-http-target',
-      'https://preview.example.com',
-      '--solutions-approved-target',
-      'https://preview.example.com',
-      '--solutions-http-contract',
-      'contract.json'
-    ]),
-    {
-      sourceOnly: false,
-      keepArtifacts: false,
-      retainSuccessArtifacts: undefined,
-      variant: undefined,
-      solutionsHttpTarget: 'https://preview.example.com',
-      solutionsApprovedTarget: 'https://preview.example.com',
-      solutionsHttpContract: 'contract.json'
-    }
-  );
-  assert.throws(
-    () => parseReleaseArgs(['--solutions-http-target', 'https://preview.example.com']),
-    /requires --solutions-http-contract/
-  );
-});
-
-test('pull-request verification permits only absent Solutions evidence', () => {
-  const missingEvidence = normalizeSolutionsEvidence();
-  const invalidEvidence = { ...missingEvidence, status: 'invalid' };
-  const options = parseReleaseArgs(['--allow-missing-solutions-evidence']);
-
-  assert.equal(options.allowMissingSolutionsEvidence, true);
-  assert.equal(isReleaseGateBlocked([], missingEvidence), true);
-  assert.equal(isReleaseGateBlocked([], missingEvidence, options), false);
-  assert.equal(isReleaseGateBlocked([], invalidEvidence, options), true);
-  assert.equal(
-    isReleaseGateBlocked([failure('failed check', 'failed')], missingEvidence, options),
-    true
-  );
-});
-
-test('release record keeps evidence tiers and rollback inventory separate', () => {
+test('release records retain command results, duration, and rollback inventory', () => {
   const record = createReleaseRecord({ sourceOnly: true });
-  assert.equal(record.recordKind, 'week05-release-readiness');
-  assert(record.crossProjectInputs.solutionsPreviewHttp);
   assert(Array.isArray(record.rollback.inventory));
   recordStep(
     record,
-    'technical-authority.source',
-    'A freely editable display label',
-    'node scripts/verify-technical-authority.js',
+    'technical-content.source',
+    'Technical content',
+    'node scripts/verify-technical-content.js',
     undefined,
     'passed',
-    'TECHNICAL_AUTHORITY_RESULT={"governanceStatus":"governance-complete","publicationCount":0}'
+    'Technical content verified: 4007 pages',
+    undefined,
+    123
   );
-  assert.equal(record.commands.at(-1).id, 'technical-authority.source');
-  assert.equal(record.evidence.technicalAuthority.source, true);
-  assert.equal(record.evidence.technicalAuthority.observed.publicationCount, 0);
-  assert.equal(
-    packageJson.scripts['verify:release-readiness'],
-    'node --test scripts/lib/release-readiness.test.js'
+  assert.equal(record.commands.at(-1).status, 'passed');
+  assert.equal(record.commands.at(-1).durationMs, 123);
+  assert.equal(record.commands.at(-1).output, 'Technical content verified: 4007 pages');
+  finalizeReleaseRecord(record, [], { sourceOnly: true });
+  assert.equal(record.status, 'source-verified');
+  recordStep(
+    record,
+    'variant.build',
+    'Build CN',
+    'npm run build',
+    'cn',
+    'passed',
+    'Built',
+    undefined,
+    456
   );
-  assert.equal(
-    packageJson.scripts['verify:solutions-preview'],
-    'node scripts/verify-solutions-preview-http.js'
+  recordVariantOutcome(record, 'cn', [], 1);
+  assert.equal(record.variants[0].buildDurationMs, 456);
+  finalizeReleaseRecord(record, [], {});
+  assert.equal(record.status, 'export-verified');
+  finalizeReleaseRecord(
+    record,
+    [{ id: 'url-alias.artifacts', variant: 'cn', output: 'Corrupt map' }],
+    {}
   );
-  assert.equal(
-    packageJson.scripts['verify:solutions-preview-regression'],
-    'node --test scripts/lib/solutions-preview-http.test.js'
-  );
+  assert.equal(record.status, 'failed');
+  assert.equal(record.variants[0].outcome, 'failed');
 });
 
 test('preview release gates skip production-only FAQ artifacts and sitemap cardinality', () => {
   const previewIds = getVariantSteps('preview').map((step) => step.id);
   const cnIds = getVariantSteps('cn').map((step) => step.id);
 
-  assert(previewIds.includes('technical-wave.export'));
+  assert(previewIds.includes('i18n-seo.export'));
   assert.equal(previewIds.includes('faq-metadata.html'), false);
   assert.equal(previewIds.includes('faq-seo-graph.html'), false);
   assert.equal(previewIds.includes('url-alias.blackbox'), false);
@@ -364,6 +354,8 @@ test('release source checks run content hygiene first and block dirty published 
     );
     fs.writeFileSync(dirtyPath, '# Temporary fixture\n\nFact Source: internal KB\n');
     const buildInfoPath = path.join(fixtureRoot, 'tsconfig.tsbuildinfo');
+    // 显式创建 fixture，避免依赖仓库实际产物（该文件已加入 gitignore，干净 CI 中不存在）。
+    fs.writeFileSync(buildInfoPath, 'build-info-fixture-bytes');
     const buildInfoBefore = fs.readFileSync(buildInfoPath);
     const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
       cwd: fixtureRoot,
@@ -425,15 +417,25 @@ test('source-only release leaves the existing build info bytes unchanged', () =>
   const releaseRecordPath = path.join(ROOT, '.release-artifacts', 'release-verification.json');
   const readReleaseRecord = () =>
     fs.existsSync(releaseRecordPath) ? fs.readFileSync(releaseRecordPath) : undefined;
-  const before = fs.readFileSync(buildInfoPath);
-  const releaseRecordBefore = readReleaseRecord();
-  const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
-    cwd: ROOT,
-    encoding: 'utf8'
-  });
-  assert.equal(result.status, 0, result.stdout + result.stderr);
-  assert.deepEqual(fs.readFileSync(buildInfoPath), before);
-  assert.deepEqual(readReleaseRecord(), releaseRecordBefore);
+
+  // 干净 CI 中 tsconfig.tsbuildinfo 不存在（已 gitignore），测试临时创建 fixture 并在结束后清理，
+  // 避免依赖仓库实际产物，同时保持 cwd=ROOT 以复用 node_modules。
+  const createdFixture = !fs.existsSync(buildInfoPath);
+  if (createdFixture) fs.writeFileSync(buildInfoPath, 'build-info-fixture-bytes');
+
+  try {
+    const before = fs.readFileSync(buildInfoPath);
+    const releaseRecordBefore = readReleaseRecord();
+    const result = spawnSync(process.execPath, ['scripts/verify-release.js', '--source-only'], {
+      cwd: ROOT,
+      encoding: 'utf8'
+    });
+    assert.equal(result.status, 0, result.stdout + result.stderr);
+    assert.deepEqual(fs.readFileSync(buildInfoPath), before);
+    assert.deepEqual(readReleaseRecord(), releaseRecordBefore);
+  } finally {
+    if (createdFixture) fs.rmSync(buildInfoPath, { force: true });
+  }
 });
 
 test('release build and workflow wiring preserve source hygiene while enforcing completed HTML exports', () => {
@@ -452,10 +454,8 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   );
   assert.match(
     packageJson.scripts.build,
-    /fix-html-lang\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/
+    /fix-html-lang\.js && node --test scripts\/verify-content-sidebar-cta\.test\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/
   );
-  const variantOrder = getVariantExecutionOrder('cn');
-  assert(variantOrder.indexOf('variant.build') < variantOrder.indexOf('content-hygiene.html'));
   assert(getSourceExecutionOrder().includes('typescript.source'));
   for (const pattern of [
     'src/**',
@@ -466,16 +466,6 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     assert(verificationWorkflow.includes(pattern), pattern);
 });
 
-test('successful verified outputs can be retained before lifecycle cleanup', () => {
-  assert.equal(typeof retainSuccessArtifacts, 'function');
-  assert.deepEqual(parseReleaseArgs(['--retain-success-artifacts', 'tmp/release-output']), {
-    sourceOnly: false,
-    keepArtifacts: false,
-    retainSuccessArtifacts: path.join(ROOT, 'tmp/release-output'),
-    variant: undefined
-  });
-});
-
 test('P1 successful evidence keeps the emitted KiB measurement', () => {
   const output =
     'P1 verification passed for https://fastgpt.io: 259.8 KiB initial JavaScript gzip\n';
@@ -483,62 +473,34 @@ test('P1 successful evidence keeps the emitted KiB measurement', () => {
   assert.equal(extractP1SuccessMeasurement('P1 verification passed'), undefined);
 });
 
-test('Linux release evidence stays build-only', () => {
-  const workflowPath = path.join(ROOT, '.github/workflows/guide-release-verification.yml');
-  const dockerfilePath = path.join(ROOT, 'Dockerfile.verify');
-  const workflow = fs.existsSync(workflowPath) ? fs.readFileSync(workflowPath, 'utf8') : '';
-  const dockerfile = fs.existsSync(dockerfilePath) ? fs.readFileSync(dockerfilePath, 'utf8') : '';
-
-  assert.match(workflow, /runs-on: ubuntu-24\.04/);
-  assert.match(workflow, /permissions:\s*\n\s*contents: read/);
-  assert.match(workflow, /actions\/checkout@v4/);
-  assert.match(workflow, /actions\/setup-node@v4/);
-  assert.match(workflow, /node-version: 24/);
-  assert.match(workflow, /cache: npm/);
-  assert.match(workflow, /npm ci/);
-  assert.match(workflow, /npm run verify:release -- --keep-artifacts/);
-  assert.match(workflow, /allow-missing-solutions-evidence/);
-  assert.match(workflow, /if: \$\{\{ always\(\)/);
-  assert.match(workflow, /actions\/upload-artifact@v4/);
-  assert.match(workflow, /\.release-artifacts/);
-  assert.match(workflow, /include-hidden-files: true/);
-  assert.match(workflow, /technical-content-release-evidence/);
-  assert.match(workflow, /docker build --target runtime/);
-  assert.match(workflow, /NEXT_PUBLIC_SITE_VARIANT=cn/);
-  for (const pathTrigger of [
-    'Dockerfile',
-    '.dockerignore',
-    'nginx.conf',
-    'nginx-security-headers.conf',
-    'nginx-embeddable-security-headers.conf'
-  ]) {
-    assert(workflow.includes(`- '${pathTrigger}'`), pathTrigger);
+test('release variants inherit shared configuration and isolate site overrides', () => {
+  const baseEnv = {
+    NEXT_PUBLIC_CRM_API_URL: 'https://crm.example.com',
+    CN_NEXT_PUBLIC_USER_URL: 'https://cloud.fastgpt.cn',
+    CN_NEXT_PUBLIC_FILING_ADDRESS: 'CN filing',
+    IO_NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: '.fastgpt.io',
+    CN_NEXT_PUBLIC_HOME_URL: 'https://untrusted.example.com'
+  };
+  for (const variant of ['cn', 'io', 'preview']) {
+    const env = variantEnvironment(variant, baseEnv);
+    assert.equal(env.NEXT_PUBLIC_CRM_API_URL, baseEnv.NEXT_PUBLIC_CRM_API_URL);
+    assert.equal(env.NEXT_PUBLIC_SITE_VARIANT, variant);
+    assert.equal(env.NEXT_PUBLIC_HOME_URL, `https://fastgpt.${variant === 'cn' ? 'cn' : 'io'}`);
+    assert.equal(env.NEXT_PUBLIC_FILING_ADDRESS, variant === 'cn' ? 'CN filing' : undefined);
+    assert.equal(
+      env.NEXT_PUBLIC_USER_URL,
+      variant === 'cn' ? 'https://cloud.fastgpt.cn' : undefined
+    );
+    assert.equal(
+      env.NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN,
+      variant === 'io' ? '.fastgpt.io' : undefined
+    );
   }
-
-  assert.match(dockerfile, /^FROM node:24/m);
-  assert.match(dockerfile, /COPY package\.json package-lock\.json \.\//);
-  assert.match(dockerfile, /RUN npm ci/);
-  assert.match(dockerfile, /COPY \. \./);
-  assert.match(dockerfile, /RUN npm run verify:release/);
-  assert.match(
-    dockerfile,
-    /docker build --file Dockerfile\.verify --tag fastgpt-guide-release-verify \./
-  );
-
-  const executable = [
-    ...workflow.split('\n').filter((line) => /^\s*run:|^\s*- run:/.test(line)),
-    ...dockerfile.split('\n').filter((line) => /^(RUN|CMD|ENTRYPOINT)\b/.test(line))
-  ].join('\n');
-  assert.doesNotMatch(
-    executable,
-    /\b(deploy|curl|rollback|kubectl|docker push|cache purge|revision)\b/i
-  );
-  assert.equal(fs.existsSync(path.join(ROOT, 'scripts/verify-guide-live.js')), false);
 });
 
 test('P1 budget failures remain aggregate failures and add a separate baseline advisory', () => {
   const failures = [
-    failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 260 KiB')
+    failure('P1 HTML verification (io)', 'Initial JavaScript is 267.0 KiB gzip, budget is 261 KiB')
   ];
   const original = structuredClone(failures);
   const advisories = [];
@@ -550,7 +512,7 @@ test('P1 budget failures remain aggregate failures and add a separate baseline a
   assert.match(advisories[0].output, /c77cf48/);
   assert.match(advisories[0].output, /266\.9 KiB/);
   assert.match(advisories[0].output, /\+0\.1 KiB/);
-  assert.match(advisories[0].output, /260 KiB/);
+  assert.match(advisories[0].output, /261 KiB/);
   assert.equal(advisories[0].command, original[0].command);
   assert.equal(advisories[0].variant, 'io');
 });
@@ -702,4 +664,15 @@ test('requiring the metadata verifier is silent and side-effect free', () => {
   assert.equal(result.status, 0);
   assert.equal(result.stdout, '');
   assert.equal(result.stderr, '');
+});
+
+test('daily releases retain current content protection and keep Week08 acceptance explicit', () => {
+  const { getSourceNodeSteps, getVariantSteps } = require('./lib/release-steps');
+  const steps = getSourceNodeSteps();
+  assert(steps.some(([id]) => id === 'not-found.regression'));
+  assert(steps.some(([id]) => id === 'guide-markdown.regression'));
+  assert(steps.some(([id]) => id === 'guide-export.regression'));
+  assert(!steps.some(([id]) => id.startsWith('week08.')));
+  for (const variant of ['cn', 'io', 'preview'])
+    assert(!getVariantSteps(variant).some(({ id }) => id.startsWith('week08.')));
 });

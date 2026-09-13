@@ -1,13 +1,47 @@
 import TechCenterPage from '@/components/tech-center/TechCenterPage';
 import { TechCenterHubJsonLd } from '@/components/tech-center/TechCenterJsonLd';
-import { CATEGORY_META, FEATURED_ENTRY, TECH_ENTRIES } from '@/components/tech-center/data';
+import {
+  getCategoryMetaForLocale,
+  getFeaturedEntryForLocale,
+  getTechEntriesForLocale
+} from '@/components/tech-center/data';
 import { PAGE_SIZE } from '@/components/tech-center/constants';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { localeMap } from '@/lib/seo';
-import { currentSiteVariant, getOwnedLocaleUrl } from '@/lib/siteRouting';
+import {
+  currentSiteVariant,
+  getDefaultLocaleForSiteVariant,
+  getLocaleHreflang,
+  getOwnedLocaleUrl,
+  getReviewLocalePath
+} from '@/lib/siteRouting';
 import { normalizeLocale } from '@/lib/locales';
+import { techPublishedLocaleCodes, type TechPublishedLocale } from '@/lib/publishedLocales';
 import { toTechSearchEntry } from '@/components/tech-center/types';
 import { Metadata } from 'next';
+import { notFound } from 'next/navigation';
+import { getTechCenterPagePath } from '@/lib/technicalRouting';
+
+type RouteParams = Promise<{ lang?: string; page?: string }>;
+
+function getPageNumber(value: string | undefined, totalEntries: number) {
+  if (value === undefined) return 1;
+  const page = Number(value);
+  if (
+    !/^[1-9]\d*$/.test(value) ||
+    !Number.isSafeInteger(page) ||
+    page < 2 ||
+    page > Math.ceil(totalEntries / PAGE_SIZE)
+  ) {
+    notFound();
+  }
+  return page;
+}
+
+function getPageTitle(locale: string, page: number) {
+  const title = titleMap[locale] || titleMap.en;
+  return page === 1 ? title : `${title} | ${locale === 'zh' ? `第 ${page} 页` : `Page ${page}`}`;
+}
 
 const titleMap: Record<string, string> = {
   zh: 'FastGPT 技术中心｜部署、升级、排错与 API 指南',
@@ -22,7 +56,6 @@ const titleMap: Record<string, string> = {
 };
 
 const descriptionMap: Record<string, string> = {
-  zh: `面向开发与部署人员的 FastGPT 技术中心，按任务搜索 ${TECH_ENTRIES.length} 篇部署升级、知识库、工作流、集成与 API 内容。`,
   'zh-hant': '瀏覽 FastGPT 部署升級、故障排查、知識庫、工作流節點、第三方整合與 API 技術指南。',
   en: 'Browse FastGPT guides for deployment, troubleshooting, knowledge bases, workflow nodes, integrations, and APIs.',
   ja: 'FastGPT のデプロイ、トラブルシューティング、RAG、ワークフロー、連携、API ガイドを閲覧できます。',
@@ -33,44 +66,82 @@ const descriptionMap: Record<string, string> = {
   ms: 'Terokai panduan FastGPT untuk deployment, penyelesaian masalah, knowledge base, aliran kerja, integrasi dan API.'
 };
 
-export default async function TechCenterRoute({ params }: { params: Promise<{ lang?: string }> }) {
-  const { lang } = await params;
+function getDescription(locale: string, totalEntries: number) {
+  if (locale === 'zh') {
+    return `面向开发与部署人员的 FastGPT 技术中心，按任务搜索 ${totalEntries} 篇部署升级、知识库、工作流、集成与 API 内容。`;
+  }
+  return descriptionMap[locale] || descriptionMap.en;
+}
+
+export default async function TechCenterRoute({ params }: { params: RouteParams }) {
+  const { lang, page: pageParam } = await params;
   const locale = normalizeLocale(lang || defaultLocale);
   const dict = await getDictionary(locale);
-  const title = titleMap[locale] || titleMap.en;
-  const description = descriptionMap[locale] || descriptionMap.en;
+  const localeEntries = getTechEntriesForLocale(locale);
+  const page = getPageNumber(pageParam, localeEntries.length);
+  const title = getPageTitle(locale, page);
+  const description = getDescription(locale, localeEntries.length);
+  const initialEntries = localeEntries
+    .slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE)
+    .map(toTechSearchEntry);
+  const categoryMeta = getCategoryMetaForLocale(locale);
+  const featuredEntry = getFeaturedEntryForLocale(locale);
 
   return (
     <>
-      {locale === 'zh' && (
-        <TechCenterHubJsonLd schema={dict.JsonLd} title={title} description={description} />
-      )}
+      {techPublishedLocaleCodes.includes(locale as TechPublishedLocale) &&
+        localeEntries.length > 0 && (
+          <TechCenterHubJsonLd
+            schema={dict.JsonLd}
+            title={title}
+            description={description}
+            locale={locale}
+            page={page}
+          />
+        )}
       <TechCenterPage
+        key={`${locale}-${page}`}
         locale={locale}
         links={dict.links}
         navCta={dict.Home.navCta}
         footer={dict.Home.footer}
-        initialEntries={TECH_ENTRIES.slice(0, PAGE_SIZE).map(toTechSearchEntry)}
-        featuredEntry={FEATURED_ENTRY}
-        categoryMeta={CATEGORY_META}
-        totalEntries={TECH_ENTRIES.length}
+        initialEntries={initialEntries}
+        initialPage={page}
+        featuredEntry={featuredEntry}
+        categoryMeta={categoryMeta}
+        totalEntries={localeEntries.length}
+        languageSwitchPaths={Object.fromEntries(
+          (page === 1 ? techPublishedLocaleCodes : [locale]).map((lang) => [
+            lang,
+            currentSiteVariant === 'preview'
+              ? getReviewLocalePath(lang, getTechCenterPagePath(page))
+              : getOwnedLocaleUrl(lang, getTechCenterPagePath(page))
+          ])
+        )}
+        searchIndexPath={
+          locale === 'zh'
+            ? '/tech-center/search-index.json'
+            : `/tech-center/search-index.${locale}.json`
+        }
       />
     </>
   );
 }
 
-export async function generateMetadata({
-  params
-}: {
-  params: Promise<{ lang?: string }>;
-}): Promise<Metadata> {
-  const { lang } = await params;
+export async function generateMetadata({ params }: { params: RouteParams }): Promise<Metadata> {
+  const { lang, page: pageParam } = await params;
   const locale = normalizeLocale(lang || defaultLocale);
-  const title = titleMap[locale] || titleMap.en;
-  const description = descriptionMap[locale] || descriptionMap.en;
-  const canonical = getOwnedLocaleUrl(locale, '/tech-center');
+  const totalEntries = getTechEntriesForLocale(locale).length;
+  const page = getPageNumber(pageParam, totalEntries);
+  const title = getPageTitle(locale, page);
+  const description = getDescription(locale, totalEntries);
+  const hasPublishedEntries = totalEntries > 0;
+  const canonical = getOwnedLocaleUrl(locale, getTechCenterPagePath(page));
   const baseUrl = new URL(canonical).origin;
-  const indexable = locale === 'zh' && currentSiteVariant !== 'preview';
+  const indexable =
+    techPublishedLocaleCodes.includes(locale as TechPublishedLocale) &&
+    hasPublishedEntries &&
+    currentSiteVariant !== 'preview';
 
   return {
     title,
@@ -79,7 +150,15 @@ export async function generateMetadata({
       currentSiteVariant === 'preview'
         ? { index: false, follow: false }
         : { index: indexable, follow: true },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: Object.fromEntries(
+        (page === 1 ? techPublishedLocaleCodes : [locale]).map((publishedLocale) => [
+          getLocaleHreflang(publishedLocale),
+          getOwnedLocaleUrl(publishedLocale, getTechCenterPagePath(page))
+        ])
+      )
+    },
     openGraph: {
       title,
       description,
@@ -98,7 +177,9 @@ export async function generateMetadata({
 }
 
 export async function generateStaticParams() {
-  return [{ lang: 'zh' }];
+  return currentSiteVariant === 'preview'
+    ? techPublishedLocaleCodes.map((lang) => ({ lang }))
+    : [{ lang: getDefaultLocaleForSiteVariant(currentSiteVariant) }];
 }
 
 export const dynamicParams = false;

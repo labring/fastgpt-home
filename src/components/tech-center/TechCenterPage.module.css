@@ -885,7 +885,7 @@
     transform 160ms ease;
 }
 
-.pageButton:hover:enabled {
+.pageButton[href]:hover {
   color: var(--tech-blue-deep);
   border-color: rgba(50, 109, 255, 0.4);
 }
@@ -896,7 +896,7 @@
   border-color: var(--tech-blue);
 }
 
-.pageButton:disabled {
+.pageButton[aria-disabled='true'] {
   cursor: default;
   opacity: 0.38;
 }

@@ -16,6 +16,98 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - 英文 LLM Context：https://fastgpt.io/llms.txt
 - GitHub：https://github.com/labring/FastGPT
 
+## Customer Case Center
+- Customer Case Center: https://fastgpt.cn/customers
+- AI旅游行程规划: https://fastgpt.cn/customers/business/ai-travel-itinerary-planner
+- 标书审查助手: https://fastgpt.cn/customers/business/bid-document-review-assistant
+- ChatPPT助手: https://fastgpt.cn/customers/business/chatppt-assistant
+- 数据图表助手: https://fastgpt.cn/customers/business/data-chart-assistant
+- 企业邮件撰写助手: https://fastgpt.cn/customers/business/enterprise-email-writing-assistant-2
+- 企业报告自动生成: https://fastgpt.cn/customers/business/enterprise-report-auto-generation
+- 活动策划助手: https://fastgpt.cn/customers/business/event-planning-assistant
+- AI搜索营销系统: https://fastgpt.cn/customers/business/fastgpt-ai-search-marketing-system
+- 飞书智能报销助手: https://fastgpt.cn/customers/business/feishu-smart-reimbursement-assistant
+- 智能文档提纲提取: https://fastgpt.cn/customers/business/intelligent-document-outline-extraction
+- 面试辅助助手: https://fastgpt.cn/customers/business/interview-assistant
+- JD生成助手: https://fastgpt.cn/customers/business/jd-generation-assistant
+- 采购填表助手: https://fastgpt.cn/customers/business/procurement-form-filling-assistant
+- 简历筛选Agent: https://fastgpt.cn/customers/business/resume-screening-agent
+- 安全需求智能评审: https://fastgpt.cn/customers/business/security-requirement-review
+- 制度与项目查询智能体: https://fastgpt.cn/customers/construction-engineering-renovation/text-sql-institution-agent
+- AI广告脚本生成器: https://fastgpt.cn/customers/e-commerce-retail-trade/ai-ad-script-generator
+- AI客群画像: https://fastgpt.cn/customers/e-commerce-retail-trade/ai-customer-profiling
+- AI智能客服工单系统: https://fastgpt.cn/customers/e-commerce-retail-trade/ai-customer-service-ticketing-system
+- 电商生图助手: https://fastgpt.cn/customers/e-commerce-retail-trade/ecommerce-image-generation-assistant
+- AI派单中台: https://fastgpt.cn/customers/e-commerce-retail-trade/retail-ai-dispatch-platform
+- 零售智能客服: https://fastgpt.cn/customers/e-commerce-retail-trade/retail-intelligent-customer-service
+- AI智能客服方案: https://fastgpt.cn/customers/education-training-research-study/ai-intelligent-customer-service
+- 志愿填报助手: https://fastgpt.cn/customers/education-training-research-study/college-application-assistant
+- SDG智能分析系统: https://fastgpt.cn/customers/education-training-research-study/education-sdg-analysis-system
+- 英语外教销服助手: https://fastgpt.cn/customers/education-training-research-study/english-tutor-sales-assistant
+- 医考能力诊断系统: https://fastgpt.cn/customers/education-training-research-study/fastgpt-medical-exam-diagnosis
+- 启发式做题助手: https://fastgpt.cn/customers/education-training-research-study/heuristic-problem-solving-assistant
+- 智能出题助手: https://fastgpt.cn/customers/education-training-research-study/intelligent-question-generation-assistant
+- AI学伴智能批改: https://fastgpt.cn/customers/education-training-research-study/k12-intelligent-homework-grading
+- 智能学习洞察引擎: https://fastgpt.cn/customers/education-training-research-study/learning-insight-engine-for-medical-education
+- 学习规划助手: https://fastgpt.cn/customers/education-training-research-study/study-planning-assistant
+- 储能运营AI: https://fastgpt.cn/customers/energy-minerals-chemicals/energy-storage-operations-ai
+- NMR智能解析: https://fastgpt.cn/customers/energy-minerals-chemicals/nmr-intelligent-analysis
+- 销售开单智能体: https://fastgpt.cn/customers/energy-minerals-chemicals/sales-order-agent
+- 发货履约风控: https://fastgpt.cn/customers/energy-minerals-chemicals/shipping-fulfillment-risk-control
+- 竞价报告助手: https://fastgpt.cn/customers/finance-insurance-wealth-management/bidding-report-assistant
+- 智能营销助手: https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-leasing-smart-marketing-assistant
+- 研报智能检索助手: https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-report-retrieval-solution
+- 财报分析智能助手: https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant
+- 金融终端AI智能搜索: https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-terminal-ai-search
+- 融资日报助手: https://fastgpt.cn/customers/finance-insurance-wealth-management/financing-daily-report-assistant
+- 保险理赔初审助手: https://fastgpt.cn/customers/finance-insurance-wealth-management/insurance-claims-initial-review-assistant
+- 智能尽调报告智能体: https://fastgpt.cn/customers/finance-insurance-wealth-management/intelligent-due-diligence-agent-for-financial-leasing
+- 招证灵瞳一体化AI平台: https://fastgpt.cn/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt
+- 收益率播报智能体: https://fastgpt.cn/customers/finance-insurance-wealth-management/yield-reporting-intelligent-agent
+- 政务公积金智能问答: https://fastgpt.cn/customers/government-public-services/government-provident-fund-intelligent-qa
+- 三套专项智能助手: https://fastgpt.cn/customers/government-public-services/three-special-ai-assistants
+- 工单分类助手: https://fastgpt.cn/customers/government-public-services/ticket-classification-assistant
+- AI技术文档助手: https://fastgpt.cn/customers/internet-it-technology/ai-technical-documentation-assistant
+- 运维问答助手: https://fastgpt.cn/customers/internet-it-technology/it-operations-qa-assistant
+- 企微销售与文案助手: https://fastgpt.cn/customers/internet-it-technology/wechat-sales-and-copy-optimizer
+- 民法典问答助手: https://fastgpt.cn/customers/legal-affairs-compliance/civil-code-qa-assistant
+- 合同附件智能评审: https://fastgpt.cn/customers/legal-affairs-compliance/contract-attachment-review
+- 合同字段比对助手: https://fastgpt.cn/customers/legal-affairs-compliance/contract-field-comparison-assistant
+- 合同版本对比助手: https://fastgpt.cn/customers/legal-affairs-compliance/contract-version-comparison-assistant
+- 飞书合同审查: https://fastgpt.cn/customers/legal-affairs-compliance/feishu-contract-review
+- 律所文书助手: https://fastgpt.cn/customers/legal-affairs-compliance/law-firm-document-assistant
+- 法务尽调助手: https://fastgpt.cn/customers/legal-affairs-compliance/legal-due-diligence-assistant
+- ADAS质检: https://fastgpt.cn/customers/manufacturing-production-processing/adas-quality-inspection
+- 财务智能审单助手: https://fastgpt.cn/customers/manufacturing-production-processing/ai-financial-audit-solution
+- AI元器件料号解析系统: https://fastgpt.cn/customers/manufacturing-production-processing/ai-part-number-analyzer-system
+- 汽修问答助手: https://fastgpt.cn/customers/manufacturing-production-processing/auto-repair-qa-assistant
+- 汽车话术助手: https://fastgpt.cn/customers/manufacturing-production-processing/automotive-sales-script-assistant
+- 生物试剂咨询助手: https://fastgpt.cn/customers/manufacturing-production-processing/biological-reagent-consultation-assistant
+- BOM销售报价助手: https://fastgpt.cn/customers/manufacturing-production-processing/bom-sales-quotation-assistant
+- 文档交叉审查: https://fastgpt.cn/customers/manufacturing-production-processing/document-cross-review
+- 供应商智能推荐助手: https://fastgpt.cn/customers/manufacturing-production-processing/fastgpt-supplier-recommendation-system
+- 智能投标文稿: https://fastgpt.cn/customers/manufacturing-production-processing/intelligent-bid-document-writing
+- iSAP IT运维机器人: https://fastgpt.cn/customers/manufacturing-production-processing/isap-it-ops-robot-solution
+- 包装审查助手: https://fastgpt.cn/customers/manufacturing-production-processing/packaging-review-assistant
+- VDA6.3智能审核: https://fastgpt.cn/customers/manufacturing-production-processing/vda6-3-intelligent-audit
+- 内容合规审核助手: https://fastgpt.cn/customers/media-film-cultural-creativity/content-compliance-review-assistant
+- 多平台改写: https://fastgpt.cn/customers/media-film-cultural-creativity/multi-platform-rewriting
+- 诺诺助手智能客服: https://fastgpt.cn/customers/medical-health-wellness/biomedical-customer-service-assistant
+- 临床试验预筛智能体: https://fastgpt.cn/customers/medical-health-wellness/clinical-trial-prescreening
+- 员捷办自助问答助手: https://fastgpt.cn/customers/medical-health-wellness/fastgpt-factory-qa-assistant
+- 医药研发AI方案: https://fastgpt.cn/customers/medical-health-wellness/fastgpt-pharmacy-research-solution
+- 医院导诊助手: https://fastgpt.cn/customers/medical-health-wellness/hospital-guide-assistant
+- OA智能助手: https://fastgpt.cn/customers/medical-health-wellness/oa-assistant-biopharma-case
+- 点将台人才决策智能体: https://fastgpt.cn/customers/medical-health-wellness/pharma-talent-decision-agent
+- GMP/SOP制度问答智能体: https://fastgpt.cn/customers/medical-health-wellness/pharmaceutical-gmp-sop-qa-agent
+- 私域咨询转化助手: https://fastgpt.cn/customers/medical-health-wellness/private-domain-consultation-conversion-assistant
+- 质量文档智能迎检助手: https://fastgpt.cn/customers/medical-health-wellness/quality-document-inspection-assistant
+- 桥梁巡检诊断智能体: https://fastgpt.cn/customers/transportation-logistics/bridge-inspection-intelligent-agent
+- 隧道运营安全应急智能体: https://fastgpt.cn/customers/transportation-logistics/tunnel-operation-safety-intelligent-agent
+- YC小易智能客服: https://fastgpt.cn/customers/transportation-logistics/yc-intelligent-customer-service
+- 旅行策划助手: https://fastgpt.cn/customers/wen-tourism-leisure-entertainment/travel-planning-assistant
+- 旅行规划专家: https://fastgpt.cn/customers/wen-tourism-leisure-entertainment/travel-planning-expert
+
 ## 核心能力
 
 ### 企业知识库与 Agentic RAG

@@ -2,13 +2,16 @@
 
 import { Fragment, useEffect, useMemo, useRef, useState } from 'react';
 import type { ComponentProps } from 'react';
+import { useRouter } from 'next/navigation';
 import { ArrowRight, ChevronLeft, ChevronRight, ExternalLink, Search, X } from 'lucide-react';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
+import { getTechCenterPagePath, getTechnicalReviewPath } from '@/lib/technicalRouting';
+import { isPreviewSite } from '@/lib/siteRouting';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
 import Footer from '@/components/home/Footer';
-import { CATEGORY_DEFINITIONS, COMMON_TOPICS, PAGE_SIZE, SOURCE_DEFINITIONS } from './constants';
+import { CATEGORY_DEFINITIONS, PAGE_SIZE, SOURCE_DEFINITIONS } from './constants';
 import {
   getTechEntryPath,
   type CategoryMeta,
@@ -22,12 +25,154 @@ import styles from './TechCenterPage.module.css';
 type SourceFilter = 'all' | TechSource;
 type SortMode = 'default' | 'title' | 'minutes';
 
-const FLOW_NODES = [
-  { number: '01', title: 'API 调用', kind: 'Request' },
-  { number: '02', title: '身份鉴权', kind: 'API Key' },
-  { number: '03', title: '应用编排', kind: 'App ID' },
-  { number: '04', title: '流式响应', kind: 'SSE' }
-];
+const TECH_CENTER_COPY = {
+  zh: {
+    categoryTask: '按任务找到答案',
+    categoryAll: '全部内容',
+    sourceAll: '全部来源',
+    sourceLabels: {
+      官方文档: '官方文档',
+      'GitHub issue': 'GitHub Issue',
+      深度场景内容: '深度场景内容'
+    },
+    localeName: 'zh-CN',
+    flowNodes: [
+      { number: '01', title: 'API 调用', kind: 'Request' },
+      { number: '02', title: '身份鉴权', kind: 'API Key' },
+      { number: '03', title: '应用编排', kind: 'App ID' },
+      { number: '04', title: '流式响应', kind: 'SSE' }
+    ],
+    commonTopics: [
+      'Docker',
+      '版本升级',
+      '私有部署',
+      '工作流',
+      '知识库',
+      'RAG',
+      'API',
+      'MCP',
+      '插件',
+      '模型配置'
+    ],
+    resultsTitle: '搜索结果',
+    resultsCount: (count: number, query: string) =>
+      `共 ${count} 篇${query ? `，关键词“${query}”` : ''}`,
+    skipLink: '跳至主要内容',
+    breadcrumbs: '面包屑',
+    hubName: '技术中心',
+    eyebrow: 'FASTGPT / 技术中心',
+    heroLineOne: '从部署到 API，',
+    heroLineTwo: '直接找到可执行答案。',
+    intro: (count: number) =>
+      `面向开发与部署人员，按任务搜索 ${count} 篇技术内容，覆盖部署升级、知识库、工作流、集成与 API。`,
+    searchPlaceholder: '搜索部署、升级、知识库或 API',
+    searchAria: '搜索技术内容',
+    clearSearch: '清除搜索',
+    searchButton: '查找答案',
+    overviewAria: '技术内容概览',
+    contentCount: (count: number) => `${count} 篇内容`,
+    topicCount: (count: number) => `${count} 个主题`,
+    sourceSummary: '官方文档与公开 Issue',
+    flowAria: 'API 调用经过身份鉴权、应用编排并返回流式响应的 FastGPT 工作流示意图',
+    flowLabel: 'API 调用路径',
+    flowNote: '可追溯来源 · 可执行步骤 · 可验证结果',
+    featured: '推荐入口',
+    readMinutes: (minutes: number) => `${minutes} 分钟阅读`,
+    readApiGuide: '阅读 API 指南',
+    viewDocs: '查看官方文档',
+    filtersAria: '技术内容筛选',
+    byTopic: '按主题',
+    sourceType: '来源类型',
+    commonEntries: '常用入口',
+    contentSource: '内容来源',
+    sortAria: '内容排序',
+    sortDefault: '默认排序',
+    sortTitle: '按标题',
+    sortMinutes: '阅读时间',
+    pagination: '内容分页',
+    previousPage: '上一页',
+    nextPage: '下一页',
+    emptyTitle: '换个关键词，继续找答案',
+    emptyQuery: (query: string) => `没有找到“${query}”相关内容。试试“Docker”“版本升级”或“API”。`,
+    emptyFiltered: '当前筛选条件下没有内容，可以清除筛选后继续搜索。',
+    clearFilters: '清除筛选'
+  },
+  en: {
+    categoryTask: 'Find answers by task',
+    categoryAll: 'All content',
+    sourceAll: 'All sources',
+    sourceLabels: {
+      官方文档: 'Official documentation',
+      'GitHub issue': 'GitHub issue',
+      深度场景内容: 'In-depth scenario content'
+    },
+    localeName: 'en-US',
+    flowNodes: [
+      { number: '01', title: 'API request', kind: 'Request' },
+      { number: '02', title: 'Authentication', kind: 'API Key' },
+      { number: '03', title: 'App orchestration', kind: 'App ID' },
+      { number: '04', title: 'Streaming response', kind: 'SSE' }
+    ],
+    commonTopics: [
+      'Docker',
+      'Upgrades',
+      'Self-hosting',
+      'Workflows',
+      'Knowledge bases',
+      'RAG',
+      'API',
+      'MCP',
+      'Plugins',
+      'Model configuration'
+    ],
+    resultsTitle: 'Search results',
+    resultsCount: (count: number, query: string) =>
+      `${count} ${count === 1 ? 'article' : 'articles'}${query ? ` for “${query}”` : ''}`,
+    skipLink: 'Skip to main content',
+    breadcrumbs: 'Breadcrumbs',
+    hubName: 'Technical Center',
+    eyebrow: 'FASTGPT / TECHNICAL CENTER',
+    heroLineOne: 'From deployment to API,',
+    heroLineTwo: 'find an actionable answer.',
+    intro: (count: number) =>
+      `Search ${count} technical ${
+        count === 1 ? 'article' : 'articles'
+      } covering deployment, upgrades, knowledge bases, workflows, integrations, and APIs.`,
+    searchPlaceholder: 'Search deployment, upgrades, knowledge bases, or APIs',
+    searchAria: 'Search technical content',
+    clearSearch: 'Clear search',
+    searchButton: 'Find answers',
+    overviewAria: 'Technical content overview',
+    contentCount: (count: number) => `${count} ${count === 1 ? 'article' : 'articles'}`,
+    topicCount: (count: number) => `${count} topics`,
+    sourceSummary: 'Official documentation and public issues',
+    flowAria:
+      'FastGPT workflow showing an API request passing through authentication and app orchestration before returning a streaming response',
+    flowLabel: 'API request path',
+    flowNote: 'Traceable sources · Actionable steps · Verifiable results',
+    featured: 'Featured guide',
+    readMinutes: (minutes: number) => `${minutes} min read`,
+    readApiGuide: 'Read the API guide',
+    viewDocs: 'View official documentation',
+    filtersAria: 'Technical content filters',
+    byTopic: 'Topics',
+    sourceType: 'Source type',
+    commonEntries: 'Common searches',
+    contentSource: 'Content source',
+    sortAria: 'Sort content',
+    sortDefault: 'Default order',
+    sortTitle: 'Title',
+    sortMinutes: 'Reading time',
+    pagination: 'Content pages',
+    previousPage: 'Previous page',
+    nextPage: 'Next page',
+    emptyTitle: 'Try another search',
+    emptyQuery: (query: string) =>
+      `No content matched “${query}”. Try “Docker”, “Upgrades”, or “API”.`,
+    emptyFiltered: 'No content matches these filters. Clear the filters to continue searching.',
+    clearFilters: 'Clear filters'
+  }
+};
 
 const SEARCH_ENTRY_KEYS = [
   'identity',
@@ -43,11 +188,6 @@ const SEARCH_CATEGORIES: ReadonlySet<string> = new Set(CATEGORY_DEFINITIONS.map(
 const SEARCH_SOURCE_TYPES: ReadonlySet<string> = new Set(
   SOURCE_DEFINITIONS.map(({ value }) => value)
 );
-const SOURCE_OPTIONS: { value: SourceFilter; label: string }[] = [
-  { value: 'all', label: '全部来源' },
-  ...SOURCE_DEFINITIONS
-];
-
 function isTechSearchEntry(value: unknown): value is TechSearchEntry {
   if (!value || typeof value !== 'object') return false;
   const entry = value as Record<string, unknown>;
@@ -93,13 +233,17 @@ function isTechSearchProjection(
   return new Set(value.map((entry) => (entry as TechSearchEntry).identity)).size === value.length;
 }
 
-function getCategoryLabel(category: TechCategoryKey, categoryMeta: CategoryMeta[]) {
-  if (category === 'all') return '按任务找到答案';
+function getCategoryLabel(
+  category: TechCategoryKey,
+  categoryMeta: CategoryMeta[],
+  allLabel: string
+) {
+  if (category === 'all') return allLabel;
   return categoryMeta.find((item) => item.key === category)?.label || category;
 }
 
-function getSourceLabel(sourceType: TechSource) {
-  return SOURCE_DEFINITIONS.find((item) => item.value === sourceType)?.label || sourceType;
+function getSourceLabel(sourceType: TechSource, labels: Record<TechSource, string>) {
+  return labels[sourceType] || sourceType;
 }
 
 function visiblePageNumbers(current: number, total: number) {
@@ -121,37 +265,52 @@ export default function TechCenterPage({
   navCta,
   footer,
   initialEntries,
+  initialPage = 1,
   featuredEntry,
   categoryMeta,
-  totalEntries
+  totalEntries,
+  languageSwitchPaths,
+  searchIndexPath = '/tech-center/search-index.json'
 }: {
   locale: string;
   links: NavLink[];
   navCta: NavCta;
   footer: HomeFooter;
   initialEntries: TechSearchEntry[];
-  featuredEntry: TechEntry;
+  initialPage?: number;
+  featuredEntry?: TechEntry;
   categoryMeta: CategoryMeta[];
   totalEntries: number;
+  languageSwitchPaths: ComponentProps<typeof Navbar>['languageSwitchPaths'];
+  searchIndexPath?: string;
 }) {
+  const router = useRouter();
+  const copy = locale === 'zh' ? TECH_CENTER_COPY.zh : TECH_CENTER_COPY.en;
+  const sourceOptions: { value: SourceFilter; label: string }[] = [
+    { value: 'all', label: copy.sourceAll },
+    ...SOURCE_DEFINITIONS.map(({ value }) => ({
+      value,
+      label: getSourceLabel(value, copy.sourceLabels)
+    }))
+  ];
   const resultsTitleRef = useRef<HTMLHeadingElement>(null);
   const searchInputRef = useRef<HTMLInputElement>(null);
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState<TechCategoryKey>('all');
   const [source, setSource] = useState<SourceFilter>('all');
   const [sort, setSort] = useState<SortMode>('default');
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(initialPage);
   const [urlStateReady, setUrlStateReady] = useState(false);
-  const [entries, setEntries] = useState<TechSearchEntry[]>(initialEntries);
+  const [entries, setEntries] = useState<TechSearchEntry[] | null>(null);
 
   const categoryItems = [
-    { key: 'all' as const, label: '全部内容', icon: '◫', count: totalEntries },
+    { key: 'all' as const, label: copy.categoryAll, icon: '◫', count: totalEntries },
     ...categoryMeta
   ];
 
   useEffect(() => {
     let active = true;
-    fetch('/tech-center/search-index.json')
+    fetch(searchIndexPath)
       .then((response) => {
         if (!response.ok) throw new Error('Technical search projection request failed');
         return response.json() as Promise<unknown>;
@@ -169,17 +328,18 @@ export default function TechCenterPage({
     return () => {
       active = false;
     };
-  }, [totalEntries]);
+  }, [searchIndexPath, totalEntries]);
 
   const filteredEntries = useMemo(() => {
-    const normalizedQuery = query.trim().toLocaleLowerCase('zh-CN');
-    const result = entries.filter((entry) => {
+    const normalizedQuery = query.trim().toLocaleLowerCase(copy.localeName);
+    const result = (entries || initialEntries).filter((entry) => {
       const categoryMatch = category === 'all' || entry.category === category;
       const sourceMatch = source === 'all' || entry.sourceType === source;
-      const categoryLabel = getCategoryLabel(entry.category, categoryMeta);
-      const haystack = [entry.title, entry.description, categoryLabel, entry.sourceType]
+      const categoryLabel = getCategoryLabel(entry.category, categoryMeta, copy.categoryTask);
+      const sourceLabel = getSourceLabel(entry.sourceType, copy.sourceLabels);
+      const haystack = [entry.title, entry.description, categoryLabel, sourceLabel]
         .join(' ')
-        .toLocaleLowerCase('zh-CN');
+        .toLocaleLowerCase(copy.localeName);
 
       return (
         categoryMatch && sourceMatch && (!normalizedQuery || haystack.includes(normalizedQuery))
@@ -189,33 +349,73 @@ export default function TechCenterPage({
     if (sort === 'title') {
       return result
         .slice()
-        .sort((first, second) => first.title.localeCompare(second.title, 'zh-CN'));
+        .sort((first, second) => first.title.localeCompare(second.title, copy.localeName));
     }
     if (sort === 'minutes') {
       return result
         .slice()
         .sort(
           (first, second) =>
-            first.minutes - second.minutes || first.title.localeCompare(second.title, 'zh-CN')
+            first.minutes - second.minutes ||
+            first.title.localeCompare(second.title, copy.localeName)
         );
     }
     return result;
-  }, [category, categoryMeta, entries, query, sort, source]);
+  }, [category, categoryMeta, copy, entries, initialEntries, query, sort, source]);
 
-  const totalPages = Math.max(1, Math.ceil(filteredEntries.length / PAGE_SIZE));
-  const currentPage = Math.min(page, totalPages);
-  const pageEntries = filteredEntries.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE);
+  const hasFilters = Boolean(
+    query.trim() || category !== 'all' || source !== 'all' || sort !== 'default'
+  );
+  const clientPagination = hasFilters && entries !== null;
+  const resultCount = clientPagination ? filteredEntries.length : totalEntries;
+  const totalPages = Math.max(1, Math.ceil(resultCount / PAGE_SIZE));
+  const currentPage = entries ? Math.min(page, totalPages) : initialPage;
+  const pageEntries = entries
+    ? filteredEntries.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+    : initialEntries;
   const pageNumbers = visiblePageNumbers(currentPage, totalPages);
-  const resultsTitle = query ? '搜索结果' : getCategoryLabel(category, categoryMeta);
-  const resultsCount = `共 ${filteredEntries.length} 篇${query ? `，关键词“${query}”` : ''}`;
+  const resultsTitle = query
+    ? copy.resultsTitle
+    : getCategoryLabel(category, categoryMeta, copy.categoryTask);
+  const resultsCount = copy.resultsCount(resultCount, query);
   const homeHref = getDefaultLocalePath(locale);
-  const hubHref = getDefaultLocalePath(locale, '/tech-center');
+  const hubHref = getTechnicalReviewPath(locale, '/tech-center');
+  const getPageHref = (pageNumber: number) => {
+    if (!clientPagination) return getTechnicalReviewPath(locale, getTechCenterPagePath(pageNumber));
+    const params = new URLSearchParams({
+      category,
+      q: query.trim(),
+      sourceType: source,
+      sort,
+      page: String(pageNumber)
+    });
+    return `${hubHref}?${params}`;
+  };
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const urlCategory = params.get('category') as TechCategoryKey | null;
     const urlSource = params.get('sourceType') as SourceFilter | null;
     const urlSort = params.get('sort') as SortMode | null;
+    const pageValue = Number(params.get('page'));
+    const urlPage = Number.isSafeInteger(pageValue) && pageValue > 0 ? pageValue : initialPage;
+    const filteredUrl = Boolean(
+      params.get('q')?.trim() ||
+        (urlCategory &&
+          urlCategory !== 'all' &&
+          categoryMeta.some((item) => item.key === urlCategory)) ||
+        (urlSource && urlSource !== 'all' && SEARCH_SOURCE_TYPES.has(urlSource)) ||
+        urlSort === 'title' ||
+        urlSort === 'minutes'
+    );
+    if (!filteredUrl && params.has('page') && urlPage > 1) {
+      params.delete('page');
+      const path = getTechnicalReviewPath(locale, getTechCenterPagePath(urlPage));
+      router.replace(`${path}${params.size ? `?${params}` : ''}${window.location.hash}`, {
+        scroll: false
+      });
+      return;
+    }
 
     queueMicrotask(() => {
       if (
@@ -224,17 +424,18 @@ export default function TechCenterPage({
       ) {
         setCategory(urlCategory);
       }
-      if (urlSource && SOURCE_OPTIONS.some((item) => item.value === urlSource)) {
+      if (urlSource && (urlSource === 'all' || SEARCH_SOURCE_TYPES.has(urlSource))) {
         setSource(urlSource);
       }
       if (urlSort === 'default' || urlSort === 'title' || urlSort === 'minutes') {
         setSort(urlSort);
       }
       setQuery(params.get('q') || '');
-      setPage(Math.max(1, Number(params.get('page')) || 1));
+      setPage(filteredUrl ? urlPage : initialPage);
       setUrlStateReady(true);
+      if (params.has('q')) searchInputRef.current?.focus();
     });
-  }, [categoryMeta]);
+  }, [categoryMeta, initialPage, locale, router]);
 
   useEffect(() => {
     if (!urlStateReady) return;
@@ -245,7 +446,7 @@ export default function TechCenterPage({
       q: query.trim(),
       sourceType: source,
       sort,
-      page: String(currentPage)
+      page: hasFilters ? String(entries ? currentPage : page) : '1'
     };
 
     Object.entries(values).forEach(([key, value]) => {
@@ -255,8 +456,28 @@ export default function TechCenterPage({
         url.searchParams.set(key, value);
       }
     });
-    window.history.replaceState(null, '', url);
-  }, [category, currentPage, query, sort, source, urlStateReady]);
+    url.pathname = hasFilters
+      ? hubHref
+      : getTechnicalReviewPath(locale, getTechCenterPagePath(currentPage));
+    if (url.pathname !== window.location.pathname) {
+      router.replace(`${url.pathname}${url.search}${url.hash}`, { scroll: false });
+    } else {
+      window.history.replaceState(null, '', url);
+    }
+  }, [
+    category,
+    currentPage,
+    entries,
+    hasFilters,
+    hubHref,
+    locale,
+    page,
+    query,
+    router,
+    sort,
+    source,
+    urlStateReady
+  ]);
 
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -303,30 +524,39 @@ export default function TechCenterPage({
         links={links}
         t={navCta}
         locale={locale}
-        publishedLocales={techPublishedLocaleCodes}
+        publishedLocales={techPublishedLocaleCodes.filter(
+          (language) => languageSwitchPaths?.[language]
+        )}
+        reviewLocalePaths={isPreviewSite}
+        languageSwitchPaths={languageSwitchPaths}
       />
       <main id="main-content" className={`${styles.page} ${styles.main}`}>
         <a className={styles.skipLink} href="#main-content">
-          跳至主要内容
+          {copy.skipLink}
         </a>
-        <nav className={`${styles.container} ${styles.breadcrumbs}`} aria-label="面包屑">
+        <nav className={`${styles.container} ${styles.breadcrumbs}`} aria-label={copy.breadcrumbs}>
           <a href={homeHref}>FastGPT</a>
           <span aria-hidden="true">/</span>
-          <a href={hubHref} aria-current="page">
-            技术中心
+          <a href={hubHref} aria-current={initialPage === 1 ? 'page' : undefined}>
+            {copy.hubName}
           </a>
+          {initialPage > 1 && (
+            <>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">
+                {locale === 'zh' ? `第 ${initialPage} 页` : `Page ${initialPage}`}
+              </span>
+            </>
+          )}
         </nav>
         <section className={`${styles.container} ${styles.intro}`} aria-labelledby="page-title">
-          <div className={styles.eyebrow}>FASTGPT / 技术中心</div>
+          <div className={styles.eyebrow}>{copy.eyebrow}</div>
           <h1 id="page-title">
-            从部署到 API，
+            {copy.heroLineOne}
             <br />
-            直接找到可执行答案。
+            {copy.heroLineTwo}
           </h1>
-          <p className={styles.introCopy}>
-            面向开发与部署人员，按任务搜索 {totalEntries}{' '}
-            篇技术内容，覆盖部署升级、知识库、工作流、集成与 API。
-          </p>
+          <p className={styles.introCopy}>{copy.intro(totalEntries)}</p>
           <form
             className={styles.searchPanel}
             role="search"
@@ -346,14 +576,14 @@ export default function TechCenterPage({
                   setQuery(event.target.value);
                   setPage(1);
                 }}
-                placeholder="搜索部署、升级、知识库或 API"
-                aria-label="搜索技术内容"
+                placeholder={copy.searchPlaceholder}
+                aria-label={copy.searchAria}
               />
               {query && (
                 <button
                   className={styles.clearSearch}
                   type="button"
-                  aria-label="清除搜索"
+                  aria-label={copy.clearSearch}
                   onClick={() => {
                     setQuery('');
                     setPage(1);
@@ -366,80 +596,80 @@ export default function TechCenterPage({
               <kbd className={styles.shortcut}>⌘K</kbd>
             </div>
             <button className={styles.searchButton} type="submit">
-              查找答案
+              {copy.searchButton}
               <ArrowRight size={17} strokeWidth={1.8} aria-hidden="true" />
             </button>
           </form>
-          <div className={styles.trustBar} aria-label="技术内容概览">
-            <span>{totalEntries} 篇内容</span>
-            <span>{categoryMeta.length} 个主题</span>
-            <span>官方文档与公开 Issue</span>
+          <div className={styles.trustBar} aria-label={copy.overviewAria}>
+            <span>{copy.contentCount(totalEntries)}</span>
+            <span>{copy.topicCount(categoryMeta.length)}</span>
+            <span>{copy.sourceSummary}</span>
           </div>
         </section>
 
-        <section
-          className={`${styles.container} ${styles.featured}`}
-          aria-labelledby="featured-title"
-        >
-          <div
-            className={styles.flowCanvas}
-            role="img"
-            aria-label="API 调用经过身份鉴权、应用编排并返回流式响应的 FastGPT 工作流示意图"
+        {featuredEntry && (
+          <section
+            className={`${styles.container} ${styles.featured}`}
+            aria-labelledby="featured-title"
           >
-            <div className={styles.canvasLabel}>API 调用路径</div>
-            <div className={styles.flowStage}>
-              <div className={styles.flowLine} aria-hidden="true" />
-              {FLOW_NODES.map((node) => (
-                <div className={styles.flowNode} key={node.number}>
-                  <span className={styles.nodeIcon}>{node.number}</span>
-                  <span className={styles.nodeTitle}>{node.title}</span>
-                  <span className={styles.nodeKind}>{node.kind}</span>
-                </div>
-              ))}
+            <div className={styles.flowCanvas} role="img" aria-label={copy.flowAria}>
+              <div className={styles.canvasLabel}>{copy.flowLabel}</div>
+              <div className={styles.flowStage}>
+                <div className={styles.flowLine} aria-hidden="true" />
+                {copy.flowNodes.map((node) => (
+                  <div className={styles.flowNode} key={node.number}>
+                    <span className={styles.nodeIcon}>{node.number}</span>
+                    <span className={styles.nodeTitle}>{node.title}</span>
+                    <span className={styles.nodeKind}>{node.kind}</span>
+                  </div>
+                ))}
+              </div>
+              <div className={styles.canvasNote}>{copy.flowNote}</div>
             </div>
-            <div className={styles.canvasNote}>可追溯来源 · 可执行步骤 · 可验证结果</div>
-          </div>
 
-          <div className={styles.featuredCopy}>
-            <div className={styles.featuredEyebrow}>推荐入口</div>
-            <div className={styles.metaRow}>
-              <span className={styles.badge}>{featuredEntry.categoryLabel}</span>
-              <span className={`${styles.badge} ${styles.sourceBadge}`}>
-                {featuredEntry.sourceType}
-              </span>
-              <span>{featuredEntry.minutes} 分钟阅读</span>
+            <div className={styles.featuredCopy}>
+              <div className={styles.featuredEyebrow}>{copy.featured}</div>
+              <div className={styles.metaRow}>
+                <span className={styles.badge}>
+                  {getCategoryLabel(featuredEntry.category, categoryMeta, copy.categoryTask)}
+                </span>
+                <span className={`${styles.badge} ${styles.sourceBadge}`}>
+                  {getSourceLabel(featuredEntry.sourceType, copy.sourceLabels)}
+                </span>
+                <span>{copy.readMinutes(featuredEntry.minutes)}</span>
+              </div>
+              <h2 className={styles.featuredTitle} id="featured-title">
+                {featuredEntry.title}
+              </h2>
+              <p className={styles.featuredSummary}>{featuredEntry.summary}</p>
+              <div className={styles.featuredActions}>
+                <a
+                  className={styles.primaryLink}
+                  href={getTechnicalReviewPath(locale, getTechEntryPath(featuredEntry))}
+                >
+                  {copy.readApiGuide} <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />
+                </a>
+                <a
+                  className={styles.textLink}
+                  href={featuredEntry.source}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {copy.viewDocs} <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
+                </a>
+              </div>
             </div>
-            <h2 className={styles.featuredTitle} id="featured-title">
-              {featuredEntry.title}
-            </h2>
-            <p className={styles.featuredSummary}>{featuredEntry.summary}</p>
-            <div className={styles.featuredActions}>
-              <a
-                className={styles.primaryLink}
-                href={getDefaultLocalePath(locale, getTechEntryPath(featuredEntry))}
-              >
-                阅读 API 指南 <ArrowRight size={16} strokeWidth={1.8} aria-hidden="true" />
-              </a>
-              <a
-                className={styles.textLink}
-                href={featuredEntry.source}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                查看官方文档 <ExternalLink size={14} strokeWidth={1.8} aria-hidden="true" />
-              </a>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         <section
           className={`${styles.container} ${styles.library}`}
           id="content-library"
           aria-labelledby="results-title"
         >
-          <aside className={styles.filters} aria-label="技术内容筛选">
+          <aside className={styles.filters} aria-label={copy.filtersAria}>
             <div className={styles.filterGroup}>
-              <h2 className={styles.filterHeading}>按主题</h2>
+              <h2 className={styles.filterHeading}>{copy.byTopic}</h2>
               <div className={styles.categoryList}>
                 {categoryItems.map((item) => (
                   <button
@@ -462,7 +692,7 @@ export default function TechCenterPage({
               </div>
               <div className={styles.mobileFilterRow}>
                 <label className={styles.srOnly} htmlFor="mobile-source-filter">
-                  来源类型
+                  {copy.sourceType}
                 </label>
                 <select
                   className={styles.sourceSelect}
@@ -473,7 +703,7 @@ export default function TechCenterPage({
                     setPage(1);
                   }}
                 >
-                  {SOURCE_OPTIONS.map((option) => (
+                  {sourceOptions.map((option) => (
                     <option key={option.value} value={option.value}>
                       {option.label}
                     </option>
@@ -483,9 +713,9 @@ export default function TechCenterPage({
             </div>
 
             <div className={styles.filterGroup}>
-              <h2 className={styles.filterHeading}>常用入口</h2>
+              <h2 className={styles.filterHeading}>{copy.commonEntries}</h2>
               <div className={styles.tagList}>
-                {COMMON_TOPICS.map((topic) => (
+                {copy.commonTopics.map((topic) => (
                   <button
                     className={styles.tagButton}
                     type="button"
@@ -503,7 +733,7 @@ export default function TechCenterPage({
 
             <div className={styles.filterGroup}>
               <label className={styles.filterHeading} htmlFor="source-filter">
-                内容来源
+                {copy.contentSource}
               </label>
               <select
                 className={styles.sourceSelect}
@@ -514,7 +744,7 @@ export default function TechCenterPage({
                   setPage(1);
                 }}
               >
-                {SOURCE_OPTIONS.map((option) => (
+                {sourceOptions.map((option) => (
                   <option key={option.value} value={option.value}>
                     {option.label}
                   </option>
@@ -534,7 +764,7 @@ export default function TechCenterPage({
                 </p>
               </div>
               <label className={styles.srOnly} htmlFor="sort-select">
-                内容排序
+                {copy.sortAria}
               </label>
               <select
                 className={styles.sortSelect}
@@ -545,9 +775,9 @@ export default function TechCenterPage({
                   setPage(1);
                 }}
               >
-                <option value="default">默认排序</option>
-                <option value="title">按标题</option>
-                <option value="minutes">阅读时间</option>
+                <option value="default">{copy.sortDefault}</option>
+                <option value="title">{copy.sortTitle}</option>
+                <option value="minutes">{copy.sortMinutes}</option>
               </select>
             </div>
 
@@ -558,18 +788,20 @@ export default function TechCenterPage({
                     <article className={styles.articleCard} key={entry.identity}>
                       <div className={styles.cardTop}>
                         <span className={styles.badge}>
-                          {getCategoryLabel(entry.category, categoryMeta)}
+                          {getCategoryLabel(entry.category, categoryMeta, copy.categoryTask)}
                         </span>
-                        <span className={styles.cardSource}>{getSourceLabel(entry.sourceType)}</span>
+                        <span className={styles.cardSource}>
+                          {getSourceLabel(entry.sourceType, copy.sourceLabels)}
+                        </span>
                       </div>
                       <h3 className={styles.cardTitle}>
-                        <a href={getDefaultLocalePath(entry.locale, entry.publicPath)}>
+                        <a href={getTechnicalReviewPath(entry.locale, entry.publicPath)}>
                           {entry.title}
                         </a>
                       </h3>
                       <p className={styles.cardSummary}>{entry.description}</p>
                       <div className={styles.cardFooter}>
-                        <span>{entry.minutes} 分钟阅读</span>
+                        <span>{copy.readMinutes(entry.minutes)}</span>
                         <span className={styles.cardArrow} aria-hidden="true">
                           <ArrowRight size={16} strokeWidth={1.8} />
                         </span>
@@ -579,16 +811,23 @@ export default function TechCenterPage({
                 </div>
 
                 {totalPages > 1 && (
-                  <nav className={styles.pagination} aria-label="内容分页">
-                    <button
+                  <nav className={styles.pagination} aria-label={copy.pagination}>
+                    <a
                       className={styles.pageButton}
-                      type="button"
-                      disabled={currentPage === 1}
-                      aria-label="上一页"
-                      onClick={() => changePage(currentPage - 1)}
+                      href={currentPage > 1 ? getPageHref(currentPage - 1) : undefined}
+                      aria-disabled={currentPage === 1 || undefined}
+                      aria-label={copy.previousPage}
+                      onClick={
+                        clientPagination && currentPage > 1
+                          ? (event) => {
+                              event.preventDefault();
+                              changePage(currentPage - 1);
+                            }
+                          : undefined
+                      }
                     >
                       <ChevronLeft size={17} strokeWidth={1.8} aria-hidden="true" />
-                    </button>
+                    </a>
                     {pageNumbers.map((pageNumber, index) => {
                       const previousPage = pageNumbers[index - 1];
                       const hasGap = previousPage && pageNumber - previousPage > 1;
@@ -599,40 +838,50 @@ export default function TechCenterPage({
                               …
                             </span>
                           )}
-                          <button
+                          <a
                             className={styles.pageButton}
-                            type="button"
+                            href={getPageHref(pageNumber)}
                             aria-current={pageNumber === currentPage ? 'page' : undefined}
-                            onClick={() => changePage(pageNumber)}
+                            onClick={
+                              clientPagination
+                                ? (event) => {
+                                    event.preventDefault();
+                                    changePage(pageNumber);
+                                  }
+                                : undefined
+                            }
                           >
                             {pageNumber}
-                          </button>
+                          </a>
                         </Fragment>
                       );
                     })}
-                    <button
+                    <a
                       className={styles.pageButton}
-                      type="button"
-                      disabled={currentPage === totalPages}
-                      aria-label="下一页"
-                      onClick={() => changePage(currentPage + 1)}
+                      href={currentPage < totalPages ? getPageHref(currentPage + 1) : undefined}
+                      aria-disabled={currentPage === totalPages || undefined}
+                      aria-label={copy.nextPage}
+                      onClick={
+                        clientPagination && currentPage < totalPages
+                          ? (event) => {
+                              event.preventDefault();
+                              changePage(currentPage + 1);
+                            }
+                          : undefined
+                      }
                     >
                       <ChevronRight size={17} strokeWidth={1.8} aria-hidden="true" />
-                    </button>
+                    </a>
                   </nav>
                 )}
               </>
             ) : (
               <div className={styles.emptyState}>
                 <div>
-                  <h3>换个关键词，继续找答案</h3>
-                  <p>
-                    {query
-                      ? `没有找到“${query}”相关内容。试试“Docker”“版本升级”或“API”。`
-                      : '当前筛选条件下没有内容，可以清除筛选后继续搜索。'}
-                  </p>
+                  <h3>{copy.emptyTitle}</h3>
+                  <p>{query ? copy.emptyQuery(query) : copy.emptyFiltered}</p>
                   <button className={styles.clearButton} type="button" onClick={clearFilters}>
-                    清除筛选
+                    {copy.clearFilters}
                   </button>
                 </div>
               </div>

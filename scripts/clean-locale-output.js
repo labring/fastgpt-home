@@ -5,6 +5,7 @@ const path = require('node:path');
 const {
   buildRedirects,
   getTechIdentities,
+  getTechRoutesToRemove,
   writeCloudflareWorker,
   writeNginxRedirectMap
 } = require('./lib/redirects');
@@ -13,18 +14,12 @@ const {
   getUrlAliasAuthoritySummary,
   readUrlAliasAuthority
 } = require('./lib/url-alias-authority');
-const {
-  getDefaultLocale,
-  getPublishedLocaleCodes,
-  localeCodes,
-  resolveSiteVariant
-} = require('./lib/site-variant');
+const { getPublishedLocaleCodes, localeCodes, resolveSiteVariant } = require('./lib/site-variant');
 
 const rootDir = path.join(__dirname, '..');
 const outDir = path.join(rootDir, 'out');
 const nextDir = path.join(rootDir, '.next');
 const variant = resolveSiteVariant();
-const defaultLocale = getDefaultLocale(variant);
 const allowedLocales = new Set(getPublishedLocaleCodes(variant));
 const techIdentities = getTechIdentities(rootDir);
 const aliasAuthority = readUrlAliasAuthority(rootDir);
@@ -92,14 +87,15 @@ for (const locale of localeCodes) {
   removed += removePath(path.join(outDir, `${locale}.txt`));
 }
 
-// The technical center currently publishes complete content only in Simplified Chinese.
-if (defaultLocale !== 'zh') {
-  // Preview keeps the shared search projection consumed by /zh/tech-center.
-  const removeTechCenterRoute = variant === 'preview' ? removeRouteDocuments : removeRoute;
-  removed += removeTechCenterRoute('/tech-center');
+for (const route of getTechRoutesToRemove(techIdentities, variant)) {
+  removed += route === '/tech-center' ? removeRouteDocuments(route) : removeRoute(route);
 }
-for (const identity of techIdentities) {
-  removed += removeRoute(variant === 'cn' ? identity.sourcePath : identity.canonicalPath);
+
+if (variant === 'preview') {
+  removed += removeRoute('/guide');
+} else {
+  removed += removeRoute('/zh/guide');
+  removed += removeRoute('/en/guide');
 }
 
 const { cnRedirects, ioRedirects } = buildRedirects(rootDir);

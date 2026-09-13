@@ -14,7 +14,7 @@
     },
     {
       "label": "案例中心",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "/customers"
     }
   ],
   "Pricing": {
@@ -427,6 +427,30 @@
       "trial": "立即开始",
       "consult": "商务咨询"
     },
+    "consultationDialog": {
+      "badge": "FastGPT 企业服务",
+      "title": "FastGPT 商务咨询",
+      "description": "留下你的业务流程、数据现状与目标效果，FastGPT 团队将在 1 天内联系你，结合知识库、工作流与智能体能力，为你提供一份可落地的专属方案。",
+      "benefits": [
+        {
+          "title": "从知识库到 AI 应用",
+          "description": "基于企业知识库与 RAG，快速构建可信的业务问答。"
+        },
+        {
+          "title": "用工作流编排业务流程",
+          "description": "可视化工作流连接模型、知识库与业务系统。"
+        },
+        {
+          "title": "构建可运营的智能体",
+          "description": "围绕真实业务场景，让 AI 持续落地执行。"
+        },
+        {
+          "title": "支持企业级部署与治理",
+          "description": "覆盖 SaaS 与私有化，满足企业安全要求。"
+        }
+      ],
+      "footer": "已服务金融、制造、教育、医疗等 17 个重点行业"
+    },
     "footer": {
       "tagline": "企业级AI生产力引擎",
       "columns": {
@@ -454,7 +478,8 @@
         },
         "more": {
           "title": "更多信息",
-          "email": "邮箱：Dennis@sealos.io",
+          "email": "邮箱：business@fastgpt.io",
+          "phone": "电话：4006992336",
           "lanqiao": "蓝桥云课 x FastGPT教程",
           "book": "FastGPT官方教材（纸质书）"
         }

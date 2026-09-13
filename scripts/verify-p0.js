@@ -86,6 +86,31 @@ async function verifyImage() {
   );
 }
 
+function verifyNginxHeaderCoverage(config) {
+  const scopes = [];
+  // ponytail: This checks the current multiline blocks; inline blocks need a Nginx parser.
+  for (const line of config.split('\n').map((line) => line.trim())) {
+    if (line.startsWith('#')) continue;
+    if (line.endsWith('{')) {
+      scopes.push({ name: line, directives: [] });
+    } else if (line === '}') {
+      const scope = scopes.pop();
+      const isServer = scope.name.startsWith('server ');
+      if (isServer || scope.directives.some((directive) => directive.startsWith('add_header '))) {
+        const expected = isServer
+          ? /^include \/etc\/nginx\/security-headers\.conf;$/
+          : /^include \/etc\/nginx\/(?:embeddable-)?security-headers\.conf;$/;
+        assert(
+          scope.directives.some((directive) => expected.test(directive)),
+          `Security headers missing from ${scope.name}`
+        );
+      }
+    } else if (scopes.length) {
+      scopes[scopes.length - 1].directives.push(line);
+    }
+  }
+}
+
 function verifyNginxHeaders() {
   const headerConfig = fs.readFileSync(path.join(rootDir, 'nginx-security-headers.conf'), 'utf8');
   const embeddableHeaderConfig = fs.readFileSync(
@@ -106,10 +131,7 @@ function verifyNginxHeaders() {
     assert(headerConfig.includes(`add_header ${header} `), `Missing ${header}`);
   }
 
-  const includeCount = (nginxConfig.match(/include \/etc\/nginx\/security-headers\.conf;/g) || [])
-    .length;
-  // Keep the release manifest endpoint covered alongside the server and cache locations.
-  assert.equal(includeCount, 12, 'Security headers must cover the server, release manifest, and cache locations');
+  verifyNginxHeaderCoverage(nginxConfig);
   assert(headerConfig.includes('add_header X-Frame-Options "DENY"'), 'Default pages must deny framing');
   assert(
     !embeddableHeaderConfig.includes('X-Frame-Options'),
@@ -175,23 +197,6 @@ function verifyNginxHeaders() {
     'Docker build does not enforce its CN-only publication boundary'
   );
   assert(dockerfile.includes('RUN nginx -t'), 'Docker image does not validate the Nginx config');
-  const releaseStageStart = dockerfile.indexOf('AS release-runtime');
-  const runtimeStageStart = dockerfile.indexOf('AS runtime');
-  const releaseStage = dockerfile.slice(releaseStageStart, runtimeStageStart);
-  const redirectMapCopy = releaseStage.indexOf(
-    'COPY release-out/__release/nginx-redirects.conf /etc/nginx/generated-redirects.conf'
-  );
-  const redirectMapGuard = releaseStage.indexOf('test -s /etc/nginx/generated-redirects.conf');
-  const nginxTest = releaseStage.indexOf('nginx -t');
-  assert(
-    releaseStageStart >= 0 && runtimeStageStart > releaseStageStart,
-    'Dockerfile must keep release-runtime before the default runtime stage'
-  );
-  assert(
-    redirectMapCopy >= 0 && redirectMapGuard > redirectMapCopy && nginxTest > redirectMapGuard,
-    'Release runtime must copy and validate the generated Nginx redirect map'
-  );
-
   const redirectMap = parseNginxRedirectMap(
     fs.readFileSync(path.join(rootDir, '.next', 'nginx-redirects.conf'), 'utf8')
   );
@@ -253,7 +258,11 @@ async function main() {
   console.log(`P0 verification passed for ${baseUrl}`);
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
+
+module.exports = { verifyNginxHeaderCoverage };

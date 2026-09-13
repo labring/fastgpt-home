@@ -29,7 +29,7 @@ const ts = loadTypeScript();
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
-const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales'];
+const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales', 'content/customers'];
 const ENGLISH_CITATION_LABEL = 'Source(?:s)?|Reference(?:s)?';
 const CHINESE_CITATION_LABEL = '资料来源|参考资料|来源';
 const CITATION_LABEL_NAME = `${ENGLISH_CITATION_LABEL}|${CHINESE_CITATION_LABEL}`;
@@ -117,6 +117,9 @@ const MARKDOWN_TYPE_6_HTML_BLOCK = new RegExp(
   'i'
 );
 const BLOCK_BOUNDARY = '\uE000';
+const HTML_SECTION_BOUNDARY = '\uE001';
+const HTML_SECTION_OPENERS = new Set(['aside', 'footer', 'nav']);
+const HTML_SECTION_CLOSERS = new Set(['article', 'main', 'section']);
 const CHINESE_EDITORIAL_LABELS = [
   '事实来源',
   '需求依据',
@@ -2239,6 +2242,12 @@ function projectVisibleHtml(visible) {
         if (href) appendSyntheticHtml(projection, '[', tagStart);
       }
     }
+    if (
+      (!closing && HTML_SECTION_OPENERS.has(name)) ||
+      (closing && HTML_SECTION_CLOSERS.has(name))
+    ) {
+      appendSyntheticHtml(projection, `\n${HTML_SECTION_BOUNDARY}\n`, tagStart);
+    }
     if (/^h[1-6]$/.test(name)) {
       appendBlockBoundary(projection, tagStart);
       if (!closing) appendSyntheticHtml(projection, '## ', tagStart);
@@ -2316,6 +2325,11 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   const isBoundary = (index) => Boolean(boundaryRunAt(index)?.boundary);
   let cursor = 0;
   for (let index = 0; index < source.text.length; index += 1) {
+    if (!preserveBlockBoundaries && source.text[index] === HTML_SECTION_BOUNDARY) {
+      appendRange(projection, cursor, index);
+      cursor = index + 1;
+      continue;
+    }
     if (preserveBlockBoundaries && isBoundary(index)) {
       appendRange(projection, cursor, index);
       appendProjectedHtml(projection, BLOCK_BOUNDARY, rawOffsetAt(index), false, true);
@@ -2455,21 +2469,28 @@ function visibleCitationBlocks(projection) {
   const citations = [];
   let inSources = false;
   let lineStart = 0;
-  for (const line of projection.text.replaceAll(BLOCK_BOUNDARY, '\n').split('\n')) {
-    const heading = line.match(/^#{1,6}\s+/);
-    if (SOURCE_SECTION.test(line)) {
-      inSources = true;
-      lineStart += line.length + 1;
-      continue;
+  for (const rawLine of projection.text.replaceAll(BLOCK_BOUNDARY, '\n').split('\n')) {
+    let segmentStart = 0;
+    for (const line of rawLine.split(HTML_SECTION_BOUNDARY)) {
+      if (segmentStart > 0) inSources = false;
+      const heading = line.match(/^#{1,6}\s+/);
+      if (SOURCE_SECTION.test(line)) {
+        inSources = true;
+      } else {
+        if (heading) inSources = false;
+        if (inSources && line.trim()) {
+          citations.push({ index: lineStart + segmentStart + line.search(/\S/), value: line });
+        }
+        for (const entry of labelledCitationEntries(line)) {
+          citations.push({
+            index: lineStart + segmentStart + entry.index,
+            value: entry.value
+          });
+        }
+      }
+      segmentStart += line.length + 1;
     }
-    if (heading) inSources = false;
-    if (inSources && line.trim()) {
-      citations.push({ index: lineStart + line.search(/\S/), value: line });
-    }
-    for (const entry of labelledCitationEntries(line)) {
-      citations.push({ index: lineStart + entry.index, value: entry.value });
-    }
-    lineStart += line.length + 1;
+    lineStart += rawLine.length + 1;
   }
   return citations;
 }

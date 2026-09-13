@@ -63,7 +63,7 @@ export default function Stats({ stars, t }: StatsProps) {
   );
 }
 
-function StatItem({
+export function StatItem({
   end,
   decimals,
   suffix,
@@ -75,7 +75,7 @@ function StatItem({
   decimals: number;
   suffix: string;
   label: string;
-  desc: string;
+  desc?: string;
   delay: number;
 }) {
   const { value, ref } = useCountUp(end, decimals);
@@ -101,7 +101,9 @@ function StatItem({
         <p className="m-0 text-ink text-[16px] md:text-[20px] font-medium leading-[24px] md:leading-[28px] tracking-[-0.32px] md:tracking-[-0.4px]">
           {label}
         </p>
-        <p className="text-ink-sub text-[12px] md:text-[16px] leading-[18px] md:leading-[24px]">{desc}</p>
+        {desc && (
+          <p className="text-ink-sub text-[12px] md:text-[16px] leading-[18px] md:leading-[24px]">{desc}</p>
+        )}
       </div>
     </m.div>
   );

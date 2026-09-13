@@ -1,0 +1,1630 @@
+{
+  "authority": "customer-migration",
+  "authorityDigest": "7391b3b44d263cb1da1050b35477ad2776e4c6361c60ee7ce24ca1ad2d153c16",
+  "digest": "c01cda88914d8d9d5e219889ac66528877ae8146dc4e208c5f365405433abcbe",
+  "entries": [
+    {
+      "sourceClass": "legacy-root",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers"
+    },
+    {
+      "sourceClass": "legacy-hub",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/ai-travel-itinerary-planner",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/ai-travel-itinerary-planner"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/bid-document-review-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/bid-document-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/chatppt-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/chatppt-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/data-chart-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/data-chart-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/enterprise-email-writing-assistant-2",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/enterprise-email-writing-assistant-2"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/enterprise-report-auto-generation",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/enterprise-report-auto-generation"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/event-planning-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/event-planning-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/fastgpt-ai-search-marketing-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/fastgpt-ai-search-marketing-system"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/feishu-smart-reimbursement-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/feishu-smart-reimbursement-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/intelligent-document-outline-extraction",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/intelligent-document-outline-extraction"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/interview-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/interview-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/jd-generation-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/jd-generation-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/procurement-form-filling-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/procurement-form-filling-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/resume-screening-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/resume-screening-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/business/security-requirement-review",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/security-requirement-review"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/accommodation-catering-hotels",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/accommodation-catering-hotels"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/agriculture-forestry-livestock-fishing",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/agriculture-forestry-livestock-fishing"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/business",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/business"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/construction-engineering-renovation",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/construction-engineering-renovation"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/e-commerce-retail-trade",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/e-commerce-retail-trade"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/education-training-research-study",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/education-training-research-study"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/energy-minerals-chemicals",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/energy-minerals-chemicals"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/finance-insurance-wealth-management",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/finance-insurance-wealth-management"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/government-public-services",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/government-public-services"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/internet-it-technology",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/internet-it-technology"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/legal-affairs-compliance",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/legal-affairs-compliance"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/life-household-services",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/life-household-services"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/manufacturing-production-processing",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/manufacturing-production-processing"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/media-film-cultural-creativity",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/media-film-cultural-creativity"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/medical-health-wellness",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/medical-health-wellness"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/transportation-logistics",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/transportation-logistics"
+    },
+    {
+      "sourceClass": "legacy-category",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/categories/wen-tourism-leisure-entertainment",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/categories/wen-tourism-leisure-entertainment"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/construction-engineering-renovation/text-sql-institution-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/construction-engineering-renovation/text-sql-institution-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/e-commerce-retail-trade/ai-ad-script-generator",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ai-ad-script-generator"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/e-commerce-retail-trade/ai-customer-profiling",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ai-customer-profiling"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/e-commerce-retail-trade/ai-customer-service-ticketing-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ai-customer-service-ticketing-system"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/e-commerce-retail-trade/ecommerce-image-generation-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ecommerce-image-generation-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/e-commerce-retail-trade/retail-ai-dispatch-platform",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/retail-ai-dispatch-platform"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/e-commerce-retail-trade/retail-intelligent-customer-service",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/retail-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/ai-intelligent-customer-service",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/ai-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/college-application-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/college-application-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/education-sdg-analysis-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/education-sdg-analysis-system"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/english-tutor-sales-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/english-tutor-sales-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/fastgpt-medical-exam-diagnosis",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/fastgpt-medical-exam-diagnosis"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/heuristic-problem-solving-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/heuristic-problem-solving-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/intelligent-question-generation-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/intelligent-question-generation-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/k12-intelligent-homework-grading",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/k12-intelligent-homework-grading"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/learning-insight-engine-for-medical-education",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/learning-insight-engine-for-medical-education"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/education-training-research-study/study-planning-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/study-planning-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/energy-minerals-chemicals/energy-storage-operations-ai",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/energy-storage-operations-ai"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/energy-minerals-chemicals/nmr-intelligent-analysis",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/nmr-intelligent-analysis"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/energy-minerals-chemicals/sales-order-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/sales-order-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/energy-minerals-chemicals/shipping-fulfillment-risk-control",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/shipping-fulfillment-risk-control"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/bidding-report-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/bidding-report-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/financial-leasing-smart-marketing-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-leasing-smart-marketing-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/financial-report-retrieval-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-report-retrieval-solution"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/financial-terminal-ai-search",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-terminal-ai-search"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/financing-daily-report-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financing-daily-report-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/insurance-claims-initial-review-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/insurance-claims-initial-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/intelligent-due-diligence-agent-for-financial-leasing",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/intelligent-due-diligence-agent-for-financial-leasing"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/finance-insurance-wealth-management/yield-reporting-intelligent-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/yield-reporting-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/government-public-services/government-provident-fund-intelligent-qa",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/government-provident-fund-intelligent-qa"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/government-public-services/three-special-ai-assistants",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/three-special-ai-assistants"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/government-public-services/ticket-classification-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/ticket-classification-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/internet-it-technology/ai-technical-documentation-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/ai-technical-documentation-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/internet-it-technology/it-operations-qa-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/it-operations-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/internet-it-technology/wechat-sales-and-copy-optimizer",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/wechat-sales-and-copy-optimizer"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/civil-code-qa-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/civil-code-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/contract-attachment-review",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/contract-attachment-review"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/contract-field-comparison-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/contract-field-comparison-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/contract-version-comparison-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/contract-version-comparison-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/feishu-contract-review",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/feishu-contract-review"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/law-firm-document-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/law-firm-document-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/legal-affairs-compliance/legal-due-diligence-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/legal-due-diligence-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/adas-quality-inspection",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/adas-quality-inspection"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/ai-financial-audit-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/ai-financial-audit-solution"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/ai-part-number-analyzer-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/ai-part-number-analyzer-system"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/auto-repair-qa-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/auto-repair-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/automotive-sales-script-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/automotive-sales-script-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/biological-reagent-consultation-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/biological-reagent-consultation-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/bom-sales-quotation-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/bom-sales-quotation-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/document-cross-review",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/document-cross-review"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/fastgpt-supplier-recommendation-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/fastgpt-supplier-recommendation-system"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/intelligent-bid-document-writing",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/intelligent-bid-document-writing"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/isap-it-ops-robot-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/isap-it-ops-robot-solution"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/packaging-review-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/packaging-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/manufacturing-production-processing/vda6-3-intelligent-audit",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/vda6-3-intelligent-audit"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/media-film-cultural-creativity/content-compliance-review-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/media-film-cultural-creativity/content-compliance-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/media-film-cultural-creativity/multi-platform-rewriting",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/media-film-cultural-creativity/multi-platform-rewriting"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/biomedical-customer-service-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/biomedical-customer-service-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/clinical-trial-prescreening",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/clinical-trial-prescreening"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/fastgpt-factory-qa-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/fastgpt-factory-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/fastgpt-pharmacy-research-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/fastgpt-pharmacy-research-solution"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/hospital-guide-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/hospital-guide-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/oa-assistant-biopharma-case",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/oa-assistant-biopharma-case"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/pharma-talent-decision-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/pharma-talent-decision-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/pharmaceutical-gmp-sop-qa-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/pharmaceutical-gmp-sop-qa-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/private-domain-consultation-conversion-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/private-domain-consultation-conversion-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/medical-health-wellness/quality-document-inspection-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/quality-document-inspection-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/adas-quality-inspection/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/adas-quality-inspection"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-ad-script-generator/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ai-ad-script-generator"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-customer-profiling/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ai-customer-profiling"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-customer-service-ticketing-system/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ai-customer-service-ticketing-system"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-financial-audit-solution/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/ai-financial-audit-solution"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-intelligent-customer-service/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/ai-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-part-number-analyzer-system/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/ai-part-number-analyzer-system"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-technical-documentation-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/ai-technical-documentation-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ai-travel-itinerary-planner/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/ai-travel-itinerary-planner"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/auto-repair-qa-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/auto-repair-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/automotive-sales-script-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/automotive-sales-script-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/bid-document-review-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/bid-document-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/bidding-report-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/bidding-report-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/biological-reagent-consultation-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/biological-reagent-consultation-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/biomedical-customer-service-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/biomedical-customer-service-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/bom-sales-quotation-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/bom-sales-quotation-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/bridge-inspection-intelligent-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/bridge-inspection-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/chatppt-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/chatppt-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/civil-code-qa-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/civil-code-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/clinical-trial-prescreening/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/clinical-trial-prescreening"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/college-application-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/college-application-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/content-compliance-review-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/media-film-cultural-creativity/content-compliance-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/contract-attachment-review/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/contract-attachment-review"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/contract-field-comparison-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/contract-field-comparison-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/contract-version-comparison-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/contract-version-comparison-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/data-chart-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/data-chart-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/document-cross-review/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/document-cross-review"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ecommerce-image-generation-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/ecommerce-image-generation-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/education-sdg-analysis-system/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/education-sdg-analysis-system"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/energy-storage-operations-ai/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/energy-storage-operations-ai"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/english-tutor-sales-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/english-tutor-sales-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/enterprise-email-writing-assistant-2/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/enterprise-email-writing-assistant-2"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/enterprise-report-auto-generation/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/enterprise-report-auto-generation"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/event-planning-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/event-planning-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/fastgpt-ai-search-marketing-system/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/fastgpt-ai-search-marketing-system"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/fastgpt-factory-qa-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/fastgpt-factory-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/fastgpt-medical-exam-diagnosis/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/fastgpt-medical-exam-diagnosis"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/fastgpt-pharmacy-research-solution/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/fastgpt-pharmacy-research-solution"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/fastgpt-supplier-recommendation-system/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/fastgpt-supplier-recommendation-system"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/feishu-contract-review/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/feishu-contract-review"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/feishu-smart-reimbursement-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/feishu-smart-reimbursement-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/financial-leasing-smart-marketing-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-leasing-smart-marketing-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/financial-report-retrieval-solution/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-report-retrieval-solution"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/financial-reporting-ai-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/financial-terminal-ai-search/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-terminal-ai-search"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/financing-daily-report-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financing-daily-report-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/government-provident-fund-intelligent-qa/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/government-provident-fund-intelligent-qa"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/heuristic-problem-solving-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/heuristic-problem-solving-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/hospital-guide-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/hospital-guide-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/insurance-claims-initial-review-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/insurance-claims-initial-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/intelligent-bid-document-writing/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/intelligent-bid-document-writing"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/intelligent-document-outline-extraction/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/intelligent-document-outline-extraction"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/intelligent-due-diligence-agent-for-financial-leasing/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/intelligent-due-diligence-agent-for-financial-leasing"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/intelligent-question-generation-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/intelligent-question-generation-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/interview-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/interview-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/isap-it-ops-robot-solution/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/isap-it-ops-robot-solution"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/it-operations-qa-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/it-operations-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/jd-generation-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/jd-generation-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/k12-intelligent-homework-grading/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/k12-intelligent-homework-grading"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/law-firm-document-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/law-firm-document-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/learning-insight-engine-for-medical-education/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/learning-insight-engine-for-medical-education"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/legal-due-diligence-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/legal-affairs-compliance/legal-due-diligence-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/multi-platform-rewriting/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/media-film-cultural-creativity/multi-platform-rewriting"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/nmr-intelligent-analysis/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/nmr-intelligent-analysis"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/oa-assistant-biopharma-case/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/oa-assistant-biopharma-case"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/packaging-review-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/packaging-review-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/pharma-talent-decision-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/pharma-talent-decision-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/pharmaceutical-gmp-sop-qa-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/pharmaceutical-gmp-sop-qa-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/private-domain-consultation-conversion-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/private-domain-consultation-conversion-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/procurement-form-filling-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/procurement-form-filling-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/quality-document-inspection-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/quality-document-inspection-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/resume-screening-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/resume-screening-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/retail-ai-dispatch-platform/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/retail-ai-dispatch-platform"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/retail-intelligent-customer-service/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/retail-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/sales-order-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/sales-order-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/securities-ai-platform-fastgpt/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/security-requirement-review/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/security-requirement-review"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/shipping-fulfillment-risk-control/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/energy-minerals-chemicals/shipping-fulfillment-risk-control"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/study-planning-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/study-planning-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/text-sql-institution-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/construction-engineering-renovation/text-sql-institution-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/three-special-ai-assistants/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/three-special-ai-assistants"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/ticket-classification-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/ticket-classification-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/travel-planning-assistant/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/wen-tourism-leisure-entertainment/travel-planning-assistant"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/travel-planning-expert/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/wen-tourism-leisure-entertainment/travel-planning-expert"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/tunnel-operation-safety-intelligent-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/tunnel-operation-safety-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/vda6-3-intelligent-audit/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/vda6-3-intelligent-audit"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/wechat-sales-and-copy-optimizer/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/wechat-sales-and-copy-optimizer"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/yc-intelligent-customer-service/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/yc-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-markdown",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/solution/yield-reporting-intelligent-agent/markdown",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/yield-reporting-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/transportation-logistics/bridge-inspection-intelligent-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/bridge-inspection-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/transportation-logistics/tunnel-operation-safety-intelligent-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/tunnel-operation-safety-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/transportation-logistics/yc-intelligent-customer-service",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/yc-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/wen-tourism-leisure-entertainment/travel-planning-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/wen-tourism-leisure-entertainment/travel-planning-assistant"
+    },
+    {
+      "sourceClass": "legacy-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/customers/wen-tourism-leisure-entertainment/travel-planning-expert",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/wen-tourism-leisure-entertainment/travel-planning-expert"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/business/fastgpt-ai-search-marketing-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/business/fastgpt-ai-search-marketing-system"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/construction-engineering-renovation/text-sql-institution-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/construction-engineering-renovation/text-sql-institution-agent"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/e-commerce-retail-trade/retail-ai-dispatch-platform",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/e-commerce-retail-trade/retail-ai-dispatch-platform"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/education-training-research-study/ai-intelligent-customer-service",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/ai-intelligent-customer-service"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/education-training-research-study/education-sdg-analysis-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/education-sdg-analysis-system"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/education-training-research-study/fastgpt-medical-exam-diagnosis",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/fastgpt-medical-exam-diagnosis"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/education-training-research-study/k12-intelligent-homework-grading",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/k12-intelligent-homework-grading"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/education-training-research-study/learning-insight-engine-for-medical-education",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/education-training-research-study/learning-insight-engine-for-medical-education"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/financial-leasing-smart-marketing-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-leasing-smart-marketing-assistant"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/financial-report-retrieval-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-report-retrieval-solution"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/financial-reporting-ai-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/financial-terminal-ai-search",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/financial-terminal-ai-search"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/intelligent-due-diligence-agent-for-financial-leasing",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/intelligent-due-diligence-agent-for-financial-leasing"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/securities-ai-platform-fastgpt",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/securities-ai-platform-fastgpt"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/finance-insurance-wealth-management/yield-reporting-intelligent-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/finance-insurance-wealth-management/yield-reporting-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/government-public-services/government-provident-fund-intelligent-qa",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/government-provident-fund-intelligent-qa"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/government-public-services/three-special-ai-assistants",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/government-public-services/three-special-ai-assistants"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/internet-it-technology/wechat-sales-and-copy-optimizer",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/internet-it-technology/wechat-sales-and-copy-optimizer"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/manufacturing-production-processing/ai-financial-audit-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/ai-financial-audit-solution"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/manufacturing-production-processing/ai-part-number-analyzer-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/ai-part-number-analyzer-system"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/manufacturing-production-processing/fastgpt-supplier-recommendation-system",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/fastgpt-supplier-recommendation-system"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/manufacturing-production-processing/isap-it-ops-robot-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/manufacturing-production-processing/isap-it-ops-robot-solution"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/biomedical-customer-service-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/biomedical-customer-service-assistant"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/clinical-trial-prescreening",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/clinical-trial-prescreening"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/fastgpt-factory-qa-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/fastgpt-factory-qa-assistant"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/fastgpt-pharmacy-research-solution",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/fastgpt-pharmacy-research-solution"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/oa-assistant-biopharma-case",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/oa-assistant-biopharma-case"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/pharma-talent-decision-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/pharma-talent-decision-agent"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/pharmaceutical-gmp-sop-qa-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/pharmaceutical-gmp-sop-qa-agent"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/medical-health-wellness/quality-document-inspection-assistant",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/medical-health-wellness/quality-document-inspection-assistant"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/transportation-logistics/bridge-inspection-intelligent-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/bridge-inspection-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/transportation-logistics/tunnel-operation-safety-intelligent-agent",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/tunnel-operation-safety-intelligent-agent"
+    },
+    {
+      "sourceClass": "legacy-solutions-detail",
+      "sourceHost": "solutions.fastgpt.cn",
+      "sourcePath": "/solutions/transportation-logistics/yc-intelligent-customer-service",
+      "targetHost": "fastgpt.cn",
+      "targetPath": "/customers/transportation-logistics/yc-intelligent-customer-service"
+    }
+  ],
+  "schemaVersion": 1,
+  "sourceClassCounts": {
+    "legacy-category": 17,
+    "legacy-detail": 89,
+    "legacy-hub": 1,
+    "legacy-markdown": 89,
+    "legacy-root": 1,
+    "legacy-solutions-detail": 33
+  },
+  "sourceCount": 230,
+  "sourceHost": "solutions.fastgpt.cn",
+  "targetCount": 107,
+  "targetHost": "fastgpt.cn"
+}

@@ -281,6 +281,9 @@ function isInternalReferrer(referrer: string): boolean {
   }
 }
 
+// A document referrer describes its entry, not later client-side navigations.
+let trackedDocument: Document | null = null;
+
 function loadStoredAttribution(): StoredAttribution | null {
   const result = loadAttributionSnapshot(getStorageOptions());
   return result.value;
@@ -290,6 +293,7 @@ function loadStoredAttribution(): StoredAttribution | null {
 export function clearAttribution(): void {
   clearStoredAttribution(getStorageOptions());
   resetGeneratedVisitorId();
+  trackedDocument = null;
 }
 
 /** Return the current bounded storage channel and internal reason code. */
@@ -306,7 +310,7 @@ export function trackVisit(): void {
   try {
     const visitor_id = getVisitorId();
     const now = new Date().toISOString();
-    let referrer = document.referrer || '';
+    let referrer = trackedDocument === document ? '' : document.referrer || '';
     // 站内跳转：referrer 与当前同 origin → 当作无来源，避免把站内点击记成 Referral
     try {
       if (referrer && isInternalReferrer(referrer)) {
@@ -333,7 +337,8 @@ export function trackVisit(): void {
     if (current.channel_l1 !== 'direct') last = current;
 
     const next: StoredAttribution = { visitor_id, first, last };
-    saveAttributionSnapshot(next, getStorageOptions());
+    const saved = saveAttributionSnapshot(next, getStorageOptions());
+    if (saved.value) trackedDocument = document;
   } catch {
     /* 归因失败绝不影响页面 */
   }
@@ -389,11 +394,13 @@ export function getAttributionPayload(): AttributionPayload {
   };
 }
 
-/** Return the explicit source for the current business submission only. */
-export function getSubmissionSource(): string {
-  if (typeof window === 'undefined') return DEFAULT_ATTRIBUTION_SOURCE;
-  const source = new URLSearchParams(window.location.search).get('source')?.trim();
-  return source?.slice(0, 128) || DEFAULT_ATTRIBUTION_SOURCE;
+/** Prefer the current landing source, then the submission surface's default. */
+export function getSubmissionSource(fallbackSource = DEFAULT_ATTRIBUTION_SOURCE): string {
+  const source =
+    typeof window === 'undefined'
+      ? ''
+      : new URLSearchParams(window.location.search).get('source')?.trim();
+  return (source || fallbackSource.trim() || DEFAULT_ATTRIBUTION_SOURCE).slice(0, 128);
 }
 
 /** Submit anonymous attribution to CRM after the local browser snapshot changes. */

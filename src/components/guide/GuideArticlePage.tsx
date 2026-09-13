@@ -1,13 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ContentSidebarCta, { type ContentSidebarCtaCopy } from '@/components/ContentSidebarCta';
 import guideStyles from '@/components/guide/GuideArticlePage.module.css';
 import MarkdownContent, { getMarkdownHeadings } from '@/components/tech-center/MarkdownContent';
 import techStyles from '@/components/tech-center/TechArticlePage.module.css';
 import type { GuideDocument } from '@/lib/guideContent';
-import { getGuideOwnedPath, type GuidePublishedLocale } from '@/lib/guideSeo';
+import { getGuideReviewPath, type GuidePublishedLocale } from '@/lib/guideSeo';
 import { parseMarkdown } from '@/lib/markdownParser';
-import { getOwnedLocalePath } from '@/lib/siteRouting';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 
 const guideArticleCopy = {
   en: {
@@ -54,10 +55,12 @@ export function getGuideArticleCopy(locale: GuidePublishedLocale) {
 
 export default function GuideArticlePage({
   document,
-  locale
+  locale,
+  cta
 }: {
   document: GuideDocument;
   locale: GuidePublishedLocale;
+  cta: ContentSidebarCtaCopy;
 }) {
   const labels = getGuideArticleCopy(locale);
   const { assetPolicy, configuredInternalLinks } = document.source;
@@ -71,9 +74,9 @@ export default function GuideArticlePage({
           className={`${techStyles.breadcrumbs} ${guideStyles.breadcrumbs}`}
           aria-label={labels.breadcrumb}
         >
-          <Link href={getOwnedLocalePath(locale)}>{labels.home}</Link>
+          <Link href={getDefaultLocalePath(locale)}>{labels.home}</Link>
           <span aria-hidden="true">/</span>
-          <Link href={getGuideOwnedPath(locale)}>{labels.guide}</Link>
+          <Link href={getGuideReviewPath(locale)}>{labels.guide}</Link>
           <span aria-hidden="true">/</span>
           <span aria-current="page">{document.source.h1}</span>
         </nav>
@@ -104,6 +107,7 @@ export default function GuideArticlePage({
               </figure>
             )}
             <MarkdownContent
+              locale={locale}
               blocks={blocks}
               markdown={document.body}
               title={document.source.h1}
@@ -127,25 +131,36 @@ export default function GuideArticlePage({
                 </div>
               </section>
             )}
-            <p className={techStyles.returnLink}>
-              <Link href={getGuideOwnedPath(locale)}>{labels.back}</Link>
-            </p>
+            <nav aria-label={labels.back}>
+              <p className={techStyles.returnLink}>
+                <Link href={getGuideReviewPath(locale)}>{labels.back}</Link>
+              </p>
+            </nav>
           </article>
-          {headings.length > 0 && (
-            <aside className={guideStyles.toc} aria-label={labels.onThisPage}>
-              <p className={guideStyles.tocTitle}>{labels.onThisPage}</p>
-              <ol>
-                {headings.map((heading) => (
-                  <li
-                    className={heading.level > 2 ? guideStyles.tocNested : undefined}
-                    key={heading.id}
-                  >
-                    <a href={'#' + heading.id}>{heading.text}</a>
-                  </li>
-                ))}
-              </ol>
-            </aside>
-          )}
+          <aside className={guideStyles.sidebar} aria-label={cta.title}>
+            <ContentSidebarCta
+              locale={locale}
+              copy={cta}
+              consultSource="guide_article_sidebar_consult"
+              trialSource="guide_article_sidebar_trial"
+              slug={document.metadata.slug}
+            />
+            {headings.length > 0 && (
+              <nav className={guideStyles.toc} aria-label={labels.onThisPage}>
+                <p className={guideStyles.tocTitle}>{labels.onThisPage}</p>
+                <ol>
+                  {headings.map((heading) => (
+                    <li
+                      className={heading.level > 2 ? guideStyles.tocNested : undefined}
+                      key={heading.id}
+                    >
+                      <a href={'#' + heading.id}>{heading.text}</a>
+                    </li>
+                  ))}
+                </ol>
+              </nav>
+            )}
+          </aside>
         </div>
       </div>
     </main>

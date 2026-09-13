@@ -1,13 +1,16 @@
 import 'server-only';
 
 import fs from 'node:fs';
+import stageReturns from '@/content/tech-center/stage-returns.json';
 import path from 'node:path';
 import {
   TECH_ENTRIES,
+  getTechEntriesForLocale,
   getTechnicalPageIdentity,
   type TechEntry
 } from '@/components/tech-center/data';
-import { currentSiteVariant, type SiteVariant } from '@/lib/siteRouting';
+import { techPublishedLocaleCodes, type TechPublishedLocale } from '@/lib/publishedLocales';
+import { currentSiteVariant, getLocaleOwner, type SiteVariant } from '@/lib/siteRouting';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'src/content/tech-center');
 
@@ -25,11 +28,13 @@ export type TechArticle = TechEntry & {
   metaTitle: string;
   pageType: string;
   markdown: string;
+  stageReturn?: { path: string; title: string };
+  publishedLocales: TechPublishedLocale[];
   seoDescription: string;
 };
 
 export type TechArticleParams = {
-  lang: 'zh';
+  lang: TechPublishedLocale;
   section: string;
   slug: string;
 };
@@ -61,11 +66,19 @@ function parseFrontMatter(markdown: string) {
 function getEntryPath(entry: Pick<TechEntry, 'slug'>) {
   const identity = getTechnicalPageIdentity(entry);
   const segments = identity.canonicalPath.split('/');
-  if (identity.locale !== 'zh' || segments.length !== 3 || !segments[1] || !segments[2]) {
+  if (
+    !techPublishedLocaleCodes.includes(identity.locale as TechPublishedLocale) ||
+    segments.length !== 3 ||
+    !segments[1] ||
+    !segments[2]
+  ) {
     throw new Error(`Unsupported tech article slug: ${entry.slug}`);
   }
 
-  return path.join(CONTENT_ROOT, segments[1], `${segments[2]}.md`);
+  const localizedPath = path.join(CONTENT_ROOT, identity.locale, segments[1], `${segments[2]}.md`);
+  if (fs.existsSync(localizedPath)) return localizedPath;
+  if (identity.locale === 'zh') return path.join(CONTENT_ROOT, segments[1], `${segments[2]}.md`);
+  return localizedPath;
 }
 
 const DESCRIPTION_LIMIT = 155;
@@ -76,6 +89,7 @@ function stripMarkdown(text: string) {
     .replace(/\[([^\]]+)\]\([^)]*\)/g, '$1')
     .replace(/`([^`]+)`/g, '$1')
     .replace(/[*_~]/g, '')
+    .replace(/([:：;；])\s*\d+[.)、．]\s+(?=\S)/g, '$1')
     .replace(/\s+/g, ' ')
     .trim();
 }
@@ -84,14 +98,12 @@ function truncateDescription(text: string) {
   if (text.length <= DESCRIPTION_LIMIT) return text;
 
   const slice = text.slice(0, DESCRIPTION_LIMIT);
-  const sentenceEnd = Math.max(
-    slice.lastIndexOf('。'),
-    slice.lastIndexOf('！'),
-    slice.lastIndexOf('？'),
-    slice.lastIndexOf('. '),
-    slice.lastIndexOf('! '),
-    slice.lastIndexOf('? ')
-  );
+  let sentenceEnd = -1;
+  // Inspect the full text so a cut inside a version or decimal is never a sentence end.
+  for (const match of text.matchAll(/[。！？]|[.!?](?=\s|$)/g)) {
+    if (match.index >= DESCRIPTION_LIMIT) break;
+    sentenceEnd = match.index;
+  }
 
   if (sentenceEnd >= 48) return slice.slice(0, sentenceEnd + 1).trim();
   return `${slice.slice(0, DESCRIPTION_LIMIT - 1).trim()}…`;
@@ -109,15 +121,17 @@ export function getTechArticleDescription(
 
   const lines = markdown.replace(/\r\n?/g, '\n').split('\n');
   const prose: string[] = [];
-  let inCode = false;
+  let codeFence = '';
 
   for (const rawLine of lines) {
     const line = rawLine.trim();
-    if (line.startsWith('```')) {
-      inCode = !inCode;
+    const fence = line.match(/^(`{3,}|~{3,})/);
+    if (fence) {
+      if (!codeFence) codeFence = fence[1];
+      else if (fence[1][0] === codeFence[0] && fence[1].length >= codeFence.length) codeFence = '';
       continue;
     }
-    if (inCode || !line || /^>\s*(来源|source)[:：]/i.test(line)) continue;
+    if (codeFence || !line || /^>\s*(来源|source)[:：]/i.test(line)) continue;
 
     const heading = line.match(/^#{1,6}\s+(.+?)\s*#*$/);
     if (heading) {
@@ -129,7 +143,14 @@ export function getTechArticleDescription(
     }
 
     if (/^>\s?/.test(line) || /^\|/.test(line) || /^[-*_]{3,}$/.test(line)) continue;
-    prose.push(stripMarkdown(line.replace(/^[-*]\s+/, '')));
+    prose.push(
+      stripMarkdown(
+        line.replace(
+          /^(?:[-*+]\s+|\d+[.)、．](?!\d)\s*|[（(][\d一二三四五六七八九十百]+[）)]\s*|[一二三四五六七八九十百]+[、.]\s*)/,
+          ''
+        )
+      )
+    );
   }
 
   const derived = truncateDescription(prose.filter(Boolean).join(' '));
@@ -150,6 +171,8 @@ function readTechArticle(entry: TechEntry): TechArticle {
 
   return {
     ...entry,
+    publishedLocales: getTechArticlePublishedLocales(entry),
+    stageReturn: getStageReturn(entry),
     contentType: metadata.schema_type === 'Article' ? 'Article' : 'TechArticle',
     dateModified: metadata.date_modified,
     datePublished: metadata.date_published,
@@ -167,15 +190,43 @@ function readTechArticle(entry: TechEntry): TechArticle {
           .map((keyword) => keyword.trim())
           .filter(Boolean)
       : [],
-    metaTitle: metadata.meta_title || `${entry.title}｜FastGPT 技术中心`,
+    metaTitle:
+      metadata.meta_title ||
+      `${entry.title}${
+        getTechnicalPageIdentity(entry).locale === 'en'
+          ? ' | FastGPT Technical Center'
+          : '｜FastGPT 技术中心'
+      }`,
     pageType: metadata.page_type || entry.categoryLabel,
     markdown: body,
     seoDescription: metadata.meta_description || getTechArticleDescription(entry, body)
   };
 }
 
-export function getTechArticle(section: string, slug: string) {
-  const entry = TECH_ENTRIES.find((item) => item.slug === `/zh/${section}/${slug}`);
+const entriesBySlug = new Map(TECH_ENTRIES.map((entry) => [entry.slug, entry]));
+const returnPaths: Record<string, string> = stageReturns;
+
+function getStageReturn(entry: TechEntry) {
+  const target = returnPaths[entry.slug];
+  if (!target) return undefined;
+  const stage = entriesBySlug.get(target);
+  if (!stage) throw new Error(`Unresolved article stage: ${entry.slug} -> ${target}`);
+  return { path: getTechnicalPageIdentity(stage).canonicalPath, title: stage.title };
+}
+
+export function getTechArticlePublishedLocales(entry: TechEntry) {
+  const { canonicalPath } = getTechnicalPageIdentity(entry);
+  return techPublishedLocaleCodes.filter((locale) =>
+    entriesBySlug.has(`/${locale}${canonicalPath}`)
+  );
+}
+
+export function getTechEntry(section: string, slug: string, locale: TechPublishedLocale = 'zh') {
+  return entriesBySlug.get(`/${locale}/${section}/${slug}`);
+}
+
+export function getTechArticle(section: string, slug: string, locale: TechPublishedLocale = 'zh') {
+  const entry = getTechEntry(section, slug, locale);
   return entry ? readTechArticle(entry) : null;
 }
 
@@ -187,14 +238,16 @@ export function getTechArticleLastModified(article: TechEntry) {
   return dateModified ? new Date(`${dateModified}T00:00:00Z`) : fileModified;
 }
 
-export function getTechCenterLastModified() {
-  return new Date(
-    Math.max(...TECH_ENTRIES.map((entry) => getTechArticleLastModified(entry).getTime()))
-  );
+export function getTechCenterLastModified(locale?: TechPublishedLocale) {
+  const entries = locale ? getTechEntriesForLocale(locale) : TECH_ENTRIES;
+  if (!entries.length) return undefined;
+  return new Date(Math.max(...entries.map((entry) => getTechArticleLastModified(entry).getTime())));
 }
 
 export function getRelatedTechArticles(article: TechEntry, limit = 3) {
-  const related = TECH_ENTRIES.filter((entry) => entry.category === article.category);
+  const related = getTechEntriesForLocale(article.slug.split('/')[1]).filter(
+    (entry) => entry.category === article.category
+  );
   const currentIndex = related.findIndex((entry) => entry.slug === article.slug);
   if (currentIndex === -1) return related.slice(0, limit);
 
@@ -210,10 +263,14 @@ export function getTechArticleParams(): TechArticleParams[] {
   return TECH_ENTRIES.map((entry) => {
     const identity = getTechnicalPageIdentity(entry);
     const [, section, slug] = identity.canonicalPath.split('/');
-    if (identity.locale !== 'zh' || !section || !slug) {
+    if (
+      !techPublishedLocaleCodes.includes(identity.locale as TechPublishedLocale) ||
+      !section ||
+      !slug
+    ) {
       throw new Error(`Invalid tech article slug: ${entry.slug}`);
     }
-    return { lang: 'zh', section, slug };
+    return { lang: identity.locale as TechPublishedLocale, section, slug };
   });
 }
 
@@ -221,15 +278,19 @@ export function getTechArticleReviewParams(
   variant: SiteVariant = currentSiteVariant
 ): TechArticleParams[] {
   const params = getTechArticleParams();
-  return variant === 'preview' ? params : params.slice(0, 1);
+  if (variant === 'preview') return params;
+  const ownerParams = params.filter((param) => getLocaleOwner(param.lang) === variant);
+  return ownerParams.length ? ownerParams : params.slice(0, 1);
 }
 
 export function getTechArticleOwnerParams(
   section: string,
   variant: SiteVariant = currentSiteVariant
 ) {
-  const params = getTechArticleParams()
-    .filter((param) => param.section === section)
-    .map(({ slug }) => ({ slug }));
-  return variant === 'cn' ? params : params.slice(0, 1);
+  const params = getTechArticleParams().filter((param) => param.section === section);
+  if (variant === 'preview') return params.slice(0, 1).map(({ slug }) => ({ slug }));
+  const ownerParams = params.filter((param) => getLocaleOwner(param.lang) === variant);
+  // Static export requires one seed param when this variant owns no route in the section.
+  const slugs = (ownerParams.length ? ownerParams : params.slice(0, 1)).map((param) => param.slug);
+  return [...new Set(slugs)].map((slug) => ({ slug }));
 }

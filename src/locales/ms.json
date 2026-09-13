@@ -14,7 +14,7 @@
     },
     {
       "label": "Pusat Kajian Kes",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "https://fastgpt.cn/customers"
     }
   ],
   "Pricing": {
@@ -353,24 +353,6 @@
               "label": "Kualiti servis distandardkan"
             }
           ]
-        },
-        {
-          "key": "lcfc",
-          "title": "Tinggalkan Excel 10k baris; tanya dengan bahasa semula jadi bila-bila masa",
-          "metrics": [
-            {
-              "value": "240+ min",
-              "label": "Peningkatan produktiviti data"
-            },
-            {
-              "value": "90%",
-              "label": "Pengurangan lag sistem"
-            },
-            {
-              "value": "3%",
-              "label": "Kadar ralat turun kepada"
-            }
-          ]
         }
       ]
     },
@@ -438,6 +420,30 @@
       "trial": "Mula",
       "consult": "Hubungi Jualan"
     },
+    "consultationDialog": {
+      "badge": "Perkhidmatan Enterprise FastGPT",
+      "title": "Hubungi Jualan FastGPT",
+      "description": "Kongsikan proses perniagaan, keadaan data dan matlamat anda. Pasukan kami akan menghubungi dalam 1 hari dan menggabungkan pangkalan pengetahuan, aliran kerja serta keupayaan ejen menjadi pelan yang boleh dilaksanakan.",
+      "benefits": [
+        {
+          "title": "Dari pangkalan pengetahuan ke aplikasi AI",
+          "description": "Bina Q&A perniagaan yang boleh dipercayai dengan pangkalan pengetahuan dan RAG."
+        },
+        {
+          "title": "Automasikan proses dengan aliran kerja",
+          "description": "Sambungkan model, pangkalan pengetahuan dan sistem perniagaan secara visual."
+        },
+        {
+          "title": "Bina ejen yang beroperasi",
+          "description": "Konfigurasi ejen mengikut senario perniagaan sebenar untuk pelaksanaan berterusan."
+        },
+        {
+          "title": "Pelaksanaan & tadbir urus peringkat enterprise",
+          "description": "Sokongan SaaS dan persendirian dengan kebenaran dan pengasingan data."
+        }
+      ],
+      "footer": "Dipercayai merentasi 17 industri utama termasuk kewangan, pembuatan, pendidikan dan penjagaan kesihatan"
+    },
     "footer": {
       "tagline": "Enjin Produktiviti AI untuk Perusahaan",
       "columns": {
@@ -465,7 +471,8 @@
         },
         "more": {
           "title": "Lagi",
-          "email": "E-mel: Dennis@sealos.io",
+          "email": "E-mel: business@fastgpt.io",
+          "phone": "Telefon: 4006992336",
           "lanqiao": "Kursus Lanqiao × FastGPT",
           "book": "Buku Rasmi FastGPT"
         }

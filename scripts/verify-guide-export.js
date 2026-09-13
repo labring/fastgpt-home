@@ -6,10 +6,14 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const { verifyBodyLinks, visibleHtml } = require('./lib/technical-export');
 
 const ROOT = path.resolve(__dirname, '..');
 const REGISTRY_PATH = path.join(ROOT, 'src/content/guides/registry.json');
 const POLICY_PATH = path.join(ROOT, 'src/content/guides/policy.json');
+const TECHNICAL_GUIDE_PATHS = new Set(require('./lib/redirects').getTechIdentities(ROOT)
+  .filter((identity) => identity.canonicalPath.startsWith('/guide/'))
+  .map((identity) => identity.canonicalPath));
 const GUIDE_ENTRY_COUNT = JSON.parse(fs.readFileSync(POLICY_PATH, 'utf8')).entryCount;
 const GUIDE_TRACER_SLUG = 'poc-30-day-design';
 const GUIDE_SLUG = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -120,7 +124,7 @@ function getAlternates(html, context) {
 }
 
 function getAnchors(html) {
-  return [...html.matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)].map((match) => ({
+  return [...visibleHtml(html).matchAll(/<a\b([^>]*)>([\s\S]*?)<\/a>/gi)].map((match) => ({
     href: getAttribute(`<a ${match[1]}>`, 'href'),
     text: stripHtml(stripAriaHiddenContent(match[2]))
   }));
@@ -324,6 +328,7 @@ function collectGuideRoutes(outDir, expectation) {
   for (const filePath of files) {
     const route = guideRouteFromFile(outDir, filePath);
     if (!route) fail(hubContext, `invalid Guide HTML output path ${filePath}`);
+    if (TECHNICAL_GUIDE_PATHS.has(route) && !expectation.routes.has(route)) continue;
     if (routes.has(route)) fail(hubContext, `duplicate Guide HTML route ${route}`);
     routes.set(route, filePath);
   }
@@ -340,12 +345,34 @@ function absoluteUrl(host, href) {
   return new URL(href, host).href;
 }
 
-function expectedAlternates(route) {
-  return {
-    'zh-CN': `https://fastgpt.cn${route}`,
-    en: `https://fastgpt.io${route}`,
-    'x-default': `https://fastgpt.io${route}`
-  };
+function expectedAlternates(route, locales = ['zh', 'en'], hosts = VARIANTS) {
+  const alternates = Object.fromEntries(
+    locales.map((locale) => [
+      locale === 'zh' ? 'zh-CN' : 'en',
+      `${hosts[locale === 'zh' ? 'cn' : 'io'].host}${route}`
+    ])
+  );
+  if (locales.includes('en')) alternates['x-default'] = `${hosts.io.host}${route}`;
+  return alternates;
+}
+
+function verifyArticleDates(
+  article,
+  metadata,
+  canonical,
+  context = { slug: canonical, surface: 'schema:Article' }
+) {
+  for (const field of ['datePublished', 'dateModified'])
+    assertSchemaValue(context, article[field], metadata[field], 'schema:Article', field);
+  assertSchemaValue(
+    context,
+    article.mainEntityOfPage?.['@id'],
+    canonical,
+    'schema:Article',
+    'mainEntityOfPage.@id'
+  );
+  if (article.url !== undefined)
+    assertSchemaValue(context, article.url, canonical, 'schema:Article', 'url');
 }
 
 function assertEqual(context, actual, expected, surface) {
@@ -384,6 +411,8 @@ function verifyMetadata(html, page, expectation, filePath) {
   assertEqual(context, getCanonical(html, context), canonical, 'canonical');
   assertEqual(context, getOpenGraphUrl(html, context), canonical, 'og:url');
 
+  assertEqual(context, getMetaContent(html, 'robots', context),
+    expectation.variant === 'preview' ? 'noindex, nofollow' : 'index, follow', 'robots');
   const alternates = getAlternates(html, { ...context, surface: 'alternates' });
   const expected = expectedAlternates(page.route);
   const languages = Object.keys(alternates).sort();
@@ -459,10 +488,10 @@ function verifyArticle(html, page, expectation, filePath) {
   const language = expectation.locale === 'zh' ? 'zh-CN' : 'en-US';
   const article = getJsonLdNode(nodes, 'Article', context, 'schema:Article');
   verifyUpdatedTime(html, page, expectation, context);
+  verifyArticleDates(article, page.source, canonical, context);
   assertSchemaValue(context, article.headline, page.source.h1, 'schema:Article', 'headline');
   assertSchemaValue(context, article.description, page.source.metaDescription, 'schema:Article', 'description');
   assertSchemaValue(context, article.inLanguage, language, 'schema:Article', 'inLanguage');
-  assertSchemaValue(context, article.mainEntityOfPage?.['@id'], canonical, 'schema:Article', 'mainEntityOfPage.@id');
   assertBreadcrumbUrls(
     context,
     getJsonLdNode(nodes, 'BreadcrumbList', context, 'schema:BreadcrumbList'),
@@ -515,7 +544,8 @@ function verifySitemap(outDir, expectation) {
   for (const url of urls) {
     try {
       const parsed = new URL(url);
-      if (parsed.pathname === '/guide' || parsed.pathname.startsWith('/guide/')) actual.push(url);
+      if ((parsed.pathname === '/guide' || parsed.pathname.startsWith('/guide/')) &&
+          (!TECHNICAL_GUIDE_PATHS.has(parsed.pathname) || expectation.routes.has(parsed.pathname))) actual.push(url);
     } catch {
       fail(context, `invalid sitemap URL ${url}`);
     }
@@ -543,7 +573,11 @@ function verifyGuideExport({ outDir, variant, entries }) {
     verifyMetadata(html, page, expectation, filePath);
     verifySharedShell(html, page, expectation, filePath);
     if (page.hub) verifyHub(html, page, expectation, filePath);
-    else verifyArticle(html, page, expectation, filePath);
+    else {
+      verifyArticle(html, page, expectation, filePath);
+      verifyBodyLinks(html, fs.readFileSync(path.join(ROOT, 'src/content/guides',
+        expectation.locale, page.source.sourceName), 'utf8'), variant, safeOutDir);
+    }
   }
   const sitemapUrls = verifySitemap(safeOutDir, expectation);
   return { variant, pages: routeFiles.size, sitemapUrls };
@@ -592,4 +626,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { assertNoCaseFoldCollisions, parseArgs, buildGuideExpectation, verifyGuideExport, main };
+module.exports = { verifyGuideSectionAnchors, getAlternates, getAnchors, getAttribute, getJsonLdNodes, getJsonLdNode, expectedAlternates, verifyArticleDates, verifyUpdatedTime, verifyMetadata, verifyArticle, assertNoCaseFoldCollisions, parseArgs, buildGuideExpectation, verifyGuideExport, main };

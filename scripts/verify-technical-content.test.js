@@ -4,23 +4,20 @@ const os = require('node:os');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
 const test = require('node:test');
-const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
 
 const {
   assertDeniedIdentitiesAbsent,
   buildImportPlan,
   buildSearchProjection,
   foldIdentity,
-  validateImportPlanPolicy,
   validateIdentitySet,
   verifyImportPlanNoDrift,
-  verifyCommittedAuthority,
+  verifyTechnicalContent,
   writeImportPlan
 } = require('./import-technical-content');
 
 const root = path.resolve(__dirname, '..');
 const fixture = path.join(root, 'scripts/fixtures/technical-page-delivery');
-const EXPECTED_TECHNICAL_PAGE_COUNT = TECHNICAL_CONTENT_POLICY.expectedPageCount;
 
 test('representative delivery normalizes the canonical path and body', () => {
   const plan = buildImportPlan({ repoRoot: root, sourcePath: fixture });
@@ -34,7 +31,7 @@ test('representative delivery normalizes the canonical path and body', () => {
   assert.equal(plan.pages.length, 3);
   assert.deepEqual(
     plan.pages.map((page) => page.operation),
-    ['add', 'add', 'add']
+    ['update', 'update', 'update']
   );
   assert.equal(openSandbox.identity.canonicalPath, '/reference/fastgpt-opensandbox-env-config');
   assert.equal(
@@ -45,38 +42,7 @@ test('representative delivery normalizes the canonical path and body', () => {
   );
   assert.match(secretPage.normalizedDocument, /YOUR_API_KEY/);
   assert.doesNotMatch(secretPage.normalizedDocument, /sk-aaabbb/);
-  assert.equal(plan.ledger.denials.length, 1);
-  assert.ok(
-    plan.ledger.corrections.some(
-      (correction) =>
-        correction.field === 'canonicalPath' &&
-        correction.to === '/reference/fastgpt-opensandbox-env-config'
-    )
-  );
-  assert.ok(
-    plan.ledger.corrections.some(
-      (correction) => correction.field === 'body' && correction.to === 'YOUR_API_KEY'
-    )
-  );
-  assert.ok(
-    plan.ledger.corrections.some(
-      (correction) => correction.field === 'pageType' && correction.to === '技术速查'
-    )
-  );
-});
-
-test('previously imported add remains net-new when a later delivery changes its body', () => {
-  const tempSource = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-delivery-'));
-  fs.cpSync(fixture, tempSource, { recursive: true });
-  const sourceFile = path.join(tempSource, 'reference/fastgpt-chatglm2-m3e-api-test.md');
-  fs.appendFileSync(sourceFile, '\n追加的交付说明。\n');
-
-  const plan = buildImportPlan({ repoRoot: root, sourcePath: tempSource });
-  const changedPage = plan.pages.find(
-    (page) => page.identity.canonicalPath === '/reference/fastgpt-chatglm2-m3e-api-test'
-  );
-
-  assert.equal(changedPage.operation, 'add');
+  assert.equal(plan.denials.length, 1);
 });
 
 test('normalizes bare source citations into descriptive Markdown links', () => {
@@ -95,7 +61,24 @@ test('normalizes bare source citations into descriptive Markdown links', () => {
   );
 
   assert.match(page.normalizedDocument, /> 来源：\[FastGPT 官方文档\]\(https:\/\/doc\.fastgpt\.cn/);
-  assert.ok(page.corrections.some((correction) => correction.field === 'citations'));
+});
+
+test('redacts FastGPT API credentials during import', () => {
+  const tempSource = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-credential-'));
+  try {
+    fs.cpSync(fixture, tempSource, { recursive: true });
+    const sourceFile = path.join(tempSource, 'reference/fastgpt-opensandbox-env-config.md');
+    const credential = `fastgpt-${'A'.repeat(48)}`;
+    fs.appendFileSync(sourceFile, `\nAuthorization: Bearer ${credential}\n`);
+    const plan = buildImportPlan({ repoRoot: root, sourcePath: tempSource });
+    const page = plan.pages.find(
+      (candidate) => candidate.source.file === 'reference/fastgpt-opensandbox-env-config.md'
+    );
+    assert(page.normalizedDocument.includes('Authorization: Bearer YOUR_API_KEY'));
+    assert(!page.normalizedDocument.includes(credential));
+  } finally {
+    fs.rmSync(tempSource, { recursive: true, force: true });
+  }
 });
 
 test('normalizes structural escaped line endings', () => {
@@ -114,7 +97,6 @@ test('normalizes structural escaped line endings', () => {
   );
 
   assert.match(page.normalizedDocument, /## 环境变量配置\n\n## 具体配置/);
-  assert.ok(page.corrections.some((correction) => correction.field === 'lineEndings'));
 });
 
 test('identity folding rejects full-identity collisions and permits repeated final slugs', () => {
@@ -238,23 +220,11 @@ test('delivery trust boundaries validate public sources, citation counts, and lo
   assert.throws(() => buildImportPlan({ repoRoot: root, sourcePath: tempRoot }), /lowercase/i);
 });
 
-test('write policy fixes the accepted operation distribution', () => {
-  assert.throws(
-    () =>
-      validateImportPlanPolicy({
-        pages: Array.from({ length: 454 }, () => ({ operation: 'add' })),
-        ledger: { denials: Array.from({ length: 6 }) }
-      }),
-    /operation drift/i
-  );
-});
-
 test('check mode leaves committed projections byte-for-byte unchanged', () => {
   const outputs = [
     'src/components/tech-center/entries.json',
-    'src/content/tech-center/authority/import-manifest.json',
-    'src/content/tech-center/authority/decision-ledger.json',
     'public/tech-center/search-index.json',
+    'public/tech-center/search-index.en.json',
     'src/content/tech-center/deploy/fastgpt-opensandbox-env-config.md',
     'src/content/tech-center/reference/fastgpt-opensandbox-env-config.md',
     'src/content/tech-center/reference/fastgpt-chatglm2-m3e-api-test.md'
@@ -278,7 +248,9 @@ test('public search projection contains only discovery fields and matches the re
     fs.readFileSync(path.join(root, 'src/components/tech-center/entries.json'), 'utf8')
   );
   const projection = buildSearchProjection(entries);
-  const firstEntry = entries[0];
+  const zhProjection = projection.filter((entry) => entry.locale === 'zh');
+  const enProjection = projection.filter((entry) => entry.locale === 'en');
+  const firstEntry = entries.find((entry) => entry.slug === '/zh/tutorial/private-deployment-topology');
 
   assert.deepEqual(Object.keys(projection[0]), [
     'identity',
@@ -290,7 +262,7 @@ test('public search projection contains only discovery fields and matches the re
     'sourceType',
     'minutes'
   ]);
-  assert.deepEqual(projection[0], {
+  assert.deepEqual(projection.find((entry) => entry.identity === 'zh|/tutorial/private-deployment-topology'), {
     identity: 'zh|/tutorial/private-deployment-topology',
     title: firstEntry.title,
     description: firstEntry.summary,
@@ -313,21 +285,223 @@ test('public search projection contains only discovery fields and matches the re
   ]);
   assert.deepEqual(
     JSON.parse(fs.readFileSync(path.join(root, 'public/tech-center/search-index.json'), 'utf8')),
-    projection
+    zhProjection
+  );
+  assert.deepEqual(
+    JSON.parse(fs.readFileSync(path.join(root, 'public/tech-center/search-index.en.json'), 'utf8')),
+    enProjection
   );
 });
 
-test('committed technical authority covers the complete accepted identity projection', () => {
-  const manifest = verifyCommittedAuthority(root);
-  const entries = JSON.parse(
-    fs.readFileSync(path.join(root, 'src/components/tech-center/entries.json'), 'utf8')
+test('source verification covers every indexed page and catches content drift without batch ledgers', () => {
+  assert.equal(
+    verifyTechnicalContent(root).length,
+    require('../src/components/tech-center/entries.json').length
   );
-  const searchProjection = JSON.parse(
-    fs.readFileSync(path.join(root, 'public/tech-center/search-index.json'), 'utf8')
-  );
+  const repo = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-content-verification-'));
+  try {
+    const plan = buildImportPlan({ repoRoot: repo, sourcePath: fixture });
+    writeImportPlan(plan, repo);
+    assert.equal(verifyTechnicalContent(repo).length, 3);
+    const bodyPath = path.join(repo, plan.pages[0].normalizedBodyPath);
+    const registryPath = path.join(repo, 'src/components/tech-center/entries.json');
+    const searchPath = path.join(repo, 'public/tech-center/search-index.json');
+    const renameSync = fs.renameSync;
+    const originalRegistry = fs.readFileSync(registryPath);
+    const changed = buildImportPlan({ repoRoot: repo, sourcePath: fixture });
+    changed.pages[0].projection.title = 'Changed title';
+    let writes = 0;
+    fs.renameSync = (...args) => {
+      if (++writes === 3) throw new Error('Injected write failure');
+      return renameSync(...args);
+    };
+    try {
+      assert.throws(() => writeImportPlan(changed, repo), /Injected write failure/);
+    } finally {
+      fs.renameSync = renameSync;
+    }
+    assert.deepEqual(fs.readFileSync(registryPath), originalRegistry);
+    assert.equal(verifyTechnicalContent(repo).length, 3);
+    for (const [filePath, change, message] of [
+      [bodyPath, () => null, /Missing technical body/],
+      [bodyPath, (bytes) => bytes.replace('slug: /zh/', 'slug: /en/'), /metadata drift/],
+      [bodyPath, (bytes) => bytes + '\nsk-' + 'unexpectedCredential123456789', /secret-shaped/],
+      [bodyPath, (bytes) => bytes + '\nfastgpt-' + 'A'.repeat(48), /secret-shaped/],
+      [
+        registryPath,
+        (bytes) => JSON.stringify([...JSON.parse(bytes), JSON.parse(bytes)[0]]),
+        /identity collision/
+      ],
+      [searchPath, () => '[]\n', /search projection/]
+    ]) {
+      const original = fs.readFileSync(filePath, 'utf8');
+      const changed = change(original);
+      if (changed === null) fs.unlinkSync(filePath);
+      else fs.writeFileSync(filePath, changed);
+      try {
+        assert.throws(() => verifyTechnicalContent(repo), message);
+      } finally {
+        fs.writeFileSync(filePath, original);
+      }
+    }
+    const registryBytes = fs.readFileSync(registryPath, 'utf8');
+    const searchBytes = fs.readFileSync(searchPath, 'utf8');
+    fs.writeFileSync(registryPath, JSON.stringify(JSON.parse(registryBytes).slice(1)));
+    fs.writeFileSync(searchPath, JSON.stringify(JSON.parse(searchBytes).slice(1), null, 2) + '\n');
+    assert.throws(() => verifyTechnicalContent(repo), /Unindexed technical body/);
+    fs.writeFileSync(registryPath, registryBytes);
+    fs.writeFileSync(searchPath, searchBytes);
+    assert.equal(verifyTechnicalContent(repo).length, 3);
+  } finally {
+    fs.rmSync(repo, { recursive: true, force: true });
+  }
+});
 
-  assert.equal(manifest.pages.length, TECHNICAL_CONTENT_POLICY.expectedAcceptedCount);
-  assert.equal(manifest.source.deniedCount, TECHNICAL_CONTENT_POLICY.expectedDeniedCount);
-  assert.equal(entries.length, EXPECTED_TECHNICAL_PAGE_COUNT);
-  assert.equal(searchProjection.length, EXPECTED_TECHNICAL_PAGE_COUNT);
+test('stage membership follows explicit roles and the selected table', () => {
+  const { verifyStageNavigation } = require('./import-technical-content');
+  const stage = '/zh/guide/example-issues';
+  const source = '/zh/api/example';
+  const reference = '/zh/reference/environment';
+  const ordinaryGuide = '/zh/guide/ordinary-guide';
+  const overview = '/zh/guide/deployment-issue-landscape';
+  const entries = [stage, source, overview, reference, ordinaryGuide].map((slug) => ({ slug }));
+  const metadata = { page_type: '问题清单聚合页', stage_members_heading: 'Members' };
+  const body = `[Overview](${overview})
+## Members
+| Article | Area |
+| --- | --- |
+| [Article](${source}) | API |
+
+## Related references
+[Reference](${reference})
+| Reference | Area |
+| --- | --- |
+| [Guide](${ordinaryGuide}) | Guide |
+`;
+  const document = (text = body, meta = metadata) =>
+    new Map([
+      [stage, { metadata: meta, body: text }],
+      [ordinaryGuide, { metadata: { page_type: 'Tutorial' }, body: '# Ordinary guide' }]
+    ]);
+  const returns = { [source]: stage };
+  const verify = (e = entries, d = document(), r = returns, g = []) =>
+    verifyStageNavigation(e, d, r, g);
+  verify();
+  verify(entries, document(body + '\nRevised operational wording.'));
+  verify(entries, document(body, { ...metadata, page_type: 'Issue list' }));
+  // A source-shaped link in another cell is an editorial reference.
+  verify(entries, document(body.replace('| API |', `| [Reference](${reference}) |`)));
+  const later = '/zh/api/later';
+  verify(
+    [...entries, { slug: later }],
+    document(
+      body.replace(
+        '\n\n## Related references',
+        `\n| [Later](${later}) | API |\n\n## Related references`
+      )
+    ),
+    { ...returns, [later]: stage }
+  );
+  // Stage identity is independent of its URL section.
+  const moved = '/zh/troubleshoot/example-stage';
+  const movedDocuments = document();
+  movedDocuments.set(moved, movedDocuments.get(stage));
+  movedDocuments.delete(stage);
+  verify(
+    entries.map((entry) => (entry.slug === stage ? { slug: moved } : entry)),
+    movedDocuments,
+    { [source]: moved }
+  );
+  assert.throws(() => verify(entries.slice(1)), /Unresolved stage target/);
+  assert.throws(
+    () => verify(entries.filter((entry) => entry.slug !== source)),
+    /Unresolved return source/
+  );
+  assert.throws(() => verify([...entries, entries[1]]), /Duplicate content owner/);
+  assert.throws(
+    () => verify(entries, document(), returns, [{ slug: 'example-issues', zh: {} }]),
+    /Duplicate content owner/
+  );
+  assert.throws(
+    () => verify(entries, document(), { [source]: ordinaryGuide }),
+    /Unresolved stage target/
+  );
+  assert.throws(() => verify(entries, document(), {}), /missing reverse mapping/);
+  assert.throws(
+    () => verify(entries, document(body.replace(`[Overview](${overview})`, ''))),
+    /missing landscape/
+  );
+  assert.throws(
+    () => verify(entries, document(body, { page_type: 'Issue list' })),
+    /missing stage_members_heading/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace('## Members', '## Renamed'))),
+    /expected one member section/
+  );
+  assert.throws(
+    () => verify(entries, document(body + '\n## Members\n')),
+    /expected one member section/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace('| --- | --- |', '| invalid | --- |'))),
+    /invalid member table/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace(`[Article](${source})`, 'Article'))),
+    /one article per member row/
+  );
+  assert.throws(
+    () =>
+      verify(
+        entries,
+        document(
+          body.replace(
+            '\n\n## Related references',
+            `\n| [Duplicate](${source}) | API |\n\n## Related references`
+          )
+        )
+      ),
+    /duplicate stage member/
+  );
+  assert.throws(
+    () => verify(entries, document(body.replace(source, '/zh/api/missing')), {}),
+    /Unresolved stage member/
+  );
+  // An ordinary paragraph link cannot substitute for membership in the selected table.
+  assert.throws(
+    () => verify(entries, document(body.replace(source, reference) + `\n[Article](${source})`)),
+    /missing article link/
+  );
+  const foreign = '/en/api/example';
+  assert.throws(
+    () => verify([...entries, { slug: foreign }], document(), { [foreign]: stage }),
+    /Cross-locale/
+  );
+  assert.throws(
+    () => verify([...entries, { slug: foreign }], document(body.replace(source, foreign)), {}),
+    /Cross-locale/
+  );
+  assert.throws(
+    () =>
+      verify(
+        entries,
+        document(
+          body
+            .replace('## Members', '## Members\n```md')
+            .replace('## Related references', '```\n## Related references')
+        )
+      ),
+    /expected one member table/
+  );
+  const secondTable =
+    '\n| Reference | Area |\n| --- | --- |\n| [Ref](' + reference + ') | Reference |\n';
+  assert.throws(
+    () =>
+      verify(
+        entries,
+        document(body.replace('## Related references', secondTable + '\n## Related references'))
+      ),
+    /expected one member table/
+  );
 });

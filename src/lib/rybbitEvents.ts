@@ -1,5 +1,6 @@
 export const RYBBIT_EVENTS = {
   businessConsultClick: 'business_consult_click',
+  businessConsultSubmitSuccess: 'business_consult_submit_success',
   cloudServiceClick: 'cloud_service_click',
   caseCenterClick: 'case_center_click',
   learningCenterClick: 'learning_center_click'

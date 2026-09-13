@@ -99,3 +99,12 @@ test('normalizes inline Markdown in heading labels and anchors', () => {
     { level: 2, text: 'Use API docs', id: 'guide-section-use-api-docs' }
   ]);
 });
+
+test('preserves escaped pipes and inline identifiers in reference table cells', () => {
+  const source = '| Setting | Value | Notes |\n| --- | --- | --- |\n' +
+    '| `MODE` | `info\\|warn` | a\\|b; punctuation |';
+  assert.deepEqual(parseMarkdown(source, '')[0].rows, [
+    ['Setting', 'Value', 'Notes'],
+    ['`MODE`', '`info|warn`', 'a|b; punctuation']
+  ]);
+});

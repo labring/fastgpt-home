@@ -61,6 +61,15 @@ export function getOwnedLocalePath(locale: string, path = '') {
   return `/${normalizedLocale}${normalizedPath === '/' ? '' : normalizedPath}` || '/';
 }
 
+/** Keep locale-prefixed review routes in Preview and owner-relative routes in production. */
+export function getReviewLocalePath(locale: string, path = '') {
+  const normalizedLocale = normalizeLocale(locale);
+  const normalizedPath = normalizePath(path);
+  return currentSiteVariant === 'preview'
+    ? `/${normalizedLocale}${normalizedPath === '/' ? '' : normalizedPath}`
+    : getOwnedLocalePath(normalizedLocale, normalizedPath);
+}
+
 export function getOwnedLocaleUrl(locale: string, path = '') {
   const normalizedLocale = normalizeLocale(locale);
   return `${getSiteBaseUrl(getLocaleOwner(normalizedLocale))}${getOwnedLocalePath(

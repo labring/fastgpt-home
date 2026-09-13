@@ -1,9 +1,4 @@
 {
-  "expectedPageCount": 1172,
-  "expectedAcceptedCount": 454,
-  "expectedDeniedCount": 6,
-  "expectedAddCount": 450,
-  "expectedUpdateCount": 4,
   "categories": {
     "api": "API",
     "dataset": "知识库",
@@ -11,12 +6,16 @@
     "integration": "集成",
     "node": "工作流节点",
     "reference": "技术速查",
+    "model": "模型指南",
+    "glossary": "术语表",
     "troubleshoot": "故障排查",
-    "tutorial": "教程"
+    "tutorial": "教程",
+    "compare": "对比与迁移"
   },
   "sourceTypes": {
     "官方文档": "官方文档",
     "官方文档小节": "官方文档",
+    "Official documentation": "官方文档",
     "GitHub issue": "GitHub issue",
     "GitHub Issue": "GitHub issue",
     "深度场景内容": "深度场景内容"

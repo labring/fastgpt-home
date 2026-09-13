@@ -51,38 +51,6 @@ async function verifyContactQueryFlow() {
   const { appendForwardedAttributionQuery, getForwardedAttributionQuery } = await import(
     pathToFileURL(path.join(root, 'src/lib/attribution/query.mjs')).href
   );
-  const contactSource = fs.readFileSync(path.join(root, 'src/lib/contact.ts'), 'utf8');
-  const formSource = fs.readFileSync(
-    path.join(root, 'src/components/contact/ContactForm.tsx'),
-    'utf8'
-  );
-  const attributionSource = fs.readFileSync(path.join(root, 'src/lib/leadAttribution.ts'), 'utf8');
-  const contactLinkScriptSource = fs.readFileSync(
-    path.join(root, 'src/lib/contactLinkAttribution.ts'),
-    'utf8'
-  );
-
-  assert.match(
-    contactSource,
-    /appendForwardedAttributionQuery\(path, search\)/,
-    'Contact URL helper must use the shared query-forwarding helper'
-  );
-  assert.match(
-    contactLinkScriptSource,
-    /document\.addEventListener\('pointerdown'/,
-    'Contact links must preserve attribution before React hydration'
-  );
-  assert.match(
-    formSource,
-    /source:\s*getSubmissionSource\(\)/,
-    'Contact submission must send the current explicit source'
-  );
-  assert.match(
-    attributionSource,
-    /new URLSearchParams\(window\.location\.search\)\.get\('source'\)/,
-    'Submission source must come from the current landing URL'
-  );
-
   const landingQuery =
     'source=partner&utm_source=google&utm_campaign=launch&click_id=abc123&email=drop-me';
   assert.equal(
@@ -125,7 +93,10 @@ function verifyBuiltResourcePolicy() {
       );
       assert(fs.existsSync(assetPath), `Missing local Contact service asset: ${assetPath}`);
       const size = fs.statSync(assetPath).size;
-      assert(size <= 250 * 1024, `${path.relative(root, assetPath)} exceeds the 250 KB asset limit`);
+      assert(
+        size <= 250 * 1024,
+        `${path.relative(root, assetPath)} exceeds the 250 KB asset limit`
+      );
       totalBytes += size;
     }
     assert(
@@ -157,7 +128,10 @@ function verifyBuiltResourcePolicy() {
 
 function verifyCrmState() {
   const defaultContactHtml = resolveHtml('/contact');
-  const hasExplicitCrmEnv = Object.prototype.hasOwnProperty.call(process.env, 'NEXT_PUBLIC_CRM_API_URL');
+  const hasExplicitCrmEnv = Object.prototype.hasOwnProperty.call(
+    process.env,
+    'NEXT_PUBLIC_CRM_API_URL'
+  );
   const crmConfigured = Boolean(process.env.NEXT_PUBLIC_CRM_API_URL?.trim());
   const isPreview = variant === 'preview';
   const hasConfigError = defaultContactHtml.includes('data-crm-config-error');
@@ -180,7 +154,10 @@ function verifyCrmState() {
   }
 
   if (hasExplicitCrmEnv && !crmConfigured) {
-    assert(hasConfigError, 'Production Contact page must expose the missing CRM configuration error');
+    assert(
+      hasConfigError,
+      'Production Contact page must expose the missing CRM configuration error'
+    );
     return;
   }
 
@@ -220,6 +197,13 @@ function verifyAllBuiltContactLinks() {
       assert(
         resolveHtmlPath(contactPath),
         `${path.relative(root, file)} points to missing Contact HTML at ${contactPath}`
+      );
+    }
+    for (const [anchor] of content.matchAll(/<a\b[^>]*>/g)) {
+      if (!anchor.includes('data-rybbit-event="business_consult_click"')) continue;
+      assert(
+        anchor.includes('data-consultation-trigger="true"'),
+        `${path.relative(root, file)} contains a business consultation CTA without a dialog trigger`
       );
     }
   }

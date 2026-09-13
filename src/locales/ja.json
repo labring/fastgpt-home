@@ -14,7 +14,7 @@
     },
     {
       "label": "事例センター",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "https://fastgpt.cn/customers"
     }
   ],
   "Pricing": {
@@ -420,6 +420,30 @@
       "trial": "今すぐ始める",
       "consult": "お問い合わせ"
     },
+    "consultationDialog": {
+      "badge": "FastGPT 企業サービス",
+      "title": "FastGPT 営業お問い合わせ",
+      "description": "ビジネスプロセス、データの現状、目標をお知らせください。FastGPT チームが 1 日以内にご連絡し、ナレッジベース、ワークフロー、エージェント機能を組み合わせた実現可能な専用プランをご提案します。",
+      "benefits": [
+        {
+          "title": "ナレッジベースから AI アプリへ",
+          "description": "企業ナレッジベースと RAG で、信頼できる業務 Q&A を構築。"
+        },
+        {
+          "title": "ワークフローで業務を自動化",
+          "description": "モデル、ナレッジベース、業務システムを視覚的に接続。"
+        },
+        {
+          "title": "運用可能なエージェントを構築",
+          "description": "実際の業務シナリオに合わせ、AI を継続的に実行。"
+        },
+        {
+          "title": "エンタープライズ級の導入とガバナンス",
+          "description": "SaaS とプライベート展開、権限管理とデータ分離に対応。"
+        }
+      ],
+      "footer": "金融・製造・教育・医療など 17 の主要業界で導入実績"
+    },
     "footer": {
       "tagline": "エンタープライズAI生産性エンジン",
       "columns": {
@@ -447,7 +471,8 @@
         },
         "more": {
           "title": "詳細",
-          "email": "メール: Dennis@sealos.io",
+          "email": "メール: business@fastgpt.io",
+          "phone": "電話：4006992336",
           "lanqiao": "蓝桥云课 × FastGPTコース",
           "book": "FastGPT公式書籍（紙書）"
         }

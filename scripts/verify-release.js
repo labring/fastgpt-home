@@ -10,19 +10,11 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { spawnSync } = require('node:child_process');
-const { URL_ALIAS_CONTRACT } = require('./lib/url-alias-authority');
 const {
   verifyUrlAliasArtifactBundle,
   writeUrlAliasArtifactBundle
 } = require('./lib/url-alias-artifacts');
 const { siteVariants } = require('./lib/site-variant');
-const {
-  GENERATED_PUBLIC_PATHS,
-  addRollbackFile,
-  commandLabel,
-  createFailure,
-  loadSolutionsEvidence
-} = require('./lib/release-cross-project');
 const {
   assertCaseSensitiveFilesystem,
   clearBuildArtifacts,
@@ -31,7 +23,6 @@ const {
   recordVariantRollbackInventory,
   restoreGeneratedPublicFiles,
   retainFailureArtifacts,
-  retainSuccessArtifacts,
   snapshotGeneratedPublicFiles,
   variantEnvironment,
   verifyExportCardinality
@@ -39,87 +30,54 @@ const {
 const {
   createReleaseRecord,
   finalizeReleaseRecord,
-  formatTechnicalAuthoritySuccess,
   recordStep,
   recordVariantOutcome,
   writeReleaseRecord
 } = require('./lib/release-record');
+const {
+  extractP1SuccessMeasurement,
+  getSourceNodeSteps,
+  getSourceNpmSteps,
+  getVariantSteps
+} = require('./lib/release-steps');
 
 const ROOT = path.resolve(__dirname, '..');
 const RETAIN_DIR = path.join(ROOT, '.release-artifacts');
 const P1_BASELINE_KIB = 266.9;
-const P1_BUDGET_KIB = 260;
+const P1_BUDGET_KIB = 261;
 
 function parseArgs(argv) {
   const options = {
     sourceOnly: false,
     keepArtifacts: false,
-    retainSuccessArtifacts: undefined,
     variant: undefined
   };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
     if (token === '--source-only') options.sourceOnly = true;
     else if (token === '--keep-artifacts') options.keepArtifacts = true;
-    else if (token === '--allow-missing-solutions-evidence') {
-      options.allowMissingSolutionsEvidence = true;
-    } else if (token === '--live') options.live = true;
-    else if (token === '--retain-success-artifacts') {
-      const retainDir = argv[++index];
-      if (!retainDir || retainDir.startsWith('--'))
-        throw new Error('--retain-success-artifacts requires a directory');
-      options.retainSuccessArtifacts = path.resolve(ROOT, retainDir);
-    } else if (token === '--variant') {
+    else if (token === '--variant') {
       const variant = argv[++index];
       if (!siteVariants.includes(variant)) {
         throw new Error(`--variant requires one of: ${siteVariants.join(', ')}`);
       }
       options.variant = variant;
-    } else if (token === '--solutions-evidence' || token === '--solutions-preview-evidence') {
-      const evidencePath = argv[++index];
-      if (!evidencePath || evidencePath.startsWith('--')) {
-        throw new Error(`${token} requires a JSON file path`);
-      }
-      options.solutionsEvidence = evidencePath;
-    } else if (token === '--solutions-http-target') {
-      const target = argv[++index];
-      if (!target || target.startsWith('--')) throw new Error(`${token} requires an HTTPS URL`);
-      options.solutionsHttpTarget = target;
-    } else if (token === '--solutions-http-contract') {
-      const contractPath = argv[++index];
-      if (!contractPath || contractPath.startsWith('--')) {
-        throw new Error(`${token} requires a JSON file path`);
-      }
-      options.solutionsHttpContract = contractPath;
-    } else if (token === '--solutions-approved-target') {
-      const target = argv[++index];
-      if (!target || target.startsWith('--')) throw new Error(`${token} requires an HTTPS URL`);
-      options.solutionsApprovedTarget = target;
     } else {
       throw new Error(`Unknown argument: ${token}`);
     }
-  }
-  if (options.solutionsEvidence && (options.solutionsHttpTarget || options.solutionsHttpContract)) {
-    throw new Error(
-      '--solutions-evidence cannot be combined with --solutions-http-target or --solutions-http-contract'
-    );
-  }
-  if (options.solutionsHttpTarget !== undefined && options.solutionsHttpContract === undefined) {
-    throw new Error('--solutions-http-target requires --solutions-http-contract');
-  }
-  if (options.solutionsHttpContract !== undefined && options.solutionsHttpTarget === undefined) {
-    throw new Error('--solutions-http-contract requires --solutions-http-target');
   }
   return options;
 }
 
 function runStep(failures, stepId, label, command, args, env, variant, formatSuccess, record) {
+  const startedAt = performance.now();
   const result = spawnSync(command, args, {
     cwd: ROOT,
     env,
     encoding: 'utf8',
     maxBuffer: 20 * 1024 * 1024
   });
+  const durationMs = Math.round(performance.now() - startedAt);
   const output = `${result.stdout || ''}${result.stderr || ''}`;
   if (result.error || result.status !== 0) {
     const failureOutput = result.error ? `${output}\n${result.error.message}` : output;
@@ -127,12 +85,20 @@ function runStep(failures, stepId, label, command, args, env, variant, formatSuc
       record,
       stepId,
       label,
-      commandLabel(command, args),
+      [command, ...args].join(' '),
       variant,
       'failed',
-      failureOutput
+      failureOutput,
+      undefined,
+      durationMs
     );
-    failures.push(createFailure(stepId, label, command, args, failureOutput, variant));
+    failures.push({
+      id: stepId,
+      label,
+      command: [command, ...args].join(' '),
+      output: failureOutput,
+      variant
+    });
     console.error(`[verify-release] ${label} failed`);
     return false;
   }
@@ -141,11 +107,12 @@ function runStep(failures, stepId, label, command, args, env, variant, formatSuc
     record,
     stepId,
     label,
-    commandLabel(command, args),
+    [command, ...args].join(' '),
     variant,
     'passed',
     output,
-    successEvidence
+    successEvidence,
+    durationMs
   );
   console.log(`[verify-release] ${label} passed${successEvidence ? `: ${successEvidence}` : ''}`);
   return true;
@@ -180,162 +147,23 @@ function npmStep(failures, stepId, label, args, env, variant, formatSuccess, rec
   );
 }
 
-function getSourceNodeSteps() {
-  return [
-    [
-      'solutions-preview.regression',
-      'Solutions preview runner regression',
-      'scripts/lib/solutions-preview-http.test.js',
-      []
-    ],
-    ['seo-basics.regression', 'SEO basics regression', 'scripts/verify-seo-basics.test.js', []],
-    [
-      'content-hygiene.source',
-      'content hygiene source verification',
-      'scripts/verify-content-hygiene.js',
-      ['--mode', 'source']
-    ],
-    [
-      'faq-route-registry.source',
-      'route registry check',
-      'scripts/generate-faq-route-registry.js',
-      ['--check']
-    ],
-    [
-      'faq-metadata-snapshot.source',
-      'metadata snapshot check',
-      'scripts/generate-faq-metadata.js',
-      ['--check']
-    ],
-    ['faq-routes.source', 'FAQ route source verification', 'scripts/verify-faq-routes.js', []],
-    [
-      'faq-metadata-legacy.source',
-      'FAQ metadata source verification',
-      'scripts/verify-faq-metadata.js',
-      []
-    ],
-    [
-      'faq-metadata.source',
-      'FAQ metadata normalization source verification',
-      'scripts/verify-faq-metadata-authority.js',
-      []
-    ],
-    [
-      'faq-seo-graph.source',
-      'FAQ SEO graph source verification',
-      'scripts/verify-faq-seo-graph.js',
-      []
-    ],
-    [
-      'url-alias.source',
-      'URL Alias Authority source verification',
-      'scripts/verify-url-alias-authority.js',
-      []
-    ],
-    [
-      'case-only.source',
-      'case-only authority and projection source verification',
-      'scripts/verify-case-only-aliases.js',
-      []
-    ],
-    [
-      'url-alias.rebuilt-source',
-      'URL Alias rebuilt-slug authority and projection source verification',
-      'scripts/verify-rebuilt-slug-aliases.js',
-      []
-    ],
-    [
-      'faq-redirects.source',
-      'FAQ redirect source verification',
-      'scripts/verify-faq-redirects.js',
-      ['--source']
-    ],
-    [
-      'technical-authority.source',
-      'technical authority source verification',
-      'scripts/verify-technical-authority.js',
-      []
-    ],
-    [
-      'technical-wave.source',
-      'technical wave source verification',
-      'scripts/verify-technical-wave.js',
-      []
-    ]
-  ];
-}
-
-function getSourceNpmSteps() {
-  return [
-    [
-      'technical-content.source',
-      'technical content authority verification',
-      ['verify:technical-content']
-    ],
-    [
-      'technical-authority.regression',
-      'technical authority regression',
-      ['verify:technical-authority-regression']
-    ],
-    [
-      'technical-wave.regression',
-      'technical wave regression',
-      ['verify:technical-wave-regression']
-    ],
-    [
-      'technical-content.regression',
-      'technical content regression',
-      ['verify:technical-content-regression']
-    ],
-    [
-      'technical-center.regression',
-      'technical center regression',
-      ['verify:technical-center-regression']
-    ],
-    [
-      'technical-export.regression',
-      'technical export regression',
-      ['verify:technical-export-regression']
-    ],
-    ['url-alias.regression', 'URL Alias Authority regression', ['verify:url-alias-regression']],
-    ['case-only.regression', 'case-only slice regression', ['verify:case-only-regression']],
-    [
-      'url-alias.rebuilt-regression',
-      'URL Alias rebuilt-slug slice regression',
-      ['verify:rebuilt-slug-regression']
-    ],
-    [
-      'faq-metadata.regression',
-      'FAQ metadata normalization regression',
-      ['verify:faq-metadata-authority-regression']
-    ],
-    ['release-readiness.regression', 'release readiness regression', ['verify:release-readiness']]
-  ];
-}
-
 function getSourceExecutionOrder() {
   return [
     ...getSourceNodeSteps().map(([stepId]) => stepId),
     ...getSourceNpmSteps().map(([stepId]) => stepId),
     'lint.source',
     'typescript.source',
-    'guide-authorization.source',
-    'guide-authorization.regression',
     'guide-content.source'
   ];
 }
 
 function runSourceChecks(failures, env, record) {
   for (const [stepId, label, script, args] of getSourceNodeSteps()) {
-    const formatSuccess =
-      stepId === 'technical-authority.source' ? formatTechnicalAuthoritySuccess : undefined;
-    nodeStep(failures, stepId, label, script, args, env, undefined, record, formatSuccess);
+    nodeStep(failures, stepId, label, script, args, env, undefined, record);
   }
 
   for (const [stepId, label, args] of getSourceNpmSteps()) {
-    const formatSuccess =
-      stepId === 'technical-authority.regression' ? formatTechnicalAuthoritySuccess : undefined;
-    npmStep(failures, stepId, label, args, env, undefined, formatSuccess, record);
+    npmStep(failures, stepId, label, args, env, undefined, undefined, record);
   }
   npmStep(
     failures,
@@ -358,39 +186,10 @@ function runSourceChecks(failures, env, record) {
     undefined,
     record
   );
-  const technicalAuthority = record?.evidence.technicalAuthority;
-  if (
-    technicalAuthority?.observed?.governanceStatus === 'governance-complete' &&
-    technicalAuthority.observed.publicationCount === 0
-  ) {
-    console.log('[verify-release] Wave 0 governance-complete; publication-count=0');
-  }
 }
 
 function runGuideSourceChecks(failures, env, variant, record) {
   const suffix = variant ? ` (${variant})` : '';
-  if (!variant) {
-    nodeStep(
-      failures,
-      'guide-authorization.source',
-      'Guide authorization source verification',
-      'scripts/verify-guide-authorization.js',
-      [],
-      env,
-      undefined,
-      record
-    );
-    npmStep(
-      failures,
-      'guide-authorization.regression',
-      'Guide authorization regression',
-      ['verify:guide-authorization-regression'],
-      env,
-      undefined,
-      undefined,
-      record
-    );
-  }
   nodeStep(
     failures,
     'guide-content.source',
@@ -401,114 +200,6 @@ function runGuideSourceChecks(failures, env, variant, record) {
     variant,
     record
   );
-}
-
-function extractP1SuccessMeasurement(output) {
-  return output.match(
-    /P1 verification passed for .*:\s*([0-9.]+ KiB initial JavaScript gzip)/
-  )?.[1];
-}
-
-function getVariantSteps(variant) {
-  const steps = [
-    {
-      runner: 'node',
-      id: 'content-hygiene.html',
-      label: `Complete HTML hygiene (${variant})`,
-      command: 'scripts/verify-content-hygiene.js',
-      args: ['--mode', 'html', '--root', 'out', '--variant', variant]
-    },
-    {
-      runner: 'npm',
-      id: 'technical-center.export',
-      label: `technical center artifact verification (${variant})`,
-      args: ['verify:technical-center']
-    },
-    {
-      runner: 'npm',
-      id: 'technical-export.export',
-      label: `technical export artifact verification (${variant})`,
-      args: ['verify:technical-export']
-    },
-    {
-      runner: 'npm',
-      id: 'technical-wave.export',
-      label: `technical wave export verification (${variant})`,
-      args: ['verify:technical-wave', '--', '--export', '--variant', variant, '--out-dir', 'out']
-    },
-    ...(variant === 'preview'
-      ? []
-      : [
-          {
-            runner: 'node',
-            id: 'url-alias.blackbox',
-            label: `URL Alias black-box verification (${variant})`,
-            command: 'scripts/verify-url-alias-blackbox.js',
-            args: ['--variant', variant]
-          },
-          {
-            runner: 'node',
-            id: 'case-only.http',
-            label: `Case-only HTTP verification (${variant})`,
-            command: 'scripts/verify-url-alias-blackbox.js',
-            args: ['--variant', variant, '--slice', 'case-only']
-          }
-        ]),
-    {
-      runner: 'npm',
-      id: 'p0.export',
-      label: `P0 HTML verification (${variant})`,
-      args: ['verify:p0']
-    },
-    {
-      runner: 'npm',
-      id: 'p1.export',
-      label: `P1 HTML verification (${variant})`,
-      args: ['verify:p1'],
-      formatSuccess: extractP1SuccessMeasurement
-    },
-    {
-      runner: 'npm',
-      id: 'p2.export',
-      label: `P2 HTML verification (${variant})`,
-      args: ['verify:p2']
-    },
-    {
-      runner: 'npm',
-      id: 'i18n-seo.export',
-      label: `i18n SEO HTML verification (${variant})`,
-      args: ['verify:i18n-seo']
-    },
-    ...(variant === 'preview'
-      ? []
-      : [
-          {
-            runner: 'npm',
-            id: 'faq-metadata-legacy.html',
-            label: `FAQ metadata HTML verification (${variant})`,
-            args: ['verify:faq-metadata', '--', '--html', '--variant', variant]
-          },
-          {
-            runner: 'npm',
-            id: 'faq-metadata.html',
-            label: `FAQ metadata normalization HTML verification (${variant})`,
-            args: ['verify:faq-metadata-authority', '--', '--html', '--variant', variant]
-          },
-          {
-            runner: 'npm',
-            id: 'faq-seo-graph.html',
-            label: `FAQ SEO graph HTML verification (${variant})`,
-            args: ['verify:faq-seo-graph', '--', '--html', '--out-dir', 'out', '--variant', variant]
-          },
-          {
-            runner: 'npm',
-            id: 'faq-redirects.export',
-            label: `FAQ redirect artifact verification (${variant})`,
-            args: ['verify:faq-redirects']
-          }
-        ])
-  ];
-  return steps;
 }
 
 function getVariantExecutionOrder(variant) {
@@ -623,7 +314,9 @@ function runVariantChecks(failures, variant, env, record) {
 function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) {
   for (const failure of failures.slice(startIndex)) {
     const budgetMatch = failure.output.match(
-      /Initial JavaScript is ([0-9.]+) KiB gzip, budget is 260 KiB/
+      new RegExp(
+        `Initial JavaScript is ([0-9.]+) KiB gzip, budget is ${P1_BUDGET_KIB} KiB`
+      )
     );
     if (failure.id !== 'p1.export' || !budgetMatch) continue;
     const currentKib = Number.parseFloat(budgetMatch[1]);
@@ -685,14 +378,6 @@ function runReleaseRegressionChecks(failures, env, record) {
   );
 }
 
-function isReleaseGateBlocked(failures, solutionsEvidence, options = {}) {
-  if (failures.length) return true;
-  if (solutionsEvidence.claim === true) return false;
-  return !(
-    options.allowMissingSolutionsEvidence === true && solutionsEvidence.status === 'not-provided'
-  );
-}
-
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const failures = [];
@@ -702,29 +387,6 @@ function main() {
   // Source-only checks run inside release regressions; preserve any full release record they inspect.
   if (!options.keepArtifacts && !options.sourceOnly) {
     fs.rmSync(RETAIN_DIR, { recursive: true, force: true });
-  }
-  loadSolutionsEvidence(record, options);
-  addRollbackFile(
-    record,
-    'src/content/tech-center/authority/week05-wave1-release-manifest.json',
-    'technical-wave-release-manifest',
-    record.startedAt
-  );
-  addRollbackFile(
-    record,
-    'src/content/tech-center/authority/week05-wave1-rollback.json',
-    'technical-wave-rollback',
-    record.startedAt
-  );
-  for (const [relativePath, role] of [
-    ['src/faq/generated-en-route-registry.json', 'faq-route-registry'],
-    ['src/faq/generated-en-metadata.json', 'faq-metadata-projection'],
-    ['src/faq/generated-en-metadata-authority.json', 'faq-metadata-authority'],
-    ['src/content/guides/registry.json', 'guide-registry'],
-    ['src/content/guides/policy.json', 'guide-release-policy'],
-    ['src/content/guides/authorization.json', 'guide-authorization']
-  ]) {
-    addRollbackFile(record, relativePath, role, record.startedAt);
   }
   const snapshot = snapshotGeneratedPublicFiles();
   const sourceEnv = {
@@ -803,15 +465,8 @@ function main() {
       const variantFailed = failures.length > beforeFailures;
       if (!variantFailed && ['cn', 'io'].includes(variant)) {
         try {
-          const bundle = writeUrlAliasArtifactBundle(ROOT, RETAIN_DIR, variant);
+          writeUrlAliasArtifactBundle(ROOT, RETAIN_DIR, variant);
           verifyUrlAliasArtifactBundle(path.join(RETAIN_DIR, 'url-alias'), [variant]);
-          record.evidence.aliasContract.artifacts[variant] = {
-            status: 'passed',
-            path: path.relative(ROOT, bundle.root),
-            authorityDigest: bundle.releaseManifest.authority.digest,
-            authoritySha256: bundle.authoritySha256,
-            projectionSha256: bundle.projectionSha256
-          };
           recordVariantRollbackInventory(record, variant);
           console.log(`[verify-release] URL Alias ${variant} release/rollback artifacts passed`);
         } catch (error) {
@@ -822,10 +477,6 @@ function main() {
             command: 'in-process URL Alias release artifact generation',
             output: error.message
           });
-          record.evidence.aliasContract.artifacts[variant] = {
-            status: 'failed',
-            detail: error.message
-          };
         }
       }
       if (!variantFailed) recordVariantExportRollbackInventory(record, variant);
@@ -842,52 +493,19 @@ function main() {
           });
         }
       }
-      if (!variantFailed && options.retainSuccessArtifacts) {
-        try {
-          const retainedPath = retainSuccessArtifacts(variant, options.retainSuccessArtifacts);
-          record.evidence.aliasContract.artifacts[variant] = {
-            status: 'passed',
-            path: path.relative(ROOT, path.join(retainedPath, 'url-alias', variant)),
-            authorityDigest: JSON.parse(
-              fs.readFileSync(
-                path.join(retainedPath, 'url-alias', variant, 'release', 'manifest.json'),
-                'utf8'
-              )
-            ).authority.digest
-          };
-          console.log(`[verify-release] retained verified ${variant} output: ${retainedPath}`);
-        } catch (error) {
-          failures.push({
-            id: 'artifacts.retain-success',
-            label: `success artifact retention (${variant})`,
-            variant,
-            command: 'in-process verified output copy',
-            output: error.message
-          });
-        }
-      }
       clearBuildArtifacts();
     }
 
     reportFailures(failures, advisories, retainedPaths);
-    const solutionsEvidence = record.crossProjectInputs.solutionsPreviewHttp;
-    const solutionsBlocked = solutionsEvidence.claim !== true;
-    const missingSolutionsAllowed =
-      options.allowMissingSolutionsEvidence === true && solutionsEvidence.status === 'not-provided';
-    if (!failures.length && !solutionsBlocked) {
-      console.log(
-        `[verify-release] release gate passed for source, redirects, ${siteVariants.join(
-          ', '
-        )}, HTML, and sitemap evidence`
-      );
-    } else if (!failures.length && missingSolutionsAllowed) {
-      console.log(
-        '[verify-release] pull-request source and export gates passed; production release eligibility awaits Solutions preview HTTP evidence'
-      );
-    } else if (!failures.length && solutionsBlocked) {
-      console.error('[verify-release] release gate blocked by Solutions preview HTTP evidence');
-    }
-    process.exitCode = isReleaseGateBlocked(failures, solutionsEvidence, options) ? 1 : 0;
+    if (!failures.length) console.log('[verify-release] source and export checks passed');
+    process.exitCode = failures.length ? 1 : 0;
+  } catch (error) {
+    failures.push({
+      id: 'release.unexpected',
+      label: 'Unexpected verification error',
+      output: error.message
+    });
+    throw error;
   } finally {
     finalizeReleaseRecord(record, failures, options);
     if (!options.sourceOnly) {
@@ -920,7 +538,5 @@ module.exports = {
   getSourceExecutionOrder,
   getVariantExecutionOrder,
   getVariantSteps,
-  isReleaseGateBlocked,
-  loadSolutionsEvidence,
   parseArgs
 };

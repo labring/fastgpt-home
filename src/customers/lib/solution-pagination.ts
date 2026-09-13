@@ -1,0 +1,1 @@
+export const PUBLIC_SOLUTIONS_PAGE_SIZE = 15;

@@ -1,8 +1,8 @@
 import Link from 'next/link';
 
-import { guideEntries, type GuidePublicationGroup } from '@/content/guides/registry';
-import { getGuidePath, type GuidePublishedLocale } from '@/lib/guideSeo';
-import { getOwnedLocalePath } from '@/lib/siteRouting';
+import { guideBuildEntries, type GuidePublicationGroup } from '@/content/guides/registry';
+import { getGuideReviewPath, type GuidePublishedLocale } from '@/lib/guideSeo';
+import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import styles from './GuideHubPage.module.css';
 
 const HUB_GROUPS: GuidePublicationGroup[] = ['decision', 'implementation', 'industry'];
@@ -76,7 +76,7 @@ export default function GuideHubPage({ locale }: { locale: GuidePublishedLocale 
         <nav aria-label={copy.breadcrumbGuide} className={styles.breadcrumb}>
           <ol>
             <li>
-              <Link href={getOwnedLocalePath(locale, '/')}>{copy.breadcrumbHome}</Link>
+              <Link href={getDefaultLocalePath(locale)}>{copy.breadcrumbHome}</Link>
             </li>
             <li aria-current="page">{copy.breadcrumbGuide}</li>
           </ol>
@@ -87,7 +87,7 @@ export default function GuideHubPage({ locale }: { locale: GuidePublishedLocale 
         </header>
         {HUB_GROUPS.map((group, groupIndex) => {
           const groupCopy = copy.groups[group];
-          const cards = guideEntries.filter((entry) => entry.group === group);
+          const cards = guideBuildEntries.filter((entry) => entry.group === group);
 
           return (
             <section aria-labelledby={`guide-group-${group}`} className={styles.group} key={group}>
@@ -107,7 +107,7 @@ export default function GuideHubPage({ locale }: { locale: GuidePublishedLocale 
                     >
                       <Link
                         className={styles.card + (index === 0 ? ' ' + styles.featuredCard : '')}
-                        href={getOwnedLocalePath(locale, getGuidePath(entry.slug))}
+                        href={getGuideReviewPath(locale, entry.slug)}
                       >
                         <div className={styles.cardTopline}>
                           <span>{String(index + 1).padStart(2, '0')}</span>

@@ -5,6 +5,7 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { getCustomerRouteAuthority } = require('./lib/customer-migration');
 
 const baseUrl = (process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io').replace(/\/$/, '');
 const isCn = new URL(baseUrl).hostname.endsWith('.cn');
@@ -18,6 +19,23 @@ const traditionalHomeUrl = `${ioBaseUrl}/zh-hant`;
 const englishLlmUrl = `${ioBaseUrl}/llms.txt`;
 const chineseLlmUrl = `${cnBaseUrl}/llms.txt`;
 const traditionalLlmUrl = `${ioBaseUrl}/zh-hant/llms.txt`;
+
+function loadCustomerDirectory() {
+  const routeAuthority = getCustomerRouteAuthority(path.join(__dirname, '..'));
+  return routeAuthority.details.map((detail) => ({
+    categorySlug: detail.categorySlug,
+    path: detail.path,
+    slug: detail.slug,
+    title: detail.title
+  }));
+}
+
+const customerDirectoryEntries = loadCustomerDirectory();
+const customerDirectory = [
+  '## Customer Case Center',
+  `- Customer Case Center: ${cnBaseUrl}/customers`,
+  ...customerDirectoryEntries.map((entry) => `- ${entry.title}: ${cnBaseUrl}${entry.path}`)
+].join('\n');
 
 const links = {
   website: ioBaseUrl,
@@ -64,6 +82,8 @@ FastGPT is designed for enterprise knowledge base Q&A, AI customer service, inte
 - Bahasa Melayu: ${ioBaseUrl}/ms
 
 The Japanese, Arabic, Vietnamese, Thai, Indonesian, and Malay pages use this English LLM context file. Chinese uses ${chineseLlmUrl}, and Traditional Chinese uses ${traditionalLlmUrl}.
+
+${customerDirectory}
 
 ## Core Features
 
@@ -157,6 +177,8 @@ FastGPT 面向企业知识库问答、AI 客服、内部助手、流程自动化
 - 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
 
+${customerDirectory}
+
 ## 核心能力
 
 ### 企业知识库与 Agentic RAG
@@ -223,6 +245,8 @@ FastGPT 面向企業知識庫問答、AI 客服、內部助手、流程自動化
 - 簡體中文 LLM Context：${chineseLlmUrl}
 - 英文 LLM Context：${englishLlmUrl}
 - GitHub：https://github.com/labring/FastGPT
+
+${customerDirectory}
 
 ## 核心能力
 

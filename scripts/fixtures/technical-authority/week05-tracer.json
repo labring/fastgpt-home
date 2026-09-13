@@ -1,8 +1,0 @@
-{
-  "schemaVersion": 1,
-  "candidateId": "week05-0001",
-  "canonicalHost": "https://fastgpt.cn",
-  "title": "解决FastGPT配套bge-rerank-v2-m3镜像的Docker GPU部署启动错误问题",
-  "summary": "Controlled Week05 tracer projection for the Technical Content Authority.",
-  "operation": "add"
-}

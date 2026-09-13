@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "batch": "week06",
+  "wave": "g1",
+  "status": "ready",
+  "baselinePublishedEntryCount": 13,
+  "resultingPublishedEntryCount": 15,
+  "publicSurfaces": [
+    "registry",
+    "owner-pages",
+    "guide-hub",
+    "sitemap",
+    "structured-data",
+    "internal-links",
+    "release-record",
+    "rollback"
+  ],
+  "waveIdentitySet": ["migrate-saas-to-selfhost", "embed-ai-into-product"],
+  "removeSlugs": ["migrate-saas-to-selfhost", "embed-ai-into-product"],
+  "keepG2Slugs": ["soe-policy-qa-deployment"],
+  "priorCompleteState": {
+    "identitySetSha256": "188b369cff5b6a5851711f5a6161d6bf754c8cf9b26dc98e0bfff7a07fe46f05"
+  },
+  "rollbackAction": "Restore the prior complete Guide projection before serving a replacement export."
+}

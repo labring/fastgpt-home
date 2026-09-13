@@ -178,6 +178,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
             >
               <m.a
                 href={contactUrl}
+                data-consultation-trigger="true"
                 {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_hero_consult')}
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.97 }}

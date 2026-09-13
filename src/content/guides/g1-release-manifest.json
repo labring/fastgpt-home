@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "issue": 255,
+  "batch": "week06",
+  "wave": "g1",
+  "group": "G1",
+  "status": "source-verified",
+  "baseline": {
+    "publishedEntryCount": 13,
+    "registryEntryCount": 13,
+    "slugs": [
+      "saas-platform-enterprise-gaps",
+      "self-build-three-year-tco",
+      "server-sizing-guide",
+      "complex-doc-golden-set",
+      "poc-30-day-design",
+      "database-qa-integration-guide",
+      "scheduled-report-automation",
+      "support-bot-four-steps",
+      "manufacturing-itops-invoice-audit",
+      "pharma-compliance-docs",
+      "education-retail-support-insight",
+      "finance-research-retrieval",
+      "finance-daily-report-automation"
+    ],
+    "identitySetSha256": "188b369cff5b6a5851711f5a6161d6bf754c8cf9b26dc98e0bfff7a07fe46f05"
+  },
+  "result": {
+    "registryEntryCount": 16,
+    "publishedEntryCount": 15,
+    "g1IdentityCount": 2,
+    "ownerPages": { "cn": 2, "io": 2 },
+    "sourceDocumentCount": 4
+  },
+  "publicSurfaces": [
+    "registry",
+    "owner-pages",
+    "guide-hub",
+    "sitemap",
+    "structured-data",
+    "internal-links",
+    "release-record",
+    "rollback"
+  ],
+  "writeStrategy": "atomic-with-rollback",
+  "postWriteVerification": "required",
+  "sourceSetSha256": "3b6d399e6e71b2fc11a8792a9a94b7f2a612549a6ef4f0f0e5fb173db20a0b71",
+  "identitySet": [
+    {
+      "slug": "migrate-saas-to-selfhost",
+      "group": "implementation",
+      "locales": ["zh", "en"],
+      "ownerPages": {
+        "cn": "https://fastgpt.cn/guide/migrate-saas-to-selfhost",
+        "io": "https://fastgpt.io/guide/migrate-saas-to-selfhost"
+      },
+      "localesData": {
+        "zh": {
+          "sourceName": "migrate-saas-to-selfhost.zh.md",
+          "sourceSha256": "8d5c289f2fe8eea3a6db0c286514f30ecad6b6cb37c9b5f1389fd08c019a0006",
+          "bodySha256": "a6477c856e690eb9d27770a000bd4387dbabb7804ebd1ef9f459eb49e717184e",
+          "canonical": "https://fastgpt.cn/guide/migrate-saas-to-selfhost",
+          "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/migrate-saas-to-selfhost | en → https://fastgpt.io/guide/migrate-saas-to-selfhost | x-default → https://fastgpt.io/guide/migrate-saas-to-selfhost",
+          "dateModified": "2026-08-27",
+          "schemaTokens": ["HowTo", "Article", "BreadcrumbList"],
+          "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+          "assetStatus": "source-exception",
+          "configuredInternalLinks": [
+            { "label": "迁移指南", "target": "https://fastgpt.cn/guide/migrate-saas-to-selfhost" },
+            {
+              "label": "API 文档",
+              "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+            },
+            { "label": "私有化页", "target": "https://fastgpt.cn/guide/self-build-three-year-tco" }
+          ]
+        },
+        "en": {
+          "sourceName": "migrate-saas-to-selfhost.en.md",
+          "sourceSha256": "d92ea74099c0bb6e9570993f6924365aef7d794be64b8cba7ecc4a09330b4737",
+          "bodySha256": "663d5a2a8c96a237b100c001ec895b1356354bbcf4dde9f509df9feaa9a8a0e7",
+          "canonical": "https://fastgpt.io/guide/migrate-saas-to-selfhost",
+          "hreflang": "en | zh-CN → https://fastgpt.cn/guide/migrate-saas-to-selfhost | en → https://fastgpt.io/guide/migrate-saas-to-selfhost | x-default → https://fastgpt.io/guide/migrate-saas-to-selfhost",
+          "dateModified": "2026-08-27",
+          "schemaTokens": ["HowTo", "Article", "BreadcrumbList"],
+          "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+          "assetStatus": "source-exception",
+          "configuredInternalLinks": [
+            {
+              "label": "Migration guide",
+              "target": "https://fastgpt.io/guide/migrate-saas-to-selfhost"
+            },
+            {
+              "label": "API documentation",
+              "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+            },
+            {
+              "label": "Self-hosted deployment",
+              "target": "https://fastgpt.io/guide/self-build-three-year-tco"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "slug": "embed-ai-into-product",
+      "group": "implementation",
+      "locales": ["zh", "en"],
+      "ownerPages": {
+        "cn": "https://fastgpt.cn/guide/embed-ai-into-product",
+        "io": "https://fastgpt.io/guide/embed-ai-into-product"
+      },
+      "localesData": {
+        "zh": {
+          "sourceName": "embed-ai-into-product.zh.md",
+          "sourceSha256": "0ac8a86ab588e7011346be6b6c648a8940687e3bbea541f09e817319c519012b",
+          "bodySha256": "5a00fd9ad2075c5091430166941d9ca327c15dc90065dd0ca4016a7030859de2",
+          "canonical": "https://fastgpt.cn/guide/embed-ai-into-product",
+          "hreflang": "zh-CN | zh-CN → https://fastgpt.cn/guide/embed-ai-into-product | en → https://fastgpt.io/guide/embed-ai-into-product | x-default → https://fastgpt.io/guide/embed-ai-into-product",
+          "dateModified": "2026-08-27",
+          "schemaTokens": ["HowTo", "Article", "BreadcrumbList"],
+          "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+          "assetStatus": "source-exception",
+          "configuredInternalLinks": [
+            {
+              "label": "API 文档",
+              "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+            },
+            { "label": "快速开始", "target": "https://fastgpt.cn/guide/poc-30-day-design" },
+            {
+              "label": "集成文档",
+              "target": "https://fastgpt.cn/guide/database-qa-integration-guide"
+            }
+          ]
+        },
+        "en": {
+          "sourceName": "embed-ai-into-product.en.md",
+          "sourceSha256": "c6e25c848e61c446580ea44a30754c46e6af13c2ea88df8affd3550de4656edb",
+          "bodySha256": "8fca88b4248edf722cd3f5684d65eed71ef2790b12a194f00d9d2fe5a5341bd3",
+          "canonical": "https://fastgpt.io/guide/embed-ai-into-product",
+          "hreflang": "en | zh-CN → https://fastgpt.cn/guide/embed-ai-into-product | en → https://fastgpt.io/guide/embed-ai-into-product | x-default → https://fastgpt.io/guide/embed-ai-into-product",
+          "dateModified": "2026-08-27",
+          "schemaTokens": ["HowTo", "Article", "BreadcrumbList"],
+          "sourceImageDirective": "Text and accessible tables; no image is required for this release.",
+          "assetStatus": "source-exception",
+          "configuredInternalLinks": [
+            {
+              "label": "API documentation",
+              "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+            },
+            { "label": "Getting started", "target": "https://fastgpt.io/guide/poc-30-day-design" },
+            {
+              "label": "Integration documentation",
+              "target": "https://fastgpt.io/guide/database-qa-integration-guide"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

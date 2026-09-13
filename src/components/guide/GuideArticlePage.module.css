@@ -49,8 +49,8 @@
 }
 
 .layout {
-  grid-template-columns: minmax(0, 1fr) 224px;
-  gap: 48px;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 32px;
   margin-top: 48px;
 }
 
@@ -100,16 +100,21 @@
   font-weight: 650;
 }
 
-.toc {
+.sidebar {
   position: sticky;
   top: 104px;
   align-self: start;
+  display: grid;
+  gap: 20px;
   max-height: calc(100vh - 128px);
   overflow-y: auto;
-  padding: 18px 0 18px 20px;
-  border-left: 1px solid var(--article-line);
   overscroll-behavior: contain;
   scrollbar-gutter: stable;
+}
+
+.toc {
+  padding: 18px 0 18px 20px;
+  border-left: 1px solid var(--article-line);
 }
 
 .tocTitle {
@@ -164,11 +169,14 @@
     gap: 24px;
   }
 
-  .toc {
+  .sidebar {
     position: static;
     order: -1;
     max-height: none;
     overflow: visible;
+  }
+
+  .toc {
     padding: 0 0 20px;
     border-top: 1px solid var(--article-line);
     border-left: 0;

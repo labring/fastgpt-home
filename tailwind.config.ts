@@ -48,6 +48,24 @@ const config = {
         "social-bg": "var(--home-social-bg)",
         hairline: "var(--home-hairline)",
         "hairline-soft": "var(--home-border)",
+        // customers 案例中心专属 token（增量，与现有 token 无冲突）
+        brand: {
+          50: "#f0f9ff",
+          100: "#e0f2fe",
+          200: "#bae6fd",
+          300: "#7dd3fc",
+          400: "#38bdf8",
+          500: "#0ea5e9",
+          600: "#0052d9",
+          700: "#0047b8",
+          800: "#075985",
+          900: "#091e42",
+        },
+        surface: {
+          100: "#f5f6f7",
+          200: "#eff0f1",
+          300: "#dee0e3",
+        },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
@@ -77,6 +95,11 @@ const config = {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        "elevation-1": "0 1px 2px rgba(31, 35, 41, 0.06), 0 0 0 1px rgba(31, 35, 41, 0.03)",
+        "elevation-2": "0 6px 16px -8px rgba(31, 35, 41, 0.14), 0 2px 6px rgba(31, 35, 41, 0.04)",
+        "elevation-3": "0 12px 28px -12px rgba(31, 35, 41, 0.18), 0 4px 10px rgba(31, 35, 41, 0.05)",
       },
       keyframes: {
         "accordion-down": {
@@ -119,7 +142,7 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), heroui()],
+  plugins: [require("tailwindcss-animate"), require("@tailwindcss/typography"), heroui()],
 } satisfies Config
 
 export default config

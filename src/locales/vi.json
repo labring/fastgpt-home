@@ -14,7 +14,7 @@
     },
     {
       "label": "Trung tâm case study",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "https://fastgpt.cn/customers"
     }
   ],
   "Pricing": {
@@ -353,24 +353,6 @@
               "label": "Chất lượng dịch vụ"
             }
           ]
-        },
-        {
-          "key": "lcfc",
-          "title": "Thoát khỏi Excel 10k dòng chậm chạp, truy vấn bằng ngôn ngữ tự nhiên",
-          "metrics": [
-            {
-              "value": "240+ phút",
-              "label": "Năng suất dữ liệu tăng"
-            },
-            {
-              "value": "90%",
-              "label": "Độ trễ hệ thống giảm"
-            },
-            {
-              "value": "3%",
-              "label": "Tỷ lệ lỗi giảm còn"
-            }
-          ]
         }
       ]
     },
@@ -438,6 +420,30 @@
       "trial": "Bắt đầu",
       "consult": "Liên hệ sales"
     },
+    "consultationDialog": {
+      "badge": "Dịch vụ doanh nghiệp FastGPT",
+      "title": "Liên hệ FastGPT Sales",
+      "description": "Hãy cho chúng tôi biết quy trình nghiệp vụ, hiện trạng dữ liệu và mục tiêu của bạn. Đội ngũ sẽ liên hệ trong 1 ngày, kết hợp knowledge base, workflow và agent để đưa ra phương án khả thi.",
+      "benefits": [
+        {
+          "title": "Từ knowledge base đến ứng dụng AI",
+          "description": "Xây dựng Q&A nghiệp vụ đáng tin cậy với knowledge base và RAG."
+        },
+        {
+          "title": "Tự động hóa quy trình bằng workflow",
+          "description": "Kết nối model, knowledge base và hệ thống nghiệp vụ một cách trực quan."
+        },
+        {
+          "title": "Xây dựng agent vận hành được",
+          "description": "Cấu hình agent theo kịch bản nghiệp vụ thực tế để thực thi liên tục."
+        },
+        {
+          "title": "Triển khai & quản trị cấp doanh nghiệp",
+          "description": "Hỗ trợ SaaS và private với phân quyền và cô lập dữ liệu."
+        }
+      ],
+      "footer": "Được tin dùng tại 17 ngành trọng điểm gồm tài chính, sản xuất, giáo dục, y tế"
+    },
     "footer": {
       "tagline": "Động cơ năng suất AI cho doanh nghiệp",
       "columns": {
@@ -465,7 +471,8 @@
         },
         "more": {
           "title": "Thêm",
-          "email": "Email: Dennis@sealos.io",
+          "email": "Email: business@fastgpt.io",
+          "phone": "Điện thoại: 4006992336",
           "lanqiao": "Khóa học Lanqiao × FastGPT",
           "book": "Sách chính thức FastGPT"
         }

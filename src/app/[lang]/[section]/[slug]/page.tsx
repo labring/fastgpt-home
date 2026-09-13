@@ -9,7 +9,8 @@ import {
   getTechArticleReviewParams
 } from '@/lib/tech-center-content';
 import { normalizeLocale } from '@/lib/locales';
-import { currentSiteVariant } from '@/lib/siteRouting';
+import { techPublishedLocaleCodes, type TechPublishedLocale } from '@/lib/publishedLocales';
+import { currentSiteVariant, getLocaleHreflang, getOwnedLocaleUrl } from '@/lib/siteRouting';
 import { getTechnicalCanonicalUrl } from '@/lib/technicalRouting';
 
 type TechArticleRouteParams = {
@@ -25,7 +26,9 @@ export default async function TechArticleRoute({
 }) {
   const { lang, section, slug } = await params;
   const locale = normalizeLocale(lang || defaultLocale);
-  const article = locale === 'zh' ? getTechArticle(section, slug) : null;
+  const article = techPublishedLocaleCodes.includes(locale as TechPublishedLocale)
+    ? getTechArticle(section, slug, locale as TechPublishedLocale)
+    : null;
 
   if (!article) notFound();
 
@@ -45,7 +48,8 @@ export default async function TechArticleRoute({
           eyebrow: dict.FAQ.sidebarEyebrow,
           title: dict.FAQ.sidebarTitle,
           description: dict.FAQ.sidebarDescription,
-          label: dict.FAQ.sidebarCta
+          consultLabel: dict.Home.navCta.consult,
+          trialLabel: dict.FAQ.sidebarCta
         }}
       />
     </>
@@ -59,7 +63,9 @@ export async function generateMetadata({
 }): Promise<Metadata> {
   const { lang, section, slug } = await params;
   const locale = normalizeLocale(lang || defaultLocale);
-  const article = locale === 'zh' ? getTechArticle(section, slug) : null;
+  const article = techPublishedLocaleCodes.includes(locale as TechPublishedLocale)
+    ? getTechArticle(section, slug, locale as TechPublishedLocale)
+    : null;
 
   if (!article) return {};
 
@@ -83,12 +89,23 @@ export async function generateMetadata({
       currentSiteVariant === 'preview'
         ? { index: false, follow: false }
         : { index: true, follow: true },
-    alternates: { canonical },
+    alternates: {
+      canonical,
+      languages: Object.fromEntries([
+        ...article.publishedLocales.map((publishedLocale) => [
+          getLocaleHreflang(publishedLocale),
+          getOwnedLocaleUrl(publishedLocale, `/${section}/${slug}`)
+        ]),
+        ...(article.publishedLocales.includes('en')
+          ? [['x-default', getOwnedLocaleUrl('en', `/${section}/${slug}`)]]
+          : [])
+      ])
+    },
     openGraph: {
       title,
       description: article.seoDescription,
       type: 'article',
-      locale: 'zh_CN',
+      locale: locale === 'zh' ? 'zh_CN' : 'en_US',
       url: canonical,
       ...(article.datePublished ? { publishedTime: article.datePublished } : {}),
       ...(article.dateModified ? { modifiedTime: article.dateModified } : {}),
@@ -104,7 +121,10 @@ export async function generateMetadata({
 }
 
 export function generateStaticParams() {
-  return getTechArticleReviewParams(currentSiteVariant);
+  // The dedicated comparison route also serves technical migration articles.
+  return getTechArticleReviewParams(currentSiteVariant).filter(
+    ({ section }) => section !== 'compare' && section !== 'guide'
+  );
 }
 
 export const dynamicParams = false;

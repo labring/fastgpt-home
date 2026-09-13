@@ -7,7 +7,10 @@ export type TechCategoryKey =
   | 'node'
   | 'integration'
   | 'api'
-  | 'reference';
+  | 'reference'
+  | 'model'
+  | 'glossary'
+  | 'compare';
 
 export type TechCategory = Exclude<TechCategoryKey, 'all'>;
 export type TechSource = '官方文档' | 'GitHub issue' | '深度场景内容';

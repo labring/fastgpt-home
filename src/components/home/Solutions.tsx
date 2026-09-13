@@ -174,6 +174,7 @@ export default function Solutions({ t, locale }: { t: SolutionsT; locale: string
                 </div>
                 <a
                   href={contactUrl}
+                  data-consultation-trigger="true"
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_solutions_consult', {
                     solution: current.key
                   })}

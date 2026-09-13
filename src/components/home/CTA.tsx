@@ -96,6 +96,7 @@ export default function CTA({ t, locale }: { t: CTAT; locale: string }) {
               >
                 <m.a
                   href={contactUrl}
+                  data-consultation-trigger="true"
                   {...rybbitClickAttrs(RYBBIT_EVENTS.businessConsultClick, 'home_bottom_consult')}
                   whileHover={{ scale: 1.04 }}
                   whileTap={{ scale: 0.97 }}

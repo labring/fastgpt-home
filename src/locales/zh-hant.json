@@ -14,7 +14,7 @@
     },
     {
       "label": "案例中心",
-      "href": "https://solutions.fastgpt.cn/"
+      "href": "https://fastgpt.cn/customers"
     }
   ],
   "Pricing": {
@@ -420,6 +420,30 @@
       "trial": "立即開始",
       "consult": "商務諮詢"
     },
+    "consultationDialog": {
+      "badge": "FastGPT 企業服務",
+      "title": "FastGPT 商務諮詢",
+      "description": "留下你的業務流程、數據現狀與目標效果，FastGPT 團隊將在 1 天內聯繫你，結合知識庫、工作流與智能體能力，為你提供一份可落地的專屬方案。",
+      "benefits": [
+        {
+          "title": "從知識庫到 AI 應用",
+          "description": "基於企業知識庫與 RAG，快速構建可信的業務問答。"
+        },
+        {
+          "title": "用工作流編排業務流程",
+          "description": "視覺化工作流連接模型、知識庫與業務系統。"
+        },
+        {
+          "title": "構建可運營的智能體",
+          "description": "圍繞真實業務場景，讓 AI 持續落地執行。"
+        },
+        {
+          "title": "支持企業級部署與治理",
+          "description": "覆蓋 SaaS 與私有化，滿足企業安全要求。"
+        }
+      ],
+      "footer": "已服務金融、製造、教育、醫療等 17 個重點行業"
+    },
     "footer": {
       "tagline": "企業級AI生產力引擎",
       "columns": {
@@ -447,7 +471,8 @@
         },
         "more": {
           "title": "更多信息",
-          "email": "郵箱：Dennis@sealos.io",
+          "email": "郵箱：business@fastgpt.io",
+          "phone": "電話：4006992336",
           "lanqiao": "藍橋雲課 x FastGPT教程",
           "book": "FastGPT官方教材（紙質書）"
         }

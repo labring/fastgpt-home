@@ -13,6 +13,7 @@ export const contactLinkAttributionScript = `
 (function() {
   var keys = ${attributionKeysJson};
   var valueCaps = ${attributionValueCapsJson};
+  var linkDefaults = new WeakMap();
 
   function updateContactHref(event) {
     if (event.defaultPrevented || !(event.target instanceof Element)) return;
@@ -39,10 +40,20 @@ export const contactLinkAttributionScript = `
       return;
     }
 
+    var linkDefault = linkDefaults.get(anchor);
+    // Component href updates establish a new default; our own writes retain it.
+    if (!linkDefault || linkDefault.href !== rawHref) {
+      linkDefault = { source: target.searchParams.get('source'), href: rawHref };
+      linkDefaults.set(anchor, linkDefault);
+    }
+
     var incoming = new URLSearchParams(window.location.search);
     var forwarded = new URLSearchParams();
     keys.forEach(function(key) {
-      var value = incoming.get(key);
+      // Preserve an explicit landing source, with the CTA source as the default.
+      var value = key === 'source'
+        ? ((incoming.get(key) || '').trim() || linkDefault.source)
+        : incoming.get(key);
       var maxLength = valueCaps[key];
       if (value && maxLength) {
         value = value.trim().slice(0, maxLength);
@@ -51,7 +62,8 @@ export const contactLinkAttributionScript = `
     });
 
     target.search = forwarded.toString() ? '?' + forwarded.toString() : '';
-    anchor.setAttribute('href', target.pathname + target.search + target.hash);
+    linkDefault.href = target.pathname + target.search + target.hash;
+    anchor.setAttribute('href', linkDefault.href);
   }
 
   document.addEventListener('pointerdown', updateContactHref, true);

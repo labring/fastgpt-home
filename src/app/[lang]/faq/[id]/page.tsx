@@ -10,7 +10,7 @@ import {
 } from '@/faq';
 import { notFound } from 'next/navigation';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
-import { getFaqAlternates } from '@/lib/faqSeo';
+import { getFaqAlternates, getFaqLanguageSwitchPaths } from '@/lib/faqSeo';
 import { getRobotsPolicy, localeMap } from '@/lib/seo';
 import { normalizeFaqMetadata } from '@/lib/faqMetadata';
 import {
@@ -20,9 +20,9 @@ import {
   getBuildLocaleCodes
 } from '@/lib/siteRouting';
 import { getFaqPath } from '@/lib/localizedRoutes';
-import { ArrowLeft, ArrowRight, ArrowUpRight, Workflow } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
+import ContentSidebarCta from '@/components/ContentSidebarCta';
 import FAQCard from '@/components/faq/FAQCard';
-import CloudEntryLink from '@/components/home/CloudEntryLink';
 import Navbar from '@/components/home/Navbar';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
@@ -82,6 +82,10 @@ export default async function FAQDetailPage({
         t={dict.Home.navCta}
         locale={langName}
         publishedLocales={getFaqTranslationLocales(routeKey, faqLangName)}
+        languageSwitchPaths={getFaqLanguageSwitchPaths(
+          contentId,
+          getFaqTranslationLocales(routeKey, faqLangName)
+        )}
       />
 
       <main className="relative px-[16px] pb-[80px] md:px-[32px]">
@@ -170,54 +174,20 @@ export default async function FAQDetailPage({
               className="self-start lg:sticky lg:top-[104px] lg:col-start-2 lg:row-span-2 lg:row-start-1"
               aria-label={dict.FAQ.sidebarTitle}
             >
-              <section
-                className="relative overflow-hidden rounded-[8px] bg-[#070d1d] px-6 pb-6 pt-7 text-white shadow-[0_20px_45px_rgba(15,23,42,0.16)]"
-                aria-labelledby="faq-sidebar-title"
-              >
-                <div
-                  className="pointer-events-none absolute inset-0 opacity-[0.08]"
-                  style={{
-                    backgroundImage:
-                      'linear-gradient(rgba(255,255,255,0.45) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.45) 1px, transparent 1px)',
-                    backgroundSize: '32px 32px',
-                    maskImage: 'linear-gradient(to bottom left, black, transparent 68%)',
-                    WebkitMaskImage: 'linear-gradient(to bottom left, black, transparent 68%)'
-                  }}
-                  aria-hidden="true"
-                />
-
-                <div className="relative">
-                  <div className="mb-5 flex h-10 w-10 items-center justify-center rounded-[8px] bg-white/10">
-                    <Workflow className="h-5 w-5" strokeWidth={1.7} aria-hidden="true" />
-                  </div>
-                  <p className="mb-3 text-[11px] font-semibold leading-4 text-white/60">
-                    {dict.FAQ.sidebarEyebrow}
-                  </p>
-                  <p
-                    id="faq-sidebar-title"
-                    className="mb-3 text-[24px] font-semibold leading-[32px] text-white [text-wrap:balance]"
-                  >
-                    {dict.FAQ.sidebarTitle}
-                  </p>
-                  <p className="mb-6 text-[14px] leading-[22px] text-white/65 [text-wrap:pretty]">
-                    {dict.FAQ.sidebarDescription}
-                  </p>
-                  <CloudEntryLink
-                    source="faq_detail_sidebar_trial"
-                    data-rybbit-prop-category={faqItem.Category}
-                    rel="noopener noreferrer nofollow"
-                    aria-label={`${dict.FAQ.sidebarCta}: ${dict.FAQ.sidebarTitle}`}
-                    className="group inline-flex h-11 w-full items-center justify-center gap-2 rounded-[6px] bg-white px-5 text-[14px] font-semibold text-[#070d1d] transition-[background-color,transform] duration-200 hover:-translate-y-0.5 hover:bg-[#f1f5f9] active:translate-y-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-[#070d1d]"
-                  >
-                    <span>{dict.FAQ.sidebarCta}</span>
-                    <ArrowUpRight
-                      className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
-                      strokeWidth={1.8}
-                      aria-hidden="true"
-                    />
-                  </CloudEntryLink>
-                </div>
-              </section>
+              <ContentSidebarCta
+                locale={langName}
+                copy={{
+                  eyebrow: dict.FAQ.sidebarEyebrow,
+                  title: dict.FAQ.sidebarTitle,
+                  description: dict.FAQ.sidebarDescription,
+                  consultLabel: dict.Home.navCta.consult,
+                  trialLabel: dict.FAQ.sidebarCta
+                }}
+                consultSource="faq_detail_sidebar_consult"
+                trialSource="faq_detail_sidebar_trial"
+                category={faqItem.Category}
+                slug={routeKey}
+              />
 
               {relatedFAQs.length > 0 && (
                 <nav

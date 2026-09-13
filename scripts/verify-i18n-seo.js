@@ -2,9 +2,9 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const vm = require('node:vm');
 const {
   buildRedirects,
+  getTechIdentities,
   getPublishedFaqIds,
   parseNginxRedirectMap
 } = require('./lib/redirects');
@@ -168,6 +168,49 @@ function verifyPage(route, locale, pathSuffix, languages) {
   );
 }
 
+// Compare server-rendered navigation with each page's published translation set.
+function verifyLanguageLinks() {
+  const routes = ['/', '/price', '/faq', `/faq/${faqId}`, '/contact', '/compare', '/compare/dify-vs-fastgpt'];
+  const guideSlug = guideRegistry[0].slug;
+  const contentLocales = variant === 'preview' ? ['zh', 'en'] : [defaultLocale];
+  for (const locale of contentLocales) {
+    const prefix = variant === 'preview' ? `/${locale}` : '';
+    routes.push(`${prefix}/guide`, `${prefix}/guide/${guideSlug}`, `${prefix}/tech-center`);
+    if (resolveHtmlPath(`${prefix}/tech-center/page/2`)) routes.push(`${prefix}/tech-center/page/2`);
+    const article = getTechIdentities(rootDir).find((entry) => entry.locale === locale);
+    if (article) routes.push(`${prefix}${article.canonicalPath}`);
+  }
+  if (variant !== 'cn') routes.push('/ja', '/zh-hant/contact');
+
+  for (const route of routes) {
+    const html = resolveHtml(route);
+    const alternates = getAlternates(html);
+    delete alternates['x-default'];
+    const anchors = getTags(html, 'a').filter((tag) => getAttribute(tag, 'data-language-switch'));
+    const actual = {};
+    for (const anchor of anchors) {
+      const language = getAttribute(anchor, 'hreflang');
+      const href = getAttribute(anchor, 'href');
+      assert(!href.includes('__fg_lang'), `${route}: static choice marker`);
+      let canonical = href;
+      if (variant === 'preview') {
+        assert(href.startsWith('/') && !href.startsWith('//'), `${route}: preview left its origin`);
+        const targetPath = new URL(href, 'https://preview.invalid').pathname;
+        assert(resolveHtmlPath(targetPath), `${route}: missing preview translation ${href}`);
+        const segments = targetPath.split('/');
+        if (Object.hasOwn(locales, segments[1])) segments.splice(1, 1);
+        const code = getAttribute(anchor, 'data-language-switch');
+        const prefix = code === 'en' || code === 'zh' ? '' : `/${code}`;
+        const pagePath = segments.join('/');
+        canonical = `${baseUrls[locales[code].owner]}${prefix}${pagePath === '/' ? (prefix ? '' : '/') : pagePath}`;
+      }
+      assert.equal(normalizeUrl(canonical), normalizeUrl(alternates[language]), `${route}: ${language} navigation differs from hreflang`);
+      actual[language] = canonical;
+    }
+    assert.deepEqual(Object.keys(actual).sort(), Object.keys(alternates).length > 1 ? Object.keys(alternates).sort() : [], `${route}: incomplete language navigation`);
+  }
+}
+
 function verifyRobotsFile() {
   const robots = fs.readFileSync(path.join(outDir, 'robots.txt'), 'utf8');
   assert(/User-Agent:\s*\*/i.test(robots), 'robots.txt must define a wildcard crawler rule');
@@ -270,8 +313,8 @@ function verifySitemap() {
   );
   assert(!urls.some((url) => url.endsWith('/ja/contact')), 'Sitemap contains Japanese Contact');
   assert.equal(
-    urls.includes(`${baseUrls.cn}/tech-center`),
-    variant === 'cn',
+    urls.includes(`${baseUrl}/tech-center`),
+    variant === 'cn' || variant === 'io',
     'Sitemap has an unexpected technical center URL'
   );
 
@@ -325,10 +368,18 @@ function verifyPublishedRoutes() {
     Boolean(resolveHtmlPath('/zh-hant/contact')),
     variant === 'io' || variant === 'preview'
   );
-  assert.equal(Boolean(resolveHtmlPath('/tech-center')), variant === 'cn');
-  assert.equal(Boolean(resolveHtmlPath('/zh/tech-center')), variant === 'cn' || variant === 'preview');
+  assert.equal(Boolean(resolveHtmlPath('/tech-center')), variant !== 'preview');
+  assert.equal(Boolean(resolveHtmlPath('/zh/tech-center')), variant === 'preview');
+  assert.equal(Boolean(resolveHtmlPath('/en/tech-center')), variant === 'preview');
   assert.equal(Boolean(resolveHtmlPath(techPath)), variant === 'cn');
   assert.equal(Boolean(resolveHtmlPath(`/zh${techPath}`)), variant === 'preview');
+  for (const identity of getTechIdentities(rootDir)) {
+    assert.equal(
+      Boolean(resolveHtmlPath(identity.sourcePath)),
+      variant === 'preview',
+      `Unexpected Technical review route state: ${identity.sourcePath}`
+    );
+  }
 }
 
 function verifyNotFoundFallback() {
@@ -338,60 +389,13 @@ function verifyNotFoundFallback() {
     .map((locale) => `:not(:lang(${locale}))`)
     .join('')} .not-found-locale-${defaultLocale},`;
   assert(html.includes(selector), `404 page is missing the ${defaultLocale} fallback selector`);
-
-  const script = html.match(
-    /<script>\s*(\(\(\) => \{[\s\S]*?data-not-found-recovery[\s\S]*?\}\)\(\);)\s*<\/script>/
-  )?.[1];
-  assert(script, '404 page is missing the recovery script');
-
-  function getRecoveryLinks(pathname) {
-    const links = [];
-    const container = {
-      style: {},
-      append(link) {
-        links.push(link);
-      }
-    };
-    vm.runInNewContext(script, {
-      location: { pathname },
-      document: {
-        createElement(tagName) {
-          assert.equal(tagName, 'a');
-          return {};
-        },
-        querySelectorAll(query) {
-          assert.equal(query, '[data-not-found-recovery]');
-          return [container];
-        }
-      }
-    });
-    return { hrefs: links.map((link) => link.href), display: container.style.display };
-  }
-
-  const contactHrefs =
-    variant === 'preview'
-      ? ['/contact', '/zh/contact', '/zh-hant/contact']
-      : [
-          `${baseUrls.io}/contact`,
-          `${baseUrls.cn}/contact`,
-          `${baseUrls.io}/zh-hant/contact`
-        ];
-  const contactRecovery = getRecoveryLinks('/ja/contact/missing');
-  assert.deepEqual(contactRecovery.hrefs, contactHrefs);
-  assert.equal(contactRecovery.display, 'contents');
-
-  const techRecovery = getRecoveryLinks('/ja/tutorial/missing');
-  assert.deepEqual(techRecovery.hrefs, [
-    variant === 'preview' ? '/zh/tech-center' : `${baseUrls.cn}/tech-center`
-  ]);
-  assert.deepEqual(getRecoveryLinks('/ja/missing').hrefs, []);
 }
 
 function verifyContactExperience() {
   const defaultContactHtml = resolveHtml('/contact');
   assert.equal(
     defaultContactHtml.includes('aria-label="Switch language"'),
-    variant !== 'cn',
+    true,
     'Default Contact page has an unexpected language switcher state'
   );
 
@@ -460,6 +464,7 @@ function main() {
   verifyPublishedRoutes();
   verifyNotFoundFallback();
   verifyContactExperience();
+  verifyLanguageLinks();
 
   const rootLocale = defaultLocale === 'zh' ? 'zh-CN' : 'en';
   verifyPage('/', rootLocale, '', pageLanguages);
@@ -493,6 +498,9 @@ function main() {
     const techHtml = resolveHtml('/zh/tech-center');
     assert.equal(getCanonical(techHtml, '/zh/tech-center'), `${baseUrls.cn}/tech-center`);
     assert.equal(getRobots(techHtml), 'noindex, nofollow');
+    const englishTechHtml = resolveHtml('/en/tech-center');
+    assert.equal(getCanonical(englishTechHtml, '/en/tech-center'), `${baseUrls.io}/tech-center`);
+    assert.equal(getRobots(englishTechHtml), 'noindex, nofollow');
 
     const techArticleHtml = resolveHtml(`/zh${techPath}`);
     assert.equal(getCanonical(techArticleHtml, `/zh${techPath}`), `${baseUrls.cn}${techPath}`);

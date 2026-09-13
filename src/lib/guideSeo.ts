@@ -4,9 +4,11 @@ import { getGuideSource } from '@/content/guides/registry';
 import { getAlternates } from '@/lib/seo';
 import {
   getBuildLocaleCodes,
+  currentSiteVariant,
   getDefaultLocaleForSiteVariant,
   getOwnedLocalePath,
-  getOwnedLocaleUrl
+  getOwnedLocaleUrl,
+  getReviewLocalePath
 } from '@/lib/siteRouting';
 
 export const GUIDE_PUBLISHED_LOCALES = ['zh', 'en'] as const;
@@ -39,6 +41,7 @@ export function resolveGuideLocale(locale: string): GuidePublishedLocale | undef
 
 /** Return the published Guide locales owned by the current static-export variant. */
 export function getGuideBuildLocales(): GuidePublishedLocale[] {
+  if (currentSiteVariant === 'preview') return [...GUIDE_PUBLISHED_LOCALES];
   const locales = getBuildLocaleCodes()
     .map(resolveGuideLocale)
     .filter((locale): locale is GuidePublishedLocale => Boolean(locale));
@@ -69,10 +72,15 @@ export function getGuideOwnedPath(locale: GuidePublishedLocale, slug?: string): 
   return getOwnedLocalePath(locale, getGuidePath(slug));
 }
 
+/** Build the locale-prefixed Guide review path used by Preview exports. */
+export function getGuideReviewPath(locale: GuidePublishedLocale, slug?: string): string {
+  return getReviewLocalePath(locale, getGuidePath(slug));
+}
+
 export function getGuideArticleMetadata(
   locale: GuidePublishedLocale,
   slug: string,
-  { indexable = true }: GuideMetadataOptions = {}
+  { indexable = currentSiteVariant !== 'preview' }: GuideMetadataOptions = {}
 ): Metadata {
   const snapshot = getGuideSnapshot(locale, slug);
   const canonical = getGuideCanonicalUrl(locale, slug);
@@ -82,7 +90,7 @@ export function getGuideArticleMetadata(
     description: snapshot.metaDescription,
     keywords: snapshot.keywords,
     alternates: getGuideAlternates(locale, slug),
-    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: false },
     openGraph: {
       type: 'article',
       url: canonical,
@@ -108,14 +116,14 @@ export function getGuideArticleMetadata(
 
 export function getGuideHubMetadata(
   locale: GuidePublishedLocale,
-  { indexable = true }: GuideMetadataOptions = {}
+  { indexable = currentSiteVariant !== 'preview' }: GuideMetadataOptions = {}
 ): Metadata {
   const copy = GUIDE_HUB_COPY[locale];
   return {
     title: copy.title,
     description: copy.description,
     alternates: getGuideAlternates(locale),
-    robots: indexable ? { index: true, follow: true } : { index: false, follow: true },
+    robots: indexable ? { index: true, follow: true } : { index: false, follow: false },
     openGraph: {
       type: 'website',
       url: getGuideCanonicalUrl(locale),

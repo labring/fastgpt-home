@@ -6,7 +6,7 @@ on:
 
 # Only one build per PR branch at a time.
 concurrency:
-  group: 'preview-build-${{ github.head_ref }}'
+  group: 'preview-build-${{ github.event.pull_request.number || github.ref }}'
   cancel-in-progress: true
 
 permissions:
@@ -22,13 +22,18 @@ jobs:
       # Public filing text is available to fork PRs without repository secrets.
       NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
       NEXT_PUBLIC_FILING_ADDRESS: '粤ICP备2023048773号'
+      NEXT_PUBLIC_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_SITE_VARIANT: preview
+      NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+      NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
+      NEXT_PUBLIC_CRM_API_URL: ''
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
 
     steps:
-      - name: Checkout PR code
+      - name: Checkout merge result or selected manual revision
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: recursive
           fetch-depth: 0
 
@@ -37,51 +42,41 @@ jobs:
         with:
           node-version: 24
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 9
-
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
+
+      - name: Select CRM build coverage and record revisions
+        id: coverage
+        run: node scripts/select-preview-builds.js | tee preview-selection.json
+
+      - name: Verify CRM states and build selection
+        run: node --test scripts/verify-consultation-attribution.test.js scripts/select-preview-builds.test.js
 
       - name: Verify footer
         run: node --test scripts/verify-footer-copy.test.js scripts/verify-footer-tech-link.test.js
 
       - name: Build and verify CRM-disabled preview
-        env:
-          NEXT_PUBLIC_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_SITE_VARIANT: preview
-          NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
-          NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
-          # Preview builds must not create real CRM leads.
-          NEXT_PUBLIC_CRM_API_URL: ''
-          NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
         run: |
           rm -rf out
-          pnpm run build
-          pnpm run verify:contact
-          pnpm run verify:i18n-seo
+          npm run build
+          npm run verify:contact
+          npm run verify:i18n-seo
           mv out .preview-build-crm-disabled
 
       - name: Build and verify configured CRM preview
+        if: steps.coverage.outputs.configured == 'true'
         env:
-          NEXT_PUBLIC_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_SITE_VARIANT: preview
-          NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
-          NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
-          # This URL is intentionally unreachable; it only exercises the configured form build.
+          # Automated form submissions are intercepted by the real-form regression harness.
           NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-          NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
         run: |
           rm -rf out
-          pnpm run build
-          pnpm run verify:contact
-          pnpm run verify:i18n-seo
+          npm run build
+          npm run verify:contact
+          npm run verify:i18n-seo
           rm -rf out
-          mv .preview-build-crm-disabled out
+
+      - name: Select CRM-disabled deployment artifact
+        run: mv .preview-build-crm-disabled out
 
       - name: Verify preview filing links
         run: |

@@ -199,6 +199,59 @@ function findElement(node, type) {
   }
 }
 
+test('CRM-disabled Preview retains its form, explanation, disabled submit, and zero requests', async () => {
+  const env = browser(false, { NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: '' });
+  const requests = [];
+  env.mocks['@/lib/fetchWithTimeout'] = {
+    fetchWithTimeout: async (...args) => requests.push(args)
+  };
+  const form = renderForm(env);
+  const rendered = form.render();
+  assert.equal(rendered.type, 'form');
+  assert.match(JSON.stringify(rendered), /data-crm-preview/);
+  assert.match(JSON.stringify(rendered), /预览/);
+  assert.equal(findElement(rendered, 'button').props.disabled, true);
+  await form.submit();
+  await flushBackgroundWork();
+  assert.equal(requests.length, 0);
+});
+
+test('production variants retain the CRM configuration error', () => {
+  for (const variant of ['cn', 'io']) {
+    const env = browser(false, { NEXT_PUBLIC_SITE_VARIANT: variant, NEXT_PUBLIC_CRM_API_URL: '' });
+    const rendered = renderForm(env).render();
+    assert.equal(rendered.props.role, 'alert');
+    assert.equal(rendered.props['data-crm-config-error'], true);
+    assert.equal(findElement(rendered, 'form'), undefined);
+  }
+});
+
+test('configured Preview submits intercepted attribution and recovers after CRM failure', async () => {
+  const env = browser(false, {
+    NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: 'https://crm-preview.invalid'
+  });
+  let succeed = false;
+  const requests = [];
+  env.mocks['@/lib/fetchWithTimeout'] = {
+    fetchWithTimeout: async (url, options) => {
+      if (url.endsWith('/contacts/submit')) requests.push({ url, body: JSON.parse(options.body) });
+      return { ok: succeed, status: succeed ? 200 : 500, json: async () => ({ submission_id: 'test' }) };
+    }
+  };
+  const form = renderForm(env);
+  assert.equal(findElement(form.render(), 'button').props.disabled, false);
+  await form.submit();
+  assert.equal(form.render().type, 'form');
+  assert.equal(findElement(form.render(), 'button').props.disabled, false);
+  succeed = true;
+  await form.submit();
+  assert.equal(form.render().props.role, 'status');
+  assert.equal(requests.length, 2);
+  assert.equal(requests[0].url, 'https://crm-preview.invalid/contacts/submit');
+  assert(requests[1].body.visitor_id);
+  assert.equal(requests[1].body.visitor_id, requests[0].body.visitor_id);
+});
+
 test('consultation snapshot props flow from dialog through content to ContactForm', () => {
   const capture = {
     source: '案例详情-顶部商务咨询',

@@ -9,4 +9,6 @@ COPY payload/runtime/nginx-redirects.conf /etc/nginx/generated-redirects.conf
 COPY payload/runtime/nginx-embeddable-security-headers.conf /etc/nginx/embeddable-security-headers.conf
 COPY manifest.json /etc/nginx/site-manifest.json
 COPY payload/verification.json /etc/nginx/site-verification.json
+RUN grep -q '"siteVariant": "cn"' /etc/nginx/site-manifest.json || \
+    (echo "Docker publication supports only NEXT_PUBLIC_SITE_VARIANT=cn" >&2; exit 1)
 RUN nginx -t

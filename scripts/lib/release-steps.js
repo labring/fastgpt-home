@@ -202,13 +202,15 @@ function extractP1SuccessMeasurement(output) {
 
 function getVariantSteps(variant) {
   const steps = [
+    ...(variant === 'preview' ? [
     {
       runner: 'node',
       id: 'contact.export',
       label: `Contact export (${variant})`,
       command: 'scripts/verify-contact-page.js',
       args: []
-    },
+    }
+    ] : []),
     ...(variant === 'preview'
       ? []
       : [

@@ -264,3 +264,6 @@ The tables above can be checked against the open-source repository. If a specifi
 ## References
 
 - [FastGPT env variables reference — 5957d06](https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/.env.template)
+
+
+Preview timing verification sample.

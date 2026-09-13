@@ -67,7 +67,7 @@ jobs:
           key: ${{ steps.compilation.outputs.key }}
       - name: Verify packaging inputs
         run: |
-          node -e "require('node:fs').writeFileSync('expected-site.json', JSON.stringify(require('./scripts/lib/site-artifact-identity').siteArtifactIdentity()))"
+          node -e "const {getPublicationInputs,siteArtifactIdentity}=require('./scripts/lib/site-artifact-identity');require('node:fs').writeFileSync('expected-site.json', JSON.stringify(getPublicationInputs(siteArtifactIdentity())))"
           node scripts/verify-site-artifact.js --bundle .release-artifacts/site/cn-configured --identity expected-site.json
       - name: Build and check the actual CN runtime
         run: |

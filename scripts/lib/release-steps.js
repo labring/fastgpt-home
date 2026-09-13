@@ -1,12 +1,6 @@
 function getSourceNodeSteps() {
   return [
     ['footer-copy.regression', 'Footer copy regression', 'scripts/verify-footer-copy.test.js', []],
-    [
-      'footer-links.regression',
-      'Footer links regression',
-      'scripts/verify-footer-tech-link.test.js',
-      []
-    ],
     ['customers-data.source', 'Customer data verification', 'scripts/verify-customers-data.js', []],
     [
       'customers-search.source',

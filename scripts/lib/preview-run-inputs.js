@@ -37,56 +37,11 @@ module.exports = async function previewRunInputs(github, context, selection, sou
   assert.equal(pr.state, 'open', 'Preview PR has closed');
   assert.equal(pr.head.sha, selection.headRevision, 'Preview head is stale');
   assert.equal(pr.base.sha, selection.baseRevision, 'Preview base is stale');
-  const commit = (await github.rest.git.getCommit({ owner, repo, commit_sha: selection.revision }))
-    .data;
-  assert.deepEqual(
-    commit.parents.map((parent) => parent.sha),
-    [pr.base.sha, pr.head.sha],
+  assert.equal(pr.mergeable, true, 'Merge result is not ready; resolve conflicts and rerun');
+  assert.equal(
+    selection.revision,
+    pr.merge_commit_sha,
     'Preview must be the verified merge result'
   );
   return { revision: selection.revision, number: String(pr.number), branch: `pr-${pr.number}` };
-};
-
-// PR-triggered consumers keep compilation caches in the PR's native cache scope.
-// The Preview producer publishes this evidence as soon as its shared source gate passes.
-module.exports.waitForPreviewSource = async function waitForPreviewSource(
-  github,
-  context,
-  sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms))
-) {
-  const { owner, repo } = context.repo;
-  const head = context.payload.pull_request.head.sha;
-  const title = `Preview ${context.payload.pull_request.number} / ${context.sha}`;
-  for (let attempt = 0; attempt < 60; attempt += 1) {
-    const { data } = await github.rest.actions.listWorkflowRuns({
-      owner,
-      repo,
-      workflow_id: 'preview.yml',
-      head_sha: head,
-      event: 'pull_request',
-      per_page: 10
-    });
-    const run = data.workflow_runs
-      .filter((run) => run.head_sha === head && run.event === 'pull_request' && run.display_title === title)
-      .sort((a, b) => b.id - a.id)[0];
-    if (run) {
-      const { data: artifacts } = await github.rest.actions.listWorkflowRunArtifacts({
-        owner,
-        repo,
-        run_id: run.id
-      });
-      if (
-        artifacts.artifacts.some(
-          (artifact) => artifact.name === 'verified-source' && !artifact.expired
-        )
-      )
-        return run.id;
-      assert(
-        !['failure', 'cancelled', 'timed_out', 'action_required'].includes(run.conclusion),
-        'Preview source producer failed'
-      );
-    }
-    await sleep(15000);
-  }
-  throw new Error('Timed out waiting for shared Preview source verification');
 };

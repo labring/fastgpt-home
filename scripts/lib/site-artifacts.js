@@ -2,7 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { directoryInventory, digestJson } = require('./release-readiness');
-const { getSourceExecutionOrder, getVariantExecutionOrder } = require('./release-steps');
+const { getPublicationInputs } = require('./site-artifact-identity');
 const { verifyUrlAliasArtifactBundle } = require('./url-alias-artifacts');
 const NGINX_FILES = [
   'nginx.conf',
@@ -38,9 +38,14 @@ function verifyRecord(record, identity) {
     !record.failures?.some((failure) => !failure.variant || failure.variant === variant),
     'Failed verification record'
   );
+}
+
+function verifyBuildRecord(record, identity) {
+  verifyRecord(record, identity);
+  const { getSourceExecutionOrder, getVariantExecutionOrder } = require('./release-steps');
   for (const [ids, expectedVariant] of [
-    [getSourceExecutionOrder(), undefined],
-    [getVariantExecutionOrder(variant), variant]
+    [[...getSourceExecutionOrder(), 'release.regression'], undefined],
+    [getVariantExecutionOrder(identity.siteVariant), identity.siteVariant]
   ]) {
     for (const id of ids) {
       assert(
@@ -78,7 +83,10 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
     fs.readFileSync(path.join(root, '.next/cache/site-identity.json'), 'utf8')
   );
   assert.equal(identity.siteVariant, variant, 'Artifact variant differs from built identity');
-  verifyRecord(record, identity);
+  verifyBuildRecord(record, identity);
+  const publicationInputs = getPublicationInputs(identity);
+  const { nodeVersion, platform, architecture } = identity;
+  const provenance = { nodeVersion, platform, architecture };
   const out = path.join(root, 'out');
   assertRegularFiles(out);
   const verifiedInventory = record.artifacts.find(
@@ -111,11 +119,25 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
     }
     fs.writeFileSync(
       path.join(payload, 'verification.json'),
-      `${JSON.stringify(record, null, 2)}\n`
+      `${JSON.stringify(
+        {
+          ...record,
+          publicationInputs,
+          provenance,
+          publicationVerification: { version: 1, source: 'passed', export: 'passed', variant }
+        },
+        null,
+        2
+      )}\n`
     );
-    const manifest = { schemaVersion: 1, identity, inventory: inventoryPayload(payload) };
+    const manifest = {
+      schemaVersion: 2,
+      publicationInputs,
+      provenance,
+      inventory: inventoryPayload(payload)
+    };
     fs.writeFileSync(path.join(staging, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-    verifySiteArtifact(staging, identity);
+    verifySiteArtifact(staging, publicationInputs);
     // Seal the replacement before touching an existing rollback unit.
     const previous = `${staging}.previous`;
     if (fs.existsSync(destination)) fs.renameSync(destination, previous);
@@ -132,29 +154,60 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
   }
 }
 
-function verifySiteArtifact(bundle, expectedIdentity) {
+function verifySiteArtifact(bundle, expectedInputs) {
+  assert(fs.lstatSync(bundle).isDirectory(), 'Artifact bundle must be a real directory');
+  assert(
+    fs.lstatSync(path.join(bundle, 'manifest.json')).isFile(),
+    'Manifest must be a regular file'
+  );
   const manifest = JSON.parse(fs.readFileSync(path.join(bundle, 'manifest.json'), 'utf8'));
-  assert.equal(manifest.schemaVersion, 1, 'Unsupported site artifact manifest');
   assert.equal(
-    digestJson(manifest.identity),
-    digestJson(expectedIdentity),
+    manifest.schemaVersion,
+    2,
+    'Unsupported site artifact manifest; rebuild the publication'
+  );
+  assert.equal(
+    digestJson(manifest.publicationInputs),
+    digestJson(expectedInputs),
     'Site artifact identity mismatch'
   );
   const payload = path.join(bundle, 'payload');
   const inventory = inventoryPayload(payload);
   assert.equal(inventory.sha256, manifest.inventory.sha256, 'Site artifact integrity mismatch');
   const record = JSON.parse(fs.readFileSync(path.join(payload, 'verification.json'), 'utf8'));
-  verifyRecord(record, manifest.identity);
-  const variant = manifest.identity.siteVariant;
+  verifyRecord(record, manifest.publicationInputs);
+  const variant = manifest.publicationInputs.siteVariant;
+  assert.deepEqual(
+    record.publicationVerification,
+    {
+      version: 1,
+      source: 'passed',
+      export: 'passed',
+      variant
+    },
+    'Missing successful publication verification contract'
+  );
+  assert.deepEqual(
+    record.publicationInputs,
+    manifest.publicationInputs,
+    'Publication evidence input mismatch'
+  );
+  assert.deepEqual(record.provenance, manifest.provenance, 'Publication provenance mismatch');
+  for (const field of ['nodeVersion', 'platform', 'architecture']) {
+    assert(
+      typeof record.provenance?.[field] === 'string' && record.provenance[field].length > 0,
+      `Missing build provenance: ${field}`
+    );
+  }
   const verifiedInventory = record.artifacts.find(
     (entry) => entry.variant === variant && entry.role === 'static-export'
   );
   assert.equal(
-    directoryInventory(path.join(payload, 'out'), {
-      root: payload,
-      role: 'static-export',
-      source: 'generated'
-    }).sha256,
+    digestJson(
+      inventory.files
+        .filter((entry) => entry.path.startsWith('out/'))
+        .map(({ capturedAt, ...entry }) => ({ ...entry, role: 'static-export' }))
+    ),
     verifiedInventory?.sha256,
     'Export differs from verification evidence'
   );

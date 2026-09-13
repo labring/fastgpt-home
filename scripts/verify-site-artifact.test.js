@@ -3,10 +3,11 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
-const { spawnSync } = require('node:child_process');
+const { execFileSync, spawnSync } = require('node:child_process');
 const { directoryInventory } = require('./lib/release-readiness');
 const { getSourceExecutionOrder, getVariantExecutionOrder } = require('./verify-release');
 const { retainVerifiedSiteArtifact } = require('./lib/site-artifacts');
+const { digest, getPublicationInputs } = require('./lib/site-artifact-identity');
 
 test('a complete verified publication unit rejects identity drift and corrupted handoffs', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'verified-site-'));
@@ -16,13 +17,14 @@ test('a complete verified publication unit rejects identity drift and corrupted 
   };
   const identity = {
     sourceRevision: 'a'.repeat(40),
-    lockfileDigest: 'b'.repeat(64),
-    nodeVersion: process.version,
-    platform: process.platform,
-    architecture: process.arch,
+    lockfileDigest: digest('{}'),
+    nodeVersion: 'v24.0.0',
+    platform: 'linux',
+    architecture: 'x64',
     siteVariant: 'preview',
     crmMode: 'disabled',
-    publicSettings: { NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: '' }
+    publicSettings: { NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: '' },
+    cnDomainPolicy: 'unchanged'
   };
   try {
     write('out/index.html', '<main>Accepted body</main>');
@@ -31,8 +33,10 @@ test('a complete verified publication unit rejects identity drift and corrupted 
     write('.next/cache/site-identity.json', JSON.stringify(identity));
     const record = {
       sourceRevision: identity.sourceRevision,
+      status: 'export-verified',
       commands: [
         ...getSourceExecutionOrder().map((id) => ({ id, status: 'passed' })),
+        { id: 'release.regression', status: 'passed' },
         ...getVariantExecutionOrder('preview').map((id) => ({
           id,
           variant: 'preview',
@@ -54,7 +58,8 @@ test('a complete verified publication unit rejects identity drift and corrupted 
     };
     const bundle = path.join(root, 'retained');
     retainVerifiedSiteArtifact(root, bundle, 'preview', record);
-    const verify = (expected = identity) => {
+    assert.equal(JSON.parse(fs.readFileSync(path.join(bundle, 'manifest.json'))).schemaVersion, 2);
+    const verify = (expected = getPublicationInputs(identity)) => {
       write('expected.json', JSON.stringify(expected));
       return spawnSync(
         process.execPath,
@@ -69,6 +74,124 @@ test('a complete verified publication unit rejects identity drift and corrupted 
       );
     };
     assert.equal(verify().status, 0);
+    // Exercise the deployment entry point from a verifier checkout without node_modules.
+    for (const file of [
+      'scripts/verify-preview-artifact.js',
+      ...[
+        'site-artifacts',
+        'site-artifact-identity',
+        'site-variant',
+        'release-readiness',
+        'url-alias-artifacts',
+        'url-alias-authority'
+      ].map((name) => `scripts/lib/${name}.js`),
+      'src/config/site-routing.json'
+    ]) {
+      write(`verifier/${file}`, fs.readFileSync(path.resolve(__dirname, '..', file)));
+    }
+    write('candidate/package-lock.json', '{}');
+    const marker = path.join(root, 'candidate-executed');
+    write(
+      'candidate/preload.cjs',
+      `require('node:fs').writeFileSync(${JSON.stringify(marker)}, 'loaded');`
+    );
+    for (const file of ['.env', '.env.local', '.env.production', '.env.production.local']) {
+      write(
+        `candidate/${file}`,
+        `ENV_BOUNDARY_MARKER=candidate\nLD_PRELOAD=candidate.so\nNEXT_PUBLIC_SITE_VARIANT=cn\nNODE_OPTIONS=--require ${path.join(
+          root,
+          'candidate/preload.cjs'
+        )}\n`
+      );
+    }
+    write(
+      'environment-probe.cjs',
+      `
+      const assert = require('node:assert/strict');
+      const digest = () => require('node:crypto').createHash('sha256').update(JSON.stringify({...process.env})).digest('hex');
+      const before = digest();
+      process.on('exit', () => {
+        assert.equal(digest(), before, 'Deployment changed its execution environment');
+        const child = require('node:child_process').spawnSync(process.execPath,
+          ['-e', 'process.stdout.write(process.env.ENV_BOUNDARY_MARKER || "clean")'], {encoding:'utf8'});
+        assert.equal(child.status, 0);
+        assert.equal(child.stdout, 'clean');
+      });
+    `
+    );
+    const deployCheck = spawnSync(
+      process.execPath,
+      [
+        '--require',
+        path.join(root, 'environment-probe.cjs'),
+        path.join(root, 'verifier/scripts/verify-preview-artifact.js'),
+        '--bundle',
+        bundle,
+        '--candidate',
+        path.join(root, 'candidate'),
+        '--revision',
+        identity.sourceRevision
+      ],
+      { cwd: root, encoding: 'utf8', env: { PATH: process.env.PATH, ...identity.publicSettings } }
+    );
+    assert.equal(deployCheck.status, 0, deployCheck.stderr);
+    assert(!fs.existsSync(marker), 'Candidate environment files remain inert data');
+    const { verifySiteArtifact } = require('./lib/site-artifacts');
+    const read = fs.readFileSync;
+    const reads = new Map();
+    try {
+      fs.readFileSync = (file, ...args) => {
+        if (String(file).startsWith(path.join(bundle, 'payload/out') + path.sep)) {
+          reads.set(String(file), (reads.get(String(file)) || 0) + 1);
+        }
+        return read(file, ...args);
+      };
+      verifySiteArtifact(bundle, getPublicationInputs(identity));
+    } finally {
+      fs.readFileSync = read;
+    }
+    assert.deepEqual(
+      [...reads.values()],
+      [1, 1, 1],
+      'Every static file is read once per consumer check'
+    );
+    const reseal = (edit) => {
+      edit();
+      const manifestPath = path.join(bundle, 'manifest.json');
+      const manifest = JSON.parse(fs.readFileSync(manifestPath));
+      const payload = path.join(bundle, 'payload');
+      manifest.inventory = directoryInventory(payload, {
+        root: payload,
+        role: 'site-artifact',
+        source: 'generated'
+      });
+      fs.writeFileSync(manifestPath, JSON.stringify(manifest));
+    };
+    const changeRecord = (edit) =>
+      reseal(() => {
+        const file = path.join(bundle, 'payload/verification.json');
+        const data = JSON.parse(fs.readFileSync(file));
+        edit(data);
+        fs.writeFileSync(file, JSON.stringify(data));
+      });
+    changeRecord((data) => {
+      data.commands = [{ id: 'renamed-internal-regression', status: 'passed' }];
+    });
+    assert.equal(verify().status, 0, 'Internal test names are diagnostic metadata');
+    changeRecord((data) => {
+      data.publicationVerification.source = 'failed';
+    });
+    assert.equal(verify().status, 1);
+    retainVerifiedSiteArtifact(root, bundle, 'preview', record);
+    reseal(() =>
+      fs.appendFileSync(path.join(bundle, 'payload/out/index.html'), 'Changed after verification')
+    );
+    assert.equal(
+      verify().status,
+      1,
+      'Rehashing the manifest cannot replace the verified export evidence'
+    );
+    retainVerifiedSiteArtifact(root, bundle, 'preview', record);
     for (const changed of [
       { sourceRevision: 'c'.repeat(40) },
       { lockfileDigest: 'd'.repeat(64) },
@@ -81,7 +204,7 @@ test('a complete verified publication unit rejects identity drift and corrupted 
         }
       }
     ]) {
-      const result = verify({ ...identity, ...changed });
+      const result = verify({ ...getPublicationInputs(identity), ...changed });
       assert.equal(result.status, 1, result.stdout);
       assert.match(result.stderr, /identity/i);
     }
@@ -144,6 +267,8 @@ test('preview handoff resolves the completed merge result and rejects stale or s
   const pr = {
     number: 303,
     state: 'open',
+    mergeable: true,
+    merge_commit_sha: merge,
     base: { sha: base, repo: { full_name: 'labring/fastgpt-home' } },
     head: { sha: head }
   };
@@ -176,42 +301,108 @@ test('preview handoff resolves the completed merge result and rejects stale or s
   await assert.rejects(resolve(github, context, selection, { sourceRevision: head }));
 });
 
-test('PR source consumers wait for the shared gate and surface producer failures', async () => {
-  const { waitForPreviewSource } = require('./lib/preview-run-inputs');
-  const context = {
-    sha: 'c'.repeat(40),
-    repo: { owner: 'labring', repo: 'fastgpt-home' },
-    payload: { pull_request: { number: 303, head: { sha: 'a'.repeat(40) } } }
-  };
-  let ready = false,
-    waits = 0;
-  const run = { display_title: `Preview 303 / ${'c'.repeat(40)}`, id: 42, head_sha: 'a'.repeat(40), event: 'pull_request', conclusion: null };
-  const github = {
-    rest: {
-      actions: {
-        listWorkflowRuns: async () => ({ data: { workflow_runs: [
-          { ...run, id: 43, display_title: `Preview 999 / ${'c'.repeat(40)}` },
-          { ...run, id: 44, display_title: `Preview 303 / ${'d'.repeat(40)}` },
-          ...(waits ? [run] : [])
-        ] } }),
-        listWorkflowRunArtifacts: async () => ({
-          data: { artifacts: ready ? [{ name: 'verified-source', expired: false }] : [] }
-        })
+test("preview deployment accepts only GitHub's ready merge tree", async () => {
+  const resolve = require('./lib/preview-run-inputs');
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'preview-merge-tree-'));
+  const git = (...args) =>
+    execFileSync('git', args, {
+      cwd: root,
+      encoding: 'utf8',
+      env: {
+        ...process.env,
+        GIT_AUTHOR_NAME: 'Test',
+        GIT_AUTHOR_EMAIL: 'test@example.invalid',
+        GIT_COMMITTER_NAME: 'Test',
+        GIT_COMMITTER_EMAIL: 'test@example.invalid'
       }
+    }).trim();
+  try {
+    git('init', '-q');
+    fs.writeFileSync(path.join(root, 'page.html'), 'Base');
+    git('add', '.');
+    git('commit', '-qm', 'Base');
+    const base = git('rev-parse', 'HEAD');
+    fs.writeFileSync(path.join(root, 'page.html'), 'Reviewed content');
+    git('add', '.');
+    git('commit', '-qm', 'Head');
+    const head = git('rev-parse', 'HEAD');
+    const merge = git('commit-tree', git('write-tree'), '-p', base, '-p', head, '-m', 'Merge');
+    fs.writeFileSync(path.join(root, 'page.html'), 'Substituted content');
+    git('add', '.');
+    const substitute = git(
+      'commit-tree',
+      git('write-tree'),
+      '-p',
+      base,
+      '-p',
+      head,
+      '-m',
+      'Substitute'
+    );
+    assert.equal(
+      git('show', '-s', '--format=%P', merge),
+      git('show', '-s', '--format=%P', substitute)
+    );
+    assert.notEqual(
+      git('show', '-s', '--format=%T', merge),
+      git('show', '-s', '--format=%T', substitute)
+    );
+    const pr = {
+      number: 303,
+      state: 'open',
+      mergeable: true,
+      merge_commit_sha: merge,
+      base: { sha: base, repo: { full_name: 'labring/fastgpt-home' } },
+      head: { sha: head }
+    };
+    const context = {
+      repo: { owner: 'labring', repo: 'fastgpt-home' },
+      payload: {
+        workflow_run: {
+          conclusion: 'success',
+          repository: { full_name: 'labring/fastgpt-home' },
+          event: 'pull_request',
+          head_sha: head,
+          pull_requests: [{ number: 303 }]
+        }
+      }
+    };
+    const github = {
+      rest: {
+        pulls: { get: async () => ({ data: pr }) },
+        git: {
+          getCommit: async ({ commit_sha }) => ({
+            data: {
+              parents: git('show', '-s', '--format=%P', commit_sha)
+                .split(' ')
+                .map((sha) => ({ sha }))
+            }
+          })
+        }
+      }
+    };
+    const selection = { revision: merge, baseRevision: base, headRevision: head };
+    assert.equal(
+      (await resolve(github, context, selection, { sourceRevision: merge })).revision,
+      merge
+    );
+    await assert.rejects(
+      resolve(
+        github,
+        context,
+        { ...selection, revision: substitute },
+        { sourceRevision: substitute }
+      ),
+      /merge result/i
+    );
+    for (const mergeable of [null, false]) {
+      pr.mergeable = mergeable;
+      await assert.rejects(
+        resolve(github, context, selection, { sourceRevision: merge }),
+        /rerun/i
+      );
     }
-  };
-  assert.equal(
-    await waitForPreviewSource(github, context, async () => {
-      waits += 1;
-      ready = true;
-    }),
-    42
-  );
-  assert.equal(waits, 1);
-  ready = false;
-  run.conclusion = 'failure';
-  await assert.rejects(
-    waitForPreviewSource(github, context, async () => {}),
-    /producer failed/
-  );
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
 });

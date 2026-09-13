@@ -132,6 +132,20 @@ jobs:
           console.log('Preview filing links verified');
           NODE
 
+      - name: Check out the consumer separately from candidate build dependencies
+        uses: actions/checkout@v4
+        with:
+          path: .preview-verifier
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            scripts/lib/
+            scripts/verify-preview-artifact.js
+            src/config/site-routing.json
+
+      - name: Exercise the deployment consumer on the complete Preview artifact
+        run: node .preview-verifier/scripts/verify-preview-artifact.js --bundle .release-artifacts/site/preview-disabled --candidate . --revision "$(git rev-parse HEAD)"
+
       - name: Upload verified disabled preview
         uses: actions/upload-artifact@v4
         with:

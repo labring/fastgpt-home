@@ -45,9 +45,6 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
-      - name: Install trusted verifier dependencies
-        working-directory: verifier
-        run: npm ci --ignore-scripts
       - uses: actions/download-artifact@v4
         with:
           name: verified-preview
@@ -78,9 +75,9 @@ jobs:
           ref: ${{ steps.pr.outputs.revision }}
           persist-credentials: false
       - name: Verify expected publication identity and complete artifact digest
-        run: |
-          node -e "require('node:fs').writeFileSync('expected-site.json', JSON.stringify(require('./verifier/scripts/lib/site-artifact-identity').siteArtifactIdentity(require('node:path').resolve('candidate'))))"
-          node verifier/scripts/verify-site-artifact.js --bundle verified-preview --identity expected-site.json
+        env:
+          VERIFIED_PREVIEW_REVISION: ${{ steps.pr.outputs.revision }}
+        run: node verifier/scripts/verify-preview-artifact.js --bundle verified-preview --candidate candidate --revision "$VERIFIED_PREVIEW_REVISION"
 
       - name: Deploy to Cloudflare Pages
         id: deploy

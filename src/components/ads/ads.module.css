@@ -1,0 +1,480 @@
+/* Bing Ads landing pages — standalone light theme (ADR 0013).
+   Transcribed 1:1 from the client-approved Arco-palette previews; do not restyle
+   against the site theme. Tailwind preflight already resets margins and
+   headings, so font sizes/weights are restated explicitly here. */
+
+.page {
+  --brand: #3370ff;
+  --brand-d: #2354d9;
+  --brand-l: #eef3ff;
+  --ink: #1d2129;
+  --ink2: #4e5969;
+  --ink3: #86909c;
+  --line: #e5e6eb;
+  --bg: #f7f8fa;
+  --dark: #070d1d;
+  --ok: #00b42a;
+
+  min-height: 100vh;
+  background: #fff;
+  color: var(--ink);
+  /* The root layout forces colorScheme dark on <html>; the light form controls
+     of this standalone theme must not inherit it. */
+  color-scheme: light;
+  font: 15px/1.75 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei',
+    sans-serif;
+}
+
+.page a {
+  color: var(--brand);
+  text-decoration: none;
+}
+
+.page a:hover {
+  text-decoration: underline;
+}
+
+/* ── Minimal nav ── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  padding: 0 32px;
+  height: 60px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 17px;
+  color: var(--ink);
+  white-space: nowrap;
+}
+
+.navLink {
+  color: var(--ink2);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.btn {
+  display: inline-block;
+  padding: 7px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.solid {
+  background: var(--brand);
+  color: #fff;
+}
+
+.solid:hover {
+  background: var(--brand-d);
+  text-decoration: none;
+}
+
+/* ── First screen ── */
+.hero {
+  background: linear-gradient(180deg, var(--brand-l) 0%, #fff 72%);
+  border-bottom: 1px solid var(--line);
+}
+
+.wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.heroWrap {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 372px;
+  gap: 46px;
+  align-items: start;
+  padding-top: 48px;
+  padding-bottom: 52px;
+}
+
+.kwBadge {
+  display: inline-block;
+  font-size: 12.5px;
+  color: var(--brand);
+  background: #fff;
+  border: 1px solid #c4d6ff;
+  border-radius: 999px;
+  padding: 3px 11px;
+  margin: 0 0 16px;
+}
+
+.h1 {
+  font-size: 38px;
+  line-height: 1.3;
+  font-weight: 700;
+  margin: 0 0 14px;
+  letter-spacing: -0.3px;
+}
+
+.subtitle {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--ink2);
+  margin: 0 0 26px;
+}
+
+.sec {
+  margin: 0 0 18px;
+  padding-left: 14px;
+  border-left: 3px solid #c4d6ff;
+}
+
+.secHeading {
+  font-size: 15.5px;
+  font-weight: 700;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+
+.secBody {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.8;
+  color: var(--ink2);
+}
+
+.trust {
+  margin-top: 24px;
+  padding: 13px 16px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 13.5px;
+  color: var(--ink2);
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.trustLabel {
+  color: var(--ink);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── Lead form ── */
+.aside {
+  position: sticky;
+  top: 84px;
+}
+
+.form {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 24px 22px 20px;
+  box-shadow: 0 16px 40px rgba(29, 33, 41, 0.1);
+}
+
+.formTitle {
+  font-size: 19px;
+  font-weight: 700;
+  margin: 0 0 6px;
+}
+
+.formHint {
+  font-size: 13px;
+  color: var(--ink3);
+  margin: 0 0 18px;
+}
+
+.field {
+  margin-bottom: 13px;
+}
+
+.label {
+  display: block;
+  font-size: 13px;
+  color: var(--ink2);
+  margin-bottom: 5px;
+}
+
+.requiredMark {
+  color: #f53f3f;
+  font-style: normal;
+  margin-left: 2px;
+}
+
+.input {
+  width: 100%;
+  height: 38px;
+  padding: 0 11px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
+.input:focus {
+  outline: 0;
+  border-color: var(--brand);
+}
+
+.submit {
+  width: 100%;
+  height: 42px;
+  font-size: 15px;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.consent {
+  margin-top: 12px;
+  font-size: 12px;
+  line-height: 1.65;
+  color: var(--ink3);
+  display: flex;
+  gap: 7px;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.consent input {
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+/* ── Second screen (shared across pages) ── */
+.block {
+  padding: 52px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.blockAlt {
+  background: var(--bg);
+}
+
+.blockTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.blockSub {
+  font-size: 14px;
+  color: var(--ink3);
+  margin: 0 0 30px;
+  text-align: center;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 22px 20px;
+}
+
+.cardTitle {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0 0 9px;
+}
+
+.cardBody {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--ink2);
+}
+
+.caseMetrics {
+  font-size: 13.5px;
+  color: var(--brand);
+  line-height: 1.8;
+  margin-top: 8px;
+}
+
+.logoPlaceholder {
+  border: 1px dashed #c9cdd4;
+  border-radius: 10px;
+  background: #fff;
+  padding: 30px 22px;
+  text-align: center;
+  color: var(--ink3);
+  font-size: 13.5px;
+  margin-top: 20px;
+}
+
+.logoPlaceholderTitle {
+  display: block;
+  color: var(--ink2);
+  font-size: 14.5px;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.reads {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.readsItem {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 18px 18px;
+}
+
+.readsLink {
+  font-size: 15px;
+  line-height: 1.6;
+  display: block;
+}
+
+.readsUrl {
+  display: block;
+  font-size: 12.5px;
+  color: var(--ink3);
+  margin-top: 7px;
+  word-break: break-all;
+}
+
+/* ── Closing call-to-action and footer ── */
+.closing {
+  background: var(--dark);
+  color: #fff;
+  padding: 54px 0;
+  text-align: center;
+}
+
+.closingTitle {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 0 0 10px;
+  color: #fff;
+}
+
+.closingNote {
+  margin: 0 0 22px;
+  font-size: 14.5px;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.closingButton {
+  padding: 11px 30px;
+  font-size: 15px;
+  background: #fff;
+  color: var(--dark);
+}
+
+.closingButton:hover {
+  background: #e8ebf0;
+  text-decoration: none;
+}
+
+.footer {
+  padding: 24px 0 34px;
+  font-size: 12.5px;
+  color: var(--ink3);
+  line-height: 1.9;
+}
+
+.formError {
+  margin-top: 10px;
+  padding: 8px 11px;
+  border: 1px solid #fdcdc9;
+  border-radius: 6px;
+  background: #fff7f6;
+  font-size: 12.5px;
+  line-height: 1.6;
+  color: #b42318;
+}
+
+.formSuccess {
+  padding: 34px 22px 28px;
+  text-align: center;
+}
+
+.formSuccessTitle {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0 0 8px;
+}
+
+.formSuccessBody {
+  font-size: 13.5px;
+  color: var(--ink2);
+  margin: 0;
+}
+
+.formSuccessReset {
+  margin-top: 16px;
+  padding: 8px 16px;
+  font-size: 13.5px;
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  background: #fff;
+  color: var(--ink2);
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.formSuccessReset:hover {
+  background: var(--bg);
+}
+
+@media (max-width: 900px) {
+  .nav {
+    padding: 0 16px;
+    gap: 14px;
+    overflow-x: auto;
+  }
+
+  .heroWrap {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding-top: 32px;
+    padding-bottom: 34px;
+  }
+
+  .aside {
+    position: static;
+  }
+
+  .h1 {
+    font-size: 27px;
+  }
+
+  .grid3,
+  .reads {
+    grid-template-columns: 1fr;
+  }
+
+  .submit {
+    height: 46px;
+  }
+}

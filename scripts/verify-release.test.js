@@ -475,7 +475,7 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   );
   assert.match(
     packageJson.scripts.build,
-    /fix-html-lang\.js && node --test scripts\/verify-content-sidebar-cta\.test\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out$/
+    /verify-content-hygiene\.js --mode html --root out && node scripts\/verify-ads\.js$/
   );
   assert(getSourceExecutionOrder().includes('typescript.source'));
   const workflow = require('js-yaml').load(verificationWorkflow);

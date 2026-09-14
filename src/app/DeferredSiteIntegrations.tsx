@@ -6,6 +6,7 @@ import { runAfterIdle } from '@/lib/runAfterIdle';
 export default function DeferredSiteIntegrations() {
   const [Analytics, setAnalytics] = useState<ComponentType | null>(null);
   const [Attribution, setAttribution] = useState<ComponentType | null>(null);
+  const [Uet, setUet] = useState<ComponentType | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -16,6 +17,9 @@ export default function DeferredSiteIntegrations() {
     const cancel = runAfterIdle(() => {
       void import('./LeadAttribution').then(({ default: Content }) => {
         if (active) setAttribution(() => Content);
+      });
+      void import('./UetAnalytics').then(({ default: Content }) => {
+        if (active) setUet(() => Content);
       });
     });
 
@@ -29,6 +33,7 @@ export default function DeferredSiteIntegrations() {
     <>
       {Analytics && <Analytics />}
       {Attribution && <Attribution />}
+      {Uet && <Uet />}
     </>
   );
 }

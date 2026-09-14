@@ -1,0 +1,3 @@
+# Style Bing ads landing pages outside the site design system
+
+The `/ads/` Bing search landing pages ship as a standalone light-theme CSS module with a minimal four-link navigation bar instead of the site's HeroUI/Tailwind dark theme and global navbar. Paid-click pages are judged on conversion and first-screen latency, the agency preview design behind them was already client-approved, and the PPT spec explicitly requires a reduced-exit navigation; cross-page consistency comes from the shared second-screen template, not from the site theme. The pages are `noindex` and absent from the sitemap, so they never compete with the themed, indexable site pages they overlap with.

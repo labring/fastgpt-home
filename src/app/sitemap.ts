@@ -48,6 +48,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  if (currentSiteVariant === 'cn') {
+    addEntry(getOwnedLocaleUrl('zh', '/videos'));
+  }
+
   for (const locale of contactPublishedLocaleCodes.filter((locale) =>
     siteLocales.includes(locale)
   )) {

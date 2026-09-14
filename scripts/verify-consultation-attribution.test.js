@@ -252,12 +252,12 @@ test('configured Preview submits intercepted attribution and recovers after CRM 
   assert.equal(requests[1].body.visitor_id, requests[0].body.visitor_id);
 });
 
-test('consultation snapshot props flow from dialog through content to ContactForm', () => {
+test('consultation locale and snapshot props flow from dialog through content to ContactForm', () => {
   const capture = {
     source: '案例详情-顶部商务咨询',
     entryPageUrl: '案例详情-顶部商务咨询｜https://fastgpt.cn/customers'
   };
-  const dialogEnv = browser();
+  const dialogEnv = browser(false, { NEXT_PUBLIC_SITE_VARIANT: 'preview' });
   const dialogState = [];
   let dialogCursor = 0;
   const ContentStub = () => null;
@@ -280,7 +280,7 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   };
   const Dialog = dialogEnv.load('src/components/consultation/ConsultationDialog.tsx').default;
   Dialog();
-  const trigger = new dialogEnv.Element('/contact?source=customers');
+  const trigger = new dialogEnv.Element('/zh/contact?source=customers');
   trigger.dataset = { rybbitPropSource: 'customers_hero' };
   trigger.closest = () => trigger;
   dialogEnv.listeners.click({
@@ -291,6 +291,7 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   });
   dialogCursor = 0;
   const contentElement = findElement(Dialog(), ContentStub);
+  assert.equal(contentElement?.props.locale, 'zh');
   assert.equal(contentElement?.props.rybbitConsultCapture?.source, capture.source);
   assert.equal(contentElement?.props.rybbitConsultCapture?.entryPageUrl, capture.entryPageUrl);
 
@@ -321,7 +322,7 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   const Content = contentEnv.load('src/components/consultation/ConsultationDialogContent.tsx').default;
   const formElement = findElement(
     Content({
-      locale: 'zh',
+      locale: contentElement.props.locale,
       submissionSource: 'customers',
       rybbitConsultCapture: capture,
       triggerRef: { current: null },
@@ -331,6 +332,14 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   );
   assert.equal(formElement?.props.rybbitConsultCapture?.source, capture.source);
   assert.equal(formElement?.props.rybbitConsultCapture?.entryPageUrl, capture.entryPageUrl);
+  assert.equal(formElement?.props.locale, 'zh');
+
+  for (const [href, expected] of [['/zh-hant/contact', 'zh-hant'], ['/contact', 'en']]) {
+    trigger.href = href;
+    dialogEnv.listeners.click({ target: trigger, button: 0, preventDefault() {} });
+    dialogCursor = 0;
+    assert.equal(findElement(Dialog(), ContentStub)?.props.locale, expected);
+  }
 });
 
 const sources = [

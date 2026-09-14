@@ -77,7 +77,8 @@
     "verify:customers-data": "node scripts/verify-customers-data.js",
     "verify:customers-search": "node scripts/verify-customers-search.js",
     "verify:customers-export": "node scripts/verify-customers-export.js",
-    "verify:llms": "node scripts/verify-llms.js"
+    "verify:llms": "node scripts/verify-llms.js",
+    "verify:learning-center": "node scripts/verify-learning-center.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

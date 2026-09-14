@@ -94,6 +94,9 @@ function getSourceNodeSteps() {
 
 function getSourceNpmSteps() {
   return [
+    ['preview-selection.regression', 'Preview build selection regression', ['verify:preview-selection']],
+    ['content-reuse.regression', 'Content reuse regression', ['verify:content-reuse']],
+    ['build-cache.regression', 'Compilation cache regression', ['verify:build-cache']],
     [
       'contact.regression',
       'consultation attribution regression',

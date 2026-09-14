@@ -1,6 +1,7 @@
 import 'server-only';
 
 import fs from 'node:fs';
+import { cache } from 'react';
 import stageReturns from '@/content/tech-center/stage-returns.json';
 import path from 'node:path';
 import {
@@ -160,7 +161,7 @@ export function getTechArticleDescription(
   );
 }
 
-function readTechArticle(entry: TechEntry): TechArticle {
+const readTechArticle = cache((entry: TechEntry): TechArticle => {
   const filePath = getEntryPath(entry);
   const source = fs.readFileSync(filePath, 'utf8');
   const { metadata, body } = parseFrontMatter(source);
@@ -201,9 +202,18 @@ function readTechArticle(entry: TechEntry): TechArticle {
     markdown: body,
     seoDescription: metadata.meta_description || getTechArticleDescription(entry, body)
   };
-}
+});
 
 const entriesBySlug = new Map(TECH_ENTRIES.map((entry) => [entry.slug, entry]));
+const relatedGroups = new Map<string, { entries: TechEntry[]; positions: Map<string, number> }>();
+for (const entry of TECH_ENTRIES) {
+  const identity = getTechnicalPageIdentity(entry);
+  const key = `${identity.locale}|${entry.category}`;
+  const group = relatedGroups.get(key) || { entries: [], positions: new Map<string, number>() };
+  group.positions.set(identity.key, group.entries.length);
+  group.entries.push(entry);
+  relatedGroups.set(key, group);
+}
 const returnPaths: Record<string, string> = stageReturns;
 
 function getStageReturn(entry: TechEntry) {
@@ -245,18 +255,15 @@ export function getTechCenterLastModified(locale?: TechPublishedLocale) {
 }
 
 export function getRelatedTechArticles(article: TechEntry, limit = 3) {
-  const related = getTechEntriesForLocale(article.slug.split('/')[1]).filter(
-    (entry) => entry.category === article.category
+  const identity = getTechnicalPageIdentity(article);
+  const group = relatedGroups.get(`${identity.locale}|${article.category}`);
+  if (!group) return [];
+  const currentIndex = group.positions.get(identity.key);
+  if (currentIndex === undefined) return group.entries.slice(0, limit);
+  return Array.from(
+    { length: Math.min(limit, group.entries.length - 1) },
+    (_, index) => group.entries[(currentIndex + index + 1) % group.entries.length]
   );
-  const currentIndex = related.findIndex((entry) => entry.slug === article.slug);
-  if (currentIndex === -1) return related.slice(0, limit);
-
-  const candidates = related.filter((entry) => entry.slug !== article.slug);
-  if (!candidates.length) return [];
-  const startIndex = currentIndex % candidates.length;
-  return Array.from({ length: Math.min(limit, candidates.length) }, (_, index) => {
-    return candidates[(startIndex + index) % candidates.length];
-  });
 }
 
 export function getTechArticleParams(): TechArticleParams[] {

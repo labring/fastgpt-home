@@ -40,6 +40,16 @@ env:
 jobs:
   verify:
     runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        variant: [cn, io, preview]
+    env:
+      NEXT_PUBLIC_SITE_VARIANT: ${{ matrix.variant }}
+      NEXT_PUBLIC_HOME_URL: ${{ matrix.variant == 'cn' && 'https://fastgpt.cn' || 'https://fastgpt.io' }}
+      NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+      NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_LANGUAGE_REGION: ${{ matrix.variant == 'cn' && 'zh-CN' || 'en-US' }}
 
     steps:
       - uses: actions/checkout@v4
@@ -51,16 +61,34 @@ jobs:
           node-version: 24
           cache: npm
 
-      - name: Verify three-variant release evidence
-        run: |
-          npm ci
-          npm run verify:release -- --keep-artifacts
+      - name: Install locked dependencies
+        run: npm ci
+
+      - name: Identify compilation cache
+        id: compilation
+        run: node scripts/prepare-build.js
+
+      - name: Restore compatible compilation cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.compilation.outputs.key }}
+          restore-keys: ${{ steps.compilation.outputs.restore-prefix }}
+
+      - name: Verify isolated Site Variant
+        run: npm run verify:release -- --variant ${{ matrix.variant }} --keep-artifacts
+
+      - name: Save compatible compilation cache
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.compilation.outputs.key }}
 
       - name: Upload release verification record and artifacts
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: technical-content-release-evidence
+          name: technical-content-release-evidence-${{ matrix.variant }}
           path: .release-artifacts
           retention-days: 90
           if-no-files-found: ignore
@@ -72,7 +100,7 @@ jobs:
           {
             echo '## Website verification'
             echo '- Record: `.release-artifacts/release-verification.json`'
-            echo '- Uploaded artifact: `technical-content-release-evidence` (90-day retention)'
+            echo '- Uploaded artifact: `technical-content-release-evidence-${{ matrix.variant }}` (90-day retention)'
           } >> "$GITHUB_STEP_SUMMARY"
 
   verify-runtime:

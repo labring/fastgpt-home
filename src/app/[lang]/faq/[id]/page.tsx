@@ -1,6 +1,6 @@
 import {
   faqContentLocaleCodes,
-  getFaqData,
+  getRelatedFaqs,
   getFaqIds,
   getFaqItem,
   getFaqRouteKey,
@@ -57,10 +57,7 @@ export default async function FAQDetailPage({
     notFound();
   }
 
-  const localizedFaq = getFaqData(faqLangName);
-  const relatedFAQs = Object.entries(localizedFaq)
-    .filter(([key, item]) => item.Category === faqItem.Category && key !== routeKey)
-    .slice(0, 4);
+  const relatedFAQs = getRelatedFaqs(routeKey, faqLangName);
 
   const paragraphs = faqItem.Answers.split('\n\n');
   const summary = paragraphs[0] || '';

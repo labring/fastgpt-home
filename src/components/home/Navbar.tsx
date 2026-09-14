@@ -28,7 +28,7 @@ function isExternalHref(href: string) {
 }
 
 function getNavLinkRybbitAttrs(link: NavLink) {
-  if (link.href.includes('video.fastgpt.cn/videos')) {
+  if (link.href === '/videos' || link.href.includes('video.fastgpt.cn/videos')) {
     return rybbitClickAttrs(RYBBIT_EVENTS.learningCenterClick, 'home_nav_learning_center');
   }
 

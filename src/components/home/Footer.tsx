@@ -82,8 +82,8 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
         },
         {
           label: t.links.items.learning,
-          href: 'https://video.fastgpt.cn/videos',
-          external: true
+          href: normalizedLocale === 'zh' ? '/videos' : 'https://video.fastgpt.cn/videos',
+          external: normalizedLocale !== 'zh'
         },
         {
           label: t.links.items.cases,

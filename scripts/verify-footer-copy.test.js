@@ -85,6 +85,7 @@ for (const variant of ['cn', 'io']) {
         '{cloud}': env.NEXT_PUBLIC_USER_URL,
         '{contact}': route(contactLocale, 'contact'),
         '{guide}': '/guide',
+        '{learning}': locale === 'zh' ? '/videos' : 'https://video.fastgpt.cn/videos',
         '{cases}': locale === 'zh' ? '/customers' : 'https://fastgpt.cn/customers',
         '{faq}': route(publishedLocale, 'faq'),
         '{tech}': route(publishedLocale, 'tech-center')

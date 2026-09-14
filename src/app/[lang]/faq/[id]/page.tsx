@@ -89,7 +89,9 @@ export default async function FAQDetailPage({
       />
 
       <main className="relative px-[16px] pb-[80px] md:px-[32px]">
-        <GradientBlobs />
+        <div className="mx-auto relative container">
+          <GradientBlobs />
+        </div>
 
         <div className="relative z-[1] mx-auto w-full max-w-[1240px] pt-[96px] md:pt-[128px]">
           <a

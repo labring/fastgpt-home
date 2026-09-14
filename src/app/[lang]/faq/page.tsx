@@ -55,7 +55,9 @@ export default async function FAQPage({ params }: { params: Promise<{ lang?: str
       />
       <main className="pb-[80px] px-[16px] md:px-[32px] relative">
         {/* Background blobs layer */}
-        <GradientBlobs />
+        <div className="mx-auto relative container">
+          <GradientBlobs />
+        </div>
 
         {/* Content layer */}
         <div

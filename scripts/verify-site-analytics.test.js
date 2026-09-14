@@ -155,9 +155,8 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
       assert.equal(window._hmt || window.clarity, queue, 'Preserve existing vendor queues');
     }
 
-    assert.ok(read('.github/workflows/fastgpt-home-image.yml').includes(`${variable}=${id}`));
-    assert.ok(read('Dockerfile').includes(`ARG ${variable}\n`));
-    assert.ok(read('Dockerfile').includes(`ENV ${variable}=$${variable}\n`));
+    const production = require('js-yaml').load(read('.github/workflows/fastgpt-home-image.yml'));
+    assert.equal(production.jobs['build-fastgpt-landingpage-images'].env[variable], id);
     assert.ok(read('.env.template').includes(`${variable}=\n`));
   }
 

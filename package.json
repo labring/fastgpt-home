@@ -81,6 +81,8 @@
     "verify:customers-search": "node scripts/verify-customers-search.js",
     "verify:customers-export": "node scripts/verify-customers-export.js",
     "verify:llms": "node scripts/verify-llms.js",
+    "build:export": "node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js && node scripts/verify-llms.js && npm --ignore-scripts run build",
+    "verify:site-artifact": "node --test scripts/verify-site-artifact.test.js",
     "verify:learning-center": "node scripts/verify-learning-center.js"
   },
   "dependencies": {

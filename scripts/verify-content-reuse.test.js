@@ -187,3 +187,24 @@ test('root article routes resolve ownership through the registry without extra b
   assert.equal(result.lang, 'en');
   assert.equal(result.section, 'api');
 });
+
+
+test('CN publication applies the existing document and cloud URL policy to all dictionary strings', () => {
+  const previous = process.env.NEXT_PUBLIC_SITE_VARIANT;
+  try {
+    for (const variant of ['cn', 'io', 'preview']) {
+      process.env.NEXT_PUBLIC_SITE_VARIANT = variant;
+      const { getPublicationUrls } = loader()('@/lib/siteRouting');
+      for (const locale of ['en', 'zh', 'zh-hant', 'ja', 'ar', 'vi', 'th', 'id', 'ms']) {
+        const original = fs.readFileSync(path.join(root, 'src/locales', `${locale}.json`), 'utf8');
+        const expected = variant === 'cn'
+          ? original.replaceAll('https://doc.fastgpt.io', 'https://doc.fastgpt.cn').replaceAll('https://cloud.fastgpt.io', 'https://cloud.fastgpt.cn')
+          : original;
+        assert.equal(getPublicationUrls(original), expected, `${variant}/${locale}`);
+      }
+    }
+  } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_SITE_VARIANT;
+    else process.env.NEXT_PUBLIC_SITE_VARIANT = previous;
+  }
+});

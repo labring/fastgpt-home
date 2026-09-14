@@ -15,6 +15,10 @@ const {
   writeUrlAliasArtifactBundle
 } = require('./lib/url-alias-artifacts');
 const { siteVariants } = require('./lib/site-variant');
+const { retainVerifiedSiteArtifact } = require('./lib/site-artifacts');
+const { digestJson } = require('./lib/release-readiness');
+const { siteArtifactIdentity } = require('./lib/site-artifact-identity');
+const assert = require('node:assert/strict');
 const {
   assertCaseSensitiveFilesystem,
   clearBuildArtifacts,
@@ -38,6 +42,8 @@ const {
   extractP1SuccessMeasurement,
   getSourceNodeSteps,
   getSourceNpmSteps,
+  getSourceExecutionOrder,
+  getVariantExecutionOrder,
   getVariantSteps
 } = require('./lib/release-steps');
 
@@ -62,6 +68,11 @@ function parseArgs(argv) {
         throw new Error(`--variant requires one of: ${siteVariants.join(', ')}`);
       }
       options.variant = variant;
+    } else if (token === '--write-source-record' || token === '--reuse-source') {
+      const file = argv[++index];
+      if (!file || file.startsWith('--')) throw new Error(`${token} requires a path`);
+      options[token === '--reuse-source' ? 'reuseSource' : 'writeSourceRecord'] =
+        path.resolve(file);
     } else {
       throw new Error(`Unknown argument: ${token}`);
     }
@@ -71,9 +82,11 @@ function parseArgs(argv) {
 
 function runStep(failures, stepId, label, command, args, env, variant, formatSuccess, record) {
   const startedAt = performance.now();
+  const childEnv = { ...env };
+  delete childEnv.NODE_TEST_CONTEXT;
   const result = spawnSync(command, args, {
     cwd: ROOT,
-    env,
+    env: childEnv,
     encoding: 'utf8',
     maxBuffer: 20 * 1024 * 1024
   });
@@ -147,16 +160,6 @@ function npmStep(failures, stepId, label, args, env, variant, formatSuccess, rec
   );
 }
 
-function getSourceExecutionOrder() {
-  return [
-    ...getSourceNodeSteps().map(([stepId]) => stepId),
-    ...getSourceNpmSteps().map(([stepId]) => stepId),
-    'lint.source',
-    'typescript.source',
-    'guide-content.source'
-  ];
-}
-
 function runSourceChecks(failures, env, record) {
   for (const [stepId, label, script, args] of getSourceNodeSteps()) {
     nodeStep(failures, stepId, label, script, args, env, undefined, record);
@@ -202,22 +205,13 @@ function runGuideSourceChecks(failures, env, variant, record) {
   );
 }
 
-function getVariantExecutionOrder(variant) {
-  return [
-    'variant.build',
-    ...getVariantSteps(variant).map((step) => step.id),
-    'faq.export-cardinality',
-    'guide.export'
-  ];
-}
-
 function runVariantChecks(failures, variant, env, record) {
   const commandStart = record?.commands.length || 0;
   const buildPassed = npmStep(
     failures,
     'variant.build',
     `build ${variant}`,
-    ['build'],
+    ['build:export'],
     env,
     variant,
     undefined,
@@ -314,9 +308,7 @@ function runVariantChecks(failures, variant, env, record) {
 function appendP1HistoricalBaselineAdvisories(failures, startIndex, advisories) {
   for (const failure of failures.slice(startIndex)) {
     const budgetMatch = failure.output.match(
-      new RegExp(
-        `Initial JavaScript is ([0-9.]+) KiB gzip, budget is ${P1_BUDGET_KIB} KiB`
-      )
+      new RegExp(`Initial JavaScript is ([0-9.]+) KiB gzip, budget is ${P1_BUDGET_KIB} KiB`)
     );
     if (failure.id !== 'p1.export' || !budgetMatch) continue;
     const currentKib = Number.parseFloat(budgetMatch[1]);
@@ -384,38 +376,56 @@ function main() {
   const advisories = [];
   const retainedPaths = [];
   const record = createReleaseRecord(options);
-  // Source-only checks run inside release regressions; preserve any full release record they inspect.
-  if (!options.keepArtifacts && !options.sourceOnly) {
-    fs.rmSync(RETAIN_DIR, { recursive: true, force: true });
-  }
+  // Keep the previous sealed publication until a replacement passes every gate.
   const snapshot = snapshotGeneratedPublicFiles();
+  // Shared checks use the same publication fixture for every build identity.
+  // Variant-specific content and final-export checks use the actual publication settings below.
   const sourceEnv = {
-    ...process.env,
+    ...Object.fromEntries(
+      Object.entries(process.env).filter(([key]) => !key.includes('NEXT_PUBLIC_'))
+    ),
     CI: process.env.CI || '1',
-    NEXT_PUBLIC_SITE_VARIANT: process.env.NEXT_PUBLIC_SITE_VARIANT || 'io',
-    NEXT_PUBLIC_HOME_URL: process.env.NEXT_PUBLIC_HOME_URL || 'https://fastgpt.io',
-    NEXT_PUBLIC_CN_HOME_URL: process.env.NEXT_PUBLIC_CN_HOME_URL || 'https://fastgpt.cn',
-    NEXT_PUBLIC_IO_HOME_URL: process.env.NEXT_PUBLIC_IO_HOME_URL || 'https://fastgpt.io'
+    NEXT_PUBLIC_SITE_VARIANT: 'io',
+    NEXT_PUBLIC_HOME_URL: 'https://fastgpt.io',
+    NEXT_PUBLIC_CN_HOME_URL: 'https://fastgpt.cn',
+    NEXT_PUBLIC_IO_HOME_URL: 'https://fastgpt.io'
   };
 
   try {
-    runSourceChecks(failures, sourceEnv, record);
-    runGuideSourceChecks(failures, sourceEnv, undefined, record);
-    if (failures.length || options.sourceOnly) {
-      reportFailures(failures, advisories, retainedPaths);
-      if (!failures.length) {
-        console.log(
-          '[verify-release] source-only checks passed; full mode requires a case-sensitive filesystem'
+    const { sourceRevision, lockfileDigest, nodeVersion, platform, architecture } =
+      siteArtifactIdentity(ROOT);
+    const sourceIdentity = { sourceRevision, lockfileDigest, nodeVersion, platform, architecture };
+    record.sourceIdentity = sourceIdentity;
+    if (options.reuseSource) {
+      const source = JSON.parse(fs.readFileSync(options.reuseSource, 'utf8'));
+      assert.equal(
+        digestJson(source.sourceIdentity),
+        digestJson(sourceIdentity),
+        'Source verification identity mismatch'
+      );
+      assert.equal(source.status, 'source-verified', 'Source verification did not pass');
+      assert.equal(source.failures.length, 0, 'Source verification contains failures');
+      for (const id of [...getSourceExecutionOrder(), 'release.regression']) {
+        assert(
+          source.commands.some(
+            (step) => step.id === id && step.variant === undefined && step.status === 'passed'
+          ),
+          `Missing source verification: ${id}`
         );
       }
-      process.exitCode = failures.length ? 1 : 0;
-      return;
+      record.commands.push(...source.commands);
+      console.log('[verify-release] shared source verification reused');
+    } else {
+      runSourceChecks(failures, sourceEnv, record);
+      runGuideSourceChecks(failures, sourceEnv, undefined, record);
+      if (!failures.length && (!options.sourceOnly || options.writeSourceRecord)) {
+        runReleaseRegressionChecks(failures, sourceEnv, record);
+      }
     }
-
-    runReleaseRegressionChecks(failures, sourceEnv, record);
-    if (failures.length) {
+    if (failures.length || options.sourceOnly) {
       reportFailures(failures, advisories, retainedPaths);
-      process.exitCode = 1;
+      if (!failures.length) console.log('[verify-release] source-only checks passed');
+      process.exitCode = failures.length ? 1 : 0;
       return;
     }
 
@@ -479,8 +489,18 @@ function main() {
           });
         }
       }
-      if (!variantFailed) recordVariantExportRollbackInventory(record, variant);
-      if (variantFailed && options.keepArtifacts) {
+      const publicationFailed = failures.length > beforeFailures;
+      if (!publicationFailed) {
+        recordVariantExportRollbackInventory(record, variant);
+        finalizeReleaseRecord(record, failures, options);
+        const identity = JSON.parse(
+          fs.readFileSync(path.join(ROOT, '.next/cache/site-identity.json'), 'utf8')
+        );
+        const destination = path.join(RETAIN_DIR, 'site', `${variant}-${identity.crmMode}`);
+        retainVerifiedSiteArtifact(ROOT, destination, variant, record);
+        console.log(`[verify-release] verified site artifact: ${destination}`);
+      }
+      if (publicationFailed && options.keepArtifacts) {
         try {
           retainedPaths.push(retainFailureArtifacts(variant));
         } catch (error) {
@@ -508,6 +528,10 @@ function main() {
     throw error;
   } finally {
     finalizeReleaseRecord(record, failures, options);
+    if (options.writeSourceRecord) {
+      fs.mkdirSync(path.dirname(options.writeSourceRecord), { recursive: true });
+      fs.writeFileSync(options.writeSourceRecord, `${JSON.stringify(record, null, 2)}\n`);
+    }
     if (!options.sourceOnly) {
       const recordPath = writeReleaseRecord(record);
       console.log(`[verify-release] verification record: ${recordPath}`);

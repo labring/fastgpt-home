@@ -25,21 +25,59 @@ jobs:
     # Only deploy when the build succeeded.
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
+    env:
+      NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
+      NEXT_PUBLIC_FILING_ADDRESS: '粤ICP备2023048773号'
+      NEXT_PUBLIC_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_SITE_VARIANT: preview
+      NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+      NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
+      NEXT_PUBLIC_CRM_API_URL: ''
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
+      NEXT_PUBLIC_LANGUAGE_REGION: en-US
     steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v4
+      # Only default-branch verification code runs in this privileged workflow.
+      - uses: actions/checkout@v4
         with:
-          name: preview-build
-          path: ./out
+          path: verifier
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-preview
+          path: verified-preview
           run-id: ${{ github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Read PR number
+      - uses: actions/download-artifact@v4
+        with:
+          name: verified-source
+          path: source
+          run-id: ${{ github.event.workflow_run.id }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Validate run and merge-result metadata
         id: pr
-        run: |
-          number="$(cat ./out/pr-number.txt)"
-          echo "number=$number" >> "$GITHUB_OUTPUT"
-          echo "branch=pr-$number" >> "$GITHUB_OUTPUT"
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('node:fs');
+            const resolve = require('./verifier/scripts/lib/preview-run-inputs.js');
+            const selection = JSON.parse(fs.readFileSync('source/preview-selection.json'));
+            const source = JSON.parse(fs.readFileSync('source/.release-artifacts/source-verification.json'));
+            const inputs = await resolve(github, context, selection, source);
+            for (const [key, value] of Object.entries(inputs)) core.setOutput(key, value);
+      - name: Read candidate inputs without executing candidate code
+        uses: actions/checkout@v4
+        with:
+          path: candidate
+          ref: ${{ steps.pr.outputs.revision }}
+          persist-credentials: false
+      - name: Verify expected publication identity and complete artifact digest
+        env:
+          VERIFIED_PREVIEW_REVISION: ${{ steps.pr.outputs.revision }}
+        run: node verifier/scripts/verify-preview-artifact.js --bundle verified-preview --candidate candidate --revision "$VERIFIED_PREVIEW_REVISION"
 
       - name: Deploy to Cloudflare Pages
         id: deploy
@@ -47,7 +85,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy ./out --project-name=fastgpt-home --branch=${{ steps.pr.outputs.branch }}
+          command: pages deploy ./verified-preview/payload/out --project-name=fastgpt-home --branch=${{ steps.pr.outputs.branch }}
           quiet: false
 
       - name: Comment Preview URL on PR

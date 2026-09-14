@@ -1,5 +1,6 @@
 'use client';
 
+import { getPublicationUrls } from '@/lib/siteRouting';
 import { useState } from 'react';
 import { Switch } from '@heroui/react';
 import Check from '@/components/icons/check';
@@ -291,7 +292,9 @@ export default function PPlan({ langName, locale }: { langName: string; locale: 
                           {locale.moreFeatures}
                           &nbsp;
                           <Link
-                            href="https://doc.fastgpt.io/docs/introduction/commercial"
+                            href={getPublicationUrls(
+                              'https://doc.fastgpt.io/docs/introduction/commercial'
+                            )}
                             target="_blank"
                             style={{ color: '#3b82f6' }}
                             className="underline"

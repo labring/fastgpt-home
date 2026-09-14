@@ -18,6 +18,7 @@ const {
 const { getProductionBaseUrls, resolveSiteVariant } = require('./lib/site-variant');
 
 const ROOT = path.resolve(__dirname, '..');
+const { directoryInventory } = require('./lib/release-readiness');
 
 function parseArgs(argv) {
   const options = {
@@ -30,6 +31,7 @@ function parseArgs(argv) {
     const token = argv[index];
     if (token === '--variant') options.variant = argv[++index];
     else if (token === '--slice') options.slice = argv[++index];
+    else if (token === '--image') options.image = argv[++index];
     else if (token === '--out-dir') options.outDir = path.resolve(ROOT, argv[++index]);
     else if (token === '--next-dir') options.nextDir = path.resolve(ROOT, argv[++index]);
     else throw new Error(`Unknown argument: ${token}`);
@@ -59,6 +61,7 @@ function requestLocal(port, requestPath) {
           resolve({
             status: response.statusCode,
             location: response.headers.location,
+            headers: response.headers,
             body: Buffer.concat(chunks)
           })
         );
@@ -200,6 +203,83 @@ async function startNginxSurface(redirectMapPath, outDir) {
   };
 }
 
+async function startContainerSurface(image, outDir) {
+  const run = (...args) => {
+    const result = spawnSync('docker', args, { encoding: 'utf8' });
+    if (result.error || result.status !== 0)
+      throw new Error(result.stderr || result.error?.message);
+    return result.stdout.trim();
+  };
+  const id = run('run', '--detach', '--publish', '127.0.0.1::80', image);
+  const inspection = fs.mkdtempSync(path.join(os.tmpdir(), 'verified-container-'));
+  const close = async () => {
+    try {
+      run('rm', '--force', id);
+    } finally {
+      fs.rmSync(inspection, { recursive: true, force: true });
+    }
+  };
+  try {
+    run('exec', id, 'nginx', '-t');
+    const exported = path.join(inspection, 'out');
+    run('cp', `${id}:/usr/share/nginx/html`, exported);
+    assert.equal(
+      directoryInventory(exported, { root: exported }).sha256,
+      directoryInventory(outDir, { root: outDir }).sha256,
+      'Image static inventory differs from accepted artifact'
+    );
+    for (const [imagePath, artifactPath] of [
+      ['conf.d/default.conf', '../runtime/nginx.conf'],
+      ['security-headers.conf', '../runtime/nginx-security-headers.conf'],
+      ['embeddable-security-headers.conf', '../runtime/nginx-embeddable-security-headers.conf'],
+      ['generated-redirects.conf', '../runtime/nginx-redirects.conf'],
+      ['site-manifest.json', '../../manifest.json'],
+      ['site-verification.json', '../verification.json']
+    ]) {
+      const copy = path.join(inspection, path.basename(imagePath));
+      run('cp', `${id}:/etc/nginx/${imagePath}`, copy);
+      assert.deepEqual(
+        fs.readFileSync(copy),
+        fs.readFileSync(path.resolve(outDir, artifactPath)),
+        `Image runtime differs: ${imagePath}`
+      );
+    }
+    const port = Number(run('port', id, '80/tcp').split(':').at(-1));
+    assert(Number.isInteger(port) && port > 0, 'Invalid container HTTP port');
+    await waitForHttp(port, { exitCode: null });
+    return { port, close, cleanup() {} };
+  } catch (error) {
+    await close();
+    throw error;
+  }
+}
+
+async function verifyContainerPublication(surface, outDir) {
+  for (const [route, status, frame] of [
+    ['/', 200, 'DENY'],
+    ['/contact', 200, undefined],
+    ['/__issue303_missing__', 404, 'DENY']
+  ]) {
+    const response = await requestLocal(surface.port, route);
+    assert.equal(response.status, status, route);
+    assert.equal(response.headers['x-content-type-options'], 'nosniff', route);
+    assert.equal(response.headers['x-frame-options'], frame, route);
+    assert(response.headers['content-security-policy'], `Missing CSP: ${route}`);
+    assert.equal(
+      response.headers['x-robots-tag'],
+      undefined,
+      'CN publication must remain indexable'
+    );
+    const file = status === 404 ? '404.html' : route === '/' ? 'index.html' : 'contact.html';
+    assert.deepEqual(
+      response.body,
+      fs.readFileSync(path.join(outDir, file)),
+      `Runtime bytes differ: ${route}`
+    );
+  }
+  console.log('[verify-url-alias-blackbox] container publication, 404 and security headers passed');
+}
+
 function expectedLocation(target, query) {
   const url = new URL(target);
   url.search = query;
@@ -271,12 +351,12 @@ async function main() {
     return;
   }
 
-  const surface = await startNginxSurface(
-    path.join(options.nextDir, 'nginx-redirects.conf'),
-    options.outDir
-  );
+  const surface = options.image
+    ? await startContainerSurface(options.image, options.outDir)
+    : await startNginxSurface(path.join(options.nextDir, 'nginx-redirects.conf'), options.outDir);
   try {
     const checked = await verifySurface(surface, projection, 'fastgpt.cn', false);
+    if (options.image) await verifyContainerPublication(surface, options.outDir);
     console.log(
       `[verify-url-alias-blackbox] cn Nginx passed (aliases=${checked}, ` +
         `terminal=local-and-verified, slice=${options.slice || 'all'}, digest=${authorityDigest})`

@@ -2,7 +2,7 @@ import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub } from 'react-icons/bs';
 import { HiUserGroup } from 'react-icons/hi';
 import { MdEmail } from 'react-icons/md';
-import { currentSiteBaseUrl } from '@/lib/siteRouting';
+import { currentSiteBaseUrl, getPublicationUrls } from '@/lib/siteRouting';
 
 const OPENGRAPH_IMAGE = '/opengraph-image.png';
 const TWITTER_IMAGE = '/twitter-image.png';
@@ -13,7 +13,7 @@ const baseSiteConfig = {
   description:
     "Build powerful AI agents with FastGPT's visual workflow, knowledge base, and RAG system. 500K+ users trust our open-source AI platform. Start free today.",
   url: currentSiteBaseUrl,
-  userUrl: process.env.NEXT_PUBLIC_USER_URL || 'https://cloud.fastgpt.io',
+  userUrl: process.env.NEXT_PUBLIC_USER_URL || getPublicationUrls('https://cloud.fastgpt.io'),
   metadataBase: currentSiteBaseUrl,
   keywords: [
     'rag',
@@ -66,8 +66,14 @@ const baseSiteConfig = {
     }
   ],
   footerService: [
-    { url: 'https://doc.fastgpt.io/docs/protocol/terms', name: 'Terms of Service' },
-    { url: 'https://doc.fastgpt.io/docs/protocol/privacy', name: 'Privacy Policy' }
+    {
+      url: getPublicationUrls('https://doc.fastgpt.io/docs/protocol/terms'),
+      name: 'Terms of Service'
+    },
+    {
+      url: getPublicationUrls('https://doc.fastgpt.io/docs/protocol/privacy'),
+      name: 'Privacy Policy'
+    }
   ]
 };
 

@@ -106,6 +106,10 @@ for (const variant of ['cn', 'io']) {
           const links = anchors.map((match) =>
             attributes(match[0].slice(0, match[0].indexOf('>')))
           );
+          const techLinks = links.filter((link) => link.href === routes['{tech}']);
+          assert.equal(techLinks.length, 1, `${context}: unique published technical center entry`);
+          assert.equal(techLinks[0].target, undefined, context);
+          assert.equal(techLinks[0].rel, undefined, context);
           const filingLinks = [
             ...(police ? ['https://beian.mps.gov.cn/'] : []),
             ...(registration ? ['https://beian.miit.gov.cn/'] : [])
@@ -113,7 +117,13 @@ for (const variant of ['cn', 'io']) {
           assert.deepEqual(
             links.map((link) => link.href),
             [
-              ...baseline.links.map((href) => routes[href] || href),
+              ...baseline.links.map(
+                (href) =>
+                  routes[href] ||
+                  (variant === 'cn'
+                    ? href.replace('https://doc.fastgpt.io', 'https://doc.fastgpt.cn')
+                    : href)
+              ),
               ...filingLinks,
               ...baseline.socials.map((social) => social.href)
             ],

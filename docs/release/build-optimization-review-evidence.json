@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "reviewedCodeRevision": "dde1997d725441d9657bebc50b389bb0fedc4278",
+  "reviewBaseRevision": "42af041bedd60f696bd7380d7acb32858f01f7ba",
+  "localValidation": {
+    "node": "v24.13.0",
+    "codeRevision": "dde1997d725441d9657bebc50b389bb0fedc4278",
+    "checks": [
+      {
+        "name": "full-tests",
+        "status": 0,
+        "ms": 66945.75774999999,
+        "log": "/Volumes/pr299-build/issue303-evidence/review-remediation/full-tests.log"
+      },
+      {
+        "name": "types",
+        "status": 0,
+        "ms": 1398.123332999996,
+        "log": "/Volumes/pr299-build/issue303-evidence/review-remediation/types.log"
+      },
+      {
+        "name": "lint",
+        "status": 0,
+        "ms": 5335.89599999995,
+        "log": "/Volumes/pr299-build/issue303-evidence/review-remediation/lint.log"
+      },
+      {
+        "name": "historical-cn-fixture-integrity",
+        "status": 0,
+        "ms": 14027.642957999953,
+        "log": "/Volumes/pr299-build/issue303-evidence/review-remediation/historical-cn-fixture-integrity.log"
+      }
+    ],
+    "testFiles": 33
+  },
+  "tests": {
+    "total": 254,
+    "passed": 253,
+    "failed": 0,
+    "skipped": 1,
+    "qualification": "The React-server-only case also passes in its dedicated subprocess. The unchanged sidebar fixture used the retained complete CN export, independently reverified afterward."
+  },
+  "reviews": {
+    "specFindings": 0,
+    "standardsFindings": 0
+  },
+  "regressions": {
+    "classifierRealGitScenarios": 20,
+    "classifierFullOutputEquivalence": true,
+    "staticFileReadsPerConsumerCheck": [
+      1,
+      1,
+      1
+    ],
+    "candidateEnvAndChildEnvUnchanged": true,
+    "sameParentsDifferentTreeRejected": true,
+    "actualMergeShaAccepted": true,
+    "differentConsumerRuntimeAccepted": true,
+    "stableContractAndPayloadCounterexamplesPassed": true
+  },
+  "workerAblationEvidence": "build-optimization-phase1-evidence.json#workerAblation",
+  "hostedContentObservation": {
+    "label": "review-remediation-single-cold-observation",
+    "pr": "https://github.com/labring/fastgpt-home/pull/309",
+    "previewRun": "https://github.com/labring/fastgpt-home/actions/runs/34766209407",
+    "guideRun": "https://github.com/labring/fastgpt-home/actions/runs/34766209397",
+    "deployRun": "https://github.com/labring/fastgpt-home/actions/runs/34766911129",
+    "githubHandoff": {
+      "resolved": {
+        "revision": "52eaaf0b3b16bd387cac0c6c4cce1018a2b4d0c3",
+        "number": "309",
+        "branch": "pr-309"
+      },
+      "selection": {
+        "buildCount": 1,
+        "deployCrmMode": "disabled",
+        "reason": "published-content-only",
+        "revision": "52eaaf0b3b16bd387cac0c6c4cce1018a2b4d0c3",
+        "baseRevision": "442d170db3facc9c1699a6f72451ca9ab76b05e6",
+        "headRevision": "c3133b03086af820bbdb9cd4e1b7af6c93fe24e4"
+      },
+      "sourceIdentity": {
+        "sourceRevision": "52eaaf0b3b16bd387cac0c6c4cce1018a2b4d0c3",
+        "lockfileDigest": "deb74955d7e669471ffdea38a06b0e505cad6ba3b2dcff3b3f73dd9de0ddf7cc",
+        "nodeVersion": "v24.20.0",
+        "platform": "linux",
+        "architecture": "x64"
+      },
+      "mergeable": true,
+      "githubMergeCommit": "52eaaf0b3b16bd387cac0c6c4cce1018a2b4d0c3",
+      "run": {
+        "id": 34766209407,
+        "conclusion": "success",
+        "headSha": "c3133b03086af820bbdb9cd4e1b7af6c93fe24e4"
+      },
+      "checkedAt": "2026-09-13T15:53:40.791Z"
+    },
+    "cache": "miss",
+    "buildCount": 1,
+    "crmMode": "disabled",
+    "seconds": {
+      "previewBuild": 848.0,
+      "previewQueue": 3.0,
+      "previewSource": 129.0,
+      "independentConsumer": 3.0,
+      "verifiedUpload": 48.0,
+      "experimentalAdapter": 48.0,
+      "guideJobs": {
+        "source": 138.0,
+        "verify (io, configured)": 240.0,
+        "verify (cn, configured)": 451.0
+      },
+      "guideTotal": 829.0,
+      "deploy": 155.0,
+      "allRunnerJobs": 1832.0,
+      "observedEndToEnd": 1021.782
+    },
+    "http": {
+      "pr": 309,
+      "buildRun": 34766209407,
+      "observedAt": "2026-09-13T15:55:31.782Z",
+      "url": "https://6d219a1d.fastgpt-home.pages.dev",
+      "article": "https://6d219a1d.fastgpt-home.pages.dev/en/reference/env-variables-reference",
+      "homeStatus": 200,
+      "articleStatus": 200,
+      "homeRobots": "noindex, nofollow",
+      "articleRobots": "noindex, nofollow",
+      "canonical": "https://fastgpt.io/reference/env-variables-reference",
+      "robots": "noindex, nofollow",
+      "visibleContent": true,
+      "transport": "existing default-branch workflow through isolated legacy adapter"
+    },
+    "qualifications": [
+      "One cold observation, separate from the historical six-run cache experiment.",
+      "The build job includes 48 seconds of experimental legacy transport preparation/upload.",
+      "The new dependency-free consumer ran on the complete schema-2 bundle from a separate verifier checkout in unprivileged CI.",
+      "The existing default-branch workflow delivered the experiment; the new privileged consumer activates after PR 307 merges.",
+      "HTTP observer polling interval is 15 seconds; observed timing is an upper bound."
+    ],
+    "previousSingleColdComparisonSeconds": {
+      "previewBuild": 820,
+      "guideTotal": 869,
+      "allRunnerJobs": 1833,
+      "observedEndToEnd": 985.762
+    },
+    "verifiedBundleDigest": "5b80d108cef843e5f79e5a43eca57e1b923eb716e7fa73d50b66903f8270c8f2"
+  },
+  "implementationCi": {
+    "305": {
+      "preview": 34766123576,
+      "guide": 34766123607
+    },
+    "306": {
+      "preview": 34766123750,
+      "guide": 34766123732
+    },
+    "307": {
+      "preview": 34766123809,
+      "guide": 34766123858
+    }
+  },
+  "rawEvidenceDirectory": "/Volumes/pr299-build/issue303-evidence/review-remediation"
+}

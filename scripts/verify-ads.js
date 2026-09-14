@@ -67,6 +67,7 @@ assert(
 );
 
 const opsRegistry = JSON.parse(fs.readFileSync(path.join(root, 'src/content/ads/ad-ops.json'), 'utf8'));
+const zhDictionary = JSON.parse(fs.readFileSync(path.join(root, 'src/locales/zh.json'), 'utf8'));
 const opsBySlug = new Map(opsRegistry.pages.map((entry) => [entry.slug, entry]));
 
 const registryBySlug = new Map(registeredPages.map((page) => [page.slug, page]));
@@ -133,6 +134,28 @@ function verifyExportedAdsPage(page, htmlPath) {
   const html = decodeHtml(raw);
   const slug = page.slug;
   const label = `/ads/${slug}`;
+  // The header/footer are the homepage components verbatim (ADR 0013
+  // amendment); their zh dictionary copy must render on every ads page.
+  for (const navLink of zhDictionary.links) {
+    assert(
+      html.includes(navLink.label),
+      `${label}: homepage navbar link "${navLink.label}" missing`
+    );
+  }
+  assert(
+    html.includes(zhDictionary.Home.navCta.consult),
+    `${label}: homepage navbar consult CTA missing`
+  );
+  assert(
+    html.includes(zhDictionary.Home.footer.tagline),
+    `${label}: homepage footer tagline missing`
+  );
+  assert(
+    html.includes(
+      zhDictionary.Home.footer.copyright.replace('{year}', String(new Date().getFullYear()))
+    ),
+    `${label}: homepage footer copyright missing`
+  );
 
   const robotsMatch =
     raw.match(/<meta\b[^>]*name="robots"[^>]*content="([^"]*)"[^>]*>/i) ||
@@ -158,7 +181,10 @@ function verifyExportedAdsPage(page, htmlPath) {
 
   assert(!/<meta\b[^>]*property="og:/i.test(raw), `${label}: OpenGraph meta must not be emitted`);
   assert(!/<meta\b[^>]*name="twitter:/i.test(raw), `${label}: Twitter meta must not be emitted`);
-  assert(!/hreflang=/i.test(raw), `${label}: hreflang must not be emitted`);
+  // No SEO alternate <link> tags; the homepage navbar's language-switch
+  // anchors carry a hreflang attribute and are required chrome (ADR 0013
+  // amendment), so the check must stay scoped to <link> elements.
+  assert(!/<link\b[^>]*hreflang=/i.test(raw), `${label}: hreflang link must not be emitted`);
   assert(
     /<html\b[^>]*lang="zh-CN"/i.test(raw),
     `${label}: exported <html> must be lang="zh-CN"`

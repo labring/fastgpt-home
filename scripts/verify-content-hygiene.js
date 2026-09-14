@@ -8,6 +8,8 @@
 const fs = require('node:fs');
 const net = require('node:net');
 const path = require('node:path');
+const { availableParallelism } = require('node:os');
+const { Worker, isMainThread, parentPort, workerData } = require('node:worker_threads');
 const { resolveSiteVariant, getDefaultLocale } = require('./lib/site-variant');
 
 function loadTypeScript() {
@@ -284,7 +286,7 @@ function usage(message) {
   if (message) process.stderr.write(`${message}\n`);
   process.stderr.write('Usage: verify-content-hygiene --mode source [--root <repository-root>]\n');
   process.stderr.write(
-    '       verify-content-hygiene --mode html --root <output-root> [--variant io|cn|preview]\n'
+    '       verify-content-hygiene --mode html --root <output-root> [--variant io|cn|preview] [--workers 1|2]\n'
   );
 }
 
@@ -293,7 +295,8 @@ function parseArgs(argv) {
     mode: undefined,
     root: REPOSITORY_ROOT,
     rootProvided: false,
-    variant: undefined
+    variant: undefined,
+    workers: Math.min(2, availableParallelism())
   };
   for (let index = 0; index < argv.length; index += 1) {
     const token = argv[index];
@@ -311,6 +314,9 @@ function parseArgs(argv) {
       if (!variant || variant.startsWith('--'))
         throw new Error('--variant requires io, cn, or preview');
       options.variant = variant;
+    } else if (token === '--workers') {
+      options.workers = Number(argv[++index]);
+      if (![1, 2].includes(options.workers)) throw new Error('--workers requires 1 or 2');
     } else {
       throw new Error(`Unknown option: ${token}`);
     }
@@ -2071,7 +2077,7 @@ function splitHtmlProjections(html) {
           offset: offset + openingEnd + 1
         });
       }
-      return block.replace(/[^\n]/g, ' ');
+      return block.replace(/[^\n]+/g, (line) => ' '.repeat(line.length));
     }
   );
   return { visible, payloads };
@@ -2152,7 +2158,7 @@ function appendProjectedHtml(projection, value, rawStart, linear, boundary = fal
 
 function appendDecodedHtml(projection, value, offset) {
   let cursor = 0;
-  for (let index = 0; index < value.length; index += 1) {
+  for (let index = value.indexOf('&'); index !== -1; index = value.indexOf('&', index + 1)) {
     const reference = htmlReferenceAt(value, index);
     if (!reference) continue;
     appendProjectedHtml(projection, value.slice(cursor, index), offset + cursor, true);
@@ -2321,46 +2327,44 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
   const sourceRunAt = projectionRunResolver(source);
-  const boundaryRunAt = projectionRunResolver(source);
-  const isBoundary = (index) => Boolean(boundaryRunAt(index)?.boundary);
+  const boundaries = preserveBlockBoundaries ? source.runs.filter((run) => run.boundary) : [];
+  let boundaryIndex = 0;
   let cursor = 0;
-  for (let index = 0; index < source.text.length; index += 1) {
-    if (!preserveBlockBoundaries && source.text[index] === HTML_SECTION_BOUNDARY) {
-      appendRange(projection, cursor, index);
-      cursor = index + 1;
-      continue;
-    }
-    if (preserveBlockBoundaries && isBoundary(index)) {
-      appendRange(projection, cursor, index);
-      appendProjectedHtml(projection, BLOCK_BOUNDARY, rawOffsetAt(index), false, true);
-      cursor = index + 1;
-      continue;
-    }
-    const character = source.text[index];
-    const whitespace = /[\p{White_Space}\p{Cf}]/u.test(character);
-    const dash = /[\p{Dash_Punctuation}\u2212]/u.test(character);
-    if (!whitespace && !dash) continue;
-    let end = index + 1;
-    if (whitespace) {
-      while (
-        end < source.text.length &&
-        !(preserveBlockBoundaries && isBoundary(end)) &&
-        /[\p{White_Space}\p{Cf}]/u.test(source.text[end])
-      ) {
-        end += 1;
-      }
-    }
-    appendRange(projection, cursor, index);
-    const rawOffset = rawOffsetAt(index);
-    const sourceRun = sourceRunAt(index);
+  const appendNormalized = (value, start, end) => {
+    const rawOffset = rawOffsetAt(start);
+    const sourceRun = sourceRunAt(start);
     const linear =
-      end === index + 1 &&
+      end === start + 1 &&
       sourceRun?.linear === true &&
       !sourceRun.boundary &&
-      sourceRun.rawStart + index - sourceRun.projectedStart === rawOffset;
-    appendProjectedHtml(projection, dash ? '-' : ' ', rawOffset, linear);
+      sourceRun.rawStart + start - sourceRun.projectedStart === rawOffset;
+    appendProjectedHtml(projection, value, rawOffset, linear);
+  };
+  // Match BMP characters to retain the original UTF-16 code-unit policy semantics.
+  // Single ASCII spaces and hyphens already have the required text and offset mapping.
+  const tokens = /(?:(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]){2,}|(?! )(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]|(?!-)(?=[\u0000-\uFFFF])[\p{Dash_Punctuation}\u2212]|\uE001/gu;
+  for (const match of source.text.matchAll(tokens)) {
+    const start = match.index;
+    const end = start + match[0].length;
+    appendRange(projection, cursor, start);
+    if (match[0] === HTML_SECTION_BOUNDARY) {
+      if (preserveBlockBoundaries) appendRange(projection, start, end);
+    } else if (/[\p{White_Space}\p{Cf}]/u.test(match[0][0])) {
+      let segmentStart = start;
+      while (boundaries[boundaryIndex]?.projectedEnd <= start) boundaryIndex += 1;
+      while (boundaries[boundaryIndex]?.projectedStart < end) {
+        const boundary = boundaries[boundaryIndex++];
+        if (segmentStart < boundary.projectedStart) {
+          appendNormalized(' ', segmentStart, boundary.projectedStart);
+        }
+        for (let index = boundary.projectedStart; index < boundary.projectedEnd; index += 1) {
+          appendProjectedHtml(projection, BLOCK_BOUNDARY, rawOffsetAt(index), false, true);
+        }
+        segmentStart = boundary.projectedEnd;
+      }
+      if (segmentStart < end) appendNormalized(' ', segmentStart, end);
+    } else appendNormalized('-', start, end);
     cursor = end;
-    index = end - 1;
   }
   appendRange(projection, cursor, source.text.length);
   return { text: projection.chunks.join(''), runs: projection.runs };
@@ -2437,8 +2441,7 @@ function decodeSerializedEscapes(source) {
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
   let cursor = 0;
-  for (let index = 0; index < source.text.length; index += 1) {
-    if (source.text[index] !== '\\') continue;
+  for (let index = source.text.indexOf('\\'); index !== -1; index = source.text.indexOf('\\', index + 1)) {
     let slashEnd = index;
     while (source.text[slashEnd] === '\\') slashEnd += 1;
     if ((slashEnd - index) % 2 === 0) {
@@ -2595,20 +2598,69 @@ function htmlFiles(root) {
     .sort((left, right) => left.localeCompare(right));
 }
 
-function inspectHtmlRoot(root, variant) {
+async function inspectHtmlRoot(root, variant, workers) {
   if (!fs.existsSync(root)) throw new Error(`HTML root does not exist: ${root}`);
   if (!fs.statSync(root).isDirectory()) throw new Error(`HTML root is not a directory: ${root}`);
   const files = htmlFiles(root);
   if (!files.length) throw new Error(`HTML root contains zero .html files: ${root}`);
-  const findings = files.flatMap((file) =>
-    inspectHtmlArtifact(file, fs.readFileSync(path.join(root, file), 'utf8'), variant)
-  );
+  const findings =
+    workers === 1
+      ? files.flatMap((file) =>
+          inspectHtmlArtifact(file, fs.readFileSync(path.join(root, file), 'utf8'), variant)
+        )
+      : await inspectHtmlWorkers(root, variant, files);
   findings.sort((left, right) =>
     [left.file, left.line, left.projection, left.rule]
       .join('\0')
       .localeCompare([right.file, right.line, right.projection, right.rule].join('\0'))
   );
   return { files, findings };
+}
+
+async function inspectHtmlWorkers(root, variant, files) {
+  const results = new Array(files.length);
+  let cursor = 0;
+  const pool = [];
+  try {
+    for (let index = 0; index < Math.min(2, files.length); index += 1) {
+      pool.push(new Worker(__filename, { workerData: { root, variant } }));
+    }
+    await Promise.all(
+      pool.map(
+        (worker) =>
+          new Promise((resolve, reject) => {
+            let index;
+            let finished = false;
+            const next = () => {
+              if (cursor === files.length) {
+                finished = true;
+                resolve();
+              } else {
+                index = cursor++;
+                worker.postMessage(files[index]);
+              }
+            };
+            worker.on('message', (result) => {
+              results[index] = result;
+              next();
+            });
+            worker.on('error', reject);
+            worker.on('exit', (code) => {
+              if (!finished)
+                reject(new Error(`HTML worker exited before completing its inventory (${code})`));
+            });
+            next();
+          })
+      )
+    );
+  } finally {
+    await Promise.all(pool.map((worker) => worker.terminate()));
+  }
+  // Serial file order determines the first fatal error and stable finding order.
+  return results.flatMap((result) => {
+    if (result.error !== undefined) throw new Error(result.error);
+    return result.findings;
+  });
 }
 
 async function main(argv = process.argv.slice(2)) {
@@ -2624,7 +2676,7 @@ async function main(argv = process.argv.slice(2)) {
   try {
     result =
       options.mode === 'html'
-        ? inspectHtmlRoot(options.root, options.variant)
+        ? await inspectHtmlRoot(options.root, options.variant, options.workers)
         : inspectRoot(options.root);
   } catch (error) {
     process.stderr.write(`${error.message}\n`);
@@ -2647,4 +2699,13 @@ async function main(argv = process.argv.slice(2)) {
   );
 }
 
-if (require.main === module) main();
+if (!isMainThread) {
+  parentPort.on('message', (file) => {
+    try {
+      const html = fs.readFileSync(path.join(workerData.root, file), 'utf8');
+      parentPort.postMessage({ findings: inspectHtmlArtifact(file, html, workerData.variant) });
+    } catch (error) {
+      parentPort.postMessage({ error: error.message });
+    }
+  });
+} else if (require.main === module) main();

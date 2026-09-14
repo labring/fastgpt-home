@@ -1,0 +1,147 @@
+{
+  "baselineRevision": "18bc7904ac3dcae0d6f1150ee645719a1e2896e0",
+  "node": "v24.13.0",
+  "platform": "Darwin arm64",
+  "htmlFiles": 8546,
+  "baselineSeconds": [
+    198.373216,
+    192.328583,
+    195.494151
+  ],
+  "optimizedSeconds": [
+    72.701803,
+    72.821806,
+    72.795308
+  ],
+  "medianImprovementPercent": 62.7634,
+  "workers": 2,
+  "hygieneRegression": {
+    "passed": 81,
+    "failed": 0
+  },
+  "projectionOffsetComparisons": 200000,
+  "productionBuild": "passed",
+  "limitations": [
+    "Measurements use a local case-sensitive APFS worktree; CI runner measurements remain a separate acceptance gate."
+  ],
+  "rollback": "Revert the phase 1 commit; the checker CLI and publication inputs are unchanged.",
+  "hygiene-final-timings.json": [
+    {
+      "run": 1,
+      "checkerSha256": "43b5def17aaae3a717b9b2981a679c0ffc6459b8b695ab5aad2c55c8a575ddd0",
+      "ms": 72701.802625,
+      "status": 0,
+      "stdout": "Content hygiene passed: 8546 HTML files\n",
+      "stderr": "       72.69 real       138.87 user         5.81 sys\n           481951744  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n             1890818  page reclaims\n                  84  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   1  messages sent\n                   0  messages received\n                   0  signals received\n                   3  voluntary context switches\n              256355  involuntary context switches\n       2954764641016  instructions retired\n        569993602437  cycles elapsed\n           469188752  peak memory footprint\n"
+    },
+    {
+      "run": 2,
+      "checkerSha256": "43b5def17aaae3a717b9b2981a679c0ffc6459b8b695ab5aad2c55c8a575ddd0",
+      "ms": 72821.805875,
+      "status": 0,
+      "stdout": "Content hygiene passed: 8546 HTML files\n",
+      "stderr": "       72.82 real       138.72 user         6.01 sys\n           482131968  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n             1890978  page reclaims\n                 162  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   1  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n              268057  involuntary context switches\n       2954067155877  instructions retired\n        569812353114  cycles elapsed\n           469401792  peak memory footprint\n"
+    },
+    {
+      "run": 3,
+      "checkerSha256": "43b5def17aaae3a717b9b2981a679c0ffc6459b8b695ab5aad2c55c8a575ddd0",
+      "ms": 72795.30770800001,
+      "status": 0,
+      "stdout": "Content hygiene passed: 8546 HTML files\n",
+      "stderr": "       72.79 real       139.12 user         5.66 sys\n           477544448  maximum resident set size\n                   0  average shared memory size\n                   0  average unshared data size\n                   0  average unshared stack size\n             1891230  page reclaims\n                  82  page faults\n                   0  swaps\n                   0  block input operations\n                   0  block output operations\n                   1  messages sent\n                   0  messages received\n                   0  signals received\n                   0  voluntary context switches\n              261228  involuntary context switches\n       2956420976848  instructions retired\n        570349334254  cycles elapsed\n           464518928  peak memory footprint\n"
+    }
+  ],
+  "hygiene-violation-equivalence.json": {
+    "equivalent": true,
+    "results": [
+      {
+        "script": "/Volumes/pr299-build/issue303-baseline/scripts/verify-content-hygiene.js",
+        "durationMs": 182.455709,
+        "status": 1,
+        "stdout": "",
+        "stderr": "D-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=2 | Sources and References require public HTTPS anchors\nD-01 editorial-metadata | payload | locale=en | route=/a | surface=page | slug=a | file=a.html | line=3 | fact sources:\nD-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=4 | Sources and References require public HTTPS anchors\nD-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=4 | Sources and References require public HTTPS anchors\nD-01 editorial-metadata | visible | locale=en | route=/z | surface=page | slug=z | file=z.html | line=2 | internal KB:\nD-01 editorial-metadata | visible | locale=en | route=/z | surface=page | slug=z | file=z.html | line=4 | Review cycle:\nD-01 editorial-metadata | payload | locale=en | route=/z | surface=page | slug=z | file=z.html | line=5 | Sign-off:\n"
+      },
+      {
+        "script": "/Users/longnv/.codex/worktrees/a0eb/fastgpt-home/scripts/verify-content-hygiene.js",
+        "durationMs": 123.50925000000001,
+        "status": 1,
+        "stdout": "",
+        "stderr": "D-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=2 | Sources and References require public HTTPS anchors\nD-01 editorial-metadata | payload | locale=en | route=/a | surface=page | slug=a | file=a.html | line=3 | fact sources:\nD-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=4 | Sources and References require public HTTPS anchors\nD-07 citation-policy | visible | locale=en | route=/a | surface=page | slug=a | file=a.html | line=4 | Sources and References require public HTTPS anchors\nD-01 editorial-metadata | visible | locale=en | route=/z | surface=page | slug=z | file=z.html | line=2 | internal KB:\nD-01 editorial-metadata | visible | locale=en | route=/z | surface=page | slug=z | file=z.html | line=4 | Review cycle:\nD-01 editorial-metadata | payload | locale=en | route=/z | surface=page | slug=z | file=z.html | line=5 | Sign-off:\n"
+      }
+    ]
+  },
+  "workerAblation": {
+    "measuredAt": "2026-09-13T15:55:43.170Z",
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "htmlFiles": 8546,
+    "baselineRevision": "18bc7904ac3dcae0d6f1150ee645719a1e2896e0",
+    "optimizedRevision": "51f1bd502f465db4585891e53ef70f9233bb5445",
+    "baselineExportArchiveSha256": "43578c56aed4f7f64eeb8432ed35b0a8bf706e0f129127f84a7b21f775031318",
+    "checkerDigests": {
+      "old": "4ca6dafe9d350c118360664b2359fa1b6df0d2ff984f5eaa3eaa8a0dbb52e5fc",
+      "new": "43b5def17aaae3a717b9b2981a679c0ffc6459b8b695ab5aad2c55c8a575ddd0"
+    },
+    "variants": [
+      {
+        "label": "old-serial",
+        "seconds": [
+          219.839377209,
+          219.49089120799997,
+          220.661549
+        ],
+        "medianSeconds": 219.839377209,
+        "maximumRssBytes": [
+          498581504,
+          498466816,
+          523010048
+        ]
+      },
+      {
+        "label": "new-serial",
+        "seconds": [
+          160.79619633299998,
+          161.2691385,
+          161.12002695799993
+        ],
+        "medianSeconds": 161.12002695799993,
+        "maximumRssBytes": [
+          404422656,
+          403685376,
+          403210240
+        ]
+      },
+      {
+        "label": "new-two-workers",
+        "seconds": [
+          85.40502395899995,
+          85.97632145799999,
+          85.26458070899989
+        ],
+        "medianSeconds": 85.40502395899995,
+        "maximumRssBytes": [
+          463519744,
+          462536704,
+          454590464
+        ]
+      }
+    ],
+    "serialImprovementPercent": 26.71011490137908,
+    "twoWorkerImprovementPercent": 61.15117089428165,
+    "decision": "Retain two persistent workers; optimized serial inspection does not meet the 50-percent reduction target.",
+    "diagnosticEquivalence": {
+      "cases": [
+        "clean",
+        "violations",
+        "fatal-error"
+      ],
+      "oldSerialNewSerialAndTwoWorkersEqual": true
+    },
+    "qualifications": [
+      "Three repetitions per configuration over one unchanged complete export; profiling disabled.",
+      "An initial fixture setup failed before inspection because its TypeScript dependency was absent. Dependencies were linked before all nine timed observations.",
+      "These measurements are separate from the historical 195.494/72.795-second comparison."
+    ]
+  }
+}

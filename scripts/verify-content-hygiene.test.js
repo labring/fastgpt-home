@@ -2317,6 +2317,62 @@ test('HTML CLI accepts multi-megabyte plain projections with compact metadata', 
   );
 });
 
+test('HTML CLI retains excluded-region separators, block boundaries, and original lines', () => {
+  withFixture({ 'index.html': [
+    '<main><p>internal<style>',
+    'x'.repeat(1024 * 1024),
+    '</style>KB: private</p>',
+    '<p>Review</p><p>cycle: ordinary prose</p>',
+    '<p>Review\u{E0001}cycle: ordinary prose</p>',
+    '<p>Review\u200bcycle: private</p>',
+    '<script>const value="Sign\\u002doff: private";</script></main>'
+  ].join('\n') }, (root) => {
+    const result = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'io'], { encoding: 'utf8' });
+    assert.equal(result.status, 1);
+    const findings = result.stderr.trim().split('\n');
+    assert.equal(findings.length, 3, result.stderr);
+    assert.match(findings[0], /visible.*line=1.*internal KB:/);
+    assert.match(findings[1], /visible.*line=6.*Review cycle:/);
+    assert.match(findings[2], /payload.*line=7.*Sign-off:/);
+  });
+});
+
+test('HTML CLI serial and two-worker runs retain identical diagnostics and fatal-error ordering', () => {
+  for (const files of [
+    { 'index.html': '<main>Clean copy</main>', 'nested/page.html': '<p>More copy</p>' },
+    { 'z.html': '<p>Review cycle: private</p>', 'a.html': '<script>const x="Sign\\u002doff: private";</script>' },
+    { 'a.html': '&amp;'.repeat(50_001), 'z.html': '<p>Review cycle: private</p>' }
+  ]) {
+    withFixture(files, (root) => {
+      const results = [1, 2].map((workers) => {
+        const { status, stdout, stderr } = spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'preview', '--workers', String(workers)], { encoding: 'utf8' });
+        return { status, stdout, stderr };
+      });
+      assert.deepEqual(results[1], results[0]);
+      assert.equal(results[0].status, files['index.html'] ? 0 : 1);
+    });
+  }
+});
+
+test('HTML CLI exits after partial worker startup fails', () => {
+  withFixture({ 'a.html': '<p>Clean</p>', 'b.html': '<p>Clean</p>' }, (root) => {
+    const preload = path.join(root, 'worker-failure.cjs');
+    fs.writeFileSync(preload, `const threads = require('node:worker_threads');
+const Original = threads.Worker;
+let count = 0;
+threads.Worker = class extends Original {
+  constructor(...args) {
+    if (++count === 2) throw new Error('Injected worker startup failure');
+    super(...args);
+  }
+};`);
+    const result = spawnSync(process.execPath, ['--require', preload, SCRIPT, '--mode', 'html', '--root', root, '--variant', 'preview', '--workers', '2'], { encoding: 'utf8', timeout: 3000 });
+    assert.equal(result.error, undefined);
+    assert.equal(result.status, 1);
+    assert.match(result.stderr, /Injected worker startup failure/);
+  });
+});
+
 test('HTML CLI compacts ordinary hub whitespace into linear offset runs', () => {
   const hubCopy = 'FAQ question answer route detail '.repeat(25_000);
   withFixture({ 'index.html': `<html><body><main>${hubCopy}</main></body></html>` }, (root) => {

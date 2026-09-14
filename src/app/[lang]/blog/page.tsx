@@ -9,7 +9,7 @@ import { getBuildLocaleCodes } from '@/lib/siteRouting';
 import { Metadata } from 'next';
 
 const titleMap: Record<string, string> = {
-  zh: 'FastGPT 博客',
+  zh: 'FastGPT 博客 - AI 知识与行业洞察',
   'zh-hant': 'FastGPT 部落格 - AI 知識與產業洞察',
   en: 'FastGPT Blog - AI Insights and Knowledge',
   ja: 'FastGPT ブログ - AI に関する知見',
@@ -21,7 +21,7 @@ const titleMap: Record<string, string> = {
 };
 
 const descMap: Record<string, string> = {
-  zh: '产品动态、技术实践与 AI Agent 落地经验',
+  zh: '阅读 FastGPT 关于 AI Agent、企业知识库和智能应用的知识与行业洞察。',
   'zh-hant': '閱讀 FastGPT 關於 AI Agent、企業知識庫與智慧應用的知識與產業洞察。',
   en: 'Explore FastGPT insights on AI Agents, enterprise knowledge bases, and intelligent applications.',
   ja: 'AI Agent、企業ナレッジベース、インテリジェントアプリケーションに関するFastGPTの知見をご覧ください。',
@@ -74,14 +74,6 @@ export default async function BlogPage({ params }: { params: Promise<{ lang?: st
         <section className="relative min-h-screen overflow-hidden bg-white">
           <div className="mx-auto relative container">
             <GradientBlobs />
-          </div>
-          <div className="relative z-[1] flex min-h-screen flex-col items-center justify-center px-[16px] pt-[64px] text-center">
-            <h1 className="m-0 text-[48px] font-semibold leading-[1.2] tracking-[-1px] text-ink md:text-[64px]">
-              FastGPT 博客
-            </h1>
-            <p className="mt-6 mb-0 text-[18px] leading-[30px] text-ink-sub md:text-[22px] md:leading-[34px]">
-              产品动态、技术实践与 AI Agent 落地经验
-            </p>
           </div>
         </section>
         <CTA t={dict.Home.cta} locale={langName} />

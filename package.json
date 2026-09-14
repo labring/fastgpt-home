@@ -111,6 +111,9 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@content-collections/core": "^0.15.2",
+    "@content-collections/mdx": "^0.2.2",
+    "@content-collections/next": "^0.2.11",
     "@types/node": "20.19.33",
     "@types/react": "19.2.14",
     "@types/react-dom": "^19.2.3",
@@ -119,7 +122,8 @@
     "husky": "^9.1.7",
     "prettier": "^2.8.8",
     "sharp": "^0.35.3",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "zod": "^4.6.5"
   },
   "engines": {
     "node": ">=20.9.0"

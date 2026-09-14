@@ -1,11 +1,11 @@
 .footer {
-  --footer-ink: #f5f7fb;
-  --footer-body: #bdc9da;
-  --footer-muted: #91a1b7;
-  --footer-border: #29364a;
-  --footer-accent: #9bbbff;
+  --footer-ink: #020617;
+  --footer-body: rgb(41, 47, 56);
+  --footer-muted: rgb(41, 47, 56);
+  --footer-border: rgb(241, 245, 249);
+  --footer-accent: #2563eb;
   padding: 40px 48px 20px;
-  background: #101a2b;
+  background: #ffffff;
   color: var(--footer-ink);
   font-family: var(--home-font-sans, sans-serif);
 }
@@ -183,7 +183,7 @@
   display: block;
   width: 19px;
   height: 19px;
-  filter: brightness(0) invert(1);
+  filter: brightness(0);
   opacity: 0.82;
 }
 .socials a:first-child img,
@@ -200,8 +200,8 @@
   height: 17px;
 }
 .socials a:hover {
-  background: #22314a;
-  border-color: #91a6c6;
+  background: rgb(241, 245, 249);
+  border-color: rgb(241, 245, 249);
 }
 @media (max-width: 1199px) {
   .container {

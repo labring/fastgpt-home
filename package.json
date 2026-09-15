@@ -12,6 +12,7 @@
     "format-code": "prettier --config \"./.prettierrc.js\" --write \"./**/src/**/*.{ts,tsx,scss}\"",
     "clean-locales": "node scripts/clean-locales.js",
     "convert-images": "node scripts/convert-images.js",
+    "generate:blog-pagefind": "pagefind --site out --output-subdir pagefind/blog --glob '**/blog/**/*.html' && rm -rf public/pagefind && cp -r out/pagefind public/",
     "verify:p0": "node scripts/verify-p0.js",
     "verify:p1": "node scripts/verify-p1.js",
     "verify:p2": "node scripts/verify-p2.js",
@@ -117,15 +118,20 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@content-collections/core": "^0.15.2",
+    "@content-collections/mdx": "^0.2.2",
+    "@content-collections/next": "^0.2.11",
     "@types/node": "20.19.33",
     "@types/react": "19.2.14",
     "@types/react-dom": "^19.2.3",
     "eslint": "^9.39.4",
     "eslint-config-next": "^16.3.2",
     "husky": "^9.1.7",
+    "pagefind": "^1.5.2",
     "prettier": "^2.8.8",
     "sharp": "^0.35.3",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "zod": "^4.6.5"
   },
   "engines": {
     "node": ">=20.9.0"

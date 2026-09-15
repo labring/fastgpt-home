@@ -1,0 +1,11 @@
+{
+  "name": {
+    "en": "Alice",
+    "zh": "爱丽丝"
+  },
+  "avatar": "/images/hero/kv-border-stroke-bold-io-en.webp",
+  "description": {
+    "en": "Alice is a fictional placeholder character who represents the sender of a message in cryptographic protocols and thought experiments.",
+    "zh": "爱丽丝是广泛地代入密码学和物理学领域的通用角色。"
+  }
+}

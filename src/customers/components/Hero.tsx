@@ -48,7 +48,9 @@ export default function Hero({
   return (
     <section className="relative pt-[120px] pb-[48px] md:pt-[160px] md:pb-[48px] bg-white overflow-hidden">
       {/* 蓝紫渐变光斑：复用 home 的 GradientBlobs，large 尺寸与主页 Hero 一致 */}
-      <GradientBlobs large colors={['#D4D6FF', '#C6DBFF', '#EFD6FF', '#B3D4FF']} />
+      <div className="pointer-events-none mx-auto relative container">
+        <GradientBlobs large colors={['#D4D6FF', '#C6DBFF', '#EFD6FF', '#B3D4FF']} />
+      </div>
 
       <div className="relative flex flex-col gap-[32px] md:gap-[50px]" style={{ zIndex: 1 }}>
         <div className="relative max-w-[min(92vw,1300px)] mx-auto flex flex-col items-center text-center gap-[50px] md:gap-[32px] px-[16px] md:px-[32px]">

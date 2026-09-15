@@ -5,6 +5,10 @@
       "href": "/price"
     },
     {
+      "label": "Blog",
+      "href": "/blog"
+    },
+    {
       "label": "Tài liệu",
       "href": "https://doc.fastgpt.io/"
     },

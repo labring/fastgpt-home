@@ -30,8 +30,8 @@ function loadTypeScript() {
 const ts = loadTypeScript();
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
-const MARKDOWN_ROOTS = ['src/content', 'content/competitors'];
-const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales', 'content/customers'];
+const MARKDOWN_ROOTS = ['src/content', 'content/competitors', 'content/blogs'];
+const STRUCTURED_COPY_ROOTS = ['src/faq', 'src/locales', 'content/customers', 'content/authors'];
 const ENGLISH_CITATION_LABEL = 'Source(?:s)?|Reference(?:s)?';
 const CHINESE_CITATION_LABEL = '资料来源|参考资料|来源';
 const CITATION_LABEL_NAME = `${ENGLISH_CITATION_LABEL}|${CHINESE_CITATION_LABEL}`;
@@ -352,7 +352,7 @@ function walkFiles(root, relativeRoot, matcher) {
 
 function publishedMarkdownFiles(root) {
   return MARKDOWN_ROOTS.flatMap((relativeRoot) =>
-    walkFiles(root, relativeRoot, (name) => name.endsWith('.md'))
+    walkFiles(root, relativeRoot, (name) => name.endsWith('.md') || name.endsWith('.mdx'))
   ).sort((left, right) => left.localeCompare(right));
 }
 

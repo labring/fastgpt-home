@@ -66,10 +66,9 @@ export function getBlogSlugs(locale: string) {
   return getPublishedBlogs(locale).map((blog) => blog.slug);
 }
 
-export function getBlogBuildParams() {
-  return getBuildLocaleCodes().flatMap((locale) =>
-    getBlogSlugs(locale).map((slug) => ({ lang: locale, slug }))
-  );
+export function getBlogBuildParams(localized = true) {
+  const locales = localized ? getBuildLocaleCodes() : [getBlogDefaultLocale()];
+  return locales.flatMap((locale) => getBlogSlugs(locale).map((slug) => ({ lang: locale, slug })));
 }
 
 export function getBlogDefaultLocale(): BlogLocale {

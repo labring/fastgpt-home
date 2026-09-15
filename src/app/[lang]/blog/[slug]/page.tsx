@@ -17,7 +17,7 @@ export default async function LocalizedBlogArticlePage({
 }
 
 export function generateStaticParams() {
-  return getBlogBuildParams();
+  return getBlogBuildParams(true);
 }
 
 export const dynamicParams = false;

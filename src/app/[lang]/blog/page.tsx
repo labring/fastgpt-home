@@ -1,8 +1,7 @@
 import BlogListPage from '@/components/blog/BlogPage';
-import { getPublishedBlogs } from '@/content/blog';
+import { getBlogBuildLocales, getPublishedBlogs } from '@/content/blog';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 import { getAlternates, getRobotsPolicy, localeMap } from '@/lib/seo';
-import { getBuildLocaleCodes } from '@/lib/siteRouting';
 import { Metadata } from 'next';
 
 const titleMap: Record<string, string> = {
@@ -66,5 +65,5 @@ export default async function BlogPage({ params }: { params: Promise<{ lang?: st
 }
 
 export async function generateStaticParams() {
-  return getBuildLocaleCodes().map((lang) => ({ lang }));
+  return getBlogBuildLocales().map((lang) => ({ lang }));
 }

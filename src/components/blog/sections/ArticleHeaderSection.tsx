@@ -6,6 +6,8 @@ import type { BlogPost } from '@/content/blog';
 import { getReviewLocalePath } from '@/lib/siteRouting';
 import GradientBlobs from '@/components/home/GradientBlobs';
 
+import { getDefaultBlogThumbnail } from '../blogThumbnails';
+
 type ArticleHeaderSectionProps = {
   post: BlogPost;
   locale: string;
@@ -21,6 +23,8 @@ export default function ArticleHeaderSection({
   categoryLabel,
   formatDate
 }: ArticleHeaderSectionProps) {
+  const thumbnail = post.thumbnail || getDefaultBlogThumbnail(post.category);
+
   return (
     <section className="relative col-span-full bg-white lg:row-start-1">
       <div className="pointer-events-none absolute inset-x-0 top-0 h-96" aria-hidden="true">
@@ -43,12 +47,12 @@ export default function ArticleHeaderSection({
             <span className="relative rounded-full bg-white/40 px-3 py-1.5 text-xs text-ink-sub ring-1 ring-gray-200 shadow-sm">
               {categoryLabel}
             </span>
-            <h1 className="m-0 max-w-4xl text-center text-4xl font-medium text-ink md:text-5xl text-balance">
+            <h1 className="m-0 max-w-6xl text-center text-4xl font-medium text-ink md:text-5xl text-balance">
               {post.title}
             </h1>
             <div className="flex flex-col items-center gap-2 text-base text-ink-sub">
               {post.authorRecord ? (
-                <div className="flex flex-wrap items-center justify-center gap-2 md:flex-nowrap">
+                <div className="flex max-md:flex-col-reverse flex-wrap items-center justify-center gap-2 md:flex-nowrap">
                   <div className="flex items-center gap-2 text-ink">
                     <Image
                       src={post.authorRecord.avatar}
@@ -59,7 +63,7 @@ export default function ArticleHeaderSection({
                     />
                     <span>{post.authorRecord.name}</span>
                   </div>
-                  <span className="text-gray-300" aria-hidden="true">
+                  <span className="text-gray-300 max-md:hidden" aria-hidden="true">
                     •
                   </span>
                   <time dateTime={post.date.toISOString()}>{formatDate(post.date)}</time>
@@ -75,18 +79,9 @@ export default function ArticleHeaderSection({
             </div>
           </div>
 
-          {post.thumbnail && (
-            <div className="relative h-[30rem] w-full overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/10 md:aspect-video md:h-auto">
-              <Image
-                src={post.thumbnail}
-                alt=""
-                fill
-                priority
-                sizes="100vw"
-                className="object-cover"
-              />
-            </div>
-          )}
+          <div className="relative h-[30rem] w-full overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/10 md:aspect-video md:h-auto">
+            <Image src={thumbnail} alt="" fill priority sizes="100vw" className="object-cover" />
+          </div>
         </header>
       </div>
     </section>

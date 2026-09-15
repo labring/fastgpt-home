@@ -1,8 +1,8 @@
 import 'server-only';
 
 import { allAuthors, allBlogs, type Author, type Blog } from 'content-collections';
-import { normalizeLocale, type LocaleCode } from '@/lib/locales';
-import { getBuildLocaleCodes, getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
+import { normalizeLocale, supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
+import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
 export const blogLocales = ['en', 'zh'] as const;
 export type BlogLocale = (typeof blogLocales)[number];
@@ -94,8 +94,13 @@ export function getBlogSlugs(locale: string) {
   return getPublishedBlogs(locale).map((blog) => blog.slug);
 }
 
+/** Build blog routes for every supported UI locale; content falls back to English or Chinese. */
+export function getBlogBuildLocales(): LocaleCode[] {
+  return [...supportedLocaleCodes];
+}
+
 export function getBlogBuildParams(localized = true) {
-  const locales = localized ? getBuildLocaleCodes() : [getBlogDefaultLocale()];
+  const locales = localized ? getBlogBuildLocales() : [getBlogDefaultLocale()];
   return locales.flatMap((locale) => getBlogSlugs(locale).map((slug) => ({ lang: locale, slug })));
 }
 

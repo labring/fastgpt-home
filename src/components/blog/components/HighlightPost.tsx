@@ -2,6 +2,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import type { BlogListPost } from './PostCard';
+import { FEATURED_DEFAULT_THUMBNAIL, getDefaultBlogThumbnail } from '../blogThumbnails';
+import { getBlogCopy } from '../blogCopy';
 import { getReviewLocalePath } from '@/lib/siteRouting';
 import { cn } from '@/lib/utils';
 
@@ -13,7 +15,7 @@ type HighlightPostProps = {
 };
 
 function formatDate(date: string, locale: string) {
-  return new Intl.DateTimeFormat(locale === 'zh' || locale === 'zh-hant' ? 'zh-CN' : 'en-US', {
+  return new Intl.DateTimeFormat(getBlogCopy(locale).article.dateLocale, {
     year: 'numeric',
     month: 'long',
     day: 'numeric'
@@ -26,6 +28,9 @@ export default function HighlightPost({
   categoryLabel,
   large = false
 }: HighlightPostProps) {
+  const thumbnail =
+    post.thumbnail || (large ? FEATURED_DEFAULT_THUMBNAIL : getDefaultBlogThumbnail(post.category));
+
   return (
     <article className="min-w-0">
       <Link
@@ -41,16 +46,14 @@ export default function HighlightPost({
             large && 'h-[30rem]'
           )}
         >
-          {post.thumbnail && (
-            <Image
-              src={post.thumbnail}
-              alt=""
-              fill
-              sizes="100vw"
-              loading="lazy"
-              className="object-cover transition-transform duration-500 group-hover:scale-105"
-            />
-          )}
+          <Image
+            src={thumbnail}
+            alt=""
+            fill
+            sizes="100vw"
+            loading="lazy"
+            className="object-cover transition-transform duration-500 group-hover:scale-[1.2]"
+          />
         </div>
 
         <div className="mt-4 flex flex-col gap-1">
@@ -61,9 +64,10 @@ export default function HighlightPost({
             <time dateTime={post.date}>{formatDate(post.date, locale)}</time>
           </div>
           <h2
-            className={`m-0 h-8 line-clamp-1 font-normal text-ink ${
+            className={cn(
+              'm-0 h-8 line-clamp-1 font-normal text-ink transition-colors group-hover:text-primary',
               large ? 'text-2xl' : 'text-xl'
-            }`}
+            )}
           >
             {post.title}
           </h2>

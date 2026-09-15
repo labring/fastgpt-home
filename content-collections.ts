@@ -46,7 +46,7 @@ const blogs = defineCollection({
     title: z.string().trim().min(1),
     summary: z.string().trim().min(1),
     thumbnail: assetUrl.optional(),
-    author: z.string().regex(SLUG_PATTERN),
+    author: z.string().regex(SLUG_PATTERN).optional(),
     draft: z.boolean().default(false),
     content: z.string()
   }),
@@ -62,11 +62,13 @@ const blogs = defineCollection({
       throw new Error(`Blog ${document._meta.path}: expected content/blogs/<locale>/<slug>.mdx`);
     }
 
-    const authorExists = context
-      .documents(authors)
-      .some((author) => author._meta.path === document.author);
-    if (!authorExists) {
-      throw new Error(`Blog ${document._meta.path}: unknown author ${document.author}`);
+    if (document.author) {
+      const authorExists = context
+        .documents(authors)
+        .some((author) => author._meta.path === document.author);
+      if (!authorExists) {
+        throw new Error(`Blog ${document._meta.path}: unknown author ${document.author}`);
+      }
     }
 
     return {

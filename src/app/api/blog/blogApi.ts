@@ -1,15 +1,14 @@
 import 'server-only';
 
-import { getPublishedBlogs } from '@/content/blog';
+import { getBlogBuildLocales, getPublishedBlogs } from '@/content/blog';
 import {
   BLOG_CATEGORIES,
   BLOG_PAGE_SIZE,
   type BlogCategory,
   toBlogListPost
 } from '@/components/blog/blogPagination';
-import { getBuildLocaleCodes } from '@/lib/siteRouting';
 
-const buildLocales = getBuildLocaleCodes();
+const buildLocales = getBlogBuildLocales();
 
 export function isBlogApiLocale(locale: string) {
   return buildLocales.includes(locale as (typeof buildLocales)[number]);

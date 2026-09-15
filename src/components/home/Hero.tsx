@@ -6,6 +6,7 @@ import * as m from 'framer-motion/m';
 import { useEffect, useRef, useState, ReactNode } from 'react';
 import Image from 'next/image';
 import { getHeroDashboardAsset } from '@/components/home/assets';
+import GradientBlobs from '@/components/home/GradientBlobs';
 import { useStartUrl } from '@/components/home/hooks/useStartUrl';
 import { useContactUrl } from '@/components/home/hooks/useContactUrl';
 import { formatGitHubStars } from '@/lib/githubStarsDisplay';
@@ -25,93 +26,6 @@ interface HeroProps {
   };
   children?: ReactNode;
 }
-
-const blobs = [
-  {
-    w: 720,
-    h: 720,
-    left: '5%',
-    top: -60,
-    color: '#FBD0DF',
-    x: [0, 180, 240, 80, -40, 0],
-    y: [0, 40, -30, 60, 15, 0],
-    s: [1, 1.15, 0.9, 1.1, 0.95, 1],
-    dur: 14
-  },
-  {
-    w: 760,
-    h: 760,
-    left: '20%',
-    top: -80,
-    color: '#D4D6FF',
-    x: [0, -160, -220, -60, 40, 0],
-    y: [0, 30, 80, -25, 55, 0],
-    s: [1, 0.9, 1.2, 0.95, 1.1, 1],
-    dur: 16
-  },
-  {
-    w: 660,
-    h: 660,
-    left: '30%',
-    top: -20,
-    color: '#C6DBFF',
-    x: [0, 140, -160, 100, -60, 0],
-    y: [0, -60, -15, 45, -30, 0],
-    s: [1, 1.1, 0.85, 1.2, 0.9, 1],
-    dur: 18,
-    delay: 1.5
-  },
-  {
-    w: 600,
-    h: 600,
-    left: '40%',
-    top: 20,
-    color: '#EFD6FF',
-    x: [0, -100, 160, -40, 100, 0],
-    y: [0, 40, -50, 70, -15, 0],
-    s: [1, 0.95, 1.15, 0.9, 1.1, 1],
-    dur: 20,
-    delay: 3
-  }
-];
-
-const mobileBlobs = [
-  {
-    w: 520,
-    h: 520,
-    left: '10%',
-    top: 120,
-    color: '#FBD0DF',
-    x: [0, 60, 120, 20, -20, 0],
-    y: [0, 20, -10, 30, 10, 0],
-    s: [1, 1.15, 0.9, 1.1, 0.95, 1],
-    dur: 14
-  },
-  {
-    w: 540,
-    h: 540,
-    right: '10%',
-    top: 100,
-    color: '#D4D6FF',
-    x: [0, -60, -100, -20, 20, 0],
-    y: [0, 20, 40, -15, 30, 0],
-    s: [1, 0.9, 1.2, 0.95, 1.1, 1],
-    dur: 16
-  },
-  {
-    w: 460,
-    h: 460,
-    left: '50%',
-    top: 200,
-    ml: -230,
-    color: '#C6DBFF',
-    x: [0, 60, -80, 40, -20, 0],
-    y: [0, -20, -5, 15, -10, 0],
-    s: [1, 1.1, 0.85, 1.2, 0.9, 1],
-    dur: 18,
-    delay: 1.5
-  }
-];
 
 export default function Hero({ stars: initialStars, locale, t, children }: HeroProps) {
   const containerRef = useRef<HTMLElement>(null);
@@ -144,62 +58,8 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
       className="relative pt-[120px] pb-[48px] md:pt-[160px] md:pb-[48px] bg-white overflow-hidden"
       style={{ position: 'relative' }}
     >
-      {/* [TODO] Use GradientBlobs component */}
       <div className="mx-auto relative container">
-        {/* Desktop gradient blobs */}
-        {blobs.map((b, i) => (
-          <m.div
-            key={i}
-            aria-hidden
-            className="pointer-events-none absolute hidden md:block rounded-full"
-            style={{
-              width: b.w,
-              height: b.h,
-              left: b.left,
-              top: b.top,
-              filter: 'blur(80px)',
-              opacity: 0.6,
-              zIndex: 0,
-              background: `radial-gradient(circle, ${b.color} 0%, ${b.color}00 70%)`,
-              animation: 'aurora-hue 20s ease-in-out infinite'
-            }}
-            animate={{ x: b.x, y: b.y, scale: b.s }}
-            transition={{
-              duration: b.dur,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: b.delay || 0
-            }}
-          />
-        ))}
-
-        {/* Mobile gradient blobs */}
-        {mobileBlobs.map((b, i) => (
-          <m.div
-            key={`m${i}`}
-            aria-hidden
-            className="pointer-events-none absolute md:hidden rounded-full"
-            style={{
-              width: b.w,
-              height: b.h,
-              ...(b.left ? { left: b.left } : { right: b.right }),
-              top: b.top,
-              ...(b.ml ? { marginLeft: b.ml } : {}),
-              filter: 'blur(80px)',
-              opacity: 0.6,
-              zIndex: 0,
-              background: `radial-gradient(circle, ${b.color} 0%, ${b.color}00 70%)`,
-              animation: 'aurora-hue 20s ease-in-out infinite'
-            }}
-            animate={{ x: b.x, y: b.y, scale: b.s }}
-            transition={{
-              duration: b.dur,
-              repeat: Infinity,
-              ease: 'easeInOut',
-              delay: b.delay || 0
-            }}
-          />
-        ))}
+        <GradientBlobs large colors={['#FBD0DF', '#D4D6FF', '#C6DBFF', '#EFD6FF']} />
       </div>
 
       {/* Main content column */}

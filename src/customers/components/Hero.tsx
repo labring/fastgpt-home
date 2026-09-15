@@ -48,7 +48,7 @@ export default function Hero({
   return (
     <section className="relative pt-[120px] pb-[48px] md:pt-[160px] md:pb-[48px] bg-white overflow-hidden">
       {/* 蓝紫渐变光斑：复用 home 的 GradientBlobs，large 尺寸与主页 Hero 一致 */}
-      <div className="mx-auto relative container">
+      <div className="pointer-events-none mx-auto relative container">
         <GradientBlobs large colors={['#D4D6FF', '#C6DBFF', '#EFD6FF', '#B3D4FF']} />
       </div>
 

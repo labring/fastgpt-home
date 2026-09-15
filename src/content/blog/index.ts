@@ -10,7 +10,7 @@ export type BlogAuthor = Omit<Author, 'name' | 'description'> & {
   name: string;
   description: string;
 };
-export type BlogPost = Blog & { authorRecord: BlogAuthor };
+export type BlogPost = Blog & { authorRecord?: BlogAuthor };
 export type BlogLocaleResolution = {
   requestedLocale: LocaleCode;
   contentLocale: BlogLocale;
@@ -46,7 +46,10 @@ function toBlogPost(blog: Blog): BlogPost {
   if (!isBlogLocale(blog.locale)) {
     throw new Error(`Blog has unsupported content locale: ${blog.locale}`);
   }
-  return { ...blog, authorRecord: resolveAuthor(blog.author, blog.locale) };
+  return {
+    ...blog,
+    ...(blog.author ? { authorRecord: resolveAuthor(blog.author, blog.locale) } : {})
+  };
 }
 
 export function getPublishedBlogs(locale: string): BlogPost[] {
@@ -60,6 +63,31 @@ export function getPublishedBlogs(locale: string): BlogPost[] {
 
 export function getBlog(locale: string, slug: string): BlogPost | undefined {
   return getPublishedBlogs(locale).find((blog) => blog.slug === slug);
+}
+
+function stableHash(value: string) {
+  let hash = 2166136261;
+  for (const character of value) {
+    hash ^= character.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+export function getRelatedBlogs(post: BlogPost, count = 2): BlogPost[] {
+  const candidates = getPublishedBlogs(post.locale).filter(
+    (candidate) => candidate.category === post.category && candidate.slug !== post.slug
+  );
+  if (candidates.length < count) return [];
+
+  return candidates
+    .map((candidate) => ({ candidate, order: stableHash(`${post.slug}:${candidate.slug}`) }))
+    .sort(
+      (left, right) =>
+        left.order - right.order || left.candidate.slug.localeCompare(right.candidate.slug)
+    )
+    .slice(0, count)
+    .map(({ candidate }) => candidate);
 }
 
 export function getBlogSlugs(locale: string) {

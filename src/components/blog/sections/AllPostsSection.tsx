@@ -90,10 +90,8 @@ export default function AllPostsSection({
   };
 
   return (
-    <section className="container px-4 pb-20 pt-16 sm:px-8">
-      <h2 className="m-0 text-center text-4xl font-medium leading-tight text-ink md:text-5xl">
-        {copy.title}
-      </h2>
+    <section className="container pb-20 pt-16">
+      <h2 className="m-0 text-center text-4xl font-medium text-ink md:text-5xl">{copy.title}</h2>
 
       <div className="mt-8">
         <FilterBar

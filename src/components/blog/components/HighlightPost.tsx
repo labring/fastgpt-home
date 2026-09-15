@@ -27,18 +27,18 @@ export default function HighlightPost({
   large = false
 }: HighlightPostProps) {
   return (
-    <article className={cn('min-w-0', large && 'lg:h-full')}>
+    <article className="min-w-0">
       <Link
         href={getReviewLocalePath(locale, `/blog/${post.slug}`)}
         className={cn(
           'group block min-w-0 rounded-2xl focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-4',
-          large && 'lg:flex lg:h-full lg:flex-col'
+          large && 'lg:flex lg:flex-col'
         )}
       >
         <div
           className={cn(
-            'relative min-h-48 overflow-hidden rounded-2xl bg-light-bg shadow-sm ring-1 ring-gray-200',
-            large && 'min-h-96 lg:min-h-48 lg:flex-1'
+            'relative h-[12.5rem] overflow-hidden rounded-2xl bg-light-bg shadow-sm ring-1 ring-gray-200',
+            large && 'h-[30rem]'
           )}
         >
           {post.thumbnail && (
@@ -46,9 +46,7 @@ export default function HighlightPost({
               src={post.thumbnail}
               alt=""
               fill
-              sizes={
-                large ? '(min-width: 1400px) 720px, 100vw' : '(min-width: 1400px) 528px, 100vw'
-              }
+              sizes="100vw"
               loading="lazy"
               className="object-cover transition-transform duration-500 group-hover:scale-105"
             />
@@ -56,16 +54,16 @@ export default function HighlightPost({
         </div>
 
         <div className="mt-4 flex flex-col gap-1">
-          <div className="flex items-center gap-2 text-base leading-6 text-ink-sub">
-            <span className="rounded-full bg-light-bg px-2 py-1 text-xs leading-4 text-slate-500">
+          <div className="flex items-center gap-2 text-base text-ink-sub">
+            <span className="rounded-full bg-light-bg px-2 py-1 text-xs text-slate-500">
               {categoryLabel}
             </span>
             <time dateTime={post.date}>{formatDate(post.date, locale)}</time>
           </div>
           <h2
-            className={`m-0 truncate font-normal text-ink ${
+            className={`m-0 h-8 line-clamp-1 font-normal text-ink ${
               large ? 'text-2xl' : 'text-xl'
-            } leading-8`}
+            }`}
           >
             {post.title}
           </h2>

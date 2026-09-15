@@ -73,7 +73,7 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
       <Navbar links={dict.links} t={dict.Home.navCta} locale={langName} />
 
       <main className="pb-[80px] px-[16px] md:px-[32px] relative">
-        <div className="mx-auto relative container">
+        <div className="pointer-events-none mx-auto relative container">
           <GradientBlobs />
         </div>
 

@@ -26,14 +26,14 @@ export default function FilterBar({
   return (
     <div className="flex w-full flex-col items-stretch gap-2 sm:flex-row sm:items-center sm:justify-center">
       <div className="w-full overflow-x-auto sm:w-auto sm:overflow-visible">
-        <div className="flex h-14 w-max min-w-full rounded-full border border-neutral-300 bg-slate-50 p-1 sm:min-w-0">
+        <div className="flex h-14 w-max min-w-full rounded-full bg-slate-50 p-1 ring-1 ring-neutral-300 sm:min-w-0">
           {filters.map((filter) => (
             <button
               key={filter}
               type="button"
               aria-pressed={activeFilter === filter}
               onClick={() => onFilterChange(filter)}
-              className={`h-full min-w-max flex-1 rounded-full px-8 text-xs leading-5 transition-colors sm:flex-none ${
+              className={`h-full min-w-max flex-1 rounded-full px-8 text-xs transition-colors sm:flex-none ${
                 activeFilter === filter
                   ? 'bg-white text-gray-700 shadow-sm'
                   : 'text-gray-400 hover:text-slate-500'
@@ -57,7 +57,7 @@ export default function FilterBar({
           onChange={(event) => onSearchChange(event.target.value)}
           placeholder={searchLabel}
           aria-label={searchLabel}
-          className="min-w-0 flex-1 bg-transparent px-1 text-sm leading-6 text-gray-700 outline-none placeholder:text-gray-400"
+          className="min-w-0 flex-1 bg-transparent px-1 text-sm text-gray-700 outline-none placeholder:text-gray-400"
         />
       </label>
     </div>

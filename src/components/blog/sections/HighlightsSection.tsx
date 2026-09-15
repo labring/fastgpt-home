@@ -17,7 +17,7 @@ export default function HighlightsSection({
   if (!featured) return null;
 
   return (
-    <section className="container grid gap-8 px-4 pb-16 pt-20 sm:px-8 md:pt-32 lg:grid-cols-7">
+    <section className="container grid gap-8 pb-16 pt-20 md:pt-32 lg:grid-cols-7">
       <div className="lg:col-span-4">
         <HighlightPost
           post={featured}

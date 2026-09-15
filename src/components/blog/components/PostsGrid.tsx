@@ -17,7 +17,7 @@ export default function PostsGrid({
   emptyLabel
 }: PostsGridProps) {
   if (!posts.length) {
-    return <p className="py-12 text-center text-base leading-6 text-slate-500">{emptyLabel}</p>;
+    return <p className="py-12 text-center text-base text-slate-500">{emptyLabel}</p>;
   }
 
   return (

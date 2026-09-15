@@ -45,7 +45,7 @@ export function getBlogMetadata(locale: string, slug: string): Metadata {
   return {
     title: blog.title,
     description: blog.summary,
-    authors: [{ name: blog.authorRecord.name }],
+    ...(blog.authorRecord ? { authors: [{ name: blog.authorRecord.name }] } : {}),
     alternates: getBlogAlternates(locale, slug),
     openGraph: {
       title: blog.title,

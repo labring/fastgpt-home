@@ -5,7 +5,6 @@ import Navbar from '@/components/home/Navbar';
 import { resolveBlogLocale, type BlogPost } from '@/content/blog';
 
 import { BLOG_PAGE_SIZE, toBlogListPost } from './blogPagination';
-import type { BlogListPost } from './blogPagination';
 import AllPostsSection from './sections/AllPostsSection';
 import HighlightsSection from './sections/HighlightsSection';
 import HeroSection from './sections/HeroSection';

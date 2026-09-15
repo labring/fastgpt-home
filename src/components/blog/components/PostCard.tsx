@@ -17,18 +17,18 @@ type PostCardProps = {
 export default function PostCard({ post, locale, categoryLabel, readMoreLabel }: PostCardProps) {
   return (
     <article className="flex min-h-48 min-w-0 flex-col">
-      <span className="w-fit rounded-full bg-light-bg px-2 py-1 text-xs leading-4 text-slate-500">
+      <span className="w-fit rounded-full bg-light-bg px-2 py-1 text-xs text-slate-500">
         {categoryLabel}
       </span>
 
       <div className="mt-4 h-24 min-w-0">
-        <h3 className="h-8 truncate text-xl font-normal leading-8 text-ink">{post.title}</h3>
-        <p className="mt-4 line-clamp-2 h-12 text-base leading-6 text-gray-500">{post.summary}</p>
+        <h3 className="h-8 truncate text-xl font-normal text-ink">{post.title}</h3>
+        <p className="mt-4 line-clamp-2 h-12 text-base text-gray-500">{post.summary}</p>
       </div>
 
       <Link
         href={getReviewLocalePath(locale, `/blog/${post.slug}`)}
-        className="group mt-4 inline-flex h-8 w-fit items-center gap-1 text-xl leading-8 text-primary transition-colors hover:text-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+        className="group mt-4 inline-flex h-8 w-fit items-center gap-1 text-xl text-primary transition-colors hover:text-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >
         <span>{readMoreLabel}</span>
         <ArrowRight

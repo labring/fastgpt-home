@@ -58,7 +58,7 @@ export default function Hero({ stars: initialStars, locale, t, children }: HeroP
       className="relative pt-[120px] pb-[48px] md:pt-[160px] md:pb-[48px] bg-white overflow-hidden"
       style={{ position: 'relative' }}
     >
-      <div className="mx-auto relative container">
+      <div className="pointer-events-none mx-auto relative container">
         <GradientBlobs large colors={['#FBD0DF', '#D4D6FF', '#C6DBFF', '#EFD6FF']} />
       </div>
 

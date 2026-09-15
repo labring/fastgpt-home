@@ -1,4 +1,5 @@
 name: Preview Home Page — Build
+run-name: Preview ${{ github.event.pull_request.number || github.ref }} / ${{ github.sha }}
 
 on:
   workflow_dispatch:
@@ -6,7 +7,7 @@ on:
 
 # Only one build per PR branch at a time.
 concurrency:
-  group: 'preview-build-${{ github.head_ref }}'
+  group: 'preview-build-${{ github.event.pull_request.number || github.ref }}'
   cancel-in-progress: true
 
 permissions:
@@ -22,13 +23,19 @@ jobs:
       # Public filing text is available to fork PRs without repository secrets.
       NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
       NEXT_PUBLIC_FILING_ADDRESS: '粤ICP备2023048773号'
+      NEXT_PUBLIC_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_SITE_VARIANT: preview
+      NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+      NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
+      NEXT_PUBLIC_CRM_API_URL: ''
+      NEXT_PUBLIC_LANGUAGE_REGION: en-US
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
 
     steps:
-      - name: Checkout PR code
+      - name: Checkout merge result or selected manual revision
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
-          repository: ${{ github.event.pull_request.head.repo.full_name }}
           submodules: recursive
           fetch-depth: 0
 
@@ -37,58 +44,81 @@ jobs:
         with:
           node-version: 24
 
-      - uses: pnpm/action-setup@v4
-        name: Install pnpm
-        with:
-          version: 9
-
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
 
-      - name: Verify footer
-        run: node --test scripts/verify-footer-copy.test.js scripts/verify-footer-tech-link.test.js
+      - name: Select CRM build coverage and record revisions
+        id: coverage
+        run: node scripts/select-preview-builds.js | tee preview-selection.json
 
-      - name: Build and verify CRM-disabled preview
+      - name: Verify shared source once
+        run: npm run verify:release -- --source-only --write-source-record .release-artifacts/source-verification.json
+
+      - name: Retain shared source and revision evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-source
+          path: |
+            .release-artifacts/source-verification.json
+            preview-selection.json
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: Prepare disabled compilation cache
+        id: cache-disabled
+        run: node scripts/prepare-build.js
+
+      - name: Restore disabled compilation cache
+        uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-disabled.outputs.key }}
+          restore-keys: ${{ steps.cache-disabled.outputs.restore-prefix }}
+
+      - name: Produce verified CRM-disabled preview
+        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json --keep-artifacts
+
+      - name: Save disabled compilation cache
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-disabled.outputs.key }}
+
+      - name: Prepare configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        id: cache-configured
         env:
-          NEXT_PUBLIC_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_SITE_VARIANT: preview
-          NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
-          NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
-          # Preview builds must not create real CRM leads.
-          NEXT_PUBLIC_CRM_API_URL: ''
-          NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
-        run: |
-          rm -rf out
-          pnpm run build
-          pnpm run verify:contact
-          pnpm run verify:i18n-seo
-          mv out .preview-build-crm-disabled
-
-      - name: Build and verify configured CRM preview
-        env:
-          NEXT_PUBLIC_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_SITE_VARIANT: preview
-          NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
-          NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
-          NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
-          # This URL is intentionally unreachable; it only exercises the configured form build.
           NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-          NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
-        run: |
-          rm -rf out
-          pnpm run build
-          pnpm run verify:contact
-          pnpm run verify:i18n-seo
-          rm -rf out
-          mv .preview-build-crm-disabled out
+        run: node scripts/prepare-build.js
+
+      - name: Restore configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-configured.outputs.key }}
+          restore-keys: ${{ steps.cache-configured.outputs.restore-prefix }}
+
+      - name: Produce verified configured CRM preview
+        if: steps.coverage.outputs.configured == 'true'
+        env:
+          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
+        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json --keep-artifacts
+
+      - name: Save configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-configured.outputs.key }}
 
       - name: Verify preview filing links
         run: |
           node <<'NODE'
           const assert = require('node:assert/strict');
           const fs = require('node:fs');
-          const html = fs.readFileSync('out/zh.html', 'utf8');
+          const html = fs.readFileSync('.release-artifacts/site/preview-disabled/payload/out/zh.html', 'utf8');
           const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
           assert(footer, 'Chinese preview must render its footer');
           for (const [key, href] of [
@@ -102,13 +132,35 @@ jobs:
           console.log('Preview filing links verified');
           NODE
 
-      # Save PR number so the deploy workflow knows which PR to comment on.
-      - name: Save PR metadata
-        run: echo "${{ github.event.pull_request.number }}" > ./out/pr-number.txt
+      - name: Check out the consumer separately from candidate build dependencies
+        uses: actions/checkout@v4
+        with:
+          path: .preview-verifier
+          persist-credentials: false
+          sparse-checkout-cone-mode: false
+          sparse-checkout: |
+            scripts/lib/
+            scripts/verify-preview-artifact.js
+            src/config/site-routing.json
 
-      - name: Upload build artifact
+      - name: Exercise the deployment consumer on the complete Preview artifact
+        run: node .preview-verifier/scripts/verify-preview-artifact.js --bundle .release-artifacts/site/preview-disabled --candidate . --revision "$(git rev-parse HEAD)"
+
+      - name: Upload verified disabled preview
         uses: actions/upload-artifact@v4
         with:
-          name: preview-build
-          path: ./out
-          retention-days: 1
+          name: verified-preview
+          path: .release-artifacts/site/preview-disabled
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
+
+      - name: Retain configured verification evidence
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/upload-artifact@v4
+        with:
+          name: configured-preview-evidence
+          path: .release-artifacts/site/preview-configured
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error

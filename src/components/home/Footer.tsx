@@ -1,3 +1,4 @@
+import { getPublicationUrls } from '@/lib/siteRouting';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
 import { assets } from '@/components/home/assets';
 import Image from 'next/image';
@@ -72,7 +73,7 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
       items: [
         {
           label: t.links.items.docs,
-          href: 'https://doc.fastgpt.io/docs/introduction',
+          href: getPublicationUrls('https://doc.fastgpt.io/docs/introduction'),
           external: true
         },
         {
@@ -82,8 +83,8 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
         },
         {
           label: t.links.items.learning,
-          href: 'https://video.fastgpt.cn/videos',
-          external: true
+          href: normalizedLocale === 'zh' ? '/videos' : 'https://video.fastgpt.cn/videos',
+          external: normalizedLocale !== 'zh'
         },
         {
           label: t.links.items.cases,

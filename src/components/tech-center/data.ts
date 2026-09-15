@@ -49,9 +49,16 @@ export type {
 export { COMMON_TOPICS, PAGE_SIZE } from './constants';
 
 export const TECH_ENTRIES = entries as TechEntry[];
+const entriesByLocale = new Map<string, TechEntry[]>();
+for (const entry of TECH_ENTRIES) {
+  const { locale } = getTechnicalPageIdentity(entry);
+  const group = entriesByLocale.get(locale) || [];
+  group.push(entry);
+  entriesByLocale.set(locale, group);
+}
 
 export function getTechEntriesForLocale(locale: string) {
-  return TECH_ENTRIES.filter((entry) => getTechnicalPageIdentity(entry).locale === locale);
+  return entriesByLocale.get(locale) || [];
 }
 
 export function getTechCenterPaginationParams(locale: string) {

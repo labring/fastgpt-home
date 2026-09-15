@@ -3,32 +3,9 @@ name: Guide Release Verification
 on:
   workflow_dispatch:
   pull_request:
-    paths:
-      - '.github/workflows/guide-release-verification.yml'
-      - '.github/workflows/fastgpt-home-image.yml'
-      - 'src/**'
-      - 'content/**'
-      - 'content/competitors/**'
-      - 'public/**'
-      - 'scripts/**'
-      - 'docs/release/**'
-      - 'scripts/verify-content-hygiene.js'
-      - 'scripts/fix-html-lang.js'
-      - 'Dockerfile.verify'
-      - 'Dockerfile'
-      - '.dockerignore'
-      - 'next.config.js'
-      - 'package.json'
-      - 'package-lock.json'
-      - 'postcss.config.js'
-      - 'tailwind.config.ts'
-      - 'tsconfig.json'
-      - 'nginx.conf'
-      - 'nginx-security-headers.conf'
-      - 'nginx-embeddable-security-headers.conf'
 
 concurrency:
-  group: guide-release-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  group: guide-release-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -38,55 +15,102 @@ env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  verify:
+  source:
     runs-on: ubuntu-24.04
-
+    timeout-minutes: 20
+    outputs:
+      revision: ${{ steps.inputs.outputs.revision }}
+      matrix: ${{ steps.inputs.outputs.matrix }}
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - name: Resolve this workflow's publication inputs
+        id: inputs
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const revision = require('node:child_process').execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
+            const matrix = [{variant:'cn',crm:'configured'}, {variant:'io',crm:'configured'}];
+            if (context.eventName === 'workflow_dispatch') {
+              matrix.push({variant:'preview',crm:'disabled'}, {variant:'preview',crm:'configured'});
+            }
+            core.setOutput('revision', revision);
+            core.setOutput('matrix', JSON.stringify(matrix));
+      - name: Verify this workflow's source once
+        run: |
+          npm ci
+          npm run verify:release -- --source-only --write-source-record source/.release-artifacts/source-verification.json
+      - uses: actions/upload-artifact@v4
+        with:
+          name: guide-shared-source
+          path: source/.release-artifacts/source-verification.json
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: error
 
+  verify:
+    needs: source
+    runs-on: ubuntu-24.04
+    strategy:
+      fail-fast: false
+      matrix:
+        include: ${{ fromJSON(needs.source.outputs.matrix) }}
+    env:
+      NEXT_PUBLIC_SITE_VARIANT: ${{ matrix.variant }}
+      NEXT_PUBLIC_HOME_URL: ${{ matrix.variant == 'cn' && 'https://fastgpt.cn' || 'https://fastgpt.io' }}
+      NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+      NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_LANGUAGE_REGION: ${{ matrix.variant == 'cn' && 'zh-CN' || 'en-US' }}
+      NEXT_PUBLIC_USER_URL: ${{ matrix.variant == 'cn' && 'https://cloud.fastgpt.cn' || 'https://cloud.fastgpt.io' }}
+      NEXT_PUBLIC_CRM_API_URL: ${{ matrix.crm == 'configured' && 'https://crm-preview.invalid' || '' }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ needs.source.outputs.revision }}
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 24
           cache: npm
-
-      - name: Verify three-variant release evidence
+      - run: npm ci
+      - uses: actions/download-artifact@v4
+        with:
+          name: guide-shared-source
+          path: shared-source
+      - name: Identify compilation cache
+        id: compilation
+        run: node scripts/prepare-build.js
+      - uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.compilation.outputs.key }}
+          restore-keys: ${{ steps.compilation.outputs.restore-prefix }}
+      - name: Install the existing Nginx black-box dependency
+        if: matrix.variant == 'cn'
+        run: sudo apt-get update && sudo apt-get install -y nginx
+      - name: Produce isolated verified Site Artifact
+        run: npm run verify:release -- --variant ${{ matrix.variant }} --reuse-source shared-source/source-verification.json --keep-artifacts
+      - uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.compilation.outputs.key }}
+      - name: Package and verify the accepted CN runtime
+        if: matrix.variant == 'cn'
         run: |
-          npm ci
-          npm run verify:release -- --keep-artifacts
-
-      - name: Upload release verification record and artifacts
+          node -e "const {getPublicationInputs,siteArtifactIdentity}=require('./scripts/lib/site-artifact-identity');require('node:fs').writeFileSync('expected-site.json', JSON.stringify(getPublicationInputs(siteArtifactIdentity())))"
+          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/cn-configured --identity expected-site.json
+          docker build --file Dockerfile --tag fastgpt-home-verified:${{ github.run_id }} .release-artifacts/site/cn-configured
+          node scripts/verify-url-alias-blackbox.js --variant cn --image fastgpt-home-verified:${{ github.run_id }} --out-dir .release-artifacts/site/cn-configured/payload/out
+      - name: Retain verification evidence and complete deliverable
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: technical-content-release-evidence
+          name: technical-content-release-evidence-${{ matrix.variant }}-${{ matrix.crm }}
           path: .release-artifacts
           retention-days: 90
           if-no-files-found: ignore
           include-hidden-files: true
-
-      - name: Summarize website verification
-        if: always()
-        run: |
-          {
-            echo '## Website verification'
-            echo '- Record: `.release-artifacts/release-verification.json`'
-            echo '- Uploaded artifact: `technical-content-release-evidence` (90-day retention)'
-          } >> "$GITHUB_STEP_SUMMARY"
-
-  verify-runtime:
-    name: Verify Docker runtime
-    runs-on: ubuntu-24.04
-
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Build runtime image and validate Nginx
-        run: |
-          docker build --target runtime \
-            --build-arg NEXT_PUBLIC_SITE_VARIANT=cn \
-            --build-arg NEXT_PUBLIC_HOME_URL=https://fastgpt.cn \
-            --build-arg NEXT_PUBLIC_CN_HOME_URL=https://fastgpt.cn \
-            --build-arg NEXT_PUBLIC_IO_HOME_URL=https://fastgpt.io \
-            --tag fastgpt-home-runtime:${{ github.sha }} .

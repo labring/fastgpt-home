@@ -199,12 +199,65 @@ function findElement(node, type) {
   }
 }
 
-test('consultation snapshot props flow from dialog through content to ContactForm', () => {
+test('CRM-disabled Preview retains its form, explanation, disabled submit, and zero requests', async () => {
+  const env = browser(false, { NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: '' });
+  const requests = [];
+  env.mocks['@/lib/fetchWithTimeout'] = {
+    fetchWithTimeout: async (...args) => requests.push(args)
+  };
+  const form = renderForm(env);
+  const rendered = form.render();
+  assert.equal(rendered.type, 'form');
+  assert.match(JSON.stringify(rendered), /data-crm-preview/);
+  assert.match(JSON.stringify(rendered), /预览/);
+  assert.equal(findElement(rendered, 'button').props.disabled, true);
+  await form.submit();
+  await flushBackgroundWork();
+  assert.equal(requests.length, 0);
+});
+
+test('production variants retain the CRM configuration error', () => {
+  for (const variant of ['cn', 'io']) {
+    const env = browser(false, { NEXT_PUBLIC_SITE_VARIANT: variant, NEXT_PUBLIC_CRM_API_URL: '' });
+    const rendered = renderForm(env).render();
+    assert.equal(rendered.props.role, 'alert');
+    assert.equal(rendered.props['data-crm-config-error'], true);
+    assert.equal(findElement(rendered, 'form'), undefined);
+  }
+});
+
+test('configured Preview submits intercepted attribution and recovers after CRM failure', async () => {
+  const env = browser(false, {
+    NEXT_PUBLIC_SITE_VARIANT: 'preview', NEXT_PUBLIC_CRM_API_URL: 'https://crm-preview.invalid'
+  });
+  let succeed = false;
+  const requests = [];
+  env.mocks['@/lib/fetchWithTimeout'] = {
+    fetchWithTimeout: async (url, options) => {
+      if (url.endsWith('/contacts/submit')) requests.push({ url, body: JSON.parse(options.body) });
+      return { ok: succeed, status: succeed ? 200 : 500, json: async () => ({ submission_id: 'test' }) };
+    }
+  };
+  const form = renderForm(env);
+  assert.equal(findElement(form.render(), 'button').props.disabled, false);
+  await form.submit();
+  assert.equal(form.render().type, 'form');
+  assert.equal(findElement(form.render(), 'button').props.disabled, false);
+  succeed = true;
+  await form.submit();
+  assert.equal(form.render().props.role, 'status');
+  assert.equal(requests.length, 2);
+  assert.equal(requests[0].url, 'https://crm-preview.invalid/contacts/submit');
+  assert(requests[1].body.visitor_id);
+  assert.equal(requests[1].body.visitor_id, requests[0].body.visitor_id);
+});
+
+test('consultation locale and snapshot props flow from dialog through content to ContactForm', () => {
   const capture = {
     source: '案例详情-顶部商务咨询',
     entryPageUrl: '案例详情-顶部商务咨询｜https://fastgpt.cn/customers'
   };
-  const dialogEnv = browser();
+  const dialogEnv = browser(false, { NEXT_PUBLIC_SITE_VARIANT: 'preview' });
   const dialogState = [];
   let dialogCursor = 0;
   const ContentStub = () => null;
@@ -227,7 +280,7 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   };
   const Dialog = dialogEnv.load('src/components/consultation/ConsultationDialog.tsx').default;
   Dialog();
-  const trigger = new dialogEnv.Element('/contact?source=customers');
+  const trigger = new dialogEnv.Element('/zh/contact?source=customers');
   trigger.dataset = { rybbitPropSource: 'customers_hero' };
   trigger.closest = () => trigger;
   dialogEnv.listeners.click({
@@ -238,6 +291,7 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   });
   dialogCursor = 0;
   const contentElement = findElement(Dialog(), ContentStub);
+  assert.equal(contentElement?.props.locale, 'zh');
   assert.equal(contentElement?.props.rybbitConsultCapture?.source, capture.source);
   assert.equal(contentElement?.props.rybbitConsultCapture?.entryPageUrl, capture.entryPageUrl);
 
@@ -268,7 +322,7 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   const Content = contentEnv.load('src/components/consultation/ConsultationDialogContent.tsx').default;
   const formElement = findElement(
     Content({
-      locale: 'zh',
+      locale: contentElement.props.locale,
       submissionSource: 'customers',
       rybbitConsultCapture: capture,
       triggerRef: { current: null },
@@ -278,6 +332,14 @@ test('consultation snapshot props flow from dialog through content to ContactFor
   );
   assert.equal(formElement?.props.rybbitConsultCapture?.source, capture.source);
   assert.equal(formElement?.props.rybbitConsultCapture?.entryPageUrl, capture.entryPageUrl);
+  assert.equal(formElement?.props.locale, 'zh');
+
+  for (const [href, expected] of [['/zh-hant/contact', 'zh-hant'], ['/contact', 'en']]) {
+    trigger.href = href;
+    dialogEnv.listeners.click({ target: trigger, button: 0, preventDefault() {} });
+    dialogCursor = 0;
+    assert.equal(findElement(Dialog(), ContentStub)?.props.locale, expected);
+  }
 });
 
 const sources = [

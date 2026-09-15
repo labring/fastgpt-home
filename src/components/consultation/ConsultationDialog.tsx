@@ -2,7 +2,7 @@
 
 import { lazy, Suspense, useEffect, useRef, useState } from 'react';
 import { useParams, usePathname } from 'next/navigation';
-import { normalizeLocale } from '@/lib/locales';
+import { isSupportedLocale, normalizeLocale } from '@/lib/locales';
 import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 import { createRybbitConsultCapture, type RybbitConsultCapture } from '@/lib/rybbitConversion';
 
@@ -22,6 +22,7 @@ export default function ConsultationDialog() {
   const locale = normalizeLocale(params?.lang || getDefaultLocaleForSiteVariant());
 
   const [open, setOpen] = useState(false);
+  const [dialogLocale, setDialogLocale] = useState(locale);
   const [submissionSource, setSubmissionSource] = useState<string>();
   const [rybbitConsultCapture, setRybbitConsultCapture] = useState<RybbitConsultCapture>();
   const triggerRef = useRef<HTMLAnchorElement | null>(null);
@@ -47,13 +48,15 @@ export default function ConsultationDialog() {
       setRybbitConsultCapture(sourceId ? createRybbitConsultCapture(sourceId) : undefined);
       setSubmissionSource(pathname?.startsWith('/customers') ? CUSTOMERS_SOURCE : HOME_SOURCE);
       setOpen(true);
+      const contactLocale = new URL(trigger.href, window.location.href).pathname.split('/')[1];
+      setDialogLocale(isSupportedLocale(contactLocale) ? contactLocale : locale);
     };
 
     // 捕获阶段监听：必须在 Next.js <Link> 的 client-side navigation（React 合成事件）之前
     // preventDefault，否则用 <Link> 的咨询按钮会在弹窗拦截前就完成路由跳转。
     document.addEventListener('click', handleConsultationClick, true);
     return () => document.removeEventListener('click', handleConsultationClick, true);
-  }, [pathname]);
+  }, [pathname, locale]);
 
   if (!open) {
     return null;
@@ -62,7 +65,7 @@ export default function ConsultationDialog() {
   return (
     <Suspense>
       <ConsultationDialogContent
-        locale={locale}
+        locale={dialogLocale}
         submissionSource={submissionSource}
         rybbitConsultCapture={rybbitConsultCapture}
         triggerRef={triggerRef}

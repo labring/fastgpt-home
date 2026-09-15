@@ -22,7 +22,9 @@ const OUT_DIR = path.join(ROOT, 'out');
 const RETAIN_DIR = path.join(ROOT, '.release-artifacts');
 
 function clearBuildArtifacts() {
-  fs.rmSync(NEXT_DIR, { recursive: true, force: true });
+  for (const entry of fs.existsSync(NEXT_DIR) ? fs.readdirSync(NEXT_DIR) : []) {
+    if (entry !== 'cache') fs.rmSync(path.join(NEXT_DIR, entry), { recursive: true, force: true });
+  }
   fs.rmSync(OUT_DIR, { recursive: true, force: true });
 }
 
@@ -74,7 +76,7 @@ function assertCaseSensitiveFilesystem() {
     if (!caseSensitive) {
       const [first, second] = findCaseFoldCollisionPair();
       throw new Error(
-        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`
+        `case-insensitive filesystem detected for published FAQ routes ${first} and ${second}; run the Guide Release Verification workflow, docker build --build-arg BUILD_SOURCE_REVISION=$(git rev-parse HEAD) --file Dockerfile.verify --tag fastgpt-guide-release-verify ., or use a case-sensitive APFS workspace (source-only remains available)`
       );
     }
   } finally {

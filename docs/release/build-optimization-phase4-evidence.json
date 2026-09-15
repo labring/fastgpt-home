@@ -1,0 +1,328 @@
+{
+  "codeRevision": "9a9126b11d39e130724e57537f6268390cb497ad",
+  "tests": {
+    "command": "node --test --test-concurrency=1 <all 34 scripts/**/*.test.js files>",
+    "passed": 253,
+    "failed": 0,
+    "skipped": 1,
+    "skipReason": "The React-server-only test is skipped in the ordinary parent process and passes in its dedicated real React server subprocess.",
+    "typecheck": "passed",
+    "lint": "passed"
+  },
+  "fullRelease": {
+    "sourceRevision": "a7bd701f6d06f38cd458319914ba1f983be330e1",
+    "status": "export-verified",
+    "startedAt": "2026-09-13T08:52:21.517Z",
+    "finishedAt": "2026-09-13T09:06:28.371Z",
+    "variants": [
+      {
+        "variant": "cn",
+        "outcome": "export-verified",
+        "buildDurationMs": 236244
+      },
+      {
+        "variant": "io",
+        "outcome": "export-verified",
+        "buildDurationMs": 105631
+      },
+      {
+        "variant": "preview",
+        "outcome": "export-verified",
+        "buildDurationMs": 368109
+      }
+    ],
+    "commandCount": 84,
+    "failures": [],
+    "outputs": [
+      {
+        "variant": "cn",
+        "bytes": 1226696350,
+        "sha256": "3f4d2e9b29a60600734e257bc98d2f1ae7510baeeabf363c90754793913e7ee7",
+        "fileCount": 8113
+      },
+      {
+        "variant": "io",
+        "bytes": 568451214,
+        "sha256": "99b2d6776f45a4dcbc2595de158a049aa761943dfe3164ef3552c5d4dfadf544",
+        "fileCount": 2712
+      },
+      {
+        "variant": "preview",
+        "bytes": 2714639708,
+        "sha256": "3037d965b05a898a37e817ecfc61a39388eedf5bbe2d8df6d9fcc0503744f872",
+        "fileCount": 8888
+      }
+    ],
+    "bundles": [
+      {
+        "name": "cn-configured",
+        "identity": {
+          "sourceRevision": "a7bd701f6d06f38cd458319914ba1f983be330e1",
+          "lockfileDigest": "deb74955d7e669471ffdea38a06b0e505cad6ba3b2dcff3b3f73dd9de0ddf7cc",
+          "nodeVersion": "v24.13.0",
+          "platform": "darwin",
+          "architecture": "arm64",
+          "siteVariant": "cn",
+          "crmMode": "configured",
+          "publicSettings": {
+            "NEXT_PUBLIC_CN_HOME_URL": "https://fastgpt.cn",
+            "NEXT_PUBLIC_CRM_API_URL": "https://crm-preview.invalid",
+            "NEXT_PUBLIC_HOME_URL": "https://fastgpt.cn",
+            "NEXT_PUBLIC_IO_HOME_URL": "https://fastgpt.io",
+            "NEXT_PUBLIC_LANGUAGE_REGION": "zh-CN",
+            "NEXT_PUBLIC_SITE_VARIANT": "cn"
+          },
+          "cnDomainPolicy": "doc-and-cloud-cn-v1",
+          "cachePrefix": "next-1dafb64e6c4da0a8d2590f6a125c65dd13302b37dd3cdc463f9bfeadb6177c64-",
+          "cacheKey": "next-1dafb64e6c4da0a8d2590f6a125c65dd13302b37dd3cdc463f9bfeadb6177c64-a7bd701f6d06f38cd458319914ba1f983be330e1"
+        },
+        "payloadBytes": 1231087125,
+        "payloadSha256": "a4ee268fd81af09c35956fe151a4e511055936e2cab402f18e80718259a9bea2",
+        "payloadFileCount": 8124
+      },
+      {
+        "name": "io-configured",
+        "identity": {
+          "sourceRevision": "a7bd701f6d06f38cd458319914ba1f983be330e1",
+          "lockfileDigest": "deb74955d7e669471ffdea38a06b0e505cad6ba3b2dcff3b3f73dd9de0ddf7cc",
+          "nodeVersion": "v24.13.0",
+          "platform": "darwin",
+          "architecture": "arm64",
+          "siteVariant": "io",
+          "crmMode": "configured",
+          "publicSettings": {
+            "NEXT_PUBLIC_CN_HOME_URL": "https://fastgpt.cn",
+            "NEXT_PUBLIC_CRM_API_URL": "https://crm-preview.invalid",
+            "NEXT_PUBLIC_HOME_URL": "https://fastgpt.io",
+            "NEXT_PUBLIC_IO_HOME_URL": "https://fastgpt.io",
+            "NEXT_PUBLIC_LANGUAGE_REGION": "en-US",
+            "NEXT_PUBLIC_SITE_VARIANT": "io"
+          },
+          "cnDomainPolicy": "unchanged",
+          "cachePrefix": "next-4e99d7337649644c2ac1b87c94df64d4af95642e0a954103ec27137cc2739ed2-",
+          "cacheKey": "next-4e99d7337649644c2ac1b87c94df64d4af95642e0a954103ec27137cc2739ed2-a7bd701f6d06f38cd458319914ba1f983be330e1"
+        },
+        "payloadBytes": 574249818,
+        "payloadSha256": "52da264e0392799c749acbdc6391735e8ac725c444cb0bd70d8c2cd4dad5beea",
+        "payloadFileCount": 2719
+      },
+      {
+        "name": "preview-disabled",
+        "identity": {
+          "sourceRevision": "a7bd701f6d06f38cd458319914ba1f983be330e1",
+          "lockfileDigest": "deb74955d7e669471ffdea38a06b0e505cad6ba3b2dcff3b3f73dd9de0ddf7cc",
+          "nodeVersion": "v24.13.0",
+          "platform": "darwin",
+          "architecture": "arm64",
+          "siteVariant": "preview",
+          "crmMode": "disabled",
+          "publicSettings": {
+            "NEXT_PUBLIC_CN_HOME_URL": "https://fastgpt.cn",
+            "NEXT_PUBLIC_HOME_URL": "https://fastgpt.io",
+            "NEXT_PUBLIC_IO_HOME_URL": "https://fastgpt.io",
+            "NEXT_PUBLIC_LANGUAGE_REGION": "en-US",
+            "NEXT_PUBLIC_SITE_VARIANT": "preview"
+          },
+          "cnDomainPolicy": "unchanged",
+          "cachePrefix": "next-4f1f48fbeea098e23ce21e1163c6c5365172bd3566d806f4f846c524ed9587ef-",
+          "cacheKey": "next-4f1f48fbeea098e23ce21e1163c6c5365172bd3566d806f4f846c524ed9587ef-a7bd701f6d06f38cd458319914ba1f983be330e1"
+        },
+        "payloadBytes": 2721189323,
+        "payloadSha256": "3d8e4dbd96e2d8508fa25d819d3e45e9fe7a471d24caee9307982f634fbc58e9",
+        "payloadFileCount": 8889
+      }
+    ]
+  },
+  "controlledLocalBuilds": {
+    "base": "a7bd701f6d06f38cd458319914ba1f983be330e1",
+    "controlledRevision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+    "node": "v24.13.0",
+    "platform": "darwin",
+    "architecture": "arm64",
+    "settings": {
+      "NEXT_PUBLIC_SITE_VARIANT": "preview",
+      "NEXT_PUBLIC_HOME_URL": "https://fastgpt.io",
+      "NEXT_PUBLIC_CN_HOME_URL": "https://fastgpt.cn",
+      "NEXT_PUBLIC_IO_HOME_URL": "https://fastgpt.io",
+      "NEXT_PUBLIC_LANGUAGE_REGION": "en-US",
+      "NEXT_PUBLIC_USER_URL": "https://cloud.fastgpt.io",
+      "NEXT_PUBLIC_CRM_API_URL": "",
+      "NEXT_PUBLIC_ATTRIBUTION_SOURCE": "",
+      "NEXT_PUBLIC_POLICE_FILING": "浙公网安备33011002017871号",
+      "NEXT_PUBLIC_FILING_ADDRESS": "粤ICP备2023048773号"
+    },
+    "note": "Six complete Preview builds use one fixed revision and one isolated extra reference article. The production build code is identical to the final code revision; the later change only shortens release CLI test fixtures.",
+    "trials": [
+      {
+        "label": "cold-1",
+        "durationMs": 356493,
+        "status": 0,
+        "revision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "cacheRestored": false,
+        "cacheKey": "next-9c480b2bb83afe3a501ad11266c195e16de515a7817e4693cf621969ed1663fa-6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "maximumRssBytes": 2649849856,
+        "compileSeconds": 26.1,
+        "htmlFiles": 8547
+      },
+      {
+        "label": "warm-1",
+        "durationMs": 366596,
+        "status": 0,
+        "revision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "cacheRestored": true,
+        "cacheKey": "next-9c480b2bb83afe3a501ad11266c195e16de515a7817e4693cf621969ed1663fa-6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "maximumRssBytes": 801914880,
+        "compileSeconds": 2.7,
+        "htmlFiles": 8547
+      },
+      {
+        "label": "cold-2",
+        "durationMs": 392291,
+        "status": 0,
+        "revision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "cacheRestored": false,
+        "cacheKey": "next-9c480b2bb83afe3a501ad11266c195e16de515a7817e4693cf621969ed1663fa-6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "maximumRssBytes": 2687500288,
+        "compileSeconds": 34.6,
+        "htmlFiles": 8547
+      },
+      {
+        "label": "warm-2",
+        "durationMs": 327909,
+        "status": 0,
+        "revision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "cacheRestored": true,
+        "cacheKey": "next-9c480b2bb83afe3a501ad11266c195e16de515a7817e4693cf621969ed1663fa-6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "maximumRssBytes": 796573696,
+        "compileSeconds": 2.5,
+        "htmlFiles": 8547
+      },
+      {
+        "label": "cold-3",
+        "durationMs": 358220,
+        "status": 0,
+        "revision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "cacheRestored": false,
+        "cacheKey": "next-9c480b2bb83afe3a501ad11266c195e16de515a7817e4693cf621969ed1663fa-6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "maximumRssBytes": 2753740800,
+        "compileSeconds": 22.9,
+        "htmlFiles": 8547
+      },
+      {
+        "label": "warm-3",
+        "durationMs": 335117,
+        "status": 0,
+        "revision": "6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "cacheRestored": true,
+        "cacheKey": "next-9c480b2bb83afe3a501ad11266c195e16de515a7817e4693cf621969ed1663fa-6cf43dfe7b80ae25c08a12fd3c9dc0edb28ee82b",
+        "maximumRssBytes": 789299200,
+        "compileSeconds": 2.4,
+        "htmlFiles": 8547
+      }
+    ],
+    "coldMedianMs": 358220,
+    "warmMedianMs": 335117,
+    "medianReductionPercent": 6.449388643850148
+  },
+  "warmCacheFreshness": {
+    "cases": [
+      {
+        "label": "single-article-edit",
+        "durationMs": 343810,
+        "status": 0,
+        "revision": "6f328b11ea64fec5f2311bd42a13451f4aed8eaa",
+        "cacheRestored": true,
+        "freshnessPassed": true,
+        "buildCount": 1
+      },
+      {
+        "label": "rename",
+        "durationMs": 336105,
+        "status": 0,
+        "revision": "110f09f986bdde863565e1de93555cdd74cfbf03",
+        "cacheRestored": true,
+        "freshnessPassed": true,
+        "buildCount": 2
+      },
+      {
+        "label": "deletion",
+        "durationMs": 343668,
+        "status": 0,
+        "revision": "b281bf498bc05f55d518616aa9403135628607eb",
+        "cacheRestored": true,
+        "freshnessPassed": true,
+        "buildCount": 2
+      },
+      {
+        "label": "batch-edit",
+        "durationMs": 338388,
+        "status": 0,
+        "revision": "1d843be3395bdf8faaedc8d8261b846930b8e3c5",
+        "cacheRestored": true,
+        "freshnessPassed": true,
+        "buildCount": 1
+      },
+      {
+        "label": "shared-component-edit",
+        "durationMs": 338752,
+        "status": 0,
+        "revision": "b71657d00cc19e787f059e02b37de0fba081ece0",
+        "cacheRestored": true,
+        "freshnessPassed": true,
+        "buildCount": 2,
+        "verificationNote": "Checked the actual default-locale home export, out/index.html. The initial fixture expected out/en.html; the successful build was reused for the corrected assertion."
+      }
+    ],
+    "selectionNote": "Rename and deletion update generated public search projections outside the approved initial content allowlist, so their complete changesets correctly select two CRM builds. Body-only and batch Markdown edits select one; the shared component selects two."
+  },
+  "hostedVerification": [
+    {
+      "name": "preview",
+      "runId": 34749262467,
+      "url": "https://github.com/labring/fastgpt-home/actions/runs/34749262467",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "build",
+          "conclusion": "success",
+          "durationSeconds": 1254
+        }
+      ]
+    },
+    {
+      "name": "guide",
+      "runId": 34749262428,
+      "url": "https://github.com/labring/fastgpt-home/actions/runs/34749262428",
+      "status": "completed",
+      "conclusion": "success",
+      "jobs": [
+        {
+          "name": "source",
+          "conclusion": "success",
+          "durationSeconds": 167
+        },
+        {
+          "name": "verify (cn, configured)",
+          "conclusion": "success",
+          "durationSeconds": 369
+        },
+        {
+          "name": "verify (io, configured)",
+          "conclusion": "success",
+          "durationSeconds": 184
+        }
+      ]
+    }
+  ],
+  "hostedPerformance": {
+    "runId": 34749874401,
+    "url": "https://github.com/labring/fastgpt-home/actions/runs/34749874401",
+    "resultTable": "https://github.com/labring/fastgpt-home/pull/307",
+    "sourceRevision": "cebc9badbe9a5f32a8d90488983cf3ba13811334",
+    "runner": "ubuntu-24.04",
+    "method": "Three cold and three restored-cache attempts on one fixed content-only PR merge revision. Only the experiment-owned Preview compiler cache is removed for cold attempts.",
+    "transportQualification": "The isolated benchmark base adds a legacy transport upload for the current default-branch deploy workflow. Its measured preparation/upload cost is reported separately. The new privileged consumer takes effect when phase four reaches the default branch."
+  },
+  "rollback": "Revert deployed phases in reverse order. Phase four consumes the identity helpers introduced in phase three. Production rollback restores the previous immutable image digest containing its website and runtime/redirect configuration."
+}

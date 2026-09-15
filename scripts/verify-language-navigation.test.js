@@ -69,6 +69,7 @@ test('navigation hrefs retain locale paths, fragments, and external destinations
     const chineseRoot = variant === 'cn' ? '' : '/zh';
     const englishRoot = variant === 'cn' ? '/en' : '';
     assert.equal(getNavHref('/price', 'zh'), `${chineseRoot}/price`);
+    assert.equal(getNavHref('/videos', 'zh'), '/videos');
     assert.equal(getNavHref('/zh/price', 'zh'), `${chineseRoot}/price`);
     assert.equal(getNavHref('/price', 'en'), `${englishRoot}/price`);
     assert.equal(getNavHref('#faq', 'zh'), `${chineseRoot || '/'}#faq`);

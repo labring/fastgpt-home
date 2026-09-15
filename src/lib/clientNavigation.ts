@@ -51,6 +51,9 @@ export function getNavHref(href: string, lang: string): string {
   if (!href) return '/';
   href = href.trim();
 
+  // The Chinese learning center has a root-only route, including preview builds.
+  if (href === '/videos') return href;
+
   if (/^(https?:)?\/\//.test(href)) {
     return href;
   }

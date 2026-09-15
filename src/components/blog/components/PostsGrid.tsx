@@ -1,4 +1,4 @@
-import type { BlogListPost } from '../blogPagination';
+import { getBlogPostKey, type BlogListPost } from '../blogPagination';
 import PostCard from './PostCard';
 
 type PostsGridProps = {
@@ -24,7 +24,7 @@ export default function PostsGrid({
     <div className="grid grid-cols-1 gap-y-10 md:grid-cols-2 md:gap-x-8 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-20">
       {posts.map((post) => (
         <PostCard
-          key={`${post.locale}/${post.slug}`}
+          key={getBlogPostKey(post)}
           post={post}
           locale={locale}
           categoryLabel={categoryLabels[post.category] || post.category}

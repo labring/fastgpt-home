@@ -38,14 +38,16 @@ export default function ArticleLayoutSection({
   return (
     <section className="bg-white pb-20 md:pb-32 lg:pb-48">
       <div className="container grid max-w-screen-2xl grid-cols-1 gap-6 lg:grid-cols-12 lg:gap-y-16">
-        <ArticleHeaderSection
-          post={post}
-          locale={locale}
-          backLabel={backLabel}
-          categoryLabel={categoryLabel}
-          formatDate={formatDate}
-        />
-        <ArticleContentSection post={post} locale={locale} cta={cta} />
+        <div className="contents" data-pagefind-body>
+          <ArticleHeaderSection
+            post={post}
+            locale={locale}
+            backLabel={backLabel}
+            categoryLabel={categoryLabel}
+            formatDate={formatDate}
+          />
+          <ArticleContentSection post={post} locale={locale} cta={cta} />
+        </div>
         <RelatedPostsSection
           posts={relatedPosts}
           locale={locale}

@@ -25,7 +25,10 @@ export default function ArticleContentSection({ post, locale, cta }: ArticleCont
       <article className="prose col-span-full mx-auto min-w-0 max-w-5xl text-base text-ink-sub md:text-lg lg:col-span-8 lg:col-start-3 lg:row-start-2">
         <MDXContent code={post.mdx} />
       </article>
-      <aside className="hidden self-start lg:sticky lg:top-24 lg:col-span-2 lg:col-start-11 lg:row-span-2 lg:row-start-2 lg:block">
+      <aside
+        className="hidden self-start lg:sticky lg:top-24 lg:col-span-2 lg:col-start-11 lg:row-span-2 lg:row-start-2 lg:block"
+        data-pagefind-ignore
+      >
         <BlogArticleCta
           locale={locale}
           title={cta.title}

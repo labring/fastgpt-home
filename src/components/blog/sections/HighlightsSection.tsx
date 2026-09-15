@@ -1,5 +1,5 @@
 import HighlightPost from '@/components/blog/components/HighlightPost';
-import type { BlogListPost } from '@/components/blog/blogPagination';
+import { getBlogPostKey, type BlogListPost } from '@/components/blog/blogPagination';
 
 type HighlightsSectionProps = {
   posts: BlogListPost[];
@@ -30,7 +30,7 @@ export default function HighlightsSection({
         <div className="grid gap-8 sm:grid-cols-2 lg:col-span-3 lg:grid-cols-1">
           {secondary.map((post) => (
             <HighlightPost
-              key={`${post.locale}/${post.slug}`}
+              key={getBlogPostKey(post)}
               post={post}
               locale={locale}
               categoryLabel={categoryLabels[post.category] || post.category}

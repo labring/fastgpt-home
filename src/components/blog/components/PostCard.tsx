@@ -15,6 +15,8 @@ type PostCardProps = {
 };
 
 export default function PostCard({ post, locale, categoryLabel, readMoreLabel }: PostCardProps) {
+  const href = post.href || getReviewLocalePath(locale, `/blog/${post.slug}`);
+
   return (
     <article className="flex min-h-48 min-w-0 flex-col">
       <span className="w-fit rounded-full bg-light-bg px-2 py-1 text-xs text-slate-500">
@@ -27,7 +29,7 @@ export default function PostCard({ post, locale, categoryLabel, readMoreLabel }:
       </div>
 
       <Link
-        href={getReviewLocalePath(locale, `/blog/${post.slug}`)}
+        href={href}
         className="group mt-4 inline-flex h-8 w-fit items-center gap-1 text-xl text-primary transition-colors hover:text-primary-dark focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
       >
         <span>{readMoreLabel}</span>

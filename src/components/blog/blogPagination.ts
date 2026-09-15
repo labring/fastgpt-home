@@ -9,6 +9,7 @@ export type BlogListPost = Pick<
   'locale' | 'slug' | 'category' | 'title' | 'summary' | 'thumbnail'
 > & {
   date: string;
+  href?: string;
 };
 
 export function toBlogListPost(post: BlogPost): BlogListPost {
@@ -21,4 +22,8 @@ export function toBlogListPost(post: BlogPost): BlogListPost {
     summary: post.summary,
     thumbnail: post.thumbnail
   };
+}
+
+export function getBlogPostKey(post: Pick<BlogListPost, 'locale' | 'slug' | 'href'>) {
+  return post.href || `${post.locale}/${post.slug}`;
 }

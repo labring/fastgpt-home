@@ -47,6 +47,28 @@ export default function ArticleHeaderSection({
             <span className="relative rounded-full bg-white/40 px-3 py-1.5 text-xs text-ink-sub ring-1 ring-gray-200 shadow-sm">
               {categoryLabel}
             </span>
+            <span
+              className="hidden"
+              aria-hidden="true"
+              data-pagefind-filter="category"
+              data-pagefind-meta="category"
+            >
+              {post.category}
+            </span>
+            <span
+              className="hidden"
+              aria-hidden="true"
+              data-pagefind-filter="locale"
+              data-pagefind-meta="locale"
+            >
+              {locale}
+            </span>
+            <span className="hidden" aria-hidden="true" data-pagefind-meta="slug">
+              {post.slug}
+            </span>
+            <span className="hidden" aria-hidden="true" data-pagefind-meta="summary">
+              {post.summary}
+            </span>
             <h1 className="m-0 max-w-6xl text-center text-4xl font-medium text-ink md:text-5xl text-balance">
               {post.title}
             </h1>
@@ -66,10 +88,14 @@ export default function ArticleHeaderSection({
                   <span className="text-gray-300 max-md:hidden" aria-hidden="true">
                     •
                   </span>
-                  <time dateTime={post.date.toISOString()}>{formatDate(post.date)}</time>
+                  <time dateTime={post.date.toISOString()} data-pagefind-meta="date[datetime]">
+                    {formatDate(post.date)}
+                  </time>
                 </div>
               ) : (
-                <time dateTime={post.date.toISOString()}>{formatDate(post.date)}</time>
+                <time dateTime={post.date.toISOString()} data-pagefind-meta="date[datetime]">
+                  {formatDate(post.date)}
+                </time>
               )}
               {post.authorRecord?.description && (
                 <p className="m-0 text-center text-xs text-ink-muted">

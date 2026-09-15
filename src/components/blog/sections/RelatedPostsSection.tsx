@@ -1,4 +1,4 @@
-import type { BlogListPost } from '@/components/blog/blogPagination';
+import { getBlogPostKey, type BlogListPost } from '@/components/blog/blogPagination';
 
 import PostCard from '../components/PostCard';
 
@@ -25,7 +25,7 @@ export default function RelatedPostsSection({
       <div className="mx-auto mt-10 grid max-w-4xl grid-cols-1 gap-8 md:mt-16 md:grid-cols-2">
         {posts.map((post) => (
           <PostCard
-            key={`${post.locale}/${post.slug}`}
+            key={getBlogPostKey(post)}
             post={post}
             locale={locale}
             categoryLabel={categoryLabels[post.category] || post.category}

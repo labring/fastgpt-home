@@ -11,6 +11,7 @@ export type BlogCopy = {
     filters: Record<BlogFilter, string>;
     categoryLabels: Record<string, string>;
     search: string;
+    searching: string;
     readMore: string;
     loadMore: string;
     end: string;
@@ -30,13 +31,18 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
     heroDescription: 'Product updates, technical practices, and practical AI Agent experience',
     allPosts: {
       title: 'All posts',
-      filters: { all: 'All', product: 'Product updates', engineering: 'Technical insights' },
+      filters: {
+        all: 'All',
+        product: 'Product updates',
+        engineering: 'Technical insights'
+      },
       categoryLabels: {
         product: 'Product updates',
         engineering: 'Technical insights',
         industry: 'Industry insights'
       },
       search: 'Search',
+      searching: 'Searching...',
       readMore: 'Read article',
       loadMore: 'Load more',
       end: 'No more posts',
@@ -53,6 +59,7 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       filters: { all: '全部', product: '产品上新', engineering: '技术干货' },
       categoryLabels: { product: '产品上新', engineering: '技术干货', industry: '行业洞察' },
       search: '搜索文章',
+      searching: '搜索中...',
       readMore: '阅读详情',
       loadMore: '加载更多',
       end: '已经到底啦',
@@ -69,6 +76,7 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       filters: { all: '全部', product: '產品上新', engineering: '技術乾貨' },
       categoryLabels: { product: '產品上新', engineering: '技術乾貨', industry: '產業洞察' },
       search: '搜尋文章',
+      searching: '搜尋中...',
       readMore: '閱讀詳情',
       loadMore: '載入更多',
       end: '已經到底了',
@@ -82,13 +90,18 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
     heroDescription: '製品アップデート、技術プラクティス、実践的な AI Agent の知見',
     allPosts: {
       title: 'すべての記事',
-      filters: { all: 'すべて', product: '製品アップデート', engineering: '技術インサイト' },
+      filters: {
+        all: 'すべて',
+        product: '製品アップデート',
+        engineering: '技術インサイト'
+      },
       categoryLabels: {
         product: '製品アップデート',
         engineering: '技術インサイト',
         industry: '業界インサイト'
       },
       search: '検索',
+      searching: '検索中...',
       readMore: '記事を読む',
       loadMore: 'もっと読む',
       end: 'これ以上の記事はありません',
@@ -102,13 +115,18 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
     heroDescription: 'تحديثات المنتجات والممارسات التقنية وخبرات عملية في AI Agent',
     allPosts: {
       title: 'جميع المقالات',
-      filters: { all: 'الكل', product: 'تحديثات المنتج', engineering: 'رؤى تقنية' },
+      filters: {
+        all: 'الكل',
+        product: 'تحديثات المنتج',
+        engineering: 'رؤى تقنية'
+      },
       categoryLabels: {
         product: 'تحديثات المنتج',
         engineering: 'رؤى تقنية',
         industry: 'رؤى قطاعية'
       },
       search: 'بحث',
+      searching: 'جارٍ البحث...',
       readMore: 'قراءة المقال',
       loadMore: 'تحميل المزيد',
       end: 'لا توجد مقالات أخرى',
@@ -122,13 +140,18 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
     heroDescription: 'Cập nhật sản phẩm, thực tiễn kỹ thuật và kinh nghiệm triển khai AI Agent',
     allPosts: {
       title: 'Tất cả bài viết',
-      filters: { all: 'Tất cả', product: 'Cập nhật sản phẩm', engineering: 'Góc nhìn kỹ thuật' },
+      filters: {
+        all: 'Tất cả',
+        product: 'Cập nhật sản phẩm',
+        engineering: 'Góc nhìn kỹ thuật'
+      },
       categoryLabels: {
         product: 'Cập nhật sản phẩm',
         engineering: 'Góc nhìn kỹ thuật',
         industry: 'Góc nhìn ngành'
       },
       search: 'Tìm kiếm',
+      searching: 'Đang tìm...',
       readMore: 'Đọc bài viết',
       loadMore: 'Tải thêm',
       end: 'Không còn bài viết',
@@ -153,6 +176,7 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
         industry: 'มุมมองอุตสาหกรรม'
       },
       search: 'ค้นหา',
+      searching: 'กำลังค้นหา...',
       readMore: 'อ่านบทความ',
       loadMore: 'โหลดเพิ่มเติม',
       end: 'ไม่มีบทความเพิ่มเติม',
@@ -166,13 +190,18 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
     heroDescription: 'Pembaruan produk, praktik teknis, dan pengalaman praktis AI Agent',
     allPosts: {
       title: 'Semua artikel',
-      filters: { all: 'Semua', product: 'Pembaruan produk', engineering: 'Wawasan teknis' },
+      filters: {
+        all: 'Semua',
+        product: 'Pembaruan produk',
+        engineering: 'Wawasan teknis'
+      },
       categoryLabels: {
         product: 'Pembaruan produk',
         engineering: 'Wawasan teknis',
         industry: 'Wawasan industri'
       },
       search: 'Cari',
+      searching: 'Mencari...',
       readMore: 'Baca artikel',
       loadMore: 'Muat lebih banyak',
       end: 'Tidak ada artikel lagi',
@@ -186,13 +215,18 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
     heroDescription: 'Kemas kini produk, amalan teknikal dan pengalaman praktikal AI Agent',
     allPosts: {
       title: 'Semua artikel',
-      filters: { all: 'Semua', product: 'Kemas kini produk', engineering: 'Cerapan teknikal' },
+      filters: {
+        all: 'Semua',
+        product: 'Kemas kini produk',
+        engineering: 'Cerapan teknikal'
+      },
       categoryLabels: {
         product: 'Kemas kini produk',
         engineering: 'Cerapan teknikal',
         industry: 'Cerapan industri'
       },
       search: 'Cari',
+      searching: 'Mencari...',
       readMore: 'Baca artikel',
       loadMore: 'Muatkan lagi',
       end: 'Tiada artikel lagi',

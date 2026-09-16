@@ -422,7 +422,7 @@ export default async function AdsLandingPage({ page }: { page: AdsLandingPageDat
                       reads as one sentence in the exported HTML. */}
                   <a
                     href={link.url}
-                    className="relative flex h-full flex-col gap-[10px] rounded-[16px] bg-light-bg p-[20px] md:p-[24px] transition-colors hover:bg-white"
+                    className="relative flex h-full flex-col gap-[10px] rounded-[16px] bg-light-bg p-[20px] pr-[44px] md:p-[24px] md:pr-[48px] transition-colors hover:bg-white"
                     style={{ boxShadow: CARD_SHADOW }}
                   >
                     {link.label}
@@ -432,9 +432,6 @@ export default async function AdsLandingPage({ page }: { page: AdsLandingPageDat
                       strokeWidth={2}
                       aria-hidden="true"
                     />
-                    <span className="break-all text-[12px] leading-[18px]" style={{ color: '#64748b' }}>
-                      {link.url}
-                    </span>
                   </a>
                 </FadeIn>
               ))}
@@ -461,9 +458,6 @@ export default async function AdsLandingPage({ page }: { page: AdsLandingPageDat
               </a>
               <p className="m-0 max-w-[720px] text-[12px] leading-[20px]" style={{ color: '#64748b' }}>
                 {CLOSING_LEGAL_NOTE}
-              </p>
-              <p className="m-0 text-[12px] leading-[20px]" style={{ color: '#64748b' }}>
-                页面更新：{page.updatedAt}
               </p>
             </div>
           </FadeIn>

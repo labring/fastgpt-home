@@ -109,7 +109,6 @@ function validateAdsLandingPage(page: AdsLandingPage) {
   }
   requireText(slug, 'trustLine', page.trustLine);
   requireText(slug, 'leadMagnet', page.leadMagnet);
-  requireText(slug, 'updatedAt', page.updatedAt);
   requireText(slug, 'form.title', page.form?.title);
   requireText(slug, 'form.subtitle', page.form?.subtitle);
   requireText(slug, 'form.button', page.form?.button);

@@ -106,8 +106,6 @@ export interface AdsLandingPage {
   cases?: AdsCaseSection;
   /** Name of the deliverable promised in the closing call-to-action */
   leadMagnet: string;
-  /** Footer 「页面更新」 date line */
-  updatedAt: string;
 }
 
 export const adsLandingPages: AdsLandingPage[] = [
@@ -231,7 +229,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       ]
     },
     leadMagnet: '逐项对比清单',
-    updatedAt: '2026年9月15日'
   },
   {
     slug: 'private-deployment',
@@ -266,7 +263,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: '私有化部署常见问题排查', url: 'https://fastgpt.cn/deploy/fastgpt-private-deployment-troubleshooting' }
     ],
     leadMagnet: '部署条件自查表',
-    updatedAt: '2026年9月11日'
   },
   {
     slug: 'brand',
@@ -300,7 +296,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: 'Docker Compose 部署与常见配置', url: 'https://fastgpt.cn/deploy/fastgpt-docker-compose-deploy' }
     ],
     leadMagnet: '版本对比与报价入口',
-    updatedAt: '2026年9月11日'
   },
   {
     slug: 'coze-vs-fastgpt',
@@ -334,7 +329,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: 'Docker Compose 部署与常见配置', url: 'https://fastgpt.cn/deploy/fastgpt-docker-compose-deploy' }
     ],
     leadMagnet: '迁移路径说明',
-    updatedAt: '2026年9月11日'
   },
   {
     slug: 'opensource-vs-fastgpt',
@@ -368,7 +362,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: '自研或直接跑开源与用平台怎么选', url: 'https://fastgpt.cn/compare/self-build-vs-platform' }
     ],
     leadMagnet: '开源选型对照表',
-    updatedAt: '2026年9月11日'
   },
   {
     slug: 'agent-workflow',
@@ -402,7 +395,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: '发布为 MCP Server 的用法', url: 'https://fastgpt.cn/integration/fastgpt-mcp-server-usage' }
     ],
     leadMagnet: '可导入的模板与搭建教程',
-    updatedAt: '2026年9月11日'
   },
   {
     slug: 'ai-customer-service',
@@ -442,7 +434,6 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: '企业微信机器人接入配置', url: 'https://fastgpt.cn/integration/fastgpt-wecom-bot-config' }
     ],
     leadMagnet: '同行业落地案例与 1v1 场景诊断',
-    updatedAt: '2026年9月11日'
   },
   {
     slug: 'enterprise-knowledge-base',
@@ -476,6 +467,5 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: '知识库常见问题', url: 'https://fastgpt.cn/dataset/fastgpt-knowledgebase-faq' }
     ],
     leadMagnet: '知识库落地清单',
-    updatedAt: '2026年9月11日'
   }
 ];

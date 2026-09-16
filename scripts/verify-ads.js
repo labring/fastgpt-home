@@ -255,8 +255,8 @@ function verifyExportedAdsPage(page, htmlPath) {
     `${label}: form title/button copy from the registry missing`
   );
   assert(
-    html.includes(page.trustLine) && html.includes(page.updatedAt),
-    `${label}: trust line / updatedAt copy from the registry missing`
+    html.includes(page.trustLine),
+    `${label}: trust line copy from the registry missing`
   );
 
   // Per-page comparison table: a real <table> whose cells and provenance line

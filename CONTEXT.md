@@ -176,7 +176,7 @@ _Avoid_: Denied Technical Candidate, Published Technical Page
 ## Advertising
 
 **广告落地页**:
-`/ads/{slug}` 下为一批必应搜索承接词组单独产出的转化页；不进搜索索引、站点地图与站内导航，第二屏跨页共用。
+`/ads/{slug}` 下为一批必应搜索承接词组单独产出的转化页；不进搜索索引、站点地图与站内导航，第二屏默认跨页共用，可按页覆盖为贴题的对照模块。
 _Avoid_: 活动页, 推广页, campaign page
 
 **一词一页**:

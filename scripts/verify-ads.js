@@ -24,7 +24,6 @@ const variant = resolveSiteVariant();
 const ADS_SUB_PATH = '/ads/';
 const HTML_COMMENT_HIDDEN = /<(script|style|template)\b[^>]*>[\s\S]*?<\/\1\s*>/gi;
 const PLACEHOLDER_PATTERN = /需客户提供|占位|TODO/i;
-const PLACEHOLDER_WHITELIST = ['客户 LOGO 墙：需客户提供可公开授权的 LOGO 素材后替换本区块'];
 
 function fail(message) {
   console.error(`[verify-ads] ${message}`);
@@ -244,7 +243,9 @@ function verifyExportedAdsPage(page, htmlPath) {
       `${label}: reading link ${link.url} missing`
     );
     assert(
-      html.includes(`>${link.label}</a>`),
+      // The reading rows carry a decorative arrow inside the anchor, so the
+      // label is the anchor's own leading text rather than its last child.
+      new RegExp(`href="${escapeRegExp(link.url)}"[^>]*>${escapeRegExp(link.label)}`).test(html),
       `${label}: reading link label "${link.label}" missing`
     );
   }
@@ -258,15 +259,106 @@ function verifyExportedAdsPage(page, htmlPath) {
     `${label}: trust line / updatedAt copy from the registry missing`
   );
 
+  // Per-page comparison table: a real <table> whose cells and provenance line
+  // all come from the registry, so a paid visitor can read the source inline.
+  if (page.comparisonTable) {
+    const table = page.comparisonTable;
+    assert(/<table\b/.test(html), `${label}: comparison table element missing`);
+    assert(
+      /<th\b[^>]*scope="col"[^>]*>对比项/.test(html),
+      `${label}: comparison table header row missing`
+    );
+    for (const row of table.rows) {
+      assert(
+        new RegExp(`<th\\b[^>]*scope="row"[^>]*>${escapeRegExp(row.dimension)}`).test(html),
+        `${label}: comparison table row header "${row.dimension}" missing`
+      );
+      for (const cell of [row.dify, row.fastgpt]) {
+        assert(
+          html.includes(cell),
+          `${label}: comparison table cell for "${row.dimension}" missing`
+        );
+      }
+    }
+    assert(
+      html.includes(table.sourceNote) &&
+        new RegExp(
+          `href="${escapeRegExp(table.sourceUrl)}"[^>]*>${escapeRegExp(table.sourceLabel)}`
+        ).test(html),
+      `${label}: comparison table source line missing`
+    );
+    assert(
+      table.sourceUrl.startsWith('https://'),
+      `${label}: comparison table source must be a public HTTPS URL (${table.sourceUrl})`
+    );
+  }
+
+  // Capability band: pages carrying their own `why` render that copy and its
+  // Dify-side verdicts; the remaining pages keep the shared three cards.
+  assert(html.includes('平台能力'), `${label}: capability band badge missing`);
+  if (page.why) {
+    assert(
+      html.includes(page.why.title) && html.includes(page.why.subtitle),
+      `${label}: capability band override title/subtitle missing`
+    );
+    assert(page.why.cards.length === 3, `${label}: capability band must render 3 cards`);
+    for (const card of page.why.cards) {
+      assert(
+        html.includes(card.title) && html.includes(card.body),
+        `${label}: capability card "${card.title}" missing`
+      );
+      if (card.verdict) {
+        assert(
+          new RegExp(
+            `${escapeRegExp(card.title)}[\\s\\S]*?Dify 侧[\\s\\S]*?${escapeRegExp(card.verdict)}`
+          ).test(html),
+          `${label}: capability card "${card.title}" verdict line missing`
+        );
+      }
+    }
+  } else {
+    assert(
+      html.includes('知识库维护看得见'),
+      `${label}: shared capability cards missing`
+    );
+  }
+
+  // Published-cases band: pages carrying their own `cases` render published
+  // customer cases whose cards link at the /customers detail pages; the
+  // remaining pages keep the shared three cards.
+  assert(
+    html.includes(page.cases?.badge ?? '客户案例'),
+    `${label}: published-cases band badge missing`
+  );
+  if (page.cases) {
+    assert(
+      html.includes(page.cases.subtitle),
+      `${label}: published-cases override badge/subtitle missing`
+    );
+    assert(page.cases.cards.length === 3, `${label}: published cases must render 3 cards`);
+    for (const card of page.cases.cards) {
+      assert(
+        html.includes(card.title) && html.includes(card.metrics) && (!card.org || html.includes(card.org)),
+        `${label}: published case card "${card.title}" missing`
+      );
+      assert(
+        new RegExp(`<a\\b[^>]*href="${escapeRegExp(card.url)}"`).test(html),
+        `${label}: published case card "${card.title}" must link to ${card.url}`
+      );
+      assert(
+        card.url.startsWith('https://'),
+        `${label}: published case link must be a public HTTPS URL (${card.url})`
+      );
+    }
+  } else {
+    assert(html.includes('研发知识助手'), `${label}: shared case cards missing`);
+  }
+
   const visibleText = decodeHtml(raw.replace(HTML_COMMENT_HIDDEN, ' ').replace(/<[^>]*>/g, ' '));
-  let placeholderScan = visibleText;
-  PLACEHOLDER_WHITELIST.forEach((allowed) => {
-    placeholderScan = placeholderScan.split(allowed).join(' ');
-  });
-  const remainingPlaceholder = placeholderScan.search(PLACEHOLDER_PATTERN);
+  const remainingPlaceholder = visibleText.search(PLACEHOLDER_PATTERN);
   assert(
     remainingPlaceholder === -1,
-    `${label}: placeholder copy outside the LOGO-wall whitelist: "${placeholderScan
+    `${label}: reader-facing placeholder copy: "${visibleText
       .slice(Math.max(0, remainingPlaceholder - 30), remainingPlaceholder + 60)
       .trim()}"`
   );

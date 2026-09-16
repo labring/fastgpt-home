@@ -26,6 +26,61 @@ export interface AdsLeadFormCopy {
   button: string;
 }
 
+export interface AdsComparisonRow {
+  /** Compared dimension, e.g. 部署形态 */
+  dimension: string;
+  /** Dify-side wording, cut from the comparison-page table */
+  dify: string;
+  /** FastGPT-side wording, cut from the comparison-page table */
+  fastgpt: string;
+}
+
+/** Optional second-screen comparison table; only pages whose intent is a
+ *  head-to-head choice carry one. */
+export interface AdsComparisonTable {
+  rows: AdsComparisonRow[];
+  /** Verification and attribution line rendered under the table */
+  sourceNote: string;
+  sourceLabel: string;
+  sourceUrl: string;
+}
+
+export interface AdsWhyCard {
+  title: string;
+  body: string;
+  /** Optional Dify-side verdict line quoted from the comparison page */
+  verdict?: string;
+}
+
+/** Optional per-page override of the shared 「为什么选 FastGPT」 band. */
+export interface AdsWhySection {
+  title?: string;
+  subtitle?: string;
+    /** Exactly three capability cards */
+    cards: AdsWhyCard[];
+}
+
+/** One published customer case card; the shared homepage cards omit org/url. */
+export interface AdsCaseCard {
+  /** Client name as published on the customers surface */
+  org?: string;
+  title: string;
+  /** Outcome line copied verbatim from the case's published figures */
+  metrics: string;
+  /** Case detail page on the customers surface */
+  url?: string;
+  image: string;
+}
+
+/** Optional per-page override of the shared 「客户成功案例」 band. */
+export interface AdsCaseSection {
+  badge?: string;
+  title?: string;
+  subtitle?: string;
+  /** Exactly three published customer cases */
+  cards: AdsCaseCard[];
+}
+
 export interface AdsLandingPage {
   /** URL segment under /ads/, e.g. 'dify-vs-fastgpt' for /ads/dify-vs-fastgpt */
   slug: string;
@@ -35,12 +90,20 @@ export interface AdsLandingPage {
   keywordGroup: string;
   h1: string;
   subtitle: string;
+  /** Optional override of the checklist band subtitle */
+  checklistSubtitle?: string;
   /** Three progressive first-screen paragraphs, exactly three entries */
   sections: AdsLandingSection[];
   trustLine: string;
   form: AdsLeadFormCopy;
   /** Deep-reading links, exactly three entries */
   readingLinks: AdsReadingLink[];
+  /** Optional second-screen comparison table */
+  comparisonTable?: AdsComparisonTable;
+  /** Optional override of the shared platform-capability band */
+  why?: AdsWhySection;
+  /** Optional override of the shared published-cases band */
+  cases?: AdsCaseSection;
   /** Name of the deliverable promised in the closing call-to-action */
   leadMagnet: string;
   /** Footer 「页面更新」 date line */
@@ -55,21 +118,22 @@ export const adsLandingPages: AdsLandingPage[] = [
     h1: 'Dify 与 FastGPT 怎么选：一张能拿去汇报的对比表',
     subtitle:
       '给正在做平台选型的技术负责人：部署形态、知识库、工作流、商用授权与迁移成本逐项列开，两边的强项都写进去。',
+    checklistSubtitle: '从部署、知识库、工作流到授权边界，理清上线半年后的真实工程成本与选型痛点。',
     sections: [
       {
-        heading: '这份清单是什么',
-        body: '一张五栏对照表，把两个平台的部署形态、知识库能力、工作流能力、商用授权边界与迁移成本放在同一行上比较。表里同时写明哪些项属于「双方都有但实现路径不同」——这类项只能用同一份数据集、同一个模型与同一台机型跑 POC 才分得出高下。'
+        heading: '5 项核心选型维度',
+        body: '聚焦部署形态、知识库、工作流、授权边界与原厂支持 5 项核心维度。针对双方均支持但实现路径不同的深水区，提供同机型、同模型下的基准实测建议与 POC 验证判据。'
       },
       {
-        heading: '和自己列功能表的区别',
+        heading: '真实维护成本与工程深度',
         body: '功能勾选表比的是条目数量，这份清单比的是上线半年后的维护成本：答不准时能否定位到切分、索引还是检索配置，一份正文能否挂多条索引，训练队列出错能否单条修复，用量能否拆到解析、向量化、检索与生成各阶段。这些差别在演示阶段几乎看不出来。'
       },
       {
-        heading: '为什么现在看',
-        body: '许可证是这类选型里最容易被「都是开源」一句带过、事后又最容易出问题的一项：用源码提供多租户服务、去除控制台品牌标识、二次开发后分发，三条边界各家写法不同，需要法务在立项前读一遍 LICENSE 原文。清单里附了这三条的逐条对照。'
+        heading: '商用授权与合规边界',
+        body: '多租户托管、去除品牌标识、二次开发后分发，各开源协议的商业化红线差异巨大。立项阶段厘清 LICENSE 边界，规避业务上线后的法律与重构风险。'
       }
     ],
-    trustLine: '对照表标注每一项的核验日期与出处，公开资料未列出的项写「未列出」，不做推断。',
+    trustLine: '基于官方公开文档与商用协议核验，支持企业按实际业务场景复现测试。',
     form: {
       title: '领取逐项对比清单',
       subtitle: '填写后由解决方案顾问联系，1 个工作日内响应。',
@@ -80,8 +144,94 @@ export const adsLandingPages: AdsLandingPage[] = [
       { label: '自研或直接跑开源与用平台怎么选：四组必算成本', url: 'https://fastgpt.cn/compare/self-build-vs-platform' },
       { label: 'Docker Compose 部署与常见配置', url: 'https://fastgpt.cn/deploy/fastgpt-docker-compose-deploy' }
     ],
+    comparisonTable: {
+      rows: [
+        {
+          dimension: '部署形态',
+          dify: 'Cloud + Community + Enterprise；Community 用 Docker Compose，Enterprise 用 Helm',
+          fastgpt:
+            'Cloud + 社区自托管 + 托管/自托管商业版；Docker Compose，支持多种向量后端；Kubernetes 的商业交付边界需确认'
+        },
+        {
+          dimension: '知识库能力',
+          dify: '同等粒度进入 POC 确认',
+          fastgpt: '单正文多索引、索引独立编辑、训练队列修复、检索历史、各阶段 Token 成本拆分、引用粒度溯源'
+        },
+        {
+          dimension: '工作流能力',
+          dify: '以通用工作流与插件生态为主',
+          fastgpt: '强调 Agentic RAG、交互状态恢复、Skills 与知识工程在同一运行时内协同'
+        },
+        {
+          dimension: '商用授权边界',
+          dify: '修改版 Apache 2.0；用源码提供多租户服务、去除前端品牌需商业授权；二次开发后分发在公开资料中未列出',
+          fastgpt:
+            '允许作为其他应用的后端服务商用、允许作为应用开发平台交付给企业；未获书面授权不得用源码运营同类多租户 SaaS，不得移除或修改控制台内的 LOGO 与版权信息'
+        },
+        {
+          dimension: '原厂支持',
+          dify: 'Enterprise 路线询价，SLA 按合同；社区版是否附带支持承诺需向对方确认',
+          fastgpt:
+            '分四个档位，覆盖时段从工作日逐档扩到 7×24，首次响应目标按档位递进；所有付费档位含安全补丁、新功能支持与远程线上协助'
+        }
+      ],
+      sourceNote: '核验日期 2026-07-20 · 基于官方公开资料 · 来源：',
+      sourceLabel: 'Dify 与 FastGPT：四种项目的选型分野',
+      sourceUrl: 'https://fastgpt.cn/compare/dify-vs-fastgpt'
+    },
+    why: {
+      title: 'FastGPT 的差异能力',
+      subtitle: '覆盖生产落地所需的深度工程能力，Dify 侧对应项标注当前官方公开资料与验证状态。',
+      cards: [
+        {
+          title: 'Skills 全生命周期',
+          body: '导入导出、版本、权限继承、引用分析、编辑沙箱与运行沙箱',
+          verdict: 'Dify Agent Skills 正式版支持范围进入 POC 阶段实测确认'
+        },
+        {
+          title: 'Agent 会话文件工作区',
+          body: '文件树、多标签编辑器、交互终端、目录 ZIP、会话沙箱产物回传',
+          verdict: '同等原生能力进入 POC 阶段实测确认'
+        },
+        {
+          title: '图片知识库与原图向量检索链路',
+          body: '同时保存原图、VLM Caption 与 imageEmbedding，支持以图搜图及 Caption 降级',
+          verdict: '同等原生能力进入 POC 阶段实测确认'
+        }
+      ]
+    },
+    cases: {
+      badge: '客户成功案例',
+      subtitle: '案例全部来自客户案例中心，点击卡片可查看完整落地过程与数据出处。',
+      cards: [
+        {
+          org: '延锋国际',
+          title: '财务智能审单助手',
+          metrics: '财务共享中心年单据 52 万+；单据秒级初审',
+          url: 'https://fastgpt.cn/customers/manufacturing-production-processing/ai-financial-audit-solution',
+          image:
+            'https://objectstorageapi.hzh.sealos.run/7jixeozw-solution/uploads/6a7d8bb1b79b7c6661bbd2c2/1786614414864-ai-cover_thumb.webp'
+        },
+        {
+          org: '三诺生物',
+          title: '诺诺助手智能客服',
+          metrics: '40 人客服团队负荷饱和背景；拦截 20% 常规咨询，等效节省 10 名全职客服',
+          url: 'https://fastgpt.cn/customers/medical-health-wellness/biomedical-customer-service-assistant',
+          image:
+            'https://objectstorageapi.hzh.sealos.run/7jixeozw-solution/uploads/6a7d8bfbb79b7c6661bbd2d6/1786614706219-ai-cover_thumb.webp'
+        },
+        {
+          org: '朝阳永续',
+          title: '财报分析智能助手',
+          metrics: '35 人编辑团队精简为 1 人核心组；人均日产出 3-5 篇提升至 50 篇',
+          url: 'https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant',
+          image:
+            'https://objectstorageapi.hzh.sealos.run/7jixeozw-solution/uploads/6a7d8b53b79b7c6661bbd2a8/1786689664873-qfe9l_thumb.webp'
+        }
+      ]
+    },
     leadMagnet: '逐项对比清单',
-    updatedAt: '2026年9月11日'
+    updatedAt: '2026年9月15日'
   },
   {
     slug: 'private-deployment',
@@ -206,7 +356,7 @@ export const adsLandingPages: AdsLandingPage[] = [
         body: '同一份三年需求清单，向每个候选方案分别报价，把许可、模型、解析、存储、数据库、运维、升级与支持的人天全部入账。不入账人天的对比，结论一定偏向看起来便宜的那个。'
       }
     ],
-    trustLine: '对照表只使用各家官方公开资料中可验证的事实并标注核验日；未列出的项写「未列出」，不做推断。',
+    trustLine: '每一行都附核验日期与出处；各家公开资料里没查到的，直接写「未列出」。',
     form: {
       title: '领取开源选型对照表',
       subtitle: '填写后由解决方案顾问联系，1 个工作日内响应。',

@@ -1,436 +1,281 @@
-/* Bing Ads landing pages — standalone light body theme (ADR 0013 as amended:
-   the header/footer come from the homepage components, this sheet styles only
-   the landing body). Transcribed 1:1 from the client-approved Arco-palette
-   previews; do not restyle against the site theme. Tailwind preflight already
-   resets margins and headings, so font sizes/weights are restated explicitly. */
+/* Bing Ads landing pages — homepage design language (ADR 0013 as amended).
+   The chrome (Navbar/Footer) and every shared band come from the homepage
+   components, so this sheet only covers the pieces that have no homepage twin:
+   the lead-form card, the optional comparison table, and the verdict line the
+   capability cards carry when a page supplies one. */
 
-.page {
-  --brand: #3370ff;
-  --brand-d: #2354d9;
-  --brand-l: #eef3ff;
-  --ink: #1d2129;
-  --ink2: #4e5969;
-  --ink3: #86909c;
-  --line: #e5e6eb;
-  --bg: #f7f8fa;
-  --dark: #070d1d;
-  --ok: #00b42a;
-
-  min-height: 100vh;
+/* ── Lead form card ── */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+  border-radius: 16px;
   background: #fff;
-  color: var(--ink);
-  /* The root layout forces colorScheme dark on <html>; the light form controls
-     of this standalone theme must not inherit it. */
+  /* The root layout forces colorScheme dark on <html>; these light form
+     controls must not inherit it. */
   color-scheme: light;
-  font: 15px/1.75 -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei',
-    sans-serif;
+  box-shadow:
+    rgba(3, 7, 18, 0.04) 0px 2px 4px 0px,
+    rgba(3, 7, 18, 0.08) 0px 1px 2px -1px,
+    rgba(3, 7, 18, 0.08) 0px 0px 0px 1px;
 }
 
-.page a {
-  color: var(--brand);
-  text-decoration: none;
+@media (min-width: 768px) {
+  .form {
+    padding: 32px;
+    gap: 16px;
+  }
 }
 
-.page a:hover {
-  text-decoration: underline;
+.formTitle {
+  margin: 0;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 600;
+  letter-spacing: -0.4px;
+  color: var(--home-dark);
 }
 
-/* ── Buttons ── */
-.btn {
-  display: inline-block;
-  padding: 7px 16px;
-  border-radius: 6px;
+.formHint {
+  margin: -6px 0 0;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--home-secondary);
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.label {
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  color: #334155;
+}
+
+.requiredMark {
+  margin-left: 3px;
+  font-style: normal;
+  color: #ef4444;
+}
+
+.input {
+  width: 100%;
+  height: 44px;
+  padding: 0 12px;
+  border: 1px solid var(--home-btn-light-border);
+  border-radius: 10px;
+  background: #fff;
+  font: inherit;
   font-size: 14px;
-  white-space: nowrap;
+  color: var(--home-dark);
+}
+
+.input::placeholder {
+  color: #9ca3af;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--home-btn-dark);
+  box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.08);
+}
+
+select.input {
+  appearance: none;
+  padding-right: 34px;
+  /* Inline chevron: the select is the only control without a native glyph
+     once appearance:none strips it. */
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5 6 6.5l5-5' fill='none' stroke='%2364748b' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 0;
   cursor: pointer;
   font-family: inherit;
 }
 
-/* ── First screen ── */
-.hero {
-  background: linear-gradient(180deg, var(--brand-l) 0%, #fff 72%);
-  border-bottom: 1px solid var(--line);
-}
-
-.wrap {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 24px;
-}
-
-.heroWrap {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 372px;
-  gap: 46px;
-  align-items: start;
-  /* 48px approved gap + ~72px fixed homepage navbar clearance */
-  padding-top: 120px;
-  padding-bottom: 52px;
-}
-
-.kwBadge {
-  display: inline-block;
-  font-size: 12.5px;
-  color: var(--brand);
-  background: #fff;
-  border: 1px solid #c4d6ff;
+.solid {
+  height: 44px;
   border-radius: 999px;
-  padding: 3px 11px;
-  margin: 0 0 16px;
-}
-
-.h1 {
-  font-size: 38px;
-  line-height: 1.3;
-  font-weight: 700;
-  margin: 0 0 14px;
-  letter-spacing: -0.3px;
-}
-
-.subtitle {
-  font-size: 16.5px;
-  line-height: 1.75;
-  color: var(--ink2);
-  margin: 0 0 26px;
-}
-
-.sec {
-  margin: 0 0 18px;
-  padding-left: 14px;
-  border-left: 3px solid #c4d6ff;
-}
-
-.secHeading {
-  font-size: 15.5px;
-  font-weight: 700;
-  margin: 0 0 4px;
-  color: var(--ink);
-}
-
-.secBody {
-  margin: 0;
-  font-size: 14.5px;
-  line-height: 1.8;
-  color: var(--ink2);
-}
-
-.trust {
-  margin-top: 24px;
-  padding: 13px 16px;
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  font-size: 13.5px;
-  color: var(--ink2);
-  display: flex;
-  gap: 9px;
-  align-items: flex-start;
-}
-
-.trustLabel {
-  color: var(--ink);
-  font-weight: 600;
-  white-space: nowrap;
-}
-
-/* ── Lead form ── */
-.aside {
-  position: sticky;
-  top: 84px;
-}
-
-.form {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 24px 22px 20px;
-  box-shadow: 0 16px 40px rgba(29, 33, 41, 0.1);
-}
-
-.formTitle {
-  font-size: 19px;
-  font-weight: 700;
-  margin: 0 0 6px;
-}
-
-.formHint {
-  font-size: 13px;
-  color: var(--ink3);
-  margin: 0 0 18px;
-}
-
-.field {
-  margin-bottom: 13px;
-}
-
-.label {
-  display: block;
-  font-size: 13px;
-  color: var(--ink2);
-  margin-bottom: 5px;
-}
-
-.requiredMark {
-  color: #f53f3f;
-  font-style: normal;
-  margin-left: 2px;
-}
-
-.input {
-  width: 100%;
-  height: 38px;
-  padding: 0 11px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  font-size: 14px;
-  font-family: inherit;
-  color: var(--ink);
-  background: #fff;
-}
-
-.input:focus {
-  outline: 0;
-  border-color: var(--brand);
+  background: var(--home-btn-dark);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
 .submit {
   width: 100%;
-  height: 42px;
-  font-size: 15px;
-  font-weight: 500;
-  margin-top: 6px;
+  margin-top: 2px;
+}
+
+.submit:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.submit:disabled {
+  opacity: 0.6;
+  cursor: default;
 }
 
 .consent {
-  margin-top: 12px;
-  font-size: 12px;
-  line-height: 1.65;
-  color: var(--ink3);
   display: flex;
-  gap: 7px;
   align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #64748b;
   cursor: pointer;
 }
 
 .consent input {
-  margin-top: 3px;
-  flex-shrink: 0;
-}
-
-/* ── Second screen (shared across pages) ── */
-.block {
-  padding: 52px 0;
-  border-bottom: 1px solid var(--line);
-}
-
-.blockAlt {
-  background: var(--bg);
-}
-
-.blockTitle {
-  font-size: 24px;
-  font-weight: 700;
-  margin: 0 0 6px;
-  text-align: center;
-}
-
-.blockSub {
-  font-size: 14px;
-  color: var(--ink3);
-  margin: 0 0 30px;
-  text-align: center;
-}
-
-.grid3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
-.card {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 22px 20px;
-}
-
-.cardTitle {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0 0 9px;
-}
-
-.cardBody {
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.8;
-  color: var(--ink2);
-}
-
-.caseMetrics {
-  font-size: 13.5px;
-  color: var(--brand);
-  line-height: 1.8;
-  margin-top: 8px;
-}
-
-.logoPlaceholder {
-  border: 1px dashed #c9cdd4;
-  border-radius: 10px;
-  background: #fff;
-  padding: 30px 22px;
-  text-align: center;
-  color: var(--ink3);
-  font-size: 13.5px;
-  margin-top: 20px;
-}
-
-.logoPlaceholderTitle {
-  display: block;
-  color: var(--ink2);
-  font-size: 14.5px;
-  font-weight: 700;
-  margin-bottom: 6px;
-}
-
-.reads {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-}
-
-.readsItem {
-  background: #fff;
-  border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 18px 18px;
-}
-
-.readsLink {
-  font-size: 15px;
-  line-height: 1.6;
-  display: block;
-}
-
-.readsUrl {
-  display: block;
-  font-size: 12.5px;
-  color: var(--ink3);
-  margin-top: 7px;
-  word-break: break-all;
-}
-
-/* ── Closing call-to-action and footer ── */
-.closing {
-  background: var(--dark);
-  color: #fff;
-  padding: 54px 0;
-  text-align: center;
-}
-
-.closingTitle {
-  font-size: 26px;
-  font-weight: 700;
-  margin: 0 0 10px;
-  color: #fff;
-}
-
-.closingNote {
-  margin: 0 0 22px;
-  font-size: 14.5px;
-  color: rgba(255, 255, 255, 0.72);
-}
-
-.closingButton {
-  padding: 11px 30px;
-  font-size: 15px;
-  background: #fff;
-  color: var(--dark);
-}
-
-.closingButton:hover {
-  background: #e8ebf0;
-  text-decoration: none;
-}
-
-.closingLegal {
-  margin-top: 14px;
-  font-size: 12.5px;
-  color: var(--ink3);
-  line-height: 1.9;
+  margin: 2px 0 0;
+  accent-color: var(--home-btn-dark);
 }
 
 .formError {
-  margin-top: 10px;
-  padding: 8px 11px;
-  border: 1px solid #fdcdc9;
-  border-radius: 6px;
-  background: #fff7f6;
-  font-size: 12.5px;
-  line-height: 1.6;
+  padding: 8px 10px;
+  border: 1px solid #fecdca;
+  border-radius: 8px;
+  background: #fef3f2;
+  font-size: 13px;
+  line-height: 20px;
   color: #b42318;
 }
 
 .formSuccess {
-  padding: 34px 22px 28px;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  padding: 32px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    rgba(3, 7, 18, 0.04) 0px 2px 4px 0px,
+    rgba(3, 7, 18, 0.08) 0px 1px 2px -1px,
+    rgba(3, 7, 18, 0.08) 0px 0px 0px 1px;
 }
 
 .formSuccessTitle {
+  margin: 0;
   font-size: 18px;
-  font-weight: 700;
-  margin: 0 0 8px;
+  line-height: 26px;
+  font-weight: 600;
+  color: var(--home-dark);
 }
 
 .formSuccessBody {
-  font-size: 13.5px;
-  color: var(--ink2);
   margin: 0;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--home-secondary);
 }
 
 .formSuccessReset {
-  margin-top: 16px;
-  padding: 8px 16px;
-  font-size: 13.5px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #fff;
-  color: var(--ink2);
-  cursor: pointer;
+  height: 40px;
+  margin-top: 8px;
+  padding: 0 20px;
+  border: 1px solid var(--home-btn-light-border);
+  border-radius: 999px;
+  background: var(--home-btn-light-bg);
   font-family: inherit;
+  font-size: 14px;
+  color: var(--home-dark);
+  cursor: pointer;
 }
 
-.formSuccessReset:hover {
-  background: var(--bg);
+/* ── Comparison table (registry-driven, only on pages that carry one) ── */
+.tableScroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow:
+    rgba(3, 7, 18, 0.04) 0px 2px 4px 0px,
+    rgba(3, 7, 18, 0.08) 0px 1px 2px -1px,
+    rgba(3, 7, 18, 0.08) 0px 0px 0px 1px;
 }
 
-@media (max-width: 900px) {
-  .heroWrap {
-    grid-template-columns: 1fr;
-    gap: 30px;
-    /* 32px approved gap + 64px fixed homepage navbar clearance */
-    padding-top: 96px;
-    padding-bottom: 34px;
-  }
+.compareTable {
+  width: 100%;
+  /* Phones scroll the table horizontally instead of shrinking it into an
+     unreadable grid; desktop is wide enough that the scroll is a no-op. */
+  min-width: 760px;
+  border-collapse: collapse;
+  font-size: 14px;
+  line-height: 22px;
+  color: var(--home-dark);
+}
 
-  .aside {
-    position: static;
-  }
+.compareTable th,
+.compareTable td {
+  padding: 16px 20px;
+  text-align: left;
+  vertical-align: top;
+  border-top: 1px solid #e8edf4;
+}
 
-  .h1 {
-    font-size: 27px;
-  }
+.compareTable thead th {
+  border-top: 0;
+  background: rgb(248, 250, 252);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 600;
+  color: var(--home-secondary);
+}
 
-  .grid3,
-  .reads {
-    grid-template-columns: 1fr;
-  }
+/* Row header: the compared dimension reads as a label, not as prose. */
+.compareTable tbody th {
+  width: 168px;
+  font-weight: 600;
+}
 
-  .submit {
-    height: 46px;
-  }
+/* FastGPT column: same brand tint the comparison page uses for its own side. */
+.compareTable thead th:last-child,
+.compareTable tbody td:last-child {
+  background: rgba(51, 112, 255, 0.05);
+}
+
+.tableSource {
+  margin: 0;
+  font-size: 12px;
+  line-height: 20px;
+  color: #64748b;
+}
+
+.tableSource a {
+  color: #2f66e8;
+  text-decoration: underline;
+}
+
+/* ── Dify-side verdict inside a capability card ── */
+.cardVerdict {
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid #e8edf4;
+  font-size: 13px;
+  line-height: 20px;
+  color: var(--home-secondary);
+}
+
+.cardVerdictLabel {
+  display: inline-block;
+  margin-right: 6px;
+  padding: 1px 6px;
+  border-radius: 4px;
+  background: rgb(248, 250, 252);
+  font-size: 11px;
+  line-height: 16px;
+  color: #64748b;
 }

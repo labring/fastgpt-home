@@ -1,6 +1,12 @@
 import 'server-only';
 
-import { adsLandingPages, type AdsLandingPage } from '@/content/ads/pages';
+import {
+  adsLandingPages,
+  type AdsCaseSection,
+  type AdsComparisonTable,
+  type AdsLandingPage,
+  type AdsWhySection
+} from '@/content/ads/pages';
 import { getSiteBaseUrl } from '@/lib/siteRouting';
 
 /**
@@ -14,7 +20,7 @@ import { getSiteBaseUrl } from '@/lib/siteRouting';
  */
 
 const ADS_SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
-const ALLOWED_READING_HOSTS = new Set(['fastgpt.cn', 'solutions.fastgpt.cn']);
+const ALLOWED_PUBLIC_HOSTS = new Set(['fastgpt.cn', 'solutions.fastgpt.cn']);
 
 function fail(slug: string, detail: string): never {
   throw new Error(`[ads] Invalid landing registry entry "${slug}": ${detail}`);
@@ -24,6 +30,66 @@ function requireText(slug: string, field: string, value: unknown) {
   if (typeof value !== 'string' || !value.trim()) {
     fail(slug, `${field} must be a non-empty string`);
   }
+}
+
+function requirePublicUrl(slug: string, field: string, value: unknown) {
+  requireText(slug, field, value);
+  let parsed: URL;
+  try {
+    parsed = new URL(value as string);
+  } catch {
+    return fail(slug, `${field} must be an absolute URL`);
+  }
+  if (parsed.protocol !== 'https:' || !ALLOWED_PUBLIC_HOSTS.has(parsed.hostname)) {
+    fail(slug, `${field} must be a public https URL on ${[...ALLOWED_PUBLIC_HOSTS].join(' or ')}`);
+  }
+}
+
+function validateComparisonTable(slug: string, table: AdsComparisonTable) {
+  if (!Array.isArray(table.rows) || table.rows.length === 0) {
+    fail(slug, 'comparisonTable.rows must hold at least one dimension');
+  }
+  table.rows.forEach((row, index) => {
+    requireText(slug, `comparisonTable.rows[${index}].dimension`, row?.dimension);
+    requireText(slug, `comparisonTable.rows[${index}].dify`, row?.dify);
+    requireText(slug, `comparisonTable.rows[${index}].fastgpt`, row?.fastgpt);
+  });
+  requireText(slug, 'comparisonTable.sourceNote', table.sourceNote);
+  requireText(slug, 'comparisonTable.sourceLabel', table.sourceLabel);
+  requirePublicUrl(slug, 'comparisonTable.sourceUrl', table.sourceUrl);
+}
+
+function validateWhySection(slug: string, why: AdsWhySection) {
+  if (why.title !== undefined) requireText(slug, 'why.title', why.title);
+  if (why.subtitle !== undefined) requireText(slug, 'why.subtitle', why.subtitle);
+  if (!Array.isArray(why.cards) || why.cards.length !== 3) {
+    fail(slug, 'why.cards must contain exactly 3 capability cards');
+  }
+  why.cards.forEach((card, index) => {
+    requireText(slug, `why.cards[${index}].title`, card?.title);
+    requireText(slug, `why.cards[${index}].body`, card?.body);
+    if (card?.verdict !== undefined) {
+      requireText(slug, `why.cards[${index}].verdict`, card.verdict);
+    }
+  });
+}
+
+function validateCaseSection(slug: string, cases: AdsCaseSection) {
+  if (cases.badge !== undefined) requireText(slug, 'cases.badge', cases.badge);
+  if (cases.title !== undefined) requireText(slug, 'cases.title', cases.title);
+  if (cases.subtitle !== undefined) requireText(slug, 'cases.subtitle', cases.subtitle);
+  if (!Array.isArray(cases.cards) || cases.cards.length !== 3) {
+    fail(slug, 'cases.cards must contain exactly 3 published customer cases');
+  }
+  cases.cards.forEach((card, index) => {
+    if (card?.org !== undefined) requireText(slug, `cases.cards[${index}].org`, card.org);
+    requireText(slug, `cases.cards[${index}].title`, card?.title);
+    requireText(slug, `cases.cards[${index}].metrics`, card?.metrics);
+    requireText(slug, `cases.cards[${index}].image`, card?.image);
+    if (card?.url !== undefined) {
+      requirePublicUrl(slug, `cases.cards[${index}].url`, card.url);
+    }
+  });
 }
 
 function validateAdsLandingPage(page: AdsLandingPage) {
@@ -38,6 +104,9 @@ function validateAdsLandingPage(page: AdsLandingPage) {
   requireText(slug, 'keywordGroup', page.keywordGroup);
   requireText(slug, 'h1', page.h1);
   requireText(slug, 'subtitle', page.subtitle);
+  if (page.checklistSubtitle !== undefined) {
+    requireText(slug, 'checklistSubtitle', page.checklistSubtitle);
+  }
   requireText(slug, 'trustLine', page.trustLine);
   requireText(slug, 'leadMagnet', page.leadMagnet);
   requireText(slug, 'updatedAt', page.updatedAt);
@@ -58,20 +127,12 @@ function validateAdsLandingPage(page: AdsLandingPage) {
   }
   page.readingLinks.forEach((link, index) => {
     requireText(slug, `readingLinks[${index}].label`, link?.label);
-    requireText(slug, `readingLinks[${index}].url`, link?.url);
-    let parsed: URL;
-    try {
-      parsed = new URL(link.url);
-    } catch {
-      return fail(slug, `readingLinks[${index}].url must be an absolute URL`);
-    }
-    if (parsed.protocol !== 'https:' || !ALLOWED_READING_HOSTS.has(parsed.hostname)) {
-      fail(
-        slug,
-        `readingLinks[${index}].url must be a public https URL on ${[...ALLOWED_READING_HOSTS].join(' or ')}`
-      );
-    }
+    requirePublicUrl(slug, `readingLinks[${index}].url`, link?.url);
   });
+
+  if (page.comparisonTable) validateComparisonTable(slug, page.comparisonTable);
+  if (page.why) validateWhySection(slug, page.why);
+  if (page.cases) validateCaseSection(slug, page.cases);
 }
 
 const slugSeen = new Set<string>();

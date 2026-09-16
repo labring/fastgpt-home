@@ -479,7 +479,7 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   );
   assert.equal(
     packageJson.scripts['generate:blog-pagefind'],
-    "pagefind --site out --output-subdir pagefind/blog --glob '**/blog/**/*.html'"
+    "pagefind --site out --output-subdir pagefind/blog --glob '**/*/blog/**/*.html'"
   );
   assert(getSourceExecutionOrder().includes('typescript.source'));
   const workflow = require('js-yaml').load(verificationWorkflow);

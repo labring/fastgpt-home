@@ -42530,6 +42530,36 @@
     "minutes": 5
   },
   {
+    "identity": "zh|/compare/fastgpt-competitor-migration-checklist",
+    "title": "面向技术选型人员的FastGPT竞品迁移对照说明",
+    "description": "从竞品强项、产品重心、能力对照与迁移复盘四层说明 FastGPT 与 Dify、RAGFlow、MaxKB 的核对方法，给出同条件 POC 的验证步骤与选型检查项。",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/fastgpt-competitor-migration-checklist",
+    "sourceType": "深度场景内容",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/compare/maxkb-fastgpt-migration-reference",
+    "title": "从MaxKB迁移到FastGPT的中性技术选型对照参考",
+    "description": "按场景匹配、能力对照与迁移核查三层说明 MaxKB 与 FastGPT 的选型边界，给出同数据同模型同硬件的对照验证方法与验收检查项。",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/maxkb-fastgpt-migration-reference",
+    "sourceType": "深度场景内容",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/compare/migrate-fastgpt-neutral-competitor-guide",
+    "title": "从竞品迁移至FastGPT的中性技术选型对照指南",
+    "description": "从竞品强项、产品重心、能力对照与迁移核查四层说明从 RAGFlow、MaxKB 迁移到 FastGPT 的选型边界，给出同条件对照验证方法。",
+    "category": "compare",
+    "locale": "zh",
+    "publicPath": "/compare/migrate-fastgpt-neutral-competitor-guide",
+    "sourceType": "深度场景内容",
+    "minutes": 3
+  },
+  {
     "identity": "zh|/troubleshoot/fastgpt-api-error-troubleshooting",
     "title": "FastGPT API调用返回异常的排查与解决方法",
     "description": "FastGPT API调用返回异常的排查与解决方法 现象 使用Python代码调用FastGPT公有云API时返回异常内容。用户的请求代码中，请求地址为https://fastgpt.run/api/v1/chat/completions，使用的API密钥为YOURAPIKEY，请求体包含chatId、st…",

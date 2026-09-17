@@ -4,6 +4,9 @@
     "io": { "defaultLocale": "en" },
     "preview": { "defaultLocale": "en" }
   },
+  "rootSectionLocales": {
+    "ads": "zh"
+  },
   "locales": {
     "en": {
       "name": "English",

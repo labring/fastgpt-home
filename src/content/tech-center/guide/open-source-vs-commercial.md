@@ -1,5 +1,5 @@
 ---
-slug: /zh/tutorial/open-source-vs-commercial
+slug: /zh/guide/open-source-vs-commercial
 page_type: 深度场景内容
 schema_type: Article
 meta_title: 开源版与商业版差在哪：付费买到的功能与服务
@@ -135,5 +135,5 @@ image_height: 630
 建议顺序是：先用 2.5 的表把需求分成必选、可选、未来三档 → 再按租户数、SSO 与 OA、开票支付三步定位私有部署档位 → 然后在 POC 中实测权限与日志 → 最后与商务确认当期价格、维保范围与授权期限。
 
 - 各档位包含内容与当期价格：见[FastGPT 价格页](/zh/price)
-- 私有化部署的组件拓扑与出站边界：见[私有化部署拓扑说明](/zh/tutorial/private-deployment-topology)
+- 私有化部署的组件拓扑与出站边界：见[私有化部署拓扑说明](/zh/guide/private-deployment-topology)
 - 四个技术支持档位的权益与渠道差别：见[支持与服务档位 FAQ](/zh/faq/support-tiers)

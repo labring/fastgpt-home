@@ -1,5 +1,5 @@
 ---
-slug: /zh/tutorial/self-hostable-platform-selection
+slug: /zh/guide/self-hostable-platform-selection
 page_type: 深度场景内容
 schema_type: Article
 meta_title: 可私有化的开源 AI 应用平台：四个固定比较变量
@@ -142,5 +142,5 @@ image_height: 630
 选型的推荐顺序是：先用四个变量缩小到 2–3 个候选 → 再用治理能力矩阵确认各自需要哪一档版本 → 然后在同一条件下跑 POC → 最后按同一口径算三年成本。四步都完成之后，结论通常是自明的。
 
 - 与 Dify 的逐项对照与 POC 判据：见[Dify 与 FastGPT 对比页](/zh/compare/dify-vs-fastgpt)
-- 社区版与商业版的功能与服务边界：见[开源版与商业版说明](/zh/tutorial/open-source-vs-commercial)
-- 私有化部署的组件拓扑与出站边界：见[私有化部署拓扑说明](/zh/tutorial/private-deployment-topology)
+- 社区版与商业版的功能与服务边界：见[开源版与商业版说明](/zh/guide/open-source-vs-commercial)
+- 私有化部署的组件拓扑与出站边界：见[私有化部署拓扑说明](/zh/guide/private-deployment-topology)

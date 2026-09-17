@@ -1,5 +1,5 @@
 ---
-slug: /zh/tutorial/private-deployment-topology
+slug: /zh/guide/private-deployment-topology
 page_type: 深度场景内容
 schema_type: Article
 meta_title: 私有化部署企业知识库：拓扑与出站边界怎么定
@@ -119,4 +119,4 @@ image_height: 630
 
 - 部署形态与商业版私有化交付范围：见[私有化部署边界 FAQ](/zh/faq/private-deployment-data-boundary)
 - Docker 部署路径与向量库配置：见[FastGPT 自部署配置说明](/zh/tutorial/fastgpt-self-host-config)
-- 社区版与商业版在治理能力上的边界：见[开源版与商业版说明](/zh/tutorial/open-source-vs-commercial)
+- 社区版与商业版在治理能力上的边界：见[开源版与商业版说明](/zh/guide/open-source-vs-commercial)

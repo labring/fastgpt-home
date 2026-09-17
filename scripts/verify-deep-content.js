@@ -1,6 +1,8 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const crypto = require('node:crypto');
+const { buildRedirects } = require('./lib/redirects');
+const { getProductionBaseUrls } = require('./lib/site-variant');
 
 const root = process.cwd();
 const entries = JSON.parse(
@@ -12,21 +14,21 @@ const articles = [
     metaTitle: '私有化部署企业知识库：拓扑与出站边界怎么定',
     metaDescription:
       '从组件拓扑、向量库选型、六类出站源三层说明私有化部署的数据边界到底由什么决定，给出哪些环节可换成内网组件、采购前应逐项确认的数据流清单，以及用威胁用例验证出站策略的方法。',
-    bodyHash: 'bbe19649690dfdb48c8e6dc526a5461d2d2b00174b13ffd27373be107215969a'
+    bodyHash: '0875e02bd41517b7ee55eabfc56bfe5c201fa48c5b00cf274a71799b029d767d'
   },
   {
     slug: 'self-hostable-platform-selection',
     metaTitle: '可私有化的开源 AI 应用平台：四个固定比较变量',
     metaDescription:
       '功能勾选表分不出高下，真正决定选型的是许可证边界、部署门槛、治理能力落在哪个版本、三年总成本这四个变量。本文给出各项核实方法、同条件验证前提，以及公开资料未列出为何不等于不支持。',
-    bodyHash: 'abae263ab5871807f8999857d57647464085c043db5a4c76ef9278161022829c'
+    bodyHash: 'bc0f41190399b217b9d26a33c0d1980f5af5f06a1246d9d9dde1ffd93b7c1896'
   },
   {
     slug: 'open-source-vs-commercial',
     metaTitle: '开源版与商业版差在哪：付费买到的功能与服务',
     metaDescription:
       '用官方「社区版镜像加商业版镜像」的口径说明付费买到的功能与服务分别是什么，给出私有部署三档的选型顺序、必选可选未来功能表模板，以及什么情况下现在还不该升级的判断依据。',
-    bodyHash: '2b6c9e0bf4d0873b5ff6d3e54597fa2cf782e5496dfbbaa98deeb72987a931eb'
+    bodyHash: '847db100f466767665b3fefe3715c3684dfce3dfed3c32c92a5ddcf458ddfff4'
   },
   {
     slug: 'ai-support-build-or-buy',
@@ -69,14 +71,17 @@ function getBody(source) {
 
 for (const article of articles) {
   const { slug } = article;
-  const route = `/zh/tutorial/${slug}`;
+  const route = `/zh/guide/${slug}`;
   const matchingEntries = entries.filter((entry) => entry.slug === route);
   if (matchingEntries.length !== 1) throw new Error(`${route}: expected one index entry`);
+  if (entries.some((entry) => entry.slug === `/zh/tutorial/${slug}`)) {
+    throw new Error(`${route}: the retired /tutorial/ route is still indexed`);
+  }
   if (matchingEntries[0].sourceType !== '深度场景内容') {
     throw new Error(`${route}: invalid source type`);
   }
 
-  const articlePath = path.join(root, `src/content/tech-center/tutorial/${slug}.md`);
+  const articlePath = path.join(root, `src/content/tech-center/guide/${slug}.md`);
   const source = fs.readFileSync(articlePath, 'utf8').replace(/\r\n?/g, '\n');
   const metadata = parseFrontMatter(source);
 
@@ -131,6 +136,17 @@ for (const article of articles) {
             path.join(root, `src/content/tech-center/${segments[1]}/${segments[2]}.md`)
           );
     if (!targetExists) throw new Error(`${route}: missing internal link target ${target}`);
+  }
+}
+
+const cnBaseUrl = getProductionBaseUrls().cn;
+const { cnRedirects } = buildRedirects(root);
+for (const { slug } of articles) {
+  const target = `${cnBaseUrl}/guide/${slug}`;
+  for (const source of [`/tutorial/${slug}`, `/zh/tutorial/${slug}`]) {
+    if (cnRedirects.get(source) !== target) {
+      throw new Error(`${source}: expected a 301 to ${target}`);
+    }
   }
 }
 

@@ -1,36 +1,30 @@
 ---
-title: FastGPT 错误码全表
+title: FastGPT 错误码全表（122 条 · 按模块分组）
 slug: /zh/reference/error-codes-reference
 page_type: 基准数据页
-source: https://github.com/labring/FastGPT/tree/5957d06807ff7f984c70c6425c8d0fc40eb1714d/packages/global/common/error/code
+source: https://github.com/labring/FastGPT/tree/v4.16.2/packages/global/common/error/code
 source_type: 官方文档
 meta_title: FastGPT 错误码全表｜FastGPT 技术中心
 meta_description: 查阅错误码全表，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。
 schema_type: TechArticle
 date_published: 2026-09-08
-date_modified: 2026-09-08
-source_file: 程序化技术页-第6批/中文-fastgpt.cn/reference/error-codes-reference.md
-source_sha256: f3ec8f44b11da9839662b0c875d0d12562bcd9dfb5faf571c55593b8c714bd0d
-source_verified: 2026-09-07
-publication_batch: Week08
+date_modified: 2026-09-09
 ---
 
 # FastGPT 错误码全表
 
-本表对应 FastGPT 开发分支快照 5957d06（2026-09-07）。开发分支包含尚未进入正式版本的能力；部署时请核对所用版本。
-
 ## 这张表怎么用
 
-接口返回的错误体里带 `code` 与 `statusText` 两个字段。本页把开源仓库中定义的 124 个错误码按模块分组逐条列出，可用 `code` 数值或 `statusText` 反查它属于哪个模块、对应哪条文案。码值取自错误码定义文件。
+接口返回的错误体里带 `code` 与 `statusText` 两个字段。本页把开源仓库中定义的 122 个错误码按模块分组逐条列出，可用 `code` 数值或 `statusText` 反查它属于哪个模块、对应哪条文案。码值取自错误码定义文件，核验日 2026-09-09。
 
-排查接口报错时的用法：先用 `code` 的前三位定位模块段位，再在对应模块的表里查具体条目；`statusText` 更适合程序判断，升级时应核对目标版本的标识兼容性。
+排查接口报错时的用法：先用 `code` 的前三位定位模块段位，再在对应模块的表里查具体条目；`statusText` 是稳定标识，跨版本比 `code` 更可靠。
 
 ## 各列的含义
 
 | 列 | 含义 |
 | --- | --- |
 | 错误码 | 接口返回体中的 `code` 数值 |
-| statusText | 接口返回体中的 `statusText`，升级时需核对兼容性，建议用它做程序判断 |
+| statusText | 接口返回体中的 `statusText`，跨版本稳定，建议用它做程序判断 |
 | 文案键 | 该错误对应的多语言文案键，可在语言包中查到面向用户的提示文字 |
 | 备注 | 码值的推导方式，以及该条目涉及的定义层面问题 |
 
@@ -120,7 +114,7 @@ publication_batch: Week08
 | `503008` | `accountCancellationPending` | `common:code_error.account_cancellation_pending` | — |
 | `503009` | `registrationMethodNotSupported` | `common:error.registration_method_not_supported` | — |
 
-## team 模块（46 条 · 基码段位 500000）
+## team 模块（45 条 · 基码段位 500000）
 
 | 错误码 | statusText | 文案键 | 备注 |
 | --- | --- | --- | --- |
@@ -169,7 +163,6 @@ publication_batch: Week08
 | `500042` | `amountError` | `common:enterprise_auth.error.amount_error` | — |
 | `500043` | `amountFailed` | `common:enterprise_auth.error.amount_failed` | — |
 | `500044` | `processing` | `common:enterprise_auth.error.processing` | — |
-| `500045` | `teamPluginInstallDisabled` | `common:code_error.team_error.team_plugin_install_disabled` | — |
 
 ## skill 模块（17 条 · 基码段位 509000）
 
@@ -255,12 +248,6 @@ publication_batch: Week08
 | --- | --- | --- | --- |
 | `512000` | `invalidCoupon` | `common:coupon_invalid` | — |
 
-## model 模块（1 条 · 基码段位 513000）
-
-| Code | statusText | Message key |
-| --- | --- | --- |
-| `513000` | `modelUnExist` | `common:model_not_exist` |
-
 ## 什么情况下这张表会过期
 
 1. **新增错误码会插入数组中间，使其后的码值整体后移。** 按 `code` 数值做的程序判断
@@ -269,6 +256,4 @@ publication_batch: Week08
 3. **文案键对应的提示文字随语言包变化**，本表只给键名，不给具体文字。
 4. **枚举中声明但未注册码值的条目，可能在后续版本补齐**，届时会获得码值。
 
-## 参考资料
-
-- [FastGPT error codes reference — 5957d06](https://github.com/labring/FastGPT/tree/5957d06807ff7f984c70c6425c8d0fc40eb1714d/packages/global/common/error/code)
+> 码值取自开源仓库的错误码定义文件（14 个模块），核验日 2026-09-09。

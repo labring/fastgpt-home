@@ -1,27 +1,21 @@
 ---
-title: FastGPT 环境变量速查全表
+title: FastGPT 环境变量速查全表（136 项 · 按用途分组）
 slug: /zh/reference/env-variables-reference
 page_type: 基准数据页
-source: https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/.env.template
+source: https://github.com/labring/FastGPT/blob/v4.16.2/projects/app/.env.template
 source_type: 官方文档
 meta_title: FastGPT 环境变量速查全表｜FastGPT 技术中心
 meta_description: 查阅环境变量速查全表，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。
 schema_type: TechArticle
 date_published: 2026-09-08
-date_modified: 2026-09-08
-source_file: 程序化技术页-第6批/中文-fastgpt.cn/reference/env-variables-reference.md
-source_sha256: d5f591b95dc65c29bd48a09e20466a8c3e8cd18c5c60956a20fb57db792017f7
-source_verified: 2026-09-07
-publication_batch: Week08
+date_modified: 2026-09-09
 ---
 
 # FastGPT 环境变量速查全表
 
-本表对应 FastGPT 开发分支快照 5957d06（2026-09-07）。开发分支包含尚未进入正式版本的能力；部署时请核对所用版本。
-
 ## 这张表怎么用
 
-本页把 FastGPT 社区版可配置的 137 个环境变量按用途分成 15 组逐条列出，每条给出默认值、官方说明与是否默认启用。变量清单取自开源仓库的配置模板文件。部署与升级时最常出问题的环节就是环境变量，这张表的用途是在不 clone 仓库的前提下逐项核对。
+本页把 FastGPT 社区版可配置的 136 个环境变量按用途分成 15 组逐条列出，每条给出默认值、官方说明与是否默认启用。变量清单取自开源仓库的配置模板文件，核验日 2026-09-09。部署与升级时最常出问题的环节就是环境变量，这张表的用途是在不 clone 仓库的前提下逐项核对。
 
 ## 各列的含义
 
@@ -118,12 +112,11 @@ publication_batch: Week08
 | `AGENT_SANDBOX_PROXY_URL` | `ws://localhost:3006` | 是 | 浏览器客户端连接沙盒代理的对外 WebSocket 地址。 启用 Agent Sandbox（show_agent_sandbox）时必填；未启用时可留空。 开发环境建议配置为 ws://localhost:3006 (指向 Docker Compose 中的 Rust 代理)。 生产环境请配置浏览器可访问的 ws:// 或 wss:// 代理地址。 |
 | `AGENT_SANDBOX_PREVIEW_PROXY_URL` | `http://localhost:3006` | 是 | 浏览器访问沙盒文件预览的 HTTP(S) 地址。启用 Agent Sandbox 时必填；默认单端口部署时与 WebSocket 使用相同端口。 |
 
-## 并发控制与限制（7 项）
+## 并发控制与限制（6 项）
 
 | 变量名 | 默认值 | 默认启用 | 说明 |
 | --- | --- | --- | --- |
 | `WECHAT_CHANNEL_CONCURRENCY` | `1000` | 是 | 微信渠道 poll worker 并发数（默认 1000），需 ≥ online channel 数；channel 数超过该值时消息延迟会线性恶化 |
-| `SYSTEM_MIGRATION_BATCH_SIZE` | `100` | 是 | 系统迁移任务每批处理的记录数，范围 50～1000，默认 100 |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600` | 是 | 文件解析超时时间（秒） |
 | `WORKFLOW_MAX_RUN_TIMES` | `500` | 是 | 工作流最大运行次数，避免极端死循环 |
 | `WORKFLOW_MAX_LOOP_TIMES` | `100` | 是 | 循环/并行节点最大输入数组长度（默认 100） |
@@ -240,8 +233,8 @@ publication_batch: Week08
 | 变量名 | 默认值 | 默认启用 | 说明 |
 | --- | --- | --- | --- |
 | `LOG_DEPTH` | `3` | 是 | — |
-| `DEFAULT_ROOT_PSW` | 示例值（部署时必须改） | 是 | 默认用户密码（用户名为 root），每次重启会自动更新。 |
-| `DB_MAX_LINK` | `20` | 是 | 数据库最大连接数 |
+| `DEFAULT_ROOT_PSW` | `123456` | 是 | 默认用户密码（用户名为 root），每次重启会自动更新。 |
+| `DB_MAX_LINK` | `5` | 是 | 数据库最大连接数 |
 | `SYNC_INDEX` | `true` | 是 | 自动同步索引 |
 
 ## 什么情况下这张表会过期
@@ -258,6 +251,4 @@ publication_batch: Week08
 5. **配置模板中的密钥、令牌、口令都是示例值，上线前必须全部替换。**
    沿用模板示例值等同于把凭证公开，本表因此不列出这些取值。
 
-## 参考资料
-
-- [FastGPT env variables reference — 5957d06](https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/.env.template)
+> 变量清单取自开源仓库配置模板 `projects/app/.env.template`，核验日 2026-09-09。

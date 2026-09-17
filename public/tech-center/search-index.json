@@ -101,23 +101,23 @@
   },
   {
     "identity": "zh|/guide/self-hostable-platform-selection",
-    "title": "可私有化的开源 AI 应用平台怎么选：四个固定比较变量",
-    "description": "用许可证边界、部署门槛、治理能力所属版本与三年总成本四个变量筛选可私有化的开源 AI 应用平台。",
+    "title": "可私有化的开源 AI 应用平台怎么选：五个固定比较变量",
+    "description": "用许可证边界、部署门槛、治理能力所属版本、原厂支持与责任边界、三年总成本五个变量筛选可私有化的开源 AI 应用平台。",
     "category": "troubleshoot",
     "locale": "zh",
     "publicPath": "/guide/self-hostable-platform-selection",
     "sourceType": "深度场景内容",
-    "minutes": 12
+    "minutes": 15
   },
   {
     "identity": "zh|/guide/open-source-vs-commercial",
     "title": "开源版和商业版差在哪：付费买到的功能与服务分别是什么",
-    "description": "拆分开源版与商业版的功能、服务和治理边界，给出私有部署档位选择与必选、可选、未来需求表。",
+    "description": "拆分开源版与商业版的功能、原厂支持服务和治理边界，给出私有部署档位选择与必选、可选、未来需求表。",
     "category": "troubleshoot",
     "locale": "zh",
     "publicPath": "/guide/open-source-vs-commercial",
     "sourceType": "深度场景内容",
-    "minutes": 11
+    "minutes": 13
   },
   {
     "identity": "zh|/guide/ai-support-build-or-buy",

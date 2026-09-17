@@ -189,13 +189,13 @@
     "minutes": 10
   },
   {
-    "title": "可私有化的开源 AI 应用平台怎么选：四个固定比较变量",
+    "title": "可私有化的开源 AI 应用平台怎么选：五个固定比较变量",
     "slug": "/zh/guide/self-hostable-platform-selection",
     "category": "troubleshoot",
     "categoryLabel": "故障排查",
     "sourceType": "深度场景内容",
-    "summary": "用许可证边界、部署门槛、治理能力所属版本与三年总成本四个变量筛选可私有化的开源 AI 应用平台。",
-    "minutes": 12
+    "summary": "用许可证边界、部署门槛、治理能力所属版本、原厂支持与责任边界、三年总成本五个变量筛选可私有化的开源 AI 应用平台。",
+    "minutes": 15
   },
   {
     "title": "开源版和商业版差在哪：付费买到的功能与服务分别是什么",
@@ -203,8 +203,8 @@
     "category": "troubleshoot",
     "categoryLabel": "故障排查",
     "sourceType": "深度场景内容",
-    "summary": "拆分开源版与商业版的功能、服务和治理边界，给出私有部署档位选择与必选、可选、未来需求表。",
-    "minutes": 11
+    "summary": "拆分开源版与商业版的功能、原厂支持服务和治理边界，给出私有部署档位选择与必选、可选、未来需求表。",
+    "minutes": 13
   },
   {
     "title": "企业上智能客服：自建开源方案还是买 SaaS 客服系统",

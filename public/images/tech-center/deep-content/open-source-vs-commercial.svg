@@ -1,47 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
-  <title id="title">开源版与商业版的功能和服务关系</title>
-  <desc id="desc">社区版镜像与商业版镜像组成完整应用，私有部署档位按实际治理需求选择。</desc>
+  <title id="title">开源版与商业版的功能、部署档位与支持档位关系</title>
+  <desc id="desc">社区版镜像与商业版镜像组成完整应用，私有部署按需求信号分三档，原厂支持按覆盖时段与首次响应目标分四档。</desc>
   <rect width="1200" height="630" fill="#f7f9fc"/>
   <rect x="44" y="36" width="1112" height="558" rx="20" fill="#ffffff" stroke="#dfe4ec" stroke-width="2"/>
   <text x="80" y="88" fill="#172033" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="34" font-weight="700">开源版与商业版：付费买到什么</text>
-  <text x="80" y="119" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17">功能镜像与服务责任分开评估</text>
+  <text x="80" y="119" fill="#667085" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="17">功能镜像、私有部署档位与服务责任分开评估</text>
 
   <g font-family="PingFang SC, Microsoft YaHei, sans-serif">
-    <rect x="82" y="174" width="284" height="132" rx="14" fill="#f3f6ff" stroke="#b7c9f5" stroke-width="2"/>
-    <text x="224" y="217" fill="#2458d8" text-anchor="middle" font-size="16" font-weight="700">基础能力</text>
-    <text x="224" y="254" fill="#172033" text-anchor="middle" font-size="25" font-weight="700">社区版镜像</text>
-    <text x="224" y="281" fill="#667085" text-anchor="middle" font-size="14">自行部署 · 自行运维</text>
+    <rect x="80" y="136" width="236" height="104" rx="14" fill="#f3f6ff" stroke="#b7c9f5" stroke-width="2"/>
+    <text x="198" y="168" fill="#2458d8" text-anchor="middle" font-size="14" font-weight="700">基础能力</text>
+    <text x="198" y="202" fill="#172033" text-anchor="middle" font-size="23" font-weight="700">社区版镜像</text>
+    <text x="198" y="226" fill="#667085" text-anchor="middle" font-size="13">自行部署 · 自行运维</text>
 
-    <text x="400" y="252" fill="#667085" text-anchor="middle" font-size="34" font-weight="500">+</text>
+    <text x="336" y="200" fill="#667085" text-anchor="middle" font-size="34" font-weight="500">+</text>
 
-    <rect x="434" y="174" width="284" height="132" rx="14" fill="#eefaf6" stroke="#a9dfce" stroke-width="2"/>
-    <text x="576" y="217" fill="#17684f" text-anchor="middle" font-size="16" font-weight="700">治理与企业功能</text>
-    <text x="576" y="254" fill="#172033" text-anchor="middle" font-size="25" font-weight="700">商业版镜像</text>
-    <text x="576" y="281" fill="#667085" text-anchor="middle" font-size="14">权限 · 审计 · 多租户</text>
+    <rect x="356" y="136" width="236" height="104" rx="14" fill="#eefaf6" stroke="#a9dfce" stroke-width="2"/>
+    <text x="474" y="168" fill="#17684f" text-anchor="middle" font-size="14" font-weight="700">治理与企业功能</text>
+    <text x="474" y="202" fill="#172033" text-anchor="middle" font-size="23" font-weight="700">商业版镜像</text>
+    <text x="474" y="226" fill="#667085" text-anchor="middle" font-size="13">权限 · 审计 · 多租户</text>
 
-    <path d="M718 240H776" fill="none" stroke="#8eaef8" stroke-width="4"/>
-    <path d="M768 230L782 240L768 250" fill="none" stroke="#8eaef8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M600 188H640" fill="none" stroke="#8eaef8" stroke-width="4"/>
+    <path d="M634 179L648 188L634 197" fill="none" stroke="#8eaef8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 
-    <rect x="782" y="174" width="336" height="132" rx="14" fill="#172033"/>
-    <text x="950" y="217" fill="#a9bfff" text-anchor="middle" font-size="16" font-weight="700">完整应用</text>
-    <text x="950" y="254" fill="#ffffff" text-anchor="middle" font-size="25" font-weight="700">功能 + 服务</text>
-    <text x="950" y="281" fill="#c6cfdd" text-anchor="middle" font-size="14">部署 · 工单 · 升级 · 托管</text>
+    <rect x="652" y="136" width="468" height="104" rx="14" fill="#172033"/>
+    <text x="886" y="168" fill="#a9bfff" text-anchor="middle" font-size="14" font-weight="700">完整应用</text>
+    <text x="886" y="202" fill="#ffffff" text-anchor="middle" font-size="23" font-weight="700">功能 + 服务</text>
+    <text x="886" y="226" fill="#c6cfdd" text-anchor="middle" font-size="13">部署 · 工单 · 升级 · 托管</text>
 
-    <text x="80" y="364" fill="#172033" font-size="20" font-weight="700">私有部署档位：按需求信号定位</text>
-    <rect x="80" y="394" width="322" height="126" rx="14" fill="#ffffff" stroke="#cbd7f4" stroke-width="2"/>
-    <text x="108" y="428" fill="#2458d8" font-size="15" font-weight="700">标准版</text>
-    <text x="108" y="463" fill="#172033" font-size="22" font-weight="700">先看租户数</text>
-    <text x="108" y="493" fill="#667085" font-size="14">单团队或基础私有部署</text>
+    <rect x="80" y="262" width="328" height="104" rx="14" fill="#ffffff" stroke="#cbd7f4" stroke-width="2"/>
+    <text x="108" y="294" fill="#2458d8" font-size="14" font-weight="700">私有部署 · 标准版</text>
+    <text x="108" y="328" fill="#172033" font-size="21" font-weight="700">先看租户数</text>
+    <text x="108" y="352" fill="#667085" font-size="13">单团队或基础私有部署</text>
 
-    <rect x="439" y="394" width="322" height="126" rx="14" fill="#ffffff" stroke="#a9dfce" stroke-width="2"/>
-    <text x="467" y="428" fill="#17684f" font-size="15" font-weight="700">专业版</text>
-    <text x="467" y="463" fill="#172033" font-size="22" font-weight="700">再看 SSO / OA</text>
-    <text x="467" y="493" fill="#667085" font-size="14">组织协同与治理要求</text>
+    <rect x="436" y="262" width="328" height="104" rx="14" fill="#ffffff" stroke="#a9dfce" stroke-width="2"/>
+    <text x="464" y="294" fill="#17684f" font-size="14" font-weight="700">私有部署 · 专业版</text>
+    <text x="464" y="328" fill="#172033" font-size="21" font-weight="700">再看 SSO / OA</text>
+    <text x="464" y="352" fill="#667085" font-size="13">组织协同与治理要求</text>
 
-    <rect x="798" y="394" width="322" height="126" rx="14" fill="#ffffff" stroke="#d2c8f8" stroke-width="2"/>
-    <text x="826" y="428" fill="#5443b8" font-size="15" font-weight="700">旗舰版</text>
-    <text x="826" y="463" fill="#172033" font-size="22" font-weight="700">最后看开票 / 支付</text>
-    <text x="826" y="493" fill="#667085" font-size="14">复杂业务与扩展能力</text>
+    <rect x="792" y="262" width="328" height="104" rx="14" fill="#ffffff" stroke="#d2c8f8" stroke-width="2"/>
+    <text x="820" y="294" fill="#5443b8" font-size="14" font-weight="700">私有部署 · 旗舰版</text>
+    <text x="820" y="328" fill="#172033" font-size="21" font-weight="700">最后看开票 / 支付</text>
+    <text x="820" y="352" fill="#667085" font-size="13">复杂业务与扩展能力</text>
+
+    <text x="80" y="392" fill="#172033" font-size="17" font-weight="700">原厂支持四档：覆盖时段与首次响应目标逐档递进</text>
+
+    <rect x="80" y="460" width="248" height="80" rx="12" fill="#f4f6f9" stroke="#d5dce5" stroke-width="2"/>
+    <text x="104" y="494" fill="#5c6675" font-size="17" font-weight="700">免费版</text>
+    <text x="104" y="520" fill="#667085" font-size="13">工作日 · 24 小时响应</text>
+
+    <rect x="344" y="440" width="248" height="100" rx="12" fill="#f3f6ff" stroke="#b7c9f5" stroke-width="2"/>
+    <text x="368" y="474" fill="#2458d8" font-size="17" font-weight="700">基础版</text>
+    <text x="368" y="500" fill="#667085" font-size="13">5×8 · 4 小时响应</text>
+    <text x="368" y="522" fill="#8a94a6" font-size="13">专属支持群</text>
+
+    <rect x="608" y="422" width="248" height="118" rx="12" fill="#eefaf6" stroke="#a9dfce" stroke-width="2"/>
+    <text x="632" y="456" fill="#17684f" font-size="17" font-weight="700">进阶版</text>
+    <text x="632" y="482" fill="#667085" font-size="13">5×12 · 2 小时响应</text>
+    <text x="632" y="504" fill="#8a94a6" font-size="13">专属支持群</text>
+    <text x="632" y="526" fill="#8a94a6" font-size="13">搭建工程师 3 人天</text>
+
+    <rect x="872" y="404" width="248" height="136" rx="12" fill="#f7f3ff" stroke="#d2c8f8" stroke-width="2"/>
+    <text x="896" y="438" fill="#5443b8" font-size="17" font-weight="700">高级版</text>
+    <text x="896" y="464" fill="#667085" font-size="13">7×24 · 1 小时响应</text>
+    <text x="896" y="486" fill="#8a94a6" font-size="13">专属支持群 + 客户经理</text>
+    <text x="896" y="508" fill="#8a94a6" font-size="13">搭建工程师 10 人天</text>
+    <text x="896" y="530" fill="#8a94a6" font-size="13">专家咨询 1 次</text>
   </g>
   <text x="80" y="574" fill="#8a94a6" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14">FastGPT 深度场景内容</text>
 </svg>

@@ -18,17 +18,17 @@ const articles = [
   },
   {
     slug: 'self-hostable-platform-selection',
-    metaTitle: '可私有化的开源 AI 应用平台：四个固定比较变量',
+    metaTitle: '可私有化的开源 AI 应用平台：五个固定比较变量',
     metaDescription:
-      '功能勾选表分不出高下，真正决定选型的是许可证边界、部署门槛、治理能力落在哪个版本、三年总成本这四个变量。本文给出各项核实方法、同条件验证前提，以及公开资料未列出为何不等于不支持。',
-    bodyHash: 'bc0f41190399b217b9d26a33c0d1980f5af5f06a1246d9d9dde1ffd93b7c1896'
+      '功能勾选表分不出高下，真正决定选型的是许可证边界、部署门槛、治理能力落在哪个版本、原厂支持与责任边界、三年总成本这五个变量。本文给出各项的核实方法与同条件验证前提。',
+    bodyHash: 'd738eeb22f11cdfc40a9feb5504458f968fa89fe069aa362f7f546c735554567'
   },
   {
     slug: 'open-source-vs-commercial',
-    metaTitle: '开源版与商业版差在哪：付费买到的功能与服务',
+    metaTitle: '开源版与商业版差在哪：功能、原厂支持与服务',
     metaDescription:
-      '用官方「社区版镜像加商业版镜像」的口径说明付费买到的功能与服务分别是什么，给出私有部署三档的选型顺序、必选可选未来功能表模板，以及什么情况下现在还不该升级的判断依据。',
-    bodyHash: '847db100f466767665b3fefe3715c3684dfce3dfed3c32c92a5ddcf458ddfff4'
+      '用官方「社区版镜像加商业版镜像」的口径说明付费买到什么，含原厂支持四个档位的时段与响应目标、私有部署三档选型顺序、必选可选未来功能表，以及何时还不该升级。',
+    bodyHash: 'b7072cf2fa2da6dc9f02939b18be4ee5a120c263084bf326aab55d503dbe879f'
   },
   {
     slug: 'ai-support-build-or-buy',

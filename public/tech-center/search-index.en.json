@@ -61,23 +61,23 @@
   },
   {
     "identity": "en|/reference/env-variables-reference",
-    "title": "FastGPT Environment Variables Reference",
-    "description": "A grouped reference of the 137 environment variables defined in the FastGPT community edition configuration template, with defaults and official notes.",
+    "title": "FastGPT Environment Variables Reference (136 settings)",
+    "description": "FastGPT Environment Variables Reference How to use this table This page lists the 136 environment variables available in the FastGPT community edition, gr…",
     "category": "reference",
     "locale": "en",
     "publicPath": "/reference/env-variables-reference",
     "sourceType": "官方文档",
-    "minutes": 36
+    "minutes": 35
   },
   {
     "identity": "en|/reference/error-codes-reference",
-    "title": "FastGPT Error Code Reference",
-    "description": "A grouped reference of the 124 error codes defined in the FastGPT open-source repository, with the numeric code, statusText and message key.",
+    "title": "FastGPT Error Code Reference (122 codes)",
+    "description": "FastGPT Error Code Reference How to use this table API error responses carry a code and a statusText. This page lists the 122 error codes defined in the o…",
     "category": "reference",
     "locale": "en",
     "publicPath": "/reference/error-codes-reference",
     "sourceType": "官方文档",
-    "minutes": 34
+    "minutes": 33
   },
   {
     "identity": "en|/reference/workflow-nodes-reference",
@@ -7298,5 +7298,35 @@
     "publicPath": "/tutorial/fastgpt-vm-status-deduplication",
     "sourceType": "官方文档",
     "minutes": 6
+  },
+  {
+    "identity": "en|/guide/kb-chunk-and-index-settings",
+    "title": "Knowledge Base Chunk and Index Settings Estimator: What Each Parameter Actually Becomes",
+    "description": "Knowledge Base Chunk and Index Settings Estimator: What Each Parameter Actually Becomes Two numbers have to be decided before documents go in: how long ea…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/kb-chunk-and-index-settings",
+    "sourceType": "官方文档",
+    "minutes": 19
+  },
+  {
+    "identity": "en|/reference/env-variable-checklist",
+    "title": "Environment Variable Checklist Generator: 136 Variables in 15 Groups, Filtered by Deployment Shape",
+    "description": "Environment Variable Checklist Generator: 136 Variables in 15 Groups, Filtered by Deployment Shape The configuration template holds 136 variables in 15 gr…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/env-variable-checklist",
+    "sourceType": "官方文档",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/reference/error-code-lookup",
+    "title": "FastGPT Error Code Lookup: 122 Codes Across 14 Modules, With 8 That Need statusText to Tell Apart",
+    "description": "FastGPT Error Code Lookup: 122 Codes Across 14 Modules, With 8 That Need statusText to Tell Apart When the API returns a six-digit number, the module it c…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/error-code-lookup",
+    "sourceType": "官方文档",
+    "minutes": 19
   }
 ]

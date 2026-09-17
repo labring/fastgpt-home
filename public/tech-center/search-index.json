@@ -61,23 +61,23 @@
   },
   {
     "identity": "zh|/reference/env-variables-reference",
-    "title": "FastGPT 环境变量速查全表",
-    "description": "查阅环境变量速查全表，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
+    "title": "FastGPT 环境变量速查全表（136 项 · 按用途分组）",
+    "description": "FastGPT 环境变量速查全表 这张表怎么用 本页把 FastGPT 社区版可配置的 136 个环境变量按用途分成 15 组逐条列出，每条给出默认值、官方说明与是否默认启用。变量清单取自开源仓库的配置模板文件，核验日 2026-09-09。部署与升级时最常出问题的环节就是环境变量，这张表的用途是在不 cl…",
     "category": "reference",
     "locale": "zh",
     "publicPath": "/reference/env-variables-reference",
     "sourceType": "官方文档",
-    "minutes": 24
+    "minutes": 23
   },
   {
     "identity": "zh|/reference/error-codes-reference",
-    "title": "FastGPT 错误码全表",
-    "description": "查阅错误码全表，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
+    "title": "FastGPT 错误码全表（122 条 · 按模块分组）",
+    "description": "FastGPT 错误码全表 这张表怎么用 接口返回的错误体里带 code 与 statusText 两个字段。本页把开源仓库中定义的 122 个错误码按模块分组逐条列出，可用 code 数值或 statusText 反查它属于哪个模块、对应哪条文案。码值取自错误码定义文件，核验日 2026-09-09。 排…",
     "category": "reference",
     "locale": "zh",
     "publicPath": "/reference/error-codes-reference",
     "sourceType": "官方文档",
-    "minutes": 29
+    "minutes": 28
   },
   {
     "identity": "zh|/reference/workflow-nodes-reference",
@@ -42828,5 +42828,35 @@
     "publicPath": "/troubleshoot/wsl2-ubuntu-fastgpt-dependency-fail",
     "sourceType": "GitHub issue",
     "minutes": 2
+  },
+  {
+    "identity": "zh|/guide/kb-chunk-and-index-settings",
+    "title": "知识库分块与索引设置估算器：自动与自定义两种模式下每个参数的实际取值",
+    "description": "知识库分块与索引设置估算器：自动与自定义两种模式下每个参数的实际取值 上传文档之前要定两个数：一段内容切多长，以及为每段建多长的索引。这两个数在界面上都能填，但填进去的值不一定就是最终生效的值 —— 处理方式与设置方式会改写其中一部分。下面这个模块把改写关系摊开：选好处理方式与设置方式，每一项的实际取值、被…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/kb-chunk-and-index-settings",
+    "sourceType": "官方文档",
+    "minutes": 8
+  },
+  {
+    "identity": "zh|/reference/env-variable-checklist",
+    "title": "环境变量清单生成器：136 项分 15 组，按部署形态与要启用的能力筛出该配哪些",
+    "description": "环境变量清单生成器：136 项分 15 组，按部署形态与要启用的能力筛出该配哪些 配置模板里有 136 项变量，分成 15 组。一次部署实际要动的远少于这个数：其中 104 项带默认值，不动也能跑；真正必须自己填的是 32 项，另有 24 项默认不启用、要显式打开才生效。下面这个模块按部署形态与要用的能力，…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/env-variable-checklist",
+    "sourceType": "官方文档",
+    "minutes": 9
+  },
+  {
+    "identity": "zh|/reference/error-code-lookup",
+    "title": "FastGPT 错误码定位器：14 个模块 122 条错误码，含 8 个需要看 statusText 才能区分的码值",
+    "description": "FastGPT 错误码定位器：14 个模块 122 条错误码，含 8 个需要看 statusText 才能区分的码值 接口返回一个六位数字，先要知道它出自哪个模块，才知道去查哪一块的配置。错误码由模块基码加偏移构成，规律清楚，但有两处例外会让纯按数字查的做法失效：有两组模块共用了同一个基码，还有一条码没有按…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/error-code-lookup",
+    "sourceType": "官方文档",
+    "minutes": 9
   }
 ]

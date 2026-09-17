@@ -151,6 +151,12 @@ export function parseMarkdown(markdown: string, title: string): MarkdownBlock[] 
       continue;
     }
 
+    // Authoring markers such as fastgpt-interactive stay in the Markdown source and out of the rendered body.
+    if (/^<!--.*-->$/.test(line.trim())) {
+      index += 1;
+      continue;
+    }
+
     const fence = line.match(/^\x60\x60\x60\s*([^\s]*)\s*$/);
     if (fence) {
       const codeLines: string[] = [];

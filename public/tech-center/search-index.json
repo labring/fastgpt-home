@@ -42858,5 +42858,275 @@
     "publicPath": "/reference/error-code-lookup",
     "sourceType": "官方文档",
     "minutes": 9
+  },
+  {
+    "identity": "zh|/api/fastgpt-api-basic-config",
+    "title": "FastGPT API接口鉴权与基础配置使用说明",
+    "description": "FastGPT API接口鉴权与基础配置使用说明 API文档概述 从4.15.0版本开始，FastGPT API文档采用zod-openapi自动生成，部分旧接口未完成改造故不会在文档中显示。你可以通过访问对应文档地址查看最新的接口情况，文档左侧手动编辑的接口说明不再更新。FastGPT API文档分为两套…",
+    "category": "api",
+    "locale": "zh",
+    "publicPath": "/api/fastgpt-api-basic-config",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/dataset/knowledge-base-search-params",
+    "title": "FastGPT知识库搜索方案和参数的配置与使用说明",
+    "description": "FastGPT知识库搜索方案和参数的配置与使用说明 向量搜索与知识库存储逻辑 FastGPT基于RAG的Embedding方案构建知识库，向量是可表征文字、图片的数字数组，通过向量距离判断相似度，距离越小相似度越高。向量搜索会召回topk个最相似内容，交由大模型完成后续语义判断与归纳。影响搜索精度的核心因素…",
+    "category": "dataset",
+    "locale": "zh",
+    "publicPath": "/dataset/knowledge-base-search-params",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-4818-upgrade-guide",
+    "title": "FastGPT V4.8.18版本升级步骤与更新说明",
+    "description": "FastGPT V4.8.18版本升级步骤与更新说明 版本更新详情 V4.8.18版本包含多项功能新增、体验优化与问题修复。新增功能包括支持通过JSON配置直接创建应用、通过CURL脚本快速创建HTTP插件，商业版支持部门架构权限模式，可配置自定义跨域安全策略且默认全开，补充私有部署模型问题排查文档。优化内…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-4818-upgrade-guide",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-docker-compose-deploy-pitfalls",
+    "title": "使用Docker Compose完成FastGPT自部署的操作指南",
+    "description": "使用Docker Compose完成FastGPT自部署的操作指南 部署架构与选型说明 FastGPT的Docker Compose部署包含三类核心组件：MongoDB用于存储除向量外的各类数据，PgVector、Milvus、Oceanbase、SeekDB用于存储向量数据，AIProxy用于聚合各类AI…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-docker-compose-deploy-pitfalls",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-model-channel-config",
+    "title": "FastGPT 第三方模型接入与渠道配置管理操作使用说明",
+    "description": "FastGPT 第三方模型接入与渠道配置管理操作使用说明 基础说明与注意事项 FastGPT 通过 AI Proxy 服务连接不同模型提供商，同时提供负载均衡、模型日志、数据看板等能力，便于检测模型调用情况。使用前需注意：系统至少需要一个语言模型和一个索引模型才能正常运行；语音识别模型仅会生效一个，配置时仅…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-model-channel-config",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-self-host-upgrade",
+    "title": "FastGPT自部署版本升级操作与配置说明",
+    "description": "FastGPT自部署版本升级操作与配置说明 版本命名与升级步骤概述 从4.14.11版本开始，FastGPT区分稳定版与快速迭代版。稳定版命名无后缀，如4.14.11、4.15.0，修复问题时会同步更新至维护的稳定版本，不引入新功能。快速迭代版带beta后缀，如4.16.0-beta.1，每2个月发布一次稳…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-self-host-upgrade",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-v4121-upgrade",
+    "title": "FastGPT V4.12.1版本升级步骤与更新说明",
+    "description": "FastGPT V4.12.1版本升级步骤与更新说明 FastGPT V4.12.1版本发布于2025年8月18日，本次更新包含新增功能、体验优化、问题修复与工具更新四类内容，适配自部署用户的版本升级需求。 升级操作步骤 1. 更新镜像：将FastGPT社区版镜像tag更新为v4.12.1-fix，商业版镜…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-v4121-upgrade",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-v4150-env-changes",
+    "title": "FastGPT V4.15.0版本升级的环境变量与配置变更说明",
+    "description": "FastGPT V4.15.0版本升级的环境变量与配置变更说明 FastGPT V4.15.0版本升级包含环境变量变更与配置调整，覆盖fastgpt-app、fastgpt-pro、代码沙箱（code-sandbox）与插件服务（fastgpt-plugin）四大模块，升级前需完成对应变量的检查与配置，避免…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-v4150-env-changes",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-v4818-upgrade",
+    "title": "FastGPT V4.8.18版本升级步骤与更新内容说明",
+    "description": "FastGPT V4.8.18版本升级步骤与更新内容说明 版本升级前提 V4.8.18版本需通过专用升级脚本完成升级，升级过程中会迁移全文检索表，迁移持续时间较长，期间全文检索功能将暂时失效，系统运行日志会打印已完成迁移的数据长度。执行升级操作前，需提前获取环境变量中的rootkey以及FastGPT的访问…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-v4818-upgrade",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-v4822-upgrade-pitfalls",
+    "title": "FastGPT V4.8.22版本升级操作与更新内容说明",
+    "description": "FastGPT V4.8.22版本升级操作与更新内容说明 本页为FastGPT V4.8.22版本的升级指引，升级前需完成数据库备份，Sandbox镜像无需更新。仅商业版且提供SaaS服务的用户，需要运行专属升级脚本完成数据迁移。 升级操作步骤 1. 更新镜像：将fastgpt镜像的tag设置为v4.8.2…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-v4822-upgrade-pitfalls",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-v491-upgrade-notes",
+    "title": "FastGPT V4.9.1版本升级操作步骤与更新内容说明",
+    "description": "FastGPT V4.9.1版本升级操作步骤与更新内容说明 升级前置准备 升级前需完成数据库备份。本次升级需更新FastGPT官方镜像与商业版镜像，镜像tag均设置为v4.9.1-fix2。Sandbox镜像无需更新，AIProxy镜像需修改为registry.cn-hangzhou.aliyuncs.co…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-v491-upgrade-notes",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/deploy/fastgpt-v496-upgrade-notes",
+    "title": "FastGPT V4.9.6版本升级操作与变更说明",
+    "description": "FastGPT V4.9.6版本升级操作与变更说明 版本核心变更 FastGPT V4.9.6 包含环境变量变更，新增多项功能与优化修复。新增内容包括以MCP方式对外提供应用调用，支持MCP SSE协议创建工具，批量执行节点支持交互节点实现循环人工参与，新增工作台二级菜单并合并工具箱，新增grok3、GPT…",
+    "category": "deploy",
+    "locale": "zh",
+    "publicPath": "/deploy/fastgpt-v496-upgrade-notes",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/node/fastgpt-tool-call-node-config",
+    "title": "FastGPT工作流工具调用节点的配置与使用说明",
+    "description": "FastGPT工作流工具调用节点的配置与使用说明 工具调用节点基础说明 工具调用节点是FastGPT工作流的核心模块，可让大语言模型动态决策执行流程，支持调用系统模块或插件。工具的核心组成分为两部分，一是工具介绍，用于告知大语言模型该工具的功能与适用场景；二是工具参数，系统模块的参数已固定，无需额外配置，插…",
+    "category": "node",
+    "locale": "zh",
+    "publicPath": "/node/fastgpt-tool-call-node-config",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/node/fastgpt-workflow-http-node-pitfalls",
+    "title": "配置FastGPT工作流HTTP请求节点的参数与使用方法",
+    "description": "配置FastGPT工作流HTTP请求节点的参数与使用方法 FastGPT工作流中的HTTP请求节点是核心功能模块，可向指定地址发送HTTP请求，操作方式与专业API调试工具类似。该节点支持配置路径请求参数Params、请求体Body、请求头Headers，所有配置项均可通过{{}}语法引用全局变量、系统变量…",
+    "category": "node",
+    "locale": "zh",
+    "publicPath": "/node/fastgpt-workflow-http-node-pitfalls",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/node/fastgpt-workflow-tool-node",
+    "title": "FastGPT工作流工具调用节点的配置与运行逻辑说明",
+    "description": "FastGPT工作流工具调用节点的配置与运行逻辑说明 工具调用节点基础介绍 工具调用节点可让大语言模型（LLM）动态决策工作流流程，不采用固定流程。工具可以是系统模块，如AI对话、知识库搜索、HTTP请求模块，也可以是插件。工具的组成包含两部分：工具介绍，用于告知LLM工具的作用；工具参数，系统模块的参数固…",
+    "category": "node",
+    "locale": "zh",
+    "publicPath": "/node/fastgpt-workflow-tool-node",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-localfile-upload-parentid-invalid",
+    "title": "解决FastGPT调用上传本地文件接口时parentid参数不生效问题",
+    "description": "解决FastGPT调用上传本地文件接口时parentid参数不生效问题 现象 调用/api/core/dataset/collection/create/localFile上传本地文件接口时，无论入参data中的parentid字段设置为何值，最终上传的文件都会被放置在根目录，parentid参数未按预期生…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-localfile-upload-parentid-invalid",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-mcp-tool-call-issue",
+    "title": "解决FastGPT私有部署版MCP工具调用异常问题",
+    "description": "解决FastGPT私有部署版MCP工具调用异常问题 现象 用户使用FastGPT V4.14.9私有部署版本时，出现MCP工具调用异常问题。具体表现为：1. MCP工具调用时按/拆分工具包与函数名，传入AI的格式为\"MCP工具包名/MCP工具函数名\"，工具包命名会影响AI的工具调用判断；2. 工具函数命名包…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-mcp-tool-call-issue",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-oss-file-copy-failed",
+    "title": "解决FastGPT私有部署中OSS复制文件导致自定义插件上传失败问题",
+    "description": "解决FastGPT私有部署中OSS复制文件导致自定义插件上传失败问题 现象 在FastGPT私有部署4.14.8.3版本中，上传自定义.js插件时会出现保存失败的问题： 1. 插件文件先通过预签名URL上传至OSS的system/plugin/tools/temp/临时目录 2. 点击「保存/确认」后，前端…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-oss-file-copy-failed",
+    "sourceType": "GitHub issue",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-pdf-image-parse-failure",
+    "title": "解决FastGPT调用Qwen3-Max识别PDF时图片无法提取内容的问题",
+    "description": "解决FastGPT调用Qwen3-Max识别PDF时图片无法提取内容的问题 现象 用户上传票据扫描PDF文件至FastGPT，调用Qwen3-Max模型进行识别。在FastGPT的AI日志中，显示识别对象为图片，导致无法提取PDF内图片的具体信息。用户验证发现，直接使用在线Qwen3-Max服务可正常识别该…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-pdf-image-parse-failure",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-repeated-getmymodels-request",
+    "title": "解决FastGPT私有部署中重复调用getMyModels接口的问题",
+    "description": "解决FastGPT私有部署中重复调用getMyModels接口的问题 现象 Docker部署的FastGPT私有版本日志中，反复打印GET /api/core/ai/model/getMyModels请求，接口均返回304状态码，且最后一条请求的参数被截断为versionK。在调用POST /api/cor…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-repeated-getmymodels-request",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-skill-iframe-error",
+    "title": "解决FastGPT技能配置页iframe显示非沙箱编辑器的问题",
+    "description": "解决FastGPT技能配置页iframe显示非沙箱编辑器的问题 现象 当SHOWSKILL=true且使用K8s部署，OpenSandbox Server通过Ingress暴露时，技能详情页的\"skill配置\"内嵌iframe显示的是 FastGPT 自身页面，不是沙箱编辑器内容。SSE流正确返回sandb…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-skill-iframe-error",
+    "sourceType": "GitHub issue",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-storage-external-startup-failure",
+    "title": "解决FastGPT 4.14.11配置外部存储端点启动失败问题",
+    "description": "解决FastGPT 4.14.11配置外部存储端点启动失败问题 现象 私有部署FastGPT 4.14.11版本，使用Docker Compose部署并配置自建MinIO存储时，若添加STORAGEEXTERNALENDPOINT环境变量，fastgpt容器会在启动阶段持续重启，外部站点返回502错误。查看…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-storage-external-startup-failure",
+    "sourceType": "GitHub issue",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-usage-abnormal-troubleshooting",
+    "title": "解决FastGPT使用过程中出现的异常报错问题",
+    "description": "解决FastGPT使用过程中出现的异常报错问题 现象 用户在FastGPT相关的GitHub issue中反馈使用过程中出现异常，但未填写具体的问题描述、复现步骤与预期结果，仅上传了两张相关截图链接，未明确说明具体的异常表现，如报错弹窗、功能失效类型等，具体现象需结合实际运行环境与截图内容进一步确认。 可能…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-usage-abnormal-troubleshooting",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/fastgpt-workflow-loop-array-error",
+    "title": "解决FastGPT工作流中循环体数组元素传递失效问题",
+    "description": "解决FastGPT工作流中循环体数组元素传递失效问题 现象 在私有部署版本V4.14.7的FastGPT工作流中，用户通过代码模块生成数组后，循环体需要输入完整响应数据才能启动，但启动后循环元素无法正常传递到后续节点，最终导致工作流失效。 可能原因 目前无官方明确说明，结合问题表现推测，可能与循环体的参数绑…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/fastgpt-workflow-loop-array-error",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/troubleshoot/item-replace-not-function-error",
+    "title": "解决FastGPT私有部署版中item.replace is not a function报错问题",
+    "description": "解决FastGPT私有部署版中item.replace is not a function报错问题 现象 在FastGPT私有部署V4.14.0版本中，创建知识库+对话引导类型的应用，配置关联知识库最低相关度为0.7并使用自定义法律顾问提示词后，部分对话场景会触发\"item.replace is not a…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/troubleshoot/item-replace-not-function-error",
+    "sourceType": "GitHub issue",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/tutorial/fastgpt-kb-quote-reader",
+    "title": "配置FastGPT知识库引用分块阅读器，实现AI引用可溯源",
+    "description": "配置FastGPT知识库引用分块阅读器，实现AI引用可溯源 核心功能与价值 传统AI对话中，当模型引用企业知识库内容时，用户仅能看到被截取的分块片段，无法确认片段在原文中的上下文，难以验证回答准确性与完成深入理解。FastGPT 4.9.1版本推出的知识库引用分块阅读器，解决了这一痛点。用户点击对话中的引用…",
+    "category": "tutorial",
+    "locale": "zh",
+    "publicPath": "/tutorial/fastgpt-kb-quote-reader",
+    "sourceType": "官方文档",
+    "minutes": 2
+  },
+  {
+    "identity": "zh|/tutorial/fastgpt-workspace-team-management",
+    "title": "FastGPT工作区团队权限与邀请配置",
+    "description": "FastGPT工作区团队权限与邀请配置 FastGPT工作区的团队管理功能，用于支持多用户协作开展应用构建、知识库管理、对话配置等工作。该功能覆盖团队角色权限配置、成员邀请两大核心模块，仅适用于当前工作空间内的协作场景，无法跨工作空间分配权限。管理员可通过该功能管控团队成员的操作范围，确保工作区资源的安全与…",
+    "category": "tutorial",
+    "locale": "zh",
+    "publicPath": "/tutorial/fastgpt-workspace-team-management",
+    "sourceType": "官方文档",
+    "minutes": 2
   }
 ]

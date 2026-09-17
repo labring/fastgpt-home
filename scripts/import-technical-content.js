@@ -1019,6 +1019,24 @@ function verifyStageNavigation(entries, documents, returns, guides = []) {
   }
 }
 
+function verifyRelatedLinks(entries, relatedLinks, guides = []) {
+  const resolvable = new Set(entries.map((entry) => entry.slug));
+  for (const guide of guides) {
+    for (const locale of ['zh', 'en']) {
+      if (guide[locale]) resolvable.add(`/${locale}/guide/${guide.slug}`);
+    }
+  }
+  for (const [source, links] of Object.entries(relatedLinks)) {
+    if (!resolvable.has(source)) throw new Error(`Unresolved related-link source: ${source}`);
+    for (const link of links) {
+      if (!resolvable.has(link.target))
+        throw new Error(`Unresolved related-link target: ${link.target}`);
+      if (source.split('/')[1] !== link.target.split('/')[1])
+        throw new Error(`Cross-locale related link: ${source} -> ${link.target}`);
+    }
+  }
+}
+
 function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   const entries = readExistingEntries(repoRoot);
   if (!Array.isArray(entries) || entries.length === 0)
@@ -1067,9 +1085,11 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   }
   const readRegistry = (file, fallback) => fs.existsSync(path.join(repoRoot, file))
     ? JSON.parse(fs.readFileSync(path.join(repoRoot, file), 'utf8')) : fallback;
+  const guideEntries = readRegistry('src/content/guides/registry.json', { entries: [] }).entries;
   verifyStageNavigation(entries, documents,
     readRegistry('src/content/tech-center/stage-returns.json', {}),
-    readRegistry('src/content/guides/registry.json', { entries: [] }).entries);
+    guideEntries);
+  verifyRelatedLinks(entries, readRegistry('src/content/related-links.json', {}), guideEntries);
   console.log(`Technical content verified: ${entries.length} pages`);
   return entries;
 }

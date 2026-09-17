@@ -9,6 +9,7 @@ import type { GuideDocument } from '@/lib/guideContent';
 import { getGuideReviewPath, type GuidePublishedLocale } from '@/lib/guideSeo';
 import { parseMarkdown } from '@/lib/markdownParser';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
+import { getRelatedLinks } from '@/lib/relatedLinks';
 
 const guideArticleCopy = {
   en: {
@@ -64,6 +65,10 @@ export default function GuideArticlePage({
 }) {
   const labels = getGuideArticleCopy(locale);
   const { assetPolicy, configuredInternalLinks } = document.source;
+  const relatedLinks = [
+    ...configuredInternalLinks,
+    ...getRelatedLinks(`/${locale}/guide/${document.metadata.slug}`)
+  ];
   const blocks = parseMarkdown(document.body, document.source.h1);
   const headings = getMarkdownHeadings(blocks, 'guide-section');
 
@@ -113,7 +118,7 @@ export default function GuideArticlePage({
               title={document.source.h1}
               headingIdPrefix="guide-section"
             />
-            {configuredInternalLinks.length > 0 && (
+            {relatedLinks.length > 0 && (
               <section
                 className={techStyles.related}
                 aria-labelledby="guide-configured-links-title"
@@ -122,7 +127,7 @@ export default function GuideArticlePage({
                   <h2 id="guide-configured-links-title">{labels.configuredLinks}</h2>
                 </div>
                 <div className={techStyles.relatedList}>
-                  {configuredInternalLinks.map((link) => (
+                  {relatedLinks.map((link) => (
                     <Link className={techStyles.relatedLink} href={link.target} key={link.target}>
                       {link.label}
                       <span aria-hidden="true">↗</span>

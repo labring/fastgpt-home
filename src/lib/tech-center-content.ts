@@ -11,6 +11,7 @@ import {
   type TechEntry
 } from '@/components/tech-center/data';
 import { techPublishedLocaleCodes, type TechPublishedLocale } from '@/lib/publishedLocales';
+import { getRelatedLinks } from '@/lib/relatedLinks';
 import { currentSiteVariant, getLocaleOwner, type SiteVariant } from '@/lib/siteRouting';
 
 const CONTENT_ROOT = path.join(process.cwd(), 'src/content/tech-center');
@@ -29,6 +30,7 @@ export type TechArticle = TechEntry & {
   metaTitle: string;
   pageType: string;
   markdown: string;
+  relatedLinks: { label: string; target: string }[];
   stageReturn?: { path: string; title: string };
   publishedLocales: TechPublishedLocale[];
   seoDescription: string;
@@ -173,6 +175,7 @@ const readTechArticle = cache((entry: TechEntry): TechArticle => {
   return {
     ...entry,
     publishedLocales: getTechArticlePublishedLocales(entry),
+    relatedLinks: getRelatedLinks(entry.slug),
     stageReturn: getStageReturn(entry),
     contentType: metadata.schema_type === 'Article' ? 'Article' : 'TechArticle',
     dateModified: metadata.date_modified,

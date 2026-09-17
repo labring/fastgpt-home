@@ -1,27 +1,21 @@
 ---
-title: FastGPT Environment Variables Reference
+title: FastGPT Environment Variables Reference (136 settings)
 slug: /en/reference/env-variables-reference
 page_type: Reference data
-source: https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/.env.template
+source: https://github.com/labring/FastGPT/blob/v4.16.2/projects/app/.env.template
 source_type: 官方文档
 meta_title: FastGPT Environment Variables Reference | FastGPT Technical Center
-meta_description: A grouped reference of the 137 environment variables defined in the FastGPT community edition configuration template, with defaults and official notes.
+meta_description: A grouped reference of the 136 environment variables defined in the FastGPT community edition configuration template, with defaults and official notes. Verified 2026-09-09.
 schema_type: TechArticle
 date_published: 2026-09-08
-date_modified: 2026-09-08
-source_file: 程序化技术页-第6批/英文-fastgpt.io/reference/env-variables-reference.md
-source_sha256: 35e227f8383326a3863b7df2da4b43acea6b29c2dcce5a4dbb1ecec696638e2b
-source_verified: 2026-09-07
-publication_batch: Week08
+date_modified: 2026-09-09
 ---
 
 # FastGPT Environment Variables Reference
 
-This table describes FastGPT development snapshot 5957d06 (2026-09-07). Development definitions can precede a stable release; check the version you deploy.
-
 ## How to use this table
 
-This page lists the 137 environment variables available in the FastGPT community edition, grouped by purpose, with the default from the configuration template and whether the line is enabled by default. Environment variables are the most common source of deployment and upgrade problems; this table exists so the values can be checked without cloning the repository.
+This page lists the 136 environment variables available in the FastGPT community edition, grouped by purpose, with the default from the configuration template and whether the line is enabled by default. Environment variables are the most common source of deployment and upgrade problems; this table exists so the values can be checked without cloning the repository. Verified 2026-09-09.
 
 ## Columns
 
@@ -118,12 +112,11 @@ This page lists the 137 environment variables available in the FastGPT community
 | `AGENT_SANDBOX_PROXY_URL` | `ws://localhost:3006` | Yes | Public WebSocket address for browser client to connect sandbox proxy. Required when Agent Sandbox (show_agent_sandbox) is enabled; leave empty otherwise. Dev env: recommend ws://localhost:3006 (points to Rust proxy in Docker Compose). Prod env: configure browser-accessible ws:// or wss:// proxy address. |
 | `AGENT_SANDBOX_PREVIEW_PROXY_URL` | `http://localhost:3006` | Yes | HTTP(S) address for browser to access sandbox file preview. Required when Agent Sandbox is enabled; uses same port as WebSocket by default in single-port deployment. |
 
-## Concurrency limits (7)
+## Concurrency limits (6)
 
 | Variable | Default | Enabled | Notes |
 | --- | --- | --- | --- |
 | `WECHAT_CHANNEL_CONCURRENCY` | `1000` | Yes | WeChat channel poll worker concurrency (default 1000), must ≥ online channel count; message delay worsens linearly when channel count exceeds this value |
-| `SYSTEM_MIGRATION_BATCH_SIZE` | `100` | Yes | Number of records processed per batch for system migration tasks, range 50～1000, default 100 |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600` | Yes | File parsing timeout (seconds) |
 | `WORKFLOW_MAX_RUN_TIMES` | `500` | Yes | Max workflow run times to avoid extreme infinite loops |
 | `WORKFLOW_MAX_LOOP_TIMES` | `100` | Yes | Max input array length for loop/parallel nodes (default 100) |
@@ -240,8 +233,8 @@ This page lists the 137 environment variables available in the FastGPT community
 | Variable | Default | Enabled | Notes |
 | --- | --- | --- | --- |
 | `LOG_DEPTH` | `3` | Yes | — |
-| `DEFAULT_ROOT_PSW` | Example value (replace before deployment) | Yes | Default user password (username: root), auto-updated on each restart |
-| `DB_MAX_LINK` | `20` | Yes | Max database connections |
+| `DEFAULT_ROOT_PSW` | `123456` | Yes | Default user password (username: root), auto-updated on each restart |
+| `DB_MAX_LINK` | `5` | Yes | Max database connections |
 | `SYNC_INDEX` | `true` | Yes | Auto-sync index |
 
 ## When this table goes out of date
@@ -261,6 +254,4 @@ The tables above can be checked against the open-source repository. If a specifi
 - [Get started](/en/start): use the cloud service and skip environment setup
 - [Pricing](/en/price): compare what each form covers
 
-## References
-
-- [FastGPT env variables reference — 5957d06](https://github.com/labring/FastGPT/blob/5957d06807ff7f984c70c6425c8d0fc40eb1714d/projects/app/.env.template)
+> Variable list taken from the open-source configuration template, verified 2026-09-09.

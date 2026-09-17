@@ -1,36 +1,30 @@
 ---
-title: FastGPT Error Code Reference
+title: FastGPT Error Code Reference (122 codes)
 slug: /en/reference/error-codes-reference
 page_type: Reference data
-source: https://github.com/labring/FastGPT/tree/5957d06807ff7f984c70c6425c8d0fc40eb1714d/packages/global/common/error/code
+source: https://github.com/labring/FastGPT/tree/v4.16.2/packages/global/common/error/code
 source_type: 官方文档
 meta_title: FastGPT Error Code Reference | FastGPT Technical Center
-meta_description: A grouped reference of the 124 error codes defined in the FastGPT open-source repository, with the numeric code, statusText and message key.
+meta_description: A grouped reference of the 122 error codes defined in the FastGPT open-source repository, with the numeric code, statusText and message key. Verified 2026-09-09.
 schema_type: TechArticle
 date_published: 2026-09-08
-date_modified: 2026-09-08
-source_file: 程序化技术页-第6批/英文-fastgpt.io/reference/error-codes-reference.md
-source_sha256: 6aac8c70d6cc3a34220356bf1cc7f5fd3c34983e6f5ab26381bece2abc28927e
-source_verified: 2026-09-07
-publication_batch: Week08
+date_modified: 2026-09-09
 ---
 
 # FastGPT Error Code Reference
 
-This table describes FastGPT development snapshot 5957d06 (2026-09-07). Development definitions can precede a stable release; check the version you deploy.
-
 ## How to use this table
 
-API error responses carry a `code` and a `statusText`. This page lists the 124 error codes defined in the open-source repository, grouped by module, so either field can be used to look up which module raised the error and which message it maps to.
+API error responses carry a `code` and a `statusText`. This page lists the 122 error codes defined in the open-source repository, grouped by module, so either field can be used to look up which module raised the error and which message it maps to. Verified 2026-09-09.
 
-Use the first three digits of `code` to locate the module band, then find the entry in that module's table. `statusText` is preferred for programmatic checks; validate its compatibility against the target version.
+Use the first three digits of `code` to locate the module band, then find the entry in that module's table. `statusText` is the stable identifier and is more reliable than `code` across versions.
 
 ## Columns
 
 | Column | Meaning |
 | --- | --- |
 | Code | The `code` value in the error response |
-| statusText | The `statusText` value; preferred for programmatic checks; verify identifier compatibility when upgrading |
+| statusText | The `statusText` value; stable across versions, use it for programmatic checks |
 | Message key | The localisation key for the user-facing message |
 | Notes | How the code is derived, and any definition-level caveat |
 
@@ -120,7 +114,7 @@ These identifiers can be referenced in code, but the error map does not contain 
 | `503008` | `accountCancellationPending` | `common:code_error.account_cancellation_pending` | — |
 | `503009` | `registrationMethodNotSupported` | `common:error.registration_method_not_supported` | — |
 
-## team module (46 codes, base band 500000)
+## team module (45 codes, base band 500000)
 
 | Code | statusText | Message key | Notes |
 | --- | --- | --- | --- |
@@ -169,7 +163,6 @@ These identifiers can be referenced in code, but the error map does not contain 
 | `500042` | `amountError` | `common:enterprise_auth.error.amount_error` | — |
 | `500043` | `amountFailed` | `common:enterprise_auth.error.amount_failed` | — |
 | `500044` | `processing` | `common:enterprise_auth.error.processing` | — |
-| `500045` | `teamPluginInstallDisabled` | `common:code_error.team_error.team_plugin_install_disabled` | — |
 
 ## skill module (17 codes, base band 509000)
 
@@ -255,12 +248,6 @@ These identifiers can be referenced in code, but the error map does not contain 
 | --- | --- | --- | --- |
 | `512000` | `invalidCoupon` | `common:coupon_invalid` | — |
 
-## model module (1 code, base band 513000)
-
-| Code | statusText | Message key |
-| --- | --- | --- |
-| `513000` | `modelUnExist` | `common:model_not_exist` |
-
 ## When this table goes out of date
 
 1. **A new error code inserted mid-array shifts every code after it.** Checks based on the numeric `code` can break after an upgrade; use `statusText` instead.
@@ -276,6 +263,4 @@ The tables above can be checked against the open-source repository. If a specifi
 - [Get started](/en/start): use the cloud service and skip environment setup
 - [Pricing](/en/price): compare what each form covers
 
-## References
-
-- [FastGPT error codes reference — 5957d06](https://github.com/labring/FastGPT/tree/5957d06807ff7f984c70c6425c8d0fc40eb1714d/packages/global/common/error/code)
+> Codes taken from the error definition files of 14 modules, verified 2026-09-09.

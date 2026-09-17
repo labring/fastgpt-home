@@ -10,7 +10,25 @@ const zlib = require('node:zlib');
 
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
-const FRONT_MATTER_KEYS = ['title', 'slug', 'page_type', 'source', 'source_type'];
+const REQUIRED_FRONT_MATTER_KEYS = ['title', 'slug', 'page_type', 'source', 'source_type'];
+// Optional delivery columns survive normalization in this order and reach the rendered page metadata.
+const OPTIONAL_FRONT_MATTER_KEYS = [
+  'meta_title',
+  'meta_description',
+  'keywords',
+  'schema_type',
+  'date_published',
+  'date_modified',
+  'image',
+  'image_alt',
+  'image_width',
+  'image_height',
+  'interactive_module',
+  'interactive_data'
+];
+const FRONT_MATTER_KEYS = [...REQUIRED_FRONT_MATTER_KEYS, ...OPTIONAL_FRONT_MATTER_KEYS];
+// The shared /guide/ tree is registered under the troubleshoot category.
+const CATEGORY_ALIASES = { guide: 'troubleshoot' };
 const SOURCE_TYPES = new Map(Object.entries(TECHNICAL_CONTENT_POLICY.sourceTypes));
 const CATEGORY_LABELS = TECHNICAL_CONTENT_POLICY.categories;
 const SECRET_PATTERN = /\b(?:sk-[A-Za-z0-9][A-Za-z0-9_-]{15,}|fastgpt-[A-Za-z0-9]{32,})\b/g;
@@ -51,12 +69,11 @@ function assertObject(value, label) {
   }
 }
 
-function assertExactKeys(value, expected, label) {
+function assertKeyDrift(value, required, allowed, label) {
   assertObject(value, label);
-  const expectedSet = new Set(expected);
   const actual = Object.keys(value);
-  const missing = expected.filter((key) => !actual.includes(key));
-  const unexpected = actual.filter((key) => !expectedSet.has(key));
+  const missing = required.filter((key) => !actual.includes(key));
+  const unexpected = actual.filter((key) => !allowed.includes(key));
   if (missing.length || unexpected.length) {
     const details = [
       missing.length ? `missing ${missing.join(', ')}` : '',
@@ -66,6 +83,10 @@ function assertExactKeys(value, expected, label) {
       .join('; ');
     throw new Error(`Schema drift in ${label}: ${details}`);
   }
+}
+
+function assertExactKeys(value, expected, label) {
+  assertKeyDrift(value, expected, expected, label);
 }
 
 function requireText(value, label) {
@@ -187,7 +208,14 @@ function parseFrontMatter(source, sourcePath, strict = true) {
     }
     metadata[key] = line.slice(separator + 1).trim();
   }
-  if (strict) assertExactKeys(metadata, FRONT_MATTER_KEYS, `${sourcePath} front matter`);
+  if (strict) {
+    assertKeyDrift(
+      metadata,
+      REQUIRED_FRONT_MATTER_KEYS,
+      FRONT_MATTER_KEYS,
+      `${sourcePath} front matter`
+    );
+  }
   return {
     metadata,
     body: normalized
@@ -288,7 +316,11 @@ function normalizeDocument(metadata, locale, canonicalPath, body) {
     ...metadata,
     slug: `/${locale}${canonicalPath}`
   };
-  const header = FRONT_MATTER_KEYS.map((key) => `${key}: ${normalizedMetadata[key]}`).join('\n');
+  const header = FRONT_MATTER_KEYS.filter(
+    (key) => normalizedMetadata[key] !== undefined && normalizedMetadata[key] !== ''
+  )
+    .map((key) => `${key}: ${normalizedMetadata[key]}`)
+    .join('\n');
   return {
     body: normalizedBody,
     document: `---\n${header}\n---\n\n${normalizedBody}\n`
@@ -320,7 +352,8 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
     identity.canonicalPath,
     lineEndings
   );
-  const category = identity.canonicalPath.split('/')[1];
+  const section = identity.canonicalPath.split('/')[1];
+  const category = CATEGORY_ALIASES[section] || section;
   const categoryLabel = CATEGORY_LABELS[category];
   if (!categoryLabel) {
     throw new Error(`Schema drift in ${label}: unsupported category ${category}`);
@@ -986,6 +1019,24 @@ function verifyStageNavigation(entries, documents, returns, guides = []) {
   }
 }
 
+function verifyRelatedLinks(entries, relatedLinks, guides = []) {
+  const resolvable = new Set(entries.map((entry) => entry.slug));
+  for (const guide of guides) {
+    for (const locale of ['zh', 'en']) {
+      if (guide[locale]) resolvable.add(`/${locale}/guide/${guide.slug}`);
+    }
+  }
+  for (const [source, links] of Object.entries(relatedLinks)) {
+    if (!resolvable.has(source)) throw new Error(`Unresolved related-link source: ${source}`);
+    for (const link of links) {
+      if (!resolvable.has(link.target))
+        throw new Error(`Unresolved related-link target: ${link.target}`);
+      if (source.split('/')[1] !== link.target.split('/')[1])
+        throw new Error(`Cross-locale related link: ${source} -> ${link.target}`);
+    }
+  }
+}
+
 function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   const entries = readExistingEntries(repoRoot);
   if (!Array.isArray(entries) || entries.length === 0)
@@ -1034,9 +1085,11 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   }
   const readRegistry = (file, fallback) => fs.existsSync(path.join(repoRoot, file))
     ? JSON.parse(fs.readFileSync(path.join(repoRoot, file), 'utf8')) : fallback;
+  const guideEntries = readRegistry('src/content/guides/registry.json', { entries: [] }).entries;
   verifyStageNavigation(entries, documents,
     readRegistry('src/content/tech-center/stage-returns.json', {}),
-    readRegistry('src/content/guides/registry.json', { entries: [] }).entries);
+    guideEntries);
+  verifyRelatedLinks(entries, readRegistry('src/content/related-links.json', {}), guideEntries);
   console.log(`Technical content verified: ${entries.length} pages`);
   return entries;
 }

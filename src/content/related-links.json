@@ -1,0 +1,26 @@
+{
+  "/zh/tutorial/fastgpt-dataset-search-process": [
+    {
+      "label": "知识库分块与索引设置估算器",
+      "target": "/zh/guide/kb-chunk-and-index-settings"
+    }
+  ],
+  "/en/tutorial/fastgpt-rag-retrieval-phase": [
+    {
+      "label": "Knowledge Base Chunk and Index Settings Estimator",
+      "target": "/en/guide/kb-chunk-and-index-settings"
+    }
+  ],
+  "/zh/guide/kb-index-strategy-selection": [
+    {
+      "label": "知识库分块与索引设置估算器",
+      "target": "/zh/guide/kb-chunk-and-index-settings"
+    }
+  ],
+  "/en/guide/kb-index-strategy-selection": [
+    {
+      "label": "Knowledge Base Chunk and Index Settings Estimator",
+      "target": "/en/guide/kb-chunk-and-index-settings"
+    }
+  ]
+}

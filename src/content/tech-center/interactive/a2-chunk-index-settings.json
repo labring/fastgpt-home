@@ -1,0 +1,34 @@
+{
+ "minChunkSize": 64,
+ "autoChunkSize": 1000,
+ "qaDefaultMaxChunkSize": 8000,
+ "defaultIndexSize": 512,
+ "indexSizeOptions": [
+  64,
+  128,
+  256,
+  512,
+  768,
+  1024,
+  1536,
+  2048,
+  3072,
+  4096,
+  5120,
+  6144,
+  7168,
+  8192
+ ],
+ "autoModeForced": {
+  "chunkSplitMode": "paragraph",
+  "paragraphChunkAIMode": "forbid",
+  "paragraphChunkDeep": 5,
+  "paragraphChunkMinSize": 100,
+  "chunkSplitter": null
+ },
+ "customModeRules": {
+  "paragraphChunkDeepZeroUnlessParagraph": true,
+  "chunkSizeCappedBy": "max(model.maxContext, 4000)",
+  "qaOverridesIndexSize": true
+ }
+}

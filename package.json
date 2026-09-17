@@ -66,6 +66,7 @@
     "verify:content-hygiene-regression": "node --test scripts/verify-content-hygiene.test.js",
     "verify:technical-content": "node scripts/verify-technical-content.js",
     "verify:technical-content-regression": "node --test scripts/verify-technical-content.test.js",
+    "verify:interactive-module": "node --test scripts/verify-interactive-module.test.js",
     "verify:technical-center": "node scripts/verify-technical-center.js",
     "verify:technical-center-regression": "node --test scripts/verify-technical-center.test.js",
     "verify:technical-export": "node scripts/verify-technical-export.js",

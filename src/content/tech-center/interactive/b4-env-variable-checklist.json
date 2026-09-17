@@ -1,0 +1,1230 @@
+{
+ "total": 136,
+ "groups": {
+  "基础配置": {
+   "count": 4,
+   "withDefault": 4,
+   "enabledByDefault": 4
+  },
+  "密钥": {
+   "count": 4,
+   "withDefault": 3,
+   "enabledByDefault": 4
+  },
+  "服务地址与集成": {
+   "count": 34,
+   "withDefault": 24,
+   "enabledByDefault": 30
+  },
+  "沙盒代理 (agent-sandbox-proxy) 与网络配置": {
+   "count": 3,
+   "withDefault": 3,
+   "enabledByDefault": 3
+  },
+  "对象存储": {
+   "count": 14,
+   "withDefault": 11,
+   "enabledByDefault": 14
+  },
+  "数据库与缓存": {
+   "count": 15,
+   "withDefault": 10,
+   "enabledByDefault": 5
+  },
+  "日志配置": {
+   "count": 12,
+   "withDefault": 12,
+   "enabledByDefault": 12
+  },
+  "域名与前端": {
+   "count": 3,
+   "withDefault": 3,
+   "enabledByDefault": 2
+  },
+  "安全配置": {
+   "count": 10,
+   "withDefault": 5,
+   "enabledByDefault": 10
+  },
+  "功能开关与特殊配置": {
+   "count": 8,
+   "withDefault": 6,
+   "enabledByDefault": 8
+  },
+  "对话日志推送（可选）": {
+   "count": 3,
+   "withDefault": 3,
+   "enabledByDefault": 0
+  },
+  "并发控制与限制": {
+   "count": 6,
+   "withDefault": 6,
+   "enabledByDefault": 6
+  },
+  "资源限制": {
+   "count": 8,
+   "withDefault": 8,
+   "enabledByDefault": 8
+  },
+  "PDF 增强解析（可选）": {
+   "count": 8,
+   "withDefault": 2,
+   "enabledByDefault": 2
+  },
+  "知识库处理并发控制": {
+   "count": 4,
+   "withDefault": 4,
+   "enabledByDefault": 4
+  }
+ },
+ "noDefault": [
+  "FILE_TOKEN_KEY",
+  "PRO_URL",
+  "PRO_TOKEN",
+  "CRM_API_KEY",
+  "AGENT_SANDBOX_PROVIDER",
+  "AGENT_SANDBOX_SEALOS_BASEURL",
+  "AGENT_SANDBOX_SEALOS_TOKEN",
+  "AGENT_SANDBOX_SEALOS_IMAGE",
+  "AGENT_SANDBOX_NPM_REGISTRY",
+  "AGENT_SANDBOX_PYPI_INDEX_URL",
+  "AGENT_SANDBOX_APT_MIRROR",
+  "STORAGE_EXTERNAL_ENDPOINT",
+  "STORAGE_S3_CDN_ENDPOINT",
+  "STORAGE_PUBLIC_ACCESS_EXTRA_SUB_PATH",
+  "MONGODB_LOG_URI",
+  "OCEANBASE_URL",
+  "SEEKDB_URL",
+  "MILVUS_ADDRESS",
+  "MILVUS_TOKEN",
+  "TRUSTED_PROXY_IPS",
+  "PASSWORD_LOGIN_MINUTE_LIMIT_COUNT",
+  "PASSWORD_EXPIRED_MONTH",
+  "MAX_LOGIN_SESSION",
+  "ALLOWED_ORIGINS",
+  "APP_REGISTRATION_URL",
+  "HIDE_CHAT_COPYRIGHT_SETTING",
+  "CUSTOM_PDF_PARSE_URL",
+  "CUSTOM_PDF_PARSE_KEY",
+  "SOMARK_API_KEY",
+  "DOC2X_KEY",
+  "TEXTIN_APP_ID",
+  "TEXTIN_SECRET_CODE"
+ ],
+ "offByDefault": [
+  "PRO_URL",
+  "PRO_TOKEN",
+  "CRM_API_URL",
+  "CRM_API_KEY",
+  "STREAM_RESUME_TTL_SECONDS",
+  "STREAM_RESUME_POST_COMPLETE_TTL_SECONDS",
+  "STREAM_RESUME_REDIS_MAXMEMORY_RATIO",
+  "STREAM_RESUME_REDIS_MEMORY_CHECK_INTERVAL_MS",
+  "OCEANBASE_URL",
+  "SEEKDB_URL",
+  "MILVUS_ADDRESS",
+  "MILVUS_TOKEN",
+  "MILVUS_LANGUAGE_IDENTIFIER",
+  "OPENGAUSS_URL",
+  "NEXT_PUBLIC_BASE_URL",
+  "CHAT_LOG_URL",
+  "CHAT_LOG_INTERVAL",
+  "CHAT_LOG_SOURCE_ID_PREFIX",
+  "CUSTOM_PDF_PARSE_URL",
+  "CUSTOM_PDF_PARSE_KEY",
+  "SOMARK_API_KEY",
+  "DOC2X_KEY",
+  "TEXTIN_APP_ID",
+  "TEXTIN_SECRET_CODE"
+ ],
+ "variables": [
+  {
+   "name": "LOG_DEPTH",
+   "group": "基础配置",
+   "default": "3",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "DEFAULT_ROOT_PSW",
+   "group": "基础配置",
+   "default": "123456",
+   "enabledByDefault": true,
+   "note": "默认用户密码（用户名为 root），每次重启会自动更新。",
+   "noteEn": "Default user password (username: root), auto-updated on each restart"
+  },
+  {
+   "name": "DB_MAX_LINK",
+   "group": "基础配置",
+   "default": "5",
+   "enabledByDefault": true,
+   "note": "数据库最大连接数",
+   "noteEn": "Max database connections"
+  },
+  {
+   "name": "SYNC_INDEX",
+   "group": "基础配置",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "自动同步索引",
+   "noteEn": "Auto-sync index"
+  },
+  {
+   "name": "FILE_TOKEN_KEY",
+   "group": "密钥",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "文件阅读时的密钥",
+   "noteEn": "Secret for file reading"
+  },
+  {
+   "name": "AES256_SECRET_KEY",
+   "group": "密钥",
+   "default": "fastgptsecret",
+   "enabledByDefault": true,
+   "note": "密钥加密 key",
+   "noteEn": "Secret encryption key"
+  },
+  {
+   "name": "INVOKE_TOKEN_SECRET",
+   "group": "密钥",
+   "default": "fastgpt_invoke_token_secret_32_chars_min",
+   "enabledByDefault": true,
+   "note": "Invoke 反向调用 JWT 密钥，至少 32 位",
+   "noteEn": "Invoke reverse call JWT secret, minimum 32 bits"
+  },
+  {
+   "name": "ROOT_KEY",
+   "group": "密钥",
+   "default": "fdafasd",
+   "enabledByDefault": true,
+   "note": "root key（最高权限）",
+   "noteEn": "root key (highest privilege)"
+  },
+  {
+   "name": "PRO_URL",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "商业版地址",
+   "noteEn": "Commercial version address"
+  },
+  {
+   "name": "PRO_TOKEN",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "CRM_API_URL",
+   "group": "服务地址与集成",
+   "default": "https://crm.example.com/api/v1",
+   "enabledByDefault": false,
+   "note": "官网访客归因 CRM（地址未配置时不进行身份上报）",
+   "noteEn": "Official website visitor attribution CRM (no identity reporting if address not configured)"
+  },
+  {
+   "name": "CRM_API_KEY",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "PLUGIN_BASE_URL",
+   "group": "服务地址与集成",
+   "default": "http://localhost:3004",
+   "enabledByDefault": true,
+   "note": "插件服务",
+   "noteEn": "Plugin service"
+  },
+  {
+   "name": "PLUGIN_TOKEN",
+   "group": "服务地址与集成",
+   "default": "XHgR8zvKx1FhjHUxCKdJMNpzFUMlavM1",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "CODE_SANDBOX_URL",
+   "group": "服务地址与集成",
+   "default": "http://localhost:3002",
+   "enabledByDefault": true,
+   "note": "代码沙箱服务",
+   "noteEn": "Code sandbox service"
+  },
+  {
+   "name": "CODE_SANDBOX_TOKEN",
+   "group": "服务地址与集成",
+   "default": "codesandbox",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AIPROXY_API_ENDPOINT",
+   "group": "服务地址与集成",
+   "default": "http://localhost:3010",
+   "enabledByDefault": true,
+   "note": "AI Proxy API",
+   "noteEn": "AI Proxy API"
+  },
+  {
+   "name": "AIPROXY_API_TOKEN",
+   "group": "服务地址与集成",
+   "default": "token",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "SSE_MCP_SERVER_PROXY_ENDPOINT",
+   "group": "服务地址与集成",
+   "default": "http://localhost:3003",
+   "enabledByDefault": true,
+   "note": "MCP Server 代理地址，用于 MCP 使用方式页拼接 SSE 地址（末尾不要带 /）",
+   "noteEn": "MCP Server proxy address, used for splicing SSE address on MCP usage page (do not add trailing /)"
+  },
+  {
+   "name": "MARKETPLACE_URL",
+   "group": "服务地址与集成",
+   "default": "https://v2.marketplace.fastgpt.cn",
+   "enabledByDefault": true,
+   "note": "插件市场地址",
+   "noteEn": "Plugin marketplace address"
+  },
+  {
+   "name": "AGENT_SANDBOX_PROVIDER",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "Agent sandbox",
+   "noteEn": "Agent sandbox"
+  },
+  {
+   "name": "AGENT_SANDBOX_SEALOS_BASEURL",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "Sealos devbox",
+   "noteEn": "Sealos devbox"
+  },
+  {
+   "name": "AGENT_SANDBOX_SEALOS_TOKEN",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_SEALOS_IMAGE",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_SEALOS_WORK_DIRECTORY",
+   "group": "服务地址与集成",
+   "default": "/home/devbox/workspace",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_CPU_COUNT",
+   "group": "服务地址与集成",
+   "default": "1",
+   "enabledByDefault": true,
+   "note": "Agent Sandbox 单实例 CPU 核数和内存上限（MiB）",
+   "noteEn": "Agent Sandbox per-instance CPU core count and memory limit (MiB)"
+  },
+  {
+   "name": "AGENT_SANDBOX_MEMORY_MIB",
+   "group": "服务地址与集成",
+   "default": "2048",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_STORAGE_SIZE_GI",
+   "group": "服务地址与集成",
+   "default": "1",
+   "enabledByDefault": true,
+   "note": "Agent Sandbox 存储容量，单位 Gi",
+   "noteEn": "Agent Sandbox storage capacity, unit Gi"
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_BASEURL",
+   "group": "服务地址与集成",
+   "default": "http://localhost:8090",
+   "enabledByDefault": true,
+   "note": "OpenSandbox 配置（PROVIDER=opensandbox 时生效）",
+   "noteEn": "OpenSandbox configuration (effective when PROVIDER=opensandbox)"
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_API_KEY",
+   "group": "服务地址与集成",
+   "default": "my_secure_sandbox_key_123",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_RUNTIME",
+   "group": "服务地址与集成",
+   "default": "docker",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_IMAGE",
+   "group": "服务地址与集成",
+   "default": "registry.cn-hangzhou.aliyuncs.com/fastgpt/fastgpt-agent-sandbox:v0.1",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_USE_SERVER_PROXY",
+   "group": "服务地址与集成",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_VOLUME_MANAGER_URL",
+   "group": "服务地址与集成",
+   "default": "http://localhost:3005",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_VOLUME_MANAGER_TOKEN",
+   "group": "服务地址与集成",
+   "default": "vmtoken",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_OPENSANDBOX_VOLUME_NAME_PREFIX",
+   "group": "服务地址与集成",
+   "default": "fastgpt-session",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "AGENT_SANDBOX_MAX_EDIT_DEBUG",
+   "group": "服务地址与集成",
+   "default": "100",
+   "enabledByDefault": true,
+   "note": "活跃编辑/调试沙箱数量上限",
+   "noteEn": "Max number of active editing/debugging sandboxes"
+  },
+  {
+   "name": "AGENT_SANDBOX_SUSPEND_MINUTES",
+   "group": "服务地址与集成",
+   "default": "60",
+   "enabledByDefault": true,
+   "note": "运行中 Agent 沙箱持续未活跃多少分钟后自动暂停",
+   "noteEn": "Auto-pause timeout (minutes) for running Agent Sandbox after continuous inactivity"
+  },
+  {
+   "name": "AGENT_SANDBOX_ARCHIVE_INACTIVE_DAYS",
+   "group": "服务地址与集成",
+   "default": "7",
+   "enabledByDefault": true,
+   "note": "已暂停 Agent 沙箱持续未活跃多少天后自动归档",
+   "noteEn": "Auto-archive suspended Agent sandboxes after days of continuous inactivity"
+  },
+  {
+   "name": "AGENT_SANDBOX_NPM_REGISTRY",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "Agent 沙箱内 npm/yarn/pnpm/bun 使用的 npm registry（可选）",
+   "noteEn": "npm registry used by npm/yarn/pnpm/bun in Agent sandbox (optional)"
+  },
+  {
+   "name": "AGENT_SANDBOX_PYPI_INDEX_URL",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "Agent 沙箱内 pip/python -m pip/uv 使用的 PyPI index URL（可选）",
+   "noteEn": "PyPI index URL used by pip/python -m pip/uv in Agent sandbox (optional)"
+  },
+  {
+   "name": "AGENT_SANDBOX_APT_MIRROR",
+   "group": "服务地址与集成",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "Ubuntu 或 Debian Agent 沙箱内使用的 apt 镜像地址（可选），仅 root 有效；Debian 的 /debian-security 会自动推导",
+   "noteEn": "apt mirror address used in Ubuntu or Debian Agent sandbox (optional), only valid for root; /debian-security for Debian will be automatically derived"
+  },
+  {
+   "name": "AGENT_SANDBOX_PROXY_SECRET",
+   "group": "沙盒代理 (agent-sandbox-proxy) 与网络配置",
+   "default": "default_fastgpt_agent_sandbox_proxy_secret",
+   "enabledByDefault": true,
+   "note": "JWT 验签与内网安全物理阻断密钥 (必须与 Rust Proxy 的 AGENT_SANDBOX_PROXY_SECRET 环境变量保持完全一致) 生产环境必须配置为至少 32 字节的高强度随机值，不能使用示例占位。",
+   "noteEn": "JWT verification and intranet security physical blocking secret (must be exactly same as AGENT_SANDBOX_PROXY_SECRET env var of Rust Proxy). Production environment must configure as high-strength random value of at least 32 bytes, do not use example placeholder"
+  },
+  {
+   "name": "AGENT_SANDBOX_PROXY_URL",
+   "group": "沙盒代理 (agent-sandbox-proxy) 与网络配置",
+   "default": "ws://localhost:3006",
+   "enabledByDefault": true,
+   "note": "浏览器客户端连接沙盒代理的对外 WebSocket 地址。 启用 Agent Sandbox（show_agent_sandbox）时必填；未启用时可留空。 开发环境建议配置为 ws://localhost:3006 (指向 Docker Compose 中的 Rust 代理)。 生产环境请配置浏览器可访问的 ws:// 或 wss:// 代理地址。",
+   "noteEn": "Public WebSocket address for browser client to connect sandbox proxy. Required when Agent Sandbox (show_agent_sandbox) is enabled; leave empty otherwise. Dev env: recommend ws://localhost:3006 (points to Rust proxy in Docker Compose). Prod env: configure browser-accessible ws:// or wss:// proxy address."
+  },
+  {
+   "name": "AGENT_SANDBOX_PREVIEW_PROXY_URL",
+   "group": "沙盒代理 (agent-sandbox-proxy) 与网络配置",
+   "default": "http://localhost:3006",
+   "enabledByDefault": true,
+   "note": "浏览器访问沙盒文件预览的 HTTP(S) 地址。启用 Agent Sandbox 时必填；默认单端口部署时与 WebSocket 使用相同端口。",
+   "noteEn": "HTTP(S) address for browser to access sandbox file preview. Required when Agent Sandbox is enabled; uses same port as WebSocket by default in single-port deployment."
+  },
+  {
+   "name": "STORAGE_VENDOR",
+   "group": "对象存储",
+   "default": "minio",
+   "enabledByDefault": true,
+   "note": "存储供应商；如果是 Sealos 的对象存储请填 aws-s3",
+   "noteEn": "Storage provider; Fill in aws-s3 if using Sealos object storage"
+  },
+  {
+   "name": "STORAGE_REGION",
+   "group": "对象存储",
+   "default": "us-east-1",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_ACCESS_KEY_ID",
+   "group": "对象存储",
+   "default": "minioadmin",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_SECRET_ACCESS_KEY",
+   "group": "对象存储",
+   "default": "minioadmin",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_PUBLIC_BUCKET",
+   "group": "对象存储",
+   "default": "fastgpt-public",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_PRIVATE_BUCKET",
+   "group": "对象存储",
+   "default": "fastgpt-private",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_EXTERNAL_ENDPOINT",
+   "group": "对象存储",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_S3_CDN_ENDPOINT",
+   "group": "对象存储",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_DOWNLOAD_URL_MODE",
+   "group": "对象存储",
+   "default": "short-proxy",
+   "enabledByDefault": true,
+   "note": "下载链接模式：short-proxy | short-redirect | presigned",
+   "noteEn": "Download link mode: short-proxy | short-redirect | presigned"
+  },
+  {
+   "name": "STORAGE_DOWNLOAD_REDIRECT_TTL_SECONDS",
+   "group": "对象存储",
+   "default": "300",
+   "enabledByDefault": true,
+   "note": "short-redirect 模式下临时 S3 预签名下载链接 TTL（秒），不太需要改。",
+   "noteEn": "Temporary S3 pre-signed download link TTL (seconds) in short-redirect mode, rarely needs modification"
+  },
+  {
+   "name": "STORAGE_S3_ENDPOINT",
+   "group": "对象存储",
+   "default": "http://localhost:9000",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_S3_FORCE_PATH_STYLE",
+   "group": "对象存储",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_S3_MAX_RETRIES",
+   "group": "对象存储",
+   "default": "3",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STORAGE_PUBLIC_ACCESS_EXTRA_SUB_PATH",
+   "group": "对象存储",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "REDIS_URL",
+   "group": "数据库与缓存",
+   "default": "redis://default:mypassword@localhost:6379",
+   "enabledByDefault": true,
+   "note": "Redis URL",
+   "noteEn": "Redis URL"
+  },
+  {
+   "name": "STREAM_RESUME_TTL_SECONDS",
+   "group": "数据库与缓存",
+   "default": "300",
+   "enabledByDefault": false,
+   "note": "流式恢复 Redis 镜像 TTL（秒）：生成中续期 / 结束后缩短，默认 300 / 30",
+   "noteEn": "Stream restore Redis image TTL (sec): renewal during generation / shorten after completion, default 300 / 30"
+  },
+  {
+   "name": "STREAM_RESUME_POST_COMPLETE_TTL_SECONDS",
+   "group": "数据库与缓存",
+   "default": "30",
+   "enabledByDefault": false,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "STREAM_RESUME_REDIS_MAXMEMORY_RATIO",
+   "group": "数据库与缓存",
+   "default": "0.8",
+   "enabledByDefault": false,
+   "note": "Redis 已用内存 / maxmemory 达到阈值后，不再为新流请求创建恢复镜像",
+   "noteEn": "Stop creating recovery images for new stream requests when Redis used memory / maxmemory reaches threshold"
+  },
+  {
+   "name": "STREAM_RESUME_REDIS_MEMORY_CHECK_INTERVAL_MS",
+   "group": "数据库与缓存",
+   "default": "5000",
+   "enabledByDefault": false,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "MONGODB_URI",
+   "group": "数据库与缓存",
+   "default": "mongodb://myusername:mypassword@localhost:27017/fastgpt?authSource=admin&directConnection=true",
+   "enabledByDefault": true,
+   "note": "MongoDB 连接参数；本地开发连接远程数据库时，可能需要添加 directConnection=true 才能连接",
+   "noteEn": "MongoDB connection parameters; add directConnection=true may be required when connecting remote database in local development"
+  },
+  {
+   "name": "MONGODB_LOG_URI",
+   "group": "数据库与缓存",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "日志库",
+   "noteEn": "Log library"
+  },
+  {
+   "name": "VECTOR_VQ_LEVEL",
+   "group": "数据库与缓存",
+   "default": "32",
+   "enabledByDefault": true,
+   "note": "向量库优先级: pg > oceanbase > milvus > opengauss 向量量化等级: PG 支持 32/16，OceanBase 支持 32/8/1",
+   "noteEn": "Vector database priority: pg > oceanbase > milvus > opengauss. Vector quantization level: PG supports 32/16, OceanBase supports 32/8/1"
+  },
+  {
+   "name": "PG_URL",
+   "group": "数据库与缓存",
+   "default": "postgresql://username:password@localhost:5432/postgres",
+   "enabledByDefault": true,
+   "note": "PG 向量库连接参数",
+   "noteEn": "PG vector database connection parameters"
+  },
+  {
+   "name": "OCEANBASE_URL",
+   "group": "数据库与缓存",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "OceanBase 向量库连接参数",
+   "noteEn": "OceanBase vector database connection parameters"
+  },
+  {
+   "name": "SEEKDB_URL",
+   "group": "数据库与缓存",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "SeekDB 向量库连接参数",
+   "noteEn": "SeekDB vector database connection parameters"
+  },
+  {
+   "name": "MILVUS_ADDRESS",
+   "group": "数据库与缓存",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "Milvus 向量库连接参数(使用 Milvus 时,全文检索自动启用 BM25;版本需 >= 2.5,推荐 2.5.16+)",
+   "noteEn": "Milvus vector database connection parameters (full-text retrieval automatically enables BM25 when using Milvus; version >= 2.5, recommended 2.5.16+)"
+  },
+  {
+   "name": "MILVUS_TOKEN",
+   "group": "数据库与缓存",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "MILVUS_LANGUAGE_IDENTIFIER",
+   "group": "数据库与缓存",
+   "default": "lingua",
+   "enabledByDefault": false,
+   "note": "Milvus BM25 语言识别引擎: lingua(默认) | whatlang",
+   "noteEn": "Milvus BM25 language recognition engine: lingua (default) | whatlang"
+  },
+  {
+   "name": "OPENGAUSS_URL",
+   "group": "数据库与缓存",
+   "default": "postgresql://gaussdb:FastGPT@123@localhost:5432/fastgpt",
+   "enabledByDefault": false,
+   "note": "openGauss 向量库连接参数",
+   "noteEn": "openGauss vector database connection parameters"
+  },
+  {
+   "name": "LOG_ENABLE_CONSOLE",
+   "group": "日志配置",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "日志等级: trace | debug | info | warning | error | fatal",
+   "noteEn": "Log level: trace | debug | info | warning | error | fatal"
+  },
+  {
+   "name": "LOG_CONSOLE_LEVEL",
+   "group": "日志配置",
+   "default": "debug",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "LOG_ENABLE_OTEL",
+   "group": "日志配置",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "LOG_OTEL_LEVEL",
+   "group": "日志配置",
+   "default": "info",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "LOG_OTEL_SERVICE_NAME",
+   "group": "日志配置",
+   "default": "fastgpt-client",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "LOG_OTEL_URL",
+   "group": "日志配置",
+   "default": "http://localhost:4318/v1/logs",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "METRICS_ENABLE_OTEL",
+   "group": "日志配置",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "指标",
+   "noteEn": "Metrics"
+  },
+  {
+   "name": "METRICS_OTEL_URL",
+   "group": "日志配置",
+   "default": "http://localhost:4318/v1/metrics",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "METRICS_OTEL_SERVICE_NAME",
+   "group": "日志配置",
+   "default": "fastgpt-client",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "TRACING_ENABLE_OTEL",
+   "group": "日志配置",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "追踪",
+   "noteEn": "Tracing"
+  },
+  {
+   "name": "TRACING_OTEL_URL",
+   "group": "日志配置",
+   "default": "http://localhost:4318/v1/traces",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "TRACING_OTEL_SERVICE_NAME",
+   "group": "日志配置",
+   "default": "fastgpt-client",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "FE_DOMAIN",
+   "group": "域名与前端",
+   "default": "http://localhost:3000",
+   "enabledByDefault": true,
+   "note": "必填。客户端访问 FastGPT 时使用的地址，由协议、主机和可选端口组成，用于补全相对路径资源（注意结尾不要带 /）",
+   "noteEn": "Required. FastGPT client access address, consisting of protocol, host and optional port, used to complete relative path resources (no trailing /)"
+  },
+  {
+   "name": "FILE_DOMAIN",
+   "group": "域名与前端",
+   "default": "http://localhost:3000",
+   "enabledByDefault": true,
+   "note": "文件域名（也指向 FastGPT 服务）；如需更高安全性可独立分配域名，避免高危文件读取到主域名内容",
+   "noteEn": "File domain (also points to FastGPT service); Assign independent domain for higher security to prevent high-risk file reading from affecting main domain content"
+  },
+  {
+   "name": "NEXT_PUBLIC_BASE_URL",
+   "group": "域名与前端",
+   "default": "/fastai",
+   "enabledByDefault": false,
+   "note": "二级路由，需要在打包时确定",
+   "noteEn": "Secondary routing, needs to be determined during packaging"
+  },
+  {
+   "name": "USE_IP_LIMIT",
+   "group": "安全配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "启动 IP 限流（true）；部分接口启用 IP 限流策略以防止异常请求",
+   "noteEn": "Enable IP rate limiting (true); IP rate limiting for partial APIs to prevent abnormal requests"
+  },
+  {
+   "name": "CHECK_INTERNAL_IP",
+   "group": "安全配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "启用内网 IP 检查",
+   "noteEn": "Enable intranet IP check"
+  },
+  {
+   "name": "AUTH_COOKIE_SECURE",
+   "group": "安全配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "是否为登录 Cookie 添加 Secure 属性，仅在全站 HTTPS 时启用",
+   "noteEn": "Add Secure attribute to login Cookie; enable only for full-site HTTPS"
+  },
+  {
+   "name": "TRUSTED_PROXY_ENABLE",
+   "group": "安全配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "是否启用可信反向代理客户端 IP 校验",
+   "noteEn": "Enable trusted reverse proxy client IP verification"
+  },
+  {
+   "name": "TRUSTED_PROXY_IPS",
+   "group": "安全配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "可信反向代理 IP/CIDR 列表，逗号或空白分隔。仅 TRUSTED_PROXY_ENABLE=true 时生效；仅显式可信代理传入的 X-Forwarded-For/X-Real-IP 会用于客户端 IP 解析",
+   "noteEn": "Trusted reverse proxy IP/CIDR list, separated by comma or whitespace. Effective only when TRUSTED_PROXY_ENABLE=true; only X-Forwarded-For/X-Real-IP passed by explicitly trusted proxies will be used for client IP resolution"
+  },
+  {
+   "name": "PASSWORD_LOGIN_MINUTE_LIMIT_COUNT",
+   "group": "安全配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "密码登录每分钟次数限制（默认 10）",
+   "noteEn": "Password login request limit per minute (default 10)"
+  },
+  {
+   "name": "PASSWORD_EXPIRED_MONTH",
+   "group": "安全配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "密码过期月份（不设置则不过期）",
+   "noteEn": "Password expiration months (no expiration if not set)"
+  },
+  {
+   "name": "MAX_LOGIN_SESSION",
+   "group": "安全配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "最大登录客户端数量（默认 10）",
+   "noteEn": "Max logged-in client count (default 10)"
+  },
+  {
+   "name": "ALLOWED_ORIGINS",
+   "group": "安全配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "自定义跨域；不配置时默认允许所有跨域（逗号分割）",
+   "noteEn": "Custom CORS; allow all CORS by default if not configured (comma-separated)"
+  },
+  {
+   "name": "MULTIPLE_DATA_TO_BASE64",
+   "group": "安全配置",
+   "default": "true",
+   "enabledByDefault": true,
+   "note": "强制将图片转成 base64 传递给模型",
+   "noteEn": "Force convert images to base64 when passing to model"
+  },
+  {
+   "name": "SHOW_COUPON",
+   "group": "功能开关与特殊配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "是否展示兑换码功能",
+   "noteEn": "Display redemption code function"
+  },
+  {
+   "name": "SHOW_DISCOUNT_COUPON",
+   "group": "功能开关与特殊配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "是否展示优惠券功能",
+   "noteEn": "Display coupon function"
+  },
+  {
+   "name": "APP_REGISTRATION_URL",
+   "group": "功能开关与特殊配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "申请应用备案地址",
+   "noteEn": "Address for application record filing"
+  },
+  {
+   "name": "HIDE_CHAT_COPYRIGHT_SETTING",
+   "group": "功能开关与特殊配置",
+   "default": "",
+   "enabledByDefault": true,
+   "note": "是否隐藏版权信息配置，只有值为 true 时隐藏",
+   "noteEn": "Configure copyright info hiding; hidden only if value is true"
+  },
+  {
+   "name": "WECOM_LOGIN_AUTO_REDIRECT",
+   "group": "功能开关与特殊配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "是否允许企微终端自动跳转登录，默认 false",
+   "noteEn": "Allow WeChat Work client auto-login redirect, default false"
+  },
+  {
+   "name": "OPENAPI_KEY_MAX_COUNT",
+   "group": "功能开关与特殊配置",
+   "default": "100",
+   "enabledByDefault": true,
+   "note": "单个团队成员最多可创建的系统 API Key 数量，最小值为 1",
+   "noteEn": "Maximum number of system API Keys that a single team member can create, minimum value is 1"
+  },
+  {
+   "name": "AGENT_ENGINE",
+   "group": "功能开关与特殊配置",
+   "default": "fastAgent",
+   "enabledByDefault": true,
+   "note": "Agent 引擎选择：fastAgent（FastGPT agent loop）| piAgent（pi-agent-core 引擎）",
+   "noteEn": "Agent engine selection: fastAgent (FastGPT agent loop) | piAgent (pi-agent-core engine)"
+  },
+  {
+   "name": "SKIP_FILE_TYPE_CHECK",
+   "group": "功能开关与特殊配置",
+   "default": "false",
+   "enabledByDefault": true,
+   "note": "",
+   "noteEn": ""
+  },
+  {
+   "name": "CHAT_LOG_URL",
+   "group": "对话日志推送（可选）",
+   "default": "http://localhost:8080",
+   "enabledByDefault": false,
+   "note": "日志服务地址",
+   "noteEn": "Log service address"
+  },
+  {
+   "name": "CHAT_LOG_INTERVAL",
+   "group": "对话日志推送（可选）",
+   "default": "10000",
+   "enabledByDefault": false,
+   "note": "日志推送间隔",
+   "noteEn": "Log push interval"
+  },
+  {
+   "name": "CHAT_LOG_SOURCE_ID_PREFIX",
+   "group": "对话日志推送（可选）",
+   "default": "fastgpt-",
+   "enabledByDefault": false,
+   "note": "日志来源 ID 前缀",
+   "noteEn": "Log source ID prefix"
+  },
+  {
+   "name": "WECHAT_CHANNEL_CONCURRENCY",
+   "group": "并发控制与限制",
+   "default": "1000",
+   "enabledByDefault": true,
+   "note": "微信渠道 poll worker 并发数（默认 1000），需 ≥ online channel 数；channel 数超过该值时消息延迟会线性恶化",
+   "noteEn": "WeChat channel poll worker concurrency (default 1000), must ≥ online channel count; message delay worsens linearly when channel count exceeds this value"
+  },
+  {
+   "name": "PARSE_FILE_TIMEOUT_SECONDS",
+   "group": "并发控制与限制",
+   "default": "600",
+   "enabledByDefault": true,
+   "note": "文件解析超时时间（秒）",
+   "noteEn": "File parsing timeout (seconds)"
+  },
+  {
+   "name": "WORKFLOW_MAX_RUN_TIMES",
+   "group": "并发控制与限制",
+   "default": "500",
+   "enabledByDefault": true,
+   "note": "工作流最大运行次数，避免极端死循环",
+   "noteEn": "Max workflow run times to avoid extreme infinite loops"
+  },
+  {
+   "name": "WORKFLOW_MAX_LOOP_TIMES",
+   "group": "并发控制与限制",
+   "default": "100",
+   "enabledByDefault": true,
+   "note": "循环/并行节点最大输入数组长度（默认 100）",
+   "noteEn": "Max input array length for loop/parallel nodes (default 100)"
+  },
+  {
+   "name": "WORKFLOW_PARALLEL_MAX_CONCURRENCY",
+   "group": "并发控制与限制",
+   "default": "10",
+   "enabledByDefault": true,
+   "note": "并行节点并发上限（最终会 clamp 到 [5, 100]，默认 10）",
+   "noteEn": "Max concurrency for parallel nodes (will clamp to [5, 100], default 10)"
+  },
+  {
+   "name": "CHAT_MAX_QPM",
+   "group": "并发控制与限制",
+   "default": "5000",
+   "enabledByDefault": true,
+   "note": "工作流 QPM（若用户套餐有限制，这里不生效）",
+   "noteEn": "Workflow QPM (does not take effect if user plan has restrictions)"
+  },
+  {
+   "name": "SERVICE_REQUEST_MAX_CONTENT_LENGTH",
+   "group": "资源限制",
+   "default": "10",
+   "enabledByDefault": true,
+   "note": "服务器接收请求的最大大小（MB）",
+   "noteEn": "Max request size received by server (MB)"
+  },
+  {
+   "name": "MAX_FOLDER_DEPTH",
+   "group": "资源限制",
+   "default": "4",
+   "enabledByDefault": true,
+   "note": "允许的最深文件夹层级，默认 4，范围 2~20（根目录下最多 4 层文件夹）",
+   "noteEn": "Maximum allowed folder depth, default 4, range 2~20 (max 4 folder levels under root directory)"
+  },
+  {
+   "name": "APP_FOLDER_MAX_AMOUNT",
+   "group": "资源限制",
+   "default": "1000",
+   "enabledByDefault": true,
+   "note": "应用文件夹最大数量",
+   "noteEn": "Max number of application folders"
+  },
+  {
+   "name": "DATASET_FOLDER_MAX_AMOUNT",
+   "group": "资源限制",
+   "default": "1000",
+   "enabledByDefault": true,
+   "note": "数据集文件夹最大数量",
+   "noteEn": "Max number of dataset folders"
+  },
+  {
+   "name": "UPLOAD_FILE_MAX_SIZE",
+   "group": "资源限制",
+   "default": "1000",
+   "enabledByDefault": true,
+   "note": "最大上传文件大小（MB）",
+   "noteEn": "Max upload file size (MB)"
+  },
+  {
+   "name": "UPLOAD_FILE_MAX_AMOUNT",
+   "group": "资源限制",
+   "default": "1000",
+   "enabledByDefault": true,
+   "note": "最大上传文件数量",
+   "noteEn": "Max number of upload files"
+  },
+  {
+   "name": "LLM_REQUEST_TRACKING_RETENTION_HOURS",
+   "group": "资源限制",
+   "default": "6",
+   "enabledByDefault": true,
+   "note": "LLM 请求追踪保留时长（小时）",
+   "noteEn": "LLM request trace retention duration (hours)"
+  },
+  {
+   "name": "MAX_HTML_TRANSFORM_CHARS",
+   "group": "资源限制",
+   "default": "1000000",
+   "enabledByDefault": true,
+   "note": "HTML 转 Markdown 最大字符数（超过后不执行转换）",
+   "noteEn": "Max character count for HTML to Markdown conversion (no conversion if exceeded)"
+  },
+  {
+   "name": "CUSTOM_PDF_PARSE_URL",
+   "group": "PDF 增强解析（可选）",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "自定义 PDF 解析服务地址",
+   "noteEn": "Custom PDF parsing service address"
+  },
+  {
+   "name": "CUSTOM_PDF_PARSE_KEY",
+   "group": "PDF 增强解析（可选）",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "自定义 PDF 解析服务密钥",
+   "noteEn": "Custom PDF parsing service secret key"
+  },
+  {
+   "name": "SOMARK_API_KEY",
+   "group": "PDF 增强解析（可选）",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "SoMark PDF 解析服务密钥",
+   "noteEn": "SoMark PDF parsing service secret key"
+  },
+  {
+   "name": "DOC2X_KEY",
+   "group": "PDF 增强解析（可选）",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "Doc2x PDF 解析服务密钥",
+   "noteEn": "Doc2x PDF parsing service secret key"
+  },
+  {
+   "name": "TEXTIN_APP_ID",
+   "group": "PDF 增强解析（可选）",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "合合信息 Textin 服务 App ID",
+   "noteEn": "Hehe Information Textin service App ID"
+  },
+  {
+   "name": "TEXTIN_SECRET_CODE",
+   "group": "PDF 增强解析（可选）",
+   "default": "",
+   "enabledByDefault": false,
+   "note": "合合信息 Textin 服务 Secret Code",
+   "noteEn": "Hehe Information Textin service Secret Code"
+  },
+  {
+   "name": "HNSW_EF_SEARCH",
+   "group": "PDF 增强解析（可选）",
+   "default": "100",
+   "enabledByDefault": true,
+   "note": "向量检索 hnsw ef_search 参数，仅对 PG / OB / OpenGauss 生效",
+   "noteEn": "Vector retrieval hnsw ef_search parameter, only effective for PG / OB / OpenGauss"
+  },
+  {
+   "name": "HNSW_MAX_SCAN_TUPLES",
+   "group": "PDF 增强解析（可选）",
+   "default": "100000",
+   "enabledByDefault": true,
+   "note": "向量检索最大扫描数据量，仅对 PG 生效",
+   "noteEn": "Maximum scanned data volume for vector retrieval, only effective for PG"
+  },
+  {
+   "name": "DATASET_PARSE_MAX_PROCESS",
+   "group": "知识库处理并发控制",
+   "default": "10",
+   "enabledByDefault": true,
+   "note": "知识库文件解析队列最大并发数",
+   "noteEn": "Max concurrent knowledge base file parsing queue size"
+  },
+  {
+   "name": "VECTOR_MAX_PROCESS",
+   "group": "知识库处理并发控制",
+   "default": "10",
+   "enabledByDefault": true,
+   "note": "向量训练队列最大并发数",
+   "noteEn": "Maximum concurrency of vector training queue"
+  },
+  {
+   "name": "QA_MAX_PROCESS",
+   "group": "知识库处理并发控制",
+   "default": "10",
+   "enabledByDefault": true,
+   "note": "问答拆分队列最大并发数",
+   "noteEn": "Max concurrent Q&A splitting queue size"
+  },
+  {
+   "name": "VLM_MAX_PROCESS",
+   "group": "知识库处理并发控制",
+   "default": "10",
+   "enabledByDefault": true,
+   "note": "图片理解模型处理队列最大并发数",
+   "noteEn": "Max concurrency for image understanding model processing queue"
+  }
+ ]
+}

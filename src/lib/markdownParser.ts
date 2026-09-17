@@ -16,6 +16,7 @@ export type MarkdownBlock =
   | { type: 'blockquote'; lines: string[] }
   | MarkdownListBlock
   | { type: 'table'; rows: string[][] }
+  | { type: 'interactive'; module: string; data: string }
   | { type: 'rule' };
 
 export type MarkdownHeading = {
@@ -32,6 +33,10 @@ type MarkdownListMarker = {
   ordered: boolean;
   text: string;
 };
+
+// Delivery contract for interactive module pages: the marker is replaced by the component at
+// render time, and the table directly below it is the control table the component replaces.
+const INTERACTIVE_MARKER = /^<!--\s*fastgpt-interactive:\s*([\w-]+)\s*\|\s*data:\s*([\w.-]+)\s*\|/;
 
 function countIndent(line: string) {
   let indent = 0;
@@ -147,6 +152,13 @@ export function parseMarkdown(markdown: string, title: string): MarkdownBlock[] 
   while (index < lines.length) {
     const line = lines[index].trimEnd();
     if (!line.trim()) {
+      index += 1;
+      continue;
+    }
+
+    const interactive = line.trim().match(INTERACTIVE_MARKER);
+    if (interactive) {
+      blocks.push({ type: 'interactive', module: interactive[1], data: interactive[2] });
       index += 1;
       continue;
     }

@@ -1,6 +1,7 @@
 import { createElement, type ElementType, type ReactNode } from 'react';
 import Link from 'next/link';
 import ContentArticleLink from '@/components/ContentArticleLink';
+import InteractiveModule from '@/components/tech-center/InteractiveModule';
 import { getReviewLocalePath } from '@/lib/siteRouting';
 
 import {
@@ -213,9 +214,20 @@ export default function MarkdownContent({
     index: 0
   };
 
-  return (
-    <div className="tech-article-content">
-      {parsedBlocks.map((block, index) => renderBlock(block, String(index), headingState, locale))}
-    </div>
-  );
+  const rendered: ReactNode[] = [];
+  for (let index = 0; index < parsedBlocks.length; index += 1) {
+    const block = parsedBlocks[index];
+    if (block.type === 'interactive') {
+      rendered.push(
+        <InteractiveModule key={index} module={block.module} data={block.data} locale={locale} />
+      );
+      // The table directly below the marker is the control table the module replaces; the static
+      // table further down stays for readers without scripting.
+      if (parsedBlocks[index + 1]?.type === 'table') index += 1;
+      continue;
+    }
+    rendered.push(renderBlock(block, String(index), headingState, locale));
+  }
+
+  return <div className="tech-article-content">{rendered}</div>;
 }

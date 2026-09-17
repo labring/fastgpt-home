@@ -168,6 +168,24 @@ function getTechPaths(rootDir) {
   return getTechIdentities(rootDir).map((identity) => identity.sourcePath);
 }
 
+// The deep-content column moved from /tutorial/ to /guide/ in 2026-09, so the retired China
+// Site addresses stay in the redirect map. The IO Site never served these routes.
+const RETIRED_DEEP_CONTENT_SLUGS = [
+  'ai-support-build-or-buy',
+  'open-source-vs-commercial',
+  'private-deployment-topology',
+  'self-hostable-platform-selection'
+];
+
+function getRetiredDeepContentRedirects() {
+  return RETIRED_DEEP_CONTENT_SLUGS.flatMap((slug) =>
+    ['/tutorial/', '/zh/tutorial/'].map((prefix) => [
+      `${prefix}${slug}`,
+      `/guide/${slug}`
+    ])
+  );
+}
+
 function getTechIdentities(rootDir) {
   const entries = JSON.parse(
     fs.readFileSync(path.join(rootDir, 'src', 'components', 'tech-center', 'entries.json'), 'utf8')
@@ -245,6 +263,10 @@ function buildRedirects(rootDir, env = process.env) {
   const aliasAuthority = readUrlAliasAuthority(rootDir);
   const ioRedirects = new Map();
   const cnRedirects = new Map();
+
+  for (const [source, targetPath] of getRetiredDeepContentRedirects()) {
+    addRedirect(cnRedirects, source, `${cnUrl}${targetPath}`);
+  }
 
   for (const [sourceHost, redirects] of [
     ['fastgpt.cn', cnRedirects],

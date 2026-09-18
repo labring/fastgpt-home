@@ -115,7 +115,7 @@ export const adsLandingPages: AdsLandingPage[] = [
     keywordGroup: 'dify、dify ai、dify 企业版',
     h1: 'Dify 与 FastGPT 怎么选：一张能拿去汇报的对比表',
     subtitle:
-      '给正在做平台选型的技术负责人：部署形态、知识库、工作流、商用授权与迁移成本逐项列开，两边的强项都写进去。',
+      '给正在做平台选型的技术负责人：逐项拆解部署形态、知识库深度、工作流、商用授权与工程运维成本，客观呈现双方适用边界。',
     checklistSubtitle: '从部署、知识库、工作流到授权边界，理清上线半年后的真实工程成本与选型痛点。',
     sections: [
       {

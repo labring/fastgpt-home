@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { BLOG_OG_THUMBNAIL_SEGMENT, getBlogThumbnailUrl } from '@/components/blog/blogThumbnails';
 import { getBlog, resolveBlogLocale } from '@/content/blog';
 import { supportedLocaleCodes } from '@/lib/locales';
 import { getLocaleHreflang, getOwnedLocaleUrl } from '@/lib/siteRouting';
@@ -29,9 +30,11 @@ export function getBlogAlternates(locale: string, slug: string): Metadata['alter
   };
 }
 
-function getImageUrl(locale: string, thumbnail?: string) {
-  if (!thumbnail) return undefined;
-  return /^https?:\/\//i.test(thumbnail) ? thumbnail : getOwnedLocaleUrl(locale, thumbnail);
+function getImageUrl(locale: string, slug: string, thumbnail?: string) {
+  if (thumbnail) {
+    return /^https?:\/\//i.test(thumbnail) ? thumbnail : getOwnedLocaleUrl(locale, thumbnail);
+  }
+  return getBlogThumbnailUrl(locale, slug, BLOG_OG_THUMBNAIL_SEGMENT);
 }
 
 export function getBlogMetadata(locale: string, slug: string): Metadata {
@@ -39,7 +42,7 @@ export function getBlogMetadata(locale: string, slug: string): Metadata {
   if (!blog) return { title: 'Blog post not found', robots: { index: false, follow: false } };
 
   const canonical = getBlogCanonicalUrl(locale, slug);
-  const image = getImageUrl(locale, blog.thumbnail);
+  const image = getImageUrl(locale, slug, blog.thumbnail);
   const dateModified = blog.dateModified || blog.date;
 
   return {
@@ -54,13 +57,13 @@ export function getBlogMetadata(locale: string, slug: string): Metadata {
       url: canonical,
       publishedTime: blog.date.toISOString(),
       modifiedTime: dateModified.toISOString(),
-      images: image ? [{ url: image }] : undefined
+      images: [{ url: image, width: 1200, height: 630, alt: blog.title }]
     },
     twitter: {
       card: 'summary_large_image',
       title: blog.title,
       description: blog.summary,
-      images: image ? [image] : undefined
+      images: [image]
     }
   };
 }

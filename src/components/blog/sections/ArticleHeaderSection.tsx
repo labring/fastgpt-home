@@ -3,10 +3,10 @@ import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 
 import type { BlogPost } from '@/content/blog';
-import { getReviewLocalePath } from '@/lib/siteRouting';
+import { getHostLocalePath } from '@/lib/siteRouting';
 import GradientBlobs from '@/components/home/GradientBlobs';
 
-import { getDefaultBlogThumbnail } from '../blogThumbnails';
+import { getBlogCoverPath } from '../blogThumbnails';
 
 type ArticleHeaderSectionProps = {
   post: BlogPost;
@@ -23,7 +23,7 @@ export default function ArticleHeaderSection({
   categoryLabel,
   formatDate
 }: ArticleHeaderSectionProps) {
-  const thumbnail = post.thumbnail || getDefaultBlogThumbnail(post.category);
+  const thumbnail = post.thumbnail || getBlogCoverPath(locale, post.slug);
 
   return (
     <section className="relative col-span-full bg-white lg:row-start-1">
@@ -35,7 +35,7 @@ export default function ArticleHeaderSection({
 
       <div className="relative pb-0 pt-24 md:pt-28 lg:pt-32">
         <Link
-          href={getReviewLocalePath(locale, '/blog')}
+          href={getHostLocalePath(locale, '/blog')}
           className="inline-flex items-center gap-1 text-lg text-primary no-underline transition-colors hover:text-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 md:text-xl"
         >
           <ArrowLeft className="size-6" strokeWidth={1.5} aria-hidden="true" />

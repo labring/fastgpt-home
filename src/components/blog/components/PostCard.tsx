@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 
-import { getReviewLocalePath } from '@/lib/siteRouting';
+import { getHostLocalePath } from '@/lib/siteRouting';
 
 import type { BlogListPost } from '../blogPagination';
 
@@ -15,7 +15,7 @@ type PostCardProps = {
 };
 
 export default function PostCard({ post, locale, categoryLabel, readMoreLabel }: PostCardProps) {
-  const href = post.href || getReviewLocalePath(locale, `/blog/${post.slug}`);
+  const href = post.href || getHostLocalePath(locale, `/blog/${post.slug}`);
 
   return (
     <article className="flex min-h-48 min-w-0 flex-col">

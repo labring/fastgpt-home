@@ -19,6 +19,8 @@ import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
 import { guideEntries } from '@/content/guides/registry';
 import { getGuideCanonicalUrl } from '@/lib/guideSeo';
+import { getPublishedBlogs } from '@/content/blog';
+import { getBlogCanonicalUrl } from '@/lib/blogSeo';
 import { getAllPublishedSolutionDetails, getCategories } from '@customers/lib/data';
 import { getSolutionPublicHref } from '@customers/lib/solution-url';
 import { absoluteUrl } from '@customers/lib/site-url';
@@ -26,7 +28,7 @@ import { absoluteUrl } from '@customers/lib/site-url';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const localizedPaths = ['', '/price'];
+  const localizedPaths = ['', '/price', '/blog'];
   const entries: MetadataRoute.Sitemap = [];
   const seenUrls = new Set<string>();
 
@@ -108,6 +110,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       getGuideCanonicalUrl(guideLocale, entry.slug),
       new Date(entry[guideLocale].dateModified)
     );
+  }
+
+  for (const locale of siteLocales) {
+    for (const post of getPublishedBlogs(locale)) {
+      addEntry(getBlogCanonicalUrl(locale, post.slug), post.dateModified || post.date);
+    }
   }
 
   // 客户案例中心：仅中文，归 fastgpt.cn；URL 由 JSON 数据源驱动。

@@ -1,3 +1,5 @@
+const { withContentCollections } = require("@content-collections/next");
+
 /** @type {import('next').NextConfig} */
 const isExport = process.env.NODE_ENV === 'production';
 
@@ -53,4 +55,4 @@ const nextConfig = {
   })
 };
 
-module.exports = nextConfig;
+module.exports = withContentCollections(nextConfig);

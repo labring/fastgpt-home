@@ -5,6 +5,10 @@
       "href": "/price"
     },
     {
+      "label": "博客",
+      "href": "/blog"
+    },
+    {
       "label": "文档",
       "href": "https://doc.fastgpt.io/docs/introduction"
     },

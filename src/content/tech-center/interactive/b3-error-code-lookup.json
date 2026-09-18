@@ -1,0 +1,1145 @@
+{
+ "totalCodes": 122,
+ "modules": {
+  "team": {
+   "base": 500000,
+   "count": 45
+  },
+  "dataset": {
+   "base": 501000,
+   "count": 13
+  },
+  "app": {
+   "base": 502000,
+   "count": 5
+  },
+  "user": {
+   "base": 503000,
+   "count": 10
+  },
+  "chat": {
+   "base": 504000,
+   "count": 2
+  },
+  "outLink": {
+   "base": 505000,
+   "count": 4
+  },
+  "openapi": {
+   "base": 506000,
+   "count": 3
+  },
+  "common": {
+   "base": 507000,
+   "count": 8
+  },
+  "plugin": {
+   "base": 508000,
+   "count": 2
+  },
+  "skill": {
+   "base": 509000,
+   "count": 17
+  },
+  "system": {
+   "base": 509000,
+   "count": 5
+  },
+  "s3": {
+   "base": 510000,
+   "count": 3
+  },
+  "sandbox": {
+   "base": 510000,
+   "count": 4
+  },
+  "coupon": {
+   "base": 512000,
+   "count": 1
+  }
+ },
+ "ambiguousCodes": {
+  "509000": [
+   {
+    "module": "skill",
+    "statusText": "skillUnExist",
+    "source": "packages/global/common/error/code/skill.ts"
+   },
+   {
+    "module": "system",
+    "statusText": "communityVersionNumLimit",
+    "source": "packages/global/common/error/code/system.ts"
+   }
+  ],
+  "509001": [
+   {
+    "module": "skill",
+    "statusText": "unAuthSkill",
+    "source": "packages/global/common/error/code/skill.ts"
+   },
+   {
+    "module": "system",
+    "statusText": "commercialFeature",
+    "source": "packages/global/common/error/code/system.ts"
+   }
+  ],
+  "509002": [
+   {
+    "module": "skill",
+    "statusText": "canNotEditAdminPermission",
+    "source": "packages/global/common/error/code/skill.ts"
+   },
+   {
+    "module": "system",
+    "statusText": "licenseAppAmountLimit",
+    "source": "packages/global/common/error/code/system.ts"
+   }
+  ],
+  "509003": [
+   {
+    "module": "skill",
+    "statusText": "invalidSkillName",
+    "source": "packages/global/common/error/code/skill.ts"
+   },
+   {
+    "module": "system",
+    "statusText": "licenseDatasetAmountLimit",
+    "source": "packages/global/common/error/code/system.ts"
+   }
+  ],
+  "509004": [
+   {
+    "module": "skill",
+    "statusText": "invalidDescription",
+    "source": "packages/global/common/error/code/skill.ts"
+   },
+   {
+    "module": "system",
+    "statusText": "licenseUserAmountLimit",
+    "source": "packages/global/common/error/code/system.ts"
+   }
+  ],
+  "510000": [
+   {
+    "module": "s3",
+    "statusText": "InvalidUploadFileType",
+    "source": "packages/global/common/error/code/s3.ts"
+   },
+   {
+    "module": "sandbox",
+    "statusText": "agentSandboxPermissionDenied",
+    "source": "packages/global/common/error/code/sandbox.ts"
+   }
+  ],
+  "510001": [
+   {
+    "module": "s3",
+    "statusText": "UploadFileTypeMismatch",
+    "source": "packages/global/common/error/code/s3.ts"
+   },
+   {
+    "module": "sandbox",
+    "statusText": "agentSandboxInitializing",
+    "source": "packages/global/common/error/code/sandbox.ts"
+   }
+  ],
+  "510002": [
+   {
+    "module": "s3",
+    "statusText": "FileUploadDisabled",
+    "source": "packages/global/common/error/code/s3.ts"
+   },
+   {
+    "module": "sandbox",
+    "statusText": "runtimeUpgradeFailed",
+    "source": "packages/global/common/error/code/sandbox.ts"
+   }
+  ]
+ },
+ "outliers": [
+  {
+   "code": 501,
+   "module": "outLink",
+   "statusText": "linkUnInvalid",
+   "base": 505000
+  }
+ ],
+ "codes": [
+  {
+   "code": 500000,
+   "module": "team",
+   "statusText": "notUser",
+   "enum": "notUser",
+   "i18nKey": "common:code_error.team_error.not_user",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500001,
+   "module": "team",
+   "statusText": "unPermission",
+   "enum": "unPermission",
+   "i18nKey": "common:error_un_permission",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500002,
+   "module": "team",
+   "statusText": "accountCancellationPending",
+   "enum": "accountCancellationPending",
+   "i18nKey": "common:code_error.team_error.account_cancellation_pending",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500003,
+   "module": "team",
+   "statusText": "teamOverSize",
+   "enum": "teamOverSize",
+   "i18nKey": "common:code_error.team_error.over_size",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500004,
+   "module": "team",
+   "statusText": "unAuthTeam",
+   "enum": "unAuthTeam",
+   "i18nKey": "common:code_error.team_error.un_auth",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500005,
+   "module": "team",
+   "statusText": "aiPointsNotEnough",
+   "enum": "aiPointsNotEnough",
+   "i18nKey": "common:code_error.team_error.ai_points_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500006,
+   "module": "team",
+   "statusText": "datasetSizeNotEnough",
+   "enum": "datasetSizeNotEnough",
+   "i18nKey": "common:code_error.team_error.dataset_size_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500007,
+   "module": "team",
+   "statusText": "datasetAmountNotEnough",
+   "enum": "datasetAmountNotEnough",
+   "i18nKey": "common:code_error.team_error.dataset_amount_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500008,
+   "module": "team",
+   "statusText": "appAmountNotEnough",
+   "enum": "appAmountNotEnough",
+   "i18nKey": "common:code_error.team_error.app_amount_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500009,
+   "module": "team",
+   "statusText": "pluginAmountNotEnough",
+   "enum": "pluginAmountNotEnough",
+   "i18nKey": "common:code_error.team_error.plugin_amount_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500010,
+   "module": "team",
+   "statusText": "appFolderAmountNotEnough",
+   "enum": "appFolderAmountNotEnough",
+   "i18nKey": "common:code_error.team_error.app_folder_amount_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500011,
+   "module": "team",
+   "statusText": "websiteSyncNotEnough",
+   "enum": "websiteSyncNotEnough",
+   "i18nKey": "common:code_error.team_error.website_sync_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500012,
+   "module": "team",
+   "statusText": "reRankNotEnough",
+   "enum": "reRankNotEnough",
+   "i18nKey": "common:code_error.team_error.re_rank_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500013,
+   "module": "team",
+   "statusText": "ticketNotAvailable",
+   "enum": "ticketNotAvailable",
+   "i18nKey": "common:code_error.team_error.ticket_not_available",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500014,
+   "module": "team",
+   "statusText": "groupNameEmpty",
+   "enum": "groupNameEmpty",
+   "i18nKey": "common:code_error.team_error.group_name_empty",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500015,
+   "module": "team",
+   "statusText": "groupNotExist",
+   "enum": "groupNotExist",
+   "i18nKey": "common:code_error.team_error.group_not_exist",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500016,
+   "module": "team",
+   "statusText": "cannotDeleteDefaultGroup",
+   "enum": "cannotDeleteDefaultGroup",
+   "i18nKey": "common:code_error.team_error.cannot_delete_default_group",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500017,
+   "module": "team",
+   "statusText": "groupNameDuplicate",
+   "enum": "groupNameDuplicate",
+   "i18nKey": "common:code_error.team_error.group_name_duplicate",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500018,
+   "module": "team",
+   "statusText": "userNotActive",
+   "enum": "userNotActive",
+   "i18nKey": "common:code_error.team_error.user_not_active",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500019,
+   "module": "team",
+   "statusText": "orgMemberNotExist",
+   "enum": "orgMemberNotExist",
+   "i18nKey": "common:code_error.team_error.org_member_not_exist",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500020,
+   "module": "team",
+   "statusText": "orgMemberDuplicated",
+   "enum": "orgMemberDuplicated",
+   "i18nKey": "common:code_error.team_error.org_member_duplicated",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500021,
+   "module": "team",
+   "statusText": "orgNotExist",
+   "enum": "orgNotExist",
+   "i18nKey": "common:code_error.team_error.org_not_exist",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500022,
+   "module": "team",
+   "statusText": "orgParentNotExist",
+   "enum": "orgParentNotExist",
+   "i18nKey": "common:code_error.team_error.org_parent_not_exist",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500023,
+   "module": "team",
+   "statusText": "cannotMoveToSubPath",
+   "enum": "cannotMoveToSubPath",
+   "i18nKey": "common:code_error.team_error.cannot_move_to_sub_path",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500024,
+   "module": "team",
+   "statusText": "cannotModifyRootOrg",
+   "enum": "cannotModifyRootOrg",
+   "i18nKey": "common:code_error.team_error.cannot_modify_root_org",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500025,
+   "module": "team",
+   "statusText": "cannotDeleteNonEmptyOrg",
+   "enum": "cannotDeleteNonEmptyOrg",
+   "i18nKey": "common:code_error.team_error.cannot_delete_non_empty_org",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500026,
+   "module": "team",
+   "statusText": "invitationLinkInvalid",
+   "enum": "invitationLinkInvalid",
+   "i18nKey": "common:code_error.team_error.invitation_link_invalid",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500027,
+   "module": "team",
+   "statusText": "youHaveBeenInTheTeam",
+   "enum": "youHaveBeenInTheTeam",
+   "i18nKey": "common:code_error.team_error.you_have_been_in_the_team",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500028,
+   "module": "team",
+   "statusText": "tooManyInvitations",
+   "enum": "tooManyInvitations",
+   "i18nKey": "common:code_error.team_error.too_many_invitations",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500029,
+   "module": "team",
+   "statusText": "datasetFolderAmountNotEnough",
+   "enum": "datasetFolderAmountNotEnough",
+   "i18nKey": "common:code_error.team_error.dataset_folder_amount_not_enough",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500030,
+   "module": "team",
+   "statusText": "sandboxNotSupport",
+   "enum": "sandboxNotSupport",
+   "i18nKey": "common:code_error.team_error.sandbox_not_support",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500031,
+   "module": "team",
+   "statusText": "disabled",
+   "enum": "disabled",
+   "i18nKey": "common:enterprise_auth.error.disabled",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500032,
+   "module": "team",
+   "statusText": "serviceNotConfigured",
+   "enum": "serviceNotConfigured",
+   "i18nKey": "common:enterprise_auth.error.service_not_configured",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500033,
+   "module": "team",
+   "statusText": "noRemainingTimes",
+   "enum": "noRemainingTimes",
+   "i18nKey": "common:enterprise_auth.error.no_remaining_times",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500034,
+   "module": "team",
+   "statusText": "alreadyVerified",
+   "enum": "alreadyVerified",
+   "i18nKey": "common:enterprise_auth.error.already_verified",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500035,
+   "module": "team",
+   "statusText": "enterpriseOccupied",
+   "enum": "enterpriseOccupied",
+   "i18nKey": "common:enterprise_auth.error.enterprise_occupied",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500036,
+   "module": "team",
+   "statusText": "tooFrequent",
+   "enum": "tooFrequent",
+   "i18nKey": "common:enterprise_auth.error.too_frequent",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500037,
+   "module": "team",
+   "statusText": "serviceError",
+   "enum": "serviceError",
+   "i18nKey": "common:enterprise_auth.error.service_error",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500038,
+   "module": "team",
+   "statusText": "serviceTimeout",
+   "enum": "serviceTimeout",
+   "i18nKey": "common:enterprise_auth.error.service_timeout",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500039,
+   "module": "team",
+   "statusText": "infoFailed",
+   "enum": "infoFailed",
+   "i18nKey": "common:enterprise_auth.error.info_failed",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500040,
+   "module": "team",
+   "statusText": "taskNotFound",
+   "enum": "taskNotFound",
+   "i18nKey": "common:enterprise_auth.error.task_not_found",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500041,
+   "module": "team",
+   "statusText": "taskExpired",
+   "enum": "taskExpired",
+   "i18nKey": "common:enterprise_auth.error.task_expired",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500042,
+   "module": "team",
+   "statusText": "amountError",
+   "enum": "amountError",
+   "i18nKey": "common:enterprise_auth.error.amount_error",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500043,
+   "module": "team",
+   "statusText": "amountFailed",
+   "enum": "amountFailed",
+   "i18nKey": "common:enterprise_auth.error.amount_failed",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 500044,
+   "module": "team",
+   "statusText": "processing",
+   "enum": "processing",
+   "i18nKey": "common:enterprise_auth.error.processing",
+   "source": "packages/global/common/error/code/team.ts"
+  },
+  {
+   "code": 501000,
+   "module": "dataset",
+   "statusText": "sameApiCollection",
+   "enum": "sameApiCollection",
+   "i18nKey": "common:core.dataset.error.sameApiCollection",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501001,
+   "module": "dataset",
+   "statusText": "notSupportSync",
+   "enum": "notSupportSync",
+   "i18nKey": "common:core.dataset.error.notSupportSync",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501002,
+   "module": "dataset",
+   "statusText": "unExistDataset",
+   "enum": "unExist",
+   "i18nKey": "common:core.dataset.error.unExistDataset",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501003,
+   "module": "dataset",
+   "statusText": "unExistCollection",
+   "enum": "unExistCollection",
+   "i18nKey": "common:error_collection_not_exist",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501004,
+   "module": "dataset",
+   "statusText": "unAuthDataset",
+   "enum": "unAuthDataset",
+   "i18nKey": "common:core.dataset.error.unAuthDataset",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501005,
+   "module": "dataset",
+   "statusText": "unAuthDatasetCollection",
+   "enum": "unAuthDatasetCollection",
+   "i18nKey": "common:core.dataset.error.unAuthDatasetCollection",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501006,
+   "module": "dataset",
+   "statusText": "unAuthDatasetData",
+   "enum": "unAuthDatasetData",
+   "i18nKey": "common:core.dataset.error.unAuthDatasetData",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501007,
+   "module": "dataset",
+   "statusText": "unAuthDatasetFile",
+   "enum": "unAuthDatasetFile",
+   "i18nKey": "common:core.dataset.error.unAuthDatasetFile",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501008,
+   "module": "dataset",
+   "statusText": "unCreateCollection",
+   "enum": "unCreateCollection",
+   "i18nKey": "common:core.dataset.error.unCreateCollection",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501009,
+   "module": "dataset",
+   "statusText": "unLinkCollection",
+   "enum": "unLinkCollection",
+   "i18nKey": "common:core.dataset.error.unLinkCollection",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501010,
+   "module": "dataset",
+   "statusText": "invalidVectorModelOrQAModel",
+   "enum": "invalidVectorModelOrQAModel",
+   "i18nKey": "common:core.dataset.error.invalidVectorModelOrQAModel",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501011,
+   "module": "dataset",
+   "statusText": "canNotEditAdminPermission",
+   "enum": "canNotEditAdminPermission",
+   "i18nKey": "common:core.dataset.error.canNotEditAdminPermission",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 501012,
+   "module": "dataset",
+   "statusText": "noApiServer",
+   "enum": "noApiServer",
+   "i18nKey": "common:core.dataset.error.noApiServer",
+   "source": "packages/global/common/error/code/dataset.ts"
+  },
+  {
+   "code": 502000,
+   "module": "app",
+   "statusText": "appUnExist",
+   "enum": "unExist",
+   "i18nKey": "common:code_error.app_error.not_exist",
+   "source": "packages/global/common/error/code/app.ts"
+  },
+  {
+   "code": 502001,
+   "module": "app",
+   "statusText": "unAuthApp",
+   "enum": "unAuthApp",
+   "i18nKey": "common:code_error.app_error.un_auth_app",
+   "source": "packages/global/common/error/code/app.ts"
+  },
+  {
+   "code": 502002,
+   "module": "app",
+   "statusText": "invalidOwner",
+   "enum": "invalidOwner",
+   "i18nKey": "common:code_error.app_error.invalid_owner",
+   "source": "packages/global/common/error/code/app.ts"
+  },
+  {
+   "code": 502003,
+   "module": "app",
+   "statusText": "invalidAppType",
+   "enum": "invalidAppType",
+   "i18nKey": "common:code_error.app_error.invalid_app_type",
+   "source": "packages/global/common/error/code/app.ts"
+  },
+  {
+   "code": 502004,
+   "module": "app",
+   "statusText": "canNotEditAdminPermission",
+   "enum": "canNotEditAdminPermission",
+   "i18nKey": "common:code_error.app_error.can_not_edit_admin_permission",
+   "source": "packages/global/common/error/code/app.ts"
+  },
+  {
+   "code": 503000,
+   "module": "user",
+   "statusText": "notUser",
+   "enum": "notUser",
+   "i18nKey": "common:code_error.account_not_found",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503001,
+   "module": "user",
+   "statusText": "userExist",
+   "enum": "userExist",
+   "i18nKey": "common:code_error.account_exist",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503002,
+   "module": "user",
+   "statusText": "account_psw_error",
+   "enum": "account_psw_error",
+   "i18nKey": "common:code_error.account_error",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503003,
+   "module": "user",
+   "statusText": "unAuthSso",
+   "enum": "unAuthSso",
+   "i18nKey": "user:sso_auth_failed",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503004,
+   "module": "user",
+   "statusText": "invalidVerificationCode",
+   "enum": "invalidVerificationCode",
+   "i18nKey": "common:error.code_error",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503005,
+   "module": "user",
+   "statusText": "sendVerificationCodeTooFrequently",
+   "enum": "sendVerificationCodeTooFrequently",
+   "i18nKey": "common:error.send_auth_code_too_frequently",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503006,
+   "module": "user",
+   "statusText": "verifyCodeTooFrequently",
+   "enum": "verifyCodeTooFrequently",
+   "i18nKey": "common:error.verify_code_too_frequently",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503007,
+   "module": "user",
+   "statusText": "invalidAccount",
+   "enum": "invalidAccount",
+   "i18nKey": "common:code_error.invalid_account",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503008,
+   "module": "user",
+   "statusText": "accountCancellationPending",
+   "enum": "accountCancellationPending",
+   "i18nKey": "common:code_error.account_cancellation_pending",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 503009,
+   "module": "user",
+   "statusText": "registrationMethodNotSupported",
+   "enum": "registrationMethodNotSupported",
+   "i18nKey": "common:error.registration_method_not_supported",
+   "source": "packages/global/common/error/code/user.ts"
+  },
+  {
+   "code": 504000,
+   "module": "chat",
+   "statusText": "unAuthChat",
+   "enum": "unAuthChat",
+   "i18nKey": "common:code_error.chat_error.un_auth",
+   "source": "packages/global/common/error/code/chat.ts"
+  },
+  {
+   "code": 504001,
+   "module": "chat",
+   "statusText": "chatIsGenerating",
+   "enum": "chatIsGenerating",
+   "i18nKey": "common:code_error.chat_error.chat_generating",
+   "source": "packages/global/common/error/code/chat.ts"
+  },
+  {
+   "code": 501,
+   "module": "outLink",
+   "statusText": "linkUnInvalid",
+   "enum": "linkUnInvalid",
+   "i18nKey": "common:code_error.outlink_error.invalid_link",
+   "source": "packages/global/common/error/code/outLink.ts"
+  },
+  {
+   "code": 505000,
+   "module": "outLink",
+   "statusText": "outlinkUnExist",
+   "enum": "unExist",
+   "i18nKey": "common:code_error.outlink_error.link_not_exist",
+   "source": "packages/global/common/error/code/outLink.ts"
+  },
+  {
+   "code": 505001,
+   "module": "outLink",
+   "statusText": "unAuthLink",
+   "enum": "unAuthLink",
+   "i18nKey": "common:code_error.outlink_error.invalid_link",
+   "source": "packages/global/common/error/code/outLink.ts"
+  },
+  {
+   "code": 505003,
+   "module": "outLink",
+   "statusText": "unAuthUser",
+   "enum": "unAuthUser",
+   "i18nKey": "common:code_error.outlink_error.un_auth_user",
+   "source": "packages/global/common/error/code/outLink.ts"
+  },
+  {
+   "code": 506000,
+   "module": "openapi",
+   "statusText": "openapiUnExist",
+   "enum": "unExist",
+   "i18nKey": "common:code_error.openapi_error.api_key_not_exist",
+   "source": "packages/global/common/error/code/openapi.ts"
+  },
+  {
+   "code": 506001,
+   "module": "openapi",
+   "statusText": "openapiUnAuth",
+   "enum": "unAuth",
+   "i18nKey": "common:code_error.openapi_error.un_auth",
+   "source": "packages/global/common/error/code/openapi.ts"
+  },
+  {
+   "code": 506002,
+   "module": "openapi",
+   "statusText": "openapiExceedLimit",
+   "enum": "exceedLimit",
+   "i18nKey": "common:code_error.openapi_error.exceed_limit",
+   "source": "packages/global/common/error/code/openapi.ts"
+  },
+  {
+   "code": 507000,
+   "module": "common",
+   "statusText": "invalidParams",
+   "enum": "invalidParams",
+   "i18nKey": "common:error.invalid_params",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507001,
+   "module": "common",
+   "statusText": "invalidResource",
+   "enum": "invalidResource",
+   "i18nKey": "common:error_invalid_resource",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507002,
+   "module": "common",
+   "statusText": "fileNotFound",
+   "enum": "fileNotFound",
+   "i18nKey": "common:error.fileNotFound",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507003,
+   "module": "common",
+   "statusText": "unAuthFile",
+   "enum": "unAuthFile",
+   "i18nKey": "common:error.unAuthFile",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507004,
+   "module": "common",
+   "statusText": "missingParams",
+   "enum": "missingParams",
+   "i18nKey": "common:error.missingParams",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507005,
+   "module": "common",
+   "statusText": "inheritPermissionError",
+   "enum": "inheritPermissionError",
+   "i18nKey": "common:error.inheritPermissionError",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507006,
+   "module": "common",
+   "statusText": "folderDepthLimit",
+   "enum": "folderDepthLimit",
+   "i18nKey": "common:error.folderDepthLimit",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 507007,
+   "module": "common",
+   "statusText": "folderMoveDepthLimit",
+   "enum": "folderMoveDepthLimit",
+   "i18nKey": "common:error.folderMoveDepthLimit",
+   "source": "packages/global/common/error/code/common.ts"
+  },
+  {
+   "code": 508000,
+   "module": "plugin",
+   "statusText": "pluginUnExist",
+   "enum": "unExist",
+   "i18nKey": "common:error.tool_not_exist",
+   "source": "packages/global/common/error/code/plugin.ts"
+  },
+  {
+   "code": 508001,
+   "module": "plugin",
+   "statusText": "pluginUnAuth",
+   "enum": "unAuth",
+   "i18nKey": "common:code_error.plugin_error.un_auth",
+   "source": "packages/global/common/error/code/plugin.ts"
+  },
+  {
+   "code": 509000,
+   "module": "skill",
+   "statusText": "skillUnExist",
+   "enum": "unExist",
+   "i18nKey": "common:code_error.skill_error.not_exist",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509000,
+   "module": "system",
+   "statusText": "communityVersionNumLimit",
+   "enum": "communityVersionNumLimit",
+   "i18nKey": "common:code_error.system_error.community_version_num_limit",
+   "source": "packages/global/common/error/code/system.ts"
+  },
+  {
+   "code": 509001,
+   "module": "skill",
+   "statusText": "unAuthSkill",
+   "enum": "unAuthSkill",
+   "i18nKey": "common:code_error.skill_error.un_auth_skill",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509001,
+   "module": "system",
+   "statusText": "commercialFeature",
+   "enum": "commercialFeature",
+   "i18nKey": "common:code_error.system_error.commercial_feature",
+   "source": "packages/global/common/error/code/system.ts"
+  },
+  {
+   "code": 509002,
+   "module": "skill",
+   "statusText": "canNotEditAdminPermission",
+   "enum": "canNotEditAdminPermission",
+   "i18nKey": "common:code_error.skill_error.can_not_edit_admin_permission",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509002,
+   "module": "system",
+   "statusText": "licenseAppAmountLimit",
+   "enum": "licenseAppAmountLimit",
+   "i18nKey": "common:code_error.system_error.license_app_amount_limit",
+   "source": "packages/global/common/error/code/system.ts"
+  },
+  {
+   "code": 509003,
+   "module": "skill",
+   "statusText": "invalidSkillName",
+   "enum": "invalidSkillName",
+   "i18nKey": "common:code_error.skill_error.invalid_name",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509003,
+   "module": "system",
+   "statusText": "licenseDatasetAmountLimit",
+   "enum": "licenseDatasetAmountLimit",
+   "i18nKey": "common:code_error.system_error.license_dataset_amount_limit",
+   "source": "packages/global/common/error/code/system.ts"
+  },
+  {
+   "code": 509004,
+   "module": "skill",
+   "statusText": "invalidDescription",
+   "enum": "invalidDescription",
+   "i18nKey": "common:code_error.skill_error.invalid_description",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509004,
+   "module": "system",
+   "statusText": "licenseUserAmountLimit",
+   "enum": "licenseUserAmountLimit",
+   "i18nKey": "common:code_error.system_error.license_user_amount_limit",
+   "source": "packages/global/common/error/code/system.ts"
+  },
+  {
+   "code": 509005,
+   "module": "skill",
+   "statusText": "invalidCategory",
+   "enum": "invalidCategory",
+   "i18nKey": "common:code_error.skill_error.invalid_category",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509006,
+   "module": "skill",
+   "statusText": "invalidConfig",
+   "enum": "invalidConfig",
+   "i18nKey": "common:code_error.skill_error.invalid_config",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509007,
+   "module": "skill",
+   "statusText": "noStorage",
+   "enum": "noStorage",
+   "i18nKey": "common:code_error.skill_error.no_storage",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509008,
+   "module": "skill",
+   "statusText": "noFieldsToUpdate",
+   "enum": "noFieldsToUpdate",
+   "i18nKey": "common:code_error.skill_error.no_fields_to_update",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509009,
+   "module": "skill",
+   "statusText": "invalidArchiveFormat",
+   "enum": "invalidArchiveFormat",
+   "i18nKey": "common:code_error.skill_error.invalid_archive_format",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509010,
+   "module": "skill",
+   "statusText": "invalidSkillPackage",
+   "enum": "invalidSkillPackage",
+   "i18nKey": "common:code_error.skill_error.invalid_package",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509011,
+   "module": "skill",
+   "statusText": "invalidSkillId",
+   "enum": "invalidSkillId",
+   "i18nKey": "common:code_error.skill_error.invalid_skill_id",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509012,
+   "module": "skill",
+   "statusText": "archiveEmpty",
+   "enum": "archiveEmpty",
+   "i18nKey": "common:code_error.skill_error.archive_empty",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509013,
+   "module": "skill",
+   "statusText": "archiveExtractionFailed",
+   "enum": "archiveExtractionFailed",
+   "i18nKey": "common:code_error.skill_error.archive_extraction_failed",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509014,
+   "module": "skill",
+   "statusText": "archiveTooLarge",
+   "enum": "archiveTooLarge",
+   "i18nKey": "common:code_error.skill_error.archive_too_large",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509015,
+   "module": "skill",
+   "statusText": "missingImageRepository",
+   "enum": "missingImageRepository",
+   "i18nKey": "common:code_error.skill_error.missing_image_repository",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 509016,
+   "module": "skill",
+   "statusText": "skillNameTooLong",
+   "enum": "skillNameTooLong",
+   "i18nKey": "common:code_error.skill_error.skill_name_too_long",
+   "source": "packages/global/common/error/code/skill.ts"
+  },
+  {
+   "code": 510000,
+   "module": "s3",
+   "statusText": "InvalidUploadFileType",
+   "enum": "invalidUploadFileType",
+   "i18nKey": "common:error.s3_upload_invalid_file_type",
+   "source": "packages/global/common/error/code/s3.ts"
+  },
+  {
+   "code": 510000,
+   "module": "sandbox",
+   "statusText": "agentSandboxPermissionDenied",
+   "enum": "agentSandboxPermissionDenied",
+   "i18nKey": "common:code_error.sandbox_error.agent_sandbox_permission_denied",
+   "source": "packages/global/common/error/code/sandbox.ts"
+  },
+  {
+   "code": 510001,
+   "module": "s3",
+   "statusText": "UploadFileTypeMismatch",
+   "enum": "uploadFileTypeMismatch",
+   "i18nKey": "common:error.s3_upload_invalid_file_type",
+   "source": "packages/global/common/error/code/s3.ts"
+  },
+  {
+   "code": 510001,
+   "module": "sandbox",
+   "statusText": "agentSandboxInitializing",
+   "enum": "agentSandboxInitializing",
+   "i18nKey": "common:code_error.sandbox_error.agent_sandbox_initializing",
+   "source": "packages/global/common/error/code/sandbox.ts"
+  },
+  {
+   "code": 510002,
+   "module": "s3",
+   "statusText": "FileUploadDisabled",
+   "enum": "fileUploadDisabled",
+   "i18nKey": "common:error.file_upload_disabled",
+   "source": "packages/global/common/error/code/s3.ts"
+  },
+  {
+   "code": 510002,
+   "module": "sandbox",
+   "statusText": "runtimeUpgradeFailed",
+   "enum": "runtimeUpgradeFailed",
+   "i18nKey": "common:code_error.sandbox_error.runtime_upgrade_failed",
+   "source": "packages/global/common/error/code/sandbox.ts"
+  },
+  {
+   "code": 510003,
+   "module": "sandbox",
+   "statusText": "runtimeUpgradeInProgress",
+   "enum": "runtimeUpgradeInProgress",
+   "i18nKey": "skill:sandbox_runtime_upgrade_in_progress",
+   "source": "packages/global/common/error/code/sandbox.ts"
+  },
+  {
+   "code": 512000,
+   "module": "coupon",
+   "statusText": "invalidCoupon",
+   "enum": "invalid",
+   "i18nKey": "common:coupon_invalid",
+   "source": "packages/global/common/error/code/coupon.ts"
+  }
+ ]
+}

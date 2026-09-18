@@ -1,5 +1,5 @@
 ---
-slug: /zh/tutorial/ai-support-build-or-buy
+slug: /zh/guide/ai-support-build-or-buy
 page_type: 深度场景内容
 schema_type: Article
 meta_title: 企业上智能客服：自建开源方案还是买 SaaS 系统

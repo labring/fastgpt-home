@@ -16,13 +16,28 @@ module.exports = async function previewRunInputs(github, context, selection, sou
   assert.equal(selection.headRevision, run.head_sha, 'PR head differs from the completed run');
   let prs = run.pull_requests || [];
   if (!prs.length) {
+    try {
+      prs = (
+        await github.rest.repos.listPullRequestsAssociatedWithCommit({
+          owner,
+          repo,
+          commit_sha: run.head_sha
+        })
+      ).data;
+    } catch {
+      // The association index is unavailable for this commit; fall through to
+      // the head-branch lookup below, which the run payload always carries.
+    }
+  }
+  if (!prs.length && run.head_repository?.full_name && run.head_branch) {
     prs = (
-      await github.rest.repos.listPullRequestsAssociatedWithCommit({
+      await github.rest.pulls.list({
         owner,
         repo,
-        commit_sha: run.head_sha
+        state: 'open',
+        head: run.head_repository.full_name
       })
-    ).data;
+    ).data.filter((pr) => pr.head.ref === run.head_branch);
   }
   const details = await Promise.all(
     prs.map(

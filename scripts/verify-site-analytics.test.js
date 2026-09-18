@@ -208,6 +208,7 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
   async function renderIntegrations(hostname, unmount = false) {
     const Analytics = () => null;
     const Attribution = () => null;
+    const Uet = () => null;
     const state = [];
     let cursor = 0;
     let effect;
@@ -244,6 +245,7 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
           };
         if (name === './SiteAnalytics') return { default: Analytics };
         if (name === './LeadAttribution') return { default: Attribution };
+        if (name === './UetAnalytics') return { default: Uet };
         return require(name);
       }
     };
@@ -262,6 +264,8 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
             ? 'analytics'
             : child.type === Attribution
             ? 'attribution'
+            : child.type === Uet
+            ? 'uet'
             : 'unexpected'
         );
     };
@@ -274,8 +278,8 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
     await new Promise((resolve) => setImmediate(resolve));
     assert.deepEqual(
       render(),
-      unmount ? [] : ['analytics', 'attribution'],
-      'Mount attribution after idle'
+      unmount ? [] : ['analytics', 'attribution', 'uet'],
+      'Mount attribution and UET after idle'
     );
     assert.equal(cancelled, unmount, 'Cancel idle work on unmount');
   }
@@ -300,4 +304,36 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
       }
     }
   }
+});
+
+test('Bing UET script loads only for configured China deployments', () => {
+  const uetCode = ts.transpileModule(read('src/app/UetAnalytics.tsx'), {
+    compilerOptions: { module: ts.ModuleKind.CommonJS, jsx: ts.JsxEmit.ReactJSX }
+  }).outputText;
+  function renderUet(variant, env) {
+    const Script = () => null;
+    const context = {
+      exports: {},
+      process: { env },
+      require: (name) => {
+        if (name === '@/lib/siteRouting') return { currentSiteVariant: variant };
+        if (name === 'next/script') return { default: Script };
+        return require(name);
+      }
+    };
+    vm.runInNewContext(uetCode, context);
+    return context.exports.default();
+  }
+  assert.equal(renderUet('cn', {}), null, 'Unconfigured deployments render nothing');
+  assert.equal(
+    renderUet('io', { NEXT_PUBLIC_BING_UET_ID: '4001234' }),
+    null,
+    'UET must never load off the China site variant'
+  );
+  const script = renderUet('cn', { NEXT_PUBLIC_BING_UET_ID: ' 4001234 ' }).props;
+  assert.equal(script.id, 'bing-uet');
+  assert.equal(script.strategy, 'afterInteractive');
+  assert.equal(script.src, undefined, 'The UET snippet bootstraps its own bat.js loader');
+  assert.match(script.children, /ti: ?"4001234"/, 'The trimmed tag id reaches the snippet');
+  assert.match(script.children, /push\('pageLoad'\)/);
 });

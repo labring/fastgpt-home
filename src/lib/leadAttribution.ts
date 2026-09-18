@@ -26,6 +26,7 @@ import { resolveCookieDomain } from '@/lib/attribution/primitives/domain';
 import { canonicalizeUrl } from '@/lib/attribution/primitives/url';
 import { getVisitorId, resetGeneratedVisitorId } from '@/lib/visitorId';
 import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
+import type { AdsUtmParams } from '@/lib/adsAttribution';
 
 export { configureAttribution, type AttributionConfiguration } from '@/lib/attribution/config';
 
@@ -401,6 +402,23 @@ export function getSubmissionSource(fallbackSource = DEFAULT_ATTRIBUTION_SOURCE)
       ? ''
       : new URLSearchParams(window.location.search).get('source')?.trim();
   return (source || fallbackSource.trim() || DEFAULT_ATTRIBUTION_SOURCE).slice(0, 128);
+}
+
+/**
+ * Last-touch utm fallback snapshot for ads landing page forms (fills gaps when
+ * the URL lacks parameters); returns null without stored attribution.
+ * Unlike getAttributionPayload this reads last_touch instead of first_touch.
+ */
+export function getLastTouchUtmSnapshot(): AdsUtmParams | null {
+  if (typeof window === 'undefined') return null;
+  try {
+    const stored = loadStoredAttribution();
+    if (!stored) return null;
+    const { utm_source, utm_medium, utm_campaign, utm_term, utm_content } = stored.last;
+    return { utm_source, utm_medium, utm_campaign, utm_term, utm_content };
+  } catch {
+    return null;
+  }
 }
 
 /** Submit anonymous attribution to CRM after the local browser snapshot changes. */

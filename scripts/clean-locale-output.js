@@ -98,6 +98,13 @@ if (variant === 'preview') {
   removed += removeRoute('/en/guide');
 }
 
+// The Bing Ads landings belong to the China production site only. Every variant
+// renders them (static export forbids empty static params), the io artifact
+// must ship none.
+if (variant === 'io') {
+  removed += removeRoute('/ads');
+}
+
 const { cnRedirects, ioRedirects } = buildRedirects(rootDir);
 writeNginxRedirectMap(nextDir, variant === 'cn' ? cnRedirects : new Map(), aliasAuthorityMetadata);
 removePath(path.join(outDir, '_redirects'));

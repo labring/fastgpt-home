@@ -62,7 +62,9 @@ export function getAlternates(
     return acc;
   }, {} as Record<string, string>);
 
-  languages['x-default'] = getOwnedLocaleUrl('en', path);
+  if (availableLocales.includes('en')) {
+    languages['x-default'] = getOwnedLocaleUrl('en', path);
+  }
 
   return {
     canonical: canonicalUrl,

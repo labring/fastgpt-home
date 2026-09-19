@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
 import { getIndustryPath, type IndustryArticle, type IndustryLocale } from '@/lib/industryContent';
-import { getLocaleHreflang, getOwnedLocaleUrl, isPreviewSite } from '@/lib/siteRouting';
+import { getAlternates } from '@/lib/seo';
+import { getOwnedLocaleUrl, isPreviewSite } from '@/lib/siteRouting';
 
 export function getIndustryCanonicalUrl(article: Pick<IndustryArticle, 'locale' | 'slug'>) {
   return getOwnedLocaleUrl(article.locale, getIndustryPath(article.slug));
@@ -10,20 +11,7 @@ export function getIndustryCanonicalUrl(article: Pick<IndustryArticle, 'locale' 
 export function getIndustryAlternates(
   article: Pick<IndustryArticle, 'locale' | 'slug' | 'publishedLocales'>
 ) {
-  const languages = Object.fromEntries(
-    article.publishedLocales.map((locale) => [
-      getLocaleHreflang(locale),
-      getOwnedLocaleUrl(locale, getIndustryPath(article.slug))
-    ])
-  );
-  if (article.publishedLocales.includes('en')) {
-    languages['x-default'] = getOwnedLocaleUrl('en', getIndustryPath(article.slug));
-  }
-
-  return {
-    canonical: getIndustryCanonicalUrl(article),
-    languages
-  } satisfies Metadata['alternates'];
+  return getAlternates(article.locale, getIndustryPath(article.slug), article.publishedLocales);
 }
 
 export function getIndustryArticleMetadata(

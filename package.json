@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "node scripts/verify-content-hygiene.js --mode source && node scripts/verify-technical-content.js && node scripts/verify-customers-data.js && node scripts/verify-customers-search.js && node scripts/verify-customer-migration.js && node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js && node scripts/verify-llms.js",
+    "prebuild": "node scripts/verify-content-hygiene.js --mode source && node scripts/verify-industry-content.js && node scripts/verify-technical-content.js && node scripts/verify-customers-data.js && node scripts/verify-customers-search.js && node scripts/verify-customer-migration.js && node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js && node scripts/verify-llms.js",
     "build": "next build && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/verify-blog-thumbnail-export.js && node scripts/verify-technical-center.js && node scripts/verify-customers-export.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind && node --test scripts/verify-content-sidebar-cta.test.js && node scripts/verify-technical-export.js && node scripts/verify-content-hygiene.js --mode html --root out && node scripts/verify-ads.js",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",

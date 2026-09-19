@@ -19,6 +19,7 @@ import { contactPublishedLocaleCodes } from '@/lib/publishedLocales';
 import { techPublishedLocaleCodes } from '@/lib/publishedLocales';
 import { guideEntries } from '@/content/guides/registry';
 import { getGuideCanonicalUrl } from '@/lib/guideSeo';
+import { getIndustryPath, getIndustrySitemapEntries } from '@/lib/industryContent';
 import { getAllPublishedSolutionDetails, getCategories } from '@customers/lib/data';
 import { getSolutionPublicHref } from '@customers/lib/solution-url';
 import { absoluteUrl } from '@customers/lib/site-url';
@@ -107,6 +108,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     addEntry(
       getGuideCanonicalUrl(guideLocale, entry.slug),
       new Date(entry[guideLocale].dateModified)
+    );
+  }
+
+  for (const article of getIndustrySitemapEntries(currentSiteVariant)) {
+    addEntry(
+      getOwnedLocaleUrl(article.locale, getIndustryPath(article.slug)),
+      new Date(`${article.dateModified}T00:00:00Z`)
     );
   }
 

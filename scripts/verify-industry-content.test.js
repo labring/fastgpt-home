@@ -30,7 +30,10 @@ test('required fields, slug safety, and duplicate identities fail at the source 
     path.join(fixtureRoot, 'zh', 'unsafe.md'),
     '---\ntitle: Safe\nslug: /zh/industry/safe\npage_type: Industry\nmeta_title: Safe\nmeta_description: Safe\ndate_modified: 2026-09-19\n---\n\n# Safe\n'
   );
-  fs.copyFileSync(path.join(fixtureRoot, 'zh', 'unsafe.md'), path.join(fixtureRoot, 'zh', 'duplicate.md'));
+  fs.copyFileSync(
+    path.join(fixtureRoot, 'zh', 'unsafe.md'),
+    path.join(fixtureRoot, 'zh', 'duplicate.md')
+  );
   assert.throws(() => readIndustrySources(fixtureRoot), /duplicate slug/);
 
   fs.writeFileSync(
@@ -38,4 +41,17 @@ test('required fields, slug safety, and duplicate identities fail at the source 
     '---\ntitle: Public\nslug: /zh/industry/public\npage_type: Industry\nmeta_title: Public\nmeta_description: Public\ndate_modified: 2026-09-19\n---\n\n# Public\n\ndelivery_schedule: internal\n'
   );
   assert.throws(() => readIndustrySources(fixtureRoot), /internal delivery metadata/);
+});
+
+test('publication boundaries keep locale-aware alternates and export cleanup', () => {
+  const root = path.join(__dirname, '..');
+  const seo = fs.readFileSync(path.join(root, 'src/lib/seo.ts'), 'utf8');
+  const industrySeo = fs.readFileSync(path.join(root, 'src/lib/industrySeo.ts'), 'utf8');
+  const cleanup = fs.readFileSync(path.join(root, 'scripts/clean-locale-output.js'), 'utf8');
+
+  assert.match(seo, /if \(availableLocales\.includes\('en'\)\)/);
+  assert.match(industrySeo, /getAlternates\(article\.locale/);
+  assert.match(cleanup, /removeRoute\('\/industry'\)/);
+  assert.match(cleanup, /const ownerLocale = variant === 'cn' \? 'zh' : 'en';/);
+  assert.match(cleanup, /removeRoute\(`\/\$\{ownerLocale\}\/industry`\)/);
 });

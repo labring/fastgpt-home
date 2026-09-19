@@ -93,9 +93,12 @@ for (const route of getTechRoutesToRemove(techIdentities, variant)) {
 
 if (variant === 'preview') {
   removed += removeRoute('/guide');
+  removed += removeRoute('/industry');
 } else {
   removed += removeRoute('/zh/guide');
   removed += removeRoute('/en/guide');
+  const ownerLocale = variant === 'cn' ? 'zh' : 'en';
+  removed += removeRoute(`/${ownerLocale}/industry`);
 }
 
 const { cnRedirects, ioRedirects } = buildRedirects(rootDir);

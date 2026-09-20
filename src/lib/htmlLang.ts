@@ -4,9 +4,11 @@
  * Must be used as a dangerouslySetInnerHTML script in the root layout <head>.
  *
  * Root / keeps the build-time default locale and remains on the canonical root URL.
+ * Sections outside the locale prefixes keep their manifest locale.
  * Supported locale paths are respected as-is.
  */
 
+import siteRoutingManifest from '@/config/site-routing.json';
 import { localeDirections, localeHtmlLangs, supportedLocaleCodes } from '@/lib/locales';
 import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
 
@@ -14,6 +16,7 @@ const normalizedBuildDefaultLocale = getDefaultLocaleForSiteVariant();
 const localesJson = JSON.stringify(supportedLocaleCodes);
 const directionsJson = JSON.stringify(localeDirections);
 const htmlLangsJson = JSON.stringify(localeHtmlLangs);
+const rootSectionLocalesJson = JSON.stringify(siteRoutingManifest.rootSectionLocales);
 
 export const htmlLangScript = `
 (function() {
@@ -22,7 +25,8 @@ export const htmlLangScript = `
   var directions = ${directionsJson};
   var htmlLangs = ${htmlLangsJson};
   var defaultLocale = '${normalizedBuildDefaultLocale}';
-  var localeCode = defaultLocale;
+  var rootSectionLocales = ${rootSectionLocalesJson};
+  var localeCode = rootSectionLocales[path.split('/')[1]] || defaultLocale;
   for (var p = 0; p < locales.length; p++) {
     var code = locales[p];
     if (path === '/' + code || path.indexOf('/' + code + '/') === 0) {

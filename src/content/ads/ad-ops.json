@@ -1,0 +1,158 @@
+{
+  "comment": "Non-rendered Bing Ads operations registry. Consumed only by scripts/verify-ads.js for the four-way consistency audit (keyword group, ad title, page H1, final URL). Never import this file from src/app or src/components: campaign spend, CTR and ad copy must not enter the page output. Source: 《必应广告落地页替换表 V1.0-20260911》sheets 1-2, reporting window 2026-01-01 ~ 2026-05-28.",
+  "finalUrlTemplate": "https://fastgpt.cn/ads/{slug}?utm_source=bing&utm_medium=cpc&utm_campaign={slug}&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}",
+  "pages": [
+    {
+      "slug": "dify-vs-fastgpt",
+      "keywordGroup": "dify、dify ai、dify 企业版",
+      "spendCny": 8537.71,
+      "clickThroughRatePercent": 1.85,
+      "avgCpcCny": 2.61,
+      "adTitles": [
+        "Dify 对比 · FastGPT 选型清单",
+        "开源可自建 · 支持私有化部署",
+        "领取逐项对比清单"
+      ],
+      "descriptions": [
+        "知识库、工作流、权限与商用授权逐项列清楚，含迁移成本估算。",
+        "支持私有化部署与专家 1v1 诊断，提交后 1 个工作日内响应。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/dify-vs-fastgpt",
+      "extensions": "私有化部署 · 版本对比 · 文档中心 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/dify-vs-fastgpt?utm_source=bing&utm_medium=cpc&utm_campaign=dify-vs-fastgpt&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "private-deployment",
+      "keywordGroup": "本地gpt、私有化部署、豆包本地知识库",
+      "spendCny": 2727.07,
+      "clickThroughRatePercent": 0.45,
+      "avgCpcCny": 3.77,
+      "adTitles": [
+        "本地 GPT 私有化部署平台",
+        "数据不出内网 · 模型可自选",
+        "领取部署条件清单"
+      ],
+      "descriptions": [
+        "支持完全离线部署，向量库与模型可自选，附最小配置与上线周期估算。",
+        "提供部署调试与原厂技术维保，提交后 1 个工作日内响应。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/private-deployment",
+      "extensions": "部署文档 · 版本对比 · 商业版说明 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/private-deployment?utm_source=bing&utm_medium=cpc&utm_campaign=private-deployment&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "brand",
+      "keywordGroup": "fastgpt、fastgpt官网",
+      "spendCny": 2473.42,
+      "clickThroughRatePercent": 4.18,
+      "avgCpcCny": 3.88,
+      "adTitles": [
+        "FastGPT 官网 · 版本与报价",
+        "开源版 / 商业版 / 云服务对比",
+        "获取商业版报价"
+      ],
+      "descriptions": [
+        "三条交付路径的能力边界、授权方式与适用规模一次看清。",
+        "私有部署按单台服务器授权，含安装部署、调试与技术维保。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/brand",
+      "extensions": "定价 · 文档中心 · 案例中心 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/brand?utm_source=bing&utm_medium=cpc&utm_campaign=brand&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "coze-vs-fastgpt",
+      "keywordGroup": "coze、coze官网、coze工作流",
+      "spendCny": 1793.16,
+      "clickThroughRatePercent": 0.78,
+      "avgCpcCny": 2.07,
+      "adTitles": [
+        "Coze 工作流的开源替代",
+        "可自建 · 数据留在自己机房",
+        "领取迁移路径说明"
+      ],
+      "descriptions": [
+        "工作流节点、知识库与权限模型的对应关系逐项列出，附迁移工作量估算。",
+        "支持私有化部署与专家 1v1 诊断，提交后 1 个工作日内响应。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/coze-vs-fastgpt",
+      "extensions": "工作流文档 · 私有化部署 · 案例中心 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/coze-vs-fastgpt?utm_source=bing&utm_medium=cpc&utm_campaign=coze-vs-fastgpt&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "opensource-vs-fastgpt",
+      "keywordGroup": "ragflow、maxkb、hiagent",
+      "spendCny": 1454.32,
+      "clickThroughRatePercent": 4.08,
+      "avgCpcCny": 2.01,
+      "adTitles": [
+        "RAGFlow / MaxKB 选型对照",
+        "开源可自建 · 商业版可选",
+        "领取开源选型对照表"
+      ],
+      "descriptions": [
+        "按产品重心、采购形态与生产细粒度三条判据逐项对照，含三年成本算法。",
+        "支持私有化部署与专家 1v1 诊断，提交后 1 个工作日内响应。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/opensource-vs-fastgpt",
+      "extensions": "竞品对比 · 私有化部署 · 文档中心 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/opensource-vs-fastgpt?utm_source=bing&utm_medium=cpc&utm_campaign=opensource-vs-fastgpt&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "agent-workflow",
+      "keywordGroup": "智能体搭建、ai工作流、ai agent 平台",
+      "spendCny": 1263.65,
+      "clickThroughRatePercent": 0.71,
+      "avgCpcCny": 5.57,
+      "adTitles": [
+        "AI 工作流搭建平台",
+        "可视化编排 · 支持私有化部署",
+        "获取可导入的工作流模板"
+      ],
+      "descriptions": [
+        "节点失败可重试、人工确认可原地恢复、调试面板按节点看输入输出与用量。",
+        "企业微信、飞书、钉钉与公众号原生发布，也可发布为 MCP Server。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/agent-workflow",
+      "extensions": "工作流文档 · Skill 文档 · 私有化部署 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/agent-workflow?utm_source=bing&utm_medium=cpc&utm_campaign=agent-workflow&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "ai-customer-service",
+      "keywordGroup": "智能客服机器人、在线客服系统",
+      "spendCny": 635.29,
+      "clickThroughRatePercent": 1.44,
+      "avgCpcCny": 0.73,
+      "adTitles": [
+        "智能客服机器人搭建",
+        "接入自有知识库 · 答案可溯源",
+        "看同行业落地案例"
+      ],
+      "descriptions": [
+        "用自己的手册与工单建库，答案带引用出处，可按条件导出对话日志抽检。",
+        "支持官网、公众号与企业微信发布，提供 1v1 场景诊断。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/ai-customer-service",
+      "extensions": "案例中心 · 渠道接入 · 私有化部署 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/ai-customer-service?utm_source=bing&utm_medium=cpc&utm_campaign=ai-customer-service&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    },
+    {
+      "slug": "enterprise-knowledge-base",
+      "keywordGroup": "ai知识库、企业知识库、rag",
+      "spendCny": 629.32,
+      "clickThroughRatePercent": 0.6,
+      "avgCpcCny": 3.46,
+      "adTitles": [
+        "企业知识库搭建方案",
+        "多索引检索 · 引用可溯源",
+        "领取知识库落地清单"
+      ],
+      "descriptions": [
+        "解析、切分、索引、检索、评测与更新六步的决定项与验收方式逐条列出。",
+        "支持私有化部署，用量按解析、向量化、检索与生成分阶段拆开。"
+      ],
+      "displayUrl": "fastgpt.cn/ads/enterprise-knowledge-base",
+      "extensions": "知识库文档 · 检索优化 · 私有化部署 · 商务咨询",
+      "finalUrl": "https://fastgpt.cn/ads/enterprise-knowledge-base?utm_source=bing&utm_medium=cpc&utm_campaign=enterprise-knowledge-base&utm_term={keyword}&utm_content={MatchType}&msclkid={msclkid}"
+    }
+  ]
+}

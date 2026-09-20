@@ -5,7 +5,7 @@
  */
 const fs = require('fs');
 const path = require('path');
-const { locales } = require('../src/config/site-routing.json');
+const { locales, rootSectionLocales } = require('../src/config/site-routing.json');
 const { getDefaultLocale, resolveSiteVariant } = require('./lib/site-variant');
 
 const outDir = path.join(__dirname, '..', 'out');
@@ -21,6 +21,11 @@ function inferLocale(filePath) {
 
   if (Object.hasOwn(locales, rootPageLocale)) return rootPageLocale;
   if (Object.hasOwn(locales, firstSegment)) return firstSegment;
+
+  // Sections outside the locale prefixes carry one locale on every site
+  // variant. The /ads/ landings are China-site content (ADR 0013), so the
+  // preview variant must still export them as zh-CN.
+  if (Object.hasOwn(rootSectionLocales, firstSegment)) return rootSectionLocales[firstSegment];
 
   return null;
 }

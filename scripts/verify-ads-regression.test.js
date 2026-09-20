@@ -397,7 +397,22 @@ function verifyExport(entries, mutateHtml = (html) => html, mutateOps = () => {}
                   }`
               )
               .join(' ')
-          : '研发知识助手'
+          : [
+              [
+                '财务智能审单助手',
+                'https://fastgpt.cn/customers/manufacturing-production-processing/ai-financial-audit-solution'
+              ],
+              [
+                '诺诺助手智能客服',
+                'https://fastgpt.cn/customers/medical-health-wellness/biomedical-customer-service-assistant'
+              ],
+              [
+                '财报分析智能助手',
+                'https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant'
+              ]
+            ]
+              .map(([title, url]) => `${title} <a href="${url}">Case</a>`)
+              .join(' ')
       }
       </body></html>`;
   }

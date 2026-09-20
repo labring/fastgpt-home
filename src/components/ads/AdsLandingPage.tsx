@@ -88,24 +88,31 @@ const CASE_SECTION = {
   subtitle: '已在金融、制造等行业关键业务场景落地，指标数据源自实际投产项目测算。'
 };
 
-/* Shared fallback cards for the published-deployments band; a page-level
-   `cases` override (today: the Dify landing) replaces them with published
-   customer cases from the customers surface. */
+/* Shared published customer cases for pages without a page-level override. */
 const CASE_CARDS: AdsCaseCard[] = [
   {
-    image: '/images/home/cases/cases-new/案例2.webp',
-    title: '研发知识助手',
-    metrics: '培训周期缩短 1 周以上 · 重复咨询降低 10% · 检索耗时 30 秒'
+    org: '延锋国际',
+    title: '财务智能审单助手',
+    metrics: '财务共享中心年单据 52 万+；单据秒级初审',
+    url: 'https://fastgpt.cn/customers/manufacturing-production-processing/ai-financial-audit-solution',
+    image:
+      'https://objectstorageapi.hzh.sealos.run/7jixeozw-solution/uploads/6a7d8bb1b79b7c6661bbd2c2/1786614414864-ai-cover_thumb.webp'
   },
   {
-    image: '/images/home/cases/cases-new/案例3.webp',
-    title: '基金研报自动化',
-    metrics: '自动化率超过 90% · 数据差错低于 1% · 制作耗时缩短 90%'
+    org: '三诺生物',
+    title: '诺诺助手智能客服',
+    metrics: '40 人客服团队负荷饱和背景；拦截 20% 常规咨询，等效节省 10 名全职客服',
+    url: 'https://fastgpt.cn/customers/medical-health-wellness/biomedical-customer-service-assistant',
+    image:
+      'https://objectstorageapi.hzh.sealos.run/7jixeozw-solution/uploads/6a7d8bfbb79b7c6661bbd2d6/1786614706219-ai-cover_thumb.webp'
   },
   {
-    image: '/images/home/cases/cases-new/案例4.webp',
-    title: 'OA 费用报销智能审核',
-    metrics: '审核提效 50% · 异常检出提升 70% · 终审错误降低 60%'
+    org: '朝阳永续',
+    title: '财报分析智能助手',
+    metrics: '35 人编辑团队精简为 1 人核心组；人均日产出 3-5 篇提升至 50 篇',
+    url: 'https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant',
+    image:
+      'https://objectstorageapi.hzh.sealos.run/7jixeoz-solution/uploads/6a7d8b53b79b7c6661bbd2a8/1786689664873-qfe9l_thumb.webp'
   }
 ];
 
@@ -348,7 +355,7 @@ export default async function AdsLandingPage({ page }: { page: AdsLandingPageDat
                   <>
                     <div
                       className={`relative overflow-hidden rounded-[10px] bg-card-bg ${
-                        page.cases ? 'aspect-[640/334]' : 'aspect-[3/1]'
+                        card.url ? 'aspect-[640/334]' : 'aspect-[3/1]'
                       }`}
                     >
                       <Image

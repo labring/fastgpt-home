@@ -322,7 +322,11 @@ function verifyExportedAdsPage(page, htmlPath) {
       }
     }
   } else {
-    assert(html.includes('研发知识助手'), `${label}: shared case cards missing`);
+    assert(html.includes('财务智能审单助手'), `${label}: shared case cards missing`);
+    assert(
+      (html.match(/<a\b[^>]*href="https:\/\/fastgpt\.cn\/customers\//g) || []).length >= 3,
+      `${label}: shared case cards must link to published customer cases`
+    );
   }
 
   const visibleText = decodeHtml(raw.replace(HTML_COMMENT_HIDDEN, ' ').replace(/<[^>]*>/g, ' '));

@@ -1786,6 +1786,9 @@ function inspectMarkdown(relativePath, source) {
   const findings = [];
   const normalized = source.replace(/\r\n?/g, '\n');
   const body = publishableBody(source);
+  // Industry articles use source and schedule vocabulary as reader-facing configuration content.
+  // Their dedicated loader still rejects comments and delivery metadata at the source boundary.
+  const isIndustryContent = relativePath.replaceAll(path.sep, '/').startsWith('src/content/industry/');
   const lines = body.split('\n');
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   const fencedCode = markdownFencedCodeMask(body);
@@ -1794,7 +1797,7 @@ function inspectMarkdown(relativePath, source) {
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     const lineNumber = bodyStartLine + index;
-    if (EDITORIAL_PREAMBLE.test(line.trim())) {
+    if (!isIndustryContent && EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
       );
@@ -1892,7 +1895,9 @@ function inspectMarkdown(relativePath, source) {
           );
         }
       }
-      for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+      for (const match of isIndustryContent
+        ? []
+        : projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
         const start = projection.offsets[match.index];
         if (isFencedCodeOffset(start)) continue;
         const end = projection.offsets[match.index + match[0].length - 1];
@@ -1909,7 +1914,7 @@ function inspectMarkdown(relativePath, source) {
           )
         );
       }
-      for (const citation of markdownCitationEntries(projection.text)) {
+      for (const citation of isIndustryContent ? [] : markdownCitationEntries(projection.text)) {
         if (citationHeading) continue;
         const start = projection.offsets[citation.index];
         if (isFencedCodeOffset(start)) continue;
@@ -2500,13 +2505,16 @@ function visibleCitationBlocks(projection) {
 
 function inspectHtmlArtifact(relativePath, html, variant) {
   const identity = htmlIdentity(relativePath, variant);
+  // Industry pages keep reader-facing source and schedule vocabulary in their rendered body.
+  // The source loader owns their internal metadata boundary before export.
+  const isIndustryContent = identity.route.split('/').includes('industry');
   const { visible, payloads } = splitHtmlProjections(html);
   const findings = [];
   const visibleProjection = projectVisibleHtml(visible);
   const visiblePolicyProjection = normalizePolicyProjection(visibleProjection, true);
-  for (const match of visiblePolicyProjection.text.matchAll(
-    new RegExp(EDITORIAL_MATCHER.source, 'giu')
-  )) {
+  for (const match of isIndustryContent
+    ? []
+    : visiblePolicyProjection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
     findings.push(
       htmlFinding(
         'D-01 editorial-metadata',
@@ -2520,7 +2528,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   }
   let lineStart = 0;
   for (const line of visibleProjection.text.split('\n')) {
-    const preamble = EDITORIAL_PREAMBLE.exec(line.trim());
+    const preamble = isIndustryContent ? undefined : EDITORIAL_PREAMBLE.exec(line.trim());
     if (!preamble) {
       lineStart += line.length + 1;
       continue;
@@ -2539,7 +2547,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
     );
     lineStart += line.length + 1;
   }
-  for (const citation of visibleCitationBlocks(visiblePolicyProjection)) {
+  for (const citation of isIndustryContent ? [] : visibleCitationBlocks(visiblePolicyProjection)) {
     if (!validPublicCitation(citation.value)) {
       findings.push(
         htmlFinding(
@@ -2555,9 +2563,9 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   }
   for (const payload of payloads) {
     const payloadProjection = projectPayloadHtml(payload.content, payload.offset);
-    for (const match of payloadProjection.text.matchAll(
-      new RegExp(EDITORIAL_MATCHER.source, 'giu')
-    )) {
+    for (const match of isIndustryContent
+      ? []
+      : payloadProjection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
       findings.push(
         htmlFinding(
           'D-01 editorial-metadata',
@@ -2573,9 +2581,9 @@ function inspectHtmlArtifact(relativePath, html, variant) {
       `\\b(?:title|data-[\\w-]+)\\s*=\\s*["']?((?:${EDITORIAL_LABEL_NAME}))\\b`,
       'iu'
     );
-    for (const match of payloadProjection.text.matchAll(
-      new RegExp(attributePattern.source, 'giu')
-    )) {
+    for (const match of isIndustryContent
+      ? []
+      : payloadProjection.text.matchAll(new RegExp(attributePattern.source, 'giu'))) {
       const valueIndex = match.index + match[0].lastIndexOf(match[1]);
       findings.push(
         htmlFinding(

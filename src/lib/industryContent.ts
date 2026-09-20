@@ -26,7 +26,7 @@ export type IndustryArticle = {
   metaTitle: string;
   metaDescription: string;
   keywords: string[];
-  datePublished?: string;
+  datePublished: string;
   dateModified: string;
   sourcePath: string;
   publishedLocales: IndustryLocale[];
@@ -112,13 +112,12 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
       const pageType = requireField(metadata, sourcePath, 'page_type');
       const metaTitle = requireField(metadata, sourcePath, 'meta_title');
       const metaDescription = requireField(metadata, sourcePath, 'meta_description');
+      const datePublished = requireField(metadata, sourcePath, 'date_published');
       const dateModified = requireField(metadata, sourcePath, 'date_modified');
       const h1 = body.match(/^#\s+(.+)$/m)?.[1]?.trim();
       if (h1 !== title) fail(sourcePath, 'title must match the first H1');
+      validateDate(datePublished, 'date_published', sourcePath);
       validateDate(dateModified, 'date_modified', sourcePath);
-      if (metadata.date_published) {
-        validateDate(metadata.date_published, 'date_published', sourcePath);
-      }
 
       return {
         locale,
@@ -134,7 +133,7 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
               .map((keyword) => keyword.trim())
               .filter(Boolean)
           : [],
-        datePublished: metadata.date_published,
+        datePublished,
         dateModified,
         sourcePath,
         publishedLocales: []
@@ -177,9 +176,13 @@ export function getIndustryArticleForRoot(slug: string, variant: SiteVariant = c
 }
 
 export function getIndustryReviewParams(variant: SiteVariant = currentSiteVariant) {
-  return industryArticles
-    .filter((article) => variant === 'preview' || getLocaleOwner(article.locale) === variant)
-    .map(({ locale, slug }) => ({ lang: locale, slug }));
+  if (variant !== 'preview') {
+    const ownerArticle = industryArticles.find(
+      (article) => getLocaleOwner(article.locale) === variant
+    );
+    return ownerArticle ? [{ lang: ownerArticle.locale, slug: ownerArticle.slug }] : [];
+  }
+  return industryArticles.map(({ locale, slug }) => ({ lang: locale, slug }));
 }
 
 export function getIndustryOwnerParams(variant: SiteVariant = currentSiteVariant) {

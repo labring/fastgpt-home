@@ -388,3 +388,17 @@ This block is written and re-added by `next dev` — verify at `node_modules/nex
 ## GitHub repository
 
 Always pass `--repo labring/fastgpt-home` to GitHub issue and PR commands; `origin` points to a personal fork.
+
+## Agent skills
+
+### Issue tracker
+
+GitHub Issues in `labring/fastgpt-home`, operated with `gh`. See `docs/agents/issue-tracker.md`.
+
+### Triage labels
+
+Use the default labels `needs-triage`, `needs-info`, `ready-for-agent`, `ready-for-human`, and `wontfix`. See `docs/agents/triage-labels.md`.
+
+### Domain docs
+
+Single-context layout with root `CONTEXT.md` and `docs/adr/`. See `docs/agents/domain.md`.

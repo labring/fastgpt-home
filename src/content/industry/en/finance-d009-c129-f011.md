@@ -1,0 +1,45 @@
+---
+title: Document Parsing and Chunking for Financial Leasing Research Report Retrieval
+slug: /en/industry/finance-d009-c129-f011
+page_type: Industry scenario page
+article_section: Research Report Search and Q&A
+is_part_of: FastGPT Tech Center
+meta_title: Document Parsing and Chunking for Financial Leasing Research
+meta_description: Financial leasing industry research report data mainly comes from industry summary reports released by national and local leasing industry
+source_type: Industry topic matrix (industry x direction x capability x real community questions)
+date_published: 2026-09-15
+date_modified: 2026-09-15
+---
+
+# Document Parsing and Chunking for Financial Leasing Research Report Retrieval
+
+## What the Data for This Category Looks Like
+Financial leasing industry research report data mainly comes from industry summary reports released by national and local leasing industry associations, annual and semi-annual financial reports publicly released by leasing enterprises, and special research documents from third-party consulting institutions. Update frequency follows quarterly industry summaries and semi-annual special analyses, with occasional dynamic research reports on leading enterprises. Document structures typically include sections such as overall industry investment scale, single-project leasing cases, regulatory compliance indicators, and rent repayment data. Exclusive fields include lease asset balance, sale-leaseback project proportion, and project investment cycle. Units include 100 million yuan, 10,000 yuan, and natural months.
+
+## Constraints for Document Parsing and Chunking
+Industry summary research reports are lengthy, with single documents often containing dozens of project cases, which imposes high requirements for context coherence in chunking. Exclusive fields have strong associative relationships; a single field is often accompanied by supporting project data, so chunking must retain the binding relationship between fields and their corresponding data. Some research reports are released as scanned documents, containing structured reports and handwritten annotations, requiring simultaneous processing of text and image content. Uncertain update frequencies require the parsing process to support batch upload and incremental updates, to avoid repeated parsing of old data.
+
+## Configuration Recommendations
+| Configuration Item | Recommended Value | Rationale |
+| --- | --- | --- |
+| `chunk_size` | 800–1200 characters | Adapt to the length of long cases and structured data in financial leasing research reports, avoid losing project association logic after splitting |
+| `chunk_overlap` | 150–200 characters | Retain associated information such as cross-chunk rent repayment cycles and project contract numbers, ensuring context integrity during retrieval |
+| `UPLOAD_FILE_MAX_SIZE` | 200 MB | Adapt to the volume limit of single multi-module research reports, avoid upload interception due to oversized files |
+| `PARSE_FILE_TIMEOUT` | 300 seconds | Reserve sufficient time for parsing and OCR processing when handling research reports with multi-page scanned documents and structured reports |
+| `enable_ocr` | Enabled | Cover leasing project ledger research reports released as scanned documents, extract exclusive fields and data from images |
+| `recall_topk` | Top 8 entries | Match the multi-field associated retrieval needs in financial leasing research reports, avoid too few or redundant recall results |
+
+> The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing.
+
+## Three Common Misconfigurations
+- A `413 Request Entity Too Large` error is triggered when parsing large-volume financial leasing research reports. The cause is failure to adjust the `UPLOAD_FILE_MAX_SIZE` parameter to the volume threshold adapted to industry research reports.
+- After a financial leasing research report with image links is uploaded to the knowledge base, the Q&A session cannot access leasing project data within the images. The cause is that the default parsing configuration does not enable the `enable_ocr` parameter, and the text extraction logic associated with image links is not activated.
+- Exclusive fields such as lease asset balance are truncated to empty in chunking results. The cause is that `chunk_size` is set too small, causing structured data to lose complete field binding relationships after being split.
+
+## How to Confirm Proper Configuration
+- Upload a standard scanned financial leasing industry research report, and check whether exclusive fields such as lease asset balance and project investment cycle are extracted in the parsing results.
+- Test uploading two research reports of adjacent length, and confirm that the number of chunks generated by parsing conforms to the configuration logic of `chunk_size` and `chunk_overlap`.
+- Upload a special research report with a volume exceeding 150 MB, and confirm that the parsing task does not trigger timeout or file size limit errors.
+- Submit questions about leading enterprise leasing project cases in the research report to the knowledge base, and confirm that the returned results include associated context information from the chunks.
+
+> Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

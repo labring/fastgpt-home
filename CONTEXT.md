@@ -168,6 +168,10 @@ _Avoid_: 指南首页, 资源中心
 `/guide/{slug}` 下的单篇企业 AI 决策或实施内容，包含标题摘要、更新时间、正文与相关资源。
 _Avoid_: 博客文章, 技术文章
 
+**行业问题页**:
+`/industry/{slug}` 下围绕金融业务品类、作业环节或服务对象行业回答一个具体配置问题的页面；页面按 Published Locale Set 组合发布到 China Site 或 International Site。
+_Avoid_: 行业落地页, 金融 FAQ
+
 **Deferred Technical Candidate**:
 因证据、人工改写或版本验证尚待完成而保持未发布状态的临时技术内容候选；批次 authority
 关闭前必须转成 accepted 或 denied。

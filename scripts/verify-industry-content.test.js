@@ -9,11 +9,24 @@ const { readIndustrySources, verifyIndustryContent } = require('./verify-industr
 test('normalized fixture sources pass the Industry contract', () => {
   assert.doesNotThrow(() => verifyIndustryContent());
   const articles = readIndustrySources();
-  assert.deepEqual(
-    [...new Set(articles.map((article) => article.slug))],
-    ['knowledge-base-retrieval']
+  assert.equal(articles.length, 19080);
+  assert.equal(articles.filter((article) => article.locale === 'zh').length, 10080);
+  assert.equal(articles.filter((article) => article.locale === 'en').length, 9000);
+  assert.equal(new Set(articles.map((article) => article.slug)).size, 10080);
+  const slugCounts = new Map();
+  for (const article of articles) slugCounts.set(article.slug, (slugCounts.get(article.slug) || 0) + 1);
+  assert.equal(
+    articles.filter((article) => slugCounts.get(article.slug) === 2).length,
+    18000
   );
-  assert.equal(articles.filter((article) => article.slug === 'knowledge-base-retrieval').length, 2);
+  assert.ok(articles.every((article) => article.metadata.date_published === '2026-09-15'));
+  assert.ok(articles.every((article) => article.metadata.date_modified === '2026-09-15'));
+  assert.ok(
+    articles.filter((article) => article.locale === 'zh').every((article) => article.metadata.keywords)
+  );
+  assert.ok(
+    articles.filter((article) => article.locale === 'en').every((article) => !article.metadata.keywords)
+  );
   assert.ok(articles.every((article) => !article.body.includes('meta_description:')));
 });
 
@@ -22,13 +35,13 @@ test('required fields, slug safety, and duplicate identities fail at the source 
   fs.mkdirSync(path.join(fixtureRoot, 'zh'));
   fs.writeFileSync(
     path.join(fixtureRoot, 'zh', 'unsafe.md'),
-    '---\ntitle: Unsafe\nslug: /zh/industry/../unsafe\npage_type: Industry\nmeta_title: Unsafe\nmeta_description: Unsafe\ndate_modified: 2026-09-19\n---\n\n# Unsafe\n'
+    '---\ntitle: Unsafe\nslug: /zh/industry/../unsafe\npage_type: Industry\nmeta_title: Unsafe\nmeta_description: Unsafe\ndate_published: 2026-09-19\ndate_modified: 2026-09-19\n---\n\n# Unsafe\n'
   );
   assert.throws(() => readIndustrySources(fixtureRoot), /invalid slug/);
 
   fs.writeFileSync(
     path.join(fixtureRoot, 'zh', 'unsafe.md'),
-    '---\ntitle: Safe\nslug: /zh/industry/safe\npage_type: Industry\nmeta_title: Safe\nmeta_description: Safe\ndate_modified: 2026-09-19\n---\n\n# Safe\n'
+    '---\ntitle: Safe\nslug: /zh/industry/safe\npage_type: Industry\nmeta_title: Safe\nmeta_description: Safe\ndate_published: 2026-09-19\ndate_modified: 2026-09-19\n---\n\n# Safe\n'
   );
   fs.copyFileSync(
     path.join(fixtureRoot, 'zh', 'unsafe.md'),
@@ -38,7 +51,7 @@ test('required fields, slug safety, and duplicate identities fail at the source 
 
   fs.writeFileSync(
     path.join(fixtureRoot, 'zh', 'duplicate.md'),
-    '---\ntitle: Public\nslug: /zh/industry/public\npage_type: Industry\nmeta_title: Public\nmeta_description: Public\ndate_modified: 2026-09-19\n---\n\n# Public\n\ndelivery_schedule: internal\n'
+    '---\ntitle: Public\nslug: /zh/industry/public\npage_type: Industry\nmeta_title: Public\nmeta_description: Public\ndate_published: 2026-09-19\ndate_modified: 2026-09-19\n---\n\n# Public\n\ndelivery_schedule: internal\n'
   );
   assert.throws(() => readIndustrySources(fixtureRoot), /internal delivery metadata/);
 });

@@ -6,7 +6,7 @@
 
 declare global {
   interface Window {
-    uetq?: unknown[];
+    uetq?: unknown[] | { push: (...args: unknown[]) => unknown };
   }
 }
 
@@ -14,7 +14,7 @@ declare global {
 export function fireUetConversion() {
   try {
     window.uetq = window.uetq || [];
-    window.uetq.push(['event', 'lead_submit', {}]);
+    window.uetq.push('event', 'lead_submit', {});
   } catch {
     // Measurement failures must never interrupt a saved CRM lead.
   }

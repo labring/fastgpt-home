@@ -92,9 +92,9 @@ interface AdsLandingPage {
 
 **可见字段（4）**：姓名、手机或邮箱（`name="phone"`，沿用官网「手机或邮箱」语义）、公司名称、咨询主题（select：私有化部署 / SaaS 版 / 渠道合作 / 其他）。
 
-**隐藏字段（9，替换表口径全量）**：`utm_source`、`utm_medium`、`utm_campaign`、`utm_term`、`utm_content`、`source_page_path`、`visitor_id`、`consent_at`、`consent_version`。
+**提交归因字段（9，替换表口径全量）**：`utm_source`、`utm_medium`、`utm_campaign`、`utm_term`、`utm_content`、`source_page_path`、`visitor_id`、`consent_at`、`consent_version`。
 
-取值方式（全部 hydration 后 `useEffect` 填充，SSR 输出空 input，避免 hydration mismatch）：
+取值方式（提交时从 URL 与已有归因存储组装 JSON；勾选时间保存在表单状态）：
 
 - `utm_*`：`location.search` 直读；缺省时回退 `leadAttribution` 已存的 last-touch 快照。
 - `source_page_path`：`location.pathname`。
@@ -144,8 +144,8 @@ https://fastgpt.cn/ads/{slug}?utm_source=bing&utm_medium=cpc&utm_campaign={slug}
 
 1. **产物存在**：cn 构建 `out/ads/*.html` 恰好 8 张；io 构建产物中无 `/ads/` 路径。
 2. **收录策略**：每张页含 `noindex, follow` robots meta、canonical 指向 `https://fastgpt.cn/ads/{slug}`、sitemap.xml 不含 `/ads/`。
-3. **四处一致**：`ad-ops.json` 中每行的 slug、最终地址、广告标题 1 与 `pages.ts` 的 H1 交叉核对（关键词 ↔ 标题 ↔ H1 ↔ 地址）。
-4. **表单完整**：每张页 HTML 含 4 个可见字段 + 9 个隐藏字段 `input[name=…]` + 隐私勾选框。
+3. **四处一致**：`ad-ops.json` 中每行的 slug、最终地址、广告字段完整性及关键词组对应关系由脚本核对；关键词、广告标题与 H1 的语义一致性由内容审核确认。
+4. **表单完整**：每张页 HTML 含 4 个可见字段、隐私勾选框和政策阅读链接；`verify:ads-regression` 检查实际发送至 CRM 的完整 19 字段 JSON，其中包含 9 个归因字段。
 5. **延伸阅读**：3 条 URL 与注册表一致且为公网 HTTPS 地址。
 6. **占位白名单**：LOGO 墙占位文案放行，其余「需客户提供 / 占位 / TODO」字样按 content-hygiene 既有规则拦截。
 
@@ -156,7 +156,7 @@ https://fastgpt.cn/ads/{slug}?utm_source=bing&utm_medium=cpc&utm_campaign={slug}
 | # | 项 | 说明 | 责任 |
 |---|----|------|------|
 | 1 | CRM 对缺失字段的必填性 | 现网 `/contacts/submit` 此前总带 `position/used_open_source/project_stage`；服务端是否容忍 `null` 未验证。**上线前对 CRM 真实提交一次 4 字段样例**；若拒绝，回退方案是表单扩到 7 字段或恢复两步式 | 待确认 |
-| 2 | 隐私政策 URL | 勾选框与 `consent_at/consent_version` 入库已实现，协议链接暂为占位 | 法务/客户提供 |
+| 2 | 隐私政策 URL | 复用官网配置的隐私政策地址 `https://doc.fastgpt.cn/docs/protocol/privacy`，保留勾选框与 `consent_at/consent_version` | 已补阅读入口；咨询用途适用范围由业务确认 |
 | 3 | UET tag ID 与转化目标 | `NEXT_PUBLIC_BING_UET_ID` + 必应后台配 `lead_submit` 转化目标 | 投放侧 |
 | 4 | 动态插入参数 | `{keyword}/{MatchType}/{msclkid}` 可用清单以投放后台当日校验为准 | 投放侧 |
 | 5 | LOGO 墙素材 | 需可公开授权素材后替换占位区块 | 客户 |
@@ -184,7 +184,7 @@ https://fastgpt.cn/ads/{slug}?utm_source=bing&utm_medium=cpc&utm_campaign={slug}
 单 PR（决策 #12），经 `/gsd-execute-phase` 执行，顺序：
 
 1. 注册表 + loader + 路由 + `AdsLandingPage`/`AdsNavbar`/样式：8 张页静态可访问，cn 构建产物含全部页面。
-2. `AdsLeadForm`：4 字段 + 隐藏字段 + 扩展 payload + 成功态；preview 站点可走查全流程。
+2. `AdsLeadForm`：4 字段 + 提交时归因 payload + 成功态；preview 站点可走查全流程。
 3. UET：`UetAnalytics` + `fireUetConversion` 接入提交成功回调。
 4. `verify-ads.js` + release 聚合 + 三变体构建验证（cn 全量 8 页 / io 零页 / preview 可走查）。
 5. 上线核对清单逐项打勾（上表 1-4 项为开闸前置）。

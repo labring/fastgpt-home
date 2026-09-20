@@ -1,5 +1,5 @@
 /**
- * Assembles the nine hidden attribution fields submitted with the Bing Ads
+ * Assembles the nine attribution fields submitted with the Bing Ads
  * landing-page lead form (ADR 0014). URL parameters win per field; the stored
  * last-touch snapshot only fills gaps left by a parameter-less revisit.
  */

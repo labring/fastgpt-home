@@ -78,7 +78,7 @@
     "sync:w3-faq": "python3 scripts/sync-w3-faq.py",
     "verify:consultation-attribution": "node --test scripts/verify-consultation-attribution.test.js",
     "verify:ads": "node scripts/verify-ads.js",
-    "verify:ads-regression": "node --test scripts/verify-ads-attribution.test.js",
+    "verify:ads-regression": "node --test scripts/verify-ads-attribution.test.js scripts/verify-ads-regression.test.js",
     "verify:contact": "node scripts/verify-contact-page.js && node --test scripts/verify-consultation-attribution.test.js",
     "verify:customers-data": "node scripts/verify-customers-data.js",
     "verify:customers-search": "node scripts/verify-customers-search.js",

@@ -6,8 +6,8 @@ import { currentSiteVariant } from '@/lib/siteRouting';
 /**
  * Microsoft Advertising UET tag. Renders nothing unless NEXT_PUBLIC_BING_UET_ID
  * is configured; conversion events are pushed from the ads lead form callback
- * via fireUetConversion(). Follows the BaiDu/Clarity pattern of guarding on the
- * production China hostname so preview hosts never report paid conversions.
+ * via fireUetConversion(). Only the China build loads the tag, keeping preview
+ * and international builds out of paid conversion reporting.
  */
 export default function UetAnalytics() {
   const uetId = process.env.NEXT_PUBLIC_BING_UET_ID?.trim();
@@ -36,7 +36,7 @@ export default function UetAnalytics() {
           };
           i = d.getElementsByTagName(t)[0];
           i.parentNode.insertBefore(n, i);
-        })(window, document, 'script', '//bat.bing.com/bat.js', 'uetq');
+        })(window, document, 'script', 'https://bat.bing.com/bat.js', 'uetq');
       `}
     </Script>
   );

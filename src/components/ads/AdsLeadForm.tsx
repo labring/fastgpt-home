@@ -1,13 +1,8 @@
 'use client';
 
-import { FormEvent, useEffect, useRef, useState } from 'react';
+import { FormEvent, useState } from 'react';
 import type { AdsLeadFormCopy } from '@/content/ads/pages';
-import {
-  ADS_ATTRIBUTION_FIELDS,
-  ADS_SUBMISSION_SOURCE,
-  buildAdsAttributionFields,
-  type AdsAttributionFields
-} from '@/lib/adsAttribution';
+import { ADS_SUBMISSION_SOURCE, buildAdsAttributionFields } from '@/lib/adsAttribution';
 import { CONTACT_OPTIONS } from '@/components/contact/contactCopy';
 import { fetchWithTimeout } from '@/lib/fetchWithTimeout';
 import {
@@ -41,7 +36,6 @@ const PLACEHOLDERS = {
   consultationTopic: '请选择'
 } as const;
 
-const CONSENT_TEXT = '已阅读并同意《隐私政策》，同意 FastGPT 就本次咨询与我联系。';
 const PHONE_ERROR = '请输入有效的手机号或邮箱。';
 const CONSENT_ERROR = '请先勾选同意隐私政策，再提交咨询。';
 const VISITOR_ERROR = '无法获取访客标识，请允许浏览器使用本地存储后重试。';
@@ -58,45 +52,10 @@ function isValidPhoneOrEmail(value: string) {
 }
 
 export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
-  const consentRef = useRef<HTMLInputElement>(null);
   const [values, setValues] = useState({ name: '', phone: '', company: '', consultationTopic: '' });
-  const [attribution, setAttribution] = useState<AdsAttributionFields>(
-    () =>
-      ({
-        utm_source: '',
-        utm_medium: '',
-        utm_campaign: '',
-        utm_term: '',
-        utm_content: '',
-        source_page_path: '',
-        visitor_id: '',
-        consent_at: '',
-        consent_version: ''
-      }) as AdsAttributionFields
-  );
+  const [consentAt, setConsentAt] = useState('');
   const [status, setStatus] = useState<'idle' | 'submitting' | 'success'>('idle');
   const [error, setError] = useState('');
-
-  // Attribution fields hydrate after mount so the SSR output keeps empty inputs
-  // and the browser-only storage/URL lookups never cause a hydration mismatch.
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    setAttribution(
-      buildAdsAttributionFields({
-        urlUtm: {
-          utm_source: params.get('utm_source') ?? undefined,
-          utm_medium: params.get('utm_medium') ?? undefined,
-          utm_campaign: params.get('utm_campaign') ?? undefined,
-          utm_term: params.get('utm_term') ?? undefined,
-          utm_content: params.get('utm_content') ?? undefined
-        },
-        storedUtm: getLastTouchUtmSnapshot(),
-        sourcePagePath: window.location.pathname,
-        visitorId: getVisitorId(),
-        consentAt: ''
-      })
-    );
-  }, []);
 
   const updateValue = (field: keyof typeof values, value: string) => {
     setValues((current) => ({ ...current, [field]: value }));
@@ -106,10 +65,7 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
   const handleConsentChange = (checked: boolean) => {
     // consent_at is the tick that accompanies the submission; unchecking clears
     // it and a re-tick refreshes the timestamp.
-    setAttribution((current) => ({
-      ...current,
-      consent_at: checked ? new Date().toISOString() : ''
-    }));
+    setConsentAt(checked ? new Date().toISOString() : '');
   };
 
   const handleSubmit = async (event: FormEvent<HTMLFormElement>) => {
@@ -121,12 +77,10 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
       return;
     }
 
-    if (!consentRef.current?.checked) {
+    if (!consentAt) {
       setError(CONSENT_ERROR);
       return;
     }
-    // Set at tick time by handleConsentChange; a checked box guarantees it.
-    const consentAt = attribution.consent_at;
 
     // Preview builds without a CRM URL walk through a fake submission so the
     // full landing flow stays verifiable pre-launch (same policy as ContactForm).
@@ -139,7 +93,7 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
       return;
     }
 
-    const visitorId = attribution.visitor_id || getVisitorId();
+    const visitorId = getVisitorId();
     if (!visitorId) {
       setError(VISITOR_ERROR);
       return;
@@ -147,6 +101,21 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
 
     setStatus('submitting');
     try {
+      // Read the fallback before trackVisit updates the stored last touch.
+      const params = new URLSearchParams(window.location.search);
+      const attribution = buildAdsAttributionFields({
+        urlUtm: {
+          utm_source: params.get('utm_source') ?? undefined,
+          utm_medium: params.get('utm_medium') ?? undefined,
+          utm_campaign: params.get('utm_campaign') ?? undefined,
+          utm_term: params.get('utm_term') ?? undefined,
+          utm_content: params.get('utm_content') ?? undefined
+        },
+        storedUtm: getLastTouchUtmSnapshot(),
+        sourcePagePath: window.location.pathname,
+        visitorId,
+        consentAt
+      });
       trackVisit();
       // Best-effort anonymous attribution must not block the lead submission.
       void reportAnonymousAttribution();
@@ -164,9 +133,7 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
           budget: null,
           notes: null,
           source: ADS_SUBMISSION_SOURCE,
-          ...attribution,
-          visitor_id: visitorId,
-          consent_at: consentAt
+          ...attribution
         })
       });
 
@@ -210,6 +177,7 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
           className={styles.formSuccessReset}
           onClick={() => {
             setValues({ name: '', phone: '', company: '', consultationTopic: '' });
+            setConsentAt('');
             setStatus('idle');
           }}
         >
@@ -267,10 +235,6 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
         </select>
       </div>
 
-      {ADS_ATTRIBUTION_FIELDS.map((field) => (
-        <input key={field} type="hidden" name={field} value={attribution[field]} />
-      ))}
-
       <button
         type="submit"
         className={`${styles.btn} ${styles.solid} ${styles.submit}`}
@@ -281,13 +245,24 @@ export default function AdsLeadForm({ copy }: { copy: AdsLeadFormCopy }) {
 
       <label className={styles.consent}>
         <input
-          ref={consentRef}
           type="checkbox"
           name="consent"
+          checked={Boolean(consentAt)}
           required
           onChange={(event) => handleConsentChange(event.target.checked)}
         />
-        <span>{CONSENT_TEXT}</span>
+        <span>
+          已阅读并同意
+          <a
+            href="https://doc.fastgpt.cn/docs/protocol/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline"
+          >
+            《隐私政策》
+          </a>
+          ，同意 FastGPT 就本次咨询与我联系。
+        </span>
       </label>
 
       {error && (

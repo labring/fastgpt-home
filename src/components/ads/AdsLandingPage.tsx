@@ -112,7 +112,7 @@ const CASE_CARDS: AdsCaseCard[] = [
     metrics: '35 人编辑团队精简为 1 人核心组；人均日产出 3-5 篇提升至 50 篇',
     url: 'https://fastgpt.cn/customers/finance-insurance-wealth-management/financial-reporting-ai-assistant',
     image:
-      'https://objectstorageapi.hzh.sealos.run/7jixeoz-solution/uploads/6a7d8b53b79b7c6661bbd2a8/1786689664873-qfe9l_thumb.webp'
+      'https://objectstorageapi.hzh.sealos.run/7jixeozw-solution/uploads/6a7d8b53b79b7c6661bbd2a8/1786689664873-qfe9l_thumb.webp'
   }
 ];
 

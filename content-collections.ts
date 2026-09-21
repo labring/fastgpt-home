@@ -1,5 +1,11 @@
 import { defineCollection, defineConfig } from '@content-collections/core';
 import { compileMDX } from '@content-collections/mdx';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeKatex from 'rehype-katex';
+import rehypePrettyCode from 'rehype-pretty-code';
+import rehypeSlug from 'rehype-slug';
+import remarkMath from 'remark-math';
+import remarkGfm from 'remark-gfm';
 import { z } from 'zod';
 
 const BLOG_LOCALES = ['en', 'zh'] as const;
@@ -76,7 +82,15 @@ const blogs = defineCollection({
       locale,
       slug,
       dateModified: document.dateModified || document.date,
-      mdx: await compileMDX(context, document)
+      mdx: await compileMDX(context, document, {
+        remarkPlugins: [remarkMath, remarkGfm],
+        rehypePlugins: [
+          rehypeKatex,
+          [rehypePrettyCode, { theme: 'github-light', keepBackground: true }],
+          rehypeSlug,
+          [rehypeAutolinkHeadings, { behavior: 'wrap' }]
+        ]
+      })
     };
   }
 });

@@ -24,7 +24,7 @@ const variant = resolveSiteVariant();
 const defaultLocale = getDefaultLocale(variant);
 const baseUrls = getProductionBaseUrls();
 const baseUrl = getCanonicalBaseUrl(variant);
-const techPath = '/tutorial/private-deployment-topology';
+const techPath = '/guide/private-deployment-topology';
 const compareSlugs = [
   'dify-vs-fastgpt',
   'ragflow-vs-fastgpt',

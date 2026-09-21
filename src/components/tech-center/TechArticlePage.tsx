@@ -37,7 +37,8 @@ const ARTICLE_COPY = {
     sourceLabel: '本文来源',
     viewSource: '查看原始来源',
     relatedEyebrow: '同主题内容',
-    relatedTitle: '继续阅读'
+    relatedTitle: '继续阅读',
+    relatedToolsTitle: '相关工具页'
   },
   en: {
     breadcrumbs: 'Breadcrumbs',
@@ -47,7 +48,8 @@ const ARTICLE_COPY = {
     sourceLabel: 'Source',
     viewSource: 'View original source',
     relatedEyebrow: 'Related content',
-    relatedTitle: 'Continue reading'
+    relatedTitle: 'Continue reading',
+    relatedToolsTitle: 'Related tool pages'
   }
 };
 
@@ -181,6 +183,25 @@ export default function TechArticlePage({
                           </small>
                           {relatedArticle.title}
                         </span>
+                        <ArrowUpRight strokeWidth={1.8} aria-hidden="true" />
+                      </Link>
+                    ))}
+                  </div>
+                </section>
+              )}
+              {article.relatedLinks.length > 0 && (
+                <section className={styles.related} aria-labelledby="related-tools-title">
+                  <div className={styles.relatedHeader}>
+                    <h2 id="related-tools-title">{copy.relatedToolsTitle}</h2>
+                  </div>
+                  <div className={styles.relatedList}>
+                    {article.relatedLinks.map((relatedLink) => (
+                      <Link
+                        className={styles.relatedLink}
+                        href={relatedLink.target}
+                        key={relatedLink.target}
+                      >
+                        <span>{relatedLink.label}</span>
                         <ArrowUpRight strokeWidth={1.8} aria-hidden="true" />
                       </Link>
                     ))}

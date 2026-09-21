@@ -25,6 +25,7 @@ const context = {
       };
     }
     if (name.startsWith('node:')) return require(name);
+    if (name.endsWith('/relatedLinks')) return { getRelatedLinks: () => [] };
     if (name.endsWith('/data')) {
       return {
         TECH_ENTRIES: [entry],

@@ -250,7 +250,7 @@ test('public search projection contains only discovery fields and matches the re
   const projection = buildSearchProjection(entries);
   const zhProjection = projection.filter((entry) => entry.locale === 'zh');
   const enProjection = projection.filter((entry) => entry.locale === 'en');
-  const firstEntry = entries.find((entry) => entry.slug === '/zh/tutorial/private-deployment-topology');
+  const firstEntry = entries.find((entry) => entry.slug === '/zh/guide/private-deployment-topology');
 
   assert.deepEqual(Object.keys(projection[0]), [
     'identity',
@@ -262,13 +262,13 @@ test('public search projection contains only discovery fields and matches the re
     'sourceType',
     'minutes'
   ]);
-  assert.deepEqual(projection.find((entry) => entry.identity === 'zh|/tutorial/private-deployment-topology'), {
-    identity: 'zh|/tutorial/private-deployment-topology',
+  assert.deepEqual(projection.find((entry) => entry.identity === 'zh|/guide/private-deployment-topology'), {
+    identity: 'zh|/guide/private-deployment-topology',
     title: firstEntry.title,
     description: firstEntry.summary,
     category: firstEntry.category,
     locale: 'zh',
-    publicPath: '/tutorial/private-deployment-topology',
+    publicPath: '/guide/private-deployment-topology',
     sourceType: firstEntry.sourceType,
     minutes: firstEntry.minutes
   });

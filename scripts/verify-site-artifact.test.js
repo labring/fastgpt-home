@@ -301,6 +301,56 @@ test('preview handoff resolves the completed merge result and rejects stale or s
   await assert.rejects(resolve(github, context, selection, { sourceRevision: head }));
 });
 
+test('preview handoff resolves fork pull requests through the head branch when the association index is empty', async () => {
+  const resolve = require('./lib/preview-run-inputs');
+  const base = 'a'.repeat(40),
+    head = 'b'.repeat(40),
+    merge = 'c'.repeat(40);
+  const context = {
+    repo: { owner: 'labring', repo: 'fastgpt-home' },
+    payload: {
+      workflow_run: {
+        conclusion: 'success',
+        repository: { full_name: 'labring/fastgpt-home' },
+        event: 'pull_request',
+        head_sha: head,
+        head_branch: 'bing-ad',
+        head_repository: { full_name: 'yangchuansheng/fastgpt-home' },
+        pull_requests: []
+      }
+    }
+  };
+  const pr = {
+    number: 314,
+    state: 'open',
+    mergeable: true,
+    merge_commit_sha: merge,
+    base: { sha: base, repo: { full_name: 'labring/fastgpt-home' } },
+    head: { sha: head, ref: 'bing-ad' }
+  };
+  const github = {
+    rest: {
+      repos: { listPullRequestsAssociatedWithCommit: async () => ({ data: [] }) },
+      pulls: {
+        list: async ({ head: headFilter }) => {
+          assert.equal(headFilter, 'yangchuansheng/fastgpt-home');
+          return { data: [pr] };
+        },
+        get: async () => ({ data: pr })
+      }
+    }
+  };
+  const selection = { revision: merge, baseRevision: base, headRevision: head };
+  const source = { sourceRevision: merge };
+  assert.deepEqual(await resolve(github, context, selection, source), {
+    revision: merge,
+    number: '314',
+    branch: 'pr-314'
+  });
+  pr.head.sha = 'd'.repeat(40);
+  await assert.rejects(resolve(github, context, selection, source), /Ambiguous/);
+});
+
 test("preview deployment accepts only GitHub's ready merge tree", async () => {
   const resolve = require('./lib/preview-run-inputs');
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'preview-merge-tree-'));

@@ -146,6 +146,7 @@ function getSourceNpmSteps() {
       'consultation attribution regression',
       ['verify:consultation-attribution']
     ],
+    ['ads.regression', 'Bing Ads attribution regression', ['verify:ads-regression']],
     ['technical-content.source', 'technical content verification', ['verify:technical-content']],
     [
       'technical-content.regression',
@@ -252,6 +253,12 @@ function getVariantSteps(variant) {
       id: 'i18n-seo.export',
       label: `i18n SEO HTML verification (${variant})`,
       args: ['verify:i18n-seo']
+    },
+    {
+      runner: 'npm',
+      id: 'ads.export',
+      label: `Bing Ads landing verification (${variant})`,
+      args: ['verify:ads']
     },
     ...(variant === 'preview'
       ? []

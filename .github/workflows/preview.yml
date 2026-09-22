@@ -85,34 +85,6 @@ jobs:
           path: .next/cache
           key: ${{ steps.cache-disabled.outputs.key }}
 
-      - name: Prepare configured compilation cache
-        if: steps.coverage.outputs.configured == 'true'
-        id: cache-configured
-        env:
-          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-        run: node scripts/prepare-build.js
-
-      - name: Restore configured compilation cache
-        if: steps.coverage.outputs.configured == 'true'
-        uses: actions/cache/restore@v4
-        with:
-          path: .next/cache
-          key: ${{ steps.cache-configured.outputs.key }}
-          restore-keys: ${{ steps.cache-configured.outputs.restore-prefix }}
-
-      - name: Produce verified configured CRM preview
-        if: steps.coverage.outputs.configured == 'true'
-        env:
-          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json --keep-artifacts
-
-      - name: Save configured compilation cache
-        if: steps.coverage.outputs.configured == 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: .next/cache
-          key: ${{ steps.cache-configured.outputs.key }}
-
       - name: Verify preview filing links
         run: |
           node <<'NODE'
@@ -156,6 +128,37 @@ jobs:
           include-hidden-files: true
           retention-days: 90
           if-no-files-found: error
+
+      - name: Remove disabled preview before configured build
+        run: rm -rf .release-artifacts/site/preview-disabled
+
+      - name: Prepare configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        id: cache-configured
+        env:
+          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
+        run: node scripts/prepare-build.js
+
+      - name: Restore configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/cache/restore@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-configured.outputs.key }}
+          restore-keys: ${{ steps.cache-configured.outputs.restore-prefix }}
+
+      - name: Produce verified configured CRM preview
+        if: steps.coverage.outputs.configured == 'true'
+        env:
+          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
+        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json
+
+      - name: Save configured compilation cache
+        if: steps.coverage.outputs.configured == 'true'
+        uses: actions/cache/save@v4
+        with:
+          path: .next/cache
+          key: ${{ steps.cache-configured.outputs.key }}
 
       - name: Retain configured verification evidence
         if: steps.coverage.outputs.configured == 'true'

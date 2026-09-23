@@ -38,6 +38,7 @@
     "verify:release": "node scripts/verify-release.js",
     "verify:worker-release": "node scripts/verify-worker-release.js",
     "verify:worker-release-regression": "node --test scripts/verify-worker-release.test.js",
+    "verify:preview-worker-regression": "node --test scripts/verify-preview-worker.test.js",
     "verify:preview-selection": "node --test scripts/select-preview-builds.test.js",
     "verify:content-reuse": "node --test scripts/verify-content-reuse.test.js",
     "verify:build-cache": "node --test scripts/prepare-build.test.js",

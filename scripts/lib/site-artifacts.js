@@ -108,7 +108,7 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
       assertRegularFiles(aliases);
       fs.cpSync(aliases, path.join(payload, 'url-alias', variant), { recursive: true });
     }
-    if (variant === 'io') {
+    if (variant === 'io' || variant === 'preview') {
       fs.copyFileSync(path.join(root, 'wrangler.json'), path.join(payload, 'wrangler.json'));
     }
     if (variant === 'cn') {
@@ -219,13 +219,14 @@ function verifySiteArtifact(bundle, expectedInputs) {
   }
   if (variant !== 'preview')
     verifyUrlAliasArtifactBundle(path.join(payload, 'url-alias'), [variant]);
-  if (variant === 'io') {
+  if (variant === 'io' || variant === 'preview') {
     const { verifyWorkerArtifact } = require('./worker-publication');
     const wranglerVersion = require('../../package.json').devDependencies.wrangler;
     verifyWorkerArtifact({
       outDir: path.join(payload, 'out'),
       configPath: path.join(payload, 'wrangler.json'),
-      wranglerVersion
+      wranglerVersion,
+      requireSitemap: variant !== 'preview'
     });
   }
   if (variant === 'cn') {

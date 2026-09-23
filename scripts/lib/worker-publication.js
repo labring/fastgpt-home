@@ -45,8 +45,8 @@ function verifyWranglerVersion(version) {
   );
 }
 
-/** Verify the IO export, Wrangler configuration, and public asset boundary. */
-function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
+/** Verify a Worker Static Assets export, Wrangler configuration, and public asset boundary. */
+function verifyWorkerArtifact({ outDir, configPath, wranglerVersion, requireSitemap = true }) {
   verifyWranglerVersion(wranglerVersion);
   const resolvedOutDir = path.resolve(outDir);
   const resolvedConfigPath = path.resolve(configPath);
@@ -58,7 +58,7 @@ function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
     'index.html',
     '404.html',
     'robots.txt',
-    'sitemap.xml',
+    ...(requireSitemap ? ['sitemap.xml'] : []),
     '_worker.js',
     '.assetsignore'
   ]) {

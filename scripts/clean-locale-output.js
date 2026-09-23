@@ -116,6 +116,7 @@ if (variant === 'preview') {
   }
   previewHtmlPatched = patchPreviewRobots();
   writeCloudflareWorker(outDir, new Map(), true, aliasAuthorityMetadata);
+  fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');
 } else if (variant === 'io') {
   writeCloudflareWorker(outDir, ioRedirects, false, aliasAuthorityMetadata);
   fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');

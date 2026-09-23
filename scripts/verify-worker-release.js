@@ -28,6 +28,10 @@ const SECURITY_HEADERS = [
   ['permissions-policy', 'camera=(), microphone=(), geolocation=()'],
   ['cross-origin-opener-policy', 'same-origin-allow-popups']
 ];
+const EMBEDDABLE_SECURITY_HEADERS = SECURITY_HEADERS.filter(
+  ([header]) => header !== 'x-frame-options'
+);
+const PAGE_CACHE = 'public, max-age=3600, stale-while-revalidate=86400';
 const HASHED_ASSET_CACHE = [
   'public, max-age=31536000, immutable',
   'public, max-age=3600, stale-while-revalidate=86400'
@@ -134,7 +138,7 @@ async function verifyHttpSurface(port, worker, env) {
   assert.match(home.headers.get('content-type') || '', /text\/html/i, 'Homepage content type');
   assert.equal(
     home.headers.get('cache-control'),
-    'public, max-age=3600, stale-while-revalidate=86400',
+    PAGE_CACHE,
     'Homepage cache policy'
   );
   assertSecurityHeaders(home, 'Homepage');
@@ -147,6 +151,8 @@ async function verifyHttpSurface(port, worker, env) {
   const deepPath = `/faq/${faqId}`;
   const deepPage = await request(deepPath);
   assert.equal(deepPage.status, 200, `Direct deep request ${deepPath}`);
+  assert.equal(deepPage.headers.get('cache-control'), PAGE_CACHE, 'Deep page cache policy');
+  assertSecurityHeaders(deepPage, 'Deep page');
   const deepHtml = await deepPage.text();
   assertCanonical(deepHtml, `${env.io}${deepPath}`);
   const refreshedPage = await request(deepPath);
@@ -249,10 +255,14 @@ async function verifyHttpSurface(port, worker, env) {
 
   const missing = await request('/__worker_release_missing__');
   assert.equal(missing.status, 404, 'Unpublished routes must return a real 404');
+  assert.equal(missing.headers.get('cache-control'), PAGE_CACHE, '404 page cache policy');
+  assertSecurityHeaders(missing, '404 page');
 
   for (const route of ['/contact', '/contact/embed']) {
     const contact = await request(route);
     assert.equal(contact.status, 200, `Contact route ${route}`);
+    assert.equal(contact.headers.get('cache-control'), PAGE_CACHE, `${route} cache policy`);
+    assertSecurityHeaders(contact, route, EMBEDDABLE_SECURITY_HEADERS);
     assert.equal(contact.headers.get('x-frame-options'), null, `${route} must allow embedding`);
     assert.match(
       contact.headers.get('content-security-policy') || '',
@@ -264,6 +274,7 @@ async function verifyHttpSurface(port, worker, env) {
   const robots = await request('/robots.txt');
   assert.equal(robots.status, 200, 'robots.txt status');
   assert.match(robots.headers.get('content-type') || '', /text\/plain/i, 'robots.txt content type');
+  assert.equal(robots.headers.get('cache-control'), PAGE_CACHE, 'robots.txt cache policy');
   assertSecurityHeaders(robots, 'robots.txt');
   assert(
     (await robots.text()).includes(`Sitemap: ${env.io}/sitemap.xml`),
@@ -271,6 +282,13 @@ async function verifyHttpSurface(port, worker, env) {
   );
   const sitemap = await request('/sitemap.xml');
   assert.equal(sitemap.status, 200, 'sitemap.xml status');
+  assert.match(
+    sitemap.headers.get('content-type') || '',
+    /(?:application|text)\/xml/i,
+    'sitemap.xml content type'
+  );
+  assert.equal(sitemap.headers.get('cache-control'), PAGE_CACHE, 'sitemap.xml cache policy');
+  assertSecurityHeaders(sitemap, 'sitemap.xml');
   const sitemapText = await sitemap.text();
   assert(sitemapText.includes(env.io), 'Sitemap must contain International Site URLs');
   assert(!sitemapText.includes(env.cn), 'Sitemap must not contain China Site URLs');
@@ -292,8 +310,8 @@ async function verifyHttpSurface(port, worker, env) {
   };
 }
 
-function assertSecurityHeaders(response, label) {
-  for (const [header, value] of SECURITY_HEADERS) {
+function assertSecurityHeaders(response, label, headers = SECURITY_HEADERS) {
+  for (const [header, value] of headers) {
     assert.equal(response.headers.get(header), value, `${label} ${header}`);
   }
 }
@@ -346,8 +364,11 @@ async function main() {
       getProductionBaseUrls()
     );
     console.log(
-      `[verify-worker-release] passed: assets=${inventory.assetCount}, largest=${inventory.largestAssetPath} (${inventory.largestAssetBytes} bytes), deep=${routes.deepPath}, redirect=${routes.redirectPath}, ` +
-        `js=${routes.staticAsset}, css=${routes.stylesheet}, image=${routes.image}, font=${routes.font}, wrangler=${pinnedVersion}`
+      `[verify-worker-release] passed: assets=${inventory.assetCount}, ` +
+        `largest=${inventory.largestAssetPath} (${inventory.largestAssetBytes} bytes), ` +
+        `deep=${routes.deepPath}, redirect=${routes.redirectPath}, ` +
+        `js=${routes.staticAsset}, css=${routes.stylesheet}, ` +
+        `image=${routes.image}, font=${routes.font}, wrangler=${pinnedVersion}`
     );
   } finally {
     await stopWrangler(child);

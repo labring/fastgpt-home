@@ -45,6 +45,20 @@ test('Worker artifact validates its deployment contract and hides the entrypoint
   }
 });
 
+test('Worker artifact accepts relative export and configuration paths', () => {
+  const fixture = createWorkerArtifact();
+  try {
+    const result = verifyWorkerArtifact({
+      outDir: path.relative(process.cwd(), fixture.outDir),
+      configPath: path.relative(process.cwd(), fixture.configPath),
+      wranglerVersion: '4.136.3'
+    });
+    assert.equal(result.assetCount, 4);
+  } finally {
+    fs.rmSync(fixture.root, { recursive: true, force: true });
+  }
+});
+
 test('Worker artifact rejects a public entrypoint, legacy redirects, and unsupported Wrangler', () => {
   const exposed = createWorkerArtifact({ assetsIgnore: '' });
   const legacy = createWorkerArtifact({ legacyRedirects: true });

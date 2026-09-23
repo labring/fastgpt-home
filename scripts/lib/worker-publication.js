@@ -48,9 +48,11 @@ function verifyWranglerVersion(version) {
 /** Verify the IO export, Wrangler configuration, and public asset boundary. */
 function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
   verifyWranglerVersion(wranglerVersion);
-  const workerPath = path.join(outDir, '_worker.js');
-  const ignorePath = path.join(outDir, '.assetsignore');
-  const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
+  const resolvedOutDir = path.resolve(outDir);
+  const resolvedConfigPath = path.resolve(configPath);
+  const workerPath = path.join(resolvedOutDir, '_worker.js');
+  const ignorePath = path.join(resolvedOutDir, '.assetsignore');
+  const config = JSON.parse(fs.readFileSync(resolvedConfigPath, 'utf8'));
 
   for (const file of [
     'index.html',
@@ -61,7 +63,7 @@ function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
     '.assetsignore'
   ]) {
     assert(
-      fs.statSync(path.join(outDir, file)).isFile(),
+      fs.statSync(path.join(resolvedOutDir, file)).isFile(),
       `Missing Worker publication file: ${file}`
     );
   }
@@ -73,7 +75,10 @@ function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
       .some((entry) => entry.trim() === '/_worker.js' || entry.trim() === '_worker.js'),
     'Static Assets .assetsignore must exclude _worker.js'
   );
-  assert(!fs.existsSync(path.join(outDir, '_redirects')), 'Legacy _redirects artifact is present');
+  assert(
+    !fs.existsSync(path.join(resolvedOutDir, '_redirects')),
+    'Legacy _redirects artifact is present'
+  );
   assert.equal(config.name, 'fastgpt-io-worker', 'Unexpected Worker name');
   assert.equal(config.workers_dev, true, 'First-stage publication must use workers.dev');
   assert.equal(config.main, './out/_worker.js', 'Worker entrypoint must come from the export');
@@ -86,18 +91,18 @@ function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
     'Static Assets must preserve the exported 404 page'
   );
   assert.equal(
-    path.resolve(path.dirname(configPath), config.main),
+    path.resolve(path.dirname(resolvedConfigPath), config.main),
     workerPath,
     'Wrangler entrypoint differs from the exported Worker'
   );
   assert.equal(
-    path.resolve(path.dirname(configPath), config.assets.directory),
-    path.resolve(outDir),
+    path.resolve(path.dirname(resolvedConfigPath), config.assets.directory),
+    resolvedOutDir,
     'Wrangler assets directory differs from the complete export'
   );
 
-  const inventory = directoryInventory(outDir, {
-    root: outDir,
+  const inventory = directoryInventory(resolvedOutDir, {
+    root: resolvedOutDir,
     role: 'worker-static-assets',
     source: 'generated'
   });

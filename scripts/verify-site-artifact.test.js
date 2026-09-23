@@ -149,7 +149,9 @@ test('a complete verified publication unit rejects identity drift and corrupted 
         '--candidate',
         path.join(root, 'candidate'),
         '--revision',
-        identity.sourceRevision
+        identity.sourceRevision,
+        '--trusted-config',
+        path.join(root, 'wrangler.json')
       ],
       { cwd: root, encoding: 'utf8', env: { PATH: process.env.PATH, ...identity.publicSettings } }
     );
@@ -171,7 +173,7 @@ test('a complete verified publication unit rejects identity drift and corrupted 
     }
     assert.deepEqual(
       [...reads.values()].sort((a, b) => a - b),
-      [2, 2, 2, 2, 3],
+      [1, 1, 1, 1, 2],
       'Packaged files are read by the site and Worker artifact consumers'
     );
     const reseal = (edit) => {

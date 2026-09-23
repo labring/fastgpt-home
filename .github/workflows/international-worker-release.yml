@@ -63,7 +63,7 @@ jobs:
       - name: Verify the sealed Worker artifact
         run: |
           node -e "const {getPublicationInputs,siteArtifactIdentity}=require('./scripts/lib/site-artifact-identity');require('node:fs').writeFileSync('expected-site.json', JSON.stringify(getPublicationInputs(siteArtifactIdentity())))"
-          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json
+          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json --trusted-config wrangler.json
 
       - name: Deploy verified Worker and Static Assets to workers.dev
         env:

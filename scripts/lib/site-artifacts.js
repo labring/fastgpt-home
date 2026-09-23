@@ -140,7 +140,9 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
       inventory: inventoryPayload(payload)
     };
     fs.writeFileSync(path.join(staging, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-    verifySiteArtifact(staging, publicationInputs);
+    verifySiteArtifact(staging, publicationInputs, {
+      trustedConfigPath: path.join(root, 'wrangler.json')
+    });
     // Seal the replacement before touching an existing rollback unit.
     const previous = `${staging}.previous`;
     if (fs.existsSync(destination)) fs.renameSync(destination, previous);
@@ -157,7 +159,7 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
   }
 }
 
-function verifySiteArtifact(bundle, expectedInputs) {
+function verifySiteArtifact(bundle, expectedInputs, options = {}) {
   assert(fs.lstatSync(bundle).isDirectory(), 'Artifact bundle must be a real directory');
   assert(
     fs.lstatSync(path.join(bundle, 'manifest.json')).isFile(),
@@ -225,6 +227,7 @@ function verifySiteArtifact(bundle, expectedInputs) {
     verifyWorkerArtifact({
       outDir: path.join(payload, 'out'),
       configPath: path.join(payload, 'wrangler.json'),
+      trustedConfigPath: options.trustedConfigPath,
       wranglerVersion,
       requireSitemap: variant !== 'preview'
     });

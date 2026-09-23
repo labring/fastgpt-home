@@ -2,13 +2,15 @@ name: Preview Home Page — Deploy Worker
 
 on:
   workflow_run:
-    workflows: ["Preview Home Page — Build"]
+    workflows: ['Preview Home Page — Build']
     types: [completed]
 
-# Keep each preview Worker deployment run from being cancelled.
+# Serialize every preview Worker mutation with cleanup so a closed PR cannot
+# race a deployment for the same Worker.
 concurrency:
-  group: 'preview-worker-${{ github.event.workflow_run.id || github.event.pull_request.number }}'
+  group: preview-worker-publish
   cancel-in-progress: false
+  queue: max
 
 permissions:
   contents: read
@@ -77,7 +79,7 @@ jobs:
       - name: Verify expected publication identity and complete artifact digest
         env:
           VERIFIED_PREVIEW_REVISION: ${{ steps.pr.outputs.revision }}
-        run: node verifier/scripts/verify-preview-artifact.js --bundle verified-preview --candidate candidate --revision "$VERIFIED_PREVIEW_REVISION"
+        run: node verifier/scripts/verify-preview-artifact.js --bundle verified-preview --candidate candidate --revision "$VERIFIED_PREVIEW_REVISION" --trusted-config verifier/wrangler.json
 
       - name: Resolve preview Worker identity
         id: worker

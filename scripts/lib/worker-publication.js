@@ -1,7 +1,6 @@
 const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
-const { directoryInventory } = require('./release-readiness');
 
 // Gate against the Workers Free limit until the release account's plan is part of the contract.
 const WORKER_ASSET_FILE_LIMIT = 20_000;
@@ -45,14 +44,35 @@ function verifyWranglerVersion(version) {
   );
 }
 
+function listAssetSizes(directory, root = directory) {
+  return fs.readdirSync(directory, { withFileTypes: true }).flatMap((entry) => {
+    const filePath = path.join(directory, entry.name);
+    if (entry.isDirectory()) return listAssetSizes(filePath, root);
+    assert(entry.isFile(), `Worker Static Asset must be a regular file: ${filePath}`);
+    return [
+      {
+        path: path.relative(root, filePath).replaceAll(path.sep, '/'),
+        bytes: fs.statSync(filePath).size
+      }
+    ];
+  });
+}
+
 /** Verify a Worker Static Assets export, Wrangler configuration, and public asset boundary. */
-function verifyWorkerArtifact({ outDir, configPath, wranglerVersion, requireSitemap = true }) {
+function verifyWorkerArtifact({
+  outDir,
+  configPath,
+  trustedConfigPath = configPath,
+  wranglerVersion,
+  requireSitemap = true
+}) {
   verifyWranglerVersion(wranglerVersion);
   const resolvedOutDir = path.resolve(outDir);
   const resolvedConfigPath = path.resolve(configPath);
   const workerPath = path.join(resolvedOutDir, '_worker.js');
   const ignorePath = path.join(resolvedOutDir, '.assetsignore');
   const config = JSON.parse(fs.readFileSync(resolvedConfigPath, 'utf8'));
+  const trustedConfig = JSON.parse(fs.readFileSync(path.resolve(trustedConfigPath), 'utf8'));
 
   for (const file of [
     'index.html',
@@ -68,18 +88,25 @@ function verifyWorkerArtifact({ outDir, configPath, wranglerVersion, requireSite
     );
   }
   assert(fs.statSync(workerPath).size > 0, 'Generated Worker entrypoint is empty');
+  const ignoreRules = fs
+    .readFileSync(ignorePath, 'utf8')
+    .split(/\r?\n/)
+    .map((entry) => entry.trim())
+    .filter(Boolean);
   assert(
-    fs
-      .readFileSync(ignorePath, 'utf8')
-      .split(/\r?\n/)
-      .some((entry) => entry.trim() === '/_worker.js' || entry.trim() === '_worker.js'),
-    'Static Assets .assetsignore must exclude _worker.js'
+    ignoreRules.length === 1 && ['/_worker.js', '_worker.js'].includes(ignoreRules[0]),
+    'Static Assets .assetsignore must contain only the _worker.js exclusion'
   );
   assert(
     !fs.existsSync(path.join(resolvedOutDir, '_redirects')),
     'Legacy _redirects artifact is present'
   );
   assert.equal(config.name, 'fastgpt-io-worker', 'Unexpected Worker name');
+  assert.deepEqual(
+    config,
+    trustedConfig,
+    'Worker configuration differs from the trusted publication profile'
+  );
   assert.equal(config.workers_dev, true, 'First-stage publication must use workers.dev');
   assert.equal(config.main, './out/_worker.js', 'Worker entrypoint must come from the export');
   assert.equal(config.assets?.directory, './out', 'Static Assets must use the complete export');
@@ -101,12 +128,7 @@ function verifyWorkerArtifact({ outDir, configPath, wranglerVersion, requireSite
     'Wrangler assets directory differs from the complete export'
   );
 
-  const inventory = directoryInventory(resolvedOutDir, {
-    root: resolvedOutDir,
-    role: 'worker-static-assets',
-    source: 'generated'
-  });
-  const assets = inventory.files.filter(
+  const assets = listAssetSizes(resolvedOutDir).filter(
     ({ path: relativePath }) => !['_worker.js', '.assetsignore', '_headers'].includes(relativePath)
   );
   return inspectWorkerAssets(assets);

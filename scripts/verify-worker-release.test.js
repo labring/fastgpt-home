@@ -84,6 +84,62 @@ test('Worker artifact rejects a public entrypoint, legacy redirects, and unsuppo
   }
 });
 
+test('Worker artifact rejects extra ignore rules and untrusted Wrangler settings', () => {
+  const extraIgnore = createWorkerArtifact({ assetsIgnore: '_worker.js\n!_worker.js\n' });
+  const extraConfig = createWorkerArtifact();
+  const trustedConfig = path.join(extraConfig.root, 'trusted-wrangler.json');
+  try {
+    fs.writeFileSync(
+      path.join(extraConfig.root, 'wrangler.json'),
+      JSON.stringify({
+        name: 'fastgpt-io-worker',
+        main: './out/_worker.js',
+        compatibility_date: '2026-09-23',
+        workers_dev: true,
+        build: { command: 'echo unsafe' },
+        assets: {
+          directory: './out',
+          binding: 'ASSETS',
+          run_worker_first: true,
+          not_found_handling: '404-page'
+        }
+      })
+    );
+    fs.copyFileSync(path.join(extraConfig.root, 'wrangler.json'), trustedConfig);
+    fs.writeFileSync(
+      trustedConfig,
+      JSON.stringify({
+        name: 'fastgpt-io-worker',
+        main: './out/_worker.js',
+        compatibility_date: '2026-09-23',
+        workers_dev: true,
+        assets: {
+          directory: './out',
+          binding: 'ASSETS',
+          run_worker_first: true,
+          not_found_handling: '404-page'
+        }
+      })
+    );
+    assert.throws(
+      () => verifyWorkerArtifact({ ...extraIgnore, wranglerVersion: '4.136.3' }),
+      /contain only the _worker\.js exclusion/
+    );
+    assert.throws(
+      () =>
+        verifyWorkerArtifact({
+          ...extraConfig,
+          trustedConfigPath: trustedConfig,
+          wranglerVersion: '4.136.3'
+        }),
+      /differs from the trusted publication profile/
+    );
+  } finally {
+    fs.rmSync(extraIgnore.root, { recursive: true, force: true });
+    fs.rmSync(extraConfig.root, { recursive: true, force: true });
+  }
+});
+
 test('Worker Static Assets enforce both file-count and largest-file limits', () => {
   assert.deepEqual(
     inspectWorkerAssets(

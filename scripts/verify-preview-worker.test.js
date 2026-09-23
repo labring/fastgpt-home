@@ -25,6 +25,10 @@ test('PR preview deployment uses an isolated Worker and the verified artifact', 
   assert.match(deploy.with.command, /^deploy /);
   assert.match(deploy.with.command, /--config \.\/verified-preview\/payload\/wrangler\.json/);
   assert.match(deploy.with.command, /--name \$\{\{ steps\.worker\.outputs\.name \}\}/);
+  assert.equal(workflow.concurrency.group, 'preview-worker-publish');
+  assert.equal(workflow.concurrency['cancel-in-progress'], false);
+  assert.equal(workflow.concurrency.queue, 'max');
+  assert.match(source, /--trusted-config verifier\/wrangler\.json/);
   assert.match(source, /fastgpt-preview-pr-\$PR_NUMBER/);
   assert.match(source, /fastgpt-home-preview/);
   assert.doesNotMatch(source, /pages deploy/);
@@ -46,5 +50,11 @@ test('PR preview cleanup deletes the numbered Worker with the same credential bo
     /delete --name \$\{\{ steps\.worker\.outputs\.name \}\} --force/
   );
   assert.match(source, /INPUT_WORKER_NAME/);
-  assert.match(source, /types: \[closed\]/);
+  assert.match(source, /pull_request_target:/);
+  assert.match(source, /Recheck pull request status/);
+  assert.doesNotMatch(source, /continue-on-error: true/);
+  const cleanupConcurrency = load(source).concurrency;
+  assert.equal(cleanupConcurrency.group, 'preview-worker-publish');
+  assert.equal(cleanupConcurrency['cancel-in-progress'], false);
+  assert.equal(cleanupConcurrency.queue, 'max');
 });

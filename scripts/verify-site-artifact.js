@@ -5,12 +5,21 @@ const { verifySiteArtifact } = require('./lib/site-artifacts');
 
 try {
   const args = process.argv.slice(2);
-  if (args.length !== 4 || args[0] !== '--bundle' || args[2] !== '--identity') {
+  if (
+    ![4, 6].includes(args.length) ||
+    args[0] !== '--bundle' ||
+    args[2] !== '--identity' ||
+    (args.length === 6 && args[4] !== '--trusted-config')
+  ) {
     throw new Error(
-      'Usage: verify-site-artifact --bundle <directory> --identity <expected-inputs.json>'
+      'Usage: verify-site-artifact --bundle <directory> --identity <expected-inputs.json> [--trusted-config <file>]'
     );
   }
-  const manifest = verifySiteArtifact(args[1], JSON.parse(fs.readFileSync(args[3], 'utf8')));
+  const manifest = verifySiteArtifact(
+    args[1],
+    JSON.parse(fs.readFileSync(args[3], 'utf8')),
+    args.length === 6 ? { trustedConfigPath: args[5] } : undefined
+  );
   console.log(
     `Verified ${manifest.publicationInputs.siteVariant} artifact: ${manifest.inventory.sha256}`
   );

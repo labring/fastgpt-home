@@ -1,18 +1,19 @@
-name: Preview Home Page — Deploy
+name: Preview Home Page — Deploy Worker
 
 on:
   workflow_run:
-    workflows: ["Preview Home Page — Build"]
+    workflows: ['Preview Home Page — Build']
     types: [completed]
 
-# Only one deploy at a time; do not cancel in-progress deploys.
+# Serialize every preview Worker mutation with cleanup so a closed PR cannot
+# race a deployment for the same Worker.
 concurrency:
-  group: 'preview-deploy'
+  group: preview-worker-publish
   cancel-in-progress: false
+  queue: max
 
 permissions:
   contents: read
-  deployments: write
   pull-requests: write
   actions: read
 
@@ -24,6 +25,7 @@ jobs:
     runs-on: ubuntu-24.04
     # Only deploy when the build succeeded.
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    environment: international-worker-preview
 
     env:
       NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
@@ -77,16 +79,30 @@ jobs:
       - name: Verify expected publication identity and complete artifact digest
         env:
           VERIFIED_PREVIEW_REVISION: ${{ steps.pr.outputs.revision }}
-        run: node verifier/scripts/verify-preview-artifact.js --bundle verified-preview --candidate candidate --revision "$VERIFIED_PREVIEW_REVISION"
+        run: node verifier/scripts/verify-preview-artifact.js --bundle verified-preview --candidate candidate --revision "$VERIFIED_PREVIEW_REVISION" --trusted-config verifier/wrangler.json
 
-      - name: Deploy to Cloudflare Pages
+      - name: Resolve preview Worker identity
+        id: worker
+        env:
+          PR_NUMBER: ${{ steps.pr.outputs.number }}
+          WORKFLOW_RUN_ID: ${{ github.event.workflow_run.id }}
+        run: |
+          set -euo pipefail
+          if [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]; then
+            worker_name="fastgpt-preview-pr-$PR_NUMBER"
+          else
+            worker_name="fastgpt-preview-manual-$WORKFLOW_RUN_ID"
+          fi
+          echo "name=$worker_name" >> "$GITHUB_OUTPUT"
+
+      - name: Deploy verified Preview Worker and Static Assets
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
-          wranglerVersion: '4'
-          command: pages deploy ./verified-preview/payload/out --project-name=fastgpt-home --branch=${{ steps.pr.outputs.branch }}
+          wranglerVersion: '4.136.3'
+          command: deploy --config ./verified-preview/payload/wrangler.json --name ${{ steps.worker.outputs.name }}
           quiet: false
 
       - name: Comment Preview URL on PR
@@ -108,7 +124,7 @@ jobs:
               second: '2-digit',
             });
             const body = `${marker}
-            🚀 **FastGPT Homepage Preview Ready!**
+            🚀 **FastGPT Worker Preview Ready!**
 
             📱 **Preview URL:** ${deployUrl}
 

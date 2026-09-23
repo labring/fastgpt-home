@@ -108,6 +108,9 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
       assertRegularFiles(aliases);
       fs.cpSync(aliases, path.join(payload, 'url-alias', variant), { recursive: true });
     }
+    if (variant === 'io' || variant === 'preview') {
+      fs.copyFileSync(path.join(root, 'wrangler.json'), path.join(payload, 'wrangler.json'));
+    }
     if (variant === 'cn') {
       fs.mkdirSync(path.join(payload, 'runtime'));
       for (const file of NGINX_FILES) {
@@ -137,7 +140,9 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
       inventory: inventoryPayload(payload)
     };
     fs.writeFileSync(path.join(staging, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
-    verifySiteArtifact(staging, publicationInputs);
+    verifySiteArtifact(staging, publicationInputs, {
+      trustedConfigPath: path.join(root, 'wrangler.json')
+    });
     // Seal the replacement before touching an existing rollback unit.
     const previous = `${staging}.previous`;
     if (fs.existsSync(destination)) fs.renameSync(destination, previous);
@@ -154,7 +159,7 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
   }
 }
 
-function verifySiteArtifact(bundle, expectedInputs) {
+function verifySiteArtifact(bundle, expectedInputs, options = {}) {
   assert(fs.lstatSync(bundle).isDirectory(), 'Artifact bundle must be a real directory');
   assert(
     fs.lstatSync(path.join(bundle, 'manifest.json')).isFile(),
@@ -216,6 +221,17 @@ function verifySiteArtifact(bundle, expectedInputs) {
   }
   if (variant !== 'preview')
     verifyUrlAliasArtifactBundle(path.join(payload, 'url-alias'), [variant]);
+  if (variant === 'io' || variant === 'preview') {
+    const { verifyWorkerArtifact } = require('./worker-publication');
+    const wranglerVersion = require('../../package.json').devDependencies.wrangler;
+    verifyWorkerArtifact({
+      outDir: path.join(payload, 'out'),
+      configPath: path.join(payload, 'wrangler.json'),
+      trustedConfigPath: options.trustedConfigPath,
+      wranglerVersion,
+      requireSitemap: variant !== 'preview'
+    });
+  }
   if (variant === 'cn') {
     for (const file of NGINX_FILES) {
       assert(

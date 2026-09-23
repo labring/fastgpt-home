@@ -30,6 +30,23 @@ test('a complete verified publication unit rejects identity drift and corrupted 
     write('out/index.html', '<main>Accepted body</main>');
     write('out/404.html', '<main>Page missing</main>');
     write('out/robots.txt', 'User-agent: *\nDisallow: /\n');
+    write('out/_worker.js', 'export default { fetch() { return new Response("ok"); } };');
+    write('out/.assetsignore', '_worker.js\n');
+    write(
+      'wrangler.json',
+      JSON.stringify({
+        name: 'fastgpt-io-worker',
+        main: './out/_worker.js',
+        compatibility_date: '2026-09-23',
+        workers_dev: true,
+        assets: {
+          directory: './out',
+          binding: 'ASSETS',
+          run_worker_first: true,
+          not_found_handling: '404-page'
+        }
+      })
+    );
     write('.next/cache/site-identity.json', JSON.stringify(identity));
     const record = {
       sourceRevision: identity.sourceRevision,
@@ -77,11 +94,13 @@ test('a complete verified publication unit rejects identity drift and corrupted 
     // Exercise the deployment entry point from a verifier checkout without node_modules.
     for (const file of [
       'scripts/verify-preview-artifact.js',
+      'package.json',
       ...[
         'site-artifacts',
         'site-artifact-identity',
         'site-variant',
         'release-readiness',
+        'worker-publication',
         'url-alias-artifacts',
         'url-alias-authority'
       ].map((name) => `scripts/lib/${name}.js`),
@@ -130,7 +149,9 @@ test('a complete verified publication unit rejects identity drift and corrupted 
         '--candidate',
         path.join(root, 'candidate'),
         '--revision',
-        identity.sourceRevision
+        identity.sourceRevision,
+        '--trusted-config',
+        path.join(root, 'wrangler.json')
       ],
       { cwd: root, encoding: 'utf8', env: { PATH: process.env.PATH, ...identity.publicSettings } }
     );
@@ -151,9 +172,9 @@ test('a complete verified publication unit rejects identity drift and corrupted 
       fs.readFileSync = read;
     }
     assert.deepEqual(
-      [...reads.values()],
-      [1, 1, 1],
-      'Every static file is read once per consumer check'
+      [...reads.values()].sort((a, b) => a - b),
+      [1, 1, 1, 1, 2],
+      'Packaged files are read by the site and Worker artifact consumers'
     );
     const reseal = (edit) => {
       edit();

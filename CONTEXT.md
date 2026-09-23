@@ -198,3 +198,9 @@ _Avoid_: 文案对齐
 **对比页**:
 `/compare/{slug}` 下的双语平台选型对比文章，进搜索索引与站点地图；与广告落地页主题可能重叠但路由、收录策略与用途互不替代。
 _Avoid_: 广告落地页, 竞品页
+
+## Publication
+
+**International Site Worker Publication**:
+国际站的统一发布单元，由公开静态内容与其拥有的 URL Alias Authority 路由投影组成。
+_Avoid_: 独立路由发布

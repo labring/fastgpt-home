@@ -1,0 +1,112 @@
+name: International Site Worker Release
+
+on:
+  workflow_dispatch:
+
+concurrency:
+  group: international-worker-production
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  deploy:
+    if: github.repository == 'labring/fastgpt-home' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-24.04
+    timeout-minutes: 90
+    environment: international-worker-production
+    env:
+      NEXT_PUBLIC_SITE_VARIANT: io
+      NEXT_PUBLIC_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
+      NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
+      NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
+      NEXT_PUBLIC_LANGUAGE_REGION: en-US
+      NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: '.fastgpt.io'
+      NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE: ${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: home-io
+      NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
+      NEXT_PUBLIC_FILING_ADDRESS: ${{ secrets.NEXT_PUBLIC_FILING_ADDRESS }}
+      NEXT_PUBLIC_POLICE_FILING: ${{ secrets.NEXT_PUBLIC_POLICE_FILING }}
+      NEXT_PUBLIC_GOOGLE_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ID }}
+      NEXT_PUBLIC_GOOGLE_VERIFICATION_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_VERIFICATION_ID }}
+      NEXT_PUBLIC_RYBBIT_TONGJI: ${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
+      NEXT_PUBLIC_RYBBIT_TONGJI_SITEID: ${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+
+      - run: npm ci
+
+      - name: Validate production build and Cloudflare configuration
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          test -n "$NEXT_PUBLIC_CRM_API_URL"
+          test -n "$CLOUDFLARE_API_TOKEN"
+          test -n "$CLOUDFLARE_ACCOUNT_ID"
+
+      - name: Build and verify the International Site Worker release
+        run: npm run verify:release -- --variant io --keep-artifacts
+
+      - name: Verify the sealed Worker artifact
+        run: |
+          node -e "const {getPublicationInputs,siteArtifactIdentity}=require('./scripts/lib/site-artifact-identity');require('node:fs').writeFileSync('expected-site.json', JSON.stringify(getPublicationInputs(siteArtifactIdentity())))"
+          node scripts/verify-site-artifact.js --bundle .release-artifacts/site/io-configured --identity expected-site.json --trusted-config wrangler.json
+
+      - name: Deploy verified Worker and Static Assets to workers.dev
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          set -euo pipefail
+          ./node_modules/.bin/wrangler deploy --config .release-artifacts/site/io-configured/payload/wrangler.json 2>&1 | tee .release-artifacts/worker-deploy.log
+
+      - name: Record Worker deployment identity and rollback evidence
+        env:
+          SOURCE_REVISION: ${{ github.sha }}
+          WORKFLOW_RUN_ID: ${{ github.run_id }}
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = require('node:path');
+          const artifactRoot = '.release-artifacts/site/io-configured';
+          const payloadRoot = path.join(artifactRoot, 'payload');
+          const artifact = JSON.parse(fs.readFileSync(path.join(artifactRoot, 'manifest.json'), 'utf8'));
+          const aliases = JSON.parse(fs.readFileSync(path.join(payloadRoot, 'url-alias/io/release/manifest.json'), 'utf8'));
+          const deployOutput = fs.readFileSync('.release-artifacts/worker-deploy.log', 'utf8');
+          const deployedUrl = deployOutput.match(/https:\/\/[^\s]+\.workers\.dev/)?.[0];
+          if (!deployedUrl) throw new Error('Wrangler output omitted the workers.dev address');
+          const record = {
+            sourceRevision: process.env.SOURCE_REVISION,
+            workflowRunId: process.env.WORKFLOW_RUN_ID,
+            workerName: 'fastgpt-io-worker',
+            deployedUrl,
+            wranglerVersion: require('./package.json').devDependencies.wrangler,
+            siteArtifactSha256: artifact.inventory.sha256,
+            urlAliasAuthorityDigest: aliases.authority.digest,
+            rollbackSource: 'existing International Site Cloudflare Pages deployment'
+          };
+          fs.writeFileSync('.release-artifacts/worker-deployment.json', `${JSON.stringify(record, null, 2)}\n`);
+          NODE
+
+      - name: Retain the verified release unit and deployment evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: verified-international-worker-${{ github.run_id }}
+          path: .release-artifacts
+          include-hidden-files: true
+          retention-days: 90
+          if-no-files-found: ignore

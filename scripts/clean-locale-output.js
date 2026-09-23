@@ -118,6 +118,7 @@ if (variant === 'preview') {
   writeCloudflareWorker(outDir, new Map(), true, aliasAuthorityMetadata);
 } else if (variant === 'io') {
   writeCloudflareWorker(outDir, ioRedirects, false, aliasAuthorityMetadata);
+  fs.writeFileSync(path.join(outDir, '.assetsignore'), '_worker.js\n');
 }
 
 console.log(

@@ -36,6 +36,8 @@
     "verify:faq-metadata-authority-regression": "node --test scripts/verify-faq-metadata-authority.test.js",
     "verify:faq-seo-graph": "node scripts/verify-faq-seo-graph.js",
     "verify:release": "node scripts/verify-release.js",
+    "verify:worker-release": "node scripts/verify-worker-release.js",
+    "verify:worker-release-regression": "node --test scripts/verify-worker-release.test.js",
     "verify:preview-selection": "node --test scripts/select-preview-builds.test.js",
     "verify:content-reuse": "node --test scripts/verify-content-reuse.test.js",
     "verify:build-cache": "node --test scripts/prepare-build.test.js",
@@ -128,7 +130,8 @@
     "husky": "^9.1.7",
     "prettier": "^2.8.8",
     "sharp": "^0.35.3",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "wrangler": "4.136.3"
   },
   "engines": {
     "node": ">=20.9.0"

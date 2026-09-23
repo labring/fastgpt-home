@@ -108,6 +108,9 @@ function retainVerifiedSiteArtifact(root, destination, variant, record) {
       assertRegularFiles(aliases);
       fs.cpSync(aliases, path.join(payload, 'url-alias', variant), { recursive: true });
     }
+    if (variant === 'io') {
+      fs.copyFileSync(path.join(root, 'wrangler.json'), path.join(payload, 'wrangler.json'));
+    }
     if (variant === 'cn') {
       fs.mkdirSync(path.join(payload, 'runtime'));
       for (const file of NGINX_FILES) {
@@ -216,6 +219,15 @@ function verifySiteArtifact(bundle, expectedInputs) {
   }
   if (variant !== 'preview')
     verifyUrlAliasArtifactBundle(path.join(payload, 'url-alias'), [variant]);
+  if (variant === 'io') {
+    const { verifyWorkerArtifact } = require('./worker-publication');
+    const wranglerVersion = require('../../package.json').devDependencies.wrangler;
+    verifyWorkerArtifact({
+      outDir: path.join(payload, 'out'),
+      configPath: path.join(payload, 'wrangler.json'),
+      wranglerVersion
+    });
+  }
   if (variant === 'cn') {
     for (const file of NGINX_FILES) {
       assert(

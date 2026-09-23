@@ -245,6 +245,19 @@ async function verifyCloudflareRedirects() {
     '/zh/price?source=locale-fallback-test',
     '/price?source=locale-fallback-test'
   ]);
+  if (variant === 'preview') {
+    const previewHtml = await context.worker.fetch(new Request(`${baseUrl}/en/contact`), {
+      ASSETS: {
+        async fetch() {
+          return new Response('<html>Preview</html>', {
+            headers: { 'content-type': 'text/html; charset=utf-8' }
+          });
+        }
+      }
+    });
+    assert.equal(previewHtml.status, 200);
+    assert.equal(previewHtml.headers.get('X-Robots-Tag'), 'noindex, nofollow');
+  }
 }
 
 async function main() {

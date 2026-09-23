@@ -3,6 +3,7 @@ const fs = require('node:fs');
 const os = require('node:os');
 const path = require('node:path');
 const test = require('node:test');
+const { load } = require('js-yaml');
 const { inspectWorkerAssets, verifyWorkerArtifact } = require('./lib/worker-publication');
 
 function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects = false } = {}) {
@@ -111,4 +112,24 @@ test('Worker Static Assets enforce both file-count and largest-file limits', () 
     () => inspectWorkerAssets([{ path: 'large.bin', bytes: 11 }], 1, 10),
     /large\.bin is 11 bytes; limit is 10/
   );
+});
+
+test('Worker release uses its dedicated environment credential', () => {
+  const workflowPath = path.join(
+    __dirname,
+    '..',
+    '.github/workflows/international-worker-release.yml'
+  );
+  const workflowSource = fs.readFileSync(workflowPath, 'utf8');
+  const workflow = load(workflowSource);
+  const job = workflow.jobs.deploy;
+  const credentialSteps = job.steps.filter((step) => step.env?.CLOUDFLARE_API_TOKEN);
+
+  assert.equal(job.environment, 'international-worker-production');
+  assert.equal(credentialSteps.length, 2);
+  for (const step of credentialSteps) {
+    assert.equal(step.env.CLOUDFLARE_API_TOKEN, '${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}');
+    assert.equal(step.env.CLOUDFLARE_ACCOUNT_ID, '${{ vars.CLOUDFLARE_ACCOUNT_ID }}');
+  }
+  assert.doesNotMatch(workflowSource, /secrets\.CLOUDFLARE_API_TOKEN/);
 });

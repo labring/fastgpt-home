@@ -18,6 +18,7 @@ jobs:
     if: github.repository == 'labring/fastgpt-home' && github.ref == 'refs/heads/main'
     runs-on: ubuntu-24.04
     timeout-minutes: 90
+    environment: international-worker-production
     env:
       NEXT_PUBLIC_SITE_VARIANT: io
       NEXT_PUBLIC_HOME_URL: https://fastgpt.io
@@ -49,7 +50,7 @@ jobs:
 
       - name: Validate production build and Cloudflare configuration
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           test -n "$NEXT_PUBLIC_CRM_API_URL"
@@ -66,7 +67,7 @@ jobs:
 
       - name: Deploy verified Worker and Static Assets to workers.dev
         env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
           CLOUDFLARE_ACCOUNT_ID: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
         run: |
           set -euo pipefail

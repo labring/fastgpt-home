@@ -155,63 +155,47 @@ async function verifyHttpSurface(port, worker, env) {
   const scriptPath = homeHtml.match(/<script\b[^>]*src="([^"]*\/_next\/static\/[^\"]+\.js)"/i)?.[1];
   assert(scriptPath, 'Homepage has no static JavaScript asset');
   const staticAsset = await request(scriptPath);
-  assert.equal(staticAsset.status, 200, `Static asset ${scriptPath}`);
-  assert.match(
-    staticAsset.headers.get('content-type') || '',
-    /javascript/i,
-    'Static asset content type'
-  );
-  assertSecurityHeaders(staticAsset, 'JavaScript asset');
-  assert.equal(
-    staticAsset.headers.get('cache-control'),
-    HASHED_ASSET_CACHE,
-    'Hashed static asset cache policy'
-  );
+  assertStaticAsset(staticAsset, {
+    kind: 'JavaScript',
+    path: scriptPath,
+    contentType: /javascript/i,
+    cacheControl: HASHED_ASSET_CACHE
+  });
 
   const tags = [...homeHtml.matchAll(/<link\b[^>]*>/gi)].map(([tag]) => tag);
   const stylesheetTag = tags.find((tag) => /\brel="stylesheet"/i.test(tag));
   const stylesheetPath = stylesheetTag?.match(/\bhref="([^"]+)"/i)?.[1];
   assert(stylesheetPath, 'Homepage has no stylesheet asset');
   const stylesheet = await request(stylesheetPath);
-  assert.equal(stylesheet.status, 200, `Stylesheet ${stylesheetPath}`);
-  assert.match(
-    stylesheet.headers.get('content-type') || '',
-    /text\/css/i,
-    'Stylesheet content type'
-  );
-  assertSecurityHeaders(stylesheet, 'Stylesheet');
-  assert.equal(
-    stylesheet.headers.get('cache-control'),
-    HASHED_ASSET_CACHE,
-    'Hashed stylesheet cache policy'
-  );
+  assertStaticAsset(stylesheet, {
+    kind: 'Stylesheet',
+    path: stylesheetPath,
+    contentType: /text\/css/i,
+    cacheControl: HASHED_ASSET_CACHE
+  });
 
   const imagePath = [...homeHtml.matchAll(/<img\b[^>]*>/gi)]
     .map(([tag]) => tag.match(/\bsrc="([^"]+)"/i)?.[1])
     .find((src) => src?.startsWith('/images/'));
   assert(imagePath, 'Homepage has no local image asset');
   const image = await request(imagePath);
-  assert.equal(image.status, 200, `Image ${imagePath}`);
-  assert.match(image.headers.get('content-type') || '', /^image\//i, 'Image content type');
-  assertSecurityHeaders(image, 'Image');
-  assert.equal(
-    image.headers.get('cache-control'),
-    IMAGE_CACHE,
-    'Image cache policy'
-  );
+  assertStaticAsset(image, {
+    kind: 'Image',
+    path: imagePath,
+    contentType: /^image\//i,
+    cacheControl: IMAGE_CACHE
+  });
 
   const fontTag = tags.find((tag) => /\bas="font"/i.test(tag) && /\.woff2?/i.test(tag));
   const fontPath = fontTag?.match(/\bhref="([^"]+)"/i)?.[1];
   assert(fontPath, 'Homepage has no preloaded local font asset');
   const font = await request(fontPath);
-  assert.equal(font.status, 200, `Font ${fontPath}`);
-  assert.match(font.headers.get('content-type') || '', /font|woff/i, 'Font content type');
-  assertSecurityHeaders(font, 'Font');
-  assert.equal(
-    font.headers.get('cache-control'),
-    HASHED_ASSET_CACHE,
-    'Hashed font cache policy'
-  );
+  assertStaticAsset(font, {
+    kind: 'Font',
+    path: fontPath,
+    contentType: /font|woff/i,
+    cacheControl: HASHED_ASSET_CACHE
+  });
 
   const alias = [...buildRedirects(ROOT).ioRedirects].find(([source]) => source !== '/');
   assert(alias, 'URL Alias Authority has no International Site redirect fixture');
@@ -312,6 +296,17 @@ function assertSecurityHeaders(response, label) {
   for (const [header, value] of SECURITY_HEADERS) {
     assert.equal(response.headers.get(header), value, `${label} ${header}`);
   }
+}
+
+function assertStaticAsset(response, { kind, path: assetPath, contentType, cacheControl }) {
+  assert.equal(response.status, 200, `${kind} ${assetPath}`);
+  assert.match(
+    response.headers.get('content-type') || '',
+    contentType,
+    `${kind} content type`
+  );
+  assertSecurityHeaders(response, kind);
+  assert.equal(response.headers.get('cache-control'), cacheControl, `${kind} cache policy`);
 }
 
 function assertCanonical(html, expected) {

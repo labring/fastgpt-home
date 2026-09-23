@@ -7,6 +7,7 @@ const { directoryInventory } = require('./release-readiness');
 const WORKER_ASSET_FILE_LIMIT = 20_000;
 const WORKER_ASSET_SIZE_LIMIT = 25 * 1024 * 1024;
 
+/** Enforce the Workers Static Assets file-count and largest-file size limits. */
 function inspectWorkerAssets(
   assets,
   fileLimit = WORKER_ASSET_FILE_LIMIT,
@@ -32,6 +33,7 @@ function inspectWorkerAssets(
   };
 }
 
+/** Require a pinned Wrangler 4.x version with Workers Static Assets support. */
 function verifyWranglerVersion(version) {
   const match = /^(\d+)\.(\d+)\.(\d+)$/.exec(version || '');
   assert(match, `Wrangler must use an exact 4.x version, received ${version || '<missing>'}`);
@@ -43,6 +45,7 @@ function verifyWranglerVersion(version) {
   );
 }
 
+/** Verify the IO export, Wrangler configuration, and public asset boundary. */
 function verifyWorkerArtifact({ outDir, configPath, wranglerVersion }) {
   verifyWranglerVersion(wranglerVersion);
   const workerPath = path.join(outDir, '_worker.js');

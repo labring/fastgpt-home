@@ -202,5 +202,5 @@ _Avoid_: 广告落地页, 竞品页
 ## Publication
 
 **International Site Worker Publication**:
-将生成的 Worker 重定向投影与完整已验证静态导出通过 `ASSETS` 绑定组成一个发布单元，首阶段部署到 `workers.dev`；URL Alias Authority 摘要、发布产物和验证证据随单元保留，现有 Pages 部署提供回滚来源。
-_Avoid_: Worker-only 发布, DNS 切换
+国际站的统一发布单元，由公开静态内容与其拥有的 URL Alias Authority 路由投影组成。
+_Avoid_: 独立路由发布

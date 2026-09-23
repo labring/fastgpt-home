@@ -12,7 +12,7 @@ ADR 0007 assigns Cloudflare Pages to the International Site and Preview Hosts. T
 
 - Publish the International Site through a dedicated `fastgpt-io-worker` configured with the generated `out/_worker.js`, the complete `out/` export, and the `ASSETS` binding.
 - Run the Worker before Static Assets so permanent redirects, query preservation, deterministic redirect order, and locale fallback retain their current request order.
-- Copy `public/.assetsignore` into the export and exclude `_worker.js` from the public asset namespace.
+- Write `.assetsignore` into the export and exclude `_worker.js` from the public asset namespace.
 - Use Wrangler 4.136.3, with 4.34.0 as the minimum supported version. The release verifier checks the exported Worker, asset count and largest file, then runs the Worker over Wrangler's local HTTP server before accepting the artifact.
 - Run a manually triggered release workflow from `main`. It runs `verify:release` for the `io` Site Variant, verifies the sealed artifact, and deploys that artifact to `workers.dev` with the existing Cloudflare API token and account ID conventions.
 - Keep the URL Alias Authority bundle, static export, Wrangler configuration, artifact digest, and deployment verification evidence together. Retain the current Pages deployment as the rollback source throughout the workers.dev behavior comparison.

@@ -20,6 +20,22 @@ const CONFIG_PATH = path.join(ROOT, 'wrangler.json');
 const PACKAGE = require('../package.json');
 const LOCK = require('../package-lock.json');
 const WRANGLER_BIN = path.join(ROOT, 'node_modules', 'wrangler', 'bin', 'wrangler.js');
+const SECURITY_HEADERS = [
+  ['strict-transport-security', 'max-age=31536000; includeSubDomains; preload'],
+  ['x-frame-options', 'DENY'],
+  ['x-content-type-options', 'nosniff'],
+  ['referrer-policy', 'strict-origin-when-cross-origin'],
+  ['permissions-policy', 'camera=(), microphone=(), geolocation=()'],
+  ['cross-origin-opener-policy', 'same-origin-allow-popups']
+];
+const HASHED_ASSET_CACHE = [
+  'public, max-age=31536000, immutable',
+  'public, max-age=3600, stale-while-revalidate=86400'
+].join(', ');
+const IMAGE_CACHE = [
+  'public, max-age=86400, stale-while-revalidate=604800',
+  'public, max-age=3600, stale-while-revalidate=86400'
+].join(', ');
 
 function loadWorker(workerPath) {
   const source = fs.readFileSync(workerPath, 'utf8');
@@ -116,16 +132,16 @@ async function verifyHttpSurface(port, worker, env) {
   const home = await request('/');
   assert.equal(home.status, 200, 'Worker homepage status');
   assert.match(home.headers.get('content-type') || '', /text\/html/i, 'Homepage content type');
-  for (const [header, value] of [
-    ['strict-transport-security', 'max-age=31536000; includeSubDomains; preload'],
-    ['x-frame-options', 'DENY'],
-    ['x-content-type-options', 'nosniff']
-  ]) {
-    assert.equal(home.headers.get(header), value, `Homepage ${header}`);
-  }
+  assert.equal(
+    home.headers.get('cache-control'),
+    'public, max-age=3600, stale-while-revalidate=86400',
+    'Homepage cache policy'
+  );
+  assertSecurityHeaders(home, 'Homepage');
+  assert.match(home.headers.get('content-security-policy') || '', /frame-ancestors 'none'/);
   assert.equal(home.headers.get('x-robots-tag'), null, 'International Site must remain indexable');
   const homeHtml = await home.text();
-  assertCanonical(homeHtml, `${env.io}/`);
+  assertCanonical(homeHtml, env.io);
 
   const faqId = getPublishedFaqIds(ROOT).english[0];
   const deepPath = `/faq/${faqId}`;
@@ -144,6 +160,57 @@ async function verifyHttpSurface(port, worker, env) {
     staticAsset.headers.get('content-type') || '',
     /javascript/i,
     'Static asset content type'
+  );
+  assertSecurityHeaders(staticAsset, 'JavaScript asset');
+  assert.equal(
+    staticAsset.headers.get('cache-control'),
+    HASHED_ASSET_CACHE,
+    'Hashed static asset cache policy'
+  );
+
+  const tags = [...homeHtml.matchAll(/<link\b[^>]*>/gi)].map(([tag]) => tag);
+  const stylesheetTag = tags.find((tag) => /\brel="stylesheet"/i.test(tag));
+  const stylesheetPath = stylesheetTag?.match(/\bhref="([^"]+)"/i)?.[1];
+  assert(stylesheetPath, 'Homepage has no stylesheet asset');
+  const stylesheet = await request(stylesheetPath);
+  assert.equal(stylesheet.status, 200, `Stylesheet ${stylesheetPath}`);
+  assert.match(
+    stylesheet.headers.get('content-type') || '',
+    /text\/css/i,
+    'Stylesheet content type'
+  );
+  assertSecurityHeaders(stylesheet, 'Stylesheet');
+  assert.equal(
+    stylesheet.headers.get('cache-control'),
+    HASHED_ASSET_CACHE,
+    'Hashed stylesheet cache policy'
+  );
+
+  const imagePath = [...homeHtml.matchAll(/<img\b[^>]*>/gi)]
+    .map(([tag]) => tag.match(/\bsrc="([^"]+)"/i)?.[1])
+    .find((src) => src?.startsWith('/images/'));
+  assert(imagePath, 'Homepage has no local image asset');
+  const image = await request(imagePath);
+  assert.equal(image.status, 200, `Image ${imagePath}`);
+  assert.match(image.headers.get('content-type') || '', /^image\//i, 'Image content type');
+  assertSecurityHeaders(image, 'Image');
+  assert.equal(
+    image.headers.get('cache-control'),
+    IMAGE_CACHE,
+    'Image cache policy'
+  );
+
+  const fontTag = tags.find((tag) => /\bas="font"/i.test(tag) && /\.woff2?/i.test(tag));
+  const fontPath = fontTag?.match(/\bhref="([^"]+)"/i)?.[1];
+  assert(fontPath, 'Homepage has no preloaded local font asset');
+  const font = await request(fontPath);
+  assert.equal(font.status, 200, `Font ${fontPath}`);
+  assert.match(font.headers.get('content-type') || '', /font|woff/i, 'Font content type');
+  assertSecurityHeaders(font, 'Font');
+  assert.equal(
+    font.headers.get('cache-control'),
+    HASHED_ASSET_CACHE,
+    'Hashed font cache policy'
   );
 
   const alias = [...buildRedirects(ROOT).ioRedirects].find(([source]) => source !== '/');
@@ -169,6 +236,7 @@ async function verifyHttpSurface(port, worker, env) {
     'Redirect status differs from the generated Worker'
   );
   for (const header of [
+    'content-type',
     'location',
     'cache-control',
     'content-security-policy',
@@ -211,6 +279,8 @@ async function verifyHttpSurface(port, worker, env) {
 
   const robots = await request('/robots.txt');
   assert.equal(robots.status, 200, 'robots.txt status');
+  assert.match(robots.headers.get('content-type') || '', /text\/plain/i, 'robots.txt content type');
+  assertSecurityHeaders(robots, 'robots.txt');
   assert(
     (await robots.text()).includes(`Sitemap: ${env.io}/sitemap.xml`),
     'robots.txt Sitemap owner'
@@ -228,7 +298,20 @@ async function verifyHttpSurface(port, worker, env) {
     'Worker entrypoint must stay outside the public namespace'
   );
   assert(!(await workerSource.text()).includes('redirectAuthority'), 'Worker source was exposed');
-  return { deepPath, redirectPath: sourcePath, staticAsset: scriptPath };
+  return {
+    deepPath,
+    redirectPath: sourcePath,
+    staticAsset: scriptPath,
+    stylesheet: stylesheetPath,
+    image: imagePath,
+    font: fontPath
+  };
+}
+
+function assertSecurityHeaders(response, label) {
+  for (const [header, value] of SECURITY_HEADERS) {
+    assert.equal(response.headers.get(header), value, `${label} ${header}`);
+  }
 }
 
 function assertCanonical(html, expected) {
@@ -268,7 +351,8 @@ async function main() {
       getProductionBaseUrls()
     );
     console.log(
-      `[verify-worker-release] passed: assets=${inventory.assetCount}, largest=${inventory.largestAssetPath} (${inventory.largestAssetBytes} bytes), deep=${routes.deepPath}, redirect=${routes.redirectPath}, static=${routes.staticAsset}, wrangler=${pinnedVersion}`
+      `[verify-worker-release] passed: assets=${inventory.assetCount}, largest=${inventory.largestAssetPath} (${inventory.largestAssetBytes} bytes), deep=${routes.deepPath}, redirect=${routes.redirectPath}, ` +
+        `js=${routes.staticAsset}, css=${routes.stylesheet}, image=${routes.image}, font=${routes.font}, wrangler=${pinnedVersion}`
     );
   } finally {
     await stopWrangler(child);
@@ -282,5 +366,3 @@ if (require.main === module) {
     process.exitCode = 1;
   });
 }
-
-module.exports = { assertCanonical, loadWorker, verifyHttpSurface };

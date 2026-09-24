@@ -2,8 +2,9 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-// Gate against the Workers Free limit until the release account's plan is part of the contract.
-const WORKER_ASSET_FILE_LIMIT = 20_000;
+const WORKER_ASSET_FILE_LIMIT = Number(
+  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 20_000
+);
 const WORKER_ASSET_SIZE_LIMIT = 25 * 1024 * 1024;
 
 /** Enforce the Workers Static Assets file-count and largest-file size limits. */

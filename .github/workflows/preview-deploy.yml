@@ -38,6 +38,7 @@ jobs:
       NEXT_PUBLIC_CRM_API_URL: ''
       NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
       NEXT_PUBLIC_LANGUAGE_REGION: en-US
+      CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: 100000
     steps:
       # Only default-branch verification code runs in this privileged workflow.
       - uses: actions/checkout@v4

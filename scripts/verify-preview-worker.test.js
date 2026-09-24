@@ -34,6 +34,20 @@ test('PR preview deployment uses an isolated Worker and the verified artifact', 
   assert.doesNotMatch(source, /pages deploy/);
 });
 
+test('PR preview build hands the sealed artifact to the deployment consumer', () => {
+  const job = load(readWorkflow('preview.yml')).jobs.build;
+  const verifier = job.steps.find((step) => step.with?.path === '.preview-verifier');
+  const consumer = job.steps.find((step) =>
+    (step.run || '').includes('verify-preview-artifact.js')
+  );
+
+  assert.match(verifier.with['sparse-checkout'], /^package\.json$/m);
+  assert.match(verifier.with['sparse-checkout'], /^wrangler\.json$/m);
+  assert.match(consumer.run, /--bundle \.release-artifacts\/site\/preview-disabled/);
+  assert.match(consumer.run, /--candidate \. /);
+  assert.match(consumer.run, /--trusted-config \.preview-verifier\/wrangler\.json/);
+});
+
 test('PR preview cleanup deletes the numbered Worker with the same credential boundary', () => {
   const source = readWorkflow('preview-worker-cleanup.yml');
   const workflow = load(source);

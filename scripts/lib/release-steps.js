@@ -124,6 +124,11 @@ function getSourceNodeSteps() {
 function getSourceNpmSteps() {
   return [
     [
+      'content-collections.source',
+      'Content Collections generation',
+      ['generate:content-collections']
+    ],
+    [
       'content-hygiene.regression',
       'Content hygiene regression',
       ['verify:content-hygiene-regression']

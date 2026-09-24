@@ -502,7 +502,11 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   );
   assert.match(
     packageJson.scripts.build,
-    /verify-content-hygiene\.js --mode html --root out && node scripts\/verify-ads\.js$/
+    /fix-html-lang\.js && npm run generate:blog-pagefind && node --test scripts\/verify-content-sidebar-cta\.test\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out && node scripts\/verify-ads\.js$/
+  );
+  assert.equal(
+    packageJson.scripts['generate:blog-pagefind'],
+    "pagefind --site out --output-subdir pagefind/blog --glob '**/*/blog/**/*.html'"
   );
   assert(getSourceExecutionOrder().includes('typescript.source'));
   const workflow = require('js-yaml').load(verificationWorkflow);
@@ -510,6 +514,12 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   assert.equal(workflow.on.workflow_run, undefined);
   assert(workflow.on.workflow_dispatch !== undefined || Object.hasOwn(workflow.on, 'workflow_dispatch'));
 
+  // The shared source record pins the producing toolchain, so consumers must not re-resolve 24.
+  assert.equal(workflow.jobs.source.outputs.node, '${{ steps.node.outputs.version }}');
+  const verifyNode = workflow.jobs.verify.steps.find((step) =>
+    String(step.uses).startsWith('actions/setup-node')
+  );
+  assert.equal(verifyNode.with['node-version'], '${{ needs.source.outputs.node }}');
 });
 
 test('P1 successful evidence keeps the emitted KiB measurement', () => {

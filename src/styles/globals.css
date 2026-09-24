@@ -119,6 +119,42 @@
   }
 }
 
+@layer components {
+  .prose a {
+    color: var(--light-fastgpt-primary-text, var(--home-primary));
+    text-decoration-line: underline;
+    text-decoration-style: dotted;
+  }
+
+  .prose :is(h1, h2, h3, h4, h5, h6) > a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .prose :is(h1, h2, h3, h4, h5, h6) > a:hover {
+    text-decoration-line: underline;
+    text-decoration-style: solid;
+  }
+
+  .prose :not(pre) > code {
+    padding: 0 0.25rem;
+    border-radius: var(--sm, 0.25rem);
+    border: 1px solid var(--Gray-Modern-200, #e5e7eb);
+    background: var(--Gray-Modern-50, #f9fafb);
+    font-weight: 400;
+  }
+
+  .prose :not(pre) > code::before,
+  .prose :not(pre) > code::after {
+    content: none;
+  }
+
+  .prose pre {
+    border: 1px solid var(--Gray-Modern-200, #e5e7eb);
+    background: #ffffff;
+  }
+}
+
 /* Legacy global heading styles for the dark marketing pages.
    Selector uses :where() to keep specificity at 0 so any Tailwind utility
    class applied on the element (text-ink, font-semibold, text-[36px], …)

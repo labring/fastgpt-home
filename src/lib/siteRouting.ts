@@ -70,6 +70,16 @@ export function getReviewLocalePath(locale: string, path = '') {
     : getOwnedLocalePath(normalizedLocale, normalizedPath);
 }
 
+/** Same-host navigation path: prefixed unless the locale is this host's default locale. */
+export function getHostLocalePath(locale: string, path = '') {
+  const normalizedLocale = normalizeLocale(locale);
+  const normalizedPath = normalizePath(path);
+  if (currentSiteVariant !== 'preview' && normalizedLocale === getDefaultLocaleForSiteVariant()) {
+    return normalizedPath;
+  }
+  return `/${normalizedLocale}${normalizedPath === '/' ? '' : normalizedPath}`;
+}
+
 export function getOwnedLocaleUrl(locale: string, path = '') {
   const normalizedLocale = normalizeLocale(locale);
   return `${getSiteBaseUrl(getLocaleOwner(normalizedLocale))}${getOwnedLocalePath(

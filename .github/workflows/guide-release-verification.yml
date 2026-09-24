@@ -28,7 +28,6 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-<<<<<<< HEAD
           node-version: 24
       # The shared source record pins the producing toolchain, so every consumer
       # job must install this exact Node instead of re-resolving the 24 range.
@@ -36,9 +35,6 @@ jobs:
         id: node
         run: |
           echo "version=$(node -p 'process.versions.node')" >> "$GITHUB_OUTPUT"
-=======
-          node-version: 24.20.0
->>>>>>> e7bdc51a (ci: pin Node version for shared release verification)
       - name: Resolve this workflow's publication inputs
         id: inputs
         uses: actions/github-script@v7
@@ -85,11 +81,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-<<<<<<< HEAD
           node-version: ${{ needs.source.outputs.node }}
-=======
-          node-version: 24.20.0
->>>>>>> e7bdc51a (ci: pin Node version for shared release verification)
           cache: npm
       - run: npm ci
       - uses: actions/download-artifact@v4

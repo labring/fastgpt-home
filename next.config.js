@@ -10,6 +10,9 @@ const nextConfig = {
   allowedDevOrigins: ['192.168.12.18', '127.0.0.1'],
   images: { unoptimized: true },
   transpilePackages: ['@heroui/react', '@heroui/theme'],
+
+  // Avoid child-process static-path workers in development environments with invalid stdio handles.
+  ...(!isExport && { experimental: { workerThreads: true } }),
   
   // Enable compression
   compress: true,

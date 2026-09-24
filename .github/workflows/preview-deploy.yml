@@ -85,7 +85,7 @@ jobs:
               run_id: runId,
             });
             const resolvedContext = {
-              ...context,
+              repo: context.repo,
               payload: { ...context.payload, workflow_run: workflowRun },
             };
             const inputs = await resolve(github, resolvedContext, selection, source);

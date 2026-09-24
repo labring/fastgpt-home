@@ -21,6 +21,7 @@ jobs:
     outputs:
       revision: ${{ steps.inputs.outputs.revision }}
       matrix: ${{ steps.inputs.outputs.matrix }}
+      node: ${{ steps.node.outputs.version }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -28,6 +29,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 24
+      # The shared source record pins the producing toolchain, so every consumer
+      # job must install this exact Node instead of re-resolving the 24 range.
+      - name: Record the resolved Node toolchain
+        id: node
+        run: |
+          echo "version=$(node -p 'process.versions.node')" >> "$GITHUB_OUTPUT"
       - name: Resolve this workflow's publication inputs
         id: inputs
         uses: actions/github-script@v7
@@ -74,7 +81,7 @@ jobs:
           persist-credentials: false
       - uses: actions/setup-node@v4
         with:
-          node-version: 24
+          node-version: ${{ needs.source.outputs.node }}
           cache: npm
       - run: npm ci
       - uses: actions/download-artifact@v4

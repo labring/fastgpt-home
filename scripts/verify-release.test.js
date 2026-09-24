@@ -514,6 +514,12 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   assert.equal(workflow.on.workflow_run, undefined);
   assert(workflow.on.workflow_dispatch !== undefined || Object.hasOwn(workflow.on, 'workflow_dispatch'));
 
+  // The shared source record pins the producing toolchain, so consumers must not re-resolve 24.
+  assert.equal(workflow.jobs.source.outputs.node, '${{ steps.node.outputs.version }}');
+  const verifyNode = workflow.jobs.verify.steps.find((step) =>
+    String(step.uses).startsWith('actions/setup-node')
+  );
+  assert.equal(verifyNode.with['node-version'], '${{ needs.source.outputs.node }}');
 });
 
 test('P1 successful evidence keeps the emitted KiB measurement', () => {

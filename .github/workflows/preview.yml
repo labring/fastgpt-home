@@ -139,12 +139,14 @@ jobs:
           persist-credentials: false
           sparse-checkout-cone-mode: false
           sparse-checkout: |
+            package.json
+            wrangler.json
             scripts/lib/
             scripts/verify-preview-artifact.js
             src/config/site-routing.json
 
       - name: Exercise the deployment consumer on the complete Preview artifact
-        run: node .preview-verifier/scripts/verify-preview-artifact.js --bundle .release-artifacts/site/preview-disabled --candidate . --revision "$(git rev-parse HEAD)"
+        run: node .preview-verifier/scripts/verify-preview-artifact.js --bundle .release-artifacts/site/preview-disabled --candidate . --revision "$(git rev-parse HEAD)" --trusted-config .preview-verifier/wrangler.json
 
       - name: Upload verified disabled preview
         uses: actions/upload-artifact@v4

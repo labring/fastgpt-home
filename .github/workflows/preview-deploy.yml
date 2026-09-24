@@ -4,6 +4,12 @@ on:
   workflow_run:
     workflows: ['Preview Home Page — Build']
     types: [completed]
+  workflow_dispatch:
+    inputs:
+      build_run_id:
+        description: 'Successful Preview Home Page — Build run to deploy'
+        required: true
+        type: string
 
 # Serialize every preview Worker mutation with cleanup so a closed PR cannot
 # race a deployment for the same Worker.
@@ -23,8 +29,8 @@ env:
 jobs:
   deploy:
     runs-on: ubuntu-24.04
-    # Only deploy when the build succeeded.
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    # Deploy completed builds or an explicitly selected successful build artifact.
+    if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
     environment: international-worker-preview
 
     env:
@@ -52,13 +58,13 @@ jobs:
         with:
           name: verified-preview
           path: verified-preview
-          run-id: ${{ github.event.workflow_run.id }}
+          run-id: ${{ github.event_name == 'workflow_dispatch' && inputs.build_run_id || github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/download-artifact@v4
         with:
           name: verified-source
           path: source
-          run-id: ${{ github.event.workflow_run.id }}
+          run-id: ${{ github.event_name == 'workflow_dispatch' && inputs.build_run_id || github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Validate run and merge-result metadata
         id: pr
@@ -69,7 +75,20 @@ jobs:
             const resolve = require('./verifier/scripts/lib/preview-run-inputs.js');
             const selection = JSON.parse(fs.readFileSync('source/preview-selection.json'));
             const source = JSON.parse(fs.readFileSync('source/.release-artifacts/source-verification.json'));
-            const inputs = await resolve(github, context, selection, source);
+            const runId = context.eventName === 'workflow_dispatch'
+              ? Number('${{ inputs.build_run_id }}')
+              : context.payload.workflow_run.id;
+            if (!Number.isInteger(runId) || runId <= 0) throw new Error('Invalid Preview build run ID');
+            const { data: workflowRun } = await github.rest.actions.getWorkflowRun({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              run_id: runId,
+            });
+            const resolvedContext = {
+              ...context,
+              payload: { ...context.payload, workflow_run: workflowRun },
+            };
+            const inputs = await resolve(github, resolvedContext, selection, source);
             for (const [key, value] of Object.entries(inputs)) core.setOutput(key, value);
       - name: Read candidate inputs without executing candidate code
         uses: actions/checkout@v4
@@ -86,7 +105,7 @@ jobs:
         id: worker
         env:
           PR_NUMBER: ${{ steps.pr.outputs.number }}
-          WORKFLOW_RUN_ID: ${{ github.event.workflow_run.id }}
+          WORKFLOW_RUN_ID: ${{ github.event_name == 'workflow_dispatch' && inputs.build_run_id || github.event.workflow_run.id }}
         run: |
           set -euo pipefail
           if [[ "$PR_NUMBER" =~ ^[0-9]+$ ]]; then
@@ -100,7 +119,7 @@ jobs:
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: '4.136.3'
           command: deploy --config ./verified-preview/payload/wrangler.json --name ${{ steps.worker.outputs.name }}

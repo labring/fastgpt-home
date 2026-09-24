@@ -33,7 +33,7 @@ function getInitialJavaScriptGzipBytes(html, outDir) {
   let gzipBytes = 0;
 
   for (const source of scriptSources) {
-    const scriptPath = path.join(outDir, source.replace(/^\//, ''));
+    const scriptPath = path.join(outDir, decodeURIComponent(source).replace(/^\//, ''));
     assert(fs.existsSync(scriptPath), `Missing initial JavaScript asset ${source}`);
     gzipBytes += zlib.gzipSync(fs.readFileSync(scriptPath), { level: 9 }).length;
   }
@@ -53,7 +53,12 @@ function getInitialJavaScriptSources(html) {
 function verifyRegistryIsOutsideInitialJavaScript(html, outDir, registryPath, maxInitialEntries) {
   const scriptSources = getInitialJavaScriptSources(html);
   const initialJavaScript = [...scriptSources]
-    .map((source) => fs.readFileSync(path.join(outDir, source.replace(/^\//, '')), 'utf8'))
+    .map((source) =>
+      fs.readFileSync(
+        path.join(outDir, decodeURIComponent(source).replace(/^\//, '')),
+        'utf8'
+      )
+    )
     .join('\n');
   const registry = JSON.parse(fs.readFileSync(registryPath, 'utf8'));
   const embeddedEntry = registry.slice(maxInitialEntries).find((entry) => {

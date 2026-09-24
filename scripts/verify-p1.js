@@ -301,7 +301,7 @@ function verifyInitialJavaScript(rootHtml) {
 
   for (const source of scriptSources) {
     const pathname = new URL(source, baseUrl).pathname;
-    const scriptPath = path.join(outDir, pathname.replace(/^\//, ''));
+    const scriptPath = path.join(outDir, decodeURIComponent(pathname).replace(/^\//, ''));
 
     assert(fs.existsSync(scriptPath), `Missing initial JavaScript asset ${pathname}`);
     const script = fs.readFileSync(scriptPath);

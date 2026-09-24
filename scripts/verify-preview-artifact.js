@@ -10,11 +10,12 @@ const { verifySiteArtifact } = require('./lib/site-artifacts');
 try {
   const args = process.argv.slice(2);
   assert(
-    args.length === 6 &&
+    args.length === 8 &&
       args[0] === '--bundle' &&
       args[2] === '--candidate' &&
-      args[4] === '--revision',
-    'Usage: verify-preview-artifact --bundle DIRECTORY --candidate DIRECTORY --revision SHA'
+      args[4] === '--revision' &&
+      args[6] === '--trusted-config',
+    'Usage: verify-preview-artifact --bundle DIRECTORY --candidate DIRECTORY --revision SHA --trusted-config FILE'
   );
   assert(/^[a-f0-9]{40}$/.test(args[5]), 'Invalid verified Preview revision');
   assert(fs.lstatSync(args[3]).isDirectory(), 'Candidate must be a real directory');
@@ -27,7 +28,7 @@ try {
   });
   assert.equal(inputs.siteVariant, 'preview', 'Preview deployment requires Preview settings');
   assert.equal(inputs.crmMode, 'disabled', 'Preview deployment requires disabled CRM');
-  const manifest = verifySiteArtifact(args[1], inputs);
+  const manifest = verifySiteArtifact(args[1], inputs, { trustedConfigPath: args[7] });
   console.log(`Verified Preview publication: ${manifest.inventory.sha256}`);
 } catch (error) {
   console.error(error.message);

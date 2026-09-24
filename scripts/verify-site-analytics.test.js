@@ -116,7 +116,7 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
     for (const hostname of [
       'fastgpt.cn',
       'fastgpt.io',
-      'preview.pages.dev',
+      'fastgpt-preview-pr-123.example.workers.dev',
       'localhost',
       'customers.fastgpt.cn',
       'fastgpt.cn.example.com'
@@ -283,7 +283,12 @@ test('Site analytics preserve vendor queues, scope, loading, and deployment wiri
     );
     assert.equal(cancelled, unmount, 'Cancel idle work on unmount');
   }
-  for (const hostname of ['fastgpt.cn', 'fastgpt.io', 'preview.pages.dev', 'localhost']) {
+  for (const hostname of [
+    'fastgpt.cn',
+    'fastgpt.io',
+    'fastgpt-preview-pr-123.example.workers.dev',
+    'localhost'
+  ]) {
     await renderIntegrations(hostname);
   }
   await renderIntegrations('fastgpt.cn', true);

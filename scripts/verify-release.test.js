@@ -351,6 +351,33 @@ test('preview release gates skip production-only FAQ artifacts and sitemap cardi
   assert(cnIds.includes('faq-seo-graph.html'));
 });
 
+test('IO release validates the Worker artifact while other variants keep their publication paths', () => {
+  assert.equal(
+    packageJson.scripts['verify:worker-release'],
+    'node scripts/verify-worker-release.js'
+  );
+  assert.equal(
+    packageJson.scripts['verify:worker-release-regression'],
+    'node --test scripts/verify-worker-release.test.js'
+  );
+  assert(
+    getSourceNpmSteps().some(([id]) => id === 'worker-publication.regression'),
+    'Worker publication regression must run in source verification'
+  );
+  assert(
+    getVariantSteps('io').some((step) => step.id === 'worker.release'),
+    'IO export verification must run the Wrangler Worker gate'
+  );
+  assert.equal(
+    getVariantSteps('cn').some((step) => step.id === 'worker.release'),
+    false
+  );
+  assert.equal(
+    getVariantSteps('preview').some((step) => step.id === 'worker.release'),
+    false
+  );
+});
+
 test('release source checks run content hygiene first and block dirty published Markdown', () => {
   assert.equal(
     packageJson.scripts['verify:content-hygiene'],

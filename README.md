@@ -10,7 +10,7 @@ FastGPT 官网首页，基于 Next.js 16 + React 19 构建。
 - React 19
 - TailwindCSS
 - HeroUI
-- Cloudflare Pages
+- Cloudflare Workers Static Assets
 
 ## Development
 
@@ -51,7 +51,7 @@ npm run build
 npm run build
 ```
 
-构建产物输出到 `out/` 目录（静态导出），通过 Nginx 或 Cloudflare Pages 托管。
+构建产物输出到 `out/` 目录（静态导出），通过 Nginx 或 Cloudflare Workers Static Assets 托管。
 
 ## Docker
 
@@ -63,7 +63,7 @@ docker build \
 docker run -p 80:80 fastgpt-home
 ```
 
-The Docker image publishes the `cn` Site Variant. The `io` and `preview` variants publish through Cloudflare Pages.
+The Docker image publishes the `cn` Site Variant. The `io` and `preview` variants publish through Cloudflare Workers Static Assets.
 
 ## License
 

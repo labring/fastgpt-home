@@ -190,7 +190,12 @@ function getSourceNpmSteps() {
       'FAQ metadata normalization regression',
       ['verify:faq-metadata-authority-regression']
     ],
-    ['release-readiness.regression', 'release readiness regression', ['verify:release-readiness']]
+    ['release-readiness.regression', 'release readiness regression', ['verify:release-readiness']],
+    [
+      'worker-publication.regression',
+      'Worker publication regression',
+      ['verify:worker-release-regression']
+    ]
   ];
 }
 
@@ -287,7 +292,17 @@ function getVariantSteps(variant) {
             label: `FAQ redirect artifact verification (${variant})`,
             args: ['verify:faq-redirects']
           }
-        ])
+        ]),
+    ...(variant === 'io'
+      ? [
+          {
+            runner: 'npm',
+            id: 'worker.release',
+            label: 'Worker Static Assets release verification (io)',
+            args: ['verify:worker-release']
+          }
+        ]
+      : [])
   ];
   return steps;
 }

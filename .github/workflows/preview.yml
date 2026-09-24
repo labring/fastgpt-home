@@ -31,6 +31,7 @@ jobs:
       NEXT_PUBLIC_CRM_API_URL: ''
       NEXT_PUBLIC_LANGUAGE_REGION: en-US
       NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
+      CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: 100000
 
     steps:
       - name: Checkout merge result or selected manual revision

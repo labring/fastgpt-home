@@ -17,7 +17,9 @@ export default function HighlightsSection({
   if (!featured) return null;
 
   return (
-    <section className="container grid gap-8 pb-16 pt-20 md:pt-32 lg:grid-cols-7">
+    // increase z-index here because Header's z-index is elevated by `position: relative`,
+    // the glowing blobs will overflow and cover over this section.
+    <section className="container z-10 grid gap-8 pb-16 pt-20 md:pt-32 lg:grid-cols-7">
       <div className="lg:col-span-4">
         <HighlightPost
           post={featured}

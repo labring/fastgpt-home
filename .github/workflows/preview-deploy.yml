@@ -31,7 +31,7 @@ jobs:
     runs-on: ubuntu-24.04
     # Deploy completed builds or an explicitly selected successful build artifact.
     if: ${{ github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success' }}
-    environment: international-worker-preview
+    environment: international-worker-production
 
     env:
       NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
@@ -119,7 +119,7 @@ jobs:
         id: deploy
         uses: cloudflare/wrangler-action@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          apiToken: ${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}
           accountId: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
           wranglerVersion: '4.136.3'
           command: deploy --config ./verified-preview/payload/wrangler.json --name ${{ steps.worker.outputs.name }}

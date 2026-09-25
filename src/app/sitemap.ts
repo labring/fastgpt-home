@@ -2,6 +2,7 @@ import { MetadataRoute } from 'next';
 import { faqContentLocaleCodes, getFaqIds } from '@/faq';
 import {
   currentSiteVariant,
+  getDefaultLocaleForSiteVariant,
   getLocaleOwner,
   getOwnedFaqUrl,
   getOwnedLocaleUrl,
@@ -21,7 +22,12 @@ import { guideEntries } from '@/content/guides/registry';
 import { getGuideCanonicalUrl } from '@/lib/guideSeo';
 import { getPublishedBlogs } from '@/content/blog';
 import { getBlogCanonicalUrl } from '@/lib/blogSeo';
-import { getIndustryPath, getIndustrySitemapEntries } from '@/lib/industryContent';
+import {
+  getIndustryPath,
+  getIndustrySitemapEntries,
+  resolveIndustryLocale
+} from '@/lib/industryContent';
+import { getIndustryHubCanonicalUrl } from '@/lib/industrySeo';
 import { getAllPublishedSolutionDetails, getCategories } from '@customers/lib/data';
 import { getSolutionPublicHref } from '@customers/lib/solution-url';
 import { absoluteUrl } from '@customers/lib/site-url';
@@ -119,7 +125,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  for (const article of getIndustrySitemapEntries(currentSiteVariant)) {
+  const industryEntries = getIndustrySitemapEntries(currentSiteVariant);
+  const industryLocale = resolveIndustryLocale(getDefaultLocaleForSiteVariant(currentSiteVariant));
+  if (industryEntries.length && industryLocale) {
+    addEntry(
+      getIndustryHubCanonicalUrl(industryLocale),
+      getLatestDate(industryEntries.map((article) => new Date(`${article.dateModified}T00:00:00Z`)))
+    );
+  }
+  for (const article of industryEntries) {
     addEntry(
       getOwnedLocaleUrl(article.locale, getIndustryPath(article.slug)),
       new Date(`${article.dateModified}T00:00:00Z`)

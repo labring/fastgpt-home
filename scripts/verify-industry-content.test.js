@@ -14,18 +14,20 @@ test('normalized fixture sources pass the Industry contract', () => {
   assert.equal(articles.filter((article) => article.locale === 'en').length, 9000);
   assert.equal(new Set(articles.map((article) => article.slug)).size, 10080);
   const slugCounts = new Map();
-  for (const article of articles) slugCounts.set(article.slug, (slugCounts.get(article.slug) || 0) + 1);
-  assert.equal(
-    articles.filter((article) => slugCounts.get(article.slug) === 2).length,
-    18000
-  );
+  for (const article of articles)
+    slugCounts.set(article.slug, (slugCounts.get(article.slug) || 0) + 1);
+  assert.equal(articles.filter((article) => slugCounts.get(article.slug) === 2).length, 18000);
   assert.ok(articles.every((article) => article.metadata.date_published === '2026-09-15'));
   assert.ok(articles.every((article) => article.metadata.date_modified === '2026-09-15'));
   assert.ok(
-    articles.filter((article) => article.locale === 'zh').every((article) => article.metadata.keywords)
+    articles
+      .filter((article) => article.locale === 'zh')
+      .every((article) => article.metadata.keywords)
   );
   assert.ok(
-    articles.filter((article) => article.locale === 'en').every((article) => !article.metadata.keywords)
+    articles
+      .filter((article) => article.locale === 'en')
+      .every((article) => !article.metadata.keywords)
   );
   assert.ok(articles.every((article) => !article.body.includes('meta_description:')));
 });
@@ -60,10 +62,21 @@ test('publication boundaries keep locale-aware alternates and export cleanup', (
   const root = path.join(__dirname, '..');
   const seo = fs.readFileSync(path.join(root, 'src/lib/seo.ts'), 'utf8');
   const industrySeo = fs.readFileSync(path.join(root, 'src/lib/industrySeo.ts'), 'utf8');
+  const industryHubRoute = fs.readFileSync(
+    path.join(root, 'src/components/industry/IndustryHubRoute.tsx'),
+    'utf8'
+  );
+  const industryHubPage = fs.readFileSync(path.join(root, 'src/app/industry/page.tsx'), 'utf8');
+  const footer = fs.readFileSync(path.join(root, 'src/components/home/Footer.tsx'), 'utf8');
+  const sitemap = fs.readFileSync(path.join(root, 'src/app/sitemap.ts'), 'utf8');
   const cleanup = fs.readFileSync(path.join(root, 'scripts/clean-locale-output.js'), 'utf8');
 
   assert.match(seo, /if \(availableLocales\.includes\('en'\)\)/);
   assert.match(industrySeo, /getAlternates\(article\.locale/);
+  assert.match(industryHubRoute, /IndustryHubPage/);
+  assert.match(industryHubPage, /getIndustryHubMetadata/);
+  assert.match(footer, /t\.links\.items\.industry/);
+  assert.match(sitemap, /getIndustryHubCanonicalUrl/);
   assert.match(cleanup, /removeRoute\('\/industry'\)/);
   assert.match(cleanup, /const ownerLocale = variant === 'cn' \? 'zh' : 'en';/);
   assert.match(cleanup, /removeRoute\(`\/\$\{ownerLocale\}\/industry`\)/);

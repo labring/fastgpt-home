@@ -185,6 +185,12 @@ export function getIndustryReviewParams(variant: SiteVariant = currentSiteVarian
   return industryArticles.map(({ locale, slug }) => ({ lang: locale, slug }));
 }
 
+export function getIndustryHubParams(variant: SiteVariant = currentSiteVariant) {
+  if (variant === 'preview') return INDUSTRY_LOCALES.map((lang) => ({ lang }));
+  const locale = resolveIndustryLocale(getDefaultLocaleForSiteVariant(variant));
+  return locale ? [{ lang: locale }] : [];
+}
+
 export function getIndustryOwnerParams(variant: SiteVariant = currentSiteVariant) {
   return [
     ...new Set(
@@ -195,8 +201,14 @@ export function getIndustryOwnerParams(variant: SiteVariant = currentSiteVariant
   ].map((slug) => ({ slug }));
 }
 
-export function getIndustryPath(slug: string) {
-  return `/industry/${slug}`;
+export function getIndustryPath(slug?: string) {
+  return slug ? `/industry/${slug}` : '/industry';
+}
+
+export function getIndustryHubArticles(locale: IndustryLocale, pageType: string, limit = 4) {
+  return industryArticles
+    .filter((article) => article.locale === locale && article.pageType === pageType)
+    .slice(0, limit);
 }
 
 export function getIndustrySitemapEntries(variant: SiteVariant = currentSiteVariant) {

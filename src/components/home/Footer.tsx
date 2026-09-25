@@ -1,4 +1,4 @@
-import { getPublicationUrls } from '@/lib/siteRouting';
+import { getPublicationUrls, getReviewLocalePath } from '@/lib/siteRouting';
 import FastGPTLogo from '@/components/home/FastGPTLogo';
 import { assets } from '@/components/home/assets';
 import Image from 'next/image';
@@ -31,6 +31,7 @@ type FooterT = {
         learning: string;
         cases: string;
         tech: string;
+        industry: string;
       };
     };
     partner: { title: string };
@@ -99,6 +100,11 @@ function buildColumns(t: FooterT['columns'], locale?: string): Column[] {
         {
           label: t.links.items.tech,
           href: getDefaultLocalePath(techLocale, '/tech-center'),
+          external: false
+        },
+        {
+          label: t.links.items.industry,
+          href: getReviewLocalePath(guideLocale, '/industry'),
           external: false
         }
       ]

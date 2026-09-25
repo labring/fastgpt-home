@@ -88,7 +88,8 @@ for (const variant of ['cn', 'io']) {
         '{learning}': locale === 'zh' ? '/videos' : 'https://video.fastgpt.cn/videos',
         '{cases}': locale === 'zh' ? '/customers' : 'https://fastgpt.cn/customers',
         '{faq}': route(publishedLocale, 'faq'),
-        '{tech}': route(publishedLocale, 'tech-center')
+        '{tech}': route(publishedLocale, 'tech-center'),
+        '{industry}': '/industry'
       };
 
       for (const police of [undefined, 'Police filing baseline']) {

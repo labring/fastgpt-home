@@ -133,7 +133,7 @@ const CHINESE_EDITORIAL_LABELS = [
   '发布落点',
   '核验流程',
   '验证流程',
-  '复核周期',
+  '(?<![\\p{L}\\p{N}_])复核周期',
   '核验日',
   '核验日期',
   '验证日期',
@@ -147,7 +147,7 @@ const CHINESE_EDITORIAL_LABELS = [
   '附录',
   '补充说明',
   '审核(?:状态)?',
-  '交付(?:排期)?',
+  '交付排期',
   '来源依据',
   '客户 *KB',
   '内部 *KB'
@@ -188,7 +188,7 @@ const CHINESE_EDITORIAL_INLINE = CHINESE_EDITORIAL_LABELS.filter(
 );
 const CHINESE_STANDALONE_EDITORIAL = '计划(?:安排)?';
 const ENGLISH_EDITORIAL_PATTERN = ENGLISH_EDITORIAL_LABELS.map((label) =>
-  label.replace(/ \+/g, '\\s+')
+  (label === 'schedule' ? '(?<![\\p{L}\\p{N}_]\\s+)schedule' : label).replace(/ \+/g, '\\s+')
 ).join('|');
 const EDITORIAL_MATCHER = new RegExp(
   `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_EDITORIAL_PATTERN})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?:${CHINESE_EDITORIAL_INLINE.join(
@@ -590,6 +590,18 @@ function labelledCitationEntries(value) {
   });
 }
 
+// Ordinary data descriptions and interpolation templates are reader-facing examples.
+function isReaderDataLabel(text, index, value) {
+  const prefix = text.slice(0, index);
+  if (/fact\s+$/i.test(prefix)) return false;
+  return (
+    (/\w\s+$/i.test(prefix) && /^[a-z]/.test(text.slice(index))) ||
+    /\bdata\s+$/i.test(prefix) ||
+    (/[\p{Script=Han}]$/u.test(prefix) && text.startsWith('来源', index)) ||
+    /\{[^{}]+\}|\\n/.test(value)
+  );
+}
+
 function markdownCitationEntries(value) {
   const pattern = new RegExp(CITATION_LABEL_TEXT.source, 'giu');
   const codeSpans = markdownCodeSpans(value, new Uint8Array(value.length));
@@ -602,11 +614,13 @@ function markdownCitationEntries(value) {
           span.contentStart - span.fullStart >= 3
       )
   );
-  return matches.map((match, index) => ({
-    index: match.index,
-    labelEnd: match.index + match[0].length,
-    value: value.slice(match.index + match[0].length, matches[index + 1]?.index).trim()
-  }));
+  return matches
+    .map((match, index) => ({
+      index: match.index,
+      labelEnd: match.index + match[0].length,
+      value: value.slice(match.index + match[0].length, matches[index + 1]?.index).trim()
+    }))
+    .filter((entry) => !isReaderDataLabel(value, entry.index, entry.value));
 }
 
 function markdownCitationLabelCrossesCode(block, startOffset, endOffset) {
@@ -1786,9 +1800,6 @@ function inspectMarkdown(relativePath, source) {
   const findings = [];
   const normalized = source.replace(/\r\n?/g, '\n');
   const body = publishableBody(source);
-  // Industry articles use source and schedule vocabulary as reader-facing configuration content.
-  // Their dedicated loader still rejects comments and delivery metadata at the source boundary.
-  const isIndustryContent = relativePath.replaceAll(path.sep, '/').startsWith('src/content/industry/');
   const lines = body.split('\n');
   const bodyStartLine = normalized.slice(0, normalized.indexOf(body)).split('\n').length;
   const fencedCode = markdownFencedCodeMask(body);
@@ -1797,7 +1808,7 @@ function inspectMarkdown(relativePath, source) {
   for (let index = 0; index < lines.length; index += 1) {
     const line = lines[index];
     const lineNumber = bodyStartLine + index;
-    if (!isIndustryContent && EDITORIAL_PREAMBLE.test(line.trim())) {
+    if (EDITORIAL_PREAMBLE.test(line.trim())) {
       findings.push(
         finding('D-01 editorial-metadata', 'markdown-body', relativePath, lineNumber, line.trim())
       );
@@ -1895,9 +1906,7 @@ function inspectMarkdown(relativePath, source) {
           );
         }
       }
-      for (const match of isIndustryContent
-        ? []
-        : projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+      for (const match of projection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
         const start = projection.offsets[match.index];
         if (isFencedCodeOffset(start)) continue;
         const end = projection.offsets[match.index + match[0].length - 1];
@@ -1914,7 +1923,7 @@ function inspectMarkdown(relativePath, source) {
           )
         );
       }
-      for (const citation of isIndustryContent ? [] : markdownCitationEntries(projection.text)) {
+      for (const citation of markdownCitationEntries(projection.text)) {
         if (citationHeading) continue;
         const start = projection.offsets[citation.index];
         if (isFencedCodeOffset(start)) continue;
@@ -2347,7 +2356,8 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   };
   // Match BMP characters to retain the original UTF-16 code-unit policy semantics.
   // Single ASCII spaces and hyphens already have the required text and offset mapping.
-  const tokens = /(?:(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]){2,}|(?! )(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]|(?!-)(?=[\u0000-\uFFFF])[\p{Dash_Punctuation}\u2212]|\uE001/gu;
+  const tokens =
+    /(?:(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]){2,}|(?! )(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]|(?!-)(?=[\u0000-\uFFFF])[\p{Dash_Punctuation}\u2212]|\uE001/gu;
   for (const match of source.text.matchAll(tokens)) {
     const start = match.index;
     const end = start + match[0].length;
@@ -2446,7 +2456,11 @@ function decodeSerializedEscapes(source) {
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
   let cursor = 0;
-  for (let index = source.text.indexOf('\\'); index !== -1; index = source.text.indexOf('\\', index + 1)) {
+  for (
+    let index = source.text.indexOf('\\');
+    index !== -1;
+    index = source.text.indexOf('\\', index + 1)
+  ) {
     let slashEnd = index;
     while (source.text[slashEnd] === '\\') slashEnd += 1;
     if ((slashEnd - index) % 2 === 0) {
@@ -2490,6 +2504,7 @@ function visibleCitationBlocks(projection) {
           citations.push({ index: lineStart + segmentStart + line.search(/\S/), value: line });
         }
         for (const entry of labelledCitationEntries(line)) {
+          if (isReaderDataLabel(line, entry.index, entry.value)) continue;
           citations.push({
             index: lineStart + segmentStart + entry.index,
             value: entry.value
@@ -2505,16 +2520,13 @@ function visibleCitationBlocks(projection) {
 
 function inspectHtmlArtifact(relativePath, html, variant) {
   const identity = htmlIdentity(relativePath, variant);
-  // Industry pages keep reader-facing source and schedule vocabulary in their rendered body.
-  // The source loader owns their internal metadata boundary before export.
-  const isIndustryContent = identity.route.split('/').includes('industry');
   const { visible, payloads } = splitHtmlProjections(html);
   const findings = [];
   const visibleProjection = projectVisibleHtml(visible);
   const visiblePolicyProjection = normalizePolicyProjection(visibleProjection, true);
-  for (const match of isIndustryContent
-    ? []
-    : visiblePolicyProjection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+  for (const match of visiblePolicyProjection.text.matchAll(
+    new RegExp(EDITORIAL_MATCHER.source, 'giu')
+  )) {
     findings.push(
       htmlFinding(
         'D-01 editorial-metadata',
@@ -2528,7 +2540,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   }
   let lineStart = 0;
   for (const line of visibleProjection.text.split('\n')) {
-    const preamble = isIndustryContent ? undefined : EDITORIAL_PREAMBLE.exec(line.trim());
+    const preamble = EDITORIAL_PREAMBLE.exec(line.trim());
     if (!preamble) {
       lineStart += line.length + 1;
       continue;
@@ -2547,7 +2559,7 @@ function inspectHtmlArtifact(relativePath, html, variant) {
     );
     lineStart += line.length + 1;
   }
-  for (const citation of isIndustryContent ? [] : visibleCitationBlocks(visiblePolicyProjection)) {
+  for (const citation of visibleCitationBlocks(visiblePolicyProjection)) {
     if (!validPublicCitation(citation.value)) {
       findings.push(
         htmlFinding(
@@ -2563,9 +2575,9 @@ function inspectHtmlArtifact(relativePath, html, variant) {
   }
   for (const payload of payloads) {
     const payloadProjection = projectPayloadHtml(payload.content, payload.offset);
-    for (const match of isIndustryContent
-      ? []
-      : payloadProjection.text.matchAll(new RegExp(EDITORIAL_MATCHER.source, 'giu'))) {
+    for (const match of payloadProjection.text.matchAll(
+      new RegExp(EDITORIAL_MATCHER.source, 'giu')
+    )) {
       findings.push(
         htmlFinding(
           'D-01 editorial-metadata',
@@ -2581,9 +2593,9 @@ function inspectHtmlArtifact(relativePath, html, variant) {
       `\\b(?:title|data-[\\w-]+)\\s*=\\s*["']?((?:${EDITORIAL_LABEL_NAME}))\\b`,
       'iu'
     );
-    for (const match of isIndustryContent
-      ? []
-      : payloadProjection.text.matchAll(new RegExp(attributePattern.source, 'giu'))) {
+    for (const match of payloadProjection.text.matchAll(
+      new RegExp(attributePattern.source, 'giu')
+    )) {
       const valueIndex = match.index + match[0].lastIndexOf(match[1]);
       findings.push(
         htmlFinding(

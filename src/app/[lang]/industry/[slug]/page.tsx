@@ -18,7 +18,9 @@ export default async function LocalizedIndustryArticlePage({
   const { lang, slug } = await params;
   const locale = resolveIndustryLocale(lang);
   if (!locale) notFound();
-  return <IndustryArticleRoute locale={locale} slug={slug} />;
+  const article = getIndustryArticle(locale, slug);
+  if (!article) notFound();
+  return <IndustryArticleRoute article={article} />;
 }
 
 export function generateStaticParams() {

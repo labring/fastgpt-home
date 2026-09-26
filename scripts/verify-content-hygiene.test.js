@@ -2593,3 +2593,25 @@ test('HTML CLI follows WHATWG entities and tokenizes escaped script or template 
     }
   );
 });
+
+test('Industry shares editorial checks while preserving data descriptions and templates', () => {
+  const body = '# Reader guide\n\nData sources: operational records.\n\nThe update schedule: daily.\n\n`Source: {source_name}`\n\n客户的复核周期：按风险等级配置。\n';
+  withFixture({ 'src/content/industry/en/example.md': body }, (root) => {
+    const clean = runFixture(root);
+    assert.equal(clean.status, 0, clean.stderr);
+    writeFixture(root, 'src/content/industry/en/example.md', body + '\nDelivery schedule: W9\n\n## Sources\n\nInternal KB\n');
+    const dirty = runFixture(root);
+    assert.equal(dirty.status, 1);
+    assert.match(dirty.stderr, /D-01 editorial-metadata/);
+    assert.match(dirty.stderr, /D-07 citation-policy/);
+  });
+  withFixture({ 'en/industry/example.html': '<h1>Reader guide</h1><p>Data sources: operational records.</p><p>The update schedule: daily.</p><code>Source: {source_name}</code>' }, (root) => {
+    const check = () => spawnSync(process.execPath, [SCRIPT, '--mode', 'html', '--root', root, '--variant', 'preview'], { encoding: 'utf8' });
+    assert.equal(check().status, 0);
+    writeFixture(root, 'en/industry/example.html', '<h1>Reader guide</h1><p>Delivery schedule: W9</p><h2>Sources</h2><p>Internal KB</p>');
+    const dirty = check();
+    assert.equal(dirty.status, 1);
+    assert.match(dirty.stderr, /D-01 editorial-metadata/);
+    assert.match(dirty.stderr, /D-07 citation-policy/);
+  });
+});

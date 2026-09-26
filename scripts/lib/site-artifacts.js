@@ -248,4 +248,4 @@ function verifySiteArtifact(bundle, expectedInputs, options = {}) {
   return manifest;
 }
 
-module.exports = { retainVerifiedSiteArtifact, verifySiteArtifact };
+module.exports = { retainVerifiedSiteArtifact, verifySiteArtifact, inventoryPayload };

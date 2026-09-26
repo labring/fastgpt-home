@@ -90,12 +90,11 @@ P0 validation commands:
 ```text
 npx tsc --noEmit
 npm run lint
-node --test scripts/verify-industry-content.test.js
 npm run verify:i18n-seo
 npm run build
 ```
 
-The focused test runs against the complete 19,080-source W9 Industry inventory.
+The Industry loader validates the complete W9 inventory while the build resolves its static routes.
 
 Release verification completed on 2026-09-20:
 

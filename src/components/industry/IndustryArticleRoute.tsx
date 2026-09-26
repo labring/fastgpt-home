@@ -1,25 +1,15 @@
-import { notFound } from 'next/navigation';
-
 import { ArticleJsonLd, BreadcrumbJsonLd } from '@/components/JsonLd';
 import IndustryArticlePage from '@/components/industry/IndustryArticlePage';
 import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
 import { getDictionary } from '@/lib/i18n';
-import { getIndustryArticle, type IndustryLocale } from '@/lib/industryContent';
+import type { IndustryArticle } from '@/lib/industryContent';
 import { getIndustryCanonicalUrl, getIndustryLanguage } from '@/lib/industrySeo';
 import { getOwnedLocaleUrl, isPreviewSite } from '@/lib/siteRouting';
 
-export async function IndustryArticleRoute({
-  locale,
-  slug
-}: {
-  locale: IndustryLocale;
-  slug: string;
-}) {
-  const article = getIndustryArticle(locale, slug);
-  if (!article) notFound();
-
+export async function IndustryArticleRoute({ article }: { article: IndustryArticle }) {
+  const { locale } = article;
   const dict = await getDictionary(locale);
   const canonical = getIndustryCanonicalUrl(article);
   return (

@@ -188,7 +188,6 @@ test('root article routes resolve ownership through the registry without extra b
   assert.equal(result.section, 'api');
 });
 
-
 test('CN publication applies the existing document and cloud URL policy to all dictionary strings', () => {
   const previous = process.env.NEXT_PUBLIC_SITE_VARIANT;
   try {
@@ -197,9 +196,12 @@ test('CN publication applies the existing document and cloud URL policy to all d
       const { getPublicationUrls } = loader()('@/lib/siteRouting');
       for (const locale of ['en', 'zh', 'zh-hant', 'ja', 'ar', 'vi', 'th', 'id', 'ms']) {
         const original = fs.readFileSync(path.join(root, 'src/locales', `${locale}.json`), 'utf8');
-        const expected = variant === 'cn'
-          ? original.replaceAll('https://doc.fastgpt.io', 'https://doc.fastgpt.cn').replaceAll('https://cloud.fastgpt.io', 'https://cloud.fastgpt.cn')
-          : original;
+        const expected =
+          variant === 'cn'
+            ? original
+                .replaceAll('https://doc.fastgpt.io', 'https://doc.fastgpt.cn')
+                .replaceAll('https://cloud.fastgpt.io', 'https://cloud.fastgpt.cn')
+            : original;
         assert.equal(getPublicationUrls(original), expected, `${variant}/${locale}`);
       }
     }
@@ -207,4 +209,68 @@ test('CN publication applies the existing document and cloud URL policy to all d
     if (previous === undefined) delete process.env.NEXT_PUBLIC_SITE_VARIANT;
     else process.env.NEXT_PUBLIC_SITE_VARIANT = previous;
   }
+});
+
+test('Industry uses the production loader for identities, dates, and owner projections', () => {
+  const article = (locale, slug, date = '2026-09-26') => `---
+title: Example
+slug: /${locale}/industry/${slug}
+page_type: Scenario
+meta_title: Example title
+meta_description: Example description
+keywords: useful, keywords
+date_published: 2026-09-15
+date_modified: ${date}
+---
+
+# Example
+
+Reader content.
+`;
+  const files = {
+    zh: { 'shared.md': article('zh', 'shared'), 'only.md': article('zh', 'only') },
+    en: { 'shared.md': article('en', 'shared') }
+  };
+  const read = () =>
+    loader({
+      'node:fs': {
+        ...fs,
+        existsSync: () => true,
+        readdirSync: (directory) =>
+          Object.keys(files[path.basename(directory)]).map((name) => ({
+            name,
+            isFile: () => true
+          })),
+        readFileSync: (file) => files[path.basename(path.dirname(file))][path.basename(file)]
+      }
+    });
+  const load = read();
+  const content = load('@/lib/industryContent');
+  assert.equal(content.industryArticles.length, 3);
+  assert.equal(content.getIndustryArticle('en', 'shared').dateModified, '2026-09-26');
+  assert.deepEqual(content.getIndustryArticle('en', 'shared').keywords, ['useful', 'keywords']);
+  assert.deepEqual(content.getIndustryArticle('zh', 'only').publishedLocales, ['zh']);
+  assert.deepEqual(content.getIndustryArticle('en', 'shared').publishedLocales, ['zh', 'en']);
+  assert.equal(content.getIndustryOwnerParams('preview').length, 2);
+  assert.equal(content.getIndustryReviewParams('preview').length, 3);
+  assert.deepEqual(content.getIndustryOwnerParams('cn'), [{ slug: 'only' }, { slug: 'shared' }]);
+  assert.deepEqual(content.getIndustryOwnerParams('io'), [{ slug: 'shared' }]);
+  assert.equal(content.getIndustrySitemapEntries('cn').length, 2);
+  assert.equal(content.getIndustrySitemapEntries('io').length, 1);
+  const seo = load('@/lib/industrySeo');
+  assert.equal(
+    seo.getIndustryCanonicalUrl(content.getIndustryArticle('zh', 'shared')),
+    'https://fastgpt.cn/industry/shared'
+  );
+  assert.equal(
+    seo.getIndustryCanonicalUrl(content.getIndustryArticle('en', 'shared')),
+    'https://fastgpt.io/industry/shared'
+  );
+  files.en['duplicate.md'] = article('en', 'shared');
+  assert.throws(() => read()('@/lib/industryContent'), /duplicate slug/);
+  delete files.en['duplicate.md'];
+  files.en['shared.md'] = article('en', '../escape');
+  assert.throws(() => read()('@/lib/industryContent'), /invalid slug/);
+  files.en['shared.md'] = article('en', 'shared', '2026-02-30');
+  assert.throws(() => read()('@/lib/industryContent'), /invalid date_modified/);
 });

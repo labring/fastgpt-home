@@ -14,7 +14,7 @@ export default async function IndustryArticlePage({
   const { slug } = await params;
   const article = getIndustryArticleForRoot(slug);
   if (!article) notFound();
-  return <IndustryArticleRoute locale={article.locale} slug={article.slug} />;
+  return <IndustryArticleRoute article={article} />;
 }
 
 export function generateStaticParams() {

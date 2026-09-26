@@ -142,11 +142,11 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
 }
 
 const loadedArticles = INDUSTRY_LOCALES.flatMap(readLocaleArticles);
-const identities = new Set<string>();
+const identities = new Map<string, IndustryArticle>();
 for (const article of loadedArticles) {
   const identity = `${article.locale}|${article.slug}`;
   if (identities.has(identity)) fail(article.sourcePath, `duplicate slug: ${article.slug}`);
-  identities.add(identity);
+  identities.set(identity, article);
 }
 
 for (const article of loadedArticles) {
@@ -164,7 +164,7 @@ export function resolveIndustryLocale(locale: string): IndustryLocale | undefine
 }
 
 export function getIndustryArticle(locale: IndustryLocale, slug: string) {
-  return industryArticles.find((article) => article.locale === locale && article.slug === slug);
+  return identities.get(`${locale}|${slug}`);
 }
 
 export function getIndustryArticleForRoot(slug: string, variant: SiteVariant = currentSiteVariant) {
@@ -203,12 +203,6 @@ export function getIndustryOwnerParams(variant: SiteVariant = currentSiteVariant
 
 export function getIndustryPath(slug?: string) {
   return slug ? `/industry/${slug}` : '/industry';
-}
-
-export function getIndustryHubArticles(locale: IndustryLocale, pageType: string, limit = 4) {
-  return industryArticles
-    .filter((article) => article.locale === locale && article.pageType === pageType)
-    .slice(0, limit);
 }
 
 export function getIndustrySitemapEntries(variant: SiteVariant = currentSiteVariant) {

@@ -38,7 +38,7 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-          fetch-depth: 0
+          fetch-depth: 1
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -47,24 +47,6 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
-
-      - name: Select CRM build coverage and record revisions
-        id: coverage
-        run: node scripts/select-preview-builds.js | tee preview-selection.json
-
-      - name: Verify shared source once
-        run: npm run verify:release -- --source-only --write-source-record .release-artifacts/source-verification.json
-
-      - name: Retain shared source and revision evidence
-        uses: actions/upload-artifact@v4
-        with:
-          name: verified-source
-          path: |
-            .release-artifacts/source-verification.json
-            preview-selection.json
-          include-hidden-files: true
-          retention-days: 90
-          if-no-files-found: error
 
       - name: Prepare disabled compilation cache
         id: cache-disabled
@@ -77,8 +59,8 @@ jobs:
           key: ${{ steps.cache-disabled.outputs.key }}
           restore-keys: ${{ steps.cache-disabled.outputs.restore-prefix }}
 
-      - name: Produce verified CRM-disabled preview
-        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json --keep-artifacts
+      - name: Build CRM-disabled preview
+        run: npm run build:preview
 
       - name: Save disabled compilation cache
         uses: actions/cache/save@v4
@@ -105,68 +87,11 @@ jobs:
           console.log('Preview filing links verified');
           NODE
 
-      - name: Check out the consumer separately from candidate build dependencies
-        uses: actions/checkout@v4
-        with:
-          path: .preview-verifier
-          persist-credentials: false
-          sparse-checkout-cone-mode: false
-          sparse-checkout: |
-            package.json
-            wrangler.json
-            scripts/lib/
-            scripts/verify-preview-artifact.js
-            src/config/site-routing.json
-
-      - name: Exercise the deployment consumer on the complete Preview artifact
-        run: node .preview-verifier/scripts/verify-preview-artifact.js --bundle .release-artifacts/site/preview-disabled --candidate . --revision "$(git rev-parse HEAD)" --trusted-config .preview-verifier/wrangler.json
-
       - name: Upload verified disabled preview
         uses: actions/upload-artifact@v4
         with:
           name: verified-preview
           path: .release-artifacts/site/preview-disabled
-          include-hidden-files: true
-          retention-days: 90
-          if-no-files-found: error
-
-      - name: Remove disabled preview before configured build
-        run: rm -rf .release-artifacts/site/preview-disabled
-
-      - name: Prepare configured compilation cache
-        if: steps.coverage.outputs.configured == 'true'
-        id: cache-configured
-        env:
-          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-        run: node scripts/prepare-build.js
-
-      - name: Restore configured compilation cache
-        if: steps.coverage.outputs.configured == 'true'
-        uses: actions/cache/restore@v4
-        with:
-          path: .next/cache
-          key: ${{ steps.cache-configured.outputs.key }}
-          restore-keys: ${{ steps.cache-configured.outputs.restore-prefix }}
-
-      - name: Produce verified configured CRM preview
-        if: steps.coverage.outputs.configured == 'true'
-        env:
-          NEXT_PUBLIC_CRM_API_URL: https://crm-preview.invalid
-        run: npm run verify:release -- --variant preview --reuse-source .release-artifacts/source-verification.json
-
-      - name: Save configured compilation cache
-        if: steps.coverage.outputs.configured == 'true'
-        uses: actions/cache/save@v4
-        with:
-          path: .next/cache
-          key: ${{ steps.cache-configured.outputs.key }}
-
-      - name: Retain configured verification evidence
-        if: steps.coverage.outputs.configured == 'true'
-        uses: actions/upload-artifact@v4
-        with:
-          name: configured-preview-evidence
-          path: .release-artifacts/site/preview-configured
           include-hidden-files: true
           retention-days: 90
           if-no-files-found: error

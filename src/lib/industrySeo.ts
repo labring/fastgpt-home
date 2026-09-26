@@ -13,7 +13,7 @@ export function getIndustryCanonicalUrl(article: Pick<IndustryArticle, 'locale' 
   return getOwnedLocaleUrl(article.locale, getIndustryPath(article.slug));
 }
 
-const industryHubCopy = {
+export const industryHubCopy = {
   en: {
     title: 'FastGPT Industry AI Use Cases',
     description:

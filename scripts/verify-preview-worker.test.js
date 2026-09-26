@@ -34,18 +34,16 @@ test('PR preview deployment uses an isolated Worker and the verified artifact', 
   assert.doesNotMatch(source, /pages deploy/);
 });
 
-test('PR preview build hands the sealed artifact to the deployment consumer', () => {
+test('PR preview builds and uploads one disabled artifact', () => {
   const job = load(readWorkflow('preview.yml')).jobs.build;
-  const verifier = job.steps.find((step) => step.with?.path === '.preview-verifier');
-  const consumer = job.steps.find((step) =>
-    (step.run || '').includes('verify-preview-artifact.js')
+  assert.equal(job.env.NEXT_PUBLIC_CRM_API_URL, '');
+  assert.equal(job.steps.filter((step) => step.run === 'npm run build:preview').length, 1);
+  assert.equal(job.steps.filter((step) => step.uses === 'actions/upload-artifact@v4').length, 1);
+  assert(
+    !job.steps.some((step) =>
+      /verify:release|verify-preview-artifact|select-preview/.test(step.run || '')
+    )
   );
-
-  assert.match(verifier.with['sparse-checkout'], /^package\.json$/m);
-  assert.match(verifier.with['sparse-checkout'], /^wrangler\.json$/m);
-  assert.match(consumer.run, /--bundle \.release-artifacts\/site\/preview-disabled/);
-  assert.match(consumer.run, /--candidate \. /);
-  assert.match(consumer.run, /--trusted-config \.preview-verifier\/wrangler\.json/);
 });
 
 test('PR preview cleanup deletes the numbered Worker with the same credential boundary', () => {

@@ -1,11 +1,8 @@
 import Link from 'next/link';
 
 import guideStyles from '@/components/guide/GuideHubPage.module.css';
-import {
-  getIndustryHubArticles,
-  getIndustryPath,
-  type IndustryLocale
-} from '@/lib/industryContent';
+import { industryArticles, getIndustryPath, type IndustryLocale } from '@/lib/industryContent';
+import { industryHubCopy } from '@/lib/industrySeo';
 import { getReviewLocalePath } from '@/lib/siteRouting';
 
 type IndustryHubGroup = {
@@ -51,17 +48,16 @@ const hubCopy = {
   en: {
     home: 'Home',
     industry: 'Industry',
-    heading: 'FastGPT Industry AI Use Cases',
-    description:
-      'Explore practical AI use cases across industry workflows, business scenarios, and operational steps.',
+    heading: industryHubCopy.en.title,
+    description: industryHubCopy.en.description,
     readArticle: 'Read article',
     pageCount: (count: number) => `${count.toLocaleString('en-US')} pages`
   },
   zh: {
     home: '首页',
     industry: '行业内容',
-    heading: 'FastGPT 行业 AI 场景与问题',
-    description: '按行业问题、业务场景和作业环节浏览 FastGPT 的企业 AI 实践内容。',
+    heading: industryHubCopy.zh.title,
+    description: industryHubCopy.zh.description,
     readArticle: '阅读文章',
     pageCount: (count: number) => `${count.toLocaleString('zh-CN')} 篇`
   }
@@ -94,12 +90,11 @@ export default function IndustryHubPage({ locale }: { locale: IndustryLocale }) 
           <p>{copy.description}</p>
         </header>
         {hubGroups[locale].map((group, groupIndex) => {
-          const articles = getIndustryHubArticles(locale, group.pageType);
-          const count = getIndustryHubArticles(
-            locale,
-            group.pageType,
-            Number.MAX_SAFE_INTEGER
-          ).length;
+          const groupArticles = industryArticles.filter(
+            (article) => article.locale === locale && article.pageType === group.pageType
+          );
+          const articles = groupArticles.slice(0, 4);
+          const count = groupArticles.length;
 
           return (
             <section

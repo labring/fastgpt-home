@@ -2,9 +2,7 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 
-const WORKER_ASSET_FILE_LIMIT = Number(
-  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 20_000
-);
+const WORKER_ASSET_FILE_LIMIT = Number(process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 20_000);
 const WORKER_ASSET_SIZE_LIMIT = 25 * 1024 * 1024;
 
 /** Enforce the Workers Static Assets file-count and largest-file size limits. */
@@ -65,7 +63,8 @@ function verifyWorkerArtifact({
   configPath,
   trustedConfigPath = configPath,
   wranglerVersion,
-  requireSitemap = true
+  requireSitemap = true,
+  inventory
 }) {
   verifyWranglerVersion(wranglerVersion);
   const resolvedOutDir = path.resolve(outDir);
@@ -129,7 +128,7 @@ function verifyWorkerArtifact({
     'Wrangler assets directory differs from the complete export'
   );
 
-  const assets = listAssetSizes(resolvedOutDir).filter(
+  const assets = (inventory || listAssetSizes(resolvedOutDir)).filter(
     ({ path: relativePath }) => !['_worker.js', '.assetsignore', '_headers'].includes(relativePath)
   );
   return inspectWorkerAssets(assets);

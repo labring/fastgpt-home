@@ -60,7 +60,18 @@ jobs:
           path: verified-preview
           run-id: ${{ github.event_name == 'workflow_dispatch' && inputs.build_run_id || github.event.workflow_run.id }}
           github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Identify artifact format
+        id: format
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const manifest = JSON.parse(require('node:fs').readFileSync('verified-preview/manifest.json'));
+            if (manifest.kind === 'preview' && manifest.schemaVersion === 1) core.setOutput('legacy', 'false');
+            else if (!manifest.kind && manifest.schemaVersion === 2) core.setOutput('legacy', 'true');
+            else throw new Error('Unsupported Preview artifact format');
+      # Legacy runs keep their source evidence during the protocol migration.
       - uses: actions/download-artifact@v4
+        if: steps.format.outputs.legacy == 'true'
         with:
           name: verified-source
           path: source
@@ -73,8 +84,7 @@ jobs:
           script: |
             const fs = require('node:fs');
             const resolve = require('./verifier/scripts/lib/preview-run-inputs.js');
-            const selection = JSON.parse(fs.readFileSync('source/preview-selection.json'));
-            const source = JSON.parse(fs.readFileSync('source/.release-artifacts/source-verification.json'));
+            const manifest = JSON.parse(fs.readFileSync('verified-preview/manifest.json'));
             const runId = context.eventName === 'workflow_dispatch'
               ? Number('${{ inputs.build_run_id }}')
               : context.payload.workflow_run.id;
@@ -88,7 +98,11 @@ jobs:
               repo: context.repo,
               payload: { ...context.payload, workflow_run: workflowRun },
             };
-            const inputs = await resolve(github, resolvedContext, selection, source);
+            const inputs = manifest.kind === 'preview'
+              ? await resolve(github, resolvedContext, manifest)
+              : await resolve(github, resolvedContext,
+                  JSON.parse(fs.readFileSync('source/preview-selection.json')),
+                  JSON.parse(fs.readFileSync('source/.release-artifacts/source-verification.json')));
             for (const [key, value] of Object.entries(inputs)) core.setOutput(key, value);
       - name: Read candidate inputs without executing candidate code
         uses: actions/checkout@v4

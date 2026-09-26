@@ -6,7 +6,7 @@ const test = require('node:test');
 const { execFileSync, spawnSync } = require('node:child_process');
 const { directoryInventory } = require('./lib/release-readiness');
 const { getSourceExecutionOrder, getVariantExecutionOrder } = require('./verify-release');
-const { retainVerifiedSiteArtifact } = require('./lib/site-artifacts');
+const { retainVerifiedSiteArtifact, verifySiteArtifact } = require('./lib/site-artifacts');
 const { digest, getPublicationInputs } = require('./lib/site-artifact-identity');
 
 test('a complete verified publication unit rejects identity drift and corrupted handoffs', () => {
@@ -97,6 +97,7 @@ test('a complete verified publication unit rejects identity drift and corrupted 
       'package.json',
       ...[
         'site-artifacts',
+        'preview-artifacts',
         'site-artifact-identity',
         'site-variant',
         'release-readiness',
@@ -278,6 +279,7 @@ test('preview handoff resolves the completed merge result and rejects stale or s
     payload: {
       workflow_run: {
         conclusion: 'success',
+        path: '.github/workflows/preview.yml',
         repository: { full_name: 'labring/fastgpt-home' },
         event: 'pull_request',
         head_sha: head,
@@ -332,6 +334,7 @@ test('preview handoff resolves fork pull requests through the head branch when t
     payload: {
       workflow_run: {
         conclusion: 'success',
+        path: '.github/workflows/preview.yml',
         repository: { full_name: 'labring/fastgpt-home' },
         event: 'pull_request',
         head_sha: head,
@@ -431,6 +434,7 @@ test("preview deployment accepts only GitHub's ready merge tree", async () => {
       payload: {
         workflow_run: {
           conclusion: 'success',
+          path: '.github/workflows/preview.yml',
           repository: { full_name: 'labring/fastgpt-home' },
           event: 'pull_request',
           head_sha: head,

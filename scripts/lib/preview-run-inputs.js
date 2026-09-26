@@ -1,19 +1,40 @@
 const assert = require('node:assert/strict');
 
 // Resolve artifact metadata against GitHub's run and commit records before checkout or deployment.
-module.exports = async function previewRunInputs(github, context, selection, source) {
+module.exports = async function previewRunInputs(github, context, manifest, legacySource) {
   const run = context.payload.workflow_run;
   const { owner, repo } = context.repo;
+  const source = legacySource
+    ? {
+        revision: manifest.revision,
+        baseRevision: manifest.baseRevision,
+        headRevision: manifest.headRevision,
+        ...legacySource
+      }
+    : manifest.source;
   assert.equal(run.conclusion, 'success');
   assert.equal(run.repository.full_name, `${owner}/${repo}`);
-  assert(/^[a-f0-9]{40}$/.test(selection.revision), 'Invalid preview revision');
-  assert.equal(source.sourceRevision, selection.revision);
+  assert.equal(run.path, '.github/workflows/preview.yml', 'Unexpected Preview workflow');
+  assert(
+    legacySource || manifest.kind === 'preview',
+    'Preview deployment requires a Preview manifest'
+  );
+  if (legacySource) {
+    assert.equal(legacySource.sourceRevision, source.revision);
+  } else {
+    assert.equal(manifest.schemaVersion, 1);
+    assert.equal(String(source.runId), String(run.id), 'Preview run mismatch');
+    assert.equal(String(source.runAttempt), String(run.run_attempt), 'Preview attempt mismatch');
+    assert.equal(source.event, run.event, 'Preview event mismatch');
+    assert.equal(manifest.publicationInputs.sourceRevision, source.revision);
+  }
+  assert(/^[a-f0-9]{40}$/.test(source.revision), 'Invalid preview revision');
   if (run.event === 'workflow_dispatch') {
-    assert.equal(selection.revision, run.head_sha, 'Manual preview revision mismatch');
-    return { revision: selection.revision, number: '', branch: `manual-${run.id}` };
+    assert.equal(source.revision, run.head_sha, 'Manual preview revision mismatch');
+    return { revision: source.revision, number: '', branch: `manual-${run.id}` };
   }
   assert.equal(run.event, 'pull_request');
-  assert.equal(selection.headRevision, run.head_sha, 'PR head differs from the completed run');
+  assert.equal(source.headRevision, run.head_sha, 'PR head differs from the completed run');
   let prs = run.pull_requests || [];
   if (!prs.length) {
     try {
@@ -50,13 +71,9 @@ module.exports = async function previewRunInputs(github, context, selection, sou
   assert.equal(candidates.length, 1, 'Ambiguous preview PR');
   const pr = candidates[0];
   assert.equal(pr.state, 'open', 'Preview PR has closed');
-  assert.equal(pr.head.sha, selection.headRevision, 'Preview head is stale');
-  assert.equal(pr.base.sha, selection.baseRevision, 'Preview base is stale');
+  assert.equal(pr.head.sha, source.headRevision, 'Preview head is stale');
+  assert.equal(pr.base.sha, source.baseRevision, 'Preview base is stale');
   assert.equal(pr.mergeable, true, 'Merge result is not ready; resolve conflicts and rerun');
-  assert.equal(
-    selection.revision,
-    pr.merge_commit_sha,
-    'Preview must be the verified merge result'
-  );
-  return { revision: selection.revision, number: String(pr.number), branch: `pr-${pr.number}` };
+  assert.equal(source.revision, pr.merge_commit_sha, 'Preview must be the verified merge result');
+  return { revision: source.revision, number: String(pr.number), branch: `pr-${pr.number}` };
 };

@@ -6,6 +6,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const { digest, getPublicationInputs } = require('./lib/site-artifact-identity');
 const { verifySiteArtifact } = require('./lib/site-artifacts');
+const { verifyPreviewArtifact } = require('./lib/preview-artifacts');
 
 try {
   const args = process.argv.slice(2);
@@ -28,7 +29,9 @@ try {
   });
   assert.equal(inputs.siteVariant, 'preview', 'Preview deployment requires Preview settings');
   assert.equal(inputs.crmMode, 'disabled', 'Preview deployment requires disabled CRM');
-  const manifest = verifySiteArtifact(args[1], inputs, { trustedConfigPath: args[7] });
+  const kind = JSON.parse(fs.readFileSync(path.join(args[1], 'manifest.json'), 'utf8')).kind;
+  const verify = kind === 'preview' ? verifyPreviewArtifact : verifySiteArtifact;
+  const manifest = verify(args[1], inputs, { trustedConfigPath: args[7] });
   console.log(`Verified Preview publication: ${manifest.inventory.sha256}`);
 } catch (error) {
   console.error(error.message);

@@ -17,9 +17,9 @@ test('PR preview deployment uses an isolated Worker and the verified artifact', 
   const deploy = job.steps.find((step) => step.id === 'deploy');
 
   assert.equal(workflow.name, 'Preview Home Page — Deploy Worker');
-  assert.equal(job.environment, 'international-worker-preview');
+  assert.equal(job.environment, 'international-worker-production');
   assert.equal(deploy.uses, 'cloudflare/wrangler-action@v3');
-  assert.equal(deploy.with.apiToken, '${{ secrets.CLOUDFLARE_PREVIEW_WORKER_API_TOKEN }}');
+  assert.equal(deploy.with.apiToken, '${{ secrets.CLOUDFLARE_WORKER_API_TOKEN }}');
   assert.equal(deploy.with.accountId, '${{ vars.CLOUDFLARE_ACCOUNT_ID }}');
   assert.equal(deploy.with.wranglerVersion, '4.136.3');
   assert.match(deploy.with.command, /^deploy /);
@@ -52,7 +52,7 @@ test('PR preview cleanup deletes the numbered Worker with the same credential bo
   const job = workflow.jobs.cleanup;
   const cleanup = job.steps.find((step) => step.name === 'Delete preview Worker');
 
-  assert.equal(job.environment, 'international-worker-preview');
+  assert.equal(job.environment, 'international-worker-production');
   assert.equal(cleanup.uses, 'cloudflare/wrangler-action@v3');
   assert.equal(cleanup.with.apiToken, '${{ env.CLOUDFLARE_API_TOKEN }}');
   assert.equal(cleanup.with.accountId, '${{ env.CLOUDFLARE_ACCOUNT_ID }}');

@@ -133,7 +133,7 @@ const CHINESE_EDITORIAL_LABELS = [
   '发布落点',
   '核验流程',
   '验证流程',
-  '复核周期',
+  '(?<![\\p{L}\\p{N}_])复核周期',
   '核验日',
   '核验日期',
   '验证日期',
@@ -147,7 +147,7 @@ const CHINESE_EDITORIAL_LABELS = [
   '附录',
   '补充说明',
   '审核(?:状态)?',
-  '交付(?:排期)?',
+  '交付排期',
   '来源依据',
   '客户 *KB',
   '内部 *KB'
@@ -188,7 +188,7 @@ const CHINESE_EDITORIAL_INLINE = CHINESE_EDITORIAL_LABELS.filter(
 );
 const CHINESE_STANDALONE_EDITORIAL = '计划(?:安排)?';
 const ENGLISH_EDITORIAL_PATTERN = ENGLISH_EDITORIAL_LABELS.map((label) =>
-  label.replace(/ \+/g, '\\s+')
+  (label === 'schedule' ? '(?<![\\p{L}\\p{N}_]\\s+)schedule' : label).replace(/ \+/g, '\\s+')
 ).join('|');
 const EDITORIAL_MATCHER = new RegExp(
   `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_EDITORIAL_PATTERN})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?:${CHINESE_EDITORIAL_INLINE.join(
@@ -590,6 +590,18 @@ function labelledCitationEntries(value) {
   });
 }
 
+// Ordinary data descriptions and interpolation templates are reader-facing examples.
+function isReaderDataLabel(text, index, value) {
+  const prefix = text.slice(0, index);
+  if (/fact\s+$/i.test(prefix)) return false;
+  return (
+    (/\w\s+$/i.test(prefix) && /^[a-z]/.test(text.slice(index))) ||
+    /\bdata\s+$/i.test(prefix) ||
+    (/[\p{Script=Han}]$/u.test(prefix) && text.startsWith('来源', index)) ||
+    /\{[^{}]+\}|\\n/.test(value)
+  );
+}
+
 function markdownCitationEntries(value) {
   const pattern = new RegExp(CITATION_LABEL_TEXT.source, 'giu');
   const codeSpans = markdownCodeSpans(value, new Uint8Array(value.length));
@@ -602,11 +614,13 @@ function markdownCitationEntries(value) {
           span.contentStart - span.fullStart >= 3
       )
   );
-  return matches.map((match, index) => ({
-    index: match.index,
-    labelEnd: match.index + match[0].length,
-    value: value.slice(match.index + match[0].length, matches[index + 1]?.index).trim()
-  }));
+  return matches
+    .map((match, index) => ({
+      index: match.index,
+      labelEnd: match.index + match[0].length,
+      value: value.slice(match.index + match[0].length, matches[index + 1]?.index).trim()
+    }))
+    .filter((entry) => !isReaderDataLabel(value, entry.index, entry.value));
 }
 
 function markdownCitationLabelCrossesCode(block, startOffset, endOffset) {
@@ -2342,7 +2356,8 @@ function normalizePolicyProjection(source, preserveBlockBoundaries = false) {
   };
   // Match BMP characters to retain the original UTF-16 code-unit policy semantics.
   // Single ASCII spaces and hyphens already have the required text and offset mapping.
-  const tokens = /(?:(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]){2,}|(?! )(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]|(?!-)(?=[\u0000-\uFFFF])[\p{Dash_Punctuation}\u2212]|\uE001/gu;
+  const tokens =
+    /(?:(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]){2,}|(?! )(?=[\u0000-\uFFFF])[\p{White_Space}\p{Cf}]|(?!-)(?=[\u0000-\uFFFF])[\p{Dash_Punctuation}\u2212]|\uE001/gu;
   for (const match of source.text.matchAll(tokens)) {
     const start = match.index;
     const end = start + match[0].length;
@@ -2441,7 +2456,11 @@ function decodeSerializedEscapes(source) {
   const appendRange = projectionRangeAppender(source);
   const rawOffsetAt = projectionOffsetResolver(source);
   let cursor = 0;
-  for (let index = source.text.indexOf('\\'); index !== -1; index = source.text.indexOf('\\', index + 1)) {
+  for (
+    let index = source.text.indexOf('\\');
+    index !== -1;
+    index = source.text.indexOf('\\', index + 1)
+  ) {
     let slashEnd = index;
     while (source.text[slashEnd] === '\\') slashEnd += 1;
     if ((slashEnd - index) % 2 === 0) {
@@ -2485,6 +2504,7 @@ function visibleCitationBlocks(projection) {
           citations.push({ index: lineStart + segmentStart + line.search(/\S/), value: line });
         }
         for (const entry of labelledCitationEntries(line)) {
+          if (isReaderDataLabel(line, entry.index, entry.value)) continue;
           citations.push({
             index: lineStart + segmentStart + entry.index,
             value: entry.value

@@ -6,7 +6,9 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const outDir = path.join(__dirname, '..', 'out');
-const CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT = 20_000;
+const CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT = Number(
+  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 20_000
+);
 
 let removed = 0;
 

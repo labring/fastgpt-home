@@ -12,6 +12,7 @@ permissions:
 
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+  CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: 100000
 
 jobs:
   deploy:

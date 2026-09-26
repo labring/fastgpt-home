@@ -1,0 +1,58 @@
+---
+title: Tool Calling and Plugins for Power Industry Intelligent Due Diligence Reports
+slug: /en/industry/finance-d008-c107-f008
+page_type: Industry scenario page
+article_section: Automated Due Diligence Reports
+is_part_of: FastGPT Tech Center
+meta_title: Tool Calling and Plugins for Power Industry Intelligent Due
+meta_description: Power due diligence data sources include publicly available operational monitoring data from grid operators, monthly operational reports disclosed by
+source_type: Industry topic matrix (industry x direction x capability x real community questions)
+date_published: 2026-09-15
+date_modified: 2026-09-15
+---
+
+# Tool Calling and Plugins for Power Industry Intelligent Due Diligence Reports
+
+## What Data for This Category Looks Like
+Power due diligence data sources include publicly available operational monitoring data from grid operators, monthly operational reports disclosed by power generation enterprises, and metering ledger data from the power consumption side.
+
+Update cycles cover three scenarios:
+- Real-time monitoring data updates at minute-level intervals
+- Monthly operational reports are updated within 5 working days of the following month
+- Annual regulatory reports are updated within 3 months of the following year
+
+Document structure is divided into four modules: power generation, power transmission, power distribution, and power consumption. Each module includes fields such as equipment number, operating parameters, and statistical cycle.
+
+For field units: power-related fields use megawatt (MW) and kilowatt (kW), electricity-related fields use megawatt-hour (MWh) and kilowatt-hour (kWh), and voltage-related fields use kilovolt (kV).
+
+## Constraints on Tool Calling and Plugins
+The multi-dimensional update cycles, differentiated field structures, and unit systems of power due diligence data impose multiple constraints on tool calling and plugin workflows.
+- The minute-level update requirement for real-time monitoring data means tool calling request intervals must align with the data refresh cycle to avoid retrieving expired data.
+- Differences in field formats across modules require plugins to include built-in field mapping rules to adapt to different numbering and parameter naming conventions for generation and power consumption sides.
+- The diverse unit system requires plugins to include built-in unit conversion logic to uniformly process data measured using different standards such as megawatts and kilowatt-hours.
+- Fixed update cycles for monthly and annual reports require tool calling to validate data update times and filter report files that have not yet completed updates.
+
+## Configuration Settings
+| Configuration Item | Recommended Value | Rationale |
+|---|---|---|
+| `toolRequestInterval` | `50 seconds` | Aligns with the minute-level update cycle of real-time power data, avoids triggering interface rate limits due to overly frequent requests, and ensures data timeliness |
+| `pluginCacheExpire` | `168 hours` | Adapts to the monthly report update cycle of the following month; caching for 7 days prevents repeated requests for unupdated report files |
+| `fieldMappingMode` | `Custom mapping` | Adapts to field differences across multiple modules of power data; manually match field names such as equipment numbers and operating parameters from different data sources |
+| `unitConvertSwitch` | `Enabled` | Uniformly handles scenarios where multiple units such as megawatts and kilowatt-hours are mixed in power data, preventing unit errors in analysis results |
+| `maxToolRetryTimes` | `2 retries` | Addresses temporary fluctuations in grid data interfaces, reducing the probability of task interruption caused by a single failed request |
+| `contextWindowSize` | `8000–12000 characters` | Meets the requirement of integrating multi-module data for power due diligence reports, and provides sufficient space to pass historical calling parameters and multi-dimensional data descriptions |
+
+> The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require targeted analysis. It is recommended to test on your own samples before finalizing settings.
+
+## Three Common Misconfigurations
+- Issue: Tool calls cannot retrieve the power data query range from historical conversations, leading to results that do not align with prior analysis context. Cause: The `toolContextIncludeHistory` configuration item is not enabled, so the tool only reads input parameters from the current request and does not associate query conditions from historical sessions.
+- Issue: Calling the power data interface returns the `401 Unauthorized` error code. Cause: Authentication parameters are not configured in MCP format, and information such as interface access keys and signature algorithms is not correctly filled in the `pluginAuthConfig` item.
+- Issue: Analysis results generated by the tool have inconsistent units, leading to calculation errors in report data. Cause: The `unitConvertSwitch` parameter is not enabled, and units of power and electricity from different data sources are not unified.
+
+## How to Verify Proper Configuration
+- Initiate a tool calling request, check the update time of the returned results, and confirm that it matches the actual refresh cycle of the corresponding data source.
+- Call a power data interface that includes different units, and check whether the returned results have completed unit conversion and unification.
+- View the plugin's authentication logs, confirm that parameters in the `pluginAuthConfig` item have been correctly loaded, and there are no authentication failure errors.
+- Initiate a conversation that includes historical query conditions, confirm that the tool call automatically associates query parameters from historical sessions.
+
+> Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

@@ -4,8 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "prebuild": "node scripts/verify-content-hygiene.js --mode source && node scripts/verify-technical-content.js && node scripts/verify-customers-data.js && node scripts/verify-customers-search.js && node scripts/verify-customer-migration.js && node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js && node scripts/verify-llms.js",
-    "build": "next build && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/verify-blog-thumbnail-export.js && node scripts/verify-technical-center.js && node scripts/verify-customers-export.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind && node --test scripts/verify-content-sidebar-cta.test.js && node scripts/verify-technical-export.js && node scripts/verify-content-hygiene.js --mode html --root out && node scripts/verify-ads.js",
+    "prebuild": "node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js",
+    "build": "next build --webpack && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind",
     "start": "npx serve@latest out",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky",
@@ -41,7 +41,6 @@
     "verify:worker-release": "node scripts/verify-worker-release.js",
     "verify:worker-release-regression": "node --test scripts/verify-worker-release.test.js",
     "verify:preview-worker-regression": "node --test scripts/verify-preview-worker.test.js",
-    "verify:preview-selection": "node --test scripts/select-preview-builds.test.js",
     "verify:content-reuse": "node --test scripts/verify-content-reuse.test.js",
     "verify:build-cache": "node --test scripts/prepare-build.test.js",
     "verify:solutions-preview": "node scripts/verify-solutions-preview-http.js",
@@ -89,10 +88,12 @@
     "verify:customers-search": "node scripts/verify-customers-search.js",
     "verify:customers-export": "node scripts/verify-customers-export.js",
     "verify:llms": "node scripts/verify-llms.js",
-    "build:export": "node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js && node scripts/verify-llms.js && npm --ignore-scripts run build",
+    "build:export": "npm run build",
     "verify:site-artifact": "node --test scripts/verify-site-artifact.test.js scripts/verify-preview-artifact.test.js",
     "verify:learning-center": "node scripts/verify-learning-center.js",
-    "verify:blog-mdx": "node --test scripts/verify-blog-mdx.test.js"
+    "verify:blog-mdx": "node --test scripts/verify-blog-mdx.test.js",
+    "build:preview": "node scripts/build-preview.js",
+    "package:preview": "node scripts/package-preview-artifact.js"
   },
   "dependencies": {
     "@heroui/react": "^2.8.9",

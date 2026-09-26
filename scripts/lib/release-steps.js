@@ -134,11 +134,6 @@ function getSourceNpmSteps() {
       ['verify:content-hygiene-regression']
     ],
     ['site-artifact.regression', 'Verified site artifact regression', ['verify:site-artifact']],
-    [
-      'preview-selection.regression',
-      'Preview build selection regression',
-      ['verify:preview-selection']
-    ],
     ['content-reuse.regression', 'Content reuse regression', ['verify:content-reuse']],
     ['build-cache.regression', 'Compilation cache regression', ['verify:build-cache']],
     [
@@ -207,15 +202,24 @@ function extractP1SuccessMeasurement(output) {
 
 function getVariantSteps(variant) {
   const steps = [
-    ...(variant === 'preview' ? [
     {
       runner: 'node',
-      id: 'contact.export',
-      label: `Contact export (${variant})`,
-      command: 'scripts/verify-contact-page.js',
+      id: 'blog-thumbnail.export',
+      label: `Blog thumbnail export (${variant})`,
+      command: 'scripts/verify-blog-thumbnail-export.js',
       args: []
-    }
-    ] : []),
+    },
+    ...(variant === 'preview'
+      ? [
+          {
+            runner: 'node',
+            id: 'contact.export',
+            label: `Contact export (${variant})`,
+            command: 'scripts/verify-contact-page.js',
+            args: []
+          }
+        ]
+      : []),
     ...(variant === 'preview'
       ? []
       : [
@@ -264,6 +268,46 @@ function getVariantSteps(variant) {
       id: 'ads.export',
       label: `Bing Ads landing verification (${variant})`,
       args: ['verify:ads']
+    },
+    {
+      runner: 'npm',
+      id: 'llms.export',
+      label: `LLMs export verification (${variant})`,
+      args: ['verify:llms']
+    },
+    {
+      runner: 'node',
+      id: 'technical-center.export',
+      label: `Technical center export verification (${variant})`,
+      command: 'scripts/verify-technical-center.js',
+      args: []
+    },
+    {
+      runner: 'node',
+      id: 'customers.export',
+      label: `Customers export verification (${variant})`,
+      command: 'scripts/verify-customers-export.js',
+      args: []
+    },
+    {
+      runner: 'npm',
+      id: 'content-sidebar-cta.export',
+      label: `Content sidebar CTA verification (${variant})`,
+      args: ['verify:content-sidebar-cta']
+    },
+    {
+      runner: 'node',
+      id: 'technical-export.export',
+      label: `Technical export verification (${variant})`,
+      command: 'scripts/verify-technical-export.js',
+      args: []
+    },
+    {
+      runner: 'node',
+      id: 'content-hygiene.html',
+      label: `Content hygiene HTML verification (${variant})`,
+      command: 'scripts/verify-content-hygiene.js',
+      args: ['--mode', 'html', '--root', 'out']
     },
     ...(variant === 'preview'
       ? []

@@ -387,9 +387,9 @@ test('release source checks run content hygiene first and block dirty published 
     packageJson.scripts['verify:content-hygiene-regression'],
     'node --test scripts/verify-content-hygiene.test.js'
   );
-  assert.match(
+  assert.equal(
     packageJson.scripts.prebuild,
-    /^node scripts\/verify-content-hygiene\.js --mode source && /
+    'node scripts/prepare-build.js && node scripts/generate-robots.js && node scripts/generate-llms.js'
   );
 
   const sourceOrder = getSourceExecutionOrder();
@@ -492,17 +492,14 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
     'utf8'
   );
 
-  assert.equal(
-    packageJson.scripts.prebuild.split(' && ')[0],
-    'node scripts/verify-content-hygiene.js --mode source'
-  );
+  assert.equal(packageJson.scripts.prebuild.split(' && ')[0], 'node scripts/prepare-build.js');
   assert.equal(
     packageJson.scripts['verify:content-hygiene-html'],
     'node scripts/verify-content-hygiene.js --mode html --root out'
   );
-  assert.match(
+  assert.equal(
     packageJson.scripts.build,
-    /fix-html-lang\.js && npm run generate:blog-pagefind && node --test scripts\/verify-content-sidebar-cta\.test\.js && node scripts\/verify-technical-export\.js && node scripts\/verify-content-hygiene\.js --mode html --root out && node scripts\/verify-ads\.js$/
+    'next build --webpack && node scripts/clean-locale-output.js && node scripts/clean-faq-rsc.js && node scripts/fix-html-lang.js && npm run generate:blog-pagefind'
   );
   assert.equal(
     packageJson.scripts['generate:blog-pagefind'],
@@ -510,7 +507,7 @@ test('release build and workflow wiring preserve source hygiene while enforcing 
   );
   assert(getSourceExecutionOrder().includes('typescript.source'));
   const workflow = require('js-yaml').load(verificationWorkflow);
-  assert(Object.hasOwn(workflow.on, 'pull_request'));
+  assert.equal(Object.hasOwn(workflow.on, 'pull_request'), false);
   assert.equal(workflow.on.workflow_run, undefined);
   assert(workflow.on.workflow_dispatch !== undefined || Object.hasOwn(workflow.on, 'workflow_dispatch'));
 

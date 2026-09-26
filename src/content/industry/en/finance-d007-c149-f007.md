@@ -1,0 +1,45 @@
+---
+title: Workflow Orchestration for Steel Trade Profitability
+slug: /en/industry/finance-d007-c149-f007
+page_type: Industry scenario page
+article_section: Yield and Market Daily Briefing
+is_part_of: FastGPT Tech Center
+meta_title: Workflow Orchestration for Steel Trade Profitability
+meta_description: Data sources for steel trade profitability data include daily quotes from domestic steel spot trading platforms, steel mill ex-factory price
+source_type: Industry topic matrix (industry x direction x capability x real community questions)
+date_published: 2026-09-15
+date_modified: 2026-09-15
+---
+
+# Workflow Orchestration for Steel Trade Profitability
+
+## What this category of data looks like
+Data sources for steel trade profitability data include daily quotes from domestic steel spot trading platforms, steel mill ex-factory price announcements, internal inventory and sales ledgers of trading enterprises, and bank financing rate disclosures. Update rhythms are as follows: spot quotes are updated 1 to 2 times per workday, ex-factory prices are adjusted irregularly with production plans, ledger data is updated after daily settlement, and financing rates are adjusted quarterly. Data is returned as a structured JSON array or CSV format. Each entry includes trade category code, product name, specification model, purchase unit price, sales unit price, transportation cost, storage cost, allocated financing interest, and daily trading volume. Default units are yuan/ton for unit prices and costs, and ton for trading volume. Some third-party platforms use yuan/kilogram as their quotation unit, so format conversion is required.
+
+## What constraints these characteristics impose on workflow orchestration
+Dispersed data sources and inconsistent update rhythms require workflows to support pulling from multiple data sources and trigger tasks in stages based on data update frequency, to avoid full repeated execution of low-frequency steps. Different data sources have varying field units. A unified conversion step must be added to the workflow, otherwise errors will occur in gross margin calculations. There are many steel trade categories with varying cost structures. Workflows must set branch conditions per category, and prioritize high-frequency trading categories to improve execution efficiency. Additionally, trade data includes internal enterprise ledgers. A data validation step must be added to the workflow to block invalid data such as missing values and outliers, ensuring the accuracy of profitability calculations.
+
+## How to configure settings
+| Configuration Item | Recommended Setting | Rationale |
+| ---- | ---- | ---- |
+| `workflow_trigger_mode` | Trigger by data update events + daily scheduled completion | Spot quotes are updated in real time and require event triggering, while low-frequency data such as financing rates only need daily scheduled completion to cover requirements |
+| `data_source_merge_strategy` | Merge using product name + specification as composite primary key | Entries from different data sources must be aligned via unique identifiers to avoid duplicate calculations of profitability for the same category |
+| `unit_conversion_factor` | 1000 | Most third-party platforms use yuan/kilogram as quotation unit; multiplying by this coefficient converts it to the commonly used yuan/ton unit for trade |
+| `branch_condition_max_count` | Top 20 high-frequency categories | There are many steel trade categories; prioritizing categories with the highest share improves overall workflow execution efficiency |
+| `workflow_debug_timeout` | 600 seconds | Total time for multi-data-source pulling and multi-branch calculation is usually within 10 minutes, so this reserves sufficient debugging time |
+| `global_variable_persist_strategy` | Persist per workflow instance | Profitability calculations for each trade batch require independent use of global variables to avoid data contamination between batches |
+
+> The parameter values provided on this page are conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require on-site analysis, and it is recommended to test on your own samples before finalizing settings.
+
+## Three common mistakes
+- Scenario: When running a workflow in environment version 4.9.13 and above, a "Dangerous behavior" error pops up, with truncated error information in the logs. Cause: The allowed external data source whitelist was not configured in the workflow's security settings, and directly calling the API of the steel spot platform triggered a security verification block.
+- Scenario: After clicking the button in the data panel, the obtained global variables are empty. Cause: The global variable persistence strategy was not set to save per workflow instance, causing variables to be reset when switching workflow nodes.
+- Scenario: The profitability calculation results generated by the workflow have large deviations. Cause: No unit conversion rules were configured, and third-party platform quotations in yuan/kilogram were directly used to calculate gross margin, resulting in inconsistent units.
+
+## How to verify proper configuration
+- Run a single-category test workflow, verify that the pulled data source fields cover purchase unit price, sales unit price, and various cost items.
+- Click the data panel button in the workflow debug interface, confirm that the global variables assigned for the current instance can be obtained.
+- Simulate abnormal data such as missing quotations or incorrect units, check whether the workflow triggers the preset validation step and returns clear prompts.
+- Export the workflow configuration file, confirm that the values of all configuration items match the preset plan.
+
+> Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

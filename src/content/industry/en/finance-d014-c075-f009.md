@@ -1,0 +1,55 @@
+---
+title: Citation Sources and Traceability for Vehicle Financial Report Analysis
+slug: /en/industry/finance-d014-c075-f009
+page_type: Industry scenario page
+article_section: Financial Statement Analysis and Reporting
+is_part_of: FastGPT Tech Center
+meta_title: Citation Sources and Traceability for Vehicle Financial
+meta_description: Vehicle financial report data comes from public regulatory disclosure channels and official automaker investor relations pages. Update cycles fall
+source_type: Industry topic matrix (industry x direction x capability x real community questions)
+date_published: 2026-09-15
+date_modified: 2026-09-15
+---
+
+# Citation Sources and Traceability for Vehicle Financial Report Analysis
+
+## What Data for This Category Looks Like
+Vehicle financial report data comes from public regulatory disclosure channels and official automaker investor relations pages. Update cycles fall into two categories: periodic and ad-hoc. Periodic reports are released on fixed schedules for quarters, semi-annual periods, and full years. Ad-hoc announcements are issued promptly after major business events occur.
+
+Documents contain multi-module structured content, including core fields such as vehicle business revenue, delivery volume, average selling price per vehicle. Field units include RMB yuan, units, 100 million yuan, and others. A single periodic report includes multiple pages of structured reports and written analysis. Some data is presented in table form, while other content consists of detailed explanations for individual business segments.
+
+## How These Characteristics Impose Constraints on Traceability
+The scattered nature of data sources means the traceability link must associate disclosure channels and document type identifiers, to avoid mixing different batches of report content.
+
+The large document volume and multi-business segment structure means retrieval must accurately locate paragraphs corresponding to specific segments, to avoid invalid citations across business modules.
+
+Varying magnitudes of field units mean the traceability link must retain original unit labels, to prevent analysis errors caused by unit confusion.
+
+The high-frequency update nature of ad-hoc announcements means the traceability link must include disclosure timestamps, to ensure referenced business data is the latest version.
+
+Core fields of vehicle financial reports are strongly tied to specific vehicle models and business segments. Traceability information must be linked to specific sub-segments, and cannot be linked only to the entire document.
+
+## Configuration Settings
+| Configuration Item | Recommended Value | Rationale |
+| --- | --- | --- |
+| `chunk_size` | 800–1200 characters | Structured data segments in vehicle financial reports are mostly 500–1000 characters in length. Excessively long segments will lose field associations, while excessively short segments will split data from the same business segment. |
+| `top_k` | Top 6–8 entries | Vehicle financial reports involve multiple business modules. Enough relevant segments must be retrieved to cover different segments, while avoiding redundant retrieval. |
+| `similarity_threshold` | 0.72–0.85 | Financial report fields have high precision requirements. A threshold that is too low will introduce irrelevant business data, while a threshold that is too high will miss relevant sub-fields. |
+| `enable_source_reference` | Enabled | Original document chapter, disclosure time and other traceability information must be retained to meet compliance requirements for financial report analysis. |
+| `source_metadata_fields` | `["披露日期", "文档类型", "业务板块"]` | Vehicle financial reports require differentiation between periodic reports and ad-hoc announcements, as well as corresponding business segments. These metadata fields can improve traceability accuracy. |
+| `dynamic_knowledge_base_switch` | Enabled | Must support dynamic switching of financial report knowledge bases for different automakers, to adapt to multi-entity analysis scenarios. |
+
+> The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.
+
+## Three Common Configuration Errors
+- Symptom: The `reference_variable` selection box in the dynamic knowledge base node has no optional variables, making dynamic specification impossible. Cause: No global variable matching the node parameter type has been created, or the variable has not been saved as an active state.
+- Symptom: MongoDB logs only display document names, and cannot distinguish citation entries for different business segments within the same document. Cause: The `source_metadata_fields` parameter has not been configured, and sub-segment metadata such as `业务板块` and `披露日期` has not been collected.
+- Symptom: The citation ID generated by the large model does not match the actually retrieved knowledge base segment, or citation markers that are not bound to real segments appear in the output content. Cause: The retrieved segment is not bound to the paragraph offset or chapter identifier of the original document, making it impossible for the large model to generate valid traceability information.
+
+## How to Verify Proper Configuration
+- Enter the dynamic knowledge base node in the workflow, check the `reference_variable` drop-down box, and confirm that the configured variables are displayed in the options.
+- Trigger a test call, check the citation source in the returned results, and confirm that metadata information such as `披露日期` and `业务板块` is included.
+- Check the MongoDB logs, and confirm that each citation record includes the corresponding knowledge base ID, document metadata and segment offset.
+- Adjust any configuration parameter, test for changes in the number or content of retrieved results, and confirm that the parameter takes effect.
+
+> Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

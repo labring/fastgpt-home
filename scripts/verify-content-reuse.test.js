@@ -251,7 +251,7 @@ Reader content.
   assert.deepEqual(content.getIndustryArticle('en', 'shared').keywords, ['useful', 'keywords']);
   assert.deepEqual(content.getIndustryArticle('zh', 'only').publishedLocales, ['zh']);
   assert.deepEqual(content.getIndustryArticle('en', 'shared').publishedLocales, ['zh', 'en']);
-  assert.equal(content.getIndustryOwnerParams('preview').length, 2);
+  assert.equal(content.getIndustryOwnerParams('preview').length, 1);
   assert.equal(content.getIndustryReviewParams('preview').length, 3);
   assert.deepEqual(content.getIndustryOwnerParams('cn'), [{ slug: 'only' }, { slug: 'shared' }]);
   assert.deepEqual(content.getIndustryOwnerParams('io'), [{ slug: 'shared' }]);

@@ -192,10 +192,14 @@ export function getIndustryHubParams(variant: SiteVariant = currentSiteVariant) 
 }
 
 export function getIndustryOwnerParams(variant: SiteVariant = currentSiteVariant) {
+  if (variant === 'preview') {
+    const placeholder = industryArticles[0]?.slug;
+    return placeholder ? [{ slug: placeholder }] : [];
+  }
   return [
     ...new Set(
       industryArticles
-        .filter((article) => variant === 'preview' || getLocaleOwner(article.locale) === variant)
+        .filter((article) => getLocaleOwner(article.locale) === variant)
         .map((article) => article.slug)
     )
   ].map((slug) => ({ slug }));

@@ -19,7 +19,9 @@ export default async function LangHome({
   return (
     <>
       <JsonLd lang={langName} schema={dict.JsonLd} />
-      <HomeLayoutSwitcher dict={dict}>{children}</HomeLayoutSwitcher>
+      <HomeLayoutSwitcher links={dict.links} navCta={dict.Home.navCta}>
+        {children}
+      </HomeLayoutSwitcher>
     </>
   );
 }

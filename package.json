@@ -88,7 +88,6 @@
     "verify:customers-search": "node scripts/verify-customers-search.js",
     "verify:customers-export": "node scripts/verify-customers-export.js",
     "verify:llms": "node scripts/verify-llms.js",
-    "build:export": "npm run build",
     "verify:site-artifact": "node --test scripts/verify-site-artifact.test.js scripts/verify-preview-artifact.test.js",
     "verify:learning-center": "node scripts/verify-learning-center.js",
     "verify:blog-mdx": "node --test scripts/verify-blog-mdx.test.js",

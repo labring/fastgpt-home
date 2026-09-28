@@ -5,9 +5,38 @@ Preview builds. It writes command outcomes, build durations, failures, and stati
 inventories to `.release-artifacts/release-verification.json`. `--source-only` runs the
 source checks on development machines; full export requires a case-sensitive filesystem.
 
-The verification workflow runs the same command on Linux. Production publishing uses the
-existing image workflow and Kubernetes rollout. External Solutions and documentation HTTP
-checks run separately against explicitly supplied targets.
+PR Preview runs one CRM-disabled build through `npm run build:preview`, packages its export,
+and verifies the artifact handoff before deployment. Guide Release Verification is a manually
+dispatched Linux workflow for the CN, IO, and Preview release configurations. It verifies
+shared source once and reuses that record for each build with the same revision and toolchain.
+
+The release gate focuses on current source data, content generation, lint/type checks, completed
+HTML, route and metadata behavior, security, and artifact integrity. Guide source content is
+checked once. FAQ route verification includes the registry check; the full alias HTTP check
+includes case-only routes. The production FAQ SEO graph verifies route and sitemap coverage;
+Preview retains its separate FAQ HTML count check.
+
+Development regression suites and historical G1/G2 acceptance run on demand through their
+existing npm commands or `node --test scripts/<name>.test.js`. For release changes, run:
+
+```bash
+npm run verify:release-regression
+npm run verify:site-artifact
+```
+
+Historical acceptance remains available through `npm run verify:guide-release`,
+`npm run verify:guide-g2-release`, and their regression commands. These suites have a separate
+execution lifecycle from the default publication gate.
+
+Every release build uses `npm run build`, including Content Collections, robots/LLMs generation,
+locale and redirect processing, RSC cleanup, HTML language correction, and Pagefind generation.
+Sealing requires successful records for every remaining source and variant check. The CN Docker
+image copies the sealed export and runtime configuration, checks the CN identity and Nginx
+configuration, and receives an HTTP check against the packaged container. Artifact consumers
+retain identity, checksum, regular-file, and trusted-configuration validation.
+
+External Solutions and documentation HTTP checks run separately against explicitly supplied
+targets.
 
 ## Documentation host owner-routing evidence
 
@@ -54,7 +83,8 @@ Use `--check` in place of `--write` to compare the delivery with committed conte
 
 Production uses the existing image workflow on upstream `main`. It builds from the triggering
 commit, deploys the returned image digest, waits for Kubernetes rollout, and restores the
-previous image when rollout fails. PR workflows verify CN, IO, Preview, and the Docker runtime.
+previous image when rollout fails. PR Preview publishes its single CRM-disabled build; the
+manual Guide workflow covers the full release configurations and Docker runtime.
 
 ## Customer migration release evidence
 
@@ -85,7 +115,7 @@ review experiment. Its source revision is
 [`405b02ff210b90cac0b5e4a19660c5fdb044f800`](https://github.com/yangchuansheng/fastgpt-home/tree/405b02ff210b90cac0b5e4a19660c5fdb044f800).
 Retrieve that archive for initial or post-publication acceptance; daily verification uses
 `npm run verify:release`. Preserve the archive through production acceptance and any later
-audit retention period. Existing Week06 release gates have a separate retirement scope.
+audit retention period. Week06 G1/G2 acceptance commands remain available on demand.
 
 PR #299 requires explicit owner approval before merge or production publication, with
 automatic merge disabled. After approval, use the existing image workflow and record the

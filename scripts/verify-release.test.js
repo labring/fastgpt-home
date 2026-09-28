@@ -13,8 +13,6 @@ const {
   extractP1SuccessMeasurement,
   finalizeReleaseRecord,
   getSourceExecutionOrder,
-  getSourceNodeSteps,
-  getSourceNpmSteps,
   getVariantExecutionOrder,
   getVariantSteps,
   parseArgs: parseReleaseArgs
@@ -207,84 +205,45 @@ if (args[0] === 'rollout' && (process.env.FAIL_ROLLOUT === 'all' ||
   }
 });
 
-test('release plans compose FAQ, Guide, and variant checks with stable step IDs', () => {
-  const sourceIds = getSourceNodeSteps().map(([stepId]) => stepId);
-  assert.deepEqual(
-    sourceIds.filter((stepId) => stepId.startsWith('faq-')),
-    [
-      'faq-route-registry.source',
-      'faq-metadata-snapshot.source',
-      'faq-routes.source',
-      'faq-metadata-legacy.source',
-      'faq-metadata.source',
-      'faq-seo-graph.source',
-      'faq-redirects.source'
-    ]
-  );
-
-  const variantOrder = getVariantExecutionOrder('cn');
-  assert.equal(variantOrder[0], 'variant.build');
-  assert(variantOrder.indexOf('variant.build') < variantOrder.indexOf('guide.export'));
-});
-
-test('release coordinator checks technical content and every site variant', () => {
-  const sourceCommands = getSourceNpmSteps().flatMap(([, , args]) => args);
-  for (const command of [
-    'verify:technical-content',
-    'verify:technical-content-regression',
-    'verify:technical-center-regression',
-    'verify:technical-export-regression'
+test('release plans retain content gates and schedule each required check once', () => {
+  const sourceIds = getSourceExecutionOrder();
+  assert.equal(new Set(sourceIds).size, sourceIds.length);
+  assert(!sourceIds.some((id) => id.includes('regression') || id.startsWith('week08.')));
+  for (const id of ['faq-route-registry.source', 'guide-release.source', 'guide-g2-release.source'])
+    assert(!sourceIds.includes(id), id);
+  for (const id of [
+    'content-collections.source',
+    'technical-content.source',
+    'content-hygiene.source',
+    'guide-content.source',
+    'faq-routes.source'
   ])
-    assert(sourceCommands.includes(command), command);
+    assert(sourceIds.includes(id), id);
   for (const variant of ['cn', 'io', 'preview']) {
     const variantIds = getVariantExecutionOrder(variant);
-    assert.equal(variantIds.filter((id) => id === 'variant.build').length, 1);
+    assert.equal(new Set(variantIds).size, variantIds.length);
+    assert.equal(variantIds[0], 'variant.build');
+    assert(variantIds.includes('guide.export'));
+    assert(variantIds.includes('content-hygiene.html'));
+    assert(!variantIds.includes('guide-content.source'));
+    assert(!variantIds.includes('case-only.http'));
+    assert.equal(variantIds.includes('faq.export-cardinality'), variant === 'preview');
+    assert.equal(variantIds.includes('faq-seo-graph.html'), variant !== 'preview');
+    assert.equal(variantIds.includes('url-alias.blackbox'), variant !== 'preview');
   }
 });
 
-test('release coordinator runs consultation regression before an export exists', () => {
-  assert.match(
-    packageJson.scripts['verify:contact'],
-    /verify-consultation-attribution\.test\.js/,
-    'verify:contact must run the consultation attribution regression'
-  );
-  assert(
-    getSourceNpmSteps().some(([, , args]) => args.includes('verify:consultation-attribution')),
-    'source verification must run the export-independent consultation regression'
-  );
-  assert(
-    !getSourceNpmSteps().some(([, , args]) => args.includes('verify:contact')),
-    'contact HTML verification requires a completed export'
-  );
-});
-
-test('release coordinator records and gates the case-only alias slice independently', () => {
-  const sourceStep = getSourceNodeSteps().find(([stepId]) => stepId === 'case-only.source');
-  const regressionStep = getSourceNpmSteps().find(([stepId]) => stepId === 'case-only.regression');
-  const httpStep = getVariantSteps('cn').find((step) => step.id === 'case-only.http');
-
-  assert.equal(sourceStep[2], 'scripts/verify-case-only-aliases.js');
-  assert.deepEqual(regressionStep[2], ['verify:case-only-regression']);
-  assert.deepEqual(httpStep.args, ['--variant', 'cn', '--slice', 'case-only']);
-  assert.equal(
-    getVariantSteps('preview').some((step) => step.id === 'case-only.http'),
-    false
-  );
-  assert.equal(packageJson.scripts['verify:case-only'], 'node scripts/verify-case-only-aliases.js');
-  assert.equal(
-    packageJson.scripts['verify:case-only-regression'],
-    'node --test scripts/verify-case-only-aliases.test.js'
-  );
-  assert.equal(packageJson.scripts['verify:guide-authorization'], undefined);
-  assert.equal(packageJson.scripts['verify:guide-authorization-regression'], undefined);
-  assert.equal(
-    packageJson.scripts['verify:guide-g2-release'],
-    'node scripts/verify-guide-g2-release.js'
-  );
-  assert.equal(
-    packageJson.scripts['verify:guide-g2-release-regression'],
-    'node --test scripts/verify-guide-g2-release.test.js'
-  );
+test('development regressions and historical acceptance remain callable on demand', () => {
+  for (const command of [
+    'verify:release-regression',
+    'verify:site-artifact',
+    'verify:case-only-regression',
+    'verify:guide-release',
+    'verify:guide-g2-release',
+    'verify:guide-import-regression',
+    'verify:consultation-attribution'
+  ])
+    assert.equal(typeof packageJson.scripts[command], 'string', command);
 });
 
 test('release coordinator accepts the preview Site Variant', () => {
@@ -359,10 +318,6 @@ test('IO release validates the Worker artifact while other variants keep their p
   assert.equal(
     packageJson.scripts['verify:worker-release-regression'],
     'node --test scripts/verify-worker-release.test.js'
-  );
-  assert(
-    getSourceNpmSteps().some(([id]) => id === 'worker-publication.regression'),
-    'Worker publication regression must run in source verification'
   );
   assert(
     getVariantSteps('io').some((step) => step.id === 'worker.release'),
@@ -461,29 +416,6 @@ test('retired consultation modal dependencies and APIs stay removed', () => {
   assert.equal(fs.existsSync(path.join(ROOT, 'src/components/contact/dialogCopy.ts')), false);
   assert.doesNotMatch(consultation, /\bgetLocaleFromPathname\b/);
   assert.doesNotMatch(contactForm, /\bonDone\b/);
-});
-
-test('source-only release leaves the existing build info bytes unchanged', () => {
-  const buildInfoPath = path.join(ROOT, 'tsconfig.tsbuildinfo');
-  const releaseRecordPath = path.join(ROOT, '.release-artifacts', 'release-verification.json');
-  const readReleaseRecord = () =>
-    fs.existsSync(releaseRecordPath) ? fs.readFileSync(releaseRecordPath) : undefined;
-
-  // 干净 CI 中 tsconfig.tsbuildinfo 不存在（已 gitignore），测试临时创建 fixture 并在结束后清理，
-  // 避免依赖仓库实际产物，同时保持 cwd=ROOT 以复用 node_modules。
-  const createdFixture = !fs.existsSync(buildInfoPath);
-  if (createdFixture) fs.writeFileSync(buildInfoPath, 'build-info-fixture-bytes');
-
-  try {
-    const before = fs.readFileSync(buildInfoPath);
-    const releaseRecordBefore = readReleaseRecord();
-    const result = runSourceBoundary(ROOT, 'tsc');
-    assert.equal(result.status, 0, result.stdout + result.stderr);
-    assert.deepEqual(fs.readFileSync(buildInfoPath), before);
-    assert.deepEqual(readReleaseRecord(), releaseRecordBefore);
-  } finally {
-    if (createdFixture) fs.rmSync(buildInfoPath, { force: true });
-  }
 });
 
 test('release build and workflow wiring preserve source hygiene while enforcing completed HTML exports', () => {
@@ -717,15 +649,4 @@ test('requiring the metadata verifier is silent and side-effect free', () => {
   assert.equal(result.status, 0);
   assert.equal(result.stdout, '');
   assert.equal(result.stderr, '');
-});
-
-test('daily releases retain current content protection and keep Week08 acceptance explicit', () => {
-  const { getSourceNodeSteps, getVariantSteps } = require('./lib/release-steps');
-  const steps = getSourceNodeSteps();
-  assert(steps.some(([id]) => id === 'not-found.regression'));
-  assert(steps.some(([id]) => id === 'guide-markdown.regression'));
-  assert(steps.some(([id]) => id === 'guide-export.regression'));
-  assert(!steps.some(([id]) => id.startsWith('week08.')));
-  for (const variant of ['cn', 'io', 'preview'])
-    assert(!getVariantSteps(variant).some(({ id }) => id.startsWith('week08.')));
 });

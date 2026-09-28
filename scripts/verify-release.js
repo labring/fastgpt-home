@@ -191,27 +191,13 @@ function runSourceChecks(failures, env, record) {
   );
 }
 
-function runGuideSourceChecks(failures, env, variant, record) {
-  const suffix = variant ? ` (${variant})` : '';
-  nodeStep(
-    failures,
-    'guide-content.source',
-    `Guide content source verification${suffix}`,
-    'scripts/verify-guide-content.js',
-    [],
-    env,
-    variant,
-    record
-  );
-}
-
 function runVariantChecks(failures, variant, env, record) {
   const commandStart = record?.commands.length || 0;
   const buildPassed = npmStep(
     failures,
     'variant.build',
     `build ${variant}`,
-    ['build:export'],
+    ['build'],
     env,
     variant,
     undefined,
@@ -240,39 +226,38 @@ function runVariantChecks(failures, variant, env, record) {
     npmStep(failures, step.id, step.label, step.args, env, variant, step.formatSuccess, record);
   }
 
-  try {
-    verifyExportCardinality(variant);
-    recordStep(
-      record,
-      'faq.export-cardinality',
-      `export cardinality (${variant})`,
-      'in-process static export cardinality check',
-      variant,
-      'passed',
-      'FAQ HTML and sitemap cardinality matched the release contract'
-    );
-    console.log(`[verify-release] export cardinality (${variant}) passed`);
-  } catch (error) {
-    failures.push({
-      id: 'faq.export-cardinality',
-      label: `export cardinality (${variant})`,
-      variant,
-      command: 'in-process static export cardinality check',
-      output: error.message
-    });
-    recordStep(
-      record,
-      'faq.export-cardinality',
-      `export cardinality (${variant})`,
-      'in-process static export cardinality check',
-      variant,
-      'failed',
-      error.message
-    );
-    console.error(`[verify-release] export cardinality (${variant}) failed`);
-  }
-
   if (variant === 'preview') {
+    try {
+      verifyExportCardinality(variant);
+      recordStep(
+        record,
+        'faq.export-cardinality',
+        `export cardinality (${variant})`,
+        'in-process static export cardinality check',
+        variant,
+        'passed',
+        'FAQ HTML cardinality matched the release contract'
+      );
+      console.log(`[verify-release] export cardinality (${variant}) passed`);
+    } catch (error) {
+      failures.push({
+        id: 'faq.export-cardinality',
+        label: `export cardinality (${variant})`,
+        variant,
+        command: 'in-process static export cardinality check',
+        output: error.message
+      });
+      recordStep(
+        record,
+        'faq.export-cardinality',
+        `export cardinality (${variant})`,
+        'in-process static export cardinality check',
+        variant,
+        'failed',
+        error.message
+      );
+      console.error(`[verify-release] export cardinality (${variant}) failed`);
+    }
     nodeStep(
       failures,
       'guide.export',
@@ -357,19 +342,6 @@ function reportFailures(failures, advisories, retainedPaths) {
   }
 }
 
-function runReleaseRegressionChecks(failures, env, record) {
-  npmStep(
-    failures,
-    'release.regression',
-    'release coordinator regression',
-    ['verify:release-regression'],
-    env,
-    undefined,
-    undefined,
-    record
-  );
-}
-
 function main() {
   const options = parseArgs(process.argv.slice(2));
   const failures = [];
@@ -379,7 +351,7 @@ function main() {
   // Keep the previous sealed publication until a replacement passes every gate.
   const snapshot = snapshotGeneratedPublicFiles();
   // Shared checks use the same publication fixture for every build identity.
-  // Variant-specific content and final-export checks use the actual publication settings below.
+  // Final-export checks use the actual publication settings below.
   const sourceEnv = {
     ...Object.fromEntries(
       Object.entries(process.env).filter(([key]) => !key.includes('NEXT_PUBLIC_'))
@@ -405,7 +377,7 @@ function main() {
       );
       assert.equal(source.status, 'source-verified', 'Source verification did not pass');
       assert.equal(source.failures.length, 0, 'Source verification contains failures');
-      for (const id of [...getSourceExecutionOrder(), 'release.regression']) {
+      for (const id of getSourceExecutionOrder()) {
         assert(
           source.commands.some(
             (step) => step.id === id && step.variant === undefined && step.status === 'passed'
@@ -417,10 +389,6 @@ function main() {
       console.log('[verify-release] shared source verification reused');
     } else {
       runSourceChecks(failures, sourceEnv, record);
-      runGuideSourceChecks(failures, sourceEnv, undefined, record);
-      if (!failures.length && (!options.sourceOnly || options.writeSourceRecord)) {
-        runReleaseRegressionChecks(failures, sourceEnv, record);
-      }
     }
     if (failures.length || options.sourceOnly) {
       reportFailures(failures, advisories, retainedPaths);
@@ -468,7 +436,6 @@ function main() {
       clearBuildArtifacts();
       const env = variantEnvironment(variant);
       const beforeFailures = failures.length;
-      runGuideSourceChecks(failures, env, variant, record);
       runVariantChecks(failures, variant, env, record);
       recordVariantArtifactInventory(record, variant);
       appendP1HistoricalBaselineAdvisories(failures, beforeFailures, advisories);

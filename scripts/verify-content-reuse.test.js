@@ -44,6 +44,46 @@ function loader(overrides = {}) {
   return load;
 }
 
+test('self-contained articles keep their own navigation and layout', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  let pathname;
+  const navCalls = [];
+  const load = loader({
+    'next/navigation': { usePathname: () => pathname },
+    '@/components/home/Navbar': (props) => {
+      navCalls.push(props);
+      return React.createElement('nav', null, 'Shared navigation');
+    }
+  });
+  const Layout = load('@/components/home/HomeLayoutSwitcher').default;
+  const props = {
+    links: [{ label: 'Docs', href: '/docs' }],
+    navCta: { trial: 'Try', consult: 'Talk' }
+  };
+  const render = () =>
+    renderToStaticMarkup(
+      React.createElement(Layout, props, React.createElement('article', null, 'Article content'))
+    );
+  for (pathname of [
+    '/en/industry',
+    '/zh/industry',
+    '/en/industry/finance-d008-c126-f012',
+    '/zh/reference/env-variables-reference',
+    '/en/model/example',
+    '/zh/glossary/example',
+    '/en/faq/example',
+    '/zh/tutorial/example',
+    '/en/guide/example'
+  ]) {
+    assert.equal(render(), '<article>Article content</article>', pathname);
+  }
+  assert.equal(navCalls.length, 0);
+  pathname = '/en/enterprise';
+  assert.match(render(), /<nav>Shared navigation<\/nav>/);
+  assert.deepEqual(navCalls, [{ links: props.links, t: props.navCta }]);
+});
+
 test('all technical recommendations retain their complete published order', () => {
   const load = loader();
   const { TECH_ENTRIES } = load('@/components/tech-center/data');

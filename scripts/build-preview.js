@@ -11,7 +11,7 @@ if (process.env.NEXT_PUBLIC_CRM_API_URL?.trim()) {
 }
 
 const npm = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-const result = spawnSync(npm, ['run', 'build:export'], {
+const result = spawnSync(npm, ['run', 'build'], {
   stdio: 'inherit',
   env: { ...process.env, NODE_ENV: 'production' }
 });

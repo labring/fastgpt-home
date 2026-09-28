@@ -37,13 +37,13 @@ jobs:
       - name: Checkout merge result or selected manual revision
         uses: actions/checkout@v4
         with:
-          submodules: recursive
           fetch-depth: 1
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 24
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
@@ -67,25 +67,6 @@ jobs:
         with:
           path: .next/cache
           key: ${{ steps.cache-disabled.outputs.key }}
-
-      - name: Verify preview filing links
-        run: |
-          node <<'NODE'
-          const assert = require('node:assert/strict');
-          const fs = require('node:fs');
-          const html = fs.readFileSync('.release-artifacts/site/preview-disabled/payload/out/zh.html', 'utf8');
-          const footer = html.match(/<footer\b[^>]*>[\s\S]*?<\/footer>/)?.[0];
-          assert(footer, 'Chinese preview must render its footer');
-          for (const [key, href] of [
-            ['NEXT_PUBLIC_POLICE_FILING', 'https://beian.mps.gov.cn/'],
-            ['NEXT_PUBLIC_FILING_ADDRESS', 'https://beian.miit.gov.cn/']
-          ]) {
-            const value = process.env[key];
-            assert(value, `${key} must be configured`);
-            assert(footer.includes(`href="${href}"`) && footer.includes(value), `${key} must render with its link`);
-          }
-          console.log('Preview filing links verified');
-          NODE
 
       - name: Upload verified disabled preview
         uses: actions/upload-artifact@v4

@@ -312,6 +312,19 @@ test('isolated current metadata and language fixtures govern technical HTML in e
       );
     const options = { identity, identities: [identity], document, variant, baseUrls };
     verifyTechnicalPage(html('2026-02-02', false), options);
+    for (const replacement of [
+      '<div class="metadata"><time datetime="2026-02-02">更新于 2026年2月2日</time></div>',
+      '<time datetime="2026-01-01">发布于 2026年1月1日</time><time datetime="2026-02-02">更新于 2026年2月2日</time>'
+    ]) {
+      verifyTechnicalPage(html('2026-02-02', false).replace(/<time.*?<\/time>/, replacement), options);
+    }
+    assert.throws(
+      () => verifyTechnicalPage(
+        html('2026-02-02', false).replace('datetime="2026-02-02"', 'datetime="2026-01-01"'),
+        options
+      ),
+      /updated/
+    );
     assert.throws(
       () => verifyTechnicalPage(html('2026-02-02', false).replace(/<time.*?<\/time>/, ''), options),
       /updated time/

@@ -177,7 +177,7 @@ const readTechArticle = cache((entry: TechEntry): TechArticle => {
     relatedLinks: getRelatedLinks(entry.slug),
     stageReturn: getStageReturn(entry),
     contentType: metadata.schema_type === 'Article' ? 'Article' : 'TechArticle',
-    dateModified: entry.dateModified || metadata.date_modified,
+    dateModified: metadata.date_modified,
     datePublished: metadata.date_published,
     image: metadata.image
       ? {

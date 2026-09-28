@@ -139,13 +139,7 @@ function verifyTechnicalPage(
   if (identity.canonicalPath.startsWith('/guide/')) {
     verifyUpdatedTime(
       visibleHtml(html),
-      {
-        source: {
-          dateModified: metadata.date_modified,
-          metaDescription: metadata.meta_description
-        }
-      },
-      { locale: identity.locale },
+      { dateModified: metadata.date_modified, locale: identity.locale },
       context
     );
   }

@@ -343,6 +343,9 @@ function deriveSummary(title, body) {
 }
 
 function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sourceCount, label }) {
+  if (identity.canonicalPath.startsWith('/guide/')) {
+    requireText(metadata.date_modified, `${label}.date_modified`);
+  }
   normalizePublicHttpsUrl(metadata.source, `${label} source`);
   const citations = normalizeCitations(body.replace(SECRET_PATTERN, 'YOUR_API_KEY'));
   const lineEndings = normalizeStructuralEscapedLineEndings(citations);

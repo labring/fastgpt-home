@@ -85,7 +85,7 @@ function verifyPage(outDir, slug, locale) {
   const context = { variant: 'preview', slug, filePath };
   const article = getJsonLdNode(getJsonLdNodes(html, context), 'Article', context, 'schema');
   verifyArticleDates(article, source, canonical);
-  verifyUpdatedTime(html, { source }, { locale }, context);
+  verifyUpdatedTime(html, { dateModified: source.dateModified, locale }, context);
   const expectation = { ...buildGuideExpectation(locale === 'zh' ? 'cn' : 'io'), variant: 'preview' };
   verifyMetadata(html, expectation.routes.get(`/guide/${slug}`), expectation, filePath);
   verifyGuideSectionAnchors(html, context);

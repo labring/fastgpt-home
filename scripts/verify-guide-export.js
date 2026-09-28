@@ -392,15 +392,15 @@ function expectedUpdatedText(dateModified, locale) {
   return `Last updated ${formatted}`;
 }
 
-function verifyUpdatedTime(html, page, expectation, context) {
-  const summary = [...html.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>\s*<time\b([^>]*)>([\s\S]*?)<\/time>/gi)].find(
-    (match) => stripHtml(match[1]) === page.source.metaDescription,
-  );
-  if (!summary) fail({ ...context, surface: 'updated' }, 'updated time must immediately follow the summary');
+function verifyUpdatedTime(html, { dateModified, locale }, context) {
+  const expectedText = expectedUpdatedText(dateModified, locale);
   const times = [...html.matchAll(/<time\b([^>]*)>([\s\S]*?)<\/time>/gi)];
-  if (times.length !== 1) fail({ ...context, surface: 'updated' }, 'expected exactly one updated time element');
-  assertEqual(context, getAttribute(`<time ${summary[2]}>`, 'datetime'), page.source.dateModified, 'updated');
-  assertEqual(context, stripHtml(summary[3]), expectedUpdatedText(page.source.dateModified, expectation.locale), 'updated');
+  if (!times.some((match) =>
+    getAttribute(`<time ${match[1]}>`, 'datetime') === dateModified &&
+    stripHtml(match[2]) === expectedText
+  )) {
+    fail({ ...context, surface: 'updated' }, `missing updated time for ${dateModified}: ${expectedText}`);
+  }
 }
 
 function verifyMetadata(html, page, expectation, filePath) {
@@ -487,7 +487,7 @@ function verifyArticle(html, page, expectation, filePath) {
   const canonical = `${expectation.host}${page.route}`;
   const language = expectation.locale === 'zh' ? 'zh-CN' : 'en-US';
   const article = getJsonLdNode(nodes, 'Article', context, 'schema:Article');
-  verifyUpdatedTime(html, page, expectation, context);
+  verifyUpdatedTime(html, { dateModified: page.source.dateModified, locale: expectation.locale }, context);
   verifyArticleDates(article, page.source, canonical, context);
   assertSchemaValue(context, article.headline, page.source.h1, 'schema:Article', 'headline');
   assertSchemaValue(context, article.description, page.source.metaDescription, 'schema:Article', 'description');

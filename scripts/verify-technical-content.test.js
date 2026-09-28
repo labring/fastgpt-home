@@ -24,7 +24,7 @@ test('Guide modification dates survive import and reject invalid dates or metada
   const repoRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-guide-date-'));
   try {
     const identity = { locale: 'zh', canonicalPath: '/guide/date-example' };
-    const normalized = buildNormalizedTechnicalPage({
+    const input = {
       metadata: {
         title: 'Date example',
         source: 'https://github.com/labring/FastGPT',
@@ -37,7 +37,23 @@ test('Guide modification dates survive import and reject invalid dates or metada
       wordCount: 10,
       sourceCount: 0,
       label: 'date example'
-    });
+    };
+    for (const date_modified of [undefined, '', '   ']) {
+      assert.throws(
+        () => buildNormalizedTechnicalPage({
+          ...input,
+          metadata: { ...input.metadata, date_modified }
+        }),
+        /date_modified/
+      );
+    }
+    assert.deepEqual(fs.readdirSync(repoRoot), []);
+    assert.doesNotThrow(() => buildNormalizedTechnicalPage({
+      ...input,
+      identity: { ...identity, canonicalPath: '/reference/date-example' },
+      metadata: { ...input.metadata, date_modified: undefined }
+    }));
+    const normalized = buildNormalizedTechnicalPage(input);
     const page = {
       identity,
       projection: normalized.projection,

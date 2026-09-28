@@ -12,7 +12,7 @@
   {
     "identity": "en|/guide/deployment-issue-landscape",
     "title": "FastGPT Deployment and Environment Issue Landscape",
-    "description": "Explore Deployment and Environment Issue Landscape with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
+    "description": "Navigate 440 FastGPT troubleshooting articles across 10 deployment stages, from containers and storage to model access and authentication.",
     "category": "troubleshoot",
     "locale": "en",
     "publicPath": "/guide/deployment-issue-landscape",
@@ -7328,5 +7328,195 @@
     "publicPath": "/reference/error-code-lookup",
     "sourceType": "官方文档",
     "minutes": 19
+  },
+  {
+    "identity": "en|/guide/app-release-and-regression",
+    "title": "Releasing and Regression-Testing an App: Versions, Canary and Rollback",
+    "description": "Plan FastGPT app releases with version records, regression samples, staged traffic, and tested rollback boundaries for each deployment.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/app-release-and-regression",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/guide/file-storage-selection",
+    "title": "Where Files Live: Local Volumes, Object Storage and External S3",
+    "description": "Compare local-volume-backed MinIO, shared MinIO, and external S3-compatible storage for FastGPT by capacity, access, backups, and migration needs.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/file-storage-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/guide/high-availability-topology",
+    "title": "High Availability and Disaster Recovery: What Must Be Redundant, What Can Wait",
+    "description": "Choose redundancy for FastGPT services, databases, storage, and model access based on recovery objectives and tested failover procedures.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/high-availability-topology",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/guide/integration-channel-selection",
+    "title": "Choosing an Integration Channel: API, Share Link, Embed or MCP",
+    "description": "Compare API access, share links, embedded chat, and MCP for FastGPT using authentication, user experience, and integration requirements.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/integration-channel-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/guide/knowledge-base-update-strategy",
+    "title": "Updating a Knowledge Base: Full Rebuild, Incremental Append or Scheduled Sync",
+    "description": "Choose full rebuilds, incremental updates, or scheduled sync for a FastGPT knowledge base, with checks for freshness and retrieval quality.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/knowledge-base-update-strategy",
+    "sourceType": "深度场景内容",
+    "minutes": 18
+  },
+  {
+    "identity": "en|/guide/log-retention-and-audit",
+    "title": "Conversation Logs: Retention Scope, Access Boundaries and Cleanup",
+    "description": "Define FastGPT conversation-log retention, access, export, and cleanup based on deployment capabilities and your audit requirements.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/log-retention-and-audit",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/guide/model-routing-and-fallback",
+    "title": "Routing and Fallback Across Models: What to Split On, What to Fall Back To",
+    "description": "Compare model routing and fallback options for FastGPT, including latency, cost, context limits, failure handling, and migration checks.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/model-routing-and-fallback",
+    "sourceType": "深度场景内容",
+    "minutes": 18
+  },
+  {
+    "identity": "en|/guide/multi-tenant-isolation",
+    "title": "Isolating Teams and Business Lines: Knowledge Bases, Apps and Credentials",
+    "description": "Choose boundaries for FastGPT teams, knowledge bases, apps, and credentials, with access tests and costs of moving to isolated deployments.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/multi-tenant-isolation",
+    "sourceType": "深度场景内容",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/reference/file-format-support-reference",
+    "title": "FastGPT File Format and Parsing Reference (25 extensions, v4.17.0)",
+    "description": "Check FastGPT v4.17.0 file input and parser formats, required services, and the limits to verify with your own documents before ingestion.",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/file-format-support-reference",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "en|/reference/model-support-reference",
+    "title": "FastGPT Supported Model Reference (319 models, v1.1.3)",
+    "description": "Browse 319 model definitions in fastgpt-plugin v1.1.3 by provider and type, and check configuration and runtime compatibility requirements.",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/model-support-reference",
+    "sourceType": "官方文档",
+    "minutes": 47
+  },
+  {
+    "identity": "en|/guide/answer-evaluation-set",
+    "title": "Building an Evaluation Set for Enterprise Open-Source AI Platforms: Pre-Launch Samples, Post-Launch Regression, and Scoring",
+    "description": "Build a fixed RAG evaluation set with target passages, negative samples, repeatable regression runs, and scoring rules for answer quality.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/answer-evaluation-set",
+    "sourceType": "深度场景内容",
+    "minutes": 23
+  },
+  {
+    "identity": "en|/guide/data-boundary-and-masking",
+    "title": "Decision Guide: What Data Should Not Enter Your Enterprise AI Knowledge Base",
+    "description": "Define what enters an AI knowledge base, mask sensitive data before model calls, and verify access controls, retention, and deletion.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/data-boundary-and-masking",
+    "sourceType": "深度场景内容",
+    "minutes": 19
+  },
+  {
+    "identity": "en|/guide/human-handoff-design",
+    "title": "Decision Guide for Human Handoff in Open-Source Enterprise AI Platforms",
+    "description": "Design human handoff for AI workflows: define triggers, route requests, pass authorized context, and review solutions before reuse.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/human-handoff-design",
+    "sourceType": "深度场景内容",
+    "minutes": 18
+  },
+  {
+    "identity": "en|/guide/kb-quality-governance",
+    "title": "Governing Knowledge Base Content: Ownership, Review Cycles and Retirement",
+    "description": "Assign knowledge base owners, schedule content reviews, retire outdated documents, and verify permissions and retrieval after changes.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/kb-quality-governance",
+    "sourceType": "深度场景内容",
+    "minutes": 18
+  },
+  {
+    "identity": "en|/guide/agent-mcp-issues",
+    "title": "FastGPT Agent and MCP Issue List",
+    "description": "Find 29 FastGPT Agent and MCP troubleshooting articles by symptom, with checks for tool calls, connectivity, and version compatibility.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/agent-mcp-issues",
+    "sourceType": "官方文档",
+    "minutes": 12
+  },
+  {
+    "identity": "en|/guide/container-orchestration-issues",
+    "title": "FastGPT Containers and orchestration Issue List",
+    "description": "Find 18 FastGPT container and orchestration troubleshooting articles, with checks for startup, networking, configuration, and dependencies.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/container-orchestration-issues",
+    "sourceType": "官方文档",
+    "minutes": 10
+  },
+  {
+    "identity": "en|/guide/database-storage-issues",
+    "title": "FastGPT Databases and object storage Issue List",
+    "description": "Find 17 FastGPT database and object-storage troubleshooting articles, with checks for connections, permissions, capacity, and version changes.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/database-storage-issues",
+    "sourceType": "官方文档",
+    "minutes": 10
+  },
+  {
+    "identity": "en|/guide/image-architecture-issues",
+    "title": "FastGPT Images and architecture Issue List",
+    "description": "Find 13 FastGPT image and architecture troubleshooting articles, with checks for image tags, downloads, CPU compatibility, and startup errors.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/image-architecture-issues",
+    "sourceType": "官方文档",
+    "minutes": 9
+  },
+  {
+    "identity": "en|/guide/startup-accessibility-issues",
+    "title": "FastGPT Startup and reachability Issue List",
+    "description": "Find 13 FastGPT startup and reachability troubleshooting articles, with checks for processes, ports, proxies, and service dependencies.",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/startup-accessibility-issues",
+    "sourceType": "官方文档",
+    "minutes": 9
   }
 ]

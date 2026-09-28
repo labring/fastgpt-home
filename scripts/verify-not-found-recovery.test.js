@@ -94,8 +94,12 @@ for (const variant of ['cn', 'io', 'preview']) {
       render('/en/guide/missing'),
       ['zh', 'en'].map((locale) => target(locale, '/guide'))
     );
-    assert.deepEqual(render('/en/guide/image-architecture-issues'), [
-      target('zh', '/guide/image-architecture-issues')
+    assert.deepEqual(
+      render('/ja/guide/image-architecture-issues'),
+      ['zh', 'en'].map((locale) => target(locale, '/guide/image-architecture-issues'))
+    );
+    assert.deepEqual(render('/en/guide/api-auth-issues'), [
+      target('zh', '/guide/api-auth-issues')
     ]);
     assert.deepEqual(
       render('/ja/reference/env-variables-reference'),

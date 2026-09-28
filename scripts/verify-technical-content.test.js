@@ -8,6 +8,7 @@ const test = require('node:test');
 const {
   assertDeniedIdentitiesAbsent,
   buildImportPlan,
+  buildNormalizedTechnicalPage,
   buildSearchProjection,
   foldIdentity,
   validateIdentitySet,
@@ -18,6 +19,45 @@ const {
 
 const root = path.resolve(__dirname, '..');
 const fixture = path.join(root, 'scripts/fixtures/technical-page-delivery');
+
+test('Guide modification dates survive import and reject invalid dates or metadata drift', () => {
+  const repoRoot = fs.mkdtempSync(path.join(os.tmpdir(), 'technical-guide-date-'));
+  try {
+    const identity = { locale: 'zh', canonicalPath: '/guide/date-example' };
+    const normalized = buildNormalizedTechnicalPage({
+      metadata: {
+        title: 'Date example',
+        source: 'https://github.com/labring/FastGPT',
+        source_type: '官方文档',
+        page_type: 'Guide',
+        date_modified: '2026-09-28'
+      },
+      identity,
+      body: '# Date example\n\nA complete article.',
+      wordCount: 10,
+      sourceCount: 0,
+      label: 'date example'
+    });
+    const page = {
+      identity,
+      projection: normalized.projection,
+      normalizedDocument: normalized.document,
+      normalizedBodyPath: 'src/content/tech-center/guide/date-example.md'
+    };
+    const plan = { pages: [page], existingEntries: [], denials: [] };
+    writeImportPlan(plan, repoRoot);
+    assert.equal(verifyTechnicalContent(repoRoot)[0].dateModified, '2026-09-28');
+    fs.writeFileSync(
+      path.join(repoRoot, page.normalizedBodyPath),
+      normalized.document.replace('2026-09-28', '2026-09-27')
+    );
+    assert.throws(() => verifyTechnicalContent(repoRoot), /modification date drift/);
+    page.projection.dateModified = '2026-02-30';
+    assert.throws(() => writeImportPlan(plan, repoRoot), /Invalid modification date/);
+  } finally {
+    fs.rmSync(repoRoot, { recursive: true, force: true });
+  }
+});
 
 test('representative delivery normalizes the canonical path and body', () => {
   const plan = buildImportPlan({ repoRoot: root, sourcePath: fixture });

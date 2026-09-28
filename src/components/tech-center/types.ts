@@ -35,6 +35,7 @@ export type TechEntry = {
   sourceType: TechSource;
   summary: string;
   minutes: number;
+  dateModified?: string;
 };
 
 export type TechnicalPageIdentity = {

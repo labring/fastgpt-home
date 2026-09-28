@@ -9,6 +9,7 @@ import Footer from '@/components/home/Footer';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
 import { parseMarkdown, getMarkdownHeadings } from '@/lib/markdownParser';
 import guideStyles from '@/components/guide/GuideArticlePage.module.css';
+import { getGuideArticleCopy } from '@/components/guide/GuideArticlePage';
 import type { TechArticle } from '@/lib/tech-center-content';
 import { getTechnicalReviewPath } from '@/lib/technicalRouting';
 import { isPreviewSite } from '@/lib/siteRouting';
@@ -109,6 +110,11 @@ export default function TechArticlePage({
             </div>
             <h1>{article.title}</h1>
             <p className={styles.summary}>{article.seoDescription}</p>
+            {article.dateModified && (
+              <time className={styles.updated} dateTime={article.dateModified}>
+                {getGuideArticleCopy(locale === 'zh' ? 'zh' : 'en').updated(article.dateModified)}
+              </time>
+            )}
           </header>
 
           <div className={`${styles.layout} ${article.image ? styles.layoutWithHero : ''}`}>

@@ -7,7 +7,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "查阅容器与编排 问题清单，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
-    "minutes": 32
+    "minutes": 32,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT 数据库与对象存储 问题清单",
@@ -17,17 +18,19 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "查阅数据库与对象存储 问题清单，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
-    "minutes": 17
+    "minutes": 17,
+    "dateModified": "2026-09-08"
   },
   {
-    "title": "FastGPT 部署与环境问题全景",
+    "title": "FastGPT 部署与环境问题全景：按环节分流",
     "slug": "/zh/guide/deployment-issue-landscape",
     "category": "troubleshoot",
     "categoryLabel": "故障排查",
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
-    "summary": "查阅部署与环境问题全景，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
-    "minutes": 5
+    "summary": "按部署环节查找 FastGPT 排障资料，10 个问题清单覆盖 611 篇已发布文档，帮助从症状定位到容器、存储、模型接入、鉴权和构建问题。",
+    "minutes": 6,
+    "dateModified": "2026-09-28"
   },
   {
     "title": "FastGPT 镜像与架构适配 问题清单",
@@ -37,7 +40,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "查阅镜像与架构适配 问题清单，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
-    "minutes": 15
+    "minutes": 15,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT 模型接入与推理服务 问题清单",
@@ -47,7 +51,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "查阅模型接入与推理服务 问题清单，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
-    "minutes": 16
+    "minutes": 16,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT 版本升级 问题清单",
@@ -57,7 +62,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "查阅版本升级 问题清单，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。",
-    "minutes": 20
+    "minutes": 20,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT 环境变量速查全表（136 项 · 按用途分组）",
@@ -97,7 +103,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "Explore API and authentication Issue List with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
-    "minutes": 13
+    "minutes": 13,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT Deployment and Environment Issue Landscape",
@@ -106,8 +113,9 @@
     "categoryLabel": "故障排查",
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
-    "summary": "Explore Deployment and Environment Issue Landscape with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
-    "minutes": 11
+    "summary": "Navigate 440 FastGPT troubleshooting articles across 10 deployment stages, from containers and storage to model access and authentication.",
+    "minutes": 11,
+    "dateModified": "2026-09-28"
   },
   {
     "title": "FastGPT Environment and configuration Issue List",
@@ -117,7 +125,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "Explore Environment and configuration Issue List with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
-    "minutes": 34
+    "minutes": 34,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT Model serving and inference Issue List",
@@ -127,7 +136,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "Explore Model serving and inference Issue List with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
-    "minutes": 15
+    "minutes": 15,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT Upgrades and migrations Issue List",
@@ -137,7 +147,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "Explore Upgrades and migrations Issue List with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
-    "minutes": 30
+    "minutes": 30,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT Workflow and nodes Issue List",
@@ -147,7 +158,8 @@
     "source": "https://github.com/labring/FastGPT",
     "sourceType": "官方文档",
     "summary": "Explore Workflow and nodes Issue List with symptom-based checks, published article links and practical guidance for troubleshooting your deployment.",
-    "minutes": 14
+    "minutes": 14,
+    "dateModified": "2026-09-08"
   },
   {
     "title": "FastGPT Environment Variables Reference (136 settings)",
@@ -186,7 +198,8 @@
     "categoryLabel": "故障排查",
     "sourceType": "深度场景内容",
     "summary": "从组件拓扑、向量库选型、六类出站源三层说明私有化部署的数据边界，给出采购前的数据流确认清单与出站策略验证方法。",
-    "minutes": 10
+    "minutes": 10,
+    "dateModified": "2026-08-13"
   },
   {
     "title": "可私有化的开源 AI 应用平台怎么选：五个固定比较变量",
@@ -195,7 +208,8 @@
     "categoryLabel": "故障排查",
     "sourceType": "深度场景内容",
     "summary": "用许可证边界、部署门槛、治理能力所属版本、原厂支持与责任边界、三年总成本五个变量筛选可私有化的开源 AI 应用平台。",
-    "minutes": 15
+    "minutes": 15,
+    "dateModified": "2026-08-13"
   },
   {
     "title": "开源版和商业版差在哪：付费买到的功能与服务分别是什么",
@@ -204,7 +218,8 @@
     "categoryLabel": "故障排查",
     "sourceType": "深度场景内容",
     "summary": "拆分开源版与商业版的功能、原厂支持服务和治理边界，给出私有部署档位选择与必选、可选、未来需求表。",
-    "minutes": 13
+    "minutes": 13,
+    "dateModified": "2026-08-13"
   },
   {
     "title": "企业上智能客服：自建开源方案还是买 SaaS 客服系统",
@@ -213,7 +228,8 @@
     "categoryLabel": "故障排查",
     "sourceType": "深度场景内容",
     "summary": "从数据敏感度、业务系统连接和长期运营责任三条依据判断智能客服自建或采购，并给出转人工与分流验证方法。",
-    "minutes": 12
+    "minutes": 12,
+    "dateModified": "2026-08-13"
   },
   {
     "title": "FastGPT智能体绑定与调用已发布技能的操作说明",
@@ -50160,7 +50176,8 @@
     "source": "https://doc.fastgpt.io/docs/guide/dataset",
     "sourceType": "官方文档",
     "summary": "Knowledge Base Chunk and Index Settings Estimator: What Each Parameter Actually Becomes Two numbers have to be decided before documents go in: how long ea…",
-    "minutes": 19
+    "minutes": 19,
+    "dateModified": "2026-09-09"
   },
   {
     "title": "Environment Variable Checklist Generator: 136 Variables in 15 Groups, Filtered by Deployment Shape",
@@ -50190,7 +50207,8 @@
     "source": "https://doc.fastgpt.cn/zh-CN/guide/dataset",
     "sourceType": "官方文档",
     "summary": "知识库分块与索引设置估算器：自动与自定义两种模式下每个参数的实际取值 上传文档之前要定两个数：一段内容切多长，以及为每段建多长的索引。这两个数在界面上都能填，但填进去的值不一定就是最终生效的值 —— 处理方式与设置方式会改写其中一部分。下面这个模块把改写关系摊开：选好处理方式与设置方式，每一项的实际取值、被…",
-    "minutes": 8
+    "minutes": 8,
+    "dateModified": "2026-09-09"
   },
   {
     "title": "环境变量清单生成器：136 项分 15 组，按部署形态与要启用的能力筛出该配哪些",
@@ -50481,5 +50499,511 @@
     "sourceType": "官方文档",
     "summary": "FastGPT工作区团队权限与邀请配置 FastGPT工作区的团队管理功能，用于支持多用户协作开展应用构建、知识库管理、对话配置等工作。该功能覆盖团队角色权限配置、成员邀请两大核心模块，仅适用于当前工作空间内的协作场景，无法跨工作空间分配权限。管理员可通过该功能管控团队成员的操作范围，确保工作区资源的安全与…",
     "minutes": 2
+  },
+  {
+    "title": "应用发版与回归验证：版本管理、灰度与回滚决策矩阵",
+    "slug": "/zh/guide/app-release-and-regression",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术负责人与采购方的应用发版回归决策矩阵，覆盖版本管理、灰度发布与回滚策略的判据与场景分析",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT文件存储形态选型：本地卷、对象存储与外部S3判据",
+    "slug": "/zh/guide/file-storage-selection",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "为企业技术负责人与采购方提供本地卷支撑的MinIO、共享MinIO服务及外部S3兼容存储的选型判据，帮助完成FastGPT文件存储部署决策。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT高可用容灾拓扑组件冗余决策矩阵",
+    "slug": "/zh/guide/high-availability-topology",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术负责人与采购方的FastGPT高可用拓扑决策工具，通过判据矩阵明确组件冗余需求",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 对外接入渠道选型决策矩阵与落地指南",
+    "slug": "/zh/guide/integration-channel-selection",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术负责人与采购方的FastGPT对外接入渠道选型参考，涵盖四种核心方案的判据与落地要点。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "知识库更新与增量同步：全量重建、增量追加与定时同步决策指南",
+    "slug": "/zh/guide/knowledge-base-update-strategy",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术负责人与采购方的知识库更新决策矩阵，涵盖全量重建、增量追加、定时同步三种方案，提供判据与选型参考，辅助合理选择更新策略",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT对话日志留存与审计：决策矩阵与实施指南",
+    "slug": "/zh/guide/log-retention-and-audit",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术负责人与采购方的FastGPT对话日志留存与审计决策指南，基于官方版本配置，提供留存范围、访问边界与清理策略的判据参考。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "多模型路由与降级：判据选择与失败兜底方案决策矩阵",
+    "slug": "/zh/guide/model-routing-and-fallback",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "本指南面向企业技术负责人与采购方，基于FastGPT部署场景，提供多模型路由与降级的判据矩阵，帮助选择分流规则与失败兜底方案，兼顾性能、成本与可用性。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "多团队与多业务线隔离：知识库、应用与凭据边界划分决策指南",
+    "slug": "/zh/guide/multi-tenant-isolation",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术负责人与采购方，系统梳理多团队与多业务线隔离的决策场景、判据矩阵、切换代价与暂缓条件，助力合理划分资源安全边界。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Releasing and Regression-Testing an App: Versions, Canary and Rollback",
+    "slug": "/en/guide/app-release-and-regression",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Plan FastGPT app releases with version records, regression samples, staged traffic, and tested rollback boundaries for each deployment.",
+    "minutes": 20,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Where Files Live: Local Volumes, Object Storage and External S3",
+    "slug": "/en/guide/file-storage-selection",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Compare local-volume-backed MinIO, shared MinIO, and external S3-compatible storage for FastGPT by capacity, access, backups, and migration needs.",
+    "minutes": 21,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "High Availability and Disaster Recovery: What Must Be Redundant, What Can Wait",
+    "slug": "/en/guide/high-availability-topology",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Choose redundancy for FastGPT services, databases, storage, and model access based on recovery objectives and tested failover procedures.",
+    "minutes": 20,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Choosing an Integration Channel: API, Share Link, Embed or MCP",
+    "slug": "/en/guide/integration-channel-selection",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Compare API access, share links, embedded chat, and MCP for FastGPT using authentication, user experience, and integration requirements.",
+    "minutes": 20,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Updating a Knowledge Base: Full Rebuild, Incremental Append or Scheduled Sync",
+    "slug": "/en/guide/knowledge-base-update-strategy",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Choose full rebuilds, incremental updates, or scheduled sync for a FastGPT knowledge base, with checks for freshness and retrieval quality.",
+    "minutes": 18,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Conversation Logs: Retention Scope, Access Boundaries and Cleanup",
+    "slug": "/en/guide/log-retention-and-audit",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Define FastGPT conversation-log retention, access, export, and cleanup based on deployment capabilities and your audit requirements.",
+    "minutes": 20,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Routing and Fallback Across Models: What to Split On, What to Fall Back To",
+    "slug": "/en/guide/model-routing-and-fallback",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Compare model routing and fallback options for FastGPT, including latency, cost, context limits, failure handling, and migration checks.",
+    "minutes": 18,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Isolating Teams and Business Lines: Knowledge Bases, Apps and Credentials",
+    "slug": "/en/guide/multi-tenant-isolation",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Choose boundaries for FastGPT teams, knowledge bases, apps, and credentials, with access tests and costs of moving to isolated deployments.",
+    "minutes": 21,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "教育与培训机构的 AI 客服：招生咨询、课程答疑与转人工的判据",
+    "slug": "/zh/guide/ai-customer-service-education",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "围绕招生咨询、课程答疑和学员服务，梳理知识库准备、问题分类、客服系统转接与效果验收的步骤，明确政策更新和人工审核责任。",
+    "minutes": 9,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "电商与零售的 AI 客服：从重复问题分流到工单落库的完整搭法",
+    "slug": "/zh/guide/ai-customer-service-retail",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "梳理电商与零售客服的高频问题分流、知识库检索和工单回写流程，明确渠道规则、字段映射、人工接管及上线验收条件。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "保险理赔与财务单据初审：文档审核工作流的搭法与验收口径",
+    "slug": "/zh/guide/document-review-insurance-claims",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "为理赔材料、报销单据和财务凭证建立文档初审工作流，明确文件解析、字段提取、规则判断、人工复核和结果回写的验收口径。",
+    "minutes": 9,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "法务与合规文档审核指南：将人工初审流程接入 FastGPT",
+    "slug": "/zh/guide/document-review-legal-compliance",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "围绕合同、标书和内部制度搭建文档审核流程，梳理解析、条款提取、知识库比对及人工复核步骤，明确权限与审计边界。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "能源与化工企业的公文与标书写作：模板、事实源与审校三件事",
+    "slug": "/zh/guide/official-document-energy",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "面向能源与化工企业的公文、标书写作，梳理事实源整理、模板使用、知识检索、内容生成与人工审校，明确统一口径和责任分工。",
+    "minutes": 9,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "金融机构的报告自动生成：数据取数、成稿与复核三段怎么拆",
+    "slug": "/zh/guide/report-generation-finance",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "面向投研、风控和合规报告，梳理数据接入、知识检索、内容生成与人工复核的工作流，明确数据口径、引用来源和验收条件。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "制造企业的报告与报表自动化：质检、供应与生产报告的搭法",
+    "slug": "/zh/guide/report-generation-manufacturing",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "面向制造企业的经营、质量和生产报告，梳理数据接口、知识库、内容生成与人工审核流程，明确数据时效、指标口径和验收标准。",
+    "minutes": 9,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "制造业销售开单与报价：BOM 解析、选型匹配与履约风控怎么落",
+    "slug": "/zh/guide/sales-quotation-manufacturing",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "深度场景内容",
+    "summary": "围绕制造业询价、BOM 解析、物料匹配和报价生成，梳理工作流与 ERP 对接方式，明确成本数据、风控规则和人工确认边界。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 文件格式与解析能力对照表（25 个扩展名 · v4.17.0）",
+    "slug": "/zh/reference/file-format-support-reference",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "source": "https://github.com/labring/FastGPT/tree/v4.17.0/packages/service/worker/readFile",
+    "sourceType": "官方文档",
+    "summary": "查阅 FastGPT v4.17.0 的文件输入与解析格式，区分内置解析和外部服务要求，并在入库前核对文档内容、格式与解析结果。",
+    "minutes": 4,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 支持的模型清单（319 个模型 · v1.1.3）",
+    "slug": "/zh/reference/model-support-reference",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "source": "https://github.com/labring/fastgpt-plugin/tree/v1.1.3/packages/infrastructure/src/static-data/models/provider",
+    "sourceType": "官方文档",
+    "summary": "查阅 fastgpt-plugin v1.1.3 的 319 条模型定义，按供应商与类型识别接入范围，并核对凭据、渠道配置和实际调用能力。",
+    "minutes": 41,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT File Format and Parsing Reference (25 extensions, v4.17.0)",
+    "slug": "/en/reference/file-format-support-reference",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "source": "https://github.com/labring/FastGPT/tree/v4.17.0/packages/service/worker/readFile",
+    "sourceType": "官方文档",
+    "summary": "Check FastGPT v4.17.0 file input and parser formats, required services, and the limits to verify with your own documents before ingestion.",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Supported Model Reference (319 models, v1.1.3)",
+    "slug": "/en/reference/model-support-reference",
+    "category": "reference",
+    "categoryLabel": "技术速查",
+    "source": "https://github.com/labring/fastgpt-plugin/tree/v1.1.3/packages/infrastructure/src/static-data/models/provider",
+    "sourceType": "官方文档",
+    "summary": "Browse 319 model definitions in fastgpt-plugin v1.1.3 by provider and type, and check configuration and runtime compatibility requirements.",
+    "minutes": 47,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "企业RAG回答质量评测集构建：上线前样本、上线后回归与判分口径",
+    "slug": "/zh/guide/answer-evaluation-set",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "针对企业技术负责人与运维负责人，讲解如何构建固定评测集量化RAG回答质量变化，覆盖上线前样本搭建、上线后回归验证及判分规则，实现可追溯、可对比的质量管控。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "企业AI知识库数据边界管控：不该纳入的内容、脱敏口径与留存范围",
+    "slug": "/zh/guide/data-boundary-and-masking",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术与运维负责人，讲解如何划定知识库数据边界，明确脱敏规则与留存范围，规避违规数据纳入风险，保障AI知识库系统合规性与应用效果。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "企业人工接管系统设计：触发条件、转接路径与结果回流",
+    "slug": "/zh/guide/human-handoff-design",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术与运维负责人，详解人工接管系统的核心设计要素，助力搭建可迭代的智能服务与运维自动化体系。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "知识库内容治理：明确责任、规范复核与过期内容退场方案",
+    "slug": "/zh/guide/kb-quality-governance",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "面向企业技术与运维负责人，从责任划分、复核节奏、退场机制三方面拆解知识库治理落地方法，解决内容老化、权责不清等核心问题，保障知识库实用价值。",
+    "minutes": 6,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Building an Evaluation Set for Enterprise Open-Source AI Platforms: Pre-Launch Samples, Post-Launch Regression, and Scoring",
+    "slug": "/en/guide/answer-evaluation-set",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Build a fixed RAG evaluation set with target passages, negative samples, repeatable regression runs, and scoring rules for answer quality.",
+    "minutes": 23,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Decision Guide: What Data Should Not Enter Your Enterprise AI Knowledge Base",
+    "slug": "/en/guide/data-boundary-and-masking",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Define what enters an AI knowledge base, mask sensitive data before model calls, and verify access controls, retention, and deletion.",
+    "minutes": 19,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Decision Guide for Human Handoff in Open-Source Enterprise AI Platforms",
+    "slug": "/en/guide/human-handoff-design",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Design human handoff for AI workflows: define triggers, route requests, pass authorized context, and review solutions before reuse.",
+    "minutes": 18,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "Governing Knowledge Base Content: Ownership, Review Cycles and Retirement",
+    "slug": "/en/guide/kb-quality-governance",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://doc.fastgpt.cn/zh-CN/self-host/config/env",
+    "sourceType": "深度场景内容",
+    "summary": "Assign knowledge base owners, schedule content reviews, retire outdated documents, and verify permissions and retrieval after changes.",
+    "minutes": 18,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Agent 与 MCP 问题清单：按症状分组",
+    "slug": "/zh/guide/agent-mcp-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "查阅FastGPT Agent 与 MCP 问题清单，按症状定位已发布的配置说明与排查条目，结合服务日志、依赖状态和版本要求逐项核对。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 接口与鉴权 问题清单：按症状分组",
+    "slug": "/zh/guide/api-auth-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "查阅FastGPT 接口与鉴权 问题清单，按症状定位已发布的配置说明与排查条目，结合服务日志、依赖状态和版本要求逐项核对。",
+    "minutes": 7,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 环境变量与初始化 问题清单：按症状分组",
+    "slug": "/zh/guide/env-initialization-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "查阅FastGPT 环境变量与初始化 问题清单，按症状定位已发布的配置说明与排查条目，结合服务日志、依赖状态和版本要求逐项核对。",
+    "minutes": 12,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 本地开发与构建 问题清单：按症状分组",
+    "slug": "/zh/guide/local-dev-build-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "查阅FastGPT 本地开发与构建 问题清单，按症状定位已发布的配置说明与排查条目，结合服务日志、依赖状态和版本要求逐项核对。",
+    "minutes": 8,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT 启动与可访问性 问题清单：按症状分组",
+    "slug": "/zh/guide/startup-accessibility-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "查阅FastGPT 启动与可访问性 问题清单，按症状定位已发布的配置说明与排查条目，结合服务日志、依赖状态和版本要求逐项核对。",
+    "minutes": 12,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Agent and MCP Issue List",
+    "slug": "/en/guide/agent-mcp-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "Find 29 FastGPT Agent and MCP troubleshooting articles by symptom, with checks for tool calls, connectivity, and version compatibility.",
+    "minutes": 12,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Containers and orchestration Issue List",
+    "slug": "/en/guide/container-orchestration-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "Find 18 FastGPT container and orchestration troubleshooting articles, with checks for startup, networking, configuration, and dependencies.",
+    "minutes": 10,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Databases and object storage Issue List",
+    "slug": "/en/guide/database-storage-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "Find 17 FastGPT database and object-storage troubleshooting articles, with checks for connections, permissions, capacity, and version changes.",
+    "minutes": 10,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Images and architecture Issue List",
+    "slug": "/en/guide/image-architecture-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "Find 13 FastGPT image and architecture troubleshooting articles, with checks for image tags, downloads, CPU compatibility, and startup errors.",
+    "minutes": 9,
+    "dateModified": "2026-09-28"
+  },
+  {
+    "title": "FastGPT Startup and reachability Issue List",
+    "slug": "/en/guide/startup-accessibility-issues",
+    "category": "troubleshoot",
+    "categoryLabel": "故障排查",
+    "source": "https://github.com/labring/FastGPT",
+    "sourceType": "官方文档",
+    "summary": "Find 13 FastGPT startup and reachability troubleshooting articles, with checks for processes, ports, proxies, and service dependencies.",
+    "minutes": 9,
+    "dateModified": "2026-09-28"
   }
 ]

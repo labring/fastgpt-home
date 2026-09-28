@@ -271,22 +271,28 @@ test('redirect fixtures preserve query strings for Worker and Nginx targets', as
 test('isolated current metadata and language fixtures govern technical HTML in every variant', () => {
   const { verifyTechnicalPage } = require('./verify-technical-export');
   const { verifyReturn, verifyBodyLinks } = require('./lib/technical-export');
-  const identity = { locale: 'zh', canonicalPath: '/api/example', sourcePath: '/zh/api/example' };
+  const identity = { locale: 'zh', canonicalPath: '/guide/example', sourcePath: '/zh/guide/example' };
   const canonical = baseUrls.cn + identity.canonicalPath;
   const document = {
-    metadata: { schema_type: 'TechArticle', date_published: '2026-01-01', date_modified: '2026-02-02' },
+    metadata: {
+      schema_type: 'TechArticle',
+      meta_description: 'An example article',
+      date_published: '2026-01-01',
+      date_modified: '2026-02-02'
+    },
     body: ''
   };
   const render = (modified, bilingual) => `<link rel="canonical" href="${canonical}">
     <link rel="alternate" hrefLang="zh-CN" href="${canonical}">
     ${
       bilingual
-        ? `<link rel="alternate" hrefLang="en" href="${baseUrls.io}/api/example">
-      <link rel="alternate" hrefLang="x-default" href="${baseUrls.io}/api/example">`
+        ? `<link rel="alternate" hrefLang="en" href="${baseUrls.io}/guide/example">
+      <link rel="alternate" hrefLang="x-default" href="${baseUrls.io}/guide/example">`
         : ''
     }
     <meta name="robots" content="ROBOTS"><meta name="description" content="An example article">
     <meta property="og:url" content="${canonical}"><h1>Example</h1>
+    <p>An example article</p><time datetime="2026-02-02">更新于 2026年2月2日</time>
     <script type="application/ld+json">${JSON.stringify({
       '@graph': [
         {
@@ -306,13 +312,24 @@ test('isolated current metadata and language fixtures govern technical HTML in e
       );
     const options = { identity, identities: [identity], document, variant, baseUrls };
     verifyTechnicalPage(html('2026-02-02', false), options);
+    assert.throws(
+      () => verifyTechnicalPage(html('2026-02-02', false).replace(/<time.*?<\/time>/, ''), options),
+      /updated time/
+    );
+    assert.throws(
+      () => verifyTechnicalPage(
+        html('2026-02-02', false).replace('更新于 2026年2月2日', 'Last updated February 2, 2026'),
+        options
+      ),
+      /updated/
+    );
     assert.throws(() => verifyTechnicalPage(
       html('2026-02-02', false) + '<a href="#article-section-missing">Missing section</a>', options
     ), /unresolved heading/);
     assert.throws(() => verifyTechnicalPage(html('2026-01-01', false), options), /dateModified/);
     const bilingual = {
       ...options,
-      identities: [identity, { ...identity, locale: 'en', sourcePath: '/en/api/example' }]
+      identities: [identity, { ...identity, locale: 'en', sourcePath: '/en/guide/example' }]
     };
     verifyTechnicalPage(html('2026-02-02', true), bilingual);
     assert.throws(

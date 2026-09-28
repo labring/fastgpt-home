@@ -53,7 +53,6 @@ test('a complete verified publication unit rejects identity drift and corrupted 
       status: 'export-verified',
       commands: [
         ...getSourceExecutionOrder().map((id) => ({ id, status: 'passed' })),
-        { id: 'release.regression', status: 'passed' },
         ...getVariantExecutionOrder('preview').map((id) => ({
           id,
           variant: 'preview',
@@ -74,6 +73,42 @@ test('a complete verified publication unit rejects identity drift and corrupted 
       failures: []
     };
     const bundle = path.join(root, 'retained');
+    for (const variant of ['cn', 'io', 'preview']) {
+      write(
+        '.next/cache/site-identity.json',
+        JSON.stringify({
+          ...identity,
+          siteVariant: variant,
+          publicSettings: { ...identity.publicSettings, NEXT_PUBLIC_SITE_VARIANT: variant }
+        })
+      );
+      const commands = [
+        ...getSourceExecutionOrder().map((id) => ({ id, status: 'passed' })),
+        ...getVariantExecutionOrder(variant).map((id) => ({ id, variant, status: 'passed' }))
+      ];
+      const variantRecord = {
+        ...record,
+        commands,
+        variants: [{ variant, outcome: 'export-verified' }]
+      };
+      for (const step of commands) {
+        const expected = { message: `Missing successful verification: ${step.id}` };
+        assert.throws(
+          () => retainVerifiedSiteArtifact(root, bundle, variant, {
+            ...variantRecord,
+            commands: commands.filter((entry) => entry !== step)
+          }),
+          expected
+        );
+        step.status = 'failed';
+        assert.throws(
+          () => retainVerifiedSiteArtifact(root, bundle, variant, variantRecord),
+          expected
+        );
+        step.status = 'passed';
+      }
+    }
+    write('.next/cache/site-identity.json', JSON.stringify(identity));
     retainVerifiedSiteArtifact(root, bundle, 'preview', record);
     assert.equal(JSON.parse(fs.readFileSync(path.join(bundle, 'manifest.json'))).schemaVersion, 2);
     const verify = (expected = getPublicationInputs(identity)) => {

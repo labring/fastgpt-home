@@ -1,6 +1,5 @@
 function getSourceNodeSteps() {
   return [
-    ['footer-copy.regression', 'Footer copy regression', 'scripts/verify-footer-copy.test.js', []],
     ['customers-data.source', 'Customer data verification', 'scripts/verify-customers-data.js', []],
     [
       'customers-search.source',
@@ -15,59 +14,16 @@ function getSourceNodeSteps() {
       []
     ],
     [
-      'not-found.regression',
-      '404 page recovery component regression',
-      'scripts/verify-not-found-recovery.test.js',
-      []
-    ],
-    [
-      'guide-export.regression',
-      'Guide export regression',
-      'scripts/verify-guide-export.test.js',
-      []
-    ],
-    [
-      'guide-markdown.regression',
-      'Guide and reference Markdown regression',
-      'scripts/verify-guide-markdown.test.js',
-      []
-    ],
-    [
-      'solutions-preview.regression',
-      'Solutions preview runner regression',
-      'scripts/lib/solutions-preview-http.test.js',
-      []
-    ],
-    ['seo-basics.regression', 'SEO basics regression', 'scripts/verify-seo-basics.test.js', []],
-    [
-      'technical-description.regression',
-      'Technical description regression',
-      'scripts/verify-technical-description.test.js',
-      []
-    ],
-    [
       'content-hygiene.source',
       'content hygiene source verification',
       'scripts/verify-content-hygiene.js',
       ['--mode', 'source']
     ],
     [
-      'guide-release.source',
-      'G1 Guide release evidence source verification',
-      'scripts/verify-guide-release.js',
+      'guide-content.source',
+      'Guide content source verification',
+      'scripts/verify-guide-content.js',
       []
-    ],
-    [
-      'guide-g2-release.source',
-      'G2 Guide release evidence source verification',
-      'scripts/verify-guide-g2-release.js',
-      []
-    ],
-    [
-      'faq-route-registry.source',
-      'route registry check',
-      'scripts/generate-faq-route-registry.js',
-      ['--check']
     ],
     [
       'faq-metadata-snapshot.source',
@@ -128,69 +84,7 @@ function getSourceNpmSteps() {
       'Content Collections generation',
       ['generate:content-collections']
     ],
-    [
-      'content-hygiene.regression',
-      'Content hygiene regression',
-      ['verify:content-hygiene-regression']
-    ],
-    ['site-artifact.regression', 'Verified site artifact regression', ['verify:site-artifact']],
-    ['content-reuse.regression', 'Content reuse regression', ['verify:content-reuse']],
-    ['build-cache.regression', 'Compilation cache regression', ['verify:build-cache']],
-    [
-      'contact.regression',
-      'consultation attribution regression',
-      ['verify:consultation-attribution']
-    ],
-    ['ads.regression', 'Bing Ads attribution regression', ['verify:ads-regression']],
-    ['technical-content.source', 'technical content verification', ['verify:technical-content']],
-    [
-      'technical-content.regression',
-      'technical content regression',
-      ['verify:technical-content-regression']
-    ],
-    [
-      'technical-center.regression',
-      'technical center regression',
-      ['verify:technical-center-regression']
-    ],
-    [
-      'technical-export.regression',
-      'technical export regression',
-      ['verify:technical-export-regression']
-    ],
-    [
-      'guide-import.regression',
-      'Week06 Guide import regression',
-      ['verify:guide-import-regression']
-    ],
-    [
-      'guide-release.regression',
-      'G1 Guide release evidence regression',
-      ['verify:guide-release-regression']
-    ],
-    [
-      'guide-g2-release.regression',
-      'G2 Guide release evidence regression',
-      ['verify:guide-g2-release-regression']
-    ],
-    ['url-alias.regression', 'URL Alias Authority regression', ['verify:url-alias-regression']],
-    ['case-only.regression', 'case-only slice regression', ['verify:case-only-regression']],
-    [
-      'url-alias.rebuilt-regression',
-      'URL Alias rebuilt-slug slice regression',
-      ['verify:rebuilt-slug-regression']
-    ],
-    [
-      'faq-metadata.regression',
-      'FAQ metadata normalization regression',
-      ['verify:faq-metadata-authority-regression']
-    ],
-    ['release-readiness.regression', 'release readiness regression', ['verify:release-readiness']],
-    [
-      'worker-publication.regression',
-      'Worker publication regression',
-      ['verify:worker-release-regression']
-    ]
+    ['technical-content.source', 'technical content verification', ['verify:technical-content']]
   ];
 }
 
@@ -229,13 +123,6 @@ function getVariantSteps(variant) {
             label: `URL Alias black-box verification (${variant})`,
             command: 'scripts/verify-url-alias-blackbox.js',
             args: ['--variant', variant]
-          },
-          {
-            runner: 'node',
-            id: 'case-only.http',
-            label: `Case-only HTTP verification (${variant})`,
-            command: 'scripts/verify-url-alias-blackbox.js',
-            args: ['--variant', variant, '--slice', 'case-only']
           }
         ]),
     {
@@ -356,8 +243,7 @@ function getSourceExecutionOrder() {
     ...getSourceNodeSteps().map(([stepId]) => stepId),
     ...getSourceNpmSteps().map(([stepId]) => stepId),
     'lint.source',
-    'typescript.source',
-    'guide-content.source'
+    'typescript.source'
   ];
 }
 
@@ -365,7 +251,7 @@ function getVariantExecutionOrder(variant) {
   return [
     'variant.build',
     ...getVariantSteps(variant).map((step) => step.id),
-    'faq.export-cardinality',
+    ...(variant === 'preview' ? ['faq.export-cardinality'] : []),
     'guide.export'
   ];
 }

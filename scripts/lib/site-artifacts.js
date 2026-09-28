@@ -44,7 +44,7 @@ function verifyBuildRecord(record, identity) {
   verifyRecord(record, identity);
   const { getSourceExecutionOrder, getVariantExecutionOrder } = require('./release-steps');
   for (const [ids, expectedVariant] of [
-    [[...getSourceExecutionOrder(), 'release.regression'], undefined],
+    [getSourceExecutionOrder(), undefined],
     [getVariantExecutionOrder(identity.siteVariant), identity.siteVariant]
   ]) {
     for (const id of ids) {

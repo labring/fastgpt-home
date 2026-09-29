@@ -1,23 +1,27 @@
 ---
-title: FastGPT 部署与环境问题全景
+title: FastGPT 部署与环境问题全景：按环节分流
 slug: /zh/guide/deployment-issue-landscape
 page_type: 问题全景聚合页
-source: https://github.com/labring/FastGPT
+article_section: 部署与升级
+is_part_of: FastGPT 技术中心
+delivery_source_type: 站内已发布文档的程序化归类
 source_type: 官方文档
-meta_title: FastGPT 部署与环境问题全景｜FastGPT 技术中心
-meta_description: 查阅部署与环境问题全景，按症状与技术对象定位相关配置、排查步骤和已发布文档，结合版本边界确认适用条件。
+source: https://github.com/labring/FastGPT
+meta_title: FastGPT 部署与环境问题全景：按环节分流｜FastGPT 技术中心
 schema_type: TechArticle
 date_published: 2026-09-08
-date_modified: 2026-09-08
-source_file: 程序化技术页-第6批/中文-fastgpt.cn/guide/deployment-issue-landscape.md
-source_sha256: 46d53a807e052ba885218cc359da7dce39bad1bc081cb92d531f420781238f79
-source_verified: 2026-09-07
-publication_batch: Week08
+date_modified: 2026-09-28
+source_file: 聚合页-第2批/中文-fastgpt.cn/guide/deployment-issue-landscape.md
+source_sha256: 8fa271f47dc9a16b643f072b4b2ebbb2759f7d514703e760a1525f54d5326835
+source_verified: 2026-09-14
+publication_batch: W9
+delivery_note: 条目取自站内已发布文档，按标题中的技术对象程序化归类，核验日 2026-09-14。
+meta_description: 按部署环节查找 FastGPT 排障资料，10 个问题清单覆盖 611 篇已发布文档，帮助从症状定位到容器、存储、模型接入、鉴权和构建问题。
 ---
 
-# FastGPT 部署与环境问题全景
+# FastGPT 部署与环境问题全景：按环节分流
 
-本页把站内已发布的 1163 篇部署与环境相关文档按出问题的环节归类，用于在不确定问题属于哪一环时先做分流，再进入对应环节的清单查具体条目。归类依据文档标题中的技术对象。
+本页汇集 10 个部署与环境问题清单，覆盖 611 篇已发布文档。遇到问题时，先按发生环节分流，再进入对应清单查看具体条目。
 
 ## 先分流：三步定位所属环节
 
@@ -35,14 +39,14 @@ publication_batch: Week08
 | 容器与编排 | 容器运行、编排与平台化部署环节的问题 | 146 | [进入清单](/zh/guide/container-orchestration-issues) |
 | 数据库与对象存储 | 数据库连接与对象存储配置环节的问题 | 73 | [进入清单](/zh/guide/database-storage-issues) |
 | 版本升级 | 版本升级过程与升级后出现的问题 | 100 | [进入清单](/zh/guide/version-upgrade-issues) |
-| 环境变量与初始化 | 见该环节文档 | 48 | [搜索技术中心](/zh/tech-center) |
-| 启动与可访问性 | 见该环节文档 | 47 | [搜索技术中心](/zh/tech-center) |
+| 环境变量与初始化 | 环境变量、初始化配置与首次启动前置项的问题 | 48 | [进入清单](/zh/guide/env-initialization-issues) |
+| 启动与可访问性 | 服务已启动但页面或接口访问不到的问题 | 47 | [进入清单](/zh/guide/startup-accessibility-issues) |
 | 模型接入与推理服务 | 自建推理服务与模型接入环节的问题 | 68 | [进入清单](/zh/guide/model-serving-issues) |
-| Agent 与 MCP | 见该环节文档 | 22 | [搜索技术中心](/zh/tech-center) |
-| 接口与鉴权 | 见该环节文档 | 21 | [搜索技术中心](/zh/tech-center) |
-| 本地开发与构建 | 见该环节文档 | 26 | [搜索技术中心](/zh/tech-center) |
+| Agent 与 MCP | Agent 运行时与 MCP 工具接入环节的问题 | 22 | [进入清单](/zh/guide/agent-mcp-issues) |
+| 接口与鉴权 | 接口调用与鉴权配置环节的问题 | 21 | [进入清单](/zh/guide/api-auth-issues) |
+| 本地开发与构建 | 本地开发环境搭建与前后端构建环节的问题 | 26 | [进入清单](/zh/guide/local-dev-build-issues) |
 
-本页已建清单的 5 个环节共覆盖 447 篇文档。另有 552 篇文档的主题较为分散，尚未归入以上环节，可通过站内搜索按具体报错信息查找。
+10 个环节的清单共覆盖 611 篇文档。其他问题可通过[技术中心搜索](/zh/tech-center)按具体报错信息查找。
 
 ## 分流时的三个常见顺序问题
 
@@ -68,8 +72,8 @@ publication_batch: Week08
 
 ## 继续阅读
 
-- [FastGPT 容器与编排 问题清单](/zh/guide/container-orchestration-issues)
-- [FastGPT 版本升级 问题清单](/zh/guide/version-upgrade-issues)
+- [FastGPT 环境变量与初始化 问题清单](/zh/guide/env-initialization-issues)
+- [FastGPT 启动与可访问性 问题清单](/zh/guide/startup-accessibility-issues)
 
 ## 参考资料
 
@@ -82,6 +86,6 @@ publication_batch: Week08
 
 上述条目覆盖的是可依据公开信息复现与排查的情形。若问题涉及具体部署环境的配置细节、或需要结合运行日志逐项确认，可通过商务咨询获取部署阶段的技术支持；云服务形态可直接开始使用，不需要处理部署环节的环境依赖。
 
-- [商务咨询](/zh/contact)： 获取私有部署与升级阶段的技术支持
-- [立即开始](/zh/start)： 使用云服务形态，跳过环境准备
-- [定价](/zh/price)： 对比云服务与私有部署两种形态的适用范围
+- [商务咨询](/zh/contact)：获取私有部署与升级阶段的技术支持
+- [立即开始](/zh/start)：使用云服务形态，跳过环境准备
+- [定价](/zh/price)：对比云服务与私有部署两种形态的适用范围

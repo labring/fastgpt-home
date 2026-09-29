@@ -5,8 +5,15 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { getContentPath, parseFrontMatter } = require('./import-technical-content');
-const { getAlternates, getAnchors, getJsonLdNodes, getJsonLdNode, expectedAlternates,
-  verifyArticleDates } = require('./verify-guide-export');
+const {
+  getAlternates,
+  getAnchors,
+  getJsonLdNodes,
+  getJsonLdNode,
+  expectedAlternates,
+  verifyArticleDates,
+  verifyUpdatedTime
+} = require('./verify-guide-export');
 const { verifyBodyLinks, verifyReturn, visibleHtml } = require('./lib/technical-export');
 const {
   buildRedirects,
@@ -129,6 +136,13 @@ function verifyTechnicalPage(
     { datePublished: metadata.date_published, dateModified: metadata.date_modified },
     canonical
   );
+  if (identity.canonicalPath.startsWith('/guide/')) {
+    verifyUpdatedTime(
+      visibleHtml(html),
+      { dateModified: metadata.date_modified, locale: identity.locale },
+      context
+    );
+  }
   getJsonLdNode(nodes, 'BreadcrumbList', context, 'schema');
   assert.equal((visibleHtml(html).match(/<h1\b/g) || []).length, 1, `${route}: H1 count`);
   const description = (html.match(/<meta\b[^>]*name="description"[^>]*>/i) || [])[0];

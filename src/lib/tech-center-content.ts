@@ -18,7 +18,6 @@ const CONTENT_ROOT = path.join(process.cwd(), 'src/content/tech-center');
 
 export type TechArticle = TechEntry & {
   contentType: 'Article' | 'TechArticle';
-  dateModified?: string;
   datePublished?: string;
   image?: {
     alt: string;
@@ -244,6 +243,7 @@ export function getTechArticle(section: string, slug: string, locale: TechPublis
 }
 
 export function getTechArticleLastModified(article: TechEntry) {
+  if (article.dateModified) return new Date(`${article.dateModified}T00:00:00Z`);
   const fileModified = fs.statSync(getEntryPath(article)).mtime;
   if (article.sourceType !== '深度场景内容') return fileModified;
 

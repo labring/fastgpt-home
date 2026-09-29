@@ -6,6 +6,7 @@ import guideStyles from '@/components/guide/GuideArticlePage.module.css';
 import MarkdownContent, { getMarkdownHeadings } from '@/components/tech-center/MarkdownContent';
 import techStyles from '@/components/tech-center/TechArticlePage.module.css';
 import type { GuideDocument } from '@/lib/guideContent';
+import { formatUpdatedDate } from '@/lib/formatUpdatedDate';
 import { getGuideReviewPath, type GuidePublishedLocale } from '@/lib/guideSeo';
 import { parseMarkdown } from '@/lib/markdownParser';
 import { getDefaultLocalePath } from '@/lib/localizedRoutes';
@@ -18,14 +19,7 @@ const guideArticleCopy = {
     breadcrumb: 'Breadcrumb',
     back: 'Back to guides',
     onThisPage: 'On this page',
-    configuredLinks: 'Related resources',
-    updated: (date: string) =>
-      `Last updated ${new Intl.DateTimeFormat('en-US', {
-        timeZone: 'UTC',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }).format(new Date(`${date}T00:00:00Z`))}`
+    configuredLinks: 'Related resources'
   },
   zh: {
     home: '首页',
@@ -33,22 +27,9 @@ const guideArticleCopy = {
     breadcrumb: '面包屑',
     back: '返回指南',
     onThisPage: '本页内容',
-    configuredLinks: '相关资源',
-    updated: (date: string) => `更新于 ${formatGuideDate(date, 'zh')}`
+    configuredLinks: '相关资源'
   }
 } as const;
-
-function formatGuideDate(date: string, locale: GuidePublishedLocale) {
-  const [year, month, day] = date.split('-').map(Number);
-  return locale === 'zh'
-    ? `${year}年${month}月${day}日`
-    : new Intl.DateTimeFormat('en-US', {
-        timeZone: 'UTC',
-        year: 'numeric',
-        month: 'long',
-        day: 'numeric'
-      }).format(new Date(Date.UTC(year, month - 1, day)));
-}
 
 export function getGuideArticleCopy(locale: GuidePublishedLocale) {
   return guideArticleCopy[locale];
@@ -94,7 +75,7 @@ export default function GuideArticlePage({
             className={`${techStyles.updated} ${guideStyles.updated}`}
             dateTime={document.source.dateModified}
           >
-            {labels.updated(document.source.dateModified)}
+            {formatUpdatedDate(document.source.dateModified, locale)}
           </time>
         </header>
         <div className={`${techStyles.layout} ${guideStyles.layout}`}>

@@ -19,6 +19,7 @@ const OPTIONAL_FRONT_MATTER_KEYS = [
   'schema_type',
   'date_published',
   'date_modified',
+  'stage_members_heading',
   'image',
   'image_alt',
   'image_width',
@@ -342,6 +343,9 @@ function deriveSummary(title, body) {
 }
 
 function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sourceCount, label }) {
+  if (identity.canonicalPath.startsWith('/guide/')) {
+    requireText(metadata.date_modified, `${label}.date_modified`);
+  }
   normalizePublicHttpsUrl(metadata.source, `${label} source`);
   const citations = normalizeCitations(body.replace(SECRET_PATTERN, 'YOUR_API_KEY'));
   const lineEndings = normalizeStructuralEscapedLineEndings(citations);
@@ -369,7 +373,8 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
       ...(metadata.source ? { source: metadata.source } : {}),
       sourceType: normalizeSourceType(metadata.source_type, `${label} source_type`),
       summary: deriveSummary(metadata.title, normalized.body),
-      minutes: Math.max(1, Math.ceil(normalized.body.length / 500))
+      minutes: Math.max(1, Math.ceil(normalized.body.length / 500)),
+      ...(metadata.date_modified ? { dateModified: metadata.date_modified } : {})
     }
   };
 }
@@ -931,7 +936,20 @@ function validateProjection(projection, label) {
     'minutes'
   ];
   if (Object.prototype.hasOwnProperty.call(projection, 'source')) expectedKeys.push('source');
+  if (Object.prototype.hasOwnProperty.call(projection, 'dateModified'))
+    expectedKeys.push('dateModified');
   assertExactKeys(projection, expectedKeys, label);
+  if (projection.dateModified !== undefined) {
+    const date = projection.dateModified;
+    if (
+      typeof date !== 'string' ||
+      !/^\d{4}-\d{2}-\d{2}$/.test(date) ||
+      !Number.isFinite(Date.parse(date)) ||
+      new Date(date).toISOString().slice(0, 10) !== date
+    ) {
+      throw new Error(`Invalid modification date in ${label}`);
+    }
+  }
   requireText(projection.title, `${label}.title`);
   requireText(projection.slug, `${label}.slug`);
   requireText(projection.category, `${label}.category`);
@@ -1071,6 +1089,12 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
     if (metadata.slug !== entry.slug || (metadata.title && metadata.title !== entry.title))
       throw new Error(`Technical content metadata drift for ${entry.slug}`);
     if (!body) throw new Error(`Empty technical body for ${entry.slug}`);
+    if (
+      (identity.canonicalPath.startsWith('/guide/') || entry.dateModified !== undefined) &&
+      (!entry.dateModified || entry.dateModified !== metadata.date_modified)
+    ) {
+      throw new Error(`Technical content modification date drift for ${entry.slug}`);
+    }
     documents.set(entry.slug, { metadata, body });
     if (metadata.source) normalizePublicHttpsUrl(metadata.source, `${entry.slug} source`);
     extractCitationUrls(body, entry.slug);

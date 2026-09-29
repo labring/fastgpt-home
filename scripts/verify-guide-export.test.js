@@ -820,13 +820,40 @@ test('isolated Guide metadata accepts later dates and requires matching schema a
       'en'
     )}</time>`;
   verifyArticleDates(article, source, canonical);
-  verifyUpdatedTime(render(source.dateModified), { source }, { locale: 'en' }, {});
+  verifyUpdatedTime(render(source.dateModified), { dateModified: source.dateModified, locale: 'en' }, {});
   const revised = { ...source, dateModified: '2026-03-03' };
   verifyArticleDates({ ...article, dateModified: revised.dateModified }, revised, canonical);
-  verifyUpdatedTime(render(revised.dateModified), { source: revised }, { locale: 'en' }, {});
+  verifyUpdatedTime(render(revised.dateModified), { dateModified: revised.dateModified, locale: 'en' }, {});
   assert.throws(() => verifyArticleDates(article, revised, canonical), /dateModified/);
   assert.throws(
-    () => verifyUpdatedTime(render(source.dateModified), { source: revised }, { locale: 'en' }, {}),
+    () => verifyUpdatedTime(render(source.dateModified), { dateModified: revised.dateModified, locale: 'en' }, {}),
     /updated/
   );
+});
+
+test('shared updated-date copy passes semantic checks in both locales and flexible layouts', () => {
+  const ts = require('typescript');
+  const vm = require('node:vm');
+  const { verifyUpdatedTime } = require('./verify-guide-export');
+  const context = { exports: {} };
+  vm.runInNewContext(ts.transpileModule(
+    fs.readFileSync(path.join(__dirname, '../src/lib/formatUpdatedDate.ts'), 'utf8'),
+    { compilerOptions: { module: ts.ModuleKind.CommonJS } }
+  ).outputText, context);
+  for (const dateModified of ['2024-02-29', '2026-01-01', '2026-09-28', '2026-12-31']) {
+    for (const locale of ['zh', 'en']) {
+      const text = context.exports.formatUpdatedDate(dateModified, locale);
+      assert.equal(text, updatedAt({ dateModified }, locale));
+      const time = `<time datetime="${dateModified}">${text}</time>`;
+      const verify = (html) => verifyUpdatedTime(html, { dateModified, locale }, {});
+      verify(`<div class="metadata">${time}</div>`);
+      verify(`<time datetime="2020-01-01">Published January 1, 2020</time>${time}`);
+      for (const broken of [
+        '',
+        time.replace(dateModified, '2020-01-01'),
+        time.replace(text, context.exports.formatUpdatedDate(dateModified, locale === 'zh' ? 'en' : 'zh')),
+        `<time datetime="${dateModified}">Wrong label</time><time datetime="2020-01-01">${text}</time>`
+      ]) assert.throws(() => verify(broken), /updated/);
+    }
+  }
 });

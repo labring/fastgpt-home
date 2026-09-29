@@ -11,6 +11,7 @@ const entry = {
   summary: 'Truncated import…',
   categoryLabel: 'Troubleshooting'
 };
+let dateMetadata = '';
 const source = fs.readFileSync(path.join(__dirname, '../src/lib/tech-center-content.ts'), 'utf8');
 const context = {
   exports: {},
@@ -21,7 +22,7 @@ const context = {
       return {
         existsSync: () => true,
         readFileSync: () =>
-          `---\nslug: ${entry.slug}\nmeta_description: Approved explicit description.\n---\nFallback body.`
+          `---\nslug: ${entry.slug}\nmeta_description: Approved explicit description.\n${dateMetadata}---\nFallback body.`
       };
     }
     if (name.startsWith('node:')) return require(name);
@@ -105,4 +106,24 @@ test('published summaries and explicit descriptions retain precedence', () => {
     getTechArticle('troubleshoot', 'description-example').seoDescription,
     'Approved explicit description.'
   );
+});
+
+test('article dates use Markdown while aggregate dates retain the index shortcut', () => {
+  try {
+    entry.dateModified = '2026-09-27';
+    dateMetadata = 'date_modified: 2026-09-28\n';
+    assert.equal(getTechArticle('troubleshoot', 'description-example').dateModified, '2026-09-28');
+    assert.equal(
+      context.exports.getTechArticleLastModified(entry).toISOString(),
+      '2026-09-27T00:00:00.000Z'
+    );
+    dateMetadata = '';
+    assert.equal(getTechArticle('troubleshoot', 'description-example').dateModified, undefined);
+    delete entry.dateModified;
+    dateMetadata = 'date_modified: 2026-09-28\n';
+    assert.equal(getTechArticle('troubleshoot', 'description-example').dateModified, '2026-09-28');
+  } finally {
+    delete entry.dateModified;
+    dateMetadata = '';
+  }
 });

@@ -1,5 +1,5 @@
 /**
- * Remove replaceable RSC route payloads to stay within Cloudflare Static Assets' file limit.
+ * Remove replaceable RSC route payloads to keep the static export compact.
  * HTML routes remain intact; client-side navigation falls back to a full page load.
  */
 const fs = require('node:fs');
@@ -7,7 +7,7 @@ const path = require('node:path');
 
 const outDir = path.join(__dirname, '..', 'out');
 const CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT = Number(
-  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 20_000
+  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 100_000
 );
 
 let removed = 0;
@@ -56,6 +56,6 @@ console.log(`[clean-faq-rsc] removed=${removed}; files=${total}`);
 
 if (total > CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT) {
   throw new Error(
-    `Cloudflare Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`
+    `Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`
   );
 }

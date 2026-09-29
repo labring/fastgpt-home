@@ -3,6 +3,7 @@ import 'server-only';
 import fs from 'node:fs';
 import { cache } from 'react';
 import stageReturns from '@/content/tech-center/stage-returns.json';
+import troubleshootingReturns from '@/content/tech-center/troubleshooting-returns.json';
 import path from 'node:path';
 import {
   TECH_ENTRIES,
@@ -216,7 +217,10 @@ for (const entry of TECH_ENTRIES) {
   group.entries.push(entry);
   relatedGroups.set(key, group);
 }
-const returnPaths: Record<string, string> = stageReturns;
+const returnPaths: Record<string, string> = {
+  ...stageReturns,
+  ...troubleshootingReturns
+};
 
 function getStageReturn(entry: TechEntry) {
   const target = returnPaths[entry.slug];

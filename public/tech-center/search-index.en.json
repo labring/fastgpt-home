@@ -7518,5 +7518,145 @@
     "publicPath": "/guide/startup-accessibility-issues",
     "sourceType": "官方文档",
     "minutes": 9
+  },
+  {
+    "identity": "en|/guide/chunking-strategy-selection",
+    "title": "Chunking by Document Type: How Each Class Splits and What Values to Use",
+    "description": "Chunking by Document Type: How Each Class Splits and What Values to Use When this decision has to be made You must decide on a knowledge base chunking str…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/chunking-strategy-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 26
+  },
+  {
+    "identity": "en|/guide/corpus-freshness-operations",
+    "title": "Keeping a Knowledge Base Fresh: Refresh Cadence, Signals and Ownership",
+    "description": "Keeping a Knowledge Base Fresh: Refresh Cadence, Signals and Ownership When this becomes a decision Knowledge base content freshness is a subtle but criti…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/corpus-freshness-operations",
+    "sourceType": "深度场景内容",
+    "minutes": 33
+  },
+  {
+    "identity": "en|/guide/handover-and-ownership",
+    "title": "Handing Over a Running Deployment: Ownership, Credentials, and Documentation",
+    "description": "Handing Over a Running Deployment: Ownership, Credentials, and Documentation When this becomes a decision Transferring a system from development to produc…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/handover-and-ownership",
+    "sourceType": "深度场景内容",
+    "minutes": 36
+  },
+  {
+    "identity": "en|/guide/incident-drill-and-runbook",
+    "title": "Incidents Worth Drilling: Writing a Runbook People Actually Use",
+    "description": "Incidents Worth Drilling: Writing a Runbook People Actually Use When this becomes a decision As system architecture grows more complex, service dependenci…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/incident-drill-and-runbook",
+    "sourceType": "深度场景内容",
+    "minutes": 33
+  },
+  {
+    "identity": "en|/guide/index-rebuild-and-migration",
+    "title": "When an Index Must Be Rebuilt: Triggers, Cost and Migration Paths",
+    "description": "When an Index Must Be Rebuilt: Triggers, Cost and Migration Paths When this decision has to be made Indexes are critical for efficient data retrieval in e…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/index-rebuild-and-migration",
+    "sourceType": "深度场景内容",
+    "minutes": 26
+  },
+  {
+    "identity": "en|/guide/observability-and-logging-stack",
+    "title": "Observability Choices: What Each Layer Records, and How Long to Keep It",
+    "description": "Observability Choices: What Each Layer Records, and How Long to Keep It When this decision has to be made Observability and log collection decisions are n…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/observability-and-logging-stack",
+    "sourceType": "深度场景内容",
+    "minutes": 31
+  },
+  {
+    "identity": "en|/guide/offline-airgap-deployment",
+    "title": "Deploying Without Egress: Image Sources, Capability Limits and Access Paths",
+    "description": "Deploying Without Egress: Image Sources, Capability Limits and Access Paths When this decision has to be made Plan for offline or intranet deployment of F…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/offline-airgap-deployment",
+    "sourceType": "深度场景内容",
+    "minutes": 27
+  },
+  {
+    "identity": "en|/guide/retrieval-mode-selection",
+    "title": "Semantic, Full-Text, or Hybrid Retrieval: Where Each Fits and What Thresholds You Need",
+    "description": "Semantic, Full-Text, or Hybrid Retrieval: Where Each Fits and What Thresholds You Need When this decision has to be made The retrieval mode for your knowl…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/retrieval-mode-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 30
+  },
+  {
+    "identity": "en|/guide/selfhosted-model-serving",
+    "title": "Wiring In a Self-Hosted Inference Endpoint: Chat, Embedding and Rerank",
+    "description": "Wiring In a Self-Hosted Inference Endpoint: Chat, Embedding and Rerank When this decision has to be made You must decide when integrating internal, self-h…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/selfhosted-model-serving",
+    "sourceType": "深度场景内容",
+    "minutes": 29
+  },
+  {
+    "identity": "en|/guide/tool-invocation-path-selection",
+    "title": "Plugins, MCP or HTTP Nodes: Picking a Path for Tool Calls",
+    "description": "Plugins, MCP or HTTP Nodes: Picking a Path for Tool Calls When this decision has to be made You must choose a tool call path when building or expanding la…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/tool-invocation-path-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 24
+  },
+  {
+    "identity": "en|/guide/usage-and-capacity-review",
+    "title": "Usage and Capacity Review: Which Numbers to Watch and When to Scale",
+    "description": "Usage and Capacity Review: Which Numbers to Watch and When to Scale When this becomes a decision After deploying your system, continuous resource monitori…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/usage-and-capacity-review",
+    "sourceType": "深度场景内容",
+    "minutes": 33
+  },
+  {
+    "identity": "en|/guide/variable-injection-strategy",
+    "title": "Where Variables Come From: Globals, Node Outputs and API Inputs",
+    "description": "Where Variables Come From: Globals, Node Outputs and API Inputs When this decision has to be made When you build or optimize workflow-based applications,…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/variable-injection-strategy",
+    "sourceType": "深度场景内容",
+    "minutes": 22
+  },
+  {
+    "identity": "en|/reference/llm-capability-tiers",
+    "title": "FastGPT LLM Capability Tiers Reference",
+    "description": "FastGPT LLM Capability Tiers Reference This page groups the 268 chat models bundled with fastgpt-plugin v1.1.3 by context length, maximum single response,…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/llm-capability-tiers",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/reference/vector-db-backends",
+    "title": "FastGPT Vector Database Backends Reference",
+    "description": "FastGPT Vector Database Backends Reference This page lists the vector database backends FastGPT v4.17.0 actually dispatches to in code, together with each…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/vector-db-backends",
+    "sourceType": "官方文档",
+    "minutes": 5
   }
 ]

@@ -356,7 +356,7 @@ test('release source checks run content hygiene first and block dirty published 
     fs.cpSync(ROOT, fixtureRoot, {
       recursive: true,
       filter: (source) =>
-        !['.git', '.next', 'node_modules', 'out', '.release-artifacts'].includes(
+        !['.git', '.codegraph', '.next', 'node_modules', 'out', '.release-artifacts'].includes(
           path.basename(source)
         )
     });

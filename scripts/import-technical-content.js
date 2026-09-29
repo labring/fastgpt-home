@@ -11,8 +11,16 @@ const zlib = require('node:zlib');
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
 const REQUIRED_FRONT_MATTER_KEYS = ['title', 'slug', 'page_type', 'source', 'source_type'];
-// Optional delivery columns survive normalization in this order and reach the rendered page metadata.
+// Optional delivery metadata stays in the non-rendered front matter for provenance and SEO.
 const OPTIONAL_FRONT_MATTER_KEYS = [
+  'description',
+  'language',
+  'axis_model_tier',
+  'axis_vector_db',
+  'covered_models',
+  'check_day',
+  'article_section',
+  'is_part_of',
   'meta_title',
   'meta_description',
   'keywords',
@@ -28,8 +36,8 @@ const OPTIONAL_FRONT_MATTER_KEYS = [
   'interactive_data'
 ];
 const FRONT_MATTER_KEYS = [...REQUIRED_FRONT_MATTER_KEYS, ...OPTIONAL_FRONT_MATTER_KEYS];
-// The shared /guide/ tree is registered under the troubleshoot category.
-const CATEGORY_ALIASES = { guide: 'troubleshoot' };
+// Shared public paths can reuse an existing technical-center category.
+const CATEGORY_ALIASES = { guide: 'troubleshoot', combo: 'model' };
 const SOURCE_TYPES = new Map(Object.entries(TECHNICAL_CONTENT_POLICY.sourceTypes));
 const CATEGORY_LABELS = TECHNICAL_CONTENT_POLICY.categories;
 const SECRET_PATTERN = /\b(?:sk-[A-Za-z0-9][A-Za-z0-9_-]{15,}|fastgpt-[A-Za-z0-9]{32,})\b/g;
@@ -357,7 +365,7 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
     lineEndings
   );
   const section = identity.canonicalPath.split('/')[1];
-  const category = CATEGORY_ALIASES[section] || section;
+  const category = getCategoryForSection(section);
   const categoryLabel = CATEGORY_LABELS[category];
   if (!categoryLabel) {
     throw new Error(`Schema drift in ${label}: unsupported category ${category}`);
@@ -383,6 +391,10 @@ function normalizeSourceType(value, label) {
   const normalized = SOURCE_TYPES.get(requireText(value, label));
   if (!normalized) throw new Error(`Schema drift in ${label}: unsupported source type ${value}`);
   return normalized;
+}
+
+function getCategoryForSection(section) {
+  return CATEGORY_ALIASES[section] || section;
 }
 
 function isSupportedSourceType(value) {
@@ -994,7 +1006,7 @@ function stageMembers({ metadata, body }, slug) {
 }
 
 /** Validate current stage navigation independently of delivery counts and wording. */
-function verifyStageNavigation(entries, documents, returns, guides = []) {
+function verifyStageNavigation(entries, documents, returns, guides = [], technicalEntries = entries) {
   const { bodyLinks } = require('./lib/technical-export');
   const owners = new Set(
     guides.flatMap((entry) =>
@@ -1007,7 +1019,7 @@ function verifyStageNavigation(entries, documents, returns, guides = []) {
     if (owners.has(entry.slug)) throw new Error(`Duplicate content owner: ${entry.slug}`);
     owners.add(entry.slug);
   }
-  const technical = new Set(entries.map((entry) => entry.slug));
+  const technical = new Set(technicalEntries.map((entry) => entry.slug));
   const stages = new Map(
     entries
       .filter((entry) =>
@@ -1075,9 +1087,7 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
     const identity = parseIdentityFromSlug(entry.slug, 'technical registry');
     if (
       entry.slug !== `/${identity.locale}${identity.canonicalPath}` ||
-      (identity.canonicalPath.split('/')[1] === 'guide'
-        ? entry.category !== 'troubleshoot'
-        : entry.category !== identity.canonicalPath.split('/')[1]) ||
+      entry.category !== getCategoryForSection(identity.canonicalPath.split('/')[1]) ||
       !Object.hasOwn(CATEGORY_LABELS, entry.category)
     ) {
       throw new Error(`Technical content route/category drift for ${entry.slug}`);
@@ -1110,9 +1120,32 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   const readRegistry = (file, fallback) => fs.existsSync(path.join(repoRoot, file))
     ? JSON.parse(fs.readFileSync(path.join(repoRoot, file), 'utf8')) : fallback;
   const guideEntries = readRegistry('src/content/guides/registry.json', { entries: [] }).entries;
-  verifyStageNavigation(entries, documents,
-    readRegistry('src/content/tech-center/stage-returns.json', {}),
-    guideEntries);
+  const stageReturns = readRegistry('src/content/tech-center/stage-returns.json', {});
+  const legacyStageSlugs = new Set(Object.values(stageReturns));
+  verifyStageNavigation(
+    entries.filter((entry) => legacyStageSlugs.has(entry.slug)),
+    documents,
+    stageReturns,
+    guideEntries,
+    entries
+  );
+  const troubleshootingReturns = readRegistry(
+    'src/content/tech-center/troubleshooting-returns.json',
+    {}
+  );
+  const troubleshootingStageSlugs = new Set(Object.values(troubleshootingReturns));
+  const troubleshootingStages = entries.filter((entry) =>
+    troubleshootingStageSlugs.has(entry.slug)
+  );
+  if (troubleshootingStages.length) {
+    verifyStageNavigation(
+      troubleshootingStages,
+      documents,
+      troubleshootingReturns,
+      guideEntries,
+      entries
+    );
+  }
   verifyRelatedLinks(entries, readRegistry('src/content/related-links.json', {}), guideEntries);
   console.log(`Technical content verified: ${entries.length} pages`);
   return entries;

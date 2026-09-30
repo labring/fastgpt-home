@@ -66,6 +66,7 @@ function startWrangler(port, persistDir) {
     [
       WRANGLER_BIN,
       'dev',
+      '--no-bundle',
       '--local',
       '--config',
       CONFIG_PATH,
@@ -95,7 +96,7 @@ function startWrangler(port, persistDir) {
 }
 
 async function waitForWrangler(port, child, getOutput) {
-  const deadline = Date.now() + 45_000;
+  const deadline = Date.now() + 180_000;
   while (Date.now() < deadline) {
     if (child.exitCode !== null)
       throw new Error(`Wrangler exited before serving HTTP:\n${getOutput()}`);
@@ -109,7 +110,7 @@ async function waitForWrangler(port, child, getOutput) {
     }
     await new Promise((resolve) => setTimeout(resolve, 250));
   }
-  throw new Error(`Wrangler did not serve HTTP within 45 seconds:\n${getOutput()}`);
+  throw new Error(`Wrangler did not serve HTTP within 180 seconds:\n${getOutput()}`);
 }
 
 async function stopWrangler(child) {

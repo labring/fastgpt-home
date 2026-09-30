@@ -30,9 +30,24 @@ test('Preview packaging preserves the Worker boundary and rejects corrupted hand
     write('out/.assetsignore', '_worker.js\n');
     write('wrangler.json', fs.readFileSync(path.join(__dirname, '../wrangler.json')));
     write('.next/cache/site-identity.json', JSON.stringify(identity));
-    const bundle = packagePreviewArtifact(root);
+    const bundle = packagePreviewArtifact(root, {
+      buildSeconds: 12.5,
+      rscPayloadFilesRemoved: 8,
+      staticExportFilesAfterCleanup: 4,
+      staticAssetFileLimit: 100000
+    });
     const manifestPath = path.join(bundle, 'manifest.json');
     const manifest = JSON.parse(fs.readFileSync(manifestPath));
+    assert.deepEqual(manifest.metrics, {
+      buildSeconds: 12.5,
+      rscPayloadFilesRemoved: 8,
+      staticExportFilesAfterCleanup: 4,
+      staticAssetFileLimit: 100000,
+      artifactFiles: 5,
+      artifactBytes: 39,
+      htmlFiles: 2,
+      htmlBytes: 14
+    });
     const inputs = manifest.publicationInputs;
     const options = { trustedConfigPath: path.join(root, 'wrangler.json') };
     const verify = () => verifyPreviewArtifact(bundle, inputs, options);

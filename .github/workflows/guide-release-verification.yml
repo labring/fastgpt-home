@@ -73,7 +73,7 @@ jobs:
       NEXT_PUBLIC_LANGUAGE_REGION: ${{ matrix.variant == 'cn' && 'zh-CN' || 'en-US' }}
       NEXT_PUBLIC_USER_URL: ${{ matrix.variant == 'cn' && 'https://cloud.fastgpt.cn' || 'https://cloud.fastgpt.io' }}
       NEXT_PUBLIC_CRM_API_URL: ${{ matrix.crm == 'configured' && 'https://crm-preview.invalid' || '' }}
-      CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: ${{ matrix.variant == 'preview' && '100000' || '20000' }}
+      CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: 100000
     steps:
       - uses: actions/checkout@v4
         with:

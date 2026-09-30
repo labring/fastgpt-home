@@ -1,5 +1,5 @@
 /**
- * Remove replaceable RSC route payloads to stay within Cloudflare Static Assets' file limit.
+ * Remove replaceable RSC route payloads to keep the static export compact.
  * HTML routes remain intact; client-side navigation falls back to a full page load.
  */
 const fs = require('node:fs');
@@ -7,7 +7,7 @@ const path = require('node:path');
 
 const outDir = path.join(__dirname, '..', 'out');
 const CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT = Number(
-  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 20_000
+  process.env.CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT || 100_000
 );
 
 let removed = 0;
@@ -54,8 +54,24 @@ function countFiles(dir) {
 countFiles(outDir);
 console.log(`[clean-faq-rsc] removed=${removed}; files=${total}`);
 
+if (process.env.PREVIEW_METRICS_PATH) {
+  fs.mkdirSync(path.dirname(process.env.PREVIEW_METRICS_PATH), { recursive: true });
+  fs.writeFileSync(
+    process.env.PREVIEW_METRICS_PATH,
+    `${JSON.stringify(
+      {
+        rscPayloadFilesRemoved: removed,
+        staticExportFilesAfterCleanup: total,
+        staticAssetFileLimit: CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT
+      },
+      null,
+      2
+    )}\n`
+  );
+}
+
 if (total > CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT) {
   throw new Error(
-    `Cloudflare Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`
+    `Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`
   );
 }

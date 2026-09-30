@@ -22,7 +22,7 @@ function readSource(revision) {
   };
 }
 
-function packagePreviewArtifact(root = process.cwd()) {
+function packagePreviewArtifact(root = process.cwd(), buildMetrics) {
   const destination = path.join(root, '.release-artifacts/site/preview-disabled');
   const identity = JSON.parse(
     fs.readFileSync(path.join(root, '.next/cache/site-identity.json'), 'utf8')
@@ -43,12 +43,25 @@ function packagePreviewArtifact(root = process.cwd()) {
     fs.mkdirSync(payload, { recursive: true });
     fs.cpSync(out, path.join(payload, 'out'), { recursive: true });
     fs.copyFileSync(path.join(root, 'wrangler.json'), path.join(payload, 'wrangler.json'));
+    const inventory = inventoryPayload(payload);
+    const exportedFiles = inventory.files.filter(({ path: file }) => file.startsWith('out/'));
+    const htmlFiles = exportedFiles.filter(({ path: file }) => file.endsWith('.html'));
+    const metrics = buildMetrics
+      ? {
+          ...buildMetrics,
+          artifactFiles: exportedFiles.length,
+          artifactBytes: exportedFiles.reduce((total, file) => total + file.bytes, 0),
+          htmlFiles: htmlFiles.length,
+          htmlBytes: htmlFiles.reduce((total, file) => total + file.bytes, 0)
+        }
+      : undefined;
     const manifest = {
       kind: 'preview',
       schemaVersion: 1,
       source: readSource(identity.sourceRevision),
       publicationInputs,
-      inventory: inventoryPayload(payload)
+      ...(metrics ? { metrics } : {}),
+      inventory
     };
     fs.writeFileSync(path.join(staging, 'manifest.json'), `${JSON.stringify(manifest, null, 2)}\n`);
     fs.rmSync(destination, { recursive: true, force: true });

@@ -216,7 +216,9 @@ for (const entry of TECH_ENTRIES) {
   group.entries.push(entry);
   relatedGroups.set(key, group);
 }
-const returnPaths: Record<string, string> = stageReturns;
+const returnPaths: Record<string, string> = {
+  ...stageReturns
+};
 
 function getStageReturn(entry: TechEntry) {
   const target = returnPaths[entry.slug];

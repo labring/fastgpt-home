@@ -191,7 +191,7 @@ const ENGLISH_EDITORIAL_PATTERN = ENGLISH_EDITORIAL_LABELS.map((label) =>
   (label === 'schedule' ? '(?<![\\p{L}\\p{N}_]\\s+)schedule' : label).replace(/ \+/g, '\\s+')
 ).join('|');
 const EDITORIAL_MATCHER = new RegExp(
-  `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_EDITORIAL_PATTERN})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?:${CHINESE_EDITORIAL_INLINE.join(
+  `(?<![\\p{L}\\p{N}_])(?:${ENGLISH_EDITORIAL_PATTERN})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_STANDALONE_EDITORIAL})\\s*[:：]|(?<![\\p{L}\\p{N}_])(?:${CHINESE_EDITORIAL_INLINE.join(
     '|'
   )})\\s*[:：]`,
   'iu'

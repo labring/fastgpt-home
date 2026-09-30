@@ -413,151 +413,68 @@ test('source verification covers every indexed page and catches content drift wi
   }
 });
 
-test('stage membership follows explicit roles and the selected table', () => {
+test('stage returns validate routes without imposing member formatting', () => {
   const { verifyStageNavigation } = require('./import-technical-content');
   const stage = '/zh/guide/example-issues';
   const source = '/zh/api/example';
-  const reference = '/zh/reference/environment';
+  const later = '/zh/api/later';
   const ordinaryGuide = '/zh/guide/ordinary-guide';
   const overview = '/zh/guide/deployment-issue-landscape';
-  const entries = [stage, source, overview, reference, ordinaryGuide].map((slug) => ({ slug }));
-  const metadata = { page_type: '问题清单聚合页', stage_members_heading: 'Members' };
-  const body = `[Overview](${overview})
-## Members
-| Article | Area |
-| --- | --- |
-| [Article](${source}) | API |
-
-## Related references
-[Reference](${reference})
-| Reference | Area |
-| --- | --- |
-| [Guide](${ordinaryGuide}) | Guide |
-`;
-  const document = (text = body, meta = metadata) =>
+  const entries = [stage, source, later, overview, ordinaryGuide].map((slug) => ({ slug }));
+  const documents = (stageBody = `[Overview](${overview})\nPlain prose is valid.`) =>
     new Map([
-      [stage, { metadata: meta, body: text }],
+      [stage, { metadata: { page_type: '问题清单聚合页' }, body: stageBody }],
       [ordinaryGuide, { metadata: { page_type: 'Tutorial' }, body: '# Ordinary guide' }]
     ]);
-  const returns = { [source]: stage };
-  const verify = (e = entries, d = document(), r = returns, g = []) =>
+  const returns = { [source]: stage, [later]: stage };
+  const verify = (e = entries, d = documents(), r = returns, g = []) =>
     verifyStageNavigation(e, d, r, g);
+
   verify();
-  verify(entries, document(body + '\nRevised operational wording.'));
-  verify(entries, document(body, { ...metadata, page_type: 'Issue list' }));
-  // A source-shaped link in another cell is an editorial reference.
-  verify(entries, document(body.replace('| API |', `| [Reference](${reference}) |`)));
-  const later = '/zh/api/later';
-  verify(
-    [...entries, { slug: later }],
-    document(
-      body.replace(
-        '\n\n## Related references',
-        `\n| [Later](${later}) | API |\n\n## Related references`
-      )
-    ),
-    { ...returns, [later]: stage }
-  );
-  // Stage identity is independent of its URL section.
-  const moved = '/zh/troubleshoot/example-stage';
-  const movedDocuments = document();
-  movedDocuments.set(moved, movedDocuments.get(stage));
-  movedDocuments.delete(stage);
-  verify(
-    entries.map((entry) => (entry.slug === stage ? { slug: moved } : entry)),
-    movedDocuments,
-    { [source]: moved }
-  );
+  verify(entries, documents('# Stage\n\n[Overview](' + overview + ')'));
+
   assert.throws(() => verify(entries.slice(1)), /Unresolved stage target/);
   assert.throws(
     () => verify(entries.filter((entry) => entry.slug !== source)),
     /Unresolved return source/
   );
-  assert.throws(() => verify([...entries, entries[1]]), /Duplicate content owner/);
+  assert.throws(() => verify([...entries, { slug: ordinaryGuide }]), /Duplicate content owner/);
   assert.throws(
-    () => verify(entries, document(), returns, [{ slug: 'example-issues', zh: {} }]),
+    () => verify(entries, documents(), returns, [{ slug: 'example-issues', zh: {} }]),
     /Duplicate content owner/
   );
   assert.throws(
-    () => verify(entries, document(), { [source]: ordinaryGuide }),
+    () => verify(entries, documents(), { [source]: ordinaryGuide }),
     /Unresolved stage target/
   );
-  assert.throws(() => verify(entries, document(), {}), /missing reverse mapping/);
   assert.throws(
-    () => verify(entries, document(body.replace(`[Overview](${overview})`, ''))),
+    () => verify(entries, documents('[Overview](/zh/guide/missing-landscape)')),
     /missing landscape/
   );
   assert.throws(
-    () => verify(entries, document(body, { page_type: 'Issue list' })),
-    /missing stage_members_heading/
-  );
-  assert.throws(
-    () => verify(entries, document(body.replace('## Members', '## Renamed'))),
-    /expected one member section/
-  );
-  assert.throws(
-    () => verify(entries, document(body + '\n## Members\n')),
-    /expected one member section/
-  );
-  assert.throws(
-    () => verify(entries, document(body.replace('| --- | --- |', '| invalid | --- |'))),
-    /invalid member table/
-  );
-  assert.throws(
-    () => verify(entries, document(body.replace(`[Article](${source})`, 'Article'))),
-    /one article per member row/
-  );
-  assert.throws(
     () =>
       verify(
         entries,
-        document(
-          body.replace(
-            '\n\n## Related references',
-            `\n| [Duplicate](${source}) | API |\n\n## Related references`
-          )
-        )
+        new Map([
+          [stage, { metadata: { page_type: 'Guide' }, body: `[Overview](${overview})` }]
+        ])
       ),
-    /duplicate stage member/
+    /Unresolved stage target/
   );
-  assert.throws(
-    () => verify(entries, document(body.replace(source, '/zh/api/missing')), {}),
-    /Unresolved stage member/
+
+  const moved = '/zh/troubleshoot/example-stage';
+  const movedDocuments = documents();
+  movedDocuments.set(moved, movedDocuments.get(stage));
+  movedDocuments.delete(stage);
+  verify(
+    entries.map((entry) => (entry.slug === stage ? { slug: moved } : entry)),
+    movedDocuments,
+    { [source]: moved, [later]: moved }
   );
-  // An ordinary paragraph link cannot substitute for membership in the selected table.
-  assert.throws(
-    () => verify(entries, document(body.replace(source, reference) + `\n[Article](${source})`)),
-    /missing article link/
-  );
+
   const foreign = '/en/api/example';
   assert.throws(
-    () => verify([...entries, { slug: foreign }], document(), { [foreign]: stage }),
+    () => verify([...entries, { slug: foreign }], documents(), { [foreign]: stage }),
     /Cross-locale/
-  );
-  assert.throws(
-    () => verify([...entries, { slug: foreign }], document(body.replace(source, foreign)), {}),
-    /Cross-locale/
-  );
-  assert.throws(
-    () =>
-      verify(
-        entries,
-        document(
-          body
-            .replace('## Members', '## Members\n```md')
-            .replace('## Related references', '```\n## Related references')
-        )
-      ),
-    /expected one member table/
-  );
-  const secondTable =
-    '\n| Reference | Area |\n| --- | --- |\n| [Ref](' + reference + ') | Reference |\n';
-  assert.throws(
-    () =>
-      verify(
-        entries,
-        document(body.replace('## Related references', secondTable + '\n## Related references'))
-      ),
-    /expected one member table/
   );
 });

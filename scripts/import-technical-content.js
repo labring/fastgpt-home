@@ -11,8 +11,16 @@ const zlib = require('node:zlib');
 const REPOSITORY_ROOT = path.resolve(__dirname, '..');
 const TECHNICAL_CONTENT_POLICY = require('../src/lib/technical-content-policy.json');
 const REQUIRED_FRONT_MATTER_KEYS = ['title', 'slug', 'page_type', 'source', 'source_type'];
-// Optional delivery columns survive normalization in this order and reach the rendered page metadata.
+// Optional delivery metadata stays in the non-rendered front matter for provenance and SEO.
 const OPTIONAL_FRONT_MATTER_KEYS = [
+  'description',
+  'language',
+  'axis_model_tier',
+  'axis_vector_db',
+  'covered_models',
+  'check_day',
+  'article_section',
+  'is_part_of',
   'meta_title',
   'meta_description',
   'keywords',
@@ -28,8 +36,8 @@ const OPTIONAL_FRONT_MATTER_KEYS = [
   'interactive_data'
 ];
 const FRONT_MATTER_KEYS = [...REQUIRED_FRONT_MATTER_KEYS, ...OPTIONAL_FRONT_MATTER_KEYS];
-// The shared /guide/ tree is registered under the troubleshoot category.
-const CATEGORY_ALIASES = { guide: 'troubleshoot' };
+// Shared public paths can reuse an existing technical-center category.
+const CATEGORY_ALIASES = { guide: 'troubleshoot', combo: 'model' };
 const SOURCE_TYPES = new Map(Object.entries(TECHNICAL_CONTENT_POLICY.sourceTypes));
 const CATEGORY_LABELS = TECHNICAL_CONTENT_POLICY.categories;
 const SECRET_PATTERN = /\b(?:sk-[A-Za-z0-9][A-Za-z0-9_-]{15,}|fastgpt-[A-Za-z0-9]{32,})\b/g;
@@ -357,7 +365,7 @@ function buildNormalizedTechnicalPage({ metadata, identity, body, wordCount, sou
     lineEndings
   );
   const section = identity.canonicalPath.split('/')[1];
-  const category = CATEGORY_ALIASES[section] || section;
+  const category = getCategoryForSection(section);
   const categoryLabel = CATEGORY_LABELS[category];
   if (!categoryLabel) {
     throw new Error(`Schema drift in ${label}: unsupported category ${category}`);
@@ -383,6 +391,10 @@ function normalizeSourceType(value, label) {
   const normalized = SOURCE_TYPES.get(requireText(value, label));
   if (!normalized) throw new Error(`Schema drift in ${label}: unsupported source type ${value}`);
   return normalized;
+}
+
+function getCategoryForSection(section) {
+  return CATEGORY_ALIASES[section] || section;
 }
 
 function isSupportedSourceType(value) {
@@ -969,30 +981,6 @@ function validateProjection(projection, label) {
   }
 }
 
-/** Read the one member table explicitly selected by a stage's front matter. */
-function stageMembers({ metadata, body }, slug) {
-  const heading = metadata.stage_members_heading;
-  if (!heading) throw new Error(`${slug}: missing stage_members_heading`);
-  const sections = body
-    .replace(/^(`{3,}|~{3,})[^\n]*\n[\s\S]*?^\1[^\n]*$/gm, '')
-    .split(/^(?=#{1,2} )/m)
-    .filter((section) => section.split('\n')[0].trim() === `## ${heading}`);
-  if (sections.length !== 1) throw new Error(`${slug}: expected one member section`);
-  const tables = sections[0].match(/^(?:\|[^\n]+\|[ \t]*(?:\n|$))+/gm) || [];
-  if (tables.length !== 1) throw new Error(`${slug}: expected one member table`);
-  const rows = tables[0].trim().split('\n');
-  if (!/^\|(?:\s*:?-+:?\s*\|)+$/.test(rows[1] || '') || rows.length < 3)
-    throw new Error(`${slug}: invalid member table`);
-  const { bodyLinks } = require('./lib/technical-export');
-  const members = rows.slice(2).map((row) => {
-    const links = bodyLinks(row.split(/(?<!\\)\|/)[1]);
-    if (links.length !== 1) throw new Error(`${slug}: expected one article per member row`);
-    return links[0];
-  });
-  if (new Set(members).size !== members.length) throw new Error(`${slug}: duplicate stage member`);
-  return new Set(members);
-}
-
 /** Validate current stage navigation independently of delivery counts and wording. */
 function verifyStageNavigation(entries, documents, returns, guides = []) {
   const { bodyLinks } = require('./lib/technical-export');
@@ -1008,32 +996,24 @@ function verifyStageNavigation(entries, documents, returns, guides = []) {
     owners.add(entry.slug);
   }
   const technical = new Set(entries.map((entry) => entry.slug));
-  const stages = new Map(
-    entries
-      .filter((entry) =>
-        ['Issue list', '问题清单聚合页'].includes(documents.get(entry.slug)?.metadata.page_type)
-      )
-      .map((entry) => [entry.slug, stageMembers(documents.get(entry.slug), entry.slug)])
-  );
+  const stages = new Set(Object.values(returns));
   for (const [source, target] of Object.entries(returns)) {
     if (!technical.has(source)) throw new Error(`Unresolved return source: ${source}`);
-    if (!stages.has(target)) throw new Error(`Unresolved stage target: ${target}`);
+    const stageDocument = documents.get(target);
+    if (
+      !technical.has(target) ||
+      !['Issue list', '问题清单聚合页'].includes(stageDocument?.metadata.page_type)
+    ) {
+      throw new Error(`Unresolved stage target: ${target}`);
+    }
     if (source.split('/')[1] !== target.split('/')[1])
       throw new Error(`Cross-locale return source: ${source}`);
-    if (!stages.get(target).has(source))
-      throw new Error(`${target}: missing article link in member table: ${source}`);
   }
-  for (const [stage, members] of stages) {
+  for (const stage of stages) {
     const locale = stage.split('/')[1];
     const landscape = `/${locale}/guide/deployment-issue-landscape`;
     if (!technical.has(landscape) || !bodyLinks(documents.get(stage).body).includes(landscape))
       throw new Error(`${stage}: missing landscape link`);
-    for (const member of members) {
-      if (!technical.has(member)) throw new Error(`Unresolved stage member: ${member}`);
-      if (member.split('/')[1] !== locale) throw new Error(`Cross-locale stage member: ${member}`);
-      if (returns[member] !== stage)
-        throw new Error(`${member}: missing reverse mapping to ${stage}`);
-    }
   }
 }
 
@@ -1075,9 +1055,7 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
     const identity = parseIdentityFromSlug(entry.slug, 'technical registry');
     if (
       entry.slug !== `/${identity.locale}${identity.canonicalPath}` ||
-      (identity.canonicalPath.split('/')[1] === 'guide'
-        ? entry.category !== 'troubleshoot'
-        : entry.category !== identity.canonicalPath.split('/')[1]) ||
+      entry.category !== getCategoryForSection(identity.canonicalPath.split('/')[1]) ||
       !Object.hasOwn(CATEGORY_LABELS, entry.category)
     ) {
       throw new Error(`Technical content route/category drift for ${entry.slug}`);
@@ -1110,9 +1088,8 @@ function verifyTechnicalContent(repoRoot = REPOSITORY_ROOT) {
   const readRegistry = (file, fallback) => fs.existsSync(path.join(repoRoot, file))
     ? JSON.parse(fs.readFileSync(path.join(repoRoot, file), 'utf8')) : fallback;
   const guideEntries = readRegistry('src/content/guides/registry.json', { entries: [] }).entries;
-  verifyStageNavigation(entries, documents,
-    readRegistry('src/content/tech-center/stage-returns.json', {}),
-    guideEntries);
+  const stageReturns = readRegistry('src/content/tech-center/stage-returns.json', {});
+  verifyStageNavigation(entries, documents, stageReturns, guideEntries);
   verifyRelatedLinks(entries, readRegistry('src/content/related-links.json', {}), guideEntries);
   console.log(`Technical content verified: ${entries.length} pages`);
   return entries;

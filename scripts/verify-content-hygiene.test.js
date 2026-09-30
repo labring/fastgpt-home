@@ -69,6 +69,20 @@ test('source CLI accepts publishable markdown and keeps a leading hidden comment
   });
 });
 
+test('source CLI ignores editorial labels embedded in reader-facing headings', () => {
+  withFixture(
+    {
+      'src/content/guides/zh/clean-heading.md':
+        '# 制造企业的图纸与工艺文件审核：版本、参数与变更怎么对上\n\n正文内容。\n\n## References\n\n- [Public source](https://example.com/reference)\n'
+    },
+    (root) => {
+      const result = runFixture(root);
+      assert.equal(result.status, 0, result.stderr);
+      assert.match(result.stdout, /Content hygiene passed: 1 source file/);
+    }
+  );
+});
+
 test('source CLI aggregates visible editorial findings with stable actionable locations', () => {
   withFixture(
     {

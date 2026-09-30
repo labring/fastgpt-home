@@ -70,12 +70,11 @@ hreflang, robots, sitemap coverage, redirects, and the Technical Center JavaScri
 Git records content revisions and batch history.
 
 Stage pages declare `page_type: Issue list` (English) or `page_type: 问题清单聚合页`
-(Chinese) in front matter. `stage_members_heading` selects one exact level-two heading
-whose section contains one pipe table. Each data row's first cell links to one member;
-`src/content/tech-center/stage-returns.json` supplies its designated return. Keep the
-selector aligned when editing that heading. Other sections and table columns can contain
-ordinary references. Source checks enforce membership, same-language targets and unique
-owners; completed-export checks verify visible links and destination reachability.
+(Chinese) in front matter. `src/content/tech-center/stage-returns.json` supplies each
+article's designated return. Source checks enforce full route ownership, resolvable
+same-language return targets, and the stage page's landscape link; the article body may
+use any section or link layout. Completed-export checks verify visible links and
+destination reachability.
 
 An explicit JSON or XLSX delivery can be imported with
 `npm run import:technical-content -- --write --source <delivery-directory>`.

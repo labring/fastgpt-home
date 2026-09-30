@@ -54,6 +54,22 @@ function countFiles(dir) {
 countFiles(outDir);
 console.log(`[clean-faq-rsc] removed=${removed}; files=${total}`);
 
+if (process.env.PREVIEW_METRICS_PATH) {
+  fs.mkdirSync(path.dirname(process.env.PREVIEW_METRICS_PATH), { recursive: true });
+  fs.writeFileSync(
+    process.env.PREVIEW_METRICS_PATH,
+    `${JSON.stringify(
+      {
+        rscPayloadFilesRemoved: removed,
+        staticExportFilesAfterCleanup: total,
+        staticAssetFileLimit: CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT
+      },
+      null,
+      2
+    )}\n`
+  );
+}
+
 if (total > CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT) {
   throw new Error(
     `Static Assets supports at most ${CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT.toLocaleString('en-US')} files; found ${total}.`

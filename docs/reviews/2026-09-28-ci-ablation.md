@@ -33,6 +33,8 @@ every retained check to pass.
 Both runs used Node 24.13.0, Next 16.3.2, nine workers, the same Preview public
 configuration, and a cleared Next compilation cache. Timing covers
 `npm run build:preview`, including generation, postprocessing, and artifact packaging.
+Preview artifacts retain the measured build duration, post-RSC-cleanup file count, removed
+RSC payload count, HTML count/bytes, and exported artifact count/bytes for the next comparison.
 
 | Measurement | Baseline | Final | Reduction |
 | --- | ---: | ---: | ---: |

@@ -237,12 +237,8 @@ function verifyTechnicalExport({
 
   const baseUrls = getProductionBaseUrls(env);
   const redirectProjection = buildRedirects(ROOT, env);
-  const returns = Object.assign(
-    {},
-    ...['stage-returns.json', 'troubleshooting-returns.json']
-      .map((fileName) => path.join(rootDir, 'src/content/tech-center', fileName))
-      .filter((filePath) => fs.existsSync(filePath))
-      .map((filePath) => JSON.parse(fs.readFileSync(filePath, 'utf8')))
+  const returns = JSON.parse(
+    fs.readFileSync(path.join(rootDir, 'src/content/tech-center/stage-returns.json'), 'utf8')
   );
   const verifyPage = (identity) => {
     const route = variant === 'preview' ? identity.sourcePath : identity.canonicalPath;

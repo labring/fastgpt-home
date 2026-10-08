@@ -61,7 +61,9 @@ export default function TechArticlePage({
   navCta,
   footer,
   relatedArticles,
-  cta
+  cta,
+  showBreadcrumbs = true,
+  showMeta = true
 }: {
   article: TechArticle;
   locale: string;
@@ -70,6 +72,8 @@ export default function TechArticlePage({
   footer: HomeFooter;
   relatedArticles: TechEntry[];
   cta: ContentSidebarCtaCopy;
+  showBreadcrumbs?: boolean;
+  showMeta?: boolean;
 }) {
   const copy = locale === 'zh' ? ARTICLE_COPY.zh : ARTICLE_COPY.en;
   const homeHref = getDefaultLocalePath(locale);
@@ -93,21 +97,25 @@ export default function TechArticlePage({
       />
       <main className={styles.page}>
         <div className={styles.container}>
-          <nav className={styles.breadcrumbs} aria-label={copy.breadcrumbs}>
-            <Link href={homeHref}>FastGPT</Link>
-            <span aria-hidden="true">/</span>
-            <Link href={hubHref}>{copy.hubName}</Link>
-            <span aria-hidden="true">/</span>
-            <span aria-current="page">{article.title}</span>
-          </nav>
+          {showBreadcrumbs && (
+            <nav className={styles.breadcrumbs} aria-label={copy.breadcrumbs}>
+              <Link href={homeHref}>FastGPT</Link>
+              <span aria-hidden="true">/</span>
+              <Link href={hubHref}>{copy.hubName}</Link>
+              <span aria-hidden="true">/</span>
+              <span aria-current="page">{article.title}</span>
+            </nav>
+          )}
 
           <header className={styles.header}>
-            <div className={styles.meta}>
-              <span className={styles.badge}>{categoryLabel}</span>
-              <span className={`${styles.badge} ${styles.sourceBadge}`}>{sourceLabel}</span>
-              <span>{copy.readMinutes(article.minutes)}</span>
-              {article.pageType !== article.sourceType && <span>{pageTypeLabel}</span>}
-            </div>
+            {showMeta && (
+              <div className={styles.meta}>
+                <span className={styles.badge}>{categoryLabel}</span>
+                <span className={`${styles.badge} ${styles.sourceBadge}`}>{sourceLabel}</span>
+                <span>{copy.readMinutes(article.minutes)}</span>
+                {article.pageType !== article.sourceType && <span>{pageTypeLabel}</span>}
+              </div>
+            )}
             <h1>{article.title}</h1>
             <p className={styles.summary}>{article.seoDescription}</p>
             {article.dateModified && (

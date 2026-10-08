@@ -59,6 +59,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   if (currentSiteVariant === 'cn') {
     addEntry(getOwnedLocaleUrl('zh', '/videos'));
+    addEntry(getOwnedLocaleUrl('zh', '/wiki'), new Date('2026-09-21'));
   }
 
   for (const locale of contactPublishedLocaleCodes.filter((locale) =>

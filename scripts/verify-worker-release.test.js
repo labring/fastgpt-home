@@ -5,6 +5,12 @@ const path = require('node:path');
 const test = require('node:test');
 const { load } = require('js-yaml');
 const { inspectWorkerAssets, verifyWorkerArtifact } = require('./lib/worker-publication');
+const {
+  getAvailablePort,
+  startWrangler,
+  waitForWrangler,
+  stopWrangler
+} = require('./verify-worker-release');
 
 function createWorkerArtifact({ assetsIgnore = '/_worker.js\n', legacyRedirects = false } = {}) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'fastgpt-worker-artifact-'));
@@ -188,4 +194,56 @@ test('Worker release uses its dedicated environment credential', () => {
     assert.equal(step.env.CLOUDFLARE_ACCOUNT_ID, '${{ vars.CLOUDFLARE_ACCOUNT_ID }}');
   }
   assert.doesNotMatch(workflowSource, /secrets\.CLOUDFLARE_API_TOKEN/);
+});
+
+test('Wrangler serves HTML and TXT as Static Assets without attaching them as Worker modules', async () => {
+  const fixture = createWorkerArtifact();
+  let child;
+  try {
+    fs.mkdirSync(path.join(fixture.outDir, 'faq'));
+    fs.writeFileSync(path.join(fixture.outDir, 'faq/example.html'), '<h1>FAQ fixture</h1>');
+    fs.writeFileSync(path.join(fixture.outDir, 'faq/example.txt'), 'FAQ text fixture');
+    fs.writeFileSync(
+      path.join(fixture.outDir, '_worker.js'),
+      `export default {
+        async fetch(request, env) {
+          const asset = await env.ASSETS.fetch(request);
+          const response = new Response(asset.body, asset);
+          response.headers.set('x-worker-fixture', 'executed');
+          return response;
+        }
+      };`
+    );
+    const port = await getAvailablePort();
+    const runtime = startWrangler(port, path.join(fixture.root, 'state'), fixture.root);
+    child = runtime.child;
+    await waitForWrangler(port, child, runtime.getOutput);
+    for (const [route, body, type] of [
+      ['/', 'index.html', /text\/html/],
+      ['/faq/example', '<h1>FAQ fixture</h1>', /text\/html/],
+      ['/faq/example.txt', 'FAQ text fixture', /text\/plain/]
+    ]) {
+      const response = await fetch(`http://127.0.0.1:${port}${route}`, {
+        redirect: 'manual',
+        signal: AbortSignal.timeout(5_000)
+      });
+      assert.equal(response.status, 200, route);
+      assert.equal(response.headers.get('x-worker-fixture'), 'executed', route);
+      assert.match(response.headers.get('content-type'), type, route);
+      assert.equal(await response.text(), body, route);
+    }
+    for (const route of ['/missing', '/_worker.js']) {
+      const response = await fetch(`http://127.0.0.1:${port}${route}`, {
+        redirect: 'manual',
+        signal: AbortSignal.timeout(5_000)
+      });
+      assert.equal(response.status, 404, route);
+      assert.equal(await response.text(), '404.html', route);
+    }
+    // With --no-bundle, Wrangler recursively reads these same assets as Text modules.
+    assert.doesNotMatch(runtime.getOutput(), /Attaching additional modules:/);
+  } finally {
+    if (child) await stopWrangler(child);
+    fs.rmSync(fixture.root, { recursive: true, force: true });
+  }
 });

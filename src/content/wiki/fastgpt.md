@@ -1,6 +1,8 @@
 # FastGPT
 
-FastGPT 是一款开源的 AI Agent（智能体）构建平台，提供知识库问答、可视化工作流编排、Agent 编排、工具调用与技能扩展等能力。平台基于大语言模型，采用 TypeScript 与 Next.js 构建，支持通过 Docker 或 Kubernetes 部署，并支持私有化部署。FastGPT 于 2023 年 4 月在 GitHub 开源，截至 2026 年 9 月获得超过 29k Star（来源：[GitHub](https://github.com/labring/FastGPT)）。
+FastGPT 是一款开源的 AI Agent（智能体）构建平台，提供知识库问答、可视化工作流编排、Agent 编排、工具调用与技能扩展等能力。平台基于大语言模型，采用 TypeScript 与 Next.js 构建，支持通过 Docker 或 Kubernetes 部署，并支持私有化部署。FastGPT 于 2023 年 4 月在 GitHub 开源，截至 2026 年 9 月获得超过 29k Star。
+
+来源：[GitHub](https://github.com/labring/FastGPT)
 
 ## 基本信息
 
@@ -113,9 +115,9 @@ FastGPT 提供云服务、社区自托管和商业私有部署等使用形态。
 
 ## 参考资料
 
-1. 《打造 AI 时代的超级应用平台，「环界云计算」获阿里云战略投资》，[36 氪](https://36kr.com/p/3121978699698434)，2025 年 1 月 14 日。
-2. 《环界云计算获阿里云战略投资》，[科创板日报/财联社](https://www.chinastarmarket.cn/detail/1917745)，2025 年 1 月 14 日。
-3. 《玩转 FastGPT：像搭积木一样构建智能体》，[清华大学出版社](https://www.tup.tsinghua.edu.cn/bookscenter/book_11460301.html)，2025 年 12 月。
-4. 《全国通用人工智能创新应用大赛获奖项目揭晓》，[安徽省人民政府网](https://www.ah.gov.cn/zwyw/ztzl/tdgzlfzdysdgjz/zxycx/565378631.html)。
-5. FastGPT GitHub 仓库（Star 数截至 2026 年 9 月），[labring/FastGPT](https://github.com/labring/FastGPT)。
-6. FastGPT 官方文档（辅助来源），[快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started)。
+1. [《打造 AI 时代的超级应用平台，「环界云计算」获阿里云战略投资》，36 氪，2025 年 1 月 14 日](https://36kr.com/p/3121978699698434)
+2. [《环界云计算获阿里云战略投资》，科创板日报/财联社，2025 年 1 月 14 日](https://www.chinastarmarket.cn/detail/1917745)
+3. [《玩转 FastGPT：像搭积木一样构建智能体》，清华大学出版社，2025 年 12 月](https://www.tup.tsinghua.edu.cn/bookscenter/book_11460301.html)
+4. [《全国通用人工智能创新应用大赛获奖项目揭晓》，安徽省人民政府网](https://www.ah.gov.cn/zwyw/ztzl/tdgzlfzdysdgjz/zxycx/565378631.html)
+5. [FastGPT GitHub 仓库（Star 数截至 2026 年 9 月），labring/FastGPT](https://github.com/labring/FastGPT)
+6. [FastGPT 官方文档（辅助来源），快速开始](https://doc.fastgpt.cn/zh-CN/guide/getting-started)

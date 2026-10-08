@@ -60,16 +60,16 @@ function getAvailablePort() {
   });
 }
 
-function startWrangler(port, persistDir) {
+function startWrangler(port, persistDir, root = ROOT) {
+  // Match deploy bundling: --no-bundle recursively loads out/ HTML and TXT as modules.
   const child = spawn(
     process.execPath,
     [
       WRANGLER_BIN,
       'dev',
-      '--no-bundle',
       '--local',
       '--config',
-      CONFIG_PATH,
+      path.join(root, 'wrangler.json'),
       '--ip',
       '127.0.0.1',
       '--port',
@@ -81,7 +81,7 @@ function startWrangler(port, persistDir) {
       persistDir
     ],
     {
-      cwd: ROOT,
+      cwd: root,
       env: { ...process.env, CI: '1' },
       stdio: ['ignore', 'pipe', 'pipe']
     }
@@ -383,3 +383,5 @@ if (require.main === module) {
     process.exitCode = 1;
   });
 }
+
+module.exports = { getAvailablePort, startWrangler, waitForWrangler, stopWrangler };

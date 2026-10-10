@@ -15,7 +15,7 @@
       "keywords": "Document AI, AI Automation, Enterprise AI, AI Workflow, AI Platform",
       "authoredDigests": {
         "Question": "37a38c6b701a9667da25bf3f91860480e3db1e27c663f300efbb83e9b87a6422",
-        "Answers": "54ce467527bde47f44771d9c907699261a25498160876b8c57d94c32f5719d3a",
+        "Answers": "d4e3fad7bbf033a35adc63bd3c3816e5bc7f29479a62bc25281661d11fece5a8",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -67,7 +67,7 @@
       "keywords": "FastGPT, Task Automation AI, Smart Assistant, AI Knowledge Management, AI Workflow",
       "authoredDigests": {
         "Question": "6321668ed26a1f082d1157adc5011327848c201b03180fc4da6ef1693687cf40",
-        "Answers": "ac0dbd1234aac16a9e754facb447ed8639f01e891c67d805399547cb6fcf878f",
+        "Answers": "3594d10813096d5b2f21b447f86fc706f127f3331d5d4e6c6a8ca0a4fc7ed96e",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -353,7 +353,7 @@
       "keywords": "Enterprise AI, API Integration, AI Knowledge Management, GPT Integration, Vector Search",
       "authoredDigests": {
         "Question": "70b9d9d0c08b90fae496ae76b660a2825de757f360db2ab8d4b5261f05fc65b9",
-        "Answers": "b58b72b02ba8742481d06bd51daca99985bfa4261585960bdf6818455af1474b",
+        "Answers": "7970bae9cbe2802929d6e366b8534d5c55c70c55a536c12da4b070e6e0c405bf",
         "Category": "f9ce8e73f9651bfa7128df8b13b3f459e4edf284ceefb90a8fc3488619ffc3d8"
       }
     },
@@ -418,7 +418,7 @@
       "keywords": "AI Workflow, FastGPT, Task Automation AI, Open Source AI, LLM Development",
       "authoredDigests": {
         "Question": "2e256cf24a01c9ca3c064b83a2bc9fd028ee76bf2ada9c6c842e2a09fdc195ce",
-        "Answers": "850410a93332dd44f3919eba7822613b45d0f4ee6d3984746d160421901d1d58",
+        "Answers": "87815b25670afba82b9861a9603611215ca7657d3b5608330074aeec55d218a9",
         "Category": "f9ce8e73f9651bfa7128df8b13b3f459e4edf284ceefb90a8fc3488619ffc3d8"
       }
     },
@@ -730,7 +730,7 @@
       "keywords": "FastGPT, LLM Development, AI Workflow, AI Platform, Task Automation AI",
       "authoredDigests": {
         "Question": "32ef61f09a1d3a14b821e7cf37f294aa95fd43e774e105fe168832415fc98932",
-        "Answers": "dd207dfd5baeaf988a4342714e0acee3e4ca0e62db83b87d7c623114274b2b21",
+        "Answers": "0d274c38d7fd061a737fb1a5139063d7e7e04f3007b28a62a9165c7a7b32d328",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -742,8 +742,8 @@
       "description": "Discover how AI uses natural language processing to summarize industry best practices by analyzing vast amounts of unstructured industry data",
       "keywords": "LLM Development, AI Knowledge Management, GPT Integration, AI Chatbot, Vector Search",
       "authoredDigests": {
-        "Question": "9f33aede086b6222aa8907a5436d8798b5f198469fd83b50e9e71ac2a01c7bbf",
-        "Answers": "f913c8c1620833e6076f9f79752a9289de56cf855ef975909fff008e4d79fe9d",
+        "Question": "2314401d4e4e380301a390019520ffda42002a0e377227a98cbe0c46d7d26479",
+        "Answers": "c9e104bcc599aa724f8a639ffd574e91bb049c39a5fa83ea5de28aa8d7ec443d",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -795,7 +795,7 @@
       "keywords": "AI Platform, Task Automation AI, API Integration, Intelligent Q&A, Smart Assistant",
       "authoredDigests": {
         "Question": "6002998c78d233e9a64c696f7ebe0a4dcd0c25910d7dbe741f4891e527d7726f",
-        "Answers": "8e837c2eaf97d7ec659ea983725f49b6fe8f85be6261ed508e1936a774849771",
+        "Answers": "e605c7e21f2fdd33144d60e6e5ed46a0b42f91a915c72381e6fef48b852b76e2",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -808,7 +808,7 @@
       "keywords": "AI Workflow, Smart Assistant, Open Source AI, AI Chatbot, Task Automation AI",
       "authoredDigests": {
         "Question": "b986aa595eb6e15c646048557695b7c90ed22f1f5322cb0d1778fd9dbeb8dcf1",
-        "Answers": "9544f49aa3da7f45d0b1b805f738a1123cbd063c2bc4930b84ea318a2f1159bc",
+        "Answers": "ee935f53fff8df04690494712f1a55c48a58aa5399adb63286ad4309d41dd765",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -951,7 +951,7 @@
       "keywords": "AI Platform, FastGPT, API Integration, Vector Search, AI Automation",
       "authoredDigests": {
         "Question": "64525f67a08ac477c729fd4c4875932ac1d354486eec047e695422af583f1433",
-        "Answers": "be6d8536971897c7ee392922e0fd82f7f24b71c3d30b9d6029c10a782156b5e5",
+        "Answers": "0d16c433cb6a877da4015cbd6a2b0105fbb5714fc2086cc85dd23a6ff24f40b8",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -1055,7 +1055,7 @@
       "keywords": "Document AI, Intelligent Q&A, AI Knowledge Management, GPT Integration, LLM Development",
       "authoredDigests": {
         "Question": "842974d898d1e004aa742f25ddace93be6f50da6ebf634cf407cdcb0d68d8e66",
-        "Answers": "072545996e6bc7de531f96f7777e22bd83c8d892c00f7db7ed205b86311d82f3",
+        "Answers": "51917bece4e1ee3540af1e734623756494ba9a82cc822eece613d7d9a78bed8b",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -1211,7 +1211,7 @@
       "keywords": "AI Knowledge Management, Intelligent Q&A, Smart Assistant, Task Automation AI, API Integration",
       "authoredDigests": {
         "Question": "34bd9f1d41cc989f16a99f1ead862628ee92cd466dfc18177fb4f35fdb1cd3d0",
-        "Answers": "e7fde63136074ed84bb190c9480ba3117e578ddd5ec8bc0e242599e50e17370f",
+        "Answers": "aa72ede104304d071654dca6123f1b9d940bbe6fbc9b7b0815fd91d240a33c62",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -1224,7 +1224,7 @@
       "keywords": "FastGPT, API Integration, Open Source AI, GPT Integration, Document AI",
       "authoredDigests": {
         "Question": "b2a4befebb1b74947fa628828d277d182b9e609631d57089c1cd9eca87194388",
-        "Answers": "c4a9e59ec48fe1ff5ebdc2d2abe6019bca0ffc1af54bd8531a5bacdea0fe63b8",
+        "Answers": "3366274feeab8fe74f68e1687a3b457faa9d0a0935ac5f605909165b5d5139d0",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -1406,7 +1406,7 @@
       "keywords": "Smart Assistant, AI Workflow, AI Chatbot, FastGPT, LLM Development",
       "authoredDigests": {
         "Question": "7120fe39d4980818e8abd1e1be7ac0e86715acaece543831471c076b3fdaf33d",
-        "Answers": "a71a47089b7181563900f075121014c3a3a08d8af8fb3a979222324dac6ae110",
+        "Answers": "32539ad9868648cf1adb82562bad12272e7d48e15a23db47fcae546eac9f9d6f",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -1484,7 +1484,7 @@
       "keywords": "GPT Integration, AI Platform, AI Automation, API Integration, LLM Development",
       "authoredDigests": {
         "Question": "4095b35eebea6271ab5adbf98e862306905932ea1185df35432c7edf490bb283",
-        "Answers": "4508bd917cf4a44d08b6bf2933f06877a5e6abb06e90803ff22f715d35ffabf7",
+        "Answers": "4684151ecf84cf0eee37b0bd1d09ae0ef6b77cb4058fdb54285012f9eaeb5054",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -1549,7 +1549,7 @@
       "keywords": "Document AI, Task Automation AI, Open Source AI, AI Chatbot, Intelligent Q&A",
       "authoredDigests": {
         "Question": "37cf5b7a2c503855b2e42d7c6438de8313c7072dabe12b7522e09467829abe3f",
-        "Answers": "b0824887e3f82fcba50578cd36b4424861f6c45cb024343c0ed6446a77729d36",
+        "Answers": "8f02c11ee931a53a1914e11ed21885ef8cad1365b62a8928b81783540f0fa876",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -1614,7 +1614,7 @@
       "keywords": "Task Automation AI, AI Chatbot, AI Automation, API Integration, Open Source AI",
       "authoredDigests": {
         "Question": "289e67cee32fd78f6bc6e1e0c91460f719108fc7b16f31c19be657a12aa776df",
-        "Answers": "27776c6897ad54492cb48739af39133a26b269ac1df6575fbd0dc3bbb8cf4568",
+        "Answers": "ef733ad8c6b50f8e7c0ad95bfcdbbe5f3951f74655b2c777ca846144a4d9c177",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -1796,7 +1796,7 @@
       "keywords": "API Integration, Smart Assistant, LLM Development, Vector Search, GPT Integration",
       "authoredDigests": {
         "Question": "b114b9e82e65d1ead216707b708ad3a8ebe21a00451b4049c6e5a4cd2b346eef",
-        "Answers": "bf3d1e8fbe7172c8dfd1a28b81caaac7b9200151eaf651824dfd39caa5ca4f42",
+        "Answers": "ec7a3db862f410ef20f8bf621c1aa6f25a7a75b1abb740b7e5edd5e23757ca11",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -1809,7 +1809,7 @@
       "keywords": "LLM Development, Document AI, Smart Assistant, Open Source AI, AI Chatbot",
       "authoredDigests": {
         "Question": "2913c718a1442dcc9fdf1027fcd72189c4a80ba4a07a5168f639c3f7c9298063",
-        "Answers": "50708f6ac7be9c9f143a8390400b5e860e45d27c6dba5af176d5924a1aee31ca",
+        "Answers": "24de4a09dec57ac7f660eaac1bc5f8575d9c4bbed710892754b85e3e7fc9896c",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -1913,7 +1913,7 @@
       "keywords": "AI Chatbot, Intelligent Q&A, AI Workflow, GPT Integration, FastGPT",
       "authoredDigests": {
         "Question": "b1c9737bc438429f3242c0c81b217cff8f50fa3f3ab401d3bacdb9888c5d24c9",
-        "Answers": "b6a167ae915fb671088bdda4d8b9440bc3baeedf2edc4043c0d828853c3dc280",
+        "Answers": "8e0c836d1263b2185edb6d230bb5a57959a3536d533d977990b6726caf5200a6",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -1965,7 +1965,7 @@
       "keywords": "API Integration, AI Workflow, Enterprise AI, Task Automation AI, FastGPT",
       "authoredDigests": {
         "Question": "bae0f6e6b6ca8d40bec60548666dd6c8070510b2e29d8211da092fcfcdb84c4f",
-        "Answers": "90191e121bffb00f9eecd7628f3f906ae960d1a29fb950427932bbfeb035ab64",
+        "Answers": "0ef8cc7918139f46aa5ef8ae45d8e91591b4e26c1409a5cb4f6e61ac178441c8",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -2030,7 +2030,7 @@
       "keywords": "Vector Search, GPT Integration, AI Knowledge Management, Smart Assistant, Document AI",
       "authoredDigests": {
         "Question": "18fdafa546ae05252000c5f911706e5967d5fc908afdaec777e3b67bccdafe5f",
-        "Answers": "6228e8e5129708513d35093685c4ba83393e895ef914794c5c8ede94ac5dbbe2",
+        "Answers": "413c939dff471d26087dc7e7cab4497d08c54eb44afba7d4235d5e60bf1ee091",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -2043,7 +2043,7 @@
       "keywords": "AI Platform, Vector Search, AI Knowledge Management, Intelligent Q&A, GPT Integration",
       "authoredDigests": {
         "Question": "6518b6644898663ea9cb43246277ec947af22aef6f9cee88295b6dfa354ab801",
-        "Answers": "ac7c911c84c45aab81f9a11ef12f7dd1a0dd2067b670697cb701d79ada453108",
+        "Answers": "6d948414b241a5bac58a150b634da62a2051489db7e9a5f211d4c86e52a62bbc",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -2068,8 +2068,8 @@
       "description": "Discover how AI can organize industry best practices, plus key factors impacting effectiveness like quality data and advanced NLP and ML tools.",
       "keywords": "Enterprise AI, AI Platform, Vector Search, FastGPT, Intelligent Q&A",
       "authoredDigests": {
-        "Question": "1339af699cf29d6b5b64ba44aca5554eb3e1f36870767f394ff678041de7e8f5",
-        "Answers": "c26acba539e1eb4adca2ae750b6f2afece400410cdee114cc99313e139fe2745",
+        "Question": "f3f366fbc25e536314b33a9d939a3997d1f7edbb62d0c3857944833b74f601c0",
+        "Answers": "2745779c790d9712ab5c4b6e345107dd42a4cc27a8bce07bd73af702efe47ced",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -2095,7 +2095,7 @@
       "keywords": "Document AI, AI Knowledge Management, LLM Development, AI Chatbot, AI Workflow",
       "authoredDigests": {
         "Question": "47a5f5648bf9bb290463d98cf53806b1f6cc75a24cbfc24ae4b5887773395a17",
-        "Answers": "ad0857a6b646ec37cbe24f03254c794755a1fdad2df6c43c573912e0490f9ded",
+        "Answers": "0dd46c9828b30bb617d91991c341cf58b75d91f2911fcbb990e5f7d125078ebc",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -2108,7 +2108,7 @@
       "keywords": "Intelligent Q&A, LLM Development, AI Chatbot, AI Knowledge Management, Enterprise AI",
       "authoredDigests": {
         "Question": "486c5b2fe5843231b45573df6b8e7a2c18ca8f833c4f762ee8bd6b15a06fde8b",
-        "Answers": "62a567ba8cbb3d0a728c14fc33db3fe39ef2d157bcccd8080318efb10a19a210",
+        "Answers": "58b71619c32ffe8bf31a687391c76189ff267acfbef6a4e0a06dc2b3005bd6e7",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -2290,7 +2290,7 @@
       "keywords": "Smart Assistant, Open Source AI, Vector Search, LLM Development, API Integration",
       "authoredDigests": {
         "Question": "7d62dd57c149d487580add1ae3022aadd30d11f146679d7b68d5e0ab01732127",
-        "Answers": "132aefba9b2bd17bbd8d975f0edd572dea6e518156844dad1140d18220f7ef70",
+        "Answers": "b6541f0a86360e6a0cfa39b1b032a5d59d8231c85f75dc6aa2959e771c6c003d",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -2302,8 +2302,8 @@
       "description": "Learn how AI uses NLP and ML models to deliver real-time, contextually appropriate agent responses based on customer intent and historical interaction",
       "keywords": "Smart Assistant, FastGPT, API Integration, AI Platform, AI Automation",
       "authoredDigests": {
-        "Question": "c88f2d459f8b0166aaa32b1b45589edd25575257b810af26215dde2452fcf336",
-        "Answers": "b71a19017e4cdd5de102f4193ce7b169e2ca20c97b169efa43ff6bfbd3f9c14d",
+        "Question": "2ffc4bd71b2e695c8a6e9f983a18929cc46d91a7a5fa74a6475e08027cbb4b7f",
+        "Answers": "6dca421cfc89d7a7137fb09b3f66ce5f624c18bcd226a88edc801a51d2f23af6",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -2368,7 +2368,7 @@
       "keywords": "Open Source AI, API Integration, AI Chatbot, LLM Development, AI Workflow",
       "authoredDigests": {
         "Question": "cb59d8799495e1ae06973bac647715ce02e08eb0a30fd342a79a67109662e1b1",
-        "Answers": "b8c47e0eac5bdaf7ead7575c8d304aa281238ff9d6ae95058b7e7b18d9afc534",
+        "Answers": "a47c11f0394b825b519b217a958cb018ccafa02a1311eda6826a947c4727ee44",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -2498,7 +2498,7 @@
       "keywords": "AI Platform, LLM Development, Intelligent Q&A, GPT Integration, Task Automation AI",
       "authoredDigests": {
         "Question": "37a4ec90a519ef1e5b2b33318da13e921492eb0f7ccdddd2ab6623aeceba9b97",
-        "Answers": "238bbafba368e487f17a495fada194cc6f7c5c80fcad42bfebd71a5e173a09c8",
+        "Answers": "04c28ef4df625d492e8382904597c7c5c87195f091647a3226275b8cfc816f77",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -2602,7 +2602,7 @@
       "keywords": "GPT Integration, Open Source AI, FastGPT, LLM Development, Smart Assistant",
       "authoredDigests": {
         "Question": "fbd3d64a148090ad54319d65858dbcd509ff07083ab6e15c898665122a3b384f",
-        "Answers": "090a119fc045d3eacf7338616be2d2f4e537ec986bea609a548f85e19879b696",
+        "Answers": "435130f0f1835306a0b16590fdf4fc8ad99504596514716f91b79fda7be2263a",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -2940,7 +2940,7 @@
       "keywords": "Enterprise AI, Task Automation AI, Open Source AI, AI Automation, AI Knowledge Management",
       "authoredDigests": {
         "Question": "1aafe54a571dd0b2cacbb19ec36a4a997fa7e32a7f1b3160101998fa8f9b577b",
-        "Answers": "3ed33731511ecc6692de9091ea4dfd5f9be3640c171a8876054917aa0ca0aaa4",
+        "Answers": "064c5c26aeb22b5d06333f8e323d04e1d4674154cd2c06b3d0c574f4e1cebc6f",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3005,7 +3005,7 @@
       "keywords": "AI Platform, GPT Integration, Task Automation AI, AI Workflow, Intelligent Q&A",
       "authoredDigests": {
         "Question": "d1f80448a73381afd32d36fa77f5ed5aebf9c8714430fb56f2d42a30d2da2bf6",
-        "Answers": "3e8a7c9f3bb7a7fdd9b7118abeabfce007400dce34c5a0e805ae5438a53e0018",
+        "Answers": "8a744a3b61ce9c1c0cc7a3e67bce959be166cf6d71d91eaa1300148fd4781901",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -3122,7 +3122,7 @@
       "keywords": "Vector Search, AI Automation, AI Workflow, Open Source AI, FastGPT",
       "authoredDigests": {
         "Question": "54dceae71ba20318cff83131e338d42bafce172789c9a2f1aff1f0c7bb6d4eda",
-        "Answers": "1a64e5a95a361f1fbf418ad0190b7486d3778775a98168d565d41625c7d126ae",
+        "Answers": "bb2a99679c34289ea981320de4e0e6600ecc79d9968bbbef374a1860865c3e59",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -3161,7 +3161,7 @@
       "keywords": "Intelligent Q&A, AI Workflow, Enterprise AI, Task Automation AI, API Integration",
       "authoredDigests": {
         "Question": "8d09a500cc9456968c3d9cf557e78ad8e0d16ab852a4b32dc6719da4f0644169",
-        "Answers": "194d3e90612712300b76204db01042f1660ead72fa23190cbdf434f88649addb",
+        "Answers": "144133da60a5db1a256dac06eae1c7be12857b6b295004e36f1370d722de1d56",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3187,7 +3187,7 @@
       "keywords": "Open Source AI, AI Automation, AI Workflow, Smart Assistant, Vector Search",
       "authoredDigests": {
         "Question": "eda2e2e2b681927be3d08fe1892d73c98de541b0767aa2fda656b90260cf2dc7",
-        "Answers": "18eb0cf41ae06e2b88e9df6197250ecf7a7dbb7a0ab1098fa3c54bf8cc1a9627",
+        "Answers": "4bf25a68333d179908367d49e83d3fd6d2242da5e8b60dbb1a45f7f7731cd356",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3252,7 +3252,7 @@
       "keywords": "AI Workflow, API Integration, Task Automation AI, Intelligent Q&A, Enterprise AI",
       "authoredDigests": {
         "Question": "14b6cd85569f769b25c20969bb6cc420b0eb9be9f0903da2fa11ecaa0c504c49",
-        "Answers": "7cb072b49a51a8a842d65ea6ec7a75145aa348a8d2ad403b647f2d0464d0c72c",
+        "Answers": "2ac196fcbd4eaf323ffe2609d0dd51e607133865dc7b915dd27f857584a8f397",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3265,7 +3265,7 @@
       "keywords": "Document AI, AI Workflow, GPT Integration, Intelligent Q&A, FastGPT",
       "authoredDigests": {
         "Question": "245075555d927a86258d1853a61d2f05b609c148246803a6cf8a9c71a7239be8",
-        "Answers": "371696568e825d121319931f33d1b96b779966e32a42cd02dbc4b1ec1a7db95e",
+        "Answers": "ee2bb782c65b524a05c7430c3185be201c6230fa75efb581c18feff37b80f0d5",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3330,7 +3330,7 @@
       "keywords": "Vector Search, AI Knowledge Management, FastGPT, AI Platform, LLM Development",
       "authoredDigests": {
         "Question": "ccbca0a795d81c34d70ef347f08f69e105e9f3154fa87e0f87d6475d3f39b01b",
-        "Answers": "6fcc575508d3fe461934f633a0036badd9dbf6b475f1854c56534a695694eb39",
+        "Answers": "ef8ba745bdb05240e6ab633225b9e2b6ec3274a0e88ffac5bb140fedc788f62d",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3369,7 +3369,7 @@
       "keywords": "API Integration, Intelligent Q&A, Smart Assistant, Vector Search, AI Automation",
       "authoredDigests": {
         "Question": "88be713d2c64d0580675f0d1d8d188dbf3c24f7bf1d92c71840a385d802515ab",
-        "Answers": "0a6e5322bac5e16feb9ccbf2d41b28e08ea65420960ecdd361f0e4ebde7436d7",
+        "Answers": "5ec3eb9b7ae2f3811404e9963d3616965200af91b89df9f6d498bc740791d896",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -3421,7 +3421,7 @@
       "keywords": "AI Platform, Vector Search, Smart Assistant, Open Source AI, API Integration",
       "authoredDigests": {
         "Question": "8fab84ae41d746bc1099e4a416ec6d6c6580bc594021f40c3aa15ac1c33c288b",
-        "Answers": "0e954dbdb2949472e5f97da7970fd35de6313a12292142e6702a3be6798c69a4",
+        "Answers": "66e27e86fe2515a60d1cebbcd1c1ef90ccc90fad2a5245d33398054c90e36024",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -3447,7 +3447,7 @@
       "keywords": "AI Knowledge Management, Enterprise AI, GPT Integration, Vector Search, Open Source AI",
       "authoredDigests": {
         "Question": "8b2af852ff76fabae1fdcfaf564123dce7ee4c8bfa03b7ec2ad8b48c874b6b6d",
-        "Answers": "bf0ea441a49799cdac5acd2cc90c2d261e766b2fd640fc76d1a61ae0c88acd1d",
+        "Answers": "e85d3c161ff7c0e5cbfdc2514d63bcbdd8144f03d7bd81f9410d0e90a0bac9fe",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -3455,12 +3455,12 @@
       "contentId": "can-ai-help-create-a",
       "sourceSlug": "can-ai-help-create-a",
       "workbookRow": 489,
-      "title": "AI creates and manages optimal knowledge update",
-      "description": "Learn how AI automates identifying outdated knowledge, analyzes usage and feedback data to recommend optimal update schedules and manage knowledge",
+      "title": "AI-Assisted Knowledge Update Scheduling",
+      "description": "AI can use content changes, usage patterns, and feedback to help identify outdated knowledge and suggest review schedules.",
       "keywords": "Enterprise AI, AI Workflow, Document AI, Vector Search, AI Platform",
       "authoredDigests": {
         "Question": "0d92ea5bc419e4c73552492ec2fda43e69d17c9be12ae087ebc6780a04ae85cb",
-        "Answers": "764e8b0ff5533a704e3e6c6e243b04ded49d85a1e4160b5f2d8ffdc5752dd3aa",
+        "Answers": "1a68028dc503e8a04ea91acee5ee0d4a1bedacd710dabea77e8ecf0ae4c88de8",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -3486,7 +3486,7 @@
       "keywords": "Intelligent Q&A, LLM Development, FastGPT, Smart Assistant, API Integration",
       "authoredDigests": {
         "Question": "7b1d97476ac116363753f017138fb6b1b652fce139d3a21be5807e1e2ff73148",
-        "Answers": "fa9df6094fd398e12f5d595b3d78af65e68c28b8066d5db54b28e1f3ec2d03e3",
+        "Answers": "0ccb93d6bc7f4b6eb0ee307ba5c15f9f59957b41cfea41d5d1428851098476d1",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -3512,7 +3512,7 @@
       "keywords": "Smart Assistant, LLM Development, AI Knowledge Management, AI Platform, AI Chatbot",
       "authoredDigests": {
         "Question": "9f93af8b631ae464e777ffeb664b3423276f42c06698e3578f5361bd804125dd",
-        "Answers": "fdfe88d09ea564ddd949122516647bdc2a4d6d0e505ee15db58cbb5bd769c609",
+        "Answers": "ceaa25f12f36b8f461e6da7d20516bbf353d5457e51479e05279b6a244768fc0",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -3655,7 +3655,7 @@
       "keywords": "AI Platform, Intelligent Q&A, AI Chatbot, AI Knowledge Management, AI Workflow",
       "authoredDigests": {
         "Question": "c2a780a033d9c01c12a80aa2969c73854f2a06b900b511a2eeba4bd8a9855e12",
-        "Answers": "2f22bbc256d586b14a685b4f76467329a8af7be146c1d359ca6d256170480db3",
+        "Answers": "204ae86da7886cd36fc32dd5c3b2e5d64b8a7f76ce19a08d70c0c6af2a7fa3dd",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -3811,7 +3811,7 @@
       "keywords": "AI Workflow, AI Automation, AI Chatbot, Intelligent Q&A, AI Knowledge Management",
       "authoredDigests": {
         "Question": "a5f9983069e30fef0a73826e1c318ab798a75ec2c5de398816e55a18d4ec6267",
-        "Answers": "75069177c3f30953564d54055ee99d3f871e64845c85385bbfc0edc24c1f90df",
+        "Answers": "dd16264ea2e2a8de63fae144e5e97737c8ff508ce6bf1910a274d51659dc3e62",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -3837,7 +3837,7 @@
       "keywords": "Open Source AI, AI Chatbot, AI Workflow, Vector Search, Intelligent Q&A",
       "authoredDigests": {
         "Question": "3c4a67edac58711b199a1c1d6de0fd1118f503d5f86a95a2cfeb8fc109febecc",
-        "Answers": "a1f456da50df9a6201fbf2f5a22aa4ce62c1d7c37963e4967feb02654b10f3c3",
+        "Answers": "146760d45e6d0b9e44bce17c75a34feef58c60b4fe68fed1784d07ac71ebbd5b",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -4266,7 +4266,7 @@
       "keywords": "AI Platform, Enterprise AI, FastGPT, API Integration, Open Source AI",
       "authoredDigests": {
         "Question": "786008fbfb28c4e3a26f62992ccb5633e453445898fc40a3f79df435aeffc316",
-        "Answers": "a66a0d66eb83891e47434e19fe97eae79602398ed07ce9ee74bf57da93ec1881",
+        "Answers": "fa53612884577e30cd1e8dfcc13eb12883eadd771947fd0eb2333f63b4f0c69c",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -4357,7 +4357,7 @@
       "keywords": "GPT Integration, AI Knowledge Management, AI Automation, API Integration, AI Chatbot",
       "authoredDigests": {
         "Question": "e1e66238f83282cc590a4122d01e2ebdc8675adf6560259b2cf75042a9a21f13",
-        "Answers": "46e5b2dadb351beb00a608400ce20ea72019ef3f65262fafa43803df7ba2361c",
+        "Answers": "fb2842ab25835f5970e7bf21f9414e4c598d7f10ab292d5531917c1bc5a27225",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -4422,7 +4422,7 @@
       "keywords": "API Integration, Document AI, AI Workflow, Smart Assistant, GPT Integration",
       "authoredDigests": {
         "Question": "4b86543e444ae51c4608d721457fe998ac4902d1ae2aeaacd7a0c571ec9a6d9f",
-        "Answers": "d9c9c55b24d58b683178f9cb0afc9c4a1d2957b387d292d6ff62ff73522e53bb",
+        "Answers": "bc71c1b6f2001cad1c02b2be157105c5b7b428d715fe94d9a2cbdb4cdae8c44c",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -4474,7 +4474,7 @@
       "keywords": "FastGPT, API Integration, Task Automation AI, AI Chatbot, Enterprise AI",
       "authoredDigests": {
         "Question": "4a17226ab93b36b290f49412b5b5f60cd9dfac1ebb39760a05f304f22a4f9bb6",
-        "Answers": "60ae816843867f8c5d22b8437575761b01f40e5ce74d26f6ba3122476489b0f2",
+        "Answers": "a41eafc46127d82bfc755d79c69b55a253cd9c92f73cfefa9a573a3910304075",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -4500,7 +4500,7 @@
       "keywords": "Smart Assistant, Open Source AI, AI Automation, Document AI, GPT Integration",
       "authoredDigests": {
         "Question": "f4d3e0e3d6499a16c89be78e26a91a359bcfe2951e313070fa13ba78be0564e9",
-        "Answers": "f36655fabdbeb43659372aceaeebf217d420c5f798939563e3b1dec3e5ac57c6",
+        "Answers": "e624893a3a2a8f3a0a6936ea03baf5691bb9744052165672e839872b3c87df88",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -4513,7 +4513,7 @@
       "keywords": "AI Platform, Enterprise AI, Document AI, Smart Assistant, AI Knowledge Management",
       "authoredDigests": {
         "Question": "5df550ad757838297412df684b196c5f05c85b68c353c9f6498469c91a7fa883",
-        "Answers": "4ee9898841e9dd66cb8f36ad6f88e56d56ae70dfb31ab8c2312bf3461e400bc3",
+        "Answers": "de96085965d29a5146e711a53321b597a05eaf748d64dcead490b33d321c4c01",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -4539,7 +4539,7 @@
       "keywords": "LLM Development, Intelligent Q&A, AI Knowledge Management, Document AI, AI Chatbot",
       "authoredDigests": {
         "Question": "f4398fa6e2e6d9c85e04d66c185a939137fbb9e56807e3d980008148ef0d4b55",
-        "Answers": "e6d632cad07e4e29293c6bc2cf254aceb11e80c5b9c62f5ce6b940cdbea0a869",
+        "Answers": "be30a3bf101771807443fae7abb74cc8239c9f690bcee0b951ffd4b624b9e6fb",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -4591,7 +4591,7 @@
       "keywords": "AI Automation, Task Automation AI, LLM Development, Smart Assistant, AI Workflow",
       "authoredDigests": {
         "Question": "6a0abe8ea4e6759a567661fa83bb0b2104dbfb6c19cc3249e7fe85c97b7e0a4c",
-        "Answers": "a19b9838a839f91c205832891295fcc5dc499fa3d367fc07bc5afc2b731e43f6",
+        "Answers": "0f6f2421b4bac58938b0faf09c13b78bfe2fc81e7b9161221b6c70606b30225e",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -4721,7 +4721,7 @@
       "keywords": "Open Source AI, Intelligent Q&A, API Integration, AI Workflow, AI Automation",
       "authoredDigests": {
         "Question": "60b83052ac0c63530a120e635a459e86a2766716f9745e65c51f716ceca0be5c",
-        "Answers": "6bb33bccb81a2d1d908ab6c8ece9d8820795505d8e75cd6279be183963f05133",
+        "Answers": "49f0874e1b005c738ff3da2c178d98f16f7d17fc35c80224f4b3fd6ee1e4285a",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -4747,7 +4747,7 @@
       "keywords": "AI Platform, Open Source AI, AI Automation, Document AI, AI Workflow",
       "authoredDigests": {
         "Question": "f323ff23a07f1390103170846e86580255f19be48d9f58f42b20f372c0ecea34",
-        "Answers": "3b4c18a41d72d155ba527846b91d0e4ee58479cf0760712f0f7a50eaf3a3ec51",
+        "Answers": "25df82d1f93c8a67aef892c1818c7957f427de267f65e36797f5c6b1f09ca327",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -4773,7 +4773,7 @@
       "keywords": "Enterprise AI, Intelligent Q&A, API Integration, AI Knowledge Management, Document AI",
       "authoredDigests": {
         "Question": "3c2640b8dabc511072c7c4c1c9e65d9412360ecf6680d9e088e93fcfa2253cdf",
-        "Answers": "dc919f0a45780ff5e0fbe141952a10c0878fc309689e7721ab8de16a26393a7b",
+        "Answers": "6929615dce487a03baa0180f162a4d9b0b394e2cb078e3a4efcc20a01036e1ad",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -4890,7 +4890,7 @@
       "keywords": "AI Platform, API Integration, LLM Development, AI Workflow, Intelligent Q&A",
       "authoredDigests": {
         "Question": "7273766c4ba1de7b6000d3efebf17c5e5c01fbe8686a51c82b3fb963576cf957",
-        "Answers": "8234926cbe4e27ffddc229860cd83fb555597b1f1dc85a74d25a7e9630e012fa",
+        "Answers": "83978b8488dcf2578cc935d8c0fc9f14d6a40ac9aa2e93eaa7bd9b5684080277",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -4916,7 +4916,7 @@
       "keywords": "Document AI, AI Automation, AI Knowledge Management, Smart Assistant, AI Workflow",
       "authoredDigests": {
         "Question": "6a072d3d6ed9e191c5b326d859d8a71fdfffb1458572cc490148ca36ff185a38",
-        "Answers": "98e91804c07f4eb19b18cdc37bd53fc27edd1f0205ffdfee9b988c43b15e7294",
+        "Answers": "21c0b37b2d8728a89adf3b56d345c4d0b041a5e202d5f1f937c47da6dbe7fefa",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -4954,8 +4954,8 @@
       "description": "Learn how AI analyzes business datasets to deliver tailored best practices aligned with company size, resources and operational complexities.",
       "keywords": "Open Source AI, FastGPT, LLM Development, API Integration, Smart Assistant",
       "authoredDigests": {
-        "Question": "b1d04891fa0dc2d0e031a0dc338ee6fa88d8989ac1d3e5a055252a6aac1e2134",
-        "Answers": "e6c84c849c9940a8c330dd345ca0231322dd4b7209978f2cb189f8191329f50e",
+        "Question": "495c5a2a5646915ddb15fe0cc3d586e449976302e68dfe1983ed28cee6741f75",
+        "Answers": "c95e764422688c9d940d7def6ad1df53dd27a9e48f5a0425420daaf767c907a5",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -4968,7 +4968,7 @@
       "keywords": "Vector Search, API Integration, AI Chatbot, LLM Development, Enterprise AI",
       "authoredDigests": {
         "Question": "5d6399d862fc343a0263f1b9654e1dc48363b1e554d3c204fcbd2ec2989fa510",
-        "Answers": "3fc928992de06d510e8953fffc97d9e8d6ad8ddf57c496295a5bd46973ceb2b8",
+        "Answers": "80f153fa5a285b16669e2f9d211b33154a1634b39adc9c012d16498a133b4d10",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -5124,7 +5124,7 @@
       "keywords": "AI Knowledge Management, GPT Integration, Document AI, Vector Search, FastGPT",
       "authoredDigests": {
         "Question": "c1b2f9d9bc67ec5a6a898c1bbb11dbb21112c437cc95412fe0a8b5ce8e09259c",
-        "Answers": "57c030992838ca6b1a04b2d21daad6a0e7587ed9d55001582ca3e6e2757b02a1",
+        "Answers": "a7a213931358d31cb16c19cefce8b116cfd8294cd5c527560c39e2e3017fde0a",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -5253,8 +5253,8 @@
       "description": "Discover how AI uses trained NLP models and ML algorithms to select contextually appropriate vocabulary by analyzing text structure and semantic meaning.",
       "keywords": "AI Automation, FastGPT, Intelligent Q&A, AI Chatbot, AI Knowledge Management",
       "authoredDigests": {
-        "Question": "1a077751a9432f0d536c65e9d1d9e920888734d516958b556fd35a5dbe75718f",
-        "Answers": "640706e163ae71f825793b7280baa0295d9b4f353e0e68c4ec6bde3650dbb20e",
+        "Question": "11d3fa8f37fd2e9cf63c2f7323140167b64be56b06d1b4d6783c75c4b76f2aae",
+        "Answers": "59e6a76bdcc076cf86c42cc5ef9273f40a608bce981059f60e514e8036bb06c8",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -5267,7 +5267,7 @@
       "keywords": "Open Source AI, API Integration, GPT Integration, AI Chatbot, Smart Assistant",
       "authoredDigests": {
         "Question": "7720413ee8433a75b6edb527b053dd9776cef75a4eef12d2b4c759580636761b",
-        "Answers": "93ff8a26c29b363de6f07b64bef81f32206b1bfd313621f55f21bf5c6a1e1f41",
+        "Answers": "ec952d56217e4cbbbdb63a2810e0c42c27a7774e8715fb92ef58dd7c08cb9bde",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -5306,7 +5306,7 @@
       "keywords": "AI Chatbot, Open Source AI, LLM Development, AI Knowledge Management, Smart Assistant",
       "authoredDigests": {
         "Question": "fab83b932647152e797a9533457f99524abd0630380f54a6b6d9ddf0f90dac09",
-        "Answers": "0abb4344634841a3aa5928d0b8a1ced36be495e982fd64708a7a6c382f707442",
+        "Answers": "11d58ac0239487c80f980fbef4875f8950de8a3b66d9c3d1b4adf3ae41f0fa9c",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -5319,7 +5319,7 @@
       "keywords": "API Integration, LLM Development, Open Source AI, Intelligent Q&A, AI Workflow",
       "authoredDigests": {
         "Question": "4adcedb67870fdf052702e598e7ce9b033afd62db82bcc713688714d1db53cf6",
-        "Answers": "a2a7b2c7b5430da19986de276490585858c864ed71786e75ec6c322d478ebc13",
+        "Answers": "1211be18febd7987373d71a4591e0744bb85bb44c16845895e91f6a4fc461182",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -5462,7 +5462,7 @@
       "keywords": "AI Workflow, Open Source AI, AI Automation, AI Chatbot, Intelligent Q&A",
       "authoredDigests": {
         "Question": "327a4b03df3ee3ca1e44eca2feb3bc54b13b7ef8920755e6f81710168979d763",
-        "Answers": "17b783482aafcaf01dd5993700965d6b6714c0e24b9c9466f7e58f769fbde3d6",
+        "Answers": "85677dcf0fd40c9256d21c686baf01aa0189e6e269cc3d1b931824f48dcdf3b1",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -5475,7 +5475,7 @@
       "keywords": "LLM Development, Vector Search, AI Chatbot, Enterprise AI, AI Automation",
       "authoredDigests": {
         "Question": "9d26510ca5a76cb8ca5a3ff4e84fd7951d19b592bf4862a9f5802d0052f370e7",
-        "Answers": "2e3775bd952b8a8a7295792e05a07b6388b9ffdde1bcbbe5c3bd973f9bd4be06",
+        "Answers": "3a67507028a74cd74a2d669d2f19bffcb83915128497c7d4e228d39de8643b07",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -5501,7 +5501,7 @@
       "keywords": "Enterprise AI, Intelligent Q&A, LLM Development, AI Knowledge Management, Smart Assistant",
       "authoredDigests": {
         "Question": "10b8f0a5b3b29abab9ace8a0a9cd9f662e6eaa2f4fe4b0d0b272f0b8b5c4ec8c",
-        "Answers": "3848c38e5b1e43d542ddb01c99c241f69a184c7adda9b6090511330eed86b506",
+        "Answers": "41c39e2be37b9a81473a41704f6ce15e4fba6842753057a35e359b0e948ce7fa",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -5618,7 +5618,7 @@
       "keywords": "Enterprise AI, AI Workflow, AI Automation, AI Chatbot, Document AI",
       "authoredDigests": {
         "Question": "d1b14d422f1f146703a780e4ced7f1008fa6684662b93d583ecb9bff41ee1e84",
-        "Answers": "789128908d1b2545bcd1fdc86619d55cbff5484718c27510dc7466787dc74d67",
+        "Answers": "8a2972d456f35c533ee69c8fb90487f3d8b67872b7346663d012e8b53ef14448",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -5631,7 +5631,7 @@
       "keywords": "Vector Search, AI Chatbot, Task Automation AI, API Integration, AI Knowledge Management",
       "authoredDigests": {
         "Question": "a8b546a6ac63d8c44b8b263cdb1ca091321d159dd9b4a9d3b2cc8ae303b9f0d7",
-        "Answers": "f713f000bf1b9350becd0726ab8c2b53058b3bf343c48cdacd0cdb9403c7162d",
+        "Answers": "fa96973463b45787d8c2fb8034dfceff2e162ab2e5af288f3e2bac33b5a4646a",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -5657,7 +5657,7 @@
       "keywords": "AI Automation, AI Platform, GPT Integration, LLM Development, AI Workflow",
       "authoredDigests": {
         "Question": "a72014020a85bb0f0d6fc0d470d325500aa7e584877bee4c4f7b94aa389d6ad6",
-        "Answers": "23eef44c6add8d48ce5bec970274a9409d720009ecae064ad75aefcbd7c19621",
+        "Answers": "e7e6fcc668bd9be9ea75316ec7fab4a6c0c6f5e152e738d71b4808d5a343217d",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -5735,7 +5735,7 @@
       "keywords": "Task Automation AI, AI Chatbot, Intelligent Q&A, AI Workflow, FastGPT",
       "authoredDigests": {
         "Question": "7fa212a72fcf592bc8bbeecbcd39b060722cafd0647215c902837a9a25826eed",
-        "Answers": "60e5ff18b76a03bd3b85217a9c6409fe998869723fbb878ae26895f8df68b136",
+        "Answers": "1371d4e5a34979e4e77f44691167f7e7155f1053744142a804410540a8a94b9f",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -5761,7 +5761,7 @@
       "keywords": "AI Workflow, AI Automation, AI Platform, Smart Assistant, Open Source AI",
       "authoredDigests": {
         "Question": "36dd5df48f0990dc40d330d5eefad46c10ab948a299091f502645c25a13aa8d1",
-        "Answers": "9cb08ba7af573d9c1d12dc286a12d26e4f2409f20c5f569ce95904e7893e37e5",
+        "Answers": "4b6f233894f1a724c5af695c1ad1e9e1f0965c8487c8685a8f7c600da9424890",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -5956,7 +5956,7 @@
       "keywords": "GPT Integration, AI Knowledge Management, FastGPT, Task Automation AI, Vector Search",
       "authoredDigests": {
         "Question": "cb7b23f792a73db49fabbe89689e7ee9ea4260d6610f055d196a21d596ace62b",
-        "Answers": "e31a7a7f621648d450bbf37026baaa07256d91223db78de2ad93273d48b4f1cd",
+        "Answers": "9ce42099bae24abb865e1e4a9e889ccb8cc75f7a0cd3b0b210f93ebb342459d2",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -6281,7 +6281,7 @@
       "keywords": "AI Workflow, AI Chatbot, Smart Assistant, AI Automation, LLM Development",
       "authoredDigests": {
         "Question": "67c1b9bf3b9d4f83544ce8f3bedd38b203cfc9c2eae406706b350c45936ebb42",
-        "Answers": "5ca5e1e35c80fd216c228e5fec157c6109d851d02f21fa776221049cef675d39",
+        "Answers": "bdef51fb0032d08b0aedbe798f9aabf1ea3304420cc5b4653f1655c60c4c85fb",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -6359,7 +6359,7 @@
       "keywords": "AI Workflow, LLM Development, FastGPT, AI Automation, Vector Search",
       "authoredDigests": {
         "Question": "4de29aa3530d0f9e8db2bb9c8eac059e4fafb200ca20f7b1853b09770a95264b",
-        "Answers": "3297cfdf5cdc6c134ef0b1e5cfaea6ff414081c2139c6b19e0cc3a89ee5cef7c",
+        "Answers": "8cbfc031cd29447de5a13df59cb599d13c379c1702078eb99df80eed8067099c",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -6368,11 +6368,11 @@
       "sourceSlug": "how-ai-agents-handle-deleted-user-data",
       "workbookRow": 1105,
       "title": "AI Agent Protocols for Handling Deleted User Data",
-      "description": "Discover how AI agents use secure data management protocols to permanently remove deleted user data and support necessary privacy compliance standards.",
+      "description": "AI agents can support data-deletion workflows, with backups, logs, and retention handled according to applicable policies.",
       "keywords": "Intelligent Q&A, AI Platform, AI Automation, AI Knowledge Management, FastGPT",
       "authoredDigests": {
         "Question": "98ff4352a6b1a6ce7cd7513717a5302f8999a22976f2007dab551693e9326c44",
-        "Answers": "c525075947f7a44a58fb3b48f39bcdaec3fefba0604486871a862adebdc02b4c",
+        "Answers": "365a02ab3e8b6a1ff77989dfb0faf29bd944962df1e07cc05cb41ffa006aa04c",
         "Category": "f9ce8e73f9651bfa7128df8b13b3f459e4edf284ceefb90a8fc3488619ffc3d8"
       }
     },
@@ -6459,11 +6459,11 @@
       "sourceSlug": "how-ai-agents-help-enterprises-develop-pricing-strategies",
       "workbookRow": 117,
       "title": "AI Agents Aid Enterprises with Data-Driven Pricing",
-      "description": "Learn how AI agents use advanced algorithms and real-time data analysis to help enterprises set optimal product pricing points for better outcomes.",
+      "description": "AI agents can analyze market, competitor, and customer data to help identify potential price points.",
       "keywords": "FastGPT, LLM Development, GPT Integration, Open Source AI, API Integration",
       "authoredDigests": {
         "Question": "3a01f04f98e791e87890e78f8fadf44028d1a61e8f2fff76e09eadf3785e1cd9",
-        "Answers": "23525fb5141eb760972eedff4f4762d4fb1db8614fd9ad2d68e589bd8b3e2c4f",
+        "Answers": "ed337175d9076e794208be102a41492be1acb86de947a0d2cc28ce79a4092480",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -6554,7 +6554,7 @@
       "keywords": "LLM Development, Vector Search, FastGPT, Enterprise AI, Document AI",
       "authoredDigests": {
         "Question": "7080150bde18207e9963dffa099a0a0574020e1a8dd3f44900f62945426e3273",
-        "Answers": "cb29d959d83a92890d99de69cff74f54dedd60b7d39ea7f74d3b8632a2e4b708",
+        "Answers": "fd169fe04e41e0d0c28ee383acb9c3c2f0af45ac3db87b3d0bde6a8fdf05178d",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -6697,7 +6697,7 @@
       "keywords": "Document AI, AI Platform, AI Chatbot, AI Automation, Task Automation AI",
       "authoredDigests": {
         "Question": "483837592a9a5af7c1455c65c9c161606e22e7a7242271659afca75db56ceb72",
-        "Answers": "d3e964541d12655a7173e4f4bf5284ec7feea12e51f2e8f812dd174272ed30ea",
+        "Answers": "49b0cd6b068da860bb057419bda0262ea81567c90e7f7d1dd7efb7c358fa9cc3",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -7074,7 +7074,7 @@
       "keywords": "Document AI, Smart Assistant, Task Automation AI, AI Platform, FastGPT",
       "authoredDigests": {
         "Question": "895a577a830019b0c42429cccd3601d521cd2fa825578ebc7bdbdf8d4b15beb4",
-        "Answers": "2ada6f49f5245d061f2a8f8d9ed98deea2f7f563f519846fcb1bee73aceb5147",
+        "Answers": "f6e3a3675cf1740c6b907c2ac3326d99309d702d74ae933e7dbd9939f2e3e206",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -7100,7 +7100,7 @@
       "keywords": "AI Platform, AI Chatbot, Smart Assistant, Open Source AI, Intelligent Q&A",
       "authoredDigests": {
         "Question": "11d7c0cfe988ef29a7bdcafedc5383311d24b5fef2f5976cf739464e30cced07",
-        "Answers": "14687987550d3f8ffa79fe90f3248b3ad9869153e3f280ca45de61923ba94c9d",
+        "Answers": "e35c83875535e9b6ca4e5cb893fead366a71b17dab42cd07a6ada6e10e992224",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -7165,7 +7165,7 @@
       "keywords": "API Integration, Enterprise AI, AI Knowledge Management, LLM Development, FastGPT",
       "authoredDigests": {
         "Question": "3ba4186980c30c7b9934003b0bd96cbcdcb7ed35d87782b9de5fe04fb70db9e8",
-        "Answers": "3a5dd5a0b884fe6d0f34514e096a539cc138fe25e4da87a8193003a74c78dbc1",
+        "Answers": "1b57602f718b43d55f2c08605f4a880f1d3965e00b21bf1cce4473f73c2ac6cb",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -7191,7 +7191,7 @@
       "keywords": "Task Automation AI, Enterprise AI, AI Automation, AI Workflow, AI Platform",
       "authoredDigests": {
         "Question": "66a49b1808a8160f4ab714ca69feeb0d1995f77f6883088386dec6525379b66f",
-        "Answers": "621d5d2977bed8ee7d17db57f6db5c036b713134f96fb4f02bee179aa4b500a0",
+        "Answers": "ca9346c09bb9e70662183ddbf046412fca689d7498d7e8eca6e163df1be610cf",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -7321,7 +7321,7 @@
       "keywords": "GPT Integration, AI Chatbot, Open Source AI, FastGPT, AI Automation",
       "authoredDigests": {
         "Question": "8dbf292ddffc9d550cc724def93fba64252f431ec1acf39659b9c32b7602fcb8",
-        "Answers": "8dcbc46f7fdff3db05a5fc4a8a20665475ec9254ba390eb1bc860541f0f0cfbb",
+        "Answers": "9a648aa1550ddc25c94d681f321ab14d2e7718ac4312756ef7f47c23f3f0a187",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -7342,12 +7342,12 @@
       "contentId": "how-ai-helps-in-arranging",
       "sourceSlug": "how-ai-helps-in-arranging",
       "workbookRow": 242,
-      "title": "AI-Powered Surgery and Treatment Optimization",
-      "description": "Discover how AI analyzes patient data, medical records and historical outcomes to recommend optimal surgical timing, procedures and personalized",
+      "title": "AI Support for Surgery and Treatment Planning",
+      "description": "AI can analyze patient data and historical outcomes to help clinicians assess surgical timing, treatment options, and post-operative care.",
       "keywords": "Open Source AI, AI Chatbot, AI Platform, AI Knowledge Management, FastGPT",
       "authoredDigests": {
         "Question": "d033a124136d040819f445fae3a43762e5912bffe31107997f4eef203a07a68b",
-        "Answers": "cfdc53e9c7ed1079e59cf490be53ff4e9cd4e92c0db05058a9e48b7410e13118",
+        "Answers": "4684c8ec00b218cbbb7e841214aa124d0cdea74666b5a9b7b7d136eb3afef413",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -7356,11 +7356,11 @@
       "sourceSlug": "how-ai-helps-in-developing",
       "workbookRow": 282,
       "title": "AI-Driven Rental Pricing Strategy Development",
-      "description": "Discover how AI uses data analysis and machine learning to set optimal rental prices by evaluating market data, demand and competitor pricing strategies.",
+      "description": "AI can analyze market, demand, and competitor data to help inform rental pricing decisions.",
       "keywords": "Enterprise AI, API Integration, FastGPT, AI Workflow, LLM Development",
       "authoredDigests": {
         "Question": "9a1f8742bdd7b951343d4d01ab61b48cb60462b9fa1a7485f35783eb12caa896",
-        "Answers": "33116508a6de4a09b50bbeed729dea6ac502e48c0d0e81deb655fbc31e31385c",
+        "Answers": "58b8af569ce150bc95f46a78251cef5019036e94e6b8dd02a8bb99f46a45933d",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -7373,7 +7373,7 @@
       "keywords": "Task Automation AI, AI Chatbot, Document AI, AI Knowledge Management, Vector Search",
       "authoredDigests": {
         "Question": "a202dfd2e6f7c2ea4c1b4643ba3dd1c7f63f9e06f1fbd1091f495cdd6d56480f",
-        "Answers": "316671c7514281ff36f087c02a8ea22b9d79afc0379ea610c1129c1054ba750d",
+        "Answers": "62fded66268dff9ca057d6e0bfc67ec7923bc7c9186f6c7ebb86a7c95a9c6071",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -7399,7 +7399,7 @@
       "keywords": "Enterprise AI, Open Source AI, API Integration, Vector Search, AI Workflow",
       "authoredDigests": {
         "Question": "4af252b200e9772ae39f159b17c59694ee2c3e900b56b350a5231ead36d943de",
-        "Answers": "c060bd42dcc1fb77412ab558fa3e075814f347c44657651d47897c1e5cee93d1",
+        "Answers": "b26c1e7a5fb0939502b3d397b3e3b9f7e0373ffbd24438f9cff13f29f0a0afcd",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -7412,7 +7412,7 @@
       "keywords": "AI Workflow, AI Automation, API Integration, Open Source AI, Intelligent Q&A",
       "authoredDigests": {
         "Question": "f6ef3bb5d41f2fc595ce6537db8927fd7bc511517a3fd31c17b90b8d27599912",
-        "Answers": "41e8baf056852c4ef1df393108344d4cf103babcc16d24aa41949517a5402fb1",
+        "Answers": "e228c191df01939cdb6ebd54e861e2eb7b8f1074b9ce323591c146a2a5438401",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -7425,7 +7425,7 @@
       "keywords": "Intelligent Q&A, AI Chatbot, AI Workflow, GPT Integration, Task Automation AI",
       "authoredDigests": {
         "Question": "89b2008e01556e6a0c3cb12897bd23eaa37a1e60e6ad8a7d3d73672467eee9fe",
-        "Answers": "4622845919c3f5452718d1170f9d9631632e48be685beeac094a18fe6323a0ac",
+        "Answers": "dd507a1a9abb2b4cf8dbaa9e617c4037f6dda6bd8951c746eef8c86a81459c9b",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -7789,7 +7789,7 @@
       "keywords": "Enterprise AI, LLM Development, FastGPT, Vector Search, GPT Integration",
       "authoredDigests": {
         "Question": "9ef9588b9bc0235e673d9390a4f257eccdeaa0ad344ff1cb3dcc47fffd6ddbad",
-        "Answers": "ab100761fd1ff4a22da1ebf792e626f63edaea287668998ebb6f168684992da0",
+        "Answers": "3f70fd0245ccce99d78c76f37a9211ed6d7ca7ce19098471085f54e906dc371b",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -7888,12 +7888,12 @@
       "contentId": "how-ai-intelligent-platforms-optimize-human-resource-allocation",
       "sourceSlug": "how-ai-intelligent-platforms-optimize-human-resource-allocation",
       "workbookRow": 127,
-      "title": "AI Platforms Optimize Enterprise HR Allocation",
-      "description": "Understand how AI platforms use predictive analytics to match employee skills to organizational needs for optimal HR allocation.",
+      "title": "AI Platforms for Enterprise Workforce Planning",
+      "description": "AI platforms can use predictive analytics to match employee skills with organizational needs and support workforce planning.",
       "keywords": "Enterprise AI, Document AI, AI Workflow, Vector Search, Smart Assistant",
       "authoredDigests": {
         "Question": "d055eb7268b432867a7b63e4db320ccf1b43b53ede6ea78eeb9b8e54dbcf22ca",
-        "Answers": "449e87688ff40873349b381278cc440fd2ee64724d4725830d09f6c19868384c",
+        "Answers": "82fdd074e5421a00e408c134f2b7387a7eda363120262382b4c5f2eeee34f950",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -8010,7 +8010,7 @@
       "keywords": "Task Automation AI, GPT Integration, AI Platform, AI Workflow, LLM Development",
       "authoredDigests": {
         "Question": "18660f60e6340e73429d2c198e1debb4247e1a4fa24c3381dde6a028e5b275b9",
-        "Answers": "5a2475be96aad0513e94b9017af6b1a9a79dbdd6f37c7a439344eecfe2f87bd1",
+        "Answers": "cc7ae3d2793c88e7398e5158465a26662c845082515b205e5d6b16c6163a5f23",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -8036,7 +8036,7 @@
       "keywords": "Document AI, AI Workflow, FastGPT, Smart Assistant, AI Chatbot",
       "authoredDigests": {
         "Question": "f6190854fced2f3e09d5e78754f5610a18fd02d4b56523c481b386d3b7474d70",
-        "Answers": "7c5a588ffaa3cd96d3bf5c2ef24a1047fae30cdaaa6b4a941dc2c634f40453fd",
+        "Answers": "b3e6b0b424b85238d3ded19d754424d8e07f064d45e7d52aa07770595be11f80",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -8309,7 +8309,7 @@
       "keywords": "AI Platform, API Integration, Enterprise AI, Intelligent Q&A, Task Automation AI",
       "authoredDigests": {
         "Question": "efc68fe09b183468a44ddc80e667476f5a6d6777bd46f54892d29853369bc23d",
-        "Answers": "7f619b40dff6e93f8cebb91d73ba51074bc6ed6b89fd15c67a19de4795270b4f",
+        "Answers": "f7a7db9a98d18c2428a1f4526e1483ccc7d88dc72a887792ccc10e61e202102c",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -8530,7 +8530,7 @@
       "keywords": "LLM Development, AI Knowledge Management, Vector Search, AI Chatbot, Intelligent Q&A",
       "authoredDigests": {
         "Question": "e9de487d12a56da8d11f8ee7fcf54b27b3306bc31336da0a415470730c9c2f6a",
-        "Answers": "5b27e745f33984a663e190513af8b8b7dd5b4f92d37fe86a624b1def4647448a",
+        "Answers": "98a865c107784d6ea1616336b68cf6158a631bbb85ac8bb5990e5e809473931f",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -8569,7 +8569,7 @@
       "keywords": "AI Automation, AI Chatbot, Enterprise AI, GPT Integration, Open Source AI",
       "authoredDigests": {
         "Question": "af0762d08b8e2130d26a2d0b2e0a2c4f3729eea9d781957c54d4dff9647d6773",
-        "Answers": "912776d254d81a3425af5a071f96408828a7cfb8f73af7a64a2bf7917929ff29",
+        "Answers": "0ddf01f4b5ac8812a773baca4ea3b9de074aca477a37046c0a28db6570199de2",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -8582,7 +8582,7 @@
       "keywords": "AI Workflow, AI Automation, AI Chatbot, Document AI, AI Platform",
       "authoredDigests": {
         "Question": "7c1976d5b5ebf39e1e9403f8d1be6a0216e673293b0c751e168480d25d6a1058",
-        "Answers": "da2f819732e716c91c7b7377050c67d3d2d026811e722744a99b6e10aeb6ad05",
+        "Answers": "c073ddefd0eb2462d420ab2c7f6f61fdcb75348778ba3e70cbc50725005380b0",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -8829,7 +8829,7 @@
       "keywords": "AI Knowledge Management, Document AI, FastGPT, Smart Assistant, Intelligent Q&A",
       "authoredDigests": {
         "Question": "f0d2b69f3e0c32d91cf5fad79f72a0eacd671da4d6e5f70b7aa46beb9046b019",
-        "Answers": "d81e97ea94bc68f2b1270e8b7702a37e6ac84bf922cbc4826ceb2b0ee775a6ff",
+        "Answers": "5acde8be503c721f3411e26700559e8d0e268f37e6dc1ae882bab3c927235683",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -8998,7 +8998,7 @@
       "keywords": "AI Chatbot, Vector Search, Intelligent Q&A, Smart Assistant, Enterprise AI",
       "authoredDigests": {
         "Question": "ea55ca71f664a3ca362414a327155da9e580df9a9c9891b42a9fdcf00595fc54",
-        "Answers": "232fc3d0ec0d7d3bce16b81f53aaa1d6f7cf71dce1a3054301e02ce2d9b43cc5",
+        "Answers": "068e2a0aad72a5b3109a4adf4765ad3cf8d5d49867f13e4401a67691bb70f929",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -9050,7 +9050,7 @@
       "keywords": "Enterprise AI, Intelligent Q&A, AI Workflow, AI Automation, GPT Integration",
       "authoredDigests": {
         "Question": "5b6d4ffdc2a8428b1753566f7ad6b488eb7db226ea59ecf86b63437005d6b0ac",
-        "Answers": "9ca7f8fc08188dd8bac265cda0079cce02b223ea681658057f1825ecf378eba5",
+        "Answers": "605e3c628df255d687fc6bcfb9cb84ca0b50a17a1757b84416c5af590674b86f",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -9063,7 +9063,7 @@
       "keywords": "AI Workflow, LLM Development, AI Platform, Smart Assistant, AI Chatbot",
       "authoredDigests": {
         "Question": "452839d9c5f977699752ab02d99b318833d2a11ec53f8ac8c6b56e13fbd89c76",
-        "Answers": "eddf6d421c0d55b3609be63dcd470a125a01c45cc1421fd2874cd6f94c99fccb",
+        "Answers": "8b91610aecba98eac501ef2dc4efb56977ced8133d3504936bbeb7b1efde72c8",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -9271,7 +9271,7 @@
       "keywords": "AI Knowledge Management, Open Source AI, Document AI, Vector Search, AI Automation",
       "authoredDigests": {
         "Question": "20bb251437f1e08d0a49819b3d8f5324aec9eff542d62c814f732dfc407d0c37",
-        "Answers": "39224019fc543a4b81b5b0b0440b0e8203cd79d227f7ac6fd0874a3134700b3a",
+        "Answers": "a3c1e5d25094e0b9624402cad9464972c01453cdccc397ad9608f1965137f17c",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -9284,7 +9284,7 @@
       "keywords": "Open Source AI, API Integration, GPT Integration, AI Workflow, AI Automation",
       "authoredDigests": {
         "Question": "9296a1f232a13379d6de9763201806e4561c86f068b37f958a972882fbdb991f",
-        "Answers": "a79a5f8dba346fbf93b1cf142abd2423ccbe5c288950cad37cdf94956f41fa53",
+        "Answers": "f5b8595327b04e1aa7f553e9cb3a18dfeb3885ff57b1729a397e44d8b1aee14e",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -9804,7 +9804,7 @@
       "keywords": "API Integration, GPT Integration, Smart Assistant, AI Platform, FastGPT",
       "authoredDigests": {
         "Question": "99c4be89c08c89d3d8a86c4b94d71e9835efe9fb38ee2a6f07df5198cfdb4e85",
-        "Answers": "12a91fb4356914cbfa4f5240ea399949a93e62a135e505f97b5c1b1818888147",
+        "Answers": "6aa47ac87f4ecfe2f23950d17c2d67675c0c132c2bdbee58ff76cf2bdbb70d9e",
         "Category": "f9ce8e73f9651bfa7128df8b13b3f459e4edf284ceefb90a8fc3488619ffc3d8"
       }
     },
@@ -9973,7 +9973,7 @@
       "keywords": "Task Automation AI, Document AI, Enterprise AI, AI Workflow, FastGPT",
       "authoredDigests": {
         "Question": "2593cfb8a5ec6b892ac99f2caa4dd9ce6cc4a36aae95864c85231da405662321",
-        "Answers": "2f7b0cc85e1c7413e164f5d21d89a4053dd7193d6a53238485697a28eb2792d2",
+        "Answers": "655c0017c378235bf60eafec5a51c81dd22c678003ac5f6a522a10caeb39c318",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -9999,7 +9999,7 @@
       "keywords": "AI Workflow, AI Chatbot, Document AI, Vector Search, API Integration",
       "authoredDigests": {
         "Question": "c501710d1eed026072f7f075ad43c99c3c59f4b801353930d3349425bfc14e13",
-        "Answers": "bdcfc8a4616609822ecbe14f71cbab88f8f77a23a1c8b8a31501186530be945c",
+        "Answers": "a7e1c7b0d1002125b07381c8ab6060c16bf3a139faba27af0eda3de8bd3c2141",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -10077,7 +10077,7 @@
       "keywords": "Smart Assistant, GPT Integration, AI Chatbot, LLM Development, AI Automation",
       "authoredDigests": {
         "Question": "11764fa7ff8ba0b92bd3c0f7693538d385d8f6e6164cc9652ee1c0c9f34e8a88",
-        "Answers": "226134d755771b834d5f92fc4814df349e4ce1cd4e1b4ea1fcaa1b6856b539e4",
+        "Answers": "567cd6d7f156c7a7159ee76be8dce3cf7216e07c55d5dd6f5a0e3e7c5c51983e",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -10103,7 +10103,7 @@
       "keywords": "LLM Development, AI Chatbot, AI Knowledge Management, Task Automation AI, Vector Search",
       "authoredDigests": {
         "Question": "f0245345082272ec67ccb3f88470e1a6b661ff2c55d3cd01017690cc3bdc0124",
-        "Answers": "9b7630ef2053fcc339d7e72e207b96aa983a4812fc9e0fed56d061481ff36784",
+        "Answers": "ab2e5bb6edcff650a6308ec6f74d6baa9b5680f3fd2b02e6f3eeaef9e45e701f",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -10168,7 +10168,7 @@
       "keywords": "AI Automation, Vector Search, GPT Integration, Open Source AI, Intelligent Q&A",
       "authoredDigests": {
         "Question": "065ab2958cb999135ad3326e0ed298755578f3ebf7e5130cbf21597c15a864d4",
-        "Answers": "99645f647ac4983d092d9753baf6b2ea077dcb9fa613fd6963dfb4590d91e7e0",
+        "Answers": "2c642e18b465f0f4481ecbaa0d77dc58ea2fb68ab758fcece83da29d2213f04d",
         "Category": "cd76339ae8845b8b7aade2a70f5dcb5687d42541c2dba45544521ea1b6f072f5"
       }
     },
@@ -10220,7 +10220,7 @@
       "keywords": "AI Platform, AI Knowledge Management, AI Workflow, Document AI, Smart Assistant",
       "authoredDigests": {
         "Question": "0dd3877e83cb79b6f8a1f538a84153507ccbcb900e9ba1c908a24b52da448ed5",
-        "Answers": "42c397414d1053f0bfe323715f3b915ac332a2a3e69a9a4b487a1b3d6a697abf",
+        "Answers": "a9ab1d218960bb12a5824448c386eb844af2f44b2703959fecdaa291bd7a15c1",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -10584,7 +10584,7 @@
       "keywords": "Smart Assistant, Intelligent Q&A, Task Automation AI, AI Knowledge Management, LLM Development",
       "authoredDigests": {
         "Question": "31608c44e9be8564cd8552d77d5ee09da39e4d0e1894ae94db4c7ff4c3420cdd",
-        "Answers": "94300ad94d2eda9c91d2f88e7fc815f1d52becc066ae0e128d4aab5bdef490d3",
+        "Answers": "d729648627182e57ee64b3ed7a3a3010d58e949ae23b6463161acca417f011ef",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -10597,7 +10597,7 @@
       "keywords": "AI Chatbot, Document AI, Enterprise AI, AI Knowledge Management, GPT Integration",
       "authoredDigests": {
         "Question": "542fe82510aa485b6cbd48e4a608324b16115c51b90ab863fa97da3cbe7a733b",
-        "Answers": "f6f70535801571be1a0271fd9f481d31edcb4275539fc2c554a2ecd84267faf9",
+        "Answers": "0526e71ab1348bb3073f605ebc2f3d05c2f3ab0ec3129a299ef5b376a286c630",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -10610,7 +10610,7 @@
       "keywords": "LLM Development, Smart Assistant, AI Automation, AI Knowledge Management, AI Workflow",
       "authoredDigests": {
         "Question": "c14ec7a62fcb9b6739463f77e7289ae5b6e1621786239d9d986adf26f2880010",
-        "Answers": "ede8f6a728eb049400536d1595630fbdded059adba5f2846662e1083672342ac",
+        "Answers": "09107b56833dc376f45f1aa9d51b06e7ab69238e38ec60ae9a864ebf8fc33df7",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -10636,7 +10636,7 @@
       "keywords": "FastGPT, Smart Assistant, AI Platform, Task Automation AI, Vector Search",
       "authoredDigests": {
         "Question": "30c8e539c61d7181afb3870babdf147a14d9305d7e8ffcf8b8ce81536e6ff537",
-        "Answers": "14f4aceb1aed1964b01c5def493f7cd1a9f3d4a2cf79d20df26aefacf4a15f1c",
+        "Answers": "98cd5ed193db44936bafa087216cdf2f945d4d7257a665cc24067dfa40550e9f",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -10662,7 +10662,7 @@
       "keywords": "Intelligent Q&A, Open Source AI, AI Chatbot, AI Workflow, Document AI",
       "authoredDigests": {
         "Question": "774d3035074f3f32ead6e3668affe9edcc4a1e950f243e7b9f9b4034de9031da",
-        "Answers": "466dc2bc96b0601503ebe36f25abd9fe391088be3723052befe26d8b24eb9f59",
+        "Answers": "7561dcb0db8f0de2724aa374ff5dae445655597975ceae37ba2eaeb4b7c25ab2",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -10753,7 +10753,7 @@
       "keywords": "FastGPT, Task Automation AI, AI Knowledge Management, Vector Search, AI Automation",
       "authoredDigests": {
         "Question": "c5317a180849f72fffcb0f41d7dd43e9a1d3ff14af36f2c0f226bbbc4f1c0c37",
-        "Answers": "49c413357cedba23ab8aa601609a78d6d4414a203c5bbf7da160a89906ce5f0b",
+        "Answers": "6b1479b2614a0ca3b6222b5e2b6aa85116cdc7656031ea2baf32b1ea6508fbb5",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -10870,7 +10870,7 @@
       "keywords": "AI Platform, FastGPT, Enterprise AI, AI Chatbot, Smart Assistant",
       "authoredDigests": {
         "Question": "bf1e614dfc1d62b8ae2ce479e6edfb232f8a469eb6517213719e81dc7deb484b",
-        "Answers": "7be09cfffce82f64386882b3041578f25c6fd87d6fa716d93d70e93e82206bfe",
+        "Answers": "084ee9541531c1de44d2ff7d952ace0aae2da10e64239cbc2230c59d55e57c64",
         "Category": "95c722528823ca95c4acf44b59c17ce78b5810d749767ab83e4c9188d338dc92"
       }
     },
@@ -10909,7 +10909,7 @@
       "keywords": "AI Platform, Open Source AI, Task Automation AI, AI Chatbot, FastGPT",
       "authoredDigests": {
         "Question": "cb93d3e2a2f225508373d8c24aa3afdcc81b43505ff157bda3c4e35a1805fe4a",
-        "Answers": "b69a196ad3cc1911b234256936ca76020ccd723a45340e4dc164da6b276f13fe",
+        "Answers": "926170aa5fedb0ede71f5b658c7b6339e2dccb429510c2108b8a6f887e28ff88",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -11104,7 +11104,7 @@
       "keywords": "AI Automation, GPT Integration, AI Workflow, Task Automation AI, Smart Assistant",
       "authoredDigests": {
         "Question": "4a28aafc0588cb0722a45d0bee168cb4ba9f1598d36a560fb2df4dad69d79ac9",
-        "Answers": "1109622ed4eccfb920fbc6deca578b6e6b35cdf291874a5b787ef00d739958ee",
+        "Answers": "46bd2d72c11b54bf870cd5e60d1fd76c144e045bdfa4c9df0f12d31830796419",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -11156,7 +11156,7 @@
       "keywords": "Document AI, AI Workflow, GPT Integration, LLM Development, Vector Search",
       "authoredDigests": {
         "Question": "7fe0cbe1733f0376d9c520ad59b5ae48358390c6c559789980fa3296179d8be7",
-        "Answers": "ef2d968a3a33724853e4959fbeb99b3a60d3eaed7567423136994b3a15394b58",
+        "Answers": "0522216b13b121b747a684326d573e07e40b70e30949addb46f813df4927064d",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -11247,7 +11247,7 @@
       "keywords": "AI Platform, AI Workflow, GPT Integration, FastGPT, Document AI",
       "authoredDigests": {
         "Question": "45adf47e3e2f643894d43c7865790286dcb601bb860d28be80538aa87e473c2a",
-        "Answers": "8694e85eddb662ae66c69b9cd803a7d919254697cef3c8daf0247ad218b31e1e",
+        "Answers": "282ff1aa910a7ff543a3aaccb64c4ae13dc234a2e5ef26633210b099cdb9d231",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -11377,7 +11377,7 @@
       "keywords": "FastGPT, AI Platform, LLM Development, AI Knowledge Management, Open Source AI",
       "authoredDigests": {
         "Question": "6d7e40a4d2f8573a627d41b8135178fb29118fc9f151cf5c344cd94cac2820de",
-        "Answers": "d92195fb3581a92e77aa90b891d7e55b741b890b45fb65b7798879fd0044724a",
+        "Answers": "342529e1e271023bcf7b9192f63d1d6d38f4d366b958f020975abe98a5762a33",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -11455,7 +11455,7 @@
       "keywords": "Enterprise AI, Smart Assistant, Task Automation AI, AI Workflow, Intelligent Q&A",
       "authoredDigests": {
         "Question": "e532e992b709e6803d8bd8c337048eb22c2a8436997096ef2e31b56974db76ba",
-        "Answers": "7636c8f0f28ca3b139c4ecd5909d92b8df9d31693e269a072eeac2145b665313",
+        "Answers": "23896dac9481c1b3b6abe4acb3872531f448103ba24e56259e83b7c1677cc814",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -11533,7 +11533,7 @@
       "keywords": "API Integration, Document AI, Open Source AI, AI Chatbot, AI Knowledge Management",
       "authoredDigests": {
         "Question": "7c7ec6e98e8ca886996a19dbd336696048b7017c183ad966e6b0a18c68d94deb",
-        "Answers": "060a1d6efa2e8a767b614109324ce9ee2b6924cf2bd54e69c1ffd8ee8b181987",
+        "Answers": "59e582287b8b86743a84608a8bb3d114daa2a7ccc94d2e0ed5c3c5e781628829",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -11689,7 +11689,7 @@
       "keywords": "AI Automation, AI Chatbot, GPT Integration, Vector Search, AI Workflow",
       "authoredDigests": {
         "Question": "54c15c292178a645d68f6dca0de0e80fb78ac37a3f583eb39cf125530ef8fa73",
-        "Answers": "98a6d59b460ad163db3f91ed67c4090feb03ca5615734e936310ea88bc4fd615",
+        "Answers": "fcb944ee0f22ac48359cbeafb563120531aa0e4c5712ff474cbb674f070fe1ff",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -11701,8 +11701,8 @@
       "description": "Discover how AI uses machine learning to analyze historical engagement data, follower demographics and content type to find optimal posting times.",
       "keywords": "FastGPT, Open Source AI, AI Knowledge Management, LLM Development, API Integration",
       "authoredDigests": {
-        "Question": "ef4694b40254bfa8309ee0cd15f296a3393764de74fe71167bab0524c9e0d5d1",
-        "Answers": "4b004cec4eadb57285f9fdb9c7aef3402cb54e8982d126e0e85993ea09ebad72",
+        "Question": "37904f553dc1c75618fba449e8551a04a45bd41060dcb76427ed2c795db3d086",
+        "Answers": "6bf0cf5494760977ccd4aab3ad2bc21cb28968d1a072c311dfe7ac0c8ab0411c",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -11715,7 +11715,7 @@
       "keywords": "Intelligent Q&A, AI Platform, Document AI, FastGPT, AI Knowledge Management",
       "authoredDigests": {
         "Question": "fbe65a3f85f3e5a50af88ea30df7d981acb71dac9c0e58c959560a594060a4a9",
-        "Answers": "89baf734227001168c61f33e58387043b12b62f704250400c61082a704815118",
+        "Answers": "5d2200f9eabbd6c56de03951eed9b944f78bd77eeec5f47908a359c20310e516",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -11767,7 +11767,7 @@
       "keywords": "Enterprise AI, API Integration, AI Automation, AI Knowledge Management, AI Chatbot",
       "authoredDigests": {
         "Question": "c0a543f9baa5c277403dc67c42640219333c196aecd8b6e5695f51c3f064dbf0",
-        "Answers": "0105d21db812502b11cce8559411ba3ee8d79519da2c931e8380a0fadf41149a",
+        "Answers": "f965b2d91fa10958016fe81fadf7d8683befdd857a6620fa417dbcf26810630c",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -11884,7 +11884,7 @@
       "keywords": "Intelligent Q&A, Enterprise AI, LLM Development, API Integration, Task Automation AI",
       "authoredDigests": {
         "Question": "8f9000522e0c6ac8ed1e16a05db14456c439221d1cfa68b4c058a57882a082fb",
-        "Answers": "ae090181303ca53a5f3a28b5c389ed7bcae87b697d2b23123642dc8cdc54432a",
+        "Answers": "a4bd882327cc12b5d03354c5b4e00181abd07e43fe8943d39080a4344c7078a6",
         "Category": "35ca6c1b6e8f626535f614f4932477b19cd76deaa219bbad11bc8e99e99c9524"
       }
     },
@@ -12039,8 +12039,8 @@
       "description": "Learn how to set up AI to summarize best practices, identify improvement areas, and what input data is needed for accurate results.",
       "keywords": "FastGPT, Task Automation AI, AI Platform, AI Automation, API Integration",
       "authoredDigests": {
-        "Question": "c260b4f1089d9c56becaafd6c5aa75cefb010ce13efc3c0b4acadf40d972a099",
-        "Answers": "93e52a53ce588cc5b9026ac272e3546736add9b01a4e192f35f092a0e84a51c5",
+        "Question": "02716bcf37035102c9316e14c5d40aa7467e557ab66a84efb37d331f2d4de941",
+        "Answers": "f3bbd3ec8a0157828e3388ecf546ddc8b7b98c216e5afe4583dc5cc6704198ca",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -12079,7 +12079,7 @@
       "keywords": "Smart Assistant, Vector Search, Document AI, API Integration, FastGPT",
       "authoredDigests": {
         "Question": "3195463a5e84f9774c1eabee695174d8895b65589a73176970ec53bdfa5c4289",
-        "Answers": "d5983b0750a8250b5af59a6209149690a0546c8761abf884f17f57bc0c20e8c5",
+        "Answers": "4d74ae336d9578a2648898d0244fecf7032ba78af0538f2bb2c331c1cabe88a2",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -12183,7 +12183,7 @@
       "keywords": "Task Automation AI, GPT Integration, AI Workflow, Open Source AI, Vector Search",
       "authoredDigests": {
         "Question": "56104c528d4151d1828dd0a9662ed8b1a8bc81d2f46592d2b52bc5b6615c3471",
-        "Answers": "257e108d187fbc0d758d53f78c387a677b7e9ab612f28a9bd7868c7ebca19f68",
+        "Answers": "706653ab9658e33e3d19096c5e18d53adfbf4c221b9fd9a77980f541d749e4bb",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -12221,8 +12221,8 @@
       "description": "Learn to optimize AI agents for mobile devices by reducing model size, addressing power and processing limits for smooth interactions.",
       "keywords": "AI Workflow, FastGPT, Enterprise AI, Intelligent Q&A, LLM Development",
       "authoredDigests": {
-        "Question": "aa22ccf1da7de7dc41a4e7a8097789ec0766f9c31eae23e82b5b3e9e54b9a189",
-        "Answers": "7ce96a1ab365caba6e43d4c12f33ecded5667de26ec2d5d193fb7735af43f120",
+        "Question": "dcd4c3a3a243535514a53a6dbadef1b722421871b90f2fa5d71b8f55e91fe9e1",
+        "Answers": "d1aeafe9d1fe48cd1cb51c49874ee8c020c258784a0af550247fa786d6415ef1",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -12456,7 +12456,7 @@
       "keywords": "LLM Development, FastGPT, AI Chatbot, Vector Search, AI Workflow",
       "authoredDigests": {
         "Question": "98990b86f44d8471f2a6c187c58bb63a0100494fe11da28f1db388d0ba141337",
-        "Answers": "066e28b2fae6f6397566f3837870654b28c404c7f71c38d2a793b6ffafdd5ade",
+        "Answers": "7dc754a6cc9037248fc22639f92f8a35fedc18e936eaed7bb7113f7cca1cffe1",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -12508,7 +12508,7 @@
       "keywords": "AI Automation, Open Source AI, AI Knowledge Management, GPT Integration, AI Chatbot",
       "authoredDigests": {
         "Question": "2f7c466f056e8485fc8e752b4b8f8b03245515604046a60eccc03a484db3ef50",
-        "Answers": "97a3861afb4bf4e3dd62149a47dc3097ce9076fd43eca630b5d907983b2c60b0",
+        "Answers": "86c9f59fad388a9eda0da15bc8d2f488933061d2de6b0a1765d713af2072f688",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -12612,7 +12612,7 @@
       "keywords": "Vector Search, API Integration, FastGPT, GPT Integration, Smart Assistant",
       "authoredDigests": {
         "Question": "7b284af0e2848d109b9fcdbd3989e6befd426c1808d5000c69d47165d8239dc7",
-        "Answers": "870da13ef14fd3740b09d5fdcf394e18c49dea439de2de04fb4f4202245dd92d",
+        "Answers": "8ecbdc954b1a0f9110be4a3c670cf76e589d9190f6ee0e5210459abca5a6cb5a",
         "Category": "22ac21bec9438800302aabaacf9051fd4d026f8ffff9d59629873b9f6aee891c"
       }
     },
@@ -12781,7 +12781,7 @@
       "keywords": "AI Automation, GPT Integration, LLM Development, Enterprise AI, Vector Search",
       "authoredDigests": {
         "Question": "89c859b3b45375a57eb56761e7ee47c4a3afbd370173db7b36e7f70fbb0b9f58",
-        "Answers": "463603b5bdff646126a4941d7e7c1cd539f82be3df5703d6d93136b5611f7e94",
+        "Answers": "1fcabe5071dfacfd0a945722d4cff79eaee3658e5e7fbe014cb444b39801d5f6",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -12898,7 +12898,7 @@
       "keywords": "AI Chatbot, Vector Search, Enterprise AI, Open Source AI, Document AI",
       "authoredDigests": {
         "Question": "ebe9962ed038d40bd408fd378a732980731fa6c42803f58ba8a3b6a6c4ed1d96",
-        "Answers": "c51c5ce214be600c051b2e2f53f58afec1dc02351b0924e917b5d04dacd883f6",
+        "Answers": "3632b577e74f85abfbbe0218613c84b23eab09e99f18735dd3430ef8814680fd",
         "Category": "e57a6b54eb05ad602ed3e9fc53b72e5992950a20e5b66b089e64443c39b38cd1"
       }
     },
@@ -12937,7 +12937,7 @@
       "keywords": "GPT Integration, AI Automation, LLM Development, AI Workflow, API Integration",
       "authoredDigests": {
         "Question": "c9fea866e2a24d4daf25f21adf5e414a0ce4fe694696d321e3882fa8532cb6b2",
-        "Answers": "4683eed24fd6cae281edcce72e3dcc0c55b25a506371112af28a679ab61e22e0",
+        "Answers": "e8cf3baeb30ac17e40208c058ceee9382f2758681893f4001766adc380c3b2a6",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -12950,7 +12950,7 @@
       "keywords": "AI Platform, API Integration, AI Workflow, Document AI, AI Knowledge Management",
       "authoredDigests": {
         "Question": "b63f8e1f4e27e784c9126842fe4f1713035dfcaace914fc74934bdaa6eb809ec",
-        "Answers": "8852a93f62c3d9e14a5feafe1001213229fb20ad1bcb9be04a97de8925bc7926",
+        "Answers": "89150995c112225bd0861bc811ec710d97e8778ccac55378ea39aaa892bf41f7",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -12963,7 +12963,7 @@
       "keywords": "FastGPT, Task Automation AI, Enterprise AI, API Integration, AI Automation",
       "authoredDigests": {
         "Question": "ea045e53beb3c8990c3edaeb8fa0d0187856292f42f3498a32db2c1f8698a792",
-        "Answers": "92e1bf81c77f06d0587bb79a9433dcc598a3f7087c81e57e42b5f88877f88cc3",
+        "Answers": "f65a13aa196b8631542377b2013f4098d591557662d155a2db99f82f07e980d8",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -12989,7 +12989,7 @@
       "keywords": "AI Platform, Document AI, AI Workflow, Open Source AI, Task Automation AI",
       "authoredDigests": {
         "Question": "31e62226049030e8778f19acd76aec744cb455c13ae1dd046c073fecca136e3d",
-        "Answers": "45cd85e146653a63da74d17de4d81c815c3d227ebd44f34a6334750ca80a23df",
+        "Answers": "4db0c5c9ba0602ba9531f1610d72a9a80b8d77f63cfea7169a997dfdc5d26221",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13015,7 +13015,7 @@
       "keywords": "Task Automation AI, API Integration, FastGPT, AI Chatbot, Document AI",
       "authoredDigests": {
         "Question": "13ba5db9292c4be908950d1e4d8bd87bcf6b7599dafe399ec7b1b275dfc2bb39",
-        "Answers": "e0ecd6f1c680a1c4adf8573d0602d3fbea6b4696f61f8f402dc14452042fad7e",
+        "Answers": "9c61719b9ea622d583faae61d0e69b92c7ae10826a27434f2ea6abd19adbcdb5",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13054,7 +13054,7 @@
       "keywords": "AI Knowledge Management, Vector Search, AI Platform, FastGPT, API Integration",
       "authoredDigests": {
         "Question": "54c744cb4b02b03d24d1b649c5f024902dec31499ff6827a59aa66310fb385ec",
-        "Answers": "ab9642ddb83d16f06b093a2db48327d7dd30c8c782529bfc9dbf0b94d80c941e",
+        "Answers": "c1ace8ce07c4cbf80ca009812f0f4f5a89605991c498e3ffad8d1c12b748db9d",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -13197,7 +13197,7 @@
       "keywords": "API Integration, AI Knowledge Management, Task Automation AI, Open Source AI, FastGPT",
       "authoredDigests": {
         "Question": "447939df4c916c3f85a0a320f1f638c532277c223d027a1ac584c6bdcb97b967",
-        "Answers": "073293f067a3cd968e2f51655ceffd7bab0cbdfb8273abd173421dd30045456f",
+        "Answers": "1402e1978c29292b6552d6bb15a7e9950963694e125ba5f6b63d414f9f19c179",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13275,7 +13275,7 @@
       "keywords": "AI Automation, Smart Assistant, Open Source AI, Document AI, AI Chatbot",
       "authoredDigests": {
         "Question": "353a8ceed52167a543391f8e365165a26eb2cf7b75e9ad49126e9e2c71588210",
-        "Answers": "e13bf7b6c8c2b045bff53723804b6a7f49daca090f607a133e2ca619d905576f",
+        "Answers": "88a8e9eff068a3dc5e5b2642cc10ef38b12647ddddaf29e705fa29fdbf1866ab",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13340,7 +13340,7 @@
       "keywords": "Vector Search, Document AI, AI Platform, Enterprise AI, Task Automation AI",
       "authoredDigests": {
         "Question": "6a6b8aa225dda938b84ae439372952d05c9cc494ee90fc50468b42d14f9a1132",
-        "Answers": "74dc65101f71a0c50208505b4ca4c27d34a4444929a458ebc832eec9aeaf8492",
+        "Answers": "6721c115a51cb68cef5f8b9bfe0081299095b5ed4668023c211d3dfc2e334971",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13353,7 +13353,7 @@
       "keywords": "FastGPT, AI Platform, AI Knowledge Management, AI Workflow, LLM Development",
       "authoredDigests": {
         "Question": "3d899233965d0f512a2724d7fb6732334c6250098b65260f3cf372725a98f6a8",
-        "Answers": "5c081eb37d03bfb017dee3e17f0f9edfbf14f67b5030dcb051e8e53386fde54e",
+        "Answers": "f9b2d243f0a9335da9f5b935bc365287ab523fcfe7784b1904c243bd376406f2",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13418,7 +13418,7 @@
       "keywords": "Open Source AI, AI Automation, Smart Assistant, Document AI, AI Chatbot",
       "authoredDigests": {
         "Question": "79deff2bd6beaec3b0d5555979a9173aeacaedc5e1922716bd98498826883e6f",
-        "Answers": "370eb40fa9dc16106977ea95b821bae16d27855735432c4993e58a3b50180c91",
+        "Answers": "eed11733819972de4b6be1736f8a47978e7135c7e3da1009f61d125ba4ad6d50",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13509,7 +13509,7 @@
       "keywords": "AI Automation, AI Knowledge Management, Smart Assistant, Intelligent Q&A, AI Chatbot",
       "authoredDigests": {
         "Question": "831de4710d90718f80d3ea422d3fc4145da57529fe96b76708b610bbb3cd4a0c",
-        "Answers": "aabb1feda0da1f2af863de66481d6036d32a9bafe7bf3b4aa8a4db88b3221ece",
+        "Answers": "ee5a2032f2807e8d14de3d4b9b8457912b16e9b8890be7c839e18410ccf38363",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13522,7 +13522,7 @@
       "keywords": "Document AI, AI Workflow, GPT Integration, Open Source AI, Enterprise AI",
       "authoredDigests": {
         "Question": "abf10d518c80d88977e82511b729c8a9055521752ec110b8fa53f7dead0cf44a",
-        "Answers": "7538ce5ae1d1cdc3ccc2eaa10600f6246f9ae7ac6ea49acc7f4929dc2ca56f10",
+        "Answers": "68f6aa494a369d29a17ad798052be925d6db95c6d932e00950043c20b7d9ae5b",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -13600,7 +13600,7 @@
       "keywords": "Enterprise AI, Intelligent Q&A, Open Source AI, AI Workflow, API Integration",
       "authoredDigests": {
         "Question": "7cfa9019b78518cf6012d1d07fd3653fd0e1cec3e8df6b4d97a12146903d4ae5",
-        "Answers": "1b18cb217e31cf96cc21d264d3c2b0d703a7d70e8363368a544902ae18fd21bd",
+        "Answers": "e80e7374cd0dcc87333ec4b9fab05c64d8eb2e30801231ee24e0db2412858989",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13717,7 +13717,7 @@
       "keywords": "AI Knowledge Management, AI Platform, Task Automation AI, Smart Assistant, Document AI",
       "authoredDigests": {
         "Question": "75b0c00f669045f1fccd6cbc9c189d4dc663536866c905324e8fce8c543d7dd9",
-        "Answers": "e27fc94036bf0d24cabb28801c0c20fea28a441a07b2f069954eab6205cd6f92",
+        "Answers": "680e744301a1b0a92f608a38da482f0cb7b610adc9f46c814527cb67c46639a0",
         "Category": "0fad606c779a7a7550cc4f1021cd84bedde35239e16be0e9db5cfcd747381932"
       }
     },
@@ -13769,7 +13769,7 @@
       "keywords": "Vector Search, GPT Integration, LLM Development, Smart Assistant, FastGPT",
       "authoredDigests": {
         "Question": "cf551649ecf2e25b0bea7b20206c389967c90c30af1f9116d253873cb71c1122",
-        "Answers": "6f253cd8c1897eaac396a21e17db45237ed2b0785e2debde578c4178120b2ac6",
+        "Answers": "ae710c5bdef023697df29a628ee50560985233ec6719c73b752a221e59709932",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -13873,7 +13873,7 @@
       "keywords": "AI Platform, AI Chatbot, LLM Development, AI Workflow, Enterprise AI",
       "authoredDigests": {
         "Question": "7efc61d40fba235b99fd8c7c63801bc60d3b0f544b364b6d734928431b71342a",
-        "Answers": "81b8b63f205239a5db2c59e8241fa2b4ac1919fca286100551db65c8b711a9de",
+        "Answers": "a5b2bb035a45a3373dbaf47f30ded8962d14ee5ee37338c73fb1568a6a893429",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -13925,7 +13925,7 @@
       "keywords": "Document AI, AI Chatbot, Smart Assistant, AI Platform, Enterprise AI",
       "authoredDigests": {
         "Question": "9d078a14ff37ae8bb74a297bae49d7c39b0d31fbccfc15c8873641412ab0f059",
-        "Answers": "80f6fe7b779d0af0f228145723a6b4558dfe6fb28f6346bb335885c62f220816",
+        "Answers": "333e5b954220ad00f4c5ff9b93ee0f9192b5236117ef6885aa94cab70b93060b",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -13951,7 +13951,7 @@
       "keywords": "Smart Assistant, GPT Integration, Task Automation AI, Vector Search, LLM Development",
       "authoredDigests": {
         "Question": "b1f30a676ac0694d8a556ed79cf6b02aa26e226bad022dce555b252f16967ce2",
-        "Answers": "2b5b2997410b86d6b6822381b3b7d9b4595df579cd368b97f080cffee5206735",
+        "Answers": "a4c37b9510f908432fdbb5ceba53c98323b34801ef1137cf452e2d394f06e104",
         "Category": "fa6260f31825ab0147f6288b0ff645265eeda4cf8302aad4479dbd734498c048"
       }
     },
@@ -14016,7 +14016,7 @@
       "keywords": "AI Chatbot, AI Knowledge Management, AI Workflow, Task Automation AI, Vector Search",
       "authoredDigests": {
         "Question": "570208f2c2aa6280a34a2dab701abc305523dcc597553bc086a2b22fbb90bb20",
-        "Answers": "ee57a92afe0d0722dceefdecd7397c057b64418233eac41deb6c9186f999d973",
+        "Answers": "e97202fb97f211f6bd1645c3686b8bc23a6a0b66f466fe491d1bf327fa6f770d",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14120,7 +14120,7 @@
       "keywords": "AI Knowledge Management, API Integration, FastGPT, Vector Search, Smart Assistant",
       "authoredDigests": {
         "Question": "da030d096e6202bdc22900f2f393888deb06bcbdebb3b5feced176d503bba9ff",
-        "Answers": "af527dbd4a69bf0403ecf29e29c41a91a65d2205ae729ba556e017d977e02a18",
+        "Answers": "ec970f86b6439e3722ca3c86d84c7dbac0b14d4079458ad79c39af636eae418c",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14133,7 +14133,7 @@
       "keywords": "Enterprise AI, Smart Assistant, AI Platform, AI Workflow, Vector Search",
       "authoredDigests": {
         "Question": "b2c8d11e51c54ccb03c90c1e5e439ea1e272e98a036a04f7acfaa400536494cc",
-        "Answers": "98f5c007e20e5eab8ad0b413a1c36773aced32407b12b93f58f08edb009a1b2f",
+        "Answers": "3de41ff358212c321fdd1c9bbd5365273165a3f22ad5abbb0823c219cb69d7a7",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14172,7 +14172,7 @@
       "keywords": "Document AI, Smart Assistant, LLM Development, GPT Integration, AI Knowledge Management",
       "authoredDigests": {
         "Question": "dee880f7c5942a23cf6959a9531e7e175798fa7035f613248eb8beb1524d07d9",
-        "Answers": "e7430e0baa1a3c597a393150791684c078e54127cdeff57dbd646e13939eb61e",
+        "Answers": "e81888dcfd9abb4a9e9c5eb202bdbc14942beedb681606f75f5945432a8f29ab",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14184,8 +14184,8 @@
       "description": "Understand the top challenge for enterprise AI assistants is ensuring consistent, accurate responses to avoid damaging business operations and reputation.",
       "keywords": "AI Platform, Open Source AI, GPT Integration, AI Workflow, Task Automation AI",
       "authoredDigests": {
-        "Question": "e703faaa8d347969eb7e71c3819047c09bc6eb9a76a17de3e628f1cfc9fc55a5",
-        "Answers": "98b0207482de78f7e85e397d69fa5f8814f5a82e613f7c648eba11dbcb261edf",
+        "Question": "26617d1e155a89eff9140de3ade6a63dc60f48d673c999a5f7e8729c2aa87e63",
+        "Answers": "71e967e4928589d27a874183fd885ce0e134f5949400b43993e4401fc0d9109e",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14197,7 +14197,7 @@
       "description": "Discover how AI intelligent platforms adapt autonomously, unlike traditional software that relies on fixed pre-defined programming rules.",
       "keywords": "AI Platform, Document AI, AI Automation, Task Automation AI, AI Chatbot",
       "authoredDigests": {
-        "Question": "bb81ed63459271ba452da199ad36592a8a953569998db910565fa724ca0266b3",
+        "Question": "b4e9494fb89cd3f8740b49f0407aee0ff55af4746b9174232040c9b259c9cb9b",
         "Answers": "2ad93034e96467a0c8b20c1a3a491caf00ff0655fd20e5ca4c27f56ff11f9dbb",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
@@ -14211,7 +14211,7 @@
       "keywords": "AI Automation, AI Knowledge Management, AI Platform, Task Automation AI, API Integration",
       "authoredDigests": {
         "Question": "33ba06dcce2938d5f1213fbbf1b311ad2302a3bf0e6250b5aa09f3f19926ea60",
-        "Answers": "9ff8637f812af954f3001ea35578f24f1e611c6ac1c1d22ee3ceaaa19a6fa6f7",
+        "Answers": "7f608c89db899d3c0ac0f87edbd202f7d71c687b770b5a90bd48d44bf002dd37",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14250,7 +14250,7 @@
       "keywords": "AI Workflow, Open Source AI, Intelligent Q&A, Enterprise AI, Vector Search",
       "authoredDigests": {
         "Question": "b1aa9943cd2fef252ddd319c71df1da9c8c3a78d2e3aabdeb534ad21e301574d",
-        "Answers": "1b6a37ba58017b16a1c5b9b8d77e4fe467a5221970a36bd92e4e48a90f98f22d",
+        "Answers": "81834c03f9fa7440c103cf641ca078a1cd8885baa28627b783f0f5c6003dce78",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14354,7 +14354,7 @@
       "keywords": "Intelligent Q&A, AI Knowledge Management, Task Automation AI, LLM Development, Vector Search",
       "authoredDigests": {
         "Question": "c7876784a9b5b67dd95d6ff2e2dce95b53a0c8ed9587a8d4f09901df98ba12f9",
-        "Answers": "0c2a89262ae48a08000984cdfa65280015ba04f4d70a0c2f0b870632fea64157",
+        "Answers": "05a8b897f09401383a1fe239e7b318f7e71036656482395a763ac9fd7922b09c",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14601,7 +14601,7 @@
       "keywords": "AI Knowledge Management, AI Workflow, GPT Integration, FastGPT, Open Source AI",
       "authoredDigests": {
         "Question": "0f93ceb42f75f219bc72deda68699b250b3f9c30b2b81919ba1914248c9d905d",
-        "Answers": "ac2dcad1aa910ac4f9bbbb970be44aab615879b6debab292fe8627c8da7d8b46",
+        "Answers": "d840c23c1b7be2f98835a210d0651fa738e8d4465640c9718032e1a03e6dc27e",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14705,7 +14705,7 @@
       "keywords": "Enterprise AI, Document AI, Intelligent Q&A, Smart Assistant, AI Knowledge Management",
       "authoredDigests": {
         "Question": "9cce99d4021930db7bd41aecc88bf919a78adeb15563a2a61932b263b14a349f",
-        "Answers": "af19d6a9761d1feec5634365f71282f3e2c9a884cc40e218e9f9bf9e1ab92788",
+        "Answers": "d353f9aac6b851c781bcdef85f61b91574b2128f070dfb7c0082df2a5a58cea6",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14714,11 +14714,11 @@
       "sourceSlug": "which-international-privacy-standards-do-ai-agents-comply-with",
       "workbookRow": 1094,
       "title": "International Privacy Standards for AI Agent",
-      "description": "Learn which key international privacy standards and regulations leading AI agents comply with, including GDPR, CCPA, PIPEDA, LGPD, and ISO/IEC 27701.",
+      "description": "AI deployments can be designed to support privacy obligations under laws such as GDPR, CCPA, PIPEDA, and LGPD, with ISO/IEC 27701 offering a privacy framework.",
       "keywords": "AI Workflow, Intelligent Q&A, Open Source AI, AI Knowledge Management, Document AI",
       "authoredDigests": {
         "Question": "0fb56b7ed4084ad0bdc31969fdb34097e00fc26e4860e209e605afc560ee2837",
-        "Answers": "70681d5f5d95b857e1be02ae81dc9e68bbe3dffca49b5612a07d5f211a492c5f",
+        "Answers": "124ca55ce284dfe3b6f5b1b11b4537806d11f21091bb1c31ba850cfb92f4cf7d",
         "Category": "f9ce8e73f9651bfa7128df8b13b3f459e4edf284ceefb90a8fc3488619ffc3d8"
       }
     },
@@ -14783,7 +14783,7 @@
       "keywords": "AI Chatbot, Vector Search, Document AI, LLM Development, Task Automation AI",
       "authoredDigests": {
         "Question": "115b83e02f55dc951e9645815054acf18f41ab5948cefc5f12ef3356d700d68d",
-        "Answers": "5f7ed0d0a75186b83c89441397c01e414f2435c92c5087a00fc673f7dea4ea4e",
+        "Answers": "bdc6a882164aea9ae634ae8edcb1ad49af8792762b6b7c90400e65ad470f9c9f",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -14795,8 +14795,8 @@
       "description": "Learn about the top transformative technologies set to enhance AI agent platforms’ capabilities, complexity and applicability over the next three years.",
       "keywords": "AI Platform, Smart Assistant, Intelligent Q&A, Task Automation AI, Vector Search",
       "authoredDigests": {
-        "Question": "6b1345f8e0a6c0e1a0ab8d24bcca0bf340a6af821f300dbc4f9342328a994f69",
-        "Answers": "b076f17e33a21a6d7ceed8fc0e1109a6289558d93f69c68b4c9399a8eb16e5f9",
+        "Question": "45932dc57e5a2e572cf290972edb86b6386571aa13a07004cd43a4c7f982a27f",
+        "Answers": "db3450bababcfc16f54bb12aee0f0f1c453628995c0a694348df2af2ea8ec5a1",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14822,7 +14822,7 @@
       "keywords": "FastGPT, AI Platform, Document AI, Smart Assistant, Open Source AI",
       "authoredDigests": {
         "Question": "dc2076173e0f04201d125e65e5e389d0977aee3ff27608acf4e4b67ecf01b085",
-        "Answers": "1b715ff39129b53f42ffc27b345486c471170b9589d2c57db20f779f62868195",
+        "Answers": "87fa3af91971f7a218531ad1774c8db93ffd265383f8b7cb957220260928d6e5",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14834,8 +14834,8 @@
       "description": "Learn how AI agents automate complex workflows, boost operational efficiency, and scale decision-making to support enterprise goals.",
       "keywords": "Open Source AI, AI Platform, LLM Development, Intelligent Q&A, Task Automation AI",
       "authoredDigests": {
-        "Question": "a75f35eec9e35fee32b32ba0f82d036ed49ed56ba3a9d24c3a515ed12e0ea7d5",
-        "Answers": "d108534d3d506de2c307b9698182446a6f7c70ff757b93335b7a4b6031703482",
+        "Question": "0e7a7ecc4aafceb11543f1955f2e69a069395f65f968d788ebf7308f4e854fea",
+        "Answers": "0eec3ced46276aa3b173acc467fea2566adb9d4506a704af851ef74d1f525ba2",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14848,7 +14848,7 @@
       "keywords": "Smart Assistant, AI Platform, Open Source AI, API Integration, Vector Search",
       "authoredDigests": {
         "Question": "bd2c3da1e5ca99fb8d851af6955d961868a62dc09d27e91377769e80481af39b",
-        "Answers": "0c3c46841fa316898cae4143d77e615a48493e75d73549e655a003343c4767ce",
+        "Answers": "9587b6ee219f99b9ad6437d6be7c1ea2fddde10a6768428fb6eb4e3c44631576",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14857,11 +14857,11 @@
       "sourceSlug": "why-ai-agents-are-better",
       "workbookRow": 56,
       "title": "AI Agents Support Fast-Growing Enterprises",
-      "description": "Discover how AI agents benefit fast-growing enterprises by offering superior scalability and efficiency, automating processes and adapting to operational",
+      "description": "AI agents can support scalable operations by automating processes and adapting to changing demands as enterprises grow.",
       "keywords": "AI Workflow, Task Automation AI, AI Automation, Document AI, Intelligent Q&A",
       "authoredDigests": {
         "Question": "102494c70bae76eb41d99f388158a2d1bec74edd2f497eb2a5ed5f0ec4aaf6f6",
-        "Answers": "7c4d6a8481bd034100e1407e73ad8617833a908da620d27ed2c00b210843a1bc",
+        "Answers": "7b765d3e7af12a1214cda09d2b2ab91a636dfa684b0de6b9ee87ca45c6152783",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14913,7 +14913,7 @@
       "keywords": "AI Platform, AI Automation, AI Workflow, Open Source AI, AI Chatbot",
       "authoredDigests": {
         "Question": "52de8a9410981d1fbb2783d321e46b5dcf4b937c3b3280d78d9f7c2a93a36e06",
-        "Answers": "009341d1515e05f4318f4b7970579ff80ba4208a21ed3fa601d3cfc4ce444033",
+        "Answers": "7ceae603ff8d1ebc968219c46df22fd2ee4961f220ae16483f98b0b56a312634",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14952,7 +14952,7 @@
       "keywords": "Intelligent Q&A, AI Workflow, AI Chatbot, Task Automation AI, AI Platform",
       "authoredDigests": {
         "Question": "0a65f96092cab7f4cebf39f02d51761fd08aab8aa15f09322d108acb446811d5",
-        "Answers": "25abaae5be38d9734cda0b9a862d1393df8d8eaa2b739ea8b6670b7ab7f52e74",
+        "Answers": "19756ed13ef8daf7f1af13f3741edfa622d32e395ff262d62616987ea0059742",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14978,7 +14978,7 @@
       "keywords": "Vector Search, Smart Assistant, AI Chatbot, API Integration, AI Knowledge Management",
       "authoredDigests": {
         "Question": "338f405c4b07fada5c06e213ca6a1ca2253e0eb60bf670bc8e34651109da880e",
-        "Answers": "ca331778e3105f26ebc130fbc2b2fb1d179c114b4585359c1d823c0f0475f49c",
+        "Answers": "24afea2ca11aefe05e9de44f846f658c1d5ba1d13d269a2ff231a185924d4b21",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -14991,7 +14991,7 @@
       "keywords": "Enterprise AI, GPT Integration, LLM Development, Intelligent Q&A, Smart Assistant",
       "authoredDigests": {
         "Question": "14a2d476726cc251685b6b2fc8bcb4332ad9f9960ce4abf1fe832742df0560eb",
-        "Answers": "ce81d33a90537c4e8a55c41ea4fa7a06b1e85d1d0a07849bcbb12e72616e27b6",
+        "Answers": "5948d394135164ed9df8ed136685fec84b16ab0dc2d8912afffec7a13e691e35",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15017,7 +15017,7 @@
       "keywords": "Intelligent Q&A, LLM Development, Enterprise AI, AI Automation, GPT Integration",
       "authoredDigests": {
         "Question": "623d1575bdfeae1994a2f9938fb2fff71af10aeb74f652f256b987f2e92228ae",
-        "Answers": "e70cdf7829535df917526ee28464faae8935d5a810234b6d06978dd6224d9a08",
+        "Answers": "fa93ff70ec17f764475b341fdc11ebe70494d79b57d3b7fb63798e1101a84456",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },
@@ -15056,7 +15056,7 @@
       "keywords": "Smart Assistant, LLM Development, Task Automation AI, API Integration, AI Workflow",
       "authoredDigests": {
         "Question": "739f7de5579dd838c92037387b67fd9ee16dd536be4ad88d1f4ce31a5eaf6e7f",
-        "Answers": "3994c99f3a1eb3716d99fb1ff9110c80da99cec6e139bab554dc2e9f6c0e605f",
+        "Answers": "484d05eeaeb5f9f1ff1e3abc6a694f5597c52c0b68c8a3f568613449f075158a",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15108,7 +15108,7 @@
       "keywords": "Document AI, AI Chatbot, API Integration, Intelligent Q&A, Smart Assistant",
       "authoredDigests": {
         "Question": "afbe57bc8eb0f97b6a6f3b17492f2a7e808025981e9cce5d37184b681543fa6f",
-        "Answers": "7d18f36071857a9723e5a3cb6a7ed0a6bbd715eff508bc71aefb6a9e79648b4c",
+        "Answers": "79c7e8d8f1dec156c6f2d68fad5af9c35ec79c8345b4ee7a3354b4714a41dd97",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15134,7 +15134,7 @@
       "keywords": "Intelligent Q&A, Task Automation AI, FastGPT, Smart Assistant, API Integration",
       "authoredDigests": {
         "Question": "cdb3addab1c0167cb3cd8f2bbd8adbb38102714de239e4b2d85ff88afd0359f5",
-        "Answers": "74f4f78d389fb0b2f76d2ff6a3503c6bf6efd27ddaa44abef4715232b081d53c",
+        "Answers": "14e7bf903075f24ba90b07371fcab85c219c5ee97b62b8b57c1ee2e1b7dac291",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15225,7 +15225,7 @@
       "keywords": "Intelligent Q&A, Task Automation AI, LLM Development, AI Platform, Smart Assistant",
       "authoredDigests": {
         "Question": "c5fb342898b3e7730765d0eaa28b8f6057dd47bf41f9e652256818fa9ed7dc1f",
-        "Answers": "771e2efe60b93fc2afc4f7cc720b1b983104ebeaecb5d6824fa7dfb21461b8d2",
+        "Answers": "2e2ddabc676444fc1897a85ee5c6a8871f38e5deb4599ef8ebf27d5fc609a48d",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15238,7 +15238,7 @@
       "keywords": "Vector Search, Smart Assistant, Intelligent Q&A, GPT Integration, Task Automation AI",
       "authoredDigests": {
         "Question": "2538c96ae49926d39327e3619dfee0a3e54e0b711daca31bc3a2ca36192280de",
-        "Answers": "e1c326393655a0cbfab752b15d140ddee7ef5a9e34995aa361d37539bf89974a",
+        "Answers": "e903c13fa762dbfab698d5f384c9f752a4a640d7c02bdecff17a75dee535ff85",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15303,7 +15303,7 @@
       "keywords": "FastGPT, LLM Development, AI Workflow, Vector Search, Open Source AI",
       "authoredDigests": {
         "Question": "e87fb2b601e9df5a1bb3ead692f1fc1bf8f50f11849b233d49960be188714523",
-        "Answers": "612bbf158951506a7c652009a489c19ea8b357b17ba41b07770d9178d925d989",
+        "Answers": "9e752e2b93226933441dd4f3d16def27d639c4ab8a35114e5d22d0e1ea80d454",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15329,7 +15329,7 @@
       "keywords": "Intelligent Q&A, AI Platform, AI Workflow, AI Knowledge Management, LLM Development",
       "authoredDigests": {
         "Question": "a302de810cbc19327e9e177c2542cd09a78eab6b2ca9e7ef36f1887da2ccd42e",
-        "Answers": "0e95f163832d1f787f9bd2e6327a3ffca31cf6e5bbb42b6c7b041c9eaa2adf5c",
+        "Answers": "a1e13c5653ccde70bc82f21839a8e93e9eeecbdf7f152e257508837bda2a7433",
         "Category": "cbb1c7db6ec7f20293790bc15141e4a84a112db172b754a79acaa2f0a386de98"
       }
     },
@@ -15459,7 +15459,7 @@
       "keywords": "FastGPT, Vector Search, LLM Development, Intelligent Q&A, API Integration",
       "authoredDigests": {
         "Question": "bcfe7d59b7d92eb66adca8a03446bdd6a1e7040d92419e7cf9a2bb1c11c7096c",
-        "Answers": "fe7d73f8b46ef106d1f0ebce74fe19793de4542ac057f582b29783eceeb18d8d",
+        "Answers": "d447f0aed771d16bd14da642bc503385ad995aa045d71b2e4ccd4123b09df269",
         "Category": "fec93648f357a62c86c82f642bfe97eee87d08d8d72cf75bdeabd55a68067b74"
       }
     },

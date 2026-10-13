@@ -17,11 +17,11 @@ export const industryHubCopy = {
   en: {
     title: 'FastGPT Industry AI Use Cases',
     description:
-      'Explore practical AI use cases across industry workflows, business scenarios, and operational steps.'
+      'Browse practical AI workflows by application area, from finance and biopharma to scientific research.'
   },
   zh: {
     title: 'FastGPT 行业 AI 场景与问题',
-    description: '按行业问题、业务场景和作业环节浏览 FastGPT 的企业 AI 实践内容。'
+    description: '按金融、生物医药、科研等应用领域，浏览具体业务场景与作业环节中的 AI 实践内容。'
   }
 } as const;
 

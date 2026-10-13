@@ -2,11 +2,13 @@ import 'server-only';
 
 import fs from 'node:fs';
 import path from 'node:path';
+import { isIndustryArea, type IndustryArea, type IndustrySummary } from '@/lib/industryListing';
 
 import {
   currentSiteVariant,
   getDefaultLocaleForSiteVariant,
   getLocaleOwner,
+  getReviewLocalePath,
   type SiteVariant
 } from '@/lib/siteRouting';
 
@@ -22,6 +24,7 @@ export type IndustryArticle = {
   slug: string;
   title: string;
   pageType: string;
+  area: IndustryArea;
   body: string;
   metaTitle: string;
   metaDescription: string;
@@ -45,7 +48,11 @@ function parseFrontMatter(source: string, sourcePath: string) {
   for (const line of match[1].split('\n')) {
     const separator = line.indexOf(':');
     if (separator <= 0) fail(sourcePath, `invalid front matter line: ${line}`);
-    metadata[line.slice(0, separator).trim()] = line.slice(separator + 1).trim();
+    const field = line.slice(0, separator).trim();
+    if (field === 'application_area' && Object.hasOwn(metadata, field)) {
+      fail(sourcePath, 'duplicate application_area; declare exactly one primary area');
+    }
+    metadata[field] = line.slice(separator + 1).trim();
   }
 
   const body = normalized.slice(match[0].length).trim();
@@ -96,6 +103,34 @@ function validateDate(value: string, field: string, sourcePath: string) {
   }
 }
 
+function resolveApplicationArea(
+  metadata: Record<string, string>,
+  slug: string,
+  sourcePath: string
+) {
+  const historicalArea = /^(?:finance|fin)-/.test(slug)
+    ? 'finance'
+    : slug.startsWith('biomed-')
+    ? 'biomed'
+    : undefined;
+  const declaredArea = metadata.application_area;
+  if (declaredArea !== undefined && !isIndustryArea(declaredArea)) {
+    fail(
+      sourcePath,
+      `unknown application_area: ${declaredArea}; expected finance, biomed, or research`
+    );
+  }
+  if (historicalArea && declaredArea && historicalArea !== declaredArea) {
+    fail(
+      sourcePath,
+      `conflicting application_area: ${declaredArea}; ${slug} belongs to ${historicalArea}`
+    );
+  }
+  const area = declaredArea || historicalArea;
+  if (!area) fail(sourcePath, 'missing application_area; expected finance, biomed, or research');
+  return area;
+}
+
 function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
   const localeRoot = path.resolve(INDUSTRY_ROOT, locale);
   if (!fs.existsSync(localeRoot)) return [];
@@ -124,6 +159,7 @@ function readLocaleArticles(locale: IndustryLocale): IndustryArticle[] {
         slug,
         title,
         pageType,
+        area: resolveApplicationArea(metadata, slug, sourcePath),
         body,
         metaTitle,
         metaDescription,
@@ -156,6 +192,18 @@ for (const article of loadedArticles) {
 }
 
 export const industryArticles = loadedArticles;
+
+export function getIndustrySummaries(locale: IndustryLocale): IndustrySummary[] {
+  return industryArticles
+    .filter((article) => article.locale === locale)
+    .map(({ slug, area, title, metaDescription }) => ({
+      slug,
+      area,
+      title,
+      description: metaDescription,
+      href: getReviewLocalePath(locale, getIndustryPath(slug))
+    }));
+}
 
 export function resolveIndustryLocale(locale: string): IndustryLocale | undefined {
   return INDUSTRY_LOCALES.includes(locale as IndustryLocale)

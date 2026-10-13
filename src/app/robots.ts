@@ -10,7 +10,11 @@ export default function robots(): MetadataRoute.Robots {
   }
 
   return {
-    rules: [{ userAgent: '*', allow: '/' }],
+    rules: [
+      { userAgent: '*', allow: '/' },
+      // Explicit groups for major AI crawlers (same policy as `*`; keep in sync with generate-robots.js).
+      ...['GPTBot', 'ClaudeBot', 'PerplexityBot'].map((userAgent) => ({ userAgent, allow: '/' }))
+    ],
     sitemap: `${currentSiteBaseUrl}/sitemap.xml`,
     host: currentSiteBaseUrl
   };

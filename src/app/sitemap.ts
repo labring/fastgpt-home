@@ -53,7 +53,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const siteLocales = getPublishedLocaleCodes();
   for (const locale of siteLocales) {
     for (const path of localizedPaths) {
-      addEntry(getOwnedLocaleUrl(locale, path));
+      // Stable routes (home/price/contact/FAQ) intentionally omit lastmod: no verifiable content
+      // date exists for them (enforced by scripts/verify-i18n-seo.js). The blog index uses its
+      // newest post date.
+      const lastModified =
+        path === '/blog'
+          ? getLatestDate(getPublishedBlogs(locale).map((post) => post.dateModified || post.date))
+          : undefined;
+      addEntry(getOwnedLocaleUrl(locale, path), lastModified);
     }
   }
 
@@ -143,15 +150,23 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 客户案例中心：仅中文，归 fastgpt.cn；URL 由 JSON 数据源驱动。
   if (currentSiteVariant === 'cn') {
-    addEntry(absoluteUrl('/'));
-    for (const solution of getAllPublishedSolutionDetails()) {
+    const solutions = getAllPublishedSolutionDetails();
+    const solutionDate = (solution: (typeof solutions)[number]) =>
+      new Date(solution.updatedAt || solution.createdAt);
+    addEntry(absoluteUrl('/'), getLatestDate(solutions.map(solutionDate)));
+    for (const solution of solutions) {
       addEntry(
         absoluteUrl(getSolutionPublicHref(solution)),
         new Date(solution.updatedAt || solution.createdAt)
       );
     }
     for (const category of getCategories()) {
-      addEntry(absoluteUrl(`/categories/${category.slug}`));
+      addEntry(
+        absoluteUrl(`/categories/${category.slug}`),
+        getLatestDate(
+          solutions.filter((solution) => solution.categorySlug === category.slug).map(solutionDate)
+        )
+      );
     }
   }
 

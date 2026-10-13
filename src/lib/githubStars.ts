@@ -40,9 +40,12 @@ async function writeStarsCache(stars: number) {
 async function fetchGitHubStars(): Promise<number> {
   const response = await fetch(GITHUB_REPO_API, {
     headers: {
-      Accept: 'application/vnd.github+json'
+      Accept: 'application/vnd.github+json',
+      ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {})
     },
-    cache: 'no-store'
+    // `no-store` opts the static-export build out of fetching, which silently forced the fallback.
+    // A build-time fetch is the intent: the value is baked into the static HTML.
+    cache: 'force-cache'
   });
 
   if (!response.ok) {

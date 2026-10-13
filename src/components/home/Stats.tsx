@@ -5,7 +5,8 @@ import * as m from 'framer-motion/m';
 import { formatGitHubStarsInThousands } from '@/lib/githubStarsDisplay';
 
 function useCountUp(end: number, decimals = 0, duration = 2000) {
-  const [value, setValue] = useState(0);
+  // Start at the real value so SSR/static HTML (and no-JS crawlers) see the number, not 0.
+  const [value, setValue] = useState(end);
   const ref = useRef<HTMLDivElement>(null);
   const hasAnimated = useRef(false);
 
@@ -14,6 +15,11 @@ function useCountUp(end: number, decimals = 0, duration = 2000) {
     if (!el) return;
     const observer = new IntersectionObserver(
       ([entry]) => {
+        if (!entry.isIntersecting && !hasAnimated.current) {
+          // Off-screen on hydration: reset so the count-up still plays when scrolled into view.
+          setValue(0);
+          return;
+        }
         if (entry.isIntersecting && !hasAnimated.current) {
           hasAnimated.current = true;
           const startTime = performance.now();

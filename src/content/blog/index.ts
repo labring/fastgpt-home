@@ -61,8 +61,17 @@ export function getPublishedBlogs(locale: string): BlogPost[] {
     .map(toBlogPost);
 }
 
+/**
+ * Draft posts (e.g. placeholder content) stay buildable by direct URL — static export needs at
+ * least one blog route — but are noindexed and excluded from listings, sitemap, API and search.
+ */
+function getAllBlogsForLocale(locale: string): BlogPost[] {
+  const { contentLocale } = resolveBlogLocale(locale);
+  return allBlogs.filter((blog) => blog.locale === contentLocale).map(toBlogPost);
+}
+
 export function getBlog(locale: string, slug: string): BlogPost | undefined {
-  return getPublishedBlogs(locale).find((blog) => blog.slug === slug);
+  return getAllBlogsForLocale(locale).find((blog) => blog.slug === slug);
 }
 
 function stableHash(value: string) {
@@ -91,7 +100,7 @@ export function getRelatedBlogs(post: BlogPost, count = 2): BlogPost[] {
 }
 
 export function getBlogSlugs(locale: string) {
-  return getPublishedBlogs(locale).map((blog) => blog.slug);
+  return getAllBlogsForLocale(locale).map((blog) => blog.slug);
 }
 
 /** Build blog routes for every supported UI locale; content falls back to English or Chinese. */

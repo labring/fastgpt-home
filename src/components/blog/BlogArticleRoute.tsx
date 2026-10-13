@@ -20,10 +20,7 @@ export default async function BlogArticleRoute({ locale, slug }: { locale: strin
   const categoryLabels = copy.allPosts.categoryLabels;
 
   return (
-    <div
-      className="home overflow-x-clip"
-      {...(post.draft ? { 'data-pagefind-ignore': 'all' } : {})}
-    >
+    <div className="home overflow-x-clip">
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} locale={locale} />
 

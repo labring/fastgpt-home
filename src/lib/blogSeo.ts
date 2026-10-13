@@ -64,7 +64,6 @@ export function getBlogMetadata(locale: string, slug: string): Metadata {
       title: blog.title,
       description: blog.summary,
       images: [image]
-    },
-    ...(blog.draft ? { robots: { index: false, follow: false } } : {})
+    }
   };
 }

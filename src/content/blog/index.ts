@@ -61,17 +61,8 @@ export function getPublishedBlogs(locale: string): BlogPost[] {
     .map(toBlogPost);
 }
 
-/**
- * Draft posts (e.g. placeholder content) stay buildable by direct URL — static export needs at
- * least one blog route — but are noindexed and excluded from listings, sitemap, API and search.
- */
-function getAllBlogsForLocale(locale: string): BlogPost[] {
-  const { contentLocale } = resolveBlogLocale(locale);
-  return allBlogs.filter((blog) => blog.locale === contentLocale).map(toBlogPost);
-}
-
 export function getBlog(locale: string, slug: string): BlogPost | undefined {
-  return getAllBlogsForLocale(locale).find((blog) => blog.slug === slug);
+  return getPublishedBlogs(locale).find((blog) => blog.slug === slug);
 }
 
 function stableHash(value: string) {
@@ -100,7 +91,7 @@ export function getRelatedBlogs(post: BlogPost, count = 2): BlogPost[] {
 }
 
 export function getBlogSlugs(locale: string) {
-  return getAllBlogsForLocale(locale).map((blog) => blog.slug);
+  return getPublishedBlogs(locale).map((blog) => blog.slug);
 }
 
 /** Build blog routes for every supported UI locale; content falls back to English or Chinese. */
@@ -108,9 +99,18 @@ export function getBlogBuildLocales(): LocaleCode[] {
   return [...supportedLocaleCodes];
 }
 
+/**
+ * Reserved slug emitted only when no post is published: static export rejects an empty
+ * generateStaticParams, and the page/route handlers already 404 for unknown slugs.
+ */
+export const EMPTY_BLOG_SENTINEL_SLUG = '__no-published-posts__';
+
 export function getBlogBuildParams(localized = true) {
   const locales = localized ? getBlogBuildLocales() : [getBlogDefaultLocale()];
-  return locales.flatMap((locale) => getBlogSlugs(locale).map((slug) => ({ lang: locale, slug })));
+  const params = locales.flatMap((locale) =>
+    getBlogSlugs(locale).map((slug) => ({ lang: locale, slug }))
+  );
+  return params.length ? params : [{ lang: locales[0], slug: EMPTY_BLOG_SENTINEL_SLUG }];
 }
 
 export function getBlogDefaultLocale(): BlogLocale {

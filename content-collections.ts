@@ -8,6 +8,8 @@ import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import { z } from 'zod';
 
+import { collectBlogTocFromMarkdown, type BlogTocItem } from './src/lib/blogToc';
+
 const BLOG_LOCALES = ['en', 'zh'] as const;
 const BLOG_CATEGORIES = ['product', 'engineering', 'industry'] as const;
 const SLUG_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
@@ -77,11 +79,13 @@ const blogs = defineCollection({
       }
     }
 
+    const toc: BlogTocItem[] = collectBlogTocFromMarkdown(document.content);
     return {
       ...document,
       locale,
       slug,
       dateModified: document.dateModified || document.date,
+      toc,
       mdx: await compileMDX(context, document, {
         remarkPlugins: [remarkMath, remarkGfm],
         rehypePlugins: [

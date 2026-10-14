@@ -6,8 +6,6 @@ import type { BlogPost } from '@/content/blog';
 import { getHostLocalePath } from '@/lib/siteRouting';
 import GradientBlobs from '@/components/home/GradientBlobs';
 
-import { getBlogCoverPath } from '../blogThumbnails';
-
 type ArticleHeaderSectionProps = {
   post: BlogPost;
   locale: string;
@@ -23,17 +21,15 @@ export default function ArticleHeaderSection({
   categoryLabel,
   formatDate
 }: ArticleHeaderSectionProps) {
-  const thumbnail = post.thumbnail || getBlogCoverPath(locale, post.slug);
-
   return (
     <section className="relative col-span-full bg-white lg:row-start-1">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-96" aria-hidden="true">
+      <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-96" aria-hidden="true">
         <div className="relative size-full">
           <GradientBlobs large />
         </div>
       </div>
 
-      <div className="relative pb-0 pt-24 md:pt-28 lg:pt-32">
+      <div className="relative z-10 pb-0 pt-24 md:pt-28 lg:pt-32">
         <Link
           href={getHostLocalePath(locale, '/blog')}
           className="inline-flex items-center gap-1 text-lg text-primary no-underline transition-colors hover:text-primary-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 md:text-xl"
@@ -103,10 +99,6 @@ export default function ArticleHeaderSection({
                 </p>
               )}
             </div>
-          </div>
-
-          <div className="relative h-[30rem] w-full overflow-hidden rounded-3xl bg-white shadow-sm ring-1 ring-black/10 md:aspect-video md:h-auto">
-            <Image src={thumbnail} alt="" fill priority sizes="100vw" className="object-cover" />
           </div>
         </header>
       </div>

@@ -3,6 +3,7 @@ import 'server-only';
 import { allAuthors, allBlogs, type Author, type Blog } from 'content-collections';
 import { normalizeLocale, supportedLocaleCodes, type LocaleCode } from '@/lib/locales';
 import { getDefaultLocaleForSiteVariant } from '@/lib/siteRouting';
+import type { BlogTocItem } from '@/lib/blogToc';
 
 export const blogLocales = ['en', 'zh'] as const;
 export type BlogLocale = (typeof blogLocales)[number];
@@ -10,7 +11,7 @@ export type BlogAuthor = Omit<Author, 'name' | 'description'> & {
   name: string;
   description: string;
 };
-export type BlogPost = Blog & { authorRecord?: BlogAuthor };
+export type BlogPost = Omit<Blog, 'toc'> & { toc: BlogTocItem[]; authorRecord?: BlogAuthor };
 export type BlogLocaleResolution = {
   requestedLocale: LocaleCode;
   contentLocale: BlogLocale;

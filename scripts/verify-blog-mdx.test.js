@@ -1,3 +1,5 @@
+const { execFileSync } = require('node:child_process');
+const path = require('node:path');
 const test = require('node:test');
 const assert = require('node:assert/strict');
 
@@ -55,4 +57,27 @@ test('blog MDX compiles math and code highlighting at build time', async () => {
   assert.match(mdx, /data-rehype-pretty-code-figure/);
   assert.match(mdx, /answer/);
   assert.match(mdx, /href:"#a-heading"/);
+});
+
+test('generated blog records expose heading TOC data with matching slugs', async () => {
+  execFileSync(process.execPath, [path.join(__dirname, 'generate-content-collections.js')], {
+    cwd: path.join(__dirname, '..'),
+    stdio: 'ignore'
+  });
+
+  const { allBlogs } = await import(
+    `../.content-collections/generated/index.js?toc-test=${Date.now()}`
+  );
+  const post = allBlogs.find((blog) => blog.slug === 'fastgpt-permission-system-design-evolution');
+
+  assert(post, 'Expected the Chinese blog fixture');
+  assert.deepEqual(post.toc.slice(0, 3), [
+    { id: '引言', title: '引言', depth: 2 },
+    { id: '1-第一性原理实体与关系的抽象', title: '1. 第一性原理：实体与关系的抽象', depth: 2 },
+    { id: '2-技术选型混合权限模型', title: '2. 技术选型：混合权限模型', depth: 2 }
+  ]);
+  assert.equal(
+    post.toc.some((item) => item.depth === 3),
+    true
+  );
 });

@@ -20,7 +20,10 @@ export type BlogCopy = {
   article: {
     back: string;
     related: string;
+    onThisPage: string;
     dateLocale: string;
+    ctaTitle?: string;
+    ctaDescription?: string;
   };
 };
 
@@ -48,7 +51,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'No more posts',
       empty: 'No posts match your filters.'
     },
-    article: { back: 'Back to blog', related: 'Related posts', dateLocale: 'en-US' }
+    article: {
+      back: 'Back to blog',
+      related: 'Related posts',
+      onThisPage: 'On this page',
+      dateLocale: 'en-US'
+    }
   },
   zh: {
     eyebrow: '博客',
@@ -65,7 +73,14 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: '已经到底啦',
       empty: '暂无匹配文章。'
     },
-    article: { back: '返回', related: '相关文章', dateLocale: 'zh-CN' }
+    article: {
+      back: '返回',
+      related: '相关文章',
+      onThisPage: '本页内容',
+      dateLocale: 'zh-CN',
+      ctaTitle: '准备好开始了吗？',
+      ctaDescription: '让你的企业知识真正被 AI 用起来'
+    }
   },
   'zh-hant': {
     eyebrow: '部落格',
@@ -82,7 +97,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: '已經到底了',
       empty: '暫無符合篩選條件的文章。'
     },
-    article: { back: '返回部落格', related: '相關文章', dateLocale: 'zh-TW' }
+    article: {
+      back: '返回部落格',
+      related: '相關文章',
+      onThisPage: '本頁內容',
+      dateLocale: 'zh-TW'
+    }
   },
   ja: {
     eyebrow: 'ブログ',
@@ -107,7 +127,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'これ以上の記事はありません',
       empty: '条件に一致する記事はありません。'
     },
-    article: { back: 'ブログに戻る', related: '関連記事', dateLocale: 'ja-JP' }
+    article: {
+      back: 'ブログに戻る',
+      related: '関連記事',
+      onThisPage: 'このページ',
+      dateLocale: 'ja-JP'
+    }
   },
   ar: {
     eyebrow: 'المدونة',
@@ -132,7 +157,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'لا توجد مقالات أخرى',
       empty: 'لا توجد مقالات تطابق عوامل التصفية.'
     },
-    article: { back: 'العودة إلى المدونة', related: 'مقالات ذات صلة', dateLocale: 'ar-SA' }
+    article: {
+      back: 'العودة إلى المدونة',
+      related: 'مقالات ذات صلة',
+      onThisPage: 'في هذه الصفحة',
+      dateLocale: 'ar-SA'
+    }
   },
   vi: {
     eyebrow: 'Blog',
@@ -157,7 +187,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'Không còn bài viết',
       empty: 'Không có bài viết phù hợp.'
     },
-    article: { back: 'Quay lại blog', related: 'Bài viết liên quan', dateLocale: 'vi-VN' }
+    article: {
+      back: 'Quay lại blog',
+      related: 'Bài viết liên quan',
+      onThisPage: 'Trong trang này',
+      dateLocale: 'vi-VN'
+    }
   },
   th: {
     eyebrow: 'บล็อก',
@@ -182,7 +217,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'ไม่มีบทความเพิ่มเติม',
       empty: 'ไม่มีบทความที่ตรงกับตัวกรอง'
     },
-    article: { back: 'กลับไปที่บล็อก', related: 'บทความที่เกี่ยวข้อง', dateLocale: 'th-TH' }
+    article: {
+      back: 'กลับไปที่บล็อก',
+      related: 'บทความที่เกี่ยวข้อง',
+      onThisPage: 'ในหน้านี้',
+      dateLocale: 'th-TH'
+    }
   },
   id: {
     eyebrow: 'Blog',
@@ -207,7 +247,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'Tidak ada artikel lagi',
       empty: 'Tidak ada artikel yang sesuai dengan filter.'
     },
-    article: { back: 'Kembali ke blog', related: 'Artikel terkait', dateLocale: 'id-ID' }
+    article: {
+      back: 'Kembali ke blog',
+      related: 'Artikel terkait',
+      onThisPage: 'Di halaman ini',
+      dateLocale: 'id-ID'
+    }
   },
   ms: {
     eyebrow: 'Blog',
@@ -232,7 +277,12 @@ const blogCopyMap: Record<LocaleCode, BlogCopy> = {
       end: 'Tiada artikel lagi',
       empty: 'Tiada artikel sepadan dengan penapis.'
     },
-    article: { back: 'Kembali ke blog', related: 'Artikel berkaitan', dateLocale: 'ms-MY' }
+    article: {
+      back: 'Kembali ke blog',
+      related: 'Artikel berkaitan',
+      onThisPage: 'Pada halaman ini',
+      dateLocale: 'ms-MY'
+    }
   }
 };
 

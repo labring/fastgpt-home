@@ -22,10 +22,10 @@ export default function ArticleHeaderSection({
   formatDate
 }: ArticleHeaderSectionProps) {
   return (
-    <section className="relative col-span-full bg-white lg:row-start-1">
+    <section className="relative col-span-full bg-white lg:col-span-8 lg:col-start-3 lg:row-start-1">
       <div className="pointer-events-none absolute inset-x-0 top-0 z-0 h-96" aria-hidden="true">
         <div className="relative size-full">
-          <GradientBlobs large />
+          <GradientBlobs />
         </div>
       </div>
 

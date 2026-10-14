@@ -18,15 +18,15 @@ export default function BlogArticleToc({ items, label, footer }: BlogArticleTocP
 
   return (
     <aside
-      className="hidden self-start lg:sticky lg:top-24 lg:h-[calc(100dvh-6rem)] lg:col-span-2 lg:col-start-11 lg:row-span-2 lg:row-start-2 lg:block"
+      className="hidden self-start lg:sticky lg:top-24 lg:h-[calc(100dvh-6rem)] lg:col-span-2 lg:col-start-11 lg:row-span-2 lg:row-start-1 lg:block"
       data-pagefind-ignore
     >
       <div className="flex h-full flex-col overflow-hidden">
-        <h2 className="mb-2 inline-flex shrink-0 items-center gap-1.5 pt-12 text-sm text-ink-muted">
+        <h2 className="mb-2 inline-flex shrink-0 items-center gap-1.5 pt-8 text-sm text-ink-muted">
           <Text className="size-4" aria-hidden="true" />
           {label}
         </h2>
-        <div className="min-h-0 flex-1 overflow-y-auto pe-2">
+        <div className="min-h-0 flex-1 overflow-y-auto pe-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <nav aria-label={label}>
             <DesktopTocItems items={items} activeId={activeId} />
           </nav>

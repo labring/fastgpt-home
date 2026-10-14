@@ -179,7 +179,7 @@ export default function GradientBlobs({
             filter: 'blur(80px)',
             opacity,
             zIndex: 0,
-            mixBlendMode: 'color-dodge',
+            mixBlendMode: 'multiply',
             background: `radial-gradient(circle, ${color} 0%, ${color}00 70%)`,
             ...(large ? { animation: 'aurora-hue 20s ease-in-out infinite' } : {})
           }}

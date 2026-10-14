@@ -1,5 +1,6 @@
 import 'server-only';
 
+import { createHash } from 'node:crypto';
 import fs from 'node:fs';
 import path from 'node:path';
 import { isIndustryArea, type IndustryArea, type IndustrySummary } from '@/lib/industryListing';
@@ -192,6 +193,37 @@ for (const article of loadedArticles) {
 }
 
 export const industryArticles = loadedArticles;
+
+const relatedGroups = new Map<
+  string,
+  { articles: IndustryArticle[]; positions: Map<string, number> }
+>();
+// Order each pool once for stable recommendations without per-page sorting.
+for (const { article } of loadedArticles
+  .map((article) => ({
+    article,
+    rank: createHash('sha256').update(article.slug).digest('hex')
+  }))
+  .sort(
+    (left, right) =>
+      left.rank.localeCompare(right.rank) || left.article.slug.localeCompare(right.article.slug)
+  )) {
+  const key = `${article.locale}|${article.area}`;
+  const group = relatedGroups.get(key) || { articles: [], positions: new Map<string, number>() };
+  group.positions.set(article.slug, group.articles.length);
+  group.articles.push(article);
+  relatedGroups.set(key, group);
+}
+
+export function getRelatedIndustryArticles(article: IndustryArticle): IndustryArticle[] {
+  const group = relatedGroups.get(`${article.locale}|${article.area}`);
+  const position = group?.positions.get(article.slug);
+  if (!group || position === undefined) return [];
+  return Array.from(
+    { length: Math.min(3, group.articles.length - 1) },
+    (_, index) => group.articles[(position + index + 1) % group.articles.length]
+  );
+}
 
 export function getIndustrySummaries(locale: IndustryLocale): IndustrySummary[] {
   return industryArticles

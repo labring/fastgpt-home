@@ -65,3 +65,18 @@ Local snapshot navigation prefetches for unrelated pages returned 404 because th
 ## Verification boundaries
 
 Browser checks cover Chrome desktop and its responsive device emulation. Accessibility checks cover keyboard operation and rendered ARIA semantics; spoken output in a screen reader and physical mobile devices were not exercised. Production deployment and production-network latency remain release-stage checks.
+
+## Related reading follow-up (2026-10-14)
+
+Chinese and English problem, scenario, and workflow articles now render a localized Continue reading section after the body. Each article links to up to three distinct published articles in its own locale and application area, excluding itself. Small pools show their available candidates; empty pools hide the section.
+
+The loader orders each locale/area pool by a SHA-256 rank of its slugs and takes the next three entries cyclically. A fixed collection produces stable recommendations across reloads, builds, source enumeration, and filename changes. Adding or removing articles can update the selection. Every article in a pool with at least two entries receives an incoming recommendation. The shared article component reuses existing related-card styles and emits ordinary links into static HTML.
+
+Regression fixtures exercise all three page types, locale/area isolation, zero through three candidates, uniqueness, source-order stability, deletion, incoming-link coverage, localized labels, and owner/preview paths. Completed-export checks read every Industry article and compare its rendered recommendations with the production loader.
+
+- China production build and i18n SEO verification passed. Completed-export checks passed all 15 applicable tests, covering 16,057 articles and 48,171 related links.
+- Chinese Chrome checks passed for all three page types. Reload preserved the same recommendations; keyboard Tab exposed visible focus and Enter opened the selected article. At 320 CSS pixels, the cards retained readable wrapped titles and stayed within the viewport.
+- International production build and i18n SEO verification passed. Completed-export checks passed all 15 applicable tests, covering 14,678 articles and 44,034 related links. Its first build attempt stopped in the existing Google Fonts loader; an unchanged retry completed successfully.
+- English Chrome checks passed at desktop and 320 CSS pixels: localized labels and long titles rendered correctly, reload retained the three recommendations, and selecting a card opened its article.
+- Strict TypeScript, repository ESLint, and the React server condition check passed. Standards and specification reviews found no actionable issues in the follow-up.
+- The final full suite passed 310 tests with zero failures; both conditional checks were exercised separately through the completed-export and React server runs above.

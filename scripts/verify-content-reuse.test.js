@@ -349,6 +349,137 @@ Reader content.
 `;
 }
 
+function industryRelatedLinks(html) {
+  const section = html.match(
+    /<section\b[^>]*aria-labelledby="industry-related-title"[^>]*>([\s\S]*?)<\/section>/
+  )?.[1];
+  return section === undefined
+    ? null
+    : [...section.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1]);
+}
+
+test('Industry recommendations are stable, distinct, and bounded by locale and application area', () => {
+  const files = { zh: {}, en: {} };
+  for (const locale of ['zh', 'en']) {
+    for (let index = 0; index < 8; index++) {
+      const slug = `finance-${index}`;
+      files[locale][`${slug}.md`] = industrySource(slug).replace(
+        'page_type: Scenario',
+        `page_type: ${['Problem', 'Scenario', 'Workflow'][index % 3]}`
+      );
+    }
+    for (let index = 0; index < (locale === 'zh' ? 3 : 2); index++) {
+      const slug = `biomed-${index}`;
+      files[locale][`${slug}.md`] = industrySource(slug);
+    }
+    files[locale]['research.md'] = industrySource('research', 'research');
+  }
+  const content = industryFixture(files)('@/lib/industryContent');
+  const identities = (articles) => articles.map(({ locale, slug }) => `${locale}/${slug}`);
+  const recommendations = (module) =>
+    Object.fromEntries(
+      module.industryArticles.map((article) => [
+        `${article.locale}/${article.slug}`,
+        identities(module.getRelatedIndustryArticles(article))
+      ])
+    );
+  const original = recommendations(content);
+  const linked = new Set();
+  for (const article of content.industryArticles) {
+    const group = content.industryArticles.filter(
+      (candidate) => candidate.locale === article.locale && candidate.area === article.area
+    );
+    const related = content.getRelatedIndustryArticles(article);
+    assert.equal(related.length, Math.min(3, group.length - 1));
+    assert.equal(new Set(identities(related)).size, related.length);
+    assert(related.every((candidate) => group.includes(candidate) && candidate !== article));
+    assert.deepEqual(identities(content.getRelatedIndustryArticles(article)), identities(related));
+    identities(related).forEach((identity) => linked.add(identity));
+  }
+  assert.deepEqual(
+    [...linked].sort(),
+    identities(content.industryArticles.filter((article) => article.area !== 'research')).sort()
+  );
+  const renamedFiles = Object.fromEntries(
+    Object.entries(files).map(([locale, sources]) => [
+      locale,
+      Object.fromEntries(
+        Object.values(sources)
+          .reverse()
+          .map((source, index) => [`${index}.md`, source])
+      )
+    ])
+  );
+  assert.deepEqual(
+    recommendations(industryFixture(renamedFiles)('@/lib/industryContent')),
+    original
+  );
+  delete files.en['finance-2.md'];
+  const updated = industryFixture(files)('@/lib/industryContent');
+  for (const article of updated.industryArticles.filter((entry) => entry.locale === 'en')) {
+    assert(
+      updated.getRelatedIndustryArticles(article).every((entry) => entry.slug !== 'finance-2')
+    );
+  }
+});
+
+test('Industry article HTML includes localized related links for all page types and hides empty pools', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  const files = { zh: {}, en: {} };
+  for (const locale of ['zh', 'en']) {
+    for (const [index, pageType] of ['Problem', 'Scenario', 'Workflow', 'Problem'].entries()) {
+      const slug = `finance-${index}`;
+      files[locale][`${slug}.md`] = industrySource(slug, undefined, `Article ${index}`).replace(
+        'page_type: Scenario',
+        `page_type: ${pageType}`
+      );
+    }
+    files[locale]['research.md'] = industrySource('research', 'research');
+  }
+  const previous = process.env.NEXT_PUBLIC_SITE_VARIANT;
+  try {
+    for (const variant of ['cn', 'io', 'preview']) {
+      process.env.NEXT_PUBLIC_SITE_VARIANT = variant;
+      const load = industryFixture(files, {
+        '@/components/guide/GuideArticlePage.module.css': {},
+        '@/components/tech-center/TechArticlePage.module.css': {},
+        '@/components/ContentSidebarCta': () => null,
+        '@/components/tech-center/MarkdownContent': {
+          __esModule: true,
+          default: () => React.createElement('p', null, 'Reader content.'),
+          getMarkdownHeadings: () => []
+        }
+      });
+      const content = load('@/lib/industryContent');
+      const Page = load('@/components/industry/IndustryArticlePage').default;
+      const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
+      for (const locale of locales) {
+        for (const article of content.industryArticles.filter((entry) => entry.locale === locale)) {
+          const html = renderToStaticMarkup(
+            React.createElement(Page, { article, locale, cta: {} })
+          );
+          if (article.area === 'research') {
+            assert.equal(industryRelatedLinks(html), null);
+            continue;
+          }
+          const prefix = variant === 'preview' ? `/${locale}/industry/` : '/industry/';
+          assert.deepEqual(
+            industryRelatedLinks(html),
+            content.getRelatedIndustryArticles(article).map(({ slug }) => `${prefix}${slug}`)
+          );
+          assert.equal(industryRelatedLinks(html).length, 3);
+          assert.match(html, locale === 'zh' ? /继续阅读/ : /Continue reading/);
+          assert(html.indexOf('Reader content.') < html.indexOf('industry-related-title'));
+        }
+      }
+    }
+  } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_SITE_VARIANT;
+    else process.env.NEXT_PUBLIC_SITE_VARIANT = previous;
+  }
+});
+
 test('Industry classifies historical batches and explicitly authored research by workflow', () => {
   const files = {
     en: {
@@ -638,11 +769,22 @@ test(
       new URL(url).pathname.startsWith('/industry/')
     );
     assert.deepEqual(sitemap.sort(), expected.map(({ slug }) => `${canonical}/${slug}`).sort());
+    let relatedLinkCount = 0;
     for (const entry of summaries) {
       assert(
         fs.existsSync(path.join(out, `${entry.href}.html`)),
         `Missing article export: ${entry.href}`
       );
+      const articleHtml = fs.readFileSync(path.join(out, `${entry.href}.html`), 'utf8');
+      const related = content.getRelatedIndustryArticles(
+        content.getIndustryArticle(locale, entry.slug)
+      );
+      assert.deepEqual(
+        industryRelatedLinks(articleHtml),
+        related.length ? related.map(({ slug }) => content.getIndustryPath(slug)) : null,
+        `Related links in ${entry.href}`
+      );
+      relatedLinkCount += related.length;
     }
     for (const area of ['finance', 'biomed', 'research']) {
       const group = summaries.filter((entry) => entry.area === area);
@@ -667,7 +809,8 @@ test(
         jsonBytes: json.length,
         gzipBytes: zlib.gzipSync(json).length,
         brotliBytes: zlib.brotliCompressSync(json).length,
-        htmlBytes: Buffer.byteLength(html)
+        htmlBytes: Buffer.byteLength(html),
+        relatedLinkCount
       })
     );
   }

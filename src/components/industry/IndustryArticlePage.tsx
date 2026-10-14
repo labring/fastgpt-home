@@ -78,14 +78,16 @@ export default function IndustryArticlePage({
           </time>
         </header>
         <div className={`${techStyles.layout} ${guideStyles.layout}`}>
-          <article className={`${techStyles.article} ${guideStyles.article}`}>
-            <MarkdownContent
-              locale={locale}
-              blocks={blocks}
-              markdown={article.body}
-              title={article.title}
-              headingIdPrefix="industry-section"
-            />
+          <div className="min-w-0">
+            <article className={`${techStyles.article} ${guideStyles.article}`}>
+              <MarkdownContent
+                locale={locale}
+                blocks={blocks}
+                markdown={article.body}
+                title={article.title}
+                headingIdPrefix="industry-section"
+              />
+            </article>
             {relatedArticles.length > 0 && (
               <section className={techStyles.related} aria-labelledby="industry-related-title">
                 <div className={techStyles.relatedHeader}>
@@ -109,7 +111,7 @@ export default function IndustryArticlePage({
                 </div>
               </section>
             )}
-          </article>
+          </div>
           <aside className={guideStyles.sidebar} aria-label={cta.title}>
             <ContentSidebarCta
               locale={locale}

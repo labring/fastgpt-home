@@ -80,3 +80,11 @@ Regression fixtures exercise all three page types, locale/area isolation, zero t
 - English Chrome checks passed at desktop and 320 CSS pixels: localized labels and long titles rendered correctly, reload retained the three recommendations, and selecting a card opened its article.
 - Strict TypeScript, repository ESLint, and the React server condition check passed. Standards and specification reviews found no actionable issues in the follow-up.
 - The final full suite passed 310 tests with zero failures; both conditional checks were exercised separately through the completed-export and React server runs above.
+
+### Placement adjustment
+
+The related-reading section sits outside the white body card, directly below it in the same left column. One width-constrained wrapper preserves the two-column layout and the existing responsive sidebar order. The shared rendering regression requires the article's closing tag to precede the related section for every supported page type, locale, and site variant.
+
+Both production builds, i18n SEO checks, and completed-export regressions passed again after this adjustment (15 applicable tests per variant, 92,205 related links). Strict TypeScript and component ESLint passed. Chrome desktop and 320 CSS-pixel checks confirmed the separate recommendation area, column width, and readable Chinese and English titles.
+
+This markup-only follow-up used the focused content-reuse suite and completed-export checks. The full-suite and independent-review results above apply to `b6641d58e`, before this placement adjustment. An initial focused test process exited without an individual assertion report while TypeScript ran concurrently; its isolated rerun passed all 14 applicable tests.

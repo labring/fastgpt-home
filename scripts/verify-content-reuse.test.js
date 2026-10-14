@@ -471,6 +471,7 @@ test('Industry article HTML includes localized related links for all page types 
           assert.equal(industryRelatedLinks(html).length, 3);
           assert.match(html, locale === 'zh' ? /继续阅读/ : /Continue reading/);
           assert(html.indexOf('Reader content.') < html.indexOf('industry-related-title'));
+          assert(html.indexOf('</article>') < html.indexOf('industry-related-title'));
         }
       }
     }

@@ -9,6 +9,7 @@ import type { IndustryLocale } from '@/lib/industryContent';
 import {
   INDUSTRY_AREAS,
   INDUSTRY_PAGE_SIZE,
+  getIndustryAreaCounts,
   getIndustryBrowseHref,
   getIndustryListing,
   isIndustrySummaryIndex,
@@ -68,6 +69,7 @@ export default function IndustryBrowser({
   const [failed, setFailed] = useState(false);
   const [attempt, setAttempt] = useState(0);
   const resultsHeading = useRef<HTMLHeadingElement>(null);
+  const focusResults = useRef(false);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -77,7 +79,7 @@ export default function IndustryBrowser({
         return response.json() as Promise<unknown>;
       })
       .then((value) => {
-        if (!isIndustrySummaryIndex(value, counts, articlePrefix)) {
+        if (!isIndustrySummaryIndex(value, articlePrefix)) {
           throw new Error('Industry summary projection mismatch');
         }
         if (!controller.signal.aborted) setEntries(value);
@@ -86,7 +88,7 @@ export default function IndustryBrowser({
         if (!controller.signal.aborted) setFailed(true);
       });
     return () => controller.abort();
-  }, [indexPath, counts, articlePrefix, attempt]);
+  }, [indexPath, articlePrefix, attempt]);
 
   useEffect(() => {
     if (!entries) return;
@@ -94,13 +96,20 @@ export default function IndustryBrowser({
       const url = new URL(window.location.href);
       const state = getIndustryListing(entries, url.searchParams);
       const href = getIndustryBrowseHref(url, state);
-      window.history.replaceState(window.history.state, '', href);
+      window.history.replaceState(null, '', href);
       setQuery(new URL(href, url).search);
     };
     restore();
     window.addEventListener('popstate', restore);
     return () => window.removeEventListener('popstate', restore);
   }, [entries]);
+
+  useEffect(() => {
+    if (!focusResults.current) return;
+    focusResults.current = false;
+    resultsHeading.current?.focus({ preventScroll: true });
+    resultsHeading.current?.scrollIntoView({ block: 'start' });
+  }, [query]);
 
   const listing = useMemo(
     () =>
@@ -115,7 +124,13 @@ export default function IndustryBrowser({
           },
     [entries, query, counts.all, initialEntries]
   );
-  const areas = (Object.keys(INDUSTRY_AREAS) as IndustryArea[]).filter((area) => counts[area] > 0);
+  const currentCounts = useMemo(
+    () => (entries ? getIndustryAreaCounts(entries) : counts),
+    [entries, counts]
+  );
+  const areas = (Object.keys(INDUSTRY_AREAS) as IndustryArea[]).filter(
+    (area) => currentCounts[area] > 0
+  );
   const selectedLabel =
     listing.industry === 'all' ? t.all : INDUSTRY_AREAS[listing.industry][locale];
   const pages = [...new Set([1, listing.page - 1, listing.page, listing.page + 1, listing.pages])]
@@ -126,9 +141,9 @@ export default function IndustryBrowser({
     const url = new URL(window.location.href);
     const href = getIndustryBrowseHref(url, state);
     if (href === `${url.pathname}${url.search}${url.hash}`) return;
-    window.history.pushState(window.history.state, '', href);
+    window.history.pushState(null, '', href);
+    focusResults.current = true;
     setQuery(new URL(href, url).search);
-    resultsHeading.current?.focus({ preventScroll: true });
   }
 
   return (

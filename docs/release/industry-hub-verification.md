@@ -88,3 +88,15 @@ The related-reading section sits outside the white body card, directly below it 
 Both production builds, i18n SEO checks, and completed-export regressions passed again after this adjustment (15 applicable tests per variant, 92,205 related links). Strict TypeScript and component ESLint passed. Chrome desktop and 320 CSS-pixel checks confirmed the separate recommendation area, column width, and readable Chinese and English titles.
 
 This markup-only follow-up used the focused content-reuse suite and completed-export checks. The full-suite and independent-review results above apply to `b6641d58e`, before this placement adjustment. An initial focused test process exited without an individual assertion report while TypeScript ran concurrently; its isolated rerun passed all 14 applicable tests.
+
+## PR review corrections (2026-10-15)
+
+Summary validation checks field types, supported areas, unique slugs, and owned article paths independently of the cached HTML's counts. After loading, the full index supplies available areas, counts, and pagination. This accepts valid publication snapshots with additions, deletions, or an empty collection while retaining the first-page fallback for invalid responses.
+
+Both native History API calls pass `null`, allowing Next.js to preserve its internal history fields and synchronize Router state. User-initiated filtering and pagination focus and scroll the results heading after the updated list commits; its 84px scroll margin follows the existing fixed-navigation offset. Back/Forward retain browser scroll restoration.
+
+- The focused content-reuse suite passed all 15 applicable tests. New assertions cover changed snapshot sizes, new/removed areas, empty results, and malformed or unsafe entries. Strict TypeScript and repository ESLint passed.
+- A temporary Next.js 16.3.2 route rendered the production `IndustryBrowser` with a visible `useSearchParams()` observer. An initial count of 25 accepted 26 summaries and exposed the new Research area. A malformed response retained the twelve initial links and Retry; retrying 24 valid summaries restored browsing, removed unavailable Research, and clamped the requested page to two.
+- The observer matched the address bar after query normalization, filtering, pagination, and Back. Desktop and 320 CSS-pixel keyboard pagination brought the result heading, its focus outline, and the first new card into view. Back restored the previous page's bottom position.
+- The temporary route and index were removed before the production build. These checks used the real Next Router and production component with compact data; physical devices and spoken screen-reader output remain outside this validation.
+- The International production build, i18n SEO check, and all 16 applicable completed-export regressions passed. Export coverage includes 14,678 Industry articles and 44,034 related links. The China build and full-suite results above apply to their recorded earlier revisions; this correction used the focused suite, shared-component browser checks, and International export.

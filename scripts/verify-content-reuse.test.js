@@ -602,17 +602,25 @@ test('Industry summaries expose the complete locale collection with stable pages
     getIndustryBrowseHref(url, { industry: 'all', page: 1 }),
     '/industry?utm_source=test#results'
   );
-  const counts = getIndustryAreaCounts(zh);
-  assert(isIndustrySummaryIndex(zh, counts, '/industry/'));
+  assert(isIndustrySummaryIndex(zh, '/industry/'));
+  for (const valid of [
+    [],
+    zh.slice(1),
+    [...zh, { ...zh[0], slug: 'new', href: '/industry/new' }]
+  ]) {
+    assert(isIndustrySummaryIndex(valid, '/industry/'), 'Allow a different publication snapshot');
+  }
   for (const invalid of [
     null,
     {},
-    zh.slice(1),
     [...zh.slice(1), zh[1]],
     [{ ...zh[0], href: 'javascript:alert(1)' }, ...zh.slice(1)],
-    [{ ...zh[0], area: 'unknown' }, ...zh.slice(1)]
+    [{ ...zh[0], href: `/en/industry/${zh[0].slug}` }, ...zh.slice(1)],
+    [{ ...zh[0], area: 'unknown' }, ...zh.slice(1)],
+    [{ ...zh[0], title: ' ' }, ...zh.slice(1)],
+    [{ ...zh[0], description: null }, ...zh.slice(1)]
   ]) {
-    assert.equal(isIndustrySummaryIndex(invalid, counts, '/industry/'), false);
+    assert.equal(isIndustrySummaryIndex(invalid, '/industry/'), false);
   }
 });
 
@@ -646,6 +654,53 @@ test('Industry hub renders twelve useful links and accessible browsing controls 
     assert.match(html, /27/);
     assert.match(html, locale === 'en' ? /Application area/ : /应用领域/);
     assert.doesNotMatch(html, /<button[^>]*>(?:Scientific Research|科研)<\/button>/);
+  }
+});
+
+test('Industry browsing uses loaded snapshot counts and areas across publication changes', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  let entries;
+  const load = loader({
+    // Seed the completed-fetch state while retaining React's rendering and other hooks.
+    react: {
+      ...React,
+      useState: (initial) => React.useState(initial === null ? entries : initial)
+    },
+    '@/components/guide/GuideHubPage.module.css': {},
+    '@/components/industry/IndustryBrowser.module.css': {}
+  });
+  const Browser = load('@/components/industry/IndustryBrowser').default;
+  const summary = (index, area = 'finance') => ({
+    slug: `${area}-${index}`,
+    area,
+    title: `Workflow ${index}`,
+    description: 'Practical workflow guidance.',
+    href: `/industry/${area}-${index}`
+  });
+  const initial = Array.from({ length: 25 }, (_, index) => summary(index));
+  const newer = [...initial, summary(25, 'research')];
+  const older = initial.slice(0, 24);
+  for (const [snapshot, pages] of [
+    [newer, 3],
+    [older, 2],
+    [[], 1]
+  ]) {
+    entries = snapshot;
+    const html = renderToStaticMarkup(
+      React.createElement(Browser, {
+        locale: 'en',
+        initialEntries: initial.slice(0, 12),
+        counts: { all: 25, finance: 25, biomed: 0, research: 0 },
+        indexPath: '/industry-index/en/index.json',
+        articlePrefix: '/industry/'
+      })
+    );
+    assert(html.includes(`${entries.length} articles · Page 1 of ${pages}`));
+    assert.equal(html.includes('>Scientific Research</button>'), entries === newer);
+    assert.equal(html.includes('>Finance</button>'), entries.length > 0);
+    assert.equal((html.match(/href="\/industry\//g) || []).length, Math.min(entries.length, 12));
+    assert.doesNotMatch(html, /Loading the complete collection|could not be loaded/);
   }
 });
 

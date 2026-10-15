@@ -60,13 +60,12 @@ export function getIndustryBrowseHref(url: URL, state: IndustryBrowseState) {
   return `${next.pathname}${next.search}${next.hash}`;
 }
 
-/** Reject stale or malformed projections while retaining the server-rendered first page. */
+/** Validate summaries independently of the cached HTML's publication snapshot. */
 export function isIndustrySummaryIndex(
   value: unknown,
-  expectedCounts: IndustryAreaCounts,
   articlePrefix: string
 ): value is IndustrySummary[] {
-  if (!Array.isArray(value) || value.length !== expectedCounts.all) return false;
+  if (!Array.isArray(value)) return false;
   const slugs = new Set<string>();
   for (const entry of value) {
     if (
@@ -86,8 +85,5 @@ export function isIndustrySummaryIndex(
       return false;
     slugs.add(entry.slug);
   }
-  const counts = getIndustryAreaCounts(value);
-  return (Object.keys(counts) as IndustrySelection[]).every(
-    (area) => counts[area] === expectedCounts[area]
-  );
+  return true;
 }

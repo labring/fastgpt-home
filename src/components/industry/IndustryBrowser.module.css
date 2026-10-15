@@ -42,6 +42,7 @@
 
 .heading {
   margin: 26px 0 8px;
+  scroll-margin-top: 84px;
   font-size: 1.7rem;
   font-weight: 600;
 }

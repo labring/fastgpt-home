@@ -256,6 +256,7 @@ test('Industry uses the production loader for identities, dates, and owner proje
 title: Example
 slug: /${locale}/industry/${slug}
 page_type: Scenario
+application_area: research
 meta_title: Example title
 meta_description: Example description
 keywords: useful, keywords
@@ -314,3 +315,559 @@ Reader content.
   files.en['shared.md'] = article('en', 'shared', '2026-02-30');
   assert.throws(() => read()('@/lib/industryContent'), /invalid date_modified/);
 });
+
+function industryFixture(files, overrides = {}) {
+  return loader({
+    'node:fs': {
+      ...fs,
+      existsSync: () => true,
+      readdirSync: (directory) =>
+        Object.keys(files[path.basename(directory)] || {}).map((name) => ({
+          name,
+          isFile: () => true
+        })),
+      readFileSync: (file) => files[path.basename(path.dirname(file))][path.basename(file)]
+    },
+    ...overrides
+  });
+}
+
+function industrySource(slug, area, title = 'Example') {
+  return `---
+title: ${title}
+slug: /industry/${slug}
+page_type: Scenario
+${area === undefined ? '' : `application_area: ${area}\n`}meta_title: ${title}
+meta_description: Practical workflow guidance.
+date_published: 2026-09-15
+date_modified: 2026-09-26
+---
+
+# ${title}
+
+Reader content.
+`;
+}
+
+function industryRelatedLinks(html) {
+  const section = html.match(
+    /<section\b[^>]*aria-labelledby="industry-related-title"[^>]*>([\s\S]*?)<\/section>/
+  )?.[1];
+  return section === undefined
+    ? null
+    : [...section.matchAll(/<a\b[^>]*href="([^"]+)"/g)].map((match) => match[1]);
+}
+
+test('Industry recommendations are stable, distinct, and bounded by locale and application area', () => {
+  const files = { zh: {}, en: {} };
+  for (const locale of ['zh', 'en']) {
+    for (let index = 0; index < 8; index++) {
+      const slug = `finance-${index}`;
+      files[locale][`${slug}.md`] = industrySource(slug).replace(
+        'page_type: Scenario',
+        `page_type: ${['Problem', 'Scenario', 'Workflow'][index % 3]}`
+      );
+    }
+    for (let index = 0; index < (locale === 'zh' ? 3 : 2); index++) {
+      const slug = `biomed-${index}`;
+      files[locale][`${slug}.md`] = industrySource(slug);
+    }
+    files[locale]['research.md'] = industrySource('research', 'research');
+  }
+  const content = industryFixture(files)('@/lib/industryContent');
+  const identities = (articles) => articles.map(({ locale, slug }) => `${locale}/${slug}`);
+  const recommendations = (module) =>
+    Object.fromEntries(
+      module.industryArticles.map((article) => [
+        `${article.locale}/${article.slug}`,
+        identities(module.getRelatedIndustryArticles(article))
+      ])
+    );
+  const original = recommendations(content);
+  const linked = new Set();
+  for (const article of content.industryArticles) {
+    const group = content.industryArticles.filter(
+      (candidate) => candidate.locale === article.locale && candidate.area === article.area
+    );
+    const related = content.getRelatedIndustryArticles(article);
+    assert.equal(related.length, Math.min(3, group.length - 1));
+    assert.equal(new Set(identities(related)).size, related.length);
+    assert(related.every((candidate) => group.includes(candidate) && candidate !== article));
+    assert.deepEqual(identities(content.getRelatedIndustryArticles(article)), identities(related));
+    identities(related).forEach((identity) => linked.add(identity));
+  }
+  assert.deepEqual(
+    [...linked].sort(),
+    identities(content.industryArticles.filter((article) => article.area !== 'research')).sort()
+  );
+  const renamedFiles = Object.fromEntries(
+    Object.entries(files).map(([locale, sources]) => [
+      locale,
+      Object.fromEntries(
+        Object.values(sources)
+          .reverse()
+          .map((source, index) => [`${index}.md`, source])
+      )
+    ])
+  );
+  assert.deepEqual(
+    recommendations(industryFixture(renamedFiles)('@/lib/industryContent')),
+    original
+  );
+  delete files.en['finance-2.md'];
+  const updated = industryFixture(files)('@/lib/industryContent');
+  for (const article of updated.industryArticles.filter((entry) => entry.locale === 'en')) {
+    assert(
+      updated.getRelatedIndustryArticles(article).every((entry) => entry.slug !== 'finance-2')
+    );
+  }
+});
+
+test('Industry article HTML includes localized related links for all page types and hides empty pools', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  const files = { zh: {}, en: {} };
+  for (const locale of ['zh', 'en']) {
+    for (const [index, pageType] of ['Problem', 'Scenario', 'Workflow', 'Problem'].entries()) {
+      const slug = `finance-${index}`;
+      files[locale][`${slug}.md`] = industrySource(slug, undefined, `Article ${index}`).replace(
+        'page_type: Scenario',
+        `page_type: ${pageType}`
+      );
+    }
+    files[locale]['research.md'] = industrySource('research', 'research');
+  }
+  const previous = process.env.NEXT_PUBLIC_SITE_VARIANT;
+  try {
+    for (const variant of ['cn', 'io', 'preview']) {
+      process.env.NEXT_PUBLIC_SITE_VARIANT = variant;
+      const load = industryFixture(files, {
+        '@/components/guide/GuideArticlePage.module.css': {},
+        '@/components/tech-center/TechArticlePage.module.css': {},
+        '@/components/ContentSidebarCta': () => null,
+        '@/components/tech-center/MarkdownContent': {
+          __esModule: true,
+          default: () => React.createElement('p', null, 'Reader content.'),
+          getMarkdownHeadings: () => []
+        }
+      });
+      const content = load('@/lib/industryContent');
+      const Page = load('@/components/industry/IndustryArticlePage').default;
+      const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
+      for (const locale of locales) {
+        for (const article of content.industryArticles.filter((entry) => entry.locale === locale)) {
+          const html = renderToStaticMarkup(
+            React.createElement(Page, { article, locale, cta: {} })
+          );
+          if (article.area === 'research') {
+            assert.equal(industryRelatedLinks(html), null);
+            continue;
+          }
+          const prefix = variant === 'preview' ? `/${locale}/industry/` : '/industry/';
+          assert.deepEqual(
+            industryRelatedLinks(html),
+            content.getRelatedIndustryArticles(article).map(({ slug }) => `${prefix}${slug}`)
+          );
+          assert.equal(industryRelatedLinks(html).length, 3);
+          assert.match(html, locale === 'zh' ? /继续阅读/ : /Continue reading/);
+          assert(html.indexOf('Reader content.') < html.indexOf('industry-related-title'));
+          assert(html.indexOf('</article>') < html.indexOf('industry-related-title'));
+        }
+      }
+    }
+  } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_SITE_VARIANT;
+    else process.env.NEXT_PUBLIC_SITE_VARIANT = previous;
+  }
+});
+
+test('Industry classifies historical batches and explicitly authored research by workflow', () => {
+  const files = {
+    en: {
+      'finance-pharma.md': industrySource(
+        'finance-pharma',
+        undefined,
+        'Pharmaceutical equity research'
+      ),
+      'fin-report.md': industrySource('fin-report'),
+      'biomed-rd.md': industrySource('biomed-rd'),
+      'university.md': industrySource('university', 'research')
+    }
+  };
+  const content = industryFixture(files)('@/lib/industryContent');
+  assert.deepEqual(
+    content.industryArticles.map(({ slug, area }) => [slug, area]),
+    [
+      ['biomed-rd', 'biomed'],
+      ['fin-report', 'finance'],
+      ['finance-pharma', 'finance'],
+      ['university', 'research']
+    ]
+  );
+  for (const [slug, area, error] of [
+    ['new-workflow', undefined, /missing application_area/],
+    ['new-workflow', 'unknown', /unknown application_area/],
+    ['finance-pharma', 'biomed', /conflicting application_area/],
+    ['fin-report', 'research', /conflicting application_area/],
+    ['biomed-rd', 'finance', /conflicting application_area/]
+  ]) {
+    assert.throws(
+      () =>
+        industryFixture({ en: { 'invalid.md': industrySource(slug, area) } })(
+          '@/lib/industryContent'
+        ),
+      (failure) => /invalid\.md/.test(failure.message) && error.test(failure.message)
+    );
+  }
+  assert.throws(
+    () =>
+      industryFixture({
+        en: {
+          'duplicate-area.md': industrySource('university', 'finance\napplication_area: research')
+        }
+      })('@/lib/industryContent'),
+    /duplicate application_area/
+  );
+});
+
+test('Industry summaries expose the complete locale collection with stable pages and normalized URLs', () => {
+  const financeSlugs = Array.from(
+    { length: 25 },
+    (_, index) => `finance-${String(index + 1).padStart(2, '0')}`
+  );
+  const files = {
+    zh: Object.fromEntries(financeSlugs.map((slug) => [`${slug}.md`, industrySource(slug)])),
+    en: {
+      'finance-01.md': industrySource('finance-01'),
+      'biomed-rd.md': industrySource('biomed-rd')
+    }
+  };
+  files.zh['biomed-rd.md'] = industrySource('biomed-rd');
+  files.zh['university.md'] = industrySource('university', 'research');
+  const load = industryFixture(files);
+  const content = load('@/lib/industryContent');
+  const {
+    getIndustryListing,
+    getIndustryAreaCounts,
+    getIndustryBrowseHref,
+    isIndustrySummaryIndex
+  } = load('@/lib/industryListing');
+  const zh = content.getIndustrySummaries('zh');
+  const en = content.getIndustrySummaries('en');
+  assert.deepEqual(getIndustryAreaCounts(zh), { all: 27, finance: 25, biomed: 1, research: 1 });
+  assert.deepEqual(getIndustryAreaCounts(en), { all: 2, finance: 1, biomed: 1, research: 0 });
+  assert.deepEqual(Object.keys(zh[0]).sort(), ['area', 'description', 'href', 'slug', 'title']);
+  assert.equal(zh[0].href, '/industry/biomed-rd');
+  assert.equal(zh[0].description, 'Practical workflow guidance.');
+  const list = (query, entries = zh) => getIndustryListing(entries, new URLSearchParams(query));
+  assert.deepEqual(
+    list('').entries.map(({ slug }) => slug),
+    ['biomed-rd', ...financeSlugs.slice(0, 11)]
+  );
+  const traversal = [1, 2, 3].map((page) => list(`industry=finance&page=${page}`));
+  assert.deepEqual(
+    traversal.map(({ entries }) => entries.length),
+    [12, 12, 1]
+  );
+  assert.deepEqual(
+    traversal.flatMap(({ entries }) => entries.map(({ slug }) => slug)),
+    financeSlugs
+  );
+  assert.equal(traversal[2].total, 25);
+  assert.equal(traversal[2].pages, 3);
+  for (const page of ['', 'bad', '0', '-1', '1.5', 'NaN', 'Infinity', '1e2', '+2', ' 2']) {
+    assert.equal(list(`industry=finance&page=${encodeURIComponent(page)}`).page, 1, page);
+  }
+  for (const page of ['4', '999999999999999999999999999999999999']) {
+    assert.equal(list(`industry=finance&page=${page}`).page, 3);
+  }
+  assert.equal(list('industry=unknown&page=2').industry, 'all');
+  assert.equal(list('industry=research', en).industry, 'all');
+  assert.equal(list('industry=research', zh).industry, 'research');
+  assert.deepEqual(list('industry=research&page=9', []), {
+    industry: 'all',
+    page: 1,
+    total: 0,
+    pages: 1,
+    entries: []
+  });
+  const url = new URL(
+    'https://fastgpt.cn/industry?utm_source=test&industry=research&page=9#results'
+  );
+  assert.equal(
+    getIndustryBrowseHref(url, list('industry=finance&page=2')),
+    '/industry?utm_source=test&industry=finance&page=2#results'
+  );
+  assert.equal(
+    getIndustryBrowseHref(url, { industry: 'all', page: 1 }),
+    '/industry?utm_source=test#results'
+  );
+  assert(isIndustrySummaryIndex(zh, '/industry/'));
+  for (const valid of [
+    [],
+    zh.slice(1),
+    [...zh, { ...zh[0], slug: 'new', href: '/industry/new' }]
+  ]) {
+    assert(isIndustrySummaryIndex(valid, '/industry/'), 'Allow a different publication snapshot');
+  }
+  for (const invalid of [
+    null,
+    {},
+    [...zh.slice(1), zh[1]],
+    [{ ...zh[0], href: 'javascript:alert(1)' }, ...zh.slice(1)],
+    [{ ...zh[0], href: `/en/industry/${zh[0].slug}` }, ...zh.slice(1)],
+    [{ ...zh[0], area: 'unknown' }, ...zh.slice(1)],
+    [{ ...zh[0], title: ' ' }, ...zh.slice(1)],
+    [{ ...zh[0], description: null }, ...zh.slice(1)]
+  ]) {
+    assert.equal(isIndustrySummaryIndex(invalid, '/industry/'), false);
+  }
+});
+
+test('Industry hub renders twelve useful links and accessible browsing controls before data loads', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  const load = loader({
+    '@/components/guide/GuideHubPage.module.css': {},
+    '@/components/industry/IndustryBrowser.module.css': {}
+  });
+  const Page = load('@/components/industry/IndustryHubPage').default;
+  const entries = Array.from({ length: 12 }, (_, index) => ({
+    slug: `finance-${index + 1}`,
+    area: 'finance',
+    title: `Workflow ${index + 1}`,
+    description: 'Practical workflow guidance.',
+    href: `/industry/finance-${index + 1}`
+  }));
+  for (const locale of ['en', 'zh']) {
+    const html = renderToStaticMarkup(
+      React.createElement(Page, {
+        locale,
+        initialEntries: entries,
+        counts: { all: 27, finance: 25, biomed: 2, research: 0 }
+      })
+    );
+    assert.equal((html.match(/href="\/industry\/finance-/g) || []).length, 12);
+    assert.match(html, /aria-pressed="true"/);
+    assert.match(html, /role="status"/);
+    assert.match(html, /aria-live="polite"/);
+    assert.match(html, /27/);
+    assert.match(html, locale === 'en' ? /Application area/ : /应用领域/);
+    assert.doesNotMatch(html, /<button[^>]*>(?:Scientific Research|科研)<\/button>/);
+  }
+});
+
+test('Industry browsing uses loaded snapshot counts and areas across publication changes', () => {
+  const React = require('react');
+  const { renderToStaticMarkup } = require('react-dom/server');
+  let entries;
+  const load = loader({
+    // Seed the completed-fetch state while retaining React's rendering and other hooks.
+    react: {
+      ...React,
+      useState: (initial) => React.useState(initial === null ? entries : initial)
+    },
+    '@/components/guide/GuideHubPage.module.css': {},
+    '@/components/industry/IndustryBrowser.module.css': {}
+  });
+  const Browser = load('@/components/industry/IndustryBrowser').default;
+  const summary = (index, area = 'finance') => ({
+    slug: `${area}-${index}`,
+    area,
+    title: `Workflow ${index}`,
+    description: 'Practical workflow guidance.',
+    href: `/industry/${area}-${index}`
+  });
+  const initial = Array.from({ length: 25 }, (_, index) => summary(index));
+  const newer = [...initial, summary(25, 'research')];
+  const older = initial.slice(0, 24);
+  for (const [snapshot, pages] of [
+    [newer, 3],
+    [older, 2],
+    [[], 1]
+  ]) {
+    entries = snapshot;
+    const html = renderToStaticMarkup(
+      React.createElement(Browser, {
+        locale: 'en',
+        initialEntries: initial.slice(0, 12),
+        counts: { all: 25, finance: 25, biomed: 0, research: 0 },
+        indexPath: '/industry-index/en/index.json',
+        articlePrefix: '/industry/'
+      })
+    );
+    assert(html.includes(`${entries.length} articles · Page 1 of ${pages}`));
+    assert.equal(html.includes('>Scientific Research</button>'), entries === newer);
+    assert.equal(html.includes('>Finance</button>'), entries.length > 0);
+    assert.equal((html.match(/href="\/industry\//g) || []).length, Math.min(entries.length, 12));
+    assert.doesNotMatch(html, /Loading the complete collection|could not be loaded/);
+  }
+});
+
+test('Industry summary routes and hub schema use the same publication collection', async () => {
+  const { renderToStaticMarkup } = require('react-dom/server');
+  const files = { zh: {}, en: {} };
+  for (let index = 1; index <= 13; index++) {
+    const slug = `finance-${String(index).padStart(2, '0')}`;
+    for (const locale of ['zh', 'en']) files[locale][`${slug}.md`] = industrySource(slug);
+  }
+  const previous = process.env.NEXT_PUBLIC_SITE_VARIANT;
+  try {
+    for (const variant of ['cn', 'io', 'preview']) {
+      process.env.NEXT_PUBLIC_SITE_VARIANT = variant;
+      const load = industryFixture(files, {
+        '@/components/guide/GuideHubPage.module.css': {},
+        '@/components/industry/IndustryBrowser.module.css': {},
+        '@/components/home/Navbar': () => null,
+        '@/components/home/Footer': () => null,
+        '@/components/home/HomeThemeFix': () => null,
+        '@/lib/i18n': { getDictionary: async () => ({ JsonLd: { siteName: 'FastGPT' }, Home: {} }) }
+      });
+      const route = load('@/app/industry-index/[locale]/index.json/route');
+      assert.deepEqual(
+        route.generateStaticParams(),
+        variant === 'preview'
+          ? [{ locale: 'zh' }, { locale: 'en' }]
+          : [{ locale: variant === 'cn' ? 'zh' : 'en' }]
+      );
+      const locales = variant === 'preview' ? ['zh', 'en'] : [variant === 'cn' ? 'zh' : 'en'];
+      for (const locale of locales) {
+        const response = await route.GET(new Request('https://example.com'), {
+          params: Promise.resolve({ locale })
+        });
+        const summaries = await response.json();
+        assert.deepEqual(summaries, load('@/lib/industryContent').getIndustrySummaries(locale));
+        const prefix = variant === 'preview' ? `/${locale}/industry/` : '/industry/';
+        assert.equal(summaries[0].href, `${prefix}finance-01`);
+        const html = renderToStaticMarkup(
+          await load('@/components/industry/IndustryHubRoute').IndustryHubRoute({ locale })
+        );
+        const cards = [...html.matchAll(/<a[^>]*href="([^"]*\/industry\/finance-[^"]+)"/g)].map(
+          (match) => match[1]
+        );
+        const schemas = [
+          ...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)
+        ].flatMap((match) => {
+          const schema = JSON.parse(match[1]);
+          return schema['@graph'] || [schema];
+        });
+        const items = schemas.find((schema) => schema['@type'] === 'ItemList').itemListElement;
+        assert.deepEqual(
+          cards,
+          summaries.slice(0, 12).map(({ href }) => href)
+        );
+        const canonical = `https://fastgpt.${locale === 'zh' ? 'cn' : 'io'}/industry`;
+        assert.deepEqual(
+          items.map(({ url }) => url),
+          summaries.slice(0, 12).map(({ slug }) => `${canonical}/${slug}`)
+        );
+        const metadata = load('@/lib/industrySeo').getIndustryHubMetadata(locale);
+        assert.equal(metadata.alternates.canonical, canonical);
+        assert.equal(items.length, 12);
+      }
+      assert.equal(
+        (
+          await route.GET(new Request('https://example.com'), {
+            params: Promise.resolve({ locale: 'ja' })
+          })
+        ).status,
+        404
+      );
+    }
+  } finally {
+    if (previous === undefined) delete process.env.NEXT_PUBLIC_SITE_VARIANT;
+    else process.env.NEXT_PUBLIC_SITE_VARIANT = previous;
+  }
+});
+
+test(
+  'Industry export preserves publication URLs, summary assets, and first-page schema',
+  {
+    skip: !process.env.INDUSTRY_EXPORT_DIR
+  },
+  () => {
+    const zlib = require('node:zlib');
+    const { getCanonical, getHreflang, readSitemap } = require('./verify-technical-export');
+    const out = path.resolve(process.env.INDUSTRY_EXPORT_DIR);
+    const load = loader();
+    const { currentSiteVariant, getDefaultLocaleForSiteVariant } = load('@/lib/siteRouting');
+    assert(['cn', 'io'].includes(currentSiteVariant), 'Set NEXT_PUBLIC_SITE_VARIANT=cn or io');
+    const locale = getDefaultLocaleForSiteVariant(currentSiteVariant);
+    const content = load('@/lib/industryContent');
+    const expected = content.getIndustrySummaries(locale);
+    const json = fs.readFileSync(path.join(out, 'industry-index', locale, 'index.json'));
+    const summaries = JSON.parse(json);
+    assert.deepEqual(summaries, expected);
+    const canonical = `https://fastgpt.${currentSiteVariant === 'cn' ? 'cn' : 'io'}/industry`;
+    const html = fs.readFileSync(path.join(out, 'industry.html'), 'utf8');
+    assert.equal(getCanonical(html, '/industry'), canonical);
+    assert.equal(getHreflang(html, '/industry', 'zh-CN'), 'https://fastgpt.cn/industry');
+    assert.equal(getHreflang(html, '/industry', 'en'), 'https://fastgpt.io/industry');
+    const cards = [...html.matchAll(/<a[^>]*href="(\/industry\/[^"?#]+)"/g)].map(
+      (match) => match[1]
+    );
+    assert.deepEqual(
+      cards,
+      expected.slice(0, 12).map(({ href }) => href)
+    );
+    const schemas = [
+      ...html.matchAll(/<script type="application\/ld\+json">(.*?)<\/script>/g)
+    ].flatMap((match) => {
+      const schema = JSON.parse(match[1]);
+      return schema['@graph'] || [schema];
+    });
+    const items = schemas.find((schema) => schema['@type'] === 'ItemList').itemListElement;
+    assert.deepEqual(
+      items.map(({ url }) => url),
+      expected.slice(0, 12).map(({ slug }) => `${canonical}/${slug}`)
+    );
+    const sitemap = readSitemap(out).filter((url) =>
+      new URL(url).pathname.startsWith('/industry/')
+    );
+    assert.deepEqual(sitemap.sort(), expected.map(({ slug }) => `${canonical}/${slug}`).sort());
+    let relatedLinkCount = 0;
+    for (const entry of summaries) {
+      assert(
+        fs.existsSync(path.join(out, `${entry.href}.html`)),
+        `Missing article export: ${entry.href}`
+      );
+      const articleHtml = fs.readFileSync(path.join(out, `${entry.href}.html`), 'utf8');
+      const related = content.getRelatedIndustryArticles(
+        content.getIndustryArticle(locale, entry.slug)
+      );
+      assert.deepEqual(
+        industryRelatedLinks(articleHtml),
+        related.length ? related.map(({ slug }) => content.getIndustryPath(slug)) : null,
+        `Related links in ${entry.href}`
+      );
+      relatedLinkCount += related.length;
+    }
+    for (const area of ['finance', 'biomed', 'research']) {
+      const group = summaries.filter((entry) => entry.area === area);
+      for (const entry of [group[0], group.at(-1)].filter(Boolean)) {
+        const articleHtml = fs.readFileSync(path.join(out, `${entry.href}.html`), 'utf8');
+        assert.equal(getCanonical(articleHtml, entry.href), `${canonical}/${entry.slug}`);
+      }
+    }
+    const scripts = [...html.matchAll(/<script[^>]*src="([^\"]+\.js)"/g)].map((match) => match[1]);
+    const scriptBodies = scripts
+      .filter((src) => src.startsWith('/_next/'))
+      .map((src) => fs.readFileSync(path.join(out, src), 'utf8'));
+    assert(!html.includes(expected[12].slug), 'Only the first page belongs in the HTML payload');
+    assert(
+      scriptBodies.every((body) => !body.includes(expected[12].slug)),
+      'Summary collection leaked into JavaScript'
+    );
+    console.log(
+      JSON.stringify({
+        variant: currentSiteVariant,
+        summaries: summaries.length,
+        jsonBytes: json.length,
+        gzipBytes: zlib.gzipSync(json).length,
+        brotliBytes: zlib.brotliCompressSync(json).length,
+        htmlBytes: Buffer.byteLength(html),
+        relatedLinkCount
+      })
+    );
+  }
+);

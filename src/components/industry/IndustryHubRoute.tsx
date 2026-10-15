@@ -5,7 +5,8 @@ import Footer from '@/components/home/Footer';
 import HomeThemeFix from '@/components/home/HomeThemeFix';
 import Navbar from '@/components/home/Navbar';
 import IndustryHubPage, { getIndustryHubCopy } from '@/components/industry/IndustryHubPage';
-import { INDUSTRY_LOCALES, industryArticles, type IndustryLocale } from '@/lib/industryContent';
+import { INDUSTRY_LOCALES, getIndustrySummaries, type IndustryLocale } from '@/lib/industryContent';
+import { getIndustryAreaCounts, getIndustryListing } from '@/lib/industryListing';
 import { getDictionary } from '@/lib/i18n';
 import { getIndustryHubCanonicalUrl } from '@/lib/industrySeo';
 import { getOwnedLocaleUrl, isPreviewSite } from '@/lib/siteRouting';
@@ -14,7 +15,8 @@ export async function IndustryHubRoute({ locale }: { locale: IndustryLocale }) {
   const dict = await getDictionary(locale);
   const copy = getIndustryHubCopy(locale);
   const canonical = getIndustryHubCanonicalUrl(locale);
-  const articles = industryArticles.filter((article) => article.locale === locale).slice(0, 12);
+  const summaries = getIndustrySummaries(locale);
+  const { entries: articles } = getIndustryListing(summaries, new URLSearchParams());
   if (!articles.length) notFound();
 
   return (
@@ -64,7 +66,11 @@ export async function IndustryHubRoute({ locale }: { locale: IndustryLocale }) {
         publishedLocales={INDUSTRY_LOCALES}
         reviewLocalePaths={isPreviewSite}
       />
-      <IndustryHubPage locale={locale} />
+      <IndustryHubPage
+        locale={locale}
+        initialEntries={articles}
+        counts={getIndustryAreaCounts(summaries)}
+      />
       <Footer t={dict.Home.footer} locale={locale} />
     </div>
   );

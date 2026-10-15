@@ -1,0 +1,75 @@
+.browser {
+  border-top: 1px solid var(--guide-line);
+  padding-top: 28px;
+}
+
+.filters {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  padding: 6px 4px 12px;
+}
+
+.browser button {
+  flex-shrink: 0;
+  min-height: 44px;
+  padding: 10px 16px;
+  border: 1px solid var(--guide-line);
+  border-radius: 2px;
+  background: var(--guide-surface);
+  color: var(--guide-ink);
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.browser button[aria-pressed='true'],
+.browser button[aria-current='page'] {
+  border-color: var(--guide-blue);
+  background: var(--guide-blue);
+  color: #fff;
+}
+
+.browser button:disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+
+.browser button:focus-visible,
+.heading:focus-visible {
+  outline: 3px solid var(--guide-blue);
+  outline-offset: 3px;
+}
+
+.heading {
+  margin: 26px 0 8px;
+  scroll-margin-top: 84px;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+.status {
+  margin: 0 0 24px;
+  color: var(--guide-muted);
+  line-height: 1.7;
+}
+
+.error {
+  margin-bottom: 24px;
+}
+
+.error p {
+  margin-bottom: 12px;
+}
+
+.pagination,
+.pageNumber {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.pagination {
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 32px;
+}

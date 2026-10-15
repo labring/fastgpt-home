@@ -5,7 +5,8 @@ import guideStyles from '@/components/guide/GuideArticlePage.module.css';
 import MarkdownContent, { getMarkdownHeadings } from '@/components/tech-center/MarkdownContent';
 import techStyles from '@/components/tech-center/TechArticlePage.module.css';
 import type { IndustryArticle, IndustryLocale } from '@/lib/industryContent';
-import { getIndustryPath } from '@/lib/industryContent';
+import { getIndustryPath, getRelatedIndustryArticles } from '@/lib/industryContent';
+import { INDUSTRY_AREAS } from '@/lib/industryListing';
 import { getReviewLocalePath } from '@/lib/siteRouting';
 import { parseMarkdown } from '@/lib/markdownParser';
 
@@ -15,14 +16,16 @@ const copy = {
     industry: 'Industry',
     breadcrumbs: 'Breadcrumbs',
     updated: 'Last updated',
-    onThisPage: 'On this page'
+    onThisPage: 'On this page',
+    related: 'Continue reading'
   },
   zh: {
     home: '首页',
     industry: '行业问题',
     breadcrumbs: '面包屑',
     updated: '更新于',
-    onThisPage: '本页内容'
+    onThisPage: '本页内容',
+    related: '继续阅读'
   }
 } as const;
 
@@ -47,6 +50,7 @@ export default function IndustryArticlePage({
   const labels = copy[locale];
   const blocks = parseMarkdown(article.body, article.title);
   const headings = getMarkdownHeadings(blocks, 'industry-section');
+  const relatedArticles = getRelatedIndustryArticles(article);
 
   return (
     <main className={`${techStyles.page} ${guideStyles.page}`}>
@@ -74,15 +78,40 @@ export default function IndustryArticlePage({
           </time>
         </header>
         <div className={`${techStyles.layout} ${guideStyles.layout}`}>
-          <article className={`${techStyles.article} ${guideStyles.article}`}>
-            <MarkdownContent
-              locale={locale}
-              blocks={blocks}
-              markdown={article.body}
-              title={article.title}
-              headingIdPrefix="industry-section"
-            />
-          </article>
+          <div className="min-w-0">
+            <article className={`${techStyles.article} ${guideStyles.article}`}>
+              <MarkdownContent
+                locale={locale}
+                blocks={blocks}
+                markdown={article.body}
+                title={article.title}
+                headingIdPrefix="industry-section"
+              />
+            </article>
+            {relatedArticles.length > 0 && (
+              <section className={techStyles.related} aria-labelledby="industry-related-title">
+                <div className={techStyles.relatedHeader}>
+                  <h2 id="industry-related-title">{labels.related}</h2>
+                </div>
+                <div className={techStyles.relatedList}>
+                  {relatedArticles.map((relatedArticle) => (
+                    <Link
+                      className={techStyles.relatedLink}
+                      href={getReviewLocalePath(locale, getIndustryPath(relatedArticle.slug))}
+                      key={relatedArticle.slug}
+                      prefetch={false}
+                    >
+                      <span>
+                        <small>{INDUSTRY_AREAS[relatedArticle.area][locale]}</small>
+                        {relatedArticle.title}
+                      </span>
+                      <span aria-hidden="true">↗</span>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
           <aside className={guideStyles.sidebar} aria-label={cta.title}>
             <ContentSidebarCta
               locale={locale}

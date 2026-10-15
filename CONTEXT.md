@@ -169,8 +169,20 @@ _Avoid_: 指南首页, 资源中心
 _Avoid_: 博客文章, 技术文章
 
 **行业问题页**:
-`/industry/{slug}` 下围绕金融业务品类、作业环节或服务对象行业回答一个具体配置问题的页面；页面按 Published Locale Set 组合发布到 China Site 或 International Site。
+An Industry Problem Page at `/industry/{slug}` answers a concrete AI configuration question for an Application Area, Business Scenario, or operational step. Each page publishes to the China Site or International Site according to its Published Locale Set.
 _Avoid_: 行业落地页, 金融 FAQ
+
+**Application Area (应用领域)**:
+The primary industry or scientific research direction served by an Industry Problem Page, classified by its intended users and core workflow. Each page has exactly one area: Finance / 金融 (`finance`), Biopharma / 生物医药 (`biomed`), or Scientific Research / 科研 (`research`). An area appears in a locale's Industry hub when that locale has publishable articles in the area. Existing `finance-*` and `fin-*` identities belong to Finance; `biomed-*` identities belong to Biopharma. New identities declare `application_area` in front matter. Authored `article_section` and page type retain their own meanings.
+_Avoid_: Page type, Business Scenario, article section
+
+**Business Scenario (业务场景)**:
+A concrete task within an Application Area, such as financial investment research or pharmaceutical R&D knowledge management. Classification follows the users and workflow: financial research about a pharmaceutical company belongs to Finance, and pharmaceutical R&D belongs to Biopharma.
+_Avoid_: Application Area, page type
+
+**Scientific Research (科研)**:
+The Application Area for universities, research institutes, and general scientific research workflows, including research literature and project knowledge. Pharmaceutical R&D belongs to Biopharma; financial investment research belongs to Finance.
+_Avoid_: All research activities, pharmaceutical R&D, financial investment research
 
 **Deferred Technical Candidate**:
 因证据、人工改写或版本验证尚待完成而保持未发布状态的临时技术内容候选；批次 authority

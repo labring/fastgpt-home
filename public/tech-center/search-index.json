@@ -48632,7 +48632,7 @@
   {
     "identity": "zh|/guide/troubleshooting-overview",
     "title": "FastGPT 报错与排障问题全景：按出错环节分流",
-    "description": "FastGPT 报错与排障问题全景 本页把站内已发布的 2848 篇排障文档按报错发生的环节归类，用于在拿到一条报错但不确定属于哪一环时先做分流，再进入对应环节的清单查具体条目。归类依据文档标题中的技术对象， 先分流：三步把报错归到环节 | 步骤 | 需要确认的事实 | 指向的环节 | | --- | --…",
+    "description": "FastGPT 报错与排障问题全景 本页把站内已发布的 2848 篇排障文档按报错发生的环节归类，用于在拿到一条报错但不确定属于哪一环时先做分流，再进入对应环节的清单查具体条目。归类依据文档标题中的技术对象，核验日 2026-09-28。 先分流：三步把报错归到环节 | 步骤 | 需要确认的事实 | 指向的…",
     "category": "troubleshoot",
     "locale": "zh",
     "publicPath": "/guide/troubleshooting-overview",
@@ -48688,5 +48688,955 @@
     "publicPath": "/reference/vector-db-backends",
     "sourceType": "官方文档",
     "minutes": 2
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-baai01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 bge-m3 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是知识库应用中可引用内容的总token额度，限定了单轮对话中可注入上下文的总长度。本档对话模型的quoteMaxToken覆盖50000至128000 tokens区间，能够适配…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-baai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-chatglm01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 embedding-3 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 embedding-3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可调用的引用内容总token预算，本档对话模型的该参数区间为50,000–128,000 tokens。该预算区间适配需要承载较多上下文引用的知识库应用，可…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-chatglm01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-doubao01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可引入的引用内容总token预算，本次选型的区…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-doubao01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-ernie01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 Embedding-V1 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 Embedding-V1 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是引用内容的总token预算，限定单轮对话中可投入的参考内容总长度。本档5万–12.8万的token区间，可支撑较多段落的上下文引用，适配需要整合多段背景信息的知识…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-ernie01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-ernie02",
+    "title": "引用预算 5 万–12.8 万的对话模型配 tao-8k 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 tao-8k 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是引用内容的token预算，限定单次对话中可引入的背景信息总token上限。本次选型的对话模型档位覆盖50000–128000 tokens的预算区间，能够承载较长的上下文引用需…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-ernie02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-gemini01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 gemini-embedding-2 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 gemini-embedding-2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是知识库应用中可引用的上下文内容的总token限额，本档50000至128000token的预算区间，适配多数中长上下文的知识库问答场景。该区间可容纳数十…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-gemini01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-hunyuan01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 hunyuan-embedding 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 hunyuan-embedding 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken指单轮对话中可引用的上下文内容总token预算，本次选型的5万至12.8万token区间，适配多数中长文本知识库的上下文需求。既可以覆盖长文档的分段引用，也…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-hunyuan01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-jina01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径 这一档模型的参数意味着什么 本次选型的对话模型档包含AntLing系列、Baichuan系列、ChatGLM系列等共90个模型，其quoteMaxToken指…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-jina01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-jina02",
+    "title": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的单轮引用内容累计token上限，本档50000至128000 tokens的…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-jina02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-jina03",
+    "title": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是引用内容的 token 预算，限定了单次对话中可引用的所有内容的总 token 数量。这一档模型的区间覆盖 50,000–128…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-jina03",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-jina04",
+    "title": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是单次对话中可引用的参考内容总token上限，本档5万至12.8万的区间，能够覆盖多数长文…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-jina04",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-openai01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型允许的引用内容总token预算，限定了单次对话中可注入的知识库参考内容的token总…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-openai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-qwen01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的引用内容总token预算，限定了单次对话中可注入的外部知识库内容的总token数量。本次选型的对话模…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-qwen01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q128k-siliconflow01",
+    "title": "引用预算 5 万–12.8 万的对话模型配 BAAI/bge-m3 的分段与引用口径",
+    "description": "引用预算 5 万–12.8 万的对话模型配 BAAI/bge-m3 的分段与引用口径 这一档模型的参数意味着什么 当前档位对话模型的quoteMaxToken为50000–128000 tokens，代表单轮对话中可引用的知识库内容总token预算处于中等偏长区间。该区间能够适配多数中大型知识库的内容引用需…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q128k-siliconflow01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-baai01",
+    "title": "引用预算 50 万–1000 万的对话模型配 bge-m3 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的上下文引用内容的总token额度，限制所有被召回的参考内容加起来的token数不超过该值。当前档的引用预算区间为50万–1000万token，覆盖了多数企业级知…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-baai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-chatglm01",
+    "title": "引用预算 50 万–1000 万的对话模型配 embedding-3 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 embedding-3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可接收的引用内容合计token预算，限定了单次对话中可注入的参考资料总token上限。本次选型的对话模型引用预算处于500,000–10,000,000…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-chatglm01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-doubao01",
+    "title": "引用预算 50 万–1000 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可引用的知识库内容总token限额，本次选型…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-doubao01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-ernie01",
+    "title": "引用预算 50 万–1000 万的对话模型配 Embedding-V1 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 Embedding-V1 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是单轮对话中可引入的上下文引用内容的总token预算，限定了所有召回片段的总token数不得超过该值。本次选型的引用预算区间覆盖50万至1000万tokens，适配…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-ernie01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-ernie02",
+    "title": "引用预算 50 万–1000 万的对话模型配 tao-8k 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 tao-8k 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可带入的引用内容总 token 预算，限定了知识库向对话模型投喂的背景信息总长度。本次选型的对话模型档预算区间为 50 万至 1000 万 tokens，覆盖多数…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-ernie02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-gemini01",
+    "title": "引用预算 50 万–1000 万的对话模型配 gemini-embedding-2 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 gemini-embedding-2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是引用内容的总token预算，限定单次对话中可传入的背景知识总量。本次选型的对话模型档预算区间为50万至1000万token，可承载较多的检索片段整合…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-gemini01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-hunyuan01",
+    "title": "引用预算 50 万–1000 万的对话模型配 hunyuan-embedding 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 hunyuan-embedding 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型允许的引用内容总token预算，限定了一次对话中可带入的检索结果总长度。本档模型的预算区间为50万–1000万tokens，对应知识库应用中可…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-hunyuan01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-jina01",
+    "title": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型可调用的引用内容总token预算，限定了单次对话中可注入的知识库片段总长度。本档模型的预算覆…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-jina01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-jina02",
+    "title": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可插入的引用内容总 token 预算，直接限定了引用内容的总消耗额度。这一档…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-jina02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-jina03",
+    "title": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径 这一档模型的参数意味着什么 这一档模型的quoteMaxToken为引用内容的总token预算，50万–1000万的区间适配中大型知识库应用场景，可承载较多的上下文引用内容，无需频繁截…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-jina03",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-jina04",
+    "title": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是单轮对话中可引用的知识库内容的总token预算，本档对话模型的预算区间覆盖50万至10…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-jina04",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-openai01",
+    "title": "引用预算 50 万–1000 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型允许的单次调用中引用内容的总token预算，限定了可带入知识库片段的总长度。本档模…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-openai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-qwen01",
+    "title": "引用预算 50 万–1000 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中引用内容的累计token预算，限定检索后返回的所有参考内容的总token数量。本档对话模型的500…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-qwen01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q1m-siliconflow01",
+    "title": "引用预算 50 万–1000 万的对话模型配 BAAI/bge-m3 的分段与引用口径",
+    "description": "引用预算 50 万–1000 万的对话模型配 BAAI/bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可注入的上下文引用内容的总token预算，限定了引用内容的整体长度上限。这一档50万至1000万token的预算区间，适配多数中长上下文的知识库问答场景…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q1m-siliconflow01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-baai01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 bge-m3 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许引用的检索内容的总token预算，用于限制传入模型的参考内容长度，避免超出模型的输入上限。当前对话模型档的quoteMaxToken区间为12000–32000…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-baai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-chatglm01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 embedding-3 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 embedding-3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 限定了单次对话中可引用的知识库内容总token预算，该档位的区间覆盖了多数长上下文交互场景。它能支持批量召回较多的知识库片段，适配复杂问答、长文档总结等知识库应用需…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-chatglm01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-doubao01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可承载的引用内容总token预算，限定了知识库…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-doubao01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-ernie01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 Embedding-V1 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 Embedding-V1 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可分配给引用内容的总token预算，本次选型的对话模型档预算区间为12000至32000 tokens。该区间可支撑包含多段长文本的知识库应用，允许召回…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-ernie01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-ernie02",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 tao-8k 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 tao-8k 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是知识库应用中可引用内容的总token额度，限定了单次对话中可调用的参考文本总量。12000至32000 tokens的区间覆盖了多数长上下文对话场景的需求，既可以支撑多段落文…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-ernie02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-gemini01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 gemini-embedding-2 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 gemini-embedding-2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的单次对话中引入的外部参考内容的总token预算，限定了参考内容的总token上限。本档模型的quoteMaxToken区间为12000至…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-gemini01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-hunyuan01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 hunyuan-embedding 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 hunyuan-embedding 的分段与引用口径 这一档模型的参数意味着什么 这一档对话模型的quoteMaxToken处于12000–32000 tokens区间，代表知识库应用可用于承载召回内容的总token预算处于该范围。该预算可支持多段长文本的上下文…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-hunyuan01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-jina01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可承载的引用内容总token预算，本档对话模型的该参数区间覆盖12000至32000 to…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-jina01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-jina02",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型可调用的引用内容总token预算，限定了一轮对话中可整合的知识库内容的总长度。这…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-jina02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-jina03",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken指单轮对话中可注入的知识库参考内容累计token上限，本档对话模型的该参数区间为12000至32000 tokens。在知识库应用…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-jina03",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-jina04",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是单轮对话中可插入的上下文引用内容的总token预算，本档对话模型的该参数覆盖12000…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-jina04",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-openai01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的引用内容总token预算，限定一轮对话中可整合的参考文本总长度。当前选型的12…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-openai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-qwen01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的上下文引用内容的总token预算，限定了单次对话中可带入的参考文档总token上限。本档包含Bai…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-qwen01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q32k-siliconflow01",
+    "title": "引用预算 1.2 万–3.2 万的对话模型配 BAAI/bge-m3 的分段与引用口径",
+    "description": "引用预算 1.2 万–3.2 万的对话模型配 BAAI/bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型允许的引用内容总token预算，当前档位的12000–32000 tokens区间，可承载较多段的知识库内容引用，适配长文档问答、多上下文关联的复杂问答场景…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q32k-siliconflow01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-baai01",
+    "title": "引用预算 19 万–35 万的对话模型配 bge-m3 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可接收的引用内容总token预算，限定了单次对话中所有被召回的知识库内容合计占用的token上限。当前档位的190000–350000 token区间，能够支撑较长上下…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-baai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-chatglm01",
+    "title": "引用预算 19 万–35 万的对话模型配 embedding-3 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 embedding-3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可引用内容的总token预算，限定了单轮对话中嵌入上下文的引用内容总长度。本次所选的对话模型档，quoteMaxToken 处于190000至350000…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-chatglm01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-doubao01",
+    "title": "引用预算 19 万–35 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单次对话中可引用的知识库内容的总token预算，本档对话模…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-doubao01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-ernie01",
+    "title": "引用预算 19 万–35 万的对话模型配 Embedding-V1 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 Embedding-V1 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型允许的单次对话中引用内容的累计token预算，限定了可带入参考文档的总token上限。本档模型的预算区间为19万至35万tokens，能够承载较多的参考文档…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-ernie01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-ernie02",
+    "title": "引用预算 19 万–35 万的对话模型配 tao-8k 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 tao-8k 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型可接收的引用内容总token预算，该档模型的预算区间为190000–350000 tokens。在知识库应用中，这一预算意味着可以容纳较多的长文本引用内容，能够支撑多文档…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-ernie02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-gemini01",
+    "title": "引用预算 19 万–35 万的对话模型配 gemini-embedding-2 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 gemini-embedding-2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型可承载的引用内容总token预算，限定了单次对话中可注入的知识库内容总长度。当前190000–350000 tokens的区间，能够覆盖多数长文档…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-gemini01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-hunyuan01",
+    "title": "引用预算 19 万–35 万的对话模型配 hunyuan-embedding 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 hunyuan-embedding 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可引用内容的总token预算，限定了单次对话中注入上下文的引用内容总长度。本次选型的对话模型档预算区间为190000至350000 token…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-hunyuan01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-jina01",
+    "title": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库引用内容的总 token 预算，限定了单次对话中可纳入上下文的所有引用内容的累计 token 上…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-jina01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-jina02",
+    "title": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可纳入上下文的引用内容总token预算，本档对话模型的该参数区间为19万至35…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-jina02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-jina03",
+    "title": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可使用的引用内容总token预算，限定了传入对话模型的背景信息累计长度。当前档位的区间覆盖190000–350000 t…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-jina03",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-jina04",
+    "title": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可引用内容的总 token 预算，本档对话模型的该参数区间为 190,000…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-jina04",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-openai01",
+    "title": "引用预算 19 万–35 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中可引用的知识库内容总token预算，本档190000至350000的token区间，…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-openai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-qwen01",
+    "title": "引用预算 19 万–35 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可注入上下文的总token预算，限定了单轮对话中引用内容的总长度上限。本档对话模型的quoteMaxT…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-qwen01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q360k-siliconflow01",
+    "title": "引用预算 19 万–35 万的对话模型配 BAAI/bge-m3 的分段与引用口径",
+    "description": "引用预算 19 万–35 万的对话模型配 BAAI/bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中引用内容的总 token 预算，限定检索召回的所有引用内容合计占用的 token 数量。当前对话模型档的预算区间为 190000–350000 token…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q360k-siliconflow01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-baai01",
+    "title": "引用预算 4K–8K的对话模型配 bge-m3 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是限定传入对话模型的上下文引用内容总token数的参数，本档共包含16款对话模型，其quoteMaxToken取值落在4000至8000 tokens的区间内。该预算区间适配多数企业知识库…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-baai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-chatglm01",
+    "title": "引用预算 4K–8K的对话模型配 embedding-3 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 embedding-3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 限定了单轮对话中可引入的外部引用内容的总 token 额度，4000至8000 tokens 的区间覆盖了多数中等规模知识库的引用需求，既能够承载多段检索到的知识库内容，又不会…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-chatglm01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-doubao01",
+    "title": "引用预算 4K–8K的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 doubao-embedding-large-text-250515 / doubao-embedding-text-240715 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可使用的引用内容总token预算，本档共16款符合该参数区…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-doubao01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-ernie01",
+    "title": "引用预算 4K–8K的对话模型配 Embedding-V1 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 Embedding-V1 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型接收引用内容的总token预算，限定了单轮对话中可注入的知识库内容总长度。4000至8000 tokens的区间适配多数通用知识库应用场景，既可以承载足够多的分段内…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-ernie01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-ernie02",
+    "title": "引用预算 4K–8K的对话模型配 tao-8k 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 tao-8k 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是限定单次对话中引用内容总token数的核心参数，4000至8000 tokens的区间覆盖多数通用知识库应用场景。该预算既可以支撑对较长文档片段的整合引用，保障回复的上下文连贯性，又能为…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-ernie02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-gemini01",
+    "title": "引用预算 4K–8K的对话模型配 gemini-embedding-2 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 gemini-embedding-2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可引用内容的总token预算，限定了单轮对话中插入的检索结果合计token数。4000–8000 tokens的预算区间，适配多数中小规模知识库的检…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-gemini01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-hunyuan01",
+    "title": "引用预算 4K–8K的对话模型配 hunyuan-embedding 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 hunyuan-embedding 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是对话模型可承载的引用内容总token预算，限定了传入上下文的引用内容合计token数。这一档4000至8000 tokens的预算区间，在知识库应用中可承载较多检索…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-hunyuan01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-jina01",
+    "title": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-omni-nano / jina-clip-v2 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是对话模型可接收的引用内容总token预算，限定了知识库返回的上下文内容总长度。本次选型的对话模型档，quote…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-jina01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-jina02",
+    "title": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-text-nano / jina-embeddings-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken是指系统可调用的上下文引用内容的总token预算，限定了单次问答中嵌入到提示词的引用内容总长度。当前对…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-jina02",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-jina03",
+    "title": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-omni-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken指单轮对话中可引入的知识库参考内容的总token上限，本档对话模型的该参数处于4000至8000 tokens区间。在知识库应用中，该预算限定…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-jina03",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-jina04",
+    "title": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 jina-embeddings-v5-text-small / jina-embeddings-v4 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken为单轮对话中可带入的引用内容总token预算，本档对话模型共包含16款，涵盖通用与多模态对话场景，其…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-jina04",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-openai01",
+    "title": "引用预算 4K–8K的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 text-embedding-3-large / text-embedding-3-small 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是单轮对话中留给上下文引用内容的token预算，限定了所有引用分段的总token数上限。当前对话模型档的…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-openai01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-qwen01",
+    "title": "引用预算 4K–8K的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 text-embedding-v4 / text-embedding-v3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是知识库应用中可引用内容的总token预算，限定单轮对话中嵌入上下文的引用内容累计token上限。4000–8000 tok…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-qwen01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/combo/combo-q8k-siliconflow01",
+    "title": "引用预算 4K–8K的对话模型配 BAAI/bge-m3 的分段与引用口径",
+    "description": "引用预算 4K–8K的对话模型配 BAAI/bge-m3 的分段与引用口径 这一档模型的参数意味着什么 quoteMaxToken 是系统限定的可插入引用内容的总token额度，这一档4000至8000 tokens的区间，覆盖了多数中等长度的上下文需求。该档位包含多类主流对话模型，既可以支撑整合多段背景信…",
+    "category": "model",
+    "locale": "zh",
+    "publicPath": "/combo/combo-q8k-siliconflow01",
+    "sourceType": "官方文档",
+    "minutes": 3
+  },
+  {
+    "identity": "zh|/guide/ai-customer-service-medical-health",
+    "title": "医疗与健康机构的 AI 咨询台：就诊指引、知识口径与转人工怎么排",
+    "description": "医疗与健康机构的 AI 咨询台：就诊指引、知识口径与转人工怎么排 这个行业做这件事，卡在哪 相关材料来自机构内部的就诊指南、科室手册、医保政策文件、常见问题汇总等文档。内容审核由医务科、客服主管、合规岗共同完成，审核范围包括表述准确性、合规性、是否符合医疗风险防控要求。人工处理该类咨询时，同一问题多次重复回…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ai-customer-service-medical-health",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/api-auth-errors",
+    "title": "FastGPT接口与鉴权报错清单：按症状分组",
+    "description": "FastGPT接口与鉴权报错清单 本页汇总站内已发布的接口调用与鉴权配置环节的报错相关文档，按症状分组列出，可按报错表现直接定位到对应文档。该环节已发布 148 篇，本页列出其中 60 篇，核验日 2026-09-28。 属于这一环节的三类典型症状 1. 接口返回 200 而响应里没有有效内容 2. 调用返…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/api-auth-errors",
+    "sourceType": "官方文档",
+    "minutes": 13
+  },
+  {
+    "identity": "zh|/guide/app-migration-across-envs",
+    "title": "应用环境迁移方式选型：配置导出、模板与复制迁移对比",
+    "description": "应用环境迁移方式选型：配置导出、模板与复制迁移对比 这个决定什么时候必须做 当企业存在多环境部署需求，需将应用从开发环境同步至测试、预发布或生产环境，或跨团队共享应用配置时，该决定成为必须执行的事项。若执行过早，会增加未稳定应用的迁移成本，导致重复调整配置；若执行过晚，会导致生产环境与开发环境配置不一致，引…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/app-migration-across-envs",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/chat-api-session-and-run-detail",
+    "title": "用对话接口接入应用：会话、历史记录与运行详情的获取方案",
+    "description": "用对话接口接入应用：会话、历史记录与运行详情的获取方案 这件事在什么时候变成问题 当企业将对话能力集成到外部业务系统时，基础的单次调用往往无法满足长期业务需求。仅实现单次问答调用时，无法保留用户多轮对话的上下文，无法复用历史交互记录，也无法追踪单次运行的具体节点执行情况。当业务需要支撑多用户并发会话、留存完…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/chat-api-session-and-run-detail",
+    "sourceType": "深度场景内容",
+    "minutes": 8
+  },
+  {
+    "identity": "zh|/guide/contract-review-finance",
+    "title": "金融机构的合同初审：条款比对、必备要素核对与复核留痕怎么搭",
+    "description": "金融机构的合同初审：条款比对、必备要素核对与复核留痕怎么搭 这个行业做这件事，卡在哪 金融机构的合同初审涉及授信、保险、代销类合同，材料来源涵盖业务系统导出的电子文件、线下扫描件转换的文本、外部合作方提交的合同文档。初审工作由风控、合规、法务人员共同完成，需核对风险提示、监管要求、双方权利义务等必备条款，比…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/contract-review-finance",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/cpu-arch-and-image-selection",
+    "title": "部署架构与镜像选型：x86与ARM架构的镜像取舍决策矩阵",
+    "description": "部署架构与镜像选型：x86与ARM架构的镜像取舍决策矩阵 这个决定什么时候必须做 当首次规划企业级FastGPT相关服务部署，或现有部署需要迁移至新的CPU架构服务器，或新增支持多架构的组件时，该决定必须被执行。若在部署前未确定架构与镜像的匹配关系，会导致镜像拉取失败、容器启动异常、服务无法正常运行等问题，…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/cpu-arch-and-image-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/database-storage-errors",
+    "title": "FastGPT数据库与存储报错清单：按症状分组",
+    "description": "FastGPT数据库与存储报错清单 本页汇总站内已发布的数据库连接与对象存储配置环节的报错相关文档，按症状分组列出，可按报错表现直接定位到对应文档。该环节已发布 74 篇，本页列出其中 60 篇，核验日 2026-09-28。 属于这一环节的三类典型症状 1. 启动时提示缺少 Redis、PostgreSQ…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/database-storage-errors",
+    "sourceType": "官方文档",
+    "minutes": 13
+  },
+  {
+    "identity": "zh|/guide/document-review-energy",
+    "title": "能源与化工企业的作业文件审核：安全要素、审批签字与版本怎么查",
+    "description": "能源与化工企业的作业文件审核：安全要素、审批签字与版本怎么查 这个行业做这件事，卡在哪 作业文件来源涵盖动火作业许可、检维修方案、安全规程等，多为纸质扫描件、docx、pdf混合格式，存储于不同部门的本地服务器或共享文件夹中。审核工作由安全专员、技术负责人、合规岗分多轮开展，需逐一核对作业文件中的安全防护措…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/document-review-energy",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/document-translation-e-commerce",
+    "title": "电商与跨境贸易的商品资料翻译：批量处理、术语统一与上架前核对",
+    "description": "电商与跨境贸易的商品资料翻译：批量处理、术语统一与上架前核对 这个行业做这件事，卡在哪 商品资料多来自不同格式的原始文档，包括规格参数表、售后条款文本、商品详情页内容，需覆盖多个目标语种。审核工作由跨境运营与合规岗共同完成，需核对术语统一、格式匹配与当地合规要求。人工处理时需逐篇翻译并核对，单批次数十个商品…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/document-translation-e-commerce",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/document-translation-manufacturing",
+    "title": "制造企业的技术文档翻译：术语表、版本对应与译后校对怎么定",
+    "description": "制造企业的技术文档翻译：术语表、版本对应与译后校对怎么定 这个行业做这件事，卡在哪 制造企业的技术文档翻译覆盖设备说明书、作业指导书、技术规格书等材料，这些材料通常由研发、工艺部门编制，需遵循固定的专业术语体系。翻译工作需经质量或合规部门审核，确保内容符合生产安全标准与客户要求。人工翻译需逐篇核对术语、匹配…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/document-translation-manufacturing",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/history-rounds-selection",
+    "title": "对话历史携带策略选型决策矩阵：轮数、截断与变量传递",
+    "description": "对话历史携带策略选型决策矩阵：轮数、截断与变量传递 这个决定什么时候必须做 当企业构建多轮对话类应用，包括客服助手、知识库问答Agent、工具调用工作流等场景时，该决定成为必须考量的问题。若决策过早，在应用原型阶段就过度限制历史携带规则，会导致后续无法适配复杂多轮交互需求，需重构核心逻辑；若决策过晚，上线后…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/history-rounds-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 8
+  },
+  {
+    "identity": "zh|/guide/kb-import-method-selection",
+    "title": "知识库导入方式选型决策矩阵：本地文件、网页同步、第三方知识库与接口",
+    "description": "知识库导入方式选型决策矩阵：本地文件、网页同步、第三方知识库与接口 这个决定什么时候必须做 当企业启动知识库系统搭建，且数据源覆盖本地存储文件、公开网页资源、第三方知识库或业务接口时，该决定成为必须落地的选型问题。若决策过早，未结合长期业务需求与现有系统架构匹配选型，例如仅配置本地文件导入功能后需新增网页同…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/kb-import-method-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 8
+  },
+  {
+    "identity": "zh|/guide/kb-processing-model-selection",
+    "title": "知识库处理模型选型：文本理解、索引与图片理解模型分工决策",
+    "description": "知识库处理模型选型：文本理解、索引与图片理解模型分工决策 这个决定什么时候必须做 当企业部署检索增强生成（RAG）知识库应用，且涉及多模型配置、功能升级或场景扩展时，该选型决定成为必须完成的任务。若在未明确业务需求前提前选型，会导致配置冗余，增加部署与维护成本，同时可能引入不必要的模型依赖。若延迟选型，例如…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/kb-processing-model-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 9
+  },
+  {
+    "identity": "zh|/guide/kb-retrieval-miss-diagnosis",
+    "title": "知识库内容存在却检索不到：从检索词到引用的逐层排查指南",
+    "description": "知识库内容存在却检索不到：从检索词到引用的逐层排查指南 这件事在什么时候变成问题 当企业将知识库作为业务流程的核心信息支撑，比如运维排障、客户服务、研发文档查询等场景，单次检索失败会直接导致流程中断。当重复尝试调整检索词、重新上传文档仍无法获取结果时，该问题会从临时不便升级为需要系统性解决的故障。此时，技术…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/kb-retrieval-miss-diagnosis",
+    "sourceType": "深度场景内容",
+    "minutes": 8
+  },
+  {
+    "identity": "zh|/guide/official-document-education",
+    "title": "学校与培训机构的通知与制度文稿：模板、事实来源与审校怎么定",
+    "description": "学校与培训机构的通知与制度文稿：模板、事实来源与审校怎么定 这个行业做这件事，卡在哪 校内通知、教学管理制度、对外函件的撰写与审校，涉及的材料分散于上级教育部门文件、校内现有规章制度、教学计划、学生反馈等多个来源。文稿的审校需覆盖格式合规性、事实准确性、口径统一性等多个维度，参与人员包括教务部门、行政部门、…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/official-document-education",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/performance-timeout-errors",
+    "title": "FastGPT性能与超时报错清单：按症状分组",
+    "description": "FastGPT性能与超时报错清单 本页汇总站内已发布的响应变慢、超时与并发相关的问题相关文档，按症状分组列出，可按报错表现直接定位到对应文档。该环节已发布 26 篇，本页列出其中 26 篇，核验日 2026-09-28。 属于这一环节的三类典型症状 1. 模型调用或接口调用在固定时长后超时 2. 数据量增大…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/performance-timeout-errors",
+    "sourceType": "官方文档",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/qa-pair-vs-chunk-index",
+    "title": "问答对与普通分段：企业知识库数据形态选型决策矩阵",
+    "description": "问答对与普通分段：企业知识库数据形态选型决策矩阵 这个决定什么时候必须做 当企业搭建或迭代知识库系统，需要确定数据的存储与处理形态时，该决策成为必须完成的事项。若决策过早，在数据采集初期未结合业务场景明确形态，后续发现检索精度不足或业务适配性差时，需返工调整大量已导入的数据，增加重复处理成本。若决策过晚，在…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/qa-pair-vs-chunk-index",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/report-generation-energy",
+    "title": "能源与化工企业的生产报告：巡检记录、指标汇总与成稿复核怎么拆",
+    "description": "能源与化工企业的生产报告：巡检记录、指标汇总与成稿复核怎么拆 这个行业做这件事，卡在哪 能源与化工企业的生产报告所需材料来源分散，巡检记录多为纸质表单或零散电子文件，生产指标来自分散的控制系统与报表文件。报告需经生产部门、安全管理部门、合规岗位共同审核，审核内容涵盖数据准确性、指标偏差范围、合规条款匹配度、…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/report-generation-energy",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/sales-quotation-energy",
+    "title": "能源与化工品贸易的询报价：规格解析、牌号匹配与报价成单",
+    "description": "能源与化工品贸易的询报价：规格解析、牌号匹配与报价成单 这个行业做这件事，卡在哪 能源与化工品贸易的询报价流程，依赖企业内部的产品手册、ERP库存数据、价格政策文件等多类资料。业务人员接收客户询盘后，需逐一核对产品的规格、牌号是否与需求匹配，确认报价是否符合区域、大客户等特殊政策，同时核对库存与交货周期。由…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/sales-quotation-energy",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/smart-grading-business",
+    "title": "企业内训的考核批改：评分口径、误判复核与结果回流怎么定",
+    "description": "企业内训的考核批改：评分口径、误判复核与结果回流怎么定 这个行业做这件事，卡在哪 企业内训的考核批改材料多为员工提交的主观题作答文档、案例分析作业，格式涵盖pdf、doc、docx等常见类型。批改工作由业务专家或培训师执行，需对照预先设定的评分口径逐一校验作答内容，结合作答完整性、逻辑合理性、知识点掌握程度…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/smart-grading-business",
+    "sourceType": "深度场景内容",
+    "minutes": 7
+  },
+  {
+    "identity": "zh|/guide/smart-quiz-education",
+    "title": "教育与培训机构的智能出题：从教材到题库，题型、难度与审核怎么定",
+    "description": "教育与培训机构的智能出题：从教材到题库，题型、难度与审核怎么定 这个行业做这件事，卡在哪 该场景的核心材料来自教材、讲义、课程大纲等教学文档，来源格式多样。审核环节需由具备学科专业资质的人员完成，审核内容包括题目与指定章节知识点的匹配度、题型符合教学要求、题目无知识性错误。人工完成该工作时，需反复核对知识点…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/smart-quiz-education",
+    "sourceType": "深度场景内容",
+    "minutes": 6
+  },
+  {
+    "identity": "zh|/guide/team-permission-errors",
+    "title": "FastGPT账号团队与权限报错清单：按症状分组",
+    "description": "FastGPT账号团队与权限报错清单 本页汇总站内已发布的账号、团队与权限配置环节的报错相关文档，按症状分组列出，可按报错表现直接定位到对应文档。该环节已发布 78 篇，本页列出其中 60 篇，核验日 2026-09-28。 属于这一环节的三类典型症状 1. 免登录窗口或分享链接操作时提示无权限 2. 登录…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/team-permission-errors",
+    "sourceType": "官方文档",
+    "minutes": 14
+  },
+  {
+    "identity": "zh|/guide/ui-display-errors",
+    "title": "FastGPT界面与展示报错清单：按症状分组",
+    "description": "FastGPT界面与展示报错清单 本页汇总站内已发布的页面渲染与内容展示环节的异常相关文档，按症状分组列出，可按报错表现直接定位到对应文档。该环节已发布 79 篇，本页列出其中 60 篇，核验日 2026-09-28。 属于这一环节的三类典型症状 1. 图表或组件区域空白、只显示坐标轴 2. 同一条回复在对…",
+    "category": "troubleshoot",
+    "locale": "zh",
+    "publicPath": "/guide/ui-display-errors",
+    "sourceType": "官方文档",
+    "minutes": 13
+  },
+  {
+    "identity": "zh|/reference/embedding-model-reference",
+    "title": "FastGPT 内置向量模型参数对照表",
+    "description": "FastGPT 内置向量模型参数对照表 本页列出 fastgpt-plugin v1.1.3 内置的 21 个向量模型在平台里登记的两个长度参数： defaultToken（默认每段长度）与 maxToken（单段能送进向量模型的上限），核验日 2026-09-28。 对照表 | 提供商 | 模型标识 |…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/embedding-model-reference",
+    "sourceType": "官方文档",
+    "minutes": 4
+  },
+  {
+    "identity": "zh|/reference/llm-quote-budget-bands",
+    "title": "FastGPT 对话模型引用预算分档表",
+    "description": "FastGPT 对话模型引用预算分档表 quoteMaxToken 是对话模型的引用预算：一轮回答里知识库引用内容合计能占多少 token。本页把 fastgpt-plugin v1.1.3 内置的 268 个对话模型按这个值分成 5 档，核验日 2026-09-28。 分档表 | 引用预算区间（token…",
+    "category": "reference",
+    "locale": "zh",
+    "publicPath": "/reference/llm-quote-budget-bands",
+    "sourceType": "官方文档",
+    "minutes": 3
   }
 ]

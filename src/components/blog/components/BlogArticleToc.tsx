@@ -26,7 +26,10 @@ export default function BlogArticleToc({ items, label, footer }: BlogArticleTocP
           <Text className="size-4" aria-hidden="true" />
           {label}
         </h2>
-        <div className="min-h-0 flex-1 overflow-y-auto pe-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div
+          className="min-h-0 flex-1 overflow-y-auto pe-2 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]"
+          data-blog-toc-scroll
+        >
           <nav aria-label={label}>
             <DesktopTocItems items={items} activeId={activeId} />
           </nav>
@@ -38,9 +41,9 @@ export default function BlogArticleToc({ items, label, footer }: BlogArticleTocP
 }
 
 export function BlogArticleTocMobile({ items, label }: Omit<BlogArticleTocProps, 'footer'>) {
-  const activeId = useActiveToc(items);
   const [open, setOpen] = useState(false);
   const mobileRef = useRef<HTMLDivElement>(null);
+  const activeId = useActiveToc(items, open);
 
   useEffect(() => {
     if (!open) return;
@@ -75,6 +78,7 @@ export function BlogArticleTocMobile({ items, label }: Omit<BlogArticleTocProps,
     <div
       ref={mobileRef}
       className="sticky top-[64px] z-20 border-b border-hairline-soft bg-[rgba(255,255,255,0.05)] backdrop-blur-[10px] lg:hidden"
+      data-blog-mobile-toc
       data-pagefind-ignore
     >
       <button
@@ -84,7 +88,7 @@ export function BlogArticleTocMobile({ items, label }: Omit<BlogArticleTocProps,
         aria-controls="blog-toc-popover"
         onClick={() => setOpen((current) => !current)}
       >
-        <ProgressCircle value={progress} className={open ? 'text-primary' : undefined} />
+        <ProgressCircle value={progress} className={open ? 'text-ink' : undefined} />
         <span className="min-w-0 flex-1 truncate">{open ? label : activeItem?.title ?? label}</span>
         <ChevronDown
           className={`mx-0.5 size-4 shrink-0 transition-transform ${open ? 'rotate-180' : ''}`}
@@ -100,21 +104,37 @@ export function BlogArticleTocMobile({ items, label }: Omit<BlogArticleTocProps,
   );
 }
 
-function useActiveToc(items: BlogTocItem[]) {
+function useActiveToc(items: BlogTocItem[], mobileTocOpen = false) {
   const [activeId, setActiveId] = useState(items[0]?.id);
 
   useEffect(() => {
     if (items.length === 0) return;
 
     const updateActive = () => {
-      const offset = 128;
+      const navbarBottom =
+        document.querySelector<HTMLElement>('nav.fixed')?.getBoundingClientRect().bottom ?? 0;
+      const mobileTocBottom =
+        document.querySelector<HTMLElement>('[data-blog-mobile-toc]')?.getBoundingClientRect()
+          .bottom ?? 0;
+      const visibleTop = Math.max(0, navbarBottom, mobileTocBottom);
+      const visibleBottom = window.innerHeight;
+      const lowerViewportStart = visibleBottom * 0.4;
       let nextActiveId = items[0].id;
 
-      for (const item of items) {
+      for (const [index, item] of items.entries()) {
         const heading = document.getElementById(item.id);
         if (!heading) continue;
-        if (heading.getBoundingClientRect().top <= offset) nextActiveId = item.id;
-        else break;
+
+        const { top, bottom } = heading.getBoundingClientRect();
+        if (bottom <= visibleTop) {
+          nextActiveId = item.id;
+          continue;
+        }
+        if (top >= visibleTop && bottom <= visibleBottom) {
+          nextActiveId = index > 0 && top >= lowerViewportStart ? items[index - 1].id : item.id;
+          break;
+        }
+        if (top > visibleBottom) break;
       }
 
       setActiveId((current) => (current === nextActiveId ? current : nextActiveId));
@@ -135,7 +155,7 @@ function useActiveToc(items: BlogTocItem[]) {
       window.removeEventListener('scroll', onScroll);
       window.removeEventListener('resize', updateActive);
     };
-  }, [items]);
+  }, [items, mobileTocOpen]);
 
   return activeId;
 }
@@ -150,6 +170,22 @@ type TocGeometry = {
 function DesktopTocItems({ items, activeId }: { items: BlogTocItem[]; activeId?: string }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [geometry, setGeometry] = useState<TocGeometry | null>(null);
+
+  useEffect(() => {
+    const activeItem = containerRef.current?.querySelector<HTMLElement>(
+      'a[aria-current="location"]'
+    );
+    const scrollContainer = containerRef.current?.closest<HTMLElement>('[data-blog-toc-scroll]');
+    if (!activeItem || !scrollContainer) return;
+
+    const itemRect = activeItem.getBoundingClientRect();
+    const containerRect = scrollContainer.getBoundingClientRect();
+    if (itemRect.top < containerRect.top || itemRect.bottom > containerRect.bottom) {
+      const itemTop = scrollContainer.scrollTop + itemRect.top - containerRect.top;
+      const centeredTop = itemTop - (scrollContainer.clientHeight - activeItem.offsetHeight) / 2;
+      scrollContainer.scrollTo({ top: Math.max(0, centeredTop), behavior: 'smooth' });
+    }
+  }, [activeId]);
 
   const print = useCallback(() => {
     const container = containerRef.current;
@@ -237,7 +273,7 @@ function DesktopTocItems({ items, activeId }: { items: BlogTocItem[]; activeId?:
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox={`0 0 ${geometry.width} ${geometry.height}`}
-              className="absolute inset-0 size-full overflow-visible text-primary transition-[clip-path] duration-300 ease-out"
+              className="absolute inset-0 size-full overflow-visible text-ink transition-[clip-path] duration-300 ease-out"
               style={{
                 clipPath: `polygon(0 ${activePosition[0]}px, 100% ${activePosition[0]}px, 100% ${activePosition[1]}px, 0 ${activePosition[1]}px)`
               }}
@@ -259,7 +295,7 @@ function DesktopTocItems({ items, activeId }: { items: BlogTocItem[]; activeId?:
             href={`#${item.id}`}
             aria-current={active ? 'location' : undefined}
             className={`relative z-10 block min-w-0 break-words py-1.5 pe-2 text-sm leading-5 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset ${
-              active ? 'text-primary' : 'text-ink-muted'
+              active ? 'text-ink' : 'text-ink-muted'
             } ${first ? 'pt-0' : ''} ${last ? 'pb-0' : ''}`}
             style={{ paddingInlineStart: getItemOffset(item.depth) }}
           >
@@ -294,7 +330,7 @@ function MobileTocItems({
             aria-current={active ? 'location' : undefined}
             onClick={onSelect}
             className={`relative block min-w-0 break-words py-1.5 pe-2 text-sm leading-5 transition-colors hover:text-primary focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-inset ${
-              active ? 'text-primary' : 'text-ink-muted'
+              active ? 'text-ink' : 'text-ink-muted'
             } ${first ? 'pt-0' : ''} ${last ? 'pb-0' : ''}`}
             style={{ paddingInlineStart: getItemOffset(item.depth) }}
           >

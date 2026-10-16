@@ -4,6 +4,10 @@ import { GITHUB_STARS_FALLBACK, getGitHubStarsFallback, isValidGitHubStars } fro
 
 const GITHUB_REPO_API = 'https://api.github.com/repos/labring/FastGPT';
 const CACHE_FILE = '.cache/github-stars.json';
+// Next 16 stores default prerender fetches in .next/cache/fetch-cache (revalidate ≈ 1 year), and
+// prepare-build keeps that cache across builds. A per-process value in the request headers makes
+// the fetch-cache key differ per build, so each build fetches fresh while staying static-export safe.
+const BUILD_FETCH_NONCE = String(Date.now());
 
 type GitHubStarsCache = {
   stars: number;
@@ -40,9 +44,13 @@ async function writeStarsCache(stars: number) {
 async function fetchGitHubStars(): Promise<number> {
   const response = await fetch(GITHUB_REPO_API, {
     headers: {
-      Accept: 'application/vnd.github+json'
+      Accept: 'application/vnd.github+json',
+      'X-Build-Fetch-Nonce': BUILD_FETCH_NONCE,
+      ...(process.env.GITHUB_TOKEN ? { Authorization: `Bearer ${process.env.GITHUB_TOKEN}` } : {})
     },
-    cache: 'no-store'
+    // No `no-store` (static export would skip it and use the fallback) and no `force-cache`.
+    // Short timeout so an unreachable GitHub only falls back instead of stalling the build.
+    signal: AbortSignal.timeout(5000)
   });
 
   if (!response.ok) {

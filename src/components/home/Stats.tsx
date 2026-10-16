@@ -1,40 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
-import * as m from 'framer-motion/m';
 import { formatGitHubStarsInThousands } from '@/lib/githubStarsDisplay';
-
-function useCountUp(end: number, decimals = 0, duration = 2000) {
-  const [value, setValue] = useState(0);
-  const ref = useRef<HTMLDivElement>(null);
-  const hasAnimated = useRef(false);
-
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting && !hasAnimated.current) {
-          hasAnimated.current = true;
-          const startTime = performance.now();
-          const animate = (now: number) => {
-            const elapsed = now - startTime;
-            const progress = Math.min(elapsed / duration, 1);
-            const eased = 1 - Math.pow(1 - progress, 3);
-            setValue(parseFloat((eased * end).toFixed(decimals)));
-            if (progress < 1) requestAnimationFrame(animate);
-          };
-          requestAnimationFrame(animate);
-        }
-      },
-      { rootMargin: '0px 0px 48px 0px', threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [end, decimals, duration]);
-
-  return { value, ref };
-}
 
 interface StatsProps {
   stars?: number;
@@ -55,7 +21,7 @@ export default function Stats({ stars, t }: StatsProps) {
       <div className="max-w-[min(92vw,1300px)] md:max-w-[min(85vw,1300px)] mx-auto">
         <div className="flex flex-col gap-[32px] items-center md:flex-row md:gap-0 md:items-start md:justify-between">
           {stats.map((stat, i) => (
-            <StatItem key={`${stat.label}-${stat.end}`} {...stat} delay={i * 0.12} />
+            <StatItem key={`${stat.label}-${stat.end}`} {...stat} />
           ))}
         </div>
       </div>
@@ -68,26 +34,21 @@ export function StatItem({
   decimals,
   suffix,
   label,
-  desc,
-  delay
+  desc
 }: {
   end: number;
   decimals: number;
   suffix: string;
   label: string;
   desc?: string;
-  delay: number;
+  /** Kept for caller compatibility; stats render statically without entrance animation. */
+  delay?: number;
 }) {
-  const { value, ref } = useCountUp(end, decimals);
-  const formatted = decimals > 0 ? value.toFixed(decimals) : value.toLocaleString();
+  // Final value rendered directly so static HTML is complete and visible without JS.
+  const formatted = decimals > 0 ? end.toFixed(decimals) : end.toLocaleString('en-US');
 
   return (
-    <m.div
-      ref={ref}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '0px 0px 48px 0px' }}
-      transition={{ duration: 0.7, delay, ease: [0.21, 0.47, 0.32, 0.98] }}
+    <div
       className="flex flex-1 flex-col items-center text-center"
       style={{ rowGap: 24 }}
     >
@@ -105,6 +66,6 @@ export function StatItem({
           <p className="text-ink-sub text-[12px] md:text-[16px] leading-[18px] md:leading-[24px]">{desc}</p>
         )}
       </div>
-    </m.div>
+    </div>
   );
 }

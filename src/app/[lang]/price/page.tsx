@@ -8,6 +8,65 @@ import HomeThemeFix from '@/components/home/HomeThemeFix';
 import GradientBlobs from '@/components/home/GradientBlobs';
 import FAQ from '@/components/home/FAQ';
 import { Metadata } from 'next';
+import { JsonLdScript } from '@/components/JsonLd';
+import { PRICE_PLANS_CLOUD } from '@/config/price';
+import { getOwnedLocaleUrl } from '@/lib/siteRouting';
+
+// Offer prices mirror PRICE_PLANS_CLOUD (CNY, as rendered by PPlan); annual = monthly × 10 as in PPlan.
+function getPricingOfferSchema(langName: string, title: string, description: string) {
+  const plans = PRICE_PLANS_CLOUD[langName] || PRICE_PLANS_CLOUD.en;
+  const pageUrl = getOwnedLocaleUrl(langName, '/price');
+  const offers = plans
+    .filter((plan) => typeof plan.price === 'number')
+    .flatMap((plan) => {
+      const monthly = plan.price as number;
+      const base = {
+        '@type': 'Offer',
+        url: pageUrl,
+        priceCurrency: 'CNY',
+        availability: 'https://schema.org/InStock'
+      };
+      if (monthly === 0) return [{ ...base, name: plan.title, price: '0' }];
+      return [
+        {
+          ...base,
+          name: plan.title,
+          price: String(monthly),
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: String(monthly),
+            priceCurrency: 'CNY',
+            unitCode: 'MON',
+            referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'MON' }
+          }
+        },
+        {
+          ...base,
+          name: plan.title,
+          price: String(monthly * 10),
+          priceSpecification: {
+            '@type': 'UnitPriceSpecification',
+            price: String(monthly * 10),
+            priceCurrency: 'CNY',
+            unitCode: 'ANN',
+            referenceQuantity: { '@type': 'QuantitativeValue', value: 1, unitCode: 'ANN' }
+          }
+        }
+      ];
+    });
+
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: 'FastGPT',
+    applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
+    url: pageUrl,
+    description,
+    headline: title,
+    offers
+  };
+}
 
 const titleMap: Record<string, string> = {
   zh: 'FastGPT 定价 - 选择适合你的方案',
@@ -69,6 +128,13 @@ export default async function Index({ params }: { params: Promise<{ lang?: strin
 
   return (
     <div className="home overflow-x-hidden">
+      <JsonLdScript
+        data={getPricingOfferSchema(
+          langName,
+          titleMap[langName] || titleMap.en,
+          descMap[langName] || descMap.en
+        )}
+      />
       <HomeThemeFix />
       <Navbar links={dict.links} t={dict.Home.navCta} locale={langName} />
 

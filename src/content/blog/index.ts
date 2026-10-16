@@ -100,9 +100,18 @@ export function getBlogBuildLocales(): LocaleCode[] {
   return [...supportedLocaleCodes];
 }
 
+/**
+ * Reserved slug emitted only when no post is published: static export rejects an empty
+ * generateStaticParams, and the page/route handlers already 404 for unknown slugs.
+ */
+export const EMPTY_BLOG_SENTINEL_SLUG = '__no-published-posts__';
+
 export function getBlogBuildParams(localized = true) {
   const locales = localized ? getBlogBuildLocales() : [getBlogDefaultLocale()];
-  return locales.flatMap((locale) => getBlogSlugs(locale).map((slug) => ({ lang: locale, slug })));
+  const params = locales.flatMap((locale) =>
+    getBlogSlugs(locale).map((slug) => ({ lang: locale, slug }))
+  );
+  return params.length ? params : [{ lang: locales[0], slug: EMPTY_BLOG_SENTINEL_SLUG }];
 }
 
 export function getBlogDefaultLocale(): BlogLocale {

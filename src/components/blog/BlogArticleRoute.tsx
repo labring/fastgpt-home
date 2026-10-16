@@ -9,6 +9,7 @@ import { getDictionary } from '@/lib/i18n';
 
 import { toBlogListPost } from './blogPagination';
 import { getBlogCopy } from './blogCopy';
+import { BlogArticleTocMobile } from './components/BlogArticleToc';
 import ArticleLayoutSection from './sections/ArticleLayoutSection';
 
 export default async function BlogArticleRoute({ locale, slug }: { locale: string; slug: string }) {
@@ -25,11 +26,13 @@ export default async function BlogArticleRoute({ locale, slug }: { locale: strin
       <Navbar links={dict.links} t={dict.Home.navCta} locale={locale} />
 
       <main className="bg-white text-slate-950">
+        <BlogArticleTocMobile items={post.toc} label={copy.article.onThisPage} />
         <ArticleLayoutSection
           post={post}
           locale={locale}
           backLabel={copy.article.back}
           categoryLabel={categoryLabels[post.category]}
+          onThisPage={copy.article.onThisPage}
           formatDate={(date) =>
             new Intl.DateTimeFormat(copy.article.dateLocale, {
               year: 'numeric',
@@ -42,8 +45,8 @@ export default async function BlogArticleRoute({ locale, slug }: { locale: strin
           relatedReadMoreLabel={copy.allPosts.readMore}
           relatedCategoryLabels={categoryLabels}
           cta={{
-            title: dict.FAQ.sidebarTitle,
-            description: dict.FAQ.sidebarDescription,
+            title: copy.article.ctaTitle ?? dict.FAQ.sidebarTitle,
+            description: copy.article.ctaDescription ?? dict.FAQ.sidebarDescription,
             consultLabel: dict.Home.navCta.consult,
             trialLabel: dict.FAQ.sidebarCta
           }}

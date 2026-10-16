@@ -18,7 +18,7 @@ env:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: namespace-profile-sealos-apps-amd64
     env:
       # Public filing text is available to fork PRs without repository secrets.
       NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'

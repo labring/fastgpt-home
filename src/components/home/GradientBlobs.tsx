@@ -31,7 +31,7 @@ const defaultDesktop: BlobSpec[] = [
     h: 620,
     left: '15%',
     top: -160,
-    x: [0, 80, 120, 40, -20, 0],
+    x: [0, 30, 0],
     y: [0, -20, 10, -15, 5, 0],
     s: [1, 1.05, 0.95, 1.08, 0.97, 1],
     dur: 10
@@ -41,7 +41,7 @@ const defaultDesktop: BlobSpec[] = [
     h: 620,
     left: '35%',
     top: -140,
-    x: [0, -80, -100, -30, 30, 0],
+    x: [0, -30, 0],
     y: [0, 15, -10, 20, -5, 0],
     s: [1, 0.95, 1.1, 0.97, 1.05, 1],
     dur: 12
@@ -54,8 +54,8 @@ const defaultMobile: BlobSpec[] = [
     h: 400,
     left: '0%',
     top: -140,
-    x: [0, 40, 60, 15, -15, 0],
-    y: [0, -10, 5, -8, 3, 0],
+    x: [0, 25, 0],
+    y: [0, -25, 0],
     s: [1, 1.05, 0.95, 1.08, 0.97, 1],
     dur: 10
   },
@@ -184,7 +184,12 @@ export default function GradientBlobs({
             ...(large ? { animation: 'aurora-hue 20s ease-in-out infinite' } : {})
           }}
           animate={{ x: b.x, y: b.y, scale: b.s }}
-          transition={{ duration: b.dur, repeat: Infinity, ease: 'easeInOut', delay: b.delay || 0 }}
+          transition={{
+            duration: b.dur,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: b.delay || 0
+          }}
         />
       );
     });

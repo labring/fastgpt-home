@@ -15,7 +15,7 @@ env:
 
 jobs:
   source:
-    runs-on: ubuntu-24.04
+    runs-on: namespace-profile-sealos-apps-amd64
     timeout-minutes: 20
     outputs:
       revision: ${{ steps.inputs.outputs.revision }}
@@ -60,7 +60,7 @@ jobs:
 
   verify:
     needs: source
-    runs-on: ubuntu-24.04
+    runs-on: namespace-profile-sealos-apps-amd64
     strategy:
       fail-fast: false
       matrix:

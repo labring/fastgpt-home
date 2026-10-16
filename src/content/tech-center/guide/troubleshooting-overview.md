@@ -2,20 +2,19 @@
 title: FastGPT 报错与排障问题全景：按出错环节分流
 slug: /zh/guide/troubleshooting-overview
 page_type: 问题全景聚合页
-source: https://github.com/labring/FastGPT
+source: https://doc.fastgpt.cn/zh-CN/self-host/deploy/docker
 source_type: 站内已发布文档的程序化归类
-check_day: 2026-09-29
+check_day: 2026-09-28
 article_section: 报错与排障
 is_part_of: FastGPT 技术中心
-meta_title: FastGPT 报错与排障问题全景：按出错环节分流
-meta_description: FastGPT 报错与排障问题全景 本页把站内已发布的 2848 篇排障文档按报错发生的环节归类，用于在拿到一条报错但不确定属于哪一环时先做分流，再进入对应环节的清单查具体条目。归类依据文档标题中的技术对象， 先分流：三步把报错归到环节 | 步骤 | 需要确认的事实 | 指向的环节 | | --- | ---
-date_published: 2026-09-29
-date_modified: 2026-09-29
+schema_type: TechArticle
+date_published: 2026-10-15
+date_modified: 2026-10-15
 ---
 
 # FastGPT 报错与排障问题全景
 
-本页把站内已发布的 2848 篇排障文档按报错发生的环节归类，用于在拿到一条报错但不确定属于哪一环时先做分流，再进入对应环节的清单查具体条目。归类依据文档标题中的技术对象，
+本页把站内已发布的 2848 篇排障文档按报错发生的环节归类，用于在拿到一条报错但不确定属于哪一环时先做分流，再进入对应环节的清单查具体条目。归类依据文档标题中的技术对象，核验日 2026-09-28。
 
 ## 先分流：三步把报错归到环节
 
@@ -34,13 +33,13 @@ date_modified: 2026-09-29
 | 工作流与节点 | 工作流编排、节点配置与变量传递环节的报错 | 228 | [进入清单](/zh/guide/workflow-node-errors) |
 | 工具调用与插件 | 工具调用、插件与沙箱运行环节的报错 | 241 | [进入清单](/zh/guide/tool-plugin-errors) |
 | 部署与容器 | 容器构建、镜像拉取与部署环节的报错 | 325 | [进入清单](/zh/guide/deploy-container-errors) |
-| 接口与鉴权 | 接口调用与鉴权配置环节的报错 | 148 | 本轮未建清单 |
-| 界面与展示 | 页面渲染与内容展示环节的异常 | 79 | 本轮未建清单 |
-| 账号团队与权限 | 账号、团队与权限配置环节的报错 | 78 | 本轮未建清单 |
-| 性能与超时 | 响应变慢、超时与并发相关的问题 | 26 | 本轮未建清单 |
-| 数据库与存储 | 数据库连接与对象存储配置环节的报错 | 74 | 本轮未建清单 |
+| 接口与鉴权 | 接口调用与鉴权配置环节的报错 | 148 | [进入清单](/zh/guide/api-auth-errors) |
+| 界面与展示 | 页面渲染与内容展示环节的异常 | 79 | [进入清单](/zh/guide/ui-display-errors) |
+| 账号团队与权限 | 账号、团队与权限配置环节的报错 | 78 | [进入清单](/zh/guide/team-permission-errors) |
+| 性能与超时 | 响应变慢、超时与并发相关的问题 | 26 | [进入清单](/zh/guide/performance-timeout-errors) |
+| 数据库与存储 | 数据库连接与对象存储配置环节的报错 | 74 | [进入清单](/zh/guide/database-storage-errors) |
 
-本轮已建清单的 5 个环节共覆盖 1726 篇文档。另有 717 篇文档的主题较为分散，尚未归入以上环节，可通过站内搜索按具体报错信息查找。
+以上 10 个环节均已建清单，共覆盖 2131 篇文档。另有 717 篇文档的主题较为分散，尚未归入以上环节，可通过站内搜索按具体报错信息查找。
 
 ## 分流时的三个常见顺序问题
 
@@ -65,8 +64,8 @@ date_modified: 2026-09-29
 
 ## 继续阅读
 
-- [FastGPT模型调用与推理报错清单](/zh/guide/model-inference-errors)
-- [FastGPT知识库与文件解析报错清单](/zh/guide/kb-parsing-errors)
+- [FastGPT接口与鉴权报错清单](/zh/guide/api-auth-errors)
+- [FastGPT界面与展示报错清单](/zh/guide/ui-display-errors)
 
 ## 参考资料
 
@@ -82,3 +81,5 @@ date_modified: 2026-09-29
 - 商务咨询：获取私有部署与升级阶段的技术支持
 - 立即开始：使用云服务形态，跳过环境准备
 - 定价：对比云服务与私有部署两种形态的适用范围
+
+> 条目取自站内已发布文档，按标题中的技术对象程序化归类，核验日 2026-09-28。

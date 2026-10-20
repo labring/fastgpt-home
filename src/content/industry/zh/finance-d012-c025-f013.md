@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行营销内容的知识库检索与召回
-meta_description: 农商行营销内容的数据来源为内部运营系统的营销物料库、信贷管理系统的产品文档、网点反馈的客户沟通话术整理。更新节奏为每月固定更新一次，遇重大营销活动临时追加更
+meta_description: 农商行营销内容的知识库检索与召回：农商行营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 农商行、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

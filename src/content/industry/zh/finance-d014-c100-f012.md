@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理财报分析的模型接入与配置
-meta_description: 物业管理财报的数据来源包括物业项目的收费管理系统、能耗监测平台、维保工单系统与财务记账凭证。更新节奏为月度或季度，单份文档对应单个独立物业项目，文档结构包含
+meta_description: 物业管理财报分析的模型接入与配置：物业管理财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 物业管理、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Jewelry
-meta_description: Jewelry research report data primarily comes from industry association monthly briefings, public new product research reports from leading brands
+meta_description: Multi-turn Dialogue and Prompt Engineering for Jewelry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

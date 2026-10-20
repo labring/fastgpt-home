@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料融资日报的引用来源与溯源
-meta_description: 饲料融资日报的数据来源涵盖全国饲料工业协会资讯平台、农业农村部畜牧兽医局监测数据库、上市饲料企业公告披露渠道。数据更新节奏为每日更新，单条记录的文档结构包含
+meta_description: 饲料融资日报的引用来源与溯源：饲料融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 饲料、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

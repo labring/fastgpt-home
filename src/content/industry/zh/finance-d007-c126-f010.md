@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场收益率的数据库与运维
-meta_description: 航空机场收益率相关数据主要来自民航管理机构公开API、机场内部ERP系统与营收台账。更新节奏分为两类：航班起降实时数据每15分钟同步一次，单日营收、收益率类
+meta_description: 航空机场收益率的数据库与运维：航空机场收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 航空机场、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

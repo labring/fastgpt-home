@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理智能尽调报告的工具调用与插件
-meta_description: 这个品类的数据主要来自生态环境部门公开水质监测站数据、水务运营方内部运维系统、第三方检测机构正式报告。更新节奏分为三类：实时水质参数每小时同步，日常运维日志
+meta_description: 水处理智能尽调报告的工具调用与插件：水处理智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 水处理、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

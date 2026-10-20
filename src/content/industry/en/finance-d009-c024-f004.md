@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c024-f004
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Agrochemical Product Research
-meta_description: Agrochemical product research report data primarily comes from industry association monthly operation briefings, securities firm chemical industry
+meta_title: Vector Models and Indexing for Agrochemical Product
+meta_description: Vector Models and Indexing for Agrochemical Product Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

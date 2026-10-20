@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业投研知识库建设的部署与升级
-meta_description: 商业物业投研的数据来源涵盖内部运营系统、招商管理平台、能耗监测终端、政府住建部门公开渠道及行业协会报告。更新节奏存在分层特点：基础项目档案每季度更新，租金台
+meta_description: 商业物业投研知识库建设的部署与升级：商业物业投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 商业物业、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

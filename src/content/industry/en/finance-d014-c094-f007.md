@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Refinery Financial Report
-meta_description: Data sources for refinery enterprise financial report analysis include internal ERP production modules, manufacturing execution systems (MES)
+meta_description: Workflow Orchestration for Refinery Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Cross-data-source field association requirements require workflows to include da
 | --- | --- | --- |
 | `database_connection_timeout` | `300 seconds` | Refinery financial report-related data has a large storage scale. The default timeout duration is insufficient to complete full data pulls. Extending the connection time reduces the probability of connection failures |
 | `workflow_trigger_mode` | `Scheduled trigger + Manual trigger` | Adapts to the different update rhythms of quarterly financial report updates and daily updated operational data. Manual triggers are used for temporary emergency financial report analysis needs |
-| `variable_format_rule` | `{{dataset_id}}.{{field_name}}` | Follows the platform's built-in knowledge base variable reference specifications to avoid node execution failures caused by format errors |
+| `variable_format_rule` | `example value.example value` | Follows the platform's built-in knowledge base variable reference specifications to avoid node execution failures caused by format errors |
 | `data_cleaning_schema` | `Preset refinery financial report template` | Matches refinery-specific metric fields such as processing volume and energy consumption, reducing manual mapping workload and error probability |
 | `parallel_task_limit` | `2 parallel tasks` | Balances resource usage and execution efficiency for multi-data source connections, avoiding system overload caused by pulling too much data simultaneously |
 
@@ -46,7 +46,7 @@ Cross-data-source field association requirements require workflows to include da
 
 ## How to Confirm Correct Configuration
 - Enter workflow debug mode, manually trigger one execution, and check the execution logs of each node to confirm that the database connection node has no errors and data pulls successfully.
-- Enter a test `{{dataset_id}}` in the variable reference node, and check whether the returned field list includes refinery-specific metrics such as processing volume and energy consumption.
+- Enter a test `example value` in the variable reference node, and check whether the returned field list includes refinery-specific metrics such as processing volume and energy consumption.
 - Check the workflow's trigger configuration page to confirm that the scheduled task cycle matches the data update rhythm, and that the switch function between manual trigger and scheduled trigger works normally.
 - Export the workflow execution results, verify that the units of structured data fields match the preset units of refinery metrics, and confirm that the data cleaning step has taken effect.
 

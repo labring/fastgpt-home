@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务投研知识库建设的对话日志与审计
-meta_description: 水务投研的数据主要来自市政水务集团的实时管网监测系统、月度运营报表、国家及地方水务行业政策文件、水质标准规范、行业协会调研资料。实时监测数据按小时或每日更新
+meta_description: 水务投研知识库建设的对话日志与审计：水务投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 水务、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

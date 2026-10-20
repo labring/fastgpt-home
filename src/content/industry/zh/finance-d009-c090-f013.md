@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨研报检索的知识库检索与召回
-meta_description: 涂料油墨研报数据主要来自行业协会公开报告、上市涂料企业年度技术报告、第三方化工咨询机构的细分品类分析文档，以及环保监管部门发布的合规标准文件。更新节奏随行业
+meta_description: 涂料油墨研报检索的知识库检索与召回：涂料油墨研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 涂料油墨、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

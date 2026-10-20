@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c124-f004
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Automated Equipment Marketing
-meta_description: Automated equipment marketing content in finance, insurance, or wealth management scenarios uses data sources including official product technical
+meta_title: Vector Models and Indexing for Automated Equipment
+meta_description: Vector Models and Indexing for Automated Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

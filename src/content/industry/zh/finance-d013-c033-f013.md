@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤融资日报的知识库检索与召回
-meta_description: 化纤融资日报的数据来源包括化纤行业协会公开的每日行业台账、大宗商品现货交易平台的化纤品类行情数据、海关总署公示的化纤进出口融资信息、区域石化园区的企业融资备
+meta_description: 化纤融资日报的知识库检索与召回：化纤融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 化纤、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

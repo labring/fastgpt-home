@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体财报分析的模型接入与配置
-meta_description: 半导体行业财报数据主要来自境内外证券交易所公开披露的定期报告、行业协会公开统计文档。更新节奏按季度、年度固定发布，季度报告在季度结束后1个月内披露，年度报告
+meta_description: 半导体财报分析的模型接入与配置：半导体财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 半导体、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

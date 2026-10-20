@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务智能尽调报告的多轮对话与提示词
-meta_description: 水务智能尽调报告的数据主要来自供水、排水运营企业的公开运营档案、住建部门的公用事业统计公示、管网物联网监测系统的实时采集数据。更新节奏覆盖小时级（管网压力、
+meta_description: 水务智能尽调报告的多轮对话与提示词：水务智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水务、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行研报检索的模型接入与配置
-meta_description: 农商行研报检索的数据源主要来自行内调研团队产出的专项分析报告、监管部门发布的涉农金融政策解读、辖内涉农经营主体的月度跟踪分析文档。更新节奏随业务需求与政策发
+meta_description: 农商行研报检索的模型接入与配置：农商行研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 农商行、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

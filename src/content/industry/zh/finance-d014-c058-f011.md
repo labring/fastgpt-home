@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的文档解析与分块
-meta_description: 小金属财报数据主要来自境内外交易所披露的上市公司年报、季报，以及行业协会发布的月度供需报告。文档多为PDF或DOCX格式，单份年报篇幅跨度较大，包含产量、库
+meta_description: 小金属财报分析的文档解析与分块：小金属财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

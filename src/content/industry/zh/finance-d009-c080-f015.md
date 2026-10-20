@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺研报检索的部署与升级
-meta_description: 面向金融投研场景的服装家纺研报，数据来源包括中国纺织工业联合会公开行业报告、上市服装家纺企业定期公告、专业纺织服饰细分数据库。更新节奏为行业月度报告固定更新
+meta_description: 服装家纺研报检索的部署与升级：服装家纺研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 服装家纺、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

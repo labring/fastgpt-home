@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Qualification
-meta_description: Qualification compliance bidding data is primarily sourced from public government procurement announcements, industry regulatory authority
+meta_description: Multi-turn Dialogue and Prompting for Qualification Compliance Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口智能尽调报告的模型接入与配置
-meta_description: 航运港口智能尽调报告的数据来源包含港口内部运营管理系统、海关通关系统、船舶交通管理系统及行业统计平台。数据更新节奏分为三类：实时作业类数据（靠离港、装卸进度
+meta_description: 航运港口智能尽调报告的模型接入与配置：航运港口智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 航运港口、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

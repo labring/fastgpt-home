@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务研报检索的工作流编排
-meta_description: 本品类的数据涵盖券商研究所公开研报、行业研究白皮书、公募基金季度持仓报告等公开研究文档。更新节奏随发布主体调整，常规券商研报随交易日更新，行业白皮书按需发布
+meta_description: 综合服务研报检索的工作流编排：综合服务研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 综合服务、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

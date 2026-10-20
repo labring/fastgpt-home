@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁收益率的对话日志与审计
-meta_description: 融资租赁的收益率日报数据来源为租赁公司核心业务系统每日生成的项目收益快照，更新节奏为每日凌晨批量生成前一日全量存量项目数据。单条数据包含项目唯一标识、租赁物
+meta_description: 融资租赁收益率的对话日志与审计：融资租赁收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 融资租赁、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

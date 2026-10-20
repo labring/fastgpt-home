@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业融资日报的HTTP 接口与外部系统
-meta_description: 商业物业融资日报的数据来源为商业物业运营系统、合作银行对公融资台账、项目租金收缴系统。更新节奏为每日凌晨完成全量更新，单份日报文档按项目维度拆分，包含项目编
+meta_description: 商业物业融资日报的HTTP 接口与外部系统：商业物业融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业物业、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

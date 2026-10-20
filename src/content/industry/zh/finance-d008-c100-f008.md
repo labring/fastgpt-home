@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理智能尽调报告的工具调用与插件
-meta_description: 物业管理智能尽调报告的数据来源涵盖物业内部运维台账、政府住建部门备案平台、第三方运维服务商接口三类。结构化数据包含楼宇编号、设施型号、维护日期、报修响应时长
+meta_description: 物业管理智能尽调报告的工具调用与插件：物业管理智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 物业管理、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

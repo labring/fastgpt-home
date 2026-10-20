@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖营销内容的工具调用与插件
-meta_description: 水产养殖的核心数据来源包括塘口物联网传感器、养殖台账系统、饲料投喂记录系统与苗种批次档案。数据更新节奏分为实时（溶氧、水温等水质指标）、每日（投喂量、用药记
+meta_description: 水产养殖营销内容的工具调用与插件：水产养殖营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 水产养殖、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

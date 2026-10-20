@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的表单与交互
-meta_description: 数据主要来自酒店餐饮门店的POS终端、会员管理系统、第三方预订平台API，部分营销触达数据来自金融合作渠道的投放后台。更新节奏分为实时（订单、优惠券核销记录
+meta_description: 酒店餐饮营销内容的表单与交互：酒店餐饮营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 酒店餐饮、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

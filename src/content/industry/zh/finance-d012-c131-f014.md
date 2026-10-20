@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的表单与交互
-meta_description: 装修装饰类在金融理财场景下的营销内容数据，主要来源于合作装修公司的落地案例库、银行装修贷产品库及用户留资申请数据。数据更新节奏为每周同步新增合作商家案例与更
+meta_description: 装修装饰营销内容的表单与交互：装修装饰营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 装修装饰、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

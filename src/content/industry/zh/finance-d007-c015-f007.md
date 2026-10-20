@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能收益率的工作流编排
-meta_description: 储能收益率相关数据主要来源于国家电网电力交易中心公开接口、储能场站本地数据采集系统。数据更新节奏为每日凌晨更新前一日的全量记录。数据格式为结构化JSON或C
+meta_description: 储能收益率的工作流编排：储能收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 储能、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

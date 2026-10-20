@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电研报检索的向量模型与索引
-meta_description: 白色家电研报的数据主要来自券商研究所、行业协会及头部品牌公开的行业分析报告。更新节奏随新品发布季、行业展会及季度财报周期波动，无固定日更频率。文档结构包含结
+meta_description: 白色家电研报检索的向量模型与索引：白色家电研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 白色家电、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

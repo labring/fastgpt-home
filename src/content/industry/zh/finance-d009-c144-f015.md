@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务研报检索的部署与升级
-meta_description: 金融领域的通信服务研报数据来源主要为券商研究所通信行业专项研报、金融机构内部整理的运营商运营数据、第三方金融数据平台的通信赛道公开报告。更新节奏分为两类：行
+meta_description: 通信服务研报检索的部署与升级：通信服务研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 通信服务、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

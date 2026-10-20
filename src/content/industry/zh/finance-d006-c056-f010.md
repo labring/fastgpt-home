@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品投研知识库建设的数据库与运维
-meta_description: 家居用品投研数据主要来源于行业协会公开统计资料、品牌方官方产品手册、跨境电商平台sku快照、海关进出口报关数据。更新节奏存在差异，行业合规类数据每季度更新，
+meta_description: 家居用品投研知识库建设的数据库与运维：家居用品投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 家居用品、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

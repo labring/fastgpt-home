@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销收益率的模型接入与配置
-meta_description: 金融领域广告营销场景下的收益率与行情数据，主要来自各金融广告投放管理平台的后台报表、媒体对接的API接口。更新节奏以自然日为周期，每日固定时段更新前一自然日
+meta_description: 广告营销收益率的模型接入与配置：广告营销收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 广告营销、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

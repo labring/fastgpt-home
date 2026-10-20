@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Special Steel Marketing
-meta_description: Special steel marketing and production documents for supply chain financial services of financial institutions are mainly sourced from internal
+meta_description: Document Parsing and Chunking for Special Steel Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台营销内容的模型接入与配置
-meta_description: 投资平台的核心数据包含两类，一类是结构化的用户行为数据，来源为用户持仓记录、交易流水、风险测评结果，更新节奏为交易时段实时同步、每日盘后更新持仓市值与收益率
+meta_description: 投资平台营销内容的模型接入与配置：投资平台营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 投资平台、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺研报检索的多轮对话与提示词
-meta_description: 服装家纺研报数据主要来自中国纺织工业联合会家纺分会、券商研究所、专业纺织咨询机构三类渠道。行业通用数据按季度更新，头部企业专项研报随年报、行业展会节点不定期
+meta_description: 服装家纺研报检索的多轮对话与提示词：服装家纺研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 服装家纺、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

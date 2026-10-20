@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行融资日报的向量模型与索引
-meta_description: 数据来源为辖内企业融资申请台账、人行金融统计监测系统、本行信贷审批流程节点数据，更新频率为每日凌晨生成前一日全量更新。单份日报文档以结构化表格为主体，包含企
+meta_description: 农商行融资日报的向量模型与索引：农商行融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 农商行、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

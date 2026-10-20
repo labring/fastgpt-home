@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的对话日志与审计
-meta_description: 化学制药领域的收益率与行情数据，来源为证券交易所公开的医药生物板块细分行情接口及行业监测数据库。数据按交易日更新，每个交易日收盘后生成完整当日数据集。标准文
+meta_description: 化学制药收益率的对话日志与审计：化学制药收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 化学制药、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

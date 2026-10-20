@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的部署与升级
-meta_description: 自动化设备的营销关联数据主要来源于工业物联网网关、设备本地PLC日志、客户现场的工况采集系统。实时工况数据每1至5秒更新一次，包含设备SN码、运行温度（℃）
+meta_description: 自动化设备营销内容的部署与升级：自动化设备营销内容的部署与升级，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

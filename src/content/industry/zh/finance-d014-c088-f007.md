@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程财报分析的工作流编排
-meta_description: 油服工程财报数据主要来自境内外证券交易所披露的定期报告、行业监管机构公开的作业统计文件，更新节奏匹配企业年报、季报周期，临时公告则随重大作业节点发布。文档结
+meta_description: 油服工程财报分析的工作流编排：油服工程财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 油服工程、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c029-f013
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Packaging and
-meta_description: Packaging and printing financing daily report data comes from three main sources: public disclosures of national printing industry associations
+meta_title: Knowledge Base Retrieval and Recall for Packaging
+meta_description: Knowledge Base Retrieval and Recall for Packaging and Printing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ Special business fields for the packaging and printing industry require category
 
 ## Three Common Configuration Mistakes
 - Phenomenon: The exported knowledge base file size is only hundreds of KB, and some financing document content is missing. Cause: The full synchronization switch is not enabled, and only temporary chunk data from the current session is exported.
-- Phenomenon: Image links not from online image beds in markdown files imported into the knowledge base cannot be displayed normally. Empty placeholder fields are returned during retrieval. Cause: Local image paths are not replaced with the platform's built-in image bed address. Only original local file paths are retained.
+- Phenomenon: Image links not from online image beds in markdown files imported into the knowledge base cannot be displayed normally. Empty pending verification fields are returned during retrieval. Cause: Local image paths are not replaced with the platform's built-in image bed address. Only original local file paths are retained.
 - Phenomenon: A large number of financing events from non-packaging and printing industries are mixed in retrieval results. The number of recalled entries exceeds the expected range. Cause: No category keyword filtering rules are set. Matching conditions for packaging and printing related fields are not added during the retrieval link.
 
 ## How to Confirm Configuration Is Correct

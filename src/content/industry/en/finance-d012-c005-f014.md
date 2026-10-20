@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Personal Care Product Marketing
-meta_description: Personal care product marketing content data comes primarily from official product manuals, compliance quality inspection reports, e-commerce platform
+meta_description: Forms and Interactions for Personal Care Product Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

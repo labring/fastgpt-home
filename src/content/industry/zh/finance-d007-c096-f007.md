@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭收益率的工作流编排
-meta_description: 焦炭的行情数据来源为大连商品交易所官方行情接口、行业现货监测平台的交易数据接口。更新节奏为交易日每日16:30至17:30完成当日全量数据更新，非交易日无有
+meta_description: 焦炭收益率的工作流编排：焦炭收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 焦炭、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

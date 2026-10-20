@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销融资日报的多轮对话与提示词
-meta_description: 广告营销融资日报的数据来源包含公开企业融资披露信息、行业监测平台的广告赛道融资数据、合作方的投放回款关联数据。更新节奏为每日更新，单份日报文档包含企业名称、
+meta_description: 广告营销融资日报的多轮对话与提示词：广告营销融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 广告营销、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易财报分析的文档解析与分块
-meta_description: 钢铁贸易的财报与业务文档主要来源于企业内部进销存台账、月度结算单、季度/年度官方财报PDF、交易所现货报价报表。更新节奏分为月度（进销存与结算单）、季度（中
+meta_description: 钢铁贸易财报分析的文档解析与分块：钢铁贸易财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 钢铁贸易、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

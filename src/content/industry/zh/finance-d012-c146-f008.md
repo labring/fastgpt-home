@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备营销内容的工具调用与插件
-meta_description: 通用设备的数据源包括出厂铭牌参数、运维台账、行业通用技术手册、招标采购文档。出厂参数为固定值，运维数据按月更新，招标文档随项目实时更新。文档结构以结构化表格
+meta_description: 通用设备营销内容的工具调用与插件：通用设备营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 通用设备、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

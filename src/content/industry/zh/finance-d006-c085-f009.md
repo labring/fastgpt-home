@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥投研知识库建设的引用来源与溯源
-meta_description: 水泥行业投研数据包含多类来源：中国建筑材料联合会发布的月度产能、区域价格数据，上海期货交易所的水泥期货日度报价，上市建材企业的季度财报，以及地方住建部门的基
+meta_description: 水泥投研知识库建设的引用来源与溯源：水泥投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 水泥、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

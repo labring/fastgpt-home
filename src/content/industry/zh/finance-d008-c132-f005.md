@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备智能尽调报告的多轮对话与提示词
-meta_description: 计算机设备尽调报告的数据主要来源于厂商官方参数文档、第三方质检报告、供应链溯源系统、设备运维日志与库存管理平台。硬件核心参数（如CPU主频、内存容量）更新节
+meta_description: 计算机设备智能尽调报告的多轮对话与提示词：计算机设备智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 计算机设备、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

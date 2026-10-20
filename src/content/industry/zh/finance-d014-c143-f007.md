@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发财报分析的工作流编排
-meta_description: 软件开发企业的财报数据主要来自公开披露的定期报告，包括季度报、半年报与年报，更新节奏固定为每季度、每半年、每年一次。数据文档包含合并财务报表、研发投入专项说
+meta_description: 软件开发财报分析的工作流编排：软件开发财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 软件开发、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

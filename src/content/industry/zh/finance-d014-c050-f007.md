@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶财报分析的工作流编排
-meta_description: 数据主要来自上市公司公开披露的年报、季报，国内塑料橡胶行业协会的月度行业运行报告，以及大宗商品交易平台的现货报价数据。更新节奏分为三类：年度报告每年4月前披
+meta_description: 塑料橡胶财报分析的工作流编排：塑料橡胶财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 塑料橡胶、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

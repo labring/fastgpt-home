@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力智能尽调报告的向量模型与索引
-meta_description: 热力智能尽调报告的数据主要来自热力运营企业的月度运营台账、管网实时监测数据、供热计费系统记录、政府住建部门备案文件及年度审计报告。更新节奏分为三类：管网运行
+meta_description: 热力智能尽调报告的向量模型与索引：热力智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 热力、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

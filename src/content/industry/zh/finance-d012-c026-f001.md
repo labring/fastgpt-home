@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c026-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 出版营销内容的HTTP 接口与外部系统
-meta_description: 金融领域出版营销内容的数据主要来自金融出版社内部选题管理系统、理财类电商平台图书详情接口、自营金融营销素材库。更新节奏分为两类：新书上线周期内批量同步全量营
+meta_title: 出版营销内容的HTTP接口与外部系统
+meta_description: 出版营销内容的HTTP接口与外部系统：出版营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 出版、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

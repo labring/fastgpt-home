@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for In-Client Natural
-meta_description: The data sources for this category include structured business fields from the client’s embedded business system, natural language search queries
+meta_description: Model Access and Configuration for In-Client Natural Language Search (Function Entry)
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

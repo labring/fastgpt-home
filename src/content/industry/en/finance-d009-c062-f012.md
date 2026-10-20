@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c062-f012
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Advertising and
-meta_description: Advertising and marketing research report data primarily comes from industry think tanks, media agencies, and brand marketing review reports. Update
+meta_title: Model Integration and Configuration for Advertising
+meta_description: Model Integration and Configuration for Advertising and Marketing Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

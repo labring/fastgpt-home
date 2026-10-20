@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c042-f009
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Brand Agency Operation
-meta_description: Data sources for brand agency operation financing daily reports include public industrial and commercial disclosures, official brand announcements
+meta_title: Citation Sources and Traceability for Brand Agency
+meta_description: Citation Sources and Traceability for Brand Agency Operation Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ Since data sources are scattered across multiple channels including public annou
 | --- | --- | --- |
 | `sourceEnable` | `Enabled` | Citation for brand agency operation financing daily reports must clearly label data sources to meet compliance requirements for industry information traceability |
 | `maxSourceRetrieve` | `Top 6 entries` | Associated data sources for a single financing record do not exceed 5. Retaining the top 6 entries covers all valid sources without occupying excessive context |
-| `sourceMarkTemplate` | `【Data Source】{{sourceName}} | {{sourceUrl}} | {{publishDate}}` | Adapts to the field structure of financing daily reports, clearly displaying source name, link, and disclosure date |
+| `sourceMarkTemplate` | `【Data Source】example value | example value | example value` | Adapts to the field structure of financing daily reports, clearly displaying source name, link, and disclosure date |
 | `maxContext` | `8000–12000 characters` | Structured data for a single financing daily report record is approximately 150 characters. Combined with historical conversation context, this range covers complete traceability information and conversation context |
 | `similarityThreshold` | `0.75–0.85` | Keywords for financing daily reports have high recognition. This threshold filters low-relevance data sources while retaining accurate associated records |
 | `maxResponseTokens` | `2000 characters` | Responses for financing daily reports must include traceability information. This length fully displays all citation sources and core data |

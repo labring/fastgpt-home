@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Tender
-meta_description: The data primarily comes from government procurement websites at all levels, public resource trading centers, official websites of industry regulatory
+meta_description: Multi-turn Dialogue and Prompt Engineering for Tender Announcement Bidding Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版研报检索的多轮对话与提示词
-meta_description: 出版行业研报的数据主要来自合规授权的出版社官方数据库、行业协会公开资讯平台及专业出版机构的自研库。更新节奏按研报类型区分，常规研报按周、月或季度刊期更新，突
+meta_description: 出版研报检索的多轮对话与提示词：出版研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 出版、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

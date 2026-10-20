@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷财报分析的部署与升级
-meta_description: 包装印刷行业的财报数据主要来自企业官方披露的年报、季报及临时公告，数据来源为交易所公开披露平台与企业官网。更新节奏分为固定周期与实时触发：定期报告按年度、季
+meta_description: 包装印刷财报分析的部署与升级：包装印刷财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 包装印刷、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

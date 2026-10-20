@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Engineering
-meta_description: Data sources for engineering consulting intelligent due diligence reports typically include official industry documents such as project approval
+meta_description: HTTP Interfaces and External Systems for Engineering Consulting Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The multi-source structured nature of engineering consulting due diligence repor
 > The parameter values provided on this page are general recommendations to serve as a starting point for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three common errors
-- Symptom: A custom external interface call returns a 404 status code, but the interface works normally when tested with a standalone tool. Cause: FastGPT configuration does not include the full path for `{{baseURL}}`, or the `{{authorization}}` parameter does not carry a valid authentication token, resulting in interface requests failing to match the correct route.
+- Symptom: A custom external interface call returns a 404 status code, but the interface works normally when tested with a standalone tool. Cause: FastGPT configuration does not include the full path for `example value`, or the `example value` parameter does not carry a valid authentication token, resulting in interface requests failing to match the correct route.
 - Symptom: A call to the `/api/core/dataset/update` interface returns a 500 status code, but the corresponding function works normally in the browser. Cause: The request parameter format for this interface in FastGPT 4.9.0 does not match the official specification, or the response data structure returned by the external system does not match the parsing rules expected by FastGPT.
 - Symptom: Fields such as construction area in synchronized engineering due diligence reports lose their unit information. Cause: The `CUSTOM_FIELD_MAPPING` parameter is not configured, and no specialized engineering unit rules are mapped, resulting in the interface automatically discarding non-standard unit fields during parsing.
 

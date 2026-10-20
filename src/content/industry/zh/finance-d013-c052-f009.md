@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股融资日报的引用来源与溯源
-meta_description: 多元控股融资日报的数据来源包含集团合并融资报表、各子公司独立融资公告、内部授信审批文件及公开披露的融资信息。更新节奏为每日生成全量或增量文件，覆盖前一工作日
+meta_description: 多元控股融资日报的引用来源与溯源：多元控股融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 多元控股、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的向量模型与索引
-meta_description: 动力煤营销内容的数据源涵盖公开行业监测平台、现货交易市场报价系统、煤炭生产企业产销公示及行业资讯整理内容。更新节奏存在差异：现货报价类文档每日更新，产品手册
+meta_description: 动力煤营销内容的向量模型与索引：动力煤营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 动力煤、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备营销内容的工具调用与插件
-meta_description: 航天装备面向金融行业的营销内容的数据主要来自型号研制公开文档、试验工况记录、配套供应链公开参数，更新节奏随型号立项、试验节点或新品发布调整。文档多为结构化技
+meta_description: 航天装备营销内容的工具调用与插件：航天装备营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 航天装备、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的HTTP 接口与外部系统
-meta_description: 卫星通信营销内容的数据来自卫星终端上报的触达日志、地面站同步的链路数据、客户侧交互反馈记录。更新节奏为准实时，随终端通信状态触发上报或按固定周期同步。单条数
+meta_description: 卫星通信营销内容的HTTP 接口与外部系统：卫星通信营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Steel Trade Financing Daily
-meta_description: Data for steel trade financing daily reports comes from public steel circulation market databases, internal daily settlement documents of traders, and
+meta_description: Tool Calling and Plugins for Steel Trade Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

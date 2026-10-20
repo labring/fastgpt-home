@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Cultural and Entertainment
-meta_description: Data sources for cultural and entertainment supplies mainly include compliance archives submitted voluntarily by manufacturing enterprises, publicly
+meta_description: Tool Calling and Plugins for Cultural and Entertainment Supplies Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

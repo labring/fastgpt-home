@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Paper Manufacturing Yield Rates
-meta_description: Yield and market data for this category is sourced from the China Paper Association’s daily industry monitoring ledger, domestic commodity spot market
+meta_description: Database and Operations for Paper Manufacturing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

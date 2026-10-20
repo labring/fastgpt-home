@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶收益率的对话日志与审计
-meta_description: 塑料橡胶的行情数据主要来源于上海期货交易所的期货挂牌品种，以及国内大宗商品现货贸易商的每日报价。更新节奏为交易日每小时更新一次现货报价，期货数据随交易时段实
+meta_description: 塑料橡胶收益率的对话日志与审计：塑料橡胶收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 塑料橡胶、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

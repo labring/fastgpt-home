@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材财报分析的文档解析与分块
-meta_description: 消费建材财报相关数据主要来自沪深交易所披露的上市公司定期报告、行业协会发布的月度供需报告及下游地产配套招标公告。更新节奏分为季度、年度定期披露，行业数据按月
+meta_description: 消费建材财报分析的文档解析与分块：消费建材财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 消费建材、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

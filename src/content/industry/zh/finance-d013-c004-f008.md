@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备融资日报的工具调用与插件
-meta_description: 专用设备融资日报的数据来源于融资租赁公司的设备放款台账、采购合同备案系统及设备抵押登记公示信息，更新节奏为每日一次，当日生成前一自然日的全量更新数据。文档为
+meta_description: 专用设备融资日报的工具调用与插件：专用设备融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 专用设备、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

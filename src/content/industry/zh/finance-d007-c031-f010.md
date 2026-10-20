@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的数据库与运维
-meta_description: 数据来源包括公开研发管线数据库、药企定期披露的研发投入与管线营收预期数据、第三方医药行业监测平台。更新节奏分为三类：研发管线核心节点数据随公开披露实时更新，
+meta_description: 化学制药收益率的数据库与运维：化学制药收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 化学制药、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

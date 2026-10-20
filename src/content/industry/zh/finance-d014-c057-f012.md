@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电财报分析的模型接入与配置
-meta_description: 小家电财报数据主要来自境内外证券交易所的公开披露平台、企业官方公告渠道，更新节奏以季度报告、年度报告为核心周期。文档结构包含主营业务拆解（厨房小家电、个人护
+meta_description: 小家电财报分析的模型接入与配置：小家电财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 小家电、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

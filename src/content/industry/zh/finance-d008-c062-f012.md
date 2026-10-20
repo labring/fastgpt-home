@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销智能尽调报告的模型接入与配置
-meta_description: 广告营销智能尽调报告的数据主要来自广告投放平台后台、媒体资源合作台账、第三方监测工具及合作方结算凭证。数据更新节奏覆盖小时级投放明细、日级转化汇总、周级媒体
+meta_description: 广告营销智能尽调报告的模型接入与配置：广告营销智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 广告营销、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

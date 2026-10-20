@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品研报检索的工作流编排
-meta_description: 化妆品研报的数据主要来自行业协会公开报告、品牌方产品备案文档、第三方咨询机构细分品类分析，以及电商平台销售关联的用户反馈数据。更新节奏随数据类型差异：行业协
+meta_description: 化妆品研报检索的工作流编排：化妆品研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 化妆品、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的多轮对话与提示词
-meta_description: 航空装备相关数据主要来源于型号研制规范文档、试飞监测日志、供应链生产台账及官方营销宣传物料。数据更新节奏分为两类：定型量产型号数据静态更新，仅在批次改进时同
+meta_description: 航空装备营销内容的多轮对话与提示词：航空装备营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航空装备、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

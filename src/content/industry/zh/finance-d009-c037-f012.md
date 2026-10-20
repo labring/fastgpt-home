@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的模型接入与配置
-meta_description: 卫星通信研报主要来自航天院所公开技术文档、卫星运营商官方白皮书、行业协会发布的链路性能报告。更新节奏随航天发射、频谱分配调整、载荷优化等活动波动，无固定周期
+meta_description: 卫星通信研报检索的模型接入与配置：卫星通信研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 卫星通信、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

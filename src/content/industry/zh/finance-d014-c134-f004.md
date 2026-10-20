@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品财报分析的向量模型与索引
-meta_description: 调味品企业的财报数据主要来自交易所披露的定期报告（年报、季报）与临时公告，行业调研数据作为补充来源。更新节奏为季度报告每3个月更新一次，年度报告每年更新，临
+meta_description: 调味品财报分析的向量模型与索引：调味品财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 调味品、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

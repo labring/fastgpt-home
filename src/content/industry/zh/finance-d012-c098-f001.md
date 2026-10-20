@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工营销内容的HTTP 接口与外部系统
-meta_description: 煤化工营销内容的数据来源包括企业内部营销物料库、煤炭行业协会公开数据库、第三方供应链交易平台。更新节奏分三类：报价类数据每日同步，产品参数类每季度更新，获客
+meta_description: 煤化工营销内容的HTTP 接口与外部系统：煤化工营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 煤化工、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

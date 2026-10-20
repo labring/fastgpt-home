@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢营销内容的文档解析与分块
-meta_description: 普钢相关的金融营销与业务数据主要来源于钢厂出厂价目表、经销商报价单、行业协会供需报告、面向金融机构的质押物估值文档及招投标文件。数据更新节奏随类型差异较大：
+meta_description: 普钢营销内容的文档解析与分块：普钢营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 普钢、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

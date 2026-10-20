@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行营销内容的文档解析与分块
-meta_description: 国有大行的营销内容文档主要来源于内部营销管理系统、线下网点宣传物料归档库、线上官方推广素材库，更新节奏随营销活动周期调整，常见为月度集中更新或活动前临时补充
+meta_description: 国有大行营销内容的文档解析与分块：国有大行营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 国有大行、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

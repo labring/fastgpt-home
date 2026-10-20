@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁营销内容的文档解析与分块
-meta_description: 融资租赁领域的营销内容文档，数据源主要来自内部租赁产品说明书、合作厂商设备参数文档、过往项目结案报告、行业获客白皮书与客户成功案例。更新节奏随合作项目推进、
+meta_description: 融资租赁营销内容的文档解析与分块：融资租赁营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 融资租赁、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

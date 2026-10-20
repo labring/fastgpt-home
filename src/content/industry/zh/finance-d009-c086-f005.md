@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务研报检索的多轮对话与提示词
-meta_description: 汽车服务研报的数据来源包含汽车行业协会公开资料、主机厂官方技术手册、汽车后市场服务机构运营数据、第三方汽车咨询调研成果。更新节奏随对应文档类型调整，行业报告
+meta_description: 汽车服务研报检索的多轮对话与提示词：汽车服务研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 汽车服务、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的向量模型与索引
-meta_description: 卫星通信研报数据主要来自卫星运营商公开业务报告、行业协会统计文档、第三方咨询机构专业分析内容。更新节奏包含季度、半年度定期报告，以及卫星发射、频段分配调整等
+meta_description: 卫星通信研报检索的向量模型与索引：卫星通信研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 卫星通信、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

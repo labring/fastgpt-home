@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券融资日报的向量模型与索引
-meta_description: 证券融资日报的数据来源于沪深北交易所每日收盘后披露的融资融券公开数据，以及部分合规的场内交易统计信息。更新节奏为每日更新一次，数据覆盖当日全市场个股的融资融
+meta_description: 证券融资日报的向量模型与索引：证券融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 证券、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

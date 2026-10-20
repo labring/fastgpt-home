@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c048-f006
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Dialogue Logging and Audit for Investment Research Knowledge
-meta_description: Urban commercial bank investment research data is sourced from regional macroeconomic monitoring databases, local entity enterprise credit files
+meta_title: Dialogue Logging and Audit for Investment Research
+meta_description: Dialogue Logging and Audit for Investment Research Knowledge Base Construction for Urban Commercial Banks
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c090-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Paint and Ink Industry
-meta_description: Paint and ink industry due diligence data primarily comes from public reports released by the China National Coatings Industry Association, import and
+meta_title: Multi-turn Dialogue and Prompting for Paint and Ink
+meta_description: Multi-turn Dialogue and Prompting for Paint and Ink Industry Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

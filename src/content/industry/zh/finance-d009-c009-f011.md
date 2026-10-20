@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区研报检索的文档解析与分块
-meta_description: 这个品类的数据主要来自产业园区管委会公开年度/季度报告、行业协会调研文档、园区运营方内部运营台账、土地与住建部门公示信息。更新节奏随数据类型分为季度公开报告
+meta_description: 产业园区研报检索的文档解析与分块：产业园区研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 产业园区、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

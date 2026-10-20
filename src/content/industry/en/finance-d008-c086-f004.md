@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Automotive Service
-meta_description: Data sources include offline vehicle 4S shop maintenance work order systems, used car transaction platform vehicle condition reports, and vehicle
+meta_description: Vector Models and Indexing for Automotive Service Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

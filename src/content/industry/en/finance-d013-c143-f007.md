@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Software Development Financing
-meta_description: Financing daily report data for the software development sector comes from public investment and financing information aggregation APIs, archived data
+meta_description: Workflow Orchestration for Software Development Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -41,7 +41,7 @@ Additionally, multiple data sources may result in duplicate reports of the same 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Mistakes
-- Symptom: After clicking save to edit workflow template content, the interface displays the "Parameter format error" prompt. Cause: The `Financing Subject` field was not mapped to the corresponding field returned by the data source, and placeholder text was used directly.
+- Symptom: After clicking save to edit workflow template content, the interface displays the "Parameter format error" prompt. Cause: The `Financing Subject` field was not mapped to the corresponding field returned by the data source, and pending verification text was used directly.
 - Symptom: Duplicate financing events appear in workflow execution results. Cause: The `Duplicate Data Filter Condition` was not configured, or the filter condition did not include the `Disclosure Date` field, leading to unremoved duplicate events across dates.
 - Symptom: After calling the `Knowledge Base Recall` node, the number of returned results does not match expectations. Cause: The default value of the `Recall Count` parameter was not adjusted, failing to adapt to the requirement of displaying multiple rounds of investors in financing daily reports.
 

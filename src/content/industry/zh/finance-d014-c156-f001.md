@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电财报分析的HTTP 接口与外部系统
-meta_description: 黑色家电财报分析的数据主要来自上市家电企业公开季度/年度财报公告、行业监测机构的整机出货监测数据，以及线下零售终端的销售上报数据。财报数据按自然季度更新，行
+meta_description: 黑色家电财报分析的HTTP 接口与外部系统：黑色家电财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 黑色家电、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

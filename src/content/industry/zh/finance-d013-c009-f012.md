@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区融资日报的模型接入与配置
-meta_description: 产业园区融资日报的数据来源为园区运营方的招商备案系统、入驻企业的融资报备端口、地方金融服务平台的园区专项数据池。更新节奏为每日凌晨更新前一个工作日的融资数据
+meta_description: 产业园区融资日报的模型接入与配置：产业园区融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 产业园区、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

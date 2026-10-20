@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏投研知识库建设的数据库与运维
-meta_description: 光伏投研数据来源包括组件厂商公开技术文档、上市光伏企业定期财报、行业协会发布的供需与政策数据、地面电站的实时运行时序数据、气象站点的辐照度与光照时长数据。更
+meta_description: 光伏投研知识库建设的数据库与运维：光伏投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 光伏、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

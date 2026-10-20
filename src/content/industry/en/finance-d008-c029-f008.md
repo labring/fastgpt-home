@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Packaging and Printing
-meta_description: The data sources for packaging and printing intelligent due diligence reports include production ledgers, raw and auxiliary material purchase
+meta_description: Tool Calling and Plugins for Packaging and Printing Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

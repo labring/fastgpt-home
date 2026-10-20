@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业智能尽调报告的工具调用与插件
-meta_description: 商业物业智能尽调报告的数据来自多类官方与商业渠道：权属信息来自不动产登记中心，更新周期为季度；租赁台账来自物业运营管理系统，更新频率为每日；商圈客流、租金指
+meta_description: 商业物业智能尽调报告的工具调用与插件：商业物业智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 商业物业、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

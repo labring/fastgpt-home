@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料财报分析的工具调用与插件
-meta_description: 公开上市饲料企业年度/季度财报、农业农村部畜牧兽医局月度监测数据、行业协会统计报告是核心数据来源。更新节奏分为两类：企业财报按季度、年度更新，行业监测数据按
+meta_description: 饲料财报分析的工具调用与插件：饲料财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 饲料、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

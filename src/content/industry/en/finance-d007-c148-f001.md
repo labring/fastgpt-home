@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Hotel and Catering
-meta_description: Primary sources of hotel and catering industry revenue yield and market trend daily report data are in-store POS cash registers, table management
+meta_description: HTTP Interfaces and External Systems for Hotel and Catering Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

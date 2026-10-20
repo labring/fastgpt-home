@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区财报分析的引用来源与溯源
-meta_description: 产业园区财报数据的来源包括园区运营主体的公开财务报告、属地住建及税务部门的园区运营统计台账。更新节奏为季度更新运营数据、年度更新完整财报，文档多为PDF格式
+meta_description: 产业园区财报分析的引用来源与溯源：产业园区财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 产业园区、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

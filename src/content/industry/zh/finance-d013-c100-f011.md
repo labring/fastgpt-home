@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理融资日报的文档解析与分块
-meta_description: 数据主要来自物业项目的日常运营台账、银行融资审批回执、行业融资对标统计报表，按自然日更新为当日汇总版。文档多为结构化Excel或单页PDF，包含统计日期、项
+meta_description: 物业管理融资日报的文档解析与分块：物业管理融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 物业管理、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

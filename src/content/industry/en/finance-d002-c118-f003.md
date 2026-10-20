@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Unified Entry All-in-One AI
-meta_description: Unified entry all-in-one AI platforms address multi-app integration requirements across finance, insurance, and wealth management. Data sources
+meta_description: Sharing and Embedding for Unified Entry All-in-One AI Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

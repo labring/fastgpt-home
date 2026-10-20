@@ -4,8 +4,8 @@ slug: /en/industry/finance-d005-c010-f004
 page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Product Consultation Customer
-meta_description: Data comes primarily from official product manuals, rate adjustment announcements, insurance purchase guidelines, archived past customer support Q&As
+meta_title: Vector Models and Indexing for Product Consultation
+meta_description: Vector Models and Indexing for Product Consultation Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

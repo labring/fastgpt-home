@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Attribution for Carbon Steel
-meta_description: Carbon steel-related data primarily comes from monthly public reports released by the China Iron and Steel Industry Association, official monthly
+meta_description: Citation Sources and Attribution for Carbon Steel Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

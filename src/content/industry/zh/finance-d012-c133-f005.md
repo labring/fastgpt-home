@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券营销内容的多轮对话与提示词
-meta_description: 证券营销内容的数据来源包括券商内部合规备案的投研观点文本、标准化营销话术模板、历史客户咨询对话日志、实时行情异动公告。更新节奏方面，合规话术模板每季度随监管
+meta_description: 证券营销内容的多轮对话与提示词：证券营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 证券、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

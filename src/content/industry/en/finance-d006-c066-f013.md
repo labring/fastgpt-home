@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Building
-meta_description: Building construction engineering investment research data comes primarily from construction drawing design files, cost budget estimates, construction
+meta_description: Knowledge Base Retrieval and Recall for Building Construction Investment Research Knowledge Base Development
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

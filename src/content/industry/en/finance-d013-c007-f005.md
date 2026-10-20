@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Dairy
-meta_description: Data comes from public industrial and commercial change records, industry media financing columns, and third-party corporate financing monitoring
+meta_description: Multi-turn Dialogue and Prompt Engineering for Dairy Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

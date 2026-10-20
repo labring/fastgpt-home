@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Iron Ore Financial
-meta_description: Iron ore-related data includes types such as spot prices, port inventories, industry production capacity, and listed mining company financial reports.
+meta_description: Citation Source and Traceability for Iron Ore Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

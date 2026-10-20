@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子研报检索的多轮对话与提示词
-meta_description: 消费电子研报主要来源于券商研究所消费电子组、垂直行业资讯平台、供应链厂商公开披露报告。更新节奏随新品发布周期、季度财报节点调整，部分供应链动态报告为周更或即
+meta_description: 消费电子研报检索的多轮对话与提示词：消费电子研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 消费电子、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

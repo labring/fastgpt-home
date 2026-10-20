@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版研报检索的引用来源与溯源
-meta_description: 出版类研报数据主要来自正规出版机构的公开研报文档，更新节奏随研报发布周期调整，单篇文档长度差异较大，短则数千字长则数万字。文档结构通常包含标题、发布机构、发
+meta_description: 出版研报检索的引用来源与溯源：出版研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 出版、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

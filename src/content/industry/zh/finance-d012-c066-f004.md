@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的向量模型与索引
-meta_description: 房建工程的营销内容面向金融/保险/理财场景，来源包括项目方提供的营销物料、招投标文件、施工进度公示、区域配套调研文档，以及线下带看的咨询素材整理。数据伴随项
+meta_description: 房建工程营销内容的向量模型与索引：房建工程营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

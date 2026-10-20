@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询融资日报的工作流编排
-meta_description: 工程咨询领域的融资日报数据，主要来自内部项目台账、合作银行的每日授信反馈、公共资源交易平台的中标项目融资公示。数据更新节奏为每日T+1汇总前一日的融资动态。
+meta_description: 工程咨询融资日报的工作流编排：工程咨询融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 工程咨询、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮收益率的HTTP 接口与外部系统
-meta_description: 酒店餐饮行业的收益率与行情日报数据主要来自门店POS收银系统、桌台管理系统与营收报表模块。数据按自然日生成，每日营业结束后1小时内完成当日全量报表输出。单份
+meta_description: 酒店餐饮收益率的HTTP 接口与外部系统：酒店餐饮收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 酒店餐饮、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

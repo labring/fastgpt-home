@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的部署与升级
-meta_description: 水泥研报的数据来源包括公开行业监测报告、上市建材企业定期披露文件、专业建材资讯平台的研报内容。更新节奏为：月度区域供需数据每月更新，季度行业趋势研报在季度末
+meta_description: 水泥研报检索的部署与升级：水泥研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 水泥、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

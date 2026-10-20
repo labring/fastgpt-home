@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品收益率的工具调用与插件
-meta_description: 家居用品的收益率与行情数据主要来自国内轻工行业协会发布的月度监测台账、头部家居品牌公开的经销商报价文档。更新节奏分为两类：常规品类为每月更新，热销单品的周度
+meta_description: 家居用品收益率的工具调用与插件：家居用品收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 家居用品、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券融资日报的部署与升级
-meta_description: 证券融资日报的数据来自沪深交易所每日收盘后公开披露的融资融券交易数据，更新节奏为每个交易日17点左右更新一次，仅在工作日发布。单份日报为结构化表格数据，包含
+meta_description: 证券融资日报的部署与升级：证券融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 证券、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

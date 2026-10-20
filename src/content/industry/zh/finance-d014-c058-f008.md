@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的工具调用与插件
-meta_description: 小金属财报数据主要来自国内小金属行业协会公开披露、对应上市公司定期报告、专业现货交易平台公开报价。数据更新节奏分两类：上市公司财报按季度、年度固定更新，行业
+meta_description: 小金属财报分析的工具调用与插件：小金属财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

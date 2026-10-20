@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药营销内容的多轮对话与提示词
-meta_description: 在金融/保险/理财的营销获客场景中，中药相关的营销数据主要来源于国家药典、行业炮制规范、药企内部质量标准及临床应用文献。数据更新节奏遵循药典每5年一次的修订
+meta_description: 中药营销内容的多轮对话与提示词：中药营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 中药、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

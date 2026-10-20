@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药财报分析的引用来源与溯源
-meta_description: 化学制药财报的数据来源为境内外证券交易所公开披露的定期报告、药企官方发布的年度、半年度与季度财报。更新节奏固定，季度报告于季后1个月内披露，年度报告于次年4
+meta_description: 化学制药财报分析的引用来源与溯源：化学制药财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 化学制药、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测智能尽调报告的工具调用与插件
-meta_description: 环境监测智能尽调报告的数据主要来自生态环境部门公开监测站点、企业自建排污口传感器、移动监测采集设备。常规站点数据更新频率为小时级，重点监管点位可达分钟级。单
+meta_description: 环境监测智能尽调报告的工具调用与插件：环境监测智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 环境监测、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

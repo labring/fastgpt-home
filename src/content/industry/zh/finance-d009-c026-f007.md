@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版研报检索的工作流编排
-meta_description: 出版研报的数据主要来自正规传媒出版机构的研报产品线、行业研究数据库的正版授权内容。更新节奏随研究主题变化，常规行业研报为月度或季度更新，个股跟踪研报按交易日
+meta_description: 出版研报检索的工作流编排：出版研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 出版、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

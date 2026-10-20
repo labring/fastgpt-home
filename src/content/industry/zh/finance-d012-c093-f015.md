@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏营销内容的部署与升级
-meta_description: 游戏营销内容的数据主要来源于版本更新日志、活动规则文档、投放素材源文件、玩家社区反馈整理内容。更新节奏随项目周期调整，版本类内容按季度或月度更新，活动类内容
+meta_description: 游戏营销内容的部署与升级：游戏营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 游戏、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Photovoltaic Financing Daily
-meta_description: Photovoltaic financing daily report data is primarily sourced from public filing information released by energy bureaus of all provinces and cities
+meta_description: Deployment and Upgrade of Photovoltaic Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

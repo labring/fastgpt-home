@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品智能尽调报告的文档解析与分块
-meta_description: 化妆品智能尽调的数据来源包含品牌方备案资料、第三方成分检测报告、供应链台账、电商平台销售数据及监管部门公示文件。更新节奏随新品上线、合规检查周期波动，无固定
+meta_description: 化妆品智能尽调报告的文档解析与分块：化妆品智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 化妆品、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

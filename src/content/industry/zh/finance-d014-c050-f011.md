@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶财报分析的文档解析与分块
-meta_description: 数据来源包括沪深港交易所披露的上市公司年度/季度财报、中国塑料加工工业协会发布的行业运行报告、大宗商品交易所公开的原料价格周报。更新节奏为年度财报每年披露一
+meta_description: 塑料橡胶财报分析的文档解析与分块：塑料橡胶财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 塑料橡胶、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

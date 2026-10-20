@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c131-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logs and Auditing for Decoration and Renovation
-meta_description: Profit margin data for the decoration and renovation industry comes from internal enterprise ERP systems, material supplier quotation ledgers, project
+meta_title: Conversation Logs and Auditing for Decoration
+meta_description: Conversation Logs and Auditing for Decoration and Renovation Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

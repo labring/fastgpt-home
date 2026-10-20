@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测财报分析的引用来源与溯源
-meta_description: 环境监测相关数据主要来自生态环境主管部门公开的自动监测站点数据、企业自行上传的排污监测日志、第三方检测机构出具的合规报告。自动监测数据更新节奏为每15分钟至
+meta_description: 环境监测财报分析的引用来源与溯源：环境监测财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 环境监测、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

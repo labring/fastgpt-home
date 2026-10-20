@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的模型接入与配置
-meta_description: 风电融资日报的数据来源于地方能源主管部门公开的风电项目备案信息、合作金融机构的风电专项授信系统接口、电网公司的风电并网运行日报。数据更新节奏为每日凌晨更新前
+meta_description: 风电融资日报的模型接入与配置：风电融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 风电、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

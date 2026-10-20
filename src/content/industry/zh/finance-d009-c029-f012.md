@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷研报检索的模型接入与配置
-meta_description: 包装印刷研报的来源主要包括轻工制造行业数据库、包装印刷细分领域行业协会发布的公开资料、上市包装印刷企业的定期公告、原辅材料供应商的价格周报。更新节奏随数据类
+meta_description: 包装印刷研报检索的模型接入与配置：包装印刷研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 包装印刷、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

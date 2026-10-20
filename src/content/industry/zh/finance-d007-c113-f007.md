@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒收益率的工作流编排
-meta_description: 白酒行业收益率与行情的数据源主要来自公开证券行情接口与行业资讯平台的每日报告，更新节奏为每个交易日15:30收盘后完成当日数据同步，周末及法定节假日无更新。
+meta_description: 白酒收益率的工作流编排：白酒收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 白酒、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

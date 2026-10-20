@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的部署与升级
-meta_description: 煤化工融资日报的数据主要来源于国内煤炭工业协会公开备案数据、地方发改委项目公示端口、商业银行授信台账接口及煤化工企业公开财报。数据每日更新，次日发布前一日的
+meta_description: 煤化工融资日报的部署与升级：煤化工融资日报的部署与升级，涵盖配置与验证建议。。。
 keywords: 煤化工、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

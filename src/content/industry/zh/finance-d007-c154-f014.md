@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品收益率的表单与交互
-meta_description: 这个品类的数据主要来自三个渠道：品牌官方授权的定价系统、垂直二手饰品交易平台的流通行情，以及用户自行上传的购置记录。官方指导价每1至3个月随新品上线更新，二
+meta_description: 饰品收益率的表单与交互：饰品收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 饰品、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

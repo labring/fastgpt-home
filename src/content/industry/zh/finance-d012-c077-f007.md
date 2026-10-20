@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的工作流编排
-meta_description: 数据来源为景区官方运维系统、票务平台接口、线下活动报备文档、游客服务台账。更新节奏为基础信息季度更新，票务、活动信息每日或即时更新，应急预案临时更新。文档结
+meta_description: 旅游景区营销内容的工作流编排：旅游景区营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 旅游景区、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

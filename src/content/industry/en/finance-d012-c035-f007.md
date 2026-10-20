@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Medical Aesthetic Marketing
-meta_description: Medical aesthetic marketing content used in financial industry marketing scenarios draws core data from three sources. These include supporting
+meta_description: Workflow Orchestration for Medical Aesthetic Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮收益率的对话日志与审计
-meta_description: 本场景面向金融理财行业，为酒店餐饮企业提供收益率日报播报服务。相关数据主要来自门店POS终端、中央厨房库存系统、会员消费管理系统及中央结算平台。数据更新节奏
+meta_description: 酒店餐饮收益率的对话日志与审计：酒店餐饮收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 酒店餐饮、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备投研知识库建设的文档解析与分块
-meta_description: 通信设备投研的数据来源涵盖运营商集采公告、设备厂商技术白皮书、3GPP系列标准文档、行业展会报告、季度出货量统计、专利公开文件等。更新节奏依文档类型不同，集
+meta_description: 通信设备投研知识库建设的文档解析与分块：通信设备投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 通信设备、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

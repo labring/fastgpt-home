@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的知识库检索与召回
-meta_description: 小金属品类的财报数据主要来自境内外上市企业定期报告、行业协会月度供需统计及海关进出口报关数据。数据更新节奏分三类：季度财报于季后15日内披露，年度财报于次年
+meta_description: 小金属财报分析的知识库检索与召回：小金属财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

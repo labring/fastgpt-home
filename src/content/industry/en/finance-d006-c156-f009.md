@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Black Goods Investment
-meta_description: Black goods investment research data sources include public industry monitoring data, official business disclosures from brands, third-party retail
+meta_description: Citation Source and Traceability for Black Goods Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

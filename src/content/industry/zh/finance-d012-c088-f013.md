@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程营销内容的知识库检索与召回
-meta_description: 油服工程的营销内容多服务于金融/保险/理财行业内的油服工程合作推广需求，来源包括企业投标方案、现场作业记录、技术白皮书、营销宣传物料、行业合规文件等。更新节
+meta_description: 油服工程营销内容的知识库检索与召回：油服工程营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 油服工程、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

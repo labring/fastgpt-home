@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Dairy Industry Investment
-meta_description: Dairy industry investment research data comes from four main sources: broker food and beverage research reports, public financial reports from dairy
+meta_description: Vector Models and Indexing for Dairy Industry Investment Research Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

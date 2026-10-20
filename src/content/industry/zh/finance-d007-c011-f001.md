@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品收益率的HTTP 接口与外部系统
-meta_description: 休闲食品的收益率数据来源包括品牌方经销商进销存系统API、零售终端POS对接接口，以及第三方零售行情监测数据源。数据更新节奏为每日凌晨批量同步当日闭店后的销
+meta_description: 休闲食品收益率的HTTP 接口与外部系统：休闲食品收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 休闲食品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

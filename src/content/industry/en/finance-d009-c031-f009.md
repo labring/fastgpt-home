@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c031-f009
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Chemical Pharmaceutical
-meta_description: Chemical pharmaceutical research reports mainly come from securities firm medical industry research reports, CDE public review materials
+meta_title: Citation Source and Traceability for Chemical
+meta_description: Citation Source and Traceability for Chemical Pharmaceutical Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

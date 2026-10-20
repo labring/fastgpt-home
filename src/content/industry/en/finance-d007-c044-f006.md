@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c044-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logs and Auditing for Commercial Property Yield
-meta_description: Data for this category originates from rent collection ledgers, operation and maintenance cost settlement documents, and revenue reports for public
+meta_title: Conversation Logs and Auditing for Commercial Property
+meta_description: Conversation Logs and Auditing for Commercial Property Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

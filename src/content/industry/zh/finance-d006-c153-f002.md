@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电投研知识库建设的上下文与 token
-meta_description: 风电投研的数据来源包括风电整机厂商的技术白皮书、风电场运行日志、气象监测机构的逐小时风速风向数据、电网并网调度指标、行业协会的年度发展报告。更新节奏存在差异
+meta_description: 风电投研知识库建设的上下文与 token：风电投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 风电、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

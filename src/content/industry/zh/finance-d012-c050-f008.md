@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的工具调用与插件
-meta_description: 面向金融行业的塑料橡胶营销内容所依赖的数据，来源包括国内合成树脂工业协会、海关总署进出口数据、上游石化企业的出厂报价系统。更新节奏分为三类：原料价格每日更新
+meta_description: 塑料橡胶营销内容的工具调用与插件：塑料橡胶营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 塑料橡胶、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

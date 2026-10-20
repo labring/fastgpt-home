@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Airport Financing
-meta_description: Data sources for airport financing daily reports include public airport financing announcements from Civil Aviation Regional Administrations, industry
+meta_description: Citation Sources and Traceability for Airport Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Fourth, disclosure documents for individual financing transactions are lengthy. 
 | `reranked return count` | Top 6 entries | The number of valid daily financing transactions is limited. Retaining the top 6 entries ensures traceability covers all core events. |
 | `segment length` | 800–1200 characters | Core disclosure paragraphs of financing announcements retain field association relationships, avoiding truncation of key information such as airport codes and financing amounts. |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120 seconds | PDF parsing of exchange announcements requires adaptation to complex layouts, avoiding timeout that prevents some announcements from being indexed. |
-| `citation template` | Fixed format including `source`, `publish_date`, `airport_code` | Disclosure source, publication date, and airport code must be used as core traceability identifiers to facilitate subsequent accurate verification. |
+| `Traceability details` | Fixed format including `source`, `publish_date`, `airport_code` | Disclosure source, publication date, and airport code must be used as core traceability identifiers to facilitate subsequent accurate verification. |
 
 > The parameter values provided on this page are conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.
 

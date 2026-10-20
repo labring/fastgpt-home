@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的工具调用与插件
-meta_description: 小家电营销相关的数据主要来源于品牌方官方商品参数文档、电商平台上架的商品详情字段、金融机构内部的礼品兑换规则台账与实时库存数据。每个SKU对应独立的数据文档
+meta_description: 小家电营销内容的工具调用与插件：小家电营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 小家电、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒智能尽调报告的部署与升级
-meta_description: 白酒智能尽调的数据源包含企业公开财报、产区流通备案档案、第三方质检报告、年份酒溯源凭证与经销商资质文件。数据更新节奏随披露节点推进，企业财报按季度或年度更新
+meta_description: 白酒智能尽调报告的部署与升级：白酒智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 白酒、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

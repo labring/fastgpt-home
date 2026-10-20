@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理智能尽调报告的工作流编排
-meta_description: 这个品类的数据主要来自物业内部管理系统、不动产登记备案文件、现场勘查记录。日常巡检记录实时更新，工单汇总按周更新，物业费统计、专项维修资金台账按月更新。文档
+meta_description: 物业管理智能尽调报告的工作流编排：物业管理智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 物业管理、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

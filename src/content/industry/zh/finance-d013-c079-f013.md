@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢融资日报的知识库检索与召回
-meta_description: 普钢融资日报的数据来源为国内大宗商品融资监测系统、银行对公授信数据接口，每日更新。文档包含报告日期、普钢品类（如热轧卷板、螺纹钢）、当日融资规模、融资主体、
+meta_description: 普钢融资日报的知识库检索与召回：普钢融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 普钢、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

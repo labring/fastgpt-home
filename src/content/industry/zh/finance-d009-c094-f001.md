@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化研报检索的HTTP 接口与外部系统
-meta_description: 炼化研报的数据来源包括石油石化行业协会公开报告、专业炼化咨询机构的专项研报、上市炼化企业的季度披露文件、大宗商品交易平台的行业跟踪数据。更新节奏随行业动态调
+meta_description: 炼化研报检索的HTTP 接口与外部系统：炼化研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 炼化、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全营销内容的多轮对话与提示词
-meta_description: 数据来源包括企业内部安全合规文档、第三方漏洞平台通告、过往营销互动记录与行业安全标准。更新节奏为漏洞相关数据实时同步，合规文档每季度更新，营销互动数据每日汇
+meta_description: 网络安全营销内容的多轮对话与提示词：网络安全营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 网络安全、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

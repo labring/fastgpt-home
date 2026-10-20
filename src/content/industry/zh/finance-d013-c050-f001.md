@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶融资日报的HTTP 接口与外部系统
-meta_description: 该品类的融资日报数据来自期货交易所仓单公示平台、大宗商品现货融资备案系统及行业第三方资讯机构。更新节奏为每日凌晨更新前一自然日的全量统计数据。文档采用结构化
+meta_description: 塑料橡胶融资日报的HTTP 接口与外部系统：塑料橡胶融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 塑料橡胶、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备智能尽调报告的文档解析与分块
-meta_description: 通用设备智能尽调报告的数据来源涵盖厂商出厂技术文档、行业第三方检测报告、设备运维台账及招投标技术文件。数据更新节奏随设备新品发布、年度运维巡检及项目招投标周
+meta_description: 通用设备智能尽调报告的文档解析与分块：通用设备智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 通用设备、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

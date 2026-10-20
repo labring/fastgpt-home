@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Cosmetics Financial
-meta_description: Data sources include periodic reports disclosed by listed beauty enterprises and publicly available operational briefings from brands. Update cadence
+meta_description: Model Access and Configuration for Cosmetics Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

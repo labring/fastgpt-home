@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃研报检索的HTTP 接口与外部系统
-meta_description: 玻璃研报的数据来源主要为国内建筑材料行业数据库、中国建筑玻璃与工业玻璃协会月度统计及第三方建材资讯平台。更新节奏存在差异：现货价格类数据日更，区域市场动态周
+meta_description: 玻璃研报检索的HTTP 接口与外部系统：玻璃研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 玻璃、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

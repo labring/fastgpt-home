@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的向量模型与索引
-meta_description: 能源金属营销内容的数据主要来自内部营销团队产出的产品手册、行业趋势推文、经销商培训材料，以及合作行业媒体的营销稿件、第三方咨询机构的行业洞察报告。更新节奏分
+meta_description: 能源金属营销内容的向量模型与索引：能源金属营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 能源金属、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

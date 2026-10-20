@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备智能尽调报告的工具调用与插件
-meta_description: 航空装备智能尽调的数据来源主要包括航空工业集团公开年报、整机厂商披露的核心参数文档、民航局适航认证数据库、供应链上下游企业的公开财报与订单信息。数据更新节奏
+meta_description: 航空装备智能尽调报告的工具调用与插件：航空装备智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 航空装备、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

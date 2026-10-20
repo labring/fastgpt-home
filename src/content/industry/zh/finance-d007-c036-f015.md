@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体收益率的部署与升级
-meta_description: 半导体收益率与行情日报的数据来源于公开的证券市场行业板块行情接口，更新节奏为交易日内每5分钟推送实时快照，收盘后生成当日完整汇总文档。文档结构以交易日期为核
+meta_description: 半导体收益率的部署与升级：半导体收益率的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 半导体、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

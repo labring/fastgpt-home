@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备财报分析的向量模型与索引
-meta_description: 通信设备行业财报数据主要来自上市企业公开年报、季度业绩公告，以及行业组织的季度监测报告。更新节奏以季度为固定周期，年度财报为完整周期文档。文档结构包含营收拆
+meta_description: 通信设备财报分析的向量模型与索引：通信设备财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 通信设备、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

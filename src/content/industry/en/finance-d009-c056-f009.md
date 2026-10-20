@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Home Goods Research
-meta_description: Data sources for home goods research reports include securities firm light manufacturing industry research reports, China Home Association industry
+meta_description: Citation Source and Traceability for Home Goods Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Data sources are scattered and have uneven structural quality. Securities firm r
 | `Recall Count` | `Top 8-12 entries` | Home goods research reports cover many segmented categories, this range covers sufficient relevant content while avoiding redundancy |
 | `Similarity Threshold` | `0.72-0.80` | Home goods keywords have high recognition, this range filters irrelevant recall results while retaining valid content |
 | `Reranked Return Count` | `Top 3-5 entries` | Research report content is lengthy, prioritize returning the most relevant snippets for answer generation and citation |
-| `Citation Template` | `{{content}} (Source: {{source}}, Publish Time: {{publish_time}})` | Clearly mark the source and publish time of cited content to meet traceability requirements |
+| `Traceability details` | `the configured value (the configured source field, the configured publish-time field)` | Clearly mark the source and publish time of cited content to meet traceability requirements |
 | `Data Source Priority Configuration` | `Securities Firm Reports > Industry Association Data > Retail Chain Public Data` | Securities firm reports have higher structural quality and more reliable data accuracy |
 | `Field Extraction Rules` | Extract fields for "Terminal Selling Price", "Monthly Shipment Volume", "Publishing Entity" | Core citation fields for home goods research reports are price, sales volume, and publishing entity |
 

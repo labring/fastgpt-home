@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询财报分析的工具调用与插件
-meta_description: 工程咨询行业的财报数据主要来源于企业内部项目管理台账、公开行业备案数据库及年度审计报告。数据更新节奏以季度为周期同步当期营收、成本数据，项目类数据随竣工节点
+meta_description: 工程咨询财报分析的工具调用与插件：工程咨询财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 工程咨询、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

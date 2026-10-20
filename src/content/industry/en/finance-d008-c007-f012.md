@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c007-f012
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Dairy Product Intelligent
-meta_description: The data used for dairy product intelligent due diligence reports comes from four main sources: internal enterprise production management systems
+meta_title: Model Access and Configuration for Dairy Product
+meta_description: Model Access and Configuration for Dairy Product Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

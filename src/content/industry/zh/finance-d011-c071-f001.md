@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d011-c071-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 指标口径终端内自然语言检索的HTTP 接口与外部系统
-meta_description: 指标口径数据来源于金融机构内部业务规则库、监管部门发布的官方统计口径文档与核心业务系统交易日志。更新节奏分为两类，监管强制口径按季度或半年度由合规部门统一更
+meta_title: 指标口径终端内自然语言检索的HTTP接口与外部系统
+meta_description: 指标口径终端内自然语言检索的HTTP接口与外部系统：指标口径终端内自然语言检索的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 指标口径、终端内自然语言检索、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

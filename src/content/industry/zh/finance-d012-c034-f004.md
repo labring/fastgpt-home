@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械营销内容的向量模型与索引
-meta_description: 金融场景下的医疗器械营销内容，数据来源包括合作厂商提供的产品注册证附件、临床对照研究报告、官方合规宣传物料，以及机构自主制作的推广素材、经销商培训课件。更新
+meta_description: 医疗器械营销内容的向量模型与索引：医疗器械营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 医疗器械、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

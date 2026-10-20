@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的文档解析与分块
-meta_description: 种植业智能尽调报告的数据主要来源于种植户日常台账、土壤检测实验室报告、气象观测记录、农产品收购合同、地方农业部门统计报表。数据更新节奏覆盖月度种植日志、季度
+meta_description: 种植业智能尽调报告的文档解析与分块：种植业智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车财报分析的向量模型与索引
-meta_description: 数据来源为上市商用车企业公开定期报告、行业协会月度产销统计文件、企业内部运营台账。更新节奏为按季度、半年度、年度发布定期报告，随重大经营事项触发临时公告。文
+meta_description: 商用车财报分析的向量模型与索引：商用车财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 商用车、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气营销内容的模型接入与配置
-meta_description: 燃气行业的营销内容数据主要来源于企业内部营销管理系统、用户用气档案数据库、线下推广台账。数据更新节奏分两类：营销文案模板按季度或活动节点更新，用户行为数据每
+meta_description: 燃气营销内容的模型接入与配置：燃气营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 燃气、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

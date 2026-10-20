@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属收益率的工作流编排
-meta_description: 能源金属的行情与收益率数据主要来自国内大宗商品期货交易所、现货贸易平台及行业库存数据库。更新节奏分为两类：日度汇总数据在每个交易日收盘后1小时内完成更新，日
+meta_description: 能源金属收益率的工作流编排：能源金属收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 能源金属、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

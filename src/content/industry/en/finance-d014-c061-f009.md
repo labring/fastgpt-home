@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c061-f009
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Construction Machinery
-meta_description: Financial report data of listed companies in the construction machinery industry mainly comes from periodic reports disclosed by the Shanghai and
+meta_title: Citation Sources and Traceability for Construction
+meta_description: Citation Sources and Traceability for Construction Machinery Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

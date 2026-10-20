@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷营销内容的文档解析与分块
-meta_description: 这个品类的营销文档主要来自金融、保险、理财机构的包装印刷推广物料，包括产品宣传册、合同包装手册、客户权益告知书、理财方案样册等。文档更新随业务调整不定期触发
+meta_description: 包装印刷营销内容的文档解析与分块：包装印刷营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 包装印刷、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

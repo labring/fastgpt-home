@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工收益率的模型接入与配置
-meta_description: 煤化工收益率相关数据主要来自国内煤炭工业协会的公开监测数据、大宗商品现货交易市场的成交记录。数据更新节奏为每个交易日收盘后1小时内完成发布。文档为结构化JS
+meta_description: 煤化工收益率的模型接入与配置：煤化工收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 煤化工、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

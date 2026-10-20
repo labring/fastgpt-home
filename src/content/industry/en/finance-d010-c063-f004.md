@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Failed Bid Items
-meta_description: Data sources include public tender announcement platforms, official purchaser announcements, and internal post-tender project review documents.
+meta_description: Vector Models and Indexing for Failed Bid Items
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

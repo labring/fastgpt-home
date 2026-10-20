@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的模型接入与配置
-meta_description: 这个品类的数据主要来自上市化学制药企业披露的定期报告、医药行业供应链公开监测平台。更新节奏分为两类：企业核心财务收益率数据按季度随定期报告更新，原料药、制剂
+meta_description: 化学制药收益率的模型接入与配置：化学制药收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 化学制药、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

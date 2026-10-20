@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁营销内容的向量模型与索引
-meta_description: 来源包括内部营销素材库的产品方案文档、客户案例汇编、线下宣讲PPT、线上推广文案，以及合作机构提供的行业参考资料。更新节奏随新产品上线、区域租赁政策调整、新
+meta_description: 融资租赁营销内容的向量模型与索引：融资租赁营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 融资租赁、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

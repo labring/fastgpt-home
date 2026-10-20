@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品融资日报的引用来源与溯源
-meta_description: 农化制品融资日报的数据来源主要包括农业农村部农资监测中心、全国农药工业协会、第三方农化交易平台及上市农化企业公告。数据按每日更新节奏发布，单篇文档按农药、化
+meta_description: 农化制品融资日报的引用来源与溯源：农化制品融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 农化制品、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

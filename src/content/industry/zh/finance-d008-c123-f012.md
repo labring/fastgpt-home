@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属智能尽调报告的模型接入与配置
-meta_description: 能源金属的数据源涵盖公开行业统计公报、海关总署公开进出口数据、现货交易平台报价、矿山企业公开披露信息。更新节奏存在明显差异：现货价格类数据每日更新，月度供需
+meta_description: 能源金属智能尽调报告的模型接入与配置：能源金属智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 能源金属、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车融资日报的工具调用与插件
-meta_description: 这个品类的数据来自商用车整车企业、核心零部件厂商的公开融资披露，以及地方金融监管部门的备案融资信息、供应链金融服务平台的交易记录。更新节奏为每日更新前一个自
+meta_description: 商用车融资日报的工具调用与插件：商用车融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 商用车、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

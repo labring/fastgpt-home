@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电融资日报的HTTP 接口与外部系统
-meta_description: 白色家电融资日报的数据来源为家电行业供应链金融服务平台的交易接口、家电经销商的融资管理系统结构化台账。更新节奏为每个自然日的03:00前完成前一日全量数据归
+meta_description: 白色家电融资日报的HTTP 接口与外部系统：白色家电融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白色家电、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

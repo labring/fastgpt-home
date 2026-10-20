@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属融资日报的知识库检索与召回
-meta_description: 工业金属融资日报的数据主要来自大宗商品交易所仓单系统、地方大宗商品交易中心公开披露信息及金融同业监测汇总数据。更新节奏为每日T+1发布当日全品类数据。文档多
+meta_description: 工业金属融资日报的知识库检索与召回：工业金属融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 工业金属、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

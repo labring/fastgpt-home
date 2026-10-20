@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for White Goods Investment
-meta_description: White goods investment research data is sourced from public reports of industry monitoring institutions, public brand financial reports, e-commerce
+meta_description: Model Access and Configuration for White Goods Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力投研知识库建设的文档解析与分块
-meta_description: 热力行业投研相关数据来源包括热力行业公开运营报告、供热企业内部台账、市政管网监测数据、发改委定价公示文件。更新节奏分为季度财报发布、月度运营报表更新、每日管
+meta_description: 热力投研知识库建设的文档解析与分块：热力投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 热力、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

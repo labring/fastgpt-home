@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Telecom Services Intelligent
-meta_description: Data for telecom services intelligent due diligence reports is sourced from three main places: financial institution-exclusive operator operation and
+meta_description: Tool Calling and Plugins for Telecom Services Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

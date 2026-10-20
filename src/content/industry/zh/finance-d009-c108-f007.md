@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务研报检索的工作流编排
-meta_description: 电商服务类研报数据来源为电商平台官方披露的行业分析文档、合规第三方电商数据服务机构的公开研报。更新节奏为每季度发布常规行业研报，大促节点前会发布专项监测报告
+meta_description: 电商服务研报检索的工作流编排：电商服务研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 电商服务、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

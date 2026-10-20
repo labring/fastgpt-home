@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的部署与升级
-meta_description: IT服务研报的数据来源包括公开行业研究机构、上市公司公开披露文档、行业协会公开数据。更新节奏不固定，常规研报按季度发布，突发行业事件后会生成专项研报。单篇文
+meta_description: IT 服务研报检索的部署与升级：IT 服务研报检索的部署与升级，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

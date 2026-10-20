@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的文档解析与分块
-meta_description: 物业管理面向金融/保险/理财领域的营销内容数据，主要来自社区金融服务推广物料、物业费分期方案、社区理财活动通知、业主保险推介手册、项目案场金融配套资料等。更
+meta_description: 物业管理营销内容的文档解析与分块：物业管理营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 物业管理、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

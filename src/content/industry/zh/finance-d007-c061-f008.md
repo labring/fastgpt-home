@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械收益率的工具调用与插件
-meta_description: 工程机械收益率相关数据来源于设备联网终端上报的实时运行数据、区域租赁市场公开报价数据、行业监测机构的区域运营数据。更新节奏分为三级：台班运行数据每小时同步，
+meta_description: 工程机械收益率的工具调用与插件：工程机械收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 工程机械、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

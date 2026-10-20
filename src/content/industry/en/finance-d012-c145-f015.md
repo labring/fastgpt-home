@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c145-f015
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Marketing Content for
-meta_description: Marketing content data for communications equipment mainly comes from three sources: device operation and maintenance logs, product materials uploaded
+meta_title: Deployment and Upgrade of Marketing Content
+meta_description: Deployment and Upgrade of Marketing Content for Communications Equipment
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

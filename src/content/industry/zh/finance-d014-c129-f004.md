@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁财报分析的向量模型与索引
-meta_description: 融资租赁的财报数据主要来源于项目台账系统、租金回收模块、租赁物估值档案及监管报送报表。数据更新以季度为基础周期，年度财报需完成全量项目复盘。单份财报文档包含
+meta_description: 融资租赁财报分析的向量模型与索引：融资租赁财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 融资租赁、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

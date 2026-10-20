@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的HTTP 接口与外部系统
-meta_description: 小家电的营销内容数据主要来源于品牌官方参数库、电商平台商品详情页、官方营销素材中心。数据更新分为两类：新品上线时的批量同步，以及促销活动、合规政策变更时的临
+meta_description: 小家电营销内容的HTTP 接口与外部系统：小家电营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 小家电、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

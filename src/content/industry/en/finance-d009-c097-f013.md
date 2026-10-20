@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c097-f013
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Coking Coal Research
-meta_description: Data sources for coking coal research reports include industry association coking coal branches, futures exchanges, securities firm coal industry
+meta_title: Knowledge Base Retrieval and Recall for Coking Coal
+meta_description: Knowledge Base Retrieval and Recall for Coking Coal Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

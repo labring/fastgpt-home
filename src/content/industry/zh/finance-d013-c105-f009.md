@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品融资日报的引用来源与溯源
-meta_description: 生物制品融资日报的数据主要来自上市药企公告、一级市场融资数据库、医药行业协会披露信息，更新节奏为每日更新一次。单篇文档通常包含融资主体全称、融资轮次、融资金
+meta_description: 生物制品融资日报的引用来源与溯源：生物制品融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 生物制品、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

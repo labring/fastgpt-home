@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的多轮对话与提示词
-meta_description: 酒店餐饮财报数据主要来源于门店POS系统、第三方支付流水、食材采购台账及人力薪酬报表。数据更新节奏分为三级：门店级营收、成本明细每日更新，月度汇总报表次月5
+meta_description: 酒店餐饮财报分析的多轮对话与提示词：酒店餐饮财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测收益率的部署与升级
-meta_description: 环境监测数据来自固定站点物联网传感器、区域环境监测平台，更新频率分为实时秒级、小时级、日度三类。单条数据文档包含监测点编码、采集时间戳、污染物浓度值（如PM
+meta_description: 环境监测收益率的部署与升级：环境监测收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 环境监测、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械融资日报的工具调用与插件
-meta_description: 医疗器械融资日报的数据来源为境内外证券交易所披露的医疗器械企业融资公告、行业投融资数据库、地方金融监管局公示信息。更新节奏为每个工作日更新一次，覆盖前一工作
+meta_description: 医疗器械融资日报的工具调用与插件：医疗器械融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 医疗器械、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品智能尽调报告的工作流编排
-meta_description: 乳制品尽调数据的来源包含原料乳检测报告、生产批次溯源档案、第三方监管抽检公告、供应链供应商资质文件。数据更新节奏分为三类：生产批次数据随每日生产计划更新，第
+meta_description: 乳制品智能尽调报告的工作流编排：乳制品智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 乳制品、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

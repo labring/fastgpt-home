@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Photovoltaic Intelligent Due
-meta_description: Photovoltaic intelligent due diligence reports are core documents used by financial institutions for credit granting and underwriting of photovoltaic
+meta_description: Deployment and Upgrade for Photovoltaic Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

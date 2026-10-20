@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶研报检索的引用来源与溯源
-meta_description: 塑料橡胶研报的数据主要来自中国塑料加工工业协会、中国橡胶工业协会、国内期货交易所、头部第三方产业咨询机构，是金融领域塑料橡胶期货、理财相关业务的核心参考资料
+meta_description: 塑料橡胶研报检索的引用来源与溯源：塑料橡胶研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 塑料橡胶、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

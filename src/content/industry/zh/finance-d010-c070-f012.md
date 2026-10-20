@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 招标公告竞价的模型接入与配置
-meta_description: 招标公告的数据来源为各级公共资源交易平台、政府采购官方站点及行业主管部门官网。更新节奏随项目进度波动，日常以每日更新为主，项目集中启动阶段更新频次会提升。单
+meta_description: 招标公告竞价的模型接入与配置：招标公告竞价的模型接入与配置，涵盖配置与验证建议。
 keywords: 招标公告、竞价与投标报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

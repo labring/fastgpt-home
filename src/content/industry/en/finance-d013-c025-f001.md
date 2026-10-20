@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Financing Daily
-meta_description: The data is sourced from core credit systems and internal enterprise financing registration ledgers. It is generated daily at a fixed time, containing
+meta_description: HTTP Interfaces and External Systems for Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

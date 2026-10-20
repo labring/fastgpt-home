@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场收益率的工作流编排
-meta_description: 航空机场收益率相关数据主要来自中国民用航空局公开运行统计数据集、机场运营管理系统导出的结构化台账，以及第三方航空气象流量接口。数据更新节奏分为双维度：单日航
+meta_description: 航空机场收益率的工作流编排：航空机场收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 航空机场、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

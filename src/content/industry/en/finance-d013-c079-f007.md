@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Carbon Steel Financing Daily
-meta_description: The data for carbon steel financing daily reports primarily comes from domestic steel spot trading platforms, internal steel mill settlement systems
+meta_description: Workflow Orchestration for Carbon Steel Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Power Sector Yield Calculation
-meta_description: Power yield data comes primarily from public APIs of provincial power trading centers and structured operational data submitted by grid dispatch
+meta_description: Workflow Orchestration for Power Sector Yield Calculation
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ The multi-source, heterogeneous nature of power data requires workflows to inclu
 | `Scheduled Trigger Configuration` | `Trigger daily at 02:00, set retry count to 2` | Power yield daily reports use T+1 data, so execution must run after trading center data updates. The retry mechanism handles temporary interface fluctuations |
 | `Multi-source API Node Mapping Rule` | `Unify the `settlement electricity price` fields returned by different interfaces to `trade_price`, and unify units to yuan/megawatt-hour` | Power data comes from multiple trading entity interfaces with inconsistent field naming, so standardization processing is required |
 | `Field Validation Threshold` | `Filter entries where `trade_price` is less than 0, set the value range of `calculated yield` to 0-2` | Power transaction settlement electricity prices cannot be negative, and yields fall within a reasonable range to avoid invalid data entering subsequent processes |
-| `Knowledge Base Associated datasetID` | `Fill in the datasetID of the corresponding power trading rules knowledge base, reference via the global variable `{{dataset_id}}` | Resolves issues with direct global variable references, requires binding variable mapping in node configuration |
+| `Knowledge Base Associated datasetID` | `Fill in the datasetID of the corresponding power trading rules knowledge base, reference via the global variable `example value` | Resolves issues with direct global variable references, requires binding variable mapping in node configuration |
 | `Node Output Hide Configuration` | `Set the output of the data cleaning node to not be publicly displayed` | Only retain the output of the final broadcast node, meeting the information simplification requirements of internal workflows |
 | `User-level Variable Scope` | `Enable the user-level variable switch for the workflow, bind `user_id` as a scope variable` | Configurations of different users must be isolated to avoid global variable conflicts |
 

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Sanctions List Screening and KYC
-meta_description: Sanctions list screening data primarily comes from public sanction lists released by regulatory agencies, compliance lists from international
+meta_description: Workflow Orchestration for Sanctions List Screening and KYC Verification
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

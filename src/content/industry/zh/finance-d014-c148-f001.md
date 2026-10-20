@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的HTTP 接口与外部系统
-meta_description: 酒店餐饮的财报分析数据来源覆盖门店POS终端、中央厨房库存系统、第三方预订平台及线下收银系统。数据更新节奏分为三级：门店级交易数据每日同步多次，区域汇总数据
+meta_description: 酒店餐饮财报分析的HTTP 接口与外部系统：酒店餐饮财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

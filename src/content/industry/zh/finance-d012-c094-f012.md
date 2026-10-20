@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的模型接入与配置
-meta_description: 炼化营销相关的数据来源包括企业内部工艺参数文档、批次质检报告、月度产销简报、区域营销物料包。数据更新按生产批次、月度周期、年度版本迭代推进。文档多包含结构化
+meta_description: 炼化营销内容的模型接入与配置：炼化营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 炼化、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

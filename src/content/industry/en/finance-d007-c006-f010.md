@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Traditional Chinese Medicine
-meta_description: Data related to TCM yield rates comes from two primary sources: real-time trading quotes from major domestic TCM professional markets, and cost
+meta_description: Database and Operations for Traditional Chinese Medicine Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

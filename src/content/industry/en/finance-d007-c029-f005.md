@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c029-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Packaging and Printing
-meta_description: Packaging and printing industry profit margin and market trend data is sourced from packaging and printing raw material spot markets, downstream order
+meta_title: Multi-turn Dialogue and Prompting for Packaging
+meta_description: Multi-turn Dialogue and Prompting for Packaging and Printing Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

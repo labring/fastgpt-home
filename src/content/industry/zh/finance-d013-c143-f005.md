@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发融资日报的多轮对话与提示词
-meta_description: 软件开发领域的融资日报数据主要来自公开交易场所的企业融资披露公告、合规第三方金融数据接口。更新节奏为每个工作日当日收盘后完成当日数据归集，非工作日无更新。单
+meta_description: 软件开发融资日报的多轮对话与提示词：软件开发融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 软件开发、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

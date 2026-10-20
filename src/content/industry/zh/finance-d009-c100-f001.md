@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理研报检索的HTTP 接口与外部系统
-meta_description: 数据来源包括物业管理行业协会发布的行业研报、在管项目的月度运维台账、物业企业的标准化服务手册、公共区域能耗监测报表，以及金融机构委托的物业资产调研数据。更新
+meta_description: 物业管理研报检索的HTTP 接口与外部系统：物业管理研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 物业管理、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

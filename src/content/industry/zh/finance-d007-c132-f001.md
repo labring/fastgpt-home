@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的HTTP 接口与外部系统
-meta_description: 部署于金融场景的计算机设备，用于收益率与行情日报播报时，数据来源主要为交易所官方行情接口、合规第三方金融数据服务API。更新节奏匹配对应市场交易时段，交易时
+meta_description: 计算机设备收益率的HTTP 接口与外部系统：计算机设备收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 计算机设备、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

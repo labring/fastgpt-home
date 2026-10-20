@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的工具调用与插件
-meta_description: 投诉工单数据来源于金融、保险、理财机构的客服工单系统与客户服务CRM模块，更新节奏为工单提交后实时录入，处理状态变更的同步频率为1-5分钟。文档包含固定字段
+meta_description: 投诉工单客户服务的工具调用与插件：投诉工单客户服务的工具调用与插件，涵盖配置与验证建议
 keywords: 投诉工单、客户服务与账户咨询、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

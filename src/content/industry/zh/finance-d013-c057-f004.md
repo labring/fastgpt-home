@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电融资日报的向量模型与索引
-meta_description: 小家电融资日报的数据来源于家电行业供应链数据库、品牌方公开融资公告及行业资讯聚合平台。每日凌晨完成当日数据更新，单条日报文档为结构化格式，包含品牌全称、核心
+meta_description: 小家电融资日报的向量模型与索引：小家电融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 小家电、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

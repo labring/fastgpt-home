@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属研报检索的多轮对话与提示词
-meta_description: 贵金属研报主要来自专业金融资讯机构、境内外贵金属交易所、券商研究所及行业协会。更新节奏随内容类型区分，每日行情跟踪研报按交易日更新，月度供需、政策解读研报按
+meta_description: 贵金属研报检索的多轮对话与提示词：贵金属研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 贵金属、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

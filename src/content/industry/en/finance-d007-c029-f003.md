@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Packaging and Printing Yield Rates
-meta_description: Packaging and printing industry yield rate data draws from three primary sources: public industry association monitoring systems, upstream raw
+meta_description: Sharing and Embedding of Packaging and Printing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

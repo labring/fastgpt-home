@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备智能尽调报告的工作流编排
-meta_description: 通用设备智能尽调报告的数据主要来源于设备出厂合格证、运维台账、第三方法定检测报告及物联网实时采集的运行数据。静态数据如设备型号、额定功率、出厂编号随设备建档
+meta_description: 通用设备智能尽调报告的工作流编排：通用设备智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 通用设备、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

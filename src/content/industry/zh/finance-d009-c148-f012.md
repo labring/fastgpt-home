@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮研报检索的模型接入与配置
-meta_description: 酒店餐饮行业研报主要来自行业协会公开报告、第三方消费调研机构数据、上市餐饮及酒店企业定期财报、OTA平台运营分析文档。更新节奏随报告类型区分，行业大盘报告月
+meta_description: 酒店餐饮研报检索的模型接入与配置：酒店餐饮研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 酒店餐饮、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

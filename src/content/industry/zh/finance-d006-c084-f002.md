@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理投研知识库建设的上下文与 token
-meta_description: 水处理投研的数据来源包含三类：一是市政/工业水质监测站点的实时/准实时监测数据，包含pH、COD、氨氮等标准化监测字段，附带点位、采样时间等元数据；二是水务
+meta_description: 水处理投研知识库建设的上下文与 token：水处理投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 水处理、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

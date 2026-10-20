@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理收益率的工作流编排
-meta_description: 大气治理领域的收益率与行情数据，主要来源于区域环境监测站的实时上报数据、大气污染物减排项目的运营台账，以及地方生态环境部门的合规公示信息。数据更新节奏分为两
+meta_description: 大气治理收益率的工作流编排：大气治理收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 大气治理、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

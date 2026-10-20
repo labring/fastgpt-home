@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属融资日报的多轮对话与提示词
-meta_description: 工业金属融资日报的数据主要来自国内期货交割仓库的仓单质押备案、商业银行的工业金属授信台账及大宗商品贸易平台的融资申报信息。更新节奏为每个交易日收盘后完成当日
+meta_description: 工业金属融资日报的多轮对话与提示词：工业金属融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工业金属、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

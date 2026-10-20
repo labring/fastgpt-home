@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备收益率的模型接入与配置
-meta_description: 通信设备的收益率相关数据常用于金融行业的行情日报播报，数据来源于设备内置的运行数据采集模块、运营商业务支撑系统的计费接口，以及第三方通信行业运维数据平台。更
+meta_description: 通信设备收益率的模型接入与配置：通信设备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 通信设备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

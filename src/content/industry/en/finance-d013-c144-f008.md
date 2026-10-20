@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Telecommunications Services
-meta_description: Data for telecommunications services financing daily reports comes primarily from publicly disclosed industry financing announcements, information
+meta_description: Tool Calling and Plugins for Telecommunications Services Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Multiple characteristics of telecommunications services financing daily reports 
 | `plugin_fetch_interval` | `86400 seconds` | Matches the daily update rhythm of the telecommunications services financing daily report data source, ensuring pull frequency aligns with data updates |
 | `plugin_incremental_fetch_key` | `disclosure_date` | Uses disclosure date as the unique identifier for incremental pulls, preventing duplicate pulls of historical data |
 | `field_unit_conversion_rule` | `Automatically recognize ten thousand yuan/hundred million yuan and unify conversion to hundred million yuan units` | Standardizes the output format of financing amounts, reducing recognition errors of multiple units by the large model |
-| `plugin_abnormal_field_handle` | `Replace with the placeholder "Financing amount undisclosed"` | Handles entries with undisclosed amounts, preventing the large model from generating meaningless vague content |
+| `plugin_abnormal_field_handle` | `Replace with the pending verification "Financing amount undisclosed"` | Handles entries with undisclosed amounts, preventing the large model from generating meaningless vague content |
 | `tool_call_timeout` | `300 seconds` | Adapts to the pull time required for full telecommunications services financing data, preventing network requests from timing out mid-process |
 | `filter_track_type` | `Enable parameter filtering by telecommunications service segments` | Supports precise queries by tracks such as cloud communications, 5G infrastructure, improving the matching accuracy of tool calls |
 
@@ -38,7 +38,7 @@ Multiple characteristics of telecommunications services financing daily reports 
 
 ## How to Confirm Proper Configuration
 - Manually trigger a plugin call, verify that the disclosure date range of returned financing data matches the preset pull cycle.
-- Check the financing amount field returned by the plugin, confirm that dual units have been unified to the preset format, and undisclosed entries show the corresponding placeholder.
+- Check the financing amount field returned by the plugin, confirm that dual units have been unified to the preset format, and undisclosed entries show the corresponding pending verification.
 - Simulate a user query containing telecommunications service segment keywords, confirm that the plugin can filter financing data for the corresponding segment using parameters.
 - After completing a full tool call workflow, initiate a normal query without tool calls, confirm that the session link has switched normally.
 

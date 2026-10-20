@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场财报分析的HTTP 接口与外部系统
-meta_description: 国内民用机场的财报数据来源分为三类：各机场集团官网公开披露的年度/半年度财报、沪深港交所披露平台的上市机场财报、民航地区管理局发布的行业统计运营数据。更新节
+meta_description: 航空机场财报分析的HTTP 接口与外部系统：航空机场财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航空机场、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股研报检索的知识库检索与召回
-meta_description: 多元控股的研报数据来源包括集团内部各业务单元的经营分析文档、行业跟踪资料，以及外部合作机构的行业研究资料。内部文档随经营周期更新，外部文档按发布时间同步，每
+meta_description: 多元控股研报检索的知识库检索与召回：多元控股研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 多元控股、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

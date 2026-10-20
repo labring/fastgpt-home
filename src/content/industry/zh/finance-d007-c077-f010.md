@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的数据库与运维
-meta_description: 旅游景区的收益率数据来源于票务核销系统、场内餐饮POS终端、二次消费设备（索道、观光车）及会员管理系统。数据更新节奏为每日凌晨完成前一日全量汇总，生成单份日
+meta_description: 旅游景区收益率的数据库与运维：旅游景区收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 旅游景区、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

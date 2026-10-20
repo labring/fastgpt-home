@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c130-f014
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Forms and Interactions for In-App Natural Language Retrieval
-meta_description: Market data primarily comes from official securities trading interfaces and compliant market data service providers. Update frequency adjusts based on
+meta_title: Forms and Interactions for In-App Natural Language
+meta_description: Forms and Interactions for In-App Natural Language Retrieval for Market Data Terminals
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

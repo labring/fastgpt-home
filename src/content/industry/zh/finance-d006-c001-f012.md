@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务投研知识库建设的模型接入与配置
-meta_description: IT服务投研知识库的数据主要来自公开行业研报、上市公司定期财报、产业链调研纪要、监管政策文件及第三方行业数据库。数据更新节奏差异明显，研报类按周或日更新，财
+meta_description: IT 服务投研知识库建设的模型接入与配置：IT 服务投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: IT 服务、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

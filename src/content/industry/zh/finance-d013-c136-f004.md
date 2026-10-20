@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属融资日报的向量模型与索引
-meta_description: 贵金属融资日报的数据来源为国内贵金属交易所、国际贵金属市场公开行情接口及金融机构融资台账；更新节奏为每日完成前一交易日全量数据同步；单篇文档为结构化格式，包
+meta_description: 贵金属融资日报的向量模型与索引：贵金属融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 贵金属、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

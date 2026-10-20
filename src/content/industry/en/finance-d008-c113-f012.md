@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Baijiu Intelligent
-meta_description: Baijiu due diligence data sources include official quality inspection reports from production enterprises, monitoring data from regional production
+meta_description: Model Integration and Configuration for Baijiu Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

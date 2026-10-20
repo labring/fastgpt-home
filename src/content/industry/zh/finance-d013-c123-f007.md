@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属融资日报的工作流编排
-meta_description: 能源金属融资日报的数据来源包括国内大宗商品交易平台的仓单融资公示、行业自律组织的每日融资统计，以及券商研报的公开披露数据。更新节奏为T+1日发布前一个交易日
+meta_description: 能源金属融资日报的工作流编排：能源金属融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 能源金属、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

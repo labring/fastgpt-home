@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺投研知识库建设的上下文与 token
-meta_description: 服装家纺品类的投研数据主要来自行业协会公开报告、品牌方供应链台账、终端POS销售数据、面料供应商报价单及海关进出口报关单。数据更新节奏差异较大：终端零售数据
+meta_description: 服装家纺投研知识库建设的上下文与 token：服装家纺投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 服装家纺、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

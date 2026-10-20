@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c126-f011
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Aviation Airport Financial
-meta_description: Aviation airport financial report data mainly comes from industry operation statistics published by civil aviation authorities, quarterly/annual
+meta_title: Document Parsing and Chunking for Aviation Airport
+meta_description: Document Parsing and Chunking for Aviation Airport Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

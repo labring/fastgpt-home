@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能智能尽调报告的工具调用与插件
-meta_description: 储能智能尽调报告的数据主要来自电力设备行业协会备案数据、并网验收文档、储能电站运维日志、公开招标公示信息。数据更新节奏分为三类：备案数据按月更新，运维日志按
+meta_description: 储能智能尽调报告的工具调用与插件：储能智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 储能、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

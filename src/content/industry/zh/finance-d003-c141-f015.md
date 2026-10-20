@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份与时效保险理赔初审的部署与升级
-meta_description: 身份与时效类保险理赔初审数据主要来自两个渠道：一是理赔申请人提交的身份证、银行卡、医院诊断证明等实体证件的扫描件或照片，二是对接公安户籍系统、社保缴费系统、
+meta_description: 身份与时效保险理赔初审的部署与升级：身份与时效保险理赔初审的部署与升级，涵盖配置与验证建议
 keywords: 身份与时效、保险理赔初审、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

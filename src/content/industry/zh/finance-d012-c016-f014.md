@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏营销内容的表单与交互
-meta_description: 光伏相关业务数据来源包括电网并网项目备案台账、光伏组件厂商公开的规格参数文档、线下获客收集的用户装机意向表单。更新节奏为：并网台账按自然月更新，组件参数随新
+meta_description: 光伏营销内容的表单与交互：光伏营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 光伏、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

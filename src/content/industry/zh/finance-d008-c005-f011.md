@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品智能尽调报告的文档解析与分块
-meta_description: 个护用品的智能尽调数据主要来自品牌方提交的合规备案文档、第三方检测机构出具的成分分析报告、行业协会发布的抽检公示文件。数据更新节奏随新品上市、合规年检调整，
+meta_description: 个护用品智能尽调报告的文档解析与分块：个护用品智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 个护用品、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

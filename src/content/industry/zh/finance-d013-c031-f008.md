@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药融资日报的工具调用与插件
-meta_description: 化学制药融资日报的数据来源包括境内外证券交易所公开披露文件、行业投融资信息聚合平台的每日汇总。更新节奏为每日更新，覆盖前一交易日披露的融资事件。文档采用结构
+meta_description: 化学制药融资日报的工具调用与插件：化学制药融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 化学制药、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

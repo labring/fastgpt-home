@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的向量模型与索引
-meta_description: 投诉工单数据来源于企业客服工单系统、CRM模块及呼叫中心转写记录，更新节奏为准实时，新工单提交后及时进入待处理队列。单条工单文档包含工单编号、客户身份标识、
+meta_description: 投诉工单客户服务的向量模型与索引：投诉工单客户服务的向量模型与索引，涵盖配置与验证建议
 keywords: 投诉工单、客户服务与账户咨询、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

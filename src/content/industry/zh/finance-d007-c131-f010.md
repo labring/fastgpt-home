@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的数据库与运维
-meta_description: 数据来源为装修装饰行业的项目结算系统、建材流通平台的价格监测接口、地方住建部门的装修市场备案数据。更新节奏为每日凌晨完成前一日全量数据的同步与计算，生成当日
+meta_description: 装修装饰收益率的数据库与运维：装修装饰收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 装修装饰、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

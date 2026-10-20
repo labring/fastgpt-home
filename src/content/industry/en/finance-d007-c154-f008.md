@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Jewelry Profitability
-meta_description: Jewelry market trend and profitability data comes from brand official store quotation systems, precious metal spot exchange raw material benchmark
+meta_description: Tool Calling and Plugins for Jewelry Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

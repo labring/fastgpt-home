@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Agrochemical Product
-meta_description: Data related to agrochemical product yield rates comes primarily from three channels: the national agrochemical product price monitoring system
+meta_description: Conversation Logging and Auditing for Agrochemical Product Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

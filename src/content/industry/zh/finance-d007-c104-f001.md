@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃收益率的HTTP 接口与外部系统
-meta_description: 玻璃收益率相关的行情数据，主要来自国内建材行业大宗商品现货监测平台与期货交易所公开接口。现货数据每日更新一次，更新时点为每日8:30，覆盖全国主要产区的浮法
+meta_description: 玻璃收益率的HTTP 接口与外部系统：玻璃收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 玻璃、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

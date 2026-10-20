@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料财报分析的向量模型与索引
-meta_description: 化学原料品类的财报数据主要来自境内外上市主体披露的季度报、年度报告及临时公告，更新节奏为每季度、年度固定更新，叠加突发行业政策或产能变动的临时披露。文档结构
+meta_description: 化学原料财报分析的向量模型与索引：化学原料财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 化学原料、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

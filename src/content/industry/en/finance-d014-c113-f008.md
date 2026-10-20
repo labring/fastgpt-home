@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Baijiu Financial Report
-meta_description: Baijiu industry listed company financial report data mainly comes from public disclosure platforms of the Shanghai Stock Exchange and Shenzhen Stock
+meta_description: Tool Calling and Plugins for Baijiu Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Baijiu financial report data sources are scattered, requiring simultaneous calls
 ## Three common mistakes
 - Phenomenon: Tool calls do not return Baijiu industry benchmark data in the knowledge base, and the generated analysis content deviates from preset logic. Cause: The `plugin_knowledge_base_bind` parameter is not configured, and the knowledge base is not bound to the tool calling chain.
 - Phenomenon: The name displayed on the plugin list page does not match the code name on the system plugin management page. Cause: The `plugin_display_name` parameter is not set in the plugin configuration, and the system uses the internal code name as the list page display name by default.
-- Phenomenon: Irrelevant numbers or text appear in tool call return results, and have no relation to the prompt words of the model's original input. Cause: The `tool_call_auto_fill` parameter is not turned off, and the system automatically supplements undefined placeholder content.
+- Phenomenon: Irrelevant numbers or text appear in tool call return results, and have no relation to the prompt words of the model's original input. Cause: The `tool_call_auto_fill` parameter is not turned off, and the system automatically supplements undefined pending verification content.
 
 ## How to confirm the configuration is correct
 - Trigger a scheduled task, check whether the tool call log contains return results of both exchange data and industry association data, and verify whether the data sources meet configuration requirements.

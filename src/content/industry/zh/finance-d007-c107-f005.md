@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力收益率的多轮对话与提示词
-meta_description: 电力收益率与行情数据来源于省级电力交易中心公开交易接口、区域电网调度公开数据集。现货交易数据每15分钟更新一次，日报数据每日凌晨生成前一日全量行情与收益核算
+meta_description: 电力收益率的多轮对话与提示词：电力收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 电力、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

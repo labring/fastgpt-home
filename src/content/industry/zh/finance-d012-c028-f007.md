@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的工作流编排
-meta_description: 动力煤相关数据多来自行业监测平台、港口交割台账与产地生产记录，更新节奏分为实时现货报价、每日库存数据、每周供需简报三类。文档结构以结构化表格为主，部分为带批
+meta_description: 动力煤营销内容的工作流编排：动力煤营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 动力煤、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

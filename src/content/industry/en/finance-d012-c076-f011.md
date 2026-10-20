@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c076-f011
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Marketing Content in the
-meta_description: Financial institutions use cultural and recreational goods data for customer marketing. This data mainly comes from brand product SKU lists
+meta_title: Document Parsing and Chunking for Marketing Content
+meta_description: Document Parsing and Chunking for Marketing Content in the Cultural and Recreational Goods Industry
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

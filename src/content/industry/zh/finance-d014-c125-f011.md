@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备财报分析的文档解析与分块
-meta_description: 航天装备品类的财报数据主要来自境内外军工上市公司公开披露的年报、半年报及临时公告，同时包含行业协会发布的产业研究报告。数据更新以年度、半年度为固定节奏，同时
+meta_description: 航天装备财报分析的文档解析与分块：航天装备财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 航天装备、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

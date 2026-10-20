@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气财报分析的模型接入与配置
-meta_description: 燃气品类的财报数据主要来自上市燃气企业公开披露的定期报告、地方公用事业监管机构发布的行业运营数据，以及行业协会的月度统计资料。数据更新节奏分为季度、半年度、
+meta_description: 燃气财报分析的模型接入与配置：燃气财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 燃气、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

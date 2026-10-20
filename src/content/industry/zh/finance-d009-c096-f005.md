@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭研报检索的多轮对话与提示词
-meta_description: 焦炭研报数据主要来自行业协会监测数据、券商专题报告、期货交易所公开行情及钢厂生产公开信息。更新节奏分日度现货价格数据、周度行业库存与开工率报告、月度供需平衡
+meta_description: 焦炭研报检索的多轮对话与提示词：焦炭研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 焦炭、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

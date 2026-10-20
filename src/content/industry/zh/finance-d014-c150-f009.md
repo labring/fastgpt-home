@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石财报分析的引用来源与溯源
-meta_description: 铁矿石相关数据包含现货价格、港口库存、行业产能、上市矿山财报等类型，数据源涵盖全球大宗商品交易所、国内钢铁行业协会、矿山企业官方公告等渠道。现货价格数据每日
+meta_description: 铁矿石财报分析的引用来源与溯源：铁矿石财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 铁矿石、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

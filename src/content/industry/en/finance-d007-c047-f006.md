@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Large State-Owned Bank
-meta_description: The data for large state-owned bank yields is sourced from internal business accounting systems and official compliant disclosure channels. There are
+meta_description: Conversation Logs and Auditing for Large State-Owned Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

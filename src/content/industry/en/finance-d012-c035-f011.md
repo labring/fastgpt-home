@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Medical Aesthetic
-meta_description: Medical aesthetic marketing content data sources primarily include internal institution project brochures, event campaign plans, draft promotional
+meta_description: Document Parsing and Chunking for Medical Aesthetic Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Personal Care Product Profit
-meta_description: The market data for personal care product profit margins comes from internal brand sales ledgers and public data interfaces from third-party retail
+meta_description: Form and Interaction for Personal Care Product Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

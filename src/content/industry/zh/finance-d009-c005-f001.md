@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品研报检索的HTTP 接口与外部系统
-meta_description: 个护用品研报的数据主要来自国内日化行业协会公开报告、品牌官方技术文档、电商平台消费洞察及第三方检测机构的合规报告。更新节奏随内容类型区分：产品参数随新品上市
+meta_description: 个护用品研报检索的HTTP 接口与外部系统：个护用品研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 个护用品、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

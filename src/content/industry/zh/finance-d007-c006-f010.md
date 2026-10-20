@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药收益率的数据库与运维
-meta_description: 中药收益率相关数据主要来自国内主要中药材专业市场的实时交易行情、中药饮片加工企业的成本核算两类数据源。交易行情数据每日更新，成本核算数据按周更新。数据文档为
+meta_description: 中药收益率的数据库与运维：中药收益率的数据库与运维，涵盖配置与验证建议。。。。。
 keywords: 中药、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

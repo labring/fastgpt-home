@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股研报检索的工作流编排
-meta_description: 多元控股研报的数据来源为旗下各业务板块的内部研究文档、公开行业分析报告，更新节奏随各板块业务节点不定期同步，部分公开类研报按固定周期更新。文档结构包含集团整
+meta_description: 多元控股研报检索的工作流编排：多元控股研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 多元控股、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

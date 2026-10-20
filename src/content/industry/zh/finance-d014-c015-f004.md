@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能财报分析的向量模型与索引
-meta_description: 储能品类的财报数据主要来自上市储能企业的定期报告、行业监管披露文件及企业公开公告。更新节奏按季度报告、年度报告及临时公告分批次推进。文档多为结构化与半结构化
+meta_description: 储能财报分析的向量模型与索引：储能财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 储能、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

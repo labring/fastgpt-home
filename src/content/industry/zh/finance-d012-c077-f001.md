@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的HTTP 接口与外部系统
-meta_description: 旅游景区的营销内容数据主要来自官方票务系统、导览小程序、线下活动公告栏、合作OTA平台及联名金融机构的活动专区。更新节奏随运营及金融合作活动节奏调整，日常每
+meta_description: 旅游景区营销内容的HTTP 接口与外部系统：旅游景区营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 旅游景区、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

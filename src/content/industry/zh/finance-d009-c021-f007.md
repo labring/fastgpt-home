@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合研报检索的工作流编排
-meta_description: 该品类的数据来源包含公开监管披露文件、第三方咨询机构行业报告、行业协会统计年鉴及企业自主调研纪要。更新节奏无固定周期，监管文件随政策出台实时更新，行业报告多
+meta_description: 其他综合研报检索的工作流编排：其他综合研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 其他综合、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

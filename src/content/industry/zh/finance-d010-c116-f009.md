@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 竞对报价竞价的引用来源与溯源
-meta_description: 竞对报价的数据来源通常为公开招投标平台、行业协会发布的合规披露文档、合作渠道的项目归档材料；更新节奏随对应招投标项目发布实时更新，或按固定周期同步行业基准信
+meta_description: 竞对报价竞价的引用来源与溯源：竞对报价竞价的引用来源与溯源，涵盖配置与验证建议。
 keywords: 竞对报价、竞价与投标报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

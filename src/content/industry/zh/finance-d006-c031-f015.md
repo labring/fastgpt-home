@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药投研知识库建设的部署与升级
-meta_description: 化学制药投研数据主要来源于国家药监局药品审评中心（CDE）公开审评资料、美国FDA药品数据库、专利数据库、药企公开研发管线公告及临床研究数据库。数据更新节奏
+meta_description: 化学制药投研知识库建设的部署与升级：化学制药投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 化学制药、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

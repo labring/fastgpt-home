@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务投研知识库建设的模型接入与配置
-meta_description: 水务投研数据来源包括公开水质监测公报、管网运营日志、上市公司水务业务财报、住建部及地方水务政策文件、项目招投标公告等。数据更新节奏差异显著：实时监测数据每日
+meta_description: 水务投研知识库建设的模型接入与配置：水务投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 水务、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

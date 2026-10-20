@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车融资日报的工具调用与插件
-meta_description: 整车融资日报的数据主要来自整车厂商供应链金融管理系统、合作银行对公融资台账及汽车流通行业公开进销存数据。数据更新节奏为每日凌晨同步前一自然日的全量更新，单份
+meta_description: 整车融资日报的工具调用与插件：整车融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 整车、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

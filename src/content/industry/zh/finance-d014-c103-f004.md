@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测财报分析的向量模型与索引
-meta_description: 环境监测财报分析的数据主要来自两部分：一是上市企业年度、季度财报中披露的环境监测专项数据，二是生态环境主管部门归档的企业自主监测历史数据。数据以结构化表格为
+meta_description: 环境监测财报分析的向量模型与索引：环境监测财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 环境监测、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

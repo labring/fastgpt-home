@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Air Pollution
-meta_description: This use case addresses project due diligence needs in the finance, insurance, and wealth management sectors. Data sources include online air
+meta_description: Knowledge Base Retrieval and Recall for Air Pollution Control Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

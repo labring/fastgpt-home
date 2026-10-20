@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版研报检索的模型接入与配置
-meta_description: 出版类研报数据主要来自专业出版机构的官方发布、行业数据库授权获取。更新节奏以定期专题研报为主，配合突发行业事件的临时研报。单篇文档结构包含发布头部、行业背景
+meta_description: 出版研报检索的模型接入与配置：出版研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 出版、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

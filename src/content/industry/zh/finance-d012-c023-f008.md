@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的工具调用与插件
-meta_description: 金融行业内的军工电子营销内容的数据主要来源于型号研发档案、供应链配套台账、公开招投标公示、客户技术交流纪要。数据更新节奏随项目节点波动，定型产品的参数文档更
+meta_description: 军工电子营销内容的工具调用与插件：军工电子营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 军工电子、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

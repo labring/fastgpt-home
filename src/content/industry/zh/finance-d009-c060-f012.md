@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的模型接入与配置
-meta_description: 工程咨询研报数据主要来自行业协会发布的行业规范、政府招投标项目台账、工程概算与造价文件、专项技术交底文档。更新节奏随项目推进与政策调整变动，无固定周期。文档
+meta_description: 工程咨询研报检索的模型接入与配置：工程咨询研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 工程咨询、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

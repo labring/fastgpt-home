@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的工作流编排
-meta_description: 模型分配的数据来源于平台集成的第三方大模型接口、用户自定义微调模型及绑定的API密钥配置。更新节奏随模型接口新增、权限调整或用户手动刷新同步。单条数据的文档
+meta_description: 模型分配一体化 AI 平台的工作流编排：模型分配一体化 AI 平台的工作流编排，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

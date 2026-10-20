@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备营销内容的知识库检索与召回
-meta_description: 专用设备的数据来源包括原厂技术规格书、金融机构内部使用规范、监管合规备案文件、设备运维更新日志。更新节奏随业务与监管要求调整，原厂固件更新按需触发，合规文档
+meta_description: 专用设备营销内容的知识库检索与召回：专用设备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 专用设备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

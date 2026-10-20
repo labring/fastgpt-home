@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务收益率的部署与升级
-meta_description: IT服务收益率与行情日报的数据来源包含内部运维监控系统、业务交易日志及第三方运维服务接口。数据更新节奏分为两类：全量日报数据在每个业务交易日结束后2小时内完
+meta_description: IT 服务收益率的部署与升级：IT 服务收益率的部署与升级，涵盖配置与验证建议。
 keywords: IT 服务、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

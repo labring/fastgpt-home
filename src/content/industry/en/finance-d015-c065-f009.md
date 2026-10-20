@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Credit Report Risk
-meta_description: Credit report data mainly comes from the central bank credit reference center, local credit management platforms, and compliant credit service
+meta_description: Citation Sources and Traceability for Credit Report Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

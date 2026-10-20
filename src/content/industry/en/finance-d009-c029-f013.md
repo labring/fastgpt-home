@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c029-f013
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Packaging and
-meta_description: The data for packaging and printing research reports comes primarily from monthly industry monitoring reports released by a domestic packaging
+meta_title: Knowledge Base Retrieval and Recall for Packaging
+meta_description: Knowledge Base Retrieval and Recall for Packaging and Printing Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The static nature of compliance standard documents requires that the knowledge b
 | `Chunk size` | `800–1200 characters` | The raw material cost analysis and capacity data sections of packaging and printing research reports are relatively long. Too long segments will destroy context association, while too short segments will split professional terms |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Financial report documents of large packaging and printing enterprises contain multi-page tables and complex data. The default timeout period is insufficient to complete full parsing |
 | `Custom Separator` | `[\r\n]+` | Uploaded CSV-format research report datasets usually separate lines with line breaks. Using this delimiter can avoid line splitting errors caused by the default delimiter |
-| `Citation Content Template` | `Source: {source} {content}` | Packaging and printing research reports have diverse sources. Clearly marking the source can help verify the timeliness and authority of data |
+| `Traceability details` | `Source: {source} {content}` | Packaging and printing research reports have diverse sources. Clearly marking the source can help verify the timeliness and authority of data |
 
 > The parameter values provided on this page are all conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing the values.
 

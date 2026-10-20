@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品营销内容的表单与交互
-meta_description: 饰品营销内容的数据主要来自金融机构自有贵金属SKU管理系统、合作品牌的商品库及质检报告。数据更新节奏随营销节点波动，新品上线期每周更新，常规时段每月同步。单
+meta_description: 饰品营销内容的表单与交互：饰品营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 饰品、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

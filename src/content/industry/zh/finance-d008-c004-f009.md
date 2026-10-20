@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备智能尽调报告的引用来源与溯源
-meta_description: 专用设备智能尽调报告的数据主要来自三类来源：设备出厂合格证、季度运维日志、年度校准报告。数据更新节奏分为静态与动态两类，出厂型号、制造商信息为静态数据，仅随
+meta_description: 专用设备智能尽调报告的引用来源与溯源：专用设备智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 专用设备、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车研报检索的知识库检索与召回
-meta_description: 整车研报的数据来源为券商研究所公开研报、车企官方公告、行业协会统计数据。更新节奏为券商研报按季度、月度定期发布，车企公告随车型发布、销量更新实时发布。文档结
+meta_description: 整车研报检索的知识库检索与召回：整车研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 整车、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

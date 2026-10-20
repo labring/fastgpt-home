@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工智能尽调报告的知识库检索与召回
-meta_description: 煤化工尽调数据的数据源包括项目可行性研究报告、行业协会产业运行数据、企业生产台账、环保监测公开文件。更新节奏因文档类型差异明显，可研报告仅在项目立项阶段更新
+meta_description: 煤化工智能尽调报告的知识库检索与召回：煤化工智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 煤化工、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

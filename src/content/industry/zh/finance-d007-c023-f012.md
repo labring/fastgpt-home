@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子收益率的模型接入与配置
-meta_description: 军工电子收益率与行情日报的数据来源于国内证券交易所公开披露的交易数据、专业金融行情服务商的军工电子细分板块分类行情数据。数据更新节奏为每个交易日收盘后生成当
+meta_description: 军工电子收益率的模型接入与配置：军工电子收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 军工电子、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

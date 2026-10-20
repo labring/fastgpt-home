@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for District Heating
-meta_description: District heating research report data primarily comes from monthly operational reports of local district heating enterprises, regional heating supply
+meta_description: Citation Source and Traceability for District Heating Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,14 +25,14 @@ The multi-source nature of district heating research reports requires the tracea
 | Similarity Threshold | `0.75–0.85` | District heating research report parameter indicators have high professionalism, so a high matching threshold is needed to avoid irrelevant content being included |
 | Number of Recalled Results | `Top 8–12 results` | District heating research reports include multi-dimensional operational data, so a sufficient number of recalled results is needed to cover relevant indicators |
 | Number of Reranked Results | `Top 4–6 results` | Control the information density of citations per round to avoid redundant output content |
-| Citation Template | `[{title}]{source_type}: {field} {value}{unit}` | Adapt to the display requirements of fields, units, and source types for district heating research reports |
+| Traceability details | `[{title}]{source_type}: {field} {value}{unit}` | Adapt to the display requirements of fields, units, and source types for district heating research reports |
 | Knowledge Base Sync Cycle | `Once per month` | Match the monthly update rhythm of heating operational data |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Long-form research report parsing requires sufficient timeout time to avoid parsing interruptions |
 
 ## Three Common Misconfigurations
 - Phenomenon: The number of citations returned per round of conversation does not match the configured value. Cause: The `Number of Reranked Results` is not correctly configured, and only the default recall parameters are used without secondary filtering
 - Phenomenon: A `504 Gateway Timeout` error occurs when parsing long-form district heating research reports. Cause: The value of `PARSE_FILE_TIMEOUT_SECONDS` is set lower than the actual time required for document parsing
-- Phenomenon: Citation content does not display unit information for thermal parameters. Cause: The `Citation Template` does not include a unit placeholder, and only numerical content is extracted
+- Phenomenon: Citation content does not display unit information for thermal parameters. Cause: The `Citation Template` does not include a unit pending verification, and only numerical content is extracted
 
 ## How to Verify Proper Configuration
 - Upload a standard district heating research report sample document, and check if the parsed text retains fields such as heating quantity and return water temperature, along with their corresponding units

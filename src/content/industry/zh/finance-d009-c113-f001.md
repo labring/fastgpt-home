@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒研报检索的HTTP 接口与外部系统
-meta_description: 白酒研报的数据源为券商研究所食品饮料研究团队发布的公开行业研究内容，更新节奏随券商研报发布节奏同步，工作日有新内容产出。单篇文档包含头部元数据、行业整体分析
+meta_description: 白酒研报检索的HTTP 接口与外部系统：白酒研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白酒、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

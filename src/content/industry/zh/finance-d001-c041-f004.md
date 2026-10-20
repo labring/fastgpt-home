@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的向量模型与索引
-meta_description: 名单筛查的数据主要来自监管机构发布的制裁名单、涉恐名单、失信被执行人名单，以及行业合规共享的风险主体名单。数据更新节奏随监管要求调整，常规为每日同步全量更新
+meta_description: 名单筛查KYC 的向量模型与索引：名单筛查KYC 的向量模型与索引，涵盖配置与验证建议
 keywords: 名单筛查、KYC 与反洗钱资料核验、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

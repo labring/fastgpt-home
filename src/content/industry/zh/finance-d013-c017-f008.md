@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子融资日报的工具调用与插件
-meta_description: 光学光电子融资日报的数据主要来自证券交易所公开披露的上市公司融资公告、行业协会的融资备案信息，以及第三方财经数据平台的公开接口。数据更新节奏为每个交易日更新
+meta_description: 光学光电子融资日报的工具调用与插件：光学光电子融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 光学光电子、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖营销内容的知识库检索与召回
-meta_description: 畜禽养殖相关数据的来源包括畜牧行业公开标准文档、养殖技术手册、基层畜牧服务站的实操记录、养殖主体的内部培训材料。更新节奏分为三类：行业标准类文档按年度更新，
+meta_description: 畜禽养殖营销内容的知识库检索与召回：畜禽养殖营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 畜禽养殖、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

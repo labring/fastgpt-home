@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁财报分析的模型接入与配置
-meta_description: 融资租赁财报数据主要来自内部业务管理系统的租赁合同台账、租金回收明细、资产估值报表，以及经审计的季度、年度财务报告。更新节奏按业务节点区分：租赁合同签约时新
+meta_description: 融资租赁财报分析的模型接入与配置：融资租赁财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 融资租赁、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

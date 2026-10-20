@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子收益率的部署与升级
-meta_description: 军工电子收益率与行情日报的数据来源为合规金融行情服务商提供的军工电子细分板块全量快照，每日仅在证券交易结束后固定窗口完成一次更新。单条日报文档采用结构化JS
+meta_description: 军工电子收益率的部署与升级：军工电子收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 军工电子、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

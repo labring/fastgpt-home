@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车智能尽调报告的文档解析与分块
-meta_description: 整车智能尽调报告的数据来源包括车企官方公告、经销商库存台账、第三方检测机构报告、二手车交易过户记录。更新节奏依来源不同，新车公告按月更新，库存台账按周更新，
+meta_description: 整车智能尽调报告的文档解析与分块：整车智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 整车、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

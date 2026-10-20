@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务融资日报的工具调用与插件
-meta_description: 电商服务融资日报的数据来源于电商平台商家结算系统、供应链金融合作机构的接口，每日凌晨更新前一自然日的统计数据。单份文档按商家维度聚合，包含商家唯一标识、当日
+meta_description: 电商服务融资日报的工具调用与插件：电商服务融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 电商服务、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

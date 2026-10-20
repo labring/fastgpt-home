@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场营销内容的工作流编排
-meta_description: 航空机场的营销数据主要来自航班调度系统、旅客服务平台、场内商户结算系统及航司合作接口。数据更新节奏分三类：航班时刻与航站楼分配数据每日凌晨刷新，实时旅客到港
+meta_description: 航空机场营销内容的工作流编排：航空机场营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 航空机场、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

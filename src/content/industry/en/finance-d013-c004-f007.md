@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Specialized Equipment Financing
-meta_description: Data sources for specialized equipment financing daily reports include equipment manufacturers' sales filing systems, regional mechanical equipment
+meta_description: Workflow Orchestration for Specialized Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -30,7 +30,7 @@ Inconsistent units across data sources require adding a numerical conversion ste
 | `Scheduled Trigger Cycle` | `Daily 00:30` | Matches the daily update schedule of specialized equipment financing daily reports, avoiding peak business hours |
 | `Multi-data Source Parallel Pull` | `Enabled` | Adapts to the pull requirements of multiple scattered data sources, shortening workflow execution duration |
 | `Field Validation Rules` | `Device ID length = 18 digits, financing amount ≥ 0` | Matches the fixed format requirements of specialized equipment financing data, filtering invalid data |
-| `Default Value Fill Configuration` | `Fill disbursement date field with NULL placeholder` | Handles unreported fields from some data sources, avoiding workflow execution interruptions |
+| `Default Value Fill Configuration` | `Fill disbursement date field with NULL pending verification` | Handles unreported fields from some data sources, avoiding workflow execution interruptions |
 | `API Authentication Configuration` | `Configure independent secret key for each data source` | Adapts to independent authentication rules for different data sources, ensuring compliance of data pull permissions |
 | `Amount Unit Conversion` | `Convert ten-thousand yuan units to yuan units` | Unifies amount reporting standards across data sources, avoiding deviations in subsequent calculations |
 

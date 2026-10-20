@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场研报检索的模型接入与配置
-meta_description: 航空机场研报的数据主要来自民航局官方月度通报、机场集团年度年报、国际航空运输协会行业报告及券商细分研报。更新节奏覆盖月度客流起降数据、季度营收动态、年度完整
+meta_description: 航空机场研报检索的模型接入与配置：航空机场研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 航空机场、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c053-f008
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Multi-Financial Yield and
-meta_description: Multi-financial category yield and market data is sourced from publicly disclosed non-bank financial product net value announcements, industry index
+meta_title: Tool Calling and Plugins for Multi-Financial Yield
+meta_description: Tool Calling and Plugins for Multi-Financial Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

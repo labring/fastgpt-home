@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Traditional Chinese Medicine
-meta_description: Data originates from supply chain financing filings at national traditional Chinese medicine (TCM) specialty markets, financing updates for small and
+meta_description: Workflow Orchestration for Traditional Chinese Medicine Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

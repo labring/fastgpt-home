@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰智能尽调报告的模型接入与配置
-meta_description: 装修装饰智能尽调报告的数据来源涵盖施工方资质文件、材料采购清单、现场监理记录、装修预算表、竣工验收单及配套施工图纸。更新节奏随项目进度不定期调整，材料进场、
+meta_description: 装修装饰智能尽调报告的模型接入与配置：装修装饰智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 装修装饰、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

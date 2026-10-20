@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c042-1
 page_type: 行业作业环节页
 article_section: 财富管理
 is_part_of: FastGPT 技术中心
-meta_title: 私人银行综合财富管理的梳理客户分散在存款、证券、基金、保险：
-meta_description: 私人银行综合财富管理的梳理客户分散在存款、证券、基金、保险：哪一部分能交给系统
+meta_title: 私人银行综合财富管理的梳理客户分散在存款、证券、基金、保险：哪一部分能交给系统
+meta_description: 私人银行综合财富管理的梳理客户分散在存款、证券、基金、保险：哪一部分能交给系统：私人银行综合财富管理的梳理客户分散在存款、证券、基金、保险：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 私人银行综合财富管理、财富管理、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

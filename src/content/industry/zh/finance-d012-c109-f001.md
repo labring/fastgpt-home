@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的HTTP 接口与外部系统
-meta_description: 电子元件的营销数据主要来源于原厂官方文档、授权分销商库存系统、行业垂直B2B交易平台，服务于金融行业内的供应链营销与获客场景。数据更新节奏差异明显：原厂规格
+meta_description: 电子元件营销内容的HTTP 接口与外部系统：电子元件营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电子元件、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的工作流编排
-meta_description: 面向金融行业的计算机设备收益率行情数据来源于公开IT设备交易行情接口、企业内部资产管理台账、第三方硬件估值平台。数据更新节奏为每日一次，于凌晨完成前一日行情
+meta_description: 计算机设备收益率的工作流编排：计算机设备收益率的工作流编排，涵盖配置与验证建议。
 keywords: 计算机设备、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -26,7 +26,7 @@ date_modified: 2026-09-15
 | `TRIGGER_CRON_EXPRESSION` | `0 2 * * *` | 每日凌晨2点触发，避开多数行情接口的访问峰值，保障数据拉取稳定性 |
 | `DATA_SOURCE_AUTH_CONFIG` | 配置IT设备行情接口API_KEY与企业资产管理系统账号密码 | 数据源包含第三方行情接口与内部台账，需分别配置对应鉴权信息 |
 | `DUPLICATE_REMOVAL_FIELD` | `device_unique_id` | 数据包含设备唯一标识字段，以此为依据去重可避免重复计算单台设备收益率 |
-| `AI_CHAT_PROMPT_TEMPLATE` | `基于以下设备数据生成标准化收益率日报：{{device_data}}` | 需将结构化的设备数据转换为自然语言播报内容，适配AI对话模块的输入要求 |
+| `AI_CHAT_PROMPT_TEMPLATE` | `基于以下设备数据生成标准化收益率日报：待核验值` | 需将结构化的设备数据转换为自然语言播报内容，适配AI对话模块的输入要求 |
 | `KNOWLEDGE_BASE_ID` | 按全局变量动态赋值 | 需根据不同业务场景切换对应行业知识库，避免硬编码导致的维护成本增加 |
 | `RECALL_TOP_K` | `前2条` | 计算机设备行情数据的核心信息集中在前2条检索结果，过多召回会增加处理延迟 |
 

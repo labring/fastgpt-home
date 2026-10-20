@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体投研知识库建设的对话日志与审计
-meta_description: 半导体投研的数据主要来自三类渠道：公开行业研报、晶圆代工厂及器件厂商的公开财报与产品参数手册、EDA设计工具的运行日志与供应链报价单。数据更新节奏差异较大，
+meta_description: 半导体投研知识库建设的对话日志与审计：半导体投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 半导体、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

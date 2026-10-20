@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Jewelry Investment
-meta_description: Jewelry investment research data primarily comes from brand product archives, seasonal style lists released at industry exhibitions, raw material
+meta_description: Model Access and Configuration for Jewelry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ The fine-grained, multi-field nature of jewelry investment research data require
 | `retrieval_count` | Top 8–12 results | Jewelry investment research requires multi-dimensional references for the same material, price range, and style. This range balances retrieval precision and context redundancy |
 | `similarity_threshold` | Calibrate based on actual testing | Jewelry data fields have high similarity. Thresholds must be adjusted based on business scenarios to avoid introducing irrelevant SKUs or missing valid matches |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120 seconds | Some jewelry documents include high-definition actual product photos. The default timeout duration is insufficient to complete the full process of image parsing and text embedding |
-| `incremental_index_enabled` | Enabled | Adapts to the fluctuating update frequency of jewelry new products based on launch cycles, and avoids time costs from full index reconstruction. Compatible with FastGPT v4.9.11 and later versions |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `multimodal_embedding_enabled` | Enable based on document type | Documents with design manuscripts or actual product photos require multimodal embedding. Pure text documents do not require additional configuration of this parameter |
 
 > The parameter values provided on this page are all common recommendations used to determine a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing values.

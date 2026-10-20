@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的对话日志与审计
-meta_description: 数据来源为园区运营管理系统的财务台账、招商签约档案、物业收费模块，以及产业楼宇的租金备案数据。更新节奏为月度更新，部分核心业态数据按周同步。单份文档包含园区
+meta_description: 产业园区收益率的对话日志与审计：产业园区收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 产业园区、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力融资日报的工作流编排
-meta_description: 电力融资日报的数据主要来自电网运营数据平台、地方能源监管部门公开披露、合作银行的授信台账三类渠道。更新节奏为每日18点前完成前一日数据的汇总发布。文档结构以
+meta_description: 电力融资日报的工作流编排：电力融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 电力、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

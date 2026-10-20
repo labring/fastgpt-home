@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券收益率的部署与升级
-meta_description: 证券收益率日报的数据来源为沪深北交易所官方行情接口、中国证券登记结算有限责任公司公开披露数据，以及合规的第三方行情聚合接口。更新节奏为每日交易结束后1至2小
+meta_description: 证券收益率的部署与升级：证券收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 证券、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

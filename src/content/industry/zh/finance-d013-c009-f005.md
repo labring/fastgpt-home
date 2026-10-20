@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区融资日报的多轮对话与提示词
-meta_description: 产业园区融资日报的数据来源包含园区运营管理系统的入驻企业融资备案、地方金融监管平台的公开披露信息、入驻企业自主提交的融资进展。更新节奏为每日固定时段更新前一
+meta_description: 产业园区融资日报的多轮对话与提示词：产业园区融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 产业园区、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

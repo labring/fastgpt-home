@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行研报检索的向量模型与索引
-meta_description: 这个品类的数据主要来自股份制银行内部投研团队产出的行业分析、宏观经济研究文档，以及采购的第三方公开研报内容。更新节奏随研报发布周期推进，常规行业研报按季度更
+meta_description: 股份制银行研报检索的向量模型与索引：股份制银行研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 股份制银行、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

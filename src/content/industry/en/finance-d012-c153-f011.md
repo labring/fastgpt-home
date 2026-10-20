@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Wind Power Marketing
-meta_description: Wind power marketing-related documents are primarily used for customer acquisition and investment financing of wind power projects by financial
+meta_description: Document Parsing and Chunking for Wind Power Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ The characteristics of wind power marketing documents impose multiple constraint
 ## Configuration Settings
 | Configuration Item | Recommended Setting | Rationale |
 | ---- | ---- | ---- |
-| `PARSE_PDF_SIGN_SUPPORT` | `true` | Wind power marketing documents often include compliance files with digital signatures. Signature-compatible parsing mode must be enabled, compatible with FastGPT V4.9.1 and above |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `chunk_size` | `800–1200 characters` | Wind power documents include long engineering descriptions and structured parameters. This range balances context coherence and chunk granularity |
 | `PARSE_TABLE_EXTRACT_MODE` | `structured_table` | Wind power marketing documents include large numbers of structured tables such as unit parameters and project budgets. Row and column structure of tables must be retained, and plain text conversion is not used |
 | `UPLOAD_FILE_MAX_SIZE` | `500 MB` | Individual wind power feasibility study reports may include multiple pages of drawings and parameter attachments. Large file upload requirements must be accommodated |

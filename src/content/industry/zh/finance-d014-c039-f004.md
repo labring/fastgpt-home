@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器财报分析的向量模型与索引
-meta_description: 厨卫电器相关上市公司的财报数据，来源为境内外证券交易所公开披露的定期报告与临时公告，更新节奏为每季度、每年度及重大经营事项触发的临时更新。单份财报文档长度跨
+meta_description: 厨卫电器财报分析的向量模型与索引：厨卫电器财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 厨卫电器、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

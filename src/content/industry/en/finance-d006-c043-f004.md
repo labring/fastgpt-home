@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Commercial Real Estate
-meta_description: Commercial real estate investment research data comes from public policy documents, project feasibility study reports, business district operation
+meta_description: Vector Models and Indexing for Commercial Real Estate Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

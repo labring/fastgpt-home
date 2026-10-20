@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤投研知识库建设的文档解析与分块
-meta_description: 化纤品类的数据源主要覆盖石油石化产业链上游原料行情、中游生产工艺参数、下游应用需求报告及海关进出口明细。数据更新节奏差异明显，原料期货行情每日更新，行业供需
+meta_description: 化纤投研知识库建设的文档解析与分块：化纤投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 化纤、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

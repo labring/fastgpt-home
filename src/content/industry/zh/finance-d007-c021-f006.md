@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合收益率的对话日志与审计
-meta_description: 其他综合收益率与行情日报的数据来源包括公开行情聚合接口、机构内部核算台账与第三方合规数据源。每日固定时段完成当日数据集的生成。文档结构为单条记录包含标的唯一
+meta_description: 其他综合收益率的对话日志与审计：其他综合收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 其他综合、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

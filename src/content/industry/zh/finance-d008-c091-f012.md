@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材智能尽调报告的模型接入与配置
-meta_description: 消费建材相关数据主要来自厂商自主出具的质检文档、供应链管理系统导出的进销存台账、住建部门公开的建材备案公示文件。单批次产品的质检报告随出厂同步生成，供应链数
+meta_description: 消费建材智能尽调报告的模型接入与配置：消费建材智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 消费建材、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

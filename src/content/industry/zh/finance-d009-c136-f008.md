@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属研报检索的工具调用与插件
-meta_description: 贵金属研报的数据来源主要包括券商研究所行业报告、上海黄金交易所、伦敦金银市场协会（LBMA）等官方发布的行情与分析文档。更新节奏覆盖每日盘后行情简报、每周行
+meta_description: 贵金属研报检索的工具调用与插件：贵金属研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 贵金属、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

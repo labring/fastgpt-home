@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的知识库检索与召回
-meta_description: 专业连锁融资日报的数据主要来源于连锁品牌总部的融资申请台账、门店端的融资提交记录，以及地方金融监管平台的连锁企业融资备案信息。数据每日更新，单份日报文档包含
+meta_description: 专业连锁融资日报的知识库检索与召回：专业连锁融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 专业连锁、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

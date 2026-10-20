@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的部署与升级
-meta_description: 休闲食品的营销内容数据，除品类自身的包装文案、电商详情页、直播脚本外，还包含金融机构联合推出的联名活动文案、信用卡积分兑换休闲食品的活动规则，来源涵盖产品包
+meta_description: 休闲食品营销内容的部署与升级：休闲食品营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 休闲食品、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

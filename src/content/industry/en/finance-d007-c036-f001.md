@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c036-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Semiconductor Yield
-meta_description: Organizations source semiconductor yield rate data primarily from public datasets provided by stock exchange semiconductor sector market interfaces
+meta_title: HTTP Interfaces and External Systems for Semiconductor
+meta_description: HTTP Interfaces and External Systems for Semiconductor Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

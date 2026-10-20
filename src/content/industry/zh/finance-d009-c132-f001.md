@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备研报检索的HTTP 接口与外部系统
-meta_description: 计算机设备研报的数据主要来源于行业咨询机构公开报告、硬件厂商官方技术文档、第三方硬件测试机构发布的评测内容，以及证券行业计算机板块的细分研报。研报更新节奏随
+meta_description: 计算机设备研报检索的HTTP 接口与外部系统：计算机设备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 计算机设备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

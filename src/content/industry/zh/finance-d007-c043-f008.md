@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产收益率的工具调用与插件
-meta_description: 商业地产收益率相关数据主要来源于商业物业运营台账、商圈租赁交易备案系统、第三方商业地产数据聚合平台。数据更新节奏为月度更新租金与运营成本明细，季度更新整体净
+meta_description: 商业地产收益率的工具调用与插件：商业地产收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 商业地产、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

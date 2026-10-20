@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Comprehensive Service Yield
-meta_description: Data sources for comprehensive service yield and daily market reports include public market APIs for exchange-traded markets, financial product return
+meta_description: Form and Interaction for Comprehensive Service Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,7 +35,7 @@ The wide coverage of comprehensive service products leads to large return volume
 | `date_range_restriction` | Last 30 days to current day | Daily yield reports only support querying synchronized historical data. Same-day data may only be queried after synchronization completes. This range covers conventional business requirements |
 | `pagination_default_size` | 20 items | Comprehensive services have a large number of products. 20 items ensures smooth interface loading and reasonable information density, aligning with user browsing habits |
 | `response_field_filter` | Enable field filtering as needed | Reduces redundant data returned, lowers interface transmission latency, and improves form interaction efficiency |
-| `workflow_audio_permission` | Calibrate based on actual testing | Adapts to permission rules for FastGPT 4.9.7 and later versions, ensuring normal triggering of voice input functionality |
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 > The parameter values provided on this page are all conventional recommendations used as starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.
 

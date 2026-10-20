@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备融资日报的HTTP 接口与外部系统
-meta_description: 电网设备融资日报的数据来源于电力供应链金融平台、电网公司招投标备案系统及设备厂商的融资申请台账。数据更新节奏为每日凌晨完成前一日全量数据同步，支持增量拉取。
+meta_description: 电网设备融资日报的HTTP 接口与外部系统：电网设备融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电网设备、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

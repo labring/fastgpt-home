@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Aquaculture
-meta_description: Aquaculture investment research data comes primarily from four sources: pond environment monitoring sensors, daily logs from farming entities, market
+meta_description: Multi-turn Dialogue and Prompt Engineering for Aquaculture Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

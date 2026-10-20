@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Multi-App Routing Integrated AI Platform: Multi-Turn
-meta_description: For multi-app routing scenarios in finance, insurance, and wealth management, data sources include deployed sub-app metadata within the platform, user
+meta_description: Multi-App Routing Integrated AI Platform: Multi-Turn Dialogue and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

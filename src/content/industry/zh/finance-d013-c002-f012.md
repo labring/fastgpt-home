@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务融资日报的模型接入与配置
-meta_description: 专业服务类融资日报的数据主要来自公开融资公告、金融资讯聚合平台、行业自律组织披露的每日融资事件。数据更新节奏为每日更新，覆盖当日披露的全品类企业融资信息。单
+meta_description: 专业服务融资日报的模型接入与配置：专业服务融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 专业服务、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

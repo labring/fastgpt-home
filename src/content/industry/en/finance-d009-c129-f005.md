@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Financial
-meta_description: Financial leasing research report data is sourced from public reports released by domestic financial leasing industry associations, annual information
+meta_description: Multi-turn Dialogue and Prompt Engineering for Financial Leasing Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Scattered data sources with inconsistent update cycles require clarification of 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Misconfigurations
-- Symptom: Global variables fail to replace into prompts as expected after calling the AI dialogue node. Cause: The `{{变量名}}` syntax is not used correctly in the prompt template, or global variable names contain special characters leading to parsing failure.
+- Symptom: Global variables fail to replace into prompts as expected after calling the AI dialogue node. Cause: The `example value` syntax is not used correctly in the prompt template, or global variable names contain special characters leading to parsing failure.
 - Symptom: The `chat:LLM_model_response_empty` error appears after multiple calls, with empty returned content. Cause: Matching degree between retrieved research report content and queries is too low, or the model receives insufficient valid context to generate a valid response.
 - Symptom: Garbled half-width quotation marks appear at the end of AI output, followed by automatic correction to standard quotation marks. Cause: Incorrect handling of trailing punctuation during document segmentation causes the model to receive incomplete punctuation context, generating abnormally formatted content.
 

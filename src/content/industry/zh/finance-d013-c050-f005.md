@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶融资日报的多轮对话与提示词
-meta_description: 塑料橡胶融资日报的数据来源涵盖大宗商品现货交易平台、期货交易所交割数据、行业协会统计及海关进出口备案信息。更新节奏为每日凌晨更新前一工作日的完整数据。文档结
+meta_description: 塑料橡胶融资日报的多轮对话与提示词：塑料橡胶融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 塑料橡胶、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

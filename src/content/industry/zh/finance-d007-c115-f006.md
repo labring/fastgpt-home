@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业收益率的对话日志与审计
-meta_description: 种植业收益率与行情数据主要来自公开农业监测机构的种植成本收益监测、期货交易所农产品行情接口、地方农业农村部门的种植户调研数据。数据更新节奏为每日更新现货与期
+meta_description: 种植业收益率的对话日志与审计：种植业收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 种植业、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

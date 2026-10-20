@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务投研知识库建设的对话日志与审计
-meta_description: 电商服务投研的数据主要来自公开电商平台商品页、用户评论、搜索热词、第三方监测工具的实时或准实时数据。数据包含结构化字段与非结构化内容，结构化字段包括商品SK
+meta_description: 电商服务投研知识库建设的对话日志与审计：电商服务投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 电商服务、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

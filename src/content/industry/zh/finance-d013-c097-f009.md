@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤融资日报的引用来源与溯源
-meta_description: 焦煤融资日报的数据来源包括国内主产区现货贸易报送系统、大连商品交易所焦煤期货仓单融资接口、港口质押监管台账。数据更新节奏为每日凌晨完成前一交易日全量数据同步
+meta_description: 焦煤融资日报的引用来源与溯源：焦煤融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 焦煤、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

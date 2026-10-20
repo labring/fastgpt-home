@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料研报检索的向量模型与索引
-meta_description: 饲料行业研报是金融、保险、理财领域从业者用于农业相关业务决策的核心参考资料，来源包括农业农村部畜牧兽医局公开监测数据、中国饲料工业协会发布的行业周报月报、券
+meta_description: 饲料研报检索的向量模型与索引：饲料研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 饲料、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

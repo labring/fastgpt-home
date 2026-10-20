@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务融资日报的工作流编排
-meta_description: 综合服务融资日报的数据来源包含公开市场业务交易公告、同业市场报价系统、上市公司融资披露公告及行业协会公开统计数据。数据更新节奏为每日收盘后生成当日日报，覆盖
+meta_description: 综合服务融资日报的工作流编排：综合服务融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 综合服务、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

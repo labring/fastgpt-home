@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶研报检索的文档解析与分块
-meta_description: 塑料橡胶研报主要来自大宗商品资讯平台、行业协会公开报告及券商行业分析文档。更新节奏覆盖日度现货价格、周度库存数据、月度供需分析及季度行业趋势报告。文档多为P
+meta_description: 塑料橡胶研报检索的文档解析与分块：塑料橡胶研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 塑料橡胶、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

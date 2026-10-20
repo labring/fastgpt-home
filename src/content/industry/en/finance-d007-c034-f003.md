@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Medical Device Yield Rates
-meta_description: Data sources for medical device yield rate and market daily reports include public data published on domestic medical device centralized procurement
+meta_description: Sharing and Embedding for Medical Device Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

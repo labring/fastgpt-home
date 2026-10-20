@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力投研知识库建设的上下文与 token
-meta_description: 电力投研的源数据涵盖多类来源：电网调度系统的实时运行日志、电力交易中心的日/小时级报价与成交数据、发电机组运维台账、行业政策文件与专业研报。数据更新节奏差异
+meta_description: 电力投研知识库建设的上下文与 token：电力投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 电力、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

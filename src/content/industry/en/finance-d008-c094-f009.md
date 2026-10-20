@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Refining and Chemical
-meta_description: Data sources for refining and chemical scenarios include real-time collection data from the enterprise’s internal distributed control system (DCS)
+meta_description: Citation Sources and Traceability for Refining and Chemical Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -36,7 +36,7 @@ Cross-system data source association requires traceability links to connect batc
 
 ## Three common configuration mistakes
 - When the `变量引用` mode is enabled, the temperature setting button disappears from the interface, and generation parameters cannot be adjusted. This occurs because the variable reference mode inherits temperature parameters from upstream configurations by default, and no independent setup entry is bound.
-- The `{{id}}` field returns null in referenced data. This occurs because the `Citation Source Display Fields` configuration is not set to a field that includes batch numbers or system IDs, and no traceability ID mapping rule is established.
+- The `example value` field returns null in referenced data. This occurs because the `Citation Source Display Fields` configuration is not set to a field that includes batch numbers or system IDs, and no traceability ID mapping rule is established.
 - Recall results include refining and chemical parameters with different units, such as confusing load data in tons per hour with volume data in cubic meters per hour. This occurs because unit matching logic is not added to recall rules, and matching relies only on keywords.
 
 ## How to confirm configuration is complete

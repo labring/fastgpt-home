@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮投研知识库建设的引用来源与溯源
-meta_description: 酒店餐饮投研数据主要来自供应链报价平台、门店POS交易系统、行业协会公示台账、第三方餐饮评级报告。更新节奏因类型而异：食材原料报价每日更新，单店营收数据按月
+meta_description: 酒店餐饮投研知识库建设的引用来源与溯源：酒店餐饮投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 酒店餐饮、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

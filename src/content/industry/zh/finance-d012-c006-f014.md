@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药营销内容的表单与交互
-meta_description: 金融场景下的中药营销内容，数据源主要包括国家药典标准文件、药品备案批准文书、金融机构内部中药主题理财或健康险的产品备案文档、用户咨询的常见健康问题记录。更新
+meta_description: 中药营销内容的表单与交互：中药营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 中药、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

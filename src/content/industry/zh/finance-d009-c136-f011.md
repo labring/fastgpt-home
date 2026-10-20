@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属研报检索的文档解析与分块
-meta_description: 贵金属研报的数据主要来自券商研究所、行业自律机构如上海黄金交易所、伦敦金银市场协会的公开报告，更新节奏跟随全球贵金属交易日程，国内报告多在交易日收盘后发布。
+meta_description: 贵金属研报检索的文档解析与分块：贵金属研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 贵金属、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

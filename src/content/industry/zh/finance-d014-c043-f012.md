@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产财报分析的模型接入与配置
-meta_description: 商业地产财报的数据主要来自项目运营台账、物业租金收缴记录、第三方不动产监测数据库及金融机构授信评估所需的企业内部合并报表。数据更新节奏分为月度（租金收缴、运
+meta_description: 商业地产财报分析的模型接入与配置：商业地产财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 商业地产、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

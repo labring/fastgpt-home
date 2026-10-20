@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品融资日报的文档解析与分块
-meta_description: 个护用品融资日报的数据主要来自个护品牌公开融资公告、行业资讯平台的融资汇总、第三方投融资数据库的公开条目。更新节奏为每日更新，覆盖当日及近72小时内的个护领
+meta_description: 个护用品融资日报的文档解析与分块：个护用品融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 个护用品、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁财报分析的部署与升级
-meta_description: 专业连锁的财报数据来源涵盖总部财务核算系统、各门店POS收银系统、供应链采购管理系统。更新节奏覆盖周度门店运营数据、月度营收汇总、季度合并财报。文档结构包含
+meta_description: 专业连锁财报分析的部署与升级：专业连锁财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 专业连锁、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的部署与升级
-meta_description: 面向金融/保险/理财行业的军工电子营销内容数据主要来源于企业内部技术文档、产品规格书、试验报告摘要、行业标准合规文件及展会宣传物料。数据更新节奏随新品发布、
+meta_description: 军工电子营销内容的部署与升级：军工电子营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 军工电子、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

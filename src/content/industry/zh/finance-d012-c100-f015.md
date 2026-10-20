@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的部署与升级
-meta_description: 金融/保险/理财行业下的物业管理营销相关数据，主要来源于业主基础档案库、社区服务工单系统、往期活动参与记录及周边便民商户合作台账，同时包含业主的理财咨询、保
+meta_description: 物业管理营销内容的部署与升级：物业管理营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 物业管理、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

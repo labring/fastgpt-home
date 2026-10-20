@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c091-f014
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Forms and Interactions for Consumer Building Materials Yield
-meta_description: Yield rate-related data for consumer building materials comes from three main sources: public monitoring ledgers published by the domestic building
+meta_title: Forms and Interactions for Consumer Building Materials
+meta_description: Forms and Interactions for Consumer Building Materials Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

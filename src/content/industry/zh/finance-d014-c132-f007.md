@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备财报分析的工作流编排
-meta_description: 计算机设备品类的财报数据主要来自境内外证券交易所披露平台、上市公司官方公告及行业合规数据库，多用于金融、理财领域的设备采购与投资分析。数据更新以季度、年度为
+meta_description: 计算机设备财报分析的工作流编排：计算机设备财报分析的工作流编排，涵盖配置与验证建议
 keywords: 计算机设备、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车财报分析的向量模型与索引
-meta_description: 整车企业财报数据主要来自交易所公开披露的定期报告、官方发布的产销快报及研发专项公告。更新节奏以季度、年度为固定周期，部分产销数据按月更新。文档结构遵循监管要
+meta_description: 整车财报分析的向量模型与索引：整车财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 整车、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

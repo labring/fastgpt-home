@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Cement Marketing
-meta_description: Cement-related data comes from manufacturing enterprise MES systems, quality inspection reports, sales outbound ledgers, and offline marketing
+meta_description: Model Integration and Configuration for Cement Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

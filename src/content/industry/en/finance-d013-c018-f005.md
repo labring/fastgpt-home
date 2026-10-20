@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Optical
-meta_description: Data for optical module financing daily reports comes from communication industry investment and financing monitoring platforms, publicly disclosed
+meta_description: Multi-turn Dialogue and Prompt Engineering for Optical Module Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

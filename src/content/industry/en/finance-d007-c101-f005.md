@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Logistics
-meta_description: Logistics revenue yield-related data mainly comes from internal enterprise transport management systems, warehouse management systems, and third-party
+meta_description: Multi-turn Dialogue and Prompt Engineering for Logistics Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器财报分析的工作流编排
-meta_description: 厨卫电器企业的定期披露报告，包括季度报、半年报、年报，来源为证券交易所公开披露平台、企业投资者关系官网。更新节奏为季度报告每季度结束后1-2个月更新，年度报
+meta_description: 厨卫电器财报分析的工作流编排：厨卫电器财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 厨卫电器、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

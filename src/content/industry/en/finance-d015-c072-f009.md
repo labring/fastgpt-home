@@ -4,8 +4,8 @@ slug: /en/industry/finance-d015-c072-f009
 page_type: Industry scenario page
 article_section: Risk Control and Credit Document Review
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Credit Application Risk
-meta_description: Credit application risk control data mainly comes from multiple sources, including structured reports issued by enterprise credit bureaus, operating
+meta_title: Citation Source and Traceability for Credit Application
+meta_description: Citation Source and Traceability for Credit Application Risk Control
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

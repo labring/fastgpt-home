@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品融资日报的向量模型与索引
-meta_description: 乳制品融资日报的数据来源为国内乳制品行业投融资公开数据库、上市公司临时公告、行业垂直媒体的每日融资动态披露。更新节奏为每日更新，当日18点前完成当日披露的融
+meta_description: 乳制品融资日报的向量模型与索引：乳制品融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 乳制品、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

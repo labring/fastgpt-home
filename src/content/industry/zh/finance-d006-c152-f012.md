@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类投研知识库建设的模型接入与配置
-meta_description: 鞋类投研数据主要来自品牌官方供应链台账、行业协会发布的品类趋势报告、跨境电商平台的销售监测数据、海关进出口品类统计文件。数据更新节奏随场景变化：供应链台账随
+meta_description: 鞋类投研知识库建设的模型接入与配置：鞋类投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 鞋类、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

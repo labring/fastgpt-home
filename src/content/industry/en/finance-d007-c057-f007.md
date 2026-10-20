@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Small Home Appliance Profit
-meta_description: Data related to small home appliance revenue comes primarily from vertical IoT operation and maintenance platforms, second-hand home appliance trading
+meta_description: Workflow Orchestration for Small Home Appliance Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

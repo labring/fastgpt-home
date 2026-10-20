@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Publishing Yield Reports
-meta_description: Data for this category comes from licensed financial market APIs and exchange public disclosure ports. The update rhythm is batch aggregation after
+meta_description: Workflow Orchestration for Publishing Yield Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

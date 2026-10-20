@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线智能尽调报告的向量模型与索引
-meta_description: 影视院线智能尽调的数据主要来自院线运营台账、每日票房结算报表、影院设备参数表、影视版权合作合同、档期排片计划、观众调研问卷。更新节奏为排片计划每周更新，票房
+meta_description: 影视院线智能尽调报告的向量模型与索引：影视院线智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 影视院线、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

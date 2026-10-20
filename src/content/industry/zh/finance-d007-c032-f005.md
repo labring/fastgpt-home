@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料收益率的多轮对话与提示词
-meta_description: 化学原料的行情与收益率数据主要来自国内大宗商品交易所、行业协会及第三方专业数据服务商。数据更新节奏以工作日为周期，现货价格每日收盘后同步，期货合约价格随交易
+meta_description: 化学原料收益率的多轮对话与提示词：化学原料收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学原料、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

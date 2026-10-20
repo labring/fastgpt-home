@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券营销内容的模型接入与配置
-meta_description: 证券营销内容的数据主要来源于券商内部合规审核通过的话术库、理财产品说明书、市场解读素材及监管要求的合规文本。数据更新节奏随产品发行、监管政策调整及营销活动规
+meta_description: 证券营销内容的模型接入与配置：证券营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 证券、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

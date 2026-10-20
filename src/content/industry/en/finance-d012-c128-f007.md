@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Shipping Port Marketing Content
-meta_description: Marketing-related data for shipping ports primarily comes from port operation management systems, container scheduling platforms, vessel dynamic
+meta_description: Workflow Orchestration for Shipping Port Marketing Content: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,13 +32,13 @@ Real-time updated vessel dynamic data requires workflow configuration with event
 
 ## Three Common Configuration Mistakes
 - Phenomenon: The external audience package ID variable cannot be read inside a loop body, and an undefined variable prompt appears during runtime. Cause: The variable scope of workflow loop nodes is restricted to the loop interior by default, and global reference permissions are not enabled.
-- Phenomenon: In version v4.8.14, when the `{{history}}` variable is entered into the code run node input box, the interface displays a validation failure prompt and cannot save the configuration. Cause: The newly added historical record input validation rule in this version does not support variable reference requirements for marketing content generation scenarios.
+- Phenomenon: In version v4.8.14, when the `example value` variable is entered into the code run node input box, the interface displays a validation failure prompt and cannot save the configuration. Cause: The newly added historical record input validation rule in this version does not support variable reference requirements for marketing content generation scenarios.
 - Phenomenon: The classification node has low accuracy for shipping-specific terms such as TEU and berthing berth, and cannot accurately identify the business scenario of marketing copy. Cause: The classification model has not been fine-tuned based on port marketing copy, and a dedicated term lexicon has not been configured.
 
 ## How to Confirm the Configuration Is Complete
 - A simulated vessel berthing event is triggered. Workflow run logs are reviewed to confirm that real-time data fields are correctly mapped to node input items.
 - An external marketing audience package variable is entered into the loop body node. A test case is run to confirm that the variable value can be read normally within the loop and batch processing is completed.
-- A test input containing `{{history}}` is entered into the code run node. The configuration is confirmed to save normally without validation error prompts.
+- A test input containing `example value` is entered into the code run node. The configuration is confirmed to save normally without validation error prompts.
 - A bulk marketing asset generation task is run. Node output field results are reviewed to confirm that the units of cargo weight and container volume align with the definitions of the local system.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

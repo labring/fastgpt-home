@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Telecommunications
-meta_description: Data sources for telecommunications services intelligent due diligence reports include public financial reports of basic operators, telecommunications
+meta_description: Document Parsing and Chunking for Telecommunications Services Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -43,7 +43,7 @@ Multi-page document content requires retaining contextual connections between pa
 ## Three common mistakes
 - Phenomenon: An analysis error is returned after uploading a 3MB PDF, and the log contains `{"detail":"错误信息"}`. Cause: `PARSE_FILE_TIMEOUT_SECONDS` is not configured to a duration suitable for long documents, or `UPLOAD_FILE_MAX_SIZE` does not cover the actual file size.
 - Phenomenon: After configuring custom separators, chunking still merges multiple paragraphs or splits a single complete paragraph. Cause: The custom separators do not cover the dedicated separation identifiers in telecommunications service documents, such as clause numbering and professional term prefixes.
-- Phenomenon: An error occurs when parsing PDFs after deploying Marker via Docker. Cause: Marker's environment variables are not configured correctly, or the deployment version is incompatible with FastGPT v4.8.17.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to confirm the configuration is correct
 - Upload a standard telecommunications service due diligence PDF, check whether the parsed structured tables have fully extracted fields such as bandwidth and user count.

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Residential Construction
-meta_description: Financial marketing data related to residential construction engineering mainly comes from project filing systems, construction log ledgers, building
+meta_description: Tool Calling and Plugins for Residential Construction Engineering Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

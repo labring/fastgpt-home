@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测融资日报的工作流编排
-meta_description: 环境监测融资日报的数据主要来自国家生态环境监测总站的公开点位监测数据、地方环保部门的排污许可监测报表，以及区域内环保类融资项目的备案信息。监测数据按小时采集
+meta_description: 环境监测融资日报的工作流编排：环境监测融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 环境监测、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Airport Intelligent
-meta_description: Airport intelligent due diligence report data primarily comes from three sources: public operation statistics released by civil aviation regional
+meta_description: Citation Sources and Traceability for Airport Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,7 +35,7 @@ Exclusive units for core fields must be verified during traceability, to prevent
 | `recall count` | `top 8` | Airport due diligence reports need to cover three core data categories: takeoff and landing, throughput, and airspace. 8 entries balance recall coverage and information redundancy |
 | `similarity threshold` | `0.72–0.78` | Most airport data consists of structured statistical values. A threshold that is too low will easily introduce irrelevant industry data, while a threshold that is too high will fail to recall comparison data of the same dimension |
 | `traceability cache duration` | `Real-time data: 10 minutes; Monthly data: 30 days; Annual data: 180 days` | Matches the update rhythms of different data sources to avoid citing expired content |
-| `citation content template` | `{{content}} (Source: {{source}}, Update time: {{update_time}})` | Clearly mark the source and update time to meet the traceability requirements of due diligence reports |
+| `Traceability details` | `the configured value (the configured source field, the configured update-time field)` | Clearly mark the source and update time to meet the traceability requirements of due diligence reports |
 | `field unit verification switch` | `Enabled` | There is a risk of mixed use of multiple units for core airport fields. Verification can avoid citing content with mismatched units |
 | `rearranged return count` | `top 3` | Prioritize returning data sources most relevant to the core indicators of due diligence, improving the rigor of reports |
 

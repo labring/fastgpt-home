@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备投研知识库建设的上下文与 token
-meta_description: 这个品类的投研数据主要来自设备厂商官方技术白皮书、行业监管机构合规检测报告、第三方性能测试机构公开数据及行业协会标准文档。数据更新节奏随品类细分有所差异，厂
+meta_description: 专用设备投研知识库建设的上下文与 token：专用设备投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 专用设备、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

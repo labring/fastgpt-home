@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电研报检索的模型接入与配置
-meta_description: 这个品类的数据主要来自券商研究所公开研报、家电产业第三方监测机构公开报告、头部家电品牌年度技术白皮书、线上线下零售监测数据。更新节奏随内容类型区分：券商研报
+meta_description: 白色家电研报检索的模型接入与配置：白色家电研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 白色家电、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

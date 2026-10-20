@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块研报检索的部署与升级
-meta_description: 光模块研报数据主要来自通信行业公开研报、光模块厂商技术白皮书、行业协会监测报告。更新节奏随厂商新品发布、行业展会节点调整，无固定周期但核心厂商新品发布后72
+meta_description: 光模块研报检索的部署与升级：光模块研报检索的部署与升级，涵盖配置与验证建议。。。
 keywords: 光模块、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

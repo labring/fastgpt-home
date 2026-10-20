@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖财报分析的模型接入与配置
-meta_description: 水产养殖财报数据主要来自养殖主体的日常养殖台账、属地农业农村部门的行业统计报表，以及上市主体公开的定期报告。数据更新节奏覆盖日常投料、存栏出栏的月度记录，季
+meta_description: 水产养殖财报分析的模型接入与配置：水产养殖财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 水产养殖、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

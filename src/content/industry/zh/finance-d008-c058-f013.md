@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属智能尽调报告的知识库检索与召回
-meta_description: 小金属数据主要来源于中国有色金属工业协会公开统计资料、上海期货交易所挂牌交易数据、各生产企业月度运营公告、海关总署进出口贸易数据。现货交易数据每日更新，行业
+meta_description: 小金属智能尽调报告的知识库检索与召回：小金属智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 小金属、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

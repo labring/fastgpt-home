@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c148-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogues and Prompt Engineering for Hotel and
-meta_description: Business data for hotel and catering comes from store menus, booking systems, review platforms, member consumption records, and offline marketing
+meta_title: Multi-turn Dialogues and Prompt Engineering for Hotel
+meta_description: Multi-turn Dialogues and Prompt Engineering for Hotel and Catering Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

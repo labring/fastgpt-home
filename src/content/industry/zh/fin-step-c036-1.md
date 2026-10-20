@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c036-1
 page_type: 行业作业环节页
 article_section: 信托
 is_part_of: FastGPT 技术中心
-meta_title: 标准化证券投资类资产管理信托的将信托合同投资范围和限制转成交
+meta_title: 标准化证券投资类资产管理信托的将信托合同投资范围和限制转成交易控制：哪一部分能交给系统
 meta_description: 标准化证券投资类资产管理信托的将信托合同投资范围和限制转成交易控制：哪一部分能交给系统
 keywords: 标准化证券投资类资产管理信托、信托、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

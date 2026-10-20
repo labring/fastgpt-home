@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产融资日报的知识库检索与召回
-meta_description: 商业地产融资日报的数据来源于各地商业地产项目的融资备案信息、银行及信托机构的放款公告、商业综合体的运营报表等。更新节奏为每日更新，每份文档为单页xlsx格式
+meta_description: 商业地产融资日报的知识库检索与召回：商业地产融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 商业地产、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

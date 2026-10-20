@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口投研知识库建设的引用来源与溯源
-meta_description: 航运港口投研数据的来源主要包括官方港口运营报表、国际海事组织（IMO）船舶动态数据库、港口协会月度吞吐量公报、集装箱航线运价指数报告等。更新节奏覆盖日度（船
+meta_description: 航运港口投研知识库建设的引用来源与溯源：航运港口投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 航运港口、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

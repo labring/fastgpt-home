@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的模型接入与配置
-meta_description: 专业连锁融资日报的数据来源于连锁品牌的门店POS系统、供应链结算后台、合作银行的授信接口与融资申请模块，部分品牌还会整合总部的融资汇总数据。数据按自然日更新
+meta_description: 专业连锁融资日报的模型接入与配置：专业连锁融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 专业连锁、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁融资日报的HTTP 接口与外部系统
-meta_description: 融资租赁融资日报的数据来源为公司核心业务系统、资金划付流水系统及风控管理模块，更新节奏为每日凌晨生成前一自然日的全量数据。文档结构为单条记录对应单个租赁项目
+meta_description: 融资租赁融资日报的HTTP 接口与外部系统：融资租赁融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 融资租赁、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

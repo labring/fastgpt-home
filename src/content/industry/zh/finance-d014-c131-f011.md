@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰财报分析的文档解析与分块
-meta_description: 装修装饰行业的财报数据主要来源为公开披露的上市公司年度/季度财报PDF、内部经营管理Excel台账、招投标中标文件。更新节奏按自然季度、年度同步企业经营周期
+meta_description: 装修装饰财报分析的文档解析与分块：装修装饰财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 装修装饰、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

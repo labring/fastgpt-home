@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Professional Services
-meta_description: The data sources for professional services investment research mainly include publicly available broker research reports, industry association
+meta_description: Citation Source and Traceability for Professional Services Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,7 +40,7 @@ Citations in professional service scenarios must meet compliance requirements. T
 ## Three Common Mistakes
 - Symptom: The local knowledge base displays citation sources without uploading the original source files. Cause: The `local file reference validation toggle` is not enabled, causing the system to directly call cached metadata without verifying the actual existence of the original file.
 - Symptom: Irrelevant industry citation content appears during hybrid retrieval. Cause: The `citation field whitelist` is not configured, and metadata for non-target industries is not filtered, resulting in low-relevance documents being recalled and displayed.
-- Symptom: An error occurs when calling knowledge base citation variables in the application, with abnormal return result formats. Cause: The traceability access permission for the corresponding application is not enabled in `knowledge base permission configuration`, or the variable format does not comply with the `{{kb_ref.[doc_id].[field]}}` specification, causing variable parsing failure.
+- Symptom: An error occurs when calling knowledge base citation variables in the application, with abnormal return result formats. Cause: The traceability access permission for the corresponding application is not enabled in `knowledge base permission configuration`, or the variable format does not comply with the `example value` specification, causing variable parsing failure.
 
 ## How to Confirm the Configuration is Correct
 - Upload a standard investment research report to the knowledge base, trigger a retrieval, and check the citation panel in the returned results to confirm that the displayed metadata includes the preset whitelist fields.

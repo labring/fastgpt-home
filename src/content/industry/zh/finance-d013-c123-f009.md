@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属融资日报的引用来源与溯源
-meta_description: 能源金属融资日报的数据主要来自国内大宗商品现货交易平台、有色金属行业公开监测数据库、交易所挂牌交易数据。更新节奏为每日凌晨更新前一交易日的全量数据。单篇文档
+meta_description: 能源金属融资日报的引用来源与溯源：能源金属融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 能源金属、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

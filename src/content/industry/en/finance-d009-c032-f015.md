@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Chemical Raw Material Research
-meta_description: The data for chemical raw material research reports targeting the finance, insurance, and wealth management sector comes primarily from public
+meta_description: Deployment and Upgrade for Chemical Raw Material Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

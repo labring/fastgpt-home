@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电融资日报的文档解析与分块
-meta_description: 小家电融资日报的数据主要来自小家电生产企业的每日融资申请台账、供应链金融平台的当日汇总报表。更新频率为每日生成一次当日汇总文档，文档多为结构化表格形式，部分
+meta_description: 小家电融资日报的文档解析与分块：小家电融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 小家电、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

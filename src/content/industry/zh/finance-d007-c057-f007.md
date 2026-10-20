@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电收益率的工作流编排
-meta_description: 小家电收益相关数据主要来自垂直IoT运维平台、二手家电交易API及地方家电补贴系统。数据更新节奏为每日凌晨批量生成前一日的统计结果，仅覆盖已完成当日交易或运
+meta_description: 小家电收益率的工作流编排：小家电收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 小家电、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

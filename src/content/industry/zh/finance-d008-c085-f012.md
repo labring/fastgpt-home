@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥智能尽调报告的模型接入与配置
-meta_description: 水泥相关尽调报告的数据主要来自建材生产企业出厂台账、区域港口熟料转运记录、行业协会月度监测数据以及住建部门基建项目报备信息。数据更新节奏存在差异：企业出厂数
+meta_description: 水泥智能尽调报告的模型接入与配置：水泥智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 水泥、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

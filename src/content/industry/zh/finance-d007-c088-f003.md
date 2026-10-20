@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的分享与嵌入
-meta_description: 油服工程的行业数据来源为油气田现场作业系统、国内油气行业公开行情数据库。更新节奏为每日1次，在当日全区域作业流程结束后完成同步。文档结构包含作业项目标识、设
+meta_description: 油服工程收益率的分享与嵌入：油服工程收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 油服工程、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

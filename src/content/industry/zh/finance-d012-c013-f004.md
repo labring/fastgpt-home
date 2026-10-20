@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险营销内容的向量模型与索引
-meta_description: 保险营销内容主要来源于内部产品管理系统的标准化条款、合规审核通过的营销话术库、代理人沉淀的客户沟通记录，以及监管发布的最新产品指引。更新节奏随新产品上线、合
+meta_description: 保险营销内容的向量模型与索引：保险营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 保险、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

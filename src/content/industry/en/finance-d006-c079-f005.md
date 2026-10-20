@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Carbon Steel
-meta_description: Carbon steel data primarily comes from domestic spot trading channels, steel mill published ex-factory price portals, and industry association
+meta_description: Multi-turn Dialogue and Prompt Engineering for Carbon Steel Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

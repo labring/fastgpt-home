@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备研报检索的文档解析与分块
-meta_description: 计算机设备研报的数据来源包括行业研究机构公开报告、厂商官方技术文档、供应链披露文件。更新节奏随新品发布、季度行业调研及市场动态调整。文档多为PDF格式，包含
+meta_description: 计算机设备研报检索的文档解析与分块：计算机设备研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 计算机设备、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

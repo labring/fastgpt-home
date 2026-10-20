@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电投研知识库建设的模型接入与配置
-meta_description: 风电投研的数据来源包括风机厂商公开的技术参数文档、风电项目运维日志、行业协会发布的研究报告、电网并网调度数据以及气象观测时序数据。数据更新节奏差异明显：运维
+meta_description: 风电投研知识库建设的模型接入与配置：风电投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 风电、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

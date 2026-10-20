@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Coking Coal Marketing
-meta_description: Coking coal data sources include coal mine production daily reports, port customs clearance documents, industry association supply and demand weekly
+meta_description: Document Parsing and Chunking for Coking Coal Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

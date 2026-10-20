@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Oil and Gas Extraction
-meta_description: Financial report data for the oil and gas extraction category originates from annual and quarterly reports of domestic and international listed oil
+meta_description: Document Parsing and Chunking for Oil and Gas Extraction Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

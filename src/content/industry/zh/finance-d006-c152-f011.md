@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类投研知识库建设的文档解析与分块
-meta_description: 数据来源包括品牌方供应链文档、行业协会发布的品类趋势报告、跨境电商平台的销售监测数据、海关进出口统计文件。更新节奏为季度行业报告更新、月度销售数据更新、新品
+meta_description: 鞋类投研知识库建设的文档解析与分块：鞋类投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 鞋类、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

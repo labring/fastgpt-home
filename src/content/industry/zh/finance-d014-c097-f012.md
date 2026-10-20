@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的模型接入与配置
-meta_description: 焦煤财报的数据来源包括境内外上市焦煤生产企业的公开定期报告、行业协会发布的月度供需数据、主要港口的焦煤现货交易报价。数据更新节奏分为季度（企业财报）、月度（
+meta_description: 焦煤财报分析的模型接入与配置：焦煤财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 焦煤、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

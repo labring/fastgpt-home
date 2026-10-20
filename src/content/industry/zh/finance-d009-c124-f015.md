@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备研报检索的部署与升级
-meta_description: 自动化设备研报的数据主要来自行业协会公开的技术标准文档、设备厂商发布的技术白皮书与新品公告、第三方咨询机构出具的行业分析报告，以及设备运维的实操手册。更新节
+meta_description: 自动化设备研报检索的部署与升级：自动化设备研报检索的部署与升级，涵盖配置与验证建议
 keywords: 自动化设备、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

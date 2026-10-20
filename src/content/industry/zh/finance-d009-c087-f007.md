@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件研报检索的工作流编排
-meta_description: 汽车零部件面向金融投资者的研报数据来源包括券商研究所公开报告、行业第三方金融数据库、主机厂公开技术文档。更新节奏随主机厂财报发布、行业展会节点波动，单篇文档
+meta_description: 汽车零部件研报检索的工作流编排：汽车零部件研报检索的工作流编排，涵盖配置与验证建议
 keywords: 汽车零部件、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

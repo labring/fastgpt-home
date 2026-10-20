@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Urban Commercial Bank
-meta_description: Data sources for urban commercial bank intelligent due diligence reports include the bank's internal credit ledgers, audited financial statements
+meta_description: Model Access and Configuration for Urban Commercial Bank Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

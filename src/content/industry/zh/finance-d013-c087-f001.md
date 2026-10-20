@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件融资日报的HTTP 接口与外部系统
-meta_description: 本品类数据来自全国汽车零部件供应链金融监测平台、合作银行对公融资台账系统，更新节奏为每日T+1更新前一自然日的全量融资记录。数据以JSON格式封装，核心字段
+meta_description: 汽车零部件融资日报的HTTP 接口与外部系统：汽车零部件融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 汽车零部件、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

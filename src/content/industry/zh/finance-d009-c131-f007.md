@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰研报检索的工作流编排
-meta_description: 装修装饰研报的数据来源包括中国建筑装饰协会公开行业报告、券商建筑建材组研报、地方住建部门招投标公示文档。更新节奏随行业政策发布、月度建材价格异动、季度行业复
+meta_description: 装修装饰研报检索的工作流编排：装修装饰研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 装修装饰、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税财报分析的HTTP 接口与外部系统
-meta_description: 免税财报分析的数据来源包括免税经营主体内部经营台账、海关离岛免税业务监管系统导出文件、上市公司公开披露的定期报告。数据更新节奏分为三类：月度经营数据于次月1
+meta_description: 免税财报分析的HTTP 接口与外部系统：免税财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 免税、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

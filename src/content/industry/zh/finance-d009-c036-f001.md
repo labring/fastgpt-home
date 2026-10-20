@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体研报检索的HTTP 接口与外部系统
-meta_description: 这个品类的数据主要来自券商研究所公开研报、半导体行业协会月度/季度报告、头部晶圆制造企业公开投资者关系文档。更新节奏随上市公司财报发布、行业重大技术事件（如
+meta_description: 半导体研报检索的HTTP 接口与外部系统：半导体研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 半导体、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

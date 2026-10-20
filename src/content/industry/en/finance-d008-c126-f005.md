@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c126-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Airports and
-meta_description: Data sources for airport and airfield intelligent due diligence include monthly and quarterly operation statistics publicly released by civil aviation
+meta_title: Multi-turn Dialogue and Prompt Engineering for Airports
+meta_description: Multi-turn Dialogue and Prompt Engineering for Airports and Airfields Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

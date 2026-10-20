@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Operating Procedure Compliance
-meta_description: Operating procedure data originates primarily from official policy documents published by an enterprise’s internal compliance and operations teams.
+meta_description: Tool Calling and Plugins for Operating Procedure Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

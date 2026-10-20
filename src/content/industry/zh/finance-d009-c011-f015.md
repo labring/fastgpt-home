@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品研报检索的部署与升级
-meta_description: 数据来源主要来自食品行业协会公开监测报告、零售终端的动销数据汇总、品牌方公开的产品研发与供应链文档；更新节奏以季度为固定周期，配合新品发布、行业展会节点追加
+meta_description: 休闲食品研报检索的部署与升级：休闲食品研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 休闲食品、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

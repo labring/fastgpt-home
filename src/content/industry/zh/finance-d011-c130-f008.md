@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 行情数据终端内自然语言检索的工具调用与插件
-meta_description: 行情数据的来源为合规交易场所官方接口、专业行情聚合服务。更新节奏随交易时段动态调整，交易时段内高频刷新，非交易时段按固定周期同步。数据以结构化JSON格式封
+meta_description: 行情数据终端内自然语言检索的工具调用与插件：行情数据终端内自然语言检索的工具调用与插件，涵盖配置与验证建议
 keywords: 行情数据、终端内自然语言检索、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

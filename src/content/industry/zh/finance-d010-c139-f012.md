@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的模型接入与配置
-meta_description: 资质符合性竞价的数据源主要为投标方提交的资质扫描件、监管机构公示的准入文件、企业内部备案的资质台账。数据随单个投标项目触发更新，每个项目的资质数据独立，不跨
+meta_description: 资质符合性竞价的模型接入与配置：资质符合性竞价的模型接入与配置，涵盖配置与验证建议
 keywords: 资质符合性、竞价与投标报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

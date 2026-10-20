@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的工作流编排
-meta_description: 资质符合性竞价的数据主要来自公共资源交易平台、招标公告官方发布渠道以及企业内部资质档案库。招标资质要求文档随采购计划发布即更新，单次投标周期内的资质证明文件
+meta_description: 资质符合性竞价的工作流编排：资质符合性竞价的工作流编排，涵盖配置与验证建议。。。
 keywords: 资质符合性、竞价与投标报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的模型接入与配置
-meta_description: 畜禽养殖研报数据主要来自农业农村部监测平台、行业协会公开报告、券商农林牧渔专项研报及养殖主体公开披露信息。更新节奏分三类：月度存栏、出栏等核心经营数据按月更
+meta_description: 畜禽养殖研报检索的模型接入与配置：畜禽养殖研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的工具调用与插件
-meta_description: 能源金属的数据来源包括全球主流商品交易所的公开交易盘面、国内行业协会的监测数据、供应链企业的公开上报信息及企业财报。更新节奏因数据类型不同存在差异：现货报价
+meta_description: 能源金属营销内容的工具调用与插件：能源金属营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 能源金属、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

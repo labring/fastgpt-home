@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电收益率的工作流编排
-meta_description: 风电收益率与行情日报的数据来源包括公开电力交易结算平台API、风机SCADA物联网接口、气象监测数据接口。数据更新节奏为每日固定时段完成全量更新，实时运行数
+meta_description: 风电收益率的工作流编排：风电收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 风电、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

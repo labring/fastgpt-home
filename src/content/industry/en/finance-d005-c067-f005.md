@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Complaint Ticket
-meta_description: Complaint ticket data originates from enterprise customer service ticket systems, CRM platforms, and call center speech-to-text transcripts. Updates
+meta_description: Multi-turn Dialogue and Prompting for Complaint Ticket Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

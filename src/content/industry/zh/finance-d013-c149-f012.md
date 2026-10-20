@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易融资日报的模型接入与配置
-meta_description: 钢铁贸易融资日报的数据主要来源于贸易商每日报送的进销存台账、合作银行的授信与放款流水、大宗商品交易平台的现货交易记录，以及仓储物流方的出入库单据。数据更新节
+meta_description: 钢铁贸易融资日报的模型接入与配置：钢铁贸易融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 钢铁贸易、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

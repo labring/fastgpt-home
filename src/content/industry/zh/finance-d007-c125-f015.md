@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备收益率的部署与升级
-meta_description: 航天装备的运营收益与行情数据来自地面测控站的任务结算系统、在轨载荷的流量统计接口，以及国防军工领域的任务调度台账。更新节奏分为两类：单次任务的实时收益数据在
+meta_description: 航天装备收益率的部署与升级：航天装备收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 航天装备、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

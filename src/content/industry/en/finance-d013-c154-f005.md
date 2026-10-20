@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Jewelry
-meta_description: Data sources for jewelry financing daily reports are domestic textile and apparel raw material trading platforms and brand supplier supply chain
+meta_description: Multi-turn Dialogue and Prompt Engineering for Jewelry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c029-f001
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Packaging and
-meta_description: Marketing content data for packaging and printing mainly comes from enterprise design file servers, CRM customer management systems, print production
+meta_title: HTTP Interfaces and External Systems for Packaging
+meta_description: HTTP Interfaces and External Systems for Packaging and Printing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子营销内容的HTTP 接口与外部系统
-meta_description: 光学光电子营销内容的数据来源包括原厂规格说明书、电商渠道产品详情、行业应用方案文档与官方营销物料库。数据更新节奏存在差异：新品上市时的参数与素材实时更新，常
+meta_description: 光学光电子营销内容的HTTP 接口与外部系统：光学光电子营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光学光电子、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶智能尽调报告的工作流编排
-meta_description: 塑料橡胶行业的尽调数据来源涵盖海关进出口报关单、大宗商品现货交易平台报价、行业协会月度报告、生产企业公开质检报告。数据更新节奏差异明显：现货报价每日更新，行
+meta_description: 塑料橡胶智能尽调报告的工作流编排：塑料橡胶智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 塑料橡胶、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

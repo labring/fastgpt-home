@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销收益率的工具调用与插件
-meta_description: 广告营销领域的收益率与行情数据，主要来自广告投放管理后台接口与第三方广告监测接口。数据更新节奏为每日凌晨完成前一日全量结算，生成当日日报文件。数据为结构化格
+meta_description: 广告营销收益率的工具调用与插件：广告营销收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 广告营销、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

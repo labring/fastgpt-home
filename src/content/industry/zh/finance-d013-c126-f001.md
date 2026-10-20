@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场融资日报的HTTP 接口与外部系统
-meta_description: 航空机场融资日报数据主要来自民航行业监管公开披露文件、机场集团内部财务核算系统及合作金融机构的融资到账回执。更新节奏为每日T+1更新当日及历史日报数据。单份
+meta_description: 航空机场融资日报的HTTP 接口与外部系统：航空机场融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航空机场、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

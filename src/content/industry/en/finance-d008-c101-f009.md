@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c101-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Reference Sources and Traceability for Logistics Intelligent
-meta_description: Logistics intelligent due diligence report data sources include logistics waybill systems, warehouse management systems, GPS track terminals, and
+meta_title: Reference Sources and Traceability for Logistics
+meta_description: Reference Sources and Traceability for Logistics Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

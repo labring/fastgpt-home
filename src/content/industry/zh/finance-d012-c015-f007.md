@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能营销内容的工作流编排
-meta_description: 储能品类的数据主要来自两类来源：一是储能设备的实时运行数据，由电池管理系统（BMS）、储能变流器（PCS）通过工业协议上报，可用于金融机构为储能项目定制风险
+meta_description: 储能营销内容的工作流编排：储能营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 储能、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

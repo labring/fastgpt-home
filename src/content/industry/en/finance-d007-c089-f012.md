@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Oil and Gas
-meta_description: Revenue and market data for oil and gas extraction comes primarily from publicly available domestic oil and gas industry statistical datasets, oil and
+meta_description: Model Integration and Configuration for Oil and Gas Extraction Revenue Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

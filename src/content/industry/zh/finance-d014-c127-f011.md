@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备财报分析的文档解析与分块
-meta_description: 航空装备财报数据主要来源于上市公司公开定期报告、军工行业公开白皮书及整机厂月度交付公告。更新节奏为季度终了后1个月内披露季报，年度终了后4个月内披露年报，临
+meta_description: 航空装备财报分析的文档解析与分块：航空装备财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 航空装备、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

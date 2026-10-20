@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务营销内容的向量模型与索引
-meta_description: 数据来源为金融机构的理财咨询话术库、保险产品营销物料、客户服务标准化文案及活动推广素材。更新节奏随营销活动周期调整，新活动上线时批量更新，日常仅微调存量内容
+meta_description: 综合服务营销内容的向量模型与索引：综合服务营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 综合服务、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

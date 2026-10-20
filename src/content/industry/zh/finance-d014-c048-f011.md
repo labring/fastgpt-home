@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行财报分析的文档解析与分块
-meta_description: 城商行的公开财报与监管报送数据主要来自官方披露平台与监管报送系统。公开财报按年度、半年度、季度节点更新，包含PDF格式的完整年报、中期报告，以及Excel、
+meta_description: 城商行财报分析的文档解析与分块：城商行财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 城商行、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

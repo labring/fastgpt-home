@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块投研知识库建设的数据库与运维
-meta_description: 光模块投研数据主要来自通信行业公开标准文档、厂商官方规格书、第三方测试报告及运营商集采公告。数据更新节奏随厂商新品发布、行业标准迭代调整，无固定周期。单条结
+meta_description: 光模块投研知识库建设的数据库与运维：光模块投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 光模块、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

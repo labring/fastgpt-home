@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务融资日报的HTTP 接口与外部系统
-meta_description: 水务融资日报的数据来源包括地方住建部门水务项目备案库、合作金融机构的授信报送接口、公开招投标的融资公告整理。数据更新节奏为自然日更新，每日生成当日全量的水务
+meta_description: 水务融资日报的HTTP 接口与外部系统：水务融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水务、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

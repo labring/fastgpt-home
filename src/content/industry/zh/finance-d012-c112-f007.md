@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的工作流编排
-meta_description: 白色家电营销内容依赖的数据主要来自产品官方参数文档、电商平台商品页、售后运维台账。数据更新无固定周期，随新品上线、促销活动调整或合规要求触发。单份数据文档包
+meta_description: 白色家电营销内容的工作流编排：白色家电营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 白色家电、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

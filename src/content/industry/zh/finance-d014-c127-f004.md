@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备财报分析的向量模型与索引
-meta_description: 航空装备财报数据主要来自上市公司披露的定期报告、临时公告及行业公开研报，更新节奏为季度、半年度、年度固定周期，辅以重大订单、产能变动等即时公告。文档结构包含
+meta_description: 航空装备财报分析的向量模型与索引：航空装备财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 航空装备、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

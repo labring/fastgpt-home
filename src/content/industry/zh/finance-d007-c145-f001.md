@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备收益率的HTTP 接口与外部系统
-meta_description: 通信设备的收益率与行情数据主要来源于运营商网络管理系统、第三方通信设备运维平台。数据更新节奏为每日T+1，即当日统计数据于次日凌晨完成同步。单条数据文档包含
+meta_description: 通信设备收益率的HTTP 接口与外部系统：通信设备收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 通信设备、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

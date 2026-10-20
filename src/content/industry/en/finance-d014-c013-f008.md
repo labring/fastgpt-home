@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Insurance Financial Report
-meta_description: Insurance financial report data mainly comes from publicly disclosed quarterly reports, annual reports, and temporary regulatory announcements of
+meta_description: Tool Calling and Plugins for Insurance Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

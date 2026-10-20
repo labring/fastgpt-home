@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Internal Policy
-meta_description: Internal policy data comes from official documents released by enterprise compliance and administrative departments. Update cycles occur irregularly
+meta_description: Knowledge Base Retrieval and Recall for Internal Policy Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The formal nature of internal policies requires that retrieval results match cur
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume and business rules. Specific issues require individual analysis, and it is recommended to test against your own samples before finalizing settings.
 
 ## Three common mistakes
-- Issue: An error `MongoServerError: The dollar ($) p` occurs when deploying a knowledge base plugin in FastGPT v4.13.0 and connecting to MongoDB 4.4.29. Cause: A compatibility issue exists between the current version of the plugin and certain query syntax in MongoDB 4.4.29. The plugin dependency version must be adjusted or the database version upgraded.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Issue: When exporting the knowledge base, only a single summary file is generated, and the classification structure of multiple policy documents cannot be retained. Cause: The multi-file subdirectory export configuration for the knowledge base is not enabled, or the flag to retain source file structure is not checked during export.
 - Issue: The AI-retrieved policy table content only covers partial entries, and all data cannot be fully extracted. Cause: The `chunk length` parameter is not adjusted to adapt to long table text, or the row-by-row extraction configuration for table parsing is not enabled, leading to truncation of partial row data.
 

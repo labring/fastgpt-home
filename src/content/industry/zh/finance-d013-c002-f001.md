@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务融资日报的HTTP 接口与外部系统
-meta_description: 专业服务融资日报的数据主要来源于工商披露平台、企业征信机构及行业协会公开的融资公告。更新节奏为每日更新，当日完成的融资交易将在次日完成披露。文档结构为结构化
+meta_description: 专业服务融资日报的HTTP 接口与外部系统：专业服务融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专业服务、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

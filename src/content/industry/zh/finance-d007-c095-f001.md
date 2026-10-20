@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的HTTP 接口与外部系统
-meta_description: 数据来源为金融终端的公用事业行情模块、热力供应企业的公开财报接口、区域公用事业监管的金融报备平台。更新节奏为每日生成一次，当日完整数据于次日早间完成同步。文
+meta_description: 热力收益率的HTTP 接口与外部系统：热力收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 热力、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

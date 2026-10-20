@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备研报检索的向量模型与索引
-meta_description: 专用设备研报数据主要来源于行业协会月度运行报告、设备厂商官方技术文档、上市公司定期公告及第三方咨询机构专项调研内容。更新节奏随行业动态调整，常规月度更新细分
+meta_description: 专用设备研报检索的向量模型与索引：专用设备研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 专用设备、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

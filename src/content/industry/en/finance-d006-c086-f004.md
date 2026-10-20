@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c086-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Automotive Service Investment
-meta_description: Data for automotive service investment research comes primarily from after-sales work order systems, vehicle parameter databases, parts pricing
+meta_title: Vector Models and Indexing for Automotive Service
+meta_description: Vector Models and Indexing for Automotive Service Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

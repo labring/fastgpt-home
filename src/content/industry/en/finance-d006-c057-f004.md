@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Small Home Appliance
-meta_description: Small home appliance investment research data primarily comes from brand official specification pages, e-commerce product detail pages, industry
+meta_description: Vector Models and Indexing for Small Home Appliance Investment Research Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

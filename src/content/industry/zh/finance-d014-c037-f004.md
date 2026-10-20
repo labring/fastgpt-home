@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信财报分析的向量模型与索引
-meta_description: 卫星通信财报数据主要来自企业公开披露的季度、年度财报文档，以及行业监管机构发布的运营简报。更新节奏为季度财报每3个月更新一次，年度财报每年更新，临时运营公告
+meta_description: 卫星通信财报分析的向量模型与索引：卫星通信财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 卫星通信、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

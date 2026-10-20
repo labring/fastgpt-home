@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车智能尽调报告的部署与升级
-meta_description: 商用车智能尽调报告的数据来源包括公安交管部门车辆登记数据库、货运企业运维台账、第三方商用车轨迹平台、保险理赔档案。核心车辆资质数据每季度同步更新，运维与运营
+meta_description: 商用车智能尽调报告的部署与升级：商用车智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 商用车、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

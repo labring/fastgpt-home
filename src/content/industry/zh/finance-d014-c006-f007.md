@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药财报分析的工作流编排
-meta_description: 中药行业上市公司的财报数据主要来源于上交所、深交所官方披露平台发布的定期报告，以及中药行业协会发布的行业监测数据。更新节奏为：季度报告每季度结束后15个工作
+meta_description: 中药财报分析的工作流编排：中药财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 中药、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

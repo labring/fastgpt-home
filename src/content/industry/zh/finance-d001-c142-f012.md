@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份证件KYC 的模型接入与配置
-meta_description: 身份证件数据主要来自官方发证机构签发的实体证件图像或结构化核验接口返回的字段。数据更新节奏为单次业务触发时的实时提交，无固定批量更新周期。文档为固定版式的印
+meta_description: 身份证件KYC 的模型接入与配置：身份证件KYC 的模型接入与配置，涵盖配置与验证建议
 keywords: 身份证件、KYC 与反洗钱资料核验、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

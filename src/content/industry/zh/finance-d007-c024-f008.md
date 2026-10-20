@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的工具调用与插件
-meta_description: 农化制品的收益率相关数据主要来自中国农药工业协会、全国农业技术推广服务中心、区域性农资批发市场及上游原料供应商。数据更新节奏分为两类：现货价格每日收盘后更新
+meta_description: 农化制品收益率的工具调用与插件：农化制品收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 农化制品、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

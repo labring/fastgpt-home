@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行研报检索的工作流编排
-meta_description: 国有大行研报的数据来源主要包括内部宏观研究部、金融市场部产出的公开与内部研报，以及与头部券商的定向合作研报。更新节奏区分三类：内部专题研报按季度或月度更新，
+meta_description: 国有大行研报检索的工作流编排：国有大行研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 国有大行、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

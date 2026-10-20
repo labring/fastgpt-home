@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的工作流编排
-meta_description: 农化制品的收益率相关数据主要来源于中国农药工业协会、全国农业生产资料流通协会的公开报告，以及国内大宗商品交易所的挂牌报价、头部农资电商平台的实时交易数据。常
+meta_description: 农化制品收益率的工作流编排：农化制品收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 农化制品、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

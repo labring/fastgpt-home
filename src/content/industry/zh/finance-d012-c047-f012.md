@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行营销内容的模型接入与配置
-meta_description: 国有大行营销内容数据来自内部合规文案管理系统、零售业务部产品手册、客户分层标签库及线下网点话术模板。更新节奏为季度更新合规版本，月度根据营销活动调整内容，日
+meta_description: 国有大行营销内容的模型接入与配置：国有大行营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 国有大行、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

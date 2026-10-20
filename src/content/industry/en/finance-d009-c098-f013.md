@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Coal Chemical
-meta_description: Coal chemical industry research reports primarily come from public reports released by coal industry associations, segmented chemical industry
+meta_description: Knowledge Base Retrieval and Recall for Coal Chemical Industry Research Report Queries
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

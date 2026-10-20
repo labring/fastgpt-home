@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区智能尽调报告的引用来源与溯源
-meta_description: 产业园区尽调相关数据来源包含国土空间规划备案文件、园区运营方的入驻企业台账、不动产登记证明、年度能耗与租金统计文档。数据更新节奏存在差异：入驻企业变更、租金
+meta_description: 产业园区智能尽调报告的引用来源与溯源：产业园区智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 产业园区、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexes for Air Pollution Control
-meta_description: Data for air pollution control intelligent due diligence reports comes primarily from four sources: real-time and historical data exported from
+meta_description: Vector Models and Indexes for Air Pollution Control Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

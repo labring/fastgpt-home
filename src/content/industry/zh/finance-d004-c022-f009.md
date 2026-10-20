@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 内部制度合规的引用来源与溯源
-meta_description: 内部制度数据来自企业内部合规管理系统、共享盘或官方发布的纸质文档电子化归档。更新节奏随监管政策迭代、内部管理调整不定期触发，无固定周期。文档多为结构化排版，
+meta_description: 内部制度合规的引用来源与溯源：内部制度合规的引用来源与溯源，涵盖配置与验证建议。
 keywords: 内部制度、合规与内部制度问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

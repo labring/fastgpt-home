@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行研报检索的工具调用与插件
-meta_description: 针对农商行的行业研报来源包括地方金融监管部门发布的区域运营监测报告、银行业协会发布的合规指引、区域涉农经济调研衍生的专项研报等。更新节奏随发布主体不同分为月
+meta_description: 农商行研报检索的工具调用与插件：农商行研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 农商行、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

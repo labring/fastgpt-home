@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺研报检索的知识库检索与召回
-meta_description: 服装家纺研报的来源包括券商研究所行业报告、纺织服饰行业协会公开数据、品牌方季度财报与新品发布公告。更新节奏覆盖月度行业动态更新、季度核心经营数据更新，部分渠
+meta_description: 服装家纺研报检索的知识库检索与召回：服装家纺研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 服装家纺、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

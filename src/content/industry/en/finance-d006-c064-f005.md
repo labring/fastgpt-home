@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c064-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Film and
-meta_description: Film and theater industry research data has two core source types. First, structured reports from theater operations, including fields such as daily
+meta_title: Multi-turn Dialogue and Prompt Engineering for Film
+meta_description: Multi-turn Dialogue and Prompt Engineering for Film and Theater Industry Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

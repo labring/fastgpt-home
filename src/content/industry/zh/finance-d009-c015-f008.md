@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能研报检索的工具调用与插件
-meta_description: 储能研报数据主要来自国内储能行业协会公开统计、券商电力设备细分领域研究报告、头部储能厂商发布的技术白皮书。更新节奏随行业政策节点、月度装机数据发布周期调整，
+meta_description: 储能研报检索的工具调用与插件：储能研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 储能、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

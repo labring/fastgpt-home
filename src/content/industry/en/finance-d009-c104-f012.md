@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Glass Industry Research
-meta_description: Glass industry research report data sources include public statistics from the China Building Glass and Industrial Glass Association, annual and
+meta_description: Model Access and Configuration for Glass Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

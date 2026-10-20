@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全研报检索的向量模型与索引
-meta_description: 数据来源包括CVE漏洞库、公开安全厂商技术公告、行业安全应急响应报告、企业内部安全审计文档。更新节奏随安全事件实时推进，重大漏洞发布后数小时内即有更新文档。
+meta_description: 网络安全研报检索的向量模型与索引：网络安全研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 网络安全、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

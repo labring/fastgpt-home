@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏营销内容的工作流编排
-meta_description: 光伏营销相关的数据分为三类，业务运营数据来自电站监控SCADA系统、第三方气象服务接口，产品营销数据来自企业内部产品库、第三方认证文档库，历史营销素材归档于
+meta_description: 光伏营销内容的工作流编排：光伏营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 光伏、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

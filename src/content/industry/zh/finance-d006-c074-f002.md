@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务投研知识库建设的上下文与 token
-meta_description: 教育服务投研的数据主要来自行业研报、教育政策文件、机构运营数据、课程产品文档及师资资质材料。数据来源覆盖官方监管机构、第三方行业咨询机构及教育机构内部系统。
+meta_description: 教育服务投研知识库建设的上下文与 token：教育服务投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 教育服务、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

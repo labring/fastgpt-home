@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭营销内容的工具调用与插件
-meta_description: 焦炭数据主要来自中国炼焦行业协会、沿海港口现货交易平台、大连商品交易所。更新节奏分两类：现货价格与库存数据每日更新，期货合约行情实时推送。标准文档结构包含产
+meta_description: 焦炭营销内容的工具调用与插件：焦炭营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 焦炭、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

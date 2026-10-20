@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类财报分析的向量模型与索引
-meta_description: 鞋类业务财报数据主要来自上市纺织服饰企业的分部披露报告、交易所公开定期报告，以及品牌方内部供应链运营报表。更新节奏覆盖年度、季度与月度，年度报告每年更新一次
+meta_description: 鞋类财报分析的向量模型与索引：鞋类财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 鞋类、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

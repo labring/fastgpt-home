@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品营销内容的知识库检索与召回
-meta_description: 休闲食品的营销内容数据主要来源于金融机构合作品牌的产品手册、新品上市通稿、电商平台详情页、社交媒体种草素材、临时促销活动规则及会员权益说明，同时包含金融渠道
+meta_description: 休闲食品营销内容的知识库检索与召回：休闲食品营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 休闲食品、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

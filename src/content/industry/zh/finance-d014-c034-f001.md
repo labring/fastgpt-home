@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械财报分析的HTTP 接口与外部系统
-meta_description: 医疗器械企业财报数据主要来自境内外证券交易所披露平台、企业官方公告渠道。更新节奏按季度、半年度、年度发布定期报告，同时伴随中标公告、新医疗器械注册证获批等临
+meta_description: 医疗器械财报分析的HTTP 接口与外部系统：医疗器械财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 医疗器械、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

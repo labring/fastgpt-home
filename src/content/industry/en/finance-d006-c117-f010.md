@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c117-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Textile Manufacturing Investment
-meta_description: Textile manufacturing investment research data sources include monthly production and sales statistics from industry associations, customs import and
+meta_title: Database and Operations for Textile Manufacturing
+meta_description: Database and Operations for Textile Manufacturing Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

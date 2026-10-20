@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品投研知识库建设的引用来源与溯源
-meta_description: 饰品投研的数据主要来自品牌方产品备案文档、行业协会质检报告、供应链出货台账、电商平台SKU详情及贵金属实时报价数据源。更新节奏分为两类：新品发布季更新频率较
+meta_description: 饰品投研知识库建设的引用来源与溯源：饰品投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 饰品、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的工作流编排
-meta_description: 卫星通信收益率相关数据来源于卫星地面测控站的遥测采集系统与卫星运营计费系统。数据更新节奏匹配卫星过境下传的窗口，无固定定时周期。单条数据以JSON格式封装，
+meta_description: 卫星通信收益率的工作流编排：卫星通信收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 卫星通信、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

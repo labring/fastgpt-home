@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Glass Industry Investment
-meta_description: Data sources for glass industry investment research mainly include monthly/annual supply and demand reports released by industry associations, quality
+meta_description: Document Parsing and Chunking for Glass Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The multi-type structure and professional parameter characteristics of glass ind
 ## Three Common Configuration Errors
 - Phenomenon: No table content or missing table cell content appears in parsed results after uploading a PDF. Cause: The detailed parsing mode for `PARSE_TABLE_MODE` is not enabled. The default simplified mode loses nested structures and unit information from tables in the glass industry.
 - Phenomenon: A 408 status code is returned when calling the parsing script. Cause: The `PARSE_FILE_TIMEOUT_SECONDS` parameter is not adjusted. Parsing large glass industry yearbooks takes longer than the default threshold, triggering a timeout error.
-- Phenomenon: A locally deployed PDF parsing tool functions normally, but no parsing option appears when uploading to the FastGPT knowledge base. Cause: The PDF parsing plugin is not enabled in FastGPT configuration, or the plugin version is incompatible with FastGPT 4.9.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to Verify Correct Configuration
 - Upload a single-page PDF of a glass quality inspection report. Check if all quality inspection parameters and their corresponding units are included in the parsed results, and confirm that the table structure is complete.

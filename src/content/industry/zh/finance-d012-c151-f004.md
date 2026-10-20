@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路营销内容的向量模型与索引
-meta_description: 本场景面向金融理财行业的铁路公路营销内容，数据主要来自铁路公路运营方的官方公示文档、线路运营手册、营销活动方案、客流统计报表、沿线服务站点的宣传物料。更新节
+meta_description: 铁路公路营销内容的向量模型与索引：铁路公路营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 铁路公路、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

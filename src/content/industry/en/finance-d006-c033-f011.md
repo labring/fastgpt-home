@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Chemical Fiber Investment
-meta_description: Data sources for the chemical fiber category mainly cover upstream raw material market trends of the petrochemical industry chain, midstream
+meta_description: Document Parsing and Chunking for Chemical Fiber Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

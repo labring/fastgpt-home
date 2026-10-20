@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Auto Service
-meta_description: Data primarily comes from marketing materials produced by the marketing departments of auto finance and auto insurance services. This includes auto
+meta_description: Knowledge Base Retrieval and Recall for Auto Service Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

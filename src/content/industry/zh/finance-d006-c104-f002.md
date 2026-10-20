@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃投研知识库建设的上下文与 token
-meta_description: 玻璃投研数据来源包括行业协会发布的浮法玻璃产能数据、大宗商品交易所的玻璃价格行情、券商发布的光伏玻璃应用研报、下游建筑与汽车行业的订单统计数据。更新节奏分为
+meta_description: 玻璃投研知识库建设的上下文与 token：玻璃投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 玻璃、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

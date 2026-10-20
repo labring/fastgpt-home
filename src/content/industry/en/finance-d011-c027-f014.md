@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for In-Client Natural Language Search
-meta_description: Data sources include user input text for natural language search triggered in the client, and associated business system fields such as customer
+meta_description: Form and Interaction for In-Client Natural Language Search (Function Entry)
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

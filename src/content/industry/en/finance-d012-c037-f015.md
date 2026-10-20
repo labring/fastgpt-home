@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c037-f015
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Satellite Communications Marketing
-meta_description: Satellite communications marketing content data for financial and insurance clients originates from terminal uplink requests collected by satellite
+meta_title: Deployment and Upgrade of Satellite Communications
+meta_description: Deployment and Upgrade of Satellite Communications Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

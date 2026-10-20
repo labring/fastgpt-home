@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采融资日报的知识库检索与召回
-meta_description: 油气开采融资日报的数据来源包括公开披露的油气开采项目融资公告、油气行业协会发布的每日融资监测数据、金融机构的油气板块融资台账。数据按日更新，覆盖当日发生的油
+meta_description: 油气开采融资日报的知识库检索与召回：油气开采融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 油气开采、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

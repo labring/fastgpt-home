@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Agrochemical Product Yield Rates
-meta_description: Agrochemical product yield daily report data is primarily sourced from domestic agrochemical industry monitoring platforms, spot-linked data from
+meta_description: Form and Interaction for Agrochemical Product Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

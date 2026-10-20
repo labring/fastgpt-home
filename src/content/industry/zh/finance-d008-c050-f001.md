@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶智能尽调报告的HTTP 接口与外部系统
-meta_description: 塑料橡胶类智能尽调报告的数据主要来自大宗商品现货交易平台、海关进出口报关数据库、行业协会月度统计公报以及上游石化生产企业的出厂价公示。数据更新节奏存在分层：
+meta_description: 塑料橡胶智能尽调报告的HTTP 接口与外部系统：塑料橡胶智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 塑料橡胶、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

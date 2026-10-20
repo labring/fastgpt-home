@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材营销内容的知识库检索与召回
-meta_description: 消费建材营销相关数据主要来自产品技术手册、终端门店推广物料、电商平台详情页、经销商政策文档及线下活动方案。数据更新节奏随新品上线、促销活动调整及价格变动不定
+meta_description: 消费建材营销内容的知识库检索与召回：消费建材营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 消费建材、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

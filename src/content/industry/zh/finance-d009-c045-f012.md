@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车研报检索的模型接入与配置
-meta_description: 商用车研报主要来自行业协会、整车厂研发部门、第三方咨询机构、证券行业汽车板块研报团队。更新节奏方面，公开研报随行业动态、政策发布、季度节点更新，企业内部研报
+meta_description: 商用车研报检索的模型接入与配置：商用车研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 商用车、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

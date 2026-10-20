@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c136-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Precious Metal Yield
-meta_description: Data comes from official market APIs of domestic and overseas precious metal exchanges, and compliant third-party market aggregation services. There
+meta_title: Model Integration and Configuration for Precious Metal
+meta_description: Model Integration and Configuration for Precious Metal Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

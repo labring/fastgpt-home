@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易研报检索的向量模型与索引
-meta_description: 钢铁贸易研报的数据主要来自行业自律组织的公开供需数据、大宗商品资讯机构的采集数据、钢厂及贸易商的公开披露文件。更新节奏覆盖不同周期，短期行情类文档每日或每两
+meta_description: 钢铁贸易研报检索的向量模型与索引：钢铁贸易研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 钢铁贸易、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

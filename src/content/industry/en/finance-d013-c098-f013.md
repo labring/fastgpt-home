@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Coal Chemical
-meta_description: Data sources for coal chemical industry financing daily reports include publicly disclosed information from industry associations, announcements from
+meta_description: Knowledge Base Retrieval and Recall for Coal Chemical Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

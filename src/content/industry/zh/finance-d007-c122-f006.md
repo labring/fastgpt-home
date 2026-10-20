@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行收益率的对话日志与审计
-meta_description: 股份制银行的收益率与行情数据主要来源于本行零售理财系统、对公同业交易台账及中国外汇交易中心公开报价接口。数据更新节奏遵循交易日实时盘口每15分钟刷新，每日闭
+meta_description: 股份制银行收益率的对话日志与审计：股份制银行收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 股份制银行、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备融资日报的向量模型与索引
-meta_description: 电网设备融资日报的数据来源包括电网设备领域企业公开融资公告、地方能源监管机构每日融资台账、全国电力设备行业协会的公开统计数据。更新节奏为每日更新，当日披露的
+meta_description: 电网设备融资日报的向量模型与索引：电网设备融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 电网设备、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

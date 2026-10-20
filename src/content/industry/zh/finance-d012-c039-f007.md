@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器营销内容的工作流编排
-meta_description: 厨卫电器的营销相关数据主要来源于品牌官方产品规格书、电商平台商品详情页、售后故障排查文档，以及金融机构合作的家装分期产品列表。数据更新无固定周期，新品上线、
+meta_description: 厨卫电器营销内容的工作流编排：厨卫电器营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 厨卫电器、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

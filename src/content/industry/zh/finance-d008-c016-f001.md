@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏智能尽调报告的HTTP 接口与外部系统
-meta_description: 光伏智能尽调报告的数据主要来自光伏电站SCADA监控系统、并网调度平台、组件运维台账及区域气象站。运行类数据如实时发电量、辐照强度每5分钟更新一次，台账类数
+meta_description: 光伏智能尽调报告的HTTP 接口与外部系统：光伏智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光伏、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

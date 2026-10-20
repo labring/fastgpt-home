@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业收益率的HTTP 接口与外部系统
-meta_description: 商业物业收益率相关数据的来源主要为物业自身运营管理系统的当日营收、成本台账，以及商圈租赁数据接口的空置率信息。数据更新分为两种节奏：每日凌晨同步前一自然日的
+meta_description: 商业物业收益率的HTTP 接口与外部系统：商业物业收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业物业、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

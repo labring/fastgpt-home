@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c111-f001
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Livestock and
-meta_description: Data for livestock and poultry farming financing daily reports comes from local agricultural and rural department livestock monitoring systems
+meta_title: HTTP Interfaces and External Systems for Livestock
+meta_description: HTTP Interfaces and External Systems for Livestock and Poultry Farming Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

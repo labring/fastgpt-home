@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢融资日报的工具调用与插件
-meta_description: 特钢融资日报的数据来源于国内特钢产业带的现货融资交易系统、中国特钢企业协会的每日监测数据库。更新节奏为前一工作日的全量数据于每日8:00前完成更新。文档为结
+meta_description: 特钢融资日报的工具调用与插件：特钢融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 特钢、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

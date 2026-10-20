@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的知识库检索与召回
-meta_description: 受益所有人KYC数据主要来源于企业工商登记年报、股权穿透尽职调查文档、监管报送材料。数据更新节奏随主体股权变动触发，固定年报周期内同步更新。单份文档多为结构
+meta_description: 受益所有人KYC 的知识库检索与召回：受益所有人KYC 的知识库检索与召回，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

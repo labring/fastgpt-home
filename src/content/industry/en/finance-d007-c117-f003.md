@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Textile Manufacturing Yield Data
-meta_description: Data sources include domestic textile raw material spot trading platforms, public monitoring data from domestic textile industry associations, and
+meta_description: Sharing and Embedding for Textile Manufacturing Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

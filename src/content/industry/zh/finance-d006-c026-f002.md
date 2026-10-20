@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版投研知识库建设的上下文与 token
-meta_description: 出版类投研数据主要来自正式出版的行业专著、定期期刊、公开投研出版物及内部研究资料。更新节奏遵循出版周期，正式期刊多为月刊或季刊，专著按需出版。文档结构包含固
+meta_description: 出版投研知识库建设的上下文与 token：出版投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 出版、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

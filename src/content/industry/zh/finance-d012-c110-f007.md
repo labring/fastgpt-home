@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的工作流编排
-meta_description: 电网设备的数据来源包括企业PLM系统、设备台账管理系统、现场运维日志、招投标文档。更新节奏分为两类，静态参数随新设备投产按季度更新，动态运维数据按分钟级更新
+meta_description: 电网设备营销内容的工作流编排：电网设备营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 电网设备、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

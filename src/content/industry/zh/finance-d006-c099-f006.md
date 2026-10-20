@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气投研知识库建设的对话日志与审计
-meta_description: 燃气投研数据主要来自国家能源局燃气政策文件、城市燃气集团运营报表、燃气商品期货行情、管道巡检日志与燃气定价公示。更新节奏差异明显：政策文件不定期发布，期货行
+meta_description: 燃气投研知识库建设的对话日志与审计：燃气投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 燃气、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

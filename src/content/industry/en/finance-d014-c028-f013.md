@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Thermal Coal
-meta_description: Thermal coal public data sources include monthly production statistics from major domestic thermal coal producing regions, daily coastal port cleared
+meta_description: Knowledge Base Retrieval and Recall for Thermal Coal Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

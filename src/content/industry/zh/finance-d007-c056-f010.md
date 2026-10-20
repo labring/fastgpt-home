@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品收益率的数据库与运维
-meta_description: 家居用品的收益率相关数据来源包含三类：线上电商平台的成交API数据、线下商超的POS批量上报文件、轻工制造行业第三方监测机构的公开数据集。数据更新节奏存在差
+meta_description: 家居用品收益率的数据库与运维：家居用品收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 家居用品、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

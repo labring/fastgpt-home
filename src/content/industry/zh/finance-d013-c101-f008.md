@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流融资日报的工具调用与插件
-meta_description: 物流融资日报的数据主要来源于物流企业的运单管理系统、合作金融机构的融资审批台账，以及第三方物流数据服务接口。数据更新节奏为每日固定时段同步前一个自然日的全量
+meta_description: 物流融资日报的工具调用与插件：物流融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 物流、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

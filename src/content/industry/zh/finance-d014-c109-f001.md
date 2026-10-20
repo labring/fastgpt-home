@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件财报分析的HTTP 接口与外部系统
-meta_description: 电子元件制造品类的财报数据主要来自上市电子元件制造企业的官方投资者关系页面及证券交易所公开披露平台。更新节奏遵循季度报告季后45日内、年度报告季后120日内
+meta_description: 电子元件财报分析的HTTP 接口与外部系统：电子元件财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电子元件、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

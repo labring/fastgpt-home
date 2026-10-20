@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的HTTP 接口与外部系统
-meta_description: 白色家电营销内容的数据主要来自金融机构合作品牌的官方产品库、主流电商平台商品详情页、线下门店的活动台账。数据更新节奏分为两类：产品基础参数按季度同步更新，促
+meta_description: 白色家电营销内容的HTTP 接口与外部系统：白色家电营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白色家电、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

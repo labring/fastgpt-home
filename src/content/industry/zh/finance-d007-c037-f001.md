@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的HTTP 接口与外部系统
-meta_description: 卫星通信收益率的行情日报数据，来源为卫星地面测控系统的运营日志与运营商业务计费系统。数据更新节奏为每日凌晨完成前一日全量汇总，次日对外提供接口调用。文档结构
+meta_description: 卫星通信收益率的HTTP 接口与外部系统：卫星通信收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 卫星通信、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖研报检索的工作流编排
-meta_description: 水产养殖研报数据主要来自农业农村部直属水产养殖监测机构、地方水产科研院所、行业协会公开报告及第三方调研机构的专项调研。更新节奏覆盖周度、月度及年度周期，周度
+meta_description: 水产养殖研报检索的工作流编排：水产养殖研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 水产养殖、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的文档解析与分块
-meta_description: 卫星通信营销内容的数据来源包括运营商标准化服务报价表、行业客户合作案例白皮书、线下展会营销PPT转写文档、获客用客户线索CSV清单。更新节奏为服务方案文档季
+meta_description: 卫星通信营销内容的文档解析与分块：卫星通信营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

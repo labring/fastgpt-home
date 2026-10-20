@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的工具调用与插件
-meta_description: 卫星通信收益率与行情的数据来源包括卫星运营商公开运营报表、地面测控站实时链路数据、行业协会统计汇总。更新节奏分为日度批量报表每日零点更新，实时链路收益数据每
+meta_description: 卫星通信收益率的工具调用与插件：卫星通信收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 卫星通信、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

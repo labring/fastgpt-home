@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电智能尽调报告的知识库检索与召回
-meta_description: 小家电智能尽调报告涉及的数据来源包括品牌官方参数文档、国家强制合规认证报告、电商平台产品详情页、售后维修手册。数据更新节奏随新品上线与合规政策调整波动，新品
+meta_description: 小家电智能尽调报告的知识库检索与召回：小家电智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 小家电、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

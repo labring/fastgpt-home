@@ -4,8 +4,8 @@ slug: /en/industry/finance-d004-c073-f001
 page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Operating Procedure
-meta_description: The data source for operating procedures consists of official institutional documents published by the enterprise’s compliance and legal departments.
+meta_title: HTTP Interfaces and External Systems for Operating
+meta_description: HTTP Interfaces and External Systems for Operating Procedure Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

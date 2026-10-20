@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Multi-App Routing Unified AI
-meta_description: Multi-app routing data primarily comes from three sources within the platform: configured sub-app metadata, traffic allocation rules, and session
+meta_description: Sharing and Embedding for Multi-App Routing Unified AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

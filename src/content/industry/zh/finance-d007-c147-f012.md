@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸收益率的模型接入与配置
-meta_description: 造纸行业的行情与收益率数据来源为轻工制造行业公开报价平台、造纸行业协会发布的官方统计报表，以及部分头部生产企业的公开出厂价信息。更新节奏方面，木浆、废纸等原
+meta_description: 造纸收益率的模型接入与配置：造纸收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 造纸、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

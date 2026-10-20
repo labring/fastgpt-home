@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流投研知识库建设的文档解析与分块
-meta_description: 物流投研的数据主要来自交通运输主管部门公开统计、头部物流企业财报、国际货运代理协会运价报告、港口运营日志等。更新节奏覆盖实时运价波动、周度仓储周转数据、月度
+meta_description: 物流投研知识库建设的文档解析与分块：物流投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 物流、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

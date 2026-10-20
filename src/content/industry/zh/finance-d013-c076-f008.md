@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品融资日报的工具调用与插件
-meta_description: 文娱用品融资日报数据主要来自公开投融资披露平台、行业协会公示信息及企业自主申报的融资公告。更新节奏为每日T+1更新前一自然日的全量有效融资条目。单条数据文档
+meta_description: 文娱用品融资日报的工具调用与插件：文娱用品融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 文娱用品、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

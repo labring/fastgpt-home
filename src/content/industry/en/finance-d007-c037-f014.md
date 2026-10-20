@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Satellite Communications Revenue
-meta_description: Data for this category is sourced from downlink acquisition data of ground stations at satellite measurement and control centers, and operation and
+meta_description: Form and Interaction for Satellite Communications Revenue Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

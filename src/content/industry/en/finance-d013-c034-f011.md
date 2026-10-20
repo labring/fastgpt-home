@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Medical Device Financing
-meta_description: Data sources are public investment and financing disclosures and daily summaries from third-party industry databases. Documents update daily. Each
+meta_description: Document Parsing and Chunking for Medical Device Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

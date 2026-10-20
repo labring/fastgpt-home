@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Photovoltaic
-meta_description: Data sources include operation logs of grid-connected photovoltaic projects, monthly monitoring reports from industry associations, and real-time
+meta_description: Multi-turn Dialogue and Prompt Engineering for Photovoltaic Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

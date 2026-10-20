@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Small Home Appliance Financing
-meta_description: Small home appliance financing daily report data comes primarily from home appliance industry supply chain financial service platforms, brand merchant
+meta_description: Tool Calling and Plugins for Small Home Appliance Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

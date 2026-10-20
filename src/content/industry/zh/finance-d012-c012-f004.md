@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的向量模型与索引
-meta_description: 住宅开发的营销内容数据来源包括项目官方推介手册、户型参数说明、政府规划公示文件、代理公司营销物料及样板间讲解脚本。更新节奏随项目节点波动：筹备期每周更新，开
+meta_description: 住宅开发营销内容的向量模型与索引：住宅开发营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 住宅开发、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

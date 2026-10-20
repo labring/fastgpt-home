@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Bid Rejection Item
-meta_description: Bid rejection item bidding data is sourced from bid rejection announcements on internal procurement bidding platforms of financial institutions and
+meta_description: HTTP Interfaces and External Systems for Bid Rejection Item Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ Additionally, bid rejection items are associated with original bidding informati
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Mistakes
-- An external interface call returns a 401 unauthorized error, and logs show the token is replaced with `fastgpt`. The cause is that configured authentication parameters are not correctly bound to the external interface request, and the default token is overwritten by the system placeholder.
+- An external interface call returns a 401 unauthorized error, and logs show the token is replaced with `fastgpt`. The cause is that configured authentication parameters are not correctly bound to the external interface request, and the default token is overwritten by the system pending verification.
 - No valid results are returned after calling the configured model in the platform, and the interface returns empty fields. The cause is that core bid rejection item fields are not included in `RESPONSE_FIELD_FILTER`, resulting in filtered return data being empty.
 - An SQL permission error occurs after restarting Docker on an Ubuntu system. The cause is that the permissions of the database directory mounted by the container are not retained, and host system permissions overwrite the container configuration after restart.
 

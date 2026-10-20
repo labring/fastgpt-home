@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Automotive Service Financial
-meta_description: Automotive service industry financial report data comes from two main sources: independently disclosed annual, semi-annual, and quarterly financial
+meta_description: Workflow Orchestration for Automotive Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

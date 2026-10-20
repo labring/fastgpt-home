@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务研报检索的多轮对话与提示词
-meta_description: 专业服务类研报数据主要来自持牌咨询机构、券商研究所及行业协会公开报告。更新随研报发布节奏同步，新内容上线后数小时内完成入库。文档结构包含标题、发布主体、发布
+meta_description: 专业服务研报检索的多轮对话与提示词：专业服务研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专业服务、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

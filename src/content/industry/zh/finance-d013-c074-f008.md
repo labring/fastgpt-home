@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的工具调用与插件
-meta_description: 教育服务融资日报的数据来源于公开融资披露信息、行业监测平台的实时更新。更新节奏为每日一次，覆盖当日披露的教育服务领域融资事件。文档采用结构化表格格式，单条记
+meta_description: 教育服务融资日报的工具调用与插件：教育服务融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 教育服务、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

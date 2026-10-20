@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨财报分析的工具调用与插件
-meta_description: 涂料油墨行业的财报数据来源包括境内外上市公司公开年报、行业协会月度调研数据、企业自愿披露的经营简报。更新节奏为年度报告每年披露一次，季度报告每季度披露，临时
+meta_description: 涂料油墨财报分析的工具调用与插件：涂料油墨财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 涂料油墨、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

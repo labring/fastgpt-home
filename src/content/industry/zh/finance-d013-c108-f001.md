@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务融资日报的HTTP 接口与外部系统
-meta_description: 电商服务融资日报的数据来源为电商平台商户结算系统、合作金融机构的融资审批与放款流水。更新节奏为自然日交易结束后，次日生成单份全量日报文件。文档结构为按商户唯
+meta_description: 电商服务融资日报的HTTP 接口与外部系统：电商服务融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电商服务、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

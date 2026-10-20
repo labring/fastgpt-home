@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材财报分析的引用来源与溯源
-meta_description: 消费建材财报数据主要来自上市公司年度报告、证券交易所公开披露文件、行业协会月度运行报告。更新节奏为年度报告于年度结束后4个月内发布，季度报告于季度结束后1个
+meta_description: 消费建材财报分析的引用来源与溯源：消费建材财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 消费建材、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

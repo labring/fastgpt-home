@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸研报检索的工具调用与插件
-meta_description: 造纸研报数据主要来自券商研究所轻工制造组、中国造纸协会公开报告、上市造纸企业定期公告。数据更新节奏覆盖多维度：现货纸浆、成品纸价格每日更新，行业开工率、产销
+meta_description: 造纸研报检索的工具调用与插件：造纸研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 造纸、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

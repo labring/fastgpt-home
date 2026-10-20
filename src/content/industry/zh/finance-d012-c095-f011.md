@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力营销内容的文档解析与分块
-meta_description: 热力营销内容的数据源主要来自热力运营企业的官方营销物料、区域供暖公告、缴费指引、设备维护手册等。更新节奏随供暖周期波动，供暖季前1-2个月集中更新存量物料，
+meta_description: 热力营销内容的文档解析与分块：热力营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 热力、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

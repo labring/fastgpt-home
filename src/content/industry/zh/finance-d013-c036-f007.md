@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体融资日报的工作流编排
-meta_description: 半导体融资日报的数据来源为公开产业融资披露端口、半导体行业协会发布的公开数据集、券商跟踪的半导体企业融资动态库。更新节奏为每个交易日更新一次，非交易日顺延至
+meta_description: 半导体融资日报的工作流编排：半导体融资日报的工作流编排，涵盖配置与验证建议。。。
 keywords: 半导体、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

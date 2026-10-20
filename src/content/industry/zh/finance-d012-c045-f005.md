@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车营销内容的多轮对话与提示词
-meta_description: 商用车金融营销的数据来源覆盖工信部车型公告、经销商库存台账、客户询价记录、官方宣传素材与金融产品参数库。更新节奏区分类型：车型公告按季度更新，金融产品参数（
+meta_description: 商用车营销内容的多轮对话与提示词：商用车营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 商用车、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

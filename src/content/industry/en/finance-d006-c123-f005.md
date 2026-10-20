@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c123-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Energy Metals
-meta_description: Energy metals data sources include industry association monthly reports, real-time spot and futures market data from exchanges, public announcements
+meta_title: Multi-turn Dialogue and Prompt Engineering for Energy
+meta_description: Multi-turn Dialogue and Prompt Engineering for Energy Metals Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

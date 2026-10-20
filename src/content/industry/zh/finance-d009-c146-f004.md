@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备研报检索的向量模型与索引
-meta_description: 通用设备研报主要来自券商机械行业研究所、中国通用机械工业协会公开文档、头部设备厂商的年度技术白皮书，面向金融机构的行业分析需求。更新节奏以季度行业跟踪报告为
+meta_description: 通用设备研报检索的向量模型与索引：通用设备研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 通用设备、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

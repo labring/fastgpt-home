@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营营销内容的文档解析与分块
-meta_description: 品牌代运营的营销内容数据来源为品牌方提供的产品手册、推广脚本、活动方案，以及代运营团队产出的投放复盘文档。更新节奏随营销节点波动，大型促销活动前会集中新增素
+meta_description: 品牌代运营营销内容的文档解析与分块：品牌代运营营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 品牌代运营、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

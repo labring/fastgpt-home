@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的文档解析与分块
-meta_description: 名单筛查用于KYC与反洗钱的数据源主要包括监管机构发布的公开制裁名单、政治敏感人士（PEP）名单，合作金融机构报送的可疑交易主体名单，以及内部风控积累的历史
+meta_description: 名单筛查KYC 的文档解析与分块：名单筛查KYC 的文档解析与分块，涵盖配置与验证建议
 keywords: 名单筛查、KYC 与反洗钱资料核验、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

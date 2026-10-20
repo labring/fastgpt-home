@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Penalty Case Compliance
-meta_description: Penalty case data primarily originates from public announcements issued by regulatory bodies, internal compliance management ledgers, and public
+meta_description: Deployment and Upgrade for Penalty Case Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c029-f001
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Packaging and
-meta_description: The financial report data of packaging and printing enterprises mainly comes from periodic reports publicly disclosed by domestic and overseas stock
+meta_title: HTTP Interfaces and External Systems for Packaging
+meta_description: HTTP Interfaces and External Systems for Packaging and Printing Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

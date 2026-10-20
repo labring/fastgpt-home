@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件投研知识库建设的对话日志与审计
-meta_description: 电子元件投研数据主要来自原厂官方datasheet、行业协会规格文档、供应链实时报价平台及第三方测试报告。数据更新节奏随产品迭代调整，新量产型号发布时同步更
+meta_description: 电子元件投研知识库建设的对话日志与审计：电子元件投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 电子元件、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

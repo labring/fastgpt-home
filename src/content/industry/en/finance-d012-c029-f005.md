@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c029-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Packaging and
-meta_description: Data for packaging and printing marketing content comes from the enterprise's internal printing order management system, marketing material design
+meta_title: Multi-turn Dialogue and Prompt Engineering for Packaging
+meta_description: Multi-turn Dialogue and Prompt Engineering for Packaging and Printing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

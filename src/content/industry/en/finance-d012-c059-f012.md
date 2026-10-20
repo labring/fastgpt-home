@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Industrial Metals
-meta_description: Data for industrial metals mainly comes from industry association public quotation platforms, real-time trading APIs of spot trading markets, and
+meta_description: Model Integration and Configuration for Industrial Metals Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

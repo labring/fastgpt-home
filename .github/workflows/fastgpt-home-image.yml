@@ -35,11 +35,20 @@ jobs:
       NEXT_PUBLIC_RYBBIT_TONGJI: ${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI }}
       NEXT_PUBLIC_RYBBIT_TONGJI_SITEID: ${{ secrets.NEXT_PUBLIC_RYBBIT_TONGJI_SITEID }}
       NEXT_PUBLIC_CRM_API_URL: ${{ secrets.NEXT_PUBLIC_CRM_API_URL }}
-      NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: '.fastgpt.cn'
+      NEXT_PUBLIC_ATTRIBUTION_COOKIE_DOMAIN: ".fastgpt.cn"
       NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE: ${{ vars.NEXT_PUBLIC_ATTRIBUTION_STORAGE_MODE }}
       NEXT_PUBLIC_ATTRIBUTION_SOURCE: ${{ secrets.NEXT_PUBLIC_ATTRIBUTION_SOURCE }}
       NEXT_PUBLIC_LANGUAGE_REGION: zh-CN
     steps:
+      - name: Free runner space
+        id: cleanup
+        uses: justinthelaw/maximize-github-runner-space@v0.12.3
+        with:
+          cleanup-profile: max
+          skip-components: cached-tools,cached-node
+          swapfile-size: 16GiB
+      - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
+
       - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4

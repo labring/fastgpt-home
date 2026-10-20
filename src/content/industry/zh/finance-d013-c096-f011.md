@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭融资日报的文档解析与分块
-meta_description: 焦炭融资日报的数据主要来自中国炼焦行业协会、主产区大宗商品交易平台及钢厂内部日报汇总。更新节奏为每日发布前一交易日的交易数据，通常早间8点前更新。文档格式以
+meta_description: 焦炭融资日报的文档解析与分块：焦炭融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 焦炭、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

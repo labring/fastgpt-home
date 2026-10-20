@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品财报分析的文档解析与分块
-meta_description: 化妆品行业的财报数据主要来源于境内外证券交易所披露的上市公司定期报告，以及品牌方公开的经营简报。数据更新按报告周期执行，年度报告每年发布一次，半年度、季度报
+meta_description: 化妆品财报分析的文档解析与分块：化妆品财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 化妆品、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

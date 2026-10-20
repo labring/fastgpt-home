@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品营销内容的工作流编排
-meta_description: 面向金融行业的生物制品企业客户，其营销相关数据具备以下特征：数据来源包括企业内部的研发备案文档、批签发记录、临床研究报告，以及国家药监局发布的合规备案文件。
+meta_description: 生物制品营销内容的工作流编排：生物制品营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 生物制品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

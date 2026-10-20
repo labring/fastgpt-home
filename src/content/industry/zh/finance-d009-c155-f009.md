@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料研报检索的引用来源与溯源
-meta_description: 饲料研报的数据主要来自农业行业监测平台、饲料工业协会公开报告、大型饲料企业的产能与原料采购披露文档，更新节奏以月度常规行业分析报告为主，伴随原料价格异动、养
+meta_description: 饲料研报检索的引用来源与溯源：饲料研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 饲料、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

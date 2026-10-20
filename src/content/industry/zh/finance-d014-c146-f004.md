@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备财报分析的向量模型与索引
-meta_description: 通用设备相关财报数据来自上市公司公开披露的定期报告、临时公告，以及行业公开调研数据。更新节奏随披露节点推进，定期报告按季度、年度发布，临时公告随重大经营变动
+meta_description: 通用设备财报分析的向量模型与索引：通用设备财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 通用设备、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

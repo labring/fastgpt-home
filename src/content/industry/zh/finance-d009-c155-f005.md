@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料研报检索的多轮对话与提示词
-meta_description: 饲料研报数据主要来自券商农业组公开研报、农业农村部畜禽监测数据、饲料行业协会公开报告、饲料原料期货行情公示及头部生产企业公开分析文档。更新节奏随数据类型差异
+meta_description: 饲料研报检索的多轮对话与提示词：饲料研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 饲料、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Chemical Raw
-meta_description: Chemical raw material financing daily report data primarily comes from public financing filing information released by local financial supervision
+meta_description: Knowledge Base Retrieval and Recall for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

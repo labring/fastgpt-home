@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流营销内容的多轮对话与提示词
-meta_description: 物流营销相关的数据主要来源于金融机构对接的物流企业的运输管理系统（TMS）、仓储管理系统（WMS）以及物流企业提交的客户寄递交互记录。数据更新节奏分为两类：
+meta_description: 物流营销内容的多轮对话与提示词：物流营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 物流、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

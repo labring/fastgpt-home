@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化智能尽调报告的文档解析与分块
-meta_description: 炼化智能尽调报告的数据主要来自炼化装置运行日志、第三方合规检测报告、上游原料采购台账、下游产品质检单、工艺设计文件等。更新节奏覆盖实时（运行日志）、每日（能
+meta_description: 炼化智能尽调报告的文档解析与分块：炼化智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 炼化、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

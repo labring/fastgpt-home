@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类融资日报的部署与升级
-meta_description: 鞋类融资日报的数据主要来自鞋类品牌供应链金融系统、合作银行的授信台账与经销商回款系统。数据更新节奏为每日凌晨同步前一自然日的业务数据。单份日报文档为结构化表
+meta_description: 鞋类融资日报的部署与升级：鞋类融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 鞋类、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

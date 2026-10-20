@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭研报检索的向量模型与索引
-meta_description: 焦炭研报的数据来源包括中国炼焦行业协会行业报告、大连商品交易所焦炭期货行情数据、券商研究所深度研报、国内主要港口现货贸易周报。更新节奏分为每日现货价格与库存
+meta_description: 焦炭研报检索的向量模型与索引：焦炭研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 焦炭、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

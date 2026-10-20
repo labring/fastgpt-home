@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的工具调用与插件
-meta_description: 卫星通信融资日报的数据来源为公开的项目立项公告、行业监管披露文件及第三方行业数据库。更新节奏为每日凌晨完成当日数据归集与整理。单篇文档结构固定，包含卫星项目
+meta_description: 卫星通信融资日报的工具调用与插件：卫星通信融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 卫星通信、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

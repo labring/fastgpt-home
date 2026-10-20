@@ -4,8 +4,8 @@ slug: /en/industry/finance-d003-c138-f007
 page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Expense Statement Insurance Claim
-meta_description: Data sources for expense statements primarily include electronic spreadsheets exported from hospital billing systems, scanned copies of medical
+meta_title: Workflow Orchestration for Expense Statement Insurance
+meta_description: Workflow Orchestration for Expense Statement Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

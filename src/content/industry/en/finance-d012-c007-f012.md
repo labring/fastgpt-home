@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Dairy Product
-meta_description: Data sources for dairy product marketing-related data include brand-owned CRM member consumption data, e-commerce platform product detail page data
+meta_description: Model Integration and Configuration for Dairy Product Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

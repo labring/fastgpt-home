@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程投研知识库建设的部署与升级
-meta_description: 房建工程投研数据主要来自住建部门公开定额文件、招投标公示平台、施工单位归档的项目日志与竣工验收报告、建材供应商的报价台账。数据更新节奏差异明显，建材报价随市
+meta_description: 房建工程投研知识库建设的部署与升级：房建工程投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 房建工程、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

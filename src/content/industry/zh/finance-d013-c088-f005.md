@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程融资日报的多轮对话与提示词
-meta_description: 油服工程融资日报的数据来源包括油服企业内部财务台账、国内石油石化行业协会每日监测数据、境内外证券交易所公开融资公告、银行间市场交易披露信息。更新节奏为工作日
+meta_description: 油服工程融资日报的多轮对话与提示词：油服工程融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 油服工程、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

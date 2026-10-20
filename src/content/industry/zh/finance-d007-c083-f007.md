@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务收益率的工作流编排
-meta_description: 水务相关收益率与行情数据主要来自水务企业的生产运营系统、市政供水监管平台、第三方水文与能耗监测终端。核心营收与成本数据按日更新，管网损耗、供水单价等关联数据
+meta_description: 水务收益率的工作流编排：水务收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 水务、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

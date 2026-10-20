@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件融资日报的模型接入与配置
-meta_description: 汽车零部件融资日报的数据主要来源于地方供应链金融服务平台、汽车产业集群的融资备案系统、第三方供应链数据服务商。更新节奏为每日凌晨更新前一日的全量融资交易记录
+meta_description: 汽车零部件融资日报的模型接入与配置：汽车零部件融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 汽车零部件、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

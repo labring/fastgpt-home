@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程营销内容的向量模型与索引
-meta_description: 金融机构针对基建工程的营销内容的数据来源包含公开招投标平台的中标公示、招标文件，内部营销物料库的项目画册、方案书，以及项目执行档案中的施工日志、验收报告。数
+meta_description: 基建工程营销内容的向量模型与索引：基建工程营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 基建工程、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

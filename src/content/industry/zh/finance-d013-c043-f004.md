@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产融资日报的向量模型与索引
-meta_description: 商业地产融资日报的数据来源包括各地住建部门的项目融资备案系统、商业银行内部信贷台账及行业信息平台的每日报送。更新节奏为每日更新，单条日报文档为结构化记录，包
+meta_description: 商业地产融资日报的向量模型与索引：商业地产融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 商业地产、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

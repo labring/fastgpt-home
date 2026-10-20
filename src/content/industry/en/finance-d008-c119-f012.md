@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Comprehensive
-meta_description: Data for comprehensive service intelligent due diligence reports comes from industrial and commercial public disclosure systems, credit reporting
+meta_description: Model Integration and Configuration for Comprehensive Service Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

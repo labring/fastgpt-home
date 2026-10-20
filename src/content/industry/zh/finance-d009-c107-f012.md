@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力研报检索的模型接入与配置
-meta_description: 电力行业研报主要来自中国电力企业联合会、区域电网公司公开披露文件及专业能源咨询机构报告，更新节奏以月度、季度为主，部分政策类研报随政策发布同步更新。文档多为
+meta_description: 电力研报检索的模型接入与配置：电力研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 电力、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

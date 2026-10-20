@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石营销内容的向量模型与索引
-meta_description: 铁矿石相关数据包含结构化与非结构化两类：结构化数据包括现货报价、港口库存、期货行情，非结构化数据涵盖行业研报、营销推广文案、客户跟进记录。数据来源包括大宗商
+meta_description: 铁矿石营销内容的向量模型与索引：铁矿石营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 铁矿石、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

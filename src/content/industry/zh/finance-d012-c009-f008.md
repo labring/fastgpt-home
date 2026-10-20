@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区营销内容的工具调用与插件
-meta_description: 产业园区的营销内容数据主要来源于园区运营管理系统、入驻企业台账、属地产业政策公示平台、园区官方公告栏。各类数据的更新节奏存在差异：入驻企业异动、招商地块余量
+meta_description: 产业园区营销内容的工具调用与插件：产业园区营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 产业园区、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

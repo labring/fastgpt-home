@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的向量模型与索引
-meta_description: 风电融资日报的数据来自区域能源监管平台的项目备案公示、银行授信审批系统的公开披露信息、风电整机商的项目回款公告。更新节奏为每日更新，单条日报文档为结构化条目
+meta_description: 风电融资日报的向量模型与索引：风电融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 风电、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

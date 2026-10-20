@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的多轮对话与提示词
-meta_description: 工程机械研报数据主要来源于公开行业报告、主机厂商公开资料、第三方行业调研数据集。更新节奏分为月度运行数据、季度销量报告、年度产业白皮书，新品参数随发布实时更
+meta_description: 工程机械研报检索的多轮对话与提示词：工程机械研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务投研知识库建设的文档解析与分块
-meta_description: 数据来源包括电商平台后台导出的结构化报表、第三方行业研报PDF、竞品店铺的公开商品页与评价文档、供应链合作方的月度对账文档。更新节奏覆盖实时销售异动、周度竞
+meta_description: 电商服务投研知识库建设的文档解析与分块：电商服务投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 电商服务、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

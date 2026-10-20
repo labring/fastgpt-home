@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理融资日报的向量模型与索引
-meta_description: 水处理融资日报的数据主要来自环保行业监管公示平台、地方公共资源交易中心、水务企业官方公告及行业协会披露信息，每日更新一次。文档以结构化表格为核心载体，附带非
+meta_description: 水处理融资日报的向量模型与索引：水处理融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 水处理、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

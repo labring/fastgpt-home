@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体营销内容的多轮对话与提示词
-meta_description: 半导体营销内容的数据主要来自厂商官方产品手册、晶圆代工报价文档、行业展会公开资料与客户需求调研表。更新节奏分为固定周期与临时调整：产品参数按季度更新，市场动
+meta_description: 半导体营销内容的多轮对话与提示词：半导体营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 半导体、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

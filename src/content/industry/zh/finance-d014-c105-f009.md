@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品财报分析的引用来源与溯源
-meta_description: 生物制品财报数据主要来自境内外证券交易所披露平台、药企官方投资者关系页面、行业第三方合规数据库。更新节奏固定，年度报告需在每年4月底前披露，半年度报告需在8
+meta_description: 生物制品财报分析的引用来源与溯源：生物制品财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 生物制品、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备智能尽调报告的向量模型与索引
-meta_description: 兵器装备智能尽调的数据来源包括军工行业公开披露的装备定型公告、军工集团年度年报、科研院所公开的技术成果文档、行业协会发布的装备动态信息。数据更新节奏分为不定
+meta_description: 兵器装备智能尽调报告的向量模型与索引：兵器装备智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 兵器装备、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

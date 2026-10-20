@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营研报检索的工具调用与插件
-meta_description: 品牌代运营的研报数据主要来自品牌监测机构、电商平台后台、社交媒体舆情分析平台三类渠道。更新节奏以周度为主，部分重点品类的实时监测报告为月度更新。文档结构包含
+meta_description: 品牌代运营研报检索的工具调用与插件：品牌代运营研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 品牌代运营、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

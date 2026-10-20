@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销收益率的HTTP 接口与外部系统
-meta_description: 广告营销领域的收益率与行情日报数据，主要来源于广告投放管理系统、媒体竞价平台的官方API接口。数据更新节奏为每日一次，通常在当日凌晨2点前完成前一日全量投放
+meta_description: 广告营销收益率的HTTP 接口与外部系统：广告营销收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 广告营销、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

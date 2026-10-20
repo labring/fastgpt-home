@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Research and Investment Knowledge
-meta_description: Personal care product research and investment data mainly comes from official brand filing documents, e-commerce platform sales and review data
+meta_description: Deployment and Upgrade of Research and Investment Knowledge Base for Personal Care Products
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

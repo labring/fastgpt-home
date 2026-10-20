@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的多轮对话与提示词
-meta_description: IT服务研报的数据来源为专业IT咨询机构针对金融领域的公开研报、金融行业协会季度监测报告、头部金融IT服务商官方技术文档。更新节奏以季度常规更新为主，核心金
+meta_description: IT 服务研报检索的多轮对话与提示词：IT 服务研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

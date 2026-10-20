@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c105-f005
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Conversation and Prompt Engineering for Biologics
-meta_description: Biologics investment research data mainly comes from public clinical trial databases, drug regulatory agency approval documents, corporate annual
+meta_title: Multi-turn Conversation and Prompt Engineering
+meta_description: Multi-turn Conversation and Prompt Engineering for Biologics Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

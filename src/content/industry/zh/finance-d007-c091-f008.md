@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材收益率的工具调用与插件
-meta_description: 消费建材收益率相关数据的来源为国内区域建材现货流通平台、建材流通行业协会的公开监测数据接口。数据更新节奏分为两类：区域终端报价每12小时同步一次，行业整体收
+meta_description: 消费建材收益率的工具调用与插件：消费建材收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 消费建材、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的工作流编排
-meta_description: 在金融保险理财场景下，航空装备的营销相关数据来源涵盖设计研发文档、试飞测试台账、供应链参数手册及官方营销素材库。数据更新节奏无固定周期，新机型发布、合规文档
+meta_description: 航空装备营销内容的工作流编排：航空装备营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 航空装备、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

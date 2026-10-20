@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险投研知识库建设的部署与升级
-meta_description: 保险投研的数据源包含监管合规文件、上市险企定期经营报告、人身险与财产险产品条款、行业精算参考手册、理赔案例汇编。数据来源覆盖监管机构官网、险企官方披露平台、
+meta_description: 保险投研知识库建设的部署与升级：保险投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 保险、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

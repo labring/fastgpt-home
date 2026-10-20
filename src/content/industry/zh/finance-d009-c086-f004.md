@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务研报检索的向量模型与索引
-meta_description: 汽车服务研报的数据主要来自券商行业研究报告、汽车后市场咨询机构公开文档、主机厂官方服务业务披露文件。更新节奏随研报类型不同，券商常规研报多为月度或季度更新，
+meta_description: 汽车服务研报检索的向量模型与索引：汽车服务研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车服务、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

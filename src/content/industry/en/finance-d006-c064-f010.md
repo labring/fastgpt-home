@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c064-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Film Theater Investment Research
-meta_description: Film theater investment research data primarily comes from theater ticket system APIs, public data from the National Film Special Fund Office
+meta_title: Database and Operations for Film Theater Investment
+meta_description: Database and Operations for Film Theater Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

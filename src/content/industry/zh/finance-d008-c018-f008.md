@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块智能尽调报告的工具调用与插件
-meta_description: 光模块智能尽调报告的数据主要来自通信行业公开标准文档、厂商官方产品规格书、运营商集采公示数据及行业协会监测信息。数据更新节奏随厂商新品发布调整，常规在售品类
+meta_description: 光模块智能尽调报告的工具调用与插件：光模块智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 光模块、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

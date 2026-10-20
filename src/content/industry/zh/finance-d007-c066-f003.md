@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程收益率的分享与嵌入
-meta_description: 房建工程收益率数据来源于住建部门发布的区域造价指导价、项目竣工结算备案档案、建材月度价格监测平台。更新节奏为月度更新建材分项成本数据，季度更新区域整体收益基
+meta_description: 房建工程收益率的分享与嵌入：房建工程收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 房建工程、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

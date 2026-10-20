@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的工作流编排
-meta_description: 装修装饰品类的收益率与行情数据来源包括行业协会发布的成本监测数据、建材供应链平台的公开报价、合作项目的财务台账。数据更新节奏为每日更新，每日凌晨完成全量同步
+meta_description: 装修装饰收益率的工作流编排：装修装饰收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 装修装饰、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

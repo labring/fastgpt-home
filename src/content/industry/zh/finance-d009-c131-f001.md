@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰研报检索的HTTP 接口与外部系统
-meta_description: 装修装饰研报的数据主要来源于行业协会发布的行业报告、上市装修企业的公开项目复盘、第三方建材供应链的实时监测数据。更新节奏分为固定周期与实时两类：月度发布行业
+meta_description: 装修装饰研报检索的HTTP 接口与外部系统：装修装饰研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 装修装饰、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

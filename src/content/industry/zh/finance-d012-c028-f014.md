@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的表单与交互
-meta_description: 面向金融行业的动力煤营销内容，其数据主要来源于国内主要煤炭生产企业的出货台账、沿海核心港口的装卸作业记录、行业监测机构的周度供需调研数据。更新节奏方面，生产
+meta_description: 动力煤营销内容的表单与交互：动力煤营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 动力煤、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

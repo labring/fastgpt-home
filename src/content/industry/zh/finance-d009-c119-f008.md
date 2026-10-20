@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务研报检索的工具调用与插件
-meta_description: 综合服务研报检索的数据来源包括券商公开研报、行业协会月度/季度报告、上市公司定期公告及监管文件。数据更新节奏随来源不同区分，券商研报为工作日更新，行业报告按
+meta_description: 综合服务研报检索的工具调用与插件：综合服务研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 综合服务、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

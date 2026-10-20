@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力营销内容的工作流编排
-meta_description: 热力数据来自金融机构合作的公用事业企业计量采集系统，包含楼栋、换热站、终端用户的用热计量信息，用于获客营销场景。更新频率按节点覆盖范围不同，从15分钟到1小
+meta_description: 热力营销内容的工作流编排：热力营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 热力、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

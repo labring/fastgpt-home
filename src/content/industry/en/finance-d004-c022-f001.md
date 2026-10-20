@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Internal Policy
-meta_description: The data for internal policy compliance scenarios comes primarily from enterprise internal compliance management systems, scanned paper policy
+meta_description: HTTP Interfaces and External Systems for Internal Policy Compliance
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

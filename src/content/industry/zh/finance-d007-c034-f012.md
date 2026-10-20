@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械收益率的模型接入与配置
-meta_description: 医疗器械收益率与行情相关数据的来源包括全国医用耗材集中采购平台、医疗器械上市企业公开披露信息及合规第三方医药数据接口。数据更新节奏为每日凌晨完成前一日全量同
+meta_description: 医疗器械收益率的模型接入与配置：医疗器械收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 医疗器械、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

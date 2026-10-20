@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采收益率的多轮对话与提示词
-meta_description: 油气开采收益率相关数据主要来源于行业生产监测系统、能源行业公开统计数据库及作业单元上报数据。数据更新节奏为每日凌晨更新前一日的全量核算信息，文档以结构化表格
+meta_description: 油气开采收益率的多轮对话与提示词：油气开采收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 油气开采、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的文档解析与分块
-meta_description: 铁矿石融资日报数据主要来自国内沿海港口仓储系统、钢铁行业现货交易平台及大连商品交易所的每日结算报告。数据更新节奏为每日凌晨发布前一日完整日报。文档多为PDF
+meta_description: 铁矿石融资日报的文档解析与分块：铁矿石融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 铁矿石、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

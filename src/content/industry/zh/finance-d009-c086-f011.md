@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务研报检索的文档解析与分块
-meta_description: 汽车服务研报属于金融保险领域的细分数据，主要来自行业协会公开统计、主机厂官方发布的售后政策与车型参数、第三方咨询机构的门店运营调研，以及线下门店的运营日志脱
+meta_description: 汽车服务研报检索的文档解析与分块：汽车服务研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 汽车服务、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

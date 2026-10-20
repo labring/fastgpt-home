@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 竞对报价竞价的知识库检索与召回
-meta_description: 竞对报价数据主要来源于公开招投标公告、竞对手工上报的投标文件、行业合规备案的报价数据库及企业历史中标归档文件。数据更新随招投标项目周期推进，单个项目的报价文
+meta_description: 竞对报价竞价的知识库检索与召回：竞对报价竞价的知识库检索与召回，涵盖配置与验证建议
 keywords: 竞对报价、竞价与投标报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

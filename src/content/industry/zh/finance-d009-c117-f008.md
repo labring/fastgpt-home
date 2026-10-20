@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造研报检索的工具调用与插件
-meta_description: 纺织制造研报的数据来源包括行业协会公开报告、券商轻工组专项研报、海关进出口纺织品类统计数据、上市纺织企业定期报告。更新节奏覆盖常规周报、月报、季报，以及棉花
+meta_description: 纺织制造研报检索的工具调用与插件：纺织制造研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 纺织制造、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

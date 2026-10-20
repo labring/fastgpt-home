@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路营销内容的部署与升级
-meta_description: 铁路公路营销内容的数据主要来自线路运营系统、车站票务系统、货运调度平台，以及营销团队上传的定制化推广素材。数据更新节奏分为固定周期与临时触发两类：日常运营文
+meta_description: 铁路公路营销内容的部署与升级：铁路公路营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 铁路公路、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

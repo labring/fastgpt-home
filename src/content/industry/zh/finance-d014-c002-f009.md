@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务财报分析的引用来源与溯源
-meta_description: 专业服务场景下的财报数据，主要来自交易所公开披露平台、专业财经数据库及上市公司官方公告。数据更新遵循固定监管披露节奏，年度报告、季度报告按要求固定时点发布，
+meta_description: 专业服务财报分析的引用来源与溯源：专业服务财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 专业服务、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

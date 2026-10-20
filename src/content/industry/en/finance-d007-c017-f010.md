@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c017-f010
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Optoelectronics Yield and Market
-meta_description: Market and yield data for the optoelectronics category is primarily sourced from domestic stock exchange public market APIs and segmented category
+meta_title: Database and Operations for Optoelectronics Yield
+meta_description: Database and Operations for Optoelectronics Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

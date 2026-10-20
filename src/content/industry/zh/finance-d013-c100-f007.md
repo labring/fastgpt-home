@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理融资日报的工作流编排
-meta_description: 物业管理融资日报的数据来源于物业收费系统、银行流水台账、房企融资对接平台的每日推送，更新节奏为每日T+1生成前一日的汇总文档，常见格式为CSV或单工作表Ex
+meta_description: 物业管理融资日报的工作流编排：物业管理融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 物业管理、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

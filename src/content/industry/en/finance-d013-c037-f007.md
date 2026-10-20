@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Satellite Communications
-meta_description: Data sources for satellite communications financing daily reports include global aerospace industry monitoring databases, public announcements from
+meta_description: Workflow Orchestration for Satellite Communications Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

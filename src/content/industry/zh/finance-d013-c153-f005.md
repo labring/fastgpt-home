@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的多轮对话与提示词
-meta_description: 风电融资日报的数据来源为公开的风电项目融资备案信息、金融机构授信公告、行业协会披露的融资动态。更新节奏为每日更新，覆盖当日发布的最新风电融资项目信息。文档结
+meta_description: 风电融资日报的多轮对话与提示词：风电融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 风电、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

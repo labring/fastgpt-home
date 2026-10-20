@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖融资日报的文档解析与分块
-meta_description: 水产养殖融资日报的数据来源为养殖主体的每日生产台账、区域水产收购商的当日报价汇总、融资申请的当日提交记录。更新节奏为每日固定时间更新当日全量数据，文档多为结
+meta_description: 水产养殖融资日报的文档解析与分块：水产养殖融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 水产养殖、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

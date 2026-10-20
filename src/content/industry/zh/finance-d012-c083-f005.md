@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务营销内容的多轮对话与提示词
-meta_description: 水务营销相关的数据主要来源于水务运营业务系统、官方服务渠道及第三方公开信息。核心数据源包括供水调度系统的管网运行数据、客户服务中心的用户咨询工单、线下缴费记
+meta_description: 水务营销内容的多轮对话与提示词：水务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

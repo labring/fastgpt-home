@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的工具调用与插件
-meta_description: 水泥研报的数据主要来自中国建筑材料联合会、各省市住建部门、上市水泥企业定期报告及专业建材咨询机构。公开研报的更新节奏为：每周更新区域水泥价格数据，月度更新全
+meta_description: 水泥研报检索的工具调用与插件：水泥研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 水泥、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

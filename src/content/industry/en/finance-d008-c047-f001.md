@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for State-owned Large
-meta_description: Data mainly comes from state-owned large bank internal credit management systems, People's Bank of China credit reporting interfaces, regulatory
+meta_description: HTTP Interfaces and External Systems for State-owned Large Bank Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

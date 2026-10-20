@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤投研知识库建设的引用来源与溯源
-meta_description: 焦煤投研数据主要来自国家能源局、中国煤炭工业协会、主产区地方工信部门、大连商品交易所及第三方大宗商品资讯平台。更新节奏覆盖日度现货报价、周度港口库存、月度产
+meta_description: 焦煤投研知识库建设的引用来源与溯源：焦煤投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 焦煤、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

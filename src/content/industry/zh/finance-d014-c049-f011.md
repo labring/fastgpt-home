@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程财报分析的文档解析与分块
-meta_description: 基建工程财报分析的数据主要来自上市公司经审计的年度、半年度财报，PPP项目专项财务报告，以及工程结算台账、招投标备案文件。数据更新节奏随报告节点而定，年度财
+meta_description: 基建工程财报分析的文档解析与分块：基建工程财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 基建工程、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c131-f001
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Decoration Industry
-meta_description: The data for decoration industry research reports comes primarily from industry reports released by industry associations, public project
+meta_title: HTTP Interfaces and External Systems for Decoration
+meta_description: HTTP Interfaces and External Systems for Decoration Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ The multi-dimensional structured fields and differentiated update cycles of deco
 > The parameter values provided on this page are common recommended starting points for configuration setup. Actual values are affected by material forms, data volume, and business rules. Specific issues require targeted analysis, and testing with internal samples is recommended before finalizing settings.
 
 ## Three Common Errors
-- Symptom: HTTP request returns empty results or mismatched search fields. Cause: No placeholder rules for variable input parameters are configured, making it impossible to dynamically pass search conditions such as decoration category and region.
+- Symptom: HTTP request returns empty results or mismatched search fields. Cause: No pending verification rules for variable input parameters are configured, making it impossible to dynamically pass search conditions such as decoration category and region.
 - Symptom: Research report content stored in the MySQL database displays garbled text. Cause: The database connection character set is not configured as `utf8mb4`, so Chinese and special symbols cannot be parsed correctly.
 - Symptom: FastGPT calls the interface and returns a 403 status code, but the call via Postman works normally. Cause: The `User-Agent` or `Authorization` parameters in the request header are not configured correctly, failing to match the interface's verification rules.
 

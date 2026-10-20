@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的多轮对话与提示词
-meta_description: 煤化工融资日报的数据来源涵盖国内煤化工项目备案公示平台、地方发改委融资批复公告、商业银行对公授信披露信息及煤炭行业专业资讯机构的融资统计。更新节奏为每个工作
+meta_description: 煤化工融资日报的多轮对话与提示词：煤化工融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 煤化工、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c004-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 专用设备营销内容的HTTP 接口与外部系统
-meta_description: 专用设备的营销相关数据来源于线下网点部署的智能营销终端、自助办理设备等硬件，包含设备运行日志、营销素材投放记录与用户交互数据。数据更新节奏分为两类：营销素材
+meta_title: 专用设备营销内容的HTTP接口与外部系统
+meta_description: 专用设备营销内容的HTTP接口与外部系统：专用设备营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 专用设备、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

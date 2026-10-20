@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥营销内容的表单与交互
-meta_description: 水泥品类的数据主要来自生产企业的质检报告、供应链台账、工地需求报备系统三类来源，金融机构获取该类数据用于供应链金融服务的营销获客。更新节奏分为两类：生产与库
+meta_description: 水泥营销内容的表单与交互：水泥营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 水泥、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -23,7 +23,7 @@ date_modified: 2026-09-15
 ## 配置怎么定
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
-| `form_initial_values` | `{"cement_grade": "P.O42.5", "last_sync": "{{datetime.utcnow()}}"}` | 预设行业通用水泥标号，减少用户输入成本，同步最新数据更新时间 |
+| `form_initial_values` | `{"cement_grade": "P.O42.5", "last_sync": "待核验值"}` | 预设行业通用水泥标号，减少用户输入成本，同步最新数据更新时间 |
 | `global_variable_default_value` | `{"stock_threshold": 500, "unit": "吨"}` | 为供应链金融营销的全局变量预设初始值，避免未初始化报错 |
 | `conditional_branch_trigger` | `基于GPT输出的字段匹配` | 匹配水泥标号、需求吨数等字段，触发不同融资方案的营销内容分支 |
 | `form_submit_timeout` | `30 秒` | 适配水泥供应链数据接口的响应时长，避免超时报错 |

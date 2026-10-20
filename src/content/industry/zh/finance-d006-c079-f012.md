@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢投研知识库建设的模型接入与配置
-meta_description: 普钢投研数据的数据源包括中国钢铁工业协会公开统计数据、钢厂官方月度运营简报、上海期货交易所普钢期货盘面数据、券商行业研报。更新节奏分三类：现货价格数据日度更
+meta_description: 普钢投研知识库建设的模型接入与配置：普钢投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 普钢、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Optical Module Investment
-meta_description: Optical module investment research data is primarily sourced from manufacturer public specifications, third-party industry test reports, supply chain
+meta_description: Vector Models and Indexing for Optical Module Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

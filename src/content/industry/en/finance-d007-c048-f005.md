@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Urban
-meta_description: Data for urban commercial bank yield and market daily reports primarily comes from daily deposit and loan, wealth management product revenue
+meta_description: Multi-turn Dialogue and Prompt Engineering for Urban Commercial Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

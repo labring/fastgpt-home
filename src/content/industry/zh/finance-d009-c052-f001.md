@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股研报检索的HTTP 接口与外部系统
-meta_description: 多元控股的研报数据主要来自集团内部各业务板块子公司的定期研报、跨行业合作机构的公开研报整合。数据更新节奏随子公司业务节点与行业研报发布周期同步，无固定统一的
+meta_description: 多元控股研报检索的HTTP 接口与外部系统：多元控股研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 多元控股、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

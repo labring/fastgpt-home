@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Diversified Financial
-meta_description: Data for diversified financial sector financial reports primarily comes from public disclosures of non-bank financial institutions’ annual and
+meta_description: Document Parsing and Chunking for Diversified Financial Sector Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

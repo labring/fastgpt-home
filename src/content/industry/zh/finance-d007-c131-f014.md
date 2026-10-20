@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的表单与交互
-meta_description: 装修装饰收益率与行情相关数据主要来源于当地住建部门发布的装修造价指数、建材供应商的报价台账、装修施工企业的项目结算数据。数据更新存在分层节奏：核心建材的日度
+meta_description: 装修装饰收益率的表单与交互：装修装饰收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 装修装饰、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

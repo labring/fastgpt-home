@@ -7658,5 +7658,105 @@
     "publicPath": "/reference/vector-db-backends",
     "sourceType": "官方文档",
     "minutes": 5
+  },
+  {
+    "identity": "en|/guide/app-migration-across-envs",
+    "title": "Moving Apps Between Environments: What Export, Templates and Copies Carry Over",
+    "description": "Moving Apps Between Environments: What Export, Templates and Copies Carry Over When this decision has to be made You must make this decision when your bus…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/app-migration-across-envs",
+    "sourceType": "深度场景内容",
+    "minutes": 19
+  },
+  {
+    "identity": "en|/guide/chat-api-session-and-run-detail",
+    "title": "Integrating Through the Chat API: Sessions, History and Per-Run Details",
+    "description": "Integrating Through the Chat API: Sessions, History and Per-Run Details When this becomes a decision You face this decision when you integrate chat capabi…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/chat-api-session-and-run-detail",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/guide/cpu-arch-and-image-selection",
+    "title": "Deployment Architecture: Images and Trade-offs on x86 and ARM Servers",
+    "description": "Deployment Architecture: Images and Trade-offs on x86 and ARM Servers When this decision has to be made You must make this decision when you first plan en…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/cpu-arch-and-image-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 19
+  },
+  {
+    "identity": "en|/guide/history-rounds-selection",
+    "title": "Chat History Depth: How Many Rounds to Carry, Where to Cut and When to Use Variables",
+    "description": "Chat History Depth: How Many Rounds to Carry, Where to Cut and When to Use Variables When this decision has to be made When your enterprise builds multi-t…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/history-rounds-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 24
+  },
+  {
+    "identity": "en|/guide/kb-import-method-selection",
+    "title": "Knowledge Base Import Options: Local Files, Web Sync, Third-Party Sources and the API",
+    "description": "Knowledge Base Import Options: Local Files, Web Sync, Third-Party Sources and the API When this decision has to be made This decision is mandatory when yo…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/kb-import-method-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 21
+  },
+  {
+    "identity": "en|/guide/kb-processing-model-selection",
+    "title": "Knowledge Base Processing Models: What Text, Index and Image Models Each Handle",
+    "description": "Knowledge Base Processing Models: What Text, Index and Image Models Each Handle When this decision has to be made You must make this selection when your e…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/kb-processing-model-selection",
+    "sourceType": "深度场景内容",
+    "minutes": 22
+  },
+  {
+    "identity": "en|/guide/kb-retrieval-miss-diagnosis",
+    "title": "When the Knowledge Base Has the Answer but Search Misses It: A Layer-by-Layer Diagnosis",
+    "description": "When the Knowledge Base Has the Answer but Search Misses It: A Layer-by-Layer Diagnosis When this becomes a decision Your enterprise uses the knowledge ba…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/kb-retrieval-miss-diagnosis",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/guide/qa-pair-vs-chunk-index",
+    "title": "Q&A Pairs or Plain Chunks: Which Data Shape Fits Which Content",
+    "description": "Q&A Pairs or Plain Chunks: Which Data Shape Fits Which Content When this decision has to be made You must make this decision when you build or iterate a k…",
+    "category": "troubleshoot",
+    "locale": "en",
+    "publicPath": "/guide/qa-pair-vs-chunk-index",
+    "sourceType": "深度场景内容",
+    "minutes": 20
+  },
+  {
+    "identity": "en|/reference/embedding-model-reference",
+    "title": "FastGPT Built-in Embedding Models: Parameter Reference",
+    "description": "FastGPT Built-in Embedding Models: Parameter Reference This page lists the two length parameters registered for the 21 embedding models built into fastgpt…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/embedding-model-reference",
+    "sourceType": "官方文档",
+    "minutes": 5
+  },
+  {
+    "identity": "en|/reference/llm-quote-budget-bands",
+    "title": "FastGPT Chat Models by Quote Budget",
+    "description": "FastGPT Chat Models by Quote Budget quoteMaxToken is a chat model's quote budget: how many tokens the retrieved knowledge base content may take up in one…",
+    "category": "reference",
+    "locale": "en",
+    "publicPath": "/reference/llm-quote-budget-bands",
+    "sourceType": "官方文档",
+    "minutes": 4
   }
 ]

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询融资日报的模型接入与配置
-meta_description: 工程咨询融资日报的数据主要来源于工程咨询机构的项目融资台账、合作银行的授信审批记录、地方发改委公开的基建项目融资公示。更新节奏为每日更新，覆盖前一自然日的新
+meta_description: 工程咨询融资日报的模型接入与配置：工程咨询融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 工程咨询、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

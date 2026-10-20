@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 征信报告风控的向量模型与索引
-meta_description: 征信报告的数据来源包括央行征信中心、合作商业银行、消费金融机构及部分公共服务机构。更新节奏随数据提供方不同，从T+1到T+7不等。文档多为固定格式的PDF或
+meta_description: 征信报告风控的向量模型与索引：征信报告风控的向量模型与索引，涵盖配置与验证建议。
 keywords: 征信报告、风控与授信材料审核、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

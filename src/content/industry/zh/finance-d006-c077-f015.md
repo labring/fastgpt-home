@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区投研知识库建设的部署与升级
-meta_description: 这个品类的数据来源包括景区运营管理系统导出的客流、营收、业态运营报表，文旅主管部门的政策公示文件，景区官方公众号、官网发布的公告，以及第三方文旅舆情监测数据
+meta_description: 旅游景区投研知识库建设的部署与升级：旅游景区投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 旅游景区、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

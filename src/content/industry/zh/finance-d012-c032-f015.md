@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的部署与升级
-meta_description: 数据来源包含行业协会公开台账、供应商实时报价接口、第三方化工数据标准化接口。更新节奏为每日更新现货报价，每旬更新供需平衡数据，每月更新合规检测报告。文档结构
+meta_description: 化学原料营销内容的部署与升级：化学原料营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 化学原料、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

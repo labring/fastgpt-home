@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的HTTP 接口与外部系统
-meta_description: 城商行研报检索的数据主要来自本行研究部产出的区域金融、普惠金融类文档，以及合作第三方机构提供的城商行细分赛道研报。更新节奏为每周更新重点赛道文档，每月更新全
+meta_description: 城商行研报检索的HTTP 接口与外部系统：城商行研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 城商行、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

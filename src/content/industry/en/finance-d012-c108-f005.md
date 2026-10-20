@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for E-commerce
-meta_description: E-commerce service marketing content data in financial scenarios primarily originates from the product management module of affiliated e-commerce
+meta_description: Multi-turn Dialogue and Prompt Engineering for E-commerce Service Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

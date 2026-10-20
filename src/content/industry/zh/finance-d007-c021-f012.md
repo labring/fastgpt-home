@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合收益率的模型接入与配置
-meta_description: 该品类的数据来源于合规的多源金融行情与收益报送接口，覆盖固定收益、权益、另类等多类非标准化资产。更新节奏为每日固定时段完成全量数据同步，当日发布当日报送内容
+meta_description: 其他综合收益率的模型接入与配置：其他综合收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 其他综合、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

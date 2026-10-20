@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务财报分析的工作流编排
-meta_description: 教育服务类财报数据主要来自机构自主编制的办学收支报告、属地教育主管部门公示的合规备案材料，以及年度审计报告。数据更新节奏以季度为核心周期，部分运营类细分数据
+meta_description: 教育服务财报分析的工作流编排：教育服务财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 教育服务、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

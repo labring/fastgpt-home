@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美研报检索的模型接入与配置
-meta_description: 面向金融/保险/理财领域的医美研报，数据来源包括中国整形美容协会发布的行业分析文档、合规医美机构公开的季度运营数据、医美耗材厂商的产品技术资料、地方卫健委发
+meta_description: 医美研报检索的模型接入与配置：医美研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 医美、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

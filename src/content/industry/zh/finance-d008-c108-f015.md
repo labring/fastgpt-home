@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务智能尽调报告的部署与升级
-meta_description: 电商服务智能尽调报告的数据主要来自电商平台开放API、商家后台导出的运营报表、第三方电商合规监测工具。数据更新节奏分两类：交易流水、用户评价数据按小时同步更
+meta_description: 电商服务智能尽调报告的部署与升级：电商服务智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 电商服务、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

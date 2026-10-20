@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线财报分析的向量模型与索引
-meta_description: 影视院线财报数据来自院线运营系统的票房结算报表、影院端的每日营收日志、上游影视版权的分账协议文档、季度及年度官方披露的运营报告。更新节奏分为三类：月度票房快
+meta_description: 影视院线财报分析的向量模型与索引：影视院线财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 影视院线、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

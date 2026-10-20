@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属财报分析的工具调用与插件
-meta_description: 工业金属财报相关数据包含多类来源：境内外上市公司公开披露的季度/年度财报、伦敦金属交易所（LME）、上海期货交易所（SHFE）等机构的现货与期货交易数据、专
+meta_description: 工业金属财报分析的工具调用与插件：工业金属财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 工业金属、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤收益率的对话日志与审计
-meta_description: 化纤品类的行情数据主要来自国内化纤行业协会公开报告、大宗商品现货交易平台报价、期货交易所结算数据，更新节奏以日度为主，核心现货与期货行情每日更新，行业开工水
+meta_description: 化纤收益率的对话日志与审计：化纤收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 化纤、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美财报分析的工作流编排
-meta_description: 医美行业财报数据来源包含医美机构内部经营台账、行业协会公开统计报表、上市公司定期报告三类。公开财报按季度更新，机构内部台账按月更新。文档结构包含营收分类（手
+meta_description: 医美财报分析的工作流编排：医美财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 医美、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

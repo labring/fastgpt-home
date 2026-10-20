@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件收益率的工具调用与插件
-meta_description: 这个品类的数据主要来自公开元器件交易平台、行业协会的公开数据接口，以及合规的现货交易渠道。数据更新节奏分为两类：现货实时报价每15分钟刷新一次，挂牌交易的合
+meta_description: 电子元件收益率的工具调用与插件：电子元件收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 电子元件、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

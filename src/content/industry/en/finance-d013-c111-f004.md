@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexes for Livestock and Poultry Farming
-meta_description: Livestock and poultry farming financing daily report data comes from breeding monitoring data submitted by local animal husbandry and veterinary
+meta_description: Vector Models and Indexes for Livestock and Poultry Farming Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

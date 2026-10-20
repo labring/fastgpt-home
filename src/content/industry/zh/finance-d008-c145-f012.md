@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备智能尽调报告的模型接入与配置
-meta_description: 通信设备的智能尽调数据来源包括运营商运维管理平台、设备自带网管系统导出文件、第三方通信设备监控工具的采集结果。数据更新节奏分为三类：核心运行参数实时更新，告
+meta_description: 通信设备智能尽调报告的模型接入与配置：通信设备智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 通信设备、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

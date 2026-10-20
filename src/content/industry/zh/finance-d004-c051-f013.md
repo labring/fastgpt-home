@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的知识库检索与召回
-meta_description: 处罚案例数据主要来源于监管机构公开的正式处罚决定书、行业自律组织发布的合规通报，以及企业内部合规部门归档的处罚执行记录。更新无固定周期，随监管通报发布、内部
+meta_description: 处罚案例合规的知识库检索与召回：处罚案例合规的知识库检索与召回，涵盖配置与验证建议
 keywords: 处罚案例、合规与内部制度问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的表单与交互
-meta_description: 免税营销相关数据主要来自免税运营商官方商品库、离岛免税政策公告文档、金融机构合作的离岛购物用户表单、免税分期产品参数库。商品SKU与分期产品数据每周同步更新
+meta_description: 免税营销内容的表单与交互：免税营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 免税、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

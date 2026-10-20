@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工收益率的对话日志与审计
-meta_description: 煤化工收益率与行情日报的数据来源为国内大宗商品现货交易平台公开数据、行业协会监测数据及期货盘面行情数据。更新节奏为每日国内大宗商品市场收盘后1至2小时生成当
+meta_description: 煤化工收益率的对话日志与审计：煤化工收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 煤化工、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料研报检索的部署与升级
-meta_description: 饲料研报的数据主要来源于农业农村部饲料工业中心发布的行业监测数据、饲料原料现货与期货市场公开报价文档、行业协会月度运行简报、上市饲料企业的定期经营公告。更新
+meta_description: 饲料研报检索的部署与升级：饲料研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 饲料、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

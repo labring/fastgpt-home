@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Aquaculture Marketing Content
-meta_description: Aquaculture marketing content data mainly comes from internal enterprise aquaculture operation manuals, pond patrol records, feed and medication
+meta_description: Vector Models and Indexing for Aquaculture Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

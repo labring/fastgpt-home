@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务财报分析的引用来源与溯源
-meta_description: 综合服务类财报分析的数据主要来自境内外证券交易所公开披露的企业定期报告、临时公告及官方财报文件。数据更新节奏遵循披露周期，季度报告每季度末后披露，年度报告次
+meta_description: 综合服务财报分析的引用来源与溯源：综合服务财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 综合服务、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

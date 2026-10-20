@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药收益率的工作流编排
-meta_description: 化学制药领域的收益率相关数据主要来源于上市医药企业公开披露的定期报告、医药供应链监测数据平台、药品中标价格数据库。数据更新节奏存在差异：定期报告按季度发布，
+meta_description: 化学制药收益率的工作流编排：化学制药收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 化学制药、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -27,7 +27,7 @@ date_modified: 2026-09-15
 | `postgresql_connection_timeout` | `30 秒` | 化学制药数据库表数据量较大，30秒可覆盖常规数据拉取时长，避免超时中断 |
 | `join_key` | `enterprise_code + product_name` | 化学制药数据需关联企业与产品维度，该组合键可唯一匹配跨数据源的同一条业务数据 |
 | `data_clean_unit_convert` | `统一为元/千克（原料）、元/粒（制剂）` | 解决不同数据源的单位不一致问题，确保收益率计算的基准统一 |
-| `variable_reference_format` | `{{datasetId}}` | 符合工作流的变量引用规范，避免格式错误 |
+| `variable_reference_format` | `待核验值` | 符合工作流的变量引用规范，避免格式错误 |
 | `retry_max_count` | `3 次` | 应对网络波动或数据源临时不可用的情况，减少工作流失败率 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子收益率的多轮对话与提示词
-meta_description: 军工电子行业的收益率与行情数据主要来源为中证指数有限公司发布的军工电子行业指数行情、沪深北证券交易所公开交易行情接口、军工电子产业链企业的公开经营数据接口。
+meta_description: 军工电子收益率的多轮对话与提示词：军工电子收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 军工电子、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

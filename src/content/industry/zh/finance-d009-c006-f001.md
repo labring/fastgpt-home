@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的HTTP 接口与外部系统
-meta_description: 面向金融投研、保险产品研发、理财顾问服务的中药研报数据，主要来源于国家中医药管理局公开文件、中医药学术期刊汇编、中药材产业调研资料及药企研发文档。更新节奏分
+meta_description: 中药研报检索的HTTP 接口与外部系统：中药研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 中药、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

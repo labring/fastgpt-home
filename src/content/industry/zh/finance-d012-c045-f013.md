@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车营销内容的知识库检索与召回
-meta_description: 商用车营销内容的数据主要来源于金融机构合作车企的内部产品参数手册、经销商端营销话术脚本、行业合规评测报告及官方广告审批文件，用于面向商用车车主、物流企业的获
+meta_description: 商用车营销内容的知识库检索与召回：商用车营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 商用车、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

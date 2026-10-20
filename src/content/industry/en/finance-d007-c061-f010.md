@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Construction Machinery Yield
-meta_description: Data related to construction machinery yield rates comes from construction equipment IoT platforms, enterprise ERP systems, equipment leasing
+meta_description: Database and Operations for Construction Machinery Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

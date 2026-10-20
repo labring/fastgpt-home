@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气融资日报的部署与升级
-meta_description: 燃气融资日报的数据来源为燃气经营主体的财务核算系统、银行授信管理接口、上游气源采购结算台账、终端燃气费回款系统。更新节奏为每日生成，覆盖前一自然日的全部融资
+meta_description: 燃气融资日报的部署与升级：燃气融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 燃气、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

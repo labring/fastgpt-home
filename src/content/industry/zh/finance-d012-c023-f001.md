@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的HTTP 接口与外部系统
-meta_description: 在金融/保险/理财领域，军工电子营销内容的数据主要来源于企业对外发布的型号技术手册、竞标方案文档、配套系统接口说明以及官方型号公告。数据更新节奏随新品定型、
+meta_description: 军工电子营销内容的HTTP 接口与外部系统：军工电子营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 军工电子、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

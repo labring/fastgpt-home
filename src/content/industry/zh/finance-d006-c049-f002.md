@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程投研知识库建设的上下文与 token
-meta_description: 基建工程投研的数据来源包括行业定额标准文件、设计院施工图、项目招投标文档、造价分析报告与月度进度台账。更新节奏因文档类型而异，招投标文件随项目进度实时更新，
+meta_description: 基建工程投研知识库建设的上下文与 token：基建工程投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 基建工程、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -23,7 +23,7 @@ date_modified: 2026-09-15
 ## 配置怎么定
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
-| `chunkSize` | 800–1200 字符 | 基建工程文档多含专业表格与长段落，该区间可平衡单段信息完整性与token占用，适配FastGPT 4.9.7版本的解析逻辑 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `similarityTopK` | 前3–5条 | 基建工程字段关联紧密，过多召回会超出上下文token限制，过少则遗漏关键造价或进度信息 |
 | `similarityThreshold` | 0.75–0.85 | 过滤低关联的工程文档内容，避免无关术语占用token，适配专业术语的匹配精度 |
 | `UPLOAD_FILE_MAX_SIZE` | 50–100 MB | 基建工程单份文档（如全套施工图PDF）体积较大，该范围可避免上传超时与token溢出 |

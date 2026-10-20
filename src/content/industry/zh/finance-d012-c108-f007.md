@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务营销内容的工作流编排
-meta_description: 电商服务的营销内容数据主要来源于金融机构的电商运营后台、会员管理系统、客服对话记录与营销活动配置平台。数据更新节奏覆盖实时、每日与按需触发：实时数据包含商品
+meta_description: 电商服务营销内容的工作流编排：电商服务营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 电商服务、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

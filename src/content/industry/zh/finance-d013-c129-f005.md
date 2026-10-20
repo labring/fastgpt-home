@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁融资日报的多轮对话与提示词
-meta_description: 数据来源为租赁公司内部业务管理系统、合作资金方的资金划转与授信通知，每日固定时点更新。文档为结构化表格格式，包含项目标识、主体信息、资金明细、时间节点、状态
+meta_description: 融资租赁融资日报的多轮对话与提示词：融资租赁融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 融资租赁、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

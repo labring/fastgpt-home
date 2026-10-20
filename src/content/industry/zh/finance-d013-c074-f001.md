@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的HTTP 接口与外部系统
-meta_description: 教育服务融资日报的数据主要来自公开融资公告、行业信息披露平台及监管报送数据。更新节奏为每日T+1更新，覆盖前一自然日披露的教育服务领域融资事件。单条数据为结
+meta_description: 教育服务融资日报的HTTP 接口与外部系统：教育服务融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 教育服务、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

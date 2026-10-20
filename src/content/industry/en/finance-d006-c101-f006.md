@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Logistics Investment
-meta_description: Logistics investment research data mainly comes from trunk waybill systems, port manifest platforms, supply chain node monitoring systems, industry
+meta_description: Conversation Logs and Auditing for Logistics Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

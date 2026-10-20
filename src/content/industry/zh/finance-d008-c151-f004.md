@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路智能尽调报告的向量模型与索引
-meta_description: 数据来源包括项目立项审批文件、竣工检测报告、日常养护台账、路网运营调度日志、沿线设施巡检档案。更新节奏分为两类，立项与竣工类文档随项目推进完成更新，日常运维
+meta_description: 铁路公路智能尽调报告的向量模型与索引：铁路公路智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 铁路公路、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

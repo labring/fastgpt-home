@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券智能尽调报告的多轮对话与提示词
-meta_description: 证券尽调数据的来源包括上市公司公开披露的年报、季报、临时公告，监管机构发布的合规文件，以及行业公开研究资料。更新节奏为定期披露节点与实时监管动态触发的更新。
+meta_description: 证券智能尽调报告的多轮对话与提示词：证券智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 证券、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能收益率的工具调用与插件
-meta_description: 储能收益率日报的数据来源包括国家电网电力市场交易系统、储能电站SCADA监控系统、第三方能源数据聚合平台。更新节奏为：日报数据每日凌晨2点完成全量结算更新，
+meta_description: 储能收益率的工具调用与插件：储能收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 储能、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

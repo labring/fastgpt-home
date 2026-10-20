@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Electronic Component Yield Data
-meta_description: Electronic component market data comes primarily from authorized distributors’ real-time inventory quotation systems and industry spot trading
+meta_description: Sharing and Embedding of Electronic Component Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ The real-time performance and field precision requirements of electronic compone
 | `share_auth_enabled` | `true` | Most electronic component quotations are targeted business data; enabling authentication helps control access scope |
 | `share_default_query` | `["component_model", "stock_status"]` | Pass component model and stock status parameters to ensure accurate matching market data is returned |
 | `iframe_max_height` | `700–900px` | Adapt to the conventional layout height of market display cards to avoid page overflow |
-| `share_show_loading` | `true` | Real-time market data loading has delays; displaying a loading placeholder optimizes user experience |
+| `share_show_loading` | `true` | Real-time market data loading has delays; displaying a loading pending verification optimizes user experience |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material forms, data volume, and business rules. Specific issues require individual analysis, and it is recommended to test on your own samples before finalizing settings.
 

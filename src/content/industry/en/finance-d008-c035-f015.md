@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Medical Aesthetics Intelligent
-meta_description: Data sources for medical aesthetics intelligent due diligence reports include: local health commission medical aesthetics institution practice
+meta_description: Deployment and Upgrade for Medical Aesthetics Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

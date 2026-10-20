@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c005-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Personal Care
-meta_description: Personal care product data sources primarily include official brand-compliant filing documents, e-commerce platform authorized product detail pages
+meta_title: Multi-turn Dialogue and Prompt Engineering for Personal
+meta_description: Multi-turn Dialogue and Prompt Engineering for Personal Care Product Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业财报分析的向量模型与索引
-meta_description: 商业物业财报数据主要来自物业运营管理系统、租金收缴台账、业态备案报表及年度审计报告。更新节奏分为月度运营数据、季度经营简报、年度正式财报三类，其中年度正式财
+meta_description: 商业物业财报分析的向量模型与索引：商业物业财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 商业物业、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Consumer Electronics
-meta_description: Consumer electronics marketing content data in financial scenarios mainly comes from official product manuals of partner brands, e-commerce platform
+meta_description: Document Parsing and Chunking for Consumer Electronics Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -23,7 +23,7 @@ Consumer electronics marketing content in financial scenarios has a high proport
 
 | Configuration Item | Recommended Approach | Rationale |
 | --- | --- | --- |
-| `CUSTOM_PARSE_SERVICE_URL` | Fill in the deployed custom parsing service interface address, compatible with FastGPT 4.8.20-fix2 | Consumer electronics marketing documents contain a large number of structured specification tables; custom parsing can accurately identify the binding relationship between parameters and units |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `PARSE_FILE_TIMEOUT_SECONDS` | `120-180 seconds` | Consumer electronics documents often contain multi-page tables and long paragraphs; default timeout durations cannot complete full parsing |
 | `maxChunkSize` | `500-550 characters` | When using BAAI/bge-large-zh-v1.5, the model's native context length is 512 tokens. Chunk length must be adjusted to fit model input limits to avoid semantic truncation |
 | `TABLE_PARSE_ENABLE` | Enabled | Consumer electronics documents contain a large number of structured specification tables; enabling this retains row and column association information |

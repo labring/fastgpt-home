@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子研报检索的向量模型与索引
-meta_description: 光学光电子研报的来源主要为券商研究所、行业第三方机构及上市公司公开披露文件，更新节奏随行业事件、财报周期与技术迭代节点调整，无固定周期，密集时段集中在行业展
+meta_description: 光学光电子研报检索的向量模型与索引：光学光电子研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 光学光电子、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

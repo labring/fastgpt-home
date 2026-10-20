@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺融资日报的工作流编排
-meta_description: 服装家纺融资日报的数据主要来自国内纺织服饰行业供应链金融服务平台、商业银行对公信贷台账，以及服装家纺产业链上下游企业的日常回款报备数据。数据更新节奏为T+1
+meta_description: 服装家纺融资日报的工作流编排：服装家纺融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 服装家纺、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

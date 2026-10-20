@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的对话日志与审计
-meta_description: 用于金融场景的卫星通信收益率相关数据来源于地面测控站的下行链路采集数据、在轨卫星载荷的实时校准数据。更新节奏随地面站下行窗口而定，通常每15分钟至1小时推送
+meta_description: 卫星通信收益率的对话日志与审计：卫星通信收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 卫星通信、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

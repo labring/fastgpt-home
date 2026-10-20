@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的工具调用与插件
-meta_description: 工程咨询的数据主要来源于内部项目台账、招投标公示平台、资质管理系统、现场勘察报告与合规审核文件。数据更新节奏随项目推进与合规要求调整，无固定周期，单个项目文
+meta_description: 工程咨询营销内容的工具调用与插件：工程咨询营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营研报检索的模型接入与配置
-meta_description: 品牌代运营（美容护理品类）的金融场景研报，数据来源包括金融机构的品牌代运营业务台账、公开美容护理行业监测数据集、合作金融品牌的电商后台导出数据。更新节奏以双
+meta_description: 品牌代运营研报检索的模型接入与配置：品牌代运营研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 品牌代运营、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口财报分析的工作流编排
-meta_description: 航运港口财报及运营数据的来源主要包括港口运营主体披露的定期报告、交通运输主管部门发布的行业统计资料，以及港口内部的生产运营台账。数据更新节奏分层，定期财报按
+meta_description: 航运港口财报分析的工作流编排：航运港口财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 航运港口、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

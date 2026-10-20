@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电收益率的分享与嵌入
-meta_description: 风电收益率的数据源来自电网公开调度平台、风电场站运维管理系统，更新节奏为每日凌晨完成前一日全量数据的同步，无临时增量数据推送。单条数据文档包含场站唯一编码、
+meta_description: 风电收益率的分享与嵌入：风电收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 风电、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

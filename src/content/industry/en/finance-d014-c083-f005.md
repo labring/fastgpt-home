@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c083-f005
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Water Utility
-meta_description: Water utility financial report data comes from public disclosure platforms designated by securities regulators and official company announcements.
+meta_title: Multi-turn Dialogue and Prompt Engineering for Water
+meta_description: Multi-turn Dialogue and Prompt Engineering for Water Utility Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ Third, water utility operational metrics have specific units. Prompts must enfor
 Fourth, specialized water utility financial data is stored in designated knowledge base collections. Multi-turn dialogue must associate with the correct collection for retrieval to ensure accurate data sources.
 
 ## How to configure settings
-These configuration items are compatible with FastGPT V4.9.3 and later versions:
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |

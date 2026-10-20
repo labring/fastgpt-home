@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏研报检索的多轮对话与提示词
-meta_description: 供金融投研场景使用的光伏研报，主要来自持牌券商研究所、电力设备行业第三方监测平台、行业协会公开报告。更新节奏随行业政策调整、产业链财报周期及突发事件（如补贴
+meta_description: 光伏研报检索的多轮对话与提示词：光伏研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 光伏、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

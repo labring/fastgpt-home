@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Precious Metals
-meta_description: Precious metals-related data mainly comes from real-time market APIs of compliant precious metals trading venues, and category dynamic documents from
+meta_description: Model Integration and Configuration for Precious Metals Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

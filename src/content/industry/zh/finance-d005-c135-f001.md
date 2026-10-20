@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 账户问题客户服务的HTTP 接口与外部系统
-meta_description: 账户问题客户服务的数据来源于核心账户管理系统、交易流水系统及客户服务工单系统。数据更新随账户操作实时触发，包括余额变动、挂失、解挂、密码重置、交易异常等场景
+meta_description: 账户问题客户服务的HTTP 接口与外部系统：账户问题客户服务的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 账户问题、客户服务与账户咨询、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

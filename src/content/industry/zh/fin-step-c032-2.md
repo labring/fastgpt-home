@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c032-2
 page_type: 行业作业环节页
 article_section: 银行信贷
 is_part_of: FastGPT 技术中心
-meta_title: 应收账款及供应链融资的确认应收账款真实、权属清晰且不存在已知
+meta_title: 应收账款及供应链融资的确认应收账款真实、权属清晰且不存在已知重：哪一部分能交给系统
 meta_description: 应收账款及供应链融资的确认应收账款真实、权属清晰且不存在已知重：哪一部分能交给系统
 keywords: 应收账款及供应链融资、银行信贷、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

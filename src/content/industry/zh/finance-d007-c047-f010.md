@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行收益率的数据库与运维
-meta_description: 国有大行收益率与行情数据主要来源于本行核心业务系统的交易明细台账、全国银行间同业拆借中心的公开行情接口、央行货币政策执行报告数据集。数据更新分为两类：每日收
+meta_description: 国有大行收益率的数据库与运维：国有大行收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 国有大行、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

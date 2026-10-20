@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c054-f010
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for All-in-One AI Platform with
-meta_description: Multi-app routing data has two primary sources: routing rule entries configured in the admin backend, and runtime logs generated during call
+meta_title: Database and Operations for All-in-One AI Platform
+meta_description: Database and Operations for All-in-One AI Platform with Multi-App Routing
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -16,7 +16,7 @@ date_modified: 2026-09-15
 ## Data for This Category
 Multi-app routing data has two primary sources: routing rule entries configured in the admin backend, and runtime logs generated during call processes. Data update cadence follows two patterns: routing rules update when manually modified or synced on a schedule, while runtime logs are written in real time after each call completes.
 
-A single routing data entry has the following document structure: unique identifier `route_id`, source app identifier `source_app_id`, target app ID list `target_app_list`, load balance type `load_balance_type`, weight configuration `weight_map`, and update timestamp `update_time`. 
+A single routing data entry has the following document structure: unique identifier `route_id`, source app identifier `source_app_id`, target app ID list `target_app_list`, load balance type `load_balance_type`, weight configuration `weight_map`, and update timestamp `update_time`.
 
 `target_app_list` is an array type, with elements being app ID strings. The unit for `update_time` is milliseconds.
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨智能尽调报告的HTTP 接口与外部系统
-meta_description: 涂料油墨智能尽调报告的数据主要来源于公开化工原料数据库、生产企业的批次质检报告、行业协会的合规统计数据。数据更新节奏存在差异：原料报价数据每日更新，批次质检
+meta_description: 涂料油墨智能尽调报告的HTTP 接口与外部系统：涂料油墨智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 涂料油墨、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

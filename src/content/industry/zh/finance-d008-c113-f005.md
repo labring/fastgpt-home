@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒智能尽调报告的多轮对话与提示词
-meta_description: 白酒智能尽调报告的数据来源包含白酒生产企业公开披露的年度/季度财报、行业协会发布的产销监测数据、第三方酒水质量检测报告、品牌官方渠道的铺货信息与产品参数文档
+meta_description: 白酒智能尽调报告的多轮对话与提示词：白酒智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 白酒、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

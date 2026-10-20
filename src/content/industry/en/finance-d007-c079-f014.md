@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Carbon Steel Yield Rates
-meta_description: Carbon steel market trend data comes from domestic steel industry spot trading platforms and official market APIs from futures exchanges. There are
+meta_description: Forms and Interactions for Carbon Steel Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

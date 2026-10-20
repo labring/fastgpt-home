@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁融资日报的向量模型与索引
-meta_description: 融资租赁融资日报的数据来自内部业务管理系统、合作征信接口与每日业务台账导出。更新节奏为T+1全量更新前一日业务数据，部分实时履约字段按小时同步。文档多为结构
+meta_description: 融资租赁融资日报的向量模型与索引：融资租赁融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 融资租赁、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

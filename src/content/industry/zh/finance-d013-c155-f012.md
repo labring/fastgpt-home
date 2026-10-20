@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料融资日报的模型接入与配置
-meta_description: 饲料融资日报的数据来自饲料原料贸易商的每日成交台账、畜牧养殖企业的采购结算记录、国内期货市场的饲料原料合约结算数据，以及地方畜牧主管部门的行业融资统计。更新
+meta_description: 饲料融资日报的模型接入与配置：饲料融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 饲料、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子收益率的工作流编排
-meta_description: 消费电子的收益率行情数据来源主要包括天猫、京东等主流电商平台的公开销售数据、品牌官方供货台账，以及第三方供应链平台的报价。数据更新节奏根据SKU优先级区分：
+meta_description: 消费电子收益率的工作流编排：消费电子收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 消费电子、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

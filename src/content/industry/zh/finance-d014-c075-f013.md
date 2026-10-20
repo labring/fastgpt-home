@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车财报分析的知识库检索与召回
-meta_description: 整车财报数据主要来自交易所公开披露的年度报告、季度报告、临时公告，以及车企官网投资者关系板块的官方披露文件。更新节奏为季度报告每季度结束后1-2个月发布，年
+meta_description: 整车财报分析的知识库检索与召回：整车财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 整车、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

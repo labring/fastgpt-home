@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合财报分析的文档解析与分块
-meta_description: 其他综合财报分析的数据主要来自企业公开披露的定期报告、内部管理财报文档，更新节奏以季度、半年度、年度为周期。文档结构包含标准化财务报表模块、非标准化附注说明
+meta_description: 其他综合财报分析的文档解析与分块：其他综合财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 其他综合、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

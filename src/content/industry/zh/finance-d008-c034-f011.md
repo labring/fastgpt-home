@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械智能尽调报告的文档解析与分块
-meta_description: 医疗器械智能尽调报告的数据主要来源于医疗器械注册证、临床试验原始数据、供应商采购清单、合规性审查文件等。更新节奏随文档类型不同有所差异：注册证按周期更新，临
+meta_description: 医疗器械智能尽调报告的文档解析与分块：医疗器械智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 医疗器械、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

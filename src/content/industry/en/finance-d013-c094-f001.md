@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Refining Financing
-meta_description: Data for refining financing daily reports comes from three sources: the internal ERP finance module and supply chain warehouse system of refining
+meta_description: HTTP Interfaces and External Systems for Refining Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

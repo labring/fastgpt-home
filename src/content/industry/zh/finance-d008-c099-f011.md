@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气智能尽调报告的文档解析与分块
-meta_description: 燃气尽调报告的数据主要来自燃气运营企业的月度管网运营报表、每日巡检点位记录、气源采购合同、地方燃气监管部门的公示文件，以及第三方燃气安全检测报告。数据更新节
+meta_description: 燃气智能尽调报告的文档解析与分块：燃气智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 燃气、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

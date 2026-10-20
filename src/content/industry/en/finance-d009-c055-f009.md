@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c055-f009
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Citation Source and Traceability for Air Governance Research
-meta_description: Air governance research report data sources include publicly available monitoring datasets from ecological environment departments, air governance
+meta_title: Citation Source and Traceability for Air Governance
+meta_description: Citation Source and Traceability for Air Governance Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,7 +40,7 @@ Wide variation in document lengths requires segmented retrieval traceability anc
 ## Three Common Misconfigurations
 - Phenomenon: The number of context entries displayed on the interface does not match the actual number of retrieved sources. For example, the interface only shows 30 entries but backend logs show 310 retrieved entries. Cause: The parameter mapping for `recall_top_k` and `rerank_top_k` is not configured correctly. The number of entries filtered in the re-ranking step is not synchronized to the front-end display logic.
 - Phenomenon: Citation traceability is not associated with the corresponding data timestamp, leading to cross-time-period air governance data confusion. For example, yesterday’s monitoring data is bound to today’s research report conclusions. Cause: The mapping rule for the sampling time field is not configured in `source_field_map`, so traceability only relies on the overall release time of the document and cannot match the hourly updates of real-time monitoring data.
-- Phenomenon: Attempting to remove citation output has no effect, or invalid citation formatting remains in the generated results. Cause: The `enable_source_citation` parameter is not correctly disabled, or the preset placeholder code of the citation template is modified incorrectly.
+- Phenomenon: Attempting to remove citation output has no effect, or invalid citation formatting remains in the generated results. Cause: The `enable_source_citation` parameter is not correctly disabled, or the preset pending verification code of the citation template is modified incorrectly.
 
 ## How to Confirm Proper Configuration
 - Check the parsing results after source data is uploaded, verify that the fields configured in `source_field_map` are correctly extracted and displayed.

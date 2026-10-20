@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造智能尽调报告的模型接入与配置
-meta_description: 纺织制造智能尽调报告的数据主要来自海关进出口报关单、工厂生产台账、原料采购质检报告、供应链上下游交易凭证四类。原料采购数据按月同步，生产台账按周更新，海关报
+meta_description: 纺织制造智能尽调报告的模型接入与配置：纺织制造智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 纺织制造、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

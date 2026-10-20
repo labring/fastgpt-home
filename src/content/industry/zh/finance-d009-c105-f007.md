@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品研报检索的工作流编排
-meta_description: 生物制品研报数据主要来自公开医药数据库、药企官方公告、临床研究期刊、第三方医药咨询机构报告。更新节奏随内容类型差异：临床数据随试验节点实时更新，监管政策类随
+meta_description: 生物制品研报检索的工作流编排：生物制品研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 生物制品、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

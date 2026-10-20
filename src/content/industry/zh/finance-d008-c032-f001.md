@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料智能尽调报告的HTTP 接口与外部系统
-meta_description: 化学原料的数据来自行业协会公开监测数据库、海关总署进出口公示文档、生产企业月度产能公示材料。更新节奏分为三类：现货交易价格每日更新，进出口通关数据每周更新，
+meta_description: 化学原料智能尽调报告的HTTP 接口与外部系统：化学原料智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化学原料、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

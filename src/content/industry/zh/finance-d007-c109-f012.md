@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件收益率的模型接入与配置
-meta_description: 电子元件的行情与收益率数据主要来源于分销商公开报价接口、行业供应链数据库以及原厂产品定价公告。数据更新节奏存在差异，高频交易品类的报价数据每小时更新，低频品
+meta_description: 电子元件收益率的模型接入与配置：电子元件收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 电子元件、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

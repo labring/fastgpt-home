@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电营销内容的模型接入与配置
-meta_description: 面向金融获客场景的黑色家电营销相关数据，主要来源于品牌官方产品参数库、主流电商平台商品详情页、金融机构的用户家电消费偏好数据及线下门店营销物料库。数据更新节
+meta_description: 黑色家电营销内容的模型接入与配置：黑色家电营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 黑色家电、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

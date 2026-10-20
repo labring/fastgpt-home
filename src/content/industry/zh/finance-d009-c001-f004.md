@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的向量模型与索引
-meta_description: IT服务行业研报数据主要来自券商研究所、行业协会公开报告、上市企业定期财报及第三方调研机构输出。更新节奏随财报发布周期波动，在季报、年报集中披露期更新密度提
+meta_description: IT 服务研报检索的向量模型与索引：IT 服务研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

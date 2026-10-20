@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Snack Food Investment
-meta_description: Snack food investment research data comes from broker food and beverage industry reports, listed companies’ annual and semi-annual reports, industry
+meta_description: Document Parsing and Chunking for Snack Food Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

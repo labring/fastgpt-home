@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogues and Prompt Engineering for Gas
-meta_description: Gas industry data primarily comes from internal business systems of gas operation enterprises, with four core source types: user gas usage profiles
+meta_description: Multi-turn Dialogues and Prompt Engineering for Gas Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

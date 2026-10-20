@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c098-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Coal Chemical
-meta_description: Coal chemical market and yield data is sourced from domestic coal futures exchanges, industry professional monitoring institutions, and port logistics
+meta_title: Multi-turn Dialogue and Prompt Engineering for Coal
+meta_description: Multi-turn Dialogue and Prompt Engineering for Coal Chemical Industry Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

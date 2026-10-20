@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属收益率的HTTP 接口与外部系统
-meta_description: 小金属行情数据来源于有色金属行业专业大宗商品数据源，更新节奏覆盖每15分钟至每小时的区间，部分小众品种的更新延迟略高于主流品类。数据采用标准化JSON格式封
+meta_description: 小金属收益率的HTTP 接口与外部系统：小金属收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 小金属、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

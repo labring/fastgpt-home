@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务营销内容的文档解析与分块
-meta_description: 通信服务营销内容的数据主要来源于金融机构内部的通信类营销物料系统、活动策划文档库，以及对外投放的短信、电话话术素材导出文件。更新节奏包含定期的金融产品推广更
+meta_description: 通信服务营销内容的文档解析与分块：通信服务营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 通信服务、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

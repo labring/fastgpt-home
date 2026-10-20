@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口财报分析的引用来源与溯源
-meta_description: 航运港口财报相关数据主要来源于港务局官方公开公告、交通运输部月度/年度交通运输统计公报、上市港口企业年度/半年度财报。公开统计数据多为月度汇总，次月上旬更新
+meta_description: 航运港口财报分析的引用来源与溯源：航运港口财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 航运港口、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

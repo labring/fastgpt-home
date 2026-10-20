@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Home Goods Funding Daily Reports
-meta_description: Data sources for home goods funding daily reports include the national light manufacturing industry funding filing ledger, home goods category entries
+meta_description: Workflow Orchestration for Home Goods Funding Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

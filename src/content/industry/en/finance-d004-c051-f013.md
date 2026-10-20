@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Penalty Case Compliance Knowledge Base Retrieval and Recall
-meta_description: Penalty case data primarily comes from official penalty decisions publicly released by regulatory authorities, compliance notices issued by industry
+meta_description: Penalty Case Compliance Knowledge Base Retrieval and Recall
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

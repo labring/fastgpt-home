@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的模型接入与配置
-meta_description: 数据主要来自景区官方公告系统、票务管理后台、游客服务反馈库及周边配套业态接口，区别于金融品类的产品持仓、交易记录类数据。更新节奏随客流周期调整，节假日及活动
+meta_description: 旅游景区营销内容的模型接入与配置：旅游景区营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 旅游景区、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

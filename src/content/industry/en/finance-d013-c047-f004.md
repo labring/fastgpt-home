@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for State-owned Large Bank
-meta_description: Data for state-owned large bank financing daily reports comes from internal credit ledgers, publicly disclosed data from the National Interbank
+meta_description: Vector Models and Indexing for State-owned Large Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石财报分析的多轮对话与提示词
-meta_description: 铁矿石财报分析相关数据主要来自上市矿山企业的季度、年度财报，以及行业协会的公开统计数据。企业财报按季度、年度更新，包含铁矿石业务的营收构成、产量、销量、平均
+meta_description: 铁矿石财报分析的多轮对话与提示词：铁矿石财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 铁矿石、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

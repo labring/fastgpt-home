@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务研报检索的工具调用与插件
-meta_description: 数据来源包括公用事业行业主管部门公开统计数据、水务运营企业公开披露的运营报告、专业水务咨询机构的定制研报。更新节奏分为月度运行监测数据、季度行业分析报告、年
+meta_description: 水务研报检索的工具调用与插件：水务研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 水务、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

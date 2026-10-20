@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的表单与交互
-meta_description: 军工电子相关营销内容的数据主要来源于企业内部研发文档、公开招投标公告、行业标准文档及客户定制需求文档。数据更新节奏随项目节点波动，单个项目周期内可能集中更新
+meta_description: 军工电子营销内容的表单与交互：军工电子营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 军工电子、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

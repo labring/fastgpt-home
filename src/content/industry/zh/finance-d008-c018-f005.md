@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块智能尽调报告的多轮对话与提示词
-meta_description: 光模块的公开数据主要来自通信设备厂商官方规格文档、通信行业标准文件、供应链公开报价与性能参数库。数据更新随厂商新品发布、行业标准迭代不定期触发，单次更新的参
+meta_description: 光模块智能尽调报告的多轮对话与提示词：光模块智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 光模块、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

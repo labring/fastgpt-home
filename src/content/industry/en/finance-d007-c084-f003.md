@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Water Treatment Yield Reports
-meta_description: Data sources include water project operation management systems and online water quality monitoring platforms. Data is updated daily, with summary
+meta_description: Sharing and Embedding for Water Treatment Yield Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

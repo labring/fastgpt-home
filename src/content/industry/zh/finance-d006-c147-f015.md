@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸投研知识库建设的部署与升级
-meta_description: 造纸投研数据来源包括公开券商研报、海关进出口统计数据、原材料现货期货报价、上市企业财报、行业协会发布的月度运行报告。数据更新节奏存在显著差异：现货报价按日更
+meta_description: 造纸投研知识库建设的部署与升级：造纸投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 造纸、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

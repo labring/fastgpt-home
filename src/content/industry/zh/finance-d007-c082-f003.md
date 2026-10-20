@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的分享与嵌入
-meta_description: 水产养殖收益率相关数据主要来源于农业农村部渔业监测站点、区域核心水产批发市场的日度采集，以及规模化养殖基地的物联网终端同步数据。数据更新节奏为每日固定时段推
+meta_description: 水产养殖收益率的分享与嵌入：水产养殖收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 水产养殖、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

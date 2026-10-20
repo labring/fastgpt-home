@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理收益率的模型接入与配置
-meta_description: 大气治理收益率相关数据主要来源于企业大气治理设施运行台账、区域环保补贴公示平台、项目能耗与减排核算报表。数据更新以日报为核心节奏，部分月度汇总数据同步更新。
+meta_description: 大气治理收益率的模型接入与配置：大气治理收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 大气治理、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

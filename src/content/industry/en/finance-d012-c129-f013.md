@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Financial Leasing
-meta_description: Financial leasing marketing content data is sourced primarily from internal product solution libraries, customer acquisition material packs
+meta_description: Knowledge Base Retrieval and Recall for Financial Leasing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

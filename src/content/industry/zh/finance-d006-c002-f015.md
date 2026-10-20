@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务投研知识库建设的部署与升级
-meta_description: 专业服务投研知识库的数据主要来自公开行业研报、监管政策文件、上市企业定期财报、第三方调研数据。数据更新节奏不固定：研报随机构发布每日更新，财报按季度或年度集
+meta_description: 专业服务投研知识库建设的部署与升级：专业服务投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 专业服务、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品投研知识库建设的部署与升级
-meta_description: 饰品投研数据主要来自品牌方官方产品手册、供应链质检报告、行业协会材质标准文档、电商平台商品详情页、第三方鉴定机构证书。更新周期为月度至季度，随新品上线与批次
+meta_description: 饰品投研知识库建设的部署与升级：饰品投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 饰品、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

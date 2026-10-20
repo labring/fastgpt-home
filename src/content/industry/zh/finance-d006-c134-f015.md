@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品投研知识库建设的部署与升级
-meta_description: 调味品投研数据主要来自行业协会月度/季度报告、上市公司定期财报、线下商超与线上渠道的零售监测数据，以及大豆、包装材料等上游原料的价格行情数据。数据包含结构化
+meta_description: 调味品投研知识库建设的部署与升级：调味品投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 调味品、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力营销内容的HTTP 接口与外部系统
-meta_description: 电力营销相关数据来源为电网营销业务系统、智能电表采集终端、线上线下客户服务工单系统。更新节奏分为三类：用电负荷数据每15分钟更新，客户画像标签每日更新，营销
+meta_description: 电力营销内容的HTTP 接口与外部系统：电力营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电力、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

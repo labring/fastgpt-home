@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁收益率的工具调用与插件
-meta_description: 融资租赁收益率相关数据主要来源于租赁公司核心业务系统、行业协会公示的租赁资产登记信息及第三方租赁估值平台。数据更新节奏为每日T+1，当日业务结束后生成前一日
+meta_description: 融资租赁收益率的工具调用与插件：融资租赁收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 融资租赁、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

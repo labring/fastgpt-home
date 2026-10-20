@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理研报检索的引用来源与溯源
-meta_description: 大气治理研报的数据来源包含生态环境部门公开监测数据集、行业协会大气治理白皮书、地方环保专项调研文档。更新节奏分为三类：实时监测数据每小时更新，季度行业研报按
+meta_description: 大气治理研报检索的引用来源与溯源：大气治理研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 大气治理、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

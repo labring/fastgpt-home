@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的HTTP 接口与外部系统
-meta_description: 资金来源KYC的数据主要来自用户提交的银行流水、纳税证明、资产权属文件、交易背景合同等。数据更新节奏为单次核验时一次性提交，无持续更新需求。文档结构多为PD
+meta_description: 资金来源KYC 的HTTP 接口与外部系统：资金来源KYC 的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

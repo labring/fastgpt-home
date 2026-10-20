@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务营销内容的文档解析与分块
-meta_description: 专业服务营销内容的数据主要来自内部营销物料库、客户沟通记录、合作方提供的产品文档。更新节奏涵盖不定期（新理财产品、保险产品上线时更新）、按季度（投研分析报告
+meta_description: 专业服务营销内容的文档解析与分块：专业服务营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 专业服务、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

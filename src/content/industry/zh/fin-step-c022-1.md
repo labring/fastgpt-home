@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c022-1
 page_type: 行业作业环节页
 article_section: 银行信贷
 is_part_of: FastGPT 技术中心
-meta_title: 国际贸易融资的审核信用证和贸易单据的一致性及条件：哪一部分能
-meta_description: 国际贸易融资的审核信用证和贸易单据的一致性及条件：哪一部分能交给系统
+meta_title: 国际贸易融资的审核信用证和贸易单据的一致性及条件：哪一部分能交给系统
+meta_description: 国际贸易融资的审核信用证和贸易单据的一致性及条件：哪一部分能交给系统：国际贸易融资的审核信用证和贸易单据的一致性及条件：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 国际贸易融资、银行信贷、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

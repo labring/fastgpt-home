@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶融资日报的文档解析与分块
-meta_description: 塑料橡胶融资日报数据主要来自大宗商品交易平台、行业仓储协会的仓单登记系统、期货交割仓库的每日报备文件。更新节奏为每个工作日发布单份日报，单份文档覆盖当日全品
+meta_description: 塑料橡胶融资日报的文档解析与分块：塑料橡胶融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 塑料橡胶、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

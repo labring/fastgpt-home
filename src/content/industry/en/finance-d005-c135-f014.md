@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Account Issue Customer Service
-meta_description: Account issue data mainly comes from user account operation logs and synchronized data from the backend core account system. The update cadence is
+meta_description: Forms and Interactions for Account Issue Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

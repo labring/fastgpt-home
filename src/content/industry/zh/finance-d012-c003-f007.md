@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁营销内容的工作流编排
-meta_description: 专业连锁的营销内容数据主要来自总部品牌素材库、各门店上传的本地化物料、区域运营配置的活动模板。数据更新节奏随场景变动：单店本地化物料每周新增调整，区域级活动
+meta_description: 专业连锁营销内容的工作流编排：专业连锁营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 专业连锁、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

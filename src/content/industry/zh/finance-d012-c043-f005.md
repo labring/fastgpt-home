@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产营销内容的多轮对话与提示词
-meta_description: 本场景属于金融/保险/理财领域下的商业地产营销内容赛道，数据来源包括商业体备案信息、招商租赁台账、现场客流监测数据、周边商圈业态报告。更新节奏为租约变更实时
+meta_description: 商业地产营销内容的多轮对话与提示词：商业地产营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 商业地产、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

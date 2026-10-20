@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c151-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Railway and Highway Financing
-meta_description: Railway and highway financing daily report data comes from public disclosure documents of transportation authorities, project announcements from
+meta_title: Vector Models and Indexing for Railway and Highway
+meta_description: Vector Models and Indexing for Railway and Highway Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

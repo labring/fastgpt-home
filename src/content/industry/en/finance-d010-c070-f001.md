@@ -4,8 +4,8 @@ slug: /en/industry/finance-d010-c070-f001
 page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Tender Announcement
-meta_description: Tender announcement data primarily comes from official government procurement network and public resource trading center platforms at all levels.
+meta_title: HTTP Interfaces and External Systems for Tender
+meta_description: HTTP Interfaces and External Systems for Tender Announcement Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

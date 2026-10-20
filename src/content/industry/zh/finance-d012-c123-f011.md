@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的文档解析与分块
-meta_description: 能源金属相关数据主要来自行业协会月度/季度报告、上市公司年度年报、现货交易平台日报、海关进出口统计文档。数据更新节奏覆盖每日（现货报价）、季度（行业供需分析
+meta_description: 能源金属营销内容的文档解析与分块：能源金属营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 能源金属、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

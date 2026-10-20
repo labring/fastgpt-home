@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理智能尽调报告的向量模型与索引
-meta_description: 大气治理智能尽调报告的数据主要来自污染源自动监测设备导出的实时/历史数据、减排项目立项与验收文件、第三方机构出具的污染物检测报告、环保部门公示的合规记录。数
+meta_description: 大气治理智能尽调报告的向量模型与索引：大气治理智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 大气治理、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

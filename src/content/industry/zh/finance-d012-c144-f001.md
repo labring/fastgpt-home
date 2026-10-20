@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c144-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 通信服务营销内容的HTTP 接口与外部系统
-meta_description: 面向金融、保险、理财客户的通信服务营销内容，数据主要来源于运营商短信网关、企业自有语音外呼系统、企信通合规发送平台。数据更新节奏为准实时，单次发送请求的内容
+meta_title: 通信服务营销内容的HTTP接口与外部系统
+meta_description: 通信服务营销内容的HTTP接口与外部系统：通信服务营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 通信服务、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

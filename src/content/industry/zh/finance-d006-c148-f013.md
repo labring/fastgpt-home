@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮投研知识库建设的知识库检索与召回
-meta_description: 数据主要来自门店POS系统导出的营业日报、供应链采购入库单、线下菜单电子档、行业协会公开调研文档。更新节奏差异较大，菜单SKU信息每周更新，客流与营收数据每
+meta_description: 酒店餐饮投研知识库建设的知识库检索与召回：酒店餐饮投研知识库建设的知识库检索与召回，涵盖配置与验证建议
 keywords: 酒店餐饮、投研知识库建设与治理、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

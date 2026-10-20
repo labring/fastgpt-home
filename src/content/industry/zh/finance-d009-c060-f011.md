@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的文档解析与分块
-meta_description: 工程咨询研报的数据主要来自建筑装饰类工程咨询机构的内部项目文档、行业协会发布的专项咨询报告、招投标公示文件及合规审查材料。数据更新节奏随项目推进实时调整，行
+meta_description: 工程咨询研报检索的文档解析与分块：工程咨询研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 工程咨询、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

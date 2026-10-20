@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税研报检索的部署与升级
-meta_description: 免税研报的数据主要来自券商研究所行业报告、免税行业协会公开调研文档，以及品牌方披露的运营公示信息。更新节奏随行业事件触发，政策调整、新门店开业等节点会有临时
+meta_description: 免税研报检索的部署与升级：免税研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 免税、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

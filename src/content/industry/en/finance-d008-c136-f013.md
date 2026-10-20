@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Precious Metals
-meta_description: Data for this category comes from global mainstream precious metals exchange market data APIs, monthly supply and demand reports from industry
+meta_description: Knowledge Base Retrieval and Recall for Precious Metals Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ The high-frequency updates of real-time market data require retrieval results to
 | `similarity threshold` | `0.75-0.85` | Precise matching of fields such as precious metals contract codes and purity has high requirements. A threshold that is too low will introduce irrelevant documents, while a threshold that is too high will miss relevant results |
 | `segment length` | `800-1200 characters` | Long-cycle industry reports have clear paragraph structures. The segment length adapts to the context carrying capacity of most scenarios, while avoiding including too much irrelevant information in a single segment |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `120 seconds` | Large CSV format inventory ledger files have large data volumes, requiring sufficient parsing time to be reserved |
-| `citation content template` | `【Document Source: {source} | Update Time: {updateTime}】{content}` | Due diligence reports require clear labeling of data sources and update times to meet compliance requirements |
+| `Traceability details` | `【Document Source: {source} | Update Time: {updateTime}】{content}` | Due diligence reports require clear labeling of data sources and update times to meet compliance requirements |
 | `custom delimiter` | Configured according to the actual format of the file, default to `\n` | Most precious metals data CSV files use standard line breaks to separate rows. If the exported file uses other delimiters such as tabs, the configuration must be modified accordingly |
 
 > The parameter values provided on this page are conventional recommendations used to establish a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing values.

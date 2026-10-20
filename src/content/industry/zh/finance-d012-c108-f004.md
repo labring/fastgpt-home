@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务营销内容的向量模型与索引
-meta_description: 电商服务的营销内容数据主要来源于商品详情页文案、店铺活动海报脚本、客服标准话术库、直播预热文案及会员营销模板。更新节奏分为两类：日常单品上新、活动微调时的定
+meta_description: 电商服务营销内容的向量模型与索引：电商服务营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 电商服务、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

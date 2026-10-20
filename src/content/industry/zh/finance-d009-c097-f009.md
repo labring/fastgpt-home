@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤研报检索的引用来源与溯源
-meta_description: 焦煤研报的数据源主要覆盖煤炭行业自律组织、大宗商品交易平台、专业咨询机构及产业链上下游企业公开披露的研究内容。文档格式存在差异，部分为纯文本分析报告，部分附
+meta_description: 焦煤研报检索的引用来源与溯源：焦煤研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 焦煤、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

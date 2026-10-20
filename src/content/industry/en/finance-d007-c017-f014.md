@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Optoelectronics Yield Data
-meta_description: Market data for the optoelectronics category comes from public market APIs of the Shanghai, Shenzhen, and Beijing Stock Exchanges, plus an industry
+meta_description: Form and Interaction for Optoelectronics Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

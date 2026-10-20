@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Software Development Industry
-meta_description: Research report data for software development scenarios mainly comes from publicly released research reports from securities firms and industry
+meta_description: Deployment and Upgrade for Software Development Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,7 +40,7 @@ Research reports contain multiple fields. During deployment, the vector storage 
 - A dependency conflict error occurs during the upgrade process. The symptom is container startup failure, with logs showing missing modules or incompatible versions. The cause is that the original service process was not stopped during the upgrade, or the basic dependency package version was not updated to match version 4.9.
 
 ## How to Confirm the Configuration Is Complete
-- Execute `curl --location --request POST 'https://{{host}}/api/admin/initv490'`, check that the returned status code is 200 to confirm that the initialization configuration is completed.
+- Execute `curl --location --request POST 'https://example value/api/admin/initv490'`, check that the returned status code is 200 to confirm that the initialization configuration is completed.
 - Upload a single research report file not exceeding 100 MB, check that the parsing log has no errors and the parsing status shows success, to confirm that the parsing module is working properly.
 - Initiate a retrieval request related to research reports, check that the number of returned results matches the setting of `recallTopK`, to confirm that the retrieval logic is working properly.
 - After upgrading, enter the model docking page, initiate a test question-and-answer session targeting research reports, confirm that the model can normally return relevant research report content, to confirm that the model connection is working properly.

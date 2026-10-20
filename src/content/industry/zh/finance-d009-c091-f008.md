@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材研报检索的工具调用与插件
-meta_description: 消费建材研报主要来自行业协会发布的监测报告、头部厂商公开的经营简报、第三方建材数据平台的公开内容。行业整体研报按季度更新，厂商动态报告不定期发布，单份文档长
+meta_description: 消费建材研报检索的工具调用与插件：消费建材研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 消费建材、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

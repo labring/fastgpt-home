@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品智能尽调报告的向量模型与索引
-meta_description: 乳制品智能尽调报告的数据主要来源于企业公开财报、第三方质量检测机构的抽检报告、供应链溯源台账、行业协会发布的合规数据。数据更新节奏分为三类：财报按季度、年度
+meta_description: 乳制品智能尽调报告的向量模型与索引：乳制品智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 乳制品、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

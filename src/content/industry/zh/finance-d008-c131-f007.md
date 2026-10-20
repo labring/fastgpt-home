@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰智能尽调报告的工作流编排
-meta_description: 装修装饰智能尽调报告的数据来源包括装修施工方提交的资质文件、材料供应商的报价单、现场监理的巡检记录、业主的验收文件等。数据随项目施工进度阶段性更新，覆盖进场
+meta_description: 装修装饰智能尽调报告的工作流编排：装修装饰智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 装修装饰、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -23,7 +23,7 @@ date_modified: 2026-09-15
 ## 配置怎么定
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
-| `PARSE_FILE_TIMEOUT_SECONDS` | `600 秒` | 装修装饰的材料清单Excel、施工日志Word等文件解析耗时较长，600秒可覆盖多数单文件解析需求，适配FastGPT v4.15版本的节点参数规则 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `multi_format_parse_enable` | `开启所有支持格式` | 装修尽调数据包含PDF资质文件、Excel报价单、Word巡检记录等多格式文档，需全格式解析适配 |
 | `field_mapping_threshold` | `0.85–0.95` | 装修数据中存在大量近似字段（如“材料单价”与“主材单价”），较高阈值可过滤误匹配，提升字段映射准确率 |
 | `data_desensitization_switch` | `开启业主手机号、地址字段脱敏` | 装修尽调报告包含业主隐私信息，需合规替换敏感字段内容 |

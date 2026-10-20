@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Funding Source KYC
-meta_description: Funding source KYC data sources include bank transaction statements, tax payment certificates, asset ownership documents, large transaction
+meta_description: Deployment and Upgrade for Funding Source KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

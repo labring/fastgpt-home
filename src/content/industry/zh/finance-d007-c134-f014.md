@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品收益率的表单与交互
-meta_description: 数据源包括全国调味品行业监测平台的经销商进销存数据、线下商超POS终端的实时交易数据、品牌方的出厂报价系统。更新节奏为每日更新终端零售价格，每周更新出厂均价
+meta_description: 调味品收益率的表单与交互：调味品收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 调味品、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Game Financing Daily Reports
-meta_description: Data for game financing daily reports comes from domestic game industry investment and financing disclosure platforms, listed game company
+meta_description: Vector Models and Indexing for Game Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

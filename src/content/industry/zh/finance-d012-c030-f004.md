@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品营销内容的向量模型与索引
-meta_description: 化妆品营销内容的数据主要来自金融机构联合美妆品牌推出的联名营销物料、品牌官方备案文档、电商平台详情页、种草笔记、直播脚本与合规宣传物料。数据更新随新品上线、
+meta_description: 化妆品营销内容的向量模型与索引：化妆品营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 化妆品、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备收益率的多轮对话与提示词
-meta_description: 通信设备收益率相关数据的来源覆盖主流基站、光模块、通信终端等品类，包含厂商出货单价台账、行业招投标公开报价、公开市场行情接口及核心元器件市场报价。数据更新分
+meta_description: 通信设备收益率的多轮对话与提示词：通信设备收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通信设备、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

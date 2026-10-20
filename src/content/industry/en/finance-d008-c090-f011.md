@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Coatings and Inks
-meta_description: The due diligence data for the coatings and inks category comes primarily from production compliance reports published by industry associations
+meta_description: Document Parsing and Chunking for Coatings and Inks Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

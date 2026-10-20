@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Comprehensive Service Yield
-meta_description: Data for comprehensive service yield and daily market reports comes from on-exchange trading market APIs, off-exchange product accounting systems, and
+meta_description: Database and Operations for Comprehensive Service Yield Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

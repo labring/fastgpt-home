@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料财报分析的多轮对话与提示词
-meta_description: 饲料财报相关数据的来源包括上市饲料企业的公开定期报告、行业协会发布的月度/季度产业监测数据、原材料期货市场的公开报价数据。更新节奏分为三类：企业定期报告按年
+meta_description: 饲料财报分析的多轮对话与提示词：饲料财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 饲料、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

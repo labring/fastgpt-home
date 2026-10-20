@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车研报检索的工具调用与插件
-meta_description: 商用车研报数据主要来自券商行业研究报告、第三方汽车产业咨询机构公开数据、交通部门营运上牌统计。更新节奏分两类：终端销量类数据按月更新，行业深度分析类研报按季
+meta_description: 商用车研报检索的工具调用与插件：商用车研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 商用车、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

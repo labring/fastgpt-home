@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行投研知识库建设的上下文与 token
-meta_description: 农商行投研数据主要来源于区域监管政策文件、本地信贷台账、涉农企业经营调研数据及地方经济动态报告。数据更新节奏覆盖每日、季度及年度，其中信贷台账每日更新，监管
+meta_description: 农商行投研知识库建设的上下文与 token：农商行投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 农商行、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

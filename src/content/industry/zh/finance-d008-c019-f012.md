@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税智能尽调报告的模型接入与配置
-meta_description: 免税智能尽调报告的数据来源包含免税经营主体的资质备案文件、海关进出口报关单、离岛免税政策官方文档、月度销售台账等。数据更新节奏存在差异：资质备案文件随主体资
+meta_description: 免税智能尽调报告的模型接入与配置：免税智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 免税、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

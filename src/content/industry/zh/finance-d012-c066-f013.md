@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的知识库检索与召回
-meta_description: 房建工程的营销内容数据主要来源于内部项目档案、合作建材供应商的产品手册、线下售楼处的客户咨询记录整理及线上营销物料。更新节奏随项目节点调整，开盘前集中更新核
+meta_description: 房建工程营销内容的知识库检索与召回：房建工程营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

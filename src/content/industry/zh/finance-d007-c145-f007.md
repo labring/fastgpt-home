@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备收益率的工作流编排
-meta_description: 通信设备收益率的数据源为运营商运维计费系统、第三方通信行业数据服务商的批量API接口。更新节奏为每日T+1同步，即次日凌晨完成前一日全量数据生成与发布。数据
+meta_description: 通信设备收益率的工作流编排：通信设备收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 通信设备、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

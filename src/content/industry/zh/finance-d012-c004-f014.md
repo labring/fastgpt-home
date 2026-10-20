@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备营销内容的表单与交互
-meta_description: 数据来自企业设备管理系统（EAM）、经销商库存台账及现场部署的传感器采集终端。基础设备台账按月度更新，包含设备唯一标识、型号、额定功率（kW）、最大工作压力
+meta_description: 专用设备营销内容的表单与交互：专用设备营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 专用设备、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

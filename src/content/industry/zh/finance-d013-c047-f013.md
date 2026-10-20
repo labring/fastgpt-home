@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行融资日报的知识库检索与召回
-meta_description: 国有大行融资日报的数据来源主要为官方公开披露的信贷简报、央行同业融资统计台账及本行内部信贷审批记录。更新节奏为每日归集当日融资数据，次日12点前完成对外发布
+meta_description: 国有大行融资日报的知识库检索与召回：国有大行融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 国有大行、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

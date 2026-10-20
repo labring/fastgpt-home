@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险财报分析的文档解析与分块
-meta_description: 保险财报数据主要来自保险公司年度、季度披露报告及监管报送文档，更新节奏为年度完整财报、季度简要财报及临时公告。文档多为PDF格式，包含结构化财务表格、精算准
+meta_description: 保险财报分析的文档解析与分块：保险财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 保险、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

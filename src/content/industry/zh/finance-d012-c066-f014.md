@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的表单与交互
-meta_description: 房建工程的营销数据主要来自项目立项台账、官方招标公告、业主需求函件与过往投标档案。数据更新随项目阶段推进，分为立项、施工图设计、招标、中标等关键节点，无固定
+meta_description: 房建工程营销内容的表单与交互：房建工程营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 房建工程、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

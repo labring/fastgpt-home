@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理营销内容的工作流编排
-meta_description: 金融机构面向水处理企业的营销内容数据，主要来自三类来源：水处理企业的水务监测传感器实时采集数据、线下水质检测机构出具的月度电子报告、金融机构收集的水处理企业
+meta_description: 水处理营销内容的工作流编排：水处理营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 水处理、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

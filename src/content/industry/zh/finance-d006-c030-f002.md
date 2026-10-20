@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品投研知识库建设的上下文与 token
-meta_description: 化妆品投研数据主要来自品牌官方备案文件、成分检测报告、电商平台用户评论、行业合规公告与新品发布信息。备案文件以PDF格式为主，包含成分表、合规声明与功效宣称
+meta_description: 化妆品投研知识库建设的上下文与 token：化妆品投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 化妆品、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

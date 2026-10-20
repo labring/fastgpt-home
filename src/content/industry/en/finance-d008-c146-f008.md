@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Invocation and Plugins for General Equipment
-meta_description: The data used for general equipment intelligent due diligence reports mainly comes from publicly available compliant documents from industry
+meta_description: Tool Invocation and Plugins for General Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的模型接入与配置
-meta_description: 装修装饰类数据主要来自装修公司的项目档案、户型测绘文件、材料报价单、施工进度台账与设计师方案文档。数据更新随单个项目周期推进，单个项目从设计交底到竣工交付会
+meta_description: 装修装饰营销内容的模型接入与配置：装修装饰营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 装修装饰、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

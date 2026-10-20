@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤财报分析的HTTP 接口与外部系统
-meta_description: 动力煤财报相关数据来源包括国内煤炭行业协会月度供需报告、动力煤上市企业季度/年度财报、国家能源局行业监测数据。更新节奏分为两类：行业监测数据为月度更新，企业
+meta_description: 动力煤财报分析的HTTP 接口与外部系统：动力煤财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 动力煤、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

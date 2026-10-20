@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务收益率的模型接入与配置
-meta_description: 该品类的数据主要来自持牌金融信息服务接口、机构内部交易台账与监管公开披露文档。更新节奏为每个交易日收盘后1小时内完成全量更新，非交易日顺延至下一交易日开盘前
+meta_description: 综合服务收益率的模型接入与配置：综合服务收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 综合服务、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖营销内容的文档解析与分块
-meta_description: 水产养殖的营销与运营数据来源涵盖养殖户日常养殖日志、饲料采购台账、水质检测报告、行业展会宣传物料、短视频脚本与公众号推文。数据更新节奏不一：养殖日志与投料记
+meta_description: 水产养殖营销内容的文档解析与分块：水产养殖营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 水产养殖、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

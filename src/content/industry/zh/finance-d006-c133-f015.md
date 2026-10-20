@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券投研知识库建设的部署与升级
-meta_description: 证券投研的数据主要来自交易所公开披露文件、第三方金融数据终端、券商研报、实时行情接口。更新节奏分为三类：实时行情数据按秒级更新，定期公告（年报、季报）按披露
+meta_description: 证券投研知识库建设的部署与升级：证券投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 证券、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

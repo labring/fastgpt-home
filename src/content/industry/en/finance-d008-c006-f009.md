@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Traditional Chinese
-meta_description: Data sources for TCM due diligence include national drug standards, local processing specifications, origin traceability archives, batch test reports
+meta_description: Citation Sources and Traceability for Traditional Chinese Medicine Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

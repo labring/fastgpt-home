@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务财报分析的模型接入与配置
-meta_description: 综合服务类财报数据主要来自证券交易所官方披露平台、上市公司官方公告及合规第三方数据接口。数据更新遵循监管要求，定期报告按季度、年度节点更新，临时公告如业绩预
+meta_description: 综合服务财报分析的模型接入与配置：综合服务财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 综合服务、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

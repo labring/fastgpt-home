@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖投研知识库建设的上下文与 token
-meta_description: 畜禽养殖投研数据主要来源于行业协会监测报告、畜牧部门公开统计、饲料企业出货数据、养殖场日常台账。更新节奏覆盖每日行情、每周存栏监测、每月行业分析、季度政策解
+meta_description: 畜禽养殖投研知识库建设的上下文与 token：畜禽养殖投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 畜禽养殖、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

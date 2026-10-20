@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢收益率的工具调用与插件
-meta_description: 特钢收益率与行情数据主要来自三类渠道：国内特钢现货交易平台、期货交易所行情接口、行业协会统计数据。现货数据每日16点前完成当日行情更新，期货数据随交易日收盘
+meta_description: 特钢收益率的工具调用与插件：特钢收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 特钢、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

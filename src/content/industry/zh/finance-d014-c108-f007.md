@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务财报分析的工作流编排
-meta_description: 电商服务类主体的财报数据来源包括公开监管披露的定期报告、合作电商平台的交易对账接口、商家端的运营数据导出文件。更新节奏分为实时交易数据按日更新、核心经营指标
+meta_description: 电商服务财报分析的工作流编排：电商服务财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 电商服务、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

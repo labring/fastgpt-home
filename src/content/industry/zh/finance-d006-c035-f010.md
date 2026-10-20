@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美投研知识库建设的数据库与运维
-meta_description: 医美投研数据主要来自国家药品监督管理局医美产品备案公示、中国整形美容协会行业动态、医美连锁机构公开经营信息、专业医美期刊临床研究数据。更新节奏方面，医美新产
+meta_description: 医美投研知识库建设的数据库与运维：医美投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 医美、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的文档解析与分块
-meta_description: 小金属类文档的来源涵盖国内小金属行业协会公开数据、现货交易平台报价、生产企业技术手册、行业研究报告与营销物料。更新节奏分为三类：现货报价数据每日更新，行业供
+meta_description: 小金属营销内容的文档解析与分块：小金属营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 小金属、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Air Pollution Control Marketing
-meta_description: Data sources include real-time pollutant monitoring data from environmental protection department monitoring stations, operation and maintenance logs
+meta_description: Deployment and Upgrade of Air Pollution Control Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ When upgrading plugins or core services, pause non-core data synchronization tas
 | `Recall count` | Top 8–12 entries | Balance content coverage and inference overhead, avoid excessive low-relevance content interfering with model output |
 | `Similarity threshold` | 0.75–0.85 | Distinguish professional emission reduction plans from general environmental science popularization content, improve the accuracy of recalled content |
 | `REDIS_IMAGE` | registry.cn-hangzhou.aliyuncs.com/library/redis:7.0.15 | Intranet environments cannot access public network image repositories, use Alibaba Cloud official image acceleration for pulling |
-| `PGVECTOR_PLUGIN_VERSION` | 0.6.0 | Adapt to FastGPT 4.9.7 version, avoid plugin and platform version incompatibility |
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 > The parameter values provided on this page are all conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing.
 

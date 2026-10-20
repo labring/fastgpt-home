@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务融资日报的部署与升级
-meta_description: 汽车服务融资日报的数据来源为汽车经销商的融资申请台账、合作金融机构的放款流水、车辆抵押登记备案数据。数据更新节奏为每日凌晨批量同步前一日的全量业务数据。单份
+meta_description: 汽车服务融资日报的部署与升级：汽车服务融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 汽车服务、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

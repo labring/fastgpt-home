@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁收益率的表单与交互
-meta_description: 融资租赁业务的收益率相关数据主要来自内部租赁业务系统导出的结构化表格，更新节奏随项目投放与月度汇总推进。单份业务文档多为多工作表Excel格式，包含项目清单
+meta_description: 融资租赁收益率的表单与交互：融资租赁收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 融资租赁、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

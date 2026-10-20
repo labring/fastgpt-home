@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子营销内容的文档解析与分块
-meta_description: 军工电子的营销内容文档主要来源于企业产品手册、公开招标公告、技术白皮书与官方宣传物料。文档更新节奏随新产品立项、招标项目周期变动，新产品上线后1-2个月内会
+meta_description: 军工电子营销内容的文档解析与分块：军工电子营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 军工电子、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

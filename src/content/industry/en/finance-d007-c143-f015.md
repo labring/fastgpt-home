@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c143-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Software Development Revenue Rate
-meta_description: The data sources for software development revenue rate daily reports include commit records from code hosting platforms, running logs from continuous
+meta_title: Deployment and Upgrade for Software Development Revenue
+meta_description: Deployment and Upgrade for Software Development Revenue Rate Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

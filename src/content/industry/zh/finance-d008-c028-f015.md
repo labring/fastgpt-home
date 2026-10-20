@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤智能尽调报告的部署与升级
-meta_description: 动力煤智能尽调报告的数据来源涵盖国内煤炭生产台账、港口装卸日报、铁路货运调度记录及电力采购报表。数据更新节奏存在差异：核心交易价格数据每日更新，矿点生产数据
+meta_description: 动力煤智能尽调报告的部署与升级：动力煤智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 动力煤、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

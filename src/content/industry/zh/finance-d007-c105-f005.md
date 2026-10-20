@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品收益率的多轮对话与提示词
-meta_description: 生物制品收益率相关数据的来源包括国家药品监督管理局批签发公开数据、上市生物制品企业定期报告、行业第三方监测平台。更新节奏分为三类：批签发数据按周更新，企业季
+meta_description: 生物制品收益率的多轮对话与提示词：生物制品收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 生物制品、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品智能尽调报告的多轮对话与提示词
-meta_description: 数据来源包括品牌官方SKU档案、第三方贵金属与宝石检测机构的电子证书、供应链来料质检记录。更新节奏随品牌上新批次或抽检周期同步，无固定周期但单次更新覆盖单批
+meta_description: 饰品智能尽调报告的多轮对话与提示词：饰品智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 饰品、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

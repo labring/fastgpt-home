@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的部署与升级
-meta_description: 证券研报数据主要来自持牌券商研究所、公开行业研究披露渠道，更新节奏随交易日波动，交易日内高频发布，非交易日更新量显著减少。单篇文档结构包含标题、核心逻辑、行
+meta_description: 证券研报检索的部署与升级：证券研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 证券、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

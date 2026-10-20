@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理营销内容的工具调用与插件
-meta_description: 固废处理相关数据主要来自环卫调度系统、垃圾分类台账、清运称重记录、处置场站运营报表。数据更新节奏为每日清运记录实时同步，月度处置统计定期更新。文档结构包含结
+meta_description: 固废处理营销内容的工具调用与插件：固废处理营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 固废处理、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Coking Coal Intelligent
-meta_description: The data for coking coal due diligence reports comes from coal mine production ledgers, port quality inspection reports, futures delivery warehouse
+meta_description: Document Parsing and Chunking for Coking Coal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理研报检索的工作流编排
-meta_description: 物业管理研报的数据来源包含行业协会公开的物业行业分析报告、单个物业项目的运维日志、物业费收缴台账、公共设施巡检记录及合规检查文档。更新节奏分为两类：公开行业
+meta_description: 物业管理研报检索的工作流编排：物业管理研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 物业管理、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

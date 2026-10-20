@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Paint and Ink
-meta_description: Financial report data for paint and ink enterprises is sourced from periodic reports disclosed by domestic and overseas exchanges, and publicly
+meta_description: Knowledge Base Retrieval and Recall for Paint and Ink Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

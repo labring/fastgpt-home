@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料智能尽调报告的引用来源与溯源
-meta_description: 饲料相关尽调数据的来源包括上游供应商资质文件、原料批次检测报告、养殖基地饲喂日志、行业监管抽检记录。数据更新节奏随业务节点变化：原料检测报告随生产批次更新，
+meta_description: 饲料智能尽调报告的引用来源与溯源：饲料智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 饲料、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

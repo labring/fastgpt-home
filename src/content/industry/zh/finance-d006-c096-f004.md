@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭投研知识库建设的向量模型与索引
-meta_description: 焦炭投研数据来源包括大连商品交易所的期货行情数据、中国炼焦行业协会的行业监测数据、港口现货交易台账、上下游企业的生产销售报表。更新节奏覆盖交易日更新的期货行
+meta_description: 焦炭投研知识库建设的向量模型与索引：焦炭投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 焦炭、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流智能尽调报告的引用来源与溯源
-meta_description: 物流智能尽调报告的数据源涵盖物流运单系统、仓储管理系统、GPS轨迹终端、进出口报关单。运单数据实时同步，仓储数据按批次每日更新，GPS轨迹数据每5分钟刷新一
+meta_description: 物流智能尽调报告的引用来源与溯源：物流智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 物流、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

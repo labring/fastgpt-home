@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询融资日报的部署与升级
-meta_description: 工程咨询融资日报的数据来源于内部工程管理系统、合作金融机构的接口、政务项目备案平台。更新频率为每日固定时段同步，文档格式为结构化CSV或JSON。单条数据对
+meta_description: 工程咨询融资日报的部署与升级：工程咨询融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 工程咨询、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

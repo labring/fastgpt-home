@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c111-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Livestock and
-meta_description: Livestock and poultry farming profit margin data is primarily sourced from Ministry of Agriculture and Rural Affairs livestock monitoring systems
+meta_title: HTTP Interfaces and External Systems for Livestock
+meta_description: HTTP Interfaces and External Systems for Livestock and Poultry Farming Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

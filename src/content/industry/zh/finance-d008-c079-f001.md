@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢智能尽调报告的HTTP 接口与外部系统
-meta_description: 普钢智能尽调报告的数据主要来自钢厂生产台账、现货交易平台的实时报价、第三方质检机构的检测报告。更新节奏为现货价格数据每日更新，生产批次数据随出货节奏同步更新
+meta_description: 普钢智能尽调报告的HTTP 接口与外部系统：普钢智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 普钢、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

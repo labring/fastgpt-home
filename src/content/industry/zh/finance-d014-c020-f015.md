@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的部署与升级
-meta_description: 兵器装备类企业的财报数据主要来自上市公司公开年报、军工行业专项披露文件及国防科技工业主管部门公开信息。更新节奏为季度报每3个月更新一次，年报每年更新一次。文
+meta_description: 兵器装备财报分析的部署与升级：兵器装备财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 兵器装备、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

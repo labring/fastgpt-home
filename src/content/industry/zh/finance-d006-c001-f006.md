@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务投研知识库建设的对话日志与审计
-meta_description: IT服务投研的核心数据来源包括公开IT厂商运维日志、行业研报文档、API调用链路记录、开源项目提交档案与合规审计文档。数据更新节奏差异明显：实时交互日志每秒
+meta_description: IT 服务投研知识库建设的对话日志与审计：IT 服务投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: IT 服务、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备研报检索的工具调用与插件
-meta_description: 计算机设备研报的数据主要来自行业协会公开文档、硬件厂商官方技术白皮书、第三方硬件测评数据库。更新节奏随厂商新品发布、行业标准迭代或季度测评更新调整，无统一固
+meta_description: 计算机设备研报检索的工具调用与插件：计算机设备研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 计算机设备、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Satellite Communications
-meta_description: Data sources for satellite communications revenue yield and market data include public operational reports from satellite operators, real-time link
+meta_description: Tool Calling and Plugins for Satellite Communications Revenue Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

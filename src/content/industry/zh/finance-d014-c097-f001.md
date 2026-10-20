@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的HTTP 接口与外部系统
-meta_description: 焦煤财报数据主要来源于境内外交易所公开披露的上市公司定期报告、煤炭行业协会发布的监测数据集。更新节奏分为两类：季度财报每季度末后30日内完成更新，年度财报每
+meta_description: 焦煤财报分析的HTTP 接口与外部系统：焦煤财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦煤、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

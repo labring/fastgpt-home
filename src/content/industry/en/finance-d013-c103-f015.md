@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c103-f015
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Environmental Monitoring Financing
-meta_description: Data sources for environmental monitoring financing daily reports include daily monitoring data from local ecological environment monitoring stations
+meta_title: Deployment and Upgrade of Environmental Monitoring
+meta_description: Deployment and Upgrade of Environmental Monitoring Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

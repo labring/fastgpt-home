@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c021-f008
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Miscellaneous General Marketing
-meta_description: Data for this category comes primarily from the internal marketing asset management system, public financial regulatory policy database, customer
+meta_title: Tool Calling and Plugins for Miscellaneous General
+meta_description: Tool Calling and Plugins for Miscellaneous General Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

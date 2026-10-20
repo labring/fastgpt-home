@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务投研知识库建设的文档解析与分块
-meta_description: 面向金融场景的IT服务投研的数据来源覆盖厂商技术白皮书、产品功能手册、运维日志、行业标准文档及客户案例报告。数据更新节奏随产品迭代调整，核心产品文档每季度更
+meta_description: IT 服务投研知识库建设的文档解析与分块：IT 服务投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: IT 服务、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

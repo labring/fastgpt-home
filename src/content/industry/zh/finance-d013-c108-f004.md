@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务融资日报的向量模型与索引
-meta_description: 数据来源为电商平台商户的当日融资申请记录、支付结算流水、订单交易数据，以及合作金融机构的放款、还款回执。更新节奏为每日凌晨完成前一日全量数据同步，支持增量补
+meta_description: 电商服务融资日报的向量模型与索引：电商服务融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 电商服务、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

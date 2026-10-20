@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖融资日报的工作流编排
-meta_description: 数据来源包括地方农业农村部门水产板块的每日公示、全国水产技术推广总站的行业融资动态、合作金融机构的公开授信公告。更新节奏为每日凌晨更新前一日的融资数据。单条
+meta_description: 水产养殖融资日报的工作流编排：水产养殖融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 水产养殖、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

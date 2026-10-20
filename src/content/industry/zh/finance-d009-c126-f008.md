@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场研报检索的工具调用与插件
-meta_description: 航空机场研报数据主要来自民航管理部门官方公开数据、各机场年度运营报告、民航细分领域咨询报告及券商金融行业研报。更新节奏覆盖每日航班动态、每周吞吐量快报、月度
+meta_description: 航空机场研报检索的工具调用与插件：航空机场研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 航空机场、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

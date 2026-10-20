@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工收益率的数据库与运维
-meta_description: 煤化工品类的行情与收益率数据多来自国内大宗商品现货交易平台、期货交易所行情接口及行业协会监测报告。现货类数据每日更新，期货类数据在交易日每15分钟推送一次，
+meta_description: 煤化工收益率的数据库与运维：煤化工收益率的数据库与运维，涵盖配置与验证建议。。。
 keywords: 煤化工、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

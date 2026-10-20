@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备融资日报的多轮对话与提示词
-meta_description: 数据来源为国防军工行业主管部门公开披露文件、上市主体临时/定期公告、行业权威信息平台。更新节奏为每日更新，覆盖当日披露的兵器装备领域融资相关信息。单份文档包
+meta_description: 兵器装备融资日报的多轮对话与提示词：兵器装备融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 兵器装备、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

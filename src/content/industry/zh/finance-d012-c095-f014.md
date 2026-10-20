@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力营销内容的表单与交互
-meta_description: 热力品类的营销数据主要来源于热力运营系统的用户缴费台账、区域热力站运行日志、线下入户调研表单及线上报修工单。数据更新节奏差异明显：用户缴费台账按自然季度同步
+meta_description: 热力营销内容的表单与交互：热力营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 热力、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备融资日报的引用来源与溯源
-meta_description: 自动化设备融资日报的数据来源包括公开融资租赁备案系统、设备经销商的出货台账、行业第三方交易统计平台。数据更新节奏为每日凌晨同步前一工作日的全量交易记录。单份
+meta_description: 自动化设备融资日报的引用来源与溯源：自动化设备融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 自动化设备、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

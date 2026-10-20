@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场财报分析的向量模型与索引
-meta_description: 航空机场财报数据主要来源于民航地区管理局公开披露的月度运营简报、机场集团官方年度及季度财报。数据更新节奏为月度运营数据、季度快报、年度正式报告。文档结构包含
+meta_description: 航空机场财报分析的向量模型与索引：航空机场财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 航空机场、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

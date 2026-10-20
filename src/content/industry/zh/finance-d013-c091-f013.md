@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材融资日报的知识库检索与召回
-meta_description: 数据主要来自各地住建部门项目备案公示、地方金融监管局融资授信备案、行业供应链服务平台的交易台账。更新节奏为每日更新，覆盖当日新增的消费建材领域融资项目。单条
+meta_description: 消费建材融资日报的知识库检索与召回：消费建材融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 消费建材、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

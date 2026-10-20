@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易智能尽调报告的引用来源与溯源
-meta_description: 钢铁贸易的数据源包括国内大宗商品现货交易平台公开成交数据、钢厂出厂报价系统、海关进出口通关数据、行业协会供需报告。更新节奏上，现货交易数据每小时更新，出厂报
+meta_description: 钢铁贸易智能尽调报告的引用来源与溯源：钢铁贸易智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 钢铁贸易、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

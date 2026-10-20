@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖融资日报的部署与升级
-meta_description: 水产养殖融资日报的数据来源为地方水产行业主管部门的每日融资报送台账、农业信贷担保机构的当日放款记录，更新节奏为每日凌晨更新前一日全量数据。单份文档为结构化表
+meta_description: 水产养殖融资日报的部署与升级：水产养殖融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 水产养殖、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

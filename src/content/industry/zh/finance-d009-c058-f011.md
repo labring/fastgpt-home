@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属研报检索的文档解析与分块
-meta_description: 小金属研报的数据来源包括中国有色金属工业协会小金属分会发布的行业月报、券商有色金属研究团队的深度研报、现货贸易商的周度行情周报、期货交易所的交割仓单报告。更
+meta_description: 小金属研报检索的文档解析与分块：小金属研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 小金属、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

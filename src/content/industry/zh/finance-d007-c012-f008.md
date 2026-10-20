@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发收益率的工具调用与插件
-meta_description: 住宅开发收益率相关数据主要来自项目拿地档案、建安成本台账、当地住建部门网签备案系统及合作方财务报表。数据更新节奏为月度同步，部分核心项目的销售备案数据存在7
+meta_description: 住宅开发收益率的工具调用与插件：住宅开发收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 住宅开发、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

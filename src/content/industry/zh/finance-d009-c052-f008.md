@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股研报检索的工具调用与插件
-meta_description: 数据主要来自集团内部各业务板块子公司的专项研报、跨板块联合调研文档，以及公开渠道披露的控股架构相关行业分析。更新节奏随子公司财报发布周期、行业政策节点同步。
+meta_description: 多元控股研报检索的工具调用与插件：多元控股研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 多元控股、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

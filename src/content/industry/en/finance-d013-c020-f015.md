@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Ordnance Equipment Financing
-meta_description: Data sources include public procurement announcements from national defense science, technology and industry authorities, official announcements from
+meta_description: Deployment and Upgrade for Ordnance Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

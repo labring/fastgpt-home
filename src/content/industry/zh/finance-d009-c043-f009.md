@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产研报检索的引用来源与溯源
-meta_description: 商业地产研报的数据主要来自行业协会、专业咨询机构、各地住建部门及商圈运营方的公开研究成果。更新节奏以季度常规报告为主，搭配不定期的商圈动态、政策调整类专项报
+meta_description: 商业地产研报检索的引用来源与溯源：商业地产研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 商业地产、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

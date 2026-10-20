@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的引用来源与溯源
-meta_description: 担保材料数据主要来自授信申请主体提交的纸质扫描件或带表单字段的电子文档，包括反担保函、抵押物权利凭证、连带责任担保承诺书等。更新节奏随单笔授信申请提交完成，
+meta_description: 担保材料风控的引用来源与溯源：担保材料风控的引用来源与溯源，涵盖配置与验证建议。
 keywords: 担保材料、风控与授信材料审核、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

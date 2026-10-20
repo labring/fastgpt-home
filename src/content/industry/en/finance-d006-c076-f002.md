@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Cultural and Entertainment Products
-meta_description: Cultural and entertainment products investment research data comes from industry association category monitoring reports, brand official public
+meta_description: Context and Token for Cultural and Entertainment Products Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

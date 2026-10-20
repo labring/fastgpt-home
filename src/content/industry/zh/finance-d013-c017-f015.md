@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子融资日报的部署与升级
-meta_description: 光学光电子融资日报的数据来源为沪深北交易所、全国中小企业股份转让系统的公开融资公告，以及行业第三方数据平台的公开汇总。更新节奏为每个交易日收盘后更新当日披露
+meta_description: 光学光电子融资日报的部署与升级：光学光电子融资日报的部署与升级，涵盖配置与验证建议
 keywords: 光学光电子、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备融资日报的模型接入与配置
-meta_description: 航空装备融资日报的数据来自国防军工行业协会公开披露、航空整机及配套企业定期公告、军工采购招标平台中标信息。更新节奏为每日同步当日披露的融资项目。文档以结构化
+meta_description: 航空装备融资日报的模型接入与配置：航空装备融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 航空装备、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

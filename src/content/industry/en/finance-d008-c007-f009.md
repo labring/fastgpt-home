@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Dairy Product
-meta_description: Dairy product due diligence data primarily comes from third-party food testing institution reports, batch testing records of large-scale ranch milk
+meta_description: Citation Sources and Traceability for Dairy Product Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,12 +38,12 @@ The batch-based update rhythm requires the traceability system to automatically 
 ## Three common configuration errors
 - Phenomenon: Cited sources are displayed even when the corresponding switch is not enabled, with no clear error prompt. Cause: In version 4.9.4, the global configuration of the `citation source switch` and knowledge base-level configuration do not have linked validation, causing the switch state to not take effect.
 - Phenomenon: Recalled citation sources do not match the current due diligence batch, with cross-batch test data appearing. Cause: Precise filtering rules based on batch numbers are not configured, and only similarity-based recall is used, leading to mismatches.
-- Phenomenon: The custom variable format `[{datasetId: xxx}]` fails to call the data source normally. Cause: The variable syntax required by FastGPT official standards is not used. The `{{dataset.xxx}}` format must be used to bind dataset parameters.
+- Phenomenon: The custom variable format `[{datasetId: xxx}]` fails to call the data source normally. Cause: The variable syntax required by FastGPT official standards is not used. The `example value` format must be used to bind dataset parameters.
 
 ## How to verify correct configuration
 - Upload a dairy product test PDF with a batch number, initiate a due diligence question and answer, and check if the citation sources in the returned results include the batch number and testing institution information of this document.
 - Adjust the `similarity threshold` to different ranges, compare the number of recalled citation sources, and confirm that the recall results within the configured range meet expectations.
 - Check the system logs to confirm that no `408 Request Timeout` errors appear in parsing requests, indicating that the document parsing configuration meets requirements.
-- Test the custom variable binding, enter the official required `{{dataset.xxx}}` format, and confirm that the data source can be called normally with no parameter error prompts.
+- Test the custom variable binding, enter the official required `example value` format, and confirm that the data source can be called normally with no parameter error prompts.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

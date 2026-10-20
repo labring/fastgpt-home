@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子营销内容的工具调用与插件
-meta_description: 消费电子品类的金融营销内容数据主要来源于品牌官方产品库、主流电商平台商品详情页、供应链SKU台账及用户评测结构化数据，同时对接金融机构的消费分期规则库。数据
+meta_description: 消费电子营销内容的工具调用与插件：消费电子营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 消费电子、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

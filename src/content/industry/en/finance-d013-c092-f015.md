@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Consumer Electronics Financing
-meta_description: Data for consumer electronics financing daily reports comes from internal brand financing approval systems, dealer remittance ledgers, and transaction
+meta_description: Deployment and Upgrade for Consumer Electronics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ Multi-source data integration requires configuring multi-interface adaptation lo
 | `UPLOAD_FILE_MAX_SIZE` | `200 MB` | Bulk import files for consumer electronics financing daily reports include multiple SKU details. This value adapts to the file size requirements for bulk imports |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | Bulk imported financing daily report files contain large amounts of category detail data. Sufficient time must be reserved for field parsing and validation |
 | `PROXY_URL` | `http://your-proxy-domain:8080` | When connecting to data from third-party supply chain financial service providers, use a proxy to avoid cross-domain or access restrictions, adapting to aiproxy configuration logic |
-| `LOCAL_MODEL_ENABLED` | `true` | Compatible with FastGPT 4.9.1 and above versions. Field validation for consumer electronics financing daily reports requires local semantic matching, no reliance on external APIs |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `VOLUME_MOUNT_PATH` | `/app/data/financing_daily` | Persistently store imported daily report files, enabling automatic sync updates to be triggered again after container restarts |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis, and it is recommended to test on your own samples before finalizing settings.

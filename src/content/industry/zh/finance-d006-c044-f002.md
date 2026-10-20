@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业投研知识库建设的上下文与 token
-meta_description: 商业物业投研数据主要来自商户租赁合同、月度租金收缴台账、公共区域运维日志、商圈业态调研文档。更新节奏随数据类型差异明显：商户租赁合同随签约、续约实时更新，租
+meta_description: 商业物业投研知识库建设的上下文与 token：商业物业投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 商业物业、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

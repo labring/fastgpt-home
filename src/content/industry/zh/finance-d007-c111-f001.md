@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖收益率的HTTP 接口与外部系统
-meta_description: 畜禽养殖收益率数据主要来源于农业农村部畜禽监测系统、地方畜牧行业公开接口及第三方行情聚合服务。数据更新节奏为每日凌晨完成前一自然日的全量数据更新，单次返回数
+meta_description: 畜禽养殖收益率的HTTP 接口与外部系统：畜禽养殖收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 畜禽养殖、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

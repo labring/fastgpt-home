@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Game Industry Intelligent Due
-meta_description: Game industry intelligent due diligence report data primarily comes from game license approval documents, R&D progress documents, revenue monitoring
+meta_description: Deployment and Upgrade for Game Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

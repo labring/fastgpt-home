@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电营销内容的知识库检索与召回
-meta_description: 金融行业风电营销内容的数据来源包括风机整机厂商的技术规格书、区域风电资源勘测报告、国家能源部门发布的并网政策文件、金融机构面向投资者的风电项目理财推介文档、
+meta_description: 风电营销内容的知识库检索与召回：风电营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 风电、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

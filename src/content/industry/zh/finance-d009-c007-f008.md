@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品研报检索的工具调用与插件
-meta_description: 乳制品研报数据主要来自国内券商研究所、中国乳制品工业协会月度报告、上市乳企定期财报及行业监测机构的动销数据。更新节奏分为多档：券商深度报告按季度发布，月度跟
+meta_description: 乳制品研报检索的工具调用与插件：乳制品研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 乳制品、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

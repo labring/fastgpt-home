@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Small Home Appliance Research
-meta_description: Data sources include publicly monitored reports from home appliance industry associations, official product manuals from brand owners, transaction and
+meta_description: Workflow Orchestration for Small Home Appliance Research Report Retrieval and Q&A
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Some data comes from user reviews, so sentiment analysis nodes must be configure
 | `Input Length Intercept Threshold` | `15000 characters` | Intercepts overly long user input in advance, prevents AI node error triggers |
 | `Knowledge Base Sync Cycle` | `1–7 days` | Aligns with the monthly/quarterly update rhythm of small home appliance research reports, ensures data timeliness |
 | `Structured Extraction Field` | `Preset by category: rated power, dimensions, noise level` | Corresponds to core parameter fields in small home appliance research reports, enables precise extraction |
-| `Variable Binding Rule` | `Reference knowledge base filter conditions via {{variable name}}` | Supports dynamic selection of knowledge bases for corresponding categories, adapts to different small home appliance segment scenarios |
+| `Variable Binding Rule` | `Reference knowledge base filter conditions via example value` | Supports dynamic selection of knowledge bases for corresponding categories, adapts to different small home appliance segment scenarios |
 | `User Interaction Trigger Node` | `Button submission trigger` | Enables a confirmation button to pop up during conversations, completes user input submission |
 
 > The parameter values provided on this page are general recommendations used as a starting point for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

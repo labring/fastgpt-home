@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的文档解析与分块
-meta_description: 化学原料相关文档主要来源于供应商官方报价页、行业协会合规报告、MSDS安全技术说明书、生产工艺白皮书与贸易订单模板。数据更新节奏差异较大：行业合规报告按季度
+meta_description: 化学原料营销内容的文档解析与分块：化学原料营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

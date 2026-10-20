@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石收益率的模型接入与配置
-meta_description: 铁矿石收益率相关数据主要来自国内大宗商品期货交易所与行业现货报价渠道，数据更新覆盖交易日日间及夜盘时段，每5分钟推送一次实时行情，每日收盘后生成当日完整结算
+meta_description: 铁矿石收益率的模型接入与配置：铁矿石收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 铁矿石、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

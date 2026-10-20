@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备财报分析的部署与升级
-meta_description: 自动化设备品类的财报数据主要来自公开披露的企业定期报告、行业协会发布的运行数据，以及企业内部生产运维报表。更新节奏以季度、年度为周期，部分行业运行数据按月更
+meta_description: 自动化设备财报分析的部署与升级：自动化设备财报分析的部署与升级，涵盖配置与验证建议
 keywords: 自动化设备、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

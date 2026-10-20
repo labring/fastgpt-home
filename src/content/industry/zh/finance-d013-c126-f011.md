@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场融资日报的文档解析与分块
-meta_description: 航空机场融资日报的数据来源包含民航地区监管局公开的机场运营配套融资公告、机场集团内部的每日融资台账、航空财经资讯平台的每日汇总。更新节奏为每日18点前更新前
+meta_description: 航空机场融资日报的文档解析与分块：航空机场融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 航空机场、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

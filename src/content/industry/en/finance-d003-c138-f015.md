@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Expense List Insurance Claim
-meta_description: Expense list data is sourced from the medical settlement systems of designated medical institutions, reimbursement ledgers of medical insurance
+meta_description: Deployment and Upgrade for Expense List Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

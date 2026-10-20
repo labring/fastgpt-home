@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备研报检索的HTTP 接口与外部系统
-meta_description: 航天装备研报主要来源于国防军工专业研报数据库、航天系统公开技术文档、行业联盟发布的年度分析报告。更新节奏以单次航天发射任务、新型号立项公示为触发节点，1-3
+meta_description: 航天装备研报检索的HTTP 接口与外部系统：航天装备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航天装备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

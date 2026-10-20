@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒营销内容的工具调用与插件
-meta_description: 白酒营销相关数据主要来自生产企业官方产品手册、区域经销商动销台账、电商平台用户评价、行业协会合规宣传规范四类。产品手册包含香型、酒精度、执行标准、窖藏年限、
+meta_description: 白酒营销内容的工具调用与插件：白酒营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 白酒、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

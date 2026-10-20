@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Industrial Park Yield Rates
-meta_description: Data for industrial park daily yield reports comes from park operation management systems, daily revenue reports from settled merchants, and daily
+meta_description: Database and Operations for Industrial Park Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤投研知识库建设的数据库与运维
-meta_description: 动力煤投研数据来源包含行业协会公开统计、北方港口现货交易台账、铁路货运调度记录及期货交割结算数据。更新节奏按数据类型区分，现货交易数据每日更新，月度供需统计
+meta_description: 动力煤投研知识库建设的数据库与运维：动力煤投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 动力煤、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

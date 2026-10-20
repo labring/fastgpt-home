@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备研报检索的多轮对话与提示词
-meta_description: 通信设备研报主要来自券商通信行业研究所、行业标准组织及头部设备商公开披露文档。更新节奏以季度行业全景研报、月度厂商动态报告为主，部分热点事件相关研报会临时更
+meta_description: 通信设备研报检索的多轮对话与提示词：通信设备研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通信设备、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

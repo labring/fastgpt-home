@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Auto Service Profit Margins
-meta_description: Profitability and market trend data for the auto service sector is primarily sourced from store operation POS systems, after-sales CRM systems, and
+meta_description: Workflow Orchestration for Auto Service Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

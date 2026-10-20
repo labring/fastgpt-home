@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的部署与升级
-meta_description: 受益所有人KYC的数据主要来自企业工商备案的股权信息、实际控制人提交的身份声明文件，以及监管要求的穿透核查材料。更新节奏随企业股权结构变更实时触发，常规按季
+meta_description: 受益所有人KYC 的部署与升级：受益所有人KYC 的部署与升级，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

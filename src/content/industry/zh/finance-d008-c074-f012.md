@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务智能尽调报告的模型接入与配置
-meta_description: 教育服务智能尽调报告的数据来源包括教育服务机构的办学资质备案文件、师资履历档案、学员服务台账、教研计划文档、年度财务报表等。更新节奏存在差异：办学资质类文件
+meta_description: 教育服务智能尽调报告的模型接入与配置：教育服务智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 教育服务、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

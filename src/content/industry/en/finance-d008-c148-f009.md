@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Hotel and Catering
-meta_description: Hotel and catering due diligence data mainly comes from four sources: business qualifications publicized by market supervision departments, store
+meta_description: Citation Sources and Traceability for Hotel and Catering Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -29,7 +29,7 @@ Some third-party platform data has copyright restrictions. Traceability must cle
 | ---- | ---- | ---- |
 | `Recall Count` | `Top 10-15 entries` | Hotel and catering due diligence data has many scattered fields, and needs to cover qualification, operation, and supply chain information. Too many entries increase context burden, too few fail to cover core fields |
 | `Similarity Threshold` | `0.75-0.85` | Must distinguish similar operation data of stores in the same category, to avoid incorrectly associating passenger flow data of nearby stores with the target store. A threshold that is too low introduces irrelevant data |
-| `Citation Content Template` | `{{content}} (Source: {{source}}, Update Time: {{update_time}})` | Adapts to traceability identifier requirements for multi-source data, clearly marks source channels and update times, and complies with compliance requirements for due diligence reports |
+| `Traceability details` | `the configured value (the configured source field, the configured update-time field)` | Adapts to traceability identifier requirements for multi-source data, clearly marks source channels and update times, and complies with compliance requirements for due diligence reports |
 | `Data Timeliness Verification Duration` | `Qualification type: 7 days, platform type: 1 day, ledger type: 30 days` | Matches update rhythms of different data sources, ensures cited data does not exceed the compliant timeliness range |
 | `Traceability Field Binding Switch` | `Enabled` | Must force binding of field names with corresponding measurement identifiers, prevent unit matching errors, and meet the field specificity requirements of hotel and catering data |
 | `Reranked Return Count` | `Top 5-8 entries` | Prioritizes returning traceability data strongly related to the target store, improving the accuracy of due diligence reports |
@@ -39,7 +39,7 @@ Some third-party platform data has copyright restrictions. Traceability must cle
 ## Three Common Misconfigurations
 - Symptom: No optional values are available for variable references when configuring the traceability link. Cause: Outputs for traceability-required variables such as store identification and update time are not configured in associated data source nodes. This leaves no corresponding options in the variable pool.
 - Symptom: A "Cannot redefine property: toString" error is thrown during online environment operation. Cause: The custom traceability processing script repeatedly declares the toString global method, which conflicts with the platform's built-in prototype method.
-- Symptom: The citation content of generated due diligence reports does not include data source channel labels. Cause: The citation content template does not include the {{source}} placeholder, or the traceability field binding switch is not enabled. This prevents automatic association of source information.
+- Symptom: The citation content of generated due diligence reports does not include data source channel labels. Cause: The citation content template does not include the example value pending verification, or the traceability field binding switch is not enabled. This prevents automatic association of source information.
 
 ## How to Verify Proper Configuration
 - Upload qualification documents and operation data for a single hotel or catering store, trigger knowledge base recall, and confirm that source tags in recall results correctly match regulatory platforms or third-party platforms.

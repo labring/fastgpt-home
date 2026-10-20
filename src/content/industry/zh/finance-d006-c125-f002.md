@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备投研知识库建设的上下文与 token
-meta_description: 面向金融投研的航天装备行业投研数据主要来自国防军工领域公开研报、航天院所发布的项目披露文档、官方发布的航天发射任务通报、行业标准规范文件，以及型号研制阶段的
+meta_description: 航天装备投研知识库建设的上下文与 token：航天装备投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 航天装备、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药研报检索的向量模型与索引
-meta_description: 化学制药研报主要来自券商研究所医药组报告、国家药监局CDE公开审评文件、药企官方研发公告及行业协会白皮书。更新节奏随事件触发，药企公告实时更新，券商研报按季
+meta_description: 化学制药研报检索的向量模型与索引：化学制药研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 化学制药、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

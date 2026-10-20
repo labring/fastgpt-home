@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Medical Device
-meta_description: Medical device investment research data primarily comes from official announcements from national drug regulatory authorities, clinical research
+meta_description: Citation Source and Traceability for Medical Device Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ The multi-official-source nature of medical device data requires traceability sy
 | `similarity_threshold` | `0.72–0.80` | A large number of professional terms require balancing recall precision and coverage, to avoid filtering out niche clinical data |
 | `parse_chunk_size` | `1000–1200 characters` | Medical device documents contain long sections of technical parameters. Too long chunks will lose traceability associations, too short chunks will damage parameter integrity |
 | `source_update_strategy` | `Incremental synchronization by data source release time` | Medical device registration data updates follow no fixed schedule. Newly released approval announcements must be crawled in real time to complete traceability binding |
-| `reference_template` | `{{product_name}} ({{reference_id}}), Source: {{source_name}}, Publish Date: {{publish_date}}` | Retain product identifiers and official traceability fields, to meet compliance requirements for investment research scenarios |
+| `traceability details` | `the configured value (the configured value), the configured source field, the configured publish-date field` | Retain product identifiers and official traceability fields, to meet compliance requirements for investment research scenarios |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing.
 

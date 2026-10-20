@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Baijiu Marketing
-meta_description: Baijiu marketing content data comes from brand official product manuals, tasting reports, offline event press releases, e-commerce product detail
+meta_description: Knowledge Base Retrieval and Recall for Baijiu Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

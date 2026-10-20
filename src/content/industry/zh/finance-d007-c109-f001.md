@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件收益率的HTTP 接口与外部系统
-meta_description: 电子元件用于收益率日报播报的相关数据主要来自授权分销商公开API、行业行情聚合数据源。数据分为两类：原厂指导价每日更新一次，适配日报播报需求；现货交易行情每
+meta_description: 电子元件收益率的HTTP 接口与外部系统：电子元件收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 电子元件、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

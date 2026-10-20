@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产品咨询客户服务的HTTP 接口与外部系统
-meta_description: 产品咨询的数据来源为企业内部产品管理系统及监管备案存档文档，更新节奏为产品条款、销售规则调整或新备案完成时触发，无固定周期。单条咨询数据的文档结构包含产品唯
+meta_description: 产品咨询客户服务的HTTP 接口与外部系统：产品咨询客户服务的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 产品咨询、客户服务与账户咨询、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

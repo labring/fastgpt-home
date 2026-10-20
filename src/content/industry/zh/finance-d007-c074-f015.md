@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务收益率的部署与升级
-meta_description: 数据来源为持牌金融信息服务机构的公开行情接口与官方披露文件。更新节奏为每日收盘后完成当日全量标的数据抓取，次日凌晨完成日报内容整合与校验，确保每日仅发布一次
+meta_description: 教育服务收益率的部署与升级：教育服务收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 教育服务、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

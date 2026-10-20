@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的工作流编排
-meta_description: 专业连锁的融资日报数据主要来自各门店的营业POS系统、总部供应链财务模块，以及合作金融机构的接口推送。数据更新节奏为每日T+1生成，即当日营业结束后次日凌晨
+meta_description: 专业连锁融资日报的工作流编排：专业连锁融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 专业连锁、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

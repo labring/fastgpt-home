@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的部署与升级
-meta_description: 这个品类的数据来源于农商行核心业务系统每日跑批生成的内部业务台账，以及公开市场同业收益率披露信息。更新节奏为每个交易日结束后次日上午完成全量数据整合。数据以
+meta_description: 农商行收益率的部署与升级：农商行收益率的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 农商行、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

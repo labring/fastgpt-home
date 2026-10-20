@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Chemical Raw Material
-meta_description: Data for chemical raw material financing daily reports comes from chemical industry financing disclosure platforms, local industry and information
+meta_description: Vector Models and Indexing for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

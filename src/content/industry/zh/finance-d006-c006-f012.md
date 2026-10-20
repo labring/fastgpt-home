@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药投研知识库建设的模型接入与配置
-meta_description: 中药投研数据主要来自国家药典标准、临床研究文献、药企质控报告与药材流通监测数据。更新节奏差异明显：国家药典标准每数年正式修订，临床文献随研究进展实时更新，企
+meta_description: 中药投研知识库建设的模型接入与配置：中药投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 中药、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

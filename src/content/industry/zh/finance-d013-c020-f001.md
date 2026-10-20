@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备融资日报的HTTP 接口与外部系统
-meta_description: 兵器装备融资日报的数据主要来自国防军工领域企业的公开融资公告、证券交易所披露文件及行业归口管理机构的汇总信息。更新节奏为每个交易日收盘后完成当日数据汇总更新
+meta_description: 兵器装备融资日报的HTTP 接口与外部系统：兵器装备融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 兵器装备、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

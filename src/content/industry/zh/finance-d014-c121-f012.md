@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料财报分析的模型接入与配置
-meta_description: 耐火材料品类的财报数据主要来自上市耐火材料企业公开披露的定期报告，以及行业协会发布的月度运行数据。数据更新节奏为上市公司季报每45天更新一次、年报每4个月更
+meta_description: 耐火材料财报分析的模型接入与配置：耐火材料财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 耐火材料、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

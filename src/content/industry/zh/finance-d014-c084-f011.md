@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理财报分析的文档解析与分块
-meta_description: 水处理相关企业的财报数据主要来自公开定期报告、专项审计报告及项目运营台账。数据更新遵循行业监管要求，年度财报每年更新一次，季度财报每季度发布，专项项目报告随
+meta_description: 水处理财报分析的文档解析与分块：水处理财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 水处理、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

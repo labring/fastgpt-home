@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c119-f008
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Comprehensive Service Financing
-meta_description: Data for comprehensive service financing daily reports comes from public market business transaction announcements, daily reports from the Interbank
+meta_title: Tool Calling and Plugins for Comprehensive Service
+meta_description: Tool Calling and Plugins for Comprehensive Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

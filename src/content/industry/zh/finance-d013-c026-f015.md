@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版融资日报的部署与升级
-meta_description: 出版融资日报的数据来源主要为上市公司公告、全国中小企业股份转让系统公告、行业监管平台公示信息及权威行业媒体的公开披露内容。更新节奏为每日T+1更新前一日披露
+meta_description: 出版融资日报的部署与升级：出版融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 出版、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

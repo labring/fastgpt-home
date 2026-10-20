@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Regulatory Compliance Measures
-meta_description: Regulatory compliance document data comes from formal normative documents released by official regulatory bodies and industry self-regulatory
+meta_description: Deployment and Upgrade for Regulatory Compliance Measures
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

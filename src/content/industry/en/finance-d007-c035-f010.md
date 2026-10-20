@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Aesthetic Medicine Profit
-meta_description: Aesthetic medicine profit margin-related data comes from de-identified transaction data of POS cash registers, member management systems at aesthetic
+meta_description: Database and Operations for Aesthetic Medicine Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

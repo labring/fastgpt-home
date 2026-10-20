@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的文档解析与分块
-meta_description: 环境监测研报的数据来源包含生态环境主管部门公开公报、第三方环境监测机构专项报告、行业协会年度汇总文档。更新节奏包含实时小时级监测快照、季度专项分析、年度综合
+meta_description: 环境监测研报检索的文档解析与分块：环境监测研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 环境监测、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

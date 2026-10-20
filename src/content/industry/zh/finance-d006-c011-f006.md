@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品投研知识库建设的对话日志与审计
-meta_description: 休闲食品投研数据来源包括线下商超POS动销数据、头部电商平台商品评论与销量数据、行业协会月度产销报告、上游谷物油脂等原材料期货行情数据、品牌方公开财报与新品
+meta_description: 休闲食品投研知识库建设的对话日志与审计：休闲食品投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 休闲食品、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

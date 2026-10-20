@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c014-2
 page_type: 行业作业环节页
 article_section: 公募基金
 is_part_of: FastGPT 技术中心
-meta_title: 债券基金投资与运营的跟踪评级、重大事项、市场价格和流动性：哪
-meta_description: 债券基金投资与运营的跟踪评级、重大事项、市场价格和流动性：哪一部分能交给系统
+meta_title: 债券基金投资与运营的跟踪评级、重大事项、市场价格和流动性：哪一部分能交给系统
+meta_description: 债券基金投资与运营的跟踪评级、重大事项、市场价格和流动性：哪一部分能交给系统：债券基金投资与运营的跟踪评级、重大事项、市场价格和流动性：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 债券基金投资与运营、公募基金、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药收益率的多轮对话与提示词
-meta_description: 中药行情与收益率数据主要来自国内中药材专业市场的每日挂牌交易记录、道地药材产地收购监测数据，以及行业公开的行情简报。数据更新节奏为每个交易日结束后同步更新，
+meta_description: 中药收益率的多轮对话与提示词：中药收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 中药、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

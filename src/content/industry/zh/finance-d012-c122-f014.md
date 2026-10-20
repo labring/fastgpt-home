@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行营销内容的表单与交互
-meta_description: 股份制银行营销相关数据来源包括内部CRM系统的客户留资数据、线上渠道交互日志、线下网点表单数据，以及营销活动配套的产品说明书、活动海报、H5素材等。更新节奏
+meta_description: 股份制银行营销内容的表单与交互：股份制银行营销内容的表单与交互，涵盖配置与验证建议
 keywords: 股份制银行、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

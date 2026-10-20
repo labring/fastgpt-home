@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Tool Invocation and Plugins for Product Consultation
-meta_description: Product consultation data primarily comes from financial institution official product manuals, real-time rate disclosure systems, underwriting rule
+meta_description: Tool Invocation and Plugins for Product Consultation Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

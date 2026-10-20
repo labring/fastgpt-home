@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Coke Marketing Content
-meta_description: Data related to coke comes primarily from the Dalian Commodity Exchange coke futures market system, major domestic coastal port spot quotation
+meta_description: Forms and Interactions for Coke Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Biologics Yield Rates
-meta_description: Data related to biologics yield rates comes from three sources: National Medical Products Administration batch release public data, periodic reports
+meta_description: Multi-turn Dialogue and Prompting for Biologics Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

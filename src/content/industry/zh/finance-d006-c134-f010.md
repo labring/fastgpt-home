@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品投研知识库建设的数据库与运维
-meta_description: 数据源包括行业公开研报、商超零售监测数据、企业公开财报、供应链原料报价数据。更新节奏依类型不同：财报按季度发布，零售监测数据按周更新，原料报价每日更新。文档
+meta_description: 调味品投研知识库建设的数据库与运维：调味品投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 调味品、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

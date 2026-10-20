@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Cosmetics Research
-meta_description: Cosmetics research report data mainly comes from public analysis from industry consulting firms, public product filing information from brands, public
+meta_description: Citation Source and Traceability for Cosmetics Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Differences in update frequencies across content also require the traceability l
 | --- | --- | --- |
 | `Recall Count` | Top 8-12 entries | Cosmetics research reports cover multi-dimensional modules including ingredients, efficacy, and compliance. A sufficient number of recalled entries is needed to cover core information and avoid missing key content |
 | `Similarity Threshold` | 0.75-0.85 | Cosmetics research reports have relatively professional content. This range filters low-match irrelevant content while retaining weakly matched entries related to specific efficacy claims |
-| `Citation Template` | `【Source: {source}, Issuing Organization: {org}, Release Date: {date}, Filing Number: {record_no}】` | Cosmetics research report traceability requires clear labeling of exclusive fields such as filing numbers and issuing organizations to ensure users can trace compliance and product information |
+| `Traceability details` | `【Source: {source}, Issuing Organization: {org}, Release Date: {date}, Filing Number: {record_no}】` | Cosmetics research report traceability requires clear labeling of exclusive fields such as filing numbers and issuing organizations to ensure users can trace compliance and product information |
 | `Segment Length` | 800-1200 characters | Cosmetics research reports include ingredient details and comparison tables. Longer segments can retain complete module information and avoid breaking content relevance by splitting |
 | `Knowledge Base Time Range Filter` | Only recall documents from the past 12 months | The cosmetics industry has fast product iteration. Expired research reports have low reference value, and filtering improves traceability accuracy |
 | `Reranked Return Count` | Top 5 entries | Prioritize displaying the most relevant core research report content to avoid excessive redundant information interfering with traceability judgments |

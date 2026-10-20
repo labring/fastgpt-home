@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Air Pollution Control Marketing
-meta_description: Data related to air pollution control comes primarily from real-time reports submitted by local environmental monitoring stations, internal enterprise
+meta_description: Workflow Orchestration for Air Pollution Control Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,7 +35,7 @@ For the data analysis link bound to work orders, ensure nodes only call historic
 | Configuration Item | Recommended Setting | Rationale |
 | --- | --- | --- |
 | `Scheduled Trigger Interval` | `300 seconds` | Matches the update frequency of most environmental monitoring data, ensures pulled data is up-to-date, supports time-sensitive marketing content |
-| `Variable Reference Format` | `{{dataset.field_name}}` | Follows FastGPT official variable reference specifications, resolves issues with unrecognized non-standard formats, ensures marketing content can correctly call dataset fields |
+| `Variable Reference Format` | `example value` | Follows FastGPT official variable reference specifications, resolves issues with unrecognized non-standard formats, ensures marketing content can correctly call dataset fields |
 | `Fixed Node Binding Rule` | `Bind to the point ID of the specified work order` | Ensures data analysis operations only target the governance points of the corresponding work order, meets the requirement of fixed operations tied to work orders, improves the accuracy of marketing content |
 | `Loop Switch` | `Enable loop, process 5 points per single run` | Processes multi-point data in batches, reduces workflow timeout risks, adapts to scenarios with a large number of air pollution control points |
 | `Data Filter Condition` | `Filter data with update time within the last 1 hour` | Ensures marketing content is based on the latest governance data, improves information timeliness, complies with compliance requirements for financial business marketing |
@@ -45,7 +45,7 @@ For the data analysis link bound to work orders, ensure nodes only call historic
 
 ## Three Common Configuration Mistakes
 - Phenomenon: Workflows throw errors in run mode, but execute normally in debug mode. Cause: Debug mode uses locally simulated test data. Run mode calls real environmental data sources without configured interface access permissions, leading to request interception.
-- Phenomenon: Target fields appear empty in generated marketing content after variable reference. Cause: Non-standard [{datasetId: xxx}] format is used. FastGPT’s {{dataset.field_name}} variable reference specification is not followed, so the system cannot parse the variable path correctly.
+- Phenomenon: Target fields appear empty in generated marketing content after variable reference. Cause: Non-standard [{datasetId: xxx}] format is used. FastGPT’s example value variable reference specification is not followed, so the system cannot parse the variable path correctly.
 - Phenomenon: Workflow execution times out and stops. Cause: Loop configuration is not enabled. All historical data for all points is pulled at once, exceeding the workflow’s default runtime limit.
 
 ## How to Confirm Configuration Is Complete

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属智能尽调报告的工具调用与插件
-meta_description: 工业金属的尽调数据主要来自全球期货交易所、国内行业协会、矿山及冶炼企业公开财报、海关进出口台账。更新节奏覆盖实时、日内、月度及季度：期货行情实时更新，行业供
+meta_description: 工业金属智能尽调报告的工具调用与插件：工业金属智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 工业金属、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

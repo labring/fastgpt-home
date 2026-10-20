@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Infrastructure
-meta_description: Infrastructure engineering investment research data mainly comes from project cost estimates, construction logs, supervision weekly reports, bidding
+meta_description: Conversation Logging and Auditing for Infrastructure Engineering Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

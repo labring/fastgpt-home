@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c031-3
 page_type: 行业作业环节页
 article_section: 银行信贷
 is_part_of: FastGPT 技术中心
-meta_title: 并购贷款的重建并购后合并现金流、债务负担及整合假设：哪一部分
-meta_description: 并购贷款的重建并购后合并现金流、债务负担及整合假设：哪一部分能交给系统
+meta_title: 并购贷款的重建并购后合并现金流、债务负担及整合假设：哪一部分能交给系统
+meta_description: 并购贷款的重建并购后合并现金流、债务负担及整合假设：哪一部分能交给系统：并购贷款的重建并购后合并现金流、债务负担及整合假设：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 并购贷款、银行信贷、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Advertising Marketing Yield Rates
-meta_description: Advertising marketing yield rate data comes from ad campaign management systems and third-party ad performance monitoring platforms. These platforms
+meta_description: Sharing and Embedding of Advertising Marketing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

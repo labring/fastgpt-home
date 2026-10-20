@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for E-commerce Service
-meta_description: Financing data for e-commerce service daily reports comes from two sources: merchant financing management modules of partnered e-commerce platforms
+meta_description: Citation Sources and Traceability for E-commerce Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

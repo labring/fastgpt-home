@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易营销内容的知识库检索与召回
-meta_description: 钢铁贸易的数据源包含企业内部库存台账、每日更新的产品报价单、行业指导价文件、定制化营销话术模板与客户合作记录。数据更新节奏随类型差异明显：报价单与库存数据每
+meta_description: 钢铁贸易营销内容的知识库检索与召回：钢铁贸易营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 钢铁贸易、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

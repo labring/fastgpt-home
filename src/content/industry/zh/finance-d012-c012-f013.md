@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的知识库检索与召回
-meta_description: 住宅开发营销内容的数据主要来源于项目案场资料、户型测绘报告、预售证公示文件、区域规划公示、营销物料（楼书、海报、短视频脚本）及客户咨询FAQ。更新节奏随项目
+meta_description: 住宅开发营销内容的知识库检索与召回：住宅开发营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 住宅开发、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

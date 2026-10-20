@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能投研知识库建设的部署与升级
-meta_description: 储能投研数据主要来自电网调度公开接口、储能设备厂商技术文档、中国电力企业联合会行业报告、区域电力交易平台实时数据。更新节奏差异明显：实时并网功率、SOC等运
+meta_description: 储能投研知识库建设的部署与升级：储能投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 储能、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

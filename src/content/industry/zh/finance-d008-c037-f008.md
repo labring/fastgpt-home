@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信智能尽调报告的工具调用与插件
-meta_description: 卫星通信智能尽调报告面向金融、保险、理财领域的航天资产合规与风险尽调需求，数据来源包括卫星运营商公开的轨道位置数据、地面站通信流量日志、频谱使用监测报告及航
+meta_description: 卫星通信智能尽调报告的工具调用与插件：卫星通信智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 卫星通信、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

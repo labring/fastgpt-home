@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采营销内容的表单与交互
-meta_description: 油气开采相关数据主要来自井场SCADA系统、现场运维日志、地质勘探研究院归档资料。传感器采集的单井实时数据每15分钟更新一次，生产日报每日更新，勘探类报告每
+meta_description: 油气开采营销内容的表单与交互：油气开采营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 油气开采、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

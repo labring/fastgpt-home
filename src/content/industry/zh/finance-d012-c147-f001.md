@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸营销内容的HTTP 接口与外部系统
-meta_description: 面向金融行业的造纸供应链营销内容的数据主要来自企业内部营销物料库、ERP产品管理模块及公开招投标平台。更新节奏分为两类：产品规格类文档按季度更新，招投标类文
+meta_description: 造纸营销内容的HTTP 接口与外部系统：造纸营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 造纸、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

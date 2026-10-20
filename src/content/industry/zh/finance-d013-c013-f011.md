@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的文档解析与分块
-meta_description: 保险融资日报的数据来源为保险公司内部承保台账、每日保费收支报表、融资业务审批单；更新节奏为每日凌晨更新前一日的全量业务数据；文档多为结构化Excel或固定版
+meta_description: 保险融资日报的文档解析与分块：保险融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 保险、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c064-f011
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Film and Theater Financing
-meta_description: Data for film and theater financing daily reports comes primarily from public financing announcements, daily submission data from industry monitoring
+meta_title: Document Parsing and Chunking for Film and Theater
+meta_description: Document Parsing and Chunking for Film and Theater Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

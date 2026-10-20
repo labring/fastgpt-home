@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的向量模型与索引
-meta_description: 卫星通信营销内容的来源为卫星通信运营商的营销素材库，包含带宽套餐说明、行业解决方案文档、终端设备宣传手册、线下活动话术脚本。更新节奏为不定期，新套餐上线、行
+meta_description: 卫星通信营销内容的向量模型与索引：卫星通信营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Attribution for Black Goods Research
-meta_description: The data sources for black goods research reports primarily include third-party home appliance industry monitoring institutions, home appliance
+meta_description: Citation Source and Attribution for Black Goods Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -37,7 +37,7 @@ The large number of segmented product categories also requires attribution infor
 ## Three Common Mistakes
 - Scenario: After uploading a local black goods research report file in a custom workflow, the attribution result shows no associated file. Cause: The tool call only supports uploading file links, and no variable mapping rules for local file uploads are configured, resulting in the file not being correctly loaded into the database.
 - Scenario: A 504 Gateway Timeout error occurs when parsing large black goods research report PDFs. Cause: The `PARSE_FILE_TIMEOUT_SECONDS` parameter is not adjusted, and the default parsing duration is insufficient, causing the parsing process to time out and interrupt.
-- Scenario: Retrieved attribution information only displays the data source institution and does not include the release time. Cause: The `SOURCE_MARK_FORMAT` parameter is not configured, or the `{date}` placeholder is omitted from the parameter, resulting in failure to extract and display the release time information.
+- Scenario: Retrieved attribution information only displays the data source institution and does not include the release time. Cause: The `SOURCE_MARK_FORMAT` parameter is not configured, or the `{date}` pending verification is omitted from the parameter, resulting in failure to extract and display the release time information.
 
 ## How to Confirm the Configuration Is Correct
 - Upload a black goods industry research report PDF, view the parsed text fragments, and confirm there are no obvious segment breaks and that all field information is complete.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的工作流编排
-meta_description: 纺织制造的核心数据来源于企业内部ERP系统、面料检测实验室报告、供应链采购台账，以及金融机构的供应链金融授信台账。ERP系统包含纱支数、克重、幅宽等结构化生
+meta_description: 纺织制造营销内容的工作流编排：纺织制造营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 纺织制造、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

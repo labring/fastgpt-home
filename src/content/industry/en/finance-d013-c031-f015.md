@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c031-f015
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Chemical Pharmaceutical Financing
-meta_description: Data sources for chemical pharmaceutical financing daily reports include primary market investment and financing public disclosure platforms, local
+meta_title: Deployment and Upgrade for Chemical Pharmaceutical
+meta_description: Deployment and Upgrade for Chemical Pharmaceutical Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

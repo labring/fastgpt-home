@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c027-f011
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for In-Client Natural Language
-meta_description: Data sources for in-client natural language retrieval at the feature entry point come mainly from the built-in business knowledge base of financial
+meta_title: Document Parsing and Chunking for In-Client Natural
+meta_description: Document Parsing and Chunking for In-Client Natural Language Retrieval (Feature Entry)
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

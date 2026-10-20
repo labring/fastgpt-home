@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路营销内容的HTTP 接口与外部系统
-meta_description: 铁路公路营销内容数据主要来自客运票务系统、站点广告管理平台、区域交通营销中台。数据更新节奏分为两类：实时类票务优惠、临时线路调整信息，按分钟级同步；固定类站
+meta_description: 铁路公路营销内容的HTTP 接口与外部系统：铁路公路营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 铁路公路、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

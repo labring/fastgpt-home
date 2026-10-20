@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路融资日报的工具调用与插件
-meta_description: 铁路公路融资日报的数据来源包括交通运输部公开的交通基建融资公示、国有铁路集团及公路运营企业的定期披露公告、地方发改委的项目融资备案信息。更新节奏为每日更新，
+meta_description: 铁路公路融资日报的工具调用与插件：铁路公路融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 铁路公路、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

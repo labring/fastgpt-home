@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全融资日报的引用来源与溯源
-meta_description: 网络安全融资日报的数据来源于政府投融资公示平台、行业垂直安全媒体的融资公告、网络安全厂商官方披露信息。更新节奏为每日更新，单篇文档通常包含3至5条融资条目。
+meta_description: 网络安全融资日报的引用来源与溯源：网络安全融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 网络安全、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的知识库检索与召回
-meta_description: 资金来源KYC数据主要来自用户提交的银行交易流水、纳税申报表、资产权属证明、贸易合同扫描件，以及合规审核生成的核验记录。更新节奏随用户提交频次波动，单次提交
+meta_description: 资金来源KYC 的知识库检索与召回：资金来源KYC 的知识库检索与召回，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

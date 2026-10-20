@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区财报分析的向量模型与索引
-meta_description: 旅游景区财报数据主要来自景区运营主体公开披露的定期报告、内部运营台账与客流统计报表。更新节奏分为季度公开财报、月度内部运营数据两类。文档结构包含营收拆分（门
+meta_description: 旅游景区财报分析的向量模型与索引：旅游景区财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 旅游景区、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

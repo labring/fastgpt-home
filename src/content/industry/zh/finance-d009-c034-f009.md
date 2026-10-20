@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的引用来源与溯源
-meta_description: 医疗器械研报的数据来源包括医疗器械注册审评公开资料、厂商技术白皮书、临床研究期刊文献、行业协会调研文档。更新节奏随监管政策变动、新品获批周期、行业调研周期调
+meta_description: 医疗器械研报检索的引用来源与溯源：医疗器械研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 医疗器械、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

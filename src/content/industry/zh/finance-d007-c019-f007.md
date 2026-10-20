@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税收益率的工作流编排
-meta_description: 免税收益率与行情日报的数据来源为离岛免税经营主体官方经营台账、海关总署离岛免税监管系统、第三方免税商品行情监测平台。数据更新节奏为每日凌晨2点至4点更新前一
+meta_description: 免税收益率的工作流编排：免税收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 免税、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

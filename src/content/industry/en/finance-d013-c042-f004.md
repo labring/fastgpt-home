@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Brand Agency Financing Daily
-meta_description: Data sources for brand agency financing daily reports include public industry financing announcements, brand updates from third-party industry
+meta_description: Vector Models and Indexing for Brand Agency Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

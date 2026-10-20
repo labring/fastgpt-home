@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产营销内容的表单与交互
-meta_description: 商业地产营销相关数据主要来自项目招商台账、在售待租商铺档案、周边商圈配套台账三类数据源。更新节奏随项目招商调整、商铺租赁状态变更或周边配套落地同步更新。文档
+meta_description: 商业地产营销内容的表单与交互：商业地产营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 商业地产、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美智能尽调报告的部署与升级
-meta_description: 医美智能尽调报告的数据来源包括属地卫生健康委员会的医美机构执业资质备案、医美项目物价与医保备案公示、监管部门的合规处罚记录、机构内部的诊疗档案归档、第三方医
+meta_description: 医美智能尽调报告的部署与升级：医美智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 医美、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品财报分析的工作流编排
-meta_description: 这个品类的数据主要来自上海证券交易所、深圳证券交易所披露平台，以及上市公司官方公告。更新节奏为定期披露，年度报告需在每年4月30日前完成披露，半年度报告、季
+meta_description: 家居用品财报分析的工作流编排：家居用品财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 家居用品、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

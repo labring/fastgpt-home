@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的多轮对话与提示词
-meta_description: 水产养殖的核心数据来自基层养殖主体的日常生产台账、区域水产技术推广站的环境监测数据、大宗水产品批发市场的当日收购报价。更新节奏：核心行情报价与收益测算相关数
+meta_description: 水产养殖收益率的多轮对话与提示词：水产养殖收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水产养殖、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

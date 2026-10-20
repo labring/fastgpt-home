@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电财报分析的工具调用与插件
-meta_description: 黑色家电财报数据主要来自上市公司官方披露的定期报告、公开零售监测数据集。季度数据每季度更新一次，年度数据每年更新一次，零售端细分数据每日更新。单份财报文档通
+meta_description: 黑色家电财报分析的工具调用与插件：黑色家电财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 黑色家电、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

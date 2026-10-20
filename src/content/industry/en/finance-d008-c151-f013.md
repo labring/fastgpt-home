@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Railway and Highway
-meta_description: This category’s data comes primarily from publicly released project completion documents, operation and maintenance logs, annual statistical reports
+meta_description: Knowledge Base Retrieval and Recall for Railway and Highway Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

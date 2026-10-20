@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械收益率的HTTP 接口与外部系统
-meta_description: 工程机械收益率的核心数据来源于设备物联网终端采集的作业时长数据，以及企业ERP系统的财务核算数据。数据更新节奏为每日凌晨完成前一自然日的全量汇总，生成标准化
+meta_description: 工程机械收益率的HTTP 接口与外部系统：工程机械收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工程机械、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务收益率的数据库与运维
-meta_description: 教育服务场景下的收益率与行情日报数据，主要来源于公共合规金融行情接口与平台内部的课程收益核算系统。数据更新节奏遵循交易日每日固定时点刷新，非交易日仅更新低频
+meta_description: 教育服务收益率的数据库与运维：教育服务收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 教育服务、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

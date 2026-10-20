@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的多轮对话与提示词
-meta_description: 家居用品研报的数据主要来自轻工制造行业数据库、券商公开研报、头部家居品牌财报、线下零售监测机构数据。更新节奏包含固定周期的季度、半年度行业大盘报告，以及新品
+meta_description: 家居用品研报检索的多轮对话与提示词：家居用品研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 家居用品、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

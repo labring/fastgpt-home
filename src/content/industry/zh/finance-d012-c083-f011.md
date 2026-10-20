@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务营销内容的文档解析与分块
-meta_description: 水务营销相关数据主要来源于管网运维记录、水费收缴台账、节水宣传物料、线下活动方案、官方公示文档等渠道。更新节奏随业务场景变化：营销活动方案随活动周期更新，运
+meta_description: 水务营销内容的文档解析与分块：水务营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 水务、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

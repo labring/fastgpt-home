@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮收益率的分享与嵌入
-meta_description: 酒店餐饮的收益率与行情数据主要来自门店POS收银系统、PMS酒店管理系统及后台营业台账。数据更新节奏为每日营业结束后生成当日日报，次日凌晨完成全量同步。单份
+meta_description: 酒店餐饮收益率的分享与嵌入：酒店餐饮收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 酒店餐饮、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

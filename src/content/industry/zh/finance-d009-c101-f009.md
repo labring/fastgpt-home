@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流研报检索的引用来源与溯源
-meta_description: 物流研报数据主要来自交通运输行业协会公开报告、第三方物流数据监测机构、上市物流企业定期财报及交通主管部门月度监测数据。数据更新节奏以月度为主，部分干线运价、
+meta_description: 物流研报检索的引用来源与溯源：物流研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 物流、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

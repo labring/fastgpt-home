@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行财报分析的知识库检索与召回
-meta_description: 农商行财报数据来源包含地方银保监分局公开披露文件、机构官方年报与季度经营简报。更新节奏为年度报告于次年4月30日前披露，半年度报告于当年8月31日前披露，季
+meta_description: 农商行财报分析的知识库检索与召回：农商行财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 农商行、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

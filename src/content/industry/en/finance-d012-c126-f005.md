@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Aviation
-meta_description: The data for this category mainly comes from the flight scheduling system of the airport operation management platform, offline merchant transaction
+meta_description: Multi-turn Dialogue and Prompt Engineering for Aviation Airport Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Flight scheduling data updates daily, so multi-turn dialogue context retention d
 > The parameter values provided on this page are common recommended starting points for configuration. The actual values are affected by material form, data volume and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing.
 
 ## Three common mistakes
-- Phenomenon: An invalid token error is returned when calling the model, and the oneapi log shows that the token field value is "fastgpt". Cause: The default placeholder text of the platform was mistakenly used when configuring the API key, and it was not replaced with an actual valid key content.
+- Phenomenon: An invalid token error is returned when calling the model, and the oneapi log shows that the token field value is "fastgpt". Cause: The default pending verification text of the platform was mistakenly used when configuring the API key, and it was not replaced with an actual valid key content.
 - Phenomenon: When accessing the workflow multiple times with the same conversation ID, the context data of the two calls is inconsistent, resulting in deviations in recommended content. Cause: Two AI model nodes in the workflow are configured with different context retention rules, and the session-level context management strategy is not unified.
 - Phenomenon: An interface does not exist error is returned when initiating a workflow creation request via API. Cause: The API permission related to the workflow is not enabled, or the used API version does not cover the workflow module functions.
 

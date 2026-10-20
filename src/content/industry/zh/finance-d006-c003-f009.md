@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁投研知识库建设的引用来源与溯源
-meta_description: 专业连锁的数据源覆盖连锁总部ERP系统、POS收银系统、线下巡检报表及行业协会区域经营监测数据。数据更新节奏存在差异：单日客流、营收数据每日更新，区域汇总报
+meta_description: 专业连锁投研知识库建设的引用来源与溯源：专业连锁投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 专业连锁、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺营销内容的文档解析与分块
-meta_description: 服装家纺领域的营销内容数据主要来自品牌内部物料包、电商平台导出的商品详情文本、线下导购培训文档与供应链面料检测报告。更新节奏随新品上线周期调整，新品密集时段
+meta_description: 服装家纺营销内容的文档解析与分块：服装家纺营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 服装家纺、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

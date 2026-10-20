@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Renovation and Decoration Yield
-meta_description: Renovation and decoration yield and market data primarily comes from internal financial accounting systems of renovation enterprises and regional
+meta_description: Deployment and Upgrade for Renovation and Decoration Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

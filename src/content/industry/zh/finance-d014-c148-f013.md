@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的知识库检索与召回
-meta_description: 酒店餐饮财报分析的数据源涵盖门店POS交易台账、供应链采购报表、月度运营简报及年度审计财报。数据更新节奏存在分层差异，单门店日度营收数据每日更新，月度经营报
+meta_description: 酒店餐饮财报分析的知识库检索与召回：酒店餐饮财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

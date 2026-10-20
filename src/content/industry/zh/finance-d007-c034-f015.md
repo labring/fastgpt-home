@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械收益率的部署与升级
-meta_description: 医疗器械收益率与行情日报的数据来源包括全国各区域公共资源交易中心的中标公示、医疗器械采购平台的挂网价格、生产企业公开的供货成本信息。数据更新节奏为每日更新当
+meta_description: 医疗器械收益率的部署与升级：医疗器械收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 医疗器械、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

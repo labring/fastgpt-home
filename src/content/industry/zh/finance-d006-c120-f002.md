@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全投研知识库建设的上下文与 token
-meta_description: 网络安全投研数据主要来自公开漏洞库、实时威胁情报源、流量审计日志、主机配置报告及厂商安全公告。更新节奏覆盖实时（威胁情报）、每日（漏洞库同步）、按需（定制化
+meta_description: 网络安全投研知识库建设的上下文与 token：网络安全投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 网络安全、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

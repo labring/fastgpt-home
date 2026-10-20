@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业融资日报的多轮对话与提示词
-meta_description: 商业物业融资日报的数据来源于物业运营方的租赁台账、地方住建部门的租赁备案信息、合作金融机构的放款台账与授信审批记录。更新节奏为每日凌晨同步前一日的全量融资动
+meta_description: 商业物业融资日报的多轮对话与提示词：商业物业融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 商业物业、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

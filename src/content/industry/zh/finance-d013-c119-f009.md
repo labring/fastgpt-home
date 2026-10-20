@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务融资日报的引用来源与溯源
-meta_description: 综合服务融资日报的数据来源包含公开工商披露信息、行业协会公示数据、合作机构授权授信数据等多类渠道。更新节奏为每日凌晨批量同步完成，覆盖前一工作日的全量融资事
+meta_description: 综合服务融资日报的引用来源与溯源：综合服务融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 综合服务、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

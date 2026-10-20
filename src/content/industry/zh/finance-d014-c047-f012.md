@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行财报分析的模型接入与配置
-meta_description: 国有大行财报数据来源为官方投资者关系栏目、监管指定信息披露平台。文档以PDF格式为主，包含结构化财务报表、经营情况讨论与分析、重要事项等章节，单份年报的页数
+meta_description: 国有大行财报分析的模型接入与配置：国有大行财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 国有大行、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

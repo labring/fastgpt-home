@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁营销内容的表单与交互
-meta_description: 融资租赁相关数据主要来自企业内部授信审批系统、租赁物估值报告、承租人提交的资质材料。数据更新节奏随客户表单提交或授信状态变更同步触发。文档分为结构化字段与非
+meta_description: 融资租赁营销内容的表单与交互：融资租赁营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 融资租赁、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

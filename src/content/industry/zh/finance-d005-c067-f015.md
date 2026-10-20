@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的部署与升级
-meta_description: 投诉工单的数据主要来源于企业客服工单系统、客户服务后台提交记录，以及关联的账户操作日志。更新节奏为实时或分钟级，新投诉提交后即同步至数据集。单份工单文档结构
+meta_description: 投诉工单客户服务的部署与升级：投诉工单客户服务的部署与升级，涵盖配置与验证建议。
 keywords: 投诉工单、客户服务与账户咨询、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

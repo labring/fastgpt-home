@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logging and Auditing for Ordnance Equipment Yield
-meta_description: Ordnance equipment sector yield rate and market trend data comes primarily from three sources: publicly disclosed military industry financial reports
+meta_description: Dialogue Logging and Auditing for Ordnance Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -37,7 +37,7 @@ Coverage of multiple business fields requires audits to strictly align with the 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. Testing against local samples is recommended before finalizing settings.
 
 ## Three Common Misconfigurations
-- Symptom: Dialogue logs generated via API calls only display placeholder title content, with no specific ordnance equipment yield rate or market data. Cause: The `LOG_FIELD_WHITELIST` configuration does not include core business fields, and only default generic title fields are retained.
+- Symptom: Dialogue logs generated via API calls only display pending verification title content, with no specific ordnance equipment yield rate or market data. Cause: The `LOG_FIELD_WHITELIST` configuration does not include core business fields, and only default generic title fields are retained.
 - Symptom: Official sources of ordnance equipment data cannot be traced during audits, making it impossible to verify data authenticity. Cause: The `LOG_DATA_SOURCE_TAG` configuration is not enabled, and no data source type is marked, resulting in missing key traceability information in logs.
 - Symptom: Model parameter information for requests is not recorded in dialogue logs, making it impossible to troubleshoot model call exceptions. Cause: The `API_LOG_INCLUDE_PARAMS` configuration does not include the `model_params` field, and the model parameter logging function is not enabled.
 

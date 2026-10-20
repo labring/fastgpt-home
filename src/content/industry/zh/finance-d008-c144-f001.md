@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务智能尽调报告的HTTP 接口与外部系统
-meta_description: 通信服务智能尽调报告的数据主要来源于运营商业务支撑系统、通信行业监管平台及企业自有通信运维系统。数据更新节奏分为两类：实时话单、流量占用数据按分钟级更新，资
+meta_description: 通信服务智能尽调报告的HTTP 接口与外部系统：通信服务智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 通信服务、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

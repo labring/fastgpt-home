@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程融资日报的HTTP 接口与外部系统
-meta_description: 基建工程融资日报的数据来源于全国建筑市场监管公共服务平台、地方住建部门的项目融资备案公示、合作银行的授信放款台账。数据更新节奏为每日凌晨完成前一日全量数据刷
+meta_description: 基建工程融资日报的HTTP 接口与外部系统：基建工程融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 基建工程、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

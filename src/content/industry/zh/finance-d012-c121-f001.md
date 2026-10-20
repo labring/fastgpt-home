@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的HTTP 接口与外部系统
-meta_description: 耐火材料的营销数据主要来源于生产管理系统、质检检测报表、销售对接记录与技术文档库。数据更新节奏分为三类：每日更新的实时质检数据，每周调整的产品报价与库存数据
+meta_description: 耐火材料营销内容的HTTP 接口与外部系统：耐火材料营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 耐火材料、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

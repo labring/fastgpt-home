@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for White Goods Investment Research
-meta_description: White goods investment research data primarily comes from public industry association reports, official brand financial reports, offline store
+meta_description: Database and Operations for White Goods Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ Longer industry report documents need larger storage shards and longer parsing t
 Investment research scenarios require retaining historical data versions. Database operations must support data rollback and version management.
 
 ## How to configure settings
-This configuration is compatible with FastGPT v4.15. Specific parameters are listed below:
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value | Rationale |
 |---|---|---|

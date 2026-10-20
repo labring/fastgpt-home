@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢投研知识库建设的数据库与运维
-meta_description: 普钢的数据主要来自钢厂出厂价报表、大宗商品交易所现货报价系统、行业协会月度监测报告及海关进出口统计数据。更新节奏存在差异：现货报价为日更，钢厂出厂价多为周更
+meta_description: 普钢投研知识库建设的数据库与运维：普钢投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 普钢、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

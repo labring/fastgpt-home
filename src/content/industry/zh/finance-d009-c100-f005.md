@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理研报检索的多轮对话与提示词
-meta_description: 物业管理研报的数据主要来自行业协会发布的区域物业运营报告、房地产开发企业的内部园区运维档案、第三方调研机构的专项业态分析文档。更新节奏以月度、季度为主，部分
+meta_description: 物业管理研报检索的多轮对话与提示词：物业管理研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 物业管理、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

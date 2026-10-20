@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒收益率的部署与升级
-meta_description: 白酒相关收益率数据主要来自公开证券行情接口与行业数据服务商，更新节奏为交易日每日收盘后批量更新，盘中可提供实时近似变动数据。单条数据文档包含交易日期、标的标
+meta_description: 白酒收益率的部署与升级：白酒收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 白酒、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品融资日报的HTTP 接口与外部系统
-meta_description: 饰品融资日报的数据来源于国内供应链金融服务平台报送的饰品类质押融资、订单融资业务每日数据，更新节奏为每日0点更新前一自然日的全量数据。文档为结构化JSON数
+meta_description: 饰品融资日报的HTTP 接口与外部系统：饰品融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饰品、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车财报分析的多轮对话与提示词
-meta_description: 整车财报数据主要来自车企官方投资者关系平台、境内外证券交易所披露系统。更新节奏以季度、年度为固定周期，同步发布临时销量公告、重大项目进展公告。文档结构包含合
+meta_description: 整车财报分析的多轮对话与提示词：整车财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 整车、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的文档解析与分块
-meta_description: 小家电相关文档的数据源包含品牌官方产品手册（PDF格式）、电商平台详情页（HTML格式）、质检合格报告（DOCX格式）、营销推广物料、售后维护文档等。更新节
+meta_description: 小家电营销内容的文档解析与分块：小家电营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 小家电、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

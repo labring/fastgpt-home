@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c133-f011
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Securities Financing Daily
-meta_description: Securities financing daily report data originates primarily from two sources: official disclosures from the Shanghai and Shenzhen Stock Exchanges, and
+meta_title: Document Parsing and Chunking for Securities Financing
+meta_description: Document Parsing and Chunking for Securities Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台研报检索的多轮对话与提示词
-meta_description: 投资平台的研报数据源主要包括券商研究所、公募基金研究部门与合规第三方金融数据服务商。更新节奏随研报发布周期波动，工作日每日均有新增内容。单篇研报文档结构包含
+meta_description: 投资平台研报检索的多轮对话与提示词：投资平台研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 投资平台、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

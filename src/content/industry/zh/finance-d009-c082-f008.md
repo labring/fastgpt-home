@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖研报检索的工具调用与插件
-meta_description: 水产养殖研报的数据源主要包括农业农村部水产养殖技术推广体系、行业协会公开报告、专业水产期刊及地方养殖主体的公开监测数据。更新节奏分为季度行业动态、月度养殖环
+meta_description: 水产养殖研报检索的工具调用与插件：水产养殖研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 水产养殖、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

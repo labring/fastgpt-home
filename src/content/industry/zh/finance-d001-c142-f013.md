@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份证件KYC 的知识库检索与召回
-meta_description: 这个品类的数据主要来自官方身份核验数据源、线下提交的证件扫描件与结构化提取字段。官方数据源的更新节奏随接口同步周期固定，线下提交的数据按提交批次更新。文档结
+meta_description: 身份证件KYC 的知识库检索与召回：身份证件KYC 的知识库检索与召回，涵盖配置与验证建议
 keywords: 身份证件、KYC 与反洗钱资料核验、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Personal Care Products Financing
-meta_description: The data for personal care products financing daily reports mainly comes from brand inventory and sales management systems, mainstream e-commerce
+meta_description: Workflow Orchestration for Personal Care Products Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The daily midnight synchronization data feature requires that the workflow’s s
 
 ## Three common mistakes
 - Symptom: Workflow run logs show `ReferenceError: globalVar is not defined`, or the interface prompts "Failed to obtain global variables". Cause: The global variable scope was not configured in the workflow initialization node, or the variable name spelling does not match the preset name.
-- Symptom: The `Authorization: Bearer {{globalVar.token}}` header is configured in the HTTP request, but the header is not replaced with the actual token after running, returning `401 Unauthorized`. Cause: The template syntax for global variables was not used correctly, or the variable was not predefined in the global scope.
+- Symptom: The `Authorization: Bearer example value` header is configured in the HTTP request, but the header is not replaced with the actual token after running, returning `401 Unauthorized`. Cause: The template syntax for global variables was not used correctly, or the variable was not predefined in the global scope.
 - Symptom: After the question classification branch is executed, the HTTP request is not triggered, and the workflow terminates early. Cause: The HTTP request node was not mounted to all branch exits of the question classification, and was only bound to a single branch.
 
 ## How to confirm the configuration is correct

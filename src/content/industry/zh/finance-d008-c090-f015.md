@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨智能尽调报告的部署与升级
-meta_description: 涂料油墨尽调数据主要来自生产企业年报、行业协会公示的原辅材料检测报告、环保部门排污许可数据及供应链上下游交易台账。更新节奏为：原辅材料价格每7天更新一次，产
+meta_description: 涂料油墨智能尽调报告的部署与升级：涂料油墨智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 涂料油墨、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

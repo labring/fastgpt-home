@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的模型接入与配置
-meta_description: 这个品类的数据主要来自门店运营系统的菜单、会员消费记录、到店时段统计，以及第三方点评平台的用户评价片段。菜单数据包含菜品分类、名称、售价、食材组成、适配餐段
+meta_description: 酒店餐饮营销内容的模型接入与配置：酒店餐饮营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 酒店餐饮、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

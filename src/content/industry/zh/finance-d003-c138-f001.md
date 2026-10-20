@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d003-c138-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 费用清单保险理赔初审的HTTP 接口与外部系统
-meta_description: 费用清单数据来源于合作医院的收费系统、医保结算平台以及保险公司内部核赔系统。更新节奏随理赔申请触发，通常在用户提交理赔材料后1至5分钟内完成同步。文档多为结
+meta_title: 费用清单保险理赔初审的HTTP接口与外部系统
+meta_description: 费用清单保险理赔初审的HTTP接口与外部系统：费用清单保险理赔初审的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

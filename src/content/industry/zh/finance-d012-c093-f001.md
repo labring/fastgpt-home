@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏营销内容的HTTP 接口与外部系统
-meta_description: 金融场景下的游戏类营销内容数据，主要来源于金融机构的游戏化营销活动管理后台、合作游戏工作室的素材库、渠道投放的推广素材包，以及社区用户创作的营销互动内容。更
+meta_description: 游戏营销内容的HTTP 接口与外部系统：游戏营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 游戏、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

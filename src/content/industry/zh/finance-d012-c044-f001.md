@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业营销内容的HTTP 接口与外部系统
-meta_description: 商业物业的营销内容数据主要来源于招商运营台账、线下物料扫描件、线上活动公告及租户合作协议。更新节奏随招商调整、节日活动上线按需触发，无固定周期。文档类型包含
+meta_description: 商业物业营销内容的HTTP 接口与外部系统：商业物业营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 商业物业、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

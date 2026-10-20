@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶收益率的工具调用与插件
-meta_description: 塑料橡胶的行情与收益率数据主要来自国内大宗商品期货交易所、第三方大宗商品资讯平台。数据更新节奏随数据源不同有所区分，期货品种随交易日交易时段实时更新，现货品
+meta_description: 塑料橡胶收益率的工具调用与插件：塑料橡胶收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 塑料橡胶、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

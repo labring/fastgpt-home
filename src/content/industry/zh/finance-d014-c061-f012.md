@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械财报分析的模型接入与配置
-meta_description: 工程机械行业财报数据主要来自上市企业定期报告、行业协会公开统计文档。更新节奏为季度报告每季度发布，年度报告于年度结束后四个月内公开。文档结构包含合并财务报表
+meta_description: 工程机械财报分析的模型接入与配置：工程机械财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 工程机械、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

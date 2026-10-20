@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖收益率的对话日志与审计
-meta_description: 畜禽养殖收益率相关的数据，来源主要为养殖场日常饲喂记录、苗种采购台账、出栏称重台账、饲料采购发票及防疫成本记录。更新节奏为每日更新，单批次养殖场的日度数据会
+meta_description: 畜禽养殖收益率的对话日志与审计：畜禽养殖收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 畜禽养殖、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务收益率的表单与交互
-meta_description: 这个品类的数据来源于合作金融机构的公开行情数据集、教育服务机构的学员付费与课程运营数据。数据更新节奏为每日固定时段更新前一自然日的全量统计。文档为结构化的批
+meta_description: 教育服务收益率的表单与交互：教育服务收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 教育服务、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

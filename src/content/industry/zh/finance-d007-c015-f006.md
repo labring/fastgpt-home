@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能收益率的对话日志与审计
-meta_description: 储能收益率日报的数据来源包括国内电力交易中心的现货交易公开数据、储能电站本地SCADA采集系统的充放电记录。更新节奏为每日T+1生成前一自然日的汇总文档，文
+meta_description: 储能收益率的对话日志与审计：储能收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 储能、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

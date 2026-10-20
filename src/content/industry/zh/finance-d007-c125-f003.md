@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备收益率的分享与嵌入
-meta_description: 航天装备收益率相关数据主要来源于国防军工行业公开披露的科研项目经费结算文件、在轨卫星运营收益报告、商业航天发射服务交易台账。更新节奏为常规型号按季度更新，重
+meta_description: 航天装备收益率的分享与嵌入：航天装备收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 航天装备、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

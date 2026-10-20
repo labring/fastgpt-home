@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属研报检索的工作流编排
-meta_description: 工业金属研报的数据来源包含行业权威统计机构、大宗商品期货交易所、第三方咨询机构及产业链企业公开报告。数据更新节奏分多档：现货行情每日盘后更新，期货主力合约价
+meta_description: 工业金属研报检索的工作流编排：工业金属研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 工业金属、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

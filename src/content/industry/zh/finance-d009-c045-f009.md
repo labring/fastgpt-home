@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车研报检索的引用来源与溯源
-meta_description: 商用车研报的数据来源主要包括行业协会公开统计、车企官方公告、第三方专业调研机构的营运数据、交通部道路运输监测数据库。更新节奏覆盖月度（细分车型销量、营运频次
+meta_description: 商用车研报检索的引用来源与溯源：商用车研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 商用车、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

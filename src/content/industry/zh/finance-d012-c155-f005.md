@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的多轮对话与提示词
-meta_description: 饲料行业的数据主要来自农业农村部公开的饲料原料目录、第三方检测机构的批次报告、养殖企业的饲喂台账。更新节奏分为三类：原料营养参数随市场检测结果每1-2周更新
+meta_description: 饲料营销内容的多轮对话与提示词：饲料营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 饲料、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

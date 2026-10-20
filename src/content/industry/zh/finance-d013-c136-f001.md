@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属融资日报的HTTP 接口与外部系统
-meta_description: 贵金属融资日报的数据主要来自国内贵金属交易所及国际贵金属市场权威报价机构，每日更新一次，于次日发布前一交易日的完整交易数据。文档以结构化表格形式呈现，核心字
+meta_description: 贵金属融资日报的HTTP 接口与外部系统：贵金属融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 贵金属、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

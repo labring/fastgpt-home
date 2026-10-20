@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Energy Metals Marketing Content
-meta_description: Energy metals data primarily comes from public industry association reports, futures exchange market data, customs import and export statistics, and
+meta_description: Forms and Interactions for Energy Metals Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

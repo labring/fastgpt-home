@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖财报分析的工具调用与插件
-meta_description: 畜禽养殖财报相关数据主要来源于农业农村部畜禽养殖监测数据库、上市养殖主体公开披露的定期报告。更新节奏分为两类：行业监测数据按月度同步更新，上市主体财报数据按
+meta_description: 畜禽养殖财报分析的工具调用与插件：畜禽养殖财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 畜禽养殖、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

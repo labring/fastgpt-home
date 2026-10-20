@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的模型接入与配置
-meta_description: 教育服务融资日报的数据主要来自教育机构公开融资公告、行业自律组织披露的融资备案信息、监管部门公示的民办教育融资备案记录。数据更新节奏为每个工作日更新一次，单
+meta_description: 教育服务融资日报的模型接入与配置：教育服务融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 教育服务、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

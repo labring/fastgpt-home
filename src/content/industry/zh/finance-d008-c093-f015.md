@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏智能尽调报告的部署与升级
-meta_description: 游戏智能尽调报告的数据主要来源于游戏版号审批文件、研发进度文档、营收监测数据、用户行为报告及合规备案材料。数据更新节奏随项目阶段变化：版号信息按季度更新，研
+meta_description: 游戏智能尽调报告的部署与升级：游戏智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 游戏、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

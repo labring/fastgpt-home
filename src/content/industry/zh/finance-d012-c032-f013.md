@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的知识库检索与召回
-meta_description: 化学原料相关数据主要来源于企业生产台账、第三方质检报告、行业标准文档及供应链报价单。数据更新节奏随业务场景调整，常规报价类数据每周更新，批次质检报告随生产批
+meta_description: 化学原料营销内容的知识库检索与召回：化学原料营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

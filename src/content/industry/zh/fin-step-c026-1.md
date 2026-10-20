@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c026-1
 page_type: 行业作业环节页
 article_section: 信托
 is_part_of: FastGPT 技术中心
-meta_title: 家族信托的穿透梳理家庭成员、财产所有权和受益安排：哪一部分能
-meta_description: 家族信托的穿透梳理家庭成员、财产所有权和受益安排：哪一部分能交给系统
+meta_title: 家族信托的穿透梳理家庭成员、财产所有权和受益安排：哪一部分能交给系统
+meta_description: 家族信托的穿透梳理家庭成员、财产所有权和受益安排：哪一部分能交给系统：家族信托的穿透梳理家庭成员、财产所有权和受益安排：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 家族信托、信托、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

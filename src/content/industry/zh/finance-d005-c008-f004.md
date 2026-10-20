@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 交易规则客户服务的向量模型与索引
-meta_description: 交易规则数据来源于金融机构内部业务配置系统、监管部门公示的业务规范文件。更新节奏随监管政策调整、新业务上线触发，无固定周期，单次更新覆盖单条或多条规则条目。
+meta_description: 交易规则客户服务的向量模型与索引：交易规则客户服务的向量模型与索引，涵盖配置与验证建议
 keywords: 交易规则、客户服务与账户咨询、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

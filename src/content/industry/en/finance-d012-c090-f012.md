@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Paint and Ink
-meta_description: Paint and ink marketing content data is primarily sourced from internal product databases, marketing material libraries, and compliance test reports.
+meta_description: Model Integration and Configuration for Paint and Ink Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Technical parameter values are bound to their units. This requires the model to 
 ## Three common mistakes
 - Phenomenon: The deployed instance cannot extract color card parameters from marketing documents, while the official online instance functions normally. Cause: `UPLOAD_FILE_MAX_SIZE` is not configured or the value is too small, resulting in failure to fully upload and parse high-resolution color card images. The official online instance includes default large file upload configuration.
 - Phenomenon: After configuring multi-step model calls in the workflow, the parameter extraction results of intermediate steps are publicly displayed. Cause: The intermediate step visibility switch for `workflow_step_output_visible` is not disabled, resulting in exposure of non-final results.
-- Phenomenon: After calling the rerank model, the number of returned results does not match the configuration, or parsing errors occur. Cause: A rerank model incompatible with FastGPT 4.6.7 is used, or `rerank_top_n` is not configured to a value matching the model's output dimension.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to confirm the configuration is complete
 - Upload a single paint and ink marketing document containing multiple sets of technical parameters, and verify that the parameter fields extracted by the model are complete and match their units.

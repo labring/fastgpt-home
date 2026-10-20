@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Shipping Port
-meta_description: Shipping port revenue rate data primarily comes from internal ERP systems of port enterprises, official shipping freight index platforms, and
+meta_description: HTTP Interfaces and External Systems for Shipping Port Revenue Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

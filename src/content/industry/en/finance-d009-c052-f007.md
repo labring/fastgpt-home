@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c052-f007
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Research Report Retrieval and Q&A
-meta_description: Data sources for research reports include internal research documents from each business segment and public industry analysis reports. Update cycles
+meta_title: Workflow Orchestration for Research Report Retrieval
+meta_description: Workflow Orchestration for Research Report Retrieval and Q&A
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

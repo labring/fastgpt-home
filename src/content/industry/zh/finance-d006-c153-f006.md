@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电投研知识库建设的对话日志与审计
-meta_description: 风电投研数据主要来自风机厂商公开技术文档、行业协会季度报告、气象站点小时级监测数据、电网运行日更数据以及风电项目环评与运维档案。文档结构包含标准化参数表、长
+meta_description: 风电投研知识库建设的对话日志与审计：风电投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 风电、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

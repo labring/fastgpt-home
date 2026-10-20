@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Water Treatment Financial
-meta_description: Water treatment financial report data comes from public annual and semi-annual financial reports of water utility operators, compliance monitoring
+meta_description: Vector Models and Indexing for Water Treatment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

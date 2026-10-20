@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车研报检索的工具调用与插件
-meta_description: 整车研报主要来自券商研究所汽车行业组、国内汽车行业协会、整车企业公开的技术白皮书与销量公告。更新节奏为：券商研报按季度发布常规报告，重大车型发布、行业政策调
+meta_description: 整车研报检索的工具调用与插件：整车研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 整车、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

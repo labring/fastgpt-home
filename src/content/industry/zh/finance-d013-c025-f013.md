@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行融资日报的知识库检索与召回
-meta_description: 农商行融资日报的数据来自辖内法人农商行每日报送的业务台账、区域金融市场交易系统的实时成交记录，更新节奏为每日更新前一工作日的全量数据。文档以机构为核心维度拆
+meta_description: 农商行融资日报的知识库检索与召回：农商行融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 农商行、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流融资日报的工作流编排
-meta_description: 数据主要来自物流企业的运单管理系统、仓储调度平台及合作银行的授信台账。更新节奏为每日凌晨批量同步前一日全量数据，部分实时运单数据可通过API增量拉取。文档结
+meta_description: 物流融资日报的工作流编排：物流融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 物流、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

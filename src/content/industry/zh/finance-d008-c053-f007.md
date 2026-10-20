@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融智能尽调报告的工作流编排
-meta_description: 这个品类的数据主要来源于监管机构公开披露的非银金融机构报送文件、标的主体官方披露文档、第三方征信机构合规数据及尽调团队现场访谈转写文件。常规披露文件按季度、
+meta_description: 多元金融智能尽调报告的工作流编排：多元金融智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 多元金融、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

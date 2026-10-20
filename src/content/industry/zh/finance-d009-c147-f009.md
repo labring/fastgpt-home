@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸研报检索的引用来源与溯源
-meta_description: 造纸研报的数据来源包括中国造纸协会公开报告、券商轻工制造行业研究团队产出文档、上市纸企定期披露文件、海关进出口贸易统计资料。更新节奏随数据类型不同有所区分，
+meta_description: 造纸研报检索的引用来源与溯源：造纸研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 造纸、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

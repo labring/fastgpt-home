@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品收益率的数据库与运维
-meta_description: 文娱用品属于轻工制造品类，其行情与收益率数据主要来自国内潮玩二级市场交易平台API、文创品牌官方发售台账、第三方品相核验机构数据。数据更新节奏为每日凌晨更新
+meta_description: 文娱用品收益率的数据库与运维：文娱用品收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 文娱用品、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -24,7 +24,7 @@ date_modified: 2026-09-15
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
 | `DB_PARTITION_BY_DATE` | 开启，按自然日分区 | 匹配文娱用品行情按日更新的特征，简化历史数据查询与清理 |
-| `VLLM_MAX_BATCH_SIZE` | 32–64 | 应对每日批量拉取的行情数据处理，平衡并发与内存占用，适配FastGPT v4.15版本的工作流调度 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `PARSE_FILE_TIMEOUT_SECONDS` | 900 秒 | 处理单品类完整台账文件的平均耗时较长，避免超时中断解析流程 |
 | `UPLOAD_FILE_MAX_SIZE` | 2000 MB | 支持导入批量SKU的历史成交Excel文件，覆盖全品类台账的导入需求 |
 | `DB_CONN_RETRY_TIMES` | 5 次 | 对接多源外部API时，应对临时网络波动与接口限流 |

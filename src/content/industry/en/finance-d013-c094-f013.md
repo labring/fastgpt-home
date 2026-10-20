@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Refining Financing
-meta_description: Refining financing daily report data comes from three main sources: daily financing ledgers in the internal financial systems of refining enterprises
+meta_description: Knowledge Base Retrieval and Recall for Refining Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

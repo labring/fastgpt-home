@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的向量模型与索引
-meta_description: 免税营销内容的数据主要来自品牌免税渠道的商品备案资料、线下门店活动策划素材、线上推广文案模板及会员权益通知。数据更新随品牌营销节点波动，节假日促销、新品上架
+meta_description: 免税营销内容的向量模型与索引：免税营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 免税、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

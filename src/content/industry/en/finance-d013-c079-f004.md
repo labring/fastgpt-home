@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Carbon Steel Financing Daily
-meta_description: Carbon steel financing daily report data comes from three sources: daily financing monitoring from domestic steel industry associations, credit
+meta_description: Vector Models and Indexing for Carbon Steel Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ Structured multi-transaction features require splitting documents by individual 
 ## How to set the configurations
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
-| `embedding_model` | `bge-large-zh-1.5` | Compatible with the embedding interface of FastGPT v4.8.7 and above, supports Chinese structured fields, and the embedding dimension matches the text length of carbon steel financing daily reports |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `chunk_size` | `200–300 characters` | The text description of a single financing transaction mostly falls within this range, to avoid destroying the integrity of business logic when splitting segments |
 | `index_incremental_sync` | Enabled | Adapts to the daily update cycle, avoiding resource consumption from full index rebuilding |
 | `filter_field_list` | `["carbon steel grade", "financing term", "financing amount"]` | Matches common filtering requirements in business scenarios, improving the accuracy of recall results |

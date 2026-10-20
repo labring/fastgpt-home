@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业营销内容的工作流编排
-meta_description: 种植业营销内容指面向种植从业者的农业保险、种植贷等金融产品的推广内容，其生成依赖多源种植场景数据，主要来自田间物联网监测设备、区域农情公共服务平台、农户线下
+meta_description: 种植业营销内容的工作流编排：种植业营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 种植业、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

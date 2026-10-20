@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨研报检索的多轮对话与提示词
-meta_description: 涂料油墨研报数据来源包括中国涂料工业协会公开月度监测数据、国内基础化工行业券商研报、上市涂料油墨企业季度财报、专业化工供应链数据库公开报告。更新节奏为行业监
+meta_description: 涂料油墨研报检索的多轮对话与提示词：涂料油墨研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 涂料油墨、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

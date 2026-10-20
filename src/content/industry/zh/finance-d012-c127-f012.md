@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的模型接入与配置
-meta_description: 在金融/保险/理财领域的航空装备营销场景中，数据主要来源于官方装备手册、机型性能参数表、客户需求沟通文档、宣传物料脚本等。数据更新节奏随新品发布、性能升级或
+meta_description: 航空装备营销内容的模型接入与配置：航空装备营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 航空装备、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

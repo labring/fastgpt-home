@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c131-f012
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Decoration and
-meta_description: Financial report data for the decoration and renovation industry mainly comes from publicly disclosed periodic reports, special audit reports, and
+meta_title: Model Integration and Configuration for Decoration
+meta_description: Model Integration and Configuration for Decoration and Renovation Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

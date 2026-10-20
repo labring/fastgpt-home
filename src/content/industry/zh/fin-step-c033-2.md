@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c033-2
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 意外伤害保险承保与理赔的判断事故与伤害/死亡之间因果关系：哪
-meta_description: 意外伤害保险承保与理赔的判断事故与伤害/死亡之间因果关系：哪一部分能交给系统
+meta_title: 意外伤害保险承保与理赔的判断事故与伤害/死亡之间因果关系：哪一部分能交给系统
+meta_description: 意外伤害保险承保与理赔的判断事故与伤害/死亡之间因果关系：哪一部分能交给系统：意外伤害保险承保与理赔的判断事故与伤害/死亡之间因果关系：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 意外伤害保险承保与理赔、保险、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

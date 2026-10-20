@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖智能尽调报告的工具调用与插件
-meta_description: 畜禽养殖智能尽调的数据主要来自规模化养殖场的养殖台账、畜禽防疫档案、出栏检疫证明、饲料采购记录，以及养殖环节物联网监测设备的实时数据。数据更新节奏分两类：养
+meta_description: 畜禽养殖智能尽调报告的工具调用与插件：畜禽养殖智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 畜禽养殖、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

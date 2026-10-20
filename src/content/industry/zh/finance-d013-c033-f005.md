@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤融资日报的多轮对话与提示词
-meta_description: 化纤融资日报的数据主要来自国内化纤行业协会的企业融资报备、全国性商业银行对公业务日报系统、大宗商品交易市场的仓单质押融资记录。数据更新节奏为每日更新，覆盖前
+meta_description: 化纤融资日报的多轮对话与提示词：化纤融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化纤、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

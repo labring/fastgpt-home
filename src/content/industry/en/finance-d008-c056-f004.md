@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Home Goods Intelligent Due
-meta_description: Intelligent due diligence data for home goods comes from four main sources: supply chain SKU profiles, third-party quality inspection reports
+meta_description: Vector Models and Indexing for Home Goods Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

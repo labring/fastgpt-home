@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Minor Metals Investment
-meta_description: Minor metals industry data sources include monthly supply and demand reports released by the Minor Metals Branch of the China Nonferrous Metals
+meta_description: Document Parsing and Chunking for Minor Metals Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

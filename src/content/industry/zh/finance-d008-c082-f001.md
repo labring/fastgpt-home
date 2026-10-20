@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖智能尽调报告的HTTP 接口与外部系统
-meta_description: 水产养殖智能尽调报告的数据主要来自养殖塘口的在线监测传感器、每日投喂台账、第三方水质检测机构报告、鱼苗采购出库凭证及出栏检疫记录。数据更新节奏分为三类：塘口
+meta_description: 水产养殖智能尽调报告的HTTP 接口与外部系统：水产养殖智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水产养殖、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

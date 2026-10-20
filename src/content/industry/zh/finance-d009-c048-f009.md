@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的引用来源与溯源
-meta_description: 城商行研报数据主要来自自身风险管理部门、区域经济调研团队及合规披露的监管报送材料，更新节奏以月度行业分析、季度授信策略报告为主，配套临时突发产业事件专项报告
+meta_description: 城商行研报检索的引用来源与溯源：城商行研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 城商行、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Automotive Service
-meta_description: Automotive service is a niche segment within the financial sector. Its financial report data primarily comes from daily operation ledgers of
+meta_description: Model Access and Configuration for Automotive Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The multi-source and non-uniform format characteristics of automotive service fi
 ## Three common configuration errors
 - Phenomenon: The model generates additional meaningless numeric 0s that do not match the original model output. Cause: The `CUSTOM_FIELD_MAPPING` rule is not configured, causing empty numeric fields to be mistakenly identified as 0 during financial report data parsing.
 - Phenomenon: The text extraction component cannot extract specified fields from financial report data referenced in the knowledge base. Cause: The component's knowledge base association parsing configuration is not enabled, or the matching range of target fields is not clearly defined in the extraction rules.
-- Phenomenon: A "no available model" prompt appears when calling the model, and the workflow cannot trigger tool calls normally. Cause: The API key of the corresponding large model is not bound in the model access configuration, or the configured model version is incompatible with the current FastGPT 4.8.10 version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to confirm the configuration is complete
 - Upload a single automotive service store's financial report, and check whether the parsed field list matches the preset mapping rules.

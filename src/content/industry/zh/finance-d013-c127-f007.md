@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备融资日报的工作流编排
-meta_description: 航空装备融资日报的数据来源包括民航运营备案系统、航空租赁企业公开披露文档、政府采购招投标平台。数据每日凌晨更新前一工作日的新增融资项目，历史数据按季度归档。
+meta_description: 航空装备融资日报的工作流编排：航空装备融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 航空装备、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

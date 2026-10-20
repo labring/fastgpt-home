@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理收益率的工作流编排
-meta_description: 物业管理场景的收益率相关数据，来源包括内部物业管理系统的收费台账、公共区域经营流水报表、能耗与运维支出记录，以及第三方支付平台的到账明细。数据更新节奏分为每
+meta_description: 物业管理收益率的工作流编排：物业管理收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 物业管理、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

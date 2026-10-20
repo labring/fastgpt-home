@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版财报分析的模型接入与配置
-meta_description: 出版品类的财报数据主要来自企业内部经营台账与监管机构公开披露的定期报告。数据更新节奏以季度、年度为核心周期，部分月度经营数据按需更新。文档多为结构化表格搭配
+meta_description: 出版财报分析的模型接入与配置：出版财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 出版、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

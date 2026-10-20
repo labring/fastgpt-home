@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c019-3
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 再保险承保、分保与账务的逐期核对分保费、赔款、摊回和应收应付
+meta_title: 再保险承保、分保与账务的逐期核对分保费、赔款、摊回和应收应付账务：哪一部分能交给系统
 meta_description: 再保险承保、分保与账务的逐期核对分保费、赔款、摊回和应收应付账务：哪一部分能交给系统
 keywords: 再保险承保、分保与账务、保险、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

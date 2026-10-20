@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Compliance and Internal Policy Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Penalty Case Compliance Document Parsing and Chunking
-meta_description: Penalty case data primarily originates from regulatory agency official announcements, industry self-regulatory organization public documents, and
+meta_description: Penalty Case Compliance Document Parsing and Chunking
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

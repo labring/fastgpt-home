@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁智能尽调报告的模型接入与配置
-meta_description: 融资租赁智能尽调报告的数据来源涵盖内部业务台账、工商公示平台、第三方征信机构、租赁物登记系统。基础主体信息按季度同步更新，租金回款与租赁物运维状态按月更新，
+meta_description: 融资租赁智能尽调报告的模型接入与配置：融资租赁智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 融资租赁、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

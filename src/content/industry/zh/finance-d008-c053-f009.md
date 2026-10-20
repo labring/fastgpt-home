@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融智能尽调报告的引用来源与溯源
-meta_description: 多元金融智能尽调报告的数据来源涵盖监管机构公示文件、行业协会披露信息、交易对手公开财报、金融产品备案记录等。更新节奏因数据源类型不同存在差异，监管文件按月更
+meta_description: 多元金融智能尽调报告的引用来源与溯源：多元金融智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 多元金融、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

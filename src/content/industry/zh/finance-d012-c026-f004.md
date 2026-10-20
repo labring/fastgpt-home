@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的向量模型与索引
-meta_description: 金融类出版的营销内容数据来源包括金融出版社官方营销文案库、基金经理或理财师授权的书稿节选、电商平台金融图书商品详情页、金融机构新媒体渠道定制宣传素材等。更新
+meta_description: 出版营销内容的向量模型与索引：出版营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 出版、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

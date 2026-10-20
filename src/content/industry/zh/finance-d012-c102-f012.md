@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的模型接入与配置
-meta_description: 面向金融行业的特钢营销相关数据来源包括金融机构供应链金融模块的客户特钢采购需求文档、企业内部ERP的特钢生产与销售模块数据、金融客户的询价与合作合同、行业特
+meta_description: 特钢营销内容的模型接入与配置：特钢营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 特钢、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

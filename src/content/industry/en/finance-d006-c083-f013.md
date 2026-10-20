@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Water Industry
-meta_description: Water industry investment research data sources include water utility group operation reports, real-time pipe network monitoring data, national and
+meta_description: Knowledge Base Retrieval and Recall for Water Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

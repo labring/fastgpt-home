@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药营销内容的向量模型与索引
-meta_description: 化学制药的营销内容数据来源包括产品说明书、临床试验报告、医学推广物料、合规备案文件及线上科普内容，部分内容用于金融渠道的健康类产品营销，面向保险、理财客户。
+meta_description: 化学制药营销内容的向量模型与索引：化学制药营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 化学制药、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

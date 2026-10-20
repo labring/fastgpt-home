@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料智能尽调报告的文档解析与分块
-meta_description: 耐火材料智能尽调报告的数据主要来自生产厂商的官方质检报告、行业联盟的供需监测文档、下游应用方的验收记录。更新节奏随数据类型不同有所差异：生产端的批次质检报告
+meta_description: 耐火材料智能尽调报告的文档解析与分块：耐火材料智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 耐火材料、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

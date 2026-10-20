@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Commercial Property
-meta_description: Commercial property financial report data primarily originates from property operation management systems, rent collection ledgers, public energy
+meta_description: Citation Sources and Traceability for Commercial Property Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Commercial property financial reports often include cross-tenant and cross-regio
 | `similarity threshold` | 0.72–0.85 | Balances precision and recall coverage. Prevents recalling content that is similar but not from the target financial report period |
 | `segment length` | 1000–1500 characters | Adapts to the detailed line structure of commercial property financial reports. Avoids breaking field associations after splitting |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 600 seconds | Large annual financial report PDF files include multiple pages of details. Sufficient time is required to complete structured parsing |
-| `citation source display template` | `{{source_name}}: {{file_name}}, {{field_name}}: {{field_value}}, generation time: {{create_time}}` | Clearly displays field-level traceability information. Meets the detailed traceability requirements of commercial property financial reports |
+| `citation source display template` | `example value: example value, example value: example value, generation time: example value` | Clearly displays field-level traceability information. Meets the detailed traceability requirements of commercial property financial reports |
 | `traceability ID binding rule` | Bind by "project number + financial report cycle + field name" | Uniquely identifies each detailed data item. Prevents confusion between cross-project and cross-cycle data |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are influenced by document format, data volume, and business rules. Individual analysis is required for specific cases. Testing on sample data is recommended before finalizing configuration settings.

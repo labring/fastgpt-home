@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Infrastructure Engineering
-meta_description: Data sources for infrastructure engineering investment research in the financial industry include bidding announcements, project cost estimates
+meta_description: Database and Operations for Infrastructure Engineering Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Multi-source heterogeneous data sources require databases to support multi-table
 
 ## Three common mistakes
 - Phenomenon: An error `text index required for $text query` is triggered during full-text retrieval. Cause: A dedicated full-text index for infrastructure engineering technical terms is not configured, and only the default general-purpose index is used.
-- Phenomenon: Database connection fails after a version upgrade. Cause: Snapshots of incremental synchronized project data were not backed up in advance, and the encrypted configuration of the connection string was not retained during the upgrade process. This applies to upgrade scenarios for FastGPT 4.8.9 and above.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Phenomenon: The number of query return results does not match expectations. Cause: Query join fields were not adjusted according to the multi-table join characteristics of infrastructure engineering, leading to the recall of redundant data.
 
 ## How to confirm the configuration is complete

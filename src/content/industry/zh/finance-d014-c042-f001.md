@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营财报分析的HTTP 接口与外部系统
-meta_description: 品牌代运营的财报分析数据主要来自合作品牌的电商后台、社交媒体投放后台、供应链库存管理系统及月度运营报表。数据更新节奏以周度为基础单元，季度同步完整财报维度。
+meta_description: 品牌代运营财报分析的HTTP 接口与外部系统：品牌代运营财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 品牌代运营、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

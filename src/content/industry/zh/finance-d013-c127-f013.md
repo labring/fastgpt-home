@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备融资日报的知识库检索与召回
-meta_description: 航空装备融资日报的数据来源包括境内外证券交易所披露的临时公告、行业第三方资讯平台的每日融资汇总。更新节奏为每日更新，单篇文档包含当日多条航空装备相关融资条目
+meta_description: 航空装备融资日报的知识库检索与召回：航空装备融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 航空装备、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

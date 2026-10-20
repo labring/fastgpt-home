@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Satellite Communications Yield
-meta_description: Data originates from ground-based financial data sources, forwarded via geostationary satellite Ka-band links as yield and market quote data. Data
+meta_description: Database and Operations for Satellite Communications Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

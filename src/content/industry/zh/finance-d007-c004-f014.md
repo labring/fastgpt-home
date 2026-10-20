@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备收益率的表单与交互
-meta_description: 面向金融租赁、资产管理场景的专用设备，其收益率与行情数据来源包括嵌入式采集终端、工业物联网运维台账、对应品类的行业行情数据库。日度汇总数据每日凌晨3点前完成
+meta_description: 专用设备收益率的表单与交互：专用设备收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 专用设备、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

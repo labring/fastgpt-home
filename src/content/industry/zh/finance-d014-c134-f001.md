@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品财报分析的HTTP 接口与外部系统
-meta_description: 调味品品类的财报数据来源为境内外证券交易所公开披露的上市公司定期报告、企业官方经营简报。数据更新节奏为每季度、每半年度、每年度。文档多为PDF格式的正式报告
+meta_description: 调味品财报分析的HTTP 接口与外部系统：调味品财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 调味品、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

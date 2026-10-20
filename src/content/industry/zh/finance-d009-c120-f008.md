@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全研报检索的工具调用与插件
-meta_description: 网络安全研报数据主要来自公开CVE漏洞库、第三方安全厂商公告、行业合规检测文档与自研安全扫描报告。数据更新节奏随事件触发，CVE类数据每日同步，厂商应急公告
+meta_description: 网络安全研报检索的工具调用与插件：网络安全研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 网络安全、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

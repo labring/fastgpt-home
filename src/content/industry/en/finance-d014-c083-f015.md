@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Water Utility Financial Report
-meta_description: Water utility financial report data comes from official exchange disclosure platforms and public announcements from local water utility authorities.
+meta_description: Deployment and Upgrade for Water Utility Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The fixed update cycle of water utility financial reports requires configuring s
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three common mistakes
-- Phenomenon: After upgrading to a specified version, model vendor icons in the chat interface fail to load, displaying a failed loading placeholder. Cause: Static resource directory model icon files were not replaced correctly during upgrade, or icon mapping configuration in frontend dependencies was not updated synchronously.
+- Phenomenon: After upgrading to a specified version, model vendor icons in the chat interface fail to load, displaying a failed loading pending verification. Cause: Static resource directory model icon files were not replaced correctly during upgrade, or icon mapping configuration in frontend dependencies was not updated synchronously.
 - Phenomenon: After upgrading from 4.13.0 to 4.14.3, an error `fail to create post presigned ur` pops up when uploading attachment files. Cause: The object storage signature expiration time parameter was not reconfigured after upgrade, or the configured storage bucket permissions did not grant pre-signed URL generation permission.
 - Phenomenon: Disk usage of the locally deployed knowledge base cannot be viewed accurately, leading to misjudgment that it only includes three parts: original files, split chunks, and embedding vectors. Cause: Disk monitoring scan path was not configured correctly, omitting the FastGPT vector database cache directory or temporary file directory.
 

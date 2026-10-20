@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Semiconductor
-meta_description: Data sources for semiconductor intelligent due diligence include industry public statistical databases, supply chain enterprise disclosure documents
+meta_description: Citation Sources and Traceability for Semiconductor Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -47,7 +47,7 @@ Mixed structured and unstructured document formats require distinguishing unique
 
 ## Three Common Mistakes
 - Phenomenon: No temperature setting entry appears in the configuration panel when using variable reference mode, and error code 4002 is returned after submitting the request. Cause: Some versions of the front-end interface do not load the temperature configuration module when in variable reference mode. The `temperature` parameter must be configured via back-end configuration items.
-- Phenomenon: The `{{id}}` field in cited content is displayed as empty. Cause: The `traceability ID generation rule` is not configured correctly, or the unique identifier of the knowledge base file is not bound to the retrieved semiconductor data.
+- Phenomenon: The `example value` field in cited content is displayed as empty. Cause: The `traceability ID generation rule` is not configured correctly, or the unique identifier of the knowledge base file is not bound to the retrieved semiconductor data.
 - Phenomenon: Recalled results include expired process node data. Cause: The `data source update synchronization cycle` is not set according to data source type, and old batch statistical data is still used.
 
 ## How to Confirm the Configuration Is Correct

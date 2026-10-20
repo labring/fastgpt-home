@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Steel Trade Marketing Content
-meta_description: Core steel trade data comes from steel mill ex-factory quotation systems, port warehouse management ledgers, purchase orders from downstream
+meta_description: Forms and Interactions for Steel Trade Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

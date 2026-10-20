@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口智能尽调报告的引用来源与溯源
-meta_description: 航运港口相关数据主要来自港口管理部门官方公开统计、船舶调度系统日志、海关通关备案记录、泊位运营台账。数据更新节奏按航次或自然日，单次航次数据随船舶靠离港实时
+meta_description: 航运港口智能尽调报告的引用来源与溯源：航运港口智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 航运港口、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

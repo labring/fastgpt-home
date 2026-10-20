@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械营销内容的向量模型与索引
-meta_description: 数据主要来自工程机械厂商官方产品手册、营销宣传物料、参数规格文档、销售培训素材及线下展会整理资料。更新随新品上市、营销活动上线或参数调整触发，无固定周期。文
+meta_description: 工程机械营销内容的向量模型与索引：工程机械营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 工程机械、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

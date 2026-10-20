@@ -7,7 +7,7 @@ on:
 
 # Only one build per PR branch at a time.
 concurrency:
-  group: 'preview-build-${{ github.event.pull_request.number || github.ref }}'
+  group: "preview-build-${{ github.event.pull_request.number || github.ref }}"
   cancel-in-progress: true
 
 permissions:
@@ -21,19 +21,35 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       # Public filing text is available to fork PRs without repository secrets.
-      NEXT_PUBLIC_POLICE_FILING: '浙公网安备33011002017871号'
-      NEXT_PUBLIC_FILING_ADDRESS: '粤ICP备2023048773号'
+      NEXT_PUBLIC_POLICE_FILING: "浙公网安备33011002017871号"
+      NEXT_PUBLIC_FILING_ADDRESS: "粤ICP备2023048773号"
       NEXT_PUBLIC_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_SITE_VARIANT: preview
       NEXT_PUBLIC_CN_HOME_URL: https://fastgpt.cn
       NEXT_PUBLIC_IO_HOME_URL: https://fastgpt.io
       NEXT_PUBLIC_USER_URL: https://cloud.fastgpt.io
-      NEXT_PUBLIC_CRM_API_URL: ''
+      NEXT_PUBLIC_CRM_API_URL: ""
       NEXT_PUBLIC_LANGUAGE_REGION: en-US
-      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ''
+      NEXT_PUBLIC_ATTRIBUTION_SOURCE: ""
       CLOUDFLARE_STATIC_ASSETS_FILE_LIMIT: 100000
 
     steps:
+      - name: Debug disk and inode usage
+        run: |
+          df -h
+          df -ih "$GITHUB_WORKSPACE"
+          du -xsh .next out node_modules 2>/dev/null || true
+          find .next out -xdev -type f 2>/dev/null | wc -l || true
+
+      - name: Free runner space
+        id: cleanup
+        uses: justinthelaw/maximize-github-runner-space@v0.12.3
+        with:
+          cleanup-profile: max
+          skip-components: cached-tools,cached-node
+          swapfile-size: 16GiB
+      - run: echo "Reclaimed ${{ steps.cleanup.outputs.reclaimed-bytes }} bytes"
+
       - name: Checkout merge result or selected manual revision
         uses: actions/checkout@v4
         with:
@@ -60,7 +76,26 @@ jobs:
           restore-keys: ${{ steps.cache-disabled.outputs.restore-prefix }}
 
       - name: Build CRM-disabled preview
-        run: npm run build:preview
+        run: |
+          (
+            while true; do
+              printf '[resource-monitor] %s\n' "$(date -u +%FT%TZ)"
+              df -h "$GITHUB_WORKSPACE"
+              df -ih "$GITHUB_WORKSPACE"
+              sleep 30
+            done
+          ) &
+          monitor_pid=$!
+          trap 'kill "$monitor_pid" 2>/dev/null || true' EXIT
+          npm run build:preview
+
+      - name: Debug build disk and inode usage
+        if: always()
+        run: |
+          df -h "$GITHUB_WORKSPACE"
+          df -ih "$GITHUB_WORKSPACE"
+          du -xsh .next out node_modules 2>/dev/null || true
+          find .next out -xdev -type f 2>/dev/null | wc -l || true
 
       - name: Save disabled compilation cache
         uses: actions/cache/save@v4

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理投研知识库建设的部署与升级
-meta_description: 物业管理投研数据主要来源于项目运维台账、公共区域能耗报表、租户合同档案、物业收费系统数据及行业政策文件。数据更新节奏分为三类：日常运维记录实时或每日更新，租
+meta_description: 物业管理投研知识库建设的部署与升级：物业管理投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 物业管理、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

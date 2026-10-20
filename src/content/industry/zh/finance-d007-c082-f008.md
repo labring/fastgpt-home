@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖收益率的工具调用与插件
-meta_description: 水产养殖的收益率相关数据主要来源于全国水产技术推广总站的养殖监测数据库、各主产区水产批发市场的每日交易台账、养殖端的物联网生长监测设备。数据更新节奏分为两类
+meta_description: 水产养殖收益率的工具调用与插件：水产养殖收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 水产养殖、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

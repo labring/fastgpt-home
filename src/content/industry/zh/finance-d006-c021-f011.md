@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合投研知识库建设的文档解析与分块
-meta_description: 其他综合投研场景的数据源涵盖公开监管文件、第三方行业数据库导出文档、企业自研接口文档（如Javadoc生成的HTML）、零散行业白皮书PDF及内部投研笔记。
+meta_description: 其他综合投研知识库建设的文档解析与分块：其他综合投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 其他综合、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

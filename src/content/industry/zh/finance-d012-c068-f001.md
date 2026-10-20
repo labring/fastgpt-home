@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d012-c068-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 投资平台营销内容的HTTP 接口与外部系统
-meta_description: 投资平台的营销内容数据主要来自自有营销素材库、合作金融机构的投教文档、平台活动配置系统及实时行情关联的营销物料。内容更新节奏随类型差异明显：活动类文案随营销
+meta_title: 投资平台营销内容的HTTP接口与外部系统
+meta_description: 投资平台营销内容的HTTP接口与外部系统：投资平台营销内容的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 投资平台、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

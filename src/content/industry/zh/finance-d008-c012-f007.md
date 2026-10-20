@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发智能尽调报告的工作流编排
-meta_description: 住宅开发智能尽调报告的数据主要来自国土空间规划部门的土地出让公告、住建部门的施工许可公示、合作银行的项目融资台账、第三方测绘机构的户型实测数据，属于金融机构
+meta_description: 住宅开发智能尽调报告的工作流编排：住宅开发智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 住宅开发、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

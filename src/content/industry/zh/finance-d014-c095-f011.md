@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力财报分析的文档解析与分块
-meta_description: 热力品类的财报数据主要来自公用热力企业定期披露的官方公告与内部运营台账。披露类文档按年度、半年度更新，内部运营台账则按月度更新。公开披露的财报多为PDF格式
+meta_description: 热力财报分析的文档解析与分块：热力财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 热力、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

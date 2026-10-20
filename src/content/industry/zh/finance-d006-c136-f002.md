@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属投研知识库建设的上下文与 token
-meta_description: 贵金属投研数据主要来自上海黄金交易所、伦敦金银市场协会等官方交易平台，以及行业协会发布的供需报告、券商投研报告。行情数据按交易时段实时或每5分钟更新，持仓数
+meta_description: 贵金属投研知识库建设的上下文与 token：贵金属投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 贵金属、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

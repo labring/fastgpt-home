@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程智能尽调报告的向量模型与索引
-meta_description: 房建工程智能尽调报告的数据主要来源于项目立项审批文件、施工图设计文件、施工日志、监理周报、竣工结算资料、不动产登记信息及周边配套调研数据。数据更新节奏随项目
+meta_description: 房建工程智能尽调报告的向量模型与索引：房建工程智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 房建工程、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

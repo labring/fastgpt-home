@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气财报分析的HTTP 接口与外部系统
-meta_description: 燃气品类的财报数据主要来自上市燃气企业公开披露的季度/年度报告、地方能源监管部门的行业运营公示，以及燃气供销环节的计量台账数据。常规财报按季度更新，月度运营
+meta_description: 燃气财报分析的HTTP 接口与外部系统：燃气财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 燃气、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

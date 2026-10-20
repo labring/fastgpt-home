@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏投研知识库建设的模型接入与配置
-meta_description: 游戏投研的数据覆盖多来源多类型。来源包括游戏版号审批官方公告、游戏平台公开页面数据、厂商公开财报、玩家社区评论、第三方竞品研报等。更新节奏差异显著，版号审批
+meta_description: 游戏投研知识库建设的模型接入与配置：游戏投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 游戏、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤研报检索的知识库检索与召回
-meta_description: 焦煤研报的数据来源涵盖行业协会焦煤分会、期货交易所、券商煤炭行业研究团队、大型焦煤生产企业公开披露信息。常规研报按周、月度周期发布，突发政策调整、供需异动时
+meta_description: 焦煤研报检索的知识库检索与召回：焦煤研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 焦煤、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

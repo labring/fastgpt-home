@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的表单与交互
-meta_description: 能源金属数据主要来自行业协会公开报告、期货交易所行情、海关进出口统计及矿山企业披露信息。更新节奏分多档：现货价格按交易日更新，月度供需数据每月中下旬发布，季
+meta_description: 能源金属营销内容的表单与交互：能源金属营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 能源金属、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Packaging and Printing
-meta_description: Marketing-related data for financial sector packaging and printing is primarily sourced from financial institutions’ production ERP systems, printing
+meta_description: Tool Calling and Plugins for Packaging and Printing Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

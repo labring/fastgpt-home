@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c118-f005
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Unified Entry
-meta_description: Data sources for the unified entry all-in-one AI platform include aggregated multi-branch AI application session logs, associated knowledge base
+meta_title: Multi-turn Dialogue and Prompt Engineering for Unified
+meta_description: Multi-turn Dialogue and Prompt Engineering for Unified Entry All-in-One AI Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

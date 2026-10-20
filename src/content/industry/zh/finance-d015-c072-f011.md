@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 授信申请风控的文档解析与分块
-meta_description: 授信申请风控的数据源主要来自用户提交的金融相关文档，包括个人或企业的身份证、营业执照、银行流水账单、纳税证明、收入证明等。文档更新节奏为单次提交的静态文件，
+meta_description: 授信申请风控的文档解析与分块：授信申请风控的文档解析与分块，涵盖配置与验证建议。
 keywords: 授信申请、风控与授信材料审核、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

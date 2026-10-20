@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备研报检索的HTTP 接口与外部系统
-meta_description: 专用设备研报的数据主要来自行业协会公开报告、厂商技术白皮书、第三方行业调研机构的深度分析文档，供金融行业投研团队检索使用。更新节奏分为两类：行业动态类研报随
+meta_description: 专用设备研报检索的HTTP 接口与外部系统：专用设备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专用设备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

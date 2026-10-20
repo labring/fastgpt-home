@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Biologics Yield Rates
-meta_description: Data related to biologics yield rates is primarily used for investment analysis of the pharmaceutical industry in the financial sector. Sources
+meta_description: Form and Interaction for Biologics Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

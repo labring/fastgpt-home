@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c036-f005
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Semiconductor
-meta_description: Semiconductor category financial report data mainly comes from publicly disclosed periodic reports and publicly available industry statistical data
+meta_title: Multi-turn Dialogue and Prompt Engineering
+meta_description: Multi-turn Dialogue and Prompt Engineering for Semiconductor Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

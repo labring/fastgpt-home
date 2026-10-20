@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品营销内容的知识库检索与召回
-meta_description: 家居用品营销内容的数据主要来源于品牌方官方产品手册、电商平台详情页、第三方合规质检报告、官方营销话术模板及售后FAQ库。数据更新节奏随新品上线、季节性促销活
+meta_description: 家居用品营销内容的知识库检索与召回：家居用品营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 家居用品、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

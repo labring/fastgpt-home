@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险财报分析的向量模型与索引
-meta_description: 保险品类的财报数据主要来源于保险公司公开披露的年度报告、季度报告及重大事项临时公告，同时包含监管要求报送的内部偿付能力报告。数据更新节奏固定，年度报告每年披
+meta_description: 保险财报分析的向量模型与索引：保险财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 保险、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

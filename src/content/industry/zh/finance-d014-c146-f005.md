@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备财报分析的多轮对话与提示词
-meta_description: 通用设备财报分析的数据主要来自上市公司定期报告、行业监管披露平台及企业内部设备管理台账。数据更新节奏为每季度、每年度。文档包含两类形态：汇总类PDF财报，以
+meta_description: 通用设备财报分析的多轮对话与提示词：通用设备财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通用设备、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

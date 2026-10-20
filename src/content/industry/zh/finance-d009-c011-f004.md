@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品研报检索的向量模型与索引
-meta_description: 休闲食品研报的数据来源涵盖公开券商食品饮料行业研报、行业监测机构的零售终端数据、品牌方公开的经营公告。更新节奏存在差异：券商研报按季度、月度发布，零售终端数
+meta_description: 休闲食品研报检索的向量模型与索引：休闲食品研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 休闲食品、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

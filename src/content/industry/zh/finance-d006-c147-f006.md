@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸投研知识库建设的对话日志与审计
-meta_description: 造纸投研数据主要来自中国造纸协会公开报告、上市纸企定期财报、木浆与废纸的现货期货交易平台数据、环保部门的排放监测公开信息。数据更新节奏覆盖每日（原料价格）、
+meta_description: 造纸投研知识库建设的对话日志与审计：造纸投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 造纸、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

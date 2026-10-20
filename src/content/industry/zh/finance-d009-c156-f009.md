@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电研报检索的引用来源与溯源
-meta_description: 黑色家电研报的数据来源主要包括第三方家电行业监测机构、券商研究所家电行业团队、家电行业协会公开报告。数据更新遵循行业发布周期，高频监测数据按周更新，常规研报
+meta_description: 黑色家电研报检索的引用来源与溯源：黑色家电研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 黑色家电、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

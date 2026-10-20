@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股收益率的对话日志与审计
-meta_description: 本品类的数据来源为旗下各金融、保险、理财子板块的交易系统、第三方行情接口及内部估值数据库。更新节奏为每日固定时段完成全量持仓收益率核算，盘中每小时同步最新估
+meta_description: 多元控股收益率的对话日志与审计：多元控股收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 多元控股、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

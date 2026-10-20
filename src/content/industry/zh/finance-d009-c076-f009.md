@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品研报检索的引用来源与溯源
-meta_description: 文娱用品研报的数据来源包含行业协会公开报告、品牌方季度披露文件、线下零售监测数据集、电商平台销售复盘数据等。更新节奏随行业节点波动，新品上市、行业展会发布周
+meta_description: 文娱用品研报检索的引用来源与溯源：文娱用品研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 文娱用品、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

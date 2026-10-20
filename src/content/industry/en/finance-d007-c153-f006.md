@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logs and Auditing for Wind Power Revenue Yields
-meta_description: Data for wind power revenue yield and market daily reports is collected from station SCADA systems, public data from regional power trading centers
+meta_description: Dialogue Logs and Auditing for Wind Power Revenue Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

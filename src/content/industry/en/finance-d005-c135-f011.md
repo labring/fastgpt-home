@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Account Issue Customer
-meta_description: Account issue data primarily comes from internal institutional account management rule documents, structured transaction ledger Excel files, archived
+meta_description: Document Parsing and Chunking for Account Issue Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

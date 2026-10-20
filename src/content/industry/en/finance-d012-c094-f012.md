@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c094-f012
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Refining and
-meta_description: Data related to refining and chemical marketing comes from internal enterprise process parameter documents, batch quality inspection reports, monthly
+meta_title: Model Integration and Configuration for Refining
+meta_description: Model Integration and Configuration for Refining and Chemical Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

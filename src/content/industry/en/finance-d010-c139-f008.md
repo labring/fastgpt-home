@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Qualification Compliance
-meta_description: The data for qualification compliance bidding primarily comes from government procurement public service platforms, industry regulatory disclosure
+meta_description: Tool Calling and Plugins for Qualification Compliance Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The characteristics of qualification compliance bidding data impose clear constr
 > The parameter values provided on this page are conventional recommendations used as starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test with in-house samples before finalizing configuration settings.
 
 ## Three Common Configuration Mistakes
--  Phenomenon: The returned qualification image URL is not displayed after calling the plugin, and a blank placeholder is shown on the interface. Cause: The `url_image_display_switch` configuration is not enabled, so the image links returned by the plugin are not rendered.
+-  Phenomenon: The returned qualification image URL is not displayed after calling the plugin, and a blank pending verification is shown on the interface. Cause: The `url_image_display_switch` configuration is not enabled, so the image links returned by the plugin are not rendered.
 -  Phenomenon: System variables cannot be inserted into the JSON input field, only static text can be entered. Cause: The `json_input_variable_support` configuration is not enabled. The default JSON input field does not have variable binding functionality enabled.
 -  Phenomenon: The plugin call returns a `504 Gateway Timeout` error. Cause: The `attachment_parse_timeout` parameter is not adjusted. The parsing time for qualification scanned documents exceeds the default threshold, causing request timeout.
 

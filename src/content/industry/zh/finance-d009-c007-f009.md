@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品研报检索的引用来源与溯源
-meta_description: 乳制品研报数据主要来自公开券商行业研报、国内乳制品企业公开财报、食品饮料行业协会月度调研数据及第三方消费行为监测报告。数据更新节奏随行业动态调整，券商研报随
+meta_description: 乳制品研报检索的引用来源与溯源：乳制品研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 乳制品、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的知识库检索与召回
-meta_description: 证券研报的数据来源主要为持牌证券研究所公开研报、合规授权的金融数据终端研报内容。更新节奏为每个交易日收盘后分批推送，重大事件相关研报会即时更新。文档结构通常
+meta_description: 证券研报检索的知识库检索与召回：证券研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 证券、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

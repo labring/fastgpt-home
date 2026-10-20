@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线融资日报的文档解析与分块
-meta_description: 影视院线融资日报的数据主要来自公开融资公告、行业监测机构的每日报送数据以及院线企业的内部运营报表。更新节奏为每日更新，单份日报覆盖当日及近期的影视项目融资动
+meta_description: 影视院线融资日报的文档解析与分块：影视院线融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 影视院线、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

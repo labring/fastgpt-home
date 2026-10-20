@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品营销内容的文档解析与分块
-meta_description: 个护用品的营销数据主要来自品牌方内部的产品手册、电商平台详情页文案、直播营销脚本、成分检测报告及线下推广物料。数据更新节奏随新品上市、合规要求调整或营销活动
+meta_description: 个护用品营销内容的文档解析与分块：个护用品营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 个护用品、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电收益率的工作流编排
-meta_description: 黑色家电的收益率相关数据主要来自公开零售监测平台、品牌方ERP系统、区域经销商上报数据三类渠道。线上电商渠道数据每日更新，线下经销商数据按月度汇总，行业大盘
+meta_description: 黑色家电收益率的工作流编排：黑色家电收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 黑色家电、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

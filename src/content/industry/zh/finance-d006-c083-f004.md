@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务投研知识库建设的向量模型与索引
-meta_description: 水务投研的数据来源包含水务集团运营台账、管网实时监测数据、水质检测报告、行业政策文件与专业研报。更新节奏差异明显，管网监测数据为分钟级更新，年度运营报告为年
+meta_description: 水务投研知识库建设的向量模型与索引：水务投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 水务、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

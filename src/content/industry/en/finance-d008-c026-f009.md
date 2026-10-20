@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c026-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Publishing Intelligent
-meta_description: Data sources for publishing intelligent due diligence reports include official filing materials submitted by publishing units, copyright office
+meta_title: Citation Sources and Traceability for Publishing
+meta_description: Citation Sources and Traceability for Publishing Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,13 +27,13 @@ The multi-source filing attribute of publishing intelligent due diligence report
 | `max_citation_return` | Top 5 entries | The number of valid citations in publishing due diligence reports is usually concentrated within 5 entries; excessive entries will distract from the focus of the main content |
 | `citation_source_field` | `dataset_custom_meta` | Metadata such as copyright and filing information for publishing reports is stored in custom dataset metadata, which can be directly extracted for traceability |
 | `rag_parse_timeout` | 800 seconds | Publishing due diligence reports usually include multiple attachments and long text content, requiring longer parsing time to complete content splitting and metadata extraction |
-| `citation_display_format` | `{{source_title}} (ISBN: {{isbn}})` | ISBN is the core identifier for the publishing category, allowing quick location of the corresponding report source |
+| `citation_display_format` | `example value (ISBN: example value)` | ISBN is the core identifier for the publishing category, allowing quick location of the corresponding report source |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require individual analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Configuration Mistakes
 - Issue: In FastGPT 4.9.4, citation content is still returned when the `enable_citation` configuration item is not enabled. Cause: This version has an issue where application configuration cache is not automatically refreshed; manual clearing of the application cache is required to restore normal behavior.
-- Issue: Using the `[{datasetId: xxx}]` format when configuring knowledge base variable references does not take effect. Cause: FastGPT’s variable template follows Handlebars syntax specifications; use `{{datasetId}}` or structured parameter templates instead of array nested formats.
+- Issue: Using the `[{datasetId: xxx}]` format when configuring knowledge base variable references does not take effect. Cause: FastGPT’s variable template follows Handlebars syntax specifications; use `example value` or structured parameter templates instead of array nested formats.
 - Issue: After importing question-answer pairs into the knowledge base, the returned content does not use the response text from the knowledge base. Cause: The `rag_force_use_context` parameter is not set to enabled; the model prioritizes calling external training data instead of knowledge base context content.
 
 ## How to Verify Successful Configuration

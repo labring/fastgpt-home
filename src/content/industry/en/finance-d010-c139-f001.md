@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Qualification
-meta_description: Qualification compliance bidding report data primarily comes from government procurement public service platforms, official tender announcements
+meta_description: HTTP Interfaces and External Systems for Qualification Compliance Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

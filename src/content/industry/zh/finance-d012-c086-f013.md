@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务营销内容的知识库检索与召回
-meta_description: 数据主要来自汽车金融、车险服务的市场部营销物料，包括车贷申请流程文档、区域车险促销方案、门店服务话术模板、车主权益说明等。更新节奏随营销活动调整，新品上市、
+meta_description: 汽车服务营销内容的知识库检索与召回：汽车服务营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 汽车服务、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

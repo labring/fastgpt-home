@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子营销内容的工具调用与插件
-meta_description: 数据来源涵盖金融机构合作的光学光电子产线自动化采集的设备运行参数、供应链管理系统的物料台账、金融电商平台的营销曝光点击数据以及线下获客的客户留资信息。更新节
+meta_description: 光学光电子营销内容的工具调用与插件：光学光电子营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 光学光电子、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

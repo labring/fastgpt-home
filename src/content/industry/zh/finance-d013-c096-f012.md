@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭融资日报的模型接入与配置
-meta_description: 焦炭融资日报数据主要来源于国内大宗商品现货交易平台、行业自律组织公开统计、港口仓储库存台账及期货交易所结算数据。数据更新节奏为每日固定时点更新前一交易日的全
+meta_description: 焦炭融资日报的模型接入与配置：焦炭融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 焦炭、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

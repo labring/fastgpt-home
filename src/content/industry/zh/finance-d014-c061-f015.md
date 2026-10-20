@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械财报分析的部署与升级
-meta_description: 这个品类的数据主要来自上市公司公开披露的季度报告、年度报告，以及交易所官方披露平台。更新节奏为每季度发布季度报告，每年发布年度报告，临时公告按需发布。文档结
+meta_description: 工程机械财报分析的部署与升级：工程机械财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 工程机械、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

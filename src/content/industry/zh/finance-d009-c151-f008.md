@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路研报检索的工具调用与插件
-meta_description: 铁路公路研报的数据来源包括交通运输主管部门月度运营通报、行业协会运行报告、上市交通运输企业定期公告、第三方咨询机构专项调研文档。更新节奏以月度常规发布为主，
+meta_description: 铁路公路研报检索的工具调用与插件：铁路公路研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 铁路公路、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

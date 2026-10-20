@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理研报检索的引用来源与溯源
-meta_description: 数据主要来自生态环境部门公开的固废处置台账、行业垂直渠道的调研报告、第三方监测机构的现场检测记录。更新节奏分为月度监测数据按月推送，年度行业分析报告按季度迭
+meta_description: 固废处理研报检索的引用来源与溯源：固废处理研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 固废处理、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

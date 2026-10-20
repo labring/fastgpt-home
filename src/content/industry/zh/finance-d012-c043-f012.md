@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产营销内容的模型接入与配置
-meta_description: 商业地产营销内容的数据主要来自商圈运营台账、招商手册、活动策划文档、商户合作协议及线下导览资料。数据更新节奏随招商调整、营销活动排期波动，无固定周期，单次更
+meta_description: 商业地产营销内容的模型接入与配置：商业地产营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 商业地产、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务营销内容的工作流编排
-meta_description: 面向金融、保险、理财领域的通信服务营销数据，来源于机构的通信服务后台、用户交互记录与营销活动数据库。更新节奏分为三类：实时触达回执为秒级更新，用户通话、短信
+meta_description: 通信服务营销内容的工作流编排：通信服务营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 通信服务、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

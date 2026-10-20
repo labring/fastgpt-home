@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品营销内容的HTTP 接口与外部系统
-meta_description: 饰品营销内容关联的数据主要来自金融机构的贵金属饰品SKU库、供应链库存系统与官方营销素材平台。数据更新节奏随上新周期与营销节点波动，季度末与节假日前会出现集
+meta_description: 饰品营销内容的HTTP 接口与外部系统：饰品营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饰品、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

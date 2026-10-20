@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务营销内容的工作流编排
-meta_description: 专业服务的营销内容数据主要来源于内部服务案例库、客户咨询归档记录、监管合规文件与服务定价手册。数据更新节奏无固定周期，随新服务上线、监管政策调整或客户需求迭
+meta_description: 专业服务营销内容的工作流编排：专业服务营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 专业服务、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

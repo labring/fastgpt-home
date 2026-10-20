@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Smart Due Diligence
-meta_description: Tourist attraction data falls into four main categories:
+meta_description: Citation Sources and Traceability for Smart Due Diligence Reports of Tourist Attractions
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

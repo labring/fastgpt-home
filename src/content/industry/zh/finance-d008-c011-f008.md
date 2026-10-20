@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品智能尽调报告的工具调用与插件
-meta_description: 休闲食品智能尽调报告的数据主要来自国家食品安全抽样检验信息系统、食品生产企业公开的产品合规文档、供应链原料溯源平台及电商平台的产品详情页。数据更新节奏分为三
+meta_description: 休闲食品智能尽调报告的工具调用与插件：休闲食品智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 休闲食品、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

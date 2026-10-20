@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒智能尽调报告的向量模型与索引
-meta_description: 数据来源包括白酒产区协会公开监测数据、上市酒企定期披露的财报、第三方酒类流通平台的终端销售数据、酒厂官方发布的产品说明书与质检报告。更新节奏：上市酒企财报按
+meta_description: 白酒智能尽调报告的向量模型与索引：白酒智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 白酒、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程投研知识库建设的部署与升级
-meta_description: 面向金融行业投研场景的油服工程投研知识库，数据主要来自现场作业系统、井下传感器采集的实时数据、行业协会公开报告、第三方勘探服务商交付的竣工文档。数据更新节奏
+meta_description: 油服工程投研知识库建设的部署与升级：油服工程投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 油服工程、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

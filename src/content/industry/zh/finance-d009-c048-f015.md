@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的部署与升级
-meta_description: 城商行研报数据主要来自内部授信评审、区域经济分析的自研文档，以及监管部门、区域行业协会发布的公开研报。更新节奏随业务需求调整，内部项目关联研报随业务推进按需
+meta_description: 城商行研报检索的部署与升级：城商行研报检索的部署与升级，涵盖配置与验证建议。。。
 keywords: 城商行、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

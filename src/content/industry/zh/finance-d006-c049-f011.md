@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程投研知识库建设的文档解析与分块
-meta_description: 基建工程投研的数据主要来自行业标准图纸PDF、施工日志Excel、造价清单CSV、招投标公告Word等。更新节奏随项目进度调整，单项目周期内按月或按周更新。
+meta_description: 基建工程投研知识库建设的文档解析与分块：基建工程投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 基建工程、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

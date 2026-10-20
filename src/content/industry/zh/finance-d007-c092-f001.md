@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子收益率的HTTP 接口与外部系统
-meta_description: 消费电子的收益率与行情数据来源包括公开电子元器件交易平台、头部电商的匿名销售数据接口、行业供应链联盟的统计报表。数据更新节奏分为两类：消费电子终端产品的零售
+meta_description: 消费电子收益率的HTTP 接口与外部系统：消费电子收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 消费电子、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

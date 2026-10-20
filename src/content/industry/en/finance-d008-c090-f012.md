@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c090-f012
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Coatings, Inks and Paints
-meta_description: This category's data mainly comes from industry operation data published by industry associations, public quotation documents from upstream raw
+meta_title: Model Access and Configuration for Coatings, Inks
+meta_description: Model Access and Configuration for Coatings, Inks and Paints Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

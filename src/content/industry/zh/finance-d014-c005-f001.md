@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品财报分析的HTTP 接口与外部系统
-meta_description: 个护用品财报相关数据来源包括上市公司公开披露的定期报告、行业零售监测数据集。更新节奏为：定期报告按季度、年度固定更新，零售监测数据按月度更新。文档结构包含营
+meta_description: 个护用品财报分析的HTTP 接口与外部系统：个护用品财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 个护用品、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

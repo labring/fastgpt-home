@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Condiment Financial
-meta_description: Condiment category financial report data primarily comes from quarterly performance announcements and annual official reports of listed condiment
+meta_description: Knowledge Base Retrieval and Recall for Condiment Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ The characteristics of condiment category financial report data create multiple 
 ## Configuration Settings
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
-| `PARSE_FILE_TIMEOUT_SECONDS` | `600 seconds` | This configuration is based on FastGPT 4.9.0. Condiment financial report PDF and Excel documents usually contain multiple pages of business data, and 600 seconds covers the complete parsing process for most files |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `Segment Length` | `800–1200 characters` | Business paragraphs in condiment financial reports often contain linked data such as revenue and sales volume consecutively. This segment length preserves complete business context |
 | `Recall Count` | `Top 8–12 results` | Core business information for condiment financial reports is scattered across multiple paragraphs. Recalling 8-12 results covers key data points while avoiding redundancy |
 | `Similarity Threshold` | `0.75–0.85` | Keywords in the condiment industry have high semantic similarity. This threshold filters low-correlation results and retains valid business data |

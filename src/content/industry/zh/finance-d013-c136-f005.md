@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属融资日报的多轮对话与提示词
-meta_description: 数据来源为上海黄金交易所官方行情接口、伦敦金银市场协会每日报价渠道，更新频率为每个交易日17:00前发布当日全量行情数据。文档为结构化的JSON或CSV格式
+meta_description: 贵金属融资日报的多轮对话与提示词：贵金属融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 贵金属、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Water Industry
-meta_description: Data sources for water industry research reports mainly include China Urban Water Supply and Drainage Association industry operation reports, annual
+meta_description: Citation Sources and Traceability for Water Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -38,7 +38,7 @@ Additionally, water industry research reports have strong regional attributes, w
 | `similarity threshold` | 0.75-0.85 | The water industry has many professional terms. A threshold that is too low will introduce irrelevant industry reports, while a threshold that is too high will miss precise data in subdivided fields |
 | `rerank return count` | Top 5-7 entries | Filter semantically duplicated regional water project data, retain the most relevant research report fragments, and avoid redundant citations |
 | `segment length` | 1000-1500 characters | Indicator paragraphs in water industry research reports are mostly long text. Segments that are too long lose context association, while segments that are too short split complete indicator analysis units |
-| `citation template` | `{{source}} | {{publish_date}} | {{region}} | {{metric_unit}}` | Water industry research reports need to clearly mark source institution, publish time, coverage region and indicator unit to meet traceability accuracy requirements |
+| `Traceability details` | `the configured value | the configured value | the configured value | the configured value` | Water industry research reports need to clearly mark source institution, publish time, coverage region and indicator unit to meet traceability accuracy requirements |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120 seconds | Large water industry annual reports include multi-page structured tables, parsing takes longer, avoid truncating document content due to timeout |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis, and testing on matching samples is recommended before finalizing.
@@ -46,7 +46,7 @@ Additionally, water industry research reports have strong regional attributes, w
 ## Three Common Mistakes
 - Phenomenon: When asking consecutive water-related questions, subsequent answers reference research reports unrelated to prior questions. Cause: Contextual recall configuration is not enabled, only documents relevant to the current question are recalled once, without associating the context scope of historical questions.
 - Phenomenon: 504 Gateway Timeout error occurs when parsing large water industry annual reports. Cause: `PARSE_FILE_TIMEOUT_SECONDS` is set below 120 seconds, parsing time for structured tables and long text exceeds the preset duration.
-- Phenomenon: Citation results do not mark the corresponding unit of the indicator. Cause: The `{{metric_unit}}` variable is not included in the citation template, and unit information of the field is not extracted, leading to data ambiguity.
+- Phenomenon: Citation results do not mark the corresponding unit of the indicator. Cause: The `example value` variable is not included in the citation template, and unit information of the field is not extracted, leading to data ambiguity.
 
 ## How to Confirm Configuration Is Correct
 - Upload an annual financial report of a water enterprise, check if the parsed segments retain complete indicator analysis paragraphs, with no obvious content truncation or splitting errors.

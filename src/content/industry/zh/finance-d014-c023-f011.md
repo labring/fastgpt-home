@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子财报分析的文档解析与分块
-meta_description: 军工电子品类的财报数据主要来自境内军工电子上市公司的公开披露公告，以及军工集团下属单位的定期业务报告，更新节奏以季度报、年报为核心，附带重大合同、资质变动等
+meta_description: 军工电子财报分析的文档解析与分块：军工电子财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 军工电子、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

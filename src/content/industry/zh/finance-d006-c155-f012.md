@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料投研知识库建设的模型接入与配置
-meta_description: 这个品类的数据主要来自四类渠道：国内饲料原料贸易平台、农业农村部畜牧兽医局公开数据、饲料企业内部配方文档、行业协会季度运行报告。更新节奏差异明显：原料交易报
+meta_description: 饲料投研知识库建设的模型接入与配置：饲料投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 饲料、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

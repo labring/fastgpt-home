@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行收益率的模型接入与配置
-meta_description: 该品类的数据主要来源于股份制银行内部理财业务系统、全国银行间同业拆借中心公开的金融行情数据，每日在当日交易结束后完成全量更新。数据以结构化表格形式存储，包含
+meta_description: 股份制银行收益率的模型接入与配置：股份制银行收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 股份制银行、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

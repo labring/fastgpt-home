@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Telecommunications Service Yield
-meta_description: Data sources primarily include public securities market APIs and operational data APIs disclosed by telecommunications industry regulators. The
+meta_description: Workflow Orchestration for Telecommunications Service Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ The mixed update rhythm of daily updates and real-time updates requires configur
 | `trigger_type` | `["schedule", "webhook"]` | Adapts to both daily scheduled trigger and real-time market push scenarios for telecommunications service market data |
 | `loop_exit_condition` | `"target_yield > 0 or total_items >= 20"` | Matches loop termination logic after batch pulling market data, meets configuration requirements for loop body condition termination |
 | `parse_node_timeout` | `600 seconds` | Adapts to typical response latency of telecommunications service market data APIs, prevents process interruption due to timeout |
-| `variable_reference_mode` | `{{field_name}}` | Complies with variable reference compatibility specifications for version V4.8.18-FIX2, fixes format reference issues |
+| `variable_reference_mode` | `example value` | Complies with variable reference compatibility specifications for version V4.8.18-FIX2, fixes format reference issues |
 | `webhook_auth_type` | `api_key` | Ensures secure calling permissions for telecommunications service market data APIs |
 
 The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力融资日报的多轮对话与提示词
-meta_description: 热力融资日报的数据来源于公用热力企业的管网监控平台、收费结算系统与能耗上报端口。每日凌晨完成前一日全量数据汇总，更新节奏为日更。文档以结构化表格形式输出，包
+meta_description: 热力融资日报的多轮对话与提示词：热力融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 热力、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

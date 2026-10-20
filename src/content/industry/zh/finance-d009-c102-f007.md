@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢研报检索的工作流编排
-meta_description: 特钢研报的数据来源包括中国特钢企业协会发布的行业统计报告、重点特钢生产企业的产销快报、第三方大宗商品资讯平台的现货报价数据。更新节奏以月度核心产销数据更新为
+meta_description: 特钢研报检索的工作流编排：特钢研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 特钢、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

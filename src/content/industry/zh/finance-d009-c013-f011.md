@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险研报检索的文档解析与分块
-meta_description: 保险研报的数据主要来自保险行业自律组织、持牌保险机构的投研部门及合规第三方金融数据平台。更新以季度、半年度定期报告为主，辅以月度市场动态及临时政策解读类文档
+meta_description: 保险研报检索的文档解析与分块：保险研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 保险、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

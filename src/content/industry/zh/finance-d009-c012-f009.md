@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发研报检索的引用来源与溯源
-meta_description: 住宅开发研报的数据来源主要包括住建部门公开的住宅项目备案数据、上市房企年度及半年度业绩公告、专业地产研究机构的区域住宅市场专项报告。更新节奏覆盖月度、季度与
+meta_description: 住宅开发研报检索的引用来源与溯源：住宅开发研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 住宅开发、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

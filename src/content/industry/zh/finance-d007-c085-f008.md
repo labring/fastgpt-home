@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥收益率的工具调用与插件
-meta_description: 水泥的现货收益率相关数据来源为国内建材现货交易监测平台、全国水泥行业协会的公开统计端口，更新节奏为每日早间8点更新前一日的区域现货价格及交易数据。数据以结构
+meta_description: 水泥收益率的工具调用与插件：水泥收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 水泥、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

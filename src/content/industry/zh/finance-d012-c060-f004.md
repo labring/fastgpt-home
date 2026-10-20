@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的向量模型与索引
-meta_description: 工程咨询的营销内容数据来源包括金融机构配套的工程类项目案例文档、可行性研究报告、投标方案书、行业分析白皮书，以及用于获客的公众号推文、短视频脚本、客户对接纪
+meta_description: 工程咨询营销内容的向量模型与索引：工程咨询营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c015-2
 page_type: 行业作业环节页
 article_section: 保险
 is_part_of: FastGPT 技术中心
-meta_title: 健康保险承保与理赔的核对疾病定义、既往症、医疗行为和保险责任
+meta_title: 健康保险承保与理赔的核对疾病定义、既往症、医疗行为和保险责任：哪一部分能交给系统
 meta_description: 健康保险承保与理赔的核对疾病定义、既往症、医疗行为和保险责任：哪一部分能交给系统
 keywords: 健康保险承保与理赔、保险、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

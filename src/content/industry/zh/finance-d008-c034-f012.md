@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械智能尽调报告的模型接入与配置
-meta_description: 医疗器械智能尽调报告的数据主要来自国家药品监督管理局备案数据库、生产企业官方质量文件、临床试验公开报告、集采中标公示等渠道。更新节奏随产品注册证换证、新获批
+meta_description: 医疗器械智能尽调报告的模型接入与配置：医疗器械智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 医疗器械、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

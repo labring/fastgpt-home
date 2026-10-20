@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备营销内容的多轮对话与提示词
-meta_description: 通信设备的营销相关数据主要来源于三类：设备硬件规格文档、实时运维日志、用户咨询历史。硬件规格文档包含型号、固件版本、信号参数等结构化内容，更新节奏随固件迭代
+meta_description: 通信设备营销内容的多轮对话与提示词：通信设备营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 通信设备、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

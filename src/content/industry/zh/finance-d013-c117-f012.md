@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造融资日报的模型接入与配置
-meta_description: 纺织制造融资日报的数据主要来自各地供应链金融服务平台、上市纺织企业公开披露的临时公告、地方金融监管部门的融资备案信息。更新节奏为每个工作日更新一次，单日数据
+meta_description: 纺织制造融资日报的模型接入与配置：纺织制造融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 纺织制造、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

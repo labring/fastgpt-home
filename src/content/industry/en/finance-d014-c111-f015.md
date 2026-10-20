@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Livestock and Poultry Farming
-meta_description: Data required for livestock and poultry farming financial report analysis comes primarily from three sources: daily production logs of large-scale
+meta_description: Deployment and Upgrade for Livestock and Poultry Farming Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Pre-existing
-meta_description: Data sources for pre-existing condition determination primarily include de-identified historical insurance claim case files, past medical visit
+meta_description: Knowledge Base Retrieval and Recall for Pre-existing Condition Determination in Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

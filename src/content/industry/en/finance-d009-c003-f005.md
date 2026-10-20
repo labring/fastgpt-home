@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Specialized Chain
-meta_description: Data for specialized chain industry research reports comes from professional research institutions in the commercial and retail sector, publicly
+meta_description: Multi-turn Dialogue and Prompting for Specialized Chain Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

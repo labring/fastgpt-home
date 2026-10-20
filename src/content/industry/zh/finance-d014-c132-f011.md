@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备财报分析的文档解析与分块
-meta_description: 计算机设备品类的财报数据主要来源于上市公司公开披露的季度报告、年度报告PDF文档，以及配套的Excel版财报底稿，部分企业还会发布单独的设备采购、销售公告作
+meta_description: 计算机设备财报分析的文档解析与分块：计算机设备财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 计算机设备、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

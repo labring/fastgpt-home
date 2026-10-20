@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务智能尽调报告的部署与升级
-meta_description: 教育服务智能尽调报告的数据主要来自办学许可文件、师资资质档案、课程教学大纲、学员调研记录、年度财务审计报告及属地教育监管部门公示信息。数据更新节奏随对应文档
+meta_description: 教育服务智能尽调报告的部署与升级：教育服务智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 教育服务、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

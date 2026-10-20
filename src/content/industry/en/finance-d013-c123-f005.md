@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c123-f005
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Energy Metals
-meta_description: Data sources include public daily reports from domestic nonferrous metal industry associations, daily settlement quotes from the Shanghai Futures
+meta_title: Multi-turn Dialogue and Prompt Engineering for Energy
+meta_description: Multi-turn Dialogue and Prompt Engineering for Energy Metals Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,8 +26,8 @@ The daily updated single-file structure requires that dialogue flows accurately 
 | `similarity threshold` | 0.75-0.85 | Category fields and units are standardized, so a high matching degree is needed to filter recall results of unrelated categories and prevent the model from confusing different metal parameters |
 | `maxContext` | 8000-12000 characters | The single file has a moderate data size. It is necessary to retain complete recalled field content and multi-turn dialogue history to prevent key information from being truncated |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 60 seconds | The single knowledge base file has a small data size, so no long parsing wait time is required, avoiding unnecessary timeout errors |
-| `reference content template` | `{{content}}` | It is necessary to fully retain the original field and unit information to ensure that the model output is consistent with the knowledge base data format |
-| `reference template prompt` | Please answer user questions based on the following energy metal data: {{reference content}} | Clearly inform the model to answer based on the recalled structured data, avoiding fabricating unspecified parameters |
+| `reference content template` | `example value` | It is necessary to fully retain the original field and unit information to ensure that the model output is consistent with the knowledge base data format |
+| `reference template prompt` | Please answer user questions based on the following energy metal data: example value | Clearly inform the model to answer based on the recalled structured data, avoiding fabricating unspecified parameters |
 
 > The parameter values provided on this page are all conventional recommendations used to determine the starting point for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on self-hosted samples before finalizing the configuration.
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料研报检索的工作流编排
-meta_description: 耐火材料研报的数据主要来自中国耐火材料工业协会官方监测平台、专业耐火材料技术期刊、券商建材行业专题研报、上下游生产企业公开技术文档及行业展会发布的调研报告。
+meta_description: 耐火材料研报检索的工作流编排：耐火材料研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 耐火材料、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

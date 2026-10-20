@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c132-f004
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexes for Computer Equipment Intelligent
-meta_description: Data sources for computer equipment intelligent due diligence reports include official manufacturer parameter documents, asset ledger systems
+meta_title: Vector Models and Indexes for Computer Equipment
+meta_description: Vector Models and Indexes for Computer Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销投研知识库建设的部署与升级
-meta_description: 广告营销投研数据来源包括广告投放后台实时报表、第三方媒介监测跨平台数据、竞品公开营销素材库、行业营销趋势研报、自有品牌广告效果日志。更新节奏覆盖实时（单条投
+meta_description: 广告营销投研知识库建设的部署与升级：广告营销投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 广告营销、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

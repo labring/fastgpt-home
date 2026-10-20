@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备融资日报的模型接入与配置
-meta_description: 数据来源包括国防军工行业主管部门公开披露的融资备案信息、兵器装备相关企事业单位的官方公告、第三方军工行业数据平台的公开采集项。更新节奏为每日更新，当日披露的
+meta_description: 兵器装备融资日报的模型接入与配置：兵器装备融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 兵器装备、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

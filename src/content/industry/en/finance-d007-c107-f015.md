@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Power Sector Yield and Market
-meta_description: Data for power sector yield and market reports comes from official public trading documents released by national and provincial power trading centers.
+meta_description: Deployment and Upgrade for Power Sector Yield and Market Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

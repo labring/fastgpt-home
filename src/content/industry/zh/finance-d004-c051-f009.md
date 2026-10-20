@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的引用来源与溯源
-meta_description: 处罚案例的数据来源为国家金融监督管理总局官网、各地银保监局公示栏、行业协会合规通报库。更新节奏随监管执法进度发布，无固定周期，单次发布后不再修改。单条文档结
+meta_description: 处罚案例合规的引用来源与溯源：处罚案例合规的引用来源与溯源，涵盖配置与验证建议。
 keywords: 处罚案例、合规与内部制度问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

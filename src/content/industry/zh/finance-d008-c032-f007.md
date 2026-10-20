@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料智能尽调报告的工作流编排
-meta_description: 化学原料的数据源涵盖公开海关进出口台账、行业协会月度供需报告、生产厂家公示的MSDS文件、现货交易平台报价数据及第三方质检报告。更新节奏因类型而异，现货价格
+meta_description: 化学原料智能尽调报告的工作流编排：化学原料智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 化学原料、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

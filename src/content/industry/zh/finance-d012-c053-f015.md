@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融营销内容的部署与升级
-meta_description: 多元金融的数据源涵盖内部业务管理系统、监管公示平台、过往营销素材库与合规审核档案。数据更新节奏不固定：产品参数随业务调整不定期更新，营销素材随获客活动按需调
+meta_description: 多元金融营销内容的部署与升级：多元金融营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 多元金融、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

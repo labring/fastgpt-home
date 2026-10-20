@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸研报检索的HTTP 接口与外部系统
-meta_description: 造纸研报的数据主要来自国内轻工制造行业协会公开数据、上市造纸企业定期公告、第三方行业咨询机构的公开研报。更新节奏随报告类型不同，季度、半年度、年度的行业全景
+meta_description: 造纸研报检索的HTTP 接口与外部系统：造纸研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 造纸、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

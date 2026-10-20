@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的工具调用与插件
-meta_description: 城商行研报的数据主要来自自身区域经济研究中心、风险管理部的辖内业务台账，以及持牌区域金融信息服务机构的公开行业数据。数据更新节奏分为三类：内部辖内业务数据按
+meta_description: 城商行研报检索的工具调用与插件：城商行研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 城商行、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

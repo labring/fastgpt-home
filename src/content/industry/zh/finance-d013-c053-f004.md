@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融融资日报的向量模型与索引
-meta_description: 多元金融融资日报的数据来源于机构核心业务系统、合作方业务台账接口，更新节奏为每日生成前一自然日的全量业务条目。单条文档对应一笔当日完成或更新的融资业务，文档
+meta_description: 多元金融融资日报的向量模型与索引：多元金融融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 多元金融、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

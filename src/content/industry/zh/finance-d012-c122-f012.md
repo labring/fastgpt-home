@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行营销内容的模型接入与配置
-meta_description: 股份制银行的营销内容数据主要来源于行内营销素材库、活动管理系统与历史客户咨询记录。数据更新节奏随营销活动周期调整，新活动上线前1-3天完成批量更新，日常仅对
+meta_description: 股份制银行营销内容的模型接入与配置：股份制银行营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 股份制银行、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

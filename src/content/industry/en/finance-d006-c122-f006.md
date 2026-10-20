@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Audit for Joint-Stock Bank
-meta_description: Joint-stock bank investment research data primarily comes from internal compliance research report repositories, publicly disclosed documents from the
+meta_description: Conversation Logging and Audit for Joint-Stock Bank Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏财报分析的工具调用与插件
-meta_description: 光伏财报的数据主要来自境内外证券交易所公开披露的年报、季报及临时公告，更新节奏为年度报告需在每个会计年度结束后4个月内披露，季度报告需在季度结束后1个月内披
+meta_description: 光伏财报分析的工具调用与插件：光伏财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 光伏、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

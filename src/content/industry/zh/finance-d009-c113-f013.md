@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒研报检索的知识库检索与召回
-meta_description: 白酒研报数据主要来自公开券商研究所研报、行业协会公开报告、头部白酒企业年度及半年度披露文件。更新随白酒行业核心节点推进，包括季度财报发布周期、行业旺季前后、
+meta_description: 白酒研报检索的知识库检索与召回：白酒研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 白酒、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

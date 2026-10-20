@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的文档解析与分块
-meta_description: 白色家电的营销内容数据主要来自品牌官方产品手册、季度促销方案合集、经销商培训材料、线上推广文案库及售后FAQ文档。更新节奏随新品发布、促销周期调整，通常每季
+meta_description: 白色家电营销内容的文档解析与分块：白色家电营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 白色家电、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

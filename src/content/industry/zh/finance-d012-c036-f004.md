@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体营销内容的向量模型与索引
-meta_description: 半导体营销内容服务于金融/保险/理财行业的获客场景，来源包括内部研发的产品规格书、应用笔记，市场部产出的宣传海报、社交媒体文案，以及合作伙伴提供的行业合作案
+meta_description: 半导体营销内容的向量模型与索引：半导体营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 半导体、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

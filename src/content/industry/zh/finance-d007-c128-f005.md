@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口收益率的多轮对话与提示词
-meta_description: 航运港口收益率相关数据主要来自官方港口管理机构、国际航运交易平台及船舶运营统计系统。数据更新节奏以每日为核心周期，部分长线航线的长期运价基准按周度更新。单份
+meta_description: 航运港口收益率的多轮对话与提示词：航运港口收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航运港口、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

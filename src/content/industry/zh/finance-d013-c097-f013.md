@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤融资日报的知识库检索与召回
-meta_description: 数据来源为国内焦煤主产区贸易企业台账、北方港口每日交割记录、行业资讯平台公开融资信息。更新节奏为每日固定时点完成更新。文档以结构化表格为主要形式，包含日期、
+meta_description: 焦煤融资日报的知识库检索与召回：焦煤融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 焦煤、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

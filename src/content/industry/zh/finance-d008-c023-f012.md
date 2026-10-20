@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子智能尽调报告的模型接入与配置
-meta_description: 军工电子智能尽调报告的数据来源包括军工电子整机厂商的公开披露年报、行业协会发布的元器件供需数据、公开的军工科研项目结题摘要、军工电子领域的国家标准与行业规范
+meta_description: 军工电子智能尽调报告的模型接入与配置：军工电子智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 军工电子、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

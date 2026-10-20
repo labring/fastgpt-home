@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务融资日报的向量模型与索引
-meta_description: 数据主要来源于汽车经销商的融资申请系统、合作金融机构的放款台账以及售后回租履约记录。更新节奏为每日凌晨批量生成前一日的全量日报文件。单条文档对应单家经销商单
+meta_description: 汽车服务融资日报的向量模型与索引：汽车服务融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车服务、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

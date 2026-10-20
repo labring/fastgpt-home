@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材收益率的对话日志与审计
-meta_description: 消费建材的行情数据主要来源于区域建材批发市场公开报价接口、品牌厂商经销商的每日结算台账，服务于金融场景下的理财与行情播报需求。更新节奏为零售类建材每日更新，
+meta_description: 消费建材收益率的对话日志与审计：消费建材收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 消费建材、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

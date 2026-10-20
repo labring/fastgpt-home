@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Coke Investment
-meta_description: Coke investment research data originates from four primary sources: Dalian Commodity Exchange public market data, China Coal Industry Association
+meta_description: Knowledge Base Retrieval and Recall for Coke Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -42,7 +42,7 @@ The fixed field and unit format require the parsing link to complete unit normal
 > The parameter values provided on this page are common starting points for configuration setup. Actual values are affected by material format, data volume, and business rules. Specific issues require targeted analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three common configuration errors
-- Phenomenon: After uploading a Markdown document containing local image paths, images fail to load normally in knowledge base retrieval results, and broken placeholder icons are displayed in the interface. Cause: Images are referenced only using local absolute paths, and are not uploaded to the public storage path allowed by the knowledge base. This causes the image resources to be unavailable during retrieval.
+- Phenomenon: After uploading a Markdown document containing local image paths, images fail to load normally in knowledge base retrieval results, and broken pending verification icons are displayed in the interface. Cause: Images are referenced only using local absolute paths, and are not uploaded to the public storage path allowed by the knowledge base. This causes the image resources to be unavailable during retrieval.
 - Phenomenon: Only the default text understanding model can be selected during the retrieval configuration phase, and custom deployed models cannot be added. Cause: The system access configuration for the custom model has not been completed, or the call permission for the custom model has not been enabled in the retrieval task.
 - Phenomenon: The index generated after batch document import contains a large number of irrelevant header and footer contents, and cannot be grouped according to preset business fields. Cause: The document structured parsing function has not been enabled, and the core metadata fields to be extracted have not been specified. This causes the parsed text to contain redundant content.
 

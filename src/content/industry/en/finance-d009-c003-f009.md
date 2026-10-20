@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Specialized Chain
-meta_description: Data sources for specialized chain industry research reports include chain brands’ public quarterly financial reports, third-party industry chain
+meta_description: Citation Source and Traceability for Specialized Chain Industry Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Data sources for specialized chain industry research reports are scattered, and 
 | `recall_num` | Top 8-12 entries | Specialized chain industry research reports have a large amount of structured data with high effective information density. Too many recalled entries will introduce redundancy, while too few will fail to cover core operating indicators |
 | `similarity_threshold` | 0.75-0.85 | Field naming in chain research reports is relatively standardized. A threshold that is too low will introduce irrelevant store data, while a threshold that is too high may miss sub-indicators of the same category |
 | `rerank_top_n` | Top 5-7 entries | Retain enough candidate sources for traceability, while filtering low-correlation non-chain research report content |
-| `reference_template` | `Source: {source_name}, Publish Time: {publish_time}, Document Section: {section_name}` | Matches the multi-source, multi-section structured characteristics of specialized chain industry research reports, and clearly displays the specific disclosure location of the citation |
+| `traceability details` | `Source: {source_name}, Publish Time: {publish_time}, Document Section: {section_name}` | Matches the multi-source, multi-section structured characteristics of specialized chain industry research reports, and clearly displays the specific disclosure location of the citation |
 | `chunk_max_length` | 1200-1500 characters | Table row content in chain research reports is usually lengthy. Too long a segment will reduce recall accuracy, while too short a segment will split complete operating indicator entries |
 | `rag_timeout` | 600 seconds | Parsing some research reports with detailed multi-store information takes a long time. Sufficient timeout time must be reserved to avoid mid-process interruptions |
 

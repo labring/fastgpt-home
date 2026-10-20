@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁财报分析的文档解析与分块
-meta_description: 融资租赁财报数据主要来自租赁公司核心业务系统、租后管理台账、监管报送报表三类来源。更新节奏以季度、年度为核心周期，部分租后监控报表按月更新。文档结构多包含结
+meta_description: 融资租赁财报分析的文档解析与分块：融资租赁财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 融资租赁、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

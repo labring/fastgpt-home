@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品财报分析的文档解析与分块
-meta_description: 农化制品财报数据主要来自上市公司公开披露的年度、半年度、季度报告，以及行业协会发布的产业运行简报。更新节奏随披露节点，定期报告按季度、半年度、年度更新，产业
+meta_description: 农化制品财报分析的文档解析与分块：农化制品财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 农化制品、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

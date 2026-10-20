@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁收益率的HTTP 接口与外部系统
-meta_description: 融资租赁收益率数据主要来自融资租赁公司内部业务管理系统的项目台账，以及行业公开的租赁资产行情数据平台。数据更新节奏为每日固定时点更新前一自然日的全量存量项目
+meta_description: 融资租赁收益率的HTTP 接口与外部系统：融资租赁收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 融资租赁、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

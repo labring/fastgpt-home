@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的数据库与运维
-meta_description: 这个品类的数据来自地面金融数据源经同步轨道卫星Ka频段链路转发的收益率与行情数据。数据传输受卫星过境窗口约束，每日固定时段完成全量日报推送，高频行情子字段在
+meta_description: 卫星通信收益率的数据库与运维：卫星通信收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 卫星通信、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

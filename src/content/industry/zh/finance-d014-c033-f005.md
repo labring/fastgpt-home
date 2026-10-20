@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤财报分析的多轮对话与提示词
-meta_description: 化纤财报数据主要来自境内外上市公司公开披露的年报、半年报、季报及临时公告，更新节奏为定期披露与临时事件同步更新。单份财报文档结构包含总营收、分板块营收、细分
+meta_description: 化纤财报分析的多轮对话与提示词：化纤财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化纤、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

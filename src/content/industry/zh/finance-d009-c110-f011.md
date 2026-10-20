@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备研报检索的文档解析与分块
-meta_description: 电网设备相关研报数据来源包括电力行业协会公开报告、国家及地方电网公开招标文档、券商电力设备细分领域研报、上市公司定期公告。数据更新节奏随事件与报告周期变化，
+meta_description: 电网设备研报检索的文档解析与分块：电网设备研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 电网设备、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

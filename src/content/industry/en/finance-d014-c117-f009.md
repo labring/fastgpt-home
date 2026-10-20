@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Textile Manufacturing
-meta_description: Publicly traded companies in the textile manufacturing industry disclose financial report data primarily through periodic reports filed with the
+meta_description: Citation Source and Traceability for Textile Manufacturing Financial Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

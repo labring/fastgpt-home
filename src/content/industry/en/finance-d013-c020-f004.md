@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Ordnance Equipment Financing
-meta_description: Ordnance equipment financing daily report data comes from publicly disclosed defense industry channels. These include official announcements from
+meta_description: Vector Models and Indexing for Ordnance Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

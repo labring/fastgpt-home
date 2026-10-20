@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Automated Equipment Investment
-meta_description: The data for automated equipment investment research primarily comes from official technical manuals of equipment manufacturers, industry compliance
+meta_description: Deployment and Upgrade for Automated Equipment Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

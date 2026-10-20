@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发财报分析的模型接入与配置
-meta_description: 软件开发类主体的财报数据主要来自公开披露的定期报告，包括季度报告、年度报告及临时公告。数据更新节奏固定，季度报告于季后10个工作日内披露，年度报告于年度结束
+meta_description: 软件开发财报分析的模型接入与配置：软件开发财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 软件开发、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

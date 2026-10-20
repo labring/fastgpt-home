@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Air Pollution
-meta_description: The data for air pollution control financing daily reports primarily comes from project announcements by local ecological environment departments
+meta_description: Knowledge Base Retrieval and Recall for Air Pollution Control Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

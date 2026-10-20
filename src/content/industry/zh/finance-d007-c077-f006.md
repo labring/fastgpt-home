@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的对话日志与审计
-meta_description: 旅游景区收益率相关数据主要来源于售票核销系统、二次消费POS终端、园区客流统计系统。数据更新分为两个层级：当日实时交易数据每小时同步一次，全量日度营收数据于
+meta_description: 旅游景区收益率的对话日志与审计：旅游景区收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 旅游景区、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测收益率的多轮对话与提示词
-meta_description: 环境监测收益率与行情相关数据主要来自国家级环境监测网络、区域级站房传感器、第三方监测机构上报接口，以及绿色金融资产的环境效益核算接口。数据更新节奏分为实时推
+meta_description: 环境监测收益率的多轮对话与提示词：环境监测收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 环境监测、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

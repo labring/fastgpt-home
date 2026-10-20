@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区财报分析的HTTP 接口与外部系统
-meta_description: 旅游景区财报相关数据主要来自内部票务系统、餐饮POS终端、住宿管理系统的结构化导出文件，以及经第三方审计的年度、半年度公开财报文件。日常运营数据每日更新，经
+meta_description: 旅游景区财报分析的HTTP 接口与外部系统：旅游景区财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 旅游景区、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c050-f004
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Plastics and Rubber Marketing
-meta_description: Marketing content data for this category originates from supply chain finance promotion materials from financial institutions serving plastics and
+meta_title: Vector Models and Indexing for Plastics and Rubber
+meta_description: Vector Models and Indexing for Plastics and Rubber Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

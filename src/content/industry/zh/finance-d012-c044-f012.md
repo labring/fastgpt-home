@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业营销内容的模型接入与配置
-meta_description: 商业物业的营销内容数据主要来自内部招商台账、场地详情页、商户入驻档案、临时活动公告四类来源。数据更新无固定周期，新商户入驻、场地档期调整、节假日营销活动上线
+meta_description: 商业物业营销内容的模型接入与配置：商业物业营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 商业物业、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区研报检索的向量模型与索引
-meta_description: 产业园区研报是金融领域机构开展产业投资分析、风控评估的核心参考资料，数据来源包括园区管委会公开的运营档案、产业调研白皮书、招商公示文件、年度运营报告等。更新
+meta_description: 产业园区研报检索的向量模型与索引：产业园区研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 产业园区、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

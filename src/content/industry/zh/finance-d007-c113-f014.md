@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒收益率的表单与交互
-meta_description: 白酒收益率相关数据的来源包括公开酒类行业监测数据库、白酒品牌官方披露的渠道数据、第三方食品饮料行情接口。更新节奏分为三类：终端现货价格按自然日更新，品牌渠道
+meta_description: 白酒收益率的表单与交互：白酒收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 白酒、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

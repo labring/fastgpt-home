@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发研报检索的向量模型与索引
-meta_description: 金融/保险/理财领域的软件开发研报数据主要来自行业技术分析机构、开源社区技术报告、企业技术白皮书及版本迭代文档。更新节奏随金融科技技术迭代波动，核心系统发布
+meta_description: 软件开发研报检索的向量模型与索引：软件开发研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 软件开发、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

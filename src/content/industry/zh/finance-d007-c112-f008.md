@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电收益率的工具调用与插件
-meta_description: 数据来自家电厂商月度供货台账、主流电商平台的实时销售快照、行业监测机构的线下终端采样数据。更新节奏为：线上零售数据每日更新，线下终端数据每周更新一次，促销活
+meta_description: 白色家电收益率的工具调用与插件：白色家电收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 白色家电、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

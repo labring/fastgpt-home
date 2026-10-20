@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤智能尽调报告的多轮对话与提示词
-meta_description: 焦煤相关数据主要来自国内主产区矿山的生产台账、北方港口的现货交易台账、期货交易所的交割结算数据、行业自律组织的供需调研。更新节奏分为三类：现货交易数据每日更
+meta_description: 焦煤智能尽调报告的多轮对话与提示词：焦煤智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 焦煤、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

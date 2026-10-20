@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for IT Service Financing Daily
-meta_description: IT service financing daily report data is sourced from public financing announcements, industry compliance disclosure platforms, and public
+meta_description: Deployment and Upgrade for IT Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,6 +40,6 @@ Daily updated data sources require stable scheduled pull tasks to be configured 
 - Manually trigger the scheduled sync task, verify that the pulled data only includes newly added financing projects from the current day, with no duplicate entries.
 - Upload a single simulated announcement attachment not exceeding 1000 MB, confirm that the parsing task completes within 600 seconds with no timeout errors.
 - View the knowledge base storage directory, confirm that original files, split file chunks, and embedded vectors are stored in separate subdirectories, and usage of each part can be counted individually.
-- Access the deployed frontend interface, check that model vendor icons display normally, with no placeholder elements that failed to load.
+- Access the deployed frontend interface, check that model vendor icons display normally, with no pending verification elements that failed to load.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Paint and Ink Yield and Market
-meta_description: Data sources include public quotes from commodity spot trading platforms, sampled statistical data from industry associations, and published
+meta_description: Database and Operations for Paint and Ink Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

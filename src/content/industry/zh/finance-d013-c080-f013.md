@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺融资日报的知识库检索与召回
-meta_description: 服装家纺领域的融资日报数据主要来自行业协会公开备案信息、上市企业公告及供应链金融平台披露的融资交易。数据更新节奏为每个工作日更新一次，非工作日无新增数据。单
+meta_description: 服装家纺融资日报的知识库检索与召回：服装家纺融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 服装家纺、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份证件KYC 的向量模型与索引
-meta_description: 数据来源包括公安联网核验接口返回的结构化字段、用户上传的身份证件扫描件或实拍照片经OCR转换的文本，以及线下补录的补充信息。更新节奏随业务场景调整，新用户核
+meta_description: 身份证件KYC 的向量模型与索引：身份证件KYC 的向量模型与索引，涵盖配置与验证建议
 keywords: 身份证件、KYC 与反洗钱资料核验、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

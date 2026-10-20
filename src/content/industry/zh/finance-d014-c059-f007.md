@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属财报分析的工作流编排
-meta_description: 工业金属数据的来源包括上海期货交易所、伦敦金属交易所的现货报价，国内有色金属行业协会的月度库存与产能数据，以及上市工业金属企业的定期财报。更新节奏为：现货报
+meta_description: 工业金属财报分析的工作流编排：工业金属财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 工业金属、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

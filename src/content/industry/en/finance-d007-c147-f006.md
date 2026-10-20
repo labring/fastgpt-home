@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Paper Manufacturing
-meta_description: Paper manufacturing market and yield data primarily comes from bulk commodity trading platforms, monthly production ledgers of paper enterprises, and
+meta_description: Conversation Logging and Auditing for Paper Manufacturing Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

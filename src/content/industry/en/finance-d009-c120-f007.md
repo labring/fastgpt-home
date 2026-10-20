@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Cybersecurity Research Report
-meta_description: Cybersecurity research report data sources include national cybersecurity notification center alert documents, third-party security vendor technical
+meta_description: Workflow Orchestration for Cybersecurity Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工智能尽调报告的向量模型与索引
-meta_description: 煤化工智能尽调报告的数据来源包括行业主管部门公开公示文件、企业生产运营台账、第三方检测报告、上下游贸易合同。更新节奏分为三类：生产类数据按月更新，合规类数据
+meta_description: 煤化工智能尽调报告的向量模型与索引：煤化工智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 煤化工、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

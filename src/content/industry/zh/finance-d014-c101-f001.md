@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流财报分析的HTTP 接口与外部系统
-meta_description: 物流财报分析的数据主要来自企业内部运单管理系统、仓储节点监控平台、第三方货运数据接口及监管要求的年度/季度财报模板。数据更新节奏分为两类：日常运营数据按周更
+meta_description: 物流财报分析的HTTP 接口与外部系统：物流财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 物流、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备研报检索的多轮对话与提示词
-meta_description: 航天装备研报主要来自军工行业咨询机构、航天院所公开报告、上市公司定期公告及行业展会披露资料，主要服务于金融机构军工赛道的投研分析场景。更新节奏随重大型号节点
+meta_description: 航天装备研报检索的多轮对话与提示词：航天装备研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航天装备、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

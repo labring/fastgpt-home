@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Black Home Appliance Marketing
-meta_description: Black home appliance data primarily comes from official brand product manuals, offline store SKU ledgers, e-commerce platform detail pages, and
+meta_description: Forms and Interactions for Black Home Appliance Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

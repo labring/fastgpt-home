@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业营销内容的表单与交互
-meta_description: 商业物业的营销数据主要来源于内部招商管理系统、租户台账、线下到访登记表单及周边商业配套统计工具。数据更新节奏随租赁状态变更实时同步，营销活动相关数据则随活动
+meta_description: 商业物业营销内容的表单与交互：商业物业营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 商业物业、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

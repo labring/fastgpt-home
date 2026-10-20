@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c026-f011
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Publishing Research Report
-meta_description: Publishing industry research report data mainly comes from formal professional research and publishing institutions. The update cadence is divided
+meta_title: Document Parsing and Chunking for Publishing Research
+meta_description: Document Parsing and Chunking for Publishing Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

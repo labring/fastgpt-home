@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务财报分析的知识库检索与召回
-meta_description: IT服务行业的财报数据主要来自境内外证券交易所公开披露的定期报告、临时公告，包括年度报告、季度报告及重大业务合同公告等。数据更新节奏遵循监管要求，定期报告按
+meta_description: IT 服务财报分析的知识库检索与召回：IT 服务财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: IT 服务、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

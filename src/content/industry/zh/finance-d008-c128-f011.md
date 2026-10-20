@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口智能尽调报告的文档解析与分块
-meta_description: 航运港口智能尽调报告的数据来源包括港口运营日报表、集装箱吞吐量统计表、泊位调度日志、海事监管文件、投融资合作合同及港口规划图纸。数据更新节奏依类型而定：运营
+meta_description: 航运港口智能尽调报告的文档解析与分块：航运港口智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 航运港口、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

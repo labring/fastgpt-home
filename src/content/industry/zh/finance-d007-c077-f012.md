@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的模型接入与配置
-meta_description: 旅游景区的收益率相关数据来源分散于票务管理系统、餐饮收银系统、园区运维后台等内部业务模块。数据更新节奏分为两类：每日闭园后生成的完整营收日报，以及每5-10
+meta_description: 旅游景区收益率的模型接入与配置：旅游景区收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 旅游景区、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

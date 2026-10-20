@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理研报检索的HTTP 接口与外部系统
-meta_description: 大气治理研报的数据源主要包括生态环境部门公开监测数据、行业协会发布的治理报告、科研院所的技术研究成果，以及金融机构内部的绿色项目评估文档。公开监测数据按日更
+meta_description: 大气治理研报检索的HTTP 接口与外部系统：大气治理研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 大气治理、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

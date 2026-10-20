@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Black Home Appliance Profit
-meta_description: Data for black home appliance profit margins and daily market reports comes from brand ERP inventory and sales systems, offline retail POS ledgers
+meta_description: Database and Operations for Black Home Appliance Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

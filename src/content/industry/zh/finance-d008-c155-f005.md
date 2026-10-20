@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料智能尽调报告的多轮对话与提示词
-meta_description: 饲料尽调数据来源包括饲料原料采购台账、养殖端饲喂记录、第三方原料检测报告及行业流通监测数据。采购台账与饲喂记录为结构化Excel格式，包含原料名称、批次号、
+meta_description: 饲料智能尽调报告的多轮对话与提示词：饲料智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 饲料、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

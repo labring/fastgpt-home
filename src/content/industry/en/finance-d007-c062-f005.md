@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c062-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Advertising and
-meta_description: Daily report data on return on investment (ROI) and market trends in the financial advertising and marketing field comes from background reports of
+meta_title: Multi-turn Dialogue and Prompting for Advertising
+meta_description: Multi-turn Dialogue and Prompting for Advertising and Marketing ROI
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

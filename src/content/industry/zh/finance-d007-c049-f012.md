@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程收益率的模型接入与配置
-meta_description: 基建工程收益率相关数据主要来源于企业内部项目管理系统、区域造价指导价库及项目财务核算模块。数据更新节奏匹配工程报量周期，通常每15天或每月更新一次。单份数据
+meta_description: 基建工程收益率的模型接入与配置：基建工程收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 基建工程、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

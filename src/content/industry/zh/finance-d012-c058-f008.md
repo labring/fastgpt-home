@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的工具调用与插件
-meta_description: 小金属的行业数据主要来自全国有色金属标准化技术委员会公开报告、行业现货交易平台、海关总署进出口数据及矿山企业月度披露文件。现货价格数据每日更新，库存总量数据
+meta_description: 小金属营销内容的工具调用与插件：小金属营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 小金属、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

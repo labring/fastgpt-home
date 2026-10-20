@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类财报分析的模型接入与配置
-meta_description: 鞋类财报的数据来源为公开财报公告、品牌官方披露的经营数据，更新节奏为每季度、每年两次固定更新。文档结构包含分部营收明细、库存周转指标、渠道运营数据等模块，字
+meta_description: 鞋类财报分析的模型接入与配置：鞋类财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 鞋类、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

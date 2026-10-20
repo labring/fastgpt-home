@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务财报分析的知识库检索与召回
-meta_description: 通信服务行业的财报数据主要来自境内外证券交易所披露平台、公司官方投资者关系板块。更新节奏以季度为基础，同步发布半年度、年度完整报告。文档多为PDF格式，部分
+meta_description: 通信服务财报分析的知识库检索与召回：通信服务财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 通信服务、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

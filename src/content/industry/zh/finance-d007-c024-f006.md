@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品收益率的对话日志与审计
-meta_description: 农化制品收益率相关数据主要来自三类渠道：全国农化产品价格监测系统、期货交易所农化品类合约行情、头部生产企业公开报价公示。数据更新节奏存在差异：期货行情每15
+meta_description: 农化制品收益率的对话日志与审计：农化制品收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 农化制品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Professional Service Yield Daily
-meta_description: The data source for professional service yield and market daily reports comes from compliant APIs of licensed financial information service
+meta_description: Forms and Interactions for Professional Service Yield Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

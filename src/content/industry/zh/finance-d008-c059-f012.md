@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属智能尽调报告的模型接入与配置
-meta_description: 工业金属相关尽调报告的数据来源包括国内行业权威统计机构、境内期货交易场所、海关总署公开数据及国际市场公开行情数据库。数据更新节奏分层：现货交易价格每日更新，
+meta_description: 工业金属智能尽调报告的模型接入与配置：工业金属智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 工业金属、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

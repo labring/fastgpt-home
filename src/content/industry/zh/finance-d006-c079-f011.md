@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢投研知识库建设的文档解析与分块
-meta_description: 普钢行业的数据源主要包括钢厂出厂价日报、中国钢铁工业协会的供需月报、海关进出口周报、期货交易所行情数据、券商行业研报等。文档格式涵盖PDF格式的研报、Exc
+meta_description: 普钢投研知识库建设的文档解析与分块：普钢投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 普钢、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

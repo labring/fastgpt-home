@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的工具调用与插件
-meta_description: 该品类的数据主要来源于内部营销素材管理系统、公开金融监管政策数据库、客户咨询高频问题库及合作渠道的行业资讯接口。更新节奏无固定周期，内部营销素材按需更新，监
+meta_description: 其他综合营销内容的工具调用与插件：其他综合营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 其他综合、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

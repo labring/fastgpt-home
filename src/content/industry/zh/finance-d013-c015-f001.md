@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能融资日报的HTTP 接口与外部系统
-meta_description: 储能融资日报的数据主要来自地方能源局项目备案公示、电力设备行业招投标公告、第三方储能产业数据库。数据更新节奏为每日更新，覆盖前一自然日的新增储能融资项目。单
+meta_description: 储能融资日报的HTTP 接口与外部系统：储能融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 储能、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d003-c141-f001
 page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Identity and Timing
-meta_description: Identity and timing data for insurance claim first review primarily originates from public security identity verification APIs, initial review
+meta_title: HTTP Interfaces and External Systems for Identity
+meta_description: HTTP Interfaces and External Systems for Identity and Timing Insurance Claim First Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

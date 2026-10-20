@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢投研知识库建设的引用来源与溯源
-meta_description: 普钢数据主要来源于中国钢铁工业协会公开报告、钢厂官方出厂价公告、第三方大宗商品交易平台实时行情。数据更新节奏分为三类：实时行情数据每15分钟更新一次，出厂价
+meta_description: 普钢投研知识库建设的引用来源与溯源：普钢投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 普钢、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

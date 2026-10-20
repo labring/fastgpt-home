@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线研报检索的工具调用与插件
-meta_description: 该类研报常被金融领域机构用于影视相关投资决策，数据来源包含公开院线排片公示、影视行业咨询机构专项报告、院线运营内部统计报表。更新节奏为：院线排片数据每日更新
+meta_description: 影视院线研报检索的工具调用与插件：影视院线研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 影视院线、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的模型接入与配置
-meta_description: 能源金属相关数据多来自国内国际大宗商品交易所、行业协会及供应链企业公开披露。现货报价数据每日收盘后更新，行业库存、产量调研数据月度更新，政策文件不定期发布。
+meta_description: 能源金属营销内容的模型接入与配置：能源金属营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 能源金属、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

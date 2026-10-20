@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程智能尽调报告的模型接入与配置
-meta_description: 基建工程智能尽调的数据来源包括项目立项审批文件、施工进度台账、监理验收报告、造价结算清单、政府监管备案资料等。数据更新随项目节点推进，立项后按周或阶段性节点
+meta_description: 基建工程智能尽调报告的模型接入与配置：基建工程智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 基建工程、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

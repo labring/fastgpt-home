@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程营销内容的HTTP 接口与外部系统
-meta_description: 基建工程营销内容的数据主要来源于住建部门招投标公示、企业自有工程案例库、资质备案文件及行业合作方共享数据。数据更新节奏分为三类：招投标项目实时推送更新，工程
+meta_description: 基建工程营销内容的HTTP 接口与外部系统：基建工程营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 基建工程、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

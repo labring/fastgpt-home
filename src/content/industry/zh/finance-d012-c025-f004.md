@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行营销内容的向量模型与索引
-meta_description: 农商行的营销内容数据主要来源于内部营销素材库，包括线下网点宣传手册、线上公众号推文、客户经理标准化话术、专属理财产品说明文档。数据更新随营销活动节点、产品迭
+meta_description: 农商行营销内容的向量模型与索引：农商行营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 农商行、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

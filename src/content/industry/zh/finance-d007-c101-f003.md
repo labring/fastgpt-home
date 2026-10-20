@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流收益率的分享与嵌入
-meta_description: 物流收益率相关数据主要来源于企业内部运输管理系统导出的运营报表，以及公开交通运输行业运价监测类平台的公开数据。数据更新节奏为每日完成前一日全量汇总，更新周期
+meta_description: 物流收益率的分享与嵌入：物流收益率的分享与嵌入，涵盖配置与验证建议。。。。。。。
 keywords: 物流、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

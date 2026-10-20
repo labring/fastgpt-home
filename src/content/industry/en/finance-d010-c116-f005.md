@@ -4,8 +4,8 @@ slug: /en/industry/finance-d010-c116-f005
 page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
-meta_title: Competitor Pricing Bid and Tender Multi-turn Dialogue and
-meta_description: Competitor pricing data comes primarily from public bidding platforms, internal enterprise historical tender archives, and tender documents shared by
+meta_title: Competitor Pricing Bid and Tender Multi-turn Dialogue
+meta_description: Competitor Pricing Bid and Tender Multi-turn Dialogue and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

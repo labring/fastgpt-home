@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品融资日报的HTTP 接口与外部系统
-meta_description: 农化制品融资日报的数据来源包括全国企业信用信息公示系统、地方金融监管局备案信息、行业媒体公开报道。更新节奏为每个工作日更新当日披露的农化制品相关融资事件，非
+meta_description: 农化制品融资日报的HTTP 接口与外部系统：农化制品融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 农化制品、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

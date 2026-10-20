@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Energy Metals Intelligent Due
-meta_description: Data related to energy metals primarily comes from public reports released by the China Nonferrous Metals Industry Association, warehouse receipt data
+meta_description: Workflow Orchestration for Energy Metals Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

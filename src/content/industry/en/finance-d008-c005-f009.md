@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Personal Care Product
-meta_description: Data sources for personal care products include public filing documents from brands, quality inspection documents issued by third-party testing
+meta_description: Citation Sources and Traceability for Personal Care Product Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ The multi-source, scattered document structure of personal care products require
 | `Recall count` | `Top 8–12 entries` | Compliance information for personal care products typically maps to multiple test reports per SKU. Too many recalls cause traceability confusion, while too few fail to cover all compliance fields |
 | `Similarity threshold` | `0.75–0.85` | Personal care product ingredient names have similar phrasing. A threshold that is too high will miss valid matches, while a threshold that is too low will introduce irrelevant content |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `120 seconds` | Parsing large quality inspection PDF documents takes significant time. The default timeout duration is insufficient to extract all fields completely |
-| `Citation template` | `{{source_name}} | {{publish_date}} | SKU:{{sku_id}}` | Traceability for personal care products requires clear source institutions, release times, and corresponding product identifiers to facilitate auditing |
+| `Traceability details` | `the configured value | the configured value | SKU:the configured value` | Traceability for personal care products requires clear source institutions, release times, and corresponding product identifiers to facilitate auditing |
 | `Knowledge Base Chunk Length` | `800–1200 characters` | Ingredient detail paragraphs in personal care product compliance documents have consistent length. Chunking that is too long causes field matching errors, while chunking that is too short breaks the integrity of individual reports |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.

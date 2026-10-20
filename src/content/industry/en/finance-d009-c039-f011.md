@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c039-f011
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Kitchen and Bath Appliance
-meta_description: Kitchen and bath appliance research report data primarily comes from annual reports released by industry associations, official new product launch
+meta_title: Document Parsing and Chunking for Kitchen and Bath
+meta_description: Document Parsing and Chunking for Kitchen and Bath Appliance Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

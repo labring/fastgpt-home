@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流营销内容的工作流编排
-meta_description: 物流营销内容关联的数据主要来自合作物流企业的运单系统、配送轨迹接口、客户收货反馈同步渠道，由金融机构通过API对接获取。数据更新节奏分为两类：运单基础信息每
+meta_description: 物流营销内容的工作流编排：物流营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 物流、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

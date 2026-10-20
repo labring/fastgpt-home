@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力收益率的对话日志与审计
-meta_description: 电力收益率相关数据主要来自区域电力交易中心、电网调度系统及发电侧运维平台。数据更新节奏覆盖日内实时、整点快照及日度结算三个层级。单份数据文档包含机组编号、交
+meta_description: 电力收益率的对话日志与审计：电力收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 电力、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

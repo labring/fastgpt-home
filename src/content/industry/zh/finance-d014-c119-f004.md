@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务财报分析的向量模型与索引
-meta_description: 综合服务财报分析的数据来源包括交易所公开披露的上市公司定期报告、临时公告，以及企业内部整合的多主体财务报表。支持的文件格式包括PDF格式的披露报告、Exce
+meta_description: 综合服务财报分析的向量模型与索引：综合服务财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 综合服务、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

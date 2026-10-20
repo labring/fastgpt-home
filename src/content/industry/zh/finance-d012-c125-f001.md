@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备营销内容的HTTP 接口与外部系统
-meta_description: 航天装备营销内容的数据来自研制单位公开的性能参数文档、发射任务归档资料、官方合规认证文件、配套服务方案。更新节奏为重大型号发布、任务完成后更新，部分动态调整
+meta_description: 航天装备营销内容的HTTP 接口与外部系统：航天装备营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航天装备、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

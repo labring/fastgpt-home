@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券智能尽调报告的部署与升级
-meta_description: 证券智能尽调报告的数据主要来自交易所公开披露文件、上市公司定期公告、券商专项研报、监管机构合规公示等渠道。披露文件按交易时段定时更新，研报与合规公示随事件触
+meta_description: 证券智能尽调报告的部署与升级：证券智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 证券、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

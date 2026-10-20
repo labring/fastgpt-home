@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品财报分析的模型接入与配置
-meta_description: 乳制品企业财报数据主要来自境内外证券交易所公开披露的定期报告、企业投资者关系板块发布的正式公告。更新节奏遵循监管要求，季度报告于每季度结束后1至2个月内发布
+meta_description: 乳制品财报分析的模型接入与配置：乳制品财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 乳制品、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

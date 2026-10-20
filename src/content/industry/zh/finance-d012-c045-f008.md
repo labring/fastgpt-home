@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车营销内容的工具调用与插件
-meta_description: 商用车相关数据主要来自工信部道路机动车辆生产企业及产品公告、车企官方技术参数库、营运车辆监管平台。数据更新节奏随车型迭代、政策调整波动，无固定周期。单条数据
+meta_description: 商用车营销内容的工具调用与插件：商用车营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 商用车、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

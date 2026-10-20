@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的引用来源与溯源
-meta_description: 贵金属相关数据主要来自上海黄金交易所公开行情、上市黄金开采冶炼企业定期财报、伦敦金银市场协会（LBMA）每日定盘价三类渠道。现货行情每15分钟更新一次，企业
+meta_description: 贵金属财报分析的引用来源与溯源：贵金属财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

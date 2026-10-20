@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备营销内容的多轮对话与提示词
-meta_description: 计算机设备的数据来源包括设备台账系统、销售CRM、运维日志库与用户反馈工单。更新节奏分为三类：新机型与库存变动数据每日同步，实时运维故障数据按分钟级推送，用
+meta_description: 计算机设备营销内容的多轮对话与提示词：计算机设备营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 计算机设备、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

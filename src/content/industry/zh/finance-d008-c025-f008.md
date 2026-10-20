@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行智能尽调报告的工具调用与插件
-meta_description: 农商行智能尽调报告的数据来源包括内部信贷管理系统、人行征信查询接口、国家企业信用信息公示系统、属地政务服务平台的经营备案数据。更新节奏为内部业务数据每日同步
+meta_description: 农商行智能尽调报告的工具调用与插件：农商行智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 农商行、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

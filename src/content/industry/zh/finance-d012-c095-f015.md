@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力营销内容的部署与升级
-meta_description: 热力营销相关的热力数据，数据源包括公用事业侧的热力供应终端运行日志、线下服务网点的客流热力采集设备，以及线上营销页面的点击热力统计工具。数据更新节奏分为两类
+meta_description: 热力营销内容的部署与升级：热力营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 热力、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类研报检索的知识库检索与召回
-meta_description: 鞋类行业研报数据主要来源于行业协会公开报告、品牌方季度财报、电商销售监测平台及供应链上游原材料供应商数据。更新节奏随数据源类型区分，品牌财报按季度更新，电商
+meta_description: 鞋类研报检索的知识库检索与召回：鞋类研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 鞋类、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

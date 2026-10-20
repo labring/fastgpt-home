@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Advertising and Marketing
-meta_description: Core advertising and marketing data for financial institutions comes from campaign materials, landing page copy, campaign keyword libraries, user
+meta_description: Vector Models and Indexing for Advertising and Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

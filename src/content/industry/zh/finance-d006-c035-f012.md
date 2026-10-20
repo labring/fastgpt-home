@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美投研知识库建设的模型接入与配置
-meta_description: 医美投研数据主要来自国家药监局医疗器械注册备案数据库、医美行业协会公开报告、脱敏后的临床诊疗与消费者反馈文档。数据更新节奏随新产品上市、监管政策调整波动，新
+meta_description: 医美投研知识库建设的模型接入与配置：医美投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 医美、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

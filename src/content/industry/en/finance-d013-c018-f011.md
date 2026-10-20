@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Optical Module Financing
-meta_description: Data sources for optical module financing daily reports include public industrial investment and financing announcements, daily financing summaries
+meta_description: Document Parsing and Chunking for Optical Module Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

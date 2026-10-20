@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务营销内容的工作流编排
-meta_description: 数据主要来自水务运营管理系统、区域管网监测平台、社区用水服务公示栏。更新节奏分为两类：管网压力、流量等实时监测数据每15分钟更新，用户用水账单、缴费记录每日
+meta_description: 水务营销内容的工作流编排：水务营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 水务、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

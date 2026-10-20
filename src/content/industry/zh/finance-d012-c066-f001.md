@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的HTTP 接口与外部系统
-meta_description: 房建工程的营销内容数据主要来源于金融机构合作楼盘的ERP管理系统、售楼处素材库及第三方建筑装饰素材平台。数据更新节奏随项目节点与金融合作节点变动，新楼栋开盘
+meta_description: 房建工程营销内容的HTTP 接口与外部系统：房建工程营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

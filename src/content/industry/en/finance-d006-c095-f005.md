@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Thermal
-meta_description: Thermal industry data primarily comes from real-time monitoring terminals at thermal substations, pipeline SCADA systems, weather stations, and user
+meta_description: Multi-turn Dialogue and Prompt Engineering for Thermal Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,8 +32,8 @@ The fixed field format of structured documents requires prompt engineering to li
 | `maxContext` | Previous 12–18 rounds of dialogue context | Thermal investment research questions mostly focus on time-series changes of a single point or area. Excessive context will interfere with the association logic of core parameters |
 | `Recall count` | Previous 6–10 entries | Thermal data has dense fields. A limited recall volume prevents the model from confusing monitoring parameters of different points |
 | `Similarity threshold` | 0.78–0.82 | Structured thermal data has clear matching characteristics. This interval filters irrelevant data while retaining valid matching results |
-| `Citation Content Template` | `[{point_id}] {collection_time}: Supply Temp {supply_temp}℃, Return Temp {return_temp}℃, Pressure {pressure}MPa` | Clarifies the display format of structured fields, making it easier for the model to associate point and time information in dialogue |
-| `Citation Template Prompt` | Please answer based on the provided thermal monitoring data, prioritize using the latest collected parameters | Strengthens the model's priority judgment of real-time data, adapting to the timeliness requirements of thermal industry investment research |
+| `Traceability details` | `[{point_id}] {collection_time}: Supply Temp {supply_temp}℃, Return Temp {return_temp}℃, Pressure {pressure}MPa` | Clarifies the display format of structured fields, making it easier for the model to associate point and time information in dialogue |
+| `Traceability details Prompt` | Please answer based on the provided thermal monitoring data, prioritize using the latest collected parameters | Strengthens the model's priority judgment of real-time data, adapting to the timeliness requirements of thermal industry investment research |
 | `stream` | Select based on scenario, must match business logic during API calls | Adapts to output format requirements of different dialogue scenarios, conforming to parameter combination specifications for actual calls |
 
 > The parameter values provided on this page are common starting points for configuration setup. Actual values are affected by material form, data volume and business rules. Each scenario requires individual analysis. It is recommended to test on your own samples before finalizing values.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的向量模型与索引
-meta_description: 其他综合营销内容的来源覆盖营销内容管理系统、线下活动物料电子化录入库、跨部门协作素材共享池。更新节奏分为日常周更的常规活动物料、季度集中更新的品牌campa
+meta_description: 其他综合营销内容的向量模型与索引：其他综合营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 其他综合、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

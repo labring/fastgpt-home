@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电收益率的表单与交互
-meta_description: 数据来源包括家电行业协会的公开监测数据集、品牌官方披露的经营数据、主流电商平台的实时销售快照。更新节奏按数据类型区分：线下零售数据按周更新，线上渠道销售数据
+meta_description: 白色家电收益率的表单与交互：白色家电收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 白色家电、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

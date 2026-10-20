@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理营销内容的模型接入与配置
-meta_description: 这个品类的数据主要来自大气治理项目的工艺文档、运维记录、合规要求文件、面向工业客户的大气治理相关营销话术素材，以及金融机构推出的绿色信贷、环保保险的配套营销
+meta_description: 大气治理营销内容的模型接入与配置：大气治理营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 大气治理、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

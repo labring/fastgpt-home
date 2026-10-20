@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营智能尽调报告的HTTP 接口与外部系统
-meta_description: 品牌代运营智能尽调报告的数据主要来自品牌方电商平台后台、社交媒体内容管理系统、供应链备案数据库及合规资质文件。数据更新节奏分两类：电商销售、实时舆情数据为小
+meta_description: 品牌代运营智能尽调报告的HTTP 接口与外部系统：品牌代运营智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 品牌代运营、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

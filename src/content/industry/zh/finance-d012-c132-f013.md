@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备营销内容的知识库检索与召回
-meta_description: 计算机设备的营销内容数据主要来源于官方产品手册、参数规格表、营销推广文案、线下活动物料及售后FAQ文档。更新节奏随新品发布、参数调整、促销活动上线而波动，新
+meta_description: 计算机设备营销内容的知识库检索与召回：计算机设备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 计算机设备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

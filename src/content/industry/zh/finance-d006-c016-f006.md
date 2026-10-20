@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏投研知识库建设的对话日志与审计
-meta_description: 光伏投研数据主要来自公开行业研报、组件厂商公开财报、分布式电站运行日志、国家级新能源政策文件与气象观测数据集。研报按周度或突发政策节点更新，财报按季度发布，
+meta_description: 光伏投研知识库建设的对话日志与审计：光伏投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 光伏、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

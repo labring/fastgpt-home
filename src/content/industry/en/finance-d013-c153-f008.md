@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Wind Power Financing Daily
-meta_description: The data sources for wind power financing daily reports include the National Renewable Energy Power Project Information Management Platform, local
+meta_description: Tool Calling and Plugins for Wind Power Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

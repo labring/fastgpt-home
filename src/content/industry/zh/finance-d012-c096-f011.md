@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭营销内容的文档解析与分块
-meta_description: 焦炭相关的营销与行业数据主要来自行业协会发布的供需文档、现货交易平台的报价文件、钢厂采购需求函、企业自制的营销手册以及期货交割标准文件。更新节奏存在明显差异
+meta_description: 焦炭营销内容的文档解析与分块：焦炭营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 焦炭、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

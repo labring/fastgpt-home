@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体研报检索的模型接入与配置
-meta_description: 半导体研报主要来自券商研究所、半导体垂直行业媒体、企业官方财报与技术发布会公开资料。更新节奏为常规赛道按月或季度更新，涉及新品制程、产能变动的专项研报会即时
+meta_description: 半导体研报检索的模型接入与配置：半导体研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 半导体、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药融资日报的知识库检索与召回
-meta_description: 化学制药融资日报的数据来源为上市公司临时公告、全国股转系统披露文件、行业资讯聚合平台的融资动态。更新节奏为工作日随融资事件披露实时更新。单条文档为结构化格式
+meta_description: 化学制药融资日报的知识库检索与召回：化学制药融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 化学制药、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

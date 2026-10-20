@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税智能尽调报告的文档解析与分块
-meta_description: 免税智能尽调报告的数据主要来自海关通关凭证、免税经营资质批复文件、线下门店销售台账、线上商城交易流水。更新节奏随业务场景不同，资质类文件按季度或年度更新，销
+meta_description: 免税智能尽调报告的文档解析与分块：免税智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 免税、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

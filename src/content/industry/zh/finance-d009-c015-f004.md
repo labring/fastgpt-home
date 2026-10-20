@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能研报检索的向量模型与索引
-meta_description: 储能研报的数据来源包括电力设备行业协会公开文档、券商电力设备细分研报、储能企业公开披露的技术白皮书与经营报告。更新节奏随行业事件与定期报告发布，包含常规季度
+meta_description: 储能研报检索的向量模型与索引：储能研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 储能、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

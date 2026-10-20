@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的多轮对话与提示词
-meta_description: 物业管理的业务数据主要来源于物业运营系统、业主服务小程序、园区巡检终端三类渠道。结构化数据包含业主房号、联系方式、缴费台账、报修工单编号等字段，格式多为「X
+meta_description: 物业管理营销内容的多轮对话与提示词：物业管理营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 物业管理、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

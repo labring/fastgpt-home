@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的知识库检索与召回
-meta_description: 卫星通信研报的数据主要来自卫星运营商公开技术文档、行业协会发布的通信链路分析报告、卫星轨道资源备案文件。更新随新卫星发射、频段调整、链路优化等重大事件触发，
+meta_description: 卫星通信研报检索的知识库检索与召回：卫星通信研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 卫星通信、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险智能尽调报告的工作流编排
-meta_description: 保险智能尽调报告的数据来源包括承保核心系统的投保信息、理赔系统的出险记录、监管机构的非银金融报备文件、第三方征信机构的履约数据。文档结构以结构化字段为主，搭
+meta_description: 保险智能尽调报告的工作流编排：保险智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 保险、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

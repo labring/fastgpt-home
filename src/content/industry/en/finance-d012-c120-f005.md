@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c120-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogues and Prompt Engineering for
-meta_description: Data sources include internal enterprise security compliance documents, third-party vulnerability platform announcements, past marketing interaction
+meta_title: Multi-turn Dialogues and Prompt Engineering
+meta_description: Multi-turn Dialogues and Prompt Engineering for Cybersecurity Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

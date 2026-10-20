@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区融资日报的工作流编排
-meta_description: 旅游景区融资日报的数据来源于景区票务系统的当日营收台账、文旅部门的景区经营监管报表、合作银行的授信审批与到账记录三类渠道。数据更新节奏为每日一次，于次日凌晨
+meta_description: 旅游景区融资日报的工作流编排：旅游景区融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 旅游景区、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Marketing Content for Textile
-meta_description: Marketing content data for textile manufacturing mainly comes from product development documents, fabric test reports, customer inquiry records
+meta_description: Deployment and Upgrade of Marketing Content for Textile Manufacturing
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

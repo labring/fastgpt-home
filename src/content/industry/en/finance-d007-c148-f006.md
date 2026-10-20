@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Hotel and Catering
-meta_description: This use case provides daily revenue yield reporting services for hotel and catering enterprises. Relevant data is collected from store POS terminals
+meta_description: Conversation Logs and Auditing for Hotel and Catering Revenue Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

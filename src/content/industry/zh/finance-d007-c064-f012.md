@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线收益率的模型接入与配置
-meta_description: 影视院线收益率行情数据主要来自院线运营管理系统、全国电影票务统计接口与影院POS终端。数据更新节奏为每日固定时段生成当日运营日报。单份文档为结构化表格形式，
+meta_description: 影视院线收益率的模型接入与配置：影视院线收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 影视院线、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

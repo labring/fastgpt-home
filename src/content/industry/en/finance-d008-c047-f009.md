@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Intelligent Due
-meta_description: The data sources for intelligent due diligence reports primarily include internal credit approval systems, public credit reporting submission files
+meta_description: Citation Source and Traceability for Intelligent Due Diligence Reports: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ Decentralized multi-source data requires the traceability system to support cros
 | `cite_source_type` | `file+metadata+field` | Citation information must display the referenced file name, associated metadata, and extracted specific fields and units, to meet compliance traceability requirements |
 | `parse_structured_field` | Enabled | Structured credit and overdue ledgers require accurate extraction of fields and their corresponding units, to avoid missing unit information in traceability content |
 | `api_return_cite` | Enabled | Complete citation IDs and details must be returned via the interface, to adapt to the traceability display requirements of tool calls in workflows |
-| `cite_format` | `[{{index}}] {{filename}} ({{field}}: {{value}} {{unit}})` | Display traceability information in the format required by regulations, clearly mark fields and units to avoid ambiguity |
+| `cite_format` | `[example value] example value (example value: example value example value)` | Display traceability information in the format required by regulations, clearly mark fields and units to avoid ambiguity |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing settings.
 

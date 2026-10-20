@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Hotel and Catering Revenue
-meta_description: Data sources include store POS terminals, hotel property management system (PMS) platforms, third-party food delivery platform merchant backends, and
+meta_description: Deployment and Upgrade for Hotel and Catering Revenue Reports: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

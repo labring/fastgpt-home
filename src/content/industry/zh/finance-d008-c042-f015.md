@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营智能尽调报告的部署与升级
-meta_description: 品牌代运营智能尽调报告的数据来源包括品牌方电商后台销售数据、社交媒体舆情数据、第三方竞品监测工具公开数据、品牌方线下运营记录。数据更新节奏为每日同步核心销售
+meta_description: 品牌代运营智能尽调报告的部署与升级：品牌代运营智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 品牌代运营、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

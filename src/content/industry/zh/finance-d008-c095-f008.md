@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力智能尽调报告的工具调用与插件
-meta_description: 热力智能尽调报告的数据主要来自热力供应企业的管网运行监测系统、用户缴费台账、能耗统计报表及地方公用事业备案平台。数据更新节奏分为实时监测类（如管网压力、供水
+meta_description: 热力智能尽调报告的工具调用与插件：热力智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 热力、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

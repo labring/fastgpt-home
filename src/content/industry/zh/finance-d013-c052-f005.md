@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股融资日报的多轮对话与提示词
-meta_description: 数据来源于公开披露的集团及旗下各控股子公司融资公告、银行授信批复文件，每日凌晨完成当日全量数据归集。单份日报文档按控股主体层级拆分章节，每个章节包含融资发生
+meta_description: 多元控股融资日报的多轮对话与提示词：多元控股融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 多元控股、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Refining and Chemical
-meta_description: Data for refining and chemical research reports comes primarily from public monitoring data released by petroleum and petrochemical industry
+meta_description: Document Parsing and Chunking for Refining and Chemical Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The mixed formats, long length, and structured field features of refining and ch
 ## Three Common Misconfigurations
 -  Phenomenon: When deploying the `marker_pdf` parsing engine privately, FastGPT returns a parsing timeout error, but the parsing server logs show the task completed successfully. Cause: The `PARSE_FILE_TIMEOUT_SECONDS` parameter was not adjusted to a value suitable for long documents. The default timeout threshold is insufficient to cover the parsing time required for refining and chemical research reports.
 -  Phenomenon: Unable to read uploaded Excel-format refining and chemical research report attachments in the workflow, returning null values or error prompts. Cause: Structured table parsing configuration was not enabled, and parsing rules for Excel file column formats were not configured, resulting in failure to correctly extract table data.
--  Phenomenon: In simple mode of FastGPT 4.8.9 and later versions, some refining and chemical research reports are not automatically parsed, and only answers based on general training data are returned. Cause: Automatic parsing trigger rules were not configured, and the exclusive document type of refining and chemical research reports was not included in the automatic parsing scope.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to Confirm Proper Configuration
 -  Upload the longest single refining and chemical research report document, check the parsing task status log, and confirm that the parsing time does not exceed the configured timeout threshold.

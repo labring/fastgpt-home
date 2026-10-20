@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流财报分析的向量模型与索引
-meta_description: 物流财报的数据来源为物流企业的季度/年度正式财报文档、内部运输管理系统导出的运营明细、财务核算的结构化报表。更新节奏为季度、年度固定更新，辅以临时的运营数据
+meta_description: 物流财报分析的向量模型与索引：物流财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 物流、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属营销内容的表单与交互
-meta_description: 数据主要来自国内期货交易所、现货贸易商公开报价平台及行业协会公开报告。更新节奏分为实时（现货当日报价）、交易日更新（期货盘面价格）、周度/月度（行业库存与供
+meta_description: 工业金属营销内容的表单与交互：工业金属营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 工业金属、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

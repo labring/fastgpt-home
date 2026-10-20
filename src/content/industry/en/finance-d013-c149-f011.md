@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Steel Trade Financing
-meta_description: Data mainly comes from daily transaction ledgers of steel traders, steel mill outbound settlement documents, credit tracking documents from partner
+meta_description: Document Parsing and Chunking for Steel Trade Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

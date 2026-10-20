@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气研报检索的工作流编排
-meta_description: 燃气研报主要来自公开行业研究机构、国家能源局及地方能源监管部门官网、燃气上市企业的定期公告。更新节奏分为月度行业动态报告、季度业绩简报、年度发展白皮书，更新
+meta_description: 燃气研报检索的工作流编排：燃气研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 燃气、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

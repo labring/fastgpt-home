@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品收益率的多轮对话与提示词
-meta_description: 饰品收益率与行情数据主要来自品牌官方公示的供货价、国内原料交易所公开行情，更新节奏为工作日每日更新1次，非工作日延迟至下一工作日。文档结构分为结构化JSON
+meta_description: 饰品收益率的多轮对话与提示词：饰品收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 饰品、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

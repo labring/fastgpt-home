@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务研报检索的文档解析与分块
-meta_description: 综合服务类研报检索的数据来源涵盖券商公开研报、行业研究白皮书、上市公司定期公告及监管文件。更新节奏包含固定周期发布（如季度、年度报告）与突发事件触发的临时文
+meta_description: 综合服务研报检索的文档解析与分块：综合服务研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 综合服务、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

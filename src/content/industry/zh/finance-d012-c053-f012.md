@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融营销内容的模型接入与配置
-meta_description: 多元金融的营销数据主要来自内部营销中台、合规管理系统与客户咨询日志。数据源更新节奏随业务节奏调整，新产品上线时新增专属营销素材，合规审核通过后更新现有内容，
+meta_description: 多元金融营销内容的模型接入与配置：多元金融营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 多元金融、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Hotel and Catering
-meta_description: Hotel and catering investment research data comes from industry analysis reports, single-store operation ledgers, supply chain purchase price lists
+meta_description: Document Parsing and Chunking for Hotel and Catering Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

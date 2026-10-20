@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备融资日报的知识库检索与召回
-meta_description: 兵器装备融资日报的数据主要来自国防科工局公开披露信息、军工上市公司临时公告、行业协会发布的军工融资动态简报。数据更新节奏为每日更新，覆盖当日披露的各类兵器装
+meta_description: 兵器装备融资日报的知识库检索与召回：兵器装备融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 兵器装备、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

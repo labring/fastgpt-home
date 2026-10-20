@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Brand Agency
-meta_description: Data sources for beauty and personal care brand agency operation research reports targeting financial and wealth management customers include
+meta_description: HTTP Interfaces and External Systems for Brand Agency Operation Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ This category of research report data has diverse sources and varying update fre
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Mistakes
-- Symptom: Global variable placeholders are not replaced when calling the interface, and request parameters retain the `{{var_name}}` format. Cause: The global variable injection switch is not enabled in the interface configuration, or the variable binding scope is set to single request instead of global.
+- Symptom: Global variable placeholders are not replaced when calling the interface, and request parameters retain the `example value` format. Cause: The global variable injection switch is not enabled in the interface configuration, or the variable binding scope is set to single request instead of global.
 - Symptom: External system SQL queries return the `SQL syntax error` status code, and research report data cannot be read. Cause: Text cleaning configuration is not enabled. Punctuation in research reports is included in SQL splicing logic, leading to syntax errors.
 - Symptom: The number of results returned when calling the retrieval interface is fixed at 6, and cannot be adjusted to a higher value. Cause: The default configuration item `retrieval_max_results` was not modified during private deployment, or the service was not restarted after configuration changes to take effect.
 

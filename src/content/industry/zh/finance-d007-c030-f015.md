@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品收益率的部署与升级
-meta_description: 化妆品收益率相关数据主要来源于品牌公开季度财报、美妆行业垂直监测数据库、头部电商平台的销售复盘报告。数据更新频率分为月度常规更新与核心SKU周度更新两类。单
+meta_description: 化妆品收益率的部署与升级：化妆品收益率的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 化妆品、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

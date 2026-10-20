@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Investment
-meta_description: Investment platform research data primarily originates from public listed company announcements, industry research reports, institutional research
+meta_description: Multi-turn Dialogue and Prompt Engineering for Investment Research Knowledge Base Construction on Investment Platforms
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

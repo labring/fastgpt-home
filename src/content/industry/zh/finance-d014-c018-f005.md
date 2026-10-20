@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块财报分析的多轮对话与提示词
-meta_description: 这个品类的数据主要来自光模块制造企业公开披露的定期报告、行业公开的供应链监测数据。更新节奏遵循企业财报周期，季度财报每3个月更新一次，年度财报每年更新，重大
+meta_description: 光模块财报分析的多轮对话与提示词：光模块财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 光模块、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

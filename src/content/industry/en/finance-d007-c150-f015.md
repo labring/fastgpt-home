@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Iron Ore Yield and Market Daily
-meta_description: Iron ore market data is primarily sourced from the official market API of the Dalian Commodity Exchange and daily settlement data from domestic spot
+meta_description: Deployment and Upgrade for Iron Ore Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

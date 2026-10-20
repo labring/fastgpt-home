@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的HTTP 接口与外部系统
-meta_description: 保险融资日报的数据来源于保险机构核心业务系统的保单质押交易流水、资金管理系统的融资台账，更新节奏为每日固定时段生成前一自然日的汇总数据。文档采用结构化表格或
+meta_description: 保险融资日报的HTTP 接口与外部系统：保险融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 保险、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

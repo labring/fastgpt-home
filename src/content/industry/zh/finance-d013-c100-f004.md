@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理融资日报的向量模型与索引
-meta_description: 该品类的数据来自物业管理企业内部运营系统、合作金融机构的每日融资对接接口，以及项目属地的物业备案数据库。更新节奏为每日凌晨生成前一日的完整日报。单条文档对应
+meta_description: 物业管理融资日报的向量模型与索引：物业管理融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 物业管理、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

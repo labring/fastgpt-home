@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷营销内容的向量模型与索引
-meta_description: 包装印刷的营销内容主要来源于内部设计系统、ERP生产系统、客户定制需求文档与合作供应商的工艺手册。更新节奏以单个项目为单位，新物料上线或定制需求变更时触发更
+meta_description: 包装印刷营销内容的向量模型与索引：包装印刷营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 包装印刷、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料融资日报的知识库检索与召回
-meta_description: 来源为全国畜牧行业监测平台、地方饲料协会公示信息、饲料贸易主体的公开融资备案；更新节奏为每日固定时段更新前一自然日的全量数据；文档以结构化表格为核心，附带简
+meta_description: 饲料融资日报的知识库检索与召回：饲料融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 饲料、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

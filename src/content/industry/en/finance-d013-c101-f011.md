@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Logistics Financing Daily
-meta_description: Logistics financing daily report data originates from three main sources: carriers' daily waybill ledgers, financing approval receipts from partner
+meta_description: Document Parsing and Chunking for Logistics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

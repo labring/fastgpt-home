@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口研报检索的模型接入与配置
-meta_description: 航运港口研报的数据主要来自上海航运交易所、中国港口协会、头部券商交通运输行业研究团队的公开报告。更新节奏分为两类：港口月度运营数据按自然月更新，行业深度研报
+meta_description: 航运港口研报检索的模型接入与配置：航运港口研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 航运港口、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

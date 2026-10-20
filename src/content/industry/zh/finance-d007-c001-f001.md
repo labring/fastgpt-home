@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务收益率的HTTP 接口与外部系统
-meta_description: IT服务收益率的数据来源为金融IT服务的自有交易核算模块、合规报送接口，更新节奏为每日固定时段同步前一交易日的全量核算数据。文档结构为标准化的结构化数据格式
+meta_description: IT 服务收益率的HTTP 接口与外部系统：IT 服务收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: IT 服务、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

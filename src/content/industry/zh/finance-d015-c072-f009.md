@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 授信申请风控的引用来源与溯源
-meta_description: 授信申请风控的数据主要来自企业征信机构出具的结构化报告、申请人提交的经营流水PDF、工商注册信息表单、银行授信审批记录等多类来源。数据更新节奏为单次申请全量
+meta_description: 授信申请风控的引用来源与溯源：授信申请风控的引用来源与溯源，涵盖配置与验证建议。
 keywords: 授信申请、风控与授信材料审核、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c149-f006
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Steel Trade Investment
-meta_description: Steel trade investment research data sources include public industry news platforms, futures exchange market data APIs, publicly disclosed steel mill
+meta_title: Conversation Logging and Auditing for Steel Trade
+meta_description: Conversation Logging and Auditing for Steel Trade Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

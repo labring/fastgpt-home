@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品智能尽调报告的文档解析与分块
-meta_description: 饰品智能尽调报告的数据来源包括品牌方提供的质检报告、供应链溯源文档、商品资质文件、电商平台导出的商品详情文档。更新节奏随新品上线、批次质检更新或合规文件变更
+meta_description: 饰品智能尽调报告的文档解析与分块：饰品智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 饰品、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造投研知识库建设的文档解析与分块
-meta_description: 纺织制造的投研数据主要来源于生产车间日报、供应链物料BOM台账、原料性能检测报告、行业工艺标准文档与订单履约记录。数据更新节奏覆盖每日、每月与不定期：生产日
+meta_description: 纺织制造投研知识库建设的文档解析与分块：纺织制造投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 纺织制造、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

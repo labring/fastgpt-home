@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发营销内容的工具调用与插件
-meta_description: 软件开发营销内容的数据主要来自代码库提交日志、营销素材版本管理系统、客户咨询工单、金融类广告投放后台的素材表现数据。代码相关数据随版本迭代按天或周更新，营销
+meta_description: 软件开发营销内容的工具调用与插件：软件开发营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 软件开发、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

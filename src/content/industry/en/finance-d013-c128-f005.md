@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c128-f005
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Shipping Port
-meta_description: Shipping port financing daily report data is primarily sourced from national major port operation platforms, public shipping exchange data, and
+meta_title: Multi-turn Dialogue and Prompt Engineering for Shipping
+meta_description: Multi-turn Dialogue and Prompt Engineering for Shipping Port Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

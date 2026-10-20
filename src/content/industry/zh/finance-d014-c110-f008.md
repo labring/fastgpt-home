@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备财报分析的工具调用与插件
-meta_description: 电网设备企业的财报数据来源为境内外证券交易所公开披露的定期报告、企业官方投资者关系公告。数据按季度、半年度、年度固定周期更新，重大订单、技术突破类临时公告会
+meta_description: 电网设备财报分析的工具调用与插件：电网设备财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 电网设备、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

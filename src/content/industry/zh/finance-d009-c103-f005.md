@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测研报检索的多轮对话与提示词
-meta_description: 环境监测研报的数据来源包括生态环境部门公开的国控/省控监测站点数据、第三方合规监测机构的专项报告、行业协会发布的区域监测汇编。数据更新节奏随监测场景变化，实
+meta_description: 环境监测研报检索的多轮对话与提示词：环境监测研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 环境监测、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

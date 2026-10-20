@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥财报分析的引用来源与溯源
-meta_description: 水泥品类的财报数据主要来自上市企业定期报告、建筑材料行业公开统计文档两类来源。上市企业财报按季度、年度固定更新，行业统计文档按月度更新。文档结构包含标准化的
+meta_description: 水泥财报分析的引用来源与溯源：水泥财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 水泥、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

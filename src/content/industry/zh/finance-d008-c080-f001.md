@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺智能尽调报告的HTTP 接口与外部系统
-meta_description: 服装家纺智能尽调报告的数据主要来自品牌方供应链台账、第三方面料检测机构报告、电商平台sku详情页、行业协会品类合规文件。数据更新节奏差异明显：面料成分、合规
+meta_description: 服装家纺智能尽调报告的HTTP 接口与外部系统：服装家纺智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 服装家纺、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

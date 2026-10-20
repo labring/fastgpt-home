@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Film Theater
-meta_description: Data sources for financial field film theater project due diligence cover national official movie ticketing systems, third-party theater operation
+meta_description: Citation Source and Traceability for Film Theater Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

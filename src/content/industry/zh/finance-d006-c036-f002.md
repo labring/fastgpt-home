@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体投研知识库建设的上下文与 token
-meta_description: 半导体投研数据主要来自晶圆厂工艺规范文档、EDA设计输出文件、行业协会供需报告、券商细分研报。更新节奏差异明显：工艺类文档更新周期为季度至年度，行业供需数据
+meta_description: 半导体投研知识库建设的上下文与 token：半导体投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 半导体、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

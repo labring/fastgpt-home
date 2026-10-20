@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产融资日报的模型接入与配置
-meta_description: 商业地产融资日报的数据来源包括商业地产运营方的内部融资台账、合作金融机构的授信审批系统、地方住建部门备案数据。数据更新节奏为每日T+1更新，即当日产出前一日
+meta_description: 商业地产融资日报的模型接入与配置：商业地产融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 商业地产、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

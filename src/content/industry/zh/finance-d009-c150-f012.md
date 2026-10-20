@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石研报检索的模型接入与配置
-meta_description: 铁矿石研报的数据来源包括国内钢铁行业资讯平台、国际大宗商品资讯机构、券商研究所的行业研报，以及期货交割仓单公开数据。更新节奏分为三类：现货行情数据每日更新，
+meta_description: 铁矿石研报检索的模型接入与配置：铁矿石研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 铁矿石、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化投研知识库建设的知识库检索与召回
-meta_description: 炼化投研的数据来源涵盖企业内部DCS系统运行日志、生产台账Excel文件、行业协会公开的炼化产能报告、第三方原油与化工品价格数据库。数据更新节奏存在差异：生
+meta_description: 炼化投研知识库建设的知识库检索与召回：炼化投研知识库建设的知识库检索与召回，涵盖配置与验证建议
 keywords: 炼化、投研知识库建设与治理、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

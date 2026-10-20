@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能营销内容的向量模型与索引
-meta_description: 储能营销内容的数据主要来自储能产品技术手册、渠道推广物料、行业合规文档、金融机构的储能项目推介材料、投资者关系知识库及线下活动宣传素材。更新节奏随新产品上线
+meta_description: 储能营销内容的向量模型与索引：储能营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 储能、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务融资日报的多轮对话与提示词
-meta_description: 水务融资日报的数据主要来自地方公共资源交易平台、水务企业定期披露公告、行业监管部门公示文件。更新节奏为每日更新，覆盖当日及近3个工作日内的公开水务项目融资信
+meta_description: 水务融资日报的多轮对话与提示词：水务融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水务、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

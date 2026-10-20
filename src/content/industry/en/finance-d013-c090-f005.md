@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c090-f005
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Paint and Ink
-meta_description: Data sources for paint and ink financing daily reports include public filing information from the National Paint Industry Information Center
+meta_title: Multi-turn Dialogue and Prompt Engineering for Paint
+meta_description: Multi-turn Dialogue and Prompt Engineering for Paint and Ink Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

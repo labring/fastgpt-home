@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Game Financial Report
-meta_description: Game financial reports primarily originate from quarterly and annual announcement PDFs of listed game companies, as well as official performance
+meta_description: Document Parsing and Chunking for Game Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

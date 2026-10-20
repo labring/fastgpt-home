@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美融资日报的引用来源与溯源
-meta_description: 医美融资日报的数据来源覆盖医美行业垂直资讯平台、上市公司公告、地方金融监管公示信息三类渠道。更新频率为每日更新当日新增医美领域融资事件，存量数据按周同步修正
+meta_description: 医美融资日报的引用来源与溯源：医美融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 医美、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

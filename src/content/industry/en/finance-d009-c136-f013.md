@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Precious Metals
-meta_description: Precious metals research report data mainly comes from professional financial information terminals, public reports from futures exchanges, and
+meta_description: Knowledge Base Retrieval and Recall for Precious Metals Research Report Search
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

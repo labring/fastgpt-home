@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备收益率的对话日志与审计
-meta_description: 这个品类的数据来自航天测控中心在轨遥测数据库、地面装备运维台账系统、国防军工配套成本核算平台。地面固定航天装备的收益率数据按每日更新，在轨航天器按每轨道周期
+meta_description: 航天装备收益率的对话日志与审计：航天装备收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 航天装备、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

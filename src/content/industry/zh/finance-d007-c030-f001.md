@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d007-c030-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 化妆品收益率的HTTP 接口与外部系统
-meta_description: 化妆品品类的收益率与行情数据主要来自电商平台销售接口、品牌方经销商进销存接口及第三方行业监测接口。数据以JSON格式封装，核心字段包含`sku_id`（SK
+meta_title: 化妆品收益率的HTTP接口与外部系统
+meta_description: 化妆品收益率的HTTP接口与外部系统：化妆品收益率的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 化妆品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

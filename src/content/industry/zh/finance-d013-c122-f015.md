@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行融资日报的部署与升级
-meta_description: 股份制银行融资日报的数据来源包括本行信贷台账系统、全国银行间同业拆借中心公开报文、内部授信审批模块。数据更新节奏为每日生成，于次日凌晨完成汇总。文档结构为标
+meta_description: 股份制银行融资日报的部署与升级：股份制银行融资日报的部署与升级，涵盖配置与验证建议
 keywords: 股份制银行、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

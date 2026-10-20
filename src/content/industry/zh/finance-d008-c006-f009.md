@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的引用来源与溯源
-meta_description: 中药尽调的数据来源包括国家药品标准、地方炮制规范、产地溯源档案、批次检测报告等，多用于金融机构中药材供应链尽调、保险机构药材理赔核验等场景。标准类文档多为结
+meta_description: 中药智能尽调报告的引用来源与溯源：中药智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子研报检索的HTTP 接口与外部系统
-meta_description: 光学光电子研报数据主要来自券商研究所行业报告、上市公司公开披露文件、行业协会统计数据及专业展会资料。更新节奏分为三类：定期行业研报按周更新，上市公司相关研报
+meta_description: 光学光电子研报检索的HTTP 接口与外部系统：光学光电子研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光学光电子、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

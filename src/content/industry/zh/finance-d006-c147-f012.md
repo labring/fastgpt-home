@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸投研知识库建设的模型接入与配置
-meta_description: 造纸投研数据主要来自中国造纸协会公开统计资料、上市造纸企业定期报告、大宗商品交易平台报价数据及行业研报。行业统计资料按季度更新，企业公告随经营节点发布，现货
+meta_description: 造纸投研知识库建设的模型接入与配置：造纸投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 造纸、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

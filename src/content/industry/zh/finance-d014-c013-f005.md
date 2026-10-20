@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险财报分析的多轮对话与提示词
-meta_description: 保险财报数据主要来自保险公司官方披露的年度报告、季度报告及临时专项公告，同步更新于监管指定披露平台与公司官网。文档结构通常包含业务经营概况、核心财务报表、准
+meta_description: 保险财报分析的多轮对话与提示词：保险财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 保险、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合研报检索的文档解析与分块
-meta_description: 该品类的数据来源包含公开券商研报、第三方行业咨询报告、企业内部调研文档及合规披露文件。更新节奏随文档类型差异较大，公开研报多按季度、月度更新，行业白皮书不定
+meta_description: 其他综合研报检索的文档解析与分块：其他综合研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 其他综合、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

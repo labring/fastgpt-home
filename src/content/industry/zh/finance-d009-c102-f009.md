@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢研报检索的引用来源与溯源
-meta_description: 特钢研报数据主要来自中国特钢企业协会、上市特钢公司年度及半年度报告、行业专业咨询机构的专项调研文档，以及特钢生产企业的内部技术白皮书。更新节奏以季度常规更新
+meta_description: 特钢研报检索的引用来源与溯源：特钢研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 特钢、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

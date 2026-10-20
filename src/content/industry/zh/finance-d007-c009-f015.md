@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的部署与升级
-meta_description: 产业园区收益率相关数据的来源包括园区自有运营管理系统、属地产业园区监管平台、周边商业地产中介的挂牌租金数据。数据更新节奏为每日凌晨完成前一日全量数据汇总。数
+meta_description: 产业园区收益率的部署与升级：产业园区收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 产业园区、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

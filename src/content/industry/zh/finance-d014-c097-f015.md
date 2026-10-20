@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的部署与升级
-meta_description: 焦煤财报数据主要来自三类渠道：国内焦煤生产企业的季度、年度公开财报，中国煤炭运销协会发布的月度焦煤供需报告，以及上海期货交易所的焦煤期货交割库存周报。数据更
+meta_description: 焦煤财报分析的部署与升级：焦煤财报分析的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 焦煤、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

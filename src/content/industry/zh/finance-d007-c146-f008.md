@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备收益率的工具调用与插件
-meta_description: 通用设备收益率与行情日报的数据来源包含设备运维系统的每日运行汇总、工业互联网平台的联网设备工况统计、行业协会发布的运行基准数据。数据更新节奏为每日凌晨汇总前
+meta_description: 通用设备收益率的工具调用与插件：通用设备收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 通用设备、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

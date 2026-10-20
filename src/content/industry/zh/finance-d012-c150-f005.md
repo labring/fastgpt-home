@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石营销内容的多轮对话与提示词
-meta_description: 铁矿石数据主要来源于大连商品交易所期货行情、沿海港口现货交易台账、国内主流钢厂采购日报。更新节奏分为三类：期货行情实时推送，港口现货价格每日更新，钢厂采购数
+meta_description: 铁矿石营销内容的多轮对话与提示词：铁矿石营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 铁矿石、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子智能尽调报告的工具调用与插件
-meta_description: 军工电子智能尽调的数据源主要包括国防科工局公开的军工资质信息、军工企业年度公开财报、行业协会发布的配套产品统计简报、军品定型鉴定的公开摘要。数据更新节奏存在
+meta_description: 军工电子智能尽调报告的工具调用与插件：军工电子智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 军工电子、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

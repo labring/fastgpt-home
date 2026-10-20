@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电营销内容的HTTP 接口与外部系统
-meta_description: 金融场景下的黑色家电营销相关数据，主要来自品牌官方参数库、电商平台商品页、内部营销物料库。单条数据对应一款具体机型，包含机型SKU编号、物理尺寸（单位毫米）
+meta_description: 黑色家电营销内容的HTTP 接口与外部系统：黑色家电营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 黑色家电、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

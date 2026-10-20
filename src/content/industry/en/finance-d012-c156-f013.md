@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c156-f013
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Black Home Appliance
-meta_description: In black home appliance marketing customer acquisition scenarios targeting the finance industry, relevant data mainly comes from official product
+meta_title: Knowledge Base Retrieval and Recall for Black Home
+meta_description: Knowledge Base Retrieval and Recall for Black Home Appliance Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

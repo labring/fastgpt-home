@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Advertising &
-meta_description: Yield rate and market trend data for advertising and marketing scenarios comes from ad campaign management systems, third-party ad monitoring
+meta_description: Conversation Logging and Auditing for Advertising & Marketing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

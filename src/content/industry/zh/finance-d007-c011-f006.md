@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品收益率的对话日志与审计
-meta_description: 休闲食品的收益率与行情数据来自品牌方线下POS收银系统、第三方电商销售后台及经销商进销存台账。数据按SKU维度拆分，线下门店数据按日更新，线上渠道数据按小时
+meta_description: 休闲食品收益率的对话日志与审计：休闲食品收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 休闲食品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区智能尽调报告的HTTP 接口与外部系统
-meta_description: 产业园区智能尽调报告的数据来源包括园区运营管理系统、不动产登记平台、入驻企业工商公示系统、能耗监测平台与租金收缴台账。入驻企业信息随招商进度实时更新，能耗数
+meta_description: 产业园区智能尽调报告的HTTP 接口与外部系统：产业园区智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 产业园区、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

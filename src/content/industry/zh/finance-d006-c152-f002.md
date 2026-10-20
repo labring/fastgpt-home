@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类投研知识库建设的上下文与 token
-meta_description: 鞋类投研数据主要来源于品牌官方供应链文档、行业协会质检报告、电商平台销售台账、鞋款设计规范文件。数据更新节奏分为固定周期与突发更新：固定周期内供应链数据每季
+meta_description: 鞋类投研知识库建设的上下文与 token：鞋类投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 鞋类、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备财报分析的引用来源与溯源
-meta_description: 航天装备相关财报的数据来源主要包括上市公司公开披露的年度报告、季度报告，国防军工行业协会发布的公开统计信息，以及相关主体发布的重大合同、研发进展临时公告。数
+meta_description: 航天装备财报分析的引用来源与溯源：航天装备财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 航天装备、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

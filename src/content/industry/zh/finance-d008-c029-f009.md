@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的引用来源与溯源
-meta_description: 包装印刷领域的智能尽调数据主要来自生产ERP台账、原辅材料质检报告、印刷工艺参数记录、合规检测文件与客户订单档案。数据更新节奏按生产批次推进，单批次生产数据
+meta_description: 包装印刷智能尽调报告的引用来源与溯源：包装印刷智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造收益率的对话日志与审计
-meta_description: 纺织制造的收益率与行情数据主要来源于企业ERP生产模块、原料大宗商品行情接口。数据按自然日汇总更新，每日凌晨完成前一日全量数据的整合。单份数据文档以生产批次
+meta_description: 纺织制造收益率的对话日志与审计：纺织制造收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 纺织制造、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务智能尽调报告的文档解析与分块
-meta_description: 教育服务智能尽调报告的数据来源包括教育机构的办学资质备案文件、课程研发文档、运营台账、师资资质证明、合规自查报告等。更新节奏随文档类型不同有所区分，资质类文
+meta_description: 教育服务智能尽调报告的文档解析与分块：教育服务智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 教育服务、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

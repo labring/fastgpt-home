@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁财报分析的工具调用与插件
-meta_description: 专业连锁的财报数据主要来自门店POS系统、供应链管理系统及总部财务核算系统。数据更新节奏以月度、季度、年度为核心周期，部分单店运营数据可按日更新。文档结构通
+meta_description: 专业连锁财报分析的工具调用与插件：专业连锁财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 专业连锁、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

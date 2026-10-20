@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷融资日报的工具调用与插件
-meta_description: 包装印刷融资日报的数据来源包括包装印刷企业公开披露的融资公告、行业融资监测数据库、地方金融服务平台备案信息。更新节奏为每日更新当日公开的单笔融资项目，每周生
+meta_description: 包装印刷融资日报的工具调用与插件：包装印刷融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 包装印刷、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

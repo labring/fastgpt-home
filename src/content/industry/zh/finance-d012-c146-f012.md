@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备营销内容的模型接入与配置
-meta_description: 通用设备的营销内容数据主要来自金融机构设备租赁业务的选型手册、厂商公开的产品参数文档、运维记录文档，以及面向企业客户的租赁方案案例。数据更新随厂商新品发布、
+meta_description: 通用设备营销内容的模型接入与配置：通用设备营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 通用设备、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

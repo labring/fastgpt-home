@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Brand Agency Marketing
-meta_description: The marketing content data for brand agency operations mainly comes from official promotional materials provided by brands, multi-channel marketing
+meta_description: Vector Models and Indexing for Brand Agency Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

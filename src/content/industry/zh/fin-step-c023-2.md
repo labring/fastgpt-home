@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c023-2
 page_type: 行业作业环节页
 article_section: 公募基金
 is_part_of: FastGPT 技术中心
-meta_title: 场外指数基金运营的处理公司行动、停牌等造成的跟踪偏离：哪一部
-meta_description: 场外指数基金运营的处理公司行动、停牌等造成的跟踪偏离：哪一部分能交给系统
+meta_title: 场外指数基金运营的处理公司行动、停牌等造成的跟踪偏离：哪一部分能交给系统
+meta_description: 场外指数基金运营的处理公司行动、停牌等造成的跟踪偏离：哪一部分能交给系统：场外指数基金运营的处理公司行动、停牌等造成的跟踪偏离：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 场外指数基金运营、公募基金、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

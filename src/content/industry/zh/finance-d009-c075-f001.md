@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车研报检索的HTTP 接口与外部系统
-meta_description: 金融领域的整车研报数据主要来自券商研究所汽车组报告、车企官方公开披露文件、汽车行业协会统计资料。更新节奏随发布主体不同，券商研报按个股或板块发布周期更新，车
+meta_description: 整车研报检索的HTTP 接口与外部系统：整车研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 整车、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

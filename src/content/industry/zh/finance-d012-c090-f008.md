@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨营销内容的工具调用与插件
-meta_description: 涂料油墨的业务数据主要来源于生产ERP系统、配方研发数据库、批次质检报告、供应链台账四类。数据更新节奏按需调整：新配方研发完成或合规标准更新时触发配方库更新
+meta_description: 涂料油墨营销内容的工具调用与插件：涂料油墨营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 涂料油墨、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

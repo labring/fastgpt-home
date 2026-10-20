@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务智能尽调报告的工具调用与插件
-meta_description: 综合服务智能尽调报告的数据来源覆盖工商公示系统、征信服务机构、行业监管数据库、合作方业务台账等多类渠道。数据更新节奏存在差异：工商主体信息按月更新，征信报告
+meta_description: 综合服务智能尽调报告的工具调用与插件：综合服务智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 综合服务、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -24,7 +24,7 @@ date_modified: 2026-09-15
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
 | `UPLOAD_FILE_ALLOWED_EXTENSIONS` | `csv,json,xlsx,pdf,docx,zip` | 覆盖综合服务尽调报告常用的结构化数据、附件与压缩包格式，支持默认全选适配MCP对接需求 |
-| `MCP_PLUGIN_AUTH_STORAGE` | `统一加密托管` | 集中管理多第三方数据源与模型的鉴权密钥，避免分散存储带来的安全风险，适配FastGPT 4.9.6及以上版本的MCP功能 |
+仅作参考；请以目标 FastGPT 发布版本与部署文档核验。
 | `MCP_REQUEST_TIMEOUT` | `300 秒` | 适配综合服务尽调多接口聚合拉取的长耗时场景，避免因超时中断数据获取流程 |
 | `PLUGIN_PARAM_VALIDATION_STRICTNESS` | `严格模式` | 匹配尽调报告字段的高规范度要求，校验入参字段完整性与格式合规性，减少无效调用 |
 | `MODEL_API_KEY_ENCRYPTION` | `开启` | 对OneAPI等第三方模型的鉴权密钥进行加密存储，解决明文输入导致的密钥丢失问题 |

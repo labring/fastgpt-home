@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区智能尽调报告的引用来源与溯源
-meta_description: 旅游景区的数据源主要包含四类：官方文旅政务平台公开的景区资质、合规备案信息，景区管委会更新的年度运营台账，实时门禁与客流监测系统的动态数据，以及第三方文旅监
+meta_description: 旅游景区智能尽调报告的引用来源与溯源：旅游景区智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 旅游景区、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

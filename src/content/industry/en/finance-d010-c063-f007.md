@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Bid Rejection Tendering Reports
-meta_description: Data for bid rejection tendering reports primarily comes from public procurement service platforms, official bid rejection announcements published by
+meta_description: Workflow Orchestration for Bid Rejection Tendering Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨智能尽调报告的知识库检索与召回
-meta_description: 用于金融尽调的涂料油墨行业数据主要来源于国标行标合规文档、供应商提供的MSDS报告、企业配方档案、批次检测记录与合规审计文件。数据更新节奏分为定期与按需两类
+meta_description: 涂料油墨智能尽调报告的知识库检索与召回：涂料油墨智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 涂料油墨、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

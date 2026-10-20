@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的知识库检索与召回
-meta_description: 炼化品类的营销相关数据主要来源于企业内部生产管理系统、营销部门素材库及行业公开的炼化产品参数文档。数据更新节奏存在差异：营销类素材随促销活动调整，更新频率为
+meta_description: 炼化营销内容的知识库检索与召回：炼化营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 炼化、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

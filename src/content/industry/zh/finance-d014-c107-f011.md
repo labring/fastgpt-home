@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力财报分析的文档解析与分块
-meta_description: 电力行业财报数据主要来自上市电力企业的定期公开报告、电力监管机构发布的行业运行数据，更新节奏以季度、半年度、年度为核心周期，部分月度运营数据同步更新。文档结
+meta_description: 电力财报分析的文档解析与分块：电力财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 电力、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

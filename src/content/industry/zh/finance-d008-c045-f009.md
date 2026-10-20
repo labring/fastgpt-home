@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车智能尽调报告的引用来源与溯源
-meta_description: 商用车尽调数据主要采集自全国机动车登记系统、工信部道路机动车辆生产企业及产品公告、地方道路运输管理平台以及车企官方售后维保系统。机动车登记信息实时同步至官方
+meta_description: 商用车智能尽调报告的引用来源与溯源：商用车智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 商用车、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

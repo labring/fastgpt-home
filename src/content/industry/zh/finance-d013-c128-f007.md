@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口融资日报的工作流编排
-meta_description: 航运港口融资日报的数据来源包括港口作业管理系统、船舶调度平台、海关通关系统、合作银行授信台账。更新节奏为每日更新，通常在次日凌晨前完成前一日的全量数据汇总。
+meta_description: 航运港口融资日报的工作流编排：航运港口融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 航运港口、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

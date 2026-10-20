@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for White Goods Industry
-meta_description: Data for white goods industry research reports comes primarily from domestic securities firm home appliance industry research institutes, the China
+meta_description: Multi-turn Dialogue and Prompting for White Goods Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -44,7 +44,7 @@ The update frequency of different data sets varies widely. Users often specify t
 
 ## Three common mistakes
 - After uploading Excel-format research report attachments, structured data such as shipment volume and average price cannot be extracted during dialogue. Cause: The Excel parsing switch in FastGPT is not enabled, or the field mapping rules for structured data are not configured.
-- When calling the dialogue interface, the returned results do not associate with the user's current specific question. Cause: The `{{query}}` variable name is not correctly referenced in the prompt template, so the interface cannot pass the actual content of the user's input.
+- When calling the dialogue interface, the returned results do not associate with the user's current specific question. Cause: The `example value` variable name is not correctly referenced in the prompt template, so the interface cannot pass the actual content of the user's input.
 - The debug preview-generated history records cannot be cleaned individually by application or session. Only all workspace data can be cleared. Cause: The specified session cleaning interface is not called, or the unique identifier of the corresponding application is not included in the cleaning request.
 
 ## How to confirm correct configuration

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Insurance Marketing Content
-meta_description: Data sources for insurance marketing content include internal insurance product management systems, compliance audit ledgers, and agent historical
+meta_description: Workflow Orchestration for Insurance Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

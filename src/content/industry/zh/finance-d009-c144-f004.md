@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务研报检索的向量模型与索引
-meta_description: 通信服务研报的来源主要包括行业协会公开统计数据、运营商季度财报、第三方通信咨询机构的正式研究文档，更新以季度常规更新为主，伴随运营商集采、新技术落地等热点事
+meta_description: 通信服务研报检索的向量模型与索引：通信服务研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 通信服务、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

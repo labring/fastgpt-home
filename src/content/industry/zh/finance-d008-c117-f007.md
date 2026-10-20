@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造智能尽调报告的工作流编排
-meta_description: 纺织制造智能尽调的数据主要来自上游原料采购的海关报关单、工厂ERP系统的生产订单台账、MES系统的车间运行数据，以及行业协会发布的产能与原料价格周报。数据更
+meta_description: 纺织制造智能尽调报告的工作流编排：纺织制造智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 纺织制造、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

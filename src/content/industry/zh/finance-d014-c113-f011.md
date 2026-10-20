@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒财报分析的文档解析与分块
-meta_description: 白酒行业上市公司的财报数据主要来源于证券交易所披露的官方PDF、Excel格式定期报告，以及企业官网投资者关系板块公开的公告文件。更新节奏遵循证券监管要求，
+meta_description: 白酒财报分析的文档解析与分块：白酒财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 白酒、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

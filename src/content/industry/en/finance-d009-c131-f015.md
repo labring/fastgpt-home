@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Decoration Industry Research
-meta_description: Data sources for decoration industry research reports mainly include public materials from industry associations, product documents from building
+meta_description: Deployment and Upgrade for Decoration Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

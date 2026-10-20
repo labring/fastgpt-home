@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行营销内容的向量模型与索引
-meta_description: 国有大行的营销内容数据主要来源于官方统一管理的营销物料库，包含理财产品说明书、信贷产品介绍、线下活动公告、客服应答标准文案等。数据更新节奏分为两类：标准化产
+meta_description: 国有大行营销内容的向量模型与索引：国有大行营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 国有大行、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

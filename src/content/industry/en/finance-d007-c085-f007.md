@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Cement Yield and Market Daily
-meta_description: Cement market data is primarily sourced from national building materials circulation associations and bulk commodity electronic trading platforms. It
+meta_description: Workflow Orchestration for Cement Yield and Market Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

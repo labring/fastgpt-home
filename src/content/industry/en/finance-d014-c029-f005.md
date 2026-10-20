@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c029-f005
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Packaging and Printing
-meta_description: Packaging and printing industry financial report data comes from public periodic disclosures of listed companies. It is updated quarterly and
+meta_title: Multi-turn Dialogue and Prompting for Packaging
+meta_description: Multi-turn Dialogue and Prompting for Packaging and Printing Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

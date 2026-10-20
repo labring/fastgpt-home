@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区研报检索的HTTP 接口与外部系统
-meta_description: 产业园区研报的数据来源包括园区官方网站公开的运营报表、地方发改部门发布的产业扶持文件、第三方产业研究机构的园区专项调研报告。数据更新节奏存在差异：官方运营数
+meta_description: 产业园区研报检索的HTTP 接口与外部系统：产业园区研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 产业园区、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

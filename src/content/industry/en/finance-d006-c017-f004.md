@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c017-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Investment Research Knowledge
-meta_description: Investment research data for the optical and optoelectronics industry mainly comes from public research reports, patent documents, device parameter
+meta_title: Vector Models and Indexing for Investment Research
+meta_description: Vector Models and Indexing for Investment Research Knowledge Base Construction in Optical and Optoelectronics Industry
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

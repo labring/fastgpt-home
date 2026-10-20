@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电收益率的多轮对话与提示词
-meta_description: 小家电相关金融标的的行情与收益率数据，来源为合规的公开金融行情数据源与行业公开经营数据。更新节奏为每日17点前完成当日全量汇总更新，盘中每10分钟更新一次实
+meta_description: 小家电收益率的多轮对话与提示词：小家电收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小家电、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

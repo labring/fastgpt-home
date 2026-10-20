@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行智能尽调报告的文档解析与分块
-meta_description: 国有大行智能尽调报告的数据主要来自内部授信审批档案、年度审计报告、监管披露文件及客户授信台账。更新节奏随单笔授信项目周期调整，批量尽调报告按季度更新。文档多
+meta_description: 国有大行智能尽调报告的文档解析与分块：国有大行智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 国有大行、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

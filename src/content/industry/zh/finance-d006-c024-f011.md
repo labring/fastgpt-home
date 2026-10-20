@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品投研知识库建设的文档解析与分块
-meta_description: 农化制品相关数据的来源包括农业农村部农药登记公告、行业协会月度供需报告、上市企业年度年报、原药价格周报、田间试验数据集等。文档类型涵盖带数字签名的官方PDF
+meta_description: 农化制品投研知识库建设的文档解析与分块：农化制品投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 农化制品、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

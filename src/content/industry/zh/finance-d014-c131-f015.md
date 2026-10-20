@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰财报分析的部署与升级
-meta_description: 装修装饰企业的财报数据来源包括公开披露的年报、季报，内部项目台账与供应链采购数据。更新节奏分为三类：月度经营数据实时更新，季度财报于每季度末后15日内完成更
+meta_description: 装修装饰财报分析的部署与升级：装修装饰财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 装修装饰、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

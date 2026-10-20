@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的表单与交互
-meta_description: 住宅开发营销表单的数据主要来自线上落地页提交、线下售楼处或展点登记、分销渠道转介。数据更新节奏为单条提交实时入库，批量汇总按日更新。文档以结构化字段为主，包
+meta_description: 住宅开发营销内容的表单与交互：住宅开发营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 住宅开发、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

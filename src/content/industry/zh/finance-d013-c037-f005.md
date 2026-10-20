@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的多轮对话与提示词
-meta_description: 数据来源包括国内国际卫星运营商的轨道资源备案公示、商业卫星发射服务招投标公告、卫星制造与运营企业的公开融资披露、行业第三方监测机构的卫星项目跟踪数据。更新节
+meta_description: 卫星通信融资日报的多轮对话与提示词：卫星通信融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 卫星通信、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

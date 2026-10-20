@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药营销内容的多轮对话与提示词
-meta_description: 化学制药的营销相关数据主要来源于药企内部合规文档库、公开临床研究数据集、产品注册备案文件及已审批的推广物料库。数据更新随新适应症获批、季度营销素材迭代及临床
+meta_description: 化学制药营销内容的多轮对话与提示词：化学制药营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学制药、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

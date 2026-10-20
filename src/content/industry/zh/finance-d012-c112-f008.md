@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的工具调用与插件
-meta_description: 金融领域关联白色家电的营销相关数据，主要来源于合作品牌官方公开产品手册、电商平台详情页、金融营销中心的家电关联物料库三类。更新节奏随新品发布批量更新，常规参
+meta_description: 白色家电营销内容的工具调用与插件：白色家电营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 白色家电、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

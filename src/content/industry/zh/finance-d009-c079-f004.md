@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢研报检索的向量模型与索引
-meta_description: 这个品类的数据主要来自国内钢铁行业权威第三方机构、上市钢企公开公告、专业行业期刊与调研机构报告。常规更新节奏为月度常规报告，遇行业政策调整、原料价格波动、下
+meta_description: 普钢研报检索的向量模型与索引：普钢研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 普钢、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

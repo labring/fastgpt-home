@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Shipping Port Financial Report
-meta_description: Primary sources of shipping port financial and operational data include periodic reports disclosed by port operating entities, industry statistical
+meta_description: Workflow Orchestration for Shipping Port Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

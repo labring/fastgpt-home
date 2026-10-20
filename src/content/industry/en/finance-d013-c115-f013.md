@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Crop Farming
-meta_description: Data sources include financing filing data of planting entities collected daily by local agricultural and rural authorities, and loan ledgers of
+meta_description: Knowledge Base Retrieval and Recall for Crop Farming Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The daily full update rhythm requires the knowledge base synchronization link to
 
 ## Three Common Misconfigurations
 - Symptom: Knowledge base retrieval results take longer than 10 seconds to return, and logs show an `ETIMEDOUT` error. Cause: Incremental synchronization rules are not configured. Full document parsing triggers during daily full updates, leading to excessive resource usage on the retrieval link.
-- Symptom: Images in imported financing daily report documents fail to display in retrieval results, with the interface showing the `[Image failed to load]` placeholder. Cause: Local storage configuration for media resources within documents is not enabled, or media resource access paths are not synchronized to the knowledge base service node.
+- Symptom: Images in imported financing daily report documents fail to display in retrieval results, with the interface showing the `[Image failed to load]` pending verification. Cause: Local storage configuration for media resources within documents is not enabled, or media resource access paths are not synchronized to the knowledge base service node.
 - Symptom: The number of retrieval results does not match the configured `Recall Count`, with only 1-2 entries returned. Cause: The similarity threshold is set too high, filtering valid financing details that match the planting category.
 
 ## How to Confirm Configuration is Correct

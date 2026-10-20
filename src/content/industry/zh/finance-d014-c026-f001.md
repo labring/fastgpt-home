@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版财报分析的HTTP 接口与外部系统
-meta_description: 出版行业财报数据主要来自出版企业公开披露的定期报告，更新节奏为季度、半年度与年度。单份财报文档结构包含核心经营数据板块，如图书出版营收、数字出版收入、版权授
+meta_description: 出版财报分析的HTTP 接口与外部系统：出版财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 出版、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

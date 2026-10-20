@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的多轮对话与提示词
-meta_description: 住宅开发的营销相关数据主要来自四个渠道：项目案场的客户咨询录音转写、户型与配套的官方公示文档、线上留资表单的用户提问记录，以及营销物料的版本迭代存档。数据更
+meta_description: 住宅开发营销内容的多轮对话与提示词：住宅开发营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 住宅开发、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

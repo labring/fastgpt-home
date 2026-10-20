@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械营销内容的工具调用与插件
-meta_description: 在金融/保险/理财场景下，医疗器械营销相关的数据主要来自国家药品监督管理局官方注册备案数据库、产品原厂公开说明书、临床研究公开文献、经销商库存台账。数据更新
+meta_description: 医疗器械营销内容的工具调用与插件：医疗器械营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 医疗器械、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

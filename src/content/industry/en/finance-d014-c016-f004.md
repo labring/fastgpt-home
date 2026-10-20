@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c016-f004
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Photovoltaic Financial Report
-meta_description: Photovoltaic-related financial report data mainly comes from periodic reports publicly disclosed by domestic and overseas stock exchanges, and
+meta_title: Vector Models and Indexing for Photovoltaic Financial
+meta_description: Vector Models and Indexing for Photovoltaic Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -20,7 +20,7 @@ Photovoltaic-related financial report data mainly comes from periodic reports pu
 Photovoltaic financial report data mixes long-text reports and structured tables, and field units vary. This requires the indexing process to support retaining structured metadata to avoid losing semantic associations during splitting. The batch update rhythm of quarterly and annual reports requires indexing to support incremental update logic, reducing resource consumption from full reconstruction. Single financial report content is lengthy, so long-text segmentation rules must be adapted to avoid context truncation during vector embedding. The large volume of data for batch indexing requires optimizing parallel processing capabilities for index construction to reduce overall time spent.
 
 ## Configuration Settings
-This configuration is adapted for FastGPT V4.8.20-FIX2.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |

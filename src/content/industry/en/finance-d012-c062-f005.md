@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Marketing
-meta_description: Data sources for advertising and marketing in the financial industry include impression, click, and conversion data from advertising platform
+meta_description: Multi-turn Dialogue and Prompt Engineering for Marketing Content in Advertising and Marketing
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

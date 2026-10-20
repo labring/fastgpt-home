@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Coking Coal
-meta_description: Data required for financial institutions to carry out coking coal-related marketing and customer acquisition mainly comes from domestic coal trading
+meta_description: HTTP Interfaces and External Systems for Coking Coal Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

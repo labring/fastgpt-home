@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电财报分析的引用来源与溯源
-meta_description: 小家电相关财报数据主要来自上市公司公开披露的定期报告、临时公告，以及行业协会发布的公开统计文档。更新节奏为季度、半年度、年度固定披露，临时公告随事件触发更新
+meta_description: 小家电财报分析的引用来源与溯源：小家电财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 小家电、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

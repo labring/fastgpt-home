@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的模型接入与配置
-meta_description: 模型分配品类的数据主要来源于三部分：平台内置的模型接入接口同步的模型基础信息、第三方模型网关的调用日志上报、本地部署模型的健康状态采集。数据更新节奏分为两类
+meta_description: 模型分配一体化 AI 平台的模型接入与配置：模型分配一体化 AI 平台的模型接入与配置，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

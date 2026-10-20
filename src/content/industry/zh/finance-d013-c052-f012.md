@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股融资日报的模型接入与配置
-meta_description: 多元控股融资日报的数据来源为集团总部融资管理系统、各子公司财务台账、公开市场融资披露平台。更新节奏为每日收盘后完成当日全量数据汇总。文档结构为多层级JSON
+meta_description: 多元控股融资日报的模型接入与配置：多元控股融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 多元控股、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -28,7 +28,7 @@ date_modified: 2026-09-15
 | `similarity_threshold` | 0.75 | 区分集团汇总与子公司明细的融资信息，避免召回冗余的同主体重复数据 |
 | `rerank_top_n` | 8 | 针对多主体的融资条目，优先召回与查询主题匹配度最高的结果 |
 | `api_request_timeout` | 300 秒 | 应对多子公司数据源并行拉取时的延迟，避免同步任务超时失败 |
-| `custom_api_auth` | `{"Authorization": "Bearer {{authorization}}"}` | 适配融资日报API的身份验证要求，从集团内部融资系统获取授权令牌 |
+| `custom_api_auth` | `{"Authorization": "Bearer 待核验值"}` | 适配融资日报API的身份验证要求，从集团内部融资系统获取授权令牌 |
 
 > 本页给出的参数取值均为常规建议，用于确定配置的起点。实际取值受材料形态、数据量与业务规则影响，具体问题需具体分析，建议在自有样本上实测后再定。
 

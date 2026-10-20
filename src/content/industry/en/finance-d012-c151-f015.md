@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Railway and Highway Marketing
-meta_description: Railway and highway marketing content data originates from line operation systems, station ticketing systems, freight dispatching platforms, and
+meta_description: Deployment and Upgrade of Railway and Highway Marketing Content: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

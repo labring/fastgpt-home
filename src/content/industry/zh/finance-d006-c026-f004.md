@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版投研知识库建设的向量模型与索引
-meta_description: 出版类投研知识库的数据主要来自正式出版的专著、学术期刊、行业研究报告、版权登记文档及出版合同。更新节奏分为批量入库（如季度新书、年度行业报告发布）和增量更新
+meta_description: 出版投研知识库建设的向量模型与索引：出版投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 出版、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

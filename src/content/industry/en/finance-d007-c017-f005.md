@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Optoelectronics Yield
-meta_description: Data sources for optoelectronics industry market and yield data include public market APIs of the Shanghai and Shenzhen Stock Exchanges, industry
+meta_description: Multi-turn Dialogue and Prompting for Optoelectronics Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Fields and units are fixed. Prompts must clearly mark the query format for each 
 ## How to Set Configurations
 | Configuration Item | Recommended Value | Rationale |
 |---|---|---|
-| `maxContext` | `1500–2000 characters` | Adapted for FastGPT V4.9.13. Multi-turn market queries for optoelectronics often involve consecutive time period comparisons. This range covers the context length of conventional multi-turn interactions |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `Recall count` | `top 8 entries` | There are a large number of target securities under optoelectronics sub-sectors. Recalling an appropriate number of entries ensures returned results cover the sub-categories mentioned by users |
 | `Similarity threshold` | `0.75` | The names of optoelectronics target securities have similarities. This threshold filters irrelevant target data with low matching accuracy |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Post-market optoelectronics industry daily reports have large document sizes. This timeout duration ensures complete parsing of all data |

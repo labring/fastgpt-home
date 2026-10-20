@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发营销内容的文档解析与分块
-meta_description: 住宅开发营销相关文档主要来自项目案场销控台账、户型设计手册、区域配套规划文件、竞品对标分析报告、线下活动执行方案、客户调研汇总表等。更新节奏为项目筹备期每周
+meta_description: 住宅开发营销内容的文档解析与分块：住宅开发营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 住宅开发、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

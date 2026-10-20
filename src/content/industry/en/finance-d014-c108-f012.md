@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for E-commerce Service
-meta_description: Data sources for e-commerce service financial report analysis mainly come from internal enterprise operation databases, public documents required by
+meta_description: Model Integration and Configuration for E-commerce Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

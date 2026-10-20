@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺营销内容的模型接入与配置
-meta_description: 服装家纺品类的数据主要来源于品牌商品管理系统、电商平台后台、线下门店进销存系统及营销活动配置后台。更新节奏分为两类：新品上线周期内批量更新全量SKU信息，日
+meta_description: 服装家纺营销内容的模型接入与配置：服装家纺营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 服装家纺、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

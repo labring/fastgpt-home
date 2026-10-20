@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场研报检索的多轮对话与提示词
-meta_description: 这个品类的数据主要来自中国民用航空局公开统计、各上市机场官方公告、民航领域专业咨询机构的专项研报。更新节奏分为三类：月度航班、吞吐量等核心运营数据每月更新，
+meta_description: 航空机场研报检索的多轮对话与提示词：航空机场研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航空机场、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

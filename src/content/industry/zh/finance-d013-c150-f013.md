@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的知识库检索与召回
-meta_description: 铁矿石融资日报的数据主要来自国内大宗商品交易平台、沿海港口仓储系统及行业协会公开披露的每日成交、库存与融资质押数据。每日固定时段更新一次，单份日报文档包含当
+meta_description: 铁矿石融资日报的知识库检索与召回：铁矿石融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 铁矿石、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

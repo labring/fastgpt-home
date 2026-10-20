@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务营销内容的HTTP 接口与外部系统
-meta_description: IT服务营销内容的数据主要来自厂商公开的产品文档、客户案例库、官方营销物料。数据更新节奏随产品版本迭代、新服务上线调整，无固定周期但不超过季度。文档以结构化
+meta_description: IT 服务营销内容的HTTP 接口与外部系统：IT 服务营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: IT 服务、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

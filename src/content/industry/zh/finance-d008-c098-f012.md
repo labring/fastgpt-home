@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工智能尽调报告的模型接入与配置
-meta_description: 煤化工尽调数据主要来自煤炭行业协会公开统计、煤化工企业生产台账、生态环境部门排放监测数据及大宗商品交易平台行情。数据更新节奏存在差异：原料采购台账每旬更新，
+meta_description: 煤化工智能尽调报告的模型接入与配置：煤化工智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 煤化工、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

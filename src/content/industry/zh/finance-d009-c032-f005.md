@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料研报检索的多轮对话与提示词
-meta_description: 化学原料研报数据来源包括行业公开统计数据集、专业化工行业期刊、上市公司披露的经营数据、大宗商品现货交易平台公开信息。更新节奏上，现货价格数据每日更新，行业供
+meta_description: 化学原料研报检索的多轮对话与提示词：化学原料研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学原料、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

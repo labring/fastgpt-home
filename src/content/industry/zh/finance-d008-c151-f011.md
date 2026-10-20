@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路智能尽调报告的文档解析与分块
-meta_description: 铁路公路智能尽调报告的数据主要来源于工程竣工档案、日常养护台账、路政巡查记录、项目可研报告等官方文档。更新节奏因文档类型而异，竣工类文档随项目完工一次性归档
+meta_description: 铁路公路智能尽调报告的文档解析与分块：铁路公路智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 铁路公路、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

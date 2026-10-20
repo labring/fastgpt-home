@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料投研知识库建设的部署与升级
-meta_description: 数据来源包括国家建材行业标准文件、生产企业的质检报告单、研发机构的试验检测报告、上下游供应链的原料与成品报价文档。更新节奏分为三类：行业标准类文档每3至5年
+meta_description: 耐火材料投研知识库建设的部署与升级：耐火材料投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 耐火材料、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

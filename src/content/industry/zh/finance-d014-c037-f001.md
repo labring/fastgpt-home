@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信财报分析的HTTP 接口与外部系统
-meta_description: 卫星通信财报数据主要来自上市卫星通信企业的公开定期报告、行业监管机构发布的行业运营数据。更新节奏分为季度报告每3个月更新一次，年度报告每12个月更新一次，临
+meta_description: 卫星通信财报分析的HTTP 接口与外部系统：卫星通信财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 卫星通信、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

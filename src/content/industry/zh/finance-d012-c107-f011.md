@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力营销内容的文档解析与分块
-meta_description: 电力营销内容的数据主要来自电力企业内部的营销管理系统、官方政策发布平台、线下服务手册等渠道。更新节奏随业务场景变化，电价调整类文档实时更新，季度营销活动方案
+meta_description: 电力营销内容的文档解析与分块：电力营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 电力、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

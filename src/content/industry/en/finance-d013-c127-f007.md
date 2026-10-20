@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Aviation Equipment Financing
-meta_description: Data sources for aviation equipment financing daily reports include civil aviation operation filing systems, publicly disclosed documents of aviation
+meta_description: Workflow Orchestration for Aviation Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Special Steel
-meta_description: Data sources for special steel financing daily reports include daily listed quotes from domestic special steel manufacturers, financing tracking data
+meta_description: Knowledge Base Retrieval and Recall for Special Steel Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Precise matching of special steel specifications and materials requires enabling
 | `Recall Count` | `Top 8 entries` | Balances result accuracy and screening costs, adapts to the feature of multiple special steel subcategories |
 | `Similarity Threshold` | `0.75–0.85` | Adapts to the precise matching requirements for special steel specifications and categories, filters irrelevant data with low matching scores |
 | `Custom Text Separator` | `Newline + 「|」` | Adapts to the row-based storage format of special steel financing daily report CSV files, resolves issues where custom separators cannot split file lines |
-| `Prompt Reference Template` | `{{title}}{{content}}, the annualized discount rate is {{discount_rate}}%` | Clearly marks core fields of special steel financing daily reports, distinguishes the functional differences between prompt templates and reference content templates |
+| `Prompt Reference Template` | `example valueexample value, the annualized discount rate is example value%` | Clearly marks core fields of special steel financing daily reports, distinguishes the functional differences between prompt templates and reference content templates |
 | `Search Node Authentication Switch` | `Enabled` | Adapts to the financial sensitive data attribute of financing daily reports, ensures compliance of data access permissions |
 | `Variable Reference Configuration` | `Configure retrieval keyword variables at the process input node` | Provides callable retrieval variables for the knowledge base search node, resolves the issue of no selectable values for variables |
 

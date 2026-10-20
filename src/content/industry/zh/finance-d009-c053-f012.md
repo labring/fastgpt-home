@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融研报检索的模型接入与配置
-meta_description: 多元金融研报的数据来源为券商研究所、持牌金融数据服务商的细分赛道研报，更新节奏为券商发布后1至2小时完成同步。文档以PDF格式为主，结构包含标题、发布机构、
+meta_description: 多元金融研报检索的模型接入与配置：多元金融研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 多元金融、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

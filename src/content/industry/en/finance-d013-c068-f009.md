@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Investment Platform
-meta_description: Financing daily report data for investment platforms comes primarily from publicly disclosed exchange documents, official enterprise announcements
+meta_description: Citation Sources and Traceability for Investment Platform Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Additionally, users in investment scenarios need to quickly locate core financin
 | `recall count` | `top 3-5` | Financing daily reports have many fields per record. Excessive recall leads to redundant context. The investment scenario only needs the top few matches to cover core requirements |
 | `similarity threshold` | `0.75-0.85` | Financing daily reports have standardized content structures. A threshold that is too high will miss relevant announcements. A threshold that is too low will introduce irrelevant data. Values must be calibrated through testing based on the business scenario |
 | `knowledge base incremental sync cycle` | `once daily` | Financing daily reports are updated daily. Matching the sync cycle to the update rhythm ensures data timeliness |
-| `citation template` | `{{source.title}} | {{source.url}} | Disclosure Date: {{source.disclosure_date}}` | Investment platform users need to quickly locate financing entities, links, and disclosure times. The template must include core traceability fields |
+| `Traceability details` | `the configured value | the configured value | Disclosure Date: the configured value` | Investment platform users need to quickly locate financing entities, links, and disclosure times. The template must include core traceability fields |
 | `re-ranked return count` | `top 2-3` | Core information for financing daily reports is concentrated in the top few recall results. Retaining the most relevant entries after re-ranking meets traceability needs |
 | `force use recalled content` | `enabled` | Ensures responses strictly use original content from the knowledge base. Prevents generation of non-target information |
 

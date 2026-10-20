@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的部署与升级
-meta_description: 电网设备的营销内容数据主要来源于厂商技术文档、电网运维系统运行记录、现场巡检电子档案。数据更新分为两类：新设备入网时批量导入全量技术参数，日常巡检与故障报修
+meta_description: 电网设备营销内容的部署与升级：电网设备营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 电网设备、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

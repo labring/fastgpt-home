@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电营销内容的部署与升级
-meta_description: 风电面向金融、保险、理财机构的营销相关数据，主要来源于风电项目可研报告、风机设备厂商的产品参数文档、区域风电并网政策文件、项目运维日志、风电融资计划书与设备
+meta_description: 风电营销内容的部署与升级：风电营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 风电、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

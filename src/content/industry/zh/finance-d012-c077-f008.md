@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区营销内容的工具调用与插件
-meta_description: 旅游景区的营销内容数据主要来自官方票务系统、游客中心客流统计模块、景区公众号及小程序后台、线下导览物料数字化档案。结构化数据包含景区编号、门票类型、单客售价
+meta_description: 旅游景区营销内容的工具调用与插件：旅游景区营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 旅游景区、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

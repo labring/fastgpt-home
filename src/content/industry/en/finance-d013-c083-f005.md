@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c083-f005
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Water Utility
-meta_description: Water utility financing daily report data comes primarily from local public resource trading platforms, regular disclosure announcements of water
+meta_title: Multi-turn Dialogue and Prompt Engineering for Water
+meta_description: Multi-turn Dialogue and Prompt Engineering for Water Utility Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

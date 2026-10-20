@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务财报分析的工具调用与插件
-meta_description: 数据来源包括民办教育机构公开披露的年度/季度财务报告、教育行业协会发布的办学运营统计数据、各地教育主管部门备案的办学收支数据。更新节奏为季度更新，年度财报需
+meta_description: 教育服务财报分析的工具调用与插件：教育服务财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 教育服务、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

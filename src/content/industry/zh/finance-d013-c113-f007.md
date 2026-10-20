@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒融资日报的工作流编排
-meta_description: 白酒行业融资日报数据主要来自中国酒业协会、国内酒类流通协会公开披露的企业融资公告，证券交易所互动易平台的企业披露信息，以及第三方企业服务平台的工商变更与融资
+meta_description: 白酒融资日报的工作流编排：白酒融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 白酒、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

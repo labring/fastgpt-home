@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的文档解析与分块
-meta_description: 担保材料的数据来源包括线下纸质担保函扫描件、线上授信系统导出的电子担保文件、不动产抵押物权属证明附件等。更新节奏随单笔授信申请提交，单次提交即完成全量数据上
+meta_description: 担保材料风控的文档解析与分块：担保材料风控的文档解析与分块，涵盖配置与验证建议。
 keywords: 担保材料、风控与授信材料审核、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

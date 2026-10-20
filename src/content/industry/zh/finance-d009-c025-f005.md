@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行研报检索的多轮对话与提示词
-meta_description: 农商行研报的数据来源包括公开监管通报、地方金融监管局发布的区域金融运行报告、农商行内部合规文档、县域农业产业调研资料。更新节奏随文档类型不同：监管通报按月更
+meta_description: 农商行研报检索的多轮对话与提示词：农商行研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 农商行、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的文档解析与分块
-meta_description: 家居用品研报的数据源涵盖国内券商轻工制造组公开研报、行业协会月度监测报告及头部企业公开年报节选。常规报告按季度发布，重大市场波动或政策调整时追加临时报告。单
+meta_description: 家居用品研报检索的文档解析与分块：家居用品研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 家居用品、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

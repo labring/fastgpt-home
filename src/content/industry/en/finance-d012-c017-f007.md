@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c017-f007
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for Optical Optoelectronics Marketing
-meta_description: Marketing content data for the optical optoelectronics category draws primarily from enterprise PDM systems, production quality inspection reports
+meta_title: Workflow Orchestration for Optical Optoelectronics
+meta_description: Workflow Orchestration for Optical Optoelectronics Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -42,7 +42,7 @@ Most fields are standardized numeric or enumeration values. No complex entity ex
 > The parameter values provided on this page are common recommendations for starting point configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Mistakes
-- Phenomenon: When referencing knowledge base variables using the `[{datasetId: xxx}]` format in a workflow, returned content lacks product parameters. Cause: FastGPT variable reference specifications are not followed. Structured parameters for optical optoelectronics must be bound using the `{{dataset.field name}}` format. Nested object writing is not allowed.
+- Phenomenon: When referencing knowledge base variables using the `[{datasetId: xxx}]` format in a workflow, returned content lacks product parameters. Cause: FastGPT variable reference specifications are not followed. Structured parameters for optical optoelectronics must be bound using the `example value` format. Nested object writing is not allowed.
 - Phenomenon: When a workflow executes batch generation of marketing content, an error "Loop node has no termination condition configured" appears, and not all product models are covered. Cause: The `LOOP_CONDITION` parameter is not set correctly. The optical optoelectronics category has a large number of product models. The loop termination condition must be explicitly set to completion of the model list traversal.
 - Phenomenon: Mixed units appear in generated marketing content. Some parameters are labeled cd/㎡, while others are labeled nit. Cause: Parameter unit conversion rules are not configured. The optical optoelectronics industry has unit differences between old and new standards. Failure to unify conversions leads to inconsistent content.
 

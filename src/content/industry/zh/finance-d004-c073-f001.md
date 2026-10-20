@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 操作规程合规的HTTP 接口与外部系统
-meta_description: 操作规程的数据源为企业内部合规部、法务部发布的正式制度文档，多为结构化电子或纸质手册。更新随监管政策调整、内部流程优化不定期触发，无固定周期。单份文档采用章
+meta_description: 操作规程合规的HTTP 接口与外部系统：操作规程合规的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 操作规程、合规与内部制度问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

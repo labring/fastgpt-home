@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销营销内容的工具调用与插件
-meta_description: 这个品类的数据主要来自金融机构的广告投放平台后台、专业金融内容创作工具及投放效果报表。更新节奏分为三类：实时同步单次投放的点击、转化数据，每日生成全量投放效
+meta_description: 广告营销营销内容的工具调用与插件：广告营销营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 广告营销、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

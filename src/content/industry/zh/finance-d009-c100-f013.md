@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理研报检索的知识库检索与召回
-meta_description: 面向金融投研场景的物业管理研报数据，主要来自官方行业主管部门发布的物业运营指引、公开的物业项目运营档案、第三方行业研究机构的调研成果。公开研报按季度更新，项
+meta_description: 物业管理研报检索的知识库检索与召回：物业管理研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 物业管理、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

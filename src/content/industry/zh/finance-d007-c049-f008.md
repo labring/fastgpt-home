@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程收益率的工具调用与插件
-meta_description: 基建工程收益率相关数据主要来源于全国建筑市场监管公共服务平台、地方住建部门工程计价数据库、项目业主官方结算文档。数据更新节奏为月度更新局部区域细分品类数据，
+meta_description: 基建工程收益率的工具调用与插件：基建工程收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 基建工程、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

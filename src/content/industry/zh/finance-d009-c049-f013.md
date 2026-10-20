@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程研报检索的知识库检索与召回
-meta_description: 基建工程研报数据主要来自行业主管部门公开定额标准、设计院专项报告、施工企业项目台账及第三方行业研究机构成果。更新节奏随项目推进调整，新开工项目研报随立项、施
+meta_description: 基建工程研报检索的知识库检索与召回：基建工程研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 基建工程、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

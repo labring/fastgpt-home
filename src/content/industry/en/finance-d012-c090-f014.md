@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Coatings and Inks Marketing
-meta_description: Coatings and inks industry data comes from production formula libraries, raw material quality inspection reports, MSDS safety technical
+meta_description: Forms and Interactions for Coatings and Inks Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Joint-Stock
-meta_description: Joint-stock bank financial report data is sourced from core accounting systems, credit management systems, interbank business ledgers, and regulatory
+meta_description: Multi-turn Dialogue and Prompt Engineering for Joint-Stock Bank Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

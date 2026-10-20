@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的工作流编排
-meta_description: 投诉工单的数据来源于金融机构的客服交互系统、客户账户管理后台及监管投诉报送端口。数据更新节奏为实时提交，处理节点同步更新状态。单条工单文档包含固定字段：工单
+meta_description: 投诉工单客户服务的工作流编排：投诉工单客户服务的工作流编排，涵盖配置与验证建议。
 keywords: 投诉工单、客户服务与账户咨询、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全智能尽调报告的部署与升级
-meta_description: 网络安全智能尽调报告的数据来源包括公开漏洞库、企业内部流量日志、第三方安全情报源。更新节奏存在差异：漏洞情报实时同步或每6小时拉取一次，资产扫描数据每周全量
+meta_description: 网络安全智能尽调报告的部署与升级：网络安全智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 网络安全、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

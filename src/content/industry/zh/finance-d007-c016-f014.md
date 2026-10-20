@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏收益率的表单与交互
-meta_description: 光伏收益率相关数据主要来自并网光伏电站的SCADA监控系统、区域电力交易公开结算报表、电网公司的并网运行数据，用于金融理财场景下的光伏项目收益测算与日报播报
+meta_description: 光伏收益率的表单与交互：光伏收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 光伏、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

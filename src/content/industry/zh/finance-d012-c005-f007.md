@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品营销内容的工作流编排
-meta_description: 数据来源包含合作金融机构的客户标签系统、品牌自有CRM系统、电商平台销售后台、国家药监局化妆品备案数据库、用户评价平台。更新节奏：新品SKU上线无固定周期，
+meta_description: 个护用品营销内容的工作流编排：个护用品营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 个护用品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

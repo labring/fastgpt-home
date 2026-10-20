@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的向量模型与索引
-meta_description: 物业管理的营销内容数据主要来自内部营销系统、业主社群历史记录、线下宣传物料电子档，涵盖社区金融服务推广、节日活动邀约、商户合作福利通知等，更新节奏分为批量活
+meta_description: 物业管理营销内容的向量模型与索引：物业管理营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 物业管理、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c121-f013
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Refractory Materials
-meta_description: Data sources for refractory materials financing daily reports include public financing announcements from the National Enterprise Credit Information
+meta_title: Knowledge Base Retrieval and Recall for Refractory
+meta_description: Knowledge Base Retrieval and Recall for Refractory Materials Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Multiple data sources lead to differences in field formats. For example, financi
 > The parameter values provided on this page are conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing the configuration.
 
 ## Three Common Configuration Mistakes
-- Phenomenon: The interface returns a `quote type error` error, prompting that the variable format is abnormal. Cause: Knowledge base fields are not referenced in the standard `{{variable name}}` format, or special characters in the field name are not escaped.
+- Phenomenon: The interface returns a `quote type error` error, prompting that the variable format is abnormal. Cause: Knowledge base fields are not referenced in the standard `example value` format, or special characters in the field name are not escaped.
 - Phenomenon: The number of retrieval results is much lower than expected. The same content can be recalled in a new knowledge base but not in the original one. Cause: The original knowledge base’s `similarity threshold` is set too high, or the directional matching rule for refractory material category tags is not enabled.
 - Phenomenon: Retrieval results do not display the knowledge base reference source. Cause: The interface’s `display reference source` switch is not enabled, or reference log output is disabled in the configuration.
 

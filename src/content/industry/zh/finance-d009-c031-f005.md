@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药研报检索的多轮对话与提示词
-meta_description: 化学制药研报数据主要来自公开临床试验登记平台、券商研究所研报库、药企官方披露文件及专业医药数据库。更新节奏随内容类型差异明显：新发布券商研报随上线实时更新，
+meta_description: 化学制药研报检索的多轮对话与提示词：化学制药研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学制药、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

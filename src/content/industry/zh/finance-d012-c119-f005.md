@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务营销内容的多轮对话与提示词
-meta_description: 综合服务营销内容的数据主要来源于内部客户关系管理系统、合规审核后的营销素材库、历史对话交互记录及金融产品官方文档。数据更新节奏分为三类：营销素材每周同步一次
+meta_description: 综合服务营销内容的多轮对话与提示词：综合服务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 综合服务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

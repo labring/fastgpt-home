@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料收益率的对话日志与审计
-meta_description: 饲料行业的行情与收益率数据主要来自国内饲料行业监测机构、饲料原料现货批发市场的采集接口，更新节奏为每个交易日收盘后1小时内生成当日完整日报。数据文档为结构化
+meta_description: 饲料收益率的对话日志与审计：饲料收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 饲料、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

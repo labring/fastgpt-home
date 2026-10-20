@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子智能尽调报告的向量模型与索引
-meta_description: 军工电子智能尽调报告的数据主要来自军工集团公开年度报告、行业协会发布的产能与供应链数据、军工电子专项招标公告及配套技术参数文档。数据更新节奏覆盖年度、季度、
+meta_description: 军工电子智能尽调报告的向量模型与索引：军工电子智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 军工电子、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

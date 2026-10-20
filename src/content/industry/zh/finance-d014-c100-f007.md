@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理财报分析的工作流编排
-meta_description: 物业管理财报数据来源于项目日常运营台账、业主缴费记录系统、公共能源管理系统及托管方汇总报表。更新节奏以月度、季度、年度为固定周期，单份文档包含营收、成本、资
+meta_description: 物业管理财报分析的工作流编排：物业管理财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 物业管理、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

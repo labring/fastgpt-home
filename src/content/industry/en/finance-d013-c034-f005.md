@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Medical
-meta_description: Data for medical device financing daily reports comes from public pharmaceutical and biotech industry financing monitoring databases, as well as
+meta_description: Multi-turn Dialogue and Prompt Engineering for Medical Device Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

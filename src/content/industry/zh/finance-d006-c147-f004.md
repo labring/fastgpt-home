@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸投研知识库建设的向量模型与索引
-meta_description: 造纸投研的数据来源包括行业公开研报、上市造纸企业定期财报、原材料（木浆、废纸）价格日报、产能与开工率月度数据、环保政策文件及下游包装印刷行业需求调研文档。更
+meta_description: 造纸投研知识库建设的向量模型与索引：造纸投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 造纸、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

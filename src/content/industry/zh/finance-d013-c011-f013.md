@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品融资日报的知识库检索与召回
-meta_description: 休闲食品融资日报的数据主要来自公开企业融资公告、行业财经媒体披露、地方金融监管部门公示信息。更新节奏为每日更新，覆盖当日及近7个自然日内的休闲食品领域融资事
+meta_description: 休闲食品融资日报的知识库检索与召回：休闲食品融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 休闲食品、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

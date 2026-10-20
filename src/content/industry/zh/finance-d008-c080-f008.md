@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺智能尽调报告的工具调用与插件
-meta_description: 服装家纺领域的尽调数据来源包括品牌方内部SKU管理系统、第三方面料检测机构、电商平台销售后台、行业协会公开文档。数据分为结构化台账与非结构化文件两类：结构化
+meta_description: 服装家纺智能尽调报告的工具调用与插件：服装家纺智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 服装家纺、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

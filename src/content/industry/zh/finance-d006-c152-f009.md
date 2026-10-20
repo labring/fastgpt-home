@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类投研知识库建设的引用来源与溯源
-meta_description: 鞋类投研数据主要来自品牌方公开财报、全球鞋类行业协会季度报告、跨境电商销售监测平台、供应链上下游报价台账以及专利公开数据库。数据更新节奏随来源不同调整，品牌
+meta_description: 鞋类投研知识库建设的引用来源与溯源：鞋类投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 鞋类、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

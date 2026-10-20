@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台收益率的HTTP 接口与外部系统
-meta_description: 投资平台的收益率数据主要来源于交易所行情接口、自营交易核算系统及用户持仓数据。数据更新节奏分为两类：实时行情数据按秒级推送，当日收益率与累计收益率的日报数据
+meta_description: 投资平台收益率的HTTP 接口与外部系统：投资平台收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 投资平台、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

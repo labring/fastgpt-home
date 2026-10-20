@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃收益率的表单与交互
-meta_description: 玻璃品类的行情数据主要来自国内建筑材料现货交易平台、郑州商品交易所玻璃期货盘面数据。更新节奏为交易日每日16:30-17:00更新当日现货及期货结算价，法定
+meta_description: 玻璃收益率的表单与交互：玻璃收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 玻璃、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

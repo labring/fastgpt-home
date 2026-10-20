@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺研报检索的工具调用与插件
-meta_description: 服装家纺研报的数据主要来自券商研究所的行业分析报告、行业协会公开统计、头部品牌的供应链调研数据。更新节奏分为三类：周度更新线上终端销售数据，月度更新原材料（
+meta_description: 服装家纺研报检索的工具调用与插件：服装家纺研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 服装家纺、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

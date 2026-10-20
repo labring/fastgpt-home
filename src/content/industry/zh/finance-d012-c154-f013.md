@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品营销内容的知识库检索与召回
-meta_description: 饰品的数据源主要来自金融机构的贵金属产品台账、产品设计文档、营销推广物料库与客户咨询知识库。更新节奏随新品发行、营销活动调整，新品上线时批量更新产品数据，日
+meta_description: 饰品营销内容的知识库检索与召回：饰品营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 饰品、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

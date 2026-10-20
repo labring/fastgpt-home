@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程营销内容的工作流编排
-meta_description: 基建工程相关营销内容的数据主要来自公开招投标公告、施工过程日志、企业资质备案文件、区域基建规划方案及过往项目案例文档。数据更新节奏随项目进度触发，中标、开工
+meta_description: 基建工程营销内容的工作流编排：基建工程营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 基建工程、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股收益率的工具调用与插件
-meta_description: 多元控股的收益率与行情数据来源为旗下各业务子公司的经营数据、持仓金融产品的实时行情接口、定期财报披露信息。数据更新节奏分为每日收盘后全量更新的日报数据，以及
+meta_description: 多元控股收益率的工具调用与插件：多元控股收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 多元控股、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

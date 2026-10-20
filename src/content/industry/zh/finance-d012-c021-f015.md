@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的部署与升级
-meta_description: 其他综合营销内容的数据主要来源于金融机构内部合规部门审核的产品说明、临时营销活动话术、客户分层运营素材，以及合作方提供的合规宣传物料。更新节奏随营销节点变动
+meta_description: 其他综合营销内容的部署与升级：其他综合营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 其他综合、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

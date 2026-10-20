@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Chemical Fiber
-meta_description: Financial report data for the chemical fiber category comes primarily from public periodic reports of listed companies on the Shanghai Stock Exchange
+meta_description: Knowledge Base Retrieval and Recall for Chemical Fiber Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -39,7 +39,7 @@ Fields have clear unit attributes. Retrieval must match unit-related keywords to
 ## Three Common Mistakes
 - Phenomenon: When calling the chat API, the returned response does not include knowledge base matching results, only general large model content. Cause: The associated knowledge base ID is not specified in the API request parameters, or the retrieval switch for the knowledge base is not enabled.
 - Phenomenon: An external system cannot retrieve matching data from a private knowledge base when calling the API. Cause: API access permissions for the knowledge base are not configured, or the request does not carry a valid API key and knowledge base binding identifier.
-- Phenomenon: When using FastGPT 4.8.20, the knowledge base page fails to load or the chat interface crashes. Cause: This version has a known compatibility issue with knowledge base index synchronization. Upgrade to a stable version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to Confirm Configuration Correctness
 - A single chemical fiber financial report test document is uploaded. The parsed segmented content is checked to confirm retention of quantitative fields and their corresponding units.

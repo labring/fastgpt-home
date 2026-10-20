@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Rural Commercial Bank Financing
-meta_description: Data sources for rural commercial bank financing daily reports include three types of systems: internal core business systems, the People's Bank of
+meta_description: Deployment and Upgrade for Rural Commercial Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

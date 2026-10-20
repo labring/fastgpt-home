@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线营销内容的HTTP 接口与外部系统
-meta_description: 影视院线的营销内容数据主要来源于院线排片管理系统、合作票务平台接口、自有营销素材库及会员运营系统。排片数据每日更新，临时营销活动素材在活动上线前1-3天完成
+meta_description: 影视院线营销内容的HTTP 接口与外部系统：影视院线营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 影视院线、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

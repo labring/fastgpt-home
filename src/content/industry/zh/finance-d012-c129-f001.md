@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁营销内容的HTTP 接口与外部系统
-meta_description: 融资租赁营销内容的数据主要来源于企业内部营销素材库、风控部门更新的准入规则库，以及合作渠道提交的区域专属推广素材。更新节奏无固定周期，仅在租赁产品迭代、费率
+meta_description: 融资租赁营销内容的HTTP 接口与外部系统：融资租赁营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 融资租赁、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

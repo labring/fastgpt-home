@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务营销内容的多轮对话与提示词
-meta_description: IT服务的营销内容数据主要来自内部营销素材库、客户工单系统、服务咨询日志三类。营销素材库包含产品方案、案例白皮书、报价文档，更新节奏随季度营销活动或新品发布
+meta_description: IT 服务营销内容的多轮对话与提示词：IT 服务营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: IT 服务、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

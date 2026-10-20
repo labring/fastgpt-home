@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Coke Futures Yield and Market Data
-meta_description: Coke is a coal futures product listed on the Dalian Commodity Exchange. Market data comes primarily from official exchange public interfaces and
+meta_description: Sharing and Embedding for Coke Futures Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

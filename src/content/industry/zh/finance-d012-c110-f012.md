@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的模型接入与配置
-meta_description: 面向金融/保险/理财场景的电网设备营销内容的数据主要来自电力设备厂商的产品技术手册、内部设备台账系统、运维日志库及招投标项目文档。数据更新节奏因类型不同有所
+meta_description: 电网设备营销内容的模型接入与配置：电网设备营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 电网设备、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的多轮对话与提示词
-meta_description: 工程咨询的数据主要来自项目可研报告、招投标文件、造价核算清单、现场踏勘记录及行业规范标准文档。数据更新随单个项目推进节奏调整，项目启动后按需补充现场数据、政
+meta_description: 工程咨询营销内容的多轮对话与提示词：工程咨询营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

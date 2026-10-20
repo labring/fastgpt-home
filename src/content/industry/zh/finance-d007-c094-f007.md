@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化收益率的工作流编排
-meta_description: 炼化品类的行情与收益率数据主要来自炼化企业的生产执行系统（MES）、集团供应链数据中台以及大宗商品行情接口。数据更新节奏为每日凌晨完成前一日全量数据归集，次
+meta_description: 炼化收益率的工作流编排：炼化收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 炼化、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

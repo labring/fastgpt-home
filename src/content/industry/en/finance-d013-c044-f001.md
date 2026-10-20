@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c044-f001
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Commercial Property
-meta_description: Data for commercial property financing daily reports comes from commercial property operation systems, cooperative bank corporate financing ledgers
+meta_title: HTTP Interfaces and External Systems for Commercial
+meta_description: HTTP Interfaces and External Systems for Commercial Property Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

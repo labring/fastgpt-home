@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨收益率的工作流编排
-meta_description: 涂料油墨的行情与收益率数据主要来自国内涂料行业协会公开统计数据集、大宗商品现货交易平台的公开报价接口。现货报价数据每日更新前一日的市场交易信息，行业产能、库
+meta_description: 涂料油墨收益率的工作流编排：涂料油墨收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 涂料油墨、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

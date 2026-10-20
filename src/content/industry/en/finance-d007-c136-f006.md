@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Precious Metal Yield
-meta_description: Precious metal market and yield data comes from compliant exchanges and industry-recognized pricing agencies. There are two update cadences: real-time
+meta_description: Conversation Logging and Auditing for Precious Metal Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -13,7 +13,7 @@ date_modified: 2026-09-15
 
 # Conversation Logging and Auditing for Precious Metal Yield Data
 
-This configuration applies to FastGPT V4.9.3 and later versions.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## What This Category's Data Looks Like
 Precious metal market and yield data comes from compliant exchanges and industry-recognized pricing agencies. There are two update cadences: real-time market data and daily yield data. Real-time market data refreshes at high frequency per exchange rules. Daily yield data is generated only after daily market close. Each data entry includes fields such as product code, product name, latest transaction price, price change benchmark value, settlement price, position size, and data update timestamp. Units are yuan/gram for gold and platinum, yuan/kilogram for silver. Some derivative products include a deferred fee field. When associating data with sessions, a unique session ID and user request identifier must be bound to ensure logs are traceable.

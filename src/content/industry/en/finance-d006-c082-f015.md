@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Aquaculture Investment Research
-meta_description: Aquaculture data for financial investment research scenarios comes from multiple sources: public monitoring data released by the Ministry of
+meta_description: Deployment and Upgrade of Aquaculture Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

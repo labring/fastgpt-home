@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的模型接入与配置
-meta_description: 证券研报的数据主要来自券商研究所、公募基金投研部门及第三方财经资讯平台，更新节奏随交易日同步，通常在盘前或收盘后发布最新内容。文档结构通常包含摘要、核心投资
+meta_description: 证券研报检索的模型接入与配置：证券研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 证券、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

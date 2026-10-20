@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理营销内容的知识库检索与召回
-meta_description: 面向金融/保险/理财场景的水处理营销内容，数据源主要包括水务运营方的工艺手册、水质监测日报、项目竣工文档、合规排放标准文件及营销用解决方案材料。更新节奏差异
+meta_description: 水处理营销内容的知识库检索与召回：水处理营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 水处理、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

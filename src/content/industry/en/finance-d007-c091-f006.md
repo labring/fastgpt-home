@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Consumer Construction
-meta_description: Market data for consumer construction materials is sourced from public quotation APIs of regional building material wholesale markets and daily
+meta_description: Conversation Logs and Auditing for Consumer Construction Materials Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

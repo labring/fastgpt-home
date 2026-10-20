@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合财报分析的工具调用与插件
-meta_description: 其他综合财报分析的数据来源为公开披露的上市公司年度、半年度及季度财报文件，更新节奏随财报披露周期调整。文档多为PDF格式的全文内容或XBRL格式的标准化结构
+meta_description: 其他综合财报分析的工具调用与插件：其他综合财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 其他综合、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

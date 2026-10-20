@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备收益率的部署与升级
-meta_description: 金融行业专用机械设备的收益率与行情日报的数据来源为设备配套的行情采集模块、金融机构交易核算系统，以及行业公开行情数据源。更新节奏为每日生成一次全量统计日报，
+meta_description: 专用设备收益率的部署与升级：专用设备收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 专用设备、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

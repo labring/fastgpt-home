@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的工作流编排
-meta_description: 面向金融/保险/理财领域的卫星通信营销相关数据，主要来自三类来源：卫星地面站的实时信令数据、金融终端设备的营销触达上报数据、星上载荷的运行日志。数据更新节奏
+meta_description: 卫星通信营销内容的工作流编排：卫星通信营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 卫星通信、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

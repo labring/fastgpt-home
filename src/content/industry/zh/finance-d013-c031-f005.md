@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药融资日报的多轮对话与提示词
-meta_description: 化学制药融资日报的数据来源于公开监管披露平台、行业投融资数据库的公开条目。更新节奏随每日投融资事件披露同步更新，遇节假日顺延。文档为单工作表的结构化表格，字
+meta_description: 化学制药融资日报的多轮对话与提示词：化学制药融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学制药、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

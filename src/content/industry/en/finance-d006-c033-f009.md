@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Chemical Fiber
-meta_description: Chemical fiber investment research data is sourced from upstream petrochemical raw material quotation platforms, public production scheduling
+meta_description: Citation Source and Traceability for Chemical Fiber Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Finally, mixed-type document recall must be sorted by data source priority, retu
 | `recall_count` | Top 20 entries | Chemical fiber data includes multiple data source types. Excessive recall leads to redundant context, while insufficient recall fails to cover core quotation and analysis content |
 | `similarity_threshold` | 0.75–0.85 | Chemical fiber product specifications have high segmentation granularity. A higher threshold is needed to filter irrelevant non-similar product data and avoid traceability errors |
 | `reranked_return_count` | Top 8 entries | Core spot quotation and key industry report content must be retained, balancing recall accuracy and context length |
-| `citation_template` | `{{source}} | {{update_time}} | {{product_spec}} | {{price}}` | Chemical fiber traceability requires clear labeling of data source, update time, product specification, and transaction unit price to meet traceability requirements for investment research scenarios |
+| `citation_template` | `example value | example value | example value | example value` | Chemical fiber traceability requires clear labeling of data source, update time, product specification, and transaction unit price to meet traceability requirements for investment research scenarios |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120 seconds | Structured quotation forms typically contain multiple rows of data, with long parsing times. Extending the timeout period avoids parsing failures |
 | `maxContext` | 8000–12000 characters | Chemical fiber investment research requires referencing raw material prices, product quotations, and industry analysis simultaneously. A longer context can cover multi-dimensional traceability information |
 

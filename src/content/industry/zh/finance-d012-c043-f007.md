@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产营销内容的工作流编排
-meta_description: 商业地产的营销内容数据来源包括招商管理系统、客流统计平台、商户租赁合同库、线下活动报名系统。基础项目信息月度更新，客流、商户营收数据每日更新，活动相关数据实
+meta_description: 商业地产营销内容的工作流编排：商业地产营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 商业地产、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

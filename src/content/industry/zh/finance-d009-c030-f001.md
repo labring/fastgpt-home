@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品研报检索的HTTP 接口与外部系统
-meta_description: 化妆品研报数据主要来源于行业协会公开报告、品牌官方合规备案信息、第三方成分检测机构、主流电商平台销售监测数据及监管公示。更新节奏随品牌新品上线、季度销售周期
+meta_description: 化妆品研报检索的HTTP 接口与外部系统：化妆品研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化妆品、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

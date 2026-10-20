@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c038-f005
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: In-App Natural Language Search for Historical Query Records
-meta_description: Historical query record data is sourced from end-user AI interaction session logs. Updates occur either in real time after a single session ends, or
+meta_title: In-App Natural Language Search for Historical Query
+meta_description: In-App Natural Language Search for Historical Query Records: Multi-Turn Dialogues and Prompt Configuration
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Historical query records are bound to a unique session identifier. Multi-turn di
 | `historyRetrieveCount` | Top 3-5 entries | Individual historical query records can be lengthy; too many entries will consume excessive context space and impact model response efficiency |
 | `maxContext` | 8000-12000 characters | Historical records include user inputs and AI responses; sufficient space must be reserved for retrieved historical content and the current interaction |
 | `contextWindowStrategy` | Truncate by session grouping | Prevents cross-session historical records from being mixed into the current conversation, matching the session binding feature of historical query records |
-| `promptTemplate` | Includes `{{session_id}}` and `{{history_list}}` variables | Accurately pulls historical query records for the current session, filtering data from unrelated sessions |
+| `promptTemplate` | Includes `example value` and `example value` variables | Accurately pulls historical query records for the current session, filtering data from unrelated sessions |
 | `latexRenderEnable` | Enabled | Fixes issues where LaTeX formats fail to display correctly in production environments, matching rendering logic from debug previews |
 | `apiCallTimeout` | 60 seconds | Batch retrieval of historical query records may involve multiple rounds of log retrieval; sufficient response time must be reserved |
 

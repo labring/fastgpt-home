@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Commercial Real Estate
-meta_description: Data sources for commercial real estate financing daily reports include project financing filing systems of local housing and urban-rural development
+meta_description: Vector Models and Indexing for Commercial Real Estate Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

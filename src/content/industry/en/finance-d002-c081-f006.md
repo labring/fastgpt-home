@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c081-f006
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logs and Auditing for Unified AI Platforms with
-meta_description: Log data for the model allocation category comes from model scheduling requests within the platform, downstream model return results, and permission
+meta_title: Conversation Logs and Auditing for Unified AI Platforms
+meta_description: Conversation Logs and Auditing for Unified AI Platforms with Model Allocation
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

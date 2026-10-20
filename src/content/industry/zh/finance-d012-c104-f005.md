@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃营销内容的多轮对话与提示词
-meta_description: 玻璃营销相关的数据来源包括生产厂商的出厂质检报告、服务于金融机构营业厅与保险网点的幕墙参数文档、供应链的库存台账及营销用产品手册。更新节奏为：常规浮法玻璃每
+meta_description: 玻璃营销内容的多轮对话与提示词：玻璃营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 玻璃、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

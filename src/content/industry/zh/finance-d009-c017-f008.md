@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子研报检索的工具调用与插件
-meta_description: 这个品类的数据主要来自券商电子行业研究团队、行业协会公开统计、头部面板与光学元件企业披露的运营数据，以及专业供应链数据库。常规行业动态研报每周更新，季度业绩
+meta_description: 光学光电子研报检索的工具调用与插件：光学光电子研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 光学光电子、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美财报分析的工具调用与插件
-meta_description: 医美财报的数据来源包括境内外证券交易所披露的公开年度、季度财报文件，以及医美机构披露的月度经营简报。更新节奏为季度财报于季度结束后1至2个月内公开，年度财报
+meta_description: 医美财报分析的工具调用与插件：医美财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 医美、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for General
-meta_description: General equipment yield rate and market data come from official statistical monitoring systems of the machinery and equipment manufacturing industry
+meta_description: Multi-turn Dialogue and Prompt Engineering for General Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ For financial scenario yield rate market daily reports, general equipment data c
 > The parameter values provided on this page are all common recommended starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Configuration Mistakes
-- Phenomenon: After calling the API and passing prompt variables, the returned result does not match the specified general equipment category. Cause: The `prompt_template` fails to correctly bind the variable placeholder, or the passed variable format does not match template requirements.
+- Phenomenon: After calling the API and passing prompt variables, the returned result does not match the specified general equipment category. Cause: The `prompt_template` fails to correctly bind the variable pending verification, or the passed variable format does not match template requirements.
 - Phenomenon: Multi-turn dialogue returns empty or incorrect fields when extracting general equipment data. Cause: The `field_mapping_rule` is not set to precise header matching, or the prompt does not clearly specify the field to extract.
 - Phenomenon: The model returns general equipment yield data with incorrect formatting, such as extra unit annotations. Cause: The `response_format` is not configured to retain the original decimal format, or the prompt does not clearly limit output content scope.
 

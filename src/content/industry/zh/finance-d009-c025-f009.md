@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行研报检索的引用来源与溯源
-meta_description: 农商行研报的数据来源包括地方银保监分局公开监管通报、省级农商联合银行内部培训材料、县域经济发展白皮书。更新节奏：监管类文档随政策调整不定期更新，内部业务研报
+meta_description: 农商行研报检索的引用来源与溯源：农商行研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 农商行、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

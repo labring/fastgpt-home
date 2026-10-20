@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药财报分析的引用来源与溯源
-meta_description: 中药相关财报数据主要来源于中药上市企业的年度、半年度、季度财报，中国中药协会的行业监测数据，国家药监局的中药注册备案信息，以及中药材主产区的行业统计公报。数
+meta_description: 中药财报分析的引用来源与溯源：中药财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 中药、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

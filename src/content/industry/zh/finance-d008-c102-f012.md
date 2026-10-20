@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢智能尽调报告的模型接入与配置
-meta_description: 特钢智能尽调报告的数据主要来自钢厂出厂质检单据、行业公开牌号标准库、供应链上下游的生产与交易台账。数据更新节奏分两类：行业牌号标准库随标准修订不定期更新，生
+meta_description: 特钢智能尽调报告的模型接入与配置：特钢智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 特钢、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

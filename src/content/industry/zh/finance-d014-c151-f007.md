@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路财报分析的工作流编排
-meta_description: 铁路公路财报数据主要来自国铁集团、地方交通管理部门及上市主体公开披露的定期报告，为金融领域投研分析的核心数据源之一。更新节奏以季度、年度为核心周期，部分细分
+meta_description: 铁路公路财报分析的工作流编排：铁路公路财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 铁路公路、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

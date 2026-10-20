@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的工作流编排
-meta_description: 数据主要来自离岛免税订单系统、海关核销数据库、会员CRM系统、信用卡支付渠道与商品SKU管理库。订单与核销数据每日批量同步，商品促销信息每周更新，会员行为与
+meta_description: 免税营销内容的工作流编排：免税营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 免税、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

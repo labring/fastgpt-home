@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷收益率的工作流编排
-meta_description: 包装印刷的收益率与行情数据主要来自企业ERP系统、生产工单台账、原材料采购台账及终端订单报价系统。数据更新节奏为每日一次，于当日生产结束后生成T+1日报。文
+meta_description: 包装印刷收益率的工作流编排：包装印刷收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 包装印刷、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

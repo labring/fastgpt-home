@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采研报检索的多轮对话与提示词
-meta_description: 油气开采研报主要来自行业协会公开报告、油气生产企业年度/季度专项报告、第三方能源咨询机构的细分研究文档。常规研报按月度、季度更新，突发行业事件如油价波动、新
+meta_description: 油气开采研报检索的多轮对话与提示词：油气开采研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 油气开采、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

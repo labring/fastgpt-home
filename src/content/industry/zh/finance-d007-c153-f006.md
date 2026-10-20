@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电收益率的对话日志与审计
-meta_description: 风电收益率与行情日报的数据来源包括场站SCADA采集系统、区域电力交易中心公开数据及电网调度平台。数据按自然日生成前一日的完整报表，部分实时监测节点数据按5
+meta_description: 风电收益率的对话日志与审计：风电收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 风电、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Investment Platform
-meta_description: Research report data for investment platforms primarily comes from public research reports published by securities firms, public offering funds, and
+meta_description: Model Integration and Configuration for Investment Platform Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

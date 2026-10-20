@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的工作流编排
-meta_description: 其他综合营销内容的数据主要来自品牌自有内容管理库、第三方合规素材合作平台，以及一线运营人员上传的定制推广物料。更新节奏无固定周期，随营销活动节奏按需调整，单
+meta_description: 其他综合营销内容的工作流编排：其他综合营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 其他综合、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

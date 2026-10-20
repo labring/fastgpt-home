@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁智能尽调报告的向量模型与索引
-meta_description: 数据来源包括承租人主体资质文件、租赁标的物权属资料、过往履约记录、财务审计报告、租赁合同原件扫描件与结构化台账；更新节奏为单项目尽调完成后批量入库，承租人履
+meta_description: 融资租赁智能尽调报告的向量模型与索引：融资租赁智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 融资租赁、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

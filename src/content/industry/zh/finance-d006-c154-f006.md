@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品投研知识库建设的对话日志与审计
-meta_description: 饰品投研的数据主要来源于品牌官方商品页、行业协会发布的材质标准报告、供应链批次质检单、实时原料报价平台。更新节奏分为三类：原料报价每日更新，新品SKU随品牌
+meta_description: 饰品投研知识库建设的对话日志与审计：饰品投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 饰品、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

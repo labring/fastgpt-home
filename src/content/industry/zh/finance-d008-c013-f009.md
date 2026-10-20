@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险智能尽调报告的引用来源与溯源
-meta_description: 保险智能尽调报告的数据来源包括保险产品条款、投保人健康告知文件、核保审批记录、理赔历史档案、银保监会监管公示文件。更新节奏方面，产品条款随新险种上线或监管要
+meta_description: 保险智能尽调报告的引用来源与溯源：保险智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 保险、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

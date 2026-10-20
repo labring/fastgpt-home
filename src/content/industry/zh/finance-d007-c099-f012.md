@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气收益率的模型接入与配置
-meta_description: 全国城市燃气价格监测系统、区域燃气管网运营方的公开结算台账为主要数据来源，更新节奏为每日当日交易结束后1.5小时内完成当日全量数据更新。文档结构为结构化JS
+meta_description: 燃气收益率的模型接入与配置：燃气收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 燃气、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

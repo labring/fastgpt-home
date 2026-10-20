@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备融资日报的部署与升级
-meta_description: 航空装备融资日报的数据来源包括国防科技工业主管部门公开备案的航空装备融资租赁项目、民航局发布的航司装备采购融资公示、航空工业产业链配套企业的融资披露公告。更
+meta_description: 航空装备融资日报的部署与升级：航空装备融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 航空装备、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

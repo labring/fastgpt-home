@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁投研知识库建设的上下文与 token
-meta_description: 专业连锁的投研数据主要来源于门店运营系统、供应链管理平台、会员管理系统及公开商圈调研资料。数据更新节奏覆盖实时（会员消费、当日客流）、每日（门店营收、库存）
+meta_description: 专业连锁投研知识库建设的上下文与 token：专业连锁投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 专业连锁、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

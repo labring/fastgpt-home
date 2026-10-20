@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Water Utility
-meta_description: Water utility marketing data is primarily sourced from water operation business systems, official service channels, and third-party public
+meta_description: Multi-turn Dialogue and Prompting for Water Utility Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

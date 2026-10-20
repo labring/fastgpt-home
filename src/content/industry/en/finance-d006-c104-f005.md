@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Glass
-meta_description: Glass industry investment research data mainly comes from weekly production capacity reports released by industry associations, daily ex-factory
+meta_description: Multi-turn Dialogue and Prompt Engineering for Glass Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

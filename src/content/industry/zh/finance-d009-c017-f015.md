@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光学光电子研报检索的部署与升级
-meta_description: 光学光电子研报的来源包括券商研究所电子行业研究报告、中国光学光电子行业协会公开资料、上市公司定期公告。更新节奏随行业事件波动，新品发布、财报季、行业展会期间
+meta_description: 光学光电子研报检索的部署与升级：光学光电子研报检索的部署与升级，涵盖配置与验证建议
 keywords: 光学光电子、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

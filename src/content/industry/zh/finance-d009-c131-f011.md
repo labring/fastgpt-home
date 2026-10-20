@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰研报检索的文档解析与分块
-meta_description: 装修装饰研报的数据主要来自行业协会发布的年度市场报告、建材供应商的季度价格公报、装修企业的项目竣工案例文档，以及住建部门出台的装修施工合规文件。更新节奏不固
+meta_description: 装修装饰研报检索的文档解析与分块：装修装饰研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 装修装饰、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

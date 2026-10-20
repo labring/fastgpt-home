@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化财报分析的部署与升级
-meta_description: 炼化品类的财报数据主要来自交易所公开披露的定期报告、企业投资者关系板块公告及第三方结构化财报数据库。更新节奏遵循监管要求，年报每年更新一次，半年报、季报分别
+meta_description: 炼化财报分析的部署与升级：炼化财报分析的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 炼化、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

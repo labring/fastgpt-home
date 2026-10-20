@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Feed Financing Daily Reports
-meta_description: Data sources for feed financing daily reports include daily transaction ledgers from feed industry raw material traders, financing order data from
+meta_description: Deployment and Upgrade for Feed Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

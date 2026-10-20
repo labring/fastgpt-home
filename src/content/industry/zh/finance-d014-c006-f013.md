@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药财报分析的知识库检索与召回
-meta_description: 中药财报的来源为证券交易所公开披露平台、企业官方公告栏。更新节奏为年度报告于每个会计年度结束后四个月内披露，半年度报告于上半年结束后两个月内披露，季度报告于
+meta_description: 中药财报分析的知识库检索与召回：中药财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 中药、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

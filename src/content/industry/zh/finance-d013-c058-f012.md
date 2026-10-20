@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的模型接入与配置
-meta_description: 小金属融资日报的数据来源于国内有色金属工业协会每日公开监测数据、上海期货交易所及伦敦金属交易所的挂牌品种融资持仓行情。更新节奏为每日凌晨2点更新前一交易日的
+meta_description: 小金属融资日报的模型接入与配置：小金属融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 小金属、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺融资日报的模型接入与配置
-meta_description: 服装家纺融资日报的数据主要来自国内纺织服饰行业协会的公开监测数据库、上市及非上市服装家纺企业的官方公告、第三方供应链金融服务平台的交易数据。更新节奏为每日更
+meta_description: 服装家纺融资日报的模型接入与配置：服装家纺融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 服装家纺、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

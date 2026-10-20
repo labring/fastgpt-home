@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏研报检索的知识库检索与召回
-meta_description: 游戏研报数据主要来自券商研究所行业研究报告、游戏厂商公开财报、第三方游戏数据平台公开内容及行业峰会披露信息。更新节奏随行业事件调整，版号发放、新游上线、季度
+meta_description: 游戏研报检索的知识库检索与召回：游戏研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 游戏、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

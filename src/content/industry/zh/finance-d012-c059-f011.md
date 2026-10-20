@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属营销内容的文档解析与分块
-meta_description: 这个品类的数据来源包括行业现货交易平台的导出文档、有色金属行业协会的月度简报、企业自制的获客手册、营销话术合集以及客户跟进案例整理文档。现货行情类文档按自然
+meta_description: 工业金属营销内容的文档解析与分块：工业金属营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 工业金属、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

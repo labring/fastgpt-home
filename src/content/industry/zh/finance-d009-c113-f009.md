@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒研报检索的引用来源与溯源
-meta_description: 白酒研报主要来自国内券商研究所、酒类行业协会及上市酒企公开披露的研究文档。更新节奏随行业节点调整，旺季前、财报季会集中发布新内容。文档多为结构化与半结构化结
+meta_description: 白酒研报检索的引用来源与溯源：白酒研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 白酒、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

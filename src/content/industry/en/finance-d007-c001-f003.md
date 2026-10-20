@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for IT Service Revenue Rates
-meta_description: IT service revenue rate and market data is sourced from internal project accounting modules of financial institutions and public industry financial IT
+meta_description: Sharing and Embedding for IT Service Revenue Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

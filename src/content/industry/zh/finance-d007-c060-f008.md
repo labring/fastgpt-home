@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的工具调用与插件
-meta_description: 工程咨询领域的收益率与行情日报数据，来源主要包括住建部门官方造价平台发布的区域造价指数、行业咨询协会的项目调研数据集，以及项目委托方提供的内部财务台账数据。
+meta_description: 工程咨询收益率的工具调用与插件：工程咨询收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 工程咨询、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

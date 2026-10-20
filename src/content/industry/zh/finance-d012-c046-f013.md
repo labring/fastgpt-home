@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理营销内容的知识库检索与召回
-meta_description: 固废处理相关的营销内容数据主要来源为环卫监管系统的作业台账、企业内部清运记录、环保部门公示的资质许可文件与环评报告。更新节奏分为三类：日常清运作业数据随每日
+meta_description: 固废处理营销内容的知识库检索与召回：固废处理营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 固废处理、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Sanctions
-meta_description: Sanctions list screening data primarily comes from sanction lists published by national law enforcement agencies, industry-shared risk entity
+meta_description: Multi-turn Dialogue and Prompt Engineering for Sanctions List Screening KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

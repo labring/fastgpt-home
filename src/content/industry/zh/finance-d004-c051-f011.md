@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的文档解析与分块
-meta_description: 处罚案例的数据主要来源于监管机构正式通报、行业自律组织公示文件及内部稽核处罚记录。更新节奏无固定周期，重大处罚事件发生后会集中发布，日常以零散的单份处罚公告
+meta_description: 处罚案例合规的文档解析与分块：处罚案例合规的文档解析与分块，涵盖配置与验证建议。
 keywords: 处罚案例、合规与内部制度问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

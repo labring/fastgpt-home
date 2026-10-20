@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造智能尽调报告的引用来源与溯源
-meta_description: 纺织制造领域的智能尽调数据主要包含四类来源：上游原材料供应商的质检报告、工厂生产环节的织造/染整工艺台账、库存与进销存的结构化记录，以及行业协会发布的产能与
+meta_description: 纺织制造智能尽调报告的引用来源与溯源：纺织制造智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 纺织制造、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

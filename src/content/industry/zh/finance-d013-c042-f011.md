@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营融资日报的文档解析与分块
-meta_description: 品牌代运营（美容护理类）的融资日报数据，主要来源于服务品牌的融资对接邮件、内部项目跟进台账、行业融资数据库的每日更新。更新节奏为每日更新，单份日报覆盖1-5
+meta_description: 品牌代运营融资日报的文档解析与分块：品牌代运营融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 品牌代运营、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

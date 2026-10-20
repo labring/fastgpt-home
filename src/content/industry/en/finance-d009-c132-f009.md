@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Computer Equipment
-meta_description: Computer equipment research report data primarily comes from public statistics released by industry associations, shipment monitoring conducted by
+meta_description: Citation Sources and Traceability for Computer Equipment Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

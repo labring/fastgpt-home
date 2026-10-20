@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路收益率的对话日志与审计
-meta_description: 铁路公路收益率相关数据的数据源包括交通运输部路网监测与应急处置中心公开报表、各铁路局集团运营台账、全国公路联网收费系统。数据更新节奏分为两类：铁路干线运营数
+meta_description: 铁路公路收益率的对话日志与审计：铁路公路收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 铁路公路、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

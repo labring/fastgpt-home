@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电投研知识库建设的数据库与运维
-meta_description: 黑色家电投研数据包含结构化与非结构化两类。结构化数据来源包括品牌公开产品规格文档、行业监测机构的零售终端数据、上游原材料供应商报价台账、线下卖场POS同步数
+meta_description: 黑色家电投研知识库建设的数据库与运维：黑色家电投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 黑色家电、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

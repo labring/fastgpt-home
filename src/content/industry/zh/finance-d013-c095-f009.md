@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力融资日报的引用来源与溯源
-meta_description: 热力融资日报的数据来源主要为各地公用事业监管平台公开备案库、热力生产供应企业官方披露的融资公告、第三方公用事业数据服务商的公开接口。更新节奏为每日凌晨更新前
+meta_description: 热力融资日报的引用来源与溯源：热力融资日报的引用来源与溯源，涵盖配置与验证建议。
 keywords: 热力、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

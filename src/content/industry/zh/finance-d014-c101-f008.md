@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流财报分析的工具调用与插件
-meta_description: 物流品类的财报数据主要来自上市物流企业公开年报、行业主管部门月度运行公报、企业内部运单与仓储管理系统导出报表。数据更新节奏分为年度完整财报、季度运营简报、月
+meta_description: 物流财报分析的工具调用与插件：物流财报分析的工具调用与插件，涵盖配置与验证建议。
 keywords: 物流、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

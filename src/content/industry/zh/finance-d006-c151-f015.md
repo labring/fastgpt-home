@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路投研知识库建设的部署与升级
-meta_description: 铁路公路投研数据主要来源于交通运输主管部门公开公报、线路运维日志、客货运量统计报表、工程设计文档与实时路况监测数据。日常运维数据按日更新，季度运营报表按季度
+meta_description: 铁路公路投研知识库建设的部署与升级：铁路公路投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 铁路公路、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

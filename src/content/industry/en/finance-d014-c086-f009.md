@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Automotive Service
-meta_description: Financial report data for the automotive service category targeting the financial sector primarily comes from annual or half-year financial reports of
+meta_description: Citation Source and Traceability for Automotive Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Financial report data for the automotive service sector targeting financial use 
 | `reranked return count` | `Top 5` | Single financial report data has many fields. Limiting the return count avoids information overload while retaining core detailed content |
 | `segment length` | `800–1200 characters` | The detailed paragraphs of financial report documents are long. This segment length preserves complete business segment data and avoids truncating key information |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `300 seconds` | Parsing large financial report documents takes significant time. 300 seconds covers the parsing needs of most public financial reports and industry reports |
-| `citation template` | `Mark source + document title + chapter number according to data source` | There are multiple types of data sources for automotive service financial reports. Clear marking improves compliance and readability of traceability |
+| `Traceability details` | `Mark source + document title + chapter number according to data source` | There are multiple types of data sources for automotive service financial reports. Clear marking improves compliance and readability of traceability |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing.
 

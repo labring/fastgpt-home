@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料投研知识库建设的引用来源与溯源
-meta_description: 饲料品类的数据源涵盖公开行业协会报告、原料供应商报价系统、海关进出口数据库与第三方检测机构报告。数据更新节奏存在差异：原料采购报价每日更新，行业供需报告每季
+meta_description: 饲料投研知识库建设的引用来源与溯源：饲料投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 饲料、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

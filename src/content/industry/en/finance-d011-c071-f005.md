@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c071-f005
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Conversation and Prompt Engineering for
-meta_description: Metric caliber data is sourced from internal business accounting systems, regulatory reporting platforms, and official statistical ledgers of
+meta_title: Multi-turn Conversation and Prompt Engineering
+meta_description: Multi-turn Conversation and Prompt Engineering for In-terminal Natural Language Retrieval of Metric Calibration
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

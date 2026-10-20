@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖财报分析的部署与升级
-meta_description: 水产养殖财报分析的数据源主要包括养殖企业内部生产台账、属地水产养殖主管部门月度报送数据、第三方水质与病害监测报告，以及季度/年度审计财报。生产类数据按养殖批
+meta_description: 水产养殖财报分析的部署与升级：水产养殖财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 水产养殖、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

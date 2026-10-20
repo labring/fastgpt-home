@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的多轮对话与提示词
-meta_description: 小金属财报数据主要来自境内外上市公司年报、季报，以及有色金属行业协会发布的月度供需简报。更新节奏为季度财报每季度末后1-2个月公开，年度财报于次年4月底前完
+meta_description: 小金属财报分析的多轮对话与提示词：小金属财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

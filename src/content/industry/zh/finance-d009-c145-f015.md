@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备研报检索的部署与升级
-meta_description: 通信设备研报的数据来源包括行业协会公开报告、通信设备厂商官方白皮书、第三方咨询机构的赛道分析文档。更新节奏以季度常规报告为主，搭配新品发布、技术迭代时的临时
+meta_description: 通信设备研报检索的部署与升级：通信设备研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 通信设备、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

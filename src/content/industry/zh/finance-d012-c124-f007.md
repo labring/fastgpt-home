@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的工作流编排
-meta_description: 数据来源为工业PLC采集模块、生产执行系统（MES）、营销物料投放后台；更新频率为每1至5分钟一次；文档结构以结构化表格或JSON格式为主，包含设备唯一标识
+meta_description: 自动化设备营销内容的工作流编排：自动化设备营销内容的工作流编排，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

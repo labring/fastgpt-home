@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行投研知识库建设的上下文与 token
-meta_description: 股份制银行投研数据来源包括内部行业研报、监管机构公开文件、沪深及港股实时行情数据、同业业务动态报告。数据更新节奏存在差异：实时行情按秒级刷新，行业研报按周或
+meta_description: 股份制银行投研知识库建设的上下文与 token：股份制银行投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 股份制银行、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮研报检索的向量模型与索引
-meta_description: 酒店餐饮研报的数据主要来自公开行业协会监测报告、上市餐饮企业季度财报、餐饮供应链数据平台及线下门店经营监测系统。更新节奏覆盖日度（门店客流、营收）、周度（供
+meta_description: 酒店餐饮研报检索的向量模型与索引：酒店餐饮研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 酒店餐饮、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

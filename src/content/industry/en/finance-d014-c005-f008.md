@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Personal Care Products
-meta_description: Personal care products financial report data primarily comes from annual and quarterly reports of listed companies publicly disclosed by domestic and
+meta_description: Tool Calling and Plugins for Personal Care Products Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ The multi-source nature, varied update timelines, diverse field units, and detai
 ## Three Common Mistakes
 - Symptom: Tool calling returns empty fields or malformed results. Cause: Failed to adapt to the format differences of multiple sources of personal care financial reports, and did not configure corresponding parsing rules, leading to field extraction failures.
 - Symptom: MySQL plugin returns an error when executing multi-line insert and select statements. Cause: The `mysql_multi_statements` configuration item is not enabled. The default restriction only supports single statement execution.
-- Symptom: A 500 error is returned when importing documents, but conversation calls work normally. Cause: The version of the bge model deployed via ollama is incompatible with the document parsing interface of FastGPT 4.8.10, and model loading parameters were not adjusted.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## How to Confirm Correct Configuration
 - Upload a test personal care financial report PDF or Excel file, check if the parsed fields cover the core items required by the business, and confirm that the parsing rules match the data format.

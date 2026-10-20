@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区智能尽调报告的文档解析与分块
-meta_description: 产业园区智能尽调报告的数据来源包括园区管委会公开的规划审批文件、运营方的内部台账、第三方尽调底稿及土地出让相关文档。更新节奏随文档类型差异明显：规划类文档随
+meta_description: 产业园区智能尽调报告的文档解析与分块：产业园区智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 产业园区、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

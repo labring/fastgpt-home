@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Financing Daily Reports
-meta_description: The data for financing daily reports originates from internal financing approval systems of affiliated subsidiaries, public financing announcement
+meta_description: Vector Models and Indexing for Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

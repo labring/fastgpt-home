@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Bid Rejection Item
-meta_description: Bid rejection item data mainly comes from public procurement public service platforms, industry tendering official websites, and internal enterprise
+meta_description: Model Integration and Configuration for Bid Rejection Item Bidding Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

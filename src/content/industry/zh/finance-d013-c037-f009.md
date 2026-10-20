@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信融资日报的引用来源与溯源
-meta_description: 卫星通信融资日报的数据来源为国内及国际卫星通信企业的公开融资公告、证券交易所披露文件、行业垂直媒体的实时汇总。更新节奏为每日更新，覆盖当日发布的全部融资事件
+meta_description: 卫星通信融资日报的引用来源与溯源：卫星通信融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 卫星通信、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

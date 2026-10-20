@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢智能尽调报告的工作流编排
-meta_description: 特钢智能尽调报告面向金融保险理财领域的尽调需求，数据主要来自钢厂生产台账、批次质检报告、下游采购订单及行业协会特钢品类监测数据库。生产台账每日更新，批次质检
+meta_description: 特钢智能尽调报告的工作流编排：特钢智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 特钢、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

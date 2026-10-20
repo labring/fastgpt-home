@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Snack Food Intelligent Due
-meta_description: Data sources for snack food intelligent due diligence include batch quality inspection reports provided by suppliers, inventory ledgers for
+meta_description: Workflow Orchestration for Snack Food Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢财报分析的知识库检索与召回
-meta_description: 普钢财报的数据主要来源于沪深交易所公开公告、上市公司季度报与年度报告、钢铁行业协会发布的月度统计数据。更新节奏随财报发布周期调整，季度报于每季度结束后1-2
+meta_description: 普钢财报分析的知识库检索与召回：普钢财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 普钢、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

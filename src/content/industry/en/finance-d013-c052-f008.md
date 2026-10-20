@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Conglomerate Funding Daily
-meta_description: Data sources for this use case include public regulatory disclosure platforms, subsidiary financial systems, and third-party compliance data
+meta_description: Tool Calling and Plugins for Conglomerate Funding Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

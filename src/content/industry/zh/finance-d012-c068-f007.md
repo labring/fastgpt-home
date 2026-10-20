@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台营销内容的工作流编排
-meta_description: 投资平台的营销相关数据来源包括自有用户行为数据库、合规备案的产品档案库、公开市场的行业研究文档。数据更新节奏存在差异：产品档案每日同步更新，用户行为数据按小
+meta_description: 投资平台营销内容的工作流编排：投资平台营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 投资平台、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

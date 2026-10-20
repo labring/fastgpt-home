@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for General Equipment
-meta_description: Data sources include public product specifications from general equipment manufacturers, category operation data released by industry associations
+meta_description: Citation Sources and Traceability for General Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ The parameter fields for general equipment are numerous and highly segmented. Pr
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120–180 seconds | Some large general equipment product manuals have long lengths. Sufficient parsing time is needed to complete content splitting and field extraction |
 | `maxContext` | 1000–1500 characters | Parameter descriptions for general equipment are lengthy. Sufficient context must be retained to accurately match corresponding fields and source information |
 | `recall count` | Top 15–20 results | General equipment data sources are dispersed. Recalling enough candidate results first allows filtering of highly relevant content via re-ranking |
-| `citation template` | "Equipment Model + Parameter Name + Parameter Value + Source Document Name + Publication Time" | General equipment due diligence requires clear parameter sources and timeliness to facilitate subsequent traceability verification |
+| `Traceability details` | "Equipment Model + Parameter Name + Parameter Value + Source Document Name + Publication Time" | General equipment due diligence requires clear parameter sources and timeliness to facilitate subsequent traceability verification |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require individual analysis. It is recommended to test on your own samples before finalizing settings.
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税投研知识库建设的向量模型与索引
-meta_description: 免税相关数据主要来自官方监管数据、行业公开研报、政策规范性文件及免税店经营台账。政策类文件随监管部门发布即时更新，经营台账数据按自然季度同步，行业研报随发布
+meta_description: 免税投研知识库建设的向量模型与索引：免税投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 免税、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料收益率的数据库与运维
-meta_description: 饲料收益率相关数据主要来自国内大宗商品现货交易所的原料报价、饲料生产企业的生产台账及行业协会的公开调研数据。数据更新节奏为每日早间更新前一交易日的全量行情，
+meta_description: 饲料收益率的数据库与运维：饲料收益率的数据库与运维，涵盖配置与验证建议。。。。。
 keywords: 饲料、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

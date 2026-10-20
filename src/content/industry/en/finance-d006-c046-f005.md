@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Solid Waste
-meta_description: Solid waste treatment investment research data sources include ecological environment department hazardous waste management ledgers, local sanitation
+meta_description: Multi-turn Dialogue and Prompt Engineering for Solid Waste Treatment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

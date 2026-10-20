@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融营销内容的工作流编排
-meta_description: 多元金融的营销相关数据主要来自三个渠道：公司内部的产品备案库、用户行为日志库与营销素材库。产品备案数据为结构化格式，包含产品代码、风险等级、投资范围、业绩基
+meta_description: 多元金融营销内容的工作流编排：多元金融营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 多元金融、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

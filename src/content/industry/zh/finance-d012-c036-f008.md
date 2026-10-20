@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体营销内容的工具调用与插件
-meta_description: 半导体营销相关的数据主要来源于原厂产品规格书、供应链库存台账、行业新品公告及竞品参数对比文档。数据更新节奏分为三类：新品发布时实时同步，季度供需数据按季度更
+meta_description: 半导体营销内容的工具调用与插件：半导体营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 半导体、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

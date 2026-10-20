@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品投研知识库建设的向量模型与索引
-meta_description: 文娱用品的投研数据来源涵盖供应链生产报表、终端销售台账、行业展会新品公示、IP授权合作文档及市场舆情信息。更新节奏分为三类：SKU库存与销售数据每日更新，新
+meta_description: 文娱用品投研知识库建设的向量模型与索引：文娱用品投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 文娱用品、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

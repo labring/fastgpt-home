@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Auto Service Profit Margins
-meta_description: Data for auto service profit margin and market trend daily reports comes from daily transaction summaries of store POS cash registers, supply chain
+meta_description: Sharing and Embedding of Auto Service Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

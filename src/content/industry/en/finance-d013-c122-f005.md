@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Joint-stock
-meta_description: Joint-stock bank financing daily report data is sourced from corporate credit management systems, interbank borrowing ledgers, and credit reporting
+meta_description: Multi-turn Dialogue and Prompt Engineering for Joint-stock Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

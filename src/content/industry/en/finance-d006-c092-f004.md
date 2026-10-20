@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Consumer Electronics
-meta_description: Consumer electronics investment research data primarily comes from new product launch presentations, supply chain delivery documents, third-party test
+meta_description: Vector Models and Indexing for Consumer Electronics Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备智能尽调报告的工作流编排
-meta_description: 航空装备智能尽调报告的数据来源包括整机厂商公开年报、适航管理机构发布的认证文档、航材供应商资质文件、供应链履约记录。更新节奏因类型不同，适航认证文档按年度更
+meta_description: 航空装备智能尽调报告的工作流编排：航空装备智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 航空装备、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

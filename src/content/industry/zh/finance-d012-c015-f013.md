@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能营销内容的知识库检索与召回
-meta_description: 储能相关数据主要来自产品研发文档、并网合规文件、营销推广物料、行业技术白皮书。更新节奏随新产品上线、政策调整不定期变化，单次更新的文档体量从单页参数表到数十
+meta_description: 储能营销内容的知识库检索与召回：储能营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 储能、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

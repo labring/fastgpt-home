@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷研报检索的工具调用与插件
-meta_description: 包装印刷研报的数据来源包括轻工制造领域的专业研报机构、行业自律组织公开报告、上市包装印刷企业的定期披露文件。更新节奏随研报发布节点推进，定期报告与突发行业事
+meta_description: 包装印刷研报检索的工具调用与插件：包装印刷研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 包装印刷、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

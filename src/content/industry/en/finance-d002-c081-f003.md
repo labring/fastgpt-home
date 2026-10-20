@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c081-f003
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Sharing and Embedding for the Unified AI Platform with Model
-meta_description: Model allocation data comes from connected large model instance information, team-configured call quotas, and preset traffic routing rules.
+meta_title: Sharing and Embedding for the Unified AI Platform
+meta_description: Sharing and Embedding for the Unified AI Platform with Model Allocation
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

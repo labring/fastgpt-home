@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的文档解析与分块
-meta_description: 酒店餐饮的营销内容文档来源包含门店菜单、节假日促销方案、会员体系规则、线上团购详情页导出文件、外卖平台店铺介绍等。更新节奏随营销活动调整，换季菜单、月度促销
+meta_description: 酒店餐饮营销内容的文档解析与分块：酒店餐饮营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 酒店餐饮、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

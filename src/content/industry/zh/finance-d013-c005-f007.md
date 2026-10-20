@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品融资日报的工作流编排
-meta_description: 个护用品融资日报数据主要来源于品牌方进销存系统、主流电商平台销售后台及合作融资机构的授信台账。数据更新节奏为每日凌晨同步前一日全量数据，单份日报文档为结构化
+meta_description: 个护用品融资日报的工作流编排：个护用品融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 个护用品、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -34,7 +34,7 @@ date_modified: 2026-09-15
 
 ## 容易做错的三处
 - 现象：工作流运行日志显示`ReferenceError: globalVar is not defined`，或界面提示“全局变量获取失败”。原因：未在工作流初始化节点配置全局变量作用域，或变量名拼写与预设名称不一致。
-- 现象：HTTP请求的请求头中配置`Authorization: Bearer {{globalVar.token}}`，但运行后请求头未替换为实际token，返回`401 Unauthorized`。原因：未正确使用全局变量的模板语法，或变量未在全局作用域中预定义。
+- 现象：HTTP请求的请求头中配置`Authorization: Bearer 待核验值`，但运行后请求头未替换为实际token，返回`401 Unauthorized`。原因：未正确使用全局变量的模板语法，或变量未在全局作用域中预定义。
 - 现象：问题分类分支执行完成后，HTTP请求未被触发，流程提前终止。原因：未将HTTP请求节点挂载至问题分类的所有分支出口，仅绑定了单个分支。
 
 ## 怎么确认配好了

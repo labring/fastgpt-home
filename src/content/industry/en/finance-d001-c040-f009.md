@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Provenance for Beneficial Owner KYC
-meta_description: Beneficial owner KYC data primarily comes from equity registration information of administrative industry and commerce departments, regulatory
+meta_description: Citation Sources and Provenance for Beneficial Owner KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

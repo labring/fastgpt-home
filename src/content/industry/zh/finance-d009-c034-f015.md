@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械研报检索的部署与升级
-meta_description: 医疗器械研报的数据主要来源于国家药品监督管理局公开数据库、第三方医药咨询机构的行业调研资料、医疗器械生产企业的官方披露文档。更新节奏随监管政策变动、新品发布
+meta_description: 医疗器械研报检索的部署与升级：医疗器械研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 医疗器械、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

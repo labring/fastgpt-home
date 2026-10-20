@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械营销内容的知识库检索与召回
-meta_description: 医疗器械营销内容的数据源主要包含国家药监局发布的注册证与备案文件、厂商提供的产品说明书与临床研究资料、合规部门审核的营销话术模板。更新节奏随品类存在差异，耗
+meta_description: 医疗器械营销内容的知识库检索与召回：医疗器械营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 医疗器械、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

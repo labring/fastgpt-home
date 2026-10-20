@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Commercial Building
-meta_description: Commercial building construction financial report data primarily comes from internal enterprise project ledgers, construction permits and completion
+meta_description: Model Access and Configuration for Commercial Building Construction Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

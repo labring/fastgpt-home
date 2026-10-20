@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Medical Device Marketing
-meta_description: For medical device marketing content in financial scenarios, data sources include product registration certificate attachments from partner
+meta_description: Vector Models and Indexing for Medical Device Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

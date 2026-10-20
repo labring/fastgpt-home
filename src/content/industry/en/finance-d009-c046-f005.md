@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Solid Waste Treatment
-meta_description: Targeting solid waste treatment industry research reports for the financial sector. Sources include special reports released by environmental
+meta_description: Multi-turn Dialogue and Prompting for Solid Waste Treatment Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Queries for solid waste treatment research reports in the financial sector are d
 ## Three Common Mistakes
 - Phenomenon: Cannot find the modification entry for the default new conversation message, and the system uses a fixed initial prompt. Reason: No default message is set in the "Session Initialization" section of "Global Configuration", so the built-in system template is used by default.
 - Phenomenon: The rerank model is configured but has no response, and the conversation details show that the rerank model was not called. Reason: The rerank model is not bound to the rerank node of the retrieval process, and the locally run model is not synchronized to the platform service.
-- Phenomenon: Prompt variables passed via API do not take effect, and the returned content is unrelated to the preset variables. Reason: The variable placeholder is not correctly declared in the prompt template, and the passed parameter name does not match the template placeholder.
+- Phenomenon: Prompt variables passed via API do not take effect, and the returned content is unrelated to the preset variables. Reason: The variable pending verification is not correctly declared in the prompt template, and the passed parameter name does not match the template pending verification.
 
 ## How to Confirm the Configuration Is Complete
 - Initiate a test conversation containing keywords related to solid waste treatment projects, and check whether the returned content includes the professional fields and units of the corresponding research report.

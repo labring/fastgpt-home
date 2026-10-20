@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合收益率的工具调用与插件
-meta_description: 其他综合收益率的数据主要来自持牌金融信息服务机构的公开接口、行业自律组织的每日统计报表。更新节奏为每日固定更新，仅在交易日次日的早间发布前一交易日的全量数据
+meta_description: 其他综合收益率的工具调用与插件：其他综合收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 其他综合、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

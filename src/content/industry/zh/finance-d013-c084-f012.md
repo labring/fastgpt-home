@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理融资日报的模型接入与配置
-meta_description: 水处理融资日报的数据来源于环保行业公开招投标平台、地方住建部门的项目备案系统、水务运营企业的月度融资公示。数据更新节奏为每日更新，每日生成前一日的全量或增量
+meta_description: 水处理融资日报的模型接入与配置：水处理融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 水处理、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

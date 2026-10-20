@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件融资日报的模型接入与配置
-meta_description: 电子元件融资日报的数据来源为公开交易撮合平台、厂商挂牌记录、区域供应链集群的成交数据，每日凌晨更新前一日的全量数据。文档采用结构化JSON或CSV格式，包含
+meta_description: 电子元件融资日报的模型接入与配置：电子元件融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 电子元件、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

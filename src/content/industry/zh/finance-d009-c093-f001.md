@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏研报检索的HTTP 接口与外部系统
-meta_description: 游戏研报作为金融行业传媒板块的细分研究内容，数据主要来自专业行业研究机构、券商研究所及游戏厂商公开披露的运营文件。更新节奏随行业事件波动，新品上线、季度财报
+meta_description: 游戏研报检索的HTTP 接口与外部系统：游戏研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 游戏、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

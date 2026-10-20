@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 生物制品收益率的HTTP 接口与外部系统
-meta_description: 数据来源包含生物制品企业公开财报、医药行业合规行情接口、批签发关联的营收测算数据源。更新节奏为每日更新当日交易行情收益率，每自然周更新细分品类的周度收益率汇
+meta_description: 生物制品收益率的HTTP 接口与外部系统：生物制品收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 生物制品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

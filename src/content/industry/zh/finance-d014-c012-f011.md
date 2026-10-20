@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发财报分析的文档解析与分块
-meta_description: 住宅开发财报数据主要来自房地产开发企业的季度报告、年度报告及专项开发进度公告，更新节奏以季度、年度为固定周期，部分项目专项报告随开发节点进度同步更新。文档多
+meta_description: 住宅开发财报分析的文档解析与分块：住宅开发财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 住宅开发、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

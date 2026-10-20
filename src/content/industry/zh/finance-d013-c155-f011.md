@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料融资日报的文档解析与分块
-meta_description: 饲料融资日报的数据主要来源于国内畜牧行业协会公开报告、上市饲料企业定期披露的融资公告、区域畜牧交易平台的实时交易数据。更新节奏为每日更新，单篇日报覆盖当日全
+meta_description: 饲料融资日报的文档解析与分块：饲料融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 饲料、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

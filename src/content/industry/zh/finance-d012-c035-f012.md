@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的模型接入与配置
-meta_description: 医美相关金融营销内容的数据主要来源于金融机构内部的医美合作产品手册、合作医美机构的合规项目素材、用户针对医美金融产品的高频咨询问题整理。更新节奏随合作医美项
+meta_description: 医美营销内容的模型接入与配置：医美营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 医美、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Textile Manufacturing Yield Rates
-meta_description: Organizations source textile manufacturing yield and market data from three primary sources: financial market raw material spot market APIs, internal
+meta_description: Workflow Orchestration for Textile Manufacturing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -30,7 +30,7 @@ Each data entry has many associated fields. Workflows must include built-in basi
 ## How to Set Configurations
 | Configuration Item | Recommended Setting | Rationale |
 | --- | --- | --- |
-| `Form Input Node - Default Value Variable Reference` | Enable global variable binding, use the `{{global.xxx}}` syntax | Daily report broadcasts for textile manufacturing need to dynamically bring in global variables such as workshop ID and broadcast date from financial market APIs, avoiding duplicate manual configuration |
+| `Form Input Node - Default Value Variable Reference` | Enable global variable binding, use the `example value` syntax | Daily report broadcasts for textile manufacturing need to dynamically bring in global variables such as workshop ID and broadcast date from financial market APIs, avoiding duplicate manual configuration |
 | `File Upload Node - Allowed Upload Formats` | `csv, json, xlsx, xls` | Production reports and market data for textile manufacturing are mostly in Excel and CSV formats. Covering common export formats reduces format conversion steps |
 | `DB Node - Query Timeout` | `30 seconds` | Response delays for financial market raw material market APIs typically fall between 10-25 seconds. Setting 30 seconds covers most normal requests and avoids timeout interruptions |
 | `Workflow Trigger - Trigger Rules` | Trigger by production shift end time plus daily scheduled triggering | Balances the real-time nature of workshop production data and the fixed time requirements of daily report broadcasts, adapting to dual-dimensional data pull needs |

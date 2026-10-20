@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢智能尽调报告的部署与升级
-meta_description: 普钢智能尽调报告是金融机构针对钢铁生产企业开展信贷、理财尽调的核心文档，数据来源包括钢厂内部生产台账、第三方质检机构的批次检测报告、行业协会的供需监测数据、
+meta_description: 普钢智能尽调报告的部署与升级：普钢智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 普钢、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备研报检索的工作流编排
-meta_description: 航天装备研报的数据来源包括中国航天科技集团、中国航天科工集团公开技术白皮书，国防军工行业协会发布的行业研报，以及证券研究机构的航天装备专项研报。更新节奏随重
+meta_description: 航天装备研报检索的工作流编排：航天装备研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 航天装备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

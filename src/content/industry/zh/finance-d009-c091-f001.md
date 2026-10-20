@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材研报检索的HTTP 接口与外部系统
-meta_description: 消费建材研报的数据主要来自行业协会公开报告、券商研究所专项分析、头部建材厂商的季度动态公告及第三方建材数据平台。更新节奏随行业政策、季度财报发布节点波动，无
+meta_description: 消费建材研报检索的HTTP 接口与外部系统：消费建材研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 消费建材、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

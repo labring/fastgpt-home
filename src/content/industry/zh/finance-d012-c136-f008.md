@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的工具调用与插件
-meta_description: 贵金属营销内容依赖的核心数据来自官方交易平台与行业报价机构，涵盖上海黄金交易所、伦敦金银市场协会的公开行情数据。实时行情数据每10-30秒更新一次，递延费率
+meta_description: 贵金属营销内容的工具调用与插件：贵金属营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 贵金属、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

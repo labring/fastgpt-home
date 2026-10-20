@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Packaging and Printing Yield
-meta_description: The daily yield rate and market trend data for packaging and printing comes from the industry monitoring database of the China Packaging Federation
+meta_description: Tool Calling and Plugins for Packaging and Printing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

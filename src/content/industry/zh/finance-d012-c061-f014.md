@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械营销内容的表单与交互
-meta_description: 工程机械的营销数据主要来自厂商官方产品手册、金融机构的工程机械融资租赁业务营销文档、技术参数说明书、销售报价文档及售后维护手册。数据更新节奏随新品发布、配置
+meta_description: 工程机械营销内容的表单与交互：工程机械营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 工程机械、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

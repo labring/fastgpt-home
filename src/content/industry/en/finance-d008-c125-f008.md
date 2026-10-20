@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c125-f008
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Aerospace Equipment Intelligent
-meta_description: Aerospace equipment due diligence data sources include public military research institute project approval announcements, model formalization
+meta_title: Tool Calling and Plugins for Aerospace Equipment
+meta_description: Tool Calling and Plugins for Aerospace Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

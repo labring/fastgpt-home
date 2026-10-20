@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexes for Baijiu Financing Daily Reports
-meta_description: Baijiu financing daily report data primarily comes from listed company announcements, publicly disclosed financing information from industry
+meta_description: Vector Models and Indexes for Baijiu Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

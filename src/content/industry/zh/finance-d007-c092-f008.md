@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子收益率的工具调用与插件
-meta_description: 消费电子收益率相关数据来源包括品牌方出货数据、线下零售终端POS数据、线上电商平台成交数据。更新节奏分为两类：零售成交数据每自然日更新，品牌出货数据每7个自
+meta_description: 消费电子收益率的工具调用与插件：消费电子收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 消费电子、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

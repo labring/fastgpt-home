@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 影视院线研报检索的知识库检索与召回
-meta_description: 影视院线研报的数据主要来自券商行业研究报告、院线运营后台数据、全国电影票务综合信息管理系统公开数据、行业协会月度统计文件。更新节奏随研报类型不同，新片上映节
+meta_description: 影视院线研报检索的知识库检索与召回：影视院线研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 影视院线、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的数据库与运维
-meta_description: 产业园区收益率日报的数据来源为园区运营管理系统、入驻商户的每日营收上报、物业运维系统的当日成本数据。更新节奏为每日固定时段同步前一自然日的全量数据集。单条数
+meta_description: 产业园区收益率的数据库与运维：产业园区收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 产业园区、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

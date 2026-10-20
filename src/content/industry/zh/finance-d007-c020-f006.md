@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备收益率的对话日志与审计
-meta_description: 兵器装备领域的收益率与行情数据，主要来自军工行业公开披露的财报信息、国防科技工业主管部门发布的行业运行数据，以及二级市场军工板块的实时行情数据。更新节奏分为
+meta_description: 兵器装备收益率的对话日志与审计：兵器装备收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 兵器装备、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

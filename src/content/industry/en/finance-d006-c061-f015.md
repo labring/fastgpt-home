@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Construction Machinery Investment
-meta_description: Construction machinery investment research data comes from four main sources: official manufacturer product manuals, industry association working
+meta_description: Deployment and Upgrade of Construction Machinery Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

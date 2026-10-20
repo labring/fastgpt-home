@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税营销内容的部署与升级
-meta_description: 免税营销相关的数据主要来自海关监管备案库、免税店内部商品系统、金融机构会员与支付系统三类来源。商品基础数据包含商品编码、名称、规格型号、完税单价、免税限额等
+meta_description: 免税营销内容的部署与升级：免税营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 免税、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

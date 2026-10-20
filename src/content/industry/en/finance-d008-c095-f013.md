@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Thermal Intelligent
-meta_description: Data sources for thermal intelligent due diligence reports include thermal pipeline network operation logs, heating load monitoring reports, annual
+meta_description: Knowledge Base Retrieval and Recall for Thermal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -36,7 +36,7 @@ Differing update frequencies between annual reports and daily data require confi
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. Conduct tests on local samples before finalizing settings.
 
 ## Three common errors
-- Phenomenon: Dynamically switching knowledge bases with global variables leads to retrieval results that do not match the specified knowledge base. Cause: The global variable is not correctly bound in the `{{datasetId}}` format, or the variable is not assigned before the call.
+- Phenomenon: Dynamically switching knowledge bases with global variables leads to retrieval results that do not match the specified knowledge base. Cause: The global variable is not correctly bound in the `example value` format, or the variable is not assigned before the call.
 - Phenomenon: Uploading Excel or PDF files of thermal due diligence reports triggers a parsing error prompt in the interface. Cause: The file contains merged cells, encrypted content, or non-standard thermal parameter table formats.
 - Phenomenon: Retrieval results cannot display thermal pipeline network topology diagrams stored in the knowledge base. Cause: The knowledge base’s image extraction configuration is not enabled, or the recall rules do not include logic to recall image fields.
 

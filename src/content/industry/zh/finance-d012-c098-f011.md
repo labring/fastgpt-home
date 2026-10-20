@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工营销内容的文档解析与分块
-meta_description: 煤化工营销内容的数据来源包括企业营销部门产出的招商手册、产品宣传物料，行业协会发布的产业动态，招投标项目的技术应答文件，以及内部的营销复盘文档。更新节奏随文
+meta_description: 煤化工营销内容的文档解析与分块：煤化工营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 煤化工、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

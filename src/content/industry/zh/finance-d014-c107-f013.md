@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力财报分析的知识库检索与召回
-meta_description: 电力行业财报数据主要来源于国家能源局公开披露信息、上市电力企业年度及季度报告、区域电力交易中心公开数据，面向金融投资分析场景的相关数据多由券商研报、金融数据
+meta_description: 电力财报分析的知识库检索与召回：电力财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 电力、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

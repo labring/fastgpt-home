@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥财报分析的模型接入与配置
-meta_description: 水泥行业财报数据主要来自上市公司公告、证监会指定披露平台及行业协会公开资料。更新节奏遵循定期披露规则，季度报告每季度末后30日内披露，年度报告需在次年4月3
+meta_description: 水泥财报分析的模型接入与配置：水泥财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 水泥、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

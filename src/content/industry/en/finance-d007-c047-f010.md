@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Large State-owned Bank Yield
-meta_description: Large state-owned bank yield and market data is primarily sourced from transaction detail ledgers in core business systems, public market APIs from
+meta_description: Database and Operations for Large State-owned Bank Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

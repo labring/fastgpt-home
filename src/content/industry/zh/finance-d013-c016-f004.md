@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏融资日报的向量模型与索引
-meta_description: 光伏融资日报的数据来源于地方能源监管部门的光伏项目备案台账、银行及融资租赁公司的信贷投放记录、第三方光伏产业数据平台的公开融资信息。更新节奏为每日更新，单条
+meta_description: 光伏融资日报的向量模型与索引：光伏融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 光伏、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

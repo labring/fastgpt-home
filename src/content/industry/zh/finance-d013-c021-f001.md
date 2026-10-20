@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合融资日报的HTTP 接口与外部系统
-meta_description: 其他综合融资日报的数据来源涵盖地方金融综合服务平台、企业内部融资台账汇总及第三方合规征信聚合渠道。更新节奏为每日更新，于当日22点前完成当日全量数据汇总。单
+meta_description: 其他综合融资日报的HTTP 接口与外部系统：其他综合融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 其他综合、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

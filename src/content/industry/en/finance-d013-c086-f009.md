@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c086-f009
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Auto Service Financing
-meta_description: Data for auto service financing daily reports comes from financing application ledgers of auto dealers, loan receipts from partner financial
+meta_title: Citation Sources and Traceability for Auto Service
+meta_description: Citation Sources and Traceability for Auto Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

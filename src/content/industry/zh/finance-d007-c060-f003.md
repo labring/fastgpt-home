@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的分享与嵌入
-meta_description: 工程咨询的收益率相关数据主要来源于造价分析软件导出的测算文件、项目管理系统的API接口，更新节奏按项目节点触发，单项目完成测算后实时更新，批量项目台账按周同
+meta_description: 工程咨询收益率的分享与嵌入：工程咨询收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 工程咨询、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -25,7 +25,7 @@ date_modified: 2026-09-15
 | 配置项 | 建议取法 | 这样取的依据 |
 | ---- | ---- | ---- |
 | `shareExpireTime` | `7 天` | 匹配工程咨询项目周报/月报的同步周期，避免长期有效的分享链接泄露数据 |
-| `embedWidgetFilter` | `project_id:{{current_project}}` | 工程咨询数据按项目标段拆分，需绑定当前嵌入页面的项目标识，防止跨项目数据泄露 |
+| `embedWidgetFilter` | `project_id:待核验值` | 工程咨询数据按项目标段拆分，需绑定当前嵌入页面的项目标识，防止跨项目数据泄露 |
 | `cacheTTL` | `12 小时` | 匹配批量项目数据的周更/日更节奏，平衡数据时效性与加载性能 |
 | `customShareIcon` | `工程咨询专属SVG图标` | 替换默认分享图标，匹配工程咨询场景的品牌视觉规范 |
 | `crossDomainAllowList` | `["https://project-console.example.com", "https://client-portal.example.com"]` | 限制嵌入域名，防止恶意站点盗用分享内容 |

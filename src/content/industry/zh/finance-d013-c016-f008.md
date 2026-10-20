@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏融资日报的工具调用与插件
-meta_description: 光伏融资日报的数据主要来自地方能源局项目备案公示、国内光伏电站开发企业公开披露信息、第三方电力设备行业数据服务机构。数据更新节奏为每日更新，覆盖当日完成备案
+meta_description: 光伏融资日报的工具调用与插件：光伏融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 光伏、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

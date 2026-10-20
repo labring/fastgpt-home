@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属财报分析的模型接入与配置
-meta_description: 贵金属财报数据主要来自上市公司定期公告、上海黄金交易所公开行情、行业协会月度监测报告。公开披露的财报按季度、年度更新，每日行情数据按交易日更新。文档结构包含
+meta_description: 贵金属财报分析的模型接入与配置：贵金属财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 贵金属、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

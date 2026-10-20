@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: KYC and AML Document Verification
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interface and External Systems for ID Card KYC
-meta_description: ID card KYC data originates from public security identity verification APIs, physical ID card scans uploaded by users, and photos of physical ID cards
+meta_description: HTTP Interface and External Systems for ID Card KYC
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

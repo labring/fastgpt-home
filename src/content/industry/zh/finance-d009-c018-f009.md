@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块研报检索的引用来源与溯源
-meta_description: 光模块研报的数据来源包含通信行业标准文档、光模块厂商技术白皮书、第三方检测机构的性能测试报告、行业展会发布的新品信息。数据更新随厂商量产进度、行业标准修订同
+meta_description: 光模块研报检索的引用来源与溯源：光模块研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 光模块、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的部署与升级
-meta_description: 资质符合性竞价的数据源包含投标方上传的资质扫描件、公共监管平台的资质公示数据、项目招标文件的资质条款解析内容。数据更新节奏随单个投标项目周期调整，仅在项目启
+meta_description: 资质符合性竞价的部署与升级：资质符合性竞价的部署与升级，涵盖配置与验证建议。。。
 keywords: 资质符合性、竞价与投标报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

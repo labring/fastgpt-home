@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行营销内容的表单与交互
-meta_description: 国有大行营销相关数据主要来源于行内CRM客户管理系统、官方公众号运营后台、线下网点营销物料台账及监管合规文档库。合规类文档按季度更新，活动类营销物料按月更新
+meta_description: 国有大行营销内容的表单与交互：国有大行营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 国有大行、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的模型接入与配置
-meta_description: 化学原料的数据主要来源于上游供应商的报价系统、行业协会的供需报告、海关进出口备案数据以及企业内部的质检台账，同时会被金融机构用于化工行业供应链金融、保险机构
+meta_description: 化学原料营销内容的模型接入与配置：化学原料营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

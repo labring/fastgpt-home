@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备收益率的工具调用与插件
-meta_description: 专用设备收益率与行情日报播报场景的数据源，主要来自合规场内交易接口与设备本地采集的交易日志。数据更新节奏分为两类：全量日报数据在每个交易日收盘后生成，次日凌
+meta_description: 专用设备收益率的工具调用与插件：专用设备收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 专用设备、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

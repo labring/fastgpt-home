@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备财报分析的模型接入与配置
-meta_description: 数据来源为航天装备相关上市主体的公开年度报告、半年度报告及临时重大订单公告；更新节奏为按季度财报披露周期更新，临时公告触发即时同步；文档结构包含标准化财务报
+meta_description: 航天装备财报分析的模型接入与配置：航天装备财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 航天装备、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

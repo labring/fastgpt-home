@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备融资日报的工具调用与插件
-meta_description: 计算机设备融资日报的数据来源包括公开设备采购招投标平台、厂商直供报价系统、供应链金融服务机构的每日交易数据。更新频率为每日凌晨更新前一自然日的全量数据，属于
+meta_description: 计算机设备融资日报的工具调用与插件：计算机设备融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 计算机设备、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

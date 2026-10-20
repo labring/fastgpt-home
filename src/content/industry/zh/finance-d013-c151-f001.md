@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路融资日报的HTTP 接口与外部系统
-meta_description: 铁路公路融资日报的数据来源主要为交通运输主管部门的路网监测系统、各地交通厅的项目融资公示，以及政策性银行的融资台账数据。更新节奏为每日凌晨更新前一日的全量融
+meta_description: 铁路公路融资日报的HTTP 接口与外部系统：铁路公路融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 铁路公路、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

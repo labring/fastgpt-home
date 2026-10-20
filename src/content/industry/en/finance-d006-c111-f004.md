@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c111-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Livestock and Poultry Farming
-meta_description: Livestock and poultry farming investment research data sources include weekly inventory and slaughter reports released by industry associations, daily
+meta_title: Vector Models and Indexing for Livestock and Poultry
+meta_description: Vector Models and Indexing for Livestock and Poultry Farming Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -22,7 +22,7 @@ The multi-frequency update schedule of livestock and poultry farming data requir
 ## Configuration Settings
 | Configuration Item | Recommended Values | Rationale |
 | --- | --- | --- |
-| `embedding_model` | `bge-large-zh-v1.5` or `text-embedding-3-small` | Adapts to the mixed semantics of livestock and poultry farming data (structured fields, research report text), balances accuracy and call costs, and is compatible with the configuration logic of FastGPT v4.8.21-fix |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `chunk_size` | `600–1000 characters` | Splits livestock industry research reports and structured table entries, avoids excessively long segments exceeding model input limits, and retains field context association |
 | `recall_top_k` | `Top 8–12 results` | Matches the information density of livestock and poultry farming investment research scenarios, avoids retrieving too many irrelevant data entries |
 | `similarity_threshold` | `0.72–0.78` | Filters low-correlation scattered price quotations or policy documents, and retains core investment research information |

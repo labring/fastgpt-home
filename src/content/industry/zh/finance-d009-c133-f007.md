@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券研报检索的工作流编排
-meta_description: 证券研报的数据来源为持牌金融信息服务平台、券商官方研究发布渠道，更新节奏为交易日随研报发布同步更新，非交易日无更新。文档格式以PDF为主，部分支持网页版解析
+meta_description: 证券研报检索的工作流编排：证券研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 证券、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

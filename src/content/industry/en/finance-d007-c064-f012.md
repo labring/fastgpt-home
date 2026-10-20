@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Film Theater Daily
-meta_description: Film theater revenue rate market data comes primarily from theater operation management systems, national film ticket statistics APIs, and cinema POS
+meta_description: Model Access and Configuration for Film Theater Daily Revenue Yield and Market Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

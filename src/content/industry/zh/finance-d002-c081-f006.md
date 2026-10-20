@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的对话日志与审计
-meta_description: 模型分配品类的日志数据来源于平台内的模型调度请求、下游模型返回结果及权限校验记录。更新节奏为实时生成，每条调度请求完成后即刻生成对应日志条目。文档结构为结构
+meta_description: 模型分配一体化 AI 平台的对话日志与审计：模型分配一体化 AI 平台的对话日志与审计，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

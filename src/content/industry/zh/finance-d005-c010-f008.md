@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产品咨询客户服务的工具调用与插件
-meta_description: 产品咨询的数据主要来自金融机构官方产品手册、实时费率公示系统、核保规则文档及历史客服交互库。数据更新节奏因类型不同存在差异，产品条款更新多按季度，费率数据每
+meta_description: 产品咨询客户服务的工具调用与插件：产品咨询客户服务的工具调用与插件，涵盖配置与验证建议
 keywords: 产品咨询、客户服务与账户咨询、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Precious Metals Research Report
-meta_description: Precious metals research report data comes from special reports issued by broker research institutes, precious metals sector research reports from
+meta_description: Deployment and Upgrade for Precious Metals Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

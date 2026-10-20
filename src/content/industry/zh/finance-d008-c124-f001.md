@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备智能尽调报告的HTTP 接口与外部系统
-meta_description: 自动化设备智能尽调报告的数据主要来源于设备内置物联网网关、PLC控制系统、企业设备台账数据库及行业合规检测机构上传的检测文件。实时运行数据更新频率为秒级至分
+meta_description: 自动化设备智能尽调报告的HTTP 接口与外部系统：自动化设备智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 自动化设备、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

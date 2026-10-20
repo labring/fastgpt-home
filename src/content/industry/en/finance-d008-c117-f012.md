@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Textile Manufacturing
-meta_description: The data for textile manufacturing intelligent due diligence reports comes from four primary categories: customs import and export declaration forms
+meta_description: Model Access and Configuration for Textile Manufacturing Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

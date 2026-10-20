@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车融资日报的模型接入与配置
-meta_description: 整车融资日报的数据主要来自整车经销商的融资申请系统、合作银行的放款台账及地方金融监管报送平台。每日凌晨完成前一日全量数据更新，单份日报文档包含单区域或全品牌
+meta_description: 整车融资日报的模型接入与配置：整车融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 整车、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

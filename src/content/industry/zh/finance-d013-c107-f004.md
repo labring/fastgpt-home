@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力融资日报的向量模型与索引
-meta_description: 数据主要来自公开的电力企业融资公告、地方能源主管部门披露的项目融资信息、合作金融机构的授信公示。更新节奏为工作日每日更新，单份日报文档通常包含数十条融资条目
+meta_description: 电力融资日报的向量模型与索引：电力融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 电力、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

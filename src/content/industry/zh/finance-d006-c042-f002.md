@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营投研知识库建设的上下文与 token
-meta_description: 品牌代运营的投研数据来源包括品牌方电商后台交易数据、社交媒体运营后台互动数据、合作品牌的月度业务报表、公开的平台流量规则文档、竞品投放案例素材。更新节奏为电
+meta_description: 品牌代运营投研知识库建设的上下文与 token：品牌代运营投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 品牌代运营、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c059-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for Industrial Metal Yield
-meta_description: Industrial metal market data is sourced from major global non-ferrous metal exchanges, including the Shanghai Futures Exchange and London Metal
+meta_title: Conversation Logging and Auditing for Industrial Metal
+meta_description: Conversation Logging and Auditing for Industrial Metal Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

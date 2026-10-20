@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Construction Machinery Marketing
-meta_description: Marketing data for construction machinery mainly comes from manufacturer official product manuals, financial leasing marketing documents for
+meta_description: Forms and Interactions for Construction Machinery Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

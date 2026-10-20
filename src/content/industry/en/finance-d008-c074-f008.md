@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Education Service Intelligent
-meta_description: Education service intelligent due diligence report data mainly comes from school qualification documents, teacher filing materials, course syllabus
+meta_description: Tool Calling and Plugins for Education Service Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ The long documents and complex layout features of education service due diligenc
 
 ## Three Common Mistakes
 - The phenomenon is a failure when calling the parsing tool to process hundreds of pages of education due diligence PDFs, while documents with dozens of pages can be parsed normally. The cause is that the `PARSE_FILE_TIMEOUT_SECONDS` parameter is not adjusted, and the long document parsing time exceeds the default configuration threshold.
-- The phenomenon is a `Cannot read properties of undefined` error popping up on the interface when calling the locally deployed pdf-marker 4.9.0 plugin. The cause is that the plugin dependency package version is incompatible with the FastGPT 4.9.0 runtime environment.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - The phenomenon is that fields such as school charging standards and course duration are missing corresponding units in the due diligence content recalled by the knowledge base. The cause is that a reasonable `Similarity threshold` is not set, and low-match irrelevant text covers valid field content with units.
 
 ## How to Confirm Configuration Is Complete

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢收益率的工具调用与插件
-meta_description: 普钢行情与收益率数据来自国内钢铁行业权威现货报价平台与期货交易所公开接口。更新节奏分为两类：现货报价每日固定时段更新一次，期货行情随交易时段实时推送。文档结
+meta_description: 普钢收益率的工具调用与插件：普钢收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 普钢、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

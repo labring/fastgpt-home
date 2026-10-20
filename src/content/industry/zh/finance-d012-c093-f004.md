@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏营销内容的向量模型与索引
-meta_description: 游戏营销内容的核心来源包括官方版本更新公告、新英雄/新玩法宣传文案、直播脚本、社群运营话术、广告投放素材及KOL合作内容。更新节奏分为固定版本周期更新与临时
+meta_description: 游戏营销内容的向量模型与索引：游戏营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 游戏、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

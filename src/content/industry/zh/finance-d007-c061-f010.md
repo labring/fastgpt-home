@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械收益率的数据库与运维
-meta_description: 工程机械收益率相关数据来源于工程设备物联网平台、企业ERP系统、设备租赁结算系统及燃油补给记录系统。核心统计维度覆盖单台设备单日的作业时长、燃油消耗、维保支
+meta_description: 工程机械收益率的数据库与运维：工程机械收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 工程机械、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for In-App Natural
-meta_description: The data sources for in-app natural language search via function entries include in-app user natural language search logs, preset function trigger
+meta_description: Knowledge Base Retrieval and Recall for In-App Natural Language Search via Function Entry Points
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

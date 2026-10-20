@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备研报检索的工作流编排
-meta_description: 电网设备研报的数据主要来自中国电力企业联合会公开报告、电网企业运维技术文档、第三方电力咨询机构的专项调研成果。更新节奏为月度更新核心设备工况参数，季度发布完
+meta_description: 电网设备研报检索的工作流编排：电网设备研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 电网设备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

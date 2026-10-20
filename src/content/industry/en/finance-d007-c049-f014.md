@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Infrastructure Construction
-meta_description: Data related to infrastructure construction project yields comes primarily from financial institution infrastructure project financial management
+meta_description: Forms and Interactions for Infrastructure Construction Project Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Expense Statement
-meta_description: Expense statement data originates from medical institution billing systems and insurance company claim acceptance systems. It is submitted with each
+meta_description: Knowledge Base Retrieval and Recall for Expense Statement Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

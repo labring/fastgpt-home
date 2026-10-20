@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多应用路由一体化 AI 平台的模型接入与配置
-meta_description: 多应用路由的数据来源于平台内已创建的业务子应用元数据、实时流量请求日志与预设路由规则。数据更新节奏随路由规则修改、流量分配调整实时生效，流量统计数据按分钟级
+meta_description: 多应用路由一体化 AI 平台的模型接入与配置：多应用路由一体化 AI 平台的模型接入与配置，涵盖配置与验证建议
 keywords: 多应用路由、一体化 AI 平台与多应用编排、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

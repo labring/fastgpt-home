@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股收益率的数据库与运维
-meta_description: 多元控股的收益率与行情数据来自旗下各业务条线的内部核算系统与外部行情接口，覆盖证券经纪、资产管理、财险、寿险等多个业态的核算指标。数据更新节奏为每日固定时段
+meta_description: 多元控股收益率的数据库与运维：多元控股收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 多元控股、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销投研知识库建设的上下文与 token
-meta_description: 广告营销投研的数据来源包括广告投放后台报表、媒介监测API数据、竞品广告素材库、行业广告趋势研报、平台规则文档等。更新节奏以小时级到日级为主，部分实时投放数
+meta_description: 广告营销投研知识库建设的上下文与 token：广告营销投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 广告营销、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

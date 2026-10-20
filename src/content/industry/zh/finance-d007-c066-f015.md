@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程收益率的部署与升级
-meta_description: 房建工程收益率相关数据主要来自项目进度核算台账、区域建筑造价监测平台、建材供应链结算数据。数据更新节奏分为两类：每日同步当日的项目进度核算数据，每周更新区域
+meta_description: 房建工程收益率的部署与升级：房建工程收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 房建工程、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

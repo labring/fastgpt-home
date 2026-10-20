@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c131-f013
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Decoration and
-meta_description: Decoration and renovation research report data primarily comes from public industry statistics released by the China Building Decoration Association
+meta_title: Knowledge Base Retrieval and Recall for Decoration
+meta_description: Knowledge Base Retrieval and Recall for Decoration and Renovation Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

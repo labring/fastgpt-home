@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石营销内容的知识库检索与召回
-meta_description: 铁矿石相关营销内容的数据主要来自大宗商品现货交易平台、期货交易所官网、钢厂采购公告、国际货代船期报告。更新节奏分为三类：现货报价每日收盘后更新，期货持仓数据
+meta_description: 铁矿石营销内容的知识库检索与召回：铁矿石营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 铁矿石、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

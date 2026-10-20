@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Kitchen and Bathroom Appliance
-meta_description: Marketing data for kitchen and bathroom appliances comes primarily from official brand product specification sheets, e-commerce platform product
+meta_description: Workflow Orchestration for Kitchen and Bathroom Appliance Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

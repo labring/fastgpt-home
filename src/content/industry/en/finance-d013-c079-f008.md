@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Carbon Steel Financing Daily
-meta_description: Carbon steel financing daily report data is sourced from three places: spot trading filing systems in the domestic steel circulation sector, trade
+meta_description: Tool Calling and Plugins for Carbon Steel Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

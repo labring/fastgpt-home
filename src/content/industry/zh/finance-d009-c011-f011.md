@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品研报检索的文档解析与分块
-meta_description: 休闲食品研报的数据来源包括券商行业研报、食品饮料行业协会月度监测报告、头部休闲食品企业的年度经营公告、线下商超动销监测文档。更新节奏随研报发布周期，常规报告
+meta_description: 休闲食品研报检索的文档解析与分块：休闲食品研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 休闲食品、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

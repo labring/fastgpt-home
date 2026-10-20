@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类融资日报的多轮对话与提示词
-meta_description: 鞋类融资日报数据来源于品牌方经销商融资系统、鞋款SKU库存台账与订单回款记录，每日凌晨完成全量更新。文档按品牌、鞋款大类分组，单份日报包含SKU编码、鞋款名
+meta_description: 鞋类融资日报的多轮对话与提示词：鞋类融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 鞋类、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

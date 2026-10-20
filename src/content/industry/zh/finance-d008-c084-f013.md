@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理智能尽调报告的知识库检索与召回
-meta_description: 水处理智能尽调报告的数据来源包括环保监测机构公开的水质检测文件、水厂日常运维档案、第三方合规检测报告及管网运维记录。更新节奏分为三类：日常运维数据每日同步更
+meta_description: 水处理智能尽调报告的知识库检索与召回：水处理智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 水处理、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

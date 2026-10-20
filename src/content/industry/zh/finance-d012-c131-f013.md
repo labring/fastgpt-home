@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的知识库检索与召回
-meta_description: 装修装饰营销内容的数据主要来自金融机构的装修分期产品文档、合作装修公司的官方案例库、材料参数手册、施工规范文档、营销文案模板及本地门店服务台账。数据更新节奏
+meta_description: 装修装饰营销内容的知识库检索与召回：装修装饰营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 装修装饰、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

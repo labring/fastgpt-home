@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理收益率的数据库与运维
-meta_description: 固废处理项目的收益率与行情日报数据，主要来源于项目运营台账、环卫清运计量系统、区域固废处置招投标平台及当地环保监管公示数据。数据更新节奏为每日一次，匹配日报
+meta_description: 固废处理收益率的数据库与运维：固废处理收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 固废处理、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

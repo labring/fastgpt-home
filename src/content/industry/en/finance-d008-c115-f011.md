@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c115-f011
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Crop Farming Due Diligence
-meta_description: Crop farming due diligence report data primarily comes from grower daily logs, soil test lab reports, meteorological observation records, agricultural
+meta_title: Document Parsing and Chunking for Crop Farming Due
+meta_description: Document Parsing and Chunking for Crop Farming Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

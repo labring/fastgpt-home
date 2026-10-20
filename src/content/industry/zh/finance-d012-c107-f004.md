@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力营销内容的向量模型与索引
-meta_description: 电力营销内容的来源主要包括内部营销系统的政策通知、线上线下活动物料、客户经理标准化话术模板、用户反馈相关的宣传文案等。更新节奏无固定周期，电价政策调整、季节
+meta_description: 电力营销内容的向量模型与索引：电力营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 电力、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

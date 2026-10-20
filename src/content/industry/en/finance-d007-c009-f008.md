@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Industrial Park Yield Rates
-meta_description: Industrial park yield rate data mainly comes from rent collection ledgers of the self-owned properties of park operating entities, industrial building
+meta_description: Tool Calling and Plugins for Industrial Park Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

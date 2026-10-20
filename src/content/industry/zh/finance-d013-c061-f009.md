@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的引用来源与溯源
-meta_description: 工程机械融资日报的数据来源于工程机械行业官方备案平台、第三方租赁交易数据服务商、地方工信部门的融资备案系统，每日凌晨更新前一日的全量有效融资数据。单份日报为
+meta_description: 工程机械融资日报的引用来源与溯源：工程机械融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 工程机械、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

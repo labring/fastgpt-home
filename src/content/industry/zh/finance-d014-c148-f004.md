@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的向量模型与索引
-meta_description: 酒店餐饮财报分析的数据来源于门店POS系统、预订平台后台、供应链管理系统导出的报表，以及总部统一编制的季度/年度财报模板。门店级运营数据每日生成，季度财报在
+meta_description: 酒店餐饮财报分析的向量模型与索引：酒店餐饮财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

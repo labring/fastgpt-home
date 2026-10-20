@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Oilfield Service Engineering
-meta_description: Oilfield service engineering yield-related data comes from three main sources: real-time sensor networks on drilling rigs, oil and gas production
+meta_description: Workflow Orchestration for Oilfield Service Engineering Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

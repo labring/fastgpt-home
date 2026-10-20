@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台融资日报的工作流编排
-meta_description: 投资平台的融资日报数据主要来自证券交易所公开融资融券数据接口、合作券商的交易系统接口。数据更新节奏为每日收盘后固定时段同步当日全市场及指定标的的两融数据。单
+meta_description: 投资平台融资日报的工作流编排：投资平台融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 投资平台、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

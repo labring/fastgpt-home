@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发投研知识库建设的部署与升级
-meta_description: 软件开发投研的数据主要来自金融领域交易系统、风控系统的公开代码仓库、技术框架官方文档、行业技术标准、软件漏洞公告与性能测试报告。数据更新节奏差异明显：代码提
+meta_description: 软件开发投研知识库建设的部署与升级：软件开发投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 软件开发、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

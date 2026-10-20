@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版财报分析的知识库检索与召回
-meta_description: 出版行业财报数据主要来自公开监管披露文件、行业协会运行报告及出版机构内部经营台账。更新节奏以季度、半年度、年度定期报告为主，同步发布重大业务相关的临时公告。
+meta_description: 出版财报分析的知识库检索与召回：出版财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 出版、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

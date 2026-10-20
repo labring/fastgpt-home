@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程营销内容的多轮对话与提示词
-meta_description: 面向金融行业基建工程营销的相关数据主要来源于项目招投标文件、施工日志、材料台账、竣工图纸及甲方沟通函件。数据更新节奏随项目阶段变化，立项与招投标阶段集中更新
+meta_description: 基建工程营销内容的多轮对话与提示词：基建工程营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 基建工程、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

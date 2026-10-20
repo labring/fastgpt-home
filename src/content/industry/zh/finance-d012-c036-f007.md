@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体营销内容的工作流编排
-meta_description: 半导体营销内容的数据主要来自金融机构的半导体主题理财产品配套手册、晶圆制程参数文档、客户案例白皮书、线下行业展会素材与线上电商详情页。更新节奏随新品制程发布
+meta_description: 半导体营销内容的工作流编排：半导体营销内容的工作流编排，涵盖配置与验证建议。。。
 keywords: 半导体、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

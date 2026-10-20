@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁融资日报的文档解析与分块
-meta_description: 融资租赁融资日报的数据多来自业务管理系统导出、租金回收台账、银行放款回执与租金到账凭证。更新节奏以每日为主，部分按周或月度汇总。文档格式以Excel为主，附
+meta_description: 融资租赁融资日报的文档解析与分块：融资租赁融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 融资租赁、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖投研知识库建设的部署与升级
-meta_description: 畜禽养殖投研数据来源涵盖行业主管部门的月度监测报表、规模化养殖场的生产台账、饲料与兽药供应商的每日报价数据、动物疫病防控机构的实时通报、上市养殖企业的定期披
+meta_description: 畜禽养殖投研知识库建设的部署与升级：畜禽养殖投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 畜禽养殖、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

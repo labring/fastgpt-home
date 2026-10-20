@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Water Utility Yield Rate
-meta_description: Daily report data related to water utility yield rate mainly comes from public operational reporting data of local municipal water utility
+meta_description: Model Access and Configuration for Water Utility Yield Rate
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

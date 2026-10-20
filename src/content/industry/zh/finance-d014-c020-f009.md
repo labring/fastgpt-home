@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的引用来源与溯源
-meta_description: 兵器装备行业财报数据主要来自沪深证券交易所、香港联合交易所公开披露的定期报告与临时公告，以及行业主管部门发布的公开信息。数据更新以年度、半年度、季度定期报告
+meta_description: 兵器装备财报分析的引用来源与溯源：兵器装备财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 兵器装备、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

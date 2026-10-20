@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的模型接入与配置
-meta_description: 这个品类的数据主要来源于工商登记系统、合规披露的第三方股权报告及关联交易档案。更新节奏随关联企业的股权变更、实际控制人调整不定期触发，无固定周期。文档多为结
+meta_description: 受益所有人KYC 的模型接入与配置：受益所有人KYC 的模型接入与配置，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

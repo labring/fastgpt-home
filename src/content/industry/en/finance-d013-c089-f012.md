@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Oil and Gas Extraction
-meta_description: Oil and gas extraction financing daily report data comes primarily from public financing announcements of listed companies on domestic and overseas
+meta_description: Model Access and Configuration for Oil and Gas Extraction Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

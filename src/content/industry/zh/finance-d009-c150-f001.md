@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石研报检索的HTTP 接口与外部系统
-meta_description: 铁矿石研报主要来源为行业资讯平台、港口监测机构、钢厂月度报告及期货交易所公开数据。更新节奏覆盖多维度：现货价格数据每日更新，周度供需周报每周发布，月度库存与
+meta_description: 铁矿石研报检索的HTTP 接口与外部系统：铁矿石研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 铁矿石、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

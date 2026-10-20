@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Energy Metal Yields
-meta_description: Energy metal market data primarily comes from official APIs of global major commodity exchanges and domestic futures exchanges. There are two update
+meta_description: Conversation Logs and Auditing for Energy Metal Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

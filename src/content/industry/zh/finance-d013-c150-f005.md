@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的多轮对话与提示词
-meta_description: 铁矿石融资日报的数据主要来自国内大宗商品现货交易平台、大连商品交易所及行业协会公开数据。每日更新一次，通常在当日收盘后2小时内发布。文档结构包含发布日期、标
+meta_description: 铁矿石融资日报的多轮对话与提示词：铁矿石融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 铁矿石、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

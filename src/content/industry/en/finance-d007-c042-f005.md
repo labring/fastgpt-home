@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c042-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Brand Agency Operation
-meta_description: Data sources for brand agency operation yield and market daily reports include the e-commerce store backends of serviced brands, advertising
+meta_title: Multi-turn Dialogue and Prompting for Brand Agency
+meta_description: Multi-turn Dialogue and Prompting for Brand Agency Operation Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

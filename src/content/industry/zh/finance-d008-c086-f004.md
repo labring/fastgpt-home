@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务智能尽调报告的向量模型与索引
-meta_description: 数据来源包括线下汽车4S店的维保工单系统、二手车交易平台的车况报告、交通运输管理部门的车辆备案信息；更新节奏为每日同步运营数据，月度更新行业对标数据集。文档
+meta_description: 汽车服务智能尽调报告的向量模型与索引：汽车服务智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车服务、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

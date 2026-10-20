@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能智能尽调报告的多轮对话与提示词
-meta_description: 储能智能尽调报告的数据主要来自电网公开并网备案文件、储能设备厂商的产品技术文档、行业协会发布的项目台账，以及项目现场的运维日志。数据更新节奏随项目推进调整，
+meta_description: 储能智能尽调报告的多轮对话与提示词：储能智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 储能、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

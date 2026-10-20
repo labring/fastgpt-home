@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流研报检索的模型接入与配置
-meta_description: 物流研报数据主要来自交通运输行业协会公开报告、干线货运监测平台、上市物流企业定期披露文件。更新节奏以周度、月度为主，部分政策解读类研报随行业动态更新。文档结
+meta_description: 物流研报检索的模型接入与配置：物流研报检索的模型接入与配置，涵盖配置与验证建议。
 keywords: 物流、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

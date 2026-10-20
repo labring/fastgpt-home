@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力财报分析的多轮对话与提示词
-meta_description: 电力行业财报数据主要来自上市电力企业定期披露的年报、中报、季报，以及省级电网公开的运营统计数据。数据更新节奏以季度为核心周期，年度报告为完整周期。单份财报文
+meta_description: 电力财报分析的多轮对话与提示词：电力财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电力、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

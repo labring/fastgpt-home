@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股智能尽调报告的模型接入与配置
-meta_description: 多元控股智能尽调报告的数据来源包括公开监管公告、子公司内部报送台账、第三方公开工商及经营数据。更新节奏按监管披露时点、内部报送周期分阶段完成。文档采用分层结
+meta_description: 多元控股智能尽调报告的模型接入与配置：多元控股智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 多元控股、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备智能尽调报告的引用来源与溯源
-meta_description: 兵器装备相关尽调数据主要来自国防军工行业公开标准、军工院所定型试验报告、装备采购备案公示、行业技术白皮书。数据更新节奏依装备阶段而定，定型量产装备更新频率较
+meta_description: 兵器装备智能尽调报告的引用来源与溯源：兵器装备智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 兵器装备、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

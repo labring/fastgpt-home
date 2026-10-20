@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Industrial Park Yield
-meta_description: Data sources include financial ledgers, investment signing archives, property fee modules from the park operation management system, and rent filing
+meta_description: Conversation Logging and Auditing for Industrial Park Yield Rate Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

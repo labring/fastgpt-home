@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气营销内容的工具调用与插件
-meta_description: 面向金融领域的燃气营销相关数据，主要来自燃气经营企业的用户档案系统、管网运营平台、月度账单系统、区域推广活动台账，以及合作金融机构的用户授信数据。数据更新节
+meta_description: 燃气营销内容的工具调用与插件：燃气营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 燃气、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发投研知识库建设的数据库与运维
-meta_description: 软件开发投研的数据来源包括公开代码仓库、技术规范文档、开源项目元数据、行业技术白皮书、漏洞公告库、API接口文档等。更新节奏差异显著，代码提交与漏洞公告为实
+meta_description: 软件开发投研知识库建设的数据库与运维：软件开发投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 软件开发、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

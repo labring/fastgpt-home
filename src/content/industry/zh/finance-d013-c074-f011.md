@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务融资日报的文档解析与分块
-meta_description: 教育服务融资日报的数据来源涵盖公开投融资披露平台、教育赛道行业数据库、机构提交的融资备案文件。更新节奏为每日更新，覆盖当日发布的全量教育服务领域融资信息。文
+meta_description: 教育服务融资日报的文档解析与分块：教育服务融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 教育服务、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

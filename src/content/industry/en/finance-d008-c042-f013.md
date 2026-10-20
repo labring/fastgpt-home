@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Intelligent Due
-meta_description: Data for intelligent due diligence reports in brand agency operations comes from e-commerce backend operation reports provided by brands, social media
+meta_description: Knowledge Base Retrieval and Recall for Intelligent Due Diligence Reports in Brand Agency Operations
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

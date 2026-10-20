@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Residential
-meta_description: Residential development yield-related data is primarily sourced from internal cost ledgers, sales filing systems, financing ledgers, and local housing
+meta_description: Multi-turn Dialogue and Prompt Engineering for Residential Development Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

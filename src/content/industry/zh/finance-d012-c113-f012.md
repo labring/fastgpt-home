@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒营销内容的模型接入与配置
-meta_description: 白酒营销内容数据主要来自品牌方产品手册、官方宣传海报、线下品鉴物料、电商详情页素材及经销商反馈话术。更新节奏随新品上市、节庆营销节点及品牌政策调整变动。文档
+meta_description: 白酒营销内容的模型接入与配置：白酒营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 白酒、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

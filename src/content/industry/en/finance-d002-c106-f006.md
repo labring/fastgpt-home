@@ -4,8 +4,8 @@ slug: /en/industry/finance-d002-c106-f006
 page_type: Industry scenario page
 article_section: Unified AI Platform and Multi-App Orchestration
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logs and Auditing for Usage Statistics in the
-meta_description: The platform generates usage statistics data from the call links, session management modules, and resource consumption statistics modules of each
+meta_title: Conversation Logs and Auditing for Usage Statistics
+meta_description: Conversation Logs and Auditing for Usage Statistics in the All-in-One AI Platform
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

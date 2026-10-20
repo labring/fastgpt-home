@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务营销内容的工作流编排
-meta_description: IT服务营销内容的数据来源包括厂商自有营销素材库、公开技术文档、客户需求整理文档。更新节奏随产品迭代、营销活动调整变动，无固定周期，单次更新覆盖单条或多条素
+meta_description: IT 服务营销内容的工作流编排：IT 服务营销内容的工作流编排，涵盖配置与验证建议
 keywords: IT 服务、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

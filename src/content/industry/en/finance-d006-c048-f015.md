@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c048-f015
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Investment Research Knowledge Base
-meta_description: The data for urban commercial bank investment research knowledge bases comes mainly from internal credit ledgers, regional economic monitoring
+meta_title: Deployment and Upgrade of Investment Research Knowledge
+meta_description: Deployment and Upgrade of Investment Research Knowledge Base Construction for Urban Commercial Banks
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

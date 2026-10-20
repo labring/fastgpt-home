@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石财报分析的知识库检索与召回
-meta_description: 铁矿石相关财报与行业数据来源包括全球主流矿山企业年报、国内港口库存周报、期货交易所交割数据、行业协会供需报告。更新节奏分多档：现货报价每日收盘后更新，行业供
+meta_description: 铁矿石财报分析的知识库检索与召回：铁矿石财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 铁矿石、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

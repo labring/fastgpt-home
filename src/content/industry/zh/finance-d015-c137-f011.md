@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贷后台账风控的文档解析与分块
-meta_description: 贷后台账数据主要来源于核心信贷业务系统、还款代扣渠道与内部催收台账系统。更新节奏随单笔交易触发或每日批量同步。文档多为导出的结构化文件，包括Excel汇总表
+meta_description: 贷后台账风控的文档解析与分块：贷后台账风控的文档解析与分块，涵盖配置与验证建议。
 keywords: 贷后台账、风控与授信材料审核、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

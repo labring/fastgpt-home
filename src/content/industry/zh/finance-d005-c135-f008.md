@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 账户问题客户服务的工具调用与插件
-meta_description: 账户问题相关数据主要来源于用户端提交的账户咨询工单、核心业务系统的账户交易日志、权限变更记录。数据更新节奏分为两类：余额、登录异常等即时类问题数据为实时更新
+meta_description: 账户问题客户服务的工具调用与插件：账户问题客户服务的工具调用与插件，涵盖配置与验证建议
 keywords: 账户问题、客户服务与账户咨询、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

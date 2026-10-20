@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Account Issue Customer Service
-meta_description: Account issue data primarily comes from financial institution core transaction systems, customer service ticket repositories, and customer operation
+meta_description: Deployment and Upgrade for Account Issue Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

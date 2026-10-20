@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的部署与升级
-meta_description: 专业连锁的融资日报数据主要来自门店收银系统、总部财务核算平台与供应链对账端口。数据更新节奏为每日营业结束后自动生成单店及总部汇总报表。文档以结构化表格为核心
+meta_description: 专业连锁融资日报的部署与升级：专业连锁融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 专业连锁、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器营销内容的向量模型与索引
-meta_description: 厨卫电器的营销内容数据来源包括金融机构合作品牌官方发布的产品参数手册、电商平台官方详情页、线下终端宣传物料、品牌官方新媒体营销稿件、金融机构定制的厨卫电器搭
+meta_description: 厨卫电器营销内容的向量模型与索引：厨卫电器营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 厨卫电器、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

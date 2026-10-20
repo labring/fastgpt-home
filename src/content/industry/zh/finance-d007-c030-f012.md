@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品收益率的模型接入与配置
-meta_description: 化妆品收益率相关数据主要来源于品牌官方销售台账、第三方电商平台后台报表、线下终端收银系统导出文件。数据更新节奏为每日更新前一日的全渠道销售明细，每周生成周度
+meta_description: 化妆品收益率的模型接入与配置：化妆品收益率的模型接入与配置，涵盖配置与验证建议。
 keywords: 化妆品、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

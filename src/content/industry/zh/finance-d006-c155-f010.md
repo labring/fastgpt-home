@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料投研知识库建设的数据库与运维
-meta_description: 饲料投研的数据主要来自行业协会公开数据、大宗商品交易所行情接口、饲料企业内部生产台账、农业农村部发布的饲料安全标准文档。更新节奏分为三类：现货行情数据每日更
+meta_description: 饲料投研知识库建设的数据库与运维：饲料投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 饲料、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

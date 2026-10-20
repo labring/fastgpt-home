@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮融资日报的多轮对话与提示词
-meta_description: 酒店餐饮融资日报的数据来自门店POS终端、供应链管理系统、地方商务部门的餐饮行业备案数据与企业内部融资对接台账。更新节奏为每日凌晨同步前一日全量数据。单条文
+meta_description: 酒店餐饮融资日报的多轮对话与提示词：酒店餐饮融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 酒店餐饮、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

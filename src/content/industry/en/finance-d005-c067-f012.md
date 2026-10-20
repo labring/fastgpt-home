@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Complaint Ticket
-meta_description: Complaint ticket data is sourced from internal enterprise customer service ticket systems, online customer service conversation archive systems, and
+meta_description: Model Integration and Configuration for Complaint Ticket Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

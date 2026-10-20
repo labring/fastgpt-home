@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Black Home
-meta_description: Sources of black home appliance intelligent due diligence data include the National Home Appliance Energy Efficiency Public Service Platform, 3C
+meta_description: HTTP Interfaces and External Systems for Black Home Appliance Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Rural Commercial Bank
-meta_description: Yield rate daily report data for rural commercial banks is sourced from internal core business systems, capital operation systems, and retail business
+meta_description: Conversation Logging and Auditing for Rural Commercial Bank Yield Rate Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

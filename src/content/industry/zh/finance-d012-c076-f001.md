@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品营销内容的HTTP 接口与外部系统
-meta_description: 文娱用品的营销相关数据主要来源于品牌方ERP系统、电商后台商品库及营销素材管理平台。常规SKU数据月度更新1-2次，新品发售或营销活动期间会集中更新。数据包
+meta_description: 文娱用品营销内容的HTTP 接口与外部系统：文娱用品营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 文娱用品、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

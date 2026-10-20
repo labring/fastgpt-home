@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车财报分析的部署与升级
-meta_description: 整车企业的财报数据来源于证券交易所公开披露的定期报告、企业官方发布的产销快报。更新节奏包含季度、半年度、年度的定期披露，辅以月度产销数据的临时更新。文档结构
+meta_description: 整车财报分析的部署与升级：整车财报分析的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 整车、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

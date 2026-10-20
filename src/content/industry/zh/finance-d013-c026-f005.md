@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版融资日报的多轮对话与提示词
-meta_description: 出版融资日报的数据来自出版企业公开融资公告、行业监管披露文件及公开股权交易信息，每日更新一次。单份日报文档为结构化表格格式，每行对应一笔独立融资项目，包含融
+meta_description: 出版融资日报的多轮对话与提示词：出版融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 出版、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

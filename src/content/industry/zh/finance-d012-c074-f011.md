@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务营销内容的文档解析与分块
-meta_description: 教育服务营销内容的数据主要来自机构内部的课程文档、招生活动方案、年度运营年报、结构化学员数据表格，以及内部协作平台的营销物料页面。更新节奏随营销节点变动，学
+meta_description: 教育服务营销内容的文档解析与分块：教育服务营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 教育服务、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

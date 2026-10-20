@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程智能尽调报告的向量模型与索引
-meta_description: 基建工程智能尽调报告的数据主要来源于项目立项审批文件、施工日志、监理周报、造价结算单、招投标文件及竣工验收资料。数据更新节奏随项目阶段推进，立项、施工、竣工
+meta_description: 基建工程智能尽调报告的向量模型与索引：基建工程智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 基建工程、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

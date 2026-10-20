@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券智能尽调报告的工具调用与插件
-meta_description: 证券智能尽调报告的数据来自交易所公开披露文件、上市公司定期报告、行业监管公示信息。更新节奏分为固定周期与实时触发两类：季度报告、年度报告按监管要求固定更新，
+meta_description: 证券智能尽调报告的工具调用与插件：证券智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 证券、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

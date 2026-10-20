@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造融资日报的文档解析与分块
-meta_description: 来源为纺织制造企业的每日融资报备文档、合作金融机构的放款回执台账、区域纺织行业供应链金融平台的每日更新数据。更新节奏为每日更新，单份文档覆盖当日全量业务条目
+meta_description: 纺织制造融资日报的文档解析与分块：纺织制造融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 纺织制造、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

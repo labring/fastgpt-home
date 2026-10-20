@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的向量模型与索引
-meta_description: 包装印刷领域的智能尽调数据主要来源于生产工单、原材料采购单、印刷工艺参数文档、质检合规报告及交货记录。数据更新节奏按生产批次触发，单次工单完成后同步更新对应
+meta_description: 包装印刷智能尽调报告的向量模型与索引：包装印刷智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

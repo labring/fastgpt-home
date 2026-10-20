@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融营销内容的多轮对话与提示词
-meta_description: 多元金融的营销内容数据主要来自产品招募说明书、理财计划条款、保险责任说明、投教科普材料、营销活动规则等。数据更新节奏随产品上线、活动调整同步进行，部分常规投
+meta_description: 多元金融营销内容的多轮对话与提示词：多元金融营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 多元金融、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

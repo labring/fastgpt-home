@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的向量模型与索引
-meta_description: 证券财报数据来源为沪深北交易所官方披露平台、上市公司指定信息披露渠道。更新节奏分为定期披露与临时披露，定期披露包含季度、半年度、年度报告，固定在披露窗口期发
+meta_description: 证券财报分析的向量模型与索引：证券财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 证券、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

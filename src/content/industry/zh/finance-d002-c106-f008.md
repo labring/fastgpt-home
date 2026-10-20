@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 用量统计一体化 AI 平台的工具调用与插件
-meta_description: 该品类的数据来源于一体化AI平台的调用链路日志、资源消耗统计模块，以及各应用的插件执行记录。数据更新节奏为分钟级，支持按小时、天维度聚合导出。文档结构包含基
+meta_description: 用量统计一体化 AI 平台的工具调用与插件：用量统计一体化 AI 平台的工具调用与插件，涵盖配置与验证建议
 keywords: 用量统计、一体化 AI 平台与多应用编排、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

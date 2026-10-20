@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Infrastructure Construction
-meta_description: The yield rate data for infrastructure construction projects comes primarily from three sources: project monthly measurement and payment ledgers
+meta_description: Workflow Orchestration for Infrastructure Construction Project Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

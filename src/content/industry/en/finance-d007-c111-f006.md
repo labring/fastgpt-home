@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logging and Auditing for Livestock and Poultry
-meta_description: Data related to livestock and poultry farming yield rates comes primarily from farm daily feeding records, seedling purchase ledgers, slaughter
+meta_description: Conversation Logging and Auditing for Livestock and Poultry Farming Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

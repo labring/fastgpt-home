@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程研报检索的多轮对话与提示词
-meta_description: 房建工程研报数据主要来源于住建部门公开施工规范、全国建筑市场监管公共服务平台招投标公示、行业协会年度白皮书、甲级设计院专项技术报告。数据更新节奏分三类：合规
+meta_description: 房建工程研报检索的多轮对话与提示词：房建工程研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 房建工程、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

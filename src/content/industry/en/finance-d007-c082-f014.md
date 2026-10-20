@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Aquaculture Profit Yield Daily
-meta_description: Core data for aquaculture profit yield and market daily reporting comes from pond IoT monitoring devices, breeding ledger systems, and regional
+meta_description: Forms and Interactions for Aquaculture Profit Yield Daily Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

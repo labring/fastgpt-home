@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械营销内容的多轮对话与提示词
-meta_description: 金融/保险/理财领域针对工程机械的营销内容数据主要来自厂商官方产品手册、技术参数文档、经销商区域适配话术库、线下展会物料及售后常见问题集，以及金融机构的工程
+meta_description: 工程机械营销内容的多轮对话与提示词：工程机械营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工程机械、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

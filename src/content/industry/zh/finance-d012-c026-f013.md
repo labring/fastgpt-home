@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版营销内容的知识库检索与召回
-meta_description: 出版营销内容的数据主要来源于出版社官方营销物料库，包括新书宣传文案、作者访谈记录、活动海报文案、渠道推广邮件、直播脚本片段等。数据更新节奏随新书上市、营销活
+meta_description: 出版营销内容的知识库检索与召回：出版营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 出版、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

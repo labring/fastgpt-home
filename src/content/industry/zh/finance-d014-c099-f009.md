@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气财报分析的引用来源与溯源
-meta_description: 燃气品类的财报数据来源为国内燃气经营企业公开披露的定期财报、地方住建部门及能源监管机构发布的行业运营公示文档。更新节奏为年度年报、半年度报、季度报的固定周期
+meta_description: 燃气财报分析的引用来源与溯源：燃气财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 燃气、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

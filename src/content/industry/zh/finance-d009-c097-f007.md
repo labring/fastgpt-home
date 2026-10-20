@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤研报检索的工作流编排
-meta_description: 数据来源包括国内煤炭行业协会公开报告、券商行业研报、大连商品交易所交割标准文档、国内主要煤炭港口的现货交易数据。更新节奏：常规行业分析报告按周、月固定更新，
+meta_description: 焦煤研报检索的工作流编排：焦煤研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 焦煤、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务收益率的表单与交互
-meta_description: 水务收益率相关数据主要来自水务企业内部生产调度系统、财务ERP模块，以及当地市政供水主管部门公开的定价备案数据。数据更新节奏为每日凌晨生成前一日的全量汇总文
+meta_description: 水务收益率的表单与交互：水务收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 水务、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

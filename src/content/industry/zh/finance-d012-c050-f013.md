@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的知识库检索与召回
-meta_description: 塑料橡胶品类的数据主要来自生产企业出厂质检报告、行业协会供需台账、上游原材料报价系统及下游定制需求文档。数据更新节奏分三类：原材料报价每日同步，批次质检报告
+meta_description: 塑料橡胶营销内容的知识库检索与召回：塑料橡胶营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 塑料橡胶、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

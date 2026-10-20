@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c112-f006
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logging and Auditing for White Goods Investment
-meta_description: White goods investment research data sources include industry association public reports, official brand quarterly financial reports, offline store
+meta_title: Conversation Logging and Auditing for White Goods
+meta_description: Conversation Logging and Auditing for White Goods Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

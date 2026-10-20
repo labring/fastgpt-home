@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品营销内容的模型接入与配置
-meta_description: 饰品品类的数据主要来自品牌方SKU管理系统、电商平台商品库及线下库存台账。数据更新节奏随上新周期调整，新品集中上线时段更新频率更高，常规库存与定价每日同步。
+meta_description: 饰品营销内容的模型接入与配置：饰品营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 饰品、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

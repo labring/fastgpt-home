@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的部署与升级
-meta_description: 担保材料风控的数据源为用户提交的纸质扫描件或电子文档，涵盖企业/个人担保函、抵押物权属证明、第三方担保协议等。更新节奏为单次提交后仅在担保关系变更时更新，无
+meta_description: 担保材料风控的部署与升级：担保材料风控的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 担保材料、风控与授信材料审核、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

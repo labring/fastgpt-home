@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器营销内容的文档解析与分块
-meta_description: 厨卫电器营销相关文档主要来源于品牌方产品规格书、电商平台导出的商品详情页、售后FAQ汇总、营销话术素材库，以及对接电商或售后系统的接口文档。更新节奏随新品上
+meta_description: 厨卫电器营销内容的文档解析与分块：厨卫电器营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 厨卫电器、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

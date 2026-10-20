@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品智能尽调报告的部署与升级
-meta_description: 乳制品智能尽调报告的数据主要来自第三方质检机构的抽检报告、企业内部的奶源检测台账、供应链溯源系统的批次记录、海关进口报关单等。更新节奏存在差异：奶源检测数据
+meta_description: 乳制品智能尽调报告的部署与升级：乳制品智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 乳制品、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

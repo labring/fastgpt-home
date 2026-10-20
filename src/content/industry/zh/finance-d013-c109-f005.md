@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件融资日报的多轮对话与提示词
-meta_description: 电子元件融资日报的数据来源包括国内电子元器件行业协会公开披露的行业融资信息、上市电子制造企业的定向增发与供应链融资公告、垂直元器件经销商的供应链金融交易记录
+meta_description: 电子元件融资日报的多轮对话与提示词：电子元件融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电子元件、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

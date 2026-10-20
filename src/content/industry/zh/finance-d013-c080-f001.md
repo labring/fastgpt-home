@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺融资日报的HTTP 接口与外部系统
-meta_description: 服装家纺融资日报的数据主要来源于行业协会公开披露、上市及非上市企业的融资公告、供应链上下游的交易融资信息。数据更新节奏为每个工作日发布当日新增的融资动态，非
+meta_description: 服装家纺融资日报的HTTP 接口与外部系统：服装家纺融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 服装家纺、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化研报检索的多轮对话与提示词
-meta_description: 炼化研报数据主要来自石油石化行业专业研究机构、炼化企业内部工艺与运营文档、行业协会月度或季度监测报告。文档结构包含装置运行参数、原料加工配比、能耗排放指标、
+meta_description: 炼化研报检索的多轮对话与提示词：炼化研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 炼化、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Share and Embed for Thermal Utility Yield Data
-meta_description: This is thermal industry yield and daily market report data from the public utilities sector of the financial industry. It is sourced from public
+meta_description: Share and Embed for Thermal Utility Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

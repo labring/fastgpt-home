@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Solid Waste Treatment Yield Rates
-meta_description: Core data sources for solid waste treatment yield rates include three categories: project operation ledgers, daily market quotes for recycled
+meta_description: Workflow Orchestration for Solid Waste Treatment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

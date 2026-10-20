@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Minor Metal Yield Data
-meta_description: Minor metal market and yield data comes from domestic nonferrous metal industry professional information platforms, public market APIs from futures
+meta_description: Deployment and Upgrade for Minor Metal Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

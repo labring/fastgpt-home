@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化融资日报的部署与升级
-meta_description: 炼化融资日报的数据来源包括石油石化行业供应链融资平台、现货交易所的炼化品交易融资记录、企业授信备案系统。更新节奏为每日更新，当日生成前一日的全量融资数据。文
+meta_description: 炼化融资日报的部署与升级：炼化融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 炼化、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

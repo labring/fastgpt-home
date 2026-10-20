@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务营销内容的向量模型与索引
-meta_description: 通信服务营销内容的数据主要来自金融机构内部营销系统、客服话术模板库、线下活动物料、合作渠道推广素材。数据更新节奏随营销活动节奏波动，新理财产品上线、节日理财
+meta_description: 通信服务营销内容的向量模型与索引：通信服务营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 通信服务、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

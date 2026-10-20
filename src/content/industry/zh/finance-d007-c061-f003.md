@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械收益率的分享与嵌入
-meta_description: 这个品类的行情与收益数据来源包括公开的工程机械整机厂商官方指导价、二手设备交易平台的实时成交记录、行业租赁平台的租金记录。更新节奏区分两类数据：新机指导价按
+meta_description: 工程机械收益率的分享与嵌入：工程机械收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 工程机械、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

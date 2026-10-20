@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c117-f015
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Textile Manufacturing Intelligent
-meta_description: Data for textile manufacturing intelligent due diligence reports comes primarily from upstream raw material spot and futures platforms, downstream
+meta_title: Deployment and Upgrade for Textile Manufacturing
+meta_description: Deployment and Upgrade for Textile Manufacturing Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

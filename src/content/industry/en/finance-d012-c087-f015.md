@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Automotive Parts Marketing
-meta_description: Marketing content data for automotive parts primarily comes from original equipment manufacturer (OEM) product manuals, after-sales spare parts
+meta_description: Deployment and Upgrade for Automotive Parts Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ High structured parameter content requires configuring field extraction rules du
 
 ## Three Common Errors
 - After upgrading to version 4.14.3, an error `fail to create post presigned url` appears when adding attachment files during conversations. The cause is that object storage configuration parameters were not updated synchronously after the upgrade, leading to abnormal presigned URL generation logic.
-- After upgrading the platform version, model vendor icons fail to load normally, and a loading failed placeholder is displayed in the interface. The cause is that the upgrade script did not overwrite the static resource directory, so icon files were not synchronized for update.
+- After upgrading the platform version, model vendor icons fail to load normally, and a loading failed pending verification is displayed in the interface. The cause is that the upgrade script did not overwrite the static resource directory, so icon files were not synchronized for update.
 - It is impossible to accurately calculate the total disk space occupied by a locally deployed knowledge base. The cause is that storage paths for original files, split file chunks, and embedding vectors are not distinguished. Directly counting root directory usage will include unrelated data.
 
 ## How to Confirm Proper Configuration

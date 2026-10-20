@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Oil and Gas Exploration
-meta_description: Oil and gas exploration research report data primarily comes from industry exploration and development institutions, internal documents of oil and gas
+meta_description: Vector Models and Indexing for Oil and Gas Exploration Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

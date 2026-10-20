@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品收益率的工具调用与插件
-meta_description: 休闲食品的收益率与行情数据主要来自线下商超POS终端、线上电商平台销售接口、供应链上游原料报价数据库。数据更新节奏分两类：线下零售数据每日凌晨更新前一日全量
+meta_description: 休闲食品收益率的工具调用与插件：休闲食品收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 休闲食品、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

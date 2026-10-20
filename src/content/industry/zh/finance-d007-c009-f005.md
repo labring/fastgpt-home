@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的多轮对话与提示词
-meta_description: 产业园区收益率相关数据主要来源于园区运营管理系统、属地产业园区管委会的公开监测台账、入驻企业的月度经营报表。数据更新节奏为月度周期，与租金结算、运营成本核算
+meta_description: 产业园区收益率的多轮对话与提示词：产业园区收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 产业园区、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

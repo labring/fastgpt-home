@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Energy Metals Financing
-meta_description: Data for energy metals financing daily reports comes from domestic non-ferrous metal industry association daily monitoring reports, financing
+meta_description: Document Parsing and Chunking for Energy Metals Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

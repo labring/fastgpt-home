@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶财报分析的部署与升级
-meta_description: 塑料橡胶行业的财报数据来源包括境内外证券交易所公开披露的上市公司定期报告、专业行业数据库、行业协会发布的月度产销监测数据。更新节奏为年度完整财报每年披露一次
+meta_description: 塑料橡胶财报分析的部署与升级：塑料橡胶财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 塑料橡胶、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

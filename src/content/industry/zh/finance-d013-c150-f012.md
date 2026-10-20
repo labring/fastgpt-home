@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的模型接入与配置
-meta_description: 铁矿石融资日报数据主要来源于国内大宗商品交易平台、沿海港口监测系统、钢厂采购台账及金融机构授信台账。数据按自然日更新，每日凌晨完成当日全量数据汇总。文档结构
+meta_description: 铁矿石融资日报的模型接入与配置：铁矿石融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 铁矿石、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件投研知识库建设的数据库与运维
-meta_description: 汽车零部件投研数据主要来自车企配套公告、行业协会供应链台账、零部件供应商官方报价单、专利数据库及合规标准文档。更新节奏随场景不同：车型配套BOM数据随新车型
+meta_description: 汽车零部件投研知识库建设的数据库与运维：汽车零部件投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 汽车零部件、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

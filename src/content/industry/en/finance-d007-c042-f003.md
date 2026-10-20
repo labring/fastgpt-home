@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Brand Agency Operation
-meta_description: Operational data for brand agency operations is collected primarily from e-commerce backend APIs, advertising management system interfaces, and
+meta_description: Sharing and Embedding for Brand Agency Operation Profitability Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -25,7 +25,7 @@ Integrating multiple data sources requires embedding components to support confi
 | `datasetSyncCron` | `0 1 * * *` | Matches the T+1 generation rhythm of brand agency operation daily reports, automatically syncs the latest data during the early morning of the next day |
 | `sharePermissionMode` | `internal_only` | Brand agency operation data is commercially sensitive information, only internally authorized users may access shared content |
 | `embedComponentLoadTimeout` | `30 seconds` | Adapts to the time consumption requirements of multi-channel data pulling, prevents loading failures caused by large data volumes |
-| `apiDataSourceFilter` | `brand_id in [{{current_user.brand_ids}}]` | Implements permission filtering by agency operation brand, ensures only data for brands assigned to the current user is displayed |
+| `apiDataSourceFilter` | `brand_id in [example value]` | Implements permission filtering by agency operation brand, ensures only data for brands assigned to the current user is displayed |
 | `datasetParseChunkSize` | `800–1200 characters` | Adapts to the length of daily report structured fields, prevents field information from being broken during splitting |
 | `shareLinkExpireTime` | `7 days` | Matches the valid cycle of daily report data, automatically expires after this period to ensure data security |
 

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融财报分析的文档解析与分块
-meta_description: 多元金融财报的数据主要来自交易所公开披露的非银金融机构年度、季度报告，更新节奏为每季度结束后1个月内披露季报，每年结束后4个月内披露年报。文档多为PDF或D
+meta_description: 多元金融财报分析的文档解析与分块：多元金融财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 多元金融、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

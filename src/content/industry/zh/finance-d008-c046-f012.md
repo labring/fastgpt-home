@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理智能尽调报告的模型接入与配置
-meta_description: 该品类为金融机构开展固废处置项目智能尽调的核心数据，主要来自属地环卫监管平台、固废处置企业运维系统、第三方合规检测报告。基础资质类数据随资质年审年度更新，转
+meta_description: 固废处理智能尽调报告的模型接入与配置：固废处理智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 固废处理、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

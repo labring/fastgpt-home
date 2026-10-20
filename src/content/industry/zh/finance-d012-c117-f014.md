@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的表单与交互
-meta_description: 来源包括金融机构面向纺织制造企业的供应链金融产品手册、线下展会收集的纺织制造企业融资需求表单、电商平台的纺织制造企业采购数据导出内容，以及自有面料库的参数文
+meta_description: 纺织制造营销内容的表单与交互：纺织制造营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 纺织制造、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石智能尽调报告的HTTP 接口与外部系统
-meta_description: 铁矿石智能尽调报告的数据主要来源于大连商品交易所交割标准数据、国内主要港口现货交易平台、国际矿山月度发货公告。数据更新节奏存在差异：港口现货数据每日更新，期
+meta_description: 铁矿石智能尽调报告的HTTP 接口与外部系统：铁矿石智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 铁矿石、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

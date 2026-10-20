@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营研报检索的引用来源与溯源
-meta_description: 金融领域品牌代运营场景的研报数据主要来自品牌电商后台（如信用卡商城、理财商城）、金融品牌社交媒体监测工具、金融行业第三方咨询机构及用户评论数据库。数据更新节
+meta_description: 品牌代运营研报检索的引用来源与溯源：品牌代运营研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 品牌代运营、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

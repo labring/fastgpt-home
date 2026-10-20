@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业营销内容的多轮对话与提示词
-meta_description: 商业物业的营销相关数据主要来源于自持招商手册、在管项目台账、商户租赁合同、活动策划方案及客流统计报表。数据更新节奏随业务节点调整：招商信息按月更新，商户入驻
+meta_description: 商业物业营销内容的多轮对话与提示词：商业物业营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 商业物业、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

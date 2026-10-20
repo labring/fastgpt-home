@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备研报检索的模型接入与配置
-meta_description: 航天装备研报是金融机构军工行业研究的核心参考资料，来源主要为公开的航天研制单位报告、行业专业期刊、官方立项公示及试验数据简报。更新节奏随型号研制节点、年度行
+meta_description: 航天装备研报检索的模型接入与配置：航天装备研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 航天装备、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

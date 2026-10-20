@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程收益率的部署与升级
-meta_description: 油服工程收益率相关数据的来源为企业内部作业台账系统、油气生产监控平台及大宗商品行情接口；更新节奏为每日T+1更新前一日全量作业数据；单条数据文档结构包含作业
+meta_description: 油服工程收益率的部署与升级：油服工程收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 油服工程、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

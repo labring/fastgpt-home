@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒财报分析的多轮对话与提示词
-meta_description: 白酒财报数据主要来自证券交易所官方披露平台、上市公司官方投资者关系公告。更新节奏遵循A股披露规则：季度报告每季度末后1个月内发布，半年度报告于每年8月底前完
+meta_description: 白酒财报分析的多轮对话与提示词：白酒财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 白酒、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

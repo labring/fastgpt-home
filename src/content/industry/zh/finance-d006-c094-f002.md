@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化投研知识库建设的上下文与 token
-meta_description: 炼化行业投研数据主要来源于装置运行日志、原油质检报告、炼化工艺规程、行业供需研报、海关进出口通关数据。装置运行数据按小时或分钟级频次更新，工艺规程与研报按季
+meta_description: 炼化投研知识库建设的上下文与 token：炼化投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 炼化、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

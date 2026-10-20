@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的多轮对话与提示词
-meta_description: 房建工程的营销内容数据主要来自项目立项文件、施工阶段的进度台账、已发布的户型与配套宣传物料、客户咨询的高频问题整理。更新节奏随项目阶段调整，从拿地筹备到开盘
+meta_description: 房建工程营销内容的多轮对话与提示词：房建工程营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

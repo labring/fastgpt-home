@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰营销内容的向量模型与索引
-meta_description: 金融行业的装修装饰营销内容数据主要来自机构网点改造方案、理财工作室软装物料、职场装修文案及报价模板。数据更新节奏随网点调整、活动场地改造、品牌形象升级波动，
+meta_description: 装修装饰营销内容的向量模型与索引：装修装饰营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 装修装饰、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

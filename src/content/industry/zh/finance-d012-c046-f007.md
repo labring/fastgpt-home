@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理营销内容的工作流编排
-meta_description: 固废处理领域的营销内容数据主要来自企业内部项目台账、环评审批文件、清运调度记录、客户招标公示及定制化营销方案文档。数据更新节奏随业务节点变动，项目类数据随中
+meta_description: 固废处理营销内容的工作流编排：固废处理营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 固废处理、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

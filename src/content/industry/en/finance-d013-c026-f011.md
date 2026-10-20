@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c026-f011
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Publishing Financing Daily
-meta_description: The data for publishing financing daily reports comes primarily from industry regulatory disclosure documents, official announcements from publishing
+meta_title: Document Parsing and Chunking for Publishing Financing
+meta_description: Document Parsing and Chunking for Publishing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

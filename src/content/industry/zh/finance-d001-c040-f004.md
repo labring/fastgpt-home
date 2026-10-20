@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的向量模型与索引
-meta_description: 受益所有人KYC数据主要来源于金融机构收集的客户尽职调查材料，包括企业工商公示信息、客户提交的股权穿透表、关联关系声明书。数据更新随客户主体变更触发，或按监
+meta_description: 受益所有人KYC 的向量模型与索引：受益所有人KYC 的向量模型与索引，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

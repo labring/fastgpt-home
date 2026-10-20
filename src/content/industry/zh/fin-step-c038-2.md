@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c038-2
 page_type: 行业作业环节页
 article_section: 银行运营与支付
 is_part_of: FastGPT 技术中心
-meta_title: 消费者权益保护与投诉处理的协调业务、合规和分支机构判断责任并
+meta_title: 消费者权益保护与投诉处理的协调业务、合规和分支机构判断责任并拟定答：哪一部分能交给系统
 meta_description: 消费者权益保护与投诉处理的协调业务、合规和分支机构判断责任并拟定答：哪一部分能交给系统
 keywords: 消费者权益保护与投诉处理、银行运营与支付、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

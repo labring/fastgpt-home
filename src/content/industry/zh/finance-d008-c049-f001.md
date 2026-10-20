@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程智能尽调报告的HTTP 接口与外部系统
-meta_description: 基建工程智能尽调报告的数据来源包括工程立项审批文件、施工日志、监理报告、造价核算台账、现场巡检记录及配套CAD图纸、造价清单附件。数据更新节奏随项目阶段变化
+meta_description: 基建工程智能尽调报告的HTTP 接口与外部系统：基建工程智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 基建工程、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Insurance Financial
-meta_description: Insurance financial report data sources include annual and quarterly financial reports independently disclosed by insurance companies, as well as
+meta_description: Model Access and Configuration for Insurance Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

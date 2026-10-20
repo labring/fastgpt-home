@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Commercial Real
-meta_description: Commercial real estate yield daily report data is mainly sourced from commercial operation management systems, local real estate transaction filing
+meta_description: HTTP Interfaces and External Systems for Commercial Real Estate Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

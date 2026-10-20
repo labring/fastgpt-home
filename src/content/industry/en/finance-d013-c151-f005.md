@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c151-f005
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Railway and
-meta_description: Data for railway and highway financing daily reports comes from project financing disclosure platforms of transportation authorities, bank credit
+meta_title: Multi-turn Dialogue and Prompt Engineering for Railway
+meta_description: Multi-turn Dialogue and Prompt Engineering for Railway and Highway Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

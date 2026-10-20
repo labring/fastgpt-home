@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c121-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Refractory Material Yield
-meta_description: Refractory material market and yield rate data comes from three primary sources: publicly monitored data from industry associations, transaction
+meta_title: Model Access and Configuration for Refractory Material
+meta_description: Model Access and Configuration for Refractory Material Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

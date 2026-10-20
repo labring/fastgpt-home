@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Investment Platform
-meta_description: Research data for investment platforms comes from multiple sources: public announcements of listed companies, brokerage research reports
+meta_description: Model Integration and Configuration for Investment Platform Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

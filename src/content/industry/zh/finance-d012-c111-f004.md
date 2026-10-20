@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖营销内容的向量模型与索引
-meta_description: 畜禽养殖的营销内容数据主要来自养殖技术手册、饲料与设备厂商推广物料、行业协会科普资料、农户养殖经验整理，以及线下培训转写文本。更新节奏随行业政策、疫病防控要
+meta_description: 畜禽养殖营销内容的向量模型与索引：畜禽养殖营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 畜禽养殖、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

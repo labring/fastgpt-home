@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券财报分析的引用来源与溯源
-meta_description: 证券财报数据主要来自境内外证券交易所的公开披露平台，更新节奏固定为季度报、年报的强制披露窗口期，重大经营事项会同步发布临时公告。文档结构包含结构化财务报表（
+meta_description: 证券财报分析的引用来源与溯源：证券财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 证券、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

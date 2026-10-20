@@ -4,8 +4,8 @@ slug: /en/industry/finance-d010-c116-f008
 page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
-meta_title: Tool Call and Plugin for Competitor Quote Bidding and Tender
-meta_description: Competitor quote data is primarily sourced from public bidding platforms, industry compliance databases, and enterprise historical tender archives.
+meta_title: Tool Call and Plugin for Competitor Quote Bidding
+meta_description: Tool Call and Plugin for Competitor Quote Bidding and Tender Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

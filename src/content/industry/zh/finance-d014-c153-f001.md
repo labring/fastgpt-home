@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电财报分析的HTTP 接口与外部系统
-meta_description: 风电行业上市公司的财报数据主要来源于境内外证券交易所公开披露的定期报告，以及行业公开运行简报。数据更新节奏固定，季度报告于每季度结束后1个月内披露，年度报告
+meta_description: 风电财报分析的HTTP 接口与外部系统：风电财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 风电、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

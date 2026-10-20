@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的多轮对话与提示词
-meta_description: 工程机械融资日报数据来源为融资租赁机构业务系统、全国工程机械租赁备案平台及设备进场登记数据库。每日凌晨完成前一日全量数据更新，单条日报文档结构标准化，包含设
+meta_description: 工程机械融资日报的多轮对话与提示词：工程机械融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工程机械、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

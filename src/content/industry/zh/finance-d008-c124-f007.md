@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备智能尽调报告的工作流编排
-meta_description: 自动化设备的尽调数据来源包含厂商出厂参数文档、设备运维日志、第三方质检报告、行业标准合规文件。其中出厂参数为静态数据，随设备型号固定；运维日志为高频更新数据
+meta_description: 自动化设备智能尽调报告的工作流编排：自动化设备智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 自动化设备、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

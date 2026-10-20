@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区营销内容的文档解析与分块
-meta_description: 产业园区营销类文档主要来源于园区运营团队编制的招商手册、产业政策汇编、入驻企业名录、活动邀约函及运营月报。更新节奏随招商进度、政策调整及入驻企业变动灵活调整
+meta_description: 产业园区营销内容的文档解析与分块：产业园区营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 产业园区、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

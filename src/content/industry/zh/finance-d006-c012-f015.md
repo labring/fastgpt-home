@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发投研知识库建设的部署与升级
-meta_description: 住宅开发投研数据主要来自土地出让公示、建设工程规划许可文件、商品房备案数据、项目可研报告、竞品楼盘施工进度月报等渠道。土地与规划类数据按工作日实时更新，备案
+meta_description: 住宅开发投研知识库建设的部署与升级：住宅开发投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 住宅开发、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

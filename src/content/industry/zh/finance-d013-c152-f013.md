@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类融资日报的知识库检索与召回
-meta_description: 鞋类融资日报的数据来自鞋类品牌方、代工厂、供应链金融机构的每日融资交易，覆盖原材料采购融资、生产订单融资、线下铺货授信等场景。更新节奏为每日更新，当日交易数
+meta_description: 鞋类融资日报的知识库检索与召回：鞋类融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 鞋类、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Airport Revenue Yield
-meta_description: Data related to airport revenue yield comes primarily from publicly available statistical datasets released by the Civil Aviation Administration of
+meta_description: Form and Interaction for Airport Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

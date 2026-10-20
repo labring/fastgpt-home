@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石收益率的HTTP 接口与外部系统
-meta_description: 铁矿石的行情与收益率数据主要来源于大连商品交易所铁矿石期货行情接口及第三方大宗商品资讯平台的现货报价接口。更新节奏分为两类：期货行情每10秒推送一次，现货报
+meta_description: 铁矿石收益率的HTTP 接口与外部系统：铁矿石收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 铁矿石、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

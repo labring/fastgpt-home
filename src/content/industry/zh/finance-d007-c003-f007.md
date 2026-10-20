@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁收益率的工作流编排
-meta_description: 专业连锁的收益率与行情数据来自各门店POS收银系统、进销存管理系统、区域行业监测平台。更新节奏为每日固定时段生成前一自然日的全量汇总数据，单门店实时营收数据
+meta_description: 专业连锁收益率的工作流编排：专业连锁收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 专业连锁、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

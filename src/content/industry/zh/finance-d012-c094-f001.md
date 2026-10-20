@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的HTTP 接口与外部系统
-meta_description: 数据来源为炼化企业内部营销管理系统、合作金融机构的供应链金融台账、经销商管理平台与线下提货台账。更新节奏：油品挂牌价格每日更新，临时促销活动方案随营销节奏发
+meta_description: 炼化营销内容的HTTP 接口与外部系统：炼化营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 炼化、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械营销内容的工具调用与插件
-meta_description: 工程机械的核心数据来源包括设备厂商出厂标定参数、现场运维采集的工况日志、租赁平台的设备调度记录。出厂参数为静态结构化数据，包含设备型号、额定起重量、最大作业
+meta_description: 工程机械营销内容的工具调用与插件：工程机械营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 工程机械、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资金来源KYC 的工具调用与插件
-meta_description: 资金来源KYC的数据包含结构化与非结构化两类核心形式：结构化数据为银行交易流水，由银行或支付机构生成，字段包括交易日期、交易金额、转出/转入账户、交易附言、
+meta_description: 资金来源KYC 的工具调用与插件：资金来源KYC 的工具调用与插件，涵盖配置与验证建议
 keywords: 资金来源、KYC 与反洗钱资料核验、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

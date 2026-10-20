@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的多轮对话与提示词
-meta_description: 医美营销内容的数据主要来源于机构内部合规部门的项目备案文件、营销团队整理的宣传素材库，以及合作医美平台的公开合规素材与用户咨询历史记录。更新节奏随合规政策调
+meta_description: 医美营销内容的多轮对话与提示词：医美营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 医美、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

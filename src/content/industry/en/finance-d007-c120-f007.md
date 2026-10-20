@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Cybersecurity Yield Rates
-meta_description: Daily yield rate and market trend data from the cybersecurity field comes from enterprise security operations center daily operation logs, public
+meta_description: Workflow Orchestration for Cybersecurity Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

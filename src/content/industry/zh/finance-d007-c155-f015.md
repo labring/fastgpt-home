@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料收益率的部署与升级
-meta_description: 饲料收益率相关数据主要来自农业农村部畜牧兽医局饲料监测系统、国内大型饲料生产企业的公开报价端口，以及区域性农贸批发市场的每日采样数据。数据更新节奏为每日16
+meta_description: 饲料收益率的部署与升级：饲料收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 饲料、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

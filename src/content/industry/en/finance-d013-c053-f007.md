@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Diversified Financial Financing
-meta_description: The data for diversified financial financing daily reports mainly comes from the non-bank financing monitoring system of local financial associations
+meta_description: Workflow Orchestration for Diversified Financial Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

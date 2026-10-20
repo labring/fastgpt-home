@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Iron Ore Yield Rates
-meta_description: Iron ore market and yield rate data primarily comes from Dalian Commodity Exchange futures trading data, and daily quote data from domestic mainstream
+meta_description: Multi-turn Dialogue and Prompting for Iron Ore Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

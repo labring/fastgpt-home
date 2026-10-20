@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Consumer Construction Materials
-meta_description: Data related to consumer construction materials yield rates comes primarily from market monitoring platforms in the building material circulation
+meta_description: Workflow Orchestration for Consumer Construction Materials Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -36,7 +36,7 @@ Multi-source data aggregation requires workflows to configure multiple data sour
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.
 
 ## Three Common Misconfigurations
-- Phenomenon: The output of the workflow text generation node retains `{{var_name}}` format variable placeholders, and does not replace them with actual data. Cause: Automatic variable replacement was not enabled in the node configuration, or variable reference syntax that does not comply with system specifications was used, preventing the system from recognizing the placeholder.
+- Phenomenon: The output of the workflow text generation node retains `example value` format variable placeholders, and does not replace them with actual data. Cause: Automatic variable replacement was not enabled in the node configuration, or variable reference syntax that does not comply with system specifications was used, preventing the system from recognizing the pending verification.
 - Phenomenon: The workflow fails directly when executing to the tool call node, with a failed running status. Cause: No initial value was set for global variables, or variable updates were not synchronized to workflow nodes, resulting in missing required parameter information for tool requests.
 - Phenomenon: Processed consumer construction material data includes records from unrelated categories that do not match the preset target categories. Cause: No category filtering rule was configured before the data pull node, or the matching logic of the filtering rule has deviations, leading to redundant data being included in the processing flow.
 

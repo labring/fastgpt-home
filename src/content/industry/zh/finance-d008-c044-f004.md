@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业物业智能尽调报告的向量模型与索引
-meta_description: 商业物业智能尽调报告的数据主要来自不动产登记机构公开权属数据、物业运营方内部台账、商圈监测机构公开报告三类。数据更新节奏存在差异：权属数据每季度更新一次，租
+meta_description: 商业物业智能尽调报告的向量模型与索引：商业物业智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 商业物业、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

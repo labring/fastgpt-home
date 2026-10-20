@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Plastics and Rubber
-meta_description: Plastics and rubber research report data mainly comes from China Plastics Processing Industry Association, China Rubber Industry Association, domestic
+meta_description: Citation Sources and Traceability for Plastics and Rubber Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

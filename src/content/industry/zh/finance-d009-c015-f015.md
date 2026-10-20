@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能研报检索的部署与升级
-meta_description: 面向金融投资场景的储能行业研报，主要来自电力设备行业协会、券商研究所、电网运营机构及储能厂商的公开研究报告。更新节奏包含月度行业动态报告、季度深度分析报告，
+meta_description: 储能研报检索的部署与升级：储能研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 储能、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

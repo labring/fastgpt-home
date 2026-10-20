@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Communications Equipment
-meta_description: Data for communications equipment financing daily reports comes from national public resource trading platforms, communications industry monitoring
+meta_description: Tool Calling and Plugins for Communications Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

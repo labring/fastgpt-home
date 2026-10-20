@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢研报检索的文档解析与分块
-meta_description: 特钢研报数据主要来自行业权威机构发布的行业报告、各特钢生产企业的内部运营文档、第三方产业调研机构公开的供需分析资料。更新节奏分为三类：月度更新的市场报价报告
+meta_description: 特钢研报检索的文档解析与分块：特钢研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 特钢、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

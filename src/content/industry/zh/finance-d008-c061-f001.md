@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的HTTP 接口与外部系统
-meta_description: 工程机械智能尽调报告的数据主要来自设备厂商运维系统、工地项目管理平台、第三方租赁服务商及质检机构。数据更新节奏分为三类：设备实时运行数据每小时同步，租赁状态
+meta_description: 工程机械智能尽调报告的HTTP 接口与外部系统：工程机械智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

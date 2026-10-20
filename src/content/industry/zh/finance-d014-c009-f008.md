@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区财报分析的工具调用与插件
-meta_description: 产业园区财报数据主要来自园区运营主体的年度财务报告、管委会发布的园区运营统计公报，以及入驻企业的定期汇总报表。数据更新以年度正式财报为核心周期，季度或月度的
+meta_description: 产业园区财报分析的工具调用与插件：产业园区财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 产业园区、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

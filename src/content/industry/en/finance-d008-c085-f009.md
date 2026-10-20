@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c085-f009
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Cement Intelligent Due
-meta_description: Cement industry data primarily comes from monthly public data released by national building material industry associations, public quality inspection
+meta_title: Citation Sources and Traceability for Cement Intelligent
+meta_description: Citation Sources and Traceability for Cement Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件融资日报的工具调用与插件
-meta_description: 电子元件融资日报的数据来自官方融资披露公告、电子元件行业资讯平台及监管公示系统，更新节奏为每个工作日早间更新前一工作日的电子元件相关融资动态。单条数据为结构
+meta_description: 电子元件融资日报的工具调用与插件：电子元件融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 电子元件、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

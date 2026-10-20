@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行研报检索的模型接入与配置
-meta_description: 城商行研报的来源主要为城商行总行投研部、区域金融协会公开报告、地方监管的行业分析文档。更新节奏为季度常规更新，配合区域政策、同业动态发布临时专题研报。文档结
+meta_description: 城商行研报检索的模型接入与配置：城商行研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 城商行、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

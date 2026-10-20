@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品研报检索的引用来源与溯源
-meta_description: 饰品研报的数据主要来自纺织服饰行业协会的细分品类报告、上游原材料供应商的报价台账、跨境电商平台的饰品销售监测数据以及品牌方的新品研发文档。更新节奏分为三类：
+meta_description: 饰品研报检索的引用来源与溯源：饰品研报检索的引用来源与溯源，涵盖配置与验证建议。
 keywords: 饰品、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

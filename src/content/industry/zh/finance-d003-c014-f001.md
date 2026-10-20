@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保障责任保险理赔初审的HTTP 接口与外部系统
-meta_description: 保障责任数据来源于保险公司核心业务系统的保单关联责任条款库、理赔定损系统的历史赔付记录。数据更新节奏分为两种：保单生效时实时生成对应责任条目，条款修订时触发
+meta_description: 保障责任保险理赔初审的HTTP 接口与外部系统：保障责任保险理赔初审的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 保障责任、保险理赔初审、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

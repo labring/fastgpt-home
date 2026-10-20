@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的工具调用与插件
-meta_description: 包装印刷智能尽调报告的数据来源涵盖生产台账、原辅材料采购凭证、印刷品质检报告、环评备案文件及印刷设计源文件。数据更新节奏随企业报送周期调整，无统一固定频率。
+meta_description: 包装印刷智能尽调报告的工具调用与插件：包装印刷智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 出版收益率的模型接入与配置
-meta_description: 出版类金融行情日报的数据来源为证券交易场所公开披露的交易结算数据，每日固定时段完成更新。数据以结构化表格格式输出，每行对应单一金融标的的当日行情信息，包含标
+meta_description: 出版收益率的模型接入与配置：出版收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 出版、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

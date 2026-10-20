@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工融资日报的文档解析与分块
-meta_description: 煤化工融资日报数据来源于国内煤炭工业协会下属融资公示平台、上市煤化工企业公告及第三方行业资讯机构的每日融资简报。更新节奏为每个工作日发布单份日报，单份文档涵
+meta_description: 煤化工融资日报的文档解析与分块：煤化工融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 煤化工、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测收益率的对话日志与审计
-meta_description: 环境监测收益率相关数据来源于固定污染源在线监测设备、大气环境监测站、水环境监测断面等终端采集设备。数据更新节奏多为分钟级至小时级，核心监测点支持秒级实时推送
+meta_description: 环境监测收益率的对话日志与审计：环境监测收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 环境监测、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

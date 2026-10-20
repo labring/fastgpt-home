@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 费用清单保险理赔初审的工具调用与插件
-meta_description: 费用清单的数据主要来源于合作医疗机构的结算单据、保险公司内部理赔系统的导出文件，以及电子发票平台的同步数据。更新节奏随理赔申请提交实时触发，单份文档包含固定
+meta_description: 费用清单保险理赔初审的工具调用与插件：费用清单保险理赔初审的工具调用与插件，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

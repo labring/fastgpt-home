@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化收益率的数据库与运维
-meta_description: 数据来源为炼化生产DCS系统、物料平衡台账、原油加工量统计、成品油及化工品出厂质检报表。更新节奏为按生产批次或每小时增量更新，单次生产周期内会有多条增量记录
+meta_description: 炼化收益率的数据库与运维：炼化收益率的数据库与运维，涵盖配置与验证建议。。。。。
 keywords: 炼化、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

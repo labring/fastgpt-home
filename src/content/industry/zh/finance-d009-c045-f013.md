@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商用车研报检索的知识库检索与召回
-meta_description: 商用车研报数据主要来自行业协会公开公告、主机厂技术白皮书、第三方咨询机构专项调研。更新节奏以月度销量报告、季度行业分析为主，新车型上市或政策调整时会追加专项
+meta_description: 商用车研报检索的知识库检索与召回：商用车研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 商用车、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

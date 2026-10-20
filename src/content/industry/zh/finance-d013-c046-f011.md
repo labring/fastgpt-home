@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理融资日报的文档解析与分块
-meta_description: 固废处理融资日报的数据主要来自各地生态环境主管部门公开的项目审批文件、固废处理企业的融资公告及行业协会的定期报送材料。更新节奏多为周度或月度，单份文档包含多
+meta_description: 固废处理融资日报的文档解析与分块：固废处理融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 固废处理、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

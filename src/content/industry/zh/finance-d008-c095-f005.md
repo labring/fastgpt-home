@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力智能尽调报告的多轮对话与提示词
-meta_description: 热力智能尽调报告的数据来源于公用事业热力供应企业的运营管理系统、管网监测终端与用户计费系统。数据更新节奏为小时级批量同步，部分核心监测点数据实时推送。单份报
+meta_description: 热力智能尽调报告的多轮对话与提示词：热力智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 热力、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

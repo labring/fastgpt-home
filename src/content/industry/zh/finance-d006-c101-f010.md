@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流投研知识库建设的数据库与运维
-meta_description: 物流投研相关数据主要来自物流企业的仓储管理系统（WMS）、运输管理系统（TMS）、GPS定位终端及快递驿站扫码设备。数据更新节奏分层级：干线运输轨迹每15秒
+meta_description: 物流投研知识库建设的数据库与运维：物流投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 物流、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

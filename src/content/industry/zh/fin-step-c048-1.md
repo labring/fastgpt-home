@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c048-1
 page_type: 行业作业环节页
 article_section: 证券交易与服务
 is_part_of: FastGPT 技术中心
-meta_title: 证券期货经营机构私募资产管理计划的把合同投资范围和限制转成可
+meta_title: 证券期货经营机构私募资产管理计划的把合同投资范围和限制转成可执行控制规则：哪一部分能交给系统
 meta_description: 证券期货经营机构私募资产管理计划的把合同投资范围和限制转成可执行控制规则：哪一部分能交给系统
 keywords: 证券期货经营机构私募资产管理计划、证券交易与服务、环节1
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

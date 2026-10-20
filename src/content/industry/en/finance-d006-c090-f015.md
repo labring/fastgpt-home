@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c090-f015
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Paint and Ink Investment Research
-meta_description: Paint and ink investment research data sources include industry association public documents, raw material supplier quotation systems, listed
+meta_title: Deployment and Upgrade for Paint and Ink Investment
+meta_description: Deployment and Upgrade for Paint and Ink Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

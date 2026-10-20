@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件智能尽调报告的向量模型与索引
-meta_description: 汽车零部件智能尽调报告的数据主要来源于供应商资质文件、物料清单（BOM）、第三方检测报告、合规认证文档及季度产能统计数据。数据更新节奏因类型不同存在差异：供
+meta_description: 汽车零部件智能尽调报告的向量模型与索引：汽车零部件智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车零部件、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

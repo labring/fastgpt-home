@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发研报检索的工具调用与插件
-meta_description: 这个品类的数据主要来自国内房地产行业研究机构发布的住宅开发专项研报、地方住建主管部门的月度市场监测报告、上市房企季度经营简报。更新节奏覆盖周度销售数据、月度
+meta_description: 住宅开发研报检索的工具调用与插件：住宅开发研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 住宅开发、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

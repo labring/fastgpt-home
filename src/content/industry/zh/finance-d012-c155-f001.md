@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的HTTP 接口与外部系统
-meta_description: 饲料相关数据主要来源于养殖场饲喂日志、饲料生产企业配方系统、经销商进销存台账。更新节奏分为三类：饲喂日志实时上报，进销存数据每日同步，配方数据按需更新。文档
+meta_description: 饲料营销内容的HTTP 接口与外部系统：饲料营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饲料、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

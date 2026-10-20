@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logging and Auditing for Aerospace Equipment
-meta_description: Aerospace equipment investment research data mainly comes from public military industry research reports, annual and semi-annual financial reports of
+meta_description: Dialogue Logging and Auditing for Aerospace Equipment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

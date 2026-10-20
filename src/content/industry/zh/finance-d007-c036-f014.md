@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体收益率的表单与交互
-meta_description: 半导体收益率与行情数据主要来自境内外证券交易所的公开交易接口、半导体产业监测平台的行业营收与产能监测数据。更新节奏分为两类：个股实时行情数据按交易时段高频更
+meta_description: 半导体收益率的表单与交互：半导体收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 半导体、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

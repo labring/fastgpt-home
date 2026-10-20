@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程研报检索的HTTP 接口与外部系统
-meta_description: 房建工程研报的数据主要来源于住建部门公开的工程建设标准、行业协会发布的行业分析报告、设计院出具的专项施工研报以及公共资源交易平台的招投标公示文件。更新节奏随
+meta_description: 房建工程研报检索的HTTP 接口与外部系统：房建工程研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 房建工程、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

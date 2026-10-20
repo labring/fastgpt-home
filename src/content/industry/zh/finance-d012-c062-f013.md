@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销营销内容的知识库检索与召回
-meta_description: 金融广告营销的营销内容数据主要来自理财类广告投放脚本、保险产品投放文案、竞品金融广告素材、投放效果报表。数据更新节奏随投放周期变动，新素材上线时同步更新，投
+meta_description: 广告营销营销内容的知识库检索与召回：广告营销营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 广告营销、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

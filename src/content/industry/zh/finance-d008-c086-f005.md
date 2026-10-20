@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务智能尽调报告的多轮对话与提示词
-meta_description: 汽车服务智能尽调报告的数据来源包括车辆VIN关联的官方登记系统、线下汽车服务门店的经营台账、合作汽修厂的维保上传系统、车险理赔数据库。更新节奏为门店经营数据
+meta_description: 汽车服务智能尽调报告的多轮对话与提示词：汽车服务智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 汽车服务、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

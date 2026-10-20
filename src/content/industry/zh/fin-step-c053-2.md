@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c053-2
 page_type: 行业作业环节页
 article_section: 公募基金
 is_part_of: FastGPT 技术中心
-meta_title: 跨境基金投资与运营（QDII）的逐笔核对境内外托管、交易、现
+meta_title: 跨境基金投资与运营（QDII）的逐笔核对境内外托管、交易、现金和外汇数据：哪一部分能交给系统
 meta_description: 跨境基金投资与运营（QDII）的逐笔核对境内外托管、交易、现金和外汇数据：哪一部分能交给系统
 keywords: 跨境基金投资与运营（QDII）、公募基金、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

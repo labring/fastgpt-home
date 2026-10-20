@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药智能尽调报告的向量模型与索引
-meta_description: 化学制药智能尽调报告的数据来源包括药品注册申报资料、临床试验原始记录、公开专利文献、企业研发管线公告及药典标准文件。数据更新节奏随场景变化，注册资料随申报进
+meta_description: 化学制药智能尽调报告的向量模型与索引：化学制药智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 化学制药、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

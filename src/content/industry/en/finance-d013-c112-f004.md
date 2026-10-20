@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for White Goods Financing Daily
-meta_description: The data for white goods financing daily reports comes from dealer financing ledgers, upstream supplier accounts receivable systems, and daily
+meta_description: Vector Models and Indexing for White Goods Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

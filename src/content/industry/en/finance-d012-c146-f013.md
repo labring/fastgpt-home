@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for General Equipment
-meta_description: Manufacturers publicly release selection manuals, technical specifications, marketing materials, and after-sales maintenance documents for financial
+meta_description: Knowledge Base Retrieval and Recall for General Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

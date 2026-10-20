@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for IT Services Financial
-meta_description: Data sources primarily include public periodic reports, industry regulatory disclosure documents, and special business announcements of domestic and
+meta_description: Citation Sources and Traceability for IT Services Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ Structured fields in IT service financial reports are scattered, and metadata su
 | `Segment Length` | `800-1200 characters` | Financial report paragraphs are mostly structured statement notes; overly long segments will lose field associations, while overly short segments will destroy the integrity of business logic |
 | `Metadata Extraction Toggle` | `Enabled` | Metadata such as reporting period and announcement number must be extracted for traceability labeling to improve citation credibility |
 | `Knowledge Base Update Cycle` | `7 days` | Regular financial reports are updated quarterly; a 7-day refresh cycle ensures data timeliness while avoiding excessive resource usage |
-| `Citation Format Template` | `{{File Name}}-{{Reporting Period}}-Paragraph {{Paragraph Number}}` | IT service financial reports require clear labeling of reporting period and paragraph location to facilitate compliance verification and subsequent traceability |
+| `Citation Format Template` | `example value-example value-Paragraph example value` | IT service financial reports require clear labeling of reporting period and paragraph location to facilitate compliance verification and subsequent traceability |
 
 > The parameter values provided on this page are general recommendations for establishing configuration baselines. Actual values are affected by material format, data volume, and business rules. Specific issues require targeted analysis, and it is recommended to test on your own samples before finalizing settings.
 

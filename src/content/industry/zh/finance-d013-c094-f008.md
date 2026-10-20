@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化融资日报的工具调用与插件
-meta_description: 数据来源为国内大宗商品现货交易监测平台、炼厂公开融资备案信息、银行间同业授信公示数据。更新节奏为每日更新，次日同步全量增量数据。文档结构为结构化JSON数组
+meta_description: 炼化融资日报的工具调用与插件：炼化融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 炼化、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

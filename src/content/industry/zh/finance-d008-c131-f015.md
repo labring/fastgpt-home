@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰智能尽调报告的部署与升级
-meta_description: 装修装饰智能尽调报告的数据来源包括金融机构合作装修企业的资质备案文件、项目施工台账、材料质量检测报告、现场勘查影像、住建部门项目备案数据。更新节奏随项目节点
+meta_description: 装修装饰智能尽调报告的部署与升级：装修装饰智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 装修装饰、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

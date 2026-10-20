@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢智能尽调报告的多轮对话与提示词
-meta_description: 普钢相关数据主要来自现货交易平台、钢厂出厂价公示渠道、行业监测机构的产量库存统计。更新节奏区分维度：现货价格每交易日更新，月度产量、进出口数据次月发布，季度
+meta_description: 普钢智能尽调报告的多轮对话与提示词：普钢智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 普钢、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

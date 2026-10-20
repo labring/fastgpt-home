@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c155-f013
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Feed Intelligent Due
-meta_description: Feed-related data mainly comes from internal enterprise raw material inventory ledgers, exported files from feed formula management systems, batch
+meta_title: Knowledge Base Retrieval and Recall for Feed Intelligent
+meta_description: Knowledge Base Retrieval and Recall for Feed Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

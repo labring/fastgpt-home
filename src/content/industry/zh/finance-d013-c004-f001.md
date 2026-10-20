@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备融资日报的HTTP 接口与外部系统
-meta_description: 专用设备融资日报的数据来源于设备制造商的经销商回款系统、融资租赁机构的放款台账，以及地方工信部门的设备购置补贴申报数据。每日更新，于次日上午生成前一自然日的
+meta_description: 专用设备融资日报的HTTP 接口与外部系统：专用设备融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专用设备、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

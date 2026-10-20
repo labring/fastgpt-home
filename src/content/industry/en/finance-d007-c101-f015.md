@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Logistics Yield Rate Deployment and Upgrade
-meta_description: Logistics sector yield rate and market trend data mainly comes from public transport freight rate monitoring platforms, internal operation ledgers of
+meta_description: Logistics Yield Rate Deployment and Upgrade
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

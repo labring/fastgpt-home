@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车营销内容的表单与交互
-meta_description: 整车营销在金融理财场景下的数据，主要来源于车企官方发布的车型公告、工信部机动车产品公示平台、品牌经销商库存管理系统，以及合作金融机构的汽车金融产品库。数据更
+meta_description: 整车营销内容的表单与交互：整车营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 整车、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

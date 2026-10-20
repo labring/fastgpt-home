@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的HTTP 接口与外部系统
-meta_description: 医美营销内容的来源主要为机构内部的项目档案、合规宣传物料、医生执业信息库与用户术前术后案例素材，部分内容包含分期、储值类金融营销信息。更新节奏随项目迭代、合
+meta_description: 医美营销内容的HTTP 接口与外部系统：医美营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 医美、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

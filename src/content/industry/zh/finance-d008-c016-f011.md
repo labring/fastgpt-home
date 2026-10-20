@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏智能尽调报告的文档解析与分块
-meta_description: 用于金融机构光伏电站信贷尽调的文档，主要来自电站竣工验收报告、运维台账、组件检测原始数据、土地权属文件与财务测算文档。新建电站项目的尽调文档为一次性批量提交
+meta_description: 光伏智能尽调报告的文档解析与分块：光伏智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 光伏、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

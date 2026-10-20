@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路财报分析的多轮对话与提示词
-meta_description: 铁路公路运营主体的财报数据，来源为运营主体官方披露的定期公告、路网运营统计数据。更新节奏为每季度、每年度，正式文档多为PDF格式。文档结构包含核心经营指标、
+meta_description: 铁路公路财报分析的多轮对话与提示词：铁路公路财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 铁路公路、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

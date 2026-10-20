@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮营销内容的HTTP 接口与外部系统
-meta_description: 酒店餐饮的金融合作营销内容数据主要来源于合作金融机构的活动管理系统、门店POS系统、CRM会员台账及外卖平台同步数据。数据更新节奏差异明显：联名促销活动实时
+meta_description: 酒店餐饮营销内容的HTTP 接口与外部系统：酒店餐饮营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 酒店餐饮、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

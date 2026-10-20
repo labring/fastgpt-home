@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区财报分析的工作流编排
-meta_description: 旅游景区财报分析的数据主要来自经审计的年度、半年度正式财报，以及月度经营简报、每日票务与客流台账。数据更新节奏为年度财报每年更新1次，半年度财报每半年更新1
+meta_description: 旅游景区财报分析的工作流编排：旅游景区财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 旅游景区、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

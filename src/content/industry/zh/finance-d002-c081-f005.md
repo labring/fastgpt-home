@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 模型分配一体化 AI 平台的多轮对话与提示词
-meta_description: 这个品类的数据主要来源于平台的模型调用日志、会话上下文记录以及模型分配规则配置文件。更新节奏分为会话级实时更新与规则级定时同步，会话级数据随每一轮交互动态生
+meta_description: 模型分配一体化 AI 平台的多轮对话与提示词：模型分配一体化 AI 平台的多轮对话与提示词，涵盖配置与验证建议
 keywords: 模型分配、一体化 AI 平台与多应用编排、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

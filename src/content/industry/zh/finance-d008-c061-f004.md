@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的向量模型与索引
-meta_description: 工程机械智能尽调报告的数据来源覆盖设备全生命周期各环节，包括出厂台账、运维日志、租赁记录、产权登记文件及现场检测报告。数据更新节奏随业务节点变化，运维类数据
+meta_description: 工程机械智能尽调报告的向量模型与索引：工程机械智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

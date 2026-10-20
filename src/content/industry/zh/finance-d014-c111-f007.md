@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖财报分析的工作流编排
-meta_description: 畜禽养殖财报的数据主要来自农业农村部公开监测数据、上市养殖企业年度/季度披露报告、地方畜牧站月度统计报表三类渠道，主要用于金融场景的企业评估。数据更新节奏以
+meta_description: 畜禽养殖财报分析的工作流编排：畜禽养殖财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 畜禽养殖、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

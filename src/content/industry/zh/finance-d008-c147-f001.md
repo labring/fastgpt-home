@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸智能尽调报告的HTTP 接口与外部系统
-meta_description: 造纸智能尽调报告的数据主要来自造纸行业协会公开月度报告、上市造纸企业季度财报、木浆与废纸等原材料的现货期货交易平台、企业排污监测台账。数据更新节奏存在差异：
+meta_description: 造纸智能尽调报告的HTTP 接口与外部系统：造纸智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 造纸、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营融资日报的工具调用与插件
-meta_description: 品牌代运营融资日报的数据来源为公开工商融资公示平台、第三方征信机构的美容护理品牌融资动态库，更新节奏为每日T+1更新当日披露的融资事件。单条数据文档包含代运
+meta_description: 品牌代运营融资日报的工具调用与插件：品牌代运营融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 品牌代运营、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

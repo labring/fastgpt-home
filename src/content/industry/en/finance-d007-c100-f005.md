@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Property
-meta_description: Property management yield rate daily report data is sourced from four places: monthly operation ledgers from the property project’s own SaaS system
+meta_description: Multi-turn Dialogue and Prompt Engineering for Property Management Yield Rates: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

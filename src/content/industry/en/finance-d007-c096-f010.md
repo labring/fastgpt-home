@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Coke Yield Reporting
-meta_description: Coke market and yield data is primarily sourced from public market APIs of the Dalian Commodity Exchange and domestic spot price platforms for major
+meta_description: Database and Operations for Coke Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

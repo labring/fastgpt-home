@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务财报分析的模型接入与配置
-meta_description: 水务行业财报数据主要来自公开监管披露文件、水务运营主体的年度及季度正式报告。数据更新以年度报告为核心周期，季度运营简报同步更新核心运营指标。文档结构包含主营
+meta_description: 水务财报分析的模型接入与配置：水务财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 水务、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

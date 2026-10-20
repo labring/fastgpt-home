@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Medical Aesthetics
-meta_description: Data for medical aesthetics financial report analysis is primarily sourced from official regular financial reports of medical aesthetics institutions
+meta_description: HTTP Interfaces and External Systems for Medical Aesthetics Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

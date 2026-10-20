@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Investment Platform
-meta_description: Investment platform research data primarily comes from brokerage research reports, public financial reports of listed companies, public industry
+meta_description: Document Parsing and Chunking for Investment Platform Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

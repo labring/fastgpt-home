@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备智能尽调报告的模型接入与配置
-meta_description: 专用设备智能尽调报告的数据主要来自设备出厂合格证、季度运维日志、年度质检报告、行业合规标准文档以及供应链采购台账。数据更新节奏分为静态与动态两类，基础设备参
+meta_description: 专用设备智能尽调报告的模型接入与配置：专用设备智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 专用设备、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的知识库检索与召回
-meta_description: 面向金融行业客户的电网设备营销相关知识库数据，主要来源于设备选型手册、技术参数表、安装调试指南、营销宣传物料及售后运维文档。更新节奏随新产品上线调整，常规物
+meta_description: 电网设备营销内容的知识库检索与召回：电网设备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 电网设备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

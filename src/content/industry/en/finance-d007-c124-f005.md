@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Automated Equipment
-meta_description: Market and yield data for automated equipment comes primarily from two sources: real-time market data push APIs from securities exchanges, and
+meta_description: Multi-turn Dialogue and Prompting for Automated Equipment Yield and Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -46,7 +46,7 @@ Yield parameter units vary by trading product. Prompts must mandate that returne
 
 ## Three Common Misconfiguration Issues
 - Empty chart tool output
-  Symptoms: When a dialogue node calls a chart tool to generate a yield curve, the returned content has no image link or the image placeholder is empty.
+  Symptoms: When a dialogue node calls a chart tool to generate a yield curve, the returned content has no image link or the image pending verification is empty.
   Causes: Failure to explicitly require the tool to return renderable chart links in the prompt, or failure to bind the chart tool parameters to the corresponding market data source for the automated equipment.
 - AI dialogue node returns empty content or error without fallback logic
   Symptoms: Returns an empty string or a `400 Bad Request` error message, and no preset error handling flow is executed.

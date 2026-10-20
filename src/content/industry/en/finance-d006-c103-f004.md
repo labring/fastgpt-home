@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Environmental Monitoring
-meta_description: Environmental monitoring research data mainly comes from real-time reports submitted by fixed monitoring stations, mobile monitoring vehicles, and
+meta_description: Vector Models and Indexing for Environmental Monitoring Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品营销内容的工具调用与插件
-meta_description: 饰品的数据主要来源于品牌方SKU管理系统、与金融机构合作的电商平台商品详情页、线下合作门店库存台账。更新节奏随新品上线、库存变动调整，常规为月度批量更新。单
+meta_description: 饰品营销内容的工具调用与插件：饰品营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 饰品、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的HTTP 接口与外部系统
-meta_description: 动力煤融资日报数据主要来自国内煤炭现货交易平台、沿海港口融资台账及区域煤炭行业协会公开披露信息，每日固定时段更新前一交易日的全量融资数据。数据采用标准结构化
+meta_description: 动力煤融资日报的HTTP 接口与外部系统：动力煤融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 动力煤、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

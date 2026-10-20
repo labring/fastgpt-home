@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c151-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Railway and Highway Yield
-meta_description: The yield-related data for this category mainly comes from the Ministry of Transport’s public industry statistical bulletins, official operation
+meta_title: Model Access and Configuration for Railway and Highway
+meta_description: Model Access and Configuration for Railway and Highway Yield Rates: covering configuration and validation guidance.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

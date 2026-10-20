@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Satellite Communication Research
-meta_description: The data sources for satellite communication research reports mainly include public operation reports from satellite operators, on-orbit satellite
+meta_description: Workflow Orchestration for Satellite Communication Research Report Retrieval and Q&A
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

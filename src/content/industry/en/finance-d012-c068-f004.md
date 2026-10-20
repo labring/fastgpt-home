@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c068-f004
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Investment Platform Marketing
-meta_description: Investment platform marketing content includes compliant educational articles, wealth product promotion copy, event rule descriptions, and similar
+meta_title: Vector Models and Indexing for Investment Platform
+meta_description: Vector Models and Indexing for Investment Platform Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Coal Chemical Industry
-meta_description: Coal chemical industry financial report data primarily comes from periodic reports of listed companies disclosed by the Shanghai Stock Exchange and
+meta_description: Document Parsing and Chunking for Coal Chemical Industry Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Coal chemical financial report documents contain mixed-format content. They incl
 
 ## Three common mistakes
 - Phenomenon: When parsing large coal chemical annual reports, errors occur where a single segment of text exceeds the set length, or chunking results are forcibly truncated. Cause: The unit of `chunkSize` is not clearly defined as characters, and the byte count is mistakenly used as the reference for value setting, or the `splitMode` is not adjusted to adapt to structured documents.
-- Phenomenon: After calling the FastGPT 4.8.10 version API to parse financial reports, the returned results do not include the chunk index field. Cause: The `includeChunkIndex` switch is not enabled in the API request parameters, or there are compatibility issues with the API parameter configuration of this version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Phenomenon: When clicking to copy chunk content on the frontend page, a prompt pops up stating "Unable to use browser automatic copy, please manually copy the content below". Cause: There is a same-origin policy restriction on page deployment, the browser cross-domain copy permission is blocked, and the copy logic is not adjusted to adapt to this scenario.
 
 ## How to confirm the configuration is correct

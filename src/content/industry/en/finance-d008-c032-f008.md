@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Chemical Raw Material
-meta_description: Chemical raw material data sources include industry association public monitoring databases, customs import and export declaration data, compliance
+meta_description: Tool Calling and Plugins for Chemical Raw Material Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

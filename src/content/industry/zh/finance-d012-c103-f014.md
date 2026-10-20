@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的表单与交互
-meta_description: 环境监测数据主要来自固定站点传感器、移动监测设备、卫星遥感平台及手持采集终端。更新节奏：固定站点传感器按1-5分钟频次上传实时数据，移动监测设备随采集动作即
+meta_description: 环境监测营销内容的表单与交互：环境监测营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 环境监测、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

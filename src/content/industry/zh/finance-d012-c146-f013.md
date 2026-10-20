@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备营销内容的知识库检索与召回
-meta_description: 通用设备的营销相关数据主要来自面向金融场景的厂商公开选型手册、技术规格书、营销宣传物料与售后维护文档。更新节奏随新产品发布、核心参数迭代调整，无固定周期。文
+meta_description: 通用设备营销内容的知识库检索与召回：通用设备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 通用设备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

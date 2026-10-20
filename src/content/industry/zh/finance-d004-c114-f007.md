@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 监管办法合规的工作流编排
-meta_description: 监管办法数据来源于国家金融监管部门、行业自律组织的公开官方渠道，更新无固定周期，随新规发布、旧规修订同步更新。文档多为结构化长文本，按章节划分条款，包含文号
+meta_description: 监管办法合规的工作流编排：监管办法合规的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 监管办法、合规与内部制度问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

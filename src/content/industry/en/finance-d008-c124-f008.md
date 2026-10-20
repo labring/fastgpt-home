@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c124-f008
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Automated Equipment Intelligent
-meta_description: Due diligence data for automated equipment comes from three primary sources: manufacturer-published public product manuals, offline collection logs
+meta_title: Tool Calling and Plugins for Automated Equipment
+meta_description: Tool Calling and Plugins for Automated Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

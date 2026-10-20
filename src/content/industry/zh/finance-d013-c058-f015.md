@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的部署与升级
-meta_description: 小金属融资日报数据主要来自国内专业有色金属现货交易平台、期货交易所仓单公示系统、行业协会统计及合作银行的授信融资台账。数据按日更新，每日凌晨完成前一日全量数
+meta_description: 小金属融资日报的部署与升级：小金属融资日报的部署与升级，涵盖配置与验证建议。。。
 keywords: 小金属、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

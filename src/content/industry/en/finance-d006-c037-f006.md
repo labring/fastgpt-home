@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Conversation Logs and Auditing for Satellite Communications
-meta_description: Satellite communications investment research data primarily comes from real-time communication link data collected by ground stations, satellite orbit
+meta_description: Conversation Logs and Auditing for Satellite Communications Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

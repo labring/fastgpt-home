@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Air Governance Financial
-meta_description: Air governance-related financial report data comes primarily from special environmental protection chapters in listed companies’ annual or quarterly
+meta_description: Document Parsing and Chunking for Air Governance Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Some ledger documents include repeated header information across pages. This req
 | `chunkOverlap` | 100–150 characters | Prevents semantic breaks across table rows and cross-cycle data, and ensures contextual continuity between chunks |
 | `PARSE_TABLE_ENABLE` | `true` | Most core data in air governance financial reports exists in structured tables. Enabling this option fully extracts cell content and associated fields |
 | `PARSE_REMOVE_REPEAT_HEADER` | `true` | Multi-page ledger documents have repeated headers. Enabling this option automatically filters redundant header information to reduce invalid chunks |
-| `PARSE_TIMEOUT_SECONDS` | 300 seconds | Compatible with FastGPT 4.9.0 and above versions, and covers parsing time requirements for most large environmental protection ledger documents |
+Reference only; verify against the target FastGPT release and deployment documentation.
 | `SIMILARITY_THRESHOLD` | 0.75 | Fields in air governance data have strong relevance. This threshold filters low-relevance redundant chunks and improves recall accuracy |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require case-by-case analysis. It is recommended to test on your own samples before finalizing settings.

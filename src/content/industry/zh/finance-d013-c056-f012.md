@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品融资日报的模型接入与配置
-meta_description: 家居用品融资日报的数据主要来自地方金融监管局公开的企业融资备案信息、家居行业协会的日度融资监测简报，以及公开渠道披露的家居制造、经销企业融资动态。数据更新节
+meta_description: 家居用品融资日报的模型接入与配置：家居用品融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 家居用品、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

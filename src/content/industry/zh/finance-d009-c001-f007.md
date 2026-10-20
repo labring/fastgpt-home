@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的工作流编排
-meta_description: 面向金融行业的IT服务研报，数据来源包含行业公开分析文档、厂商公开服务方案、运维监测公开数据、客户落地案例资料。更新节奏以季度为基础周期，伴随重大行业技术迭
+meta_description: IT 服务研报检索的工作流编排：IT 服务研报检索的工作流编排，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

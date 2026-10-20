@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电智能尽调报告的向量模型与索引
-meta_description: 原始数据来自家电品牌官方公开的产品规格书、能效备案公示信息、第三方检测机构的实测报告、行业协会的流通数据。更新节奏为新品上市时同步更新，常规数据每季度更新。
+meta_description: 白色家电智能尽调报告的向量模型与索引：白色家电智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 白色家电、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

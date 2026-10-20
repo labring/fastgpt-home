@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务智能尽调报告的向量模型与索引
-meta_description: 数据主要来自教育服务机构提交的办学资质文件、师资备案材料、课程体系文档、学员服务记录及年度合规自评报告。更新节奏随机构资质变动、课程迭代、年度审计节点触发，
+meta_description: 教育服务智能尽调报告的向量模型与索引：教育服务智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 教育服务、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

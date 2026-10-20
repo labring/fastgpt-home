@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业营销内容的工具调用与插件
-meta_description: 种植业营销内容关联的数据主要来自田间土壤与气象传感器、区域农情监测平台、公开气象接口以及种植户自主上报的农事台账。数据更新节奏因类型存在差异：气象类数据按小
+meta_description: 种植业营销内容的工具调用与插件：种植业营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 种植业、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

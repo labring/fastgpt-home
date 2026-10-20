@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备营销内容的多轮对话与提示词
-meta_description: 航天装备营销内容的数据主要来源于型号设计文档、地面试验报告、生产台账、官方宣传物料。数据更新节奏随型号立项、试验节点、交付进度调整，无固定周期。单份文档多为
+meta_description: 航天装备营销内容的多轮对话与提示词：航天装备营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 航天装备、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

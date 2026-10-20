@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块财报分析的文档解析与分块
-meta_description: 光模块相关财报数据主要来自境内外证券交易所披露的定期报告、行业协会公开调研文档。更新节奏以季度、年度为周期，对应上市公司季报、年报发布节点。文档多为PDF格
+meta_description: 光模块财报分析的文档解析与分块：光模块财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 光模块、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

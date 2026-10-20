@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品融资日报的模型接入与配置
-meta_description: 乳制品融资日报的数据主要来源于行业监测数据库、乳企官方公告及财经媒体公开披露信息。每日凌晨完成前一日全量数据的整合更新。单份日报文档包含标准化字段：`融资日
+meta_description: 乳制品融资日报的模型接入与配置：乳制品融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 乳制品、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

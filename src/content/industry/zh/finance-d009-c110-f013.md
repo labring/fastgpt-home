@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备研报检索的知识库检索与召回
-meta_description: 电网设备研报数据主要来自电力行业协会发布的行业动态、券商研究所的设备赛道分析报告、电网企业公开招标采购文档、设备厂商的技术白皮书与产品手册。更新节奏随行业政
+meta_description: 电网设备研报检索的知识库检索与召回：电网设备研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 电网设备、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

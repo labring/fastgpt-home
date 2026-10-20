@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理收益率的多轮对话与提示词
-meta_description: 水处理收益率相关数据主要来自在线水质监测终端、水厂运行日志、药剂采购与投加报表、产水达标统计台账。数据更新节奏覆盖分钟级实时监测、每日日报、月度成本汇总三类
+meta_description: 水处理收益率的多轮对话与提示词：水处理收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水处理、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

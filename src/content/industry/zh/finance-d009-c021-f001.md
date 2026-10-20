@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合研报检索的HTTP 接口与外部系统
-meta_description: 其他综合研报检索的数据来源包括公开金融研报聚合渠道、机构内部合规研报存档。更新节奏为工作日交易时段实时或准实时发布，非工作日无常规更新。单份研报文档结构包含
+meta_description: 其他综合研报检索的HTTP 接口与外部系统：其他综合研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 其他综合、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

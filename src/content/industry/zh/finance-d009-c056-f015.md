@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的部署与升级
-meta_description: 家居用品研报的数据主要来自券商轻工制造行业研报、家居用品上市公司定期报告、行业流通数据平台。更新节奏以季度为核心周期，伴随行业事件触发临时专题更新。单篇文档
+meta_description: 家居用品研报检索的部署与升级：家居用品研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 家居用品、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

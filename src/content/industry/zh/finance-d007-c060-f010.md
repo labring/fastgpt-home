@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的数据库与运维
-meta_description: 面向金融领域的工程咨询收益率相关数据，来源包括金融机构的项目投资台账、合作工程咨询机构的造价核算报告、行业监管发布的工程收益基准数据。更新节奏按单个项目的核
+meta_description: 工程咨询收益率的数据库与运维：工程咨询收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 工程咨询、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

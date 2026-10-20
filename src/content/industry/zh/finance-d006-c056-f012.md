@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品投研知识库建设的模型接入与配置
-meta_description: 家居用品投研数据来源包括上游原材料供应商的报价文档、线下商超的动销报表、品牌方的SKU更新公告、行业协会的品类报告及电商平台的实时销售数据。更新节奏存在差异
+meta_description: 家居用品投研知识库建设的模型接入与配置：家居用品投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 家居用品、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

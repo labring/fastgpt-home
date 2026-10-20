@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c076-f012
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Cultural and
-meta_description: Cultural and entertainment products investment research data mainly comes from industry association production and sales reports, e-commerce platform
+meta_title: Model Integration and Configuration for Cultural
+meta_description: Model Integration and Configuration for Cultural and Entertainment Products Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

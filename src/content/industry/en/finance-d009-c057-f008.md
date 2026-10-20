@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Small Home Appliance Research
-meta_description: Small home appliance research report data mainly comes from publicly available category monitoring data from the China Household Electrical Appliances
+meta_description: Tool Calling and Plugins for Small Home Appliance Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The multi-dimensional, detailed field characteristics of small home appliance re
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing settings.
 
 ## Three common mistakes
-- Issue: No connection options are displayed in the tool calling configuration interface, only some tools are visible. Applies to FastGPT 4.9.10 and above. Cause: The `tool_call_advanced_mode` advanced mode is not enabled, and connection configuration for non-built-in tools is hidden by default.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Issue: Calling the DuckDuckGo internet search plugin returns empty results. Cause: The `plugin_api_key` secret key is not configured, or the search keyword does not include qualifying terms for the small home appliance category, resulting in irrelevant content being returned.
 - Issue: Core fields exclusive to small home appliances such as rated power and number of SKUs are missing from tool calling return results. Cause: The `parse_table_enable` table parsing switch is not enabled, so corresponding fields cannot be extracted from structured tables in research reports.
 

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for White Goods
-meta_description: Data sources for white goods financing daily reports include supply chain finance systems, bank credit ledgers, and financing filing data from home
+meta_description: Multi-turn Dialogue and Prompt Engineering for White Goods Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业收益率的工作流编排
-meta_description: 种植业收益率相关数据主要来自农业农村部门公开监测数据、种植主体上报的生产台账，以及农资经销商的报价数据。数据更新节奏分两类：大宗粮油作物按周更新，特色经济作
+meta_description: 种植业收益率的工作流编排：种植业收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 种植业、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

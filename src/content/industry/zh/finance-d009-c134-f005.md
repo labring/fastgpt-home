@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品研报检索的多轮对话与提示词
-meta_description: 调味品研报的来源包括公开券商食品饮料行业研报、调味品专项行业调研报告、头部调味企业定期披露的经营公告。更新节奏以季度深度研报与月度跟踪报告为主，突发行业事件
+meta_description: 调味品研报检索的多轮对话与提示词：调味品研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 调味品、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

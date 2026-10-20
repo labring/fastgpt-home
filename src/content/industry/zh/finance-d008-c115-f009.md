@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业智能尽调报告的引用来源与溯源
-meta_description: 种植业智能尽调报告的数据主要来自国家级农情监测站点、区域气象观测站、种业备案数据库、种植主体上报的生产台账。数据更新节奏存在差异，气象类数据每小时更新，农情
+meta_description: 种植业智能尽调报告的引用来源与溯源：种植业智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 种植业、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

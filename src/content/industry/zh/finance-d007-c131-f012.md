@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的模型接入与配置
-meta_description: 装修装饰领域的收益率与行情数据，主要来源于区域建筑装饰协会公开的造价指导价、建材供应链企业的每日报价系统、装修项目管理平台的落地结算数据。数据更新节奏为自然
+meta_description: 装修装饰收益率的模型接入与配置：装修装饰收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 装修装饰、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

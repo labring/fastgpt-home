@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品营销内容的工作流编排
-meta_description: 金融理财场景下的饰品核心数据来源于企业贵金属管理系统、客户资产管理后台，更新节奏随新品上线、库存调整、促销活动触发，无固定周期。单条数据文档结构包含商品ID
+meta_description: 饰品营销内容的工作流编排：饰品营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 饰品、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

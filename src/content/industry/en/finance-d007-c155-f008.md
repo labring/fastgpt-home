@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Feed Profitability
-meta_description: Feed industry data sources primarily include official monitoring data released by the National Animal Husbandry Station and public quote interfaces
+meta_description: Tool Calling and Plugins for Feed Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

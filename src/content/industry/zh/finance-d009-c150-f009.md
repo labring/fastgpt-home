@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石研报检索的引用来源与溯源
-meta_description: 铁矿石研报的数据来源包括国内钢铁工业协会、大连商品交易所、全球矿山企业公开报告、大宗商品咨询机构研报。更新节奏为：现货价格与港口库存数据每日更新，行业周报每
+meta_description: 铁矿石研报检索的引用来源与溯源：铁矿石研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 铁矿石、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

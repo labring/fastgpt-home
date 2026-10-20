@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的多轮对话与提示词
-meta_description: 化学原料相关数据多用于金融场景下的化工原料供应链营销、理财顾问获客推荐等环节，主要来自上游供应商报价系统、海关进出口台账、行业协会月度监测报告。数据更新节奏
+meta_description: 化学原料营销内容的多轮对话与提示词：化学原料营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

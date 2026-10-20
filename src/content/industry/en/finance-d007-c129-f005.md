@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Financial
-meta_description: Financial lease yield daily report data comes from internal project management systems, lease asset registration and public disclosure platforms, and
+meta_description: Multi-turn Dialogue and Prompt Engineering for Financial Lease Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

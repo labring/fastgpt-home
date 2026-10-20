@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件营销内容的向量模型与索引
-meta_description: 汽车零部件的营销内容主要来源于金融机构合作的汽车经销商产品手册、电商平台商品详情页、售后延保培训文档、官方宣传物料及消费者服务知识库。更新节奏随新品上线、合
+meta_description: 汽车零部件营销内容的向量模型与索引：汽车零部件营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车零部件、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

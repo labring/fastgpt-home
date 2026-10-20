@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药投研知识库建设的向量模型与索引
-meta_description: 中药投研数据主要来源于国家药品标准数据库、行业学术期刊、药企内部研发文档及地方中药材炮制规范。数据更新节奏分为三类：国家药典类文档每5年集中修订，学术文献随
+meta_description: 中药投研知识库建设的向量模型与索引：中药投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 中药、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

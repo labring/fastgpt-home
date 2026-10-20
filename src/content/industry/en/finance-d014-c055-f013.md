@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Air Pollution
-meta_description: Financial report data for the air pollution control category comes primarily from listed companies’ annual or quarterly special environmental
+meta_description: Knowledge Base Retrieval and Recall for Air Pollution Control Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Insurance Claim First-Level Review
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Identity and Timing
-meta_description: This category of data primarily comes from user-uploaded materials and internal work order logs for insurance claim cases. Update frequency adjusts in
+meta_description: Document Parsing and Chunking for Identity and Timing Insurance Claim Initial Review
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

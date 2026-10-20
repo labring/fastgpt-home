@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务营销内容的表单与交互
-meta_description: 汽车服务的营销表单数据主要来源于汽车金融咨询、车险投保、维保套餐预约、试驾申请等用户提交的内容，数据更新节奏从提交即时同步到每日批量更新不等。文档结构包含结
+meta_description: 汽车服务营销内容的表单与交互：汽车服务营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 汽车服务、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

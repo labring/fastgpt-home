@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c047-f008
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for State-owned Large Bank Research
-meta_description: Research report data for state-owned large banks comes from public reports released by headquarters and direct research institutions of six
+meta_title: Tool Calling and Plugins for State-owned Large Bank
+meta_description: Tool Calling and Plugins for State-owned Large Bank Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

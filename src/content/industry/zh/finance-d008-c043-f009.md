@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产智能尽调报告的引用来源与溯源
-meta_description: 商业地产尽调的数据来源包含不动产登记备案档案、项目运营台账、商圈客流监测报告、工程竣工图纸及业态招商文件。数据更新节奏因类型不同存在差异：不动产备案数据按季
+meta_description: 商业地产智能尽调报告的引用来源与溯源：商业地产智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 商业地产、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

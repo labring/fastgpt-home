@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务研报检索的知识库检索与召回
-meta_description: 汽车服务研报的数据来源包含主机厂官方技术手册、汽车后市场连锁门店的运营日志、行业协会发布的调研简报、第三方检测机构的实测报告，多为金融与保险机构用于汽车金融
+meta_description: 汽车服务研报检索的知识库检索与召回：汽车服务研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 汽车服务、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

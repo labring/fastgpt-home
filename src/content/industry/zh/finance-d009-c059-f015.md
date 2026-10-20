@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属研报检索的部署与升级
-meta_description: 工业金属研报的数据主要来自行业协会、期货交易所、券商研究所及专业资讯平台。更新节奏以现货行情日更、期货盘后更新为主，常规研报按周、月频率发布，深度报告不定期
+meta_description: 工业金属研报检索的部署与升级：工业金属研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 工业金属、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

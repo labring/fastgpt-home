@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融研报检索的向量模型与索引
-meta_description: 多元金融研报的数据来源包括公开研报数据库、非银金融机构官方披露文件、行业研究机构公开报告。更新节奏为单篇研报发布后即时同步入库，常规按日更新最新研报存量。单
+meta_description: 多元金融研报检索的向量模型与索引：多元金融研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 多元金融、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

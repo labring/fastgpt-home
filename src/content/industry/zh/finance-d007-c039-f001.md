@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器收益率的HTTP 接口与外部系统
-meta_description: 厨卫电器的收益率与行情数据主要来自品牌方进销存系统、电商平台交易后台及线下零售终端的汇总报表。数据更新节奏为每日凌晨完成前一日全量数据同步，部分高流转单品的
+meta_description: 厨卫电器收益率的HTTP 接口与外部系统：厨卫电器收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 厨卫电器、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品研报检索的向量模型与索引
-meta_description: 调味品研报的数据来源包括公开券商研报、行业协会公开报告、头部调味品企业的年度及半年度披露文件。更新节奏随企业财报发布周期密集更新，伴随原料价格波动、新品发售
+meta_description: 调味品研报检索的向量模型与索引：调味品研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 调味品、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

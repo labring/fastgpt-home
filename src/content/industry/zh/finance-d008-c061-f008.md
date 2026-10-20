@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械智能尽调报告的工具调用与插件
-meta_description: 工程机械尽调报告的数据来源包括设备出厂合格证、运维日志、租赁台账、行业监管公示信息。数据更新节奏存在差异：出厂合格证数据为设备出厂时固定更新，运维日志按每日
+meta_description: 工程机械智能尽调报告的工具调用与插件：工程机械智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 工程机械、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

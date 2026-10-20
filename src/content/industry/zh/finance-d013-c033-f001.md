@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤融资日报的HTTP 接口与外部系统
-meta_description: 化纤融资日报的数据来源于国内大宗商品现货交易市场的公开披露信息、化纤行业自律组织的每日监测报表。更新节奏为每个交易日收盘后1小时内完成全量更新。单条数据文档
+meta_description: 化纤融资日报的HTTP 接口与外部系统：化纤融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化纤、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨收益率的模型接入与配置
-meta_description: 涂料油墨行业的行情与收益率数据主要来自国内基础化工行业协会公开报价数据库、大宗商品现货交易平台公开数据源。数据更新节奏为每日早间更新前一交易日的完整统计结果
+meta_description: 涂料油墨收益率的模型接入与配置：涂料油墨收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 涂料油墨、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

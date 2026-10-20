@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨智能尽调报告的工作流编排
-meta_description: 涂料油墨智能尽调报告主要用于金融机构对供应链内涂料油墨生产企业的信贷尽调，数据主要来自中国涂料工业协会公开台账、生产企业的安全生产许可文件、第三方检测机构的
+meta_description: 涂料油墨智能尽调报告的工作流编排：涂料油墨智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 涂料油墨、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

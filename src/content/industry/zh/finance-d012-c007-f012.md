@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品营销内容的模型接入与配置
-meta_description: 乳制品品类的营销相关数据来源包括品牌自有CRM的会员消费数据、电商平台的商品详情页数据、内部营销素材库的文案与物料元数据，以及线下门店的陈列与销售数据。数据
+meta_description: 乳制品营销内容的模型接入与配置：乳制品营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 乳制品、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的工具调用与插件
-meta_description: 风电融资日报的数据来源包括全国可再生能源发电项目信息管理平台、地方能源局公示渠道、合作金融机构对公业务台账及风电开发企业内部项目档案。数据更新节奏为每日凌晨
+meta_description: 风电融资日报的工具调用与插件：风电融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 风电、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

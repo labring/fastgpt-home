@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c095-f010
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for District Heating Yield and
-meta_description: Data for district heating yield and market reports comes from district heating enterprise production and operation systems and municipal public
+meta_title: Database and Operations for District Heating Yield
+meta_description: Database and Operations for District Heating Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

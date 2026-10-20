@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺智能尽调报告的引用来源与溯源
-meta_description: 服装家纺品类的数据源主要包含品牌方出厂质检报告、面料供应商成分检测文件、行业协会抽检公告及电商平台商品详情页。数据更新节奏随场景变化，批次质检报告随生产批次
+meta_description: 服装家纺智能尽调报告的引用来源与溯源：服装家纺智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 服装家纺、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的工具调用与插件
-meta_description: 热力收益率数据属于金融行业公用事业板块的行情品类，数据源主要包括金融终端收录的热力企业运营报备信息、行业监测平台的公开行情数据，以及证券市场披露的热力上市公
+meta_description: 热力收益率的工具调用与插件：热力收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 热力、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

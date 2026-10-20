@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股营销内容的工作流编排
-meta_description: 数据来源为集团统筹的各业务线营销素材库、线下与线上投放台账、客户分层标签库。更新节奏为子公司营销素材每周同步一次，投放数据按日更新，客户标签实时更新。文档结
+meta_description: 多元控股营销内容的工作流编排：多元控股营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 多元控股、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥研报检索的向量模型与索引
-meta_description: 水泥研报的数据主要来自券商研究所、建材行业资讯平台及政府公开的行业监测数据。行业监测类数据按月更新，券商研报随行业产能调整、价格波动、政策出台等事件不定期发
+meta_description: 水泥研报检索的向量模型与索引：水泥研报检索的向量模型与索引，涵盖配置与验证建议。
 keywords: 水泥、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

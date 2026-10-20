@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃营销内容的文档解析与分块
-meta_description: 玻璃营销相关文档主要来源于建筑玻璃厂商的产品规格书、营销宣传册、招投标技术文档。文档更新节奏随新品量产、工艺迭代不定期调整，无固定周期。文档结构多按玻璃品类
+meta_description: 玻璃营销内容的文档解析与分块：玻璃营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 玻璃、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

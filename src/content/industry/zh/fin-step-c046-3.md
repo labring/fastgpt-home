@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c046-3
 page_type: 行业作业环节页
 article_section: 证券交易与服务
 is_part_of: FastGPT 技术中心
-meta_title: 融资融券的处理追加担保、停牌、违约及强制处置事件：哪一部分能
-meta_description: 融资融券的处理追加担保、停牌、违约及强制处置事件：哪一部分能交给系统
+meta_title: 融资融券的处理追加担保、停牌、违约及强制处置事件：哪一部分能交给系统
+meta_description: 融资融券的处理追加担保、停牌、违约及强制处置事件：哪一部分能交给系统：融资融券的处理追加担保、停牌、违约及强制处置事件：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 融资融券、证券交易与服务、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

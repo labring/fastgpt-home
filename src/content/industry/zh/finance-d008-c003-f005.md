@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁智能尽调报告的多轮对话与提示词
-meta_description: 专业连锁的智能尽调数据主要来自公开财报披露、门店POS系统、供应链管理平台、会员管理系统。数据更新节奏分两类：门店运营、会员数据按周更新，年度扩张、财报数据
+meta_description: 专业连锁智能尽调报告的多轮对话与提示词：专业连锁智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专业连锁、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

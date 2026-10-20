@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化财报分析的知识库检索与召回
-meta_description: 来源为境内外证券交易所披露的上市公司定期报告、企业内部生产台账与月度经营报表。更新节奏为年度报告每年更新一次，季度报告每季度更新，月度经营数据按月更新。文档
+meta_description: 炼化财报分析的知识库检索与召回：炼化财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 炼化、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

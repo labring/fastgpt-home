@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的工具调用与插件
-meta_description: 受益所有人KYC的数据主要来源于企业工商公示档案、第三方股权穿透核验报告及监管要求的企业关联关系报送材料。数据更新节奏随企业股权变更事件触发，或按季度定期同
+meta_description: 受益所有人KYC 的工具调用与插件：受益所有人KYC 的工具调用与插件，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

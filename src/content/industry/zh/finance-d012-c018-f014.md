@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的表单与交互
-meta_description: 光模块相关营销内容的数据主要来自原厂规格文档、第三方测试报告及供应链备案台账。数据更新节奏随新品发布、供应链参数调整触发，无固定周期。单份文档以结构化参数表
+meta_description: 光模块营销内容的表单与交互：光模块营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 光模块、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

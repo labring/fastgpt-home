@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行收益率的HTTP 接口与外部系统
-meta_description: 股份制银行收益率日报的数据来源包括本行零售理财系统、同业拆借市场公开接口、理财子公司托管行的净值同步接口。更新节奏为每日日终批量生成，次工作日上午完成全量更
+meta_description: 股份制银行收益率的HTTP 接口与外部系统：股份制银行收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 股份制银行、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

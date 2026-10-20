@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子财报分析的文档解析与分块
-meta_description: 消费电子财报数据主要来自境内外证券交易所披露的年度、季度报告，以及头部厂商投资者关系板块公开文档。更新节奏为每季度更新季度报，每年更新年报。文档结构包含多页
+meta_description: 消费电子财报分析的文档解析与分块：消费电子财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 消费电子、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

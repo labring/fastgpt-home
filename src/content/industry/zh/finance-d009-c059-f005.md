@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属研报检索的多轮对话与提示词
-meta_description: 工业金属研报的数据主要来自中国有色金属工业协会、上海期货交易所、头部券商有色行业研究团队。更新节奏覆盖日度（现货价格、库存周报）、月度（供需平衡表）、年度（
+meta_description: 工业金属研报检索的多轮对话与提示词：工业金属研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工业金属、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

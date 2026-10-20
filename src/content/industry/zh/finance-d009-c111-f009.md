@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的引用来源与溯源
-meta_description: 畜禽养殖研报的数据主要来自行业协会公开数据、券商定期研报、农业农村部监测信息及养殖主体公开披露内容。更新节奏以月度、季度为主，部分核心行情数据按旬度更新。文
+meta_description: 畜禽养殖研报检索的引用来源与溯源：畜禽养殖研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

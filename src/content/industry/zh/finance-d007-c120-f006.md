@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全收益率的对话日志与审计
-meta_description: 网络安全场景下的收益率与行情数据，主要来源于网络安全设备运行日志、威胁告警日志、合规审计日志及关联的金融交易链路流量数据。数据更新节奏分为两类：实时威胁告警
+meta_description: 网络安全收益率的对话日志与审计：网络安全收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 网络安全、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

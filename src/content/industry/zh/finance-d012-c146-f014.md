@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备营销内容的表单与交互
-meta_description: 通用设备的数据主要来自金融机构采购的设备出厂合格证、运维台账、销售档案与设备传感器采集日志。静态参数如额定功率、机身尺寸随型号固定，更新频率为新机型发布时同
+meta_description: 通用设备营销内容的表单与交互：通用设备营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 通用设备、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

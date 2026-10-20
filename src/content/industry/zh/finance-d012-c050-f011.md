@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶营销内容的文档解析与分块
-meta_description: 塑料橡胶品类的数据源主要包括行业协会月度供需报告、生产企业批次质检报告、贸易商实时报价单、产品营销手册及专利技术文档。数据更新节奏随文档类型差异明显，报价单
+meta_description: 塑料橡胶营销内容的文档解析与分块：塑料橡胶营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 塑料橡胶、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

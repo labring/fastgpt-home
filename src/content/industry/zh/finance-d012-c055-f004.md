@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理营销内容的向量模型与索引
-meta_description: 金融机构面向大气治理领域的营销内容数据来源包括环保主管部门发布的大气污染防治标准、项目环评报告、大气治理设备厂商的技术参数文档、现场监测点位的历史数据、行业
+meta_description: 大气治理营销内容的向量模型与索引：大气治理营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 大气治理、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

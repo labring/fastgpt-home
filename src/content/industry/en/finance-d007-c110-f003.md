@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Power Grid Equipment Yield Rates
-meta_description: Power grid equipment-related yield and market data comes from public market APIs for the power grid equipment sub-sector. Data updates are completed
+meta_description: Sharing and Embedding for Power Grid Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -18,7 +18,7 @@ Power grid equipment-related yield and market data comes from public market APIs
 Symbol code is a 6-digit numeric string. The unit for average transaction price is yuan per share. The unit for trading volume is shares. Current day yield rate is a dimensionless value retained to four decimal places. The maximum number of data entries per single page returned by the API is a fixed value. Use pagination parameters to retrieve full data.
 
 ## Constraints Imposed by These Characteristics on Sharing and Embedding
-The fixed update schedule of the data source requires the refresh cycle of the embedded component to match the trading day update window, to avoid displaying expired or unupdated data. The single-page data entry limit requires the embedded component to be configured with pagination controls, limiting the amount of data loaded at one time to prevent page load timeouts. Fields include dimensionless yield values and trading data with multiple units. Unified format conversion rules must be configured during embedding to ensure displayed values and units conform to industry display conventions. The lack of new data on non-trading days requires the embedded component to be configured with empty state prompts, to avoid displaying blank or incorrect placeholder content. Sharing scenarios filtered by symbol code require embedding parameters to support carrying symbol code as a query condition.
+The fixed update schedule of the data source requires the refresh cycle of the embedded component to match the trading day update window, to avoid displaying expired or unupdated data. The single-page data entry limit requires the embedded component to be configured with pagination controls, limiting the amount of data loaded at one time to prevent page load timeouts. Fields include dimensionless yield values and trading data with multiple units. Unified format conversion rules must be configured during embedding to ensure displayed values and units conform to industry display conventions. The lack of new data on non-trading days requires the embedded component to be configured with empty state prompts, to avoid displaying blank or incorrect pending verification content. Sharing scenarios filtered by symbol code require embedding parameters to support carrying symbol code as a query condition.
 
 ## Configuration Settings
 | Configuration Item | Recommended Value | Rationale |

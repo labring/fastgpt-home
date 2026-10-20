@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备收益率的数据库与运维
-meta_description: 航天装备的收益率相关数据主要来源于地面测控系统的实时遥测数据流、商业化运营的计费结算系统、在轨设备的健康管理数据库。更新节奏为：实时运行参数每15秒推送一次
+meta_description: 航天装备收益率的数据库与运维：航天装备收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 航天装备、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

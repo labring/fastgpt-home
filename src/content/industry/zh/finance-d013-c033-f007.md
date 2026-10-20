@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤融资日报的工作流编排
-meta_description: 化纤融资日报的数据主要来自国内石化产业链现货交易平台、区域化纤企业的运营报备数据及合作银行的授信系统接口。更新节奏为每日凌晨更新前一日全量数据。文档多为结构
+meta_description: 化纤融资日报的工作流编排：化纤融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 化纤、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

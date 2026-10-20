@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料营销内容的模型接入与配置
-meta_description: 饲料品类的营销相关数据来源包括农业农村部发布的饲料原料目录、行业流通报价平台、规模化养殖企业的公开技术文档以及内部推广素材库。数据更新节奏存在差异：原料成分
+meta_description: 饲料营销内容的模型接入与配置：饲料营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 饲料、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

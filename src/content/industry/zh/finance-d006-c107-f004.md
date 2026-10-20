@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力投研知识库建设的向量模型与索引
-meta_description: 电力投研数据来源包括行业公开研报、电网企业月度运行报表、年度社会责任报告、电力设备技术文档、能源主管部门发布的政策文件、区域电网负荷监测数据等。更新节奏存在
+meta_description: 电力投研知识库建设的向量模型与索引：电力投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 电力、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

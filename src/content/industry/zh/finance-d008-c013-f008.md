@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险智能尽调报告的工具调用与插件
-meta_description: 保险智能尽调的数据来源包括保险机构内部承保系统、理赔台账、行业监管公开文档、第三方征信机构的主体信用数据。更新节奏存在差异：内部承保与理赔数据随业务流程实时
+meta_description: 保险智能尽调报告的工具调用与插件：保险智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 保险、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Context and Token for Paint and Ink Investment Research
-meta_description: Data comes primarily from public reports released by the China National Coatings Industry Association, official quotation systems of raw material
+meta_description: Context and Token for Paint and Ink Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发投研知识库建设的知识库检索与召回
-meta_description: 软件开发投研的数据主要来自代码仓库的注释与提交记录、第三方SDK/API官方文档、行业技术白皮书、内部研发规范与版本变更日志。更新节奏随研发进度波动，高频时
+meta_description: 软件开发投研知识库建设的知识库检索与召回：软件开发投研知识库建设的知识库检索与召回，涵盖配置与验证建议
 keywords: 软件开发、投研知识库建设与治理、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

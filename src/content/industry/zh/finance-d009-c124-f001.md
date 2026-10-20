@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备研报检索的HTTP 接口与外部系统
-meta_description: 自动化设备研报的数据主要来源于行业协会发布的产业监测报告、设备厂商的官方技术文档、第三方咨询机构的细分赛道研究。更新节奏随新品发布、行业展会周期调整，无固定
+meta_description: 自动化设备研报检索的HTTP 接口与外部系统：自动化设备研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 自动化设备、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

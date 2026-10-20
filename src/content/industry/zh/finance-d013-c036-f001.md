@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体融资日报的HTTP 接口与外部系统
-meta_description: 半导体融资日报的数据来源为公开的半导体领域企业融资公告、行业媒体披露的融资信息，更新频率为每日凌晨更新前一个自然日的已披露事件。数据结构为标准JSON数组，
+meta_description: 半导体融资日报的HTTP 接口与外部系统：半导体融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 半导体、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

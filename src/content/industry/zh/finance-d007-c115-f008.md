@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业收益率的工具调用与插件
-meta_description: 这个品类的数据主要来自农业农村部农情监测系统、全国农产品批发市场价格信息平台，以及地方农业技术推广站的实地采样数据。更新节奏为每日更新，每日上午10点前发布
+meta_description: 种植业收益率的工具调用与插件：种植业收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 种植业、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险营销内容的文档解析与分块
-meta_description: 保险营销内容的数据主要来自代理人培训手册、产品条款文档、合规话术库、客户跟进记录及监管政策文件。更新节奏随新产品上线、监管规则调整不定期波动，单次更新可能覆
+meta_description: 保险营销内容的文档解析与分块：保险营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 保险、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

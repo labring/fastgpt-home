@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶收益率的分享与嵌入
-meta_description: 塑料橡胶的行情数据来自国内大宗商品期货交易所与现货贸易平台，更新节奏为交易日每15分钟推送一次实时交易报价，当日收盘后1小时内发布当日结算价与全量行情快照。
+meta_description: 塑料橡胶收益率的分享与嵌入：塑料橡胶收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 塑料橡胶、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

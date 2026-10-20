@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程投研知识库建设的数据库与运维
-meta_description: 房建工程投研的数据来源涵盖项目施工图PDF、造价清单Excel、施工日志文档、材料质检报告、标段结算文件等。更新节奏随项目阶段触发，地基、主体、装饰等关键节
+meta_description: 房建工程投研知识库建设的数据库与运维：房建工程投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 房建工程、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

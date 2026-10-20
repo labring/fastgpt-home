@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器收益率的数据库与运维
-meta_description: 厨卫电器收益率相关数据的来源包括品牌方进销存系统、电商平台交易后台、线下经销商的每日上报单。数据更新节奏为每日凌晨完成前一日全量数据同步，适配日报播报的周期
+meta_description: 厨卫电器收益率的数据库与运维：厨卫电器收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 厨卫电器、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

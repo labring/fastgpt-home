@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口智能尽调报告的工作流编排
-meta_description: 航运港口尽调数据来源包括港口运营管理系统、海关通关数据平台、港务局公开统计报表、船舶代理作业申请单、租船合同档案。更新节奏存在差异：实时靠泊数据每15分钟更
+meta_description: 航运港口智能尽调报告的工作流编排：航运港口智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 航运港口、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

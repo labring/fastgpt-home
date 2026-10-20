@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能收益率的部署与升级
-meta_description: 储能收益率与行情数据主要来自电网调度系统、电力交易平台、场站侧SCADA采集系统。更新节奏为：日度收益率报表每日固定时段生成，实时充放电行情每15分钟更新一
+meta_description: 储能收益率的部署与升级：储能收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 储能、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

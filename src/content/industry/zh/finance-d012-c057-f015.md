@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的部署与升级
-meta_description: 面向金融行业的小家电营销内容，数据源包含金融机构活动运营库、赠品小家电的官方产品参数文档、活动规则说明、客服应答话术模板。更新节奏随活动上线、赠品调整、活动
+meta_description: 小家电营销内容的部署与升级：小家电营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 小家电、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

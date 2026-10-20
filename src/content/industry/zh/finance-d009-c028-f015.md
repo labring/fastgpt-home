@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤研报检索的部署与升级
-meta_description: 动力煤研报的数据来源包括行业公开监测数据、专业煤炭资讯渠道、企业公开运营报告。日常监测数据每日更新，专题研报按周、月发布，突发供需变动时即时更新。文档通常包
+meta_description: 动力煤研报检索的部署与升级：动力煤研报检索的部署与升级，涵盖配置与验证建议。。。
 keywords: 动力煤、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

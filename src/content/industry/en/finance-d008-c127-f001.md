@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c127-f001
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Aerospace Equipment
-meta_description: The data for aerospace equipment intelligent due diligence reports comes primarily from public technical documents of aerospace original equipment
+meta_title: HTTP Interfaces and External Systems for Aerospace
+meta_description: HTTP Interfaces and External Systems for Aerospace Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

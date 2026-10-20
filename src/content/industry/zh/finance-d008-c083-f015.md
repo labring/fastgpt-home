@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务智能尽调报告的部署与升级
-meta_description: 水务智能尽调报告的数据来源包括市政水务主管部门的公开监测数据集、水厂运行日志、管网巡检记录、水质检测报告、管网运维档案等。更新节奏分为两类：实时水质监测数据
+meta_description: 水务智能尽调报告的部署与升级：水务智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 水务、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

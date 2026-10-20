@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车智能尽调报告的HTTP 接口与外部系统
-meta_description: 整车智能尽调报告的数据主要来源于车辆管理登记系统、第三方车况检测机构、经销商库存数据库以及保险理赔记录。数据更新节奏随车辆状态变更触发，包括过户、出险、年检
+meta_description: 整车智能尽调报告的HTTP 接口与外部系统：整车智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 整车、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

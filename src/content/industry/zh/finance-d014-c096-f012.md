@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭财报分析的模型接入与配置
-meta_description: 焦炭财报相关的数据来源包括大连商品交易所的焦炭期货行情数据、中国炼焦行业协会发布的月度供需报告、A股上市炼焦企业的季度/年度财报、海关总署的焦炭进出口统计数
+meta_description: 焦炭财报分析的模型接入与配置：焦炭财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 焦炭、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

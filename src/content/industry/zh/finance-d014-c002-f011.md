@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务财报分析的文档解析与分块
-meta_description: 专业服务场景下的财报数据主要来自上市公司公开披露的年报、半年报、季度报及交易所临时公告，也包含内部审计底稿与客户委托的定制财报文件。数据更新节奏固定，年度财
+meta_description: 专业服务财报分析的文档解析与分块：专业服务财报分析的文档解析与分块，涵盖配置与验证建议
 keywords: 专业服务、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

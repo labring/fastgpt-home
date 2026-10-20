@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Wind Power Marketing Content
-meta_description: Wind power marketing data targeted at financial, insurance, and wealth management institutions primarily comes from wind power project feasibility
+meta_description: Deployment and Upgrade of Wind Power Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

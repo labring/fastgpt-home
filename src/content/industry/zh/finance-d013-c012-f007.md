@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 住宅开发融资日报的工作流编排
-meta_description: 住宅开发融资日报的数据主要来自房企内部资金管理系统、项目属地住建部门监管专户流水、合作金融机构的放款与还款台账。数据更新节奏为每日凌晨批量生成，单份日报覆盖
+meta_description: 住宅开发融资日报的工作流编排：住宅开发融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 住宅开发、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢收益率的工作流编排
-meta_description: 特钢收益率与行情数据主要来自国内特钢行业协会、大型特钢生产企业官网及大宗商品现货交易平台。数据更新节奏为每日收盘后1小时内完成当日全品类更新。单份数据文档包
+meta_description: 特钢收益率的工作流编排：特钢收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 特钢、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

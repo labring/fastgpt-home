@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Construction
-meta_description: Core data for construction machinery yield rates comes from operation duration data collected by equipment IoT terminals, and financial accounting
+meta_description: HTTP Interfaces and External Systems for Construction Machinery Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

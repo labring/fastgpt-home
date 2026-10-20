@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品营销内容的部署与升级
-meta_description: 面向金融/保险/理财场景的化妆品营销内容数据主要来自品牌内部产品数据库、合规备案系统与营销素材库，同时需适配金融机构的内容合规要求。常规数据更新以月度合规调
+meta_description: 化妆品营销内容的部署与升级：化妆品营销内容的部署与升级，涵盖配置与验证建议。。。
 keywords: 化妆品、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

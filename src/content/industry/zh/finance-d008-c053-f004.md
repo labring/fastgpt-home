@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融智能尽调报告的向量模型与索引
-meta_description: 数据主要来自监管公示的机构运营数据、合作方提供的标的方财务报表、内部尽调访谈记录与函证回函。更新节奏随项目周期推进，单项目尽调报告从立项到归档期间会按节点更
+meta_description: 多元金融智能尽调报告的向量模型与索引：多元金融智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 多元金融、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

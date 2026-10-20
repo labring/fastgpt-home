@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品融资日报的向量模型与索引
-meta_description: 数据主要来自上市化妆品企业公告、行业垂直媒体融资报道、监管部门备案的融资公示信息。更新节奏为事件触发式，有新的化妆品品牌或企业完成融资时同步更新。单篇文档结
+meta_description: 化妆品融资日报的向量模型与索引：化妆品融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 化妆品、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

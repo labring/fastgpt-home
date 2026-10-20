@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电研报检索的文档解析与分块
-meta_description: 小家电研报的数据主要来源于行业协会公开的品类监测报告、品牌官方的新品发布文档、电商平台的销售与评价数据、第三方调研机构的专项分析文档。更新节奏随新品迭代调整
+meta_description: 小家电研报检索的文档解析与分块：小家电研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 小家电、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

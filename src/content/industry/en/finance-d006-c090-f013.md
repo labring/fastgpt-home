@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Paint and Ink
-meta_description: Paint and ink industry data sources primarily include public industry association reports, technical parameter documents from upstream suppliers
+meta_description: Knowledge Base Retrieval and Recall for Paint and Ink Investment Research Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

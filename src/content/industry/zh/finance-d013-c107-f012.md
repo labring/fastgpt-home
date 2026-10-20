@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力融资日报的模型接入与配置
-meta_description: 电力行业融资日报的数据来源于电力企业内部资金管控系统、公开的能源行业融资披露平台及地方能源监管报送数据。更新节奏为每日凌晨更新前一日的融资发生明细。文档结构
+meta_description: 电力融资日报的模型接入与配置：电力融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 电力、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口营销内容的HTTP 接口与外部系统
-meta_description: 航运港口的营销内容数据主要来自港口官方调度系统、货主货代对接台账、航线宣传物料库。数据更新节奏涵盖实时航线调整、每日货量播报、定期营销物料发布。文档结构包含
+meta_description: 航运港口营销内容的HTTP 接口与外部系统：航运港口营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 航运港口、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

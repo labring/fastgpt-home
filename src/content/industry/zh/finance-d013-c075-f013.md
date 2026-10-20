@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车融资日报的知识库检索与召回
-meta_description: 整车融资日报的数据主要来自整车制造企业及上下游供应链主体的公开融资公告、合作金融机构的授信披露台账、第三方征信平台的企业融资动态。数据更新节奏为每日同步当日
+meta_description: 整车融资日报的知识库检索与召回：整车融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 整车、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

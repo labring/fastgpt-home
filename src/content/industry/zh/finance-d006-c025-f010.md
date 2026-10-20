@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行投研知识库建设的数据库与运维
-meta_description: 数据来源包括本行信贷台账、辖内涉农主体经营数据、地方政府公开的产业统计资料、人行下发的区域金融运行简报。更新节奏分为实时更新的本行交易类数据、月度更新的辖内
+meta_description: 农商行投研知识库建设的数据库与运维：农商行投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 农商行、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

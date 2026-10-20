@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体研报检索的向量模型与索引
-meta_description: 半导体研报的数据来源主要为头部券商研究所、半导体行业第三方咨询机构及产业展会公开资料。更新节奏分为常规周期与突发场景：每周更新行业动态研报，季度更新深度分析
+meta_description: 半导体研报检索的向量模型与索引：半导体研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 半导体、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

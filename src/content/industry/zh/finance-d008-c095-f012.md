@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力智能尽调报告的模型接入与配置
-meta_description: 热力智能尽调报告的数据来自公用事业监管平台、热力公司运营系统、终端能耗监测设备及供暖计费系统。更新节奏为供暖季按月度更新核心运行参数，非供暖季按季度更新合规
+meta_description: 热力智能尽调报告的模型接入与配置：热力智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 热力、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

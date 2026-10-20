@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程收益率的工作流编排
-meta_description: 基建工程的收益率数据主要来自项目月度计量支付台账、第三方造价咨询机构发布的工程计价指数、项目公司的月度财务报表。数据更新节奏为每日同步当日完成产值对应的收益
+meta_description: 基建工程收益率的工作流编排：基建工程收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 基建工程、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

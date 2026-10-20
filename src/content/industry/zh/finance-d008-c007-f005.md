@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品智能尽调报告的多轮对话与提示词
-meta_description: 乳制品智能尽调报告的数据主要来自牧场奶源检测台账、工厂生产批次记录、第三方权威质检报告及供应链溯源系统。数据更新节奏按生产批次或每日同步，单批次报告通常包含
+meta_description: 乳制品智能尽调报告的多轮对话与提示词：乳制品智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 乳制品、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

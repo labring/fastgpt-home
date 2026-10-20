@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业财报分析的工具调用与插件
-meta_description: 种植业财报数据主要来自农业农村部官方公开监测数据、上市涉农企业的定期报告、地方农业农村部门发布的区域种植统计资料。更新节奏分为两类：月度种植面积、农资消耗等
+meta_description: 种植业财报分析的工具调用与插件：种植业财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 种植业、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

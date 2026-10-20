@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶收益率的表单与交互
-meta_description: 塑料橡胶的行情与收益率数据来自国内大宗商品现货交易平台、期货交易所官方接口及行业协会调研渠道。更新节奏区分交易时段与非交易时段：现货数据于每个交易日17点前
+meta_description: 塑料橡胶收益率的表单与交互：塑料橡胶收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 塑料橡胶、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

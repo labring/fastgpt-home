@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融收益率的对话日志与审计
-meta_description: 多元金融收益率与行情数据的来源包括机构内部交易核算系统、第三方行情服务商接口、监管指定披露平台。更新节奏区分场内交易产品与场外产品，场内产品按自然日生成当日
+meta_description: 多元金融收益率的对话日志与审计：多元金融收益率的对话日志与审计，涵盖配置与验证建议
 keywords: 多元金融、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

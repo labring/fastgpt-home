@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒研报检索的部署与升级
-meta_description: 白酒研报的数据主要来自国内券商研究所食品饮料行业研报、白酒上市企业定期报告、行业协会公开统计资料。更新节奏随上市企业财报发布季、行业政策出台及重大行业事件调
+meta_description: 白酒研报检索的部署与升级：白酒研报检索的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 白酒、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

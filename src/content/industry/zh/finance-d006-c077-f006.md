@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区投研知识库建设的对话日志与审计
-meta_description: 面向金融投研场景的旅游景区投研数据包含多类来源：实时运营数据来自景区票务系统、客流监控设备，更新频率为分钟级至秒级；游客反馈数据来自OTA平台、现场留言板，
+meta_description: 旅游景区投研知识库建设的对话日志与审计：旅游景区投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 旅游景区、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

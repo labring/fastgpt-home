@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤投研知识库建设的数据库与运维
-meta_description: 化纤投研的数据主要来自上游石油石化产业链的原料报价（如PTA、乙二醇）、下游织造与终端服饰的供需数据、行业协会发布的月度开工率与库存报告、海关总署的进出口明
+meta_description: 化纤投研知识库建设的数据库与运维：化纤投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 化纤、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

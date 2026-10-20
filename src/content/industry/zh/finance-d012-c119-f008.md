@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务营销内容的工具调用与插件
-meta_description: 综合服务营销内容的数据来源包括内部业务CRM系统、用户交互日志库、营销素材管理中台。更新节奏按服务会话触发，实时同步用户咨询记录，营销素材则按上线/下线状态
+meta_description: 综合服务营销内容的工具调用与插件：综合服务营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 综合服务、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

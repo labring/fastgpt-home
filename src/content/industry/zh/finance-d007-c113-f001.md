@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒收益率的HTTP 接口与外部系统
-meta_description: 白酒板块的行情与收益率数据来源为证券市场行业板块行情接口与第三方金融数据服务接口。更新节奏为每个交易日实时推送成交异动数据，每日收盘后生成当日收益率汇总数据
+meta_description: 白酒收益率的HTTP 接口与外部系统：白酒收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白酒、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务研报检索的多轮对话与提示词
-meta_description: 教育服务研报数据主要来自教育行业咨询机构、地方教育主管部门公开调研、院校教研总结报告及行业协会年度白皮书。更新节奏以季度常规更新为主，年度会发布完整版行业白
+meta_description: 教育服务研报检索的多轮对话与提示词：教育服务研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 教育服务、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

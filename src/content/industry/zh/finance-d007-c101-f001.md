@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流收益率的HTTP 接口与外部系统
-meta_description: 物流品类的收益率数据主要来自物流企业的运输管理系统、第三方运价公示平台及结算对账系统。数据更新节奏分为两类：干线运输收益率按自然日更新，同城配送的实时单收益
+meta_description: 物流收益率的HTTP 接口与外部系统：物流收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 物流、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

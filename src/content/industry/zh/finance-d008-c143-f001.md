@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发智能尽调报告的HTTP 接口与外部系统
-meta_description: 软件开发智能尽调报告的数据主要来自项目代码仓库、第三方代码扫描工具、企业合规管理系统及公开资质数据库。数据更新节奏随项目迭代同步，每次版本发布、合规审计或代
+meta_description: 软件开发智能尽调报告的HTTP 接口与外部系统：软件开发智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 软件开发、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

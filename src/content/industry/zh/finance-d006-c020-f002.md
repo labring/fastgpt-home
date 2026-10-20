@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备投研知识库建设的上下文与 token
-meta_description: 兵器装备投研数据主要来自军工集团公开年报、武器装备定型鉴定公报、国防科技工业局发布的行业动态、军工行业协会的专项统计资料，以及公开的装备采购招标公告。更新节
+meta_description: 兵器装备投研知识库建设的上下文与 token：兵器装备投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 兵器装备、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理融资日报的模型接入与配置
-meta_description: 物业管理融资日报的数据来源包括物业企业内部运营管理系统、合作金融机构的业务对接接口、项目端的日常收缴台账。数据更新节奏为每日凌晨更新前一自然日的全量数据集。
+meta_description: 物业管理融资日报的模型接入与配置：物业管理融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 物业管理、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

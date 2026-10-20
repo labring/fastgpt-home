@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 炼化营销内容的工作流编排
-meta_description: 炼化相关的金融营销内容数据，主要来自炼化企业生产执行系统（MES）、油品库存管理系统、区域成品油需求监测平台，以及金融机构的供应链金融客户询价台账。数据更新
+meta_description: 炼化营销内容的工作流编排：炼化营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 炼化、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类智能尽调报告的工具调用与插件
-meta_description: 鞋类智能尽调报告的数据主要来自品牌方生产台账、第三方质检机构检测报告、跨境电商销售端参数三类数据源。更新节奏随新品上线周期波动，春秋新品季每周有多批次批量更
+meta_description: 鞋类智能尽调报告的工具调用与插件：鞋类智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 鞋类、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

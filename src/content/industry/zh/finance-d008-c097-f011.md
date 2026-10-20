@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤智能尽调报告的文档解析与分块
-meta_description: 焦煤尽调报告的数据主要来源于煤矿生产台账、港口质检报告、期货交割仓单及行业协会月度简报。生产台账每日更新，记录单批次焦煤的矿点、运输信息；质检报告随每批次货
+meta_description: 焦煤智能尽调报告的文档解析与分块：焦煤智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 焦煤、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

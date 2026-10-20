@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料投研知识库建设的上下文与 token
-meta_description: 耐火材料投研数据主要来自全国耐火材料行业协会公开报告、生产企业的技术手册与出厂质检报告、窑炉运行工况监测数据、原材料（铝矾土、镁砂等）的大宗商品报价数据、国
+meta_description: 耐火材料投研知识库建设的上下文与 token：耐火材料投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 耐火材料、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

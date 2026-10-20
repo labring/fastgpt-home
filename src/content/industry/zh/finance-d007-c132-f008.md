@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的工具调用与插件
-meta_description: 计算机设备收益率与行情数据，来源包括硬件厂商的设备性能监控API、金融交易系统的设备负载统计接口、第三方金融IT运维数据平台。更新节奏为每小时增量同步，每日
+meta_description: 计算机设备收益率的工具调用与插件：计算机设备收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 计算机设备、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

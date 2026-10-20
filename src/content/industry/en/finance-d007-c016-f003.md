@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Photovoltaic Yield and Market
-meta_description: Photovoltaic yield and market daily report data is sourced from grid-connected photovoltaic power station monitoring terminals, grid settlement
+meta_description: Sharing and Embedding for Photovoltaic Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-Holding Company Financing Daily Report: Multi-Turn
-meta_description: Data is sourced from publicly disclosed financing announcements of the group and its various holding subsidiaries, as well as bank credit approval
+meta_description: Multi-Holding Company Financing Daily Report: Multi-Turn Dialogue and Prompt Engineering
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

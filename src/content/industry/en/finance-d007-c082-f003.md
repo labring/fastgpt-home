@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding for Aquaculture Profitability Metrics
-meta_description: Aquaculture profitability data is collected daily from fishery monitoring stations, regional core aquatic product wholesale markets, and IoT terminals
+meta_description: Sharing and Embedding for Aquaculture Profitability Metrics
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Industrial Park Financing Daily
-meta_description: Data for the industrial park financing daily report comes from three sources: park operation management systems, corporate financing filings on local
+meta_description: Deployment and Upgrade of Industrial Park Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

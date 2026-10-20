@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺财报分析的HTTP 接口与外部系统
-meta_description: 服装家纺行业的上市公司财报数据主要来源于沪深交易所、港交所的官方披露平台，以及公司官方公告渠道。更新节奏以定期报告为主，包含年度报告、半年度报告及季度报告，
+meta_description: 服装家纺财报分析的HTTP 接口与外部系统：服装家纺财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 服装家纺、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c060-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for Engineering Consulting Yield and
-meta_description: Engineering consulting yield and market daily report data comes primarily from three sources: public cost monitoring platforms operated by housing and
+meta_title: Deployment and Upgrade for Engineering Consulting Yield
+meta_description: Deployment and Upgrade for Engineering Consulting Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

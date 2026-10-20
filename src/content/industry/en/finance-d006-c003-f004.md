@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c003-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Professional Chain Investment
-meta_description: Data sources for professional chain investment research include store operation reports, supply chain quotation documents, regional consumer research
+meta_title: Vector Models and Indexing for Professional Chain
+meta_description: Vector Models and Indexing for Professional Chain Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒营销内容的HTTP 接口与外部系统
-meta_description: 金融场景下的白酒营销内容数据，主要来自品牌官方渠道、合作酒企的专属素材库、金融机构私行客户的反馈标签三类。更新节奏随金融营销节点波动，季度理财沙龙、高端客户
+meta_description: 白酒营销内容的HTTP 接口与外部系统：白酒营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白酒、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

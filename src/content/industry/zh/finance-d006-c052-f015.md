@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股投研知识库建设的部署与升级
-meta_description: 多元控股的投研数据来源覆盖集团内部各子公司的季度/年度财报、跨行业研报、宏观经济监管文件、各业务线经营数据。数据更新节奏差异显著：财报按季度、年度固定更新，
+meta_description: 多元控股投研知识库建设的部署与升级：多元控股投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 多元控股、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

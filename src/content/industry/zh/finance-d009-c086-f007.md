@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务研报检索的工作流编排
-meta_description: 汽车服务研报的数据主要来自第三方汽车咨询机构公开报告、主机厂售后业务披露文件、汽车后市场行业协会统计资料。更新节奏覆盖月度、季度两个主要周期，部分专项政策解
+meta_description: 汽车服务研报检索的工作流编排：汽车服务研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 汽车服务、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

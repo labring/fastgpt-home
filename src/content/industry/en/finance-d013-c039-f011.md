@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Kitchen & Bathroom
-meta_description: Data for kitchen and bathroom appliance financing daily reports is primarily sourced from public investment and financing platforms, official
+meta_description: Document Parsing and Chunking for Kitchen & Bathroom Appliance Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

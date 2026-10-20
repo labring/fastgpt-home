@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢营销内容的向量模型与索引
-meta_description: 面向金融理财领域的特钢营销内容，数据主要来自企业内部的产品技术手册、定制化报价单、行业应用案例文档、经销商推广物料及面向理财客户的投资价值说明文档。产品牌号
+meta_description: 特钢营销内容的向量模型与索引：特钢营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 特钢、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

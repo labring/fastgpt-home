@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品融资日报的文档解析与分块
-meta_description: 休闲食品融资日报的数据来源涵盖行业第三方监测机构、各地市场监管公示平台、企业官方公告渠道。更新节奏为每日凌晨更新前一日的公开融资事件。文档存在两种主流格式：
+meta_description: 休闲食品融资日报的文档解析与分块：休闲食品融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 休闲食品、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械融资日报的HTTP 接口与外部系统
-meta_description: 工程机械融资日报的数据来源为合作厂商的融资管理系统、合作银行的保理业务接口，更新频率为每日凌晨更新前一日的全量或增量数据。单条数据包含设备唯一标识（如设备S
+meta_description: 工程机械融资日报的HTTP 接口与外部系统：工程机械融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工程机械、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子投研知识库建设的上下文与 token
-meta_description: 消费电子投研数据的来源包括原厂供应链报价文档、第三方行业调研机构报告、终端产品规格参数手册、电商销售监测数据、专利公开文档。更新节奏为：供应链数据按周更新，
+meta_description: 消费电子投研知识库建设的上下文与 token：消费电子投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 消费电子、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

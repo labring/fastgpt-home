@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 商业地产智能尽调报告的部署与升级
-meta_description: 商业地产智能尽调的数据主要来自不动产登记档案、项目测绘报告、租户租赁合同台账、周边商圈客流监测数据、物业运维记录。更新节奏为存量项目每季度同步更新，新建项目
+meta_description: 商业地产智能尽调报告的部署与升级：商业地产智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 商业地产、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

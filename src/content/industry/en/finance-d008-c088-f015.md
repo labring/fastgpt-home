@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Oilfield Services Engineering
-meta_description: Data sources for oilfield services engineering intelligent due diligence reports include on-site operation logs, third-party exploration and testing
+meta_description: Deployment and Upgrade for Oilfield Services Engineering Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

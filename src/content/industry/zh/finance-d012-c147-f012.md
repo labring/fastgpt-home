@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸营销内容的模型接入与配置
-meta_description: 造纸营销内容的数据来源包括自有产品规格文档、下游包装与印刷客户的需求反馈文档、行业品类标准文件，以及电商渠道的在售产品详情。更新节奏随业务节点调整：产品规格
+meta_description: 造纸营销内容的模型接入与配置：造纸营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 造纸、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

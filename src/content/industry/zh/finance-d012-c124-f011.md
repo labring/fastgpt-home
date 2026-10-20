@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备营销内容的文档解析与分块
-meta_description: 金融领域自动化设备的营销文档主要来自官方设备手册、选型参数表、行业应用案例集及营销推广物料。数据更新节奏随新机型发布、合规标准调整或核心参数变更触发，无固定
+meta_description: 自动化设备营销内容的文档解析与分块：自动化设备营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 自动化设备、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

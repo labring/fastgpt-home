@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏营销内容的模型接入与配置
-meta_description: 金融领域光伏相关的营销内容数据主要来自三类来源：光伏产品官方规格书、电站投资回报测算文档、理财推广物料。数据更新节奏分为三类：产品参数与测算模型随新品发布更
+meta_description: 光伏营销内容的模型接入与配置：光伏营销内容的模型接入与配置，涵盖配置与验证建议。
 keywords: 光伏、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气投研知识库建设的模型接入与配置
-meta_description: 燃气投研的数据来源包括上游气源报价平台、城市燃气企业的管网运维日志、发改委及住建部的燃气调价政策文件、燃气行业协会的供需分析报告。更新节奏差异明显：气源报价
+meta_description: 燃气投研知识库建设的模型接入与配置：燃气投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 燃气、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

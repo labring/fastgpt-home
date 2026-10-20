@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的工具调用与插件
-meta_description: 该品类的营销内容数据主要来源于合作纺织制造企业的内部生产管理系统、面料库存台账、营销素材库及线下展会采集的面料参数，同时包含金融服务机构的客户画像标签。数据
+meta_description: 纺织制造营销内容的工具调用与插件：纺织制造营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 纺织制造、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

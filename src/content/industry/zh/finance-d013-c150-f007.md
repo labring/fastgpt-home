@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的工作流编排
-meta_description: 铁矿石融资日报的数据来源包括大连商品交易所公开行情接口、国内主要港口每日库存报送系统、行业资讯机构的钢厂采购跟踪数据。更新节奏为每日收盘后1小时内完成当日数
+meta_description: 铁矿石融资日报的工作流编排：铁矿石融资日报的工作流编排，涵盖配置与验证建议。。。
 keywords: 铁矿石、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信财报分析的工具调用与插件
-meta_description: 这个品类的数据主要来自卫星运营企业官方披露的季度/年度财报、国际电信联盟（ITU）的频段使用公开报告、第三方航天咨询机构的行业整理文档。数据更新节奏以季度为
+meta_description: 卫星通信财报分析的工具调用与插件：卫星通信财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 卫星通信、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

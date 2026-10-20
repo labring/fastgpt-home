@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Computer Equipment
-meta_description: Computer equipment yield rate and market data is sourced from internal enterprise IT asset management systems and public API endpoints of compute
+meta_description: Model Integration and Configuration for Computer Equipment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

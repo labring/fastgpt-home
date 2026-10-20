@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业融资日报的工具调用与插件
-meta_description: 种植业融资日报的数据主要来自省级农业农村部门公开监测数据、种植合作社上报的当日交易台账，以及大宗农产品批发市场的实时成交记录。数据按自然日更新，每日凌晨完成
+meta_description: 种植业融资日报的工具调用与插件：种植业融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 种植业、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

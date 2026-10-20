@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务研报检索的工具调用与插件
-meta_description: 主要来自金融科技厂商官方技术文档、金融行业IT运维分析报告、银行业务系统技术白皮书与合规运维指南。更新节奏依来源不同，厂商文档随版本迭代实时更新，行业报告多
+meta_description: IT 服务研报检索的工具调用与插件：IT 服务研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: IT 服务、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

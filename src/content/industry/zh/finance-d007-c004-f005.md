@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备收益率的多轮对话与提示词
-meta_description: 专用设备的数据源主要来自金融交易终端的本地运行日志、交易所行情推送接口以及企业内部风控系统的同步数据。更新节奏为每日收盘后批量更新当日全量设备运行与收益数据
+meta_description: 专用设备收益率的多轮对话与提示词：专用设备收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专用设备、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

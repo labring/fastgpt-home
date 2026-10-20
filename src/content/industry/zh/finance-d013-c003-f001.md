@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的HTTP 接口与外部系统
-meta_description: 专业连锁融资日报的数据来自品牌总部的ERP财务系统、各门店的收款POS汇总数据以及合作的供应链金融平台。数据更新节奏为每日凌晨2点前完成前一日全量汇总。标准
+meta_description: 专业连锁融资日报的HTTP 接口与外部系统：专业连锁融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专业连锁、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

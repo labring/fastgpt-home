@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体智能尽调报告的知识库检索与召回
-meta_description: 半导体尽调数据来源包括行业协会公开研究、上市企业定期财报、专利公开数据库、供应链厂商披露文档、EDA设计规范文档。更新节奏覆盖季度级行业报告、月度级产能数据
+meta_description: 半导体智能尽调报告的知识库检索与召回：半导体智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 半导体、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

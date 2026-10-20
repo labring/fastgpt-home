@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的工具调用与插件
-meta_description: 工程咨询研报的数据主要来源于住建部门公开的行业标准、各省市住建厅发布的项目备案档案、中国建设工程造价管理协会等行业机构的专项调研成果，以及第三方工程咨询机构
+meta_description: 工程咨询研报检索的工具调用与插件：工程咨询研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 工程咨询、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

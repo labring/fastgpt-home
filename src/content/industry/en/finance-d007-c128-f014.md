@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Shipping Port Yield Rates
-meta_description: Data sources for shipping port yield rates include public statistical APIs from the international shipping industry, structured daily reports
+meta_description: Form and Interaction for Shipping Port Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

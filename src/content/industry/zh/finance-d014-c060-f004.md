@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询财报分析的向量模型与索引
-meta_description: 数据来源包括工程咨询项目的合同台账、成本核算单据、年度审计报告、客户结算凭证。更新节奏按单个项目周期、年度或半年度财报节点同步更新。文档结构包含结构化表格（
+meta_description: 工程咨询财报分析的向量模型与索引：工程咨询财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 工程咨询、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

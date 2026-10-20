@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料研报检索的工具调用与插件
-meta_description: 化学原料研报的数据来源包括公开行业数据库、上市公司定期报告、专业化工行业资讯机构公开报告。更新节奏存在显著差异：现货交易数据每日更新，行业供需分析报告每月更
+meta_description: 化学原料研报检索的工具调用与插件：化学原料研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 化学原料、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

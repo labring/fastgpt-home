@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采营销内容的知识库检索与召回
-meta_description: 在金融行业的油气开采营销场景中，数据来源包括油气开采项目的官方技术文档、区域油气资源勘探报告、金融机构为该类客户定制的营销物料、线下活动讲稿及线上推广素材。
+meta_description: 油气开采营销内容的知识库检索与召回：油气开采营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 油气开采、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

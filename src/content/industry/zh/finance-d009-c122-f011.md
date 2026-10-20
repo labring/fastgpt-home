@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行研报检索的文档解析与分块
-meta_description: 股份制银行研报的数据来源包括内部研究团队产出的行业分析文档、合作机构提供的公开行业报告、监管机构发布的区域金融监测资料。更新节奏以季度常规研报为主，临时政策
+meta_description: 股份制银行研报检索的文档解析与分块：股份制银行研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 股份制银行、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

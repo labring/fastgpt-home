@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Chemical Raw Material
-meta_description: In chemical raw material intelligent due diligence scenarios for finance, insurance and wealth management, data sources include public reports from
+meta_description: Citation Sources and Traceability for Chemical Raw Material Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

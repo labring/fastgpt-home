@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤智能尽调报告的向量模型与索引
-meta_description: 焦煤尽调报告的数据来源包括中国煤炭工业协会发布的行业分析报告、主要沿海港口的现货报价系统、国内重点钢厂的月度采购记录、期货交割库的库存监测数据。更新节奏存在
+meta_description: 焦煤智能尽调报告的向量模型与索引：焦煤智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 焦煤、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

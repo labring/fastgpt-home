@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Jewelry Investment
-meta_description: Jewelry investment research data primarily comes from brand product filing documents, industry association quality inspection reports, supply chain
+meta_description: Citation Source and Traceability for Jewelry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

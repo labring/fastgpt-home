@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备投研知识库建设的部署与升级
-meta_description: 航空装备投研数据主要来自军工行业公开研报、官方型号研制通报、航电系统标准文档、试飞数据简报及供应链配套清单。更新节奏随新型号立项、试飞、定型节点呈现阶段性峰
+meta_description: 航空装备投研知识库建设的部署与升级：航空装备投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 航空装备、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

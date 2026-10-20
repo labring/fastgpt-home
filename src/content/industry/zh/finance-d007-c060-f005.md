@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询收益率的多轮对话与提示词
-meta_description: 工程咨询领域的收益率相关数据，来源包括项目财务测算底稿、造价咨询数据库、行业主管部门发布的造价指标库。数据更新节奏随项目推进阶段性触发，当项目成本调整、资金
+meta_description: 工程咨询收益率的多轮对话与提示词：工程咨询收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工程咨询、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

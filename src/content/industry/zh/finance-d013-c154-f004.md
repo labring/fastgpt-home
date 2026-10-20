@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品融资日报的向量模型与索引
-meta_description: 饰品融资日报的数据来源主要为品牌方的进销存系统、行业交易备案平台及合作金融机构的放款台账。更新节奏为每日更新，覆盖前一自然日的全量融资交易记录。单条文档的标
+meta_description: 饰品融资日报的向量模型与索引：饰品融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 饰品、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

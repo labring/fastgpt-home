@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备投研知识库建设的部署与升级
-meta_description: 航天装备投研数据主要来自军工集团公开披露的型号立项公告、试验验证报告、行业标准规范、第三方军工咨询机构的公开研报，以及航天发射任务的公开观测记录。更新节奏随
+meta_description: 航天装备投研知识库建设的部署与升级：航天装备投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 航天装备、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

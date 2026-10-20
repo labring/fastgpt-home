@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸智能尽调报告的知识库检索与召回
-meta_description: 造纸行业智能尽调报告的数据来源包括中国造纸协会公开统计文件、上市造纸企业年度及半年度披露报告、原辅材料交易市场实时数据、环保监管部门公开指标。更新节奏分为月
+meta_description: 造纸智能尽调报告的知识库检索与召回：造纸智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 造纸、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

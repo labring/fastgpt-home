@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流财报分析的引用来源与溯源
-meta_description: 物流品类的财报数据主要来自上市物流企业公开定期报告、交通运输行业协会月度统计公报及物流园区运营台账。数据更新节奏分两类：定期财报按季度、年度发布，行业运营数
+meta_description: 物流财报分析的引用来源与溯源：物流财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 物流、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

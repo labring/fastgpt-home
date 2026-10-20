@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电智能尽调报告的引用来源与溯源
-meta_description: 白色家电的数据源涵盖多类官方公开文档与业务数据，包括国家能效标识中心的公开检测报告、品牌方的合规技术文档、电商平台的售后返修结构化表格、行业协会的品类监测汇
+meta_description: 白色家电智能尽调报告的引用来源与溯源：白色家电智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 白色家电、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -23,7 +23,7 @@ date_modified: 2026-09-15
 ## 配置怎么定
 | 配置项 | 建议取法 | 这样取的依据 |
 | --- | --- | --- |
-| `REFERENCE_TEMPLATE` | `{{content}} （来源：{{source_name}}，{{publish_date}}，{{document_type}}）` | 适配白色家电多来源的溯源标注，明确展示合规所需的来源信息，符合尽调报告的归档要求 |
+| `reference fields` | `content fields （来源字段，content fields，content fields）` | 适配白色家电多来源的溯源标注，明确展示合规所需的来源信息，符合尽调报告的归档要求 |
 | `SIMILARITY_THRESHOLD` | `0.75-0.85` | 白色家电SKU型号多、参数相似度高，阈值过低会召回无关型号数据，过高会遗漏有效参数来源 |
 | `RECALL_LIMIT` | `前8条` | 白色家电的参数文档通常单条内容较长，过多召回会导致上下文冗余，过少则无法覆盖完整尽调所需的参数维度 |
 | `PARSE_FILE_TIMEOUT_SECONDS` | `600秒` | 部分大型品牌质检PDF文档包含多页图表和签章校验，解析耗时较长，超时设置过短会导致解析失败 |

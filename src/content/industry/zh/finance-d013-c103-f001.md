@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测融资日报的HTTP 接口与外部系统
-meta_description: 环境监测融资日报的数据来源包括生态环境部门官方监测站点、企业排污口在线监测设备、第三方环保服务机构上报数据，以及对应区域当日环保项目的公开融资信息。数据更新
+meta_description: 环境监测融资日报的HTTP 接口与外部系统：环境监测融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 环境监测、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

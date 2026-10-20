@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c151-f004
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Railway and Highway Marketing
-meta_description: This scenario targets railway and highway marketing content for the finance and wealth management industry. Data originates from official public
+meta_title: Vector Models and Indexing for Railway and Highway
+meta_description: Vector Models and Indexing for Railway and Highway Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Computer Equipment
-meta_description: Data sources for computer equipment financing daily reports include internal loan ledgers of financial leasing institutions, publicly announced
+meta_description: Document Parsing and Chunking for Computer Equipment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

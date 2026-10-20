@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰融资日报的部署与升级
-meta_description: 装修装饰融资日报的数据来源于装修装饰企业的财务核算系统、合作银行的放款接口、供应链金融管理平台。数据更新节奏为每日生成前一工作日的完整条目，单份文档包含单项
+meta_description: 装修装饰融资日报的部署与升级：装修装饰融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 装修装饰、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

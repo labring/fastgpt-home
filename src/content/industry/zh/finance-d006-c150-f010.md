@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石投研知识库建设的数据库与运维
-meta_description: 铁矿石投研数据覆盖现货、期货、物流、供需四大维度，数据源包括大连商品交易所铁矿石主力合约、国内主要港口现货报价、全球矿山发货预报、钢厂采购台账及波罗的海干散
+meta_description: 铁矿石投研知识库建设的数据库与运维：铁矿石投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 铁矿石、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

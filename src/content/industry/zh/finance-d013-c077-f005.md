@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区融资日报的多轮对话与提示词
-meta_description: 数据来源包括文旅主管部门的景区经营备案数据、景区自营票务与结算系统、合作金融机构的融资审批台账；更新节奏为每日凌晨完成前一日数据的汇总与同步；单篇日报文档按
+meta_description: 旅游景区融资日报的多轮对话与提示词：旅游景区融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 旅游景区、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

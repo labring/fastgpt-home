@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备研报检索的向量模型与索引
-meta_description: 航空装备研报的数据来源包含券商军工行业研究报告、航空装备产业链上下游企业公开公告、行业协会发布的白皮书及官方披露的型号进展信息。更新节奏分为两类，定期更新为
+meta_description: 航空装备研报检索的向量模型与索引：航空装备研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 航空装备、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

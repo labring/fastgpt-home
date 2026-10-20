@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料投研知识库建设的部署与升级
-meta_description: 化学原料投研数据来源包括国内化工行业协会公开统计资料、上游生产企业披露的产能数据、海关总署的进出口贸易数据、现货交易平台的每日报价，以及专业数据库收录的安全
+meta_description: 化学原料投研知识库建设的部署与升级：化学原料投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 化学原料、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Publishing Yield Rates
-meta_description: The daily yield and market trend data for the publishing industry comes from public financial data APIs, regulatory disclosure platforms, and daily
+meta_description: Tool Calling and Plugins for Publishing Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

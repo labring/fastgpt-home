@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料财报分析的工作流编排
-meta_description: 化学原料类企业的财报数据主要来自证监会指定信息披露平台及企业官方公告渠道。更新节奏以季度、年度定期报告为主，伴随产能调整、原料价格异动的临时公告不定期发布。
+meta_description: 化学原料财报分析的工作流编排：化学原料财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 化学原料、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

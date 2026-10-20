@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工投研知识库建设的数据库与运维
-meta_description: 煤化工投研数据覆盖煤炭开采、洗选、焦化、下游烯烃加工等全产业链环节，来源包括企业内部生产报表、行业协会公开监测数据、大宗商品交易平台报价、环评报告与专利文献
+meta_description: 煤化工投研知识库建设的数据库与运维：煤化工投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 煤化工、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

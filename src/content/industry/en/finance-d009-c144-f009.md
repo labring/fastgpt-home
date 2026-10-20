@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c144-f009
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Cited Source and Traceability for Telecommunications Service
-meta_description: Telecommunications service research report data sources mainly include operator public financial reports, telecommunications industry association
+meta_title: Cited Source and Traceability for Telecommunications
+meta_description: Cited Source and Traceability for Telecommunications Service Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

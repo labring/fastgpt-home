@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖投研知识库建设的上下文与 token
-meta_description: 水产养殖投研相关数据主要来自养殖现场监测设备、投喂管理日志、苗种繁育记录、病害防控档案、行业市场行情报告与国家标准文档。监测设备数据多为分钟级更新的结构化时
+meta_description: 水产养殖投研知识库建设的上下文与 token：水产养殖投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 水产养殖、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

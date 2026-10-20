@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属研报检索的工作流编排
-meta_description: 贵金属研报的数据主要来自券商行业研报、期货交易所行情接口、现货市场报价平台。更新节奏分为两类：券商研报多在交易日开盘前或收盘后更新，现货与期货行情数据则随交
+meta_description: 贵金属研报检索的工作流编排：贵金属研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 贵金属、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

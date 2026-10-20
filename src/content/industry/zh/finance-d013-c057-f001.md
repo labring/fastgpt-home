@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电融资日报的HTTP 接口与外部系统
-meta_description: 小家电融资日报的数据来源于品牌方经销商融资管理系统、合作持牌金融机构交易接口及第三方供应链金融数据服务商接口，更新节奏为每日凌晨同步前一自然日的全量数据。单
+meta_description: 小家电融资日报的HTTP 接口与外部系统：小家电融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 小家电、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

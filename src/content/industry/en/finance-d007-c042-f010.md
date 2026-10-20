@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c042-f010
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Brand Agency Profitability and
-meta_description: Profitability and market trend data for brand agency services is primarily sourced from brand partners’ e-commerce transaction backends, marketing
+meta_title: Database and Operations for Brand Agency Profitability
+meta_description: Database and Operations for Brand Agency Profitability and Market Trend Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

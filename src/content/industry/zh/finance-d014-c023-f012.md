@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子财报分析的模型接入与配置
-meta_description: 军工电子领域的财报数据主要来源于上市公司公开披露的定期报告，以及行业主管部门下属平台发布的公开运行数据。数据更新遵循固定周期：季度报告于每季度末后披露，半年
+meta_description: 军工电子财报分析的模型接入与配置：军工电子财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 军工电子、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 征信报告风控的HTTP 接口与外部系统
-meta_description: 征信报告的数据主要来自央行征信中心、百行征信等官方合规机构，更新节奏为每月由数据报送机构批量报送后更新。文档结构通常包含个人基本信息、信贷交易汇总、逾期记录
+meta_description: 征信报告风控的HTTP 接口与外部系统：征信报告风控的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 征信报告、风控与授信材料审核、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

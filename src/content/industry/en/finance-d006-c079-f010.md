@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c079-f010
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Database and Operations for Carbon Steel Investment Research
-meta_description: Carbon steel data primarily comes from steel mill ex-factory price reports, commodity exchange spot price systems, industry association monthly
+meta_title: Database and Operations for Carbon Steel Investment
+meta_description: Database and Operations for Carbon Steel Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

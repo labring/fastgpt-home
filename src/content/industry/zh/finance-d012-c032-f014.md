@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的表单与交互
-meta_description: 该品类的数据主要来自生产企业的出厂质检单、行业公共数据库的供需台账、海关进出口报关数据，用于金融场景下的化学原料营销获客表单。更新节奏：大宗基础化学原料每周
+meta_description: 化学原料营销内容的表单与交互：化学原料营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 化学原料、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

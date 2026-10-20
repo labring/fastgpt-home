@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备研报检索的部署与升级
-meta_description: 数据来源包括金融行业通用的国防军工研报平台、航天系统内部公开技术文档、官方航天发射任务公告，供金融从业者分析航天装备赛道的投资逻辑。更新节奏随航天装备型号节
+meta_description: 航天装备研报检索的部署与升级：航天装备研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 航天装备、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

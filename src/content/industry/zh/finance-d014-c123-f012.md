@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属财报分析的模型接入与配置
-meta_description: 能源金属品类的财报数据主要来自境内外证券交易所披露的上市公司定期报告、行业协会公开统计文档。更新节奏为季度报告每3个月更新一次，年度报告每年更新一次，临时公
+meta_description: 能源金属财报分析的模型接入与配置：能源金属财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 能源金属、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

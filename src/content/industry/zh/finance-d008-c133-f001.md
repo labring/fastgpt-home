@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券智能尽调报告的HTTP 接口与外部系统
-meta_description: 证券智能尽调报告的数据来源主要包括上市公司公开披露的年度报告、半年度报告、交易所临时公告、工商登记信息、第三方征信数据及券商研报。更新节奏分为固定周期与实时
+meta_description: 证券智能尽调报告的HTTP 接口与外部系统：证券智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 证券、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

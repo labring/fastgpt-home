@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信服务营销内容的模型接入与配置
-meta_description: 通信服务的营销内容数据主要来源于运营商通信服务后台的营销素材库、客户交互留存的触达文案、第三方营销工具导出的触达记录。数据更新随营销活动上线实时生效，存量历
+meta_description: 通信服务营销内容的模型接入与配置：通信服务营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 通信服务、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

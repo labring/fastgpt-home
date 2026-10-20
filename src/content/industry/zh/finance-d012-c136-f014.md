@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的表单与交互
-meta_description: 贵金属营销相关数据主要来自官方交易所行情接口、行业资讯聚合平台及第三方行情服务商。数据更新节奏分实时行情与历史行情两类，实时行情按秒或分钟粒度推送，历史行情
+meta_description: 贵金属营销内容的表单与交互：贵金属营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 贵金属、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

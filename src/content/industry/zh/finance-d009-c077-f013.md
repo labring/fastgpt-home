@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区研报检索的知识库检索与召回
-meta_description: 旅游景区研报的数据主要来自文旅主管部门公开统计报表、景区运营管理系统的日常运营数据、行业协会季度调研成果、OTA平台游客反馈数据及景区官方公告。更新节奏覆盖
+meta_description: 旅游景区研报检索的知识库检索与召回：旅游景区研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 旅游景区、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

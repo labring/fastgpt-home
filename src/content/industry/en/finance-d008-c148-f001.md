@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Hotel and Catering
-meta_description: Data for hotel and catering intelligent due diligence reports originates from four primary sources. These include compliance certificates such as food
+meta_description: HTTP Interfaces and External Systems for Hotel and Catering Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

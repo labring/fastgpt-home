@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块投研知识库建设的上下文与 token
-meta_description: 光模块投研数据主要来源于行业协会量产参数公告、运营商集采中标公示、原厂公开的规格说明书、券商行业研报及供应链出货统计。数据更新节奏随场景变化：原厂规格书随量
+meta_description: 光模块投研知识库建设的上下文与 token：光模块投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 光模块、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

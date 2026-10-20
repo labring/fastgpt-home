@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的HTTP 接口与外部系统
-meta_description: 面向金融行业的光模块营销内容的数据主要来源于厂商官方发布的产品规格书、营销白皮书、行业测试报告及公开技术文档。核心数据包含传输速率、传输距离、接口类型、工作
+meta_description: 光模块营销内容的HTTP 接口与外部系统：光模块营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 光模块、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

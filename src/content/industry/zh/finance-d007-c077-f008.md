@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区收益率的工具调用与插件
-meta_description: 旅游景区收益率的日报数据来源包括景区内部票务、收银系统的结构化交易数据，以及属地文旅部门的景区运营监测平台汇总数据。数据更新节奏为每日T+1全量同步，每日0
+meta_description: 旅游景区收益率的工具调用与插件：旅游景区收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 旅游景区、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Wind Power Research
-meta_description: Wind power research reports are core research materials for the power equipment sub-sector within the financial and wealth management field. Data
+meta_description: Citation Source and Traceability for Wind Power Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -35,7 +35,7 @@ Additionally, wind power research reports have strong correlations between profe
 | Configuration Item | Recommended Value | Rationale |
 | --- | --- | --- |
 | `recall_top_k` | Top 8-12 results | Wind power research reports have dense, professional content. Too many recall results introduce irrelevant information, while too few fail to cover core data |
-| `citation_template` | `[{{index}}]` | Adapts to the industry’s standard academic and technical document citation format, reducing subsequent format adjustment costs |
+| `citation_template` | `[example value]` | Adapts to the industry’s standard academic and technical document citation format, reducing subsequent format adjustment costs |
 | `parse_chunk_size` | 800-1200 characters | Wind power research reports contain many correlated parameters. Too short segments split data logic, while too long segments reduce recall accuracy |
 | `filter_by_update_time` | Last 12 months | Wind industry policies and installed capacity data update quickly. Outdated data has low reference value. This setting filters invalid historical documents |
 | `enable_citation_anchor` | Enabled | Core data of wind power research reports is mostly concentrated in specific chapters. Anchor positioning improves traceability accuracy |

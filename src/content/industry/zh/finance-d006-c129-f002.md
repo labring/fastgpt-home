@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁投研知识库建设的上下文与 token
-meta_description: 融资租赁领域的投研数据来源包括租赁公司内部台账、第三方租赁物估值机构报告、公开监管公示文件、行业协会统计资料。数据更新节奏存在差异：内部台账随新签租赁合同实
+meta_description: 融资租赁投研知识库建设的上下文与 token：融资租赁投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 融资租赁、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

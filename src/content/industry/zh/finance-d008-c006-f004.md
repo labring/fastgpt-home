@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的向量模型与索引
-meta_description: 中药智能尽调报告的数据主要来源于国家药典标准文件、药企研发备案文档、中药材溯源流通数据、饮片质检报告四类。更新节奏分为定期与实时两类：药典标准随国家修订周期
+meta_description: 中药智能尽调报告的向量模型与索引：中药智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

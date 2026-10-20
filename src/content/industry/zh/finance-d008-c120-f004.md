@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全智能尽调报告的向量模型与索引
-meta_description: 网络安全智能尽调报告的数据来源包括资产扫描日志、漏洞扫描报告、威胁情报feeds、合规审计记录与攻击事件复盘材料。更新节奏依数据源类型差异，威胁情报为小时级
+meta_description: 网络安全智能尽调报告的向量模型与索引：网络安全智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 网络安全、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

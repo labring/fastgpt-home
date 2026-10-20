@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险智能尽调报告的文档解析与分块
-meta_description: 保险智能尽调报告的数据主要来源于承保档案、理赔卷宗、监管报备文件及第三方征信报告。更新节奏随承保案件、理赔流程推进或监管文件更新调整。文档结构固定，包含被保
+meta_description: 保险智能尽调报告的文档解析与分块：保险智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 保险、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

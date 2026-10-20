@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c056-2
 page_type: 行业作业环节页
 article_section: 银行运营与支付
 is_part_of: FastGPT 技术中心
-meta_title: 银行账户开户与客户尽职调查的穿透识别并验证受益所有人及控制关
+meta_title: 银行账户开户与客户尽职调查的穿透识别并验证受益所有人及控制关系：哪一部分能交给系统
 meta_description: 银行账户开户与客户尽职调查的穿透识别并验证受益所有人及控制关系：哪一部分能交给系统
 keywords: 银行账户开户与客户尽职调查、银行运营与支付、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

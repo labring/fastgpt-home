@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械收益率的表单与交互
-meta_description: 工程机械租赁收益率与行情相关数据主要来自全国工程机械租赁联盟公开报价库、厂商售后租赁台账、二手设备交易平台成交记录、工程招标平台台班计价标准。台班单价每日更
+meta_description: 工程机械收益率的表单与交互：工程机械收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 工程机械、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

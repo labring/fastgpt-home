@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理营销内容的工具调用与插件
-meta_description: 这个品类的数据来源于物业内部的业主管理系统、报修工单系统、社区服务平台三类核心系统。数据更新节奏分为三类：实时更新（业主信息变更、报修工单提交）、每日更新（
+meta_description: 物业管理营销内容的工具调用与插件：物业管理营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 物业管理、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

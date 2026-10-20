@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c130-f007
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Workflow Orchestration for In-App Natural Language Retrieval
-meta_description: Market data is sourced from exchange public market APIs and compliant third-party market data aggregation services. Update frequency varies by
+meta_title: Workflow Orchestration for In-App Natural Language
+meta_description: Workflow Orchestration for In-App Natural Language Retrieval of Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

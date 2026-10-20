@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备融资日报的模型接入与配置
-meta_description: 电网设备融资日报的数据主要来源于电网设备厂商的销售回款台账、公共资源交易平台的中标公示、合作金融机构的授信放款记录。数据按自然日更新，单份日报文档结构固定，
+meta_description: 电网设备融资日报的模型接入与配置：电网设备融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 电网设备、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

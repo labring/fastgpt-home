@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁矿石融资日报的向量模型与索引
-meta_description: 铁矿石融资日报的数据来源于国内大宗商品现货贸易监测数据、期货交易所公开交割数据、行业协会每日报送的融资交易台账。更新节奏为每个交易日16:30后完成当日数据
+meta_description: 铁矿石融资日报的向量模型与索引：铁矿石融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 铁矿石、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

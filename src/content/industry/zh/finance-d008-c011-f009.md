@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品智能尽调报告的引用来源与溯源
-meta_description: 休闲食品的数据源包含供应商资质文件、第三方批次质检报告、供应链溯源台账、电商平台销售数据及行业协会抽检公告。更新节奏随数据类型差异调整：第三方质检报告随生产
+meta_description: 休闲食品智能尽调报告的引用来源与溯源：休闲食品智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 休闲食品、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力融资日报的模型接入与配置
-meta_description: 热力融资日报的数据主要来自各地住建部门公开的公用事业项目备案信息、热力供应企业的官方公告及第三方行业资讯平台。数据更新节奏为每日更新，覆盖当日及近3个工作日
+meta_description: 热力融资日报的模型接入与配置：热力融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 热力、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

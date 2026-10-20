@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气智能尽调报告的HTTP 接口与外部系统
-meta_description: 金融机构开展燃气企业智能尽调时，所需的数据主要来源于燃气运营企业的SCADA监控系统、经营管理系统及市政燃气监管平台。数据更新节奏分为两类：实时采集的管网压
+meta_description: 燃气智能尽调报告的HTTP 接口与外部系统：燃气智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 燃气、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

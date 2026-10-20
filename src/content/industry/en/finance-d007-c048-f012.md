@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Urban Commercial Bank
-meta_description: The data for urban commercial bank yield daily reports comes from internal wealth management operation systems and regional interbank data sharing
+meta_description: Model Access and Configuration for Urban Commercial Bank Yield Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

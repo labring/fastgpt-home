@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品收益率的对话日志与审计
-meta_description: 乳制品收益率相关数据主要来自行业生鲜乳收购监测平台、乳制品出厂价统计数据库及商品期货交易所公开行情接口。数据更新节奏分三类：生鲜乳收购价按周更新，主流乳制品
+meta_description: 乳制品收益率的对话日志与审计：乳制品收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 乳制品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

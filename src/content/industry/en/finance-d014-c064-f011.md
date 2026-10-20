@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c064-f011
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Film and Theater Financial
-meta_description: The financial report data for film and theater chains is primarily exported from theater operation systems. Sources include monthly box office
+meta_title: Document Parsing and Chunking for Film and Theater
+meta_description: Document Parsing and Chunking for Film and Theater Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

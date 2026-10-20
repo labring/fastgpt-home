@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程智能尽调报告的模型接入与配置
-meta_description: 油服工程智能尽调报告的数据主要来自钻井作业原始日志、压裂施工记录、设备运维台账、行业合规资质文件及区域招投标公告。数据更新节奏随作业节点触发，单次作业文档在
+meta_description: 油服工程智能尽调报告的模型接入与配置：油服工程智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 油服工程、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

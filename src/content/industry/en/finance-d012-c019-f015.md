@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Duty-Free Marketing Content
-meta_description: Duty-free marketing-related data comes from three main sources: customs supervision and record databases, in-store duty-free product systems, and
+meta_description: Deployment and Upgrade of Duty-Free Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

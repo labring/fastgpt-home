@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Thermal Intelligent
-meta_description: The data sources for thermal intelligent due diligence reports are thermal operation management systems, smart meter backends, pipeline network
+meta_description: Citation Sources and Traceability for Thermal Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -24,7 +24,7 @@ The fine-grained single records and multi-field characteristics of thermal data 
 | --- | --- | --- |
 | `recall_count` | Top 8 entries | Thermal data entries are short, so 8 entries cover complete pipeline operating condition context |
 | `similarity_threshold` | 0.72–0.78 | Thermal data has many fields, and similarity judgment must balance device matching and time correlation. A threshold that is too low will introduce irrelevant records |
-| `citation_content_template` | `{{source_name}} | Device ID:{{device_id}} | Meter Reading Time:{{time}} | {{content}}` | Must display core identifiers of thermal data to quickly locate specific records during traceability |
+| `citation_content_template` | `example value | Device ID:example value | Meter Reading Time:example value | example value` | Must display core identifiers of thermal data to quickly locate specific records during traceability |
 | `incremental_update_mark_field` | Meter Reading Batch Number | Thermal data is updated in operation and maintenance batches. Using batch numbers as marks prevents duplicate import of historical data |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 300 seconds | Structured thermal data files are mostly in CSV or Excel format, with moderate parsing time. 300 seconds covers batch file processing |
 | `deduplication_rule` | By device ID + meter reading time | The unique identifier for thermal data is the combination of device and time. This rule completely prevents duplicate citations |

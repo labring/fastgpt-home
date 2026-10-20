@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰收益率的HTTP 接口与外部系统
-meta_description: 装修装饰收益率相关数据主要来源于装修项目竣工财务台账、区域建材批发市场每日报价系统、施工方成本归集平台。数据更新节奏为每日凌晨更新前一日的全量统计结果。文档
+meta_description: 装修装饰收益率的HTTP 接口与外部系统：装修装饰收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 装修装饰、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

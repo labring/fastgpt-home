@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电收益率的多轮对话与提示词
-meta_description: 黑色家电的行情与收益率数据主要来源于行业协会零售监测数据库、主流电商平台公开销售报表、品牌方出货报备数据。数据更新节奏为每日更新前一自然日的全渠道汇总数据，
+meta_description: 黑色家电收益率的多轮对话与提示词：黑色家电收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 黑色家电、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

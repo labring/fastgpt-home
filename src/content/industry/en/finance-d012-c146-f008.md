@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for General Equipment Marketing
-meta_description: General equipment data sources include factory nameplate parameters, operation and maintenance logs, industry general technical manuals, and bidding
+meta_description: Tool Calling and Plugins for General Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

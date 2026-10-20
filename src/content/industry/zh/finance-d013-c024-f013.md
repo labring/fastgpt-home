@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品融资日报的知识库检索与召回
-meta_description: 农化制品融资日报的数据来源为农化行业协会公开监测数据、上市农化企业定期披露公告、农业农村部农资市场动态报表。更新节奏为每日更新，覆盖当日完成的农化相关融资交
+meta_description: 农化制品融资日报的知识库检索与召回：农化制品融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 农化制品、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

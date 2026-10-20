@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Traditional Chinese
-meta_description: Data for the Traditional Chinese Medicine (TCM) financing daily report comes from domestic pharmaceutical and biotechnology enterprise financing
+meta_description: Citation Sources and Traceability for Traditional Chinese Medicine Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -13,7 +13,7 @@ date_modified: 2026-09-15
 
 # Citation Sources and Traceability for Traditional Chinese Medicine Financing Daily Reports
 
-This configuration is compatible with FastGPT V4.8.18 and later versions.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## What the data for this category looks like
 Data for the Traditional Chinese Medicine (TCM) financing daily report comes from domestic pharmaceutical and biotechnology enterprise financing disclosure announcements, official public notices from local financial regulatory bureaus, and third-party industry financing monitoring databases. Data is updated daily, covering TCM-related enterprise financing events completed and disclosed on the same day. Each daily report document primarily uses structured tables, with each record containing fields including full enterprise name, financing round, financing amount, investor list, financing completion time, affiliated TCM sub-sector, disclosing media name, and others. The financing amount is uniformly denominated in RMB ten thousand yuan.
@@ -35,7 +35,7 @@ Since data sources are scattered and mostly consist of fragmented publicly discl
 
 ## Three Common Configuration Errors
 - Phenomenon: The traceability results returned by the knowledge base search node only show fragmentary text, with no metadata such as document name and disclosure time. Cause: The `元数据提取` configuration is not enabled, and the dedicated fields of the financing daily report are not included in the traceability display scope.
-- Phenomenon: When calling a workflow via API, passing a knowledge base ID variable triggers a `400 Bad Request` error. Cause: The variable format is not configured as the standard `{{variable name}}`, or the variable does not carry a valid knowledge base identification parameter.
+- Phenomenon: When calling a workflow via API, passing a knowledge base ID variable triggers a `400 Bad Request` error. Cause: The variable format is not configured as the standard `example value`, or the variable does not carry a valid knowledge base identification parameter.
 - Phenomenon: Recalled traceability results include financing records from non-TCM categories. Cause: The similarity threshold is set too low, and no secondary filtering is performed for the TCM sub-sector field, causing unrelated records to be included in the results.
 
 ## How to Confirm the Configuration Is Complete

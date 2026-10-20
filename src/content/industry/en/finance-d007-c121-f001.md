@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c121-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Refractory Material
-meta_description: Refractory material yield rate data comes from industry alliance public monitoring databases and reported data from key manufacturers. Ex-factory unit
+meta_title: HTTP Interfaces and External Systems for Refractory
+meta_description: HTTP Interfaces and External Systems for Refractory Material Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

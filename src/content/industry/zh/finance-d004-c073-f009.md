@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 操作规程合规的引用来源与溯源
-meta_description: 操作规程的数据来源为企业内部合规管理部门发布的正式业务执行文档，更新节奏随监管政策调整、内部流程优化不定期触发。文档多采用层级化章节与条款编号结构，包含生效
+meta_description: 操作规程合规的引用来源与溯源：操作规程合规的引用来源与溯源，涵盖配置与验证建议。
 keywords: 操作规程、合规与内部制度问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的工具调用与插件
-meta_description: 保险融资日报的数据来源为保险机构当日融资操作台账、银保监会非银金融监管披露的报送数据、银行间市场保险同业融资成交记录。更新节奏为每日固定时段更新前一自然日的
+meta_description: 保险融资日报的工具调用与插件：保险融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 保险、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

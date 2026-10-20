@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材投研知识库建设的部署与升级
-meta_description: 消费建材的数据源涵盖厂商公开的产品检测报告、行业协会季度调研数据、招投标平台实时中标信息、终端零售动销报表。文档结构差异明显：产品检测报告多为结构化表格，含
+meta_description: 消费建材投研知识库建设的部署与升级：消费建材投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 消费建材、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

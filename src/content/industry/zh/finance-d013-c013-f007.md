@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的工作流编排
-meta_description: 保险融资日报的数据来源包括保险机构内部的融资台账系统、银保监报送的非银金融统计报表、合作第三方征信数据接口。数据更新节奏为T+1，即每日更新前一日的全量融资
+meta_description: 保险融资日报的工作流编排：保险融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 保险、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

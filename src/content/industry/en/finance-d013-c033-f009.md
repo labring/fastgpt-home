@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Chemical Fiber
-meta_description: Data for chemical fiber financing daily reports comes from three sources: domestic commodity financing filing and publicity platforms, industry
+meta_description: Citation Sources and Traceability for Chemical Fiber Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

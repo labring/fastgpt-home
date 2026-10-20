@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁研报检索的工作流编排
-meta_description: 融资租赁行业的研报数据主要来源于持牌融资租赁公司的内部项目台账、中国融资租赁三十人论坛等行业协会的季度调研数据、银保监会的租赁资产备案公示。数据更新节奏以月
+meta_description: 融资租赁研报检索的工作流编排：融资租赁研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 融资租赁、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

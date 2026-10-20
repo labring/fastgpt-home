@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤财报分析的模型接入与配置
-meta_description: 动力煤财报数据主要来自境内外动力煤上市公司定期报告、行业协会月度监测数据与主要港口现货交易台账。数据更新节奏分为月度、季度与年度三个层级，月度数据包含当周期
+meta_description: 动力煤财报分析的模型接入与配置：动力煤财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 动力煤、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

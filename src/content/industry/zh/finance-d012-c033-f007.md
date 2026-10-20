@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤营销内容的工作流编排
-meta_description: 化纤品类的数据主要来自上游聚合工厂的生产台账、中游贸易商的库存管理系统、下游纺织终端的采购订单系统，为金融机构的化纤行业客户营销提供核心依据。数据更新节奏分
+meta_description: 化纤营销内容的工作流编排：化纤营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 化纤、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

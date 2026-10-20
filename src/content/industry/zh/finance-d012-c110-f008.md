@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备营销内容的工具调用与插件
-meta_description: 电网设备相关数据主要来源于企业内部设备台账系统、运维巡检日志、招投标公告库与产品选型手册。数据更新节奏存在差异：运维数据随巡检周期实时更新，新设备型号上线时
+meta_description: 电网设备营销内容的工具调用与插件：电网设备营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 电网设备、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险营销内容的工具调用与插件
-meta_description: 保险营销相关数据主要来源于保险公司内部产品管理系统、监管备案的保险条款库、存量营销素材库与合规审核档案。数据更新节奏随险种上线、监管政策调整或营销活动周期变
+meta_description: 保险营销内容的工具调用与插件：保险营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 保险、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

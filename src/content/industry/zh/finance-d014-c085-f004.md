@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥财报分析的向量模型与索引
-meta_description: 水泥品类的财报数据主要来自上市水泥企业公开披露的定期报告、行业协会发布的月度运行数据及临时经营公告。数据更新节奏为季度、年度定期更新，临时公告随经营节点发布
+meta_description: 水泥财报分析的向量模型与索引：水泥财报分析的向量模型与索引，涵盖配置与验证建议。
 keywords: 水泥、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

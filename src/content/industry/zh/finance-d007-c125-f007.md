@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航天装备收益率的工作流编排
-meta_description: 航天装备的收益率相关数据主要来源于三类系统：在轨卫星的遥测下行系统、地面测试装备的任务调度系统、航天项目的财务核算系统。在轨装备的实时数据每15分钟生成一次
+meta_description: 航天装备收益率的工作流编排：航天装备收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 航天装备、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

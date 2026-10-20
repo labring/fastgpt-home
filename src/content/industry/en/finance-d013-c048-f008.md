@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c048-f008
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Urban Commercial Bank Financing
-meta_description: Data for urban commercial bank financing daily reports comes from three sources: interbank business data submitted by local PBoC branches under their
+meta_title: Tool Calling and Plugins for Urban Commercial Bank
+meta_description: Tool Calling and Plugins for Urban Commercial Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

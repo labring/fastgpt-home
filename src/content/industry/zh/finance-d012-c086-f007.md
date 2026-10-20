@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务营销内容的工作流编排
-meta_description: 汽车服务的营销内容与获客相关数据主要来自门店售后工单系统、车主管理平台、车型数据库、营销素材库，以及金融端的车险保单、汽车分期申请系统。其中结构化数据包括工
+meta_description: 汽车服务营销内容的工作流编排：汽车服务营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 汽车服务、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

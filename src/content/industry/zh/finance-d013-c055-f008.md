@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的工具调用与插件
-meta_description: 大气治理融资日报的数据主要来自生态环境主管部门项目公示、地方公共资源交易平台、银行绿色信贷披露公告及行业协会项目台账。数据每日更新，单份日报文档包含单条或多
+meta_description: 大气治理融资日报的工具调用与插件：大气治理融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 大气治理、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

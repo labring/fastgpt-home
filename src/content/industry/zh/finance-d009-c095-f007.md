@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力研报检索的工作流编排
-meta_description: 热力研报的数据来源包括国内热力行业协会发布的行业运行简报、各省市热力集团公开的运营年报、能源监管部门的专项统计资料，以及专业能源咨询机构的专题调研文档。更新
+meta_description: 热力研报检索的工作流编排：热力研报检索的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 热力、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

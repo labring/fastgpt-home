@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Solid Waste Treatment Yield
-meta_description: Solid waste treatment yield and market data primarily comes from internal enterprise production management systems, regional environmental sanitation
+meta_description: Tool Calling and Plugins for Solid Waste Treatment Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Decentralized data sources require multi-source API access configuration and cro
 
 ## Three Common Misconfigurations
 - Phenomenon: A 500 status code is returned when calling the solid waste treatment data import plugin, and the interface prompts file parsing failure. Cause: The `field_whitelist` configuration is not set to filter non-essential fields, causing the plugin to attempt to parse solid waste treatment data entries with a large number of redundant fields, exceeding memory limits.
-- Phenomenon: In FastGPT 4.8.10, when configuring a local BGE model as the recall model, the error `{"object":"error","message":"Only allowed now` is returned. Cause: The call permission for local models is not enabled in FastGPT's model configuration, or the deployed BGE model version is incompatible with the current FastGPT version.
+Reference only; verify against the target FastGPT release and deployment documentation.
 - Phenomenon: Mixed units appear in the solid waste treatment data pulled by tool calling, such as disposal volume values using both tons and kilograms. Cause: The `data_unit_check` configuration is not enabled, and unit consistency across data sources is not verified, leading to unit errors in aggregated data.
 
 ## How to Verify Successful Configuration

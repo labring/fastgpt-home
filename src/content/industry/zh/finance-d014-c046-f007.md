@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理财报分析的工作流编排
-meta_description: 固废处理相关财报数据来源包括固废处理企业的公开年度/中期财报、环保主管部门的在线监管报送系统、项目现场的PLC运营日志。更新节奏分为三类：公开财报按会计年度
+meta_description: 固废处理财报分析的工作流编排：固废处理财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 固废处理、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

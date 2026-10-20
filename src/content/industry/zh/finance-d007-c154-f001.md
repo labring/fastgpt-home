@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饰品收益率的HTTP 接口与外部系统
-meta_description: 饰品（纺织服饰类配饰）的行情与收益率数据，来源为国内线下纺织服饰辅料批发市场的每日报价台账与线上公开行情聚合平台。更新节奏为每日17:00至18:00完成当
+meta_description: 饰品收益率的HTTP 接口与外部系统：饰品收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饰品、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

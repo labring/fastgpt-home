@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全营销内容的部署与升级
-meta_description: 网络安全营销内容的数据主要来自公开漏洞情报库、行业合规标准文档、攻防演练复盘报告及客户侧安全事件台账。数据更新节奏差异较大：漏洞情报类数据按日或实时推送，合
+meta_description: 网络安全营销内容的部署与升级：网络安全营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 网络安全、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

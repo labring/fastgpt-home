@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Commercial Vehicle
-meta_description: Commercial vehicle investment research data sources include Ministry of Industry and Information Technology vehicle announcements, publicly available
+meta_description: Model Integration and Configuration for Commercial Vehicle Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

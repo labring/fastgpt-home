@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属收益率的工具调用与插件
-meta_description: 贵金属行情数据主要来自上海黄金交易所、伦敦金银市场协会等官方交易平台。实时行情每10秒推送一次，交易日内的分时数据随交易节奏更新；日报数据于每个交易日17:
+meta_description: 贵金属收益率的工具调用与插件：贵金属收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 贵金属、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

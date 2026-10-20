@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏收益率的工具调用与插件
-meta_description: 光伏收益率相关数据主要来源于省级电力交易中心公开结算数据、光伏电站运维系统的本地采集数据。数据更新节奏为每日凌晨完成前一日全量数据更新，单条数据采用结构化J
+meta_description: 光伏收益率的工具调用与插件：光伏收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 光伏、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

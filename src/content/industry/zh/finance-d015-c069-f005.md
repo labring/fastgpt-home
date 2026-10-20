@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的多轮对话与提示词
-meta_description: 担保材料的数据源主要包括线下纸质扫描件、线上提交的PDF或图片格式文件，以及合作担保机构、银行系统导出的结构化文档。更新节奏按单次风控申请批次触发，单批次材
+meta_description: 担保材料风控的多轮对话与提示词：担保材料风控的多轮对话与提示词，涵盖配置与验证建议
 keywords: 担保材料、风控与授信材料审核、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

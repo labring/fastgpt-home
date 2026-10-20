@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品融资日报的文档解析与分块
-meta_description: 化妆品融资日报的数据来源包括品牌官方融资公告、行业第三方美妆数据库、证券机构美妆赛道研报及财经媒体报道。更新节奏为每日更新，覆盖当日及近7个工作日内的美妆品
+meta_description: 化妆品融资日报的文档解析与分块：化妆品融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 化妆品、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

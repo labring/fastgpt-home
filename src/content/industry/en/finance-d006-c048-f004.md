@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c048-f004
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Investment Research Knowledge
-meta_description: Investment research data for urban commercial banks primarily comes from regional industrial policy documents, in-house credit ledgers, local economic
+meta_title: Vector Models and Indexing for Investment Research
+meta_description: Vector Models and Indexing for Investment Research Knowledge Base Construction for Urban Commercial Banks
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

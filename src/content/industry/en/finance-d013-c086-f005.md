@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Auto Service
-meta_description: Data sources for auto service financing daily reports include auto dealer financing reporting systems, partner bank loan ledgers, and statistical
+meta_description: Multi-turn Dialogue and Prompt Engineering for Auto Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ The structured single-store single-day data format requires multi-turn dialogue 
 > The parameter values provided on this page are all conventional recommendations used as a starting point for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing.
 
 ## Three Common Misconfigurations
-- Phenomenon: The reference date is specified as `{{platform time variable}}` in the conversation, but the generated content does not correctly replace it with the current date. Cause: The system prompt does not clearly require the use of the platform's built-in time variable, or the variable is not correctly mounted to the model dialogue component.
+- Phenomenon: The reference date is specified as `example value` in the conversation, but the generated content does not correctly replace it with the current date. Cause: The system prompt does not clearly require the use of the platform's built-in time variable, or the variable is not correctly mounted to the model dialogue component.
 - Phenomenon: The automatic reply content is empty after reopening the historical conversation. Cause: The persistent storage configuration of conversation history is not enabled, or the storage dimension does not cover complete context parameters.
 - Phenomenon: The full dialogue workflow runs slowly, and the single-round debug response speed is normal. Cause: The number of recalled daily report data entries is not limited, and too much structured data is loaded into the context, resulting in increased model reasoning time.
 

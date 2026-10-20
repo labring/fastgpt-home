@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的模型接入与配置
-meta_description: 主要来自企业内部合规话术库、市场部零散营销素材包、第三方合规审核后的内容片段。更新无固定周期，随合规要求更新、新营销活动上线触发更新。文档多采用半结构化格式
+meta_description: 其他综合营销内容的模型接入与配置：其他综合营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 其他综合、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 名单筛查KYC 的模型接入与配置
-meta_description: 名单筛查的数据来源于各国金融监管机构、国际合规组织发布的公开合规名单，更新节奏随监管发布周期调整，部分突发制裁、风险主体名单会实时推送。文档多为结构化CSV
+meta_description: 名单筛查KYC 的模型接入与配置：名单筛查KYC 的模型接入与配置，涵盖配置与验证建议
 keywords: 名单筛查、KYC 与反洗钱资料核验、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

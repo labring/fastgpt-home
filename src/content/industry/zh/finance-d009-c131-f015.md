@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰研报检索的部署与升级
-meta_description: 装修装饰研报的数据来源主要包括行业协会公开资料、建材厂商产品文档、地方住建部门的装修规范文件、装修施工企业的竣工项目报告。数据更新节奏随内容类型区分：行业政
+meta_description: 装修装饰研报检索的部署与升级：装修装饰研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 装修装饰、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

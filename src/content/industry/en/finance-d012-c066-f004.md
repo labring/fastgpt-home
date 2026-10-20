@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Residential Construction
-meta_description: Residential construction marketing content supports finance, insurance, and wealth management scenarios. Sources include marketing materials provided
+meta_description: Vector Models and Indexing for Residential Construction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

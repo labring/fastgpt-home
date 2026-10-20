@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的工作流编排
-meta_description: 卫星通信研报的数据源主要包括卫星运营商公开运营报告、航天科研院所发布的在轨卫星状态监测文档、行业协会发布的季度通信链路性能分析报告。更新节奏随在轨卫星状态调
+meta_description: 卫星通信研报检索的工作流编排：卫星通信研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 卫星通信、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

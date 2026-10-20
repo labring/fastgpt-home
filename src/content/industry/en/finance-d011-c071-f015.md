@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c071-f015
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for In-App Natural Language Retrieval
-meta_description: Indicator caliber data primarily comes from internal business statistics systems of financial institutions, regulatory reporting specification
+meta_title: Deployment and Upgrade for In-App Natural Language
+meta_description: Deployment and Upgrade for In-App Natural Language Retrieval of Indicator Calibers
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

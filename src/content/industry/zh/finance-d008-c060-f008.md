@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询智能尽调报告的工具调用与插件
-meta_description: 工程咨询智能尽调报告的数据来源包括项目立项审批文件、勘察测绘报告、造价概算台账、施工合同、政府规划公示等，更新节奏随项目节点推进，初步设计、施工招标、竣工阶
+meta_description: 工程咨询智能尽调报告的工具调用与插件：工程咨询智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 工程咨询、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

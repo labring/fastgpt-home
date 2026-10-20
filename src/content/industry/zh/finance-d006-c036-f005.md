@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体投研知识库建设的多轮对话与提示词
-meta_description: 半导体投研所需的数据来源包括公开行业研报、晶圆代工厂公开财报、半导体专利数据库、器件测试报告、EDA设计输出文档。更新节奏存在差异：行业研报按周或月度更新，
+meta_description: 半导体投研知识库建设的多轮对话与提示词：半导体投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: 半导体、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

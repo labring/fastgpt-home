@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属收益率的工具调用与插件
-meta_description: 能源金属的数据来源包括国内国际大宗商品交易所官方行情接口、行业权威监测机构的实时报送。更新节奏覆盖日间交易时段的高频推送与盘后结算数据更新。文档结构以标准化
+meta_description: 能源金属收益率的工具调用与插件：能源金属收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 能源金属、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

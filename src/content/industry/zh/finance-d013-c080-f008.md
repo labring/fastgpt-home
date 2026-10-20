@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺融资日报的工具调用与插件
-meta_description: 服装家纺领域的融资日报数据来源为公开企业融资公告、地方金融服务平台的企业融资备案数据，更新节奏为每日凌晨完成全量数据同步。文档格式为结构化CSV，字段包含企
+meta_description: 服装家纺融资日报的工具调用与插件：服装家纺融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 服装家纺、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

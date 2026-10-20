@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 旅游景区智能尽调报告的工具调用与插件
-meta_description: 旅游景区智能尽调报告的数据主要来自景区官方公示平台、属地文旅部门备案系统、实时票务与客流运维系统、第三方文旅数据接口。数据更新节奏差异明显：基础资质信息按季
+meta_description: 旅游景区智能尽调报告的工具调用与插件：旅游景区智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 旅游景区、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

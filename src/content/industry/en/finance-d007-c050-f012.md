@@ -4,15 +4,15 @@ slug: /en/industry/finance-d007-c050-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Access and Configuration for Plastics and Rubber Yield
-meta_description: Data on plastics and rubber market conditions and yield rates comes from public APIs of domestic futures exchanges, data from bulk commodity spot
+meta_title: Model Access and Configuration for Plastics and Rubber
+meta_description: Model Access and Configuration for Plastics and Rubber Yield Rates This document is written based on the configuration logic of FastGPT 4.9.7.
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
 ---
 
 # Model Access and Configuration for Plastics and Rubber Yield Rates
-This document is written based on the configuration logic of FastGPT 4.9.7.
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 ## What the data for this category looks like
 Data on plastics and rubber market conditions and yield rates comes from public APIs of domestic futures exchanges, data from bulk commodity spot trading platforms, and statistical information from industry associations. Data is updated on a daily basis, with a complete daily market snapshot generated after market close. Document formats are mostly structured tables or JSON, containing fields such as contract code, contract name, settlement price, spot quote, daily trading volume, and position volume. Price-related fields use yuan/ton as the unit, while trading volume and position volume use lots as the unit. Some industry guidance price data has a delay of 1 to 2 business days.

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力财报分析的工作流编排
-meta_description: 热力品类的财报数据主要来源于企业ERP财务模块、能源计量系统的采集数据及公开监管报表。更新节奏匹配财季、财年的财报披露周期，同时支持运营级数据的周度更新。文
+meta_description: 热力财报分析的工作流编排：热力财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 热力、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

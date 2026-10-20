@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块智能尽调报告的向量模型与索引
-meta_description: 金融尽调场景下的光模块智能尽调报告的数据主要来自通信设备厂商的官方规格文档、行业标准化组织的技术规范、第三方检测机构的性能测试报告以及供应链上下游的物料台账
+meta_description: 光模块智能尽调报告的向量模型与索引：光模块智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 光模块、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

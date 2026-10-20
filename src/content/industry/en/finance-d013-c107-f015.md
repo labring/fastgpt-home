@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Power Financing Daily Reports
-meta_description: Data sources include power industry financing reporting systems, corporate business ledgers of cooperating financial institutions, and project
+meta_description: Deployment and Upgrade of Power Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

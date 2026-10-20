@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询营销内容的HTTP 接口与外部系统
-meta_description: 工程咨询的营销内容数据主要来源于项目可研报告、招投标方案、客户需求函、行业标准文档等。数据更新节奏随项目阶段变化，招投标筹备阶段更新频率较高，项目落地后仅做
+meta_description: 工程咨询营销内容的HTTP 接口与外部系统：工程咨询营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工程咨询、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

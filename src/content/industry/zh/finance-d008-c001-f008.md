@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务智能尽调报告的工具调用与插件
-meta_description: IT服务智能尽调报告的数据主要来自政府采购公开平台、行业协会资质公示、企业自主披露的服务案例与合规文件。更新节奏依内容类型区分：资质认证类每1至3年更新一次
+meta_description: IT 服务智能尽调报告的工具调用与插件：IT 服务智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: IT 服务、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业融资日报的HTTP 接口与外部系统
-meta_description: 种植业融资日报的数据来源覆盖农业农村主管部门的公开监测数据与涉农金融机构的放款业务记录，更新节奏为自然日更新，每日凌晨完成前一日全量数据汇总。文档以结构化J
+meta_description: 种植业融资日报的HTTP 接口与外部系统：种植业融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 种植业、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

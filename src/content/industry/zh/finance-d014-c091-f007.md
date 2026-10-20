@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材财报分析的工作流编排
-meta_description: 消费建材财报数据主要来自上海证券交易所、深圳证券交易所的官方披露平台，以及上市公司官方公告。披露节奏为季度报告每季度结束后1个月内公开，年度报告于每年4月底
+meta_description: 消费建材财报分析的工作流编排：消费建材财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 消费建材、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

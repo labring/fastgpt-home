@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for In-Application Natural
-meta_description: Market data primarily comes from official public exchange APIs, structured export files from compliant market data aggregation services, and daily
+meta_description: Document Parsing and Chunking for In-Application Natural Language Retrieval of Market Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

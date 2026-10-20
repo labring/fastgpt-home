@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工营销内容的工具调用与插件
-meta_description: 面向金融行业的煤化工营销相关的数据，主要来源于企业内部营销物料库、中国煤炭工业协会发布的行业供需报告、上游煤炭产地的官方价格公示平台，以及金融机构的煤化工客
+meta_description: 煤化工营销内容的工具调用与插件：煤化工营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 煤化工、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

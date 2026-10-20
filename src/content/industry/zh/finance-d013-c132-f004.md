@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备融资日报的向量模型与索引
-meta_description: 计算机设备融资日报的数据来源包括企业内部采购管理系统、财务核算系统、设备厂商官方报价库及行业招投标公示平台。数据更新节奏为每日一次，每条记录对应单批次或单台
+meta_description: 计算机设备融资日报的向量模型与索引：计算机设备融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 计算机设备、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

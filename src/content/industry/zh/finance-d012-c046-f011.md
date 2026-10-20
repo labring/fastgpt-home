@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理营销内容的文档解析与分块
-meta_description: 固废处理营销内容的数据主要来源于金融机构的绿色项目推介手册、固废处置项目招投标文件、运营操作手册、环评审批报告及属地环保政策通知。数据更新节奏随场景变化：政
+meta_description: 固废处理营销内容的文档解析与分块：固废处理营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 固废处理、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

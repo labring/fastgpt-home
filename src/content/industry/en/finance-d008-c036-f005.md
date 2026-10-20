@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c036-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Conversation and Prompt Engineering for
-meta_description: Data sources for semiconductor intelligent due diligence reports cover publicly disclosed information from design companies, wafer foundries, and
+meta_title: Multi-turn Conversation and Prompt Engineering
+meta_description: Multi-turn Conversation and Prompt Engineering for Semiconductor Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

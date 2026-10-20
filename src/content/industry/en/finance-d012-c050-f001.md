@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c050-f001
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Plastics and Rubber
-meta_description: Data for plastics and rubber marketing content comes from public quotation systems of upstream basic chemical raw material suppliers, production
+meta_title: HTTP Interfaces and External Systems for Plastics
+meta_description: HTTP Interfaces and External Systems for Plastics and Rubber Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

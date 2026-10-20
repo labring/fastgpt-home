@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮研报检索的知识库检索与召回
-meta_description: 酒店餐饮研报的数据来源包括餐饮行业协会公开报告、连锁餐饮企业披露的运营公告、第三方餐饮消费调研数据集、门店POS系统脱敏汇总数据。常规行业研报按季度更新，门
+meta_description: 酒店餐饮研报检索的知识库检索与召回：酒店餐饮研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 酒店餐饮、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

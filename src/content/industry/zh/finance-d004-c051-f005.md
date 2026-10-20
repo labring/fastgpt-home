@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 处罚案例合规的多轮对话与提示词
-meta_description: 处罚案例数据主要来源于企业内部合规管理系统、监管机构公开通报文档及合规档案。更新节奏随处罚事件发生节点调整，内部处罚案例随归档流程同步更新，监管类案例随通报
+meta_description: 处罚案例合规的多轮对话与提示词：处罚案例合规的多轮对话与提示词，涵盖配置与验证建议
 keywords: 处罚案例、合规与内部制度问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c076-f013
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Cultural and
-meta_description: Public corporate financing announcements and daily disclosure summaries from industry news platforms serve as data sources for cultural and
+meta_title: Knowledge Base Retrieval and Recall for Cultural
+meta_description: Knowledge Base Retrieval and Recall for Cultural and Entertainment Products Financing Daily Report
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

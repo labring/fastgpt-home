@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏融资日报的模型接入与配置
-meta_description: 游戏融资日报的数据来源于游戏行业垂直产业数据库、公开融资披露公告及券商行业研报。更新节奏为每个工作日同步最新披露的融资动态。单篇日报文档以结构化条目组织，每
+meta_description: 游戏融资日报的模型接入与配置：游戏融资日报的模型接入与配置，涵盖配置与验证建议。
 keywords: 游戏、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

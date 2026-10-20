@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备收益率的模型接入与配置
-meta_description: 电网设备收益率相关数据主要来自区域电力交易中心的公开结算数据、电网企业内部运维台账、电力设备厂商的运行监测数据。数据按日度更新，匹配日报播报的细分需求。单条
+meta_description: 电网设备收益率的模型接入与配置：电网设备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 电网设备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

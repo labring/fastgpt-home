@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子财报分析的向量模型与索引
-meta_description: 消费电子财报数据主要来自全球主流证券交易所公开披露的PDF格式财报文档，以及对应企业投资者关系板块的官方披露文件。更新节奏以季度财报为核心周期，每季度结束后
+meta_description: 消费电子财报分析的向量模型与索引：消费电子财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 消费电子、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

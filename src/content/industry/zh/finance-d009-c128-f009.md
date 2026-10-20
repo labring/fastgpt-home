@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口研报检索的引用来源与溯源
-meta_description: 金融领域的航运港口研报数据来源主要包括行业协会、官方港口作业平台、券商交通运输行业研究团队。更新节奏覆盖每日港口作业数据、每周集装箱运价指数、月度运行报告及
+meta_description: 航运港口研报检索的引用来源与溯源：航运港口研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 航运港口、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

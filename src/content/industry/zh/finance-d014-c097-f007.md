@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤财报分析的工作流编排
-meta_description: 焦煤财报数据主要来自国内煤炭行业协会公开报告、交易所上市焦煤企业季度年报及临时公告。数据更新节奏分为季度与月度两类：季度财报数据于季后15个工作日内发布，月
+meta_description: 焦煤财报分析的工作流编排：焦煤财报分析的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 焦煤、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

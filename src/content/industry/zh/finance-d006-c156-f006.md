@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电投研知识库建设的对话日志与审计
-meta_description: 黑色家电投研的数据来源涵盖行业协会公开月度/季度运行简报、品牌方年度/半年度财报、主流电商平台的SKU销售台账、上游供应链厂商的出货明细，以及家电技术专利数
+meta_description: 黑色家电投研知识库建设的对话日志与审计：黑色家电投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 黑色家电、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

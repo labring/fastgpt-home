@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Kitchen and Bathroom Appliance
-meta_description: Kitchen and bathroom appliance research report data primarily comes from public reports released by the China Household Electrical Appliances
+meta_description: Tool Calling and Plugins for Kitchen and Bathroom Appliance Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

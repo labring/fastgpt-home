@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属智能尽调报告的部署与升级
-meta_description: 小金属尽调报告的数据来源包括中国有色金属工业协会小金属分支专业委员会、国内现货交易平台公开报价、海关总署进出口通关数据、头部矿山与冶炼企业月度经营公告。更新
+meta_description: 小金属智能尽调报告的部署与升级：小金属智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 小金属、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

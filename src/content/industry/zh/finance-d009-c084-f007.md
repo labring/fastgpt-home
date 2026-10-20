@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理研报检索的工作流编排
-meta_description: 水处理研报的数据主要来自金融机构的环保行业研报数据库、券商研究所发布的专项报告、环境监测机构的公开监测数据。更新节奏分为两类：常规环保行业研报为季度更新，大
+meta_description: 水处理研报检索的工作流编排：水处理研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 水处理、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

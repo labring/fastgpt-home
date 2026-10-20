@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务营销内容的向量模型与索引
-meta_description: 水务营销内容的数据来源为水务运营方的官方公众号推文、线下营销活动物料文案、区域供水服务公告、节水科普内容素材；更新节奏随营销活动、服务调整触发，无固定周期，
+meta_description: 水务营销内容的向量模型与索引：水务营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 水务、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

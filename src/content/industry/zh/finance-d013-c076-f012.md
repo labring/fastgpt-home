@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品融资日报的模型接入与配置
-meta_description: 文娱用品融资日报的数据来源涵盖公开工商融资公示、地方股权交易平台披露信息、行业合规媒体的公开汇总。更新节奏匹配工作日公开披露周期，非节假日顺延更新。单条记录
+meta_description: 文娱用品融资日报的模型接入与配置：文娱用品融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 文娱用品、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

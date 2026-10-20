@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Conversations and Prompt Engineering for Heating
-meta_description: Data for this category comes from production scheduling systems of heating operation enterprises, energy consumption metering terminals, and local
+meta_description: Multi-turn Conversations and Prompt Engineering for Heating Industry Yield and Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

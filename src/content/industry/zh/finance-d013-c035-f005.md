@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美融资日报的多轮对话与提示词
-meta_description: 医美融资日报的数据来源于医美机构公开融资公告、地方金融监管公示信息及第三方医美产业数据平台。更新节奏为每日更新当日汇总的前一个自然日的医美领域融资事件。单条
+meta_description: 医美融资日报的多轮对话与提示词：医美融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 医美、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

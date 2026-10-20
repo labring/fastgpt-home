@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Consumer Construction Materials
-meta_description: Data related to consumer construction materials yield comes primarily from daily monitoring data from the national building materials circulation
+meta_description: Deployment and Upgrade for Consumer Construction Materials Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

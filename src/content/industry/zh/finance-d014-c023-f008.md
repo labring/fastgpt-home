@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子财报分析的工具调用与插件
-meta_description: 军工电子上市公司的财报数据主要来自上海证券交易所、深圳证券交易所的公开披露平台，以及行业协会发布的定期行业报告。财报更新节奏固定：年度报告需在次年4月底前披
+meta_description: 军工电子财报分析的工具调用与插件：军工电子财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 军工电子、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

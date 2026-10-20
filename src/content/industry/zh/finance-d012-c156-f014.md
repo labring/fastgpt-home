@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 黑色家电营销内容的表单与交互
-meta_description: 黑色家电的数据主要来自品牌官方产品手册、线下门店SKU台账、电商平台详情页及金融机构的营销素材台账。更新节奏随新品发布批量同步，日常仅调整促销信息、库存状态
+meta_description: 黑色家电营销内容的表单与交互：黑色家电营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 黑色家电、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

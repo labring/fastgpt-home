@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品收益率的多轮对话与提示词
-meta_description: 化妆品收益率与行情数据的来源包括品牌官方公开的每日销售简报、电商平台的实时销售监测数据、美妆行业第三方监测机构的公开数据集。更新节奏为每日更新，覆盖前一自然
+meta_description: 化妆品收益率的多轮对话与提示词：化妆品收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化妆品、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

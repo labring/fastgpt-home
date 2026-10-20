@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程融资日报的向量模型与索引
-meta_description: 油服工程融资日报的数据来源包括行业协会公开披露信息、第三方融资跟踪平台、上市公司定期公告。数据更新节奏为每日更新，覆盖当日发布的各类油服企业融资相关动态。单
+meta_description: 油服工程融资日报的向量模型与索引：油服工程融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 油服工程、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

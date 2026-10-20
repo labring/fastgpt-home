@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备财报分析的HTTP 接口与外部系统
-meta_description: 自动化设备财报分析的数据主要来源于两类渠道：一是自动化设备制造企业公开披露的年度、半年度及季度财报，涵盖板块营收、产能利用率、订单交付周期等核心指标；二是行
+meta_description: 自动化设备财报分析的HTTP 接口与外部系统：自动化设备财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 自动化设备、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

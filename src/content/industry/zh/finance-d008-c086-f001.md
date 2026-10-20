@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务智能尽调报告的HTTP 接口与外部系统
-meta_description: 汽车服务智能尽调报告的数据主要来源于车辆管理部门登记系统、合作维修厂工单系统、合作保险机构理赔系统及二手车交易数据源。数据更新节奏存在差异：车辆基础登记信息
+meta_description: 汽车服务智能尽调报告的HTTP 接口与外部系统：汽车服务智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 汽车服务、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

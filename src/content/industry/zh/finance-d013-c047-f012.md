@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行融资日报的模型接入与配置
-meta_description: 国有大行融资日报的数据来源于本行对公信贷管理系统、同业业务交易系统、资金运营中台等核心业务模块。每日固定时点完成当日业务数据归集后，生成前一自然日的融资日报
+meta_description: 国有大行融资日报的模型接入与配置：国有大行融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 国有大行、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

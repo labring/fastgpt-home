@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销财报分析的工作流编排
-meta_description: 广告营销行业的财报数据主要来自品牌方的营销费用核算台账、第三方媒介监测平台的投放明细、广告代理公司的月度结算报表。更新节奏多为月度或季度周期，单份文档结构包
+meta_description: 广告营销财报分析的工作流编排：广告营销财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 广告营销、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

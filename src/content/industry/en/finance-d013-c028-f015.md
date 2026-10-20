@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Thermal Coal Financing Daily
-meta_description: Data for thermal coal financing daily reports comes from public spot data of domestic coal trading centers, financing ledger synchronization from
+meta_description: Deployment and Upgrade for Thermal Coal Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

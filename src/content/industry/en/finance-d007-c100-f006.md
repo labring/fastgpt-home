@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c100-f006
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Conversation Logs and Auditing for Property Management Yield
-meta_description: Data related to property management yield rates comes from property project billing management systems, energy consumption ledgers, public area
+meta_title: Conversation Logs and Auditing for Property Management
+meta_description: Conversation Logs and Auditing for Property Management Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

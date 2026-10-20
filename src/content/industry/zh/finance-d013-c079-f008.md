@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢融资日报的工具调用与插件
-meta_description: 普钢融资日报的数据来源于国内钢铁流通领域的现货交易备案系统、供应链金融服务商的贸易融资台账，以及各地钢材市场的每日融资申报记录。数据更新节奏为T+1，即当日
+meta_description: 普钢融资日报的工具调用与插件：普钢融资日报的工具调用与插件，涵盖配置与验证建议。
 keywords: 普钢、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

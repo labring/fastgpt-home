@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Financial Leasing
-meta_description: Data for financial leasing daily financing reports mainly comes from daily loan issuance, rent recovery, and early warning ledgers in the internal
+meta_description: Citation Sources and Traceability for Financial Leasing Daily Financing Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

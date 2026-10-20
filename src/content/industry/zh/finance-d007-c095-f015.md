@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力收益率的部署与升级
-meta_description: 热力品类的收益率与行情日报数据，来源为热力运营端的实时采集系统与企业财务结算模块，更新频率为每日一次，于每日凌晨完成前一日数据的汇总与生成。单条日报文档为结
+meta_description: 热力收益率的部署与升级：热力收益率的部署与升级，涵盖配置与验证建议。。。。。。。
 keywords: 热力、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

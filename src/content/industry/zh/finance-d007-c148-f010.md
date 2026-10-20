@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮收益率的数据库与运维
-meta_description: 酒店餐饮的收益率相关数据主要来自门店POS终端、后厨进销存系统、客房管理模块。数据更新节奏为每小时同步一次营业流水，每日闭店后生成全量日度汇总文档。单条文档
+meta_description: 酒店餐饮收益率的数据库与运维：酒店餐饮收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 酒店餐饮、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

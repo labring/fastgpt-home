@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 招标公告竞价的工具调用与插件
-meta_description: 招标公告数据主要来自各级政府采购网、公共资源交易中心及行业专属招标平台。更新节奏随平台发布节奏同步，多数平台每日更新当日发布的公告，部分紧急项目实时推送。文
+meta_description: 招标公告竞价的工具调用与插件：招标公告竞价的工具调用与插件，涵盖配置与验证建议。
 keywords: 招标公告、竞价与投标报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

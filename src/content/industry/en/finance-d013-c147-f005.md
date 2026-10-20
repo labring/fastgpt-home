@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Conversation and Prompt Engineering for Paper
-meta_description: The data for paper manufacturing financing daily reports is sourced from publicly disclosed corporate financing announcements and daily updated
+meta_description: Multi-turn Conversation and Prompt Engineering for Paper Manufacturing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

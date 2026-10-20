@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c013-f011
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Insurance Financial Report
-meta_description: Insurance financial report data comes primarily from annual and quarterly disclosure reports of insurance companies, plus regulatory submission
+meta_title: Document Parsing and Chunking for Insurance Financial
+meta_description: Document Parsing and Chunking for Insurance Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

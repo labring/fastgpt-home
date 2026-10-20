@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Air
-meta_description: Air governance revenue yield data primarily comes from regional environmental control platforms, enterprise emission accounting systems, and
+meta_description: Multi-turn Dialogue and Prompt Engineering for Air Governance Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

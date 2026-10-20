@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品智能尽调报告的向量模型与索引
-meta_description: 文娱用品的数据源主要包括生产企业的SKU档案、供应链质检报告、电商平台商品详情页、版权方授权文件。更新节奏随新品上线、授权续约、质检更新调整，新品上线周期多
+meta_description: 文娱用品智能尽调报告的向量模型与索引：文娱用品智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 文娱用品、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

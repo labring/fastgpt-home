@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Complaint Ticket Customer Service
-meta_description: Complaint ticket data is sourced from financial institution customer service interaction systems, customer account management backends, and regulatory
+meta_description: Workflow Orchestration for Complaint Ticket Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

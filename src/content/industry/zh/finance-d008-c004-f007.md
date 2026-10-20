@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备智能尽调报告的工作流编排
-meta_description: 专用设备智能尽调报告的数据主要来自三类渠道：设备出厂合格证与技术说明书、设备全生命周期运维日志、行业监管部门的合规备案文件。基础出厂数据为静态文档，包含设备
+meta_description: 专用设备智能尽调报告的工作流编排：专用设备智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 专用设备、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

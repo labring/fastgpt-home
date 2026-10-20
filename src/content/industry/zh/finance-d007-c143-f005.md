@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发收益率的多轮对话与提示词
-meta_description: 软件开发领域的收益率与行情数据来源包含内部项目工时台账、合同回款记录、第三方软件开发服务报价平台、研发资源消耗报表。更新节奏分为两类：日报类数据每日凌晨完成
+meta_description: 软件开发收益率的多轮对话与提示词：软件开发收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 软件开发、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

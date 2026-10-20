@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的模型接入与配置
-meta_description: 投诉工单的数据来源于企业内部客服工单系统、在线客服对话归档系统，以及线下投诉纸质转电子的录入工具。数据随工单流转实时更新，覆盖提交、分派、处理、闭环全流程。
+meta_description: 投诉工单客户服务的模型接入与配置：投诉工单客户服务的模型接入与配置，涵盖配置与验证建议
 keywords: 投诉工单、客户服务与账户咨询、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

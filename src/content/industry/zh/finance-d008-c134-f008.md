@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品智能尽调报告的工具调用与插件
-meta_description: 调味品尽调报告的数据来源包括国家食品药品监督管理局公开的合规检测数据、头部商超公开的进销存接口、第三方食品供应链数据平台以及企业公开披露的年度报告。数据更新
+meta_description: 调味品智能尽调报告的工具调用与插件：调味品智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 调味品、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

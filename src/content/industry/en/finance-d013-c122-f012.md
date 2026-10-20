@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Joint-Stock Bank
-meta_description: Financing daily report data for joint-stock banks is sourced from the institution’s credit management system, interbank lending transaction ledger
+meta_description: Model Access and Configuration for Joint-Stock Bank Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

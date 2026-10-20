@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合财报分析的向量模型与索引
-meta_description: 其他综合财报分析的数据来源为上市公司官方披露的定期报告、临时公告及交易所公开归档材料。更新节奏包含固定周期的季度、年度报告披露，以及不定期的业绩修正、关联交
+meta_description: 其他综合财报分析的向量模型与索引：其他综合财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 其他综合、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

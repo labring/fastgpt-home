@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行投研知识库建设的部署与升级
-meta_description: 农商行投研数据来源包括内部信贷管理台账、区域涉农主体经营监测数据、属地监管部门发布的政策文件、区域经济调研纪要、区域内企业的公开披露信息。更新节奏分为每日更
+meta_description: 农商行投研知识库建设的部署与升级：农商行投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 农商行、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

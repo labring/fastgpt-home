@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Form and Interaction for Condiment Yield Rates
-meta_description: Data sources include dealer inventory and sales data from the national condiment industry monitoring platform, real-time transaction data from offline
+meta_description: Form and Interaction for Condiment Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

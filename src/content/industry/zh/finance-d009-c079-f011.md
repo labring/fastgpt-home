@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢研报检索的文档解析与分块
-meta_description: 普钢研报的数据主要来自国内钢铁行业自律组织、大宗商品资讯机构、上市钢企定期披露文件。更新节奏分为日度（现货价格、港口库存）、周度（行业开工率）、月度（产量、
+meta_description: 普钢研报检索的文档解析与分块：普钢研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 普钢、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

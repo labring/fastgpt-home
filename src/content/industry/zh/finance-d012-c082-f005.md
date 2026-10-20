@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖营销内容的多轮对话与提示词
-meta_description: 在金融/保险/理财行业的营销获客场景中，水产养殖相关的数据来源包括养殖现场传感器（溶氧、水温、pH值）、投料设备日志、苗种批次档案，以及金融机构留存的养殖户
+meta_description: 水产养殖营销内容的多轮对话与提示词：水产养殖营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水产养殖、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

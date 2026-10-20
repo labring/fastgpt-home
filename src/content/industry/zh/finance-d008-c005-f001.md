@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品智能尽调报告的HTTP 接口与外部系统
-meta_description: 个护用品的智能尽调数据主要来自品牌方官方备案平台、国家级化妆品监管数据库、第三方质检机构报告、电商平台公开参数页。数据更新节奏随合规要求调整，新成分备案、季
+meta_description: 个护用品智能尽调报告的HTTP 接口与外部系统：个护用品智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 个护用品、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

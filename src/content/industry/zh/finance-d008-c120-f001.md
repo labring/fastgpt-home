@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全智能尽调报告的HTTP 接口与外部系统
-meta_description: 网络安全智能尽调报告的数据来自漏洞扫描工具API、威胁情报平台、资产测绘接口、合规审计日志等。更新节奏按需拉取或每日全量同步，部分实时威胁事件支持秒级更新。
+meta_description: 网络安全智能尽调报告的HTTP 接口与外部系统：网络安全智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 网络安全、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

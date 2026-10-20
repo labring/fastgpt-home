@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料营销内容的工具调用与插件
-meta_description: 化学原料的核心数据来源包括公开化工行业数据库、供应商自营报价系统、行业协会发布的供需简报。基础参数如CAS登记号、产品规格、包装形式长期稳定更新；报价类数据
+meta_description: 化学原料营销内容的工具调用与插件：化学原料营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 化学原料、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

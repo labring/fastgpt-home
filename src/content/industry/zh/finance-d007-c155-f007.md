@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料收益率的工作流编排
-meta_description: 数据来源包括全国畜牧总站公开报价、饲料生产企业出厂监测数据、区域批发市场采样数据。更新节奏分品类，主粮类饲料原料日度更新，配合饲料周度更新。文档多为结构化C
+meta_description: 饲料收益率的工作流编排：饲料收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 饲料、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

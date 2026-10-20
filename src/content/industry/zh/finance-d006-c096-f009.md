@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭投研知识库建设的引用来源与溯源
-meta_description: 焦炭相关数据主要来自大连商品交易所期货行情、中国炼焦行业协会行业报告、沿海港口现货报价系统、钢厂采购台账四类渠道。更新节奏覆盖交易日实时更新的期货成交价、每
+meta_description: 焦炭投研知识库建设的引用来源与溯源：焦炭投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 焦炭、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

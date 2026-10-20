@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场营销内容的知识库检索与召回
-meta_description: 航空机场营销内容的数据来源包括官方航司合作手册、航站楼导览物料、季节性营销活动文案、会员体系规则、航班时刻公告、广告位招商文档，以及金融合作的信用卡权益、旅
+meta_description: 航空机场营销内容的知识库检索与召回：航空机场营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 航空机场、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

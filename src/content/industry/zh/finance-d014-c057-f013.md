@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电财报分析的知识库检索与召回
-meta_description: 小家电财报的公开数据主要来源于境内外证券交易所披露的上市公司定期报告、行业零售监测机构的公开数据文件。更新节奏分为定期更新与不定期更新两类，定期报告按季度、
+meta_description: 小家电财报分析的知识库检索与召回：小家电财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 小家电、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

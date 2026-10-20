@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Complaint Ticket Customer
-meta_description: Complaint ticket data is sourced from customer service ticketing systems and customer service CRM modules of financial, insurance, and wealth
+meta_description: Tool Calling and Plugins for Complaint Ticket Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

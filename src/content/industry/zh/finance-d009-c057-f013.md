@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电研报检索的知识库检索与召回
-meta_description: 小家电研报是金融/保险/理财领域用于消费场景分析、产品定价参考的细分数据源，数据主要来自公开行业监测数据源、品牌官方披露的产品文档、线下零售终端的实时监测记
+meta_description: 小家电研报检索的知识库检索与召回：小家电研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 小家电、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

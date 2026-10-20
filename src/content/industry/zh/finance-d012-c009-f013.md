@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区营销内容的知识库检索与召回
-meta_description: 产业园区的营销内容数据主要来源于园区运营方的招商手册、入驻金融扶持政策文件、产业动态简报、配套设施介绍文档及入驻企业案例合集。数据更新节奏为不定期，重大政策
+meta_description: 产业园区营销内容的知识库检索与召回：产业园区营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 产业园区、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

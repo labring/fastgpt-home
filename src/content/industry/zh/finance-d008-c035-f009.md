@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美智能尽调报告的引用来源与溯源
-meta_description: 医美智能尽调报告用于金融场景下的合规核查，数据源主要来自医美机构执业许可证、诊疗项目备案文件、医师执业资质证明、医用耗材注册证与溯源码，以及地方卫健委的监管
+meta_description: 医美智能尽调报告的引用来源与溯源：医美智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 医美、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

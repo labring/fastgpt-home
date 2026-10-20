@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Solid Waste Treatment Financing
-meta_description: Solid waste treatment financing daily report data comes primarily from solid waste disposal project registration ledgers of local ecological
+meta_description: Deployment and Upgrade of Solid Waste Treatment Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

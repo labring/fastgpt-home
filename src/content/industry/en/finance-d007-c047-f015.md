@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c047-f015
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade for State-owned Large Bank Yield and
-meta_description: Data for state-owned large bank yield and market daily reports comes from official websites of state-owned large banks and official financial data
+meta_title: Deployment and Upgrade for State-owned Large Bank Yield
+meta_description: Deployment and Upgrade for State-owned Large Bank Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

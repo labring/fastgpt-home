@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类研报检索的多轮对话与提示词
-meta_description: 鞋类研报数据主要来自券商金融行业研报中的纺织服饰板块、专业金融终端的纺织服饰细分行业监测数据库、上市鞋类品牌的公开财报。更新节奏随发布主体不同有所区分，券商
+meta_description: 鞋类研报检索的多轮对话与提示词：鞋类研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 鞋类、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 储能财报分析的多轮对话与提示词
-meta_description: 储能行业财报数据主要来自沪深证券交易所、全国中小企业股份转让系统公开披露的定期报告及临时公告，为金融场景下的储能赛道分析提供标准化数据源。数据更新节奏遵循监
+meta_description: 储能财报分析的多轮对话与提示词：储能财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 储能、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备研报检索的工作流编排
-meta_description: 通信设备研报的数据主要来自券商研究所的行业跟踪报告、运营商公开披露的运营数据、通信行业协会的统计文档，以及国际标准组织的技术规范文件。更新节奏随行业事件波动
+meta_description: 通信设备研报检索的工作流编排：通信设备研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 通信设备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

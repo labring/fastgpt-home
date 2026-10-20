@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 统一入口一体化 AI 平台的HTTP 接口与外部系统
-meta_description: 统一入口的数据主要来源于对接的多组AI应用实例、外部业务系统的请求报文、用户访问日志以及权限配置信息。数据更新节奏为实时同步：用户发起的每一次接口请求都会生
+meta_description: 统一入口一体化 AI 平台的HTTP 接口与外部系统：统一入口一体化 AI 平台的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 统一入口、一体化 AI 平台与多应用编排、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

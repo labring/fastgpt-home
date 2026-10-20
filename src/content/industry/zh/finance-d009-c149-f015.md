@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 钢铁贸易研报检索的部署与升级
-meta_description: 钢铁贸易相关研报的数据主要来源于行业协会公开报告、钢厂内部运营报表、大宗商品交易平台实时数据、第三方行业咨询机构的分析文档。数据更新节奏分为多个层级：现货价
+meta_description: 钢铁贸易研报检索的部署与升级：钢铁贸易研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 钢铁贸易、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

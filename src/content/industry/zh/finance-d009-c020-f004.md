@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备研报检索的向量模型与索引
-meta_description: 兵器装备研报的数据来源包括券商军工行业研报、国防科技工业主管部门公开披露文件、兵器装备领域行业协会公开资料。更新节奏兼具实时动态与定期深度两种类型，行业动态
+meta_description: 兵器装备研报检索的向量模型与索引：兵器装备研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 兵器装备、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

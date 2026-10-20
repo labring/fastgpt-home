@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏营销内容的向量模型与索引
-meta_description: 光伏营销内容与获客相关的数据，主要来自金融机构内部的光伏项目招商手册、光伏理财产品说明书、面向投资者的推广话术、政策解读文档，以及公开的行业政策文件。更新节
+meta_description: 光伏营销内容的向量模型与索引：光伏营销内容的向量模型与索引，涵盖配置与验证建议。
 keywords: 光伏、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

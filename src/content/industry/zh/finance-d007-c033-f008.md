@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤收益率的工具调用与插件
-meta_description: 化纤品类的行情与收益率数据来源包括国内大宗商品现货交易平台公开行情、期货交易所挂牌合约数据、行业协会发布的供需简报。更新节奏区分三类数据源：现货行情按交易日
+meta_description: 化纤收益率的工具调用与插件：化纤收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 化纤、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

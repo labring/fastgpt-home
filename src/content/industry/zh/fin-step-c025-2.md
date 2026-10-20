@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c025-2
 page_type: 行业作业环节页
 article_section: 财富管理
 is_part_of: FastGPT 技术中心
-meta_title: 基金及金融产品代销的核对客户情况、风险承受能力和产品风险匹配
+meta_title: 基金及金融产品代销的核对客户情况、风险承受能力和产品风险匹配：哪一部分能交给系统
 meta_description: 基金及金融产品代销的核对客户情况、风险承受能力和产品风险匹配：哪一部分能交给系统
 keywords: 基金及金融产品代销、财富管理、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

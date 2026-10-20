@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备智能尽调报告的引用来源与溯源
-meta_description: 通信设备类数据主要来源于运营商公开运维档案、第三方检测机构合规报告、设备厂商官方技术白皮书。数据更新节奏分为三类：厂商技术文档按年度更新，运维监测数据按月度
+meta_description: 通信设备智能尽调报告的引用来源与溯源：通信设备智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 通信设备、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

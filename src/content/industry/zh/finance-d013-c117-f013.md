@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造融资日报的知识库检索与召回
-meta_description: 纺织制造融资日报的数据主要来自地方纺织行业协会、区域经信部门公开披露的企业授信公示、银行信贷投放台账及公开招投标中标信息。更新节奏为工作日每日更新，单条日报
+meta_description: 纺织制造融资日报的知识库检索与召回：纺织制造融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 纺织制造、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

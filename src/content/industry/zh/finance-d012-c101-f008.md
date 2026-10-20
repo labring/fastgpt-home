@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流营销内容的工具调用与插件
-meta_description: 数据来源涵盖运单管理系统、实时配送接口、仓储作业记录与第三方物流服务接口；更新节奏随业务节点触发，运单状态变更时实时推送，基础网点与时效数据每日同步；文档结
+meta_description: 物流营销内容的工具调用与插件：物流营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 物流、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

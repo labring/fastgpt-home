@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for Professional
-meta_description: Financial report data in professional service scenarios mainly comes from exchange public disclosure platforms, official enterprise annual report
+meta_description: HTTP Interfaces and External Systems for Professional Services Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,6 +40,6 @@ The concentrated update feature of financial report data requires interfaces to 
 - Initiate a parsing request for a single standard financial report, check that the returned results include preset standard financial report fields such as consolidated balance sheet and income statement.
 - Initiate batch requests within the threshold set by the `API_REQUEST_RATE_LIMIT` configuration, confirm that the external system does not return rate limiting-related error prompts.
 - Open the FastGPT model management interface, confirm that the configured target model is displayed in the system's model selection dropdown list.
-- Test the custom variable reference function, confirm that configured variables such as `{{Financial Report Period}}` can correctly match the parsed financial report data.
+- Test the custom variable reference function, confirm that configured variables such as `example value` can correctly match the parsed financial report data.
 
 > Question material comes from public community discussions. Configuration values are common starting points and should be measured against your own samples. Verified on 2026-09-14.

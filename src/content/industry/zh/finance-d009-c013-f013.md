@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险研报检索的知识库检索与召回
-meta_description: 保险研报数据主要来自券商研究所非银金融组、保险行业协会公开报告、保险机构内部调研整理。更新节奏按研报类型区分，常规行业研报按周、月更新，专题研报随行业重大事
+meta_description: 保险研报检索的知识库检索与召回：保险研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 保险、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水泥智能尽调报告的引用来源与溯源
-meta_description: 水泥品类的数据主要来自全国性建材行业协会月度公示数据、生产企业公开质检报告、区域供应链报价台账。更新节奏以月度为核心周期，部分区域现货价格数据每日更新。标准
+meta_description: 水泥智能尽调报告的引用来源与溯源：水泥智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 水泥、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢智能尽调报告的工具调用与插件
-meta_description: 特钢智能尽调报告的数据主要来自特钢生产企业内部ERP系统、第三方行业资讯平台公开披露数据、下游客户验收报告。更新节奏分为三类：生产工艺与出厂数据每日更新，行
+meta_description: 特钢智能尽调报告的工具调用与插件：特钢智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 特钢、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

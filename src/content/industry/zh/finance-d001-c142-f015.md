@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份证件KYC 的部署与升级
-meta_description: 身份证件KYC的数据主要来自用户上传的实体证件扫描件、移动端拍摄的证件照片，部分场景通过政务服务接口获取结构化核验数据。数据更新节奏分两类：用户主动提交的为
+meta_description: 身份证件KYC 的部署与升级：身份证件KYC 的部署与升级，涵盖配置与验证建议。
 keywords: 身份证件、KYC 与反洗钱资料核验、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

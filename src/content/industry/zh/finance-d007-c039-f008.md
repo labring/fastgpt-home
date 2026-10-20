@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器收益率的工具调用与插件
-meta_description: 厨卫电器的数据来源涵盖家电行业第三方监测机构的公开接口、品牌官方的运营公示、主流电商平台的实时定价接口。更新节奏存在分层：核心单品的当日定价数据每日更新，全
+meta_description: 厨卫电器收益率的工具调用与插件：厨卫电器收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 厨卫电器、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

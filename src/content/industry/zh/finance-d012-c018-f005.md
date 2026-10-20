@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的多轮对话与提示词
-meta_description: 光模块相关数据主要来自通信设备厂商公开规格书、第三方测试机构报告、行业标准文档，服务于金融行业光模块营销内容的制作与获客。数据更新节奏随新品发布调整，常规型
+meta_description: 光模块营销内容的多轮对话与提示词：光模块营销内容的多轮对话与提示词，涵盖配置与验证建议
 keywords: 光模块、营销内容与获客、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

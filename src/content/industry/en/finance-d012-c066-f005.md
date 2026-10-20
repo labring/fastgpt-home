@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Residential
-meta_description: Residential construction marketing content data is primarily sourced from project approval documents, construction phase progress logs, published unit
+meta_description: Multi-turn Dialogue and Prompting for Residential Construction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -40,7 +40,7 @@ The concentrated high-frequency inquiry scenarios require preset standardized qu
 
 ## Three Common Configuration Mistakes
 - Issue: API call returns a missing parameter error when creating a workflow. Cause: The request body does not correctly carry the `workflowId` and `contextId` fields. Workflows for residential construction projects must bind specific project IDs. Missing these fields prevents matching the corresponding configuration.
-- Issue: After deployment, model calls show a token of "fastgpt" in logs. Cause: The default token placeholder was not correctly replaced in API configuration. Model calls for residential construction marketing scenarios require binding a dedicated token. Failure to update the default placeholder causes token verification failure.
+- Issue: After deployment, model calls show a token of "fastgpt" in logs. Cause: The default token pending verification was not correctly replaced in API configuration. Model calls for residential construction marketing scenarios require binding a dedicated token. Failure to update the default pending verification causes token verification failure.
 - Issue: Multiple visits to the same project ID result in inconsistent multi-turn dialogue context turns. Cause: The retention rule for `workflowContextKeep` was not uniformly configured in the workflow. Some nodes set short context caching, leading to context loss or redundancy across cross-node calls.
 
 ## How to Verify Correct Configuration

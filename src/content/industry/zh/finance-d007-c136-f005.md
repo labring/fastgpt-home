@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属收益率的多轮对话与提示词
-meta_description: 贵金属行情数据来源包括国内上海黄金交易所、期货交易所，国际伦敦金银市场协会（LBMA）、COMEX期货交易所及合规第三方资讯聚合源。数据更新分实时滚动更新与
+meta_description: 贵金属收益率的多轮对话与提示词：贵金属收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 贵金属、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

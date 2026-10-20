@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Semiconductor Yield Data
-meta_description: Semiconductor yield and market data primarily originates from public trading APIs of domestic and overseas stock exchanges, as well as industry
+meta_description: Forms and Interactions for Semiconductor Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

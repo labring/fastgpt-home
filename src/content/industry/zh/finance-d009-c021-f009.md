@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合研报检索的引用来源与溯源
-meta_description: 其他综合研报的数据来源包括券商研究所公开研报、行业第三方研究机构的非标准化报告、企业自主撰写的行业分析文档。更新节奏不固定，券商研报随交易日发布，第三方报告
+meta_description: 其他综合研报检索的引用来源与溯源：其他综合研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 其他综合、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

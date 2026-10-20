@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路收益率的工具调用与插件
-meta_description: 铁路公路收益率相关数据取自交通运输部路网监测与应急处置中心的公开运营数据集、各区域交通运营主体的官方运营披露文件。更新节奏存在差异：全国干线铁路数据每日更新
+meta_description: 铁路公路收益率的工具调用与插件：铁路公路收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 铁路公路、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

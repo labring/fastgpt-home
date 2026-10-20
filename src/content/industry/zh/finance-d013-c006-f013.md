@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药融资日报的知识库检索与召回
-meta_description: 中药融资日报的数据来源于沪深北交易所公开披露的上市公司公告、全国股转系统挂牌公司信息、地方金融监管部门的融资备案公示，以及中药行业协会发布的行业融资动态。更
+meta_description: 中药融资日报的知识库检索与召回：中药融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 中药、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

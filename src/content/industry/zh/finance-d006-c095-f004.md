@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力投研知识库建设的向量模型与索引
-meta_description: 热力投研的数据主要来自三类渠道：公开的热力行业研报、城市热力管网的运营计量数据、发改委及住建部门的政策文件。数据更新节奏差异较大：管网实时计量数据每小时更新
+meta_description: 热力投研知识库建设的向量模型与索引：热力投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 热力、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Auto Parts Profit Margins
-meta_description: Auto parts profit margin-related data originates from upstream raw material supplier quote APIs, original equipment manufacturer (OEM) supporting
+meta_description: Database and Operations for Auto Parts Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

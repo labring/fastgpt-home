@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Medical Aesthetic
-meta_description: Data sources for medical aesthetic marketing content include internal institution project manuals, doctor practice qualification documents
+meta_description: Knowledge Base Retrieval and Recall for Medical Aesthetic Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

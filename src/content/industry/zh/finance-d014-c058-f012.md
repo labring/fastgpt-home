@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的模型接入与配置
-meta_description: 小金属财报分析所需的数据主要服务于金融投研场景，来源包括境内外小金属上市公司的公开年报、季报，以及有色金属行业协会、专业资讯平台发布的月度/周度行业简报。公
+meta_description: 小金属财报分析的模型接入与配置：小金属财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

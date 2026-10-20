@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Defense Electronics
-meta_description: Data for defense electronics marketing content primarily comes from enterprise official promotional materials, technical parameter documents
+meta_description: Knowledge Base Retrieval and Recall for Defense Electronics Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

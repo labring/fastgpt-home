@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖研报检索的向量模型与索引
-meta_description: 水产养殖研报数据主要来自行业协会发布的月度监测报告、科研院所的技术白皮书、养殖企业的生产日志与上市企业年报。更新节奏分为：行业监测数据按周更新，专题研报按月
+meta_description: 水产养殖研报检索的向量模型与索引：水产养殖研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 水产养殖、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的多轮对话与提示词
-meta_description: 这个品类的数据来源于农商行官方线上服务渠道、线下营业网点的产品公示信息，以及内部运营的业务台账。数据更新节奏为每日固定时点完成前一工作日的全量产品数据更新。
+meta_description: 农商行收益率的多轮对话与提示词：农商行收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 农商行、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

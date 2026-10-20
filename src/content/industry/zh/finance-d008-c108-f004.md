@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电商服务智能尽调报告的向量模型与索引
-meta_description: 电商服务智能尽调的数据来源包括电商平台后台的经营台账、消费者评价数据、供应链履约凭证、行业合规备案文件。更新节奏按经营节点分为实时同步交易流水、每日更新用户
+meta_description: 电商服务智能尽调报告的向量模型与索引：电商服务智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 电商服务、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

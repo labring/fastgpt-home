@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的分享与嵌入
-meta_description: 卫星通信收益率相关数据的数据源为卫星地面站的计费系统与链路监控模块，更新节奏分为全量日更与增量小时更两种。文档结构为多列结构化表格，包含卫星节点编号、服务时
+meta_description: 卫星通信收益率的分享与嵌入：卫星通信收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 卫星通信、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区收益率的模型接入与配置
-meta_description: 产业园区收益率相关数据主要来源于园区运营管理系统、财务核算模块、租金收缴台账及政府产业扶持资金拨付系统。数据更新节奏为每日归集，当日运营数据于次日凌晨完成汇
+meta_description: 产业园区收益率的模型接入与配置：产业园区收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 产业园区、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

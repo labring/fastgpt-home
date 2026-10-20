@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 耐火材料营销内容的工具调用与插件
-meta_description: 耐火材料的数据来源包括全国耐火材料标准化技术委员会发布的标准文件、生产厂商的出厂检验报告、工业窑炉运行的实时采集数据。更新节奏分为三类：标准文件每年度修订，
+meta_description: 耐火材料营销内容的工具调用与插件：耐火材料营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 耐火材料、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

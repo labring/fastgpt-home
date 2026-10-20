@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行财报分析的多轮对话与提示词
-meta_description: 城商行财报数据主要来自官方官网投资者关系栏目、银行业监管机构公开披露平台。更新节奏为年度报告每年会计年度结束后4个月内公开，季度报告每季度结束后1个月内公开
+meta_description: 城商行财报分析的多轮对话与提示词：城商行财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 城商行、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

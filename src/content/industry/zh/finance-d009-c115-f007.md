@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业研报检索的工作流编排
-meta_description: 种植业研报的数据来源主要包括农业农村部种植业管理司公开监测数据、省级农业农村部门的月度监测报告、中国农业科学院等科研机构的专项研究报告、行业协会发布的产销分
+meta_description: 种植业研报检索的工作流编排：种植业研报检索的工作流编排，涵盖配置与验证建议。。。
 keywords: 种植业、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

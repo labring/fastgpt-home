@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备收益率的工具调用与插件
-meta_description: 自动化设备收益率数据的数据源包含设备内置PLC采集模块的本地运行日志，以及工业物联网网关同步的云端结算数据。数据更新节奏为每日固定时段汇总前一日全周期运行数
+meta_description: 自动化设备收益率的工具调用与插件：自动化设备收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 自动化设备、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c002-f008
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Professional Services Financial
-meta_description: Professional service teams use data for financial report analysis primarily from periodic reports, temporary announcements, and official disclosure
+meta_title: Tool Calling and Plugins for Professional Services
+meta_description: Tool Calling and Plugins for Professional Services Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

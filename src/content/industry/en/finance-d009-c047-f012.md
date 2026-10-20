@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Large State-Owned
-meta_description: Large state-owned bank research reports primarily originate from the institution’s internal macro research department, financial markets division, and
+meta_description: Model Integration and Configuration for Large State-Owned Bank Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

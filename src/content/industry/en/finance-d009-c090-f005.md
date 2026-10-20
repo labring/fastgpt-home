@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c090-f005
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompting for Paint and Ink Research
-meta_description: Paint and ink research report data sources include public monthly monitoring data from the China Coatings Industry Association, securities firm
+meta_title: Multi-turn Dialogue and Prompting for Paint and Ink
+meta_description: Multi-turn Dialogue and Prompting for Paint and Ink Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

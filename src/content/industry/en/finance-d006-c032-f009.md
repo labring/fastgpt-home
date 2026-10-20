@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c032-f009
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Citation Sources and Traceability for Chemical Raw Materials
-meta_description: Data sources related to chemical raw materials include industry association public bulletins, annual reports of manufacturing enterprises, customs
+meta_title: Citation Sources and Traceability for Chemical Raw
+meta_description: Citation Sources and Traceability for Chemical Raw Materials Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

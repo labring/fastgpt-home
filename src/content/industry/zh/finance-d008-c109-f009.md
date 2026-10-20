@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件智能尽调报告的引用来源与溯源
-meta_description: 电子元件的数据源主要包含原厂公开规格书、分销商实时库存台账、第三方检测合规报告及海关通关数据。数据更新节奏存在差异，原厂规格书为静态更新，仅在型号迭代时调整
+meta_description: 电子元件智能尽调报告的引用来源与溯源：电子元件智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 电子元件、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

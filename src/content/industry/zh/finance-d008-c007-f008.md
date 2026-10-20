@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品智能尽调报告的工具调用与插件
-meta_description: 乳制品智能尽调的数据源涵盖行业协会月度监测数据集、乳企公开财报文档、第三方检测机构的抽检报告、牧场养殖台账等。数据更新节奏分为三类：行业协会数据按月更新，乳
+meta_description: 乳制品智能尽调报告的工具调用与插件：乳制品智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 乳制品、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

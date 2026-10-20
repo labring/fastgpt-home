@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合研报检索的部署与升级
-meta_description: 该品类的数据来源包含公开行业数据库、合规爬虫获取的公开研报站点、用户自主上传的本地文档。更新节奏因来源差异较大，公开研报按发布周期更新，用户上传文档无固定更
+meta_description: 其他综合研报检索的部署与升级：其他综合研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 其他综合、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

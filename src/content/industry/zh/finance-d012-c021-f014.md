@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 其他综合营销内容的表单与交互
-meta_description: 其他综合营销内容的数据主要来源于金融机构自有营销素材库、CRM客户标签系统、线下活动反馈表单三类渠道。更新节奏以营销活动上线为触发节点，日常维护按需调整。文
+meta_description: 其他综合营销内容的表单与交互：其他综合营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 其他综合、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

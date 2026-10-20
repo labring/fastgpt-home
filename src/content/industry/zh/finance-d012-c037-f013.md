@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信营销内容的知识库检索与召回
-meta_description: 卫星通信营销内容的数据来源包括卫星运营商官方频段文档、链路测试报告、覆盖区域方案、行业营销话术模板。数据更新节奏随频段政策调整、链路运维优化、营销活动上线不
+meta_description: 卫星通信营销内容的知识库检索与召回：卫星通信营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 卫星通信、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

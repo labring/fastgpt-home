@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤财报分析的引用来源与溯源
-meta_description: 动力煤财报相关数据主要来自三类渠道：国家能源局发布的行业供需周报、郑州商品交易所的动力煤交割日报、上市煤企的季度/年度财报附注。数据更新节奏分为三类：现货价
+meta_description: 动力煤财报分析的引用来源与溯源：动力煤财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 动力煤、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 内部制度合规的工作流编排
-meta_description: 内部制度的数据来源于企业合规部门、行政办公室整理的正式合规文件。更新节奏随企业合规政策变动、监管要求调整而定，无固定周期。文档结构多为章节式排版，包含制度编
+meta_description: 内部制度合规的工作流编排：内部制度合规的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 内部制度、合规与内部制度问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

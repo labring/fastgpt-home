@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的知识库检索与召回
-meta_description: 电子元件的数据主要来源于原厂官方datasheet、代理商报价系统、行业标准规范文档与物料清单（BOM）。更新节奏随品类不同存在差异，通用标准元件更新频率较
+meta_description: 电子元件营销内容的知识库检索与召回：电子元件营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 电子元件、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

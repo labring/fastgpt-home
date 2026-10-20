@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件营销内容的工具调用与插件
-meta_description: 电子元件的数据主要来源于原厂官方datasheet、行业供应链管理平台、合规认证数据库，是金融机构开展电子元件供应链金融营销内容的核心基础。数据分为静态参数
+meta_description: 电子元件营销内容的工具调用与插件：电子元件营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 电子元件、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

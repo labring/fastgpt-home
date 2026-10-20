@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的表单与交互
-meta_description: 小金属相关数据主要来自中国有色金属工业协会小金属分会、上海期货交易所、海关总署进出口统计、头部矿山企业公开报告。现货行情数据每日更新，库存数据周度更新，进出
+meta_description: 小金属营销内容的表单与交互：小金属营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 小金属、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

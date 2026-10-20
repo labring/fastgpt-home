@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的部署与升级
-meta_description: 医美营销内容的数据主要来自合作医美机构的项目档案、合规审核文件，金融机构的医美分期政策、专属权益规则，以及营销团队定制的跨场景话术库，同时参考公开的医美行业
+meta_description: 医美营销内容的部署与升级：医美营销内容的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 医美、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

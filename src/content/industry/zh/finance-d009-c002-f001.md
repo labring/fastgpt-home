@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务研报检索的HTTP 接口与外部系统
-meta_description: 专业服务研报的数据来源为券商研究所、第三方行业咨询机构、行业协会的公开调研与整理内容。更新节奏随研报正式发布，覆盖工作日全时段。文档结构包含核心观点、行业供
+meta_description: 专业服务研报检索的HTTP 接口与外部系统：专业服务研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 专业服务、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

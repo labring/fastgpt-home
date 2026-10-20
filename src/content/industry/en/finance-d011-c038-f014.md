@@ -4,8 +4,8 @@ slug: /en/industry/finance-d011-c038-f014
 page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
-meta_title: Form and Interaction for In-terminal Natural Language Search
-meta_description: Historical query record data is sourced from user interaction logs of financial terminals. It covers user input and system response tracks in business
+meta_title: Form and Interaction for In-terminal Natural Language
+meta_description: Form and Interaction for In-terminal Natural Language Search of Historical Query Records
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Fixed document structure requires forms to predefine core query fields, preventi
 
 ## Three common mistakes
 - Phenomenon: Submitting a form triggers a "missing required field" error, with the message `missing required field`. Cause: The core field `query_keyword` is not added to the `form_field_required` configuration list, allowing submission with empty input.
-- Phenomenon: JSON-format batch retrieval configuration cannot associate system variables. Cause: The `form_json_support_var` configuration item is not enabled, or the variable name does not follow the fixed `{{variable name}}` format.
+- Phenomenon: JSON-format batch retrieval configuration cannot associate system variables. Cause: The `form_json_support_var` configuration item is not enabled, or the variable name does not follow the fixed `example value` format.
 - Phenomenon: Retrieval results return unexpected historical records. Cause: The `search_history_max_age` configuration value exceeds the business traceability range, or the `query_time` field is not bound for time filtering.
 
 ## How to confirm the configuration is complete

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股研报检索的模型接入与配置
-meta_description: 多元控股的研报数据来源包括集团内部各子公司归档的经营分析文档、跨板块行业合作机构的细分研究报告。更新节奏分为三类：子公司月度经营研报按月更新，集团综合板块研
+meta_description: 多元控股研报检索的模型接入与配置：多元控股研报检索的模型接入与配置，涵盖配置与验证建议
 keywords: 多元控股、研报检索与问答、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

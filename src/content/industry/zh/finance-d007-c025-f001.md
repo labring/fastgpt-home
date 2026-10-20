@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行收益率的HTTP 接口与外部系统
-meta_description: 农商行的收益率数据来源为本行核心业务系统的产品台账模块，以及监管要求的同业利率报送接口。更新节奏为每月10日同步上月调整后的全量产品数据，遇监管政策调整或内
+meta_description: 农商行收益率的HTTP 接口与外部系统：农商行收益率的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 农商行、收益率与行情日报播报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

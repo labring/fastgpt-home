@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美营销内容的知识库检索与召回
-meta_description: 医美营销内容的数据来源包括机构内部的项目手册、医生执业资质文件、合规备案的广告话术、新仪器推广材料等。更新节奏随合规要求与新上项目调整，无固定周期但频次较高
+meta_description: 医美营销内容的知识库检索与召回：医美营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 医美、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

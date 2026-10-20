@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理融资日报的工作流编排
-meta_description: 固废处理融资日报的数据来源包括地方生态环境部门的固废处置项目备案台账、合作银行的授信审批记录、公共资源交易平台的固废处理项目中标公示。数据更新节奏为每日更新
+meta_description: 固废处理融资日报的工作流编排：固废处理融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 固废处理、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

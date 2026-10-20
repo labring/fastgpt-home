@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备研报检索的向量模型与索引
-meta_description: 通信设备研报数据主要来自行业协会公开文件、设备厂商官方披露资料、运营商招标公示及第三方通信领域咨询报告。更新节奏随公开信息发布节点波动，厂商财报类按季度更新
+meta_description: 通信设备研报检索的向量模型与索引：通信设备研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 通信设备、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

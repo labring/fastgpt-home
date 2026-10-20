@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材智能尽调报告的引用来源与溯源
-meta_description: 消费建材的数据源涵盖厂商出厂检测报告、行业协会抽检公示、住建部门备案信息及电商平台商品参数页。数据更新节奏存在差异：出厂报告随生产批次实时更新，协会抽检数据
+meta_description: 消费建材智能尽调报告的引用来源与溯源：消费建材智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 消费建材、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

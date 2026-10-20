@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属财报分析的HTTP 接口与外部系统
-meta_description: 工业金属财报数据主要来自上市企业公开披露的定期报告、行业协会公开监测数据。数据更新节奏匹配财报披露周期，包含产量、库存、现货价格、营收、生产成本等核心字段，
+meta_description: 工业金属财报分析的HTTP 接口与外部系统：工业金属财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工业金属、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

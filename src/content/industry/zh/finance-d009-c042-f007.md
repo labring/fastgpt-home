@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营研报检索的工作流编排
-meta_description: 品牌代运营相关研报主要来自第三方美妆护理行业监测机构、电商平台后台导出的运营数据、品牌方月度销售复盘文档。更新节奏以月度为基础，大促节点前会追加周度更新。文
+meta_description: 品牌代运营研报检索的工作流编排：品牌代运营研报检索的工作流编排，涵盖配置与验证建议
 keywords: 品牌代运营、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤投研知识库建设的数据库与运维
-meta_description: 焦煤投研数据主要来自国内现货交易平台、期货交易所公开数据库、行业协会月度报告及港口装卸台账。数据类型涵盖结构化的现货报价、期货交割明细，以及非结构化的产业链
+meta_description: 焦煤投研知识库建设的数据库与运维：焦煤投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 焦煤、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

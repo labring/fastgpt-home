@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Decoration Industry Financing
-meta_description: Data for decoration industry financing daily reports comes from financial accounting systems of decoration enterprises, loan interfaces of partner
+meta_description: Deployment and Upgrade of Decoration Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

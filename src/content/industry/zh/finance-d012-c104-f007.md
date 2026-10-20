@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃营销内容的工作流编排
-meta_description: 玻璃品类的数据主要来源于生产企业的产品参数手册、第三方检测机构的合规报告、供应链同步的SKU台账，以及线下门店的展示物料。数据更新节奏为新SKU上线时触发全
+meta_description: 玻璃营销内容的工作流编排：玻璃营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 玻璃、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

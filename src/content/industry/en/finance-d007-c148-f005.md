@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompting for Hotel Catering Yield
-meta_description: Data sources for hotel catering yield and daily market reports include store operation management systems, aggregated payment interfaces, and online
+meta_description: Multi-turn Dialogue and Prompting for Hotel Catering Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料收益率的工具调用与插件
-meta_description: 化学原料的行情数据主要来自大宗商品现货交易平台、行业协会调研数据及海关进出口报关数据。更新节奏分两类：现货成交价每日更新，行业库存、进出口数据按周或双周更新
+meta_description: 化学原料收益率的工具调用与插件：化学原料收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 化学原料、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

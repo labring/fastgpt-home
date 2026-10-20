@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美融资日报的工作流编排
-meta_description: 医美融资日报的数据来源为医美机构的财务系统、合作银行的授信接口、地方医美行业协会的融资备案数据。更新节奏为每日凌晨同步前一日的全量数据。单份日报文档按机构维
+meta_description: 医美融资日报的工作流编排：医美融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 医美、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

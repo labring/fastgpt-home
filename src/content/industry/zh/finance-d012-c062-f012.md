@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销营销内容的模型接入与配置
-meta_description: 广告营销的营销内容数据主要来自广告创意管理库、投放后台、内容发布系统及用户交互日志。数据更新节奏为准实时或按小时同步，每日汇总全量投放效果数据。文档结构以结
+meta_description: 广告营销营销内容的模型接入与配置：广告营销营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 广告营销、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

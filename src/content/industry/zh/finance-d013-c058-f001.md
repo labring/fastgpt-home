@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的HTTP 接口与外部系统
-meta_description: 小金属融资日报的数据来源为国内有色金属行业协会的每日行业统计、期货交易所融资融券持仓公开数据，以及现货交易平台的每日成交与融资数据。数据更新节奏为每日凌晨1
+meta_description: 小金属融资日报的HTTP 接口与外部系统：小金属融资日报的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 小金属、融资日报、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

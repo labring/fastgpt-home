@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行智能尽调报告的HTTP 接口与外部系统
-meta_description: 数据主要来自国有大行内部信贷管理系统、人行征信接口、监管报送数据库及公开披露的年度财报。更新节奏为单户尽调报告生成后按需同步，存量客户数据按固定周期批量更新
+meta_description: 国有大行智能尽调报告的HTTP 接口与外部系统：国有大行智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 国有大行、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

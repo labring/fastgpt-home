@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的知识库检索与召回
-meta_description: 纺织制造的知识库数据主要来源于内部工艺规程、面料成分检测报告、营销话术库、展会宣传素材与客户定制需求文档，常被金融机构用于面向纺织制造企业的理财或保险营销内
+meta_description: 纺织制造营销内容的知识库检索与召回：纺织制造营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 纺织制造、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

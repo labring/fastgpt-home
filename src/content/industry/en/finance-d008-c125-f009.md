@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Aerospace Equipment
-meta_description: Data for aerospace equipment due diligence is sourced from public national defense and aerospace industry standards, official model development
+meta_description: Citation Sources and Traceability for Aerospace Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -33,7 +33,7 @@ Fields include dedicated units. Traceability must retain full unit information t
 | `Segment Length` | `1500–2000 characters` | Preserves contextual integrity of aerospace professional terminology, and avoids losing parameter association logic after splitting |
 | `Recall Count` | `Top 8` | Covers multi-dimensional data required for aerospace due diligence, including model parameters, test records, and supply chain information |
 | `Similarity Threshold` | `0.75` | Filters irrelevant documents from the same product series, and ensures recall results are strongly associated with the target due diligence object |
-| `Citation Source Display Fields` | `file name, document version, classification marking, {{id}}` | Meets core compliance traceability requirements for aerospace documents. {{id}} is used to link the unique identifier of each recalled entry, enabling subsequent cross-verification |
+| `Citation Source Display Fields` | `file name, document version, classification marking, example value` | Meets core compliance traceability requirements for aerospace documents. example value is used to link the unique identifier of each recalled entry, enabling subsequent cross-verification |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume and business rules. Specific issues require targeted analysis. It is recommended to test against your own samples before finalizing settings.
 
@@ -44,7 +44,7 @@ Fields include dedicated units. Traceability must retain full unit information t
 
 ## How to verify successful configuration
 - Upload a single aerospace equipment document under 200 MB, and confirm the interface returns a `parse_success` status with no timeout or parsing failure prompts.
-- Submit a due diligence query for a specific aerospace model, and review the source annotations of citation results. Confirm that the results include file name, document version, classification marking, and the unique {{id}} identifier.
+- Submit a due diligence query for a specific aerospace model, and review the source annotations of citation results. Confirm that the results include file name, document version, classification marking, and the unique example value identifier.
 - Enter the conversation component configuration page, switch to variable reference mode, and confirm that an editable input box for the temperature parameter appears.
 - Upload two duplicate documents for the same model. Wait for synchronization to complete, then check that the number of documents for that model in the knowledge base is one. Confirm that automatic deduplication is active.
 

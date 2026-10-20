@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险财报分析的模型接入与配置
-meta_description: 保险财报的数据来源包含保险公司自主披露的年度、季度财务报告，以及监管机构发布的行业公开披露数据。更新节奏以年度报告为主，辅以季度报告与临时公告。单份文档结构
+meta_description: 保险财报分析的模型接入与配置：保险财报分析的模型接入与配置，涵盖配置与验证建议。
 keywords: 保险、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

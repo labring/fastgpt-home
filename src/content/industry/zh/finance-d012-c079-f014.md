@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 普钢营销内容的表单与交互
-meta_description: 普钢的数据源主要来自钢厂内部ERP系统、大宗商品现货交易平台及仓储物流管理系统。数据更新节奏存在差异：现货成交价格每日更新，库存余量按班次或每日更新，钢种牌
+meta_description: 普钢营销内容的表单与交互：普钢营销内容的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 普钢、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

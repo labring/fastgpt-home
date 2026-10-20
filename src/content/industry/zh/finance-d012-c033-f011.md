@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤营销内容的文档解析与分块
-meta_description: 化纤行业的营销文档主要来源于金融机构合作的化纤企业内部产品手册、原料检测报告、下游应用案例集与行业标准文件，更新节奏随新品上线、工艺调整或行业标准更新触发。
+meta_description: 化纤营销内容的文档解析与分块：化纤营销内容的文档解析与分块，涵盖配置与验证建议。
 keywords: 化纤、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

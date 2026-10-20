@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤营销内容的HTTP 接口与外部系统
-meta_description: 动力煤营销相关的数据主要来自国内沿海港口现货平台、产地监管统计系统与第三方大宗商品交易接口。数据更新节奏为每日1次全量更新，部分实时成交数据每小时更新。文档
+meta_description: 动力煤营销内容的HTTP 接口与外部系统：动力煤营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 动力煤、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

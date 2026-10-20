@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备智能尽调报告的工作流编排
-meta_description: 电网设备数据主要来自设备出厂质检档案、电网运维巡检台账、在线监测系统及行业设备档案库。静态档案如出厂参数随设备投产更新一次，运维巡检数据按每日或每周频次同步
+meta_description: 电网设备智能尽调报告的工作流编排：电网设备智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 电网设备、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

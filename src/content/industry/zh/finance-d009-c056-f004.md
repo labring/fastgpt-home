@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品研报检索的向量模型与索引
-meta_description: 家居用品研报的数据来源包括公开券商轻工制造行业研报、家居品牌年度报告、行业协会公开统计资料。更新节奏随行业动态、财报周期不定期更新，部分细分品类报告随新品发
+meta_description: 家居用品研报检索的向量模型与索引：家居用品研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 家居用品、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

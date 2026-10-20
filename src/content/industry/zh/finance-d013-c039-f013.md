@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器融资日报的知识库检索与召回
-meta_description: 厨卫电器融资日报的数据来源为公开企业融资公告、行业媒体融资动态汇总及证券交易所披露文件。更新节奏为每日同步当日披露的融资信息，每周生成当周全品类融资汇总文档
+meta_description: 厨卫电器融资日报的知识库检索与召回：厨卫电器融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 厨卫电器、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

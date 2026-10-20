@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件收益率的分享与嵌入
-meta_description: 汽车零部件板块的行情与收益率数据，来源为国内证券交易所披露的上市企业公开交易数据、行业细分指数的官方统计结果。更新节奏为每个交易日收盘后同步更新，非交易日无
+meta_description: 汽车零部件收益率的分享与嵌入：汽车零部件收益率的分享与嵌入，涵盖配置与验证建议。
 keywords: 汽车零部件、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

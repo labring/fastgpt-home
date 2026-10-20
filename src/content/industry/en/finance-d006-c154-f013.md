@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c154-f013
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Knowledge Base Retrieval and Recall for Jewelry Research and
-meta_description: Data for jewelry research and investment knowledge bases comes from brand official product specification documents, supply chain raw material test
+meta_title: Knowledge Base Retrieval and Recall for Jewelry Research
+meta_description: Knowledge Base Retrieval and Recall for Jewelry Research and Investment Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

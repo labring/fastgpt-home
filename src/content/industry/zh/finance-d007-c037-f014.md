@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的表单与交互
-meta_description: 该品类的数据来源于卫星测控中心的地面站下行采集数据，以及卫星运营商的运维后台日志。更新节奏分为每日全量汇总的收益率日报，与每15分钟刷新的链路状态快照。文档
+meta_description: 卫星通信收益率的表单与交互：卫星通信收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 卫星通信、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

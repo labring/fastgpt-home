@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 用量统计一体化 AI 平台的数据库与运维
-meta_description: 该品类的数据来源为一体化AI平台的应用调用日志、向量检索命中记录、资源占用上报接口。数据更新节奏分为实时明细与定时聚合两类，实时明细随每一次应用调用即时写入
+meta_description: 用量统计一体化 AI 平台的数据库与运维：用量统计一体化 AI 平台的数据库与运维，涵盖配置与验证建议
 keywords: 用量统计、一体化 AI 平台与多应用编排、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

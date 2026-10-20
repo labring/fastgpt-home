@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属财报分析的HTTP 接口与外部系统
-meta_description: 小金属财报数据主要来自国内证券交易所与境外主流交易所的公开披露、有色金属行业协会发布的行业监测报告，以及第三方专业资讯平台的整理数据。更新节奏覆盖年度、季度
+meta_description: 小金属财报分析的HTTP 接口与外部系统：小金属财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 小金属、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Duty-Free Yield Rates
-meta_description: Data related to duty-free yield rates comes primarily from duty-free operator POS sales systems, customs offshore duty-free supervision platforms, and
+meta_description: Database and Operations for Duty-Free Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

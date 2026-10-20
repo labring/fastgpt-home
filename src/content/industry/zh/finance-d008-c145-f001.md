@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备智能尽调报告的HTTP 接口与外部系统
-meta_description: 通信设备智能尽调报告的数据来源包含运营商运维管理系统、设备SNMP采集接口、第三方通信设备运维平台。数据分为配置类元数据与运行状态、告警类实时数据两类，配置
+meta_description: 通信设备智能尽调报告的HTTP 接口与外部系统：通信设备智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 通信设备、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

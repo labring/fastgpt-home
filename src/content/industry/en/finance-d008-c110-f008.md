@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Grid Equipment Intelligent Due
-meta_description: Core data sources for grid equipment include real-time operating data from grid dispatch SCADA systems, equipment factory ledger archives, operation
+meta_description: Tool Calling and Plugins for Grid Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

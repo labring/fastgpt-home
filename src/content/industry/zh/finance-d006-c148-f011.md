@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮投研知识库建设的文档解析与分块
-meta_description: 酒店餐饮投研的数据来源包含行业分析报告、单店运营台账、供应链采购价目表、OTA平台客流与营收数据、餐饮卫生监管政策文件等。数据更新节奏差异明显：行业报告按季
+meta_description: 酒店餐饮投研知识库建设的文档解析与分块：酒店餐饮投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 酒店餐饮、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤融资日报的知识库检索与召回
-meta_description: 动力煤融资日报的数据来自全国煤炭交易中心公开台账、北方港口现货交易记录、期货交易所交割日报，更新频率为每日16:00至18:00集中发布单份文档。单份文档篇
+meta_description: 动力煤融资日报的知识库检索与召回：动力煤融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 动力煤、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Thermal Coal Financial
-meta_description: Data sources for thermal coal financial reports include monthly supply and demand reports from coal industry associations, quarterly annual reports of
+meta_description: Document Parsing and Chunking for Thermal Coal Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for Product Consultation
-meta_description: Product consultation-related data primarily comes from official financial product manuals, internal customer service question-and-answer repositories
+meta_description: Document Parsing and Chunking for Product Consultation Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

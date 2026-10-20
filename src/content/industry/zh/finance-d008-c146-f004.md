@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备智能尽调报告的向量模型与索引
-meta_description: 通用设备智能尽调的数据来源包括厂商出厂技术手册、设备运维台账、行业第三方检测报告、招投标设备配置清单。更新节奏以单台设备为单元，常规通用设备如泵、压缩机的运
+meta_description: 通用设备智能尽调报告的向量模型与索引：通用设备智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 通用设备、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

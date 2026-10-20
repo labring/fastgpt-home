@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c020-f002
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Context and Token for Ordnance Equipment Investment Research
-meta_description: Ordnance equipment investment research data primarily comes from public annual reports of military industrial groups, weapon equipment type approval
+meta_title: Context and Token for Ordnance Equipment Investment
+meta_description: Context and Token for Ordnance Equipment Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

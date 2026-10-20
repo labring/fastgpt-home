@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Optical
-meta_description: Public data for optical modules comes primarily from official specification documents of communications equipment manufacturers, communications
+meta_description: Multi-turn Dialogue and Prompt Engineering for Optical Module Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

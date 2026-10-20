@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流财报分析的文档解析与分块
-meta_description: 物流行业财报数据主要来自上市物流企业的季度、年度公开财报，以及企业内部运营分析报告。数据更新节奏为季度、年度定期更新，部分干线物流企业会发布月度运营快报。文
+meta_description: 物流财报分析的文档解析与分块：物流财报分析的文档解析与分块，涵盖配置与验证建议。
 keywords: 物流、财报分析与报告生成、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

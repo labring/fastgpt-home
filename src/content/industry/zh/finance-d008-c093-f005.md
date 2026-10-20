@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏智能尽调报告的多轮对话与提示词
-meta_description: 游戏智能尽调报告的数据主要来源于国家新闻出版署版号备案数据库、游戏厂商公开的月度营收报表、第三方用户行为分析机构的调研数据、合规监管部门的公示信息。更新节奏
+meta_description: 游戏智能尽调报告的多轮对话与提示词：游戏智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 游戏、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

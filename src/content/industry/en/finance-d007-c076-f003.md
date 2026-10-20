@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c076-f003
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Share and Embed for Cultural and Entertainment Product Yield
-meta_description: Cultural and entertainment product market and yield data comes primarily from public second-hand trading platforms, official brand inventory reports
+meta_title: Share and Embed for Cultural and Entertainment Product
+meta_description: Share and Embed for Cultural and Entertainment Product Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Footwear Smart Due Diligence
-meta_description: Data for footwear smart due diligence reports comes primarily from supply chain traceability systems, test documents issued by third-party quality
+meta_description: Vector Models and Indexing for Footwear Smart Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

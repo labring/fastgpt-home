@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤收益率的多轮对话与提示词
-meta_description: 焦煤的行情与收益率数据主要来自大连商品交易所公开交易数据及国内煤炭行业监测机构的现货报价。日内盘口数据每5分钟更新一次，主力合约的日度结算、收益率数据于每日
+meta_description: 焦煤收益率的多轮对话与提示词：焦煤收益率的多轮对话与提示词，涵盖配置与验证建议。
 keywords: 焦煤、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

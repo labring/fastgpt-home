@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类投研知识库建设的数据库与运维
-meta_description: 鞋类投研数据来源包括品牌方公开的供应链文档、主流电商平台的鞋类销售排行、第三方质检机构的公开报告、行业协会发布的季度品类趋势文档。单款鞋的基础参数（如鞋长、
+meta_description: 鞋类投研知识库建设的数据库与运维：鞋类投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 鞋类、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

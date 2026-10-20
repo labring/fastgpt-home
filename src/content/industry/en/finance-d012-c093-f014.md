@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Gaming Marketing Content
-meta_description: Gaming marketing content data in the finance, insurance and wealth management field comes primarily from four sources: mini-game user behavior logs
+meta_description: Forms and Interactions for Gaming Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

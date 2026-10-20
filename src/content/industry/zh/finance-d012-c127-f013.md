@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的知识库检索与召回
-meta_description: 本场景服务于金融行业的航空装备营销与获客需求，其核心数据为航空装备自身的相关资料。数据源主要包括整机设计规范文档、试飞验证报告、备件规格手册、官方营销宣传物
+meta_description: 航空装备营销内容的知识库检索与召回：航空装备营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 航空装备、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

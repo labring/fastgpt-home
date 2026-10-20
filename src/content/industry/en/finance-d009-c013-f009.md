@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c013-f009
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Insurance Research Report Retrieval: Source Citation and
-meta_description: Insurance research report data mainly comes from public disclosure documents of industry self-regulatory organizations, regular solvency reports of
+meta_title: Insurance Research Report Retrieval: Source Citation
+meta_description: Insurance Research Report Retrieval: Source Citation and Traceability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

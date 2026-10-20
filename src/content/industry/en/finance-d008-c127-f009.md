@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Aerospace Equipment
-meta_description: Aerospace equipment data sources mainly include public national military standard documents, civil aviation airworthiness certification reports
+meta_description: Citation Sources and Traceability for Aerospace Equipment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -31,7 +31,7 @@ Fourth, single documents are lengthy. It is necessary to accurately locate speci
 | `Recall Count` | `Top 8-12` | Aerospace equipment data has many entries and high precision requirements. Too many recalls will introduce irrelevant content, while too few will fail to cover core parameters |
 | `Similarity Threshold` | `0.75-0.85` | Aerospace equipment parameters are unique. This range filters low-match irrelevant documents while retaining accurately matched valid content |
 | `Segment Length` | `800-1200 characters` | Aerospace equipment documents have clear chapter structures. This segment length adapts to core parameter paragraphs within chapters and avoids splitting critical information |
-| `Citation Content Template` | `{content} (Source: {sourceName}, Chapter: {chapter}, Update Time: {updateTime})` | Must fully mark the source document, affiliated chapter, and update time of the cited content to meet the traceability compliance requirements of due diligence reports |
+| `Traceability details` | `{content} (Source: {sourceName}, Chapter: {chapter}, Update Time: {updateTime})` | Must fully mark the source document, affiliated chapter, and update time of the cited content to meet the traceability compliance requirements of due diligence reports |
 | `Knowledge Base Metadata Extraction Rules` | Extract `chapter`, `updateTime`, `sourceName` fields | Chapter numbers and update times of aerospace equipment documents are core metadata for traceability, which must be automatically bound during parsing |
 
 > The parameter values provided on this page are conventional recommendations used to set starting points for configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require specific analysis, and it is recommended to test on your own samples before finalizing settings.

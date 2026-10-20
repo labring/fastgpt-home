@@ -4,8 +4,8 @@ slug: /en/industry/finance-d005-c135-f005
 page_type: Industry scenario page
 article_section: Customer Service and Account Enquiries
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Account Issue
-meta_description: Account issue-related data primarily comes from core account business systems, transaction ledger databases, and user historical support ticket
+meta_title: Multi-turn Dialogue and Prompt Engineering for Account
+meta_description: Multi-turn Dialogue and Prompt Engineering for Account Issue Customer Service
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

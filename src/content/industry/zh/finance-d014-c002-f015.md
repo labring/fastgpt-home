@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业服务财报分析的部署与升级
-meta_description: 专业服务场景的财报数据主要来自境内外证券交易所官方披露平台、经审计的上市公司正式公告原文。数据更新严格遵循固定披露周期，A股年报需在年度结束后4个月内发布，
+meta_description: 专业服务财报分析的部署与升级：专业服务财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 专业服务、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

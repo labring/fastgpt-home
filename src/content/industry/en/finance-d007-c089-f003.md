@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Oil and Gas Extraction Yield Data
-meta_description: Data sources for oil and gas extraction yield data primarily come from industry association public statistics, oil and gas field production management
+meta_description: Sharing and Embedding of Oil and Gas Extraction Yield Data
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

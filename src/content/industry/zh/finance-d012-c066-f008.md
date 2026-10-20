@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的工具调用与插件
-meta_description: 房建工程相关的金融营销数据主要来源于合作房建企业的项目备案系统、施工日志台账、建材供应商报价库、招投标文件与项目效果图素材，同时包含金融机构的风控台账与产品
+meta_description: 房建工程营销内容的工具调用与插件：房建工程营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Residential Development
-meta_description: Residential development scenario data includes two categories: structured and unstructured.
+meta_description: Model Access and Configuration for Residential Development Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

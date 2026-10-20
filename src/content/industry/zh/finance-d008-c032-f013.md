@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料智能尽调报告的知识库检索与召回
-meta_description: 化学原料相关数据主要来源于行业协会公开报告、生产企业质检报告、化学品安全技术说明书（MSDS）、海关进出口统计、国家标准与行业标准文档。数据更新节奏因来源不
+meta_description: 化学原料智能尽调报告的知识库检索与召回：化学原料智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 化学原料、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Failed Bid Item
-meta_description: Data related to failed bid item bidding is sourced from government procurement public service platforms, industry bidding portal websites, and
+meta_description: Knowledge Base Retrieval and Recall for Failed Bid Item Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

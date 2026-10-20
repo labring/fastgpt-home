@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险投研知识库建设的模型接入与配置
-meta_description: 保险投研的数据来源包括银保监会监管公告、保险公司季度偿付能力报告、产品精算说明书、再保险合约条款、行业协会统计数据及市场定价报告。数据更新节奏不均：监管公告
+meta_description: 保险投研知识库建设的模型接入与配置：保险投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 保险、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

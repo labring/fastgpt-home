@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏研报检索的文档解析与分块
-meta_description: 光伏行业研报主要来自券商研究所、行业协会、上市公司定期公告及政策文件。更新节奏随行业事件、季度财报、政策发布不定期调整，月度跟踪类研报更新频率较高。文档通常
+meta_description: 光伏研报检索的文档解析与分块：光伏研报检索的文档解析与分块，涵盖配置与验证建议。
 keywords: 光伏、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

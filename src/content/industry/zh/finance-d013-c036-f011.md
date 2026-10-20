@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体融资日报的文档解析与分块
-meta_description: 半导体融资日报的数据来源为国内半导体行业协会公开披露文件、券商每日融资跟踪报告、沪深北交易所上市企业公告；更新节奏为每日18点前更新当日及前一日的半导体领域
+meta_description: 半导体融资日报的文档解析与分块：半导体融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 半导体、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

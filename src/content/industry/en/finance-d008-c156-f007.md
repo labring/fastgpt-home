@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Black Home Appliance Intelligent
-meta_description: Due diligence data for black home appliances comes primarily from brand official parameter manuals, e-commerce platform product detail pages
+meta_description: Workflow Orchestration for Black Home Appliance Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Inconsistent field units require adding a parameter standardization node to auto
 | `multi_source_sync_interval` | `86400 seconds` | Regular parameter updates for black home appliances occur at low frequency. Daily synchronization covers the latest data |
 | `chunk_size` | `800-1200 characters` | Black home appliance parameter documents are mostly structured tables. This segment length preserves field integrity |
 | `filter_invalid_field` | `Enabled` | Automatically filter documents missing core parameters, reducing invalid data entering subsequent processes |
-| `tool_call_q_param_template` | `{{query.split("型号：")[1]}}` | Extract model information from user queries as the `q` parameter for tool calls, supporting precise queries in due diligence scenarios |
+| `tool_call_q_param_template` | `example value` | Extract model information from user queries as the `q` parameter for tool calls, supporting precise queries in due diligence scenarios |
 | `loop_exit_condition` | `Match specified model field` | When pulling data for multiple models, terminate the loop early after obtaining target model data |
 
 > The parameter values provided on this page are common recommendations for starting point configuration. Actual values are affected by material form, data volume, and business rules. Specific issues require case-by-case analysis, and it is recommended to test on your own samples before finalizing settings.

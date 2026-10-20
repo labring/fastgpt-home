@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Feed Profitability
-meta_description: Feed profitability-related data is sourced from three primary locations: the Feed Monitoring System under the Ministry of Agriculture and Rural
+meta_description: Deployment and Upgrade for Feed Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

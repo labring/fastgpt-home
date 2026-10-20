@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Textile Manufacturing
-meta_description: Data for textile manufacturing financing daily reports comes primarily from public bidding announcements, bank credit publicity notices, information
+meta_description: Citation Sources and Traceability for Textile Manufacturing Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ Decentralized data sources require configuring multi-source recall rules to avoi
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing.
 
 ## Three Common Configuration Mistakes
-- Phenomenon: When using the `{{id}}` variable to configure the traceability template, the unique identifier of the financing project cannot be correctly associated. Cause: The traceability anchor field is not set to `project_approval_no`, causing the default id field called by the template to not match the actual project unique identifier.
+- Phenomenon: When using the `example value` variable to configure the traceability template, the unique identifier of the financing project cannot be correctly associated. Cause: The traceability anchor field is not set to `project_approval_no`, causing the default id field called by the template to not match the actual project unique identifier.
 - Phenomenon: Non-same-day disclosed financing projects appear in the recall results. Cause: The recall time window is configured to less than 24 hours, or the same-day data filtering rule is not enabled.
 - Phenomenon: The same financing project recalled from multiple channels appears repeatedly in the traceability list. Cause: The multi-source merge strategy is not configured, or the merge strategy does not select deduplication and retain the latest version.
 

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Document Parsing and Chunking for E-commerce Service
-meta_description: E-commerce service financing daily report data comes primarily from e-commerce platform merchant operation APIs, financing business detail files from
+meta_description: Document Parsing and Chunking for E-commerce Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

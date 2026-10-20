@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程研报检索的工作流编排
-meta_description: 基建工程研报及关联数据来源包括住建部门官方项目备案公示、交通水利行业招标公告、券商建筑行业研报、工程咨询专项报告。官方公示文档多为结构化格式，包含项目编号、
+meta_description: 基建工程研报检索的工作流编排：基建工程研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 基建工程、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

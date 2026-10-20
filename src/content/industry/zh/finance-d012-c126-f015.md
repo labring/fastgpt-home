@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场营销内容的部署与升级
-meta_description: 金融/保险/理财行业在航空机场的营销相关数据，来自金融机构的产品物料库、航空机场的运营管理系统。数据更新节奏分为两类：机场客流与广告位数据每15分钟更新一次
+meta_description: 航空机场营销内容的部署与升级：航空机场营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 航空机场、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备研报检索的工作流编排
-meta_description: 兵器装备研报的数据来源涵盖国防军工行业公开报告、兵器装备研发单位的公开技术文档、防务展会发布的官方资料以及行业协会的定期通报。更新节奏随防务项目节点、行业会
+meta_description: 兵器装备研报检索的工作流编排：兵器装备研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 兵器装备、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

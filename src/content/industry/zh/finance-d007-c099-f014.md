@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气收益率的表单与交互
-meta_description: 这个品类的数据主要来自区域燃气交易中心的公开报价、国家能源局地方监管机构的行业监测数据，以及上游燃气供应商的每日结算数据。更新节奏为每日固定时段同步前一交易
+meta_description: 燃气收益率的表单与交互：燃气收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 燃气、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

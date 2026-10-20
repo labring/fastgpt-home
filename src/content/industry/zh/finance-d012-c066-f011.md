@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 房建工程营销内容的文档解析与分块
-meta_description: 房建工程的营销文档主要来源于项目标书、施工方案、建材报价单、项目宣传册与竣工报告等。文档更新节奏随项目推进调整，中标、新物料上线或方案调整时会触发更新。多数
+meta_description: 房建工程营销内容的文档解析与分块：房建工程营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 房建工程、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

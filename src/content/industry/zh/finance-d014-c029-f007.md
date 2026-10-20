@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷财报分析的工作流编排
-meta_description: 包装印刷行业的财报数据主要来源于国内沪深交易所公开披露的上市公司定期报告、金融终端收录的产业调研数据。数据更新节奏遵循固定披露周期：季度报告于会计季度结束后
+meta_description: 包装印刷财报分析的工作流编排：包装印刷财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 包装印刷、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

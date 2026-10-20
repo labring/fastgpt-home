@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器营销内容的知识库检索与召回
-meta_description: 厨卫电器的知识库数据来源包括合作品牌的官方产品参数库、金融机构的营销素材库、售后归档文档与合规标准文件。数据更新随合作品牌新品发布、家装营销活动调整及能效合
+meta_description: 厨卫电器营销内容的知识库检索与召回：厨卫电器营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 厨卫电器、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁智能尽调报告的文档解析与分块
-meta_description: 融资租赁尽调数据主要来源于承租人经营财报、央行征信报告、正式租赁合同、设备购置发票及对公银行流水。数据更新节奏随项目推进按需触发，单次尽调文档包含多页结构化
+meta_description: 融资租赁智能尽调报告的文档解析与分块：融资租赁智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 融资租赁、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

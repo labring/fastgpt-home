@@ -4,8 +4,8 @@ slug: /en/industry/finance-d009-c076-f012
 page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Cultural and
-meta_description: The data for cultural and entertainment products research reports comes primarily from publicly available light manufacturing industry research
+meta_title: Model Integration and Configuration for Cultural
+meta_description: Model Integration and Configuration for Cultural and Entertainment Products Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

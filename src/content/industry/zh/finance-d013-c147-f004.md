@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 造纸融资日报的向量模型与索引
-meta_description: 造纸融资日报的数据来源为行业自律组织的公开报送数据、上市企业公开披露的融资公告、大宗商品交易平台的质押融资公示信息。更新节奏为自然日更新，每日生成当日全市场
+meta_description: 造纸融资日报的向量模型与索引：造纸融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 造纸、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

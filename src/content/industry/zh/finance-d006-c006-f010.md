@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药投研知识库建设的数据库与运维
-meta_description: 中药投研数据来源包括国家药典委员会发布的法定标准、各省市中药炮制规范、公开的中药成分检测数据库、临床循证文献、产地溯源质检报告。更新节奏上，法定标准每5年左
+meta_description: 中药投研知识库建设的数据库与运维：中药投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 中药、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

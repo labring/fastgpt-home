@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气智能尽调报告的部署与升级
-meta_description: 燃气智能尽调报告的数据主要来自燃气运营企业的管网GIS台账、月度用气负荷报表、安全检查合规文件、上游供气合同及监管公示信息。数据更新节奏分为固定周期（月度运
+meta_description: 燃气智能尽调报告的部署与升级：燃气智能尽调报告的部署与升级，涵盖配置与验证建议。
 keywords: 燃气、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

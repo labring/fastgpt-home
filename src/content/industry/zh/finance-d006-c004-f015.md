@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备投研知识库建设的部署与升级
-meta_description: 专用设备投研数据主要来自设备出厂技术手册、现场运行日志、定期维保报告、行业合规标准文档与供应商更新的技术白皮书。静态数据如额定功率、额定转速等长期不变，运行
+meta_description: 专用设备投研知识库建设的部署与升级：专用设备投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 专用设备、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c111-f005
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Livestock and
-meta_description: Data sources for livestock and poultry farming profitability and market trend daily reports include national livestock industry monitoring platforms
+meta_title: Multi-turn Dialogue and Prompt Engineering for Livestock
+meta_description: Multi-turn Dialogue and Prompt Engineering for Livestock and Poultry Farming Profitability
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

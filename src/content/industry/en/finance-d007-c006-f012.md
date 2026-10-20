@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Traditional Chinese
-meta_description: Data sources include professional Chinese herbal medicine circulation monitoring platforms, national Chinese herbal medicine price index systems, and
+meta_description: Model Access and Configuration for Traditional Chinese Medicine Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

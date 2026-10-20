@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医美融资日报的知识库检索与召回
-meta_description: 医美融资日报的数据来源为公开融资披露文件、行业第三方监测数据库。更新节奏为每日更新，覆盖当日及近7日的医美赛道融资事件。单条记录的文档结构包含融资主体名称、
+meta_description: 医美融资日报的知识库检索与召回：医美融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 医美、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车融资日报的多轮对话与提示词
-meta_description: 整车融资日报的数据来源于车企供应链金融系统、合作银行授信台账、经销商融资报备平台。数据更新节奏为每日凌晨完成前一日全量数据同步，生成当日专属日报文档。文档结
+meta_description: 整车融资日报的多轮对话与提示词：整车融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 整车、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

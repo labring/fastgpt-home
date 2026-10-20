@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药研报检索的工具调用与插件
-meta_description: 金融场景下的化学制药研报数据主要来源于金融机构投研数据库、药企公开研发文档、CDE审批公示文件、专业医药数据库及同行评议文献。更新节奏随事件触发，CDE审批
+meta_description: 化学制药研报检索的工具调用与插件：化学制药研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 化学制药、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

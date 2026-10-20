@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备融资日报的文档解析与分块
-meta_description: 通用设备融资日报的数据主要来源于企业ERP系统导出的采购台账、融资租赁机构的业务系统报表，以及行业监测平台的汇总数据。更新节奏为每日更新当日新增的融资业务条
+meta_description: 通用设备融资日报的文档解析与分块：通用设备融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 通用设备、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属营销内容的向量模型与索引
-meta_description: 小金属营销内容的数据来源包括有色金属行业协会的月度供需报告、现货交易平台的实时行情数据、生产企业的产品规格书与营销推广文案。更新节奏覆盖每日（现货行情）、每
+meta_description: 小金属营销内容的向量模型与索引：小金属营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 小金属、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

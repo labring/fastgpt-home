@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询研报检索的知识库检索与召回
-meta_description: 工程咨询研报的数据主要来自住建部门公开定额、行业协会发布的技术规范、企业内部项目勘察设计文件、第三方咨询机构的造价分析报告。数据更新节奏差异较大：通用规范类
+meta_description: 工程咨询研报检索的知识库检索与召回：工程咨询研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 工程咨询、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

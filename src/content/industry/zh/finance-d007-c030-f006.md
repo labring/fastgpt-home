@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品收益率的对话日志与审计
-meta_description: 化妆品品类的收益率与行情数据主要来源于品牌内部ERP进销台账、主流电商平台公开销售接口、线下零售终端上报数据。常规场景下每日凌晨更新前一日全渠道的完整销售数
+meta_description: 化妆品收益率的对话日志与审计：化妆品收益率的对话日志与审计，涵盖配置与验证建议。
 keywords: 化妆品、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Engineering
-meta_description: Engineering consulting investment research data comes primarily from project survey reports, construction logs, cost quota documents, bidding
+meta_description: Multi-turn Dialogue and Prompt Engineering for Engineering Consulting Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

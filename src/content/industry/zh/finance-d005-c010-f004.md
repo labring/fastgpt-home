@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产品咨询客户服务的向量模型与索引
-meta_description: 数据主要来自金融机构官方发布的产品说明书、费率调整公告、投保须知、过往客服问答归档及监管公示的产品合规信息。更新节奏随产品迭代调整，新产品上线时批量全量更新
+meta_description: 产品咨询客户服务的向量模型与索引：产品咨询客户服务的向量模型与索引，涵盖配置与验证建议
 keywords: 产品咨询、客户服务与账户咨询、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

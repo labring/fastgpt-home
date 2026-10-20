@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 融资租赁智能尽调报告的引用来源与溯源
-meta_description: 融资租赁尽调报告的数据主要来自工商行政管理部门公示信息、不动产登记中心租赁物权属登记记录、承租人征信报告、双方签署的租赁合同原件扫描件及行业监管公示平台数据
+meta_description: 融资租赁智能尽调报告的引用来源与溯源：融资租赁智能尽调报告的引用来源与溯源，涵盖配置与验证建议
 keywords: 融资租赁、智能尽调报告、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

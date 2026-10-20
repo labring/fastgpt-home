@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Glass Yield Rates
-meta_description: Glass market and yield rate related data is mainly sourced from public quotation APIs of the domestic building materials circulation association and
+meta_description: Model Integration and Configuration for Glass Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

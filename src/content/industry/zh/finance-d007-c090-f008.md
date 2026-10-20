@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 涂料油墨收益率的工具调用与插件
-meta_description: 涂料油墨品类的行情收益率数据，主要来源于中国涂料工业协会公开监测数据库、全国化工品现货交易市场的官方报价接口。数据更新节奏为每个工作日16:00后完成当日全
+meta_description: 涂料油墨收益率的工具调用与插件：涂料油墨收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 涂料油墨、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

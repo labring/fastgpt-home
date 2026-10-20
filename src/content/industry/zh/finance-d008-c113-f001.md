@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白酒智能尽调报告的HTTP 接口与外部系统
-meta_description: 白酒尽调数据主要来自中国酒业协会公开统计、上市酒企季度财报、头部酒厂官方披露的产能与酒体参数、第三方酒类检测机构的理化检测报告、主流电商平台的商品详情与销量
+meta_description: 白酒智能尽调报告的HTTP 接口与外部系统：白酒智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白酒、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

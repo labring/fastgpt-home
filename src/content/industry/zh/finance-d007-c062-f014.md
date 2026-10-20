@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销收益率的表单与交互
-meta_description: 广告营销收益率的数据源来自广告投放平台后台API、第三方监测工具的导出文件。数据更新节奏为每日固定时段更新前一自然日的全量投放与收益记录。文档采用标准化结构
+meta_description: 广告营销收益率的表单与交互：广告营销收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 广告营销、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭营销内容的知识库检索与召回
-meta_description: 面向金融领域的焦炭相关数据主要来源于国内主要焦炭生产企业的出厂台账、沿海港口的现货交割记录、行业自律组织的月度供需简报、期货交易所的交割仓单数据。更新节奏分
+meta_description: 焦炭营销内容的知识库检索与召回：焦炭营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 焦炭、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

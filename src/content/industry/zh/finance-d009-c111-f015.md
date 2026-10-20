@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的部署与升级
-meta_description: 畜禽养殖研报数据主要来自农业农村部公开监测数据、全国畜牧总站周报、上市养殖企业定期公告及第三方行业调研机构报告。更新节奏覆盖日度出栏存栏动态、周度饲料原料价
+meta_description: 畜禽养殖研报检索的部署与升级：畜禽养殖研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 畜禽养殖、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

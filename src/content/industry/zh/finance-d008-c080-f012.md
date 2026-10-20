@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺智能尽调报告的模型接入与配置
-meta_description: 面向金融机构的服装家纺智能尽调报告，数据来源包括品牌方SKU台账、面辅料采购合同、线下门店销售周报、电商平台商品详情页及第三方质检报告。数据更新节奏以周度或
+meta_description: 服装家纺智能尽调报告的模型接入与配置：服装家纺智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 服装家纺、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭财报分析的知识库检索与召回
-meta_description: 焦炭财报相关数据主要来源于公开披露的上市煤焦企业定期报告、行业协会月度运行简报、焦煤焦炭期货交割库数据。更新节奏存在差异：期货数据按日更新，行业简报按月更新
+meta_description: 焦炭财报分析的知识库检索与召回：焦炭财报分析的知识库检索与召回，涵盖配置与验证建议
 keywords: 焦炭、财报分析与报告生成、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

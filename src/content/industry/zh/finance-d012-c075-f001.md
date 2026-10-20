@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车营销内容的HTTP 接口与外部系统
-meta_description: 汽车金融领域的整车营销内容数据主要来源于车企官方营销中台、经销商活动素材库及广告合规备案系统。更新节奏分为两类：新车上市、合规备案更新为实时触发，常规购车促
+meta_description: 整车营销内容的HTTP 接口与外部系统：整车营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 整车、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

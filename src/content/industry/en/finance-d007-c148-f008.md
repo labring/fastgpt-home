@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Hotel and Catering Revenue
-meta_description: Data related to hotel and catering revenue yield comes from in-store POS cash registers, property management systems (PMS), and third-party business
+meta_description: Tool Calling and Plugins for Hotel and Catering Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

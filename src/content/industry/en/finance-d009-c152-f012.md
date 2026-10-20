@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Footwear Industry
-meta_description: Sources of footwear industry research reports include quarterly analyses released by domestic footwear industry associations, public financial reports
+meta_description: Model Access and Configuration for Footwear Industry Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品融资日报的工具调用与插件
-meta_description: 乳制品融资日报的数据主要来自全国乳制品工业协会公开监测信息、企业工商融资披露公告、行业垂直媒体发布的融资事件报道。更新节奏为每日更新，覆盖当日披露的乳制品全
+meta_description: 乳制品融资日报的工具调用与插件：乳制品融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 乳制品、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

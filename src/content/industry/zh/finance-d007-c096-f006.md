@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦炭收益率的对话日志与审计
-meta_description: 焦炭的行情与收益率数据来自大宗商品行情数据源，更新节奏为交易日每15分钟推送一次实时报价，每日收盘后生成当日完整汇总文档。文档采用结构化格式，包含合约代码、
+meta_description: 焦炭收益率的对话日志与审计：焦炭收益率的对话日志与审计，涵盖配置与验证建议。。。
 keywords: 焦炭、收益率与行情日报播报、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

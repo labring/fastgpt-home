@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行财报分析的工具调用与插件
-meta_description: 国有大行财报数据来自官方投资者关系平台的公开披露文件，包含年度报告、半年度报告与季度报告。更新节奏为年度报告每年一季度末前披露，半年度报告每年三季度末前披露
+meta_description: 国有大行财报分析的工具调用与插件：国有大行财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 国有大行、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Kitchen and Bathroom Appliance
-meta_description: Due diligence data for kitchen and bathroom appliances comes from official brand specification documents, third-party quality inspection institution
+meta_description: Workflow Orchestration for Kitchen and Bathroom Appliance Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

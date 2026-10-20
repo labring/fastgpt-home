@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 监管办法合规的工具调用与插件
-meta_description: 监管办法类数据主要来自官方监管机构公开公告、行业自律组织正式规范文件。更新节奏随新规发布、修订不定期调整。文档多为章节式结构，包含发文单位、文件文号、生效日
+meta_description: 监管办法合规的工具调用与插件：监管办法合规的工具调用与插件，涵盖配置与验证建议。
 keywords: 监管办法、合规与内部制度问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

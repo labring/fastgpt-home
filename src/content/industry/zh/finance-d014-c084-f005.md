@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水处理财报分析的多轮对话与提示词
-meta_description: 水处理财报的数据来源包含环保部门公开监测数据、企业自行报送的水处理设施运行报表、水务项目的招投标与验收文档。更新节奏分为月度、季度、年度，以及项目周期内的实
+meta_description: 水处理财报分析的多轮对话与提示词：水处理财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水处理、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

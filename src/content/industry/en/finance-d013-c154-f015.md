@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Jewelry Financing Daily Reports
-meta_description: The data sources for jewelry financing daily reports include domestic precious metal spot trading platforms, daily wholesale monitoring data from
+meta_description: Deployment and Upgrade for Jewelry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

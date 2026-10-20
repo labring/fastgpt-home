@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c098-f005
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Multi-turn Dialogue and Prompt Engineering for Coal Chemical
-meta_description: Coal chemical industry-related data mainly comes from enterprise manufacturing execution systems, enterprise resource planning systems, and
+meta_title: Multi-turn Dialogue and Prompt Engineering for Coal
+meta_description: Multi-turn Dialogue and Prompt Engineering for Coal Chemical Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -37,7 +37,7 @@ Marketing content needs to combine specific product parameters. Multi-turn dialo
 ## Three common errors
 - Issue: In a containerized deployment environment, uploading coal chemical production ledgers or sales reports via the conversation window produces no recognition results and no error logs. Cause: The temporary directory required for file parsing was not mounted during containerized deployment. Parsed file data cannot be read.
 - Issue: In the v4.6.9 advanced orchestration flow, after configuring a judgment node, subsequent AI dialogue nodes cannot obtain the initial user question. Cause: The output variable of the judgment node was not bound to the context input parameter of the AI dialogue node.
-- Issue: After configuring a file link variable in the setup, associated marketing material documents cannot be correctly called during dialogue. Cause: The call format for the file link variable was not explicitly specified in the prompt. The model cannot recognize the variable placeholder.
+- Issue: After configuring a file link variable in the setup, associated marketing material documents cannot be correctly called during dialogue. Cause: The call format for the file link variable was not explicitly specified in the prompt. The model cannot recognize the variable pending verification.
 
 ## How to confirm configurations are set correctly
 - Upload a coal chemical production ledger CSV file. Check if the parsed fields include preset parameter types and units. Verify field matching accuracy.

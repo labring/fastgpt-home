@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航运港口研报检索的知识库检索与召回
-meta_description: 航运港口研报数据主要来自行业协会公开报告、券商交运组专项研报、港口官方月度运营披露、国际航运运价指数数据库。更新节奏存在差异：港口吞吐量、箱量数据按周或月度
+meta_description: 航运港口研报检索的知识库检索与召回：航运港口研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 航运港口、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

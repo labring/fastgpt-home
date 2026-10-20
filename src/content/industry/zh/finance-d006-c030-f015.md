@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品投研知识库建设的部署与升级
-meta_description: 化妆品投研数据的数据源包括品牌官方备案公示文件、成分检测原始报告、第三方合规测评文档、电商平台商品详情页存档、行业消费趋势文档。更新节奏随数据源类型调整，品
+meta_description: 化妆品投研知识库建设的部署与升级：化妆品投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 化妆品、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

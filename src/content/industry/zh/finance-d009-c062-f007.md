@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销研报检索的工作流编排
-meta_description: 广告营销研报的数据来源涵盖行业监测平台、广告主投放台账、媒体公开报告及第三方调研机构数据。更新节奏覆盖实时投放数据的日报、渠道表现复盘的周报，以及季度、年度
+meta_description: 广告营销研报检索的工作流编排：广告营销研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 广告营销、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

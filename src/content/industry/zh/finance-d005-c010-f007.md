@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产品咨询客户服务的工作流编排
-meta_description: 该品类的数据来源于机构内部产品管理系统、合规备案文件及官方销售指引物料。更新节奏随产品上架、参数调整、风险评级更新触发，无固定周期。单条产品咨询对应一份结构
+meta_description: 产品咨询客户服务的工作流编排：产品咨询客户服务的工作流编排，涵盖配置与验证建议。
 keywords: 产品咨询、客户服务与账户咨询、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 风电融资日报的文档解析与分块
-meta_description: 风电融资日报的数据主要来源于风电项目的放款凭证、银行授信台账、地方能源局并网公示及项目方融资进度周报，更新频率为每日更新。文档以结构化表格为核心主体，夹杂少
+meta_description: 风电融资日报的文档解析与分块：风电融资日报的文档解析与分块，涵盖配置与验证建议。
 keywords: 风电、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

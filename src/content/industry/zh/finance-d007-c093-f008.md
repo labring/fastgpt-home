@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏收益率的工具调用与插件
-meta_description: 游戏收益率相关数据主要来源于游戏官方运营后台的付费流水接口、第三方游戏数据聚合平台的公开API。更新节奏分为两类：日报类数据为统计周期结束后T+1更新，实时
+meta_description: 游戏收益率的工具调用与插件：游戏收益率的工具调用与插件，涵盖配置与验证建议。。。
 keywords: 游戏、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

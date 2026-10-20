@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流投研知识库建设的多轮对话与提示词
-meta_description: 物流投研的数据来源涵盖港口作业实时台账、干线运输时效报表、仓储库存周转率周报、行业运价指数API接口等。数据更新节奏分为三类：港口动态每15分钟更新一次，仓
+meta_description: 物流投研知识库建设的多轮对话与提示词：物流投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: 物流、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

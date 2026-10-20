@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造融资日报的工作流编排
-meta_description: 纺织制造融资日报数据主要来源于合作银行的对公授信放款系统、区域纺织产业供应链金融平台，以及行业协会的原材料采购融资统计接口。数据更新节奏为每日凌晨同步前一日
+meta_description: 纺织制造融资日报的工作流编排：纺织制造融资日报的工作流编排，涵盖配置与验证建议。
 keywords: 纺织制造、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

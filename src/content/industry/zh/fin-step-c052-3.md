@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c052-3
 page_type: 行业作业环节页
 article_section: 信托
 is_part_of: FastGPT 技术中心
-meta_title: 资产证券化服务信托的持续核对资产池变化、账户余额、触发事件：
-meta_description: 资产证券化服务信托的持续核对资产池变化、账户余额、触发事件：哪一部分能交给系统
+meta_title: 资产证券化服务信托的持续核对资产池变化、账户余额、触发事件：哪一部分能交给系统
+meta_description: 资产证券化服务信托的持续核对资产池变化、账户余额、触发事件：哪一部分能交给系统：资产证券化服务信托的持续核对资产池变化、账户余额、触发事件：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 资产证券化服务信托、信托、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

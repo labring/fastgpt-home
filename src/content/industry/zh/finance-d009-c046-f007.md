@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理研报检索的工作流编排
-meta_description: 固废处理研报数据主要来自生态环境部门官方公开文件、行业协会年度报告、第三方监测机构的专项调研文档。更新节奏分为政策类随发布即时更新，行业技术研报按月更新，项
+meta_description: 固废处理研报检索的工作流编排：固废处理研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 固废处理、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

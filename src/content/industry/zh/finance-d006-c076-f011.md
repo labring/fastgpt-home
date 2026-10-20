@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品投研知识库建设的文档解析与分块
-meta_description: 文娱用品投研数据主要来自行业协会发布的年度报告、厂商公开的财报与产品手册、电商平台的销售监测数据、IP授权合作协议、线下展会的调研记录等。更新节奏以新品上市
+meta_description: 文娱用品投研知识库建设的文档解析与分块：文娱用品投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 文娱用品、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

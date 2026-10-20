@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子融资日报的部署与升级
-meta_description: 军工电子融资日报的数据主要来自上市军工电子企业的定期公告、国防军工行业协会公开披露的投融资动态、地方国防科技产业园的招商公示。数据按工作日更新，当日披露的融
+meta_description: 军工电子融资日报的部署与升级：军工电子融资日报的部署与升级，涵盖配置与验证建议。
 keywords: 军工电子、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

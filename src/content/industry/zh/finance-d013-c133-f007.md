@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券融资日报的工作流编排
-meta_description: 证券融资日报的数据来源为沪深交易所、全国股转系统的公开两融披露文件，以及证券登记结算机构的日终结算数据。更新节奏为每个交易日收盘后1-2小时内发布，非交易日
+meta_description: 证券融资日报的工作流编排：证券融资日报的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 证券、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

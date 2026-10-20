@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 塑料橡胶融资日报的知识库检索与召回
-meta_description: 塑料橡胶融资日报的数据来源包括大宗商品行业资讯平台、期货交易所仓单公示系统、地方金融监管部门的企业融资备案数据。更新节奏为每日更新前一个交易日的全量监测数据
+meta_description: 塑料橡胶融资日报的知识库检索与召回：塑料橡胶融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 塑料橡胶、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

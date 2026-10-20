@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行智能尽调报告的模型接入与配置
-meta_description: 农商行智能尽调报告的数据主要来自内部信贷管理系统的客户授信台账、人行征信查询接口、市场监管主体资质公示信息，以及线下实地尽调采集的经营流水、担保物证明材料。
+meta_description: 农商行智能尽调报告的模型接入与配置：农商行智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 农商行、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

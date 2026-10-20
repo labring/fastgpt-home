@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的HTTP 接口与外部系统
-meta_description: 工程机械研报数据主要来自中国工程机械工业协会公开报告、主机厂官方技术文档、第三方行业数据库。更新节奏以月度行业动态报告、季度市场分析报告为主，年度专项研报为
+meta_description: 工程机械研报检索的HTTP 接口与外部系统：工程机械研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

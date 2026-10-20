@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Coke Financial Report Analysis
-meta_description: Coke-related financial report data mainly comes from monthly industry reports released by the China Coking Industry Association, daily settlement data
+meta_description: Tool Calling and Plugins for Coke Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -37,12 +37,12 @@ In addition, the quarterly nature of financial report data requires that clear t
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material form, data volume and business rules. Specific issues require specific analysis. It is recommended to test on your own samples before finalizing.
 
 ## Three Common Misconfigurations
-- Phenomenon: After configuring `mcp_input_param_template`, input parameter variables are not correctly replaced during invocation, and empty data is returned. Reason: Variables are not wrapped in the `{{var_name}}` format in the template, so the plugin cannot recognize the input parameter placeholders.
+- Phenomenon: After configuring `mcp_input_param_template`, input parameter variables are not correctly replaced during invocation, and empty data is returned. Reason: Variables are not wrapped in the `example value` format in the template, so the plugin cannot recognize the input parameter placeholders.
 - Phenomenon: The large model does not trigger tool calling, and only returns general industry analysis content. Reason: Keywords related to coke financial report analysis (such as "coke spot price", "coking capacity") are not added to the tool trigger word library, or `workflow_tool_split_threshold` is set too high, causing the large model to give priority to using knowledge base content and not calling tools.
 - Phenomenon: The units of results returned by tool calling are inconsistent. Some data is displayed as "yuan" instead of "yuan/ton" as the unit. Reason: Unit mapping in `field_mapping_rule` is not configured, and the plugin directly uses the original field units of the data source, causing the large model to be unable to process data uniformly.
 
 ## How to Verify Proper Configuration
-- Enter the FastGPT tool management page, view the configured MCP plugin, confirm that the variable format of `mcp_input_param_template` conforms to the `{{var_name}}` specification, and there are no syntax errors.
+- Enter the FastGPT tool management page, view the configured MCP plugin, confirm that the variable format of `mcp_input_param_template` conforms to the `example value` specification, and there are no syntax errors.
 - Initiate a test query, specify a clear query date and data type, and check that the field names and units of the returned results are completely consistent with the configured `field_mapping_rule`.
 - Adjust `workflow_tool_split_threshold` to 0.6 and 0.8, initiate test queries respectively, confirm that the probability of tool calling triggering meets expectations, with no over-triggering or under-triggering.
 - View the tool calling logs, confirm that after the `tool_request_timeout` is set, the proportion of timeout errors meets expectations, and the retry mechanism triggers normally.

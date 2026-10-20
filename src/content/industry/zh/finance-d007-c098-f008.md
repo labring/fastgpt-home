@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 煤化工收益率的工具调用与插件
-meta_description: 煤化工收益率与行情数据主要来自煤炭行业监测平台、国内大宗商品交易市场公开报价，以及下游煤化工企业的出厂公示信息。数据更新节奏分为两类：原料端动力煤、焦煤的采
+meta_description: 煤化工收益率的工具调用与插件：煤化工收益率的工具调用与插件，涵盖配置与验证建议。
 keywords: 煤化工、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

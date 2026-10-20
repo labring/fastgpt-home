@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏投研知识库建设的文档解析与分块
-meta_description: 游戏投研数据来源包括游戏厂商公开财报、版号审批公示文件、第三方研报机构的赛道分析文档、游戏平台公开运营数据报表、玩家社区舆情汇总文档。更新节奏覆盖季度/年度
+meta_description: 游戏投研知识库建设的文档解析与分块：游戏投研知识库建设的文档解析与分块，涵盖配置与验证建议
 keywords: 游戏、投研知识库建设与治理、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

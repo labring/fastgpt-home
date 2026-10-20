@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Feed Intelligent Due Diligence
-meta_description: Data sources for feed intelligent due diligence include production management systems of feed production enterprises, test reports from third-party
+meta_description: Workflow Orchestration for Feed Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

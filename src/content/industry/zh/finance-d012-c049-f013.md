@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程营销内容的知识库检索与召回
-meta_description: 基建工程的营销内容数据主要来源于项目投标文件、竣工案例库、区域基建规划公示、定制化营销物料。数据更新节奏随项目节点变动，中标、开工、竣工阶段会同步更新核心参
+meta_description: 基建工程营销内容的知识库检索与召回：基建工程营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 基建工程、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

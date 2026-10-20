@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险融资日报的向量模型与索引
-meta_description: 保险融资日报的数据来源于保险机构内部的承保台账、资金归集记录、融资对接业务表单，每日固定更新。文档以结构化表格为核心主体，附带少量半结构化的业务备注字段，包
+meta_description: 保险融资日报的向量模型与索引：保险融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 保险、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

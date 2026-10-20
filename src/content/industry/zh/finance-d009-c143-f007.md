@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 软件开发研报检索的工作流编排
-meta_description: 金融行业的软件开发研报数据主要来源于金融行业技术数据库、券商金融科技赛道软件工程研报、开源社区技术白皮书及头部金融科技厂商的技术分析文档。数据更新节奏涵盖每
+meta_description: 软件开发研报检索的工作流编排：软件开发研报检索的工作流编排，涵盖配置与验证建议。
 keywords: 软件开发、研报检索与问答、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

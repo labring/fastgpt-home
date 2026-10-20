@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信收益率的部署与升级
-meta_description: 卫星通信收益率与行情数据的来源为卫星地面站运营结算系统、星间链路流量统计模块。日报类数据每日凌晨生成前一日全量报表，实时链路行情数据每15分钟推送一次。文档
+meta_description: 卫星通信收益率的部署与升级：卫星通信收益率的部署与升级，涵盖配置与验证建议。。。
 keywords: 卫星通信、收益率与行情日报播报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

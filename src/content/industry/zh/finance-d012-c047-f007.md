@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行营销内容的工作流编排
-meta_description: 国有大行营销内容的数据主要来源于内部CRM客户管理系统、线下网点营销物料库、手机银行与官方公众号的历史发布素材。数据更新节奏以月度为固定周期，部分紧急营销活
+meta_description: 国有大行营销内容的工作流编排：国有大行营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 国有大行、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

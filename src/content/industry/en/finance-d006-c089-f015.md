@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c089-f015
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Deployment and Upgrade of Oil and Gas Exploration Investment
-meta_description: Oil and gas exploration investment research data for financial investment research mainly comes from drilling operation logs, original well logging
+meta_title: Deployment and Upgrade of Oil and Gas Exploration
+meta_description: Deployment and Upgrade of Oil and Gas Exploration Investment Research Knowledge Base
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务智能尽调报告的模型接入与配置
-meta_description: 综合服务智能尽调报告的数据来源于工商公示系统、征信服务机构、企业公开财报、监管披露文件及内部尽调底稿。数据更新节奏混合，工商信息按季度同步，征信数据按自然日
+meta_description: 综合服务智能尽调报告的模型接入与配置：综合服务智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 综合服务、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

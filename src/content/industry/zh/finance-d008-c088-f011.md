@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程智能尽调报告的文档解析与分块
-meta_description: 油服工程智能尽调报告的数据主要来源于项目招投标文件、现场施工日志、设备运维记录、第三方合规检测报告及成本核算台账。数据更新节奏随项目阶段调整，招投标阶段一次
+meta_description: 油服工程智能尽调报告的文档解析与分块：油服工程智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 油服工程、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

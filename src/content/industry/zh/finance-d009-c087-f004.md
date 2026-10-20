@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车零部件研报检索的向量模型与索引
-meta_description: 汽车零部件研报的数据主要来自行业协会公开数据、主机厂配套公告、券商行业研报、供应链企业披露的公开信息。更新节奏随主机厂新品周期、行业政策变动调整，无固定周期
+meta_description: 汽车零部件研报检索的向量模型与索引：汽车零部件研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 汽车零部件、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

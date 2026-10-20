@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的工具调用与插件
-meta_description: 中药智能尽调报告的数据主要来源于国家药品监督管理局公开数据库、中药材流通追溯公共服务平台、国家药典委员会公开标准文件。数据更新节奏随对应标准修订周期调整，药
+meta_description: 中药智能尽调报告的工具调用与插件：中药智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

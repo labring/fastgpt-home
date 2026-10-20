@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流投研知识库建设的对话日志与审计
-meta_description: 物流投研的数据主要来自干线运单系统、港口舱单平台、供应链节点监控系统、行业运价指数数据库及第三方物流研究报告。数据更新节奏覆盖实时（单条运单状态）、每日（区
+meta_description: 物流投研知识库建设的对话日志与审计：物流投研知识库建设的对话日志与审计，涵盖配置与验证建议
 keywords: 物流、投研知识库建设与治理、对话日志与审计
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

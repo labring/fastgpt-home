@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for White Home Appliance
-meta_description: White home appliance research report data comes from securities firm research institutes, China Household Electrical Appliances Association, offline
+meta_description: Citation Source and Traceability for White Home Appliance Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

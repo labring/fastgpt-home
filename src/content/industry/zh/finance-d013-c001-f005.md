@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务融资日报的多轮对话与提示词
-meta_description: IT服务融资日报的数据来源于公开招投标平台、企业工商披露信息、行业协会备案的融资公告。更新节奏为每日更新，覆盖当日披露的IT服务类企业融资动态。文档结构包含
+meta_description: IT 服务融资日报的多轮对话与提示词：IT 服务融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: IT 服务、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

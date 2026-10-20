@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 交易规则客户服务的文档解析与分块
-meta_description: 交易规则的数据主要来自金融机构官方业务公告、核心业务系统导出的规则文档、监管机构公示的合规文件。更新节奏随监管政策调整、业务流程迭代不定期变动，无固定周期。
+meta_description: 交易规则客户服务的文档解析与分块：交易规则客户服务的文档解析与分块，涵盖配置与验证建议
 keywords: 交易规则、客户服务与账户咨询、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

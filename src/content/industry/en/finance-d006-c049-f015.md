@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade of Infrastructure Engineering
-meta_description: Infrastructure engineering investment research data primarily originates from official design drawings, bidding announcements, weekly or monthly
+meta_description: Deployment and Upgrade of Infrastructure Engineering Investment Research Knowledge Bases
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Sharing and Embedding of Optical Module Yield Rates
-meta_description: Optical module yield rate-related data comes primarily from public industry supply chain monitoring platforms, official vendor price pages, and
+meta_description: Sharing and Embedding of Optical Module Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

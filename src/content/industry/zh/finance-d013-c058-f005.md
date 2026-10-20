@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的多轮对话与提示词
-meta_description: 小金属融资日报的数据主要来自国内有色金属工业协会每日行业统计、上海期货交易所小金属合约交易数据、券商每日行业融资跟踪报告。数据更新节奏为每日收盘后1小时内完
+meta_description: 小金属融资日报的多轮对话与提示词：小金属融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 小金属、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

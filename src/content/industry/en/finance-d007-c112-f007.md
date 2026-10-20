@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for White Goods Profit Margins
-meta_description: Data for white goods profit margins and daily market reports comes from three sources: third-party home appliance retail monitoring databases, brand
+meta_description: Workflow Orchestration for White Goods Profit Margins
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

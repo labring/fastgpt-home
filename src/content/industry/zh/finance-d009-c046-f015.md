@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理研报检索的部署与升级
-meta_description: 面向金融领域的固废处理研报，来源涵盖券商环保板块细分研报、生态环境部门公开监测数据、行业协会专项报告及企业运营环评文件。更新节奏随内容类型区分，全景年度报告
+meta_description: 固废处理研报检索的部署与升级：固废处理研报检索的部署与升级，涵盖配置与验证建议。
 keywords: 固废处理、研报检索与问答、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

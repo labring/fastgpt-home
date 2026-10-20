@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药融资日报的模型接入与配置
-meta_description: 数据来源为公开投融资披露数据库、上市及非上市化学制药企业的官方公告、行业监测机构的每日汇总；更新节奏为每日凌晨更新前一个工作日的融资动态；文档结构为单条记录
+meta_description: 化学制药融资日报的模型接入与配置：化学制药融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 化学制药、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

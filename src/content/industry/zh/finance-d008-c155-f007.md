@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料智能尽调报告的工作流编排
-meta_description: 饲料智能尽调的数据来源包括饲料生产企业的生产管理系统、第三方农牧检测机构的化验报告、畜牧养殖端的投喂记录、行业协会的供应链报备数据。数据更新节奏随来源类型区
+meta_description: 饲料智能尽调报告的工作流编排：饲料智能尽调报告的工作流编排，涵盖配置与验证建议。
 keywords: 饲料、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

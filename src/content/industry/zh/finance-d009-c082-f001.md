@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖研报检索的HTTP 接口与外部系统
-meta_description: 水产养殖研报数据主要来自农业农村部海区监测机构、全国水产技术推广总站、行业协会公开报告及高校水产研究成果，多为金融机构研报的核心数据源之一。更新节奏分为月度
+meta_description: 水产养殖研报检索的HTTP 接口与外部系统：水产养殖研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水产养殖、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

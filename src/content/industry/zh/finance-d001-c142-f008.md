@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 身份证件KYC 的工具调用与插件
-meta_description: 身份证件的数据来源包括用户上传的实体证件扫描件、实拍照片，或政务服务接口返回的结构化核验结果。文档结构分为图像层与结构化字段层，图像层包含人像、证件国徽与版
+meta_description: 身份证件KYC 的工具调用与插件：身份证件KYC 的工具调用与插件，涵盖配置与验证建议
 keywords: 身份证件、KYC 与反洗钱资料核验、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

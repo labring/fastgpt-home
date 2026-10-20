@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Oil and Gas Extraction
-meta_description: Data sources for oil and gas extraction marketing content include exploration reports, drilling operation records, regional reserve assessment
+meta_description: Vector Models and Indexing for Oil and Gas Extraction Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行营销内容的部署与升级
-meta_description: 国有大行的营销内容数据来源为总行品牌部、各分行运营库及合规审核后的宣传物料，更新节奏包含固定营销节点的批量更新与临时政策、公益宣传的即时更新。文档结构分为品
+meta_description: 国有大行营销内容的部署与升级：国有大行营销内容的部署与升级，涵盖配置与验证建议。
 keywords: 国有大行、营销内容与获客、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

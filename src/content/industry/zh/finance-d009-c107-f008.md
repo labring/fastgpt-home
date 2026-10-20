@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力研报检索的工具调用与插件
-meta_description: 电力行业研报的数据源主要包括电力行业协会公开报告、国家能源局官方统计数据、上市电力企业定期财报、第三方能源咨询机构专项分析。更新节奏覆盖周报、月度运营简报、
+meta_description: 电力研报检索的工具调用与插件：电力研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 电力、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 受益所有人KYC 的文档解析与分块
-meta_description: 受益所有人KYC相关数据主要来源于工商登记档案、股权架构披露文件、尽职调查提交的声明文件。数据更新随主体股权变更、实际控制人调整而触发，无固定周期。文档多为
+meta_description: 受益所有人KYC 的文档解析与分块：受益所有人KYC 的文档解析与分块，涵盖配置与验证建议
 keywords: 受益所有人、KYC 与反洗钱资料核验、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

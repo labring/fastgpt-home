@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Residential Development
-meta_description: Data sources for residential development intelligent due diligence reports include official public platforms of land and housing authorities, internal
+meta_description: Model Access and Configuration for Residential Development Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

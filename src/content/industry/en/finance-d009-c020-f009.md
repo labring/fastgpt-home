@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Citation Source and Traceability for Ordnance Equipment
-meta_description: Ordnance equipment research report data comes primarily from professional national defense and military industry research institutions, research
+meta_description: Citation Source and Traceability for Ordnance Equipment Research Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -26,7 +26,7 @@ The multi-source nature of ordnance equipment research reports requires traceabi
 | `Similarity threshold` | 0.72–0.85 | Military terminology has high professionality. A threshold that is too low introduces irrelevant reports. A threshold that is too high may miss associated content from the same category |
 | `PARSE_FILE_TIMEOUT_SECONDS` | 120 seconds | Individual ordnance equipment research reports often contain large numbers of technical charts and parameter tables. Parsing takes extended time |
 | `Chunk size` | 1000–1200 characters | Balances the completeness of professional parameters and context window utilization. Avoids losing equipment model associations after splitting |
-| `Citation Source Template` | `{{source}} | {{publish_date}} | 文档ID:{{id}}` | Matches the standard annotation format for military research report traceability. Clearly displays sources and unique identifiers |
+| `Citation Source Template` | `example value | example value | 文档ID:example value` | Matches the standard annotation format for military research report traceability. Clearly displays sources and unique identifiers |
 | `Rerank result count` | Top 4 entries | Prioritizes the most relevant core equipment analysis content. Reduces screening effort for users during traceability |
 
 > The parameter values provided on this page are common starting points for configuration. Actual values are affected by material format, data volume, and business rules. Analyze specific issues on a case-by-case basis. It is recommended to test against your own samples before finalizing settings.
@@ -34,7 +34,7 @@ The multi-source nature of ordnance equipment research reports requires traceabi
 ## Three Common Mistakes
 - Phenomenon: When batch uploading 100 ordnance equipment research reports, 50% of files show training exceptions, with a 413 status code returned. Cause: Individual reports contain too many high-definition technical charts. This exceeds the default limit of `UPLOAD_FILE_MAX_SIZE`.
 - Phenomenon: After switching the conversation component to variable reference mode, the temperature setting button disappears. Adjusting generation parameters is no longer possible. Cause: Temperature parameters in variable reference mode must be embedded in configuration via the `system_prompt` variable. They cannot be adjusted directly through the interface.
-- Phenomenon: The `{{id}}` field in the citation source template returns a null value. Traceability identifiers cannot be generated. Cause: The "Generate Unique Document ID" configuration option for the knowledge base is not enabled. This causes the field to not be written during parsing.
+- Phenomenon: The `example value` field in the citation source template returns a null value. Traceability identifiers cannot be generated. Cause: The "Generate Unique Document ID" configuration option for the knowledge base is not enabled. This causes the field to not be written during parsing.
 
 ## How to Confirm Proper Configuration
 - Upload a single ordnance equipment research report. View the parsed metadata panel. Confirm that the `publish_date`, `id`, and `source` fields are extracted correctly.

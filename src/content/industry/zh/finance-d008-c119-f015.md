@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务智能尽调报告的部署与升级
-meta_description: 综合服务类智能尽调报告的数据来源覆盖工商公示信息、监管合规文件、企业财报、公开舆情、合作方结构化业务数据及线下尽调底稿等多类渠道。数据更新节奏存在差异：工商
+meta_description: 综合服务智能尽调报告的部署与升级：综合服务智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 综合服务、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

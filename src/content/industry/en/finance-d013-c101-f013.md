@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Logistics Financing
-meta_description: Logistics financing daily report data mostly originates from logistics company waybill systems, cargo right warehouse systems, and partner bank credit
+meta_description: Knowledge Base Retrieval and Recall for Logistics Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

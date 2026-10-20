@@ -4,8 +4,8 @@ slug: /en/industry/finance-d008-c153-f005
 page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
-meta_title: Multiturn Dialogue and Prompt Engineering for Wind Power Due
-meta_description: Wind power due diligence reports draw data from wind farm operation and maintenance logs, real-time SCADA data collected from wind turbines, project
+meta_title: Multiturn Dialogue and Prompt Engineering for Wind Power
+meta_description: Multiturn Dialogue and Prompt Engineering for Wind Power Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

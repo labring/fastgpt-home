@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 保险收益率的表单与交互
-meta_description: 保险产品收益率的数据来自保险公司官方披露的产品说明书、年度精算报告，以及监管机构备案的产品信息。不同险种的更新节奏差异显著，传统保障型产品的固定收益率数据更
+meta_description: 保险收益率的表单与交互：保险收益率的表单与交互，涵盖配置与验证建议。。。。。。。
 keywords: 保险、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

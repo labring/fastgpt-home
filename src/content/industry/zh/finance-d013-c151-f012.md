@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路融资日报的模型接入与配置
-meta_description: 数据来源为交通运输主管部门公开监测数据、铁路运营企业报送的运营报表、公路路网监测平台的实时采集数据。更新节奏为每日固定时间更新前一日的全量数据。文档多为结构
+meta_description: 铁路公路融资日报的模型接入与配置：铁路公路融资日报的模型接入与配置，涵盖配置与验证建议
 keywords: 铁路公路、融资日报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通用设备财报分析的部署与升级
-meta_description: 通用设备行业的财报数据主要来自上市公司公开披露的定期报告、交易所官方披露平台及企业投资者关系板块。更新节奏为季度报告每季度末后1至2个月发布，年度报告于年度
+meta_description: 通用设备财报分析的部署与升级：通用设备财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 通用设备、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

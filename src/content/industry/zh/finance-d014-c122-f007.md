@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行财报分析的工作流编排
-meta_description: 股份制银行财报数据主要来自银保监会官方披露平台、银行官方投资者关系板块、境内证券交易所披露平台。更新节奏固定：年度报告于每年4月30日前披露，半年度报告于每
+meta_description: 股份制银行财报分析的工作流编排：股份制银行财报分析的工作流编排，涵盖配置与验证建议
 keywords: 股份制银行、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的工作流编排
-meta_description: 小金属融资日报的数据主要来自国内专业小金属现货交易平台、海关进出口数据监测机构及金融终端的融资融券模块。数据更新节奏为每日收盘后T+1更新，通常在当日17:
+meta_description: 小金属融资日报的工作流编排：小金属融资日报的工作流编排，涵盖配置与验证建议。。。
 keywords: 小金属、融资日报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

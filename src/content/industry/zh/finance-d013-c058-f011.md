@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属融资日报的文档解析与分块
-meta_description: 小金属融资日报数据来源于行业资讯平台、期货交易所公开披露文件、产业链企业融资公告汇总。更新节奏为每日发布前一交易日的融资交易数据。文档多为docx或pdf格
+meta_description: 小金属融资日报的文档解析与分块：小金属融资日报的文档解析与分块，涵盖配置与验证建议
 keywords: 小金属、融资日报、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

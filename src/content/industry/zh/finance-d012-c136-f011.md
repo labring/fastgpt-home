@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属营销内容的文档解析与分块
-meta_description: 贵金属相关营销与业务数据主要来自上海黄金交易所公开报价、品牌方官方营销物料、行业咨询机构研报三类渠道。实时报价类数据按分钟或小时更新，营销话术、产品手册按需
+meta_description: 贵金属营销内容的文档解析与分块：贵金属营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 贵金属、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

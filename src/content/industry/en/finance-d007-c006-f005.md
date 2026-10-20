@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Multiturn Dialogue and Prompt Engineering for Traditional
-meta_description: TCM market and yield rate data is primarily sourced from daily listed trading records of domestic professional Chinese herbal medicine markets
+meta_description: Multiturn Dialogue and Prompt Engineering for Traditional Chinese Medicine (TCM) Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理融资日报的引用来源与溯源
-meta_description: 大气治理融资日报的数据主要来自生态环境部门公开项目公示、地方发改委融资备案公告、行业协会统计简报及上市企业定期公告。数据更新节奏为每日更新，覆盖当日新公示的
+meta_description: 大气治理融资日报的引用来源与溯源：大气治理融资日报的引用来源与溯源，涵盖配置与验证建议
 keywords: 大气治理、融资日报、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

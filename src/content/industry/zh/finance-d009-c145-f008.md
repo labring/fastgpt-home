@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 通信设备研报检索的工具调用与插件
-meta_description: 通信设备研报的数据主要来自工信部通信行业监测数据、设备厂商公开技术白皮书、运营商集采公告及第三方行业调研机构公开报告。更新节奏覆盖月度、季度与年度，对应不同
+meta_description: 通信设备研报检索的工具调用与插件：通信设备研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 通信设备、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

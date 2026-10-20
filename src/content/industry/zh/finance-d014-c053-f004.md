@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融财报分析的向量模型与索引
-meta_description: 多元金融财报数据主要来自公开交易所披露文件、监管备案报表及自营业务台账。更新节奏分为定期与临时两类：定期报告按季度、半年度、年度发布，临时公告随重大业务变动
+meta_description: 多元金融财报分析的向量模型与索引：多元金融财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 多元金融、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

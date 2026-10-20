@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空机场投研知识库建设的上下文与 token
-meta_description: 航空机场投研的数据来源包括民航地区管理局公开统计报表、机场官方运营台账、空域管制部门公告、行业公开研报。更新节奏按数据类型区分：航班计划按季度更新，起降量、
+meta_description: 航空机场投研知识库建设的上下文与 token：航空机场投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 航空机场、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

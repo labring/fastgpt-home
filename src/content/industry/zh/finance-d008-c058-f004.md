@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属智能尽调报告的向量模型与索引
-meta_description: 小金属智能尽调报告的数据主要来自行业协会公开统计、现货交易所报价系统、矿山与冶炼企业披露公告、海关进出口备案数据。更新节奏分为实时现货报价、月度行业供需报告
+meta_description: 小金属智能尽调报告的向量模型与索引：小金属智能尽调报告的向量模型与索引，涵盖配置与验证建议
 keywords: 小金属、智能尽调报告、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

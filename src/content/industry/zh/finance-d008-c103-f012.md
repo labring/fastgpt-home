@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测智能尽调报告的模型接入与配置
-meta_description: 环境监测智能尽调报告的数据来源为属地生态环境部门公开监测站点、部署的在线传感器网络及第三方监测机构上报的原始数据。数据更新节奏按监测项目不同分为实时、小时级
+meta_description: 环境监测智能尽调报告的模型接入与配置：环境监测智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 环境监测、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

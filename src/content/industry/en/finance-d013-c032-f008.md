@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c032-f008
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Chemical Raw Material Financing
-meta_description: Data for chemical raw material financing daily reports comes primarily from three sources: publicly disclosed corporate financing announcements from
+meta_title: Tool Calling and Plugins for Chemical Raw Material
+meta_description: Tool Calling and Plugins for Chemical Raw Material Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

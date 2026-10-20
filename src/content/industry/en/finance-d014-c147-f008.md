@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Papermaking Financial Report
-meta_description: Papermaking industry financial report data originates from exchange public disclosure platforms, industry association statistical databases, and
+meta_description: Tool Calling and Plugins for Papermaking Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

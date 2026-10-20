@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行研报检索的多轮对话与提示词
-meta_description: 国有大行研报数据来自内部宏观与行业研究团队产出的官方文档，部分联合行业协会形成调研成果。更新节奏为常规月度行业研报、季度宏观经济展望，以及监管政策落地后的专
+meta_description: 国有大行研报检索的多轮对话与提示词：国有大行研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 国有大行、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

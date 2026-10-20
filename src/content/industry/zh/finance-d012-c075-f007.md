@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车营销内容的工作流编排
-meta_description: 整车营销相关的数据主要来源于车企官方配置管理系统、汽车金融机构的运营数据库、新车发布公告平台。数据更新节奏分为两类：常规车型配置每月同步更新，全新车型发布时
+meta_description: 整车营销内容的工作流编排：整车营销内容的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 整车、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

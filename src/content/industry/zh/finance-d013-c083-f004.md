@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务融资日报的向量模型与索引
-meta_description: 水务融资日报的数据来源包括水务企业内部融资台账、地方公共资源交易平台的水务专项项目公告、地方金融监管局公开的融资备案数据，更新频率为每日更新，单篇文档长度差
+meta_description: 水务融资日报的向量模型与索引：水务融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 水务、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

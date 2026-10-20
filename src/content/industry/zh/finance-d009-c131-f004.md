@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰研报检索的向量模型与索引
-meta_description: 装修装饰研报数据来源涵盖行业协会月度报告、建材市场周报、公开招投标文件及住建部门政策文件。更新节奏随内容类型差异明显：招投标文件随项目实时更新，建材报价按周
+meta_description: 装修装饰研报检索的向量模型与索引：装修装饰研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 装修装饰、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 文娱用品投研知识库建设的上下文与 token
-meta_description: 文娱用品投研数据主要来源于行业协会品类监测报告、品牌方公开公告、电商平台公开商品页、线下渠道调研台账、版权登记公示信息。更新节奏分为三类：新品上市周期内按周
+meta_description: 文娱用品投研知识库建设的上下文与 token：文娱用品投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 文娱用品、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

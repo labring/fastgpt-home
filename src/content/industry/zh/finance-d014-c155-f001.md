@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 饲料财报分析的HTTP 接口与外部系统
-meta_description: 饲料行业财报数据主要来源于公开披露的饲料上市公司定期财报、农业农村部饲料工业办公室发布的行业运行监测数据、全国饲料工业协会的月度统计报告。数据更新节奏分为两
+meta_description: 饲料财报分析的HTTP 接口与外部系统：饲料财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 饲料、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

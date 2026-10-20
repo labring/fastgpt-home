@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 征信报告风控的工作流编排
-meta_description: 征信报告数据主要来自央行征信中心、地方征信运营机构及合作征信服务方。更新节奏为固定周期同步，单次报告文档结构包含身份核验区、信贷交易明细模块、公共信息记录区
+meta_description: 征信报告风控的工作流编排：征信报告风控的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 征信报告、风控与授信材料审核、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

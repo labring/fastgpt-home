@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销财报分析的工具调用与插件
-meta_description: 广告营销财报分析的数据主要来自企业内部营销投放中台、第三方广告监测数据源。数据更新节奏分为两类：单渠道投放明细按自然月度更新，季度汇总财报数据于每季度结束后
+meta_description: 广告营销财报分析的工具调用与插件：广告营销财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 广告营销、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 教育服务财报分析的部署与升级
-meta_description: 教育服务财报数据主要来自机构内部运营台账、年度审计报告及属地教育主管部门备案的办学收支数据。更新节奏以季度为基础周期，年度会发布经审计的正式版本。文档多为多
+meta_description: 教育服务财报分析的部署与升级：教育服务财报分析的部署与升级，涵盖配置与验证建议。
 keywords: 教育服务、财报分析与报告生成、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

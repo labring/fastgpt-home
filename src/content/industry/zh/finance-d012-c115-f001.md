@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 种植业营销内容的HTTP 接口与外部系统
-meta_description: 种植业的营销内容数据主要来自农业行业资讯平台、合作农资厂商的素材库、内部种植基地的生产记录。更新节奏随场景变化：农资促销素材按季度或营销活动周期更新，种植技
+meta_description: 种植业营销内容的HTTP 接口与外部系统：种植业营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 种植业、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

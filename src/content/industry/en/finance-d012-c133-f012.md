@@ -4,8 +4,8 @@ slug: /en/industry/finance-d012-c133-f012
 page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Securities Marketing
-meta_description: Securities firms source marketing content data from internal compliance-approved script libraries, product manuals, market analysis materials, and
+meta_title: Model Integration and Configuration for Securities
+meta_description: Model Integration and Configuration for Securities Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: In-App Natural Language Search
 is_part_of: FastGPT Tech Center
 meta_title: HTTP Interfaces and External Systems for In-App Natural
-meta_description: Data for this category comes from end-user natural language interaction logs. It includes retrieval requests initiated by users within finance and
+meta_description: HTTP Interfaces and External Systems for In-App Natural Language Retrieval of Historical Query Records
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

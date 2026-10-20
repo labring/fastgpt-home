@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Hotel and Catering Revenue Yield
-meta_description: Operational data for the hotel and catering category comes primarily from in-store POS terminals, inventory management systems, and human resource
+meta_description: Workflow Orchestration for Hotel and Catering Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

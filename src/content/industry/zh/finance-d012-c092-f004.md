@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费电子营销内容的向量模型与索引
-meta_description: 消费电子营销内容主要来自官方产品参数页、产品评测报告、官方营销话术、促销活动文案、用户真实评价。更新节奏随新品发布、促销周期、参数调整不定期更新，新品上线期
+meta_description: 消费电子营销内容的向量模型与索引：消费电子营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 消费电子、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

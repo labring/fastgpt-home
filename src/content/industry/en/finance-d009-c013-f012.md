@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Insurance Research
-meta_description: Data sources for insurance research reports include regulatory public disclosure documents, industry analysis released by industry associations
+meta_description: Model Integration and Configuration for Insurance Research Report Retrieval
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -20,7 +20,7 @@ Data sources for insurance research reports include regulatory public disclosure
 The multi-source heterogeneous data characteristics of insurance research reports require the model integration link to support adaptation to mixed-format data sources, including PDF regulatory documents and structured table-style operating data. The combined update rhythm of scheduled and real-time updates requires configuring incremental sync trigger rules to adapt to rapid update needs for temporary policy changes. The presence of exclusive operating indicator fields requires presetting field mapping rules during model integration to avoid generic field recognition errors. The high proportion of long documents requires adjusting relevant parameters for segmentation and recall during configuration to adapt to long-text processing logic.
 
 ## Configuration Recommendations
-The following are model integration configuration items adapted for insurance research report scenarios in FastGPT 4.9.0 and above:
+Reference only; verify against the target FastGPT release and deployment documentation.
 
 | Configuration Item | Recommended Value | Rationale |
 |---|---|---|

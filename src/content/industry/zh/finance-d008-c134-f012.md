@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品智能尽调报告的模型接入与配置
-meta_description: 调味品尽调报告的数据来源包括公开行业协会发布的品类监测数据、生产企业的公开合规文档、终端零售的匿名销售数据。更新节奏分为月度销售数据更新、季度合规报告更新、
+meta_description: 调味品智能尽调报告的模型接入与配置：调味品智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 调味品、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏智能尽调报告的模型接入与配置
-meta_description: 游戏智能尽调报告的数据主要来自国家新闻出版署版号公示平台、游戏厂商公开财报、主流应用商店榜单、社区舆情数据库及游戏备案系统。数据更新节奏分批次与实时两类：版
+meta_description: 游戏智能尽调报告的模型接入与配置：游戏智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 游戏、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

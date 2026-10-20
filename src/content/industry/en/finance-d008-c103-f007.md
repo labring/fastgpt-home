@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Environmental Monitoring
-meta_description: Environmental monitoring intelligent due diligence reports for financial scenarios draw data from three sources: publicly available online monitoring
+meta_description: Workflow Orchestration for Environmental Monitoring Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -39,7 +39,7 @@ Large variations in the length of batch long-text reports require adaptive text 
 
 ## Three common mistakes
 - Phenomenon: The model selection dropdown in the text content extraction node is empty, and no model can be selected. Cause: Access authorization and key configuration for the corresponding large model have not been completed in the platform's global configuration, causing the node to fail to pull the available model list.
-- Phenomenon: After configuring the auto-increment logic for the global `number_counter` variable, the workflow execution does not change the variable value. Cause: The variable scope is not correctly bound in the variable update node, or the assignment expression is not set to `{{number_counter + 1}}` and written back to the original variable.
+- Phenomenon: After configuring the auto-increment logic for the global `number_counter` variable, the workflow execution does not change the variable value. Cause: The variable scope is not correctly bound in the variable update node, or the assignment expression is not set to `example value` and written back to the original variable.
 - Phenomenon: After importing an external workflow configuration, the execution output meets expectations but the field values in the intermediate steps do not match the original workflow. Cause: Global variables and field mapping rules relied on by the workflow have not been synchronized, or the parameter transfer connections between nodes were lost during import.
 
 ## How to confirm the configuration is complete

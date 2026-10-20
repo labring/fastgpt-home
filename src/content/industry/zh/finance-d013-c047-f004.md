@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行融资日报的向量模型与索引
-meta_description: 国有大行融资日报的数据来源为内部信贷台账、全国银行间同业拆借中心公开披露数据、央行金融市场运行节选内容。更新节奏为每日17:00后完成当日数据归集与生成，支
+meta_description: 国有大行融资日报的向量模型与索引：国有大行融资日报的向量模型与索引，涵盖配置与验证建议
 keywords: 国有大行、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c004-3
 page_type: 行业作业环节页
 article_section: 证券投行
 is_part_of: FastGPT 技术中心
-meta_title: 上市公司并购重组财务顾问的协调交易结构、会计处理和信息披露的
+meta_title: 上市公司并购重组财务顾问的协调交易结构、会计处理和信息披露的一致性：哪一部分能交给系统
 meta_description: 上市公司并购重组财务顾问的协调交易结构、会计处理和信息披露的一致性：哪一部分能交给系统
 keywords: 上市公司并购重组财务顾问、证券投行、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程咨询投研知识库建设的部署与升级
-meta_description: 工程咨询的数据源包括项目可研报告、造价估算书、招投标文件、建筑装饰行业规范、项目台账等，更新节奏为项目全周期内按需触发，仅在可研编制、结算审核等阶段节点或行
+meta_description: 工程咨询投研知识库建设的部署与升级：工程咨询投研知识库建设的部署与升级，涵盖配置与验证建议
 keywords: 工程咨询、投研知识库建设与治理、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

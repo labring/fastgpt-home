@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Wind Power Financing Daily
-meta_description: The data for wind power financing daily reports primarily comes from publicly available wind power project filing information and grid connection
+meta_description: Workflow Orchestration for Wind Power Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

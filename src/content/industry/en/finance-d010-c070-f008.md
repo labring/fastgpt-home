@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Bidding and Tender Reports
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Tender Announcement Bidding
-meta_description: Tender announcement data primarily comes from government procurement websites at all levels, public resource trading centers, and industry-specific
+meta_description: Tool Calling and Plugins for Tender Announcement Bidding
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

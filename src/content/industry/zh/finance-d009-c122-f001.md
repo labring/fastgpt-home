@@ -4,8 +4,8 @@ slug: /zh/industry/finance-d009-c122-f001
 page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
-meta_title: 股份制银行研报检索的HTTP 接口与外部系统
-meta_description: 股份制银行研报的数据主要来源于本行研究部产出的内部宏观经济、金融市场、同业业务与零售金融研报，以及少量合规采购的第三方行业细分领域研报。数据更新节奏以工作日
+meta_title: 股份制银行研报检索的HTTP接口与外部系统
+meta_description: 股份制银行研报检索的HTTP接口与外部系统：股份制银行研报检索的HTTP接口与外部系统，涵盖配置与验证建议
 keywords: 股份制银行、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

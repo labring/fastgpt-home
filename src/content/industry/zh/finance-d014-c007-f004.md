@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 乳制品财报分析的向量模型与索引
-meta_description: 乳制品财报数据主要来自公开披露的定期报告、临时公告及行业调研资料，来源包括证券交易所公告平台、企业投资者关系板块。更新节奏以季度报、年报为固定周期，临时公告
+meta_description: 乳制品财报分析的向量模型与索引：乳制品财报分析的向量模型与索引，涵盖配置与验证建议
 keywords: 乳制品、财报分析与报告生成、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Tool Calling and Plugins for Coal Chemical Industry
-meta_description: Data for coal chemical industry financing daily reports comes primarily from industry monitoring platforms, public project filing information from
+meta_description: Tool Calling and Plugins for Coal Chemical Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

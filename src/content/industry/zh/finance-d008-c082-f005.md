@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水产养殖智能尽调报告的多轮对话与提示词
-meta_description: 水产养殖的尽调数据来源包括养殖塘口的物联网监测设备、养殖户日常台账、渔政抽检报告与饲料供应商供货记录。数据更新节奏分为三类：水质溶解氧、pH等实时指标每小时
+meta_description: 水产养殖智能尽调报告的多轮对话与提示词：水产养殖智能尽调报告的多轮对话与提示词，涵盖配置与验证建议
 keywords: 水产养殖、智能尽调报告、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

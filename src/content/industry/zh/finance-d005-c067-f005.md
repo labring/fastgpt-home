@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投诉工单客户服务的多轮对话与提示词
-meta_description: 投诉工单数据来自企业客服工单系统、CRM客户管理平台及呼叫中心语音转写记录。更新节奏为用户提交或客服编辑后实时或近实时同步，无固定批量更新周期。单条工单的文
+meta_description: 投诉工单客户服务的多轮对话与提示词：投诉工单客户服务的多轮对话与提示词，涵盖配置与验证建议
 keywords: 投诉工单、客户服务与账户咨询、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

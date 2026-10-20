@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台智能尽调报告的HTTP 接口与外部系统
-meta_description: 投资平台的智能尽调报告数据主要来源于标的企业的工商备案信息、定期财报、行业监管公告、公开舆情数据及第三方合规校验接口。数据更新节奏差异较大：工商信息、财报数
+meta_description: 投资平台智能尽调报告的HTTP 接口与外部系统：投资平台智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 投资平台、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

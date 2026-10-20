@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 环境监测营销内容的工作流编排
-meta_description: 环境监测的数据主要来自部署在现场的物联网传感器、区域卫星遥感终端或手持便携监测设备。数据更新节奏覆盖秒级到日级，实时传感器数据每10秒至5分钟推送一次，区域
+meta_description: 环境监测营销内容的工作流编排：环境监测营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 环境监测、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

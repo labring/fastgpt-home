@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 资质符合性竞价的HTTP 接口与外部系统
-meta_description: 资质符合性竞价报告的数据主要来源于政府采购公共服务平台、招标方官方发布的招标公告以及行业资质监管数据库。数据更新节奏随招标项目发布实时变动，部分资质证明文件
+meta_description: 资质符合性竞价的HTTP 接口与外部系统：资质符合性竞价的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 资质符合性、竞价与投标报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

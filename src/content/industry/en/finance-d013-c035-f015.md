@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Aesthetic Medicine Financing
-meta_description: Data for aesthetic medicine financing daily reports mainly comes from financing filing public notices released by local financial regulatory
+meta_description: Deployment and Upgrade for Aesthetic Medicine Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信智能尽调报告的部署与升级
-meta_description: 卫星通信智能尽调报告的数据来自专业航天数据供应商、地面测控站实时采集系统、运营商链路测试档案，主要用于金融机构对卫星通信相关主体的合规与经营尽调。轨道根数类
+meta_description: 卫星通信智能尽调报告的部署与升级：卫星通信智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 卫星通信、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

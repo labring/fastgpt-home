@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Forms and Interactions for Iron Ore Marketing Content
-meta_description: Iron ore data is sourced from domestic major port spot trading systems, futures delivery warehouse inbound data, and daily sampling data from industry
+meta_description: Forms and Interactions for Iron Ore Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

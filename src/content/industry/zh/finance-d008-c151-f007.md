@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路智能尽调报告的工作流编排
-meta_description: 铁路公路智能尽调报告的数据主要来源于交通运输主管部门公开的基建档案、线路运维日志、年度运营统计报表及项目立项批复文件。数据更新节奏分两类：线路基础参数按季度
+meta_description: 铁路公路智能尽调报告的工作流编排：铁路公路智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 铁路公路、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

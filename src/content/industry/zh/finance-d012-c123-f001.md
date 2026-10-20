@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属营销内容的HTTP 接口与外部系统
-meta_description: 能源金属数据主要来自行业协会公开报告、国内期货交易所行情接口、矿山及冶炼企业定期披露、第三方大宗商品资讯平台。更新节奏差异较大：现货价格每15分钟更新一次，
+meta_description: 能源金属营销内容的HTTP 接口与外部系统：能源金属营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 能源金属、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷智能尽调报告的HTTP 接口与外部系统
-meta_description: 包装印刷智能尽调报告的数据来源包含企业工商公示信息、印刷产能设备台账、原材料采购记录、下游客户订单履约数据、行业印刷资质文件。数据更新节奏存在差异：原材料采
+meta_description: 包装印刷智能尽调报告的HTTP 接口与外部系统：包装印刷智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 包装印刷、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

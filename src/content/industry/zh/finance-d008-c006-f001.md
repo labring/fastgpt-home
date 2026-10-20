@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药智能尽调报告的HTTP 接口与外部系统
-meta_description: 面向金融机构的中药智能尽调报告的数据主要来源于国家药典、中药材溯源管理平台、产地质检机构出具的批次检测报告。数据更新节奏分两类：公开标准数据定期更新，批次溯
+meta_description: 中药智能尽调报告的HTTP 接口与外部系统：中药智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 中药、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

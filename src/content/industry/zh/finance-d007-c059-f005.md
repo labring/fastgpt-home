@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工业金属收益率的多轮对话与提示词
-meta_description: 数据来源为上海期货交易所、伦敦金属交易所及行业大宗商品资讯平台。更新节奏分为两类：主力期货合约每5秒刷新实时行情，现货报价每日更新两次。文档为结构化表格，包
+meta_description: 工业金属收益率的多轮对话与提示词：工业金属收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 工业金属、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

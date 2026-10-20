@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块财报分析的模型接入与配置
-meta_description: 光模块相关企业的财报数据主要来源于证券交易所官方披露平台、企业投资者关系板块的公开公告，以及行业公开调研文档。更新节奏分为固定周期与不定期两类：定期报告按季
+meta_description: 光模块财报分析的模型接入与配置：光模块财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 光模块、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

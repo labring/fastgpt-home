@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 半导体投研知识库建设的数据库与运维
-meta_description: 半导体投研的数据来源覆盖晶圆厂工艺规范文档、EDA设计文件、行业协会统计报告、券商细分研报、全球专利数据库、上游原材料现货报价平台。更新节奏差异化明显：原材
+meta_description: 半导体投研知识库建设的数据库与运维：半导体投研知识库建设的数据库与运维，涵盖配置与验证建议
 keywords: 半导体、投研知识库建设与治理、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

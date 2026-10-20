@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 固废处理研报检索的HTTP 接口与外部系统
-meta_description: 固废处理研报的数据来源包括环保主管部门公开公示文件、固废处理企业技术白皮书、行业协会月度调研简报。更新节奏分为月度动态更新、季度专项更新、年度全景更新三类。
+meta_description: 固废处理研报检索的HTTP 接口与外部系统：固废处理研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 固废处理、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

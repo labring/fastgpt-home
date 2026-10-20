@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 特钢投研知识库建设的引用来源与溯源
-meta_description: 特钢投研数据主要来自钢厂出厂质检报告、全国特钢行业协会的流通数据、期货交易所特钢品种的挂牌报价、国家知识产权局的特钢工艺专利文档、下游装备制造企业的采购需求
+meta_description: 特钢投研知识库建设的引用来源与溯源：特钢投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 特钢、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

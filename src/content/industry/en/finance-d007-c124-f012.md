@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Automated Equipment
-meta_description: Real-time operating parameters from equipment PLCs, production daily reports from MES systems, and energy consumption and downtime records from
+meta_description: Model Integration and Configuration for Automated Equipment Yield Reporting
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

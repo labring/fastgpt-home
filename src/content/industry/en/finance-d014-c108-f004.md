@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for E-commerce Service Financial
-meta_description: Financial report data for the e-commerce service category targeting the financial sector mainly comes from internal enterprise ERP systems, API
+meta_description: Vector Models and Indexing for E-commerce Service Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

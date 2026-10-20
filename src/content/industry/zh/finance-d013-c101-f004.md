@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物流融资日报的向量模型与索引
-meta_description: 物流融资日报的数据来源于物流运输管理系统、供应链融资平台的每日同步数据，更新节奏为每日凌晨完成前一工作日的全量数据同步。文档以结构化表格为核心载体，附带少量
+meta_description: 物流融资日报的向量模型与索引：物流融资日报的向量模型与索引，涵盖配置与验证建议。
 keywords: 物流、融资日报、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

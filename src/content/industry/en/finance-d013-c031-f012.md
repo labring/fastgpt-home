@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Chemical
-meta_description: Data sources include public investment and financing disclosure databases, official announcements of listed and unlisted chemical pharmaceutical
+meta_description: Model Integration and Configuration for Chemical Pharmaceutical Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

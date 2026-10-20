@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 燃气研报检索的工具调用与插件
-meta_description: 燃气行业研报数据主要来自中国城市燃气协会月度监测报告、券商公用事业赛道专项研报、能源咨询机构的公开数据源。数据更新节奏为：月度运行数据每月更新，季度深度研报
+meta_description: 燃气研报检索的工具调用与插件：燃气研报检索的工具调用与插件，涵盖配置与验证建议。
 keywords: 燃气、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

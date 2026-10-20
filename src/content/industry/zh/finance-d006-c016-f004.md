@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光伏投研知识库建设的向量模型与索引
-meta_description: 光伏投研数据主要来自行业协会公开报告、上市公司定期财报、组件厂商技术白皮书、气象日照辐射监测数据、地方新能源政策文件。数据更新节奏不一，行业研报按周、月或项
+meta_description: 光伏投研知识库建设的向量模型与索引：光伏投研知识库建设的向量模型与索引，涵盖配置与验证建议
 keywords: 光伏、投研知识库建设与治理、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

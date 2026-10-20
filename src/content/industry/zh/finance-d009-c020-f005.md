@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备研报检索的多轮对话与提示词
-meta_description: 数据主要来自券商军工行业研究报告、军工集团公开披露的技术白皮书、国防军工行业协会的月度/季度行业简报，以及军方公开的装备发展公告。更新节奏随行业事件触发，重
+meta_description: 兵器装备研报检索的多轮对话与提示词：兵器装备研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 兵器装备、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

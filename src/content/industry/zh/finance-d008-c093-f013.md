@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏智能尽调报告的知识库检索与召回
-meta_description: 游戏智能尽调报告的数据主要来自国家新闻出版署版号审批文件、游戏厂商公开的运营报表、行业第三方监测报告。更新节奏分为两类：结构化运营数据按月同步，版号合规类文
+meta_description: 游戏智能尽调报告的知识库检索与召回：游戏智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 游戏、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

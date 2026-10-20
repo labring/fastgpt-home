@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务收益率的工作流编排
-meta_description: IT服务收益率与行情的数据来源包括第三方行情聚合接口、企业内部IT服务结算系统、云服务商运行监控API。更新节奏分为两类：实时行情数据每1分钟更新一次，日报
+meta_description: IT 服务收益率的工作流编排：IT 服务收益率的工作流编排，涵盖配置与验证建议。
 keywords: IT 服务、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

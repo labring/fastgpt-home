@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 自动化设备财报分析的工作流编排
-meta_description: 自动化设备财报数据主要来自上市主体的年度、季度披露报告，以及设备运维的月度运营台账。文档结构包含核心设备产能利用率、单台设备营收贡献、备件库存周转率、年度折
+meta_description: 自动化设备财报分析的工作流编排：自动化设备财报分析的工作流编排，涵盖配置与验证建议
 keywords: 自动化设备、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

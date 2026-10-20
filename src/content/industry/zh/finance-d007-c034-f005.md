@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 医疗器械收益率的多轮对话与提示词
-meta_description: 医疗器械收益率与行情数据主要来源于各地医保局医用耗材挂网价公示、省级政府采购招投标中标公告、公立医疗机构年度采购台账。数据更新节奏随各地政策调整，部分地区挂
+meta_description: 医疗器械收益率的多轮对话与提示词：医疗器械收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 医疗器械、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

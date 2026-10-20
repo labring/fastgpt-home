@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油气开采收益率的数据库与运维
-meta_description: 油气开采场景的收益率与行情数据来源包括油田现场SCADA采集系统、油气生产管理平台的结构化报表，以及公开的能源行业行情数据源。数据更新节奏按颗粒度区分：单井
+meta_description: 油气开采收益率的数据库与运维：油气开采收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 油气开采、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

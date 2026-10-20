@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 征信报告风控的模型接入与配置
-meta_description: 征信报告数据主要来自官方征信机构与合作征信服务方，更新节奏为个人版每月同步，企业版每季度更新。文档多为标准或加密PDF格式，结构固定，包含个人/企业基本信息
+meta_description: 征信报告风控的模型接入与配置：征信报告风控的模型接入与配置，涵盖配置与验证建议。
 keywords: 征信报告、风控与授信材料审核、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

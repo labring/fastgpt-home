@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Dialogue Logs and Auditing for Thermal Coal Yields
-meta_description: Thermal coal quote and yield rate data mainly comes from domestic commodity trading platforms, industry monitoring institutions, and port spot
+meta_description: Dialogue Logs and Auditing for Thermal Coal Yields
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农商行研报检索的文档解析与分块
-meta_description: 农商行研报检索的数据主要来自内部合规研究部门产出的县域涉农经济调研、区域金融风险分析文档，以及订阅的监管机构公开指导文件、同业交流的区域业务复盘材料。更新节
+meta_description: 农商行研报检索的文档解析与分块：农商行研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 农商行、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

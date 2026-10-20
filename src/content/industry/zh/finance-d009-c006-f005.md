@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的多轮对话与提示词
-meta_description: 用于金融机构行业分析的中药研报数据，主要来源于国家药典委员会公开标准、全国中药标准化技术委员会行业分析、上市中药企业定期报告及中医药科研院所专项研究。更新节
+meta_description: 中药研报检索的多轮对话与提示词：中药研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 中药、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

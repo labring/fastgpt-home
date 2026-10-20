@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元控股智能尽调报告的工作流编排
-meta_description: 多元控股的尽调数据来源包括集团内部各经营实体的经营台账、工商登记公示信息、行业监管公开披露文件、内部审计底稿。更新节奏分为季度更新的实体经营数据、月度更新的
+meta_description: 多元控股智能尽调报告的工作流编排：多元控股智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 多元控股、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
 meta_title: Database and Operations for Game Industry Investment
-meta_description: Game investment research data primarily comes from public financial reports of game publishers, official license announcement lists, player sentiment
+meta_description: Database and Operations for Game Industry Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -34,7 +34,7 @@ Multi-source heterogeneous data sources require the database to support hybrid s
 ## Three common mistakes
 - Phenomenon: Abnormal increase in database write traffic, rapid disk space exhaustion. Cause: No reasonable bulk write parameters are configured, leading to excessively large single-batch write data, triggering frequent disk flushing operations in OceanBase.
 - Phenomenon: Milvus deployment fails, container startup error reports inability to connect to PostgreSQL. Cause: Vector storage type and metadata storage configurations are confused in the Milvus compose file, retaining irrelevant PostgreSQL mount configurations.
-- Phenomenon: Dataset creation interface call returns parameter error, prompting invalid username. Cause: The username parameter in the database configuration is not correctly modified, retaining the default `username` placeholder without replacing it with the actual OceanBase username.
+- Phenomenon: Dataset creation interface call returns parameter error, prompting invalid username. Cause: The username parameter in the database configuration is not correctly modified, retaining the default `username` pending verification without replacing it with the actual OceanBase username.
 
 ## How to confirm the configuration is correct
 - Call the dataset creation interface, check that the return status code is `200 OK` to verify that the database connection configuration is effective.

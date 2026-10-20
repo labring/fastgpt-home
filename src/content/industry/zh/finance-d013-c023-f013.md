@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子融资日报的知识库检索与召回
-meta_description: 军工电子融资日报的数据主要来源于军工电子企业公开披露的投融资公告、证券交易所官方披露平台、行业协会发布的投融资调研信息。数据更新节奏为每日更新，单条数据对应
+meta_description: 军工电子融资日报的知识库检索与召回：军工电子融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 军工电子、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

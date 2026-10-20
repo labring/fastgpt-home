@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理财报分析的引用来源与溯源
-meta_description: 大气治理相关财报数据主要来自企业年度环境专项报告、生态环境部门公开的区域监测台账、第三方环境检测机构出具的合规报告。数据更新节奏覆盖年度全量财报、季度专项监
+meta_description: 大气治理财报分析的引用来源与溯源：大气治理财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 大气治理、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 个护用品投研知识库建设的上下文与 token
-meta_description: 个护用品投研的数据来源包括品牌官方备案文档、原料供应商技术白皮书、电商平台用户评价数据集、行业协会质量检测报告。数据更新随新品上市、合规政策调整、行业标准更
+meta_description: 个护用品投研知识库建设的上下文与 token：个护用品投研知识库建设的上下文与 token，涵盖配置与验证建议
 keywords: 个护用品、投研知识库建设与治理、上下文与 token
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

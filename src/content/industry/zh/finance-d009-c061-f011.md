@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 工程机械研报检索的文档解析与分块
-meta_description: 工程机械研报的数据来源主要为行业协会公开报告、券商研究所研报、主机厂官方披露文件。数据更新节奏随报告发布周期调整，多数为月度、季度或年度频次。文档结构包含核
+meta_description: 工程机械研报检索的文档解析与分块：工程机械研报检索的文档解析与分块，涵盖配置与验证建议
 keywords: 工程机械、研报检索与问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

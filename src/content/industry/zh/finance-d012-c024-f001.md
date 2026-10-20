@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 农化制品营销内容的HTTP 接口与外部系统
-meta_description: 农化制品的营销内容数据主要来源于企业内部研发文档、农技推广手册、合规登记材料及区域适配方案，多用于金融/保险/理财领域的农化相关业务获客与内容分发。更新节奏
+meta_description: 农化制品营销内容的HTTP 接口与外部系统：农化制品营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 农化制品、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

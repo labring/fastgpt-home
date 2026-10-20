@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 免税收益率的模型接入与配置
-meta_description: 免税品类的收益率相关数据主要来自离岛免税经营主体的每日销售备案台账与官方公示的定价信息。更新节奏为每日一次，当日闭店后生成前一日的完整数据文档。文档结构固定
+meta_description: 免税收益率的模型接入与配置：免税收益率的模型接入与配置，涵盖配置与验证建议。。。
 keywords: 免税、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

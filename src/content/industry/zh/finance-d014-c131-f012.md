@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 装修装饰财报分析的模型接入与配置
-meta_description: 装修装饰行业财报数据主要来自公开披露的定期报告、专项审计报告及项目结算文件。更新节奏以年度报告、季度报告为核心周期，配套临时公告披露重大合同、竣工结算事项。
+meta_description: 装修装饰财报分析的模型接入与配置：装修装饰财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 装修装饰、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

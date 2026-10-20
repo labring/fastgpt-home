@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电力智能尽调报告的知识库检索与召回
-meta_description: 电力智能尽调报告关联的数据来源包括电网调度自动化系统的实时运行日志、发电企业的运维检修档案、电力交易中心的结算明细、行业合规监管文件。更新节奏分三类：实时运
+meta_description: 电力智能尽调报告的知识库检索与召回：电力智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 电力、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

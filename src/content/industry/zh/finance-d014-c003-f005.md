@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁财报分析的多轮对话与提示词
-meta_description: 专业连锁的财报数据主要来自门店POS系统、供应链管理平台、总部财务核算系统。数据更新节奏分为月度门店级明细、季度区域汇总、年度全量财报。文档结构包含结构化营
+meta_description: 专业连锁财报分析的多轮对话与提示词：专业连锁财报分析的多轮对话与提示词，涵盖配置与验证建议
 keywords: 专业连锁、财报分析与报告生成、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

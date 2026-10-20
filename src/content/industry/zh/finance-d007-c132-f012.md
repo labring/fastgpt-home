@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 计算机设备收益率的模型接入与配置
-meta_description: 计算机设备收益率与行情数据来源于企业内部IT资产管理系统、算力调度平台的公开API接口，更新节奏为每10分钟同步一次最新核算结果。单条数据文档为结构化JSO
+meta_description: 计算机设备收益率的模型接入与配置：计算机设备收益率的模型接入与配置，涵盖配置与验证建议
 keywords: 计算机设备、收益率与行情日报播报、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

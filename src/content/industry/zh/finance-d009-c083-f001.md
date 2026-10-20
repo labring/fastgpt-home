@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务研报检索的HTTP 接口与外部系统
-meta_description: 水务研报的数据来源包括水务行业协会公开报告、上市水务企业年度及半年度财报、水务监管部门发布的行业动态与水质监测数据，以及专业水务咨询机构的深度分析文档。更新
+meta_description: 水务研报检索的HTTP 接口与外部系统：水务研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 水务、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15
@@ -24,7 +24,7 @@ date_modified: 2026-09-15
 | 配置项 | 建议取法 | 这样取的依据 |
 | ---- | ---- | ---- |
 | `responseExtractMode` | `v4.8.12及以后版本使用「按JSON路径提取」模式` | 适配社区反馈的v4.8.12-beta版本HTTP返回值提取逻辑变更，避免旧版提取规则无法正确识别嵌套字段 |
-| `requestDynamicParams` | `通过{{变量名}}语法绑定入参，如{{water_project_id}}` | 支持按水务项目ID、监测时间范围等可变参数发起请求，适配不同细分研报的检索需求 |
+| `requestDynamicParams` | `通过待核验值语法绑定入参，如待核验值` | 支持按水务项目ID、监测时间范围等可变参数发起请求，适配不同细分研报的检索需求 |
 | `charset` | `UTF-8` | 适配水务研报中的中文专业术语与数据，避免出现乱码问题 |
 | `timeout` | `300 秒` | 水务研报数据量较大，包含多模块详细内容，预留足够请求时长避免超时中断 |
 | `returnFields` | `指定需返回的字段列表，如["project_name","cod_value","unit"]` | 减少无效数据传输，适配水务研报多字段的特征，提升接口调用效率 |

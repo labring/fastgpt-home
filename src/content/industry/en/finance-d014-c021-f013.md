@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Miscellaneous
-meta_description: Data sources include periodic report PDFs publicly disclosed by domestic and overseas stock exchanges, and structured financial report files from
+meta_description: Knowledge Base Retrieval and Recall for Miscellaneous Comprehensive Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

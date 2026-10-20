@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 服装家纺营销内容的HTTP 接口与外部系统
-meta_description: 服装家纺品类的营销内容数据主要来自企业商品管理系统、供应链同步模块与线下门店销售反馈。更新节奏随上新周期波动，换季阶段为周更，常规时段为每两周一次。单条营销
+meta_description: 服装家纺营销内容的HTTP 接口与外部系统：服装家纺营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 服装家纺、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

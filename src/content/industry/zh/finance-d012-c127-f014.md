@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备营销内容的表单与交互
-meta_description: 航空装备相关营销内容的数据主要来自整机厂商官方维护手册、民用航空适航认证文档、航司运维归档日志。数据更新节奏随机型迭代、适航规范调整，常规按季度完成一次大版
+meta_description: 航空装备营销内容的表单与交互：航空装备营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 航空装备、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

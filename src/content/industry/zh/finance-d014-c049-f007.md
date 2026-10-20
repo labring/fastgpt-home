@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 基建工程财报分析的工作流编排
-meta_description: 基建工程品类的财报数据主要来源于沪深交易所公开披露的上市公司年度、季度报告，以及项目方提交的月度进度台账、甲方结算确认文件、行业协会公开的基建项目统计数据。
+meta_description: 基建工程财报分析的工作流编排：基建工程财报分析的工作流编排，涵盖配置与验证建议。
 keywords: 基建工程、财报分析与报告生成、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

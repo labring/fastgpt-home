@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理营销内容的工具调用与插件
-meta_description: 大气治理相关数据主要来自三类渠道：地方生态环境部门公开的大气质量监测数据、企业自建的排放监测系统、行业合规要求文档。实时监测数据以分钟级更新，企业排放台账按
+meta_description: 大气治理营销内容的工具调用与插件：大气治理营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: 大气治理、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

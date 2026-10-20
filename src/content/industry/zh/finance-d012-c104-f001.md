@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃营销内容的HTTP 接口与外部系统
-meta_description: 玻璃营销相关的数据主要来自建筑玻璃厂商的ERP系统、官方报价平台与产品手册。基础产品参数（如类型、厚度、尺寸规格）更新节奏相对稳定，每季度同步一次；实时报价
+meta_description: 玻璃营销内容的HTTP 接口与外部系统：玻璃营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 玻璃、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

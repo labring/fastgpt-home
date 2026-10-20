@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药智能尽调报告的部署与升级
-meta_description: 化学制药智能尽调报告服务于金融机构的医药赛道投资、保险机构的药企承保核保等场景，数据主要来自国家药监局审评中心公开文档、药企年度财报、临床研究公示平台、专利
+meta_description: 化学制药智能尽调报告的部署与升级：化学制药智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 化学制药、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

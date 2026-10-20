@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 酒店餐饮财报分析的模型接入与配置
-meta_description: 酒店餐饮财报的数据主要来自门店POS系统、客房管理系统、供应链管理系统的月度汇总，以及第三方审计后的季度/年度定稿文件。更新节奏以月度为基础周期，季度财报会
+meta_description: 酒店餐饮财报分析的模型接入与配置：酒店餐饮财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 酒店餐饮、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

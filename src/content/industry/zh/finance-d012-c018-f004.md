@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 光模块营销内容的向量模型与索引
-meta_description: 面向金融行业的光模块营销内容数据来源包括金融场景下的产品规格文档、面向金融客户的营销宣传物料、行业技术白皮书与合规认证文件。更新节奏随新品上线、技术参数调整
+meta_description: 光模块营销内容的向量模型与索引：光模块营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 光模块、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

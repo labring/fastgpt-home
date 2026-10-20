@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小家电营销内容的表单与交互
-meta_description: 小家电的数据来源为品牌官方产品文档、电商平台详情页参数、第三方合规检测报告。更新节奏随新品上市、行业合规要求调整，无固定周期。文档按产品型号分类归档，单份文
+meta_description: 小家电营销内容的表单与交互：小家电营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 小家电、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

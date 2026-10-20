@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专业连锁融资日报的工具调用与插件
-meta_description: 专业连锁的融资日报数据来源为合作供应链金融服务商、总部ERP系统的每日资金台账与门店POS流水归集。更新节奏为每日固定时段更新前一自然日的全量数据，不支持实
+meta_description: 专业连锁融资日报的工具调用与插件：专业连锁融资日报的工具调用与插件，涵盖配置与验证建议
 keywords: 专业连锁、融资日报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

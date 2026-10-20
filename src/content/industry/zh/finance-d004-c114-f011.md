@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 监管办法合规的文档解析与分块
-meta_description: 监管办法的数据来源于国家金融监管总局、各地银保监局及央行的官方公告渠道，更新节奏随监管政策调整发布，无固定周期。文档多为正式公文格式，包含发文文号、发布主体
+meta_description: 监管办法合规的文档解析与分块：监管办法合规的文档解析与分块，涵盖配置与验证建议。
 keywords: 监管办法、合规与内部制度问答、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

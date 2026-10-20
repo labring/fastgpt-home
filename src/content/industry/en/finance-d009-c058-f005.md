@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Research Report Search and Q&A
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Minor Metal
-meta_description: Data sources for minor metal research reports include domestic minor metal industry news platforms, industry association monthly reports, daily spot
+meta_description: Multi-turn Dialogue and Prompt Engineering for Minor Metal Research Report Retrieval and Q&A
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

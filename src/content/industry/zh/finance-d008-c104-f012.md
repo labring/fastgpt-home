@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃智能尽调报告的模型接入与配置
-meta_description: 玻璃智能尽调报告的数据主要来自建筑玻璃出厂质检报告、供应链溯源台账、现场安装检测记录三类数据源。数据更新节奏随出货批次触发，单批次出货前完成一次完整更新，供
+meta_description: 玻璃智能尽调报告的模型接入与配置：玻璃智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 玻璃、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

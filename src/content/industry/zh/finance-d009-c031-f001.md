@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学制药研报检索的HTTP 接口与外部系统
-meta_description: 化学制药研报的数据来源为医药生物行业合规的公开研报数据库与行业资讯平台，为金融领域的行业研究、投资决策场景提供专业数据支撑，更新节奏随行业核心事件推进，如新
+meta_description: 化学制药研报检索的HTTP 接口与外部系统：化学制药研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 化学制药、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

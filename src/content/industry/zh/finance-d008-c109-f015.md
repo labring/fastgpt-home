@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电子元件智能尽调报告的部署与升级
-meta_description: 电子元件智能尽调报告的数据主要来源于原厂规格书、行业参数数据库、物料清单（BOM）。数据更新节奏随厂商停产、替代型号发布调整，多为季度级更新。单份文档多为多
+meta_description: 电子元件智能尽调报告的部署与升级：电子元件智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 电子元件、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

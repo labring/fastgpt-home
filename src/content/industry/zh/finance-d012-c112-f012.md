@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电营销内容的模型接入与配置
-meta_description: 白色家电的核心数据来自官方产品说明书、电商平台参数页、售后工单库、品牌官方营销物料库。更新节奏为新品上市时批量更新全量文档，日常仅针对参数微调、促销信息更新
+meta_description: 白色家电营销内容的模型接入与配置：白色家电营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 白色家电、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

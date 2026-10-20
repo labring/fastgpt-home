@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 证券投研知识库建设的模型接入与配置
-meta_description: 证券投研的数据来源涵盖交易所公开披露文件、券商研报、实时行情数据、宏观经济指标等。披露文件按固定周期更新，年报、季报为年度、季度末发布，临时公告随事项发生实
+meta_description: 证券投研知识库建设的模型接入与配置：证券投研知识库建设的模型接入与配置，涵盖配置与验证建议
 keywords: 证券、投研知识库建设与治理、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品智能尽调报告的工作流编排
-meta_description: 化妆品智能尽调报告的数据主要来自国家药品监督管理局官方备案数据库、品牌方公开的产品检测报告及成分公示文档。数据随新备案产品提交、已备案产品配方或注册信息变更
+meta_description: 化妆品智能尽调报告的工作流编排：化妆品智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 化妆品、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

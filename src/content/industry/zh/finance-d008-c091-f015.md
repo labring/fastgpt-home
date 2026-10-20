@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 消费建材智能尽调报告的部署与升级
-meta_description: 消费建材智能尽调报告的数据主要来自厂商出厂质检报告、供应链进销存台账、住建部门产品备案数据库及电商平台SKU参数页。数据更新节奏分批次与周期两类：厂商质检报
+meta_description: 消费建材智能尽调报告的部署与升级：消费建材智能尽调报告的部署与升级，涵盖配置与验证建议
 keywords: 消费建材、智能尽调报告、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

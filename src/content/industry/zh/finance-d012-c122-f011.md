@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 股份制银行营销内容的文档解析与分块
-meta_description: 股份制银行的营销内容数据主要来源于内部营销团队产出的官方物料，包括结构化的Excel客群清单、预算分配表，非结构化的PDF活动方案、海报文案、电话话术脚本等
+meta_description: 股份制银行营销内容的文档解析与分块：股份制银行营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 股份制银行、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

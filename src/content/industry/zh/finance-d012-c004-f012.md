@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 专用设备营销内容的模型接入与配置
-meta_description: 专用设备的营销相关数据来源包括设备出厂参数文档、线下销售跟进记录、线上营销素材库、设备运维实时上报数据。出厂参数文档为固定更新的结构化表格，包含型号、功率、
+meta_description: 专用设备营销内容的模型接入与配置：专用设备营销内容的模型接入与配置，涵盖配置与验证建议
 keywords: 专用设备、营销内容与获客、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

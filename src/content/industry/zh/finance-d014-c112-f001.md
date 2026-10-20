@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 白色家电财报分析的HTTP 接口与外部系统
-meta_description: 白色家电财报的数据来源为证券交易所披露的定期报告、公司投资者关系板块公开公告，以及公开的行业监测数据。更新节奏按季度、年度定期更新，临时公告仅补充重大经营变
+meta_description: 白色家电财报分析的HTTP 接口与外部系统：白色家电财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 白色家电、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

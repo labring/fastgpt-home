@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 厨卫电器营销内容的表单与交互
-meta_description: 厨卫电器的营销数据主要来源于产品官方说明书、电商平台详情页参数、线下门店导购手册及安装售后文档。数据更新节奏随新品上市、能效标准调整或产品线迭代触发，无固定
+meta_description: 厨卫电器营销内容的表单与交互：厨卫电器营销内容的表单与交互，涵盖配置与验证建议。
 keywords: 厨卫电器、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品收益率的数据库与运维
-meta_description: 休闲食品收益率相关数据来源于线下商超POS系统、经销商进销存ERP、电商平台销售接口及原材料采购报价平台。数据更新节奏存在差异，电商终端销售数据为小时级更新
+meta_description: 休闲食品收益率的数据库与运维：休闲食品收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 休闲食品、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

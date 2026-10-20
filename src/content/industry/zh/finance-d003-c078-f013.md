@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 既往症判定保险理赔初审的知识库检索与召回
-meta_description: 既往症判定的数据源主要来自脱敏的保险理赔历史案件档案、医保既往就诊记录、官方医学诊断标准文档（如ICD-10编码手册）。数据随新理赔案件提交按月同步更新。单
+meta_description: 既往症判定保险理赔初审的知识库检索与召回：既往症判定保险理赔初审的知识库检索与召回，涵盖配置与验证建议
 keywords: 既往症判定、保险理赔初审、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

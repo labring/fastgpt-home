@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 调味品智能尽调报告的知识库检索与召回
-meta_description: 数据来源包括全国调味品行业协会公开统计资料、生产企业公开披露的经营信息、市场流通监测数据、食品安全合规检测报告。更新节奏按信息类型区分，行业统计数据每季度更
+meta_description: 调味品智能尽调报告的知识库检索与召回：调味品智能尽调报告的知识库检索与召回，涵盖配置与验证建议
 keywords: 调味品、智能尽调报告、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

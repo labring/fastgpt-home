@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Power
-meta_description: Data sources include local energy regulatory department public disclosure documents, official announcements of power enterprises, and industry
+meta_description: Multi-turn Dialogue and Prompt Engineering for Power Industry Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -32,7 +32,7 @@ The structured field design of power industry financing daily reports requires e
 > The parameter values provided on this page are common starting points for configuration setup. Actual values are influenced by material format, data volume and business rules. Each scenario requires separate analysis. It is recommended to test on your own samples before finalizing the configuration.
 
 ## Three Common Misconfigurations
-- Phenomenon: After calling the API to pass prompt variables, the returned result does not replace the variable content and is irrelevant to the preset scenario. Cause: The `VAR_API_PASS_THROUGH` configuration item is not enabled, or the variable format does not comply with the `{{variable name}}` template specification.
+- Phenomenon: After calling the API to pass prompt variables, the returned result does not replace the variable content and is irrelevant to the preset scenario. Cause: The `VAR_API_PASS_THROUGH` configuration item is not enabled, or the variable format does not comply with the `example value` template specification.
 - Phenomenon: After uploading a power industry financing daily report document, when text extraction fails to hit core fields, the preset user prompt reply is not triggered. Cause: The `text_extract_fallback` trigger condition is not configured, or the process node waiting for user input is not connected.
 - Phenomenon: After deploying a custom model, an error occurs when parsing uploaded power industry financing daily report files. Cause: `parse_file_max_size` is not configured to a value adapted to the document size, or the model's file parsing plugin does not adapt to structured table documents.
 

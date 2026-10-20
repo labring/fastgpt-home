@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃融资日报的知识库检索与召回
-meta_description: 玻璃融资日报的数据来源于建材行业协会公开披露、上市公司融资公告、地方金融监管公示信息。更新节奏为每日更新，当日融资数据于次日凌晨完成汇总发布。文档结构包含统
+meta_description: 玻璃融资日报的知识库检索与召回：玻璃融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 玻璃、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

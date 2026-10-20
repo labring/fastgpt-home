@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 征信报告风控的文档解析与分块
-meta_description: 征信报告数据来源于官方征信机构、合规征信服务商，更新频率为月度或季度。文档采用固定制式模板，由结构化表格与半结构化文本混合排布。核心字段包含主体基本信息、信
+meta_description: 征信报告风控的文档解析与分块：征信报告风控的文档解析与分块，涵盖配置与验证建议。
 keywords: 征信报告、风控与授信材料审核、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

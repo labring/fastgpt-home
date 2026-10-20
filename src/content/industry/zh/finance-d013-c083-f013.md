@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 水务融资日报的知识库检索与召回
-meta_description: 水务融资日报数据主要来自地方公共资源交易平台、水务项目官方批复文件、水务集团内部运营台账。更新节奏为每日更新，单份日报文档长度差异较大，建议按自有样本统计或
+meta_description: 水务融资日报的知识库检索与召回：水务融资日报的知识库检索与召回，涵盖配置与验证建议
 keywords: 水务、融资日报、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

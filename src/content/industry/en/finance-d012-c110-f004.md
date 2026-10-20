@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Vector Models and Indexing for Power Grid Equipment
-meta_description: Marketing content for power grid equipment in finance, insurance, and wealth management industries comes primarily from product manuals, tender
+meta_description: Vector Models and Indexing for Power Grid Equipment Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

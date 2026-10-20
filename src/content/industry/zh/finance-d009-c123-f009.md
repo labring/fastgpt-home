@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 能源金属研报检索的引用来源与溯源
-meta_description: 能源金属研报数据主要来自头部券商有色团队报告、国内有色行业协会月度统计、上海期货交易所与伦敦金属交易所的现货与期货报价、矿山企业公开产能公告。更新节奏覆盖日
+meta_description: 能源金属研报检索的引用来源与溯源：能源金属研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 能源金属、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

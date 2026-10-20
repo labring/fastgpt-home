@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务投研知识库建设的多轮对话与提示词
-meta_description: 金融场景下IT服务投研的数据主要来自厂商运维手册、项目交付文档、行业标准规范、补丁更新记录及故障排查日志。数据更新节奏随发布周期变动，厂商补丁文档按周或月更
+meta_description: IT 服务投研知识库建设的多轮对话与提示词：IT 服务投研知识库建设的多轮对话与提示词，涵盖配置与验证建议
 keywords: IT 服务、投研知识库建设与治理、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

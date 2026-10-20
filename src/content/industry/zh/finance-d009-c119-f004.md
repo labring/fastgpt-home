@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 综合服务研报检索的向量模型与索引
-meta_description: 综合服务类研报检索的数据来源包含合规行业研究文档、券商研究所发布的行业分析报告、行业协会公开研究资料等。更新节奏随新文档上线实现增量同步，存量文档按需触发全
+meta_description: 综合服务研报检索的向量模型与索引：综合服务研报检索的向量模型与索引，涵盖配置与验证建议
 keywords: 综合服务、研报检索与问答、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

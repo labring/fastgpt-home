@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 汽车服务收益率的表单与交互
-meta_description: 汽车服务领域的收益率日报数据，来源为合作的汽车维保连锁门店、汽车融资租赁公司、新能源汽车充电运营商的每日运营台账，部分数据需通过API接口拉取，部分支持本地
+meta_description: 汽车服务收益率的表单与交互：汽车服务收益率的表单与交互，涵盖配置与验证建议。。。
 keywords: 汽车服务、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药研报检索的知识库检索与召回
-meta_description: 中药研报的数据来源包括中国中药协会发布的行业白皮书、券商医药行业研报、国家药典委员会公开的药典文档、药企内部研发纪要。更新节奏随内容类型有所区别：国家药典每
+meta_description: 中药研报检索的知识库检索与召回：中药研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 中药、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

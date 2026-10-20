@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 广告营销营销内容的文档解析与分块
-meta_description: 广告营销领域的文档来源包括广告投放后台导出的结构化报表、媒体合作刊例文档、内部创意脚本、投放效果日志、竞品广告分析报告等。更新节奏覆盖实时（投放数据）、按周
+meta_description: 广告营销营销内容的文档解析与分块：广告营销营销内容的文档解析与分块，涵盖配置与验证建议
 keywords: 广告营销、营销内容与获客、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

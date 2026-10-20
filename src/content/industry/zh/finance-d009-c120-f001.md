@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 网络安全研报检索的HTTP 接口与外部系统
-meta_description: 面向金融机构的网络安全研报的数据主要来源于公开CVE漏洞库、厂商安全响应中心公告、行业安全机构专项报告。更新节奏随内容类型差异：漏洞公告实时更新，行业研报按
+meta_description: 网络安全研报检索的HTTP 接口与外部系统：网络安全研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 网络安全、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

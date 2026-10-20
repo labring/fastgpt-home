@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 大气治理智能尽调报告的文档解析与分块
-meta_description: 大气治理智能尽调报告的数据来源包括环保主管部门公开的监测公报、大气治理企业报送的运行台账、第三方检测机构的现场检测报告、项目环评及整改批复文件。数据更新节奏
+meta_description: 大气治理智能尽调报告的文档解析与分块：大气治理智能尽调报告的文档解析与分块，涵盖配置与验证建议
 keywords: 大气治理、智能尽调报告、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 鞋类营销内容的工具调用与插件
-meta_description: 数据主要来自品牌内部ERP系统、合作电商平台商品库、线下门店POS数据。更新节奏随新品上线周期调整，新品集中上线阶段更新频次更高，常规款月度更新，库存类数据
+meta_description: 鞋类营销内容的工具调用与插件：鞋类营销内容的工具调用与插件，涵盖配置与验证建议。
 keywords: 鞋类、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

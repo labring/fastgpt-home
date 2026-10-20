@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Solid Waste
-meta_description: The data for solid waste treatment intelligent due diligence reports primarily comes from sanitation waste collection ledgers, hazardous waste
+meta_description: Multi-turn Dialogue and Prompt Engineering for Solid Waste Treatment Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

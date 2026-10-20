@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 玻璃投研知识库建设的引用来源与溯源
-meta_description: 玻璃投研数据主要来自国家建筑材料行业标准（如浮法玻璃、钢化玻璃系列国标）、上游原材料（石英砂、纯碱）的大宗商品行情平台、生产企业的出厂报价系统、第三方检测机
+meta_description: 玻璃投研知识库建设的引用来源与溯源：玻璃投研知识库建设的引用来源与溯源，涵盖配置与验证建议
 keywords: 玻璃、投研知识库建设与治理、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

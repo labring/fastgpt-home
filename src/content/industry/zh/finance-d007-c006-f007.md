@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 中药收益率的工作流编排
-meta_description: 中药相关金融产品的收益率与行情数据，来源包括证券交易所的中药ETF行情接口、期货交易所的中药材期货行情接口，以及金融资讯平台的结构化监测数据。更新节奏区分产
+meta_description: 中药收益率的工作流编排：中药收益率的工作流编排，涵盖配置与验证建议。。。。。。。
 keywords: 中药、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Marketing Content and Lead Generation
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Biologics
-meta_description: Data for biologics marketing is primarily sourced from publicly available registration approvals, package inserts, and batch release reports from
+meta_description: Multi-turn Dialogue and Prompt Engineering for Biologics Marketing Content
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

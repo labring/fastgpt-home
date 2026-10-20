@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 物业管理财报分析的HTTP 接口与外部系统
-meta_description: 物业管理财报的数据主要来自收费管理系统、公共区域运维台账、维保服务记录、行政办公系统及业主公示的收支明细。数据更新节奏为每月生成当月收支明细，每季度生成合并
+meta_description: 物业管理财报分析的HTTP 接口与外部系统：物业管理财报分析的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 物业管理、财报分析与报告生成、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 热力营销内容的HTTP 接口与外部系统
-meta_description: 热力营销内容的数据来源为热力供应企业的营销管理系统、用户用热行为采集系统，以及第三方营销触达平台。数据更新节奏按营销活动批次或按日同步，单次同步数据包含单批
+meta_description: 热力营销内容的HTTP 接口与外部系统：热力营销内容的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 热力、营销内容与获客、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

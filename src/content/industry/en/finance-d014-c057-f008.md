@@ -4,8 +4,8 @@ slug: /en/industry/finance-d014-c057-f008
 page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
-meta_title: Tool Calling and Plugins for Small Home Appliances Financial
-meta_description: Listed companies and third-party industry monitoring databases provide the primary sources of small home appliance industry financial report data.
+meta_title: Tool Calling and Plugins for Small Home Appliances
+meta_description: Tool Calling and Plugins for Small Home Appliances Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

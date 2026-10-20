@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c001-f012
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for IT Service Yield and
-meta_description: Data for this category mainly comes from compliant financial market data APIs and reports exported from internal trading systems of financial
+meta_title: Model Integration and Configuration for IT Service Yield
+meta_description: Model Integration and Configuration for IT Service Yield and Market Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

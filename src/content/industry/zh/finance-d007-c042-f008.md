@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 品牌代运营收益率的工具调用与插件
-meta_description: 品牌代运营的收益率与行情日报数据，核心来源为品牌合作的电商平台商家后台、广告投放API以及代运营内部的进销存系统。数据更新节奏为每日一次，通常在次日凌晨完成
+meta_description: 品牌代运营收益率的工具调用与插件：品牌代运营收益率的工具调用与插件，涵盖配置与验证建议
 keywords: 品牌代运营、收益率与行情日报播报、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

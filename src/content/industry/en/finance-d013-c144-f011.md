@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c144-f011
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Document Parsing and Chunking for Telecommunications Service
-meta_description: Sources of telecommunications service financing daily report data include public financing announcements from telecommunications equipment
+meta_title: Document Parsing and Chunking for Telecommunications
+meta_description: Document Parsing and Chunking for Telecommunications Service Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

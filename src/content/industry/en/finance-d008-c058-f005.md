@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Multi-turn Dialogue and Prompt Engineering for Minor Metals
-meta_description: Data sources include public statistics from domestic nonferrous metal industry associations, spot listing data from futures exchanges, customs import
+meta_description: Multi-turn Dialogue and Prompt Engineering for Minor Metals Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

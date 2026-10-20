@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Integration and Configuration for Property Management
-meta_description: Data sources for property management financing daily reports include internal operation management systems of property enterprises, business docking
+meta_description: Model Integration and Configuration for Property Management Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

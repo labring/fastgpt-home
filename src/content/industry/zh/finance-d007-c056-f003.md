@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 家居用品收益率的分享与嵌入
-meta_description: 家居用品的收益率相关数据来源于轻工制造行业的官方监测数据库，聚合线下零售终端与线上电商平台的销售数据。数据更新节奏为每日凌晨同步前一个自然日的全量数据。文档
+meta_description: 家居用品收益率的分享与嵌入：家居用品收益率的分享与嵌入，涵盖配置与验证建议。。。
 keywords: 家居用品、收益率与行情日报播报、分享与嵌入
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

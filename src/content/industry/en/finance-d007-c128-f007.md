@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Shipping Port Revenue Yield
-meta_description: Data for shipping port revenue yield primarily comes from official port operation statistics APIs, public datasets from shipping brokerage firms, and
+meta_description: Workflow Orchestration for Shipping Port Revenue Yield
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

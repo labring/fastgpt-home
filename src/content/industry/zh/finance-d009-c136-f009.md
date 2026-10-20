@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 贵金属研报检索的引用来源与溯源
-meta_description: 贵金属研报的数据来源涵盖交易所行情接口、行业协会统计报告、专业金融机构分析文档。更新节奏分两类：现货与期货行情数据每日更新，行业研报按周或月度发布。文档结构
+meta_description: 贵金属研报检索的引用来源与溯源：贵金属研报检索的引用来源与溯源，涵盖配置与验证建议
 keywords: 贵金属、研报检索与问答、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

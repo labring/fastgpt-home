@@ -4,8 +4,8 @@ slug: /en/industry/finance-d007-c083-f001
 page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
-meta_title: HTTP Interfaces and External Systems for Water Utility Yield
-meta_description: Water utility yield rate-related data comes from two main sources: public utility monitoring platforms of local housing and urban-rural development
+meta_title: HTTP Interfaces and External Systems for Water Utility
+meta_description: HTTP Interfaces and External Systems for Water Utility Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

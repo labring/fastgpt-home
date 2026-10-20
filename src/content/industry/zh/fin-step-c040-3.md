@@ -4,8 +4,8 @@ slug: /zh/industry/fin-step-c040-3
 page_type: 行业作业环节页
 article_section: 银行理财
 is_part_of: FastGPT 技术中心
-meta_title: 现金管理类理财投资与运营的复核估值、净值、申赎和披露数据：哪
-meta_description: 现金管理类理财投资与运营的复核估值、净值、申赎和披露数据：哪一部分能交给系统
+meta_title: 现金管理类理财投资与运营的复核估值、净值、申赎和披露数据：哪一部分能交给系统
+meta_description: 现金管理类理财投资与运营的复核估值、净值、申赎和披露数据：哪一部分能交给系统：现金管理类理财投资与运营的复核估值、净值、申赎和披露数据：哪一部分能交给系统，涵盖配置与验证建议
 keywords: 现金管理类理财投资与运营、银行理财、环节3
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）
 date_published: 2026-09-15

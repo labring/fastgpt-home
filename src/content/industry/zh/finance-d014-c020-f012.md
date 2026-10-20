@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备财报分析的模型接入与配置
-meta_description: 兵器装备财报的公开披露渠道包括国防军工行业上市公司年报、国防科技工业管理部门的采购公告、装备研制单位的公开立项文件。更新节奏为年度财报按自然年更新，季度、月
+meta_description: 兵器装备财报分析的模型接入与配置：兵器装备财报分析的模型接入与配置，涵盖配置与验证建议
 keywords: 兵器装备、财报分析与报告生成、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

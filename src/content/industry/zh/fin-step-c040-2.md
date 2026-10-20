@@ -4,7 +4,7 @@ slug: /zh/industry/fin-step-c040-2
 page_type: 行业作业环节页
 article_section: 银行理财
 is_part_of: FastGPT 技术中心
-meta_title: 现金管理类理财投资与运营的检查短期限资产、集中度和交易对手风
+meta_title: 现金管理类理财投资与运营的检查短期限资产、集中度和交易对手风险：哪一部分能交给系统
 meta_description: 现金管理类理财投资与运营的检查短期限资产、集中度和交易对手风险：哪一部分能交给系统
 keywords: 现金管理类理财投资与运营、银行理财、环节2
 source_type: 金融业务分类与作业事实取自行业研究报告（含监管文件来源编号）

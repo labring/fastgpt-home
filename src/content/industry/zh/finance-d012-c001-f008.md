@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: IT 服务营销内容的工具调用与插件
-meta_description: IT服务营销内容的数据来自厂商内部的营销素材库、已交付项目档案、客户咨询台账。更新节奏为新服务方案上线时同步更新，每月补充客户反馈数据，季度更新报价基准。文
+meta_description: IT 服务营销内容的工具调用与插件：IT 服务营销内容的工具调用与插件，涵盖配置与验证建议
 keywords: IT 服务、营销内容与获客、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

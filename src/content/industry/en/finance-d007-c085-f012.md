@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Cement Yield Rate
-meta_description: Cement market and yield rate data is primarily sourced from commodity market aggregation APIs and public APIs of the national building materials
+meta_description: Model Access and Configuration for Cement Yield Rate
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

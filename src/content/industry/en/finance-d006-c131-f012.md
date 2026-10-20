@@ -4,8 +4,8 @@ slug: /en/industry/finance-d006-c131-f012
 page_type: Industry scenario page
 article_section: Research Knowledge Base Governance
 is_part_of: FastGPT Tech Center
-meta_title: Model Integration and Configuration for Decoration and
-meta_description: Decoration and fit-out investment research data primarily comes from industry association monthly reports, building material manufacturer product
+meta_title: Model Integration and Configuration for Decoration
+meta_description: Model Integration and Configuration for Decoration and Fit-Out Investment Research Knowledge Base Construction
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

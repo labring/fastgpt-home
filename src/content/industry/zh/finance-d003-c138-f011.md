@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 费用清单保险理赔初审的文档解析与分块
-meta_description: 费用清单数据来源于医疗机构出具的收费单据、保险公司理赔系统导出的理赔附件，随单起理赔案件实时更新。单份文档对应单个理赔案件，结构固定，顶部包含就诊机构、就诊
+meta_description: 费用清单保险理赔初审的文档解析与分块：费用清单保险理赔初审的文档解析与分块，涵盖配置与验证建议
 keywords: 费用清单、保险理赔初审、文档解析与分块
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

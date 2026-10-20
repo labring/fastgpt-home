@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 军工电子智能尽调报告的工作流编排
-meta_description: 军工电子智能尽调报告的数据来源包括军工电子元器件质量与可靠性数据平台、国防科工局公开的行业资料、军工集团年度配套清单、军用装备采购中标公示以及各型号整机的定
+meta_description: 军工电子智能尽调报告的工作流编排：军工电子智能尽调报告的工作流编排，涵盖配置与验证建议
 keywords: 军工电子、智能尽调报告、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

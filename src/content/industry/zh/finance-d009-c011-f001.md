@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 休闲食品研报检索的HTTP 接口与外部系统
-meta_description: 休闲食品研报的数据来源主要为公开行业数据库、券商消费领域研报、行业协会公开报告。数据更新以季度为常规周期，伴随新品上市、行业政策调整等重大事件追加发布。单篇
+meta_description: 休闲食品研报检索的HTTP 接口与外部系统：休闲食品研报检索的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 休闲食品、研报检索与问答、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

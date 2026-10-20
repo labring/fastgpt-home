@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 担保材料风控的向量模型与索引
-meta_description: 担保材料的来源为单笔授信业务配套的纸质或电子担保文件，包括保证合同、抵押物权属证明、担保资质认定书等。更新节奏为单笔授信业务发起时一次性提交，存量担保材料仅
+meta_description: 担保材料风控的向量模型与索引：担保材料风控的向量模型与索引，涵盖配置与验证建议。
 keywords: 担保材料、风控与授信材料审核、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

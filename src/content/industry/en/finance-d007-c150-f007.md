@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Yield and Market Daily Briefing
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Iron Ore Yield Rates
-meta_description: Iron ore market and yield rate data is primarily sourced from the official API of the Dalian Commodity Exchange and third-party bulk commodity data
+meta_description: Workflow Orchestration for Iron Ore Yield Rates
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

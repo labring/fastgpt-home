@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化妆品营销内容的表单与交互
-meta_description: 金融场景下的化妆品营销相关数据，主要来源于合作品牌方的官方备案文档、成分检测报告、用户试用反馈库及营销素材中台。数据更新节奏随新品上线、活动调整波动，新品发
+meta_description: 化妆品营销内容的表单与交互：化妆品营销内容的表单与交互，涵盖配置与验证建议。。。
 keywords: 化妆品、营销内容与获客、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

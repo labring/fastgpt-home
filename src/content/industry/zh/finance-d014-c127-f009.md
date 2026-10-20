@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 航空装备财报分析的引用来源与溯源
-meta_description: 航空装备企业的财报数据主要来自上海证券交易所、深圳证券交易所的公开披露平台，以及对应军工集团的官方公告渠道。披露节奏固定为季度报告、半年度报告与年度报告，对
+meta_description: 航空装备财报分析的引用来源与溯源：航空装备财报分析的引用来源与溯源，涵盖配置与验证建议
 keywords: 航空装备、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

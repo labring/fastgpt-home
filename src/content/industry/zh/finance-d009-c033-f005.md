@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化纤研报检索的多轮对话与提示词
-meta_description: 化纤研报主要来自行业专业机构、大宗商品资讯平台及券商研究部门。更新节奏以月度、周度定期更新为主，伴随行业突发变动时追加发布。文档结构包含行业整体态势、核心品
+meta_description: 化纤研报检索的多轮对话与提示词：化纤研报检索的多轮对话与提示词，涵盖配置与验证建议
 keywords: 化纤、研报检索与问答、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

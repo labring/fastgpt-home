@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 小金属收益率的工作流编排
-meta_description: 小金属的数据来自国内有色金属行业专业行情聚合接口，覆盖钨、钼、锡、锑等细分品种的现货与期货行情。现货数据每日收盘后完成全量更新，期货数据每15分钟推送一次最
+meta_description: 小金属收益率的工作流编排：小金属收益率的工作流编排，涵盖配置与验证建议。。。。。
 keywords: 小金属、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Model Access and Configuration for Snack Food Financing
-meta_description: Public investment and financing platforms, enterprise industrial and commercial change announcement portals, and industry news platforms publicly
+meta_description: Model Access and Configuration for Snack Food Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

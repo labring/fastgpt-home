@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 动力煤收益率的表单与交互
-meta_description: 动力煤的行情数据覆盖港口现货与期货两类来源。现货数据来自秦皇岛港、曹妃甸港等国内主要煤炭港口的每日报价，以及中国煤炭运销协会的行业统计数据；期货数据来自郑州
+meta_description: 动力煤收益率的表单与交互：动力煤收益率的表单与交互，涵盖配置与验证建议。。。。。
 keywords: 动力煤、收益率与行情日报播报、表单与交互
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

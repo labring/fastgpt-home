@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 油服工程研报检索的知识库检索与召回
-meta_description: 油服工程研报的数据来源包括专业石油石化行业研究机构面向金融投资场景的公开报告、油气服务企业披露的运营数据、行业协会发布的动态报告。更新节奏区分三类数据：公开
+meta_description: 油服工程研报检索的知识库检索与召回：油服工程研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 油服工程、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

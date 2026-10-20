@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 化学原料财报分析的工具调用与插件
-meta_description: 化学原料品类的财报数据主要来自境内外证券交易所公开披露文件、行业协会月度监测数据及企业年度/半年度报告。数据更新节奏固定，季度财报每季度末后30日内更新，年
+meta_description: 化学原料财报分析的工具调用与插件：化学原料财报分析的工具调用与插件，涵盖配置与验证建议
 keywords: 化学原料、财报分析与报告生成、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

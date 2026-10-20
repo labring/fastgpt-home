@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 焦煤智能尽调报告的HTTP 接口与外部系统
-meta_description: 焦煤尽调报告的数据主要来自国内主要港口交割台账、矿山产能报备系统、大宗商品现货资讯平台与期货交易所挂牌合约。更新节奏分为三类：现货报价每日更新，港口库存数据
+meta_description: 焦煤智能尽调报告的HTTP 接口与外部系统：焦煤智能尽调报告的HTTP 接口与外部系统，涵盖配置与验证建议
 keywords: 焦煤、智能尽调报告、HTTP 接口与外部系统
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

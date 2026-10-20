@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏财报分析的引用来源与溯源
-meta_description: 游戏财报数据主要来自上市游戏主体的法定披露年报、季度报，以及行业第三方调研机构的公开文档。更新节奏以季度常规披露为主，部分头部厂商会同步发布月度运营简报数据
+meta_description: 游戏财报分析的引用来源与溯源：游戏财报分析的引用来源与溯源，涵盖配置与验证建议。
 keywords: 游戏、财报分析与报告生成、引用来源与溯源
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

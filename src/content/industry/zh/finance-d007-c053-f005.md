@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 多元金融收益率的多轮对话与提示词
-meta_description: 这个品类的数据主要来自持牌金融信息服务机构的合规交易数据源，以及场内场外市场的公开交易记录。更新节奏分为两类：实时行情数据按固定间隔更新，收益率日报数据于每
+meta_description: 多元金融收益率的多轮对话与提示词：多元金融收益率的多轮对话与提示词，涵盖配置与验证建议
 keywords: 多元金融、收益率与行情日报播报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 电网设备融资日报的多轮对话与提示词
-meta_description: 数据来源为国家能源局地方分局公开的电网设备采购中标公告、上市电网设备企业的定期融资公告、第三方供应链金融平台的设备采购融资台账。更新节奏为每日凌晨更新前一日
+meta_description: 电网设备融资日报的多轮对话与提示词：电网设备融资日报的多轮对话与提示词，涵盖配置与验证建议
 keywords: 电网设备、融资日报、多轮对话与提示词
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

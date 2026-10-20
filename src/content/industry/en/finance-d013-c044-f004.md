@@ -4,8 +4,8 @@ slug: /en/industry/finance-d013-c044-f004
 page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
-meta_title: Vector Models and Indexing for Commercial Property Financing
-meta_description: Commercial property financing daily report data is collected from the daily lease ledgers of property operation management systems, bank financing
+meta_title: Vector Models and Indexing for Commercial Property
+meta_description: Vector Models and Indexing for Commercial Property Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

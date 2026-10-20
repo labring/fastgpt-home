@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 国有大行收益率的工作流编排
-meta_description: 国有大行收益率与行情日报的数据来源为国有大行官方门户网站、央行金融市场司公开披露的运营数据。数据更新节奏为每日固定时段完成发布，文档格式为结构化表格形式，无
+meta_description: 国有大行收益率的工作流编排：国有大行收益率的工作流编排，涵盖配置与验证建议。。。
 keywords: 国有大行、收益率与行情日报播报、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

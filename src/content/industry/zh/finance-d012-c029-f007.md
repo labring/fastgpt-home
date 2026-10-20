@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 包装印刷营销内容的工作流编排
-meta_description: 包装印刷的营销内容数据主要来自金融机构提交的包装设计源文件、印刷生产ERP系统导出的工单数据，以及线下营销物料的投放台账。数据更新节奏随印刷工单批次变动，单
+meta_description: 包装印刷营销内容的工作流编排：包装印刷营销内容的工作流编排，涵盖配置与验证建议。
 keywords: 包装印刷、营销内容与获客、工作流编排
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

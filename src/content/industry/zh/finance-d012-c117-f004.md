@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 纺织制造营销内容的向量模型与索引
-meta_description: 纺织制造的营销内容数据主要来自自有产品库的参数文档、电商平台详情页素材、线下展会宣传折页扫描件、B端客户定制需求反馈文档，部分用于对接金融机构的供应链金融服
+meta_description: 纺织制造营销内容的向量模型与索引：纺织制造营销内容的向量模型与索引，涵盖配置与验证建议
 keywords: 纺织制造、营销内容与获客、向量模型与索引
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

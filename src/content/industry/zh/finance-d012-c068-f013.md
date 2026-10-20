@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 投资平台营销内容的知识库检索与召回
-meta_description: 投资平台的营销内容数据主要来源于官方投教文档、活动推广文案、合规公示材料、用户常见问题库及产品介绍页。数据更新节奏随营销活动、新品上线调整，无固定周期但单次
+meta_description: 投资平台营销内容的知识库检索与召回：投资平台营销内容的知识库检索与召回，涵盖配置与验证建议
 keywords: 投资平台、营销内容与获客、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

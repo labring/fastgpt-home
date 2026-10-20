@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 城商行智能尽调报告的模型接入与配置
-meta_description: 城商行智能尽调报告的数据来源包括本行内部信贷台账、客户提交的经审计财报、第三方征信机构的企业经营数据，以及当地监管部门的行业报送数据。数据更新节奏因来源不同
+meta_description: 城商行智能尽调报告的模型接入与配置：城商行智能尽调报告的模型接入与配置，涵盖配置与验证建议
 keywords: 城商行、智能尽调报告、模型接入与配置
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

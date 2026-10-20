@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Provenance for Miscellaneous
-meta_description: The data for miscellaneous comprehensive financing daily reports primarily comes from institution submissions by local financial regulatory
+meta_description: Citation Sources and Provenance for Miscellaneous Comprehensive Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

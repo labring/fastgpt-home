@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Real Estate Construction Project
-meta_description: Real estate construction project financing daily report data is primarily sourced from project site fund ledgers, financing receipt statements from
+meta_description: Workflow Orchestration for Real Estate Construction Project Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

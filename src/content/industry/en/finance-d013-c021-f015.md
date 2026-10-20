@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financing Daily Report
 is_part_of: FastGPT Tech Center
 meta_title: Deployment and Upgrade for Other Comprehensive Financing
-meta_description: Data sources for this financing daily report cover public corporate financing disclosures, credit systems of partner financial institutions, and
+meta_description: Deployment and Upgrade for Other Comprehensive Financing Daily Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

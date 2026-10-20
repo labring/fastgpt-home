@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 产业园区智能尽调报告的工具调用与插件
-meta_description: 产业园区的尽调数据来源包括国土空间规划公开平台、园区管委会官方招商台账、不动产登记系统及入驻企业年报。数据更新节奏存在差异：招商入驻数据每月更新，不动产权属
+meta_description: 产业园区智能尽调报告的工具调用与插件：产业园区智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 产业园区、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

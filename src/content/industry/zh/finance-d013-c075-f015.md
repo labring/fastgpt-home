@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 整车融资日报的部署与升级
-meta_description: 整车融资日报的数据来源为整车厂商融资台账、合作金融机构放款记录及车辆抵押登记备案数据。更新节奏为每日T+1生成当日全量更新文件。单份日报文档包含多条车辆融资
+meta_description: 整车融资日报的部署与升级：整车融资日报的部署与升级，涵盖配置与验证建议。。。。。
 keywords: 整车、融资日报、部署与升级
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Citation Sources and Traceability for Infrastructure
-meta_description: Data related to infrastructure engineering financial reports primarily comes from annual and semi-annual reports regularly disclosed by listed
+meta_description: Citation Sources and Traceability for Infrastructure Engineering Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
@@ -27,7 +27,7 @@ The multi-source and decentralized nature of infrastructure engineering financia
 | `Multi-Knowledge Base Association Switch` | Enabled | Infrastructure engineering data is stored across multiple independent knowledge bases, requiring cross-source association to complete full traceability |
 | `Field Matching Rule` | Strictly match field name + unit | Engineering fields may have the same name but different units; dual verification can prevent mismatches |
 | `Data Source Update Validity Period` | Quarterly financial report data retained for 12 months, monthly progress data retained for 3 months | The two types of data have different update cycles, and expired data has no valid reference value |
-| `Citation Content Template` | Include data source type, project unique identifier, update date, field value | Infrastructure engineering traceability requires clear data sources and project identifiers to meet compliance check requirements |
+| `Traceability details` | Include data source type, project unique identifier, update date, field value | Infrastructure engineering traceability requires clear data sources and project identifiers to meet compliance check requirements |
 
 > The parameter values provided on this page are common recommended starting points for configuration. Actual values are affected by material format, data volume, and business rules. Specific issues require individual analysis, and it is recommended to test on your own samples before finalizing settings.
 

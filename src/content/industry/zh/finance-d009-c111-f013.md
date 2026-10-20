@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 畜禽养殖研报检索的知识库检索与召回
-meta_description: 畜禽养殖研报数据主要来自农业农村部畜牧兽医局公开监测数据、行业协会月度监测报告、专业养殖咨询机构的季度分析文档，以及上市养殖企业的定期经营公告。更新节奏以月
+meta_description: 畜禽养殖研报检索的知识库检索与召回：畜禽养殖研报检索的知识库检索与召回，涵盖配置与验证建议
 keywords: 畜禽养殖、研报检索与问答、知识库检索与召回
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

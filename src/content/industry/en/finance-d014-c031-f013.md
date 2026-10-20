@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Financial Statement Analysis and Reporting
 is_part_of: FastGPT Tech Center
 meta_title: Knowledge Base Retrieval and Recall for Chemical
-meta_description: Chemical pharmaceutical industry financial report data is primarily sourced from regular reports officially disclosed by domestic and overseas stock
+meta_description: Knowledge Base Retrieval and Recall for Chemical Pharmaceutical Financial Report Analysis
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

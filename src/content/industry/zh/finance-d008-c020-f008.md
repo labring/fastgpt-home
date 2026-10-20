@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 兵器装备智能尽调报告的工具调用与插件
-meta_description: 兵器装备智能尽调报告的数据来源包括军工集团公开披露的年报、武器装备定型鉴定报告、国防采购公告、军工行业协会公开资料，主要用于金融场景下的军工主体尽调。数据更
+meta_description: 兵器装备智能尽调报告的工具调用与插件：兵器装备智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 兵器装备、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

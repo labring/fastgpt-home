@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 铁路公路收益率的数据库与运维
-meta_description: 铁路公路收益率相关数据的来源主要包括交通运输部路网监测平台、各铁路局集团运营统计系统、全国公路联网收费脱敏数据集。数据更新节奏为每日更新前一个自然日的全量统
+meta_description: 铁路公路收益率的数据库与运维：铁路公路收益率的数据库与运维，涵盖配置与验证建议。
 keywords: 铁路公路、收益率与行情日报播报、数据库与运维
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

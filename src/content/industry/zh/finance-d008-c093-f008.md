@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 游戏智能尽调报告的工具调用与插件
-meta_description: 游戏智能尽调报告的数据来源包括国家新闻出版署游戏版号公示平台、游戏厂商公开财报、主流应用商店数据、第三方游戏监测机构公开报告。更新节奏差异明显，版号信息按季
+meta_description: 游戏智能尽调报告的工具调用与插件：游戏智能尽调报告的工具调用与插件，涵盖配置与验证建议
 keywords: 游戏、智能尽调报告、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

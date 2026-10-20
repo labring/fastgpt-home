@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Coal Chemical Industry
-meta_description: Coal chemical due diligence data comes from internal enterprise production ledgers, industry association monitoring data, and government regulatory
+meta_description: Workflow Orchestration for Coal Chemical Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15

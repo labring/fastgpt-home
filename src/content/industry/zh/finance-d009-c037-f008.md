@@ -5,7 +5,7 @@ page_type: 行业问题页
 article_section: 金融 / 保险 / 理财
 is_part_of: FastGPT 技术中心
 meta_title: 卫星通信研报检索的工具调用与插件
-meta_description: 卫星通信研报数据主要来自航天运营机构公开技术文档、行业咨询机构专项报告及卫星测控平台原始采集数据。更新节奏以季度为核心周期，部分实时链路监测数据会按小时更新
+meta_description: 卫星通信研报检索的工具调用与插件：卫星通信研报检索的工具调用与插件，涵盖配置与验证建议
 keywords: 卫星通信、研报检索与问答、工具调用与插件
 source_type: 行业选题矩阵（细分方向 × 细分品类 × 功能 × 社区真实问题）
 date_published: 2026-09-15

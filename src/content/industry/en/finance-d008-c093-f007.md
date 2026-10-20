@@ -5,7 +5,7 @@ page_type: Industry scenario page
 article_section: Automated Due Diligence Reports
 is_part_of: FastGPT Tech Center
 meta_title: Workflow Orchestration for Game Industry Intelligent Due
-meta_description: The core data sources for game industry intelligent due diligence include the National Press and Publication Administration’s game license
+meta_description: Workflow Orchestration for Game Industry Intelligent Due Diligence Reports
 source_type: Industry topic matrix (industry x direction x capability x real community questions)
 date_published: 2026-09-15
 date_modified: 2026-09-15
